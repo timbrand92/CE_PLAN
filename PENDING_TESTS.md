@@ -19,8 +19,9 @@
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
-Owner: the Civil behaviour chat. **Full steps, with the sample files, are in
-`01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` — use that document, not this summary.**
+Owner: the Civil behaviour chat. **Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3 — it is the
+ONE consolidated list for the whole 69-commit payload, including everything in the folded-in table above.
+The rows below are a summary of this chat's own part only.**
 
 | # | What | Steps | Lane |
 |---|---|---|---|
@@ -35,7 +36,19 @@ Owner: the Civil behaviour chat. **Full steps, with the sample files, are in
 | R9 | **The 2024 lane** | R1 and R8 on AutoCAD 2024 — 2022–2024 users are in scope. | **2024** |
 
 
-### Branch `claude/c7-one-object` @ `9058a405` — 52 ahead of live `10ac480d`, 0 behind
+### FOLDED IN — `claude/c7-one-object` @ `9058a405` is inside the batch below
+
+> **Do not test from this table.** Every row of it is now part of
+> `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3, which is ONE list covering the whole payload
+> (Tim's ruling, 14 Sep). `9058a405` is an ancestor of `d6aa4dbf`, so deploying that batch installs all of
+> this too. The rows are kept below only so nothing is lost; the steps in the deploy document are the
+> current ones.
+>
+> **Row 14's hold is lifted.** `CDTWL` was held because it asserted a top water level instead of offering
+> candidates. It now offers them (commit `a5dce440`), so it is testable — see section E of the deploy
+> document.
+
+#### Original rows, superseded by that document
 
 Owner: the Civil behaviour chat. **Requires the API-v3 enabler to be rebuilt and shipped with it.**
 

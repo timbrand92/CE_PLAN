@@ -23,12 +23,35 @@ lanes, and is **not installed**. Nothing has been deployed.
 One payload, one tick-list — per Tim's ruling of 14 September: *"fix everything on the branch, ONE payload,
 ONE consolidated tick-list; no one-fix-one-deploy."*
 
+**This deploy installs 69 commits over the live bundle, not just the overnight batch.** Most of that work has
+never been run in AutoCAD by anyone: the one-object pipe (C7), `CDTWL`, `CDDEST`, `CDDESIGN`, `CDFIXTAGS`,
+split-on-draw, the LPD note, the pit label on resize, the water tank, and the pipe-grip guards for 2022–2024.
+All of it is in section 3, folded in from `PENDING_TESTS.md` — that is what "one consolidated tick-list"
+means here.
+
 | Item | What it does, in drawing terms |
 |---|---|
 | **IFD-01** | A job now carries **its own rainfall**. New command **`CDRAINFALL`**. A job with none of its own is **told** it is using the office Melbourne curve instead of being given it silently. |
 | **D2** | **Every figure says where it came from** — typed, from the rating report, measured from the drawing, required by the council, worked out from other figures, an office default, assumed, or not known. |
 | **F1 + F2** | **CDCALC now produces the drainage computations sheet**, from one record shared with the plan block and the orifice detail, so they cannot disagree. |
 | **BUG-156** | A network redesign no longer forgets the drawing's split answer, its recorded downpipe destinations, or its rainfall curve. |
+| **Colleague-standalone guard** | CE Civil now *proves* it needs neither CE Manager nor CE Structural to run — see below. |
+
+### The colleague-standalone gate, now measured and held
+
+`V3_0_PLAN` §3: Version 3 is complete only when *"colleagues can install and use CE Civil without CE Manager
+or CE Structural"*, and its first requirement is **"no runtime DLL or command dependency on Manager or
+Structural"**.
+
+**Measured 15 September: Civil already meets it.** Of seven mentions of the other two plugins in Civil's
+source, six are comments and the seventh is `CDSURVEY` looking for CE Manager **at run time** and asking at
+the command line when it is not there — which is what optional means. There is no assembly reference to
+either.
+
+**What was missing was anything holding it true.** One `using` added in passing would break a colleague's
+install and would never show up on Tim's machine, because he has all three plugins. Five guard tests now hold
+it, including the one that would have caught the Structural bundle's missing `CE_SHARED.dll`: **everything
+Civil references must either come from AutoCAD or ship beside it.**
 
 ### The engineering reason IFD-01 matters
 
@@ -100,9 +123,19 @@ The version string ends in the commit it was built from. It should end in this b
 
 ---
 
-## 3. What to test in AutoCAD
+## 3. What to test in AutoCAD — the whole payload
 
-Five sample coefficient files were produced for section A. They are **synthetic test files**, not engineering
+**Read this first.** Deploying `d6aa4dbf` installs **69 commits** of work over the live bundle, not just the
+overnight batch. Most of it has **never been run in AutoCAD by anyone**. Tim's ruling of 14 September is ONE
+payload and ONE consolidated tick-list, so this is that list — it folds in everything that was sitting in
+`PENDING_TESTS.md` as well as what was built overnight.
+
+Roughly 40 of those 69 commits are council research and planning documents that change no behaviour. What
+follows covers the ones that do: **five newly registered commands** (`CDRAINFALL`, `CDTWL`, `CDDEST`,
+`CDPIPEOBJ`, `CDC7UPGRADE`), plus `CDDESIGN` and `CDFIXTAGS`, and changed behaviour in `CD`, `CDLPD`,
+`PITEDIT`, `CDWT`, `CDCALC` and the level propagation.
+
+**Five sample coefficient files** were produced for section B. They are synthetic test files, not engineering
 data for a real job.
 
 | File | What it is |
@@ -113,106 +146,192 @@ data for a real job.
 | `SAMPLE_4_BROKEN_only_three_rows.txt` | **Broken on purpose** — three rows instead of seven |
 | `SAMPLE_5_BROKEN_wrong_order.txt` | **Broken on purpose** — rows in the wrong order |
 
-### A. `CDRAINFALL` — the rainfall a job is designed to
-
-*(2027 and 2024 — both lanes)*
-
-1. Open a drawing that already has CE drainage in it. Type **`CDRAINFALL`**.
-   **Expect:** *"This job has no rainfall curve of its own, so CE is using the office Melbourne (office OSD4W
-   zone) curve… it reads about 7 to 9 per cent high…"*, then a small table of intensities for a 1 in 10 year
-   storm at 5, 10, 15, 30 and 60 minutes. **The 5 minute figure should be about 105 mm/hr.**
-2. Answer **File**, choose `SAMPLE_2_lighter_place.txt`.
-   **Expect:** it asks *"What location are these coefficients for?"* with the **file name as the default**.
-   Press Enter.
-3. **Expect:** *"Read 7 storm frequencies for SAMPLE_2_lighter_place"*, the 1-in-10 table (**5 min should now
-   be about 86 mm/hr**), a line saying it is **about 18 per cent lighter than the office Melbourne curve, so
-   the storage this job needs changes by about the same amount**, then *"Design this job to that rainfall?"*
-4. Answer **No**. **Expect:** *"Nothing was changed."* Run `CDRAINFALL` again — it must **still** say the job
-   has no curve of its own.
-5. Run it again, this time answer **Yes**.
-   **Expect:** *"This job is now designed to the … rainfall curve. Every calculation from here on says so."*
-6. Run `CDRAINFALL` once more. **Expect:** *"Rainfall for this job uses the … curve, from the file
-   SAMPLE_2_lighter_place.txt."* — and **no** warning.
-7. **Save the drawing, close it, reopen it, run `CDRAINFALL`.** The job's curve must still be there.
-8. Try `SAMPLE_1_same_as_office.txt`. **Expect:** it is accepted, and the difference line says it gives
-   **the same rainfall as the office Melbourne curve**.
-9. Try `SAMPLE_3_with_ari_column.csv`. **Expect:** accepted — the header row and the storm-frequency column
-   are both handled.
-10. Try `SAMPLE_4_BROKEN_only_three_rows.txt`. **Expect:** *"A rainfall block needs 7 rows… 3 rows of numbers
-    found. Nothing has been stored."* Run `CDRAINFALL` again and confirm the **previous** curve is untouched.
-11. Try `SAMPLE_5_BROKEN_wrong_order.txt`. **Expect:** it is refused for being **out of order**, and again
-    nothing is stored.
-12. **Clipboard route:** open one of the sample files, copy the seven rows, then `CDRAINFALL` → **Clipboard**.
-    Same flow as above.
-13. With nothing copied at all, `CDRAINFALL` → **Clipboard**. **Expect:** *"There is nothing copied at the
-    moment…"* and nothing changed.
-14. `CDRAINFALL` → **Clear** → **Yes**. **Expect:** back to the office-curve message.
-15. `CDRAINFALL` → **Clear** on a job that has no curve of its own. **Expect:** *"…there is nothing to clear."*
-16. `CDRAINFALL` → press **Enter** (the default is Leave). **Expect:** *"Nothing was changed."*
-17. **Brand-new empty drawing, no CE records at all:** `CDRAINFALL` → File → a good file → Yes.
-    **Expect:** *"…could not be recorded because this drawing has no CE records yet. Draw a pipe or a pit
-    first…"* — not a crash, and not a silent failure.
-
-### B. The rainfall actually changes the design
-
-18. On a job with **no** curve of its own, run **`CDDESIGN`** through to the design.
-    **Expect:** among the notes, *"This job has no rainfall curve of its own…"*.
-19. Note the **storage required**. Now set the job's curve to `SAMPLE_2_lighter_place.txt` (18% lighter) with
-    `CDRAINFALL`, and run `CDDESIGN` again.
-    **Expect:** the **storage required goes DOWN**, by roughly the same proportion. If it does not move at
-    all, the curve is not reaching the calculation — say so.
-20. Set the curve back to `SAMPLE_1_same_as_office.txt` and run `CDDESIGN` again.
-    **Expect:** the storage required returns to the **original** figure, and the "no rainfall curve" note is
-    **gone**.
-
-### C. The computations sheet (F1) — this is the new one
-
-21. Open **`CDCALC`** on a job with a detention system. Fill it in as you normally would.
-22. Press **Export PDF** (and again with **Export XLSX**).
-    **Expect:** the export now **leads** with a **DRAINAGE COMPUTATIONS** sheet under a
-    **CREATIVE ENGINEERING** heading. In the XLSX it is the first tab, named **Computations**.
-23. Check the header carries: job number, site, **council**, engineer, revision, date, page, and an issue
-    line. On a sheet you have not marked as issued it should read **`DRAFT — NOT FOR CONSTRUCTION`**.
-24. Check the **BASIS OF DESIGN** block names the storm frequency, **which rainfall curve** is being used, and
-    Boyd's method.
-25. Check that **Permissible site discharge** and **Storage required** each carry **the council's name in
-    brackets**.
-26. Check the **STORAGE PROVIDED** block: in the pipe runs / in the pits / in tanks and anything else /
-    **TOTAL STORAGE PROVIDED** — and that the total really is the three added up, in both litres and m³.
-27. Check it then says either *"This meets the storage required"* or *"THIS IS SHORT… by N L"*. **Make it
-    short on purpose** (reduce the pipes) and confirm it names **how much** is missing.
-28. Check the **VOLUME OF PIPE** table (by diameter, smallest first) and the **VOLUME OF PIT** table.
-29. Check the **ORIFICE** block. **Plate height will say "not known"** — that is correct and deliberate:
-    CDCALC holds the head on the orifice, not the plate height, and CE will not invent one by working
-    backwards. The **head**, the **diameter**, **Co** and the **flow** should all be there.
-30. Check the sheet **ends** with **WHERE THESE FIGURES CAME FROM**.
-31. On a job with **no** rainfall curve of its own, the header must carry
-    **`THIS SHEET HAS FIGURES THAT ARE NOT SETTLED`**. Set a job curve and re-export — if nothing else is
-    unsettled, that line should be **gone**.
-32. Leave the council unset and export. **Expect:** the sheet still comes out, PSD reads **"not known"** —
-    **never `0`** — and the last block names it as not established. **Nothing should be blocked.**
-
-### D. BUG-156 — a redesign must not forget things
-
-33. On one drawing: record a downpipe destination with **`CDDEST`**, answer the split-on-draw question, and
-    set a rainfall curve with `CDRAINFALL`.
-34. Run a **network redesign and apply it**.
-35. **Expect, after the apply:** `CDDEST` still shows the recorded destination; the split question is **not**
-    asked again; and `CDRAINFALL` still reports the job's own curve. Before this fix, all three were lost.
-
-### E. Nothing that already worked has moved
-
-36. Open a job you know well that has **no** rainfall curve set. Run its detention calculation.
-    **Expect: exactly the same numbers as before this update.** Any movement at all on a job with no curve of
-    its own is a fault — report it.
-37. Run `CDTWL`, `CDDEST`, `CDDESIGN` and `CDCALC` once each and confirm they behave as they did.
-
-### F. The 2024 lane
-
-38. Repeat **A1–A6** and **E36** on **AutoCAD 2024**. The commands must load and run — 2022–2024 users are in
-    scope.
+> **A note on how to read this.** Where a step says *"Expect"*, that is what the code is written to do — not
+> something anyone has watched happen. If it does something else, that is the finding, and it is worth more
+> than a pass.
 
 ---
+
+### A. Before anything else — 3 steps
+
+1. **Confirm what actually installed.** The version string ends in the commit it was built from; it must end
+   in `d6aa4dbf`.
+2. **Open a drawing you know well and do nothing.** No errors on load, the CE ribbon appears, AutoCAD behaves
+   normally. If anything is wrong here, stop — everything below is meaningless.
+3. **Type `CDRAINFALL`.** It should exist. If "Unknown command", the bundle did not install and nothing below
+   will work.
+
+---
+
+### B. `CDRAINFALL` — new. The rainfall a job is designed to *(both lanes)*
+
+4. Open a drawing that already has CE drainage in it. Type **`CDRAINFALL`**.
+   **Expect:** *"This job has no rainfall curve of its own, so CE is using the office Melbourne (office OSD4W
+   zone) curve… it reads about 7 to 9 per cent high…"*, then intensities for a 1 in 10 year storm at 5, 10,
+   15, 30 and 60 minutes. **The 5 minute figure should be about 105 mm/hr.**
+5. Answer **File**, choose `SAMPLE_2_lighter_place.txt`. **Expect:** it asks *"What location are these
+   coefficients for?"* with the **file name as the default**. Press Enter.
+6. **Expect:** *"Read 7 storm frequencies…"*, the 1-in-10 table (**5 min now about 86 mm/hr**), a line saying
+   it is **about 18 per cent lighter than the office Melbourne curve, so the storage this job needs changes
+   by about the same amount**, then *"Design this job to that rainfall?"*
+7. Answer **No**. **Expect:** *"Nothing was changed."* Run it again — it must **still** say the job has no
+   curve of its own.
+8. Run again, answer **Yes**. **Expect:** *"This job is now designed to the … rainfall curve."*
+9. Run once more. **Expect:** *"Rainfall for this job uses the … curve, from the file …"* and **no warning**.
+10. **Save, close, reopen, run `CDRAINFALL`.** The curve must still be there.
+11. `SAMPLE_1_same_as_office.txt` → accepted, and the difference line says it gives **the same rainfall as the
+    office Melbourne curve**.
+12. `SAMPLE_3_with_ari_column.csv` → accepted (header row and frequency column both handled).
+13. `SAMPLE_4_BROKEN_only_three_rows.txt` → *"needs 7 rows… 3 rows of numbers found. Nothing has been
+    stored."* Then confirm the **previous** curve is untouched.
+14. `SAMPLE_5_BROKEN_wrong_order.txt` → refused for being **out of order**; again nothing stored.
+15. **Clipboard:** open a sample file, copy the seven rows, `CDRAINFALL` → **Clipboard**. Same flow.
+16. With nothing copied, `CDRAINFALL` → **Clipboard** → *"There is nothing copied at the moment…"*
+17. `CDRAINFALL` → **Clear** → **Yes** → back to the office-curve message.
+18. `CDRAINFALL` → **Clear** on a job with no curve → *"…there is nothing to clear."*
+19. `CDRAINFALL` → press **Enter** (default is Leave) → *"Nothing was changed."*
+20. **Empty new drawing, no CE records:** `CDRAINFALL` → File → good file → Yes.
+    **Expect:** *"…could not be recorded because this drawing has no CE records yet…"* — not a crash.
+
+### C. The rainfall actually changes the design
+
+21. On a job with **no** curve, run **`CDDESIGN`** through to the design. **Expect:** a note saying *"This job
+    has no rainfall curve of its own…"*
+22. Note the **storage required**. Set the 18%-lighter curve, run `CDDESIGN` again.
+    **Expect: storage required goes DOWN** by roughly the same proportion. **If it does not move at all, the
+    curve is not reaching the calculation — that is a failure, report it.**
+23. Set `SAMPLE_1_same_as_office.txt`, run again. **Expect:** back to the **original** figure, and the "no
+    rainfall curve" note is **gone**.
+
+### D. `CDCALC` — the computations sheet *(new)*
+
+24. `CDCALC` on a job with a detention system, filled in as usual. **Export PDF**, then **Export XLSX**.
+    **Expect:** the export now **leads** with a **DRAINAGE COMPUTATIONS** sheet under **CREATIVE
+    ENGINEERING**. In the XLSX it is the first tab, named **Computations**.
+25. Header carries job number, site, **council**, engineer, revision, date, page, and an issue line reading
+    **`DRAFT — NOT FOR CONSTRUCTION`** on an unissued sheet.
+26. **BASIS OF DESIGN** names the storm frequency, **which rainfall curve**, and Boyd's method.
+27. **Permissible site discharge** and **Storage required** each carry **the council's name in brackets**.
+28. **STORAGE PROVIDED**: in the pipe runs / in the pits / in tanks and anything else / **TOTAL**, in both
+    litres and m³ — and the total really is the three added up.
+29. Make the storage **short on purpose** (reduce the pipes). **Expect:** *"THIS IS SHORT… by N L"* naming
+    **how much**.
+30. **VOLUME OF PIPE** (by diameter, smallest first) and **VOLUME OF PIT** tables are present.
+31. **ORIFICE** block: **plate height will say "not known"** — that is correct and deliberate. Head,
+    diameter, Co and flow should all be there.
+32. The sheet **ends** with **WHERE THESE FIGURES CAME FROM**.
+33. On a job with no rainfall curve, the header carries **`THIS SHEET HAS FIGURES THAT ARE NOT SETTLED`**.
+    Set a curve, re-export — if nothing else is unsettled that line should be **gone**.
+34. **Leave the council unset** and export. **Expect:** the sheet still comes out, PSD reads **"not known"** —
+    **never `0`** — and the last block names it as not established. **Nothing blocked.**
+
+### E. `CDTWL` — new. Top water level *(was on hold; the hold is lifted)*
+
+35. `CDTWL` on a job with a detention pit or tank. **Expect:** it **offers every level the system could be
+    held to, each with where it came from**, and does **not** assert one. The rulebook's usual figure (the
+    obvert of the highest detention pipe) is offered and **labelled as the usual rule**, not applied.
+36. Pick one. **Expect:** the storage below it, the head on the orifice, and any pit the water would come up
+    out of. **It must change nothing in the drawing.**
+37. Run it on a job with a **trench grate sitting above the highest pipe obvert** — the case that reopened
+    this rule. The grate level must be among the candidates.
+
+### F. `CDDEST` — new. Where each downpipe goes
+
+38. `CDDEST` on a job with downpipes and drawn pipes. **Expect:** it follows the drawn pipes and says where
+    each downpipe ends up — a tank, or out to the legal point of discharge.
+39. Where the trail cannot be followed, **it names where it stopped** rather than guessing.
+40. Where **more than one pipe leaves a source**, it reports a **Split** and does not pick one.
+41. It offers to **record** those answers against the drawing. Accept, then re-run — the recorded answer is
+    used.
+
+### G. `CDDESIGN` — new. The design workflow
+
+42. `CDDESIGN` on a job. **Expect:** it asks only for **what is missing**, and makes you **confirm the legal
+    point of discharge**.
+43. Give it a **roof area larger than the site**. **Expect:** it refuses that figure **without silently
+    shrinking your number**.
+44. It finishes by saying **nothing was drawn**. **Confirm the drawing is untouched.**
+45. **The rating report offer:** on a job whose folder holds a STORM or Blue Factor report, CE should **offer**
+    the site and roof areas from it — and must **never open anything in a client folder until you say yes**.
+46. Where the report and what you typed **disagree**, it shows **both** and you pick; keeping what you typed
+    is the default.
+47. The council is filled in **only on an exact match** — a near-miss must never load a rulebook.
+
+### H. `CDFIXTAGS` and repeated source names
+
+48. In the job that failed before: `CDFW` at a free point, then on a pipe run, then on a free pipe end.
+    **Each must place** (this was BUG-154).
+49. After each placement the command line **names the repeated source name**, says **nothing was stopped by
+    it**, and offers `CDFIXTAGS`.
+50. `CDFIXTAGS` lists the repeated names and their blocks, proposes renames, and **changes nothing on No**.
+51. Run again, answer **Yes** — the renamed blocks show their new labels.
+
+### I. Splitting a pipe drawn across pits
+
+52. Three pits in a line; draw **ONE** pipe through all three. **Expect:** it asks once. Answer **Yes** →
+    four pipes, four schedule rows, and the middle pits have a pipe in and out.
+53. Draw another across pits: **it must not ask again**.
+54. In a **new drawing** answer **No** first time → stays one pipe, and does not ask again.
+55. A pipe that starts and ends on pits but crosses nothing: says nothing, splits nothing.
+56. **Escape** at the question: nothing split, pipe intact.
+
+### J. The one-object pipe *(2027 only — needs the rebuilt enabler)*
+
+57. `CDC7UPGRADE` a pipe, then `CDFW` on it. **Both halves must be CE pipe objects.**
+58. **Move the top half aside and check there is no stray pipe underneath** — that is the whole point of it.
+59. Labels and invert texts end on the **correct halves**; the new invert appears **both sides** of the floor
+    waste. A **twin barrel** still draws as twins after the split.
+60. Do the same on an **unconverted** pipe and confirm **nothing about it changed**.
+
+### K. `CDLPD` — the legal point of discharge note
+
+61. `CDLPD`, pick the street pipe end. **Expect** the list now offers **CouncilStub, ExistingStub, Easement**
+    as well as Kerb / CouncilPipe / SideEntry.
+62. Choose **CouncilStub**. The callout must read
+    `CONNECT TO COUNCIL STUB AT APPROX IL<level>m TO COUNCIL SATISFACTION. BUILDER TO CONFIRM ALL LEVELS
+    PRIOR TO THE COMMENCEMENT OF WORK.` with the level to **two decimals**.
+63. Run it on a pipe end whose invert is **not set**. The note still appears and simply **leaves the level
+    clause out** — no `IL m`, no zero.
+
+### L. Pits, tanks and levels
+
+64. **`PITEDIT` a 450 pit to 1200.** The label circle **steps out and keeps its distance from the pit**, like
+    the cover level text. Check the CE log line `ShiftAnnotation [pit label]`.
+65. **`CDWT`** — place a water tank. Its plan block and its details come from the Civil Standard Details
+    folder. Check the callout, the riser and the dropper.
+66. **A tank's storage is now counted.** On a job with a tank, check the detention total **includes** it —
+    before this, tank-heavy jobs under-counted their own storage.
+67. **Levels set by hand:** set an invert level by hand, then run the propagation. **The drawing and the
+    record must agree.** Previously the drawing was written and the record refused it, silently.
+
+### M. The 2022–2024 lane *(net48 — Tim ruled these users are in scope)*
+
+68. On **AutoCAD 2024**: the plugin loads, the ribbon appears, no errors.
+69. **`CDRAINFALL`** — repeat steps 4 to 9.
+70. **Pipe grips (OVR-01):** drag a pipe end grip. **Expect:** the pipe **cannot be lifted off the plan**
+    (its Z is flattened) and **cannot be collapsed** to nothing — a minimum of 1 mm is kept.
+71. `CD`, `CDLPD`, `PITEDIT` behave as they do on 2027.
+
+### N. Nothing that already worked has moved
+
+72. Open a job you know well **with no rainfall curve set**. Run its detention calculation.
+    **Expect: exactly the same numbers as before this update.** Any movement at all on a job with no curve of
+    its own is a fault — report it.
+73. Draw a pipe, edit a pipe, edit a pit, run the schedule. All as before.
+74. **One accepted edit = one Undo**, throughout.
+
+### O. A redesign must not forget things (BUG-156)
+
+75. On one drawing: record a downpipe destination with `CDDEST`, answer the split-on-draw question, and set a
+    rainfall curve.
+76. Run a **network redesign and apply it**.
+77. **Expect:** `CDDEST` still shows the recorded destination; the split question is **not** asked again; and
+    `CDRAINFALL` still reports the job's own curve. **Before this fix all three were lost.**
+
+---
+
+**If you only have an hour**, do A (1–3), B (4–10), C (21–23), D (24–29), N (72–74) and O (75–77). Those cover
+the new engineering, the new document, and whether anything old broke.
 
 ## 4. What is NOT done, and is honest about it
 
@@ -236,7 +355,7 @@ data for a real job.
 ## 5. Evidence behind the claims above
 
 - **Builds:** net48, net8.0-windows and net10.0-windows — **0 errors** on all three.
-- **Tests:** full Drainage suite on net10. The **23 failures are byte-for-byte the same tests** that already
+- **Tests:** full Drainage suite on net10, plus five new colleague-standalone guards. The **23 failures are byte-for-byte the same tests** that already
   fail at `326c1303`, measured by checking that commit out into a throwaway worktree and running the same
   suite there. **No new failure was introduced.**
 - **The office curve's own numbers are unchanged**, proven by running the new code against the un-refactored
