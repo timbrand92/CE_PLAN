@@ -12,9 +12,20 @@ lanes, and is **not installed**. Nothing has been deployed.
 | **Full suite (net10)** | **9042 passed / 23 failed / 17 skipped** at `c1af9781` — **+131 passing over the `326c1303` baseline, and the 23 failures are byte-for-byte the same tests that already fail there**, measured by checking that commit out into a throwaway worktree and running the same suite |
 | **Builds** | net48, net8.0-windows, net10.0-windows — **0 errors** |
 
-> **Nothing in this document deploys anything.** Claude did not deploy, because the rule is that only the
-> session Tim has told *in that conversation* "AutoCAD is closed, deploy" may do it. These are the steps for
-> Tim to run, and the list of what to check afterwards.
+> **DEPLOYED 16 September 2026, 08:05 AEST.** Tim said "AutoCAD is closed, deploy" in the session, so that
+> session was the one authorised to do it. Sections 1 and 2 are now history; **section 3 is the live task.**
+>
+> Verified at deploy: AutoCAD was not running; live was `817d482c` and had not moved overnight; the branch was
+> clean and pushed; the lineage check printed nothing; and all three lane SHA256s matched the staged payload
+> (Legacy `AB122FEA…`, Net8 `222F74C9…`, Modern `FF898FA2…`).
+>
+> **Two things the old handoff got wrong, corrected here:** `Deploy-Local-AsAdmin.ps1` has **no CE_SHARED
+> line** at all — the instruction to read `0 blocked, 0 skipped` belongs to a different script, so CE_SHARED
+> was checked directly instead. Civil now carries CE_SHARED stamped `c1af9781` while Manager still carries
+> `817d482c`; both are assembly version `1.1.0.0`, identical in size, and
+> `git diff 817d482c c1af9781 -- Shared/CE_SHARED/` is **empty** — same code, different stamp, so
+> first-loaded-wins does not matter. **If CE_SHARED ever genuinely changes, Manager must be redeployed from
+> the same commit.**
 
 ---
 

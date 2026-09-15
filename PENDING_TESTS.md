@@ -15,7 +15,14 @@
 
 ---
 
-## NOT YET DEPLOYED — nothing below is installed, so none of it can be tested yet
+## DEPLOYED 16 September 2026, 08:05 — this IS installed now and is waiting on Tim
+
+**Live bundle is `c1af9781`.** Deployed after Tim said "AutoCAD is closed, deploy". All three lane SHA256s
+matched the staged payload and the lineage check printed nothing. **Nothing below has been tested in AutoCAD
+by anyone** — that is the whole point of the list.
+
+Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
+69-commit payload. Restart AutoCAD first.
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
