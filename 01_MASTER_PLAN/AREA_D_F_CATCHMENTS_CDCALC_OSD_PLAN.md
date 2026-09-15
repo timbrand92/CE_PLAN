@@ -166,6 +166,82 @@ consume it, not duplicate it.
 
 ---
 
+## 4A. D-Q2 answered — how CE's calculations are actually done
+
+Tim, 15 September 2026: *"figure out how the calculations are done so we can design using this."* Derived
+read-only from **59 genuine drainage computations sheets**.
+
+### The chain, in CE's own words
+
+```text
+council PSD  ──►  Qp (restricted outflow)
+                                            Smax = V1 (1 - Qp/Ip)
+catchment C, A  ──► Ip = C·I·A/360  ──► V1 = Ip·T  ──►  swept over storm durations
+                        ▲                                       │
+                rainfall intensity I                            ▼
+                                            SSR = the HIGHEST Smax
+                                            critical duration = where it occurs
+                                                        │
+                storage provided = pipes + pits + tanks  ◄──── must meet SSR
+                                                        │
+                orifice: Qo = Co·Ao·√(2gh),  h = plate height − d/2,  adopt when Qo < PSD
+```
+
+Quoted from a sheet: *"Storage requirement is highest value of Smax calculated in the table below"*,
+*"Critical storm duration is the storm duration when Smax occurs"*, *"Continue table until a clear Smax is
+calculated"*.
+
+### How often each element appears, across 59 sheets
+
+| Element | Sheets |
+|---|---:|
+| detention / storage | 57 / 51 |
+| orifice, with `Co` and plate height | 44 / 41 / 41 |
+| PSD (permissible site discharge) | 42 |
+| Volume of Pit / Volume of Pipe tables | 33 / 32 |
+| Boyd's method | 28 |
+| Tc, intensity, coefficient | 28 / 26 / 28 |
+| SSR | 21 |
+| pump | 13 |
+| ARI written out | 4 |
+
+`Volume/m` for a pipe is **π·d²/4**; pit storage is plan area × depth.
+
+### What this confirms about the plugin
+
+- **The formula matches.** The sheet writes `Smax = V1(1 − Qp/Ip)`; `DetentionSizingService` computes
+  `V1 − Qp·T`. Since `V1 = Ip·T`, these are **algebraically identical**, and both reproduce the sheet's own
+  first row (3645 − 1800 = 1845 L). Pinned in `BoydsMatchesCeSheetTests`.
+- **The convention matches:** `Q(L/s) = C·I(mm/hr)·A(ha)/0.36` reproduces the sheet's Ip column.
+- **The sweep is wider:** the plugin sweeps 5–180 min, CE's sheet stopped at 30 once Smax was clearly falling.
+  The plugin is the more thorough of the two.
+
+### ⚠ The one real discrepancy — the rainfall intensity
+
+Measured against this sheet, the plugin's 1-in-10-year intensity is **systematically HIGH**, growing with
+duration:
+
+| Duration | CE's sheet | Plugin | Difference |
+|---:|---:|---:|---:|
+| 5 min | 98.6 | 105.0 | **+6.5%** |
+| 15 min | 60.1 | 64.6 | **+7.6%** |
+| 30 min | 40.9 | 44.4 | **+8.6%** |
+
+*Documented fact:* the plugin ships **one** curve — the office Melbourne / OSD4W polynomial
+(`Assets/Config/ifd-melbourne.json`).
+*Documented fact:* CE's STORM reports name a **Rainfall Station per job**, and 40 distinct councils appear
+across the 194 reports read.
+*Hypothesis, not established:* this sheet was designed to a different station's curve.
+
+**Consequence either way:** a job the plugin sizes carries roughly **7–9% more storage** than the one CE
+issued. That direction is conservative, not unsafe — but it is not what CE issued, and **it has to be settled
+before CDCALC designs unattended under D-Q1.** The difference is pinned by a characterisation test so it cannot
+drift silently.
+
+**New decision for Tim — D-Q3: is the plugin's single Melbourne curve right for every job, or must the
+intensity come from the job's rainfall station?** The STORM report already names the station, so CE can read
+it; what is missing is a curve per station.
+
 ## 5. What should NOT be built
 
 - **Do not wire the computations-sheet reader into CDCALC as an input.** CDCALC computes these figures itself;
@@ -187,6 +263,7 @@ consume it, not duplicate it.
 | **D-Q2** | Should a catchment's area be divided across the downpipes assigned to it, so connected roof area is a sum? | Needs Tim's view on whether per-downpipe areas are worth the bookkeeping; he already said roof area comes *"per catchment from the ESD report"* and the rest is *"an easy calc"*. |
 | **F-Q1** | Must the plugin's computations sheet match CE's current layout, or may it be a clean V3 sheet with the same figures? | Decides whether F1 is a formatting job or a design job. |
 | **F-Q2** | Should the sheet be issued from CDCALC directly, or through the Issue/QA workflow (area L)? | Councils require it submitted and signed. |
+| **D-Q3** | Is the single Melbourne IFD curve right for every job, or must intensity come from the job's rainfall station? | **NEW, from the D-Q2 derivation.** The plugin reads 7-9% high against a real issued sheet. Must be settled before CDCALC designs unattended. |
 | **F-Q3** | When the storage drawn disagrees with the storage on the issued sheet, what should CE do — warn, or refuse to issue? | R-27 says warn; but an issued sheet is a different weight of document. |
 
 ---
