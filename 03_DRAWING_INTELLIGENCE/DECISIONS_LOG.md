@@ -959,3 +959,24 @@ not a council's published figure, so it does not close that question, but it say
   storage against the sheet's stated total.
 - **213 of CE's computations files are `COMPUTATIONS - PUMP.xlsx`** — spreadsheets, and pump rather than
   detention. Not read. ClosedXML is already referenced if that is wanted.
+
+### 2026-09-15 (evening) — Tim's five rulings on areas D + F (catchments, CDCALC, OSD)
+
+Asked in `01_MASTER_PLAN/AREA_D_F_CATCHMENTS_CDCALC_OSD_PLAN.md` §6 and answered the same evening.
+
+| # | Question | Tim's answer |
+|---|---|---|
+| **D-Q1** | Should CDCALC offer catchment areas from the STORM report? | **Yes — and it should do everything automatically and just ask the end user to confirm.** Not an offer-per-figure; CE works it all out and asks once. |
+| **D-Q2** | Divide a catchment's area across its downpipes? | **"Figure out how the calculations are done so we can design using this."** The task is to derive CE's actual calculation chain from its own evidence first, so the plugin can *design* with it rather than only record it. |
+| **F-Q1** | Match CE's current computations sheet, or a clean V3 one? | **Clean V3, with Creative Engineering branding and a logical layout.** |
+| **F-Q2** | Issue the sheet from CDCALC, or through Issue/QA? | **Directly through CDCALC.** |
+| **F-Q3** | Storage drawn disagrees with the issued sheet? | **Warn** (consistent with R-27). |
+
+**What D-Q1 changes about the design.** The STORM-02 pattern (offer, wait for yes, per figure) was right for
+CDDESIGN's first outing but is **not** what Tim wants here: CDCALC should compute the whole thing and present
+one confirmation. Provenance still has to be visible — he is confirming, so he must be able to see what each
+figure came from — but it is one decision, not a run of them.
+
+**What F-Q1 settles.** The sheet is a **new CE-branded V3 document**, not a reproduction of the current one.
+That makes F1 a design job rather than a formatting job, and it means `CalculationExportPackage`'s existing
+content can be kept while its presentation is redone.
