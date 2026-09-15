@@ -1,0 +1,18 @@
+# Bulk evidence and client data NEVER enter this repository (DATA-01).
+02_Anonymised_Evidence/
+90_Private_Scratch/
+07_Visual_Review/
+01_Private_Index/
+*.dwg
+*.dwt
+*.bak
+*.sv$
+# Client-identifying packets kept on disk only
+*STRUCTURAL_OVERNIGHT_60_PROJECT_PACKET*
+*STRUCTURAL_WHOLE_PROJECT_REVIEW_PACKET*
+*PROGRAMME_STATUS*
+# Secrets
+*.key
+*.pem
+*.env
+*.local.json
