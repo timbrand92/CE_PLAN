@@ -789,3 +789,22 @@ ON SITE DETENTION CRITERIA block (`OnSiteDetentionCriteriaService`) and on the B
 **Defect this exposes:** `DetentionTwlCommand` asks for the required volume **in litres** and offers CDCALC's
 figure as a ready-to-press default. Accepting that default reads 25.06 m³ as 25.06 litres — **out by 1000×**.
 Logged as a Civil behaviour fix; not deployed.
+
+### Built against these rulings, same evening — branch `claude/civil-f2-destinations`
+
+Cut from `9058a405` (0 behind the live Civil bundle `10ac480d`, verified by reading the installed DLL, not the
+register). **Nothing deployed. Nothing tested in AutoCAD.**
+
+| Commit | What |
+|---|---|
+| `a5dce440` | TWL-01 + TWL-02 + SPLIT-01 + the litres/cubic-metre defect (BUG-155) |
+| `df00e23f` | F2.2 — a downpipe's destination becomes a recorded fact, new `CDDEST` |
+
+Three build lanes (net10, net8, net48) at 0 errors. Full Civil suite 8687 passed / 23 failed / 17 skipped —
+failure **names** diffed against the previous run and identical, so no new failures.
+
+Two records faults found and fixed in passing, worth knowing because they are the kind that recur:
+- **`CDTWL` was built on 15 Sep and registered nowhere** — not in `command-registry.json`, not on the ribbon.
+  It could only be reached by typing it. Now on the Review panel with `CDDEST`.
+- **`SourceTagService.GetTagCategory` held its own copy** of how a tag is read. It now delegates to the pure
+  `SourceFamilies.CategoryOf`, so the rules and the drawing cannot drift apart on what family a tag is in.
