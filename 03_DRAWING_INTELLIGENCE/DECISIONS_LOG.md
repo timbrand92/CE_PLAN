@@ -832,3 +832,38 @@ until the library holds real tanks with length, width and height.
 The market sizes are researched in `CDWT_MELBOURNE_TANK_LIBRARY_RESEARCH.md` §3, but **they are product figures,
 not CE's ruling**. Under R-00 the office values are Tim's to set. **Open question for Tim: seed the library from
 that research, or does he want to supply the sizes the office actually specifies?**
+
+### Steps 6 and 7 built — 15 September 2026 (evening), branch `claude/civil-f2-destinations`
+
+| Commit | What |
+|---|---|
+| `beaffbfd` | Merged PERF-001 / PERF-002 / SHARED-001 (the CDDEBUG lag fix Tim reported, the shared engine, the Structural telemetry privacy fix) |
+| `4f04b19d` | **Step 6** — grade-driven inverts |
+| `22bbe071` | **Step 7** — OVR-01 read-only gap report + shared pipe words |
+
+**Step 6 found a real drawing-vs-record split.** CDPROPAGATE's plan ignored the invert-override flags, so the
+preview proposed a new level for a pipe whose level had been typed by hand; Apply then wrote that level into
+the **drawing** (pipe data *and* the IL text on the plan) while the record writer correctly refused it. The
+sheet and the record disagreed about the same pipe end, announced only in the log file. **That is what "feels
+glitchy" was.** Now one decision drives both writes, CDPROPAGATE asks (Keep is the default and what Enter
+does), and what was kept is said on the command line.
+
+**Step 7's report is the useful part: #77 is much smaller than assumed.** Grip *positions* need no work at all
+— a CE pipe on 2024 is a Polyline with its own vertex grips, and `CompoundGripOverrule` already suppresses the
+wall grips. Two evidenced gaps remain (nothing flattens Z on a 2024 grip move; the words were prose only). The
+words are now single-sourced. **The overrule itself was deliberately not built**, because one question —
+whether the separate MLINE walls follow a vertex grip drag on 2024 — cannot be answered from the code and
+decides the size of the work.
+
+### Open for Tim, carried forward
+
+1. **Q-GRIP-1** — a pipe end grip dragged away from its pit: stay connected and look wrong until CDCHECK flags
+   it (today's behaviour, no work), or ask there and then? Option (b) must be built identically twice.
+2. **Q-GRIP-2** — the walls probe needs an **AutoCAD 2024** machine. Available, or proceed with the two
+   evidenced gaps only?
+3. **Two unreadable tank block names** (`A$C1cba1a13`, `A$C72c6940a`) still need the names Tim said they could
+   be given.
+4. **Structural has no packaging script** in the repo, and its installed bundle carries **no `CE_SHARED.dll`**.
+   Shipping the Structural privacy fix needs that resolved. Measured and safe meanwhile: `CE_SHARED` changed
+   **by addition only** since the live bundle (9 new files, 0 modified, 0 deleted), so a **Civil-only** install
+   is safe — the old Structural sees every API it was compiled against.
