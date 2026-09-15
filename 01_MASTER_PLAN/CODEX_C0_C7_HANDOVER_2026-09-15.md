@@ -432,3 +432,17 @@ The following register is carried forward from the read-only per-commit audit. S
 | 913419b7 | WANTED correction | Share Manager input Escape handling before workspace close |
 | 254793f8 | WANTED correction | Keep Structural settings open until save is confirmed |
 | a5382bff | DOC ONLY | Consolidate unresolved UI connection handoff requirements |
+
+## Tim's later window ruling — 15 September 2026
+
+Tim approved long-content handling: "Open a separate resizable read-only review window".
+
+Tim then clarified: "MAKING SURE THE WINDOW OCCUPIES AROUND 90 % OF THE AUTOCAD WINDOW WHICH IS AT ITS SMALLEST 1920 x 1080" and "IT NEEDS TO WORK LIKE A SMART APPLE INTEGRATION / UI / UX WOULD WORK & FEEL BUT STILL LOOK LIKE A CE DESIGNED PROGRAM". His objection is to excessive tabs and buttons created merely to avoid scrolling.
+
+Implementation interpretation: use approximately 90% of available AutoCAD bounds, retain CE appearance, keep normal related inputs together with few meaningful groups, and keep previews/status/Update/Cancel visible. Exceptional long remarks/comparison/connection evidence goes to the approved resizable read-only review window. This supersedes treating 900x600 as the primary layout design target; smaller-size guards remain useful robustness evidence. Windows display scaling must be measured, not assumed. The number of final PIT groups has not been decided by this note.
+
+Current source evidence: PitDialog.OnSourceInitialized calls ApplyPreferredWindowSize(this, 0.82). Retained workshop fallback instead uses FitWorkshopFallback, which only caps the existing size; TryFitTabbedEditor additionally fixes dimensions and caps height at820. Changing the ordinary window fraction alone cannot satisfy all routes. WindowSizingService remains Claude-owned; use its existing available-bounds contract from window code or agree a precise owner change rather than editing the service silently.
+
+Latest completed local retained-window receipt: pit-pages-fallback-connected.trx, 45 executed /41 passed /4 failed /0 skipped. Four actual comparison overflow failures remain at C2LongContentTests.cs:160. These are not waived; the earlier removed-scroll failures are no longer the immediate evidence. Current two fallback source/test edits remain uncommitted on codex/pit-no-scroll-20260915 at6b32658f (1 ahead/0 behind Civil10ac480d). No installation or AutoCAD acceptance.
+
+Owner save-return dependency update: fresh #78 now names af7172e5, revision2, with BeginEdit before ShowDialog and EditCompleted notification. This supersedes the earlier statement that the requested owner correction is unavailable. Codex still needs to inspect/integrate this revision and verify first refusal, retry and terminal window cleanup; it has not been connected by this note. Keep this separate from the PIT sizing candidate.
