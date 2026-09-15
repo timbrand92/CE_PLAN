@@ -1027,3 +1027,26 @@ jobs the station cannot be read the way the ruling assumes. Options, for Tim:
 3. Ask, once per job, and remember it on the drawing.
 
 Nothing is built on this until Tim rules.
+
+### 2026-09-15 — Tim: **"we use blue factor from now onwards"**
+
+Blue Factor is CE's rating tool going forward. Melbourne Water STORM is **legacy**.
+
+**What this settles:**
+- The Blue Factor reader is the **primary** path, not a second one. CE should speak of *"the rating report"*,
+  not *"the STORM report"*, anywhere the user reads it.
+- The STORM reader is **kept**, because the 1,500+ existing jobs carry STORM reports and a legacy job must
+  still be readable. It is not removed and not deprecated in code.
+- The folder convention is unchanged: reports still live in `<job>\Civil\STORM Report - WSUD\`, whatever the
+  tool. That folder name is now historical, and CE must not depend on the word STORM meaning the format.
+
+**What this makes urgent — D-Q3.** Tim ruled *"rainfall station per job, read it from the storm report."*
+**A Blue Factor report does not carry a rainfall station; it names a municipality.** So from now on the station
+cannot be read from the report at all, and the D-Q3 ruling cannot be implemented as worded. The three options
+put to Tim stand:
+
+1. map council → rainfall station once (about 40 councils, stable);
+2. take the station from the job's older STORM report where one exists — **not available on new jobs**;
+3. ask once per job and remember it on the drawing.
+
+**Option 2 is now effectively dead for new work.** Nothing is built until Tim rules between 1 and 3.
