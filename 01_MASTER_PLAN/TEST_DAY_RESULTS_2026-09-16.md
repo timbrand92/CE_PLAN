@@ -171,7 +171,19 @@ Tim, at the end of the session:
 
 ---
 
-## 5. Ownership — unchanged, and it matters here
+## 4a. OVERRIDE — Tim, 16 September 2026: Claude builds the CDWT window
+
+> **Tim: *"build the CDWT window yourself, ignore ruling B for now"***
+
+**This suspends Ruling B for the CDWT window only.** It does not change ownership of any other window, and it
+is explicitly *"for now"* — it is not a general reversal of the 15 September ruling.
+
+**Collision risk, stated so it is not discovered the hard way:** Codex may already be working on Civil
+windows. The CDWT window is now Claude's. If Codex has work in flight on `WaterTankPlanBlockPickerDialog` or a
+tank window, **Tim must be told before either side merges**, because two hands on one window is exactly how
+work gets lost.
+
+## 5. Ownership — otherwise unchanged, and it matters here
 
 **Ruling B: Codex builds windows. Claude owns behaviour, the spine and deploys.** Several items above are
 window work (G-03 the CDDESIGN window, W-01 the tank window's appearance, TWL-07 if CDTWL becomes a window).
