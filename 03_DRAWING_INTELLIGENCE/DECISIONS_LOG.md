@@ -996,3 +996,34 @@ on 100% of genuine reports. What is missing is **a curve per station**.
 **Until a per-station curve set exists, the plugin must not silently apply the Melbourne curve to a job whose
 report names a different station** — it should say which station it used, or say it does not have that station's
 curve. Nothing invented.
+
+### 2026-09-15 (evening) — CE has changed rating tool, found by testing 2026 jobs
+
+Tim: *"test against recent projects in 2026."*
+
+**CE's current jobs do not use Melbourne Water STORM Rating Reports. They use Blue Factor**
+(`bluefactor.com.au`). The STORM parser read none of them, so every reader built earlier that evening would
+have done nothing at all on current work.
+
+Blue Factor is **better** for CE: its catchment list names the destination in the catchment's own name
+(`D1 ROOF TO WT1`, `ROOF TO LPD`), which is precisely the per-downpipe destination F2.2 exists to record. It
+also gives site area, municipality, surface type per catchment, tank retention volumes and a compliance score.
+Both tools are now read into one shape, so nothing downstream had to change.
+
+**A drafting convention worth adopting, and it is nearly free.** The destination is only machine-readable when
+the catchment is *named* that way. One 2026 job names its catchments `ROOF 1` / `DRIVEWAY 1`, and CE then
+cannot state connected roof area at all — it reports them as unknown rather than guessing, because a guess
+there moves the detention volume. **Naming catchments "ROOF TO WT1" instead of "ROOF 1" is the difference
+between CE being able to justify a tank and not.**
+
+### D-Q3 needs revisiting before it can be built
+
+Tim's ruling was *"rainfall station per job, read it from the storm report."* That works for a STORM report,
+which names a `Rainfall Station`. **A Blue Factor report does not — it names a municipality.** So on current
+jobs the station cannot be read the way the ruling assumes. Options, for Tim:
+
+1. Map council → rainfall station once (CE uses roughly 40 councils; the mapping is stable).
+2. Take the station from the older STORM report when the job has one.
+3. Ask, once per job, and remember it on the drawing.
+
+Nothing is built on this until Tim rules.
