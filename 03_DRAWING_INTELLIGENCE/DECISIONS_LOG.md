@@ -887,3 +887,28 @@ report read-only and print what it found. If the real text layer breaks rows acr
 a second pass — the probe showed PDFium can do that with vertically-set text.
 
 Nothing consumes the result yet: wiring it into CDDESIGN is the next slice.
+
+### OVR-01 (#77) built — 15 September 2026 (evening), `82b219e6`
+
+Tim: **"do the ovr-01 gaps."** Both evidenced gaps are built: a pipe can no longer be lifted off the plan by a
+grip drag on AutoCAD 2022-2026, and a drag that would collapse it under 1 mm is refused in the contract's own
+words, before anything moves.
+
+**Two corrections to the Step 7 report, found while building it. Both make #77 smaller.**
+
+1. `CompoundGripOverrule` — which the report credited with suppressing the wall grips — is registered inside
+   `if (false)` and does nothing at runtime.
+2. **A CE pipe has no wall entities at all.** The walls are *drawn* by `PipeDrawableOverrule.WorldDraw`; only
+   `StripDrainCommand` still creates a real `Mline`. So the walls follow the polyline every time it redraws and
+   cannot lag, be stranded or need a rebuild.
+
+**Therefore Q-GRIP-2 is WITHDRAWN** — the AutoCAD 2024 probe is no longer needed to scope #77. A 2024 pass is
+still wanted to accept the work.
+
+The mistake was inferring runtime behaviour from the presence of a class without checking whether it was
+registered. Presence of code is not evidence of behaviour — the same discipline the Autodesk guardrails already
+demand, applied to our own code.
+
+**Q-GRIP-1 is still open and still needs Tim:** when a pipe end grip is dragged away from the pit it is
+connected to, should the pipe stay connected and look wrong until CDCHECK flags it (today's behaviour, no work),
+or ask there and then? Option (b) must be built identically on both platforms.
