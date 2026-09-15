@@ -7,9 +7,9 @@ lanes, and is **not installed**. Nothing has been deployed.
 |---|---|
 | **Worktree** | `C:\Lisp Files\CE_ACAD_PLUGIN\.claude\worktrees\ce-civil-handoff-75-percent-671a19` |
 | **Branch** | `claude/ce-civil-handoff-75-percent-671a19` (pushed) |
-| **Commit to deploy** | **the tip of that branch.** It was **`60c1aa54`** when this was written — check with `git log --oneline -1` and use what you actually see |
+| **Commit to deploy** | **the tip of that branch.** It was **`c1af9781`** when this was written — check with `git log --oneline -1` and use what you actually see |
 | **Live right now** | `817d482c` — unchanged; nothing was installed overnight |
-| **Full suite (net10)** | **9041 passed / 23 failed / 17 skipped** at `ca7dcead` — the 23 are the same tests that already fail at `326c1303`. `60c1aa54` on top of it changes only `CHANGELOG.md`, which is neither compiled nor shipped |
+| **Full suite (net10)** | **9042 passed / 23 failed / 17 skipped** at `c1af9781` — **+131 passing over the `326c1303` baseline, and the 23 failures are byte-for-byte the same tests that already fail there**, measured by checking that commit out into a throwaway worktree and running the same suite |
 | **Builds** | net48, net8.0-windows, net10.0-windows — **0 errors** |
 
 > **Nothing in this document deploys anything.** Claude did not deploy, because the rule is that only the
