@@ -1,0 +1,226 @@
+# Council rules — the open questions
+
+**Every question raised by reading thirteen council documents that Tim has not yet answered.** They are
+scattered one-by-one through the `COUNCIL_*.md` files; this is the single list.
+
+**Nothing here is a decision.** An unanswered question stays on this list until Tim answers it, in his own
+words, and then moves to the council file it belongs to with the date.
+
+Started 15 September 2026.
+
+---
+
+## A. Numbers that go into every job
+
+These change flows, pipe sizes and orifice sizes on every drawing. They matter most.
+
+### A1 — The runoff coefficient for soft ground: 0.30 or 0.35?
+
+**What it is.** The number that says how much rain runs off lawn, garden and landscaping rather than
+soaking in. It multiplies straight into the flow, so it decides every pipe size, every orifice and every
+detention volume.
+
+**What we found.** The plugin uses **both**. The automatic design uses 0.35. The Boyd's calculator window
+opens showing 0.3, and so does the pump sizing. Worse, when the plugin works out the pre-development
+coefficient it uses 0.35 but **prints working beside the answer that says 0.3** — so anyone checking the
+sum by hand from what we showed them would not get the number we showed them.
+
+**What the councils say.** Four of them state 0.30 for a soft surface and 0.90 for a hard one: Banyule,
+Darebin, Maroondah, and Banyule again in its general table. Banyule and Maroondah both use **0.35 as a
+whole-site pre-development figure**, which is a different thing. So the likely explanation is that 0.35 is a
+*site* number sitting in the *soft ground* box.
+
+**The question.** Is the soft-ground coefficient 0.30, is it 0.35, or are they two different numbers for
+two different sums?
+
+**Blocks:** correcting the printed working; every flow the plugin calculates.
+
+### A2 — The orifice discharge coefficient: 0.6 everywhere?
+
+**What it is.** How freely water escapes through the hole that limits the site's discharge. A bigger
+coefficient means a smaller hole for the same permitted flow.
+
+**What the councils say.** Maroondah states **0.6 for a round pipe**, with a worked example. Frankston has
+0.6 built into its one-step formula. **Darebin alone says 0.6 for a square or rectangular hole and 1.0 for
+a round one.** The difference between 0.6 and 1.0 is a hole about 29% bigger in diameter — roughly 60 mm
+where Darebin's own formula gives 46.
+
+**The question.** Is it simply 0.6 everywhere, with Darebin recorded as the one exception? Or does each
+council get its own?
+
+**Blocks:** every orifice we draw.
+
+### A3 — Rounding the orifice: up, down, or nearest?
+
+**What it is.** The sum gives an awkward number like 42 mm; the hole has to be a real size.
+
+**What the councils say.** Maroondah works out 42 mm and **adopts 40** — it rounds down to the nearest size
+off the shelf, from 32 · 40 · 50 · 65 · 80 · 90 · 100 · 150. Manningham says **nearest standard pipe
+diameter ±2 mm**. Our own recorded answer was to snap **up** to the next standard size at or above the
+minimum.
+
+**Why it matters.** Rounding up lets out *more* than the permitted discharge. Rounding down lets out less
+and holds more water back.
+
+**The question.** Which are we doing?
+
+**Blocks:** every orifice we draw; the detention volume that goes with it.
+
+### A4 — The Australian Standard edition
+
+**What we found.** The councils name different editions of AS/NZS 3500.3: Darebin **2025**, Kingston
+**2021**, Frankston and Manningham **2018**, Banyule **2015**, Boroondara names none. CE holds 2018.
+
+Tim has already ruled: *"work with australian standard issue we hold currently."* That is right for
+Frankston and Manningham and differs elsewhere.
+
+**The question that remains.** Should the plugin **record which edition each council names and show it on
+the job**, so the difference is visible rather than assumed — while still working to the copy we hold?
+
+**Blocks:** nothing urgent. It is a display and record decision.
+
+### A5 — Step irons: 900 deep everywhere, or each council's own?
+
+**What we found.** Tim ruled *"LET'S DO OVER 900 DEEP."* Maroondah's own table requires step irons above
+**900**. Banyule and Manningham both say **1 metre**.
+
+**The question.** Do we hold 900 everywhere as the office rule, or follow each council's own depth?
+
+**Blocks:** the pit schedule remark; which pits get step irons drawn.
+
+---
+
+## B. Drawing rules the councils publish and we do not hold
+
+### B1 — Twin pipes: 200 mm clear between the outside faces
+
+Manningham publishes it plainly for pipes up to 600 diameter. It is a rule for exactly what the twin-barrel
+pipe object draws, and it is measured **outside face to outside face**, not centre to centre.
+
+**The question.** Is 200 mm clear what CE draws today, and does it change by council?
+
+### B2 — The biggest pipe a pit can take
+
+Banyule caps it: a 600 × 600 pit may take a 300, anything larger takes up to 600. We hold no such rule for
+any council, so a 375 into a small pit would go out unflagged.
+
+**The question.** Should the plugin warn when a pipe is too big for the pit it enters?
+
+### B3 — The pit lid chosen by where the pit sits
+
+Manningham names a class for each place: driveway, vehicle crossover, landscaped area, backyard.
+
+**The question.** Is the drafter picking that each time? Should the plugin offer it?
+
+### B4 — Agricultural drains bypass the detention
+
+Manningham requires AGI drains to **bypass the detention system entirely** and discharge to the outlet
+chamber — or, if connected in, at least 150 mm above the top of the baffle wall.
+
+**The question.** Is that how we draw them, and should the plugin treat an AGI run as a separate system
+rather than part of the drainage network?
+
+### B5 — Minimum flow velocities
+
+Frankston: 0.7 m/s running half full or more, 1.0 running less than half, 6.0 maximum. Banyule: 1.0 to 6.0.
+Maroondah: 0.75, 1.0, and 5.0 maximum.
+
+**The question.** Are minimum velocities being checked on CE designs today, or only capacity? A pipe can
+have plenty of capacity and still run too slowly to keep itself clean.
+
+### B6 — Pipe class and pipe material change by council
+
+**Class:** Mornington Peninsula requires **Class 3** minimum concrete; Darebin, Banyule and Manningham
+accept **Class 2**.
+**Material:** Maroondah **will not accept fibre reinforced concrete or vitrified clay**; Darebin and
+Manningham both explicitly accept FRC.
+
+**The question.** Is pipe class and material being set per job now, or is one specification used everywhere
+out of habit?
+
+### B7 — Multi-cell flow control units
+
+Banyule, Manningham, Frankston and Darebin all accept them. **Maroondah refuses them outright**, along with
+above-ground storage on a driveway.
+
+**The question.** Have we ever specified a multi-cell on a Maroondah job?
+
+### B8 — The detention volume written on the plan
+
+Whitehorse requires the **volume** on the drawing, not only in the computations, alongside location, levels
+and dimensions.
+
+**The question.** Is it on our plans today?
+
+### B9 — Contour intervals
+
+Whitehorse asks for existing and design contours at **0.1 m on flat sites, 0.2 m elsewhere**, extending
+**10 m into adjoining properties**.
+
+**The question.** Is that what our survey drawings carry, or would a Whitehorse job need the survey redrawn?
+
+### B10 — The critical storm duration
+
+Mornington Peninsula requires the submission to say **which storm duration was the critical one** for the
+detention volume, not just the volume.
+
+**The question.** Is that stated on CE's computations today?
+
+---
+
+## C. Things only Tim knows — has this been happening on real jobs?
+
+Each of these is a case where a council's own document differs from what the plugin holds, or from what an
+office habit would produce. None can be answered from a document.
+
+| # | Question | Why it matters |
+|---|---|---|
+| **C1** | **Basements — which council rule have we been working to?** Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | Four councils, four different answers. One of them is probably being applied everywhere. |
+| **C2** | **Where did Whitehorse's 90 mm minimum orifice come from?** It is more than twice every other council (Darebin 30, Banyule 40, Manningham 40, Maroondah 40). A 90 mm hole passes about five times the flow of a 40 mm one. | If right it shapes every Whitehorse job; if wrong, every Whitehorse orifice has been drawn too large. It is the least-supported number in the council file. |
+| **C3** | **Is CE using Frankston's 3-minute time of concentration on multi-dwelling jobs?** | It is the shortest of any council. A longer time out of habit makes the design *less* conservative than Frankston asks. |
+| **C4** | **Frankston gives flats and units a runoff coefficient of 0.8** — the same as a factory, double a house on a big block. Is that what we apply? | Most of CE's work is multi-unit. |
+| **C5** | **Have we done commercial work in Darebin?** Commercial uses 0.6 before and 0.90 after, not the residential 0.4 and 0.8 we hold. | We only store the residential pair. |
+| **C6** | **Have we done Mornington Peninsula jobs?** That Shire will not accept a table of coefficients — they must be calculated for the site to Australian Rainfall and Runoff with Bureau rainfall for that location. | A different way of working. Better known before a job lands than at assessment. |
+| **C7** | **Have Manningham jobs been drawn at 1 in 200?** Manningham requires detention pipes no flatter than **1 in 180**. We had 1:200 recorded for them. | A pipe at 1:200 there is flatter than Council allows. |
+| **C8** | **Have Maroondah jobs been drawn at 1 in 200?** Maroondah publishes a ladder by size — 1:150 for a 150, **1:250** for 225 to 450, 1:400 for 525 and up. | We had a single 1:200 recorded for them. |
+| **C9** | **Has an orifice ever gone out smaller than a council's own minimum?** We hold no minimum at all for Darebin, Banyule or Maroondah, all of which publish one. | |
+| **C10** | **Does our Boroondara orifice pit detail show a sump and weepholes?** Council photographs both at inspection and calls the photos mandatory. | If the detail does not show them the builder may not build them, and the inspection fails after the pour. |
+| **C11** | **Is Banyule's rear-fall rule being picked up?** Their design storm steps from 1 in 10 to **1 in 20 if the site falls to the rear**. | A rear-falling Banyule site would otherwise be designed to 1 in 10 by default. |
+| **C12** | **Are the water-level-to-floor freeboards being checked?** Darebin: 400 mm below habitable floors, 200 below garages. Manningham: 300 and 150. Banyule: 300 below floors and 300 below any grated inlet. | These sit **alongside** our own 150 mm water-to-pit-lid rule, not instead of it. |
+| **C13** | **Is the Boroondara enquiry being written by hand?** Council needs five figures before they will issue the permitted discharge — site coverage, total site area, roof area, paved area, landscaped area — and answers in 10 working days. All five are measurable off the drawing. | The design cannot be finished until Council answers, so it wants sending early. Also a small, high-value feature. |
+| **C14** | **Have we done Kingston jobs since the ×0.5 porous paving rule was issued?** | Carried over from the Kingston Issue 5 read; still unanswered. |
+
+---
+
+## D. Housekeeping — I can start these without a decision
+
+### D1 — Sweep the whole council file for copied and wrong values
+
+Two error patterns are proven, not suspected:
+
+- **Above-ground storage.** `minUndergroundPct` was wrong for Boroondara (fixed earlier as audit item D1)
+  and is wrong the same way for **Banyule**, which bars above-ground tanks outright. Two found, both only
+  because a document happened to arrive.
+- **The copied grade sentence.** *"Min pipe grade 1:200 for detention pipes 225 and greater"* is stored
+  against **five** councils. Correct for two (Darebin, Banyule), **wrong for two** (Manningham 1:180,
+  Maroondah's ladder), unverified for one (Knox).
+
+Also: `orificeMinMm` is **zero for 16 of 22 councils**, including three that publish a minimum.
+
+**Ask:** shall I sweep all 22 councils for these patterns, rather than catching them one at a time as
+documents arrive?
+
+### D2 — Bring the evidence file onto the live branch
+
+Every council value in the plugin carries a "where this came from" link pointing at
+`docs/evidence/COUNCIL_PROFILE_EVIDENCE_2026-09.md`. That file exists on other branches but **not on the
+live line**, so the links do not resolve where the data actually ships.
+
+**Ask:** bring it across?
+
+---
+
+## Where the answers go when Tim gives them
+
+Into the council file the question belongs to, **in Tim's own words, in quotes, with the date** — then
+struck from this list with a pointer to where it landed. Never summarised into a decision here.
