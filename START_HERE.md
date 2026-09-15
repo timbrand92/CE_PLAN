@@ -49,6 +49,16 @@ evidence studies only, when Tim names the job. **Never copy a client name or add
 
 ---
 
+## 1b. What is waiting for Tim to TEST
+
+**`PENDING_TESTS.md`** at the root of this repository is the one living list of everything built but not yet
+tested in AutoCAD, across every chat. A chat ending must never take the test list with it.
+
+- **Built something? Add it there**, with its branch, commit and the exact steps Tim should follow.
+- **Never tick a row yourself.** A green build, a passing test run and an AutoCAD result are three different
+  facts. Only Tim's word moves a row to Accepted.
+- Steps must be specific, and must say which lane — 2027 **and** 2024/net48, since 2022-2024 users are in scope.
+
 ## 2. The four facts that change most often — check them, do not assume
 
 1. **What is actually installed in AutoCAD.** Read the bundle, not a document:

@@ -68,6 +68,12 @@ AutoCAD 2027 must be on `PATH` for net10 tests, or **zero tests are discovered a
 
 ---
 
+## WHAT IS WAITING FOR TIM TO TEST
+
+**Read `PENDING_TESTS.md` at the root of `C:\CE_PLAN`.** It is the one living list across every chat, with the
+exact steps for each item. Fourteen items sit on this branch undeployed and untested, plus two already live and
+untested. **Add to it whenever you build something, and never tick a row yourself.**
+
 ## WHAT WAS DONE TODAY (all on the branch, none deployed, none tested in AutoCAD)
 
 | Item | What it does |
