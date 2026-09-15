@@ -2,6 +2,20 @@
 
 ## Read this first
 
+### Later update — owner save fix `038a3015` reviewed
+
+Claude published `claude/pipe-pit-update-failures-7836a1` at `038a3015`, one commit ahead / zero behind live `10ac480d`, with truthful result/retry operations and `docs/workflows/CIVIL_EDIT_SAVE_RETURN_CONTRACT.md`. The older statement below that no owner result contract exists is now historical. No deployment or AutoCAD acceptance follows from this source delivery.
+
+**The proposed one-line window connection is not sufficient.** Source inspection found:
+
+1. First-close ordering: Pipe `ShowDialog` is at `PipeEditCommand.cs:129`, but `CeEditorWriteHandoff.BeginAttempt` is at `:167`, after the dialog returns. Pit has the same order, `PitEditCommand.cs:246` then `:316`. Window `OnClosed`/`EndWindow` therefore runs before the first pending flag exists. Adding only the suggested guard still discards the original comparison on the first refused attempt.
+2. Completion notification: `CeEditorWriteHandoff.Finish` only removes its own weak-table entry. It neither notifies nor releases `WorkshopEditorSession`. This is not proof of an indefinite leak (both tables use weak keys), but it does not implement the contract's deterministic completion claim.
+3. Codex-owned route gap: `PitEditWorkshopDialog.xaml.cs:94–107` completes the session directly rather than using `EndWindow`. The plain default `CdDialog`/`PitDialog` does not create the workshop comparison session itself. The small-display fallback has a separate attached lifecycle. Tests must distinguish those routes rather than credit a shared helper change to every visible window.
+
+Required owner correction: publish the active edit lifetime before the first window can close, retain per-write attempt counting separately, and provide a per-model terminal callback/subscription with safe detachment (or another agreed explicit notification) so Codex can complete its own state on success, no-op, Cancel, unavailable target and exception. Claude must not edit window files; Codex will connect the shared session and Pit workshop close route and add first-refusal/retry/terminal-cleanup tests after that contract exists. Do not call the current 22 policy tests proof of the command/window event order.
+
+Pit partial writes remain a separate acknowledged owner risk; one Undo is unproved. This audit does not endorse the report's blanket statement that transactions can never span an AutoCAD pick: no Autodesk documentation establishing that universal prohibition was supplied. The concrete remaining work is moving required input collection before accepted writes and proving whole-edit outcomes. No drawing/command source was changed in this follow-up; the three unfinished PIT layout files remain preserved.
+
 **Useful work exists and some is installed. C0–C7 as a complete programme is not finished.** The immediate Civil defect is truthful Pipe/Pit Update and retained edits after failure. The immediate window defect is PIT fitting at minimum height. The saved Structural window corrections must preserve the installed SBEAM commands.
 
 ```text
