@@ -3,6 +3,15 @@
 **Written overnight 15–16 September 2026.** Everything below is built, builds clean on all three AutoCAD
 lanes, and is **not installed**. Nothing has been deployed.
 
+| | |
+|---|---|
+| **Worktree** | `C:\Lisp Files\CE_ACAD_PLUGIN\.claude\worktrees\ce-civil-handoff-75-percent-671a19` |
+| **Branch** | `claude/ce-civil-handoff-75-percent-671a19` (pushed) |
+| **Commit to deploy** | **`d6aa4dbf`** |
+| **Live right now** | `817d482c` — unchanged; nothing was installed overnight |
+| **Full suite (net10)** | **9036 passed / 23 failed / 17 skipped** — the 23 are the same tests that already fail at `326c1303` |
+| **Builds** | net48, net8.0-windows, net10.0-windows — **0 errors** |
+
 > **Nothing in this document deploys anything.** Claude did not deploy, because the rule is that only the
 > session Tim has told *in that conversation* "AutoCAD is closed, deploy" may do it. These are the steps for
 > Tim to run, and the list of what to check afterwards.
@@ -54,7 +63,14 @@ cd "C:\Lisp Files\CE_ACAD_PLUGIN\.claude\worktrees\ce-civil-handoff-75-percent-6
 git diff --diff-filter=D --name-only 817d482c HEAD
 ```
 
-If it prints a filename, **stop** — do not deploy, and say so.
+If it prints a filename, **stop** — do not deploy, and say so. *(It printed nothing when this batch was
+finished at `d6aa4dbf`, and all four live ingredients — `10ac480d`, `fb192ec3`, `15a6d535`, `a482892a` — are
+ancestors of this branch, so it is a strict content superset of what is live. Re-run it anyway at the moment
+of deploying: the live bundle has moved once already without warning.)*
+
+`Deploy-Local-AsAdmin.ps1` **will still print its "this deploy would remove work that is already live"
+lineage warning**, because `817d482c` is a merge commit and is not an ancestor of this branch. On the
+evidence above that warning is a false alarm — but the check is what proves it, not this sentence.
 
 **Step 2 — build the release bundle** (this script already carries every no-deploy flag itself):
 
