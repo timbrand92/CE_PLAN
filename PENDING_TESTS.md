@@ -15,7 +15,16 @@
 
 ---
 
-## DEPLOYED 16 September 2026, 08:05 — this IS installed now and is waiting on Tim
+## TESTED 16 September 2026 — MOSTLY FAILED. Read `01_MASTER_PLAN/TEST_DAY_RESULTS_2026-09-16.md` FIRST
+
+`c1af9781` is live and Tim has tested it. **The deploy worked; most of what it carried does not.** Do not use
+the 77-step list as a to-do — use the failure register in
+**`01_MASTER_PLAN/TEST_DAY_RESULTS_2026-09-16.md`**, which is the authoritative record of what he found.
+
+**Tim's instruction, 16 Sep:** ONE AREA AT A TIME. Priorities **`CDWT`, `CD`, `PIT`**, then test sections
+**H, I, J, K, L**, then **M**. He has withdrawn trust in large batches.
+
+### Original deploy note (kept for the record)
 
 **Live bundle is `c1af9781`.** Deployed after Tim said "AutoCAD is closed, deploy". All three lane SHA256s
 matched the staged payload and the lineage check printed nothing. **Nothing below has been tested in AutoCAD

@@ -1,5 +1,9 @@
 # CE Civil — ready to deploy, and what to test
 
+> ⛔ **SUPERSEDED BY THE TEST RESULTS.** Tim ran this list on 16 September and **most of it failed**. The
+> authoritative record is **`TEST_DAY_RESULTS_2026-09-16.md`** in this folder. This document is kept for the
+> deploy steps and the test wording only — **do not read its claims as working behaviour.**
+
 **Written overnight 15–16 September 2026.** Everything below is built, builds clean on all three AutoCAD
 lanes, and is **not installed**. Nothing has been deployed.
 
