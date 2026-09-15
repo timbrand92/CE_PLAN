@@ -1,6 +1,6 @@
 # Council rules — the open questions
 
-**Every question raised by reading sixteen council documents that Tim has not yet answered.** They are
+**Every question raised by reading seventeen council documents that Tim has not yet answered.** They are
 scattered one-by-one through the `COUNCIL_*.md` files; this is the single list.
 
 **Nothing here is a decision.** An unanswered question stays on this list until Tim answers it, in his own
@@ -206,6 +206,15 @@ the Water Act — **no structure or filling within one metre either side**. Boro
 
 **The question.** Are those drains being shown on our plans, or only the registered easements?
 
+### B10f — The impervious threshold that triggers detention is a per-council value
+
+Five different figures found: **Maribyrnong 40%** · Banyule **65%** (35% for a carpark) · Yarra **70%** ·
+Boroondara **80%**, which also excuses detention on any lot under 300 m². Maribyrnong's is by far the
+lowest, so detention is required on far more jobs there.
+
+**The question.** Is that threshold being checked per council, or is detention assumed on every multi-unit
+job? *(Supersedes B10c, which recorded only Yarra and Banyule.)*
+
 ### B10 — The critical storm duration
 
 Mornington Peninsula requires the submission to say **which storm duration was the critical one** for the
@@ -237,6 +246,9 @@ office habit would produce. None can be answered from a document.
 | **C11** | **Is Banyule's rear-fall rule being picked up?** Their design storm steps from 1 in 10 to **1 in 20 if the site falls to the rear**. | A rear-falling Banyule site would otherwise be designed to 1 in 10 by default. |
 | **C12** | **Are the water-level-to-floor freeboards being checked?** Darebin: 400 mm below habitable floors, 200 below garages. Manningham: 300 and 150. Banyule: 300 below floors and 300 below any grated inlet. | These sit **alongside** our own 150 mm water-to-pit-lid rule, not instead of it. |
 | **C13** | **Is the Boroondara enquiry being written by hand?** Council needs five figures before they will issue the permitted discharge — site coverage, total site area, roof area, paved area, landscaped area — and answers in 10 working days. All five are measurable off the drawing. | The design cannot be finished until Council answers, so it wants sending early. Also a small, high-value feature. |
+| **C17** | **Have Maribyrnong jobs been run at a 5-minute time of concentration?** Their detention criteria are tc **10** minutes and tso **6**. The stored 5 looks to have come from their *other* table — the 5-minute minimum for commercial drainage design, a different thing. | |
+| **C18** | **Has any Maribyrnong job been given 1-in-20 storage?** Council's storage storm is **1 in 10**; the 20 is their overflow requirement. | |
+| **C19** | **Is Maribyrnong's post-development coefficient floor of 0.75 being applied?** It is the highest floor seen — Boroondara's is 0.65. | |
 | **C14** | **Have we done Kingston jobs since the ×0.5 porous paving rule was issued?** | Carried over from the Kingston Issue 5 read; still unanswered. |
 
 ---
@@ -254,7 +266,16 @@ Two error patterns are proven, not suspected:
   against **five** councils. Correct for two (Darebin, Banyule), **wrong for two** (Manningham 1:180,
   Maroondah's ladder), unverified for one (Knox).
 
-Also: `orificeMinMm` is **zero for 16 of 22 councils**, including three that publish a minimum.
+Also: `orificeMinMm` is **zero for 16 of 22 councils**, including **five** that publish a minimum — Darebin
+30, Banyule 40, Maroondah 40, **Maribyrnong 40**, and Manningham 40 (the only one stored).
+
+**A third error pattern has now appeared: a value taken from the wrong row of the right document.**
+Maribyrnong's `storageAri` is stored as **20**, which is Council's *overflow* storm; the storage storm is
+**10** — and the warning stored beside the field already says 10. So the field and its own warning
+contradict each other.
+
+That makes three patterns to sweep for, not two: values copied from another council, values in the wrong
+field, and values from the wrong row.
 
 **Ask:** shall I sweep all 22 councils for these patterns, rather than catching them one at a time as
 documents arrive?
