@@ -451,3 +451,11 @@ Owner save-return dependency update: fresh #78 now names af7172e5, revision2, wi
 
 Tim: **MAKE SURE ALL WINDOWS FOLLOW THESE RULES**. Applies the later owner-relative approximately90% sizing, few meaningful input groups, visible principal actions/previews/status, CE styling and separate resizable read-only long-information review to all CE windows (Civil, Structural, Manager, Settings). Verify1920x1080 and100/125/150% scaling. This is approved UI scope, not authorization to change engineering behavior or deploy. No blanket compliance claim: only PIT owner-relative sizing has three targeted geometry checks so far; content fit, remaining windows and native acceptance remain incomplete.
 
+
+## Evening pause — Pipe/Pit hookup (15 September 2026)
+
+Tim requested: "once you complete pit and pipe hookup then pause for the evening".
+
+Local combined hookup implementation and checks complete. Paused at codex/pipe-pit-hookup-20260915 e85330fe in C:\Users\TimothyBrand\.codex\worktrees\28a2\CE_ACAD_PLUGIN, clean/pushed,16 ahead/0 behind registered Civil live10ac480d. Combines Civil editfd0a0d33 and PITdd9935ee, preserving original Claude038a3015/af7172e5.225 focused tests executed/passed; net48/net8/net10 build0 errors. No deploy; Tim's representative AutoCAD acceptance,one Undo and2024 remain open. Final combined full suite not rerun; exact parent save-return full comparison had0 new failing names.
+
+One candidate checklist is in plugin REGRESSION_LOG. Mandatory PERF/SHARED fixes and installed Structural preservation remain release gates in FLEET_STATUS.md. All other UI/Source/all-window work remains pending; do not start new work overnight. Resume only on Tim's instruction. The wider active goal is incomplete, not marked complete or blocked.
