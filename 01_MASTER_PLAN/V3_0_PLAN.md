@@ -149,7 +149,7 @@ Update this table whenever a checkpoint, audit, deployment or AutoCAD result cha
 | CDCHECK/smart drafting | Approved | Partial foundations | Not accepted | Build after topology core |
 | CDPROFILE | Approved/closed | Strong source evidence exists | Drawing workflow incomplete | Integrate then route/insertion acceptance |
 | Slab System | Approved/closed | Strong source/evidence chain exists | Drawing insertion incomplete | Integrate then regeneration acceptance |
-| Calculations/catchments | Approved/closed | Existing foundations | Guided v3 workflow incomplete | Provenance and Apply-to-drawing review |
+| Calculations/catchments | Approved/closed | Existing foundations; **area plan for D+F written 15 Sep 2026** | Guided v3 workflow incomplete | **Provenance and Apply-to-drawing review** — still the gate; the area plan puts provenance first for that reason |
 | Survey/import/consultants | Approved/closed | Partial | Unified CDIMPORT incomplete | Implement reviewed import/update path |
 | Review/issue readiness | Approved/closed | Partial | Unified workspace incomplete | Project Review and issue gates |
 | Repair/legacy/admin | Approved/closed | Partial | Unified CDREPAIR incomplete | Read-only scan and reviewed repair |
@@ -1113,9 +1113,9 @@ Every area chat must:
 | A | Project setup, planning documents, council rules and project evidence (CDSETUP) | Planned |
 | B | Survey, surfaces, existing/proposed RLs and consultant imports | Planned |
 | C | Legal point of discharge/outfall and authority connection | Planned |
-| D | Catchments, roof/impervious areas, flow paths and CDCALC | Planned |
+| D | Catchments, roof/impervious areas, flow paths and CDCALC | **Planned — area plan written 15 Sep 2026: [AREA_D_F_CATCHMENTS_CDCALC_OSD_PLAN.md](AREA_D_F_CATCHMENTS_CDCALC_OSD_PLAN.md). Far more is already built than "Planned" implies; five decisions await Tim** |
 | E | Pits, pipes, grades, sizes, labels and connected-network editing | Active through Stage 1–3 core work |
-| F | OSD/detention design, orifice sizing and storage calculations | Planned |
+| F | OSD/detention design, orifice sizing and storage calculations | **Planned — see the D+F area plan. Tim, 15 Sep: CDCALC must PRODUCE the computations sheet, *"that's been the plan the whole time"*. `CalculationExportPackage` already exports most of it** |
 | G | Water tanks, reuse, underground/underdeck tanks and complete standard details | Existing CDWT task '01a05643-e6cb-7793-9230-18b9951d99f5'; do not duplicate |
 | H | SPS/pump stations, wet wells, pump controls and rising mains | Planned |
 | I | WSUD/treatment: raingardens, swales, buffer strips, sedimentation and treatment devices | Planned |
