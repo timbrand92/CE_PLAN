@@ -81,7 +81,13 @@ Every one moves geometry or sizing and traces to *nobody* — not a standard, no
 4. **Project "too-flat" grade 1:200** — global, overrides the AS3500 per-DN ladder. `UserSettings.cs:478`.
 5. **Min self-cleansing velocity 0.6 m/s.** `MaterialVelocityLimits.cs:43`.
 6. **Min cover 600 mm** — every council (see B8).
-7. **Detention geometry rules** — TWL = obvert of highest pipe; freeboard 150 mm below cover; max orifice = 2·baffle−1; head = baffle−d/2. `DetentionSystemViewModel.cs:601,773,632,655`.
+7. **Detention geometry rules** — freeboard 150 mm below cover; max orifice = 2·baffle−1; head = baffle−d/2. `DetentionSystemViewModel.cs:601,773,632,655`.
+   - **TWL = obvert of highest pipe — SUPERSEDED as an absolute, 15 September 2026 (TWL-01).** It remains the
+     **default CE offers and names**, but it is no longer applied on its own. Tim: *"the TWL could be something
+     other than the obvert of the highest detention pipe… we had a trench grate which was a higher level"*.
+     CDTWL must list every candidate level with its source and **use nothing until Tim picks one**. The chosen
+     level is the baffle crest, and `TWL − orifice IL` is the head that sizes the orifice.
+     See `03_DRAWING_INTELLIGENCE/DECISIONS_LOG.md`, 2026-09-15 evening.
 8. **Detention pipe: preferred max length 40 m; diameters 225–600.** `AutoDesignService.cs:63,73`.
 9. **Column-vs-pad threshold 4000 mm span** (structural). `SupportPlacementEngine.cs:42`.
 10. **Min outlet drop 20 mm; default pit drop 5 mm.** `UserSettings.cs:203,220`.

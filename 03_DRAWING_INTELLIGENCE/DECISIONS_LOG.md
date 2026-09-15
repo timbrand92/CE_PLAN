@@ -740,3 +740,52 @@ paths still fail open or become unrecoverable.
 - This is also a **retrospective gate**. Earlier learning, including the I26-05 ground-floor raft/footing work, must be rechecked and split into the same two columns before it becomes a build rule, data-model rule, automated QA rule or approved CE ACAD workflow.
 - A previous `PASS` may retain its proven project observations, but it does not authorise development until both the AutoCAD drafting grammar and the engineering meaning are separately evidenced. Any missing side reopens the relevant build/understanding gate.
 - Existing CE ACAD behaviour is evidence of the current tool only. It is not automatically the final CE drafting standard and must be compared with governed drawings, details and Timothy's correction before implementation.
+
+## 2026-09-15 (evening) — Tim's rulings on the top water level, the orifice head and split-on-draw memory
+
+Asked by the Civil behaviour chat, in plain English with the context, and answered by Tim the same evening.
+Recorded here before any code was written.
+
+### TWL-01 — CE must never assert the top water level; it presents the candidates and Tim confirms
+
+**Tim's answer: "Show candidates, I pick."**
+
+This **supersedes the absolute reading** of `01_MASTER_PLAN/ENGINEERING_RULEBOOK.md` item 7
+(*"TWL = obvert of highest pipe"*). That figure is now **a default that CE offers and names, not a law it
+applies.** The earlier wording is kept and marked superseded in the rulebook itself.
+
+Tim's reason, 15 Sep: *"the TWL could be something other than the obvert of the highest detention pipe… we had
+a trench grate which was a higher level"*.
+
+What CDTWL must do:
+- list **every** level in the detained branch that could be the top water level — obvert of the highest
+  detention pipe, a trench grate, any surcharge point — each with **its level and where it came from**;
+- say which one the rulebook default would pick, and **use nothing until Tim chooses**;
+- carry the chosen level forward as the baffle wall crest, because `TWL − orifice IL` is the head that sizes
+  the orifice. A wrong level here produces a wrong orifice diameter.
+
+### TWL-02 — when CDCALC's typed level and the measured level disagree, CE shows both and Tim chooses
+
+**Tim's answer: "Show both, I choose each time."**
+
+Neither number silently wins. CE puts the typed CDCALC top water level and the level measured from the pipes and
+pits as drawn side by side, each with its source, and **does not size the orifice until Tim says which to use.**
+CE never overwrites the CDCALC box on its own.
+
+### SPLIT-01 — split-on-draw is remembered per drawing, not per user
+
+**Tim's answer: "Per drawing."**
+
+A pipe drawn across a pit splits at that pit. CE asks once **in each drawing** and remembers the answer **for
+that drawing only**. It must not live in the settings file, where a Yes on one job would silently change the
+behaviour of every job opened afterwards.
+
+### Not a ruling — settled from the code instead
+
+**The unit of CDCALC's `volumeRequired` is cubic metres.** Labelled `m³` in `CalculationExportPackage`, in the
+ON SITE DETENTION CRITERIA block (`OnSiteDetentionCriteriaService`) and on the Boyd's button
+(`DetentionSystemViewModel.BoydsSuggestedVolumeText`). Tim was not asked, because the record answered it.
+
+**Defect this exposes:** `DetentionTwlCommand` asks for the required volume **in litres** and offers CDCALC's
+figure as a ready-to-press default. Accepting that default reads 25.06 m³ as 25.06 litres — **out by 1000×**.
+Logged as a Civil behaviour fix; not deployed.
