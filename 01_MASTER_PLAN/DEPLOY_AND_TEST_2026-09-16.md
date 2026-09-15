@@ -96,11 +96,26 @@ of deploying: the live bundle has moved once already without warning.)*
 lineage warning**, because `817d482c` is a merge commit and is not an ancestor of this branch. On the
 evidence above that warning is a false alarm — but the check is what proves it, not this sentence.
 
-**Step 2 — build the release bundle** (this script already carries every no-deploy flag itself):
+**Step 2 — build the release bundle.** *(Already done overnight at `c1af9781` and verified — the payload is
+staged and waiting, so you can skip straight to step 3 unless something has changed since. Re-running it is
+harmless: it carries every no-deploy flag itself and never touches the installed bundle.)*
 
 ```bash
 pwsh -File Installer\build_installer.ps1
 ```
+
+The overnight run finished with exit code 0 and verified all three lanes **plus the object enabler**, which
+the one-object pipe steps in section J need:
+
+| Staged file | SHA256 |
+|---|---|
+| `Contents\Win64\Legacy\CE_CVL_SUITE.dll` | `AB122FEA68A97C80660D92CDD4BE8925FA87CAF16111710E5EF24ACD5115B99C` |
+| `Contents\Win64\Net8\CE_CVL_SUITE.dll` | `222F74C912E9609C6996097979BED78EDD0009C8A6DC412C4EDD6530B3988C66` |
+| `Contents\Win64\Modern\CE_CVL_SUITE.dll` | `FF898FA297086BC4F32EDA5CEE7243AAA71C2B8FBB13BD9C86B8853C14D93344` |
+| `Contents\Win64\Modern\CE_CVL_OBJECTS_2027.dbx` (the enabler) | `72194AD4243F7124700EA2B548F0BAD616468A3CCCBEE001AFDE6B91E51CF0D8` |
+
+**`CE_SHARED.dll` is present in all three lanes** — checked deliberately, because that is exactly what the
+Structural bundle is missing. The staged Modern DLL's version string is `3.0.0+c1af9781…`.
 
 **Step 3 — install it** (as your normal user, **not** "Run as Administrator"):
 
@@ -276,7 +291,7 @@ data for a real job.
 55. A pipe that starts and ends on pits but crosses nothing: says nothing, splits nothing.
 56. **Escape** at the question: nothing split, pipe intact.
 
-### J. The one-object pipe *(2027 only — needs the rebuilt enabler)*
+### J. The one-object pipe *(2027 only — the enabler was rebuilt and staged, so this is testable)*
 
 57. `CDC7UPGRADE` a pipe, then `CDFW` on it. **Both halves must be CE pipe objects.**
 58. **Move the top half aside and check there is no stray pipe underneath** — that is the whole point of it.
