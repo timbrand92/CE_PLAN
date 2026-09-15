@@ -1,6 +1,6 @@
 # Council rules — the open questions
 
-**Every question raised by reading thirteen council documents that Tim has not yet answered.** They are
+**Every question raised by reading fifteen council documents that Tim has not yet answered.** They are
 scattered one-by-one through the `COUNCIL_*.md` files; this is the single list.
 
 **Nothing here is a decision.** An unanswered question stays on this list until Tim answers it, in his own
@@ -40,9 +40,12 @@ two different sums?
 **What it is.** How freely water escapes through the hole that limits the site's discharge. A bigger
 coefficient means a smaller hole for the same permitted flow.
 
-**What the councils say.** Maroondah states **0.6 for a round pipe**, with a worked example. Frankston has
-0.6 built into its one-step formula. **Darebin alone says 0.6 for a square or rectangular hole and 1.0 for
-a round one.** The difference between 0.6 and 1.0 is a hole about 29% bigger in diameter — roughly 60 mm
+**What the councils say.** **Yarra and Maroondah both state 0.6 for a round pipe, in the same words**
+(*"coefficient of round shaped pipe"*), Maroondah with a worked example. Frankston has 0.6 built into its
+one-step formula. **Darebin alone says 0.6 for a square or rectangular hole and 1.0 for a round one.**
+
+**Four councils at 0.6, one at 1.0.** This looks ready to close on Tim's word: *0.6 everywhere, Darebin
+recorded as the exception.* The difference between 0.6 and 1.0 is a hole about 29% bigger in diameter — roughly 60 mm
 where Darebin's own formula gives 46.
 
 **The question.** Is it simply 0.6 everywhere, with Darebin recorded as the one exception? Or does each
@@ -159,6 +162,30 @@ Whitehorse asks for existing and design contours at **0.1 m on flat sites, 0.2 m
 
 **The question.** Is that what our survey drawings carry, or would a Whitehorse job need the survey redrawn?
 
+### B10a — Pipe lengths must match the manufacturer's lengths
+
+Yarra requires it explicitly, *"to avoid small pipe sections adjacent to pit"*.
+
+**The question.** When the plugin splits a pipe where a new pit is placed, should it be trying to land on
+real pipe lengths rather than leaving a short offcut beside the pit?
+
+### B10b — Several councils share the same base text
+
+Yarra's checklist repeats Manningham's lines word for word, and Yarra's time-of-concentration table is
+identical to Maroondah's, number for number.
+
+**The question.** Should the plugin hold **one shared default set that each council inherits and
+overrides**, rather than 22 separate records filled in by hand? It would also prevent the kind of copying
+error found on the 1:200 grade.
+
+### B10c — The impervious threshold that triggers detention
+
+Yarra: no detention needed below **70%** hard surface. Banyule: detention required above **65%** (and 35%
+for a carpark).
+
+**The question.** Is that threshold being checked per council, or is detention assumed on every multi-unit
+job?
+
 ### B10 — The critical storm duration
 
 Mornington Peninsula requires the submission to say **which storm duration was the critical one** for the
@@ -175,7 +202,7 @@ office habit would produce. None can be answered from a document.
 
 | # | Question | Why it matters |
 |---|---|---|
-| **C1** | **Basements — which council rule have we been working to?** Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | Four councils, four different answers. One of them is probably being applied everywhere. |
+| **C1** | **Basements — which council rule have we been working to?** **Yarra** is strictest: tank the basement if within 2 m of groundwater, **no pumping groundwater into Council's network at all**, and the agricultural drains at the building interface must be kept from letting it in. Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | **Five councils, five answers — the most divergent rule found.** One of them is probably being applied everywhere. |
 | **C2** | **Where did Whitehorse's 90 mm minimum orifice come from?** It is more than twice every other council (Darebin 30, Banyule 40, Manningham 40, Maroondah 40). A 90 mm hole passes about five times the flow of a 40 mm one. | If right it shapes every Whitehorse job; if wrong, every Whitehorse orifice has been drawn too large. It is the least-supported number in the council file. |
 | **C3** | **Is CE using Frankston's 3-minute time of concentration on multi-dwelling jobs?** | It is the shortest of any council. A longer time out of habit makes the design *less* conservative than Frankston asks. |
 | **C4** | **Frankston gives flats and units a runoff coefficient of 0.8** — the same as a factory, double a house on a big block. Is that what we apply? | Most of CE's work is multi-unit. |
