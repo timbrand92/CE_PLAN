@@ -924,3 +924,38 @@ or ask there and then? Option (b) must be built identically on both platforms.
 
 **Consequence for the build:** every figure CDDESIGN takes from the report is *offered with its source*, never
 silently substituted, and the council is filled only when it is certain.
+
+### F2.6 / F2.7 — measured against real office files, 15 September 2026 (evening)
+
+Tim named the job source and asked for the readers to be run across many real projects.
+
+**A pattern worth naming: a folder or a filename is not evidence of what a document is.**
+
+- Of **194** files taken as STORM reports, **34 were not** — tank specification sheets, supplier documents,
+  design summaries.
+- Of **199** files named "computations", **138 were not drainage ones** — most are **structural** (beam
+  precamber, shear reinforcement, minimum Ast).
+
+Both readers now require the document to **say what it is** before anything is taken from it. Before that, both
+were reading plausible-looking numbers out of unrelated documents — the most dangerous failure of the lot,
+because the number looks right.
+
+**The STORM parser, measured on the same 194 files:** site area **27.5% → 98.8%**, council 100%, rating 99.4%,
+rows 98.1%. Three faults only real files could show: a row whose name sits on the lines above its figures was
+**silently dropped** (57 m² of bypass lost on that job, which over-states how much roof is detained); the
+header labels are stacked before their values; and the street number is a bare number too.
+
+**The computations sheet confirms CE's own rulebook.** `ENGINEERING_RULEBOOK.md` item 7 says
+**head = baffle − d/2**. Across **43 of 43** orifices found in real sheets, that is exactly what CE does. The
+sheets also write `Co 0.6` and `g 9.8` in full, matching the rulebook's gravity value. **Recorded as evidence
+against the open coefficient question in `02_COUNCIL_RULES/OPEN_QUESTIONS.md`** — this is CE's own practice,
+not a council's published figure, so it does not close that question, but it says what CE has actually used.
+
+### Open for Tim — new
+
+- **Wire the computations sheet in, or chase the wordings first?** The storage required reads on about a third
+  of sheets (the wording varies across twenty years). Nothing is guessed, so CE would simply offer nothing on
+  the other two thirds. Natural home: CDTWL's volume-required prompt, plus a cross-check of CDTWL's computed
+  storage against the sheet's stated total.
+- **213 of CE's computations files are `COMPUTATIONS - PUMP.xlsx`** — spreadsheets, and pump rather than
+  detention. Not read. ClosedXML is already referenced if that is wanted.
