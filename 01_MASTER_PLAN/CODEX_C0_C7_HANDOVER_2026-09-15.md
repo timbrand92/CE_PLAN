@@ -446,3 +446,8 @@ Current source evidence: PitDialog.OnSourceInitialized calls ApplyPreferredWindo
 Latest completed local retained-window receipt: pit-pages-fallback-connected.trx, 45 executed /41 passed /4 failed /0 skipped. Four actual comparison overflow failures remain at C2LongContentTests.cs:160. These are not waived; the earlier removed-scroll failures are no longer the immediate evidence. Current two fallback source/test edits remain uncommitted on codex/pit-no-scroll-20260915 at6b32658f (1 ahead/0 behind Civil10ac480d). No installation or AutoCAD acceptance.
 
 Owner save-return dependency update: fresh #78 now names af7172e5, revision2, with BeginEdit before ShowDialog and EditCompleted notification. This supersedes the earlier statement that the requested owner correction is unavailable. Codex still needs to inspect/integrate this revision and verify first refusal, retry and terminal window cleanup; it has not been connected by this note. Keep this separate from the PIT sizing candidate.
+
+### All-windows scope confirmation — 15 September 2026
+
+Tim: **MAKE SURE ALL WINDOWS FOLLOW THESE RULES**. Applies the later owner-relative approximately90% sizing, few meaningful input groups, visible principal actions/previews/status, CE styling and separate resizable read-only long-information review to all CE windows (Civil, Structural, Manager, Settings). Verify1920x1080 and100/125/150% scaling. This is approved UI scope, not authorization to change engineering behavior or deploy. No blanket compliance claim: only PIT owner-relative sizing has three targeted geometry checks so far; content fit, remaining windows and native acceptance remain incomplete.
+
