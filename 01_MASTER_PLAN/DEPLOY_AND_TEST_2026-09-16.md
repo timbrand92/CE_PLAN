@@ -7,9 +7,9 @@ lanes, and is **not installed**. Nothing has been deployed.
 |---|---|
 | **Worktree** | `C:\Lisp Files\CE_ACAD_PLUGIN\.claude\worktrees\ce-civil-handoff-75-percent-671a19` |
 | **Branch** | `claude/ce-civil-handoff-75-percent-671a19` (pushed) |
-| **Commit to deploy** | **`d6aa4dbf`** |
+| **Commit to deploy** | **`ca7dcead`** |
 | **Live right now** | `817d482c` — unchanged; nothing was installed overnight |
-| **Full suite (net10)** | **9036 passed / 23 failed / 17 skipped** — the 23 are the same tests that already fail at `326c1303` |
+| **Full suite (net10)** | **9041 passed / 23 failed / 17 skipped** — the 23 are the same tests that already fail at `326c1303` |
 | **Builds** | net48, net8.0-windows, net10.0-windows — **0 errors** |
 
 > **Nothing in this document deploys anything.** Claude did not deploy, because the rule is that only the
@@ -35,6 +35,7 @@ means here.
 | **D2** | **Every figure says where it came from** — typed, from the rating report, measured from the drawing, required by the council, worked out from other figures, an office default, assumed, or not known. |
 | **F1 + F2** | **CDCALC now produces the drainage computations sheet**, from one record shared with the plan block and the orifice detail, so they cannot disagree. |
 | **BUG-156** | A network redesign no longer forgets the drawing's split answer, its recorded downpipe destinations, or its rainfall curve. |
+| **What's New** | The page a colleague reads now covers this release: the per-job rainfall, the computations sheet, provenance, the top water level and downpipe destinations. |
 | **Colleague-standalone guard** | CE Civil now *proves* it needs neither CE Manager nor CE Structural to run — see below. |
 
 ### The colleague-standalone gate, now measured and held
@@ -87,7 +88,7 @@ git diff --diff-filter=D --name-only 817d482c HEAD
 ```
 
 If it prints a filename, **stop** — do not deploy, and say so. *(It printed nothing when this batch was
-finished at `d6aa4dbf`, and all four live ingredients — `10ac480d`, `fb192ec3`, `15a6d535`, `a482892a` — are
+finished at `ca7dcead`, and all four live ingredients — `10ac480d`, `fb192ec3`, `15a6d535`, `a482892a` — are
 ancestors of this branch, so it is a strict content superset of what is live. Re-run it anyway at the moment
 of deploying: the live bundle has moved once already without warning.)*
 
@@ -125,7 +126,7 @@ The version string ends in the commit it was built from. It should end in this b
 
 ## 3. What to test in AutoCAD — the whole payload
 
-**Read this first.** Deploying `d6aa4dbf` installs **69 commits** of work over the live bundle, not just the
+**Read this first.** Deploying `ca7dcead` installs **69 commits** of work over the live bundle, not just the
 overnight batch. Most of it has **never been run in AutoCAD by anyone**. Tim's ruling of 14 September is ONE
 payload and ONE consolidated tick-list, so this is that list — it folds in everything that was sitting in
 `PENDING_TESTS.md` as well as what was built overnight.
@@ -155,7 +156,7 @@ data for a real job.
 ### A. Before anything else — 3 steps
 
 1. **Confirm what actually installed.** The version string ends in the commit it was built from; it must end
-   in `d6aa4dbf`.
+   in `ca7dcead`.
 2. **Open a drawing you know well and do nothing.** No errors on load, the CE ribbon appears, AutoCAD behaves
    normally. If anything is wrong here, stop — everything below is meaningless.
 3. **Type `CDRAINFALL`.** It should exist. If "Unknown command", the bundle did not install and nothing below
