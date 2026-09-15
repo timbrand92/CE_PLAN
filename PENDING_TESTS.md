@@ -17,6 +17,24 @@
 
 ## NOT YET DEPLOYED — nothing below is installed, so none of it can be tested yet
 
+### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
+
+Owner: the Civil behaviour chat. **Full steps, with the sample files, are in
+`01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` — use that document, not this summary.**
+
+| # | What | Steps | Lane |
+|---|---|---|---|
+| R1 | **`CDRAINFALL` — a job carries its own rainfall** | New command. Run it on a job with no curve: it must SAY it is using the office Melbourne curve and warn that it reads 7–9% high. Load `SAMPLE_2_lighter_place.txt`, answer No (nothing changes), then Yes. Reopen the drawing — the curve is still there. | Both |
+| R2 | **A bad block is refused, nothing stored** | `SAMPLE_4_BROKEN_only_three_rows.txt` → "needs 7 rows… 3 rows found. Nothing has been stored." `SAMPLE_5_BROKEN_wrong_order.txt` → refused for being out of order. The previously stored curve must be untouched. | Both |
+| R3 | **The rainfall actually changes the design** | `CDDESIGN` with no curve, note the storage required. Set the 18%-lighter curve, run again — **storage required must go DOWN**. Set the same-as-office curve — it must return to the original figure. | 2027 |
+| R4 | **CDCALC produces the computations sheet** | `CDCALC` → Export PDF / XLSX. The export now LEADS with a CREATIVE ENGINEERING / DRAINAGE COMPUTATIONS sheet (XLSX tab "Computations"): header, basis of design naming the rainfall curve, PSD and storage required with the council in brackets, the storage split, VOLUME OF PIPE and VOLUME OF PIT tables, an ORIFICE block, and WHERE THESE FIGURES CAME FROM. | 2027 |
+| R5 | **The sheet warns, never blocks** | Leave the council unset and export: the sheet still comes out, PSD reads **"not known"** and never `0`, and the last block names it as not established. Make the storage short on purpose — it must say **by how much**. | 2027 |
+| R6 | **Plate height says "not known"** | On the ORIFICE block, plate height is deliberately "not known" — CDCALC holds the head, not the plate height, and CE will not work one backwards. Confirm the head, diameter, Co and flow are all present. | 2027 |
+| R7 | **BUG-156 — a redesign stops forgetting** | Record a downpipe destination (`CDDEST`), answer the split question, set a rainfall curve. Run a network redesign and apply it. All three must survive. Before this fix all three were lost. | 2027 |
+| R8 | **Nothing that already worked has moved** | A job you know well with NO rainfall curve set must produce **exactly the same** detention numbers as before. Any movement at all is a fault. | Both |
+| R9 | **The 2024 lane** | R1 and R8 on AutoCAD 2024 — 2022–2024 users are in scope. | **2024** |
+
+
 ### Branch `claude/c7-one-object` @ `9058a405` — 52 ahead of live `10ac480d`, 0 behind
 
 Owner: the Civil behaviour chat. **Requires the API-v3 enabler to be rebuilt and shipped with it.**
