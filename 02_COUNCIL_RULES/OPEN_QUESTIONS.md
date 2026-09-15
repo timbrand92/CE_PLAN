@@ -1,6 +1,6 @@
 # Council rules — the open questions
 
-**Every question raised by reading fifteen council documents that Tim has not yet answered.** They are
+**Every question raised by reading sixteen council documents that Tim has not yet answered.** They are
 scattered one-by-one through the `COUNCIL_*.md` files; this is the single list.
 
 **Nothing here is a decision.** An unanswered question stays on this list until Tim answers it, in his own
@@ -25,10 +25,13 @@ opens showing 0.3, and so does the pump sizing. Worse, when the plugin works out
 coefficient it uses 0.35 but **prints working beside the answer that says 0.3** — so anyone checking the
 sum by hand from what we showed them would not get the number we showed them.
 
-**What the councils say.** Four of them state 0.30 for a soft surface and 0.90 for a hard one: Banyule,
-Darebin, Maroondah, and Banyule again in its general table. Banyule and Maroondah both use **0.35 as a
-whole-site pre-development figure**, which is a different thing. So the likely explanation is that 0.35 is a
-*site* number sitting in the *soft ground* box.
+**What the councils say.** Three state 0.30 for a soft surface and 0.90 for a hard one — Banyule, Darebin
+and Maroondah. **Five use 0.35 as a whole-site figure** — Banyule, Maroondah, Darebin, Frankston and
+**Boroondara**, which says so outright: *"sparsely developed land with a combined runoff coefficient equal
+to 0.35… not influenced by the actual (existing) site coverage."*
+
+So the explanation now has five councils behind it: **0.35 is a site number, 0.30 is the soft-ground number,
+and CE has the site number sitting in the soft-ground field.**
 
 **The question.** Is the soft-ground coefficient 0.30, is it 0.35, or are they two different numbers for
 two different sums?
@@ -186,6 +189,23 @@ for a carpark).
 **The question.** Is that threshold being checked per council, or is detention assumed on every multi-unit
 job?
 
+### B10d — How far an outfall drain must be extended
+
+Boroondara publishes a table of the *"reasonable length of drain required"* before Council accepts that an
+outfall cannot be built — 15 m to a kerb for a small lot, up to 150 m to an easement for more than six
+dwellings. No other council read has a rule of this kind, and it decides whether a job carries an outfall
+drain at all.
+
+**The question.** Is that being checked at the start of a Boroondara job?
+
+### B10e — Council drains with no easement on title
+
+A Council drain crossing a property with no registered easement still carries an **implied easement** under
+the Water Act — **no structure or filling within one metre either side**. Boroondara has many such
+"Health Act" drains.
+
+**The question.** Are those drains being shown on our plans, or only the registered easements?
+
 ### B10 — The critical storm duration
 
 Mornington Peninsula requires the submission to say **which storm duration was the critical one** for the
@@ -202,7 +222,7 @@ office habit would produce. None can be answered from a document.
 
 | # | Question | Why it matters |
 |---|---|---|
-| **C1** | **Basements — which council rule have we been working to?** **Yarra** is strictest: tank the basement if within 2 m of groundwater, **no pumping groundwater into Council's network at all**, and the agricultural drains at the building interface must be kept from letting it in. Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | **Five councils, five answers — the most divergent rule found.** One of them is probably being applied everywhere. |
+| **C1** | **Basements — which council rule have we been working to?** **Boroondara**: Council *"is not required to accept this water"*; sub-surface drains run almost continuously and are a nuisance at a kerb outlet; where no alternative exists an outfall drain must be built to the boundary. **Yarra** is strictest: tank the basement if within 2 m of groundwater, **no pumping groundwater into Council's network at all**, and the agricultural drains at the building interface must be kept from letting it in. Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | **Six councils, six answers — the most divergent rule found.** One of them is probably being applied everywhere. |
 | **C2** | **Where did Whitehorse's 90 mm minimum orifice come from?** It is more than twice every other council (Darebin 30, Banyule 40, Manningham 40, Maroondah 40). A 90 mm hole passes about five times the flow of a 40 mm one. | If right it shapes every Whitehorse job; if wrong, every Whitehorse orifice has been drawn too large. It is the least-supported number in the council file. |
 | **C3** | **Is CE using Frankston's 3-minute time of concentration on multi-dwelling jobs?** | It is the shortest of any council. A longer time out of habit makes the design *less* conservative than Frankston asks. |
 | **C4** | **Frankston gives flats and units a runoff coefficient of 0.8** — the same as a factory, double a house on a big block. Is that what we apply? | Most of CE's work is multi-unit. |
@@ -211,7 +231,9 @@ office habit would produce. None can be answered from a document.
 | **C7** | **Have Manningham jobs been drawn at 1 in 200?** Manningham requires detention pipes no flatter than **1 in 180**. We had 1:200 recorded for them. | A pipe at 1:200 there is flatter than Council allows. |
 | **C8** | **Have Maroondah jobs been drawn at 1 in 200?** Maroondah publishes a ladder by size — 1:150 for a 150, **1:250** for 225 to 450, 1:400 for 525 and up. | We had a single 1:200 recorded for them. |
 | **C9** | **Has an orifice ever gone out smaller than a council's own minimum?** We hold no minimum at all for Darebin, Banyule or Maroondah, all of which publish one. | |
-| **C10** | **Does our Boroondara orifice pit detail show a sump and weepholes?** Council photographs both at inspection and calls the photos mandatory. | If the detail does not show them the builder may not build them, and the inspection fails after the pour. |
+| **C10** | **Does our Boroondara orifice pit detail show a sump and weepholes?** Council's own drawing SD999 Rev J has a **300 mm sump** and **25 mm weep holes**, and photographs both at inspection as a mandatory item. Also: does it show the mesh fixed to 40 × 40 × 5 angle, and the plate at the greater of 300 × 300 or 3 × the orifice? | If the detail does not show them the builder may not build them, and the inspection fails after the pour. |
+| **C15** | **Have Boroondara jobs been designed with a 5-minute time of concentration?** Boroondara uses **15 minutes on every site**, deliberately, for consistency. We have 5 recorded. | Fifteen is the longest of any council. A longer time means lighter rainfall and a smaller flow, so 5 would oversize. |
+| **C16** | **Is Boroondara's post-development coefficient floor of 0.65 being applied?** The rule is the proposed land use figure **or 0.65, whichever is greater**. | |
 | **C11** | **Is Banyule's rear-fall rule being picked up?** Their design storm steps from 1 in 10 to **1 in 20 if the site falls to the rear**. | A rear-falling Banyule site would otherwise be designed to 1 in 10 by default. |
 | **C12** | **Are the water-level-to-floor freeboards being checked?** Darebin: 400 mm below habitable floors, 200 below garages. Manningham: 300 and 150. Banyule: 300 below floors and 300 below any grated inlet. | These sit **alongside** our own 150 mm water-to-pit-lid rule, not instead of it. |
 | **C13** | **Is the Boroondara enquiry being written by hand?** Council needs five figures before they will issue the permitted discharge — site coverage, total site area, roof area, paved area, landscaped area — and answers in 10 working days. All five are measurable off the drawing. | The design cannot be finished until Council answers, so it wants sending early. Also a small, high-value feature. |

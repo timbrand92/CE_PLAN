@@ -41,7 +41,13 @@ email into something the plugin can assemble — and it is the same five numbers
 anyway. Worth correcting the warning text, and worth considering as a small feature: *produce the Boroondara
 enquiry figures from the drawing.*
 
-### Not stated on the page
+### Not stated on the page — SUPERSEDED 15 September 2026
+
+> **Superseded.** The paragraph below is right about the **web page** and wrong about the **council**.
+> Boroondara's *Stormwater Drainage and Build-Over Easement Guidelines* (January 2017) publishes all of
+> these, plus the method and charts — see [COUNCIL_BOROONDARA_GUIDELINES_2017.md](COUNCIL_BOROONDARA_GUIDELINES_2017.md).
+> `psdAri` 5 and `storageAri` 10 are now **sourced**; `tcMinutes` should be **15**, not 5. Kept here with
+> its date rather than deleted.
 
 `psdAri: 5`, `storageAri: 10`, `perviousC`, `imperviousC: 0.9`, `tcMinutes: 5` are **not** published here —
 consistent with Council supplying the PSD and the storage volume itself. So those values in CE's profile
