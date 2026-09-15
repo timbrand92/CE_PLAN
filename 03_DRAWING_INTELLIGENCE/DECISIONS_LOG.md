@@ -867,3 +867,23 @@ decides the size of the work.
    Shipping the Structural privacy fix needs that resolved. Measured and safe meanwhile: `CE_SHARED` changed
    **by addition only** since the live bundle (9 new files, 0 modified, 0 deleted), so a **Civil-only** install
    is safe — the old Structural sees every API it was compiled against.
+
+### F2.4 built — 15 September 2026 (evening), `4fcb06cc`
+
+CE can now read a job's **STORM Rating Report**, which Tim authorised: *"Yes — find one."* This is what makes
+F2.2 and F2.3 pay off — the roof split stops being typed.
+
+- The **litres and areas are the report's**, not CE's. Connected roof area becomes a **sum** of the rows
+  treated by a tank; the bypass rows are the ones that go straight out and are not detained.
+- **Which report:** Tim's ruling — the latest dated file. A rating below 100 is **reported, never refused**.
+- **No new dependency.** The PDF text layer is read with PDFiumCore, which the project already references for
+  council-source rendering — and on the **2027 lane only**, that project's existing choice. Older AutoCAD gets
+  plain words; everything that decides anything is pure and compiles on every lane.
+- **DATA-01 respected:** every fixture synthetic, no client job folder opened.
+
+**Needs Tim — a 30-second check worth a lot.** The parser has **never been run against a real STORM report**;
+its shape came from the mining study, not from a file this code opened. **Name one job** and CE will read its
+report read-only and print what it found. If the real text layer breaks rows across lines, the row parse needs
+a second pass — the probe showed PDFium can do that with vertically-set text.
+
+Nothing consumes the result yet: wiring it into CDDESIGN is the next slice.
