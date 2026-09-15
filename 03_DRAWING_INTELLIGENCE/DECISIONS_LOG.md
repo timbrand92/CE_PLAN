@@ -808,3 +808,27 @@ Two records faults found and fixed in passing, worth knowing because they are th
   It could only be reached by typing it. Now on the Review panel with `CDDEST`.
 - **`SourceTagService.GetTagCategory` held its own copy** of how a tag is read. It now delegates to the pure
   `SourceFamilies.CategoryOf`, so the rules and the drawing cannot drift apart on what family a tag is in.
+
+### F2.3 built, and the one thing that gates it — 15 September 2026 (evening)
+
+`d7846be9` on `claude/civil-f2-destinations`. A placed tank's plan size, height and orifice level now reach the
+drawing record, so the detention check counts the tank. Re-use, the orifice level and the tank top are all
+**derived** (T-02), and a self-check proves the derivation closes: the storage between the derived orifice and
+the derived top comes back to exactly the detention litres the tank is rated for.
+
+The derivation matches what `CDWT_MELBOURNE_TANK_LIBRARY_RESEARCH.md` §2.3 already recorded —
+*"orifice invert = tank base + (re-use litres ÷ plan area)"* — with one refinement: volume uses the capacity the
+tank is **sold on** divided by its height, not length × width, because ribs and a domed top are not storage. On
+a 3000 L / 1800 × 900 / 2.0 m tank the drawn footprint over-states the storage by 8%. Length × width remains the
+footprint the block is drawn to (T-01).
+
+**GATE — needs Tim.** His live tank library is **empty**:
+`%APPDATA%\CE_CVL_SUITE\settings.json` → `designStandards.tankLibrary` = `[]`, 0 entries.
+
+So every `CDWT` today goes down the type-the-litres path, no library entry is attached, no size is recorded, and
+the tank is still left out of the count — **correctly and by name, but left out.** F2.3 does nothing in practice
+until the library holds real tanks with length, width and height.
+
+The market sizes are researched in `CDWT_MELBOURNE_TANK_LIBRARY_RESEARCH.md` §3, but **they are product figures,
+not CE's ruling**. Under R-00 the office values are Tim's to set. **Open question for Tim: seed the library from
+that research, or does he want to supply the sizes the office actually specifies?**
