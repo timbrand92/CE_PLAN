@@ -7,9 +7,9 @@ lanes, and is **not installed**. Nothing has been deployed.
 |---|---|
 | **Worktree** | `C:\Lisp Files\CE_ACAD_PLUGIN\.claude\worktrees\ce-civil-handoff-75-percent-671a19` |
 | **Branch** | `claude/ce-civil-handoff-75-percent-671a19` (pushed) |
-| **Commit to deploy** | **`ca7dcead`** |
+| **Commit to deploy** | **the tip of that branch.** It was **`60c1aa54`** when this was written — check with `git log --oneline -1` and use what you actually see |
 | **Live right now** | `817d482c` — unchanged; nothing was installed overnight |
-| **Full suite (net10)** | **9041 passed / 23 failed / 17 skipped** — the 23 are the same tests that already fail at `326c1303` |
+| **Full suite (net10)** | **9041 passed / 23 failed / 17 skipped** at `ca7dcead` — the 23 are the same tests that already fail at `326c1303`. `60c1aa54` on top of it changes only `CHANGELOG.md`, which is neither compiled nor shipped |
 | **Builds** | net48, net8.0-windows, net10.0-windows — **0 errors** |
 
 > **Nothing in this document deploys anything.** Claude did not deploy, because the rule is that only the
@@ -120,13 +120,13 @@ pwsh -File Installer\Deploy-Local-AsAdmin.ps1
 powershell -NoProfile -Command "(Get-Item \"$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Win64\Modern\CE_CVL_SUITE.dll\").VersionInfo.ProductVersion"
 ```
 
-The version string ends in the commit it was built from. It should end in this batch's commit.
+The version string ends in the commit it was built from. It should end in whatever `git log --oneline -1` showed before you built.
 
 ---
 
 ## 3. What to test in AutoCAD — the whole payload
 
-**Read this first.** Deploying `ca7dcead` installs **69 commits** of work over the live bundle, not just the
+**Read this first.** Deploying the tip of that branch installs **69 commits** of work over the live bundle, not just the
 overnight batch. Most of it has **never been run in AutoCAD by anyone**. Tim's ruling of 14 September is ONE
 payload and ONE consolidated tick-list, so this is that list — it folds in everything that was sitting in
 `PENDING_TESTS.md` as well as what was built overnight.
@@ -156,7 +156,7 @@ data for a real job.
 ### A. Before anything else — 3 steps
 
 1. **Confirm what actually installed.** The version string ends in the commit it was built from; it must end
-   in `ca7dcead`.
+   in the commit you built from.
 2. **Open a drawing you know well and do nothing.** No errors on load, the CE ribbon appears, AutoCAD behaves
    normally. If anything is wrong here, stop — everything below is meaningless.
 3. **Type `CDRAINFALL`.** It should exist. If "Unknown command", the bundle did not install and nothing below
@@ -333,6 +333,12 @@ data for a real job.
 
 **If you only have an hour**, do A (1–3), B (4–10), C (21–23), D (24–29), N (72–74) and O (75–77). Those cover
 the new engineering, the new document, and whether anything old broke.
+
+## 3b. Release notes and known limitations
+
+`CHANGELOG.md` in the repo now carries this release's entry and a **Known limitations** section written for a
+colleague rather than for us. It is the plain-English version of section 4 below, and it is the thing to hand
+anybody who starts using this. The plugin's own **What's New** page also now covers this release.
 
 ## 4. What is NOT done, and is honest about it
 
