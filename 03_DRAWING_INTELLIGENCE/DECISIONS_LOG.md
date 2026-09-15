@@ -912,3 +912,15 @@ demand, applied to our own code.
 **Q-GRIP-1 is still open and still needs Tim:** when a pipe end grip is dragged away from the pit it is
 connected to, should the pipe stay connected and look wrong until CDCHECK flags it (today's behaviour, no work),
 or ask there and then? Option (b) must be built identically on both platforms.
+
+### 2026-09-15 (evening) — Tim's rulings on wiring the STORM report into CDDESIGN
+
+| # | Question | Tim's answer |
+|---|---|---|
+| **STORM-01** | How does CE find the job folder? | **Climb up from the drawing.** Start at the saved drawing file and walk up until a folder is found holding `Civil\STORM Report - WSUD`. No setup. An unsaved drawing, or one outside the job folder, means CE says so and the user types as now. |
+| **STORM-02** | Read automatically, or offer? | **Offer it; Tim says yes.** Nothing in a client job folder is opened until he agrees. Consistent with DATA-01 and with knowing where every number came from. |
+| **STORM-03** | Report figure vs typed figure | **Show both, Tim chooses each time.** The same answer as TWL-02, now confirmed for this screen too. CE uses neither until he picks. |
+| **STORM-04** | The council named in the report | **Fill it in only on an exact match** with a council CE already knows. On no match, show the name the report used and let him pick. **Never a near-miss guess** — loading the wrong council's rules silently is the failure to avoid. |
+
+**Consequence for the build:** every figure CDDESIGN takes from the report is *offered with its source*, never
+silently substituted, and the council is filled only when it is certain.
