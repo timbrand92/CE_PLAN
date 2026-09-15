@@ -980,3 +980,19 @@ figure came from — but it is one decision, not a run of them.
 **What F-Q1 settles.** The sheet is a **new CE-branded V3 document**, not a reproduction of the current one.
 That makes F1 a design job rather than a formatting job, and it means `CalculationExportPackage`'s existing
 content can be kept while its presentation is redone.
+
+### D-Q3 — Tim, 15 September 2026: rainfall intensity comes from the job's own station
+
+**Tim's answer: "rainfall station per job, read it from the storm report."**
+
+This settles the 7–9% discrepancy found in the D-Q2 derivation. The plugin currently ships **one** curve (the
+office Melbourne / OSD4W polynomial in `Assets/Config/ifd-melbourne.json`) and applies it to every job. CE does
+not design that way: every STORM Rating Report names a **Rainfall Station**, and the intensity follows it.
+
+**Consequence for the build:** `RationalFlowService.GetIntensity(ari, duration)` must become
+`GetIntensity(station, ari, duration)`. The station is already readable — `StormReport.RainfallStation` reads it
+on 100% of genuine reports. What is missing is **a curve per station**.
+
+**Until a per-station curve set exists, the plugin must not silently apply the Melbourne curve to a job whose
+report names a different station** — it should say which station it used, or say it does not have that station's
+curve. Nothing invented.
