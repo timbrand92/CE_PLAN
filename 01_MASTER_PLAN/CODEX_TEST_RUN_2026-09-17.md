@@ -9,7 +9,7 @@ pipe object and labels, then CDLPD / pit-resize / tanks / propagation, then the 
 | | |
 |---|---|
 | Branch | `claude/civil-combined-2026-09-17` (merge of the windows chat, the C7/labels chat and the K/L chat) |
-| Installed build | **`3.0.0+081c82b6315c43213f1a699c3d1421fd8c795790`** — deployed 16 Sep 22:31, all three lanes read the same string |
+| Installed build | **`3.0.0+d0ffe1a281808c1837375785351581610dcc9c51`** — deployed 16 Sep 22:57, all three lanes read the same string |
 | Previous build | `3.0.0+6505fb5a…` — backup at `%APPDATA%\Autodesk\ApplicationPlugins\CE_CVL_SUITE_PRE_6505fb5a_20260916_222407.backup` |
 | Lane | **AutoCAD 2027 (net10 / Modern)** unless a row says 2024 |
 
@@ -28,13 +28,16 @@ pipe object and labels, then CDLPD / pit-resize / tanks / propagation, then the 
 
 ## Test drawings needed — Tim must name these
 
-| Ref | What is needed | Path |
-|---|---|---|
-| **DWG-A** | A normal stormwater job: several pits and pipes, at least one 450 pit with **two or more pipes running into it**, at least one pipe with a level set, one pipe running out to the street | _(Tim to fill in)_ |
-| **DWG-B** | The **16 Sep test copy** — the one with ~51 pipes already converted by `CDC7UPGRADE` | _(Tim to fill in)_ |
-| **DWG-C** | A job with **two or more water tanks on the same detention system** | _(Tim to fill in)_ |
-| **DWG-D** | A job with a **twin-barrel detention pipe** | _(Tim to fill in)_ |
-| **DWG-E** | Any job with an **xref underneath** the drainage | _(Tim to fill in)_ |
+**The paths are NOT in this file on purpose** — they name real job folders, and client names and
+addresses never go into a repository (DATA-01). They are in:
+
+> **`C:\Users\TimothyBrand\CE_TEST_DRAWINGS_2026-09-17.md`**
+
+That file lists candidates for DWG-A, DWG-B and DWG-E found from what was opened on 16 September, and
+says plainly that **DWG-C (two tanks on one system)** and **DWG-D (twin-barrel pipe)** are **not
+identified** — Tim must name those. Nothing in it has been opened or verified; Tim confirms first.
+
+**Work on COPIES**, in a scratch folder, not in the job folders.
 
 If a drawing is not supplied, mark its steps **BLOCKED — no drawing**, not FAIL.
 
