@@ -195,3 +195,32 @@ AutoCAD, their file untouched. Written up in `FLEET_STATUS.md` on the K/L branch
 **Open for Tim (5):** the `COUNCIL PIT` vs `EXISTING COUNCIL PIT` wording · the note's layer (`25DIMS` vs
 `25TEXT`) · the note's wrap width (18.7 text heights) · whether two tanks on one system should be added ·
 whether the 16 Sep `PITEDIT` tests changed one size box or both.
+
+---
+
+### BUILT 17 Sep — branch `claude/civil-other-areas-handoff-d747af` @ `0b3f17bd` (other Civil areas chat) — NOT installed, NOT tested
+
+> **Branch note for the window chat:** this branch **is** the old `claude/civil-other-areas-2026-09-16-1c1ae6`
+> (same tip, `e0cfe172`) plus this one commit. The chat's worktree could not write to the old branch's copy, so it
+> was continued under a new name cut from that branch's tip — **not from master**. Merge THIS one; the old branch
+> is contained in it.
+
+**IDENT-02 (P-07, second half)** — *"double-clicking the invert again will not let him edit it"*. Full steps and
+the evidence are in the plugin `REGRESSION_LOG.md` entry **IDENT-02**. Summary rows:
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| O16 | **Double-click a pipe's IL text opens the Edit Pipe window** | Open a COPY of a job with pipes. **Edit nothing first** — that is the point. Double-click an `IL 19.40` text: the Edit Pipe window opens on that pipe with 19.40 in the level box. Before, you got AutoCAD's plain text editor. | 2027 **and 2024** |
+| O17 | It works the **second** time too | Escape out, double-click the same IL text again: the window opens again, not a refusal | 2027 |
+| O18 | Pipe text does the same | Double-click `225 DIA. UPVC PIPE AT 1 IN 100`: Edit Pipe window opens | 2027 |
+| O19 | **Pits are unchanged** | Double-click a pit's `CL 19.65` cover text: the Edit Pit window opens exactly as before | 2027 **and 2024** |
+| O20 | **Ordinary text is still AutoCAD's** | Double-click a note in the title block that CE did not draw: AutoCAD's own text editor opens. If the Edit Pipe window opens on it, **stop and report** | 2027 **and 2024** |
+| O21 | The pipe itself is unchanged | Double-click the pipe: Edit Pipe window as before | 2027 |
+| O22 | A drawing with no CE pipes | Double-click any text: AutoCAD's editor; opening the drawing must not feel slower | 2027 |
+| O23 | **The evidence run for "changing an invert does nothing"** | Open a pipe, change a level, press OK. **Whatever happens, say what the command line said and send the log.** Two new lines now record Cancel/Escape and "OK but nothing changed", with both levels as held and as read in. This is how that half gets settled — it is **not** claimed fixed | 2027 |
+
+**Open for Tim (1, do not decide it for him):** blanking a level in the Edit Pipe window does **not** clear it from
+the pipe's stored record — the old level stays and is read back (16 Sep log 09:31:57.836 *"recovered
+SecondInvert=19.25 from PipeLinkData"*), so the schedule can keep showing a level you deleted. Five different
+places write that record and some may pass one side meaning *leave the other alone*, so changing it blind could
+break invert propagation for every pipe. Needs Tim's word.

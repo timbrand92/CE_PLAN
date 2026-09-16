@@ -2,17 +2,17 @@
 
 FOR TIM
 
-The first read-only inventory found **408 command declarations, 82 window/control layouts and 354 command-list rows**. These overlap; they are not 844 separate tools. They establish the review boundary, not completion or installed capability.
+The corrected read-only inventory found **407 command declarations, 82 window/control layouts and 354 command-list rows**. These overlap and must not be added as separate tools. They establish the review boundary, not completion or installed capability. The initial raw count of408 included one comment; that false match is explicitly recorded and excluded.
 
 | Area | Command declarations | Window/control layouts | Planning owner |
 |---|---:|---:|---|
-| Civil | 99 | 33 | Root reuses prior Civil pack, then closes detailed gaps |
+| Civil | 98 | 33 | Root reuses prior Civil pack, then closes detailed gaps |
 | Structural | 301 | 47 | Terra/high: framing, foundations, drafting, details, coordination |
 | Manager | 8 | 2 | Root: product support, updates and recovery |
 | Shared project, sheets and issue | Included in Structural count | Included in Structural count | Root; existing implementation owner preserved |
 | Shared drawing services, AI/cloud, host, installer and release | No declarations found in bounded scan | No XAML surfaces found | Root; review indirect user journeys and other UI definitions |
 
-Sixteen command declarations use constants or other forms requiring further resolution. Code-created windows, ribbon buttons, contextual actions and LISP routes still require reconciliation. Source inspection is not installed-version or AutoCAD proof.
+Fifteen Structural command declarations use same-file constants; all15 are now resolved with their source lines. The sixteenth raw unresolved match was a Civil comment, not a command. Code-created windows, ribbon buttons, contextual actions and LISP routes still require reconciliation. Source inspection is not installed-version or AutoCAD proof.
 
 ## Authority
 
@@ -40,3 +40,9 @@ Sixteen command declarations use constants or other forms requiring further reso
 ## Audit scope still outstanding
 
 Whole-plugin coverage, detailed retention, authority conflicts, cross-discipline dependencies, proposal/override/revision rules, representative visuals and scenario checks. The earlier independent Civil audit does not close any of these whole-plugin obligations.
+
+## Additional owner surfaces
+
+Read-only comparison with the identified shared Project-to-Issue working copy44b2 found23 additional XAML files, listed in `OWNER_ADDITIONAL_SURFACES.json`. This includes themes, reusable controls, actual pages and dialogs, so23 must not be represented as23 extra windows. The issue-review and embedded project/settings/help/QA/repair surfaces are materially relevant and must join the retained-control review. Root-only82 is a baseline, not a whole-product completion count. Owner-specific CD/PIT workshop layouts are evidence of existing work, not an invitation to redesign active implementation.
+
+The Structural Control Room's recorded15September preservation candidate also differs from this root copy. Its report is retained as a dependency/locator, not silently treated as current inspected source. Source boundaries must remain explicit in the final pack.

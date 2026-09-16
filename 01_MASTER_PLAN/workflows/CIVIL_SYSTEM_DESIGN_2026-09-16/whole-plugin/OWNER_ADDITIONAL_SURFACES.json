@@ -1,0 +1,117 @@
+[
+  {
+    "Source": "Modules\\Structural\\UI\\Dialogs\\CeSheetsIssueReviewDialog.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Structural\\UI\\Dialogs\\CeSheetsIssueReviewDialog.xaml"
+  },
+  {
+    "Source": "Modules\\Manager\\UI\\Themes\\Theme.SwissModern.Dark.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Manager\\UI\\Themes\\Theme.SwissModern.Dark.xaml"
+  },
+  {
+    "Source": "Modules\\Structural\\UI\\Pages\\CeProjectSheetsWorkspaceView.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Structural\\UI\\Pages\\CeProjectSheetsWorkspaceView.xaml"
+  },
+  {
+    "Source": "Modules\\Manager\\UI\\Pages\\SettingsWorkspacePage.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Manager\\UI\\Pages\\SettingsWorkspacePage.xaml"
+  },
+  {
+    "Source": "Modules\\Manager\\UI\\Pages\\ProjectSheetsWorkspacePage.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Manager\\UI\\Pages\\ProjectSheetsWorkspacePage.xaml"
+  },
+  {
+    "Source": "Modules\\Manager\\UI\\Pages\\ProjectQaPage.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Manager\\UI\\Pages\\ProjectQaPage.xaml"
+  },
+  {
+    "Source": "Modules\\Manager\\UI\\Pages\\HelpWorkspacePage.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Manager\\UI\\Pages\\HelpWorkspacePage.xaml"
+  },
+  {
+    "Source": "Modules\\Manager\\UI\\Pages\\DrawingRepairPage.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Manager\\UI\\Pages\\DrawingRepairPage.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Themes\\CivilEditorShellTheme.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Themes\\CivilEditorShellTheme.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\BatchEditWorkshopDialog.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\BatchEditWorkshopDialog.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\SlabSurfacePreviewControl.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\SlabSurfacePreviewControl.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\DrawingCheckPanelControl.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\DrawingCheckPanelControl.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\CeProvenanceChip.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\CeProvenanceChip.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\CePitPreviewControl.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\CePitPreviewControl.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\CePipePreviewControl.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\CePipePreviewControl.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\CeFieldRow.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\CeFieldRow.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Controls\\CeEditorShell.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Controls\\CeEditorShell.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\CivilGeneralSettingsView.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\CivilGeneralSettingsView.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\CivilSettingsView.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\CivilSettingsView.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\CivilHelpGuideView.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\CivilHelpGuideView.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\CouncilSourceDialog.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\CouncilSourceDialog.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\PitEditWorkshopDialog.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\PitEditWorkshopDialog.xaml"
+  },
+  {
+    "Source": "Modules\\Drainage\\Dialogs\\PipeEditWorkshopDialog.xaml",
+    "Status": "Owner-only XAML file; surface versus theme requires classification",
+    "OwnerPath": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\PipeEditWorkshopDialog.xaml"
+  }
+]
