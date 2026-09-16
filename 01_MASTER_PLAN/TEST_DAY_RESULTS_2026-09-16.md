@@ -238,3 +238,5 @@ Contract written (nothing built): plugin repo `docs/workflows/PREVIEW_CONTRACT_C
 PIT build starts on `claude/ce-civil-handoff-sept-16-5623ca`.
 
 > **Tim, 16 Sep (on the PIT stub preview): *"CAN IT HAVE THE SCREENSHOT OF THAT AREA ON THE PLAN ? WITH HIGH FIDELITY?"*** — asked, not yet answered. Options put to him: render the real drawing around the pit off-screen (same PROBE-75 route, entities from the live drawing instead of a scratch block) — needs a probe first; nothing built.
+
+> **Tim, 16 Sep: *"PROBE"*** — approved a probe for rendering the real drawing area around a pit off-screen (PROBE-75 route) before any build.
