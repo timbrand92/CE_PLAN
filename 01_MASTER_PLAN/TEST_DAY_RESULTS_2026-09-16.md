@@ -217,3 +217,12 @@ Asked whether the CD window could be redesigned to earn its 90% size. Three opti
 will land, live as he types (behaviour work, largest, also serves P-05/P-06); (2) size CD to its content instead
 of 90%; (3) bring the More… groups onto the page as a third column. **No option chosen yet — open.**
 PIT layout (2*/3*/2*, wide centre block preview) stands as built on `claude/ce-civil-handoff-sept-16-5623ca`.
+
+### 6b. Ruling — CD and PIT previews show the real thing (Tim, 16 Sep afternoon)
+
+> **Tim: *"ON SECOND THOUGHTS I AMA HAPPY WITH BOTH AS LONG AS IT CAN SHOW REAL WORLD PREVIEWS OF BOTH THE PIT
+> AND INCOMING PIPES AND THEIR DETAILS FOR THE PIT WINDOW AND THEN FOR PIPE IT SHOULD SHOW ALL PREVIEWS OF EACH
+> END SAY PIT OR IO OR WHATEVER"***
+
+Interpretation (mine): option 1 for both windows. The LAYOUT-01 proportions stand. Next step is a written preview
+contract (what is drawn, from which drawing data, what shows when an end is Unknown), then one build per window.
