@@ -226,3 +226,5 @@ PIT layout (2*/3*/2*, wide centre block preview) stands as built on `claude/ce-c
 
 Interpretation (mine): option 1 for both windows. The LAYOUT-01 proportions stand. Next step is a written preview
 contract (what is drawn, from which drawing data, what shows when an end is Unknown), then one build per window.
+
+Contract written (nothing built): plugin repo `docs/workflows/PREVIEW_CONTRACT_CD_PIT_2026-09-16.md` on `claude/ce-civil-handoff-sept-16-5623ca`. Four open questions in it for Tim: detail placement on the PIT picture, CD end context, 2022-2024 lane, missing end types.
