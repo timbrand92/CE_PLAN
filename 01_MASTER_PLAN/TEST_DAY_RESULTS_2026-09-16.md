@@ -259,3 +259,18 @@ Route B (screen capture) is screen-resolution, viewport-shaped, and the zoomed c
 > **Tim: *"AUTOCAD IS CLOSED, DEPLOY"***
 
 Live is now `6505fb5a` in all three lanes (read back from the DLLs). Backup `CE_CVL_SUITE_PRE_0737efa3_20260916_160353.backup`. Register: issue #78. Installed, not tested: PENDING_TESTS L1–L7 + BUG-159 rectangle test.
+
+### 6f. Tim's AutoCAD results on `6505fb5a` (16 Sep, ~16:30) — first sight of the new windows
+
+1. About CE Suite: Civil `6505fb5a` — **deploy verified.**
+2. Edit Pit P10: real-plan picture **appears** (P10 label, CL 19.45, pit block, sharp). Tim: *"HOW DO WE GET IT TO
+   CHANGE BASED OF THE CHANGES WE MAKE IN THE WINDOW?"* Also seen in his image: **"No connected pipes were found
+   for pit P10"** although the P10→P9 pipe exists (image 3) — a lookup defect, new, logged as PIT-CONN-01.
+3. Edit Pipe P10→P9: real-plan picture **appears** with both end captions. Same question as 2.
+4. New Pit: block picture at typed size — works. New Pipe: old schematic in a huge empty band — Tim: *"REVIEW"*.
+5. Buttons visible, typed value survives More… → Back: *"WORKS"*.
+6. Fit-guard message: *"DIDNT"* (did not appear) — good.
+7. BUG-159: *"STILL NOT WORKING LOOK AT IMAGE 6"* — rectangle mid-side grips still square. His paste shows only
+   the REC command; whether `CDGRIPDIAG → Off` was run first is NOT confirmed. Owner: the BUG-159 chat.
+8. Tim: *"IS IT JUST ME OR ARE SOME OF THE TEXT BOXES AND SPACING AND LOOK OF THINGS A BIT UNPOLISHED AND UGLY"*
+   — yes; window polish is Codex's lane under ruling B (list to be written).
