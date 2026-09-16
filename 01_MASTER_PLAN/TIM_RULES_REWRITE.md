@@ -43,6 +43,25 @@ other projects** — these rules cover all of it. Read "the real thing" as *Auto
 - **When the AI has made a mistake, it says so plainly, first, and says what it cost him** — a wasted test
   run, a wrong window, a lost hour. No burying it.
 
+### Every reply is split in two — a visible line between them
+
+```
+▶ FOR TIM
+  What happened · what to decide · what to do next · what to test.
+  Short. Dot points. Examples. Complete on its own.
+
+──────────────────────────────────────────────
+
+▽ WORKING NOTES — skip unless curious
+  Commands run, files changed, test counts, branch and commit details,
+  technical reasoning. Nothing here needs Tim's eyes.
+```
+
+- **FOR TIM comes first, every time, and stands alone.** He must be able to act without reading below the line.
+- **Nothing he must read, decide or do ever sits below the line.**
+- If a reply has nothing technical, there is no second part.
+- Same split in the morning pack, in handoffs, and in bug reports.
+
 ---
 
 ## 3. Questions to Tim
