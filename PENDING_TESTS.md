@@ -44,6 +44,7 @@ Tim's ruling 16 Sep: *"one page layout proportioned properly, no tabs"*. Layout 
 | L2 | **Nothing pushed off on the busy cases** | Same on a detention pipe with twin pipes on, and on a pipe with a linked IL label. Type a value → More… → Back: value still there. | 2027 |
 | L3 | **PIT centre preview is the wide column** | Double-click a pit. Centre PLAN PREVIEW clearly wider than either side column. Both "Bottom right" position lists on the right fully readable, not cut off. | 2027 (and 150% scaling if you can) |
 | L4 | **Fit guard** | If the command line prints "The tabbed editor does not fit this AutoCAD work area", report which window and your monitor/scaling. | 2027 |
+| L5 | **PIT preview shows every connected pipe (PIT-PREVIEW-01, `d5f41362`+)** | Double-click a pit with 2+ pipes: each pipe is a grey stub on the wall it enters, square to the wall, with "size · Entering/Leaving · IL" at its end. Pick another pipe in the list: its stub goes gold. A pipe with no IL reads "IL Unknown". A pipe CE cannot place is listed top-left as "Not placed: … – reason" with no stub. Change the pit size: stubs stay on the walls. | 2027 only |
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
