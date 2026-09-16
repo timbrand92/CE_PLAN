@@ -230,3 +230,9 @@ contract (what is drawn, from which drawing data, what shows when an end is Unkn
 Contract written (nothing built): plugin repo `docs/workflows/PREVIEW_CONTRACT_CD_PIT_2026-09-16.md` on `claude/ce-civil-handoff-sept-16-5623ca`. Four open questions in it for Tim: detail placement on the PIT picture, CD end context, 2022-2024 lane, missing end types.
 
 > **Tim, 16 Sep (confirming): *"1 – real plan drawing in the preview (pits, pipe, text, arrow, live)"*** — option 1 confirmed for CD. The four contract questions are still open.
+
+### 6c. Tim's answers to the four preview-contract questions (16 Sep)
+
+> 1. *"AT THE STUB ON THE WALL"*  2. *"only this pipe."*  3. *"The block picture is 2027-only."*  4. *"no additionS"*
+
+PIT build starts on `claude/ce-civil-handoff-sept-16-5623ca`.
