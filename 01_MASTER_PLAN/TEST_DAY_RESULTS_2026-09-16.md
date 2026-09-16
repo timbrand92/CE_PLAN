@@ -355,3 +355,16 @@ clashing with **any** CE object (pits, pipes, sources, tanks, other CE text), pl
 (3) PLACE-01 as one rule in all five placement moments; (4) 2022–2024 enabler; (5) auto-upgrade on open with one
 dated backup per drawing on first upgrade; (6) CD draws the object. "Logically of course" is read as: the rule never
 moves a label onto another obstruction and never moves a hand-placed label — the existing CV-01I guarantees stand.
+
+### 6l. Tim, 16 Sep (evening): the six "what you are missing" items — all confirmed
+
+Claude listed eight things; Tim replied on six, in his words:
+
+> *"1. The rule must be ONE rule used in five places  2. Ordinary pipes are refusing too  3. Arrows and callouts - YES
+> BUT THE CALLOUT HAS TO BE CONNECTED TO THE PIPE AND THE TEXT NEEDS TO NOT OBSTRUCT ANY OTHER CE OBJECT  4. Twin
+> pipes UPGRADE ALSO  5. One Undo  6. One line on open  — IMPLEMENT ALL OF THIS AS WELL"*
+
+Interpretation (Claude): **PLACE-01 covers callouts too** — the leader stays anchored to the pipe (never detached),
+and the callout TEXT is moved clear of any CE object like the other labels. Twin pipes go through the auto-upgrade.
+One U reverses a move and every label that followed it. Every open that upgrades pipes prints one line naming the
+count and the backup file. The fresh-pipe identity refusal (NativeEdits) is in scope of this batch.
