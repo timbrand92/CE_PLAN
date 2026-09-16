@@ -33,10 +33,12 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
-### Branch `claude/ce-civil-handoff-sept-16-5623ca` — LAYOUT-01 CD/PIT one-page windows proportioned (built 16 Sep 2026 afternoon)
+### LIVE since 16 Sep 16:06 — `6505fb5a` on `claude/ce-civil-handoff-sept-16-5623ca` (LAYOUT-01 · PIT-PREVIEW-01/02 · CD-PREVIEW-01 · BUG-159 CDGRIPDIAG)
 
-Tim's ruling 16 Sep: *"one page layout proportioned properly, no tabs"*. Layout only; no behaviour changed.
-**Built, NOT installed** — live is still `0737efa3`. Full entry: plugin `REGRESSION_LOG.md` LAYOUT-01.
+Tim: *"AUTOCAD IS CLOSED, DEPLOY"*. All three lanes read `3.0.0+6505fb5a`. Backup: `CE_CVL_SUITE_PRE_0737efa3_20260916_160353.backup`.
+**Installed, NOT tested.** Rows L1–L7 below are the list, plus the BUG-159 rectangle test in the plugin repo `docs/workflows/BUG159_DEPLOY_HANDOVER.md`.
+
+Full entries: plugin `REGRESSION_LOG.md` LAYOUT-01, PIT-PREVIEW-01, PIT-PREVIEW-02, CD-PREVIEW-01.
 
 | # | What | Steps | Lane |
 |---|---|---|---|

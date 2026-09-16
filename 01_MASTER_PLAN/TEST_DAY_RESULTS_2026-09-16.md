@@ -253,3 +253,9 @@ Route B (screen capture) is screen-resolution, viewport-shaped, and the zoomed c
 > **Tim, 16 Sep: *"CARRY ON, BUILD THE REAL PLAN PREVIEW FIRST"*** — no deploy yet; PIT real-plan preview (Route A) is being built on `claude/ce-civil-handoff-sept-16-5623ca`, which now also carries the BUG-159 CDGRIPDIAG merge.
 
 > **Tim, 16 Sep: *"CARRY ON"*** — CD real-plan preview next, same Route A; still no deploy.
+
+### 6e. DEPLOYED 16 Sep 16:06 — `6505fb5a`
+
+> **Tim: *"AUTOCAD IS CLOSED, DEPLOY"***
+
+Live is now `6505fb5a` in all three lanes (read back from the DLLs). Backup `CE_CVL_SUITE_PRE_0737efa3_20260916_160353.backup`. Register: issue #78. Installed, not tested: PENDING_TESTS L1–L7 + BUG-159 rectangle test.
