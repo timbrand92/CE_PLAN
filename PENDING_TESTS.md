@@ -33,6 +33,46 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
+### LIVE since 16 Sep 22:31 — `081c82b6` on `claude/civil-combined-2026-09-17` (ALL THREE overnight chats, one payload)
+
+Tim: *"AUTOCAD IS CLOSED, DEPLOY"*. Merge of `claude/ce-civil-handoff-sept-16-5623ca` @ `17847985` (windows),
+`claude/civil-other-areas-2026-09-16-1c1ae6` @ `e0cfe172` (C7 / labels) and `claude/civil-k-l-2026-09-16` @
+`0ed39495` (K/L). All three lanes read `3.0.0+081c82b6315c43213f1a699c3d1421fd8c795790`.
+Backup: `CE_CVL_SUITE_PRE_6505fb5a_20260916_222407.backup`. Manager's `CE_SHARED` brought into step
+(backup `CE_SUITE_MANAGER_PRE_CESHARED_20260916_223259.backup`); **Structural is NOT redeployed**, so the
+Structural half of PERF-003 is not live.
+
+Builds: net48 / net8 / net10 **0 errors**. Full net10 suite: **9,899 run · 9,860 passed · 22 failed ·
+17 skipped** — the 22 known names, all in test files this payload never touched (list below).
+
+**Installed, NOT tested.** The ONE list for this build is
+**`01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-17.md`** — 90 steps in parts S/W/C/P/O/K/L/F/R/M, being run by
+Codex driving AutoCAD. It supersedes rows L8–L18, O1–O15 and K1–L11 below as the thing to work from;
+those rows stay for the record.
+
+<details><summary>The 22 known failures, by name (recorded 17 Sep — this baseline did not exist before)</summary>
+
+AddSystemCommand_Execute_AddsAnotherSystem · AddSystemCommand_Execute_NameIsSystem2 ·
+AddSystemCommand_Execute_SelectsNewSystem · BackTest_GlenEira24115_Computed_WithinTolerance ·
+BoydsDetentionRequired_Changed_PropagatesBoydsSuggestedVolumeToAllSystems ·
+CdEnterAfterTwoPickedPoints_FinishesTheRouteInsteadOfCancellingIt ·
+CompiledDefaultSourceCallersNeverOptIntoPitPlanPlacement ·
+Copy_GivesTheCloneItsOwnIdentityDuringReconciliation ·
+EveryTabFitsOrUsesExplicitFallbackAtOfficeScaling (×3 cases) ·
+ExistingEngineeringAndInteractionRulesRemainInTheProductionCommands ·
+FinalLandingProducerCollapsesOnlyItsOwnFreeEndRunBeforeSplitPreflightAndFinalDecision ·
+GetPanels_KeepsEveryVisibleCivilCommandReachable ·
+IMP014_OnDocumentToBeDestroyed_GatesUnhookOnIsDatabaseAlive ·
+InternalCivilCommands_RebuildOnlyAfterAnAcceptedPipeChange ·
+NativeQueue_StoresIdentityContractAndRechecksItBeforePreviewAndWrite ·
+PendingValuesKeepThePriorDisplayEnvelopeAndEveryComparisonFits ·
+RefusedNativeCallbackInvalidatesTheManagedSessionBeforeReportingChannelFailure ·
+Registration_ProjectsOnlyAfterCanonicalPipeAndOwnerRecordsAreWritten ·
+SelectedLabelStillFitsThePrevious1080p125PercentEnvelope ·
+SpineReader_WiresListedVisibleReciprocalMTextIntoTheBoundedResolver
+
+</details>
+
 ### LIVE since 16 Sep 16:06 — `6505fb5a` on `claude/ce-civil-handoff-sept-16-5623ca` (LAYOUT-01 · PIT-PREVIEW-01/02 · CD-PREVIEW-01 · BUG-159 CDGRIPDIAG)
 
 Tim: *"AUTOCAD IS CLOSED, DEPLOY"*. All three lanes read `3.0.0+6505fb5a`. Backup: `CE_CVL_SUITE_PRE_0737efa3_20260916_160353.backup`.

@@ -9,8 +9,8 @@ pipe object and labels, then CDLPD / pit-resize / tanks / propagation, then the 
 | | |
 |---|---|
 | Branch | `claude/civil-combined-2026-09-17` (merge of the windows chat, the C7/labels chat and the K/L chat) |
-| Installed build | **filled in at deploy time — read it back yourself, see step S1** |
-| Previous build | `3.0.0+6505fb5a…` — bundle backup folder named in the deploy note |
+| Installed build | **`3.0.0+081c82b6315c43213f1a699c3d1421fd8c795790`** — deployed 16 Sep 22:31, all three lanes read the same string |
+| Previous build | `3.0.0+6505fb5a…` — backup at `%APPDATA%\Autodesk\ApplicationPlugins\CE_CVL_SUITE_PRE_6505fb5a_20260916_222407.backup` |
 | Lane | **AutoCAD 2027 (net10 / Modern)** unless a row says 2024 |
 
 ## Rules for this run — please follow them exactly
