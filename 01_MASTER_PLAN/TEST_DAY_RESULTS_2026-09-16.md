@@ -337,3 +337,21 @@ Interpretation (Claude, not Tim's words):
 - **Open questions put to Tim (16 Sep evening):** Q1 slide-then-flip order; Q2 clearance value (Settings page);
   Q3 2022–2024 colleagues on an auto-upgraded drawing (no 2024 enabler exists today); Q4 one dated backup per
   drawing at first upgrade only, or every time. Unanswered until Tim answers.
+
+### 6k. Tim's answers to the four C7 questions (16 Sep, evening)
+
+> Q1 slide/flip: *"SLIDE FOR A CERTAIN DISTANCE THEN FLIP, DISTANCE SHOULD BE A TOGGLE BUT NO MORE THAN 500 FROM END
+> OF PIPE. ALSO THIS NEEDS TO BE THE SAME FOR ANY OF THIS STUFF IF IT CLASHES WITH ANY OTHER CE OBJECT IN THE
+> DRAWING LOGICALLY OFCOURSE. THIS SHOULD BE PLUGIN WIDE"*
+> Q2 2022-2024: *"Build the 2024 enabler first"* (chose the recommended option).
+> Q3 build order: *"Tools read the object first, then upgrade on open"* (recommended option).
+> Q4 backups: *"One, the first time only"* (recommended option).
+
+Interpretation (Claude): **PLACE-01 is now:** an obstructed CE label slides along its pipe away from the obstruction
+up to a Settings-page distance (default to be set, hard ceiling 500 mm measured from the pipe end), then flips to the
+other side of the pipe. It applies to every CE label (pipe text, invert texts, flow arrow; callouts left as placed)
+clashing with **any** CE object (pits, pipes, sources, tanks, other CE text), plugin-wide, through one rule.
+**Build order fixed:** (1) every CE tool reads the pipe object through the seam; (2) the fresh-pipe identity refusal;
+(3) PLACE-01 as one rule in all five placement moments; (4) 2022–2024 enabler; (5) auto-upgrade on open with one
+dated backup per drawing on first upgrade; (6) CD draws the object. "Logically of course" is read as: the rule never
+moves a label onto another obstruction and never moves a hand-placed label — the existing CV-01I guarantees stand.
