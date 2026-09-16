@@ -41,6 +41,10 @@ Fifteen Structural command declarations use same-file constants; all15 are now r
 
 Whole-plugin coverage, detailed retention, authority conflicts, cross-discipline dependencies, proposal/override/revision rules, representative visuals and scenario checks. The earlier independent Civil audit does not close any of these whole-plugin obligations.
 
+### Active audit corrections
+
+The independent coverage audit is now running; `audit/coverage/OPEN_FINDINGS_CHECKPOINT.md` records concrete gaps rather than a completion pass. Root12 expands shared sheet action/recovery semantics and corrects02's generic Cancel wording. Root13 explicitly reconciles all CV5-1–15, CV7-1–15 and PS1–22 decisions/refinements; it governs over generic source-preservation wording in new Civil C1/C3/C4/C7 wherever the latter is incomplete. Structural canonical reconciliation and remaining shared/evidence-program decisions are ongoing. No count of indexed controls or decisions is accepted as proof of full behavioural coverage.
+
 ## Additional owner surfaces
 
 Read-only comparison with the identified shared Project-to-Issue working copy44b2 found23 additional XAML files, listed in `OWNER_ADDITIONAL_SURFACES.json`. This includes themes, reusable controls, actual pages and dialogs, so23 must not be represented as23 extra windows. The issue-review and embedded project/settings/help/QA/repair surfaces are materially relevant and must join the retained-control review. Root-only82 is a baseline, not a whole-product completion count. Owner-specific CD/PIT workshop layouts are evidence of existing work, not an invitation to redesign active implementation.

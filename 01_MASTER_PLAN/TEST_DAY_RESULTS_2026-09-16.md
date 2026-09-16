@@ -621,3 +621,43 @@ connected pipe is reading a record, not inventing one, and the test now also cov
 anywhere.
 
 Suite **9909 / 9869 passed / 23 failed / 17 skipped** — same 23 pre-existing names. All three lanes 0 errors.
+
+### 6t. TWL-05 built — 17 September 2026
+
+> **Tim: *"take TWL-05 as well"***
+
+**The cause was one line.** `DetentionSystemViewModel` started a new detention system with
+`private string _volumeRequired = "0.0";` — so a system nobody had typed a volume into was **saved as zero**,
+not as empty. A zero standing in for a value CE does not have is the one thing the rules forbid.
+
+**It cost more than the retyping, and one part had never been reported:**
+
+| Where | What it did |
+|---|---|
+| CDTWL | Told Tim `"0.0"` was *"not a plain number, so it cannot be offered"* — untrue, and no help. |
+| **The ON SITE DETENTION CRITERIA block** | Printed **`VOLUME REQUIRED 0.00 m3` onto the drawing** — a council-facing figure for a storage requirement that had never been worked out. **Found chasing the first fault, not reported.** |
+| CDTWL again | When no CDCALC system matched the chosen outlet, it offered nothing **and said nothing about why**. |
+
+**Fixed:** the default is now empty; a new pure rule `DetentionVolumeRequired` is the single answer to *"do we
+know the volume?"* for both readers, so they cannot disagree; CDTWL explains every case in plain English and
+always says what to do; and the criteria block prints **`NOT SET`** rather than a fabricated `0.00 m3`.
+
+**Checked and already correct, so left alone:** the CDCALC storage status already said *"Enter required volume
+to compare"*, and the computations sheet already showed *Storage required — Unknown*.
+
+**NEW QUESTION FOR TIM, found on the way and deliberately NOT changed:** the same view model hard-codes
+`_psd = "5.24"` — a **permitted site discharge**, an engineering value, in code. R-00 says every engineering
+value lives on the Settings page. A different default PSD changes designs, so this is Tim's call: Settings
+value, or start empty like the volume now does?
+
+**Also open:** `NOT SET` is Claude's wording for the criteria block, **not** words recovered from a CE
+drawing. Tim to confirm.
+
+**Not rewritten:** drawings already saved with `"0.0"` keep that string. It is now explained and shown as
+`NOT SET` rather than silently presented as a figure, but CE does not edit an engineer's records behind their
+back.
+
+Suite **9928 / 9888 passed / 23 failed / 17 skipped** — same 23 pre-existing names. All three lanes 0 errors.
+
+**CDTWL status after today:** TWL-04 ✅, TWL-05 ✅, TWL-06 pits ✅ / **pipes still open**, TWL-03 harm removed
+but cause unestablished, TWL-07 still Tim's question.

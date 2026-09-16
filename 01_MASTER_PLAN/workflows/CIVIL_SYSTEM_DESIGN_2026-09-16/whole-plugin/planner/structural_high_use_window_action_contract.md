@@ -33,17 +33,17 @@ The window passes an in-memory result to its command route. It is not evidence t
 
 ## B. FST library and foundation manager — W5
 
-**Observed entries:** Modules/Structural/Services/CeTextService.cs:1831 and Modules/Structural/Services/FoundationService.cs:692 create FstManagerWindow.
+**Observed entries:** Modules/Structural/Services/CeTextService.cs:1831 and Modules/Structural/Services/FoundationService.cs:692 create FstManagerWindow. The exact approved `ST-06` and FST action split are retained in [structural_approved_card_reconciliation.md](structural_approved_card_reconciliation.md).
 
 | Existing action / source | Source-observed effect | Preservation and review gate |
 |---|---|---|
 | Library Add / Delete / Sort — UI/FstManagerWindow.xaml.cs:230-264; cell completion :648 | Changes selected size-library rows. XAML exposes keyed size rows for several foundation families. | **Keep/Modify proposal.** Retain explicit row scope, editable key/dimension fields, and Cancel/Save separation. A library row is not job engineering approval. |
 | Refresh / system selection — …:366-371 | Refreshes manager data and responds to selected-system change. | Preserve for review. A displayed status does not prove a complete model. |
-| Regenerate selected / all — …:376-386 | Separate selected-system and all-system routes. | Preserve distinct scope. Review must show affected items before allowed regeneration and retain manual/pinned overrides. |
-| Delete selected / Zoom selected — …:426-445 | Operates on the chosen element record. | Preserve selected-item confirmation and native protection checks. An element list does not permit changing Xref, locked, or foreign content. |
-| Rename / Delete system — …:455-524 | Rename uses a confirmation dialog; deletion is a distinct route. | Preserve confirmation and revision evidence. No silent dependent-label rewrite. |
+| Regenerate selected / all — …:376-386 | Calls `FoundationService.RegenerateSystemFromUi` immediately, then refreshes the manager. | Existing action is immediate, not a Save-controlled draft. Preserve distinct scope; a future reviewed replacement needs affected-item preview, manual/pinned override retention and defined action-level Undo. |
+| Delete selected / Zoom selected — …:426-445 | Delete confirmation then `DeleteElementFromUi` immediately; Zoom operates on the chosen element record. | Existing deletion is immediate. Preserve selected-item confirmation and native protection checks; a future `ST6-9` route must show Element-only/Entire-system counts before Apply. An element list does not permit changing Xref, locked, or foreign content. |
+| Rename / Delete system — …:455-524 | Rename prompts then calls `RenameSystemFromUi` immediately; delete confirmation says “This cannot be undone” then calls delete immediately. | Existing actions are immediate. Preserve confirmation/revision evidence; do not claim Cancel reverses a completed rename/delete. |
 | Re-link / Remove orphan / diagnostics — …:537-640 | Separate orphan remediation and diagnostic-log actions. | Preserve as recovery paths. They do not prove automatic relinking is safe. Require candidate source, change preview, Cancel, one Undo, and save/reopen review. |
-| Save Size Library / Cancel — …:524-534 | Saves library route then closes; Cancel closes. | Preserve separation. Acceptance must prove Cancel does not persist and save/reopen shows data location. |
+| Save Size Library / Cancel — …:524-534 | Save calls `CommitAllEdits()` then closes; Cancel only closes. This split is evidenced for size-library edits, not manager operations above. | Preserve separation for library rows only. Acceptance: edit row → Cancel → reopen; Save → reopen shows data location. |
 
 Manager XAML shows systems, elements, diagnostics, orphans, label, kind, driver handle and override signal. Preserve those review signals; do not collapse an override into a calculated label or assume a listed record is complete.
 
@@ -104,4 +104,6 @@ A copied detail, manually adjusted label, missing catalogue item, or changed bac
 | Named windows, main action handlers, validation routes, local working/result boundaries, schedule draft snapshots, insert confirmation, selected-system/action separation. | Runtime reachability, drawing output, persistence destination/compatibility, AutoCAD Undo grouping, Xref/locked/REFEDIT response, preview fidelity, revision evidence quality, shared publish/history, installed version, Tim acceptance. |
 
 **Built:** not assessed. **Tested:** no runtime or AutoCAD testing. **Installed:** not assessed. **Tim-accepted:** not assessed.
+
+
 

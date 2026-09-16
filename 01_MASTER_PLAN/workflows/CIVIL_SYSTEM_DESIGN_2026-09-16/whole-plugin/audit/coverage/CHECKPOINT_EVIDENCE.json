@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-09-16T23:00:34.1385829+10:00",
+  "audit": "Independent Astra/medium whole-plugin planning coverage",
+  "status": "Open findings; no overall pass",
+  "conceptAudit": "Separate bounded visual closure only",
+  "artifacts": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\00_RUN.md",
+      "sha256": "2E2DB4C9EA22187FB274891DC1E53C6EDE73E3A84B5EA6623B6C2928CED1CFE6"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\01_COVERAGE_AND_AUTHORITY.md",
+      "sha256": "5330B21A372C0C6A89388C8F288EB6B4938733728AB2E1E6CD6CA0726A880C2C"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "3017727D86A8C8FFC854E3D6B34DFB2AAAF05DCBDD47C40C35E7E3F8D0F6E35F"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "1F97570641FC534887642E75DDBECF232D6F49156E2C75436F35D017F9496089"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "A4196F74014599F4DF85D9C1DBBBB1270EAF53D605D6D72DFDDBFCD3BBE262E5"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\05_CROSS_DISCIPLINE_CHANGE_CONTRACT.md",
+      "sha256": "95D7B797DA197914C3F2437AAB9600400638AA95B3F05E098F6F2BDB59A40E74"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\06_SHARED_CONTROL_PRESERVATION.md",
+      "sha256": "522F5AD37D985B046BD69F37B29BF34248F6ABCB363B23A387A25DAF91E448BA"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\07_QA_REPAIR_AND_MIGRATION.md",
+      "sha256": "323F545209AFFA3D678B5B31DC84F37D852162D51E7956A74DBB48392E7243A8"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\08_VISUAL_REVIEW_WORKING.md",
+      "sha256": "01BC0B2F2DF2786FEE9CD01F0C3DDEC9E6E467A286BBA0DB4304304C1C44AE8C"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\09_SHARED_TRANSFORMS_AND_DISCOVERY.md",
+      "sha256": "6952F08668D55CD89A0FF873C096BEBD66A848E754407E5CCAAE415EB0BFD0D4"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\10_ASSISTANT_AND_CLOUD_RECOVERY.md",
+      "sha256": "892F1EC238FC6D6A6B77F2B5163484597661F1C047FDAB073EB5244BB6854DD5"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\11_SHARED_SETTINGS_ACTION_CONTRACT.md",
+      "sha256": "F6375F6E7E38C3A52B2240B1A24EF031AE9A84EB5C6759127F2E1F8015B6407B"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\12_SHEET_STRUCTURE_ACTION_CONTRACT.md",
+      "sha256": "6E3F9EFBEE2BE06C16CA111EE869C8C418E7899442FA93D2C05BEA15CAE95C01"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\13_CIVIL_APPROVED_DECISION_RECONCILIATION.md",
+      "sha256": "09F4CFF025093A2A0ED0FB94385AEE9203CFA33C9583CD7EEC44ABFC67F36434"
+    }
+  ],
+  "directSourceChecks": [
+    "Root FstManagerWindow.xaml.cs365-580: immediate service actions versus window Cancel",
+    "44b2 CeProjectSheetsWorkspaceView.xaml.cs2170-2425: managed/issue selection, duplicate/archive/reconcile",
+    "44b2 CeProjectSheetsWorkspaceView.xaml.cs1743-1831: rename plan rebuild, cleanup/pending effects",
+    "44b2 CeSheetsStructureService.cs175-325: whole-DWG move and bounded partial active-layout backup/removal",
+    "44b2 AdvancedSettingsViewModel.cs: Reset/Apply/Discard/OSNAP action reference matching only"
+  ],
+  "approvedDetailedReads": [
+    "ST-03 initial annotation decisions throughST3-7",
+    "ST-04 full decision table and approval refinements",
+    "ST-05 full decision table and approval refinements",
+    "ST-09 decisions throughST9-13",
+    "CV-04/CV-05/CV-07 approved decision tables",
+    "PS-01 PS1-20 and approval refinements, newerPS-01F1status",
+    "SH-04 approved decisions and refinements",
+    "AS-01 decisions1-15; currentstatuses inherited separately"
+  ],
+  "indexOnlyReads": [
+    "EV01-07 decision headings; selectedEV01/02tables",
+    "39-cardINDEX, historicalimplementationcells not treatedcurrent"
+  ],
+  "notPerformed": [
+    "AutoCAD",
+    "Plugin builds/tests",
+    "Installed-state verification",
+    "Source edits",
+    "Deployment",
+    "Network/cloud calls",
+    "Client corpus expansion",
+    "Exhaustive39carddecisionclosure"
+  ],
+  "delta": {
+    "COV06": "Root12 inspected against actual44b2 service/handlers; planning gap addressed, runtime qualification retained",
+    "COV01_05": "Awaiting corrections/reconciliation",
+    "additionalShared": "SH04 exportprivacy/corruptbackup; AS01 intelligentobjects/placeholders sent to root"
+  }
+}

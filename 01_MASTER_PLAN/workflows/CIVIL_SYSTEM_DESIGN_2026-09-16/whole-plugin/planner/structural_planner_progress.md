@@ -50,3 +50,11 @@
 | 2026-09-16T22:41:55.6115863+10:00 | Completed | civil_action_boundary_contract.md | Source-observed cancellation, preview, selection and output boundaries for Civil non-CD/PIT high-use routes, including one explicit source-vs-approved-direction conflict for owner review. |
 
 **Latest verified checkpoint:** 2026-09-16T22:41:55.6115863+10:00 — Civil non-CD/PIT action-boundary contract added. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+
+| 2026-09-16T22:53:54.6346411+10:00 | Completed | command_discovery_reconciliation.md | Reconciled suite register, three module registries and source declaration ledgers; records user-journey access, aliases/hidden/expert/config gaps and CDTAG/CDSOURCE automatic-nearest-pipe split trigger. |
+
+**Latest verified checkpoint:** 2026-09-16T22:53:54.6346411+10:00 — command-discovery reconciliation completed. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+| 2026-09-16T23:01:14.4676048+10:00 | Completed | structural_registry_gap_dispositions.md; structural_approved_card_reconciliation.md | Traced 37 declaration-only and eight registry-only Structural identities to source method/alias/shared-owner/card routes; recorded discovery/Help boundary and central-register intent. Added exact ST-03/04/05/06/09 requirements and corrected the FST manager’s immediate-action versus size-library Save/Cancel split. |
+
+**Latest verified checkpoint:** 2026-09-16T23:01:14.4676048+10:00 — command-gap dispositions and approved-card/FST correction completed. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+

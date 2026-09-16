@@ -23,4 +23,8 @@ Latest root receipt:72 offline checks, no browser errors, covering the named int
 
 The root opened actual screenshots and corrected low-contrast issue rows and a setup drawing that initially showed a member. Independent inspection then found stale old-area wording, Escape retaining an edit scope, stale issue confirmation, overly broad Undo and hidden narrow key labels. Root corrected these and added corresponding sequence checks; independent recheck is pending against frozen SHA256 `BA136356F8744A7B426E5CCD3280806591BB7CBE09A55CAA7A435518A0AF7B21`.
 
-No visual is yet declared whole-plugin-complete or Tim-accepted. Use the independent closure, once available, only for this bounded concept.
+### Independent closure — 16 September, 22:50 Sydney read-back
+
+The pending recheck above is now superseded by `audit/visual/VISUAL_CLOSURE.md` and `VISUAL_CLOSURE_EVIDENCE.json`: 29/29 independent checks passed against the same frozen SHA256. The auditor opened the actual corrected artifact and corrected screenshots. All five listed findings are closed; seven action footers fit the tested1280×720 viewport without horizontal overflow. The root read the closure record back before presentation.
+
+This permits presentation of the bounded concept only. Setup/search/document selection remain illustrative stubs; no source extraction, real plotting, support collection, drawing persistence or native AutoCAD interaction was performed. The whole-plugin coverage audit remains outstanding. No visual is declared whole-plugin-complete or Tim-accepted.

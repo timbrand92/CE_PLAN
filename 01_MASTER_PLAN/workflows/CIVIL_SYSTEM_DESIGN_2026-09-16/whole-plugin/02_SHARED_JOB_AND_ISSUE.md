@@ -36,7 +36,7 @@ Source observed: `Modules/Structural/Commands/SheetsCommands.cs:15–17` gives C
 
 **Preview:** old/new sheet number, title, revision/date, drawing/layout and whether the target is open, closed, unavailable or protected. An unavailable sheet is not a successful update. Preserve user-reviewed mapping; no silent title-block guess.
 
-**Lifecycle:** discard edits on Cancel; recheck targets immediately before Apply; stale previews require refresh. Single-drawing accepted edits follow one Undo; the shared owner's multi-file recovery design must explicitly handle partially unavailable files. Save/reopen must preserve the same sheet identities and pending conflicts.
+**Lifecycle target:** discard uncommitted edits on Cancel; recheck targets immediately before Apply; stale previews require refresh. This does not undo previously accepted immediate Duplicate/Archive/Rename/Reconcile operations or external files. Their distinct existing boundaries and gaps are recorded in [12_SHEET_STRUCTURE_ACTION_CONTRACT.md](12_SHEET_STRUCTURE_ACTION_CONTRACT.md). Single-drawing accepted edits require their reviewed Undo behaviour; multi-file recovery must explicitly handle partially unavailable files. Save/reopen must preserve the same sheet identities and pending conflicts.
 
 **Representative scenario:** rename one sheet in a four-sheet set with one unavailable drawing. Preview must show the intended rename and unavailable target. It must not claim all title blocks are synchronised while one remains unchanged.
 

@@ -2,6 +2,8 @@
 
 **Planning-only cards, grouped in the order a structural drafter works through a job.** The source command ledger is the complete declaration-level index: [structural_source_command_window_ledger.md](structural_source_command_window_ledger.md). Each `W` card below owns every ledger row carrying that `W` reference, including aliases and hidden/expert rows. A source declaration or a registry description is not proof of current AutoCAD behaviour.
 
+**Approved-card precision supplement:** [structural_approved_card_reconciliation.md](structural_approved_card_reconciliation.md) preserves the exact ST-03/ST-04/ST-05/ST-06/ST-09 workflow decisions and corrects the FST action split. It supplements, and takes precedence over, generic retention wording in these new cards.
+
 ## Rules shared by every card
 
 - Keep proven working drafting routes until a reviewed replacement passes an AutoCAD acceptance scenario. No source route is retired by this document.
@@ -178,3 +180,4 @@ Run later on a synthetic structural job only, after implementation work and befo
 6. Exercise Xref/locked/foreign-content cases and verify no bypass, duplicate object or inferred relationship.
 
 **Built:** not assessed. **Automated checks:** not run. **Installed:** not assessed. **Tim-accepted:** no. These cards are proposed review material, not a change authorisation.
+

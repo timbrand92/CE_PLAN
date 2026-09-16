@@ -331,3 +331,18 @@ else that writes levels is untouched (opt-in). Full entry: plugin `REGRESSION_LO
 | O27 | **A typo must never delete anything** | Type `19.4O` (**letter O**) in a level box, OK. **Nothing is deleted** — the stored levels stay as they were. Say what the command line said | 2027 |
 | O28 | **"Just draw the pipe" must never delete a level** | On a pipe with both levels, tick **simple pipe only**, OK. The texts come off the plan but `PITSCHEDULE` **still shows both levels**. Untick: still there | 2027 **and 2024** |
 | O29 | Nothing else changed | Run `CDLPD`, a pit move, and `CDREPAIR` on a pipe that has only ONE level: the other level must **not** be wiped | 2027 |
+
+### ADDED 17 Sep — TWL-05, branch `claude/civil-k-l-2026-09-16` @ `b8e234f9`
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| T6 | A fresh system has **no** volume | `CDCALC` → Detention → add a system. Volume required box is **empty**, not `0.0`; status reads *"Enter required volume to compare."* | both |
+| T7 | A real volume is offered | Type `25.06`, save, run `CDTWL`. *"CDCALC records the volume required for this system as 25.06 m3. Press Enter to use it…"* — and **Enter accepts it** | both |
+| T8 | An empty one is explained | `CDTWL` on a system with no volume: *"CDCALC has no volume recorded for this system yet…"*. Must NOT say *"not a plain number"* | both |
+| T9 | No matching system says so | Pick an outlet no CDCALC system names: *"CDCALC has no detention system recorded against this outlet…"*. Must not go quiet | both |
+| T10 | **The drawing block** | Insert ON SITE DETENTION CRITERIA for a system with no volume: `VOLUME REQUIRED   NOT SET`. Must NOT read `0.00 m3`. **Tim to say whether `NOT SET` is the right words** | both |
+| T11 | An existing job is untouched | Open a job already filled in — its volume still reads what he typed | both |
+
+**Question for Tim (new):** the same view model hard-codes `_psd = "5.24"` — a permitted site discharge, an
+engineering value, in code. R-00 puts those on the Settings page. **Not changed**, because a different default
+PSD changes designs. Should it be a Settings value, or start empty like the volume now does?
