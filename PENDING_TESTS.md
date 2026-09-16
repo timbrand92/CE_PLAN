@@ -283,3 +283,18 @@ guessed at); **TWL-03** (CDCALC's own TWL box is already offered, so its record 
 cannot be established without the drawing — T1 removes the harm); **TWL-05** (the `"0.0"` volume is written on
 the CDCALC side, which is the unclaimed computations work); **TWL-07** (*"will this whole command be in a
 window at some point?"* — still Tim's question).
+
+### BUILT 17 Sep — **BLANK-01**, branch `claude/civil-other-areas-handoff-d747af` @ `d63a29f3` — NOT installed, NOT tested
+
+**Tim, 17 Sep:** *"yes a blank box should clear it, go ahead"*. Emptying a level box now deletes the level. It was
+coming back from **two** places — the pipe's own record **and** the schedule row — so both were fixed. Everything
+else that writes levels is untouched (opt-in). Full entry: plugin `REGRESSION_LOG.md` **BLANK-01**.
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| O24 | **A deleted level stays deleted** | Pick a pipe with both levels; note them in `PITSCHEDULE`. Double-click it, **empty the downstream box**, OK. The IL text leaves the plan **and** `PITSCHEDULE` shows that level **blank** — not the old number. Re-open the pipe: the box is still **empty** | 2027 **and 2024** |
+| O25 | One Undo brings it back | `U` once after O24: the level returns on the plan **and** in the schedule | 2027 |
+| O26 | Both levels deleted | Empty **both** boxes, OK: both gone from plan and schedule; the pipe still runs between the same two pits and its pipe text still reads size and material | 2027 |
+| O27 | **A typo must never delete anything** | Type `19.4O` (**letter O**) in a level box, OK. **Nothing is deleted** — the stored levels stay as they were. Say what the command line said | 2027 |
+| O28 | **"Just draw the pipe" must never delete a level** | On a pipe with both levels, tick **simple pipe only**, OK. The texts come off the plan but `PITSCHEDULE` **still shows both levels**. Untick: still there | 2027 **and 2024** |
+| O29 | Nothing else changed | Run `CDLPD`, a pit move, and `CDREPAIR` on a pipe that has only ONE level: the other level must **not** be wiped | 2027 |
