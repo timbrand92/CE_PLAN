@@ -37,3 +37,7 @@
 **Read-only source scope:** `Modules\Structural`, `Modules\Structural.DesignCore`, relevant repo plans/cards/registry and supplied CE plan records.  
 **No source/build/test/deploy/Git/AutoCAD/process/client-project actions:** performed by this planner.  
 **Built:** not assessed. **Tested:** no AutoCAD test run. **Installed:** not assessed. **Tim-accepted:** no.
+
+| 2026-09-16T22:31:14.5385006+10:00 | Completed | structural_high_use_window_action_contract.md | Source-backed high-use action routes for Beam Settings, FST Manager, RC/steel pickers, XCLMTXT and notes/time. Preserves local-state, cancellation and preview boundaries without runtime claims. |
+
+**Latest verified checkpoint:** 2026-09-16T22:31:14.5385006+10:00 — high-use window action contract added. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.

@@ -534,3 +534,38 @@ propagation for every pipe. Needs his word first.
 **Branch:** the chat's worktree could not write to `claude/civil-other-areas-2026-09-16-1c1ae6`, so work continues
 on **`claude/civil-other-areas-handoff-d747af`**, cut from that branch's tip `e0cfe172` — **not from master**. It
 contains everything the old branch had. Tip `0b3f17bd`, pushed. **Nothing deployed; live is still `6505fb5a`.**
+
+### 6r. The A1 template is the authority for the LPD note — and the width is NOT a standard (17 Sep 2026)
+
+> **Tim: *"its in this drawing refer to it"*** — `CE_A1_C01 - VERTICAL.dwg` (Drawing Templates \ A1 Templates)
+> **Tim: *"all the sizing and text is correct here, modify to suit if that makes sense"***
+> **Tim: *"width isnt a standard"***
+
+**How it was read:** a **copy** was taken to a session scratch folder and read **headless** in
+`accoreconsole` 2027 with a read-only LISP dump of every `TEXT` / `MTEXT` / `MULTILEADER` / `ATTDEF` in model
+space, paper space and every block definition — 753 entities. **Tim's template file was never opened and never
+written to.** Nothing from it goes into any repository (DATA-01); only the measurements below are recorded.
+
+**The template carries the LPD note ready-made, twice**, and settles four things:
+
+| | |
+|---|---|
+| **Wording** | Confirmed **character for character** against `LpdStandardNote.DefaultTemplate`, blanks and all: `CONNECT TO COUNCIL PIPE AT APPROX IL____m TO COUNCIL SATISFACTION. BUILDER TO CONFIRM ALL LEVELS PRIOR TO THE COMMENCEMENT OF WORK.` and the same for `KERB & CHANNEL`. |
+| **Layer** | `25TEXT` — which is what Tim ruled independently the same day. The ruling and the drawing agree. |
+| **Text height** | `250`, the same as CE's pipe text. |
+| **Leaders** | The template has **no MLeaders at all**; these notes are plain MText. CE still draws one MLeader, because that is what Tim asked for on Test Day. A deliberate difference, recorded as one. |
+
+**The width is NOT a standard — a correction to my own record.** Both template copies measure `4867.3933`, and
+**I read two matching numbers as a deliberate standard and wrote it up as one.** Tim corrected it, and the
+same drawing proves him right: the other notes on `25TEXT` at height 250 in that template run from about 2000
+to 7000 wide. Two copies match because one was copied from the other.
+
+The width is now recorded as **a starting width, not a rule** — enough that a fresh note is not born as one
+130-character line — held in Settings (`DesignStandards.LpdNoteWrapWidthInTextHeights`, default 19.4696 text
+heights) **because it is a preference**, with the drafter stretching the note afterwards like any MText.
+The earlier figure of 18.685, measured off finished job 2648, was the same mistake with one drawing instead
+of two, and is superseded.
+
+**Standing lesson, worth more than the number:** *an office template outranks a finished job as evidence of
+what CE draws* — but **a measurement repeated twice is not a standard**. Ask Tim which of the things in a
+drawing are rules and which are just where somebody dragged a grip.
