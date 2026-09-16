@@ -387,3 +387,26 @@ never tried, and the failure reason never reached the command line. Full entry: 
 **Not fixed, and said plainly:** the underlying refusal. Erasing a label that another source also claims would take
 the wrong text off the drawing, so that guard was **not** bypassed. Whether the shared claim is real on this
 drawing or the duplicate tag itself confuses the scan **is not established** — row O36's log line settles it.
+
+### BUILT 17 Sep — **P-02 split levels**, branch `claude/civil-other-areas-handoff-d747af` @ `24d9230f` — NOT installed, NOT tested
+
+The split level was correct but **one of the two copies was drawn at the far end of the pipe** instead of at the
+pit it was split at. Proven from Tim's own 16 Sep coordinates. Full entry: plugin `REGRESSION_LOG.md` **P-02**.
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| O37 | **Split levels sit at the middle pit** | Three pits in a line, left to right. `CD` ONE pipe through all three (19.45 → 19.25). Answer **Yes** to the split. **Both `IL 19.35` texts must be beside the MIDDLE pit** — one just above the pipe, one just below — **not** one back at the first pit | 2027 **and 2024** |
+| O38 | Drawn right-to-left | Same run drawn the other way, split it: levels still at the middle pit | 2027 |
+| O39 | Drawn vertically | A north-south run through three pits, split it: levels at the middle pit | 2027 |
+| O40 | They do not overlap | The two split levels are on opposite sides of the pipe | 2027 |
+
+**Open for Tim — P-01, when should it ask?** Today the question *"split this pipe at the pits it runs across?"*
+comes **after** the Edit Pipe window closes and after the pipe is drawn (deliberately, 15 Sep: so the new halves
+link correctly). Tim on Test Day: *"asks at the wrong time … the question and answer are messed up."*
+**Recommendation:** keep doing the split after the pipe is drawn (moving it earlier risks the halves not linking),
+but **ask inside the CD window as a tick — "split where it crosses pits"** — so the answer is given before he
+commits, not at the command line after the window has gone. The window is Codex's to build, so this needs a
+written contract from this chat, and Tim's word first. **Not decided.**
+
+**Still open in this area:** P-04 (a pipe with more than one bend) and P-05 (each half needs its own pipe text)
+— both in progress in the same chat.
