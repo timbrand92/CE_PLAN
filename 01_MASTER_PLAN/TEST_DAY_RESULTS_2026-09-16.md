@@ -396,3 +396,12 @@ carries the overnight instruction). Nothing is deployed overnight.
 Block: `01_MASTER_PLAN/OVERNIGHT_BLOCK_WINDOWS_CHAT_2026-09-16.md` — CDWT W-01..05 → computations sheet BUG-158 (unclaimed, proposed) → CD window ticks/polish → audit → morning pack `MORNING_PACK_WINDOWS_2026-09-17.md` by 8 am. Nothing deployed. Not started until Tim says Go.
 
 > **Tim, 16 Sep (evening): *"GO"*** — windows chat overnight block started (6o).
+
+### 6m-result. PROBE-C7-POLY passed (16 Sep, 18:52, headless accoreconsole 2027)
+
+A custom object derived from `AcDbPolyline` reads in .NET as a real `Polyline` (real handle, real extension
+dictionary, `is Polyline` true, not a proxy); `handOverTo` keeps handle and dictionary; managed `SetPointAt` and a
+managed link-record write both persist through save/reopen; `Clone()` keeps the class. Findings and receipts:
+`C:\Autodesk\CERef\PROBE-C7-POLY-20260916\FINDINGS.md`. **Per Tim's 6m choice, the real enabler is now rebuilt on
+`AcDbPolyline` (overnight).** The 16 Sep v1 objects stay readable through a kept legacy class and are migrated in
+place; nothing is deployed.
