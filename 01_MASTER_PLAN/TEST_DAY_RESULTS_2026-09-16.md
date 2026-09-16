@@ -498,3 +498,39 @@ Asked in `MORNING_PACK_K_L_2026-09-17.md` §3. His words, verbatim:
    remaining candidate is the one he named in the same breath and which IS now fixed — *"it does not move the
    connections of existing pipes"*. The re-test (PENDING_TESTS L1/L2) asks him to change **both** boxes, and
    `PITEDIT Resize:` now records the size from and to, so a repeat report settles itself.
+
+### 6q. P-07 — root cause found for the second half; the first half is NOT solved (17 Sep, "other Civil areas" chat)
+
+**Tim's report (P-07):** *"Changing an invert does nothing"*, and double-clicking the invert again *"will not let
+him edit it"* — *"what a joke"*.
+
+**Second half — CAUSE FOUND, FIXED, built only.** Read from his own 16 Sep log, not inferred: **all 14** of that
+day's double-clicks on a TEXT or MTEXT printed `TryRedirectToCdEdit: plain … bypass`. The two lines that would mean
+CE recognised its own label never appeared once. The only double-click that reached `CDEDIT` was a **pit** block.
+The intercept is not allowed to open a transaction (PL-068), so it decides ownership from the per-drawing cache
+alone; a CE pipe label and a CE IL text are **MText**, and that route reads `DocState.AttachmentPositions`. When a
+drawing opens, the **pit** pass records a pit's attachments — the **pipe** pass never recorded a pipe's. So on a
+job you had just opened, CE did not know it had drawn its own pipe text or IL texts. It only began working after
+that pipe had been edited once in the same session. Fixed in the scan that was already reading the record, so
+opening is no slower. Entry `IDENT-02` in the plugin `REGRESSION_LOG.md`; test rows **O16–O23**.
+
+**First half — NOT solved, and not claimed to be.** `HasDialogChanges` does compare both invert values, so the
+obvious explanation is ruled out and there is no evidence for another. The log could not settle it either: the
+Edit Pipe window has **two silent exits** (Cancel/Escape, and "OK pressed but nothing changed") that wrote
+**nothing**. On 16 Sep the window was open **43 seconds** on one pipe (16:12:05 → 16:12:48) and left no entry at
+all. Both now record one line, with both levels as the window held them and as they were read in. **Insufficient
+information** until Tim runs it once more (row O23).
+
+**A diagnostic that was actively misleading, now fixed:** `StorePipeInverts` printed the **merged** record, so a
+side it had left alone read exactly like a side it had just written — on 16 Sep it printed `second=19.25` on a save
+that wrote no second invert. That is part of why this hid for so long.
+
+**One question for Tim, not decided for him:** blanking a level in the Edit Pipe window does **not** clear it from
+the pipe's stored record — the old level stays and is read back (16 Sep 09:31:57.836: *"recovered
+SecondInvert=19.25 from PipeLinkData"*), so the schedule can keep showing a level he deleted. **Five** places write
+that record and some may pass one side meaning *leave the other alone*, so changing it blind could break invert
+propagation for every pipe. Needs his word first.
+
+**Branch:** the chat's worktree could not write to `claude/civil-other-areas-2026-09-16-1c1ae6`, so work continues
+on **`claude/civil-other-areas-handoff-d747af`**, cut from that branch's tip `e0cfe172` — **not from master**. It
+contains everything the old branch had. Tip `0b3f17bd`, pushed. **Nothing deployed; live is still `6505fb5a`.**
