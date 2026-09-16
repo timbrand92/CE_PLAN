@@ -457,3 +457,12 @@ propagation for everybody; and a comment stated AutoCAD behaviour that had not b
 Final: net10 suite **9,876 run / 9,836 passed / 23 failed / 17 skipped** — the same 23 pre-existing names,
 compared by name. **net48, net8.0-windows, net10.0-windows: 0 errors.** The live bundle was never touched —
 still `6505fb5a`, written 16 Sep 16:05:47.
+
+### 6o. Overnight 16→17 Sep result (the "other Civil areas" chat) — built, not installed, not tested
+
+PROBE-C7-POLY passed → the pipe object was rebuilt on AutoCAD's polyline class (`CE_CVL_PIPE_OBJECT`), the 16 Sep
+morning object kept and migrated in place; upgrade on open / on draw / on demand with one backup and one line; twins;
+IDENT-01 (new pipes get their identity — the "no matching identity" refusal); PLACE-01 built as one rule at four
+moments + Settings values; the 2022–2024 enabler builds but has never been loaded. **Morning pack:**
+`01_MASTER_PLAN/MORNING_PACK_C7_2026-09-17.md`. Test rows O1–O15 in `PENDING_TESTS.md`. Branch
+`claude/civil-other-areas-2026-09-16-1c1ae6` @ `812f868f`. Live is still `6505fb5a`.
