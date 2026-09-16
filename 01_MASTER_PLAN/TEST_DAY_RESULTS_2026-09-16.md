@@ -236,3 +236,5 @@ Contract written (nothing built): plugin repo `docs/workflows/PREVIEW_CONTRACT_C
 > 1. *"AT THE STUB ON THE WALL"*  2. *"only this pipe."*  3. *"The block picture is 2027-only."*  4. *"no additionS"*
 
 PIT build starts on `claude/ce-civil-handoff-sept-16-5623ca`.
+
+> **Tim, 16 Sep (on the PIT stub preview): *"CAN IT HAVE THE SCREENSHOT OF THAT AREA ON THE PLAN ? WITH HIGH FIDELITY?"*** — asked, not yet answered. Options put to him: render the real drawing around the pit off-screen (same PROBE-75 route, entities from the live drawing instead of a scratch block) — needs a probe first; nothing built.
