@@ -394,3 +394,5 @@ carries the overnight instruction). Nothing is deployed overnight.
 > *"CAN YOU PLEASE PREPARE OVERNIGHT SEQUENCE"* (to the windows chat)
 
 Block: `01_MASTER_PLAN/OVERNIGHT_BLOCK_WINDOWS_CHAT_2026-09-16.md` — CDWT W-01..05 → computations sheet BUG-158 (unclaimed, proposed) → CD window ticks/polish → audit → morning pack `MORNING_PACK_WINDOWS_2026-09-17.md` by 8 am. Nothing deployed. Not started until Tim says Go.
+
+> **Tim, 16 Sep (evening): *"GO"*** — windows chat overnight block started (6o).
