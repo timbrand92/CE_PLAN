@@ -466,3 +466,35 @@ IDENT-01 (new pipes get their identity — the "no matching identity" refusal); 
 moments + Settings values; the 2022–2024 enabler builds but has never been loaded. **Morning pack:**
 `01_MASTER_PLAN/MORNING_PACK_C7_2026-09-17.md`. Test rows O1–O15 in `PENDING_TESTS.md`. Branch
 `claude/civil-other-areas-2026-09-16-1c1ae6` @ `812f868f`. Live is still `6505fb5a`.
+
+### 6q. Tim's answers to the five K/L questions — 17 September 2026
+
+Asked in `MORNING_PACK_K_L_2026-09-17.md` §3. His words, verbatim:
+
+| # | Question | **Tim** |
+|---|---|---|
+| 1 | `COUNCIL PIT` or `EXISTING COUNCIL PIT`? | ***"both are options"*** |
+| 2 | The LPD note on `25DIMS` or `25TEXT`? | ***"25text always for text"*** |
+| 3 | Is the note the right width? | ***"show me the different variations"*** |
+| 4 | Two tanks on one system — add them together? | ***"yes"*** |
+| 5 | Did the 16 Sep `PITEDIT` test change one size box or both? | ***"i changed y axis only"*** |
+
+**Acted on, branch `claude/civil-k-l-2026-09-16`:**
+
+1. **Both are offered.** `CouncilPit` → `COUNCIL PIT` and `ExistingCouncilPit` → `EXISTING COUNCIL PIT`, each
+   with its own typed word so neither answers to the other's. The drafter picks the one that is true of the job.
+2. **The note moved to `25TEXT`** (`LayerService.LAYER_PIPE_TEXT`). This also matches CE's own finished job
+   2648, where the note text is on `25TEXT`; the separate old-style leader there is on `25DIMS`, and one
+   MLeader can only be on one layer — the text is what this is.
+3. **Five widths drawn to one scale and put to him** (10 / 14 / 18.685 / 24 / 32 text heights), with the real
+   line breaks, calibrated off job 2648 (4671 wide at text height 250 → 5 lines). **Awaiting his pick.**
+4. **Confirmed as built** — every tank in a detained branch is counted (item 66). No change needed.
+5. **This settles the pit-label half of P-08.** Both 16 September resizes logged `delta=(0.0,375.0)`, i.e. the
+   Y side growing by 750 and the X side unchanged — which is exactly what Tim did. **So the label rule was
+   behaving correctly on the runs he tested**: it stepped out 375 on the axis that changed and kept its clear
+   gap, and it correctly did not move on an axis that did not change.
+
+   **What "still wrong" was therefore about is NOT established**, and must not be guessed. The likeliest
+   remaining candidate is the one he named in the same breath and which IS now fixed — *"it does not move the
+   connections of existing pipes"*. The re-test (PENDING_TESTS L1/L2) asks him to change **both** boxes, and
+   `PITEDIT Resize:` now records the size from and to, so a repeat report settles itself.
