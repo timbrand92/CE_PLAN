@@ -274,3 +274,17 @@ Live is now `6505fb5a` in all three lanes (read back from the DLLs). Backup `CE_
    the REC command; whether `CDGRIPDIAG → Off` was run first is NOT confirmed. Owner: the BUG-159 chat.
 8. Tim: *"IS IT JUST ME OR ARE SOME OF THE TEXT BOXES AND SPACING AND LOOK OF THINGS A BIT UNPOLISHED AND UGLY"*
    — yes; window polish is Codex's lane under ruling B (list to be written).
+
+### 6g. Tim, 16 Sep (after 6f)
+
+> *"YES I RAN CDGRIPDIAG OFF FIRST AND NOW ITS BACK TO NROMAL, WILL THAT REGRESS THE PLUGIN?"* — **BUG-159 answer
+> for the BUG-159 chat: YES, the CE pipe grip guard (`PipePlanGripOverrule`) is the cause.** Rectangle grips are
+> normal with it Off. Fix belongs to the BUG-159 chat (XData filter, keep pipe protection).
+
+> *"YOU DO THE POLISH YOURSELF MAKE IT FAR FAR BETTER PLEASE"* — **ruling B suspended for the CD and PIT windows'
+> polish** (as already for CDWT on 16 Sep). Claude does it.
+
+> *"FIX 4"* (New Pipe gets the real plan) and *"FIX THIS PLEASE"* (PIT-CONN-01 connected-pipe lookup) — ordered.
+> Asked whether the dry-run preview (2 & 3) adds lag — answered in chat; recorded below when built.
+
+Order: PIT-CONN-01 → New Pipe plan → polish → dry-run preview.
