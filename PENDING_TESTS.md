@@ -139,3 +139,25 @@ Owner: the Civil behaviour chat. **Requires the API-v3 enabler to be rebuilt and
 | CDPARTS Save and Reset to Defaults (BUG-152/153) | `10ac480d` | 15 Sep 2026 — recorded on #78 |
 | PIT block preview, original rendering — **7 of 8 checks** | `6a6d6bc7` | 15 Sep 2026 — #75. The 2024 check stays open |
 | C0 managed Slide/Offset/Flip grips and twin/MLINE selection, bounded Test Day 2 | `9050f497` | recorded on #26 |
+
+### BUILT 16→17 Sep overnight — branch `claude/civil-other-areas-2026-09-16-1c1ae6` @ `3bc94c78` (other Civil areas chat) — NOT installed, NOT tested
+
+Steps written for a stranger are in the plugin `REGRESSION_LOG.md` entries **C7-POLY, IDENT-01, PLACE-01, C7-2024**. Summary rows:
+
+| # | What | Test (2027 unless said) | Lane |
+|---|---|---|---|
+| O1 | Pipes become CE pipe objects on open | Open a COPY of a job: one line `[CE] N pipe(s) upgraded to CE pipe objects ... Backup: ...`; `_PRE_C7_` file beside it; reopen → no second line, no second backup | 2027 |
+| O2 | The object is ONE polyline-like thing | Click a pipe: band + magenta walls, vertex grips only, LIST says `CE pipe P3: 3 points, 225 mm wide` | 2027 |
+| O3 | Text follows the object | MOVE a pipe 2 m: pipe text, both IL texts, arrow move with it; grip an end: same at command end | 2027 |
+| O4 | CDFW on a converted pipe | Split happens, two objects, no stray polyline under either half (move one half aside) | 2027 |
+| O5 | CD draws the object | `CD` a pipe: one object at once; one U removes pipe + labels | 2027 |
+| O6 | Twin | After open a twin is ONE object drawing two barrels; grip-move it; no stray barrels | 2027 |
+| O7 | CDEDIT width | 100 → 150: walls widen, no MLINE appears | 2027 |
+| O8 | Migration | The 16 Sep test copy (51 morning-objects): open → "migrated" in the line; pipes still work | 2027 |
+| O9 | IDENT-01 | `CD` a pipe, grip-drag its end straight away: labels follow; no "identity" line in the log | 2027 |
+| O10 | PLACE-01 draw | `CD` a pipe whose start lands 100 mm from a big pit's edge: the start IL text sits one step further in (log `route=draw ... in from the pipe end (1)`) | 2027 |
+| O11 | PLACE-01 pit | `PITEDIT` 450 → 1200 on a pipe: IL text slides in; past 500 mm it flips (`route=pit-boundary`) | 2027 |
+| O12 | PLACE-01 pipe | MOVE a pipe so its label crosses another pipe: label slides clear; report names `pipe P9` | 2027 |
+| O13 | PLACE-01 callout | MOVE a pipe so its callout text lands on IL text: text moves, leader still starts on the pipe | 2027 |
+| O14 | PLACE-01 settings | CDSETTINGS → LABEL PLACEMENT: 900 refused; 300 → IL text flips instead of a second slide | 2027 |
+| O15 | 2024 enabler | Needs an AutoCAD 2024: ARXLOAD `CE_CVL_OBJECTS_2024.dbx`, open a 2027-saved drawing with pipe objects: pipes draw, one object, no proxy warning | 2024 |
