@@ -54,6 +54,7 @@ Full entries: plugin `REGRESSION_LOG.md` LAYOUT-01, PIT-PREVIEW-01, PIT-PREVIEW-
 | L10 | **POLISH-01 - CD/PIT windows tidied** (built, NOT installed) | Edit Pipe: level row on one line ("Set Upstream 19.45 m AHD"), header chip one line, plain wording under the levels. Edit Pit: label row + one status line under it, two readout lines under the picture, no duplicate "no pipes". Say what still looks wrong. | 2027 |
 | L11 | **PIT-TYPE-01 - stormwater pipe no longer called CHARGED in the pit list** (built, NOT installed) | Edit Pit P10: list reads "P10 → P9 · Entering/Leaving · IL 19.450" and the pit IL suggestion strip appears. Save the pipe unchanged, reopen the pit: still not charged. A real Charged pipe still reads CHARGED. | 2027 |
 | L12 | **CLICK-01 - click the picture to select** (built, NOT installed) | Edit Pit with 2+ pipes: click a pipe tag on the picture, the list changes and the tag goes gold. Edit Pipe: click the downstream ring, the cursor lands in the downstream level box with its value selected. | 2027 |
+| L13 | **DRAG-01 - drag the corner badge** (built, NOT installed) | Edit Pit: drag the gold badge to the top-left of the picture and release: badge sits top-left, the Pit label corner list reads Top left, cover-text list unchanged. Pick "Cover text" in the footer list, drag to top-right: only the cover-text corner changes. Cancel: nothing moved on the drawing. | 2027 |
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
