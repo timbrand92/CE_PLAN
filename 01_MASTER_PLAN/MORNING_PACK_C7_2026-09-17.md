@@ -22,8 +22,7 @@
 | 9 | Doubled outline risk | The managed border overrule now leaves a pipe object alone. | audit commit `812f868f` |
 
 **Test counts (honest):** native self-test green; net10 focused fixtures 30/30, 64/64, 33/33, 71/72 (the 1 is a known
-trunk failure); full net10 suite last complete run 9812 run, 27 failed of which 4 were mine and are fixed since —
-the final full run was still going when this pack was written (see the line at the bottom); net48 / net8 / net10
+trunk failure); **final full net10 suite 9812 run / 9772 passed / 23 failed / 17 skipped — the same 23 known trunk failures, zero new**; net48 / net8 / net10
 builds 0 errors, SkipDevBundle throughout.
 
 ## 2. TEST THIS — AutoCAD 2027, on a COPY of a job, after the window chat installs the payload
