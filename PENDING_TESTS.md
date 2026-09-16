@@ -346,3 +346,23 @@ else that writes levels is untouched (opt-in). Full entry: plugin `REGRESSION_LO
 **Question for Tim (new):** the same view model hard-codes `_psd = "5.24"` — a permitted site discharge, an
 engineering value, in code. R-00 puts those on the Settings page. **Not changed**, because a different default
 PSD changes designs. Should it be a Settings value, or start empty like the volume now does?
+
+### BUILT 17 Sep — **T-01 `CDFIXTAGS`**, branch `claude/civil-other-areas-handoff-d747af` @ `acfb38f6` — NOT installed, NOT tested
+
+It contradicted itself because the summary asked "describe the renames that worked" with an empty list, and that
+helper answers *"Nothing to repair"*. It also **stopped at the first block it could not rename**, so the rest were
+never tried, and the failure reason never reached the command line. Full entry: plugin `REGRESSION_LOG.md` **T-01**.
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| O30 | **The contradiction is gone** | Same drawing as 16 Sep. `CDFIXTAGS` → **Yes**. The words *"Nothing to repair"* must **not** appear anywhere after a Yes | 2027 **and 2024** |
+| O31 | **It says what it did, once** | One summary: either *"N blocks were renamed: …"* or *"No block was renamed."*, then *"N was/were not renamed:"* and one line per block with the block number and a plain-English reason ending in what to do (`CDTAG` or `CDREPAIR`) | 2027 |
+| O32 | **More should change than last time** | One awkward block used to stop the rest. **Count how many of the three get renamed now and tell me the number** | 2027 |
+| O33 | Follow the reason, run it again | Do what the reason says (usually `CDTAG` the other block), run `CDFIXTAGS` again — it should rename the rest | 2027 |
+| O34 | A tidy drawing is still called tidy | `CDFIXTAGS` on a drawing with no repeated names: *"Every source name in this drawing already names one block. Nothing to repair."* — that sentence is correct **there** and must stay | 2027 |
+| O35 | Answering No | *"Nothing was renamed."* and nothing changes | 2027 |
+| O36 | **Send the log** | A new `[SourceClaims] refused:` line names which piece of text is claimed twice and by which blocks. **That is what decides whether the refusal is right or whether it is the next bug** | 2027 |
+
+**Not fixed, and said plainly:** the underlying refusal. Erasing a label that another source also claims would take
+the wrong text off the drawing, so that guard was **not** bypassed. Whether the shared claim is real on this
+drawing or the duplicate tag itself confuses the scan **is not established** — row O36's log line settles it.
