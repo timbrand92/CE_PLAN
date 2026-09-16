@@ -308,3 +308,32 @@ Root cause found and fixed as PIT-TYPE-01 (plugin REGRESSION_LOG): the pipe wind
 > **Tim, 16 Sep: *"CARRY ON WITH THE DRY-RUN PREVIEW"*** — contract first, then build.
 
 DRYRUN-01 built (not installed) on `claude/ce-civil-handoff-sept-16-5623ca`; contract at plugin `docs/workflows/DRY_RUN_PREVIEW_CONTRACT_2026-09-16.md`. Open question for Tim's test: does an aborted outer transaction leave an Undo step (L14).
+
+### 6j. Tim, 16 Sep (evening) — the CE pipe object (C7), text placement rules, and upgrade-everywhere (recorded by the "other Civil areas" chat)
+
+Context: this chat found the causes of C7-01/02/03 in the log (CDFW refused on a converted pipe by the source
+pre-scan; the pipe watcher only recognises polylines so a moved converted pipe is filed as a stray label; CD still
+draws the old polyline). Tim's reply, in his words:
+
+> *"THAT ALL SEEMS GREAT BUT THERE NEEDS TO BE SOME RULES AROUND PLACEMENT AND LOCATIONS FOR EXAMPLE IF A PIPE OR A
+> PIT IS LOCATED IN/ON A PIPE TEXT OR INVERT TEXT THEN THAT TEXT EITHER MOVES AWAY FROM THE PIT TO NOT OBSTRUCT
+> ALONG THE ANGLE OF THE PIPE OR IT FLIPS TO THE OTHER SIDE OF THE PIPE, DOES THAT MAKES SENSE?"*
+
+> *"IF WE UPGRADE TO THIS NEW ENTITIY THAT STILL WORKS WITHOUT THE PLUGIN THEN IT NEEDS TO BE IMPLEMENTED EVERYTIME
+> YOU OPEN AN EXISTING JOB, EVERYTIME YOU OPEN OR EDIT A PIPE EVERYWHERE IT NEEDS TO BE IMPLEMENTED."*
+
+> *"THE CONVERTED PIPE MOVED OR SHIFTED AND IT FELL APART AND THE TEXT DIDNT MOVE WITH IT."* (C7-01 clarified: a
+> MOVE / shift, not only a grip.)
+
+Interpretation (Claude, not Tim's words):
+- **PLACE-01 (rule):** when a pit or a pipe sits on a pipe text or an invert text, that text is moved clear —
+  first along the pipe's own angle, away from the pit; otherwise flipped to the other side of the pipe. The
+  order (slide first, flip second) and the clearance distance are put to Tim as questions below, not decided.
+- **C7-UPGRADE-01:** automatic upgrade to the CE pipe object on open of an existing job and on every pipe
+  open/edit — Tim's 14 Sep ruling (a) is now confirmed and widened to "everywhere". `CD` draws the new object
+  directly (C7-02 becomes a build item, not a question). Pre-condition Claude states: the remaining polyline-only
+  readers (252 sites on 16 Sep) must go through the one seam first, or an auto-upgraded job opens with tools that
+  cannot read its pipes.
+- **Open questions put to Tim (16 Sep evening):** Q1 slide-then-flip order; Q2 clearance value (Settings page);
+  Q3 2022–2024 colleagues on an auto-upgraded drawing (no 2024 enabler exists today); Q4 one dated backup per
+  drawing at first upgrade only, or every time. Unanswered until Tim answers.
