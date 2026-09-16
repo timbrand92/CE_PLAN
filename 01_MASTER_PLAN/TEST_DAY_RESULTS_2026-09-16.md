@@ -251,3 +251,5 @@ Route B (screen capture) is screen-resolution, viewport-shaped, and the zoomed c
 > continuous; render on open and on committed size/type change only, never per keystroke; extents pre-filter.
 
 > **Tim, 16 Sep: *"CARRY ON, BUILD THE REAL PLAN PREVIEW FIRST"*** — no deploy yet; PIT real-plan preview (Route A) is being built on `claude/ce-civil-handoff-sept-16-5623ca`, which now also carries the BUG-159 CDGRIPDIAG merge.
+
+> **Tim, 16 Sep: *"CARRY ON"*** — CD real-plan preview next, same Route A; still no deploy.
