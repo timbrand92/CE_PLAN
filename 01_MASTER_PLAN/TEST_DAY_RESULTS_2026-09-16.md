@@ -288,3 +288,15 @@ Live is now `6505fb5a` in all three lanes (read back from the DLLs). Backup `CE_
 > Asked whether the dry-run preview (2 & 3) adds lag — answered in chat; recorded below when built.
 
 Order: PIT-CONN-01 → New Pipe plan → polish → dry-run preview.
+
+### 6h. Tim, 16 Sep (evening): all three CD/PIT window upgrades go ahead
+
+> *"IVE GOT SOME OTHER FIXES ALONG SIDE THAT SO WHILST THAT HAPPENS CAN WE DO THIS STUFF:"* — (1) preview shows
+> what is about to be saved (dry-run), (2) click a pipe tag in the PIT picture selects it in the list / click an
+> end in the CD picture jumps to that level box, (3) drag the pit label / cover text tag on the picture to choose
+> its corner.
+
+Order: 2 (small) → 3 (medium) → 1 (biggest, contract first). Owner of the CD/PIT window files and preview
+controls is this chat (`claude/ce-civil-handoff-sept-16-5623ca`). **Other chats fixing alongside must not touch
+`PipeOnePageLayout`, `PitOnePageLayout`, `PitBlockPreviewControl`, `CdPlanPreviewControl`, `PlanAreaRenderer`,
+or the preview parts of `PitEditCommand` / `PipeEditCommand`.**
