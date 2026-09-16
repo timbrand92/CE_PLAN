@@ -378,3 +378,13 @@ class so every tool sees a real polyline. Tim chose: **"Probe first, then rebuil
 option). PROBE-C7-POLY: a throwaway DBX with a class derived from AcDbPolyline, proven headless in accoreconsole 2027
 (reads as a real Polyline with its real handle, keeps its extension dictionary through handOverTo, draws its own
 walls, survives save/reopen). No change to the live enabler until the probe result is recorded here.
+
+### 6n. Tim, 16 Sep (evening): overnight sequence — GO, for both chats
+
+> Tim: *"CAN YOU PLEASE PREPARE OVERNIGHT SEQUENCE"* → block put to him (probe → rebuild-or-fallback → ordinary-pipe
+> refusal → PLACE-01 → upgrade-on-open → 2024 enabler attempt → audit → morning pack by 8 am, nothing deployed) →
+> Tim: **"Go"**. Then: *"OVERNIGHT SEQUENCE FOR BOTH THIUS CHAT AND KL CHAT AS WELL"*.
+
+Morning packs: `01_MASTER_PLAN/MORNING_PACK_C7_2026-09-17.md` (this chat) and
+`01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md` (the K/L chat; its prompt `CHAT_PROMPT_CIVIL_K_L_2026-09-16.md` now
+carries the overnight instruction). Nothing is deployed overnight.

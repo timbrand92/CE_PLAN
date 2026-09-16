@@ -28,8 +28,19 @@ $p = Join-Path $env:APPDATA 'Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Con
 
 **Talk to Tim the way `~/.claude/rules/common/collaboration.md` says:** answer first, plain English with a
 real-world example, dot points, every reply split into `▶ FOR TIM` then `▽ WORKING NOTES`. Built / tested /
-installed / Tim-accepted are four separate facts. Before you write a line of code, tell Tim in one short message
-what you are about to work on and wait for his go.
+installed / Tim-accepted are four separate facts.
+
+## THIS IS AN OVERNIGHT BLOCK (Tim, 16 Sep evening: "OVERNIGHT SEQUENCE FOR BOTH THIS CHAT AND KL CHAT AS WELL")
+
+Reply with ONE short confirmation naming the items you are taking, then **build through the night without waiting
+for Tim**: items 1 to 6 below in order, each one failing test → fix → passing test → REGRESSION_LOG entry → commit →
+push. Park anything that needs Tim's decision (write the question down, do not decide it) and keep moving. When the
+block is done, or by **8 am on 17 Sep at the latest**, run an audit pass over your own claims (re-run the tests,
+re-read the diffs, open any artefact you produced) and write the morning pack to disk:
+`C:\CE_PLAN_MASTER_PLAN\MORNING_PACK_K_L_2026-09-17.md` — one page, three lists: **built** / **test this**
+(exact AutoCAD steps a stranger could follow, what "right" looks like, both lanes) / **needs Tim** (decisions,
+parked items). Commit it to `C:\CE_PLAN`. **Never deploy.** If you run out of unblocked work, stop and say so in
+the pack. If you must stop early (usage limit, a blocker), the pack still lands, saying where you stopped and why.
 
 ## Where to work
 
@@ -125,7 +136,7 @@ with branch, commit and steps, both lanes (2027 and 2024).
 - Computations sheet BUG-158 / F1-01..05 — not started by anyone; ask Tim before taking it.
 - Sections H, I, J, PLACE-01, C7 auto-upgrade, 2024 enabler — the "other Civil areas" chat.
 
-## When you finish (or at 85% context)
+## When you finish (or at 85% context) — in addition to the morning pack
 
 Write `FLEET_STATUS.md` in your worktree with three lists — **built / untested / parked** — plus branch and tip,
 and tell Tim: "Send this to the window chat: branch `claude/civil-k-l-2026-09-16`, tip `<sha>`."
