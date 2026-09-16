@@ -304,3 +304,5 @@ or the preview parts of `PitEditCommand` / `PipeEditCommand`.**
 ### 6i. Tim, 16 Sep: *"INSPECTOR SHOWS CORRECTLY PIT WINDOW SHOWS THIS PIPE AS CHARGED?"*
 
 Root cause found and fixed as PIT-TYPE-01 (plugin REGRESSION_LOG): the pipe window stored a charged-destination name on every pipe and the pit reader let that name outrank the drawing's own type. Built, not installed.
+
+> **Tim, 16 Sep: *"CARRY ON WITH THE DRY-RUN PREVIEW"*** — contract first, then build.
