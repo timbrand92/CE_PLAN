@@ -306,3 +306,5 @@ or the preview parts of `PitEditCommand` / `PipeEditCommand`.**
 Root cause found and fixed as PIT-TYPE-01 (plugin REGRESSION_LOG): the pipe window stored a charged-destination name on every pipe and the pit reader let that name outrank the drawing's own type. Built, not installed.
 
 > **Tim, 16 Sep: *"CARRY ON WITH THE DRY-RUN PREVIEW"*** — contract first, then build.
+
+DRYRUN-01 built (not installed) on `claude/ce-civil-handoff-sept-16-5623ca`; contract at plugin `docs/workflows/DRY_RUN_PREVIEW_CONTRACT_2026-09-16.md`. Open question for Tim's test: does an aborted outer transaction leave an Undo step (L14).
