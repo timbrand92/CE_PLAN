@@ -161,3 +161,37 @@ Steps written for a stranger are in the plugin `REGRESSION_LOG.md` entries **C7-
 | O13 | PLACE-01 callout | MOVE a pipe so its callout text lands on IL text: text moves, leader still starts on the pipe | 2027 |
 | O14 | PLACE-01 settings | CDSETTINGS → LABEL PLACEMENT: 900 refused; 300 → IL text flips instead of a second slide | 2027 |
 | O15 | 2024 enabler | Needs an AutoCAD 2024: ARXLOAD `CE_CVL_OBJECTS_2024.dbx`, open a 2027-saved drawing with pipe objects: pipes draw, one object, no proxy warning | 2024 |
+
+### BUILT 16→17 Sep overnight — branch `claude/civil-k-l-2026-09-16` @ `0ed39495` (sections K and L chat) — NOT installed, NOT tested
+
+Steps written for a stranger are in the plugin `REGRESSION_LOG.md` entries **L-01, L-02/L-03, P-08/item 64,
+item 66, item 67, AUDIT-K-L**, and collected in `01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md`. Summary rows:
+
+| # | What | Test (2027 first; 2024 builds clean but is unrun) | Lane |
+|---|---|---|---|
+| K1 | `CDLPD` offers **Council Pit** | `CDLPD` on a street pipe end: `CouncilPit` is in the list; note reads `CONNECT TO COUNCIL PIT AT APPROX IL<lvl>m TO COUNCIL SATISFACTION. BUILDER TO CONFIRM…` | both |
+| K2 | The old `Council` word still works | `CDLPD`, type `Council` → still gives COUNCIL PIPE | both |
+| K3 | An unknown word writes nothing | `CDLPD`, type `Banana` → "not recognised", **nothing written**. Must NOT quietly write a kerb note | both |
+| K4 | The note is an **MLeader**, wrapped | Note sits where you picked, **wrapped ~5 lines**, leader + arrow back to the **pipe end**, same look as a CD pipe callout. Not one long line; leader must not shoot to the drawing origin | both |
+| K5 | **No invert set → no level clause** | `CDLPD` on an end with no invert: `CONNECT TO COUNCIL STUB TO COUNCIL SATISFACTION. BUILDER TO…` — no `IL`, no `0.00`, no gap | both |
+| K6 | COUNCIL PIPE does not break mid-sentence | `CDLPD` → `CouncilPipe`: `CONNECT TO COUNCIL PIPE AT APPROX …` runs on. Must NOT break the line after PIPE | both |
+| K7 | One note, not two | Run `CDLPD` twice on the same end → one note. `U` once removes note + leader | both |
+| L1 | **Pit resize re-snaps the pipe ends** (was broken) | 450 pit with ≥2 pipes in → `PITEDIT` → 1200 × 1200 (**both** boxes) → every pipe stops at the **new** outline; none stranded inside, none poking through | both |
+| L2 | Label and cover keep their distance | Same resize: label circle and cover text step out, same clear gap from the pit edge | both |
+| L3 | Undo, and shrink | `U` once → size, label, cover, pipe ends all go back. Then 1200 → 450: label + cover come **in**, pipe ends come in with them | both |
+| L4 | If L2 still looks wrong, the log now answers it | `%APPDATA%\CE_CVL_SUITE\logs\`: `PITEDIT Resize:` names size **from** and **to**; each `ShiftAnnotation` line prints `gapBefore=` / `gapAfter=`. Same numbers = the ruling held | both |
+| L5 | **Every tank counted** | `CDTWL` on a job with 2+ tanks on one system: total goes **up**; report says *"This system has 2 tanks (WT1, WT2). All of them are counted in the storage."* Must NOT say *"Only WT1 is counted"* | both |
+| L6 | A one-tank job is unchanged | `CDTWL` on a single-tank system: total the same as before | both |
+| L7 | A tank on another branch is not counted | A re-use tank on a different system must not appear in this branch's total | both |
+| L8 | **Propagation: drawing and record agree** | Type an invert by hand, save, `CDPROPAGATE` from the downstream pit: it says which levels you set by hand and asks; after Apply the drawing level and the schedule level are the **same number** (open 2–3 pipes) | both |
+| L9 | One Undo takes the schedule with it | `U` once after L8 → pipes, pits **and** the schedule all go back. Reopen a pipe and check | both |
+| L10 | **Nothing is skipped in silence** | On a `CDC7UPGRADE`d drawing, `CDPROPAGATE`: any pipe that could not be updated is **named** in a line at the top. Must not quietly report success. **Send Tim's line back** — evidence for the unfinished piece | 2027 |
+| L11 | A refused cascade leaves the schedule alone | If a cascade is refused for any reason, the schedule still shows the **old** levels | both |
+
+**Not finished, needs the other Civil chat:** writing a *converted* pipe's own stored record goes through
+`LinkService.Persistence.cs` (their file) and, reading the code, does not reach the real object. Unproven in
+AutoCAD, their file untouched. Written up in `FLEET_STATUS.md` on the K/L branch.
+
+**Open for Tim (5):** the `COUNCIL PIT` vs `EXISTING COUNCIL PIT` wording · the note's layer (`25DIMS` vs
+`25TEXT`) · the note's wrap width (18.7 text heights) · whether two tanks on one system should be added ·
+whether the 16 Sep `PITEDIT` tests changed one size box or both.

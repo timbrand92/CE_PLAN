@@ -409,3 +409,51 @@ place; nothing is deployed.
 ### 6p. Windows chat overnight block — DONE (17 Sep, before 8 am)
 
 Items 1–3 built and audited (CDWT-W01, BUG-158/F1, CD-TICKS-01); morning pack `01_MASTER_PLAN/MORNING_PACK_WINDOWS_2026-09-17.md`. Trunk `claude/ce-civil-handoff-sept-16-5623ca` @ `17847985`. Nothing deployed. Out of unblocked work in this chat's lane; stopped as the block says.
+
+### 6p. The K/L overnight block — DONE, 17 September, nothing deployed
+
+Tim, 16 Sep evening: *"yes go ahead, see you in the morning"*.
+
+All six items taken (61, 62, 63 — `CDLPD`; 64, 66, 67 — pits, tanks, levels), each built with a failing test
+first, committed and pushed. Branch **`claude/civil-k-l-2026-09-16`**, tip **`0ed39495`**.
+Morning pack: `01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md`. Test rows: `PENDING_TESTS.md` K1–K7, L1–L11.
+
+**Two root causes found, both provable:**
+
+- **Item 64 (P-08, the pipe connections).** `AdjustLinkedPipesToPitBoundary` could only be reached from the
+  pit **MOVE** path, which returns early unless the pit's *position* changed. **Nothing called it on a
+  resize.** Tim's own 16 Sep log at 09:32:03 (pit P8) shows the block updating, both annotations shifting and
+  **no pipe adjustment line at all**. Fixed.
+- **Item 67 (the silent disagreement).** Two things: the project record was written *outside* the drawing's
+  transaction, so a failed cascade left the schedule holding levels the drawing never got; and a **converted
+  CE pipe** was dropped by a bare `continue`, because the code cast the opened object to a `Polyline` and a
+  pipe object is an `AcDbCurve`. On the drawing Tim tested, `CDC7UPGRADE` had converted **51 pipes**. Both
+  fixed; every pipe that still cannot be written is now **named to the user**.
+
+**L-03 could not be settled from the log, and that was the log's own fault.** The 16 Sep log shows `CDLPD`
+running three times and records **nothing** about the connection type, the level or the note. The zero-level
+explanation is the best-supported one, **not a proven one**. Two diagnostic lines added so it settles itself
+next time.
+
+**P-08's label half is NOT claimed fixed.** On both resizes in the log the label moved and kept its edge gap.
+What the log never recorded was the pit's before/after size, so Tim's report could be neither confirmed nor
+refuted. `PITEDIT Resize:` and `gapBefore=`/`gapAfter=` now record both.
+
+**Not finished — needs the other Civil chat.** Writing a *converted* pipe's own stored CE record goes through
+`LinkService.Persistence.cs` (their file), which resolves the extension dictionary directly rather than
+through the pipe seam. Reading the code, that write does not reach a converted pipe. **Unproven in AutoCAD;
+their file untouched.**
+
+**Five questions for Tim** (none decided for him): the `COUNCIL PIT` vs `EXISTING COUNCIL PIT` wording — CE's
+corpus has no finished drawing using this note; the note's layer; the note's wrap width; whether two tanks on
+one detention system should be added together; and whether the 16 Sep `PITEDIT` tests changed one size box or
+both (both logged resizes show only the Y side changing).
+
+**The audit pass found three faults in its own overnight work**, all fixed before Tim saw them and written up
+as `AUDIT-K-L` in the plugin `REGRESSION_LOG.md`: the pit re-snap would have fired on every **preview**
+keystroke; the propagation fix had changed how an **ordinary** pipe is opened and could have broken
+propagation for everybody; and a comment stated AutoCAD behaviour that had not been verified.
+
+Final: net10 suite **9,876 run / 9,836 passed / 23 failed / 17 skipped** — the same 23 pre-existing names,
+compared by name. **net48, net8.0-windows, net10.0-windows: 0 errors.** The live bundle was never touched —
+still `6505fb5a`, written 16 Sep 16:05:47.
