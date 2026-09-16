@@ -405,3 +405,7 @@ managed link-record write both persist through save/reopen; `Clone()` keeps the 
 `C:\Autodesk\CERef\PROBE-C7-POLY-20260916\FINDINGS.md`. **Per Tim's 6m choice, the real enabler is now rebuilt on
 `AcDbPolyline` (overnight).** The 16 Sep v1 objects stay readable through a kept legacy class and are migrated in
 place; nothing is deployed.
+
+### 6p. Windows chat overnight block — DONE (17 Sep, before 8 am)
+
+Items 1–3 built and audited (CDWT-W01, BUG-158/F1, CD-TICKS-01); morning pack `01_MASTER_PLAN/MORNING_PACK_WINDOWS_2026-09-17.md`. Trunk `claude/ce-civil-handoff-sept-16-5623ca` @ `17847985`. Nothing deployed. Out of unblocked work in this chat's lane; stopped as the block says.

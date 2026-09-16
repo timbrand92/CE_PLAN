@@ -32,3 +32,13 @@ The approved scoped handover is `C:\Users\TimothyBrand\.codex\worktrees\28a2\CE_
 The historical trial demonstrates bounded document review and selected PDF geometry measurements. It does not prove unattended recognition, native drawing behaviour or integrated report ingestion. New visual concepts are proposals for Tim's review.
 
 Built, tested, installed and Tim-accepted remain separate facts. No plugin implementation is claimed by this planning block. If work stops early, the morning pack must state the actual stopping point and reason.
+
+## Final planning disposition
+
+- Finalised: 2026-09-16 19:27:22 +10:00 (Australia/Sydney).
+- Actual elapsed since recorded start: 41.6 minutes; not a 6-8 hour run.
+- Terra/high planning was followed by Astra/medium independent audit; all nine findings closed. See audit/AUDIT_CLOSURE.md and its evidence receipt.
+- Morning pack: MORNING_PACK_2026-09-17.md, ready before the deadline.
+- Early stop reason: available family-level planning, source reconciliation, visual review and corrections are complete. Independent audit found no substantive missing family-level planning. Further engineering choices belong to Tim; implementation contracts and real AutoCAD proof belong to the authorised owners. No extra scope or unapproved engineering decisions were invented to occupy time.
+- No plugin build, deployment, git operation or parent-task process action occurred. New planning remains proposed for Tim review. The scoped handover received a supporting-annex link and clarification of existing multiple-outlet/one-DP-destination decisions.
+

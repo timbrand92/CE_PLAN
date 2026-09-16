@@ -37,6 +37,6 @@ All three overview states fit the checked 1024 × 900, 1280 × 720 and 1920 × 1
 
 The eight source files in the earlier private historical trial were fingerprinted again at 19:05 Sydney on 16 September; all eight matched the original manifest. Private paths/results remain in that trial folder, outside repositories.
 
-First independent audit: `audit/AUDIT_REPORT.md`. Corrected visual closure audit is pending. Native AutoCAD sizing, preview performance, document persistence and all real design interactions remain untested.
+First independent audit: `audit/AUDIT_REPORT.md`. The corrected visual is independently closed in `audit/AUDIT_CLOSURE.md`: 28 browser checks and 3 actual-file checks, separate from the root's 34. Native AutoCAD sizing, preview performance, document persistence and all real design interactions remain untested.
 
 The root check was also run by opening the actual disk HTML file, not only injecting its text into a browser page. Its displayed m² units, interactions and stated viewport checks passed. The morning pack links directly to that local concept for standalone review.

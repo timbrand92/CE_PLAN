@@ -2,7 +2,7 @@
 
 **FOR TIM**
 
-**DRAFT — final corrections and independent closure audit pending.** Planning only. Your other implementation tasks remain untouched.
+**Audited planning pack ready.** Finished early after about 40 minutes: the remaining substantive work needs your engineering choices and the separate implementation owners. This was not a full-night run. Planning only; your other implementation tasks remain untouched.
 
 **Planned**
 
@@ -24,6 +24,6 @@
 
 ---
 
-Planning evidence: [journey](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/civil_journey_and_window_map.md), [workflow cards](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/workflow_cards.md), [specialist detail](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/specialist_workflow_details.md), [audit](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/audit/AUDIT_REPORT.md).
+Planning evidence: [journey](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/civil_journey_and_window_map.md), [workflow cards](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/workflow_cards.md), [specialist detail](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/specialist_workflow_details.md), [closed audit](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/audit/AUDIT_CLOSURE.md). The first-pass report remains as correction history.
 
-Built: no plugin changes. Tested: 34 offline concept checks; no AutoCAD tests. Installed: nothing. Tim-accepted: not yet. Native sizing remains unproved despite tested browser fits. Final elapsed time and audit closure are pending; no claim of a completed 6–8 hour run.
+Built: no plugin changes. Tested: 34 root offline concept checks; independent audit separately ran 28 browser and 3 disk-file checks. No AutoCAD tests. Installed: nothing. Tim-accepted: not yet. Native sizing remains unproved despite tested browser fits. Audit closed all nine planning findings on 16 September, before the 17 September 08:00 Sydney deadline. Exact finish time is in the run record; no claim of a completed 6–8 hour run.
