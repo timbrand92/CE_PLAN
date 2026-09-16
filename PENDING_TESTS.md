@@ -51,6 +51,7 @@ Full entries: plugin `REGRESSION_LOG.md` LAYOUT-01, PIT-PREVIEW-01, PIT-PREVIEW-
 | L7 | **CD preview is the real plan along the pipe (CD-PREVIEW-01)** | Double-click a pipe between two pits: the PLAN PREVIEW band is the actual plan along it, north up, both pits in view, sharp. Gold ring + caption "pit · IL" at each end; type a new invert and the caption changes at once. A pipe ending at an IO/DP/LPD shows the real symbol. A 3+ vertex pipe shows the whole run. A NEW pipe still shows the old schematic. Opening must not feel slower. NOT yet shown: where pipe text / invert text / arrow will land (next item). | 2027 only |
 | L8 | **PIT-CONN-01 - pit lists its pipes again** (built, NOT installed) | Edit Pit P10 on the same drawing: Connected pipes shows the P10→P9 pipe with size and IL, and its tag sits on the picture at the wall. Edit Pit P9: same pipe, Entering. A pit with no pipes still says so. | 2027 |
 | L9 | **CD-PREVIEW-01a - New Pipe shows the real plan** (built, NOT installed) | CD, pick the route: the window opens with the plan along the picked points and End 1 / End 2 captions. | 2027 |
+| L10 | **POLISH-01 - CD/PIT windows tidied** (built, NOT installed) | Edit Pipe: level row on one line ("Set Upstream 19.45 m AHD"), header chip one line, plain wording under the levels. Edit Pit: label row + one status line under it, two readout lines under the picture, no duplicate "no pipes". Say what still looks wrong. | 2027 |
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
