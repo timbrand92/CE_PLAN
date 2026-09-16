@@ -1,0 +1,161 @@
+{
+  "at": "2026-09-16T12:45:52.422Z",
+  "scope": "Bounded visual findings closure only. Whole-plugin coverage audit pending.",
+  "sha256": "BA136356F8744A7B426E5CCD3280806591BB7CBE09A55CAA7A435518A0AF7B21",
+  "checks": [
+    {
+      "name": "Frozen source hash matches",
+      "passed": true
+    },
+    {
+      "name": "VIS01 obsolete area not labelled current",
+      "passed": true
+    },
+    {
+      "name": "VIS01 previous240 plus confirmed252 explicit",
+      "passed": true
+    },
+    {
+      "name": "VIS02 scope clears Escape",
+      "passed": true
+    },
+    {
+      "name": "VIS02 acceptance disabled after cancel",
+      "passed": true
+    },
+    {
+      "name": "Independent member200label180",
+      "passed": true
+    },
+    {
+      "name": "Choosing together no catchup",
+      "passed": true
+    },
+    {
+      "name": "VIS02 Escape after rerender resets scope",
+      "passed": true
+    },
+    {
+      "name": "VIS02 accepted state retained onEscape",
+      "passed": true
+    },
+    {
+      "name": "Together label200",
+      "passed": true
+    },
+    {
+      "name": "VIS04 firstUndo member200label180",
+      "passed": true
+    },
+    {
+      "name": "VIS05 key label visible narrow",
+      "passed": true
+    },
+    {
+      "name": "VIS05 key correct180",
+      "passed": true
+    },
+    {
+      "name": "VIS04 secondUndo member180label180",
+      "passed": true
+    },
+    {
+      "name": "Independent later edit does not revert label",
+      "passed": true
+    },
+    {
+      "name": "No-op independent choice not extraUndo",
+      "passed": true
+    },
+    {
+      "name": "Concept confirmed beforeBack",
+      "passed": true
+    },
+    {
+      "name": "VIS03 Back invalidatesconfirmation",
+      "passed": true
+    },
+    {
+      "name": "VIS03 editedmembership unconfirmed",
+      "passed": true
+    },
+    {
+      "name": "VIS03 editedrevision unconfirmed",
+      "passed": true
+    },
+    {
+      "name": "VIS03 resetunconfirmed",
+      "passed": true
+    },
+    {
+      "name": "Corrected start desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 653.546875,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "Corrected civil desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "Corrected framing desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 699.3125,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "Corrected details desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 656.921875,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "Corrected issue desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 688.75,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "Corrected settings desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "Corrected support desktopfit",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "height": 720,
+        "horizontal": true
+      }
+    },
+    {
+      "name": "No browsererrors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 29,
+  "failed": 0
+}

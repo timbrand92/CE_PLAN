@@ -1,0 +1,421 @@
+{
+  "at": "2026-09-16T12:41:09.151Z",
+  "scope": "Bounded independent visual audit only; no whole-plugin completion",
+  "sha256": "11b5fa6f0c69500674b35aa071e9f860a91c014e4719eafba5e69ce180ac4a31",
+  "checks": [
+    {
+      "name": "start horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 662.546875,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "start actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 662.546875,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "civil horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "civil actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "framing horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 699.3125,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "framing actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 699.3125,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "details horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 656.921875,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "details actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 656.921875,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "issue horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 688.75,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "issue actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 688.75,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "settings horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "settings actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "support horizontal fit 1280",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "support actions visible720",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 720,
+        "scroll": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "name": "start horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 662.546875,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "civil horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "framing horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 699.3125,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "details horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 673.71875,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "issue horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 688.75,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "settings horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "support horizontal fit 1024",
+      "passed": true,
+      "detail": {
+        "bottom": 650.375,
+        "viewport": 900,
+        "scroll": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "start horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 1156.71875,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "civil horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 1057.890625,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "framing horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 1236.078125,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "details horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 1042.703125,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "issue horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 861.3125,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "settings horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 990.703125,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "support horizontal fit 360",
+      "passed": true,
+      "detail": {
+        "bottom": 924.078125,
+        "viewport": 900,
+        "scroll": 360,
+        "width": 360
+      }
+    },
+    {
+      "name": "Civil pin remains240",
+      "passed": true
+    },
+    {
+      "name": "Civil adopted252",
+      "passed": true
+    },
+    {
+      "name": "Keep after adopt keeps252",
+      "passed": true
+    },
+    {
+      "name": "Civil evidence truthful after adoption",
+      "passed": false,
+      "detail": "Review what changed\nRoof area in current design\n252 m²\nNew measured proposal\n252 m²\nArea source\nConfirmed measurement\nArea changed in this concept. Connected calculations need updating.\n\nExample survey B · page 2 · revision B\nSource and revision are fictional.\n\nShow plan\nSelect/change documents\nSource evidence\nSite area ≠ catchment area\nFICTIONAL EVIDENCE · NOT A REAL REPORT\nExample survey · Rev B · page 2\nMeasured roof polygon: 252 m²\nCurrent design area: 240 m², manually pinned\nProposal: review the difference. Measurement alone does not establish routing or runoff classification.\nUnclassified area stays Unknown"
+    },
+    {
+      "name": "Framing no defaultscope",
+      "passed": true
+    },
+    {
+      "name": "Independent member200 label180",
+      "passed": true
+    },
+    {
+      "name": "Scope clears on acceptance",
+      "passed": true
+    },
+    {
+      "name": "Choosing together no catchup",
+      "passed": true
+    },
+    {
+      "name": "Escape clears operation scope",
+      "passed": false
+    },
+    {
+      "name": "Reentry no catchup",
+      "passed": true
+    },
+    {
+      "name": "Explicit together updateslabel",
+      "passed": true
+    },
+    {
+      "name": "Manual position same",
+      "passed": true
+    },
+    {
+      "name": "Concept undo restores180",
+      "passed": true
+    },
+    {
+      "name": "Suitability requested",
+      "passed": true
+    },
+    {
+      "name": "Projectcopy scale source retained",
+      "passed": true
+    },
+    {
+      "name": "Unchanged included sheet olddate",
+      "passed": true
+    },
+    {
+      "name": "Membership independent",
+      "passed": true
+    },
+    {
+      "name": "Explicit revised date",
+      "passed": true
+    },
+    {
+      "name": "Review exact set locked",
+      "passed": true
+    },
+    {
+      "name": "No realissue claim",
+      "passed": true
+    },
+    {
+      "name": "Changed issue selection clears confirmation",
+      "passed": false,
+      "detail": "Concept preview confirmed only. No PDF produced and no issue finalised."
+    },
+    {
+      "name": "Discard olddefault",
+      "passed": true
+    },
+    {
+      "name": "Save futuredefault225",
+      "passed": true
+    },
+    {
+      "name": "Reset previewdiscard225",
+      "passed": true
+    },
+    {
+      "name": "Blank notzero",
+      "passed": true
+    },
+    {
+      "name": "Support help-label responds",
+      "passed": true
+    },
+    {
+      "name": "Support help-issue responds",
+      "passed": true
+    },
+    {
+      "name": "Support help-unknown responds",
+      "passed": true
+    },
+    {
+      "name": "Support support-local responds",
+      "passed": true
+    },
+    {
+      "name": "Support support-health responds",
+      "passed": true
+    },
+    {
+      "name": "No externalrequest",
+      "passed": true
+    },
+    {
+      "name": "No scripterror",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "passed": 57,
+  "failed": 3
+}

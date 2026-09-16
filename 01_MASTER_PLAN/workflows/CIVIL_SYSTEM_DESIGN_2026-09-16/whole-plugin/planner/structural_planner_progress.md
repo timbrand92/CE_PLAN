@@ -41,3 +41,12 @@
 | 2026-09-16T22:31:14.5385006+10:00 | Completed | structural_high_use_window_action_contract.md | Source-backed high-use action routes for Beam Settings, FST Manager, RC/steel pickers, XCLMTXT and notes/time. Preserves local-state, cancellation and preview boundaries without runtime claims. |
 
 **Latest verified checkpoint:** 2026-09-16T22:31:14.5385006+10:00 — high-use window action contract added. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+
+| 2026-09-16T22:40:40.8634776+10:00 | Completed | civil_route_control_preservation_ledger.md | Reconciled all 98 Civil declaration rows and 33 non-theme Civil XAML surfaces against earlier Civil pack; preserves owner-only candidates and active CD/PIT/CDWT boundaries. |
+| 2026-09-16T22:40:40.8634776+10:00 | Completed | civil_uncovered_workflow_cards.md | Detailed cards for survey/import/source, calculator tabs, profiles/schedules, slab/site, source items/treatment, diagnostics/repair, TPZ/SRZ and Water Tank last. |
+
+**Latest verified checkpoint:** 2026-09-16T22:40:40.8634776+10:00 — Civil route/control and uncovered-card pass complete. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+
+| 2026-09-16T22:41:55.6115863+10:00 | Completed | civil_action_boundary_contract.md | Source-observed cancellation, preview, selection and output boundaries for Civil non-CD/PIT high-use routes, including one explicit source-vs-approved-direction conflict for owner review. |
+
+**Latest verified checkpoint:** 2026-09-16T22:41:55.6115863+10:00 — Civil non-CD/PIT action-boundary contract added. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.

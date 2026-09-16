@@ -1,0 +1,6210 @@
+{
+  "utc": "2026-09-16T12:39:56.630158+00:00",
+  "roots": {
+    "baseline": "C:\\Lisp Files\\CE_ACAD_PLUGIN",
+    "shared-owner": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN"
+  },
+  "surfaces": [
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeProjectSetupDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "62337ce8eeeb43dd5c6d11e34a9244d969e239f2ca0f56129ac87a61b3c3cde6",
+      "controls": [
+        {
+          "line": 55,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 60,
+          "kind": "ComboBox",
+          "x:Name": "cboProfiles"
+        },
+        {
+          "line": 97,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 102,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 107,
+          "kind": "TextBox",
+          "x:Name": "txtJobName"
+        },
+        {
+          "line": 112,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 117,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "txtDrawnBy"
+        },
+        {
+          "line": 127,
+          "kind": "TextBox",
+          "x:Name": "txtDesignedBy"
+        },
+        {
+          "line": 143,
+          "kind": "TextBox",
+          "x:Name": "txtInitialRevision"
+        },
+        {
+          "line": 146,
+          "kind": "TextBox",
+          "x:Name": "txtTitleSheetTitle"
+        },
+        {
+          "line": 150,
+          "kind": "TextBox",
+          "x:Name": "txtAdditionalSheetTitles"
+        },
+        {
+          "line": 157,
+          "kind": "CheckBox",
+          "x:Name": "chkSeedSharedTitleXref",
+          "Content": "Seed shared A1 title xref into the project Xref folder",
+          "IsChecked": "True"
+        },
+        {
+          "line": 187,
+          "kind": "Button",
+          "x:Name": "btnCreate",
+          "Content": "Create Setup"
+        },
+        {
+          "line": 193,
+          "kind": "Button",
+          "x:Name": "btnCancel",
+          "Content": "Cancel"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "7b17e16a14c451017261792fa9f7969893b1ef8e522ccf529059a17be1ab52fd",
+      "controls": [
+        {
+          "line": 57,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 68,
+          "kind": "Button",
+          "x:Name": "btnBrowse",
+          "Content": "Browse...",
+          "Click": "BtnBrowse_Click"
+        },
+        {
+          "line": 73,
+          "kind": "Button",
+          "x:Name": "btnScan",
+          "Content": "Scan",
+          "Click": "BtnScan_Click"
+        },
+        {
+          "line": 105,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 108,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 111,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 114,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 117,
+          "kind": "TextBox",
+          "x:Name": "txtDrawnBy"
+        },
+        {
+          "line": 120,
+          "kind": "TextBox",
+          "x:Name": "txtDesignedBy"
+        },
+        {
+          "line": 134,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 171,
+          "kind": "ComboBox",
+          "x:Name": "cboDisciplineFilter"
+        },
+        {
+          "line": 215,
+          "kind": "DataGridCheckBoxColumn",
+          "Header": "Issue",
+          "Binding": "{Binding IncludeInIssue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+        },
+        {
+          "line": 218,
+          "kind": "DataGridTextColumn",
+          "Header": "Order",
+          "Binding": "{Binding SheetOrder}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 222,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet No",
+          "Binding": "{Binding SheetNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+        },
+        {
+          "line": 225,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet Title",
+          "Binding": "{Binding SheetTitle, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+        },
+        {
+          "line": 228,
+          "kind": "DataGridTextColumn",
+          "Header": "Rev",
+          "Binding": "{Binding CurrentRevision}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 232,
+          "kind": "DataGridTextColumn",
+          "Header": "Disc",
+          "Binding": "{Binding Discipline}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 236,
+          "kind": "DataGridTextColumn",
+          "Header": "Layout",
+          "Binding": "{Binding LayoutName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 240,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawing",
+          "Binding": "{Binding DwgPath}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 251,
+          "kind": "Button",
+          "x:Name": "btnMoveUp",
+          "Content": "Move Up",
+          "Click": "BtnMoveUp_Click"
+        },
+        {
+          "line": 256,
+          "kind": "Button",
+          "x:Name": "btnMoveDown",
+          "Content": "Move Down",
+          "Click": "BtnMoveDown_Click"
+        },
+        {
+          "line": 261,
+          "kind": "Button",
+          "x:Name": "btnRenumber",
+          "Content": "Renumber Sheets",
+          "Click": "BtnRenumber_Click"
+        },
+        {
+          "line": 277,
+          "kind": "Button",
+          "x:Name": "btnUpdate",
+          "Content": "Update Drawings",
+          "Click": "BtnUpdate_Click"
+        },
+        {
+          "line": 293,
+          "kind": "Button",
+          "x:Name": "btnPublish",
+          "Content": "Publish Issue PDF",
+          "Click": "BtnPublish_Click"
+        },
+        {
+          "line": 298,
+          "kind": "Button",
+          "x:Name": "btnSave",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 337,
+          "kind": "Button",
+          "x:Name": "btnClose",
+          "Content": "Close",
+          "Click": "BtnClose_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsManagerWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "c8e6086bc570e2d885370425d82fd8bd26fbafbc88b1b9e67c76e5c33560d16c",
+      "controls": [
+        {
+          "line": 56,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot"
+        },
+        {
+          "line": 66,
+          "kind": "Button",
+          "Content": "Browse...",
+          "Click": "BtnBrowseProject_Click"
+        },
+        {
+          "line": 70,
+          "kind": "Button",
+          "Content": "Open Folder",
+          "Click": "BtnOpenProjectFolder_Click"
+        },
+        {
+          "line": 74,
+          "kind": "Button",
+          "Content": "Setup Project",
+          "Click": "BtnSetupProject_Click"
+        },
+        {
+          "line": 78,
+          "kind": "Button",
+          "Content": "Scan Project",
+          "Click": "BtnScanProject_Click"
+        },
+        {
+          "line": 85,
+          "kind": "Button",
+          "Content": "Force Full Rescan",
+          "Click": "BtnForceRescanProject_Click"
+        },
+        {
+          "line": 113,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 116,
+          "kind": "TextBox",
+          "x:Name": "txtJobName"
+        },
+        {
+          "line": 119,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 125,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 128,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDrawnBy"
+        },
+        {
+          "line": 131,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDesignedBy"
+        },
+        {
+          "line": 147,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 150,
+          "kind": "TextBox",
+          "x:Name": "txtIssueRevision"
+        },
+        {
+          "line": 152,
+          "kind": "CheckBox",
+          "x:Name": "chkCouncilApproval",
+          "Content": "For council approval"
+        },
+        {
+          "line": 157,
+          "kind": "TextBox",
+          "x:Name": "txtIssueFolderName",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 161,
+          "kind": "CheckBox",
+          "x:Name": "chkSyncLayoutNames",
+          "Content": "Rename layout tabs from the manager",
+          "IsChecked": "True"
+        },
+        {
+          "line": 178,
+          "kind": "ListBox",
+          "x:Name": "lstIssueHistory"
+        },
+        {
+          "line": 190,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDiff",
+          "IsReadOnly": "True",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 199,
+          "kind": "Button",
+          "Content": "Reissue from Selected",
+          "x:Name": "btnReissueFrom",
+          "Click": "BtnReissueFrom_Click"
+        },
+        {
+          "line": 236,
+          "kind": "Button",
+          "Content": "Map Title Block",
+          "Click": "BtnMapTitleBlock_Click"
+        },
+        {
+          "line": 244,
+          "kind": "TextBox",
+          "x:Name": "txtHealthDetails",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 269,
+          "kind": "CheckBox",
+          "x:Name": "chkShowExcluded",
+          "Content": "Show excluded"
+        },
+        {
+          "line": 275,
+          "kind": "Button",
+          "Content": "Add To Issue",
+          "Click": "BtnIncludeSelectedInIssue_Click"
+        },
+        {
+          "line": 276,
+          "kind": "Button",
+          "Content": "Remove From Issue",
+          "Click": "BtnExcludeSelectedFromIssue_Click"
+        },
+        {
+          "line": 277,
+          "kind": "Button",
+          "Content": "Duplicate Selected",
+          "Click": "BtnDuplicateSelected_Click"
+        },
+        {
+          "line": 278,
+          "kind": "Button",
+          "Content": "Insert Before",
+          "Click": "BtnInsertBefore_Click"
+        },
+        {
+          "line": 279,
+          "kind": "Button",
+          "Content": "Insert After",
+          "Click": "BtnInsertAfter_Click"
+        },
+        {
+          "line": 280,
+          "kind": "Button",
+          "Content": "Exclude Selected",
+          "Click": "BtnExcludeSelected_Click"
+        },
+        {
+          "line": 281,
+          "kind": "Button",
+          "Content": "Manage Selected",
+          "Click": "BtnManageSelected_Click"
+        },
+        {
+          "line": 282,
+          "kind": "Button",
+          "Content": "Archive Selected",
+          "Click": "BtnArchiveSelected_Click"
+        },
+        {
+          "line": 283,
+          "kind": "Button",
+          "Content": "Renumber Sheets",
+          "Click": "BtnRenumberSheets_Click"
+        },
+        {
+          "line": 284,
+          "kind": "Button",
+          "Content": "Reconcile Files",
+          "Click": "BtnReconcileFiles_Click"
+        },
+        {
+          "line": 285,
+          "kind": "Button",
+          "Content": "Move Up",
+          "Click": "BtnMoveUp_Click"
+        },
+        {
+          "line": 286,
+          "kind": "Button",
+          "Content": "Move Down",
+          "Click": "BtnMoveDown_Click"
+        },
+        {
+          "line": 287,
+          "kind": "Button",
+          "Content": "Bump Revision",
+          "Click": "BtnBumpRevision_Click"
+        },
+        {
+          "line": 302,
+          "kind": "MenuItem",
+          "Header": "Set Drawn By for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 303,
+          "kind": "MenuItem",
+          "Header": "Set Designed By for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 304,
+          "kind": "MenuItem",
+          "Header": "Set Revision for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 305,
+          "kind": "MenuItem",
+          "Header": "Set Discipline for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 307,
+          "kind": "MenuItem",
+          "Header": "Bump Revision for Selected",
+          "Click": "BtnBumpRevision_Click"
+        },
+        {
+          "line": 309,
+          "kind": "MenuItem",
+          "Header": "Select by Discipline…",
+          "Click": "CtxSelectByDiscipline_Click"
+        },
+        {
+          "line": 310,
+          "kind": "MenuItem",
+          "Header": "Select All Managed",
+          "Click": "CtxSelectAllManaged_Click"
+        },
+        {
+          "line": 312,
+          "kind": "MenuItem",
+          "Header": "Renumber Selected from…",
+          "Click": "CtxRenumberSelectedFrom_Click"
+        },
+        {
+          "line": 313,
+          "kind": "MenuItem",
+          "Header": "Show Numbering Gaps",
+          "Click": "CtxShowGaps_Click"
+        },
+        {
+          "line": 317,
+          "kind": "DataGridTextColumn",
+          "Header": "Status",
+          "Binding": "{Binding ManagementStatus}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 318,
+          "kind": "DataGridTextColumn",
+          "Header": "Issue",
+          "Binding": "{Binding IssueStatus}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 319,
+          "kind": "DataGridTextColumn",
+          "Header": "Order",
+          "Binding": "{Binding SheetOrder}"
+        },
+        {
+          "line": 320,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet No",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 321,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet Title",
+          "Binding": "{Binding SheetTitle}"
+        },
+        {
+          "line": 322,
+          "kind": "DataGridTextColumn",
+          "Header": "Revision",
+          "Binding": "{Binding CurrentRevision}"
+        },
+        {
+          "line": 323,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawn By",
+          "Binding": "{Binding DrawnBy}"
+        },
+        {
+          "line": 324,
+          "kind": "DataGridTextColumn",
+          "Header": "Designed By",
+          "Binding": "{Binding DesignedBy}"
+        },
+        {
+          "line": 325,
+          "kind": "DataGridTextColumn",
+          "Header": "Discipline",
+          "Binding": "{Binding Discipline}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 326,
+          "kind": "DataGridTextColumn",
+          "Header": "Layout Tab",
+          "Binding": "{Binding LayoutTabName}"
+        },
+        {
+          "line": 327,
+          "kind": "DataGridTextColumn",
+          "Header": "Layout",
+          "Binding": "{Binding LayoutName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 328,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawing Path",
+          "Binding": "{Binding DwgPath}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 333,
+          "kind": "Button",
+          "Content": "Save Manifest",
+          "Click": "BtnSaveManifest_Click"
+        },
+        {
+          "line": 334,
+          "kind": "Button",
+          "Content": "Sync Drawings",
+          "Click": "BtnSyncDrawings_Click"
+        },
+        {
+          "line": 335,
+          "kind": "Button",
+          "Content": "Map Title Block",
+          "Click": "BtnMapTitleBlock_Click"
+        },
+        {
+          "line": 336,
+          "kind": "Button",
+          "Content": "Preview Renames",
+          "Click": "BtnPreviewRenames_Click"
+        },
+        {
+          "line": 337,
+          "kind": "Button",
+          "Content": "Apply Renames",
+          "Click": "BtnApplyRenames_Click"
+        },
+        {
+          "line": 338,
+          "kind": "Button",
+          "Content": "Create Issue Snapshot",
+          "Click": "BtnCreateIssue_Click"
+        },
+        {
+          "line": 339,
+          "kind": "Button",
+          "Content": "Publish Issue PDFs",
+          "Click": "BtnPublishIssue_Click"
+        },
+        {
+          "line": 340,
+          "kind": "Button",
+          "Content": "Validate Project",
+          "Click": "BtnValidateProject_Click"
+        },
+        {
+          "line": 368,
+          "kind": "Button",
+          "x:Name": "btnCancelScan",
+          "Content": "Cancel Scan",
+          "Visibility": "Collapsed",
+          "Click": "BtnCancelScan_Click"
+        },
+        {
+          "line": 374,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "BtnClose_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsSyncPreviewWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "c5cf5aec6f50722862bdee46d2a316662c60cd64c49edb9443bfa0d9628f41f0",
+      "controls": [
+        {
+          "line": 182,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        },
+        {
+          "line": 187,
+          "kind": "Button",
+          "x:Name": "btnApplySync",
+          "Content": "Apply Sync",
+          "Click": "BtnApplySync_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsValidationReportWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "257df6deb1ca4a7367b4407779eaa6528abe0deb3a0247adf0937bd979421930",
+      "controls": [
+        {
+          "line": 125,
+          "kind": "DataGridTextColumn",
+          "Header": "Status",
+          "Binding": "{Binding SeverityLabel}"
+        },
+        {
+          "line": 128,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet #",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 131,
+          "kind": "DataGridTextColumn",
+          "Header": "Title",
+          "Binding": "{Binding SheetTitle}"
+        },
+        {
+          "line": 134,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawing",
+          "Binding": "{Binding DwgName}"
+        },
+        {
+          "line": 137,
+          "kind": "DataGridTextColumn",
+          "Header": "Issues",
+          "Binding": "{Binding IssueCount}"
+        },
+        {
+          "line": 212,
+          "kind": "Button",
+          "Content": "Export Report...",
+          "Click": "BtnExportReport_Click"
+        },
+        {
+          "line": 216,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "BtnClose_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSharedTitleMappingWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "9dc92e765bf4cb230db1b7e48e86aa672b5ecb991e67829b3cc9db6fd78a7b4b",
+      "controls": [
+        {
+          "line": 63,
+          "kind": "DataGridTextColumn",
+          "Header": "Candidate",
+          "Binding": "{Binding CandidateLabel}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 64,
+          "kind": "DataGridTextColumn",
+          "Header": "Block",
+          "Binding": "{Binding OwnerBlockName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 65,
+          "kind": "DataGridTextColumn",
+          "Header": "Layer",
+          "Binding": "{Binding LayerName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 66,
+          "kind": "DataGridTextColumn",
+          "Header": "Tag/Source",
+          "Binding": "{Binding SourceName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 67,
+          "kind": "DataGridTextColumn",
+          "Header": "Sample",
+          "Binding": "{Binding SampleText}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 68,
+          "kind": "DataGridTextColumn",
+          "Header": "Scope",
+          "Binding": "{Binding ScopeKind}"
+        },
+        {
+          "line": 69,
+          "kind": "DataGridTextColumn",
+          "Header": "Field",
+          "Binding": "{Binding FieldName}"
+        },
+        {
+          "line": 70,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 71,
+          "kind": "DataGridTextColumn",
+          "Header": "Revision",
+          "Binding": "{Binding RevisionCode}"
+        },
+        {
+          "line": 72,
+          "kind": "DataGridTextColumn",
+          "Header": "Discipline",
+          "Binding": "{Binding DisciplineCode}"
+        },
+        {
+          "line": 73,
+          "kind": "DataGridTextColumn",
+          "Header": "Mapping",
+          "Binding": "{Binding MappingLabel}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 91,
+          "kind": "CheckBox",
+          "x:Name": "chkSaveReusable",
+          "Content": "Save as reusable template mapping in CS_Settings.json"
+        },
+        {
+          "line": 101,
+          "kind": "Button",
+          "Content": "Clear Selected",
+          "Click": "BtnClearSelected_Click"
+        },
+        {
+          "line": 105,
+          "kind": "Button",
+          "Content": "Save Mapping",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 112,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CePropsDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "6f91c1115f0471074147d7a9819c3bc2e7c35d82aba7fee474e2fda47f4014c1",
+      "controls": [
+        {
+          "line": 73,
+          "kind": "TextBox",
+          "x:Name": "txtDrawingPath",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 84,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 119,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "txtJobName"
+        },
+        {
+          "line": 125,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 128,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 131,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 134,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDrawnBy"
+        },
+        {
+          "line": 137,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDesignedBy"
+        },
+        {
+          "line": 164,
+          "kind": "TextBox",
+          "x:Name": "txtRevision"
+        },
+        {
+          "line": 167,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 183,
+          "kind": "CheckBox",
+          "x:Name": "chkUpdateManifest",
+          "Content": "Update CE project manifest for this drawing"
+        },
+        {
+          "line": 188,
+          "kind": "CheckBox",
+          "x:Name": "chkSyncProject",
+          "Content": "Sync managed project drawings now after save"
+        },
+        {
+          "line": 215,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        },
+        {
+          "line": 221,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeIssuePublishDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "5e3e88f2e4cd3b5b5d6997545d187b23b990b6268711bd3174d85b913f9a3a6f",
+      "controls": [
+        {
+          "line": 43,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 47,
+          "kind": "CheckBox",
+          "x:Name": "chkCouncil",
+          "Content": "For council approval"
+        },
+        {
+          "line": 56,
+          "kind": "RadioButton",
+          "x:Name": "rbSeparate",
+          "Content": "Separate packs (a folder per discipline)",
+          "IsChecked": "True"
+        },
+        {
+          "line": 61,
+          "kind": "RadioButton",
+          "x:Name": "rbCombined",
+          "Content": "One combined pack (single folder)"
+        },
+        {
+          "line": 89,
+          "kind": "Button",
+          "x:Name": "btnPublish",
+          "Content": "Publish",
+          "Click": "BtnPublish_Click"
+        },
+        {
+          "line": 98,
+          "kind": "Button",
+          "x:Name": "btnCancel",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "a2424eef3636f4507bf7b2c4302d4fa78e2c0aa8a4f8861c83daa6510f8a1871",
+      "controls": [
+        {
+          "line": 31,
+          "kind": "Button",
+          "Content": "Reset Defaults",
+          "Click": "OnResetDefaultsClick"
+        },
+        {
+          "line": 32,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "OnCancelClick"
+        },
+        {
+          "line": 33,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "OnSaveClick"
+        },
+        {
+          "line": 37,
+          "kind": "TabItem",
+          "x:Name": "GeneralTab",
+          "Header": "General"
+        },
+        {
+          "line": 41,
+          "kind": "TextBox",
+          "x:Name": "DataFolderTextBox"
+        },
+        {
+          "line": 42,
+          "kind": "TextBox",
+          "x:Name": "UserNameTextBox"
+        },
+        {
+          "line": 43,
+          "kind": "ComboBox",
+          "x:Name": "DefaultTabComboBox"
+        },
+        {
+          "line": 49,
+          "kind": "ComboBox",
+          "x:Name": "PaletteDockComboBox"
+        },
+        {
+          "line": 54,
+          "kind": "ComboBox",
+          "x:Name": "ThemeComboBox"
+        },
+        {
+          "line": 59,
+          "kind": "TextBox",
+          "x:Name": "IdleTimeoutTextBox"
+        },
+        {
+          "line": 60,
+          "kind": "TextBox",
+          "x:Name": "LastPaletteWidthTextBox"
+        },
+        {
+          "line": 61,
+          "kind": "TextBox",
+          "x:Name": "FavoriteCommandsTextBox"
+        },
+        {
+          "line": 62,
+          "kind": "CheckBox",
+          "x:Name": "AutoResumeSessionCheckBox",
+          "Content": "Auto resume session"
+        },
+        {
+          "line": 63,
+          "kind": "CheckBox",
+          "x:Name": "ShowStatusBarTimerCheckBox",
+          "Content": "Show status bar timer"
+        },
+        {
+          "line": 64,
+          "kind": "CheckBox",
+          "x:Name": "ShowFloatingTimerCheckBox",
+          "Content": "Show floating timer"
+        },
+        {
+          "line": 65,
+          "kind": "CheckBox",
+          "x:Name": "ShowPaletteOnStartupCheckBox",
+          "Content": "Show palette on startup"
+        },
+        {
+          "line": 70,
+          "kind": "TabItem",
+          "x:Name": "BeamTab",
+          "Header": "Beam"
+        },
+        {
+          "line": 94,
+          "kind": "TextBox",
+          "x:Name": "BeamRegularOffsetTextBox"
+        },
+        {
+          "line": 98,
+          "kind": "TextBox",
+          "x:Name": "BeamMTextOffsetTextBox"
+        },
+        {
+          "line": 102,
+          "kind": "TextBox",
+          "x:Name": "BeamParallelToleranceTextBox"
+        },
+        {
+          "line": 106,
+          "kind": "TextBox",
+          "x:Name": "BeamSearchDistanceTextBox"
+        },
+        {
+          "line": 110,
+          "kind": "TextBox",
+          "x:Name": "BeamWindowDistanceTextBox"
+        },
+        {
+          "line": 114,
+          "kind": "TextBox",
+          "x:Name": "BeamWindowBandTextBox"
+        },
+        {
+          "line": 118,
+          "kind": "TextBox",
+          "x:Name": "BeamCenterToleranceTextBox"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "BeamOffsetMarginTextBox"
+        },
+        {
+          "line": 128,
+          "kind": "TextBox",
+          "x:Name": "SupportInsertOsmodeTextBox"
+        },
+        {
+          "line": 132,
+          "kind": "TextBox",
+          "x:Name": "SupportRotateOsmodeTextBox"
+        },
+        {
+          "line": 136,
+          "kind": "TextBox",
+          "x:Name": "SupportTextOsmodeTextBox"
+        },
+        {
+          "line": 140,
+          "kind": "CheckBox",
+          "x:Name": "BeamLinkingEnabledCheckBox",
+          "Content": "Enable beam linking (move/erase beam, supports &amp; text together)"
+        },
+        {
+          "line": 144,
+          "kind": "CheckBox",
+          "x:Name": "BeamUseInsideOutsidePromptCheckBox",
+          "Content": "Prompt once if no inside-points saved (J11 — recommended)"
+        },
+        {
+          "line": 148,
+          "kind": "CheckBox",
+          "x:Name": "BeamDiagnosticModeCheckBox",
+          "Content": "Diagnostic mode (writes one trace line per beam placement)"
+        },
+        {
+          "line": 150,
+          "kind": "CheckBox",
+          "x:Name": "BeamAutoOffsetCheckBox",
+          "Content": "Auto offset from xref context"
+        },
+        {
+          "line": 151,
+          "kind": "CheckBox",
+          "x:Name": "BeamAutoWallsCheckBox",
+          "Content": "Use walls for auto offset"
+        },
+        {
+          "line": 152,
+          "kind": "CheckBox",
+          "x:Name": "BeamAutoWindowsCheckBox",
+          "Content": "Use windows for auto offset"
+        },
+        {
+          "line": 154,
+          "kind": "CheckBox",
+          "x:Name": "BeamRememberChoicesCheckBox",
+          "Content": "Remember last choices"
+        },
+        {
+          "line": 155,
+          "kind": "CheckBox",
+          "x:Name": "BeamMergeCommandModesCheckBox",
+          "Content": "Merge 1/2/4 with 1A/2A/4A"
+        },
+        {
+          "line": 156,
+          "kind": "CheckBox",
+          "x:Name": "BeamSupportPreviewCheckBox",
+          "Content": "Support rotation preview"
+        },
+        {
+          "line": 157,
+          "kind": "CheckBox",
+          "x:Name": "BeamSupportCancelWholeCheckBox",
+          "Content": "ESC cancels whole support flow"
+        },
+        {
+          "line": 174,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMinReferenceSegmentLengthTextBox"
+        },
+        {
+          "line": 179,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMinWindowOffsetDriverSegmentLengthTextBox"
+        },
+        {
+          "line": 184,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedWallAssemblyGapToleranceTextBox"
+        },
+        {
+          "line": 202,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedEndpointAutoTrimPerpendicularToleranceDegTextBox"
+        },
+        {
+          "line": 207,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedEndpointAutoTrimPointToleranceTextBox"
+        },
+        {
+          "line": 212,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedEndpointAutoTrimSearchDistanceTextBox"
+        },
+        {
+          "line": 219,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedCandidateTPositionsCsvTextBox"
+        },
+        {
+          "line": 234,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedPreviewMarkerSizeTextBox"
+        },
+        {
+          "line": 251,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedLintelPrefixesCsvTextBox"
+        },
+        {
+          "line": 256,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedXrefScanLayerPatternsCsvTextBox"
+        },
+        {
+          "line": 274,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMigrateSupportEndpointToleranceTextBox"
+        },
+        {
+          "line": 279,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMigrateTextProximityToleranceParallelTextBox"
+        },
+        {
+          "line": 284,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMigrateTextProximityToleranceAlongTextBox"
+        },
+        {
+          "line": 294,
+          "kind": "TabItem",
+          "x:Name": "JointTab",
+          "Header": "CJ / SSC"
+        },
+        {
+          "line": 296,
+          "kind": "TextBox",
+          "x:Name": "JointBaseOffsetTextBox"
+        },
+        {
+          "line": 297,
+          "kind": "TextBox",
+          "x:Name": "JointCollisionMarginTextBox"
+        },
+        {
+          "line": 298,
+          "kind": "CheckBox",
+          "x:Name": "JointAutoSideCheckBox",
+          "Content": "Auto choose clean side"
+        },
+        {
+          "line": 299,
+          "kind": "CheckBox",
+          "x:Name": "JointPromptAmbiguousCheckBox",
+          "Content": "Prompt when ambiguous"
+        },
+        {
+          "line": 303,
+          "kind": "TabItem",
+          "x:Name": "SupportsTab",
+          "Header": "Supports"
+        },
+        {
+          "line": 305,
+          "kind": "CheckBox",
+          "x:Name": "SupportAutoDetectSideCheckBox",
+          "Content": "Auto detect support text side"
+        },
+        {
+          "line": 309,
+          "kind": "TabItem",
+          "x:Name": "BracingTab",
+          "Header": "Bracing"
+        },
+        {
+          "line": 311,
+          "kind": "CheckBox",
+          "x:Name": "BracingSkipFlipPromptCheckBox",
+          "Content": "Skip flip prompt when decisive"
+        },
+        {
+          "line": 315,
+          "kind": "TabItem",
+          "x:Name": "RafterJoistTab",
+          "Header": "Rafter / Joist"
+        },
+        {
+          "line": 317,
+          "kind": "TextBox",
+          "x:Name": "RjClashRadiusTextBox"
+        },
+        {
+          "line": 318,
+          "kind": "TextBox",
+          "x:Name": "RjSnapToleranceTextBox"
+        },
+        {
+          "line": 319,
+          "kind": "TextBox",
+          "x:Name": "RjLastR1TextBox"
+        },
+        {
+          "line": 320,
+          "kind": "TextBox",
+          "x:Name": "RjLastFj1TextBox"
+        },
+        {
+          "line": 321,
+          "kind": "TextBox",
+          "x:Name": "RjLastP1TextBox"
+        },
+        {
+          "line": 322,
+          "kind": "CheckBox",
+          "x:Name": "RjAutoPlacementCheckBox",
+          "Content": "Enable auto placement"
+        },
+        {
+          "line": 323,
+          "kind": "CheckBox",
+          "x:Name": "RjDebugLoggingCheckBox",
+          "Content": "Enable debug logging"
+        },
+        {
+          "line": 327,
+          "kind": "TabItem",
+          "x:Name": "RebarTab",
+          "Header": "Rebar"
+        },
+        {
+          "line": 329,
+          "kind": "TextBox",
+          "x:Name": "RebarSizeTextBox"
+        },
+        {
+          "line": 330,
+          "kind": "TextBox",
+          "x:Name": "RebarSpacingTextBox"
+        },
+        {
+          "line": 331,
+          "kind": "TextBox",
+          "x:Name": "RebarZoneTextBox"
+        },
+        {
+          "line": 332,
+          "kind": "TextBox",
+          "x:Name": "RebarCountTextBox"
+        },
+        {
+          "line": 333,
+          "kind": "TextBox",
+          "x:Name": "RebarLengthTextBox"
+        },
+        {
+          "line": 334,
+          "kind": "TextBox",
+          "x:Name": "RebarQuantityTextBox"
+        },
+        {
+          "line": 335,
+          "kind": "TextBox",
+          "x:Name": "RebarExportPathTextBox"
+        },
+        {
+          "line": 339,
+          "kind": "TabItem",
+          "x:Name": "AnnotationTab",
+          "Header": "Annotation"
+        },
+        {
+          "line": 341,
+          "kind": "TextBox",
+          "x:Name": "AnnotationLevelTypeTextBox"
+        },
+        {
+          "line": 342,
+          "kind": "TextBox",
+          "x:Name": "AnnotationSectionDirectionTextBox"
+        },
+        {
+          "line": 343,
+          "kind": "TextBox",
+          "x:Name": "AnnotationArcDimTypeTextBox"
+        },
+        {
+          "line": 347,
+          "kind": "TabItem",
+          "x:Name": "XrefLayerTab",
+          "Header": "Xref Layer"
+        },
+        {
+          "line": 349,
+          "kind": "TextBox",
+          "x:Name": "XrefTargetLayerTextBox"
+        },
+        {
+          "line": 350,
+          "kind": "TextBox",
+          "x:Name": "XrefColorTextBox"
+        },
+        {
+          "line": 351,
+          "kind": "TextBox",
+          "x:Name": "XrefLinetypeTextBox"
+        },
+        {
+          "line": 355,
+          "kind": "TabItem",
+          "x:Name": "SystemTab",
+          "Header": "System"
+        },
+        {
+          "line": 358,
+          "kind": "TextBox",
+          "x:Name": "DiagnosticsThresholdTextBox"
+        },
+        {
+          "line": 359,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveIntervalTextBox"
+        },
+        {
+          "line": 360,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveIdleDelayTextBox"
+        },
+        {
+          "line": 361,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveMaxCopiesTextBox"
+        },
+        {
+          "line": 362,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveBackupRootTextBox"
+        },
+        {
+          "line": 363,
+          "kind": "CheckBox",
+          "x:Name": "OptionsDebugLoggingCheckBox",
+          "Content": "Enable global debug logging"
+        },
+        {
+          "line": 364,
+          "kind": "CheckBox",
+          "x:Name": "DiagnosticsEnabledCheckBox",
+          "Content": "Enable diagnostics"
+        },
+        {
+          "line": 365,
+          "kind": "CheckBox",
+          "x:Name": "VerboseDiagnosticsCheckBox",
+          "Content": "Enable verbose diagnostics"
+        },
+        {
+          "line": 366,
+          "kind": "CheckBox",
+          "x:Name": "AutoSaveEnabledCheckBox",
+          "Content": "Enable autosave"
+        },
+        {
+          "line": 367,
+          "kind": "CheckBox",
+          "x:Name": "AutoSaveWriteBackupsCheckBox",
+          "Content": "Write rolling backups"
+        },
+        {
+          "line": 368,
+          "kind": "CheckBox",
+          "x:Name": "AutoSaveEchoCheckBox",
+          "Content": "Echo saves to command line"
+        },
+        {
+          "line": 369,
+          "kind": "TextBox",
+          "x:Name": "InstallPackageVersionTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 370,
+          "kind": "TextBox",
+          "x:Name": "InstallBundleRootTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 371,
+          "kind": "TextBox",
+          "x:Name": "InstallRuntimeAssemblyTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 372,
+          "kind": "TextBox",
+          "x:Name": "InstallSharedAssetsTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 373,
+          "kind": "TextBox",
+          "x:Name": "InstallWorkspaceCuixTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 378,
+          "kind": "TabItem",
+          "x:Name": "DataAutomationTab",
+          "Header": "Data / Automation"
+        },
+        {
+          "line": 381,
+          "kind": "TextBox",
+          "x:Name": "ExcelLastFolderTextBox"
+        },
+        {
+          "line": 382,
+          "kind": "TextBox",
+          "x:Name": "ExcelProjectSessionTextBox"
+        },
+        {
+          "line": 383,
+          "kind": "TextBox",
+          "x:Name": "ExcelSourceFileTextBox"
+        },
+        {
+          "line": 384,
+          "kind": "TextBox",
+          "x:Name": "ExcelPlacementModeTextBox"
+        },
+        {
+          "line": 385,
+          "kind": "TextBox",
+          "x:Name": "ExcelPreferredColumnsTextBox"
+        },
+        {
+          "line": 386,
+          "kind": "TextBox",
+          "x:Name": "ExcelRowsPerColumnTextBox"
+        },
+        {
+          "line": 387,
+          "kind": "TextBox",
+          "x:Name": "ExcelFloorGapTextBox"
+        },
+        {
+          "line": 388,
+          "kind": "TextBox",
+          "x:Name": "ExcelTextOffsetXTextBox"
+        },
+        {
+          "line": 389,
+          "kind": "TextBox",
+          "x:Name": "ExcelTextOffsetYTextBox"
+        },
+        {
+          "line": 390,
+          "kind": "TextBox",
+          "x:Name": "ExcelMinimumDistanceTextBox"
+        },
+        {
+          "line": 391,
+          "kind": "TextBox",
+          "x:Name": "ExcelScheduleBlockNameTextBox"
+        },
+        {
+          "line": 392,
+          "kind": "TextBox",
+          "x:Name": "ExcelScheduleBlockFileTextBox"
+        },
+        {
+          "line": 393,
+          "kind": "CheckBox",
+          "x:Name": "ExcelAdaptiveLearningCheckBox",
+          "Content": "Enable adaptive learning"
+        },
+        {
+          "line": 394,
+          "kind": "CheckBox",
+          "x:Name": "ExcelInsertScheduleBlocksCheckBox",
+          "Content": "Insert schedule blocks"
+        },
+        {
+          "line": 395,
+          "kind": "CheckBox",
+          "x:Name": "ExcelAuxWipeoutCheckBox",
+          "Content": "Use auxiliary wipeouts"
+        },
+        {
+          "line": 396,
+          "kind": "CheckBox",
+          "x:Name": "ExcelStaticGeometryCheckBox",
+          "Content": "Convert blocks to static geometry"
+        },
+        {
+          "line": 397,
+          "kind": "CheckBox",
+          "x:Name": "ExcelMarkPrefixRulesCheckBox",
+          "Content": "Use mark prefix rules"
+        },
+        {
+          "line": 398,
+          "kind": "CheckBox",
+          "x:Name": "ExcelMezzanineCheckBox",
+          "Content": "Use second floor label for mezzanine"
+        },
+        {
+          "line": 399,
+          "kind": "CheckBox",
+          "x:Name": "ExcelCombineRoofCheckBox",
+          "Content": "Combine roof and first floor schedules"
+        },
+        {
+          "line": 400,
+          "kind": "CheckBox",
+          "x:Name": "ExcelDuplicateAuditCheckBox",
+          "Content": "Enable duplicate mark audit"
+        },
+        {
+          "line": 401,
+          "kind": "CheckBox",
+          "x:Name": "ExcelAuditOnlyCheckBox",
+          "Content": "Audit only"
+        },
+        {
+          "line": 402,
+          "kind": "TextBox",
+          "x:Name": "XclmLastFolderTextBox"
+        },
+        {
+          "line": 403,
+          "kind": "TextBox",
+          "x:Name": "XclmProjectSessionTextBox"
+        },
+        {
+          "line": 404,
+          "kind": "TextBox",
+          "x:Name": "XclmSourceFileTextBox"
+        },
+        {
+          "line": 405,
+          "kind": "TextBox",
+          "x:Name": "XclmAutoApplyThresholdTextBox"
+        },
+        {
+          "line": 406,
+          "kind": "TextBox",
+          "x:Name": "XclmReviewThresholdTextBox"
+        },
+        {
+          "line": 407,
+          "kind": "CheckBox",
+          "x:Name": "XclmBackgroundRefreshCheckBox",
+          "Content": "Background refresh enabled"
+        },
+        {
+          "line": 408,
+          "kind": "CheckBox",
+          "x:Name": "XclmPreferPdfCheckBox",
+          "Content": "Prefer member schedule PDF"
+        },
+        {
+          "line": 409,
+          "kind": "TextBox",
+          "x:Name": "MarkupLastFolderTextBox"
+        },
+        {
+          "line": 410,
+          "kind": "TextBox",
+          "x:Name": "MarkupApiKeyEnvTextBox"
+        },
+        {
+          "line": 411,
+          "kind": "TextBox",
+          "x:Name": "MarkupBaseUrlTextBox"
+        },
+        {
+          "line": 412,
+          "kind": "TextBox",
+          "x:Name": "MarkupModelTextBox"
+        },
+        {
+          "line": 413,
+          "kind": "TextBox",
+          "x:Name": "MarkupThresholdTextBox"
+        },
+        {
+          "line": 414,
+          "kind": "TextBox",
+          "x:Name": "MarkupArchitectIdTextBox"
+        },
+        {
+          "line": 415,
+          "kind": "TextBox",
+          "x:Name": "MarkupDrafterIdTextBox"
+        },
+        {
+          "line": 416,
+          "kind": "TextBox",
+          "x:Name": "MarkupPythonTextBox"
+        },
+        {
+          "line": 417,
+          "kind": "TextBox",
+          "x:Name": "MarkupWorkerTimeoutTextBox"
+        },
+        {
+          "line": 418,
+          "kind": "CheckBox",
+          "x:Name": "MarkupEnabledCheckBox",
+          "Content": "Enable MarkupAI"
+        },
+        {
+          "line": 419,
+          "kind": "CheckBox",
+          "x:Name": "MarkupCivilOntologyCheckBox",
+          "Content": "Include civil ontology"
+        },
+        {
+          "line": 420,
+          "kind": "CheckBox",
+          "x:Name": "MarkupLearningOptInCheckBox",
+          "Content": "Learning data opt in"
+        },
+        {
+          "line": 421,
+          "kind": "CheckBox",
+          "x:Name": "MarkupSaveProjectFolderCheckBox",
+          "Content": "Save packages to project folder"
+        },
+        {
+          "line": 422,
+          "kind": "CheckBox",
+          "x:Name": "MarkupBootstrapWorkerCheckBox",
+          "Content": "Auto bootstrap worker"
+        },
+        {
+          "line": 423,
+          "kind": "CheckBox",
+          "x:Name": "MarkupChatEnabledCheckBox",
+          "Content": "Enable chat"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/SettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "6df6c06e44f40302b9f93823e0c52c9526ebc8ef5c79c0c99ad54a1c8f303b96",
+      "controls": [
+        {
+          "line": 60,
+          "kind": "TextBox",
+          "x:Name": "txtIdleTimeout",
+          "Text": "5"
+        },
+        {
+          "line": 67,
+          "kind": "CheckBox",
+          "x:Name": "chkAutoResumeSession",
+          "Content": "Auto-resume session when returning from idle"
+        },
+        {
+          "line": 71,
+          "kind": "CheckBox",
+          "x:Name": "chkShowStatusBarTimer",
+          "Content": "Show timer in AutoCAD status bar"
+        },
+        {
+          "line": 75,
+          "kind": "CheckBox",
+          "x:Name": "chkShowFloatingTimer",
+          "Content": "Show floating timer window"
+        },
+        {
+          "line": 99,
+          "kind": "ComboBox",
+          "x:Name": "cboDefaultTab"
+        },
+        {
+          "line": 116,
+          "kind": "ComboBox",
+          "x:Name": "cboPaletteDock"
+        },
+        {
+          "line": 132,
+          "kind": "ComboBox",
+          "x:Name": "cboTheme"
+        },
+        {
+          "line": 159,
+          "kind": "TextBox",
+          "x:Name": "txtUserName"
+        },
+        {
+          "line": 180,
+          "kind": "TextBox",
+          "x:Name": "txtDataFolder",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 185,
+          "kind": "Button",
+          "Content": "Browse...",
+          "Click": "BtnBrowseDataFolder_Click"
+        },
+        {
+          "line": 210,
+          "kind": "Button",
+          "Content": "Reset to Defaults",
+          "Click": "BtnResetDefaults_Click"
+        },
+        {
+          "line": 214,
+          "kind": "Button",
+          "Content": "About",
+          "Click": "BtnAbout_Click"
+        },
+        {
+          "line": 220,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 228,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/AdvancedSettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "9f74d9e830c74b4e6aca0c077a347ecb1dc3b8762d4053141c3a139064e67c53",
+      "controls": [
+        {
+          "line": 37,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding InvertPositionOptions}",
+          "SelectedItem": "{Binding DefaultInvertPosition}"
+        },
+        {
+          "line": 43,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding MirrorOptions}",
+          "SelectedItem": "{Binding DefaultMirror}"
+        },
+        {
+          "line": 62,
+          "kind": "TextBox",
+          "Text": "{Binding InvertInwardDistance, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 69,
+          "kind": "TextBox",
+          "Text": "{Binding InvertMaskOffsetMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 95,
+          "kind": "TextBox",
+          "Text": "{Binding DefaultMinimumGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 102,
+          "kind": "TextBox",
+          "Text": "{Binding DefaultStandardGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 121,
+          "kind": "TextBox",
+          "Text": "{Binding CalculatedInvertDecimals, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 127,
+          "kind": "TextBox",
+          "Text": "{Binding MinOutletDropMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 135,
+          "kind": "CheckBox",
+          "Content": "Remember last Quick Mode settings",
+          "IsChecked": "{Binding RememberQuickMode}"
+        },
+        {
+          "line": 138,
+          "kind": "CheckBox",
+          "Content": "Default Auto-zoom in CD",
+          "IsChecked": "{Binding DefaultAutoZoom}"
+        },
+        {
+          "line": 146,
+          "kind": "Button",
+          "Content": "Open OSNAP Settings",
+          "Command": "{Binding OsnapCommand}"
+        },
+        {
+          "line": 170,
+          "kind": "TextBox",
+          "Text": "{Binding DsMinimumPipeGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 176,
+          "kind": "TextBox",
+          "Text": "{Binding DsMaximumPipeVelocity, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 182,
+          "kind": "TextBox",
+          "Text": "{Binding DsMinimumCoverDepth, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 188,
+          "kind": "TextBox",
+          "Text": "{Binding DsLpdPitIdentifier, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 194,
+          "kind": "TextBox",
+          "Text": "{Binding DsMaxPipeRunLength, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 222,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding SurveyWorkflowModeOptions}",
+          "SelectedItem": "{Binding SurveyWorkflowMode}"
+        },
+        {
+          "line": 229,
+          "kind": "TextBox",
+          "Text": "{Binding SurveyRlToleranceMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 243,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding ThemeOptions}",
+          "SelectedItem": "{Binding SelectedTheme}"
+        },
+        {
+          "line": 251,
+          "kind": "CheckBox",
+          "Content": "Use step-by-step wizard mode",
+          "IsChecked": "{Binding UseStepByStepCdMode}"
+        },
+        {
+          "line": 254,
+          "kind": "CheckBox",
+          "Content": "Draw pipe run before options dialog (CD)",
+          "IsChecked": "{Binding CdDrawFirst}"
+        },
+        {
+          "line": 262,
+          "kind": "CheckBox",
+          "Content": "Enable diagnostic logging",
+          "IsChecked": "{Binding DebugLogging}"
+        },
+        {
+          "line": 276,
+          "kind": "Button",
+          "Content": "Reset to Defaults",
+          "Command": "{Binding ResetCommand}"
+        },
+        {
+          "line": 281,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Command": "{Binding CancelCommand}"
+        },
+        {
+          "line": 287,
+          "kind": "Button",
+          "Content": "OK",
+          "Command": "{Binding OkCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/OsnapSettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "63d3c495403ab4972a7294725fd602b5008fb4e671db23919bbade5e20d64f53",
+      "controls": [
+        {
+          "line": 75,
+          "kind": "CheckBox",
+          "IsChecked": "{Binding DrawingEnabled}",
+          "Content": "{Binding Name}",
+          "Name": "{Binding Name}"
+        },
+        {
+          "line": 87,
+          "kind": "Button",
+          "Content": "Use current AutoCAD",
+          "Command": "{Binding UseCurrentForDrawingCommand}"
+        },
+        {
+          "line": 91,
+          "kind": "Button",
+          "Content": "All On",
+          "Command": "{Binding DrawingAllOnCommand}"
+        },
+        {
+          "line": 95,
+          "kind": "Button",
+          "Content": "All Off",
+          "Command": "{Binding DrawingAllOffCommand}"
+        },
+        {
+          "line": 126,
+          "kind": "CheckBox",
+          "IsChecked": "{Binding TextEnabled}",
+          "Content": "{Binding Name}",
+          "Name": "{Binding Name}"
+        },
+        {
+          "line": 138,
+          "kind": "Button",
+          "Content": "Use current AutoCAD",
+          "Command": "{Binding UseCurrentForTextCommand}"
+        },
+        {
+          "line": 142,
+          "kind": "Button",
+          "Content": "All On",
+          "Command": "{Binding TextAllOnCommand}"
+        },
+        {
+          "line": 146,
+          "kind": "Button",
+          "Content": "All Off",
+          "Command": "{Binding TextAllOffCommand}"
+        },
+        {
+          "line": 164,
+          "kind": "Button",
+          "Content": "Restore CE Defaults",
+          "Command": "{Binding ResetDefaultsCommand}"
+        },
+        {
+          "line": 169,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Command": "{Binding CancelCommand}"
+        },
+        {
+          "line": 176,
+          "kind": "Button",
+          "Content": "Save + Use Drawing Now",
+          "Command": "{Binding ApplyCommand}"
+        },
+        {
+          "line": 183,
+          "kind": "Button",
+          "Content": "Save &amp; Close",
+          "Command": "{Binding OkCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/HelpGuideWindow.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "98ee0ab90011fd2ef74b66ae7aec3054b5149a6e753089fb2f3d7e2692d1fe25",
+      "controls": [
+        {
+          "line": 36,
+          "kind": "Button",
+          "x:Name": "OpenInBrowserButton",
+          "Content": "Open in default browser",
+          "Click": "OnOpenInBrowser"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/CdHelpDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "34418bd6612c09d3950b7702f9ac8fd2afcb0156e707a8ca34d7d628777c79e3",
+      "controls": [
+        {
+          "line": 47,
+          "kind": "Button",
+          "Content": "Open CE Suite Manager",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 110,
+          "kind": "Button",
+          "Content": "Pipe Layout (CD)",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 111,
+          "kind": "Button",
+          "Content": "Pit Layout (PIT)",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 112,
+          "kind": "Button",
+          "Content": "Edit Existing (CDEDIT)",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 113,
+          "kind": "Button",
+          "Content": "Pit Schedule",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 114,
+          "kind": "Button",
+          "Content": "Design Check",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 115,
+          "kind": "Button",
+          "Content": "Long. Profile",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 116,
+          "kind": "Button",
+          "Content": "Inspector",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 117,
+          "kind": "Button",
+          "Content": "Repair Center",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 190,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "OnClose"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "46be2a5177d8bc06caa06fda51d670bdb9f9e1824f95c8ba13df9840197dfc45",
+      "controls": [
+        {
+          "line": 205,
+          "kind": "Button",
+          "Content": "Open Hub",
+          "Click": "BtnOpenHub_Click"
+        },
+        {
+          "line": 211,
+          "kind": "Button",
+          "Content": "Open Help",
+          "Click": "BtnOpenHelp_Click"
+        },
+        {
+          "line": 218,
+          "kind": "Button",
+          "Content": "{Binding SettingsButtonLabel}",
+          "Click": "BtnSettings_Click"
+        },
+        {
+          "line": 224,
+          "kind": "Button",
+          "Content": "Open Repair",
+          "Click": "BtnOpenRepair_Click"
+        },
+        {
+          "line": 231,
+          "kind": "Button",
+          "Content": "View Commands",
+          "Click": "BtnViewCommands_Click"
+        },
+        {
+          "line": 237,
+          "kind": "Button",
+          "x:Name": "BtnToggle",
+          "Content": "{Binding ToggleButtonLabel}",
+          "Click": "BtnToggle_Click"
+        },
+        {
+          "line": 248,
+          "kind": "Button",
+          "Content": "Load Now",
+          "Visibility": "{Binding CanLoadNow, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnLoad_Click"
+        },
+        {
+          "line": 255,
+          "kind": "Button",
+          "Content": "{Binding InstallButtonLabel}",
+          "Visibility": "{Binding CanInstallOrUpdate, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnInstall_Click"
+        },
+        {
+          "line": 262,
+          "kind": "Button",
+          "Content": "View History",
+          "Visibility": "{Binding HasUpdateNotes, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnViewHistory_Click"
+        },
+        {
+          "line": 268,
+          "kind": "Button",
+          "Content": "View Superseded",
+          "Visibility": "{Binding HasSupersededBuilds, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnViewSuperseded_Click"
+        },
+        {
+          "line": 335,
+          "kind": "Button",
+          "x:Name": "btnAdminDashboard",
+          "Content": "Admin Dashboard",
+          "Click": "BtnAdminDashboard_Click",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 348,
+          "kind": "Button",
+          "Content": "⟳  Refresh",
+          "Click": "BtnRefresh_Click"
+        },
+        {
+          "line": 464,
+          "kind": "Button",
+          "x:Name": "btnUploadTelemetry",
+          "Content": "Upload Pending Admin Data",
+          "Click": "BtnUploadTelemetry_Click"
+        },
+        {
+          "line": 479,
+          "kind": "Button",
+          "x:Name": "btnSendDiagnostics",
+          "Content": "⬆  Send Diagnostics",
+          "Click": "BtnSendDiagnostics_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Dialogs/PluginAdminWindow.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "4c08a9c5e0ce91394c4b8e7aaf699562951ed6186e74ff39bdc119a7ddcd85e7",
+      "controls": [
+        {
+          "line": 48,
+          "kind": "Button",
+          "Content": "Publish to Azure",
+          "Click": "BtnPublishToAzure_Click"
+        },
+        {
+          "line": 52,
+          "kind": "Button",
+          "Content": "Upload Pending",
+          "Click": "BtnUploadPending_Click"
+        },
+        {
+          "line": 56,
+          "kind": "Button",
+          "Content": "Create Support Bundle",
+          "Click": "BtnCreateBundle_Click"
+        },
+        {
+          "line": 60,
+          "kind": "Button",
+          "x:Name": "BtnRefresh",
+          "Content": "Refresh",
+          "Click": "BtnRefresh_Click"
+        },
+        {
+          "line": 123,
+          "kind": "TabItem",
+          "Header": "Overview",
+          "x:Name": "tabOverview"
+        },
+        {
+          "line": 142,
+          "kind": "TabItem",
+          "Header": "Machines",
+          "x:Name": "tabMachines"
+        },
+        {
+          "line": 148,
+          "kind": "DataGridTextColumn",
+          "Header": "User",
+          "Binding": "{Binding UserName}"
+        },
+        {
+          "line": 149,
+          "kind": "DataGridTextColumn",
+          "Header": "Machine",
+          "Binding": "{Binding MachineName}"
+        },
+        {
+          "line": 150,
+          "kind": "DataGridTextColumn",
+          "Header": "Last Seen",
+          "Binding": "{Binding LastSeenLocal}"
+        },
+        {
+          "line": 151,
+          "kind": "DataGridTextColumn",
+          "Header": "AutoCAD",
+          "Binding": "{Binding AutoCadVersion}"
+        },
+        {
+          "line": 152,
+          "kind": "DataGridTextColumn",
+          "Header": "Restart",
+          "Binding": "{Binding RestartState}"
+        },
+        {
+          "line": 153,
+          "kind": "DataGridTextColumn",
+          "Header": "Health",
+          "Binding": "{Binding HealthState}"
+        },
+        {
+          "line": 154,
+          "kind": "DataGridTextColumn",
+          "Header": "Versions",
+          "Binding": "{Binding PluginVersions}"
+        },
+        {
+          "line": 159,
+          "kind": "TabItem",
+          "Header": "Usage",
+          "x:Name": "tabUsage"
+        },
+        {
+          "line": 166,
+          "kind": "TabItem",
+          "Header": "Failures",
+          "x:Name": "tabFailures"
+        },
+        {
+          "line": 174,
+          "kind": "MenuItem",
+          "Header": "Mark as Investigated",
+          "Click": "MnuAcknowledgeFailure_Click"
+        },
+        {
+          "line": 178,
+          "kind": "DataGridTextColumn",
+          "Header": "Time",
+          "Binding": "{Binding LocalTime}"
+        },
+        {
+          "line": 179,
+          "kind": "DataGridTextColumn",
+          "Header": "Severity",
+          "Binding": "{Binding Severity}"
+        },
+        {
+          "line": 180,
+          "kind": "DataGridTextColumn",
+          "Header": "User",
+          "Binding": "{Binding UserName}"
+        },
+        {
+          "line": 181,
+          "kind": "DataGridTextColumn",
+          "Header": "Machine",
+          "Binding": "{Binding MachineName}"
+        },
+        {
+          "line": 182,
+          "kind": "DataGridTextColumn",
+          "Header": "Plugin",
+          "Binding": "{Binding PluginId}"
+        },
+        {
+          "line": 183,
+          "kind": "DataGridTextColumn",
+          "Header": "Category",
+          "Binding": "{Binding Category}"
+        },
+        {
+          "line": 184,
+          "kind": "DataGridTextColumn",
+          "Header": "Type",
+          "Binding": "{Binding Type}"
+        },
+        {
+          "line": 185,
+          "kind": "DataGridTextColumn",
+          "Header": "Message",
+          "Binding": "{Binding Message}"
+        },
+        {
+          "line": 206,
+          "kind": "TabItem",
+          "Header": "Updates",
+          "x:Name": "tabUpdates"
+        },
+        {
+          "line": 213,
+          "kind": "Button",
+          "Content": "Approve Available Build",
+          "Click": "BtnApproveAvailable_Click"
+        },
+        {
+          "line": 217,
+          "kind": "Button",
+          "Content": "Roll Back Approved Release",
+          "Click": "BtnRollbackApproved_Click"
+        },
+        {
+          "line": 221,
+          "kind": "Button",
+          "Content": "Canary Rollout...",
+          "Click": "BtnCanaryRollout_Click"
+        },
+        {
+          "line": 225,
+          "kind": "Button",
+          "Content": "Promote to All",
+          "Click": "BtnPromoteToAll_Click"
+        },
+        {
+          "line": 236,
+          "kind": "TabItem",
+          "Header": "Support Bundles",
+          "x:Name": "tabSupportBundles"
+        },
+        {
+          "line": 243,
+          "kind": "TabItem",
+          "Header": "Policies",
+          "x:Name": "tabPolicies"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/FeedbackDialog.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "c8374080fddbabc82d7d1b156ef753b41ac4b447d2a33d624bf1cfb96ae5fa16",
+      "controls": [
+        {
+          "line": 59,
+          "kind": "RadioButton",
+          "Content": "Bug report",
+          "IsChecked": "{Binding IsTypeBug}"
+        },
+        {
+          "line": 62,
+          "kind": "RadioButton",
+          "Content": "Suggestion / feature request",
+          "IsChecked": "{Binding IsTypeSuggestion}"
+        },
+        {
+          "line": 69,
+          "kind": "TextBox",
+          "Text": "{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 76,
+          "kind": "TextBox",
+          "Text": "{Binding Description, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 148,
+          "kind": "Button",
+          "Content": "Submit",
+          "Click": "OnSubmit"
+        },
+        {
+          "line": 156,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "OnCancel"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/WhatsNewDialog.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "328e7642390c391eb2f01cfda8efa744abf664252b56bcb13444fe2d7382230f",
+      "controls": [
+        {
+          "line": 75,
+          "kind": "Button",
+          "Content": "How To Guide",
+          "Click": "OnHowToGuide"
+        },
+        {
+          "line": 81,
+          "kind": "Button",
+          "Content": "Got It",
+          "Click": "OnGotIt"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Controls/CeAssistantControl.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "4c67186c9fe652753259ba250a932527fd77b827b70b9a59ff7884c8704c50b2",
+      "controls": [
+        {
+          "line": 144,
+          "kind": "Button",
+          "x:Name": "AnalyzeMarkupsButton",
+          "Content": "Analyse markups",
+          "Click": "AnalyzeMarkupsButton_Click"
+        },
+        {
+          "line": 156,
+          "kind": "Button",
+          "x:Name": "AnalyzeFromFileButton",
+          "Content": "From file…",
+          "Click": "AnalyzeFromFileButton_Click"
+        },
+        {
+          "line": 168,
+          "kind": "Button",
+          "x:Name": "ReviewChangesButton",
+          "Content": "{Binding ReviewChangesButtonText}",
+          "Visibility": "{Binding HasPendingMarkupPlan, Converter={StaticResource BoolToVis}}",
+          "Click": "ReviewChangesButton_Click"
+        },
+        {
+          "line": 184,
+          "kind": "TextBox",
+          "x:Name": "InputBox",
+          "Text": "{Binding InputText, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 201,
+          "kind": "Button",
+          "x:Name": "SendButton",
+          "Content": "Send",
+          "Click": "SendButton_Click"
+        },
+        {
+          "line": 208,
+          "kind": "Button"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Palette/MarkupAIPanel.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "a2a6e4d4253d2fa89b3464db01143b8289caa649a30068d51940f41d0dc60e72",
+      "controls": [
+        {
+          "line": 50,
+          "kind": "TextBox",
+          "x:Name": "txtPdfPath"
+        },
+        {
+          "line": 51,
+          "kind": "Button",
+          "Content": "Browse...",
+          "Click": "BtnBrowsePdf_Click"
+        },
+        {
+          "line": 52,
+          "kind": "Button",
+          "Content": "Parse",
+          "Click": "BtnParse_Click"
+        },
+        {
+          "line": 56,
+          "kind": "ComboBox",
+          "x:Name": "cmbSourceMode"
+        },
+        {
+          "line": 62,
+          "kind": "ComboBox",
+          "x:Name": "cmbProjectType"
+        },
+        {
+          "line": 69,
+          "kind": "Button",
+          "Content": "Load...",
+          "Click": "BtnLoadPackage_Click"
+        },
+        {
+          "line": 70,
+          "kind": "Button",
+          "Content": "Replan",
+          "Click": "BtnReplan_Click"
+        },
+        {
+          "line": 71,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 92,
+          "kind": "DataGridCheckBoxColumn",
+          "Header": "OK",
+          "Binding": "{Binding IsApproved}"
+        },
+        {
+          "line": 93,
+          "kind": "DataGridTextColumn",
+          "Header": "Page",
+          "Binding": "{Binding Page}"
+        },
+        {
+          "line": 94,
+          "kind": "DataGridTextColumn",
+          "Header": "Source",
+          "Binding": "{Binding Source}"
+        },
+        {
+          "line": 95,
+          "kind": "DataGridTextColumn",
+          "Header": "Type",
+          "Binding": "{Binding Intent}"
+        },
+        {
+          "line": 96,
+          "kind": "DataGridTextColumn",
+          "Header": "Text",
+          "Binding": "{Binding Text}"
+        },
+        {
+          "line": 97,
+          "kind": "DataGridTextColumn",
+          "Header": "Conf",
+          "Binding": "{Binding Confidence}"
+        },
+        {
+          "line": 98,
+          "kind": "DataGridTextColumn",
+          "Header": "Exec",
+          "Binding": "{Binding Executor}"
+        },
+        {
+          "line": 99,
+          "kind": "DataGridTextColumn",
+          "Header": "Place",
+          "Binding": "{Binding PlacementReady}"
+        },
+        {
+          "line": 100,
+          "kind": "DataGridTextColumn",
+          "Header": "Command",
+          "Binding": "{Binding Command}"
+        },
+        {
+          "line": 101,
+          "kind": "DataGridTextColumn",
+          "Header": "Reason",
+          "Binding": "{Binding ExecutorReason}"
+        },
+        {
+          "line": 102,
+          "kind": "DataGridTextColumn",
+          "Header": "Group",
+          "Binding": "{Binding GroupKey}"
+        },
+        {
+          "line": 103,
+          "kind": "DataGridTextColumn",
+          "Header": "SubBatch",
+          "Binding": "{Binding SubBatchKey}"
+        },
+        {
+          "line": 104,
+          "kind": "DataGridTextColumn",
+          "Header": "Status",
+          "Binding": "{Binding Status}"
+        },
+        {
+          "line": 109,
+          "kind": "Button",
+          "Content": "Visual Preview",
+          "Click": "BtnVisualPreview_Click"
+        },
+        {
+          "line": 110,
+          "kind": "Button",
+          "Content": "Approve Selected",
+          "Click": "BtnApproveSelected_Click"
+        },
+        {
+          "line": 111,
+          "kind": "Button",
+          "Content": "Reject Selected",
+          "Click": "BtnRejectSelected_Click"
+        },
+        {
+          "line": 112,
+          "kind": "Button",
+          "Content": "Preview Next",
+          "Click": "BtnPreviewNext_Click"
+        },
+        {
+          "line": 113,
+          "kind": "Button",
+          "Content": "Run Next Group",
+          "Click": "BtnRunNext_Click"
+        },
+        {
+          "line": 114,
+          "kind": "Button",
+          "Content": "Undo Last Group",
+          "Click": "BtnUndoLast_Click"
+        },
+        {
+          "line": 115,
+          "kind": "Button",
+          "Content": "Refresh",
+          "Click": "BtnRefresh_Click"
+        },
+        {
+          "line": 132,
+          "kind": "TextBox",
+          "x:Name": "txtChatPrompt"
+        },
+        {
+          "line": 133,
+          "kind": "Button",
+          "Content": "Ask AI",
+          "Click": "BtnAskAi_Click"
+        },
+        {
+          "line": 134,
+          "kind": "Button",
+          "Content": "Apply Suggestions",
+          "Click": "BtnApplyAi_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeProjectSetupDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "62337ce8eeeb43dd5c6d11e34a9244d969e239f2ca0f56129ac87a61b3c3cde6",
+      "controls": [
+        {
+          "line": 55,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 60,
+          "kind": "ComboBox",
+          "x:Name": "cboProfiles"
+        },
+        {
+          "line": 97,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 102,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 107,
+          "kind": "TextBox",
+          "x:Name": "txtJobName"
+        },
+        {
+          "line": 112,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 117,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "txtDrawnBy"
+        },
+        {
+          "line": 127,
+          "kind": "TextBox",
+          "x:Name": "txtDesignedBy"
+        },
+        {
+          "line": 143,
+          "kind": "TextBox",
+          "x:Name": "txtInitialRevision"
+        },
+        {
+          "line": 146,
+          "kind": "TextBox",
+          "x:Name": "txtTitleSheetTitle"
+        },
+        {
+          "line": 150,
+          "kind": "TextBox",
+          "x:Name": "txtAdditionalSheetTitles"
+        },
+        {
+          "line": 157,
+          "kind": "CheckBox",
+          "x:Name": "chkSeedSharedTitleXref",
+          "Content": "Seed shared A1 title xref into the project Xref folder",
+          "IsChecked": "True"
+        },
+        {
+          "line": 187,
+          "kind": "Button",
+          "x:Name": "btnCreate",
+          "Content": "Create Setup"
+        },
+        {
+          "line": 193,
+          "kind": "Button",
+          "x:Name": "btnCancel",
+          "Content": "Cancel"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "7b17e16a14c451017261792fa9f7969893b1ef8e522ccf529059a17be1ab52fd",
+      "controls": [
+        {
+          "line": 57,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 68,
+          "kind": "Button",
+          "x:Name": "btnBrowse",
+          "Content": "Browse...",
+          "Click": "BtnBrowse_Click"
+        },
+        {
+          "line": 73,
+          "kind": "Button",
+          "x:Name": "btnScan",
+          "Content": "Scan",
+          "Click": "BtnScan_Click"
+        },
+        {
+          "line": 105,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 108,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 111,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 114,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 117,
+          "kind": "TextBox",
+          "x:Name": "txtDrawnBy"
+        },
+        {
+          "line": 120,
+          "kind": "TextBox",
+          "x:Name": "txtDesignedBy"
+        },
+        {
+          "line": 134,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 171,
+          "kind": "ComboBox",
+          "x:Name": "cboDisciplineFilter"
+        },
+        {
+          "line": 215,
+          "kind": "DataGridCheckBoxColumn",
+          "Header": "Issue",
+          "Binding": "{Binding IncludeInIssue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+        },
+        {
+          "line": 218,
+          "kind": "DataGridTextColumn",
+          "Header": "Order",
+          "Binding": "{Binding SheetOrder}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 222,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet No",
+          "Binding": "{Binding SheetNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+        },
+        {
+          "line": 225,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet Title",
+          "Binding": "{Binding SheetTitle, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+        },
+        {
+          "line": 228,
+          "kind": "DataGridTextColumn",
+          "Header": "Rev",
+          "Binding": "{Binding CurrentRevision}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 232,
+          "kind": "DataGridTextColumn",
+          "Header": "Disc",
+          "Binding": "{Binding Discipline}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 236,
+          "kind": "DataGridTextColumn",
+          "Header": "Layout",
+          "Binding": "{Binding LayoutName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 240,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawing",
+          "Binding": "{Binding DwgPath}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 251,
+          "kind": "Button",
+          "x:Name": "btnMoveUp",
+          "Content": "Move Up",
+          "Click": "BtnMoveUp_Click"
+        },
+        {
+          "line": 256,
+          "kind": "Button",
+          "x:Name": "btnMoveDown",
+          "Content": "Move Down",
+          "Click": "BtnMoveDown_Click"
+        },
+        {
+          "line": 261,
+          "kind": "Button",
+          "x:Name": "btnRenumber",
+          "Content": "Renumber Sheets",
+          "Click": "BtnRenumber_Click"
+        },
+        {
+          "line": 277,
+          "kind": "Button",
+          "x:Name": "btnUpdate",
+          "Content": "Update Drawings",
+          "Click": "BtnUpdate_Click"
+        },
+        {
+          "line": 293,
+          "kind": "Button",
+          "x:Name": "btnPublish",
+          "Content": "Publish Issue PDF",
+          "Click": "BtnPublish_Click"
+        },
+        {
+          "line": 298,
+          "kind": "Button",
+          "x:Name": "btnSave",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 337,
+          "kind": "Button",
+          "x:Name": "btnClose",
+          "Content": "Close",
+          "Click": "BtnClose_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsManagerWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "6e62767a9b07bf2de47be1ac7d0f7667d430cef1bca5e7250c0409cd9e374a63",
+      "controls": [],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsSyncPreviewWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "c5cf5aec6f50722862bdee46d2a316662c60cd64c49edb9443bfa0d9628f41f0",
+      "controls": [
+        {
+          "line": 182,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        },
+        {
+          "line": 187,
+          "kind": "Button",
+          "x:Name": "btnApplySync",
+          "Content": "Apply Sync",
+          "Click": "BtnApplySync_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsValidationReportWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "257df6deb1ca4a7367b4407779eaa6528abe0deb3a0247adf0937bd979421930",
+      "controls": [
+        {
+          "line": 125,
+          "kind": "DataGridTextColumn",
+          "Header": "Status",
+          "Binding": "{Binding SeverityLabel}"
+        },
+        {
+          "line": 128,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet #",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 131,
+          "kind": "DataGridTextColumn",
+          "Header": "Title",
+          "Binding": "{Binding SheetTitle}"
+        },
+        {
+          "line": 134,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawing",
+          "Binding": "{Binding DwgName}"
+        },
+        {
+          "line": 137,
+          "kind": "DataGridTextColumn",
+          "Header": "Issues",
+          "Binding": "{Binding IssueCount}"
+        },
+        {
+          "line": 212,
+          "kind": "Button",
+          "Content": "Export Report...",
+          "Click": "BtnExportReport_Click"
+        },
+        {
+          "line": 216,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "BtnClose_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSharedTitleMappingWindow.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "9dc92e765bf4cb230db1b7e48e86aa672b5ecb991e67829b3cc9db6fd78a7b4b",
+      "controls": [
+        {
+          "line": 63,
+          "kind": "DataGridTextColumn",
+          "Header": "Candidate",
+          "Binding": "{Binding CandidateLabel}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 64,
+          "kind": "DataGridTextColumn",
+          "Header": "Block",
+          "Binding": "{Binding OwnerBlockName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 65,
+          "kind": "DataGridTextColumn",
+          "Header": "Layer",
+          "Binding": "{Binding LayerName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 66,
+          "kind": "DataGridTextColumn",
+          "Header": "Tag/Source",
+          "Binding": "{Binding SourceName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 67,
+          "kind": "DataGridTextColumn",
+          "Header": "Sample",
+          "Binding": "{Binding SampleText}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 68,
+          "kind": "DataGridTextColumn",
+          "Header": "Scope",
+          "Binding": "{Binding ScopeKind}"
+        },
+        {
+          "line": 69,
+          "kind": "DataGridTextColumn",
+          "Header": "Field",
+          "Binding": "{Binding FieldName}"
+        },
+        {
+          "line": 70,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 71,
+          "kind": "DataGridTextColumn",
+          "Header": "Revision",
+          "Binding": "{Binding RevisionCode}"
+        },
+        {
+          "line": 72,
+          "kind": "DataGridTextColumn",
+          "Header": "Discipline",
+          "Binding": "{Binding DisciplineCode}"
+        },
+        {
+          "line": 73,
+          "kind": "DataGridTextColumn",
+          "Header": "Mapping",
+          "Binding": "{Binding MappingLabel}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 91,
+          "kind": "CheckBox",
+          "x:Name": "chkSaveReusable",
+          "Content": "Save as reusable template mapping in CS_Settings.json"
+        },
+        {
+          "line": 101,
+          "kind": "Button",
+          "Content": "Clear Selected",
+          "Click": "BtnClearSelected_Click"
+        },
+        {
+          "line": 105,
+          "kind": "Button",
+          "Content": "Save Mapping",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 112,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CePropsDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "6f91c1115f0471074147d7a9819c3bc2e7c35d82aba7fee474e2fda47f4014c1",
+      "controls": [
+        {
+          "line": 73,
+          "kind": "TextBox",
+          "x:Name": "txtDrawingPath",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 84,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 119,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "txtJobName"
+        },
+        {
+          "line": 125,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 128,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 131,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 134,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDrawnBy"
+        },
+        {
+          "line": 137,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDesignedBy"
+        },
+        {
+          "line": 164,
+          "kind": "TextBox",
+          "x:Name": "txtRevision"
+        },
+        {
+          "line": 167,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 183,
+          "kind": "CheckBox",
+          "x:Name": "chkUpdateManifest",
+          "Content": "Update CE project manifest for this drawing"
+        },
+        {
+          "line": 188,
+          "kind": "CheckBox",
+          "x:Name": "chkSyncProject",
+          "Content": "Sync managed project drawings now after save"
+        },
+        {
+          "line": 215,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        },
+        {
+          "line": 221,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeIssuePublishDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "229177ee83479d6e9b062b81249fdd91d0d04a260b24ce0513060687158cdb88",
+      "controls": [
+        {
+          "line": 43,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 47,
+          "kind": "CheckBox",
+          "x:Name": "chkCouncil",
+          "Content": "For council approval"
+        },
+        {
+          "line": 56,
+          "kind": "RadioButton",
+          "x:Name": "rbSeparate",
+          "Content": "Separate packs (a folder per discipline)",
+          "IsChecked": "True"
+        },
+        {
+          "line": 61,
+          "kind": "RadioButton",
+          "x:Name": "rbCombined",
+          "Content": "One combined pack (single folder)"
+        },
+        {
+          "line": 89,
+          "kind": "Button",
+          "x:Name": "btnPublish",
+          "Content": "Review",
+          "Click": "BtnPublish_Click"
+        },
+        {
+          "line": 98,
+          "kind": "Button",
+          "x:Name": "btnCancel",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsIssueReviewDialog.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "6277285b75c6e3eac6a120791668acd4a4382475f361c41aeba728c7e14333d0",
+      "controls": [
+        {
+          "line": 47,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet No",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 48,
+          "kind": "DataGridTextColumn",
+          "Header": "Title",
+          "Binding": "{Binding SheetTitle}"
+        },
+        {
+          "line": 49,
+          "kind": "DataGridTextColumn",
+          "Header": "Rev",
+          "Binding": "{Binding Revision}"
+        },
+        {
+          "line": 50,
+          "kind": "DataGridTextColumn",
+          "Header": "Discipline",
+          "Binding": "{Binding Discipline}"
+        },
+        {
+          "line": 51,
+          "kind": "DataGridTextColumn",
+          "Header": "DWG",
+          "Binding": "{Binding DrawingPath}"
+        },
+        {
+          "line": 52,
+          "kind": "DataGridTextColumn",
+          "Header": "Actual layout",
+          "Binding": "{Binding ActualLayout}"
+        },
+        {
+          "line": 92,
+          "kind": "Button",
+          "x:Name": "btnBack",
+          "Content": "Back",
+          "Click": "BtnBack_Click"
+        },
+        {
+          "line": 94,
+          "kind": "Button",
+          "x:Name": "btnIssue",
+          "Content": "Issue",
+          "Click": "BtnIssue_Click"
+        },
+        {
+          "line": 97,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Pages/CeProjectSheetsWorkspaceView.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "b85e1c97a9df72e4d24201d94dbd09e44408ba005d314ebfc9871b8ebdc39368",
+      "controls": [
+        {
+          "line": 52,
+          "kind": "TextBox",
+          "x:Name": "txtProjectRoot"
+        },
+        {
+          "line": 62,
+          "kind": "Button",
+          "Content": "Browse...",
+          "Click": "BtnBrowseProject_Click"
+        },
+        {
+          "line": 66,
+          "kind": "Button",
+          "Content": "Open Folder",
+          "Click": "BtnOpenProjectFolder_Click"
+        },
+        {
+          "line": 70,
+          "kind": "Button",
+          "Content": "Setup Project",
+          "Click": "BtnSetupProject_Click"
+        },
+        {
+          "line": 74,
+          "kind": "Button",
+          "Content": "Scan Project",
+          "Click": "BtnScanProject_Click"
+        },
+        {
+          "line": 81,
+          "kind": "Button",
+          "Content": "Force Full Rescan",
+          "Click": "BtnForceRescanProject_Click"
+        },
+        {
+          "line": 109,
+          "kind": "TextBox",
+          "x:Name": "txtJobNumber"
+        },
+        {
+          "line": 112,
+          "kind": "TextBox",
+          "x:Name": "txtJobName"
+        },
+        {
+          "line": 115,
+          "kind": "TextBox",
+          "x:Name": "txtJobAddress"
+        },
+        {
+          "line": 118,
+          "kind": "TextBox",
+          "x:Name": "txtSuburb"
+        },
+        {
+          "line": 121,
+          "kind": "TextBox",
+          "x:Name": "txtClientName"
+        },
+        {
+          "line": 124,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDrawnBy"
+        },
+        {
+          "line": 127,
+          "kind": "TextBox",
+          "x:Name": "txtDefaultDesignedBy"
+        },
+        {
+          "line": 143,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDate"
+        },
+        {
+          "line": 146,
+          "kind": "TextBox",
+          "x:Name": "txtIssueRevision"
+        },
+        {
+          "line": 148,
+          "kind": "CheckBox",
+          "x:Name": "chkCouncilApproval",
+          "Content": "For council approval"
+        },
+        {
+          "line": 153,
+          "kind": "TextBox",
+          "x:Name": "txtIssueFolderName",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 157,
+          "kind": "CheckBox",
+          "x:Name": "chkSyncLayoutNames",
+          "Content": "Rename layout tabs from the manager",
+          "IsChecked": "True"
+        },
+        {
+          "line": 174,
+          "kind": "ListBox",
+          "x:Name": "lstIssueHistory"
+        },
+        {
+          "line": 186,
+          "kind": "TextBox",
+          "x:Name": "txtIssueDiff",
+          "IsReadOnly": "True",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 195,
+          "kind": "Button",
+          "Content": "Reissue from Selected",
+          "x:Name": "btnReissueFrom",
+          "Click": "BtnReissueFrom_Click"
+        },
+        {
+          "line": 232,
+          "kind": "Button",
+          "Content": "Map Title Block",
+          "Click": "BtnMapTitleBlock_Click"
+        },
+        {
+          "line": 240,
+          "kind": "TextBox",
+          "x:Name": "txtHealthDetails",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 265,
+          "kind": "ComboBox",
+          "x:Name": "cboDisciplineFilter"
+        },
+        {
+          "line": 274,
+          "kind": "CheckBox",
+          "x:Name": "chkShowExcluded",
+          "Content": "Show excluded"
+        },
+        {
+          "line": 280,
+          "kind": "Button",
+          "Content": "Add To Issue",
+          "Click": "BtnIncludeSelectedInIssue_Click"
+        },
+        {
+          "line": 281,
+          "kind": "Button",
+          "Content": "Remove From Issue",
+          "Click": "BtnExcludeSelectedFromIssue_Click"
+        },
+        {
+          "line": 282,
+          "kind": "Button",
+          "Content": "Duplicate Selected",
+          "Click": "BtnDuplicateSelected_Click"
+        },
+        {
+          "line": 283,
+          "kind": "Button",
+          "Content": "Insert Before",
+          "Click": "BtnInsertBefore_Click"
+        },
+        {
+          "line": 284,
+          "kind": "Button",
+          "Content": "Insert After",
+          "Click": "BtnInsertAfter_Click"
+        },
+        {
+          "line": 285,
+          "kind": "Button",
+          "Content": "Exclude Selected",
+          "Click": "BtnExcludeSelected_Click"
+        },
+        {
+          "line": 286,
+          "kind": "Button",
+          "Content": "Manage Selected",
+          "Click": "BtnManageSelected_Click"
+        },
+        {
+          "line": 287,
+          "kind": "Button",
+          "Content": "Archive Selected",
+          "Click": "BtnArchiveSelected_Click"
+        },
+        {
+          "line": 288,
+          "kind": "Button",
+          "Content": "Renumber Sheets",
+          "Click": "BtnRenumberSheets_Click"
+        },
+        {
+          "line": 289,
+          "kind": "Button",
+          "Content": "Reconcile Files",
+          "Click": "BtnReconcileFiles_Click"
+        },
+        {
+          "line": 290,
+          "kind": "Button",
+          "Content": "Move Up",
+          "Click": "BtnMoveUp_Click"
+        },
+        {
+          "line": 291,
+          "kind": "Button",
+          "Content": "Move Down",
+          "Click": "BtnMoveDown_Click"
+        },
+        {
+          "line": 292,
+          "kind": "Button",
+          "Content": "Bump Revision",
+          "Click": "BtnBumpRevision_Click"
+        },
+        {
+          "line": 307,
+          "kind": "MenuItem",
+          "Header": "Set Drawn By for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 308,
+          "kind": "MenuItem",
+          "Header": "Set Designed By for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 309,
+          "kind": "MenuItem",
+          "Header": "Set Revision for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 310,
+          "kind": "MenuItem",
+          "Header": "Set Discipline for Selected…",
+          "Click": "CtxSetField_Click"
+        },
+        {
+          "line": 312,
+          "kind": "MenuItem",
+          "Header": "Bump Revision for Selected",
+          "Click": "BtnBumpRevision_Click"
+        },
+        {
+          "line": 314,
+          "kind": "MenuItem",
+          "Header": "Select by Discipline…",
+          "Click": "CtxSelectByDiscipline_Click"
+        },
+        {
+          "line": 315,
+          "kind": "MenuItem",
+          "Header": "Select All Managed",
+          "Click": "CtxSelectAllManaged_Click"
+        },
+        {
+          "line": 317,
+          "kind": "MenuItem",
+          "Header": "Renumber Selected from…",
+          "Click": "CtxRenumberSelectedFrom_Click"
+        },
+        {
+          "line": 318,
+          "kind": "MenuItem",
+          "Header": "Show Numbering Gaps",
+          "Click": "CtxShowGaps_Click"
+        },
+        {
+          "line": 322,
+          "kind": "DataGridTextColumn",
+          "Header": "Status",
+          "Binding": "{Binding ManagementStatus}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 323,
+          "kind": "DataGridTextColumn",
+          "Header": "Issue",
+          "Binding": "{Binding IssueStatus}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 324,
+          "kind": "DataGridTextColumn",
+          "Header": "Order",
+          "Binding": "{Binding SheetOrder}"
+        },
+        {
+          "line": 325,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet No",
+          "Binding": "{Binding SheetNumber}"
+        },
+        {
+          "line": 326,
+          "kind": "DataGridTextColumn",
+          "Header": "Sheet Title",
+          "Binding": "{Binding SheetTitle}"
+        },
+        {
+          "line": 327,
+          "kind": "DataGridTextColumn",
+          "Header": "Revision",
+          "Binding": "{Binding CurrentRevision}"
+        },
+        {
+          "line": 328,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawn By",
+          "Binding": "{Binding DrawnBy}"
+        },
+        {
+          "line": 329,
+          "kind": "DataGridTextColumn",
+          "Header": "Designed By",
+          "Binding": "{Binding DesignedBy}"
+        },
+        {
+          "line": 330,
+          "kind": "DataGridTextColumn",
+          "Header": "Discipline",
+          "Binding": "{Binding Discipline}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 331,
+          "kind": "DataGridTextColumn",
+          "Header": "Layout Tab",
+          "Binding": "{Binding LayoutTabName}"
+        },
+        {
+          "line": 332,
+          "kind": "DataGridTextColumn",
+          "Header": "Layout",
+          "Binding": "{Binding LayoutName}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 333,
+          "kind": "DataGridTextColumn",
+          "Header": "Drawing Path",
+          "Binding": "{Binding DwgPath}",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 338,
+          "kind": "Button",
+          "Content": "Save Manifest",
+          "Click": "BtnSaveManifest_Click"
+        },
+        {
+          "line": 339,
+          "kind": "Button",
+          "Content": "Sync Drawings",
+          "Click": "BtnSyncDrawings_Click"
+        },
+        {
+          "line": 340,
+          "kind": "Button",
+          "Content": "Map Title Block",
+          "Click": "BtnMapTitleBlock_Click"
+        },
+        {
+          "line": 341,
+          "kind": "Button",
+          "Content": "Preview Renames",
+          "Click": "BtnPreviewRenames_Click"
+        },
+        {
+          "line": 342,
+          "kind": "Button",
+          "Content": "Apply Renames",
+          "Click": "BtnApplyRenames_Click"
+        },
+        {
+          "line": 343,
+          "kind": "Button",
+          "x:Name": "btnCreateIssue",
+          "Content": "Create Issue Snapshot",
+          "Click": "BtnCreateIssue_Click"
+        },
+        {
+          "line": 344,
+          "kind": "Button",
+          "x:Name": "btnPublishIssue",
+          "Content": "Publish Issue PDFs",
+          "Click": "BtnPublishIssue_Click"
+        },
+        {
+          "line": 345,
+          "kind": "Button",
+          "Content": "Validate Project",
+          "Click": "BtnValidateProject_Click"
+        },
+        {
+          "line": 373,
+          "kind": "Button",
+          "x:Name": "btnCancelScan",
+          "Content": "Cancel Scan",
+          "Visibility": "Collapsed",
+          "Click": "BtnCancelScan_Click"
+        },
+        {
+          "line": 379,
+          "kind": "Button",
+          "x:Name": "btnClose",
+          "Content": "Close",
+          "Click": "BtnClose_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Pages/ProjectSheetsWorkspacePage.xaml",
+      "card": "02_SHARED_JOB_AND_ISSUE.md",
+      "sha256": "54ae89c6d3e7222f218409b9834de63c76ef202771372274ccd7d71b47b2c75b",
+      "controls": [
+        {
+          "line": 26,
+          "kind": "Button",
+          "x:Name": "apply",
+          "Content": "Save Project",
+          "Click": "ActionClicked"
+        },
+        {
+          "line": 27,
+          "kind": "Button",
+          "x:Name": "discard",
+          "Content": "Discard",
+          "Click": "ActionClicked"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/CeSettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "a2424eef3636f4507bf7b2c4302d4fa78e2c0aa8a4f8861c83daa6510f8a1871",
+      "controls": [
+        {
+          "line": 31,
+          "kind": "Button",
+          "Content": "Reset Defaults",
+          "Click": "OnResetDefaultsClick"
+        },
+        {
+          "line": 32,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "OnCancelClick"
+        },
+        {
+          "line": 33,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "OnSaveClick"
+        },
+        {
+          "line": 37,
+          "kind": "TabItem",
+          "x:Name": "GeneralTab",
+          "Header": "General"
+        },
+        {
+          "line": 41,
+          "kind": "TextBox",
+          "x:Name": "DataFolderTextBox"
+        },
+        {
+          "line": 42,
+          "kind": "TextBox",
+          "x:Name": "UserNameTextBox"
+        },
+        {
+          "line": 43,
+          "kind": "ComboBox",
+          "x:Name": "DefaultTabComboBox"
+        },
+        {
+          "line": 49,
+          "kind": "ComboBox",
+          "x:Name": "PaletteDockComboBox"
+        },
+        {
+          "line": 54,
+          "kind": "ComboBox",
+          "x:Name": "ThemeComboBox"
+        },
+        {
+          "line": 59,
+          "kind": "TextBox",
+          "x:Name": "IdleTimeoutTextBox"
+        },
+        {
+          "line": 60,
+          "kind": "TextBox",
+          "x:Name": "LastPaletteWidthTextBox"
+        },
+        {
+          "line": 61,
+          "kind": "TextBox",
+          "x:Name": "FavoriteCommandsTextBox"
+        },
+        {
+          "line": 62,
+          "kind": "CheckBox",
+          "x:Name": "AutoResumeSessionCheckBox",
+          "Content": "Auto resume session"
+        },
+        {
+          "line": 63,
+          "kind": "CheckBox",
+          "x:Name": "ShowStatusBarTimerCheckBox",
+          "Content": "Show status bar timer"
+        },
+        {
+          "line": 64,
+          "kind": "CheckBox",
+          "x:Name": "ShowFloatingTimerCheckBox",
+          "Content": "Show floating timer"
+        },
+        {
+          "line": 65,
+          "kind": "CheckBox",
+          "x:Name": "ShowPaletteOnStartupCheckBox",
+          "Content": "Show palette on startup"
+        },
+        {
+          "line": 70,
+          "kind": "TabItem",
+          "x:Name": "BeamTab",
+          "Header": "Beam"
+        },
+        {
+          "line": 94,
+          "kind": "TextBox",
+          "x:Name": "BeamRegularOffsetTextBox"
+        },
+        {
+          "line": 98,
+          "kind": "TextBox",
+          "x:Name": "BeamMTextOffsetTextBox"
+        },
+        {
+          "line": 102,
+          "kind": "TextBox",
+          "x:Name": "BeamParallelToleranceTextBox"
+        },
+        {
+          "line": 106,
+          "kind": "TextBox",
+          "x:Name": "BeamSearchDistanceTextBox"
+        },
+        {
+          "line": 110,
+          "kind": "TextBox",
+          "x:Name": "BeamWindowDistanceTextBox"
+        },
+        {
+          "line": 114,
+          "kind": "TextBox",
+          "x:Name": "BeamWindowBandTextBox"
+        },
+        {
+          "line": 118,
+          "kind": "TextBox",
+          "x:Name": "BeamCenterToleranceTextBox"
+        },
+        {
+          "line": 122,
+          "kind": "TextBox",
+          "x:Name": "BeamOffsetMarginTextBox"
+        },
+        {
+          "line": 128,
+          "kind": "TextBox",
+          "x:Name": "SupportInsertOsmodeTextBox"
+        },
+        {
+          "line": 132,
+          "kind": "TextBox",
+          "x:Name": "SupportRotateOsmodeTextBox"
+        },
+        {
+          "line": 136,
+          "kind": "TextBox",
+          "x:Name": "SupportTextOsmodeTextBox"
+        },
+        {
+          "line": 140,
+          "kind": "CheckBox",
+          "x:Name": "BeamLinkingEnabledCheckBox",
+          "Content": "Enable beam linking (move/erase beam, supports &amp; text together)"
+        },
+        {
+          "line": 144,
+          "kind": "CheckBox",
+          "x:Name": "BeamUseInsideOutsidePromptCheckBox",
+          "Content": "Prompt once if no inside-points saved (J11 — recommended)"
+        },
+        {
+          "line": 148,
+          "kind": "CheckBox",
+          "x:Name": "BeamDiagnosticModeCheckBox",
+          "Content": "Diagnostic mode (writes one trace line per beam placement)"
+        },
+        {
+          "line": 150,
+          "kind": "CheckBox",
+          "x:Name": "BeamAutoOffsetCheckBox",
+          "Content": "Auto offset from xref context"
+        },
+        {
+          "line": 151,
+          "kind": "CheckBox",
+          "x:Name": "BeamAutoWallsCheckBox",
+          "Content": "Use walls for auto offset"
+        },
+        {
+          "line": 152,
+          "kind": "CheckBox",
+          "x:Name": "BeamAutoWindowsCheckBox",
+          "Content": "Use windows for auto offset"
+        },
+        {
+          "line": 154,
+          "kind": "CheckBox",
+          "x:Name": "BeamRememberChoicesCheckBox",
+          "Content": "Remember last choices"
+        },
+        {
+          "line": 155,
+          "kind": "CheckBox",
+          "x:Name": "BeamMergeCommandModesCheckBox",
+          "Content": "Merge 1/2/4 with 1A/2A/4A"
+        },
+        {
+          "line": 156,
+          "kind": "CheckBox",
+          "x:Name": "BeamSupportPreviewCheckBox",
+          "Content": "Support rotation preview"
+        },
+        {
+          "line": 157,
+          "kind": "CheckBox",
+          "x:Name": "BeamSupportCancelWholeCheckBox",
+          "Content": "ESC cancels whole support flow"
+        },
+        {
+          "line": 174,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMinReferenceSegmentLengthTextBox"
+        },
+        {
+          "line": 179,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMinWindowOffsetDriverSegmentLengthTextBox"
+        },
+        {
+          "line": 184,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedWallAssemblyGapToleranceTextBox"
+        },
+        {
+          "line": 202,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedEndpointAutoTrimPerpendicularToleranceDegTextBox"
+        },
+        {
+          "line": 207,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedEndpointAutoTrimPointToleranceTextBox"
+        },
+        {
+          "line": 212,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedEndpointAutoTrimSearchDistanceTextBox"
+        },
+        {
+          "line": 219,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedCandidateTPositionsCsvTextBox"
+        },
+        {
+          "line": 234,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedPreviewMarkerSizeTextBox"
+        },
+        {
+          "line": 251,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedLintelPrefixesCsvTextBox"
+        },
+        {
+          "line": 256,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedXrefScanLayerPatternsCsvTextBox"
+        },
+        {
+          "line": 274,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMigrateSupportEndpointToleranceTextBox"
+        },
+        {
+          "line": 279,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMigrateTextProximityToleranceParallelTextBox"
+        },
+        {
+          "line": 284,
+          "kind": "TextBox",
+          "x:Name": "BeamAdvancedMigrateTextProximityToleranceAlongTextBox"
+        },
+        {
+          "line": 294,
+          "kind": "TabItem",
+          "x:Name": "JointTab",
+          "Header": "CJ / SSC"
+        },
+        {
+          "line": 296,
+          "kind": "TextBox",
+          "x:Name": "JointBaseOffsetTextBox"
+        },
+        {
+          "line": 297,
+          "kind": "TextBox",
+          "x:Name": "JointCollisionMarginTextBox"
+        },
+        {
+          "line": 298,
+          "kind": "CheckBox",
+          "x:Name": "JointAutoSideCheckBox",
+          "Content": "Auto choose clean side"
+        },
+        {
+          "line": 299,
+          "kind": "CheckBox",
+          "x:Name": "JointPromptAmbiguousCheckBox",
+          "Content": "Prompt when ambiguous"
+        },
+        {
+          "line": 303,
+          "kind": "TabItem",
+          "x:Name": "SupportsTab",
+          "Header": "Supports"
+        },
+        {
+          "line": 305,
+          "kind": "CheckBox",
+          "x:Name": "SupportAutoDetectSideCheckBox",
+          "Content": "Auto detect support text side"
+        },
+        {
+          "line": 309,
+          "kind": "TabItem",
+          "x:Name": "BracingTab",
+          "Header": "Bracing"
+        },
+        {
+          "line": 311,
+          "kind": "CheckBox",
+          "x:Name": "BracingSkipFlipPromptCheckBox",
+          "Content": "Skip flip prompt when decisive"
+        },
+        {
+          "line": 315,
+          "kind": "TabItem",
+          "x:Name": "RafterJoistTab",
+          "Header": "Rafter / Joist"
+        },
+        {
+          "line": 317,
+          "kind": "TextBox",
+          "x:Name": "RjClashRadiusTextBox"
+        },
+        {
+          "line": 318,
+          "kind": "TextBox",
+          "x:Name": "RjSnapToleranceTextBox"
+        },
+        {
+          "line": 319,
+          "kind": "TextBox",
+          "x:Name": "RjLastR1TextBox"
+        },
+        {
+          "line": 320,
+          "kind": "TextBox",
+          "x:Name": "RjLastFj1TextBox"
+        },
+        {
+          "line": 321,
+          "kind": "TextBox",
+          "x:Name": "RjLastP1TextBox"
+        },
+        {
+          "line": 322,
+          "kind": "CheckBox",
+          "x:Name": "RjAutoPlacementCheckBox",
+          "Content": "Enable auto placement"
+        },
+        {
+          "line": 323,
+          "kind": "CheckBox",
+          "x:Name": "RjDebugLoggingCheckBox",
+          "Content": "Enable debug logging"
+        },
+        {
+          "line": 327,
+          "kind": "TabItem",
+          "x:Name": "RebarTab",
+          "Header": "Rebar"
+        },
+        {
+          "line": 329,
+          "kind": "TextBox",
+          "x:Name": "RebarSizeTextBox"
+        },
+        {
+          "line": 330,
+          "kind": "TextBox",
+          "x:Name": "RebarSpacingTextBox"
+        },
+        {
+          "line": 331,
+          "kind": "TextBox",
+          "x:Name": "RebarZoneTextBox"
+        },
+        {
+          "line": 332,
+          "kind": "TextBox",
+          "x:Name": "RebarCountTextBox"
+        },
+        {
+          "line": 333,
+          "kind": "TextBox",
+          "x:Name": "RebarLengthTextBox"
+        },
+        {
+          "line": 334,
+          "kind": "TextBox",
+          "x:Name": "RebarQuantityTextBox"
+        },
+        {
+          "line": 335,
+          "kind": "TextBox",
+          "x:Name": "RebarExportPathTextBox"
+        },
+        {
+          "line": 339,
+          "kind": "TabItem",
+          "x:Name": "AnnotationTab",
+          "Header": "Annotation"
+        },
+        {
+          "line": 341,
+          "kind": "TextBox",
+          "x:Name": "AnnotationLevelTypeTextBox"
+        },
+        {
+          "line": 342,
+          "kind": "TextBox",
+          "x:Name": "AnnotationSectionDirectionTextBox"
+        },
+        {
+          "line": 343,
+          "kind": "TextBox",
+          "x:Name": "AnnotationArcDimTypeTextBox"
+        },
+        {
+          "line": 347,
+          "kind": "TabItem",
+          "x:Name": "XrefLayerTab",
+          "Header": "Xref Layer"
+        },
+        {
+          "line": 349,
+          "kind": "TextBox",
+          "x:Name": "XrefTargetLayerTextBox"
+        },
+        {
+          "line": 350,
+          "kind": "TextBox",
+          "x:Name": "XrefColorTextBox"
+        },
+        {
+          "line": 351,
+          "kind": "TextBox",
+          "x:Name": "XrefLinetypeTextBox"
+        },
+        {
+          "line": 355,
+          "kind": "TabItem",
+          "x:Name": "SystemTab",
+          "Header": "System"
+        },
+        {
+          "line": 358,
+          "kind": "TextBox",
+          "x:Name": "DiagnosticsThresholdTextBox"
+        },
+        {
+          "line": 359,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveIntervalTextBox"
+        },
+        {
+          "line": 360,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveIdleDelayTextBox"
+        },
+        {
+          "line": 361,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveMaxCopiesTextBox"
+        },
+        {
+          "line": 362,
+          "kind": "TextBox",
+          "x:Name": "AutoSaveBackupRootTextBox"
+        },
+        {
+          "line": 363,
+          "kind": "CheckBox",
+          "x:Name": "OptionsDebugLoggingCheckBox",
+          "Content": "Enable global debug logging"
+        },
+        {
+          "line": 364,
+          "kind": "CheckBox",
+          "x:Name": "DiagnosticsEnabledCheckBox",
+          "Content": "Enable diagnostics"
+        },
+        {
+          "line": 365,
+          "kind": "CheckBox",
+          "x:Name": "VerboseDiagnosticsCheckBox",
+          "Content": "Enable verbose diagnostics"
+        },
+        {
+          "line": 366,
+          "kind": "CheckBox",
+          "x:Name": "AutoSaveEnabledCheckBox",
+          "Content": "Enable autosave"
+        },
+        {
+          "line": 367,
+          "kind": "CheckBox",
+          "x:Name": "AutoSaveWriteBackupsCheckBox",
+          "Content": "Write rolling backups"
+        },
+        {
+          "line": 368,
+          "kind": "CheckBox",
+          "x:Name": "AutoSaveEchoCheckBox",
+          "Content": "Echo saves to command line"
+        },
+        {
+          "line": 369,
+          "kind": "TextBox",
+          "x:Name": "InstallPackageVersionTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 370,
+          "kind": "TextBox",
+          "x:Name": "InstallBundleRootTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 371,
+          "kind": "TextBox",
+          "x:Name": "InstallRuntimeAssemblyTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 372,
+          "kind": "TextBox",
+          "x:Name": "InstallSharedAssetsTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 373,
+          "kind": "TextBox",
+          "x:Name": "InstallWorkspaceCuixTextBox",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 378,
+          "kind": "TabItem",
+          "x:Name": "DataAutomationTab",
+          "Header": "Data / Automation"
+        },
+        {
+          "line": 381,
+          "kind": "TextBox",
+          "x:Name": "ExcelLastFolderTextBox"
+        },
+        {
+          "line": 382,
+          "kind": "TextBox",
+          "x:Name": "ExcelProjectSessionTextBox"
+        },
+        {
+          "line": 383,
+          "kind": "TextBox",
+          "x:Name": "ExcelSourceFileTextBox"
+        },
+        {
+          "line": 384,
+          "kind": "TextBox",
+          "x:Name": "ExcelPlacementModeTextBox"
+        },
+        {
+          "line": 385,
+          "kind": "TextBox",
+          "x:Name": "ExcelPreferredColumnsTextBox"
+        },
+        {
+          "line": 386,
+          "kind": "TextBox",
+          "x:Name": "ExcelRowsPerColumnTextBox"
+        },
+        {
+          "line": 387,
+          "kind": "TextBox",
+          "x:Name": "ExcelFloorGapTextBox"
+        },
+        {
+          "line": 388,
+          "kind": "TextBox",
+          "x:Name": "ExcelTextOffsetXTextBox"
+        },
+        {
+          "line": 389,
+          "kind": "TextBox",
+          "x:Name": "ExcelTextOffsetYTextBox"
+        },
+        {
+          "line": 390,
+          "kind": "TextBox",
+          "x:Name": "ExcelMinimumDistanceTextBox"
+        },
+        {
+          "line": 391,
+          "kind": "TextBox",
+          "x:Name": "ExcelScheduleBlockNameTextBox"
+        },
+        {
+          "line": 392,
+          "kind": "TextBox",
+          "x:Name": "ExcelScheduleBlockFileTextBox"
+        },
+        {
+          "line": 393,
+          "kind": "CheckBox",
+          "x:Name": "ExcelAdaptiveLearningCheckBox",
+          "Content": "Enable adaptive learning"
+        },
+        {
+          "line": 394,
+          "kind": "CheckBox",
+          "x:Name": "ExcelInsertScheduleBlocksCheckBox",
+          "Content": "Insert schedule blocks"
+        },
+        {
+          "line": 395,
+          "kind": "CheckBox",
+          "x:Name": "ExcelAuxWipeoutCheckBox",
+          "Content": "Use auxiliary wipeouts"
+        },
+        {
+          "line": 396,
+          "kind": "CheckBox",
+          "x:Name": "ExcelStaticGeometryCheckBox",
+          "Content": "Convert blocks to static geometry"
+        },
+        {
+          "line": 397,
+          "kind": "CheckBox",
+          "x:Name": "ExcelMarkPrefixRulesCheckBox",
+          "Content": "Use mark prefix rules"
+        },
+        {
+          "line": 398,
+          "kind": "CheckBox",
+          "x:Name": "ExcelMezzanineCheckBox",
+          "Content": "Use second floor label for mezzanine"
+        },
+        {
+          "line": 399,
+          "kind": "CheckBox",
+          "x:Name": "ExcelCombineRoofCheckBox",
+          "Content": "Combine roof and first floor schedules"
+        },
+        {
+          "line": 400,
+          "kind": "CheckBox",
+          "x:Name": "ExcelDuplicateAuditCheckBox",
+          "Content": "Enable duplicate mark audit"
+        },
+        {
+          "line": 401,
+          "kind": "CheckBox",
+          "x:Name": "ExcelAuditOnlyCheckBox",
+          "Content": "Audit only"
+        },
+        {
+          "line": 402,
+          "kind": "TextBox",
+          "x:Name": "XclmLastFolderTextBox"
+        },
+        {
+          "line": 403,
+          "kind": "TextBox",
+          "x:Name": "XclmProjectSessionTextBox"
+        },
+        {
+          "line": 404,
+          "kind": "TextBox",
+          "x:Name": "XclmSourceFileTextBox"
+        },
+        {
+          "line": 405,
+          "kind": "TextBox",
+          "x:Name": "XclmAutoApplyThresholdTextBox"
+        },
+        {
+          "line": 406,
+          "kind": "TextBox",
+          "x:Name": "XclmReviewThresholdTextBox"
+        },
+        {
+          "line": 407,
+          "kind": "CheckBox",
+          "x:Name": "XclmBackgroundRefreshCheckBox",
+          "Content": "Background refresh enabled"
+        },
+        {
+          "line": 408,
+          "kind": "CheckBox",
+          "x:Name": "XclmPreferPdfCheckBox",
+          "Content": "Prefer member schedule PDF"
+        },
+        {
+          "line": 409,
+          "kind": "TextBox",
+          "x:Name": "MarkupLastFolderTextBox"
+        },
+        {
+          "line": 410,
+          "kind": "TextBox",
+          "x:Name": "MarkupApiKeyEnvTextBox"
+        },
+        {
+          "line": 411,
+          "kind": "TextBox",
+          "x:Name": "MarkupBaseUrlTextBox"
+        },
+        {
+          "line": 412,
+          "kind": "TextBox",
+          "x:Name": "MarkupModelTextBox"
+        },
+        {
+          "line": 413,
+          "kind": "TextBox",
+          "x:Name": "MarkupThresholdTextBox"
+        },
+        {
+          "line": 414,
+          "kind": "TextBox",
+          "x:Name": "MarkupArchitectIdTextBox"
+        },
+        {
+          "line": 415,
+          "kind": "TextBox",
+          "x:Name": "MarkupDrafterIdTextBox"
+        },
+        {
+          "line": 416,
+          "kind": "TextBox",
+          "x:Name": "MarkupPythonTextBox"
+        },
+        {
+          "line": 417,
+          "kind": "TextBox",
+          "x:Name": "MarkupWorkerTimeoutTextBox"
+        },
+        {
+          "line": 418,
+          "kind": "CheckBox",
+          "x:Name": "MarkupEnabledCheckBox",
+          "Content": "Enable MarkupAI"
+        },
+        {
+          "line": 419,
+          "kind": "CheckBox",
+          "x:Name": "MarkupCivilOntologyCheckBox",
+          "Content": "Include civil ontology"
+        },
+        {
+          "line": 420,
+          "kind": "CheckBox",
+          "x:Name": "MarkupLearningOptInCheckBox",
+          "Content": "Learning data opt in"
+        },
+        {
+          "line": 421,
+          "kind": "CheckBox",
+          "x:Name": "MarkupSaveProjectFolderCheckBox",
+          "Content": "Save packages to project folder"
+        },
+        {
+          "line": 422,
+          "kind": "CheckBox",
+          "x:Name": "MarkupBootstrapWorkerCheckBox",
+          "Content": "Auto bootstrap worker"
+        },
+        {
+          "line": 423,
+          "kind": "CheckBox",
+          "x:Name": "MarkupChatEnabledCheckBox",
+          "Content": "Enable chat"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Dialogs/SettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "6df6c06e44f40302b9f93823e0c52c9526ebc8ef5c79c0c99ad54a1c8f303b96",
+      "controls": [
+        {
+          "line": 60,
+          "kind": "TextBox",
+          "x:Name": "txtIdleTimeout",
+          "Text": "5"
+        },
+        {
+          "line": 67,
+          "kind": "CheckBox",
+          "x:Name": "chkAutoResumeSession",
+          "Content": "Auto-resume session when returning from idle"
+        },
+        {
+          "line": 71,
+          "kind": "CheckBox",
+          "x:Name": "chkShowStatusBarTimer",
+          "Content": "Show timer in AutoCAD status bar"
+        },
+        {
+          "line": 75,
+          "kind": "CheckBox",
+          "x:Name": "chkShowFloatingTimer",
+          "Content": "Show floating timer window"
+        },
+        {
+          "line": 99,
+          "kind": "ComboBox",
+          "x:Name": "cboDefaultTab"
+        },
+        {
+          "line": 116,
+          "kind": "ComboBox",
+          "x:Name": "cboPaletteDock"
+        },
+        {
+          "line": 132,
+          "kind": "ComboBox",
+          "x:Name": "cboTheme"
+        },
+        {
+          "line": 159,
+          "kind": "TextBox",
+          "x:Name": "txtUserName"
+        },
+        {
+          "line": 180,
+          "kind": "TextBox",
+          "x:Name": "txtDataFolder",
+          "IsReadOnly": "True"
+        },
+        {
+          "line": 185,
+          "kind": "Button",
+          "Content": "Browse...",
+          "Click": "BtnBrowseDataFolder_Click"
+        },
+        {
+          "line": 210,
+          "kind": "Button",
+          "Content": "Reset to Defaults",
+          "Click": "BtnResetDefaults_Click"
+        },
+        {
+          "line": 214,
+          "kind": "Button",
+          "Content": "About",
+          "Click": "BtnAbout_Click"
+        },
+        {
+          "line": 220,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 228,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancel_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/AdvancedSettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "6dd2dbf4f73aebe6dc9d52732c90ad99b1874ea8960d215588d14a700902135a",
+      "controls": [
+        {
+          "line": 37,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding InvertPositionOptions}",
+          "SelectedItem": "{Binding DefaultInvertPosition}"
+        },
+        {
+          "line": 43,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding MirrorOptions}",
+          "SelectedItem": "{Binding DefaultMirror}"
+        },
+        {
+          "line": 62,
+          "kind": "TextBox",
+          "Text": "{Binding InvertInwardDistance, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 69,
+          "kind": "TextBox",
+          "Text": "{Binding InvertMaskOffsetMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 95,
+          "kind": "TextBox",
+          "Text": "{Binding DefaultMinimumGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 102,
+          "kind": "TextBox",
+          "Text": "{Binding DefaultStandardGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 121,
+          "kind": "TextBox",
+          "Text": "{Binding CalculatedInvertDecimals, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 127,
+          "kind": "TextBox",
+          "Text": "{Binding MinOutletDropMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 135,
+          "kind": "CheckBox",
+          "Content": "Remember last Quick Mode settings",
+          "IsChecked": "{Binding RememberQuickMode}"
+        },
+        {
+          "line": 138,
+          "kind": "CheckBox",
+          "Content": "Default Auto-zoom in CD",
+          "IsChecked": "{Binding DefaultAutoZoom}"
+        },
+        {
+          "line": 146,
+          "kind": "Button",
+          "Content": "Open OSNAP Settings",
+          "Command": "{Binding OsnapCommand}"
+        },
+        {
+          "line": 170,
+          "kind": "TextBox",
+          "Text": "{Binding DsMinimumPipeGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 176,
+          "kind": "TextBox",
+          "Text": "{Binding DsMaximumPipeVelocity, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 182,
+          "kind": "TextBox",
+          "Text": "{Binding DsMinimumCoverDepth, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 188,
+          "kind": "TextBox",
+          "Text": "{Binding DsLpdPitIdentifier, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 194,
+          "kind": "TextBox",
+          "Text": "{Binding DsMaxPipeRunLength, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 222,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding SurveyWorkflowModeOptions}",
+          "SelectedItem": "{Binding SurveyWorkflowMode}"
+        },
+        {
+          "line": 229,
+          "kind": "TextBox",
+          "Text": "{Binding SurveyRlToleranceMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 243,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding ThemeOptions}",
+          "SelectedItem": "{Binding SelectedTheme}"
+        },
+        {
+          "line": 251,
+          "kind": "CheckBox",
+          "Content": "Draw pipe run before options dialog (CD)",
+          "IsChecked": "{Binding CdDrawFirst}"
+        },
+        {
+          "line": 258,
+          "kind": "CheckBox",
+          "Content": "Enable diagnostic logging",
+          "IsChecked": "{Binding DebugLogging}"
+        },
+        {
+          "line": 272,
+          "kind": "Button",
+          "Content": "Reset to Defaults",
+          "Command": "{Binding ResetCommand}"
+        },
+        {
+          "line": 277,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Command": "{Binding CancelCommand}"
+        },
+        {
+          "line": 283,
+          "kind": "Button",
+          "Content": "OK",
+          "Command": "{Binding OkCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/OsnapSettingsDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "6bf1941bd907ffde6878d45d254765f7751cfd5b05fba50204d40312e76f72de",
+      "controls": [
+        {
+          "line": 75,
+          "kind": "CheckBox",
+          "IsChecked": "{Binding DrawingEnabled}",
+          "Content": "{Binding Name}",
+          "Name": "{Binding Name}"
+        },
+        {
+          "line": 87,
+          "kind": "Button",
+          "Content": "Use current AutoCAD",
+          "Command": "{Binding UseCurrentForDrawingCommand}"
+        },
+        {
+          "line": 91,
+          "kind": "Button",
+          "Content": "All On",
+          "Command": "{Binding DrawingAllOnCommand}"
+        },
+        {
+          "line": 95,
+          "kind": "Button",
+          "Content": "All Off",
+          "Command": "{Binding DrawingAllOffCommand}"
+        },
+        {
+          "line": 126,
+          "kind": "CheckBox",
+          "IsChecked": "{Binding TextEnabled}",
+          "Content": "{Binding Name}",
+          "Name": "{Binding Name}"
+        },
+        {
+          "line": 138,
+          "kind": "Button",
+          "Content": "Use current AutoCAD",
+          "Command": "{Binding UseCurrentForTextCommand}"
+        },
+        {
+          "line": 142,
+          "kind": "Button",
+          "Content": "All On",
+          "Command": "{Binding TextAllOnCommand}"
+        },
+        {
+          "line": 146,
+          "kind": "Button",
+          "Content": "All Off",
+          "Command": "{Binding TextAllOffCommand}"
+        },
+        {
+          "line": 164,
+          "kind": "Button",
+          "Content": "Restore CE Defaults",
+          "Command": "{Binding ResetDefaultsCommand}"
+        },
+        {
+          "line": 169,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Command": "{Binding CancelCommand}"
+        },
+        {
+          "line": 176,
+          "kind": "Button",
+          "Content": "Save + Use Drawing Now",
+          "Command": "{Binding ApplyCommand}"
+        },
+        {
+          "line": 183,
+          "kind": "Button",
+          "Content": "Save &amp; Close",
+          "Command": "{Binding OkCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/CivilSettingsView.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "c67210f6936839c8b3c765dc7b39860a33be16394f1960e9a257d7c30e4a2f03",
+      "controls": [
+        {
+          "line": 15,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding InvertPositionOptions}",
+          "SelectedItem": "{Binding DefaultInvertPosition}"
+        },
+        {
+          "line": 17,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding MirrorOptions}",
+          "SelectedItem": "{Binding DefaultMirror}"
+        },
+        {
+          "line": 32,
+          "kind": "TextBox",
+          "Text": "{Binding InvertInwardDistance, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 35,
+          "kind": "TextBox",
+          "Text": "{Binding InvertMaskOffsetMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 52,
+          "kind": "TextBox",
+          "Text": "{Binding DefaultMinimumGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 54,
+          "kind": "TextBox",
+          "Text": "{Binding DefaultStandardGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 69,
+          "kind": "TextBox",
+          "Text": "{Binding CalculatedInvertDecimals, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 72,
+          "kind": "TextBox",
+          "Text": "{Binding MinOutletDropMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 78,
+          "kind": "CheckBox",
+          "Content": "Remember last Quick Mode settings",
+          "IsChecked": "{Binding RememberQuickMode}"
+        },
+        {
+          "line": 79,
+          "kind": "CheckBox",
+          "Content": "Default Auto-zoom in CD",
+          "IsChecked": "{Binding DefaultAutoZoom}"
+        },
+        {
+          "line": 85,
+          "kind": "Button",
+          "Content": "Open OSNAP Settings",
+          "Command": "{Binding OsnapCommand}"
+        },
+        {
+          "line": 103,
+          "kind": "TextBox",
+          "Text": "{Binding DsMinimumPipeGrade, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 106,
+          "kind": "TextBox",
+          "Text": "{Binding DsMaximumPipeVelocity, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 109,
+          "kind": "TextBox",
+          "Text": "{Binding DsMinimumCoverDepth, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 112,
+          "kind": "TextBox",
+          "Text": "{Binding DsLpdPitIdentifier, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 114,
+          "kind": "TextBox",
+          "Text": "{Binding DsMaxPipeRunLength, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 132,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding SurveyWorkflowModeOptions}",
+          "SelectedItem": "{Binding SurveyWorkflowMode}"
+        },
+        {
+          "line": 134,
+          "kind": "TextBox",
+          "Text": "{Binding SurveyRlToleranceMm, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 140,
+          "kind": "CheckBox",
+          "Content": "Draw pipe run before options dialog (CD)",
+          "IsChecked": "{Binding CdDrawFirst}"
+        },
+        {
+          "line": 144,
+          "kind": "CheckBox",
+          "Content": "Enable diagnostic logging",
+          "IsChecked": "{Binding DebugLogging}"
+        },
+        {
+          "line": 146,
+          "kind": "Button",
+          "Content": "Reset Civil",
+          "Command": "{Binding ResetCivilCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/CivilGeneralSettingsView.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "8bbf63c073e431ab67b5cdd5c6fdbe6861988af6a3d3e5619e1a7b128c0eb947",
+      "controls": [
+        {
+          "line": 11,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding ThemeOptions}",
+          "SelectedItem": "{Binding SelectedTheme}"
+        },
+        {
+          "line": 14,
+          "kind": "Button",
+          "Content": "Reset General",
+          "Command": "{Binding ResetGeneralCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/CivilHelpGuideView.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "d41c81b8b856f40bccc37c4f8f859c4f49baae33edb690647b5503c80bf22ad5",
+      "controls": [
+        {
+          "line": 28,
+          "kind": "Button",
+          "x:Name": "OpenInBrowserButton",
+          "Content": "Open in default browser",
+          "Click": "OnOpenInBrowser"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/HelpGuideWindow.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "a2c63a5e2a0b12b8800ffbe9bebea9333f4cf6b83c12eb29a877bcb34ff0fb2f",
+      "controls": [],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/CdHelpDialog.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "83a19132aabc1092322cf262900dcccd96d25ff6aa7dab6761828fc7f0d4ce46",
+      "controls": [
+        {
+          "line": 104,
+          "kind": "Button",
+          "Content": "Pipe Layout (CD)",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 105,
+          "kind": "Button",
+          "Content": "Pit Layout (PIT)",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 106,
+          "kind": "Button",
+          "Content": "Edit Existing (CDEDIT)",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 107,
+          "kind": "Button",
+          "Content": "Pit Schedule",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 108,
+          "kind": "Button",
+          "Content": "Design Check",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 109,
+          "kind": "Button",
+          "Content": "Long. Profile",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 110,
+          "kind": "Button",
+          "Content": "Inspector",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 111,
+          "kind": "Button",
+          "Content": "Repair Center",
+          "Click": "OnRunCommand"
+        },
+        {
+          "line": 184,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "OnClose"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Pages/SettingsWorkspacePage.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "e4ec0fb2ca7152cd0726a0ff9b797750920eb9d194ab9d3f2516bb8f5ed7dbf8",
+      "controls": [
+        {
+          "line": 16,
+          "kind": "TabItem",
+          "Header": "General"
+        },
+        {
+          "line": 22,
+          "kind": "TabItem",
+          "Header": "Civil"
+        },
+        {
+          "line": 27,
+          "kind": "Button",
+          "x:Name": "civilFallback",
+          "Content": "Open existing Civil settings",
+          "Click": "ActionClicked"
+        },
+        {
+          "line": 31,
+          "kind": "TabItem",
+          "Header": "Structural"
+        },
+        {
+          "line": 35,
+          "kind": "Button",
+          "x:Name": "structuralSettings",
+          "Content": "Open Structural settings",
+          "Click": "ActionClicked"
+        },
+        {
+          "line": 38,
+          "kind": "TabItem",
+          "Header": "Manager"
+        },
+        {
+          "line": 43,
+          "kind": "Button",
+          "x:Name": "companyControls",
+          "Content": "Company controls",
+          "Click": "ActionClicked",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 55,
+          "kind": "Button",
+          "x:Name": "apply",
+          "Content": "Apply",
+          "Click": "ActionClicked"
+        },
+        {
+          "line": 56,
+          "kind": "Button",
+          "x:Name": "discard",
+          "Content": "Discard",
+          "Click": "ActionClicked"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Pages/HelpWorkspacePage.xaml",
+      "card": "03_SETTINGS_ASSETS_AND_HELP.md",
+      "sha256": "527b2043f284b136e8643124eb15c191e41436dfb829316b513b2cdc32690024",
+      "controls": [
+        {
+          "line": 16,
+          "kind": "TabItem",
+          "Header": "Civil"
+        },
+        {
+          "line": 21,
+          "kind": "Button",
+          "x:Name": "civilFallback",
+          "Content": "Open existing Civil Help",
+          "Click": "ActionClicked"
+        },
+        {
+          "line": 25,
+          "kind": "TabItem",
+          "Header": "Task journeys"
+        },
+        {
+          "line": 31,
+          "kind": "TabItem",
+          "Header": "Structural"
+        },
+        {
+          "line": 34,
+          "kind": "Button",
+          "x:Name": "structuralFallback",
+          "Content": "Open existing Structural Help",
+          "Click": "ActionClicked"
+        },
+        {
+          "line": 37,
+          "kind": "TabItem",
+          "Header": "Manager &amp; Support"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "886a42b3c25b5c34ac7c3a4f47d8a29e9a9b5a7571869e78a68b779c86d1709e",
+      "controls": [
+        {
+          "line": 48,
+          "kind": "Button",
+          "Content": "Review update",
+          "Visibility": "{Binding CanReviewPreparation, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnReviewPreparation_Click"
+        },
+        {
+          "line": 49,
+          "kind": "Button",
+          "Content": "View receipt",
+          "Visibility": "{Binding CanViewPreparationReceipt, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnViewPreparationReceipt_Click"
+        },
+        {
+          "line": 70,
+          "kind": "Button",
+          "x:Name": "btnAdminDashboard",
+          "Content": "Admin Dashboard",
+          "Click": "BtnAdminDashboard_Click",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 71,
+          "kind": "Button",
+          "Content": "Refresh",
+          "Click": "BtnRefresh_Click"
+        },
+        {
+          "line": 95,
+          "kind": "TabItem",
+          "Header": "Status"
+        },
+        {
+          "line": 105,
+          "kind": "TabItem",
+          "x:Name": "tabModule",
+          "Header": "Module"
+        },
+        {
+          "line": 108,
+          "kind": "ListBox",
+          "x:Name": "icPlugins",
+          "ItemsSource": "{Binding Modules}",
+          "SelectedItem": "{Binding SelectedModule, Mode=TwoWay}",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 109,
+          "kind": "ListBox"
+        },
+        {
+          "line": 128,
+          "kind": "Button",
+          "Content": "Open Hub",
+          "Click": "BtnOpenHub_Click"
+        },
+        {
+          "line": 129,
+          "kind": "Button",
+          "Content": "Open Help",
+          "Click": "BtnOpenHelp_Click"
+        },
+        {
+          "line": 130,
+          "kind": "Button",
+          "Content": "{Binding SelectedModule.Descriptor.SettingsButtonLabel}",
+          "Click": "BtnSettings_Click"
+        },
+        {
+          "line": 131,
+          "kind": "Button",
+          "Content": "Open Repair",
+          "Click": "BtnOpenRepair_Click"
+        },
+        {
+          "line": 132,
+          "kind": "Button",
+          "Content": "View Commands",
+          "Click": "BtnViewCommands_Click"
+        },
+        {
+          "line": 133,
+          "kind": "Button",
+          "Content": "{Binding SelectedModule.Descriptor.ToggleButtonLabel}",
+          "Click": "BtnToggle_Click"
+        },
+        {
+          "line": 134,
+          "kind": "Button",
+          "Content": "Load Now",
+          "Visibility": "{Binding SelectedModule.CanLoadNow, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnLoad_Click"
+        },
+        {
+          "line": 135,
+          "kind": "Button",
+          "Content": "View History",
+          "Click": "BtnViewHistory_Click"
+        },
+        {
+          "line": 136,
+          "kind": "Button",
+          "Content": "View Superseded",
+          "Click": "BtnViewSuperseded_Click"
+        },
+        {
+          "line": 143,
+          "kind": "TabItem",
+          "x:Name": "tabUpdates",
+          "Header": "Updates"
+        },
+        {
+          "line": 173,
+          "kind": "Button",
+          "Content": "Review update",
+          "Visibility": "{Binding SelectedModule.CanReviewPreparation, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnReviewPreparation_Click"
+        },
+        {
+          "line": 174,
+          "kind": "Button",
+          "Content": "View preparation receipt",
+          "Visibility": "{Binding SelectedModule.CanViewPreparationReceipt, Converter={StaticResource BoolToVis}}",
+          "Click": "BtnViewPreparationReceipt_Click"
+        },
+        {
+          "line": 179,
+          "kind": "Button",
+          "Content": "Confirm preparation",
+          "Click": "BtnInstall_Click"
+        },
+        {
+          "line": 180,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "BtnCancelPreparation_Click"
+        },
+        {
+          "line": 193,
+          "kind": "TabItem",
+          "x:Name": "tabHelp",
+          "Header": "Help"
+        },
+        {
+          "line": 197,
+          "kind": "TabItem",
+          "x:Name": "tabSettings",
+          "Header": "Settings"
+        },
+        {
+          "line": 201,
+          "kind": "TabItem",
+          "x:Name": "tabProjectSheets",
+          "Header": "Project / Sheets"
+        },
+        {
+          "line": 206,
+          "kind": "TabItem",
+          "x:Name": "tabDrawingRepair",
+          "Header": "Drawing Repair"
+        },
+        {
+          "line": 213,
+          "kind": "TabItem",
+          "x:Name": "tabProjectQa",
+          "Header": "Project QA",
+          "Visibility": "Collapsed"
+        },
+        {
+          "line": 223,
+          "kind": "Button",
+          "x:Name": "btnUploadTelemetry",
+          "Content": "Upload Pending Admin Data",
+          "Click": "BtnUploadTelemetry_Click"
+        },
+        {
+          "line": 224,
+          "kind": "Button",
+          "x:Name": "btnSendDiagnostics",
+          "Content": "Send Diagnostics",
+          "Click": "BtnSendDiagnostics_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Dialogs/PluginAdminWindow.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "dcb6d8881b52fe6c29e9d29b4decc170651abf799b9acfba9e9fe2755499248f",
+      "controls": [
+        {
+          "line": 48,
+          "kind": "Button",
+          "Content": "Upload Pending",
+          "Click": "BtnUploadPending_Click"
+        },
+        {
+          "line": 52,
+          "kind": "Button",
+          "Content": "Create Support Bundle",
+          "Click": "BtnCreateBundle_Click"
+        },
+        {
+          "line": 56,
+          "kind": "Button",
+          "x:Name": "BtnRefresh",
+          "Content": "Refresh",
+          "Click": "BtnRefresh_Click"
+        },
+        {
+          "line": 119,
+          "kind": "TabItem",
+          "Header": "Overview",
+          "x:Name": "tabOverview"
+        },
+        {
+          "line": 138,
+          "kind": "TabItem",
+          "Header": "Machines",
+          "x:Name": "tabMachines"
+        },
+        {
+          "line": 144,
+          "kind": "DataGridTextColumn",
+          "Header": "User",
+          "Binding": "{Binding UserName}"
+        },
+        {
+          "line": 145,
+          "kind": "DataGridTextColumn",
+          "Header": "Machine",
+          "Binding": "{Binding MachineName}"
+        },
+        {
+          "line": 146,
+          "kind": "DataGridTextColumn",
+          "Header": "Last Seen",
+          "Binding": "{Binding LastSeenLocal}"
+        },
+        {
+          "line": 147,
+          "kind": "DataGridTextColumn",
+          "Header": "AutoCAD",
+          "Binding": "{Binding AutoCadVersion}"
+        },
+        {
+          "line": 148,
+          "kind": "DataGridTextColumn",
+          "Header": "Restart",
+          "Binding": "{Binding RestartState}"
+        },
+        {
+          "line": 149,
+          "kind": "DataGridTextColumn",
+          "Header": "Health",
+          "Binding": "{Binding HealthState}"
+        },
+        {
+          "line": 150,
+          "kind": "DataGridTextColumn",
+          "Header": "Versions",
+          "Binding": "{Binding PluginVersions}"
+        },
+        {
+          "line": 155,
+          "kind": "TabItem",
+          "Header": "Usage",
+          "x:Name": "tabUsage"
+        },
+        {
+          "line": 162,
+          "kind": "TabItem",
+          "Header": "Failures",
+          "x:Name": "tabFailures"
+        },
+        {
+          "line": 170,
+          "kind": "MenuItem",
+          "Header": "Mark as Investigated",
+          "Click": "MnuAcknowledgeFailure_Click"
+        },
+        {
+          "line": 174,
+          "kind": "DataGridTextColumn",
+          "Header": "Time",
+          "Binding": "{Binding LocalTime}"
+        },
+        {
+          "line": 175,
+          "kind": "DataGridTextColumn",
+          "Header": "Severity",
+          "Binding": "{Binding Severity}"
+        },
+        {
+          "line": 176,
+          "kind": "DataGridTextColumn",
+          "Header": "User",
+          "Binding": "{Binding UserName}"
+        },
+        {
+          "line": 177,
+          "kind": "DataGridTextColumn",
+          "Header": "Machine",
+          "Binding": "{Binding MachineName}"
+        },
+        {
+          "line": 178,
+          "kind": "DataGridTextColumn",
+          "Header": "Plugin",
+          "Binding": "{Binding PluginId}"
+        },
+        {
+          "line": 179,
+          "kind": "DataGridTextColumn",
+          "Header": "Category",
+          "Binding": "{Binding Category}"
+        },
+        {
+          "line": 180,
+          "kind": "DataGridTextColumn",
+          "Header": "Type",
+          "Binding": "{Binding Type}"
+        },
+        {
+          "line": 181,
+          "kind": "DataGridTextColumn",
+          "Header": "Message",
+          "Binding": "{Binding Message}"
+        },
+        {
+          "line": 202,
+          "kind": "TabItem",
+          "Header": "Updates",
+          "x:Name": "tabUpdates"
+        },
+        {
+          "line": 209,
+          "kind": "Button",
+          "Content": "Approve Available Build",
+          "Click": "BtnApproveAvailable_Click"
+        },
+        {
+          "line": 213,
+          "kind": "Button",
+          "Content": "Roll Back Approved Release",
+          "Click": "BtnRollbackApproved_Click"
+        },
+        {
+          "line": 217,
+          "kind": "Button",
+          "Content": "Canary Rollout...",
+          "Click": "BtnCanaryRollout_Click"
+        },
+        {
+          "line": 221,
+          "kind": "Button",
+          "Content": "Promote to All",
+          "Click": "BtnPromoteToAll_Click"
+        },
+        {
+          "line": 232,
+          "kind": "TabItem",
+          "Header": "Support Bundles",
+          "x:Name": "tabSupportBundles"
+        },
+        {
+          "line": 239,
+          "kind": "TabItem",
+          "Header": "Policies",
+          "x:Name": "tabPolicies"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/FeedbackDialog.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "c8374080fddbabc82d7d1b156ef753b41ac4b447d2a33d624bf1cfb96ae5fa16",
+      "controls": [
+        {
+          "line": 59,
+          "kind": "RadioButton",
+          "Content": "Bug report",
+          "IsChecked": "{Binding IsTypeBug}"
+        },
+        {
+          "line": 62,
+          "kind": "RadioButton",
+          "Content": "Suggestion / feature request",
+          "IsChecked": "{Binding IsTypeSuggestion}"
+        },
+        {
+          "line": 69,
+          "kind": "TextBox",
+          "Text": "{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 76,
+          "kind": "TextBox",
+          "Text": "{Binding Description, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 148,
+          "kind": "Button",
+          "Content": "Submit",
+          "Click": "OnSubmit"
+        },
+        {
+          "line": 156,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Click": "OnCancel"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Dialogs/WhatsNewDialog.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "328e7642390c391eb2f01cfda8efa744abf664252b56bcb13444fe2d7382230f",
+      "controls": [
+        {
+          "line": 75,
+          "kind": "Button",
+          "Content": "How To Guide",
+          "Click": "OnHowToGuide"
+        },
+        {
+          "line": 81,
+          "kind": "Button",
+          "Content": "Got It",
+          "Click": "OnGotIt"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Drainage/Controls/CeAssistantControl.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "e002597fbeb3ab09be40b346ae211c1ddb937b0191f54002d4a94376ff489f5c",
+      "controls": [
+        {
+          "line": 144,
+          "kind": "Button",
+          "x:Name": "AnalyzeMarkupsButton",
+          "Content": "Analyse markups",
+          "Click": "AnalyzeMarkupsButton_Click"
+        },
+        {
+          "line": 156,
+          "kind": "Button",
+          "x:Name": "AnalyzeFromFileButton",
+          "Content": "From file…",
+          "Click": "AnalyzeFromFileButton_Click"
+        },
+        {
+          "line": 168,
+          "kind": "Button",
+          "x:Name": "ReviewChangesButton",
+          "Content": "{Binding ReviewChangesButtonText}",
+          "Visibility": "{Binding HasPendingMarkupPlan, Converter={StaticResource BoolToVis}}",
+          "Click": "ReviewChangesButton_Click"
+        },
+        {
+          "line": 184,
+          "kind": "TextBox",
+          "x:Name": "InputBox",
+          "Text": "{Binding InputText, UpdateSourceTrigger=PropertyChanged}"
+        },
+        {
+          "line": 201,
+          "kind": "Button",
+          "x:Name": "SendButton",
+          "Content": "Send",
+          "Click": "SendButton_Click"
+        },
+        {
+          "line": 208,
+          "kind": "Button"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Structural/UI/Palette/MarkupAIPanel.xaml",
+      "card": "04_PRODUCT_SUPPORT_AND_ASSISTANCE.md",
+      "sha256": "a2a6e4d4253d2fa89b3464db01143b8289caa649a30068d51940f41d0dc60e72",
+      "controls": [
+        {
+          "line": 50,
+          "kind": "TextBox",
+          "x:Name": "txtPdfPath"
+        },
+        {
+          "line": 51,
+          "kind": "Button",
+          "Content": "Browse...",
+          "Click": "BtnBrowsePdf_Click"
+        },
+        {
+          "line": 52,
+          "kind": "Button",
+          "Content": "Parse",
+          "Click": "BtnParse_Click"
+        },
+        {
+          "line": 56,
+          "kind": "ComboBox",
+          "x:Name": "cmbSourceMode"
+        },
+        {
+          "line": 62,
+          "kind": "ComboBox",
+          "x:Name": "cmbProjectType"
+        },
+        {
+          "line": 69,
+          "kind": "Button",
+          "Content": "Load...",
+          "Click": "BtnLoadPackage_Click"
+        },
+        {
+          "line": 70,
+          "kind": "Button",
+          "Content": "Replan",
+          "Click": "BtnReplan_Click"
+        },
+        {
+          "line": 71,
+          "kind": "Button",
+          "Content": "Save",
+          "Click": "BtnSave_Click"
+        },
+        {
+          "line": 92,
+          "kind": "DataGridCheckBoxColumn",
+          "Header": "OK",
+          "Binding": "{Binding IsApproved}"
+        },
+        {
+          "line": 93,
+          "kind": "DataGridTextColumn",
+          "Header": "Page",
+          "Binding": "{Binding Page}"
+        },
+        {
+          "line": 94,
+          "kind": "DataGridTextColumn",
+          "Header": "Source",
+          "Binding": "{Binding Source}"
+        },
+        {
+          "line": 95,
+          "kind": "DataGridTextColumn",
+          "Header": "Type",
+          "Binding": "{Binding Intent}"
+        },
+        {
+          "line": 96,
+          "kind": "DataGridTextColumn",
+          "Header": "Text",
+          "Binding": "{Binding Text}"
+        },
+        {
+          "line": 97,
+          "kind": "DataGridTextColumn",
+          "Header": "Conf",
+          "Binding": "{Binding Confidence}"
+        },
+        {
+          "line": 98,
+          "kind": "DataGridTextColumn",
+          "Header": "Exec",
+          "Binding": "{Binding Executor}"
+        },
+        {
+          "line": 99,
+          "kind": "DataGridTextColumn",
+          "Header": "Place",
+          "Binding": "{Binding PlacementReady}"
+        },
+        {
+          "line": 100,
+          "kind": "DataGridTextColumn",
+          "Header": "Command",
+          "Binding": "{Binding Command}"
+        },
+        {
+          "line": 101,
+          "kind": "DataGridTextColumn",
+          "Header": "Reason",
+          "Binding": "{Binding ExecutorReason}"
+        },
+        {
+          "line": 102,
+          "kind": "DataGridTextColumn",
+          "Header": "Group",
+          "Binding": "{Binding GroupKey}"
+        },
+        {
+          "line": 103,
+          "kind": "DataGridTextColumn",
+          "Header": "SubBatch",
+          "Binding": "{Binding SubBatchKey}"
+        },
+        {
+          "line": 104,
+          "kind": "DataGridTextColumn",
+          "Header": "Status",
+          "Binding": "{Binding Status}"
+        },
+        {
+          "line": 109,
+          "kind": "Button",
+          "Content": "Visual Preview",
+          "Click": "BtnVisualPreview_Click"
+        },
+        {
+          "line": 110,
+          "kind": "Button",
+          "Content": "Approve Selected",
+          "Click": "BtnApproveSelected_Click"
+        },
+        {
+          "line": 111,
+          "kind": "Button",
+          "Content": "Reject Selected",
+          "Click": "BtnRejectSelected_Click"
+        },
+        {
+          "line": 112,
+          "kind": "Button",
+          "Content": "Preview Next",
+          "Click": "BtnPreviewNext_Click"
+        },
+        {
+          "line": 113,
+          "kind": "Button",
+          "Content": "Run Next Group",
+          "Click": "BtnRunNext_Click"
+        },
+        {
+          "line": 114,
+          "kind": "Button",
+          "Content": "Undo Last Group",
+          "Click": "BtnUndoLast_Click"
+        },
+        {
+          "line": 115,
+          "kind": "Button",
+          "Content": "Refresh",
+          "Click": "BtnRefresh_Click"
+        },
+        {
+          "line": 132,
+          "kind": "TextBox",
+          "x:Name": "txtChatPrompt"
+        },
+        {
+          "line": 133,
+          "kind": "Button",
+          "Content": "Ask AI",
+          "Click": "BtnAskAi_Click"
+        },
+        {
+          "line": 134,
+          "kind": "Button",
+          "Content": "Apply Suggestions",
+          "Click": "BtnApplyAi_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Pages/ProjectQaPage.xaml",
+      "card": "05_CROSS_DISCIPLINE_CHANGE_CONTRACT.md",
+      "sha256": "1474aa31d710ea934c3c5ac834feb4bb8f7104dc89d515fb0156aa2d28ec93d8",
+      "controls": [
+        {
+          "line": 43,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding Contributors}",
+          "SelectedItem": "{Binding SelectedContributor, Mode=TwoWay}"
+        },
+        {
+          "line": 77,
+          "kind": "Button",
+          "Content": "Cancel",
+          "Command": "{Binding CancelCommand}",
+          "Click": "Cancel_Click"
+        },
+        {
+          "line": 83,
+          "kind": "Button",
+          "Content": "Refresh drawing",
+          "Command": "{Binding RefreshCommand}"
+        },
+        {
+          "line": 157,
+          "kind": "ListBox",
+          "ItemsSource": "{Binding VisibleFindings}",
+          "SelectedItem": "{Binding SelectedFinding, Mode=TwoWay}"
+        },
+        {
+          "line": 163,
+          "kind": "ListBox"
+        },
+        {
+          "line": 190,
+          "kind": "Button",
+          "Content": "Previous",
+          "Command": "{Binding PreviousFindingsCommand}"
+        },
+        {
+          "line": 195,
+          "kind": "Button",
+          "Content": "Next",
+          "Command": "{Binding NextFindingsCommand}"
+        },
+        {
+          "line": 239,
+          "kind": "Button",
+          "Content": "Show in drawing",
+          "Command": "{Binding ShowCommand}"
+        },
+        {
+          "line": 258,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "Close_Click"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    },
+    {
+      "copy": "shared-owner",
+      "source": "Modules/Manager/UI/Pages/DrawingRepairPage.xaml",
+      "card": "05_CROSS_DISCIPLINE_CHANGE_CONTRACT.md",
+      "sha256": "d5bee1fc1501ba54f8d4b104b60451aeb66ce6f9d36a7b1e79ded83843ab64a0",
+      "controls": [
+        {
+          "line": 64,
+          "kind": "ComboBox",
+          "ItemsSource": "{Binding Contributors}",
+          "SelectedItem": "{Binding SelectedContributor, Mode=TwoWay}"
+        },
+        {
+          "line": 130,
+          "kind": "ListBox",
+          "ItemsSource": "{Binding VisibleFindings}",
+          "Visibility": "{Binding HasPreview, Converter={StaticResource BoolToVis}}"
+        },
+        {
+          "line": 135,
+          "kind": "ListBox"
+        },
+        {
+          "line": 168,
+          "kind": "Button",
+          "Content": "Previous",
+          "Command": "{Binding PreviousFindingsCommand}"
+        },
+        {
+          "line": 173,
+          "kind": "Button",
+          "Content": "Next",
+          "Command": "{Binding NextFindingsCommand}"
+        },
+        {
+          "line": 233,
+          "kind": "Button",
+          "Content": "Unavailable"
+        },
+        {
+          "line": 245,
+          "kind": "Button",
+          "Content": "Unavailable"
+        },
+        {
+          "line": 259,
+          "kind": "Button",
+          "Content": "Fix it",
+          "Command": "{Binding FixCommand}"
+        },
+        {
+          "line": 265,
+          "kind": "Button",
+          "Content": "Cancel preview",
+          "Command": "{Binding CancelCommand}"
+        },
+        {
+          "line": 271,
+          "kind": "Button",
+          "Content": "Close",
+          "Click": "Close_Click"
+        },
+        {
+          "line": 276,
+          "kind": "Button",
+          "Content": "Inspect drawing",
+          "Command": "{Binding InspectCommand}"
+        }
+      ],
+      "disposition": "Retain capability; verify owner-specific route before any proposed consolidation"
+    }
+  ],
+  "absentFiles": [
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Dialogs/CeSheetsIssueReviewDialog.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Structural/UI/Pages/CeProjectSheetsWorkspaceView.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Pages/ProjectSheetsWorkspacePage.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/CivilSettingsView.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/CivilGeneralSettingsView.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Drainage/Dialogs/CivilHelpGuideView.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Pages/SettingsWorkspacePage.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Pages/HelpWorkspacePage.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Pages/ProjectQaPage.xaml"
+    },
+    {
+      "copy": "baseline",
+      "source": "Modules/Manager/UI/Pages/DrawingRepairPage.xaml"
+    }
+  ],
+  "limits": [
+    "Static controls only; code-created controls/actions remain separately reviewed",
+    "Two identified source copies, not whole installed or branch inventory",
+    "Retention is planning disposition, not permission to modify",
+    "Bound properties and dynamically populated controls require their owning source for semantics"
+  ]
+}

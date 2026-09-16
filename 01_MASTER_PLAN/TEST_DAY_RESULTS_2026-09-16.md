@@ -584,3 +584,40 @@ An empty box means *there is no level*, and the stored record must say so — no
 user saying it; it is **not** a licence for every programmatic writer to wipe a level it simply had nothing to say
 about. Machine callers that pass one side and mean *leave the other alone* keep today's behaviour, so invert
 propagation is not changed for everybody. Recorded as **BLANK-01**; entry in the plugin `REGRESSION_LOG.md`.
+
+### 6s. TWL-04 and TWL-06 built — 17 September 2026
+
+> **Tim: *"carry on with the rest"***
+
+Taken from §2 TWL, on the same branch `claude/civil-k-l-2026-09-16` (tip `b8d827b8`). Nothing deployed.
+
+- **TWL-04 fixed.** The level pick was a whole-number prompt limited to the rows offered, so a typed level was
+  rejected outright — a hard block, and R-27 allows only two. CDTWL now takes a row number **or** a level of
+  the engineer's own (decimal point = level; whole number inside the list = row; whole number outside = level;
+  the prompt says all three). A typed level carries its own source into the report, and a level above the
+  lowest lid **warns without blocking**. A system CE cannot measure at all no longer stops the command dead.
+- **TWL-06, the PITS half, fixed.** `BuildPit` asked the pit record for a typed level and a recorded base and
+  gave up. **A pit's level is usually not typed into the pit — it is on the pipes that meet it**, which is
+  where `PitScheduleBuilder` and `LpdService.GetInvertAtPit` have always read it from. The detention collector
+  was the one place that did not, so a drawing that schedules perfectly well lost 8 pits from its own storage.
+  A pit with no level of its own now takes the **lowest** invert of its connected pipes — lowest because the
+  floor sits at or below the lowest connection, so it under-states rather than over-states. The note says
+  where the level came from; a pit with no level anywhere is still left out and named; a zero is still not a
+  level.
+
+**Explicitly NOT done, so it is not assumed:**
+
+| | |
+|---|---|
+| **The 18 dropped pipes** | `PipeData` records **no length and no geometry**, only a handle, so the pure collector can measure a pipe only from its two pits' positions. A pipe whose ends are not both pits, or whose pit has no recorded position, has no length. Fixing it means recording a measured length or letting the service supply one from the drawing — **a real change of shape, not guessed at.** On Tim's drawing the pipes were the bigger half of the loss. |
+| **TWL-03** | CDTWL already offers CDCALC's own TWL box, so the record did not hold 18.54. **Why cannot be established without the drawing.** TWL-04 removes the harm — he can type it. |
+| **TWL-05** | The `"0.0"` required volume is written on the CDCALC side — the unclaimed computations-sheet work (F1 / BUG-158). Not taken without Tim's word. |
+| **TWL-07** | *"WILL THIS WHOLE COMMAND BE IN A WINDOW AT SOME POINT?"* — still Tim's question to answer. |
+
+One existing test rewritten because it **pinned the old behaviour**:
+`DetentionBranchCollectorTests.Collect_NeverInventsALevel_ItNamesWhatItLeftOut` asserted a pit was left out
+when its own invert box was empty — exactly what Tim reported as the fault. Its intent is intact: reading a
+connected pipe is reading a record, not inventing one, and the test now also covers a pit with no level
+anywhere.
+
+Suite **9909 / 9869 passed / 23 failed / 17 skipped** — same 23 pre-existing names. All three lanes 0 errors.

@@ -264,3 +264,22 @@ the pipe's stored record — the old level stays and is read back (16 Sep log 09
 SecondInvert=19.25 from PipeLinkData"*), so the schedule can keep showing a level you deleted. Five different
 places write that record and some may pass one side meaning *leave the other alone*, so changing it blind could
 break invert propagation for every pipe. Needs Tim's word.
+
+### ADDED 17 Sep — CDTWL faults, same branch `claude/civil-k-l-2026-09-16` @ `b8d827b8` — NOT installed, NOT tested
+
+Steps in the plugin `REGRESSION_LOG.md` entry **TWL-04 / TWL-06**. Summary rows:
+
+| # | What | Test (2027 first, then 2024) | Lane |
+|---|---|---|---|
+| T1 | **CDTWL takes your own level** | `CDTWL` → outlet → volume → at *"Which level is the top water level?"* type **`18.54`**. Accepted. It must NOT say *"1 or 2 only"*. The report says *"your own level, not one CE measured off the drawing"* | both |
+| T2 | Picking by number still works | Run again, type `1` — exactly as before | both |
+| T3 | It warns without blocking | Type a level above the lowest lid → accepted, plus *"Careful: that is ABOVE the lowest lid in this system (…), so water would come up out of it."* | both |
+| T4 | Nonsense is refused cleanly | Type `banana` → *"neither one of the numbers above nor a level. Nothing was worked out."* | both |
+| T5 | **The storage total — the important one** | On the same real job as Test Day, run `CDTWL`. Far fewer pits left out; the ones taken say *"…so its floor was taken from the pipes that meet it (19.200)"*; storage total **higher** than the 17,948 L he saw. **Send back the new number and how many pits and pipes are still left out** | both |
+
+**Not fixed, and said so:** the **18 dropped pipes** (`PipeData` records no length or geometry, so the pure
+collector can only measure a pipe from its two pits' positions — fixing it changes the shape and was not
+guessed at); **TWL-03** (CDCALC's own TWL box is already offered, so its record did not hold 18.54 and why
+cannot be established without the drawing — T1 removes the harm); **TWL-05** (the `"0.0"` volume is written on
+the CDCALC side, which is the unclaimed computations work); **TWL-07** (*"will this whole command be in a
+window at some point?"* — still Tim's question).
