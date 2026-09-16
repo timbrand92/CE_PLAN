@@ -207,3 +207,13 @@ Interpretation (mine, not his words): the 2 September three-tab approval for the
 CD: Engineering left, Drafting right, wide plan preview underneath; PIT: Engineering left, large centre
 preview, Drafting right — with no scrolling and the main actions always visible. `PipeEditWorkshopDialog.xaml`'s
 five tabs stay as the hidden source the one-page layout re-homes controls from; they are not shown.
+
+### 6a. Tim on the LAYOUT-01 renders (16 Sep, afternoon; seen as test PNGs, not yet in AutoCAD)
+
+> **Tim: *"PIT LOOKS GREAT THE CD WINDOW NOT SO"***
+
+Asked whether the CD window could be redesigned to earn its 90% size. Three options were put to him:
+(1) draw the real plan in the CD preview — the two pits, the pipe, pipe text, invert text and arrow where they
+will land, live as he types (behaviour work, largest, also serves P-05/P-06); (2) size CD to its content instead
+of 90%; (3) bring the More… groups onto the page as a third column. **No option chosen yet — open.**
+PIT layout (2*/3*/2*, wide centre block preview) stands as built on `claude/ce-civil-handoff-sept-16-5623ca`.
