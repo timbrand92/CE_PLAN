@@ -569,3 +569,18 @@ of two, and is superseded.
 **Standing lesson, worth more than the number:** *an office template outranks a finished job as evidence of
 what CE draws* — but **a measurement repeated twice is not a standard**. Ask Tim which of the things in a
 drawing are rules and which are just where somebody dragged a grip.
+
+### 6r. Tim, 17 September 2026 — a blank level box CLEARS the stored level
+
+Question put to him (6q): blanking a level in the Edit Pipe window does not clear it from the pipe's stored
+record — the old level stays and is read back, so the schedule can keep showing a level he deleted. Recommendation
+was "yes, it should clear", with the warning that five places write that record and some may pass one side meaning
+*leave the other alone*.
+
+> **Tim: *"yes a blank box should clear it, go ahead"***
+
+Interpretation (Claude, not Tim's words): **the Edit Pipe window's boxes are the authority for that pipe's levels.**
+An empty box means *there is no level*, and the stored record must say so — not keep the old number. This is the
+user saying it; it is **not** a licence for every programmatic writer to wipe a level it simply had nothing to say
+about. Machine callers that pass one side and mean *leave the other alone* keep today's behaviour, so invert
+propagation is not changed for everybody. Recorded as **BLANK-01**; entry in the plugin `REGRESSION_LOG.md`.
