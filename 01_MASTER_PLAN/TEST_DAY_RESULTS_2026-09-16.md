@@ -368,3 +368,13 @@ Interpretation (Claude): **PLACE-01 covers callouts too** — the leader stays a
 and the callout TEXT is moved clear of any CE object like the other labels. Twin pipes go through the auto-upgrade.
 One U reverses a move and every label that followed it. Every open that upgrades pipes prints one line naming the
 count and the backup file. The fresh-pipe identity refusal (NativeEdits) is in scope of this batch.
+
+### 6m. Tim, 16 Sep (evening): C7 fork — probe first
+
+Claude found that the pipe object's stand-in polyline has no handle and no drawing behind it, so CE code that writes a
+record against a stand-in writes nothing (hypothesis from code reading, not yet proven in AutoCAD), and that ~250
+read sites + ~100 write lines would need changing. Alternative put to Tim: rebuild the object on AutoCAD's polyline
+class so every tool sees a real polyline. Tim chose: **"Probe first, then rebuild if it works"** (the recommended
+option). PROBE-C7-POLY: a throwaway DBX with a class derived from AcDbPolyline, proven headless in accoreconsole 2027
+(reads as a real Polyline with its real handle, keeps its extension dictionary through handOverTo, draws its own
+walls, survives save/reopen). No change to the live enabler until the probe result is recorded here.
