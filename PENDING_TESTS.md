@@ -33,6 +33,18 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
+### Branch `claude/ce-civil-handoff-sept-16-5623ca` — LAYOUT-01 CD/PIT one-page windows proportioned (built 16 Sep 2026 afternoon)
+
+Tim's ruling 16 Sep: *"one page layout proportioned properly, no tabs"*. Layout only; no behaviour changed.
+**Built, NOT installed** — live is still `0737efa3`. Full entry: plugin `REGRESSION_LOG.md` LAYOUT-01.
+
+| # | What | Steps | Lane |
+|---|---|---|---|
+| L1 | **CD window uses the whole window** | Double-click a stormwater pipe. Engineering left, Drafting right, PLAN PREVIEW reaching from just under the fields to just above the buttons. No empty black band. All five buttons visible, no scrolling. | 2027 |
+| L2 | **Nothing pushed off on the busy cases** | Same on a detention pipe with twin pipes on, and on a pipe with a linked IL label. Type a value → More… → Back: value still there. | 2027 |
+| L3 | **PIT centre preview is the wide column** | Double-click a pit. Centre PLAN PREVIEW clearly wider than either side column. Both "Bottom right" position lists on the right fully readable, not cut off. | 2027 (and 150% scaling if you can) |
+| L4 | **Fit guard** | If the command line prints "The tabbed editor does not fit this AutoCAD work area", report which window and your monitor/scaling. | 2027 |
+
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
 Owner: the Civil behaviour chat. **Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3 — it is the
