@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-09-16T19:14:45.0403205+10:00",
+  "auditor": "Astra/medium",
+  "status": "First pass: corrections and delivery audit pending",
+  "scope": "Civil planning annex and offline concept only",
+  "artifacts": [
+    {
+      "file": "00_RUN.md",
+      "sha256": "DB56BDE0CDA8031F5422AEF1F5BF0CB334141A143A2F4C39950235B282E59127"
+    },
+    {
+      "file": "01_INTEGRATION_EVIDENCE.md",
+      "sha256": "51072B25DCF0A37D38A39FCE944FA31525C228BDFCDD619AB384544B49F90F80"
+    },
+    {
+      "file": "02_SCENARIO_REVIEW.md",
+      "sha256": "E10CAE7D7CFED4A9F8FE100ED151BC32AFA30DDEC87044F73BF248F49AE8F8C8"
+    },
+    {
+      "file": "03_REPORTS_REQUIREMENTS_DETAIL.md",
+      "sha256": "0C7107C91848C605AD65A5E7D329F9EF7DB769243437FA711A564536C905737C"
+    },
+    {
+      "file": "04_VISUAL_REVIEW.md",
+      "sha256": "B4A798CE334C2BDF722F7F84750DC8ABE4A14CCA81C0E6F4DC2634C1CF166B95"
+    },
+    {
+      "file": "05_COMPLETION_REVIEW.md",
+      "sha256": "560FD7BD6E1C709B52D03766AFAD43E88829DE4E58CC451C7B46C84A0AB46FF3"
+    },
+    {
+      "file": "planner\\automation_override_revision_contract.md",
+      "sha256": "DBA5944EB781CD835FAB9AC55288C7CDAF292CEA5A940F0702C574738FCC7C65"
+    },
+    {
+      "file": "planner\\civil_journey_and_window_map.md",
+      "sha256": "5B26C1CF7A4E9B8B533D9B1D3827C82EA9A2D0CC07C3AAE8C95AE8CDDA5B857B"
+    },
+    {
+      "file": "planner\\decisions_for_tim.md",
+      "sha256": "57CC5DABACADE6C77E2294CF8A20D99D2F80BCFD82D3D8ECB609B1A772F0D799"
+    },
+    {
+      "file": "planner\\engineering_dependency_map.md",
+      "sha256": "21A8740BC56A25DCF18A0ABD45008652F787F800A1A8D482B07FD26B1ECF1D7B"
+    },
+    {
+      "file": "planner\\planner_progress.md",
+      "sha256": "308D8F34F8FA34A4536068EC64A951BFB16BA213775FE377D563A50618644758"
+    },
+    {
+      "file": "planner\\representative_acceptance_scenarios.md",
+      "sha256": "5A554CC8046AB95DF6E6A5DCD163AB7E9DF1AFB0CD6EFBA62AFCD0922158FC75"
+    },
+    {
+      "file": "planner\\retained_command_inventory.md",
+      "sha256": "18A7450F3B2F7983E49ACE4542E5C539E00A6425ABA969751A8F26B326B82054"
+    },
+    {
+      "file": "planner\\source_authority_and_conflicts.md",
+      "sha256": "BBD6890D0EF44F672A1C84B1A26BC2A0CBACE0CBB2BCCC2C1C132F0781D9E25A"
+    },
+    {
+      "file": "planner\\specialist_workflow_details.md",
+      "sha256": "444111EAAAB0C7CAE0A34C410DA2B503B05824FE9385D577046F8CDC3BEFCD49"
+    },
+    {
+      "file": "planner\\workflow_cards.md",
+      "sha256": "D9597A2CE133745DE0A8FCEF0C57B38698E56A5146436922E3A47C1A87EB4FD9"
+    }
+  ],
+  "independentlyChecked": [
+    "Root 00–05 and nine initial planner files",
+    "START_HERE and V3 section11 A–M",
+    "Approved scoped handover",
+    "Current Test Day ownership and decisions",
+    "Relevant consolidated record sections",
+    "Bounded source declarations/calculation/schedule/help/project-helper/design-model checks",
+    "Five root screenshots opened",
+    "Independent offline Chromium primary interactions and 15 layout observations",
+    "Two independent screenshots opened",
+    "Three existing private historical renders opened",
+    "Eight source-file SHA256 compared with original manifest: 8 matched at 19:12:52 Sydney",
+    "Private from-scratch walkthrough read"
+  ],
+  "interactionReceipt": "interaction-evidence.json",
+  "findings": [
+    "AUD-01",
+    "AUD-02",
+    "AUD-03",
+    "AUD-04",
+    "AUD-05",
+    "AUD-06",
+    "AUD-07",
+    "AUD-08"
+  ],
+  "notChecked": [
+    "All historical PDF pages and all quantities",
+    "Native AutoCAD",
+    "Integrated ingestion",
+    "Persistence through application restart",
+    "Hydraulic or council validation",
+    "Current installed DLL or GitHub register independently",
+    "Morning pack not yet written",
+    "Pending specialist delta"
+  ],
+  "restrictions": [
+    "No plugin/source edits",
+    "No build/test/git/deployment",
+    "No AutoCAD/process controls",
+    "No new private rendered evidence copied to repository"
+  ]
+}

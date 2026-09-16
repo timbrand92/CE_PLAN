@@ -1,0 +1,241 @@
+{
+  "checkedAt": "2026-09-16T09:11:09.023Z",
+  "scope": "Independent offline concept browser interactions, not AutoCAD",
+  "results": [
+    {
+      "name": "Unconfirmed new job and no network",
+      "passed": true
+    },
+    {
+      "name": "Source review does not adopt criteria",
+      "passed": true
+    },
+    {
+      "name": "Back discards draft load",
+      "passed": true
+    },
+    {
+      "name": "Keep remembers selection locally",
+      "passed": true
+    },
+    {
+      "name": "Escape preserves committed selection",
+      "passed": true
+    },
+    {
+      "name": "LIMIT: WSUD selection leaves council evidence",
+      "passed": true,
+      "detail": "Not an interactive selected-source preview"
+    },
+    {
+      "name": "select explicitly conceptual",
+      "passed": true
+    },
+    {
+      "name": "draw explicitly conceptual",
+      "passed": true
+    },
+    {
+      "name": "manual explicitly conceptual",
+      "passed": true
+    },
+    {
+      "name": "Pin retained and review remains",
+      "passed": true
+    },
+    {
+      "name": "Recalculate conditional on governing change",
+      "passed": true
+    },
+    {
+      "name": "Old issue remains",
+      "passed": true
+    },
+    {
+      "name": "Fit 1024x900 start",
+      "metrics": {
+        "bottom": 859,
+        "right": 977.59375,
+        "viewHeight": 900,
+        "viewWidth": 1024,
+        "scrollWidth": 1024
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1024x900 change",
+      "metrics": {
+        "bottom": 863,
+        "right": 977.59375,
+        "viewHeight": 900,
+        "viewWidth": 1024,
+        "scrollWidth": 1024
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1024x900 issue",
+      "metrics": {
+        "bottom": 859,
+        "right": 977.59375,
+        "viewHeight": 900,
+        "viewWidth": 1024,
+        "scrollWidth": 1024
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1280x720 start",
+      "metrics": {
+        "bottom": 859,
+        "right": 1228.46875,
+        "viewHeight": 720,
+        "viewWidth": 1280,
+        "scrollWidth": 1280
+      },
+      "desktopFits": false,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1280x720 change",
+      "metrics": {
+        "bottom": 863,
+        "right": 1228.46875,
+        "viewHeight": 720,
+        "viewWidth": 1280,
+        "scrollWidth": 1280
+      },
+      "desktopFits": false,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1280x720 issue",
+      "metrics": {
+        "bottom": 859,
+        "right": 1228.46875,
+        "viewHeight": 720,
+        "viewWidth": 1280,
+        "scrollWidth": 1280
+      },
+      "desktopFits": false,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1920x1080 start",
+      "metrics": {
+        "bottom": 859,
+        "right": 1855.671875,
+        "viewHeight": 1080,
+        "viewWidth": 1920,
+        "scrollWidth": 1920
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1920x1080 change",
+      "metrics": {
+        "bottom": 863,
+        "right": 1855.671875,
+        "viewHeight": 1080,
+        "viewWidth": 1920,
+        "scrollWidth": 1920
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 1920x1080 issue",
+      "metrics": {
+        "bottom": 859,
+        "right": 1855.671875,
+        "viewHeight": 1080,
+        "viewWidth": 1920,
+        "scrollWidth": 1920
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 736x900 start",
+      "metrics": {
+        "bottom": 849,
+        "right": 719,
+        "viewHeight": 900,
+        "viewWidth": 736,
+        "scrollWidth": 736
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 736x900 change",
+      "metrics": {
+        "bottom": 849,
+        "right": 719,
+        "viewHeight": 900,
+        "viewWidth": 736,
+        "scrollWidth": 736
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 736x900 issue",
+      "metrics": {
+        "bottom": 849,
+        "right": 719,
+        "viewHeight": 900,
+        "viewWidth": 736,
+        "scrollWidth": 736
+      },
+      "desktopFits": true,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 320x900 start",
+      "metrics": {
+        "bottom": 1645,
+        "right": 307,
+        "viewHeight": 900,
+        "viewWidth": 320,
+        "scrollWidth": 320
+      },
+      "desktopFits": false,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 320x900 change",
+      "metrics": {
+        "bottom": 1553,
+        "right": 307,
+        "viewHeight": 900,
+        "viewWidth": 320,
+        "scrollWidth": 320
+      },
+      "desktopFits": false,
+      "horizontalFits": true
+    },
+    {
+      "name": "Fit 320x900 issue",
+      "metrics": {
+        "bottom": 1617,
+        "right": 307,
+        "viewHeight": 900,
+        "viewWidth": 320,
+        "scrollWidth": 320
+      },
+      "desktopFits": false,
+      "horizontalFits": true
+    },
+    {
+      "name": "No JS errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}

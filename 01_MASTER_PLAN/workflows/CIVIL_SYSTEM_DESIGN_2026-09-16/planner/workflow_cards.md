@@ -68,8 +68,8 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Field | Review card |
 |---|---|
 | Classification | **Modify** partial CDIMPORT route; full unified import is **Missing**. |
-| Current works | Master records partial survey/import foundations and a planned unified reviewed path. |
-| Wrong / missing | Current command/field ownership, supported formats and update reconciliation are Unknown in the available records. |
+| Current works | Source-observed routes are CDSURVEY (Xref/raw survey, spot levels/TIN and transform), CDIMPORTXCIVIL, CDIMPORTLANDXML and CDIMPORTCOMPARE. Their command-line/file-picker flows, reports and replace choice are retained routes. |
+| Wrong / missing | A unified reviewed user experience and its update reconciliation are not proven. Source observation does not establish runtime behaviour, supported project recovery or AutoCAD acceptance. |
 | Intended result | Read external survey/consultant/context data, show proposed changes and provenance, then allow selected safe adoption. Existing/proposed RLs stay distinguished from a manually adopted design level. |
 | Trigger | `CDIMPORT` / Survey entry from CDDESIGN or review. |
 | Prompts / selection | Select source and map/confirm items; do not auto-change existing drawing geometry. |
@@ -130,8 +130,8 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Field | Review card |
 |---|---|
 | Classification | **Modify** known partial slab/surface routes; grade/overland route status is **Unknown**. |
-| Current works | Strip Drain, TG, AGI and slab system have some documented behaviour/source evidence; strip drain route/width and TG engineering fields are approved. |
-| Wrong / missing | Complete insertion/regeneration and the scope/behaviour of site-grade workflows are not confirmed by this evidence set. |
+| Current works | Source-observed: CDSTRIP point/MLINE route, CDSPOON closed route, CDTG placement/direction/length/width/style/class/cover-level prompts, CDAGI, and CDSLAB/CDSLABIMPORT/CDSLABEDIT/CDSLABEREGEN. Slab screens expose name, surface, control-point FSL/source, falls/regeneration and outlet-pit checks. |
+| Wrong / missing | Complete insertion/regeneration correctness and the scope/behaviour of an overland/flood workflow are not proven. No dedicated CDOVERLAND command was observed in the bounded command scan. |
 | Intended result | Draw/edit physical strip drains, trench grates, AGIs, slab drains and site-grade/flow evidence through dedicated routes. Keep treatment/network inference explicit. |
 | Trigger | Drainage Items, CDSLAB/surface-drain command, selected object or CDDESIGN review warning. |
 | Prompts / selection | Draw/select route, choose relevant type/detail, set applicable dimensions/levels; no AGI engineering diameter/grade/level fields by default. |
@@ -162,8 +162,8 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Field | Review card |
 |---|---|
 | Classification | **Missing** integrated review workflow; individual device routes require inventory. |
-| Current works | Raingarden outline/area/associated GIO is approved. Report evidence may propose treatment sequence/device sizes/assumptions. Pumps, soakage and overland flow appear in master scope, but current command truth is Unknown here. |
-| Wrong / missing | No source-backed full workflow for treatment train, wet well/pump controls/rising main, soakage suitability or flood/surcharge assessment is available in this packet. |
+| Current works | Source-observed: CDRG/GIO placement, raingarden project-data mutations, a CDCALC WSUD tab, a Pump System calculation tab, PumpSizing/SoakageSizing services, SPS models/detail generation and rising-main schedule recognition. |
+| Wrong / missing | No CDPUMP/CDSOAK/CDWSUD/CDOVERLAND command declaration was observed in the bounded command scan. That does not prove absence elsewhere, but a full device placement/editor, ground-condition, treatment-train and flood/surcharge workflow is not established by this evidence. |
 | Intended result | Each treatment/device is placed or selected explicitly, carries its own engineering and source basis, and exposes dependencies to its catchment/physical network/calculation. Overland path is safety evidence, never inferred from plan crossings. |
 | Trigger | CDDESIGN treatment row, Drainage Items Raingarden, a specialised device command or Review warning. |
 | Prompts / selection | Select/draw device outline/route, confirm association/destination and source assumptions. Unknown capacity/ground conditions remain Unknown. |
@@ -179,8 +179,8 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Field | Review card |
 |---|---|
 | Classification | **Modify** partial foundations; profile/drawing insertion is incomplete. |
-| Current works | Profile source evidence exists; schedules/details/notes have partial foundations; planned output should derive from one trusted engineering record. |
-| Wrong / missing | Exact retained commands and current visual/output route are not fully established here. Test Day proves the computation PDF cannot be accepted on text tests alone. |
+| Current works | Source-observed CDPROFILE selects a pit/path and insertion point; Calculations V2 also has Longitudinal path/datum/scale/preview/export/update controls. PITSCHEDULE opens a staged source/review/place workflow with Xref/current-drawing choice, row overrides, sets, warnings and CSV export. |
+| Wrong / missing | Exact profile/drawing output correctness and a single issue-ready output contract are not established. Test Day proves the computation PDF cannot be accepted on text tests alone. |
 | Intended result | Generate and update profile, schedules, criteria blocks, details and notes from selected reviewed records; keep plan label authority and presentation overrides. Issue review compares generated output against current design/drawing state. |
 | Trigger | CDPROFILE, schedule/detail commands, CDDESIGN output door, Project Review issue check. |
 | Prompts / selection | Choose route/scope/insertion point/revision output; confirm any stale calculation/source before regenerate or issue. |
@@ -194,8 +194,8 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Field | Review card |
 |---|---|
 | Classification | **Modify** partial review foundations; **Missing** unified review workspace. |
-| Current works | Master calls for review/issue readiness; CDDESIGN direction requires comparison of requirements/calculated/provided values and changed evidence. |
-| Wrong / missing | Single review window, issue gate and exact retained entries are not verified. |
+| Current works | Source-observed Civil Hub is a read-only check with Show on plan/Edit doors; CDDASHBOARD lists/filter/navigates findings and offers explicit propose-fix/audit/export/repair actions. Master calls for review/issue readiness and CDDESIGN direction requires comparison of requirements/calculated/provided values. |
+| Wrong / missing | A single source/evidence/calculation/drawing revision workspace and issue gate are not established. Source observation does not verify the current review routes in AutoCAD. |
 | Intended result | A clear list of unresolved inputs, conflicts, explicit overrides, stale calculations, drawing/capacity differences and output readiness. Jump from a row to the source page or real plan item. Issue is a review decision, not the meaning of Save. |
 | Trigger | Project Review command, CDDESIGN next action, pre-issue output route. |
 | Prompts / selection | Filter, inspect, resolve/acknowledge with reason, reopen owner workflow. Never auto-resolve a conflict from date alone. |
@@ -209,8 +209,8 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Field | Review card |
 |---|---|
 | Classification | **Modify** partial repair/settings foundations; Help is **Missing**. |
-| Current works | Settings-first is binding; CDREPAIR has partial/read-only scan direction; protected objects can be inspected read-only. |
-| Wrong / missing | Unified repair, asset diagnostics and plain-English help/error route are not built according to the master. |
+| Current works | Settings-first is binding. Source-observed CDREPAIR exposes ordered Sync/Rebuild/Recover then heavy repair/relink/register/upgrade/audit/triage, with status links. CDHELP has context tracking and a modern embedded-guide / older-lane browser fallback; CDDIAG is command-line counts plus Repair Audit direction. |
+| Wrong / missing | A unified accepted repair, asset diagnostic and plain-English help/error experience is not established. The repair screen’s declared actions must be inventoried/reviewed before simplification, not treated as disposable. |
 | Intended result | Settings visibly hold engineering/council values and sources. Repair scans first, shows a safe preview and offers selected repair. Help explains what user can do next in drawing terms, and diagnostics preserve safe support evidence. |
 | Trigger | Settings, CDREPAIR, Help, or a clear “why can’t I edit this?” link. |
 | Prompts / selection | Choose only reviewed setting/repair target; distinguish project value from office standard; never modify locked/Xref/foreign content automatically. |

@@ -10,6 +10,8 @@
 | Completed — planning | `automation_override_revision_contract.md` | Proposals, manual choices, changed documents, stale calculations and protected/external content have a safe proposed behaviour. |
 | Completed — planning | `decisions_for_tim.md` | Six prioritised genuine decisions remain, with further specialist matters explicitly deferred rather than assumed. |
 | Completed — planning | `representative_acceptance_scenarios.md` | Small future AutoCAD acceptance batches cover discovery, evidence, physical drawing, calculations, output, recovery and offline/protected cases. |
+| Completed — source inventory | `retained_command_inventory.md` | Read-only source inventory names retained command/window routes across A–M before any specialist replacement is proposed. |
+| Completed — dependency planning | `engineering_dependency_map.md` | Optional systems are separated into inputs, consumers, stale effects, retained routes and genuine gaps; Water Tank interfaces remain last. |
 | Partial | Source/implementation truth for several older specialist commands | The cards explicitly say Unknown rather than guessing current behaviour. Root is reconciling this evidence. |
 | Unreviewed | All proposed cards/contracts | The independent auditor still needs to check claims and Tim still needs to approve the review cards. |
 
@@ -23,6 +25,9 @@
 | Sequence checkpoint | Automation/override/revision contract and prioritised Tim decision bank completed. |
 | Sequence checkpoint | Council three-mode/field-gap evidence and bounded project-recognition evidence incorporated; CD/PIT temporary Claude ownership added to conflict protection. |
 | 2026-09-16 18:54 | Existing Design Package/Impact concepts recorded as reuse-first evidence; representative future AutoCAD scenarios added across every non-tank family. |
+| 2026-09-16 19:00 | Read-only retained-command/window inventory completed; cards B/E/F/L/M corrected from broad Unknown to source-observed routes while runtime/acceptance remain Unknown. |
+| 2026-09-16 19:04 | Engineering dependency map completed; numeric decision recommendations changed to source/basis questions where Tim has not ruled a default. |
+| 2026-09-16 19:05 | Dependency map refined: new evidence marks **Needs review**; only a confirmed governing-input change makes a result **Numerically out of date**; missing basis is **Cannot calculate**. |
 
 ## Next work
 
