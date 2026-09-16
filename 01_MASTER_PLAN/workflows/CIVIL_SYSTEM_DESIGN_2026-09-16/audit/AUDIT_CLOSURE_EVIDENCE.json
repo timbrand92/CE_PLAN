@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-09-16T19:25:53.4714334+10:00",
+  "status": "Nine findings closed for family-level planning; final administrative delivery status pending",
+  "artifacts": [
+    {
+      "file": "00_RUN.md",
+      "sha256": "DB56BDE0CDA8031F5422AEF1F5BF0CB334141A143A2F4C39950235B282E59127"
+    },
+    {
+      "file": "01_INTEGRATION_EVIDENCE.md",
+      "sha256": "51072B25DCF0A37D38A39FCE944FA31525C228BDFCDD619AB384544B49F90F80"
+    },
+    {
+      "file": "02_SCENARIO_REVIEW.md",
+      "sha256": "E10CAE7D7CFED4A9F8FE100ED151BC32AFA30DDEC87044F73BF248F49AE8F8C8"
+    },
+    {
+      "file": "03_REPORTS_REQUIREMENTS_DETAIL.md",
+      "sha256": "F0AB3C3CF6FD7706E1EF50F0EF1C6218E35C28E605DE6C26CD8D6DEB88B07265"
+    },
+    {
+      "file": "04_VISUAL_REVIEW.md",
+      "sha256": "7F02BC8E54C18E0B10447CB5D63F3D93337DBD5FABD1407578542CC6ECD03D56"
+    },
+    {
+      "file": "05_COMPLETION_REVIEW.md",
+      "sha256": "560FD7BD6E1C709B52D03766AFAD43E88829DE4E58CC451C7B46C84A0AB46FF3"
+    },
+    {
+      "file": "MORNING_PACK_2026-09-17.md",
+      "sha256": "A3FA18BDD67692E67556D3E7174A2A8D28F0E7F8A05764FA1D5D6FF91A5FD6E6"
+    },
+    {
+      "file": "planner\\AUDIT_FIXES.md",
+      "sha256": "8E89EE3ED2DCA27E1BF946F67E87B44D226B2C6DFD6566C5A6376B08ED1BED6C"
+    },
+    {
+      "file": "planner\\automation_override_revision_contract.md",
+      "sha256": "51E4E8BE850BC852B85162418190190210161BED105DF6B3E966482CC1976C86"
+    },
+    {
+      "file": "planner\\civil_journey_and_window_map.md",
+      "sha256": "4BA01E14C65A92BA407B246D982FCD147AC87DF0FDC4FE260D16476139DA985A"
+    },
+    {
+      "file": "planner\\decisions_for_tim.md",
+      "sha256": "50C3223A3C92B77318A9846EDC80518D52176669C4FCFDD059904CB21AB88E68"
+    },
+    {
+      "file": "planner\\engineering_dependency_map.md",
+      "sha256": "CF7ABC8032804ED8047E2AC621D0E0C1D3075BB29EE00BC3290CE4360D9520B9"
+    },
+    {
+      "file": "planner\\ownership_and_migration_supplement.md",
+      "sha256": "25E189014A38766E55EEE356CAFA4A0887CF2183CBC9121A8D22CC6C4F862461"
+    },
+    {
+      "file": "planner\\planner_progress.md",
+      "sha256": "41523BC0AAA1CAE61AE13E0BFA50F35BD697624F6E8E5A5130FC50DCFBAE1B91"
+    },
+    {
+      "file": "planner\\representative_acceptance_scenarios.md",
+      "sha256": "B044CB8A661325B8057B51073B77A3886C3A585D18C85290DF8465EBDFC00135"
+    },
+    {
+      "file": "planner\\retained_command_inventory.md",
+      "sha256": "A79D7FE491517DEEE3D3FE9BFB3204EA44D1F1D0F7EBE53645784E826E21D15B"
+    },
+    {
+      "file": "planner\\source_authority_and_conflicts.md",
+      "sha256": "5F15875EC453F2534F6976F1D527D13C48A07A2268275B425A455CA0AF508E60"
+    },
+    {
+      "file": "planner\\specialist_workflow_details.md",
+      "sha256": "0C69B8F2585830221FEFD155A43B8E56BB958B3439ADD2B9E8C5E51AC5C18E2B"
+    },
+    {
+      "file": "planner\\workflow_cards.md",
+      "sha256": "D9F970BAE1944B309AB9ED26C52AAD05613151425BA76A07E8C3D35400012DB6"
+    }
+  ],
+  "independentBrowserChecks": 28,
+  "directDiskFileChecks": 3,
+  "rootReportedChecks": 34,
+  "screenshotsOpened": [
+    "closure-compact-area.png",
+    "closure-compact-draft.png"
+  ],
+  "receipts": [
+    "closure-interaction-evidence.json",
+    "direct-file-evidence.json"
+  ],
+  "packLocalLinksChecked": 10,
+  "unresolvedFindingIds": [],
+  "administrativeRemaining": [
+    "Morning pack DRAFT and closure link",
+    "05_COMPLETION_REVIEW stale gate text",
+    "Actual stop time and truthful early-stop reason"
+  ],
+  "goalMarkedComplete": false,
+  "noNativeAcceptance": true
+}

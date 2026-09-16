@@ -12,8 +12,8 @@
 
 **Review this — no AutoCAD testing required for this planning pack**
 
-- Walk through New job, Area changes and Before issue in the conversation visual. The same overview should guide the next action.
-- In Select/change documents, choose a WSUD report to see its matching source page. Loading a draft must not approve its values.
+- Open the [interactive concept](C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/civil-job-lifecycle.html). Click New job, Area changes and Before issue; the same overview should guide the next action.
+- In Select/change documents, click the **report-name button** to preview its page; its **checkbox** controls loading. Loading a draft must not approve its values.
 - [Old-job walkthrough](C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/cddesign-historical-trial/START_FROM_SCRATCH_WALKTHROUGH.md): existing catchment plans are offered before redrawing; later geometry remains a separate review.
 
 **Needs Tim / parked**
@@ -26,4 +26,4 @@
 
 Planning evidence: [journey](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/civil_journey_and_window_map.md), [workflow cards](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/workflow_cards.md), [specialist detail](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/specialist_workflow_details.md), [audit](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/audit/AUDIT_REPORT.md).
 
-Built: no plugin changes. Tested: 33 offline concept checks; no AutoCAD tests. Installed: nothing. Tim-accepted: not yet. Native sizing remains unproved despite tested browser fits. Final elapsed time and audit closure are pending; no claim of a completed 6–8 hour run.
+Built: no plugin changes. Tested: 34 offline concept checks; no AutoCAD tests. Installed: nothing. Tim-accepted: not yet. Native sizing remains unproved despite tested browser fits. Final elapsed time and audit closure are pending; no claim of a completed 6–8 hour run.

@@ -123,7 +123,7 @@ Evidence / confirmed decisions / actual Civil objects
 | Aspect | Dependency map |
 |---|---|
 | Applies when | A selected network/system/result needs drawing representation, construction information or issue review. Output does not itself make engineering accepted. |
-| Known input types | Confirmed Civil identities/geometry/levels/connections; selected schedule set/path/insertion scope; applicable calculation result and criteria; plan-label authority/presentation override; source/revision/stale status. |
+| Known input types | Confirmed Civil identities/geometry/levels/connections; selected schedule set/path/insertion scope; applicable calculation result and criteria; plan-label authority/presentation override; source/revision/dependency state. |
 | Evidence door | Existing `CDPROFILE` path/insertion route; Calculations V2 Longitudinal export/update; `PITSCHEDULE` source/review/place route; selected result/detail services; Civil Hub/Dashboard review. |
 | Consumers | Long profile, pit schedule, calculation sheet, OSD criteria/detail and Project Review/issue evidence. |
 | Review / out-of-date effect | New source/geometry/label evidence is **Needs review**. Only a confirmed governing object/level/topology/criteria/catchment/result/label change makes the consuming output **Numerically out of date** and eligible for deliberate regeneration. Manual display override remains separate. |

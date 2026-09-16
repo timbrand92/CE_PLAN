@@ -53,13 +53,13 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Classification | **Modify** existing CDLPD marker/note workflow. |
 | Current works | CDLPD marker exists in plan records; LPD concept requires position, level, denotation and typical note. Test Day found missing connection choice and wrong note/leader behaviour. |
 | Wrong / missing | Full authority connection evidence, uncertain outlet invert and generated note workflow remain incomplete. |
-| Intended result | One LPD record used by CDDESIGN and Drainage Items. It holds connection type, position, optional level, source evidence and a normal CE drawing note; missing invert produces no fake number. |
+| Intended result | One shared LPD record **per outlet** used by CDDESIGN and Drainage Items. A job may have more than one outlet; each has its own authority and pit/pipe membership. The selected outlet record holds connection type, position, optional level, source evidence and a normal CE drawing note; missing invert produces no fake number. |
 | Trigger | CDDESIGN discharge row, CDLPD, or Drainage Items LPD option. |
 | Prompts / selection | Place/select marker; choose supported connection type; enter/confirm level only if known; inspect source qualification. |
-| Preview / output | Actual plan preview and MLeader-style note preview. Output is marker/note presentation linked to the single LPD record. |
+| Preview / output | Actual plan preview and MLeader-style note preview. Output is marker/note presentation linked to the selected outlet’s LPD record. |
 | Cancel / Escape / Undo / reopen | Placement is one drawing operation/Undo. Escape removes temporary placement. Reopen preserves Not set rather than zero. |
 | Dependencies / performance / discovery | Existing LPD behaviour contract, note style, protected-object checks, CDDESIGN record door. |
-| Evidence and acceptance | On a clean drawing, place LPD without level and confirm the note omits the IL clause; set a level, confirm two-decimal wording and MLeader placement; reopen and check identity/level/source remain. |
+| Evidence and acceptance | On a clean synthetic drawing, place two separately selected outlets without level and confirm each note omits the IL clause; set one level, confirm two-decimal wording and MLeader placement; reopen and check each identity/authority/membership remains separate. |
 
 ## Batch 2 — survey, surfaces and catchments
 
@@ -86,7 +86,7 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Current works | Existing outlines/plans, report values and geometry measurement can be proposed. The record strongly requires site extent, surface class and hydraulic catchment to remain separate. |
 | Wrong / missing | No accepted complete impervious take-off; unclassified remainder cannot default to pervious; automatic native-DWG recognition is not proved. |
 | Intended result | Look for an existing catchment plan first. For each row, engineer can accept source proposal, adjust, select outline, draw boundary or manually enter an area; then separately classify surface and allocate runoff/treatment. |
-| Trigger | CDDESIGN Catchments, selected existing catchment plan, DP allocation or Project Review stale warning. |
+| Trigger | CDDESIGN Catchments, selected existing catchment plan, DP allocation or Project Review basis/revision state. |
 | Prompts / selection | Confirm each governing boundary/value only where evidence differs or is missing. Provide split/join and intentional-overlap reason. |
 | Preview / output | Actual drawing/area overlay while working; source page while checking evidence. Temporary overlays are non-printing and clear on Escape/hide/close/drawing change. |
 | Cancel / Escape / Undo / reopen | Proposals and overlays disappear on cancel. Accepted boundary change is one Undoable drawing action; a manual number does not alter geometry. Reopen shows measured, report and governing values. |
@@ -150,12 +150,12 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Current works | Boyd’s sweep chain, distinct calculated/nominated/adopted discharge concepts, storage/drawn comparison direction and three-output single-record intent are supported. |
 | Wrong / missing | Test Day reports unusable computations-sheet output, missing/incorrect detention inputs, typed-TWL refusal and incomplete storage collection. Current record linkage is not verified. |
 | Intended result | Calculate from confirmed criteria/catchments/physical storage, show inputs and provenance, present TWL candidates including higher governing elements, permit a recorded typed choice, and compare designed vs provided storage. |
-| Trigger | CDDESIGN Calculate, CDCALC, detention/TWL review and Project Review stale flag. |
+| Trigger | CDDESIGN Calculate, CDCALC, detention/TWL review and Project Review basis/revision state. |
 | Prompts / selection | Resolve changed or Unknown input; choose/enter governing TWL with reason; do not make a floor level the TWL. |
 | Preview / output | Actual drawing storage/network evidence plus results table; reviewed source record generates sheet, OSD criteria and detail. |
-| Cancel / Escape / Undo / reopen | Calculation preview is non-destructive. Selecting an approved application is explicit and one Undo where it changes drawing output; reopen identifies result/version and stale state. |
+| Cancel / Escape / Undo / reopen | Calculation preview is non-destructive. Selecting an approved application is explicit and one Undo where it changes drawing output; reopen identifies result/version and its Needs review / Numerically out of date / Cannot calculate state. |
 | Dependencies / performance / discovery | Per-job IFD, council criteria, catchment provenance, detention branch collection, existing Design Package/Impact concepts (inputs, branches/results/details, stable identities, directed links and status), calculation output generator, Water Tank interface. Do not create a duplicate package without first confirming the existing record link. |
-| Evidence and acceptance | Synthetic job with one higher trench-grate candidate and changed catchment: Tim can choose a typed TWL, see rationale/provenance, generate a formatted preview (not Notes list), change a catchment and see output marked stale without its old values disappearing. |
+| Evidence and acceptance | Synthetic job with one higher trench-grate candidate: Tim can choose a typed TWL, see rationale/provenance and generate a formatted preview (not Notes list). Then change measured catchment geometry while retaining its governing pin: state is **Needs review**, with result still matching recorded inputs. Deliberately adopt that changed area: dependent result/output becomes **Numerically out of date**; missing required basis is **Cannot calculate**. Neither case overwrites old values or recalculates silently. |
 
 ### F2 — WSUD, treatment, pumps, soakage and overland safety
 
@@ -168,9 +168,9 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Trigger | CDDESIGN treatment row, Drainage Items Raingarden, a specialised device command or Review warning. |
 | Prompts / selection | Select/draw device outline/route, confirm association/destination and source assumptions. Unknown capacity/ground conditions remain Unknown. |
 | Preview / output | Actual plan/device and temporary non-printing catchment/overflow overlays. |
-| Cancel / Escape / Undo / reopen | Clear temporary evidence; chosen geometry one Undo; reopen preserves source, association, exclusions and stale state. |
+| Cancel / Escape / Undo / reopen | Clear temporary evidence; chosen geometry one Undo; reopen preserves source, association, exclusions and its Needs review / Numerically out of date / Cannot calculate state. |
 | Dependencies / performance / discovery | Device catalogue/details, physical connection model, catchment/calculation contract, geotechnical/source evidence, protected-object guard. |
-| Evidence and acceptance | To be specified after command/inventory evidence. Tim must first review which device families are retained and their real standard details. |
+| Evidence and acceptance | Detailed proposed task groups and separate future cases for pump/SPS, charged drainage, raingarden, swale/buffer/sedimentation, soakage and overland are in [specialist_workflow_details.md](specialist_workflow_details.md). They are planning proposals, not retained-runtime or Tim-acceptance claims. |
 
 ## Batch 5 — outputs, review, repair and support
 
@@ -183,7 +183,7 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Wrong / missing | Exact profile/drawing output correctness and a single issue-ready output contract are not established. Test Day proves the computation PDF cannot be accepted on text tests alone. |
 | Intended result | Generate and update profile, schedules, criteria blocks, details and notes from selected reviewed records; keep plan label authority and presentation overrides. Issue review compares generated output against current design/drawing state. |
 | Trigger | CDPROFILE, schedule/detail commands, CDDESIGN output door, Project Review issue check. |
-| Prompts / selection | Choose route/scope/insertion point/revision output; confirm any stale calculation/source before regenerate or issue. |
+| Prompts / selection | Choose route/scope/insertion point/revision output; confirm any Needs review / Numerically out of date / Cannot calculate calculation or source before regenerate or issue. |
 | Preview / output | Actual plan/profile/schedule/detail and rendered PDF/XLSX page where applicable. |
 | Cancel / Escape / Undo / reopen | Preview must render real artefact. Insertion/update one Undo; save/reopen preserves source-result link and manual display override. |
 | Dependencies / performance / discovery | Calculation result contract, drawing object topology, standard detail assets, issue/revision ledger, renderer. |
@@ -196,22 +196,22 @@ Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quo
 | Classification | **Modify** partial review foundations; **Missing** unified review workspace. |
 | Current works | Source-observed Civil Hub is a read-only check with Show on plan/Edit doors; CDDASHBOARD lists/filter/navigates findings and offers explicit propose-fix/audit/export/repair actions. Master calls for review/issue readiness and CDDESIGN direction requires comparison of requirements/calculated/provided values. |
 | Wrong / missing | A single source/evidence/calculation/drawing revision workspace and issue gate are not established. Source observation does not verify the current review routes in AutoCAD. |
-| Intended result | A clear list of unresolved inputs, conflicts, explicit overrides, stale calculations, drawing/capacity differences and output readiness. Jump from a row to the source page or real plan item. Issue is a review decision, not the meaning of Save. |
+| Intended result | A clear list of unresolved inputs, conflicts, explicit overrides, Needs review / Numerically out-of-date calculations, drawing/capacity differences and output readiness. Jump from a row to the source page or real plan item. Issue is a review decision, not the meaning of Save. |
 | Trigger | Project Review command, CDDESIGN next action, pre-issue output route. |
 | Prompts / selection | Filter, inspect, resolve/acknowledge with reason, reopen owner workflow. Never auto-resolve a conflict from date alone. |
 | Preview / output | Source/page comparison or actual drawing preview. Output is revision/issue evidence; no automatic issue stamp. |
 | Cancel / Escape / Undo / reopen | Inspection changes nothing. Recorded resolution/reason is explicit and preserved; drawing edits occur only in owner workflow. |
-| Dependencies / performance / discovery | Revision ledger, stale dependency graph, Focus/Show Where service, output contract. |
+| Dependencies / performance / discovery | Revision ledger, dependency-state graph, Focus/Show Where service, output contract. |
 | Evidence and acceptance | Change a source, boundary and pipe in a synthetic job; Tim sees three affected items, jumps to each, records one intentional exception and confirms no drawing changed merely by reviewing. |
 
 ### M1 — Settings, assets, repair and help
 
 | Field | Review card |
 |---|---|
-| Classification | **Modify** partial repair/settings foundations; Help is **Missing**. |
+| Classification | **Modify** partial repair/settings foundations; retained Help is **Keep/Modify**. The integrated accepted support experience is **Missing/Unknown**. |
 | Current works | Settings-first is binding. Source-observed CDREPAIR exposes ordered Sync/Rebuild/Recover then heavy repair/relink/register/upgrade/audit/triage, with status links. CDHELP has context tracking and a modern embedded-guide / older-lane browser fallback; CDDIAG is command-line counts plus Repair Audit direction. |
 | Wrong / missing | A unified accepted repair, asset diagnostic and plain-English help/error experience is not established. The repair screen’s declared actions must be inventoried/reviewed before simplification, not treated as disposable. |
-| Intended result | Settings visibly hold engineering/council values and sources. Repair scans first, shows a safe preview and offers selected repair. Help explains what user can do next in drawing terms, and diagnostics preserve safe support evidence. |
+| Intended result | Settings visibly hold engineering/council values and sources. Ordinary Repair scans first, shows a safe preview and offers selected repair. Help explains what user can do next in drawing terms, and diagnostics preserve safe support evidence. The separately approved gated pipe upgrade on existing-job open and each pipe open/edit remains with its active owner; see [ownership_and_migration_supplement.md](ownership_and_migration_supplement.md). |
 | Trigger | Settings, CDREPAIR, Help, or a clear “why can’t I edit this?” link. |
 | Prompts / selection | Choose only reviewed setting/repair target; distinguish project value from office standard; never modify locked/Xref/foreign content automatically. |
 | Preview / output | Read-only diagnostic/repair change list; actual target focus. |

@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-09-16T09:21:07.992Z",
+  "htmlSha256": "89f856744a818c4aa017aaf9d417ebe7f949a30ebf39f356edcc3fd66197d77c",
+  "checks": [
+    {
+      "name": "Overview fit 1024x900 start",
+      "passed": true,
+      "detail": {
+        "bottom": 859,
+        "scrollWidth": 1024,
+        "height": 900,
+        "width": 1024
+      }
+    },
+    {
+      "name": "Overview fit 1024x900 change",
+      "passed": true,
+      "detail": {
+        "bottom": 863,
+        "scrollWidth": 1024,
+        "height": 900,
+        "width": 1024
+      }
+    },
+    {
+      "name": "Overview fit 1024x900 issue",
+      "passed": true,
+      "detail": {
+        "bottom": 859,
+        "scrollWidth": 1024,
+        "height": 900,
+        "width": 1024
+      }
+    },
+    {
+      "name": "Overview fit 1280x720 start",
+      "passed": true,
+      "detail": {
+        "bottom": 705,
+        "scrollWidth": 1280,
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "name": "Overview fit 1280x720 change",
+      "passed": true,
+      "detail": {
+        "bottom": 705,
+        "scrollWidth": 1280,
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "name": "Overview fit 1280x720 issue",
+      "passed": true,
+      "detail": {
+        "bottom": 705,
+        "scrollWidth": 1280,
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "name": "Overview fit 1920x1080 start",
+      "passed": true,
+      "detail": {
+        "bottom": 859,
+        "scrollWidth": 1920,
+        "height": 1080,
+        "width": 1920
+      }
+    },
+    {
+      "name": "Overview fit 1920x1080 change",
+      "passed": true,
+      "detail": {
+        "bottom": 863,
+        "scrollWidth": 1920,
+        "height": 1080,
+        "width": 1920
+      }
+    },
+    {
+      "name": "Overview fit 1920x1080 issue",
+      "passed": true,
+      "detail": {
+        "bottom": 859,
+        "scrollWidth": 1920,
+        "height": 1080,
+        "width": 1920
+      }
+    },
+    {
+      "name": "Focused document matches 0",
+      "passed": true
+    },
+    {
+      "name": "Focus is not load 0",
+      "passed": true
+    },
+    {
+      "name": "Focused document matches 1",
+      "passed": true
+    },
+    {
+      "name": "Focus is not load 1",
+      "passed": true
+    },
+    {
+      "name": "Focused document matches 2",
+      "passed": true
+    },
+    {
+      "name": "Focus is not load 2",
+      "passed": true
+    },
+    {
+      "name": "Document review compact fits",
+      "passed": true
+    },
+    {
+      "name": "Back cancels draft load",
+      "passed": true
+    },
+    {
+      "name": "Load does not confirm",
+      "passed": true
+    },
+    {
+      "name": "Load retained locally",
+      "passed": true
+    },
+    {
+      "name": "Escape preserves previous load",
+      "passed": true
+    },
+    {
+      "name": "Source reviewed does not confirm",
+      "passed": true
+    },
+    {
+      "name": "select is explicitly prototype",
+      "passed": true
+    },
+    {
+      "name": "draw is explicitly prototype",
+      "passed": true
+    },
+    {
+      "name": "manual is explicitly prototype",
+      "passed": true
+    },
+    {
+      "name": "Pinned review remains",
+      "passed": true
+    },
+    {
+      "name": "Calculation conditional",
+      "passed": true
+    },
+    {
+      "name": "Prior issue preserved",
+      "passed": true
+    },
+    {
+      "name": "Zero JS errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 28,
+  "failed": 0,
+  "scope": "Independent offline concept only"
+}

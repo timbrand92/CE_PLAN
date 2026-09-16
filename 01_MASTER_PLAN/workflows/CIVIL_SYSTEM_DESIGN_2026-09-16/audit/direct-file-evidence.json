@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-16T09:23:21.337Z",
+  "results": [
+    {
+      "name": "Direct file opens correct engineering unit",
+      "passed": true
+    },
+    {
+      "name": "Direct file draft focus",
+      "passed": true
+    },
+    {
+      "name": "Direct file Escape",
+      "passed": true
+    }
+  ]
+}

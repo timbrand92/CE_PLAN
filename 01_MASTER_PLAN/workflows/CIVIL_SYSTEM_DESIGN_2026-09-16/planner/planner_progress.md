@@ -7,13 +7,14 @@
 | Completed — planning | `source_authority_and_conflicts.md` | Current decisions and historical conflicts are separated, with evidence gaps named. |
 | Completed — planning | `civil_journey_and_window_map.md` | One whole-job route maps CDDESIGN to drawing, calculations, outputs and issue without duplicate data owners. |
 | Completed — planning | `workflow_cards.md` | Review cards cover A–M Civil families and hold Water Tank last. |
-| Completed — planning | `automation_override_revision_contract.md` | Proposals, manual choices, changed documents, stale calculations and protected/external content have a safe proposed behaviour. |
-| Completed — planning | `decisions_for_tim.md` | Six prioritised genuine decisions remain, with further specialist matters explicitly deferred rather than assumed. |
+| Completed — planning | `automation_override_revision_contract.md` | Proposals, manual choices, changed documents, protected/external content and explicit review/result states have a safe proposed behaviour. |
+| Completed — planning | `decisions_for_tim.md` | Nine prioritised genuine decisions remain, including computations-sheet, issued-sheet discrepancy and project-recovery questions. |
 | Completed — planning | `representative_acceptance_scenarios.md` | Small future AutoCAD acceptance batches cover discovery, evidence, physical drawing, calculations, output, recovery and offline/protected cases. |
 | Completed — source inventory | `retained_command_inventory.md` | Read-only source inventory names retained command/window routes across A–M before any specialist replacement is proposed. |
-| Completed — dependency planning | `engineering_dependency_map.md` | Optional systems are separated into inputs, consumers, stale effects, retained routes and genuine gaps; Water Tank interfaces remain last. |
+| Completed — dependency planning | `engineering_dependency_map.md` | Optional systems are separated into inputs, consumers, dependency-state effects, retained routes and genuine gaps; Water Tank interfaces remain last. |
+| Completed — audit correction | `ownership_and_migration_supplement.md`, `AUDIT_FIXES.md` | Audit findings are mapped to planner-only changes, with active-owner boundaries and the gated pipe-upgrade exception preserved. |
 | Partial | Source/implementation truth for several older specialist commands | The cards explicitly say Unknown rather than guessing current behaviour. Root is reconciling this evidence. |
-| Unreviewed | All proposed cards/contracts | The independent auditor still needs to check claims and Tim still needs to approve the review cards. |
+| Partial — audit closure | All proposed cards/contracts | First-pass independent audit was read and planner corrections were made. Closure remains with the independent auditor/root; Tim still needs to approve the proposed review cards. |
 
 ## Checkpoints
 
@@ -28,13 +29,13 @@
 | 2026-09-16 19:00 | Read-only retained-command/window inventory completed; cards B/E/F/L/M corrected from broad Unknown to source-observed routes while runtime/acceptance remain Unknown. |
 | 2026-09-16 19:04 | Engineering dependency map completed; numeric decision recommendations changed to source/basis questions where Tim has not ruled a default. |
 | 2026-09-16 19:05 | Dependency map refined: new evidence marks **Needs review**; only a confirmed governing-input change makes a result **Numerically out of date**; missing basis is **Cannot calculate**. |
+| 2026-09-16 19:21:42+10:00 | Planner-only audit corrections recorded: ownership/migration supplement, three-state boundary cases, Help classification, source-evidence request cleanup, adoption-versus-provenance model, multi-outlet LPD rule and retained open decisions. |
 
 ## Next work
 
-1. Re-read all planner files against the supplied records, correct any accidental live/implementation claim and add scoped root-reconciliation evidence when received.
-2. Perform an internal consistency pass: cards must use the same one-record doors and override/revision rules as the journey map.
-3. Hold Water Tank as last; do not add a competing CDWT workflow or reassign its temporary Claude-only window ownership.
-4. Leave the completed annexes for the independent Astra audit; do not claim audit complete beforehand.
+1. Hold the corrected planner records for independent audit closure and root integration; do not claim closure, build, runtime verification or Tim approval.
+2. Hold Water Tank as last; do not add a competing CDWT workflow or reassign its temporary Claude-only window ownership.
+3. Retain the F-Q2/F-Q3 and project-recovery questions for a later one-at-a-time Tim decision, not an overnight assumption.
 
 ---
 

@@ -33,8 +33,10 @@ All three overview states fit the checked 1024 × 900, 1280 × 720 and 1920 × 1
 
 ## Verification evidence
 
-`civil-lifecycle-checks.json` beside the concept records 33 passing offline concept checks, including actual selection/Cancel/Escape behaviour, matching selected WSUD source pages, unconfirmed values after source review, retained pinned area, three overview states, horizontal fit at 1024/736/320 pixels, the stated desktop vertical-fit cases, and zero browser script errors. `check-civil-lifecycle.cjs` is the bounded visual check, not a build/deploy script. This is not plugin testing.
+`civil-lifecycle-checks.json` beside the concept records 34 passing offline concept checks, including actual selection/Cancel/Escape behaviour, matching selected WSUD source pages, unconfirmed values after source review, retained pinned area, three overview states, horizontal fit at 1024/736/320 pixels, the stated desktop vertical-fit cases, and zero browser script errors. `check-civil-lifecycle.cjs` is the bounded visual check, not a build/deploy script. This is not plugin testing.
 
 The eight source files in the earlier private historical trial were fingerprinted again at 19:05 Sydney on 16 September; all eight matched the original manifest. Private paths/results remain in that trial folder, outside repositories.
 
 First independent audit: `audit/AUDIT_REPORT.md`. Corrected visual closure audit is pending. Native AutoCAD sizing, preview performance, document persistence and all real design interactions remain untested.
+
+The root check was also run by opening the actual disk HTML file, not only injecting its text into a browser page. Its displayed m² units, interactions and stated viewport checks passed. The morning pack links directly to that local concept for standalone review.

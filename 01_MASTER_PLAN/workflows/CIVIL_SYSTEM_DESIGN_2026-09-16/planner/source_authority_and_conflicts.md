@@ -21,7 +21,7 @@
 | Evidence first | Extract/measure/propose, then the engineer confirms governing values before calculation or drawing impact. Newer documents trigger comparison, not automatic adoption. | Civil Windows handover, 16 Sep | Behaviour approved. |
 | Areas | Site boundary, surface/imperviousness and hydraulic catchment are separate. Existing catchment plans are considered before redraw. No automatic equal DP split or unclassified-pervious remainder. | Civil Windows handover, 15–16 Sep | Behaviour approved. |
 | Preview | Review source pages while judging evidence; show the actual drawing while judging areas/network. No invented completed network on an empty job. | Civil Windows handover; Test Day §6b–d, 16 Sep | Behaviour approved. |
-| Drainage Items | DP/IO/GIO/FW/TG/AGI/OF main choices; More contains FO, Strip Drain, custom source, Raingarden, LPD and only later-inventoried applicable items. Existing item commands preselect the matching item. | Civil Windows handover, 15 Sep | Behaviour approved. Do not reopen in this planning block. |
+| Drainage Items | DP/IO/GIO/FW/TG/AGI/OF main choices; More contains the approved FO, Strip Drain, custom source, Raingarden and LPD choices. Existing item commands preselect the matching item. Additional source-inventoried item types are not approved additions and require future workflow review. | Civil Windows handover, 15 Sep | Behaviour approved. Do not reopen in this planning block. |
 | Water Tank | Plan last. `CDWT` window ownership is temporarily Claude-only, per Tim's 16 Sep override. | Test Day §4a; V3 §11 G | Scope/ownership direction only; not reallocated here. |
 | Calculations | One computed record should feed computations sheet, OSD criteria block and orifice detail. Designed storage and provided/drawn storage stay separate. | D+F plan, §§3–4 | Proposed design direction; calculations sheet presentation has current Test Day failures. |
 | Rainfall | Hold IFD coefficient block per job, with place/source. Do not quietly use the shipped Melbourne curve for every job. | IFD rainfall record, 15 Sep | Behaviour approved; obtaining new fitted blocks remains Unknown. |
@@ -67,8 +67,8 @@ The following need a source/status reconciliation outside this annex before a be
 
 1. Project recognition may safely use the bounded path marker as a *candidate only*. The current helper's fallback directory and its exclusions are not a recognised-project result. The unresolved/ambiguous-project recovery interaction remains unapproved.
 2. Existing Design Package / Impact concepts should be inspected and reused before new records are proposed: DesignInputs (including optional outfall/source geometry), branches/results/details/long section/calculation/warnings/refusals, stable pit/pipe identities, directed connections, presentation and Complete/Partial/Unknown/OutOfDate state. Whether sheet/criteria/detail currently share a stable calculation-result identity remains to be checked.
-3. The authoritative council-rule integration field list and the eight pending council decisions, so this planner does not invent engineering fields.
-4. Current retained commands for surface drains, slab, grades, pumps, soakage, profiles, schedules, repair and help — status is deliberately **Unknown** here unless a source record says otherwise.
+3. The authoritative council-rule integration field list and unresolved decision basis in `02_COUNCIL_RULES/COUNCIL_RULES_V3_INTEGRATION.md` §6 and `OPEN_QUESTIONS.md`, so this planner does not invent engineering fields.
+4. Completed bounded retained-command inventory: [retained_command_inventory.md](retained_command_inventory.md) records surface drains, slab, grades, pumps, soakage, profiles, schedules, repair and help. Its source observation does not settle runtime behaviour, recovery support or AutoCAD acceptance.
 
 ---
 
