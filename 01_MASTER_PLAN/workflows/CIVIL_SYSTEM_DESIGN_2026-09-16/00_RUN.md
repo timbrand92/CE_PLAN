@@ -1,3 +1,4 @@
+> **Scope correction — 16 September 2026, 22:13 Sydney.** Tim rejected the earlier 43-minute result: "i asked you to go through the whole plugin not just the cddesign window", then instructed "do another overnight run". This document is retained as a PARTIAL CIVIL result. Its earlier completion/early-stop conclusion does not satisfy the whole-plugin overnight request and is superseded. Continued planning and whole-plugin audit are tracked in whole-plugin/00_RUN.md. The historic Civil audit is not a whole-plugin audit.
 # Civil system overnight planning — 16 September 2026
 
 FOR TIM

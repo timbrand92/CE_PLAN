@@ -1,3 +1,4 @@
+> **Scope correction — 16 September 2026, 22:13 Sydney.** Tim rejected the earlier 43-minute result: "i asked you to go through the whole plugin not just the cddesign window", then instructed "do another overnight run". This document is retained as a PARTIAL CIVIL result. Its earlier completion/early-stop conclusion does not satisfy the whole-plugin overnight request and is superseded. Continued planning and whole-plugin audit are tracked in whole-plugin/00_RUN.md. The historic Civil audit is not a whole-plugin audit.
 # Completion review — audited planning delivery
 
 The root read the independent closure report and its evidence receipt, reviewed the corrected records and finalised the delivery status. This establishes a whole-Civil family-level planning pack, not a complete production specification or implementation. The first-pass checklist below is retained as the scope inventory; its former pending gates are resolved for planning by the disposition following it.
