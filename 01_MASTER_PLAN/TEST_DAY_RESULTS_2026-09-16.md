@@ -388,3 +388,9 @@ walls, survives save/reopen). No change to the live enabler until the probe resu
 Morning packs: `01_MASTER_PLAN/MORNING_PACK_C7_2026-09-17.md` (this chat) and
 `01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md` (the K/L chat; its prompt `CHAT_PROMPT_CIVIL_K_L_2026-09-16.md` now
 carries the overnight instruction). Nothing is deployed overnight.
+
+### 6o. Tim, 16 Sep (evening): overnight sequence for the windows chat — PREPARED, awaiting "Go"
+
+> *"CAN YOU PLEASE PREPARE OVERNIGHT SEQUENCE"* (to the windows chat)
+
+Block: `01_MASTER_PLAN/OVERNIGHT_BLOCK_WINDOWS_CHAT_2026-09-16.md` — CDWT W-01..05 → computations sheet BUG-158 (unclaimed, proposed) → CD window ticks/polish → audit → morning pack `MORNING_PACK_WINDOWS_2026-09-17.md` by 8 am. Nothing deployed. Not started until Tim says Go.
