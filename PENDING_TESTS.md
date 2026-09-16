@@ -33,6 +33,39 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
+### SUPERSEDED 20 minutes later by `d0ffe1a2` — see below. `081c82b6` was live 22:31–22:57 only.
+
+### LIVE since 16 Sep 22:57 — `d0ffe1a2` on `claude/civil-combined-2026-09-17`
+
+`081c82b6` **did not contain two commits Tim had already been answered on.** The K/L branch had moved to
+`26432227` after the tip that was handed over, carrying `L-01b/L-02b` (**both** Council Pit wordings offered,
+note moved to `25TEXT`) and `L-02c`. Those are now in, plus **F1-06** (Tim, 17 Sep: the rainfall warning
+appears *"once"*).
+
+All three lanes read `3.0.0+d0ffe1a281808c1837375785351581610dcc9c51`. Manager's `CE_SHARED` re-synced.
+Backup is still `CE_CVL_SUITE_PRE_6505fb5a_20260916_222407.backup`.
+
+Builds: net48 / net8 / net10 **0 errors**. Full net10 suite: **9,904 run · 9,864 passed · 23 failed ·
+17 skipped**. The 23rd is `MarkupFileImageLoaderTests.LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully`
+— *"The PDF renderer produced only blank page(s)"*. **It passes 15/15 when its fixture is run on its own**,
+and this payload changes no PDF or markup code. Recorded as **flaky under full-suite load, not a regression**
+— not as "pre-existing", because it did not fail in the 22:31 run of the same suite.
+
+**Tim's four answers of 17 Sep:**
+
+| | Tim | State |
+|---|---|---|
+| `COUNCIL PIT` vs `EXISTING COUNCIL PIT` | *"both are necessary"* (and *"both are options"*, 16 Sep) | **Both offered** — `CouncilPit` and `ExistingCouncilPit`, in `d0ffe1a2` |
+| Sump tick wording | *"yes"* | Already built (PIT-TWEAKS-01) — no change |
+| Two tanks on one system | *"i have confirmed two tanks on one detention system"* | Already built (item 66) — no change |
+| Rainfall warning twice | *"once"* | **Built in `d0ffe1a2`** (F1-06) |
+
+**Still open and NOT decided:** the note's wrap width — Tim asked to *"show me the different variations"*,
+five widths were drawn for him on 17 Sep and **he has not picked one**.
+
+**Installed, NOT tested.** The ONE list: `01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-17.md`; drawings named in
+`C:\Users\TimothyBrand\CE_TEST_DRAWINGS_2026-09-17.md` (outside every repo, DATA-01).
+
 ### LIVE since 16 Sep 22:31 — `081c82b6` on `claude/civil-combined-2026-09-17` (ALL THREE overnight chats, one payload)
 
 Tim: *"AUTOCAD IS CLOSED, DEPLOY"*. Merge of `claude/ce-civil-handoff-sept-16-5623ca` @ `17847985` (windows),
