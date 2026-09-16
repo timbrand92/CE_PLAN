@@ -37,7 +37,7 @@ for Tim**: items 1 to 6 below in order, each one failing test → fix → passin
 push. Park anything that needs Tim's decision (write the question down, do not decide it) and keep moving. When the
 block is done, or by **8 am on 17 Sep at the latest**, run an audit pass over your own claims (re-run the tests,
 re-read the diffs, open any artefact you produced) and write the morning pack to disk:
-`C:\CE_PLANCE_PLAN_MASTER_PLAN1_MASTER_PLAN\MORNING_PACK_K_L_2026-09-17.md` — one page, three lists: **built** / **test this**
+`C:\CE_PLAN\01_MASTER_PLAN\MORNING_PACK_K_L_2026-09-17.md` — one page, three lists: **built** / **test this**
 (exact AutoCAD steps a stranger could follow, what "right" looks like, both lanes) / **needs Tim** (decisions,
 parked items). Commit it to `C:\CE_PLAN`. **Never deploy.** If you run out of unblocked work, stop and say so in
 the pack. If you must stop early (usage limit, a blocker), the pack still lands, saying where you stopped and why.
