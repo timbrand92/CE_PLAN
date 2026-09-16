@@ -1,5 +1,6 @@
 # Structural configured field and action manifest
 
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [full Structural approved-card reconciliation](structural_approved_card_reconciliation.md) · [actual high-use action boundary](structural_high_use_window_action_contract.md) · [identity-gap dispositions](structural_registry_gap_dispositions.md). Explicit approved requirements, including `ST6-14` ordinary-registration retirement of `STR`/`BWT`, govern target behaviour; source observations remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Purpose:** preserve the existing configuration wording before a later workflow review changes any Structural interface. This is a transcription of the Structural command registry’s configured labels, prompts, descriptions, layer notes and migration flags, linked back to declaration source where it was found. It is **source evidence only**: not proof the prompt/window/output appears or succeeds in AutoCAD.
 
 - Registry source: `Modules\Structural\Assets\Config\command-registry.json` (251 entries observed).
@@ -91,7 +92,7 @@
 | EXCELMTEXT | Excel to MText — Schedules/Import | Resume or fresh draft; Issue review and suggested fixes; Schedule insertion | Exception-first Excel to schedule workflow (alias of XCLMTXT). Uses the existing schedule insertion engine and schedule/text layer rules from settings. Alias of XCLMTXT — kept for muscle memory. | Visible | Modules/Structural/Commands/ExcelMTextCommands.cs:82 | W8 |
 | EXCELMTEXTNEW | EXCELMTEXTNEW — Schedules/Import | No configured prompt recorded | Retired alias — opens XCLMTXT (same workflow). Delegates entirely to XCLMTXT. | Hidden; Deprecated; replacement XCLMTXT | Modules/Structural/Commands/ExcelMTextCommands.cs:10 | W8 |
 | XCLMTXT | XCLMTXT — Schedules/Import | Resume or fresh draft; Issue review and suggested fixes; Schedule insertion | Exception-first Excel to schedule workflow. Uses the existing schedule insertion engine and schedule/text layer rules from settings. New generation workflow shipped beside EXCELMTEXT during rollout. | Visible | Modules/Structural/Commands/ExcelMTextCommands.cs:81 | W8 |
-| XCLMTXTINDEX | XCLMTXT Index Refresh — Schedules/Import | No configured prompt recorded | Request a background corpus refresh for XCLMTXT. No drawing changes; refreshes cached research data only. | Visible; Expert | No declaration linked | Reconcile |
+| XCLMTXTINDEX | XCLMTXT Index Refresh — Schedules/Import | No configured prompt recorded | Registry source text says it requests background corpus refresh. This is not observed command behaviour. | Registry metadata says Visible; Expert | No declaration linked | **Unqualified ghost; not callable/exposed.** Hidden pending a real qualified identity. |
 | STRSCHEDCREATE | STRSCHEDCREATE — Schedules/Schedule Tools | Command-specific utility prompts | Run schedule command STRSCHEDCREATE. Command-specific. | Visible | Modules/Structural/Commands/UtilityCommands.cs:62 | W11 |
 | STRSCHEDREFRESH | STRSCHEDREFRESH — Schedules/Schedule Tools | Command-specific utility prompts | Run schedule command STRSCHEDREFRESH. Command-specific. | Visible; Expert | Modules/Structural/Commands/UtilityCommands.cs:68 | W11 |
 | STRSCHEDSYNC | STRSCHEDSYNC — Schedules/Schedule Tools | Command-specific utility prompts | Run schedule command STRSCHEDSYNC. Command-specific. | Visible | Modules/Structural/Commands/UtilityCommands.cs:89 | W11 |
@@ -269,3 +270,5 @@
 4. Resolve `No declaration linked`, aliases and deprecated replacements through the command-truth owner before any removal or ribbon change.
 
 **Built/Tested/Installed/Tim-accepted:** not assessed.
+
+

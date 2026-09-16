@@ -2,6 +2,8 @@
 
 FOR TIM
 
+Start with the [whole-job journey](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md). This generated ledger is an inventory checklist, not a completed window contract. Rows without verified handler/consumer meaning remain unresolved. Retaining evidence of a control does not approve its exposure, its current side effects or a replacement layout. Read the linked action and approved-requirement companions before designing a window.
+
 Existing fields and actions are preserved while the shared pages are reconciled. This ledger is supporting evidence, not a proposal to give every control its own page.
 
 ---

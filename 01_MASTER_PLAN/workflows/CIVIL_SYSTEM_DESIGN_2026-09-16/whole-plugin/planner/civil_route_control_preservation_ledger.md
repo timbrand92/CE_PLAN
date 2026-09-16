@@ -1,5 +1,6 @@
 # Civil route and control preservation ledger
 
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [Civil approved decisions](../13_CIVIL_APPROVED_DECISION_RECONCILIATION.md) · [hydraulics/profiles/continuations](../15_HYDRAULICS_PROFILES_AND_CONTINUATIONS.md) · [recovery/release](../16_RECOVERY_AND_RELEASE_REQUIREMENTS.md) · [network/source/surface/QA authority](../18_NETWORK_SOURCE_SURFACE_AND_QA_AUTHORITY.md). These later explicit requirements govern target behaviour; the source observations in this file remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Scope.** Read-only source reconciliation of the 98 Drainage command declarations and 33 non-theme Drainage XAML surfaces recorded in whole-plugin/SOURCE_INVENTORY.json. It closes the gap between the prior Civil family pack and the actual current-source routes. It neither proves runtime behaviour nor authorises a replacement.
 
 - Prior planning input: [../planner/retained_command_inventory.md](../../planner/retained_command_inventory.md) and [../planner/workflow_cards.md](../../planner/workflow_cards.md).
@@ -261,3 +262,4 @@ The additional owner record names CivilEditorShellTheme, BatchEditWorkshopDialog
 - The 33 XAML rows come from the same source inventory; generated/code-built controls are separately represented only where a source call is observed.
 - No runtime, AutoCAD, install, build, test, git, deployment or client-project scan was performed.
 - No command/control has been marked retired, built, tested, installed or Tim-accepted.
+

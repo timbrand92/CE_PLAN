@@ -30,7 +30,7 @@
 | `LBW` | `LoadBearingWallCommands.cs:33`; compile-time command constant. | Preserve direct wall-marking route under `ST-02` review. Architectural geometry cannot become a bearing decision without explicit confirmation. |
 | `ML` | `SchedulingCommands.cs:93`; structural schedule/member-label route. | Retain under `ST-07`; schedule source, manual rows and refresh/sync are separately reviewed. No issue output is implied. |
 | `NGL`, `RL`, `SSL` | `LevelMarkCommands.cs:77,69,73`; short legacy level aliases. | Same `ST-03` disposition as the `CE_*` long aliases: direct source route only; Manual/Unknown rather than a fabricated value. |
-| `P1` | `RafterJoistCommands.cs:66`; rafter/joist placement family. | Retain under `ST-02` review. Connection/load meaning, source and drawing output need explicit workflow evidence. |
+| `P1` | `RafterJoistCommands.cs:66`; rafter/joist placement family. | **Hidden pending approved lap rules** (`ST2-14`). Retain source evidence only; connection/load meaning, source and drawing output need explicit workflow evidence before any daily discovery route. |
 | `PFC`, `SFC`, `SF`, `THC` | `CeTextCommands.cs:63,74,78,56` dispatches text/foundation-family actions. | Preserve familiar aliases through `ST-04`/`ST-06` transition. `ST4-1` splits text from footing geometry; `ST6-5–9` require explicit host, full preview and compound identity. |
 | `R2LTXT` | `CeTextCommands.cs:89`; selected TEXT conversion route. | Keep only as a controlled conversion candidate under `ST-04`. `ST4-11` requires recognised eligible text, count + preview, preserved content/position/ownership, one Undo. |
 | `SCREWPILE`, `STUMPFOOTING` | `CeTextCommands.cs:94–95`; foundation placement entries. | Retain under `ST-06`; an Approved asset is required. `ST6-12` prohibits an approximate-circle fallback. |
@@ -50,3 +50,4 @@
 1. The central register’s destination and migration treatment are already approved by `CT-01`; the remaining task is per-route qualification/evidence, not a new product choice.
 2. Direct command presence has been traced above, but current ribbon/palette visibility, Help rendering, execution, file side effects and AutoCAD acceptance are still Unknown.
 3. Shared-owner transitions for project/settings/sheets/coordination and Transform implementation are intentionally not duplicated in this Structural planner.
+

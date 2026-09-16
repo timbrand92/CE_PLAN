@@ -51,3 +51,32 @@ This is an **open findings checkpoint**, not a completed line-by-line audit of a
 
 Review corrected canonical decision mappings against actual approved records, then root12 shared sheets and root Civil reconciliation, planner discovery/action corrections, and missing owner interfaces. Review all remaining canonical decisions before a final coverage disposition. A clean browser result cannot substitute for this work.
 
+
+## Subsequent findings and correction status (after checkpoint)
+
+- **COV-06 planning gap addressed by root12:** independently read the actual44b2 structure service175–325 and rename handler1743–1831. New12 accurately distinguishes full-DWG moves from bounded partial active-layout removal, backup/dirty checks, mismatched UI wording, conditional persistence and external recovery. Runtime behaviour remains unqualified; no implementation fix claimed.
+- **COV-03/04 substantial correction in root13:** new mapping preserves CV5/CV7/PS1–22 and refinements. Read against the approved decision tables, including quality/visibility gates, TIN constraints, storedtreeidentity, sourceoverride staleness, PS20close and Xref/placement contracts. Final integrated closure awaits planner crosslinks and all remaining Civil authority.
+- **COV-07 Medium — shared settings/assets authority omissions:** root03/11 lack explicit SH-04 #11 shareable-settings export privacy and #12 corrupt-config warning/recoverablebackup; AS-01 #12 native/dynamic object preservation and authorised-only explode, #13 governed placeholders and issue disposition. These approved requirements need exact inheritance, not fresh approval. Root notified.
+- **COV-08 High — Civil hydraulic/review approval coverage:** read CV01 CV1–25/refinement tables, CV02 HD1–15 and HV1–15 plus approval caveats, CV03 CV3-1–15 and CV06 CV6-1–15. Generic cards omit explicit partialflow/self-cleansing limit, no automatic downsize, worstpointcover, catalogue/rounding/nodrift and exact profile branches/linkedupdate/exportselection semantics. Preserve values only with existing source/version/corpus qualification; no current regulatory verification occurred. CV03 source/tag split is separately assigned to planner; do not duplicate that work.
+- **COV-09 High — split-plan continuation workflow:** CV-01J direct read establishes Continue on another plan, paired display markers, one logicalPipeID, full developedlength, distinct gravity/risingmain, approved mapping constraints, fragment-resolved editing, nofakepit/schedulerow, and two-DWG recovery/per-DWGUndo boundary. Whole-plugin general network cards do not preserve this complete route. Reconcile with current scopedC7 migration rather than automatically treating every old continuation upgrade as either manual-only or auto-on-open. Historical build/slice status is not current installed evidence.
+
+Whole-plugin approval remains open. This file records actionable evidence, not an assertion that every remaining canonical card has been exhaustively audited.
+
+## Further readback at 23:08 Sydney
+
+- Root14 now explicitly inherits all SH-04/AS-01 requirements, including export/corruption and intelligent-object/placeholder controls: **COV-07 planning correction verified**.
+- Root15 now explicitly inherits HD/HV/CV6 and CV01J and qualifies historical numeric authority, cross-DWG Undo and C7 migration scope. Its CV6-7 now names QA12 identical-reversible-drafting batching: **COV-08/09 planning corrections verified for those mapped requirements**.
+- Root16/17 checked against canonical CV08/SH/FND/RS/PD/TH and SUP requirements: additional recovery/version-skew/quarantine, exactreleaseidentity, truthfulsupport and test-evidence boundaries retained. These are inherited requirements, not new tests or release certification.
+- Structural approved supplement and updated high-use FST contract materially address COV-01/02/05. Compressed rows must explicitly inherit uncopied canonical details and later scoped decisions. Requested exact scheduleCOPYsnapshot and later issue-QA disposition clarification.
+- **COV-10 Medium — discovery contradictions:** command_discovery_reconciliation.md Retirement state still says no Tim-approved permanent retirements, contradicting ST6-14 and its own earlier STR/BWT row. It also broadly preserves XCLMTXTINDEX expert access while structural_registry_gap_dispositions.md correctly calls it an unqualified noncallable ghost. P1 needs its approved hidden-until-lap-rule status. Parent notified; fixes pending readback.
+- Read canonical EV03–07 full decision bodies and FND/CT/TH/RS/PD/SH decision sets; DATA01 privacy controls and PC01 record obligations. No corpus files/history inspected. Exact current privacy clearance/implementation is not established by historical headings.
+- Independently read actual root watchdog callback/timeouts, SmartifyPipe Execute and cloud telemetry handler. Root10 correctly distinguishes abandoned-await from cancellation, then-current read from unproven latewrite, and accepted202 from stored:true.
+
+The39-row canonical matrix is separate and counted as39. It is a **coverage audit map**, not39 passed implementation tests. Remaining Civil canonical mapping, discovery corrections, evidence interfaces and integrated journey/index remain in progress.
+
+
+## Correction readback — 23:14 Sydney
+
+COV-01–10's identified authority/action/discovery defects now have substantive corrected records. The final planner readback confirms snapshot-copy, later unresolved-QA disposition, P1/retirement/ghost status and candidate-versus-governing staleness. Root19 provides a connected reading index and original records have companion links.180 current root/planner Markdown local targets exist; earlier17 malformed Windows paths are corrected. Concept SHA256 remains identical to bounded visual closure.
+
+**These scoped corrections are verified; whole-plugin completion remains open.** Remaining tasks are the material control/consumer qualification currently being developed, integrated scenario/decision-gap review and the final morning pack. Retention inventories are explicitly not complete UI contracts. See CORRECTION_READBACK_EVIDENCE.json, LOCAL_LINK_RECHECK.json and INDEPENDENT_JOURNEY_TRACES.md. Do not read earlier checkpoint open statuses as newer than this readback; they remain history of findings.

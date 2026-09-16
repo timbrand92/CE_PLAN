@@ -2,6 +2,12 @@
 
 FOR TIM
 
+## Reading this record
+
+Start with the [whole-job journey](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md). Read this record together with the [approved requirements and action qualifications](14_SHARED_APPROVED_ASSET_AND_SETTINGS_REQUIREMENTS.md); those explicit corrections govern where the earlier summary is incomplete. Source observations remain evidence, not approval or installed behaviour.
+
+
+
 Changing a default must not redraw an existing job. A project carries its agreed rules; office standards and personal appearance remain separate.
 
 ## Authority and ownership

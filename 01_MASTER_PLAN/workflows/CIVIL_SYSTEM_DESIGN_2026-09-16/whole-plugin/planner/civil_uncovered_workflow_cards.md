@@ -1,5 +1,6 @@
 # Civil uncovered workflow cards — whole-plugin completion pass
 
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [Civil approved decisions](../13_CIVIL_APPROVED_DECISION_RECONCILIATION.md) · [hydraulics/profiles/continuations](../15_HYDRAULICS_PROFILES_AND_CONTINUATIONS.md) · [recovery/release](../16_RECOVERY_AND_RELEASE_REQUIREMENTS.md) · [network/source/surface/QA authority](../18_NETWORK_SOURCE_SURFACE_AND_QA_AUTHORITY.md). These later explicit requirements govern target behaviour; the source observations in this file remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Scope.** These cards add the Civil routes that the earlier family cards did not describe at window/control level. They preserve current-source wording and entry paths before any redesign. They do not reopen approved Drainage Items, active CD/PIT work, CDWT ownership, or root-owned settings/help/project-QA/repair-host design.
 
 - Route/control evidence: [civil_route_control_preservation_ledger.md](civil_route_control_preservation_ledger.md).
@@ -110,4 +111,5 @@
 ## Cross-card acceptance batch
 
 For every card, future acceptance must explicitly prove the entry command/ribbon/context route; source/selection scope; visible preview; action plus Cancel/Escape; one Undo; save/reopen; locked/Xref/REFEDIT/unsupported-object handling; manual/pinned override; performance on ordinary drawing; and rediscovery route. No item is **Built**, **Tested**, **Installed**, or **Tim-accepted** because it appears in this planning document.
+
 

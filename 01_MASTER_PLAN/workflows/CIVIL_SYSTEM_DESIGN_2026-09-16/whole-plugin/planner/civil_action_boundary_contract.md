@@ -1,5 +1,6 @@
 # Civil action-boundary contract — non-CD/PIT routes
 
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [Civil approved decisions](../13_CIVIL_APPROVED_DECISION_RECONCILIATION.md) · [hydraulics/profiles/continuations](../15_HYDRAULICS_PROFILES_AND_CONTINUATIONS.md) · [recovery/release](../16_RECOVERY_AND_RELEASE_REQUIREMENTS.md) · [network/source/surface/QA authority](../18_NETWORK_SOURCE_SURFACE_AND_QA_AUTHORITY.md). These later explicit requirements govern target behaviour; the source observations in this file remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Purpose.** This contract deepens the Civil route ledger with source-observed action boundaries. It retains useful behaviour, flags source/approved-direction conflicts, and deliberately leaves active CD/PIT workshop design to its owner.
 
 - Route/control evidence: [civil_route_control_preservation_ledger.md](civil_route_control_preservation_ledger.md).
@@ -62,4 +63,5 @@
 7. Place/cancel TPZ and SRZ separately; prove no hydraulic/catchment mutation.
 
 **Built:** not assessed. **Tested:** no runtime or AutoCAD test. **Installed:** not assessed. **Tim-accepted:** not assessed.
+
 

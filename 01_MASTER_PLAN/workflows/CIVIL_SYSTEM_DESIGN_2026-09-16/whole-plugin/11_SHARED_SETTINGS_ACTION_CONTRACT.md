@@ -39,7 +39,7 @@ Source: CivilSettingsView.xaml and CivilGeneralSettingsView.xaml; bindings retai
 | Invert position; mirror text | Preferred annotation placement | Future placement defaults; existing hand-positioned labels retained |
 | Invert inward distance; text/invert gap | Distances controlling placement | Explicit units; preview example. Existing source labels inward distance only “units”, so physical versus drawing units requires consumer verification before relabelling |
 | Minimum grade label; standard grade label | CD fixed-grade choices with no entered inverts | Show1:N meaning; do not confuse this label preference with the governing minimum permitted pipe grade |
-| Calculated invert decimals | Display precision | Preserve full calculation accuracy; verify actual consumer before claiming display-only implementation |
+| Calculated invert decimals | Calculated-level rounding and displayed precision in the inspected source | Not merely cosmetic: CD/CDEDIT pass this value into the calculated-invert rule. Preserve approved common rounding and engineering authority; do not offer it as harmless appearance-only setting |
 | Minimum outlet drop | Level-assistance input | Engineering assumption/source shown and project adoption reviewed; changing personal default is not a network recalculation |
 | Remember Quick Mode; default auto-zoom; draw run before options | Drafting interaction preferences | Clear next-command behaviour; do not erase current unfinished command state |
 | OSNAP drawing/text modes | Selection/placement aids | Separate retained editor and its own save/cancel scope; restore temporary drafting state after command |
@@ -61,3 +61,9 @@ Source: CivilSettingsView.xaml and CivilGeneralSettingsView.xaml; bindings retai
 ## Remaining qualification
 
 Actual consumer units/precision and latest Civil engineering-rule ownership need tracing before new labels or grouping are approved. Structural candidate settings fixes remain with the recorded owner; this pass does not infer them absent from an older file. Native keyboard/focus, window close/Escape, OSNAP save failure, cross-module conflict and actual owner sizing remain untested. No source or installed settings were changed; independent planning audit is ongoing.
+
+### Bounded consumer read-back — 16 September
+
+Root source `Modules/Drainage/Commands/CdCommand.cs:426–436` and `PipeEditCommand.Update.cs:228–244` pass CalculatedDecimals and minimum outlet drop into ApplyCalculatedInvertRule, then use the returned inverts. `LinkService.Split.cs:578` formats an interpolated split invert with that precision; `LinkService.Utilities.cs:1048–1065` formats a changed endpoint for the project pipe. Therefore this preference can affect resulting engineering values in these paths; the earlier display-only suggestion is corrected above. No active owner's newer calculation code was changed or runtime result asserted.
+
+Root `QuickModeService.cs:41–45,183–184` and `TextService.cs:50–59,1542–1565` use inward/mask distances directly in drawing-coordinate geometry without a conversion in these inspected functions. This supports “drawing distance” for those paths, not a universal paper-mm interpretation. Before relabelling the current “units” field, qualify actual drawing units and all owner paths; a property name ending Mm alone is insufficient proof. This is a concrete remaining field-semantics check, not a request for Tim to decide what the code does.

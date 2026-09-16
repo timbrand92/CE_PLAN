@@ -2,6 +2,12 @@
 
 FOR TIM
 
+## Reading this record
+
+Start with the [whole-job journey](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md). Read this record together with the [approved requirements and action qualifications](12_SHEET_STRUCTURE_ACTION_CONTRACT.md); those explicit corrections govern where the earlier summary is incomplete. Source observations remain evidence, not approval or installed behaviour.
+
+
+
 One job record should serve Civil and Structural. The user starts from their drawing, works with the appropriate discipline tools, and returns to the same sheet register and issue history. This is a proposal for joining existing approved workflows; it does not create a new competing home window.
 
 ## Authority and present source

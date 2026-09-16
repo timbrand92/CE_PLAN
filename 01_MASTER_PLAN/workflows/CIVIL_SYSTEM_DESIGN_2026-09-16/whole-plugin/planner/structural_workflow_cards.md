@@ -1,12 +1,13 @@
 # Structural end-user workflow cards
 
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [full Structural approved-card reconciliation](structural_approved_card_reconciliation.md) · [actual high-use action boundary](structural_high_use_window_action_contract.md) · [identity-gap dispositions](structural_registry_gap_dispositions.md). Explicit approved requirements, including `ST6-14` ordinary-registration retirement of `STR`/`BWT`, govern target behaviour; source observations remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Planning-only cards, grouped in the order a structural drafter works through a job.** The source command ledger is the complete declaration-level index: [structural_source_command_window_ledger.md](structural_source_command_window_ledger.md). Each `W` card below owns every ledger row carrying that `W` reference, including aliases and hidden/expert rows. A source declaration or a registry description is not proof of current AutoCAD behaviour.
 
 **Approved-card precision supplement:** [structural_approved_card_reconciliation.md](structural_approved_card_reconciliation.md) preserves the exact ST-03/ST-04/ST-05/ST-06/ST-09 workflow decisions and corrects the FST action split. It supplements, and takes precedence over, generic retention wording in these new cards.
 
 ## Rules shared by every card
 
-- Keep proven working drafting routes until a reviewed replacement passes an AutoCAD acceptance scenario. No source route is retired by this document.
+- Keep proven working drafting routes until a reviewed replacement passes an AutoCAD acceptance scenario. **Exception:** `ST6-14` already approves removal of `STR` and `BWT` from ordinary command registration; their source/alias evidence remains retained through transition.
 - Distinguish a drawing observation, source/markup proposal, engineer-confirmed structural choice, manual/pinned choice, `Assumed`, `Unknown` and presentation-only label position. A newer file or a nearby object never becomes an engineering decision by itself.
 - Existing Structural approvals govern framing/foundation intent: background geometry can suggest a review item but cannot establish bearing, load, support, connection, setdown depth, member size or adequacy.
 - Native AutoCAD locked-layer, Xref, REFEDIT and foreign-object protections remain in force. A preview must state when it cannot edit its selected source.
@@ -89,8 +90,8 @@
 
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
-| Foundation manager | `FST`, `FEDIT`, `BP`, `SCREWPILE`, `STUMPFOOTING`, `FDELETE`, `FADOPT`, `FREGEN`, `FREGENALL`; `FoundationService`, `FstManagerWindow`. | Preserve manager/edit/regeneration entry points while reviewing actual fields, source/geometry scope and object relationships. A regenerate action cannot be assumed to be a safe whole-job update. |
-| Foundation detail/text family | Foundation dispatch in `CeTextCommands`: `THC`/`FTHC`, `PFC`/`FPFC`, `SF`/`FSF`, `REB`, `RIB` and the other footing/tag aliases captured in ledger W3/W5/W7. | Keep known drafting codes but group them by footing type and drawing output for review; no broad retirement of terse commands. |
+| Foundation manager | `FST`, `FEDIT`, `BP`, `SCREWPILE`, `STUMPFOOTING`, `FDELETE`, `FADOPT`, `FREGEN`, `FREGENALL`; `FoundationService`, `FstManagerWindow`. | Preserve manager/edit/regeneration entry points while reviewing actual fields, source/geometry scope and object relationships. `FDELETE` is not a retained broad-delete route: `ST6-9` replaces it with Element-only/Entire-system choice and exact counts before Apply. A regenerate action cannot be assumed to be a safe whole-job update. |
+| Foundation detail/text family | Foundation dispatch in `CeTextCommands`: `THC`/`FTHC`, `PFC`/`FPFC`, `SF`/`FSF`, `REB`, `RIB` and the other footing/tag aliases captured in ledger W3/W5/W7; `FSTEXPORT` is a source route. | Keep known drafting codes but group them by footing type and drawing output for review. `FSTEXPORT` redirects to the single `ST-07` schedule engine; source preservation is not a second daily schedule route. |
 | Slab | `BSSLAB` and `SlabDetailCommands`; registry marks some slab detail capability as planned/placeholder. | A placeholder is not a working route. Keep its identity visible, identify the source/Unknown status and do not present a planned field set as built. |
 | Approved foundation editing | Journey approval requires contextual property/grip review, wall/edge/void/setdown proposals, confirmed supports, previewed edge-beam/hatch/annotation changes and missing-depth/thickness warnings. | A confirmed footing mark/size may feed schedule review; source geometry does not fill missing depth/thickness. Independent edits do not propagate or erase relationships; they surface quiet QA discrepancies. |
 
@@ -104,7 +105,7 @@
 |---|---|---|
 | Steel/timber sections | `SBEAM`, `SPEDITSECTION`; `SteelSectionPickerDialog`; registry describes type/catalogue selection and insertion point. | Retain section selection, drawing-scale output and any stored section identity. Catalogue presence is not design adequacy or automatic selection. |
 | RC beams/columns | `RCBEAM`, `RCRECTCOL`, `RCCIRCCOL`; `RCBeamPickerDialog`, `RCMemberDialog`, `RCLigDialog`; registry exposes dimensions, bar/tie/stirrup/cover and insertion prompts. | Dialog fields must remain visible for review before drawing. A proposed/typed dimension or reinforcement entry needs its source/Assumed/Manual state; no engineering default is invented. |
-| Rebar/reinforcement | `CE_REBARLINE`, `CE_REBARCIRCLE`, `CE_STIRRUP`, `CE_BARWEIGHT`, `LIGS*`, `COLTIES`, `WALLREO` and reinforcement-detail source families. | Retain separate line/circle/stirrup/tie/detail routes. Registry placeholders remain Missing/phase-labelled until source/runtime review proves otherwise. |
+| Rebar/reinforcement | `CE_REBARLINE`, `CE_REBARCIRCLE`/`RBC`, `CE_STIRRUP`/`STR`/`STIRRUP`, `CE_BARWEIGHT`/`BWT`/`BARWEIGHT`, `LIGS*`, `COLTIES`, `WALLREO` and reinforcement-detail source families. | `RBC` compound preview states bar-centre radius. `STR` and `BWT` have an approved ordinary-registration retirement (`ST6-14`); current source shares their methods with the named `CE_*` identities, so do not falsely call those separate daily routes retained or retired. Registry placeholders remain Missing/phase-labelled until source/runtime review proves otherwise. |
 | Steel details | `STLCONN*`, `PORTAL`, `TRUSS`, `PURLINS`/`PPURLINS`, `ANGLES`, `BOLTS`, `BRACE`/`SWBRACE`, `BASEDET`, `GUSSETS`, `RIDGE`, `KNEE` and related `SteelworkDetailCommands`. | Preserve every existing command identity in ledger. Detail/library search, source/version, suitability confirmation and inserted/project-copy revision must be reviewed before replacement. |
 | Markers | `CE_SECTIONMARK`, section mark commands and related drawing details. | A section mark is presentation/coordination evidence; it must not fabricate a section/detail relationship. |
 
@@ -127,9 +128,9 @@
 
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
-| Excel/MText | `XCLMTXT`, `EXCELMTEXT`, `EXCELMTEXTNEW`, `XCLMTXTINDEX`, `EXCELMAPFLOOR`, `EXCELMAPFLOORAREA`; `ExcelSheetPickerDialog`, `XclmTxtDialog`, advanced editor; registry describes file/sheet/floor mapping/import prompts. | Retain picker, mapping and advanced-edit routes. Selected source sheet, range/mapping and output are visible before accept. Source import does not overwrite confirmed drawing labels or structural choices. |
+| Excel/MText | `XCLMTXT`, `EXCELMTEXT`, `EXCELMTEXTNEW`, `XCLMTXTINDEX`, `EXCELMAPFLOOR`, `EXCELMAPFLOORAREA`; `ExcelSheetPickerDialog`, `XclmTxtDialog`, advanced editor; registry describes file/sheet/floor mapping/import prompts. | Retain picker, mapping and advanced-edit routes. Selected source sheet, range/mapping and output are visible before accept. `XCLMTXTINDEX` is an unqualified ghost, not a callable expert route. Source import does not overwrite confirmed drawing labels or structural choices. |
 | Structural schedules | `STRSCHEDCREATE`, `STRSCHEDREFRESH`, `STRSCHEDSYNC`, member-label source route. | Keep create/refresh/sync distinct. A refresh must identify its source record, manual row/presentation overrides and dependencies; it may not quietly generate an issue output. |
-| Schedule relationship | Approved journey requires member mark/size changes to update schedule in coordinated mode and flag affected details for review. | Edit-this-only retains relationship and creates quiet QA mismatch; Edit-together uses the reviewed coordinated update. No blanket catch-up occurs afterwards. |
+| Schedule relationship | Approved journey requires member mark/size changes to update schedule in coordinated mode and flag affected details for review. | Edit-this-only retains relationship and creates quiet QA mismatch; Edit-together uses the reviewed coordinated update. **COPY creates a project-specific snapshot unless the user deliberately creates another linked view; ERASE removes the view only.** No blanket catch-up occurs afterwards. |
 
 **Classification:** Keep/Modify proposal; `EXCELMTEXTNEW` is registry-hidden/deprecated with `XCLMTXT` replacement and stays visible for migration review. **Unknown:** real Excel/file compatibility, rendered output and cross-drawing persistence.
 
@@ -180,4 +181,8 @@ Run later on a synthetic structural job only, after implementation work and befo
 6. Exercise Xref/locked/foreign-content cases and verify no bypass, duplicate object or inferred relationship.
 
 **Built:** not assessed. **Automated checks:** not run. **Installed:** not assessed. **Tim-accepted:** no. These cards are proposed review material, not a change authorisation.
+
+
+
+
 

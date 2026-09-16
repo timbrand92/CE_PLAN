@@ -33,6 +33,27 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
+### BUILT overnight 17 Sep - branch `claude/civil-combined-2026-09-17` @ `28464fbd` - NOT installed
+
+Windows chat. Three CDWT faults found by opening the real master and the rendered window. Full detail in the
+plugin `REGRESSION_LOG.md` (**W-06**, **W-07**, **W-08**) and
+`01_MASTER_PLAN/MORNING_PACK_WINDOWS_2026-09-18.md`. Builds 0 errors on all three lanes; full net10 suite
+**9,918 run · 9,879 passed · 22 failed · 17 skipped** - the same 22 names as the baseline, compared by name.
+
+| # | What | Steps | Lane |
+|---|---|---|---|
+| N1 | **Tank tile names are right (W-06)** | `CDWT`: no two tiles carry the same tank name at different sizes; exactly **one** "KINGSPAN 6000 L SLIMLINE METAL TANK"; no tile starts with a code like `xsm1;` | 2027 |
+| N2 | **Untitled tiles are honest (W-06)** | Two tiles read **"Untitled tank plan"** with a size and a picture - those plans have no title in the master. **Tim: say if you want them named** | 2027 |
+| N3 | **The MELRO pair - Tim's eye needed (W-06)** | 4500 and 5500 MELRO now attach to different blocks (4500 -> 5600x1760, 5500 -> 4622x1760). Check against the master; if wrong, the master's titles need moving, not CE | 2027 |
+| N4 | **Empty Standard Details folder (W-08)** | Settings -> point the folder at an empty one -> `CDWT`: reads "No tank plans found", names the drawing, offers both ways out. **No empty black panel.** "Tag a block already in the drawing" still asks for the block. Put the folder back: tiles return | 2027 |
+| N5 | **Nothing else about CDWT moved** | Place a tank normally: tank, detention share, plan, Place tank, insertion point, callout/riser/dropper, Base RL - as before | 2027 |
+| N6 | **The tank detail warning (W-07)** | Nothing to do in normal use. If the master is ever resaved, `CDWT` prints *"The usual water tank detail was not in ... CE used the biggest tank detail it could find instead"* rather than quietly drafting a different detail | 2027 |
+
+**Not fixed, contract written:** double-clicking a pipe **label** opens the OLD editor, not the one-page
+window (needs 823 px against an 820 cap - three pixels). `CdDialog.xaml` is Codex's file under ruling B, so
+the measurement and the contract are in the plugin at
+`docs/workflows/CD_LABEL_TAB_FIT_CONTRACT_2026-09-17.md`. Building it clears **five** of the 22 red tests.
+
 ### SUPERSEDED 20 minutes later by `d0ffe1a2` — see below. `081c82b6` was live 22:31–22:57 only.
 
 ### LIVE since 16 Sep 22:57 — `d0ffe1a2` on `claude/civil-combined-2026-09-17`

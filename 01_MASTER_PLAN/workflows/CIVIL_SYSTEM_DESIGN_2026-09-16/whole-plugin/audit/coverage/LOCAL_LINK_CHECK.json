@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-09-16T23:12:22.5798010+10:00",
+  "markdownLinksChecked": 148,
+  "missing": [
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-01_SCOPE.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-02_ACCEPTANCE_GATES.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-03_EVIDENCE_MODEL.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-04_PATTERN_ATLAS.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-05_ENGINEERING_CONTEXT_MAP.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-06_GOLD_BENCHMARK.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/EV-07_AUTOMATION_REGISTER.md"
+    },
+    {
+      "file": "evidence_program_interface_authority_contract.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/DATA-01_CORPUS_PRIVACY.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-01_BEAMS_LINKS.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-02_SUPPORTS_BRACING_JOISTS.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-03_ANNOTATION_DIMENSIONS.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-04_TEXT_PLACEMENT.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-05_HATCHING_UTILITIES_XREFS.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-06_FOUNDATIONS_REBAR.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-07_SCHEDULES_SHEETS_EXCEL.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-08_SECTIONS_DETAILS.md"
+    },
+    {
+      "file": "structural_approved_card_reconciliation.md",
+      "target": "/C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-09_MARKUP_CHECKLIST_NOTES_TIME.md"
+    }
+  ],
+  "scope": "Root and planner direct markdown local links only; no browser navigation or private target read"
+}

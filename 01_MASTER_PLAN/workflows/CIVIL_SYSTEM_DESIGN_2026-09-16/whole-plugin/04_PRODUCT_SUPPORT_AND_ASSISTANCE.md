@@ -2,6 +2,12 @@
 
 FOR TIM
 
+## Reading this record
+
+Start with the [whole-job journey](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md). Read this record together with the [approved requirements and action qualifications](16_RECOVERY_AND_RELEASE_REQUIREMENTS.md); those explicit corrections govern where the earlier summary is incomplete. Source observations remain evidence, not approval or installed behaviour.
+
+
+
 Daily drafting should open directly into the job. Manager handles the shared job pages and product support; it must not become another competing drafting home screen. Help works offline, and the assistant proposes changes for review.
 
 ## M-01 — start CE and find the right tool

@@ -146,8 +146,8 @@
 | BP | Bored Pier — Foundations/Piers | Modules/Structural/Commands/CeTextCommands.cs:93 | Keep/Modify proposal — source route | W3/W5/W7 |
 | SCREWPILE | No exact registry match observed | Modules/Structural/Commands/CeTextCommands.cs:94 | Unknown — no exact registry descriptor | W3/W5/W7 |
 | STUMPFOOTING | No exact registry match observed | Modules/Structural/Commands/CeTextCommands.cs:95 | Unknown — no exact registry descriptor | W3/W5/W7 |
-| FDELETE | Delete Foundation System — Foundations/Manage | Modules/Structural/Commands/CeTextCommands.cs:96 | Keep/Modify proposal — source route | W3/W5/W7 |
-| FSTEXPORT | Export Footing Schedule — Foundations/Size Library | Modules/Structural/Commands/CeTextCommands.cs:97 | Keep/Modify proposal — source route | W3/W5/W7 |
+| FDELETE | Delete Foundation System — Foundations/Manage | Modules/Structural/Commands/CeTextCommands.cs:96 | Rebuild target — `ST6-9` Element-only/Entire-system choice and exact counts before Apply | W3/W5/W7 |
+| FSTEXPORT | Export Footing Schedule — Foundations/Size Library | Modules/Structural/Commands/CeTextCommands.cs:97 | Redirect to the single `ST-07` schedule engine — approved `ST6-14` | W3/W5/W7 |
 | RCRECTCOL | Rect Column — Section Details/Column Sections | Modules/Structural/Commands/ColumnDetailCommands.cs:25 | Keep/Modify proposal — source route | W6 |
 | RCCIRCCOL | Circ Column — Section Details/Column Sections | Modules/Structural/Commands/ColumnDetailCommands.cs:167 | Keep/Modify proposal — source route | W6 |
 | CERECOVERY | Review Recovery Snapshots — Administration/Diagnostics | Modules/Structural/Commands/DiagnosticsCommands.cs:76 | Keep/Modify proposal — source route | W11 |
@@ -259,13 +259,13 @@
 | RBL | RBL — Utilities/Legacy | Modules/Structural/Commands/RebarCommands.cs:24 | Keep/Modify proposal — source route | W6 |
 | REBARLINE | REBARLINE — Utilities/Legacy | Modules/Structural/Commands/RebarCommands.cs:25 | Keep/Modify proposal — source route | W6 |
 | CE_REBARCIRCLE | Rebar Circle — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:28 | Keep/Modify proposal — source route | W6 |
-| RBC | Rebar Circle — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:29 | Keep/Modify proposal — source route | W6 |
+| RBC | Rebar Circle — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:29 | Keep/Modify proposal — `ST6-13` requires bar-centre-radius wording and compound preview | W6 |
 | REBARCIRCLE | Rebar Circle — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:30 | Keep/Modify proposal — source route | W6 |
-| CE_STIRRUP | Stirrup — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:33 | Keep/Modify proposal — source route | W6 |
-| STR | Stirrup — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:34 | Keep/Modify proposal — source route | W6 |
+| CE_STIRRUP | Stirrup — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:33 | Source semantic identity; currently shares method with `STR`/`STIRRUP`. No ordinary-route disposition inferred from the shared source method. | W6 |
+| STR | Stirrup — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:34 | **Retire from ordinary registration — approved `ST6-14`**; retain source/alias evidence during transition. | W6 |
 | STIRRUP | Stirrup — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:35 | Keep/Modify proposal — source route | W6 |
-| CE_BARWEIGHT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:38 | Keep/Modify proposal — source route | W6 |
-| BWT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:39 | Keep/Modify proposal — source route | W6 |
+| CE_BARWEIGHT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:38 | Source semantic identity; currently shares method with `BWT`/`BARWEIGHT`. No ordinary-route disposition inferred from the shared source method. | W6 |
+| BWT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:39 | **Retire from ordinary registration — approved `ST6-14`**; retain source/alias evidence during transition. | W6 |
 | BARWEIGHT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:40 | Keep/Modify proposal — source route | W6 |
 | LIGS | Ligatures — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:13 | Keep/Modify proposal — source route | W6 |
 | COLTIES | Column Ties — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:14 | Keep/Modify proposal — source route | W6 |
@@ -380,3 +380,4 @@
 ---
 
 **Planning status:** source inventory complete for declared command files; workflow review continuing. **Built/Tested/Installed/Tim-accepted:** not assessed by this ledger.
+

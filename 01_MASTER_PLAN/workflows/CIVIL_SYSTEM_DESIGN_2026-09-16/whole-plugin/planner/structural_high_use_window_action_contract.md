@@ -1,5 +1,6 @@
 # Structural high-use window action contract
 
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [full Structural approved-card reconciliation](structural_approved_card_reconciliation.md) · [identity-gap dispositions](structural_registry_gap_dispositions.md). Explicit approved requirements, including `ST6-14` ordinary-registration retirement of `STR`/`BWT`, govern target behaviour; source observations remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Purpose.** This companion to the retained-control ledger follows source-observed action paths for high-use Structural windows that can change a drawing, working draft, or user record. It preserves controls and action order for review. It is not runtime proof or a decision to retain every implementation detail.
 
 - Full 47-surface control inventory: [structural_retained_control_ledger.md](structural_retained_control_ledger.md).
@@ -104,6 +105,8 @@ A copied detail, manually adjusted label, missing catalogue item, or changed bac
 | Named windows, main action handlers, validation routes, local working/result boundaries, schedule draft snapshots, insert confirmation, selected-system/action separation. | Runtime reachability, drawing output, persistence destination/compatibility, AutoCAD Undo grouping, Xref/locked/REFEDIT response, preview fidelity, revision evidence quality, shared publish/history, installed version, Tim acceptance. |
 
 **Built:** not assessed. **Tested:** no runtime or AutoCAD testing. **Installed:** not assessed. **Tim-accepted:** not assessed.
+
+
 
 
 

@@ -54,7 +54,23 @@
 | 2026-09-16T22:53:54.6346411+10:00 | Completed | command_discovery_reconciliation.md | Reconciled suite register, three module registries and source declaration ledgers; records user-journey access, aliases/hidden/expert/config gaps and CDTAG/CDSOURCE automatic-nearest-pipe split trigger. |
 
 **Latest verified checkpoint:** 2026-09-16T22:53:54.6346411+10:00 — command-discovery reconciliation completed. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
-| 2026-09-16T23:01:14.4676048+10:00 | Completed | structural_registry_gap_dispositions.md; structural_approved_card_reconciliation.md | Traced 37 declaration-only and eight registry-only Structural identities to source method/alias/shared-owner/card routes; recorded discovery/Help boundary and central-register intent. Added exact ST-03/04/05/06/09 requirements and corrected the FST manager’s immediate-action versus size-library Save/Cancel split. |
+| 2026-09-16T23:02:38.7872133+10:00 | Completed | structural_registry_gap_dispositions.md; structural_approved_card_reconciliation.md | Traced 37 declaration-only and eight registry-only Structural identities to source method/alias/shared-owner/card routes; recorded discovery/Help boundary and central-register intent. Added exact ST-03/04/05/06/09 requirements and corrected the FST manager’s immediate-action versus size-library Save/Cancel split. |
 
-**Latest verified checkpoint:** 2026-09-16T23:01:14.4676048+10:00 — command-gap dispositions and approved-card/FST correction completed. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+**Latest verified checkpoint:** 2026-09-16T23:02:38.7872133+10:00 — command-gap dispositions, exact ST-01→ST-09 approved-card reconciliation and FST correction completed. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+| 2026-09-16T23:04:34.6035327+10:00 | Completed | structural_source_command_window_ledger.md; structural_workflow_cards.md; structural_approved_card_reconciliation.md | Applied exact ST-06 correction: `STR`/`BWT` retire from ordinary registration; `CE_STIRRUP`/`CE_BARWEIGHT` currently share the source methods but have no inferred daily disposition. Recorded `RBC` bar-centre radius, screw-pile asset block, FDELETE scope/count replacement and FSTEXPORT redirect. |
 
+**Latest verified checkpoint:** 2026-09-16T23:04:34.6035327+10:00 — ST-06 exact retirement/reinforcement correction completed. No build, runtime test, AutoCAD test, deployment, source edit or client-project scan performed.
+| 2026-09-16T23:09:53.0993063+10:00 | Completed | command_discovery_reconciliation.md; structural_registry_gap_dispositions.md; structural_workflow_cards.md; structural_approved_card_reconciliation.md; evidence_program_interface_authority_contract.md | Corrected retirement/hidden/P1/schedule-copy/QA wording; added canonical full-decision links and ST inheritance. Added evidence-program interface/authority/dependency contract from EV-01→07 and DATA-01 without corpus access. |
+
+**Latest verified checkpoint:** 2026-09-16T23:09:53.0993063+10:00 — command-consistency corrections and evidence-program contract completed. No build, runtime test, AutoCAD test, deployment, source edit, corpus/history scan, provider access or client-project scan performed.
+
+
+
+
+| 2026-09-16T23:14:21.4293525+10:00 | Completed | civil_uncovered_workflow_cards.md; civil_action_boundary_contract.md; civil_route_control_preservation_ledger.md; structural_workflow_cards.md; structural_high_use_window_action_contract.md; structural_command_identity_reconciliation.md; structural_configured_field_action_manifest.md; structural_approved_card_reconciliation.md; evidence_program_interface_authority_contract.md | Added prominent governing-companion links, removed the remaining blanket-retention wording, corrected XCLMTXTINDEX and P1 dispositions, clarified schedule-copy snapshot/linked-view behavior, applied precise unresolved-QA decision boundaries, and separated unadopted evidence review from adopted governing-input numeric staleness. | 
+
+**Latest verified checkpoint:** 2026-09-16T23:14:21.4293525+10:00 — companion-link and approved-boundary consistency pass completed. Planner Markdown links resolve. No build, runtime test, AutoCAD test, deployment, source edit, corpus/history scan, provider access or client-project scan performed.
+
+| 2026-09-16T23:19:52.8241225+10:00 | Completed | structural_control_semantics_supplement.md | Traced remaining high-impact Structural controls: Layer Manager’s immediate drawing/file/default actions, checklist-template editor draft-to-caller boundary, and XCLMTXT draft review versus dual-gated confirmed drawing insert. Recorded fields/units where source establishes them, persistence scope, Cancel/Undo limits, owner gaps and synthetic acceptance cases. |
+
+**Latest verified checkpoint:** 2026-09-16T23:19:52.8241225+10:00 — Structural control-semantics supplement added. No build, runtime test, AutoCAD test, deployment, source edit, corpus/history scan, provider access or client-project scan performed.

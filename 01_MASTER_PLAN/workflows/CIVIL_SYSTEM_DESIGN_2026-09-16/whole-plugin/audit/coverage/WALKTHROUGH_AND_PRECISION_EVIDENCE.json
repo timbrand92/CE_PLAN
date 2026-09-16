@@ -1,0 +1,23 @@
+{
+  "clockUtc": "2026-09-16 13:20:36 UTC",
+  "clockSydney": "2026-09-16 23:20:36 +10:00",
+  "scope": "root11 precision, root20 integrated walkthrough, bounded root21 context readback",
+  "findings": [
+    "INT-01 pending ambiguous-project recovery wording",
+    "INT-02 owner rounding consumer reconciliation"
+  ],
+  "runtimeExecuted": false,
+  "visualRerun": false,
+  "wholePluginComplete": false,
+  "readArtifacts": [
+    "11_SHARED_SETTINGS_ACTION_CONTRACT.md",
+    "17_EVIDENCE_AND_ACCEPTANCE_BOUNDARIES.md",
+    "20_INTEGRATED_SYNTHETIC_JOB_WALKTHROUGH.md",
+    "21_AUTOMATIC_PROJECT_CONTEXT_BOUNDARIES.md",
+    "planner/decisions_for_tim.md",
+    "audit/coverage/CANONICAL_COVERAGE_MATRIX.md"
+  ],
+  "sourceRoot": "C:\\Lisp Files\\CE_ACAD_PLUGIN",
+  "ownerCopy": "C:\\Users\\TimothyBrand\\.codex\\worktrees\\44b2\\CE_ACAD_PLUGIN",
+  "limits": "Report lists exact independent ranges; remaining root21 rows not independently reread. No source/runtime changes."
+}

@@ -2,6 +2,12 @@
 
 FOR TIM
 
+## Reading this record
+
+Start with the [whole-job journey](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md). Read this record together with the [approved requirements and action qualifications](16_RECOVERY_AND_RELEASE_REQUIREMENTS.md); those explicit corrections govern where the earlier summary is incomplete. Source observations remain evidence, not approval or installed behaviour.
+
+
+
 Checking should show what needs attention and take you to the affected item. It must not quietly repair the drawing or call an unchecked project ready.
 
 ## Q-01 — inspect a drawing and review findings

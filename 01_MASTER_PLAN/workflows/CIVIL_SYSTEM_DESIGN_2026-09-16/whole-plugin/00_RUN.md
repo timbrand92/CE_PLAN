@@ -2,6 +2,8 @@
 
 FOR TIM
 
+Read the [whole-job journey and requirement index](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) for the connected plan. This run remains active; the independent whole-plugin coverage audit is not yet complete.
+
 Tim: "43 minutes is not acceptable i asked you to go through the whole plugin not just the cddesign window".
 Tim: "do another overnight run".
 

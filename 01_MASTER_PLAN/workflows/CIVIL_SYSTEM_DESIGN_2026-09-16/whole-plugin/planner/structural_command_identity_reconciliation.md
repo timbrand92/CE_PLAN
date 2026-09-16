@@ -1,6 +1,7 @@
 # Structural command identity reconciliation
 
-**Bounded source reconciliation.** This compares resolved `CommandMethod` names from `Modules\Structural\Commands` with the Structural command registry. It does not prove compiled registration, ribbon exposure, runtime ownership or AutoCAD support. No route below is retired by a mismatch.
+> **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [full Structural approved-card reconciliation](structural_approved_card_reconciliation.md) · [actual high-use action boundary](structural_high_use_window_action_contract.md) · [identity-gap dispositions](structural_registry_gap_dispositions.md). Explicit approved requirements, including `ST6-14` ordinary-registration retirement of `STR`/`BWT`, govern target behaviour; source observations remain current-source evidence, not approval, runtime proof or permission to expose a route.
+**Bounded source reconciliation.** This compares resolved `CommandMethod` names from `Modules\Structural\Commands` with the Structural command registry. It does not prove compiled registration, ribbon exposure, runtime ownership or AutoCAD support. No route below is retired solely by a mismatch; the approved `ST6-14` ordinary-registration retirement of `STR` and `BWT` is recorded in the governing companion.
 
 | Measure | Observed count | Meaning |
 |---|---:|---|
@@ -43,7 +44,7 @@ Source and configuration evidence are linked in [structural_source_command_windo
 | LBW | Modules/Structural/Commands/LoadBearingWallCommands.cs:33 | W2 | Keep for command-truth review; no automatic hide/retire. |
 | ML | Modules/Structural/Commands/SchedulingCommands.cs:93 | W8 | Keep for command-truth review; no automatic hide/retire. |
 | NGL | Modules/Structural/Commands/LevelMarkCommands.cs:77 | W7 | Keep for command-truth review; no automatic hide/retire. |
-| P1 | Modules/Structural/Commands/RafterJoistCommands.cs:66 | W3 | Keep for command-truth review; no automatic hide/retire. |
+| P1 | Modules/Structural/Commands/RafterJoistCommands.cs:66 | W3 | **Hidden pending approved lap rules** (`ST2-14`); retain source evidence only. |
 | PFC | Modules/Structural/Commands/CeTextCommands.cs:63 | W3/W5/W7 | Keep for command-truth review; no automatic hide/retire. |
 | R2LTXT | Modules/Structural/Commands/CeTextCommands.cs:89 | W3/W5/W7 | Keep for command-truth review; no automatic hide/retire. |
 | RL | Modules/Structural/Commands/LevelMarkCommands.cs:69 | W7 | Keep for command-truth review; no automatic hide/retire. |
@@ -65,7 +66,7 @@ Source and configuration evidence are linked in [structural_source_command_windo
 | CR | CR — Utilities/Legacy |  | Visible | Reconcile with command-truth owner; do not assume missing/retired. |
 | MOVEROT | MOVEROT — Utilities/Legacy |  | Visible | Reconcile with command-truth owner; do not assume missing/retired. |
 | MR | MR — Utilities/Legacy |  | Visible | Reconcile with command-truth owner; do not assume missing/retired. |
-| XCLMTXTINDEX | XCLMTXT Index Refresh — Schedules/Import |  | Visible; Expert | Reconcile with command-truth owner; do not assume missing/retired. |
+| XCLMTXTINDEX | XCLMTXT Index Refresh — Schedules/Import |  | Registry metadata says Visible; Expert | **Unqualified ghost:** no observed declaration, not callable/exposed; hidden pending real qualified identity. |
 
 ## Decisions preserved while reconciling
 
@@ -75,3 +76,6 @@ Source and configuration evidence are linked in [structural_source_command_windo
 4. Every later identity resolution retains selection/prompt/output, protections, Cancel/Escape/Undo/save-reopen and manual override/revision behaviour from its linked W card.
 
 **Built/Tested/Installed/Tim-accepted:** not assessed.
+
+
+

@@ -1,6 +1,21 @@
 # Structural approved-card reconciliation supplement
 
 **Planning-only supplement.** This records approved Structural requirements that source route inventory alone must not flatten into generic “Keep/Modify” language. It does not claim implementation, testing, installation or Tim acceptance. Source locations identify current route evidence only; the listed approved cards govern intended behaviour.
+## Canonical full-decision authority
+
+This supplement is compressed navigation only. The complete approved decisions, refinements and examples remain authoritative and override any shortened row here:
+
+- [ST-01 — Beams and explicit links](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-01_BEAMS_LINKS.md>)
+- [ST-02 — Supports, bracing and joist markers](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-02_SUPPORTS_BRACING_JOISTS.md>)
+- [ST-03 — Annotation and dimensions](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-03_ANNOTATION_DIMENSIONS.md>)
+- [ST-04 — Text placement](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-04_TEXT_PLACEMENT.md>)
+- [ST-05 — Hatching, utilities and Xrefs](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-05_HATCHING_UTILITIES_XREFS.md>)
+- [ST-06 — Foundations and reinforcement](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-06_FOUNDATIONS_REBAR.md>)
+- [ST-07 — Schedules, Sheets and Excel](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-07_SCHEDULES_SHEETS_EXCEL.md>)
+- [ST-08 — Sections and details](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-08_SECTIONS_DETAILS.md>)
+- [ST-09 — Markup, checklist, notes and time](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/CARDS/ST-09_MARKUP_CHECKLIST_NOTES_TIME.md>)
+
+“Full-decision inheritance” means these records retain their exact conditions even if a command appears in a grouped ledger: for example `BDL` is one paired assembly with fixed separation and two outside labels, command `5` previews actual offset side, and copied section marks receive a fresh internal identity while a duplicate section reference is flagged for confirmation.
 
 ## W0 / ST-09 — Coordination, notes and time
 
@@ -17,7 +32,7 @@
 | Family | Approved retained behaviour |
 |---|---|
 | Dimensions/leaders | `AD`/`LD` retain native associative dimensions and their normal prompt flow; `Q`/`QD` retain native editable leader/text. `MLL`/`MLR` preview full leader/text/arrow; `F` flips side. `RD` refuses unsupported geometry. Styles are local/portable and previous layer/style/snaps restore. (`ST3-1–6`) |
-| Levels/sections/breaklines | `FFL`/`RL`/`SSL`/`NGL` use trusted source or Manual/Unknown, never `0.000`; whole compound previews and `F` flips. `LMU` targets recognised CE level marks only, then Preview → Apply → one Undo. Section marks preview both bubbles/hatch direction/reference; copy gives a new identity. `BL` is current space/UCS-aware and plotted-scale sized. (`ST3-7–13`) |
+| Levels/sections/breaklines | `FFL`/`RL`/`SSL`/`NGL` use trusted source or Manual/Unknown, never `0.000`; whole compound previews and `F` flips. `LMU` targets recognised CE level marks only, then Preview → Apply → one Undo. Section marks preview both bubbles/hatch direction/reference; copy gives a fresh internal identity while preserving visible identifier, and a duplicate section reference is flagged for confirmation rather than silently renumbered. `BL` is current space/UCS-aware and plotted-scale sized. (`ST3-7–13`) |
 | Text and tags | All familiar aliases map to one visible preset: role/prefix/layer/**plotted** height/justification/preferred side/rotation. `F` flips, `R` changes reference/alignment, Tab cycles ranked alternatives. A full prefix result previews without double-prefixing. Text↔MText preserves link; manual label position is retained; last-used text is session/drawing visible default only. (`ST4-2–14`) |
 | Repair/conversion | `DSET`/`DSET1`/`DUP` consolidate to selected scope + existing/proposed style/scale preview + Apply + one Undo; never force save. `R2LTXT` only recognises eligible text and previews selected count. (`ST3-12`; `ST4-11`) |
 
@@ -47,3 +62,36 @@ The previous high-use contract incorrectly treated all manager actions as draft 
 3. Start time in a registered drawing, switch projects, leave idle, return and choose treatment; manually adjust once and verify an additive ledger entry rather than a rewrite.
 4. `H2A`: a mix of convertible and unresolved hatches retains unresolved originals; Undo restores converted ones. `CXREF/PXREF` retains overlay/attachment, units, Xclip and overrides.
 5. FST: change one library row then Cancel/reopen; separately regenerate, rename and delete with their immediate current effects recorded. Future replacement must prove the approved scoped preview/Undo before old behaviour can retire.
+## W3/W4 / ST-01 and ST-02 — framing, links, supports and bracing
+
+| Family | Approved retained behaviour |
+|---|---|
+| Beams and copied assemblies | Retain `1`, `2`, `4`, `5`, `8`, `BDL`, `BEXT`, `BTX`; do not revive `1A/2A/4A`. A beam owns geometry + label, while supports are shared linked objects. Valid preselection precedes support/line/point prompts. One side/clearance resolver must give identical preview and final placement, with 45 mm base label offset and 70 mm suffix lift. Command `5` stays distinct because it offsets beam geometry and previews actual offset side. `BDL` is one paired assembly with stable pair identity, fixed separation and two outside labels. `BEXT` uses owned label, not nearest text; `BTX` preserves visual centre/rotation/style/text/ownership. Beam-only COPY creates fresh beam + copied label and **unconnected** supports until explicitly connected. No forced `QSAVE`; touched links update once at command end. (`ST1-1–15`, including Tim’s 12 Sep 2026 beam-only COPY refinement) |
+| Supports | Retain `DS`/`DS1`/`TS1`/`C1`/`C2`; switching routes change type through selected/preselected support and retain centre/rotation/mark/label/link relations. A label-bearing support is block + data + label compound. It centres by physical block centre and, where clear, within the wall; otherwise preview + `R` controls orientation. It highlights every beam end that truly touches the footprint; ambiguity needs confirmation. Never find a label or beam by nearest/proximity sweep. (`ST2-1–10`) |
+| Bracing and joists | `AB`/`BB` retain first-end → live completed-preview → second-end flow. AB visibly caps at 2700 mm with `MAX`; BB/BT do not. `F` flips initial auto-flip; `ABS` switches A/B without moving/resizing/reflipping. `R1`/`FJ1` become two-boundary selection → visible in-bay marker placement → tag; four points are fallback only. `P1` stays hidden until its lap rule is approved. Esc leaves nothing and each route is one Undo. (`ST2-11–15`) |
+
+## W8 / ST-07 — schedules, spreadsheets, Sheets and issue interface
+
+| Family | Approved retained behaviour |
+|---|---|
+| One schedule model | One semantic structural schedule with stable row identity, element links, value/source/revision/approval/staleness. Calculation/workbook remains engineering authority; schedule is a coordinated view. A disagreement shows both values as a conflict. `FSTEXPORT` redirects here; no second schedule engine. (`ST7-1,3,5–6`) |
+| Import and mapping | Every imported value retains workbook/worksheet/cell-or-named-result/revision-hash/import time, without paths in sanitised support logs. Mezzanine and Second Floor are distinct identities unless project mapping deliberately combines display. Existing learned answers are Candidate suggestions only. `XCLMTXT`: source → detected worksheet/profile → rows/Unknowns → sections → actual preview → Apply → one Undo. (`ST7-4,7–9`) |
+| Refresh and sheets | Refresh is normally authoritative-elements/calculations → schedule. Engineering-cell edit produces a linked-element preview; it does not write back immediately. MOVE preserves placed position; COPY creates a project-specific snapshot unless the user deliberately creates another linked view; ERASE removes the view only. `CESHEETS` is the canonical Sheets/Issue workspace; Classic routes transition after parity. Scans are read-only; Update Drawings lists each affected drawing/field. (`ST7-2,10–12`) |
+| Issue boundary | The future approved `QA-01` gate governs formal publishing. Per the later approved [14 September Structural drawing journey](<C:/Lisp Files/CE_ACAD_PLUGIN/docs/workflows/STRUCTURAL_DRAWING_JOURNEY_2026-09-14.md>), unresolved QA requires an explicit decision before proceeding, is remembered only for the relevant item/job, and is asked again after a relevant drawing or instruction change; mismatch notices stay quiet in QA. The [whole-job QA authority](../18_NETWORK_SOURCE_SURFACE_AND_QA_AUTHORITY.md) applies that boundary. This planner does **not** assert that current unresolved QA locks out every print/export route. Formal issue preview shows sheets/order/revision/paper/page setup/output and never overwrites issued PDF silently; it stays isolated from active drawing and finalises only after temporary output completion is verified. `XCLMTXTINDEX` remains hidden until a real corpus feature exists. (`ST7-2,13–15`) |
+
+## W6 / ST-08 — sections and details
+
+| Family | Approved retained behaviour |
+|---|---|
+| Actual member first | Start from selected drawing element and show linked calculation/source/revision or Manual/Unknown; the drawing never silently becomes a calculator. `SBEAM`/RC flows are visual previews of chosen input, not inferred engineering. (`ST8-3–7`) |
+| Detail and graphic integrity | Produce native plottable compound detail linework with managed relationships. Approved section graphics, assets and standard-detail source/version govern output; missing Approved asset blocks placement rather than drawing an approximation. (`ST8-8–9,12–13`) |
+| Edit/copy/cancel | COPY explicitly asks whether the copy is another view of the same member, a new member or an independent detail; never silently shares wrong identity. Edit preserves explicit relationship/manual choices; Cancel creates nothing and each accepted result is one Undo. Corpus may later recommend but cannot set standards or engineering values. Fake/placeholder commands stay hidden rather than pretending to be complete. (`ST8-10–11,14–15`) |
+### ST-06 exact retirement and reinforcement boundary
+
+`RebarCommands.cs:33–41` shows that `CE_STIRRUP`/`STR`/`STIRRUP` currently share one method and `CE_BARWEIGHT`/`BWT`/`BARWEIGHT` share another. The approved disposition is precise: **remove `STR` and `BWT` from ordinary command registration** (`ST6-14`), while preserving source/alias evidence for a controlled transition. This planner does not infer an unapproved daily disposition for the separately named `CE_STIRRUP` or `CE_BARWEIGHT` identities from that shared implementation.
+
+`RBC` remains a compound route whose preview states bar size, count, zone, orientation and final label; its selected radius is explicitly the **bar-centre radius** (`ST6-13`). `SCREWPILE` blocks placement if the Approved asset is missing; it does not draw a substitute circle (`ST6-12`). `FDELETE` is replaced by Element-only / Entire-system with exact counts before Apply (`ST6-9`), and `FSTEXPORT` redirects to the one `ST-07` schedule engine (`ST6-14`).
+
+
+
+
