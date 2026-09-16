@@ -192,3 +192,18 @@ build the window.
 
 Items that are squarely behaviour and therefore mine: P-02..P-08, C7-01..03, L-01..03, T-01, D-01, G-02, G-04,
 TWL-03..06, F1-01..04, and the `CDRAINFALL` sample files.
+
+---
+
+## 6. Ruling — 16 September 2026 (afternoon): CD / PIT window layout
+
+Asked: one-page Engineering/Drafting layout as shipped (proportioned properly), or the three slim tabs approved
+on 2 September?
+
+> **Tim: *"one page layout proportioned properly, no tabs"***
+
+Interpretation (mine, not his words): the 2 September three-tab approval for the Pipe and Pit editors is
+**superseded** for these two windows. The work is to make the shipped one-page layout fill the ~90% window —
+CD: Engineering left, Drafting right, wide plan preview underneath; PIT: Engineering left, large centre
+preview, Drafting right — with no scrolling and the main actions always visible. `PipeEditWorkshopDialog.xaml`'s
+five tabs stay as the hidden source the one-page layout re-homes controls from; they are not shown.
