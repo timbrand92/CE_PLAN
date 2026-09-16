@@ -273,6 +273,43 @@ Then ask if anything should be saved to memory.
 
 ---
 
+## 16. The evening sequence — overnight building
+
+**Trigger:** Tim writes **"evening sequence"** (or "overnight"). The AI replies with **one short confirmation**
+— *"Understood: an overnight block. I'll take [these items] from the plan, build and audit through the night,
+and have your morning pack ready by 8am. Nothing will be deployed. Go?"* — and proceeds on his yes.
+
+### The shape
+
+| Role | Claude | Codex | Thinking | Job |
+|---|---|---|---|---|
+| **Builder** | Opus | Terra | high | Takes a **block** from the plan and builds it, tested and committed, item after item |
+| **Auditor** | Opus extra | Astra | medium | Runs **after** the builder, before Tim sees anything. Verifies every claim the way rule 6 says — **and opens the real artefacts**: the PDF, the window, the settings file |
+
+Don't go cheaper on the auditor. It is the thing that would have caught the `Note:` PDF and the wrong
+settings file.
+
+### The rules
+
+- **A block, not a chunk.** Sized for **6–8 hours** — a sequence of related plan items, not one. The builder
+  does **not** stop after the first item. Thirty minutes of work is not an overnight.
+- **One session with a goal**, not a scheduled task with a blank brain. The goal names the delivery time. A
+  fresh session with no plan loaded and a "do one chunk and stop" prompt is why overnights have died early.
+- **Builder, then auditor, always.** Nothing reaches Tim unaudited.
+- **Morning pack by 8am, on disk, with paths.** One page, three lists: **built** / **test this** (exact steps
+  a stranger could follow) / **needs Tim** (decisions, parked items). Nothing delivered only in chat.
+- **Never deploys.** Prepares the release bundle so the morning is just "deploy" — but the install waits for
+  Tim's word.
+- **Runs out of unblocked work → stops and says so.** It does not invent scope, and it does not decide Tim's
+  open questions to keep busy.
+- **AutoCAD testing overnight:** run what can be run headless (`accoreconsole`) and say so. Where a tool can
+  drive the AutoCAD screen, it may — but **never claim a test that wasn't actually run**, and windows still
+  need Tim's eyes to be *accepted*.
+- **If it must stop early** (usage limit, a blocker), the morning pack still lands — saying exactly where it
+  stopped and why.
+
+---
+
 ## The short version
 
 > **Answer first. Plain English, with an example. Check before you claim. Show him the real thing.
