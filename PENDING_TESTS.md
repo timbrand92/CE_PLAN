@@ -52,6 +52,8 @@ Full entries: plugin `REGRESSION_LOG.md` LAYOUT-01, PIT-PREVIEW-01, PIT-PREVIEW-
 | L8 | **PIT-CONN-01 - pit lists its pipes again** (built, NOT installed) | Edit Pit P10 on the same drawing: Connected pipes shows the P10→P9 pipe with size and IL, and its tag sits on the picture at the wall. Edit Pit P9: same pipe, Entering. A pit with no pipes still says so. | 2027 |
 | L9 | **CD-PREVIEW-01a - New Pipe shows the real plan** (built, NOT installed) | CD, pick the route: the window opens with the plan along the picked points and End 1 / End 2 captions. | 2027 |
 | L10 | **POLISH-01 - CD/PIT windows tidied** (built, NOT installed) | Edit Pipe: level row on one line ("Set Upstream 19.45 m AHD"), header chip one line, plain wording under the levels. Edit Pit: label row + one status line under it, two readout lines under the picture, no duplicate "no pipes". Say what still looks wrong. | 2027 |
+| L11 | **PIT-TYPE-01 - stormwater pipe no longer called CHARGED in the pit list** (built, NOT installed) | Edit Pit P10: list reads "P10 → P9 · Entering/Leaving · IL 19.450" and the pit IL suggestion strip appears. Save the pipe unchanged, reopen the pit: still not charged. A real Charged pipe still reads CHARGED. | 2027 |
+| L12 | **CLICK-01 - click the picture to select** (built, NOT installed) | Edit Pit with 2+ pipes: click a pipe tag on the picture, the list changes and the tag goes gold. Edit Pipe: click the downstream ring, the cursor lands in the downstream level box with its value selected. | 2027 |
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 

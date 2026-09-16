@@ -300,3 +300,7 @@ Order: 2 (small) → 3 (medium) → 1 (biggest, contract first). Owner of the CD
 controls is this chat (`claude/ce-civil-handoff-sept-16-5623ca`). **Other chats fixing alongside must not touch
 `PipeOnePageLayout`, `PitOnePageLayout`, `PitBlockPreviewControl`, `CdPlanPreviewControl`, `PlanAreaRenderer`,
 or the preview parts of `PitEditCommand` / `PipeEditCommand`.**
+
+### 6i. Tim, 16 Sep: *"INSPECTOR SHOWS CORRECTLY PIT WINDOW SHOWS THIS PIPE AS CHARGED?"*
+
+Root cause found and fixed as PIT-TYPE-01 (plugin REGRESSION_LOG): the pipe window stored a charged-destination name on every pipe and the pit reader let that name outrank the drawing's own type. Built, not installed.
