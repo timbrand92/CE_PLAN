@@ -249,3 +249,5 @@ Route B (screen capture) is screen-resolution, viewport-shaped, and the zoomed c
 
 > **Tim: *"THIS WONT ADD EXTRA LAG WILL IT? IF SO HOW DO WE RESOLVE"*** — answer: one-off ~0.2 s per render, not
 > continuous; render on open and on committed size/type change only, never per keystroke; extents pre-filter.
+
+> **Tim, 16 Sep: *"CARRY ON, BUILD THE REAL PLAN PREVIEW FIRST"*** — no deploy yet; PIT real-plan preview (Route A) is being built on `claude/ce-civil-handoff-sept-16-5623ca`, which now also carries the BUG-159 CDGRIPDIAG merge.
