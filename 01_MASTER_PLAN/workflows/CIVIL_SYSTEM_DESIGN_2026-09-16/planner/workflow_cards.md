@@ -12,7 +12,7 @@
 | Retire | Only Tim can approve permanent removal. None is proposed below. |
 | Missing | The required experience has no supported complete route. |
 
-Every proposed card remains **Planning approval only** until Tim reviews it. No card claims Built, Tested, Installed or Tim-accepted.
+Every card below is **Proposed, not yet Tim-approved**, unless it explicitly quotes an earlier approved direction. No card claims Built, Tested, Installed or Tim-accepted.
 
 ## Batch 1 — start a project, evidence and requirements
 
@@ -28,7 +28,7 @@ Every proposed card remains **Planning approval only** until Tim reviews it. No 
 | Prompts / selection | Only ask to resolve a genuinely ambiguous project, choose governing document/value, or add a missing source. Newer file is not selected automatically. |
 | Preview / output | Source page when reviewing evidence; job overview and actual drawing later. Save selected-document identities, page/revision/status and governing decisions; no drawing output merely from discovery. |
 | Cancel / Escape / Undo / reopen | Cancel discovery or document review without changing the loaded/guiding set. Reopen shows what was reviewed versus confirmed. Changing loaded documents is a recorded project decision, not an Undoable drawing edit. |
-| Dependencies / performance / discovery | Project context, safe recursive discovery, duplicate comparison, report readers and a progress/cancel state. Discovery must not block normal drafting. |
+| Dependencies / performance / discovery | Project context may produce a candidate only; a current path helper's fallback directory cannot prove job identity, and sheet-scan exclusions must not suppress relevant report folders. Use safe recursive discovery, duplicate comparison, report readers and a progress/cancel state. Discovery must not block normal drafting. |
 | Evidence and acceptance | Use a synthetic multi-folder job with an exact duplicate, a dated draft and an image-only report. Tim opens CDDESIGN, sees documents and page evidence, changes only the loaded document choice, then closes/reopens and sees the same governing choice. |
 
 ### A2 — Requirements, council and rainfall
@@ -36,8 +36,8 @@ Every proposed card remains **Planning approval only** until Tim reviews it. No 
 | Field | Review card |
 |---|---|
 | Classification | **Modify** criteria entry; **Missing** confirmed current IFD-block acquisition route. |
-| Current works | Settings-first and per-council provenance are binding. Existing record says a one-location Melbourne curve exists; no silent all-job fallback is permitted. |
-| Wrong / missing | Council rules historically land in warnings; not every required field is represented. Blue Factor identifies municipality rather than a rainfall station. How a new coefficient block is fitted/obtained is Unknown. |
+| Current works | Settings-first and per-council provenance are binding. Council behaviour has three modes: Published, Council-issued and Compute-to-ARR. Existing record says a one-location Melbourne curve exists; no silent all-job fallback is permitted. |
+| Wrong / missing | Council rules historically land in warnings; not every required field is represented and the council integration record says nothing there is built. Blue Factor identifies municipality rather than a rainfall station. How a new coefficient block is fitted/obtained is Unknown. |
 | Intended result | CDDESIGN proposes document-derived requirements, labels each as sourced/assumed/office/manual, and asks for confirmation before design impact. Each job carries its own IFD coefficient block, location and source. |
 | Trigger | Design criteria section; Settings route for standard/council maintenance. |
 | Prompts / selection | Confirm governing council edition/requirement; paste/select a job IFD block when missing; record a reason for manual or pinned choice. Do not ask users to retype extracted values. |
@@ -82,7 +82,7 @@ Every proposed card remains **Planning approval only** until Tim reviews it. No 
 
 | Field | Review card |
 |---|---|
-| Classification | **Rebuild** the coordinated review experience; individual foundations may exist but persisted integrated allocation is unverified. |
+| Classification | **Modify** any retained coordinated foundation; **Missing** integrated persisted allocation experience pending command/data inventory. |
 | Current works | Existing outlines/plans, report values and geometry measurement can be proposed. The record strongly requires site extent, surface class and hydraulic catchment to remain separate. |
 | Wrong / missing | No accepted complete impervious take-off; unclassified remainder cannot default to pervious; automatic native-DWG recognition is not proved. |
 | Intended result | Look for an existing catchment plan first. For each row, engineer can accept source proposal, adjust, select outline, draw boundary or manually enter an area; then separately classify surface and allocate runoff/treatment. |
@@ -146,7 +146,7 @@ Every proposed card remains **Planning approval only** until Tim reviews it. No 
 
 | Field | Review card |
 |---|---|
-| Classification | **Modify** existing calculation foundations; output/issue experience is **Rebuild**. |
+| Classification | **Modify** existing calculation foundations; **Missing** accepted output/issue experience. |
 | Current works | Boyd’s sweep chain, distinct calculated/nominated/adopted discharge concepts, storage/drawn comparison direction and three-output single-record intent are supported. |
 | Wrong / missing | Test Day reports unusable computations-sheet output, missing/incorrect detention inputs, typed-TWL refusal and incomplete storage collection. Current record linkage is not verified. |
 | Intended result | Calculate from confirmed criteria/catchments/physical storage, show inputs and provenance, present TWL candidates including higher governing elements, permit a recorded typed choice, and compare designed vs provided storage. |
@@ -154,7 +154,7 @@ Every proposed card remains **Planning approval only** until Tim reviews it. No 
 | Prompts / selection | Resolve changed or Unknown input; choose/enter governing TWL with reason; do not make a floor level the TWL. |
 | Preview / output | Actual drawing storage/network evidence plus results table; reviewed source record generates sheet, OSD criteria and detail. |
 | Cancel / Escape / Undo / reopen | Calculation preview is non-destructive. Selecting an approved application is explicit and one Undo where it changes drawing output; reopen identifies result/version and stale state. |
-| Dependencies / performance / discovery | Per-job IFD, council criteria, catchment provenance, detention branch collection, calculation record/output generator, Water Tank interface. |
+| Dependencies / performance / discovery | Per-job IFD, council criteria, catchment provenance, detention branch collection, existing Design Package/Impact concepts (inputs, branches/results/details, stable identities, directed links and status), calculation output generator, Water Tank interface. Do not create a duplicate package without first confirming the existing record link. |
 | Evidence and acceptance | Synthetic job with one higher trench-grate candidate and changed catchment: Tim can choose a typed TWL, see rationale/provenance, generate a formatted preview (not Notes list), change a catchment and see output marked stale without its old values disappearing. |
 
 ### F2 — WSUD, treatment, pumps, soakage and overland safety
@@ -193,7 +193,7 @@ Every proposed card remains **Planning approval only** until Tim reviews it. No 
 
 | Field | Review card |
 |---|---|
-| Classification | **Rebuild** unified workspace; partial review foundations exist. |
+| Classification | **Modify** partial review foundations; **Missing** unified review workspace. |
 | Current works | Master calls for review/issue readiness; CDDESIGN direction requires comparison of requirements/calculated/provided values and changed evidence. |
 | Wrong / missing | Single review window, issue gate and exact retained entries are not verified. |
 | Intended result | A clear list of unresolved inputs, conflicts, explicit overrides, stale calculations, drawing/capacity differences and output readiness. Jump from a row to the source page or real plan item. Issue is a review decision, not the meaning of Save. |

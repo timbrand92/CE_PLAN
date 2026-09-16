@@ -1,6 +1,6 @@
 # Civil system journey and window map
 
-**Planning-only map.** It covers the whole Civil job without inventing a second owner, second record or second window. Water Tank is intentionally last.
+**Planning-only map.** This is a proposed whole-Civil ownership and journey map for Tim review. It must reuse retained working routes and data concepts where present, rather than inventing a second owner, second record or second window. Water Tank is intentionally last.
 
 ## The job at a glance
 
@@ -30,8 +30,8 @@ No box above is a compulsory stage. A user can keep drafting while a separate in
 | Discharge / LPD | Design record with source evidence | CDDESIGN, Drainage Items (opens same information), calculations, issue review | An item window or a calculation result. |
 | Council/design criteria and IFD data | Settings/project criteria record | CDDESIGN, calculation review, issue review | Report extraction or a default curve. |
 | Site extent / surface / hydraulic catchment | Three linked but distinct project records | CDDESIGN, area tools, Drainage Items DP allocation, calculations | Each other or a generic remainder. |
-| Physical pits, pipes, drainage items and grades | Drawing/Civil object record | Editing, profile, schedule, review | Document evidence or a proximity inference. |
-| Calculation inputs and results | Calculation record | CDDESIGN, CDCALC, issue review | A drawing label or older sheet. |
+| Physical pits, pipes, drainage items and grades | Drawing/Civil object record; plan label content is reconciled as authority where the established rule applies | Editing, profile, schedule, review | Document evidence or a proximity inference. |
+| Calculation inputs and results | Calculation record | CDDESIGN, CDCALC, issue review | An older sheet or an unreconciled display string. Where a plan label is the authority, its edit must be parsed/reconciled into the engineering record or shown as a conflict — never overwritten to suit the record. |
 | Drawing presentation | Drawing presentation record | Editors, schedule/profile/detail output | Engineering value. |
 | Override/revision evidence | Override/revision ledger beside the governed value | Everywhere that shows the value | Refresh, recalc, save/reopen or import. |
 
@@ -74,7 +74,7 @@ No box above is a compulsory stage. A user can keep drafting while a separate in
 | CDDESIGN LPD row | CDLPD / LPD detail | Both show one LPD record. Drainage Items never creates a competing LPD. |
 | CDDESIGN catchment row | Existing catchment plan / draw/select/manual | First recognise plan evidence; confirmation creates/updates one catchment record. |
 | DP item | Catchment allocation | DP references a confirmed contributing portion. It cannot own the full roof merely because it is connected. |
-| Physical drawing object | Calculation | Calculation consumes confirmed engineering/drawing values and records the input revision. It does not turn labels into governing inputs. |
+| Physical drawing object | Calculation | Calculation consumes reconciled engineering/drawing values and records the input revision. An authoritative plan-label change is reconciled into its record first; an unreconciled display string is not silently used. |
 | Calculation | sheet/criteria/detail | One computed result is selected for derived output; a user reviews affected outputs before issue. |
 | Review row | drawing object/source page | Selection highlights/zooms the actual thing, and closing the review does not alter it. |
 | Repair | any Civil record | Scan first; repairs require a preview and cannot bypass locked/Xref/foreign protections. |
@@ -84,6 +84,7 @@ No box above is a compulsory stage. A user can keep drafting while a separate in
 - **Cancel/Escape:** remove temporary overlay/preview and return the drawing/state to its starting point; no source, working value or document selection changes merely because the user inspected them.
 - **Save/Apply:** one accepted operation becomes one AutoCAD Undo step. Saving a window never means engineering or issue approval.
 - **Save/reopen:** loaded-document identity, source page, governing decision, pinned override, stale flag and drawing-link identity remain readable after reopen.
+- **Plan label authority:** where a plan label carries the authoritative value, CE reads/reconciles that label and makes the record follow it. A display-only override stays presentation-only; it must never be used to erase or disguise a label/record disagreement.
 - **Performance:** discovery, extraction and broad scans are deliberate/background review work with visible progress; normal pipe/pit edits use local reassessment only.
 - **Discovery:** keep the everyday route visible; commands, context actions and selected plan objects open the matching existing family. Do not make users hunt through a new navigation shell.
 - **Access:** locked/Xref/REFEDIT/foreign items can be inspected but state plainly why changing them is unavailable. No automatic unlock, detach, explode, clone-around or surrogate link.

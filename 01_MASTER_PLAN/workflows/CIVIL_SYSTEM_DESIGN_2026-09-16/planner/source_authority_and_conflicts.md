@@ -1,6 +1,6 @@
 # Civil system planning — source authority and conflicts
 
-**Planning-only annex.** Created 16 September 2026, 19:15 Australia/Sydney. This is a map of what can direct the next Civil design review. It does not claim that a command, window or drawing output is Built, Tested, Installed or Tim-accepted.
+**Planning-only annex.** Created 16 September 2026. This is a map of what can direct the next Civil design review. It does not claim that a command, window or drawing output is Built, Tested, Installed or Tim-accepted.
 
 ## Read this first
 
@@ -43,6 +43,9 @@
 | C-10 | Existing tool uses one Melbourne IFD curve. | Coefficients are held per job; silent Melbourne fallback is prohibited. | Design can accept a user-pasted current block, but creation/fit of a new block remains an open engineering path. |
 | C-11 | Master plan status tables and historic deployment records contain stale/live contradictions. | This annex is planning-only and does not repeat live status. | Never infer installed or working state from the plan labels. |
 | C-12 | Old calculation and drawing outputs can be useful evidence. | They must not be imported as the new calculation's truth or teach rules automatically. | Show them as comparison evidence only. |
+| C-13 | Ruling B normally assigns the CD/PIT windows to Codex. | Test Day §6g temporarily assigns CD/PIT polish to Claude. | This planner must not allocate, redesign or touch the active CD/PIT work. |
+| C-14 | Existing project-path helper falls back to the current directory and deliberately excludes folders such as Architectural, Survey and Xref from sheet scans. | CDDESIGN needs automatic recognition plus discovery across **all relevant job folders**; ambiguous recognition remains unresolved. | Do not reuse directory fallback as proof of project identity or inherit sheet-scan exclusions for design-report discovery. |
+| C-15 | Council records can be read as a generic values/default problem. | Council integration establishes three modes: Published, Council-issued and Compute-to-ARR, with source/provenance per rule. Nothing in that plan is built. | Criteria UI must model the mode, show values/provenance and never turn a free-text warning/default into an engineered check. |
 
 ## Source boundaries and confidence
 
@@ -53,6 +56,8 @@
 | `CIVIL_WINDOWS_PLANNING_2026-09-15_DRAINAGE_ITEMS_DESIGN.md` | Latest window/design direction and bounded historical-evidence lessons | A production contract or live implementation. It is planning authority. |
 | `AREA_D_F_CATCHMENTS_CDCALC_OSD_PLAN.md` | Calculation chain, provenance gate and computation-output relationship | A settled choice on the remaining listed questions. |
 | `ENGINEERING_RULEBOOK.md` | Marked office/council rules and unresolved assumptions | That every draft number is approved; use dated Tim corrections where they conflict. |
+| `02_COUNCIL_RULES/COUNCIL_RULES_V3_INTEGRATION.md` + `OPEN_QUESTIONS.md` | Council modes, current field gaps, provenance model and genuine unanswered engineering choices | That the required model/checks already exist. The integration record explicitly says nothing there is built. |
+| Bounded source reconciliation supplied by integration owner, 16 Sep | Existing `DesignInputs` carries an optional outfall invert/source geometry; Design Package models have branches/results/details/long section/calculation/warning/refusal concepts; Design Impact models have stable pit/pipe identity, directed connections, presentation and Complete/Partial/Unknown/OutOfDate states. | That all source/catchment/revision dependencies are persisted or integrated. This was not a whole-repository absence proof. |
 | `TEST_DAY_RESULTS_2026-09-16.md` | Tim's real drawing observations, ownership override and newer presentation rulings | That untested areas passed. |
 | Scoped historical trial | Evidence-model limits: documents/measurements are proposals, not adopted design | Any client/job detail. This annex deliberately records none. |
 
@@ -60,8 +65,8 @@
 
 The following need a source/status reconciliation outside this annex before a behaviour contract is written:
 
-1. Whether the existing `CDDESIGN` behaviour has a single recognised project-context source, and the exact unresolved/ambiguous-project response already available, if any.
-2. The existing calculation record identities and whether the sheet, OSD criteria and detail currently share any stable ID.
+1. Project recognition may safely use the bounded path marker as a *candidate only*. The current helper's fallback directory and its exclusions are not a recognised-project result. The unresolved/ambiguous-project recovery interaction remains unapproved.
+2. Existing Design Package / Impact concepts should be inspected and reused before new records are proposed: DesignInputs (including optional outfall/source geometry), branches/results/details/long section/calculation/warnings/refusals, stable pit/pipe identities, directed connections, presentation and Complete/Partial/Unknown/OutOfDate state. Whether sheet/criteria/detail currently share a stable calculation-result identity remains to be checked.
 3. The authoritative council-rule integration field list and the eight pending council decisions, so this planner does not invent engineering fields.
 4. Current retained commands for surface drains, slab, grades, pumps, soakage, profiles, schedules, repair and help — status is deliberately **Unknown** here unless a source record says otherwise.
 
@@ -71,7 +76,7 @@ The following need a source/status reconciliation outside this annex before a be
 
 `Source evidence` is an identified document/page or drawing measurement. `Proposal` is a value CE offers for review. `Governing value` is the confirmed value used by the design. `Calculated result` is derived from the governing inputs. `Provided value` is the capacity actually represented by the drawing. `Display wording` is plan presentation only. These must have distinct identities, provenance and revision history.
 
-**Planning approval:** provisional.  
+**Planning status:** proposed / awaiting review.  
 **Built:** not assessed.  
 **Tested:** no AutoCAD test run by this planning annex.  
 **Installed:** not assessed.  
