@@ -1,4 +1,4 @@
-# Structural end-user workflow cards
+﻿# Structural end-user workflow cards
 
 > **Governing companions — read before using generic retention text:** [whole-job index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) · [full Structural approved-card reconciliation](structural_approved_card_reconciliation.md) · [actual high-use action boundary](structural_high_use_window_action_contract.md) · [identity-gap dispositions](structural_registry_gap_dispositions.md). Explicit approved requirements, including `ST6-14` ordinary-registration retirement of `STR`/`BWT`, govern target behaviour; source observations remain current-source evidence, not approval, runtime proof or permission to expose a route.
 **Planning-only cards, grouped in the order a structural drafter works through a job.** The source command ledger is the complete declaration-level index: [structural_source_command_window_ledger.md](structural_source_command_window_ledger.md). Each `W` card below owns every ledger row carrying that `W` reference, including aliases and hidden/expert rows. A source declaration or a registry description is not proof of current AutoCAD behaviour.
@@ -25,6 +25,11 @@
 
 ## W0 — Start work, settings, help, notes and job time
 
+> **Daily QA-card companion:** [one normal checklist row from discovery through an honest receipt](structural_checklist_daily_qa_card.md) connects the settled ST-09 single-authority rules to familiar CECHECKLIST use. It preserves root ownership of template/library persistence, checklist replacement and issue gates.
+
+
+> **Detailed context/notes/time cards:** [W0–W1 interaction cards](structural_w0_w1_context_notes_time_cards.md) supplement this family row. They retain the shared project owner, approved ST-09 choices and current source boundaries while marking proposed Main/More/lifecycle behavior as planning only.
+
 | Review item | Source-observed route / fields | Intended end-user result |
 |---|---|---|
 | Structural entry and command discovery | `CESTRUC`, `CETOOLS`, `CETOOLSTOGGLE`, `CE_HELP`/`CEHELP`/`?CE`, `CE_VERSION`, `CEADMIN`; `StrucSuiteWindow`, command palette/help and palette source. The main palette names Job Time, Sheets, Notes, Checklist and Commands tabs; its source has Pause/Resume, Stop, Settings and View Reports actions. | A drafter can open the existing Structural work surface or search the matching command without a compulsory new setup wizard. The one suite shell/Manager boundary remains root-owned. |
@@ -39,6 +44,8 @@
 
 ## W1 — Recognise the Structural workspace and job context
 
+> **Detailed context/notes/time cards:** [W0–W1 interaction cards](structural_w0_w1_context_notes_time_cards.md) supplement this family row. They retain the shared project owner, approved ST-09 choices and current source boundaries while marking proposed Main/More/lifecycle behavior as planning only.
+
 | Review item | Source-observed route / fields | Intended end-user result |
 |---|---|---|
 | Workspace shell | `CESTRUC` / UI command routes, `StrucSuiteWindow`, `MainPalette`, `CeProjectSetupDialog`, palette job header fields. | The existing workspace can show drawing/job context, but source fields do not prove an identity match. An ambiguous job remains unresolved rather than being silently attached to another project. |
@@ -51,6 +58,8 @@
 
 ## W2 — Prepare backgrounds, layers, walls and site context
 
+> **Detailed interaction cards:** [W2–W6 grouped end-user cards](structural_w2_w6_interaction_cards.md) supplement this family row. [Daily Xref copy/layer card](structural_xref_daily_copy_layer_card.md) adds the retained `CXREF`/`PXREF`/`XRL` coordinated-plan sequence and preserves ST-05 as authority. [Closed-Mline/copy utility card](structural_closed_mline_copy_utility_card.md) records the review-pending `CML`/`COPYM` daily boundary without inventing a utility default. The detailed cards preserve current source observations while labeling proposed Main/More, preview and lifecycle behavior as proposals. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+
 | Review item | Source-observed route / fields | Intended end-user result |
 |---|---|---|
 | Layers and Xrefs | `LAYERMANAGER`, `LAYERMANAGERXREF`, `XRL*`/Xref-related registry routes, `LayerManagerWindow`, `NativeXrefLayerService`; CEADMIN exposes an Xref settings area. | Retain layer/Xref inspection and any existing safely reviewed controls. An Xref/background can be inspected and used as evidence, but it is never detached, unlocked, exploded or rewritten by an inference workflow. |
@@ -62,6 +71,10 @@
 **Future acceptance:** inspect locked local linework, an Xref wall, a void/hatch ambiguity and conflicting plan/elevation notes. Confirm they remain read-only/evidence until selected; cancel overlay; use an allowed local layer operation and Undo it once.
 
 ## W3 — Frame the job: beams, rafters/joists, marks and local edits
+
+> **Detailed interaction cards:** [W2–W6 grouped end-user cards](structural_w2_w6_interaction_cards.md) supplement this family row. The detailed cards preserve current source observations while labeling proposed Main/More, preview and lifecycle behavior as proposals. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily beam card:** [first member input, complete preview and owned-label output](structural_beam_placement_daily_card.md) closes the W3 first-use production gap without inferring engineering values or support links.
+> **Daily supports/bracing card:** [selected footprint, endpoints and in-bay marker flow](structural_supports_bracing_daily_card.md) adds the settled ST-02 ordinary path without inferring support links or engineering values.
 
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
@@ -76,6 +89,9 @@
 
 ## W4 — Supports, bracing and comparison proposals
 
+> **Detailed interaction cards:** [W2–W6 grouped end-user cards](structural_w2_w6_interaction_cards.md) supplement this family row. The detailed cards preserve current source observations while labeling proposed Main/More, preview and lifecycle behavior as proposals. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily supports/bracing card:** [selected footprint, endpoints and in-bay marker flow](structural_supports_bracing_daily_card.md) adds the settled ST-02 ordinary path without inferring support links or engineering values.
+
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
 | Supports | `C1`, `C2`, `DS`, `DS1`, `SC1`, `SC2`, `SDS`, `SDS1`, `STS1`, `TC1`, `TDS`, `TDS1`, `TS1`, `TTS1`, `SUPTEXTAUTO`; `SupportBlockCommands`. | Keep the established support command family and its output types until reviewed. A chosen support may be linked only by explicit/confirmed association, not endpoint proximity. |
@@ -87,6 +103,11 @@
 **Future acceptance:** use a synthetic wall corner/two competing wall directions; run only the preview route, inspect marker/reference layer and clear it; select one support to rotate with manual angle override; accept one explicit connection then Undo; verify a crossing/nearby beam is not linked.
 
 ## W5 — Footings, slab and foundation record
+
+> **Detailed interaction cards:** [W2–W6 grouped end-user cards](structural_w2_w6_interaction_cards.md) supplement this family row. [Division-marker card](structural_division_marker_daily_card.md) preserves direct `DIV`/`DIVX` guide-only use separately from ST-06 placement. The detailed cards preserve current source observations while labeling proposed Main/More, preview and lifecycle behavior as proposals. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily foundation placement card:** [host-bound RIB/REB/THC and standalone SF/PFC](structural_foundation_first_placement_card.md) adds the approved ordinary first-placement path without changing values or Manager behavior.
+> **Daily pier/pile card:** [BP/SPW visual-state and approved-asset placement](structural_pier_pile_daily_placement_card.md) adds ST6-11/12 ordinary placement without new engineering values or asset substitutions.
+> **Daily joint card:** [CJ/SSC/CJSS direct drafting and selected swap](structural_joint_drafting_daily_card.md) preserves native point/selection gestures while separating source partial/quick-save behavior from the proposed receipt.
 
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
@@ -101,17 +122,26 @@
 
 ## W6 — Sections, reinforcement, columns and steel details
 
+> **Detailed interaction cards:** [W2–W6 grouped end-user cards](structural_w2_w6_interaction_cards.md) supplement this family row. The detailed cards preserve current source observations while labeling proposed Main/More, preview and lifecycle behavior as proposals. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily reinforcement card:** [RBL/RBC compound placement](structural_reinforcement_daily_placement_card.md) adds the retained daily reinforcement sequence without changing the settled foundation/rebar rules.
+> **Daily RC member card:** [RCBEAM/RCRECTCOL/RCCIRCCOL section detail](structural_rc_member_section_daily_card.md) adds the retained first-use picker-to-detail sequence without adopting a field value or creating calculation authority.
+> **Daily steel/timber section card:** [SBEAM/SPEDITSECTION picker-to-detail flow](structural_steel_section_daily_card.md) adds retained section selection/editing without turning catalogue presence into an engineering choice.
+> **Daily standard-detail library card:** [Approved asset to fixed project-copy flow](structural_standard_detail_library_daily_card.md) adds discovery, suitability, variables, linked/Manual detail and later-version review without creating a second library.
+
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
 | Steel/timber sections | `SBEAM`, `SPEDITSECTION`; `SteelSectionPickerDialog`; registry describes type/catalogue selection and insertion point. | Retain section selection, drawing-scale output and any stored section identity. Catalogue presence is not design adequacy or automatic selection. |
 | RC beams/columns | `RCBEAM`, `RCRECTCOL`, `RCCIRCCOL`; `RCBeamPickerDialog`, `RCMemberDialog`, `RCLigDialog`; registry exposes dimensions, bar/tie/stirrup/cover and insertion prompts. | Dialog fields must remain visible for review before drawing. A proposed/typed dimension or reinforcement entry needs its source/Assumed/Manual state; no engineering default is invented. |
-| Rebar/reinforcement | `CE_REBARLINE`, `CE_REBARCIRCLE`/`RBC`, `CE_STIRRUP`/`STR`/`STIRRUP`, `CE_BARWEIGHT`/`BWT`/`BARWEIGHT`, `LIGS*`, `COLTIES`, `WALLREO` and reinforcement-detail source families. | `RBC` compound preview states bar-centre radius. `STR` and `BWT` have an approved ordinary-registration retirement (`ST6-14`); current source shares their methods with the named `CE_*` identities, so do not falsely call those separate daily routes retained or retired. Registry placeholders remain Missing/phase-labelled until source/runtime review proves otherwise. |
+| Rebar/reinforcement | `CE_REBARLINE`, `CE_REBARCIRCLE`/`RBC`, `CE_STIRRUP`/`STR`/`STIRRUP`, `CE_BARWEIGHT`/`BWT`/`BARWEIGHT`, `LIGS*`, `COLTIES`, `WALLREO` and reinforcement-detail source families. | `RBC` compound preview states bar-centre radius. `STR` and `BWT` have an approved ordinary-registration retirement (`ST6-14`); current source shares their methods with the named `CE_*` identities, so do not falsely call those separate daily routes retained or retired. `LIGS`, `COLTIES` and `WALLREO` are current message-only stubs and are explicitly **Hide** under `ST8-15` until each earns an evidence-backed Tool card; this is not deletion or a replacement. Other registry placeholders remain Missing/phase-labelled until source/runtime review proves otherwise. |
 | Steel details | `STLCONN*`, `PORTAL`, `TRUSS`, `PURLINS`/`PPURLINS`, `ANGLES`, `BOLTS`, `BRACE`/`SWBRACE`, `BASEDET`, `GUSSETS`, `RIDGE`, `KNEE` and related `SteelworkDetailCommands`. | Preserve every existing command identity in ledger. Detail/library search, source/version, suitability confirmation and inserted/project-copy revision must be reviewed before replacement. |
 | Markers | `CE_SECTIONMARK`, section mark commands and related drawing details. | A section mark is presentation/coordination evidence; it must not fabricate a section/detail relationship. |
 
 **Classification:** Keep/Modify proposal where source route is present; Missing/Unknown for registry-declared Phase/placeholder routes. **Future acceptance:** choose steel, RC beam and RC column fixtures; inspect each picker’s fields; Cancel no insertion; place selected detail once, Undo; set one manual/pinned reinforcement value with a reason; save/reopen; verify source/version and label placement stay visible without proving calculation adequacy.
 
 ## W7 — Annotate the structural drawing
+
+> **Detailed interaction cards:** [W7–W11 grouped end-user cards](structural_w7_w11_interaction_cards.md) supplement this family row. The detailed cards retain source observations, exact approved rules and root-owner boundaries while marking Main/More and lifecycle proposals as unimplemented review material. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily section-mark card:** [SM/SECTION compound and reference flow](structural_section_mark_daily_card.md) adds the approved ordinary section-reference path without choosing values or replacing drawing/sheet ownership.
 
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
@@ -126,6 +156,9 @@
 
 ## W8 — Build, import and review schedules
 
+> **Detailed interaction cards:** [W7–W11 grouped end-user cards](structural_w7_w11_interaction_cards.md) supplement this family row. [Floor-capture/mapping card](structural_floor_capture_mapping_daily_card.md) adds the direct `EXCELCAPTURE*` candidate-evidence boundary before W8 schedule review. The detailed cards retain source observations, exact approved rules and root-owner boundaries while marking Main/More and lifecycle proposals as unimplemented review material. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily member-schedule card:** [named scope, first native view and governed revision flow](structural_member_schedule_creation_revision_daily_card.md) adds first creation and later member revision without creating another schedule authority or using legacy direct sync.
+
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
 | Excel/MText | `XCLMTXT`, `EXCELMTEXT`, `EXCELMTEXTNEW`, `XCLMTXTINDEX`, `EXCELMAPFLOOR`, `EXCELMAPFLOORAREA`; `ExcelSheetPickerDialog`, `XclmTxtDialog`, advanced editor; registry describes file/sheet/floor mapping/import prompts. | Retain picker, mapping and advanced-edit routes. Selected source sheet, range/mapping and output are visible before accept. `XCLMTXTINDEX` is an unqualified ghost, not a callable expert route. Source import does not overwrite confirmed drawing labels or structural choices. |
@@ -138,6 +171,9 @@
 
 ## W9 — Review markup and drawing-intelligence proposals (Structural interface)
 
+> **Detailed interaction cards:** [W7–W11 grouped end-user cards](structural_w7_w11_interaction_cards.md) supplement this family row. [Floor-capture/mapping card](structural_floor_capture_mapping_daily_card.md) adds the direct `EXCELCAPTURE*` candidate-evidence boundary before W8 schedule review. The detailed cards retain source observations, exact approved rules and root-owner boundaries while marking Main/More and lifecycle proposals as unimplemented review material. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Daily markup card:** [select evidence, classify and apply one bounded drafting correction](structural_markup_review_to_correction_daily_card.md) makes the approved ST-09 review-to-correction path concrete without creating an engineering or provider action.
+
 | Review item | Source-observed route / fields/actions | Structural handoff contract |
 |---|---|---|
 | Markup commands | `CEMARKUP`, `CEMARKUPBENCH`, `CEMARKUPLOAD`, `CEMARKUPPARSE`, `CEMARKUPPLAN`, `CEMARKUPPREVIEW`, `CEMARKUPREGISTER`, `CEMARKUPRUN`, `CEMARKUPSTATUS`, `CEMARKUPUNDO`, `CEMARKUPVIEW`. | Root owns whole-suite AI/drawing-intelligence behaviour. Structural cards require that an interpreted item shows source page, type/intent, confidence, status and the proposed matching command before any drawing change. |
@@ -148,11 +184,20 @@
 
 ## W10 — Sheets, issue and publication (Structural interface)
 
+> **Detailed interaction cards:** [W7–W11 grouped end-user cards](structural_w7_w11_interaction_cards.md) supplement this family row. [Floor-capture/mapping card](structural_floor_capture_mapping_daily_card.md) adds the direct `EXCELCAPTURE*` candidate-evidence boundary before W8 schedule review. The detailed cards retain source observations, exact approved rules and root-owner boundaries while marking Main/More and lifecycle proposals as unimplemented review material. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+
 `CeSheetsWindow`, manager/sync/validation/publish windows and `SheetsCommands` are declared/observed and indexed in the ledger. Root owns sheets, issue, shared project authority and publication behaviour. Structural planning requires only this interface contract: select an explicit output set; show source drawing/revision, selected Structural records and manual presentation choices; preview the real artifact before issue; preserve previous issue identity; warning/decision path for mismatches; no automatic issue or overwrite from a drawing refresh.
 
 **Classification:** Root interface. No competing sheet/issue card, command redesign or implementation claim is made here.
 
 ## W11 — Inspect, recover, export and migrate safely
+
+> **Direct evidence-export companion:** [CE_INSPECT selection, fixed-output and evidence-only boundary](structural_ce_inspect_evidence_export_card.md). It supplements this family row without creating a repair, project, issue or calculation path.
+
+> **Direct utility companion:** [explicit text-link and review-gated strip-layer utility boundary](structural_linktext_strip_layer_utility_card.md). It keeps native direct prompts for text link and preserves the immediate current merge as source evidence, not a routine migration target.
+
+> **Detailed interaction cards:** [W7–W11 grouped end-user cards](structural_w7_w11_interaction_cards.md) supplement this family row. [Floor-capture/mapping card](structural_floor_capture_mapping_daily_card.md) adds the direct `EXCELCAPTURE*` candidate-evidence boundary before W8 schedule review. The detailed cards retain source observations, exact approved rules and root-owner boundaries while marking Main/More and lifecycle proposals as unimplemented review material. [Multi-floor walkthrough](structural_multifloor_interaction_walkthrough.md) checks these cards through one proposed job sequence.
+> **Direct export scope card:** [exact selected identities, visible omissions, destination and truthful result/retry](structural_direct_export_scope_card.md) deepens direct Structural export only; reports, issue/publishing, support insertion and project-property flows remain with their owners.
 
 | Review item | Source-observed route / fields/actions | Intended result and preservation door |
 |---|---|---|
@@ -181,6 +226,20 @@ Run later on a synthetic structural job only, after implementation work and befo
 6. Exercise Xref/locked/foreign-content cases and verify no bypass, duplicate object or inferred relationship.
 
 **Built:** not assessed. **Automated checks:** not run. **Installed:** not assessed. **Tim-accepted:** no. These cards are proposed review material, not a change authorisation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

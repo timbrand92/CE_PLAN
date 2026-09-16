@@ -105,3 +105,18 @@ PS-01F1 Placement Readiness Reasons remains explicitly awaiting Tim's visual app
 | Cancel schedule insertion point, then successful retry | First attempt keeps window/work; success inserts once and closes |
 
 This reconciliation is planning evidence only. No engineering standard was newly checked or adopted, no plugin/source state changed, and no AutoCAD acceptance is claimed. Independent audit must check these decisions against the combined plan, not just count rows.
+## Additional source companion — survey and slab cancellation
+
+Read [the detailed survey/slab action contract](planner/civil_surface_coverage_survey_and_slab_detail.md) with the approved CV5/CV7 requirements above. The source-qualified distinctions include missing FSL becoming0.0 in the inspected legacy path, and new-boundary commit occurring before later CDSLAB cancellation. These observations do not override Unknown/no-fall or approve a replacement interaction.
+
+Survey candidate storage and adoption as governing evidence must remain separate: storing suspect points with a warning alone does not establish which downstream consumers activate them. The intake review/activation boundary needs explicit evidence; do not infer either safe adoption or a runtime failure from the storage call alone. No suspect survey dataset was loaded in this planning.
+
+### Follow-through to sampled survey consumers
+
+Root `Services/SurveyService.cs:631–653` deserialises the stored payload; `TryGetRlAtPoint:477–502` receives only triangle/spot arrays, tries TIN interpolation then nearest spot, and returns a success flag plus source description. These inspected functions do not take or check suspect-point metadata or an adoption state.
+
+Root `Commands/PitCommand.cs:114–125` loads that payload in Design mode and prefills a displayed survey suggestion before showing the pit dialog. This proves suggestion availability, not automatic pit-cover commitment; the active PIT owner's later acceptance logic is not changed or claimed absent. Root `Commands/SlabCommand.cs:550–566` uses the same lookup for a suggested control-point FSL, followed by a user prompt.
+
+The slab prompt consumer at:608–630 starts with that suggestion, parses entered text and records the point. Its Source field is chosen from `hasSurveyRl`, so an explicitly different typed value can still be labelled Survey in this bounded path. Invalid nonblank parsing can yield0 because TryParse's Boolean is not checked there. This is a source-to-required-provenance gap: retain original suggested evidence separately from a user's manual adopted value, and keep invalid text Unknown/unaccepted rather than silently0. It is not a claim of a tested runtime failure.
+
+This closes the earlier missing consumer trace for these sampled routes only. Survey quality review must precede governing use; downstream consumers need a reviewed basis/quality state, not just geometry arrays. Future qualification: stored suspect candidate → pit suggestion display → Cancel/explicit adoption; slab suggested RL overridden manually → source remains Manual with original evidence retained; invalid FSL text → visible correction/Unknown; missing TIN/spot data → no fabricated level. No survey data or native drawing was processed during this read.

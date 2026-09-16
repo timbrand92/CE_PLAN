@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-09-16T16:16:53.517Z",
+  "hashes": {
+    "ce-whole-plugin-planning-map.html": "9e36e97c2e2d72f32b00a41e59c85a1abf40214e8c81d6044cbc16ac85ec7025",
+    "planning-map-preview.html": "ab9b874d3207ce5a80a072aa8ccea471d9cda9b53176efc69c0b1b43663c2cea"
+  },
+  "checks": [
+    {
+      "name": "12 domains",
+      "pass": true
+    },
+    {
+      "name": "job sole selected",
+      "pass": true
+    },
+    {
+      "name": "job matching heading",
+      "pass": true
+    },
+    {
+      "name": "job five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "evidence sole selected",
+      "pass": true
+    },
+    {
+      "name": "evidence matching heading",
+      "pass": true
+    },
+    {
+      "name": "evidence five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "site sole selected",
+      "pass": true
+    },
+    {
+      "name": "site matching heading",
+      "pass": true
+    },
+    {
+      "name": "site five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "network sole selected",
+      "pass": true
+    },
+    {
+      "name": "network matching heading",
+      "pass": true
+    },
+    {
+      "name": "network five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "surface sole selected",
+      "pass": true
+    },
+    {
+      "name": "surface matching heading",
+      "pass": true
+    },
+    {
+      "name": "surface five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "calculation sole selected",
+      "pass": true
+    },
+    {
+      "name": "calculation matching heading",
+      "pass": true
+    },
+    {
+      "name": "calculation five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "framing sole selected",
+      "pass": true
+    },
+    {
+      "name": "framing matching heading",
+      "pass": true
+    },
+    {
+      "name": "framing five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "foundation sole selected",
+      "pass": true
+    },
+    {
+      "name": "foundation matching heading",
+      "pass": true
+    },
+    {
+      "name": "foundation five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "output sole selected",
+      "pass": true
+    },
+    {
+      "name": "output matching heading",
+      "pass": true
+    },
+    {
+      "name": "output five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "review sole selected",
+      "pass": true
+    },
+    {
+      "name": "review matching heading",
+      "pass": true
+    },
+    {
+      "name": "review five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "issue sole selected",
+      "pass": true
+    },
+    {
+      "name": "issue matching heading",
+      "pass": true
+    },
+    {
+      "name": "issue five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "support sole selected",
+      "pass": true
+    },
+    {
+      "name": "support matching heading",
+      "pass": true
+    },
+    {
+      "name": "support five meaningful rows",
+      "pass": true
+    },
+    {
+      "name": "keyboard Space selects evidence",
+      "pass": true
+    },
+    {
+      "name": "736 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "320 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no browser errors",
+      "pass": true
+    },
+    {
+      "name": "no network requests",
+      "pass": false
+    },
+    {
+      "name": "planning-only and Water Tank retained",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "file:///C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/planning-map-preview.html",
+    "https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js",
+    "https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js",
+    "https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js"
+  ],
+  "scope": "Offline explainer only; no native product"
+}

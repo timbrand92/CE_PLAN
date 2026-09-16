@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-17T02:59:19.8150037+10:00",
+  "packHash": "AF44775E7FE929F090D2B2D84E1331ABDA406897660AD06339E0F3ABC31CC046",
+  "directLinksChecked": 6,
+  "missing": 0,
+  "status": "Working draft only",
+  "pending": [
+    "RCDAILY01",
+    "RCDAILY02",
+    "final combined audit",
+    "08:00 handover"
+  ]
+}

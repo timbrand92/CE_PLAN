@@ -1,0 +1,13 @@
+{
+  "clockUtc": "2026-09-16 13:49:29 UTC",
+  "scope": "root22 direct exports; configuration corrections",
+  "closed": [
+    "CFG-01",
+    "CFG-02",
+    "CFG-03",
+    "SURF-02"
+  ],
+  "newMaterialFindings": 0,
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

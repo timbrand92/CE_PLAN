@@ -64,6 +64,21 @@ Actual consumer units/precision and latest Civil engineering-rule ownership need
 
 ### Bounded consumer read-back — 16 September
 
+#### Precision reconciliation contract — observed paths versus intended common rule
+
+The independent audit identified different consumers. Direct root-source read of `Helpers/MathHelper.cs:278–317` confirms the table below. This is a proposed owner reconciliation, not approval of new rounding or permission to alter the active CD/PIT implementation.
+
+| Operation | Observed units and calculation | Input/result boundary | Required owner qualification |
+|---|---|---|---|
+| CD calculated invert | CD:426–436 passes level values and minimum drop in millimetres; helper divides minimum drop by1000, clamps decimals0–4, rounds raw drop, applies minimum and ceilings effective drop to chosen precision | Even the end described as preserved is rounded using AwayFromZero; opposite end is calculated from that rounded value | Identify intended protected/manual precision, exact stored result and preview. A code comment saying preserved does not prove exact numeric preservation. |
+| Pipe edit calculated invert | `PipeEditCommand.Update.cs:228–244` uses the same helper | Same common-helper policy in the inspected path | Match creation/edit semantics and current owner refinements before any change. |
+| Split pipe | `LinkService.Split.cs:558–580` interpolates between stored endpoints using developed-length ratio, then formats the new value to selected decimals | It does not invoke the minimum-drop/ceiling helper in this function | Preserve physical source endpoints and qualify split-only rounding versus recomputation; no extra minimum drop inferred for every fragment. |
+| Grade-locked endpoint update | `LinkService.Utilities.cs:1048–1065` formats the derived endpoint and uses it for project data | A formatted value affects the result, not merely a label | Reconcile intended stored precision and grade/endpoint authority with calculation owner. |
+
+Future synthetic acceptance should compare creation, editing, splitting and grade-locked movement using the same reviewed basis. Include a manually entered end with more precision than the setting, a drop just below/above the minimum, reverse direction and repeat edit/save/reopen. Record raw input, authoritative end, effective drop, stored endpoints, actual displayed labels and whether a second unchanged operation drifts. Expected engineering numbers must come from the approved rule; this planning pass does not invent them or execute tests.
+
+Changing this preference must clearly distinguish future calculations from existing objects. No source evidence here authorises recalculating all existing pipes when settings are saved. Keep Fixed/manual values protected under the governing command contract; any source-to-intent discrepancy is an owner reconciliation gate, not a reason to ask Tim what current code does.
+
 Root source `Modules/Drainage/Commands/CdCommand.cs:426–436` and `PipeEditCommand.Update.cs:228–244` pass CalculatedDecimals and minimum outlet drop into ApplyCalculatedInvertRule, then use the returned inverts. `LinkService.Split.cs:578` formats an interpolated split invert with that precision; `LinkService.Utilities.cs:1048–1065` formats a changed endpoint for the project pipe. Therefore this preference can affect resulting engineering values in these paths; the earlier display-only suggestion is corrected above. No active owner's newer calculation code was changed or runtime result asserted.
 
 Root `QuickModeService.cs:41–45,183–184` and `TextService.cs:50–59,1542–1565` use inward/mask distances directly in drawing-coordinate geometry without a conversion in these inspected functions. This supports “drawing distance” for those paths, not a universal paper-mm interpretation. Before relabelling the current “units” field, qualify actual drawing units and all owner paths; a property name ending Mm alone is insufficient proof. This is a concrete remaining field-semantics check, not a request for Tim to decide what the code does.

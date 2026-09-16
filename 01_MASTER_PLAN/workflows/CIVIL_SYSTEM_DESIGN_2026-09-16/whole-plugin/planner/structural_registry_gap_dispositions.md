@@ -1,4 +1,4 @@
-# Structural registry-gap dispositions
+﻿# Structural registry-gap dispositions
 
 **Scope.** This is a source-backed disposition for the 37 Structural declaration-only and eight Structural-registry-only identities reported in [structural_command_identity_reconciliation.md](structural_command_identity_reconciliation.md). It does not claim the commands load, appear in a running ribbon, work in AutoCAD or have been accepted. “Direct command route” means only that a `[CommandMethod]` declaration was observed. It is not runtime proof.
 
@@ -28,13 +28,13 @@
 | `JOBTIMERDEBUG` | `JobTimerDebugCommand.cs:22`; diagnostic route. | Expert-review only. Keep out of normal discovery until `ST9-13–15` stable-identity, idle and append-only-record acceptance is in place. |
 | `JOBTIMEREDIT` | `JobTimerEditCommand.cs:17`; time-entry editor. | Preserve a direct time-edit route while coordination owner migrates it. It must not quietly rewrite records: `ST9-13–14` govern. |
 | `LBW` | `LoadBearingWallCommands.cs:33`; compile-time command constant. | Preserve direct wall-marking route under `ST-02` review. Architectural geometry cannot become a bearing decision without explicit confirmation. |
-| `ML` | `SchedulingCommands.cs:93`; structural schedule/member-label route. | Retain under `ST-07`; schedule source, manual rows and refresh/sync are separately reviewed. No issue output is implied. |
+| `ML` | `SchedulingCommands.cs:93–100`; current `NativeMlineAlias` queues native `MLINE`. The separately declared member-label routes are `CE_MEMBERLABEL`/`LABEL` at `:18–20`. | Preserve only as a source-observed native MLINE alias pending command-truth review. It is **not** a schedule/member-label route and no registry/ribbon/Help exposure is proven. |
 | `NGL`, `RL`, `SSL` | `LevelMarkCommands.cs:77,69,73`; short legacy level aliases. | Same `ST-03` disposition as the `CE_*` long aliases: direct source route only; Manual/Unknown rather than a fabricated value. |
 | `P1` | `RafterJoistCommands.cs:66`; rafter/joist placement family. | **Hidden pending approved lap rules** (`ST2-14`). Retain source evidence only; connection/load meaning, source and drawing output need explicit workflow evidence before any daily discovery route. |
 | `PFC`, `SFC`, `SF`, `THC` | `CeTextCommands.cs:63,74,78,56` dispatches text/foundation-family actions. | Preserve familiar aliases through `ST-04`/`ST-06` transition. `ST4-1` splits text from footing geometry; `ST6-5–9` require explicit host, full preview and compound identity. |
 | `R2LTXT` | `CeTextCommands.cs:89`; selected TEXT conversion route. | Keep only as a controlled conversion candidate under `ST-04`. `ST4-11` requires recognised eligible text, count + preview, preserved content/position/ownership, one Undo. |
 | `SCREWPILE`, `STUMPFOOTING` | `CeTextCommands.cs:94–95`; foundation placement entries. | Retain under `ST-06`; an Approved asset is required. `ST6-12` prohibits an approximate-circle fallback. |
-| `WALLSTRS` | `ReinforcementDetailCommands.cs:16`; reinforcement detail declaration. | Retain identity under `ST-06`; source comments do not prove a working detail. It remains review-pending, not a claim of calculated reinforcement. |
+| `WALLSTRS` | [ReinforcementDetailCommands.cs:16–24](<C:/Lisp Files/CE_ACAD_PLUGIN/Modules/Structural/Commands/ReinforcementDetailCommands.cs:16>) calls `Pending("WALLSTRS")`, which only writes a not-implemented message after active-editor acquisition. | **Current source: message-only stub.** ST-06 does not settle it; ST-08’s approved placeholder policy supports owner review, while its sampled named list does not specifically name `WALLSTRS`. No new discovery/exposure or replacement is approved; keep the identity for scoped owner/tool-card review. |
 
 ## Registry-only identities — eight
 
@@ -50,4 +50,5 @@
 1. The central register’s destination and migration treatment are already approved by `CT-01`; the remaining task is per-route qualification/evidence, not a new product choice.
 2. Direct command presence has been traced above, but current ribbon/palette visibility, Help rendering, execution, file side effects and AutoCAD acceptance are still Unknown.
 3. Shared-owner transitions for project/settings/sheets/coordination and Transform implementation are intentionally not duplicated in this Structural planner.
+
 

@@ -1,0 +1,30 @@
+# Civil Drainage Items and begin-job overlap report
+
+**Planning checkpoint:** 2026-09-17T00:27:54.3687302+10:00. This is a bounded preservation/overlap check, not a replacement design for Drainage Items, CD/PIT, CDDESIGN, calculations, profiles or Water Tank. It records what is already covered before any overlapping work is considered.
+
+**Authority and companions.** [15 Sep Drainage Items handover](C:/Users/TimothyBrand/.codex/worktrees/28a2/CE_ACAD_PLUGIN/docs/workflows/CIVIL_WINDOWS_PLANNING_2026-09-15_DRAINAGE_ITEMS_DESIGN.md) §§1–3, 6–7 is the newer window decision record. It is read with [job journey index](../19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md), [integrated synthetic walkthrough](../20_INTEGRATED_SYNTHETIC_JOB_WALKTHROUGH.md), [automatic context boundaries](../21_AUTOMATIC_PROJECT_CONTEXT_BOUNDARIES.md), [calculation/schedule interactions](../25_CALCULATION_AND_SCHEDULE_REVIEW_INTERACTIONS.md), [profile/calculation lifecycle](../26_PROFILE_ROUTE_AND_CALCULATION_DRAFT_LIFECYCLE.md), [uncovered Civil cards](civil_uncovered_workflow_cards.md) and [Civil route/control ledger](civil_route_control_preservation_ledger.md).
+
+## Bounded interaction map
+
+| Start/resume interaction | Existing planning authority | Overlap decision | Evidence/status limit |
+|---|---|---|---|
+| **Open a blank Civil drawing** | Handover §§6–7: no compulsory wizard or stage selector; show unknown/not-set inputs and no invented completed network. Job index and walkthrough carry the shared automatic-context doorway. | **Already planned.** Do not add a second first-run window. The existing CDDESIGN/job overview remains the coordination doorway. | Integrated source/runtime behaviour is not proven. This is planning authority, not Built, Tested, Installed or Tim-accepted. |
+| **Recognise project and documents** | Handover §6: automatic discovery across relevant folders; user control is **Select / change documents**; ambiguous/unidentified project remains visibly unresolved. | **Already planned.** Preserve automatic recognised context; use Select/change only for manual document/evidence override or ambiguity. | Exceptional project recovery remains an existing unreviewed Tim decision. A fallback folder is not job identity. |
+| **Review evidence before designing** | Handover §7: source-page preview for evidence review, actual drawing preview while working; governing adoption is reviewed, not newest-file automatic. Civil C1 companion keeps candidate/adopted/manual distinction. | **Already planned.** No new source browser or adoption screen is proposed here. | Discovery/persistence/activation is a future owner/native gate where source consumer proof is missing. |
+| **Choose a physical drainage item** | Handover §§1–3 settles Main (**DP, IO, GIO, FW, TG, AGI, OF**) and More (**FO, Strip Drain, Source/custom, Raingarden, LPD**); source/item first, then optional pipe connection. | **Active-owner preservation.** Do not rearrange Main/More, duplicate Roof Drain, require a destination pipe, or create a parallel item chooser. | Existing source entry routes are recorded in the Civil ledger; live UI/AutoCAD behaviour is unverified here. |
+| **Create/edit pit or pipe from the item path** | Handover says established physical item/pit/pipe editing remains available; active CD/PIT owner controls its current work. | **No overlap.** This report makes no CD/PIT card or proposal. | Active owner scope and native protections remain unchanged. |
+| **LPD and DP destination from early item work** | Handover §11: one authoritative LPD record **per outlet**; one DP destination; shared roof allocation may be unequal but must not double count. | **Already settled.** Do not create a job-wide single-outlet control or new routing rule. | Calculation/link proof belongs to existing calculation owner work. |
+| **Refresh calculations, schedule or profile after items exist** | Root-owned calculation/schedule and profile lifecycle supplements define draft/review/refresh boundaries. | **No overlap.** Link to the owners above; no second refresh, report, profile or issue experience is proposed. | Source observations do not establish end-to-end runtime persistence. |
+| **Empty drawing with no sources, catchments or items yet** | Handover: next-action guidance may say what is unresolved while known work continues; source confirmation precedes design/drawing impact. | **Already planned.** A calm empty state is an existing CDDESIGN requirement, not a new Drainage Items screen. | Exact implementation integration remains a future native/owner acceptance gate. |
+
+## Result: no safe unowned interaction card to add
+
+There is **no new non-overlapping Drainage Items/start-of-job interface gap** to design in this planner pass. The only material item not settled by the cited authorities is **exceptional ambiguous-project recovery**. It is already recorded as unreviewed; this report does not invent a recovery picker, folder wizard or automatic adoption rule.
+
+The implementation-facing watchpoint is preservation only: an early-item route must still open the settled item selection, retain source-first/optional-connection behaviour, and hand back to the shared job overview and the active CD/PIT/calculation/profile owners. It is not evidence that those integrations are currently built or accepted.
+
+## Future acceptance boundary
+
+Use a fictitious empty drawing with a recognised project and a second drawing with ambiguous identity. Verify: recognised context appears without a wizard; ambiguity stays unresolved; Select/change documents permits deliberate review; a DP opens the settled item choice; no pipe is forced before source placement; blank preview shows no invented network; then move to the owner-controlled pit/profile/calculation flows. This is a **future representative acceptance scenario**, not a test claim.
+
+No source code, drawing, build, test, AutoCAD, process, deployment, issue action or client corpus was touched.

@@ -103,3 +103,46 @@ The card records J5B2 source work, with J6 confirmation/consumer integration and
 - Profile update and selected report sections after network revision: stored route retained, stale preview refreshed, actual output matches selected sections.
 
 These scenarios are planning requirements, not executed tests. Independent coverage audit ongoing.
+
+## Calculation report controls — bounded source read-back
+
+Inspected root `C:\Lisp Files\CE_ACAD_PLUGIN`, not another owner's newer implementation or installed state. `Modules/Drainage/Dialogs/CalculationsV2Dialog.xaml:1163–1177` visibly binds four section choices and Export to PDF. `ViewModels/CalculationsV2ViewModel.cs:130–160` builds a FlowDocument and uses a PrintDialog; after confirmation it calls PrintDocument. In the inspected complete BuildFlowDocument body, a cover is always added and only ExportDetention adds section pages. ExportPipeFlows, ExportCatchments and ExportWsud are defined/bound but not consumed by that report-building body.
+
+| Control/action | Current bounded source effect | Required planning consequence |
+|---|---|---|
+| Four section checkboxes | Only detention selection affects the inspected report composition | Do not claim exact selected output from controls alone. Reconcile every selected section with actual generated pages, or show unavailable output explicitly. |
+| Export to PDF | Opens printer selection and submits a document; no explicit PDF file receipt in this method | Distinguish Print from verified saved PDF. Printer success is not issue completion or proof of filename/pages. |
+| Suggested filename / Copy filename | Builds a sanitised name and copies it to clipboard at:281–305 | Suggested name is not the selected destination and does not establish a saved file. Clipboard failure is caught; no content/output proof. |
+| Add System | Creates a view-model system then calls LoadFromDrawing at:102–111 | Scope/source/draft authority must remain explicit; a new tab is not proof of a distinct adopted outlet/system. |
+| Refresh | Reloads each system from drawing and calls longitudinal refresh at:114–118 | Qualify pending edits before describing Refresh as read-only. No unconditional discard of manual inputs is approved here. |
+| Insert Criteria | Builds selected system summary and invokes insertion service at:121–127 | Separate drawing output from report export and underlying source adoption; this read did not qualify the insertion service's native result. |
+
+Proposed report acceptance: select each available section alone and together; inspect the actual generated document, its cover and page order; compare listed calculation basis/rule version with the reviewed input; cancel printer/file choice; verify exact saved artifact before sharing/issue. Missing sections, stale calculations and incomplete output stay visible. No report was generated or printed in this planning run. The computations-sheet design/doorway/issue interaction remains in the existing pending decisions; this evidence does not decide it for Tim.
+
+### Detention refresh and system membership — inspected consumer
+
+Root `ViewModels/DetentionSystemViewModel.cs:297–374` clears pipe/pit collections, obtains current drawing data and scans detention-typed pipes. The inspected method has no per-system/outlet argument or membership filter. `PopulateFromSeeds:381–460` creates new rows with IsSelected=true, includes connected pits, clears an unavailable OrificePitId and chooses the first pit when none is selected. These are source observations, not approved automatic outlet selection.
+
+| Action | Source consequence | Target qualification |
+|---|---|---|
+| Refresh / Add from drawing | Rebuilds collections; previously excluded/removed row may return selected | Preserve explicit system membership and exclusions by stable identity, or present a reviewed difference. Do not describe refresh as merely updating displayed numbers. |
+| Remove selected row | At:231–250 removes a view-model row and recalculates; no drawing deletion in that body | Label scope as calculation membership, not Delete pipe/pit. Persistence and refresh behaviour must be explicit. |
+| Add another system tab | CalculationsV2 AddSystem calls this same drawing loader | A tab name alone does not prove distinct physical system/outlet scope. Qualify each system's adopted membership before totals or reports are treated as independent. |
+| Orifice pit no longer available | Current source falls back to first pit | Required target must flag missing adopted control location; do not silently make another pit the governing outlet. Exact recovery interaction needs its reviewed owner contract. |
+| Use Boyd's value | At:216–220 explicitly assigns suggested volume formatted to two decimals | Distinguish current suggestion from deliberately used required volume; method applicability and governing source remain separately reviewed. |
+
+No broad claim that Refresh overwrites every manual input is supported: the inspected path specifically rebuilds pipe/pit membership and may replace orifice-pit selection. Other manual fields require their own consumer evidence. Future synthetic qualification: exclude one pipe, refresh; create two distinct systems; remove the adopted control pit; then save/reopen. Compare membership, outlet identity, selected totals, retained manual required volume and resulting report. Never let a missing reference quietly become a zero or an alternative outlet.
+
+### Criteria insertion — output is not automatically a linked design record
+
+Direct root read `Services/OnSiteDetentionCriteriaService.cs:16–216` establishes this sequence: locate named asset, reuse/load system-named definition, prompt placement, explode the new reference, erase it and replace text with summary rows. Definition loading precedes the placement prompt. Therefore Cancel at placement is not proof that no definition was added, and this multi-step path is not proven as one native Undo operation.
+
+`PopulateExplodedCriteria` erases non-title text before checking usable extents. An early return for missing extents can still reach the caller's transaction commit. This is a source-level incomplete-output risk, not an observed drawing failure. A successful insertion prompt must not stand in for verified complete criteria content.
+
+The output rows include PSD, TWL, head, orifice diameter, required volume, selected pit/pipe/extra contributions and total storage. `DetentionSystemViewModel.BuildSummary:556–595` converts input strings through `Parse:716–723`, which returns0 on parse failure. Thus this inspected handoff can lose the distinction between unsupported/invalid input and an actual zero. No new engineering default is approved. The target must retain missing/invalid status and prevent an apparently verified criteria note from presenting an invented zero.
+
+The inspected insertion body contains no explicit document/page/revision or calculation-currentness stamp. That is a bounded service observation, not proof that all external infrastructure lacks provenance. Until qualified, treat these inserted notes as a snapshot needing comparison after design changes, not a proven live linked result.
+
+AS-01's native/dynamic-object preservation rule still governs assets. This service's explicit explosion is not itself evidence of a catalogue-authorised exception. Existing owner must establish the intended asset contract before retaining or changing that behaviour; this planning does not redesign Water Tank or edit the active Civil implementation.
+
+Future synthetic acceptance: missing criteria asset; Cancel after definition load; valid and invalid PSD/TWL/volume inputs; missing usable asset extents; repeat insertion with an existing same-name definition; one accepted drawing operation followed by native Undo/save/reopen; later changed calculation basis. Inspect actual text, remaining placeholders, graphic completeness and traceable scope. Keep criteria insertion, PDF output and final issue history as separate results.

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-17T03:56:02.1693370+10:00",
+  "scope": "Existing receipts plus named risk-based planning readbacks, not full reread",
+  "open": [],
+  "relativeLinksChecked": 138,
+  "missingLinks": 0,
+  "files": [
+    {
+      "path": "17_EVIDENCE_AND_ACCEPTANCE_BOUNDARIES.md",
+      "sha256": "967FF27C43708B9A6F5A1E1CF51DEEC11C6D187391D9A3EACE91AB8AA1F7BDE9"
+    },
+    {
+      "path": "19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md",
+      "sha256": "8475459BB1AE226D0936FF82488419D8AE22873E9B0A8B3C5E787B2A663B5F91"
+    },
+    {
+      "path": "MORNING_PACK.md",
+      "sha256": "BE00A81AB600D36AD367E6BEDEBF22D83D443AF7AC0738AC738EFB8185AC7C06"
+    },
+    {
+      "path": "20_INTEGRATED_SYNTHETIC_JOB_WALKTHROUGH.md",
+      "sha256": "F46C806AC793413A262E0B63CC056B29B99C184CD84B9281B1EA881B1ED43860"
+    }
+  ],
+  "nativeExecuted": false,
+  "finalDelivery": false
+}

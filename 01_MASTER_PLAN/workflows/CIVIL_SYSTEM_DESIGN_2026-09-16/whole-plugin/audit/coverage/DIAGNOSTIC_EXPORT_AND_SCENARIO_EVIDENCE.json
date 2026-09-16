@@ -1,0 +1,13 @@
+{
+  "clockUtc": "2026-09-16 13:51:21 UTC",
+  "scope": "root22 markup exports and root19/20 reconciliation",
+  "newMaterialFindings": 0,
+  "remainingSource": [
+    "TPZ/SRZ lifecycle",
+    "source-tag explicit selection/split",
+    "unsampled survey lifecycle",
+    "final action/status/morning-pack reconciliation"
+  ],
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

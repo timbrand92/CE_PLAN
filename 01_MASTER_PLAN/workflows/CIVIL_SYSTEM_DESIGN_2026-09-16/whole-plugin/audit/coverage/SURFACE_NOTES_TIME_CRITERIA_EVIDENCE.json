@@ -1,0 +1,14 @@
+{
+  "clockUtc": "2026-09-16 13:31:51 UTC",
+  "uniqueXamlNames": 47,
+  "codeCreatedGroups": 40,
+  "missingMappedNames": 0,
+  "semanticsComplete": false,
+  "findings": [
+    "SURF-01",
+    "SURF-02",
+    "SURF-03"
+  ],
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

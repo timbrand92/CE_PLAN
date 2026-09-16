@@ -12,6 +12,27 @@ The card's original AI1 calls for CDASK redirect for one Stable release; its ref
 
 ## User-visible states and actions
 
+### First use: choose the actual session before Ask
+
+This proposed interaction fills the ordinary first-use handoff under approved AI2/4/5/7/9/14/15. It does not establish that the bridge is built, grant provider access, or ask to connect anything during this planning run.
+
+| User step | Required visible result and boundary |
+|---|---|
+| Open the retained Ask CE doorway | Show Disconnected or actual verified connection, selected drawing and effective permissions. Opening the palette does not pair automatically or read a drawing. |
+| Review the eligible provider/connection route | Apply the recorded provider and project policy first. Claude production and Tim-only development fallback remain their approved separate scopes; Codex drawing access staysR0 until its distinct approval. No staff key entry or silent provider switch. |
+| Choose the local AutoCAD session and drawing | Identify the actual process/session and exact drawing, distinguishing duplicate captions. Selection is pending context, not a permission grant. Ambiguous or unavailable targets remain unresolved. |
+| Pair using the local connection's code | The approved localhost-only bridge validates pairing and its short-lived token. Show pending/failed/paired truthfully. No token duration, unattended pairing or remote listener is invented here. Cancel leaves no new authorised session; an already completed prior pairing must be reported separately. |
+| Review effective scope | Show the drawing, connection and actual allowed read/write level in the palette. The role defaults remain staff R2/W1, Tim R3/W2, confidential R0/W0, subject to stricter provider/project restrictions. The effective role established by the owner cannot override a denied provider route or confidential job. No self-service role selector is proposed. Unknown permission is blocked. |
+| Make the first permitted Ask | Capture only the authorised frozen, non-writing snapshot for that exact drawing/scope; show what is being reviewed and Stop. No SyncWithDrawing, continuous scan or engineering adoption occurs merely from asking. Work pauses at required command/save/plot boundaries underAI14. |
+| Review the answer | Show evidence, uncertainty and any proposed next action. An answer is not a drawing change or engineering Pass. Any later permitted write retains Plan/Preview/explicit approval/Apply/currentness checks and its qualified Undo. |
+| Disconnect | Immediately end connection authority and make the state visible. Pending requests cannot later borrow it; completed independent actions remain separately recorded. Reconnecting requires a valid reviewed target/scope, not reuse of an expired permission display. |
+
+Confidential status travels with the project. A new drawing or a reopened session must re-establish actual target/policy rather than inherit a caption or elevated display from the last job. Temporary elevation ends with AutoCAD as already approved; reconnect is not an elevation mechanism.
+
+**Example:** two local AutoCAD sessions show drawings with the same basename. The user chooses the verified intended session/drawing before a permitted read-only review. Switching focus to the other session while the snapshot is pending cannot retarget the request. If that route is ineligible, drafting continues and Ask remains unavailable for that drawing; pairing success alone never bypasses the restriction.
+
+Future owner qualification: cancelled/failed pairing; duplicate drawing captions; stale/expired connection; confidential job on another machine; drawing switch before snapshot capture; first permitted non-writing Ask; immediate Disconnect and late result; reconnection without stale permissions. No connection, token, drawing snapshot or provider call was made here.
+
 | State | What the drafter sees and can do | What must remain true |
 |---|---|---|
 | Ready | Selected drawing, allowed scope, connection, Ask | Scope is actual, not the last drawing's caption |

@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-09-17T01:15:28.1207169+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\36_CHARGED_AND_PUMP_ORDINARY_DESIGN.md",
+      "sha256": "C12836210D99A4E854FBCA9933FD59AA8FCDC8A830F4D114DA65C0AA8928E218"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\ViewModels\\ChargedSystemCalcViewModel.cs",
+      "sha256": "712ED75291A5AA04CCDF8CF92831198CA4B4DD5D883251D8D42E5CD7A0952983"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\ViewModels\\PumpSystemCalcViewModel.cs",
+      "sha256": "7332C8EFB101BDB468576D8F505179810607958C66E0B4AD7FC959604B09FBDD"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\ViewModels\\CalculationBaseViewModel.cs",
+      "sha256": "129684220267F4BEA32133B91F84B7EED95C3AE42E5583ADADFEE3CD2411E228"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Dialogs\\CalculationsV2Dialog.xaml",
+      "sha256": "41F7D90468D5BC938E49779453CE7CE49BAE749FB462D3EE6661568B4116759A"
+    }
+  ],
+  "sourceScope": "Three complete model files and XAML lines616–783",
+  "disposition": "No material correction found in bounded readback",
+  "nativeExecution": false,
+  "standardsValidation": false,
+  "wholeGoalComplete": false
+}

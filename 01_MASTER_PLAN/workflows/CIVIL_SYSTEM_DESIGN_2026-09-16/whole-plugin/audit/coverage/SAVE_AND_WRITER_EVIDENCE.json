@@ -1,0 +1,20 @@
+{
+  "clockUtc": "2026-09-16 13:25:06 UTC",
+  "scope": "root22, root23, two Structural control/writer supplements",
+  "sourceOnly": true,
+  "runtimeExecuted": false,
+  "wholePluginComplete": false,
+  "closedByReadback": [
+    "INT-01",
+    "SAVE-01",
+    "SAVE-02",
+    "SAVE-03"
+  ],
+  "pending": [
+    "SAVE-05 MTS-specific approval citation or proposed label"
+  ],
+  "qualified": [
+    "SAVE-04 links added; earlier-pass open list historical"
+  ],
+  "report": "SAVE_AND_WRITER_AUDIT.md"
+}

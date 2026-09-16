@@ -1,0 +1,11 @@
+{
+  "clockUtc": "2026-09-16 13:48:17 UTC",
+  "scope": "Manager active/inactive branches and Civil Layer/Parts/Label contracts",
+  "findings": [
+    "CFG-01 reset write attempt",
+    "CFG-02 precommit counter",
+    "CFG-03 stale next trace"
+  ],
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

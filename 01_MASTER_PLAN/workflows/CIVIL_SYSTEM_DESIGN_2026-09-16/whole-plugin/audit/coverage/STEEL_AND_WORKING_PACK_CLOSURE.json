@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-09-17T03:06:32.1852612+10:00",
+  "closed": [
+    "STEELDAILY01",
+    "PICKER01",
+    "RCDAILY01",
+    "RCDAILY02"
+  ],
+  "steelHash": "3AF49AD36534FA2010683ABA52850C688C6722188F19CA4AB67CDECF51C5CA1A",
+  "packHash": "4DEDD41E0364D12424F024A2807399D186885AA9776A39CD3C63F8143A72A75C",
+  "links": [
+    {
+      "target": "C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/ce-whole-plugin-planning-map.html",
+      "exists": true
+    },
+    {
+      "target": "19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md",
+      "exists": true
+    },
+    {
+      "target": "55_IMPORTED_NETWORK_OUTLET_AND_CUSTOM_SOURCE_HANDOFF.md",
+      "exists": true
+    },
+    {
+      "target": "08_VISUAL_REVIEW_WORKING.md",
+      "exists": true
+    },
+    {
+      "target": "../planner/decisions_for_tim.md",
+      "exists": true
+    },
+    {
+      "target": "00_RUN.md",
+      "exists": true
+    }
+  ],
+  "status": "Working draft only; overnight active",
+  "nativeExecuted": false
+}

@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-09-17T01:19:38.3056560+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\38_PUMP_RESULT_AUTHORITY_AND_ROUTE_RECONCILIATION.md",
+      "sha256": "1E2F8E4E74F9284FD25046DBC73C62D084DD6AE54B23AE2256126C4E82BF5E24"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Services\\PumpSizingService.cs",
+      "sha256": "D2D7041CDA0AADE167E440B772EF0F8905D4C5A929FC24189DB081A151CA6D00"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Services\\RationalFlowService.cs",
+      "sha256": "514F3224546C116A4B3C1FF01F577CEFE2E97D82DFF2D8DA96E7D205EB6B52C1"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Models\\PumpModels.cs",
+      "sha256": "2AB549F2625433BA03563EFE3EBE16911B6FBA1E069D830C525FB22DA2782AF6"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Models\\DesignPackageModels.cs",
+      "sha256": "137B1D8496FD730D38780457CE96104D172345FAF11AB411A89CE5F2FED27463"
+    }
+  ],
+  "openFinding": "PUMPROUTE01",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

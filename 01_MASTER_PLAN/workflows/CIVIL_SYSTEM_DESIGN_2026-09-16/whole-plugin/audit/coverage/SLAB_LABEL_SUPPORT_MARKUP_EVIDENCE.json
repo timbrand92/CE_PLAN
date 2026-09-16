@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-09-17T01:45:17.8569714+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\40_SLAB_BOUNDARY_LEVEL_AND_PREVIEW_PRODUCTION.md",
+      "sha256": "9ED6DE69E1F2C0F1AEDC5BEBA984337D7F4C66768F3B830BDFADB53CDE07E27B"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\41_LABEL_STYLE_SELECTION_AND_DRAWING_REVIEW.md",
+      "sha256": "9EE5BADBD70F93288F230611E42C5FCCD0A3C71FADF94072F2005E95FE72278C"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_supports_bracing_daily_card.md",
+      "sha256": "BD14BAC3ADD7DD0BDCE27BDA53DDEAC25F66F9E166A60A47B89DC954B53669AF"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_markup_review_to_correction_daily_card.md",
+      "sha256": "864DBDFF5BA29E8D3C14D239A7C5C4F97EF9D9CCABC2188158309F9BBB71EBC5"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\00_RUN.md",
+      "sha256": "7180FB2A0A8FD7230BEE985932B30D88FCCEFE0E97E9FC4DEBCCC5BE3C96E821"
+    }
+  ],
+  "openFinding": "SUPPORTUX01",
+  "closedFinding": "STATUS01",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

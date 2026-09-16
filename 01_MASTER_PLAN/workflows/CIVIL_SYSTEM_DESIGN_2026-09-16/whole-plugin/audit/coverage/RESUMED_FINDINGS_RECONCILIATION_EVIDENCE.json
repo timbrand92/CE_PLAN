@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-17T03:24:40.678831+10:00",
+  "scope": "Resumed root25–58 and daily-card material finding receipts; not fresh full-artifact audit",
+  "checkpoint": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\audit\\coverage\\OPEN_FINDINGS_CHECKPOINT.md",
+  "adminProgressLiteralMarkers": 0,
+  "stillOpenRecordedMaterialIDs": [],
+  "wholeRunComplete": false,
+  "sourceOrRuntimeRead": false,
+  "pending": "Final combined handover/08:00 pack; owner/Tim/native gates separate",
+  "findingIdReconciliation": {
+    "recognizedResumedIDs": 66,
+    "mapped": 66,
+    "unmapped": [],
+    "brokenReceiptLinks": [],
+    "meaning": "Status index check only, not product coverage or tests"
+  }
+}

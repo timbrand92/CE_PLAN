@@ -71,3 +71,37 @@ Daily drafting should open directly into the job. Manager handles the shared job
 ## Still to verify
 
 Complete retained-control mapping, latest shared-owner reconciliation, direct-versus-embedded route distinctions, supported-version presentation and representative visual review. Product-source observations above do not claim installed behaviour or AutoCAD acceptance.
+## Markup preview freshness — additional bounded source qualification
+
+Root `Modules/Structural/UI/Dialogs/MarkupPreviewWindow.xaml.cs:28–59` reads the runtime package and drawing preview. It builds a drawing snapshot only when the stored snapshot is null; `BtnRefresh_Click:334–337` calls that same loader. Thus this window's Refresh button alone does not prove a fresh snapshot of a changed drawing. Other workflow invalidation may exist and must be traced before claiming an actual stale-application defect.
+
+The source window lists item/page/intent/text/approval/command/placement and displays confidence, but those display values do not establish engineering suitability or drawing-action approval. The Open PDF action at:339–357 checks file presence and invokes the external viewer; successful launch is not proof of correct page/revision or alignment. This overnight did not launch it.
+
+Required planning check: bind reviewed markup, page/revision, alignment and target drawing state; invalidate or rebuild the relevant preview before Apply when that basis changes. Keep missing PDF, stale drawing snapshot, unresolved interpretation and pending approval distinct. Existing Structural markup authority and manual overrides govern; no automatic send or drawing action is authorised by viewing a preview. Next source work is the workflow's snapshot invalidation and execute-group guards, not another review of this window's controls.
+
+### Execution handoff read-back
+
+Root `MarkupAIWorkflowService.cs:470–505` does provide separate placement-context rebuild routes; successful rebuild enriches plans and replaces the snapshot, failure clears it. Therefore the preview-window finding is not a claim that no refresh capability exists. The execution route at:169–183 passes the stored package/snapshot/plans onward; it does not itself call that rebuild first.
+
+`Commands/MarkupAICommands.cs:217–242` performs normal preflight, previews the next batch and asks Yes/No before execution. `MarkupAIExecutionService.cs:53–200` chooses pending group/sub-batch, refuses Manual executor, obtains the active document and dispatches native/Python work. Native results are mapped per action; missing native results become failures unless an approved fallback applies. Python result mapping skips actions without a returned result and bases success on returned executed/failed counts, so requested-versus-returned identity completeness needs separate qualification.
+
+`MarkupAINativeExecutionService.cs:33–103` checks document/package/plans, prepares drawing standards and executes each action under document lock, retaining individual failures. The inspected boundary does not compare the reviewed snapshot's drawing path/content with the active drawing. Python batch construction at `MarkupAIPyAutocadWorkerService.cs:125–165` sets DrawingPath from the active document while transforming actions using the supplied snapshot. Other downstream guards and exact action mutations remain to be qualified; these observations are not a proven wrong-drawing runtime event.
+
+Proposed acceptance contract: before execution, verify exact reviewed package revision, selected action identities, target drawing and relevant drawing state. A switch of job, changed drawing, changed alignment or replan requires fresh scoped review rather than silent retargeting. Execution receipt distinguishes every requested action as completed, failed, pending or unknown; partial success is not a whole-batch pass. Preserve manual choices and protected-object rules, and qualify actual Undo separately from a source attempt to group actions. No markup parsing, external worker, command or drawing execution occurred in this planning read.
+
+Direct-command fallback qualification: `MarkupAIExecutionService.cs:13` defines an empty whitelist; its predicate checks that list and this file contains no additions. Thus no direct fallback is enabled by this inspected list. The conditional branch and code wording “approved” are not evidence of Tim approving a fallback or of one being available.
+
+## Manager enable, load and update — distinct action meanings
+
+Additional root read: `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml.cs:163–268`, `Services/CePluginRegistryService.cs:157–224`, `Services/CePluginInstallerService.cs:208–254`. No manager action was invoked and no installed manifest was read or changed.
+
+| Button | Inspected current effect | Target scope and receipt |
+|---|---|---|
+| Enable/disable | Changes every ComponentEntry's LoadOnAutoCADStartup in the descriptor's manifest, writes it and flags RestartRequired | Startup preference, not unloading the currently running module. Do not say a loaded failing tool has stopped merely because its next-start setting changed. |
+| Load Now | Rejects already-loaded descriptor or missing DLL path; queues NETLOAD in active drawing; host schedules a later refresh | Queued load is not verified loaded identity. Existing RS no-hot-swap/activation rules govern eligibility; a button is not permission to replace a loaded version. |
+| Install/update | Active service stages outside plugin scan folders, optionally obtains a remote bundle, returns PendingRestart; legacy live mutation is inside `#if false` | Staged, activated and loaded stay separate. Reuse exact staged identity and existing closed-process owner. Do not describe the inactive legacy branch as a current live overwrite. |
+| Close after any action | Does not undo a manifest preference already saved, a queued command or completed staging | Explain completed effect and current state. Cancel applies to pending action only; recovery belongs to that action's owner. |
+
+The startup toggle still writes its descriptor manifest in this inspected route, whereas active update staging does not. This distinction needs reconciliation with current release ownership and preference location; do not generalize staging's no-live-manifest claim to every Manager button. Planning does not authorise changing installed files or relaxing release controls.
+
+Future synthetic acceptance: disable an already loaded optional module and verify truthful current-versus-next-start state; denied manifest write; queue load with no active drawing; attempt already-loaded route; stage update then keep drafting; reopen only after approved closed-process activation and verify actual loaded identity. No running processes, bundles or deployment state were touched in this read.

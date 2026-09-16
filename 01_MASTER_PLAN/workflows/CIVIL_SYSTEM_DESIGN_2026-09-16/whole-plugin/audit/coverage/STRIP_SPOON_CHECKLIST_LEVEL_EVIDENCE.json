@@ -1,0 +1,24 @@
+{
+  "nativeExecuted": false,
+  "finding": "LMDAILY01 authority reference correction pending",
+  "checkedAt": "2026-09-17T01:59:24.6125681+10:00",
+  "scope": "Bounded planning/source review only",
+  "artifacts": [
+    {
+      "Path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\45_STRIP_DRAIN_ROUTE_WIDTH_AND_PRESENTATION.md",
+      "Hash": "B65643B1D4BE80292411CC6518418342D2949AEA2ACC1CDC18404FAE645DF53E"
+    },
+    {
+      "Path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\46_SPOON_CREATION_AND_SLAB_OWNERSHIP.md",
+      "Hash": "8592A0DCAFE1C306D25F82B5BA7CF96817E2FC5CB31494CE29CD9762A7259322"
+    },
+    {
+      "Path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_checklist_daily_qa_card.md",
+      "Hash": "54E541AC42B69A945DC18A4FDC4BB8461141C4ABC2BE39BF985AE3B3B44FD767"
+    },
+    {
+      "Path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_level_mark_daily_card.md",
+      "Hash": "D2396BA06991E12404CF033DAD9C2F211A072D9C249B64A01164CF3DEBC16C81"
+    }
+  ]
+}

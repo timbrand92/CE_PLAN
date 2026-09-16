@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-17T03:00:49.3440125+10:00",
+  "rcHash": "85668946792300EE8E52B6E8CCF6815BD644E73D1AD65694EFFE0CE3A239CB7B",
+  "closed": [
+    "RCDAILY01",
+    "RCDAILY02"
+  ],
+  "open": [
+    "PICKER01"
+  ],
+  "nativeExecuted": false
+}

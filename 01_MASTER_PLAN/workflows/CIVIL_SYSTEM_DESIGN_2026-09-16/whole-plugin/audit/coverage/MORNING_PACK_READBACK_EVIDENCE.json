@@ -1,0 +1,13 @@
+{
+  "clockUtc": "2026-09-16 13:55:37 UTC",
+  "packHash": "072AB9D83F500B4A59AB808A789318FBC8709861719AFCB33F76A64D79FDECF0",
+  "links": 6,
+  "missingLinks": 0,
+  "closed": [
+    "FIN-01",
+    "FIN-02"
+  ],
+  "requirement8": "draft content verified; final matrix/status pending",
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

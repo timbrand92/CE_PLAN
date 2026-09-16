@@ -1,3 +1,78 @@
+Reconciled: 2026-09-17T03:24:40.6788310+10:00
+
+# Current resumed-phase finding reconciliation
+
+FOR TIM
+
+The recorded material findings from the resumed interaction/design reviews now have correction readbacks. This does **not** say every possible planning gap has been found or that the overnight is complete. Unapproved engineering choices, owner review and future AutoCAD proof remain separate.
+
+The progress-log newline defect is also closed: fresh actual read showed separate lines and zero literal backtick newline markers. The final combined handover and 08:00 pack remain outstanding.
+
+---
+
+## Scope and rule for this status
+
+This reconciliation covers resumed root25–58 and Structural/Civil daily-card findings in the existing coverage audit records. Actual latest appended readbacks and selected JSON closure receipts were reread; older Open rows are retained history, not current blockers. No closure is inferred merely from a file existing. This is a receipt reconciliation, not a fresh audit of every source or every current artifact version. Exact native/render/source limits in each cited report remain binding. Historical FINAL_* files remain bounded first-pass records and confer no whole-run closure.
+
+Status **Closed** below means the identified planning defect was corrected and the actual correction read back, not built, tested in AutoCAD, installed or Tim-accepted. “Covered” for original UX scenarios means the concrete proposal plus its later material corrections are recorded; it is not engineering approval.
+
+## Resumed finding IDs and current evidence
+
+| IDs | Current disposition | Actual readback/receipt and retained limit |
+|---|---|---|
+| UX01, UX01-A | Covered; correction closed | [W2–W6 audit](W2_W6_INTERACTION_PROPOSAL_AUDIT.md): confirmed basis versus draft corrected; detailed first-system/membership route assessed. General persistence remains UX08's proposed contract. |
+| UX02, UX02-A | Covered; correction closed | [W2–W6 correction append](W2_W6_INTERACTION_PROPOSAL_AUDIT.md): saved/pending overrides and Keep pending versus Discard restored; no Xref/source write permission. |
+| UX03, WUX02, WUX03, WUX04 | Covered; corrections closed | [W2–W6 readback](W2_W6_INTERACTION_PROPOSAL_AUDIT.md) plus [root26 final retry readback](ROOT26_W7_W11_INTERACTION_AUDIT.md): complete eligible rows, blocked system distinction, Stop retains completed work; both Failed/Unknown require absence or qualified resume. |
+| UX04 | Covered | [W2–W6 audit](W2_W6_INTERACTION_PROPOSAL_AUDIT.md): positive opening, false void correction, unknown depth, evidence/view/level; no automatic bearing inference. |
+| UX05, WUX06 | Covered; correction closed | [W2–W6 readback](W2_W6_INTERACTION_PROPOSAL_AUDIT.md): explicit endpoint/support drawing/view/level and repeated-mark versus connection scope. |
+| UX06, WUX01, WUX05 | Covered; corrections closed | [W2–W6 readback](W2_W6_INTERACTION_PROPOSAL_AUDIT.md): Manual path retained; completed native COPY separate from pending relation. Later RC-specific wording is RCDAILY/PICKER below. |
+| UX07, UX08 | Covered | [Root26 audit](ROOT26_W7_W11_INTERACTION_AUDIT.md): invalid stored route and calculation draft/input/result/output lifecycle concrete; persistence/native acceptance remain future. |
+| W711-01, W711-02, W711-03 | Closed | [Settings/context audit](SETTINGS_AND_CONTEXT_INTERACTION_AUDIT.md): current RD setting boundary, editable CEPROPS, inspect partial export files. Later approved RD target correction DIMDAILY01 supersedes any source-order-as-target reading. |
+| SETUX01, CTXUX01, CTXUX02 | Closed | [Shared setup readback](SHARED_SETUP_ALLOCATION_DEPTH_AUDIT.md): firm read-only tier, automatic recognised context, return to original job's parked draft. |
+| SHUX01, SHUX02 | Closed | [Setup/multifloor audit](SETUP_AND_MULTIFLOOR_AUDIT.md): file collision/partial and title-block comparison; Apply/Discard/Stay correctly separates completed copies. |
+| SHUX03, DPREL01 | Closed | [DP release final readback](DP_RELEASE_INTERACTION_AUDIT.md): prior confirmed basis remains historical with missing reference; proposed release adopted separately. |
+| WALK01, WALK02 | Closed | [Setup/multifloor correction append](SETUP_AND_MULTIFLOOR_AUDIT.md): first detail versus detail COPY; Manual badge alone not Needs review. |
+| DRAFTUX01 | Closed | [Report-fact audit](REPORT_FACT_ADOPTION_AUDIT.md): actual two-cell table and consuming placement-draft-only invalidation; no numerical staleness from label move. |
+| REOUX01, REOUX02 | Closed | [Daily detention/WSUD/foundation audit](DAILY_DETENTION_WSUD_FOUNDATION_AUDIT.md): RBL orientation and engineering-token versus presentation edits. |
+| FPLACE01 | Closed | [Same audit closure](DAILY_DETENTION_WSUD_FOUNDATION_AUDIT.md) and [JSON](FOUNDATION_SECTION_DAILY_EVIDENCE.json): shared host MOVE rechecks children, does not auto-regenerate. |
+| WSUDUX01 | Closed | [Same audit target closure](DAILY_DETENTION_WSUD_FOUNDATION_AUDIT.md): requirement/estimator/pending target distinction and reviewed target input. |
+| PUMPROUTE01 | Closed | [Pump route closure](PUMP_ROUTE_AUTHORITY_AUDIT.md), [JSON](PUMP_CLOSURE_OVERLAND_EVIDENCE.json): requested/resolved/evaluated rainfall events separate; clamp policy unapproved. |
+| DETAILUX01 | Closed | [Standard detail closure](STANDARD_DETAIL_DAILY_AUDIT.md), [JSON](DETAIL_CLOSURE_ROUTE_MAP_EVIDENCE.json): Candidate replacement preview-only; suitability does not confer office approval. |
+| STATUS01 | Closed | [Slab/label/support audit](SLAB_LABEL_SUPPORT_MARKUP_DAILY_AUDIT.md): root00 supersedes stale pending paragraph while run stays active. |
+| SUPPORTUX01 | Closed, all five parts | [Support correction readback](SLAB_LABEL_SUPPORT_MARKUP_DAILY_AUDIT.md), [JSON](CSV_SUPPORT_SCHEDULE_CLOSURE_EVIDENCE.json): fixed types, ambiguity, AB/BT prompts and scoped MOVE. |
+| SCHEDUX01 | Closed | [Schedule audit](STRUCTURAL_SCHEDULE_DAILY_AUDIT.md), same JSON: multiple rendered tables allowed from one semantic authority; actual provenance gap retained. |
+| BEAMUX01 | Closed, all three parts | [Raingarden/beam readback](RAINGARDEN_BEAM_DAILY_AUDIT.md): command5 preset/entered distance, auto-trim preview and BEXT scope. |
+| LMDAILY01 | Closed | [Strip/spoon/level audit](STRIP_SPOON_CHECKLIST_LEVEL_DAILY_AUDIT.md): correct ST3-8 authority reference. |
+| DIMDAILY01 | Closed | [Dimension audit](DIMENSION_LEADER_DAILY_AUDIT.md): approved select-first RD target distinct from current source preference-first. |
+| HATCHDAILY01, HATCHDAILY02, TEXTDAILY01 | Closed | [Text/hatch actual readback](TEXT_HATCH_DAILY_AUDIT.md): full property/gesture/owner retention and deliberate parent/generic-note choice. |
+| XREFDAILY01, XREFDAILY02, CMLCOPY01, CMLCOPY02, CMLCOPY03 | Closed | [Xref/CML final readback](XREF_CML_COPY_DAILY_AUDIT.md): applied versus saved, actual target drawing, exact setting attempt, caps versus route closure, native-first flow. |
+| DIVDAILY01, DIVDAILY02, DIVDAILY03 | Closed | [Division readback](FLOOR_CAPTURE_DIVISION_DAILY_AUDIT.md): segments/interior count, redistributed chord gap, owned-block handoff. |
+| SUPDAILY01 | Closed | [Support-report readback](SUPPORT_REPORT_DAILY_AUDIT.md): same-second collision/deletion source observation and prior-report preservation scenario. |
+| JOINTDAILY01 | Closed | [Native drafting/time audit](NATIVE_DRAFTING_TIME_REPORT_AUDIT.md): drawing edit does not confer engineering intent approval; example sequence corrected. |
+| SYMBOLDAILY01, SYMBOLDAILY02 | Closed | [Symbol closure](NATIVE_SYMBOL_DAILY_AUDIT.md): REBAR false branch and RC OSNAP/corner/state scope. |
+| TWOFLOOR01, TWOFLOOR02 | Closed wording; additional doorway proposal now covered | [Integrated import/two-floor readback](INTEGRATED_IMPORT_AND_TWO_FLOOR_AUDIT.md), [raft doorway follow-up](REVIEW_BATCHES_AND_RAFT_HOST_AUDIT.md), [later FADOPT separation](PARTS_CATALOGUE_DAILY_AUDIT.md). Invocation/required inputs still owner review, not implementation. |
+| RCDAILY01, RCDAILY02, PICKER01 | Closed | [RC/grouped readbacks](TREE_CENTRE_AND_RC_DETAIL_AUDIT.md), [closure JSON](STEEL_AND_WORKING_PACK_CLOSURE.json): RCBEAM-specific single visual/eight types; actual member first; columns not silently merged. |
+| STEELDAILY01 | Closed | [Steel correction append](NAMED_SCENARIO_READINESS_AND_STEEL_AUDIT.md), same JSON: view choice, complete preview, break-line and qualified graphics conventions. |
+| EXPORTDAILY01, EXPORTDAILY02, EXPORTDAILY03 | Closed | [Direct-export final readbacks](DIRECT_EXPORT_DAILY_AUDIT.md): library files, XLSX/two sheets, note formats/attachment omission, actual-read binding. |
+| CEINSPECT01 | Closed | [Inspection correction append](CE_INSPECT_EVIDENCE_AUDIT.md), [JSON](INSPECT_EXPORT_CLOSURE_READBACK.json): prior JSON collision protection, selected/recorded distinction and separate Explorer. |
+| Unnumbered CE_INSPECT table/XLSX-example/progress-format residuals | Closed | CE_INSPECT and XLSX actual readbacks above; progress freshly read during this reconciliation: actual separate lines, zero literal newline markers. Older JSON pending progress408 is now superseded by this check. |
+| Root20 alignment shorthand preliminary concern | Clarified, not a material authority defect | [Scenario audit](NAMED_SCENARIO_READINESS_AND_STEEL_AUDIT.md): exact CV7 permits suspect-point review and overlay confirmation; only manual pick placement prohibited. Initial broad concern withdrawn promptly; actual revised row preserves both rules. |
+
+## Still open versus owner/Tim/native gates
+
+No still-open **recorded material defect ID in this resumed coverage set** remains after the cited readbacks. This statement is deliberately narrower than complete planning coverage or “no more useful work.” New or changed artifacts still require their own audit.
+
+Remain **owner/Tim review, not silently approved**: proposed raft entry invocation/required values; column detail target surfaces; catalogue identity/duplicate policy and permitted Candidate use; manual draw-order/recurring rule policy; centre/companion tree interactions; unique inspection filename policy; applicable engineering methods/coefficients, reporting/output doorway, linked roof-treatment-reuse adoption and exceptional project recovery. The existing decision bank and canonical owner records remain authority; this audit creates no new decision bank. Root is separately reconciling human-choice statements against settled decisions.
+
+Remain **future implementation/native proof**: source findings not fixed by planning, storage/Undo/Cancel effects, true output content and geometry, protection behavior, active-document races, real UI focus/size, persisted files and Tim acceptance. These are not tonight's permission to build/run/deploy. Browser visual findings are separately version-scoped in root08 and audit/visual; this coverage-status pass did not rerun or broaden them.
+
+Remain **handover work**: combine latest review status and scope incident into final morning pack; final readback and actual 08:00 delivery. No duration requirement, goal completion, or zero-risk conclusion follows from this table.
+
+## Historical first-pass checkpoint retained below
+
+The following older checkpoint is preserved unchanged as history. Its open rows do not override the resumed statuses or their cited later receipts above.
+
+---
 # Whole-plugin coverage audit — open findings checkpoint
 
 FOR TIM
@@ -80,3 +155,79 @@ The39-row canonical matrix is separate and counted as39. It is a **coverage audi
 COV-01–10's identified authority/action/discovery defects now have substantive corrected records. The final planner readback confirms snapshot-copy, later unresolved-QA disposition, P1/retirement/ghost status and candidate-versus-governing staleness. Root19 provides a connected reading index and original records have companion links.180 current root/planner Markdown local targets exist; earlier17 malformed Windows paths are corrected. Concept SHA256 remains identical to bounded visual closure.
 
 **These scoped corrections are verified; whole-plugin completion remains open.** Remaining tasks are the material control/consumer qualification currently being developed, integrated scenario/decision-gap review and the final morning pack. Retention inventories are explicitly not complete UI contracts. See CORRECTION_READBACK_EVIDENCE.json, LOCAL_LINK_RECHECK.json and INDEPENDENT_JOURNEY_TRACES.md. Do not read earlier checkpoint open statuses as newer than this readback; they remain history of findings.
+
+
+## Subsequent delta — 2026-09-17T03:26:26.4031422+10:00
+
+CHOICE01 is open in STRUCTURAL_CHOICE_AUTHORITY_AUDIT.md: qualify sole-Structural-Tim-input claim to the bounded reviewed statements; no second decision bank. This subsequent finding supersedes the earlier zero-open-ID snapshot for current status. No whole-run completion.
+
+
+## Subsequent closure — 2026-09-17T03:28:12.6377172+10:00
+
+CHOICE01 closed by actual correction readback in STRUCTURAL_CHOICE_AUTHORITY_AUDIT.md. No new material defect from root19 decision-summary or root20 empty-Civil trace bounded audits; see DECISION_INDEX_AND_EMPTY_JOB_AUDIT.md. All decisions/evidence/native/handover qualifications above remain.
+
+
+## Subsequent findings — 2026-09-17T03:29:45.4507936+10:00
+
+DEP01 (bounded scenario wording/user confirmation) and ISSUESOURCE01 (accepted in-memory versus saved publication source) open; see DEPENDENCY_AND_ISSUE_SOURCE_AUDIT.md. Root17 historical qualification independently read and coherent. Earlier closure counts are timestamped, not a present completeness claim.
+
+
+Readback 2026-09-17T03:29:58.7925298+10:00 — DEP01 closed: actual two-floor33/35 now limits the finding to this reviewed chain, distinguishes Proposed/unimplemented/unapproved host doorway, and reserves issue/revision intent for user/engineer confirmation. ISSUESOURCE01 remains open with root.
+
+
+Readback 2026-09-17T03:30:19.7830373+10:00 — ISSUESOURCE01 closed at planning level: actual root29:15–29 separates reviewed/on-screen-unsaved/saved/publisher basis per included DWG-layout, offers qualified Save/revalidate or unfinalised state, permits snapshots/earlier basis only through established owner support, preserves accepted work on failed/cancelled save and requires renewed review after changes. First/revised examples forbid older-file proof of new content and save-as-issue increment. No disk-only publisher assumption, automatic save permission, native test or whole completion.
+
+
+## Subsequent finding — 2026-09-17T03:32:34.9801451+10:00
+
+SHAREDUX01 open: ordinary local/private assistant pairing to exact process/drawing and effective scope before first Ask needs a concrete proposed path under approved AI7. See SHARED_ORDINARY_PREREQUISITE_AUDIT.md. New root12 add-sheet sequence bounded pass. No source/runtime or whole completion.
+
+
+## Subsequent closure — 2026-09-17T03:34:53.4164784+10:00
+
+SHAREDUX01 closed after actual root10 first-pairing and owner-established-role readback; no provider access/runtime action. ML registry and W0 presentation wording separately read and coherent; LBW awaits its own audit. See SHARED_ORDINARY_PREREQUISITE_AUDIT.md.
+
+
+## LBW daily checkpoint — 2026-09-17T03:38:50.0361937+10:00
+LBW01–03 open; exact named-source observations and required changes in [LBW audit](LBW_ORDINARY_FIRST_USE_AUDIT.md). Pairing SHAREDUX01 remains closed. No whole-run completion.
+
+## LBW closure — 2026-09-17T03:40:44.2720492+10:00
+LBW01–03 closed by full actual revised card readback recorded in [LBW audit](LBW_ORDINARY_FIRST_USE_AUDIT.md). Root60 bounded alias audit found no material correction; [receipt](REINFORCEMENT_ALIAS_SCOPE_AUDIT.md). No whole-run completion.
+
+## Current cross-tool state review — 2026-09-17T03:54:29.8545764+10:00
+CROSSSTATE01 open (medium): root20:38 unqualified Atomic accepted drawing operation summary for drainage drawing/items is broader than root47/root48 separate committed geometry/registration/saved-state boundaries. Required: qualify approved target scope and retain partial stage/readback/Cancel distinctions. This is sampled summary consistency, not product behavior proof. ST8-15 named placeholder readback passed in [reinforcement audit](REINFORCEMENT_ALIAS_SCOPE_AUDIT.md). Combined resumed disposition remains in progress; final08 delivery not complete.
+
+Timestamp: 2026-09-17T03:55:39.1197455+10:00
+## Combined resumed planning disposition — current checkpoint
+
+This supersedes no approved master decision and is not the final08:00 handover. It joins existing exact audit receipts through root60 and the latest named planner placeholder/LBW records. The earlier first-pass FINAL files remain historical. Current check used the existing finding reconciliation and subsequent closure deltas, with risk-based actual readback of root17 requirements, root19 first32 lines, working MORNING_PACK, root20 ordinary/revision rows, root05 status/operation sections, root29 source/partial-output rows, root47/48 commit boundaries and current named planner placeholder entries. This was not a fresh read of every annex paragraph, source route or native control. Truncated combined reads were narrowed for relevant rows; no unseen output is credited.
+
+| Root17 requirement | Current planning disposition and remaining limit |
+|---|---|
+| 1 — source/module/window coverage | Existing bounded source/control/command records and later daily cards reconcile identities rather than equating count with functionality. Latest examples: ML dispatcher, WALLSTRS Pending and reinforcement shared aliases. No renewed exhaustive source search or installed availability claim. |
+| 2 — approved requirements | Existing canonical reconciliations and exact correction receipts retained. Latest explicit ST8-15 Hide versus current Pending/config-visible distinction verified. Owner review for unlisted alias/host surfaces is not settled approval. |
+| 3 — complete user journey | Detailed ordinary cards now expose entry, preview, manual/source decisions and distinct partial outcomes. New CROSSSTATE01 is open: root20 blanket atomic item summary needs qualification against separate geometry/registration/saved state. Other sampled saved-source/issue/retry/viewer boundaries are coherent. This sample does not certify every control. |
+| 4 — discovery/adoption | Existing report/document/area reviews and bounded report concept preserve candidate versus adopted/Manual/Unknown states. Root20 sampled rows retain per-fact scope and unchanged governing basis until adoption. Linked treatment grouping remains an open decision; ingestion is not built. |
+| 5 — ownership | Pack and index preserve active implementation owners, standalone routes and Water Tank last in review. No implementation or deployment authority granted. |
+| 6 — representative visuals | Five prior exact-artifact visual receipts remain representative only. No new browser check in this block and no claim every actual product window/field was rendered. Native focus, coordinate/protection, geometry, extraction and persistence remain future evidence. |
+| 7 — independent audit | Earlier findings reconciled by exact receipts; LBW01–03 and SHAREDUX01 closed by actual revised reads. CROSSSTATE01 remains material/open at this checkpoint. Tim/owner choices remain distinct from defects and native evidence. No whole-run pass. |
+| 8 — usable morning pack | Current working pack read in full: whole-plugin scope, concise reading actions, decision links, disclosed scope incident and planned/not-built distinction. Final combined08:00 handover/readback still outstanding. |
+
+Navigation check:138 relative links across root17/root19/MORNING_PACK resolve on disk. This proves navigation only, not their claims or exhaustive coverage. Absolute visual link was not rerendered in this check.
+
+Remaining gates: recorded Civil engineering/calculation/reporting/exceptional-recovery choices; Structural inside/outside examples and hidden P1 lap; approved workflow review for new proposals; qualified owner implementation/registration/alias decisions; per-operation geometry/relationship/Undo/save-reopen and output/publisher/source evidence in AutoCAD; Tim visual acceptance. None is converted into a default or a request to execute product work tonight. The final pack must retain the disclosed accidental corpus-search incident and distinguish reported containment from independently proven absence of all copied data.
+
+## Combined checkpoint correction readback — 2026-09-17T03:56:02.1693370+10:00
+CROSSSTATE01 closed: actual root20:38 now limits target atomicity to approved operation boundary, separates geometry/identity-registration/saved state, and preserves accepted earlier stages on later Cancel. Root19:21 confirmed relationships/no proximity, :119 qualified established host or proposed unbuilt doorway before host-bound work, and MORNING_PACK:11 unbuilt/unapproved owner-review wording read. Root19 historical labels194/196/209 correctly scope first-pass notes; no current completion inferred. These latest deltas update requirement3/7 of the preceding checkpoint: no known material finding remains open in this audited sample. Final08 combined delivery/readback remains outstanding; this is not exhaustive paragraph/control/native validation.
+
+## Water Tank last interface and visual identity — 2026-09-17T03:58:28.0093272+10:00
+Actual root23:83–101, root18:69 and C8 owner-preservation rows read. No material correction: candidate requirement versus adopted fact, required/calculated/provided, total/detention/reuse, exact owner relationships, no proximity or automatic resize/reconnect, affected actual consumers, and later comparison Cancel preserving accepted geometry/saved-state are distinct. Grouping decision remains open; no tank UI redesign or implementation reschedule. Named handover authority5/131/161/173 supports those separations; no engineering method endorsed.
+All five actual task HTML hashes independently read and match root08 identity appendix and previous frozen receipts. No browser test/screenshot or native check rerun; later additions not thereby illustrated.
+Read-scope limitation: a keyword extraction in the explicitly named approved handover surfaced existing historical report-locator metadata in tool output. No referenced client/corpus file opened and none of that metadata copied to audit/plans. Root notified. Subsequent mixed-record reads should use exact authority ranges. This is distinct from the earlier planner broad corpus search and must not be misreported as a fresh client-file/corpus scan.
+Current sample has no new material planning finding; final08 delivery and broader owner/native gates remain open.
+
+
+## Existing-drawing first review — 2026-09-17T04:10:43.1157274+10:00
+Actual root28:21–38 read in a bounded range, compared with root07:35–47, root16 CV8-6/7/11/12 and root21 identity/SaveAs/recovery qualifications. No material contradiction found. Confirmed/manual CE record, schedule-only override and loose text remain separate; explicit selected/qualified identity rather than matching marks; no automatic fact adoption or second CDDESIGN write path. Unsupported newer schema is not empty data. C7's approved existing-job/open and pipe-open/edit migration remains separately owned, not repeated or reversed by document review. Cancel preserves existing states and completed owner actions. This is a proposed interface/readback, not an executed legacy-job test; future qualification remains. No source/client/project/corpus file read in this block.
+
+Working MORNING_PACK Civil bullet10 read back at 2026-09-17T04:10:59.1375306+10:00: first review on existing job preserves confirmed/manual records and distinguishes loose labels; candidate report is not adopted. Coherent with root28; no new test or acceptance claim.

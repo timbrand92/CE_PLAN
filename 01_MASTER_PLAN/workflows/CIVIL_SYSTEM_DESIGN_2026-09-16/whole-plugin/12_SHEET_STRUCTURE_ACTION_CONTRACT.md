@@ -49,6 +49,21 @@ These are proposed refinements of approved shared-project behaviour, requiring o
 
 ## Synthetic end-user scenarios for qualification
 
+### Ordinary use: add one drawing sheet during design
+
+This proposed sequence joins the retained actions above. It does not introduce a second sheet manager or claim their implementation already has this review.
+
+1. Select the actual source sheet by DWG and layout, then **Duplicate / Insert Before / Insert After**. The preview identifies whether the owner will create a new DWG or clone a layout in the active drawing; a sheet title alone is not enough.
+2. Review the destination, intended register position and resulting sheet identity. Reuse of the source's copied title-block values is shown as a difference to resolve, not assumed valid new-sheet information. Preserve unrelated draft edits or disclose the complete draft that the retained action will save.
+3. Confirm the qualified copy operation. Show the created DWG/layout separately from register persistence and any unsaved active drawing. If the copy exists but the register save fails, recover that existing copy rather than duplicating again.
+4. Review the new sheet's title/number and exact title-block mapping under30. Changing register order is distinct from deliberate **Renumber sheets**, and neither proves the title block updated. Preserve existing legitimate gaps unless the reviewed renumber operation changes them.
+5. Choose whether the new sheet is managed and whether it belongs in the next issue. Those are separate choices. An automatically suggested issue membership or revision is still reviewed under the issue owner's contract; creating a sheet does not issue it.
+6. Before output, reconcile the actual saved/current source basis under29. Existing issued sheets retain their recorded revision/date unless deliberately revised; merely including them beside the new sheet does not revise them.
+
+**Example:** insert a detail sheet after the drainage plan. The user can inspect the new sheet without automatically renumbering the whole set, changing earlier issue dates or archiving the source plan. If the later title-block review is cancelled, the accepted sheet copy still exists and its unresolved mapping remains visible.
+
+This is a future representative end-to-end qualification: inspect actual new layout/file, register row, title block, issue membership and retained earlier history. A successful copy message alone does not establish those results. The exact numbering proposal and initial membership behavior remain owner-reviewed; no default has been silently chosen here.
+
 | Sequence | Expected review evidence |
 |---|---|
 | Remove S02 from issue → Discard draft → reopen | Drawing untouched; membership returns according to actual saved state; no archive created |
@@ -61,3 +76,19 @@ These are proposed refinements of approved shared-project behaviour, requiring o
 | Reconcile → Discard/close → reopen | Saved path assignments distinguished from discarded subsequent edits |
 
 No plugin build/test or AutoCAD verification was performed. Independent coverage audit is ongoing.
+# Drawing Properties: one drawing versus shared project scope
+
+Additional read-only source qualification from owner44b2 `Modules/Structural/UI/Dialogs/CePropsDialog.xaml.cs:20–81` and `Services/CeDrawingPropertiesService.cs:38–88,110–159,172–219`. This is not a live UI or installed-state check.
+
+| Action / field | Observed effect | Required end-user distinction |
+|---|---|---|
+| Open properties | Loads drawing summary first, fills blanks from manifest, then parser fallback; update-manifest defaults on when a root is recognised, sync defaults off | Show each value's scope/source when values disagree. A nonblank drawing value is not proof it is the current shared project authority. |
+| Save dialog | Copies trimmed fields and checkbox choices into model; Cancel returns false | Dialog acceptance is not yet durable saving. No drawing write occurs in that dialog Save handler itself. |
+| Save drawing properties | Service updates drawing custom/legacy summary fields and notifies content changed before attempting manifest changes | Drawing changed in memory is separate from disk saved and manifest updated. Failure later does not prove this earlier step was undone. |
+| Update project manifest | Replaces job metadata/defaults in manifest and assigns entered revision/date to every sheet row matching this DWG path | Project-level job edits and all-layouts-in-this-DWG revision edits are broader than a selected-sheet change. Preview exact affected scope; do not treat this as final issue history. |
+| Sync project now | Available only with manifest update; service invokes shared SyncManifest after saving manifest | Changes to other managed drawings are a separate action under the existing shared owner's review/recovery contract. |
+| Missing manifest | Service may load or scan before applying model | Opening and Save paths have different effects; no heavy scan-on-open inference. Qualify unexpected save-time scan/failure separately. |
+
+The inspected path collapses the drawing's revision/date fields to one pair even when several layouts have different issued states. Approved included-versus-revised sheet rules still govern; an ordinary Properties edit cannot silently be treated as a verified new issue. Existing shared project draft, drawing update and issue owners must reconcile this retained route rather than create competing authority.
+
+Future synthetic acceptance: a two-layout DWG with different revisions; drawing metadata disagreeing with shared metadata; Save with manifest update off/on; sync off/on; manifest failure after drawing-memory update; Cancel before acceptance; save/reopen. Compare exact field scopes, prior/current values, affected drawings and truthful partial-state messages. No job metadata, manifest or drawing was edited during this planning.

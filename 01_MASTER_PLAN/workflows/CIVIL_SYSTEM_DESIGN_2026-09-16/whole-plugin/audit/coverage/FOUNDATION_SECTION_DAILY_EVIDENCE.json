@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-09-17T01:13:26.6915901+10:00",
+  "scope": "Foundation closure and section-mark planning readback",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_foundation_first_placement_card.md",
+      "sha256": "B888E6EE65778D7A2432EBC7B4BB7554561BDC913C92A086D91BB385B9B43C09"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_section_mark_daily_card.md",
+      "sha256": "CC964F19FAC71351C5C8CC1BD739953C99BF58C138E1DD87748D5A1951651693"
+    }
+  ],
+  "finding": "FPLACE01",
+  "status": "Closed at proposal level",
+  "nativeTest": false,
+  "wholeGoalComplete": false
+}

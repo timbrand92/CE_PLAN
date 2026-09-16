@@ -67,3 +67,15 @@ Approved SH-04, AS-01, SH-01 and Round8 decisions govern. The inspected shared o
 ## Design checks still required
 
 Complete one-to-one field/action retention against SOURCE_INVENTORY and code-built controls; inspect whole-plugin visuals; reconcile exact modern/legacy fallback coverage; audit scope-specific source ownership. No new native behaviour is claimed by this document.
+
+## Column size picker and support placement — retained action boundary
+
+Root `UI/Dialogs/ColumnVisibilityPickerDialog.cs:153–177` returns a selected nonblank block-state label; it does not itself save settings or alter a drawing. `Commands/SupportBlockCommands.cs:931–985` maps the displayed C2 option to actual visibility. User Cancel throws cancellation; a windowing failure instead falls back to the command-line keyword picker. These different paths must not turn deliberate Cancel into another unwanted prompt.
+
+Insertion at:190–275 may obtain a matching size from the stored member schedule and bypass the picker; otherwise it prompts size, then position, then creates a block and sets visibility in a committed transaction. It passes the command's default visibility as fallback when the schedule-derived state cannot be applied. This is observed behaviour, not authority to substitute a design size invisibly. Read with the [schedule consumer contract](planner/structural_mts_xcl_writer_recovery_supplement.md): expose suggested versus actually applied size and preserve manual selection/override.
+
+Rotation and text placement occur after that commit. At:275–305, explicit cancellation attempts to erase the inserted block; a non-cancellation rotation failure returns without that same cleanup branch. The subsequent route attempts a nearby-beam link. Neither source cleanup calls nor the outer Undo grouping prove complete native rollback, label cleanup or approved association. Qualify the existing relationship owner against later Structural connection rules; do not import Civil's hydraulic rules into this command.
+
+Conversion uses the current block visibility as picker hint at:345–365 and only proceeds after selection. Preserve conversion scope, owned labels, manual positions and protected-object rules from the approved Structural card. Future synthetic acceptance: manual C2 choice, matching schedule suggestion, unavailable dynamic state, picker Cancel, window failure fallback, rotation Cancel/failure and label-stage cancellation; inspect actual block, label, relationship and Undo/save-reopen result. This completes the picker-to-consumer source trace, not native acceptance or a new engineering size approval.
+
+Visibility helper read-back at `SupportBlockCommands.cs:1128–1181` confirms attempted requested-state matching, then command-default matching, otherwise leaves current state and logs a warning. It returns no applied-size result to this caller. A requested size or log line is therefore not sufficient proof of the actual placed state; the target receipt must distinguish requested, applied, fallback and unresolved outcomes. No statement in source comments about AutoCAD internals is treated as verified native behaviour.

@@ -1,0 +1,32 @@
+{
+  "clockUtc": "2026-09-16 14:04:23 UTC",
+  "clockSydney": "2026-09-17 00:04:23 +10:00",
+  "disposition": "Final administrative readback passed; reviewed planning package ready for presentation",
+  "files": [
+    {
+      "file": "MORNING_PACK.md",
+      "sha256": "EF33AC8C1C6D63891357E4F75BDF21145AADEB415159FA1C15E3AD66A262B97B"
+    },
+    {
+      "file": "00_RUN.md",
+      "sha256": "D06D7C23ED7B866FDA3AC46D2CAD3C193198EAA330FF6B00B3D7400B07E9C32A"
+    },
+    {
+      "file": "17_EVIDENCE_AND_ACCEPTANCE_BOUNDARIES.md",
+      "sha256": "F02CBBCC4CBE112CC0207CF3445236F4689F6680B13521FDCE34E32ECDF92389"
+    },
+    {
+      "file": "19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md",
+      "sha256": "3159D0EBE91CF50161BE1F21ED930B196DFE9CFB02BA2D99DB6A71E48F94C4EA"
+    }
+  ],
+  "missingLocalLinks": 0,
+  "planningRequirements": "1-8 satisfied at bounded planning/proposal level",
+  "requestedOvernightDurationMet": false,
+  "durationBasis": "Root records restart about22:13 and early conclusion about00:03; approximately2h statement is consistent, not independently continuous-time metering",
+  "productBuilt": false,
+  "nativeTested": false,
+  "installed": false,
+  "newProposalsTimAccepted": false,
+  "goalStatusChanged": false
+}

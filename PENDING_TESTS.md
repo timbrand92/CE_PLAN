@@ -410,3 +410,15 @@ written contract from this chat, and Tim's word first. **Not decided.**
 
 **Still open in this area:** P-04 (a pipe with more than one bend) and P-05 (each half needs its own pipe text)
 — both in progress in the same chat.
+
+### ADDED 17 Sep — PSD-01, branch `claude/civil-k-l-2026-09-16` @ `457bf032`
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| T12 | A new system has **no** PSD | `CDCALC` → Detention → add a system. PSD box **empty**. Must NOT say `5.24` | both |
+| T13 | CE does not fill it in for you | Fill the Boyd's tab so it works out a PSD → the Detention PSD box is **still empty** (the one-click button is Codex's to add) | both |
+| T14 | A typed PSD survives | Type your own PSD, then change the Boyd's figure → yours stays | both |
+| T15 | It round-trips | Save, reopen: an empty PSD is still empty, a typed one still reads what you typed | both |
+
+**Worth a look on old jobs:** every system created before today started at `5.24 l/s`. CE does not rewrite
+saved records, so check any job you have not looked at since.

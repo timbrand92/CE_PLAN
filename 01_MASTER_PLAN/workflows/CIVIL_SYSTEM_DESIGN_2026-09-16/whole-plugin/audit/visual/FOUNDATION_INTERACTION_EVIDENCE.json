@@ -1,0 +1,129 @@
+{
+  "utc": "2026-09-16T15:02:10.576Z",
+  "target": "C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/ce-foundation-partial-review.html",
+  "checks": [
+    {
+      "name": "apply gated",
+      "pass": true
+    },
+    {
+      "name": "F1 manual retained eligible",
+      "pass": true
+    },
+    {
+      "name": "preview enables",
+      "pass": true
+    },
+    {
+      "name": "F1 done F2 unstarted",
+      "pass": true
+    },
+    {
+      "name": "stop retains F1",
+      "pass": true
+    },
+    {
+      "name": "stop acknowledges unstarted",
+      "pass": true
+    },
+    {
+      "name": "unknown no retry",
+      "pass": true
+    },
+    {
+      "name": "readback explicit fictional",
+      "pass": true
+    },
+    {
+      "name": "absence enables retry",
+      "pass": true
+    },
+    {
+      "name": "both complete",
+      "pass": true
+    },
+    {
+      "name": "whole system not ready",
+      "pass": true
+    },
+    {
+      "name": "blocked unchanged",
+      "pass": true
+    },
+    {
+      "name": "conflict unchanged",
+      "pass": true
+    },
+    {
+      "name": "retry disappears",
+      "pass": true
+    },
+    {
+      "name": "normal completes",
+      "pass": true
+    },
+    {
+      "name": "Escape stops proposal operation",
+      "pass": true
+    },
+    {
+      "name": "desktop no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "desktop F2/F3 no overlap",
+      "pass": true
+    },
+    {
+      "name": "desktop geometry",
+      "geometry": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "height": 720,
+        "footerBottom": 694,
+        "overlapF2F3": false
+      }
+    },
+    {
+      "name": "medium no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "medium F2/F3 no overlap",
+      "pass": true
+    },
+    {
+      "name": "medium geometry",
+      "geometry": {
+        "width": 1024,
+        "scrollWidth": 1024,
+        "height": 768,
+        "footerBottom": 694,
+        "overlapF2F3": false
+      }
+    },
+    {
+      "name": "narrow no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "narrow F2/F3 no overlap",
+      "pass": true
+    },
+    {
+      "name": "narrow geometry",
+      "geometry": {
+        "width": 360,
+        "scrollWidth": 360,
+        "height": 800,
+        "footerBottom": 1162,
+        "overlapF2F3": false
+      }
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

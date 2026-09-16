@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-17T03:04:19.8062125+10:00",
+  "packHash": "E8703085BF2E7EABA345968B4AE67DDEC44C11A1EDD408B1B9DCE18D1C8EDA80",
+  "w6Hash": "3CA2D4DCB7D28508B9752732E8BE290F7309535D223C21CBC3052027F0BBD9DC",
+  "closed": [
+    "PICKER01"
+  ],
+  "open": [
+    "STEELDAILY01"
+  ],
+  "nativeExecuted": false,
+  "packStatus": "Working draft"
+}

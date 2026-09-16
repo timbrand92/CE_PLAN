@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-09-17T01:17:53.6593053+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\37_SOAKAGE_SUITABILITY_TO_PHYSICAL_PROVISION.md",
+      "sha256": "16D2988F76B8F51A286944CCB0EB38B389C1DF0B70DF27E4EF9E07AFC5C87588"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_pier_pile_daily_placement_card.md",
+      "sha256": "96CD551CFBC3013F9DD8E28D848F1D816FCB59C4FCBBBE9C4592F3A3117F4969"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Services\\SoakageSizingService.cs",
+      "sha256": "A3C9E74B29DDF2A0940EA24BDB5120146C34EC9D76EB157A1C1A402B3B3B9AC2"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Models\\SoakageModels.cs",
+      "sha256": "AE0599AE4A3612A8EAEE29259F8C5DF9AF55FD0E3219355011D3890CEF25C2F5"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Drainage\\Services\\AutoDesignOrchestrator.cs",
+      "sha256": "E0D4A6861C2BE46621EDA92C50997E5A28BF19B8FDA72C61D6C1D80E31A17B4B"
+    }
+  ],
+  "disposition": "No material correction found in bounded source/planning readback",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

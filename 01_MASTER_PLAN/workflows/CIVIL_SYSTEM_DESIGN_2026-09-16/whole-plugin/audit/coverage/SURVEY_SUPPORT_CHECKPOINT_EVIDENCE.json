@@ -1,0 +1,15 @@
+{
+  "clockUtc": "2026-09-16 13:43:08 UTC",
+  "scope": [
+    "root13 survey consumers",
+    "root03 support picker/visibility",
+    "root19 interim checkpoint"
+  ],
+  "closed": [
+    "CIVS-01",
+    "CIVS-02"
+  ],
+  "newMaterialWordingFindings": 0,
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

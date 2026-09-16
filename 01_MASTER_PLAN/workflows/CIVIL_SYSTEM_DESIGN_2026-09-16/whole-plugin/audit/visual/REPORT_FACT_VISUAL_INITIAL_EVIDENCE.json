@@ -1,0 +1,149 @@
+{
+  "utc": "2026-09-16T15:26:34.436Z",
+  "target": "C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/ce-report-fact-review.html",
+  "sha256": "0072919f947cc7397232ebff4197ad028a0a785f5c68acc1ce1cd0ae26bd6cd3",
+  "checks": [
+    {
+      "name": "initial adoption gated",
+      "pass": true
+    },
+    {
+      "name": "load preserves basis",
+      "pass": true
+    },
+    {
+      "name": "empty selection gated",
+      "pass": true
+    },
+    {
+      "name": "unknown candidate no adoption control",
+      "pass": true
+    },
+    {
+      "name": "review enables",
+      "pass": true
+    },
+    {
+      "name": "cancel retains pending",
+      "pass": true
+    },
+    {
+      "name": "cancel no governing change",
+      "pass": true
+    },
+    {
+      "name": "escape retains and invalidates",
+      "pass": true
+    },
+    {
+      "name": "revision invalidates not adopts",
+      "pass": true
+    },
+    {
+      "name": "revision pending retained",
+      "pass": true
+    },
+    {
+      "name": "page and candidate current revision",
+      "pass": true
+    },
+    {
+      "name": "unload hides page",
+      "pass": true
+    },
+    {
+      "name": "unload blocks review",
+      "pass": true
+    },
+    {
+      "name": "unload retains basis/pending",
+      "pass": true
+    },
+    {
+      "name": "adopts selected area",
+      "pass": true
+    },
+    {
+      "name": "manual pin retained",
+      "pass": true
+    },
+    {
+      "name": "changed marked out of date",
+      "pass": true
+    },
+    {
+      "name": "mixed persists",
+      "pass": true
+    },
+    {
+      "name": "level basis becomes report",
+      "pass": true
+    },
+    {
+      "name": "old manual basis historical",
+      "pass": true
+    },
+    {
+      "name": "no-change confirmation not new numerical change",
+      "pass": true
+    },
+    {
+      "name": "later candidate does not overwrite adopted",
+      "pass": true
+    },
+    {
+      "name": "desktop no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "medium no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "narrow no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    }
+  ],
+  "observations": [
+    {
+      "name": "excerpt after manual replacement",
+      "text": "Reference level: 101.260 m. Review its purpose and datum before replacing the manual pin."
+    },
+    {
+      "name": "state after prior change then keep",
+      "text": "Concept confirmation only; no file or design saved. Governing numbers unchanged. Report remains mixed: discharge evidence unresolved."
+    },
+    {
+      "name": "desktop",
+      "geometry": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "footerBottom": 702,
+        "height": 720
+      }
+    },
+    {
+      "name": "medium",
+      "geometry": {
+        "width": 1024,
+        "scrollWidth": 1024,
+        "footerBottom": 702,
+        "height": 768
+      }
+    },
+    {
+      "name": "narrow",
+      "geometry": {
+        "width": 360,
+        "scrollWidth": 360,
+        "footerBottom": 1419,
+        "height": 800
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,4 +1,4 @@
-# Structural source command and window coverage ledger
+﻿# Structural source command and window coverage ledger
 
 **Planning-only, source-backed inventory.** This ledger records declarations and configuration observed in the checked-out source on 16 September 2026. It does **not** prove that a command loads, appears on the ribbon, runs safely, survives save/reopen or has been accepted in AutoCAD.
 
@@ -267,13 +267,13 @@
 | CE_BARWEIGHT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:38 | Source semantic identity; currently shares method with `BWT`/`BARWEIGHT`. No ordinary-route disposition inferred from the shared source method. | W6 |
 | BWT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:39 | **Retire from ordinary registration — approved `ST6-14`**; retain source/alias evidence during transition. | W6 |
 | BARWEIGHT | Bar Weight — Footings/Rebar | Modules/Structural/Commands/RebarCommands.cs:40 | Keep/Modify proposal — source route | W6 |
-| LIGS | Ligatures — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:13 | Keep/Modify proposal — source route | W6 |
-| COLTIES | Column Ties — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:14 | Keep/Modify proposal — source route | W6 |
-| WALLREO | Wall Reo — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:15 | Keep/Modify proposal — source route | W6 |
-| WALLSTRS | No exact registry match observed | Modules/Structural/Commands/ReinforcementDetailCommands.cs:16 | Unknown — no exact registry descriptor | W6 |
+| LIGS | Ligatures — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:13–24 | **Approved target: Hide** under ST8-15; current source is message-only Pending stub | W6 |
+| COLTIES | Column Ties — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:13–24 | **Approved target: Hide** under ST8-15; current source is message-only Pending stub | W6 |
+| WALLREO | Wall Reo — Section Details/Reinforcement | Modules/Structural/Commands/ReinforcementDetailCommands.cs:13–24 | **Approved target: Hide** under ST8-15; current source is message-only Pending stub | W6 |
+| WALLSTRS | No exact registry match observed | Modules/Structural/Commands/ReinforcementDetailCommands.cs:16–24 | Current source: message-only stub; target discovery requires scoped owner review | W6 |
 | CE_MEMBERLABEL | Member Label — Scheduling/Labels | Modules/Structural/Commands/SchedulingCommands.cs:18 | Keep/Modify proposal — source route | W8 |
 | LABEL | Member Label — Scheduling/Labels | Modules/Structural/Commands/SchedulingCommands.cs:19 | Keep/Modify proposal — source route | W8 |
-| ML | No exact registry match observed | Modules/Structural/Commands/SchedulingCommands.cs:93 | Unknown — no exact registry descriptor | W8 |
+| ML | No exact registry match observed | Modules/Structural/Commands/SchedulingCommands.cs:93–100 (`NativeMlineAlias` queues native `MLINE`) | Source-observed native MLINE alias — no schedule/member-label semantic or discovery route inferred | W-legacy |
 | SBEAM | Steel/Timber Section — Section Details/Beam Sections | Modules/Structural/Commands/SectionDetailCommands.cs:26 | Keep/Modify proposal — source route | W6 |
 | RCBEAM | RC Beam Section — Section Details/Beam Sections | Modules/Structural/Commands/SectionDetailCommands.cs:381 | Keep/Modify proposal — source route | W6 |
 | CE_SECTIONMARK | Section Mark — Annotation/Markers | Modules/Structural/Commands/SectionMarkCommands.cs:19 | Keep/Modify proposal — source route | W6 |
@@ -380,4 +380,5 @@
 ---
 
 **Planning status:** source inventory complete for declared command files; workflow review continuing. **Built/Tested/Installed/Tim-accepted:** not assessed by this ledger.
+
 

@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-09-17T01:11:59.2655874+10:00",
+  "scope": "Planning document and bounded source readback only",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\34_DETENTION_ORDINARY_DESIGN_SEQUENCE.md",
+      "sha256": "F8473225D215A4CF137791870418232E7B364D6F3CF7226181FF6F3AA85280AC"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\33_REPORT_FACT_ADOPTION_AND_PARTIAL_SAVE.md",
+      "sha256": "7FB31D0261AAD8A65505056D74532F036E0E86F8AB32D2CB66C4251A14D01AEE"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\35_WSUD_ESTIMATE_REPORT_AND_DRAWN_PROVISION.md",
+      "sha256": "69786BA13E22A840AD55C82D7610BB21FC943CDB6A76035C11151A850F2D8AEA"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_reinforcement_daily_placement_card.md",
+      "sha256": "0155A691AFA660824D81E64A862C2AB513157AA63FD0363474D032131BB75663"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_foundation_first_placement_card.md",
+      "sha256": "3AE7D01F97397BF560A6FC7139B26BE87F5CDCE83079593091618AEB0A8640ED"
+    }
+  ],
+  "openFindings": [
+    "FPLACE01",
+    "WSUDUX01"
+  ],
+  "closedFindings": [
+    "REOUX01",
+    "REOUX02"
+  ],
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

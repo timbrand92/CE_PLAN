@@ -1,0 +1,17 @@
+{
+  "clockUtc": "2026-09-16 13:39:25 UTC",
+  "civilXamlNames": 33,
+  "missingMappedNames": 0,
+  "findings": [
+    "CIVS-01 storage versus activation",
+    "CIVS-02 early existing-layer change"
+  ],
+  "closed": [
+    "MR-01",
+    "MR-02",
+    "SURF-01",
+    "SURF-03"
+  ],
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

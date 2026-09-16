@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-09-17T01:32:05.3712784+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_standard_detail_library_daily_card.md",
+      "sha256": "EBD19BD4ABD763A155012C70EC993443757541F0679F6DBF115DF3BA8B90AA1D"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\20_INTEGRATED_SYNTHETIC_JOB_WALKTHROUGH.md",
+      "sha256": "1186686E7F8C3A26679374CA07DC2FEE8465C3FCDC3DDBADB6D6EF80CCD3135C"
+    }
+  ],
+  "closedFinding": "DETAILUX01",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

@@ -1,0 +1,17 @@
+{
+  "clockUtc": "2026-09-16 13:29:04 UTC",
+  "scope": [
+    "root11 precision contract",
+    "root15 report controls",
+    "root24 Help",
+    "planner MTS authority readback"
+  ],
+  "closedPlanningFindings": [
+    "INT-02",
+    "SAVE-05"
+  ],
+  "newMaterialFindings": 0,
+  "runtimeExecuted": false,
+  "wholePluginComplete": false,
+  "report": "PRECISION_HELP_REPORT_DELTA.md"
+}

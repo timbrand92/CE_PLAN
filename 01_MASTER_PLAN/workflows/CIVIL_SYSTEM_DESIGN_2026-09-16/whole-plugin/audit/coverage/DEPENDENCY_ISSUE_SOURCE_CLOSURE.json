@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-17T03:30:19.7830373+10:00",
+  "closed": [
+    "DEP01",
+    "ISSUESOURCE01",
+    "CHOICE01"
+  ],
+  "root29Hash": "E284C25FB8279029DEC4510AF25FE2CC60122B9D33AF305838C20A571B1136D9",
+  "twoFloorHash": "AC7DD7813D0BAE2218FA590D8DE6C177E6CF0EEA538A5F13FEFBA03E728B5628",
+  "root17HistoricalDispositionRead": true,
+  "runtime": false,
+  "wholeRunComplete": false
+}

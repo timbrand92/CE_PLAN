@@ -661,3 +661,29 @@ Suite **9928 / 9888 passed / 23 failed / 17 skipped** — same 23 pre-existing n
 
 **CDTWL status after today:** TWL-04 ✅, TWL-05 ✅, TWL-06 pits ✅ / **pipes still open**, TWL-03 harm removed
 but cause unestablished, TWL-07 still Tim's question.
+
+### 6u. Tim's PSD ruling — 17 September 2026
+
+> **Tim, on the hard-coded permissible site discharge: *"stay empty until inputted or found in cddesign"***
+
+Answers the question §6t raised. `DetentionSystemViewModel` started every new detention system with
+`_psd = "5.24"` — a **permissible site discharge, hard-coded in code**. It **sizes the orifice**, and on
+screen it was indistinguishable from a figure worked out for that job.
+
+**Built, both halves:**
+
+- **"stay empty until inputted"** — `_psd` starts empty and saves empty.
+- **"or found in cddesign"** — the calculation already held a PSD (`BoydsDraftData.PsdDischarge`) that nothing
+  was reading across. It is now surfaced on every detention system and **offered**, in the same shape as the
+  existing Boyd's required-volume offer. **Offered, never applied:** a typed PSD is never overwritten, and a
+  zero is not a PSD.
+
+**Window work left for Codex (ruling B):** the one-click button. The command, its label and its enabled state
+exist and are tested; the Detention tab needs a button bound to them beside "Use Boyd's value".
+
+**Still at risk:** jobs already saved with `5.24` keep it — CE does not rewrite an engineer's records behind
+their back, so any job not checked since is worth a look.
+
+**New open question (small):** the PSD offered comes from the **Boyd's tab's own** figure. If CDDESIGN should
+outrank it when the two differ, Tim to say — they are two different calculations and neither was assumed to
+win.

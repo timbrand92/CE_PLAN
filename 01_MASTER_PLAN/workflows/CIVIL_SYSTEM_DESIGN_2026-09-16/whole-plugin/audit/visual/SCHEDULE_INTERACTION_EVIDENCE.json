@@ -1,0 +1,126 @@
+{
+  "utc": "2026-09-16T14:23:11.024Z",
+  "target": "C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/ce-schedule-change-review.html",
+  "checks": [
+    {
+      "name": "four distinct initial values",
+      "pass": true
+    },
+    {
+      "name": "initial apply disabled",
+      "pass": true
+    },
+    {
+      "name": "review and keep enables",
+      "pass": true
+    },
+    {
+      "name": "cancel retains pending",
+      "pass": true
+    },
+    {
+      "name": "cancel preserves saved and placed",
+      "pass": true
+    },
+    {
+      "name": "cancel disables",
+      "pass": true
+    },
+    {
+      "name": "discard restores saved value/reason",
+      "pass": true
+    },
+    {
+      "name": "discard does not accept source",
+      "pass": true
+    },
+    {
+      "name": "second change invalidates choice",
+      "pass": true
+    },
+    {
+      "name": "second change retains pending",
+      "pass": true
+    },
+    {
+      "name": "blank reason blocks",
+      "pass": true
+    },
+    {
+      "name": "pending value saved",
+      "pass": true
+    },
+    {
+      "name": "only schedule changes",
+      "pass": true
+    },
+    {
+      "name": "no repeat apply",
+      "pass": true
+    },
+    {
+      "name": "linked removes override",
+      "pass": true
+    },
+    {
+      "name": "linked source change marks stale",
+      "pass": true
+    },
+    {
+      "name": "Escape cancels from input",
+      "pass": true
+    },
+    {
+      "name": "negative RL allowed",
+      "pass": true,
+      "classification": "finding candidate"
+    },
+    {
+      "name": "desktop no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "desktop layout",
+      "geometry": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "height": 720,
+        "scrollHeight": 721,
+        "footerBottom": 693.375
+      }
+    },
+    {
+      "name": "medium no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "medium layout",
+      "geometry": {
+        "width": 1024,
+        "scrollWidth": 1024,
+        "height": 768,
+        "scrollHeight": 768,
+        "footerBottom": 693.375
+      }
+    },
+    {
+      "name": "narrow no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "narrow layout",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 844,
+        "scrollHeight": 1230,
+        "footerBottom": 1202.375
+      }
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

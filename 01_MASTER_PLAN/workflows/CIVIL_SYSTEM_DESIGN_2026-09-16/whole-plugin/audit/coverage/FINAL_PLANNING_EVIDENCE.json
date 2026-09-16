@@ -1,0 +1,14 @@
+{
+  "clockUtc": "2026-09-16 14:02:08 UTC",
+  "clockSydney": "2026-09-17 00:02:08 +10:00",
+  "substantivePlanningCoverage": "complete at reviewed proposal level",
+  "closed": [
+    "PROP-01",
+    "PROP-02",
+    "PROP-03"
+  ],
+  "residual": "administrative pack/status update and readback",
+  "runtimeExecuted": false,
+  "productComplete": false,
+  "goalStatusChanged": false
+}

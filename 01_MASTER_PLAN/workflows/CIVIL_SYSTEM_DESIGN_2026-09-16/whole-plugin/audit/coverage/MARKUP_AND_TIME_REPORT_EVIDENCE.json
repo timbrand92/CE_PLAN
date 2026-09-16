@@ -1,0 +1,10 @@
+{
+  "clockUtc": "2026-09-16 13:35:34 UTC",
+  "scope": "root04 markup; root22 report export",
+  "findings": [
+    "MR-01 date-filter freshness",
+    "MR-02 empty fallback whitelist"
+  ],
+  "runtimeExecuted": false,
+  "wholePluginComplete": false
+}

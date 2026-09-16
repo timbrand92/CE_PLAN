@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-17T03:20:00.8445424+10:00",
+  "closed": [
+    "CEINSPECT01",
+    "XLSX example residual"
+  ],
+  "inspectHash": "A1963ABEB71EBABB8CB787EF1D76FDFF3D4CBE1870F921BE16373408C2A7F96C",
+  "exportHash": "87E5D99B17C467445A5BD57AF649B4CD480DE7C74BBD8B1A31E798F4827F7188",
+  "pending": "structural_planner_progress.md:408 contains four literal newline markers; planner notified",
+  "runtime": false
+}

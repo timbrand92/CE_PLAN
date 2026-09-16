@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-09-17T03:18:28.4512618+10:00",
+  "cardHash": "2F8CDC1D39C84E1411065191250EB48B60C13D5E9CB74F200CC88F7F1AF4F783",
+  "runtime": false,
+  "scope": "Named source ranges plus actual planning card",
+  "pending": [
+    "CE_INSPECT table newline",
+    "XLSX example actual-read binding"
+  ]
+}

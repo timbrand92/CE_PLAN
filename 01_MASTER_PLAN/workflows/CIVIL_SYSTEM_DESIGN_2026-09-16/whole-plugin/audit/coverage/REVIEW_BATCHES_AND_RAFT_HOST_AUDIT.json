@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-17T02:47:25.7210556+10:00",
+  "report": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\audit\\coverage\\REVIEW_BATCHES_AND_RAFT_HOST_AUDIT.md",
+  "scope": "Bounded review section/card/source samples; no runtime",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md",
+      "sha256": "867F06BC44455A04912778FA95A542F1FA6761334BF52C2483EB81681079AA35"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_raft_host_entry_adoption_card.md",
+      "sha256": "E7DE7134C1CBDEC1F4BA95C5B3496DA1450136DE7375EDB0244D526EFF819425"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\docs\\CARDS\\ST-06_FOUNDATIONS_REBAR.md",
+      "sha256": "C00F1CB513438A24DCA8D6DF28779D9AA95CC4CCF746157B6B96E3DA4DA09B9E"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Structural\\Commands\\CeTextCommands.cs",
+      "sha256": "E8C1722D1D1EA3E58FAE500D6AD6021F9EE25E7CD96A0270B734206EE68CEA0C"
+    },
+    {
+      "path": "C:\\Lisp Files\\CE_ACAD_PLUGIN\\Modules\\Structural\\Services\\FoundationService.cs",
+      "sha256": "48CFDE8E6D11B76D2BE53F21939E304A41E9E9098B6F7440CF18839BEEE625F6"
+    }
+  ]
+}

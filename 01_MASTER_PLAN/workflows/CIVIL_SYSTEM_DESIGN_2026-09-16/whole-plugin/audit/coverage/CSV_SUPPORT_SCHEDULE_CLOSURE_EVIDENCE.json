@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-09-17T01:49:33.0038340+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\43_PIT_SCHEDULE_CSV_REVIEW_AND_ADOPTION.md",
+      "sha256": "9FF62D5AB1BD0ACE92B886F626A706F31026A859D2A782E195D5D3732133CB75"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_supports_bracing_daily_card.md",
+      "sha256": "BD14BAC3ADD7DD0BDCE27BDA53DDEAC25F66F9E166A60A47B89DC954B53669AF"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_member_schedule_creation_revision_daily_card.md",
+      "sha256": "E9E3AE1812619EB0A1E623BB4AA44BE77E411CB58017A4264EB3573BC4379EF7"
+    }
+  ],
+  "closedFindings": [
+    "SUPPORTUX01",
+    "SCHEDUX01"
+  ],
+  "csvDisposition": "No material correction",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

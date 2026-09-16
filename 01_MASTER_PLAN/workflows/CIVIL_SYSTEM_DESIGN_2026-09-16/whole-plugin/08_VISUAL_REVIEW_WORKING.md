@@ -2,9 +2,21 @@
 
 FOR TIM
 
+**Current reading note:** five frozen concepts have their bounded independent receipts recorded below, with matching file hashes rechecked at03:55:45 on17September. Earlier pending-review and creation-turn presentation instructions remain historical checkpoints, not new work requests. No later planning addition is automatically tested by those concepts.
+
 The concept uses one fictional job to show setup, Civil review, framing, details, sheets/issue, settings and support. It is a planning illustration, not a built AutoCAD window or a replacement for every command.
 
 ## Artefacts
+
+### Resumed interaction visual — schedule source change
+
+`C:\Users\TimothyBrand\.codex\visualizations\2026\09\16\01a0a938-956c-79d1-9ea7-8fa7121c6042\ce-schedule-change-review.html` is a separate proposed interaction, not a replacement for the first-pass concept. It distinguishes previous/new linked value, saved override/reason and pending override/reason; Cancel comparison retains typing, Discard restores saved state, and a second source change invalidates acceptance. All levels and geometry are fictional; no source/drawing is read or changed.
+
+Root inspected desktop and narrow screenshots. Initial dark table text and tall desktop layout were corrected; primary actions fit the checked1280×720 viewport. Narrow320–390-style conversation layouts stack and scroll; this is not native no-scroll parity or a mobile product proposal. Root tested actual widths1280/1024/736/360. Independent visual review found a positive-only input restriction; root corrected signed finite numeric input and added negative/nonfinite checks. Latest root receipt `schedule-review-checks.json`:26 checks,0 failures,0 script errors. Independent correction readback is pending in `audit/visual/SCHEDULE_VISUAL_AUDIT.md`; do not transfer old-hash results to the revised file.
+
+These are browser-concept checks only. Real PS20 close prompts, native placement/Undo, source-drawing updates, saved file durability and all other product fields remain outside this single comparison illustration.
+
+Independent signed-level correction closure is now appended to `audit/visual/SCHEDULE_VISUAL_AUDIT.md`:22/22 independent checks pass, no script errors, exact revised SHA256 `77B26F0BD86C9B06F11E17B8E92A10D4B790443CE1A78E4ADB0F56CF4BFEC415`. Root verified that current disk hash and retains its separate26-check receipt. SV01 is closed for this concept; narrow scrolling and all native/product limitations remain. Whole-plugin overnight work continues.
 
 - Interactive concept: `C:\Users\TimothyBrand\.codex\visualizations\2026\09\16\01a0a938-956c-79d1-9ea7-8fa7121c6042\ce-whole-job-workflow.html`.
 - Root check: `check-whole-job.cjs` in the same folder; receipt `whole-job-checks.json`.
@@ -28,3 +40,42 @@ The root opened actual screenshots and corrected low-contrast issue rows and a s
 The pending recheck above is now superseded by `audit/visual/VISUAL_CLOSURE.md` and `VISUAL_CLOSURE_EVIDENCE.json`: 29/29 independent checks passed against the same frozen SHA256. The auditor opened the actual corrected artifact and corrected screenshots. All five listed findings are closed; seven action footers fit the tested1280×720 viewport without horizontal overflow. The root read the closure record back before presentation.
 
 This permits presentation of the bounded concept only. Setup/search/document selection remain illustrative stubs; no source extraction, real plotting, support collection, drawing persistence or native AutoCAD interaction was performed. The whole-plugin coverage audit remains outstanding. No visual is declared whole-plugin-complete or Tim-accepted.
+
+### Morning-pack preparation readback
+
+Root re-read the independent closure, recomputed the on-disk HTML SHA256 (unchanged at the frozen value above) and opened `audit/visual/closure-framing-desktop.png`. The actual image shows the large framing preview, explicit operation scope, retained manual label position, source instruction and visible footer actions. This is a screenshot/readback check, not an additional interaction test or native-window acceptance. The recorded 72 root and 29 independent checks are unchanged.
+
+## Resumed foundation partial-result concept — 17 September
+
+Task-owned file: `C:\Users\TimothyBrand\.codex\visualizations\2026\09\16\01a0a938-956c-79d1-9ea7-8fa7121c6042\ce-foundation-partial-review.html`.
+
+The fictional one-level schematic reviews two eligible footings while preserving a protected item, an actual source/manual-choice conflict and an already-current item. F1 retains a manually positioned label without treating that alone as a conflict. Preview gates the operation; Stop/Escape before F2 preserves completed F1. Lost response leaves F2 Unknown, blocks retry until fictional readback confirms absence, and retries F2 only. Bounded operation completion does not label the whole system ready.
+
+Root `check-foundation-review.cjs` / `foundation-review-checks.json`:22 checks pass, zero browser errors. Actual1280px and360px screenshots opened; desktop actions fit720px height, narrow content stacks and scrolls. Independent `audit/visual/FOUNDATION_VISUAL_AUDIT.md` reports23 checks pass after Escape/focus and completion-wording corrections. Exact revised SHA256 `BE48322C93B985DD65C53BCFF700B96E8EEE0EF5D7C5AE526AAFA2588B5773C8`.
+
+Limits: static one-level synthetic basis, fixed fictional readback outcome, no real geometry regeneration, provider/source updates, persistence, AutoCAD focus/Undo, multi-level relation or engineering proof. The initial22/23 independent result and failed initial root Escape fix remain historical evidence; final correction explicitly focuses the visible Stop control so scoped Escape works. This concept does not establish native implementation or Tim acceptance. Whole-plugin planning continues.
+
+## Resumed CDDESIGN report-fact concept — 17 September
+
+Task-owned file: `C:\Users\TimothyBrand\.codex\visualizations\2026\09\16\01a0a938-956c-79d1-9ea7-8fa7121c6042\ce-report-fact-review.html`.
+
+Three fictional report facts show governing/candidate values, manual pin, unreadable discharge candidate and a synthetic cited page. Select/change documents changes only the loaded review set. Reviewed choices gate confirmation; Cancel/Escape/new revision retain pending choices but invalidate the prior review. Adopted per-fact revision/page/source remains visible when a later candidate appears. Replacing the pin updates both current-state and page wording. An affected result's out-of-date state survives later Keep, revision and Cancel actions; no recalculation is simulated. Linked treatment/reuse grouping remains explicitly open.
+
+Root `check-report-review.cjs` / `report-review-checks.json`:30 checks pass, no browser errors. Root opened1280/360 initial screenshots and the adoptedRevC/candidateRevD state. Independent `audit/visual/REPORT_FACT_VISUAL_AUDIT.md` and REPORT_FACT_VISUAL_EVIDENCE report32 checks pass, no errors, after RFV01–03 corrections. Exact frozen SHA256 `AD693FB9E3C9A77DE1FFD2877B5CA0CB7AD3A9A89A9BF5028EB7C47E0D2C319F`.
+
+Desktop footer approximately693px fits720px; narrow layout scrolls and is only a readable conversation fallback. This is synthetic offline interaction, not automatic project discovery, PDF/OCR ingestion, real requirement extraction/adoption, partial-save recovery, hydraulic calculation, native window sizing/focus, persistence or Tim acceptance. No client report is depicted. Initial markup option error was fixed before the first complete root run; independent audit then found stale pin wording, missing adopted citations and transient stale-result status, all corrected in the frozen version. Whole-plugin planning remains active.
+
+## Fifth visual — whole-plugin planning map
+
+`C:\Users\TimothyBrand\.codex\visualizations\2026\09\16\01a0a938-956c-79d1-9ea7-8fa7121c6042\ce-whole-plugin-planning-map.html` is an interactive reading explainer, not a proposed product window or command launcher. Twelve work areas show input, automatic assistance, user choices, output and revision consequence. Water Tank remains last/owner-reserved. It maps the combined planning contract rather than simulated engineering outcomes.
+
+Root check-planning-map.cjs / planning-map-checks.json currently33/33 pass, no browser exceptions, including12 selections, single active selection, complete five-row meaning, evidence/outlet/issue distinctions, keyboard choice and no horizontal overflow at736/360/320. Root opened736/320 screenshots; a split narrow row-label word was fixed and final renderer/33 checks/320 screenshot repeated. One intermediate renderer call refused overwrite; the immediately following check still used the older wrapper, so that intermediate run is not final-version evidence. Explicit --force rerender and subsequent successful33-check run are the final receipt.
+
+Final SHA256 `728AF8DDA18B422AFD2BA5E1D4DF59328F37A46D3CF6B48B40D35DF1B625DBE0` after clarifying that confirmed numerical changes make results stale. Root rerendered and repeated33/33 checks. Independent `audit/visual/PLANNING_MAP_AUDIT.md` and `PLANNING_MAP_OFFLINE_EVIDENCE.json` report43/43 with HTTP(S) blocked (42 behaviour/layout/status checks plus one blocked-route configuration check), zero browser exceptions; final736/320 screenshots actually opened. Initial independent wrapper check was42/43 because the renderer requests three allowed libraries; that initial no-network failure is retained. Fragment itself makes no external calls, and the blocked-network run proves these local selections still work.
+
+Cleared for bounded explainer presentation. Native focus/sizing, document discovery, calculations, drawing writes, project persistence and issue publishing are not tested. This explainer uses host typography, not a CE product screenshot. Must be presented inline in this creation turn's final; no whole-run completion implied.
+# Frozen-artifact identity check — 17 September03:55:45 Sydney
+
+Root read SHA256 from the five exact task-owned HTML files at this checkpoint. All match the earlier reviewed frozen versions: whole-job `BA136356F8744A7B426E5CCD3280806591BB7CBE09A55CAA7A435518A0AF7B21`; schedule `77B26F0BD86C9B06F11E17B8E92A10D4B790443CE1A78E4ADB0F56CF4BFEC415`; foundation `BE48322C93B985DD65C53BCFF700B96E8EEE0EF5D7C5AE526AAFA2588B5773C8`; report-fact `AD693FB9E3C9A77DE1FFD2877B5CA0CB7AD3A9A89A9BF5028EB7C47E0D2C319F`; planning-map `728AF8DDA18B422AFD2BA5E1D4DF59328F37A46D3CF6B48B40D35DF1B625DBE0`.
+
+This is artifact-identity readback only. No visual was modified or newly generated and no browser/native test was rerun in this block. The prior exact interaction checks/screenshots retain their original scopes and limitations; later planning additions are not automatically illustrated or tested by these frozen concepts.

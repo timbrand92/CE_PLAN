@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-09-17T01:20:47.5951468+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\38_PUMP_RESULT_AUTHORITY_AND_ROUTE_RECONCILIATION.md",
+      "sha256": "5C70468D2D168BA0F3703B2370E7A70C857F3827FDA386394FFCE8EC442C7459"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\39_OVERLAND_ROUTE_EVIDENCE_AND_DRAWING_REVIEW.md",
+      "sha256": "F48BAF2F793A0E9FA84049E700578D13B9416DCA495DFC34CAC432F0827E2BFC"
+    }
+  ],
+  "closedFinding": "PUMPROUTE01",
+  "overlandDisposition": "No material correction in bounded planning readback",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

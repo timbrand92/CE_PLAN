@@ -97,3 +97,22 @@ QA7 governing-change staleness is separate from new unadopted evidence: a newer 
 6. Requirednote unavailable orAIcannotverify: Unknown; userdispositionrecorded without fabricatedPass.
 
 No source changes, native tests or engineering verification performed. Independent whole-plugin audit continues.
+
+## CDTAG action and split scope — bounded current-source qualification
+
+Read root `Commands/SourceTagCommand.cs:14–161`, `Services/SourceTagService.cs:151–303`, `Services/LinkService.Split.cs:20–224` and `LinkService.SourceMoves.cs:319–357`. This is read-only; active CD/PIT ownership is untouched. The existing CV3/later exact-connection decisions above govern the target, not the current nearest-candidate path.
+
+| Action | Actual inspected sequence | Required end-user distinction |
+|---|---|---|
+| Select block / edit tag | Block selection abort returns; existing-tag Action prompt maps any non-OK result to Set. Tag-text non-OK returns without later tagging. | Escape must be qualified at each prompt. Current Action Escape is not an immediate exit in this body. |
+| Show label prompt | Any non-OK result, including cancellation status, is treated as showLabel=true, followed by tag/label/connection writes and commit. | Proposed target: Escape cancels the pending edit. Do not claim current Escape is safe merely because earlier prompts return. Native reproduction remains unperformed. |
+| Choose No for label | Skips EnsureTagLabel; this branch does not remove an existing label. | Distinguish choosing not to create/update a label from hiding/removing one already drawn. Keep the intended visibility choice explicit. |
+| Apply tag | Commits tag, optional label and connection point first; then registers attachment/source, attempts split and relinks all pipe endpoints. | A later error or split failure does not prove the earlier tag edit was undone. Review exact affected topology before acceptance; receipt separates tag, label, split and relink. |
+| Inline split | Scans recognised model-space pipe polylines, rejects ineligible geometry/hitbox candidates, chooses smallest owner distance among eligible candidates. Equal distance retains the earlier selected candidate in this loop. | This is nearest eligible geometry, not a reviewed choice of intended pipe. Nearby parallel pipes/crossings require exact approved connection scope; no engineering default or new tolerance is approved here. |
+| Split completion | Split transaction commits before old/new geometry-link updates. Catch returns zero if later work throws. | Zero return alone does not prove no split occurred. Distinguish geometry committed from subsequent linking complete; qualify actual Undo/recovery in AutoCAD. |
+| Remove tag | Attempts label/hitbox erase with caught erase exceptions, removes stored keys and commits, then relinks endpoints. | Stored tag removed does not establish every associated graphic erased. A visible remnant needs a scoped finding, not blind removal of nearby graphics. |
+| Linked-pipe count | Counts project pipe From/To strings matching the entered tag. | Displayed count is tag-text based, not proof of unique selected-block identity; duplicate tag cases need explicit checking. |
+
+Manual presentation: EnsureTagLabel updates text of an existing DBText/MText without repositioning it in the inspected branch. This supports a bounded preservation observation, not proof every later move/refresh retains placement. The move helper reuses a stored connection point/radius when available and writes them again; its comment alone is not evidence that all edit/move/rotate cases work.
+
+Future synthetic workflow card: existing tag → Escape at each prompt; choose No with a label already present; two equally near eligible pipes; duplicate tag text; split committed then linkage failure; protected label during removal; manual label movement then retag/save/reopen. Expected target keeps explicit connection approval, native protections, truthful partial results and retained presentation. No scenario was run, no issue marked fixed, no source changed.

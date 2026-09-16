@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-09-17T01:52:17.7376821+10:00",
+  "files": [
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\44_RAINGARDEN_BOUNDARY_GIO_AND_REPORT_COMPARISON.md",
+      "sha256": "3E8CACB9A56C701353F1DFB1133864DBA5F9C39F16012C4B45F7CCFF2E633581"
+    },
+    {
+      "path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\planner\\structural_beam_placement_daily_card.md",
+      "sha256": "F6E4207BADFC0DF0EDDB91CE888F56199224F8DDB3C9F486C035A159D624A975"
+    }
+  ],
+  "openFinding": "BEAMUX01",
+  "nativeExecution": false,
+  "wholeGoalComplete": false
+}

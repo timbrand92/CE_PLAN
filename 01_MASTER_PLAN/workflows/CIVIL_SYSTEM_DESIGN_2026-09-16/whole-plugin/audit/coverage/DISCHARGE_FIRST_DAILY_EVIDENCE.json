@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-17T02:11:51.8009897+10:00",
+  "artifact": {
+    "Path": "C:\\CE_PLAN\\01_MASTER_PLAN\\workflows\\CIVIL_SYSTEM_DESIGN_2026-09-16\\whole-plugin\\49_DISCHARGE_FIRST_JOB_TO_PHYSICAL_CONNECTION.md",
+    "Hash": "9774F65DF4AECF8B1ADB0305BFF94B1C326CF26AEA65A0BD636BF776502BB5A2"
+  },
+  "nativeExecuted": false,
+  "disposition": "Bounded planning pass; no whole-run closure"
+}

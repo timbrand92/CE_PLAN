@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-09-17T03:40:23.8143054+10:00",
+  "artifact": "C28A90F9A4BF25F299B9E70F63BAA4F0D5D9FB4226915D61A86E22F37807659E",
+  "source": "76D22AF3110BCA46A77CABD8124D1719B78B494F042301AB41FEA86173E2A70E",
+  "materialFindings": 0,
+  "runtime": false,
+  "coverage": "Named declarations, bounded caller effects and cited canonical decisions only"
+}
