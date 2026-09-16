@@ -240,3 +240,12 @@ PIT build starts on `claude/ce-civil-handoff-sept-16-5623ca`.
 > **Tim, 16 Sep (on the PIT stub preview): *"CAN IT HAVE THE SCREENSHOT OF THAT AREA ON THE PLAN ? WITH HIGH FIDELITY?"*** — asked, not yet answered. Options put to him: render the real drawing around the pit off-screen (same PROBE-75 route, entities from the live drawing instead of a scratch block) — needs a probe first; nothing built.
 
 > **Tim, 16 Sep: *"PROBE"*** — approved a probe for rendering the real drawing area around a pit off-screen (PROBE-75 route) before any build.
+
+### 6d. PROBE-PLAN result (16 Sep, run by Tim on a real drawing)
+
+Route A (off-screen re-render of the live entities around the pit) **works**: crisp 1200x1200, 3 entities, 224 ms.
+Route B (screen capture) is screen-resolution, viewport-shaped, and the zoomed capture landed on the wrong area.
+**Verdict: build the real-plan preview on Route A.** Findings: `C:\Autodesk\CERef\PROBE-PLAN-AreaPreview-20260916\FINDINGS.md`.
+
+> **Tim: *"THIS WONT ADD EXTRA LAG WILL IT? IF SO HOW DO WE RESOLVE"*** — answer: one-off ~0.2 s per render, not
+> continuous; render on open and on committed size/type change only, never per keystroke; extents pre-filter.
