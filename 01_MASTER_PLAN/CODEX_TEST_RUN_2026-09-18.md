@@ -7,6 +7,9 @@ replaces it.
 **Tim's instruction, 18 September:** *"all 40 for codex so make sure it knows what to do"* — the whole list goes
 to Codex in one run, not fed one area at a time.
 
+**It is 76 steps, not 40.** Four chats' work is in this payload, and the fixes chat landed after the first
+count was given. Nothing has been dropped to reach a tidier number.
+
 ---
 
 ## 0. DO NOT START UNTIL THIS IS TRUE
@@ -15,7 +18,7 @@ to Codex in one run, not fed one area at a time.
 
 | | |
 |---|---|
-| Build under test | `claude/civil-combine-2026-09-18` — the merge of the windows chat, the other-Civil-areas chat and the K/L chat |
+| Build under test | `claude/civil-combine-2026-09-18` — the merge of **all four** Civil chats: windows/deploy, other-Civil-areas, K/L, and fixes |
 | Its commit | recorded in `PENDING_TESTS.md` under **COMBINED 18 September 2026** |
 | Build it replaces | `3.0.0+d0ffe1a2…` — that is what the 17 September run tested |
 | Lane | **AutoCAD 2027 (net10 / Modern)** unless a row says **2024** |
@@ -122,18 +125,54 @@ having fixed it.** If it behaves any differently from the above, that *is* worth
 
 # PART N — CDWT, the water-tank window (Tim's first priority)
 
-**What changed:** tank tiles were carrying each other's names. On Tim's own master **five** tiles all read
-`KINGSPAN 6000 L SLIMLINE METAL TANK` when three of them were really 3500 L, 5000 L and 6000 L — so picking the
-6000 tile could place a 3500 tank.
+**What changed — two separate fixes, and they interact.**
+
+- **W-06** (windows chat): tank tiles were carrying **each other's names**. Five tiles all read
+  `KINGSPAN 6000 L SLIMLINE METAL TANK` when three were really 3500 L, 5000 L and 6000 L.
+- **W-09 / W-10** (fixes chat): CDWT was asking the master for a tank **by the caption printed under the
+  tile**, which is not a block name and can never be found — so **every tile picture was blank**, **ten plans
+  were missing**, and **no ghost followed the cursor**. The picker was also filtering to captions containing
+  the word TANK, against Tim's 14 September ruling that it shows **everything** in his master.
+
+> ⚠️ **The CDWT CRASH IS NOT FIXED.** Tim's 16 September run ended in *"AutoCAD cannot continue"* when he
+> picked the callout point. The fixes chat states plainly that its cause is **not established** and that no
+> fix was attempted — CE's own error handling cannot see it and **no CE log line exists for it**.
+> **Step N9 is a 30-second probe to narrow it. If it crashes, that is expected, not a new fault — record it
+> and move on.**
 
 | ID | Step | What "right" looks like |
 |---|---|---|
-| **N1** | Type `CDWT`. Read every tile caption. | **No two tiles carry the same tank name at different sizes.** Exactly **one** tile reads `KINGSPAN 6000 L SLIMLINE METAL TANK`. **No caption starts with a code** like `xsm1;`. List every caption in your report. |
-| **N2** | Look for tiles reading **"Untitled tank plan"**. | Two tiles should read exactly that, each with a size and a picture. That is correct — those plans carry no title in the master. **Count them and say how many.** (Tim is deciding whether to name them.) |
-| **N3** | Find the **4500 MELRO** and **5500 MELRO** tiles. Note the block dimensions each is attached to. | Expected: 4500 → **5600×1760**, 5500 → **4622×1760**. **Report the dimensions you actually see.** A 5500 L tank measuring smaller than a 4500 L one is odd and Tim needs the numbers. **Do not judge which is right — just report.** |
-| **N4** | Settings → point the Standard Details folder at an **empty** folder → `CDWT`. | The window reads **"No tank plans found"**, **names the drawing** CE opened, and offers **both** ways to carry on. **No half-window of empty black, no permanently greyed "Place tank" with nothing explaining why.** "Tag a block already in the drawing" must still ask for the block. **Then put the folder back and confirm tiles return.** |
-| **N5** | Place a tank normally, end to end: tank → detention share → plan → **Place tank** → insertion point → callout/riser/dropper → Base RL. | Works as before. **This is the "nothing else moved" step** — the naming fix must not have broken placing. |
-| **N6** | Nothing to do in normal use. **If** `CDWT` prints a warning about the tank detail: | It should read *"The usual water tank detail was not in … CE used the biggest tank detail it could find instead"*. **Quote it exactly if it appears.** Silence here is also a pass — the warning only fires if the master was resaved. |
+| **N1** | Type `CDWT`. **Count the tiles.** | **39 tiles**, not 29. **Record the number you actually see.** |
+| **N2** | Look at every tile picture. | **Every tile has a picture. None blank.** (All were blank on 16 September.) |
+| **N3** | Look for **GRAF CARAT**, **AQUARIUS**, **WT1** and **PLAN VIEW**. | All present. These were silently dropped before. **Say which, if any, are still missing.** |
+| **N4** | Read every tile caption. | **No two tiles carry the same tank name at different sizes.** Exactly **one** reads `KINGSPAN 6000 L SLIMLINE METAL TANK`. **No caption starts with a code** like `xsm1;`. **List every caption in your report.** |
+| **N5** | Find the three tiles reading **"PLAN VIEW (7560 x 4800 mm)"**, **"… 2"** and **"… 3"**. | All three present and numbered. They are three genuinely different tank plans in Tim's master — **not** duplicates. (Tim is deciding whether to name them properly; that would be a change to his master, not to CE.) |
+| **N6** | Find the **4500 MELRO** and **5500 MELRO** tiles. Note the block dimensions each is attached to. | Expected: 4500 → **5600×1760**, 5500 → **4622×1760**. **Report what you actually see.** A 5500 L tank measuring smaller than a 4500 L one is odd and Tim needs the numbers. **Do not judge which is right — just report.** |
+| **N7** | **The tile that failed on 16 September.** Pick **2510L UNDERDECK WATER TANK**, set a detention share, press **Place tank**, pick an insertion point. | **A ghost of the real tank follows the cursor.** This is the exact tile whose log read *"The master drawing no longer contains the plan block …"*. |
+| **N8** | Finish that placement: callout point, Base RL, riser, dropper. | **The tank block that lands is the one in the picture.** |
+| **N9** | **THE CRASH PROBE — do this one carefully.** Place a tank again, but at the callout prompt press **Enter** instead of picking a point. | **If it completes:** the callout pick is implicated — say so clearly, that is the finding. **If it still crashes:** the cause is elsewhere — **attach the AutoCAD error report from that run**, which is the only evidence that exists. Either way this is **not a new fault**. |
+| **N10** | Settings → point the Standard Details folder at an **empty** folder → `CDWT`. | Reads **"No tank plans found"**, **names the drawing** CE opened, offers **both** ways to carry on. **No empty black panel.** "Tag a block already in the drawing" still asks for the block. **Put the folder back and confirm the tiles return.** |
+| **N11** | Nothing to do in normal use. **If** `CDWT` prints a warning about the tank detail: | *"The usual water tank detail was not in … CE used the biggest tank detail it could find instead"*. **Quote it exactly if it appears.** Silence is also a pass. |
+
+---
+
+# PART P — the pit number that stayed behind (P12 / P14 / BUG-151)
+
+**What changed, and why it has been so hard to catch.** The pit label is a block holding a **wipeout** (that is
+the circle you see) plus the number as an **attribute**, which carries **its own position**. All three CE
+movers moved the block and never touched the attribute — so **the circle stepped out and the number stayed
+put**, and the drawing read as a label that had not moved. **This is the long-running "the pit label won't
+step out" report.** It did step out. Nobody was looking at the number.
+
+| ID | Step | What "right" looks like | Lane |
+|---|---|---|---|
+| **P1** | Open a job. Note where **P10**'s number sits inside its circle. | — | 2027 |
+| **P2** | `CDEDIT` on **P10**. Change **450×450 → 1200×1200**. **Save.** | **The circle AND the number move together**, number still centred in the circle. | 2027 **and 2024** |
+| **P3** | Undo. `CDEDIT` **P10** again, change **only the label corner** (Top right → Bottom right). **Save.** | **The number goes with the circle.** No resize at all in this one — that is the point. | 2027 **and 2024** |
+| **P4** | Do the same on a pit whose label uses the **other** block (`PIT LABEL`, e.g. **P1** or **C1**). | Same result. Both label blocks must behave. | 2027 |
+| **P5** | **Resize two pits at once** (the batch path). | **Both** numbers travelled. | 2027 |
+| **P6** | After any one of the above: one accepted change = **one Undo**. | *(The separate cancelled-window Undo fault — §3b — may still appear. Record what you see; it is not this fix's job.)* | 2027 |
+| **P7** | **A lead worth checking, NOT a claimed fix.** **MOVE** a pipe that has a `FALL` or `LEVEL` tag on it, and separately **grip** one. Watch the text inside those blocks. | **Report exactly what the text does.** A probe found **240 of 387** blocks on that drawing carry their text as attributes the same way the pit label did — so the same fault may affect FALL / LEVEL / DP / WT tags. **This is a hypothesis, not a finding, and it is NOT fixed.** Your observation is what turns it into one. | 2027 |
 
 ---
 
@@ -341,6 +380,8 @@ things failed, because he tests the failures himself.
   this payload.
 - **`CDIMPORTLANDXML` reads 0 pipes** from a real Civil 3D export. That finding is on a different branch and was
   not re-verified.
-- **The pit number staying behind when its circle moves** (P12 / P14 / BUG-151) and **the CDWT crash** are being
-  fixed in a separate chat. Whether they are in this payload is recorded in `PENDING_TESTS.md` — **check there
-  before testing them**, and if they are not in it, they are **NOT TESTED**, not FAIL.
+- **The CDWT crash (W4).** The fixes chat's own record states its cause is **not established** and **no fix was
+  attempted**. **N9 is a probe to narrow it, not a test of a fix.** A crash there is expected, not a regression.
+- **The FALL / LEVEL / DP / WT tags losing their text when moved or gripped.** Named in **P7** as a lead only.
+  Not diagnosed against those symptoms, not fixed.
+- **The pipe import (`CDIMPORTXCIVIL`)** — see above. Still a standing risk, still not in this payload.
