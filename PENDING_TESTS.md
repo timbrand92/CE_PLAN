@@ -15,9 +15,11 @@
 
 ---
 
-## COMBINED 18 September 2026 — `claude/civil-combine-2026-09-18` @ `ed5c7077` — BUILT, NOT INSTALLED, NOT TESTED
+## COMBINED 18 September 2026 — `claude/civil-combine-2026-09-18` @ `0a84eb07` — BUILT, NOT INSTALLED, NOT TESTED
 
-**Three branches merged into one payload by the COMBINE chat. Nothing here is in AutoCAD.**
+**All FOUR Civil branches merged into one payload by the COMBINE chat. Nothing here is in AutoCAD.**
+Morning pack: `01_MASTER_PLAN/MORNING_PACK_COMBINE_2026-09-19.md`. Codex test list (76 steps):
+`01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-18.md`.
 Installed is still `3.0.0+d0ffe1a2`, read back from the DLL.
 
 | Input | Tip merged | Note |
@@ -25,15 +27,16 @@ Installed is still `3.0.0+d0ffe1a2`, read back from the DLL.
 | windows / deploy `claude/civil-combined-2026-09-17` | `c9dac1bc` | base of the merge |
 | other Civil areas `claude/civil-other-areas-handoff-d747af` | `24d9230f` | **forked beside the installed build at `e0cfe172`** — had to be merged, never built alone |
 | K / L `claude/civil-k-l-2026-09-16` | **`dc937001`** | **NOT the handed-over `457bf032`** — that tip had already moved; `dc937001` adds the K4 Council-keyword fix Tim asked for on 18 Sep |
-| fixes `claude/civil-fixes-2026-09-18` | **not merged** | still mid-flight at `c0ef58a6` when this was combined |
+| fixes `claude/civil-fixes-2026-09-18` | **`c0ef58a6`** | merged 18 Sep after Tim said that chat had finished; its claims were verified from the diff, not from a handover (it never wrote a Section 4) |
 
 **Proof held (§6 of the combine brief):**
 
 - `git merge-base --is-ancestor` — `c9dac1bc`, `24d9230f`, `dc937001` **and the installed `d0ffe1a2`** are all
   ancestors of `ed5c7077`.
 - Builds: **net48, net8.0-windows, net10.0-windows — 0 errors** each.
-- Full net10 suite: **10,044 run · 10,005 passed · 22 failed · 17 skipped.** Failing **names** set-compared
-  against the 20 recorded distinct names: **identical — no new failures, none silently fixed.**
+- Full net10 suite (final, all four merged): **10,052 run · 10,013 passed · 22 failed · 17 skipped.** Failing
+  **names** set-compared against the 20 recorded distinct names: **identical — no new failures, none silently
+  fixed.** All eight of the fixes chat's new guard tests ran and passed.
 - `PreviewPackage_AllSections_RetainsStatusAndUsesAdvisoryWsudAuthority` — reported as a 23rd failure by BOTH
   the other-areas and K/L chats, both predicting it would clear once merged with BUG-158 (`308ea803`).
   **Confirmed by evidence: it RAN and PASSED on the combined line.** Prediction upheld.
@@ -54,10 +57,13 @@ Installed is still `3.0.0+d0ffe1a2`, read back from the DLL.
 `/p:ProductionIntegration=true`. It must be run through **PowerShell** — Git Bash rewrites the `/t:` and `/p:`
 switches into paths and MSBuild fails with `MSB1008`.
 
-**What Tim must test if this is installed:** rows **N1–N6** (tank naming / CDWT), **O16–O40** (pipe text on a
-fresh job, blanking a level, `CDFIXTAGS`, split levels), and the K/L rows for **TWL-04/TWL-06**, **TWL-05**,
-**PSD-01** and **K4**. That is roughly 40 steps — large by Tim's 16 Sep standard, so it should be offered in
-areas, not as one list.
+**What Tim must test if this is installed:** the **76-step Codex list** at
+`01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-18.md` (Tim, 18 Sep: *"all 40 for codex so make sure it knows what to
+do"*). Parts S (start-up) · N (CDWT, 11) · P (pit number, 7) · O (pipe text, levels, CDFIXTAGS, splits, 25) ·
+T (CDTWL, detention, PSD, CDLPD, 21) · X (2024 lane) · Z (regression sweep).
+
+⚠️ **The CDWT crash (W4) is NOT fixed** — the fixes chat states its cause is not established and no fix was
+attempted. Step **N9** is a probe, and a crash there is expected, not a regression.
 
 ---
 
