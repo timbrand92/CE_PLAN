@@ -422,13 +422,20 @@ pit it was split at. Proven from Tim's own 16 Sep coordinates. Full entry: plugi
 | O39 | Drawn vertically | A north-south run through three pits, split it: levels at the middle pit | 2027 |
 | O40 | They do not overlap | The two split levels are on opposite sides of the pipe | 2027 |
 
-**Open for Tim — P-01, when should it ask?** Today the question *"split this pipe at the pits it runs across?"*
-comes **after** the Edit Pipe window closes and after the pipe is drawn (deliberately, 15 Sep: so the new halves
-link correctly). Tim on Test Day: *"asks at the wrong time … the question and answer are messed up."*
-**Recommendation:** keep doing the split after the pipe is drawn (moving it earlier risks the halves not linking),
-but **ask inside the CD window as a tick — "split where it crosses pits"** — so the answer is given before he
-commits, not at the command line after the window has gone. The window is Codex's to build, so this needs a
-written contract from this chat, and Tim's word first. **Not decided.**
+**DECIDED — P-01, Tim, 18 September 2026: *"ask inside the CD window as a tick"***
+
+The command-line question is **moved, not retired**: the same choice, asked before the pipe is drawn instead of
+at the command line after the window closes. The splitting itself still runs after the pipe exists, because the
+halves cannot link to their pits until the pipe is in the drawing. Contract for Codex to build the tick from:
+`01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`. Ruling recorded at `TEST_DAY_RESULTS_2026-09-16.md`
+§6s. **Not built yet** — acceptance replaces steps 52–56 and is listed in §9 of the contract.
+
+**Two things still need Tim before Codex builds it** (not assumed): the exact wording on the tick (recommended
+*"Split where it crosses pits"*), and what replaces the old **Escape** route — with a tick there is no separate
+escape moment, so acceptance step 56 as written would be **retired**, and a retirement needs his explicit word.
+
+**One thing the behaviour side must prove before it ships:** that one `U` after a ticked draw removes the pipe,
+its halves and their labels **together**. Not verified today, not claimed.
 
 **Still open in this area:** P-04 (a pipe with more than one bend) and P-05 (each half needs its own pipe text)
 — both in progress in the same chat.

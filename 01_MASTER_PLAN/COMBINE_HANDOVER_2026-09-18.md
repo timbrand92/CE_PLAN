@@ -260,13 +260,14 @@ not, that is a real finding and must be raised, not written off.**
 
 ### 5. Open questions for Tim, and what is half-built
 
-**Needs Tim — P-01, when should split-on-draw ask?** Today the question *"split this pipe at the pits it runs
-across?"* comes **after** the Edit Pipe window has closed, at the command line. Tim on Test Day: *"asks at the
-wrong time ... the question and answer are messed up."* The splitting itself has to happen after the pipe exists
-or the halves do not link. **Recommendation (not decided): keep the split where it is, but ask inside the CD
-window as a tick — "split where it crosses pits" — so the answer is given before he commits.** The window is
-Codex's to build, so this needs a written contract from this lane and Tim's word first. Recorded in
-`PENDING_TESTS.md`.
+**ANSWERED 18 September — P-01.** Tim: ***"ask inside the CD window as a tick"***. The command-line question is
+**moved, not retired**; the splitting itself still runs after the pipe is drawn (the halves cannot link to their
+pits until the pipe exists). **Codex builds the tick** (ruling B); this lane published the contract it is built
+from: `01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`. Ruling at `TEST_DAY_RESULTS_2026-09-16.md`
+§6s. **Nothing is built for it yet — no code on this branch changes because of this ruling.** Two items still
+need Tim (the tick's wording, and what replaces the old Escape route — a retirement, so his word is required),
+and one thing this lane must prove before it ships: that one `U` after a ticked draw removes the pipe, its
+halves and their labels together. Not verified, not claimed.
 
 **Not started, and openly unfinished in this area:**
 
