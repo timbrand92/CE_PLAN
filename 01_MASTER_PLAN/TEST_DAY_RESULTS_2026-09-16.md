@@ -687,3 +687,24 @@ their back, so any job not checked since is worth a look.
 **New open question (small):** the PSD offered comes from the **Boyd's tab's own** figure. If CDDESIGN should
 outrank it when the two differ, Tim to say — they are two different calculations and neither was assumed to
 win.
+
+### 6s. Tim, 18 September 2026 — P-01: split-on-draw moves into the CD window as a tick
+
+Question put to him (P-01, Test Day: *"asks at the wrong time ... the question and answer are messed up"*), with
+the recommendation to keep the splitting where it is but ask in the window instead of at the command line.
+
+> **Tim: *"ask inside the CD window as a tick"***
+
+Interpretation (Claude, not Tim's words): the command-line question is **moved, not retired** — the same choice,
+asked before the pipe is drawn instead of after the window closes. The splitting itself still runs after the
+pipe exists, because the halves cannot link to their pits until the pipe is in the drawing. The tick's state is
+remembered **for that drawing only**; the Settings page keeps the office default for a new drawing (SPLIT-01
+stands). **Codex builds the tick; the behaviour side wrote the contract and does not touch the window**
+(ruling B). Contract: `01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`.
+
+**Two things still need Tim** and are NOT assumed: the exact wording on the tick (recommended *"Split where it
+crosses pits"*), and what replaces the old **Escape** route — with a tick there is no separate escape moment, so
+acceptance step 56 as written would be **retired**, and a retirement needs his explicit word.
+
+**One thing the behaviour side must prove before it ships:** that one `U` after a ticked draw removes the pipe,
+its halves and their labels **together**. That is not verified today and is not claimed.
