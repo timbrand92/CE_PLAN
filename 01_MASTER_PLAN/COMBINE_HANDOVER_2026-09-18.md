@@ -241,6 +241,7 @@ REGRESSION_LOG.md, FLEET_STATUS.md                         (docs)
 | Builds | **net48 0 errors, net8.0-windows 0 errors, net10.0-windows 0 errors** (`-p:SkipDevBundle=true -nr:false --disable-build-servers`) |
 | Test project build | 0 errors |
 | Full net10 suite | **9,844 run / 9,804 passed / 23 failed / 17 skipped** (`handover-18sep.trx`) |
+| Re-run to confirm | **run a second time at handover, identical** (`handover-18sep-rerun.trx`). Branch unchanged between the two runs: same tip `24d9230f`, 0 commits, 0 uncommitted code edits. |
 
 **Compared by NAME against the 22 recorded in `PENDING_TESTS.md`** (which are 20 distinct names once the
 parameterised cases are collapsed):
