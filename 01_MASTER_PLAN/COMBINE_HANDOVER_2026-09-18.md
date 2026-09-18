@@ -342,7 +342,10 @@ only. **O3 / O4 / O17 remain open and unexplained by anything on this branch.**
 | `457bf032` PSD-01 | **NOT installed** |
 | `dc937001` **K4 — the Council keyword** | **NOT installed** |
 
-### 2. The three uninstalled commits, in drawing terms
+### 2. The FOUR uninstalled commits, in drawing terms
+
+> The brief I was given said *three* — it was written before Tim told me on 18 September to fix the Council
+> keyword bug, which added `dc937001`. **There are four. Do not import only three.**
 
 **`b8d827b8` — CDTWL takes the engineer's own level, and stops losing the system.**
 Asked which level is the top water level, CDTWL only accepted a row number — so typing the level the job was
@@ -376,6 +379,16 @@ is never overwritten. **The one-click button itself is window work (ruling B) an
 its label and its enabled state exist and are tested.
 ⚠️ **Jobs saved before 17 Sep still hold `5.24`.** CE does not rewrite an engineer's records, so any job not
 checked since is worth a look.
+
+**`dc937001` — K4. Typing `Council` put COUNCIL STUB on the drawing instead of COUNCIL PIPE.**
+The connection question used AutoCAD's keyword prompt, so AutoCAD matched the typed word **before** CE saw it;
+`Council` is the start of four of the offered words, so it came back as `CouncilStub` and CE's own rule for
+the retired word could never run. CE reads the typed text and matches it itself now — an exact word always
+beats a shortening, a shortening that could mean two things is **named and refused** rather than guessed, and
+nothing unrecognised is ever written. **Trade: this one question no longer offers AutoCAD's right-click
+keyword menu**; the choices are still printed and shortenings still work.
+**It fixes which connection TYPE is chosen — not how the note READS.** The note wording is wrong on Tim's
+machine for a separate reason (the stored old template, §6).
 
 ### 3. Files changed (`git diff --name-only 595c8672 HEAD`)
 
