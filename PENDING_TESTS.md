@@ -33,6 +33,32 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
+### BUILT 18 Sep — **P12 / P14 / BUG-151 pit label**, branch `claude/civil-fixes-2026-09-18` @ `29d0598d` — NOT installed, NOT tested
+
+Fixes register **P12** and **P14**, and almost certainly the long-running **BUG-151 / P-08** *"the label
+won't step out"*. Builds net48 / net8 / net10 **0 errors**; full net10 suite **9,929 run · 9,890 passed ·
+22 failed · 17 skipped — the same 22 names as the recorded baseline, compared by name. No regressions.**
+Full entry: plugin `REGRESSION_LOG.md` **P12 / P14 / BUG-151**.
+
+**What it actually was:** the pit label is a block holding the **circle**, with the **number** stored as an
+attribute that has its own position. CE moved the block and never moved the number. The label *did* step
+out — the circle went, the number stayed.
+
+| # | What | Steps | Lane |
+|---|---|---|---|
+| P12 | **Resize: number goes with the circle** | Open DWG-B. `CDEDIT` on **P10**, change **450 × 450 → 1200 × 1200**, Save. The circle **and** the number move together; the number stays centred in the circle. | 2027 **and 2024** |
+| P14 | **Corner change: same, with no resize** | `CDEDIT` **P10**, change only the **label corner Top right → Bottom right**, Save. The number goes with the circle. | 2027 **and 2024** |
+| P12b | **The other label block** | Same test on **P1** or **C1** (they use `PIT LABEL`, not `PIT LABEL 2`). | 2027 |
+| P12c | **Two pits at once** | Resize two pits in one go. **Both** numbers travelled. | 2027 |
+| P12d | **One change = one Undo** | After an accepted resize, one `U` puts it back. | 2027 |
+
+**NEW, NOT FIXED — worth knowing:** a second probe on the same drawing found **240 of 387** other blocks
+also carry their text as attributes — the **FALL / grade** label, the **LEVEL** texts, **DP** and **WT**
+tags. Two pipe paths move those blocks the same way the pit label was moved. That is a **strong candidate**
+for register items **O3 / O4 / O10 / O17** ("MOVE and grip break label alignment") — but it is a hypothesis,
+nobody has reproduced those items against it, and it needs a full rotate-and-move rather than the simple
+fix used here. **Not touched.**
+
 ### BUILT 18 Sep — **W-09 / W-10 CDWT tank plans**, branch `claude/civil-fixes-2026-09-18` @ `d95e7342` — NOT installed, NOT tested
 
 Fixes register **W2** (blank tile pictures, short list) and the **no-ghost** half of **W4**. Cut from
