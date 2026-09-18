@@ -15,6 +15,52 @@
 
 ---
 
+## COMBINED 18 September 2026 — `claude/civil-combine-2026-09-18` @ `ed5c7077` — BUILT, NOT INSTALLED, NOT TESTED
+
+**Three branches merged into one payload by the COMBINE chat. Nothing here is in AutoCAD.**
+Installed is still `3.0.0+d0ffe1a2`, read back from the DLL.
+
+| Input | Tip merged | Note |
+|---|---|---|
+| windows / deploy `claude/civil-combined-2026-09-17` | `c9dac1bc` | base of the merge |
+| other Civil areas `claude/civil-other-areas-handoff-d747af` | `24d9230f` | **forked beside the installed build at `e0cfe172`** — had to be merged, never built alone |
+| K / L `claude/civil-k-l-2026-09-16` | **`dc937001`** | **NOT the handed-over `457bf032`** — that tip had already moved; `dc937001` adds the K4 Council-keyword fix Tim asked for on 18 Sep |
+| fixes `claude/civil-fixes-2026-09-18` | **not merged** | still mid-flight at `c0ef58a6` when this was combined |
+
+**Proof held (§6 of the combine brief):**
+
+- `git merge-base --is-ancestor` — `c9dac1bc`, `24d9230f`, `dc937001` **and the installed `d0ffe1a2`** are all
+  ancestors of `ed5c7077`.
+- Builds: **net48, net8.0-windows, net10.0-windows — 0 errors** each.
+- Full net10 suite: **10,044 run · 10,005 passed · 22 failed · 17 skipped.** Failing **names** set-compared
+  against the 20 recorded distinct names: **identical — no new failures, none silently fixed.**
+- `PreviewPackage_AllSections_RetainsStatusAndUsesAdvisoryWsudAuthority` — reported as a 23rd failure by BOTH
+  the other-areas and K/L chats, both predicting it would clear once merged with BUG-158 (`308ea803`).
+  **Confirmed by evidence: it RAN and PASSED on the combined line.** Prediction upheld.
+- `MarkupFileImageLoaderTests.LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully` (the known flaky one)
+  also **ran and passed**.
+
+**Conflict resolution, stated so nobody has to re-derive it:**
+
+- `Modules/Drainage/Commands/PipeEditCommand.cs` **auto-merged with no conflict** — the two chats edited
+  different regions. Verified by hand, not trusted: the `vm.DryRunPreview =` assignment is **gone** from both
+  `PipeEditCommand.cs` and `PitEditCommand.cs`; the separate `IsDryRunPreview` flag **survives**; the
+  other-areas chat's `LevelBoxesAreAuthoritative` is **present**. Both behaviours kept.
+- `REGRESSION_LOG.md` and `FLEET_STATUS.md` conflicted only because all three chats prepend entries to a shared
+  tail. **Both sides kept in full**, newest first. No entry from any chat was dropped.
+
+**Build gap worth recording (issue #78):** a fresh worktree fails the net10 lane with `MSB3030` until
+`Modules/Shared.Transform.Native2027/CE_TRANSFORM_TRIAL_2027.vcxproj` is built with
+`/p:ProductionIntegration=true`. It must be run through **PowerShell** — Git Bash rewrites the `/t:` and `/p:`
+switches into paths and MSBuild fails with `MSB1008`.
+
+**What Tim must test if this is installed:** rows **N1–N6** (tank naming / CDWT), **O16–O40** (pipe text on a
+fresh job, blanking a level, `CDFIXTAGS`, split levels), and the K/L rows for **TWL-04/TWL-06**, **TWL-05**,
+**PSD-01** and **K4**. That is roughly 40 steps — large by Tim's 16 Sep standard, so it should be offered in
+areas, not as one list.
+
+---
+
 ## TESTED 16 September 2026 — MOSTLY FAILED. Read `01_MASTER_PLAN/TEST_DAY_RESULTS_2026-09-16.md` FIRST
 
 `c1af9781` is live and Tim has tested it. **The deploy worked; most of what it carried does not.** Do not use
