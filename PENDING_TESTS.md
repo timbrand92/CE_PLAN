@@ -15,6 +15,44 @@
 
 ---
 
+## BUILT overnight 18→19 Sep — `claude/civil-overnight-2026-09-19` @ `07325a2b` — NOT INSTALLED, NOT TESTED
+
+**Eight items, on top of the frozen combined payload `0a84eb07`.** Tim: *"overnight sequence for all fixes,
+improvements and completion of all tasks from all 4 chats"*, then **"Go — all 8 items"** and **"No — just
+build"**.
+
+**`claude/civil-combine-2026-09-18` @ `0a84eb07` is UNMOVED and still deployable on its own** if any of the
+overnight work proves wrong.
+
+| ID | What Tim would see | Lane |
+|---|---|---|
+| **V1** | **Settings page: the standard LPD note now reads the full sentence**, not `LPD - {connection}, IL {invert} m AHD`. That stale setting is why every note came out short no matter what the code said | both |
+| **V2** | `CDLPD` → type `Council` → the note reads **CONNECT TO COUNCIL PIPE AT APPROX IL…m TO COUNCIL SATISFACTION. BUILDER TO CONFIRM…** — a sentence, not one short line | both |
+| **V3** | **Type your OWN wording** into the Settings note box, save, close AutoCAD, reopen. **Your wording is still there.** CE must never overwrite it | both |
+| **V4** | **Lock the layer the IL texts sit on**, run the invert propagation. It **names the pipes it could not update**, and `PITSCHEDULE` must **NOT** show the new levels for them — schedule and drawing must agree | both |
+| **V5** | Unlock, run again: drawing and schedule move together. A pipe with **no** IL text still updates normally | both |
+| **V6** | Make a write fail outright (lock the pipe's own layer): the refusal **names the pipe** it stopped on | 2027 |
+| **V7** | Draft an orifice standard detail. **It must look exactly as always, with no new message.** If a message ever appears saying CE used the closest orifice detail it could find, tell me — the master was resaved | 2027 |
+| **V8** | Convert a job's pipes (`CDC7UPGRADE`), set a converted pipe's level to **17.35**, Save. `PITSCHEDULE` shows **17.35**, **not a blank cell**. Reopen the drawing: still 17.35 | 2027 |
+| **V9** | Same on an **ordinary** pipe: nothing about it has changed | 2027 |
+| **V10** | **MOVE** a pipe that has `FALL` / `LEVEL` tags. The tag box **and its text** travel together. Then **grip** one. Then try a **turned** (diagonal) pipe | both |
+| **V11** | Open Edit Pipe, change something, **Cancel**. The tag text goes back with its box, not left where the edit put it | 2027 |
+| **V12** | **Then say whether O3 / O4 / O10 / O17 still happen.** If they do, this was not their cause and I will say so | 2027 |
+| **V13** | Three pits in a line, `CD` one pipe through all three, **Yes** to the split. **BOTH lengths carry their own pipe text**, each mid-way along its own length, same side as before | both |
+| **V14** | Same the other way: draw the pipe, then **drop a pit onto it**. Same result — that is the route Tim asked about, and it shares this code | both |
+| **V15** | A **bent** pipe (3+ points), split it: the copied text sits **on** the pipe, not out in space | 2027 |
+| **V16** | A pipe drawn with **simple pipe only** (no text): split it. **Neither half gains a text** | 2027 |
+| **V17** | **One Undo** after a split removes the whole thing, copied text included | 2027 |
+| **V18** | Check a copied text reads the right size and material. **If a half shows the wrong GRADE, say so** — that is the known limit of copying rather than re-rendering | 2027 |
+
+### Ghost preview — NOTHING to test yet
+
+`GHOST-01` built the **rule** only (Tim's ruling A, 18 Sep). **The picture panel is Codex's under ruling B and
+is NOT built**, so Tim will see no change in AutoCAD. Contract:
+`01_MASTER_PLAN/CONTRACT_GHOST_PREVIEW_2026-09-18.md`.
+
+---
+
 ## COMBINED 18 September 2026 — `claude/civil-combine-2026-09-18` @ `0a84eb07` — BUILT, NOT INSTALLED, NOT TESTED
 
 **All FOUR Civil branches merged into one payload by the COMBINE chat. Nothing here is in AutoCAD.**
