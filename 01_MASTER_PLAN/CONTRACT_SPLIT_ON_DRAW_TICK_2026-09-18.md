@@ -15,6 +15,13 @@ Question put to him 17 September with the recommendation below. Tim, 18 Septembe
 
 > **"ask inside the CD window as a tick"**
 
+Both follow-up questions put to him the same day. Tim, 18 September 2026:
+
+> **"wording is fine, and yes retire the escape step"**
+
+So: the tick reads **`Split where it crosses pits`**, and the old Escape route is **RETIRED with his explicit
+approval**. Nothing in this contract is now waiting on Tim.
+
 ## 2. What changes, in one line
 
 The command-line question **"split this pipe at the pits it runs across?"** stops being asked. The same choice
@@ -28,7 +35,7 @@ the pipe exists — that part does not move, and §6 says why.
 | Command-line question *"Split at the N pit(s) it crosses? [Yes/No]"* | **MOVED** into the CD window as a tick. Not retired — the same decision, asked earlier. |
 | `Yes` / `No` answer | **MOVED** — the tick is the answer. |
 | Enter = Yes (the default) | **KEPT** as the tick's starting state (see §4). |
-| **Escape at the question = nothing split, pipe left whole** | **NEEDS TIM'S WORD — see §7 question 2.** With a tick there is no separate Escape moment. |
+| **Escape at the question = nothing split, pipe left whole** | **RETIRED — Tim's explicit approval, 18 September 2026: _"yes retire the escape step"_.** With a tick there is no separate Escape moment; leaving the tick unticked is the same answer. Acceptance step 56 goes with it. |
 | "Remember for this drawing" | **KEPT** exactly as it is — the tick's state is remembered for that drawing only. |
 | Settings page default for a new drawing | **KEPT** — `Settings ▸ Pipe ▸ SplitAtCrossings`. |
 | The one summary line on the command line after a split | **KEPT.** R-27: warn and record, never go silent. |
@@ -36,7 +43,7 @@ the pipe exists — that part does not move, and §6 says why.
 ## 4. The tick itself — what Codex builds
 
 - **Where:** the CD window (new pipe), in the same group as the other drawing choices (pipe text, flow arrow).
-- **Wording (recommended, Tim can change it):** **`Split where it crosses pits`**
+- **Wording — APPROVED by Tim, 18 September 2026 (_"wording is fine"_):** **`Split where it crosses pits`**
   With the quieter second line: *"Each length between pits becomes its own pipe, with its own levels and its
   own schedule row."*
   No software words — plain-English UI rule.
@@ -79,13 +86,16 @@ Moving the split before the pipe is drawn would leave the halves unlinked — on
 and no levels at the pits in between, which is the very fault split-on-draw was built to cure (15 Sep).
 **So: the decision moves; the work does not.**
 
-## 7. Open — needs Tim before Codex builds
+## 7. SETTLED — both questions answered, 18 September 2026
 
-1. **The wording on the tick.** Recommended: **`Split where it crosses pits`**. One word from Tim settles it.
-2. **What replaces Escape?** Today, Escape at the question leaves the pipe whole and splits nothing
-   (acceptance step 56). With a tick there is no separate moment to escape — Cancel on the window means no pipe
-   at all. **Recommendation: accept that, because the tick can simply be left unticked**, and retire step 56 as
-   written. **That is a retirement, so it needs Tim's explicit word. Not assumed.**
+Tim: > **"wording is fine, and yes retire the escape step"**
+
+1. **The wording on the tick** — **settled: `Split where it crosses pits`.**
+2. **Escape** — **settled: RETIRED, with his explicit approval.** There is no separate escape moment once the
+   choice is a tick; leaving it unticked is the same answer, and Cancel on the window still means no pipe at all.
+   **Acceptance step 56 of the 16 September list is retired with it** and is replaced by row 3 of §9.
+
+**Nothing in this contract is waiting on Tim. Codex can build the tick from it.**
 
 ## 8. One thing the behaviour side must prove before this ships
 

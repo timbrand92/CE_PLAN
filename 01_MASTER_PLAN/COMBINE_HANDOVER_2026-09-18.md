@@ -264,10 +264,12 @@ not, that is a real finding and must be raised, not written off.**
 **moved, not retired**; the splitting itself still runs after the pipe is drawn (the halves cannot link to their
 pits until the pipe exists). **Codex builds the tick** (ruling B); this lane published the contract it is built
 from: `01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`. Ruling at `TEST_DAY_RESULTS_2026-09-16.md`
-§6s. **Nothing is built for it yet — no code on this branch changes because of this ruling.** Two items still
-need Tim (the tick's wording, and what replaces the old Escape route — a retirement, so his word is required),
-and one thing this lane must prove before it ships: that one `U` after a ticked draw removes the pipe, its
-halves and their labels together. Not verified, not claimed.
+§6s–§6t. **Nothing is built for it yet — no code on this branch changes because of this ruling.** Tim settled the
+two follow-ups the same day (*"wording is fine, and yes retire the escape step"*): the tick reads **`Split
+where it crosses pits`**, and the old **Escape** route plus **acceptance step 56** are **RETIRED with his
+explicit approval**. **The contract is complete and waiting on nobody.** One obligation remains, and it is this
+lane's, not Tim's: prove that one `U` after a ticked draw removes the pipe, its halves and their labels
+together. Not verified, not claimed.
 
 **Not started, and openly unfinished in this area:**
 

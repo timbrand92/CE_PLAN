@@ -708,3 +708,17 @@ acceptance step 56 as written would be **retired**, and a retirement needs his e
 
 **One thing the behaviour side must prove before it ships:** that one `U` after a ticked draw removes the pipe,
 its halves and their labels **together**. That is not verified today and is not claimed.
+
+### 6t. Tim, 18 September 2026 — the two P-01 follow-ups: wording approved, Escape retired
+
+> **Tim: *"wording is fine, and yes retire the escape step"***
+
+- **Tick wording APPROVED:** **`Split where it crosses pits`**.
+- **RETIREMENT, with his explicit approval** (the standing rule is that nothing is retired without it): the old
+  **Escape at the split question** route, and **acceptance step 56** of the 16 September list, are retired. Once
+  the choice is a tick there is no separate escape moment — leaving it unticked is the same answer, and Cancel
+  on the CD window still means no pipe at all.
+
+**`CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md` is now complete and waiting on nobody. Codex can build the tick.**
+The one remaining obligation is this lane's, not Tim's: prove that one `U` after a ticked draw removes the pipe,
+its halves and their labels together. Not verified, not claimed.

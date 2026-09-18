@@ -335,11 +335,11 @@ the evidence are in the plugin `REGRESSION_LOG.md` entry **IDENT-02**. Summary r
 | O22 | A drawing with no CE pipes | Double-click any text: AutoCAD's editor; opening the drawing must not feel slower | 2027 |
 | O23 | **The evidence run for "changing an invert does nothing"** | Open a pipe, change a level, press OK. **Whatever happens, say what the command line said and send the log.** Two new lines now record Cancel/Escape and "OK but nothing changed", with both levels as held and as read in. This is how that half gets settled — it is **not** claimed fixed | 2027 |
 
-**Open for Tim (1, do not decide it for him):** blanking a level in the Edit Pipe window does **not** clear it from
-the pipe's stored record — the old level stays and is read back (16 Sep log 09:31:57.836 *"recovered
-SecondInvert=19.25 from PipeLinkData"*), so the schedule can keep showing a level you deleted. Five different
-places write that record and some may pass one side meaning *leave the other alone*, so changing it blind could
-break invert propagation for every pipe. Needs Tim's word.
+**ANSWERED and BUILT — this is no longer open.** The question was: blanking a level in the Edit Pipe window did
+**not** clear it from the pipe's stored record, so the schedule could keep showing a level you deleted.
+**Tim, 17 September 2026: *"yes a blank box should clear it, go ahead"***. Built as **BLANK-01** (`d63a29f3`) —
+it turned out the old level came back from **two** places, the pipe's own record **and** the schedule row, and
+both were fixed as an opt-in so the other four level-writers are untouched. **Test rows O24–O29.**
 
 ### ADDED 17 Sep — CDTWL faults, same branch `claude/civil-k-l-2026-09-16` @ `b8d827b8` — NOT installed, NOT tested
 
@@ -430,9 +430,11 @@ halves cannot link to their pits until the pipe is in the drawing. Contract for 
 `01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`. Ruling recorded at `TEST_DAY_RESULTS_2026-09-16.md`
 §6s. **Not built yet** — acceptance replaces steps 52–56 and is listed in §9 of the contract.
 
-**Two things still need Tim before Codex builds it** (not assumed): the exact wording on the tick (recommended
-*"Split where it crosses pits"*), and what replaces the old **Escape** route — with a tick there is no separate
-escape moment, so acceptance step 56 as written would be **retired**, and a retirement needs his explicit word.
+**Both follow-ups settled the same day.** Tim, 18 September 2026: ***"wording is fine, and yes retire the escape
+step"***. The tick reads **`Split where it crosses pits`**. The old **Escape at the split question** route is
+**RETIRED with his explicit approval**, and **acceptance step 56 of the 16 September list is retired with it** —
+leaving the tick unticked is the same answer, and Cancel on the CD window still means no pipe at all.
+**The contract is complete and waiting on nobody; Codex can build the tick.**
 
 **One thing the behaviour side must prove before it ships:** that one `U` after a ticked draw removes the pipe,
 its halves and their labels **together**. Not verified today, not claimed.
