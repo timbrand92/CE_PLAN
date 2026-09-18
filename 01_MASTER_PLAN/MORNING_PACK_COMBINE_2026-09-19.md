@@ -221,3 +221,35 @@ rather than silently leaving it out. The rest are Codex window branches (`codex/
 
 `PENDING_TESTS.md` still needs its COMBINED section updated from `ed5c7077` to `0a84eb07` — done in the same
 commit as this pack.
+
+---
+
+## OVERRIDE RECORDED — 18 September 2026, ~23:00
+
+**Tim:** *"overnight sequence for all fixes, improvements and completion of all tasks from all 4 chats"*, then
+**"Go — all 8 items"** and **"No — just build"** (no deploy).
+
+**Rule overridden and its scope:** the COMBINE chat's brief says *"YOU WRITE NO PRODUCT CODE. If you find a
+fault, you record it and tell the owning chat."* Tim has overridden that **for this overnight block only**.
+Scope: the eight behaviour items listed below, on branch `claude/civil-overnight-2026-09-19`. The gate-keeping
+rules are **not** overridden — nothing is deployed, every claim is still proven by name, and windows remain
+Codex's under ruling B.
+
+**The frozen payload stays recoverable:** `claude/civil-combine-2026-09-18` @ `0a84eb07` is pushed and is NOT
+moved by the overnight work. If the overnight branch goes wrong, that tip is still the deployable one.
+
+**The eight items (Tim's order: all of them):**
+
+| # | Item | Why it matters on a drawing |
+|---|---|---|
+| 1 | LPD note template stuck in saved settings (the R-00 hole) | Every LPD note on Tim's machine comes out short no matter what the code says |
+| 2 | L13 — a locked layer lets the schedule run ahead of the drawing | Schedule says 19.50, drawing says 19.60. A wrong drawing goes out |
+| 3 | P-05 — pipe text on **both** halves after a split | One length left with no size/material on it. Tim raised this himself on 18 Sep |
+| 4 | L12 — a refused pipe does not say **which** pipe | Tim cannot find what to fix |
+| 5 | Orifice standard detail carries the same anonymous-block trap W-07 fixed for tanks | A different detail drafted silently |
+| 6 | Ghost preview **rule** (Tim's ruling A, 18 Sep) | Restores the preview he asked for, without a writer. Panel is Codex's |
+| 7 | L10 — converted pipes write their record where it cannot be read back | Drawn level 17.35, schedule IL blank |
+| 8 | FALL / LEVEL / DP / WT tags losing their text when moved — **probe first** | Candidate for register O3/O4/O10/O17. Hypothesis, not a finding |
+
+**Not in scope, said plainly:** Codex's windows (label-fit, the PSD button, the CDWT rebuild); anything needing
+AutoCAD open (the CDWT crash probe N9, the P-07 invert evidence run, L1/L4 with diagnostics on).
