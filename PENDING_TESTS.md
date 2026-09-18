@@ -33,6 +33,28 @@ by anyone** — that is the whole point of the list.
 Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
+### BUILT 18 Sep — **W-09 / W-10 CDWT tank plans**, branch `claude/civil-fixes-2026-09-18` @ `d95e7342` — NOT installed, NOT tested
+
+Fixes register **W2** (blank tile pictures, short list) and the **no-ghost** half of **W4**. Cut from
+`claude/civil-combined-2026-09-17` @ `c9dac1bc`. Builds net48 / net8 / net10 **0 errors**; 149 WaterTank
+tests pass. Full entry: plugin `REGRESSION_LOG.md` **W-09 / W-10**.
+
+Measured against Tim's own `CE Civil WATER TANKS PLAN.dxf`: **39 plans read · 29 offered before · 39 now ·
+39 with a picture · 39 with a real size · 0 using the caption as a block name.**
+
+| # | What | Steps | Lane |
+|---|---|---|---|
+| W-09a | **Every tile has a picture** | `CDWT`. No tile is blank. | 2027 |
+| W-09b | **Nothing is missing from the list** | `CDWT`. Count the tiles: **39**, not 29. Look for **GRAF CARAT**, **AQUARIUS**, **WT1** and **PLAN VIEW** — all four were being dropped. | 2027 |
+| W-10 | **Three PLAN VIEW tanks — Tim's eye needed** | Three tiles read "PLAN VIEW  (7560 x 4800 mm)", "… 2" and "… 3". They are three different plans in your master. **Say if you want them named properly** — that means moving titles in the master, not changing CE. | 2027 |
+| W-09c | **The ghost comes back** | Pick **2510L UNDERDECK WATER TANK**, set a detention share, **Place tank**, pick an insertion point. **A ghost of the real tank follows the cursor.** That is the exact tile that failed on 16 Sep. | 2027 |
+| W-09d | **The right block lands** | Finish the placement. The block on the drawing is the one in the picture. | 2027 |
+| **W4-PROBE** | **The crash — NOT fixed, this is a 30-second probe** | Place a tank, and press **Enter** at the callout prompt instead of picking a point. **Does it still crash?** If it completes, the callout pick is the suspect; if it crashes anyway, it is elsewhere. Either answer tells me where to look. | 2027 |
+
+**Not claimed fixed:** the `AutoCAD cannot continue` crash in W4. It is an unmanaged fault — CE's own error
+handling cannot see it and there is no CE log line for it — so its cause is **not established** and no fix
+has been attempted. The probe above is how we settle it.
+
 ### BUILT overnight 17 Sep - branch `claude/civil-combined-2026-09-17` @ `28464fbd` - NOT installed
 
 Windows chat. Three CDWT faults found by opening the real master and the rendered window. Full detail in the
