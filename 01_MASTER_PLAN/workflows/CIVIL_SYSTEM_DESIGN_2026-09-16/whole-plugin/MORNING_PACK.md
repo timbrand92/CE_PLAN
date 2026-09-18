@@ -6,24 +6,27 @@ FOR TIM
 
 ## What changed — planning only
 
-- The plan follows the whole job: recognise the project → review evidence → draw/design → coordinate → check → issue → revise. Civil, Structural, shared drafting, settings, support and recovery are included.
-- Civil records now cover source-first items, areas/allocations, discharge, calculations, schedules, consultant revisions and tree constraints. A new report remains a candidate until confirmed; opening CDDESIGN on existing work preserves confirmed/manual values and keeps loose labels separate.
-- Structural records cover ordinary foundations/framing, labels, details, schedules and two-floor revisions. The plan documents a proposed blank-job draw/select raft-host doorway; it remains unbuilt/unapproved and needs owner workflow review. RCBEAM retains its approved single visual preview and eight geometry types.
-- Shared records distinguish saved preferences, immediate drawing actions, future automatic rules, time/support exports and formal issue history. Cancelling a later review must not pretend earlier accepted work disappeared.
-- Active implementation owners remain intact. Water Tank is last in this planning review.
+- Whole-job sequence: recognise project → review evidence → draw/design → coordinate → check → issue → revise.
+- Civil: source-first items, areas/allocations, discharge, calculations, schedules and revisions. Reports remain candidates until confirmed; existing manual values survive review.
+- Structural: foundations/framing, labels, details, schedules and two-floor changes. The proposed raft-host entry remains unbuilt/unapproved; RCBEAM retains its approved visual and eight geometry types.
+- Shared: settings, assets, assistance, exports, issue and recovery. Earlier accepted actions remain distinct from later Cancel. Implementation owners are preserved; Water Tank stays last in this review.
 
 ## Review this later — no AutoCAD testing requested now
 
 1. Start with the [whole-plugin map](C:/Users/TimothyBrand/.codex/visualizations/2026/09/16/01a0a938-956c-79d1-9ea7-8fa7121c6042/ce-whole-plugin-planning-map.html). It is a reading explainer, not the proposed product window.
-2. Use the [job journey and small review batches](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md) to choose one complete drawing workflow. Existing approved choices do not need approving again.
+2. Start the [small review batches](19_JOB_JOURNEY_AND_REQUIREMENT_INDEX.md#proposed-review-batches-after-this-planning-run) with **Job and evidence**: one recognised job, one report fact and a retained manual override. Settled decisions need no reapproval; this reading order does not reschedule implementation.
 3. Review a representative change: [a revised imported network removes the discharge endpoint](55_IMPORTED_NETWORK_OUTLET_AND_CUSTOM_SOURCE_HANDOFF.md). The authority record and manual source level survive; the missing physical connection remains visible until deliberately resolved.
 
-Five illustrative concepts have bounded independent browser reviews. Their [exact versions and limits](08_VISUAL_REVIEW_WORKING.md) do not prove AutoCAD window behaviour, geometry, document extraction, calculations, Undo or saved drawings. Future checks in AutoCAD belong to the implementation owners in small batches.
+Five concepts have bounded independent browser reviews; see their [exact versions and limits](08_VISUAL_REVIEW_WORKING.md). These do not prove AutoCAD behaviour or engineering calculations.
+
+The linked job walkthroughs are fictional planning exercises. This overnight continuation did not run the proposed system against an old project or demonstrate automatic report ingestion; those remain unverified.
+
+Review covers named workflows and corrections, not proven completeness of every command/field/interaction. Owners still owe drawing-output, save/reopen, Undo and recovery evidence; Tim should not have to guess these facts.
 
 ## Needs Tim / parked
 
-- The [existing decision bank](../planner/decisions_for_tim.md) retains unresolved engineering methods, calculation rules, reporting and exceptional project recovery. No unanswered choice became a default. Discuss one relevant decision at a time after review.
-- The [Structural choice review](planner/structural_choice_authority_review.md) retains the requested inside/outside label examples and hidden unapproved lap rule. Ordinary badge/icon choices are separated from engineering decisions; this is a bounded review, not a claim that no other Structural choices remain.
+- The [existing Civil decision bank](../planner/decisions_for_tim.md) retains engineering methods, calculation rules, reporting and exceptional project recovery. Discuss one relevant decision at a time; no unanswered choice became a default.
+- The [Structural choice review](planner/structural_choice_authority_review.md) retains inside/outside label examples and the hidden unapproved lap rule. This is not an exhaustive list of all future choices.
 - New interaction proposals remain proposals. Nothing in this pack authorises product changes or deployment. **No plugin was built, tested in AutoCAD or installed by this planning run; new proposals are not Tim-accepted.**
 - Final combined audit/readback and the 08:00 pack are still outstanding. The [live checkpoint](00_RUN.md) names the actual queue; an earlier two-hour stop and its claimed completion were superseded.
 

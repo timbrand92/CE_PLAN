@@ -36,6 +36,19 @@ Owner copy inspected: `C:\Users\TimothyBrand\.codex\worktrees\44b2\CE_ACAD_PLUGI
 
 ## Qualification still required
 
+### First Structural review after Save As — proposed interaction
+
+Read this after the shared owner has resolved the target job/drawing; it does not define a new identity rule or an ambiguous-project recovery choice. Saving a drawing file is not the same operation as copying a member or creating a linked schedule view.
+
+The first relevant Structural review names the actual target drawing and distinguishes visible geometry/manual label positions from member, detail and schedule associations. Preserve the existing drawing presentation. Read the destination's qualified records before reporting associations as current; where their scope cannot be established, show Unverified/Needs review rather than silently linking, deleting or resetting them. An established valid association does not require fresh approval simply because Save As occurred.
+
+| Resolved destination | Proposed review outcome |
+|---|---|
+| Another drawing in the same job | Revalidate the exact member/drawing/layout/view/level scope. A visible copied schedule is not proof of another live view. Where a new association is needed, use the existing schedule owner's snapshot-versus-linked-view review; do not invent an automatic second schedule or demand that all existing valid views be recreated. |
+| A genuinely different job | Retain visible beams, details and hand-moved labels, but do not present old-job report authority or schedule relationships as confirmed destination authority. Keep their actual origin visible where recorded. Re-establish applicable associations through the existing owners against the resolved destination; no write back to the original job and no automatic adoption of its engineering basis. |
+
+For example, using an earlier drawing as a starting point can retain a beam label placed clear of a wall. That label's position does not prove that its beam belongs to the new job's member schedule or that the previous design basis applies. Inspect the existing association through its owner, retaining the drawing presentation while unresolved. Pending review is not permission to change member sizes. Actual Save As, association persistence and native drawing behaviour require implementation-owner evidence; these are planning requirements only.
+
 The exceptional ambiguous-project recovery interaction is **not approved**. See [pending recovery decision](../planner/decisions_for_tim.md), row9. Ordinary automatic linking is approved; visible unresolved identity must not silently become a guessed job or a newly invented recovery picker. This decision gap is separate from source-answerable lifecycle checks below.
 
 Source establishes a useful existing shared-window context boundary, not complete automatic identity for every CE window. Remaining checks include standalone Civil context ownership, same-document Save As, nonstandard root recognition, internal action guards, and move/rename reconciliation. No new engineering decision is inferred and no current owner's implementation is interrupted.

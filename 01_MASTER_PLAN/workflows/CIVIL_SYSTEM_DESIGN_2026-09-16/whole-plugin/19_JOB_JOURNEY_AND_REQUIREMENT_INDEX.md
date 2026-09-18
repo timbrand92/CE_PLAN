@@ -75,7 +75,7 @@ Original source/control observations remain valuable evidence. Where their gener
 - The same [output boundary contract](22_CHECKLIST_AND_DRAWING_SAVE_BOUNDARIES.md) now includes direct Structural XLSX, block-library, layout PDF, drawing-note and inspection exports. Direct export is not formal issue; source scope, file completion and cancellation need distinct receipts.
 
 - [Integrated synthetic job](20_INTEGRATED_SYNTHETIC_JOB_WALKTHROUGH.md): step-by-step planning trace, not an AutoCAD test.
-- [Automatic project context](21_AUTOMATIC_PROJECT_CONTEXT_BOUNDARIES.md): same-job drafts, changed drawing paths, folder recognition and separate report-discovery scope.
+- [Automatic project context](21_AUTOMATIC_PROJECT_CONTEXT_BOUNDARIES.md): same-job drafts, changed drawing paths, folder recognition and separate report-discovery scope; first Structural review after Save As retains drawing presentation while checking the destination's member/detail/schedule associations.
 
 - [Source scope and authority](01_COVERAGE_AND_AUTHORITY.md): exact bounded source populations and owner copies.
 - [Command discovery](planner/command_discovery_reconciliation.md): primary/alias/ribbon/Help differences and approved disposition; all working routes are not automatically Active.
@@ -127,6 +127,10 @@ Each batch uses the relevant detailed cards' existing small representative nativ
 ## Window rules across the sequence — retained
 
 Retain CE visual language, roughly90% AutoCAD-owner sizing, large relevant previews, visible primary actions, minimal tabs and no main-page scrolling. Open detailed editing when needed; do not turn this reading index into compulsory product tabs. Familiar direct commands remain supported under their reviewed status. Search/context Help explain unavailable capabilities rather than imply they work.
+
+Apply the large-window target to the design/review windows being planned; preserve separately approved interaction types. Ask CE remains dockable and non-blocking under AI-01. Native point/selection commands retain their approved prompts and transient previews, and C2 retains its separately approved picker. This is a scope clarification, not permission to resize an approved window or replace a working command with a new full-size dialog. Exact owner-reviewed layouts still govern.
+
+For example, reviewing a report needs the large source-page preview; placing an ordinary support uses its existing direct route and any specifically approved picker. Both retain visible purpose and user control without forcing the same window onto every drawing action.
 
 Each window must state what its main action affects: draft, settings file, drawing, external file, issue history or shared source. Save, Apply, Close, Cancel and Undo are not interchangeable. The user's confirmed engineering values and hand-placed presentation must survive source discovery and ordinary refresh.
 

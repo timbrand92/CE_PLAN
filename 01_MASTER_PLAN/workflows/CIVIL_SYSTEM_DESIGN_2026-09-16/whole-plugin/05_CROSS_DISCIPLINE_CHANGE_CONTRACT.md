@@ -76,6 +76,26 @@ Revalidation is scoped: a markup change concerning B1 reopens B1's relevant reme
 
 Issue membership and revision membership are separate. Include unchanged sheets when making the full set PDF, while retaining their dates/revisions. Proposed folders/files are editable and reviewed. A plot failure leaves issue preparation unfinalised; retry reuses the reviewed revision intent and does not increment it again. Existing shared phased publishing/history work is reused, not replaced.
 
+## C-06 — Undo/Redo after separate design and drawing actions
+
+This is proposed cross-tool state review, not a new Undo command or a claim about AutoCAD internals. Preserve each owner's approved operation boundary and prove its actual restored state. A drawing Undo is not a global rollback of report adoption, settings files, exported files or issued history.
+
+| User action | Required visible reconciliation |
+|---|---|
+| Undo an accepted pipe/member geometry edit | Read the actual restored object/relationship state through its owner. Recheck only affected dependants. Do not assume a result became Current merely because the visible line resembles its earlier position. |
+| Undo a manual label move | Reconcile presentation and any draft that consumed its prior position. This alone does not change runoff, a member size or a calculation's numerical basis. |
+| Undo a drawing edit after separately accepting report criteria | Retain the report fact's actual adopted state unless its own qualified operation was also explicitly reversed. The restored geometry may now disagree with that still-adopted basis; show the mismatch instead of silently reverting the report. |
+| Undo a selected coordinated operation | Restore only what the qualified operation actually owned and restored; show any separate output/record that remains. A cross-tool transaction is not assumed from an Edit together label. |
+| Undo/Redo a Structural Edit this only change | Recompare the actual member with its related schedule/detail state. Retain or clear the mismatch only as that comparison establishes; do not refresh the related views automatically or assume their currentness from the member's display alone. |
+| Redo after another relevant value or source changed | Revalidate actual current scope and dependent status. Redo does not approve newer evidence, reuse a stale proposal's permission or overwrite unrelated manual work. Exact native availability/behavior remains to be qualified. |
+| Undo after a file or issue output was completed separately | Keep the existing file/history identity intact. The current drawing can differ from the issued baseline; do not delete or relabel that issued evidence as though it never existed. |
+
+An earlier result may only be described as current when the owning calculation/check can establish that its relevant numerical inputs, method, system identity and applicable evidence status match the actual state. An unchanged displayed number is insufficient proof. Conversely, restoring presentation alone must not cause a blanket numerical recalculation demand. Numerical freshness and source/relationship review remain separate where their causes differ.
+
+**Fictional example:** a permitted-discharge criterion is adopted, then a pipe is moved. Undoing the pipe move does not cancel that separate criterion adoption. The engineer sees the restored geometry against the retained criterion and the actual affected result status. No report or pipe value is silently chosen to make them agree.
+
+Future combined qualification uses an accepted drawing change, a separate report fact, a manual label move and a completed historical output. Exercise only the supported native Undo/Redo operations and inspect actual objects, saved/unsaved state, adopted facts and result/output identities. Record Unsupported/Unknown where restoration cannot be established. These cases were not run.
+
 ## Synthetic end-to-end scenarios for later implementation acceptance
 
 | Scenario | Required observation | Current proof |

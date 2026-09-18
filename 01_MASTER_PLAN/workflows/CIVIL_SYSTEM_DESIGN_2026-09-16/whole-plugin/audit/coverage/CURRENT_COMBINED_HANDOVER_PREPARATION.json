@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-17T07:09:38.8452218+10:00",
+  "packHash": "6D35E4F9DDF5F09B3E2AC02B26DF2DB2760821E00BBA32659B97E0F2019CF89E",
+  "knownMaterialOpenFindingsInAuditedScope": [],
+  "universalRequirements1to3Certified": false,
+  "final08Delivery": false,
+  "newNativeOrBrowserTests": false,
+  "scope": "Full shortened pack readback against existing preparation; no material misleading compression"
+}

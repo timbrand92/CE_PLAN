@@ -10,6 +10,8 @@ Proposed shared interaction detail across the existing reviewed command owners. 
 
 This proposal does not redesign active CD/PIT, replace approved command prompts, or introduce manual alignment in CV7 import (that route expressly requires its approved alignment preview and no manual pick-point placement). It applies only where selecting/drawing in AutoCAD is already an allowed workflow.
 
+The large-window handoff applies to an originating design/review window. It does not require native commands to open one, change an approved picker, or turn the dockable Ask CE palette into a modal window; retain the interaction-type qualifications in19.
+
 ## Before, during and after a pick
 
 | Stage | Proposed user experience | Boundary |

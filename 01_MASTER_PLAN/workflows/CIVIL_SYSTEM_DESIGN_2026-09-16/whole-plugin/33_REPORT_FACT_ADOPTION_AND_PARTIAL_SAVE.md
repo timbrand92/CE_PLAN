@@ -23,6 +23,8 @@ Selecting the report shows its page preview and fact rows. Each row identifies p
 
 These letters represent distinct values, not engineering defaults. Report revision status is an evidence property; adoption status belongs to individual facts and their applicable scope. The header can say Mixed review, not Report adopted when some facts remain unreviewed.
 
+**Level comparison — proposed handoff:** for a level fact, show its level role and vertical datum alongside units, including Unknown where the source does not establish them. A readable number alone cannot establish compatibility with a survey, pit invert or slab FSL. For example, a report level on an unspecified local datum must not be treated as a directly comparable AHD level merely because both values are in metres. Preserve the cited original and any manual pin. Where an existing owner supports a reviewed datum conversion, keep the original value/datum and the confirmed conversion basis distinct from the derived value; never infer an offset from similar numbers, drawing placement or a matching label. If a necessary datum relationship is unresolved, retain the candidate for review and qualify the affected level-dependent calculation rather than confirming it as compatible. Unrelated facts and ordinary drafting can proceed under their existing rules. This adds no automatic conversion tool, datum choice or new numerical standard.
+
 ## 2. Review and confirm the exact fact set
 
 1. Select a row to see current/pending values and the relevant page together. Highlight only the cited passage where available; no fabricated citation.

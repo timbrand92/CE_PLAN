@@ -67,6 +67,24 @@ Before accepting a boundary, classification or allocation change, recheck drawin
 
 For a compound change distinguish proposed geometry, accepted drawing geometry, confirmed governing record and dependent output state. Partial/unknown persistence needs readback before retry. Never redraw a possibly created boundary or duplicate allocations because the response was lost. Save/reopen must show actual durable geometry and confirmed basis; a completion message is not proof both persisted.
 
+## 6. Erased outline versus removed catchment
+
+This proposed handoff distinguishes a missing drawing reference from deliberately removing a hydraulic contribution. It does not introduce a replacement ERASE command or promise that current CE records already survive every native operation.
+
+Where an existing approved owner defines ERASE of a whole managed compound as removal of its governing item, that qualified operation and its dependency/Undo rules still apply. This section concerns separate referenced geometry; it must not silently change compound ownership or add a second mandatory confirmation to an already approved removal.
+
+| Observed or reviewed action | Retained evidence and next review |
+|---|---|
+| A referenced outline is erased | Show the missing geometry identity beside its last recorded measured value, report/manual basis and allocations. Last measurement is historical evidence, not a fresh measurement of an existing outline. Do not write zero, delete source citations or redistribute DP portions. |
+| A separately recorded manual/report area remains | Preserve that record's actual confirmed/unconfirmed status. Geometry availability and suitability are shown separately; keeping a value is not blanket permission to calculate where required geometry or other basis is missing. |
+| User draws/selects a replacement outline | Review exact old/new geometry and governing-value consequences through the existing owner. Similar shape, matching text or the same visible catchment name does not automatically restore identity or an allocation. |
+| User deliberately proposes removing the catchment contribution | Preview affected allocations, systems and results, and resolve the exact selected change through the owner. This is distinct from deleting an annotation/outline. Retire the confirmed contribution only through the reviewed operation; no zero-area stand-in or automatic reassignment. |
+| Undo restores an outline | Follow root05's actual restored-state reconciliation. Re-establish the exact supported identity/basis before claiming Current; no blind match to the nearest new outline. |
+
+**Fictional example:** a drafter erases an outline while tidying a plan. The prior manual area and its cited report remain recorded, while the outline is Missing and affected suitability is visible. Drawing a cleaner outline proposes a replacement; it does not create a second active catchment or silently take over the old DP shares. Cancelling that later comparison retains the actual accepted drawing state and unresolved relationship.
+
+Future proof should inspect the actual record/geometry/allocations after ERASE, cancellation of replacement review, explicit replacement and supported Undo/save-reopen. Current source behavior and any required preservation mechanism remain unproved; this is a planning requirement, not a successful test or new numerical rule.
+
 ## Proposed representative review
 
 1. Reopen a project with an existing catchment plan: it appears before new candidates; no duplicate600m² catchment.
