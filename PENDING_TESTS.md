@@ -479,3 +479,21 @@ its halves and their labels **together**. Not verified today, not claimed.
 
 **Worth a look on old jobs:** every system created before today started at `5.24 l/s`. CE does not rewrite
 saved records, so check any job you have not looked at since.
+
+### ADDED 18 Sep — K4 Council keyword, branch `claude/civil-k-l-2026-09-16` @ `dc937001`
+
+| # | What | Test | Lane |
+|---|---|---|---|
+| T16 | **`Council` gives COUNCIL PIPE** *(the bug)* | `CDLPD` → pipe end → label point → type **`Council`**. Note says **COUNCIL PIPE**. Must NOT say COUNCIL STUB | both |
+| T17 | Each full word still works | `CouncilStub`, `CouncilPit`, `CouncilPipe` each give their own wording | both |
+| T18 | An ambiguous shortening is refused, not guessed | Type **`CouncilP`** → *"CouncilP could mean CouncilPit or CouncilPipe. Nothing was written…"* and **nothing is placed** | both |
+| T19 | Shortenings still work | Type **`K`** → KERB & CHANNEL | both |
+| T20 | Enter still takes the default | Press Enter → KERB & CHANNEL | both |
+| T21 | `Other` still takes your own words | Type `Other`, then your wording → it goes on the note | both |
+
+**Changed for Tim, say if you mind:** this one question no longer offers AutoCAD's right-click keyword menu —
+CE reads what you type and matches it itself, which is why it can now be proven. The choices are still printed
+in the question and shortenings still work.
+
+**Not fixed by this:** the note **wording** is still wrong on Tim's machine because his settings hold the old
+short template. K4 fixes which connection **type** is chosen. Both are needed.

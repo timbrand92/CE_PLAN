@@ -324,8 +324,9 @@ only. **O3 / O4 / O17 remain open and unexplained by anything on this branch.**
 | | |
 |---|---|
 | Branch | `claude/civil-k-l-2026-09-16` |
-| `git rev-parse HEAD` | `457bf032ec6a02d370619a5df02870cf0afbafad` |
-| `git rev-parse @{u}` | `457bf032ec6a02d370619a5df02870cf0afbafad` |
+| `git rev-parse HEAD` | `dc9370017d268ae616ea1d76df6ec4892272ce47` |
+| `git rev-parse @{u}` | `dc9370017d268ae616ea1d76df6ec4892272ce47` |
+| *(was `457bf032` when this section was first written; `dc937001` adds the K4 fix Tim asked for on 18 Sep)* | |
 | **Pushed** | **yes** — HEAD and upstream identical |
 | Worktree | **clean**, `git status --porcelain` empty |
 | Installed build read from the DLL | `3.0.0+d0ffe1a281808c1837375785351581610dcc9c51`, written 16 Sep 22:41 |
@@ -338,6 +339,7 @@ only. **O3 / O4 / O17 remain open and unexplained by anything on this branch.**
 | `b8d827b8` TWL-04 / TWL-06 | **NOT installed** |
 | `b8e234f9` TWL-05 | **NOT installed** |
 | `457bf032` PSD-01 | **NOT installed** |
+| `dc937001` **K4 — the Council keyword** | **NOT installed** |
 
 ### 2. The three uninstalled commits, in drawing terms
 
@@ -403,7 +405,7 @@ path unchanged), `DetentionTwlService.cs`, `OnSiteDetentionCriteriaService.cs`,
 ### 4. Test result — re-run just now at `457bf032`, not quoted from earlier
 
 - **Builds: net48, net8.0-windows, net10.0-windows — 0 errors** each, `-p:SkipDevBundle=true`.
-- **Full net10 suite: 9,936 run · 9,896 passed · 23 failed · 17 skipped.**
+- **Full net10 suite: 9,971 run · 9,931 passed · 23 failed · 17 skipped** (re-run after the K4 fix).
 - **By name**, the failures are the 20 recorded names (with `EveryTabFitsOrUsesExplicitFallbackAtOfficeScaling`
   ×3 cases = 22 executions) **plus one**:
 
@@ -479,13 +481,32 @@ for anyone whose settings were already saved — that is a general hole in setti
 again. **Until it is fixed, Tim can clear the LPD note box on the Settings page and the correct wording
 returns.**
 
-#### K4 — a defect of mine that my own unit test could not catch
+#### K4 — FIXED 18 September, on Tim's instruction (`dc937001`)
 
-Codex: typing `Council` produced **COUNCIL STUB**, not COUNCIL PIPE. My rule maps the retired word `Council`
-→ COUNCIL PIPE and the test passes — **but AutoCAD resolves the ambiguous keyword first.** `Council` is a
-prefix of `CouncilStub`, `CouncilPit` and `CouncilPipe`, so the prompt hands my code `"CouncilStub"` and my
-retired-keyword branch is never reached. **I tested the rule, not the prompt** — the exact trap the rules warn
-about. Needs either a non-ambiguous retired alias or the prompt handling it explicitly.
+Codex: typing `Council` produced **COUNCIL STUB**, not COUNCIL PIPE. My rule mapped the retired word
+correctly and its test was green — but the command used AutoCAD's `GetKeywords`, so **AutoCAD matched the
+typed text before CE saw it**. `Council` is a prefix of four offered words, the prompt handed back
+`"CouncilStub"`, and the retired-word branch was unreachable by construction. **I tested the rule, not what
+the engineer types.**
+
+**Tim, 18 Sep: *"fix the council keyword bug before you stop"*. Done.**
+
+CE now reads the raw text and decides for itself — `SourceFamilies.ReadLpdConnectionInput`, a pure rule, in
+this order, **and the order is the whole of the fix**: nothing typed → the default · **an exact word beats any
+prefix** (this is what makes `Council` reachable) · a shortening that can only mean one thing → that one · a
+shortening that could mean several → **CE names them and writes nothing** · anything else → not recognised,
+nothing written. Retired words must be typed in full, so one can never capture a shortening of a real choice.
+
+Handing this to a matcher whose precedence CE cannot see, cannot unit-test and must never assert was the real
+fault, so the fix is also the only version that can be proven. **Trade, stated plainly: this question loses
+AutoCAD's right-click keyword menu.** The choices are still printed and shortenings still work.
+`CDLPDRESET`'s Yes/No keyword prompt is untouched.
+
+New files `Rules/LpdConnectionInput.cs`, tests `Rules/LpdConnectionInputTests` (19). **A source guard fails if
+the connection choices are ever handed back to AutoCAD's matcher.**
+
+**K4 fixes which connection TYPE is chosen. It does not fix how the note READS** — that is the settings fault
+above, and both are needed before CDLPD is right on Tim's machine.
 
 ### 6b. ⚠️ ShiftAnnotation and the pit label — MY FENCE, and my answer on ownership
 
