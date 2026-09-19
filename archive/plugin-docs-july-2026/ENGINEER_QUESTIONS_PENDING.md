@@ -55,7 +55,7 @@ A minimum applies but the value was never given (Monash 65, Whitehorse 90, Morni
 Casey 50 are all in). Manningham currently has NO minimum enforced.
 → *The number in mm (or "none").*
 
-## 4. Job 24-100 (38 Ella Grove, Chelsea) — which sheet is approved?
+## 4. Job 24-100 ([job 24-100], Chelsea) — which sheet is approved?
 Two conflicting sets exist in the job folder:
 - Boyd's KINGSTON xls: site **686.4** m² / impervious **386.12** m²
 - Other session record: site **657** / impervious **345**
