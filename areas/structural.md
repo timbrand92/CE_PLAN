@@ -17,6 +17,8 @@ Structural (S1 to S3 and Level 3): project understanding, connected framing, det
 
 ## 3. Items and status
 
+1. **DATA-01 corpus move (19 Sep 2026).** The CEMARKUP corpus data is out of the repo (plugin draft PR `claude/private-data-step4`) and lives at `C:\CE_DrawingIntelligence_Plugin_CEMARKUP_Corpus\`. The code reads only the manifest, which stayed. **Built (docs and data only), not tested, not installed.** Still to do in a plugin chat with a build: swap the real addresses in eleven drainage test/source string literals for fictional same-shape addresses, run Drainage.Tests and Structural.Tests, then a settings-page path for the corpus root if the validation service ever needs the snapshots.
+
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "see the source documents". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
 ## 4. Bugs
