@@ -116,7 +116,7 @@ single set of pits.
   with root causes + Tim's rulings). Read it first.
 - Regression log: `CE_ACAD_PLUGIN/REGRESSION_LOG.md` (newest first — rounds 3/4 detail).
 - Checklist: `CE_ACAD_PLUGIN/docs/TIM_CHECKLIST.md`. Plan board: `docs/SMARTIFY_PLAN.md`.
-- Real data: MAIN drawing `...\W26-32_Lot 58 Axis Boulevard, Officer South\W26-32_CVL.dwg`
+- Real data: MAIN drawing `...\W26-32_[address withheld]\W26-32_CVL.dwg`
   (its `W26-32_CVL TEST.dxf` is the test-import target but is full of untracked ghosts from earlier
   runs — for a clean test, import into a FRESH SAVEAS of the real CVL dwg, not the TEST file).
   Consultant package: `...\Engineering\Markups\From Mike\2026-06-24_Design from Mike\` (26612_XCivil.dwg,
