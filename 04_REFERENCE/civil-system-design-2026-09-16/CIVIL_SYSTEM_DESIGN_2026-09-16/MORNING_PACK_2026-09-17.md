@@ -20,11 +20,11 @@
 **Needs Tim / parked**
 
 - First planning choice: review a connected roof → treatment → reuse arrangement together, or confirm each value separately? **Recommendation: together, with individual overrides**, so a revised roof area is reviewed alongside its tank/treatment assumptions. Individual confirmation offers finer control but needs a mixed-revision warning.
-- Other unresolved engineering choices stay in the [decision bank](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/decisions_for_tim.md); none was answered for you.
+- Other unresolved engineering choices stay in the [decision bank](C:/CE_PLAN/04_REFERENCE/civil-system-design-2026-09-16/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/decisions_for_tim.md); none was answered for you.
 - Actual ingestion, drawing recognition, saved overrides, native window fit and engineering calculations still require implementation and real AutoCAD acceptance.
 
 ---
 
-Planning evidence: [journey](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/civil_journey_and_window_map.md), [workflow cards](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/workflow_cards.md), [specialist detail](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/specialist_workflow_details.md), [closed audit](C:/CE_PLAN/01_MASTER_PLAN/workflows/CIVIL_SYSTEM_DESIGN_2026-09-16/audit/AUDIT_CLOSURE.md). The first-pass report remains as correction history.
+Planning evidence: [journey](C:/CE_PLAN/04_REFERENCE/civil-system-design-2026-09-16/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/civil_journey_and_window_map.md), [workflow cards](C:/CE_PLAN/04_REFERENCE/civil-system-design-2026-09-16/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/workflow_cards.md), [specialist detail](C:/CE_PLAN/04_REFERENCE/civil-system-design-2026-09-16/CIVIL_SYSTEM_DESIGN_2026-09-16/planner/specialist_workflow_details.md), [closed audit](C:/CE_PLAN/04_REFERENCE/civil-system-design-2026-09-16/CIVIL_SYSTEM_DESIGN_2026-09-16/audit/AUDIT_CLOSURE.md). The first-pass report remains as correction history.
 
 Built: no plugin changes. Tested: 34 root offline concept checks; independent audit separately ran 28 browser and 3 disk-file checks. No AutoCAD tests. Installed: nothing. Tim-accepted: not yet. Native sizing remains unproved despite tested browser fits. Audit closed all nine planning findings on 16 September, before the 17 September 08:00 Sydney deadline. Exact finish time is in the run record; no claim of a completed 6–8 hour run.

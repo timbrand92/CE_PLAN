@@ -87,7 +87,7 @@ Every one moves geometry or sizing and traces to *nobody* — not a standard, no
      other than the obvert of the highest detention pipe… we had a trench grate which was a higher level"*.
      CDTWL must list every candidate level with its source and **use nothing until Tim picks one**. The chosen
      level is the baffle crest, and `TWL − orifice IL` is the head that sizes the orifice.
-     See `03_DRAWING_INTELLIGENCE/DECISIONS_LOG.md`, 2026-09-15 evening.
+     See `decisions/DECISIONS_LOG_DRAWING_INTELLIGENCE.md`, 2026-09-15 evening.
 8. **Detention pipe: preferred max length 40 m; diameters 225–600.** `AutoDesignService.cs:63,73`.
 9. **Column-vs-pad threshold 4000 mm span** (structural). `SupportPlacementEngine.cs:42`.
 10. **Min outlet drop 20 mm; default pit drop 5 mm.** `UserSettings.cs:203,220`.

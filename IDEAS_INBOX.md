@@ -1,4 +1,4 @@
-# IDEAS INBOX — raw capture (TIMS IDEAS)
+# IDEAS INBOX — raw capture (CE_ACAD — the one idea file for the plugin)
 Add one plain-English line under NEW. The daily TIMS IDEAS run sorts + routes it. Nothing is lost.
 ## NEW
 - 2026-09-16 Tim (PIT window, this chat owns): "USE TICK ON/OFF INSTEAD OF SET BUTTON" — the Bottom (m AHD) Set toggle becomes a tick box.
@@ -14,3 +14,5 @@ Add one plain-English line under NEW. The daily TIMS IDEAS run sorts + routes it
 - 2026-09-04 (Tim, Test Day 4): double-click on a pipe label or invert MText should open a CE pop-up that edits both the shown text and the engineering value, instead of AutoCAD's text editor. (Behaviour = intercept here; the window = C2.)
 - 2026-09-04 (Tim, Test Day 4): making an existing plain polyline into a CE pipe (CDPIPE on a drawn line) is not built yet — wanted for the branch-junction test.
 ## PROCESSED
+
+- **2026-09-19** — *(pointer)* the old drainage suite's parking lot (94 KB, 4 Jun 2026) is archived at `archive\previous-plugins\CE_CVL_SUITE_PARKING_LOT_2026-06-04.md`. Tim decides whether anything in it is still wanted.

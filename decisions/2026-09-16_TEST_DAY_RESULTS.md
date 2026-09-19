@@ -385,15 +385,15 @@ walls, survives save/reopen). No change to the live enabler until the probe resu
 > refusal → PLACE-01 → upgrade-on-open → 2024 enabler attempt → audit → morning pack by 8 am, nothing deployed) →
 > Tim: **"Go"**. Then: *"OVERNIGHT SEQUENCE FOR BOTH THIUS CHAT AND KL CHAT AS WELL"*.
 
-Morning packs: `01_MASTER_PLAN/MORNING_PACK_C7_2026-09-17.md` (this chat) and
-`01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md` (the K/L chat; its prompt `CHAT_PROMPT_CIVIL_K_L_2026-09-16.md` now
+Morning packs: `archive/chat-records-2026-09/MORNING_PACK_C7_2026-09-17.md` (this chat) and
+`archive/chat-records-2026-09/MORNING_PACK_K_L_2026-09-17.md` (the K/L chat; its prompt `CHAT_PROMPT_CIVIL_K_L_2026-09-16.md` now
 carries the overnight instruction). Nothing is deployed overnight.
 
 ### 6o. Tim, 16 Sep (evening): overnight sequence for the windows chat — PREPARED, awaiting "Go"
 
 > *"CAN YOU PLEASE PREPARE OVERNIGHT SEQUENCE"* (to the windows chat)
 
-Block: `01_MASTER_PLAN/OVERNIGHT_BLOCK_WINDOWS_CHAT_2026-09-16.md` — CDWT W-01..05 → computations sheet BUG-158 (unclaimed, proposed) → CD window ticks/polish → audit → morning pack `MORNING_PACK_WINDOWS_2026-09-17.md` by 8 am. Nothing deployed. Not started until Tim says Go.
+Block: `archive/chat-records-2026-09/OVERNIGHT_BLOCK_WINDOWS_CHAT_2026-09-16.md` — CDWT W-01..05 → computations sheet BUG-158 (unclaimed, proposed) → CD window ticks/polish → audit → morning pack `MORNING_PACK_WINDOWS_2026-09-17.md` by 8 am. Nothing deployed. Not started until Tim says Go.
 
 > **Tim, 16 Sep (evening): *"GO"*** — windows chat overnight block started (6o).
 
@@ -408,7 +408,7 @@ place; nothing is deployed.
 
 ### 6p. Windows chat overnight block — DONE (17 Sep, before 8 am)
 
-Items 1–3 built and audited (CDWT-W01, BUG-158/F1, CD-TICKS-01); morning pack `01_MASTER_PLAN/MORNING_PACK_WINDOWS_2026-09-17.md`. Trunk `claude/ce-civil-handoff-sept-16-5623ca` @ `17847985`. Nothing deployed. Out of unblocked work in this chat's lane; stopped as the block says.
+Items 1–3 built and audited (CDWT-W01, BUG-158/F1, CD-TICKS-01); morning pack `archive/chat-records-2026-09/MORNING_PACK_WINDOWS_2026-09-17.md`. Trunk `claude/ce-civil-handoff-sept-16-5623ca` @ `17847985`. Nothing deployed. Out of unblocked work in this chat's lane; stopped as the block says.
 
 ### 6p. The K/L overnight block — DONE, 17 September, nothing deployed
 
@@ -416,7 +416,7 @@ Tim, 16 Sep evening: *"yes go ahead, see you in the morning"*.
 
 All six items taken (61, 62, 63 — `CDLPD`; 64, 66, 67 — pits, tanks, levels), each built with a failing test
 first, committed and pushed. Branch **`claude/civil-k-l-2026-09-16`**, tip **`0ed39495`**.
-Morning pack: `01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md`. Test rows: `PENDING_TESTS.md` K1–K7, L1–L11.
+Morning pack: `archive/chat-records-2026-09/MORNING_PACK_K_L_2026-09-17.md`. Test rows: `PENDING_TESTS.md` K1–K7, L1–L11.
 
 **Two root causes found, both provable:**
 
@@ -464,7 +464,7 @@ PROBE-C7-POLY passed → the pipe object was rebuilt on AutoCAD's polyline class
 morning object kept and migrated in place; upgrade on open / on draw / on demand with one backup and one line; twins;
 IDENT-01 (new pipes get their identity — the "no matching identity" refusal); PLACE-01 built as one rule at four
 moments + Settings values; the 2022–2024 enabler builds but has never been loaded. **Morning pack:**
-`01_MASTER_PLAN/MORNING_PACK_C7_2026-09-17.md`. Test rows O1–O15 in `PENDING_TESTS.md`. Branch
+`archive/chat-records-2026-09/MORNING_PACK_C7_2026-09-17.md`. Test rows O1–O15 in `PENDING_TESTS.md`. Branch
 `claude/civil-other-areas-2026-09-16-1c1ae6` @ `812f868f`. Live is still `6505fb5a`.
 
 ### 6q. Tim's answers to the five K/L questions — 17 September 2026
@@ -700,7 +700,7 @@ asked before the pipe is drawn instead of after the window closes. The splitting
 pipe exists, because the halves cannot link to their pits until the pipe is in the drawing. The tick's state is
 remembered **for that drawing only**; the Settings page keeps the office default for a new drawing (SPLIT-01
 stands). **Codex builds the tick; the behaviour side wrote the contract and does not touch the window**
-(ruling B). Contract: `01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`.
+(ruling B). Contract: `04_REFERENCE/contracts/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`.
 
 **Two things still need Tim** and are NOT assumed: the exact wording on the tick (recommended *"Split where it
 crosses pits"*), and what replaces the old **Escape** route — with a tick there is no separate escape moment, so

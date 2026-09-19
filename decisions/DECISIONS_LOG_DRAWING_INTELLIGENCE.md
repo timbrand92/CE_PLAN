@@ -962,7 +962,7 @@ not a council's published figure, so it does not close that question, but it say
 
 ### 2026-09-15 (evening) — Tim's five rulings on areas D + F (catchments, CDCALC, OSD)
 
-Asked in `01_MASTER_PLAN/AREA_D_F_CATCHMENTS_CDCALC_OSD_PLAN.md` §6 and answered the same evening.
+Asked in `areas/civil-D-F-catchments-cdcalc-osd.md` §6 and answered the same evening.
 
 | # | Question | Tim's answer |
 |---|---|---|

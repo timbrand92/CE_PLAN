@@ -49,15 +49,15 @@ overnight work proves wrong.
 
 `GHOST-01` built the **rule** only (Tim's ruling A, 18 Sep). **The picture panel is Codex's under ruling B and
 is NOT built**, so Tim will see no change in AutoCAD. Contract:
-`01_MASTER_PLAN/CONTRACT_GHOST_PREVIEW_2026-09-18.md`.
+`04_REFERENCE/contracts/CONTRACT_GHOST_PREVIEW_2026-09-18.md`.
 
 ---
 
 ## COMBINED 18 September 2026 — `claude/civil-combine-2026-09-18` @ `0a84eb07` — BUILT, NOT INSTALLED, NOT TESTED
 
 **All FOUR Civil branches merged into one payload by the COMBINE chat. Nothing here is in AutoCAD.**
-Morning pack: `01_MASTER_PLAN/MORNING_PACK_COMBINE_2026-09-19.md`. Codex test list (76 steps):
-`01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-18.md`.
+Morning pack: `archive/chat-records-2026-09/MORNING_PACK_COMBINE_2026-09-19.md`. Codex test list (76 steps):
+`archive/chat-records-2026-09/CODEX_TEST_RUN_2026-09-18.md`.
 Installed is still `3.0.0+d0ffe1a2`, read back from the DLL.
 
 | Input | Tip merged | Note |
@@ -96,7 +96,7 @@ Installed is still `3.0.0+d0ffe1a2`, read back from the DLL.
 switches into paths and MSBuild fails with `MSB1008`.
 
 **What Tim must test if this is installed:** the **76-step Codex list** at
-`01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-18.md` (Tim, 18 Sep: *"all 40 for codex so make sure it knows what to
+`archive/chat-records-2026-09/CODEX_TEST_RUN_2026-09-18.md` (Tim, 18 Sep: *"all 40 for codex so make sure it knows what to
 do"*). Parts S (start-up) · N (CDWT, 11) · P (pit number, 7) · O (pipe text, levels, CDFIXTAGS, splits, 25) ·
 T (CDTWL, detention, PSD, CDLPD, 21) · X (2024 lane) · Z (regression sweep).
 
@@ -105,11 +105,11 @@ attempted. Step **N9** is a probe, and a crash there is expected, not a regressi
 
 ---
 
-## TESTED 16 September 2026 — MOSTLY FAILED. Read `01_MASTER_PLAN/TEST_DAY_RESULTS_2026-09-16.md` FIRST
+## TESTED 16 September 2026 — MOSTLY FAILED. Read `decisions/2026-09-16_TEST_DAY_RESULTS.md` FIRST
 
 `c1af9781` is live and Tim has tested it. **The deploy worked; most of what it carried does not.** Do not use
 the 77-step list as a to-do — use the failure register in
-**`01_MASTER_PLAN/TEST_DAY_RESULTS_2026-09-16.md`**, which is the authoritative record of what he found.
+**`decisions/2026-09-16_TEST_DAY_RESULTS.md`**, which is the authoritative record of what he found.
 
 **Tim's instruction, 16 Sep:** ONE AREA AT A TIME. Priorities **`CDWT`, `CD`, `PIT`**, then test sections
 **H, I, J, K, L**, then **M**. He has withdrawn trust in large batches.
@@ -120,7 +120,7 @@ the 77-step list as a to-do — use the failure register in
 matched the staged payload and the lineage check printed nothing. **Nothing below has been tested in AutoCAD
 by anyone** — that is the whole point of the list.
 
-Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
+Use `archive/chat-records-2026-09/DEPLOY_AND_TEST_2026-09-16.md` section 3: **77 steps, A to O**, covering the whole
 69-commit payload. Restart AutoCAD first.
 
 ### BUILT 18 Sep — **P12 / P14 / BUG-151 pit label**, branch `claude/civil-fixes-2026-09-18` @ `29d0598d` — NOT installed, NOT tested
@@ -175,7 +175,7 @@ has been attempted. The probe above is how we settle it.
 
 Windows chat. Three CDWT faults found by opening the real master and the rendered window. Full detail in the
 plugin `REGRESSION_LOG.md` (**W-06**, **W-07**, **W-08**) and
-`01_MASTER_PLAN/MORNING_PACK_WINDOWS_2026-09-18.md`. Builds 0 errors on all three lanes; full net10 suite
+`archive/chat-records-2026-09/MORNING_PACK_WINDOWS_2026-09-18.md`. Builds 0 errors on all three lanes; full net10 suite
 **9,918 run · 9,879 passed · 22 failed · 17 skipped** - the same 22 names as the baseline, compared by name.
 
 | # | What | Steps | Lane |
@@ -222,7 +222,7 @@ and this payload changes no PDF or markup code. Recorded as **flaky under full-s
 **Still open and NOT decided:** the note's wrap width — Tim asked to *"show me the different variations"*,
 five widths were drawn for him on 17 Sep and **he has not picked one**.
 
-**Installed, NOT tested.** The ONE list: `01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-17.md`; drawings named in
+**Installed, NOT tested.** The ONE list: `archive/chat-records-2026-09/CODEX_TEST_RUN_2026-09-17.md`; drawings named in
 `C:\Users\TimothyBrand\CE_TEST_DRAWINGS_2026-09-17.md` (outside every repo, DATA-01).
 
 ### LIVE since 16 Sep 22:31 — `081c82b6` on `claude/civil-combined-2026-09-17` (ALL THREE overnight chats, one payload)
@@ -238,7 +238,7 @@ Builds: net48 / net8 / net10 **0 errors**. Full net10 suite: **9,899 run · 9,86
 17 skipped** — the 22 known names, all in test files this payload never touched (list below).
 
 **Installed, NOT tested.** The ONE list for this build is
-**`01_MASTER_PLAN/CODEX_TEST_RUN_2026-09-17.md`** — 90 steps in parts S/W/C/P/O/K/L/F/R/M, being run by
+**`archive/chat-records-2026-09/CODEX_TEST_RUN_2026-09-17.md`** — 90 steps in parts S/W/C/P/O/K/L/F/R/M, being run by
 Codex driving AutoCAD. It supersedes rows L8–L18, O1–O15 and K1–L11 below as the thing to work from;
 those rows stay for the record.
 
@@ -295,7 +295,7 @@ Full entries: plugin `REGRESSION_LOG.md` LAYOUT-01, PIT-PREVIEW-01, PIT-PREVIEW-
 
 ### Branch `claude/ce-civil-handoff-75-percent-671a19` — IFD-01 · D2 · F1/F2 · BUG-156 (built overnight 15–16 Sep 2026)
 
-Owner: the Civil behaviour chat. **Use `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3 — it is the
+Owner: the Civil behaviour chat. **Use `archive/chat-records-2026-09/DEPLOY_AND_TEST_2026-09-16.md` section 3 — it is the
 ONE consolidated list for the whole 69-commit payload, including everything in the folded-in table above.
 The rows below are a summary of this chat's own part only.**
 
@@ -315,7 +315,7 @@ The rows below are a summary of this chat's own part only.**
 ### FOLDED IN — `claude/c7-one-object` @ `9058a405` is inside the batch below
 
 > **Do not test from this table.** Every row of it is now part of
-> `01_MASTER_PLAN/DEPLOY_AND_TEST_2026-09-16.md` section 3, which is ONE list covering the whole payload
+> `archive/chat-records-2026-09/DEPLOY_AND_TEST_2026-09-16.md` section 3, which is ONE list covering the whole payload
 > (Tim's ruling, 14 Sep). `9058a405` is an ancestor of `d6aa4dbf`, so deploying that batch installs all of
 > this too. The rows are kept below only so nothing is lost; the steps in the deploy document are the
 > current ones.
@@ -397,7 +397,7 @@ Steps written for a stranger are in the plugin `REGRESSION_LOG.md` entries **C7-
 ### BUILT 16→17 Sep overnight — branch `claude/civil-k-l-2026-09-16` @ `0ed39495` (sections K and L chat) — NOT installed, NOT tested
 
 Steps written for a stranger are in the plugin `REGRESSION_LOG.md` entries **L-01, L-02/L-03, P-08/item 64,
-item 66, item 67, AUDIT-K-L**, and collected in `01_MASTER_PLAN/MORNING_PACK_K_L_2026-09-17.md`. Summary rows:
+item 66, item 67, AUDIT-K-L**, and collected in `archive/chat-records-2026-09/MORNING_PACK_K_L_2026-09-17.md`. Summary rows:
 
 | # | What | Test (2027 first; 2024 builds clean but is unrun) | Lane |
 |---|---|---|---|
@@ -543,7 +543,7 @@ pit it was split at. Proven from Tim's own 16 Sep coordinates. Full entry: plugi
 The command-line question is **moved, not retired**: the same choice, asked before the pipe is drawn instead of
 at the command line after the window closes. The splitting itself still runs after the pipe exists, because the
 halves cannot link to their pits until the pipe is in the drawing. Contract for Codex to build the tick from:
-`01_MASTER_PLAN/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`. Ruling recorded at `TEST_DAY_RESULTS_2026-09-16.md`
+`04_REFERENCE/contracts/CONTRACT_SPLIT_ON_DRAW_TICK_2026-09-18.md`. Ruling recorded at `TEST_DAY_RESULTS_2026-09-16.md`
 §6s. **Not built yet** — acceptance replaces steps 52–56 and is listed in §9 of the contract.
 
 **Both follow-ups settled the same day.** Tim, 18 September 2026: ***"wording is fine, and yes retire the escape
