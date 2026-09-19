@@ -526,3 +526,15 @@ Before any plugin deploy round:
 
 If any answer is "no", finish that step before sending Tim the deploy
 PowerShell.
+
+---
+
+## R-LEARN — The evidence model is never finished (Tim, 19 September 2026)
+
+Tim's words: *"will the corpus/data/evidence model continue to be updated from what were working on and anything that is learnt from? that should be a hard rule and constantly evolving"*.
+
+1. **Every job worked on feeds the evidence.** When a chat reads a real drawing, a council document, a markup or a correction Tim makes, the lesson is recorded the same reply: the anonymised rule or pattern in this repository (a council file, an area file, this rulebook), the identifying evidence in the local-only store `C:\CE_DrawingIntelligence\` (the CEMARKUP corpus is `10_Plugin_CEMARKUP_Corpus\`; the programme's own folders are as its README says).
+2. **The evidence model (EV-03) is the mechanism**, not a one-off: objects, relationships, drafting scenes and correction history keep being added as projects are worked. The project queue in `03_DRAWING_INTELLIGENCE\CIVIL_KNOWLEDGE_PROJECT_QUEUE.md` is the order; a project used for work is a candidate for the queue.
+3. **A correction from Tim is evidence.** When he says a value, a placement or a label is wrong, the corrected rule goes into the rulebook or the council file with his words and the date, and the case goes into the corpus so the plugin can be tested against it.
+4. **DATA-01 still holds.** Client names and addresses never enter a repository; the corpus grows on disk, the lessons grow in git.
+5. **A session that learnt something and recorded nothing has not finished.**

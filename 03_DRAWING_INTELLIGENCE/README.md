@@ -7,6 +7,8 @@ covers only Desktop/Documents/Pictures). **Never** move it into a synced locatio
 cloud-sync tool, and never point a cloud backup at `01_Private_Index` or `90_Private_Scratch`.
 Local-drive backups are fine.
 
+**19 Sep 2026:** the plugin's CEMARKUP corpus (snapshots and index files named after real jobs) moved out of the plugin repository into `C:\CE_DrawingIntelligence_Plugin_CEMARKUP_Corpus\`. It grows there. Rule R-LEARN in `..\ENGINEERING_RULEBOOK.md`.
+
 ## Authority
 
 - **Timothy Brand** — sole approver of CE drafting/engineering standards, engineering values and
