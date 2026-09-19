@@ -1,6 +1,7 @@
 # IDEAS INBOX — raw capture (CE_ACAD — the one idea file for the plugin)
 Add one plain-English line under NEW. The daily TIMS IDEAS run sorts + routes it. Nothing is lost.
 ## NEW
+- 2026-09-20 00:40 Tim (TimOS setup chat, after the Lisp Files root clean-up): "can those lisp files be updated and added to the plugin at some point add to the plan to do so". The old root LISP tools are retired at runtime (Structural `Docs\Audit.md`, `LispLoader.cs`) and most already run as native C# commands (XRL, XRLFAST, CXREF, PXREF, CML, CPB, SPW x4). Task: review each old tool against the native command, port what is missing (SML and CHECKML from CLOSED MLINE.lsp have no C# command yet; TIM_TOOLS_COMBINED.lsp is gone, its utilities are covered by the audit list; slopetick.vlx is lost and its purpose unknown). Sources: `C:\Lisp Files Backup\` (XREF LAYER, COPY-PASTE-XREF, CLOSED MLINE, DIVIDE BORED PIER, WafflePodHatch.PAT), plugin `Modules\Structural\Assets\` (the two .dcl files, Copy Rotate, CPB). Then test each command in AutoCAD and get Tim's acceptance.
 - 2026-09-16 Tim (PIT window, this chat owns): "USE TICK ON/OFF INSTEAD OF SET BUTTON" — the Bottom (m AHD) Set toggle becomes a tick box.
 - 2026-09-16 Tim (PIT window): "DROP DOWN MENU FOR PIT SIZES" — plan size boxes become a list of the standard sizes (350/450/600/900/1200), typed value still allowed.
 - 2026-09-16 Tim (PIT window): "BOTTOM IL FOR SUMP PIT - TICK ON/OFF" — a tick that marks the pit as a sump with its own bottom IL.
