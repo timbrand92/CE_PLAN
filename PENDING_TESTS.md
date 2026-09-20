@@ -587,3 +587,13 @@ in the question and shortenings still work.
 
 **Not fixed by this:** the note **wording** is still wrong on Tim's machine because his settings hold the old
 short template. K4 fixes which connection **type** is chosen. Both are needed.
+
+## BUILT overnight 20→21 Sep — `claude/lisp-tools-port` (draft PR) — NOT INSTALLED, NOT TESTED
+
+Two commands ported from the retired root LISP file CLOSED MLINE.lsp (Tim, 20 Sep: "can those lisp files be updated and added to the plugin"). CML already ran natively. Built on net10, three source-guard tests pass. Nothing installed; needs a build into a bundle and a deploy on Tim's phrase before these rows can be ticked.
+
+| ID | What Tim would see | Lane |
+|---|---|---|
+| **L1** | Type `SML`, then draw two points. **A plain STANDARD multiline appears** (no end caps). Type `CML`, draw again: **closed ends** as before. | both |
+| **L2** | Type `CHECKML` after `SML`. The command line prints **three lines: MLINE style STANDARD, the scale number, the justification word** (Top / Zero (centre) / Bottom). After `CML` it says CLOSED-ENDS. | both |
+| **L3** | In a fresh drawing with no STANDARD style renamed, `SML` never errors. If STANDARD was deleted from the drawing, `SML` says **"STANDARD MLINE style not found in this drawing"** and draws nothing. | 2027 |
