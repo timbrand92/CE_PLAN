@@ -15,6 +15,62 @@
 
 ---
 
+## LIVE since 23 Sep 2026 09:36 — `3.0.0+d90659cf` on `claude/civil-merge-2026-09-23`
+
+Tim: **"AUTOCAD IS CLOSED, DEPLOY"** (23 Sep, 09:34). AutoCAD checked twice, eight seconds apart, before
+anything was touched: not running either time.
+
+**Read back from all three lane DLLs by hand, not from the script's own output:**
+
+1. **Legacy** (net48, AutoCAD 2022–2024) — `3.0.0+d90659cf25cee1bac8e9e106deb4a006f4e9fe7d`
+2. **Net8** (AutoCAD 2025–2026) — same
+3. **Modern** (net10, AutoCAD 2027) — same
+
+Native modules staged in Modern: `CE_CVL_NATIVE_GRIP_2027.arx` (82 KB), `CE_TRANSFORM_2027.arx` (74 KB),
+`CE_CVL_OBJECTS_2027.dbx` (108 KB).
+
+### Tim's one-action undo — the backups
+
+The deploy script does **not** back up. Both were taken by hand first:
+
+1. **Civil:** `CE_CVL_SUITE_PRE_d0ffe1a2_20260923-093445.backup` — 133 MB, 806 files
+2. **Manager:** `CE_SUITE_MANAGER_PRE_CESHARED_20260923-093445.backup` — 75 files
+
+Both sit beside the live bundles in `%APPDATA%\Autodesk\ApplicationPlugins\`.
+
+### CE_SHARED brought into step
+
+The deploy script does **not** sync it, and every CE plugin shares one assembly identity — the first copy
+AutoCAD loads wins for all of them. All three Manager lanes differed from Civil's and were copied across,
+each hash-verified after the copy.
+
+**STRUCTURAL IS NOT REDEPLOYED.** Its bundle still carries whatever CE_SHARED it was built with.
+
+### What this build carries, beyond the previous live `d0ffe1a2`
+
+1. All four September Civil chats — tanks, pipe text, levels, `CDFIXTAGS`, splits, CDTWL, the detention
+   zero, the Council keyword.
+2. The eight overnight fixes of 19 Sep, and the audit that corrected them.
+3. The trunk's documents and the DATA-01 privacy clean-up (PRs #79/#80/#81).
+4. **CD-RECENT-01** — the "Recent:" strip trimmed.
+5. **DEPLOY-01** — the release script's reference paths, and a preflight that checks eleven inputs.
+
+### What is NOT in it, said plainly
+
+1. **The CD window layout fixes** — pipe preview still scrolls away, invert boxes and labels unchanged.
+   That window was rebuilt since the branch they came from, so they are a redesign, not a patch.
+2. **The pit-on-pipe preview programme** — 35,700 product lines and 108,990 test lines, never opened in
+   AutoCAD. Deliberately not taken.
+3. **The CDWT crash (W4)** — cause still not established.
+
+### Still open on this register
+
+`build_installer.ps1` does **not** build `CE_TRANSFORM_2027.arx`. It was built by hand before this release,
+as every release has needed. The new preflight checks the project exists, which is not the same as building
+it. Unchanged gap.
+
+---
+
 ## BUILT overnight 18→19 Sep — `claude/civil-overnight-2026-09-19` @ `07325a2b` — NOT INSTALLED, NOT TESTED
 
 **Eight items, on top of the frozen combined payload `0a84eb07`.** Tim: *"overnight sequence for all fixes,
