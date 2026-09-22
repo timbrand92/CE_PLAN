@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-160 *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-161 *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -56,6 +56,7 @@
 
 | ID | Command / Area | Status |
 |----|---------------|--------|
+| [BUG-160](#bug-160) | Pipe end dragged on a grade-held pipe — plan IL text rewritten over a hand-typed bottom level; schedule keeps the typed number | OPEN — SUSPECTED from reading the code, 23 Sep 2026. NOT seen in AutoCAD. Same drawing-vs-schedule split fixed for CDPROPAGATE on 15 Sep. |
 | [BUG-159](#bug-159) | Ordinary polylines (REC / PLINE) — midpoint grips square instead of stretch grips, hover menus gone | OPEN — NOT diagnosed. One suspect (PipePlanGripOverrule, the only unfiltered whole-Polyline overrule, new since 15 Sep). CDGRIPDIAG built to settle it; awaiting Tim run. No deploy. |
 | [BUG-093](#bug-093) | Civil linked-pipe attachment point grips — visible grips reject every drag sample | OPEN — exact AutoCAD debug evidence captured; isolated grip repair required after the active Drawing Intelligence stage. |
 | [BUG-092](#bug-092) | Manager startup/workspace change — repeated CE ribbon rebuild causes noticeable lag | IN PROGRESS — Tim approved the bounded repair on 2026-08-25; exact live failure/source provenance recorded; no deployment yet. |
@@ -141,6 +142,26 @@
 | BUG-046 | CD STILL crashed (side-DB) after BUG-044 — ReferenceEquals on AC Database wrappers is unsound | IN PROGRESS — coded 2026-06-04, awaiting AC test. Explicit `IsSideDatabaseOperation` flag replaces reference inference. SUPERSEDES BUG-044. |
 | BUG-047 | "Simple Pipe" mode stuck on with Recall Last Settings | IN PROGRESS — coded 2026-06-04, awaiting AC test. Simple-pipe is now one-shot, not persisted. |
 | BUG-048 | Invert level text boxes styling regressed | OPEN — needs screenshot of CD dialog invert section. Not fixed blind. |
+
+---
+
+## BUG-160
+
+**Command / Area:** Moving the end of a CE pipe (grip drag, STRETCH) when the pipe's grade choice is Default minimum, Default standard or Custom (a "grade-held" pipe). Area E.
+
+**Symptom (suspected — found by reading the code on 23 Sep 2026, not seen in AutoCAD):** if the pipe's bottom level was typed by hand, dragging the pipe end longer or shorter re-works that bottom level from the grade and writes the new number into the IL text on the plan and into the pipe's own stored levels, while the project record (what the pit schedule reads) keeps the hand-typed number. The plan and the schedule then disagree about the same pipe end, with nothing said on the command line.
+
+**Expected behaviour:** a level typed by hand is never overwritten by an automatic re-work. The pipe keeps the typed level, the grade gives way instead, and the command line says so. Plan text and schedule always show the same number.
+
+**Real example:** 375 pipe, 20 m at 1 in 100, top IL 10.50, bottom IL typed by hand as 10.30. Drag the end so it is 25 m long. Plan text would show IL 10.25; the schedule would still show 10.30.
+
+**Test that catches it:** a grade-held pipe with a hand-typed bottom level, lengthened; assert the plan IL text, the pipe's stored level and the project record all hold the typed value, and the grade label shows the re-worked grade.
+
+**Steps for Tim to confirm the fix:** draw a pipe at a set grade, open Pipe Edit and type the bottom level by hand, drag the pipe end 5 m further, then open the pit schedule. The IL on the plan and the schedule must show the same number (the one you typed), and the grade label must have changed.
+
+**Reference:** `Modules/Drainage/Services/LinkService.Utilities.cs` — `ApplyGradeLockToInverts` computes the new level without checking the hand-typed flags; `ProjectDataService.UpdatePipeInvertsByHandle` refuses it for the record, but `WriteGradeLockInvertsToEntities` still writes the plan text. Related idea: IDEAS_INBOX 23 Sep 2026, "locked to a grade or locked to an invert".
+
+**Status:** OPEN
 
 ---
 

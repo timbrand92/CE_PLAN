@@ -22,9 +22,13 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
 
+1. **BUG-160** (23 Sep 2026, suspected from code, not seen in AutoCAD) — dragging the end of a grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule.
+
 ## 5. Parked
 
 `IDEAS_INBOX.md` at the root is the one idea file. List this area's parked items here.
+
+1. **Hold grade / hold levels** (Tim, 23 Sep 2026) — when a pipe end moves, the pipe either keeps its grade (bottom level re-worked, change carried downstream) or keeps its levels (grade re-worked). Half exists hidden in the CD grade choice; gaps and open questions in IDEAS_INBOX 23 Sep.
 
 ## 6. Test steps
 
