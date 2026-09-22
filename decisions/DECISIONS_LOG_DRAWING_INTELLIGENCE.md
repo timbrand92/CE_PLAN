@@ -750,7 +750,7 @@ Recorded here before any code was written.
 
 **Tim's answer: "Show candidates, I pick."**
 
-This **supersedes the absolute reading** of `01_MASTER_PLAN/ENGINEERING_RULEBOOK.md` item 7
+This **supersedes the absolute reading** of `ENGINEERING_RULEBOOK.md` item 7
 (*"TWL = obvert of highest pipe"*). That figure is now **a default that CE offers and names, not a law it
 applies.** The earlier wording is kept and marked superseded in the rulebook itself.
 

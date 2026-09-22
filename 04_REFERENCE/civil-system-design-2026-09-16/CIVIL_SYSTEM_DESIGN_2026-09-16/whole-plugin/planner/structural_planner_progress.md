@@ -33,7 +33,7 @@
 
 ## Technical appendix
 
-**Ownership:** only `C:\CE_PLAN\01_MASTER_PLAN\workflows\CIVIL_SYSTEM_DESIGN_2026-09-16\whole-plugin\planner\` was written.  
+**Ownership:** only `C:\CE_PLAN\workflows\CIVIL_SYSTEM_DESIGN_2026-09-16\whole-plugin\planner\` was written.  
 **Read-only source scope:** `Modules\Structural`, `Modules\Structural.DesignCore`, relevant repo plans/cards/registry and supplied CE plan records.  
 **No source/build/test/deploy/Git/AutoCAD/process/client-project actions:** performed by this planner.  
 **Built:** not assessed. **Tested:** no AutoCAD test run. **Installed:** not assessed. **Tim-accepted:** no.

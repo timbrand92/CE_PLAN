@@ -41,7 +41,7 @@
 
 ## Technical appendix
 
-**Folder ownership:** `C:\CE_PLAN\01_MASTER_PLAN\workflows\CIVIL_SYSTEM_DESIGN_2026-09-16\planner\` only.  
+**Folder ownership:** `C:\CE_PLAN\workflows\CIVIL_SYSTEM_DESIGN_2026-09-16\planner\` only.  
 **No source/build/test/deploy/git/AutoCAD action:** performed by this planner.  
 **Planning status:** proposed / awaiting review.  
 **Built:** not assessed.  
