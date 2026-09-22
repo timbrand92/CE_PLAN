@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-161 *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-162 *(BUG-161 = the trunk (master 3eb912d7) lacks 174 changes installed in AutoCAD, 23 Sep 2026)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -56,6 +56,7 @@
 
 | ID | Command / Area | Status |
 |----|---------------|--------|
+| [BUG-161](#bug-161) | Release / trunk — master `3eb912d7` lacks 174 changes that are installed in AutoCAD (`d0ffe1a2`); the next install from master would silently remove them | OPEN — found 23 Sep 2026 09:40. The 23 Sep trunk ruling was made on register #78, which still names `10ac480d` as live; the DLL on disk reads `d0ffe1a2`. Needs Tim's ruling before anyone deploys from master. |
 | [BUG-160](#bug-160) | Pipe end dragged on a grade-held pipe — plan IL text rewritten over a hand-typed bottom level; schedule keeps the typed number | OPEN — SUSPECTED from reading the code, 23 Sep 2026. NOT seen in AutoCAD. Same drawing-vs-schedule split fixed for CDPROPAGATE on 15 Sep. |
 | [BUG-159](#bug-159) | Ordinary polylines (REC / PLINE) — midpoint grips square instead of stretch grips, hover menus gone | OPEN — NOT diagnosed. One suspect (PipePlanGripOverrule, the only unfiltered whole-Polyline overrule, new since 15 Sep). CDGRIPDIAG built to settle it; awaiting Tim run. No deploy. |
 | [BUG-093](#bug-093) | Civil linked-pipe attachment point grips — visible grips reject every drag sample | OPEN — exact AutoCAD debug evidence captured; isolated grip repair required after the active Drawing Intelligence stage. |
@@ -145,13 +146,33 @@
 
 ---
 
+## BUG-161
+
+**Command / Area:** Release — which code line the next AutoCAD install is built from. Not a drawing command.
+
+**Symptom:** the plugin's trunk (`master`, `3eb912d7`, set 23 Sep 2026 on Tim's "Live is the trunk") does not contain what is actually installed in AutoCAD. The installed DLL reads product version `3.0.0+d0ffe1a2…` (16 Sep 22:38 commit, the 16 Sep test-day payload). Master was built from `10ac480d` (15 Sep 14:42), because deploy register #78 still says `10ac480d` is live. **174 changes that are in AutoCAD today are not on master** (checked 23 Sep 2026 09:40 with `git log --no-merges --cherry-pick --right-only HEAD...d0ffe1a2`). Among them: per-job rainfall and the CDCALC computations sheet (IFD-01), the C7 pipe object rebuild, the CDWT tank window (W-01), the Pipe/Pit Update truthfulness fixes (BUG-154 to 156), and the 15 Sep fix that stops CDPROPAGATE writing over a level typed by hand (`4f04b19d`).
+
+**What would go wrong:** the next install from master would silently take all of that out of Tim's AutoCAD, and any test after it would be testing an older plugin than the one he has now.
+
+**Expected behaviour:** master holds everything installed, or Tim rules which of the 16 Sep payload is deliberately left out (Test Day 16 Sep failed much of it). Register #78 names the real live commit.
+
+**Test that catches it:** before any deploy, `git merge-base --is-ancestor <commit in the installed DLL's version> <commit being deployed>` must succeed, or the deploy chat must name what it removes and have Tim's yes.
+
+**Steps for Tim to confirm the fix:** none in AutoCAD. The chat that fixes it shows the check above passing, and register #78's "LIVE RIGHT NOW" names `d0ffe1a2` (or whatever is installed then).
+
+**Reference:** `decisions6-09-23_TRUNK.md`; GitHub issue #78; found by the `pipe-points-locking-grade-invert` chat, which is not the owner. Belongs to whichever chat owns the trunk and deploys.
+
+**Status:** OPEN
+
+---
+
 ## BUG-160
 
 **Command / Area:** Moving the end of a CE pipe (grip drag, STRETCH) when the pipe's grade choice is Default minimum, Default standard or Custom (a "grade-held" pipe). Area E.
 
 **Symptom (suspected — found by reading the code on 23 Sep 2026, not seen in AutoCAD):** if the pipe's bottom level was typed by hand, dragging the pipe end longer or shorter re-works that bottom level from the grade and writes the new number into the IL text on the plan and into the pipe's own stored levels, while the project record (what the pit schedule reads) keeps the hand-typed number. The plan and the schedule then disagree about the same pipe end, with nothing said on the command line.
 
-**Expected behaviour:** a level typed by hand is never overwritten by an automatic re-work. The pipe keeps the typed level, the grade gives way instead, and the command line says so. Plan text and schedule always show the same number.
+**Expected behaviour (Tim, 23 Sep 2026: "if i changed something i always need to confirm if the automatic number is correct or not"):** nothing typed by hand is silently kept or silently overwritten. The move opens the preview window, which shows the typed number and the automatic number side by side; Tim picks. Plan text and schedule always end up showing the same number. See `decisions6-09-23_HOLD_GRADE_HOLD_LEVELS.md`.
 
 **Real example:** 375 pipe, 20 m at 1 in 100, top IL 10.50, bottom IL typed by hand as 10.30. Drag the end so it is 25 m long. Plan text would show IL 10.25; the schedule would still show 10.30.
 
