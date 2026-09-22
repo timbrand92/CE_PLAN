@@ -21,7 +21,7 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 1. **E-HOLD-01 — Hold grade / hold levels when a pipe end moves** (Tim's idea and rulings, 23 Sep 2026: `decisions\2026-09-23_HOLD_GRADE_HOLD_LEVELS.md`).
    - **What it does:** moving a pipe end or a pit opens a preview window listing every level and grade the move changes, old to new, including the pipes downstream. Grade-held pipes keep the top level and drop the bottom. Numbers Tim typed by hand are shown beside the automatic number for him to pick. Apply = one Undo.
    - **Pieces, in order:** (1) moving a pit and dragging a pipe end give the same answer, BUG-160 fixed; (2) the move builds one change list and shows it in the existing Cascade Preview window; (3) window wording and the "you typed" column — Codex, from a contract Claude writes.
-   - **Open:** what Cancel does (asked 23 Sep).
+   - **Cancel** undoes the move (Tim, 23 Sep 2026: "answer for question is a").
    - **Status:** Planned. Not built, not tested, not installed, not accepted. **Waits for BUG-161** (the trunk lacks the 15 Sep hand-typed-level fix this builds on).
 
 ## 4. Bugs

@@ -27,7 +27,11 @@
 2. A move that changes no number (the whole network moved together) shows no window.
 3. The existing CDPROPAGATE / Pipe Edit "Cascade Preview" window is reused rather than a new window built. Its wording and any new column (the "you typed" choice) are Codex's work under ruling B; Claude writes the contract.
 
+## 4. What Cancel does in the preview window
+
+Offered: A undo the move, the pit or pipe goes back (recommended); B keep the move, leave the old numbers for CDCHECK.
+**Tim (23 Sep 2026):** *"answer for question is a"* — **Cancel undoes the move.** The drawing never shows a pipe whose levels do not match its length.
+
 ## Still open
 
-1. **What Cancel does** in that window: undo the move (pipe or pit goes back), or keep the move and leave the old numbers for CDCHECK. Asked 23 Sep; not answered.
-2. **Building waits for the trunk to be fixed** (BUG-161): the trunk lacks the 15 Sep fix this work builds on.
+1. **Building waits for the trunk to be fixed** (BUG-161): the trunk lacks the 15 Sep fix this work builds on.
