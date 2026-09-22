@@ -18,7 +18,7 @@ Pits, pipes, grades, sizes, labels and connected-network editing. (From the area
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Active through Stage 1 to 3 core work". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
-1. **E-HOLD-01 — Hold grade / hold levels when a pipe end moves** (Tim's idea and rulings, 23 Sep 2026: `decisions6-09-23_HOLD_GRADE_HOLD_LEVELS.md`).
+1. **E-HOLD-01 — Hold grade / hold levels when a pipe end moves** (Tim's idea and rulings, 23 Sep 2026: `decisions\2026-09-23_HOLD_GRADE_HOLD_LEVELS.md`).
    - **What it does:** moving a pipe end or a pit opens a preview window listing every level and grade the move changes, old to new, including the pipes downstream. Grade-held pipes keep the top level and drop the bottom. Numbers Tim typed by hand are shown beside the automatic number for him to pick. Apply = one Undo.
    - **Pieces, in order:** (1) moving a pit and dragging a pipe end give the same answer, BUG-160 fixed; (2) the move builds one change list and shows it in the existing Cascade Preview window; (3) window wording and the "you typed" column — Codex, from a contract Claude writes.
    - **Open:** what Cancel does (asked 23 Sep).

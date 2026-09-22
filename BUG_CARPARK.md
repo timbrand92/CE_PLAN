@@ -160,7 +160,7 @@
 
 **Steps for Tim to confirm the fix:** none in AutoCAD. The chat that fixes it shows the check above passing, and register #78's "LIVE RIGHT NOW" names `d0ffe1a2` (or whatever is installed then).
 
-**Reference:** `decisions6-09-23_TRUNK.md`; GitHub issue #78; found by the `pipe-points-locking-grade-invert` chat, which is not the owner. Belongs to whichever chat owns the trunk and deploys.
+**Reference:** `decisions\2026-09-23_TRUNK.md`; GitHub issue #78; found by the `pipe-points-locking-grade-invert` chat, which is not the owner. Belongs to whichever chat owns the trunk and deploys.
 
 **Status:** OPEN
 
@@ -172,7 +172,7 @@
 
 **Symptom (suspected — found by reading the code on 23 Sep 2026, not seen in AutoCAD):** if the pipe's bottom level was typed by hand, dragging the pipe end longer or shorter re-works that bottom level from the grade and writes the new number into the IL text on the plan and into the pipe's own stored levels, while the project record (what the pit schedule reads) keeps the hand-typed number. The plan and the schedule then disagree about the same pipe end, with nothing said on the command line.
 
-**Expected behaviour (Tim, 23 Sep 2026: "if i changed something i always need to confirm if the automatic number is correct or not"):** nothing typed by hand is silently kept or silently overwritten. The move opens the preview window, which shows the typed number and the automatic number side by side; Tim picks. Plan text and schedule always end up showing the same number. See `decisions6-09-23_HOLD_GRADE_HOLD_LEVELS.md`.
+**Expected behaviour (Tim, 23 Sep 2026: "if i changed something i always need to confirm if the automatic number is correct or not"):** nothing typed by hand is silently kept or silently overwritten. The move opens the preview window, which shows the typed number and the automatic number side by side; Tim picks. Plan text and schedule always end up showing the same number. See `decisions\2026-09-23_HOLD_GRADE_HOLD_LEVELS.md`.
 
 **Real example:** 375 pipe, 20 m at 1 in 100, top IL 10.50, bottom IL typed by hand as 10.30. Drag the end so it is 25 m long. Plan text would show IL 10.25; the schedule would still show 10.30.
 
