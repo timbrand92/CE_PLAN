@@ -588,7 +588,7 @@ in the question and shortenings still work.
 **Not fixed by this:** the note **wording** is still wrong on Tim's machine because his settings hold the old
 short template. K4 fixes which connection **type** is chosen. Both are needed.
 
-## BUILT overnight 20→21 Sep — `claude/lisp-tools-port` (draft PR) — NOT INSTALLED, NOT TESTED
+## BUILT overnight 20→21 Sep — `claude/lisp-tools-port`, merged to master 23 Sep (PR #83, `38f1d98a`) — NOT INSTALLED, NOT TESTED
 
 Two commands ported from the retired root LISP file CLOSED MLINE.lsp (Tim, 20 Sep: "can those lisp files be updated and added to the plugin"). CML already ran natively. Built on net10, three source-guard tests pass. Nothing installed; needs a build into a bundle and a deploy on Tim's phrase before these rows can be ticked.
 
