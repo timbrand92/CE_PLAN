@@ -201,3 +201,11 @@ Tim (verbatim): *"dont hold back on anything because you wont be able to impleme
 2. Build toward the V3 plan's objectives in full (MASTER_PLAN stages 2-5 and the Structural delivery plan), starting with work already approved in CE_PLAN (approved workflow cards, the 2 Sep visual approvals D1-D32, the V3 UI design pack), not only fixes.
 3. Tuesday's pilot takes the best tested build at that time; Tim continues from there.
 4. Unchanged: Civil first; ruling B (Codex builds window layouts; Claude owns behaviour, spine and deploys; Codex window-builder runs are code-only and do not take AutoCAD time from testing); every change tested and logged; never deploy while a Codex run is live; report usage to Tim at 60% of the weekly limit.
+
+## Claude builds everything, windows included; the CD window is the design reference — Tim, 23 Sep 2026, about 22:10
+
+Tim (verbatim): *"i want you to build everything including windows and if codex needs to help then do so but youre the primary builder, also ui should be like the cd window and work and feel like a product apple or autodesk would design but with a creative engineering feel"*
+
+**Meaning:**
+1. **Supersedes ruling B of 15 Sep** (Codex builds windows, Claude owns behaviour): Claude is now the primary builder of windows as well as behaviour; Codex helps where useful and remains the AutoCAD tester.
+2. **Design reference: the CD window (New Pipe).** Every CE window should look, work and feel like it: product quality of the kind Apple or Autodesk ship, with a Creative Engineering feel (CE deep blue #1E5AA8 on light, accent gold on dark, no teal), under Tim's standing UI rules: no scrollbars or collapsed expanders (tabs instead), the 30-times-a-day instrument test, colour where attention is needed, plain English.
