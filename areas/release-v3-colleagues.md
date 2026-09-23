@@ -37,6 +37,7 @@ The master plan's own definition of done for Version 3 (a standalone Civil insta
 5. **Sign in to Azure and re-make the storage write key** (it is refused since the July reset), then put it in the local file on his PC. Until then nobody can publish, including CEADMIN's own button. Details: `decisions\2026-09-23_COLLEAGUE_UPDATE_CHANNEL.md`.
 6. **The release signing key** in the key drawer does not match the key built into the plugin. Tim decides which is right. Needed before any signed approval, which is what the new Manager's update route requires.
 7. **Structural for AutoCAD 2022 colleagues:** the three-version Structural build leaves out the 2027 native module (`CE_STRUC_NATIVE_2027.arx`, used by CEARCHREVIEW); Tuesday's 2027 pilot gets the 2027 build that keeps it. Tim decides how 2022 colleagues get Structural.
+8. **CDPIPEOBJ (Pipe as One Object, AutoCAD 2027 only): a ribbon button, or hidden?** It is a visible command with no button, so the automatic "every visible command is on the CE tab" check fails on it alone. A 2022 colleague cannot use it. Nothing changed until Tim decides; hiding a command needs his word.
 
 ## 2. Where the detail is
 
@@ -211,6 +212,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 3. **BUG-165** — Manager's version check ranked `2026.0420.1549` above `3.0.0`: **fix merged** PR #92 (`c1d0b7db`); not installed yet.
 4. **BUG-162** — stale automatic check: **fixed** PR #93 (`7627ed39`), test only.
 5. **G-02 / G-04** (16 Sep faults) — CDDESIGN whole-job search and council from the folder's suburb: **merged** PR #94 (`db5c8517`); not installed; Codex Part G. G-03 (the window) stays with Codex under ruling B.
+6. **RIBBON-01** — Rainfall Curve (CDRAINFALL) had no ribbon button since 15 Sep: **merged** PR #95 (`45bec4be`), Review panel, keytip RF; not installed. CDPIPEOBJ queued for Tim (item 8 above).
 
 ## 7. Parked
 

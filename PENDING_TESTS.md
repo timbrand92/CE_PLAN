@@ -74,6 +74,7 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 1. **BUG-165** (PR #92): Manager never treats the old `2026.0420` build number as newer than 3.0. Nothing to click; Manager's trace log stops showing *"staging CE_CVL_SUITE → 2026.0420.1549"*.
 2. **BUG-162** (PR #93): test only.
 3. **G-02 / G-04** (PR #94, `db5c8517`): CDDESIGN looks through every folder in the job for the rating report, and offers the council from the job folder's suburb. Steps: `REGRESSION_LOG.md` G-02/G-04 and Codex list Part G.
+4. **RIBBON-01** (PR #95, `45bec4be`): CE tab, Review panel, **Rainfall Curve** runs CDRAINFALL.
 
 ---
 
