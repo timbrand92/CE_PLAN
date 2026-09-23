@@ -84,6 +84,29 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## 24 Sep 2026 01:12 — Structural ROLLED BACK to `1.0.74+bf264cbb`; Codex pass 6 results
+
+1. **Rollback:** Codex pass 6 (X8) found that no button on the organised Structural ribbon (`5ca35054`) opens
+   anything, including Beam, RC Beam, Column, Footing, Rebar, Level/Section Mark, schedules and CE Settings. The release
+   chat put the previous build back at 01:12, with AutoCAD closed twice. The failed build is kept as
+   `CE_STRUC_SUITE_5ca35054_RIBBON_FAIL_20260924-011234.backup`. Civil and Manager are unchanged (`6eec48af`). Codex is
+   diagnosing on `codex/struc-ribbon-fix` (from `claude/struc-d1-prep`).
+2. **Pass 6 results:** gate PASS; safety readbacks matched at start and end. Report:
+   `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS6_2026-09-24.md`.
+   - X1 CDWT-CONTRAST-01: **PASS**.
+   - X2 C7-DRAW-01: **FAIL**. LIST shows CE_CVL_PIPE_OBJECT but Properties says Polyline, and the label tidy-up was
+     skipped ("outline of object ... could not be read", a detention pit). New Pipe also said ready while Start Pipe was
+     disabled; that is fixed by #129, which is not installed.
+   - X3 PIT-OUTLINE-01: **FAIL**. One U after a PITEDIT resize left the enlarged pit and moved pipe end.
+   - X4 SPLIT-HALVES-01: **BLOCKED**. No verified split was produced.
+   - X5 LAYER-CASE-01: **FAIL, and more serious than the layer case.** CDEDIT refuses to select a CE pipe object, before
+     and after the rename.
+   - X6 RIBBON-02: **FAIL**. Water Tank is on the Draw panel and the tab reads CE Inspector, but the palette still says
+     "Civil Properties" and "Existing Inspector".
+   - X7 HELP-V3-01: **BLOCKED**. The v3.0 badge shows; the older-pages notice could not be reached by automation.
+   - X8 Structural ribbon: **FAIL** (see 1).
+3. **Routed:** X5, X2 tidy-up, X3 and X6 to the overnight Claude builder (`claude/uc-behaviour-02`, PR #134); X8 to Codex.
+
 ## LIVE since 23 Sep 2026 23:45 on Tim's PC — Civil `3.0.0+6eec48af`, Manager `1.1.0+6eec48af`, Structural `1.0.74+5ca35054`
 
 1. **Installed by the release chat.** Civil + Manager 23:42-23:44 from master `6eec48af`; Structural 23:45 from candidate
