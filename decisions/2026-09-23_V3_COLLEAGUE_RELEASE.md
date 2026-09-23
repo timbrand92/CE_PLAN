@@ -116,6 +116,14 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 
 **Recorded as an override of how questions are handled (RULES 3, 14.6). Scope: this release, until Tuesday 29 Sep.** The release chat decides the ordinary engineering-of-the-release choices itself, records each one here as *Claude's call* with its reason, and does not stop to ask. **Unchanged:** the four confirmed limits (AutoCAD really closed, never under a Codex run, backups and read-back, no publishing to colleagues without Tim's word); no download or install of new tools without Tim's yes (the session's own safety rules); nothing Tim-accepted without Tim. Anything that genuinely needs Tim (the pilot colleague's name, publishing to a colleague, a real engineering ruling) is **queued in one list for Monday**, not asked piecemeal.
 
+## Claude posts straight into the Codex test session — Tim, 23 Sep 2026 (clickable choice)
+
+**Tim's other messages today:** *"can you keep building, deploy and testing between you, the other chat and codex until next tuesday so we can get close to the version3 release properly completed"*.
+
+**Asked:** may the release chat post instructions straight into Tim's Codex test session with the Codex command line (`codex queue`), instead of Tim pasting? **Tim:** *"Yes, post into the test session"* (Claude's recommendation).
+
+**Limits Claude set on itself:** only the one AutoCAD test session; never start a second Codex driving AutoCAD; every message posted is logged in the area file.
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
