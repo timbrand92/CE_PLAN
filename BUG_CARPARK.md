@@ -162,7 +162,9 @@
 
 **Reference:** `decisions\2026-09-23_TRUNK.md`; GitHub issue #78; found by the `pipe-points-locking-grade-invert` chat, which is not the owner. Belongs to whichever chat owns the trunk and deploys.
 
-**Status:** OPEN
+**Count check (E-HOLD chat, 23 Sep 2026 10:35, after PR #87):** before the merge, master `38f1d98a` lacked **204** changes that are in the installed `3.0.0+d90659cf` (deployed 09:35-09:36), by `git log --no-merges --cherry-pick --right-only`; PR #87 brought in 206. The "eight" in the fixing chat's report does not match this count. After the merge: 0 installed changes missing from master `b02f3ec7`; 6 master changes not yet installed (command-count guard, CDWT-LINK-01, SML/CHECKML, AGENTS.md x2, DATA-01 placeholders), which the next deploy carries. Also: BUG-161 was written at ~09:40 from a DLL read taken just before the 09:36 deploy and never re-read, so it named `d0ffe1a2` and 174 when the installed build had already changed.
+
+**Status:** FIXED — 2026-09-23 (PR #87 merged, master `b02f3ec7`; nothing to test in AutoCAD)
 
 ---
 
