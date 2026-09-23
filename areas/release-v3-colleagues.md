@@ -52,7 +52,7 @@ Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Se
 
 1. **The shared common library.** Every CE plugin carries the same library and the first copy AutoCAD loads wins for all of them. A colleague given Civil 3.0 while keeping Manager 1.0.2 and Structural 1.0.41 (library 1.0.0) risks the CE ribbon silently not loading. **All three must move together, carrying the same library.**
 2. **Mixed versions on one job.** Version 3 upgrades pipes into its own pipe object when a drawing is opened or drawn in. A colleague still on 2.1.14 opening that drawing has no enabler for that object. What they see is **not yet established** — probe first, then decide.
-3. **AutoCAD 2024.** The 2024 lane of Civil 3.0 has never been opened by Tim. Tim's Structural 1.0.74 has no 2024 lane at all.
+3. **AutoCAD 2022.** Colleagues run 2022 and 2027 (Tim, 23 Sep). The 2022 to 2024 lane of Civil 3.0 has no recorded AutoCAD check (PENDING_TESTS rows 18 and 19: "2024, never tested"), and this PC has AutoCAD 2027 only. Tim's Structural 1.0.74 has no 2022 lane at all.
 4. **Known hazards on the installed build.** The CDWT crash (W4) has no established cause. The CD window layout fixes are not in it.
 5. **The release script.** `build_installer.ps1` was broken until DEPLOY-01 (23 Sep) and still does not build the transform module (`CE_TRANSFORM_2027.arx`); it is built by hand.
 
@@ -61,16 +61,16 @@ Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Se
 Tim asked: *"whats stopping us from getting the large majority of version 3 by tuesday?"*
 
 1. **Not unfinished building on a shelf.** Every one of 17 built pieces named in `PENDING_TESTS.md` (branches of 16 to 19 Sep) was checked with `git merge-base --is-ancestor`: all 17 are already in `master` `b02f3ec7`, so all ship on Tuesday under Tim's "newest saved work" answer. The other branches not in `master` are 19 to 20 Sep rescue copies marked unfinished and unbuilt, 1,150 to 1,570 changes behind.
-2. **Tim's AutoCAD check is the limit.** The 16 Sep test day recorded **37 faults** (`decisions6-09-16_TEST_DAY_RESULTS.md`, sections R, W, P, C7, L, T, D, G, TWL, F1). Fixes for many have been built and installed since. **None has been re-checked by Tim.** Until he has looked, whether they work is Unknown.
+2. **Tim's AutoCAD check is the limit.** The 16 Sep test day recorded **37 faults** (`decisions\2026-09-16_TEST_DAY_RESULTS.md`, sections R, W, P, C7, L, T, D, G, TWL, F1). Fixes for many have been built and installed since. **None has been re-checked by Tim.** Until he has looked, whether they work is Unknown.
 3. **Some areas have nothing recorded as built for Version 3.** The area files for H (pump stations), I (WSUD), J (overland flow) and others were opened 19 Sep with no items. This is "not recorded", not proof of "not built".
-4. **The 2022 lane cannot be checked on this PC.** `C:\Program Files\Autodesk` holds **AutoCAD 2027 only** (read 23 Sep). A 2022 colleague would be the first person ever to open Civil 3.0 in 2022.
+4. **The 2022 lane cannot be checked on this PC.** `C:\Program Files\Autodesk` holds **AutoCAD 2027 only** (read 23 Sep). No AutoCAD check of Civil 3.0 in 2022 is recorded anywhere.
 5. **Proposed (not decided):** Claude pre-checks the 37 faults with AutoCAD running without a screen (the accoreconsole probe) in the free windows, so Tim only opens what passes; Tim then re-checks area by area in the order he set on 16 Sep (CDWT, CD, PIT, then H to L, then M). The Tuesday pilot colleague is on 2027; 2022 colleagues follow after one check on a real 2022 machine.
 
-## 5. Items and status — PROPOSED plan, awaiting Tim's answers (not a decision)
+## 5. Items and status — PROPOSED plan (not a decision). Tim's four answers of 23 Sep are applied; the pilot colleague is still to be named
 
 Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
-1. **REL-01 Freeze** — Thursday 24 Sep night: the colleague build is exactly what is in Tim's AutoCAD then. Nothing newer. **Status:** Proposed.
+1. **REL-01 Freeze** — the colleague build is the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"* (23 Sep). Freeze time proposed as Thursday 24 Sep, 5:30pm, and announced on register #78 so other chats know what they merge before then reaches a colleague. **Status:** Proposed.
 2. **REL-02 Package** — Friday 25 Sep to weekend: build all three plugins from the frozen source with one matching common library; full automated checks; package audit (hashes, every file present, both lanes). **Status:** Proposed.
 3. **REL-03 Rehearsal** — weekend: install onto a clean AutoCAD profile the way a colleague would, then roll back to 2.1.14, both proven. Probe what a 2.1.14 user sees in a drawing Version 3 has touched. **Status:** Proposed.
 4. **REL-04 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back. **Status:** Proposed.
