@@ -114,8 +114,8 @@ These choices only set which mode each operation *starts* in. You can always swi
 **D. Which AutoCAD versions**
 
 12. **Grips on AutoCAD 2027 first.**
-    - Your 14 Sep choice was one shared ObjectARX drawing core for Structural, with 2027 first and older versions kept on
-      their existing paths.
+    - Your 14 Sep choice was one shared drawing engine for all Structural grips and previews ("Shared native core across
+      Structural"), with 2027 first and older versions kept working the way they work now.
     - **Recommend:** D2 grips go on 2027 first. On 2022 to 2026, beams keep AutoCAD's plain grips plus the right-click
       and beam-panel actions. Older-version grips come as a later step.
     - **On a job:** a colleague on AutoCAD 2024 can still change a beam from the panel or right-click, but will not see
