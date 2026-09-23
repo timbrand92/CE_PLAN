@@ -146,8 +146,10 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 |---|---|---|
 | **G1** | Open the drawing copy from `Civil\Drawings`. `CDDESIGN`. Answer **Yes** to *"Look through this job's folders for its rating report…"*. | It reads the report and says *"It was not in the usual "STORM Report - WSUD" folder; CE found it in "Civil\Reports"."* Site and roof areas are offered. |
 | **G2** | Carry on until CDDESIGN asks about the council (if the report did not already set it). | *"The job folder puts this job in Carnegie, which CE's council rules place in Glen Eira. Use Glen Eira?"* **Yes** sets it. |
-| **G3** | Repeat with the folder renamed `25-99_1 Example Street, Nowhereville`. | It says none of CE's council rules list that suburb and asks you to type the council. |
+| **G3** | Repeat with the folder renamed `25-99_1 Example Street, Nowhereville` (no `Council` folder yet). | It says none of CE's council rules list that suburb, then asks *"Look through this job's council letters and permits for the council?"* **Yes**: it says it found no council letter or permit in this job, then asks you to type the council. (G-04b, added 23 Sep: the extra question.) |
 | **G4** | Repeat with the report moved back into `Civil\STORM Report - WSUD`. | It reads it from there, with no "not in the usual folder" line. |
+| **G5** | **G-04b.** Keep the `Nowhereville` name. Make a folder `Council` inside the job and copy in `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES\Council letter - Glen Eira (INVENTED TEST).pdf` (an invented letter, not a real document). `CDDESIGN` again, **Yes** to the letters question. | *""Council letter - Glen Eira (INVENTED TEST).pdf" in "Council" names Glen Eira City Council. Use Glen Eira?"* **Yes** sets it: *"Council set to Glen Eira, from a council document in the job."* |
+| **G6** | Replace that letter with `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES\Council letter - two councils (INVENTED TEST).pdf`. `CDDESIGN`, **Yes** to the letters question. | It does **not** pick one. It says none names exactly one council CE has rules for (1 named more than one, so CE did not choose), then asks you to type the council. |
 
 ---
 

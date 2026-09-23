@@ -78,6 +78,7 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 5. ~~CD-ESC-01~~ **WITHDRAWN, do not test** (PR #100). CD keeps its 10 Sep rule: Escape at point 3 cancels the pipe.
 7. **MGR-OPEN-01** (PR #99, `26285f0f`): `CEMANAGER` opens the Manager window. Drawing Repair and Project QA open, with grey buttons like the rest.
 6. **C7-LOG-01** (PR #98, `e3b95b50`): nothing to click. After a drawing says pipes were left as drawn, the CE log lists each one with its reason.
+8. **G-04b** (PR #101, `8e17ab6e`): CDDESIGN finds the council in a council letter or permit in the job when the folder's suburb does not settle it. AutoCAD 2027 only. Steps: Codex list Part G, G3, G5 and G6.
 
 ---
 
