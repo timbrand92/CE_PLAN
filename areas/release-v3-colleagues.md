@@ -33,8 +33,10 @@ Read from `Creative Engineering - IT Admin\` (OneDrive-synced), DLL product vers
 
 1. **Civil 3.0.0+d90659cf**, installed 23 Sep 09:36, all three lanes.
 2. **Manager 1.1.0+96e7d76a**, with its common library hand-copied from Civil at each deploy.
-3. **Structural 1.0.74+5d723d41 — AutoCAD 2027 only.** No 2024 or 2025/26 lane, and no common library of its own (it uses whichever one AutoCAD loaded first).
+3. **Structural 1.0.74+5d723d41 — AutoCAD 2027 only** as installed (its source builds all three lanes). **It does not use the common library at all** — isolated on 25 Aug (`isolate standalone runtime from CE_SHARED`). *Corrected 23 Sep: this line first said it used whichever copy AutoCAD loaded first; that was wrong.*
 4. **Common library 1.1.0** in Civil and Manager.
+
+**The saved main line's Structural is 1.0.42**: older than Tim's 1.0.74 by 128 changes, and it still uses the common library.
 
 ### How colleagues receive updates today
 
@@ -71,7 +73,7 @@ Tim asked: *"whats stopping us from getting the large majority of version 3 by t
 Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
 1. **REL-00 Codex AutoCAD run, pass 1** — on the installed `3.0.0+d90659cf`: start-up, release checks (three plugins, one common library), the never-run 18 Sep list, the 19 Sep overnight fixes V1 to V18, and the 37 faults of 16 Sep by name. List: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. **Status:** list written 23 Sep; not started.
-2. **REL-01 Freeze** — Civil is the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"*. Proposed: **Thursday 24 Sep, 5:30pm**, announced on register #78. Manager and Structural: **open question** (see the decision file). **Status:** Proposed.
+2. **REL-01 Freeze** — Civil and Manager are the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"* and *"Newest saved for all three"*. Proposed: **Thursday 24 Sep, 5:30pm**, announced on register #78. **Structural: re-asked** — the saved Structural is older than Tim's (see the decision file's correction). **Status:** Proposed.
 3. **REL-02 Fix what pass 1 finds** — one area at a time, CDWT, CD, PIT first (Tim, 16 Sep). Each fix lands on `master` before the freeze. **Status:** waiting on pass 1.
 4. **REL-03 Package** — Thursday night: build all three plugins, all three AutoCAD lanes, one matching common library; full automated suite; package audit (hashes, every file present). **Status:** Proposed.
 5. **REL-04 Install the package on Tim's PC** — Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.

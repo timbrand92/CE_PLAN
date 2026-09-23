@@ -45,4 +45,18 @@ Read from git, not from a document:
 2. **Manager:** Tim runs `96e7d76a`. The saved main line has **38 more Manager changes** (including new Project QA pages) that **have never been installed on any PC**.
 3. **Structural:** Tim runs `1.0.74+5d723d41`, which is **not on the saved main line at all**: it lives on the Codex Structural branches (`codex/structural-ui-preservation-20260915` and others). The saved main line has 53 different Structural changes (including SML and CHECKML), also never installed.
 
-**Question put to Tim:** for Manager and Structural, ship exactly what he runs, or the saved main line. Claude recommends what he runs: it is the only combination anyone has used, and it builds for 2022 as well as 2027 (checked: `5d723d41` targets net48, net8 and net10). **Unanswered — stays open.**
+**Question put to Tim:** for Manager and Structural, ship exactly what he runs, or the saved main line. Claude recommends what he runs: it is the only combination anyone has used, and it builds for 2022 as well as 2027 (checked: `5d723d41` targets net48, net8 and net10). ~~**Unanswered — stays open.**~~
+
+**Tim's answer, 23 Sep 2026, about 11:45am:** *"Newest saved for all three"* (not Claude's recommendation).
+
+### CORRECTION — the evidence put to Tim for Structural was incomplete (Claude, 23 Sep, about 11:50am)
+
+**Tim's words above are unchanged. The question he answered described the saved Structural as "a different mix that nobody has installed". It did not say that the saved one is OLDER.** Read from git after his answer:
+
+1. **Saved main line Structural is version 1.0.42.** Tim runs **1.0.74**. Colleagues run 1.0.40 and 1.0.41.
+2. **128 Structural changes in Tim's 1.0.74 are not on the saved main line** (patch-equivalent commits excluded), including the SBEAM repeat placement, SBEAM edit, picker and Undo corrections, the startup palette fix and CEARCHREVIEW.
+3. **Tim's 1.0.74 does not use the common library at all** (`fix(structural): isolate standalone runtime from CE_SHARED`, 25 Aug). The saved 1.0.42 still does, so it would bring the shared-library risk back into Structural.
+4. **Installing "newest saved" Structural on Tim's PC on Friday would roll his own Structural back from 1.0.74 to 1.0.42.**
+5. The newest Structural work anywhere is `codex/structural-ui-preservation-20260915` @ `60c41228`: Tim's 1.0.74 plus 4 window recovery commits (Settings save and Cancel, Publish validation), never installed.
+
+**So for Structural, Tim's answer is re-asked with these facts** (the BUG-161 lesson: a ruling made on incomplete evidence is re-put, not acted on). **Manager and Civil stand as answered:** the saved Manager genuinely contains Tim's installed `96e7d76a` plus 38 newer changes; the saved Civil is his installed build plus CDWT-LINK-01.
