@@ -242,3 +242,10 @@ Tim (verbatim): *"With the windows, I am happy to scroll in places when you woul
 Tim (verbatim): *"continue with the building overnight as well just manage usage until Friday midday or when weekly resets please, you manage that"*
 
 **Meaning:** Claude builders continue overnight alongside Codex, held to the budget line in the 23:30 entry (about 1% of the week an hour, to about 97% at Friday 12:00). In practice that is one Claude builder at a time, on Civil behaviour first. A second one (Structural) runs when usage is under the line at a checkpoint. The release chat manages this, not Tim.
+
+## LU stays as it is; Codex pass 8 now — Tim, 24 Sep 2026, about 07:50
+
+Tim (verbatim): *"keep lu as is, it stands for layer update. can you get codex to do pass 8 now on autocad"*
+
+1. Structural's LU (layer update) keeps importing the office layer settings straight away, with no confirmation.
+2. Codex pass 8 was started at about 07:50 on Tim's AutoCAD, at his request, covering the overnight windows.
