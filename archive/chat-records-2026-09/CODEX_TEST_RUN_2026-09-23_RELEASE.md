@@ -69,7 +69,7 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 | ID | Step | What "right" looks like |
 |---|---|---|
-| **R1** | Screenshot the whole CE ribbon tab. | Civil, Manager and Structural panels all present. **Icons in their right places** (16 Sep fault R-01 said they were not). Describe anything misplaced. |
+| **R1** | Screenshot the **CE**, **CE Tools** and **CE STRUC** tabs, one each. | **Corrected 23 Sep about 14:40 — the first wording was wrong.** Three tabs is the design until the unified-ribbon step: **CE** carries the Civil panels (CE, Draw, Sources, Edit, Review, Site, Import, Settings), **CE Tools** is Manager's, and **CE STRUC** is Structural 1.0.74's own. What R1 checks is 16 Sep fault R-01: **every icon sits in its own button, none shifted, clipped or overlapping.** Describe anything misplaced, tab by tab. |
 | **R2** | Type `CEMANAGER`. | The Manager window opens and shows the installed versions. Record them exactly as shown. Close it. |
 | **R3** | Type `CEHEALTH`. | Copy the full command-line output into the report. Any `[WARN]` or `[FAIL]` line is recorded as written. |
 | **R4** | Type `CEHELP`. | Structural help opens. Close it. |
