@@ -78,6 +78,8 @@ work is built: (1) can CE's preview window open by itself right after a MOVE, ST
 (2) can Cancel take the move back in one step, and what does one U take back after Apply. Built and
 unit-tested (33/33 on net10); both lanes compile. **Use a TEST drawing — the test uses Undo.**
 
+**Who installs it:** the release chat only (Tim, 23 Sep 2026: *"CE_ACAD / release-v3-colleagues / plan / 01 this chat controls deployment"*). **Tim's PC only — a test tool, never in the colleague build.** Release chat: note here when it goes in.
+
 **Steps (AutoCAD 2027):**
 1. **Setup:** a test drawing with two CE pits joined by one CE pipe.
 2. **Run A — MOVE a pit, Cancel.** Type `CDMOVETEST`, Enter. Then `MOVE`, pick one pit, move it about 2 m.
