@@ -249,3 +249,4 @@ Tim (verbatim): *"keep lu as is, it stands for layer update. can you get codex t
 
 1. Structural's LU (layer update) keeps importing the office layer settings straight away, with no confirmation.
 2. Codex pass 8 was started at about 07:50 on Tim's AutoCAD, at his request, covering the overnight windows.
+3. Tim, minutes later (verbatim): *"yes to windows"*, answering queued item 20. CDDESIGN, CDRAINFALL and CDLPD switch from command-line prompts to their new windows (PR #146), with named Design entries on the ribbon.
