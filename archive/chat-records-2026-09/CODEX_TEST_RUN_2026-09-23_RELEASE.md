@@ -150,7 +150,25 @@ Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**
 
 ## PART M — AutoCAD 2022, Monday 28 Sep, on a colleague's PC — NOT for Codex
 
-Tim arranges 30 minutes on a colleague's 2022 PC. Claude writes the five steps separately after the package exists. Listed here only so nothing assumes the 2022 side was covered by this run.
+Tim arranges 30 minutes on a colleague's 2022 PC (Tim, 23 Sep: *"Yes, Monday"*). **Tim or the colleague runs these, not Codex** — this PC has AutoCAD 2027 only.
+
+**Why it matters:** nobody has ever opened Civil 3.0 in AutoCAD 2022. This is also the first real run of the hand install and the going-back steps (area REL, REL-09) on a colleague's PC.
+
+**Default:** the colleague goes back to their July version at the end (step M9), because Tuesday's pilot is a 2027 colleague. Tim can say keep it instead.
+
+| ID | Step | What "right" looks like |
+|---|---|---|
+| **M1** | Before anything: open AutoCAD 2022, type `CEMANAGER` (or look at the CE About box). Write down the versions shown. Close AutoCAD. | Their July versions (expected Civil 2.1.14, Manager 1.0.2, Structural 1.0.40). Whatever it says, write it down. |
+| **M2** | Task Manager: no `acad.exe`, no `accoreconsole.exe`. Then the REL-09 install: in `%APPDATA%\Autodesk\ApplicationPlugins` rename the three CE folders by adding `_PRE_V3.backup`; check `C:\ProgramData\Autodesk\ApplicationPlugins` for any CE folder (if one is there, stop and tell Tim); copy in the three new `.bundle` folders. | Three new folders, three `_PRE_V3.backup` folders, nothing CE in ProgramData. |
+| **M3** | Open AutoCAD 2022. Read the command line from start-up. | CE ribbon tab loads with Civil, Manager and Structural. **No** "unable to load", no error box. |
+| **M4** | `CEMANAGER`. | Shows Civil **3.0.0**, Manager **1.1.0**, Structural **1.0.74**. |
+| **M5** | On a COPY of a drainage job: `CD`, draw one pipe between two pits with levels. Double-click it, change the diameter, OK. `U` once. | Pipe, text, arrow and levels land; the text shows the new size; one `U` takes the edit back. |
+| **M6** | `PITSCHEDULE` on the same copy. | Opens and lists the pits. |
+| **M7** | On a COPY of a structural job: `SBEAM`, draw one beam. | Draws normally. |
+| **M8** | **Mixed versions:** open a COPY of a drawing Tim has worked on in Version 3 on AutoCAD 2027 (pipes converted with `CDC7UPGRADE`). Click a pipe. | **Write down exactly what shows** — the pipe draws, can be picked, and what the Properties palette calls it. A warning about missing objects is information, not a failure. |
+| **M9** | Close AutoCAD. Note any crash message (BUG-164). Then go back: delete the three new folders, remove `_PRE_V3.backup` from the three old names, open AutoCAD, `CEMANAGER`. | The July versions from M1 are back and the ribbon loads. |
+
+**Send Claude:** the M1 and M4 versions, a photo of anything unexpected, and what M8 showed.
 
 ---
 

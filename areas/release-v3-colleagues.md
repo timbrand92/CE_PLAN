@@ -107,7 +107,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
    - **Not yet done:** the full automated test suite on the frozen line; a package audit of all three together.
 5. **REL-04 Install the package on Tim's PC** — Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.
 6. **REL-05 Codex pass 2** — Part Z of the list: the tank change and every fix since pass 1, on the package. Friday evening and the weekend. **Status:** Proposed.
-7. **REL-06 AutoCAD 2022** — Monday 28 Sep, 30 minutes on a colleague's 2022 PC (Tim: *"Yes, Monday"*). Five steps written by Claude once the package exists. **Status:** Proposed.
+7. **REL-06 AutoCAD 2022** — Monday 28 Sep, 30 minutes on a colleague's 2022 PC (Tim: *"Yes, Monday"*). Steps M1 to M9 written 23 Sep in the run list, Part M: install by hand, check, mixed-version probe, then go back (the first real run of REL-09 both ways). **Status:** steps written; not run.
 8. **REL-07 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back to 2.1.14. **Status:** Proposed.
 9. **REL-08 Pilot** — Tuesday 29 Sep: the named colleague (Tim to name; 2027 recommended) installs with AutoCAD closed. **Publishing to the IT Admin folder or approving a build for any colleague happens only on Tim's explicit word for that exact package.** **Status:** Proposed.
 
