@@ -100,6 +100,31 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 8. **REL-07 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back to 2.1.14. **Status:** Proposed.
 9. **REL-08 Pilot** — Tuesday 29 Sep: the named colleague (Tim to name; 2027 recommended) installs with AutoCAD closed. **Publishing to the IT Admin folder or approving a build for any colleague happens only on Tim's explicit word for that exact package.** **Status:** Proposed.
 
+### REL-09 How the hand install works — PROPOSED, read from the files 23 Sep
+
+**What exists, read today:**
+
+1. **The three install files in the IT Admin folder** (`Install-CECvlSuite.ps1`, `Install-CESuiteManager.ps1`, `Install-CEStrucSuite.ps1`) **delete the old plugin folder, then copy the new one. No backup, and no check that AutoCAD is closed.** Not safe for a pilot on their own.
+2. **The new Civil installer program is not a double-click installer any more.** Since RS-01B2 it only activates an update that Manager has already staged (it needs `--stage-record`, `--target`, `--rollback-root`, `--result-root`). It does refuse while `acad` or `accoreconsole` is running and keeps a rollback copy, but a colleague cannot run it by hand.
+3. **A folder in the plugins folder whose name ends in `.backup` is not loaded by AutoCAD.** Observed, not documented: Tim's own `%APPDATA%\Autodesk\ApplicationPlugins` holds 19 such folders (counted 23 Sep) and his AutoCAD loads normally.
+
+**Proposed steps — no new script, every step visible:**
+
+1. **Close AutoCAD.** Check Task Manager: no `acad.exe`, no `accoreconsole.exe`.
+2. Open File Explorer at `%APPDATA%\Autodesk\ApplicationPlugins`.
+3. **Rename** `CE_CVL_SUITE.bundle`, `CE_SUITE_MANAGER.bundle` and `CE_STRUC_SUITE.bundle` by adding `_PRE_V3.backup` to the end.
+4. **Check `C:\ProgramData\Autodesk\ApplicationPlugins`** for any CE folder. If one is there, stop and tell Tim: AutoCAD would load two copies. (Tim's own PC has an old Manager 1.0.0 there, switched off on 17 Jul by renaming its `PackageContents.xml` to `PackageContents.xml.DISABLED-duplicate-appdata-wins`; a colleague may have one that is still live.)
+5. **Copy the three new `.bundle` folders** from the pilot folder into `%APPDATA%\Autodesk\ApplicationPlugins`.
+6. Open AutoCAD. The CE ribbon loads. `CEMANAGER` shows the three new versions.
+
+**Going back (one step each):** close AutoCAD; delete the three new folders; remove `_PRE_V3.backup` from the three old names; open AutoCAD.
+
+**Still open:**
+
+1. **Settings.** Version 3 may rewrite the colleague's CE settings files (`%APPDATA%\TIM_CE_CADTOOLS`, `%APPDATA%\CE_CVL_SUITE`). Whether 2.1.14 still reads them after going back is **not established**. Proposed: copy those two folders to a `_PRE_V3` copy at step 3 as well.
+2. **Where the pilot package sits.** Putting it in the shared IT Admin folder is publishing and needs Tim's word; a separate `CE V3 PILOT` subfolder keeps the 2.1.14 copies other colleagues use untouched.
+3. **Rehearsal:** these steps are run first on a spare Windows user profile on Tim's PC, both ways, before Tuesday (REL-05/REL-06 window).
+
 ### Holds
 
 1. **PR #88 (`CDMOVETEST`, the E-HOLD-01 probe) stays OFF `master` until the colleague package is cut** (Thursday 5:30pm). It is a test tool and must not reach a colleague. It goes onto Tim's PC only after Codex pass 2 finishes, so it does not change the build under test. Decided by this chat, 23 Sep, as the deployment controller.
