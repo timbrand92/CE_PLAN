@@ -40,6 +40,8 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 9. **If you are stopped part-way** (usage limit, crash, Tim needs AutoCAD), **save the partial report** and mark every unreached step NOT TESTED.
 10. **Tim needs AutoCAD from 8:30am to 2:00pm and 3:00 to 5:30pm on weekdays.** Run outside those hours unless Tim tells you otherwise himself.
 11. **Turn CE diagnostics ON first** and say how in the report.
+12. **Re-read this file whenever you pause or finish a part.** The release chat adds to it (new build numbers, new steps) instead of sending a new list. The build number in S1 changes when a new build is installed: **always check S1 against the file, not your memory.**
+13. **Do not press F2** on this AutoCAD profile: it runs `CLEAN`, which saved a test copy on 23 Sep. Use `TEXTSCR` or the command-line window to read history.
 
 **Report:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_2026-09-23.md`, screenshots beside it. Put a short **FOR TIM** block at the top in plain English, then one row per step ID.
 
