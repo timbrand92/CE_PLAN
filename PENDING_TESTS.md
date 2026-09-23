@@ -75,7 +75,8 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 2. **BUG-162** (PR #93): test only.
 3. **G-02 / G-04** (PR #94, `db5c8517`): CDDESIGN looks through every folder in the job for the rating report, and offers the council from the job folder's suburb. Steps: `REGRESSION_LOG.md` G-02/G-04 and Codex list Part G.
 4. **RIBBON-01** (PR #95, `45bec4be`): CE tab, Review panel, **Rainfall Curve** runs CDRAINFALL.
-5. **CD-ESC-01** (PR #96, `8fa245ae`): `CD`, pick two points, press **Escape** at point 3: the pipe is drawn between the two points. Escape at point 1 or 2: nothing is drawn.
+5. ~~CD-ESC-01~~ **WITHDRAWN, do not test** (PR #100). CD keeps its 10 Sep rule: Escape at point 3 cancels the pipe.
+7. **MGR-OPEN-01** (PR #99, `26285f0f`): `CEMANAGER` opens the Manager window. Drawing Repair and Project QA open, with grey buttons like the rest.
 6. **C7-LOG-01** (PR #98, `e3b95b50`): nothing to click. After a drawing says pipes were left as drawn, the CE log lists each one with its reason.
 
 ---

@@ -158,3 +158,5 @@ Tim, after the release chat had gone quiet waiting for Codex: *"why have you sto
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
+
+**Claude's correction, 23 Sep about 15:20:** CD-ESC-01 (PR #96) made Escape at CD's third point keep the two-point pipe. It was withdrawn in PR #100 the same afternoon, because the 10 Sep CD card documents the opposite rule and Tim had not been asked. It was never installed. The question is now in the area file's Queued for Tim, item 12. Lesson recorded: a failing old check is not proof that the newer behaviour was accidental. Read the workflow cards first.
