@@ -210,6 +210,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 2. **BUG-164** — AutoCAD crashed on closing: **cause proven** (CE's palette shutdown, 18 closes in the Windows event log); **fix merged** PR #90 and **installed 23 Sep 12:18** (`3.0.0+aeb03763`, all lanes read back); not tested in AutoCAD (Codex Part C).
 3. **BUG-165** — Manager's version check ranked `2026.0420.1549` above `3.0.0`: **fix merged** PR #92 (`c1d0b7db`); not installed yet.
 4. **BUG-162** — stale automatic check: **fixed** PR #93 (`7627ed39`), test only.
+5. **G-02 / G-04** (16 Sep faults) — CDDESIGN whole-job search and council from the folder's suburb: **merged** PR #94 (`db5c8517`); not installed; Codex Part G. G-03 (the window) stays with Codex under ruling B.
 
 ## 7. Parked
 

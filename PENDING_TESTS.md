@@ -69,6 +69,14 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## BUILT 23 Sep 2026 — on `master`, NOT installed yet (goes in at the next install, after Codex's current run)
+
+1. **BUG-165** (PR #92): Manager never treats the old `2026.0420` build number as newer than 3.0. Nothing to click; Manager's trace log stops showing *"staging CE_CVL_SUITE → 2026.0420.1549"*.
+2. **BUG-162** (PR #93): test only.
+3. **G-02 / G-04** (PR #94, `db5c8517`): CDDESIGN looks through every folder in the job for the rating report, and offers the council from the job folder's suburb. Steps: `REGRESSION_LOG.md` G-02/G-04 and Codex list Part G.
+
+---
+
 ## LIVE since 23 Sep 2026 12:18 — `3.0.0+aeb037639f628e64a98e1cde4d86d2df38c45fcc` (master, PRs #89 + #90)
 
 Installed by the release chat under Tim's standing override (*"from now until tuesday we build, test and deploy whenever we need"*), AutoCAD checked closed at 12:12:29 and 12:12:40 (Tim: *"AutoCAD is closed"*) and again by the script before build and before install.
