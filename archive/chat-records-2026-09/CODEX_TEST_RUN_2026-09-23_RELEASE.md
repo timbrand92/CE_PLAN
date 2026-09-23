@@ -161,6 +161,15 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 
 ---
 
+## PART L3 — P-07 evidence: does changing a level in Edit Pipe change the drawing? (added 23 Sep about 16:15). On the DWG-A copy, diagnostics on (CDDEBUG is already on). Undo afterwards.
+
+| ID | Step | What to record |
+|---|---|---|
+| **L3-1** | Pick a simple pipe between two pits that has an IL text at its downstream end. Open **Edit Pipe** (double-click the pipe, or the ribbon). Note the downstream level shown. Change it by **+0.10** (e.g. 18.20 to 18.30) and press **OK**. | Whether the IL text on the drawing now shows the new level, and whether the pit schedule row changed. The command line. The CE log line starting `CDEDIT outcome` (or its absence) and any `StorePipeInverts` line for that minute, from `%APPDATA%\CE_CVL_SUITE\logs\CE_CVL_SUITE.log`. Feel line. Then **U** once and say whether it all went back. |
+| **L3-2** | Same pipe: open Edit Pipe, **delete** the downstream level (empty box), OK. | What the drawing and the schedule show afterwards (the level may stay: that is an open question for Tim, so **record, do not judge**). The same log lines. Then **U**. |
+
+---
+
 ## PART B — the deploy chat's list for this build, folded in (agreed by both release chats, 23 Sep)
 
 Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**, in its order. It was written for `b02f3ec7`; the installed `aeb03763` contains it and adds only the close-crash fix and a build-file fix.
@@ -181,7 +190,7 @@ Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**
 | **Z2** | Parts S2–S4 and all of Part R again. | Same as pass 1. |
 | **Z3** | **The tank finds its own plan (CDWT-LINK-01), on the package.** Re-run Part B's **T1 to T6**. | The same as in pass 1. Record each as `Z3-T1` and so on. **Never** copy a pass-1 result forward. |
 | **Z4-Z7** | **Nothing separate to run** (23 Sep about 16:10): the old Z4-Z7 tank steps were folded into Z3 (Part B T1-T6). Record them as "folded into Z3", not NOT TESTED. | - |
-| **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**, in this order, each with a Part H **Feel** line (brief `CODEX_BRIEF_HUMAN_TESTING_UIUX_STRUCTURAL_2026-09-23.md`): **Z8a R5** SBEAM on `DWG-S.dwg`, 610UB125, Place: the beam **and its label** are drawn; Escape and one Undo. **Z8b** 25R and 25L text on `DWG-S.dwg` (same builder as the SBEAM label). **Z8c R2** CEMANAGER opens; then Drawing Repair and Project QA open. **Z8d B-P5** two pits, Edit Pit: the batch editor opens; resize both. **Z8e B-L1** double-click the IL label: Edit Pipe opens (log: "pick set emptied so TEXTEDIT stops at its prompt"). **Z8f B-L3** Edit Pipe on the same pipe: a plain-English reason, not "Unable to read pipe data". **Z8g B-D3** CDLPD `CouncilP`: the message and nothing drawn; Escape at the question: nothing drawn. **Z8h B-D7** CDCALC Insert Criteria Block: the table's top-left corner is at the pick. Then **Part G** G1-G6 (CDDESIGN, invented letters in `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES`). | Record each as its own row. **Never** copy a pass-1 result forward. |
+| **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**, in this order, each with a Part H **Feel** line (brief `CODEX_BRIEF_HUMAN_TESTING_UIUX_STRUCTURAL_2026-09-23.md`): **Z8a R5** SBEAM on `DWG-S.dwg`, 610UB125, Place: the beam **and its label** are drawn; Escape and one Undo. **Z8b** 25R and 25L text on `DWG-S.dwg` (same builder as the SBEAM label). **Z8c R2** CEMANAGER opens; then Drawing Repair and Project QA open. **Z8d B-P5** two pits, Edit Pit: the batch editor opens; resize both. **Z8e B-L1** double-click the IL label: Edit Pipe opens (log: "pick set emptied so TEXTEDIT stops at its prompt"). **Z8f B-L3** Edit Pipe on the same pipe: a plain-English reason, not "Unable to read pipe data". **Z8g B-D3** CDLPD `CouncilP`: the message and nothing drawn; Escape at the question: nothing drawn. **Z8h B-D7** CDCALC Insert Criteria Block: the table's top-left corner is at the pick. **Z8i** Part L3 (P-07 evidence). Then **Part G** G1-G6 (CDDESIGN, invented letters in `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES`). | Record each as its own row. **Never** copy a pass-1 result forward. |
 
 **Installed 23 Sep 12:32, so run Z9 to Z21 in pass 1 as well (Z1 to Z8 still wait for the next build).** **Manager — 38 changes never installed on any PC before this package.** Before each step, **save the drawing copy**, so `DBMOD` reads 0.
 
