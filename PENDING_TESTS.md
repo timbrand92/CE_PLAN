@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Drawing Standards — UI-STANDARDS-03 (24 September 2026, awaiting release)
+
+1. **Candidate:** `codex/ui-standards`, tip `63015551`, [PR #126](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/126). All three Release lanes 0 errors; own window tests 13/13; full Civil 10,588 total / 10,558 passed / 11 known failures / 19 skipped, exact baseline names. Fourteen dark/light real-window pictures inspected and committed. No installation or AutoCAD acceptance; the build/test gate is met for review.
+2. **One representative session after a separately authorised combined installation, AutoCAD 2027 and 2024/net48:** open Drawing Standards, Label Styles and Parts Catalogue; visit all seven tabs in dark/light at 1920 x 1080, scale 1. Header, actions and footer stay in place; only long lists or label text scroll. Add/duplicate/delete beyond the visible list, save/reopen, and confirm the final row remains available. Enter an invalid pipe diameter: Save keeps the draft and explains the problem. Reset then Cancel preserves saved catalogue entries; Escape retains the established cancel/close behaviour.
+3. **Label and drawing remainder:** in a synthetic drawing, insert Pit number/Cover level into existing wording, replace selected wording with a named field, add a line, inspect the live example and save/reopen. Apply Draw Order to Model and All Layouts and check one Undo; apply labels and check one Undo. Save/reopen the drawing. Native DIMSTYLE opens through Labels & Dimensions. The automated checks already prove draft persistence, cell validation, named-field round trips, caret insertion, selection reveal and both-theme layout; Tim's remainder is native drawing output and interaction.
+
 ## Feedback window — FEEDBACK-UI-01 (24 September 2026, awaiting release)
 
 1. **Branch:** `codex/ui-feedback`, tip `546bb4a5`, **PR #136 draft**. Feedback 25/25; all three Release lanes 0 errors; full Civil 10,544 passed / 12 failed / 19 skipped (11 known + the newly merged Settings reset expectation mismatch, routed to its builder). Code only: no installation or AutoCAD acceptance. All four compiled-window pictures checked in dark/light at 1080p scale 1 and committed.
