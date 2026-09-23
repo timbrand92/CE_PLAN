@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Civil import windows — UI-IMPORT-20260924 (24 September 2026, awaiting command wiring)
+
+1. **Candidate:** `codex/ui-import` contains the source, schedule and results window code and 14 dark/light pictures. Three Civil Release lanes build with zero errors; seven focused window checks pass; the full Civil suite has 10,829 passed / 11 exact baseline failures / 19 skipped. The CE ribbon does not open these windows yet: X-Civil, LandXML and survey command/service wiring is reserved for Claude. No AutoCAD opened, installation or acceptance.
+2. **After command wiring and a separately authorised combined release, AutoCAD 2027 and 2024/net48:** open CE Import and X-Civil/LandXML in both themes at 1920 × 1080 scale 1. Choose a DWG, then a consultant package folder; check the pit/pipe schedule identifies P1 and P1 to P2 before accepting. The result must identify the same drawing labels, with any unproven levels shown as Unknown. Cancel at source and schedule review must draw nothing. Repeat an import and use the existing Abort option; the prior drawing items must remain untouched.
+3. **One drawing-output check:** import a LandXML network and confirm its pits and pipes match the existing command's result; link a survey and review/approve it through Manager Survey Intake. After an accepted change, use one Undo, then save/reopen. Check locked layers and Xrefs retain AutoCAD's normal protections. Automated pictures prove layout only; real file picking, drawing output, Undo and persistence remain untested.
+
 ## Edit Pipe — UI-EDITPIPE-20260924 (24 September 2026, awaiting release)
 
 1. **Candidate:** [PR #144](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/144), codex/ui-editpipe tip d7008652, tested code 5f199fbb; ready for review. All three Release lanes 0 errors. Full Civil: 10,765 passed / 11 exact baseline failures / 19 skipped / 10,795 total. All 25 Edit Pipe cases pass; all 24 dark/light compiled-window pictures inspected. No installation or AutoCAD run performed by this session; not Tim-accepted.
