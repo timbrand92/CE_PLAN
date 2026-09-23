@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Edit Pipe — UI-EDITPIPE-20260924 (24 September 2026, awaiting release)
+
+1. **Candidate:** [PR #144](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/144), codex/ui-editpipe tip d7008652, tested code 5f199fbb; ready for review. All three Release lanes 0 errors. Full Civil: 10,765 passed / 11 exact baseline failures / 19 skipped / 10,795 total. All 25 Edit Pipe cases pass; all 24 dark/light compiled-window pictures inspected. No installation or AutoCAD run performed by this session; not Tim-accepted.
+2. **After release-owner installation, AutoCAD 2027 and 2024/net48:** on one representative synthetic pipe, open CDEDIT and its invert label in both themes at 1920 x 1080 scale 1. Check Engineering / Connections / Presentation and the fixed footer. Unknown levels/length/fall must stay Unknown. Review a missing manual level, then each known-end direction in automatic mode: focus must land in the visible level box. Review material must open the existing material input without choosing a value. The release owner retains the existing workshop-editor rollout flag; the older-pipe label question remains Claude's C7 work.
+3. **Native remainder:** change label choices and selected wording, Inspect Drawing and return, then adjust the arrow. Cancel/Escape must discard the draft. Save once, one Undo, then save/reopen to confirm existing drawing output and persistence. Actual native prompts, keyboard focus, view return and Undo remain untested; layout, all six pipe families, level modes, binding preservation and warning/Unknown presentation already have automated coverage. No new manual backlog of individual controls is required.
+
 ## Civil Hub — CIVIL-HUB-UI-20260924 (24 September 2026, awaiting release)
 
 1. **Candidate:** [PR #142](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/142), codex/ui-print tip 49020240, tested code 9c226efc; ready for review. Print in review item 15 is CDCALC, already rebuilt by PR #139; this is the next eligible scrolling window, item 20 Civil Hub (CDHUB). Three Release lanes 0 errors. Full Civil: 10,668 passed / 11 exact baseline failures / 19 skipped / 10,698 reported. All 52 Hub checks pass; 40 dark/light real-window pictures inspected and unchanged after the full suite. Not installed or Tim-accepted.
