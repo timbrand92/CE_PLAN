@@ -100,6 +100,16 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 4. **Publishing to colleagues** (the IT Admin folder, any approval, any colleague PC) is not "deploy" here. It still needs Tim's word for the exact package.
 5. Installs go only through the two release chats (`CE_ACAD / release-v3-colleagues / deploy / 01` and `/ plan / 01`).
 
+## Online storage — Tim, 23 Sep 2026, before 12:00 (clickable choice)
+
+**Earlier, to the deploy chat:** *"publish the current build so the channel can go back on"* and *"make sure you and [the plan chat] are working together and you know whats going on"*.
+
+**Facts put to Tim by the plan chat:** online storage reaches no Version 3 user (the new Manager reads signed OneDrive approvals only; colleagues' 1.0.2 link was signed with the key replaced in July); only Tim's old Manager would see it, until Friday. Offered: A don't publish, fix after Tuesday with signed approvals (Claude's recommendation); B publish anyway.
+
+**Tim:** *"Publish anyway"* (option B).
+
+**Meaning (Claude's reading):** the deploy chat publishes **Civil `3.0.0+b02f3ec7`**, the exact bundle installed on Tim's PC, as it proposed. Manager and Structural are **not** included: their candidates are not installed or tested, and Tim was not asked about them. Publishing to the IT Admin folder or approving a build for a colleague is still separate (limit 4).
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
