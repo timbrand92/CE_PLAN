@@ -226,3 +226,19 @@ Tim (verbatim): *"overnight can you build so that we run all the way until frida
 1. Claude's weekly allowance must last until it resets on Friday 25 Sep at about 12:00. At 23:30 it stood at 62%, so the budget line runs straight from 62% to about 97% at Friday 12:00: about 1% an hour. Checkpoints: Thu 07:30 about 70%, Thu 12:00 about 74%, Thu 18:00 about 80%, Fri 00:00 about 86%, Fri 06:00 about 92%. When above the line, no new Claude builder starts until it is back under.
 2. Codex takes the building load: whole windows, code only, in their own worktrees, launched by the release chat with `codex exec` (two runs at a time, queued). Codex also keeps AutoCAD testing as its priority, one AutoCAD run at a time.
 3. Claude keeps behaviour, the object spine, reviews, merges and installs. The deploy chat stands down from Codex runs overnight so that only one Claude chat is driving Codex (agreed 23:36).
+
+## Scrolling: allowed instead of page buttons; never in high-use windows where design can do better — Tim, 24 Sep 2026, about 00:00
+
+Tim (verbatim): *"With the windows, I am happy to scroll in places when you would have to implement a next page button like in the help window i just dont want high use windows to have scrolling areas where the ui and ux could be designed far better, does that make sense?"*
+
+**Meaning (release chat's reading). It refines the 4 Sep no-scroll rule; it does not replace it:**
+1. **A long list or reading page may scroll** inside a bounded area, instead of Previous / Next page buttons. This covers Help pages, catalogues, schedules, finding lists and the tank sizes list.
+2. **A high-use window's layout must not scroll** where a better design would fit it. That means CD / New Pipe, New Pit, CDWT, Edit Pipe and Edit Pit, CDCALC, Settings and the Inspector. The answers there are still tabs, grouping and a tighter layout, never a scrolling form.
+3. **Still no collapsed expanders.**
+4. Windows built tonight with page buttons for lists (CDWT capacities, Help Centre pages) change to a scrolling list where that reads better.
+
+## Keep building overnight, paced — Tim, 24 Sep 2026, about 00:00
+
+Tim (verbatim): *"continue with the building overnight as well just manage usage until Friday midday or when weekly resets please, you manage that"*
+
+**Meaning:** Claude builders continue overnight alongside Codex, held to the budget line in the 23:30 entry (about 1% of the week an hour, to about 97% at Friday 12:00). In practice that is one Claude builder at a time, on Civil behaviour first. A second one (Structural) runs when usage is under the line at a checkpoint. The release chat manages this, not Tim.
