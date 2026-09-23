@@ -2,6 +2,8 @@
 
 **Run this yourself, start to finish. Tim does not need to be at the desk.**
 
+> **INSTALLED AND READY.**  went live 23 September 11:26. S1 will pass.
+
 ---
 
 ## 0. STOP IF THIS IS NOT TRUE
