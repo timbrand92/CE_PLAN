@@ -62,10 +62,20 @@ sandbox for those runs, and only those.
    version of this rule told you to use an isolated profile from `C:\Autodesk\CERef`. Do not.)*
    Codex still cannot see the screen, so the standing guards are: never F2, **No** to every save prompt,
    copies only, never save a template or a profile or a setting, and never type a credential.
-   Around every run, **measure and repair** these four, because nothing else protects them:
-   `Profiles\(default)` = `<<Unnamed Profile>>` · `OSMODE` = 4133 ·
-   `acadiso.dwt` = `12B46B17C114D235…` · `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` against its
-   backup. Anything needing Tim's real judgement is still **Tim's to run**, not Codex's.
+   Around every run, **measure and repair** these, because nothing else protects them:
+   - **Inside AutoCAD, at its command line** — `OSMODE` must read **21759**, `CPROFILE` must read
+     `"Tim" (read only)`. **Never read or write these in the registry.** *(Corrected 23 Sep: this rule
+     first said `OSMODE` = 4133 and `Profiles\(default)` = `<<Unnamed Profile>>`, both read from `HKCU`.
+     Measured inside AutoCAD, the live value is 21759 and the live profile is `Tim` — which does not
+     exist in `HKCU` at all. Writing 4133 back would have stripped Tim's snaps to four modes. The
+     registry key is a different, probably stale profile; AutoCAD persists profiles on a clean exit,
+     and BUG-164 crashed 18 of its closes between 15 and 23 September.)*
+   - **On disk** — `acadiso.dwt` = `12B46B17C114D235…`, and `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`
+     against its backup in `setup-snapshot-20260923\`.
+
+   Expect `OSMODE` to be wrong straight after Part T: `CDWT` sets it to 512 for the callout pick and
+   restores it when the prompt closes, and T is designed to kill AutoCAD mid-pick. Check it there first.
+   Anything needing Tim's real judgement is still **Tim's to run**, not Codex's.
 5. **One Codex run at a time, and say so before starting.** Installs and tests share one AutoCAD. Tell the
    other chat before a run starts and when it ends; never install while a run is live.
 
