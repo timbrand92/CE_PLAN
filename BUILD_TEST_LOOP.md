@@ -209,9 +209,10 @@ reset codex usage now but it will have to last until next thursday at the same t
    | Follow-up tweak to a window already built (scroll list, rewording, one control) | luna | medium | Small and clear |
    | Chores (merge master, keep both log sides, rename labels, re-render pictures) | luna | low | Mechanical; Claude often does these itself |
    | Second-opinion review of a PR diff, read-only | astra | medium | Short, and needs the best judgement |
-   | Plain records or documents (CE_PLAN notes, handover text) | terra | low | Straightforward writing, cheapest to run |
+   | Plain records or documents (CE_PLAN notes, handover text) | luna | low | Straightforward writing; luna is the cheapest |
 
    Escalate only on failure: luna, then sol, then astra, one step at a time, and say so in the queue log. Never ultra or max.
+   **Do not use the older models (gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5).** OpenAI's API price list, checked 24 Sep 2026, prices each of them the same as or dearer than its gpt-6 counterpart (per million tokens, input / output: gpt-6-luna $0.10 / $0.50; gpt-6-sol $2 / $10; gpt-6-astra $10 / $50; gpt-5.6-terra $2 / $12; gpt-5.6-sol $4 / $20; gpt-5.6-luna $0.20 / $1.20; gpt-5.5 $5 / $30). Terra was in this list for an hour on 24 Sep and is withdrawn. Sources: https://developers.openai.com/api/docs/pricing and https://developers.openai.com/api/docs/models. "ultra" is a Codex-app-only level, not an API value.
    Never astra at high or above unless a job has already failed on sol at high.
 4. **Concurrency:** one AutoCAD pass plus at most one build at a time.
 5. **Measure:** the runner logs usage before and after each job (`queue.log`), so the cost per model and effort becomes known;
