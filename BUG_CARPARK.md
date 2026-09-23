@@ -168,7 +168,11 @@
 
 **Reference:** found by Codex (pass 1, B-L1), diagnosed by the release chat from both CE logs, 23 Sep 2026.
 
-**Status:** OPEN — diagnosed to the hand-over; the experiment is in the Codex list; fix after its result
+**Experiment result (Codex B-L1b, 15:25 and 15:26):** TEXTEDIT stays in in-place editing through 15 s; one Escape returns it to its own Multiple prompt; it never ends, so the queued Edit Pipe never runs. The log shows CE routed and posted the cancel both times.
+
+**Fix:** PR #107 (`a2f56f43`). When redirecting a text editor, CE empties the pre-picked set before the cancel, so the command stops at its prompt, where the cancel lands as it does for BEDIT. Cannot be proven headless.
+
+**Status:** IN PROGRESS — fix merged 23 Sep; not installed; Codex re-runs B-L1 after the install; then Tim confirms
 
 ---
 
@@ -247,6 +251,8 @@
 
 **Status:** OPEN
 
+
+**Caveat, 23 Sep about 15:50 (deploy chat and release chat):** the eFilerError on `1041DE` (a block holding a PDF underlay, `AcDbPdfReference` 104110) was measured headless on a copy with **no PDF beside it**. Headless may not load PDF underlays at all. So it may belong to the missing or unloaded underlay, not to the PDF. Codex's Part T copy shows "Missing or invalid reference" at the underlay too. **A "no crash" result in Part T does not disprove this bug**: nobody has yet tested the 16 Sep state, with the PDF resolvable, in full AutoCAD.
 ---
 
 ## BUG-162

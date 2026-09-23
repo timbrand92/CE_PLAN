@@ -83,6 +83,7 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 10. **PIT-BATCH-01 + PIPE-EDIT-WHY-01** (PR #103, `659b6540`): select two pits, Edit Pit, and the batch editor opens (B-P5 again). Edit Pipe on a pipe with doubled labels says why in plain words (B-L3 again).
 11. **LPD-NOWRITE-01** (PR #105, `e7a0af71`): `CDLPD`, type `CouncilP`: the message, and nothing on the drawing. Escape at the connection question: nothing on the drawing.
 12. **CRITERIA-ANCHOR-01** (PR #106, `2a22c381`): CDCALC, Insert Criteria Block, pick a clear point: the table's top-left corner is at the pick.
+13. **BUG-166** (PR #107, `a2f56f43`): double-click a pipe's IL label: Edit Pipe opens on that pipe. Ordinary text still opens AutoCAD's editor.
 
 ---
 
