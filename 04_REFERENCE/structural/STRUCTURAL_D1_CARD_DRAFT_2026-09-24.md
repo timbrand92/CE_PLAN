@@ -264,7 +264,8 @@ Your words and dates are in the Structural drawing-journey record of 14 Sep (the
 4. **"MODELSPACE-CASE-01" and "STRUC-LAYER-CASE-01" (2026-09-23):** the connected route had been refusing real 2027
    drawings; fixed, not yet Tim-accepted. **"STRUC-BEAM-WORDS-01" (2026-09-23):** plain names for command 1.
 5. **"STRUC-TEST-LOAD-01" (2026-09-23):** the Structural plugin test project could not load on this PC, so none of the
-   connected-route tests above had been re-run here since; being fixed on `claude/struc-d1-prep`.
+   connected-route tests above had been re-run here since. Fixed on `claude/struc-d1-prep` (`e2c2d974`, 23 Sep):
+   on net10, 1,356 of 1,365 pass outside the SBEAM compiled-route proofs, which do not finish (see that entry).
 
 ### Identity owner nomination (choice 1, technical detail)
 
@@ -324,5 +325,6 @@ with the command line text for any FAIL. Then Tim's final look: steps 2, 5 and 1
 1. Tim's answers to the 12 choices.
 2. A plan for bringing `Shared/CE.Spine` (and, if choice 12 stands, the native grip pattern) onto the Structural line
    without a big-bang merge.
-3. The Structural plugin test project running on this PC (STRUC-TEST-LOAD-01, being fixed on `claude/struc-d1-prep`).
+3. The Structural plugin test project runs on this PC again (STRUC-TEST-LOAD-01, `e2c2d974`), but 9 stale or
+   AutoCAD-only guards fail and the SBEAM compiled-route proofs loop; D2's guards must not depend on those.
 4. Duration: not estimated until items 1 and 2 are settled; the plan's rule is no invented dates.
