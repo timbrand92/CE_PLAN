@@ -15,6 +15,14 @@
 
 ---
 
+## COLLEAGUE RELEASE, Tuesday 29 Sep — Codex runs the AutoCAD testing (Tim, 23 Sep)
+
+**The one run list:** `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. Pass 1 covers the installed
+`d90659cf`, including the 18 Sep list and V1 to V18 below, which are **installed now** even where their
+headings still say NOT INSTALLED. Area: `areas\release-v3-colleagues.md`.
+
+---
+
 ## LIVE since 23 Sep 2026 09:36 — `3.0.0+d90659cf` on `claude/civil-merge-2026-09-23`
 
 Tim: **"AUTOCAD IS CLOSED, DEPLOY"** (23 Sep, 09:34). AutoCAD checked twice, eight seconds apart, before
@@ -72,6 +80,11 @@ it. Unchanged gap.
 ---
 
 ## BUILT 23 Sep 2026 — **CDMOVETEST** (E-HOLD-01 probe), branch `claude/e-hold-01-move-test` @ `42766dd9`, PR #88 — NOT installed, NOT tested
+
+**Install decision (release chat, 23 Sep):** PR #88 stays off `master` until the colleague package is cut
+(Thursday 24 Sep, 5:30pm), so this test tool never reaches a colleague. It goes onto Tim's PC after Codex's
+second pass on the colleague package finishes, so it does not change the build under test. Area:
+`areas\release-v3-colleagues.md`, Holds.
 
 **What it is:** a test command, not a feature. It answers two questions before the hold-grade / hold-levels
 work is built: (1) can CE's preview window open by itself right after a MOVE, STRETCH or grip drag, and

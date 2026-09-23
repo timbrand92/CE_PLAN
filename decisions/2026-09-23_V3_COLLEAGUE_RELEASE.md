@@ -29,3 +29,20 @@ _Answers go below, in Tim's words, dated, the moment he gives them. An unanswere
 1. The **2022 lane is in scope** for the release, not only 2027. Tim's Structural 1.0.74 has no 2022 lane, so Structural must be built for 2022 from the same source before any 2022 colleague moves.
 2. The pilot colleague's AutoCAD version decides what Tuesday needs. **Still open:** which colleague, and on which AutoCAD.
 3. "Newest saved work" means anything another chat merges into `master` before the freeze reaches a colleague. The deploy register #78 is told the freeze time.
+
+## Second round — Tim, 23 Sep 2026, about 11:30am
+
+1. **Who tests in AutoCAD:** *"i can get codex to do all testing on autocad whenever up until tuesday"* — typed by Tim instead of choosing the pre-check plan. **Override recorded (RULES 14.6), scope: AutoCAD testing for this release, until Tuesday 29 Sep.** Codex produces evidence; only Tim's word accepts. Run list: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`.
+2. **Pilot colleague:** *"I'll tell you later"*. Needed by Monday 28 Sep.
+3. **A 2022 PC for 30 minutes on Monday:** *"Yes, Monday"*.
+4. **This chat controls deployment** — Tim's words as relayed by the E-HOLD chat ("Pipe points locking to grade/invert"), 23 Sep: *"CE_ACAD / release-v3-colleagues / plan / 01 this chat controls deployment"*. Relayed, not heard directly by this chat.
+
+## Open, found 23 Sep about 11:20am — "newest saved work" and "Structural exactly as you use it" are different builds
+
+Read from git, not from a document:
+
+1. **Civil:** the saved main line is the installed `d90659cf` plus one change (CDWT-LINK-01, a tank finds its own plan). No conflict.
+2. **Manager:** Tim runs `96e7d76a`. The saved main line has **38 more Manager changes** (including new Project QA pages) that **have never been installed on any PC**.
+3. **Structural:** Tim runs `1.0.74+5d723d41`, which is **not on the saved main line at all**: it lives on the Codex Structural branches (`codex/structural-ui-preservation-20260915` and others). The saved main line has 53 different Structural changes (including SML and CHECKML), also never installed.
+
+**Question put to Tim:** for Manager and Structural, ship exactly what he runs, or the saved main line. Claude recommends what he runs: it is the only combination anyone has used, and it builds for 2022 as well as 2027 (checked: `5d723d41` targets net48, net8 and net10). **Unanswered — stays open.**

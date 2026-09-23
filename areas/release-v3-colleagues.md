@@ -66,16 +66,23 @@ Tim asked: *"whats stopping us from getting the large majority of version 3 by t
 4. **The 2022 lane cannot be checked on this PC.** `C:\Program Files\Autodesk` holds **AutoCAD 2027 only** (read 23 Sep). No AutoCAD check of Civil 3.0 in 2022 is recorded anywhere.
 5. **Proposed (not decided):** Claude pre-checks the 37 faults with AutoCAD running without a screen (the accoreconsole probe) in the free windows, so Tim only opens what passes; Tim then re-checks area by area in the order he set on 16 Sep (CDWT, CD, PIT, then H to L, then M). The Tuesday pilot colleague is on 2027; 2022 colleagues follow after one check on a real 2022 machine.
 
-## 5. Items and status — PROPOSED plan (not a decision). Tim's four answers of 23 Sep are applied; the pilot colleague is still to be named
+## 5. Items and status — the plan after Tim's answers of 23 Sep (proposed timings, not decisions)
 
 Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
-1. **REL-01 Freeze** — the colleague build is the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"* (23 Sep). Freeze time proposed as Thursday 24 Sep, 5:30pm, and announced on register #78 so other chats know what they merge before then reaches a colleague. **Status:** Proposed.
-2. **REL-02 Package** — Friday 25 Sep to weekend: build all three plugins from the frozen source with one matching common library; full automated checks; package audit (hashes, every file present, both lanes). **Status:** Proposed.
-3. **REL-03 Rehearsal** — weekend: install onto a clean AutoCAD profile the way a colleague would, then roll back to 2.1.14, both proven. Probe what a 2.1.14 user sees in a drawing Version 3 has touched. **Status:** Proposed.
-4. **REL-04 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back. **Status:** Proposed.
-5. **REL-05 Tim's acceptance** — Monday 28 Sep, in the 2:00 to 3:00pm window, about 30 minutes, a short checklist on the frozen package. **Status:** Proposed.
-6. **REL-06 Pilot** — Tuesday 29 Sep: the named colleague installs with AutoCAD closed; rollback steps in hand. **Status:** Proposed. Publishing to the IT Admin folder or approving a build for any colleague happens **only on Tim's explicit word for that exact package.**
+1. **REL-00 Codex AutoCAD run, pass 1** — on the installed `3.0.0+d90659cf`: start-up, release checks (three plugins, one common library), the never-run 18 Sep list, the 19 Sep overnight fixes V1 to V18, and the 37 faults of 16 Sep by name. List: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. **Status:** list written 23 Sep; not started.
+2. **REL-01 Freeze** — Civil is the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"*. Proposed: **Thursday 24 Sep, 5:30pm**, announced on register #78. Manager and Structural: **open question** (see the decision file). **Status:** Proposed.
+3. **REL-02 Fix what pass 1 finds** — one area at a time, CDWT, CD, PIT first (Tim, 16 Sep). Each fix lands on `master` before the freeze. **Status:** waiting on pass 1.
+4. **REL-03 Package** — Thursday night: build all three plugins, all three AutoCAD lanes, one matching common library; full automated suite; package audit (hashes, every file present). **Status:** Proposed.
+5. **REL-04 Install the package on Tim's PC** — Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.
+6. **REL-05 Codex pass 2** — Part Z of the list: the tank change and every fix since pass 1, on the package. Friday evening and the weekend. **Status:** Proposed.
+7. **REL-06 AutoCAD 2022** — Monday 28 Sep, 30 minutes on a colleague's 2022 PC (Tim: *"Yes, Monday"*). Five steps written by Claude once the package exists. **Status:** Proposed.
+8. **REL-07 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back to 2.1.14. **Status:** Proposed.
+9. **REL-08 Pilot** — Tuesday 29 Sep: the named colleague (Tim to name; 2027 recommended) installs with AutoCAD closed. **Publishing to the IT Admin folder or approving a build for any colleague happens only on Tim's explicit word for that exact package.** **Status:** Proposed.
+
+### Holds
+
+1. **PR #88 (`CDMOVETEST`, the E-HOLD-01 probe) stays OFF `master` until the colleague package is cut** (Thursday 5:30pm). It is a test tool and must not reach a colleague. It goes onto Tim's PC only after Codex pass 2 finishes, so it does not change the build under test. Decided by this chat, 23 Sep, as the deployment controller.
 
 ## 6. Bugs
 
