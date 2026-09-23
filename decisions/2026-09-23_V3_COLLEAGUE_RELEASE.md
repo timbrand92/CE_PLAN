@@ -147,6 +147,14 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 2. **Structural built by the AutoCAD 2027 trial route**, not the three-version route, because the three-version route leaves out `CE_STRUC_NATIVE_2027.arx` that Tim's own install had. It matches Tim's answer *"Yours + Codex's 4 window fixes"* like for like. The 2022 question is queued for Tim.
 3. **Codex set-up:** the deploy chat builds a GUI sandbox first; fallback at 18:00 to Tim's live AutoCAD under rules 13-14 with a registry and file snapshot taken first.
 
+## Never idle — Tim, 23 Sep 2026, about 13:00
+
+Tim, after the release chat had gone quiet waiting for Codex: *"why have you stopped?"*, then *"you said i didnt need to watch you, if codex is testing you build in the meantime"*, then *"basically you should never stop unless codex has sent you something in which you complete the current task and then review its finidngs and implement"*.
+
+**Meaning:** the release chat always has a task in hand. When Codex's findings arrive, it finishes the current task, reviews the findings, then implements the fixes. The release chat's own admission: it had stopped because nothing woke it, not because the work was done.
+
+**Claude's call, recorded as such:** after Thursday's 5:30pm freeze only fixes for what Codex finds go in (each re-tested), so the weekend proves the release rather than changes it. Before the freeze, failures and new features both go in (Tim's earlier answer).
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
