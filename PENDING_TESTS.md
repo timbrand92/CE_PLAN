@@ -69,6 +69,19 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 23 Sep 2026 17:11 on Tim's PC — Civil `3.0.0+9df46d7b`, Manager `1.1.0+9df46d7b`, Structural `1.0.74+4cb3c938`
+
+Adds, on top of the 16:01 set (none Tim-accepted; Codex pass 3 re-runs them first):
+
+1. **SBEAM-DBID-01** (Structural `4cb3c938`, branch `claude/struc-sbeam-fingerprint`): SBEAM places a steel beam on 2027. Steps: SBEAM on a copy of a structural drawing, any section, Place, one point. The section, hatch and label appear. One Undo removes the whole beam. Escape at the point leaves nothing.
+2. **MGR-RUN-01** (PR #109): CEMANAGER, then Drawing Repair, then Project QA. Both pages open and show their counts and status line; AutoCAD stays open.
+3. **CDWT-MATCH-02** (PR #110): CDWT, Underground, pick 3000 L Round after choosing a plan for it once. That plan comes first and the other 3000 L plans follow it. Then type 2510 in "or type litres": the 2510 L underdeck plan is selected and the gold line says one plan matches.
+4. **D-01** (PR #108): CDDEST on a copy of an older drawing with DP labels. It says how many DP labels and downpipe blocks it can see and points to CDTAG. Nothing changes.
+
+Read back by hand: CE_SHARED identical in Civil and Manager in all three lanes. Pilot **candidate 3** is at `_RELEASE_V3_PILOT\candidate-3-civil-9df46d7b`, 0 files differing from the live set.
+
+---
+
 ## LIVE since 23 Sep 2026 16:01 on Tim's PC — Civil `3.0.0+a2f56f43`, Manager `1.1.0+a2f56f43`, Structural `1.0.74+aad3fe02`
 
 Everything in the BUILT list below is now **installed**, plus **BUG-166** (double-click a level label) and **STRUC-TEXT-ORDER-01** (SBEAM places steel beams on 2027; the 25R/25L text from the same builder). Read back by hand: CE_SHARED identical in Civil and Manager in all three lanes; the Civil 2027 natives are present; Structural has its native module and no CE_SHARED. Backups: `CE_CVL_SUITE_PRE_aeb03763_20260923-155243.backup`, `CE_SUITE_MANAGER_PRE_aeb03763_20260923-155243.backup`, `CE_STRUC_SUITE_PRE_60c41228_20260923-160046.backup`. Pilot candidate 2: `C:\Lisp Files\_RELEASE_V3_PILOT\candidate-2-civil-a2f56f43` (0 files differ from the live set). Codex pass 2 runs Z8 first (SBEAM first).
