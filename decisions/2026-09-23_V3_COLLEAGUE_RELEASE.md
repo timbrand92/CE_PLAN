@@ -76,6 +76,11 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 1. **What other chats build before the freeze:** *"Failures + new features"* (not Claude's recommendation, which was failures only). Anything merged to `master` by Thursday 24 Sep 5:30pm goes to the colleague; new features get one Codex check, in pass 2.
 2. **Start a chat on the CDWT crash now:** *"Yes, start it now"* (Claude's recommendation). Brief written for the tanks chat ("CE Civil - LPD & Pits, Tanks, Level").
 
+## Fourth round — Tim, 23 Sep 2026, after 11:31 (clickable choices)
+
+1. **How the colleague gets it on Tuesday:** *"By hand, AutoCAD closed"* (Claude's recommendation). The colleague runs the three install files from the IT Admin folder with AutoCAD closed, talked through it; their current version is backed up first so it can go back in one step. Fixing automatic updates waits until after Tuesday.
+2. **Does Tim see a crash message when he closes AutoCAD:** *"Sometimes"*. Recorded against BUG-164.
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.

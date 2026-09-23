@@ -57,7 +57,7 @@ Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Se
 1. **The Manager 1.0.2 bundle offered in the IT Admin folder carries an online-storage config with both a read link and an admin link filled in** (`Contents\Win64\Assets\Config\blob-config.json`; values not printed or used here).
 2. **With that config present, Manager 1.0.2 looks for approved builds ONLY in online storage, never in the IT Admin folder** (`CeApprovedReleaseService.GetApprovedReleases` at `c5250a11`).
 3. **Both storage keys were regenerated for SEC-001 in July**, and the admin link was confirmed dead then (memory record `sec-001-azure-sas-leak`). So colleagues' automatic updates are **very likely dead**. Not tested from here: that would mean using the link.
-4. **Consequence for Tuesday:** the pilot colleague installs by hand, with AutoCAD closed. The canary route is not relied on.
+4. **Consequence for Tuesday — ruled:** the pilot colleague installs by hand, with AutoCAD closed (Tim, 23 Sep: *"By hand, AutoCAD closed"*). The canary route is not relied on; fixing automatic updates comes after Tuesday.
 5. **Housekeeping, not urgent:** a dead admin link still sits in a folder every colleague syncs. It grants nothing once the key is rotated, but it should not be there. For Tim to decide after Tuesday.
 
 ### The packaging routes that already exist — no new script needed (read 23 Sep)
@@ -106,7 +106,10 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
 ## 6. Bugs
 
-`BUG_CARPARK.md` is the one bug file. Release blockers found in this area are listed here by ID. _(none yet)_
+`BUG_CARPARK.md` is the one bug file. Release blockers found in this area are listed here by ID.
+
+1. **BUG-163** — CDWT "AutoCAD cannot continue" at the callout point. Brief: `archive\chat-records-2026-09\CHAT_PROMPT_CDWT_CRASH_2026-09-23.md`. OPEN.
+2. **BUG-164** — AutoCAD sometimes crashes on closing (Tim: *"Sometimes"*). Same brief. OPEN.
 
 ## 7. Parked
 
