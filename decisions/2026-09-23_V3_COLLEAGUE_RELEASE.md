@@ -209,3 +209,7 @@ Tim (verbatim): *"i want you to build everything including windows and if codex 
 **Meaning:**
 1. **Supersedes ruling B of 15 Sep** (Codex builds windows, Claude owns behaviour): Claude is now the primary builder of windows as well as behaviour; Codex helps where useful and remains the AutoCAD tester.
 2. **Design reference: the CD window (New Pipe).** Every CE window should look, work and feel like it: product quality of the kind Apple or Autodesk ship, with a Creative Engineering feel (CE deep blue #1E5AA8 on light, accent gold on dark, no teal), under Tim's standing UI rules: no scrollbars or collapsed expanders (tabs instead), the 30-times-a-day instrument test, colour where attention is needed, plain English.
+
+## At 60% weekly usage: three builders, keep going — Tim, 23 Sep 2026, about 22:15
+
+Tim (verbatim): *"once you get to 60% weekly just reduce to 3 builders but continue"*. **Meaning:** below 60% of the weekly (all models) limit the release chat runs as many build lanes as the work needs (seven at 22:15: five Civil/Structural lanes plus two Claude window lanes, besides Codex's two window builders); at 60% it drops to three and continues, and reports usage and progress to Tim.
