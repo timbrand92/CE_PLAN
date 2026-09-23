@@ -191,3 +191,13 @@ Clock times first written here were Claude's estimates, and several were wrong b
 2. **A result stays valid until the code under it changes, not until the next install.**
 3. Results gathered against an AutoCAD that was interfered with (e.g. closed under a live run, as with pass 2's tail) are marked separately, because no commit hash shows that.
 4. Each Codex result is tagged with the Civil build it ran against.
+
+## Do not hold back: build as much of the plan as possible for Tuesday — Tim, 23 Sep 2026, about 22:00
+
+Tim (verbatim): *"dont hold back on anything because you wont be able to implement i want you to try and implemennt, on tuesday i want a good version with as much built and then i will continue working from there. i dont want you to condense plans or go easy i want you to achieve big things and not be scared to go through with the plan and its objectives"*
+
+**Meaning:**
+1. Nothing is deferred to "after Tuesday" because it is big. **Supersedes** the 21:30 call (Claude and the deploy chat) to hold the tabs-instead-of-scrollbars restructure until after the pilot: it goes ahead now, window by window, each on its own branch, merged and installed as each passes its tests and Codex's check.
+2. Build toward the V3 plan's objectives in full (MASTER_PLAN stages 2-5 and the Structural delivery plan), starting with work already approved in CE_PLAN (approved workflow cards, the 2 Sep visual approvals D1-D32, the V3 UI design pack), not only fixes.
+3. Tuesday's pilot takes the best tested build at that time; Tim continues from there.
+4. Unchanged: Civil first; ruling B (Codex builds window layouts; Claude owns behaviour, spine and deploys; Codex window-builder runs are code-only and do not take AutoCAD time from testing); every change tested and logged; never deploy while a Codex run is live; report usage to Tim at 60% of the weekly limit.
