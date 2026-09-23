@@ -49,7 +49,7 @@ sandbox for those runs, and only those.
 
 ---
 
-## The five rules that make it trustworthy
+## The six rules that make it trustworthy
 
 1. **The version gate.** Every brief starts by making Codex read the installed version and **stop** if it is
    not the expected one. Without this, Codex tests yesterday's build and reports a pass. This is the single
@@ -62,6 +62,13 @@ sandbox for those runs, and only those.
    at. Anything that genuinely needs Tim's real profile and customisation is **Tim's to run**, not Codex's.
 5. **One Codex run at a time, and say so before starting.** Installs and tests share one AutoCAD. Tell the
    other chat before a run starts and when it ends; never install while a run is live.
+
+6. **Close stdin, then prove the run actually started.** `codex exec` launched from a background
+   shell reads stdin and waits for an end-of-file that never comes: it prints
+   *"Reading additional input from stdin..."* and hangs forever, using no CPU and writing no session
+   log. Always redirect: `codex exec ... "<prompt>" < /dev/null`. Then **check within two minutes**
+   that a new rollout file appears under `~\.codex\sessions\<yyyy>\<mm>\<dd>` and that the process's CPU
+   time is climbing. A launched agent is not a running agent.
 
 ---
 
