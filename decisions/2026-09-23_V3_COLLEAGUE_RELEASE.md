@@ -81,6 +81,25 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 1. **How the colleague gets it on Tuesday:** *"By hand, AutoCAD closed"* (Claude's recommendation). The colleague runs the three install files from the IT Admin folder with AutoCAD closed, talked through it; their current version is backed up first so it can go back in one step. Fixing automatic updates waits until after Tuesday.
 2. **Does Tim see a crash message when he closes AutoCAD:** *"Sometimes"*. Recorded against BUG-164.
 
+## STANDING OVERRIDE — Tim, 23 Sep 2026, saved 11:36: build, test and deploy whenever needed, until Tuesday
+
+**Tim:** *"from now until tuesday we build, test and deploy whenever we need"*
+
+**Recorded as an override (RULES 14.6). Scope: the Version 3 colleague release, from 23 Sep until the pilot on Tuesday 29 Sep 2026.**
+
+**What it lifts:**
+
+1. The AutoCAD-hours rule for builds and automated tests (RULES 1.8, ROUTER step 6). They run whenever needed.
+2. Waiting for a fresh "AutoCAD is closed, deploy" before **each** install on Tim's PC (RULES 8.7). Installs to Tim's PC happen when the release needs them.
+
+**What it does NOT lift (Claude's reading, for Tim to correct):**
+
+1. **AutoCAD must actually be closed** before an install, checked more than once (it has been caught still shutting down twice today). A chat never closes AutoCAD itself.
+2. **Never install under a Codex run in progress.** It would test a different build from the one it gates on.
+3. **Backups first, one-action undo named, every lane read back by hand** after each install.
+4. **Publishing to colleagues** (the IT Admin folder, any approval, any colleague PC) is not "deploy" here. It still needs Tim's word for the exact package.
+5. Installs go only through the two release chats (`CE_ACAD / release-v3-colleagues / deploy / 01` and `/ plan / 01`).
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.

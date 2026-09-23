@@ -10,6 +10,8 @@ Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build
 
 The master plan's own definition of done for Version 3 (a standalone Civil install, a controlled pilot, help and rollback) is the long goal. **Tuesday is a first step towards it, not the whole of it.**
 
+**Standing override until Tuesday 29 Sep (Tim, 23 Sep):** *"from now until tuesday we build, test and deploy whenever we need"*. Limits as recorded in the decision file: AutoCAD really closed, never under a Codex run, backups and read-back every time, publishing to colleagues still needs Tim's word.
+
 ## 2. Where the detail is
 
 1. `decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md` — Tim's goal and the open questions.
