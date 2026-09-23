@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-162 *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-163 *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -56,6 +56,7 @@
 
 | ID | Command / Area | Status |
 |----|---------------|--------|
+| [BUG-162](#bug-162) | Tests — `InternalCivilCommands_RebuildOnlyAfterAnAcceptedPipeChange` fails on master and on the installed build | OPEN — stale check, not lost code. Found 23 Sep 2026 by the E-HOLD chat. Nothing to test in AutoCAD. |
 | [BUG-161](#bug-161) | Release / trunk — `master` did not contain what is installed in AutoCAD; the next install from it would silently remove this month's Civil work | **FIXED — PR #87 merged 23 Sep 2026, master `b02f3ec7`.** Tim ruled: bring it all in, nothing left out. **Proof after merging: commits in AutoCAD but not on master = 0**, and master contains the installed build `d90659cf`, the 16 Sep payload `d0ffe1a2`, the previous master `38f1d98a` and the 23 Sep Civil work `9ba29f04`. Three lanes built 0 errors; 10,125 tests ran with the failing names identical to the recorded baseline. **No AutoCAD test needed — nothing installed by merging; Tim already runs `d90659cf`.** Root cause recorded: register #78's "LIVE RIGHT NOW" was stale, so the 23 Sep trunk ruling was made on the wrong live line. |
 | [BUG-160](#bug-160) | Pipe end dragged on a grade-held pipe — plan IL text rewritten over a hand-typed bottom level; schedule keeps the typed number | OPEN — SUSPECTED from reading the code, 23 Sep 2026. NOT seen in AutoCAD. Same drawing-vs-schedule split fixed for CDPROPAGATE on 15 Sep. |
 | [BUG-159](#bug-159) | Ordinary polylines (REC / PLINE) — midpoint grips square instead of stretch grips, hover menus gone | OPEN — NOT diagnosed. One suspect (PipePlanGripOverrule, the only unfiltered whole-Polyline overrule, new since 15 Sep). CDGRIPDIAG built to settle it; awaiting Tim run. No deploy. |
@@ -143,6 +144,32 @@
 | BUG-046 | CD STILL crashed (side-DB) after BUG-044 — ReferenceEquals on AC Database wrappers is unsound | IN PROGRESS — coded 2026-06-04, awaiting AC test. Explicit `IsSideDatabaseOperation` flag replaces reference inference. SUPERSEDES BUG-044. |
 | BUG-047 | "Simple Pipe" mode stuck on with Recall Last Settings | IN PROGRESS — coded 2026-06-04, awaiting AC test. Simple-pipe is now one-shot, not persisted. |
 | BUG-048 | Invert level text boxes styling regressed | OPEN — needs screenshot of CD dialog invert section. Not fixed blind. |
+
+---
+
+## BUG-162
+
+**Command / Area:** Automated tests only — `Modules/Drainage.Tests/Services/LinkServiceCommandPerformanceContractTests.cs`,
+`InternalCivilCommands_RebuildOnlyAfterAnAcceptedPipeChange`. Nothing Tim sees in AutoCAD.
+
+**Symptom:** the check fails on master `b02f3ec7` and on the installed `d90659cf` (also absent from `d0ffe1a2` and
+`10ac480d`). It looks in `PipeEditCommand.Update.cs` for the exact text `if (coordinatedUpdateCommitted)`.
+Commit `5ea79fd1` (13 Sep, "Close CDEDIT supplementary transaction gaps") deliberately widened that line to
+`if (coordinatedUpdateCommitted || coordinatedUpdateCommitOutcomeUnknown)`, and the check was never moved with it.
+
+**Why it matters:** every chat that runs this group sees one red it did not cause, and may either waste time on it
+or learn to ignore reds. It is **not** a sign that the 23 Sep merge dropped work (checked: the old text is missing on
+every line since 13 Sep).
+
+**Expected behaviour:** the check accepts the widened condition (and still fails if the guard disappears).
+
+**Test that catches it:** the check itself, green on master.
+
+**Steps for Tim to confirm the fix:** none in AutoCAD.
+
+**Reference:** found by the `pipe-points-locking-grade-invert` chat while running the command-scan tests for PR #88.
+
+**Status:** OPEN
 
 ---
 

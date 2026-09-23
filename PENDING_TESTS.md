@@ -71,6 +71,30 @@ it. Unchanged gap.
 
 ---
 
+## BUILT 23 Sep 2026 — **CDMOVETEST** (E-HOLD-01 probe), branch `claude/e-hold-01-move-test` @ `42766dd9`, PR #88 — NOT installed, NOT tested
+
+**What it is:** a test command, not a feature. It answers two questions before the hold-grade / hold-levels
+work is built: (1) can CE's preview window open by itself right after a MOVE, STRETCH or grip drag, and
+(2) can Cancel take the move back in one step, and what does one U take back after Apply. Built and
+unit-tested (33/33 on net10); both lanes compile. **Use a TEST drawing — the test uses Undo.**
+
+**Steps (AutoCAD 2027):**
+1. **Setup:** a test drawing with two CE pits joined by one CE pipe.
+2. **Run A — MOVE a pit, Cancel.** Type `CDMOVETEST`, Enter. Then `MOVE`, pick one pit, move it about 2 m.
+   **Right looks like:** a window opens by itself, headed "MOVE TEST - nothing in this window is written"
+   (ignore "IL 0.00"). Click **Cancel**: the pit and its pipe end jump back, and the command line says
+   `Result 2 ... YES`.
+3. **Run B — drag a pipe-end grip, Apply, then U.** `CDMOVETEST`, Enter. Click the pipe, drag one end grip
+   about 2 m. The window opens; click **Apply**. Type `U`, Enter, once. Read `Result 3`. If it asks, `U` once
+   more and read `Result 4`.
+4. **Run C — STRETCH, Cancel.** `CDMOVETEST`, Enter. `STRETCH` with a crossing window over one pit and its
+   pipe end, move 2 m. Window opens; **Cancel**. Read `Result 2`.
+5. **Send Claude every line starting `[CE move test]`** (F2 shows them). A NO is a useful answer, not a failure.
+
+**Steps (AutoCAD 2024):** Run A only, then send the lines.
+
+---
+
 ## BUILT overnight 18→19 Sep — `claude/civil-overnight-2026-09-19` @ `07325a2b` — NOT INSTALLED, NOT TESTED
 
 **Eight items, on top of the frozen combined payload `0a84eb07`.** Tim: *"overnight sequence for all fixes,
