@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## New Pit and Edit Pit levels — UI-NEWPIT-02 (24 September 2026, awaiting release)
+
+1. **Candidate:** [PR #127](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/127), `codex/ui-newpit` tip `1a780add`, tested code `fe48b037`. Code gate met for review; no installation or AutoCAD acceptance. Three Release lanes 0 errors each; full Civil 10,686 reported / 10,656 passed / 11 exact known failures / 19 skipped; all 260 Pit checks pass. Fourteen dark/light actual-window pictures inspected and unchanged after the final suite, committed under `docs/image/V3_WINDOWS/newpit-*` and `editpit-*-levels.png`.
+2. **After a separately authorised combined installation, AutoCAD 2027 and 2024/net48:** open PIT in dark/light at 1920 x 1080 scale 1. Clear cover, width, invert or rotation; confirm one matching next action and highlighted input. Complete the input and confirm Continue placement enables. Visit all five tabs, including detention/building alignment; use a preset, survey RL, Recall and Inspect/return with long remarks. Header/footer stay fixed. Cancel/Escape leave no pit; complete one placement and Undo.
+3. **Edit Pit / native remainder:** edit a pit with a missing connected invert and confirm the warning sits beside Bottom. Check the retained connection evidence in Levels & Pipes, Save/Cancel and save/reopen. Automated checks prove shared bindings, focus routes, command enablement, warning clearing and both-theme layouts at minimum/opening sizes. Native preview, drawing output and keyboard feel remain Tim's representative acceptance checks; these renders deliberately show the no-preview state outside AutoCAD.
+
 ## Help Centre scrolling - code ready for review, 24 September 2026
 
 1. **Candidate:** [PR #125](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/125), codex/ui-help tip a651680b, code 54801c50. Ready for review; not installed or Tim-accepted. Three Release lanes 0 errors each; full Civil 10,595 passed / 11 exact baseline failures / 19 skipped. Shared Help 45/45, browser 3/3, real Civil renders 2/2. All 64 current pictures inspected, unchanged after full suite.
