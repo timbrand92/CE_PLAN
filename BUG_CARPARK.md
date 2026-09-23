@@ -163,7 +163,7 @@
 
 **Reference:** found by the release chat while checking the deploy chat's question "does Manager refuse to go backwards", 23 Sep 2026.
 
-**Status:** OPEN
+**Status:** IN PROGRESS — fix merged 23 Sep 2026 (PR #92, `c1d0b7db`; Manager tests 233/233); not installed on Tim's PC yet
 
 ---
 
@@ -242,7 +242,7 @@ every line since 13 Sep).
 
 **Reference:** found by the `pipe-points-locking-grade-invert` chat while running the command-scan tests for PR #88.
 
-**Status:** OPEN
+**Status:** FIXED — 2026-09-23 (test only: PR #93 merged, `master` `7627ed39`; the check now follows the widened guard, group 54/54; nothing to test in AutoCAD)
 
 ---
 
