@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## CDCALC whole window - UI-CDCALC-02 (24 September 2026, awaiting release)
+
+1. **Candidate:** `codex/ui-cdcalc`, tip `88d0e99d`, [PR #139](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/139), ready for review. Final master integration `59e03b0e` includes master `53b5a8c4`. All three Release lanes 0 errors; Civil 10,654 total / 10,624 passed / 11 known failures / 19 skipped, exact baseline names; all nine CDCALC window tests pass. Thirty-two dark/light compiled-window pictures inspected and unchanged after the final suite. No AutoCAD opened, installation or acceptance by this session.
+2. **One representative session after a separately authorised combined installation, AutoCAD 2027 and 2024/net48:** open CDCALC in a synthetic drawing; visit every calculation tab in both themes at 1920 x 1080 scale 1. Header, task tabs and footer stay fixed; long lists scroll in their own area. Detention: scroll beyond the first rows, Find/add/remove/refresh, add extra storage and edit litres. Check blank required volume, typed zero, shortfall and surplus; each reads honestly with superscript units. This supersedes the older five-row paging checks.
+3. **Native remainder:** pick a longitudinal route, preview/place/update; preview/export a computation sheet; insert the detention criteria block, Undo, Close/Escape and save/reopen. Confirm drawing picks, output and saved values remain correct. Automated checks already cover every page at minimum/opening sizes, rendered selection, row addition, required/attention states and unit text. Existing automatic recalculation remains; no separate Calculate command or per-pollutant WSUD flags have been added to protected models.
+
 ## Drawing Standards — UI-STANDARDS-03 (24 September 2026, awaiting release)
 
 1. **Candidate:** `codex/ui-standards`, tip `63015551`, [PR #126](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/126). All three Release lanes 0 errors; own window tests 13/13; full Civil 10,588 total / 10,558 passed / 11 known failures / 19 skipped, exact baseline names. Fourteen dark/light real-window pictures inspected and committed. No installation or AutoCAD acceptance; the build/test gate is met for review.
