@@ -73,9 +73,9 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 | **R2** | Type `CEMANAGER`. | The Manager window opens and shows the installed versions. Record them exactly as shown. Close it. |
 | **R3** | Type `CEHEALTH`. | Copy the full command-line output into the report. Any `[WARN]` or `[FAIL]` line is recorded as written. |
 | **R4** | Type `CEHELP`. | Structural help opens. Close it. |
-| **R5** | In a COPY of a structural job, type `SBEAM` and draw one steel beam; then `RCBEAM` and draw one concrete beam. | Both draw normally. Escape out of each afterwards leaves no half-drawn objects. |
+| **R5** | **Drawing added 23 Sep about 14:50:** open `C:\Lisp Files\_TEST_COPIES_20260923\DWG-S.dwg` (a blank copy of the default template; no job data). `SBEAM`, draw one steel beam; then `RCBEAM`, draw one concrete beam. Do not save it unless the list says so. | Both draw normally. Escape out of each afterwards leaves no half-drawn objects. |
 | **R6** | PowerShell: list `CE_SHARED.dll` product versions in `CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`, all lanes. | **All the same version.** Record them. |
-| **R7** | Close AutoCAD. Reopen it, reopen the same COPY. | Ribbon loads again with all three. Repeat three times; say if any start differs. |
+| **R7** | Close AutoCAD. Reopen it, reopen the same COPY. | **Corrected 23 Sep, as R1:** the **CE**, **CE Tools** and **CE STRUC** tabs all load again, each with its icons in place. Three separate tabs is the design, not a fault. Repeat three times; say if any start differs. |
 
 ---
 
