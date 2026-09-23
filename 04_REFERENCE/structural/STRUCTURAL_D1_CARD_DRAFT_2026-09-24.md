@@ -203,8 +203,8 @@ Your words and dates are in the Structural drawing-journey record of 14 Sep (the
 3. **Master (Civil owner of the spine):** `origin/master` at `3812120c`. `Shared/CE.Spine` exists only on master.
 4. **Tim's 14 Sep journey rulings used here:** plugin repo `docs/workflows/STRUCTURAL_DRAWING_JOURNEY_2026-09-14.md`,
    only reachable at commit `3460f0c0` on `origin/codex/CIVIL3RESEARCH` (not on master or the Structural line). It also
-   holds ST-NATIVE-01. Worth copying into `C:\CE_PLAN` so the rulings cannot be lost (file names a real project in its
-   examples, so strip those first).
+   holds ST-NATIVE-01. Copied, with the real job's details removed, to
+   `04_REFERENCE\structural\STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md` on 24 Sep.
 5. **The two lines have split far apart:** common ancestor `01380d16` (26 Jul 2026); 402 commits on the Structural line,
    1,382 on master. Master has `Shared/CE.Spine`, `Modules/Drainage.NativeGrip2027`, `Modules/Shared.Transform.Native2027`;
    the Structural line has `Modules/Structural.Native2027` and neither of the others. **D2 cannot start until the
