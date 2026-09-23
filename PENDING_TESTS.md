@@ -69,6 +69,20 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 23 Sep 2026 19:10 on Tim's PC — Civil `3.0.0+19c77126`, Manager `1.1.0+19c77126`, Structural `1.0.74+bf264cbb`
+
+Adds, on top of 17:11 (none Tim-accepted; Tim's new rule: Codex-proven first, then his short final check). Installed at 18:01 and Codex PASS in pass 4: new pit labels and batch resize (Z8d), SBEAM (Z8a), older-pipe wording (Z8e). New at 19:10:
+
+1. **CDEDIT-LEGACY-01** (PR #115): on a copy of an older drawing, double-click a pipe's level text. CE highlights the pipe's label and asks whether it is this pipe's label; Yes records it and opens Edit Pipe; next time it opens straight away; No changes nothing.
+2. **MGR-STATUS-01** (PR #113): CEMANAGER shows Structural once, installed and running; Manager's own "Installed next start"; the footer "3 of 3 installed CE plugins running".
+3. **CRITERIA-LABELS-01** (PR #114): CDCALC, Detention, Insert Criteria Block: the labels sit down the left beside their values; nothing at 0,0.
+4. **P06-MESSAGES-01** (PR #116): the detention length prompt says "drawn length"; Enter keeps the drawn length.
+5. **MODELSPACE-CASE-01 + IDENT-02** (PR #112): PIT twice: both number labels; both pits resize together; one Undo.
+
+Pilot **candidate 4** at `_RELEASE_V3_PILOT\candidate-4-civil-19c77126`, 0 files differing from the live set.
+
+---
+
 ## LIVE since 23 Sep 2026 17:11 on Tim's PC — Civil `3.0.0+9df46d7b`, Manager `1.1.0+9df46d7b`, Structural `1.0.74+4cb3c938`
 
 Adds, on top of the 16:01 set (none Tim-accepted; Codex pass 3 re-runs them first):
