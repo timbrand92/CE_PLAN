@@ -15,7 +15,7 @@ Survey, surfaces, existing/proposed RLs and consultant imports. (From the area r
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Planned". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
-1. **Civil import window, 24 September 2026:** Built and headless-tested on `codex/ui-import`: X-Civil source/schedule/results, LandXML source/results and a survey source/results presentation. Fourteen dark/light pictures inspected; three Civil Release lanes build with zero errors; full Civil suite has 10,829 passed, the exact 11 known failures and 19 skipped. The current CE ribbon commands still use their existing picker/command-line and Manager survey route because their command/service files are owned by Claude and were not changed. Installed: no. Tim-accepted: no. Command wiring and drawing interaction remain pending.
+1. **Civil import window, 24 September 2026:** Built and headless-tested on `codex/ui-import` tip `65e54830`, [PR #153](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/153), ready for review: X-Civil source/schedule/results, LandXML source/results and a survey source/results presentation. Fourteen dark/light pictures inspected; three Civil Release lanes build with zero errors; full Civil suite has 10,829 passed, the exact 11 known failures and 19 skipped. The current CE ribbon commands still use their existing picker/command-line and Manager survey route because their command/service files are owned by Claude and were not changed. Installed: no. Tim-accepted: no. Command wiring and drawing interaction remain pending.
 
 ## 4. Bugs
 
