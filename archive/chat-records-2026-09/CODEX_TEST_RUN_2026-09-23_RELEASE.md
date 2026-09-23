@@ -58,7 +58,7 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 ## PART R — release checks: the three CE plugins together (new)
 
-**Why:** every CE plugin shares one common library, and the first copy AutoCAD loads wins for all of them. If they disagree, the CE ribbon can silently fail to load. A colleague gets Civil, Manager and Structural together.
+**Why:** Civil and Manager share one common library, and the first copy AutoCAD loads wins for both. If they disagree, the CE ribbon can silently fail to load. (Tim's Structural 1.0.74 does not use it.) A colleague gets Civil, Manager and Structural together.
 
 **In pass 1 these checks run on the Manager and Structural installed today, which are NOT what ships.** The colleague gets a newer Manager (38 changes never installed) and Structural 1.0.74 plus four window fixes. Those are tested in Part Z only.
 
