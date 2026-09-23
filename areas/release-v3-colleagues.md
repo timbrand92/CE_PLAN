@@ -56,6 +56,16 @@ Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Se
 4. **Known hazards on the installed build.** The CDWT crash (W4) has no established cause. The CD window layout fixes are not in it.
 5. **The release script.** `build_installer.ps1` was broken until DEPLOY-01 (23 Sep) and still does not build the transform module (`CE_TRANSFORM_2027.arx`); it is built by hand.
 
+## 4a. What stands between Tuesday and "most of Version 3" — checked 23 Sep 2026, about 11:10am
+
+Tim asked: *"whats stopping us from getting the large majority of version 3 by tuesday?"*
+
+1. **Not unfinished building on a shelf.** Every one of 17 built pieces named in `PENDING_TESTS.md` (branches of 16 to 19 Sep) was checked with `git merge-base --is-ancestor`: all 17 are already in `master` `b02f3ec7`, so all ship on Tuesday under Tim's "newest saved work" answer. The other branches not in `master` are 19 to 20 Sep rescue copies marked unfinished and unbuilt, 1,150 to 1,570 changes behind.
+2. **Tim's AutoCAD check is the limit.** The 16 Sep test day recorded **37 faults** (`decisions6-09-16_TEST_DAY_RESULTS.md`, sections R, W, P, C7, L, T, D, G, TWL, F1). Fixes for many have been built and installed since. **None has been re-checked by Tim.** Until he has looked, whether they work is Unknown.
+3. **Some areas have nothing recorded as built for Version 3.** The area files for H (pump stations), I (WSUD), J (overland flow) and others were opened 19 Sep with no items. This is "not recorded", not proof of "not built".
+4. **The 2022 lane cannot be checked on this PC.** `C:\Program Files\Autodesk` holds **AutoCAD 2027 only** (read 23 Sep). A 2022 colleague would be the first person ever to open Civil 3.0 in 2022.
+5. **Proposed (not decided):** Claude pre-checks the 37 faults with AutoCAD running without a screen (the accoreconsole probe) in the free windows, so Tim only opens what passes; Tim then re-checks area by area in the order he set on 16 Sep (CDWT, CD, PIT, then H to L, then M). The Tuesday pilot colleague is on 2027; 2022 colleagues follow after one check on a real 2022 machine.
+
 ## 5. Items and status — PROPOSED plan, awaiting Tim's answers (not a decision)
 
 Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
