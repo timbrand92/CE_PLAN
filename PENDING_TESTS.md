@@ -69,6 +69,36 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 23 Sep 2026 23:45 on Tim's PC — Civil `3.0.0+6eec48af`, Manager `1.1.0+6eec48af`, Structural `1.0.74+5ca35054`
+
+1. **Installed by the release chat.** Civil + Manager 23:42-23:44 from master `6eec48af`; Structural 23:45 from candidate
+   `5ca35054` (`claude/struc-ribbon-organised`, Modern SHA256 `F608578A...92783CB7E`). CE_SHARED is identical in Civil and
+   Manager in all three lanes (D7E6BFC5 / 4DEA942A / 01ACC18C); Structural carries none. Modern natives: grip ARX,
+   transform ARX, object DBX.
+2. **Civil was deployed from `Installer\payload_build` without the release zip**, because `build_installer.ps1` hung
+   twice at `Compress-Archive` (BUG-167). Every lane was built and checked before the hang, and all three read `6eec48af`
+   before the copy.
+3. **Carries, beyond 19:10:**
+   - #117 HEADLESS-PROOF-01
+   - #118 LAYER-CASE-01
+   - #119 SPLIT-HALVES-01
+   - #120 PIT-OUTLINE-01
+   - #122 HELP-V3-01
+   - #123 RIBBON-02
+   - #124 CDWT-CONTRAST-01
+   - #128 C7-DRAW-01
+   - Structural's organised ribbon
+4. **Backups:** `CE_CVL_SUITE_PRE_19c77126_20260923-234112.backup`, `CE_SUITE_MANAGER_PRE_19c77126_20260923-234112.backup`,
+   `CE_STRUC_SUITE_PRE_bf264cbb_20260923-234521.backup` (all in `%APPDATA%\Autodesk\ApplicationPlugins`). Two earlier
+   Civil backups from the hung attempts (`..._20260923-214427`, `..._20260923-231539`) are identical copies of 19c77126.
+5. **Codex pass 6** (launched 23:50 by the release chat): re-runs X1-X8 for the items above; report
+   `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS6_2026-09-24.md`.
+6. **INVALIDATES:** pass 5 results for CDWT's status line, the ribbon, Help and the Structural ribbon (their code
+   changed). Pass 5's R-B (Manager) and R-C (criteria labels) stand: that code did not change. R-A-4 is still a
+   known FAIL.
+7. **Merged after this build, NOT installed:** #121 SPLIT-LEVEL-02, #129 UC behaviour (New Pipe readiness, CDCALC Unknown
+   wording, drafting words, CDFALL/Spot Level Escape).
+
 ## LIVE since 23 Sep 2026 19:10 on Tim's PC — Civil `3.0.0+19c77126`, Manager `1.1.0+19c77126`, Structural `1.0.74+bf264cbb`
 
 Adds, on top of 17:11 (none Tim-accepted; Tim's new rule: Codex-proven first, then his short final check). Installed at 18:01 and Codex PASS in pass 4: new pit labels and batch resize (Z8d), SBEAM (Z8a), older-pipe wording (Z8e). New at 19:10:
