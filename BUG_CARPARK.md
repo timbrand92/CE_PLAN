@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-163 *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-165 *(BUG-164 = suspected: AutoCAD crashes when it is closed, 23 Sep 2026)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -144,6 +144,46 @@
 | BUG-046 | CD STILL crashed (side-DB) after BUG-044 — ReferenceEquals on AC Database wrappers is unsound | IN PROGRESS — coded 2026-06-04, awaiting AC test. Explicit `IsSideDatabaseOperation` flag replaces reference inference. SUPERSEDES BUG-044. |
 | BUG-047 | "Simple Pipe" mode stuck on with Recall Last Settings | IN PROGRESS — coded 2026-06-04, awaiting AC test. Simple-pipe is now one-shot, not persisted. |
 | BUG-048 | Invert level text boxes styling regressed | OPEN — needs screenshot of CD dialog invert section. Not fixed blind. |
+
+---
+
+## BUG-164
+
+**Command / Area:** AutoCAD closing, with the CE plugins loaded. **SUSPECTED, not confirmed.**
+
+**Symptom:** none reported by Tim. Windows has saved an AutoCAD crash report (`acad.exe.<number>.dmp` in `C:\Users\TimothyBrand\AppData\Local\CrashDumps\`) close to an install, five times. Report time against install time: 16 Sep **16:03** against the 16:06 deploy; 16 Sep **22:32** against the 22:31 and 22:57 deploys; 23 Sep **09:33** against the 09:34 "AutoCAD is closed" and the 09:36 deploy; 23 Sep **11:05** against the 11:05 to 11:07 deploy attempt; 23 Sep **11:25** against the 11:26 deploy. Three other reports on 16 Sep (11:52, 12:17, 17:57) are not near an install.
+
+**What is known:** the report times (read from the drive, 23 Sep). **What is NOT known:** whether each report is a crash on closing, which module failed, and whether CE is involved. That needs the reports opened with a debugger. None is installed on this PC (`dotnet-trace` only).
+
+**Expected behaviour:** AutoCAD closes cleanly. A colleague must not see "AutoCAD has stopped working" every time they close it.
+
+**Test that catches it:** close AutoCAD with a CE drawing open; no new `acad.exe.*.dmp` appears in `C:\Users\TimothyBrand\AppData\Local\CrashDumps\`.
+
+**Steps for Tim to confirm the fix:** open AutoCAD, open a drainage job, close AutoCAD normally. No crash message, and no new report file with that time.
+
+**Reference:** found by the release chat (`CE_ACAD / release-v3-colleagues / plan / 01`) while looking for BUG-163 evidence. Handed with BUG-163 to the tanks chat. **The reports hold AutoCAD's memory, which can include drawing content: read them where they are, never copy them into a repository.**
+
+**Status:** OPEN — suspected
+
+---
+
+## BUG-163
+
+**Command / Area:** `CDWT` (water tanks), placing a tank. Area G. Colleague release blocker (area REL).
+
+**Symptom:** Tim, Test Day 16 Sep: AutoCAD shows **"AutoCAD cannot continue"** and closes when he picks the callout point while placing a tank. Codex reproduced it on 17 Sep (its W4): 4500 L underground, 1000 L detention, underdeck plan, Place tank; the insertion and callout prompts appeared, **no ghost of the tank followed the cursor**, and picking the callout position crashed AutoCAD before the riser / dropper / Base RL questions.
+
+**Expected behaviour:** a ghost of the real tank follows the cursor at the insertion point; then CE asks about callout, riser and dropper, then Base RL; the tank is placed. No crash.
+
+**What is known:** CE's own error handling never sees it and **no CE log line exists for it** (the 18 Sep fixes chat). Cause **not established**; no fix attempted. Evidence: `C:\TimOS\retired\_TEST_COPIES_20260917\package\FAILURE_EVIDENCE_REGISTER_2026-09-17.md`, section W4, with `evidence\w4-crash.jpg` and `evidence\w4-capture-window.log` (that folder may name real jobs: read it, never copy it into a repository). The crash reports listed under BUG-164 include ones from 16 Sep that may be this crash.
+
+**Test that catches it:** Codex run list Part B step **B-T8** (the crash probe: at the callout prompt press Enter instead of picking). No automated test exists yet.
+
+**Steps for Tim to confirm the fix:** `CDWT`, Underground, 4500 L, set a detention share, pick the underdeck plan, **Place tank**, pick an insertion point (a ghost of the tank follows the cursor), then pick the callout point. **Right looks like:** no crash; CE asks about riser and dropper, then Base RL; the tank is drawn.
+
+**Reference:** `decisions\2026-09-16_TEST_DAY_RESULTS.md`; `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-18.md` step N9. Logged 23 Sep 2026 by the release chat; it had never been in this file. Tim, 23 Sep: start a chat on it now.
+
+**Status:** OPEN
 
 ---
 
