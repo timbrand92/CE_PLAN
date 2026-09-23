@@ -151,7 +151,7 @@
 
 **Command / Area:** CE Manager automatic updates (`Modules/Manager/Services/CePluginInstallerService.cs`, `CompareVersions` / `IsNewerBuild`). Area REL. Nothing Tim sees today.
 
-**Symptom:** latent. Older CE builds used date-style version numbers (`2026.0420.1549`, still named in the IT Admin approval of 28 Apr). `CompareVersions` parses both as version numbers, so `2026.420.1549` counts as **newer** than `3.0.0`. If such a build ever carried a valid signed approval, Manager would "update" a Version 3 machine back to it.
+**Symptom:** live in the OLD Manager on Tim's PC (`96e7d76a`): its trace log shows *"staging CE_CVL_SUITE → 2026.0420.1549"* at every AutoCAD start, 54 times since 7 Sep, observed to change nothing (Civil stayed on Version 3). Latent in the new Manager. Older CE builds used date-style version numbers (`2026.0420.1549`, still named in the IT Admin approval of 28 Apr). `CompareVersions` parses both as version numbers, so `2026.420.1549` counts as **newer** than `3.0.0`. If such a build ever carried a valid signed approval, Manager would "update" a Version 3 machine back to it.
 
 **What stops it today:** the new Manager only stages an approval that carries the signed, pinned identity; the April and July approvals do not, so they are refused (*"This approval predates exact signed-content verification"*). Read from source 23 Sep; not run.
 
