@@ -293,3 +293,11 @@ _"These things must still work" on a colleague install:_
 1. The CE ribbon loads, with Civil, Manager and Structural all present.
 2. Every CE plugin's common library is the same version and the same file.
 3. Rolling back returns the colleague to exactly what they had before.
+
+
+### Drawing Standards window builder — PR #126, 23 September 2026
+
+1. **Scope authorised:** Tim widened Drawing Standards / Label Styles / Parts Catalogue from XAML-only to the complete window and its supporting view models. Exact instruction and boundaries: `decisions/2026-09-23_DRAWING_STANDARDS_WINDOW.md`. Earlier PR #126's stop is superseded.
+2. **Implementation:** `codex/ui-standards`, existing standards worktree. Six-row pages retain the full draft; named label fields and cursor insertion; fixed category tabs/header/footer using New Pipe resources. Only these windows and their supporting view models/tests changed; Settings and other builders' protected files untouched.
+3. **State:** code written, build/test verification running. Not installed, not AutoCAD-tested, not Tim-accepted. No deployment or merge authority in this task.
+4. **Lesson:** explicit ResourceDictionary replacement in Window.Resources discards ThemeService preload. These windows retain loose local resources and call the existing MergeEditorShellResources before InitializeComponent. Paging must finish an in-progress cell edit before changing pages.
