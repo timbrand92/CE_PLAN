@@ -207,6 +207,14 @@
 
 **Reference:** `decisions\2026-09-16_TEST_DAY_RESULTS.md`; `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-18.md` step N9. Logged 23 Sep 2026 by the release chat; it had never been in this file. Tim, 23 Sep: start a chat on it now.
 
+**EVIDENCE FOUND 23 Sep 2026 — AutoCAD's own crash report** (`%LOCALAPPDATA%\Autodesk\CER\6d903fba…\1789566209810`, written 16 Sep 23:43, the minute of Codex's W4 run). Read as text; the minidump itself was not opened (no debugger installed):
+
+1. **Where it died:** inside AutoCAD's own point pick — `Editor.GetPoint` ← `WaterTankCommand.PromptOptionalPoint` ← `BuildAndApply` ← `PlaceWaterTank`. That is the **callout** prompt (not the riser step after it). Faulting module `KERNELBASE.dll`; the report carries the flag `win_message_queue_full`. No .NET unhandled exception recorded.
+2. **Drawing:** `dwg-b.dwg`. Last commands: CDINSPECTOR, BEDIT, then the CDWT group.
+3. **Just before it** (first-chance, handled): `eFilerError` from `Entity.GeometricExtents` on object `1041DE` inside `LinkService.CollectTextBoxesNear` (the callout live words), and the tank-ghost lookup failure since fixed by W-09/W-10.
+4. **Lead, NOT proven:** during that pick CE forces *Nearest* object snap (`NearestOnlyOsnapScope`). An object whose outline cannot be read (`eFilerError`) sat near the tank; the drawing had had its pipes converted that day to the **16 Sep version of the CE pipe object**, which was rebuilt on a Polyline on 17 Sep after problems. AutoCAD snapping to an unreadable object during the pick would fit. If so, the 17 Sep rebuild may already have removed the cause.
+5. **Next:** (a) identify object `1041DE` in the 16 Sep copy of `DWG-B` (`C:\TimOS\retired\_TEST_COPIES_20260917`) with a headless read — what type it is; (b) Codex step B-T8 / A-N9 on today's build, on a drawing converted with today's pipe object; (c) only then decide whether CE should stop forcing Nearest snap at the callout pick.
+
 **Status:** OPEN
 
 ---
