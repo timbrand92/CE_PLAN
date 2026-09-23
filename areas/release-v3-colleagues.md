@@ -191,7 +191,13 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 > 3. Copy the three new `.bundle` folders from the pilot folder into this one.
 > 4. Open AutoCAD. The CE ribbon tab should appear. Type `CEMANAGER` and check it shows Civil 3.0.0.
 >
-> **What is new** [FILL from Codex passes: only what passed]. Expected headings: the new pipe object and editing; CDWT tank placement that finds its own plan drawing; levels and pipe splits; the LPD note; the detention top-water-level check; AutoCAD no longer crashing when you close it.
+> **What is new** (only what Codex has passed in AutoCAD, as of pass 1, 23 Sep; pass 2 adds to this):
+> 1. **AutoCAD no longer crashes when you close it** (four clean closes).
+> 2. **CDWT finds the right tank plan for you:** pick a size and the matching plans come first, or it says there are none (B-T1, T2, T4, T6).
+> 3. **Pit labels move with the pit:** resize a pit or move its label corner, and the number stays in its circle; one Undo puts it back (B-P1 to P3).
+> 4. **CDLPD writes the council's full note** for Council, Kerb and a blank answer (B-D2, B-D4).
+> 5. **CDFIXTAGS** reports every doubled source name with a reason and a next step (B-L12, L13).
+> [PENDING pass 2: SBEAM steel beams, the Manager window, the pit batch editor, double-click to edit a level, CDDESIGN finding the council, the CDCALC criteria table.]
 >
 > **Please do not use yet** [FILL from Codex failures]. Known now: the online automatic update (switched off; Tim installs updates by hand for now); [PENDING Tim, Queued item 9: on AutoCAD 2022-2024, from your second start AutoCAD may print *"Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL"*. It is harmless and the CE menu still works]; [CDWT tank placement near pasted PDF pictures, pending BUG-163].
 >
