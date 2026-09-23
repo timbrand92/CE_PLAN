@@ -99,9 +99,13 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 | ID | Step | What "right" looks like |
 |---|---|---|
 | **T1** | Open the copy. Type `ZOOM`, `C`, `57876,-210513`, height `20000`. The block holding a PDF picture on layer BLOCKS sits there (handle `1041DE`). Screenshot. | You can see where it sits. Record whether the PDF picture shows or is missing. |
-| **T2** | `CDWT`, choose any tank, press **Place tank**, and pick the insertion point **about 5 m from that block**. At the callout prompt, move the cursor **over the block** and pick there. | **Record exactly what happens.** If AutoCAD stops with "cannot continue", that is the finding: say so plainly, and note the newest file in `%LOCALAPPDATA%\Autodesk\CER` after restart. |
-| **T3** | Repeat T2, but pick the callout point **far from the block** (over 50 m away). | Record. A difference between T2 and T3 is the evidence. |
-| **T4** | Repeat T2 on a COPY of `DWG-A`. | Record. |
+| **T2** | `CDWT`, choose any tank, press **Place tank**, pick the insertion point **about 5 m from that block**. At the callout prompt, put the cursor **over the block** and pick there. | **Record exactly what happens.** If AutoCAD stops with "cannot continue", that is the finding: say so plainly, and after restarting note the newest folder in `%LOCALAPPDATA%\Autodesk\CER`. |
+| **T3** | Same as T2, but pick the callout point **far from the block** (over 50 m away, nothing else under the cursor). | Record. A difference between T2 and T3 points at the block. |
+| **T4** | **Control.** Same as T2, but at the callout prompt **press F3 first** (object snap off; the command line says `<Osnap off>`), then pick over the block. *(Setting OSMODE to 0 before CDWT is NOT a control: CE sets it to Nearest for this prompt whatever it was.)* | Record. If T2 crashes and T4 does not, the Nearest snap is implicated. |
+| **T5** | Same as T2, but press **Enter** at the callout prompt instead of picking. | Record. |
+| **T6** | Repeat T2 on a COPY of `DWG-A`, picking over any block. | Record. |
+
+**Nobody fixes this on these results alone.** Forcing Nearest at the callout pick is Tim's own BUG-127 request; changing it needs his ruling on Tuesday.
 
 ---
 
