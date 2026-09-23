@@ -184,19 +184,35 @@ sol extra high or other models to manage the usage then do so, same in claude, i
 and only audit with better ones then set that up, only if its better and still mainatain the speed and quality and lower usage. i will
 reset codex usage now but it will have to last until next thursday at the same time"* and *"you can use codex to build as well after i reset"*.
 
-### Codex - one week, 24 Sep to Thu 1 Oct (about 09:00)
+### Codex - one week, 24 Sep to Thu 1 Oct (about 09:20)
+
+**Reset by Tim at about 09:20 on 24 Sep** (his usage page: weekly limit 100% left, resets in 7 days). The limit is **shared across Codex, ChatGPT Work, Workspace Agents and ChatGPT for Excel** (not chat conversations), so Tim's own use of those comes out of the same week.
 
 1. **Read usage before every job.** Every run records `rate_limits` (weekly used_percent, reset time) in its rollout under
    `~\.codex\sessions`. The release chat's runner (`queue2.sh` + `codex_usage.sh`, session scratchpad) refuses to START a job
    when usage is at or above that job's cap.
 2. **Daily ceilings (cumulative weekly %):** Thu 24: 15; Fri 25: 28; Sat 26: 40; Sun 27: 52; Mon 28: 65; Tue 29 (release): 80;
    Wed 30: 90; Thu 1 Oct: 97. About 1 AutoCAD pass plus 2-3 builds a day. Keep a reserve for release-day testing.
-3. **Model per job:**
-   - Window and code builds: **gpt-6-sol** (the everyday coding model) at **medium**; **high** only for a complex window.
-   - Mechanical chores (rewording, log conflicts): **gpt-6-luna** at **low**, or done by Claude directly.
-   - AutoCAD testing (needs judgement on screen): **gpt-6-astra** at **low**, with a precise brief, a stated scope and a time cap
-     (about 2 hours). Never an open-ended "every button" pass again.
-   - Never astra at high or above unless a job has failed on sol.
+3. **Model and thinking level per job** (Tim, 24 Sep: *"make sure with codex you know which to use of all the models astra, sol,
+   luna and terra and what thinking level as well"*). The four models, as Codex describes them:
+   - **astra (gpt-6-astra):** frontier, the strongest and dearest.
+   - **sol (gpt-6-sol):** the workhorse for coding.
+   - **luna (gpt-6-luna):** fast and affordable, for easier tasks.
+   - **terra (gpt-5.6-terra):** older and balanced, for straightforward work.
+
+   | Job | Model | Thinking level | Why |
+   |---|---|---|---|
+   | AutoCAD test pass (drives AutoCAD, judges screens, follows a strict list) | astra | **low** | Best at reading the screen and keeping the rules; the brief does the thinking, so low is enough |
+   | Diagnosing a FAIL from logs and code, read-only | sol | medium | Code reading, no screen |
+   | Building a whole new or rebuilt window (layout, view model, tests, pictures) | sol | **high** (**xhigh** for the largest windows: Edit Pipe, CDCALC, Civil Hub) | Design judgement and many files |
+   | Behaviour or code fix with clear evidence | sol | medium | Well-scoped coding |
+   | Follow-up tweak to a window already built (scroll list, rewording, one control) | luna | medium | Small and clear |
+   | Chores (merge master, keep both log sides, rename labels, re-render pictures) | luna | low | Mechanical; Claude often does these itself |
+   | Second-opinion review of a PR diff, read-only | astra | medium | Short, and needs the best judgement |
+   | Plain records or documents (CE_PLAN notes, handover text) | terra | low | Straightforward writing, cheapest to run |
+
+   Escalate only on failure: luna, then sol, then astra, one step at a time, and say so in the queue log. Never ultra or max.
+   Never astra at high or above unless a job has already failed on sol at high.
 4. **Concurrency:** one AutoCAD pass plus at most one build at a time.
 5. **Measure:** the runner logs usage before and after each job (`queue.log`), so the cost per model and effort becomes known;
    adjust the ceilings from the measurements.
