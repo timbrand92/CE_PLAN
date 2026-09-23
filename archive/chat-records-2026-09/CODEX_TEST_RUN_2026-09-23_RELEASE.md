@@ -134,6 +134,7 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 1. **For each fault ID, one row: does it still happen on this build?** PASS means the fault is gone; FAIL means it still happens.
 2. **Reuse your Part A and V observations where they cover the same thing** — say which step covers it. Where nothing in A or V covers a fault, **reproduce it directly** from the description in that file.
 3. **Questions in that file** (P-06, TWL-07, G-04's view) are not faults to reproduce; mark them **NOT TESTED — a question for Tim**.
+4. **K-P13 control (the cancelled-window Undo, 18 Sep list section 3b).** The question is whether this is CE's fault or ordinary AutoCAD. On a COPY of a drawing, draw a line with `LINE`, then run `LIST`, pick the line, Enter. Then type `U` once. **Record the command-line text word for word.** Then: open any CE editor window, change nothing, **Cancel**, and type `U` once. **Record that text too.** If AutoCAD's own `LIST` also costs one `U`, the CE behaviour matches plain AutoCAD and the fault may not be CE's. Say which.
 
 ---
 
