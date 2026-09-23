@@ -217,3 +217,12 @@ Tim (verbatim): *"once you get to 60% weekly just reduce to 3 builders but conti
 ## Codex: testing first, building too — Tim, 23 Sep 2026, about 22:20
 
 Tim (verbatim): *"that doesnt mean codex cant build to help as well ideally it also does the testing as priority and some building"*. **Meaning:** Claude is the primary builder (22:10 ruling), and Codex also builds with any spare sessions; its AutoCAD testing always comes first. Handed to Codex builders at 22:20: Print, Help Centre and Feedback windows (plus CDCALC Detention and CDWT already running), all to the CD-window standard.
+
+## Pace Claude to Friday midday; Codex does the heavy lifting — Tim, 23 Sep 2026, about 23:30
+
+Tim (verbatim): *"overnight can you build so that we run all the way until friday at midday. and then use codex to do more heavy lifting until then"*
+
+**Meaning (release chat's reading):**
+1. Claude's weekly allowance must last until it resets on Friday 25 Sep at about 12:00. At 23:30 it stood at 62%, so the budget line runs straight from 62% to about 97% at Friday 12:00: about 1% an hour. Checkpoints: Thu 07:30 about 70%, Thu 12:00 about 74%, Thu 18:00 about 80%, Fri 00:00 about 86%, Fri 06:00 about 92%. When above the line, no new Claude builder starts until it is back under.
+2. Codex takes the building load: whole windows, code only, in their own worktrees, launched by the release chat with `codex exec` (two runs at a time, queued). Codex also keeps AutoCAD testing as its priority, one AutoCAD run at a time.
+3. Claude keeps behaviour, the object spine, reviews, merges and installs. The deploy chat stands down from Codex runs overnight so that only one Claude chat is driving Codex (agreed 23:36).

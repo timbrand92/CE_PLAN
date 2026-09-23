@@ -147,6 +147,33 @@
 
 ---
 
+## BUG-167
+
+**Command / Area:** the release build, `Installer\build_installer.ps1`, at "Creating payload.zip" (`Compress-Archive`). Area: release packaging, which Tuesday's colleague installer needs.
+
+**Symptom:** twice on 23 Sep 2026, at 22:36 and 23:33, the build finished every lane (Legacy, Net8, Modern, object enabler, shared config and 17 blocks all verified), then stopped at "Creating payload.zip...". `payload.zip` stayed at 0 bytes. The Windows PowerShell 5.1 process stopped using CPU, with its main thread waiting inside Windows ("Executive"). It was left 40 minutes the first time and 12 the second, then stopped by hand. The 18:54 build the same evening zipped normally.
+
+**What is known:**
+1. There was no Defender detection. CPU load was 15%. AutoCAD was closed.
+2. Defender's `MpOav.dll` is loaded in the hung process.
+3. The machine had five test runs and two Codex builds going at the time.
+
+**Not known:** what the zip is waiting on.
+
+**Workaround used:** the local install (`Deploy-Local-AsAdmin.ps1`) copies from `Installer\payload_build`, not from the zip. The 23 Sep 23:50 install therefore deployed the finished build after checking that all three lanes read the master commit. The installer .exe, the archive copy and the source snapshot were not made for that build.
+
+**Expected behaviour:** `payload.zip` is written in under a minute (806 files, 134 MB).
+
+**Test that catches it:** run `build_installer.ps1` on a quiet machine and time the zip step. If it hangs again, try `[System.IO.Compression.ZipFile]::CreateFromDirectory` on the same folder from PowerShell 7, and check whether Defender real-time scanning of the new zip is the wait.
+
+**Steps for Tim to confirm the fix:** the colleague installer builds end to end, and `payload.zip` opens.
+
+**Reference:** found by the release chat during the 23 Sep night install.
+
+**Status:** OPEN. It must be fixed or understood before the Tuesday colleague package is built.
+
+---
+
 ## BUG-166
 
 **Command / Area:** double-clicking a CE level label (an IL text) should open Edit Pipe (`CompoundEditModeService`, the TEXTEDIT redirect). Area C (CD / pipe editing).
