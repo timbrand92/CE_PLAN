@@ -51,6 +51,7 @@ The required delivery sequence (detail in Part C, section 8):
 18. **DP** — Drawing production extension across Civil, Structural and Manager (approved for planning 6 Sep). File: `areas\drawing-production.md`
 19. **L3** — Level 3 external-tool integration and reuse (10 Sep). File: `areas\level3-external-tools.md`
 20. **S1** — Civil Stage 1 foundation: the status log carried out of the old master plan (1 to 3 Sep). File: `areas\civil-stage1-foundation-status-log.md`
+21. **REL** — Version 3 to colleagues: which build, who, packaging, install, rollback and colleague notes (Stage 6; opened 23 Sep for Tim's Tuesday 29 Sep target). File: `areas\release-v3-colleagues.md`
 
 ## C. The control framework (carried from the 15 Sep master control framework, status removed)
 
