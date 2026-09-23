@@ -56,13 +56,13 @@ each beam with φ = 0.65 applied. Excluding 45 unfilled template copies and 5 re
 
 | Ratio | Mark | Eng | Job |
 |---|---|---|---|
-| **1.381** | IB2 | D.H | **24-244_5 Rogers Street, Mentone** |
-| 1.080 | EB2 | D.H | 24-330_13 Connel Road, Oakleigh |
-| 1.030 | IB2 | D.H | 25-33_5 Augusta Drive, Drouin |
-| 1.029 | EB3 | D.H | 26-25_2 Pacific Boulevard, Beaumaris |
+| **1.381** | IB2 | D.H | **24-244_[address withheld]** |
+| 1.080 | EB2 | D.H | 24-330_[address withheld]|
+| 1.030 | IB2 | D.H | 25-33_[address withheld]|
+| 1.029 | EB3 | D.H | 26-25_[address withheld]|
 | 1.018 | IB2 | D.H | 01_Carter Grange |
-| 1.014 | EX.FOOTING | D.H | 25-66_22 Nambour Drive, Mooroolbark |
-| 1.005 | EB1 | D.H | 24-180_15 Broadway, Elwood |
+| 1.014 | EX.FOOTING | D.H | 25-66_[address withheld]|
+| 1.005 | EB1 | D.H | 24-180_[address withheld]|
 | 1.003 | IB2 | D.H | 01_Carter Grange |
 
 **Seven of the eight are within 8% of the line** — arguably inside the noise of the sheet's own

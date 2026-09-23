@@ -19,10 +19,10 @@ validation evidence.
 
 | ID | File |
 |---|---|
-| BM1 | `Creative Engineering - Projects\2020\20-110_31 Cairnes Grove, Bentleigh\Engineering\Comps\PF1 PORTAL FRAME.SG` |
+| BM1 | `Creative Engineering - Projects\2020\20-110_[address withheld]\Engineering\Comps\PF1 PORTAL FRAME.SG` |
 | BM2 | `Creative Engineering - Engineering\Spacegass Templates\Warehouse Portal Frames\35-42m Portal frame - Template.SG` |
-| BM3 | `Creative Engineering - Projects\2020\20-108_21-35 McDonald Road, Brooklyn\Engineering\Comps\R1 PORTAL FRAME.SG` |
-| BM4 | `Creative Engineering - Projects\2024\24-134_15 Harwood Street, Brighton\Engineering\Comps\spacegass\upper portal.SG` (and `lower portal.SG` if quick) |
+| BM3 | `Creative Engineering - Projects\2020\20-108_[address withheld]\Engineering\Comps\R1 PORTAL FRAME.SG` |
+| BM4 | `Creative Engineering - Projects\2024\24-134_[address withheld]\Engineering\Comps\spacegass\upper portal.SG` (and `lower portal.SG` if quick) |
 | BM5 | A braced bay with tension-only rods — ask a firm engineer to nominate one, or skip and tell me; fallback is planned |
 
 **Work on a COPY.** Copy each `.sg` into its `benchmarks\` folder first and open the copy —
@@ -68,7 +68,7 @@ never re-save over a job file.
 
 - **No license / dongle busy:** stop — tell me which models you got through; partial is fine.
 - **Model won't analyse (errors):** screenshot the error, skip the model, tell me — we'll
-  swap in the spare (`2020\20-113_2 Kooyong Road, Armadale\...\RB2 PORTAL FRAME.SG`).
+  swap in the spare (`2020\20-113_[address withheld]\...\RB2 PORTAL FRAME.SG`).
 - **Can't find a report writer:** the datasheet grids (Nodes/Members/Reactions views) can
   usually be copied to clipboard → paste into Excel → save as `linear-report.xlsx`. Equally
   usable for me.

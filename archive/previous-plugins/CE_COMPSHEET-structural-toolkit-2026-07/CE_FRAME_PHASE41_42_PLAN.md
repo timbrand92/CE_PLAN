@@ -37,7 +37,7 @@ claim to replace SPACE GASS for portal frames.
   session). SPACE GASS templates confirmed at
   `Creative Engineering - Engineering\Spacegass Templates\` (incl.
   `Warehouse Portal Frames\35-42m Portal frame - Template.SG`).
-- **Benchmark artefact goldmine found:** job `2020\20-110_31 Cairnes Grove, Bentleigh` has
+- **Benchmark artefact goldmine found:** job `2020\20-110_[address withheld]` has
   `PF1 PORTAL FRAME.SG` **plus printed SPACE GASS output PDFs per load case** (`PF1 G.pdf`,
   `PF1 Q.pdf`, `PF1 WIND.pdf`, `PF1 REACT.pdf`, `PF1 MOMENT.pdf`, `PF1 DEFL.pdf`,
   `PF1 ULTIMATE.pdf`). Read this session: SPACE GASS 12.25, a pinned-base residential portal
