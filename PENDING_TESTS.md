@@ -69,6 +69,12 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 23 Sep 2026 16:01 on Tim's PC — Civil `3.0.0+a2f56f43`, Manager `1.1.0+a2f56f43`, Structural `1.0.74+aad3fe02`
+
+Everything in the BUILT list below is now **installed**, plus **BUG-166** (double-click a level label) and **STRUC-TEXT-ORDER-01** (SBEAM places steel beams on 2027; the 25R/25L text from the same builder). Read back by hand: CE_SHARED identical in Civil and Manager in all three lanes; the Civil 2027 natives are present; Structural has its native module and no CE_SHARED. Backups: `CE_CVL_SUITE_PRE_aeb03763_20260923-155243.backup`, `CE_SUITE_MANAGER_PRE_aeb03763_20260923-155243.backup`, `CE_STRUC_SUITE_PRE_60c41228_20260923-160046.backup`. Pilot candidate 2: `C:\Lisp Files\_RELEASE_V3_PILOT\candidate-2-civil-a2f56f43` (0 files differ from the live set). Codex pass 2 runs Z8 first (SBEAM first).
+
+---
+
 ## BUILT 23 Sep 2026 — on `master`, NOT installed yet (goes in at the next install, after Codex's current run)
 
 1. **BUG-165** (PR #92): Manager never treats the old `2026.0420` build number as newer than 3.0. Nothing to click; Manager's trace log stops showing *"staging CE_CVL_SUITE → 2026.0420.1549"*.
