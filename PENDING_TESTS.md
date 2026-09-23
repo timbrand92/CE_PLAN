@@ -90,6 +90,31 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 24 Sep 2026 02:24 on Tim's PC — Civil `3.0.0+d1d7022c`, Manager `1.1.0+d1d7022c`, Structural `1.0.74+a93e2614`
+
+1. **Installed by the release chat,** AutoCAD closed (checked twice at each step). CE_SHARED is identical in Civil and
+   Manager in all three lanes (90617F46 / 170510A4 / DEE9627C). Structural has no CE_SHARED; its native ARX is present.
+   `build_installer.ps1` zipped normally this time, so BUG-167 comes and goes. The install script now stops the build if
+   the zip is still empty 180 s after it starts.
+2. **Carries, beyond 23:45:**
+   - #121 SPLIT-LEVEL-02
+   - #129 UC behaviour (New Pipe readiness, CDCALC wording, drafting words, CDFALL/CDSL Escape)
+   - #130 Settings window (six tabs; Reset now gives 6.0 m/s and 450 mm)
+   - #131 SAME-DRAWING-01 (CDRG, CDREPAIR Apply)
+   - #132 PIT-OUTLINE-02
+   - #133 and #137 test follow-ups
+   - #134 UC behaviour 02: CDEDIT accepts the CE pipe object (pass 6 X5); tidy-up no longer aborts on one unreadable pit
+     (X2); "CE Inspector" wording (X6); CDTAG with nothing selected; downpipe failure wording; New Pit and Edit Pit
+     signals for Codex's windows
+   - #136 Feedback window
+   - Structural `a93e2614`: the ribbon fix (#138: the handler dropped the clicked button) plus plain-English labels
+3. **Backups:** `CE_CVL_SUITE_PRE_6eec48af_20260924-021323.backup`, `CE_SUITE_MANAGER_PRE_6eec48af_20260924-021323.backup`,
+   `CE_STRUC_SUITE_PRE_bf264cbb_20260924-022426.backup`.
+4. **Codex pass 7** (launched 02:25): items Y1-Y15; report `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS7_2026-09-24.md`.
+5. **INVALIDATES:** pass 6 X2, X5 and X6 (that code changed), and every Structural result from 5ca35054.
+6. **Still known FAIL, not fixed:** X3 (one U after a PITEDIT resize). Investigated in #134, with candidate fixes named.
+7. **Merged after this build, NOT installed:** #126 Drawing Standards windows.
+
 ## 24 Sep 2026 01:12 — Structural ROLLED BACK to `1.0.74+bf264cbb`; Codex pass 6 results
 
 1. **Rollback:** Codex pass 6 (X8) found that no button on the organised Structural ribbon (`5ca35054`) opens
