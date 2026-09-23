@@ -252,6 +252,20 @@ Your words and dates are in the Structural drawing-journey record of 14 Sep (the
     create at birth, keep an existing key, never write locked-layer/Xref/REFEDIT objects), `LinkService.Spine.cs`
     (`SPINE_ID` text under the object's CE link dictionary), `CloneOwnedSpineIdentityPolicy.cs` (COPY admission).
 
+### Evidence in the plugin's REGRESSION_LOG (Structural line)
+
+1. **"Stage 3A1 adds a pure connected-structural record without changing DWG behaviour" (2026-07-23):** the record is
+   pure; `BEAM_LINK` stays the only drawing truth; no nearest-object guessing; one support may serve several beams.
+2. **"Stage 3B2b-ii.c routes beam commands 1/2 through the accepted host" (2026-07-24):** 1 and 2 on the connected
+   preview/commit route; 4, 5, BDL, BEXT, BTX then frozen (4 joined later, see "2026-08-03 — Command 4 connected Preview
+   route").
+3. **"ST-01A / P1-01 — selected-beam read-only Structural Inspector" (2026-08-03):** panel is read-only; supports stay
+   Amber until confirmed; no repair or identity writes.
+4. **"MODELSPACE-CASE-01" and "STRUC-LAYER-CASE-01" (2026-09-23):** the connected route had been refusing real 2027
+   drawings; fixed, not yet Tim-accepted. **"STRUC-BEAM-WORDS-01" (2026-09-23):** plain names for command 1.
+5. **"STRUC-TEST-LOAD-01" (2026-09-23):** the Structural plugin test project could not load on this PC, so none of the
+   connected-route tests above had been re-run here since; being fixed on `claude/struc-d1-prep`.
+
 ### Identity owner nomination (choice 1, technical detail)
 
 1. **Nominee:** `CE.Spine.SpineKey`, one per beam and per support block, kind `Member` (columns and stud packs are
