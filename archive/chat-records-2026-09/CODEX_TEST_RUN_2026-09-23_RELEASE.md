@@ -65,7 +65,7 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 **Why:** Civil and Manager share one common library, and the first copy AutoCAD loads wins for both. If they disagree, the CE ribbon can silently fail to load. (Tim's Structural 1.0.74 does not use it.) A colleague gets Civil, Manager and Structural together.
 
-**In pass 1 these checks run on the Manager and Structural installed today, which are NOT what ships.** The colleague gets a newer Manager (38 changes never installed) and Structural 1.0.74 plus four window fixes. Those are tested in Part Z only.
+**Since 23 Sep 12:32 the Manager and Structural installed ARE what ships:** Manager `1.1.0+aeb03763`, Structural `1.0.74+60c41228`. Record the versions R2 shows.
 
 | ID | Step | What "right" looks like |
 |---|---|---|
@@ -158,7 +158,7 @@ Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**
 | **Z3** | **The tank finds its own plan (CDWT-LINK-01), on the package.** Re-run Part B's **T1 to T6**. | The same as in pass 1. Record each as `Z3-T1` and so on. **Never** copy a pass-1 result forward. |
 | **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**. Claude lists them when the package is installed. | Record each as its own row. **Never** copy a pass-1 result forward. |
 
-**Manager — 38 changes never installed on any PC before this package.** Before each step, **save the drawing copy**, so `DBMOD` reads 0.
+**Installed 23 Sep 12:32, so run Z9 to Z21 in pass 1 as well (Z1 to Z8 still wait for the next build).** **Manager — 38 changes never installed on any PC before this package.** Before each step, **save the drawing copy**, so `DBMOD` reads 0.
 
 | ID | Step | What "right" looks like |
 |---|---|---|

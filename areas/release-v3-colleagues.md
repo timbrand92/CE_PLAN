@@ -12,7 +12,7 @@
 
 **If this chat's memory fills up (context):** the app summarises the older conversation and carries on; nothing that matters lives only in the chat. The state lives here, in the decision file, the bug file, PENDING_TESTS and the one Codex list. If this chat ever has to be replaced, the next one is `CE_ACAD / release-v3-colleagues / plan / 02` and starts from this file. The 30-minute timer lives only in this chat; a replacement chat must set its own.
 
-**Installs by this chat:** 23 Sep 12:18 — `3.0.0+aeb03763` (BUG-164 + REL-BUILD-01); first attempt at 12:13 stopped at the build step with nothing changed (script fault, fixed).
+**Installs by this chat:** 23 Sep 12:18 — `3.0.0+aeb03763` (BUG-164 + REL-BUILD-01); first attempt at 12:13 stopped at the build step with nothing changed (script fault, fixed). 23 Sep 12:32 — shipping Manager `1.1.0+aeb03763` and Structural `1.0.74+60c41228` (2027 trial route, native module kept), by the REL-09 hand steps; all read back; CE_SHARED identical Civil/Manager.
 
 Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build, which colleagues, how it is packaged and installed, how it is rolled back, and what they are told. Opened 23 Sep 2026 for Tim's Tuesday 29 Sep target (`decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md`).
 
@@ -32,6 +32,7 @@ The master plan's own definition of done for Version 3 (a standalone Civil insta
 4. **Tuesday morning, 15 minutes** (Tim's choice): one page from Claude — what passed, what is hidden or not ready, a five-step check — then his yes.
 5. **Sign in to Azure and re-make the storage write key** (it is refused since the July reset), then put it in the local file on his PC. Until then nobody can publish, including CEADMIN's own button. Details: `decisions\2026-09-23_COLLEAGUE_UPDATE_CHANNEL.md`.
 6. **The release signing key** in the key drawer does not match the key built into the plugin. Tim decides which is right. Needed before any signed approval, which is what the new Manager's update route requires.
+7. **Structural for AutoCAD 2022 colleagues:** the three-version Structural build leaves out the 2027 native module (`CE_STRUC_NATIVE_2027.arx`, used by CEARCHREVIEW); Tuesday's 2027 pilot gets the 2027 build that keeps it. Tim decides how 2022 colleagues get Structural.
 
 ## 2. Where the detail is
 
@@ -127,7 +128,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
    - **Structural** `60c41228`: its own `build_installer.ps1`, three lanes, refs from `C:\TimOS\refs\autocad`: *"Complete three-lane unsigned release candidate verified"*, 0 errors, version 1.0.74. Candidate in this chat's scratchpad; worktree `rel-structural-60c41228` created by this chat.
    - **Automated tests, `master` `c66fc481`, 23 Sep:** Civil 10,125 run, 20 failed, 19 skipped. Every failing name is in the known list (18 distinct names); two known failures now pass (`FinalLandingProducer…`, `RefusedNativeCallback…`). Manager 225/225. Spine 81/81. Command truth 55/57 (`Civil_HasNoCompiledOrRegistryOnlyCommandDrift`, `CentralRegister_OwnsApprovedFoundationToolsAndRecordsLegacyInputs`). Installer 225/269 (44 failed; the 13 Sep record said 43; no by-name baseline existed, so today's 44 names are the baseline, kept in this chat's scratchpad). Installer failures concern the activation installer and release packaging checks, not the hand install used on Tuesday.
    - **Not yet done:** a package audit of all three together on the frozen line.
-5. **REL-04 Install the package on Tim's PC** — Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.
+5. **REL-04 Install the package on Tim's PC** — **DONE EARLY, 23 Sep 12:18 and 12:32** (Civil, then Manager and Structural; Civil will be reinstalled from `master` at the freeze). Original plan:  Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.
 6. **REL-05 Codex pass 2** — Part Z of the list: the tank change and every fix since pass 1, on the package. Friday evening and the weekend. **Status:** Proposed.
 7. **REL-06 AutoCAD 2022** — Monday 28 Sep, 30 minutes on a colleague's 2022 PC (Tim: *"Yes, Monday"*). Steps M1 to M9 written 23 Sep in the run list, Part M: install by hand, check, mixed-version probe, then go back (the first real run of REL-09 both ways). **Status:** steps written; not run.
 8. **REL-07 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back to 2.1.14. **Status:** draft written 23 Sep (section 5b), [FILL] parts wait for Codex.

@@ -81,6 +81,14 @@ Installed by the release chat under Tim's standing override (*"from now until tu
 
 **Note:** the existing `Deploy-Local-AsAdmin.ps1` also sets SECURELOAD=1 in the user registry for AutoCAD 2025-2027, as on every earlier install.
 
+**12:32 — the shipping Manager and Structural installed too** (release chat's call: test what ships, from the start). By the REL-09 hand steps: old bundle renamed to a `.backup` name, new bundle copied in.
+
+1. **Manager `1.1.0+aeb03763`**, all three lanes, 72 files (its own verified release candidate). Replaces `1.1.0+96e7d76a` (7 Sep). Backup `CE_SUITE_MANAGER_PRE_96e7d76a_20260923-123202.backup`.
+2. **Structural `1.0.74+60c41228`** (Tim's 1.0.74 plus Codex's four window fixes), AutoCAD 2027 only, **built by the 2027 trial route so it keeps `CE_STRUC_NATIVE_2027.arx`** (the three-lane route leaves it out). Replaces `1.0.74+5d723d41`. Backup `CE_STRUC_SUITE_PRE_5d723d41_20260923-123202.backup`.
+3. **CE_SHARED 1.1.0.0, byte-identical in Civil and Manager in all three lanes**; Structural carries none. The ProgramData Manager copy has no live manifest.
+
+**Tests:** Codex list Part R (versions), Part Z steps Z9-Z21 (Manager and Structural) now run in pass 1.
+
 ---
 
 ## LIVE since 23 Sep 2026 09:36 — `3.0.0+d90659cf` on `claude/civil-merge-2026-09-23`

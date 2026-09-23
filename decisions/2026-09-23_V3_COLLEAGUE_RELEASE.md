@@ -141,6 +141,12 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 1. *"if you ever need something like that done like a human, ask codex to do it"* — said when AutoCAD had to be closed for an install. **Meaning:** anything that needs a person at the screen (close AutoCAD, answer a dialog, click through a window) is asked of Codex, through the deploy chat that drives it, instead of waiting for Tim. This replaces the plan chat's own limit "a chat never closes AutoCAD itself" for Codex only; the other three limits stand (AutoCAD really closed before an install, never under a Codex test run, backups and read-back).
 2. *"so once i go you and codex run evrerything and go back to back with each other"* — **confirmed:** Claude fixes and installs, Codex tests, Claude fixes what Codex finds, repeat, until Tuesday.
 
+## Claude's calls while Tim is away (recorded as calls, not Tim's words)
+
+1. **23 Sep 12:32 — the shipping Manager and Structural installed on Tim's PC before the freeze**, so Codex tests what the colleague gets from its first real run. Reason: a pass on an in-between mix would prove nothing about the pilot.
+2. **Structural built by the AutoCAD 2027 trial route**, not the three-version route, because the three-version route leaves out `CE_STRUC_NATIVE_2027.arx` that Tim's own install had. It matches Tim's answer *"Yours + Codex's 4 window fixes"* like for like. The 2022 question is queued for Tim.
+3. **Codex set-up:** the deploy chat builds a GUI sandbox first; fallback at 18:00 to Tim's live AutoCAD under rules 13-14 with a registry and file snapshot taken first.
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
