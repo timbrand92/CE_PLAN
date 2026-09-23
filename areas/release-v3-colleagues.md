@@ -50,6 +50,22 @@ Read from `Creative Engineering - IT Admin\` (OneDrive-synced), DLL product vers
 
 Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Sep test day mostly failed. **Nothing since has been recorded as accepted.** `d0ffe1a2` (16 Sep) and `d90659cf` (23 Sep) are installed and in daily use by Tim, which is evidence of use, not acceptance.
 
+### Colleagues' automatic update — read 23 Sep, about 12:30pm
+
+1. **The Manager 1.0.2 bundle offered in the IT Admin folder carries an online-storage config with both a read link and an admin link filled in** (`Contents\Win64\Assets\Config\blob-config.json`; values not printed or used here).
+2. **With that config present, Manager 1.0.2 looks for approved builds ONLY in online storage, never in the IT Admin folder** (`CeApprovedReleaseService.GetApprovedReleases` at `c5250a11`).
+3. **Both storage keys were regenerated for SEC-001 in July**, and the admin link was confirmed dead then (memory record `sec-001-azure-sas-leak`). So colleagues' automatic updates are **very likely dead**. Not tested from here: that would mean using the link.
+4. **Consequence for Tuesday:** the pilot colleague installs by hand, with AutoCAD closed. The canary route is not relied on.
+5. **Housekeeping, not urgent:** a dead admin link still sits in a folder every colleague syncs. It grants nothing once the key is rotated, but it should not be there. For Tim to decide after Tuesday.
+
+### The packaging routes that already exist — no new script needed (read 23 Sep)
+
+1. **Civil:** `Installer\build_installer.ps1` builds all three lanes and the installer. The transform module `CE_TRANSFORM_2027.arx` is still built by hand first.
+2. **Manager:** its own project file packages a release bundle when built with `PrepareReleaseBundle=true` and `ApprovedCeSharedRoot` pointing at Civil's common library, and **stops if the library's hash differs**. That is the lane-matched library guarantee, built in.
+3. **Structural:** `Modules\Structural\Installer\build_installer.ps1` exists at `60c41228` (not on `master`). Without its `-AutoCad2027OnlyTrial` switch it is meant to build all three lanes.
+4. **Install on a colleague PC:** the existing `Install-CECvlSuite.ps1`, `Install-CESuiteManager.ps1` and `Install-CEStrucSuite.ps1` in the IT Admin folder copy each bundle into the user's plugin folder.
+5. **Local install on Tim's PC:** `master`'s `Deploy-Local-AsAdmin.ps1` is **Civil only and does not sync the common library** (the three-plugin `-Module` version, `6f67f8ed`, exists only on `claude/perf001-on-live-trunk`; `master` took a different script on 15 Sep, `d4158953`). Friday's install therefore follows the 23 Sep method: backups by hand, library copied lane for lane, every hash read back.
+
 ## 4. The risks that decide the plan
 
 1. **The shared common library.** Every CE plugin carries the same library and the first copy AutoCAD loads wins for all of them. A colleague given Civil 3.0 while keeping Manager 1.0.2 and Structural 1.0.41 (library 1.0.0) risks the CE ribbon silently not loading. **All three must move together, carrying the same library.**
