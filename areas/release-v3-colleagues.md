@@ -12,6 +12,14 @@ The master plan's own definition of done for Version 3 (a standalone Civil insta
 
 **Standing override until Tuesday 29 Sep (Tim, 23 Sep):** *"from now until tuesday we build, test and deploy whenever we need"*. Limits, confirmed by Tim (*"keep going, drop none of the limits"*): AutoCAD really closed, never under a Codex run, backups and read-back every time, publishing to colleagues still needs Tim's word.
 
+**Working without Tim until Tuesday (Tim, 23 Sep: *"keep going WITHOUT MY INVOLVEMENT"*).** Claude's calls are recorded in the decision file. Things that need Tim wait in the list below, for Monday.
+
+### Queued for Tim, Monday 28 Sep (do not ask before then)
+
+1. **The pilot colleague's name** (on AutoCAD 2027).
+2. **Where the pilot copy sits**: a separate `CE V3 PILOT` folder in IT Admin is proposed. Placing it there is publishing, so it needs his word.
+3. **The Monday 2022 PC**: which colleague, and when.
+
 ## 2. Where the detail is
 
 1. `decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md` — Tim's goal and the open questions.

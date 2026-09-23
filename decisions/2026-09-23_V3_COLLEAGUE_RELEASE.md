@@ -110,6 +110,12 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 
 **Meaning (Claude's reading):** the deploy chat publishes **Civil `3.0.0+b02f3ec7`**, the exact bundle installed on Tim's PC, as it proposed. Manager and Structural are **not** included: their candidates are not installed or tested, and Tim was not asked about them. Publishing to the IT Admin folder or approving a build for a colleague is still separate (limit 4).
 
+## Work without Tim — Tim, 23 Sep 2026, about 12:10
+
+**Tim:** *"keep going WITHOUT MY INVOLVEMENT"*
+
+**Recorded as an override of how questions are handled (RULES 3, 14.6). Scope: this release, until Tuesday 29 Sep.** The release chat decides the ordinary engineering-of-the-release choices itself, records each one here as *Claude's call* with its reason, and does not stop to ask. **Unchanged:** the four confirmed limits (AutoCAD really closed, never under a Codex run, backups and read-back, no publishing to colleagues without Tim's word); no download or install of new tools without Tim's yes (the session's own safety rules); nothing Tim-accepted without Tim. Anything that genuinely needs Tim (the pilot colleague's name, publishing to a colleague, a real engineering ruling) is **queued in one list for Monday**, not asked piecemeal.
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
