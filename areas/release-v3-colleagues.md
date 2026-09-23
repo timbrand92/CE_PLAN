@@ -8,6 +8,8 @@
 
 **Codex (23 Sep, 12:02):** the deploy chat drives Codex from the command line (`codex exec`, first run started 11:53, session `01a0cbf7-9dc0-71b3-bd5b-4d54dc73e0d1`), **one run at a time**, because installs and tests share one AutoCAD. The plan chat does not post into Codex sessions: Tim's desktop Codex session `01a0cbcd…` is him setting up a virtual machine. Tim allowed the plan chat to post into the test session; it is not needed while the deploy chat drives. **Log of messages this chat posted to Codex: none.**
 
+**Installs by this chat:** 23 Sep 12:18 — `3.0.0+aeb03763` (BUG-164 + REL-BUILD-01); first attempt at 12:13 stopped at the build step with nothing changed (script fault, fixed).
+
 Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build, which colleagues, how it is packaged and installed, how it is rolled back, and what they are told. Opened 23 Sep 2026 for Tim's Tuesday 29 Sep target (`decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md`).
 
 The master plan's own definition of done for Version 3 (a standalone Civil install, a controlled pilot, help and rollback) is the long goal. **Tuesday is a first step towards it, not the whole of it.**
@@ -161,7 +163,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 `BUG_CARPARK.md` is the one bug file. Release blockers found in this area are listed here by ID.
 
 1. **BUG-163** — CDWT "AutoCAD cannot continue" at the callout point. Brief: `archive\chat-records-2026-09\CHAT_PROMPT_CDWT_CRASH_2026-09-23.md`. OPEN.
-2. **BUG-164** — AutoCAD crashed on closing: **cause proven** (CE's palette shutdown, 18 closes in the Windows event log); **fix merged** PR #90 `aeb03763`; not installed, not tested in AutoCAD.
+2. **BUG-164** — AutoCAD crashed on closing: **cause proven** (CE's palette shutdown, 18 closes in the Windows event log); **fix merged** PR #90 and **installed 23 Sep 12:18** (`3.0.0+aeb03763`, all lanes read back); not tested in AutoCAD (Codex Part C).
 3. **BUG-165** — latent: Manager's version check ranks `2026.0420.1549` above `3.0.0`; held back only by the signed-approval check. Not a Tuesday blocker. OPEN.
 
 ## 7. Parked

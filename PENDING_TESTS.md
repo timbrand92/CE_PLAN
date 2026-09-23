@@ -18,7 +18,7 @@
 ## COLLEAGUE RELEASE, Tuesday 29 Sep — Codex runs the AutoCAD testing (Tim, 23 Sep)
 
 **The one run list:** `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. Pass 1 covers the installed
-`b02f3ec7` (deployed 11:26 by the deploy chat), including the 18 Sep list, V1 to V18 below and the deploy chat's
+`aeb03763` (installed 12:18 by the release chat), including the 18 Sep list, V1 to V18 below and the deploy chat's
 `CODEX_TEST_RUN_2026-09-23.md` folded in as Part B. All of it is **installed now**, even where headings still say NOT INSTALLED. Area: `areas\release-v3-colleagues.md`.
 
 ---
@@ -66,6 +66,20 @@ two checks. **Nothing was copied or removed.** On the retry the first check caug
 down** (a process at 64 K), so **four** checks were made before installing. `accoreconsole.exe` was also
 running; its loaded modules were inspected and it was not holding the bundle. **The deploy script checks only
 `acad.exe`, never `accoreconsole`.**
+
+---
+
+## LIVE since 23 Sep 2026 12:18 — `3.0.0+aeb037639f628e64a98e1cde4d86d2df38c45fcc` (master, PRs #89 + #90)
+
+Installed by the release chat under Tim's standing override (*"from now until tuesday we build, test and deploy whenever we need"*), AutoCAD checked closed at 12:12:29 and 12:12:40 (Tim: *"AutoCAD is closed"*) and again by the script before build and before install.
+
+**Read back by hand from all three lanes:** Legacy `DF49FD6C…`, Net8 `13A4C69E…`, Modern `9572839E…`, each `3.0.0+aeb03763…`. CE_SHARED copied into Manager lane for lane and hash-verified (Legacy `98ECCF14…`, Net8 `C3A92910…`, Modern `B746E17A…`). Natives in Modern: `CE_CVL_NATIVE_GRIP_2027.arx`, `CE_TRANSFORM_2027.arx`, `CE_CVL_OBJECTS_2027.dbx`. Manager `1.1.0+96e7d76a` and Structural `1.0.74+5d723d41` unchanged.
+
+**Undo:** close AutoCAD; delete `CE_CVL_SUITE.bundle` and rename `CE_CVL_SUITE_PRE_b02f3ec7_20260923-121346.backup` back to it; do the same for Manager with `CE_SUITE_MANAGER_PRE_CESHARED_20260923-121346.backup` (both in `%APPDATA%\Autodesk\ApplicationPlugins`).
+
+**What it adds over `b02f3ec7`:** BUG-164 (AutoCAD no longer crashes on close) and REL-BUILD-01 (build-file only). **Test:** Codex list Part C; Tim's steps in `REGRESSION_LOG.md` BUG-164.
+
+**Note:** the existing `Deploy-Local-AsAdmin.ps1` also sets SECURELOAD=1 in the user registry for AutoCAD 2025-2027, as on every earlier install.
 
 ---
 
