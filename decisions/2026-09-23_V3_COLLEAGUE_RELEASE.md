@@ -213,3 +213,7 @@ Tim (verbatim): *"i want you to build everything including windows and if codex 
 ## At 60% weekly usage: three builders, keep going — Tim, 23 Sep 2026, about 22:15
 
 Tim (verbatim): *"once you get to 60% weekly just reduce to 3 builders but continue"*. **Meaning:** below 60% of the weekly (all models) limit the release chat runs as many build lanes as the work needs (seven at 22:15: five Civil/Structural lanes plus two Claude window lanes, besides Codex's two window builders); at 60% it drops to three and continues, and reports usage and progress to Tim.
+
+## Codex: testing first, building too — Tim, 23 Sep 2026, about 22:20
+
+Tim (verbatim): *"that doesnt mean codex cant build to help as well ideally it also does the testing as priority and some building"*. **Meaning:** Claude is the primary builder (22:10 ruling), and Codex also builds with any spare sessions; its AutoCAD testing always comes first. Handed to Codex builders at 22:20: Print, Help Centre and Feedback windows (plus CDCALC Detention and CDWT already running), all to the CD-window standard.
