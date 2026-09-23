@@ -44,6 +44,7 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 13. **Do not press F2** on this AutoCAD profile: it runs `CLEAN`, which saved a test copy and, in a second run, Tim's metric drawing template `acadiso.dwt` on 23 Sep. Use `TEXTSCR` or the command-line window to read history.
 14. **Keep off Tim's own AutoCAD set-up** (agreed by both release chats, 23 Sep). Use an isolated set-up from `C:\Autodesk\CERef\*-isolate` when the deploy chat has one that runs full AutoCAD with the CE plugins; until then, on Tim's live set-up: **never save a template, a profile or a setting**, answer **No** to every save prompt except on a test copy, and never use F2.
 15. **Parts M and X (AutoCAD 2022/2024) are Tim's, on Tuesday, on his virtual machine** (Tim, 23 Sep). Mark them NOT TESTED — Tim's Tuesday check.
+16. **State at the top of every report which AutoCAD profile you used** (Tim's own, or which isolated one) and how you started AutoCAD. It cannot be worked out from the results afterwards.
 
 **Report:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_2026-09-23.md`, screenshots beside it. Put a short **FOR TIM** block at the top in plain English, then one row per step ID.
 
