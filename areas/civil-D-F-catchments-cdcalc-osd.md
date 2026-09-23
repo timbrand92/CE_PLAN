@@ -286,3 +286,13 @@ it; what is missing is a curve per station.
   evidence read-only; recorded what is already built against what the "Planned" label implies.
 - **Did not:** write production source, change any behaviour, or decide anything in §6.
 - **DATA-01:** no client name, address or job address is recorded here.
+
+
+## 9. CDCALC whole-window build — 24 September 2026
+
+1. **Approved Modify / scope:** Tim: "BUILD A WHOLE WINDOW - layout AND the code behind it. Code only." Branch `codex/ui-cdcalc`; confirmed takeover, preserve `c816c087`, merge master without rebasing. Window XAML/code-behind and new presentation helpers/tests only; CalculationsV2ViewModel and DetentionSystemViewModel remain Claude-owned. No AutoCAD, install, deploy or PR merge.
+2. **Superseded layout decision:** five-row detention pages from 23 September are superseded by Tim's midnight ruling: "I am happy to scroll in places when you would have to implement a next page button like in the help window i just dont want high use windows to have scrolling areas where the ui and ux could be designed far better". Fixed task tabs and footer; bounded row lists scroll.
+3. **Preserved / moved:** every calculation input, result, drawing pick, extra-storage add/edit/remove, export preview and PDF/XLSX action stays bound to its established model/handler. Detention keeps Storage/Discharge/Drawing output. Longitudinal separates Route and scales/Preview/Levels; Print separates Sheet details/Sections and export. All other calculation tabs receive the same header/footer, units and readable row selection. The empty WSUD Pass column had no bound values; targets, achieved values and the existing overall status remain.
+4. **PR #129 consumed:** RequiredVolumeDisplay, NextActionText/HasNextAction, CalculationDraftNeedsAttention and IsStorageUnknown. The window formats m³/m² without rewriting engineering values. Unknown is attention, shortfall red, surplus green.
+5. **Validation in progress:** real compiled window, STA RenderTargetBitmap, synthetic data, dark/light, 1080p scale 1, every page. Minimum/opening-size fit, input/selection and state-colour checks; all three build lanes and full Civil suite required before release handoff. AutoCAD acceptance remains pending. No extra engineering intent has been inferred from the older design pack.
+6. **Behaviour-owner boundary:** no Detention Calculate command is exposed; inputs already recalculate when edited. Preserve that path. Wider provenance, rule approval, profile correctness and export engineering remain with their existing owners.
