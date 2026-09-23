@@ -67,7 +67,7 @@ each beam with φ = 0.65 applied. Excluding 45 unfilled template copies and 5 re
 
 **Seven of the eight are within 8% of the line** — arguably inside the noise of the sheet's own
 simplified Mu formula, and the kind of thing you'd resolve by looking at the actual beam.
-**One is not: Rogers Street IB2 at 1.38 — 38% over.** That's the one I'd look at first.
+**One is not: job 24-244 IB2 at 1.38 — 38% over.** That's the one I'd look at first.
 
 ## 3. The edition question — it changes the answer, and only you can settle it
 
@@ -96,7 +96,7 @@ our own library — but please confirm, because it's the difference between 8 an
 ## 5. What I'm asking
 
 1. Confirm the φ reading (5 min in the sheet) and the edition (A1 vs A2).
-2. Decide whether **Rogers Street IB2**, and then the other seven, warrant a re-check. That's an
+2. Decide whether **job 24-244 IB2**, and then the other seven, warrant a re-check. That's an
    engineering and commercial call — it's yours, not mine.
 3. Say whether the sheet should be flagged/pulled meanwhile — it's still in
    `01 - Design Spreadsheets` where it can be copied into a new job today.
