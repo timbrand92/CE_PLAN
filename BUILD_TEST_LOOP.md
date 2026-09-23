@@ -170,3 +170,45 @@ Report back in the format that file's HOW TO REPORT section sets out." < /dev/nu
 
 Before starting: tell the other chat. When it ends: tell them the report path. Claude reads the report, fixes
 what failed, rebuilds, and asks again. **Tim sees the summary.**
+
+---
+
+## Usage budget - Codex and Claude (set 24 Sep 2026 after Codex ran out)
+
+**What happened:** overnight 23-24 Sep the release chat ran two or three `codex exec` jobs at once, every window build on
+gpt-6-astra at HIGH effort, plus AutoCAD passes of up to five hours. Codex's weekly Pro allowance went from 41% at 22:23 to
+100% at 07:45. Tim reset it on 24 Sep.
+
+**Tim (24 Sep, verbatim):** *"you need to manage its usage better so it lasts for the full week, if you need it to use astra low or
+sol extra high or other models to manage the usage then do so, same in claude, if theres a smarter way to build with lesser models
+and only audit with better ones then set that up, only if its better and still mainatain the speed and quality and lower usage. i will
+reset codex usage now but it will have to last until next thursday at the same time"* and *"you can use codex to build as well after i reset"*.
+
+### Codex - one week, 24 Sep to Thu 1 Oct (about 09:00)
+
+1. **Read usage before every job.** Every run records `rate_limits` (weekly used_percent, reset time) in its rollout under
+   `~\.codex\sessions`. The release chat's runner (`queue2.sh` + `codex_usage.sh`, session scratchpad) refuses to START a job
+   when usage is at or above that job's cap.
+2. **Daily ceilings (cumulative weekly %):** Thu 24: 15; Fri 25: 28; Sat 26: 40; Sun 27: 52; Mon 28: 65; Tue 29 (release): 80;
+   Wed 30: 90; Thu 1 Oct: 97. About 1 AutoCAD pass plus 2-3 builds a day. Keep a reserve for release-day testing.
+3. **Model per job:**
+   - Window and code builds: **gpt-6-sol** (the everyday coding model) at **medium**; **high** only for a complex window.
+   - Mechanical chores (rewording, log conflicts): **gpt-6-luna** at **low**, or done by Claude directly.
+   - AutoCAD testing (needs judgement on screen): **gpt-6-astra** at **low**, with a precise brief, a stated scope and a time cap
+     (about 2 hours). Never an open-ended "every button" pass again.
+   - Never astra at high or above unless a job has failed on sol.
+4. **Concurrency:** one AutoCAD pass plus at most one build at a time.
+5. **Measure:** the runner logs usage before and after each job (`queue.log`), so the cost per model and effort becomes known;
+   adjust the ceilings from the measurements.
+
+### Claude - resets Friday 12:00 each week
+
+1. **Build cheap, audit strong.** Builders run on **Sonnet** for scoped work, which is most window, wording, test and behaviour
+   fixes with clear evidence. **Opus** builds only spine / undo / C7-object / cross-cutting work, or a task Sonnet has
+   failed. Before a Sonnet PR is merged, one **Opus review** (a reviewer agent on the diff, not a rebuild) checks it. The
+   release chat runs the tests and merges.
+2. **Pace:** about 14% of the week a day on average. Build-heavy days (Fri afternoon to Mon) up to about 18%. Release day
+   about 10%. Keep about 10% in reserve.
+3. **The release chat itself** makes fewer, larger turns and doesn't re-read big files. The orchestrator's own context is
+   the largest single cost.
+4. **Only where it holds speed and quality:** if a Sonnet build comes back wrong twice, that task goes to Opus.
