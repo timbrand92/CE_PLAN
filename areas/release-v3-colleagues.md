@@ -60,7 +60,9 @@ Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Se
 2. **With that config present, Manager 1.0.2 looks for approved builds ONLY in online storage, never in the IT Admin folder** (`CeApprovedReleaseService.GetApprovedReleases` at `c5250a11`).
 3. **Both storage keys were regenerated for SEC-001 in July**, and the admin link was confirmed dead then (memory record `sec-001-azure-sas-leak`). So colleagues' automatic updates are **very likely dead**. Not tested from here: that would mean using the link.
 4. **Consequence for Tuesday — ruled:** the pilot colleague installs by hand, with AutoCAD closed (Tim, 23 Sep: *"By hand, AutoCAD closed"*). The canary route is not relied on; fixing automatic updates comes after Tuesday.
-5. **Housekeeping, not urgent:** a dead admin link still sits in a folder every colleague syncs. It grants nothing once the key is rotated, but it should not be there. For Tim to decide after Tuesday.
+5. **Online storage, checked by the deploy chat 23 Sep (its message to this chat):** the read link in Tim's key drawer is **alive** (read and list only, expires 22 Sep 2027; a list returned 193 files). **What is published there is from 28 April and in the old single-version layout** (no 2022/2025/2027 split, no native modules). The deploy chat switched the read link on in Tim's installed Manager on Tim's word, found this, and on Tim's ruling **switched it off again** (all three lanes blanked, read back). **The online channel stays off until the current build is published there** — that needs the admin link (Tim's PC only) and Tim's word on the exact package. After Tuesday.
+6. **The new Manager refuses old unsigned approvals** (read 23 Sep, `CeApprovedReleaseService` on `master`): an approval without the signed, pinned identity is rejected (*"This approval predates exact signed-content verification"*). So the pilot colleague's new Manager will **not** pull the April or July builds back over Version 3. **Latent flaw logged as BUG-165:** its version comparison would rank the old-style number `2026.0420.1549` as newer than `3.0.0`; only the signature check stops it.
+7. **Housekeeping, not urgent:** a dead admin link still sits in a folder every colleague syncs. It grants nothing once the key is rotated, but it should not be there. For Tim to decide after Tuesday.
 
 ### The packaging routes that already exist — no new script needed (read 23 Sep)
 
@@ -95,7 +97,11 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 1. **REL-00 Codex AutoCAD run, pass 1** — on the installed `3.0.0+b02f3ec7` (deployed 23 Sep 11:26 by `CE_ACAD / release-v3-colleagues / deploy / 01`; read back by this chat at 11:27, all three lanes, common library matching Civil and Manager lane for lane): start-up, release checks (three plugins, one common library), the never-run 18 Sep list, the 19 Sep overnight fixes V1 to V18, and the 37 faults of 16 Sep by name. List: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. **Status:** list written 23 Sep; not started.
 2. **REL-01 Freeze** — Civil and Manager are the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"* and *"Newest saved for all three"*. Proposed: **Thursday 24 Sep, 5:30pm**, announced on register #78. **Structural = `codex/structural-ui-preservation-20260915` @ `60c41228`** (Tim, 23 Sep: *"Yours + Codex's 4 window fixes"*). **Status:** Proposed.
 3. **REL-02 Fix what pass 1 finds** — one area at a time, CDWT, CD, PIT first (Tim, 16 Sep). Each fix lands on `master` before the freeze. **Status:** waiting on pass 1.
-4. **REL-03 Package** — Thursday night: build all three plugins, all three AutoCAD lanes, one matching common library; full automated suite; package audit (hashes, every file present). **Status:** Proposed.
+4. **REL-03 Package** — Thursday night: build all three plugins, all three AutoCAD lanes, one matching common library; full automated suite; package audit (hashes, every file present). **Status:** practice build done 23 Sep, started 11:36, last build finished by 11:42 — nothing installed, installed plugins read identical before and after:
+   - **Civil** `b02f3ec7`: built and installed by the deploy chat at 11:26 (all three lanes). Its own `build_installer.ps1` needs the transform module built first with `/p:ProductionIntegration=true`.
+   - **Manager** `master`: first attempt **failed** on the 2022 lane (reference folder order, REL-BUILD-01). Fixed, merged as PR #89 (`c66fc481`). Rebuilt without the `Platform=x64` flag (the package check looks in `bin\Release`): *"Complete 72-file, three-lane release candidate verified"*, 0 errors, Manager `1.1.0+b02f3ec7` in all three lanes, common library **identical to installed Civil in all three lanes**.
+   - **Structural** `60c41228`: its own `build_installer.ps1`, three lanes, refs from `C:\TimOS\refs\autocad`: *"Complete three-lane unsigned release candidate verified"*, 0 errors, version 1.0.74. Candidate in this chat's scratchpad; worktree `rel-structural-60c41228` created by this chat.
+   - **Not yet done:** the full automated test suite on the frozen line; a package audit of all three together.
 5. **REL-04 Install the package on Tim's PC** — Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.
 6. **REL-05 Codex pass 2** — Part Z of the list: the tank change and every fix since pass 1, on the package. Friday evening and the weekend. **Status:** Proposed.
 7. **REL-06 AutoCAD 2022** — Monday 28 Sep, 30 minutes on a colleague's 2022 PC (Tim: *"Yes, Monday"*). Five steps written by Claude once the package exists. **Status:** Proposed.
@@ -137,6 +143,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
 1. **BUG-163** — CDWT "AutoCAD cannot continue" at the callout point. Brief: `archive\chat-records-2026-09\CHAT_PROMPT_CDWT_CRASH_2026-09-23.md`. OPEN.
 2. **BUG-164** — AutoCAD sometimes crashes on closing (Tim: *"Sometimes"*). Same brief. OPEN.
+3. **BUG-165** — latent: Manager's version check ranks `2026.0420.1549` above `3.0.0`; held back only by the signed-approval check. Not a Tuesday blocker. OPEN.
 
 ## 7. Parked
 
