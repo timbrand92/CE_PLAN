@@ -54,7 +54,7 @@ Start with a **top ten**: the changes that would most improve a colleague's firs
 The shipping Structural is 1.0.74 (`60c41228`) plus today's fix for SBEAM on AutoCAD 2027 (`aad3fe02`, branch
 `claude/struc-text-order-60c41228`). Audit it as it will ship:
 
-1. Run every command on the CE STRUC tab and the Structural panels on `DWG-S.dwg` (blank). If Tim has named a structural job
+1. **Start with the commands nobody has run on AutoCAD 2027** (the deploy chat's point: SBEAM was broken on every 2027 drawing and nobody had drawn a steel beam on the shipping build until 23 Sep). Then run every other command on the CE STRUC tab and the Structural panels, on `DWG-S.dwg` (blank). If Tim has named a structural job
    copy by then, use it too; **do not pick one yourself.**
 2. For each command: does it work, what does it draw, Escape, Undo, the Feel line (Part H), and anything in the Structural log
    (`%APPDATA%\TIM_CE_CADTOOLS\logs\ce_struc_structured_*.log`) for that minute: copy the exception and stack lines.
