@@ -23,6 +23,52 @@
 
 ---
 
+## LIVE since 23 Sep 2026 11:26 — `3.0.0+b02f3ec7` built from **master**
+
+Tim: **"AUTOCAD IS CLOSED, DEPLOY"**. **The first release built from `master`**, now that PR #87 has made the
+main line equal what is installed.
+
+**Read back by hand from all three lane DLLs, not from the installer's output — all three identical:**
+
+1. **Legacy** (net48, AutoCAD 2022–2024) — `3.0.0+b02f3ec7988e9666199aab5bbd16dee482acd09b`
+2. **Net8** (AutoCAD 2025–2026) — same
+3. **Modern** (net10, AutoCAD 2027) — same
+
+Lane SHA256: Legacy `B1666539…5826A1` · Net8 `54337DB6…D4D517` · Modern `BAB029FC…6800FA8`.
+Native modules staged in Modern: grip `.arx` 82 KB, objects `.dbx` 108 KB, transform `.arx` 74 KB.
+
+**Tim's one-action undo** — the deploy script does not back up, so both were taken by hand first:
+
+1. `CE_CVL_SUITE_PRE_d90659cf_20260923-110557.backup` — 133 MB, 806 files
+2. `CE_SUITE_MANAGER_PRE_CESHARED_20260923-110557.backup` — 75 files
+
+**CE_SHARED** — the script does not sync it. All three Manager lanes differed and were copied from Civil,
+each hash-verified after the copy: Legacy `B35FEE12…`, Net8 `F98CE4C0…`, Modern `41DD9367…`.
+Independently re-read afterwards and confirmed identical lane for lane.
+**STRUCTURAL IS NOT REDEPLOYED** — still `1.0.74+5d723d41`.
+
+### What this carries beyond `d90659cf`
+
+1. **CDWT-LINK-01** — a tank finds its own plan drawing, matched on the litres in the plan caption.
+2. **CD-RECENT-01** — the CD window's "Recent:" strip trimmed (four diameter buttons, not ten).
+3. **DEPLOY-01** — the release script's reference paths, and a preflight over eleven inputs.
+4. Two client addresses out of the saved code; the command-count guard corrected for `SML`/`CHECKML`.
+
+### Testing
+
+**`CODEX_TEST_RUN_2026-09-23.md`** (55 steps, mine) is folded into the release chat's single list as **Part B**.
+That list is the one Tim uses. **Part X needs an AutoCAD 2024 machine** and is carried to Monday's colleague check.
+
+### The first attempt was refused, and it is worth recording
+
+At 11:07 the installer stopped: `ERROR: AutoCAD is running (PID 8616)` — AutoCAD had been opened between the
+two checks. **Nothing was copied or removed.** On the retry the first check caught AutoCAD **still shutting
+down** (a process at 64 K), so **four** checks were made before installing. `accoreconsole.exe` was also
+running; its loaded modules were inspected and it was not holding the bundle. **The deploy script checks only
+`acad.exe`, never `accoreconsole`.**
+
+---
+
 ## LIVE since 23 Sep 2026 09:36 — `3.0.0+d90659cf` on `claude/civil-merge-2026-09-23`
 
 Tim: **"AUTOCAD IS CLOSED, DEPLOY"** (23 Sep, 09:34). AutoCAD checked twice, eight seconds apart, before
