@@ -81,6 +81,8 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 8. **G-04b** (PR #101, `8e17ab6e`): CDDESIGN finds the council in a council letter or permit in the job when the folder's suburb does not settle it. AutoCAD 2027 only. Steps: Codex list Part G, G3, G5 and G6.
 9. **R-02** (PR #102, `40a1e509`): on AutoCAD 2022-2024, the CE CVL toolbar's Rules and Rulebook buttons show the ribbon's pictures. Tim's VM check, Part M6b.
 10. **PIT-BATCH-01 + PIPE-EDIT-WHY-01** (PR #103, `659b6540`): select two pits, Edit Pit, and the batch editor opens (B-P5 again). Edit Pipe on a pipe with doubled labels says why in plain words (B-L3 again).
+11. **LPD-NOWRITE-01** (PR #105, `e7a0af71`): `CDLPD`, type `CouncilP`: the message, and nothing on the drawing. Escape at the connection question: nothing on the drawing.
+12. **CRITERIA-ANCHOR-01** (PR #106, `2a22c381`): CDCALC, Insert Criteria Block, pick a clear point: the table's top-left corner is at the pick.
 
 ---
 
