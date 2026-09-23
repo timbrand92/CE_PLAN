@@ -1,4 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
+## Project Review, What CE Found and Pit Schedule — REVIEW-SCHEDULE-02 (24 September 2026, awaiting release)
+
+1. **Candidate:** [PR #140](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/140), codex/ui-review tip 00fbda40, implementation af7dd32c; ready for review. Three Release lanes 0 errors each. Civil: 10,692 passed / 11 exact baseline failures / 19 skipped / 10,722 total. All 65 targeted checks passed in the full suite. All 34 dark/light compiled-window pictures inspected and unchanged after the suite. Not installed or Tim-accepted; no AutoCAD opened by this session.
+2. **After release-owner installation, AutoCAD 2027 and 2024/net48:** on a synthetic drawing open CDDASHBOARD. Visit all seven tabs, filter and Clear all, scroll to the final finding, select it and Show in drawing; confirm the label and highlighted object agree. Check again, CSV and Escape. Open CDCHECKCURRENT; select an item, switch to Attached, select an attached drawing and Show in drawing. Summary and Surfaces must not highlight a hidden prior selection. Read the full explanation and last surface note. Header/footer stay fixed in both themes.
+3. **Pit Schedule native remainder:** open PITSCHEDULE; scroll to the final pit/inlet and switch the three column views. Edit/restore one cell, reorder a group, apply/clear a search and confirm the stated output scope is unchanged. Review changes, choose set/system, place/update once and cancel once; check Undo, Close/Escape and drawing save/reopen. Drawing selection/output, persistence and keyboard feel remain the native acceptance work. Automated evidence already covers layout, tab clipping, final-row access, selected-row contrast, labels, filter/output separation and command bindings. This supersedes earlier finding/schedule page-button checks.
+
 
 ## New Pit and Edit Pit levels — UI-NEWPIT-02 (24 September 2026, awaiting release)
 
