@@ -15,6 +15,14 @@
 
 ---
 
+## CDWT-LAYOUT-02 — code built; release gate blocked — 24 Sep 2026
+
+1. **Candidate:** draft [PR #135](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/135), `codex/ui-cdwt` at `24dde703`. Three build lanes: 0 errors. Focused Water Tank: 192/192. Full Civil: 10,353 passed, 12 failed, 19 skipped; the extra failure above the 11 known is the unrelated PDF resource-in-use test. Master subsequently advanced; integration has a regression-log-only conflict. Not installed or accepted.
+2. **Already automated:** both themes, every bounded page, minimum/opening dimensions, fixed footer, captions, paging/selection, matched-first plans, gold/blue next action, typed capacity, empty lists and page-button double clicks. Twenty real-window off-screen pictures inspected and committed. No AutoCAD launch in this build session.
+3. **Remaining after separately authorised combined installation — AutoCAD 2027:** open CDWT, choose a tank and check its matching plan is first; visit the last capacity and Plan pages, choose a plan, switch tabs and confirm capacity/selection and footer stay fixed. Check dark/light once, typed litres and detention/reuse. Complete representative Place/double-click and Tag existing flows; Cancel/Escape draw nothing; one Undo and save/reopen retain the established behaviour.
+4. **AutoCAD 2024/net48:** confirm the existing CDWT entry still works; this WPF window change compiles only in the 2027 lane. Tim's native acceptance remains pending. See `areas/civil-G-water-tanks-cdwt.md` section 10 for the handoff.
+
+---
 ## COLLEAGUE RELEASE, Tuesday 29 Sep — Codex runs the AutoCAD testing (Tim, 23 Sep)
 
 **The one run list:** `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. Pass 1 covers the installed
