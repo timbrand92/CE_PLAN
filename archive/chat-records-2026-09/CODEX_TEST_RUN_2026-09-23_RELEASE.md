@@ -92,6 +92,19 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 ---
 
+## PART T — the tank crash, reproduced on purpose (BUG-163)
+
+**Why:** on 16 Sep AutoCAD died during the CDWT callout pick on this drawing. The only damaged object in it is a pasted block holding a **PDF underlay** whose outline AutoCAD cannot compute. A crash here is **expected evidence, not a new failure**. Work on a COPY of `C:\Lisp Files\_TEST_COPIES_20260923\DWG-B_16SEP_PRECRASH.dwg`. Save nothing.
+
+| ID | Step | What "right" looks like |
+|---|---|---|
+| **T1** | Open the copy. Type `ZOOM`, `C`, `57876,-210513`, height `20000`. The block holding a PDF picture on layer BLOCKS sits there (handle `1041DE`). Screenshot. | You can see where it sits. Record whether the PDF picture shows or is missing. |
+| **T2** | `CDWT`, choose any tank, press **Place tank**, and pick the insertion point **about 5 m from that block**. At the callout prompt, move the cursor **over the block** and pick there. | **Record exactly what happens.** If AutoCAD stops with "cannot continue", that is the finding: say so plainly, and note the newest file in `%LOCALAPPDATA%\Autodesk\CER` after restart. |
+| **T3** | Repeat T2, but pick the callout point **far from the block** (over 50 m away). | Record. A difference between T2 and T3 is the evidence. |
+| **T4** | Repeat T2 on a COPY of `DWG-A`. | Record. |
+
+---
+
 ## PART A — the 18 September list, now installed and never run
 
 **Everything in `C:\CE_PLAN\archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-18.md` is inside the installed build** (its payload `0a84eb07` was checked as contained in `d90659cf`, which `b02f3ec7` contains, 23 Sep). It has never been run.
@@ -177,7 +190,7 @@ Tim arranges 30 minutes on a colleague's 2022 PC (Tim, 23 Sep: *"Yes, Monday"*).
 | ID | Step | What "right" looks like |
 |---|---|---|
 | **M1** | Before anything: open AutoCAD 2022, type `CEMANAGER` (or look at the CE About box). Write down the versions shown. Close AutoCAD. | Their July versions (expected Civil 2.1.14, Manager 1.0.2, Structural 1.0.40). Whatever it says, write it down. |
-| **M2** | Task Manager: no `acad.exe`, no `accoreconsole.exe`. Then the REL-09 install: in `%APPDATA%\Autodesk\ApplicationPlugins` rename the three CE folders by adding `_PRE_V3.backup`; check `C:\ProgramData\Autodesk\ApplicationPlugins` for any CE folder (if one is there, stop and tell Tim); copy in the three new `.bundle` folders. | Three new folders, three `_PRE_V3.backup` folders, nothing CE in ProgramData. |
+| **M2** | Task Manager: no `acad.exe`, no `accoreconsole.exe`. Then the REL-09 install: in `%APPDATA%\Autodesk\ApplicationPlugins` rename the three CE folders by adding `_PRE_V3.backup`; check `C:\ProgramData\Autodesk\ApplicationPlugins`: a CE `.bundle` folder there **with a live `PackageContents.xml`** means stop and tell Tim (an old July Manager there carries common library 1.0.0 and would load first); one whose `PackageContents.xml` is renamed or missing is harmless: note it and carry on. Then copy in the three new `.bundle` folders. | Three new folders, three `_PRE_V3.backup` folders, no live CE bundle in ProgramData. |
 | **M3** | Open AutoCAD 2022. Read the command line from start-up. | CE ribbon tab loads with Civil, Manager and Structural. **No** "unable to load", no error box. |
 | **M4** | `CEMANAGER`. | Shows Civil **3.0.0**, Manager **1.1.0**, Structural **1.0.74**. |
 | **M5** | On a COPY of a drainage job: `CD`, draw one pipe between two pits with levels. Double-click it, change the diameter, OK. `U` once. | Pipe, text, arrow and levels land; the text shows the new size; one `U` takes the edit back. |

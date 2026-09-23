@@ -8,6 +8,10 @@
 
 **Codex (23 Sep, 12:02):** the deploy chat drives Codex from the command line (`codex exec`, first run started 11:53, session `01a0cbf7-9dc0-71b3-bd5b-4d54dc73e0d1`), **one run at a time**, because installs and tests share one AutoCAD. The plan chat does not post into Codex sessions: Tim's desktop Codex session `01a0cbcd…` is him setting up a virtual machine. Tim allowed the plan chat to post into the test session; it is not needed while the deploy chat drives. **Log of messages this chat posted to Codex: none.**
 
+**Codex set-up (23 Sep, release chat's call):** the `C:\Autodesk\CERef\*-isolate` folders are headless-only (no plugins folder), so rule 14's isolated set-up does not exist yet. The deploy chat builds and proves a GUI sandbox first (redirected APPDATA with a plugins copy, a separate `/p` profile). **If it is not proven by 18:00 on 23 Sep, Codex runs on Tim's live AutoCAD** under rules 13-14, after a snapshot of his AutoCAD registry profile and support folder, because Tim asked for Codex testing over and over until Tuesday.
+
+**If this chat's memory fills up (context):** the app summarises the older conversation and carries on; nothing that matters lives only in the chat. The state lives here, in the decision file, the bug file, PENDING_TESTS and the one Codex list. If this chat ever has to be replaced, the next one is `CE_ACAD / release-v3-colleagues / plan / 02` and starts from this file. The 30-minute timer lives only in this chat; a replacement chat must set its own.
+
 **Installs by this chat:** 23 Sep 12:18 — `3.0.0+aeb03763` (BUG-164 + REL-BUILD-01); first attempt at 12:13 stopped at the build step with nothing changed (script fault, fixed).
 
 Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build, which colleagues, how it is packaged and installed, how it is rolled back, and what they are told. Opened 23 Sep 2026 for Tim's Tuesday 29 Sep target (`decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md`).
@@ -142,7 +146,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 1. **Close AutoCAD.** Check Task Manager: no `acad.exe`, no `accoreconsole.exe`.
 2. Open File Explorer at `%APPDATA%\Autodesk\ApplicationPlugins`.
 3. **Rename** `CE_CVL_SUITE.bundle`, `CE_SUITE_MANAGER.bundle` and `CE_STRUC_SUITE.bundle` by adding `_PRE_V3.backup` to the end.
-4. **Check `C:\ProgramData\Autodesk\ApplicationPlugins`** for any CE folder. If one is there, stop and tell Tim: AutoCAD would load two copies. (Tim's own PC has an old Manager 1.0.0 there, switched off on 17 Jul by renaming its `PackageContents.xml` to `PackageContents.xml.DISABLED-duplicate-appdata-wins`; a colleague may have one that is still live.)
+4. **Check `C:\ProgramData\Autodesk\ApplicationPlugins`** for a CE `.bundle` folder **with a live `PackageContents.xml`**. If one is there, stop and tell Tim: an old July Manager there carries common library 1.0.0 and would load first, and the ribbon can fail silently. A folder whose `PackageContents.xml` is renamed or missing is harmless: note it and carry on (deploy chat, 23 Sep). (Tim's own PC has an old Manager 1.0.0 there, switched off on 17 Jul by renaming its `PackageContents.xml` to `PackageContents.xml.DISABLED-duplicate-appdata-wins`; a colleague may have one that is still live.)
 5. **Copy the three new `.bundle` folders** from the pilot folder into `%APPDATA%\Autodesk\ApplicationPlugins`.
 6. Open AutoCAD. The CE ribbon loads. `CEMANAGER` shows the three new versions.
 
