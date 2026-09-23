@@ -33,3 +33,10 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 _"These things must still work", re-checked before any deploy. Seed from `REGRESSION_LOG.md` in the plugin repo._
 
 1. _(none recorded yet)_
+
+## HELP-UI-20260923 — presentation-only build stopped at navigation boundary
+
+1. **Tim's instruction, 23 Sep 2026:** "BUILD A WINDOW. Code only. DO NOT OPEN AUTOCAD. DO NOT INSTALL ANYTHING." Scope: Help Centre on new branch `codex/ui-help`; "If a layout change seems to need a behaviour change, STOP and say so in the PR."
+2. **Status:** no window built or tested, nothing installed or Tim-accepted. Draft PR https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/125, documentation commit `5f441f0c`. Fresh worktree `C:\Lisp Files\CE_ACAD_PLUGIN\.codex\worktrees\ui-help-20260923`, based on fetched master `8f5b8d9f`.
+3. **Evidence learned:** Civil guide HTML explicitly scrolls for section links and direct command anchors; the shared Help reader creates result controls in code and restores scroll/expanded-detail state. Removing scrollbars in markup alone hides content. Behaviour owner must supply bounded navigation preserving these destinations before layout can safely finish. This is an implementation finding, not a new Tim decision.
+4. **Preserved:** guide content, commands, all code and view models. No builds or Civil tests run for this documentation-only stop. No manual test requested. Future window must match CdDialog header/footer and theme and pass all three build lanes, the known Civil baseline and Tim's no-scroll acceptance in 2027 / 2024 fallback.
