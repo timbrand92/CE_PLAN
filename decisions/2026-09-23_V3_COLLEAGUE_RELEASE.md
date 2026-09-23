@@ -136,6 +136,11 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 2. **Tuesday's go-ahead:** *"15-minute look Tuesday morning"* (Claude's recommendation). Claude leaves one page: what passed, what is hidden or not ready, a five-step check. Tim looks, says yes, the colleague installs.
 3. **AutoCAD 2022:** *"vm will have 2022 but i will test on tuesday"* — the virtual machine Tim is setting up will have AutoCAD 2022; **Tim runs the 2022 check himself on Tuesday.** Codex does not.
 
+## Codex does the human jobs; the two work back to back — Tim, 23 Sep 2026, about 12:15
+
+1. *"if you ever need something like that done like a human, ask codex to do it"* — said when AutoCAD had to be closed for an install. **Meaning:** anything that needs a person at the screen (close AutoCAD, answer a dialog, click through a window) is asked of Codex, through the deploy chat that drives it, instead of waiting for Tim. This replaces the plan chat's own limit "a chat never closes AutoCAD itself" for Codex only; the other three limits stand (AutoCAD really closed before an install, never under a Codex test run, backups and read-back).
+2. *"so once i go you and codex run evrerything and go back to back with each other"* — **confirmed:** Claude fixes and installs, Codex tests, Claude fixes what Codex finds, repeat, until Tuesday.
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
