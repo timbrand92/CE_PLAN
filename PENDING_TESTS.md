@@ -1,5 +1,13 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Help Centre scrolling - code ready for review, 24 September 2026
+
+1. **Candidate:** [PR #125](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/125), codex/ui-help tip a651680b, code 54801c50. Ready for review; not installed or Tim-accepted. Three Release lanes 0 errors each; full Civil 10,595 passed / 11 exact baseline failures / 19 skipped. Shared Help 45/45, browser 3/3, real Civil renders 2/2. All 64 current pictures inspected, unchanged after full suite.
+2. **After release-owner installation, AutoCAD 2027 and 2024/net48:** open Help, search "change pipe size", open the result. Wheel and Page Down/Page Up scroll its complete section; header, search, left section list and footer stay fixed. Reach the last topic and end of the guide, check Home and Escape. Keep the visible version 2.1 guidance warning on Introduction.
+3. **Shared reader:** open Move and rotate, scroll to More detail, return Home and Continue reading, then close/reopen. The reading position returns; the existing guarded Start tool and minimise/restore paths still need native host acceptance. No new drawing operation is introduced.
+4. **Supersedes:** previous Help Previous/Next-page acceptance steps and -page-/-tasks- pictures. Use current help-window-<theme>-<section>.png, help-civil-<theme>-<section>.png and help-shared-<theme>-{home,reading-top,reading-end}.png evidence in docs/image/V3_WINDOWS. Current ribbon tour and older guide content remain behaviour-owner work.
+
+
 ## CDCALC whole window - UI-CDCALC-02 (24 September 2026, awaiting release)
 
 1. **Candidate:** `codex/ui-cdcalc`, tip `88d0e99d`, [PR #139](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/139), ready for review. Final master integration `59e03b0e` includes master `53b5a8c4`. All three Release lanes 0 errors; Civil 10,654 total / 10,624 passed / 11 known failures / 19 skipped, exact baseline names; all nine CDCALC window tests pass. Thirty-two dark/light compiled-window pictures inspected and unchanged after the final suite. No AutoCAD opened, installation or acceptance by this session.
