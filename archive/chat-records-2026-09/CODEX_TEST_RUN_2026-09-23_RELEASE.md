@@ -215,6 +215,7 @@ Tim arranges 30 minutes on a colleague's 2022 PC (Tim, 23 Sep: *"Yes, Monday"*).
 | **M4** | `CEMANAGER`. | Shows Civil **3.0.0**, Manager **1.1.0**, Structural **1.0.74**. |
 | **M5** | On a COPY of a drainage job: `CD`, draw one pipe between two pits with levels. Double-click it, change the diameter, OK. `U` once. | Pipe, text, arrow and levels land; the text shows the new size; one `U` takes the edit back. |
 | **M6** | `PITSCHEDULE` on the same copy. | Opens and lists the pits. |
+| **M6b** | **R-02 (added 23 Sep).** Look at the CE CVL toolbar and the CE CVL pull-down menu. | The **Rules** and **Rulebook** buttons show the same pictures as on the 2027 ribbon (an info mark and a settings mark), not the plain tool picture. Every other button looks as it did. Also note whether AutoCAD printed *"Menu item failed to load"* at start-up (Queued item 9). |
 | **M7** | On a COPY of a structural job: `SBEAM`, draw one beam. | Draws normally. |
 | **M8** | **Mixed versions:** open a COPY of a drawing Tim has worked on in Version 3 on AutoCAD 2027 (pipes converted with `CDC7UPGRADE`). Click a pipe. | **Write down exactly what shows** — the pipe draws, can be picked, and what the Properties palette calls it. A warning about missing objects is information, not a failure. |
 | **M9** | Close AutoCAD. Note any crash message (BUG-164). Then go back: delete the three new folders, remove `_PRE_V3.backup` from the three old names, open AutoCAD, `CEMANAGER`. | The July versions from M1 are back and the ribbon loads. |
