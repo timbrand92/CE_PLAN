@@ -190,6 +190,16 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 >
 > **Drawings shared with colleagues still on the July version** [FILL from Tim's Tuesday 2022/VM check and the M8 mixed-version step]: what they will see when they open a drawing you have worked on.
 
+## 5c. Tim's Tuesday page — SKELETON (fill Monday evening; one page, numbered lists, no tables)
+
+1. **The package:** which candidate folder, the three versions, and that it is byte-for-byte what Codex tested (manifest check result).
+2. **What passed in Codex's runs** — by area in Tim's order (CDWT, CD, PIT, then the rest), plain words, one line each. [FILL]
+3. **What failed or is hidden for the pilot** — each with what the colleague would see and what we did (fixed and re-tested / left out / noted in the colleague notes). [FILL]
+4. **Crashes:** BUG-164 (closing AutoCAD) result from Part C; BUG-163 (CDWT) result from Part T and the ruling it needs from Tim (Nearest snap at the callout, his BUG-127). [FILL]
+5. **His AutoCAD set-up:** OSMODE, the profile pointer, the template and the CE log checked against the 23 Sep baseline; anything Codex changed and put back; the `CE_SANDBOX` profile copy (keep or remove). [FILL]
+6. **Five-step check for Tim (about 15 minutes):** open a real job, one CD pipe, one PIT edit, one CDWT tank, close AutoCAD. [FILL exact steps from what changed]
+7. **Decisions for him, one line each with a recommendation:** the pilot colleague's name; the pilot folder in IT Admin; the storage write key and signing key; Structural for 2022 colleagues; BUG-163 ruling. Then his 2022 check on the virtual machine (Part M).
+
 ## 6. Bugs
 
 `BUG_CARPARK.md` is the one bug file. Release blockers found in this area are listed here by ID.
