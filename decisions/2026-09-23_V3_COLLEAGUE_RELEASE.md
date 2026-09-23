@@ -184,3 +184,10 @@ Clock times first written here were Claude's estimates, and several were wrong b
 1. *"lets go with 5 builders please and dont worry about the usage until you hit 60% of weekly usage then give me a report of how its going"* **Meaning:** five background build lanes managed by the release chat; at 60% of the weekly (all models) limit, report usage and progress to Tim. At the time: weekly 36%, resets Fri 25 Sep about 12:00.
 2. *"continue my mistake"* — Tim's interruption (a rejected tool call) was not meant to stop the work. It had stopped two builders; their finished work was saved (Structural `9ec20c5c` pushed; the layer-name work committed as WIP `c8aafc85`) and two replacement builders continue from it.
 3. *"we did the look, feel, UI, UX, review pass on the structural by Codex. Can you do the same for the civil module as well?"* **Meaning:** Codex runs Part UC, a Civil look/feel/UI/UX review (read-only), after the short re-run list, judged against Tim's standing rules (no scrollbars, the 30-times-a-day test, colour where attention is needed with gold on dark and CE blue #1E5AA8 on light and no teal, plain English) and discoverability for a colleague's first week. Output: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_CIVIL_UIUX_REVIEW.md`, top ten first; Behaviour items go to the build lanes, Window items to Codex (ruling B).
+
+## Evidence rule for many small installs — agreed with the deploy chat, 23 Sep 2026 about 19:15 (Claude's call)
+
+1. Every install message carries the S1 string, the re-runs it adds, and **INVALIDATES:** — which earlier results no longer describe the installed build.
+2. **A result stays valid until the code under it changes, not until the next install.**
+3. Results gathered against an AutoCAD that was interfered with (e.g. closed under a live run, as with pass 2's tail) are marked separately, because no commit hash shows that.
+4. Each Codex result is tagged with the Civil build it ran against.
