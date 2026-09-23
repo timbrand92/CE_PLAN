@@ -16,7 +16,9 @@ The master plan's own definition of done for Version 3 (a standalone Civil insta
 
 **Working without Tim until Tuesday (Tim, 23 Sep: *"keep going WITHOUT MY INVOLVEMENT"*).** Claude's calls are recorded in the decision file. Things that need Tim wait in the list below, for Monday.
 
-### Queued for Tim, Monday 28 Sep (do not ask before then)
+**While Tim is away (23 to 29 Sep):** this chat wakes itself every 30 minutes (session timer `921d5b90`, at :13 and :43) and works the list below; installs are done by this chat under Tim's standing override, only with AutoCAD closed and no Codex run active; the deploy chat drives Codex against the one list. The timer lives only as long as this chat stays open on Tim's PC.
+
+### Queued for Tim, Tuesday 29 Sep morning (do not ask before then)
 
 1. **The pilot colleague's name** (on AutoCAD 2027) — Tim: *"I'll tell you Tuesday"*.
 2. **Where the pilot copy sits**: a separate `CE V3 PILOT` folder in IT Admin is proposed. Placing it there is publishing, so it needs his word — part of Tuesday's 15-minute look.
