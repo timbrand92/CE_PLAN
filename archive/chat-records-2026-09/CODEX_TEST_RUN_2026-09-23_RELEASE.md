@@ -20,7 +20,7 @@ Paste everything from RUN CONFIG down into a new Codex task.
 
 **Two passes, two builds:**
 
-1. **Pass 1, now:** the build **already installed**, `3.0.0+d90659cf`. It carries everything built from 16 to 23 Sep except one tank change. Parts S, R, A, V and K below.
+1. **Pass 1, now:** the build **already installed**, `3.0.0+b02f3ec7` (installed 23 Sep 11:26 by the deploy chat, read back by the release chat). It carries everything built from 16 to 23 Sep. Parts S, R, A, V, K and B below.
 2. **Pass 2, after Claude installs the colleague package (planned Friday 25 Sep, 2:00 to 3:00pm):** Part Z. **Do not start Part Z until step Z1 reads the new version.**
 
 Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
@@ -49,7 +49,7 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 | ID | Step | What "right" looks like |
 |---|---|---|
-| **S1** | PowerShell: `(Get-Item "$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Win64\Modern\CE_CVL_SUITE.dll").VersionInfo.ProductVersion` | **Record the full string.** Pass 1 expects `3.0.0+d90659cf25cee1bac8e9e106deb4a006f4e9fe7d`. **Anything else: STOP, everything is BLOCKED, tell Claude.** |
+| **S1** | PowerShell: `(Get-Item "$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Win64\Modern\CE_CVL_SUITE.dll").VersionInfo.ProductVersion` | **Record the full string.** Pass 1 expects `3.0.0+b02f3ec7988e9666199aab5bbd16dee482acd09b`. **Anything else: STOP, everything is BLOCKED, tell Claude.** |
 | **S2** | Start AutoCAD 2027. Open a COPY of a drainage job. | CE ribbon tab appears. No error dialog, no "unable to load" on the command line. |
 | **S3** | Type `CDINSPECTOR`. | It runs. **If any CE command is "Unknown command", stop — nothing below can run.** |
 | **S4** | Turn diagnostics on. | Say how you did it. |
@@ -76,10 +76,10 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 ## PART A — the 18 September list, now installed and never run
 
-**Everything in `C:\CE_PLAN\archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-18.md` is inside the installed build** (its payload `0a84eb07` was checked as contained in `d90659cf`, 23 Sep). It has never been run.
+**Everything in `C:\CE_PLAN\archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-18.md` is inside the installed build** (its payload `0a84eb07` was checked as contained in `d90659cf`, which `b02f3ec7` contains, 23 Sep). It has never been run.
 
 1. **Run it all, Parts N onward, in its order** (CDWT first, then CD, PIT and the rest).
-2. **Skip its Part S and its "section 0" stop rule** — this list's S1 replaces them. Its S1 said "must not be `d0ffe1a2`"; the installed `d90659cf` contains that payload and more.
+2. **Skip its Part S and its "section 0" stop rule** — this list's S1 replaces them. Its S1 said "must not be `d0ffe1a2`"; the installed `b02f3ec7` contains that payload and more.
 3. **Its section 3a (the short LPD note) may no longer apply**: overnight fix V1 below changed the default. Record what the note actually reads and move on.
 4. **Its section 3b (a cancelled editor still costs one Undo) is still open.** Expect it; report only if it behaves differently.
 5. **Its Part X (AutoCAD 2024) cannot run on this PC** — only AutoCAD 2027 is installed here. Mark X1 and X2 **BLOCKED — no AutoCAD 2024/2022 on this PC.** The 2022 check is Part M below and is not yours.
@@ -88,7 +88,7 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 ## PART V — the eighteen overnight fixes of 19 September, installed and never run
 
-The steps are the table **V1 to V18** in `C:\CE_PLAN\PENDING_TESTS.md`, section *"BUILT overnight 18→19 Sep"*. That section's heading still says NOT INSTALLED; **it is installed now**, inside `d90659cf`. Run all eighteen in order, 2027 only.
+The steps are the table **V1 to V18** in `C:\CE_PLAN\PENDING_TESTS.md`, section *"BUILT overnight 18→19 Sep"*. That section's heading still says NOT INSTALLED; **it is installed now**, inside `b02f3ec7`. Run all eighteen in order, 2027 only.
 
 ---
 
@@ -102,17 +102,25 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 
 ---
 
+## PART B — the deploy chat's list for this build, folded in (agreed by both release chats, 23 Sep)
+
+Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**, in its order. It was written for exactly this build, `b02f3ec7`.
+
+1. **Its section 0 and Part S are covered by this list's S1–S4.** Do not run them twice.
+2. **Its section 3 lists three known faults** (the cancelled-window Undo, the CDWT crash, the CD window scrolling). Treat them as it says.
+3. **Its step IDs clash with this list's letters** (both have an R, a T and a Z). **Prefix its IDs with `B-`** in your report: `B-T1`, `B-R1`, `B-Z1`.
+4. **Its Part X (AutoCAD 2024) cannot run on this PC.** Mark it **BLOCKED — no AutoCAD 2024/2022 on this PC**. It is carried to the Monday 2022 check.
+5. **Its T8 is the tank crash probe.** A crash there is expected. Say so, restart AutoCAD, carry on.
+
+---
+
 ## PART Z — pass 2, on the colleague package (only after Claude says it is installed)
 
 | ID | Step | What "right" looks like |
 |---|---|---|
-| **Z1** | S1 again. | **A new version string, not `d90659cf`.** Claude will tell you the exact one. If it still reads `d90659cf`, **STOP: Part Z is BLOCKED.** |
+| **Z1** | S1 again. | **A new version string, not `b02f3ec7`.** Claude will tell you the exact one. If it still reads `b02f3ec7`, **STOP: Part Z is BLOCKED.** |
 | **Z2** | Parts S2–S4 and all of Part R again. | Same as pass 1. |
-| **Z3** | **CDWT-LINK-01, a tank finds its own plan drawing.** `CDWT`, Above ground, pick **3000 L Round**. | The four 3000-litre plans come to the front of the grid, a gold line says four were found, **nothing disappears**. |
-| **Z4** | Pick one plan. Close CDWT, run it again, pick **3000 L Round** again. | **Your plan is already selected.** |
-| **Z5** | Switch question 1 to **Underground**, pick a tank. | The underground plans come first. |
-| **Z6** | Pick **2510 L**. | Its one plan is **selected outright**. |
-| **Z7** | Pick **7000 L**. | The gold line says no plan is marked 7000 L; the full list stays exactly as it was. |
+| **Z3** | **The tank finds its own plan (CDWT-LINK-01), on the package.** Re-run Part B's **T1 to T6**. | The same as in pass 1. Record each as `Z3-T1` and so on. **Never** copy a pass-1 result forward. |
 | **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**. Claude lists them when the package is installed. | Record each as its own row. **Never** copy a pass-1 result forward. |
 
 **Manager — 38 changes never installed on any PC before this package.** Before each step, **save the drawing copy**, so `DBMOD` reads 0.

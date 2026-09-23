@@ -18,8 +18,8 @@
 ## COLLEAGUE RELEASE, Tuesday 29 Sep — Codex runs the AutoCAD testing (Tim, 23 Sep)
 
 **The one run list:** `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. Pass 1 covers the installed
-`d90659cf`, including the 18 Sep list and V1 to V18 below, which are **installed now** even where their
-headings still say NOT INSTALLED. Area: `areas\release-v3-colleagues.md`.
+`b02f3ec7` (deployed 11:26 by the deploy chat), including the 18 Sep list, V1 to V18 below and the deploy chat's
+`CODEX_TEST_RUN_2026-09-23.md` folded in as Part B. All of it is **installed now**, even where headings still say NOT INSTALLED. Area: `areas\release-v3-colleagues.md`.
 
 ---
 

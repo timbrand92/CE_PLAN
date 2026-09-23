@@ -17,7 +17,7 @@ Tim, 23 Sep 2026, about 10:40am: *"can we continue working on trying to release 
 
 _Answers go below, in Tim's words, dated, the moment he gives them. An unanswered question stays open._
 
-## Answers — Tim, 23 Sep 2026, about 10:55am (clickable choices; question 3 typed by Tim)
+## Answers — Tim, 23 Sep 2026, saved 10:46 (clickable choices; question 3 typed by Tim)
 
 1. **Who gets it on Tuesday:** *"One colleague first"* (Claude's recommendation).
 2. **What ships:** *"Newest saved work"* — **not** Claude's recommendation (a copy of Tim's AutoCAD frozen Thursday). Taken as given. Claude's reading: the colleague build is the saved main line (`master`) at the freeze, including changes Tim has not drawn with yet.
@@ -30,14 +30,14 @@ _Answers go below, in Tim's words, dated, the moment he gives them. An unanswere
 2. The pilot colleague's AutoCAD version decides what Tuesday needs. **Still open:** which colleague, and on which AutoCAD.
 3. "Newest saved work" means anything another chat merges into `master` before the freeze reaches a colleague. The deploy register #78 is told the freeze time.
 
-## Second round — Tim, 23 Sep 2026, about 11:30am
+## Second round — Tim, 23 Sep 2026, saved 10:57
 
 1. **Who tests in AutoCAD:** *"i can get codex to do all testing on autocad whenever up until tuesday"* — typed by Tim instead of choosing the pre-check plan. **Override recorded (RULES 14.6), scope: AutoCAD testing for this release, until Tuesday 29 Sep.** Codex produces evidence; only Tim's word accepts. Run list: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`.
 2. **Pilot colleague:** *"I'll tell you later"*. Needed by Monday 28 Sep.
 3. **A 2022 PC for 30 minutes on Monday:** *"Yes, Monday"*.
 4. **This chat controls deployment** — Tim's words as relayed by the E-HOLD chat ("Pipe points locking to grade/invert"), 23 Sep: *"CE_ACAD / release-v3-colleagues / plan / 01 this chat controls deployment"*. Relayed, not heard directly by this chat.
 
-## Open, found 23 Sep about 11:20am — "newest saved work" and "Structural exactly as you use it" are different builds
+## Open, found 23 Sep before 10:57 — "newest saved work" and "Structural exactly as you use it" are different builds
 
 Read from git, not from a document:
 
@@ -47,9 +47,9 @@ Read from git, not from a document:
 
 **Question put to Tim:** for Manager and Structural, ship exactly what he runs, or the saved main line. Claude recommends what he runs: it is the only combination anyone has used, and it builds for 2022 as well as 2027 (checked: `5d723d41` targets net48, net8 and net10). ~~**Unanswered — stays open.**~~
 
-**Tim's answer, 23 Sep 2026, about 11:45am:** *"Newest saved for all three"* (not Claude's recommendation).
+**Tim's answer, 23 Sep 2026, saved 11:00:** *"Newest saved for all three"* (not Claude's recommendation).
 
-### CORRECTION — the evidence put to Tim for Structural was incomplete (Claude, 23 Sep, about 11:50am)
+### CORRECTION — the evidence put to Tim for Structural was incomplete (Claude, 23 Sep, saved 11:00)
 
 **Tim's words above are unchanged. The question he answered described the saved Structural as "a different mix that nobody has installed". It did not say that the saved one is OLDER.** Read from git after his answer:
 
@@ -61,7 +61,7 @@ Read from git, not from a document:
 
 **So for Structural, Tim's answer is re-asked with these facts** (the BUG-161 lesson: a ruling made on incomplete evidence is re-put, not acted on). **Manager and Civil stand as answered:** the saved Manager genuinely contains Tim's installed `96e7d76a` plus 38 newer changes; the saved Civil is his installed build plus CDWT-LINK-01.
 
-## Structural, re-asked with the corrected facts — Tim, 23 Sep 2026, about 12:00pm
+## Structural, re-asked with the corrected facts — Tim, 23 Sep 2026, saved 11:05
 
 Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four window fixes of 15 Sep, never installed; C the saved 1.0.42.
 
@@ -70,3 +70,12 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 **Meaning:** Structural for the colleague, and for Tim's PC on Friday, is built from `codex/structural-ui-preservation-20260915` @ `60c41228` (1.0.74 plus: Settings save confirmation, Settings Cancel/keyboard and load warning, Notes/Properties/Project Setup window connections, Publish validation and Cancel). It does not use the common library. The SML/CHECKML LISP port (saved main line only) is **not** in it; neither Tim nor any colleague has it installed today.
 
 **Whole release, as ruled:** Civil = saved main line at the freeze; Manager = saved main line at the freeze (Tim's installed 7 Sep build plus 38 later changes, never installed); Structural = `60c41228`. One colleague on Tuesday; Codex tests in AutoCAD; 2022 check Monday on a colleague's PC.
+
+## Third round — Tim, 23 Sep 2026, between 11:13 and 11:27 (clickable choices)
+
+1. **What other chats build before the freeze:** *"Failures + new features"* (not Claude's recommendation, which was failures only). Anything merged to `master` by Thursday 24 Sep 5:30pm goes to the colleague; new features get one Codex check, in pass 2.
+2. **Start a chat on the CDWT crash now:** *"Yes, start it now"* (Claude's recommendation). Brief written for the tanks chat ("CE Civil - LPD & Pits, Tanks, Level").
+
+## Note on times in this file
+
+Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.

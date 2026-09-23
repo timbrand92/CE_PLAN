@@ -4,6 +4,8 @@
 
 ## 1. What this area is
 
+**Two chats work this area (agreed 23 Sep):** `CE_ACAD / release-v3-colleagues / deploy / 01` does the installs Tim orders; `CE_ACAD / release-v3-colleagues / plan / 01` keeps this file, the decision file and the one Codex list. Neither edits the other's Codex list.
+
 Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build, which colleagues, how it is packaged and installed, how it is rolled back, and what they are told. Opened 23 Sep 2026 for Tim's Tuesday 29 Sep target (`decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md`).
 
 The master plan's own definition of done for Version 3 (a standalone Civil install, a controlled pilot, help and rollback) is the long goal. **Tuesday is a first step towards it, not the whole of it.**
@@ -50,7 +52,7 @@ Read from `Creative Engineering - IT Admin\` (OneDrive-synced), DLL product vers
 
 Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Sep test day mostly failed. **Nothing since has been recorded as accepted.** `d0ffe1a2` (16 Sep) and `d90659cf` (23 Sep) are installed and in daily use by Tim, which is evidence of use, not acceptance.
 
-### Colleagues' automatic update — read 23 Sep, about 12:30pm
+### Colleagues' automatic update — read 23 Sep, saved 11:13
 
 1. **The Manager 1.0.2 bundle offered in the IT Admin folder carries an online-storage config with both a read link and an admin link filled in** (`Contents\Win64\Assets\Config\blob-config.json`; values not printed or used here).
 2. **With that config present, Manager 1.0.2 looks for approved builds ONLY in online storage, never in the IT Admin folder** (`CeApprovedReleaseService.GetApprovedReleases` at `c5250a11`).
@@ -74,7 +76,7 @@ Three items, all before 16 Sep (`PENDING_TESTS.md`, Accepted section). The 16 Se
 4. **Known hazards on the installed build.** The CDWT crash (W4) has no established cause. The CD window layout fixes are not in it.
 5. **The release script.** `build_installer.ps1` was broken until DEPLOY-01 (23 Sep) and still does not build the transform module (`CE_TRANSFORM_2027.arx`); it is built by hand.
 
-## 4a. What stands between Tuesday and "most of Version 3" — checked 23 Sep 2026, about 11:10am
+## 4a. What stands between Tuesday and "most of Version 3" — checked 23 Sep 2026, saved 10:48
 
 Tim asked: *"whats stopping us from getting the large majority of version 3 by tuesday?"*
 
@@ -88,7 +90,7 @@ Tim asked: *"whats stopping us from getting the large majority of version 3 by t
 
 Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
-1. **REL-00 Codex AutoCAD run, pass 1** — on the installed `3.0.0+d90659cf`: start-up, release checks (three plugins, one common library), the never-run 18 Sep list, the 19 Sep overnight fixes V1 to V18, and the 37 faults of 16 Sep by name. List: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. **Status:** list written 23 Sep; not started.
+1. **REL-00 Codex AutoCAD run, pass 1** — on the installed `3.0.0+b02f3ec7` (deployed 23 Sep 11:26 by `CE_ACAD / release-v3-colleagues / deploy / 01`; read back by this chat at 11:27, all three lanes, common library matching Civil and Manager lane for lane): start-up, release checks (three plugins, one common library), the never-run 18 Sep list, the 19 Sep overnight fixes V1 to V18, and the 37 faults of 16 Sep by name. List: `archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md`. **Status:** list written 23 Sep; not started.
 2. **REL-01 Freeze** — Civil and Manager are the saved main line (`master`) at the freeze, per Tim's *"Newest saved work"* and *"Newest saved for all three"*. Proposed: **Thursday 24 Sep, 5:30pm**, announced on register #78. **Structural = `codex/structural-ui-preservation-20260915` @ `60c41228`** (Tim, 23 Sep: *"Yours + Codex's 4 window fixes"*). **Status:** Proposed.
 3. **REL-02 Fix what pass 1 finds** — one area at a time, CDWT, CD, PIT first (Tim, 16 Sep). Each fix lands on `master` before the freeze. **Status:** waiting on pass 1.
 4. **REL-03 Package** — Thursday night: build all three plugins, all three AutoCAD lanes, one matching common library; full automated suite; package audit (hashes, every file present). **Status:** Proposed.
