@@ -1,5 +1,12 @@
 # Area REL — Version 3 to colleagues (the staff release, Stage 6 of the master plan)
 
+## Feedback window — Codex takeover, 24 September 2026
+
+1. **Authority and ownership:** Tim: "BUILD A WHOLE WINDOW - layout AND the code behind it. Code only." and "TAKEOVER IS CONFIRMED." Branch `codex/ui-feedback`, worktree `ui-feedback-20260923`. Existing unfinished work saved as `bea03dfa` (WIP taken over), origin/master merged as `741051b7`. Scope is Feedback XAML, its code-behind/view model and its tests. No AutoCAD, install, deploy or PR merge.
+2. **Modify, existing routes kept:** Problem/Idea (stored as Bug/Suggestion), title and multiline description on Details; versions/current drawing and file disclosure on Included information; fixed Save/Cancel footer. Existing FeedbackCommand and FeedbackService retain ownership of the local save and command-line filename. Nothing is retired. CD header, spacing, themes and shell resources are the reference.
+3. **Tim's current scrolling ruling:** "I am happy to scroll in places when you would have to implement a next page button like in the help window i just dont want high use windows to have scrolling areas where the ui and ux could be designed far better" (midnight 24 Sep; supersedes the earlier blanket ban for bounded lists/reading). Feedback's form has no scrolling layout or visible scrollbar.
+4. **Evidence / remaining boundary:** real compiled-window render tests and three Release lanes are in progress. The older design pack's automatic screenshot, shared delivery and Manager receipt need command/service work owned by Claude; these capabilities are not present in the current Feedback save route. Do not imply delivery. Test learning: feedback type updates must notify both radio choices; a long draft must disclose the existing 2,000-character file cap before saving.
+
 **Product:** CE_ACAD (the AutoCAD plugin). **Plan:** `C:\CE_PLAN\MASTER_PLAN.md`. **This file is the one place for this area's items, status, bugs, parked ideas, test steps and regression list.** Update it in the same reply as the work.
 
 ## 1. What this area is
