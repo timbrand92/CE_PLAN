@@ -130,7 +130,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 5. **REL-04 Install the package on Tim's PC** — Friday 25 Sep, 2:00 to 3:00pm, **only on Tim's "AutoCAD is closed, deploy"**, using the colleague installer route so the installer itself is tested. Backups first; one-action undo named. **Status:** Proposed.
 6. **REL-05 Codex pass 2** — Part Z of the list: the tank change and every fix since pass 1, on the package. Friday evening and the weekend. **Status:** Proposed.
 7. **REL-06 AutoCAD 2022** — Monday 28 Sep, 30 minutes on a colleague's 2022 PC (Tim: *"Yes, Monday"*). Steps M1 to M9 written 23 Sep in the run list, Part M: install by hand, check, mixed-version probe, then go back (the first real run of REL-09 both ways). **Status:** steps written; not run.
-8. **REL-07 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back to 2.1.14. **Status:** Proposed.
+8. **REL-07 Colleague notes** — one page: what is new, what not to use yet, how to get help, how to roll back to 2.1.14. **Status:** draft written 23 Sep (section 5b), [FILL] parts wait for Codex.
 9. **REL-08 Pilot** — Tuesday 29 Sep: the named colleague (Tim to name; 2027 recommended) installs with AutoCAD closed. **Publishing to the IT Admin folder or approving a build for any colleague happens only on Tim's explicit word for that exact package.** **Status:** Proposed.
 
 ### REL-09 How the hand install works — PROPOSED, read from the files 23 Sep
@@ -161,6 +161,30 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 ### Holds
 
 1. **PR #88 (`CDMOVETEST`, the E-HOLD-01 probe) stays OFF `master` until the colleague package is cut** (Thursday 5:30pm). It is a test tool and must not reach a colleague. It goes onto Tim's PC only after Codex pass 2 finishes, so it does not change the build under test. Decided by this chat, 23 Sep, as the deployment controller.
+
+## 5b. REL-07 Colleague notes — DRAFT (23 Sep; parts marked [FILL] wait for Codex's results; Tim approves the final wording on Tuesday)
+
+> **CE Civil Version 3 — pilot copy for one colleague**
+>
+> **What you are getting.** CE Civil 3.0, CE Manager 1.1 and CE Structural 1.0.74, the same set Tim uses. It replaces your July versions (Civil 2.1.14, Manager 1.0.2, Structural 1.0.41). You are the first person outside Tim to use it, so tell him about anything odd, even small things.
+>
+> **Before you install.** Save your work and close AutoCAD. Check Task Manager shows no `acad.exe`.
+>
+> **Install (about 5 minutes).**
+> 1. Open File Explorer and paste `%APPDATA%\Autodesk\ApplicationPlugins` into the address bar.
+> 2. Rename `CE_CVL_SUITE.bundle`, `CE_SUITE_MANAGER.bundle` and `CE_STRUC_SUITE.bundle` by adding `_PRE_V3.backup` to the end of each name. That is your way back.
+> 3. Copy the three new `.bundle` folders from the pilot folder into this one.
+> 4. Open AutoCAD. The CE ribbon tab should appear. Type `CEMANAGER` and check it shows Civil 3.0.0.
+>
+> **What is new** [FILL from Codex passes: only what passed]. Expected headings: the new pipe object and editing; CDWT tank placement that finds its own plan drawing; levels and pipe splits; the LPD note; the detention top-water-level check; AutoCAD no longer crashing when you close it.
+>
+> **Please do not use yet** [FILL from Codex failures]. Known now: the online automatic update (switched off; Tim installs updates by hand for now); [CDWT tank placement near pasted PDF pictures, pending BUG-163].
+>
+> **If something goes wrong.** Note what you clicked and what you expected. Send Tim the newest files from `%APPDATA%\CE_CVL_SUITE\logs`. Nothing in your drawings is lost by going back.
+>
+> **Going back to your July version (2 minutes).** Close AutoCAD. Delete the three new `.bundle` folders. Remove `_PRE_V3.backup` from the three old names. Open AutoCAD.
+>
+> **Drawings shared with colleagues still on the July version** [FILL from Tim's Tuesday 2022/VM check and the M8 mixed-version step]: what they will see when they open a drawing you have worked on.
 
 ## 6. Bugs
 
