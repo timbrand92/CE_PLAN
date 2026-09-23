@@ -250,3 +250,13 @@ Tim (verbatim): *"keep lu as is, it stands for layer update. can you get codex t
 1. Structural's LU (layer update) keeps importing the office layer settings straight away, with no confirmation.
 2. Codex pass 8 was started at about 07:50 on Tim's AutoCAD, at his request, covering the overnight windows.
 3. Tim, minutes later (verbatim): *"yes to windows"*, answering queued item 20. CDDESIGN, CDRAINFALL and CDLPD switch from command-line prompts to their new windows (PR #146), with named Design entries on the ribbon.
+
+## Undo after the older-pipe label question: "Undo clears it" — Tim, 24 Sep 2026, about 09:05 (relayed by the deploy chat)
+
+Tim chose the recommended option himself (clicked, not typed): *"When you Undo after telling CE which text is a pipe's label: Undo clears it. One Undo puts everything back, including CE's record of the answer, and CE asks again next time. The drawing and CE's record must always agree."*
+
+1. Codex pass 5 R-A-4 (the question did not come back after one U) is a FAULT, and the test is right.
+2. It is routed to the Opus builder `claude/undo-and-pit-window-01` with the other one-U faults (Edit Pipe Z4, Edit Pit X3).
+3. The re-run is R-A-4 then R-A-5: double-click, Yes, U once, double-click, the question comes back, answer No, nothing changes.
+
+Also relayed: Tim said *"Yes, bring it across"* for the SEC-001 port (`48638225`). The deploy chat is porting it onto master on its own branch (`Modules/Manager` only), as a PR, not installed.
