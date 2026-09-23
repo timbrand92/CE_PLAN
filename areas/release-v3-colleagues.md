@@ -24,7 +24,7 @@ The master plan's own definition of done for Version 3 (a standalone Civil insta
 2. **Where the pilot copy sits**: a separate `CE V3 PILOT` folder in IT Admin is proposed. Placing it there is publishing, so it needs his word — part of Tuesday's 15-minute look.
 3. **The 2022 check** — **Tim runs it himself on Tuesday, on his virtual machine with AutoCAD 2022** (replaces "Monday on a colleague's PC").
 4. **Tuesday morning, 15 minutes** (Tim's choice): one page from Claude — what passed, what is hidden or not ready, a five-step check — then his yes.
-5. **Sign in to Azure and re-make the storage write key** (it is refused since the July reset), then put it in the local file on his PC. Until then nobody can publish, including CEADMIN's own button. Details: `decisions6-09-23_COLLEAGUE_UPDATE_CHANNEL.md`.
+5. **Sign in to Azure and re-make the storage write key** (it is refused since the July reset), then put it in the local file on his PC. Until then nobody can publish, including CEADMIN's own button. Details: `decisions\2026-09-23_COLLEAGUE_UPDATE_CHANNEL.md`.
 6. **The release signing key** in the key drawer does not match the key built into the plugin. Tim decides which is right. Needed before any signed approval, which is what the new Manager's update route requires.
 
 ## 2. Where the detail is

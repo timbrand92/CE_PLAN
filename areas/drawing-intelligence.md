@@ -15,7 +15,7 @@ Drawing intelligence: connectivity, CDCHECK, learning from real drawings safely 
 
 ## 3. Items and status
 
-1. **Standing rule R-LEARN (Tim, 19 Sep 2026): the evidence keeps growing.** See `ENGINEERING_RULEBOOK.md`. The CEMARKUP corpus is now at `C:\CE_DrawingIntelligence_Plugin_CEMARKUP_Corpus\` (out of the repo on 19 Sep, plugin PR #79) and every project worked on adds to it; anonymised lessons come back into this repository.
+1. **Standing rule R-LEARN (Tim, 19 Sep 2026): the evidence keeps growing.** See `ENGINEERING_RULEBOOK.md`. The CEMARKUP corpus is now at `C:\CE_DrawingIntelligence\10_Plugin_CEMARKUP_Corpus\` (out of the repo on 19 Sep, plugin PR #79) and every project worked on adds to it; anonymised lessons come back into this repository.
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "see the source documents". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
