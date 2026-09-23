@@ -110,6 +110,8 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 
 **Meaning (Claude's reading):** the deploy chat publishes **Civil `3.0.0+b02f3ec7`**, the exact bundle installed on Tim's PC, as it proposed. Manager and Structural are **not** included: their candidates are not installed or tested, and Tim was not asked about them. Publishing to the IT Admin folder or approving a build for a colleague is still separate (limit 4).
 
+**BLOCKED — cannot be carried out (recorded 23 Sep by the deploy chat, `decisions6-09-23_COLLEAGUE_UPDATE_CHANNEL.md`; the plan chat read that record and did not re-test the keys):** the storage **write** key in Tim's drawer is refused (HTTP 403) — the July SEC-001 reset re-made the read key but never the write key — and the release signing key in the drawer does not match the public key built into the plugin. **Nobody can publish until Tim signs in to Azure and re-makes the write key.** The options put to Tim did not mention this; his answer stands as a decision, blocked from outside. Queued for Tuesday. **Tuesday's one page must not promise colleagues a working update channel.**
+
 ## Work without Tim — Tim, 23 Sep 2026, about 12:10
 
 **Tim:** *"keep going WITHOUT MY INVOLVEMENT"*
