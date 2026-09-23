@@ -134,6 +134,29 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 24 Sep 2026 07:39 on Tim's PC — Civil `3.0.0+c78a350d`, Manager `1.1.0+c78a350d`, Structural `1.0.74+8c077569`
+
+1. **Installed by the release chat,** AutoCAD closed (checked twice at each step). CE_SHARED is identical in Civil and
+   Manager in all three lanes (E856BE14 / 10A43BA5 / 6B7D6B87). Structural carries none and its native ARX is present.
+   BUG-167 hit again (zip still empty after 180 s). The script stopped the build and installed from `payload_build`,
+   having checked that all three lanes read `c78a350d`.
+2. **Carries, beyond 02:24:** the overnight windows.
+   - Civil: #125 Help Centre, #126 Drawing Standards, #127 New Pit and Edit Pit levels, #135 CDWT, #139 CDCALC,
+     #140 Project Review / What CE Found / Pit Schedule, #141 CE Inspector, #142 Civil Hub, #144 Edit Pipe.
+   - Structural `8c077569`: #145 windows in the Civil look and #147 ribbon pictograms and plain names, on top of #138.
+3. **Backups:** `CE_CVL_SUITE_PRE_d1d7022c_20260924-072908.backup`, `CE_SUITE_MANAGER_PRE_d1d7022c_20260924-072908.backup`,
+   `CE_STRUC_SUITE_PRE_a93e2614_20260924-073928.backup`.
+4. **Codex pass 7 results** (on `d1d7022c` / `a93e2614`): 6 PASS, 6 FAIL, 3 BLOCKED. Report
+   `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS7_2026-09-24.md`.
+5. **INVALIDATES:**
+   - Pass 7's window results: Y11 Settings and Y12 Feedback still stand; CDWT, CDCALC, Help, New Pit, Edit Pit, Edit Pipe,
+     Inspector, Pit Schedule and Review are new and untested.
+   - Pass 7's Structural ribbon results: the pictures and names changed; the handler did not.
+6. **Pass 8, when AutoCAD is free:**
+   - Every new Civil window once: open it, check no scrollbar on the layout, Escape/Cancel.
+   - The Structural windows and ribbon.
+   - The C7 fixes once PR `claude/c7-regressions-01` lands.
+
 ## LIVE since 24 Sep 2026 02:24 on Tim's PC — Civil `3.0.0+d1d7022c`, Manager `1.1.0+d1d7022c`, Structural `1.0.74+a93e2614`
 
 1. **Installed by the release chat,** AutoCAD closed (checked twice at each step). CE_SHARED is identical in Civil and
