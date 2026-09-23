@@ -60,6 +60,8 @@ Area of this run in the plan: `C:\CE_PLAN\areas\release-v3-colleagues.md`.
 
 **Why:** every CE plugin shares one common library, and the first copy AutoCAD loads wins for all of them. If they disagree, the CE ribbon can silently fail to load. A colleague gets Civil, Manager and Structural together.
 
+**In pass 1 these checks run on the Manager and Structural installed today, which are NOT what ships.** The colleague gets a newer Manager (38 changes never installed) and Structural 1.0.74 plus four window fixes. Those are tested in Part Z only.
+
 | ID | Step | What "right" looks like |
 |---|---|---|
 | **R1** | Screenshot the whole CE ribbon tab. | Civil, Manager and Structural panels all present. **Icons in their right places** (16 Sep fault R-01 said they were not). Describe anything misplaced. |
@@ -112,6 +114,29 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 | **Z6** | Pick **2510 L**. | Its one plan is **selected outright**. |
 | **Z7** | Pick **7000 L**. | The gold line says no plan is marked 7000 L; the full list stays exactly as it was. |
 | **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**. Claude lists them when the package is installed. | Record each as its own row. **Never** copy a pass-1 result forward. |
+
+**Manager — 38 changes never installed on any PC before this package.** Before each step, **save the drawing copy**, so `DBMOD` reads 0.
+
+| ID | Step | What "right" looks like |
+|---|---|---|
+| **Z9** | `CEMANAGER`. Screenshot every page you open. | The window opens. It shows Civil, Manager and Structural versions that match the package Claude names. **Copy exactly what it says about updates.** |
+| **Z10** | In Manager, open **Settings**. Change one harmless value (the theme preview). Press **Discard** or **Cancel**. Close and reopen Manager. | The value is **back as it was**. Nothing saved. |
+| **Z11** | Same, but **Apply**. Close and reopen. Then put it back and Apply again. | The change **stays** after reopening, then goes back. |
+| **Z12** | In Manager, open **Help**. | Civil help opens and reads in plain English. Record any page that is blank or shows an error. |
+| **Z13** | In Manager, open **Project QA** and **Drawing Repair**. Look, then close each with **Cancel**. Type `DBMOD`. | Both open. `DBMOD` reads **0**: looking changed nothing in the drawing. |
+| **Z14** | `CESURVEYREVIEW`, then **Cancel**. Type `DBMOD`. | It opens; `DBMOD` reads **0**. |
+
+**Structural — 1.0.74 plus Codex's four window fixes of 15 Sep, never installed.**
+
+| ID | Step | What "right" looks like |
+|---|---|---|
+| **Z15** | `CESETTINGS`. Change one value, **Save**. Reopen `CESETTINGS`. | The value **stayed**. |
+| **Z16** | `CESETTINGS`. Change a value, then press **Cancel**. Reopen. Repeat with **Escape**. | Both times the value is **unchanged**. |
+| **Z17** | `CENOTES`. Press **Refresh**, select a note, then **Escape**. | Refresh works, the selected note shows, Escape closes. |
+| **Z18** | From the Structural panel, open **Project Setup** and **Properties**; close each with **Escape**. | Both open and close; nothing saved. |
+| **Z19** | `CESHEETS`. Go to **Issue / Publish** with **no sheet ticked** and press **Publish**. Then **Cancel**. | A plain validation message says what is missing; **nothing is published**; Cancel closes. |
+| **Z20** | In a COPY of a structural job: `SBEAM`, draw one steel beam; `RCBEAM`, draw one concrete beam. Then `U` once for each. | Both draw normally; each `U` removes that beam whole. |
+| **Z21** | PowerShell: list the files in `CE_STRUC_SUITE.bundle\Contents\Win64\Modern\`. | **No `CE_SHARED.dll`** there. Structural does not use the common library. |
 
 ---
 

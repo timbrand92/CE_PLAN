@@ -60,3 +60,13 @@ Read from git, not from a document:
 5. The newest Structural work anywhere is `codex/structural-ui-preservation-20260915` @ `60c41228`: Tim's 1.0.74 plus 4 window recovery commits (Settings save and Cancel, Publish validation), never installed.
 
 **So for Structural, Tim's answer is re-asked with these facts** (the BUG-161 lesson: a ruling made on incomplete evidence is re-put, not acted on). **Manager and Civil stand as answered:** the saved Manager genuinely contains Tim's installed `96e7d76a` plus 38 newer changes; the saved Civil is his installed build plus CDWT-LINK-01.
+
+## Structural, re-asked with the corrected facts — Tim, 23 Sep 2026, about 12:00pm
+
+Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four window fixes of 15 Sep, never installed; C the saved 1.0.42.
+
+**Tim:** *"Yours + Codex's 4 window fixes"* (option B).
+
+**Meaning:** Structural for the colleague, and for Tim's PC on Friday, is built from `codex/structural-ui-preservation-20260915` @ `60c41228` (1.0.74 plus: Settings save confirmation, Settings Cancel/keyboard and load warning, Notes/Properties/Project Setup window connections, Publish validation and Cancel). It does not use the common library. The SML/CHECKML LISP port (saved main line only) is **not** in it; neither Tim nor any colleague has it installed today.
+
+**Whole release, as ruled:** Civil = saved main line at the freeze; Manager = saved main line at the freeze (Tim's installed 7 Sep build plus 38 later changes, never installed); Structural = `60c41228`. One colleague on Tuesday; Codex tests in AutoCAD; 2022 check Monday on a colleague's PC.
