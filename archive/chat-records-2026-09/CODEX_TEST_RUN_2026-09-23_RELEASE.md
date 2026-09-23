@@ -170,6 +170,16 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 
 ---
 
+## PART L4 — P-03 / P-04 / P-05 evidence: a bent pipe split at a pit (added 23 Sep about 16:20). On the DWG-A copy. Undo afterwards.
+
+| ID | Step | What to record |
+|---|---|---|
+| **L4-1** | Three pits (use existing ones, or place three with PIT in clear space). `CD`: pick pit A, then a bend point, then pit B, then another bend point, then pit C (**two bends, through the middle pit**), Enter. Give the upstream level 19.45 and downstream 19.25. Answer **Yes** if CE offers to split at the middle pit. | Everything that happens, in order: every question and the exact words. Whether it refused, split, or did something else. How many pipe pieces result. |
+| **L4-2** | Look at the result. | **P-05:** does **each** piece have its own pipe text? **P-02:** is the split level (about 19.35) at the middle pit on both pieces? **P-03:** click each piece; what the Properties palette names it (a CE pipe object, or a plain polyline). Screenshot. The CE log lines for that minute containing `Split`, `InlineSplit` or `C7`. Feel line. |
+| **L4-3** | **U** until the drawing is back as it was. | Whether one Undo per command did it, and anything left behind. |
+
+---
+
 ## PART B — the deploy chat's list for this build, folded in (agreed by both release chats, 23 Sep)
 
 Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**, in its order. It was written for `b02f3ec7`; the installed `aeb03763` contains it and adds only the close-crash fix and a build-file fix.
@@ -190,7 +200,7 @@ Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**
 | **Z2** | Parts S2–S4 and all of Part R again. | Same as pass 1. |
 | **Z3** | **The tank finds its own plan (CDWT-LINK-01), on the package.** Re-run Part B's **T1 to T6**. | The same as in pass 1. Record each as `Z3-T1` and so on. **Never** copy a pass-1 result forward. |
 | **Z4-Z7** | **Nothing separate to run** (23 Sep about 16:10): the old Z4-Z7 tank steps were folded into Z3 (Part B T1-T6). Record them as "folded into Z3", not NOT TESTED. | - |
-| **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**, in this order, each with a Part H **Feel** line (brief `CODEX_BRIEF_HUMAN_TESTING_UIUX_STRUCTURAL_2026-09-23.md`): **Z8a R5** SBEAM on `DWG-S.dwg`, 610UB125, Place: the beam **and its label** are drawn; Escape and one Undo. **Z8b** 25R and 25L text on `DWG-S.dwg` (same builder as the SBEAM label). **Z8c R2** CEMANAGER opens; then Drawing Repair and Project QA open. **Z8d B-P5** two pits, Edit Pit: the batch editor opens; resize both. **Z8e B-L1** double-click the IL label: Edit Pipe opens (log: "pick set emptied so TEXTEDIT stops at its prompt"). **Z8f B-L3** Edit Pipe on the same pipe: a plain-English reason, not "Unable to read pipe data". **Z8g B-D3** CDLPD `CouncilP`: the message and nothing drawn; Escape at the question: nothing drawn. **Z8h B-D7** CDCALC Insert Criteria Block: the table's top-left corner is at the pick. **Z8i** Part L3 (P-07 evidence). Then **Part G** G1-G6 (CDDESIGN, invented letters in `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES`). | Record each as its own row. **Never** copy a pass-1 result forward. |
+| **Z8** | Re-run every step that was **FAIL** in pass 1 **and was fixed since**, in this order, each with a Part H **Feel** line (brief `CODEX_BRIEF_HUMAN_TESTING_UIUX_STRUCTURAL_2026-09-23.md`): **Z8a R5** SBEAM on `DWG-S.dwg`, 610UB125, Place: the beam **and its label** are drawn; Escape and one Undo. **Z8b** 25R and 25L text on `DWG-S.dwg` (same builder as the SBEAM label). **Z8c R2** CEMANAGER opens; then Drawing Repair and Project QA open. **Z8d B-P5** two pits, Edit Pit: the batch editor opens; resize both. **Z8e B-L1** double-click the IL label: Edit Pipe opens (log: "pick set emptied so TEXTEDIT stops at its prompt"). **Z8f B-L3** Edit Pipe on the same pipe: a plain-English reason, not "Unable to read pipe data". **Z8g B-D3** CDLPD `CouncilP`: the message and nothing drawn; Escape at the question: nothing drawn. **Z8h B-D7** CDCALC Insert Criteria Block: the table's top-left corner is at the pick. **Z8i** Part L3 (P-07 evidence). **Z8j** Part L4 (P-03/P-04/P-05 evidence). Then **Part G** G1-G6 (CDDESIGN, invented letters in `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES`). | Record each as its own row. **Never** copy a pass-1 result forward. |
 
 **Installed 23 Sep 12:32, so run Z9 to Z21 in pass 1 as well (Z1 to Z8 still wait for the next build).** **Manager — 38 changes never installed on any PC before this package.** Before each step, **save the drawing copy**, so `DBMOD` reads 0.
 
