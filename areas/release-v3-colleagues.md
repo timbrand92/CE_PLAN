@@ -6,6 +6,8 @@
 
 **Two chats work this area (agreed 23 Sep):** `CE_ACAD / release-v3-colleagues / deploy / 01` does the installs Tim orders; `CE_ACAD / release-v3-colleagues / plan / 01` keeps this file, the decision file and the one Codex list. Neither edits the other's Codex list.
 
+**Codex (23 Sep, 12:02):** the deploy chat drives Codex from the command line (`codex exec`, first run started 11:53, session `01a0cbf7-9dc0-71b3-bd5b-4d54dc73e0d1`), **one run at a time**, because installs and tests share one AutoCAD. The plan chat does not post into Codex sessions: Tim's desktop Codex session `01a0cbcd…` is him setting up a virtual machine. Tim allowed the plan chat to post into the test session; it is not needed while the deploy chat drives. **Log of messages this chat posted to Codex: none.**
+
 Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build, which colleagues, how it is packaged and installed, how it is rolled back, and what they are told. Opened 23 Sep 2026 for Tim's Tuesday 29 Sep target (`decisions\2026-09-23_V3_COLLEAGUE_RELEASE.md`).
 
 The master plan's own definition of done for Version 3 (a standalone Civil install, a controlled pilot, help and rollback) is the long goal. **Tuesday is a first step towards it, not the whole of it.**
