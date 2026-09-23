@@ -10,7 +10,7 @@ Getting a Version 3 build from Tim's PC onto colleagues' PCs safely: which build
 
 The master plan's own definition of done for Version 3 (a standalone Civil install, a controlled pilot, help and rollback) is the long goal. **Tuesday is a first step towards it, not the whole of it.**
 
-**Standing override until Tuesday 29 Sep (Tim, 23 Sep):** *"from now until tuesday we build, test and deploy whenever we need"*. Limits as recorded in the decision file: AutoCAD really closed, never under a Codex run, backups and read-back every time, publishing to colleagues still needs Tim's word.
+**Standing override until Tuesday 29 Sep (Tim, 23 Sep):** *"from now until tuesday we build, test and deploy whenever we need"*. Limits, confirmed by Tim (*"keep going, drop none of the limits"*): AutoCAD really closed, never under a Codex run, backups and read-back every time, publishing to colleagues still needs Tim's word.
 
 ## 2. Where the detail is
 
@@ -125,7 +125,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 
 1. **Settings.** Version 3 may rewrite the colleague's CE settings files (`%APPDATA%\TIM_CE_CADTOOLS`, `%APPDATA%\CE_CVL_SUITE`). Whether 2.1.14 still reads them after going back is **not established**. Proposed: copy those two folders to a `_PRE_V3` copy at step 3 as well.
 2. **Where the pilot package sits.** Putting it in the shared IT Admin folder is publishing and needs Tim's word; a separate `CE V3 PILOT` subfolder keeps the 2.1.14 copies other colleagues use untouched.
-3. **Rehearsal:** these steps are run first on a spare Windows user profile on Tim's PC, both ways, before Tuesday (REL-05/REL-06 window).
+3. **Rehearsal (changed 23 Sep):** Friday's install on Tim's PC uses **exactly these steps**, then the going-back steps, then the install again, so both directions are proven in real AutoCAD before Tuesday. A spare Windows user profile was the first idea; creating a Windows account is not something a chat does, so it is dropped.
 
 ### Holds
 

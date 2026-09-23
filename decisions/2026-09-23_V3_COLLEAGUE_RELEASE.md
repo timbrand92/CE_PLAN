@@ -92,7 +92,7 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 1. The AutoCAD-hours rule for builds and automated tests (RULES 1.8, ROUTER step 6). They run whenever needed.
 2. Waiting for a fresh "AutoCAD is closed, deploy" before **each** install on Tim's PC (RULES 8.7). Installs to Tim's PC happen when the release needs them.
 
-**What it does NOT lift (Claude's reading, for Tim to correct):**
+**What it does NOT lift — Claude's reading, CONFIRMED by Tim, 23 Sep: *"keep going, drop none of the limits"*:**
 
 1. **AutoCAD must actually be closed** before an install, checked more than once (it has been caught still shutting down twice today). A chat never closes AutoCAD itself.
 2. **Never install under a Codex run in progress.** It would test a different build from the one it gates on.
