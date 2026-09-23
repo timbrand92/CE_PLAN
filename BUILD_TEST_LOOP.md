@@ -57,9 +57,15 @@ sandbox for those runs, and only those.
 2. **Four words, never a score.** PASS · FAIL · BLOCKED · NOT TESTED, one per step, plus four counts at the
    end. **No percentage.** A score is the one output that lets a real failure hide.
 3. **A step with no observation is NOT TESTED**, even if it obviously works. Never infer one step from another.
-4. **Never Tim's live AutoCAD profile.** Codex runs AutoCAD with an isolated profile from `C:\Autodesk\CERef`.
-   Codex cannot see the screen reliably, so a mis-sent keystroke lands in whatever environment it is pointed
-   at. Anything that genuinely needs Tim's real profile and customisation is **Tim's to run**, not Codex's.
+4. **There is no sandbox. Codex tests on Tim's own AutoCAD, and the protection is measurement.**
+   *(Rewritten 23 Sep after the sandbox was built and proven impossible — see below. The earlier
+   version of this rule told you to use an isolated profile from `C:\Autodesk\CERef`. Do not.)*
+   Codex still cannot see the screen, so the standing guards are: never F2, **No** to every save prompt,
+   copies only, never save a template or a profile or a setting, and never type a credential.
+   Around every run, **measure and repair** these four, because nothing else protects them:
+   `Profiles\(default)` = `<<Unnamed Profile>>` · `OSMODE` = 4133 ·
+   `acadiso.dwt` = `12B46B17C114D235…` · `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` against its
+   backup. Anything needing Tim's real judgement is still **Tim's to run**, not Codex's.
 5. **One Codex run at a time, and say so before starting.** Installs and tests share one AutoCAD. Tell the
    other chat before a run starts and when it ends; never install while a run is live.
 
@@ -85,8 +91,29 @@ Two Codex runs were pointed at Tim's live AutoCAD within forty minutes.
 
 **What actually went wrong** is not the F2 key. It is that a tool which cannot see the screen was driving a
 real working environment, off a private brief, while another run was already going. The probe also returned
-**no evidence at all** — the crash it was sent to investigate was never reached. Both rules above exist so
-that the cost of a blind keystroke is a throwaway profile.
+**no evidence at all** — the crash it was sent to investigate was never reached.
+
+## Why there is no sandbox — proven, 23 Sep 2026, don't try it again
+
+A sandbox was built properly: 780 MB clone of Tim's AutoCAD support folders, its own `ApplicationPlugins`,
+its own `Template` folder, its own `CE_SANDBOX` profile, `APPDATA`/`LOCALAPPDATA`/`TEMP` all redirected.
+**It cannot isolate CE, and it never will.**
+
+- CE resolves its folders with `Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)` in at
+  least ten places (`LoggingService.cs:61`, `SettingsService.cs:51`, `PluginInitialization.cs:65`,
+  `BlockService.cs:107`…). **That API asks Windows for the known folder and ignores the `APPDATA`
+  environment variable.** Measured: with the redirect fully in place, CE loaded and wrote to Tim's real log
+  and read his real `TIM_CE_CADTOOLS\CD_Settings.json`. No CE log was created in the sandbox at all.
+- Worse than useless: a run everyone *believes* is isolated, writing to Tim's real settings.
+- Two further blockers even if that were fixed: the CUIX failed to load (`File not found: acad`), so **no CE
+  ribbon appeared** and a sandbox run would not have been representative; and closing it raised a **Flexera
+  licence prompt**, which no unattended run can answer and which returns whenever a token expires.
+- One hazard it introduced: **every `/p` launch rewrote `Profiles\(default)`**, so Tim's next ordinary start
+  would have opened in the sandbox profile. Demonstrated three times. The `CE_SANDBOX` key has since been
+  exported and deleted so it cannot happen again.
+
+If someone proposes sandboxing AutoCAD again, the question to answer first is not "can we redirect AppData"
+— it is "how does CE find its folders", and today the answer is: by asking Windows, not the environment.
 
 ---
 
@@ -127,8 +154,8 @@ machine, not Codex's.
 codex exec --skip-git-repo-check "Run PART <x> of
 C:\CE_PLAN\archive\chat-records-2026-09\CODEX_TEST_RUN_2026-09-23_RELEASE.md.
 Stop at step S1 if the installed version is not the one that file names.
-Use an isolated AutoCAD profile from C:\Autodesk\CERef, never Tim's own profile.
-Report back in the format that file's HOW TO REPORT section sets out."
+Never press F2, answer No to every save prompt, work on copies only, and never type a credential.
+Report back in the format that file's HOW TO REPORT section sets out." < /dev/null
 ```
 
 Before starting: tell the other chat. When it ends: tell them the report path. Claude reads the report, fixes
