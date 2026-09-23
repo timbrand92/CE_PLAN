@@ -18,9 +18,10 @@ The master plan's own definition of done for Version 3 (a standalone Civil insta
 
 ### Queued for Tim, Monday 28 Sep (do not ask before then)
 
-1. **The pilot colleague's name** (on AutoCAD 2027).
-2. **Where the pilot copy sits**: a separate `CE V3 PILOT` folder in IT Admin is proposed. Placing it there is publishing, so it needs his word.
-3. **The Monday 2022 PC**: which colleague, and when.
+1. **The pilot colleague's name** (on AutoCAD 2027) — Tim: *"I'll tell you Tuesday"*.
+2. **Where the pilot copy sits**: a separate `CE V3 PILOT` folder in IT Admin is proposed. Placing it there is publishing, so it needs his word — part of Tuesday's 15-minute look.
+3. **The 2022 check** — **Tim runs it himself on Tuesday, on his virtual machine with AutoCAD 2022** (replaces "Monday on a colleague's PC").
+4. **Tuesday morning, 15 minutes** (Tim's choice): one page from Claude — what passed, what is hidden or not ready, a five-step check — then his yes.
 
 ## 2. Where the detail is
 

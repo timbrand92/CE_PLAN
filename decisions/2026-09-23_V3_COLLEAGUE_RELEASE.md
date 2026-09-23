@@ -124,6 +124,16 @@ Offered: A his 1.0.74 (Claude's recommendation); B his 1.0.74 plus Codex's four 
 
 **Limits Claude set on itself:** only the one AutoCAD test session; never start a second Codex driving AutoCAD; every message posted is logged in the area file.
 
+## Five days away — Tim, 23 Sep 2026, about 12:10
+
+**Tim asked:** *"so in theory if i left today for 5 days and didnt check until then, you and codex could work together to get a colleague version ready for tuesday with as close to all functionality of the v3 plan as possible?"*
+
+**Answer given:** mostly yes; three things only Tim can do (accept, hand to a colleague, the 2022 check). **Tim's answers (clickable, one typed):**
+
+1. **Pilot colleague:** *"I'll tell you Tuesday"*.
+2. **Tuesday's go-ahead:** *"15-minute look Tuesday morning"* (Claude's recommendation). Claude leaves one page: what passed, what is hidden or not ready, a five-step check. Tim looks, says yes, the colleague installs.
+3. **AutoCAD 2022:** *"vm will have 2022 but i will test on tuesday"* — the virtual machine Tim is setting up will have AutoCAD 2022; **Tim runs the 2022 check himself on Tuesday.** Codex does not.
+
 ## Note on times in this file
 
 Clock times first written here were Claude's estimates, and several were wrong by up to an hour. **Corrected 23 Sep to the time each answer was saved** (`git log` of this repository), which is just after Tim gave it. Tim's words are unchanged.
