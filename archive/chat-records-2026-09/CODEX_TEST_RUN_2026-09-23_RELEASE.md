@@ -153,6 +153,14 @@ Tim's 16 Sep test day recorded **37 faults**: `C:\CE_PLAN\decisions\2026-09-16_T
 
 ---
 
+## PART L2 — BUG-166 experiment (added 23 Sep about 15:15). Any time, on the DWG-B fresh copy. Changes nothing.
+
+| ID | Step | What to record |
+|---|---|---|
+| **B-L1b** | Double-click the "IL 16.98" label beside P1. **Do not press anything for 15 seconds.** Screenshot. Then press **Escape once** and wait 10 seconds. Screenshot. | Whether Edit Pipe opened at either point. The full command-line text. Every line containing `TryRedirectToCdEdit` or `CDEDIT` from `%APPDATA%\CE_CVL_SUITE\logs\ce_cvl_structured_20260923.log` for that minute. Evidence for BUG-166, not a PASS or FAIL. |
+
+---
+
 ## PART B — the deploy chat's list for this build, folded in (agreed by both release chats, 23 Sep)
 
 Run **`C:\CE_PLAN\CODEX_TEST_RUN_2026-09-23.md`**, Parts **T, R, P, L, D and Z**, in its order. It was written for `b02f3ec7`; the installed `aeb03763` contains it and adds only the close-crash fix and a build-file fix.

@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-166 *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-167 *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -144,6 +144,31 @@
 | BUG-046 | CD STILL crashed (side-DB) after BUG-044 — ReferenceEquals on AC Database wrappers is unsound | IN PROGRESS — coded 2026-06-04, awaiting AC test. Explicit `IsSideDatabaseOperation` flag replaces reference inference. SUPERSEDES BUG-044. |
 | BUG-047 | "Simple Pipe" mode stuck on with Recall Last Settings | IN PROGRESS — coded 2026-06-04, awaiting AC test. Simple-pipe is now one-shot, not persisted. |
 | BUG-048 | Invert level text boxes styling regressed | OPEN — needs screenshot of CD dialog invert section. Not fixed blind. |
+
+---
+
+## BUG-166
+
+**Command / Area:** double-clicking a CE level label (an IL text) should open Edit Pipe (`CompoundEditModeService`, the TEXTEDIT redirect). Area C (CD / pipe editing).
+
+**Symptom:** Codex pass 1, step B-L1, 23 Sep 2026 about 14:33, on the DWG-B fresh test copy: double-clicked "IL 16.98" beside P1. AutoCAD's own text editor started (*"TEXTEDIT Select an annotation object or [Undo/Mode]:"*), and Edit Pipe never opened. Codex pressed Escape twice.
+
+**What is known (read from `%APPDATA%\CE_CVL_SUITE\logs\ce_cvl_structured_20260923.log`):**
+1. CE decided correctly: *"exact cached text 1104C1 routes to pipe 109835"*.
+2. It posted the cancel (*"CANCELCMD posted=true for TEXTEDIT"*) and scheduled Edit Pipe for when AutoCAD goes idle.
+3. **TEXTEDIT did not end.** 2.5 s later the log still says *"command running during TEXTEDIT"*, and no TEXTEDIT end line follows. For BEDIT (pits, 14:26) the same cancel ended the command in 43 ms, and Edit Pipe started half a second later.
+4. The line *"starting CDEDIT in command context"* never appears. So the idle-time start never ran, or the queued edit expired while TEXTEDIT waited for Escape.
+**Not known:** which of those two, so no fix yet (a blind change to command-cancel timing is how the 4 Sep Test Day 3 bug happened).
+
+**Expected behaviour:** double-clicking a CE level label opens Edit Pipe on its pipe, the same as double-clicking the pipe.
+
+**Test that catches it:** Codex list, step B-L1b (added 23 Sep): double-click the IL label and **wait 15 s without pressing anything**; then press Escape **once** and wait 10 s. Record the command line and the structured log lines containing `TryRedirectToCdEdit`.
+
+**Steps for Tim to confirm the fix:** double-click a pipe's IL label: Edit Pipe opens on that pipe.
+
+**Reference:** found by Codex (pass 1, B-L1), diagnosed by the release chat from both CE logs, 23 Sep 2026.
+
+**Status:** OPEN — diagnosed to the hand-over; the experiment is in the Codex list; fix after its result
 
 ---
 
