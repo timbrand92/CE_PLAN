@@ -11,6 +11,14 @@ run Codex there at any time, without asking each time? Nothing ever touches your
 **Tim, 24 Sep 2026 about 13:00 (verbatim):** *"now that you have your own machine all testing can be done at any
 time"*. So the RULES AutoCAD-hours window (8:30–2:00, 3:00–5:30) applies to Tim's PC only, not to this VM.
 
+## PAUSED — Tim, 24 Sep 2026 about 17:20 (verbatim): *"pause until monday morning"*
+
+**State at pause:** R-004 started, not finished. Pass 9 stopped at 16:58, during P9-R; its window-layout results are
+invalid until R-004 is done. AutoCAD closed (checked 17:01:31 and 17:01:46). Backup made:
+`C:\CE_TEST_STATION\backup-before-R004\`. Nothing imported yet: Tim's settings zip and the five CE settings files had
+not synced from Tim's PC. **Monday:** check they are in `CE_TEST_STATION\inputs`, finish R-004, then re-run pass 9
+from Part S. Codex usage at pause: 9% weekly.
+
 ## R-003 — three office drawings measured headless (24 Sep 2026, 16:25)
 
 **FOR TIM:** done. The weld mark is 45° ticks, 20 long, 15 apart, on one side of the line, layer WELDING colour 9.
