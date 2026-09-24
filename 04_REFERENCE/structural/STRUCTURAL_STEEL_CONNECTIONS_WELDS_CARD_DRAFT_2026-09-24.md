@@ -72,3 +72,11 @@ the next.
 1. *"JUST THE SYMBOL"*: graphic weld symbols only. **Section 3 item 1 (note leaders) is superseded.**
 2. *"AS RECOMMENDED, BUT NEEDS TO LOOK LIKE A CREATIVE ENGINEERING DRAWN VERSION NOT HOW STRUC PLUS DOES IT"*: order as listed; symbols and details drawn in CE's own style (CE standard details, the STEEL tool palette blocks), not StrucPlus's.
 3. *"YES THIS IS CORRECT, DO THE SSAME FOR ALL TYPES"*: every family's defaults come from CE's own standard wording, editable on the Settings page.
+
+## 6. CE's own drawn look (read-only helper, 24 Sep about 11:50; nothing opened in AutoCAD)
+
+1. **CE's weld mark:** the STEEL tool palette has **WELD VERT** and **WELD HORIZ** (block names = tool names), layer **WELDING**. From the 64 px thumbnails: a row of parallel diagonal ticks along an edge, a weld-run mark. **No arrow, reference line, tail or flag**: not an AS 1101.3 symbol. Source drawing: `Creative Engineering - Drafting\Superseded Stuff\SILVIAS SELECTION steel DETAILS.dwg` (a live tool pointing into Superseded Stuff). No AS 1101.3 weld symbol block exists in any palette.
+2. **Related STEEL blocks:** FULLY WELD - 89 SHS and EXTENDED CAP/BASE PLATE - 89 SHS, from `CE_TYPICAL BLOCKS-LAYERS-SCHEDULES-NOTES.dwg`, layer BLOCKS.
+3. **CE's base plate sheet:** `Standard Details\Footing Details\CE Base Plate Details.dwg` (indexed in the evidence store as a DXF). Several typical details (column to strip footing, to slab, cast-in plate CP1, recessed PC1/PC2, bored pier), each a section "VIEW A-A SCALE 1:10", plus a plan view for the recessed plate. Per sheet about 108 blocks, 75 dimensions, 70 notes, 67 hatches, 31 leaders. Stiffener variant note: "4 No 10 THICK TRIANGULAR STIFFENERS, 6CFW ALL AROUND".
+4. **Layers:** WELDING, CAST-IN-PLATE, BLOCKS, SECTION MARK, TITLE TEXT, SCHEDULE, hatch layers. Text height follows the layer name (18/25/35/50TEXT). No text-style table was found.
+5. **Open question for Tim (asked 24 Sep):** is "the symbol" CE's tick-run weld mark (item 1), drawn along any edge he picks? Recommended: yes.
