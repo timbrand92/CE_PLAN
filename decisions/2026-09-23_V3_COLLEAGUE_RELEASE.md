@@ -287,3 +287,9 @@ CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT CREATIVE  ENGINEERING USE, ALSO I H
 3. **Tool palettes:** Tim's office tool palette suite should come with the plugin "somehow". **Think first**: a proposal to Tim, no build until he picks.
 4. **RC** (Structural revision cloud, `LegacyPortCommands.cs`) is "a bit glitchy": a bug. Symptoms not yet recorded; asked 24 Sep.
 5. **Version numbers:** every plugin update installed carries a new version number. Release chat's reading (proposal, not Tim's words): the last digit goes up by one per install of that module, the number the status bar and Manager show; tonight Civil 3.0.0 to 3.0.1, Manager 1.1.0 to 1.1.1, Structural 1.0.74 to 1.0.75; CE_SHARED's identity is left alone (one shared assembly identity, first loaded wins).
+
+## Structural commands keep the drafter's layer — Tim, 24 Sep 2026, about 12:15
+
+Tim (verbatim): *"RC GOES WRONG WHEN I PRESS ENTER AFTER USING IT, TO USE IT AGAIN, IT DOESNT RESET THE LAYER PROPERLY. ALSO THIS HAPPENS WITH OTHER COMMAND IN STRUCTURAL MODULE, LAYER SHOULD BE STORED BEFORE AND THEN RESTORED AFTER COMMANDS"*
+
+**Meaning (a rule for the whole Structural module):** a command that draws on its own layer remembers the current layer when it starts and restores it when it ends (finish, Escape, error, Enter-repeat), instead of switching to a fixed layer such as 25CONT. Release chat's reading: the Line styles pen buttons and Set All are exempt, because setting the layer is their job. BUG-169.
