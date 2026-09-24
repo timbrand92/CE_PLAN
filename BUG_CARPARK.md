@@ -130,7 +130,7 @@
 
 **Tim's AutoCAD steps:** open PIT, Edit Pit and double-click a pipe: each looks like the CD window you draw pipes with.
 
-**Status:** IN PROGRESS — pit window candidate in draft PR #176 (`b0c34b1f`); pipe one-page candidate in draft PR #180 (`7e74c93d`). Pipe edit now uses Tim's approved New Pipe composition on both remembered-switch routes, with 345 focused checks, three zero-error Civil builds and four inspected dark/light New/Edit renders. Full Civil suite awaits the release chat after 17:30. Neither candidate is installed or Tim-accepted. The combined native check in 2027 and 2024 is still required.
+**Status:** IN PROGRESS — pit one-page candidate in draft PR #184 (`8d24ad83`), superseding wrong-reference tabbed PR #176; pipe one-page candidate in draft PR #180 (`7e74c93d`). The pit candidate has three zero-error Civil Release builds, 177 focused checks and six inspected dark/light New Pit/Edit Pit/New Pipe renders. Its real-drawing preview still needs command-owner integration: New Pit must supply the plan anchor, and Edit Pit the pending dry-run preview. Pipe edit has 345 focused checks, three zero-error Civil builds and four inspected renders. Full Civil suite awaits after 17:30. Neither candidate is installed or Tim-accepted. The combined native check in 2027 and 2024 is still required.
 
 ---
 
