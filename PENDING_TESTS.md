@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Command-line keyword choices — BUG-168 (24 September 2026, awaiting release)
+
+1. **Candidate:** `codex/keyword-shortcuts` tip `825c12ac`, draft [PR #155](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/155). Seven static prompt clashes and CDWT's generated lists corrected; global keyword names remain stable. Focused net10 checks 16/16, three Drainage Release lanes 0 errors. No AutoCAD opened, installation or acceptance.
+2. **After separately authorised installation, AutoCAD 2027 and separately 2024/net48:** type `CDGRIPDIAG`, click `OFF` in F12 and check the command line reports OFF. Run it again, click `ON`, and check ON. Run `CDDEBUG`, click `OFF`, and check OFF is reported. For `CDDISCIPLINE`, choose Clear and check the explicit tag is cleared; repeat with Cancel and check there is no change. Check CDWT's plan and office tank lists display separate A–I choices when several names begin with the same letter. Escape from each prompt must leave its setting unchanged. No drawing edits are expected from these shortcut checks.
+
 ## Civil import windows — UI-IMPORT-20260924 (24 September 2026, awaiting command wiring)
 
 1. **Candidate:** `codex/ui-import` tip `65e54830`, [PR #153](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/153), ready for review, contains the source, schedule and results window code and 14 dark/light pictures. Three Civil Release lanes build with zero errors; seven focused window checks pass; the full Civil suite has 10,829 passed / 11 exact baseline failures / 19 skipped. The CE ribbon does not open these windows yet: X-Civil, LandXML and survey command/service wiring is reserved for Claude. No AutoCAD opened, installation or acceptance.

@@ -254,6 +254,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
    - **Also 24 Sep:**
      - Codex was reset by Tim at about 09:20 and is budgeted to Thu 1 Oct (BUILD_TEST_LOOP.md "Usage budget"). Measured: a sol/high window build cost about 1% of the week.
      - Keyword-shortcut sweep (`codex/keyword-shortcuts`): Tim, verbatim: "IF AN END USER CLICKS ON THE OFF THEN IT ALWAYS SHOWS AS SELECTED AS ON IN THE COMMAND LINE CAN YOU ENSURE THIS IS FIXED THROUGHOUT". Cause: "Off" and "On" share the shortcut O.
+       Source built and pushed 24 Sep: draft PR #155 at `825c12ac` fixes seven static prompt clashes and the generated CDWT lists, keeps global keyword names, and adds a source guard. Focused net10 checks 16/16; net48, net8 and net10 Drainage Release builds 0 errors. Manager and protected PipeEdit prompts had no clash. No AutoCAD opened, installed or accepted; BUG-168 and PENDING_TESTS hold the native remainder.
      - BUG-159 grips: fix merged (#154); cause proven by Tim with CDGRIPDIAG Off.
 42. **24 Sep 08:38: CODEX IS OUT OF USAGE UNTIL TUESDAY 29 SEP 08:38.** Codex's message: "You've hit your usage limit ... try again at Sep 29th, 2026 8:38 AM". It used about 971,000 tokens on pass 8 alone. It had run two or three jobs at a time since 23:32.
    - **Consequences:** Claude does all building until Tuesday. Testing is unit tests, the headless harness (tools\headless-proof) and Tim's short checks. Tim can buy Codex credits at chatgpt.com/codex/settings/usage; that is his decision.

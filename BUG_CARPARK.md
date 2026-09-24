@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-168 *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-169 *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -52,10 +52,23 @@
 
 ---
 
+## BUG-168
+
+**Command / Area:** CE command-line keywords in Drainage and Manager; first seen in CDGRIPDIAG.
+
+**Symptom:** Tim clicked Off in the CDGRIPDIAG F12 list and the command line selected On.
+
+**Expected behaviour:** clicking Off must turn the guard off. Each displayed choice must have its own unambiguous typed shortcut.
+
+**Reference:** Tim, 24 Sep 2026: "IF AN END USER CLICKS ON THE OFF THEN IT ALWAYS SHOWS AS SELECTED AS ON IN THE COMMAND LINE CAN YOU ENSURE THIS IS FIXED THROUGHOUT". Draft PR #155, `codex/keyword-shortcuts` at `825c12ac`; REGRESSION_LOG.md KEYWORD-SHORTCUTS.
+
+**Status:** IN PROGRESS — built and unit-tested (16/16 focused; three Drainage Release lanes 0 errors). Not installed or tested in AutoCAD. Tim's exact 2027 and 2024 checks are in PENDING_TESTS.md. Never mark fixed until Tim confirms there.
+
 ## Status Summary
 
 | ID | Command / Area | Status |
 |----|---------------|--------|
+| [BUG-168](#bug-168) | CE command-line F12 keywords — clicking Off can select On | IN PROGRESS — source fix in draft PR #155; 16 focused checks pass and three Drainage Release lanes build with 0 errors. No install or AutoCAD acceptance. |
 | [BUG-162](#bug-162) | Tests — `InternalCivilCommands_RebuildOnlyAfterAnAcceptedPipeChange` fails on master and on the installed build | OPEN — stale check, not lost code. Found 23 Sep 2026 by the E-HOLD chat. Nothing to test in AutoCAD. |
 | [BUG-161](#bug-161) | Release / trunk — `master` did not contain what is installed in AutoCAD; the next install from it would silently remove this month's Civil work | **FIXED — PR #87 merged 23 Sep 2026, master `b02f3ec7`.** Tim ruled: bring it all in, nothing left out. **Proof after merging: commits in AutoCAD but not on master = 0**, and master contains the installed build `d90659cf`, the 16 Sep payload `d0ffe1a2`, the previous master `38f1d98a` and the 23 Sep Civil work `9ba29f04`. Three lanes built 0 errors; 10,125 tests ran with the failing names identical to the recorded baseline. **No AutoCAD test needed — nothing installed by merging; Tim already runs `d90659cf`.** Root cause recorded: register #78's "LIVE RIGHT NOW" was stale, so the 23 Sep trunk ruling was made on the wrong live line. |
 | [BUG-160](#bug-160) | Pipe end dragged on a grade-held pipe — plan IL text rewritten over a hand-typed bottom level; schedule keeps the typed number | OPEN — SUSPECTED from reading the code, 23 Sep 2026. NOT seen in AutoCAD. Same drawing-vs-schedule split fixed for CDPROPAGATE on 15 Sep. |
