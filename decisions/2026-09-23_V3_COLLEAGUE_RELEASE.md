@@ -343,3 +343,9 @@ Settings where Tim's PC differs from a fresh install (read by a builder, PR #183
 Tim (verbatim): *"IM GOIGN TO GO HOME, FROM NOW ON LETS TEST HERE UNTIL MONDAY MORNING, I HAVE LEFT AUTOCAD IS CLOSED"*. He also told the VM chat to pause until Monday morning (it stopped at 17:1x, R-004 half done, no Codex run).
 
 **Meaning (scope):** from 24 Sep about 17:15 until Monday 28 Sep morning (before 8:30), Tim's own PC is the test machine: the release chat may install on it (AutoCAD confirmed closed twice before each install, backups and read-back as always), run the full suites, the headless proofs and Codex AutoCAD passes on his AutoCAD (Codex list rules: copies only, No to every save, never F2, never save a template or profile, CPROFILE/OSMODE checked at start and end). The VM stays paused. Publishing to colleagues still needs Tim's word.
+
+## Build while Codex tests; pace usage to Friday noon; follow the V3 plan — Tim, 24 Sep 2026, about 17:50
+
+Tim (verbatim): *"no no tonight you need to build whilst waiting for codex and then manage usage until tomorrow noon. also make sure youre working towards v3 plan"*.
+
+**Meaning:** Claude keeps a build lane running tonight on V3 plan items (not fixes only), paced so the weekly Claude allowance lasts to the Friday 12:00 reset; Codex tests and builds in parallel. Build order taken from the V3 big-work queue (area item 39) and recorded in area item 80.
