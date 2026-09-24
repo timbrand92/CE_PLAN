@@ -349,3 +349,9 @@ Tim (verbatim): *"IM GOIGN TO GO HOME, FROM NOW ON LETS TEST HERE UNTIL MONDAY M
 Tim (verbatim): *"no no tonight you need to build whilst waiting for codex and then manage usage until tomorrow noon. also make sure youre working towards v3 plan"*.
 
 **Meaning:** Claude keeps a build lane running tonight on V3 plan items (not fixes only), paced so the weekly Claude allowance lasts to the Friday 12:00 reset; Codex tests and builds in parallel. Build order taken from the V3 big-work queue (area item 39) and recorded in area item 80.
+
+## Codex: an equal amount each day until the weekly reset — Tim, 25 Sep 2026, about 09:00
+
+1. **Tim's words:** "can you make sure youre constantly working until monday morning" was followed on 25 Sep by: "can you slow codexs usage to use an equal amount each day until next weeks usage reset".
+2. **Applied:** 28% was used by Fri 25 Sep 09:00; 72% left over the six days to the reset Thu 01 Oct 08:57 = **12% a day**. Each day runs 08:57 to 08:57. Cap by the end of each day: Fri 40%, Sat 52%, Sun 64%, Mon 76%, Tue 88%, Wed (to Thu 08:57) 100%. A day's unused share carries to the next day. After the reset: 100/7 = 14% a day.
+3. **How it is enforced:** the Codex queue (`daily_cap.sh` + `queue3.sh` with cap `auto`) starts a job only if today's usage plus the job's expected cost (AutoCAD test pass about 7%, build about 1-2%) fits under today's cap; a test brief's stop line is set to today's cap. **Supersedes** the 24 Sep lines (Fri 28, Sat 40, Sun 52, Mon 65, Tue 80, Wed 90, Thu 97).
