@@ -275,3 +275,15 @@ Tim (verbatim), answering the release chat's four questions:
 3. Only the Pen & Linetypes toolbar: 20 pen buttons (0.25/0.35/0.50/0.70 x Continuous/Hidden/Center/Dashed/Phantom) and Set All. The Change Colour and Change Linetype toolbars are NOT built.
 4. The Civil import windows (PR #153: X-Civil, LandXML, survey) are connected in place of today's prompts; built by Claude today, tested by Codex tonight; if they fail, Tuesday ships today's import prompts.
 5. Tim also asked (verbatim): *"IS THERE ANYT OTHER USEFUL STUFF IN STRUC PLUS FO OUR V3 PLAN?"* A read-only inventory is under way.
+
+## Weld symbols, CE steel connections, tool palettes, RC, version numbers — Tim, 24 Sep 2026, about 11:50
+
+Tim (verbatim): *"LETS ADD WELD SYMBOLS, THE REST WE DONT REALLY USE IF YOU LOOK AT EVIDENCE / DATA MODEL
+CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT CREATIVE  ENGINEERING USE, ALSO I HAVE A FULL SUITE OF TOOL PALETTE WHICH WOULD BE GREAT IF THIS WAS INCLUDED IN OUR PLUGIN SOMEHOW THINK ABOUT IT FIRST "C:\Users\TimothyBrand\Creative Engineering\Creative Engineering - Drafting\Tool Palettes\NEW". WE ALSO NEED TO UPDATE THE RC COMMAND AS ITS A BIT GLITCHY ATM. ALSO MAKE SURE WHEN YOU SEND AN UPDATE OF PLUGIN, UPDATE THE VERSION NUMBER PLEASE"*
+
+**Meaning:**
+1. **Weld symbols** go into the Structural plan (from StrucPlus `Weld.lsp`, to CE practice): card first, then build. Of the StrucPlus inventory (`04_REFERENCE/structural/STRUCPLUS_INVENTORY_2026-09-24.md`) items 1 and 3 to 8 are **not wanted**; Tim says the evidence model shows CE does not use them.
+2. **Steel connections** (V3 STLCONN, KNEE, BASEDET and relatives) are updated to what CE actually details, read from CE's own evidence and standard details: evidence study, card, then build.
+3. **Tool palettes:** Tim's office tool palette suite should come with the plugin "somehow". **Think first**: a proposal to Tim, no build until he picks.
+4. **RC** (Structural revision cloud, `LegacyPortCommands.cs`) is "a bit glitchy": a bug. Symptoms not yet recorded; asked 24 Sep.
+5. **Version numbers:** every plugin update installed carries a new version number. Release chat's reading (proposal, not Tim's words): the last digit goes up by one per install of that module, the number the status bar and Manager show; tonight Civil 3.0.0 to 3.0.1, Manager 1.1.0 to 1.1.1, Structural 1.0.74 to 1.0.75; CE_SHARED's identity is left alone (one shared assembly identity, first loaded wins).
