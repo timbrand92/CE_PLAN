@@ -98,7 +98,7 @@
 
 **Tim's AutoCAD steps:** after the fix, double-click a rising main and a stormwater pipe next to it: each shows its own destination and flow arrow as drawn.
 
-**Status:** OPEN — builder queued 24 Sep.
+**Status:** IN PROGRESS — built, not installed. **Draft PR #179** (`49ea9be0`, based on #175 because it needs #175's "Stormwater Pipe" case): the true type is resolved once, before the reverse-arrow and destination readings; the crude guess is deleted. Builder's report: 3 lanes 0 errors; focused Pipe/PipeTruth/PipeEdit tests 2402 passed, 4 failed (window-fit/DPI tests it says are the known baseline; not yet re-checked by the release chat). Merge after #175. Never mark fixed until Tim confirms.
 
 ---
 
