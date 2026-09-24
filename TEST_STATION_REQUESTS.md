@@ -3,6 +3,16 @@
 The Test Station (Tim's VM) reads this; it writes its answers in `TEST_STATION_RESULTS.md`. Set-up and rules:
 `04_REFERENCE/TEST_STATION_SETUP.md`. Newest request first.
 
+## R-003 — measure three office drawings, headless and read-only (24 Sep 2026, 13:35)
+
+**Why:** the weld mark (Tim: CE's own tick-run mark, "A"), the base plate family and the CE Blocks palette must copy CE's own drawings, not guesses. Cards: `04_REFERENCE/structural/STRUCTURAL_WELD_MARK_CARD_2026-09-24.md`, `04_REFERENCE/structural/STRUCTURAL_STEEL_CONNECTIONS_WELDS_CARD_DRAFT_2026-09-24.md`, `04_REFERENCE/TOOL_PALETTES_PROPOSAL_2026-09-24.md`.
+**Inputs** (copies of office standards, no client data): `CE_TEST_STATION\inputs\` `WELD_SOURCE_steel_details.dwg`, `CE_Base_Plate_Details.dwg`, `CE_TYPICAL_BLOCKS.dwg`.
+**How:** AutoCAD 2027 `accoreconsole.exe` on the VM with a script and LISP you write; open each drawing read-only; **never save**; no CE plugin needed. Can run while Codex is between steps (it is a separate, headless process).
+1. **WELD VERT and WELD HORIZ** block definitions: every entity (type, layer, colour, linetype, lineweight, start/end points), the base point, overall length and height, tick length, tick spacing and tick angle to the run line, and whether the ticks sit on one side of the line or across it. Whether the blocks are annotative or scaled.
+2. **CE_Base_Plate_Details.dwg:** layers (name, colour, linetype, lineweight); text styles (name, font, height, width factor); dimension styles in use; block names used (with counts); every MText/Text content as plain text grouped by detail title (e.g. "VIEW A-A SCALE 1:10"), with its layer and height; hatch patterns and scales; the extents of each detail.
+3. **CE_TYPICAL_BLOCKS.dwg:** every block definition name with its extents, the layers its contents use, whether it is annotative, and its attribute tags. Also the drawing's layers (name, colour, linetype, lineweight).
+4. Write the results to `C:\CE_TEST_STATION\evidence\R-003\` and a **short summary** (the weld numbers in full; counts and names for the rest) in `TEST_STATION_RESULTS.md`. These are office standards, not client drawings, but still no screenshots in CE_PLAN.
+
 ## R-002 — install tonight's candidate and run pass 9 (24 Sep 2026, 13:10)
 
 **Payload:** `CE_TEST_STATION\payloads\0924-civil-7d85c40f-struc-488f6250\` (three bundles + `SHA256SUMS.txt`, 1,542 files; the release chat re-hashed the OneDrive copy at 13:08: 0 mismatches). It is a **candidate** built from the release trains, not yet on master. If it holds, Tim's PC gets the same bytes tonight.
