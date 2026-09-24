@@ -14,6 +14,8 @@ The CE windows, ribbon and design pack. Codex builds windows, Claude builds beha
 
 ## 3. Items and status
 
+1. **HELP-V3-CONTENT — Version 3 Civil guide, 24 Sep 2026:** Tim's code/content-only brief replaces the older engineering guide with current command and window facts read from the ribbon, command implementations, window tabs and `REGRESSION_LOG.md`. Branch `codex/help-v3-content` at `4f51457a`, draft PR #172 against master, based on the Civil train. The 69 distinct current Civil ribbon commands have 69 guide entries and zero uncovered; Edit slab and Change Type are named as not ready. The prior Version 2.1 guide warning and its later wording sweep are superseded by this complete guide. The Help Centre keeps search and bounded reading, with the real window and browser fallback marked `v3.0 guide`. Three Civil Release lanes built with zero errors; five focused Help checks passed; eight real dark/light introduction and reading-page pictures were inspected under `docs/image/V3_WINDOWS/`. The full Civil suite waits for the release chat after 17:30 Melbourne. Built and code-tested; no AutoCAD, install or Tim acceptance. Representative native steps are in `PENDING_TESTS.md`.
+
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "see the source documents". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
 ## 4. Bugs
