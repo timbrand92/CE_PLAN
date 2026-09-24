@@ -329,3 +329,11 @@ Tim (clicked): *"Yes, everyone gets it"* — the one-page CD window (Engineering
 Tim (verbatim, minutes later): *"LIKE IVE SAID 1 MILLION TIMES BEFORE I WANT WHATEVER VERSION YOUVE INSTALLED FOR ME ON THEIR COMPUTERS ON TUESDAY OTHERWISE HOW CAN I POSSIBLY EXPLAIN TO THEM WHAT LEVEL ITS AT. SERIOUSLY!"*
 
 **Meaning (a standing rule for the release):** the colleague install on Tuesday is **the exact payload installed on Tim's PC plus Tim's behaviour-affecting switches as the defaults** (layout and editor flags such as `editors.workshopLayout`, grip routes, and anything else that changes what a user sees or does). Personal values (recent lists, file paths, window positions) are not copied. The release chat asked this as a question when the plan already answered it (entry of 23 Sep, "What ships: exactly what is in Tim's AutoCAD"): a mistake, recorded here so no chat asks again.
+
+## Fresh-install defaults to match Tim — Tim, 24 Sep 2026, about 16:25 (clicked)
+
+Settings where Tim's PC differs from a fresh install (read by a builder, PR #183; local list `C:\CE_DrawingIntelligence _Control\COLLEAGUE_DEFAULTS_DIFF_2026-09-24.txt`). Already changed as plain behaviour: `editors.workshopLayout` true (the one-page CD window), `options.defaultInvertPosition` Bottom. Tim's answers on the rest:
+1. CD draw-first: *"Yes, like mine"* — default true for everyone.
+2. Minimum pipe cover: *"300 mm, like mine"* — default 300 mm (replaces the 450 mm seed of 4 Sep for new installs).
+3. Pit invert drop: *"20 mm default"* — the default stays 20 mm; Tim's own 5 mm was a one-off (his own PC keeps 5 mm until he changes it in Settings).
+4. *"My 12 layer draw-order rules"* and *"Compound behaviour switch on"* — both become the defaults for everyone.
