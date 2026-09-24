@@ -337,3 +337,9 @@ Settings where Tim's PC differs from a fresh install (read by a builder, PR #183
 2. Minimum pipe cover: *"300 mm, like mine"* — default 300 mm (replaces the 450 mm seed of 4 Sep for new installs).
 3. Pit invert drop: *"20 mm default"* — the default stays 20 mm; Tim's own 5 mm was a one-off (his own PC keeps 5 mm until he changes it in Settings).
 4. *"My 12 layer draw-order rules"* and *"Compound behaviour switch on"* — both become the defaults for everyone.
+
+## Test on Tim's PC until Monday morning — Tim, 24 Sep 2026, about 17:15
+
+Tim (verbatim): *"IM GOIGN TO GO HOME, FROM NOW ON LETS TEST HERE UNTIL MONDAY MORNING, I HAVE LEFT AUTOCAD IS CLOSED"*. He also told the VM chat to pause until Monday morning (it stopped at 17:1x, R-004 half done, no Codex run).
+
+**Meaning (scope):** from 24 Sep about 17:15 until Monday 28 Sep morning (before 8:30), Tim's own PC is the test machine: the release chat may install on it (AutoCAD confirmed closed twice before each install, backups and read-back as always), run the full suites, the headless proofs and Codex AutoCAD passes on his AutoCAD (Codex list rules: copies only, No to every save, never F2, never save a template or profile, CPROFILE/OSMODE checked at start and end). The VM stays paused. Publishing to colleagues still needs Tim's word.
