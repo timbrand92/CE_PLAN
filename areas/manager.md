@@ -13,6 +13,8 @@ Manager: dashboard, one-button update, safe updates and rollback. (From the area
 
 ## 3. Items and status
 
+1. **CE Blocks palette — code candidate, 24 Sep 2026:** Tim approved the `04_REFERENCE/CE_BLOCKS_PALETTE_CARD_2026-09-24.md` answers at 15:00 Melbourne: same inserts as today's tool palettes, one palette, buttons on the CE tabs, exported thumbnails first. `codex/ce-blocks` builds the Manager-owned CEBLOCKS command and settings, with a Civil CE button; Structural remains a separate later line. Twelve real exports and 307 blocks parse. Manager focused 16/16, Civil focused 18/18; both themes' actual palette pictures inspected. Manager and Civil three Release lanes have zero errors after the existing native ARX prerequisite was built locally. The full Civil suite is for the release chat after 17:30. Built and offline-tested only; not installed, opened in AutoCAD or Tim-accepted. The accepted native checklist is in `PENDING_TESTS.md`.
+
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "see the source documents". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
 ## 4. Bugs
