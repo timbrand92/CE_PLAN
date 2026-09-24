@@ -18,7 +18,8 @@ run Codex there at any time, without asking each time? Nothing ever touches your
 4. **Codex CLI:** present, 0.156.1, logged in using ChatGPT (Tim's account). Run as `codex.cmd`; PowerShell script
    execution is disabled on the VM and was left that way.
 5. **OneDrive:** present and signed in ("OneDrive - Creative Engineering"). **`CE_TEST_STATION` folder: missing.**
-   Tim is asking the release chat to create it.
+   Tim is asking the release chat to create it. **Update 24 Sep:** now syncing on the VM (Tim ticked it in Choose
+   folders). `test-copies\` holds 881 files (online-only until opened); `payloads\` is empty, as expected before R-002.
 6. **Stay awake:** screen turn-off is Never. **Sleep on mains still reads 15 minutes (STANDBYIDLE 0x384) at 12:48**
    after Tim changed it; not yet fixed. Screen-lock setting not confirmed.
 7. **Existing CE bundles:** none. `%APPDATA%\Autodesk\ApplicationPlugins` is empty;
