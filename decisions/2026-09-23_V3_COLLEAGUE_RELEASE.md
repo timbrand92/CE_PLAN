@@ -310,3 +310,9 @@ Tim (verbatim): *"I WANT TO MOVE THE TESTING OF THE CE ACAD PLUGIN AND EVERYTHIN
 Asked: is "the symbol" CE's WELD VERT / WELD HORIZ mark (a row of diagonal ticks along the welded edge, layer WELDING), drawn by the new tool along any edge picked, any length or angle (A, recommended), or a full AS 1101.3 symbol in CE style (B)? Tim (verbatim): *"A"*.
 
 **Meaning:** the V3 weld tool draws CE's tick-run weld mark along a picked edge, on layer WELDING, with the tick size, spacing and angle taken from CE's own WELD VERT block (measured headless, not guessed). No arrow, reference line, tail or text. Card: `04_REFERENCE/structural/STRUCTURAL_WELD_MARK_CARD_2026-09-24.md`.
+
+## Keep building, don't wait for windows — Tim, 24 Sep 2026, about 13:00
+
+Tim (verbatim): *"COTNINUE BUILD PROCESS PLEASE, DONT KEEP STOPPING"*
+
+**Meaning and scope (RULES 14.6 override, written down):** today, builds and automated test suites run during Tim's drafting hours instead of waiting for the 2:00 pm and 5:30 pm windows; the release chat keeps lanes busy continuously. **Not overridden:** nothing touches Tim's own AutoCAD (no install, no Codex AutoCAD run, no accoreconsole on his PC) before he closes it; installs still need AutoCAD closed.
