@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Civil performance fixes — PERF-1B (24 September 2026, awaiting release)
+
+1. **Candidate:** `codex/perf-audit` @ `05476cd2`, draft [PR #156](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/156). Four existing paths changed: moved-pipe label tidy-up, automatic Project QA timing, command usage writing and CE pipe grip filtering. Three Civil Release lanes built with zero errors; 67 focused net10 tests passed. Synthetic figures are in `docs/perf/PERF_AUDIT_2026-09-24.md`; the full Civil suite awaits the release chat after 17:30 Melbourne. No AutoCAD, install or acceptance by this session.
+2. **After a separately authorised release, AutoCAD 2027 and 2024/net48:** on a disposable synthetic drawing with two adjacent CE pipes and nearby pit/invert text, MOVE one pipe and grip-move an end. Its labels must clear the same nearby clashes; labels on the neighbouring pipe must remain correct. Cancel a move; then Undo a completed move and check geometry, labels and pipe links return together. Save/reopen and confirm the label positions persist. Select and grip an ordinary rectangle/polyline: its normal midpoint stretch grips and hover menu must remain; select a CE pipe and check its grip and plan-only move.
+3. **Settling check:** make several quick drawing edits, stop for three seconds, then open Project Review and check its drawing findings become current without repeated flicker. Complete a CE command and check its ordinary usage record is still written. Tim's representative native check is needed because synthetic operation counts do not prove wall-time speed or drawing output.
+
 ## Command-line keyword choices — BUG-168 (24 September 2026, awaiting release)
 
 1. **Candidate:** `codex/keyword-shortcuts` tip `825c12ac`, draft [PR #155](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/155). Seven static prompt clashes and CDWT's generated lists corrected; global keyword names remain stable. Focused net10 checks 16/16, three Drainage Release lanes 0 errors. No AutoCAD opened, installation or acceptance.
