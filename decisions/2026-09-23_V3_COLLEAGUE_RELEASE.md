@@ -260,3 +260,18 @@ Tim chose the recommended option himself (clicked, not typed): *"When you Undo a
 3. The re-run is R-A-4 then R-A-5: double-click, Yes, U once, double-click, the question comes back, answer No, nothing changes.
 
 Also relayed: Tim said *"Yes, bring it across"* for the SEC-001 port (`48638225`). The deploy chat is porting it onto master on its own branch (`Modules/Manager` only), as a PR, not installed.
+
+## StrucPlus pen buttons and the import windows — Tim, 24 Sep 2026, about 11:15
+
+Tim (verbatim), answering the release chat's four questions:
+*"1. a but layers should be 35CONT, 25TEXT, 70HIDDEN
+2. A REVIEW ABOVE
+3. Pen & Linetypes, 21 buttons ONLY
+4. A"*
+
+**Meaning:**
+1. A pen button sets its layer current exactly as StrucPlus did (made if missing, thawed and on if present, colour and linetype ByLayer) and does not start drawing.
+2. Layer names follow Tim's pattern, `<pen><TYPE>` with no prefix: `25CONT`, `35HIDDEN`, `50CENTER`, `70DASHED`, `70PHANTOM`. This is exactly the original StrucPlus table `data\Bylayer.ini` in the IT Admin copy; the later `config\ce_bylayers.ini` (`CE-35-HIDDEN`) is not used. "25TEXT" is the same pattern for text; the text toolbar is not in scope (answer 3).
+3. Only the Pen & Linetypes toolbar: 20 pen buttons (0.25/0.35/0.50/0.70 x Continuous/Hidden/Center/Dashed/Phantom) and Set All. The Change Colour and Change Linetype toolbars are NOT built.
+4. The Civil import windows (PR #153: X-Civil, LandXML, survey) are connected in place of today's prompts; built by Claude today, tested by Codex tonight; if they fail, Tuesday ships today's import prompts.
+5. Tim also asked (verbatim): *"IS THERE ANYT OTHER USEFUL STUFF IN STRUC PLUS FO OUR V3 PLAN?"* A read-only inventory is under way.
