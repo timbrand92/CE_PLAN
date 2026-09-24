@@ -11,6 +11,28 @@ run Codex there at any time, without asking each time? Nothing ever touches your
 **Tim, 24 Sep 2026 about 13:00 (verbatim):** *"now that you have your own machine all testing can be done at any
 time"*. So the RULES AutoCAD-hours window (8:30–2:00, 3:00–5:30) applies to Tim's PC only, not to this VM.
 
+## R-002 — install and pass 9 (status 24 Sep 2026, 15:40)
+
+**FOR TIM:** installed and the version gate passes. Codex pass 9 is running (second try; the first could not see the
+screen because the Codex desktop app was not open on the VM).
+
+1. **Payload** `0924-civil-7d85c40f-struc-488f6250`: 1,542 files, every hash matches `SHA256SUMS.txt` on OneDrive and
+   again after install (0 mismatches, 0 missing).
+2. **Install (REL-09):** AutoCAD closed, checked twice 10 s apart (14:11:11, 14:11:24: none running). Nothing to rename:
+   the VM had no CE bundles. ProgramData ApplicationPlugins does not exist. Tim ran the copy (Claude's copy was blocked
+   by the app's safety check). Going back: close AutoCAD, delete the three bundles.
+3. **Versions read back (S1 gate): PASS.**
+   - Civil Legacy / Net8 / Modern: `3.0.1+7d85c40f7908b45f6d07343f6520477529628d14`
+   - Manager Legacy / Net8 / Modern: `1.1.1+7d85c40f7908b45f6d07343f6520477529628d14`; CE_SHARED.dll identical to
+     Civil's in all three lanes (version `1.1.0+inspector-contract.1.7d85c40f…`)
+   - Structural Modern: `1.0.75+488f6250445206c754d51e71d1f8cdcc00b65d44`; `CE_STRUC_NATIVE_2027.arx` present; no
+     CE_SHARED.dll. Legacy and Net8 lanes absent from this payload (by its SHA256SUMS).
+4. **Codex attempt 1 (15:17):** S1–S4 PASS; S5 BLOCKED: computer-use native pipe unavailable (Codex desktop app not
+   running). All later steps BLOCKED, nothing in AutoCAD tested. Evidence:
+   `C:\CE_TEST_STATION\evidence\R-002\attempt1_cli_no_computer_use\`.
+5. **Codex attempt 2:** started after opening the Codex app. Usage before: 6% weekly (stop line 14%).
+6. **Not tested yet:** every AutoCAD step of pass 9; performance Parts 2 and 3; R-003.
+
 ## R-001 — set up and prove the station (24 Sep 2026, 12:48)
 
 1. **Repos:** present. TimOS, CE_PLAN and CE_ACAD_PLUGIN cloned; `gh` signed in as timbrand92; Git 2.55.0 installed.
