@@ -157,6 +157,22 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 24 Sep 2026 14:46 on Tim's PC — Civil `3.0.1+7d85c40f`, Manager `1.1.1+7d85c40f`, Structural `1.0.74+8c077569` (unchanged)
+
+1. **Installed by the release chat** on Tim's word ("AUTOCAD IS CLOSED, DO WHAT YOU NEED TO", about 14:15); AutoCAD closed, checked twice before the swap and again after. REL-09 rename and copy of the pre-built payload (`CE_TEST_STATION\payloads\0924-civil-7d85c40f-struc-488f6250\`); 884 files hash-checked after copying, 0 mismatches; CE_SHARED identical in Civil and Manager in all three lanes; no AdminSasUrl in any Manager blob-config. `7d85c40f` is in master (release train PR #170, master `1ee79791`).
+2. **Carries, beyond 07:39:** #143 C7 regressions; #146/#149 CDDESIGN, CDRAINFALL, CDLPD windows (connected); #150 SEC-001; #154 BUG-159 grip filter; #151 one U = one edit, tabbed PIT / Edit Pit, Edit Pipe polish; #157 window wording; #155 F12 keyword shortcuts (BUG-168); #156 speed fixes; #162 import windows (X-Civil, LandXML, survey); #160 fit check (quiet on older drawings); #164 version numbers.
+3. **Checks before install:** full Civil suite on `7d85c40f`: 15 failed = 11 known + 4 source guards, all four protections confirmed present (PR #169). Manager 257/257. Structural 1.0.75 **not installed**: its suite comparison was still running at 14:45.
+4. **Backups (undo):** `CE_CVL_SUITE_PRE_c78a350d_20260924-144523.backup`, `CE_SUITE_MANAGER_PRE_c78a350d_20260924-144523.backup`. Undo: close AutoCAD, delete the two new bundles, rename these two back to `CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`.
+5. **INVALIDATES:** pass 8 Z2-Z11 window results (PIT / Edit Pit windows, wording, Edit Pipe clipping changed); R-A-4 / Z4 / X3 Undo results (U1 in); CDGRIPDIAG / BUG-159 grip results; every earlier keyword-choice observation.
+6. **Tim's quick look this afternoon (2027):**
+   1. The CE status bar reads **3.0.1**; `CEMANAGER` shows Civil 3.0.1 and Manager 1.1.1.
+   2. BUG-159: type `CDGRIPDIAG`, click **On** (undoing this morning's workaround). A plain rectangle keeps AutoCAD's own square midpoint grips and hover menu; a CE pipe keeps CE's grips.
+   3. BUG-168: `CDGRIPDIAG` again, click **Off** in the list: the command line says OFF. Then set it back On.
+   4. One U: edit a pipe's diameter in Edit Pipe, Save, press U once: only that change goes.
+   5. `PIT`: the tabbed Pit window opens (Pit & size / Levels & text / Connected pipes / Drawing options / Rotation / Presets).
+   6. `CDDESIGN`, `CDRAINFALL`, `CDLPD` each open a window; Cancel closes with nothing drawn.
+7. **Codex / Test Station:** R-002 on the VM tests the same Civil and Manager bytes plus Structural 1.0.75.
+
 ## LIVE since 24 Sep 2026 07:39 on Tim's PC — Civil `3.0.0+c78a350d`, Manager `1.1.0+c78a350d`, Structural `1.0.74+8c077569`
 
 1. **Installed by the release chat,** AutoCAD closed (checked twice at each step). CE_SHARED is identical in Civil and
