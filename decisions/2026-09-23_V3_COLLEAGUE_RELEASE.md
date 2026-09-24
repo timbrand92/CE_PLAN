@@ -322,3 +322,10 @@ Tim (verbatim): *"COTNINUE BUILD PROCESS PLEASE, DONT KEEP STOPPING"*
 1. *"Yes, same as today"*: every CE Blocks insert behaves exactly as Tim's tool palettes do today (own layer, own fixed size, stored rotation and explode).
 2. *"Yes"*: one CE Blocks palette, opened from a button on all three CE tabs (CE, CE STRUC, CE Tools), with the palettes' own small pictures first and sharper pictures later.
 3. *"Yes, remove them"*: the 99 old job files (address-named) come out of the shipping Structural branch, as on master since 19 Sep (PR #168; private copies verified in `C:\CE_DrawingIntelligence`).
+
+## Colleagues get exactly Tim's installed version, settings included; one CD window for everyone — Tim, 24 Sep 2026, about 15:53
+
+Tim (clicked): *"Yes, everyone gets it"* — the one-page CD window (Engineering and Drafting on top, the real-plan preview below; switched on only on Tim's PC by `editors.workshopLayout` since 16 Sep) becomes the standard for everyone, and Edit Pipe, New Pit and Edit Pit use the same layout. The older CD window stays in the plugin, switched off, until Tim says it can go.
+Tim (verbatim, minutes later): *"LIKE IVE SAID 1 MILLION TIMES BEFORE I WANT WHATEVER VERSION YOUVE INSTALLED FOR ME ON THEIR COMPUTERS ON TUESDAY OTHERWISE HOW CAN I POSSIBLY EXPLAIN TO THEM WHAT LEVEL ITS AT. SERIOUSLY!"*
+
+**Meaning (a standing rule for the release):** the colleague install on Tuesday is **the exact payload installed on Tim's PC plus Tim's behaviour-affecting switches as the defaults** (layout and editor flags such as `editors.workshopLayout`, grip routes, and anything else that changes what a user sees or does). Personal values (recent lists, file paths, window positions) are not copied. The release chat asked this as a question when the plan already answered it (entry of 23 Sep, "What ships: exactly what is in Tim's AutoCAD"): a mistake, recorded here so no chat asks again.
