@@ -90,7 +90,8 @@ The next release chat starts here, then reads `areas/release-v3-colleagues.md` i
      CL, REBAR, SCAB, SPW and more) under Utilities → Legacy, but no coloured-line panel exists, and RBL and FFL are stubs.
    - What each colour and pattern meant (layer, linetype, lineweight; draw new or change selected) is not recorded
      anywhere found.
-   - **Ask Tim for the mapping, or a drawing or template carrying those layers.** Then write the command card (review
+   - **UPDATE 10:40, Tim:** StrucPlus lives at `C:\Users\TimothyBrand\Creative Engineering\Creative Engineering - IT Admin\StructPlus` (his OneDrive IT Admin folder, read-only). Read the toolbar and LISP there first.
+   - **Ask Tim for the mapping, or a drawing or template carrying those layers,** only if that folder doesn't answer it. Then write the command card (review
      gate) and build a "Line styles" panel on the Structural ribbon.
 2. **Import windows (#153):** connect them? The same question as the design windows.
 
