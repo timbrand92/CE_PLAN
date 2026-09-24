@@ -112,7 +112,7 @@
 
 **Tim's AutoCAD steps:** delete nothing; type the What's New command (or start AutoCAD after the next version change); check it opens large enough to read without leaning in, the headings and text are easy to read in dark and light, the top line is complete, and every item describes something you can actually find on the ribbon.
 
-**Status:** OPEN — routed to a Codex window job 24 Sep (window + content truth pass).
+**Status:** IN PROGRESS — code built on `codex/whatsnew-readable` at `4465e22d`, three Civil lanes zero errors and 40 focused checks pass. Eight real dark/light top/end pictures inspected. Awaiting a separately authorised install and Tim's AutoCAD confirmation; not fixed yet.
 
 ---
 

@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## What's New readability and content — BUG-170 (24 September 2026, awaiting release)
+
+1. **Candidate:** `codex/whatsnew-readable` at `4465e22d`, draft PR pending. The window is 760 × 640, resizable, with a fixed header/footer and a scrolling reading list. Its 15 Version 3.0.1 claims name visible Civil actions; the false single-tab and Civil status-dot text has gone. Three Civil Release lanes have zero errors; 11 What's New and 29 related ribbon/registry checks pass. Eight real dark/light pictures at 100% and 125% were inspected. Full Civil suite waits for the release chat after 17:30 Melbourne. No AutoCAD, install or acceptance by this session.
+2. **After a separately authorised combined release, AutoCAD 2027 and 2024/net48:** when the window opens after the next version change, read the full subtitle in dark and light at 1920 × 1080. Scroll to "Less work after a pipe move"; the header and How To Guide/Got It buttons must stay in place, with all text readable. Check that Design setup, Rainfall, Legal point of discharge and Import → X-Civil/LandXML/Survey are on the Civil ribbon, and that the page does not claim one CE tab or a Civil status dot. Press Escape: the drawing stays unchanged. This is a visual/content check; no new drawing action was added.
+
 ## Tabbed Pit review and plan text targets — PIT-REVIEW-02 (24 September 2026, awaiting release)
 
 1. **Candidate:** `codex/pit-review-changes` at `bad3c979`, draft [PR #166](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/166) against master, dependent on the 24 Sep Civil train. New Pit and Edit Pit have a fixed-footer Review changes button and the one-page plan text choices. Edit Pit retains its opening Was → Now values after Inspect Drawing. Three Civil Release lanes build with zero errors; 27 focused Pit window checks pass; dark/light review and tab pictures inspected. Full Civil suite remains with the release chat after 17:30. No AutoCAD, installation or acceptance.
