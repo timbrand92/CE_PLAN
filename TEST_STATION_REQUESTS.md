@@ -3,6 +3,24 @@
 The Test Station (Tim's VM) reads this; it writes its answers in `TEST_STATION_RESULTS.md`. Set-up and rules:
 `04_REFERENCE/TEST_STATION_SETUP.md`. Newest request first.
 
+## R-004 — make the VM's AutoCAD match Tim's: his AutoCAD 2027 setup and his CE settings (24 Sep 2026, 17:10)
+
+**Why:** Tim (24 Sep, verbatim): *"NEED TO TELL THE OTHER VM CHAT THAT ITS GOT THE OLD VERSION OF CD AND THAT IT NEEDS TO INSTALL MY SETUP OF AUTOCAD 2027."* The VM shows the older CD window because a fresh CE install has the one-page window switched off (`editors.workshopLayout`); Tim's PC has it on. Tim's standing rule: colleagues, and so the Test Station, get exactly his setup.
+
+**Inputs** (in `CE_TEST_STATION\inputs\`):
+1. `AutoCAD 2027 - English_cust_settings.zip` (6.7 MB): Tim's AutoCAD settings export (profile, support folder, fonts; 3,098 files). It contains **no CE plugins**, so it cannot overwrite the CE version installed on the VM.
+2. `TIM_CE_SETTINGS_2026-09-24\TIM_CE_CADTOOLS\`: Tim's five CE settings files: `CD_Settings.json` (holds the one-page CD switch and his CE options), `CS_Settings.json`, `label_styles.json`, `parts_catalogue.json`, `theme.json`. Deliberately NOT copied: project records, autosave backups, logs, `install_salt.bin` (per-install identity), `last_version.txt`.
+
+**Steps:**
+1. Close AutoCAD on the VM (check `acad.exe` is gone twice, 10 s apart).
+2. **Back up first:** copy `%APPDATA%\Autodesk\AutoCAD 2027` and `%APPDATA%\TIM_CE_CADTOOLS` (if present) to `C:\CE_TEST_STATION\backup-before-R004\`.
+3. **Import Tim's AutoCAD settings** with Autodesk's own tool: Start menu > AutoCAD 2027 - English > **Import AutoCAD 2027 - English Settings**; choose the zip; import everything it offers. If the tool asks to overwrite, yes (the backup is in step 2).
+4. **CE settings:** copy the five files into `%APPDATA%\TIM_CE_CADTOOLS\` (create it if missing).
+5. **Check the CE plugins were not touched:** re-hash the three CE bundles against `SHA256SUMS.txt` of the installed payload (R-002). Any difference: stop and report.
+6. Start AutoCAD. Check: the CE, CE STRUC and CE Tools tabs load; `CD` then Enter shows the **one-page** window (Engineering and Drafting across the top, a big plan preview below: Tim's reference picture `inputs\CD_NEWPIPE_THE_REFERENCE_tim_2026-09-24.webp`); the status bar shows 3.0.1; answer No to every save.
+7. Report in `TEST_STATION_RESULTS.md` (what was imported, anything the import tool refused, the hash check, a screenshot path of the one-page CD window on the VM). Then carry on with R-002 (pass 9) on this setup; any pass 9 results taken before R-004 on window layout are INVALID and must be re-run.
+8. **Undo:** close AutoCAD, restore the two folders from `C:\CE_TEST_STATION\backup-before-R004\`.
+
 ## R-003 — measure three office drawings, headless and read-only (24 Sep 2026, 13:35)
 
 **Why:** the weld mark (Tim: CE's own tick-run mark, "A"), the base plate family and the CE Blocks palette must copy CE's own drawings, not guesses. Cards: `04_REFERENCE/structural/STRUCTURAL_WELD_MARK_CARD_2026-09-24.md`, `04_REFERENCE/structural/STRUCTURAL_STEEL_CONNECTIONS_WELDS_CARD_DRAFT_2026-09-24.md`, `04_REFERENCE/TOOL_PALETTES_PROPOSAL_2026-09-24.md`.
