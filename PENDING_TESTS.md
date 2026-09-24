@@ -173,6 +173,7 @@ running; its loaded modules were inspected and it was not holding the bundle. **
    5. `PIT`: the tabbed Pit window opens (Pit & size / Levels & text / Connected pipes / Drawing options / Rotation / Presets).
    6. `CDDESIGN`, `CDRAINFALL`, `CDLPD` each open a window; Cancel closes with nothing drawn.
 7. **Codex / Test Station:** R-002 on the VM tests the same Civil and Manager bytes plus Structural 1.0.75.
+8. **Tim's results, 24 Sep about 15:10 (2027):** step 1 version "YEP WORKS"; step 2 grips "WORKS NOW" (BUG-159 fixed); step 3 Off/On "WORKS" (BUG-168, CDGRIPDIAG); step 4 one U "WORKS"; step 6 design windows "WORKS". **Tim-accepted:** those five. Step 5 PIT: the tabbed window opens but "DOESNT LOOK GREAT IN COMPARISON TO HOW THE CD WINDOW LOOKS" (BUG-173). New: BUG-171 (upgraded old pipe opens as Detention), BUG-172 (Civil ribbon pictures), BUG-173 (Edit Pipe should look like New Pipe).
 
 ## LIVE since 24 Sep 2026 07:39 on Tim's PC — Civil `3.0.0+c78a350d`, Manager `1.1.0+c78a350d`, Structural `1.0.74+8c077569`
 
