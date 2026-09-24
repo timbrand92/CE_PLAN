@@ -36,7 +36,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-174 *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-175 *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -81,6 +81,22 @@
 **Tim's AutoCAD steps:** look along the CE tab: every picture matches its button and sits level with its neighbours, as on CE STRUC.
 
 **Status:** OPEN — waiting for Tim's screenshot; then a window/ribbon job.
+
+---
+
+## BUG-174
+
+**Command / Area:** command-line questions (keyword prompts) across Civil and Manager; seen in CDDESIGN.
+
+**What Tim did / what happened:** 24 Sep 2026 about 15:25 on `3.0.1+7d85c40f`, CDDESIGN printed "[CE] Look through this job's folders for its rating report and offer the site and roof areas? [Yes No] <Yes>:". Tim (verbatim): *"IT SAYS YES OR CE WHICH IS NOT A QUESTION CHAMP"*. The leading "[CE]" tag is in square brackets, and AutoCAD offers bracketed text in a question as a choice, so the choices read Yes / CE. (The release chat first misread the screenshot and asked Tim what was wrong.)
+
+**Expected behaviour:** a question offers only its real choices (here Yes and No); the [CE] tag never appears inside a question.
+
+**Test that catches it:** a source guard: no keyword prompt message contains bracketed text other than its keyword list (helpers included).
+
+**Tim's AutoCAD steps:** run CDDESIGN: the question's choices (click or F12) are only Yes and No. Repeat in 2024.
+
+**Status:** OPEN — Claude builder on `claude/bug-174-ce-tag-in-prompts` 24 Sep.
 
 ---
 
