@@ -8,6 +8,8 @@ Newest first. Drawings by label only; evidence stays on the VM.
 **Question (24 Sep 2026, in chat `CE_ACAD / test-station / 01`):** *"May I install CE builds into this VM's AutoCAD and
 run Codex there at any time, without asking each time? Nothing ever touches your own PC."*
 **Tim, 24 Sep 2026 about 12:45 (verbatim):** *"yes"*
+**Tim, 24 Sep 2026 about 13:00 (verbatim):** *"now that you have your own machine all testing can be done at any
+time"*. So the RULES AutoCAD-hours window (8:30–2:00, 3:00–5:30) applies to Tim's PC only, not to this VM.
 
 ## R-001 — set up and prove the station (24 Sep 2026, 12:48)
 
@@ -21,7 +23,9 @@ run Codex there at any time, without asking each time? Nothing ever touches your
    Tim is asking the release chat to create it. **Update 24 Sep:** now syncing on the VM (Tim ticked it in Choose
    folders). `test-copies\` holds 881 files (online-only until opened); `payloads\` is empty, as expected before R-002.
 6. **Stay awake:** screen turn-off is Never. **Sleep on mains still reads 15 minutes (STANDBYIDLE 0x384) at 12:48**
-   after Tim changed it; not yet fixed. Screen-lock setting not confirmed.
+   after Tim changed it; not yet fixed. Screen-lock setting not confirmed. **Update 24 Sep:** not a problem —
+   `powercfg /a` shows the VM firmware supports no sleep or hibernate state at all, so the 15-minute value never
+   fires (Windows hides the sleep option for this reason).
 7. **Existing CE bundles:** none. `%APPDATA%\Autodesk\ApplicationPlugins` is empty;
    `C:\ProgramData\Autodesk\ApplicationPlugins` does not exist.
 
