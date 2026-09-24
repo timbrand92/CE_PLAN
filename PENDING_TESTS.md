@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Tabbed Pit review and plan text targets — PIT-REVIEW-02 (24 September 2026, awaiting release)
+
+1. **Candidate:** `codex/pit-review-changes` on the 24 Sep Civil train. New Pit and Edit Pit have a fixed-footer Review changes button and the one-page plan text choices. Edit Pit retains its opening Was → Now values after Inspect Drawing. Three Civil Release lanes build with zero errors; 27 focused Pit window checks pass; dark/light review and tab pictures inspected. Full Civil suite remains with the release chat after 17:30. No AutoCAD, installation or acceptance.
+2. **After a separately authorised combined release, AutoCAD 2027 and 2024/net48:** open New Pit, note the starting plan length, change it, and click Review changes. Check the opening and pending lengths are both shown under Plan length. The fixed footer must show Pit label and Cover, invert and notes under Text on plan. Cancel without placing.
+3. **Edit Pit:** edit a 600 mm pit, change its plan length to 1200 mm and clear its cover level. Review changes must show Was 600 mm → Now 1200 mm and Now Unknown for Cover level. Choose Cover, invert and notes; the corner marker must name that text. Click Inspect Drawing, pan/zoom, press Enter to return: the gold edge, Was/Now tip and review list must still use the original 600 mm value. Cancel; the drawing pit remains 600 mm.
+
 ## Civil performance fixes — PERF-1B (24 September 2026, awaiting release)
 
 1. **Candidate:** `codex/perf-audit`, draft [PR #156](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/156). Four existing paths changed: moved-pipe label tidy-up, automatic Project QA timing, command usage/failure writing and CE pipe grip filtering. Three Civil Release lanes built with zero errors; 68 focused net10 tests passed. Synthetic figures are in `docs/perf/PERF_AUDIT_2026-09-24.md`; the full Civil suite awaits the release chat after 17:30 Melbourne. No AutoCAD, install or acceptance by this session.
