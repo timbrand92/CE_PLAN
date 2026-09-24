@@ -56,7 +56,19 @@ screen because the Codex desktop app was not open on the VM).
    Publisher; location `%APPDATA%\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\...\Modern`; buttons Always Load /
    Load Once / Do Not Load). Codex correctly did not answer a security prompt. **For the pilot:** a colleague's fresh
    AutoCAD 2027 will show this same prompt unless the ARX is signed or the bundle folder is trusted. Waiting for Tim's
-   choice on the VM. Evidence: `evidence\R-002\P9_S5_modal2.png`. Usage 7% weekly.
+   choice on the VM. Evidence: `evidence\R-002\attempt4_security_prompt\P9_S5_modal2.png`. Usage 7% weekly.
+   Tim clicked **Always Load** on every security prompt (about 16:15).
+6. **Attempt 5, Part S (16:49): PASS 7 · FAIL 1 · BLOCKED 0 · NOT TESTED 1** (S9 runs last). Usage 9%.
+   - S1–S4 PASS (versions and hashes as item 3).
+   - **S5 FAIL:** DWG-A_P9 opened; CE, CE STRUC and CE Tools tabs present. Command-line history shows
+     **"Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager"** and **"Menu item failed to load:
+     CE_STRUC_SUITE_MENU:CE STRUC"**. CEADMIN: "Runtime health RESTART RECOMMENDED (document)", "Restart AutoCAD now
+     (recent hotspots 1)". Also seen: "[CE] 0 pipe(s) upgraded to CE pipe objects, 19 left as drawn"; 3 missing
+     xrefs (ignored once); CE made a PRE_C7 backup in test-copies. A stray PASTECLIP prompt from focus recovery was
+     cancelled before insertion. Evidence: `P9_S5_history.txt`, `P9_S5_CE.log`, `P9_S5_*.png`.
+   - S6 PASS (CDINSPECTOR opens). S7 PASS ("CDDEBUG ON"). S8 PASS baseline: OSMODE 4133, profile `<<Unnamed
+     Profile>>` (VM, not Tim's), acadiso.dwt `12B46B17C114D235…` (same as Tim's), CD_Settings.json absent.
+   - Now running P9-R.
 6. **Not tested yet:** every AutoCAD step of pass 9; performance Parts 2 and 3; R-003.
 
 ## R-001 — set up and prove the station (24 Sep 2026, 12:48)
