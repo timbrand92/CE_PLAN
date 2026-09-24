@@ -332,7 +332,7 @@ Tim (verbatim, minutes later): *"LIKE IVE SAID 1 MILLION TIMES BEFORE I WANT WHA
 
 ## Fresh-install defaults to match Tim — Tim, 24 Sep 2026, about 16:25 (clicked)
 
-Settings where Tim's PC differs from a fresh install (read by a builder, PR #183; local list `C:\CE_DrawingIntelligence _Control\COLLEAGUE_DEFAULTS_DIFF_2026-09-24.txt`). Already changed as plain behaviour: `editors.workshopLayout` true (the one-page CD window), `options.defaultInvertPosition` Bottom. Tim's answers on the rest:
+Settings where Tim's PC differs from a fresh install (read by a builder, PR #183; local list `C:\CE_DrawingIntelligence\00_Control\COLLEAGUE_DEFAULTS_DIFF_2026-09-24.txt`). Already changed as plain behaviour: `editors.workshopLayout` true (the one-page CD window), `options.defaultInvertPosition` Bottom. Tim's answers on the rest:
 1. CD draw-first: *"Yes, like mine"* — default true for everyone.
 2. Minimum pipe cover: *"300 mm, like mine"* — default 300 mm (replaces the 450 mm seed of 4 Sep for new installs).
 3. Pit invert drop: *"20 mm default"* — the default stays 20 mm; Tim's own 5 mm was a one-off (his own PC keeps 5 mm until he changes it in Settings).
