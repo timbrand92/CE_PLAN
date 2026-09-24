@@ -1,7 +1,7 @@
 # CE Blocks palette — command card, DRAFT for Tim's OK (24 Sep 2026)
 
 **Why:** Tim, 24 Sep (verbatim): *"LETS GO WITH OPTION A FOR CE BLOCKS"* (proposal:
-`04_REFERENCE/TOOL_PALETTES_PROPOSAL_2026-09-24.md`). **Status:** DRAFT; no code until Tim answers section 5.
+`04_REFERENCE/TOOL_PALETTES_PROPOSAL_2026-09-24.md`). **Status:** APPROVED by Tim 24 Sep 15:00 (all three recommended answers, decision file).
 Classification: **Missing** (today the palettes are AutoCAD tool palettes imported by hand into each profile).
 
 ## 1. What it does on the drawing
@@ -59,3 +59,7 @@ Classification: **Missing** (today the palettes are AutoCAD tool palettes import
    stored)? **Recommended: yes** — nothing changes for anyone's hands.
 2. **Pictures:** use the palettes' own small thumbnails first, sharper live pictures later? **Recommended: yes.**
 3. **Where:** one CE Blocks palette, opened from a button on all three CE tabs? **Recommended: yes.**
+
+## 6. Tim's answers (24 Sep 15:00)
+
+1. Yes, same as today. 2. Yes (thumbnails first). 3. Yes (all three tabs).

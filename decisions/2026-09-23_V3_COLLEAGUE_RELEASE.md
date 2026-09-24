@@ -316,3 +316,9 @@ Asked: is "the symbol" CE's WELD VERT / WELD HORIZ mark (a row of diagonal ticks
 Tim (verbatim): *"COTNINUE BUILD PROCESS PLEASE, DONT KEEP STOPPING"*
 
 **Meaning and scope (RULES 14.6 override, written down):** today, **building** runs continuously during Tim's drafting hours; the release chat keeps build lanes busy. **Corrected about 13:05:** the release chat first read this as "run the test suites now" and started the full Civil suite; Tim (verbatim): *"I DIDNT SAY TEST NOW, I SAID BUILD NOW"* and *"ONCE VM IS SETUP WE CAN TEST ANYTIME OF DAY"*. The suite was stopped within minutes. **Testing waits** for the Test Station (VM) or the free windows. **Not overridden:** nothing touches Tim's own AutoCAD (no install, no Codex AutoCAD run, no accoreconsole on his PC) before he closes it; installs still need AutoCAD closed.
+
+## CE Blocks approved; old job files out of the Structural branch — Tim, 24 Sep 2026, 15:00 (clicked choices)
+
+1. *"Yes, same as today"*: every CE Blocks insert behaves exactly as Tim's tool palettes do today (own layer, own fixed size, stored rotation and explode).
+2. *"Yes"*: one CE Blocks palette, opened from a button on all three CE tabs (CE, CE STRUC, CE Tools), with the palettes' own small pictures first and sharper pictures later.
+3. *"Yes, remove them"*: the 99 old job files (address-named) come out of the shipping Structural branch, as on master since 19 Sep (PR #168; private copies verified in `C:\CE_DrawingIntelligence`).
