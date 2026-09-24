@@ -62,7 +62,9 @@
 
 **Test that catches it / Tim's AutoCAD steps:** to be written once the symptom is known.
 
-**Status:** OPEN — symptom recorded 24 Sep about 11:20; Claude builder on `claude/struc-layer-restore` (from `claude/struc-d1-prep`).
+**Cause (builder's diagnosis, not yet re-checked by the release chat):** RC handed REVCLOUD to AutoCAD with `SendStringToExecute`, which runs only after RC has ended, so Enter repeated REVCLOUD, not RC; and RC always switched back to a fixed 25CONT. The strip footing commands (SFC, SFCT, SFCB, BSFC, BSFCT, BSFCB) had the same hand-off, and worse: the footing was drawn on the drafter's own layer instead of STRIP FOOTINGS. CML had the Enter-repeat fault only.
+
+**Status:** IN PROGRESS — built, not installed. **PR #163** (`claude/struc-layer-restore`, tip `8d382ec0`, base `claude/struc-d1-prep`): native commands now run inside the CE command, and one shared helper puts back the layer the drafter was on (if it still exists and is not frozen). Builder's report: 3 Structural lanes 0 errors; 54 focused tests passed; the net48 test project did not compile because of two untouched test files (claimed pre-existing; to verify). Tim's 2027 and 2024 steps are in REGRESSION_LOG.md. Never mark fixed until Tim confirms in AutoCAD.
 
 ---
 
