@@ -37,6 +37,7 @@ The CE project manager, Hush, personal finance and the rest have their own plans
 3. **`decisions\`** — Tim's words, in quotes, dated: the 16 Sep test-day results, decisions D1 to D10 and the
    design-pack rulings, the 4 Sep reconciliation, the drawing-intelligence decisions log.
 4. **`PENDING_TESTS.md`** — everything built but not yet tested in AutoCAD, across every chat. Section 1b.
+4b. **`TEST_STATION_REQUESTS.md`** / **`TEST_STATION_RESULTS.md`** — the bridge to the Test Station on Tim's virtual machine (from 24 Sep 2026): the release chat writes requests, the VM writes results. Set-up: `04_REFERENCE\TEST_STATION_SETUP.md`.
 5. **`BUG_CARPARK.md`** — the one bug file. **`IDEAS_INBOX.md`** and `IDEAS_BACKLOG.md` — the one idea file
    and its sorted backlog.
 6. **`ENGINEERING_RULEBOOK.md`** — the engineering rules (R-00 onward), the Autodesk API guardrails, and the
