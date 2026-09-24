@@ -363,7 +363,7 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
    4. **PITEDIT finish** (approved; part-built): levels, details, connections, presentation.
    5. **CDEDIT batch** (approved): finish routing and same-type one-Undo batch for pipes as for pits.
    6. **Pipe-to-pit physical fit warning** (approved 2 Sep, warning-only, not built): in PIPEEDIT, PITEDIT, CDCHECK and Project Review.
-   7. **Calculations provenance and Apply-to-drawing review** (the D+F area plan's gate).
+   7. **Calculations provenance and Apply-to-drawing review** (the D+F area plan's gate). **24 Sep 2026 — a build session stopped before writing code: the "(CV-02)" pointer used below (item 279) is wrong.** CV-02's real A1–A3 is pipe-diameter-sizing advisory (`archive/plugin-docs-july-2026/workflows/CV-02A_ASSISTED_PIPE_SIZING_PLAN.md`), not D+F provenance; the D+F area file has no approved A1/A2/A3 and six open decisions (D-Q1–3, F-Q1–3) Tim hasn't answered. Full finding: `areas/civil-D-F-catchments-cdcalc-osd.md` §10.
    8. **CDSETUP guided project design** (behaviour and visual approved; approved workflow card; not built).
    9. **Topology / local reassessment on normal edits**, then **CDCHECK smart drafting**.
    10. **CDPROFILE drawing integration**, **Slab System insertion**, **unified CDIMPORT**, **Project Review workspace**, **CDREPAIR read-only scan and reviewed repair**, **visual CDHELP** (full v3 guide).
