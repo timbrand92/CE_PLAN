@@ -178,6 +178,15 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 24 Sep 2026 22:04 on Tim's PC — Civil `3.0.3+b22095c5`, Manager `1.1.3+b22095c5`, Structural `1.0.74+8c077569` (unchanged)
+
+1. **Installed** under Tim's 24 Sep 17:15 word (test here until Monday). AutoCAD (left open by Codex pass 9 since 18:08, no drawing open) was closed gracefully at 22:03 with no save prompt; then checked closed twice. REL-09 swap; 899 files hash-verified (0 mismatches); CE_SHARED identical in all lanes; no AdminSasUrl. `b22095c5` is in master (release train 3, PR #201; master `bf57f739`).
+2. **Carries, beyond 18:04:** one-page Pit window with real preview and 125/150% fit (#184, #186), CDPROFILE (#187), council rule R-30 (#189), CDEDIT same-type batch for everyone (#192), Newtonsoft fragile calls (#194), CE Blocks layer/dock/icon (#195), BUG-171 round 2 (#196), Undo after save and pit Undo (#197), C7 split + bent-pipe grip (#198), pass 9 wording (#199), versions (#200).
+3. **Checks:** full Civil suite on `b22095c5`: 6 failed, all within the saved baseline (0 new); Manager 265/265.
+4. **Backups (undo):** `CE_CVL_SUITE_PRE_f0aca3f9_20260924-220345.backup`, `CE_SUITE_MANAGER_PRE_f0aca3f9_20260924-220345.backup`.
+5. **INVALIDATES:** every pass 9 result for the items above; PIT / Edit Pit window results (now the one-page layout).
+6. **Headless proofs not run:** another process (AutoCAD Benchmark `cebench`) keeps a core console open, and the proof runner refuses to start alongside one. **Codex pass 10** queued (brief `codex\pass10.txt`, report `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS10_2026-09-24.md`).
+
 ## LIVE since 24 Sep 2026 18:04 on Tim's PC — Civil `3.0.2+f0aca3f9`, Manager `1.1.2+f0aca3f9`, Structural `1.0.74+8c077569` (unchanged)
 
 1. **Installed by the release chat** under Tim's word of 24 Sep about 17:15 ("TEST HERE UNTIL MONDAY MORNING, I HAVE LEFT AUTOCAD IS CLOSED"); AutoCAD closed, checked twice (18:03:40, 18:03:50) and at the end. REL-09 rename and copy; every installed file hash-checked against the payload afterwards: 899 files (Civil 821, Manager 78), 0 missing, 0 mismatches (the script's own count showed 0 because its first hash list had shifted paths; re-written and re-checked by hand). CE_SHARED identical Civil/Manager in all lanes; no AdminSasUrl. `f0aca3f9` is in master (release train 2, PR #190; master `1eb8f4ec` after #191).
