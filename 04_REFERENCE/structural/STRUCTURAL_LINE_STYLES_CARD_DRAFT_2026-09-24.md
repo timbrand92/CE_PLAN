@@ -51,7 +51,7 @@ it; the Structural module does not).
 5. **Values on the Settings page (R-00):** pen → colour, layer name pattern, the linetype file.
 6. **Both lanes:** 2027, and 2022-2024 (net48).
 
-## 3. Tim's AutoCAD checklist (after build)
+## 3. Tim's AutoCAD checklist (after build) — layer names per section 4: read `35HIDDEN` for `CE-35-HIDDEN`; steps 4 to 6 dropped
 
 1. Click **0.35 Hidden**. The layer list shows `CE-35-HIDDEN` current, yellow, Hidden. Draw a LINE: yellow, hidden.
 2. Freeze `CE-35-HIDDEN`, click 0.35 Hidden again: it is thawed and current.
@@ -66,4 +66,4 @@ it; the Structural module does not).
 1. *"a but layers should be 35CONT, 25TEXT, 70HIDDEN"*: behaviour as StrucPlus; layer names `<pen><TYPE>` (`25CONT`, `35HIDDEN`, `50CENTER`, `70DASHED`, `70PHANTOM`), the original StrucPlus `data\Bylayer.ini` table. **Section 2 item 2 is superseded.**
 2. *"A REVIEW ABOVE"*.
 3. *"Pen & Linetypes, 21 buttons ONLY"*: the Change panel (section 1 items 5 to 9, checklist steps 4 to 6) is **not built**.
-4. Existing layers keep their own colour and linetype (the office layer update, LU, may already define them); a missing linetype is loaded from acadiso.lin.
+**Release chat's call, not Tim's (24 Sep):** existing layers keep their own colour and linetype (the office layer update, LU, may already define them); a missing linetype is loaded from acadiso.lin.
