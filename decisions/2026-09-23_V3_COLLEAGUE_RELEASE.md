@@ -304,3 +304,9 @@ Tim (verbatim): *"I WANT TO MOVE THE TESTING OF THE CE ACAD PLUGIN AND EVERYTHIN
 3. **Welds: graphic weld symbols only** (option B; Claude had recommended note leaders). Supersedes the proposal in the steel card section 3 item 1.
 4. **Connection order as recommended** (base plate, web cleat, portal moment end plate, beam end plate, cast-in plate). **Look:** welds and connections are drawn the way Creative Engineering draws them (CE's own standard details and blocks), **not** StrucPlus's style.
 5. **Defaults:** every connection family is seeded from CE's own standard wording, as for the base plate, editable on the Settings page.
+
+## The weld symbol is CE's own tick-run mark — Tim, 24 Sep 2026, about 11:58
+
+Asked: is "the symbol" CE's WELD VERT / WELD HORIZ mark (a row of diagonal ticks along the welded edge, layer WELDING), drawn by the new tool along any edge picked, any length or angle (A, recommended), or a full AS 1101.3 symbol in CE style (B)? Tim (verbatim): *"A"*.
+
+**Meaning:** the V3 weld tool draws CE's tick-run weld mark along a picked edge, on layer WELDING, with the tick size, spacing and angle taken from CE's own WELD VERT block (measured headless, not guessed). No arrow, reference line, tail or text. Card: `04_REFERENCE/structural/STRUCTURAL_WELD_MARK_CARD_2026-09-24.md`.
