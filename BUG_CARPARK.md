@@ -126,11 +126,11 @@
 
 **Expected behaviour:** the Pit windows and Edit Pipe look and work like the CD / New Pipe window (the design reference, Tim 23 Sep 22:10): same layout, spacing, header, footer, preview treatment.
 
-**Test that catches it:** off-screen renders compared side by side with New Pipe; fit tests at 1080p scale 1.0 and 1.25; control inventory Kept/Moved/Combined/Replaced.
+**Test that catches it:** off-screen renders compared side by side with New Pipe; fit and preview/footer bounds at 1080p and 1440p, scales 1.0, 1.25 and 1.5, including detention, plastic and six connections; control inventory Kept/Moved/Combined/Replaced.
 
 **Tim's AutoCAD steps:** open PIT, Edit Pit and double-click a pipe: each looks like the CD window you draw pipes with.
 
-**Status:** IN PROGRESS — pit one-page candidate in draft PR #184 (`8d24ad83`), superseding wrong-reference tabbed PR #176; pipe one-page candidate in draft PR #180 (`7e74c93d`). The pit candidate has three zero-error Civil Release builds, 177 focused checks and six inspected dark/light New Pit/Edit Pit/New Pipe renders. Its real-drawing preview still needs command-owner integration: New Pit must supply the plan anchor, and Edit Pit the pending dry-run preview. Pipe edit has 345 focused checks, three zero-error Civil builds and four inspected renders. Full Civil suite awaits after 17:30. Neither candidate is installed or Tim-accepted. The combined native check in 2027 and 2024 is still required.
+**Status:** IN PROGRESS for native acceptance. Pit one-page [PR #184](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/184) is ready for review at `a760d7d4`: all 20 new scaling failures cleared, 304 requested/pit and 599 wider fit checks pass, three Civil Release builds have zero errors, and the full Civil run has 10,935 passed / 6 existing non-Pit failures / 19 skipped. Thirty-two 150% dark/light New/Edit Pit renders were inspected. The real-drawing preview still needs command-owner plan-anchor/dry-run integration. Pipe one-page PR #180 remains separate. Neither is installed or Tim-accepted; the combined 2027/2024 native check remains.
 
 ---
 
