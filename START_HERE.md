@@ -1,3 +1,5 @@
+> **Release chat handover (24 Sep 10:30):** start at `archive/chat-records-2026-09/HANDOVER_RELEASE_CHAT_2026-09-24_1030.md`.
+
 # START HERE — read this before you do anything
 
 **You are working on CE_ACAD, the CE AutoCAD plugin, for Tim Brand.** This repository is the one place its plan,
