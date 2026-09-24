@@ -64,7 +64,9 @@
 
 **Tim's AutoCAD steps:** open a copy of an older drawing with a stormwater pipe drawn before 23 Sep, upgrade it the way you did today, double-click it: Edit Pipe shows Stormwater.
 
-**Status:** OPEN — Claude builder diagnosing 24 Sep.
+**Cause (builder's diagnosis, 24 Sep):** not the upgrade. Every upgrade path keeps the pipe's handle, XData and record, and its stored type stays Stormwater. The fault is where the type is read back for display: `PipeTruthResolverService.ParsePipeTypeLabel` had no case for "Stormwater Pipe", so a correct Stormwater record was discarded and replaced by a layer-name guess that reads Detention. Edit Pipe, its preview and CDINSPECTOR's live check share that method.
+
+**Status:** IN PROGRESS — built, not installed. **Draft PR #175** (`claude/bug-171-upgrade-system`, tip `0da8f850`): the missing case added, plus regression, Detention-still-works, round-trip and no-evidence tests. Builder's report: 3 lanes 0 errors; 164 focused tests passed. A related dead-code copy of the layer guess in `PipeEditCommand.DataCollection.cs` was flagged separately, not changed. Never mark fixed until Tim confirms in AutoCAD.
 
 ---
 
