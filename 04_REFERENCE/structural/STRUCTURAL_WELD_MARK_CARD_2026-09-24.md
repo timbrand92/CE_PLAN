@@ -1,7 +1,6 @@
 # Structural weld mark — command card (24 Sep 2026)
 
-**Status:** behaviour APPROVED by Tim 24 Sep about 11:58 (*"A"*, decision file). One measurement outstanding before
-code (section 3). Classification: **Missing**.
+**Status:** behaviour APPROVED by Tim 24 Sep about 11:58 (*"A"*, decision file). Measured 24 Sep 16:25 (section 4): **ready to build.** Classification: **Missing**.
 
 ## 1. What it does on the drawing
 
@@ -32,3 +31,9 @@ code (section 3). Classification: **Missing**.
    `Creative Engineering - Drafting\Superseded Stuff\SILVIAS SELECTION steel DETAILS.dwg`, read-only, headless, after
    17:30 or on the Test Station. Record the numbers here.
 2. The block's source drawing sits in "Superseded Stuff": on the tool-palette tidy-up list (`04_REFERENCE/TOOL_PALETTES_PROPOSAL_2026-09-24.md` section 3).
+
+## 4. Measured (Test Station R-003, 24 Sep 16:25, headless, read-only)
+
+1. WELD VERT and WELD HORIZ are ticks only (no run line): **tick length 20.000, spacing 15.000, 45 degrees to the run, one side only**; VERT 18 ticks, HORIZ 13.
+2. Layer **WELDING**, colour **9**, Continuous, default lineweight; everything ByLayer; base point 0,0; units mm; not annotative; inserted at a fixed size (like every tool in Tim's palettes: a fixed factor, not the drawing scale).
+3. **Defaults for the Settings page:** tick length 20, spacing 15, angle 45, layer WELDING, colour 9 for a new layer. The mark runs the full picked length: ticks start at 0 and repeat every 15 to the end of the edge.
