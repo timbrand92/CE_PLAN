@@ -11,6 +11,24 @@ run Codex there at any time, without asking each time? Nothing ever touches your
 **Tim, 24 Sep 2026 about 13:00 (verbatim):** *"now that you have your own machine all testing can be done at any
 time"*. So the RULES AutoCAD-hours window (8:30–2:00, 3:00–5:30) applies to Tim's PC only, not to this VM.
 
+## R-003 — three office drawings measured headless (24 Sep 2026, 16:25)
+
+**FOR TIM:** done. The weld mark is 45° ticks, 20 long, 15 apart, on one side of the line, layer WELDING colour 9.
+
+1. **WELD VERT / WELD HORIZ** (only in WELD_SOURCE; no other WELD* block in the three drawings): lines only, no run
+   line drawn. VERT 18 ticks, tick i from (0, 15i) to (14.142, 15i+14.142); HORIZ 13 ticks, tick i from (15i, 0) to
+   (15i+14.142, 14.142). **Tick length 20.000, spacing 15.000, 45° to the run line, one side only.** Layer WELDING
+   (colour 9, Continuous, default lineweight), all BYLAYER. Base point 0,0, mm, not annotative, scale-uniformly off.
+   Extents VERT 14.142 × 269.142, HORIZ 194.142 × 14.142. Not inserted anywhere, so in-use scale is not seen.
+2. **CE_Base_Plate_Details:** 44 layers; 1 text style (STANDARD, Arial Narrow); 5 dim styles, 3 used; 502 block
+   definitions; 110 inserts of 82 names; 350 texts; 208 hatches; 66 detail titles.
+3. **CE_TYPICAL_BLOCKS:** 188 layers; 789 block definitions (174 named, 281 pasted `A$C…`, 334 anonymous); none
+   annotative; 36 with attributes.
+4. **Approximate:** texts grouped to the nearest detail title (159 left unassigned); detail extents leave out hatches
+   and dimensions; dynamic-block states not resolved.
+5. Full lists on the VM: `C:\CE_TEST_STATION\evidence\R-003\` (SUMMARY.md, WELD_analysis.txt,
+   BASE_texts_by_detail.txt, TYP_blocks_summary.txt). Nothing saved in any drawing.
+
 ## R-002 — install and pass 9 (status 24 Sep 2026, 15:40)
 
 **FOR TIM:** installed and the version gate passes. Codex pass 9 is running (second try; the first could not see the
