@@ -261,7 +261,7 @@ Tim chose the recommended option himself (clicked, not typed): *"When you Undo a
 
 Also relayed: Tim said *"Yes, bring it across"* for the SEC-001 port (`48638225`). The deploy chat is porting it onto master on its own branch (`Modules/Manager` only), as a PR, not installed.
 
-## StrucPlus pen buttons and the import windows — Tim, 24 Sep 2026, about 11:15
+## StrucPlus pen buttons and the import windows — Tim, 24 Sep 2026, about 11:00
 
 Tim (verbatim), answering the release chat's four questions:
 *"1. a but layers should be 35CONT, 25TEXT, 70HIDDEN
@@ -276,7 +276,7 @@ Tim (verbatim), answering the release chat's four questions:
 4. The Civil import windows (PR #153: X-Civil, LandXML, survey) are connected in place of today's prompts; built by Claude today, tested by Codex tonight; if they fail, Tuesday ships today's import prompts.
 5. Tim also asked (verbatim): *"IS THERE ANYT OTHER USEFUL STUFF IN STRUC PLUS FO OUR V3 PLAN?"* A read-only inventory is under way.
 
-## Weld symbols, CE steel connections, tool palettes, RC, version numbers — Tim, 24 Sep 2026, about 11:50
+## Weld symbols, CE steel connections, tool palettes, RC, version numbers — Tim, 24 Sep 2026, about 11:10
 
 Tim (verbatim): *"LETS ADD WELD SYMBOLS, THE REST WE DONT REALLY USE IF YOU LOOK AT EVIDENCE / DATA MODEL
 CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT CREATIVE  ENGINEERING USE, ALSO I HAVE A FULL SUITE OF TOOL PALETTE WHICH WOULD BE GREAT IF THIS WAS INCLUDED IN OUR PLUGIN SOMEHOW THINK ABOUT IT FIRST "C:\Users\TimothyBrand\Creative Engineering\Creative Engineering - Drafting\Tool Palettes\NEW". WE ALSO NEED TO UPDATE THE RC COMMAND AS ITS A BIT GLITCHY ATM. ALSO MAKE SURE WHEN YOU SEND AN UPDATE OF PLUGIN, UPDATE THE VERSION NUMBER PLEASE"*
@@ -288,7 +288,7 @@ CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT CREATIVE  ENGINEERING USE, ALSO I H
 4. **RC** (Structural revision cloud, `LegacyPortCommands.cs`) is "a bit glitchy": a bug. Symptoms not yet recorded; asked 24 Sep.
 5. **Version numbers:** every plugin update installed carries a new version number. Release chat's reading (proposal, not Tim's words): the last digit goes up by one per install of that module, the number the status bar and Manager show; tonight Civil 3.0.0 to 3.0.1, Manager 1.1.0 to 1.1.1, Structural 1.0.74 to 1.0.75; CE_SHARED's identity is left alone (one shared assembly identity, first loaded wins).
 
-## Structural commands keep the drafter's layer — Tim, 24 Sep 2026, about 12:15
+## Structural commands keep the drafter's layer — Tim, 24 Sep 2026, about 11:20
 
 Tim (verbatim): *"RC GOES WRONG WHEN I PRESS ENTER AFTER USING IT, TO USE IT AGAIN, IT DOESNT RESET THE LAYER PROPERLY. ALSO THIS HAPPENS WITH OTHER COMMAND IN STRUCTURAL MODULE, LAYER SHOULD BE STORED BEFORE AND THEN RESTORED AFTER COMMANDS"*
 

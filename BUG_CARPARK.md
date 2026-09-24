@@ -56,13 +56,13 @@
 
 **Command / Area:** Structural RC (rectangular revision cloud; `Modules/Structural/Commands/LegacyPortCommands.cs`, shipping branch `claude/struc-d1-prep`). Asks "Keep OSNAP ON?", then two corners; draws on layer CLOUD with CE arc lengths and returns to 25CONT.
 
-**What Tim did / what happened:** Tim, 24 Sep 2026 about 11:50: "WE ALSO NEED TO UPDATE THE RC COMMAND AS ITS A BIT GLITCHY ATM"; about 12:15: "RC GOES WRONG WHEN I PRESS ENTER AFTER USING IT, TO USE IT AGAIN, IT DOESNT RESET THE LAYER PROPERLY. ALSO THIS HAPPENS WITH OTHER COMMAND IN STRUCTURAL MODULE, LAYER SHOULD BE STORED BEFORE AND THEN RESTORED AFTER COMMANDS". So: run RC, draw a cloud, press Enter to repeat, and the current layer is wrong afterwards. The same happens with other Structural commands. Note: RC is documented to "return to 25CONT" (a fixed layer), not to the layer the drafter was on.
+**What Tim did / what happened:** Tim, 24 Sep 2026 about 11:10: "WE ALSO NEED TO UPDATE THE RC COMMAND AS ITS A BIT GLITCHY ATM"; about 11:20: "RC GOES WRONG WHEN I PRESS ENTER AFTER USING IT, TO USE IT AGAIN, IT DOESNT RESET THE LAYER PROPERLY. ALSO THIS HAPPENS WITH OTHER COMMAND IN STRUCTURAL MODULE, LAYER SHOULD BE STORED BEFORE AND THEN RESTORED AFTER COMMANDS". So: run RC, draw a cloud, press Enter to repeat, and the current layer is wrong afterwards. The same happens with other Structural commands. Note: RC is documented to "return to 25CONT" (a fixed layer), not to the layer the drafter was on.
 
 **Expected behaviour (Tim's rule):** every Structural command that draws on its own layer stores the drafter's current layer before it starts and puts it back when it ends: after finishing, after Escape, after an error, and when repeated with Enter. Commands whose job is to set the layer (the Line styles pen buttons, Set All) are the exception.
 
 **Test that catches it / Tim's AutoCAD steps:** to be written once the symptom is known.
 
-**Status:** OPEN — symptom recorded 24 Sep 12:15; Claude builder on `claude/struc-layer-restore` (from `claude/struc-d1-prep`).
+**Status:** OPEN — symptom recorded 24 Sep about 11:20; Claude builder on `claude/struc-layer-restore` (from `claude/struc-d1-prep`).
 
 ---
 

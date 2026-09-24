@@ -1,6 +1,6 @@
 # StrucPlus inventory against V3 Structural — 24 Sep 2026
 
-**Why:** Tim, 24 Sep about 11:15 (verbatim): *"IS THERE ANYT OTHER USEFUL STUFF IN STRUC PLUS FO OUR V3 PLAN?"*
+**Why:** Tim, 24 Sep about 11:00 (verbatim): *"IS THERE ANYT OTHER USEFUL STUFF IN STRUC PLUS FO OUR V3 PLAN?"*
 
 **How:** a read-only helper (Sonnet) read Tim's StrucPlus copy in OneDrive IT Admin (`StructPlus\CE_StrucPlus\`:
 `menu\CE_StrucPlus.mnu`, `lisp\`, `data\`, `config\`) and compared it with the shipping Structural line
@@ -53,11 +53,11 @@ licensing file, and the slide-picker dialogs themselves (V3 uses its own windows
    checklist template).
 2. The section catalogue exists (above), which corrects the helper's "port the tables" to "compare".
 
-## Tim's answer, 24 Sep about 11:50
+## Tim's answer, 24 Sep about 11:10
 
 Weld symbols (item 2) only; the rest "WE DONT REALLY USE IF YOU LOOK AT EVIDENCE / DATA MODEL". Steel connections to be updated to what CE uses (evidence study). See the decision file entry of that time.
 
-## Next step (superseded 24 Sep 11:50 by the answer above)
+## Next step (superseded 24 Sep about 11:10 by the answer above)
 
 Tim picks which of 1 to 8 go into the Structural plan (ST-08 Sections & Details) and in what order. Each then needs a
 command card before any code (AGENTS.md review gate). **None is a Tuesday item.**

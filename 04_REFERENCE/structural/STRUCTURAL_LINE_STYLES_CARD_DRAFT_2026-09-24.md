@@ -1,6 +1,6 @@
 # Structural "Line styles" — command card, DRAFT for Tim's OK (24 Sep 2026)
 
-**Status:** APPROVED by Tim 24 Sep about 11:15 with changes (section 4); Pen & Linetypes only. Classification: **Missing** (StrucPlus had
+**Status:** APPROVED by Tim 24 Sep about 11:00 with changes (section 4); Pen & Linetypes only. Classification: **Missing** (StrucPlus had
 it; the Structural module does not).
 
 **Source read (read-only, nothing copied):** Tim's StrucPlus copy in OneDrive IT Admin, `StructPlus\CE_StrucPlus\`:
@@ -61,7 +61,7 @@ it; the Structural module does not).
 6. Try 4 with a line on a locked layer: it is left alone and the command line says so.
 7. Repeat 1 and 4 in AutoCAD 2024 (net48).
 
-## 4. Tim's answers (24 Sep about 11:15, verbatim in decisions/2026-09-23_V3_COLLEAGUE_RELEASE.md)
+## 4. Tim's answers (24 Sep about 11:00, verbatim in decisions/2026-09-23_V3_COLLEAGUE_RELEASE.md)
 
 1. *"a but layers should be 35CONT, 25TEXT, 70HIDDEN"*: behaviour as StrucPlus; layer names `<pen><TYPE>` (`25CONT`, `35HIDDEN`, `50CENTER`, `70DASHED`, `70PHANTOM`), the original StrucPlus `data\Bylayer.ini` table. **Section 2 item 2 is superseded.**
 2. *"A REVIEW ABOVE"*.

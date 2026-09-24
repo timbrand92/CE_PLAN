@@ -1,7 +1,7 @@
 # Structural steel connections and welds — command card, DRAFT for Tim's OK (24 Sep 2026)
 
 **Status:** DRAFT. No code starts until Tim answers section 4 (AGENTS.md review gate).
-**Why:** Tim, 24 Sep about 11:50 (verbatim): *"LETS ADD WELD SYMBOLS ... CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT
+**Why:** Tim, 24 Sep about 11:10 (verbatim): *"LETS ADD WELD SYMBOLS ... CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT
 CREATIVE  ENGINEERING USE"* (decision file entry of that time).
 
 ## 1. What V3 has today (read from `claude/struc-d1-prep`)

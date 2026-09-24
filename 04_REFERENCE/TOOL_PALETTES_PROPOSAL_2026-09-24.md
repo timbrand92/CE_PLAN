@@ -1,6 +1,6 @@
 # Office tool palettes in the CE plugin — proposal for Tim (24 Sep 2026)
 
-**Why:** Tim, 24 Sep about 11:50 (verbatim): *"I HAVE A FULL SUITE OF TOOL PALETTE WHICH WOULD BE GREAT IF THIS WAS
+**Why:** Tim, 24 Sep about 11:10 (verbatim): *"I HAVE A FULL SUITE OF TOOL PALETTE WHICH WOULD BE GREAT IF THIS WAS
 INCLUDED IN OUR PLUGIN SOMEHOW THINK ABOUT IT FIRST"*, folder `Creative Engineering - Drafting\Tool Palettes\NEW`.
 **Status:** PROPOSAL. Nothing built. Not a Tuesday item.
 
