@@ -1,6 +1,6 @@
 # Structural steel connections and welds — command card, DRAFT for Tim's OK (24 Sep 2026)
 
-**Status:** DRAFT. No code starts until Tim answers section 4 (AGENTS.md review gate).
+**Status:** ANSWERED by Tim 24 Sep about 11:40 (section 5). Each family and the weld symbol still get their own short card, drawn from CE's own details, before code.
 **Why:** Tim, 24 Sep about 11:10 (verbatim): *"LETS ADD WELD SYMBOLS ... CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT
 CREATIVE  ENGINEERING USE"* (decision file entry of that time).
 
@@ -67,6 +67,8 @@ evidence set. **These are keyword counts, not a clean per-job tally; treat the r
 **Not a Tuesday item.** The build starts after Tim's answers, one family at a time, each tested in AutoCAD before
 the next.
 
-## 5. Tim's answers
+## 5. Tim's answers (24 Sep about 11:40, verbatim in the decision file)
 
-(none yet)
+1. *"JUST THE SYMBOL"*: graphic weld symbols only. **Section 3 item 1 (note leaders) is superseded.**
+2. *"AS RECOMMENDED, BUT NEEDS TO LOOK LIKE A CREATIVE ENGINEERING DRAWN VERSION NOT HOW STRUC PLUS DOES IT"*: order as listed; symbols and details drawn in CE's own style (CE standard details, the STEEL tool palette blocks), not StrucPlus's.
+3. *"YES THIS IS CORRECT, DO THE SSAME FOR ALL TYPES"*: every family's defaults come from CE's own standard wording, editable on the Settings page.

@@ -293,3 +293,14 @@ CAN WE UPDATE STEEL CONNECTIONS TO SUIT WHAT CREATIVE  ENGINEERING USE, ALSO I H
 Tim (verbatim): *"RC GOES WRONG WHEN I PRESS ENTER AFTER USING IT, TO USE IT AGAIN, IT DOESNT RESET THE LAYER PROPERLY. ALSO THIS HAPPENS WITH OTHER COMMAND IN STRUCTURAL MODULE, LAYER SHOULD BE STORED BEFORE AND THEN RESTORED AFTER COMMANDS"*
 
 **Meaning (a rule for the whole Structural module):** a command that draws on its own layer remembers the current layer when it starts and restores it when it ends (finish, Escape, error, Enter-repeat), instead of switching to a fixed layer such as 25CONT. Release chat's reading: the Line styles pen buttons and Set All are exempt, because setting the layer is their job. BUG-169.
+
+## A test machine; CE Blocks palette; steel and weld answers — Tim, 24 Sep 2026, about 11:40
+
+Tim (verbatim): *"I WANT TO MOVE THE TESTING OF THE CE ACAD PLUGIN AND EVERYTHING TO ANOTHER VIRTUAL MACHINE SO IT CAN RUN REGARDLESS OF ME WORKING ON THIS CURRENT DEVICE, I HAVE CLAUDE AND CODEX OPEN THERE BUT THEY HAVE NO CONTEXT OF WHATS GOING ON, CAN YOU TELL ME WHAT TO DO AND IF I NEED TO SETUP SOMETHING OR A PROMPT TO GET IT GOING? LETS GO WITH OPTION A FOR CE BLOCKS. STEEL QUESTIONS: 1. JUST THE SYMBOL 2. AS RECOMMENDED, BUT NEEDS TO LOOK LIKE A CREATIVE ENGINEERING DRAWN VERSION NOT HOW STRUC PLUS DOES IT. 3. YES THIS IS CORRECT, DO THE SSAME FOR ALL TYPES"*
+
+**Meaning:**
+1. **Test machine:** plugin testing (Codex AutoCAD passes, full test suites, headless proofs) moves to Tim's virtual machine so it runs while Tim drafts on his PC. Set-up and the starting prompt: `04_REFERENCE/TEST_STATION_SETUP.md`. Whether the VM chats may install on the VM's AutoCAD at any time is asked in the VM chat itself (RULES 8.7: Tim's word in that conversation).
+2. **CE Blocks: option A** of `04_REFERENCE/TOOL_PALETTES_PROPOSAL_2026-09-24.md` — a CE palette inside the plugin reading the office block drawing, in Tim's twelve groups. Card next; not a Tuesday item.
+3. **Welds: graphic weld symbols only** (option B; Claude had recommended note leaders). Supersedes the proposal in the steel card section 3 item 1.
+4. **Connection order as recommended** (base plate, web cleat, portal moment end plate, beam end plate, cast-in plate). **Look:** welds and connections are drawn the way Creative Engineering draws them (CE's own standard details and blocks), **not** StrucPlus's style.
+5. **Defaults:** every connection family is seeded from CE's own standard wording, as for the base plate, editable on the Settings page.

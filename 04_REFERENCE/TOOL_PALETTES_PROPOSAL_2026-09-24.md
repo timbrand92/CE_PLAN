@@ -2,7 +2,7 @@
 
 **Why:** Tim, 24 Sep about 11:10 (verbatim): *"I HAVE A FULL SUITE OF TOOL PALETTE WHICH WOULD BE GREAT IF THIS WAS
 INCLUDED IN OUR PLUGIN SOMEHOW THINK ABOUT IT FIRST"*, folder `Creative Engineering - Drafting\Tool Palettes\NEW`.
-**Status:** PROPOSAL. Nothing built. Not a Tuesday item.
+**Status:** Option A chosen by Tim 24 Sep. Nothing built. Not a Tuesday item.
 
 ## 1. What the suite is (read-only helper, 24 Sep; nothing opened in AutoCAD)
 
@@ -46,4 +46,4 @@ INCLUDED IN OUR PLUGIN SOMEHOW THINK ABOUT IT FIRST"*, folder `Creative Engineer
 
 ## 4. Tim's answer
 
-(none yet)
+24 Sep about 11:40 (verbatim): *"LETS GO WITH OPTION A FOR CE BLOCKS"*. Next: a command card for the CE Blocks palette (review gate). Not a Tuesday item.
