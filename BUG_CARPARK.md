@@ -130,7 +130,7 @@
 
 **Tim's AutoCAD steps:** open PIT, Edit Pit and double-click a pipe: each looks like the CD window you draw pipes with.
 
-**Status:** OPEN — Codex window jobs queued 24 Sep.
+**Status:** OPEN — pit window code candidate in draft PR #176 (`b0c34b1f`), with 37 focused checks and three zero-error Civil builds. It includes PR #166; no AutoCAD or installation, and Tim has not accepted the look. Edit Pipe is a separate parallel job. The combined native check in 2027 and 2024 is still required.
 
 ---
 
