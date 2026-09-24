@@ -178,6 +178,15 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 24 Sep 2026 18:04 on Tim's PC — Civil `3.0.2+f0aca3f9`, Manager `1.1.2+f0aca3f9`, Structural `1.0.74+8c077569` (unchanged)
+
+1. **Installed by the release chat** under Tim's word of 24 Sep about 17:15 ("TEST HERE UNTIL MONDAY MORNING, I HAVE LEFT AUTOCAD IS CLOSED"); AutoCAD closed, checked twice (18:03:40, 18:03:50) and at the end. REL-09 rename and copy; every installed file hash-checked against the payload afterwards: 899 files (Civil 821, Manager 78), 0 missing, 0 mismatches (the script's own count showed 0 because its first hash list had shifted paths; re-written and re-checked by hand). CE_SHARED identical Civil/Manager in all lanes; no AdminSasUrl. `f0aca3f9` is in master (release train 2, PR #190; master `1eb8f4ec` after #191).
+2. **Carries, beyond 14:46:** BUG-171 read-back (#175), BUG-175 Edit Pipe type order (#179), BUG-174 no [CE] in questions (#177), What's New readable and true (#173), CE Blocks palette (#174), Undo after save / COPY (#167), Help v3 guide (#172), CEPERFDIAG (#178), Edit Pipe = the one-page window (#180), fresh-install defaults = Tim (#183), guards (#188), versions (#182). NOT in: one-page Pit (#184/#186, fit fix running).
+3. **Checks before install:** full Civil suite on `f0aca3f9`: 11,015 run, 11 failed = exactly the baseline; Manager 262/262 (same list before #188). The Manager release check stopped at 72-vs-78 files: the six extra are the CE Blocks icons (#174), verified; check updated (#191).
+4. **Backups (undo):** `CE_CVL_SUITE_PRE_7d85c40f_20260924-180340.backup`, `CE_SUITE_MANAGER_PRE_7d85c40f_20260924-180340.backup`. Undo: close AutoCAD, delete the two new bundles, rename these back.
+5. **INVALIDATES:** earlier results for What's New, Edit Pipe routes and window, CDDESIGN question choices, Undo after save/COPY, Help content, and any CD start-up order observation (draw-first is unchanged on Tim's PC).
+6. **Codex pass 9** (Tim's PC, tonight): brief `codex\pass9.txt` in the old release scratchpad; report `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS9_2026-09-24.md`.
+
 ## LIVE since 24 Sep 2026 14:46 on Tim's PC — Civil `3.0.1+7d85c40f`, Manager `1.1.1+7d85c40f`, Structural `1.0.74+8c077569` (unchanged)
 
 1. **Installed by the release chat** on Tim's word ("AUTOCAD IS CLOSED, DO WHAT YOU NEED TO", about 14:15); AutoCAD closed, checked twice before the swap and again after. REL-09 rename and copy of the pre-built payload (`CE_TEST_STATION\payloads\0924-civil-7d85c40f-struc-488f6250\`); 884 files hash-checked after copying, 0 mismatches; CE_SHARED identical in Civil and Manager in all three lanes; no AdminSasUrl in any Manager blob-config. `7d85c40f` is in master (release train PR #170, master `1ee79791`).
