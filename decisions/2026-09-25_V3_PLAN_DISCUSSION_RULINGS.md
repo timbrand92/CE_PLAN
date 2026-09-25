@@ -1424,3 +1424,17 @@ a 2027-first rollout; it would allow a safe hover menu. Not scheduled against th
    viewport and feed the register.
 4. **UX-LAY-04:** Tim: "Always reads the same on paper (Recommended)". CE labels plot at the office text height on
    every sheet whatever the viewport scale.
+
+## Structural foundations and rebar — 26 Sep 09:46 2026
+
+Builds on ST-06 (July) and the 14 Sep foundation answers.
+
+1. **UX-FDN-01:** Tim: "Propose, you accept (Recommended)". CE proposes strip footings under loadbearing walls, pads
+   under columns and thickenings under walls on slab, sized from the footing calculation, previewed with marks; accept
+   or adjust; one U.
+2. **UX-FDN-02:** Tim: "Same as beams (Recommended)". Footing CE grips resize or move with a live preview; supported
+   walls/columns highlighted; Edit together by default; Edit this only on right-click; one U.
+3. **UX-FDN-03:** Tim: "Propose spacing from the calc (Recommended)". Piers proposed along strip footings at the
+   calculated spacing, at corners and under point loads; adjustable individually.
+4. **UX-FDN-04:** Tim: "Automatic from drawn bars (Recommended)". Each drawn bar gets its mark; the bar schedule (size,
+   shape, length, number, mass) builds and updates itself; changes highlighted for review.

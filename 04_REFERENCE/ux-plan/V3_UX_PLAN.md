@@ -147,6 +147,8 @@ Builders: the release chat writes a card per item before code.
 8. **Computations in CE:** start from the drawing; the same CE sheet as Civil; timber, then footings, steel,
    bracing; wind class proposed; geotech report read; loads traced from the drawing; results previewed then
    applied. (UX-SCALC-01..08)
+8b. **Foundations and rebar:** footings, pads and thickenings proposed from what sits above; footing grips like
+   beams; piers set out from the calc; bar marks and bar schedule automatic. (UX-FDN-01..04)
 9. **2022 colleagues** get full Structural with 2027-only tools greyed. (UX-STRUC-12)
 
 ## 8. Jobs, Manager, settings
