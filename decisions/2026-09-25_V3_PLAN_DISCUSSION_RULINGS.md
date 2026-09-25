@@ -649,3 +649,35 @@ command-registry.json`): 307 commands, 298 visible; largest groups Text Tags 56,
    to Rebar, floor level and centreline to Annotate, and so on; the word "Legacy" disappears.
 5. Diagnostic/test commands hidden from drafters (e.g. CEDEBUG, JOBTIMERDEBUG): presented as part of the polished
    version; not separately asked.
+
+---
+
+## Structural D1 card — Tim's 12 choices, 25 Sep 2026, answered by 23:13
+
+Card: `04_REFERENCE\structural\STRUCTURAL_D1_CARD_DRAFT_2026-09-24.md` §3 (planned for Tuesday; Tim chose to do it
+today). Numbers follow the card.
+
+1. **Permanent name:** Tim: "One system with Civil (Recommended)". The spine name Civil pits and pipes use; each
+   beam and column named when drawn, inside the same U.
+2. **Column grip:** Tim: "Edit together (Recommended)".
+3. **Beam end grip:** Tim: "Edit together (Recommended)". The label slides to stay centred.
+4. **Beam middle grip / MOVE on the beam alone:** Tim: "Edit together (Recommended)".
+5. **Typing over a label:** Tim: "Text changes; QA notes it (Recommended)". QA lists "Label says B3, beam is B1" with
+   "Make the beam B3"; no pop-up.
+6. **Shared mark, Enter:** Tim: "All B1s (Recommended)", with the count shown.
+7. **AutoCAD MOVE on a column without its beams:** Tim: **"Beams follow"** (recommended "what you select moves" not
+   taken). Beam ends follow the column even with plain MOVE, which cannot show CE's preview; this chat noted to Tim
+   that one U must take back the column and beam ends together. Resolves the card's conflict between the July rule
+   (moving a support updates its beam ends) and the September no-silent-change rule in favour of the July rule for
+   MOVE.
+8. **Schedule mismatch display:** Tim: "QA list + non-printing highlight (Recommended)".
+9. **Mark with no schedule row:** Tim: "Offer to add a row (Recommended)". Size stays Unknown until typed.
+10. **Last B4 erased:** Tim: "Row stays, QA notes it (Recommended)".
+11. **Where the schedule values live:** Tim, his own words: **"ideally xclmtxt and then it gets phased out as the
+    comps are done easier and better within autocad as the plugin"**. For D2 the engineer's Excel schedule brought in
+    by XCLMTXT stays the one member schedule (linked by mark). Longer term, XCLMTXT is phased out as the computations
+    move into the plugin inside AutoCAD (links to the 20 Sep idea: CE_COMPSHEET into the Structural module).
+12. **Grip versions:** Tim: "2027 first (Recommended)". 2022-2026 keep plain grips plus right-click and beam-panel
+    actions until a later step.
+
+**Card status:** all 12 choices answered; section 5's test drawing and checklist not yet reviewed with Tim.
