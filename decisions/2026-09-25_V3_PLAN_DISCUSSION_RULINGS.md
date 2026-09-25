@@ -1219,3 +1219,26 @@ Follows D1 choice 11 (XCLMTXT phased out as computations move into the plugin) a
    columns; footings and slabs; bracing and tie-downs. Order not ruled (listed order recorded).
 4. **UX-SCALC-04:** Tim: "Preview, then update (Recommended)". A calculated size change previews the beam, label and
    schedule row; any CE user applies it (recorded); one U.
+
+## Civil drawing sets: register and notes — 26 Sep 01:15 2026
+
+**Tim, verbatim: "civil drawings are same as structural but the civil doesnt have drawing register or notes page or it
+is added on structural drawings register. check recent drawings or porjects folder".**
+
+**Checked read-only (Tim's instruction), office Projects folder, the five most recently active job groups, issue
+PDFs of 21-25 Sep 2026; no file copied, no job named here (DATA-01):**
+1. Civil-only issue PDFs are 1-2 pages starting at C01, with no drawing register and no general notes page.
+2. Structural sets carry the register and general notes on their first sheet, and on combined jobs that register
+   also lists the civil (C) sheets.
+3. Combined issues use folders like "STR+CVL_REV A" holding separate STR and CVL PDFs (sometimes one combined PDF);
+   civil and structural revisions run separately (e.g. "STR REV F + CVL REV G"); civil sets are also issued alone
+   ("CVL_REV B FOR COUNCIL").
+
+**UX-REG-09 refined (supersedes the register part of the earlier UX-REG-09):**
+1. Civil uses the same revision and issue workflow as Structural, **but a Civil set has no register table and no
+   notes page of its own**.
+2. On a job with both disciplines, civil sheets are listed in the Structural set's drawing register (cover sheet),
+   updated automatically from the one sheet list.
+3. Civil and Structural keep **separate revision sequences**; an issue can include both (e.g. STR REV F + CVL REV G),
+   one folder, separate or combined PDF as chosen in the issue preview.
+4. A civil-only job has no register (its sheets are C01 onward).
