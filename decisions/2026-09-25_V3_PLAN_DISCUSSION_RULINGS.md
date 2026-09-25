@@ -749,3 +749,14 @@ finalises nothing).
    and triangles around each change in the preview; the user accepts, moves, reshapes or deletes each before issue.
 4. **UX-REG-04, register location:** Tim: "On the cover sheet, auto (Recommended)". The drawing list table on the
    cover/notes sheet updates from the one sheet list, plus an Excel copy in the issue folder.
+
+## Structural register and issue, batch 2 — 25 Sep 2026, 23:37
+
+1. **UX-REG-05, status words:** Tim: "Yes, from the revision (Recommended)". P revisions read PRELIMINARY, T FOR
+   TENDER, A onwards FOR CONSTRUCTION; shown in the issue preview; wording is a Settings value and can be changed.
+2. **UX-REG-06, who issues:** Tim: "Anyone, names the engineer (Recommended)". Any CE user issues, picks the approving
+   engineer (printed in the title block); who pressed Issue is recorded (same as UX-CALC-03).
+3. **UX-REG-07, new sheet number:** Tim: "Next in its group (Recommended)". Gaps are never filled or renumbered
+   without asking.
+4. **UX-REG-08, where issue starts:** Tim: "Sheets window + Project Review (Recommended)". Both open the one issue
+   preview.
