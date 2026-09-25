@@ -1139,3 +1139,7 @@ Recorded as a requirement for every Level 3 proposal (detention/storage options 
 2. Selecting an option shows it as a **full-size ghost in the real drawing** (pipes, pits, tank or storage, orifice
    pit, overflow, labels); switching options swaps the ghost; nothing is drawn until Accept; one U.
 3. Differences between options are highlighted (e.g. "B uses 7 m less pipe, 0.3 m shallower").
+
+**UX-L3-20, chooser sketch approved:** shown a sketch of the proposal chooser (three options side by side with plan
+pictures and figures, the selected option as a full-size ghost in the drawing, Cancel / Accept), Tim: "Yes, that's it
+(Recommended)". Reference sketch: `04_REFERENCE\ux-plan\PROPOSAL_CHOOSER_SKETCH_2026-09-26.svg` (synthetic figures).

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 680 430" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+<rect width="680" height="430" fill="#ffffff"/>
+<rect x="10" y="10" width="660" height="36" rx="6" fill="#F1EFE8"/><text x="24" y="33" font-weight="500" fill="#2C2C2A">Detention proposals - job site, council (e.g. Boroondara)</text>
+<rect x="10" y="58" width="210" height="210" rx="8" fill="none" stroke="#888780"/><text x="22" y="80" font-weight="500">A: storage pipes</text>
+<rect x="30" y="92" width="170" height="90" fill="none" stroke="#B4B2A9"/><rect x="45" y="105" width="80" height="50" fill="none" stroke="#B4B2A9"/>
+<line x1="40" y1="170" x2="190" y2="170" stroke="#378ADD" stroke-width="3"/><line x1="40" y1="165" x2="190" y2="165" stroke="#378ADD" stroke-width="3"/>
+<text x="22" y="202">2 x 375 pipes, 18 m</text><text x="22" y="220">4.6 m3, 0.9 m deep</text><text x="22" y="238">Under driveway</text><text x="22" y="256">Council rules met</text>
+<rect x="235" y="58" width="210" height="210" rx="8" fill="none" stroke="#378ADD" stroke-width="2"/><text x="247" y="80" font-weight="500">B: tank + pit</text>
+<rect x="255" y="92" width="170" height="90" fill="none" stroke="#B4B2A9"/><rect x="270" y="105" width="80" height="50" fill="none" stroke="#B4B2A9"/>
+<rect x="370" y="140" width="40" height="30" fill="none" stroke="#378ADD" stroke-width="2"/>
+<text x="247" y="202">5 kL tank + 1 pit</text><text x="247" y="220">4.8 m3, 0.6 m deep</text><text x="247" y="238">7 m less pipe than A</text><text x="247" y="256">Shown in drawing</text>
+<rect x="460" y="58" width="210" height="210" rx="8" fill="none" stroke="#888780"/><text x="472" y="80" font-weight="500">C: 450 pipes</text>
+<rect x="480" y="92" width="170" height="90" fill="none" stroke="#B4B2A9"/><rect x="495" y="105" width="80" height="50" fill="none" stroke="#B4B2A9"/>
+<line x1="500" y1="168" x2="610" y2="168" stroke="#378ADD" stroke-width="5"/>
+<text x="472" y="202">1 x 450 pipe, 11 m</text><text x="472" y="220">4.7 m3, 1.1 m deep</text><text x="472" y="238" fill="#A32D2D">Clash: tree zone T2</text><text x="472" y="256">Needs a decision</text>
+<rect x="10" y="282" width="660" height="100" rx="8" fill="none" stroke="#888780" stroke-dasharray="4 3"/>
+<text x="24" y="304">In the real drawing: option B as a full-size ghost (tank, orifice pit, overflow, labels)</text>
+<rect x="60" y="318" width="200" height="50" fill="none" stroke="#B4B2A9"/>
+<rect x="400" y="325" width="70" height="40" fill="none" stroke="#85B7EB" stroke-width="2" stroke-dasharray="5 3"/>
+<line x1="260" y1="343" x2="400" y2="345" stroke="#85B7EB" stroke-width="2" stroke-dasharray="5 3"/>
+<circle cx="520" cy="345" r="10" fill="none" stroke="#85B7EB" stroke-width="2" stroke-dasharray="4 3"/><text x="540" y="349">Orifice pit</text>
+<rect x="430" y="392" width="110" height="30" rx="6" fill="none" stroke="#888780"/><text x="485" y="411" text-anchor="middle">Cancel</text>
+<rect x="550" y="392" width="120" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="610" y="411" text-anchor="middle" font-weight="500" fill="#0C447C">Accept B</text>
+</svg>
