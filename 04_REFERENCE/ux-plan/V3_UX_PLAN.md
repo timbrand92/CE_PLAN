@@ -34,7 +34,8 @@ Builders: the release chat writes a card per item before code.
    honest result line; "Decide later". (UX-WORD-01..03b)
 10. **Old typed names work forever** as silent shortcuts; never shown in ribbon, Help or tooltips. (UX-NAMES-01)
 11. **Learning:** CE learns from your habits, the whole office, past CE projects (anonymised) and corrections; every
-    suggestion says why; never silently changes an engineering rule. (UX-LEARN-01)
+    suggestion says why; never silently changes an engineering rule; office learning is anonymous; each person sees,
+    corrects or removes what CE learned from them and can switch it off. (UX-LEARN-01..04)
 12. **Speed:** anything over a second shows status-bar progress with Cancel; a slow CE feature offers to pause
     itself for that drawing. (UX-PERF-01, 02)
 13. **Approvals:** any CE user can approve calculations, apply proposals and issue, always recorded, naming the

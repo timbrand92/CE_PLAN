@@ -1466,3 +1466,12 @@ Builds on AI-01 (July): permissions, preview then one U, no raw commands, provid
    following the engineer's markup; clear parts accepted; unclear items in "Needs clarification".
 2. **UX-SL3-02:** good past framing layouts to learn from: Tim ticked **"Engineer marked up little"**, **"Issued without
    later changes"** and **"Fewest members for the spans"**. Not ticked: "Council/certifier had no RFI".
+
+## Learning and people — 26 Sep 09:55 2026
+
+1. **UX-LEARN-02:** Tim: "Anonymous (Recommended)". Office-wide suggestions say "the office usually...", never name a
+   person; only patterns are shared.
+2. **UX-LEARN-03:** Tim: "Yes, a "What CE learned" list (Recommended)". Each person can see, correct and remove what CE
+   learned from them (extends the Structural "Remembered decisions" list to everything).
+3. **UX-LEARN-04:** Tim: "Yes, in Settings (Recommended)". A person can switch off learning from their own choices;
+   they still receive office suggestions.
