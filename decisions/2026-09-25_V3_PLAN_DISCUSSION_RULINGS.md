@@ -580,3 +580,11 @@ actual RFI letter a council sends on a job.
    under Project Review > Proposals.
 4. **UX-DES-01 (Q83):** Tim: "Back to drafting (Recommended)". A draftsperson's "Confirm setup" closes Design and
    returns to drafting.
+
+## Design window, last two — 25 Sep 2026, 19:56
+
+1. **UX-DES-02 (Q82):** Tim: "Fixed CE colours (Recommended)". Area overlay in Design: roof blue, driveway orange,
+   paving purple, garden grey, unknown amber, on every job; preview only.
+2. **UX-DES-03 (CDSETUP card Q5):** Tim: "During (Recommended)". A part-drawn, unchanged job opens Design on During.
+3. Q84 (outlet invert source words) was answered 5 Sep. Q56 (Pit Schedule "DET X (Grated)" display column) is
+   parked: the question could not be worded clearly; not decided.
