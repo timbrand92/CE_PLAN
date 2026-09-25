@@ -620,3 +620,11 @@ answers.
    Manager; STRIPLAYERSMERGE and STRUCLINKTEXT stay typed in Structural. Refines UX-RIBBON-04's earlier wording.
 4. **CESTRUC / StrucSuiteWindow (UX-RIBBON-04 OPEN 2):** Tim, his own words: "needs to be revisited in detail before
    deciding". Not decided; kept as is until a detailed review.
+
+## Two checks on today's answers — 25 Sep 2026, 21:46
+
+1. **UX-PIPE-06c:** Tim: "Only these pipes (Recommended)". The several-pipes grade preview opens with "Only these
+   pipes" ticked; "Carry downstream" is the other choice. Confirms this chat's interpretation of "both options".
+2. **UX-STD-01b:** Tim: "Carry on by default (Recommended)". CD and PIT carry on until Enter or Escape by default,
+   like the source commands; no Batch tick needed. Corrects the build that made them carry on only with a Batch
+   tick switched on (off by default).
