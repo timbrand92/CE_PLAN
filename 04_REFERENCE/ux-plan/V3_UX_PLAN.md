@@ -159,6 +159,9 @@ Builders: the release chat writes a card per item before code.
    (UX-MGR-01..07, UX-ADMIN-01)
 4. **Settings:** any engineer changes firm values, recorded; search; per-value history; gold "This job" tag; LPD note
    box. (UX-SET-01..06)
+6. **Layouts and viewports:** "New sheet" makes the layout, title block, viewport at office scale, plan title and
+   north point; office scale list, viewports locked; titles and scales linked; labels plot at the office height at
+   every scale. (UX-LAY-01..04)
 5. **Job time and notes:** timer starts per job drawing; idle asks on return; hours to CE Project Manager; own time
    plus admin summary; checklist auto-ticks what CE can prove, drafted office list; job notes once then an icon.
    (UX-TIME-01..04, UX-CHK-01..03, UX-NOTES-01)

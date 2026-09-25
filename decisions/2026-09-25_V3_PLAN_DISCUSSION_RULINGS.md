@@ -1413,3 +1413,14 @@ a 2027-first rollout; it would allow a safe hover menu. Not scheduled against th
    2022-2026; everything else works the same; one ribbon everywhere.
 3. **UX-MGR-07:** Tim: "Yes, admin page (Recommended)". Each PC reports its CE versions and AutoCAD year at start; the
    admin page lists who is on what.
+
+## Layouts and viewports — 26 Sep 09:45 2026
+
+1. **UX-LAY-01:** Tim: "Layout + viewport ready (Recommended)". "New sheet": pick size and what it shows; CE makes the
+   layout with title block, a viewport at the office scale framed on that plan area, plan title and north point.
+2. **UX-LAY-02:** Tim: "Office scale list, locked (Recommended)". Viewport scales from the office list (Settings);
+   viewports locked; unlocked or off-list viewports warned at issue.
+3. **UX-LAY-03:** Tim: "Yes, linked (Recommended)". Plan titles and scale text under each viewport stay linked to the
+   viewport and feed the register.
+4. **UX-LAY-04:** Tim: "Always reads the same on paper (Recommended)". CE labels plot at the office text height on
+   every sheet whatever the viewport scale.
