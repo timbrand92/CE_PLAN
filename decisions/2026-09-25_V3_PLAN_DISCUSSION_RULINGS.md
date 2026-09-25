@@ -685,3 +685,19 @@ today). Numbers follow the card.
 **D1 card APPROVED — Tim, 25 Sep 2026, 23:14: "Approve (Recommended)".** The question read: *Approve the D1 card, with its
 test drawing and 12 steps plus step 13 (MOVE C1 alone: beams follow, one U restores all three)?* Added test step
 13: MOVE C1 alone 300 mm; both beam ends follow and labels re-centre; one U puts all three back.
+
+---
+
+## Structural drawing journey — priority after D1, 25 Sep 2026, 23:19
+
+Walked through Tim's 14 Sep journey rulings (`04_REFERENCE\structural\STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`)
+stage by stage, with today's state (read from the installed registry, not AutoCAD-tested).
+
+**UX-STRUC-06:** asked which stages Structural V3 tackles first after beams (D1), up to three, most important first.
+Tim ticked, in this order: **"QA against the markup"**, **"Register, revisions, issue"**, **"Background preparation"**.
+Not ticked: "Detail browser".
+
+1. Order after D1: (1) QA against the engineer's markup (stage 6); (2) drawing register, per-sheet revisions and
+   issue (stage 7); (3) architectural background preparation (stage 2). The detail browser (stage 5) follows later.
+2. Each needs its workflow card before any build (release chat), reusing the 14 Sep rulings; stage 2 first needs
+   real prepared Xrefs studied (the 14 Sep record says the cleanup rules must be learned from actual jobs).
