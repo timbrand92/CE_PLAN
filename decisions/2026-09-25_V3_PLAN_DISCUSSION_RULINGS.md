@@ -570,3 +570,13 @@ actual RFI letter a council sends on a job.
 3. **UX-RFI-03, where it lives:** Tim: "A tab in Project Review (Recommended)". "Council RFI (n open)", with Show
    where and Fix working as for any check.
 4. Build request logged in `IDEAS_INBOX.md`; needs a workflow card (release chat).
+
+## Pass 3, last-but-one batch — 25 Sep 2026, 15:53
+
+1. **UX-PIPE-07 (Q16):** Tim: "Whole job (Recommended)". "Keep as a free end" is remembered for the whole job.
+2. **UX-SET-01 (Q65):** Tim: "Retire it (Recommended)". Settings' "Mirror Text Default" is retired (explicit Tim
+   yes); the Pipe window's own mirror control, which remembers the last choice, is the one place.
+3. **UX-ASK-01 (Q78):** Tim: "Both (Recommended)". Ask CE keeps "Review changes", and the same changes are listed
+   under Project Review > Proposals.
+4. **UX-DES-01 (Q83):** Tim: "Back to drafting (Recommended)". A draftsperson's "Confirm setup" closes Design and
+   returns to drafting.
