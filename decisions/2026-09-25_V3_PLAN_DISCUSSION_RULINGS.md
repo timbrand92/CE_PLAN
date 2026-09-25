@@ -961,3 +961,21 @@ cases get placed prior to pipes connecting them".**
 2. Pipes drawn later connect **to** them, the same way pipes connect to pits (auto-join UX-PIPE-02b applies).
 3. None of the three offered options was chosen; the premise (place onto an existing pipe) was wrong. Consistent
    with the 15 Sep idea that sources place anywhere with CD's live feedback.
+
+## Items queued for Tuesday, settled early — 26 Sep 00:30 2026
+
+From `areas\release-v3-colleagues.md` "Queued for Tim, Tuesday 29 Sep".
+
+1. **Item 14, UX-SET-02:** Tim: "Add to Settings > Design (Recommended)". The standard LPD note wording gets an
+   editable text box on the Settings Design page; CDLPD writes whatever is there.
+2. **Item 17, UX-PIT-02:** Tim: "Outline + 100 mm (Recommended)". A pit catches a pipe end only within its own outline
+   plus 100 mm (not the ~1 m hidden 950 mm circle), proved on a real job copy first. Supersedes the R6.10 "never
+   shrink it" note for this reach.
+3. **Item 10, UX-TPL-01:** Tim: "Skip templates + delete stray (Recommended)". The open-time pipe upgrade skips the
+   office Templates folder (no upgrade, no in-place backup); the one stray backup
+   `Drawings Templates\A1 Templates\CE_A1_C01 - VERTICAL_PRE_C7_20260923_084850.dwg` is to be deleted (Tim's explicit
+   yes; the template itself is unchanged). Deletion is done by the release chat, after re-checking the template.
+4. **Item 8, CDPIPEOBJ:** Tim asked, verbatim: "is this not a temporary command to test the object prior to making it
+   part of the cd/pipe command and all pipes are upgraded to this when opening old drawings". Read from master:
+   CDPIPEOBJ draws a pipe directly as the one CE object (2027 only); CDC7UPGRADE converts existing pipes; pipes are
+   also upgraded on open. Follow-up question put to Tim below.
