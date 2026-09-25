@@ -1106,3 +1106,14 @@ Builds on Hold grade / hold levels (23 Sep) and Solve Run.
    click. Default pre-selection not ruled (this chat suggests the learned pattern).
 4. **UX-L3-10, preview:** Tim: "Ghost DPs + lines to destination (Recommended)". Ghost DP symbols with a thin line to
    the tank/pit and the catchment area; accept all or per DP; one U.
+
+## Level 3 proposal 3: detention and tank layout — 26 Sep 00:59 2026
+
+1. **UX-L3-11, options:** Tim: "2-3 options side by side (Recommended)". Each option with storage, depth and council
+   rules checked (e.g. % underground); the user picks one, then adjusts.
+2. **UX-L3-12, location:** Tim: "Learned + clash-checked (Recommended)". Placed where past jobs usually put storage,
+   clear of easements (including implied), tree zones, footings and services; each clash shown.
+3. **UX-L3-13, complete system:** Tim: "Yes, complete system (Recommended)". The proposal includes the orifice pit with
+   its sized plate (from the calculation), the overflow route and the OSD criteria block; one preview, one U.
+4. **UX-L3-14, unapproved calculation:** Tim: "Yes, marked draft (Recommended)". Proposes from current figures with a
+   "Draft: calculation not approved" banner in the preview and on the OSD block until approved.
