@@ -17,6 +17,13 @@ answered, mark it here with a pointer to the decisions file.
 3. **Pass 2, one way of working:** 9, 17, 21, 22, 25, 39, 41, 52, 53, 55, 71, 74, 79, 81, 85, 86.
 4. **Pass 3, by family:** everything else, asked with its family.
 
+## 0. Answered in the V3 plan discussion, 25 Sep 2026
+
+1, 2, 4 kept as built (UX-RIBBON-02). 5 jump to the contextual tab (UX-RIBBON-01). CE CVL menu retired later,
+toolbars kept (UX-RIBBON-03). Workspace/System commands merged, automated, into Manager (UX-RIBBON-04).
+62 overtaken by build: X-Civil is on the Import menu since PR #162. 80 overtaken for CDLPD (on the Design panel,
+PR #149); CDLPDRESET stays typed-only unless Tim says otherwise.
+
 ## 1. Answered by Tim (8)
 
 3 Water Tank has its own button on Draw (RIBBON-02, 23 Sep; code comment "Tim names CDWT first"). 23 Schedule

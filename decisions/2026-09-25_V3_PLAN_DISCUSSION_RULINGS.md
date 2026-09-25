@@ -224,3 +224,42 @@ catchment from the rating report, one confirmation, sources shown. You check it 
 2. OPEN 4: keep CDRAINFALL's reviewed paste/file route; no automatic fitting of rainfall coefficients until a
    method is evidenced and approved.
 3. The card is approved **with UX-CALC-03 replacing its OPEN 5 recommendation**.
+
+---
+
+## Front door, batch 1 — 25 Sep 2026, 13:50
+
+From the sorted design-pack list (`04_REFERENCE\ux-plan\DESIGN_PACK_QUESTIONS_SORTED_2026-09-25.md`) and
+`windows\01_RIBBON.md` §9 (plugin repo design pack).
+
+### UX-RIBBON-01 — Selecting a pipe (design-pack Q5)
+
+**Tim: "Jump to it (Recommended)".** The choice read: *Same as AutoCAD's Hatch and Text editors: select a pipe and its
+tools are in front of you. Escape or Close returns to the CE tab.* Applies to the contextual Pipe, Pit and Source
+tabs alike.
+
+### UX-RIBBON-02 — Three ribbon details as built (Q1, Q2, Q4)
+
+**Tim: "Keep all three (Recommended)".** Kept: the Pit button face opens the full Pit window and its arrow gives the
+preset sizes; Solve Run Inverts sits on the Review panel; the Civil/Structural switch is always visible on the CE
+panel.
+
+### UX-RIBBON-03 — CE CVL pull-down menu and its seven toolbars (01_RIBBON §9, "Retired — needs Tim")
+
+**Tim: "Keep toolbars, drop menu (Recommended)".** The choice read: *Toolbars stay for people who like them, with
+icons matching the ribbon (your 16 Sep ask). The pull-down menu goes, and so does the start-up warning it causes on
+AutoCAD 2022.*
+
+1. The seven CE toolbars stay as a second way in; their icons match the ribbon.
+2. The CE CVL pull-down menu is retired **once the one CE tab works on every AutoCAD version, 2022 included**
+   (the 2022-2024 CUIX still carries the ribbon there today). Answers release-v3 queued item 9 in the same
+   direction: stop writing the menu entry that causes *"Menu item failed to load"*.
+
+### UX-RIBBON-04 — Workspace and System repair commands (01_RIBBON §9, "Retired — needs Tim")
+
+**Tim, his own words (not one of the offered choices): "merge and automte them as much as possible then add
+tomanager".**
+
+1. The seven commands that install and repair the CE workspace, menu and toolbars are **merged** into as few as
+   possible and **automated** as far as possible (repair happens without the user having to run them).
+2. What remains goes **into Manager**. Nothing on the CE ribbon.
