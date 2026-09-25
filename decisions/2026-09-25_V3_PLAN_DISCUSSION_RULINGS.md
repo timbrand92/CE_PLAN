@@ -133,3 +133,14 @@ product similar to something apple or autodesk would design".**
 3. **Not this chat's job:** engineering numbers (Settings page, R-00) and release status (the release chat).
 4. Structural D1 (12 choices on beam grips and the member schedule) stays on its own card for Tuesday, as that
    card planned; it is taken up here only as part of the Structural command family.
+
+### UX-PLAN-01 — How the UX plan runs (Tim, 25 Sep 2026, about 13:35)
+
+**Tim: "Yes, front door first (Recommended)".** The choice read: *Names and ribbon first, because they are what a
+colleague meets first and they shape everything after. Then the one standard, then family by family.*
+
+1. **Pass 1, the front door:** every command name, ribbon tabs and panels, icons, tooltips and what is typed.
+2. **Pass 2, one way of working:** one interaction standard every command follows (start, ask, preview, finish,
+   change later), written from existing rulings plus the gaps.
+3. **Pass 3, family by family:** 5 to 10 related commands at a time in job order (Civil, then Structural, then
+   Manager), each showing today, the polished version and only Tim's genuine choices.
