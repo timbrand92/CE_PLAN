@@ -1033,3 +1033,18 @@ AutoCAD (retirement approved in advance on that condition).
 4. **CR-D1 (sweep):** Tim: "Yes, sweep all (Recommended)". Sweep all 22 council profiles for the known error patterns
    (copied values, wrong field, wrong row), each change listed with its source for Tim to glance at; unsure values
    become Unknown.
+
+## Council tools, batch 5 — 26 Sep 00:47 2026
+
+Covered without asking: B2 (pipe too big for pit) by Tim's 15 Sep ruling "ASK to upsize" (IDEAS_INBOX 15 Sep); B10
+(critical duration stated) by the approved D+F card.
+
+1. **UX-CR-15 (C1):** Tim: "Warn per council (Recommended)". Drawing a basement pump station shows that council's
+   basement rule beside the office rule R-23 and warns where they differ.
+2. **UX-CR-16 (C11):** Tim: "Ask once on Banyule jobs (Recommended)". Design asks whether the site falls to the rear
+   (or reads it from survey levels) and applies Banyule's 1-in-20 storm if so, with the source.
+3. **UX-CR-17 (C12):** Tim: "Check against floors (Recommended)". With floor levels known, CE checks the top water
+   level against each council's floor freeboard and warns on failure; the 150 mm water-to-lid rule stays alongside.
+   Floor level still never sets the water level.
+4. **CR-C2:** Tim: "Not sure, mark Assumed (Recommended)". Whitehorse's 90 mm minimum orifice stays but is marked
+   "Assumed - source not found" until a Whitehorse document confirms it.

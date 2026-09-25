@@ -117,6 +117,8 @@ pipe object draws, and it is measured **outside face to outside face**, not cent
 
 ### B2 — The biggest pipe a pit can take
 
+**ANSWERED — covered by the 15 Sep ruling: ASK to upsize. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md (26 Sep).**
+
 Banyule caps it: a 600 × 600 pit may take a 300, anything larger takes up to 600. We hold no such rule for
 any council, so a 375 into a small pit would go out unflagged.
 
@@ -253,6 +255,8 @@ job? *(Supersedes B10c, which recorded only Yarra and Banyule.)*
 
 ### B10 — The critical storm duration
 
+**ANSWERED — covered by the approved D+F card (critical duration stated). See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md (26 Sep).**
+
 Mornington Peninsula requires the submission to say **which storm duration was the critical one** for the
 detention volume, not just the volume.
 
@@ -267,8 +271,8 @@ office habit would produce. None can be answered from a document.
 
 | # | Question | Why it matters |
 |---|---|---|
-| **C1** | **Basements — which council rule have we been working to?** **Boroondara**: Council *"is not required to accept this water"*; sub-surface drains run almost continuously and are a nuisance at a kerb outlet; where no alternative exists an outfall drain must be built to the boundary. **Yarra** is strictest: tank the basement if within 2 m of groundwater, **no pumping groundwater into Council's network at all**, and the agricultural drains at the building interface must be kept from letting it in. Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | **Six councils, six answers — the most divergent rule found.** One of them is probably being applied everywhere. |
-| **C2** | **Where did Whitehorse's 90 mm minimum orifice come from?** It is more than twice every other council (Darebin 30, Banyule 40, Manningham 40, Maroondah 40). A 90 mm hole passes about five times the flow of a 40 mm one. | If right it shapes every Whitehorse job; if wrong, every Whitehorse orifice has been drawn too large. It is the least-supported number in the council file. |
+| **C1** | **ANSWERED 26 Sep (UX-CR-15).** **Basements — which council rule have we been working to?** **Boroondara**: Council *"is not required to accept this water"*; sub-surface drains run almost continuously and are a nuisance at a kerb outlet; where no alternative exists an outfall drain must be built to the boundary. **Yarra** is strictest: tank the basement if within 2 m of groundwater, **no pumping groundwater into Council's network at all**, and the agricultural drains at the building interface must be kept from letting it in. Manningham allows a basement pump into the detention if the rising main invert sits at or above the top of the baffle wall. Darebin forbids basement seepage in the stormwater system altogether. Boroondara forbids basement groundwater to laneways, kerbs and channels. Maroondah wants an **extra** 1-in-100, 60-minute store for the basement catchment on top of the normal detention, unless there is an automatic backup pump and generator. | **Six councils, six answers — the most divergent rule found.** One of them is probably being applied everywhere. |
+| **C2** | **ANSWERED 26 Sep (CR-C2 Assumed).** **Where did Whitehorse's 90 mm minimum orifice come from?** It is more than twice every other council (Darebin 30, Banyule 40, Manningham 40, Maroondah 40). A 90 mm hole passes about five times the flow of a 40 mm one. | If right it shapes every Whitehorse job; if wrong, every Whitehorse orifice has been drawn too large. It is the least-supported number in the council file. |
 | **C3** | **Is CE using Frankston's 3-minute time of concentration on multi-dwelling jobs?** | It is the shortest of any council. A longer time out of habit makes the design *less* conservative than Frankston asks. |
 | **C4** | **Frankston gives flats and units a runoff coefficient of 0.8** — the same as a factory, double a house on a big block. Is that what we apply? | Most of CE's work is multi-unit. |
 | **C5** | **Have we done commercial work in Darebin?** Commercial uses 0.6 before and 0.90 after, not the residential 0.4 and 0.8 we hold. | We only store the residential pair. |
@@ -279,8 +283,8 @@ office habit would produce. None can be answered from a document.
 | **C10** | **Does our Boroondara orifice pit detail show a sump and weepholes?** Council's own drawing SD999 Rev J has a **300 mm sump** and **25 mm weep holes**, and photographs both at inspection as a mandatory item. Also: does it show the mesh fixed to 40 × 40 × 5 angle, and the plate at the greater of 300 × 300 or 3 × the orifice? | If the detail does not show them the builder may not build them, and the inspection fails after the pour. |
 | **C15** | **Have Boroondara jobs been designed with a 5-minute time of concentration?** Boroondara uses **15 minutes on every site**, deliberately, for consistency. We have 5 recorded. | Fifteen is the longest of any council. A longer time means lighter rainfall and a smaller flow, so 5 would oversize. |
 | **C16** | **Is Boroondara's post-development coefficient floor of 0.65 being applied?** The rule is the proposed land use figure **or 0.65, whichever is greater**. | |
-| **C11** | **Is Banyule's rear-fall rule being picked up?** Their design storm steps from 1 in 10 to **1 in 20 if the site falls to the rear**. | A rear-falling Banyule site would otherwise be designed to 1 in 10 by default. |
-| **C12** | **Are the water-level-to-floor freeboards being checked?** Darebin: 400 mm below habitable floors, 200 below garages. Manningham: 300 and 150. Banyule: 300 below floors and 300 below any grated inlet. | These sit **alongside** our own 150 mm water-to-pit-lid rule, not instead of it. |
+| **C11** | **ANSWERED 26 Sep (UX-CR-16).** **Is Banyule's rear-fall rule being picked up?** Their design storm steps from 1 in 10 to **1 in 20 if the site falls to the rear**. | A rear-falling Banyule site would otherwise be designed to 1 in 10 by default. |
+| **C12** | **ANSWERED 26 Sep (UX-CR-17).** **Are the water-level-to-floor freeboards being checked?** Darebin: 400 mm below habitable floors, 200 below garages. Manningham: 300 and 150. Banyule: 300 below floors and 300 below any grated inlet. | These sit **alongside** our own 150 mm water-to-pit-lid rule, not instead of it. |
 | **C13** | **ANSWERED 26 Sep (UX-CR-01): CE writes the enquiry from the drawing.** **Is the Boroondara enquiry being written by hand?** Council needs five figures before they will issue the permitted discharge — site coverage, total site area, roof area, paved area, landscaped area — and answers in 10 working days. All five are measurable off the drawing. | The design cannot be finished until Council answers, so it wants sending early. Also a small, high-value feature. |
 | **C17** | **Have Maribyrnong jobs been run at a 5-minute time of concentration?** Their detention criteria are tc **10** minutes and tso **6**. The stored 5 looks to have come from their *other* table — the 5-minute minimum for commercial drainage design, a different thing. | |
 | **C18** | **Has any Maribyrnong job been given 1-in-20 storage?** Council's storage storm is **1 in 10**; the 20 is their overflow requirement. | |
