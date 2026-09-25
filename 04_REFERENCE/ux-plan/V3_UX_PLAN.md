@@ -136,6 +136,8 @@ Builders: the release chat writes a card per item before code.
 1. **Beams (D1 approved, D2 building):** one name system with Civil; column and beam grips start in Edit together;
    MOVE on a column brings its beams; labels follow; mismatches go to QA quietly; XCLMTXT schedule now, phased out
    as computations move into CE; 2027 first. (D1 choices 1-12, UX-D2-01..06)
+1b. **Whole-plan proposal:** one proposal following the engineer's markup (14 Sep); learned from past framing with
+   few engineer mark-ups, no later redraws and the fewest members for the spans. (UX-SL3-01, 02)
 2. **Later stage:** beams and columns become CE's own kind of object (safe hover menu). (UX-D2-05b)
 3. **Beam failures** say the plain reason and next step; STRUCDEBUG; 5 and BDL move to the one engine. (UX-BEAM-01..03)
 4. **Priority after D1:** QA against the engineer's markup; register and issue; background preparation (also for

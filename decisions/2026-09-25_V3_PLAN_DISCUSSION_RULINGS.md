@@ -1459,3 +1459,10 @@ Builds on AI-01 (July): permissions, preview then one U, no raw commands, provid
    preview of what is purged; never touches Xrefs; one U; CE still never saves.
 3. **UX-STDS-03:** Tim: "Settings > Drawing Standards (Recommended)". The Drawing Standards window is the one home for
    office standards; LU and the checks read from it; changes recorded (any engineer, as UX-SET-03).
+
+## Structural whole-plan proposal — 26 Sep 09:54 2026
+
+1. **UX-SL3-01:** Tim: "One proposal (Recommended)". The Structural whole-plan proposal stays one proposal (14 Sep),
+   following the engineer's markup; clear parts accepted; unclear items in "Needs clarification".
+2. **UX-SL3-02:** good past framing layouts to learn from: Tim ticked **"Engineer marked up little"**, **"Issued without
+   later changes"** and **"Fewest members for the spans"**. Not ticked: "Council/certifier had no RFI".
