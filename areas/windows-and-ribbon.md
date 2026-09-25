@@ -133,3 +133,4 @@ _"These things must still work", re-checked before any deploy. Seed from `REGRES
 2. **Method (Tim, UX-PLAN-01):** Pass 1 front door (names, ribbon, tooltips, typing); Pass 2 one way of working; Pass 3 family by family.
 3. **Starting point found 25 Sep:** most of the front door was designed and approved on 5 Sep (plugin repo docs/design/V3_UI/00C_TIM_REVIEW_2026-09-05.md, windows/01_RIBBON.md; single CE tab ruled 4 Sep). Gaps: three tabs still in the code; approved V3 names CDREVIEW, CDINTAKE, CESETTINGS not built; old names still on the ribbon.
 4. **The 86 design-pack questions (5 Sep), sorted:** 04_REFERENCE\ux-plan\DESIGN_PACK_QUESTIONS_SORTED_2026-09-25.md. Answered 8, overtaken 5, built-one-way to confirm 3, still open 70.
+5. **Consolidated plan (26 Sep 2026):** 04_REFERENCE\ux-plan\V3_UX_PLAN.md, one page per area, every line citing its ruling.
