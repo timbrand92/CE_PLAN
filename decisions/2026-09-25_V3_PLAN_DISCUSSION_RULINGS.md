@@ -855,3 +855,14 @@ Builds on the 14 Sep eight approved detail-browser behaviours and statuses.
 4. **UX-MGR-06, one report:** Tim: "Merge (Recommended)". Feedback "Send report" and the Support bundle become one
    "Report a problem" everywhere (ribbon, Help, error messages); versions and recent log added automatically; the
    drawing only if ticked. UX-WORD-03's honest result line applies.
+
+## Civil labels and annotations — 26 Sep 00:00 2026
+
+1. **UX-LBL-01, hand-placed labels:** Tim: "Stays where you put it (Recommended)". Hand-placed labels are remembered
+   and never re-tidied; a new clash is listed quietly in Checks.
+2. **UX-LBL-02, re-tidy after edits:** Tim: "Straight away, in the same U (Recommended)". CE-placed labels that now
+   clash are re-placed in the edit's own preview; one U undoes edit and tidy together.
+3. **UX-LBL-03, Tidy labels command:** Tim: "Yes (Recommended)". Tidies every CE label on a sheet or selection by
+   slide-then-flip, skipping hand-placed ones; preview first; one U. (Relates to the CV-01I annotation tidy-up plan.)
+4. **UX-LBL-04, what tidying avoids:** Tim: "Avoid everything, move only CE (Recommended)". CE labels avoid Xref
+   content, other disciplines' text and hatches; only CE labels ever move.
