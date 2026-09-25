@@ -257,6 +257,14 @@ it; what is missing is a curve per station.
 
 ## 6. Decisions this pass could not make — for Tim
 
+**ALL ANSWERED — do not ask again (note added 25 Sep 2026, 12:53, by the V3 plan discussion chat).** Tim answered
+D-Q1, D-Q2, F-Q1, F-Q2 and F-Q3 on the evening of 15 Sep 2026: `decisions\DECISIONS_LOG_DRAWING_INTELLIGENCE.md`,
+section "2026-09-15 (evening) — Tim's five rulings on areas D + F". In short: D-Q1 *"do everything automatically
+and just ask the end user to confirm"*; F-Q1 clean V3 sheet with CE branding; F-Q2 directly through CDCALC; F-Q3
+warn. D-Q3 was answered the same day (*"rainfall station per job, read it from the storm report"*), found
+unbuildable for Blue Factor reports, then settled by Tim's *"yes, hold the coefficients per job"* (15 Sep):
+`04_REFERENCE\IFD_RAINFALL_HOW_IT_WORKS.md`; CDRAINFALL was built from it. The table below is kept as history.
+
 | # | Question | Why it cannot be settled here |
 |---|---|---|
 | **D-Q1** | Should CDCALC offer catchment areas from the STORM report, the way CDDESIGN now offers the site area? | A behaviour change to the window Tim uses most. |
@@ -313,3 +321,12 @@ it; what is missing is a curve per station.
    - **(b)** Answer D-Q1 (does CDCALC offer catchment areas from the STORM report like CDDESIGN does) and F-Q1 (must the plugin's sheet match CE's current layout, or may it be a clean V3 sheet with the same figures) at minimum, then have a real workflow card written and reviewed for D+F provenance/apply-review before any build starts.
 
 `release-v3-colleagues.md` item 39.7 flagged inline pointing here.
+
+**Correction, 25 Sep 2026, 12:53 (V3 plan discussion chat, read from the records, not a new Tim ruling).** Point 3
+above is wrong on one fact: the six D+F questions are **not** unanswered. All were answered on 15 Sep (see the
+note at the top of section 6). Way forward (b) is therefore already met on Tim's side. What is genuinely missing
+is only the **written D+F workflow card** (catchments from the rating report computed automatically with one
+confirmation and visible provenance; a clean CE-branded V3 computations sheet issued from CDCALC; a warning when
+drawn storage disagrees with the sheet; the job's own rainfall coefficients). Item 39 already authorises writing a
+missing card from Tim's approved decisions and building to it. No Tim question is outstanding for D+F.
+CV-02A (pipe-size suggestions) is a separate item and keeps its own label.
