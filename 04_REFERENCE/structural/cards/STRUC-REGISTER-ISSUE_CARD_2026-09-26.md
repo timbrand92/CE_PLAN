@@ -1,4 +1,12 @@
-# Structural drawing register, revisions and issue — command card (26 Sep 2026)
+# Drawing register, revisions and issue — command card (26 Sep 2026)
+
+**This is now a SHARED, whole-plugin card, not a Structural-only one (UX-REG-09, 26 Sep 2026, Tim: "Same
+workflow (Recommended)" — "Civil drawings use the Structural register, revision and issue workflow; a job with
+both disciplines shares one register").** Everything below was written for Structural first and is unchanged in
+substance; Civil now uses the identical workflow, register and issue authority — not a second, parallel one.
+The file name and its existing content stay as the detailed record; this note, §3a and §5 items 11-13 below are
+the Civil/whole-plugin additions. A pointer line for Civil readers is in
+`04_REFERENCE\ux-plan\cards\README.md`.
 
 **Status: APPROVED-IN-PRINCIPLE.** Tim settled the whole register/revisions/issue workflow 25 Sep 2026 —
 rulings UX-REG-01 to 08 (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural register, revisions
@@ -7,11 +15,15 @@ and issue" and "Structural register and issue, batch 2"), plus the multi-DWG com
 this card was first drafted from (the "Drawing register, revisions and issue", "Issue completion" and "Revision
 history and remembered decisions" sections of `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`) and UX-STRUC-01 (25
 Sep, closed-sheet writes). Priority set by Tim 25 Sep 2026 (UX-STRUC-06: register/revisions/issue is the second
-drawing-journey stage tackled after D1, after QA against the markup). **Nothing here is built.** No code starts
-until Tim confirms the test drawing and checklist in section 7 — approval-in-principle covers the workflow, not
-the build. This is journey stage 7 of 7 (`areas\structural.md` UX plan note).
+drawing-journey stage tackled after D1, after QA against the markup). **26 Sep 2026 addition:** UX-REG-09..12
+(`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Issue and submission, Civil and whole plugin") extend
+this same card to cover the shared-register decision, one-click council submission packs, applying the office
+plot style/pens at Issue, and a locked read-only DWG snapshot per issue — see §3a, §5 items 11-13, §6 and §8
+below. **Nothing here is built.** No code starts until Tim confirms the test drawing and checklist in section 7
+— approval-in-principle covers the workflow, not the build. This is journey stage 7 of 7 (`areas\structural.md`
+UX plan note).
 **Read from:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`
-(UX-STRUC-01, UX-REG-01 to 08), and the shipping CE Sheets code on `claude/struc-d1-prep`
+(UX-STRUC-01, UX-REG-01 to 12), and the shipping CE Sheets code on `claude/struc-d1-prep`
 (`Modules/Structural/Commands/SheetsCommands.cs`, `Modules/Structural/Models/CeSheetsModels.cs`,
 `Modules/Structural/Services/CeSheets*.cs`).
 
@@ -96,6 +108,31 @@ job gives **one combined PDF across the whole issue, sheets in register order** 
 Open question 1 as first drafted (a truly job-wide PDF, not one PDF per DWG; see section 5 item 3 and "Open
 questions" below).
 
+### 3a. Civil and whole-plugin additions, 26 September 2026 (UX-REG-09 to 12)
+
+`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Issue and submission, Civil and whole plugin — 26 Sep
+2026 01:07". **APPROVED-IN-PRINCIPLE**, same status as UX-REG-01 to 08.
+
+1. **UX-REG-09 — one shared register.** Tim: *"Same workflow (Recommended)".* Civil drawings use this exact
+   register, revision and issue workflow (UX-REG-01 to 08); a job with both Civil and Structural sheets shares
+   **one** register, not a Civil register and a Structural register kept in step. This directly answers the
+   "For the builder" open dependency this card already flagged (§ below, "Confirm whether Civil already owns a
+   shared sheet/issue system") — the answer is: no separate Civil system is to be built; Civil is a consumer of
+   this one.
+2. **UX-REG-10 — one-click council submission pack.** Tim: *"Yes, one pack (Recommended)".* One click builds a
+   dated folder containing the drawing-set PDF, the computations sheet, the rating report and the LPD letter,
+   named the way the selected council asks. The pack is **reviewed before it is made** (a preview of exactly
+   what will go in it, named how), and **CE never sends it** — sending stays a human action outside CE.
+3. **UX-REG-11 — office plot style, page setup and pens at Issue.** Tim: *"Yes, from Settings (Recommended)".*
+   Issue applies the office's plot style, page setup and pen settings, all Settings values (R-00); a sheet whose
+   own plot/page setup differs from the office standard is **flagged in the issue preview**, not silently
+   overridden or silently allowed through.
+4. **UX-REG-12 — locked read-only DWG snapshot per issue.** Tim: *"Yes, in the issue folder (Recommended)".* A
+   locked, read-only DWG snapshot is saved into the dated issue folder beside the PDF at every issue; the
+   existing "what changed since last issue" comparison (§5 item 7 above, the revision-cloud engine, reusing the
+   Markup QA card's UX-QA-08 compare mode) reads from this snapshot rather than from whatever the drawing looked
+   like at some remembered moment — giving that comparison a fixed, exact prior state to diff against.
+
 ### 4. What Tim already ruled 14 September 2026 — not asked again
 
 **Setup and register (batch 1, item 10; and the dedicated register/revisions/issue batches):**
@@ -168,6 +205,21 @@ drawing to its pre-acceptance state.
 10. **Failed/cancelled plotting leaves the issue unfinalised — Modify (confirm, then harden).** CE Sheets already
     has issue/publish plumbing; needs a build-time check that a failed plot genuinely leaves nothing half-issued
     (no revision advanced, no register row changed) before this is called done.
+11. **One-click council submission pack (UX-REG-10) — Missing.** No code today assembles a dated folder of
+    drawing-set PDF + computations sheet + rating report + LPD letter, named per council. New: a pack builder
+    that reads the same issue folder/PDF this card already produces, plus the D+F card's computations-sheet
+    export (`DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md` §2.9) and the rating report/LPD letter already on
+    file for the job, with a preview before the pack is written and no send action anywhere in CE.
+12. **Office plot style/page setup/pens applied and checked at Issue (UX-REG-11) — Missing.** `CeSheetsIssueService`/
+    `CeSheetsPdfPublisher` plot from whatever plot style and page setup each sheet already carries; nothing
+    compares that against an office Settings standard or flags a mismatch in the issue preview today. New: a
+    Settings-held office plot style/page setup/pen standard (R-00), applied at Issue, with a flag (not a
+    silent fix) on any sheet whose own setup differs.
+13. **Locked read-only DWG snapshot per issue (UX-REG-12) — Missing.** `CeIssueEntry`/`CeIssueSheetSnapshot`
+    already record sheet metadata (number, title, revision, drawn/designed by, issue date) but no full DWG copy.
+    New: save a locked, read-only DWG snapshot into the dated issue folder at issue time, and point the existing
+    revision-cloud "what changed since last issue" comparison (§5 item 7, UX-QA-08-based) at this snapshot as
+    its fixed prior state, rather than a remembered in-memory state that a later drawing edit could disturb.
 
 ### 6. The full experience
 
@@ -192,7 +244,12 @@ drawing to its pre-acceptance state.
    the project, surviving a reopen or a colleague opening the same job.
 10. **Settings:** the office's revision-sequence convention (P1/P2/P3/A, or the T-series tender variant) is a
     per-job choice, not a hard-coded sequence (14 Sep, item 5) — recommend it lives on the Settings page as an
-    editable default, consistent with R-00.
+    editable default, consistent with R-00. The office plot style/page setup/pens (UX-REG-11) are also Settings
+    values, checked at Issue rather than hard-coded.
+11. **After Issue (UX-REG-10/12):** once an issue is accepted, the same dated issue folder gains the locked
+    read-only DWG snapshot (UX-REG-12) automatically, no separate step; the one-click council submission pack
+    (UX-REG-10) is a distinct, explicit action a drafter chooses afterwards — reviewed in its own preview,
+    never bundled silently into Issue itself, and never sent by CE.
 
 ### 7. Example drawing and checklist
 
@@ -229,6 +286,14 @@ drawing to its pre-acceptance state.
    (UX-QA-08) rather than build a second one — sequence after that card's slice 6.
 6. **Slice 6 — the issue-time unresolved-QA gate**, reading the Markup QA card's item states directly once both
    exist.
+7. **Slice 7 — locked read-only DWG snapshot per issue (UX-REG-12).** Save the snapshot into the dated issue
+   folder at issue time; point Slice 5's revision-cloud comparison at it once both exist. Small, contained, no
+   dependency beyond Issue itself already working.
+8. **Slice 8 — office plot style/page setup/pens check (UX-REG-11).** Settings-held office standard; apply at
+   Issue; flag a differing sheet in the issue preview (extends Slice 2).
+9. **Slice 9 — one-click council submission pack (UX-REG-10).** The largest of the additions — depends on the
+   D+F card's computations-sheet export and the rating report/LPD letter already being on file for the job;
+   sequence after this card's own Slice 1 (job-wide PDF) since the pack includes that PDF.
 
 ### Open questions
 
@@ -242,6 +307,17 @@ Genuinely unsettled build details only — the multi-DWG combined-PDF question f
 2. **Where does the office's revision-sequence convention (P1/P2/P3/A vs a T-series) get set for a given job —
    Settings default, or a per-job choice at first issue?** *Recommended: a Settings default (R-00) that a job
    can override once, at its first issue, then locked for that job's own sequence so it cannot drift mid-job.*
+3. **What exactly does a council's submission pack contain when the job is missing one of the four named
+   pieces (UX-REG-10)** — e.g. no LPD letter obtained yet, or no rating report for a job that doesn't need one?
+   *Recommended: the pack preview lists every piece it will include and names any of the four that is missing
+   rather than silently omitting it or blocking the whole pack — the drafter decides whether to proceed with a
+   partial pack, consistent with R-27 (warn, don't hard-block).*
+4. **What counts as a "differently set up" sheet for UX-REG-11's flag** — any deviation at all from the office
+   plot style/page setup/pens, or only a deviation that would visibly change the plotted output (e.g. a
+   different pen-to-lineweight mapping vs. a cosmetically identical but differently-named plot style)?
+   *Recommended: flag any deviation from the exact named office standard, however cosmetically small — Issue is
+   the one place a silent mismatch would reach a council, and R-27's "warn, don't hard-block" already means this
+   never stops the issue, only names it.*
 
 ---
 
@@ -298,11 +374,20 @@ Genuinely unsettled build details only — the multi-DWG combined-PDF question f
 
 ### Open dependencies before a builder starts
 
-1. Tim's answers to the two Open questions above.
+1. Tim's answers to the four Open questions above.
 2. The revision-cloud comparison engine should reuse the Markup QA card's drawing-to-drawing compare (UX-QA-08,
-   slice 6 of that card) rather than be built twice — sequence this card's slice 5 after that one lands.
+   slice 6 of that card) rather than be built twice — sequence this card's slice 5 after that one lands, and
+   once slice 7 (UX-REG-12 snapshot) exists, point the comparison at the locked snapshot rather than a
+   remembered in-memory state.
 3. The issue-time unresolved-QA gate (this card's slice 6) reads the Markup QA card's item-state model directly
    — needs that card's slice 1 (the state model) before this card's slice 6 can start, though slices 1-4 here
    are independent and can proceed first.
-4. Confirm whether Civil already owns a shared sheet/issue system this card's work must align with (see "Shared
-   owner note" above) before slice 1.
+4. **RESOLVED 26 Sep 2026 (UX-REG-09):** Civil does not own, and must not build, a separate sheet/issue system —
+   Civil uses this exact register/revision/issue workflow, one shared register per job across both disciplines.
+   The "Shared owner note" above is now confirmed, not merely flagged. Any Civil-side sheet/issue code found to
+   exist independently before slice 1 starts should be checked against this ruling and reported to Tim, not
+   quietly kept as a second path.
+5. Slice 9 (council submission pack, UX-REG-10) depends on the D+F card's computations-sheet export
+   (`DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md`, APPROVED) and on the rating report/LPD letter already
+   being on file for the job — confirm both are reachable from the issue folder's job context before slice 9
+   starts.

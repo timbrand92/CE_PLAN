@@ -1187,3 +1187,12 @@ Builds on the 14 Sep journey (job number and address from the folder; people ent
    file name, fills the title block and opens it. (Templates themselves are never modified: UX-TPL-01.)
 4. **UX-JOB-04:** Tim: "Learned office pattern (Recommended)". File names follow the pattern learned from past jobs,
    shown before saving, editable.
+
+## Speed and working together — 26 Sep 01:11 2026
+
+1. **UX-PERF-01:** Tim: "Status-bar progress + Cancel (Recommended)". Anything over about a second shows a status-bar
+   progress line with Cancel; nothing freezes silently.
+2. **UX-PERF-02:** Tim: "Tell you + offer to pause it (Recommended)". When a CE feature is slowing AutoCAD, one quiet
+   line offers to pause it for that drawing; remembered per drawing; shown on Manager's status page.
+3. **UX-JOB-05:** Tim: "Show and ask per change (Recommended)". When another person changes the shared job record,
+   the other user sees what changed and by whom and chooses to take each change; nothing is overwritten silently.
