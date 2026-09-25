@@ -900,7 +900,7 @@ tree-zone radius from the report only).
 
 Plan read: `archive\plugin-docs-july-2026\workflows\CV-02A_ASSISTED_PIPE_SIZING_PLAN.md` (July; not approved then).
 
-1. **Structural timing:** Tim wrote "we needs to work on structural once civil passes are done", then, asked what
+1. **Structural timing — CORRECTED 26 Sep by Tim:** *"Structural once Civil passes are done, i meant our plan discussions"*. His first words referred to the ORDER OF THIS CHAT'S DISCUSSION (Structural UX after the Civil passes), not to builds. Original record kept below. Tim wrote "we needs to work on structural once civil passes are done", then, asked what
    to do with the D2 beam build already started, chose **"Keep both going"**. Structural continues alongside Civil;
    the release chat keeps its own pacing (usage, one AutoCAD test at a time).
 2. **UX-SIZE-01, where suggestions appear:** Tim: "Pipe window + Proposals (Recommended)". One advisory line in the
