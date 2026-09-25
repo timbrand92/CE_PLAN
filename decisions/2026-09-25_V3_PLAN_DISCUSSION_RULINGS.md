@@ -1143,3 +1143,9 @@ Recorded as a requirement for every Level 3 proposal (detention/storage options 
 **UX-L3-20, chooser sketch approved:** shown a sketch of the proposal chooser (three options side by side with plan
 pictures and figures, the selected option as a full-size ghost in the drawing, Cancel / Accept), Tim: "Yes, that's it
 (Recommended)". Reference sketch: `04_REFERENCE\ux-plan\PROPOSAL_CHOOSER_SKETCH_2026-09-26.svg` (synthetic figures).
+
+### UX-L3-21 — Detention proposals learned from previous jobs (26 Sep 01:04)
+
+**Tim, verbatim: "you need to learn proposals of detention from previous jobs and the best layouts".** Detention and
+storage proposals are learned from CE's previous jobs (the drawing-intelligence evidence, local only), weighted
+toward the best layouts. How "best" is judged is asked next.
