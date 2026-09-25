@@ -521,7 +521,7 @@ before Apply; one U undoes it.
    Apply with preview and one U. Today's write-before-compare behaviour goes.
 5. Q56 (DET X (Grated) column) not asked yet: needs clearer context first.
 
-## Pass 3, family 7: import and repair — 25 Sep 2026, 14:45
+## Pass 3, family 7: import and repair — 25 Sep 2026, answered by 15:48
 
 1. **UX-IMP-02 (Q60):** Tim: "Summary + open the list (Recommended)". CDCHECKDWG ends with one summary line and
    opens the full list in the results window.
