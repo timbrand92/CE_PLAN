@@ -588,3 +588,19 @@ actual RFI letter a council sends on a job.
 2. **UX-DES-03 (CDSETUP card Q5):** Tim: "During (Recommended)". A part-drawn, unchanged job opens Design on During.
 3. Q84 (outlet invert source words) was answered 5 Sep. Q56 (Pit Schedule "DET X (Grated)" display column) is
    parked: the question could not be worded clearly; not decided.
+
+## Release-chat follow-ups — 25 Sep 2026, 20:04
+
+1. **UX-PIPE-02b (auto-join behaviour; nothing built yet):** Tim: "Pits or pipe ends". A new pipe's end placed within
+   the Settings distance (75 mm default) of a pit or another pipe end is snapped on and linked, shown in the
+   preview. (Recommended "pits only" not taken.) Carried standing rules: never guess between two candidates (ask);
+   one U or Disconnect undoes; off switch in Settings.
+2. **UX-PIPE-06b (downstream when setting one grade on several pipes):** Tim, his own words: "both options".
+   **Interpretation (this chat's, not a ruling):** the preview offers both, and the drafter chooses each time:
+   "Only the selected pipes" (downstream clashes listed as warnings) or "Carry downstream" (downstream pipes
+   re-graded, all shown first). Which one is pre-selected is not decided.
+3. **UX-STRUC-01 (Structural PR #236, closed-sheet writes):** Tim: "Keep, with a notice (Recommended)". CE Sheets
+   sync and project setup keep updating closed sheet drawings and say plainly which ones they changed; open
+   drawings are never saved for the user; Issue/Publish warns if an open sheet has unsaved changes.
+4. **UX-TANK-04b:** Tim: "Retire (Recommended)". The LidType "Standard" field is also retired on AGI drain and
+   trench grate records.
