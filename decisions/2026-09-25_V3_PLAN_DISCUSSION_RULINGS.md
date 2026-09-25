@@ -983,3 +983,16 @@ From `areas\release-v3-colleagues.md` "Queued for Tim, Tuesday 29 Sep".
 **UX-PIPE-08 (item 8):** Tim: "Hide now, retire later (Recommended)". CDPIPEOBJ is hidden from the ribbon and Help now
 (still works typed for testing), and retired once CD itself draws the one-piece pipe and Tim has accepted it in
 AutoCAD (retirement approved in advance on that condition).
+
+## Council tools and Structural 2022 — 26 Sep 00:38 2026
+
+1. **UX-CR-01 (council OPEN_QUESTIONS C13 and the CR spec "produce the enquiry"):** Tim: "Yes, one-page enquiry
+   (Recommended)". For councils that issue the allowed discharge on request (Boroondara, Bayside, Monash, Manningham),
+   Design offers "prepare enquiry"; CE measures the figures off the plan and fills that council's form or letter;
+   the user checks and sends; council's reply figures are entered against the job with the letter as source.
+2. **UX-CR-02 (B3):** Tim: "Suggest from the surface (Recommended)". CE pre-fills the lid class from where the pit sits
+   (driveway/hardstand etc.) with the reason shown; editable; class per location is a Settings/council value.
+3. **UX-CR-03 (B10e):** Tim: "Show and warn (Recommended)". A traced council drain gets a non-printing 1 m each-side
+   "implied easement" band; CE warns if a footing, tank or pit sits inside it.
+4. **UX-STRUC-12 (release-v3 queued item 7):** Tim: "Same Structural, that one tool greyed (Recommended)". AutoCAD 2022
+   colleagues get the full Structural build; CEARCHREVIEW shows greyed with "needs AutoCAD 2027".

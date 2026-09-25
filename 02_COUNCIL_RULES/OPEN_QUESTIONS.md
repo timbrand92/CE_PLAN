@@ -122,6 +122,8 @@ any council, so a 375 into a small pit would go out unflagged.
 
 ### B3 — The pit lid chosen by where the pit sits
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-02: suggest from the surface. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 Manningham names a class for each place: driveway, vehicle crossover, landscaped area, backyard.
 
 **The question.** Is the drafter picking that each time? Should the plugin offer it?
@@ -208,6 +210,8 @@ drain at all.
 
 ### B10e — Council drains with no easement on title
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-03: show 1 m band and warn. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 A Council drain crossing a property with no registered easement still carries an **implied easement** under
 the Water Act — **no structure or filling within one metre either side**. Boroondara has many such
 "Health Act" drains.
@@ -253,7 +257,7 @@ office habit would produce. None can be answered from a document.
 | **C16** | **Is Boroondara's post-development coefficient floor of 0.65 being applied?** The rule is the proposed land use figure **or 0.65, whichever is greater**. | |
 | **C11** | **Is Banyule's rear-fall rule being picked up?** Their design storm steps from 1 in 10 to **1 in 20 if the site falls to the rear**. | A rear-falling Banyule site would otherwise be designed to 1 in 10 by default. |
 | **C12** | **Are the water-level-to-floor freeboards being checked?** Darebin: 400 mm below habitable floors, 200 below garages. Manningham: 300 and 150. Banyule: 300 below floors and 300 below any grated inlet. | These sit **alongside** our own 150 mm water-to-pit-lid rule, not instead of it. |
-| **C13** | **Is the Boroondara enquiry being written by hand?** Council needs five figures before they will issue the permitted discharge — site coverage, total site area, roof area, paved area, landscaped area — and answers in 10 working days. All five are measurable off the drawing. | The design cannot be finished until Council answers, so it wants sending early. Also a small, high-value feature. |
+| **C13** | **ANSWERED 26 Sep (UX-CR-01): CE writes the enquiry from the drawing.** **Is the Boroondara enquiry being written by hand?** Council needs five figures before they will issue the permitted discharge — site coverage, total site area, roof area, paved area, landscaped area — and answers in 10 working days. All five are measurable off the drawing. | The design cannot be finished until Council answers, so it wants sending early. Also a small, high-value feature. |
 | **C17** | **Have Maribyrnong jobs been run at a 5-minute time of concentration?** Their detention criteria are tc **10** minutes and tso **6**. The stored 5 looks to have come from their *other* table — the 5-minute minimum for commercial drainage design, a different thing. | |
 | **C18** | **Has any Maribyrnong job been given 1-in-20 storage?** Council's storage storm is **1 in 10**; the 20 is their overflow requirement. | |
 | **C19** | **Is Maribyrnong's post-development coefficient floor of 0.75 being applied?** It is the highest floor seen — Boroondara's is 0.65. | |
