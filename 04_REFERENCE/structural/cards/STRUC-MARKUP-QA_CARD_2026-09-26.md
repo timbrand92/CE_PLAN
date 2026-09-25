@@ -85,6 +85,12 @@ Each one is approved-in-principle; only a genuine build gap is asked as an Open 
 8. **UX-QA-08 — engineer-drafted changes.** Tim: *"Yes, compare drawing versions (Recommended)".* When the
    engineer drafts changes directly instead of marking up a PDF, CE compares the engineer's drawing with the
    last version and lists the differences as items, with the same four states and the same highlighting.
+9. **Unblankable title block (this card's own Open question, settled 25 Sep 2026 — "Structural cards", release
+   chat commit d65586a7).** Tim: *"Don't send; say so (Recommended)".* When a markup page's title block cannot
+   be blanked, CE does **not** send that page to Claude at all, and tells the user plainly why not; **the user
+   then tags that page's marks by hand** rather than CE reading it. This is now Tim's answer, not a
+   recommendation — it replaces the "Open question" this card first drafted on the point (see "Open questions"
+   below).
 
 ### 4. What Tim already ruled 14 September 2026 that still stands
 
@@ -195,23 +201,21 @@ Not superseded by the 25 Sep batch above; still governs the build.
 
 ### Open questions
 
-Genuinely unsettled build details only — the workflow itself is approved-in-principle above.
+Genuinely unsettled build details only — the workflow itself is approved-in-principle above. The title-block
+question first drafted here is now answered (Tim, 25 Sep: *"Don't send; say so"*; see section 3 item 9 above)
+and is not repeated as an open item.
 
-1. **When the title-block cannot be blanked (a hand-marked sketch with no clean title-block region, say), what
-   happens?** *Recommended: refuse to send that page and say so plainly on the command line ("Can't blank the
-   title block on this page — not sent"), rather than sending it unblanked. You can always redact it yourself
-   and re-supply the page if you want CE to read it anyway.*
-2. **What exactly counts as "the same item" across rounds, so a P2 change is recognised as superseding a P1
+1. **What exactly counts as "the same item" across rounds, so a P2 change is recognised as superseding a P1
    item rather than showing as a brand-new one?** *Recommended: position on the page plus the item's read
    content — if a later round's mark sits over the same drawing location as an open item, treat it as
    superseding that item; anything CE cannot match with confidence lands as a new item instead, never a guessed
    supersede.*
-3. **Which "last version" does UX-QA-08's engineer-drafted-changes compare use** — the last version CE itself
+2. **Which "last version" does UX-QA-08's engineer-drafted-changes compare use** — the last version CE itself
    holds a record of, the last saved DWG before the engineer's edit, or the last issued revision? *Recommended:
    the last version CE has a stored comparison snapshot for (the same "before" state QA already needs to detect
    drift), falling back to the last issued revision if no CE snapshot exists, and saying plainly which one it
    used.*
-4. **Does DATA-01's Gate 0 privacy hold (`04_REFERENCE\CARDS_INDEX.md`: "DATA-01 is failed/blocked... before
+3. **Does DATA-01's Gate 0 privacy hold (`04_REFERENCE\CARDS_INDEX.md`: "DATA-01 is failed/blocked... before
    broad AI/corpus access") touch this card at all?** *Recommended: no — DATA-01 concerns the historical
    CEMARKUP corpus (old snapshot files with identifying names), not a fresh markup page sent live for one job's
    QA reading under UX-QA-05's narrow, explicit, non-training permission. A builder should confirm this reading
@@ -258,7 +262,7 @@ Genuinely unsettled build details only — the workflow itself is approved-in-pr
    this card's scope; do not confuse with the clarification-list PDF export in slice 5.
 9. **Provider-permission record:** UX-QA-05 is the source-of-truth grant for this feature; record it alongside
    (not instead of) the existing DATA-01 corpus Gate 0 status (`04_REFERENCE\CARDS_INDEX.md`, "Gate 0 —
-   privacy") so a later reviewer does not read one as clearing the other. Open question 4 above needs a builder
+   privacy") so a later reviewer does not read one as clearing the other. Open question 3 above needs a builder
    sign-off before slice 2 starts.
 
 ### Automated guards to write with this card
@@ -276,7 +280,8 @@ Genuinely unsettled build details only — the workflow itself is approved-in-pr
 
 ### Open dependencies before a builder starts
 
-1. Tim's answers to the four Open questions above (build details only — the workflow is already approved).
+1. Tim's answers to the three Open questions above (build details only — the workflow is already approved; the
+   title-block-blanking point is already answered, 25 Sep).
 2. The register/issue card's "always before issue" hook (UX-QA-03) needs this card's QA-run entry point to
    exist first, or to be built in the same slice — sequence with that card before wiring the issue-time trigger.
 3. The ribbon card's family/gallery work is independent of this card and does not block it; CEMARKUP's ribbon

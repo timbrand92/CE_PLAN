@@ -1,13 +1,15 @@
 # Structural ribbon — families, drop-downs and duplicates (draft, 26 Sep 2026)
 
 **Status:** DRAFT. Behaviour already ruled by Tim 25 Sep 2026 (UX-STRUC-02 to 05,
-`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural front door"). This card turns that ruling into a
-build-ready plan for the AGENTS.md review gate: what works today, what changes, and the open build questions.
-**Nothing here is built.** No code starts until Tim approves this card.
+`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural front door"; and UX-STRUC-07 to 09, same file,
+"Structural hatch and text families" — hatch gallery layout, the one Text button and smart tagging). This card
+turns those rulings into a build-ready plan for the AGENTS.md review gate: what works today, what changes, and
+the open build questions. **Nothing here is built.** No code starts until Tim approves this card.
 **Read from:** the command registry on the shipping branch (`claude/struc-d1-prep`, commit `0945bdf6`,
 `Modules/Structural/Assets/Config/command-registry.json`, 329 commands), the Structural ribbon builder
-(`Modules/Structural/Services/CeStrucRibbonContributor.cs`), and the shared ribbon code in `Shared/CE_SHARED` on
-both the Structural line and `origin/master`.
+(`Modules/Structural/Services/CeStrucRibbonContributor.cs`), the shared ribbon code in `Shared/CE_SHARED` on
+both the Structural line and `origin/master`, and the office hatch-code convention recorded in
+`areas\structural.md` item 5.
 
 ---
 
@@ -61,16 +63,28 @@ Grouped the way you'd actually look for them on a job, not alphabetically.
    commands 2, 4, 5, BDL, BEXT and the rest of the Structural/Beam group (18 commands), alphabetical, no
    memory. **Change to:** a Beam drop-down button — face click runs your last-used beam type, the arrow opens
    Regular / Lower / Special / Offset as named picks, remembering whichever you used last.
-2. **Text family — Modify.** Today: text-drafting commands (COPYM/CEMCOPY, R2LTXT, and others) sit scattered
-   across Annotate's "Legacy Drafting" and "Beam & Support Tags" dropdowns. **Change to:** one Text drop-down
-   grouping the drafting-text tools together, remembering the last pick.
-3. **Tag family — Modify (per UX-STRUC-04, already ruled).** Today: all 56 text/tag codes sit in one flat
-   "Beam & Support Tags" dropdown, typed only, no on-drawing pick-and-place tool. **Change to:** the 56 codes
-   keep working exactly as typed today (nothing retired); one new **Tag** tool is added to the ribbon: pick the
-   object, pick the side, and it remembers your side choice next time.
-4. **Hatch gallery — Rebuild.** Today: 43 hatching commands (20 patterns, 18 template presets, 5 CE hatch tools)
-   are one flat alphabetical dropdown with no picture. **Change to:** a picture gallery, tiled, remembering the
-   last tile picked — the way AutoCAD's own Hatch ribbon gallery works.
+2. **Text family — Modify (confirmed 25 Sep 2026, UX-STRUC-08).** Today: text-drafting commands (COPYM/CEMCOPY,
+   R2LTXT, and others) sit scattered across Annotate's "Legacy Drafting" and "Beam & Support Tags" dropdowns.
+   **Change to:** Tim: *"Yes, size + compass (Recommended)".* One Text button: pick 1.8 mm or 2.5 mm text size
+   and a placement point on a compass pad around the insertion point; it remembers the last pick. The 11 existing
+   text codes stay typed, unchanged.
+3. **Tag family — Modify (per UX-STRUC-04, refined 25 Sep 2026 by UX-STRUC-09).** Today: all 56 text/tag codes
+   sit in one flat "Beam & Support Tags" dropdown, typed only, no on-drawing pick-and-place tool. **Change to:**
+   Tim: *"Smart tag, picker as backup (Recommended)".* Click a CE beam, column or footing and CE places the
+   right tag on the side clicked, working out which tag from the object itself; a small backup picker (object
+   type, over/under, side) appears only for anything CE does not recognise. All 56 codes stay typed, unchanged.
+4. **Hatch gallery — Rebuild (layout confirmed 25 Sep 2026, UX-STRUC-07).** Today: 43 hatching commands (20
+   patterns, 18 template presets, 5 CE hatch tools) are one flat alphabetical dropdown with no picture.
+   **Change to:** Tim: *"Yes, that layout (Recommended)".* Most-used presets at the top (learned per user/office,
+   per UX-LEARN-01), then material picture tiles, then colour swatches, then the hatch tools (Library, Change
+   Preset, Batch, Gap Assistance, Audit, Make Annotative) along the bottom; every typed code stays unchanged.
+   **Office hatch-code convention, Tim's own words: *"its colour then type then h to denote its a hatch"*.** A
+   hatch code is AutoCAD colour number + pattern-type letter(s) + H — e.g. 21H (colour 21, solid), 21DH (colour
+   21, dot), 21LH (colour 21, diagonal/line), 11CH (colour 11, concrete), 6DH (colour 6, dot). This is recorded
+   office knowledge (R-LEARN, also `areas\structural.md` item 5), not itself a ruling on gallery layout. **This
+   chat's proposal, not a ruling (Open question 4 below):** group the colour-swatch tiles by pattern type with
+   their swatch, show each tile's code so users learn the pattern, and have any new preset follow the same
+   convention.
 5. **Utilities/Legacy family — Modify (per UX-STRUC-05, already ruled).** Today: 29 commands under one dropdown
    literally called "Legacy Drafting". **Change to:** sorted into the family each tool actually belongs to (list
    in section 5) with the word "Legacy" gone from every label a drafter sees.
@@ -85,18 +99,23 @@ Grouped the way you'd actually look for them on a job, not alphabetically.
 
 ### 4. Every duplicate group in today's registry (27 groups, one real command each)
 
-Read directly from the registry on 26 Sep 2026. For each group this card recommends the shortest, most
-AutoCAD-style code as the one shown on the ribbon and in Help; every other name keeps working as a silent typed
-shortcut. This recommendation is Open question 1 below — Tim may prefer a different pick in any row.
+Read directly from the registry on 26 Sep 2026. **Tim confirmed 25 Sep 2026**
+(`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural cards (release chat, commit d65586a7)"):
+*"Shortest code (Recommended)".* The shortest, most AutoCAD-style code in each row is the one shown on the
+ribbon and in Help (AutoCAD style — CL over CENTRELINE, RB over REBAR, FFL over FFLMARKER); every other name
+keeps working as a silent typed shortcut. This settles this card's Open question 1 as first drafted, as a
+general rule — the "over"/left-right variant rows below still depend on their own group membership being
+confirmed first (Open question 1), and CEMARKUPBENCH's hiding (Open question 2) was **not** put to Tim
+separately; both stay open, unconfirmed recommendations.
 
 1. **Centreline Symbol:** CENTERLINE, CENTRELINE, CL, CLINE → recommend **CL**.
 2. **Slab Thickening Outline and Tag:** THC, BTHC, THCL, THCR → recommend **THC** (BTHC/THCL/THCR are the
    "over" and left/right variants — confirm with Tim these are truly the same tool before merging; see Open
-   question 2).
+   question 1).
 3. **Pad Footing Outline and Tag:** PFC, BPFC, PFCL, PFCR → same left/right caveat as above → recommend **PFC**.
 4. **Strip Footing Multiline and Tag:** SFC, BSFC, SFCB, SFCT → recommend **SFC**.
 5. **Strip Footing Over Multiline and Tag:** BSFCB, BSFCT → these are the "over" pair of #4; recommend keeping
-   as their own tool (an "over" version is a different drawn result, not a duplicate — see Open question 2).
+   as their own tool (an "over" version is a different drawn result, not a duplicate — see Open question 1).
 6. **Slab Thickening Over Outline and Tag:** BTHCL, BTHCR → same "over" caveat.
 7. **Pad Footing Over Outline and Tag:** BPFCL, BPFCR → same "over" caveat.
 8. **Column Over Tag:** BPC, BPCL, BPCR → same "over" caveat.
@@ -158,7 +177,7 @@ two named examples:
 2. **JOBTIMERDEBUG** (Time Tracking Diagnostics) — currently visible, must be hidden.
 3. **BEAMLINKDEBUG, BEAMLINKMIGRATE** — already hidden in today's registry; keep hidden.
 4. **CEMARKUPBENCH** (Check Markup Reading Accuracy) — a test/accuracy tool, not a drafting command; recommend
-   hiding alongside the two named ones (Open question 3).
+   hiding alongside the two named ones (Open question 2).
 5. Hiding is a registry flag only — Tim, Codex and a builder can still type any of these commands directly; only
    the ribbon, Help and search stop showing them to ordinary drafters.
 
@@ -190,7 +209,9 @@ other work first.
 1. **Where you start:** the CE Structural ribbon tab, same seven panels as today (Beams, Columns & Footings,
    Rebar & Bracing, Annotate, Line styles, Schedules, CE); only what is inside four of those panels changes.
 2. **Trigger:** click the family face button to run your last pick, or the arrow beside it to choose a different
-   one from that family (Beam, Text, Hatch) or pick-and-place a Tag.
+   one from that family (Beam type; Text size + compass position; a Hatch tile); or, for a Tag, simply click the
+   CE beam, column or footing you want tagged — CE places the right tag on the side clicked, with a small backup
+   picker (object, over/under, side) only when it does not recognise the object.
 3. **Prompts:** unchanged — every family still runs its underlying typed command's own prompts once you pick it.
 4. **Selection, preview, drawing output:** unchanged per command; this card only changes how you find and start
    a command, never what it draws.
@@ -217,10 +238,14 @@ other work first.
 4. **Tim's AutoCAD checklist, once built:**
    - Open DWG-S1. Click the Beam family face button: your last-used beam type runs. Click the arrow: Regular,
      Lower, Special and Offset are all there, named plainly.
-   - Open the Hatch gallery: you see pictures of the patterns, not a text list; pick one, hatch a slab, reopen
-     the gallery — your pick is ticked.
-   - Click the new Tag tool: pick a beam, pick a side, it tags; run it again on another beam, same side without
-     re-picking.
+   - Open the Hatch gallery: most-used presets sit at the top, then material picture tiles, then colour swatches
+     with their code shown (colour + pattern-type letter(s) + H, e.g. 21H, 21DH), then the hatch tools along the
+     bottom; pick one, hatch a slab, reopen the gallery — your pick is ticked.
+   - Click the new Text button: pick 1.8 or 2.5 mm and a compass position, place text; run it again — your last
+     size and position are still selected.
+   - Click directly on a beam with the smart Tag tool: CE places the tag on the side you clicked, no extra
+     picking. Try it on an object CE doesn't recognise and confirm the small backup picker (object, over/under,
+     side) appears instead.
    - Type FFLMARKER (a duplicate's old name) at the command line: still works, still draws the same mark.
    - Open Help or CEPALETTE and search "centreline": one result, not four.
    - Confirm CEDEBUG does not appear anywhere on the ribbon, Help or CEPALETTE — then type it directly: it still
@@ -234,30 +259,40 @@ other work first.
 2. **Slice 2 — fix the double-display bug** for the already-partially-aliased groups (AB/STRUCAB and its two
    pairs) so an alias never shows as a second visible entry. Proves the underlying mechanism works before the
    bigger duplicate-merge slice.
-3. **Slice 3 — merge the remaining 24 plain duplicate groups** (section 4) into one canonical name each, once
-   Tim has answered which name wins in each row.
+3. **Slice 3 — merge the remaining 24 plain duplicate groups** (section 4) into one canonical name each, now
+   that Tim has confirmed the shortest-code rule (25 Sep 2026); the "over"/left-right groups stay excluded until
+   Open question 1 is answered.
 4. **Slice 4 — sort the 29 Utilities/Legacy commands** into their families and drop the word "Legacy" (section
    5). Independent of the drop-down/gallery work; can land before or after slice 5.
 5. **Slice 5 — bring the Structural line onto master's `CE_SHARED`** (section 7), coordinated with the D1 card's
    own need for master's shared object-naming code. This is the blocking slice for slices 6 and 7.
-6. **Slice 6 — build the Beam and Text drop-downs and the one Tag tool**, once slice 5 lands.
-7. **Slice 7 — build the Hatch picture gallery**, once slice 5 lands; can run in parallel with slice 6.
+6. **Slice 6 — build the Beam drop-down, the Text size/compass button and the smart Tag tool**, once slice 5
+   lands (UX-STRUC-08, UX-STRUC-09).
+7. **Slice 7 — build the Hatch picture gallery**, once slice 5 lands; can run in parallel with slice 6
+   (UX-STRUC-07's confirmed layout; the pattern-type grouping/tile-code detail is Open question 4, not blocking).
 
 ### Open questions
 
-1. **Which name wins in each duplicate group (section 4)?** *Recommended: the shortest, most AutoCAD-style code
-   in each row, as listed.* Example: typing FLMK still works either way; only which name shows on the ribbon and
-   in Help changes.
-2. **Are the "over" and left/right variants (THC/BTHC/THCL/THCR and its four sibling groups) genuinely the same
+Question 1 as first drafted here is now answered — see section 4's intro above (Tim, 25 Sep: *"Shortest code
+(Recommended)"*) — and is not repeated as an open item.
+
+1. **Are the "over" and left/right variants (THC/BTHC/THCL/THCR and its four sibling groups) genuinely the same
    drawn result, or different outlines that only share a label?** *Recommended: treat left/right and "over" as
    real, separate tools (not part of the duplicate merge) until someone who knows the footing/slab detailing
    confirms they draw the same thing — merging two tools that actually draw differently would be a silent
-   change, which the plan does not allow.*
-3. **Hide CEMARKUPBENCH from drafters alongside CEDEBUG and JOBTIMERDEBUG?** *Recommended: yes — it is an
-   accuracy-testing tool (see the Markup QA card), not a drafting command.*
-4. **Exact target list for "about 40 tools shown"?** *Recommended: leave the precise number to the builder once
+   change, which the plan does not allow.* Not put to Tim on 25 Sep; stays unconfirmed.
+2. **Hide CEMARKUPBENCH from drafters alongside CEDEBUG and JOBTIMERDEBUG?** *Recommended: yes — it is an
+   accuracy-testing tool (see the Markup QA card), not a drafting command.* Not put to Tim on 25 Sep; stays
+   unconfirmed.
+3. **Exact target list for "about 40 tools shown"?** *Recommended: leave the precise number to the builder once
    the family and duplicate merges are built — the ruling gives a target, not a fixed count, and forcing an
    exact 40 before build risks cutting something a drafter uses daily.*
+4. **Does the Hatch gallery's pattern-type grouping and per-tile code display (this chat's proposal built on
+   Tim's colour+type+H convention, section 3 item 4) match what Tim actually wants, or would he arrange the
+   colour-swatch tiles differently?** Not put to Tim on 25 Sep — the convention itself is confirmed office
+   knowledge, but this specific gallery arrangement is this chat's own suggestion only. *Recommended: build it as
+   described and let Tim correct the tile arrangement once he sees it, rather than blocking the gallery slice on
+   a further round of questions.*
 
 ---
 
@@ -327,8 +362,8 @@ other work first.
 
 ### Open dependencies before a builder starts
 
-1. Tim's answers to the four Open questions above.
+1. Tim's answers to the four Open questions above (the which-name-wins question is already answered, 25 Sep).
 2. Slice 5 (Structural onto master's `CE_SHARED`) is shared work with the D1 card's own `Shared/CE.Spine`
    dependency — coordinate one plan for bringing the Structural line forward, not two competing ones.
-3. Confirmation from whoever knows footing/slab detailing on Open question 2 before slice 3 touches the four
+3. Confirmation from whoever knows footing/slab detailing on Open question 1 before slice 3 touches the four
    "over"/left-right groups.

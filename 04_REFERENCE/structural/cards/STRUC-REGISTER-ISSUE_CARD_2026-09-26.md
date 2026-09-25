@@ -1,13 +1,17 @@
-# Structural drawing register, revisions and issue — command card (draft, 26 Sep 2026)
+# Structural drawing register, revisions and issue — command card (26 Sep 2026)
 
-**Status:** DRAFT. Priority set by Tim 25 Sep 2026 (UX-STRUC-06: register/revisions/issue is the second
-drawing-journey stage tackled after D1, after QA against the markup). Behaviour largely already ruled 14 Sep
-2026 (the "Drawing register, revisions and issue", "Issue completion" and "Revision history and remembered
-decisions" sections of `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`), plus UX-STRUC-01 (25 Sep, closed-sheet
-writes). **Nothing here is built.** No code starts until Tim approves this card. This is journey stage 7 of 7
-(`areas\structural.md` UX plan note).
+**Status: APPROVED-IN-PRINCIPLE.** Tim settled the whole register/revisions/issue workflow 25 Sep 2026 —
+rulings UX-REG-01 to 08 (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural register, revisions
+and issue" and "Structural register and issue, batch 2"), plus the multi-DWG combined-PDF answer recorded under
+"Structural cards (release chat, commit d65586a7)" in the same file — on top of the 14 Sep 2026 journey rulings
+this card was first drafted from (the "Drawing register, revisions and issue", "Issue completion" and "Revision
+history and remembered decisions" sections of `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`) and UX-STRUC-01 (25
+Sep, closed-sheet writes). Priority set by Tim 25 Sep 2026 (UX-STRUC-06: register/revisions/issue is the second
+drawing-journey stage tackled after D1, after QA against the markup). **Nothing here is built.** No code starts
+until Tim confirms the test drawing and checklist in section 7 — approval-in-principle covers the workflow, not
+the build. This is journey stage 7 of 7 (`areas\structural.md` UX plan note).
 **Read from:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`
-(UX-STRUC-01), and the shipping CE Sheets code on `claude/struc-d1-prep`
+(UX-STRUC-01, UX-REG-01 to 08), and the shipping CE Sheets code on `claude/struc-d1-prep`
 (`Modules/Structural/Commands/SheetsCommands.cs`, `Modules/Structural/Models/CeSheetsModels.cs`,
 `Modules/Structural/Services/CeSheets*.cs`).
 
@@ -54,7 +58,45 @@ writes). **Nothing here is built.** No code starts until Tim approves this card.
    for at issue time — this overlaps with, and should reuse, the Markup QA card's own Remembered/Checked-state
    work rather than build a second one.
 
-### 3. What Tim already ruled 14 September 2026 — not asked again
+### 3. Tim's settled workflow, 25 September 2026 (UX-REG-01 to 08)
+
+**Batch 1** (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural register, revisions and issue",
+25 Sep 2026):
+
+1. **UX-REG-01 — what changed.** Tim: *"Compare with last issue (Recommended)".* CE compares each sheet with
+   its last issued version and lists changed sheets with a reason; the user ticks which sheets get a new
+   revision.
+2. **UX-REG-02 — next revision.** Tim: *"Suggest, you pick stage (Recommended)".* After P3, CE offers P4 / T1 /
+   A with the likely one pre-picked from this job's own pattern, remembered per job. This is a **suggestion, not
+   a lock.**
+3. **UX-REG-03 — revision clouds (after A).** Tim: *"CE proposes, you adjust (Recommended)".* CE draws proposed
+   clouds and triangles around each change in the preview; the user accepts, moves, reshapes or deletes each one
+   before issue.
+4. **UX-REG-04 — register location.** Tim: *"On the cover sheet, auto (Recommended)".* The drawing-list table on
+   the cover/notes sheet updates automatically from the one shared sheet list, plus an Excel copy is written to
+   the issue folder.
+
+**Batch 2** (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural register and issue, batch 2",
+25 Sep 2026):
+
+5. **UX-REG-05 — status words.** Tim: *"Yes, from the revision (Recommended)".* P revisions read PRELIMINARY, T
+   revisions read FOR TENDER, A onwards reads FOR CONSTRUCTION; shown in the issue preview; the wording itself is
+   a Settings value (R-00) and can be changed.
+6. **UX-REG-06 — who issues.** Tim: *"Anyone, names the engineer (Recommended)".* Any CE user issues, but picks
+   the approving engineer, who prints on the title block; who actually pressed Issue is recorded separately (same
+   pattern as UX-CALC-03).
+7. **UX-REG-07 — new sheet number.** Tim: *"Next in its group (Recommended)".* A new sheet takes the next number
+   in its group; gaps are never filled or renumbered without asking first.
+8. **UX-REG-08 — where issue starts.** Tim: *"Sheets window + Project Review (Recommended)".* Issue starts from
+   either the Sheets window or Project Review; both open the one shared issue preview.
+
+**Multi-DWG combined PDF** (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural cards (release
+chat, commit d65586a7)", 25 Sep 2026): Tim: *"One PDF, register order (Recommended)".* A multi-DWG Structural
+job gives **one combined PDF across the whole issue, sheets in register order** — this settles this card's own
+Open question 1 as first drafted (a truly job-wide PDF, not one PDF per DWG; see section 5 item 3 and "Open
+questions" below).
+
+### 4. What Tim already ruled 14 September 2026 — not asked again
 
 **Setup and register (batch 1, item 10; and the dedicated register/revisions/issue batches):**
 
@@ -98,14 +140,15 @@ writes). **Nothing here is built.** No code starts until Tim approves this card.
 **Whole-plan proposal (item 6):** accepting a proposal, including an issue, is one Undo operation, returning the
 drawing to its pre-acceptance state.
 
-### 4. Keep / Modify / Rebuild / Missing, step by step
+### 5. Keep / Modify / Rebuild / Missing, step by step
 
 1. **The shared sheet list, scanning, renaming and reordering — Keep.** Already matches the ruling; no changes
    asked for in this card.
 2. **Closed-sheet writes with a notice — Keep.** Already matches UX-STRUC-01 exactly; nothing to change.
-3. **Combined PDF — Modify.** Change from "one combined PDF per DWG" to "one combined PDF for the whole issue",
-   with the option to select a smaller set (item 9 above). This is the one clear functional change to existing,
-   working code.
+3. **Combined PDF — Modify, Tim-confirmed 25 Sep.** Change from "one combined PDF per DWG" to "one combined PDF
+   for the whole issue, sheets in register order" (Tim: *"One PDF, register order (Recommended)"*), with the
+   option to select a smaller set (item 9 above). This is the one clear functional change to existing, working
+   code, and this card's own Open question 1 as first drafted is now resolved by that answer.
 4. **The Issue record and its sheet snapshots — Keep**, extended (not rebuilt) to carry: the suggested-affected-
    sheets list and your confirmation of it, the issue preview data, and the revision description text.
 5. **Suggested affected sheets — Missing.** New: work out which sheets a confirmed drawing change (or a
@@ -126,7 +169,7 @@ drawing to its pre-acceptance state.
     has issue/publish plumbing; needs a build-time check that a failed plot genuinely leaves nothing half-issued
     (no revision advanced, no register row changed) before this is called done.
 
-### 5. The full experience
+### 6. The full experience
 
 1. **Where you start:** CESHEETS, same entry point as today (already ribbon-mapped, Schedules panel per the
    ribbon card).
@@ -151,7 +194,7 @@ drawing to its pre-acceptance state.
     per-job choice, not a hard-coded sequence (14 Sep, item 5) — recommend it lives on the Settings page as an
     editable default, consistent with R-00.
 
-### 6. Example drawing and checklist
+### 7. Example drawing and checklist
 
 1. **Test drawing set DWG-S3a/b/c:** three small made-up Structural sheets (S01 general notes, S03 footing plan,
    S07 framing plan) forming one job, with one already-issued Revision A baseline, no client content.
@@ -172,7 +215,7 @@ drawing to its pre-acceptance state.
    - Repeat with one sheet closed in AutoCAD at issue time: CE writes to it and tells you plainly which sheet it
      touched while closed (per UX-STRUC-01, already built — confirming, not new work).
 
-### 7. Slices, smallest first
+### 8. Slices, smallest first
 
 1. **Slice 1 — job-wide combined PDF**, changing today's per-DWG combined output to one PDF for the whole issue
    with an optional smaller-set selection. Smallest, most contained change to already-working code.
@@ -189,16 +232,14 @@ drawing to its pre-acceptance state.
 
 ### Open questions
 
-1. **When a job has more than one Structural DWG, does "one combined PDF" mean truly one PDF across every DWG in
-   the issue, or does "per DWG, but always combined across that DWG's own sheets" already satisfy the 14 Sep
-   ruling?** *Recommended: truly one PDF across the whole issue, sheets in register order, since that is what
-   "always a combined PDF" plainly means to an engineer opening one file for council — the current per-DWG
-   behaviour is the gap to close, not the target.*
-2. **What exactly counts as "a confirmed change" for the revision-cloud comparison** — a drawing edit CE itself
+Genuinely unsettled build details only — the multi-DWG combined-PDF question first drafted here is now answered
+(Tim, 25 Sep: *"One PDF, register order"*; see section 3 above) and is not repeated as an open item.
+
+1. **What exactly counts as "a confirmed change" for the revision-cloud comparison** — a drawing edit CE itself
    made, any edit at all since the last issue, or only edits tied to a Checked QA item? *Recommended: any
    geometry/annotation change on a sheet since its last issued snapshot, not limited to CE-made edits — an
    engineer's own manual fix must cloud too, or the cloud becomes unreliable.*
-3. **Where does the office's revision-sequence convention (P1/P2/P3/A vs a T-series) get set for a given job —
+2. **Where does the office's revision-sequence convention (P1/P2/P3/A vs a T-series) get set for a given job —
    Settings default, or a per-job choice at first issue?** *Recommended: a Settings default (R-00) that a job
    can override once, at its first issue, then locked for that job's own sequence so it cannot drift mid-job.*
 
@@ -257,7 +298,7 @@ drawing to its pre-acceptance state.
 
 ### Open dependencies before a builder starts
 
-1. Tim's answers to the three Open questions above.
+1. Tim's answers to the two Open questions above.
 2. The revision-cloud comparison engine should reuse the Markup QA card's drawing-to-drawing compare (UX-QA-08,
    slice 6 of that card) rather than be built twice — sequence this card's slice 5 after that one lands.
 3. The issue-time unresolved-QA gate (this card's slice 6) reads the Markup QA card's item-state model directly
