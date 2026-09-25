@@ -1149,3 +1149,9 @@ pictures and figures, the selected option as a full-size ghost in the drawing, C
 **Tim, verbatim: "you need to learn proposals of detention from previous jobs and the best layouts".** Detention and
 storage proposals are learned from CE's previous jobs (the drawing-intelligence evidence, local only), weighted
 toward the best layouts. How "best" is judged is asked next.
+
+**UX-L3-22, what makes a layout "best":** Tim ticked **"Council approved first time"**, **"Least pipe and depth"** and
+**"Issued without later changes"**. Not ticked: "You or an engineer marks it". So "best" past detention layouts are
+scored by: no council RFI on the drainage (council RFI reader, UX-RFI-01..03); meeting storage with the least pipe
+length, excavation depth and number of pits; and not redrawn in later revisions (compared across issues). No manual
+"good example" marking is required.
