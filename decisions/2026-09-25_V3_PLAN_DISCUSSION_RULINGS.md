@@ -866,3 +866,18 @@ Builds on the 14 Sep eight approved detail-browser behaviours and statuses.
    slide-then-flip, skipping hand-placed ones; preview first; one U. (Relates to the CV-01I annotation tidy-up plan.)
 4. **UX-LBL-04, what tidying avoids:** Tim: "Avoid everything, move only CE (Recommended)". CE labels avoid Xref
    content, other disciplines' text and hatches; only CE labels ever move.
+
+## Civil site and slab tools — 26 Sep 00:04 2026
+
+Builds on the 5 Sep Slab System review (one Slab window; outlets; Show flow; joints advisory until a signed rule;
+tree-zone radius from the report only).
+
+1. **UX-SITE-01, arborist report:** Tim: "CE reads it, you confirm (Recommended)". CE finds the arborist PDF in the job
+   folder, lists each tree with TPZ/SRZ radius and page; the user confirms before anything is drawn.
+2. **UX-SITE-02, joint proposals:** Tim: "Propose, marked advisory (Recommended)". CE proposes construction joints and
+   saw cuts learned from past slabs (re-entrant corners, pit clearances, panel shapes), previewed and labelled
+   "Advisory - from past jobs"; each accepted, moved or deleted by the user. Stays advisory under the 5 Sep ruling.
+3. **UX-SITE-03, spoon drains:** Tim: "Drag with live fall (Recommended)". Pick points with length and fall shown live;
+   linked to its slab and outlet.
+4. **UX-SITE-04, slab boundaries from the background:** Tim: "Offer, you confirm (Recommended)". CE highlights closed
+   outlines found in the architect's background as possible slabs; click to use; own pick or drawing still allowed.
