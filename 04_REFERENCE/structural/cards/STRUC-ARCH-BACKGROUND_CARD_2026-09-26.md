@@ -1,0 +1,275 @@
+# Structural architectural background preparation — command card (draft, 26 Sep 2026)
+
+**Status:** DRAFT — **planning only; real prepared Xrefs must be studied before any behaviour in this card is
+built.** Priority set by Tim 25 Sep 2026 (UX-STRUC-06: background preparation is the third drawing-journey stage
+tackled after D1, after QA against the markup and register/revisions/issue). Behaviour framed by the 14 Sep 2026
+rulings (`STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, "Batch 1", "Batch 2", "Detail-library decisions",
+"Representative completed job", "Direct DWG inspection" and "Xref placement follow-up" sections). **Nothing here
+is built.** No code starts until Tim approves this card, and this card itself says plainly that its own approval
+cannot authorise any general behaviour until more real examples are read. This is journey stage 2 of 7
+(`areas\structural.md` UX plan note).
+**Read from:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, and the shipping code on `claude/struc-d1-prep`
+(`Modules/Structural/Commands/ArchitecturalChangeReviewCommands.cs`,
+`Modules/Structural/Services/DrawingIntelligence/ArchitecturalChangeReviewCommandRunner.cs`).
+
+---
+
+## FOR TIM
+
+### 1. What this card covers
+
+1. **The very start of a Structural job:** turning the architect's DWG into a clean, aligned, correctly
+   coloured Xref background you can drop structural drafting on top of — before any beam, column or footing is
+   drawn.
+2. **Why this is last of the three priority stages, not first:** the 14 Sep record is explicit that the exact
+   cleanup rules, level-separation rules and colour-override rules **must be learned from actual prepared
+   Xrefs**, not invented from a general description. One example job was read once, read-only, on 14 Sep — that
+   is not enough evidence to build a general rule from, and this card says so rather than guessing.
+3. **What this card asks for before code:** which further real, representative job folders can be read the same
+   safe, read-only way, so the cleanup and alignment rules are learned from your actual jobs rather than assumed.
+
+### 2. What works today, in drawing terms
+
+1. **LU already sets up some layers.** It is your existing tool for preparing a new drawing's layers, and the
+   14 Sep record already flags it as a Modify/reuse candidate needing improvement — not something this card
+   replaces.
+2. **CEARCHREVIEW exists, but it is a narrow research probe, not a working tool.** Reading its own code
+   comment: *"the flow has no selection, discovery or persistence route: exact locators can arrive only through
+   the drawing-external receipt boundary."* In plain terms: it can only check one Xref occurrence someone has
+   already told it about by hand, against a saved reference — you cannot point it at a drawing and ask "how is
+   this Xref set up." It does not select, discover or remember anything, and makes no drawing changes. It is the
+   first slice of a much later, governed capability, not today's background-prep tool.
+3. **Nothing else exists yet:** no template/background two-stage workflow, no automatic job-number/address pickup
+   from the project folder, no cleanup pass on the incoming architectural DWG, no placement/alignment preview,
+   no colour-override or level-separation logic, no whole-plan-movement command.
+4. **What has been learned, from exactly one job, read-only, 14 Sep 2026** (kept here for reference, not as a
+   rule to build from): that job used **six separate Xref overlay insertions** of the same one source Xref file
+   (Site, Ground Over, Ground Under, First Over, Roof, and a plain unnamed one), each with its own clip and its
+   own host-layer colour overrides on four architectural layers, plus one additional linked detail Xref. Paired
+   overlay insertions sat 50,000 drawing units apart on the Y axis. This is **one job's pattern, not a confirmed
+   office convention** — the record is explicit that a single example cannot establish a universal rule.
+
+### 3. Tim's intended result, in his own words and rulings — 14 September 2026
+
+1. *"Start with a template Xref drawing to prepare architectural backgrounds... Once prepared, copy/Save As a
+   drawing template from the same folder into the project folder, insert Xrefs with colour overrides for
+   particular plans and levels, then supply the drawing to the engineer."* A two-stage workflow: prepare the
+   background once, then bring it into the live project drawing.
+2. CE should understand context from the drawing's contents and whether the Xref drawing is being updated or
+   drafted directly — never forcing a rigid New/Continue choice, and never silently resetting project state.
+3. Job number and address come automatically from the project folder; client is optional; drawn/designed/checked
+   by is entered once with later editing available. Shared project metadata, reused from the one shared
+   authority — never a second, Structural-only copy.
+4. Prepare layers, text/dimension styles, units and scales — LU already does some of this and needs improving
+   (not rebuilding from nothing).
+5. **Architectural input is a DWG; clean it to suit CE drawings before proceeding.** PDF is not the normal
+   architectural-input route.
+6. Help with background placement, scale and alignment, with you confirming alignment — never an unconfirmed
+   automatic placement.
+7. Both single-DWG and multiple-DWG job arrangements must be supported — no universal one-DWG rule.
+8. Sheet setup evolves constantly through the job; support adding, reordering and changing sheets throughout,
+   not a one-time setup screen.
+9. A job-type starting sheet list is fine as an optional, editable suggestion — never a mandatory fixed set.
+10. **Constant register updates and each page's revision/date are a major repetitive frustration** (this hands
+    straight to the register/issue card — the two stages meet here).
+11. Remove architectural content not needed for engineering, but keep walls, stairs, shower bases, bathtubs,
+    landscaping, fences, windows and doors — *"Tim asks for review of actual Xrefs to understand the rules."*
+    This retained-content list is illustrative, not a permission to auto-delete every other category.
+12. Level separation, and plan/level colour overrides, **must be learned from how actual drawings are set up**
+    — never assumed to be separate files, separate regions, or any one convention.
+13. Supply the engineer with a plotted PDF of the full current plan set (not just the active sheet); the engineer
+    returns marked-up or sketched PDFs, or sometimes drafts directly — both input paths must be supported.
+14. Revised architectural backgrounds are overlaid and compared, adjusted, or rebuilt from scratch, **depending
+    on the extent of change** — no automatic threshold decides which.
+15. Alignment reference may be a building corner, grid intersection or boundary — any of these is valid, not one
+    mandated type.
+16. Repositioning the whole plan should offer to move both backgrounds and the associated structural drafting
+    together — an explicit whole-plan operation, not silent propagation of every individual edit.
+17. Replacing a revised background previews the alignment against the existing version before applying it, with
+    your confirmation.
+18. Whole-plan movement, once triggered, includes backgrounds, structural objects, labels, dimensions, the plan
+    title **and hatches** together, with preview and editable inclusion.
+
+### 4. The evidence gate — what has to happen before this card can leave "planning only"
+
+This is the one thing this card asks Tim to help move, not a normal Open question — it blocks everything else in
+section 6.
+
+1. **What is needed:** two to three more representative, already-completed Structural project folders (in
+   addition to the one already read 14 Sep), each containing — as a minimum — a prepared architectural Xref DWG,
+   the host Structural drawing that references it (to see the colour overrides and viewport setup in place), and
+   ideally the original, unprepared architectural DWG the Xref was cleaned from. A plotted plan-set PDF from each
+   job, if available, helps confirm what "ready for the engineer" looks like.
+2. **How it gets read, safely:** exactly the same way the one 14 Sep example was read — read-only, headless (no
+   AutoCAD launch, no drawing save), via the already-installed ACadSharp library or `accoreconsole`, with a
+   SHA256 check before and after confirming nothing changed. No new script, project or build is authorised by
+   this card; if the existing read-only approach needs changing, that itself needs Tim's approval first (per the
+   AGENTS.md build-script rule).
+3. **Where the job folders live:** Tim's own OneDrive project structure, already mapped in memory
+   (`office-folder-map.md`) — real client folders, never copied into a repo, never opened in a way that writes
+   anything back. The project folder path, job number and site address stay local-only (DATA-01); only the
+   anonymised pattern (layer names, overlay counts, colour numbers, relative folder structure) is recorded here
+   or in any workflow card.
+4. **What each new example should confirm or correct:** whether the "six overlay variants of one source Xref"
+   pattern from the first job is common office practice or specific to that job; what the level-separation rule
+   actually is (separate files? separate regions in one file? something else?); what triggers a colour override
+   on a given layer; and what the retained/removed content list (item 3.11) actually looks like once someone who
+   knows architectural cleanup reviews real examples against it.
+5. **Until this is done:** this card can be approved as a *plan* — the shape of the workflow, the Keep/Modify/
+   Missing classification, the full-experience walk-through below — but the cleanup, alignment and colour-
+   override *rules* inside it stay Unknown, not zero, and no code implementing them may start.
+
+### 5. Keep / Modify / Rebuild / Missing
+
+1. **LU (layer/style/unit/scale setup) — Modify.** Reuse and extend; do not replace. Exact shortcomings still
+   need real examples (item 4 above) before the extension is specified.
+2. **CEARCHREVIEW — Keep as the first governed slice; not this card's tool.** It stays exactly as the narrow,
+   read-only, receipt-based probe it is today. This card's background-prep workflow is a separate, much larger
+   piece of work that may eventually share its underlying safe-read approach, but CEARCHREVIEW itself is not
+   rebuilt or extended by this card.
+3. **Two-stage template-then-project workflow — Missing.** New, and blocked on the evidence gate (section 4).
+4. **Job metadata auto-fill from the project folder — Missing.** New; likely shares the same "one shared project
+   authority" the register/issue card already reads from CE Sheets — confirm the owner before building a second
+   metadata reader.
+5. **DWG cleanup pass — Missing.** New, and squarely blocked on the evidence gate: the retained/removed content
+   list (item 3.11) is explicitly illustrative, not a spec, until real examples confirm it.
+6. **Placement, alignment and preview — Missing.** New; the alignment-reference flexibility (item 3.15) and
+   whole-plan-movement scope (items 3.16-3.18) are already ruled, so this piece can be designed now even though
+   it cannot be built until the cleanup rules it sits alongside are evidenced.
+7. **Colour-override and level-separation logic — Missing, and explicitly not to be generalised from one
+   example.** This is the piece most directly blocked by section 4.
+8. **Engineer handoff (plotted full-set PDF out; markup PDF or direct draft back in) — Missing**, but shares
+   infrastructure with the register/issue card's combined-PDF work and the Markup QA card's markup-reading and
+   drawing-to-drawing compare work — sequence with both rather than building a third PDF/compare path.
+9. **Revised-background overlay/compare/rebuild — Missing.** New; depends on the same comparison thinking as the
+   Markup QA card's UX-QA-08 (drawing-to-drawing compare) — likely the same underlying engine applied to
+   backgrounds instead of structural content.
+
+### 6. The full experience (design only — build waits on section 4)
+
+1. **Where you start:** a new or continuing Structural job; CE reads the drawing's own contents to tell whether
+   this is a fresh background-preparation pass or continued work on an existing one, rather than asking you to
+   choose New/Continue up front.
+2. **Trigger:** part of job setup, alongside the job-metadata auto-fill; not yet assigned a ribbon location in
+   this card (see Open question 2).
+3. **Prompts:** confirm the auto-filled job number/address; confirm which architectural DWG to prepare from;
+   confirm the alignment reference point (corner, grid intersection or boundary — your choice, not CE's).
+4. **Selection:** the architectural DWG(s) to bring in; single or multiple, per your job's own arrangement.
+5. **Preview:** the cleaned background shown against the project drawing before anything is placed; alignment
+   preview before a revised background replaces an earlier one.
+6. **Drawing output:** the prepared Xref insertion(s), with their colour overrides and clips, on the project
+   drawing — exact mechanics depend on the evidence gate.
+7. **Cancel / Escape:** leaves the project drawing unchanged; a cancelled cleanup pass touches nothing.
+8. **One Undo:** placing or replacing a background, and any whole-plan move that follows it, is one Undo step
+   (consistent with the 14 Sep whole-plan-proposal rule).
+9. **Save/reopen:** the prepared background, its alignment and its source reference survive a reopen, exactly as
+   any other Xref does today, plus whatever CE-specific override/clip record this card adds.
+10. **Settings:** the retained/removed content categories and any office-wide colour-override convention belong
+    on the Settings page once they are confirmed by real examples (R-00) — never hard-coded ahead of that
+    confirmation.
+11. **Discovery:** part of job setup, so it should be hard to miss at the start of a job — exact ribbon/menu
+    placement is Open question 2.
+
+### 7. Example drawings and checklist
+
+1. **No real client Xref may be used as a fixture — ever.** Test material must be a fabricated example that
+   mirrors the *pattern* learned from real jobs (once section 4's evidence gate has enough examples to describe
+   a pattern) without containing any real address, job number or architect's actual drawing content.
+2. **Test drawing set DWG-S4 (to be built once section 4 has enough evidence):** a made-up "architect's" DWG
+   with walls, stairs, a window/door set, landscaping and fencing (the illustrative retained-content list, item
+   3.11) plus some content that should be stripped, referenced from a made-up host drawing with at least two
+   overlay uses and at least one deliberate colour override — enough to exercise the cleanup and alignment logic
+   without being any real job.
+3. **Automated guard (once buildable):** the cleanup pass keeps every item on the confirmed retained-content list
+   and removes only what real-example review confirms should go — tested against the fabricated fixture, not a
+   real drawing.
+4. **Automated guard:** placement/alignment never proceeds without your explicit confirmation step — a headless
+   test can assert the command halts and asks, it cannot assert the alignment "looks right" (that stays a human
+   check).
+5. **Tim's AutoCAD checklist, once built:** deferred until section 4's evidence gate is satisfied and section 6
+   has moved from design to a real build — this card does not hand you a checklist for work that cannot start
+   yet.
+
+### 8. Slices, smallest first
+
+1. **Slice 0 — the evidence gate itself (section 4).** Not code: reading two to three more real project folders
+   read-only, and writing what is learned back into this card (or a successor) as confirmed pattern, separated
+   plainly from the one-job pattern already on record. Nothing else in this card can start before this.
+2. **Slice 1 — job metadata auto-fill**, once the shared-project-authority question (section 5, item 4) is
+   answered; the least dependent on the evidence gate, since it reads folder/job data, not architectural
+   content.
+3. **Slice 2 — placement, alignment and preview**, using the alignment-reference and whole-plan-movement rules
+   already settled 14 Sep (items 3.15-3.18) — buildable once slice 0 confirms enough about typical Xref
+   structure to know what is being aligned.
+4. **Slice 3 — the cleanup pass**, once slice 0's evidence confirms the retained/removed content rules.
+5. **Slice 4 — colour-override and level-separation logic**, the most evidence-dependent piece; last.
+6. **Slice 5 — engineer handoff and revised-background compare**, sequenced with the register/issue card's
+   combined-PDF work and the Markup QA card's compare engine (section 5, items 8-9).
+
+### Open questions
+
+1. **Which specific project folders should be read next for the evidence gate, and how many is "enough" before
+   a pattern counts as a confirmed office convention rather than one more example?** *Recommended: two to three
+   more jobs spanning different practical shapes (a single-DWG job and a multi-DWG job, at minimum, since item
+   3.7 already says both exist) — enough to say "this holds across N jobs of different shapes," never a single
+   number chosen in advance; if the second and third examples disagree with the first, that disagreement itself
+   is useful and should be recorded, not resolved by picking one.*
+2. **Where does background preparation sit in the ribbon/command flow — its own command, or folded into job
+   setup alongside CESETTINGS/CEPROPS?** *Recommended: folded into job setup, since item 3.2 explicitly wants CE
+   to read context rather than make you choose a separate command, and a first-time drafter is unlikely to know
+   to look for a standalone "prepare background" command.*
+3. **Does the cleanup pass ever run again later in the job** (for a revised background, item 3.14), or is
+   cleanup a one-time step and only alignment/compare repeats? *Recommended: cleanup runs again only when a
+   background is rebuilt from scratch (the "extent of change" threshold in item 3.14); an overlaid/compared
+   update reuses the already-cleaned background and only re-aligns, so the same content is not re-cleaned and
+   potentially re-stripped every time.*
+
+---
+
+*Everything below this line is for the builder. Nothing below needs Tim to read, decide or do anything.*
+
+---
+
+## For the builder
+
+### Pinned source (read 26 Sep 2026)
+
+1. **Shipping Structural line:** `origin/claude/struc-d1-prep`, tip `0945bdf6`.
+2. **CEARCHREVIEW:** `Modules/Structural/Commands/ArchitecturalChangeReviewCommands.cs`,
+   `Modules/Structural/Services/DrawingIntelligence/ArchitecturalChangeReviewCommandRunner.cs` — confirmed by
+   direct read: `Execute` has exactly four outcomes (`Observed`, `Unknown`, `Refused`, `Cancelled`), no
+   selection, no discovery, no persistence; `Read` only runs against a pre-supplied, already-approved external
+   receipt (`GetApprovedReceipt`); the class's own comment names it "the first governed CEARCHREVIEW slice."
+   Registered in the command registry with an empty group/subgroup (falls into the ungrouped 27, per the ribbon
+   card's section "For the builder" item 8).
+3. **14 Sep evidence source:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, "Representative completed job — first
+   bounded review" and "Direct DWG inspection — 14 September follow-on" sections. The DWG read there used
+   ACadSharp 3.4.29 in memory via PowerShell, SHA256-verified before/after, no AutoCAD, no drawing save, and
+   produced private local evidence (`dwg-structure.json`, `xref-clips.json`, `viewport-colour-records.json`,
+   `viewport-handles.json`) kept out of any repository. Reuse this exact method for the evidence gate (section
+   4) unless Tim approves a different one.
+4. **LU:** not separately re-read for this card; `areas\structural.md` item under "Items and status" already
+   names it a needs-improvement candidate — read its current source before specifying the extension in slice 1.
+5. **Shared-owner question (section 5, item 4):** the 14 Sep "Area ownership" table names "Job Coordination" as
+   the owner of "project folder identity and editable project metadata through existing shared project
+   authority" — confirm which module/service that is today (likely the same one the register/issue card's CE
+   Sheets manifest reads job number/address from) before building a second reader in this card.
+
+### Automated guards to write with this card
+
+1. **Slice 0 only:** the read-only evidence pass leaves every inspected DWG's SHA256 unchanged (already the
+   established pattern; re-run for each new example folder, not a new guard to invent).
+2. **From slice 1 on:** every guard listed in sections 6-8 above depends on the evidence gate; do not write a
+   guard that encodes a rule from the single 14 Sep example as if it were confirmed office-wide.
+3. **Fixture discipline:** any automated test fixture for this card is built from the fabricated DWG-S4 pattern
+   (section 7), never copied or derived from a real project folder's actual geometry.
+
+### Open dependencies before a builder starts
+
+1. Tim naming the two to three next project folders for the evidence gate (Open question 1), and someone who
+   knows architectural cleanup available to review what comes back (section 4, item 4 — content classification
+   is a drafting judgement call, not something a read-only DWG parse alone can settle).
+2. The shared job-metadata authority question (section 5, item 4) — needed before slice 1.
+3. The Markup QA card's drawing-to-drawing compare engine (UX-QA-08) landing before this card's slice 5.
+4. The register/issue card's combined-PDF and engineer-handoff work, sequenced alongside this card's slice 5
+   rather than duplicated.
