@@ -464,3 +464,13 @@ editable and marked manual. Nothing further asked.
 
 **Tim: "Allow, with preview (Recommended)".** The preview lists each pipe's new levels and anything downstream
 before Apply; one U undoes it.
+
+## Pass 3, family 2: downpipes and sources — 25 Sep 2026, 14:33
+
+1. **UX-SRC-01 (Q26):** Tim: "Same symbol, different tag". OF and FO share one plan symbol; the tag (OF1 / FO1)
+   tells them apart.
+2. **UX-SRC-02 (Q27):** Tim: "Its own type (Recommended)". Strip drain is its own type in the Source window and
+   asks for the run.
+3. **UX-SRC-03 (Q28):** Tim: "RG1, RG2 (Recommended)". Raingardens are tagged RG.
+4. **UX-SRC-04 (Q29):** Tim: "Drag, or type (Recommended)". Trench grate length: drag with the length shown live, or
+   type it at any time, like LINE.
