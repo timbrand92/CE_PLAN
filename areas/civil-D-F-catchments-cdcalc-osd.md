@@ -330,3 +330,5 @@ confirmation and visible provenance; a clean CE-branded V3 computations sheet is
 drawn storage disagrees with the sheet; the job's own rainfall coefficients). Item 39 already authorises writing a
 missing card from Tim's approved decisions and building to it. No Tim question is outstanding for D+F.
 CV-02A (pipe-size suggestions) is a separate item and keeps its own label.
+
+**Item 39.7 card, 25 Sep 2026:** [D+F calculation provenance and Apply-to-drawing workflow](../04_REFERENCE/civil-D-F/DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md) — DRAFT from Tim's rulings; not built.
