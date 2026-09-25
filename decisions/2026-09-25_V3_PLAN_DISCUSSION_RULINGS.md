@@ -1271,3 +1271,14 @@ STRUC-REGISTER-ISSUE).
 4. **UX-SCALC-08, loads:** Tim: "Traced from the drawing (Recommended)". Loads traced from what sits on the member
    (floor area carried, roof above, posts landing) along the 14 Sep load path; each load shows its source; the user
    adjusts.
+
+## Check plots — 26 Sep 01:19 2026
+
+Evidence: recent office issue folders include "CHECK PLOT" PDFs between revisions (read 26 Sep).
+
+1. **UX-REG-13:** Tim: "Yes (Recommended)". A Check plot button: current set with issue plot settings, CHECK PLOT stamp
+   on every sheet, dated "CHECK PLOT" folder; no revision or register change.
+2. **UX-REG-14:** Tim: "Optional tick (Recommended)". "Include review marks" (off by default) prints QA markers on check
+   plots only, never on issues.
+3. **UX-REG-15:** Tim: "Same button, "For engineer" option (Recommended)". Check plot has a "For engineer mark-up"
+   choice: all plans stamped FOR ENGINEER REVIEW; the returned markup feeds QA against the markup.
