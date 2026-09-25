@@ -1,10 +1,12 @@
 # Structural ribbon — families, drop-downs and duplicates (draft, 26 Sep 2026)
 
 **Status:** DRAFT. Behaviour already ruled by Tim 25 Sep 2026 (UX-STRUC-02 to 05,
-`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural front door"; and UX-STRUC-07 to 09, same file,
-"Structural hatch and text families" — hatch gallery layout, the one Text button and smart tagging). This card
-turns those rulings into a build-ready plan for the AGENTS.md review gate: what works today, what changes, and
-the open build questions. **Nothing here is built.** No code starts until Tim approves this card.
+`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural front door"; UX-STRUC-07 to 09, same file,
+"Structural hatch and text families" — hatch gallery layout, the one Text button and smart tagging; and
+UX-STRUC-10, same file, "CESTRUC 'CE Structural Suite' window" — CESTRUC's launcher role retired, the ribbon
+covers it, closing UX-RIBBON-04 OPEN 2). This card turns those rulings into a build-ready plan for the AGENTS.md
+review gate: what works today, what changes, and the open build questions. **Nothing here is built.** No code
+starts until Tim approves this card.
 **Read from:** the command registry on the shipping branch (`claude/struc-d1-prep`, commit `0945bdf6`,
 `Modules/Structural/Assets/Config/command-registry.json`, 329 commands), the Structural ribbon builder
 (`Modules/Structural/Services/CeStrucRibbonContributor.cs`), the shared ribbon code in `Shared/CE_SHARED` on
@@ -52,8 +54,29 @@ both the Structural line and `origin/master`, and the office hatch-code conventi
 8. **CETOOLS, CENOTES, CECHECKLIST, CETOOLSTOGGLE:** already ruled 25 Sep (UX-RIBBON-04, not re-asked here).
    CETOOLS stays on the Structural ribbon; CECHECKLIST and CETOOLSTOGGLE merge into it with their old names kept
    as typed shortcuts; only CENOTES moves into Manager; STRIPLAYERSMERGE and STRUCLINKTEXT stay typed-only in
-   Structural (no ribbon button). CESTRUC (the Structural Command Window / StrucSuiteWindow) is explicitly **not
-   decided** — Tim: *"needs to be revisited in detail before deciding"* — so this card leaves it exactly as it is.
+   Structural (no ribbon button).
+9. **CESTRUC (the Structural Command Window / StrucSuiteWindow) — decided 25 Sep 2026, UX-STRUC-10.** Read at
+   commit `8c077569`: a modeless window of 109 command buttons across 7 top-level tabs (Beams, Text + Supports,
+   Bracing, Bored Piers, Imports, Schedules + Export, Utilities) plus loaded-tools/update-tool-files actions —
+   figures confirmed by a direct count of `Modules/Structural/UI/StrucSuiteWindow.xaml` on
+   `origin/claude/struc-d1-prep`. Tim was offered "Find a tool" search / retire / keep and answered, verbatim:
+   *"cestruc does a lot more than search commands, retire the search as ribbon will cover it".* CESTRUC's
+   command-launcher role is retired; the family ribbon covers it. This **supersedes** the "revisit in detail"
+   hold recorded earlier the same day and closes UX-RIBBON-04 OPEN 2 (also updated in
+   `04_REFERENCE\ux-plan\cards\UX-RIBBON-04_CARD_2026-09-25.md`).
+   **Preservation check (the standing full-function-preservation rule): every CESTRUC-only button was checked
+   against the command registry on the same commit, 26 Sep 2026.** Of the 109 buttons, all but one already have
+   their own registered command with a registry `group`/`subgroup` — meaning they already have a ribbon-dropdown
+   home today, independent of CESTRUC (confirmed for the Schedule-tools trio Create/Refresh/Synchronise, the
+   Export trio CSV/PDF/Blocks, FADOPT/FREGEN/FREGENALL, the XRL/XRLFAST/XRLCONFIG/CXREF/PXREF Xref tools,
+   EXCELMTEXT/XCLMTXT, STRUCLINKTEXT and FST). The four `CEADMIN|...` buttons (bracing list, loaded tools, check
+   tools, update tool files) are not separate commands at all — they call the **same** CEADMIN command that
+   already has its own ribbon entry (Administration/Diagnostics, "Admin Hub"), whose own `AdminHubWindow` already
+   exposes the identical List / Loaded tools / Check tools / Update tool files actions. **The one genuine gap
+   found:** "Create schedule template" (`CREATETEMPLATE`) has **no** registry entry at all — CESTRUC is its only
+   current surface, typed or ribbon. This single item needs a Kept/Moved home (most likely folded into the
+   Schedules family alongside the other schedule tools, or added to the registry as its own typed command) before
+   the window is retired; nothing else on CESTRUC needs a new home, only rediscovery through the family ribbon.
 
 ### 3. What needs to change, family by family
 
@@ -73,6 +96,14 @@ Grouped the way you'd actually look for them on a job, not alphabetically.
    Tim: *"Smart tag, picker as backup (Recommended)".* Click a CE beam, column or footing and CE places the
    right tag on the side clicked, working out which tag from the object itself; a small backup picker (object
    type, over/under, side) appears only for anything CE does not recognise. All 56 codes stay typed, unchanged.
+   **UX-STRUC-09b, the same day (idea logged, `IDEAS_INBOX.md`), Tim's own words: *"a smart text tagger which
+   you select object and it automatically places tag correctly based off historical data would be great".*** This
+   is the **first Structural learning feature** (extends the smart tag above with UX-LEARN-01): once the smart
+   tag exists, it places tag type, side, offset and rotation the way CE's own past drawings and this office's
+   corrections have done it, not just a fixed side-click rule — every placement stays previewed with one Undo,
+   and a moved tag is remembered as a correction the same way UX-LEARN-01 describes generally. Not yet built or
+   scheduled as its own slice; recorded here so the smart-tag slice (slice 6 below) is built with this extension
+   in mind rather than needing rework later.
 4. **Hatch gallery — Rebuild (layout confirmed 25 Sep 2026, UX-STRUC-07).** Today: 43 hatching commands (20
    patterns, 18 template presets, 5 CE hatch tools) are one flat alphabetical dropdown with no picture.
    **Change to:** Tim: *"Yes, that layout (Recommended)".* Most-used presets at the top (learned per user/office,
@@ -94,7 +125,9 @@ Grouped the way you'd actually look for them on a job, not alphabetically.
    (section 6) stop appearing on the ribbon and in Help/search for ordinary drafters; the typed command still
    works for anyone who knows it (Tim, Codex, a builder chasing a fault).
 8. **CE panel — Keep**, with the CETOOLS/CECHECKLIST/CETOOLSTOGGLE/CENOTES merge already ruled (item 2.8) folded
-   in.
+   in, and CESTRUC's launcher role retired per item 2.9 — its 109 buttons are rediscovered through the family
+   ribbon and the existing Admin Hub, except "Create schedule template," which needs a new home before the
+   window goes (item 2.9).
 9. **Line styles panel — Keep as is.** Already a compact, working picker; not part of this card's scope.
 
 ### 4. Every duplicate group in today's registry (27 groups, one real command each)
@@ -140,8 +173,10 @@ separately; both stay open, unconfirmed recommendations.
 25. **Assign Selected Objects to Floor:** EXCELCAPTURESELECTION, EXCELMAPFLOOR → recommend **EXCELCAPTURESELECTION**
     (matches the other Excel-import command names already in use).
 26. **Assign Drawing Area to Floor:** EXCELCAPTUREAREA, EXCELMAPFLOORAREA → recommend **EXCELCAPTUREAREA**.
-27. **Structural Command Window:** CE_STRUC_SUITE, CESTRUC → **not decided** (UX-RIBBON-04 OPEN 2); left alone
-    until Tim's detailed review.
+27. **Structural Command Window:** CE_STRUC_SUITE, CESTRUC → **retired as a launcher, 25 Sep 2026 (UX-STRUC-10,
+    closes UX-RIBBON-04 OPEN 2).** Not a duplicate-name merge like the other 26 rows — the typed command itself
+    stays working; only its window's command-launcher role goes, once "Create schedule template" (section 2 item
+    2.9) has a home.
 
 **Already correctly merged, nothing to do:** BEXT/BEXTEND (Beam Extend) already shows as one command with the
 other as a typed alias — the pattern every row above should copy.
@@ -270,6 +305,12 @@ other work first.
    lands (UX-STRUC-08, UX-STRUC-09).
 7. **Slice 7 — build the Hatch picture gallery**, once slice 5 lands; can run in parallel with slice 6
    (UX-STRUC-07's confirmed layout; the pattern-type grouping/tile-code detail is Open question 4, not blocking).
+8. **Slice 8 — retire CESTRUC's launcher role** (section 2 item 2.9, UX-STRUC-10). Give "Create schedule
+   template" a registered home (Schedules family or its own typed command); confirm every other CESTRUC button
+   is reachable from the rebuilt family ribbon or the existing Admin Hub; then remove CESTRUC's own launch
+   entry point, keeping the typed command itself working. Independent of slices 1-7 — can land any time after
+   slice 4 (families need to exist for CESTRUC's buttons to have somewhere obvious to be rediscovered) and does
+   not depend on slice 5's `CE_SHARED` upgrade.
 
 ### Open questions
 
@@ -348,6 +389,23 @@ Question 1 as first drafted here is now answered — see section 4's intro above
    entries) predate the current 329-command registry and use different workflow-card numbering (`ST-*`, `W0-
    W11`) to this V3-plan front-door ruling. Treat as background evidence only; do not mix their counts with this
    card's.
+10. **CESTRUC preservation check (26 Sep 2026, UX-STRUC-10):** `Modules/Structural/UI/StrucSuiteWindow.xaml` on
+    the same pinned commit has 109 `CommandButtonStyle` buttons across 17 `TabItem` elements (7 top-level,
+    matching the ruling's own count; the rest are nested sub-tabs inside "Text + Supports"), confirmed by direct
+    count. Every button's `Tag` was checked against the registry: all but one (`CREATETEMPLATE`, "Create schedule
+    template") already carry a registry `group`/`subgroup` — Schedules/Schedule Tools (`STRSCHEDCREATE`,
+    `STRSCHEDREFRESH`, `STRSCHEDSYNC`), Utilities/Export (`STRUCEXPORTCSV`, `STRUCEXPORTPDF`,
+    `STRUCEXPORTBLOCKS`), Foundations/Manage (`FADOPT`, `FREGEN`, `FREGENALL`), Utilities/Xrefs (`XRL`,
+    `XRLFAST`, `XRLCONFIG`, `CXREF`, `PXREF`), Schedules/Import (`EXCELMTEXT`, `XCLMTXT`),
+    Administration/System (`STRUCLINKTEXT`), Foundations/Size Library (`FST`) — meaning each already has a
+    ribbon-dropdown home today, independent of CESTRUC. The four `CEADMIN|BRACING|LIST` /
+    `CEADMIN|SYSTEM|LOAD` / `CEADMIN|SYSTEM|AUDIT` / `CEADMIN|SYSTEM|DEPLOY` buttons are not separate commands:
+    `OnCommandClick` routes them through the same `CEADMIN` command CESTRUC's own registry check confirms is
+    already ribbon-reachable (Administration/Diagnostics, "Admin Hub"), and `Modules/Structural/UI/Dialogs/
+    AdminHubWindow.xaml` (opened by CEADMIN) already has its own "List" / "Loaded tools" / "Check tools" /
+    "Update tool files" buttons covering the same four actions. `CREATETEMPLATE` alone has zero registry rows —
+    CESTRUC is its only current surface, typed or ribbon — so it is the one function slice 8 must give a real
+    home before CESTRUC's window can go.
 
 ### Automated guards to write with this card
 

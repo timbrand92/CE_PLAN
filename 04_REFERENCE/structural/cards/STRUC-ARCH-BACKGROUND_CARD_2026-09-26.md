@@ -4,11 +4,14 @@
 built.** Priority set by Tim 25 Sep 2026 (UX-STRUC-06: background preparation is the third drawing-journey stage
 tackled after D1, after QA against the markup and register/revisions/issue). Behaviour framed by the 14 Sep 2026
 rulings (`STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, "Batch 1", "Batch 2", "Detail-library decisions",
-"Representative completed job", "Direct DWG inspection" and "Xref placement follow-up" sections). **Nothing here
-is built.** No code starts until Tim approves this card, and this card itself says plainly that its own approval
-cannot authorise any general behaviour until more real examples are read. This is journey stage 2 of 7
-(`areas\structural.md` UX plan note).
-**Read from:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, and the shipping code on `claude/struc-d1-prep`
+"Representative completed job", "Direct DWG inspection" and "Xref placement follow-up" sections), plus a second,
+filesystem-level-only reading of three more completed jobs on 25 Sep 2026 under Tim's explicit permission
+(`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural cards": *"Pick recent completed jobs"*) — see
+section 4 items 6-9. **Nothing here is built.** No code starts until Tim approves this card, and this card
+itself says plainly that its own approval cannot authorise any general behaviour until the evidence gate's
+DWG-content half (item 9) is also satisfied. This is journey stage 2 of 7 (`areas\structural.md` UX plan note).
+**Read from:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`,
+`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, and the shipping code on `claude/struc-d1-prep`
 (`Modules/Structural/Commands/ArchitecturalChangeReviewCommands.cs`,
 `Modules/Structural/Services/DrawingIntelligence/ArchitecturalChangeReviewCommandRunner.cs`).
 
@@ -119,6 +122,71 @@ section 6.
    Missing classification, the full-experience walk-through below — but the cleanup, alignment and colour-
    override *rules* inside it stay Unknown, not zero, and no code implementing them may start.
 
+**Second reading — 25 September 2026** (Tim's permission, `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`,
+"Structural cards": *"Pick recent completed jobs"*). Three more completed Structural jobs were read the same
+safe way as the 14 Sep example — read-only, no AutoCAD launch, no drawing save, nothing copied into any
+repository — but this round stayed at the **filesystem level only**: folder listing, filenames, sizes and dates.
+No DWG was opened or parsed this round. Job identities, folder paths, addresses and job numbers stay local-only
+(DATA-01); only the anonymised pattern below is recorded.
+
+6. **What the three jobs were, in general shape (no identifying detail kept):** one single-dwelling job using
+   one host Structural drawing with a single combined Xref file, carried through six formal revisions to a fully
+   issued state and quiet for roughly ten months since; one mixed Civil-and-Structural job using one host drawing
+   per discipline (not per sheet), reaching a "CONSTRUCTION ISSUE" revision and quiet for about two months; and
+   one staged multi-dwelling job using one Structural drawing **per sheet** (three separate sheet files) plus its
+   own title-block reference drawing, reaching a later lettered revision under an explicit "STAGE 1" label and
+   quiet for about five weeks. All three show no activity since their last issue — the same completion signal the
+   14 Sep example used.
+7. **What this confirms or corrects about the 14 Sep pattern:** the "one source Xref file inserted six times with
+   six clips/colour overrides" pattern from the 14 Sep job was **not** seen in any of these three. Each used
+   either one single combined Xref file for the whole job, or — in a handful of other, still-active (not yet
+   completed) job folders skimmed for comparison only, not counted among the three completed examples — **several
+   separate Xref files, one per architectural level or plan type** (a ground-floor file, a first-floor file, a
+   roof file, a site file, kept as distinct DWGs in the same Xref folder rather than one file referenced multiple
+   times). **This settles the card's own first evidence question in part:** the six-overlay-of-one-file pattern is
+   confirmed as one job's own arrangement, not a universal office convention — but it also shows there are at
+   least **two** different real conventions in use (one combined file; several per-level files), not one single
+   alternative to swap in its place. Which convention a given job uses did not correlate obviously with
+   single-DWG-vs-multi-DWG structural drafting in this small sample (the completed single-DWG jobs used one
+   combined file; the still-active multi-DWG jobs skimmed for comparison used several per-level files) — too
+   small a sample to call that a rule either way.
+8. **What else this reading found, unprompted:**
+   - **The "Architectural" handoff folder is not a one-time drop.** On every job read this round it held a
+     *sequence of dated subfolders* spanning the life of the job (an initial pricing/quote set, then a CAD issue,
+     then one or more markup or "updated" packages, sometimes a late-stage detail package) — confirming Tim's 14
+     Sep point that revised backgrounds arrive over time, and showing concretely that "arrives over time" means a
+     growing dated history sitting beside the live Xref, not a single overwritten file.
+   - **A "Superseded" folder (structural output) and a separate "Superseeded Xrefs" folder (inside Xref) both
+     exist on every job, but are not both used on every job.** Two of the three completed jobs never populated
+     "Superseeded Xrefs" at all — the background was prepared once and never replaced for the life of the job.
+     The third had used it once, with the *entire* prior Xref file (and its own backup) moved there wholesale
+     when a later background replaced it — a whole-file swap, not a partial or diffed update.
+   - **CE's own title-block drawing is itself kept as an Xref**, sitting in the same Xref folder as the
+     architectural background on at least one job — the folder is not purely "architectural content," and any
+     future cleanup/organisation rule needs to tell CE's own reference drawings apart from the architect's.
+   - **The Xref folder is not always purpose-pure.** On one job it also held unrelated reference material dropped
+     in alongside the actual background file — a council standard-detail PDF and a couple of screen captures. A
+     build should not assume every file inside "Xref" is the background.
+   - **A small sidecar checklist file from an existing office tool** was found alongside one job's Xref DWG. Its
+     recorded checklist categories are: **"XREF Creation", "Double Storey", "Double Storey with Basement",
+     "Civil", "Civil Basement".** This is a genuine finding worth its own follow-up: an **existing, named "XREF
+     Creation" checklist type already exists in office tooling**, and on the job read it had not been opened (no
+     checklist type was selected). Before specifying this card's cleanup rules from scratch, a builder should
+     locate and read that existing checklist template — it may already encode office knowledge this card is
+     trying to rebuild.
+9. **Is the evidence gate satisfied yet? No — only partially.** This reading answers the **organisational** half
+   of item 4 above (single file vs several per-level files; how the architectural handoff arrives over time; how
+   superseding actually happens on disk) from real, generic, filesystem-level evidence across three more completed
+   jobs, on top of the one from 14 Sep. It does **not** answer the **content** half — the actual colour-override
+   values, which layers get overridden and why, the real level-separation mechanism inside a multi-insertion or
+   multi-file DWG, or the retained/removed content list (item 3.11) — because that needs the DWG's own internal
+   structure read, the same ACadSharp-based method item 2 above describes, which this round's scope deliberately
+   did not use (list-only, no DWG content parsing). **What is still needed:** one more read at the same depth as
+   14 Sep's (headless, SHA256-verified, ACadSharp or `accoreconsole`) against at least one of the "several
+   separate Xref files" jobs, to see whether that convention still uses per-layer colour overrides the way the 14
+   Sep job did, or something else — and, separately, someone who knows architectural cleanup reviewing real
+   drawings against the retained/removed content list (item 3.11), which a folder listing alone cannot settle.
+
 ### 5. Keep / Modify / Rebuild / Missing
 
 1. **LU (layer/style/unit/scale setup) — Modify.** Reuse and extend; do not replace. Exact shortcomings still
@@ -209,11 +277,16 @@ section 6.
 ### Open questions
 
 1. **Which specific project folders should be read next for the evidence gate, and how many is "enough" before
-   a pattern counts as a confirmed office convention rather than one more example?** *Recommended: two to three
-   more jobs spanning different practical shapes (a single-DWG job and a multi-DWG job, at minimum, since item
-   3.7 already says both exist) — enough to say "this holds across N jobs of different shapes," never a single
-   number chosen in advance; if the second and third examples disagree with the first, that disagreement itself
-   is useful and should be recorded, not resolved by picking one.*
+   a pattern counts as a confirmed office convention rather than one more example? PARTIALLY ANSWERED 25 Sep
+   2026.** Three more completed jobs (one single-DWG, one multi-discipline single-DWG-per-discipline, one
+   multi-DWG per-sheet) were read at filesystem level — see section 4 items 6-9. They confirm both single-DWG
+   and multi-DWG jobs exist, and that a "combined Xref file per job" organisation is real on completed jobs of
+   both shapes, while other (still-active) jobs skimmed for comparison show a genuinely different "several Xref
+   files, one per level" convention — so at least two conventions are real, not one to swap in place of the 14
+   Sep job's pattern. *Still open: whether "several files per level" is itself a completed-job norm or an
+   in-progress-only pattern, and the DWG-content-level questions (colour-override triggers, level-separation
+   mechanism) item 9 above says are not yet answered — recommended next step is one ACadSharp-depth read of a
+   "several files per level" job, per item 9.*
 2. **Where does background preparation sit in the ribbon/command flow — its own command, or folded into job
    setup alongside CESETTINGS/CEPROPS?** *Recommended: folded into job setup, since item 3.2 explicitly wants CE
    to read context rather than make you choose a separate command, and a first-time drafter is unlikely to know
@@ -266,9 +339,11 @@ section 6.
 
 ### Open dependencies before a builder starts
 
-1. Tim naming the two to three next project folders for the evidence gate (Open question 1), and someone who
-   knows architectural cleanup available to review what comes back (section 4, item 4 — content classification
-   is a drafting judgement call, not something a read-only DWG parse alone can settle).
+1. The filesystem-level half of Open question 1 is now done (three more jobs read 25 Sep 2026, section 4 items
+   6-9, under Tim's standing permission to pick the jobs). Still needed: one ACadSharp-depth (DWG-content) read
+   of a "several Xref files per level" job (section 4 item 9), and someone who knows architectural cleanup
+   available to review what comes back (section 4, item 4 — content classification is a drafting judgement call,
+   not something a read-only DWG parse alone can settle).
 2. The shared job-metadata authority question (section 5, item 4) — needed before slice 1.
 3. The Markup QA card's drawing-to-drawing compare engine (UX-QA-08) landing before this card's slice 5.
 4. The register/issue card's combined-PDF and engineer-handoff work, sequenced alongside this card's slice 5

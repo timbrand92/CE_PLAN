@@ -15,7 +15,8 @@ None of the underlying work is built, tested in AutoCAD, installed or Tim-accept
    Manager. Corrects a second stale premise: the design pack's "install and repair the CE workspace, menu
    and toolbars" description does not match what these seven commands actually do (four window/palette
    openers, a notes browser, two drawing-editing utilities) — the card proposes a merge based on their real
-   behaviour instead.
+   behaviour instead. Its OPEN 2 (`CESTRUC`'s fate) is answered 25 Sep 2026 (UX-STRUC-10): the launcher role
+   is retired, the family ribbon covers it; OPEN 1, 3, 4 and 5 remain open.
 3. **[`K-REQ-01_CARD_2026-09-25.md`](K-REQ-01_CARD_2026-09-25.md)** — CDPROFILE Apply and the Pit Schedule
    rows it touches update together: one preview, one Undo. CDPROFILE PR #187's open decision 5.
 4. **[`REPAIR-DECIDE-LATER_CARD_2026-09-25.md`](REPAIR-DECIDE-LATER_CARD_2026-09-25.md)** — a "Decide later"

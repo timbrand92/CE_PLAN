@@ -20,9 +20,11 @@ Written 26 Sep 2026 from `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, `
    yet fully approved — Tim confirmed 25 Sep 2026 that the shortest, most AutoCAD-style code wins each duplicate
    group (the "over"/left-right groups and hiding CEMARKUPBENCH were not put to him separately and stay open,
    unconfirmed recommendations), plus the Hatch gallery layout, the one Text size/compass button and smart
-   tagging (UX-STRUC-07 to 09) and the office hatch-code convention ("colour then type then h", e.g. 21H, 21DH).
-   Also records what the shared ribbon code (`CE_SHARED`) can and cannot do yet for drop-downs and galleries, and
-   why.
+   tagging (UX-STRUC-07 to 09, plus the learning extension UX-STRUC-09b) and the office hatch-code convention
+   ("colour then type then h", e.g. 21H, 21DH). **CESTRUC's launcher role is also retired 25 Sep 2026
+   (UX-STRUC-10, closing UX-RIBBON-04 OPEN 2)** — its 109 buttons were checked against the registry and all but
+   one ("Create schedule template") already have an existing ribbon or Admin Hub home. Also records what the
+   shared ribbon code (`CE_SHARED`) can and cannot do yet for drop-downs and galleries, and why.
 2. **[STRUC-MARKUP-QA_CARD_2026-09-26.md](STRUC-MARKUP-QA_CARD_2026-09-26.md)** — QA against the engineer's
    markup: CE reads the markup by AI vision and proposes items, a faded overlay of the markup under the drawing
    with a docked item list, four item states (To do / Drafted / Needs clarification / Checked), markup rounds,

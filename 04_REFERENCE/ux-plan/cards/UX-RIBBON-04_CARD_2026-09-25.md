@@ -6,7 +6,8 @@ batch 1 — 25 Sep 2026, 13:50", UX-RIBBON-04. Tim's own words, not one of the o
 automte them as much as possible then add tomanager."** Recorded intent: "The seven commands that install
 and repair the CE workspace, menu and toolbars are merged into as few as possible and automated as far as
 possible (repair happens without the user having to run them). What remains goes into Manager. Nothing on
-the CE ribbon."
+the CE ribbon." **OPEN 2 (CESTRUC's fate) is now answered**, same file, "Structural front door" section,
+UX-STRUC-10 (25 Sep 2026, 23:54) — see item 4 in section 2 below; OPEN 1, 3, 4 and 5 remain open.
 
 ## 1. Correcting the premise the question was asked under, before proposing anything
 
@@ -66,11 +67,20 @@ each while this card is being built, so a future drafter reading CEHELP knows wh
    it first. Recommend folding it into the palette itself (a Checklist tab you click, as the other tabs
    already are) and keeping `CECHECKLIST` as a typed redirect that opens `CETOOLS` on that tab, for the same
    no-retirement reason.
-4. **`CESTRUC` — Missing a clear reason to exist beside `CETOOLS`.** Opens a second, separate window
-   (`StrucSuiteWindow`) whose relationship to the `CETOOLS` palette is not established by anything read for
-   this card. Recommend Tim say in review whether `StrucSuiteWindow` is still used, and if so what it is
-   for — this card cannot respons­ibly propose merging it into `CETOOLS` without knowing what's actually in
-   it. Flagged as OPEN 2.
+4. **`CESTRUC` — decided 25 Sep 2026, UX-STRUC-10 (closes OPEN 2).** Read at commit `8c077569` in the
+   Structural release chat: `StrucSuiteWindow` is a modeless window of 109 command buttons across 7 top-level
+   tabs (Beams, Text + Supports, Bracing, Bored Piers, Imports, Schedules + Export, Utilities), offered to Tim
+   as "Find a tool" search / retire / keep. Tim, verbatim: *"cestruc does a lot more than search commands,
+   retire the search as ribbon will cover it".* **CESTRUC's command-launcher role is retired; the family ribbon
+   covers it** (superseding the "revisit in detail" hold this card recorded earlier the same day). The
+   full-function-preservation rule still applies: the Structural release chat checked every one of the 109
+   buttons against the command registry (`04_REFERENCE\structural\cards\STRUC-RIBBON_CARD_2026-09-26.md`
+   §"Pinned source" item 10) and found all but one already has its own registry `group`/`subgroup` — an
+   existing ribbon-dropdown home independent of CESTRUC — and the four `CEADMIN|...` buttons duplicate actions
+   already on the existing, ribbon-reachable Admin Hub (`CEADMIN` → `AdminHubWindow`). The one genuine gap is
+   "Create schedule template" (`CREATETEMPLATE`), which has no registry entry at all; it needs a real home
+   (most likely folded into the Schedules family) before the window is retired. See that card for the full
+   Kept/Moved detail; this card's own OPEN 2 is now closed.
 5. **`CENOTES` — Keep the function, candidate for Manager.** A genuine, separate piece of content (shared
    notes across all users and jobs) that survives independent of any one drawing session — a good fit for a
    Manager tab rather than a ribbon button, consistent with how Diagnostics already folded into Manager
@@ -100,9 +110,12 @@ each while this card is being built, so a future drafter reading CEHELP knows wh
    `CE ▸ Workspace` and `CE ▸ System` flyouts (§8.2 of the design pack). Intended: the merged set
    (`CETOOLS` absorbing `CETOOLSTOGGLE`/`CECHECKLIST`) stays typed and, per OPEN 1, may keep one ribbon
    entry point since it is daily-use, not admin; `CENOTES` moves to a Manager tab; `STRIPLAYERSMERGE` and
-   `STRUCLINKTEXT` stay Structural-typed, expert-only, off the ribbon flyout that is retiring.
+   `STRUCLINKTEXT` stay Structural-typed, expert-only, off the ribbon flyout that is retiring; `CESTRUC`'s
+   own launcher window is retired (per UX-STRUC-10 above), its buttons rediscovered through the rebuilt
+   family ribbon and the existing Admin Hub.
 2. **Prompts — Keep, unchanged for the two drawing utilities.** `STRUCLINKTEXT`'s two-entity pick prompt is
-   unaffected by this card. `CETOOLS`/`CENOTES`/`CESTRUC` open windows with no command-line prompt.
+   unaffected by this card. `CETOOLS`/`CENOTES` open windows with no command-line prompt; `CESTRUC` no longer
+   opens a launcher window once retired, but the typed command itself keeps working.
 3. **Selection — Keep, unchanged.** `STRUCLINKTEXT` already runs `DrawingSafetyService.CommandPreFlight`
    before its picks; not touched here.
 4. **Preview — not applicable to the four window-openers.** `STRIPLAYERSMERGE` currently has no preview
@@ -136,7 +149,9 @@ each while this card is being built, so a future drafter reading CEHELP knows wh
 2. **Tim's AutoCAD checklist (DWG-S):** open the Structural ribbon. **Right result:** the old two
    admin flyouts are gone from the CE tab (or reduced to whatever OPEN 1 settles), `CETOOLS` still opens the
    same palette, `CETOOLSTOGGLE`/`CECHECKLIST` typed at the command line still reach it, `CENOTES` opens
-   from its new Manager tab, `CESTRUC` still opens its own window (pending OPEN 2), and
+   from its new Manager tab, `CESTRUC` typed at the command line still runs (its launcher window is retired
+   per UX-STRUC-10, but every function it opened is now reachable from the family ribbon or the Admin Hub —
+   confirm "Create schedule template" specifically, since it needed a new registered home), and
    `STRIPLAYERSMERGE`/`STRUCLINKTEXT` still work exactly as before when typed.
 
 ## 6. Slices — smallest first
@@ -152,8 +167,11 @@ each while this card is being built, so a future drafter reading CEHELP knows wh
 4. **Slice 4 — move `CENOTES` into Manager.** Give it a tab on an existing Manager workspace page (the
    `SettingsWorkspacePage`/`HelpWorkspacePage` pattern of General/Civil/Structural/Manager tabs is the
    nearest existing precedent) or a page of its own, per Tim's answer to OPEN 5.
-5. **Slice 5 — whatever OPEN 1, 2, 3 and 4 settle** for `CETOOLS`'s own home, `CESTRUC`'s fate, and the two
-   drawing-editing utilities.
+5. **Slice 5 — whatever OPEN 1, 3 and 4 settle** for `CETOOLS`'s own home and the two drawing-editing
+   utilities. `CESTRUC`'s fate is no longer part of this slice — OPEN 2 is answered (UX-STRUC-10); its own
+   retirement work is tracked as slice 8 of the Structural ribbon card
+   (`04_REFERENCE\structural\cards\STRUC-RIBBON_CARD_2026-09-26.md`), not here, to avoid two cards building
+   the same thing.
 
 ## 7. OPEN questions, each with a recommended answer
 
@@ -161,9 +179,11 @@ each while this card is being built, so a future drafter reading CEHELP knows wh
    "what remains goes into Manager" really mean `CETOOLS` moves into Manager, or does it mean only the
    genuinely administrative remainder does?** *Recommended: `CETOOLS` keeps a Structural ribbon entry point
    (it is not admin work); only `CENOTES` (a real content browser) moves into Manager.*
-2. **OPEN 2 — what is `StrucSuiteWindow` (opened by `CESTRUC`) actually for, and is it still used?** This
-   card could not establish that from the code read for it. *No recommendation offered without that
-   answer — this needs Tim's word before a merge target can be proposed.*
+2. **OPEN 2 — ANSWERED 25 Sep 2026 (UX-STRUC-10).** `StrucSuiteWindow` (opened by `CESTRUC`) is a 109-button,
+   7-tab command launcher duplicating what the family ribbon already covers. Tim: *"cestruc does a lot more
+   than search commands, retire the search as ribbon will cover it".* Its launcher role is retired; see item 4
+   in section 2 above and the Structural ribbon card's own preservation check for the one function
+   (`CREATETEMPLATE`) that still needs a registered home first.
 3. **OPEN 3 — `STRIPLAYERSMERGE` and `STRUCLINKTEXT` edit the drawing; Manager has no drawing-editing
    surface today. Does "add to manager" really include these two, or only the window-opening/admin
    commands?** *Recommended: keep both in Structural, typed, expert-flagged; moving drawing-editing logic
