@@ -1403,3 +1403,13 @@ Right-click while moving (Edit together / Edit this only / Disconnect) and a gri
 **Tim: "Yes, plan it"** (recommended "Not now" not taken). Making Structural beams and columns CE's own kind of object
 (like Civil's one-piece pipe, C7) is added to the Structural plan as a **later, separate stage** with its own card and
 a 2027-first rollout; it would allow a safe hover menu. Not scheduled against the current D2 work.
+
+## Mixed versions during the move to V3 — 26 Sep 09:42 2026
+
+1. **UX-MIX-01:** Tim: "Pipes must stay visible (Recommended)". Requirement: a V3 drawing shows pipes, pits and labels
+   correctly to someone without V3 (they cannot edit them the smart way). To be proven on the 2022 VM (Tuesday's
+   check) before any colleague shares V3 drawings. Feasibility not yet established (release risk 2).
+2. **UX-MIX-02:** Tim: "Greyed, "needs AutoCAD 2027" (Recommended)". 2027-only tools appear greyed with the reason on
+   2022-2026; everything else works the same; one ribbon everywhere.
+3. **UX-MGR-07:** Tim: "Yes, admin page (Recommended)". Each PC reports its CE versions and AutoCAD year at start; the
+   admin page lists who is on what.
