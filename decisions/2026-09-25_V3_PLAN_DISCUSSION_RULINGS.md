@@ -1310,3 +1310,13 @@ Builds on EV-05a (4 Sep: per-job completion checklist, step names Tim fills late
    opening the job, then a status-bar notes icon with a count.
 4. **UX-CHK-03:** Tim: "Listed in the issue preview (Recommended)". Unticked checklist items appear beside open QA
    items in the issue preview, with the same explicit decision; never a block.
+
+## Xrefs and backgrounds, both disciplines — 26 Sep 01:22 2026
+
+1. **UX-XREF-01:** Tim: "Notice and offer compare (Recommended)". When an architectural background Xref changes, CE
+   offers to compare with the previous version; changes are highlighted with what they affect (pits, beams, levels);
+   nothing moves on its own. Applies to Civil and Structural.
+2. **UX-XREF-02:** Tim: "Same workflow (Recommended)". Civil uses the same background preparation as Structural, with
+   its own colour/visibility preset learned from past Civil drawings.
+3. **UX-XREF-03:** Tim: "Offer to repair (Recommended)". Broken Xref paths after a job folder move are offered for
+   repair on opening, previewed per path, one click, relative paths.
