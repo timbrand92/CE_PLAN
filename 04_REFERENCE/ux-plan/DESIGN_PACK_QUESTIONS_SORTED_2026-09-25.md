@@ -31,6 +31,9 @@ yet" (UX-WORD-02); 21 hidden Inspector stays hidden (UX-STD-09); 25 names non-CE
 55 Highlight warnings switch retired (UX-STD-11); 79 "Send report" with an honest result line (UX-WORD-03); R3
 "Decide later" (UX-WORD-03b). Master look: New Pipe header and footer (UX-LOOK-01). **Pass 2 complete.**
 
+**Status 26 Sep 2026: all 86 answered, overtaken, covered by standing rules, or not asked as numbers/test-fixture
+details. Answers: decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md (Q56 = UX-SCHED-03).**
+
 ## 1. Answered by Tim (8)
 
 3 Water Tank has its own button on Draw (RIBBON-02, 23 Sep; code comment "Tim names CDWT first"). 23 Schedule

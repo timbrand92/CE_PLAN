@@ -913,3 +913,10 @@ Plan read: `archive\plugin-docs-july-2026\workflows\CV-02A_ASSISTED_PIPE_SIZING_
    plan's "visit every pipe first" gate.
 5. Unchanged from the July plan and not re-asked: no automatic downsizing (information note only); the numeric sizing
    rules need engineer sign-off before production suggestions (CV-02A4 gate).
+
+## Pit Schedule DET X column (design-pack Q56) — 26 Sep 00:10 2026
+
+**UX-SCHED-03:** Tim: "Inside, as printed (Recommended)". The Pit Schedule window shows a detention pit's grated size
+inside PIT SIZE and LID TYPE + REMARKS exactly as the printed schedule does (no eleventh on-screen column);
+double-clicking the row edits it. Closes the parked Q56. **All 86 design-pack questions are now answered, overtaken
+or covered by standing rules.**
