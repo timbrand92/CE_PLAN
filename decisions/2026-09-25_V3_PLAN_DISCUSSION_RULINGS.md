@@ -1079,3 +1079,17 @@ approved July card AI-01, not re-asked.)
 **UX-L3-02, build order:** Tim: "Levels, sources, detention, layout (Recommended)". (1) Levels and grades for a drawn
 network (building on Solve Run); (2) downpipe and source placement from the rating report and roof plan;
 (3) detention and tank layout (after the approved calculations card); (4) full network layout last.
+
+## Level 3 proposal 1: levels for a drawn network — 26 Sep 00:55 2026
+
+Builds on Hold grade / hold levels (23 Sep) and Solve Run.
+
+1. **UX-L3-03, start:** Tim: "Fit between both ends (Recommended)". Hold the outlet/LPD invert and minimum cover at the
+   top pits; fit grades between; if impossible, say where and by how much.
+2. **UX-L3-04, hand-typed levels:** Tim: "Keep them fixed (Recommended)". Treated as fixed controls; flagged if they
+   make the network impossible.
+3. **UX-L3-05, preview:** Tim: "Ghost labels + was/now list (Recommended)". Ghost invert labels on the plan plus a
+   pit/was/now/why list; accept all or per pit; one U.
+4. **UX-L3-06, no solution:** Tim: "Show shortfall + options (Recommended)". CE states the shortfall at the worst pit
+   and offers flatter grades (if allowed), a charged system, a pump, or reduced cover with a reason; the user
+   chooses; CE never forces one.
