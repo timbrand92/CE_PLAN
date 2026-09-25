@@ -1,6 +1,6 @@
 # UX plan — workflow cards
 
-Five DRAFT workflow cards written 25 September 2026 for Tim's V3 UX plan discussion
+Six DRAFT workflow cards written 25 September 2026 for Tim's V3 UX plan discussion
 (`decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`), following the command/workflow review gate in
 `C:\Lisp Files\CE_ACAD_PLUGIN\AGENTS.md`. Each is **DRAFT — awaiting Tim's approval before any code starts.**
 None of the underlying work is built, tested in AutoCAD, installed or Tim-accepted.
@@ -29,6 +29,14 @@ None of the underlying work is built, tested in AutoCAD, installed or Tim-accept
    and corrections, every suggestion showing why, never silently changing an engineering rule. Builds on an
    existing local suggestion ledger (`SuggestionLedgerService`, "FEATURE 10 SEED") that already records the
    right signals privately but has nothing reading them back yet.
+6. **[`DETENTION-PIT-ANNOTATE_CARD_2026-09-25.md`](DETENTION-PIT-ANNOTATE_CARD_2026-09-25.md)** — UX-TANK-03: a
+   new pit-side command (`CDPITDETENTION`, working name) gives an existing pit a real detention record, so the
+   Pit Schedule and the ON SITE DETENTION CRITERIA block count it; the pit stays a pit, CDWT stays
+   water-tanks-only. Corrects the premise CDCALC reads a typed litres figure: storage volume comes from the
+   pit's own footprint and levels, already wired into `PitScheduleBuilder`/`DetentionTwlService` — the real gap
+   is a guided entry point onto that existing mechanism, not a new data model. Flags one narrower, separate
+   gate: CDCALC's own interactive Detention tab additionally needs the pit's connected pipes typed Detention,
+   which this card leaves to the existing pipe-edit control (OPEN 4).
 
 Each card follows the same shape: what works today (Keep/Modify/Rebuild/Retire/Missing, read from
 `origin/master` in `C:\Lisp Files\CE_ACAD_PLUGIN`, never from AutoCAD), the full drafter experience,
