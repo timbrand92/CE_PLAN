@@ -1048,3 +1048,19 @@ Covered without asking: B2 (pipe too big for pit) by Tim's 15 Sep ruling "ASK to
    Floor level still never sets the water level.
 4. **CR-C2:** Tim: "Not sure, mark Assumed (Recommended)". Whitehorse's 90 mm minimum orifice stays but is marked
    "Assumed - source not found" until a Whitehorse document confirms it.
+
+## Drawing intelligence: keeping the network right — 26 Sep 00:49 2026
+
+Master plan Stage 3 (bounded local reassessment; Connect/Disconnect/Ignore/Resolve; CDCHECK and Show where;
+CDTRIM/CDEXTEND/CDBREAK/CDJOIN).
+
+1. **UX-DI-01:** Tim: "Straight after, quietly (Recommended)". After an ordinary AutoCAD edit, CE re-checks only the
+   edited items and their neighbours; ends that no longer touch turn amber "Not connected yet"; no pop-up; shown in
+   Checks; never reconnects on its own.
+2. **UX-DI-02:** Tim: "AutoCAD's own commands (Recommended)". Once the one-piece pipe is accepted, AutoCAD's TRIM,
+   EXTEND, BREAK and JOIN work on CE pipes and CE keeps lengths, grades and labels right, one U; CDTRIM, CDEXTEND,
+   CDBREAK and CDJOIN become hidden typed shortcuts.
+3. **UX-DI-03:** Tim: "Until something changes (Recommended)". An ignored finding is ignored for the job with its
+   reason and asked again only if the item or its rule changes; an "Ignored" list shows them all.
+4. **UX-DI-04:** Tim: "Zoom + glow, window stays (Recommended)". Show where zooms and highlights in the attention
+   colour; the list stays open; Escape clears the highlight.
