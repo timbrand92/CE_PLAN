@@ -23,6 +23,11 @@ answered, mark it here with a pointer to the decisions file.
 toolbars kept (UX-RIBBON-03). Workspace/System commands merged, automated, into Manager (UX-RIBBON-04).
 62 overtaken by build: X-Civil is on the Import menu since PR #162. 80 overtaken for CDLPD (on the Design panel,
 PR #149); CDLPDRESET stays typed-only unless Tim says otherwise.
+Pass 2 (standards): 9 carry on, window every time (UX-STD-01); 39 no confirm after a preview (UX-STD-02); 74 CE
+never saves (UX-STD-03); 53 quick picks plus note (UX-STD-04); 71 safe drafting fixes pre-ticked (UX-STD-05);
+17 original selection kept (UX-STD-06); 81 straight to the known job (UX-STD-07); 22 and 41 one green line, passes
+folded (UX-STD-08); X1 "Free end" / "Not connected yet" (UX-WORD-01); 52 "Suggestion only: not an office rule
+yet" (UX-WORD-02). Still open in Pass 2: 21, 25, 55, 79, R3.
 
 ## 1. Answered by Tim (8)
 

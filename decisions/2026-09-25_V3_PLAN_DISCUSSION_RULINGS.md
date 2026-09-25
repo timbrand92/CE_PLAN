@@ -335,3 +335,30 @@ come ticked. Anything touching levels, sizes or links is never pre-ticked. One U
 
 **Tim: "Your original selection (Recommended)".** The choice read: *Like AutoCAD's Properties palette: editing never
 changes what you'd selected.*
+
+---
+
+## Pass 2, batch 3 — what the drafter sees and reads — 25 Sep 2026, 14:00
+
+### UX-STD-07 — Design on a drawing CE already knows (Q81)
+
+**Tim: "Straight to the job (Recommended)".** The choice read: *Opens on the job with its saved answers. A small
+"Different job?" link is there if needed.*
+
+### UX-STD-08 — When checks find nothing wrong (Q22, Q41)
+
+**Tim: "One green line (Recommended)".** The choice read: *e.g. "Network OK: 24 pipes, 11 pits checked". The passed
+checks are folded away and one click opens them. One glance tells you you're fine (your cockpit rule).*
+
+### UX-WORD-01 — Pipe-end chips (X1)
+
+**Tim: ""Free end" / "Not connected yet" (Recommended)".** The choice read: *Your deliberate choice reads "Free end";
+the undecided one reads "Not connected yet" in amber. No two labels look alike.*
+
+1. Replaces the chip "Not connected" (used for "Keep as a free end") with **"Free end"** everywhere it appears
+   (Pit window, Civil Properties, Inspector, checks).
+
+### UX-WORD-02 — Proposal based on an unsigned office rule (Q52)
+
+**Tim: "Suggestion only (Recommended)".** The choice read: *"Suggestion only: not an office rule yet". Plain, and it
+says why you should check it.*
