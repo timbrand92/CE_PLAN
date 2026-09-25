@@ -1282,3 +1282,17 @@ Evidence: recent office issue folders include "CHECK PLOT" PDFs between revision
    plots only, never on issues.
 3. **UX-REG-15:** Tim: "Same button, "For engineer" option (Recommended)". Check plot has a "For engineer mark-up"
    choice: all plans stamped FOR ENGINEER REVIEW; the returned markup feeds QA against the markup.
+
+## Job time — 26 Sep 01:20 2026
+
+Builds on ST-09 (July) and the one-record-across-disciplines note in the D1-D10 decisions file.
+
+1. **UX-TIME-01:** Tim: "Automatically per job drawing (Recommended)". Opening a drawing in a job folder starts that
+   job's timer (discipline noted); the status bar shows job, discipline and time; switching drawings switches job.
+2. **UX-TIME-02:** Tim: "Pause, ask on return (Recommended)". Idle pauses the timer; on return, one click decides
+   whether the away time counts.
+3. **UX-TIME-03:** Tim: "CE Project Manager (Recommended)". Time goes to the CE Project Manager app against the job
+   once it is ready; until then a weekly export file. **Cross-product:** the CE Project Manager side must be recorded
+   in that product's own plan by its own chat (this chat writes only to CE_PLAN).
+4. **UX-TIME-04:** Tim: "Own time + admin summary (Recommended)". Each person sees and corrects their own time; the
+   administrator sees the office summary per job.
