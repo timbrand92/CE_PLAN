@@ -27,7 +27,9 @@ Pass 2 (standards): 9 carry on, window every time (UX-STD-01); 39 no confirm aft
 never saves (UX-STD-03); 53 quick picks plus note (UX-STD-04); 71 safe drafting fixes pre-ticked (UX-STD-05);
 17 original selection kept (UX-STD-06); 81 straight to the known job (UX-STD-07); 22 and 41 one green line, passes
 folded (UX-STD-08); X1 "Free end" / "Not connected yet" (UX-WORD-01); 52 "Suggestion only: not an office rule
-yet" (UX-WORD-02). Still open in Pass 2: 21, 25, 55, 79, R3.
+yet" (UX-WORD-02); 21 hidden Inspector stays hidden (UX-STD-09); 25 names non-CE objects with a hint (UX-STD-10);
+55 Highlight warnings switch retired (UX-STD-11); 79 "Send report" with an honest result line (UX-WORD-03); R3
+"Decide later" (UX-WORD-03b). Master look: New Pipe header and footer (UX-LOOK-01). **Pass 2 complete.**
 
 ## 1. Answered by Tim (8)
 

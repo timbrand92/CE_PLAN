@@ -400,3 +400,16 @@ only where a window has separate topics (like Settings).*
 3. **Supersedes in part** the 5 Sep review line that froze the Settings design as the reference for every window's
    look (plugin repo docs/design/V3_UI/00C_TIM_REVIEW_2026-09-05.md): the shared colours, type and buttons stand (the
    two windows already match there); the header and footer now follow New Pipe.
+
+### UX-WORD-03 — Feedback button (Q79)
+
+**Tim: "Send report (Recommended)".** The choice read: *Then one honest line: "Sent to the office feedback folder", or
+"Saved on this PC only: the office folder wasn't reachable".* (Today the report is saved locally and copied
+best-effort to the IT Admin folder, read from FeedbackService on master, 25 Sep.)
+
+### UX-WORD-03b — Parking a Drawing Repair item (R3)
+
+**Tim: "Decide later (Recommended)".** The choice read: *Plain and says what happens; the item waits in the holding
+list with your reason.* Replaces the design pack's "Leave undecided".
+
+**Pass 2 status:** every Pass 2 question on the sorted list is now answered (14:10).
