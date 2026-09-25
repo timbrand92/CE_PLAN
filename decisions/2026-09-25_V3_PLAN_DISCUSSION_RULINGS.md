@@ -441,3 +441,26 @@ confirmed).
 
 **Tim: "Yes, all three (Recommended)".** One-click recent diameter, material and invert buttons in the one-page
 New/Edit Pipe window, read from CE's existing saved recent lists. Build request (window build).
+
+## Pass 3, family 1: pipes and pits, batch 2 — 25 Sep 2026, 14:30
+
+### Design-pack Q7 (broken-pipe total length) — not decided, question withdrawn
+
+**Tim: "this doesnt make sense to me".** The question was badly worded by this chat. Plain meaning: one real pipe
+drawn as two pieces on the same sheet with a break (the "Broken on this plan" choice); CE measures the real total
+length itself. Already covered by Tim's 2 Sep ruling (the real total is measured automatically, with an explicit
+typed/pinned correction; plugin repo `docs/design/V3_UI/windows/02_PIPE.md`) and his 5 Sep rule that every value is
+editable and marked manual. Nothing further asked.
+
+### UX-PIPE-05 — "Hide" grade on every pipe type (Q8)
+
+**Tim: "Every type (Recommended)".** The grade stays in the pipe's data and schedule either way.
+
+### UX-PIT-01 — Plastic pit off the schedule still gets its plan label (Q14)
+
+**Tim: "Yes, label it (Recommended)".**
+
+### UX-PIPE-06 — One design grade for several selected pipes (Q18)
+
+**Tim: "Allow, with preview (Recommended)".** The preview lists each pipe's new levels and anything downstream
+before Apply; one U undoes it.
