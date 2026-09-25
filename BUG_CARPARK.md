@@ -62,7 +62,7 @@
 
 **Reference:** `Modules/Drainage/Assets/Config/command-registry.json` (CDPIPEOBJ entry); `Modules/Drainage/Services/CeCvlRibbonContributor.cs`; guard test `Modules/Drainage.Tests/Services/CeCvlRibbonContributorTests.cs::GetPanels_KeepsEveryVisibleCivilCommandReachable`.
 
-**Status:** OPEN — not fixed in this session (out of scope: adding it to the ribbon needs the mandatory command/workflow review with Tim first, per AGENTS.md). The guard test still fails on `CDPIPEOBJ` alone; every other command it checks passes.
+**Release chat, 26 Sep:** Tim already ruled UX-PIPE-08 (decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md, "Items queued for Tuesday, settled early"): CDPIPEOBJ is to be HIDDEN from the ribbon and Help now (still typed for testing) and retired once CD draws the one-piece pipe and Tim accepts it - so "no ribbon button" is intended. Action: mark CDPIPEOBJ hidden in the command registry so the ribbon-reachability guard stops expecting a button (queued with UX-PIPE-08). **Status:** OPEN — not fixed in this session (out of scope: adding it to the ribbon needs the mandatory command/workflow review with Tim first, per AGENTS.md). The guard test still fails on `CDPIPEOBJ` alone; every other command it checks passes.
 
 ---
 
