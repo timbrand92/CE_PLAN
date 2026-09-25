@@ -1260,3 +1260,14 @@ STRUC-REGISTER-ISSUE).
    when extending CDRUNSOLVE; "Unknown" kept separate from "No size works"; the sizing-rule sign-off reuses the
    network-redesign sign-off pattern; downpipe numbering default = learned pattern; "Draft" on detention means the
    calculation is not approved or not yet issued.
+
+## Structural computations, inputs — 26 Sep 01:18 2026
+
+1. **UX-SCALC-05, order:** Tim: "Timber, footings, steel, bracing (Recommended)".
+2. **UX-SCALC-06, wind class:** Tim: "Propose, you confirm (Recommended)". From the site region plus terrain,
+   shielding and topography confirmed on a short list; basis shown on the job record and calc sheets.
+3. **UX-SCALC-07, geotech report:** Tim: "Read it, you confirm (Recommended)". CE finds the geotechnical report in the
+   job folder, pulls site class and allowable bearing with page references; the user confirms; Unknown if absent.
+4. **UX-SCALC-08, loads:** Tim: "Traced from the drawing (Recommended)". Loads traced from what sits on the member
+   (floor area carried, roof above, posts landing) along the 14 Sep load path; each load shows its source; the user
+   adjusts.
