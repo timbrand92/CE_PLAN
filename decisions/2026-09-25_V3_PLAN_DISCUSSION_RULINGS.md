@@ -717,3 +717,20 @@ agreed departures remembered; issue-time decision; review highlights never print
    before issue, and a quiet open-item count in the QA panel; never pop-ups.
 4. **UX-QA-04, item states:** Tim: "Yes, those four (Recommended)". To do, Drafted, Needs clarification, Checked. CE
    may set Drafted when it sees the item drawn; only a person marks Checked.
+
+## Structural QA against the markup, batch 2 — 25 Sep 2026, 23:28
+
+1. **UX-QA-05, AI provider permission for markup reading (DATA-01 / Gate 0 provider permission):** Tim: "Yes, Claude
+   only, page only (Recommended)". The choice read: *Only the markup page goes, only to Claude through CE's
+   connection, never kept for training; the title-block area is blanked first where possible. Recorded as your
+   provider permission.* Scope: engineer markup page images for QA reading only. Not a permission for any other
+   provider or any other job data.
+2. **UX-QA-06, markup rounds:** Tim: "One list, grouped by round (Recommended)". A new round's items join the list
+   tagged by round; earlier open items stay open; items a new round changes are marked "superseded by P3".
+3. **UX-QA-07, clarification list:** Tim: "Yes, a PDF list with snippets (Recommended)". "Needs clarification" items
+   become a one-page PDF with markup and plan snippets; the user sends it; CE never emails.
+4. **UX-QA-08, engineer-drafted changes:** Tim: "Yes, compare drawing versions (Recommended)". CE compares the
+   engineer's drawing with the last version and lists the changes as items, with the same states and highlights.
+
+**QA against the markup: all workflow choices answered.** Needs a workflow card from these plus the 14 Sep rulings
+(release chat).
