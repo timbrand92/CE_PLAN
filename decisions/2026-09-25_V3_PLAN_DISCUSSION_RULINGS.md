@@ -487,3 +487,12 @@ before Apply; one U undoes it.
    detention record, so CDCALC and the drawn-versus-issued storage check count it; the pit stays a pit.
 5. **UX-TANK-04 (Q32):** Tim: "Retire it (Recommended)". The tank record's LidType "Standard" field is retired
    (explicit Tim yes); underground tanks carry their real lid and surface level.
+
+## Pass 3, family 4: slab (CDSLAB) — 25 Sep 2026, 14:38
+
+1. **Design-pack Q39 (Make fixed control: confirm first?), not asked:** answered by UX-STD-02 (no "Are you sure?"
+   after a preview).
+2. **UX-SLAB-01 (Q36):** Tim: "Keep "Meets 1 in 100" (Recommended)". Fall checks keep naming the rule ("Meets 1 in
+   100" / "Below 1 in 100") before and after the rulebook is signed.
+3. **UX-SLAB-02 (Q37):** Tim: "Right as it is". The nine-item Purpose list stays.
+4. Q35 (demo-job outlet naming) is a test-fixture detail, not asked. Q38 (decimals) is a Settings default.
