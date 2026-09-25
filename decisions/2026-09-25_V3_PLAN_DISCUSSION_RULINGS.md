@@ -1075,3 +1075,7 @@ approved July card AI-01, not re-asked.)
    learned from past jobs and corrections (UX-LEARN-01); never silently changes an engineering rule; Unknown never
    guessed.
 2. The build order is asked separately below.
+
+**UX-L3-02, build order:** Tim: "Levels, sources, detention, layout (Recommended)". (1) Levels and grades for a drawn
+network (building on Solve Run); (2) downpipe and source placement from the rating report and roof plan;
+(3) detention and tank layout (after the approved calculations card); (4) full network layout last.
