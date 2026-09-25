@@ -1161,3 +1161,15 @@ then another between p2 and p3 or something like that and including pit detentio
 combine storage pipes on several pit-to-pit runs (e.g. P1-P2 and P2-P3, sizes may differ) with detention pit storage
 (and tanks), totalled against the required storage; each option card lists every piece (run, size, length, volume)
 and the pits counted as storage.
+
+## Issue and submission, Civil and whole plugin — 26 Sep 01:07 2026
+
+1. **UX-REG-09:** Tim: "Same workflow (Recommended)". Civil drawings use the Structural register, revision and issue
+   workflow (UX-REG-01..08); a job with both disciplines shares one register.
+2. **UX-REG-10:** Tim: "Yes, one pack (Recommended)". One click builds a dated council submission folder (drawing set
+   PDF, computations sheet, rating report, LPD letter) named the way that council asks; reviewed before it is made;
+   CE never sends it.
+3. **UX-REG-11:** Tim: "Yes, from Settings (Recommended)". Issue applies the office plot style, page setup and pen
+   settings (Settings values); a differently set-up sheet is flagged in the issue preview.
+4. **UX-REG-12:** Tim: "Yes, in the issue folder (Recommended)". A locked read-only DWG snapshot goes into the dated
+   issue folder beside the PDF; the "what changed since last issue" comparison uses it.
