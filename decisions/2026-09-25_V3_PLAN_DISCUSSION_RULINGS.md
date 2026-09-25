@@ -681,3 +681,7 @@ today). Numbers follow the card.
     actions until a later step.
 
 **Card status:** all 12 choices answered; section 5's test drawing and checklist not yet reviewed with Tim.
+
+**D1 card APPROVED — Tim, 25 Sep 2026, 23:14: "Approve (Recommended)".** The question read: *Approve the D1 card, with its
+test drawing and 12 steps plus step 13 (MOVE C1 alone: beams follow, one U restores all three)?* Added test step
+13: MOVE C1 alone 300 mm; both beam ends follow and labels re-centre; one U puts all three back.

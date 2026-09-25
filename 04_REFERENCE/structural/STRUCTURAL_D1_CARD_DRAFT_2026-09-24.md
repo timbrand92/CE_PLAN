@@ -167,6 +167,13 @@ Your words and dates are in the Structural drawing-journey record of 14 Sep (the
 12. **Protection:** put C1 on a locked layer and drag its grip. Right: CE refuses and says "C1 is on a locked layer",
     and nothing moves. Repeat with the beams inside an Xref, and during REFEDIT: CE changes nothing.
 
+13. **MOVE the column alone (Tim, 25 Sep: "Beams follow").** MOVE C1 by 300 mm without selecting the beams. Right:
+    both beam ends follow and both labels re-centre; one U puts all three back.
+
+**Tim approved this card with all 12 choices answered, 25 Sep 2026** (decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md,
+section "Structural D1 card"). Choice 7 was answered "Beams follow" and choice 11 in Tim's own words, not as
+recommended in section 3 above.
+
 ### 6. The full experience, from start to finish
 
 1. **Where you start:** the Beams panel on the CE STRUC tab (commands 1, 2 and 4) for placing, exactly as today.
