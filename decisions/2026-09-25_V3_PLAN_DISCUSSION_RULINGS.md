@@ -1117,3 +1117,25 @@ Builds on Hold grade / hold levels (23 Sep) and Solve Run.
    its sized plate (from the calculation), the overflow route and the OSD criteria block; one preview, one U.
 4. **UX-L3-14, unapproved calculation:** Tim: "Yes, marked draft (Recommended)". Proposes from current figures with a
    "Draft: calculation not approved" banner in the preview and on the OSD block until approved.
+
+## Level 3 proposal 4: full network layout — 26 Sep 01:01 2026
+
+1. **UX-L3-15, missing inputs:** Tim: "Propose, show gaps (Recommended)". Proposes with what exists; missing inputs
+   listed; those parts stay Unknown until supplied.
+2. **UX-L3-16, routes:** Tim, his own words: **"learn from previous drawings"**. Pipe routes, pit positions and
+   set-offs follow the patterns learned from CE's previous drawings (UX-LEARN-01), not a fixed "building lines" or
+   "shortest path" rule; footings, tree zones and easements still avoided.
+3. **UX-L3-17, alternatives:** Tim: **"Always 2-3 side by side"** (recommended "one + try another" not taken). Like
+   the detention options.
+4. **UX-L3-18, existing work:** Tim: "Build around it (Recommended)". Drawn pipes and pits are kept; only what is
+   missing is proposed; any change to existing work is shown separately and applied only if ticked.
+
+### UX-L3-19 — Visual proposals
+
+**Tim, verbatim: "can ce plugin show visual proposals for detention and storage as well as the full design".**
+Recorded as a requirement for every Level 3 proposal (detention/storage options and full network layout):
+1. The chooser shows each option as a **picture of the plan** (a small drawing of that option on the real site,
+   with its key figures), side by side.
+2. Selecting an option shows it as a **full-size ghost in the real drawing** (pipes, pits, tank or storage, orifice
+   pit, overflow, labels); switching options swaps the ghost; nothing is drawn until Accept; one U.
+3. Differences between options are highlighted (e.g. "B uses 7 m less pipe, 0.3 m shallower").
