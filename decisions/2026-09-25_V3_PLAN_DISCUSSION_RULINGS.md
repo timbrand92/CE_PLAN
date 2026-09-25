@@ -895,3 +895,21 @@ tree-zone radius from the report only).
    survey and AHD datum; name and time recorded, shown in Project Review.
 
 **Civil families: all covered in the V3 plan discussion.**
+
+## Pipe-size suggestions (CV-02A) and Structural timing — 26 Sep 00:08 2026
+
+Plan read: `archive\plugin-docs-july-2026\workflows\CV-02A_ASSISTED_PIPE_SIZING_PLAN.md` (July; not approved then).
+
+1. **Structural timing:** Tim wrote "we needs to work on structural once civil passes are done", then, asked what
+   to do with the D2 beam build already started, chose **"Keep both going"**. Structural continues alongside Civil;
+   the release chat keeps its own pacing (usage, one AutoCAD test at a time).
+2. **UX-SIZE-01, where suggestions appear:** Tim: "Pipe window + Proposals (Recommended)". One advisory line in the
+   Pipe window while drawing or editing (never changes the pipe), and the whole-network review in Project Review >
+   Proposals.
+3. **UX-SIZE-02, modes:** Tim: "Yes, tie them (Recommended)". Draftsperson mode checks against the supplied design
+   (Matches / Different / Can't verify); Engineer mode suggests sizes (Keep / Upsize / Unknown / No size works).
+4. **UX-SIZE-03, accept all:** Tim: "Accept all allowed (Recommended)". After the preview, Accept all applies the clear
+   suggestions in one U; Unknown and no-feasible-size pipes are never included and stay listed. Supersedes the July
+   plan's "visit every pipe first" gate.
+5. Unchanged from the July plan and not re-asked: no automatic downsizing (information note only); the numeric sizing
+   rules need engineer sign-off before production suggestions (CV-02A4 gate).
