@@ -496,3 +496,14 @@ before Apply; one U undoes it.
    100" / "Below 1 in 100") before and after the rulebook is signed.
 3. **UX-SLAB-02 (Q37):** Tim: "Right as it is". The nine-item Purpose list stays.
 4. Q35 (demo-job outlet naming) is a test-fixture detail, not asked. Q38 (decimals) is a Settings default.
+
+## Pass 3, family 5: review and checks — 25 Sep 2026, 14:40
+
+1. **UX-REV-01 (CDPROFILE PR #187 decision 6):** Tim: "One Project Review (Recommended)". One Project Review window
+   from the CE tab covering Civil and Structural (checks, calculations, profiles, proposals). CDPROFILE decision 6
+   is closed.
+2. **UX-REV-02 (Q50):** Tim: "Proposals tab (Recommended)". The Proposals button opens Project Review on
+   Proposals; the Project Review button opens on Checks.
+3. **UX-REV-03 (Q51):** Tim: "Confidence first, then size (Recommended)".
+4. **UX-REV-04 (Q44):** Tim: "PDF (Recommended)". Export report defaults to PDF; CSV one tick away.
+5. Q41 (passes folded) was answered by UX-STD-08.
