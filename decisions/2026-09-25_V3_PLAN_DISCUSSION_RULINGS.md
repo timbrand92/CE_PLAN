@@ -799,3 +799,18 @@ historical data would be great".** Extends UX-STRUC-09: select the object and CE
 rotation) the way CE's past drawings did it, learned from history (UX-LEARN-01 "past CE projects" and "your
 corrections"; client data stays local, only anonymised lessons shared). Every placement is previewed and one U; a
 moved tag is remembered as a correction.
+
+### UX-STRUC-10 — CESTRUC "CE Structural Suite" window (Tim, 25 Sep 2026, 23:54)
+
+Read at 8c077569: a modeless window of 109 command buttons in 7 tabs (Beams, Text + Supports, Bracing, Bored Piers,
+Imports, Schedules + Export, Utilities) plus Reload LISP and Deploy Assets. Offered: replace with a "Find a tool"
+search window / retire / keep.
+
+**Tim, verbatim: "cestruc does a lot more than search commands, retire the search as ribbon will cover it".**
+
+1. The command-launcher role of CESTRUC is retired; the family ribbon covers it.
+2. **Interpretation (this chat's, per the full-function-preservation rule):** nothing CESTRUC does is lost. Every
+   function reachable today only through CESTRUC (e.g. Create / Refresh / Sync Schedule, Export CSV / PDF / Blocks,
+   FADOPT, FREGEN, FREGENALL, Link Text to Entity, Reload LISP, Deploy Assets, the CEADMIN lists, the XRL tools) gets
+   a ribbon or Manager home, listed Kept/Moved in a card, before the window is retired. The "Find a tool" search
+   window is not adopted. Supersedes the "revisit in detail" hold recorded earlier today.
