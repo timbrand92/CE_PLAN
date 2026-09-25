@@ -920,3 +920,15 @@ Plan read: `archive\plugin-docs-july-2026\workflows\CV-02A_ASSISTED_PIPE_SIZING_
 inside PIT SIZE and LID TYPE + REMARKS exactly as the printed schedule does (no eleventh on-screen column);
 double-clicking the row edits it. Closes the parked Q56. **All 86 design-pack questions are now answered, overtaken
 or covered by standing rules.**
+
+## Structural D2 slice 1 questions (release chat, PR #250) — 26 Sep 00:18 2026
+
+1. **UX-D2-01, ordinary column grip before CE grips:** Tim: "Keep (Recommended)". Dragging a column's ordinary
+   AutoCAD grip moves its beams (no preview, like MOVE), one U, until CE's own grips arrive.
+2. **UX-D2-02, column label:** Tim: "Yes, next slice (Recommended)". A column's own label (e.g. "C1") moves with the
+   column; a hand-placed label keeps its offset. Card item for D2 slice 2.
+3. **UX-D2-03, test tool:** Tim: "Yes, keep it (Recommended)". The builder's headless beam-check tool is kept in the
+   plugin repo next to Civil's headless proof, never shipped to colleagues (Tim's approval for new test tooling).
+4. **Permanent names on the Structural line (not asked):** bringing the shared spine-name component onto the
+   Structural shipping line is technical and follows Tim's D1 choice 1 ("One system with Civil"); decided by this
+   chat as implementation, under the one-version rule.
