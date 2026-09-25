@@ -134,7 +134,7 @@ product similar to something apple or autodesk would design".**
 4. Structural D1 (12 choices on beam grips and the member schedule) stays on its own card for Tuesday, as that
    card planned; it is taken up here only as part of the Structural command family.
 
-### UX-PLAN-01 — How the UX plan runs (Tim, 25 Sep 2026, about 13:35)
+### UX-PLAN-01 — How the UX plan runs (Tim, 25 Sep 2026, 13:23)
 
 **Tim: "Yes, front door first (Recommended)".** The choice read: *Names and ribbon first, because they are what a
 colleague meets first and they shape everything after. Then the one standard, then family by family.*
