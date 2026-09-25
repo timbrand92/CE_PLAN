@@ -814,3 +814,17 @@ search window / retire / keep.
    FADOPT, FREGEN, FREGENALL, Link Text to Entity, Reload LISP, Deploy Assets, the CEADMIN lists, the XRL tools) gets
    a ribbon or Manager home, listed Kept/Moved in a card, before the window is retired. The "Find a tool" search
    window is not adopted. Supersedes the "revisit in detail" hold recorded earlier today.
+
+## Structural detail browser — 25 Sep 2026, 23:55
+
+Builds on the 14 Sep eight approved detail-browser behaviours and statuses.
+
+1. **UX-DET-01, one library:** Tim: "One palette: Blocks | Details (Recommended)". CE Blocks (approved 24 Sep) and the
+   detail browser become one "CE Library" palette with Blocks and Details tabs and one search box.
+2. **UX-DET-02, who approves office standards:** Tim: **"Any engineer"** (recommended "Administrator" not taken). Any
+   engineer may mark a detail Approved office standard; batch approval of trusted groups allowed; the approver and
+   time are recorded (consistent with UX-CALC-APPROVE-01).
+3. **UX-DET-03, PDF-only details:** Tim: "Reference picture, marked (Recommended)". Placed as a linked PDF underlay
+   with a small "REFERENCE ONLY - not editable" tag until redrawn as a DWG detail.
+4. **UX-DET-04, numbering:** Tim: "Yes, number and track (Recommended)". CE gives the next detail number on the sheet
+   and title; if a detail or sheet moves, every callout (e.g. "5/S20") updates, with a preview.
