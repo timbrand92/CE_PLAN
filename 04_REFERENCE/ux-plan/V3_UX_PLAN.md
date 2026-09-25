@@ -125,6 +125,8 @@ Builders: the release chat writes a card per item before code.
    notes page); separate revision letters per discipline; status words from the revision; one combined PDF in
    register order; council submission pack; office plot setup; a DWG snapshot per issue; check plots with an
    optional "For engineer" version. (UX-REG-01..15)
+3b. **Standards at issue:** off-standard layers, styles and pens listed with safe fixes pre-ticked; optional clean-up
+   with preview; standards live in Settings > Drawing Standards. (UX-STDS-01..03)
 4. **Import and repair:** Compare only compares; CDCHECKDWG summary plus list; survey files chosen in the window;
    import report kept plus PDF; expert repair commands warn; "Decide later" is a Repair tab; admin-only delete.
    (UX-IMP-01..04, UX-REP-01..03)

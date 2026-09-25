@@ -1450,3 +1450,12 @@ Builds on AI-01 (July): permissions, preview then one U, no raw commands, provid
 3. **UX-AI-03:** Tim: "Yes, with the source (Recommended)". Ask CE answers council-rule and office-standard questions
    from the council files and rulebook, always citing document and page; "not recorded" when unknown.
 4. **UX-AI-04:** Tim: "Later, not V3 (Recommended)". Voice input after V3.
+
+## Drawing standards and tidy-up at issue — 26 Sep 09:50 2026
+
+1. **UX-STDS-01:** Tim: "Check + fix safe ones (Recommended)". At issue, off-standard layers, text styles, dimension
+   styles and pens are listed in the issue preview; safe fixes pre-ticked; Xref content never touched.
+2. **UX-STDS-02:** Tim: "Offered in the issue preview (Recommended)". A "Clean up drawing" tick (off by default) with a
+   preview of what is purged; never touches Xrefs; one U; CE still never saves.
+3. **UX-STDS-03:** Tim: "Settings > Drawing Standards (Recommended)". The Drawing Standards window is the one home for
+   office standards; LU and the checks read from it; changes recorded (any engineer, as UX-SET-03).
