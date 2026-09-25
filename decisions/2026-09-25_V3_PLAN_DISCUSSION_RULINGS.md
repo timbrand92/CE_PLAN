@@ -996,3 +996,16 @@ AutoCAD (retirement approved in advance on that condition).
    "implied easement" band; CE warns if a footing, tank or pit sits inside it.
 4. **UX-STRUC-12 (release-v3 queued item 7):** Tim: "Same Structural, that one tool greyed (Recommended)". AutoCAD 2022
    colleagues get the full Structural build; CEARCHREVIEW shows greyed with "needs AutoCAD 2027".
+
+## Council tools, batch 2 — 26 Sep 00:41 2026
+
+1. **UX-CR-04 (B4):** Tim: "Own system, rule per council (Recommended)". AGI runs are their own network; where a
+   council requires AGI to bypass detention, CE warns if an AGI connects into storage (or below the council's height
+   above the baffle, e.g. Manningham 150 mm).
+2. **UX-CR-05 (B10a):** Tim: "Warn on short offcuts (Recommended)". A pipe split leaving a piece shorter than a Settings
+   minimum (per council where published) shows "short offcut next to P4" in the preview with a suggestion to nudge
+   the pit.
+3. **UX-CR-06 (B10b):** Tim: "Shared base + overrides (Recommended)". Council settings hold one shared base that each
+   council inherits; each council page highlights only what differs; the rest reads "from base".
+4. **UX-CR-07 (B10d):** Tim: "Yes, in Design's start (Recommended)". On a Boroondara job, Design measures the distance to
+   kerb/easement at the start and says which outfall requirement applies, citing the council table.

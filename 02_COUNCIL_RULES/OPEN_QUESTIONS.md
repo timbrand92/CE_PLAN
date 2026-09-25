@@ -130,6 +130,8 @@ Manningham names a class for each place: driveway, vehicle crossover, landscaped
 
 ### B4 — Agricultural drains bypass the detention
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-04: own system, rule per council. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 Manningham requires AGI drains to **bypass the detention system entirely** and discharge to the outlet
 chamber — or, if connected in, at least 150 mm above the top of the baffle wall.
 
@@ -177,12 +179,16 @@ Whitehorse asks for existing and design contours at **0.1 m on flat sites, 0.2 m
 
 ### B10a — Pipe lengths must match the manufacturer's lengths
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-05: warn on short offcuts. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 Yarra requires it explicitly, *"to avoid small pipe sections adjacent to pit"*.
 
 **The question.** When the plugin splits a pipe where a new pit is placed, should it be trying to land on
 real pipe lengths rather than leaving a short offcut beside the pit?
 
 ### B10b — Several councils share the same base text
+
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-06: shared base + overrides. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
 
 Yarra's checklist repeats Manningham's lines word for word, and Yarra's time-of-concentration table is
 identical to Maroondah's, number for number.
@@ -200,6 +206,8 @@ for a carpark).
 job?
 
 ### B10d — How far an outfall drain must be extended
+
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-07: checked at Design start. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
 
 Boroondara publishes a table of the *"reasonable length of drain required"* before Council accepts that an
 outfall cannot be built — 15 m to a kerb for a small lot, up to 150 m to an easement for more than six
