@@ -1206,3 +1206,16 @@ Builds on the 14 Sep journey (job number and address from the folder; people ent
    "Reset to office value".
 4. **UX-SET-06:** Tim: "Gold "This job" tag (Recommended)". A job-only value shows a gold tag, with the office value
    beside it and "Reset to office".
+
+## Structural computations in the plugin — 26 Sep 01:14 2026
+
+Follows D1 choice 11 (XCLMTXT phased out as computations move into the plugin) and the 20 Sep CE_COMPSHEET idea.
+
+1. **UX-SCALC-01:** Tim: "From the drawing (Recommended)". Select a beam or footing, "Design this member": span,
+   supports, tributary width and levels from the drawing; loads from the job and Settings; the user checks and adjusts.
+2. **UX-SCALC-02:** Tim: "Same CE sheet as Civil (Recommended)". CE-branded computations sheet, same look as Civil;
+   anyone issues naming the engineer.
+3. **UX-SCALC-03:** asked for up to three first; Tim ticked **all four**: timber beams and lintels; steel beams and
+   columns; footings and slabs; bracing and tie-downs. Order not ruled (listed order recorded).
+4. **UX-SCALC-04:** Tim: "Preview, then update (Recommended)". A calculated size change previews the beam, label and
+   schedule row; any CE user applies it (recorded); one U.
