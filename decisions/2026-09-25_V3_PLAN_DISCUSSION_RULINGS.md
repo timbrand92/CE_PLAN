@@ -292,3 +292,46 @@ you decide when to save. Undo stays available.*
 
 **Tim: "Quick picks + note (Recommended)".** The choice read: *One click on "Survey", "Council requirement",
 "Engineer's judgement" or "Other", with a note box if wanted. Still optional.* (Optional per the 5 Sep review.)
+
+---
+
+## Pass 2, batch 2, and the learning principle — 25 Sep 2026, 13:57
+
+### UX-STD-01 (completed) — The window during a run (Q9 follow-up)
+
+**Tim: "Every time".** The choice read: *Each pipe opens the window so you can check it before it's placed.*
+
+1. Placing commands carry on until Enter or Escape (UX-STD-01), and **the window opens for every item** in the run.
+2. Chosen over "first one, then keep clicking" (recommended) and "review at the end".
+
+### UX-LEARN-01 — Decisions in the plugin learn (machine learning)
+
+**Tim, verbatim (about 13:55): "decision within the plugin should have a machine learning element".**
+
+Then, asked where CE should learn from, Tim ticked **all four**: "Your own habits (Recommended)", "The whole office
+(Recommended)", "Past CE projects", "Your corrections". The question read: *Machine learning: where should CE learn
+from decisions? It always shows why it suggests something ("You usually pick 450 here") and never silently changes
+an engineering rule.*
+
+1. **Your own habits:** pre-fill what this user usually chooses in that situation (pit size, lid class, label side,
+   which window tab).
+2. **The whole office:** everyone's choices shape suggestions, shared through Manager (a new colleague gets the
+   office's usual choice first).
+3. **Past CE projects:** learn from drawings CE has issued (the drawing-intelligence evidence). Client data stays on
+   Tim's PC; only anonymised lessons are shared (DATA-01, R-LEARN).
+4. **Your corrections:** when a user changes a suggestion, CE remembers and suggests their version next time, and
+   shows how often it has been corrected.
+5. **Limits carried from standing rules:** every suggestion shows its reason; learning proposes and never silently
+   changes an engineering rule (master plan Part C §5); a learned default becomes a company default only when an
+   engineer promotes it (R-10 pattern); Unknown is never filled by a guess.
+6. Build request: `IDEAS_INBOX.md`, 25 Sep 13:57 (for the release chat to card and schedule).
+
+### UX-STD-05 — What comes pre-ticked in a list of fixes (Q71)
+
+**Tim: "Safe drafting fixes ticked (Recommended)".** The choice read: *Label overlaps, layer names and missing tags
+come ticked. Anything touching levels, sizes or links is never pre-ticked. One U undoes the lot.*
+
+### UX-STD-06 — Selection after editing part of it (Q17)
+
+**Tim: "Your original selection (Recommended)".** The choice read: *Like AutoCAD's Properties palette: editing never
+changes what you'd selected.*
