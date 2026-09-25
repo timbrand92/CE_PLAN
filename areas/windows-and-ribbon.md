@@ -1,5 +1,14 @@
 # Area W — The CE windows, ribbon and design pack. Codex builds windows, Claude builds behaviour (Ruling B, 15 Sep); the CDWT window is the exception (Tim, 16 Sep)
 
+## UC 39.2 audit and code hand-off — 25 Sep 2026
+
+1. **Downpipe read-back: CLAUDE-OWNED / STILL OPEN.** PR #134 changed the failed-placement wording, but `LinkService.SourceLanding.cs` still contains the read-back refusal and the pass reports do not prove placement now succeeds. `LinkService*` is protected by Tim's brief. Route the underlying repair to Claude; no placement claim from Codex.
+2. **CDTAG with nothing selected: STILL OPEN on master, now built in PR #209.** Tim's 25 Sep instruction supersedes PR #134's pick prompt for this exact case. With no selection, it gives one plain instruction and exits. Branch `codex/uc392-cdtag` at `60d11634`, PR #209 ready for review; three Civil Release lanes have 0 errors; full net10 suite 11,097 total / 11,072 passed / 6 known failures / 19 skipped. No AutoCAD acceptance or install.
+3. **Named CDDESIGN / Rainfall / LPD entries: ALREADY FIXED.** PR #149 is merged; `CeCvlRibbonContributor.cs` and the classic ribbon each name the three entries under Design. Pass 9 row N4 reaches Design setup.
+4. **Inspector diagnostics: ALREADY FIXED.** PR #134 supplies `Not checked` display counts until Refresh; the four tiles bind to those values. Pass 9 row R-Z6 records Drawing health Refresh, and pass 10B row Z6 records the Inspector readout. Native opening-before-Refresh acceptance is still Tim's.
+5. **CDCALC units: ALREADY FIXED.** PR #139's window uses m²/m³ literals and the unit display converter. Pass 8 row Z5 explicitly reports proper m³ across the checked screens; no arithmetic acceptance is inferred.
+6. **Other Claude-owned work left untouched:** Edit Pipe, Edit Pit, New Pit, Edit 2 Pipes, save/Undo, C7 grips/MOVE, label tidy-up; specifically R-A-4, walkthrough #3 and #5. The 39.2 brief forbids editing their owners.
+
 **Product:** CE_ACAD (the AutoCAD plugin). **Plan:** `C:\CE_PLAN\MASTER_PLAN.md`. **This file is the one place for this area's items, status, bugs, parked ideas, test steps and regression list.** Update it in the same reply as the work.
 
 ## 1. What this area is
