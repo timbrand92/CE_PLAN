@@ -760,3 +760,18 @@ finalises nothing).
    without asking.
 4. **UX-REG-08, where issue starts:** Tim: "Sheets window + Project Review (Recommended)". Both open the one issue
    preview.
+
+## Structural cards (release chat, commit d65586a7) — 25 Sep 2026, 23:39
+
+Cards in `04_REFERENCE\structural\cards\`.
+
+1. **STRUC-RIBBON, which name wins in each duplicate group:** Tim: "Shortest code (Recommended)". AutoCAD style (CL
+   over CENTRELINE, RB over REBAR, FFL over FFLMARKER); all other names keep working typed. The card's other two
+   recommendations (footing/slab "over" and left/right groups stay separate until a detailer confirms; hide
+   CEMARKUPBENCH) were not put to Tim separately.
+2. **STRUC-MARKUP-QA, title block cannot be blanked:** Tim: "Don't send; say so (Recommended)". CE does not send that
+   page to Claude and tells the user to tag that page's marks by hand.
+3. **STRUC-REGISTER-ISSUE, multi-DWG job:** Tim: "One PDF, register order (Recommended)".
+4. **STRUC-ARCH-BACKGROUND, example jobs:** Tim: "Pick recent completed jobs". The release chat may pick 2-3 recently
+   completed Structural jobs from the office Projects folder to study read-only; nothing copied into any repository;
+   client names and addresses stay on Tim's PC (DATA-01). This is Tim's permission for that bounded read.
