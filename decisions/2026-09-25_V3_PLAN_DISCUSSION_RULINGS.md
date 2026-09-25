@@ -979,3 +979,7 @@ From `areas\release-v3-colleagues.md` "Queued for Tim, Tuesday 29 Sep".
    part of the cd/pipe command and all pipes are upgraded to this when opening old drawings". Read from master:
    CDPIPEOBJ draws a pipe directly as the one CE object (2027 only); CDC7UPGRADE converts existing pipes; pipes are
    also upgraded on open. Follow-up question put to Tim below.
+
+**UX-PIPE-08 (item 8):** Tim: "Hide now, retire later (Recommended)". CDPIPEOBJ is hidden from the ribbon and Help now
+(still works typed for testing), and retired once CD itself draws the one-piece pipe and Tim has accepted it in
+AutoCAD (retirement approved in advance on that condition).
