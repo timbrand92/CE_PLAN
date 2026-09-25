@@ -416,12 +416,12 @@ list with your reason.* Replaces the design pack's "Leave undecided".
 
 ---
 
-## Chat model — Tim, 25 Sep 2026, about 14:15
+## Chat model — Tim, 25 Sep 2026, about 14:24
 
 **Tim: "go but keep opus 5.5 medium".** This chat stays on Opus 5.5 at medium effort (Tim's override of the
 prompt's Sonnet default, scope: this chat).
 
-## Pass 3, family 1: pipes and pits, batch 1 — 25 Sep 2026, 14:16
+## Pass 3, family 1: pipes and pits, batch 1 — 25 Sep 2026, 14:26
 
 ### UX-PIPE-01 — "Keep separate" and "Keep as a free end" (design-pack Q6)
 
