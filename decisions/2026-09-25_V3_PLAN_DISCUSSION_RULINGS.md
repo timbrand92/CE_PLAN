@@ -604,3 +604,19 @@ actual RFI letter a council sends on a job.
    drawings are never saved for the user; Issue/Publish warns if an open sheet has unsaved changes.
 4. **UX-TANK-04b:** Tim: "Retire (Recommended)". The LidType "Standard" field is also retired on AGI drain and
    trench grate records.
+
+## Release-chat cards approved — 25 Sep 2026, 21:20
+
+Cards in `04_REFERENCE\ux-plan\cards\` (release chat, 25 Sep). Tim was asked to approve each with its recommended
+answers.
+
+1. **Approved with recommended answers** (Tim ticked all four): UX-RIBBON-01 ("Pipe tab jump"), K-REQ-01 ("Section
+   + schedule together"), REPAIR-DECIDE-LATER ("Decide later tab"), UX-LEARN-01 ("Learning, slice 1").
+2. **DETENTION-PIT-ANNOTATE approved:** Tim: "Approve (Recommended)". CDPITDETENTION beside PIT; "DETENTION PIT"
+   only; widths pre-filled from Settings (never a zero-volume pit); indicative volume shown before Accept; warns if
+   connected pipes are not Detention; additive with a tank's detention; preview, one U.
+3. **UX-RIBBON-04 corrected and approved:** Tim: "Yes, as the card says (Recommended)". CETOOLS stays on the
+   Structural ribbon; CECHECKLIST and CETOOLSTOGGLE merge into it (typed redirects kept); only CENOTES moves into
+   Manager; STRIPLAYERSMERGE and STRUCLINKTEXT stay typed in Structural. Refines UX-RIBBON-04's earlier wording.
+4. **CESTRUC / StrucSuiteWindow (UX-RIBBON-04 OPEN 2):** Tim, his own words: "needs to be revisited in detail before
+   deciding". Not decided; kept as is until a detailed review.
