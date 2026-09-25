@@ -1020,3 +1020,16 @@ AutoCAD (retirement approved in advance on that condition).
    detention volume, from the same record as the computations sheet.
 4. **UX-CR-11 (B9):** Tim: "Check and tell (Recommended)". On linking a survey, CE compares its contour interval (and
    extent) with the council's rule and warns early (e.g. Whitehorse 0.1/0.2 m, 10 m beyond the boundary).
+
+## Council tools, batch 4 — 26 Sep 00:46 2026
+
+1. **UX-CR-12 (B5):** Tim: "Check, council value wins (Recommended)". Every pipe's velocity is checked against the
+   minimum; the council's published figure applies where it exists, otherwise R-02 (0.6 m/s); a slow pipe shows a
+   quiet warning in Checks and the Pipe window.
+2. **UX-CR-13 (B10c/B10f):** Tim: "Yes, at Design start (Recommended)". Design states at the start whether detention
+   is needed under the council's hard-surface threshold, with the source; the engineer can override.
+3. **UX-CR-14 (A4):** Tim: "Show it, quietly (Recommended)". Design shows the council's named AS/NZS 3500.3 edition
+   beside the office edition (R-24) as information only.
+4. **CR-D1 (sweep):** Tim: "Yes, sweep all (Recommended)". Sweep all 22 council profiles for the known error patterns
+   (copied values, wrong field, wrong row), each change listed with its source for Tim to glance at; unsure values
+   become Unknown.

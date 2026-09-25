@@ -80,6 +80,8 @@ and holds more water back.
 
 ### A4 — The Australian Standard edition
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-14: council edition shown quietly. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 **What we found.** The councils name different editions of AS/NZS 3500.3: Darebin **2025**, Kingston
 **2021**, Frankston and Manningham **2018**, Banyule **2015**, Boroondara names none. CE holds 2018.
 
@@ -139,6 +141,8 @@ chamber — or, if connected in, at least 150 mm above the top of the baffle wal
 rather than part of the drainage network?
 
 ### B5 — Minimum flow velocities
+
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-12: check velocity, council value wins. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
 
 Frankston: 0.7 m/s running half full or more, 1.0 running less than half, 6.0 maximum. Banyule: 1.0 to 6.0.
 Maroondah: 0.75, 1.0, and 5.0 maximum.
@@ -207,6 +211,8 @@ error found on the 1:200 grade.
 
 ### B10c — The impervious threshold that triggers detention
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-13: stated at Design start. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 Yarra: no detention needed below **70%** hard surface. Banyule: detention required above **65%** (and 35%
 for a carpark).
 
@@ -235,6 +241,8 @@ the Water Act — **no structure or filling within one metre either side**. Boro
 **The question.** Are those drains being shown on our plans, or only the registered easements?
 
 ### B10f — The impervious threshold that triggers detention is a per-council value
+
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-13: stated at Design start. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
 
 Five different figures found: **Maribyrnong 40%** · Banyule **65%** (35% for a carpark) · Yarra **70%** ·
 Boroondara **80%**, which also excuses detention on any lot under 300 m². Maribyrnong's is by far the
@@ -284,6 +292,8 @@ office habit would produce. None can be answered from a document.
 ## D. Housekeeping — I can start these without a decision
 
 ### D1 — Sweep the whole council file for copied and wrong values
+
+**ANSWERED by Tim, 26 Sep 2026 — CR-D1: sweep all 22 councils. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
 
 Two error patterns are proven, not suspected:
 
