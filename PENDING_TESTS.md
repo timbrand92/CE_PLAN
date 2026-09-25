@@ -221,6 +221,17 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 25 Sep 2026 18:19 on Tim's PC — Civil `3.0.4+cef5215c`, Manager `1.1.4+cef5215c`, Structural `1.0.75+838f95ee`
+
+1. **Installed by the release chat** under Tim's word of 24 Sep about 17:15 ("TEST HERE UNTIL MONDAY MORNING, I HAVE LEFT AUTOCAD IS CLOSED"). AutoCAD closed, checked twice (18:18:56, 18:19:06), before the swap and at the end. REL-09 rename and copy; 1,563 payload files hash-checked after install, 0 mismatches. CE_SHARED identical Civil/Manager in all three lanes; Structural has none; native ARX present; no AdminSasUrl.
+2. **Sources:** Civil + Manager = release train 4 `release/civil-train-0925` @ cef5215c (master bf57f739 + #223 #217 #234 #216 #207 #220 #225 #204 #205 #206 #211 #214 #203 #210 #212 #222). Structural = `release/struc-train-0925` @ 838f95ee (#221 guard re-pins incl. train 0924b: weld mark #202, CE Blocks button #193, version 1.0.75; + #219 Newtonsoft crash fix).
+3. **Checks before install:** Civil full suite 11,134 run / 6 failed = the known baseline; Manager 265/265; Structural.Tests 2,036 run / 21 failed = the base's 21, 0 new; DesignCore 1,302 / 6 = base.
+4. **Carries:** one U after an Edit Pit resize diagnostics (X3, CDDEBUG [X3] lines); CE never saves the drawing and a save writes no draw order (#225); PIT split one U and Edit 2 Pipes after a split (#216); downpipe / pipe-end identity kept (#220, #207 CDRG); pipe type kept after a label edit (#204); each split half its own length (#205); CE Blocks docked (#206); CDCALC WSUD gold, Manningham R-30 (#203) and Edit Pipe warning (#211); C2 diagnostics (#214); C4 tidy-up pit check (#217); CDSETUP Start page + LPD confirm (#210, #212). Structural: SBEAMEDIT registered, weld mark, Pen & Linetypes, commands return to your layer (RC), CE STRUC CE Blocks button, colleague defaults, MarkupAI/SBEAM/Connected Design Newtonsoft crash fix.
+5. **Backups (undo):** `CE_CVL_SUITE_PRE_b22095c5_20260925-181856.backup`, `CE_SUITE_MANAGER_PRE_b22095c5_20260925-181856.backup`, `CE_STRUC_SUITE_PRE_8c077569_20260925-181856.backup`. Undo: close AutoCAD, delete the three new bundles, rename these back.
+6. **What changes for Tim:** CE no longer saves the drawing every 10 minutes (only AutoCAD's own automatic save protects unsaved work). One U straight after Ctrl+S undoes AutoCAD's own save step first (proven in the core console with no CE code; pass 11 U0 checks full AutoCAD).
+7. **INVALIDATES:** earlier results for Undo after save / pit resize / PIT split, CDRG, CE Blocks docking, Edit Pipe warnings, CDCALC WSUD colour, pipe type after label edits, and every Structural beam result.
+8. **Codex pass 11** (Tim's PC, tonight): brief `codex\pass11.txt` in the old release scratchpad; report `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS11_2026-09-25.md`.
+
 ## LIVE since 24 Sep 2026 22:04 on Tim's PC — Civil `3.0.3+b22095c5`, Manager `1.1.3+b22095c5`, Structural `1.0.74+8c077569` (unchanged)
 
 1. **Installed** under Tim's 24 Sep 17:15 word (test here until Monday). AutoCAD (left open by Codex pass 9 since 18:08, no drawing open) was closed gracefully at 22:03 with no save prompt; then checked closed twice. REL-09 swap; 899 files hash-verified (0 mismatches); CE_SHARED identical in all lanes; no AdminSasUrl. `b22095c5` is in master (release train 3, PR #201; master `bf57f739`).
