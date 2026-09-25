@@ -147,7 +147,7 @@ colleague meets first and they shape everything after. Then the one standard, th
 
 ---
 
-## Structural beam commands — 25 Sep 2026, 13:50
+## Structural beam commands — 25 Sep 2026, 13:32
 
 From the release chat's card `04_REFERENCE\structural\STRUCTURAL_BEAM_FIX_CARD_2026-09-25.md` section 4, raised after
 Tim's own message to the release chat at about 13:20 (*"with structural module can you looking into the beam
