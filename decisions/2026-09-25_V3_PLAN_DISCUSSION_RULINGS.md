@@ -1374,3 +1374,14 @@ Strip.
    objects before release.
 3. **UX-D2-06:** Tim: "Keep (Recommended)". AutoCAD's own column grip keeps moving the beams with no preview, same as
    MOVE, even with CE grips on.
+
+## Helping colleagues learn CE — 26 Sep 01:28 2026
+
+1. **UX-HELP-06:** Tim: "Yes, for the main tasks (Recommended)". 5-10 second silent clips for the top tasks (pipe run,
+   pit, edit, check, issue), made from the real windows so they stay current.
+2. **UX-HELP-07:** Tim: **"No"**. No practice drawing (recommended "made-up job" not taken); colleagues learn on real
+   jobs.
+3. **UX-HELP-08:** Tim: "First 3 uses, then quiet (Recommended)". A one-line tip in the window the first three uses of a
+   tool, then never; can be turned off in Settings.
+4. **UX-HELP-09:** Tim: "Suggest once, quietly (Recommended)". When a colleague does something the long way (e.g. many
+   single edits where batch edit exists), CE suggests the faster way once in the status line; learns if dismissed.
