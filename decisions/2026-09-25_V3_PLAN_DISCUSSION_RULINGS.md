@@ -948,3 +948,16 @@ Read-only check of 24 July card files (`04_REFERENCE\CARDS\`) against this file;
    size change driven by the engineer's Excel schedule can be applied by any CE user after the preview; name, time
    and Excel revision recorded; QA shows it until checked. Supersedes ST-07's "Timothy or the responsible engineer
    must approve the update".
+
+## CDRG and DP placement — 26 Sep 00:24 2026
+
+Release chat's question (test N4): CDRG places nothing on ordinary pipes because they do not record their end pits.
+
+**UX-SRC-05 — Tim, verbatim: "cdrg and dp are not pipe dependent if anything they are similar to pits which in most
+cases get placed prior to pipes connecting them".**
+
+1. CDRG (raingarden + grated inlet) and DP (downpipe) are placed like pits: anywhere, **before** pipes exist; they
+   do not need a pipe to land on.
+2. Pipes drawn later connect **to** them, the same way pipes connect to pits (auto-join UX-PIPE-02b applies).
+3. None of the three offered options was chosen; the premise (place onto an existing pipe) was wrong. Consistent
+   with the 15 Sep idea that sources place anywhere with CD's live feedback.
