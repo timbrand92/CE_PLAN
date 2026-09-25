@@ -1,5 +1,10 @@
 # Area REL — Version 3 to colleagues (the staff release, Stage 6 of the master plan)
 
+## Item 39.1 — Civil layout scrolling audit, first batch (25 September 2026)
+
+1. **Built/tested:** `codex/v3-noscroll-1` at `3ffe39a1`, PR #208 ready for review. Off-screen 1920 × 1080 scale-1 dark/light audit: CDCALC, CDWT, Project Review / What CE Found, Pit Schedule and Help Centre have bounded list or reading scroll only; Settings, Print and Feedback fit. No outer layout scrolling or clipping found, so no window behaviour was changed. All CDCALC task-page pictures were refreshed and committed; other window pictures were already committed.
+2. **Checks:** Three Civil Release lanes 0 errors; focused windows 80/80 passed; full Civil net10 11,097 total, 11,072 passed, 6 established failures, 19 skipped. No new failure. No AutoCAD opened, installation, deployment or merge; Tim acceptance remains separate. The next batch can start after PR review, using the six-failure baseline and Tim's midnight bounded-list ruling.
+
 ## Feedback window — Codex takeover, 24 September 2026
 
 1. **Authority and ownership:** Tim: "BUILD A WHOLE WINDOW - layout AND the code behind it. Code only." and "TAKEOVER IS CONFIRMED." Branch `codex/ui-feedback`, worktree `ui-feedback-20260923`. Existing unfinished work saved as `bea03dfa` (WIP taken over), origin/master merged as `741051b7`. Scope is Feedback XAML, its code-behind/view model and its tests. No AutoCAD, install, deploy or PR merge.
