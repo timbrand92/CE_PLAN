@@ -102,7 +102,7 @@
 
 **Tim's AutoCAD steps:** after the fix, CDRG with four boundary points, Close, Place, pick an ordinary pipe: the grated inlet lands on the pipe; one U removes the raingarden and the inlet.
 
-**Status:** OPEN - diagnostics only in **draft PR #251** (b26695d4); needs Tim's decision. Also needs PR #249 (N8 read-back fix) before any inlet can land in a drawing like DWG-B. Never mark fixed until Tim confirms.
+**Tim's ruling (UX-SRC-05, 26 Sep, via the V3 plan discussion chat):** "cdrg and dp are not pipe dependent if anything they are similar to pits which in most cases get placed prior to pipes connecting them" - none of the three options; the premise was wrong. CDRG and DP place anywhere, like pits, before any pipe exists; pipes drawn later connect TO them the way they connect to pits (auto-join UX-PIPE-02b). **Status:** OPEN - diagnostics only in **draft PR #251** (b26695d4); build to Tim's ruling queued. Also needs PR #249 (N8 read-back fix) before any inlet can land in a drawing like DWG-B. Never mark fixed until Tim confirms.
 
 ---
 
