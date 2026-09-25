@@ -1348,3 +1348,17 @@ Strip.
    draining paving is picked; area and treated catchment show live and label themselves.
 4. **UX-WSUD-04:** Tim: "Yes, from the library (Recommended)". WSUD standard details come from the CE Library filled
    with the job's sizes and linked.
+
+## Civil area J: overland flow — 26 Sep 01:26 2026
+
+1. **UX-OLF-01:** Tim: "Propose from levels, you confirm (Recommended)". CE traces the overflow route from surface levels
+   (survey and slab) to the street or LPD, shown as flow arrows; the user confirms or redraws; drawn as the office
+   overland-flow linework.
+2. **UX-OLF-02:** Tim: "Warn, show where (Recommended)". Overflow leaving the site across a neighbouring boundary warns
+   with Show where; never blocks.
+3. **UX-OLF-03:** Tim: "Yes, in Checks (Recommended)". Checks lists any overflow point without an overland path or
+   outlet.
+4. **UX-OLF-04:** Tim: "Check, council value (Recommended)". Where floor levels are known, floors beside the path are
+   checked against the council's overland-flow freeboard; warning only.
+
+**All Civil areas A to M now have UX rulings in this file.**

@@ -14,6 +14,8 @@ Overland flow, overflow paths, flood/surcharge evidence and surface safety. (Fro
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Planned". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
+1. **UX plan, 26 Sep 2026 (Tim, UX-OLF-01 to 04):** CE proposes the overflow route from surface levels for confirmation; warns when overflow crosses a neighbouring boundary; Checks lists overflow points with no path; floors beside the path checked against council freeboard. Not built. Needs a workflow card (release chat). Record: decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
