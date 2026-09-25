@@ -413,3 +413,31 @@ best-effort to the IT Admin folder, read from FeedbackService on master, 25 Sep.
 list with your reason.* Replaces the design pack's "Leave undecided".
 
 **Pass 2 status:** every Pass 2 question on the sorted list is now answered (14:10).
+
+---
+
+## Chat model — Tim, 25 Sep 2026, about 14:15
+
+**Tim: "go but keep opus 5.5 medium".** This chat stays on Opus 5.5 at medium effort (Tim's override of the
+prompt's Sonnet default, scope: this chat).
+
+## Pass 3, family 1: pipes and pits, batch 1 — 25 Sep 2026, 14:16
+
+### UX-PIPE-01 — "Keep separate" and "Keep as a free end" (design-pack Q6)
+
+**Tim: "Keep both (Recommended)".** Both stay: touching a pit but not joined, versus joined to nothing.
+
+### UX-PIPE-02 — Auto-join to the only matching pit within 75 mm (Q15)
+
+**Tim: "On (Recommended)".** On by default in a new drawing; never guesses between two pits; one U or Disconnect
+undoes it.
+
+### UX-PIPE-03 — Escape at the third point of CD (release-v3 queued item 12)
+
+**Tim: "Keep CE's rule (Recommended)".** Escape cancels the whole pipe; Enter gives the straight pipe (10 Sep rule
+confirmed).
+
+### UX-PIPE-04 — Recent values in the New Pipe window (release-v3 queued item 13)
+
+**Tim: "Yes, all three (Recommended)".** One-click recent diameter, material and invert buttons in the one-page
+New/Edit Pipe window, read from CE's existing saved recent lists. Build request (window build).
