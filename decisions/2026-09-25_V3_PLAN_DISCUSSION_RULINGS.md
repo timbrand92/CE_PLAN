@@ -69,3 +69,50 @@ about".**
    do not ask it again. Only an engineering choice that changes how a workflow behaves is asked, and only once.
 3. The four answers above stand as Tim gave them. Three confirm earlier rulings; CR-A3 changes R-05/R-20's
    rounding direction.
+
+---
+
+## How commands behave — 25 Sep 2026, 13:18
+
+The CDTAG question came from the release chat (release-v3 item 116, PR #209 held). The other three are CDPROFILE
+PR #187's open decisions 5, 4 and 2. Decision 1 (keep the old long-section instruction line) is covered by the
+standing rule that nothing is retired without Tim's yes; decision 3 was settled by CR-A3; decision 6 (one Review
+home) is still open.
+
+### UX-CDTAG-01 — CDTAG typed with nothing selected
+
+**Tim: "Ask me to pick (Recommended)".** The choice read: *Command line asks "Pick the downpipe or source to tag:",
+the way MOVE asks "Select objects". This was CE's rule until Codex's PR #209 changed it.*
+
+1. The old rule UC-CDTAG-PICK-01 **stands**: with nothing selected, CDTAG asks the drafter to pick the downpipe or
+   source.
+2. PR #209 (one message, then stop) is **not** what Tim wants for this case and should not be merged as built.
+
+### UX-PROFILE-05 — Long section update and the Pit Schedule
+
+**Tim: "Both together now".** The choice read: *The long section and the matching schedule rows update in one step.
+This needs a combined preview and one-Undo build first, so it arrives later either way.*
+
+1. When a long section is updated (CDPROFILE Apply), the Pit Schedule rows it touches update **in the same step**:
+   one preview showing both changes, one Undo for both.
+2. Tim chose this over "leave the schedule alone for now". It is a build request for the release chat, recorded in
+   `areas\civil-K-profiles-long-sections.md`. Until it is built, the schedule is not refreshed by CDPROFILE
+   (nothing silent is added in the meantime).
+
+### UX-CALC-APPROVE-01 — Who can approve a calculation
+
+**Tim: "Any CE user, recorded (Recommended)".** The choice read: *Anyone can approve. CE records their name, the
+time and the source they checked, and shows it on the sheet, e.g. "Approved by JS 25/09 14:05, source: rating
+report". Nothing is locked.*
+
+1. Any CE user may press Approve. No Engineer-mode lock (consistent with R-27).
+2. The approver's name, the time and the source reviewed are recorded and shown on the calculation output.
+
+### UX-CALC-OLDER-01 — Pump and WSUD calculators in CDCALC
+
+**Tim: "Under 'Older calculators' (Recommended)".** The choice read: *They move to an 'Older calculators' heading,
+read-only, until their rules are signed. The commands you use today to open them still work.*
+
+1. In CDCALC, the pump and WSUD calculators sit under an **Older calculators** heading, read-only, until their
+   rules are signed.
+2. Their existing opening routes keep working. Nothing is retired.

@@ -15,6 +15,10 @@ Profiles/long sections and plan-profile coordination (CDLPD). (From the area reg
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Source evidence exists; integration pending". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
+1. **CDPROFILE rebuild, PR #187:** merged in release train 3 and installed on Tim's PC in Civil 3.0.3 (release-v3 items 100-102). Not tested in AutoCAD by Tim; not Tim-accepted.
+2. **K-REQ-01 — REQUESTED BUILD (Tim, 25 Sep 2026, 13:18: "Both together now"):** when a long section is updated with CDPROFILE, the Pit Schedule rows it touches update in the same step, with one preview showing both changes and one Undo for both. Not built. For the release chat to schedule; needs its workflow card first (the combined preview and single-Undo Apply). Until built, CDPROFILE leaves the schedule alone. Ruling: `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md` UX-PROFILE-05.
+3. **PR #187 open decisions, answered 25 Sep 2026:** 1 kept by the standing no-retirement rule; 2 pump/WSUD under Older calculators (UX-CALC-OLDER-01); 3 orifice rounds down to whole mm (CR-A3); 4 any CE user approves, recorded (UX-CALC-APPROVE-01); 5 schedule updates with the section (UX-PROFILE-05). **6 (one Review home) still open.**
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
