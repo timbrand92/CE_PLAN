@@ -791,3 +791,11 @@ Cards in `04_REFERENCE\structural\cards\`.
    position on a compass pad; remembers the last pick; the 11 codes stay typed.
 4. **UX-STRUC-09, tags:** Tim: "Smart tag, picker as backup (Recommended)". Click a CE beam, column or footing: CE
    places the right tag on the side clicked; a small picker (object, over/under, side) for anything not recognised.
+
+### UX-STRUC-09b — Smart tagger learns placement from history (Tim, 25 Sep 2026, 23:46)
+
+**Tim, verbatim: "a smart text tagger which you select object and it automatically places tag correctly based off
+historical data would be great".** Extends UX-STRUC-09: select the object and CE places the tag (type, side, offset,
+rotation) the way CE's past drawings did it, learned from history (UX-LEARN-01 "past CE projects" and "your
+corrections"; client data stays local, only anonymised lessons shared). Every placement is previewed and one U; a
+moved tag is remembered as a correction.
