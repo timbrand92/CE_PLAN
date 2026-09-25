@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## CDTAG empty selection — UC 39.2 (25 September 2026, code review ready)
+
+1. **Candidate:** [PR #209](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/209), `codex/uc392-cdtag` at `60d11634`, ready for review. Three Civil Release builds have 0 errors; full net10 suite 11,072 passed / 6 known failures / 19 skipped. Code only: no AutoCAD, installation or Tim acceptance.
+2. **AutoCAD 2027 and 2024/net48, after a separately authorised release:** with nothing selected, type `CDTAG`. Expect one line: `Select one source, then run CDTAG again. Nothing was changed.` No block-pick or tag question and no drawing change. Select one downpipe, run `CDTAG` again and check its normal tag workflow still opens; Escape without changing it.
+
 ## Edit Pipe one-page New Pipe look — BUG-173 pipe (24 September 2026, awaiting release)
 
 1. **Candidate:** [draft PR #180](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/180), `codex/onepage-editpipe` tip `7e74c93d`. Every pipe-edit entry opens the one-page New Pipe layout titled Edit Pipe with Save, independent of the remembered workshop switch. Three Civil Release lanes built with zero errors; 345 focused checks passed. Four compiled dark/light New/Edit pictures were inspected at `docs/image/V3_WINDOWS/editpipe-onepage-*.png`. Full Civil suite awaits the release chat after 17:30. No AutoCAD, installation or Tim acceptance.
