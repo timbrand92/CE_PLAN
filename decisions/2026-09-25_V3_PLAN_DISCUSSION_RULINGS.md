@@ -1393,3 +1393,13 @@ Structural rulings (every typed code keeps working). **Tim: "Forever, as silent 
 merged command names keep working when typed, indefinitely, in Civil and Structural; they never appear in the
 ribbon, Help or tooltips. **Supersedes** the 5 Sep "for one release" limit (plugin repo
 docs/design/V3_UI/00C_TIM_REVIEW_2026-09-05.md, Help Centre row).
+
+### UX-D2-05b — Hover menu stopped; Structural objects planned (26 Sep 09:41)
+
+The release chat tried UX-D2-05 and stopped as instructed: in AutoCAD 2027 a hover menu applies per kind of object,
+so a CE menu on lines replaced AutoCAD's own on every line and three test runs aborted AutoCAD (BUG-159 class).
+Right-click while moving (Edit together / Edit this only / Disconnect) and a grip tooltip stand instead.
+
+**Tim: "Yes, plan it"** (recommended "Not now" not taken). Making Structural beams and columns CE's own kind of object
+(like Civil's one-piece pipe, C7) is added to the Structural plan as a **later, separate stage** with its own card and
+a 2027-first rollout; it would allow a safe hover menu. Not scheduled against the current D2 work.
