@@ -881,3 +881,17 @@ tree-zone radius from the report only).
    linked to its slab and outlet.
 4. **UX-SITE-04, slab boundaries from the background:** Tim: "Offer, you confirm (Recommended)". CE highlights closed
    outlines found in the architect's background as possible slabs; click to use; own pick or drawing still allowed.
+
+## Civil survey — 26 Sep 00:06 2026
+
+1. **UX-SURV-01, surface level from the survey:** Tim: "Fill it, marked "Survey" (Recommended)". Placing a pit fills
+   the existing surface level from the linked survey with the source word "Survey"; typing over it makes it
+   "manual"; no nearby survey level means Unknown, never a guess.
+2. **UX-SURV-02, revised survey:** Tim: "Compare and list effects (Recommended)". CE compares old and new surveys and
+   lists changes that affect the design, with Show where; the user chooses which to update, one U.
+3. **UX-SURV-03, spot levels:** Tim: "Shows existing, you type proposed (Recommended)". CDSL shows the survey level at
+   the clicked point and the user types the proposed level.
+4. **UX-SURV-04, survey approval:** Tim: "Any user, recorded (Recommended)". Whoever links the survey confirms the
+   survey and AHD datum; name and time recorded, shown in Project Review.
+
+**Civil families: all covered in the V3 plan discussion.**
