@@ -531,3 +531,15 @@ before Apply; one U undoes it.
    saved as a PDF in the job folder.
 4. **UX-REP-01 (Q70):** Tim: "Yes, with a warning (Recommended)". CDSYNC, CDREBUILD and similar stay typed-only with
    direct writes, starting with one line saying what they will change and that one U undoes it. No button.
+
+## Pass 3, batch: Darebin note, repair holding list, administrator — 25 Sep 2026, 15:49
+
+1. **CR-A2b (release chat's follow-up from the PR #228 review):** Tim: "Everywhere the orifice shows (Recommended)".
+   The Darebin note (Darebin's published 1.0 and the smaller hole it gives; CE draws the 0.6 hole) appears in
+   CDDESIGN's working, in CDCALC's Detention page and as a note under the drawn OSD table.
+2. **UX-REP-02 (Q72):** Tim: "A tab in Drawing Repair (Recommended)". The "Decide later" holding list is a tab in
+   Drawing Repair, with the count in its title.
+3. **UX-REP-03 (Q73):** Tim: "Administrator only (Recommended)". Anyone can resolve a parked item; only an
+   administrator can delete one outright, and CE records who and why.
+4. **UX-ADMIN-01 (Q68):** Tim: "Tim only (Recommended)". Tim is the only CE administrator on day one; adding someone
+   is done in Manager.
