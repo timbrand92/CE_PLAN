@@ -1,14 +1,13 @@
 # Drawing register, revisions and issue — command card (26 Sep 2026)
 
-**This is now a SHARED, whole-plugin card, not a Structural-only one (UX-REG-09, 26 Sep 2026, Tim: "Same
-workflow (Recommended)" — "Civil drawings use the Structural register, revision and issue workflow; a job with
-both disciplines shares one register").** Everything below was written for Structural first and is unchanged in
-substance; Civil now uses the identical workflow, register and issue authority — not a second, parallel one.
-The file name and its existing content stay as the detailed record; this note, §3a and §5 items 11-13 below are
-the Civil/whole-plugin additions. A pointer line for Civil readers is in
+**SHARED Civil + Structural card (UX-REG-09 refined, 26 Sep 2026).** Civil uses the same revision and issue
+workflow, but a Civil set has no register table or notes page. On a two-discipline job the Structural cover
+sheet's register lists the Civil sheets too; each discipline keeps its own revision sequence. A Civil-only job
+has no register. This replaces the earlier UX-REG-09 reading that implied a Civil register or one revision
+sequence. A pointer for Civil readers is in
 `04_REFERENCE\ux-plan\cards\README.md`.
 
-**Status: APPROVED-IN-PRINCIPLE.** Tim settled the whole register/revisions/issue workflow 25 Sep 2026 —
+**Status: APPROVED (plan only; not built, tested, installed or Tim-accepted).** Tim settled the register/revisions/issue workflow 25 Sep 2026 —
 rulings UX-REG-01 to 08 (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Structural register, revisions
 and issue" and "Structural register and issue, batch 2"), plus the multi-DWG combined-PDF answer recorded under
 "Structural cards (release chat, commit d65586a7)" in the same file — on top of the 14 Sep 2026 journey rulings
@@ -17,13 +16,13 @@ history and remembered decisions" sections of `STRUCTURAL_JOURNEY_RULINGS_2026-0
 Sep, closed-sheet writes). Priority set by Tim 25 Sep 2026 (UX-STRUC-06: register/revisions/issue is the second
 drawing-journey stage tackled after D1, after QA against the markup). **26 Sep 2026 addition:** UX-REG-09..12
 (`decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Issue and submission, Civil and whole plugin") extend
-this same card to cover the shared-register decision, one-click council submission packs, applying the office
+this same card to cover Civil issue, one-click council submission packs, applying the office
 plot style/pens at Issue, and a locked read-only DWG snapshot per issue — see §3a, §5 items 11-13, §6 and §8
-below. **Nothing here is built.** No code starts until Tim confirms the test drawing and checklist in section 7
-— approval-in-principle covers the workflow, not the build. This is journey stage 7 of 7 (`areas\structural.md`
+below. **Nothing here is built.** Approval covers the workflow; the representative drawing and checklist in
+section 7 remain the build gate. This is journey stage 7 of 7 (`areas\structural.md`
 UX plan note).
 **Read from:** `STRUCTURAL_JOURNEY_RULINGS_2026-09-14.md`, `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`
-(UX-STRUC-01, UX-REG-01 to 12), and the shipping CE Sheets code on `claude/struc-d1-prep`
+(UX-STRUC-01, UX-REG-01 to 15), and the shipping CE Sheets code on `claude/struc-d1-prep`
 (`Modules/Structural/Commands/SheetsCommands.cs`, `Modules/Structural/Models/CeSheetsModels.cs`,
 `Modules/Structural/Services/CeSheets*.cs`).
 
@@ -111,14 +110,17 @@ questions" below).
 ### 3a. Civil and whole-plugin additions, 26 September 2026 (UX-REG-09 to 12)
 
 `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Issue and submission, Civil and whole plugin — 26 Sep
-2026 01:07". **APPROVED-IN-PRINCIPLE**, same status as UX-REG-01 to 08.
+2026 01:07", refined by "Civil drawing sets: register and notes — 26 Sep 01:15". **APPROVED** as a plan.
 
-1. **UX-REG-09 — one shared register.** Tim: *"Same workflow (Recommended)".* Civil drawings use this exact
-   register, revision and issue workflow (UX-REG-01 to 08); a job with both Civil and Structural sheets shares
-   **one** register, not a Civil register and a Structural register kept in step. This directly answers the
-   "For the builder" open dependency this card already flagged (§ below, "Confirm whether Civil already owns a
-   shared sheet/issue system") — the answer is: no separate Civil system is to be built; Civil is a consumer of
-   this one.
+1. **UX-REG-09 — REFINED 26 Sep.** Tim: *"civil drawings are same as structural but the civil doesnt have drawing
+   register or notes page or it is added on structural drawings register".* Civil uses the same revision and
+   issue steps (UX-REG-01 to 08) but **has no register table and no notes page of its own**. On a job with both
+   disciplines, the Structural set's cover-sheet register lists the Civil sheets. Civil and Structural revisions
+   run separately: for example, **STR REV F + CVL REV G**. One dated issue folder may contain both sets as
+   separate PDFs or one combined PDF, as chosen in the preview. A Civil-only job has no register; its sheets
+   start at C01. The earlier 01:07 reading of UX-REG-09 as a shared register and shared revision sequence is
+   superseded by Tim's 01:15 clarification. One sheet list may supply both sets, but does not create a Civil
+   register.
 2. **UX-REG-10 — one-click council submission pack.** Tim: *"Yes, one pack (Recommended)".* One click builds a
    dated folder containing the drawing-set PDF, the computations sheet, the rating report and the LPD letter,
    named the way the selected council asks. The pack is **reviewed before it is made** (a preview of exactly
@@ -133,16 +135,28 @@ questions" below).
    Markup QA card's UX-QA-08 compare mode) reads from this snapshot rather than from whatever the drawing looked
    like at some remembered moment — giving that comparison a fixed, exact prior state to diff against.
 
+5. **UX-REG-13 — Check plot.** Tim: *"Yes (Recommended)".* A Check plot button plots the current selected set
+   with the issue plot settings, stamps every sheet **CHECK PLOT**, and writes a dated **CHECK PLOT** folder.
+   It does not change a revision, register or issued record.
+6. **UX-REG-14 — review marks.** Tim: *"Optional tick (Recommended)".* **Include review marks** is off by
+   default and prints QA markers on check plots only. Issue plots never print these markers.
+7. **UX-REG-15 — engineer mark-up.** Tim: *"Same button, \"For engineer\" option (Recommended)".* The same
+   Check plot button offers **For engineer mark-up**. Every plan is stamped **FOR ENGINEER REVIEW**; returned
+   mark-up feeds QA against the mark-up (`STRUC-MARKUP-QA_CARD_2026-09-26.md`). This is a review output,
+   without a revision or register change.
+8. **Council pack missing document — decided 26 Sep.** Tim: *"Warn and list it (Recommended)".* The pack
+   preview lists a missing document in amber and permits the pack to be built.
+
 ### 4. What Tim already ruled 14 September 2026 — not asked again
 
 **Setup and register (batch 1, item 10; and the dedicated register/revisions/issue batches):**
 
-1. Maintain one shared sheet list; update the drawing register when sheets are added, renamed, reordered or
-   removed.
+1. Maintain one shared sheet list; update the **Structural** cover-sheet register when sheets are added,
+   renamed, reordered or removed. Civil sheets appear there on two-discipline jobs; no Civil register is made.
 2. CE suggests sheets affected by an issue or change; you confirm which sheets actually receive a new revision.
 3. Unchanged sheets keep their existing revision and date — a set-wide issue date must never overwrite them.
-4. Apply the confirmed revision and date to affected title blocks and the register together, through one shared
-   sheet/issue authority (do not build a second register for Structural alone).
+4. Apply the confirmed revision and date to affected title blocks and, where present, the Structural register
+   together, through one sheet/issue authority. Keep Civil and Structural revision sequences separate.
 5. Preliminary revisions typically progress P1, P2, P3 and then A — but the sequence depends on the job, and
    some jobs use **T1, T2, etc. for a tender issue before A.** Never hard-code a fixed P-to-T-to-A sequence or a
    fixed number of preliminary/tender issues.
@@ -179,13 +193,15 @@ drawing to its pre-acceptance state.
 
 ### 5. Keep / Modify / Rebuild / Missing, step by step
 
-1. **The shared sheet list, scanning, renaming and reordering — Keep.** Already matches the ruling; no changes
-   asked for in this card.
+1. **The shared sheet list, scanning, renaming and reordering — Keep / Modify.** Keep one source of sheet
+   identity. Modify register output so only the Structural cover sheet carries a table; include Civil sheets
+   there on two-discipline jobs. Do not create a table or notes page for a Civil-only job.
 2. **Closed-sheet writes with a notice — Keep.** Already matches UX-STRUC-01 exactly; nothing to change.
-3. **Combined PDF — Modify, Tim-confirmed 25 Sep.** Change from "one combined PDF per DWG" to "one combined PDF
-   for the whole issue, sheets in register order" (Tim: *"One PDF, register order (Recommended)"*), with the
-   option to select a smaller set (item 9 above). This is the one clear functional change to existing, working
-   code, and this card's own Open question 1 as first drafted is now resolved by that answer.
+3. **Combined PDF — Modify, Tim-confirmed 25 Sep and refined 26 Sep.** For a Structural issue, change from
+   "one combined PDF per DWG" to one PDF for the whole issue, sheets in Structural register order (Tim:
+   *"One PDF, register order (Recommended)"*). A two-discipline issue may be separate Civil and Structural
+   PDFs or one combined PDF, chosen in the preview, in one dated folder. A Civil-only issue has a PDF but no
+   register order; use the confirmed sheet-list order. The earlier multi-DWG question is resolved.
 4. **The Issue record and its sheet snapshots — Keep**, extended (not rebuilt) to carry: the suggested-affected-
    sheets list and your confirmation of it, the issue preview data, and the revision description text.
 5. **Suggested affected sheets — Missing.** New: work out which sheets a confirmed drawing change (or a
@@ -209,7 +225,8 @@ drawing to its pre-acceptance state.
     drawing-set PDF + computations sheet + rating report + LPD letter, named per council. New: a pack builder
     that reads the same issue folder/PDF this card already produces, plus the D+F card's computations-sheet
     export (`DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md` §2.9) and the rating report/LPD letter already on
-    file for the job, with a preview before the pack is written and no send action anywhere in CE.
+    file for the job, with a preview before the pack is written and no send action anywhere in CE. List each
+    missing document in amber; allow a partial pack to be built (Tim, UX-REG-10 follow-up).
 12. **Office plot style/page setup/pens applied and checked at Issue (UX-REG-11) — Missing.** `CeSheetsIssueService`/
     `CeSheetsPdfPublisher` plot from whatever plot style and page setup each sheet already carries; nothing
     compares that against an office Settings standard or flags a mismatch in the issue preview today. New: a
@@ -220,6 +237,14 @@ drawing to its pre-acceptance state.
     New: save a locked, read-only DWG snapshot into the dated issue folder at issue time, and point the existing
     revision-cloud "what changed since last issue" comparison (§5 item 7, UX-QA-08-based) at this snapshot as
     its fixed prior state, rather than a remembered in-memory state that a later drawing edit could disturb.
+14. **Separate discipline revisions and Structural-only register — Modify.** Extend the existing issue record
+    to hold the Civil and Structural revision choices independently. Render the register on the Structural
+    cover sheet only, listing Civil sheets there on two-discipline jobs. A Civil-only set has no register or
+    notes page.
+15. **Check plot and engineer mark-up — Missing.** Add the button and its two review outputs using Issue's
+    plot settings, with stamps and a dated CHECK PLOT folder. Review marks are off by default and may print on
+    check plots only. Neither route changes an issue, revision or register. Returned engineer mark-up enters
+    the Markup QA card's intake, not a second QA route.
 
 ### 6. The full experience
 
@@ -228,15 +253,17 @@ drawing to its pre-acceptance state.
 2. **Trigger:** the existing "scan → edit → Update Drawings → Publish" spine; this card adds an **Issue** step
    between Update Drawings and Publish, and folds today's direct-to-Publish flow into it.
 3. **Prompts:** confirm the affected-sheets suggestion; confirm or edit the proposed revision description;
-   confirm the combined-PDF sheet set (full set by default, per item 9 above).
+   choose Civil, Structural or both and separate or combined PDFs when both are present. Confirm the sheet set
+   (full current set by default). Civil and Structural revision choices are shown separately.
 4. **Selection:** none required beyond the confirmations above — CE Sheets already knows every sheet from its
    scan.
-5. **Preview:** the issue preview (sheets, revisions, dates, unresolved QA) before anything plots; revision
+5. **Preview:** the issue preview (sheets, discipline-specific revisions, dates, unresolved QA) before anything plots; revision
    clouds/triangles preview on the affected sheets before they are committed to the title block and register.
 6. **Drawing output:** revision clouds/triangles on the drawing (new, no-plot-safe layer per the existing CE
    convention — review highlights never print, but an accepted revision cloud is a real, plotted annotation, not
    a review highlight — these are different things and must not share a layer); the title block and register
-   revision/date fields (existing); the combined PDF (existing, changed to job-wide).
+   revision/date fields (existing); the Structural register where one exists; the chosen PDF output. Civil
+   receives no register table or notes page.
 7. **Cancel / Escape:** leaves the drawing, register and any prior issue exactly as they were.
 8. **One Undo:** accepting an issue (title block writes, register update and revision cloud placement together)
    is one Undo, as already ruled (14 Sep, "Whole-plan proposal" item 6).
@@ -250,6 +277,12 @@ drawing to its pre-acceptance state.
     read-only DWG snapshot (UX-REG-12) automatically, no separate step; the one-click council submission pack
     (UX-REG-10) is a distinct, explicit action a drafter chooses afterwards — reviewed in its own preview,
     never bundled silently into Issue itself, and never sent by CE.
+12. **Check plot (UX-REG-13..15):** from the Sheets window or Project Review, choose **Check plot** for the
+    current set. The preview shows issue plot settings, dated CHECK PLOT folder, stamp and whether **Include
+    review marks** is ticked (off by default). **For engineer mark-up** uses the same button and stamps every
+    plan FOR ENGINEER REVIEW. Cancel/Escape writes no plot; neither route advances a revision, changes the
+    Structural register or creates an issue. Returned mark-up enters the Markup QA workflow. Save/reopen leaves
+    the last issued state unchanged; output files remain in their review folder.
 
 ### 7. Example drawing and checklist
 
@@ -263,7 +296,13 @@ drawing to its pre-acceptance state.
    double-advancing the revision.
 4. **Automated guard:** issuing Revision C replaces Revision B's clouds/triangles with B-to-C changes only;
    the issued Revision B PDF itself is untouched in the job's issue history.
-5. **Tim's AutoCAD checklist, once built:**
+5. **Automated guard:** a Civil-only issue makes no register or notes page. A combined issue lists Civil
+   sheets in the Structural register, keeps STR and CVL revisions independent, and produces the chosen
+   separate or combined PDF arrangement in one dated folder.
+6. **Automated guard:** Check plot and For engineer mark-up use the issue plot settings and correct stamp,
+   leave revision/register/issue history unchanged, and print review marks only when the check-plot tick is
+   selected. A normal Issue never prints review marks.
+7. **Tim's AutoCAD checklist, once built:**
    - Open the job, change S03 only, run Issue: CE suggests "S03" as the affected sheet (not S01/S07); confirm.
    - Preview shows S03 at the new revision, S01/S07 unchanged, and any open QA items listed.
    - Publish: one combined PDF containing all three sheets; S03 carries a revision cloud/triangle around the
@@ -271,6 +310,11 @@ drawing to its pre-acceptance state.
    - Close AutoCAD, reopen the job later: the issue history, revisions and clouds are exactly as issued.
    - Repeat with one sheet closed in AutoCAD at issue time: CE writes to it and tells you plainly which sheet it
      touched while closed (per UX-STRUC-01, already built — confirming, not new work).
+   - Check plot the current set, first without and then with **Include review marks**. Every page says CHECK
+     PLOT; only the second output shows QA markers. Choose **For engineer mark-up** and check every page says
+     FOR ENGINEER REVIEW. Reopen the issue history: revisions and register are unchanged.
+   - On a fabricated two-discipline set, issue STR REV F + CVL REV G and choose separate PDFs, then preview a
+     combined-PDF issue. Civil sheets appear only in the Structural register; Civil has no notes page.
 
 ### 8. Slices, smallest first
 
@@ -294,6 +338,12 @@ drawing to its pre-acceptance state.
 9. **Slice 9 — one-click council submission pack (UX-REG-10).** The largest of the additions — depends on the
    D+F card's computations-sheet export and the rating report/LPD letter already being on file for the job;
    sequence after this card's own Slice 1 (job-wide PDF) since the pack includes that PDF.
+10. **Slice 10 — separate Civil and Structural issue state.** Use the existing sheet list for both sets; make
+    the Structural register include Civil sheets where relevant, omit a Civil register/notes page, and show two
+    independent revision sequences. Let one folder carry separate or combined PDFs.
+11. **Slice 11 — Check plot.** Plot the selected current set with issue settings and CHECK PLOT stamps into a
+    dated review folder, without advancing issue state. Add the off-by-default review-mark tick; then add the
+    FOR ENGINEER REVIEW variant and link returned mark-up to Markup QA.
 
 ### Open questions
 
@@ -307,11 +357,8 @@ Genuinely unsettled build details only — the multi-DWG combined-PDF question f
 2. **Where does the office's revision-sequence convention (P1/P2/P3/A vs a T-series) get set for a given job —
    Settings default, or a per-job choice at first issue?** *Recommended: a Settings default (R-00) that a job
    can override once, at its first issue, then locked for that job's own sequence so it cannot drift mid-job.*
-3. **What exactly does a council's submission pack contain when the job is missing one of the four named
-   pieces (UX-REG-10)** — e.g. no LPD letter obtained yet, or no rating report for a job that doesn't need one?
-   *Recommended: the pack preview lists every piece it will include and names any of the four that is missing
-   rather than silently omitting it or blocking the whole pack — the drafter decides whether to proceed with a
-   partial pack, consistent with R-27 (warn, don't hard-block).*
+3. **RESOLVED — missing submission document (UX-REG-10).** Tim: *"Warn and list it (Recommended)"* (26 Sep).
+   The pack preview lists missing pieces in amber and permits the partial pack. Do not silently omit them.
 4. **What counts as a "differently set up" sheet for UX-REG-11's flag** — any deviation at all from the office
    plot style/page setup/pens, or only a deviation that would visibly change the plotted output (e.g. a
    different pen-to-lineweight mapping vs. a cosmetically identical but differently-named plot style)?
@@ -371,10 +418,12 @@ Genuinely unsettled build details only — the multi-DWG combined-PDF question f
    for revision N is never modified.
 5. `CeSheetsActiveDocViewGuard` coverage extends to any new issue-time read/write this card adds — no new code
    path may change a colleague's open-drawing view, layout tab or UCS.
+6. Check plot, engineer mark-up and a partial council pack leave the last issued revision and register
+   unchanged; the pack preview lists missing documents in amber and still permits Build.
 
 ### Open dependencies before a builder starts
 
-1. Tim's answers to the four Open questions above.
+1. The remaining build-detail questions above (cloud scope, revision convention and plot-setting mismatch).
 2. The revision-cloud comparison engine should reuse the Markup QA card's drawing-to-drawing compare (UX-QA-08,
    slice 6 of that card) rather than be built twice — sequence this card's slice 5 after that one lands, and
    once slice 7 (UX-REG-12 snapshot) exists, point the comparison at the locked snapshot rather than a
@@ -382,11 +431,10 @@ Genuinely unsettled build details only — the multi-DWG combined-PDF question f
 3. The issue-time unresolved-QA gate (this card's slice 6) reads the Markup QA card's item-state model directly
    — needs that card's slice 1 (the state model) before this card's slice 6 can start, though slices 1-4 here
    are independent and can proceed first.
-4. **RESOLVED 26 Sep 2026 (UX-REG-09):** Civil does not own, and must not build, a separate sheet/issue system —
-   Civil uses this exact register/revision/issue workflow, one shared register per job across both disciplines.
-   The "Shared owner note" above is now confirmed, not merely flagged. Any Civil-side sheet/issue code found to
-   exist independently before slice 1 starts should be checked against this ruling and reported to Tim, not
-   quietly kept as a second path.
+4. **REFINED 26 Sep 2026 (UX-REG-09):** Civil and Structural use the same issue workflow and sheet authority.
+   The Structural register lists both disciplines on a two-discipline job; Civil has no register or notes page,
+   including on Civil-only jobs. Revisions remain independent. Check any existing Civil-side issue code against
+   this ruling before Slice 1.
 5. Slice 9 (council submission pack, UX-REG-10) depends on the D+F card's computations-sheet export
    (`DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md`, APPROVED) and on the rating report/LPD letter already
    being on file for the job — confirm both are reachable from the issue folder's job context before slice 9

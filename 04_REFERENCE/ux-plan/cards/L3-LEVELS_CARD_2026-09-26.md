@@ -1,12 +1,16 @@
 # L3-LEVELS workflow card — Level 3 proposal 1: levels and grades for a drawn network
 
-**DRAFT · awaiting Tim's approval before any code starts.** Not built, tested in AutoCAD, installed or
+**APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal 1:
 levels for a drawn network — 26 Sep 00:55 2026" (UX-L3-03..06), read together with "Level 3: Civil design
 proposals — 26 Sep 00:52 2026" (UX-L3-01, UX-L3-02) which sets this as build order item (1) of four, and
 `decisions/2026-09-23_HOLD_GRADE_HOLD_LEVELS.md` (Hold grade / hold levels, 23 Sep 2026), which this proposal
-builds on. **APPROVED-IN-PRINCIPLE** wherever Tim's own ruling settles the point (marked below); only genuinely
-unsettled points are left OPEN.
+builds on. The release-chat decisions below close the named workflow choice; remaining build details are
+still OPEN.
+
+**Decision and implementation call (26 Sep):** Tim: *"Top of every branch (Recommended)"* (UX-L3-03
+clarification). Minimum cover applies at the highest pit of **every** branch; branches meet at junction pits.
+**IMPLEMENTATION CALL, not Tim's words:** Hold grade is a fixed control when CDRUNSOLVE is extended.
 
 ## 1. What Tim ruled, and what it builds on
 
@@ -85,9 +89,8 @@ client name or site address was opened.
 ## 3. The full experience, with today's state and the intended result
 
 1. **Ribbon/trigger — Modify.** Today: CDRUNSOLVE is a typed/ribbon command a drafter runs explicitly per run
-   (start pit → end pit). Intended: the same trigger point, offered as a Level 3 proposal — either the same
-   CDRUNSOLVE entry point extended to hold Fixed pits, or a clearly related "Design levels for this network"
-   entry beside it (OPEN 5 below). No new hydraulics either way.
+   (start pit → end pit). Intended: extend CDRUNSOLVE to hold Fixed pits and Hold grade, and offer the result
+   as the Level 3 proposal. No new hydraulic authority is created.
 2. **Prompts — Keep, unchanged.** Start pit pick, then end pit pick/Enter for natural end, exactly as
    CDRUNSOLVE does today.
 3. **Selection — Modify.** Today CDRUNSOLVE only ever treats the two ends (start, LPD/chosen end) as fixed.
@@ -155,18 +158,13 @@ client name or site address was opened.
 4. **Slice 4 — ghost invert labels on the plan.** Feed the run-solve was/now rows into `EditGhostPlan`
    (`GhostKind.Text`/`Leader`) so the drafter sees the proposal on the drawing while the list is open
    (UX-L3-05, first half).
-5. **Slice 5 — entry point and wording.** Settle OPEN 5 below and wire the chosen entry point; this is
+5. **Slice 5 — entry point and wording.** Extend CDRUNSOLVE per the implementation call; this is
    presentation only once Slices 1-4 exist.
 
 ## 7. OPEN questions, each with a recommended answer
 
-1. **OPEN — what exactly counts as a "top pit" whose minimum cover is held, when a run branches?** UX-L3-03's
-   wording ("hold the outlet/LPD invert and minimum cover at the top pits") reads naturally for one straight
-   run (CDRUNSOLVE's existing shape); it is less obvious for a branching network. *Recommended:* run the
-   existing CDRUNSOLVE engine once per branch feeding the same LPD/outlet (each branch's own topological start
-   pits are its "top pits"), and present every branch's was/now rows together in one combined review — this
-   reuses the existing single-run engine rather than building a new whole-network solver, consistent with
-   UX-L3-02 putting this proposal first because it "builds on Solve Run."
+1. **DECIDED — top pit of every branch.** Tim: *"Top of every branch (Recommended)"* (26 Sep). Hold minimum
+   cover at each branch's highest pit; branches meet at junction pits. Present all branches in one review.
 2. **OPEN — does "impossible" mean only a Fixed-level conflict (CV-02 HD9), or also a grade-table/cover
    breach with no Fixed conflict?** *Recommended:* both — reuse `NetworkDesignService`'s existing `Feasible`
    flag and cover/grade notes as the single source of "impossible," exactly as CDCALC/CDEDIT/Inspector already
@@ -181,8 +179,5 @@ client name or site address was opened.
    when a drafter drags one pipe end; L3-LEVELS is a separate, explicit, on-demand whole-run design action
    (like CDRUNSOLVE today) that a drafter chooses to run — the two never fire on the same edit at the same
    time, so there is no conflict to arbitrate.
-5. **OPEN — ribbon/menu entry point: extend CDRUNSOLVE itself, or add a new command beside it?** Not covered
-   by UX-L3-02/03 (build order only, not UI placement). *Recommended:* extend CDRUNSOLVE — it is already the
-   Solve Run Inverts button on the Review panel (UX-RIBBON-02, "keep all three"), already does the walk/solve/
-   preview/apply mechanics, and Tim's own UX-L3-02 language ("building on Solve Run") reads as one capability
-   growing, not two buttons for the same job. Needs Tim's yes before Slice 5.
+5. **IMPLEMENTATION CALL — extend CDRUNSOLVE.** Hold grade is a fixed control within that route. This is the
+   card's implementation recommendation adopted in the release-chat decision record, not Tim's wording.

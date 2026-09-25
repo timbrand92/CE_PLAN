@@ -1,11 +1,12 @@
 # L3-SOURCES workflow card — Level 3 proposal 2: downpipes and source placement
 
-**DRAFT · awaiting Tim's approval before any code starts.** Not built, tested in AutoCAD, installed or
+**APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal 2:
 downpipes and sources — 26 Sep 00:58 2026" (UX-L3-07..10), read together with UX-L3-01/02 (scope and build
 order — this is build item (2), after L3-LEVELS) and `UX-SRC-05` (CDRG and DP placement, 26 Sep 00:24, "not
-pipe dependent... placed prior to pipes connecting them"). **APPROVED-IN-PRINCIPLE** wherever Tim's own ruling
-settles the point; only genuinely unsettled points are left OPEN.
+pipe dependent... placed prior to pipes connecting them"). **APPROVED** as a plan wherever Tim's own ruling
+settles the point; remaining build details are OPEN. **IMPLEMENTATION CALL, not Tim's words:** downpipe
+numbering defaults to the learned pattern; the other two orders remain one click away.
 
 ## 1. What Tim ruled, and what it builds on
 
@@ -16,8 +17,7 @@ settles the point; only genuinely unsettled points are left OPEN.
    jobs for the user to pick; never guessed silently.
 3. **UX-L3-09 (numbering):** Tim, his own words: **"all option available"** — all three orders are offered as a
    choice in the preview: the learned office pattern, clockwise from the front left, and the order placed;
-   renumber with one click. **Default pre-selection is explicitly not ruled** — Tim's own record says so; this
-   card recommends the learned pattern (§7 OPEN 1).
+   renumber with one click. The default learned pattern is an **implementation call**, not Tim's wording.
 4. **UX-L3-10 (preview):** "Ghost DPs + lines to destination" — ghost DP symbols with a thin line to the
    tank/pit and the catchment area; accept all or per DP; one Undo.
 5. **Builds on:** `UX-SRC-05` — CDRG (raingarden/grated inlet) and DP are placed like pits: anywhere, **before**
@@ -145,15 +145,14 @@ client name or site address was opened.
    DPs (UX-L3-07, second branch), feeding the same read-back learning path as Slice 2 once UX-LEARN-01 exists.
 4. **Slice 4 — ghost preview, was/now/why list, per-DP accept.** Reuse `EditGhostPlan` and the extended
    `ProposalPreviewDialog` from L3-LEVELS Slice 3/4 (UX-L3-10) — shared UI work, not duplicated.
-5. **Slice 5 — numbering choice and one-click renumber.** All three orders, default pre-selection per OPEN 1
+5. **Slice 5 — numbering choice and one-click renumber.** All three orders, default to the learned pattern
    below (UX-L3-09).
 
 ## 7. OPEN questions, each with a recommended answer
 
-1. **OPEN — default numbering pre-selection.** Tim's own ruling explicitly leaves this unruled ("Default
-   pre-selection not ruled — this chat suggests the learned pattern"). *Recommended, as Tim's own record
-   already suggests:* pre-select the learned office pattern, with clockwise-from-front-left and order-placed
-   both one click away — needs Tim's yes, not assumed from silence.
+1. **IMPLEMENTATION CALL — default numbering.** Pre-select the learned office pattern, with
+   clockwise-from-front-left and order-placed both one click away. This is the release-chat implementation
+   call, not Tim's wording.
 2. **OPEN — what layer/block-name patterns count as "the architect's DP symbols"?** These vary office to
    office and job to job; nothing today recognises them. *Recommended:* a Settings-held, editable list of known
    patterns (seeded from real jobs, confirmed per pick, extended by correction over time) rather than one fixed

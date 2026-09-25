@@ -1,11 +1,11 @@
 # L3-NETWORK workflow card — Level 3 proposal 4: full network layout
 
-**DRAFT · awaiting Tim's approval before any code starts.** Not built, tested in AutoCAD, installed or
+**APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal 4:
 full network layout — 26 Sep 01:01 2026" (UX-L3-15..18), plus UX-L3-19/20 (visual proposals and the approved
 chooser sketch, shared with `L3-DETENTION_CARD_2026-09-26.md`). Read together with UX-L3-01/02 (scope and build
-order — this is build item (4), **last**, after L3-LEVELS, L3-SOURCES and L3-DETENTION). **APPROVED-IN-PRINCIPLE**
-wherever Tim's own ruling settles the point; only genuinely unsettled points are left OPEN.
+order — this is build item (4), **last**, after L3-LEVELS, L3-SOURCES and L3-DETENTION). Remaining build
+details are OPEN. Tim: *"Say so, offer nothing (Recommended)"* before enough past jobs are learned.
 
 ## 1. What Tim ruled, and what it builds on
 
@@ -144,10 +144,9 @@ client name or site address was opened.
 2. **Slice 2 — gap listing over an existing partial network.** Walk the drawing's current pits/pipes/sources
    and produce a plain list of what a complete network would still need, with Unknown for anything the
    available inputs can't determine (UX-L3-15). No route geometry proposed yet.
-3. **Slice 3 — one learned route/layout option, feasibility-checked.** The first candidate layout, built from
-   whatever learning path UX-L3-16 lands on (or a clearly-labelled seed pattern if learning isn't ready yet —
-   see OPEN 1), validated through `NetworkDesignService` and the shared clash check (reusing L3-DETENTION Slice
-   2) before being shown.
+3. **Slice 3 — one learned route/layout option, feasibility-checked.** Wait until enough past jobs have been
+   learned. Until then, say so and offer no layout. Validate a learned candidate through
+   `NetworkDesignService` and the shared clash check (reusing L3-DETENTION Slice 2) before showing it.
 4. **Slice 4 — 2-3 options side by side.** Extend Slice 3 to produce genuinely different candidate layouts, not
    the same one shown three times (UX-L3-17; see OPEN 3 on what varies between them).
 5. **Slice 5 — build-around-existing-work with separately ticked changes.** The full UX-L3-18 behaviour: new
@@ -156,12 +155,9 @@ client name or site address was opened.
 
 ## 7. OPEN questions, each with a recommended answer
 
-1. **OPEN — what does this card do if UX-LEARN-01's read-back path (routes learned from past drawings) is not
-   yet built when this card's turn comes up in the build order?** UX-L3-16 explicitly rules out a fixed
-   geometric substitute rule. *Recommended:* do not build a permanent fixed-rule fallback; if L3-NETWORK's build
-   slot arrives before UX-LEARN-01 exists, either wait or ship Slice 2 (gap listing) alone, clearly labelled as
-   incomplete until the learned-route piece lands — consistent with never silently guessing a rule Tim didn't
-   set.
+1. **DECIDED — insufficient learned examples.** Tim: *"Say so, offer nothing (Recommended)"* (26 Sep).
+   State that too little has been learned and show no network layout option. Do not use a fixed geometric
+   substitute rule or a guessed route.
 2. **OPEN — should the combined footings/services/easement/tree-zone clash check be one shared engine across
    L3-DETENTION and L3-NETWORK, built once?** Both cards need the identical checks. *Recommended:* yes — build
    it once as part of L3-DETENTION's Slice 2 (it is needed there first, per the build order) and have this

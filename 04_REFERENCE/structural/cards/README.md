@@ -33,17 +33,24 @@ Written 26 Sep 2026 from `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, `
    details remain open.
 3. **[STRUC-REGISTER-ISSUE_CARD_2026-09-26.md](STRUC-REGISTER-ISSUE_CARD_2026-09-26.md)** — one shared drawing
    register, suggested affected sheets, one combined PDF per issue, revision clouds/triangles after Revision A
-   showing only the current changes. Status: **APPROVED-IN-PRINCIPLE** — Tim settled the whole workflow 25 Sep
-   2026 (UX-REG-01 to 08, plus the multi-DWG combined-PDF answer); only build-level details remain open. Records
+   showing only the current changes. Status: **APPROVED** — Tim settled the workflow 25-26 Sep
+   2026 (UX-REG-01 to 15, including the refined Civil set and Check plot); build-level details remain open. Civil
+   has no register or notes page; the Structural register lists Civil sheets on combined jobs, with separate
+   revision sequences. Records
    that CE Sheets is already a mature, mostly-working system for scan/register/closed-sheet writes/publish — this
    card is mostly about the gaps (job-wide combined PDF, affected-sheet suggestions, revision clouds), not a
    rebuild.
-4. **[STRUC-ARCH-BACKGROUND_CARD_2026-09-26.md](STRUC-ARCH-BACKGROUND_CARD_2026-09-26.md)** — preparing the
-   architect's DWG into an aligned, correctly coloured Xref background before structural drafting starts.
+4. **[STRUC-ARCH-BACKGROUND_CARD_2026-09-26.md](STRUC-ARCH-BACKGROUND_CARD_2026-09-26.md)** — shared Civil +
+   Structural background preparation, including a separate Civil colour/visibility preset, changed-Xref
+   comparison and relative-path repair.
    Status: **PLANNING ONLY** — blocked on an evidence gate: real prepared Xrefs from two to three more
    representative jobs must be read (read-only, headless, SHA256-verified, never a real client file copied into
    a repo) before the cleanup/alignment/colour-override rules can be specified, let alone built. One example job
    was read 14 Sep 2026; the record is explicit that one example is not enough to generalise from.
+5. **[STRUC-COMPS_CARD_2026-09-26.md](STRUC-COMPS_CARD_2026-09-26.md)** — Design this member from drawing
+   evidence, traced loads, confirmed wind/geotech basis, previewed size/schedule change and the shared CE
+   computations sheet. **DRAFT PLAN**; numerical design methods and clauses need engineer sign-off. Build order:
+   timber beams/lintels, footings/slabs, steel, bracing/tie-downs.
 
 ## Reading order
 
@@ -54,7 +61,7 @@ these on its own track (it changes discovery and presentation, not drawing behav
 get blocked by the other three). The detail browser (journey stage 5) was not ticked as a near-term priority and
 has no card here yet.
 
-## Open questions across all four cards, with recommendations
+## Open questions across the original four cards, with recommendations
 
 Compact list; each card carries the full reasoning for its own items. Items Tim has since answered (25 Sep
 2026) are marked **ANSWERED** and kept here for traceability rather than deleted; each card itself has already

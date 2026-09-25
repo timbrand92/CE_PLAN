@@ -1,14 +1,14 @@
 # L3-DETENTION workflow card — Level 3 proposal 3: detention and tank layout
 
-**DRAFT · awaiting Tim's approval before any code starts.** Not built, tested in AutoCAD, installed or
+**APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal
 3" territory — UX-L3-11..14 (detention/storage specifics), UX-L3-19 (visual proposals, "detention and storage
 as well as the full design"), UX-L3-20 (chooser sketch approved) and UX-L3-21 (learned from previous jobs).
 Read together with UX-L3-01/02 (scope and build order — this is build item (3), after L3-LEVELS and
 L3-SOURCES, "after the approved calculations card") and the already-**APPROVED** D+F card
 `04_REFERENCE\civil-D-F\DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md`, which this card builds on rather than
-repeats. **APPROVED-IN-PRINCIPLE** wherever Tim's own ruling settles the point; only genuinely unsettled points
-are left OPEN.
+repeats. Remaining build details are OPEN. **IMPLEMENTATION CALL, not Tim's words:** “Draft” means the
+calculation is not approved or not yet issued; show the reason plainly.
 
 ## 1. What Tim ruled, and what it builds on
 
@@ -232,12 +232,9 @@ client name or site address was opened.
    in the codebase today. *Recommended:* a Settings-held list of recognised layer/block-name patterns (footing
    outlines, service trenches/pits from a services background), confirmed per job the same way `UX-SITE-04`
    already confirms background-derived slab outlines — consistent with R-00, not a fixed guess.
-4. **OPEN — does "Draft: calculation not approved" mean the D+F calculation is not yet Issued (DF card
-   `UX-CALC-03`), or some separate engineering-rule sign-off (like CV-02A4's future rule-pack approval)?** The
-   coordinator's wording distinguishes "approved" from Issue, but no separate approval concept exists for
-   detention calculations today. *Recommended:* treat "approved" as "Issued" here — reuse the DF card's exact
-   existing draft-state wording and its Issue step (`UX-CALC-03`) rather than inventing a second approval
-   concept; needs Tim's confirmation since it is genuinely ambiguous.
+4. **IMPLEMENTATION CALL — Draft state.** “Draft” means not approved or not issued. Reuse the D+F sheet's
+   **DRAFT — NOT FOR CONSTRUCTION** wording and say which state is missing; do not imply an issued sheet is
+   engineer-approved merely because someone pressed Issue.
 5. **OPEN — what does "issued without later drainage redraws" (UX-L3-22, signal c) actually compare?** No
    revision-to-revision drainage-geometry comparison exists today. *Recommended:* compare each issued
    revision's stored drainage geometry (pipes/pits/detention) against the next issued revision for the same

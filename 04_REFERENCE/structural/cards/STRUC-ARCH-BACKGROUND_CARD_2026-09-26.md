@@ -1,4 +1,13 @@
-# Structural architectural background preparation — command card (draft, 26 Sep 2026)
+# Shared Civil + Structural architectural background preparation — command card (draft, 26 Sep 2026)
+
+**Shared Civil + Structural scope, UX-XREF-01..03 (Tim, 26 Sep 2026).** Both disciplines prepare an architectural
+Xref through this workflow. Civil has its own colour/visibility preset, to be learned from past Civil drawings.
+Changed backgrounds are offered for comparison in both disciplines; broken paths are offered for repair on
+opening. The evidence gate below now includes Civil jobs. Only generic findings may enter this repository
+(DATA-01).
+
+Tim's answers: UX-XREF-01 *"Notice and offer compare (Recommended)"*; UX-XREF-02 *"Same workflow
+(Recommended)"*; UX-XREF-03 *"Offer to repair (Recommended)"*.
 
 **Status:** DRAFT — **planning only; real prepared Xrefs must be studied before any behaviour in this card is
 built.** Priority set by Tim 25 Sep 2026 (UX-STRUC-06: background preparation is the third drawing-journey stage
@@ -21,9 +30,8 @@ DWG-content half (item 9) is also satisfied. This is journey stage 2 of 7 (`area
 
 ### 1. What this card covers
 
-1. **The very start of a Structural job:** turning the architect's DWG into a clean, aligned, correctly
-   coloured Xref background you can drop structural drafting on top of — before any beam, column or footing is
-   drawn.
+1. **The start of a Civil or Structural job:** turn the architect's DWG into a clean, aligned, correctly
+   coloured Xref background before drawing pits, beams or other discipline work.
 2. **Why this is last of the three priority stages, not first:** the 14 Sep record is explicit that the exact
    cleanup rules, level-separation rules and colour-override rules **must be learned from actual prepared
    Xrefs**, not invented from a general description. One example job was read once, read-only, on 14 Sep — that
@@ -94,6 +102,11 @@ DWG-content half (item 9) is also satisfied. This is journey stage 2 of 7 (`area
     title **and hatches** together, with preview and editable inclusion.
 
 ### 4. The evidence gate — what has to happen before this card can leave "planning only"
+
+**Civil included (UX-XREF-02, 26 Sep):** the example-job study must include prepared backgrounds used by
+Civil drawings as well as Structural drawings. Learn the Civil colour/visibility preset from those examples;
+do not copy the Structural preset by assumption. Read-only study only, generic findings here, no client
+name, site address, job identifier or private drawing content in this repository (DATA-01).
 
 This is the one thing this card asks Tim to help move, not a normal Open question — it blocks everything else in
 section 6.
@@ -212,10 +225,18 @@ No DWG was opened or parsed this round. Job identities, folder paths, addresses 
 9. **Revised-background overlay/compare/rebuild — Missing.** New; depends on the same comparison thinking as the
    Markup QA card's UX-QA-08 (drawing-to-drawing compare) — likely the same underlying engine applied to
    backgrounds instead of structural content.
+10. **Civil colour and visibility preset — Missing.** Learn it from past Civil drawings under DATA-01, confirm
+    the generic pattern and hold editable values in Settings (R-00). The Structural preset is not assumed to
+    work for Civil.
+11. **Changed Xref notice and impact compare — Missing.** When an architectural background changes, offer
+    comparison with its previous version in Civil and Structural drawings. Highlight changed areas and their
+    possible effects on pits, beams and levels; ask for review. Nothing moves on its own (UX-XREF-01).
+12. **Broken-path repair — Missing.** On opening a drawing after a folder move, list broken Xref paths and
+    preview each proposed relative path. One click applies only the confirmed repairs (UX-XREF-03).
 
 ### 6. The full experience (design only — build waits on section 4)
 
-1. **Where you start:** a new or continuing Structural job; CE reads the drawing's own contents to tell whether
+1. **Where you start:** a new or continuing Civil or Structural job; CE reads the drawing's own contents to tell whether
    this is a fresh background-preparation pass or continued work on an existing one, rather than asking you to
    choose New/Continue up front.
 2. **Trigger:** part of job setup, alongside the job-metadata auto-fill; not yet assigned a ribbon location in
@@ -237,6 +258,11 @@ No DWG was opened or parsed this round. Job identities, folder paths, addresses 
     confirmation.
 11. **Discovery:** part of job setup, so it should be hard to miss at the start of a job — exact ribbon/menu
     placement is Open question 2.
+12. **Changed or broken Xref:** on opening, show a quiet notice of the changed background or broken path.
+    **Compare** highlights old versus new and names affected pits, beams and levels in the current discipline;
+    no drawing object moves. **Repair paths** previews every old and proposed relative path, then applies the
+    confirmed set with one click. Cancel/Escape leaves paths and the drawing as they were; save/reopen keeps
+    the confirmed relative paths and reviewed comparison state.
 
 ### 7. Example drawings and checklist
 
@@ -273,6 +299,11 @@ No DWG was opened or parsed this round. Job identities, folder paths, addresses 
 5. **Slice 4 — colour-override and level-separation logic**, the most evidence-dependent piece; last.
 6. **Slice 5 — engineer handoff and revised-background compare**, sequenced with the register/issue card's
    combined-PDF work and the Markup QA card's compare engine (section 5, items 8-9).
+7. **Slice 6 — Civil preset and shared change notice.** Add Civil examples to the read-only study, derive a
+   separate editable Civil colour/visibility preset, then offer old/new comparison in either discipline with
+   pit, beam and level impacts named; no automatic move.
+8. **Slice 7 — path repair.** Detect broken paths on open, preview each proposed relative path, apply confirmed
+   repairs with one click, and preserve them after reopen.
 
 ### Open questions
 

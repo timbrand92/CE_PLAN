@@ -1,12 +1,16 @@
 # CV-02A workflow card — pipe-size suggestions (advisory, never Apply)
 
-**DRAFT · awaiting Tim's approval before any code starts.** Not built, tested in AutoCAD, installed or
+**APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Pipe-size suggestions
 (CV-02A) and Structural timing — 26 Sep 00:08 2026" (UX-SIZE-01..03), read together with the July plan
 `archive\plugin-docs-july-2026\workflows\CV-02A_ASSISTED_PIPE_SIZING_PLAN.md` (not approved then — this card
 builds on it, corrected by the 26 Sep rulings) and `04_REFERENCE\CARDS\CV-02_HYDRAULIC_DESIGN.md` (the approved
-hydraulic engine and rule values this advisory must not duplicate). **APPROVED-IN-PRINCIPLE** wherever Tim's own
-ruling settles the point; only genuinely unsettled points are left OPEN.
+hydraulic engine and rule values this advisory must not duplicate). The release-chat choice below closes the
+mode question; other build details remain OPEN.
+
+**Decision and implementation calls (26 Sep):** Tim: *"Engineer mode only (Recommended)"* — **Accept all**
+appears only in Engineer mode. **IMPLEMENTATION CALLS, not Tim's words:** Unknown stays separate from **No size
+works**; sizing-rule sign-off reuses the network-redesign sign-off pattern.
 
 ## 1. What Tim ruled, and what it corrects from July
 
@@ -158,7 +162,7 @@ client name or site address was opened.
 
 ## 7. OPEN questions, each with a recommended answer
 
-1. **OPEN — how does `Unknown` differ from today's `Infeasible` verdict?** Today `PipeFlowSizingAdvisorService`
+1. **IMPLEMENTATION CALL — `Unknown` differs from `Infeasible`.** Today `PipeFlowSizingAdvisorService`
    only returns `Infeasible` for "no diameter carries this flow" and for missing/invalid input (no diameter, no
    length, no flow) — UX-SIZE-02 wants a genuine `Unknown` (can't tell) distinct from `No size works` (proven
    infeasible). *Recommended:* keep `Infeasible` for a proven no-size-works result (every catalogue diameter
@@ -169,12 +173,9 @@ client name or site address was opened.
    verify` when the supplied document doesn't state a value for that pipe at all (or the document/revision is
    stale/unresolved, per the July plan's staleness rule); `Different` only when the document states a value and
    the drawing disagrees with it — never inferred from a missing note.
-3. **OPEN — does `Accept all` in Draftsperson mode do anything, given Draftsperson mode never suggests a
-   size?** UX-SIZE-03's wording ("applies the clear suggestions") reads as an Engineer-mode action. *Recommended:*
-   `Accept all` is Engineer-mode only; Draftsperson mode's rows are report-only (`Matches`/`Different`/`Cannot
-   verify`) with no accept action, consistent with the July plan's Mode A ("CE must not... redesign, substitute
-   a preferred size").
-4. **OPEN — what, concretely, is "engineer sign-off" for CV-02A4 once this advisory layer ships?** Nothing in
+3. **DECIDED — Accept all mode.** Tim: *"Engineer mode only (Recommended)"* (26 Sep). Draftsperson mode's
+   rows are report-only (`Matches`/`Different`/`Cannot verify`) with no Accept all action.
+4. **IMPLEMENTATION CALL — sizing-rule sign-off.** Nothing in
    the codebase today models a rule-pack approval record. *Recommended:* reuse the shape already built for
    `NetworkRedesignSignOffService` (named person, UTC time, exact record/rule hash) for a future
    `PipeSizingRuleApprovalService`, gated the same way DF's CDCALC "Issue" step already names a responsible
