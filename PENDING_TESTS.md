@@ -1,5 +1,28 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## CDSETUP / Design source draft and LPD outlet — V3 39.8 (25 September 2026, code review ready)
+
+1. **Candidate:** Slice 1 PR #210 (`a650644a`) and Slice 2 ready-for-review
+   PR #212 (`0cee02af`), stacked on #210. Three Civil Release builds: 0 errors.
+   Full net10 suite: 11,078 passed / 19 skipped / 6 known failures. Dark/light
+   Design pictures checked. No AutoCAD, install, merge or Tim acceptance yet.
+2. **After a separately authorised release, AutoCAD 2027 and 2024/net48:**
+   in a disposable synthetic drawing, open Design, enter a job reference and
+   survey revision, then Escape. Reopen and check nothing was saved or drawn.
+   Enter them again, Save Draft, reopen and check both remain; one `U` must
+   reverse that Save Draft. Pick an approved outlet and note location, review
+   the ghost and CE standard note in dark and light, then Cancel: nothing is
+   placed. Pick again, enter an evidence reference and known invert with datum,
+   Confirm LPD, and check the CDLPD-style marker and note. Reopen, verify the
+   same outlet values, then one `U` must remove marker, note and record. Repeat,
+   save/reopen and check persistence. Add a second outlet and confirm each is
+   selected separately. Set one invert to Unknown and check Work out design is
+   blocked. On a disposable drawing with an older CDLPD record, Design must
+   ask for review and leave it untouched. Check locked layers, Xrefs and
+   REFEDIT retain AutoCAD's normal protection. Only native appearance,
+   interaction, Undo and save/reopen remain to prove; automated checks cover
+   the model and window layout.
+
 ## CDTAG empty selection — UC 39.2 (25 September 2026, code review ready)
 
 1. **Candidate:** [PR #209](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/209), `codex/uc392-cdtag` at `60d11634`, ready for review. Three Civil Release builds have 0 errors; full net10 suite 11,072 passed / 6 known failures / 19 skipped. Code only: no AutoCAD, installation or Tim acceptance.

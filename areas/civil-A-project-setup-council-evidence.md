@@ -16,6 +16,19 @@ Project setup, planning documents, council rules and project evidence (CDSETUP).
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Planned". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
+1. **V3 item 39.8, Design project setup:** Slice 1, source-reference Save Draft,
+   is built in PR #210 (`codex/v3-cdsetup-1` at `a650644a`), not merged or
+   installed. Slice 2, pick/preview/confirm of the existing CDLPD marker and
+   CE note with one outlet record each, is built in ready-for-review PR #212
+   (`codex/v3-cdsetup-2` at `0cee02af`), stacked on #210. On 25 Sep 2026 the
+   three Civil Release build lanes had 0 errors; the full net10 suite had
+   11,078 passed, 19 skipped and the same 6 known failures as Slice 1. WPF
+   dark/light pictures were reviewed. No AutoCAD test, installation, merge or
+   Tim acceptance has occurred. The CDLPD reuse is the recorded plan
+   interpretation supplied with Slice 2, not a new Tim ruling. Council rule
+   review, area confirmation, accepted-design/CDCALC hand-off and During/Finish
+   remain later slices; pipe linking requires explicit outlet-pipe selection.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
