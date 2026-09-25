@@ -263,3 +263,32 @@ tomanager".**
 1. The seven commands that install and repair the CE workspace, menu and toolbars are **merged** into as few as
    possible and **automated** as far as possible (repair happens without the user having to run them).
 2. What remains goes **into Manager**. Nothing on the CE ribbon.
+
+---
+
+## Pass 2, one way of working, batch 1 — 25 Sep 2026, 13:58
+
+Standards every CE command follows (design-pack Q9, Q39, Q74, Q53 as general rules).
+
+### UX-STD-01 — Placing commands repeat (Q9)
+
+**Tim, his own words: "carry on but will it open window each time?"**
+
+1. Placing commands (pipe, pit, source) **carry on** for the next item until Enter or Escape.
+2. **Open:** whether the window opens for every item. Tim asked; the follow-up question is recorded below when he
+   answers. Not decided.
+
+### UX-STD-02 — No "Are you sure?" after a preview (Q39)
+
+**Tim: "No, the preview is enough (Recommended)".** The choice read: *Preview, one click, done; one U takes it back.
+How Autodesk tools work. Only deleting CE's link records still asks.*
+
+### UX-STD-03 — CE never saves the drawing (Q74)
+
+**Tim: "Never, you save (Recommended)".** The choice read: *Like every AutoCAD command: CE changes the drawing and
+you decide when to save. Undo stays available.*
+
+### UX-STD-04 — Override reasons (Q53)
+
+**Tim: "Quick picks + note (Recommended)".** The choice read: *One click on "Survey", "Council requirement",
+"Engineer's judgement" or "Other", with a note box if wanted. Still optional.* (Optional per the 5 Sep review.)
