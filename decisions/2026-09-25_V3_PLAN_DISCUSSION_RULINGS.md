@@ -266,7 +266,7 @@ tomanager".**
 
 ---
 
-## Pass 2, one way of working, batch 1 — 25 Sep 2026, 13:58
+## Pass 2, one way of working, batch 1 — 25 Sep 2026, 13:54
 
 Standards every CE command follows (design-pack Q9, Q39, Q74, Q53 as general rules).
 
