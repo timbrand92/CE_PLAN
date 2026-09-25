@@ -1,5 +1,20 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## UX-RIBBON-01 / jump to the contextual Pipe, Pit, Source tab (25 September 2026, code review ready)
+
+1. **Candidate:** branch `claude/ux-ribbon-jump` (from `origin/release/civil-train-0925`, `cef5215c`), draft PR
+   against `master`. Three Civil Release lanes and three Manager Release lanes: 0 errors. Full net10 suite:
+   Manager 265/265, Civil 11,130 passed / 6 known baseline failures (unchanged) / 19 skipped. No AutoCAD,
+   install or Tim acceptance. Also pending Tim's review of the UX-RIBBON-01 card itself (settings-first
+   default, recorded in `areas\windows-and-ribbon.md`).
+2. **After a separately authorised release, AutoCAD 2027 and 2024/net48:** open a job with a drawn pipe, pit
+   and source (downpipe or overflow). Click the pipe — the Pipe tab must appear and be the active tab at once,
+   the way selecting a hatch opens Hatch Editor in front. Press Escape (or the tab's Close button) — the tab
+   must disappear and the CE tab must be back in front, not any other AutoCAD tab. Repeat for the pit and the
+   source. Click the pipe, then Ctrl-click the pit so the selection mixes families — no contextual tab may
+   claim it. Click the pipe and run Reverse Flow from the now-active Pipe tab — its existing confirm step and
+   single Undo must be unchanged.
+
 ## CDSETUP / Design source draft and LPD outlet — V3 39.8 (25 September 2026, code review ready)
 
 1. **Candidate:** Slice 1 PR #210 (`a650644a`) and Slice 2 ready-for-review

@@ -1,5 +1,13 @@
 # Area W — The CE windows, ribbon and design pack. Codex builds windows, Claude builds behaviour (Ruling B, 15 Sep); the CDWT window is the exception (Tim, 16 Sep)
 
+## UX-RIBBON-01 — jump to the contextual Pipe/Pit/Source tab on select — 25 Sep 2026
+
+1. **CLAUDE-OWNED / CODE READY, awaiting Tim's card review then AutoCAD.** Tim's ruling: `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Front door, batch 1" — *"Jump to it (Recommended)"*, same as AutoCAD's Hatch/Text Editor. Draft card: `04_REFERENCE\ux-plan\cards\UX-RIBBON-01_CARD_2026-09-25.md`.
+2. **What changed:** the three Civil contextual tabs (Pipe/Pit/Source), already built on master, now activate themselves the instant they're raised by a selection, instead of only showing behind the CE tab. Reverse Flow's confirm step, mixed/non-CE selections and Close/Escape behaviour are all unchanged.
+3. **Beyond the card's slice-1 wording, flagged for Tim's review:** built as a Settings value (`Options.JumpToContextualTabOnSelect`, default ON, off sticks once turned off) rather than a fixed hard-coded flag, applied in `StandaloneCivilRibbonService` before the tabs register. No Settings-page checkbox yet (same gap as the existing `ShowClassicCeTabs` switch) — a Codex window follow-up if Tim wants one.
+4. **Branch:** `claude/ux-ribbon-jump` from `origin/release/civil-train-0925` (`cef5215c`) — `master` does not yet contain that release train. Draft PR against `master`.
+5. **Evidence:** three Civil lanes + three Manager lanes, 0 errors. Focused `CeCvlRibbonContributorTests` 17/17. Full net10 suite: Manager 265/265; Civil 11,130 passed / 6 known failures (unchanged baseline, none touching this code) / 19 skipped / 11,155 total. No AutoCAD, install or Tim acceptance. Test steps: `PENDING_TESTS.md`.
+
 ## UC 39.2 audit and code hand-off — 25 Sep 2026
 
 1. **Downpipe read-back: CLAUDE-OWNED / STILL OPEN.** PR #134 changed the failed-placement wording, but `LinkService.SourceLanding.cs` still contains the read-back refusal and the pass reports do not prove placement now succeeds. `LinkService*` is protected by Tim's brief. Route the underlying repair to Claude; no placement claim from Codex.
