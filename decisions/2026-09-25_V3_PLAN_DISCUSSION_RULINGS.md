@@ -367,7 +367,7 @@ says why you should check it.*
 
 ## Pass 2, batch 4 — 25 Sep 2026, 14:05
 
-### UX-LOOK-01 — Master look for every CE window — OPEN
+### UX-LOOK-01 — Master look for every CE window — ANSWERED 14:08, see below
 
 **Tim, his own words: "can you show me both im leaning to pipe window".** Not decided. He is leaning to the one-page
 New Pipe window over the Settings window; pictures of both are being shown to him first.
@@ -387,3 +387,16 @@ make it a pipe, use Convert to Pipe."*
 **Tim: "Retire it (Recommended)".** The choice read: *The colours are how CE tells you something needs attention
 (your 4 Sep emphasis rule), and every coloured chip also has words, so nothing depends on colour alone.* Retirement
 approved by Tim here (explicit, per the no-retirement-without-Tim rule).
+
+### UX-LOOK-01 (answered) — Master header and footer for every CE window
+
+Tim was shown both real window pictures (New Pipe one-page reference and Settings, dark theme, from the plugin's
+docs/image/V3_WINDOWS on master), then answered **"New Pipe's (Recommended)"**. The choice read: *CE logo, one-line
+summary of what you're working on, status top right; tools bottom left, Cancel and the gold button bottom right. Tabs
+only where a window has separate topics (like Settings).*
+
+1. Every CE window uses the one-page New Pipe window's header and footer.
+2. Tabs are used only where a window has genuinely separate topics (Settings keeps its tabs).
+3. **Supersedes in part** the 5 Sep review line that froze the Settings design as the reference for every window's
+   look (plugin repo docs/design/V3_UI/00C_TIM_REVIEW_2026-09-05.md): the shared colours, type and buttons stand (the
+   two windows already match there); the header and footer now follow New Pipe.
