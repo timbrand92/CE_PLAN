@@ -1296,3 +1296,17 @@ Builds on ST-09 (July) and the one-record-across-disciplines note in the D1-D10 
    in that product's own plan by its own chat (this chat writes only to CE_PLAN).
 4. **UX-TIME-04:** Tim: "Own time + admin summary (Recommended)". Each person sees and corrects their own time; the
    administrator sees the office summary per job.
+
+## Job checklist and notes — 26 Sep 01:21 2026
+
+Builds on EV-05a (4 Sep: per-job completion checklist, step names Tim fills later) and ST-09.
+
+1. **UX-CHK-01:** Tim: "Where it can prove it (Recommended)". Items CE can prove tick themselves with the reason; the
+   rest are ticked by a person.
+2. **UX-CHK-02:** Tim: "CE drafts, you edit (Recommended)". CE drafts the step list from past issued jobs and council
+   rules; Tim edits it once in Settings as the office list. Supersedes "Tim fills later" (EV-05a) as the starting
+   point, not the ownership.
+3. **UX-NOTES-01:** Tim: "Once per person, then a quiet icon (Recommended)". New job notes show once per person on
+   opening the job, then a status-bar notes icon with a count.
+4. **UX-CHK-03:** Tim: "Listed in the issue preview (Recommended)". Unticked checklist items appear beside open QA
+   items in the issue preview, with the same explicit decision; never a block.
