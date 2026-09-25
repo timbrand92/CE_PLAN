@@ -362,3 +362,28 @@ the undecided one reads "Not connected yet" in amber. No two labels look alike.*
 
 **Tim: "Suggestion only (Recommended)".** The choice read: *"Suggestion only: not an office rule yet". Plain, and it
 says why you should check it.*
+
+---
+
+## Pass 2, batch 4 — 25 Sep 2026, 14:05
+
+### UX-LOOK-01 — Master look for every CE window — OPEN
+
+**Tim, his own words: "can you show me both im leaning to pipe window".** Not decided. He is leaning to the one-page
+New Pipe window over the Settings window; pictures of both are being shown to him first.
+
+### UX-STD-09 — Hidden Inspector stays hidden (Q21)
+
+**Tim: "Stay hidden (Recommended)".** The choice read: *Like AutoCAD's Properties palette: if you closed it, it stays
+closed. Double-click still opens the pipe's window.*
+
+### UX-STD-10 — Inspector on a non-CE object (Q25)
+
+**Tim: "What it is + a hint (Recommended)".** The choice read: *e.g. "Not a CE object: Polyline on layer DRAINAGE. To
+make it a pipe, use Convert to Pipe."*
+
+### UX-STD-11 — "Highlight warnings" switch retired (Q55)
+
+**Tim: "Retire it (Recommended)".** The choice read: *The colours are how CE tells you something needs attention
+(your 4 Sep emphasis rule), and every coloured chip also has words, so nothing depends on colour alone.* Retirement
+approved by Tim here (explicit, per the no-retirement-without-Tim rule).
