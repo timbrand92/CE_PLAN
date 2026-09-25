@@ -1362,3 +1362,15 @@ Strip.
    checked against the council's overland-flow freeboard; warning only.
 
 **All Civil areas A to M now have UX rulings in this file.**
+
+## Structural D2 slice 2 questions (PR #252) — 26 Sep 01:27 2026
+
+1. **UX-D2-04:** Tim: "Offer in preview, CE grip only (Recommended)". For columns placed before this version, a CE grip
+   move shows the single nearby column text moving as "its label?" in the preview; recorded only if the move is
+   placed; plain MOVE never guesses.
+2. **UX-D2-05:** Tim: **"Yes, try it"** (recommended "Not now" not taken). Build a hover menu beside the Structural CE
+   grips, like Civil's pipes, **with care**: it must not replace or break AutoCAD's own hover menus on ordinary lines,
+   polylines and blocks (the BUG-159 class of fault); filter to CE Structural objects only and test on non-CE
+   objects before release.
+3. **UX-D2-06:** Tim: "Keep (Recommended)". AutoCAD's own column grip keeps moving the beams with no preview, same as
+   MOVE, even with CE grips on.
