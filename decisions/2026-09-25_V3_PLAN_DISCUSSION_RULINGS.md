@@ -116,3 +116,20 @@ read-only, until their rules are signed. The commands you use today to open them
 1. In CDCALC, the pump and WSUD calculators sit under an **Older calculators** heading, read-only, until their
    rules are signed.
 2. Their existing opening routes keep working. Nothing is retired.
+
+---
+
+## What this chat is for — Tim, 25 Sep 2026, about 13:22
+
+**Tim, verbatim: "this ux planning should be for the commands, command names, how an end user interacts with the
+plugin and how it can best be designed to help the end user, i want users to feel like theyre using a polished
+product similar to something apple or autodesk would design".**
+
+1. **Scope of `CE_ACAD / V3 PLAN / DISCUSSION`:** the end-user experience of the whole plugin: the command set,
+   command names, how a user finds a command (ribbon, typing, help), how each command talks to the user (prompts,
+   selection, windows, preview, grips, messages, Cancel, Escape, Undo), and consistency across Civil, Structural
+   and Manager.
+2. **The bar:** a polished product, like something Apple or Autodesk would design.
+3. **Not this chat's job:** engineering numbers (Settings page, R-00) and release status (the release chat).
+4. Structural D1 (12 choices on beam grips and the member schedule) stays on its own card for Tuesday, as that
+   card planned; it is taken up here only as part of the Structural command family.
