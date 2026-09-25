@@ -1009,3 +1009,14 @@ AutoCAD (retirement approved in advance on that condition).
    council inherits; each council page highlights only what differs; the rest reads "from base".
 4. **UX-CR-07 (B10d):** Tim: "Yes, in Design's start (Recommended)". On a Boroondara job, Design measures the distance to
    kerb/easement at the start and says which outfall requirement applies, citing the council table.
+
+## Council tools, batch 3 — 26 Sep 00:43 2026
+
+1. **UX-CR-08 (B6):** Tim: "Default from council + warn (Recommended)". New pipes default to the council's minimum class;
+   a material the council refuses warns with the source; editable.
+2. **UX-CR-09 (B7):** Tim: "Warn, with source (Recommended)". Items a council refuses (e.g. Maroondah multi-cell units,
+   driveway above-ground storage) warn with the document reference; never block.
+3. **UX-CR-10 (B8):** Tim: "Always show it (Recommended)". The OSD criteria block always shows required and provided
+   detention volume, from the same record as the computations sheet.
+4. **UX-CR-11 (B9):** Tim: "Check and tell (Recommended)". On linking a survey, CE compares its contour interval (and
+   extent) with the council's rule and warns early (e.g. Whitehorse 0.1/0.2 m, 10 m beyond the boundary).

@@ -148,6 +148,8 @@ have plenty of capacity and still run too slowly to keep itself clean.
 
 ### B6 — Pipe class and pipe material change by council
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-08: default from council + warn. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 **Class:** Mornington Peninsula requires **Class 3** minimum concrete; Darebin, Banyule and Manningham
 accept **Class 2**.
 **Material:** Maroondah **will not accept fibre reinforced concrete or vitrified clay**; Darebin and
@@ -158,6 +160,8 @@ out of habit?
 
 ### B7 — Multi-cell flow control units
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-09: warn with source. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 Banyule, Manningham, Frankston and Darebin all accept them. **Maroondah refuses them outright**, along with
 above-ground storage on a driveway.
 
@@ -165,12 +169,16 @@ above-ground storage on a driveway.
 
 ### B8 — The detention volume written on the plan
 
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-10: always show volume. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
+
 Whitehorse requires the **volume** on the drawing, not only in the computations, alongside location, levels
 and dimensions.
 
 **The question.** Is it on our plans today?
 
 ### B9 — Contour intervals
+
+**ANSWERED by Tim, 26 Sep 2026 — UX-CR-11: check survey contours and tell. See decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.**
 
 Whitehorse asks for existing and design contours at **0.1 m on flat sites, 0.2 m elsewhere**, extending
 **10 m into adjoining properties**.
