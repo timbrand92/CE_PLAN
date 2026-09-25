@@ -14,6 +14,8 @@ SPS/pump stations, wet wells, pump controls and rising mains. (From the area reg
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Planned". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
+1. **UX plan, 26 Sep 2026 (Tim, UX-SPS-01 to 04):** one Pump Station tool (wet well, duty + standby pumps, inlet, rising main start, storage from the catchment, one U); rising main drawn as a Rising Main pipe to a discharge pit; the office SPS detail filled from the job; CE gives the duty point, the engineer names the pump. Not built. Needs a workflow card (release chat). Record: decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.

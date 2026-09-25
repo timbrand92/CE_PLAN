@@ -1320,3 +1320,17 @@ Builds on EV-05a (4 Sep: per-job completion checklist, step names Tim fills late
    its own colour/visibility preset learned from past Civil drawings.
 3. **UX-XREF-03:** Tim: "Offer to repair (Recommended)". Broken Xref paths after a job folder move are offered for
    repair on opening, previewed per path, one click, relative paths.
+
+## Civil area H: pump stations — 26 Sep 01:23 2026
+
+Builds on R-14..R-17 and R-23 (4 Sep).
+
+1. **UX-SPS-01:** Tim: "One Pump Station tool (Recommended)". One tool like the Water Tank window: pick the spot; CE
+   draws the wet well, two pumps (duty + standby), inlet, rising main start and label, with storage from the
+   catchment; one U.
+2. **UX-SPS-02:** Tim: "As a pipe to a discharge pit (Recommended)". The rising main is drawn with the normal pipe tool
+   as type Rising Main to a discharge pit; joins like any pipe; labelled as pumped.
+3. **UX-SPS-03:** Tim: "Fill from the job (Recommended)". The office SPS master detail is inserted with the job's levels,
+   storage, pump duty and rising main size filled and linked; Unknown left visible.
+4. **UX-SPS-04:** Tim: "Duty point only, pump by engineer (Recommended)". CE works out and shows the duty point (flow,
+   head, rising main losses); the engineer names the pump.
