@@ -1155,3 +1155,9 @@ toward the best layouts. How "best" is judged is asked next.
 scored by: no council RFI on the drainage (council RFI reader, UX-RFI-01..03); meeting storage with the least pipe
 length, excavation depth and number of pits; and not redrawn in later revisions (compared across issues). No manual
 "good example" marking is required.
+
+**UX-L3-23, detention options are combinations (Tim, verbatim): "might be one detention pipe between p1 and p2 and
+then another between p2 and p3 or something like that and including pit detention".** A proposed detention option can
+combine storage pipes on several pit-to-pit runs (e.g. P1-P2 and P2-P3, sizes may differ) with detention pit storage
+(and tanks), totalled against the required storage; each option card lists every piece (run, size, length, volume)
+and the pits counted as storage.
