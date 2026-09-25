@@ -775,3 +775,19 @@ Cards in `04_REFERENCE\structural\cards\`.
 4. **STRUC-ARCH-BACKGROUND, example jobs:** Tim: "Pick recent completed jobs". The release chat may pick 2-3 recently
    completed Structural jobs from the office Projects folder to study read-only; nothing copied into any repository;
    client names and addresses stay on Tim's PC (DATA-01). This is Tim's permission for that bounded read.
+
+## Structural hatch and text families — 25 Sep 2026, 23:45
+
+1. **UX-STRUC-07, hatch gallery:** Tim: "Yes, that layout (Recommended)". Most-used presets at the top (learned),
+   then material picture tiles, colour swatches, and the hatch tools (Library, Change Preset, Batch, Gap
+   Assistance, Audit, Make Annotative) along the bottom; typed codes unchanged.
+2. **Hatch code convention (office knowledge, recorded per R-LEARN):** asked whether the solid-colour hatches have
+   fixed meanings, Tim explained the naming instead, verbatim: **"its colour then type then h to denote its a
+   hatch"**. So a hatch code is AutoCAD colour number + pattern-type letter(s) + H: e.g. 21H colour 21 solid,
+   21DH colour 21 dot, 21LH colour 21 diagonal/line, 11CH colour 11 concrete, 6DH colour 6 dot. Consequence for the
+   gallery (this chat's proposal, not a ruling): group the colour hatches by pattern type with colour swatches, and
+   show each tile's code so users learn the pattern; any new preset follows the same convention.
+3. **UX-STRUC-08, text:** Tim: "Yes, size + compass (Recommended)". One Text button: pick 1.8 or 2.5 mm and a
+   position on a compass pad; remembers the last pick; the 11 codes stay typed.
+4. **UX-STRUC-09, tags:** Tim: "Smart tag, picker as backup (Recommended)". Click a CE beam, column or footing: CE
+   places the right tag on the side clicked; a small picker (object, over/under, side) for anything not recognised.

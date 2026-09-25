@@ -50,3 +50,4 @@ _"These things must still work", re-checked before any deploy. Seed from `REGRES
 2. **Also today:** beam fixes UX-BEAM-01 to 03 (plain reasons, STRUCDEBUG, one engine); closed-sheet writes kept with a notice (UX-STRUC-01); CETOOLS stays on the ribbon, CENOTES into Manager (UX-RIBBON-04); CESTRUC to be reviewed in detail.
 3. **Not built, not tested, not installed, not Tim-accepted.** Needs a Structural ribbon card (release chat).
 4. **Priority after D1 (Tim, 25 Sep, UX-STRUC-06):** QA against the engineer's markup, then register/revisions/issue, then architectural background preparation; detail browser later. Each needs a workflow card first.
+5. **Office convention learnt 25 Sep (Tim):** hatch codes are colour number + pattern-type letter(s) + H (e.g. 21H solid colour 21, 21DH dot, 11CH concrete colour 11). Any new hatch preset follows it. Hatch, Text and Tag family rulings: UX-STRUC-07 to 09.
