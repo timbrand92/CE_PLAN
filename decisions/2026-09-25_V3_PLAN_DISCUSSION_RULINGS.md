@@ -1475,3 +1475,15 @@ Builds on AI-01 (July): permissions, preview then one U, no raw commands, provid
    learned from them (extends the Structural "Remembered decisions" list to everything).
 3. **UX-LEARN-04:** Tim: "Yes, in Settings (Recommended)". A person can switch off learning from their own choices;
    they still receive office suggestions.
+
+### UX-MIX-03 — Hold the automatic pipe upgrade on colleagues' PCs (26 Sep 09:56)
+
+Release chat's probe (AutoCAD 2027 core console, no CE loaded, copy of an upgraded test drawing): someone without V3
+sees all CE pipes correctly (proxy graphics, view-only) when the drawing was saved with PROXYGRAPHICS=1 (a safeguard is
+being added); pits and labels are normal. The pipe-object enabler ships for 2027 only; the 2024 enabler has never
+been loaded on real 2022-2024.
+
+**Tim: "Hold it on colleagues' PCs (Recommended)".** Until the 2022-2024 enabler is proven (on Tim's VM, per his
+16 Sep enabler-first rule), colleagues' V3 installs do **not** upgrade pipes to the one-piece object on open; Tim's
+own PC keeps upgrading as the test bed. **Deliberate exception** to "colleagues get Tim's exact setup and switches"
+(24 Sep) and to "upgrade everywhere" (16 Sep), limited to this upgrade until the enabler is proven.

@@ -41,7 +41,8 @@ Builders: the release chat writes a card per item before code.
 13. **Approvals:** any CE user can approve calculations, apply proposals and issue, always recorded, naming the
     engineer where a sheet goes out. (UX-CALC-APPROVE-01, UX-CALC-03, UX-REG-06, UX-STRUC-11, UX-REV-05)
 14. **Mixed versions:** V3 drawings must stay visible to colleagues without V3 (prove on the 2022 VM); 2027-only
-    tools greyed with "needs AutoCAD 2027". (UX-MIX-01, 02)
+    tools greyed with "needs AutoCAD 2027"; the automatic pipe upgrade is held on colleagues' PCs until the
+    2022-2024 enabler is proven. (UX-MIX-01..03)
 
 ## 2. The front door — ribbon, names, help
 
