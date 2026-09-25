@@ -180,3 +180,47 @@ so engineers can update system wide, same for council values, nothing should be 
 limit becomes a Settings value with today's default. **UX note from this chat (a recommendation, not a Tim
 ruling):** the on-screen message should not show the raw number ("limit 65,536"); say it in drafting words, e.g.
 *"Beam not placed: too much drawing near this beam for CE to check. Zoom closer or turn off Xrefs you do not need."*
+
+---
+
+## Calculations workflow card (CDCALC, D+F) — 25 Sep 2026, 13:40
+
+Card: `04_REFERENCE\civil-D-F\DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md` (release chat's draft from Tim's 15 Sep
+rulings, commit e0e224da). Questions cover its OPEN 1, 2 and 5; the fourth approved the card with OPEN 3 and 4 as
+recommended.
+
+### UX-CALC-01 — Fixing a catchment inside the one confirmation (OPEN 1)
+
+**Tim: "Yes, fix it there (Recommended)".** The choice read: *Report value and your value side by side, yours marked
+"manual". A downpipe CE can't prove stays Unknown. Then confirm the whole set once.*
+
+### UX-CALC-02 — What Apply to drawing replaces (OPEN 2)
+
+**Tim: "You pick, one U (Recommended)".** The choice read: *Click the existing block or detail, or pick a spot for a
+new one. A preview shows every change first. One U takes it all back. CE never overwrites a detail you didn't pick.*
+
+1. The one Undo includes the reviewed calculation record saved with the Apply (the card's recommendation).
+
+### UX-CALC-03 — Who issues the computations sheet (OPEN 5)
+
+**Tim: "Anyone, names the engineer (Recommended)".** The choice read: *Any CE user can issue, but must pick the
+engineer responsible. That engineer prints on the sheet; who pressed Issue, and when, is recorded. No locks, and
+council always sees an engineer's name.*
+
+1. Differs from the card's recommendation (named engineer only). Tim's answer governs; consistent with
+   UX-CALC-APPROVE-01 and R-27.
+2. Until issued, the sheet keeps DRAFT - NOT FOR CONSTRUCTION. Issue records the revision, date, who pressed Issue,
+   the responsible engineer and the reviewed sources.
+
+### UX-CALC-04 — Card approved
+
+**Tim: "Approve (Recommended)".** The question read: *Approve the calculations card, with its suggestions for the
+last two points: compare drawn storage with the last issued sheet (and warn), and keep today's way of pasting
+rainfall numbers (no automatic fetching yet)?* The choice read: *The release chat builds slice 1 this weekend: one
+catchment from the rating report, one confirmation, sources shown. You check it in AutoCAD afterwards.*
+
+1. OPEN 3: compare unrounded drawn storage with the last explicitly issued revision for that system; warn; show
+   both values and the difference; no invented percentage allowance.
+2. OPEN 4: keep CDRAINFALL's reviewed paste/file route; no automatic fitting of rainfall coefficients until a
+   method is evidenced and approved.
+3. The card is approved **with UX-CALC-03 replacing its OPEN 5 recommendation**.
