@@ -553,3 +553,20 @@ before Apply; one U undoes it.
 3. **UX-MGR-02 (Q75):** Tim: "Drop it (Recommended)". Manager's "Open Hub" button is retired (explicit Tim yes); job
    review lives in the one Project Review on the CE tab.
 4. **UX-HELP-01 (Q76):** Tim: "Yes (Recommended)". Help guides get an "Open in browser" button.
+
+## Council RFI reader — Tim, 25 Sep 2026, 15:52
+
+**Tim, verbatim: "we also need a council rfi ingest and reader".** Related existing record: the RFI checklists per
+council in the CE guidebook v1.3 (`02_COUNCIL_RULES\CE_GUIDEBOOK_V1_3_SUPERSEDES.md` §2). This is new: reading the
+actual RFI letter a council sends on a job.
+
+1. **UX-RFI-01, what CE does** (multi-choice): Tim ticked "List every item as a to-do", "Check what it can itself",
+   "Learn from it". Not ticked: "Draft the response".
+   - Each council request becomes a line: what was asked, which drawing or calculation it concerns, done / not done.
+   - CE checks the items it can against the drawing: Met / Not met / Can't tell, with Show where.
+   - What councils keep asking for feeds the council rules and RFI checklists (UX-LEARN-01; client data stays local).
+2. **UX-RFI-02, how it arrives:** Tim: "CE finds it in the job folder (Recommended)". CE spots a new council PDF in
+   the job folder and asks "Read this RFI?"; dragging one in also works.
+3. **UX-RFI-03, where it lives:** Tim: "A tab in Project Review (Recommended)". "Council RFI (n open)", with Show
+   where and Fix working as for any check.
+4. Build request logged in `IDEAS_INBOX.md`; needs a workflow card (release chat).
