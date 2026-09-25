@@ -1064,3 +1064,14 @@ CDTRIM/CDEXTEND/CDBREAK/CDJOIN).
    reason and asked again only if the item or its rule changes; an "Ignored" list shows them all.
 4. **UX-DI-04:** Tim: "Zoom + glow, window stays (Recommended)". Show where zooms and highlights in the attention
    colour; the list stays open; Escape clears the highlight.
+
+## Level 3: Civil design proposals — 26 Sep 00:52 2026
+
+Asked to tick up to three Civil proposal types for CE to learn first; Tim ticked **all four**: "Network layout",
+"Levels for a drawn network", "Detention and tank layout", "Downpipe and source placement". (Ask CE: covered by the
+approved July card AI-01, not re-asked.)
+
+1. **UX-L3-01:** all four are wanted as V3 Level 3 proposals. Each: preview first, accept or adjust per item, one U;
+   learned from past jobs and corrections (UX-LEARN-01); never silently changes an engineering rule; Unknown never
+   guessed.
+2. The build order is asked separately below.
