@@ -543,3 +543,13 @@ before Apply; one U undoes it.
    administrator can delete one outright, and CE records who and why.
 4. **UX-ADMIN-01 (Q68):** Tim: "Tim only (Recommended)". Tim is the only CE administrator on day one; adding someone
    is done in Manager.
+
+## Pass 3, family 8: Manager, Help and rule updates — 25 Sep 2026, 15:51
+
+1. **UX-MGR-01 (Q77):** Tim: "Pick who, then everyone (Recommended)". Update colleagues: tick who gets a version
+   first, then Everyone once proven; one click to roll back.
+2. **UX-RULES-01 (Q69):** Tim: "Any time, you choose (Recommended)". A job may adopt a newer council rulebook at any
+   time, only when the user clicks; CE shows what changed; issued jobs keep their issued edition.
+3. **UX-MGR-02 (Q75):** Tim: "Drop it (Recommended)". Manager's "Open Hub" button is retired (explicit Tim yes); job
+   review lives in the one Project Review on the CE tab.
+4. **UX-HELP-01 (Q76):** Tim: "Yes (Recommended)". Help guides get an "Open in browser" button.
