@@ -1,5 +1,33 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## UX-HELP-02..05 / Start Here first-run tour, My Role, What's New gate (26 September 2026, code review ready)
+
+1. **Candidate:** plugin draft [PR #255](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/255), branch
+   `claude/ux-first-run` (tip `2002b438`) against `master`. From Tim's 25 Sep 2026 23:57 "Help and first run"
+   ruling. Civil and Manager Release net48/net8/net10: 0 errors. Full Civil suite (net10, single NUnit worker):
+   11,160 passed / 19 skipped / 6 known baseline failures, unchanged by name — none touch a file this branch
+   changed. Dark/light pictures of the new tour window inspected:
+   `docs/image/V3_WINDOWS/starthere-{dark,light}.png`. **Not installed, not opened in AutoCAD, not
+   Tim-accepted.** UX-HELP-04 (F1 context help) and UX-HELP-08 (first-three-uses tips) were not reached —
+   see the branch's `REGRESSION_LOG.md` top entry for what remains.
+2. **After an authorised install, AutoCAD 2027 first, then 2024.** Open the CE tab.
+   1. The **Start Here** button (CE panel, leftmost) should carry a small amber dot with a tooltip
+      explaining why — never just a colour with no words.
+   2. Click it (or type `CESTARTHERE`). The tour opens: five cards with real ribbon pictures (Pipe, Pit,
+      Edit, Checks, Help), then "Are you an Engineer or a Draftsperson?". Pick one — a confirmation line
+      appears. Close with **Got It**.
+   3. Look at the CE tab again, same session: Start Here should no longer carry the dot. Close and reopen
+      AutoCAD — still no dot (this is what stops it ever coming back).
+   4. Type `CEROLE` (or click **My Role**): it reports your current role, then lets you change it
+      (Engineer / Draftsperson / Cancel). Change it, run `CEROLE` again, confirm the new answer sticks.
+   5. Delete `%APPDATA%\TIM_CE_CADTOOLS\last_version.txt`, restart AutoCAD: What's New should open once,
+      within a few seconds. Restart again without touching the file: it should **not** reappear. This is
+      the exact case Codex found missing — please confirm it specifically.
+   6. From the tour, choose **Help Centre** instead of Got It: the CE Help Centre should open and the tour
+      should close.
+   7. If a spare machine or fresh Windows profile is available: with no `CD_Settings.json` at all, Start
+      Here should be lit from the very first CE tab shown, with no pop-up of any kind on its own.
+
 ## STRUC-D2-SLICE1 / beams follow their column on MOVE; each label stays with its beam (26 September 2026, code review ready)
 
 1. **Candidate:** plugin draft [PR #250](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/250), branch `claude/d2-slice1`
