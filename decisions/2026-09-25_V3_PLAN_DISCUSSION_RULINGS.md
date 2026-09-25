@@ -932,3 +932,19 @@ or covered by standing rules.**
 4. **Permanent names on the Structural line (not asked):** bringing the shared spine-name component onto the
    Structural shipping line is technical and follows Tim's D1 choice 1 ("One system with Civil"); decided by this
    chat as implementation, under the one-version rule.
+
+## Clash check: July cards vs 25-26 Sep rulings — 26 Sep 00:21 2026
+
+Read-only check of 24 July card files (`04_REFERENCE\CARDS\`) against this file; three conflicts found.
+
+1. **ST-09 ST9-1/ST9-2 vs UX-RIBBON-04 (corrected):** July had CETOOLS/CECHECKLIST opening Manager "Coordination"
+   sections; 25 Sep keeps CETOOLS on the Structural ribbon (CECHECKLIST merged into it), only CENOTES into Manager.
+   The later, explicit 25 Sep ruling governs; not re-asked. ST-09 is superseded on that point.
+2. **UX-SCHED-01b (PS-01 PS11 superseded):** Tim: "Update the pit, all values (Recommended)". Any engineering value
+   typed in the Pit Schedule (depth, invert, cover level, lid class...) updates the pit or pipe, with preview and one
+   U; the schedule never disagrees with the drawing. A separate right-click "display only" remains for the rare case
+   of matching an issued council schedule. Supersedes PS11's "offer two explicit paths" for typed engineering values.
+3. **UX-STRUC-11 (ST-07 controlled schedule edit superseded):** Tim: "Any CE user, recorded (Recommended)". A beam
+   size change driven by the engineer's Excel schedule can be applied by any CE user after the preview; name, time
+   and Excel revision recorded; QA shows it until checked. Supersedes ST-07's "Timothy or the responsible engineer
+   must approve the update".
