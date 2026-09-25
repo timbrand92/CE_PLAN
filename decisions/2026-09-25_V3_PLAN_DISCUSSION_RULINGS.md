@@ -507,3 +507,16 @@ before Apply; one U undoes it.
 3. **UX-REV-03 (Q51):** Tim: "Confidence first, then size (Recommended)".
 4. **UX-REV-04 (Q44):** Tim: "PDF (Recommended)". Export report defaults to PDF; CSV one tick away.
 5. Q41 (passes folded) was answered by UX-STD-08.
+
+## Pass 3, family 6: Pit Schedule and leftovers — 25 Sep 2026, 14:42
+
+1. **UX-SCHED-01 (Q58):** Tim: "Updates the pit, with preview (Recommended)". A DEPTH typed in the Pit Schedule
+   changes the pit's bottom level; the preview shows what else moves; one U undoes. The schedule never disagrees
+   with the drawing.
+2. **UX-SCHED-02 (Q59):** Tim: "Plus a checking sheet (Recommended)". Excel export: sheet 1 the schedule as drawn,
+   sheet 2 each value with its source.
+3. **UX-REV-05 (Q54):** Tim: "Yes (Recommended)". Applying a CE proposal records who approved it, the time and what
+   changed, inside the drawing.
+4. **UX-IMP-01 (Q61):** Tim: "Compare only (Recommended)". Import > Compare changes nothing; any update is a separate
+   Apply with preview and one U. Today's write-before-compare behaviour goes.
+5. Q56 (DET X (Grated) column) not asked yet: needs clearer context first.
