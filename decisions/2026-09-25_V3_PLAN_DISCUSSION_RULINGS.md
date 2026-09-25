@@ -1334,3 +1334,17 @@ Builds on R-14..R-17 and R-23 (4 Sep).
    storage, pump duty and rising main size filled and linked; Unknown left visible.
 4. **UX-SPS-04:** Tim: "Duty point only, pump by engineer (Recommended)". CE works out and shows the duty point (flow,
    head, rising main losses); the engineer names the pump.
+
+## Civil area I: WSUD — 26 Sep 01:25 2026
+
+Evidence (areas D+F, 15 Sep): 701 treatment rows across 194 rating reports used only Rainwater Tank, None and Buffer
+Strip.
+
+1. **UX-WSUD-01:** Tim: "Tanks, buffer strips, raingardens (Recommended)". V3 WSUD tools: tanks (existing), buffer
+   strips, raingardens (CDRG); swales, sedimentation, porous paving and treatment devices wait until a job needs them.
+2. **UX-WSUD-02:** Tim: "Check and warn (Recommended)". Drawn treatment is checked against the rating report (areas,
+   treated catchments, tank sizes) with both values shown in Checks.
+3. **UX-WSUD-03:** Tim: "Draw its area, link what drains to it (Recommended)". A buffer strip is drawn as an area; the
+   draining paving is picked; area and treated catchment show live and label themselves.
+4. **UX-WSUD-04:** Tim: "Yes, from the library (Recommended)". WSUD standard details come from the CE Library filled
+   with the job's sizes and linked.

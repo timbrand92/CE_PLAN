@@ -15,6 +15,8 @@ WSUD/treatment: raingardens, swales, buffer strips, sedimentation and treatment 
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "Planned". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
+1. **UX plan, 26 Sep 2026 (Tim, UX-WSUD-01 to 04):** V3 scope is tanks, buffer strips and raingardens only; drawn treatment checked against the rating report; buffer strip drawn as an area linked to what drains to it; WSUD details filled from the job via the CE Library. Not built. Needs a workflow card (release chat). Record: decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
