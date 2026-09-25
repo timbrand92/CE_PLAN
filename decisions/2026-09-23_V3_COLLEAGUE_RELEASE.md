@@ -355,3 +355,9 @@ Tim (verbatim): *"no no tonight you need to build whilst waiting for codex and t
 1. **Tim's words:** "can you make sure youre constantly working until monday morning" was followed on 25 Sep by: "can you slow codexs usage to use an equal amount each day until next weeks usage reset".
 2. **Applied:** 28% was used by Fri 25 Sep 09:00; 72% left over the six days to the reset Thu 01 Oct 08:57 = **12% a day**. Each day runs 08:57 to 08:57. Cap by the end of each day: Fri 40%, Sat 52%, Sun 64%, Mon 76%, Tue 88%, Wed (to Thu 08:57) 100%. A day's unused share carries to the next day. After the reset: 100/7 = 14% a day.
 3. **How it is enforced:** the Codex queue (`daily_cap.sh` + `queue3.sh` with cap `auto`) starts a job only if today's usage plus the job's expected cost (AutoCAD test pass about 7%, build about 1-2%) fits under today's cap; a test brief's stop line is set to today's cap. **Supersedes** the 24 Sep lines (Fri 28, Sat 40, Sun 52, Mon 65, Tue 80, Wed 90, Thu 97).
+
+## Claude: manage usage for the week - Tim, 25 Sep 2026, about 12:15
+
+1. **Tim's words:** "please manage your usage for the week" (straight after the Claude weekly reset at 12:00 on Fri 25 Sep).
+2. **Applied (same shape as his Codex ruling of 09:00):** an equal share each day to the next reset, Fri 02 Oct 12:00 = about **14% a day**; each day runs 12:00 to 12:00. Cap by the end of each day: Fri 14%, Sat 28%, Sun 42%, Mon 57%, Tue 71%, Wed 85%, Thu (to Fri 12:00) 100%. Unused share carries forward.
+3. **How:** the release chat reads the plan meter at every hourly tick and before starting any Claude builder; no new builder starts once today's line is reached (Codex takes the work instead - its builds cost about 0-1% of its week). Builders on Sonnet, at most two at a time; Opus only for the release chat and one review per train. Other chats (e.g. the V3 plan discussion chat) share the same weekly pool, so their prompts default to Sonnet.

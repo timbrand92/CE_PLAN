@@ -5,9 +5,9 @@ Paste everything below the line into a new Claude Code chat opened in `C:\CE_PLA
 ---
 
 **RUN CONFIG**
-- **Model:** Opus 5.5, thinking **high**.
-- **Why:** this chat explains the whole Version 3 plan and turns Tim's answers into recorded decisions. It needs judgement and accuracy across many documents, and it builds nothing.
-- **Downgrade option:** Sonnet 5, thinking medium, if usage runs short. Explanations stay fine; cross-checking between documents gets weaker.
+- **Model:** Sonnet 5, thinking **high**.
+- **Why:** this chat explains the whole Version 3 plan and turns Tim's answers into recorded decisions, and builds nothing. Tim asked on 25 Sep for Claude's weekly usage to be managed (about 14% a day shared by every chat), so it starts on Sonnet.
+- **Upgrade option:** Opus 5.5, thinking high, for a session where Tim wants a deep cross-check of several areas at once. It gives sharper cross-document judgement but uses several times more of the week.
 
 **NAME THIS CHAT: CE_ACAD / V3 PLAN / DISCUSSION / 01**
 
