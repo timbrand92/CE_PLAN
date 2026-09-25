@@ -465,7 +465,7 @@ editable and marked manual. Nothing further asked.
 **Tim: "Allow, with preview (Recommended)".** The preview lists each pipe's new levels and anything downstream
 before Apply; one U undoes it.
 
-## Pass 3, family 2: downpipes and sources — 25 Sep 2026, 14:33
+## Pass 3, family 2: downpipes and sources — 25 Sep 2026, 14:31
 
 1. **UX-SRC-01 (Q26):** Tim: "Same symbol, different tag". OF and FO share one plan symbol; the tag (OF1 / FO1)
    tells them apart.
@@ -474,3 +474,16 @@ before Apply; one U undoes it.
 3. **UX-SRC-03 (Q28):** Tim: "RG1, RG2 (Recommended)". Raingardens are tagged RG.
 4. **UX-SRC-04 (Q29):** Tim: "Drag, or type (Recommended)". Trench grate length: drag with the length shown live, or
    type it at any time, like LINE.
+
+## Pass 3, family 3: water tanks (CDWT) — 25 Sep 2026, 14:35
+
+1. **Design-pack Q30 (typed reuse), not asked:** covered by Tim's 5 Sep rule that every value can be overridden,
+   marked manual.
+2. **UX-TANK-01 (Q31):** Tim: "Keep it (Recommended)". No-detention tanks keep the one-line callout
+   ("WT1 — 5000 lt TO BE USED FOR TOILET FLUSHING AND WATER REUSE"); three lines only when there is detention.
+3. **UX-TANK-02 (Q33):** Tim: "Keep R1 / D1". Risers and droppers keep R1 / D1 numbering (recommended WT1-R/WT1-D
+   not taken).
+4. **UX-TANK-03 (Q34):** Tim: "Real record (Recommended)". "Annotate existing detention pit" gives the pit a real
+   detention record, so CDCALC and the drawn-versus-issued storage check count it; the pit stays a pit.
+5. **UX-TANK-04 (Q32):** Tim: "Retire it (Recommended)". The tank record's LidType "Standard" field is retired
+   (explicit Tim yes); underground tanks carry their real lid and surface level.
