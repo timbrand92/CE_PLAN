@@ -170,5 +170,13 @@ Builders: the release chat writes a card per item before code.
 
 ---
 
+## 9. Ask CE (AI assistant)
+
+1. July card AI-01 stands (permissions, preview then one U, no raw commands). New: "Draw these" from QA-against-markup
+   items as a proposal; an "Explain" button on every finding; rule and standard questions answered with the source
+   cited; voice after V3. (UX-AI-01..04)
+
+---
+
 *Kept current by the V3 plan discussion chat. When a ruling changes, update the line here and the decisions file in
 the same commit.*

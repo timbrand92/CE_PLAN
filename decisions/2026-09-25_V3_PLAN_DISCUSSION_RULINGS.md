@@ -1438,3 +1438,15 @@ Builds on ST-06 (July) and the 14 Sep foundation answers.
    calculated spacing, at corners and under point loads; adjustable individually.
 4. **UX-FDN-04:** Tim: "Automatic from drawn bars (Recommended)". Each drawn bar gets its mark; the bar schedule (size,
    shape, length, number, mass) builds and updates itself; changes highlighted for review.
+
+## Ask CE upgrades — 26 Sep 09:47 2026
+
+Builds on AI-01 (July): permissions, preview then one U, no raw commands, provider rules.
+
+1. **UX-AI-01:** Tim: "Yes, as a proposal (Recommended)". "Draw these" on selected QA-against-markup items: Ask CE
+   proposes the drafting as a normal preview; accept; one U.
+2. **UX-AI-02:** Tim: "Yes (Recommended)". An "Explain" button on every check finding: why, the rule and its source,
+   and what would fix it.
+3. **UX-AI-03:** Tim: "Yes, with the source (Recommended)". Ask CE answers council-rule and office-standard questions
+   from the council files and rulebook, always citing document and page; "not recorded" when unknown.
+4. **UX-AI-04:** Tim: "Later, not V3 (Recommended)". Voice input after V3.
