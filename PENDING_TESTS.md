@@ -1,5 +1,28 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## STRUC-D2-SLICE1 / beams follow their column on MOVE; each label stays with its beam (26 September 2026, code review ready)
+
+1. **Candidate:** plugin draft [PR #250](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/250), branch `claude/d2-slice1`
+   (tip `cce3b237`) against the shipping Structural line `claude/struc-d1-prep`. From the D1 card Tim approved 25 Sep
+   (choice 7 "Beams follow"; the label half of choices 3 and 4). Shipped Structural lanes net48/net8/net10: 0 warnings,
+   0 errors. Machine tests and a headless AutoCAD 2027 core-console proof passed (13/13 plus save/reopen; one U put
+   everything back each time). **Not installed, not opened in full AutoCAD, not Tim-accepted.**
+2. **After an authorised install, AutoCAD 2027 first, then 2024.** New drawing: two stud walls 6.0 m apart, a DS1 on
+   each, a C1 halfway. Command **1**: B1 from the left DS1 to C1, then B1 from C1 to the right DS1.
+   1. **MOVE**, pick only C1, Enter, `@300,0`. Right: both beam ends land on C1 in its new place, each label keeps its
+      place on its beam (centred stays centred), and the command line says *"CE moved 2 beam ends with the support, and
+      2 beam labels with their beams. One U undoes both."*
+   2. **U** once. Right: C1, both beams and both labels are exactly back.
+   3. MOVE C1 `@0,300`. Right: both beams tilt to meet C1; each label keeps its side and turns with its beam. U: all back.
+   4. Click C1, drag its own grip and click. Right: the same as step 1 (no preview yet: the CE grips are slice 2).
+      U: all back.
+   5. MOVE the left beam line alone `@0,500`. Right: its label comes with it; C1 and the right beam stay. U: all back.
+   6. Start MOVE on C1, press Escape before the second point. Right: nothing moves.
+   7. Lock the beam layer, MOVE C1 `@300,0`. Right: only C1 moves; the command line names B1 and says to unlock the
+      layer. U: C1 back. Unlock the layer.
+   8. MOVE C1 `@300,0`, save, close, reopen, MOVE C1 `@-300,0`. Right: the beams follow again.
+   9. AutoCAD 2024: repeat steps 1 and 2.
+
 ## UX-RIBBON-01 / jump to the contextual Pipe, Pit, Source tab (25 September 2026, code review ready)
 
 1. **Candidate:** branch `claude/ux-ribbon-jump` (from `origin/release/civil-train-0925`, `cef5215c`), draft PR
