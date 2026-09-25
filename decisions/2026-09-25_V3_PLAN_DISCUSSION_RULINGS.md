@@ -1093,3 +1093,16 @@ Builds on Hold grade / hold levels (23 Sep) and Solve Run.
 4. **UX-L3-06, no solution:** Tim: "Show shortfall + options (Recommended)". CE states the shortfall at the worst pit
    and offers flatter grades (if allowed), a charged system, a pump, or reduced cover with a reason; the user
    chooses; CE never forces one.
+
+## Level 3 proposal 2: downpipes and sources — 26 Sep 00:58 2026
+
+1. **UX-L3-07, positions:** Tim: "Architect's DPs, else roof (Recommended)". Use the architect's downpipe symbols
+   where present; otherwise propose from roof edges and gutters, learned from past jobs; each confirmed.
+2. **UX-L3-08, destination:** Tim: "Rating report, then nearest option shown (Recommended)". From the rating report's
+   catchment names; where a name does not say, the destination is Unknown with the likely tank/pit suggested from
+   past jobs for the user to pick; never guessed silently.
+3. **UX-L3-09, numbering:** Tim, his own words: "all option available". All three orders are offered as a choice in
+   the preview: the learned office pattern, clockwise from the front left, and the order placed; renumber with one
+   click. Default pre-selection not ruled (this chat suggests the learned pattern).
+4. **UX-L3-10, preview:** Tim: "Ghost DPs + lines to destination (Recommended)". Ghost DP symbols with a thin line to
+   the tank/pit and the catchment area; accept all or per DP; one U.
