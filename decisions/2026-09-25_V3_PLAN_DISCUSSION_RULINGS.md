@@ -828,3 +828,18 @@ Builds on the 14 Sep eight approved detail-browser behaviours and statuses.
    with a small "REFERENCE ONLY - not editable" tag until redrawn as a DWG detail.
 4. **UX-DET-04, numbering:** Tim: "Yes, number and track (Recommended)". CE gives the next detail number on the sheet
    and title; if a detail or sheet moves, every callout (e.g. "5/S20") updates, with a preview.
+
+---
+
+## Help and first run — 25 Sep 2026, 23:57
+
+1. **UX-HELP-02, first run:** Tim: ""Start here" button, lit once (Recommended)". A highlighted "Start here" on the CE
+   tab until clicked: a 2-minute picture tour of the ribbon and the five things to know (Pipe, Pit, Edit, Checks,
+   Help); never shown again once opened. No pop-up (SH2 stands).
+2. **UX-HELP-03, What's New:** Tim: **"Opens once after update"** (recommended "dot on Help" not taken). What's New
+   opens by itself the first time AutoCAD starts after an update, once. **Note:** this is a deliberate exception by
+   Tim to the July "no startup pop-up" ruling (SH2), limited to the first start after an update.
+3. **UX-HELP-04, F1:** Tim: "Yes, context help (Recommended)". F1 or a small ? in any CE window or command opens that
+   command's guide at the part in use.
+4. **UX-HELP-05, role:** Tim: "Ask once, first run (Recommended)". The Start-here tour asks "Engineer or
+   Draftsperson?" once; changeable any time on the CE panel. (Colleagues otherwise get Tim's set-up and switches.)
