@@ -843,3 +843,15 @@ Builds on the 14 Sep eight approved detail-browser behaviours and statuses.
    command's guide at the part in use.
 4. **UX-HELP-05, role:** Tim: "Ask once, first run (Recommended)". The Start-here tour asks "Engineer or
    Draftsperson?" once; changeable any time on the CE panel. (Colleagues otherwise get Tim's set-up and switches.)
+
+## Manager — 25 Sep 2026, 23:59
+
+1. **UX-MGR-03, home page:** Tim: "One-glance status page (Recommended)". Civil / Structural / Manager versions with
+   green-amber-red, up to date or update ready, and any problem in plain words with its fix button.
+2. **UX-MGR-04, update arrival:** Tim: "Quietly at next start (Recommended)". Downloaded in the background, switched
+   on at the next AutoCAD start (never mid-drawing), then What's New opens once (UX-HELP-03).
+3. **UX-MGR-05, rollback:** Tim: "Yes, one click, you're told (Recommended)". Any user can go back to the previous
+   version in Manager (applied at next start); a note goes to the office feedback folder saying who and why.
+4. **UX-MGR-06, one report:** Tim: "Merge (Recommended)". Feedback "Send report" and the Support bundle become one
+   "Report a problem" everywhere (ribbon, Help, error messages); versions and recent log added automatically; the
+   drawing only if ticked. UX-WORD-03's honest result line applies.
