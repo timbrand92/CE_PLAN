@@ -1242,3 +1242,21 @@ PDFs of 21-25 Sep 2026; no file copied, no job named here (DATA-01):**
 3. Civil and Structural keep **separate revision sequences**; an issue can include both (e.g. STR REV F + CVL REV G),
    one folder, separate or combined PDF as chosen in the issue preview.
 4. A civil-only job has no register (its sheets are C01 onward).
+
+## Release-chat L3 cards, open choices — 26 Sep 01:17 2026
+
+Cards in `04_REFERENCE\ux-plan\cards\` (L3-LEVELS, CV-02A_SIZING, L3-SOURCES, L3-DETENTION, L3-NETWORK,
+STRUC-REGISTER-ISSUE).
+
+1. **CV-02A:** Tim: "Engineer mode only (Recommended)". "Accept all" sizing suggestions is available in Engineer mode
+   only; Draftsperson mode checks against the supplied design.
+2. **L3-NETWORK:** Tim: "Say so, offer nothing (Recommended)". Before enough past jobs are learned, the layout
+   proposal says so and offers nothing; no invented fixed rule.
+3. **REGISTER / submission pack:** Tim: "Warn and list it (Recommended)". A missing document is listed in amber in the
+   pack preview; the pack can still be built.
+4. **L3-LEVELS:** Tim: "Top of every branch (Recommended)". Minimum cover applies at the highest pit of every branch;
+   branches meet at junction pits.
+5. Not put to Tim, taken as the cards' recommendations (implementation-level): Hold grade treated as a fixed control
+   when extending CDRUNSOLVE; "Unknown" kept separate from "No size works"; the sizing-rule sign-off reuses the
+   network-redesign sign-off pattern; downpipe numbering default = learned pattern; "Draft" on detention means the
+   calculation is not approved or not yet issued.
