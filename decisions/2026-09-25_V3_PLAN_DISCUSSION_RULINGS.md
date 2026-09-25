@@ -628,3 +628,24 @@ answers.
 2. **UX-STD-01b:** Tim: "Carry on by default (Recommended)". CD and PIT carry on until Enter or Escape by default,
    like the source commands; no Batch tick needed. Corrects the build that made them carry on only with a Batch
    tick switched on (off by default).
+
+---
+
+## Structural front door — 25 Sep 2026, 22:56
+
+Inventory read from the installed Structural's registry (commit 8c077569, `Modules/Structural/Assets/Config/
+command-registry.json`): 307 commands, 298 visible; largest groups Text Tags 56, Hatching 38 (patterns 20, presets
+18), Utilities/Legacy 29, Beam 16; many duplicates.
+
+1. **UX-STRUC-02 — families on the ribbon:** Tim: "Families (Recommended)". The Structural ribbon shows families
+   with drop-downs (Beam ▾ Regular/Lower/Special/Offset, Text ▾, Tag ▾, a Hatch gallery with pictures); each
+   remembers the last pick; about 40 tools shown; every typed code unchanged.
+2. **UX-STRUC-03 — duplicates:** Tim: "One each + shortcuts (Recommended)". One real command per tool
+   (e.g. CENTERLINE/CENTRELINE/CL/CLINE; FFL/FFLMARKER/FLMK; RB/REBAR; SCAB/SCABBLE; COPYM/CEMCOPY; BEXT/BEXTEND);
+   the other names stay as silent typed shortcuts; Help and the ribbon show one name.
+3. **UX-STRUC-04 — tags:** Tim: "Codes + one Tag tool (Recommended)". The 56 text/tag codes stay typed; one Tag tool
+   on the ribbon: pick the object and side once, and it remembers.
+4. **UX-STRUC-05 — "Legacy" utilities:** Tim: "Sort into proper families (Recommended)". Piers to Foundations, rebar
+   to Rebar, floor level and centreline to Annotate, and so on; the word "Legacy" disappears.
+5. Diagnostic/test commands hidden from drafters (e.g. CEDEBUG, JOBTIMERDEBUG): presented as part of the polished
+   version; not separately asked.
