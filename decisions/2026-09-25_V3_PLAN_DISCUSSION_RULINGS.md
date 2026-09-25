@@ -1196,3 +1196,13 @@ Builds on the 14 Sep journey (job number and address from the folder; people ent
    line offers to pause it for that drawing; remembered per drawing; shown on Manager's status page.
 3. **UX-JOB-05:** Tim: "Show and ask per change (Recommended)". When another person changes the shared job record,
    the other user sees what changed and by whom and chooses to take each change; nothing is overwritten silently.
+
+## Settings window — 26 Sep 01:12 2026
+
+1. **UX-SET-03:** Tim: "Any engineer, recorded (Recommended)". Any engineer may change a firm-wide value with a reason;
+   who, when and the old value are kept; everyone receives it at their next start (per R-00, 4 Sep).
+2. **UX-SET-04:** Tim: "Yes (Recommended)". Settings has a search box across all pages and councils.
+3. **UX-SET-05:** Tim: "Yes, one click (Recommended)". A clock beside each changed value opens its history, with
+   "Reset to office value".
+4. **UX-SET-06:** Tim: "Gold "This job" tag (Recommended)". A job-only value shows a gold tag, with the office value
+   beside it and "Reset to office".
