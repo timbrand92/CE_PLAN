@@ -236,7 +236,7 @@ From `council-profiles.json` + `COUNCIL_PROFILE_AUDIT.md`. ⚠️ = disagrees wi
 | R-02 | Minimum self-cleansing velocity | 0.6 m/s |
 | R-03 | Minimum grade | AS/NZS 3500 per-diameter ladder governs; project "too-flat 1:200" is a drafting warning only (closes C4) |
 | R-04 | Minimum cover | Setting: office standard seeded **450 mm**, project override with reason, council profile wins when present (Frankston 250) (closes B8, C6) |
-| R-05 | Orifice plate | Snap up to the next standard plate, never below the council minimum; exact calculated size stays visible. Co = 0.6 (closes D9) |
+| R-05 | Orifice plate | **Rounding part SUPERSEDED 25 Sep 2026 (Tim, CR-A3): round DOWN to the whole mm, never below the council minimum; `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`. Co = 0.6 confirmed (CR-A2).** Was: Snap up to the next standard plate, never below the council minimum; exact calculated size stays visible. Co = 0.6 (closes D9) |
 | R-06 | Detention pipe house rules | Preferred maximum run 40 m; diameters 225 to 600; TWL at obvert of highest pipe; 150 mm freeboard below cover (closes C7, C8) |
 | R-07 | Default pipe diameter | **100 mm**; per-type defaults read from the data model (pipe-type catalogue), never a constant (closes C13) |
 | R-08 | Pit drop | 20 mm default, project-adjustable; lowest incoming pipe governs; main outlet only (closes C10) |
@@ -255,7 +255,7 @@ From `council-profiles.json` + `COUNCIL_PROFILE_AUDIT.md`. ⚠️ = disagrees wi
 | UI-02 | Grip shapes (D8) | Four distinct grip shapes, no icons: square = move pipe end, triangle along pipe = slide label, diamond = offset label, circle = flip label side. |
 | UI-03 | Drafter / Engineer modes | Ribbon toggle, mode recorded in the drawing. Drafter mode hides catchment coefficients and PSD; Engineer mode shows and requires them. Issue from Drafter mode allowed with a recorded warning. |
 | EV-01..EV-08 | Civil portfolio evidence rules | Confirmed 2026-09-04; full text on #25 (approval-to-be-confirmed after any post-approval change; four values kept separate; separate tank volumes; engineer confirms catchments; separate authority gates; issued Xref state remembered; highlight-together test; read-only first slice). |
-| R-20 | Drawing vs calc rounding | Storage may round up within 0.02 m³; orifice rounds up to next whole mm, never above council max; members sum exactly to total. |
+| R-20 | Drawing vs calc rounding | **Orifice direction SUPERSEDED 25 Sep 2026 (Tim, CR-A3): orifice rounds DOWN to the whole mm; storage and member rules unchanged.** Was: Storage may round up within 0.02 m³; orifice rounds up to next whole mm, never above council max; members sum exactly to total. |
 | R-21 | Tank allocation and STORM credit | STORM treatment volume = drawn reuse compartment; detention air-space never counts; "max 4,000 L tank" = reuse capacity. User override with recorded reason allowed. |
 | R-22 | Local tank orifices | Own check at own head; local flows sum ≤ whole-site PSD; copied sizes flagged. |
 | R-23 | Basement pump groundwater exclusion | Tanked basement; only ramp, AGI behind tanking and rain-fed floor wastes enter the SPS; note + geotech/waterproofing reference; "groundwater excluded" tick; missing reference **warns** at issue (R-27). |
@@ -265,7 +265,7 @@ From `council-profiles.json` + `COUNCIL_PROFILE_AUDIT.md`. ⚠️ = disagrees wi
 | R-27 | No hard blocks (Tim verbatim: nothing hard-coded, nothing restricts users unless really serious) | Every check failure = warn + record + continue. Hard blocks only for items Tim lists as really serious (none listed yet). |
 | R-27 list | "Really serious" hard blocks | Only two: deleting spine identities; pushing an update to colleagues on a failed build. Everything else warns + records. |
 | R-28 | Annotation offsets (closes C11 / P-01) | At DIMSCALE: label text 70, invert text inward 200, saw-cut/CJ label 200, text mask 70 mm. Settings values. |
-| R-29 | Step-iron note (closes P-05) | 24 mm diameter galvanised MS step irons in pits deeper than 1000 mm; note text and depth are Settings values. |
+| R-29 | Step-iron note (closes P-05) | **Depth SUPERSEDED: 900 mm, office-wide (STEP-02, Tim 15 Sep, "LET'S DO OVER 900 DEEP"; confirmed 25 Sep, CR-A5). Note wording unchanged.** Was: 24 mm diameter galvanised MS step irons in pits deeper than 1000 mm; note text and depth are Settings values. |
 | EV-05a | Completion checklist (P-06) | Per-job checklist on the project record; step names are a Settings list Tim fills later. |
 | CP-01..CP-08 | Council profile data rulings | On #25 (4 Sept): Kingston residential-only; Glen Eira PSD 10-yr; Darebin C 0.4 / floor 0.8, Tc 10; Whitehorse Assumed; Manningham 40 outlet / 25 tank; Yarra Ranges council guide with 10/20/100 site case; Maribyrnong 20-yr, C 0.4 / 0.75; all 219 unsourced fields kept, tagged Assumed, warn on use. |
 

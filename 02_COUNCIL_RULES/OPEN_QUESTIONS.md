@@ -16,6 +16,8 @@ These change flows, pipe sizes and orifice sizes on every drawing. They matter m
 
 ### A1 — The runoff coefficient for soft ground: 0.30 or 0.35?
 
+**ANSWERED by Tim, 25 Sep 2026 13:10 — CR-A1: two numbers, 0.35 whole site before development (hold unchanged), 0.30 soft ground after development. Tim's words and detail: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`.**
+
 **What it is.** The number that says how much rain runs off lawn, garden and landscaping rather than
 soaking in. It multiplies straight into the flow, so it decides every pipe size, every orifice and every
 detention volume.
@@ -40,6 +42,8 @@ two different sums?
 
 ### A2 — The orifice discharge coefficient: 0.6 everywhere?
 
+**ANSWERED by Tim, 25 Sep 2026 13:10 — CR-A2: 0.6 everywhere, Darebin 1.0 shown as a note on Darebin jobs. Tim's words and detail: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`.**
+
 **What it is.** How freely water escapes through the hole that limits the site's discharge. A bigger
 coefficient means a smaller hole for the same permitted flow.
 
@@ -57,6 +61,8 @@ council get its own?
 **Blocks:** every orifice we draw.
 
 ### A3 — Rounding the orifice: up, down, or nearest?
+
+**ANSWERED by Tim, 25 Sep 2026 13:10 — CR-A3: round DOWN to the whole mm, never below the council minimum. Tim's words and detail: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`.**
 
 **What it is.** The sum gives an awkward number like 42 mm; the hole has to be a real size.
 
@@ -86,6 +92,8 @@ the job**, so the difference is visible rather than assumed — while still work
 **Blocks:** nothing urgent. It is a display and record decision.
 
 ### A5 — Step irons: 900 deep everywhere, or each council's own?
+
+**ANSWERED by Tim, 25 Sep 2026 13:10 — CR-A5: 900 mm everywhere, one office rule. Tim's words and detail: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`.**
 
 **What we found.** Tim ruled *"LET'S DO OVER 900 DEEP."* Maroondah's own table requires step irons above
 **900**. Banyule and Manningham both say **1 metre**.
