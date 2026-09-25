@@ -1385,3 +1385,11 @@ Strip.
    tool, then never; can be turned off in Settings.
 4. **UX-HELP-09:** Tim: "Suggest once, quietly (Recommended)". When a colleague does something the long way (e.g. many
    single edits where batch edit exists), CE suggests the faster way once in the status line; learns if dismissed.
+
+### UX-NAMES-01 — Old typed command names, whole plugin (26 Sep 07:49)
+
+Clash found between the 5 Sep Civil review ("old names still work when typed for one release") and today's
+Structural rulings (every typed code keeps working). **Tim: "Forever, as silent shortcuts (Recommended)".** Renamed or
+merged command names keep working when typed, indefinitely, in Civil and Structural; they never appear in the
+ribbon, Help or tooltips. **Supersedes** the 5 Sep "for one release" limit (plugin repo
+docs/design/V3_UI/00C_TIM_REVIEW_2026-09-05.md, Help Centre row).
