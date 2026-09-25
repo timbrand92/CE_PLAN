@@ -701,3 +701,19 @@ Not ticked: "Detail browser".
    issue (stage 7); (3) architectural background preparation (stage 2). The detail browser (stage 5) follows later.
 2. Each needs its workflow card before any build (release chat), reusing the 14 Sep rulings; stage 2 first needs
    real prepared Xrefs studied (the 14 Sep record says the cleanup rules must be learned from actual jobs).
+
+## Structural QA against the markup, batch 1 — 25 Sep 2026, 23:23
+
+Builds on the 14 Sep rulings (Missing / Different from markup / Unable to verify; highlight with markup beside;
+agreed departures remembered; issue-time decision; review highlights never print).
+
+1. **UX-QA-01, reading the markup:** Tim: "CE proposes, you correct (Recommended)". CE reads the handwriting (AI
+   vision) and proposes each item with the markup snippet beside it; the user fixes or deletes wrong items and clicks
+   any missed mark to add it; CE learns from the corrections (UX-LEARN-01).
+2. **UX-QA-02, where the markup shows:** Tim: "Faded over the plan + side list (Recommended)". The marked-up page
+   sits lined-up and faded under the drawing (toggle on/off), with the item list docked beside; clicking an item
+   zooms there.
+3. **UX-QA-03, when it runs:** Tim: "On demand + at issue (Recommended)". A "Check against markup" button, always
+   before issue, and a quiet open-item count in the QA panel; never pop-ups.
+4. **UX-QA-04, item states:** Tim: "Yes, those four (Recommended)". To do, Drafted, Needs clarification, Checked. CE
+   may set Drafted when it sees the item drawn; only a person marks Checked.
