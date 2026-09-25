@@ -144,3 +144,39 @@ colleague meets first and they shape everything after. Then the one standard, th
    change later), written from existing rulings plus the gaps.
 3. **Pass 3, family by family:** 5 to 10 related commands at a time in job order (Civil, then Structural, then
    Manager), each showing today, the polished version and only Tim's genuine choices.
+
+---
+
+## Structural beam commands — 25 Sep 2026, 13:50
+
+From the release chat's card `04_REFERENCE\structural\STRUCTURAL_BEAM_FIX_CARD_2026-09-25.md` section 4, raised after
+Tim's own message to the release chat at about 13:20 (*"with structural module can you looking into the beam
+commands, it always fails and always works terribly in multiple ways"*).
+
+### UX-BEAM-01 — Say why a beam was not placed (card fix 1)
+
+**Tim: "Plain reason + next step (Recommended)".** The choice read: *One line naming the cause and what to do, e.g.
+"Beam not placed: no inside-of-building point in this drawing. Pick one now, or run BSET." Internal codes stay in
+the log, never on screen.*
+
+1. Every beam refusal (commands 1, 2, 4, 5, BDL) shows one plain line: what CE found and what to do next.
+2. Internal codes stay in the log only. This supersedes the single generic line introduced 23 Sep
+   (STRUC-BEAM-WORDS-01) for the refusal case.
+
+### UX-BEAM-02 — STRUCDEBUG switch (card fix 2)
+
+**Tim: "Yes, like CDDEBUG (Recommended)".** The choice read: *Off by default, so colleagues never see it. When on,
+each beam step writes a readable line to the command line, so Codex's test runs can prove each cause.*
+
+### UX-BEAM-03 — One engine for every beam command (card fix 3)
+
+**Tim: "After the message fixes (Recommended)".** The choice read: *Once the plain reasons and the switch are in,
+move 5 then BDL across one at a time, each tested by Codex before the next.*
+
+### Card question 4 (object limit) — not asked, already answered
+
+Covered by R-00 (Tim, 4 Sep 2026: *"all of the engineering values and decisions must be part of the settings page
+so engineers can update system wide, same for council values, nothing should be hardcoded"*): the nearby-object
+limit becomes a Settings value with today's default. **UX note from this chat (a recommendation, not a Tim
+ruling):** the on-screen message should not show the raw number ("limit 65,536"); say it in drafting words, e.g.
+*"Beam not placed: too much drawing near this beam for CE to check. Zoom closer or turn off Xrefs you do not need."*
