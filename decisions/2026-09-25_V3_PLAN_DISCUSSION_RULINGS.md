@@ -734,3 +734,18 @@ agreed departures remembered; issue-time decision; review highlights never print
 
 **QA against the markup: all workflow choices answered.** Needs a workflow card from these plus the 14 Sep rulings
 (release chat).
+
+## Structural register, revisions and issue — 25 Sep 2026, 23:33
+
+Builds on the 14 Sep rulings (one sheet list; suggest-then-confirm affected sheets; unchanged sheets keep revision
+and date; P/T/A not hard-coded; issue preview; one combined PDF; clouds after A, current changes only; failed plot
+finalises nothing).
+
+1. **UX-REG-01, what changed:** Tim: "Compare with last issue (Recommended)". CE compares each sheet with its last
+   issued version and lists changed sheets with a reason; the user ticks which get a new revision.
+2. **UX-REG-02, next revision:** Tim: "Suggest, you pick stage (Recommended)". After P3 CE offers P4 / T1 / A with the
+   likely one pre-picked from the job's pattern; remembered per job.
+3. **UX-REG-03, revision clouds (after A):** Tim: "CE proposes, you adjust (Recommended)". CE draws proposed clouds
+   and triangles around each change in the preview; the user accepts, moves, reshapes or deletes each before issue.
+4. **UX-REG-04, register location:** Tim: "On the cover sheet, auto (Recommended)". The drawing list table on the
+   cover/notes sheet updates from the one sheet list, plus an Excel copy in the issue folder.
