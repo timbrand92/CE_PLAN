@@ -1173,3 +1173,17 @@ and the pits counted as storage.
    settings (Settings values); a differently set-up sheet is flagged in the issue preview.
 4. **UX-REG-12:** Tim: "Yes, in the issue folder (Recommended)". A locked read-only DWG snapshot goes into the dated
    issue folder beside the PDF; the "what changed since last issue" comparison uses it.
+
+## Starting a job, both disciplines — 26 Sep 01:09 2026
+
+Builds on the 14 Sep journey (job number and address from the folder; people entered once; client optional).
+
+1. **UX-JOB-01:** Tim: "One job record (Recommended)". One job record (number, address, client, people, council, rating
+   report) used by Civil Design, Structural and every title block; each discipline adds only its own items.
+2. **UX-JOB-02:** Tim: "Fill and keep in sync (Recommended)". Title blocks fill from the job record and stay in step;
+   a change to the job record updates every sheet, shown in a preview.
+3. **UX-JOB-03:** Tim: "Yes, from the office templates (Recommended)". "New job drawing": pick discipline and sheet size;
+   CE copies the right template from the office Drawing Templates folder into the project folder with the office
+   file name, fills the title block and opens it. (Templates themselves are never modified: UX-TPL-01.)
+4. **UX-JOB-04:** Tim: "Learned office pattern (Recommended)". File names follow the pattern learned from past jobs,
+   shown before saving, editable.
