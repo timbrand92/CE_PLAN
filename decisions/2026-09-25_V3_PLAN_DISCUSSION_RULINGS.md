@@ -520,3 +520,14 @@ before Apply; one U undoes it.
 4. **UX-IMP-01 (Q61):** Tim: "Compare only (Recommended)". Import > Compare changes nothing; any update is a separate
    Apply with preview and one U. Today's write-before-compare behaviour goes.
 5. Q56 (DET X (Grated) column) not asked yet: needs clearer context first.
+
+## Pass 3, family 7: import and repair — 25 Sep 2026, 14:45
+
+1. **UX-IMP-02 (Q60):** Tim: "Summary + open the list (Recommended)". CDCHECKDWG ends with one summary line and
+   opens the full list in the results window.
+2. **UX-IMP-03 (Q63):** Tim: "Choose files in the window (Recommended)". Survey files are chosen inside the Import
+   window; CE shows what it found before anything goes into the drawing.
+3. **UX-IMP-04 (Q64):** Tim: "Record + a file (Recommended)". The import report is kept in the drawing's record and
+   saved as a PDF in the job folder.
+4. **UX-REP-01 (Q70):** Tim: "Yes, with a warning (Recommended)". CDSYNC, CDREBUILD and similar stay typed-only with
+   direct writes, starting with one line saying what they will change and that one U undoes it. No button.
