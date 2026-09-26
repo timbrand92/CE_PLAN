@@ -1529,3 +1529,13 @@ drafting from a markup, its different to drafting from scratch with no set desig
 3. **UX-MODE-04:** Tim: **"Everything, as suggestions"** (recommended "Drafting only" not taken). In a Civil
    From-markup job CE still shows all proposals (sizing, levels, layout, detention), each marked "differs from
    supplied design" where it does; nothing changes the supplied design unless accepted.
+
+## Structural top-down load path — 26 Sep 10:17 2026
+
+1. **UX-LOAD-01:** Tim, his own words: **"yes we already do somewhat but i want to formalise it better"**. Drafting top
+   down, the level below shows what lands on it from above (posts, point loads, loadbearing walls) as non-printing
+   markers with their source; formalised as a CE feature rather than today's informal practice.
+2. **UX-LOAD-02:** Tim: "Flag in QA when that level is drafted (Recommended)". Anything above with nothing under it is a
+   quiet QA item with Show where when the level below is drafted.
+3. **UX-LOAD-03:** Tim: "Yes, from the full load path (Recommended)". The footing proposal uses every load traced down
+   all levels and lists anything above still Unknown.
