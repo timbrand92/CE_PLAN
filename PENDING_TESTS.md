@@ -300,6 +300,15 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 27 Sep 2026 02:10 on Tim's PC — Civil `3.0.6+a7c46308`, Manager `1.1.6+a7c46308`, Structural `1.0.77+f23e5e77`
+
+1. **Installed by the release chat** (Tim: "keep working until monday 10am"). AutoCAD closed checked twice (02:09:41, 02:09:52), before the swap and at the end; 2,900 files hash-checked after install, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all lanes, native ARX listed.
+2. **Sources:** Civil + Manager = train 6 `release/civil-train-0927` @ a7c46308 (#268 #272 #274; merged to master by #281). Structural = `release/struc-train-0927` @ f23e5e77 (#271 #269 #270 #273 #275 #279; merged to claude/struc-d1-prep by #282).
+3. **Checks before install:** Opus reviews (train 6 fix PRs; #273 separately) with every fix applied; Civil full suite 6 failed = baseline; Manager 265/265; DesignCore base; Structural suite base + 7 receipt drift (re-pinned #279); 383 tests did not run overnight - their guard groups run directly: 394/395 pass (the 1 is a build-freshness check).
+4. **Carries (fixes for pass 12 faults):** BUG-178 Esc then ONE U removes the last placed pit/pipe/source; BUG-179 downpipe no longer rolled back by an unrelated pipe; BUG-181 STRUCDEBUG registered; BUG-182 beam command 4 places again + plain refusal lines; BUG-183 column MOVE then ONE U restores; BUG-184 command 1/2 beams link each column to the end on it (a right-to-left beam's column MOVE moves the right end) and support-to-point beams work heading left/down; old swapped beams stay put with one plain line.
+5. **Backups (undo):** `CE_CVL_SUITE_PRE_e4c97de1_20260927-020941.backup`, `CE_SUITE_MANAGER_PRE_e4c97de1_20260927-020941.backup`, `CE_STRUC_SUITE_PRE_ad9c0742_20260927-020941.backup`.
+6. **Codex pass 13** at 09:05 (brief codex\pass13.txt; report `_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md`). A PASS is now **Codex-accepted** (RULES 4.5, Tim 27 Sep).
+
 ## LIVE since 26 Sep 2026 16:58 on Tim's PC — Civil `3.0.5+e4c97de1`, Manager `1.1.5+e4c97de1`, Structural `1.0.76+ad9c0742`
 
 1. **Installed by the release chat** under Tim's standing word ("test here until Monday morning"; AutoCAD free, Tim away). AutoCAD closed, checked twice (16:57:19, 16:57:29), before the swap and at the end. REL-09 rename and copy; 2,900 payload files hash-checked after install, 0 mismatches. CE_SHARED identical Civil/Manager in all three lanes; Structural has none; Structural is now the ALL-LANES package (Legacy, Net8, Modern; the same package colleagues get, UX-STRUC-12), 591 ribbon pictures per lane, native ARX in Modern and listed to load at start-up.
