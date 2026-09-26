@@ -62,7 +62,9 @@
 
 **Reference:** the support role comes from pick order (`BeamCommandAutoCadSelectedSourceReader.cs` ~132-151); the beam is written in standard direction (left to right / bottom to top, `BeamPlacementPlanner.cs` ~301-304); the writer measures the start role from `beam.StartPoint` (`AutoCadBeamAtomicWriteGateway.cs` ~292-300, 363-369) and nothing remaps it for commands 1/2 (commands 4/5 use `BeamSpecialEndpointRoleMapper.ToCanonicalAxisRole`). The same fix also allows the held-back "support to a point heading left or down" change from PR #270. Test needed in AutoCAD: command 1 from C2 (right) to C1 (left), then MOVE C1 300 and check which beam end follows.
 
-**Status:** OPEN
+**Proven 26 Sep (core console on 1.0.76 + behaviour tests):** right column +300 moved the LEFT end; left column -300 moved the RIGHT end; vertical beam, top column up moved the BOTTOM end.
+
+**Status:** IN PROGRESS (fix drafted: PR #273 claude/struc-bug184-support-ends - roles mapped to the ends they sit on for commands 1/2, as commands 4/5; old drawings with swapped records: the follow leaves the beam and prints a plain line; re-enables #270's held-back left/down support-to-point beams; awaiting Opus review, train 6 and Tim's AutoCAD check)
 
 ---
 
