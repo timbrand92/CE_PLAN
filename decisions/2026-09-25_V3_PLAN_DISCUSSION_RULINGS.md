@@ -2008,3 +2008,13 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    and clip, then runs the "what moved" review.
 3. **UX-ARCH-03:** Tim: "Office 'background' preset". One click applies the office's usual freeze/grey list to the
    architectural Xref, learned from past jobs and editable in Settings.
+
+## Naming new commands — 27 Sep 01:56 2026
+
+1. **UX-NAMES-02, prefixes for new commands:** Tim: "CD = Civil, CS = Structural, CE = shared". New typed names start
+   CD (Civil), CS (Structural) or CE (shared, e.g. CEFIND, ASKCE stays as named). Existing names keep working forever
+   (UX-NAMES-01); this governs new and renamed commands only.
+2. **UX-NAMES-03, ribbon labels:** Tim: "Plain words, code in tooltip". Buttons say "New Pit", "Water Tank"; the typed
+   code appears in the tooltip (UX-TIP-01).
+3. **UX-NAMES-04, short aliases:** Tim: "Yes, few, office set". About ten short aliases for daily tools (e.g. PP pipe,
+   PT pit) in Settings, clash-checked against AutoCAD's own aliases.

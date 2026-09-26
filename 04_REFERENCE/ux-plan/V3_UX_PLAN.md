@@ -103,6 +103,8 @@ Builders: the release chat writes a card per item before code.
 35. **Architect's drawing:** revised background raises a "what moved" review, nothing moves itself; "Replace
     background" swaps the file keeping position, layers and clip; one-click office background layer preset.
     (UX-ARCH-01..03)
+36. **Naming:** new commands CD (Civil), CS (Structural), CE (shared); ribbon buttons in plain words with the code
+    in the tooltip; about ten office short aliases, clash-checked. Old names forever. (UX-NAMES-01..04)
 
 ## 2. The front door — ribbon, names, help
 
