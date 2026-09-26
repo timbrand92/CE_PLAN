@@ -64,6 +64,9 @@ Builders: the release chat writes a card per item before code.
 20. **Command line and cursor:** AutoCAD-style prompts with clickable options and defaults; size, grade and length
     beside the cursor, warning colour on a fail; Enter repeats with last values; subtle glow plus CE snap marker
     on the connection target. (UX-CMD-01..04)
+21. **Layers and colour:** CE objects go on office layers (made if missing, current layer untouched); a wrong layer
+    is a pre-ticked safe fix in Checks; colour ByLayer always, preview colour only until Apply; existing greyed
+    on EX layers, demolished dashed on DEMO with "TO BE REMOVED". (UX-LYR-01..04)
 
 ## 2. The front door — ribbon, names, help
 

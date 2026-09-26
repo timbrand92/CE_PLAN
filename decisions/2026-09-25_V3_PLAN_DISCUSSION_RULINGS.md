@@ -1847,3 +1847,14 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    size and type last used.
 4. **UX-CMD-04, snap feedback:** Tim: "Subtle glow + snap marker". A soft highlight on the object a pipe end will join,
    plus a small CE snap marker like AutoCAD's object-snap marker; respects OSMODE on/off.
+
+## Layers and colour — 26 Sep 12:18 2026
+
+1. **UX-LYR-01, which layer:** Tim: "Office layers, auto-made". Each CE object type goes on its office layer from
+   Settings; CE creates a missing layer with the office colour and linetype; the current layer is never changed.
+2. **UX-LYR-02, moved to a wrong layer:** Tim: "Flag in checks". Shown in Project Checks as a safe drafting fix,
+   pre-ticked (UX-STD-05); never moved silently.
+3. **UX-LYR-03, colour:** Tim: "ByLayer always". Plot styles and the office pen table control output; previews and
+   proposals use a temporary preview colour only until Apply.
+4. **UX-LYR-04, existing and demolished:** Tim: "Office layers + linetypes". Existing greyed on EX layers; demolished
+   dashed on a DEMO layer with "TO BE REMOVED" text; all from Settings.
