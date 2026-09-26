@@ -90,7 +90,8 @@ Builders: the release chat writes a card per item before code.
 10. **WSUD:** tanks, buffer strips and raingardens only; checked against the rating report. (UX-WSUD-01..04)
 12. **C02 details:** CE offers the details C01 uses, filled with job sizes and kept live with preview; hand edits kept
     and flagged. Sheets: C01 plan with notes, fixed legend and Pit Schedule; C02 details. (UX-DET-07, 08, UX-SHEETS-03,
-    04, UX-CPLAN-01..03)
+    04, UX-CPLAN-01..03). Civil notes are the full template every time, plus council-required notes from the council
+    profile. (UX-NOTES-05, 06)
 11. **Overland flow:** route proposed from levels; neighbour warning; every overflow must go somewhere; floor
     freeboard checked. (UX-OLF-01..04)
 

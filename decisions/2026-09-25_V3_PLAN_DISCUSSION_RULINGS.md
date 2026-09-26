@@ -1718,3 +1718,11 @@ Builds on ST-08 (July).
 2. **UX-DET-08:** Tim: "Yes, update with preview (Recommended)". Civil details carrying job values (orifice plate,
    tank volumes, SPS levels) update after a preview when the calculation or drawing changes; a hand-edited figure is
    kept and flagged.
+
+## Civil notes on C01 — 26 Sep 11:34 2026
+
+1. **UX-NOTES-05:** Tim: **"Full template always"** (recommended "assemble from the job" not taken). Civil general notes
+   on C01 are the full standard Civil notes block every time (unlike Structural S01, UX-NOTES-02).
+2. **UX-NOTES-06:** Tim: "Yes, from the council profile (Recommended)". The job's council adds its required notes
+   (e.g. step-iron note, discharge conditions) from the council profile, with the source, shown in the notes preview;
+   a Settings value per council.
