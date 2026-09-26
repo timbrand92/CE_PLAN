@@ -98,6 +98,8 @@ Builders: the release chat writes a card per item before code.
     fixed layout, changed only between releases from office use counts. (UX-RIBBON-05..07)
 33. **Comfort:** windows follow Windows scaling; every status has a symbol as well as a colour; every control
     reachable by keyboard with Alt shortcuts. (UX-ACC-01..03)
+34. **Proposals feel:** options worked out in the background with a bell when ready; unchosen options kept until
+    issue; parts can be mixed across options and are rechecked before Apply. (UX-L3-24..26)
 
 ## 2. The front door — ribbon, names, help
 

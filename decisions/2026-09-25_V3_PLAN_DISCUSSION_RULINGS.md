@@ -1986,3 +1986,13 @@ Builds on UX-RIBBON-01..04.
    green alone. Works with the UI emphasis rule.
 3. **UX-ACC-03:** Tim: "Yes". Every window control is reachable by Tab, with underlined Alt shortcuts on main buttons
    (e.g. Alt+A Apply). Extends UX-WIN-01.
+
+## How proposals feel — 27 Sep 01:51 2026
+
+Builds on UX-L3-01..23 and the approved chooser sketch.
+1. **UX-L3-24:** Tim: "Keep drafting, bell when ready". Options are worked out in the background; the drawing is not
+   locked; the CE bell says when they are ready.
+2. **UX-L3-25:** Tim: "Kept for this job". Unchosen options stay with the job and can be reopened in the chooser until
+   the job is issued.
+3. **UX-L3-26:** Tim: "Allowed, rechecked". Parts can be taken from different options (e.g. B's pipes, A's tank); CE
+   rechecks the combination and shows any problems before Apply.
