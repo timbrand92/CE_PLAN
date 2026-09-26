@@ -1607,3 +1607,12 @@ Asked which types CE drafts often enough to need a proper tool (standard details
 four**: "Waffle pod slabs", "Timber subfloors", "Screw piles", "Suspended / basement slabs". Each gets a proper tool
 like the raft tools (tracked elements, tags, automatic schedule and legend entries, previews, one U), learned from past
 jobs; conventions to be learned from past drawings and confirmed with Tim as short questions before cards.
+
+## Framing plans — 26 Sep 10:43 2026
+
+1. **UX-FRM-01:** Tim: "Yes, build it automatically". Framing plans carry a legend (member types, stud walls, posts,
+   symbols) built and updated from what is drawn, in office wording, like the footing legend.
+2. **UX-FRM-02:** Tim: "Varies". The member schedule's position varies (on each framing sheet or a separate schedule
+   sheet); CE learns it per job and offers the job's pattern.
+3. **UX-FRM-03:** Tim: "On the framing plan". Bracing walls and tie-downs are shown on the framing plan, not a separate
+   bracing plan.
