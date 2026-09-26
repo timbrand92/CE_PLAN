@@ -11,9 +11,12 @@ raingarden or GIO in the sample). Anonymised (DATA-01). Items 1, 2, 7 remarks an
 4. **Tanks:** WT, WT1...; callout with capacity, make, dimensions and the detention/reuse split; riser/dropper notes.
 5. **LPD:** "CONNECTION TO LPD NOTE:" - connect to council pit at approx. IL to council satisfaction, plus bullets.
 6. **Existing services:** "Ex. SEWER DRAIN" etc., single-letter line codes (S, W, T).
-7. **Pit Schedule:** "STORMWATER PIT SCHEDULE"; pit no., size, from/inlets, inlet dia, IL, outlet dia, cover level, depth
-   to outlet, lid type and remarks (column order to be confirmed visually); levels to 2 decimals; three standard
-   remarks under every schedule.
+7. **Pit Schedule:** "STORMWATER PIT SCHEDULE". Column order confirmed from the rendered C01 of the most recent issue
+   (26 Sep): PIT No. | PIT SIZE | INLET (FROM, DIA, INVERT LEVEL) | OUTLET (DIA, INVERT LEVEL) | COVER LEVEL | DEPTH
+   TO OUTLET | TYPE OF LID AND REMARKS. One row per inlet: the first inlet shares the pit's row, each further inlet
+   gets its own row with only FROM/DIA/INVERT filled. FROM uses the source code (PP, TG ...). A double pit lists
+   each size on its own line in PIT SIZE and joins lids with "+" ("Class A Solid Lid + Class A Grated Lid"). Levels
+   to 2 decimals; three standard remarks under every schedule.
 8. **C01 notes:** blocks GENERAL, CIVIL WORKS, STORMWATER DRAINAGE, SITE PREPARATION (standard boilerplate);
    "ON SITE DETENTION CRITERIA" block (PSD, head, orifice dia, TWL, volume required per storage element, total);
    council blocks for some councils (e.g. a full City of Kingston notes block), otherwise the LPD note.

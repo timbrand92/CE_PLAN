@@ -1751,3 +1751,8 @@ Study: `04_REFERENCE\ux-plan\CIVIL_DRAWING_PRACTICE_2026-09-26.md`. Confirmed by
 **UX-CPLAN-05, MIN. suffix (26 Sep 11:46):** Tim: "Keep the May rule: no MIN.". Pipe labels show the actual grade exactly ("AT
 1 IN 100"), never MIN./MAX.; BUG-027 (ENGINEERING_RULEBOOK B4) stands. Older drawings showing "MIN." are old output,
 not the convention.
+
+**UX-CPLAN-06, Pit Schedule layout (26 Sep, observed, awaiting Tim's one-click confirm):** the office column order,
+read from the most recent issued C01: PIT No., PIT SIZE, INLET (FROM, DIA, INVERT LEVEL), OUTLET (DIA, INVERT LEVEL),
+COVER LEVEL, DEPTH TO OUTLET, TYPE OF LID AND REMARKS; one row per inlet. Proposed: CE's automatic Pit Schedule
+copies this layout exactly. Not a ruling until Tim confirms.
