@@ -1825,3 +1825,14 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    shows while CE loads, closes by itself and needs no click. **Refines SH2 (July "no startup pop-up"):** SH2 still
    bars anything that stops the drafter or needs a click; this brief self-closing loading splash is Tim's chosen
    exception. What's New after an update (UX-HELP-03) is unchanged.
+
+## How CE windows behave — 26 Sep 12:05 2026
+
+1. **UX-WIN-01, keys:** Tim: "Enter = Apply, Esc = Cancel". As in AutoCAD's own dialogs; Tab runs top to bottom, left to
+   right; Enter inside a multi-line box adds a line.
+2. **UX-WIN-02, position:** Tim: "Where you last left it". Each window remembers its position per PC and monitor; if that
+   monitor is gone it opens centred on AutoCAD. Personal value, never copied to colleagues (23 Sep rule).
+3. **UX-WIN-03, preview timing:** Tim: "As you type". The drawing preview updates about 0.3 s after typing stops;
+   nothing is written until Apply.
+4. **UX-WIN-04, blocking:** Tim: "Editors block, palettes don't". Edit windows (Pipe, Pit, Tank and the like) hold
+   AutoCAD until Apply or Cancel; Civil Properties, Checks and Proposals are palettes that stay open while drafting.
