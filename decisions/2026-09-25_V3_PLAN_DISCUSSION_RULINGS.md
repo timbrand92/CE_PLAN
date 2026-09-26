@@ -1977,3 +1977,12 @@ Builds on UX-RIBBON-01..04.
    office use counts) get large buttons; the rest small or in drop-downs.
 3. **UX-RIBBON-07, adaptive ribbon:** Tim: "No, fixed layout". Buttons stay where people learned them (cockpit rule);
    use counts inform the next release's layout instead.
+
+## Accessibility and comfort — 27 Sep 01:50 2026
+
+1. **UX-ACC-01:** Tim: "Follow Windows scaling". CE windows grow with Windows display scaling and stay sharp on 4K; no
+   separate CE text-size setting.
+2. **UX-ACC-02:** Tim: "Colour + symbol always". Every status shows a symbol too (tick, triangle, cross); never red and
+   green alone. Works with the UI emphasis rule.
+3. **UX-ACC-03:** Tim: "Yes". Every window control is reachable by Tab, with underlined Alt shortcuts on main buttons
+   (e.g. Alt+A Apply). Extends UX-WIN-01.

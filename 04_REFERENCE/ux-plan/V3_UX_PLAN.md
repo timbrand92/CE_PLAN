@@ -96,6 +96,8 @@ Builders: the release chat writes a card per item before code.
     UX-VOICE-01, UX-UNIT-04)
 32. **Ribbon look:** AutoCAD-style line icons with one CE accent; large buttons for about five daily tools per panel;
     fixed layout, changed only between releases from office use counts. (UX-RIBBON-05..07)
+33. **Comfort:** windows follow Windows scaling; every status has a symbol as well as a colour; every control
+    reachable by keyboard with Alt shortcuts. (UX-ACC-01..03)
 
 ## 2. The front door — ribbon, names, help
 
