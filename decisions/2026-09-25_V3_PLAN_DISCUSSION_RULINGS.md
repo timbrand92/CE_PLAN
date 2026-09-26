@@ -1679,3 +1679,15 @@ Study: `04_REFERENCE\structural\FRAMING_PLAN_PRACTICE_2026-09-26.md`. Confirmed 
    in the job record and applied everywhere (UX-FRM-10).
 3. **UX-UNIT-03:** Tim: "One schedule, grouped by unit". One MEMBER SCHEDULE with a heading per unit ("Typical all
    units" where identical).
+
+## Structural sections and details — 26 Sep 11:25 2026
+
+Builds on ST-08 (July).
+
+1. **UX-SEC-01:** Tim: "Yes, linked and numbered (Recommended)". Placing a section mark creates the numbered section
+   frame on the details sheet (e.g. 3/S05); mark and title stay in step when either moves.
+2. **UX-SEC-02:** Tim: "Generate, you adjust (Recommended)". Simple member sections (RC beam, steel beam, footing) are
+   drawn from the member's data (bars, cover, dimensions, labels) in office style and update with preview if the
+   member changes.
+3. **UX-SEC-03:** Tim: "Library by type, sizes filled (Recommended)". Steel connection details come from the CE Library
+   by connection type, with member sizes and cleat-table values filled.

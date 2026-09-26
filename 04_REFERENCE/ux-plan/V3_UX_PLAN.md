@@ -159,6 +159,8 @@ Builders: the release chat writes a card per item before code.
 6. **Tags:** smart tag places the right tag from the object, learned from past drawings. (UX-STRUC-09, 09b)
 7. **Detail library:** one CE Library palette (Blocks | Details); any engineer approves standards; PDF details as
    marked reference; detail numbers and callouts tracked. (UX-DET-01..04)
+7b. **Sections:** section marks create linked, numbered section frames; simple member sections generated from member
+   data; steel connections from the library with sizes filled. (UX-SEC-01..03)
 8. **Computations in CE:** start from the drawing; the same CE sheet as Civil; timber, then footings, steel,
    bracing; wind class proposed; geotech report read; loads traced from the drawing; results previewed then
    applied. (UX-SCALC-01..08)
