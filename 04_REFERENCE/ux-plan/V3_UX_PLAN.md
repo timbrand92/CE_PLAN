@@ -67,6 +67,10 @@ Builders: the release chat writes a card per item before code.
 21. **Layers and colour:** CE objects go on office layers (made if missing, current layer untouched); a wrong layer
     is a pre-ticked safe fix in Checks; colour ByLayer always, preview colour only until Apply; existing greyed
     on EX layers, demolished dashed on DEMO with "TO BE REMOVED". (UX-LYR-01..04)
+22. **Civil and Structural together:** each discipline reads the other's CE objects from the job folder, read-only;
+    pipes in a footing's zone of influence are flagged with a suggestion; an FFL/slab change gives Civil a quiet
+    heads-up; downpipes are Civil-owned, Structural sees and suggests. Nothing moves on its own.
+    (UX-XDISC-01..04)
 
 ## 2. The front door — ribbon, names, help
 

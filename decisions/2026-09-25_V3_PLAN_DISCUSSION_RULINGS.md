@@ -1858,3 +1858,14 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    proposals use a temporary preview colour only until Apply.
 4. **UX-LYR-04, existing and demolished:** Tim: "Office layers + linetypes". Existing greyed on EX layers; demolished
    dashed on a DEMO layer with "TO BE REMOVED" text; all from Settings.
+
+## Civil and Structural on the same job — 26 Sep 19:06 2026
+
+1. **UX-XDISC-01, pipe near a footing:** Tim: "Warn + suggest". Checks flag a pipe inside a footing's zone of influence
+   (angle a Settings value) and suggest deepening the footing or rerouting; nothing changes on its own.
+2. **UX-XDISC-02, separate DWGs:** Tim: "Via the job, both ways". CE reads the other discipline's CE objects from the job
+   folder, read-only, so cross checks work without Xref juggling.
+3. **UX-XDISC-03, FFL or slab change:** Tim: "Civil gets a heads-up". When the Civil drawing next opens, a quiet note names
+   the change (e.g. FFL 43.60 to 43.75) and the affected items, one click to see them; nothing moves on its own.
+4. **UX-XDISC-04, downpipe ownership:** Tim: "Civil owns, Structural sees". DPs are Civil objects; Structural sees them
+   read-only (e.g. post clashes) and can suggest a move.
