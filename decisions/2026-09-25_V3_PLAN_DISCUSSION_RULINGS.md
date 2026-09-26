@@ -1879,7 +1879,14 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
 3. **UX-NAV-03, walking the network:** Tim typed: "yes arrows in properties like youve shown but it would be great to
    also have a dynamic flashing symbol of some sort to sub consciously guide you, elaborate on that". Up/down arrows
    in Civil Properties step pit, pipe, pit and zoom along: **ruled**. The moving guide symbol: **asked for, design
-   options shown to Tim; not ruled yet** (see UX-NAV-05 when answered). Note: the 4 Sep cockpit rule says "no motion";
+   options shown to Tim; not ruled yet** (answered: UX-NAV-05). Note: the 4 Sep cockpit rule says "no motion";
    Tim's request makes a narrow exception for a guide that appears only while walking.
 4. **UX-NAV-04, selecting a run:** Tim: "Double-click = object, right-click = run". Double-click opens the object's
    window; right-click offers "Select this run" and "Select whole network" (UX-RCLICK-01 group).
+5. **UX-NAV-05, the guide symbol (27 Sep 01:22):** four animated options shown as a picture; Tim ticked **A flow arrows, B
+   next-stop ring, C checked trail** (not D, the amber problem beacon), and "Walking + Checks jumps" for where it
+   plays. So: while walking with the arrows, dashes run downstream along the current pipe, a slow breathing ring marks
+   the next stop, and stepped-past items fade slightly with a small tick; the same guide plays when a Checks or
+   schedule row zooms to an item. Rules shown with the picture and not objected to: screen-only (never saved or
+   plotted), fades about 3 s after walking stops or drafting starts, slow pulse about once a second (never strobing),
+   Settings switch to turn it off. Narrow exception to the 4 Sep "no motion" cockpit rule, at Tim's request.

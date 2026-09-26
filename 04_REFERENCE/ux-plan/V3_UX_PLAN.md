@@ -71,6 +71,10 @@ Builders: the release chat writes a card per item before code.
     pipes in a footing's zone of influence are flagged with a suggestion; an FFL/slab change gives Civil a quiet
     heads-up; downpipes are Civil-owned, Structural sees and suggests. Nothing moves on its own.
     (UX-XDISC-01..04)
+23. **Finding your way:** CE find box (P7, WT1, beam marks) zooms and highlights; clicking any schedule/Checks/
+    Properties row zooms with Back; up/down arrows walk the network with a gentle screen-only guide (flow dashes,
+    next-stop ring, ticked trail), also on Checks jumps, switchable off; right-click selects a run or network.
+    (UX-NAV-01..05)
 
 ## 2. The front door — ribbon, names, help
 
