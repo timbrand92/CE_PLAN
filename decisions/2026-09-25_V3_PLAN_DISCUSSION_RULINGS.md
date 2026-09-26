@@ -1487,3 +1487,17 @@ been loaded on real 2022-2024.
 16 Sep enabler-first rule), colleagues' V3 installs do **not** upgrade pipes to the one-piece object on open; Tim's
 own PC keeps upgrading as the test bed. **Deliberate exception** to "colleagues get Tim's exact setup and switches"
 (24 Sep) and to "upgrade everywhere" (16 Sep), limited to this upgrade until the enabler is proven.
+
+## Walkthrough corrections: top-down, rafts, roles — 26 Sep 10:10 2026
+
+Asked whether the start-to-finish walkthrough (Civil and Structural) matched, Tim, verbatim: **"what about raft slabs,
+infill slabs, do you understand how ti all works? the start to finish looks close enough nromally with structural we
+draft and design from top down. how does it differ from drafter to engineer"**.
+
+1. **UX-STRUC-13, top-down:** Structural jobs are drafted and designed top down (roof, upper floors, ground floor,
+   footings last); loads traced downward; the footing plan is the last plan. The walkthrough is otherwise "close
+   enough".
+2. **Raft and infill slabs:** not understood well enough by this chat to plan (CE's own conventions unknown). Tim:
+   "Study past jobs, then you correct (Recommended)": a read-only study of a few recent jobs with raft and infill
+   slabs (nothing copied out, DATA-01), producing a one-page description for Tim to correct before any UX questions.
+3. **Structural roles:** Tim asked, verbatim: "what if engineer drafts their own job". Follow-up put to Tim below.
