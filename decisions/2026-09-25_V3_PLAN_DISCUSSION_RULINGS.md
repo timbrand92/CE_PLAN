@@ -1782,3 +1782,16 @@ copies this layout exactly.
 17. **UX-CPLAN-17 (26 Sep 11:55):** Tim ticked "Charged detail on C02" and "Charged pipe linetype" (not the checks
     warning). When CE detects a charged line it adds the charged system detail to C02 and draws those pipes in the
     legend's charged pipe style. No council-acceptance warning.
+
+## Everyday AutoCAD edits on CE objects — 26 Sep 11:57 2026
+
+Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. All four clicked answers.
+1. **UX-EDIT-01, erase a connected pit:** Tim: "Pipes stay, free ends". The pit goes; its pipes stay with "Not connected
+   yet" ends (UX-WORD-01); the schedule updates; a quiet status-bar line says how many pipes now have free ends; one
+   Undo restores everything.
+2. **UX-EDIT-02, copy (COPY or Ctrl+C/Ctrl+V to another drawing):** Tim: "Full CE copies". Copies are real CE objects
+   renumbered to the next free number; levels come across flagged "Check levels" until the drafter confirms.
+3. **UX-EDIT-03, mirror or rotate:** Tim: "Labels stay readable". Geometry mirrors; CE text never reads backwards or
+   upside down, whatever MIRRTEXT says, and labels re-slide clear (PLACE-01).
+4. **UX-EDIT-04, explode:** Tim: "Allow + warn". Explode works as normal (R-27, no hard block); a status-bar line names
+   what left the schedule (e.g. "P3 is now plain linework and has left the schedule"); one Undo restores it.

@@ -48,6 +48,9 @@ Builders: the release chat writes a card per item before code.
     the instructions; extras are allowed and listed quietly as "Not in markup" (agree and remember, or remove).
     A late markup offers a switch, keeps drawn work and adds QA. All Civil proposals remain suggestions, marked
     "differs from supplied design" where relevant, and never alter it until accepted. (UX-MODE-01..04)
+16. **Everyday AutoCAD edits:** ERASE a pit leaves its pipes with free ends and says so; COPY/paste makes real CE
+    copies renumbered with levels flagged to check; MIRROR/ROTATE keeps CE text readable and re-slid; EXPLODE is
+    allowed with a status-bar note of what left the schedule. One Undo restores each. (UX-EDIT-01..04)
 
 ## 2. The front door — ribbon, names, help
 
