@@ -1909,3 +1909,14 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    "Nothing"). Palettes reopen docked as left; the next pipe starts from the last size/type used in that job.
 3. **UX-RECENT-01:** Tim: "CE panel job button". The job name on the CE panel drops down the last 10 jobs; one click
    opens that job's main drawing.
+
+## A colleague's first day — 27 Sep 01:35 2026
+
+Builds on UX-LEARN-01..04 (not replacing them).
+1. **UX-FIRST-01:** Tim: "One welcome card". After the splash on the very first start: one card, three pictures (draw
+   a pipe, place a pit, run checks), "Show me" and "Got it"; never again unless reopened from Help. Consistent with
+   SH2 as a one-time first-ever card.
+2. **UX-FIRST-02:** Tim: "One-line tip, once". First use of each command shows a single tip line (command line or window
+   footer), once per person per command.
+3. **UX-FIRST-03:** Tim: "Yes, a practice drawing". Help > "Open practice job": an anonymised small residential job
+   (DATA-01) to draw and check freely; never counted in time or reports.

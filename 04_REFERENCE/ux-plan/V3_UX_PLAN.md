@@ -80,6 +80,8 @@ Builders: the release chat writes a card per item before code.
     ones the person. (UX-MSG-01..03)
 25. **Undo and resuming:** CE Undo steps have plain names; palettes and last pipe size/type come back next day;
     the CE panel job button lists the last 10 jobs. (UX-UNDO-01, UX-RESUME-01, UX-RECENT-01)
+26. **First day:** one welcome card on the very first start; a one-line tip the first time each command is used;
+    an anonymised practice job in Help, never counted. (UX-FIRST-01..03)
 
 ## 2. The front door — ribbon, names, help
 
