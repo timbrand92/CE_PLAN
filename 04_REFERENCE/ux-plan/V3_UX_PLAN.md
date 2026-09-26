@@ -82,6 +82,8 @@ Builders: the release chat writes a card per item before code.
     the CE panel job button lists the last 10 jobs. (UX-UNDO-01, UX-RESUME-01, UX-RECENT-01)
 26. **First day:** one welcome card on the very first start; a one-line tip the first time each command is used;
     an anonymised practice job in Help, never counted. (UX-FIRST-01..03)
+27. **Beam marks:** gaps stay after deletes with a previewed renumber offered before issue; identical beams share a
+    mark with a quantity; tags placed at the learned office spot. (UX-MARK-01..03)
 
 ## 2. The front door — ribbon, names, help
 

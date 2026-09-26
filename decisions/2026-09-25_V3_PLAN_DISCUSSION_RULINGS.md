@@ -1920,3 +1920,12 @@ Builds on UX-LEARN-01..04 (not replacing them).
    footer), once per person per command.
 3. **UX-FIRST-03:** Tim: "Yes, a practice drawing". Help > "Open practice job": an anonymised small residential job
    (DATA-01) to draw and check freely; never counted in time or reports.
+
+## Structural beam marks and tags — 27 Sep 01:39 2026
+
+1. **UX-MARK-01:** Tim: "Gaps stay, offer tidy". Marks never change on their own after a delete; before issue, Checks
+   offers "Renumber marks in order", previewed, one Undo.
+2. **UX-MARK-02:** Tim: "Share a mark". Identical beams share a mark, the schedule shows the quantity; editing one asks
+   "all of them, or split this one off?".
+3. **UX-MARK-03:** Tim: "Learned office spot". Tags go where the office usually puts them (learned from past drawings,
+   the smart tagger idea), sliding clear of other text (PLACE-01).
