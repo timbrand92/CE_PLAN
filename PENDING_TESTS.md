@@ -1,10 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
-## CR-D1 / council profile source sweep (26 September 2026, code review ready)
+## CR-D1b/c / council profile source sweep (26 September 2026, code review ready)
 
-1. **Candidate:** draft [PR #259](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/259), `codex/cr-d1-council-sweep` at `afa5435c` against `master`; the 352-line change record is `02_COUNCIL_RULES/CR-D1_SWEEP_2026-09-26.md`. Three Civil Release builds: 0 errors. Focused checks: 63 passed. Full Civil suite: 11,131 passed, six known baseline failures, 19 skipped. **No AutoCAD opened; nothing installed or Tim-accepted.** The numeric loader still keeps old placeholders for Unknown fields; do not treat them as council approvals.
+1. **Candidate:** [PR #259](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/259), codex/cr-d1-council-sweep. All 284 unsourced values stay in use, marked **Assumed - no council source** and warned on use; the 24 source-backed value corrections and Whitehorse exception stay. All 22 profiles were compared with origin/master on the same inputs: zero other profile-value differences. Three Civil Release builds: 0 errors. Focused checks: 65 passed. Full Civil suite: 11,135 passed, six known baseline failures, 19 skipped. **No AutoCAD opened; nothing installed or Tim-accepted.**
 2. **After a separately authorised install, in AutoCAD 2027 and then 2024/net48:** open CE Settings and select Banyule. Its detention rule should require **all storage below ground**, and its minimum orifice should read **40 mm**. Select Maribyrnong: storage should use the **10-year storm**, not the 20-year overflow storm, and the minimum orifice should be **40 mm**.
-3. **One uncertainty check in each lane:** select Whitehorse. Its **90 mm** minimum must be visibly marked **Assumed - source not found**. Select Knox: the detention method and minimum grade must say **Unknown / requires council confirmation**, never a pass. If a raw old number appears as verified, stop acceptance and report that screen; the data-only sweep cannot change the display/consumer model.
+3. **One uncertainty check in each lane:** select Whitehorse. Its **90 mm** minimum must be visibly marked **Assumed - source not found**. Select Knox: its retained detention-method value must be marked **Assumed - no council source** and warn when used. A minimum grade with no entered value may remain Unknown; it must never say council-verified. If an assumed value appears as verified, stop acceptance and report that screen.
 
 ## UX-HELP-02..05 / Start Here first-run tour, My Role, What's New gate (26 September 2026, code review ready)
 
