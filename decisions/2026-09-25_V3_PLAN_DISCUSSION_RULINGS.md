@@ -1773,3 +1773,12 @@ copies this layout exactly.
     Project Checks as "Used but not in legend" with a one-click Add row; the legend never changes by itself.
 13. **UX-CPLAN-13 (26 Sep 11:53):** Tim: "Update live". Level text CE placed (RL, FFL, CL, TWL) follows its object; hand-typed
     levels are never rewritten, only flagged by checks when they disagree.
+14. **UX-CPLAN-14 (26 Sep 11:55):** Tim: "Code only". Sources are tagged DP, IO, OF with no number, as now; a Settings
+    switch can add numbers (DP1, DP2) for big jobs.
+15. **UX-CPLAN-15 (26 Sep 11:55):** Tim: "By content". C02 is titled "OUTFALL DRAIN PLAN AND DETAILS" when it carries an
+    outfall/LPD plan, otherwise "STORMWATER DRAINAGE DETAIL SHEET"; the drafter can overtype it.
+16. **UX-CPLAN-16 (26 Sep 11:55):** Tim: "Auto-pack, then drag". CE lays C02 details on a tidy grid in office order; the
+    drafter drags to adjust and CE remembers that arrangement for next time.
+17. **UX-CPLAN-17 (26 Sep 11:55):** Tim ticked "Charged detail on C02" and "Charged pipe linetype" (not the checks
+    warning). When CE detects a charged line it adds the charged system detail to C02 and draws those pipes in the
+    legend's charged pipe style. No council-acceptance warning.

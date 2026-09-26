@@ -96,7 +96,9 @@ Builders: the release chat writes a card per item before code.
     details titled not numbered; three standard remarks under the Pit Schedule. Pit Schedule copies the office layout
     exactly; OSD criteria block filled live; C01 note blocks picked by council; tank callout placed automatically in
     office wording; LPD note auto at the connection; existing services labelled with a clash check; legend gaps
-    flagged in checks; CE level text updates live, hand text only flagged. (UX-CPLAN-04..13, UX-DET-09)
+    flagged in checks; CE level text updates live, hand text only flagged; sources DP/IO/OF unnumbered; C02 titled by
+    content, details auto-packed then draggable; charged lines get the C02 detail and charged linetype.
+    (UX-CPLAN-04..17, UX-DET-09)
 11. **Overland flow:** route proposed from levels; neighbour warning; every overflow must go somewhere; floor
     freeboard checked. (UX-OLF-01..04)
 
