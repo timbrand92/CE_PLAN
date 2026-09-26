@@ -1967,3 +1967,13 @@ Builds on UX-AI-01..04 and UX-QA-05 (Claude-only provider permission unchanged).
    plain-English rule).
 3. **UX-UNIT-04:** Tim: "Always with units". Values in messages and windows always carry units (0.28 m, 225 mm, 1 in
    100, 12.4 m³); never a bare number.
+
+## Ribbon look — 27 Sep 01:48 2026
+
+Builds on UX-RIBBON-01..04.
+1. **UX-RIBBON-05, icons:** Tim: "Match AutoCAD's own". Flat simple line icons in AutoCAD's palette so CE looks
+   built-in; one accent colour marks CE-only ideas.
+2. **UX-RIBBON-06, button size:** Tim: "Big for daily tools". The most-used commands per panel (about five, from
+   office use counts) get large buttons; the rest small or in drop-downs.
+3. **UX-RIBBON-07, adaptive ribbon:** Tim: "No, fixed layout". Buttons stay where people learned them (cockpit rule);
+   use counts inform the next release's layout instead.
