@@ -1561,3 +1561,10 @@ questions, im not reading big documents"** (the facts are put to him as short qu
    running.
 4. **Raft notes, verbatim:** "we use a legend atm , please review drawings". The study's reading (notes inline) was
    **wrong**; the office currently uses a legend; drawings to be reviewed for its contents.
+
+## Structural sheet set order — 26 Sep 10:28 2026
+
+1. **UX-SHEETS-01:** Tim: "Notes, then footings up (Recommended)". Structural set order: S01 notes and register, then
+   ground floor footing plan, then floors upward, then roof, then details (drafted top-down, sheeted bottom-up).
+2. **UX-SHEETS-02:** Tim: "Yes, details after each plan". Each plan level is followed by its own details sheet(s)
+   (footing plan then footing details; framing plan then framing details). "New sheet" numbering follows this order.
