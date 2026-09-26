@@ -95,7 +95,8 @@ Builders: the release chat writes a card per item before code.
 13. **Civil conventions:** pipe labels "100 DIA. UPVC PIPE AT 1 IN 100" (no MIN./MAX.); pits P1, EP/SEP, JP1; Civil
     details titled not numbered; three standard remarks under the Pit Schedule. Pit Schedule copies the office layout
     exactly; OSD criteria block filled live; C01 note blocks picked by council; tank callout placed automatically in
-    office wording. (UX-CPLAN-04..09, UX-DET-09)
+    office wording; LPD note auto at the connection; existing services labelled with a clash check; legend gaps
+    flagged in checks; CE level text updates live, hand text only flagged. (UX-CPLAN-04..13, UX-DET-09)
 11. **Overland flow:** route proposed from levels; neighbour warning; every overflow must go somewhere; floor
     freeboard checked. (UX-OLF-01..04)
 

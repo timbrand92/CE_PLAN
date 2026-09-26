@@ -1764,3 +1764,12 @@ copies this layout exactly.
 9. **UX-CPLAN-09 (26 Sep 11:51):** Tim: "Auto, office wording". The water tank callout (WT1, capacity, make, dimensions,
    detention/reuse split, riser/dropper notes) is placed when the tank is drawn, in the current office wording,
    updates with the tank and slides clear of other text (PLACE-01).
+10. **UX-CPLAN-10 (26 Sep 11:53):** Tim: "Auto at the LPD". The CONNECTION TO LPD NOTE is placed beside the connection
+    when the LPD is set, filled with the actual IL, in Settings wording; a council's own note replaces it where one
+    exists.
+11. **UX-CPLAN-11 (26 Sep 11:53):** Tim: "Label + clash check". Existing services from survey get office labels (Ex. SEWER
+    DRAIN) and line codes (S, W, T), greyed; checks warn when a new pipe crosses one without the Settings clearance.
+12. **UX-CPLAN-12 (26 Sep 11:53):** Tim: "Warn in checks". A symbol used but missing from the CIVIL WORKS LEGEND shows in
+    Project Checks as "Used but not in legend" with a one-click Add row; the legend never changes by itself.
+13. **UX-CPLAN-13 (26 Sep 11:53):** Tim: "Update live". Level text CE placed (RL, FFL, CL, TWL) follows its object; hand-typed
+    levels are never rewritten, only flagged by checks when they disagree.
