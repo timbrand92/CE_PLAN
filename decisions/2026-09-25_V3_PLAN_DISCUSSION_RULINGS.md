@@ -1568,3 +1568,10 @@ questions, im not reading big documents"** (the facts are put to him as short qu
    ground floor footing plan, then floors upward, then roof, then details (drafted top-down, sheeted bottom-up).
 2. **UX-SHEETS-02:** Tim: "Yes, details after each plan". Each plan level is followed by its own details sheet(s)
    (footing plan then footing details; framing plan then framing details). "New sheet" numbering follows this order.
+
+## Civil sheet set — 26 Sep 10:30 2026
+
+1. **UX-SHEETS-03:** Tim: "C01 plan, C02 details". A Civil set is usually C01 drainage plan and C02 details and
+   schedules; more sheets on big jobs.
+2. **UX-SHEETS-04:** Tim: "On C01 beside the plan". Civil general notes, the OSD criteria block and the LPD note sit on
+   C01 beside the plan.
