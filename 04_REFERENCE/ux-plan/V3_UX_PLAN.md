@@ -89,6 +89,8 @@ Builders: the release chat writes a card per item before code.
     no proxy box. (UX-DWG-01..03)
 29. **Settings feel:** search box on the Settings page; job values tagged with their source (Council / Job override /
     Office); office standard changes hit new work only, with a previewed bell offer per job. (UX-SET-07..09)
+30. **Ask CE day to day:** dockable palette plus ASKCE; its changes use the normal preview/Apply/one Undo; the current
+    selection shows as removable chips. (UX-AI-05..07)
 
 ## 2. The front door — ribbon, names, help
 

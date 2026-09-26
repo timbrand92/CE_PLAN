@@ -1948,3 +1948,12 @@ Builds on UX-SET-01..06.
    ("Council: <name>", "Job override", "Office"); hover shows why and who set it.
 3. **UX-SET-09:** Tim: "New work only, offer to update". An office standard change applies to new work; existing
    drawings stay as issued; the CE bell offers "Office wording changed: update this job?" with a preview.
+
+## Ask CE in everyday drafting — 27 Sep 01:44 2026
+
+Builds on UX-AI-01..04 and UX-QA-05 (Claude-only provider permission unchanged).
+1. **UX-AI-05:** Tim: "Palette + command line". A dockable Ask CE palette; typing ASKCE opens it with the cursor ready.
+2. **UX-AI-06:** Tim: "Same preview + Apply". Ask CE changes go through the normal proposal path: ghost preview, list
+   of changes, Apply or Cancel, one Undo; never writes on its own.
+3. **UX-AI-07:** Tim: "Yes, shown as chips". Selected objects appear as removable chips above the question box and
+   are used as context.
