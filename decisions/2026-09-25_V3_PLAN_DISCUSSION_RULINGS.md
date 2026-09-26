@@ -1869,3 +1869,17 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    the change (e.g. FFL 43.60 to 43.75) and the affected items, one click to see them; nothing moves on its own.
 4. **UX-XDISC-04, downpipe ownership:** Tim: "Civil owns, Structural sees". DPs are Civil objects; Structural sees them
    read-only (e.g. post clashes) and can suggest a move.
+
+## Finding and moving around the network — 27 Sep 01:14 2026
+
+1. **UX-NAV-01, find:** Tim: "Type it in a CE find box". A find box on the CE panel (and a CEFIND command): type P7, WT1
+   or a beam mark; CE zooms to it and highlights it, across model space and layouts.
+2. **UX-NAV-02, clicking a row:** Tim: "Zoom + highlight". Schedule, Checks and Civil Properties rows zoom to the object
+   at a comfortable scale and highlight it for about 2 seconds; "Back" returns to the previous view.
+3. **UX-NAV-03, walking the network:** Tim typed: "yes arrows in properties like youve shown but it would be great to
+   also have a dynamic flashing symbol of some sort to sub consciously guide you, elaborate on that". Up/down arrows
+   in Civil Properties step pit, pipe, pit and zoom along: **ruled**. The moving guide symbol: **asked for, design
+   options shown to Tim; not ruled yet** (see UX-NAV-05 when answered). Note: the 4 Sep cockpit rule says "no motion";
+   Tim's request makes a narrow exception for a guide that appears only while walking.
+4. **UX-NAV-04, selecting a run:** Tim: "Double-click = object, right-click = run". Double-click opens the object's
+   window; right-click offers "Select this run" and "Select whole network" (UX-RCLICK-01 group).
