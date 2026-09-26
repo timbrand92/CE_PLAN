@@ -100,6 +100,9 @@ Builders: the release chat writes a card per item before code.
     reachable by keyboard with Alt shortcuts. (UX-ACC-01..03)
 34. **Proposals feel:** options worked out in the background with a bell when ready; unchosen options kept until
     issue; parts can be mixed across options and are rechecked before Apply. (UX-L3-24..26)
+35. **Architect's drawing:** revised background raises a "what moved" review, nothing moves itself; "Replace
+    background" swaps the file keeping position, layers and clip; one-click office background layer preset.
+    (UX-ARCH-01..03)
 
 ## 2. The front door — ribbon, names, help
 
