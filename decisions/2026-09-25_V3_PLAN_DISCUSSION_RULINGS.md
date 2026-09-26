@@ -2018,3 +2018,7 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    code appears in the tooltip (UX-TIP-01).
 3. **UX-NAMES-04, short aliases:** Tim: "Yes, few, office set". About ten short aliases for daily tools (e.g. PP pipe,
    PT pit) in Settings, clash-checked against AutoCAD's own aliases.
+4. **UX-NAMES-05, existing Structural names (27 Sep 01:57):** Tim: "Rename, old names stay". Ribbon, Help and tooltips move to
+   CS names (e.g. CSBEAM) in the Structural stage, not rushed; old names keep working silently forever (UX-NAMES-01).
+5. **UX-NAMES-06, Civil short codes (27 Sep 01:57):** Tim: "Keep short codes". CDWT, CDLPD and the like stay; the ribbon shows
+   plain words anyway.
