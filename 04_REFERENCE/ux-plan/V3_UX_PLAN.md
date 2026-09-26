@@ -56,6 +56,9 @@ Builders: the release chat writes a card per item before code.
     colleague names them and opens read-only, Issue waits with "Notify me when free". Nothing selected: the
     command asks to pick, filtered. Ribbon tooltips are Autodesk style (line, then picture). (UX-FAIL-01,
     UX-SHARE-01, UX-SEL-01, UX-TIP-01)
+18. **Around the object:** right-click shows a short CE group on top of AutoCAD's menu; Ctrl+1 shows editable CE
+    values with the same rules and one Undo; failure reports go to the office admin named in Manager; a brief
+    self-closing CE splash while AutoCAD loads. (UX-RCLICK-01, UX-PROP-01, UX-FAIL-02, UX-START-01)
 
 ## 2. The front door — ribbon, names, help
 

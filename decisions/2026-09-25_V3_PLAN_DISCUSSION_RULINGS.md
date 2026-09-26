@@ -1811,3 +1811,17 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    result plus the typed command name, like AutoCAD's own buttons.
 4. **UX-SEL-01, nothing selected:** Tim: "Ask to pick". The command line asks for the right object ("Select a pipe:"),
    filtered to that kind; Esc cancels cleanly. Same pattern as UX-CDTAG-01.
+
+## Admin route, right-click, Ctrl+1, startup — 26 Sep 12:03 2026
+
+1. **UX-FAIL-02, who "Send to admin" reaches:** Tim: "Office admin in Manager". A Manager setting names the office admin
+   (Tim for now); reports land in the office feedback folder and show as a count in the admin's Manager.
+2. **UX-RCLICK-01, right-click on a CE object:** Tim: "Short CE group on top". Three to five CE actions for that object
+   (e.g. Edit, Connect, Relabel, Show in schedule) at the top, AutoCAD's normal menu underneath. Beams and columns the
+   same (UX-STRUC grips ruling unchanged).
+3. **UX-PROP-01, AutoCAD Properties palette (Ctrl+1):** Tim: "CE values, editable". A CE section shows the key values
+   (e.g. size, grade, ILs, material); edits go through the same rules, preview where needed and one Undo as the window.
+4. **UX-START-01, AutoCAD start:** Tim chose "Splash for a second" over the recommended silent line. A small CE splash
+   shows while CE loads, closes by itself and needs no click. **Refines SH2 (July "no startup pop-up"):** SH2 still
+   bars anything that stops the drafter or needs a click; this brief self-closing loading splash is Tim's chosen
+   exception. What's New after an update (UX-HELP-03) is unchanged.
