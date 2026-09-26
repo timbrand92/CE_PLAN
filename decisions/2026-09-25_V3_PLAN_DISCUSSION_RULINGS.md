@@ -2022,3 +2022,13 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    CS names (e.g. CSBEAM) in the Structural stage, not rushed; old names keep working silently forever (UX-NAMES-01).
 5. **UX-NAMES-06, Civil short codes (27 Sep 01:57):** Tim: "Keep short codes". CDWT, CDLPD and the like stay; the ribbon shows
    plain words anyway.
+
+## Schedule tables in the drawing — 27 Sep 01:59 2026
+
+1. **UX-SCHED-04, long schedules:** Tim chose **"Continue on next sheet"** over the recommended split into columns. A
+   schedule longer than its space continues on another sheet with repeated headers; it never runs off the sheet or
+   shrinks.
+2. **UX-SCHED-05, typing in a cell:** Tim: "Edits the object". Confirms UX-SCHED-01/01b: an engineering value typed in
+   the table changes the object (preview for level changes); plain text cells (remarks) are simply saved.
+3. **UX-SCHED-06, sort:** Tim: "Mark order, natural". P1, P2 ... P10, never P1, P10, P2; Structural stays grouped by
+   heading (earlier ruling).

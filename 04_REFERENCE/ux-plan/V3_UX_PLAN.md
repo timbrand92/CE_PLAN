@@ -106,6 +106,8 @@ Builders: the release chat writes a card per item before code.
 36. **Naming:** new commands CD (Civil), CS (Structural), CE (shared); ribbon buttons in plain words with the code
     in the tooltip; about ten office short aliases, clash-checked. Old names forever; Structural moves to CS names in
     its stage; Civil short codes (CDWT, CDLPD) stay. (UX-NAMES-01..06)
+37. **Schedule tables:** a long schedule continues on the next sheet with repeated headers; typing in a cell edits
+    the object; natural mark order (P1, P2 ... P10). (UX-SCHED-04..06)
 
 ## 2. The front door — ribbon, names, help
 
