@@ -1519,3 +1519,13 @@ drafting from a markup, its different to drafting from scratch with no set desig
    (role asked at first run: no longer asked); UX-SIZE-02 and the CV-02A "Engineer mode only" Accept all (now: Design
    from scratch mode); UX-DES-01 (draftsperson Confirm setup: now the From markup mode). The Structural roles question
    is answered by this.
+
+## Job modes in practice — 26 Sep 10:14 2026
+
+1. **UX-MODE-02:** Tim: "Allow it, list as "Not in markup" (Recommended)". In From-markup jobs, items drawn that the
+   markup does not show are allowed and listed quietly as "Not in markup" (agreed and remembered, or removed).
+2. **UX-MODE-03:** Tim: "CE offers to switch (Recommended)". When a markup arrives on a Design-from-scratch job, CE
+   offers to check the design against it; switching keeps everything drawn and adds the QA list.
+3. **UX-MODE-04:** Tim: **"Everything, as suggestions"** (recommended "Drafting only" not taken). In a Civil
+   From-markup job CE still shows all proposals (sizing, levels, layout, detention), each marked "differs from
+   supplied design" where it does; nothing changes the supplied design unless accepted.

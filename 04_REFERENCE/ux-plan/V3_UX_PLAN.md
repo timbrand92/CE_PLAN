@@ -41,7 +41,9 @@ Builders: the release chat writes a card per item before code.
 13. **Approvals:** any CE user can approve calculations, apply proposals and issue, always recorded, naming the
     engineer where a sheet goes out. (UX-CALC-APPROVE-01, UX-CALC-03, UX-REG-06, UX-STRUC-11, UX-REV-05)
 15. **Job mode, not person role:** each job (per discipline) is "From markup / supplied design" or "Design from
-    scratch", suggested by CE, switchable; replaces Engineer/Draftsperson everywhere below. (UX-MODE-01)
+    scratch", suggested by CE, switchable; replaces Engineer/Draftsperson everywhere below. Extra items in a
+    From-markup job are listed "Not in markup"; a late markup offers a switch; Civil From-markup jobs still show every
+    proposal, marked where it differs. (UX-MODE-01..04)
 14. **Mixed versions:** V3 drawings must stay visible to colleagues without V3 (prove on the 2022 VM); 2027-only
     tools greyed with "needs AutoCAD 2027"; the automatic pipe upgrade is held on colleagues' PCs until the
     2022-2024 enabler is proven. (UX-MIX-01..03)
