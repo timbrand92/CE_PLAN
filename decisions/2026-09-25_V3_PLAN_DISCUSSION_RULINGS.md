@@ -1691,3 +1691,13 @@ Builds on ST-08 (July).
    member changes.
 3. **UX-SEC-03:** Tim: "Library by type, sizes filled (Recommended)". Steel connection details come from the CE Library
    by connection type, with member sizes and cleat-table values filled.
+
+## Structural general notes (S01) — 26 Sep 11:31 2026
+
+1. **UX-NOTES-02:** Tim: "Assemble from the job (Recommended)". S01 general notes are assembled from office note blocks
+   relevant to the job (waffle, basement, screw pile notes only when present), with site class and geotech details
+   from the job record; editable.
+2. **UX-NOTES-03:** Tim: "Yes, from the report (Recommended)". The geotechnical note is filled from the job's geotech
+   report (UX-SCALC-07); Unknown where not found.
+3. **UX-NOTES-04:** Tim: **"Full standard block"**. The concrete cover table is always the full standard block (not
+   only the rows used).

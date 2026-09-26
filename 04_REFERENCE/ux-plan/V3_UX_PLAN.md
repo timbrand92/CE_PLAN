@@ -161,6 +161,8 @@ Builders: the release chat writes a card per item before code.
    marked reference; detail numbers and callouts tracked. (UX-DET-01..04)
 7b. **Sections:** section marks create linked, numbered section frames; simple member sections generated from member
    data; steel connections from the library with sizes filled. (UX-SEC-01..03)
+7c. **S01 general notes:** assembled from relevant office note blocks; geotechnical note filled from the report; full
+   concrete cover table always. (UX-NOTES-02..04)
 8. **Computations in CE:** start from the drawing; the same CE sheet as Civil; timber, then footings, steel,
    bracing; wind class proposed; geotech report read; loads traced from the drawing; results previewed then
    applied. (UX-SCALC-01..08)
