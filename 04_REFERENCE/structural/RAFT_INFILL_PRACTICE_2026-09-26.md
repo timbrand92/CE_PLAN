@@ -48,3 +48,17 @@ are thinner AND DO have internal rib beams. Raft notes are in a LEGEND, not inli
 2. Should raft beams (EB/IB) go in a schedule, or stay dimensioned on plan?
 3. Is "infill slab" as described (lighter slab between/beside the raft) right, and should it be a tracked element
    with its own mark?
+
+## Deeper review after Tim's corrections (26 Sep 2026, ~55 structural issue PDFs 2020-2026, 14 read in full; anonymised)
+
+1. **Infill slabs:** typically 100 mm (sometimes 150), single top mesh (e.g. SL82 top), on membrane and packing sand;
+   they DO have rib and edge beams using the same IB / EB tags as the raft; a 200x200 mass-concrete edge beam is
+   commonly noted; drawn on the same footing/slab plan; no standalone infill standard detail.
+2. **Legend:** a heading "LEGEND", usually bottom-left of the footing plan near the notes: the raft slab note
+   (thickness, mesh top and bottom, cover, f'c, membrane, sand) plus symbol keys (saw cuts, steps/set-downs, steel
+   columns, stud walls, slab-thickness callouts) and sometimes the infill note; wording is an office template.
+   A Footing Schedule (PF / EB / IB / TH / BP: width, depth, reinforcement, comments) sits beside it.
+3. **Band beams:** BB1, BB2 in an "RC BEAM SCHEDULE" (type, width, depth, reinforcement), in suspended ground-floor
+   slabs over basements/retention structures; notes on continuous top mesh and restricted penetrations; standards in
+   the "Retention and Suspended Slab Details" folder, separate from on-ground raft details.
+4. **Unverified:** the infill hatch (graphics only); whether infill ribs have their own detail.
