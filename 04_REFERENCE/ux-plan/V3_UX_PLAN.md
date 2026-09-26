@@ -61,6 +61,9 @@ Builders: the release chat writes a card per item before code.
     self-closing CE splash while AutoCAD loads. (UX-RCLICK-01, UX-PROP-01, UX-FAIL-02, UX-START-01)
 19. **Windows:** Enter applies, Esc cancels; each window reopens where it was left; the preview follows typing live;
     editors hold AutoCAD until Apply/Cancel, palettes (Properties, Checks, Proposals) stay open. (UX-WIN-01..04)
+20. **Command line and cursor:** AutoCAD-style prompts with clickable options and defaults; size, grade and length
+    beside the cursor, warning colour on a fail; Enter repeats with last values; subtle glow plus CE snap marker
+    on the connection target. (UX-CMD-01..04)
 
 ## 2. The front door — ribbon, names, help
 

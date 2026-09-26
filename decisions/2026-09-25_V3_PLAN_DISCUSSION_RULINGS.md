@@ -1836,3 +1836,14 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    nothing is written until Apply.
 4. **UX-WIN-04, blocking:** Tim: "Editors block, palettes don't". Edit windows (Pipe, Pit, Tank and the like) hold
    AutoCAD until Apply or Cancel; Civil Properties, Checks and Proposals are palettes that stay open while drafting.
+
+## Command line and cursor — 26 Sep 12:13 2026
+
+1. **UX-CMD-01, prompts:** Tim: "AutoCAD style". e.g. "Pick next point or [Size/Grade/Undo] <225 at 1 in 100>:" with
+   clickable options, defaults in angle brackets and capital-letter shortcuts.
+2. **UX-CMD-02, beside the cursor:** Tim: "Size, grade, length live". While drawing a pipe, "225 · 1 in 100 · 12.4 m"
+   follows the cursor and turns to the warning colour if grade or cover fails; it follows the user's DYNMODE.
+3. **UX-CMD-03, Enter/Space repeat:** Tim: "Same command, last values". Repeats the last CE command starting from the
+   size and type last used.
+4. **UX-CMD-04, snap feedback:** Tim: "Subtle glow + snap marker". A soft highlight on the object a pipe end will join,
+   plus a small CE snap marker like AutoCAD's object-snap marker; respects OSMODE on/off.
