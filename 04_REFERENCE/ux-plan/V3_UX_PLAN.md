@@ -171,6 +171,9 @@ Builders: the release chat writes a card per item before code.
 8d. **Framing plans:** office tags (FB, RB, LRB, PB, L, RL, CANT/CONT; C, P, DS1, TS1); automatic legend and
    "MEMBER SCHEDULE" (MARK, SIZE, grouped); bracing Type A/B tool with totals; bracing on the framing plan; lintels,
    roof framing by area and stud supports proposed. (UX-FRM-01..08)
+8d2. **Multi-unit jobs:** draft one unit, CE copies to identical/mirrored units, tags renumbered by unit and linked;
+   tag prefix (level / unit / none) set once in the job record; one member schedule grouped by unit; schedules show
+   full names under headings. (UX-UNIT-01..03, UX-FRM-09, 10)
 8e. **More foundation tools:** waffle pod slabs, timber subfloors, screw piles, suspended/basement slabs, each with office
    tags, schedules and notes. (UX-FDN-05)
 9. **2022 colleagues** get full Structural with 2027-only tools greyed. (UX-STRUC-12)

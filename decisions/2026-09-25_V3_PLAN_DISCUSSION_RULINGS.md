@@ -1669,3 +1669,13 @@ Study: `04_REFERENCE\structural\FRAMING_PLAN_PRACTICE_2026-09-26.md`. Confirmed 
 3. **Leading number, verbatim:** "either floor level or townhouse/unit number". **UX-FRM-10:** a leading number on a tag
    (e.g. 1FB5) means the floor level or the townhouse/unit number; CE sets it from the level or unit the member
    belongs to (job setting which one applies).
+
+## Multi-unit jobs — 26 Sep 11:14 2026
+
+1. **UX-UNIT-01:** Tim: "CE copies to the others, linked (Recommended)". For identical or mirrored units, draft one;
+   CE copies the framing to the picked units (mirrored if needed) with tags renumbered by unit (1FB1 -> 2FB1), linked
+   so a change offers to carry to all (Edit together / Edit this only).
+2. **UX-UNIT-02:** Tim: "Asked once in the job record (Recommended)". "Tag prefix by: level / unit / none" is set once
+   in the job record and applied everywhere (UX-FRM-10).
+3. **UX-UNIT-03:** Tim: "One schedule, grouped by unit". One MEMBER SCHEDULE with a heading per unit ("Typical all
+   units" where identical).
