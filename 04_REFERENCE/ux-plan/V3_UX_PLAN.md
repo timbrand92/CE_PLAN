@@ -111,7 +111,8 @@ Builders: the release chat writes a card per item before code.
 38. **Pit numbering:** P1 at the outlet, rising uphill; main line first, then branches from nearest the outlet;
     later pits take the next free number with a previewed renumber offered before issue. (UX-CPLAN-18..20)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
-    leader out when too short, every pipe labelled (no TYP.). (UX-CPLAN-21..25)
+    leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
+    (UX-CPLAN-21..27)
 39. **CE panel:** job name and mode with recent jobs, a one-line health indicator into Checks, the bell count and
     the find box; the discipline switch follows the drawing. (UX-PANEL-01, 02)
 

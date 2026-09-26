@@ -2063,3 +2063,6 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
 4. **UX-CPLAN-24, short pipes (27 Sep 02:05):** Tim: "Leader out automatically". A label that will not fit moves to the nearest
    clear space with a leader.
 5. **UX-CPLAN-25, identical neighbours (27 Sep 02:05):** Tim: "Label each". Every pipe keeps its own label; no "TYP.".
+6. **UX-CPLAN-26, IL text at pits (27 Sep 02:07):** Tim: "One IL per pipe, at its end". Each pipe's IL ("IL 33.00") sits near
+   where it enters or leaves the pit with a short leader, as in office drawings.
+7. **UX-CPLAN-27, equal ILs (27 Sep 02:07):** Tim: "Show both". Identical inlet and outlet ILs are both shown.
