@@ -1,5 +1,14 @@
 # L3-DETENTION workflow card — Level 3 proposal 3: detention and tank layout
 
+**Job-mode refinement (UX-MODE-01..04, 26 Sep):** Civil job mode is set per job, suggested at setup, shown on
+the CE panel and switchable; it never depends on the person's role. In **From markup / supplied design**,
+detention and tank proposals follow the markup's instructions, while all options remain visible as suggestions.
+Mark a conflicting option `differs from supplied design`; keep supplied sizes and layout until the particular
+change is accepted. In **Design from scratch**, full detention proposals lead, with `Accept all` after preview.
+From-markup changes are accepted individually, with no `Accept all`.
+An extra drawn item is allowed and quietly listed as `Not in markup` (agree and remember, or remove). A late
+markup offers a switch, keeps all drawn work and adds the QA list.
+
 **APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal
 3" territory — UX-L3-11..14 (detention/storage specifics), UX-L3-19 (visual proposals, "detention and storage

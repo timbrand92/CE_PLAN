@@ -1,5 +1,14 @@
 # L3-NETWORK workflow card — Level 3 proposal 4: full network layout
 
+**Job-mode refinement (UX-MODE-01..04, 26 Sep):** Civil job mode is set per job, suggested at setup, shown on
+the CE panel and switchable; it never depends on the person's role. In **From markup / supplied design**, layout
+proposals follow the markup's instructions. All learned layout options remain visible as suggestions; mark
+conflicts `differs from supplied design` and leave the supplied layout untouched until the relevant change is
+accepted. In **Design from scratch**, full layout proposals lead, with `Accept all` after preview. From-markup
+changes are accepted individually, with no `Accept all`. Extra drawn
+pits or pipes are allowed and quietly listed as `Not in markup` (agree and remember, or remove). A late markup
+offers a switch, keeps all drawn work and adds the QA list.
+
 **APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal 4:
 full network layout — 26 Sep 01:01 2026" (UX-L3-15..18), plus UX-L3-19/20 (visual proposals and the approved

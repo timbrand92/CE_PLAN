@@ -1,5 +1,14 @@
 # L3-SOURCES workflow card — Level 3 proposal 2: downpipes and source placement
 
+**Job-mode refinement (UX-MODE-01..04, 26 Sep):** Civil job mode is set per job, suggested at setup, shown on
+the CE panel and switchable; it never depends on the person's role. In **From markup / supplied design**, source
+placement follows the markup's instructions. All source and destination proposals remain visible as suggestions;
+mark a conflict `differs from supplied design` and leave the supplied design untouched until the item is
+accepted. In **Design from scratch**, full source proposals lead, with `Accept all` after preview. From-markup
+changes are accepted individually, with no `Accept all`. An extra
+drawn source is allowed and quietly listed as `Not in markup` (agree and remember, or remove). A late markup
+offers a switch, keeps all drawn work and adds the QA list.
+
 **APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or
 Tim-accepted. Source of the ruling: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Level 3 proposal 2:
 downpipes and sources — 26 Sep 00:58 2026" (UX-L3-07..10), read together with UX-L3-01/02 (scope and build

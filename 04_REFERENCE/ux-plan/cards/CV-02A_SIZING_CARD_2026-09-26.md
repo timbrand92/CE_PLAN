@@ -8,8 +8,10 @@ builds on it, corrected by the 26 Sep rulings) and `04_REFERENCE\CARDS\CV-02_HYD
 hydraulic engine and rule values this advisory must not duplicate). The release-chat choice below closes the
 mode question; other build details remain OPEN.
 
-**Decision and implementation calls (26 Sep):** Tim: *"Engineer mode only (Recommended)"* — **Accept all**
-appears only in Engineer mode. **IMPLEMENTATION CALLS, not Tim's words:** Unknown stays separate from **No size
+**Superseded decision (UX-MODE-01, 26 Sep):** Tim: *"Engineer mode only (Recommended)"* was the earlier
+person-role wording. **Accept all** now belongs to **Design from scratch** job mode. In **From markup / supplied
+design** mode, all sizing proposals remain visible as suggestions (UX-MODE-04).
+**IMPLEMENTATION CALLS, not Tim's words:** Unknown stays separate from **No size
 works**; sizing-rule sign-off reuses the network-redesign sign-off pattern.
 
 ## 1. What Tim ruled, and what it corrects from July
@@ -17,16 +19,21 @@ works**; sizing-rule sign-off reuses the network-redesign sign-off pattern.
 1. **UX-SIZE-01 (where suggestions appear):** "Pipe window + Proposals" — one advisory line in the Pipe window
    while drawing or editing (never changes the pipe), and the whole-network review in Project Review >
    Proposals.
-2. **UX-SIZE-02 (modes):** "Yes, tie them" — Draftsperson mode checks against the supplied design (`Matches` /
-   `Different` / `Can't verify`); Engineer mode suggests sizes (`Keep` / `Upsize` / `Unknown` / `No size
-   works`).
+2. **UX-SIZE-02, refined by UX-MODE-01/04:** "Yes, tie them" now means tie the display to the **job's Civil
+   mode**, not the user's role. **From markup / supplied design** checks `Matches` / `Different` / `Can't verify`
+   against the named design and also shows every sizing proposal (`Keep` / `Upsize` / `Unknown` / `No size works`)
+   as a suggestion. Mark a conflicting proposal `differs from supplied design`; the supplied size stays until
+   that individual suggestion is accepted. **Design from scratch** lets the sizing suggestions lead.
 3. **UX-SIZE-03 (accept all):** "Accept all allowed" — after the preview, `Accept all` applies the clear
    suggestions in one Undo; Unknown and no-feasible-size pipes are never included and stay listed. **This
    supersedes the July plan's "visit every pipe first" gate** (July: `Accept all reviewed suggestions` is
    unavailable until every pipe, unchanged row, warning, Unknown and infeasible result has been visited).
 4. **Unchanged from July, not re-asked:** no automatic downsizing (information note only); the numeric sizing
    rules still need engineer sign-off before production suggestions (July's CV-02A4 gate).
-5. **Corrected premise carried from the discussion chat:** the earlier record that "CV-02's card file does not
+5. **UX-MODE-02/03:** An extra drawn pipe in a From-markup job is allowed and listed quietly as `Not in markup`;
+   the user can agree and remember it or remove it. A markup arriving later in a Design-from-scratch job prompts
+   an offer to switch; all drawn work remains and the markup QA list is added.
+6. **Corrected premise carried from the discussion chat:** the earlier record that "CV-02's card file does not
    exist" (`areas/release-v3-colleagues.md` item 89, 24 Sep) is stale — item 176 (26 Sep 00:13) found all 37 July
    cards including `CV-02_HYDRAULIC_DESIGN.md` on `origin/master` at `docs/CARDS/`, now also copied into
    `C:\CE_PLAN\04_REFERENCE\CARDS\`. This card reads that copy directly; it does not restate HD1-15/HV1-15,
@@ -43,7 +50,7 @@ client name or site address was opened.
    strip's optional Q (design-flow) box, delegates entirely to `PipeSizingSolver.TrySize` (no formula
    duplicated), and returns one of `PipeFlowSizingVerdict.KeepDiameter`, `.Upsize` or `.Infeasible` against the
    pipe's **drawn** diameter — never proposing a smaller pipe than drawn (the no-downsizing rule, already
-   built). This already matches Engineer mode's `Keep` / `Upsize` / `No size works` three of four outcomes.
+   built). This already supplies `Keep` / `Upsize` / `No size works` three of four suggestion outcomes.
 2. **It is already wired into the Pipe window today — Keep.** `Modules/Drainage/Commands/PipeEditCommand.GradeSuggestion.cs`
    calls `PipeFlowSizingAdvisorService.Advise` and `Modules/Drainage/ViewModels/CdViewModel.GradeSuggestion.cs`
    (`SetFlowSizingSuggestion`, `BuildFlowSizingTooltip`) already surfaces the verdict and a tooltip in the
@@ -51,12 +58,12 @@ client name or site address was opened.
    window while drawing or editing (never changes the pipe)" already built and already never writing the
    drawing. **Missing:** an explicit `Unknown` verdict distinct from `Infeasible` — today's three verdicts don't
    yet separate "no size works" from "can't tell" (see §3.4/OPEN 1).
-3. **Engineer/Draftsperson as a per-job setting already exists — Keep, this card's mode switch.**
+3. **Old person-route setting — Modify under UX-MODE-01, not this card's job mode.**
    `Modules/Drainage/Rules/CivilDesignWorkflow.cs` already defines `CivilDesignRoute.Engineer` /
    `.Draftsperson` / `.ContinueExisting` ("Card #45, Tim's three routes"), chosen at CDDESIGN start and read
-   back by `CivilDesignWindowViewModel`. UX-SIZE-02's "tie them" reads naturally as: the job's already-chosen
-   route decides which of the two CV-02A modes a drafter sees — this card does not need a second, separate
-   mode picker.
+   back by `CivilDesignWindowViewModel`. This is a historical implementation fact, not authority for the new
+   mode. Replace its person-route meaning with the per-job, per-discipline mode suggested at setup, shown on
+   the CE panel and switchable there; no person locks (UX-MODE-01).
 4. **Whole-network review page — Missing.** There is no `PipeFlowSizingResult` consumer today outside the
    single-pipe CDEDIT/CD strip — no "Project Review > Proposals" surface exists yet for pipe sizing
    specifically. `Modules/Drainage/ViewModels/DesignCheckDashboardViewModel.cs` and
@@ -70,12 +77,12 @@ client name or site address was opened.
    are eligible for `Accept all`, built on this existing machinery, not a new apply path. It also **reverses**
    the July plan's stricter gate (§1.3 above): today's `ProposalPreviewViewModel` has no "every row must be
    visited first" gate at all, so this is actually the simpler of the two behaviours to build.
-6. **Mode A (Draftsperson) "compare against the supplied design" — Missing.** Nothing today reads a named
+6. **From markup / supplied design comparison — Missing.** Nothing today reads a named
    external plan/revision and compares it against the drawing (`Matches` / `Different` / `Can't verify`). The
    closest existing pattern is `UX-STRUC-11`/`ST-07`'s Excel-schedule-driven size change (a different
    discipline, same shape: an external authoritative document drives a comparison) and the D+F card's rating-
    report intake review (`04_REFERENCE\civil-D-F\DF_CALC_PROVENANCE_WORKFLOW_CARD_2026-09-25.md`, "one
-   confirmation listing every value and its source"). This card's Draftsperson mode is new work following that
+   confirmation listing every value and its source"). This job-mode comparison is new work following that
    same shape: a named document + revision, a source per value, `Cannot verify` when the document doesn't say.
 7. **Numeric sizing rules still gated behind engineer sign-off — Keep, unchanged.** The July plan's production
    blockers stand exactly as written: `MaterialVelocityLimits` placeholder scour caps, full-bore-vs-part-full
@@ -96,10 +103,11 @@ client name or site address was opened.
    connectivity walk CDRUNSOLVE already uses (`ProposalApplyService.WalkDownstreamRun`) rather than a new
    selection mechanism.
 4. **Preview — Modify.** Pipe window: the existing tooltip/strip line stays a one-line advisory, extended with
-   the mode split (§3 below) and, in Draftsperson mode, the `Matches`/`Different`/`Can't verify` wording.
+   the job-mode split and, in From-markup mode, the `Matches`/`Different`/`Can't verify` wording.
    Proposals: the existing was/now `ProposalPreviewDialog` shell, extended with per-row `Keep`/`Upsize`/
-   `Unknown`/`No size works` (Engineer) or `Matches`/`Different`/`Can't verify` (Draftsperson) and an `Accept
-   all` that only ever selects clear (non-Unknown, feasible) rows, per UX-SIZE-03.
+   `Unknown`/`No size works` suggestions in both modes. From-markup rows also show `Matches`/`Different`/
+   `Can't verify` and `differs from supplied design` where needed. `Accept all` is available in Design-from-scratch
+   mode only; From-markup suggestions require individual acceptance (UX-MODE-01/04).
 5. **Drawing output — Keep, unchanged principle.** The Pipe-window line **never** changes the pipe (explicit in
    UX-SIZE-01's own wording, and already true of today's advisory strip). Only an accepted Proposals-page
    `Accept all`/per-row accept writes the drawing, and only the diameter/label/schedule fields the July plan's
@@ -122,7 +130,7 @@ client name or site address was opened.
 
 1. **DWG-A or DWG-B (Civil):** a drawn network with at least one pipe that is oversized, one undersized for its
    Q, and one with no Q entered (exercises Keep/Upsize/no-suggestion in the Pipe window).
-2. **A Draftsperson-mode variant** with a named supplied design document (synthetic, `NOT FOR DESIGN · NOT
+2. **A From-markup variant** with a named supplied design document (synthetic, `NOT FOR DESIGN · NOT
    VERIFIED` watermark per the July plan) carrying one pipe that matches, one that differs and one it cannot
    speak to.
 
@@ -134,31 +142,32 @@ client name or site address was opened.
    - A `ProposalPreviewViewModel`-family test proving `Accept all` selects only Keep/Upsize-eligible rows and
      leaves Unknown/no-feasible rows both excluded and still listed (UX-SIZE-03), mirroring the existing
      `ProposalApplyServiceFixAllTests` shape.
-   - A `CivilDesignRoute`-driven test proving the Proposals page renders Engineer wording for
-     `CivilDesignRoute.Engineer` jobs and Draftsperson wording for `.Draftsperson` jobs from the same
-     underlying `PipeFlowSizingResult` data (UX-SIZE-02).
+   - A job-mode test proving the Proposals page shows sizing suggestions in both modes, adds supplied-design
+     comparison and individual acceptance in From-markup mode, and offers `Accept all` only in Design-from-scratch
+     mode (UX-MODE-01/04).
 2. **Tim's AutoCAD checklist (nothing else proves this):**
-   - Open DWG-A in an Engineer-route job. Draw/edit a pipe with Q filled in. **Right result:** one advisory
+   - Open DWG-A in a Design-from-scratch job. Draw/edit a pipe with Q filled in. **Right result:** one advisory
      line/tooltip, the pipe's own diameter unchanged.
    - Open Project Review > Proposals. **Right result:** every pipe listed (Keep/Upsize/Unknown/No size works),
      `Accept all` enabled only for the clear rows, Unknown and infeasible rows still shown but excluded.
    - Accept all, then Undo once. **Right result:** every accepted diameter/label/schedule change reverts
      together.
-   - Repeat in a Draftsperson-route job with the supplied-design variant. **Right result:** `Matches` /
-     `Different` / `Can't verify` wording, no size-changing suggestion offered.
+   - Repeat in a From-markup job with the supplied-design variant. **Right result:** `Matches` / `Different` /
+     `Can't verify` and all sizing suggestions appear; conflicts say `differs from supplied design`; no supplied
+     size changes until its suggestion is accepted, and `Accept all` is absent.
 
 ## 6. Slices — smallest first
 
 1. **Slice 1 — Unknown verdict.** Add an explicit `Unknown` outcome to `PipeFlowSizingAdvisorService` distinct
    from `Infeasible` (OPEN 1), with tests. No UI change.
-2. **Slice 2 — Proposals page, Engineer mode, read-only.** Build the whole-network review tab reusing the
-   `ProposalPreviewDialog`/`DesignCheckDashboardViewModel` shell, Engineer wording only, no Accept yet.
+2. **Slice 2 — Proposals page, Design-from-scratch mode, read-only.** Build the whole-network review tab reusing
+   the `ProposalPreviewDialog`/`DesignCheckDashboardViewModel` shell, no Accept yet.
 3. **Slice 3 — Accept all with the UX-SIZE-03 filter.** Wire `Accept all` to the existing `ChangePlan`/Apply
    path, selecting only clear rows, one Undo.
-4. **Slice 4 — Draftsperson mode.** Add the supplied-design intake/comparison (`Matches`/`Different`/`Can't
-   verify`), reusing the D+F card's "one confirmation, source per value" shape.
+4. **Slice 4 — From-markup mode.** Add the supplied-design intake/comparison (`Matches`/`Different`/`Can't
+   verify`) alongside all sizing suggestions, with individual acceptance only (UX-MODE-04).
 5. **Slice 5 — Pipe-window mode wording.** Switch the existing CDEDIT/CD advisory line's wording by
-   `CivilDesignRoute` (Engineer vs Draftsperson phrasing) — cosmetic once Slices 1-4 exist.
+   the Civil job mode (Design-from-scratch vs From-markup phrasing) — cosmetic once Slices 1-4 exist.
 
 ## 7. OPEN questions, each with a recommended answer
 
@@ -169,12 +178,14 @@ client name or site address was opened.
    checked and rejected) and add `Unknown` specifically for missing/unverifiable input (no Q, no material, a
    scour cap still placeholder per July's A1/A2 boundary) — this mirrors CV-02 HD12/HD15's existing
    Pass/Advisory/Fail/Unknown/No-feasible-solution five-state pattern instead of inventing a sixth.
-2. **OPEN — what exactly triggers Draftsperson's `Cannot verify` versus `Different`?** *Recommended:* `Cannot
+2. **OPEN — what exactly triggers From-markup `Cannot verify` versus `Different`?** *Recommended:* `Cannot
    verify` when the supplied document doesn't state a value for that pipe at all (or the document/revision is
    stale/unresolved, per the July plan's staleness rule); `Different` only when the document states a value and
    the drawing disagrees with it — never inferred from a missing note.
-3. **DECIDED — Accept all mode.** Tim: *"Engineer mode only (Recommended)"* (26 Sep). Draftsperson mode's
-   rows are report-only (`Matches`/`Different`/`Cannot verify`) with no Accept all action.
+3. **DECIDED — Accept all mode (UX-MODE-01/04).** The earlier Tim choice *"Engineer mode only
+   (Recommended)"* is superseded by job mode. `Accept all` is available in Design-from-scratch mode only.
+   From-markup rows show checks and all sizing suggestions; each differs-from-design suggestion can be accepted
+   individually, but never changes the supplied design on its own.
 4. **IMPLEMENTATION CALL — sizing-rule sign-off.** Nothing in
    the codebase today models a rule-pack approval record. *Recommended:* reuse the shape already built for
    `NetworkRedesignSignOffService` (named person, UTC time, exact record/rule hash) for a future

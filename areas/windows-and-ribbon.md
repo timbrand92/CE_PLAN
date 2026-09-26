@@ -1,5 +1,13 @@
 # Area W — The CE windows, ribbon and design pack. Codex builds windows, Claude builds behaviour (Ruling B, 15 Sep); the CDWT window is the exception (Tim, 16 Sep)
 
+## UX-MODE-01..04 — job-mode plan cards, 26 Sep 2026
+
+1. **Plan updated:** CV-02A, all four Level 3 proposal cards, the Design/CDSETUP setup card and the V3 UX
+   plan now use per-job, per-discipline mode. UI-03 person roles are superseded; From-markup Civil proposals
+   remain visible as suggestions and supplied design changes require acceptance. No plugin code changed.
+2. **Status:** plan only. Not built, tested in AutoCAD, installed or Tim-accepted. Future AutoCAD checks are
+   written in the cards; no built-work row belongs in `PENDING_TESTS.md` yet. No bug or new idea arose.
+
 ## UX-RIBBON-01 — jump to the contextual Pipe/Pit/Source tab on select — 25 Sep 2026
 
 1. **CLAUDE-OWNED / CODE READY, awaiting Tim's card review then AutoCAD.** Tim's ruling: `decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`, "Front door, batch 1" — *"Jump to it (Recommended)"*, same as AutoCAD's Hatch/Text Editor. Draft card: `04_REFERENCE\ux-plan\cards\UX-RIBBON-01_CARD_2026-09-25.md`.

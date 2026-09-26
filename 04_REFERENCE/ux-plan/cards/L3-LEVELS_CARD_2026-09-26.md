@@ -8,6 +8,15 @@ proposals — 26 Sep 00:52 2026" (UX-L3-01, UX-L3-02) which sets this as build o
 builds on. The release-chat decisions below close the named workflow choice; remaining build details are
 still OPEN.
 
+**Job-mode refinement (UX-MODE-01..04, 26 Sep):** Civil job mode is set per job, suggested at setup, shown on
+the CE panel and switchable; it never depends on the person's role. In **From markup / supplied design**, level
+proposals follow the markup's instructions and still show every level/grade suggestion. Mark any conflicting
+suggestion `differs from supplied design`; keep the supplied levels until that item is accepted. In **Design
+from scratch**, the full levels proposal leads and `Accept all` is available after preview. From-markup changes
+are accepted individually, with no `Accept all`. Extra drawn items
+are allowed and quietly listed as `Not in markup` (agree and remember, or remove). A late markup offers a mode
+switch that keeps all drawn work and adds the QA list.
+
 **Decision and implementation call (26 Sep):** Tim: *"Top of every branch (Recommended)"* (UX-L3-03
 clarification). Minimum cover applies at the highest pit of **every** branch; branches meet at junction pits.
 **IMPLEMENTATION CALL, not Tim's words:** Hold grade is a fixed control when CDRUNSOLVE is extended.

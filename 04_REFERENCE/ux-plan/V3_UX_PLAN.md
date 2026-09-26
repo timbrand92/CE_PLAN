@@ -40,13 +40,14 @@ Builders: the release chat writes a card per item before code.
     itself for that drawing. (UX-PERF-01, 02)
 13. **Approvals:** any CE user can approve calculations, apply proposals and issue, always recorded, naming the
     engineer where a sheet goes out. (UX-CALC-APPROVE-01, UX-CALC-03, UX-REG-06, UX-STRUC-11, UX-REV-05)
-15. **Job mode, not person role:** each job (per discipline) is "From markup / supplied design" or "Design from
-    scratch", suggested by CE, switchable; replaces Engineer/Draftsperson everywhere below. Extra items in a
-    From-markup job are listed "Not in markup"; a late markup offers a switch; Civil From-markup jobs still show every
-    proposal, marked where it differs. (UX-MODE-01..04)
 14. **Mixed versions:** V3 drawings must stay visible to colleagues without V3 (prove on the 2022 VM); 2027-only
     tools greyed with "needs AutoCAD 2027"; the automatic pipe upgrade is held on colleagues' PCs until the
     2022-2024 enabler is proven. (UX-MIX-01..03)
+15. **Job mode, not person role:** each job (per discipline) is "From markup / supplied design" or "Design from
+    scratch", suggested by CE, shown on the CE panel and switchable without person locks. From-markup work follows
+    the instructions; extras are allowed and listed quietly as "Not in markup" (agree and remember, or remove).
+    A late markup offers a switch, keeps drawn work and adds QA. All Civil proposals remain suggestions, marked
+    "differs from supplied design" where relevant, and never alter it until accepted. (UX-MODE-01..04)
 
 ## 2. The front door — ribbon, names, help
 
@@ -92,8 +93,10 @@ Builders: the release chat writes a card per item before code.
 
 ## 4. Civil — design and calculations
 
-1. **Design (CDDESIGN):** opens straight on a known job; fixed CE area colours; opens on "During"; draftsperson's
-   Confirm setup returns to drafting. (UX-STD-07, UX-DES-01..03)
+1. **Design (CDDESIGN/CDSETUP):** opens straight on a known job; fixed CE area colours; opens on "During".
+   Setup suggests a mode per job and discipline from the job-folder evidence and shows it on the CE panel,
+   switchable at any time. In From-markup mode, Confirm setup returns to drafting. (UX-STD-07,
+   UX-DES-01..03, UX-MODE-01/03; [Design/CDSETUP card](cards/UX-DES-01_CDSETUP_JOB_MODE_CARD_2026-09-26.md))
 2. **Calculations card approved:** catchments from the rating report computed automatically with one confirmation,
    fix any catchment in place; you pick what Apply replaces, one U; anyone issues naming the engineer. (UX-CALC-01..04)
 3. **Council tools:** CE writes discharge enquiries; lid class suggested from the surface; implied easements shown;
@@ -103,7 +106,9 @@ Builders: the release chat writes a card per item before code.
 4. **Council RFI reader:** found in the job folder; a to-do tab in Project Review; CE checks what it can; learns.
    (UX-RFI-01..03)
 5. **Pipe-size suggestions:** one advisory line in the Pipe window and a network review in Proposals; tied to
-   Engineer/Draftsperson mode; Accept all in Engineer mode only. (UX-SIZE-01..03)
+   the Civil job mode. Design from scratch offers Accept all after preview. From markup shows the supplied-design
+   check and every sizing suggestion, marks differences and changes nothing unless individually accepted.
+   (UX-SIZE-01..03, UX-MODE-01/04)
 
 ## 5. Level 3 — CE proposes design
 
