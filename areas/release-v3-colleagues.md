@@ -252,6 +252,50 @@ Say Built / Tested / Installed / Tim-accepted separately, never a percentage.
 11. **Known failing checks, triaged 23 Sep.** Drainage had 20 failures this morning. Fixed since: CD-ESC-01, GUARDS-13SEP (2), BUG-162, and RIBBON-01 (CDRAINFALL; CDPIPEOBJ waits on Tim). **Test machine, not the plugin:** Add System and the Boyd's detention checks (4) call AutoCAD's `DocumentManager`, which cannot run outside AutoCAD. **Fixed since, GUARDS-23SEP (PR #100):** IMP014, Copy, SpineReader and Registration now follow the code, and the grip overrule file is split under its cap, so NativeQueue's rechecks run again. The full Civil suite went from 20 failures to 11. **Still open:** the GE 24-115 back-test (Queued item 11); formerly IMP014, Copy, SpineReader and Registration (stale source-text checks; each read against the code 23 Sep: the protections they guard are still there, under renamed calls or Windows line endings); NativeQueue (the grip overrule file is 854 lines against an 800-line cap since 13 Sep; because that check comes first, the preview and write rechecks after it never run); six Pipe window fit checks (Codex's windows, ruling B). Installer tests (44), **triaged 23 Sep: not a shipping fault.** They describe Codex's July signed-release route (branch `codex/mline-release-safety-repair`, 31 Jul): `Deploy-Local-AsAdmin.ps1` retired to a hard failure, complete-package validation targets, `PrepareReleaseCandidateRoot`, and official manifest coordinates. Master never adopted that route, and the hand install uses master's working one. Porting that route or retiring these tests is a choice for after Tuesday. It goes with the signing-key decision (Queued item 6), which that route needs anyway.
 12. **Codex pass 1, R2 FAIL (CEMANAGER opened no window): FIXED on master, MGR-OPEN-01, PR #99 (`26285f0f`); not installed. Release blocker until installed.** The Drawing Repair and Project QA pages took a button style from the window's theme as a static lookup, which fails in AutoCAD before the window adopts the page. The new guard builds all six pages the way AutoCAD does and fails on the old ones with Codex's exact message. A scan of all 117 XAML files found no other live case (the slab preview's lookups resolve through the Civil theme that every Civil command loads first).
 13. **Codex pass 1, R1 FAIL is my list's wrong expectation, not a fault.** Its screenshot shows the CE tab with the Civil panels and icons in place, plus separate CE Tools (Manager) and CE STRUC (Structural 1.0.74) tabs: one tab per plugin is master's design until the unified-ribbon step, which the plan forbids doing big-bang. R1 is reworded for pass 2 to check R-01 (icons in place) on all three tabs. Whether icon placement now satisfies R-01 is Tim's to judge from R1.png.
+243. **26 Sep 11:35: Release-chat review batch DONE - all four PRs pushed (detached HEADs, branch locks).**
+    - **#244** (`c1f46306`): Opus review fixes + Tim's UX-PIPE-06c built. Preview/Apply length
+      mismatch fixed (preview now uses the same straight-vertex `GeometryHelper.GetPolylineLength`
+      Apply always used, not `Polyline.Length`/`context.PipeLength` — identical on a straight pipe,
+      different on any bulge). Each preview line now names the PIT at the worked-out end whose
+      schedule invert/depth follows the new level. `CeBatchEditViewModel.ImpactLines` cached (was
+      reopening one AutoCAD transaction per pipe on every read). UX-PIPE-06c built: "Only these
+      pipes" (default) / "Carry downstream" radio pair; the cascade stops and NAMES the pit the
+      moment it finds two downstream candidates rather than guessing
+      (`PipeEditCommand.DecideCascadeStep`, pure, 8 tests); Apply writes the identical cascade the
+      preview showed, one Undo. Caught by looking at the rendered picture, not the passing test: the
+      two RadioButtons' shared `GroupName` raced their own bindings and left both unchecked on first
+      layout — fixed by dropping `GroupName` (the view model already keeps the two options as exact
+      inverses). Known, noted-not-guessed limitation: two seeds' cascades converging on the same
+      downstream pipe silently keep the first found, drop the second. 51/51 focused + full Civil
+      11,157/6/19 (same 6 baseline, unchanged); 3 lanes 0 errors.
+    - **#240** (`803424a3`): CDREBUILD's "...save it immediately" / "ProjectData saved" wording
+      replaced — it only writes CE's record into the drawing's own Named Object Dictionary, never a
+      DWG save (UX-STD-03, "Never, you save"). "One U undoes it" kept, not removed — checked against
+      this repo's own T4-UNDO-PROOF headless evidence plus the `CommandFlags.Modal`/no-nested-command
+      chain, not assumed. 3 lanes 0 errors; focused 7/7.
+    - **#239** (`2f020d38`): `FeedbackService` was silently creating "Creative Engineering - IT Admin"
+      itself on a PC without the office share (an official-looking folder nothing would ever collect
+      from), while reporting success. Fixed: only checks that folder exists, never creates it; only
+      creates `CE Diagnostics\feedback` underneath an ALREADY-existing IT Admin folder. CDFEEDBACK's
+      command line no longer prints "Email this file... or Tim will collect it remotely"
+      unconditionally — only in the "saved locally only" branch, where it's actually true. 30/30
+      focused; 3 lanes 0 errors.
+    - **#255** (`e65e9455`): UX-MODE-01 built — the Engineer/Draftsperson question (UX-HELP-05) is
+      REMOVED, not shipped: Tim's same-day ruling replaced that person role with a per-job job mode.
+      Gone: the role question + buttons, `CEROLE`, "My Role" (ribbon + registry + guide), `CeUserRole`/
+      `GetRole`/`SetRole`, `OnboardingSettings.UserRole`. Highlight colour fixed too: the Start Here
+      ribbon dot was reusing Manager's generic amber health-status colour (fixed `#E09B1A`, doesn't
+      follow AutoCAD's theme); now a new `CeStatusLevel.Highlight` draws CE's own accent (gold
+      `#C9A84C` dark / CE blue `#1E5AA8` light) via the same `_darkRibbon` flag every ribbon icon
+      already reads — Manager's real update-available amber is untouched (its own 7 tests still
+      pass). Bonus: removing the role section left a large empty gap in the tour window — caught by
+      re-rendering and looking at the picture, not the passing test; window shortened
+      (760/520→560/480). 37/38 focused (the 1 is the documented pre-existing BUG-177, unrelated);
+      Civil + Manager 3 lanes each, 0 errors.
+    - **None installed, none opened in AutoCAD, none Tim-accepted.** Each PR's own body + a PR
+      comment carries the same detail. `PENDING_TESTS.md`'s #255 entry updated to match; the other
+      three did not have PENDING_TESTS entries yet at this writing.
+
 242. **26 Sep 11:25: Sections and details ruled (UX-SEC-01..03 on top of ST-08; V3_UX_PLAN 7.7b) - QUEUED:** placing a section mark creates the numbered section frame on the details sheet (e.g. 3/S05), mark and title stay in step; simple member sections (RC beam, steel beam, footing) generated from member data in office style, updating with a preview when the member changes; steel connection details from the CE Library by type with member sizes and cleat-table values filled (fits the CE Library palette UX-DET-01 and the steel connections card).
 241. **26 Sep 11:14: Multi-unit ruled (UX-UNIT-01..03; V3_UX_PLAN 7.8d2) - for the framing card:** draft one unit; CE copies its framing to the picked identical or mirrored units with tags renumbered by unit (1FB1 -> 2FB1), linked so a change offers to carry to all (Edit together / Edit this only); "Tag prefix by: level / unit / none" set once in the job record; ONE MEMBER SCHEDULE grouped by unit, with "Typical all units" where identical, full names under type headings (UX-FRM-09).
 240. **26 Sep 11:12: Framing tag meanings (Tim; decisions; FRAMING_PLAN_PRACTICE item 11):** AB = awning beam (Tim: "i think"), TR = trimmer beam, BJ = balcony joist, SB = subfloor beam, WT = wall tie. **UX-FRM-09:** the member schedule shows each tag's full name and groups members under headings by type. **UX-FRM-10:** a leading number (e.g. 1FB5) means the floor level OR the townhouse/unit number - CE sets it from the member's level or unit, with a job setting for which applies (multi-unit jobs). For the framing card.
