@@ -1539,3 +1539,14 @@ drafting from a markup, its different to drafting from scratch with no set desig
    quiet QA item with Show where when the level below is drafted.
 3. **UX-LOAD-03:** Tim: "Yes, from the full load path (Recommended)". The footing proposal uses every load traced down
    all levels and lists anything above still Unknown.
+
+## Raft and infill slabs — 26 Sep 10:18 2026
+
+Study draft: `04_REFERENCE\structural\RAFT_INFILL_PRACTICE_2026-09-26.md`. Tim, verbatim, on reviewing it: **"ask me
+questions, im not reading big documents"** (the facts are put to him as short questions next).
+
+1. **UX-RAFT-01:** Tim: "Auto schedule, keep plan tags (Recommended)". CE keeps an RC beam schedule of every raft
+   beam (EB, IB, BB) automatically, like footings and bars; plan tags stay; dimensioning on plan still possible.
+2. **UX-RAFT-02:** Tim: "Yes, tracked area (Recommended)". Infill slab becomes a tracked area: drawn as an area, hatched
+   11IH, thickness and mesh note from Settings defaults, known as not part of the raft for checks and the footing
+   proposal.
