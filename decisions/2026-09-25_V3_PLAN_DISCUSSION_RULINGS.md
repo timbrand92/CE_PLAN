@@ -1999,7 +1999,7 @@ Builds on UX-L3-01..23 and the approved chooser sketch.
 
 ## Working with the architect's drawing — 27 Sep 01:53 2026
 
-Builds on the earlier UX-XREF rulings; the native protection rule (never bypass Xref protection) stands.
+UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake). Builds on UX-XREF-01..03; the native protection rule (never bypass Xref protection) stands.
 1. **UX-ARCH-01:** Tim: "Show what moved". A revised architectural Xref raises a bell message; Review highlights moved
    walls, FFLs and downpipes and the CE items they affect; nothing moves on its own.
 2. **UX-ARCH-02:** Tim: "CE 'Replace background'". Pick the new file; CE swaps the Xref keeping position, layer settings
