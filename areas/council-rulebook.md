@@ -17,7 +17,7 @@ Council rulebook workstream: every council value on the Settings page, nothing h
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "see the source documents". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
-1. **CR-D1, 26 Sep 2026 — Built and automated-tested; not installed or Tim-accepted.** All 22 council profiles swept on `codex/cr-d1-council-sweep`; 352 field changes and their sources are listed in `02_COUNCIL_RULES/CR-D1_SWEEP_2026-09-26.md` (plan commit `fe22c58`). Whitehorse 90 mm remains Assumed under CR-C2. Civil Release net48/net8/net10 built with 0 errors; focused checks 63/63; final full Civil suite 11,131 passed, 6 known baseline failures, 19 skipped. No AutoCAD opened. The existing numeric loader still retains legacy placeholders behind Unknown provenance; a later reviewed model/consumer change is needed to remove them.
+1. **CR-D1, 26 Sep 2026 — Built and automated-tested; not installed or Tim-accepted.** All 22 council profiles swept in draft [PR #259](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/259), `codex/cr-d1-council-sweep` at `afa5435c`; 352 field changes and their sources are listed in `02_COUNCIL_RULES/CR-D1_SWEEP_2026-09-26.md` (report commit `fdf4cb9`). Whitehorse 90 mm remains Assumed under CR-C2. Civil Release net48/net8/net10 built with 0 errors; focused checks 63/63; final full Civil suite 11,131 passed, 6 known baseline failures, 19 skipped. No AutoCAD opened. The existing numeric loader still retains legacy placeholders behind Unknown provenance; a later reviewed model/consumer change is needed to remove them.
 
 ## 4. Bugs
 
