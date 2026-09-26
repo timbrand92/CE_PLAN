@@ -1929,3 +1929,12 @@ Builds on UX-LEARN-01..04 (not replacing them).
    "all of them, or split this one off?".
 3. **UX-MARK-03:** Tim: "Learned office spot". Tags go where the office usually puts them (learned from past drawings,
    the smart tagger idea), sliding clear of other text (PLACE-01).
+
+## Drawings from outside, older and without CE — 27 Sep 01:43 2026
+
+1. **UX-DWG-01, another consultant's drawing:** Tim: "Quiet offer". The CE bell says how many things look like pits and
+   pipes, with Review; nothing changes until the drafter ticks what to convert.
+2. **UX-DWG-02, older CE drawing:** Tim: "Upgrade quietly, one line". Objects upgrade on open with one status-bar line
+   and one Undo; UX-MIX-03 still holds the pipe upgrade on colleagues' PCs until the 2022-2024 enabler is proven.
+3. **UX-DWG-03, recipient without CE:** Tim: "Normal clean linework". CE objects look and plot like ordinary AutoCAD
+   objects with no proxy warning box. No separate flatten option.

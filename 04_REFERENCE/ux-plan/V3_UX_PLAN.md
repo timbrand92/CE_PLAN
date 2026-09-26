@@ -84,6 +84,9 @@ Builders: the release chat writes a card per item before code.
     an anonymised practice job in Help, never counted. (UX-FIRST-01..03)
 27. **Beam marks:** gaps stay after deletes with a previewed renumber offered before issue; identical beams share a
     mark with a quantity; tags placed at the learned office spot. (UX-MARK-01..03)
+28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
+    on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
+    no proxy box. (UX-DWG-01..03)
 
 ## 2. The front door — ribbon, names, help
 
