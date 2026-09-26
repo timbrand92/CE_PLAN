@@ -1575,3 +1575,15 @@ questions, im not reading big documents"** (the facts are put to him as short qu
    schedules; more sheets on big jobs.
 2. **UX-SHEETS-04:** Tim: "On C01 beside the plan". Civil general notes, the OSD criteria block and the LPD note sit on
    C01 beside the plan.
+
+## Council sweep CR-D1 follow-up — 26 Sep 10:32 2026
+
+Sweep report: `02_COUNCIL_RULES\CR-D1_SWEEP_2026-09-26.md` (release chat, draft PR #259): 352 field changes across
+22 councils; 284 unsourced values had been marked Unknown.
+
+1. **CR-D1b:** Tim: "Assumed, as on 4 Sep (Recommended)". Unsourced council values are kept and used, shown as
+   "Assumed - no council source" with a warning on use, until a council document confirms or corrects them (CP-01..08,
+   4 Sep, stands). The sweep's "Unknown" marking for those 284 must change to Assumed. Values the sweep corrected from
+   a council document (wrong row, wrong field, copied) keep their corrections and sources.
+2. **CR-D1c:** Tim: **"Include it"** (recommended "after the pilot" not taken). The council sweep goes into Tuesday's
+   pilot build, with the Assumed correction applied first.
