@@ -17,6 +17,8 @@ Council rulebook workstream: every council value on the Settings page, nothing h
 
 _Opened 19 Sep 2026; this area had no area file before. Its state in the old master plan's register was "see the source documents". Add items here as work starts; say Built / Tested / Installed / Tim-accepted separately, never a percentage._
 
+1. **CR-D1, 26 Sep 2026 — Built and automated-tested; not installed or Tim-accepted.** All 22 council profiles swept on `codex/cr-d1-council-sweep`; 352 field changes and their sources are listed in `02_COUNCIL_RULES/CR-D1_SWEEP_2026-09-26.md` (plan commit `fe22c58`). Whitehorse 90 mm remains Assumed under CR-C2. Civil Release net48/net8/net10 built with 0 errors; focused checks 63/63; final full Civil suite 11,131 passed, 6 known baseline failures, 19 skipped. No AutoCAD opened. The existing numeric loader still retains legacy placeholders behind Unknown provenance; a later reviewed model/consumer change is needed to remove them.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
@@ -33,4 +35,4 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 _"These things must still work", re-checked before any deploy. Seed from `REGRESSION_LOG.md` in the plugin repo._
 
-1. _(none recorded yet)_
+1. **CR-D1:** A council figure needs its own source, not a copied office or neighbouring-council value. Verify Banyule 100% below ground / 40 mm orifice, Maribyrnong 10-year storage / 40 mm orifice, and Whitehorse 90 mm marked Assumed. Unknown must not be shown as a council pass. Use the after-install checklist in `PENDING_TESTS.md`; no result is accepted until Tim confirms it in AutoCAD.
