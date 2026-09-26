@@ -164,6 +164,10 @@ Builders: the release chat writes a card per item before code.
    applied. (UX-SCALC-01..08)
 8b. **Foundations and rebar:** footings, pads and thickenings proposed from what sits above; footing grips like
    beams; piers set out from the calc; bar marks and bar schedule automatic. (UX-FDN-01..04)
+8c. **Rafts, infill, band beams:** EB/IB raft beams auto-scheduled; infill slab a tracked area (100 mm, top mesh, IB/EB
+   ribs); BB band beams for suspended slabs over basements in the RC beam schedule; the footing-plan legend built
+   automatically; footing schedule in office columns; drafted top-down with load markers, sheeted notes then footings
+   up. (UX-RAFT-01..04, UX-LOAD-01..03, UX-SHEETS-01..04, UX-STRUC-13)
 9. **2022 colleagues** get full Structural with 2027-only tools greyed. (UX-STRUC-12)
 
 ## 8. Jobs, Manager, settings

@@ -1587,3 +1587,16 @@ Sweep report: `02_COUNCIL_RULES\CR-D1_SWEEP_2026-09-26.md` (release chat, draft 
    a council document (wrong row, wrong field, copied) keep their corrections and sources.
 2. **CR-D1c:** Tim: **"Include it"** (recommended "after the pilot" not taken). The council sweep goes into Tuesday's
    pilot build, with the Assumed correction applied first.
+
+## Raft, infill, legend and schedules confirmed — 26 Sep 10:39 2026
+
+From the deeper review (`04_REFERENCE\structural\RAFT_INFILL_PRACTICE_2026-09-26.md`), confirmed by Tim as short
+questions:
+1. **Infill slab:** Tim: "Right". Usually 100 mm, top mesh only, rib and edge beams with the same IB/EB tags as the
+   raft, often a 200x200 edge beam around it.
+2. **UX-RAFT-03, legend:** Tim: "Yes, automatic (Recommended)". The footing-plan LEGEND (bottom-left: raft slab note
+   plus symbol keys for saw cuts, set-downs, columns, stud walls, thickness callouts, infill note) is built and updated
+   by CE from what is drawn on that plan, in the office wording; editable.
+3. **Band beams:** Tim: "Right". BB1, BB2 in an "RC BEAM SCHEDULE", in suspended ground-floor slabs over basements.
+4. **UX-RAFT-04, footing schedule:** Tim: "Yes, same columns". CE's automatic footing schedule uses the office columns:
+   PF / EB / IB / TH / BP with width, depth, reinforcement, comments.
