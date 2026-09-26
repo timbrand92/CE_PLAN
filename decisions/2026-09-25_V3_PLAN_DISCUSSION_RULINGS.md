@@ -1736,3 +1736,14 @@ Builds on ST-08 (July).
    the admin page with their version and log; one click rolls that colleague back.
 3. **UX-MGR-10:** Tim: "CE drafts, you approve (Recommended)". What's New is drafted in plain words from the changes and
    edited/approved by Tim on the approval page.
+
+## Civil drawing conventions confirmed — 26 Sep 11:44 2026
+
+Study: `04_REFERENCE\ux-plan\CIVIL_DRAWING_PRACTICE_2026-09-26.md`. Confirmed by Tim as short questions:
+1. **Pipe labels:** Tim: "Right" to "100 DIA. UPVC PIPE AT 1 IN 100 MIN." (grades "1 IN 100", never 1:100 or %).
+   **Clash to resolve:** the "MIN." suffix conflicts with BUG-027 ("NO MIN./MAX. suffix anywhere", ENGINEERING_RULEBOOK
+   B4); put to Tim next.
+2. **Pit tags:** Tim: "Right". P1, P2...; existing council pits EP / SEP; boundary junction pits JP1.
+3. **UX-DET-09:** Tim: "Keep titles, no numbers". Civil details are titled by description ("ORIFICE PIT P1 DETAIL"),
+   no detail numbers. Supersedes the "numbered" part of UX-DET-07 for Civil (Structural keeps numbers, UX-DET-04).
+4. **UX-CPLAN-04:** Tim: "Yes". The three standard remarks are always added under the Pit Schedule (Settings text).
