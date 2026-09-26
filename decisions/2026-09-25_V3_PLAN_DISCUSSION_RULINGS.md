@@ -2032,3 +2032,7 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    the table changes the object (preview for level changes); plain text cells (remarks) are simply saved.
 3. **UX-SCHED-06, sort:** Tim: "Mark order, natural". P1, P2 ... P10, never P1, P10, P2; Structural stays grouped by
    heading (earlier ruling).
+4. **UX-CPLAN-18, pit numbering direction (27 Sep 02:00):** Tim, typed: "pit schedule and pit labels should really be numbered
+   from downhill to uphill". Pits are numbered from the downstream end: P1 nearest the outlet/LPD, rising uphill.
+   With UX-SCHED-06 the schedule's natural mark order therefore reads downhill to uphill. How branches and pits added
+   later are numbered: asked next (UX-CPLAN-19).
