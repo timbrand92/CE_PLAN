@@ -1625,3 +1625,16 @@ jobs; conventions to be learned from past drawings and confirmed with Tim as sho
    direction marker, spacing and tag, learned from past roofs.
 3. **UX-FRM-06:** Tim: "Suggest, you confirm (Recommended)". Where a beam lands on a stud wall, CE proposes the support
    (DS1/TS1 by load, or Unknown) in the preview.
+
+## Waffle, subfloor, screw pile, basement conventions confirmed — 26 Sep 11:00 2026
+
+Study: `04_REFERENCE\structural\WAFFLE_SUBFLOOR_PILE_SUSPENDED_PRACTICE_2026-09-26.md`. Confirmed by Tim ("Right" to
+each, as short questions); office knowledge for the tools of UX-FDN-05:
+1. **Waffle slabs:** pods usually 300 deep, ribs min 110 wide, EB/IB/TH tags as rafts, a numbered "WAFFLE POD RAFT SLAB
+   NOTES" block.
+2. **Timber subfloors:** BR1/BR2 bearers, GFJ1 joists, DB1 deck bearers, DJ1 deck joists, Member Schedule grouped
+   "Sub-Floor" and "Porch/Deck".
+3. **Screw piles:** SP1-SP4 by design load, "SCREW PILE SCHEDULE (SAFE WORKING LOADS)" (type, load kN), supplier
+   certification note.
+4. **Basements:** separate "Basement Footing & Retention Plan" and "Ground Floor Slab Plan", with soldier pile and
+   blockwork retaining wall schedules.

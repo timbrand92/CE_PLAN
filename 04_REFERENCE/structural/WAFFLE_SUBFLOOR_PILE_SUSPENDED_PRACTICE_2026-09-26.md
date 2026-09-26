@@ -1,8 +1,7 @@
 # Waffle slabs, timber subfloors, screw piles, suspended/basement slabs — CE practice (DRAFT, 26 Sep 2026)
 
 Read-only study approved by Tim (UX-FDN-05): 4 structural sets read in full (2021-2025) and ~140 keyword-scanned
-(2021-2026). Anonymised (DATA-01). **A reading of the evidence, not a Tim ruling;** confirmed items are marked in the
-decisions file.
+(2021-2026). Anonymised (DATA-01). **Items 1-4 CONFIRMED by Tim, 26 Sep 2026** (short questions; decisions file). Item 5 unverified.
 
 1. **Waffle pod slabs:** 85-150 mm slab, mesh top (and bottom), 300 mm pods (225 locally), min rib 110 mm with
    1-N12 top and bottom, extra bars per rib-width tables; tags EB/IB/TH/PF/SF/C, screw piles SP1-SP4 when piled;
