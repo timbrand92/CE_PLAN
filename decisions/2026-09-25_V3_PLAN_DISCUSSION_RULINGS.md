@@ -2049,3 +2049,12 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    **CE bell count** (copy of the status-bar count) and the **find box** (UX-NAV-01).
 2. **UX-PANEL-02:** Tim: "Follows the drawing". The Civil/Structural switch changes to the drawing's discipline when
    drawings change; it can still be flipped by hand. Refines Q4 (switch always visible, UX-RIBBON-02).
+
+## Pit labels on the plan — 27 Sep 02:03 2026
+
+1. **UX-CPLAN-21, what a pit label shows:** Tim typed: "pit label shows number and cover level text shown also". The
+   plan label carries the pit number and its cover level (e.g. "P1" with "CL 43.60"); size, inlet/outlet levels and
+   lid stay in the Pit Schedule, and IL text stays with the pipes (practice item 2). Cover level text is live CE
+   level text (UX-CPLAN-13).
+2. **UX-CPLAN-22, where it sits:** Tim: "Learned office spot". Placed where the office usually puts it, sliding clear of
+   pipes and text (PLACE-01), as beam tags (UX-MARK-03).

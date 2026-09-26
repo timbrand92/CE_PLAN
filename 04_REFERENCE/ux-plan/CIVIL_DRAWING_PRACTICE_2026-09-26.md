@@ -3,7 +3,7 @@
 Read-only study approved by Tim: 9 civil sets (8 jobs, 2024-2026), all small residential/townhouse jobs (no SPS,
 raingarden or GIO in the sample). Anonymised (DATA-01). Items 1, 2, 3, 4 callout, 5, 6, 7 (layout and remarks), 8, 9 titling, 10 and 11 CONFIRMED by Tim, 26 Sep 2026 (decisions file).
 
-1. **Pits:** P1, P2... numbered downhill to uphill, P1 nearest the outlet (Tim 27 Sep); existing council pits EP / SEP; boundary junction pits JP1; size only in the schedule.
+1. **Pits:** P1, P2... numbered downhill to uphill, P1 nearest the outlet (Tim 27 Sep); existing council pits EP / SEP; boundary junction pits JP1; size only in the schedule; the plan label shows number and cover level (Tim 27 Sep).
 2. **Pipes:** "100 DIA. UPVC PIPE AT 1 IN 100" (Tim 26 Sep: no MIN./MAX. suffix, BUG-027 stands, although older drawings show it); "225 DIA. RCP / RRJ PIPE AT 1 IN 200 - 21.5m DETENTION"; IL text
    "IL 33.00" with a short leader; inlet/outlet ILs stacked either side of a pit.
 3. **Sources:** DP downpipes; IO inspection openings; OF overflows (no FO or GIO seen); grated pits and trench drains via
