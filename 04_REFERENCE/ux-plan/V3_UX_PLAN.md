@@ -163,6 +163,8 @@ Builders: the release chat writes a card per item before code.
    data; steel connections from the library with sizes filled. (UX-SEC-01..03)
 7c. **S01 general notes:** assembled from relevant office note blocks; geotechnical note filled from the report; full
    concrete cover table always. (UX-NOTES-02..04)
+7d. **Details sheets:** CE offers the standard details each plan uses, laid out in a neat learned grid, numbered and
+   linked; re-packs with preview. (UX-DET-05, 06)
 8. **Computations in CE:** start from the drawing; the same CE sheet as Civil; timber, then footings, steel,
    bracing; wind class proposed; geotech report read; loads traced from the drawing; results previewed then
    applied. (UX-SCALC-01..08)

@@ -1701,3 +1701,11 @@ Builds on ST-08 (July).
    report (UX-SCALC-07); Unknown where not found.
 3. **UX-NOTES-04:** Tim: **"Full standard block"**. The concrete cover table is always the full standard block (not
    only the rows used).
+
+## Details sheets — 26 Sep 11:33 2026
+
+1. **UX-DET-05:** Tim: "Offer the set, you confirm (Recommended)". From what a plan contains (raft, waffle, piers,
+   stumps...), CE proposes the matching standard details laid out on the plan's details sheet, numbered with linked
+   callouts; the user adds, removes or rearranges.
+2. **UX-DET-06:** Tim: "Neat grid, learned (Recommended)". Details are packed in a tidy grid by size in the office's
+   usual order, never over the title block, re-packed with a preview when one is added or removed.
