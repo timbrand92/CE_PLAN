@@ -56,7 +56,7 @@ Builders: the release chat writes a card per item before code.
 4. **Structural ribbon shows families** (Beam ▾, Text ▾ size + compass, Tag, Hatch gallery), about 40 tools instead
    of 298; duplicates merged, shortest code wins; "Legacy" tools sorted into families. (UX-STRUC-02..05, 07, 08)
 5. **CESTRUC's button launcher retires**; its unique functions get proper homes first. (UX-STRUC-10)
-6. **First run:** a lit "Start here" button with a 2-minute tour that (the role question is dropped: UX-MODE-01).
+6. **First run:** a lit "Start here" button with a 2-minute tour (it no longer asks a role: UX-MODE-01).
    What's New opens once after an update. F1 opens help for what you're doing. (UX-HELP-02..05)
 7. **Learning help:** short clips for the main tasks; tips on the first three uses; the faster way suggested once;
    no practice drawing. (UX-HELP-06..09)
