@@ -1709,3 +1709,12 @@ Builds on ST-08 (July).
    callouts; the user adds, removes or rearranges.
 2. **UX-DET-06:** Tim: "Neat grid, learned (Recommended)". Details are packed in a tidy grid by size in the office's
    usual order, never over the title block, re-packed with a preview when one is added or removed.
+
+## Civil C02 details — 26 Sep 11:33 2026
+
+1. **UX-DET-07:** Tim: "Offer the set, you confirm (Recommended)". CE offers the standard Civil details the C01 plan
+   uses (pit types, tank, orifice pit, SPS, raingarden, trench grate) on C02, filled with job sizes where linked, grid
+   layout, numbered.
+2. **UX-DET-08:** Tim: "Yes, update with preview (Recommended)". Civil details carrying job values (orifice plate,
+   tank volumes, SPS levels) update after a preview when the calculation or drawing changes; a hand-edited figure is
+   kept and flagged.
