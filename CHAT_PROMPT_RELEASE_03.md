@@ -45,12 +45,28 @@ coder. Colleagues pilot from Tuesday 29 Sep. Tim wants V3 out ASAP and ambitious
 - Never `git add -A`, never stash, never --no-verify; long PowerShell in a .ps1 file.
 - Only install with AutoCAD closed (checked twice); never publish to colleagues without Tim's word.
 
-## State at handover
-See release-v3 items 253-262 for the exact tips. In short: installed = Civil 3.0.5 / Manager 1.1.5 / Structural 1.0.76
-(26 Sep 16:58) unless item 263+ says train 6 (Civil 3.0.6 / Manager 1.1.6 / Structural 1.0.77) was installed.
-Wave 1 of V3 feature builders (A UX standards, B sources + Pit Schedule, C repair + import, D CDCALC, E Structural
-beam engine) was started 27 Sep ~00:40 by chat 02; their draft PRs are on GitHub. Next: ONE Opus review of wave 1 +
-Codex's #252/contextual-tab fixes, then train 7, install, Codex pass.
+## State at handover (27 Sep 09:00)
+1. **Installed on Tim's PC:** train 6 - Civil 3.0.6+a7c46308 / Manager 1.1.6 / Structural 1.0.77+f23e5e77 (27 Sep 02:10).
+   See the PENDING_TESTS LIVE block and release-v3 items 263-269 (newest first) for everything since.
+2. **Codex pass 13** started 09:05 on that install (re-tests the six pass-12 faults BUG-178..184 + N3/N4/N12). Its queue
+   runs in chat 02's background, so check it yourself: queue log
+   C:\Users\TIMOTH~1\AppData\Local\Temp\claude\C--Lisp-Files-CE-ACAD-PLUGIN--claude-worktrees-ce-civil-merge-gate-8a60ae\d4076b2c-9fff-4c1c-883a-ff18db9ab0a8\scratchpad\codex\queue.log
+   and report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md. After pass 13 the same
+   queue runs Codex's contextual-tab fix (fixn8, BUG-180) and the #252/#256 column-label fix (fix252). Codex scripts
+   (queue3.sh, daily_cap.sh, pass*.txt briefs) live in that codex folder. A PASS = Codex-accepted: mark carpark
+   items `FIXED — date (Codex-accepted, pass 13)`.
+3. **Train 7 (install only AFTER pass 13 finishes):** Civil 3.0.7 = #277 #283 #286 #287 #284 + a 3.0.7/1.1.7
+   version PR (copy #274). Structural 1.0.78 = REBUILD release/struc-train-0927b from the current #280 tip (a3c15008)
+   + #285 + #288 (add #288's missing VERSION-1.0.78 log entry); read the Sbeam receipts once and re-pin only if
+   needed (item 269); run the guard groups the crashed host skipped (item 268). Then ONE install + Codex pass 14.
+4. **Held for Tim's word:** #276 (admin fail-closed: Tim clicks "Set up CE administrator" once first) and #278
+   (CDCALC rainfall, an engineering change). Tim's Monday question list = release-v3 item 264.
+5. **Packaging/test wrappers** (payload_build.ps1, payload_struc.ps1, install_payload.ps1, train2.sh + resolvers,
+   struc_train_suite.ps1, struc_focus.ps1) are in chat 02's scratchpad:
+   C:\Users\TIMOTH~1\AppData\Local\Temp\claude\C--Lisp-Files-CE-ACAD-PLUGIN--claude-worktrees-ce-v3-release-chat-8a20d8\1a09942f-f391-47b0-8749-05cd9d6b5d23\scratchpad
+   Copy what you need; they wrap the repo's approved build_installer.ps1 routes (not new build scripts).
+6. **The discussion chat** (CE_ACAD / V3 PLAN / DISCUSSION / 01) sends Tim's new rulings as cross-session messages:
+   record them in the plan once per batch; add window/message rules to BUILDER_BRIEF_COMMON.md.
 
 ## Tim's asks for himself (remind him, don't nag)
 1. Answer the open-question queue in one sitting (C15/C17 Tc, "assumed, Tim to confirm" items, the two questions in items 256/257).
