@@ -1726,3 +1726,13 @@ Builds on ST-08 (July).
 2. **UX-NOTES-06:** Tim: "Yes, from the council profile (Recommended)". The job's council adds its required notes
    (e.g. step-iron note, discharge conditions) from the council profile, with the source, shown in the notes preview;
    a Settings value per council.
+
+## Publishing updates (admin) — 26 Sep 11:41 2026
+
+1. **UX-MGR-08:** Tim: "One page: what's new + test result (Recommended)". Before approving a build: version, plain-word
+   changes, automatic/Codex test results, anything not yet Tim-accepted, and the rollback copy location; then
+   "Approve for [picked colleagues]".
+2. **UX-MGR-09:** Tim: "Report + version + one-click rollback (Recommended)". A colleague's "Report a problem" shows on
+   the admin page with their version and log; one click rolls that colleague back.
+3. **UX-MGR-10:** Tim: "CE drafts, you approve (Recommended)". What's New is drafted in plain words from the changes and
+   edited/approved by Tim on the approval page.

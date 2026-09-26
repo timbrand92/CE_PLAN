@@ -195,7 +195,8 @@ Builders: the release chat writes a card per item before code.
 2. **Xrefs:** background changes offered for comparison; broken paths offered for repair. (UX-XREF-01..03)
 3. **Manager:** one-glance status page; quiet updates at next start; colleague rollback with notice; one "Report a
    problem"; updates to picked colleagues first; admin page of who's on what; Tim the only administrator for now.
-   (UX-MGR-01..07, UX-ADMIN-01)
+   Approving a build shows one page (changes, tests, not-yet-accepted, rollback); problem reports arrive with version and
+   one-click rollback; What's New drafted by CE, approved by Tim. (UX-MGR-01..10, UX-ADMIN-01)
 4. **Settings:** any engineer changes firm values, recorded; search; per-value history; gold "This job" tag; LPD note
    box. (UX-SET-01..06)
 6. **Layouts and viewports:** "New sheet" makes the layout, title block, viewport at office scale, plan title and
