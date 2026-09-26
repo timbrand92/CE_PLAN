@@ -75,6 +75,9 @@ Builders: the release chat writes a card per item before code.
     Properties row zooms with Back; up/down arrows walk the network with a gentle screen-only guide (flow dashes,
     next-stop ring, ticked trail), also on Checks jumps, switchable off; right-click selects a run or network.
     (UX-NAV-01..05)
+24. **Messages:** one CE bell on the status bar collects every quiet message with one action each; only failures,
+    a colleague holding the DWG and update-ready show a self-fading balloon; job messages follow the job, personal
+    ones the person. (UX-MSG-01..03)
 
 ## 2. The front door — ribbon, names, help
 

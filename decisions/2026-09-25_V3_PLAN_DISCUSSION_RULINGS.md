@@ -1890,3 +1890,13 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    schedule row zooms to an item. Rules shown with the picture and not objected to: screen-only (never saved or
    plotted), fades about 3 s after walking stops or drafting starts, slow pulse about once a second (never strobing),
    Settings switch to turn it off. Narrow exception to the 4 Sep "no motion" cockpit rule, at Tim's request.
+
+## Where CE's quiet messages collect — 27 Sep 01:27 2026
+
+1. **UX-MSG-01, one place:** Tim: "CE bell on status bar". A small CE icon on AutoCAD's status bar with a count; click
+   for a short list; each item has one action (Review, Open, Dismiss); nothing pops over the work. Collects e.g. the
+   FFL heads-up (UX-XDISC-03), new RFI found, update ready, failure reports, the save reminder.
+2. **UX-MSG-02, what may interrupt:** Tim ticked **Failures, Colleague has DWG, Update ready** (not "New RFI found").
+   These three also show a small self-fading balloon near the status bar; everything else waits in the bell.
+3. **UX-MSG-03, scope:** Tim: "The drawing/job". Drawing and job messages show to whoever opens the job next until
+   someone reviews them; personal ones (update, save reminder) stay with the person.
