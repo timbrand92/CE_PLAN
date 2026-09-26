@@ -1550,3 +1550,14 @@ questions, im not reading big documents"** (the facts are put to him as short qu
 2. **UX-RAFT-02:** Tim: "Yes, tracked area (Recommended)". Infill slab becomes a tracked area: drawn as an area, hatched
    11IH, thickness and mesh note from Settings defaults, known as not part of the raft for checks and the footing
    proposal.
+
+### Raft/infill facts corrected by Tim (26 Sep 10:25) — office knowledge (R-LEARN)
+
+1. **EB / IB:** Tim: "Yes". Raft edge beams EB1, EB2...; internal beams IB1, IB2...
+2. **BB, verbatim:** "band beams are in suspended slab that are in basements or concrete subfloor strcutures, not a
+   suspended on piers, screw piles or on ground". The study's reading (BB for rafts on piers) was **wrong**.
+3. **Infill slab, verbatim:** "infill slab is typically thinner and does have internal rib beams, look through old
+   projects please". The study's reading (mesh-only, no ribs) was **wrong**; a deeper review of older projects is
+   running.
+4. **Raft notes, verbatim:** "we use a legend atm , please review drawings". The study's reading (notes inline) was
+   **wrong**; the office currently uses a legend; drawings to be reviewed for its contents.

@@ -4,6 +4,10 @@ Read-only study approved by Tim (26 Sep): 7 recent structural issue PDFs (Jun-Se
 names and the plugin registry at 8c077569. Anonymised (DATA-01): no jobs named. **This is a reading of the evidence,
 not a Tim ruling.** Tim to correct before any UX questions.
 
+**TIM'S CORRECTIONS, 26 Sep 2026 (these override the text below):** EB/IB confirmed. BB band beams belong to
+suspended slabs in basements or concrete subfloor structures, NOT rafts on piers, screw piles or ground. Infill slabs
+are thinner AND DO have internal rib beams. Raft notes are in a LEGEND, not inline. A deeper drawing review is running.
+
 ## Raft slabs
 
 1. **Where:** the Ground Floor Footing Plan sheet; general and geotechnical notes on the first sheet.
