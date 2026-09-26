@@ -1957,3 +1957,13 @@ Builds on UX-AI-01..04 and UX-QA-05 (Claude-only provider permission unchanged).
    of changes, Apply or Cancel, one Undo; never writes on its own.
 3. **UX-AI-07:** Tim: "Yes, shown as chips". Selected objects appear as removable chips above the question box and
    are used as context.
+
+## Live timing, voice and units — 27 Sep 01:47 2026
+
+1. **UX-LIVE-01:** Tim: "Straight after each edit". Live labels, schedule and OSD block update as each edit finishes;
+   very large jobs batch with a status-bar progress line and Cancel (UX-PERF-01).
+2. **UX-VOICE-01:** Tim: "Calm, direct, plain". e.g. "P3 cover is 0.28 m. Office minimum is 0.45 m. Lower the pipe or
+   raise the pit." No exclamation marks, no "Oops", no blame. Applies to every message and window (with the
+   plain-English rule).
+3. **UX-UNIT-04:** Tim: "Always with units". Values in messages and windows always carry units (0.28 m, 225 mm, 1 in
+   100, 12.4 m³); never a bare number.

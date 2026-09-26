@@ -91,6 +91,9 @@ Builders: the release chat writes a card per item before code.
     Office); office standard changes hit new work only, with a previewed bell offer per job. (UX-SET-07..09)
 30. **Ask CE day to day:** dockable palette plus ASKCE; its changes use the normal preview/Apply/one Undo; the current
     selection shows as removable chips. (UX-AI-05..07)
+31. **Voice and timing:** live updates straight after each edit (batched with Cancel on big jobs); every message calm,
+    direct and plain, saying what and what to do, no blame; every value shown with its unit. (UX-LIVE-01,
+    UX-VOICE-01, UX-UNIT-04)
 
 ## 2. The front door — ribbon, names, help
 
