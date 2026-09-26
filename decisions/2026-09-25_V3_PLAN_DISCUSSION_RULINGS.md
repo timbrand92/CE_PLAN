@@ -1927,7 +1927,7 @@ Builds on UX-LEARN-01..04 (not replacing them).
 
 1. **UX-MARK-01:** Tim: "Gaps stay, offer tidy". Marks never change on their own after a delete; before issue, Checks
    offers "Renumber marks in order", previewed, one Undo.
-2. **UX-MARK-02:** Tim: "Share a mark". Identical beams share a mark, the schedule shows the quantity; editing one asks
+2. **UX-MARK-02 (refined by UX-MARK-06):** Tim: "Share a mark". Identical beams share a mark, the schedule shows the quantity; editing one asks
    "all of them, or split this one off?".
 3. **UX-MARK-03:** Tim: "Learned office spot". Tags go where the office usually puts them (learned from past drawings,
    the smart tagger idea), sliding clear of other text (PLACE-01).
@@ -2066,3 +2066,16 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
 6. **UX-CPLAN-26, IL text at pits (27 Sep 02:07):** Tim: "One IL per pipe, at its end". Each pipe's IL ("IL 33.00") sits near
    where it enters or leaves the pit with a short leader, as in office drawings.
 7. **UX-CPLAN-27, equal ILs (27 Sep 02:07):** Tim: "Show both". Identical inlet and outlet ILs are both shown.
+
+## Column and footing marks — 27 Sep 02:12 2026
+
+1. **UX-MARK-04, column tags:** Tim: "Mark only, size in schedule". "C1" beside the column at the learned office spot;
+   size and base details in the schedule.
+2. **UX-MARK-05, footing tags:** Tim: "Mark only, details in schedule". "F1" on the plan; size, depth and reinforcement
+   in the schedule.
+3. **UX-MARK-06, what a mark means:** Tim typed: "they are labelled based on size not placement". A mark is a type:
+   every column (or footing) of the same size shares one mark; placement never sets the number. Asked next, Tim chose
+   **"Most common first"** (over smallest first): the size used most often is C1 (F1), the next most common C2, and so
+   on. For beams Tim chose **"Same member = same mark"**: a beam shares a mark when section and member type match,
+   with quantity in the schedule; this refines UX-MARK-02 (which required identical span and load too). UX-MARK-01's
+   no-silent-renumber and offer-before-issue apply when counts change the order.
