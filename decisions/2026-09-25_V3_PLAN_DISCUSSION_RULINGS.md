@@ -1747,3 +1747,7 @@ Study: `04_REFERENCE\ux-plan\CIVIL_DRAWING_PRACTICE_2026-09-26.md`. Confirmed by
 3. **UX-DET-09:** Tim: "Keep titles, no numbers". Civil details are titled by description ("ORIFICE PIT P1 DETAIL"),
    no detail numbers. Supersedes the "numbered" part of UX-DET-07 for Civil (Structural keeps numbers, UX-DET-04).
 4. **UX-CPLAN-04:** Tim: "Yes". The three standard remarks are always added under the Pit Schedule (Settings text).
+
+**UX-CPLAN-05, MIN. suffix (26 Sep 11:46):** Tim: "Keep the May rule: no MIN.". Pipe labels show the actual grade exactly ("AT
+1 IN 100"), never MIN./MAX.; BUG-027 (ENGINEERING_RULEBOOK B4) stands. Older drawings showing "MIN." are old output,
+not the convention.
