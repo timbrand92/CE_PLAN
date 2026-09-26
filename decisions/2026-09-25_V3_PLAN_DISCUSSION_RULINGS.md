@@ -2058,3 +2058,8 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    level text (UX-CPLAN-13).
 2. **UX-CPLAN-22, where it sits:** Tim: "Learned office spot". Placed where the office usually puts it, sliding clear of
    pipes and text (PLACE-01), as beam tags (UX-MARK-03).
+3. **UX-CPLAN-23, pipe label placement (27 Sep 02:05):** Tim: "Mid-pipe, along the line". Parallel to the pipe at mid-length,
+   reading left-to-right or bottom-to-top, sliding clear (PLACE-01).
+4. **UX-CPLAN-24, short pipes (27 Sep 02:05):** Tim: "Leader out automatically". A label that will not fit moves to the nearest
+   clear space with a leader.
+5. **UX-CPLAN-25, identical neighbours (27 Sep 02:05):** Tim: "Label each". Every pipe keeps its own label; no "TYP.".
