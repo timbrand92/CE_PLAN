@@ -17,6 +17,7 @@
 > **When a carpark bug is being fixed:**
 > - Change its status to `IN PROGRESS` before starting work.
 > - Change it to `FIXED — YYYY-MM-DD` once Tim has confirmed it works in AutoCAD.
+> - *27 Sep 2026 (Tim: "if codex can test then my rule of me driving it is no longer necessary and it can be the measure of that"):* a Codex PASS in real AutoCAD on Tim's PC also counts - write `FIXED — YYYY-MM-DD (Codex-accepted, pass N)`. Engineering-judgement items still need Tim.
 > - Never mark FIXED until Tim has confirmed the test in AutoCAD — not assumed, confirmed.
 >
 > **Adding a new bug — use this exact template:**
