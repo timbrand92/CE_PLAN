@@ -93,7 +93,9 @@ Builders: the release chat writes a card per item before code.
     04, UX-CPLAN-01..03). Civil notes are the full template every time, plus council-required notes from the council
     profile. (UX-NOTES-05, 06)
 13. **Civil conventions:** pipe labels "100 DIA. UPVC PIPE AT 1 IN 100" (no MIN./MAX.); pits P1, EP/SEP, JP1; Civil
-    details titled not numbered; three standard remarks under the Pit Schedule. (UX-CPLAN-04, 05, UX-DET-09)
+    details titled not numbered; three standard remarks under the Pit Schedule. Pit Schedule copies the office layout
+    exactly; OSD criteria block filled live; C01 note blocks picked by council; tank callout placed automatically in
+    office wording. (UX-CPLAN-04..09, UX-DET-09)
 11. **Overland flow:** route proposed from levels; neighbour warning; every overflow must go somewhere; floor
     freeboard checked. (UX-OLF-01..04)
 

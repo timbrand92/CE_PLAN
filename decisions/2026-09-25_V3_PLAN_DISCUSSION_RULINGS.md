@@ -1752,7 +1752,15 @@ Study: `04_REFERENCE\ux-plan\CIVIL_DRAWING_PRACTICE_2026-09-26.md`. Confirmed by
 1 IN 100"), never MIN./MAX.; BUG-027 (ENGINEERING_RULEBOOK B4) stands. Older drawings showing "MIN." are old output,
 not the convention.
 
-**UX-CPLAN-06, Pit Schedule layout (26 Sep, observed, awaiting Tim's one-click confirm):** the office column order,
+**UX-CPLAN-06, Pit Schedule layout (26 Sep 11:51, CONFIRMED, Tim: "Copy exactly"):** the office column order,
 read from the most recent issued C01: PIT No., PIT SIZE, INLET (FROM, DIA, INVERT LEVEL), OUTLET (DIA, INVERT LEVEL),
-COVER LEVEL, DEPTH TO OUTLET, TYPE OF LID AND REMARKS; one row per inlet. Proposed: CE's automatic Pit Schedule
-copies this layout exactly. Not a ruling until Tim confirms.
+COVER LEVEL, DEPTH TO OUTLET, TYPE OF LID AND REMARKS; one row per inlet. CE's automatic Pit Schedule
+copies this layout exactly.
+7. **UX-CPLAN-07 (26 Sep 11:51):** Tim: "CE fills it live". The ON SITE DETENTION CRITERIA block on C01 updates whenever a
+   tank, pit or orifice changes; a missing value shows Unknown, never a guess.
+8. **UX-CPLAN-08 (26 Sep 11:51):** Tim: "Pick by council". The standard C01 note blocks (GENERAL, CIVIL WORKS, STORMWATER
+   DRAINAGE, SITE PREPARATION) always go in; CE adds the job council's own block when one exists (e.g. Kingston),
+   otherwise the LPD note. All wording is Settings text (R-00).
+9. **UX-CPLAN-09 (26 Sep 11:51):** Tim: "Auto, office wording". The water tank callout (WT1, capacity, make, dimensions,
+   detention/reuse split, riser/dropper notes) is placed when the tank is drawn, in the current office wording,
+   updates with the tank and slides clear of other text (PLACE-01).
