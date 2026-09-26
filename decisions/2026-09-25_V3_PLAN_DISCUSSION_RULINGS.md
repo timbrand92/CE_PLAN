@@ -1805,6 +1805,8 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    line UX-WORD-03). Where CE knows the fix (e.g. a missing cover level), a Fix button does it with the usual preview
    and one Undo. The drawing is left as it was before the command. *Interpretation of a terse answer, logged per Tim's
    marathon style; correct it if wrong.*
+   **Scope vs UX-BEAM-01:** a known refusal (CE cannot do it for a stated reason, e.g. no inside point) stays a plain
+   line with the next step (UX-BEAM-01); the failure window is for unexpected failures and bugs.
 2. **UX-SHARE-01, drawing open by a colleague:** Tim: "Name them + read-only". CE says who has it open and since when;
    the drafter can look and check but not change; Issue waits, with "Notify me when free".
 3. **UX-TIP-01, ribbon tooltips:** Tim: "Autodesk style". Short line first; a longer hover shows a small picture of the
