@@ -1501,3 +1501,21 @@ draft and design from top down. how does it differ from drafter to engineer"**.
    "Study past jobs, then you correct (Recommended)": a read-only study of a few recent jobs with raft and infill
    slabs (nothing copied out, DATA-01), producing a one-page description for Tim to correct before any UX questions.
 3. **Structural roles:** Tim asked, verbatim: "what if engineer drafts their own job". Follow-up put to Tim below.
+
+### UX-MODE-01 — Job mode replaces Engineer/Draftsperson (26 Sep 10:12)
+
+Tim, verbatim, asked how the modes should work: **"what if engineer drafts their own job"**, then **"well if youre
+drafting from a markup, its different to drafting from scratch with no set design"**. Offered the replacement, Tim:
+**"Yes, per job, CE suggests it (Recommended)"**.
+
+1. The mode is about **what the job is worked from**, not who the person is:
+   - **From markup / supplied design:** CE follows the markup or supplied design; checks what is drawn against it;
+     proposals follow the instructions; design figures shown as checks.
+   - **Design from scratch:** CE's design tools lead ("Design this member", sizing suggestions, level and layout
+     proposals, Accept all).
+2. **Per job, per discipline**, suggested by CE (an engineer markup or supplied design in the job folder means "From
+   markup", otherwise "Design from scratch"); shown on the CE panel; switchable any time; no person-based locks.
+3. **Supersedes:** UI-03 Drafter/Engineer modes (4 Sep, ENGINEERING_RULEBOOK) and the 5 Sep "who am I" role; UX-HELP-05
+   (role asked at first run: no longer asked); UX-SIZE-02 and the CV-02A "Engineer mode only" Accept all (now: Design
+   from scratch mode); UX-DES-01 (draftsperson Confirm setup: now the From markup mode). The Structural roles question
+   is answered by this.

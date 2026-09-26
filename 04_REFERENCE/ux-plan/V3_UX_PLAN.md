@@ -40,6 +40,8 @@ Builders: the release chat writes a card per item before code.
     itself for that drawing. (UX-PERF-01, 02)
 13. **Approvals:** any CE user can approve calculations, apply proposals and issue, always recorded, naming the
     engineer where a sheet goes out. (UX-CALC-APPROVE-01, UX-CALC-03, UX-REG-06, UX-STRUC-11, UX-REV-05)
+15. **Job mode, not person role:** each job (per discipline) is "From markup / supplied design" or "Design from
+    scratch", suggested by CE, switchable; replaces Engineer/Draftsperson everywhere below. (UX-MODE-01)
 14. **Mixed versions:** V3 drawings must stay visible to colleagues without V3 (prove on the 2022 VM); 2027-only
     tools greyed with "needs AutoCAD 2027"; the automatic pipe upgrade is held on colleagues' PCs until the
     2022-2024 enabler is proven. (UX-MIX-01..03)
@@ -54,7 +56,7 @@ Builders: the release chat writes a card per item before code.
 4. **Structural ribbon shows families** (Beam ▾, Text ▾ size + compass, Tag, Hatch gallery), about 40 tools instead
    of 298; duplicates merged, shortest code wins; "Legacy" tools sorted into families. (UX-STRUC-02..05, 07, 08)
 5. **CESTRUC's button launcher retires**; its unique functions get proper homes first. (UX-STRUC-10)
-6. **First run:** a lit "Start here" button with a 2-minute tour that asks "Engineer or Draftsperson?" once.
+6. **First run:** a lit "Start here" button with a 2-minute tour that (the role question is dropped: UX-MODE-01).
    What's New opens once after an update. F1 opens help for what you're doing. (UX-HELP-02..05)
 7. **Learning help:** short clips for the main tasks; tips on the first three uses; the faster way suggested once;
    no practice drawing. (UX-HELP-06..09)
