@@ -78,6 +78,8 @@ Builders: the release chat writes a card per item before code.
 24. **Messages:** one CE bell on the status bar collects every quiet message with one action each; only failures,
     a colleague holding the DWG and update-ready show a self-fading balloon; job messages follow the job, personal
     ones the person. (UX-MSG-01..03)
+25. **Undo and resuming:** CE Undo steps have plain names; palettes and last pipe size/type come back next day;
+    the CE panel job button lists the last 10 jobs. (UX-UNDO-01, UX-RESUME-01, UX-RECENT-01)
 
 ## 2. The front door — ribbon, names, help
 

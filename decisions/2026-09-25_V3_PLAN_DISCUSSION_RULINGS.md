@@ -1900,3 +1900,12 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    These three also show a small self-fading balloon near the status bar; everything else waits in the bell.
 3. **UX-MSG-03, scope:** Tim: "The drawing/job". Drawing and job messages show to whoever opens the job next until
    someone reviews them; personal ones (update, save reminder) stay with the person.
+
+## Undo names, resuming, recent jobs — 27 Sep 01:34 2026
+
+1. **UX-UNDO-01:** Tim: "Plain action names". CE steps in AutoCAD's Undo/Redo list read in plain words, e.g.
+   "CE: Move P3 (4 pipes relevelled)", "CE: New pipe P2-P3".
+2. **UX-RESUME-01:** Tim ticked **Palettes as left** and **Last pipe size/type** (not "Where you were", not
+   "Nothing"). Palettes reopen docked as left; the next pipe starts from the last size/type used in that job.
+3. **UX-RECENT-01:** Tim: "CE panel job button". The job name on the CE panel drops down the last 10 jobs; one click
+   opens that job's main drawing.
