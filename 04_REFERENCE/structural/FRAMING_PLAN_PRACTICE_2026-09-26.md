@@ -22,4 +22,5 @@ Anonymised (DATA-01). Items 1, 3, 6 and 8 CONFIRMED by Tim, 26 Sep 2026 (decisio
    steel, open-web joist bracing, Pryda or equal connectors); truss manufacturer note; double studs under all beam and
    lintel ends; F17 KDHW may be substituted by equivalent LVL; read with architectural documents.
 10. **Plugin gaps:** no MARK/SIZE member-schedule generator, no Type A/B bracing symbol tool, no hanger/strap tag tool.
-11. **Unconfirmed:** TR1, BJ1, WT1, SB1-SB5 meanings.
+11. **Tim, 26 Sep:** AB awning beam (tentative); TR trimmer beam; BJ balcony joist; SB subfloor beam; WT wall tie; a
+    leading number = floor level or townhouse/unit number. Schedules show each full name, grouped under headings.

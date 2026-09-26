@@ -1658,3 +1658,14 @@ Study: `04_REFERENCE\structural\FRAMING_PLAN_PRACTICE_2026-09-26.md`. Confirmed 
    supports), spec notes after the size. (Position per job: UX-FRM-02.)
 4. **UX-FRM-08, bracing tool:** Tim: "Yes (Recommended)". Pick a wall, choose Type A (strap) or Type B (ply); CE draws
    the symbol, keeps the legend entry and totals bracing per wall line for the bracing calculation.
+
+### Framing tag meanings (Tim, 26 Sep 11:12) — office knowledge (R-LEARN)
+
+1. **AB, verbatim:** "awning beams i think" (tentative).
+2. **TR / BJ / SB / WT, verbatim:** "trimmer beam, balcony joists, subfloor beam, wall tie, it should show in schedule
+   what its called and it should also show under headings or groups in the schedule". So TR = trimmer beam, BJ =
+   balcony joist, SB = subfloor beam, WT = wall tie. **UX-FRM-09:** the member schedule shows each tag's full name
+   (what it is called) and groups members under headings by type.
+3. **Leading number, verbatim:** "either floor level or townhouse/unit number". **UX-FRM-10:** a leading number on a tag
+   (e.g. 1FB5) means the floor level or the townhouse/unit number; CE sets it from the level or unit the member
+   belongs to (job setting which one applies).
