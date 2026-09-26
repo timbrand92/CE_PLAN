@@ -1616,3 +1616,12 @@ jobs; conventions to be learned from past drawings and confirmed with Tim as sho
    sheet); CE learns it per job and offers the job's pattern.
 3. **UX-FRM-03:** Tim: "On the framing plan". Bracing walls and tie-downs are shown on the framing plan, not a separate
    bracing plan.
+
+### Framing proposals (26 Sep 10:47)
+
+1. **UX-FRM-04:** Tim: "Propose, you accept (Recommended)". Lintels proposed over every opening in a loadbearing wall
+   (size from the timber calc once built, else Unknown), tagged, previewed.
+2. **UX-FRM-05:** Tim: "Yes, by area (Recommended)". Roof framing set out per picked roof area (R1/FJ1 bay pick, ST2-14):
+   direction marker, spacing and tag, learned from past roofs.
+3. **UX-FRM-06:** Tim: "Suggest, you confirm (Recommended)". Where a beam lands on a stud wall, CE proposes the support
+   (DS1/TS1 by load, or Unknown) in the preview.
