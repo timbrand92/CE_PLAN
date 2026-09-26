@@ -2036,3 +2036,8 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    from downhill to uphill". Pits are numbered from the downstream end: P1 nearest the outlet/LPD, rising uphill.
    With UX-SCHED-06 the schedule's natural mark order therefore reads downhill to uphill. How branches and pits added
    later are numbered: asked next (UX-CPLAN-19).
+5. **UX-CPLAN-19, branches (27 Sep 02:00):** Tim: "Main line first, then branches". Numbers run up the longest line to its top
+   pit, then continue up each branch, starting with the branch nearest the outlet.
+6. **UX-CPLAN-20, pits added later (27 Sep 02:00):** Tim: "Offer renumber before issue". A new pit takes the next free number;
+   before issue Checks offers "Renumber downhill to uphill", previewed, labels and schedule together, one Undo;
+   nothing renumbers on its own.

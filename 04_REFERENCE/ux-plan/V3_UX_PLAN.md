@@ -108,6 +108,8 @@ Builders: the release chat writes a card per item before code.
     its stage; Civil short codes (CDWT, CDLPD) stay. (UX-NAMES-01..06)
 37. **Schedule tables:** a long schedule continues on the next sheet with repeated headers; typing in a cell edits
     the object; natural mark order (P1, P2 ... P10). (UX-SCHED-04..06)
+38. **Pit numbering:** P1 at the outlet, rising uphill; main line first, then branches from nearest the outlet;
+    later pits take the next free number with a previewed renumber offered before issue. (UX-CPLAN-18..20)
 
 ## 2. The front door — ribbon, names, help
 
