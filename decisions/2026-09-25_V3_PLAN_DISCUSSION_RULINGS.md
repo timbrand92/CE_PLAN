@@ -1938,3 +1938,13 @@ Builds on UX-LEARN-01..04 (not replacing them).
    and one Undo; UX-MIX-03 still holds the pipe upgrade on colleagues' PCs until the 2022-2024 enabler is proven.
 3. **UX-DWG-03, recipient without CE:** Tim: "Normal clean linework". CE objects look and plot like ordinary AutoCAD
    objects with no proxy warning box. No separate flatten option.
+
+## Settings feel — 27 Sep 01:43 2026
+
+Builds on UX-SET-01..06.
+1. **UX-SET-07:** Tim: "Search box at top". Typing (e.g. "cover") shows every matching setting with its group and a
+   plain-English line on what it changes.
+2. **UX-SET-08:** Tim: "Marked with its source". A value differing from office standard carries a small tag
+   ("Council: <name>", "Job override", "Office"); hover shows why and who set it.
+3. **UX-SET-09:** Tim: "New work only, offer to update". An office standard change applies to new work; existing
+   drawings stay as issued; the CE bell offers "Office wording changed: update this job?" with a preview.

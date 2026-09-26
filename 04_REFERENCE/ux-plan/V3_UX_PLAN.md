@@ -87,6 +87,8 @@ Builders: the release chat writes a card per item before code.
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)
+29. **Settings feel:** search box on the Settings page; job values tagged with their source (Council / Job override /
+    Office); office standard changes hit new work only, with a previewed bell offer per job. (UX-SET-07..09)
 
 ## 2. The front door — ribbon, names, help
 
