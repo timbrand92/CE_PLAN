@@ -110,6 +110,8 @@ Builders: the release chat writes a card per item before code.
     the object; natural mark order (P1, P2 ... P10). (UX-SCHED-04..06)
 38. **Pit numbering:** P1 at the outlet, rising uphill; main line first, then branches from nearest the outlet;
     later pits take the next free number with a previewed renumber offered before issue. (UX-CPLAN-18..20)
+39. **CE panel:** job name and mode with recent jobs, a one-line health indicator into Checks, the bell count and
+    the find box; the discipline switch follows the drawing. (UX-PANEL-01, 02)
 
 ## 2. The front door — ribbon, names, help
 

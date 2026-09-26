@@ -2041,3 +2041,11 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
 6. **UX-CPLAN-20, pits added later (27 Sep 02:00):** Tim: "Offer renumber before issue". A new pit takes the next free number;
    before issue Checks offers "Renumber downhill to uphill", previewed, labels and schedule together, one Undo;
    nothing renumbers on its own.
+
+## The CE panel — 27 Sep 02:01 2026
+
+1. **UX-PANEL-01:** Tim ticked all four: **job name + mode** (with the recent-jobs drop-down, UX-RECENT-01), a **health
+   line** (one green/amber/red line, "Network OK" or "3 items to check", click opens Checks; with UX-STD-08), the
+   **CE bell count** (copy of the status-bar count) and the **find box** (UX-NAV-01).
+2. **UX-PANEL-02:** Tim: "Follows the drawing". The Civil/Structural switch changes to the drawing's discipline when
+   drawings change; it can still be flipped by hand. Refines Q4 (switch always visible, UX-RIBBON-02).
