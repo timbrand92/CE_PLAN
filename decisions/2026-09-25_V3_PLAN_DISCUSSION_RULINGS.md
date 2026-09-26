@@ -1638,3 +1638,11 @@ each, as short questions); office knowledge for the tools of UX-FDN-05:
    certification note.
 4. **Basements:** separate "Basement Footing & Retention Plan" and "Ground Floor Slab Plan", with soldier pile and
    blockwork retaining wall schedules.
+
+## Civil plan conventions — 26 Sep 11:02 2026
+
+1. **UX-CPLAN-01:** Tim: "Fixed legend block". Civil drainage plans keep the template's full legend block, always the
+   same (not auto-built like Structural).
+2. **UX-CPLAN-02:** Tim: "C01 with the plan". The Pit Schedule sits on C01 beside the plan.
+3. **UX-CPLAN-03:** Tim: "From survey, greyed + labelled EX". Existing pits, sewer and easements are taken from the
+   linked survey, shown in the existing style with EX labels, confirmed by the user.
