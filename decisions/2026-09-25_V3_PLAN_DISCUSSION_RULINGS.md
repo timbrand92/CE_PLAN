@@ -1600,3 +1600,10 @@ questions:
 3. **Band beams:** Tim: "Right". BB1, BB2 in an "RC BEAM SCHEDULE", in suspended ground-floor slabs over basements.
 4. **UX-RAFT-04, footing schedule:** Tim: "Yes, same columns". CE's automatic footing schedule uses the office columns:
    PF / EB / IB / TH / BP with width, depth, reinforcement, comments.
+
+### UX-FDN-05 — More foundation and slab tools (26 Sep 10:39)
+
+Asked which types CE drafts often enough to need a proper tool (standard details exist for each), Tim ticked **all
+four**: "Waffle pod slabs", "Timber subfloors", "Screw piles", "Suspended / basement slabs". Each gets a proper tool
+like the raft tools (tracked elements, tags, automatic schedule and legend entries, previews, one U), learned from past
+jobs; conventions to be learned from past drawings and confirmed with Tim as short questions before cards.
