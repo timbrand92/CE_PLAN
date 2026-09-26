@@ -1646,3 +1646,15 @@ each, as short questions); office knowledge for the tools of UX-FDN-05:
 2. **UX-CPLAN-02:** Tim: "C01 with the plan". The Pit Schedule sits on C01 beside the plan.
 3. **UX-CPLAN-03:** Tim: "From survey, greyed + labelled EX". Existing pits, sewer and easements are taken from the
    linked survey, shown in the existing style with EX labels, confirmed by the user.
+
+## Framing plan conventions confirmed — 26 Sep 11:09 2026
+
+Study: `04_REFERENCE\structural\FRAMING_PLAN_PRACTICE_2026-09-26.md`. Confirmed by Tim as short questions:
+1. **Beam tags:** Tim: "Right". FB floor beam, RB roof beam, LRB lower roof beam, PB pergola beam, L lintel, RL roof
+   lintel, with CANT / CONT appended when needed.
+2. **Posts:** Tim: "Right". C steel columns, P timber posts, DS1 double stud, TS1 triple stud.
+3. **UX-FRM-07, member schedule:** Tim: "Yes, like that". CE builds and updates "MEMBER SCHEDULE" (and "ROOF MEMBER
+   SCHEDULE") on each framing sheet: MARK and SIZE, grouped by function (roof beams, lintels, rafters/purlins,
+   supports), spec notes after the size. (Position per job: UX-FRM-02.)
+4. **UX-FRM-08, bracing tool:** Tim: "Yes (Recommended)". Pick a wall, choose Type A (strap) or Type B (ply); CE draws
+   the symbol, keeps the legend entry and totals bracing per wall line for the bracing calculation.

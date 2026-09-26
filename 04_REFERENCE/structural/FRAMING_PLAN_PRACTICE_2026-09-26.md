@@ -1,7 +1,7 @@
 # Framing plans — CE practice (DRAFT, 26 Sep 2026)
 
 Read-only study approved by Tim: framing-plan pages from 5 structural sets (2023-2025) read in full, 2 more scanned.
-Anonymised (DATA-01). A reading of the evidence; confirmations are in the decisions file.
+Anonymised (DATA-01). Items 1, 3, 6 and 8 CONFIRMED by Tim, 26 Sep 2026 (decisions file); the rest is a reading of the evidence.
 
 1. **Beam tags:** category prefix + number: FB floor beam, RB roof beam, LRB lower roof beam, PB pergola/pavilion
    beam, AB (a ground/subfloor category), RL roof lintel, RT roof truss girder; a leading digit sometimes (e.g. 1FB5),

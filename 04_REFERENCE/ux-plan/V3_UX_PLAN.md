@@ -168,6 +168,11 @@ Builders: the release chat writes a card per item before code.
    ribs); BB band beams for suspended slabs over basements in the RC beam schedule; the footing-plan legend built
    automatically; footing schedule in office columns; drafted top-down with load markers, sheeted notes then footings
    up. (UX-RAFT-01..04, UX-LOAD-01..03, UX-SHEETS-01..04, UX-STRUC-13)
+8d. **Framing plans:** office tags (FB, RB, LRB, PB, L, RL, CANT/CONT; C, P, DS1, TS1); automatic legend and
+   "MEMBER SCHEDULE" (MARK, SIZE, grouped); bracing Type A/B tool with totals; bracing on the framing plan; lintels,
+   roof framing by area and stud supports proposed. (UX-FRM-01..08)
+8e. **More foundation tools:** waffle pod slabs, timber subfloors, screw piles, suspended/basement slabs, each with office
+   tags, schedules and notes. (UX-FDN-05)
 9. **2022 colleagues** get full Structural with 2027-only tools greyed. (UX-STRUC-12)
 
 ## 8. Jobs, Manager, settings
