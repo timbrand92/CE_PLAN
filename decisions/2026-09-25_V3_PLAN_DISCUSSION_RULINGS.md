@@ -1795,3 +1795,19 @@ Asked because ERASE, COPY, MIRROR and EXPLODE on CE objects had no UX ruling. Al
    upside down, whatever MIRRTEXT says, and labels re-slide clear (PLACE-01).
 4. **UX-EDIT-04, explode:** Tim: "Allow + warn". Explode works as normal (R-27, no hard block); a status-bar line names
    what left the schedule (e.g. "P3 is now plain linework and has left the schedule"); one Undo restores it.
+
+## Failures, shared drawings, tooltips, empty selection — 26 Sep 11:59 2026
+
+1. **UX-FAIL-01, when a command fails:** Tim typed (not the recommended plain line): "window with log, send to admin
+   and fix button if possible". **Meaning as recorded:** a failure opens a window. It leads with one plain-English line
+   saying what did not happen (plain-English rule), shows the log below it, and has a "Send to admin" button, which is
+   the one "Report a problem" route (UX-MGR-06, log and versions attached, drawing only if ticked, honest result
+   line UX-WORD-03). Where CE knows the fix (e.g. a missing cover level), a Fix button does it with the usual preview
+   and one Undo. The drawing is left as it was before the command. *Interpretation of a terse answer, logged per Tim's
+   marathon style; correct it if wrong.*
+2. **UX-SHARE-01, drawing open by a colleague:** Tim: "Name them + read-only". CE says who has it open and since when;
+   the drafter can look and check but not change; Issue waits, with "Notify me when free".
+3. **UX-TIP-01, ribbon tooltips:** Tim: "Autodesk style". Short line first; a longer hover shows a small picture of the
+   result plus the typed command name, like AutoCAD's own buttons.
+4. **UX-SEL-01, nothing selected:** Tim: "Ask to pick". The command line asks for the right object ("Select a pipe:"),
+   filtered to that kind; Esc cancels cleanly. Same pattern as UX-CDTAG-01.

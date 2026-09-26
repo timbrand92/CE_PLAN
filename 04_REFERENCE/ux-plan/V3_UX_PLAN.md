@@ -51,6 +51,11 @@ Builders: the release chat writes a card per item before code.
 16. **Everyday AutoCAD edits:** ERASE a pit leaves its pipes with free ends and says so; COPY/paste makes real CE
     copies renumbered with levels flagged to check; MIRROR/ROTATE keeps CE text readable and re-slid; EXPLODE is
     allowed with a status-bar note of what left the schedule. One Undo restores each. (UX-EDIT-01..04)
+17. **When things go wrong or clash:** a failure opens a window: plain line first, the log, "Send to admin" (the
+    one Report a problem) and a Fix button where CE knows the fix; the drawing is untouched. A drawing open by a
+    colleague names them and opens read-only, Issue waits with "Notify me when free". Nothing selected: the
+    command asks to pick, filtered. Ribbon tooltips are Autodesk style (line, then picture). (UX-FAIL-01,
+    UX-SHARE-01, UX-SEL-01, UX-TIP-01)
 
 ## 2. The front door — ribbon, names, help
 
