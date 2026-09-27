@@ -148,7 +148,8 @@ Builders: the release chat writes a card per item before code.
     Retaining walls: pick a line and CE lays out the three office blocks (sleeper wall, post, bored pier, each with
     its hatch): posts centred on piers, piers offset inward at boundaries, PFC+UC corner posts, PFC end posts where
     a wall stops against something; heights from levels; AG drain offered; schedule from the office typical schedule;
-    wall type shown on plan by a rotated dimension; standard section filled; on either set. (UX-RW-01..09)
+    wall type shown on plan by a rotated dimension; standard section filled; on either set; masonry fence walls and
+    fence post footings designed too; "fence on top" adds surcharge to a retaining wall. (UX-RW-01..11)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

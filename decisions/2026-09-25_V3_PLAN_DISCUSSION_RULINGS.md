@@ -2327,3 +2327,7 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    library with post, pier and height filled per specification (like UX-SEC-03).
 9. **UX-RW-09, which discipline (27 Sep 19:33):** Tim: "Either". A retaining wall can sit on the Civil or the Structural set,
    whichever the job needs; the other discipline sees it read-only (UX-XDISC-02).
+10. **UX-RW-10, fences and fence walls (27 Sep 19:35):** Tim: "Both". Masonry fence walls get a tag, footing and schedule row
+    like other walls, and timber/Colorbond fences get post footings designed too.
+11. **UX-RW-11, fence on a retaining wall (27 Sep 19:35):** Tim: "Tick 'fence on top'". A retaining wall property that adds the
+    fence load to the design, picks the post size accordingly and adds a note on plan.
