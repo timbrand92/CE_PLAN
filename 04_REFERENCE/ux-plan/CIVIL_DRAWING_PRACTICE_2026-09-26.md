@@ -27,3 +27,17 @@ raingarden or GIO in the sample). Anonymised (DATA-01). Items 1, 2, 3, 4 callout
     IO, existing services, TPZ, PP, charged pipe, suspended pipe, overland flowpath...).
 11. **Levels and grades:** plain 2-decimal levels, "RL" for spot levels, AHD stated in notes; IL / CL / TWL prefixes;
     grades written "1 IN 100", never percent.
+
+## Outfall drains (read 27 Sep from three past jobs, anonymised; Tim asked "find some outfall drains")
+
+12. **On C01:** the outfall pipe leaves the site and runs along the road reserve to an existing council pit/drain,
+    labelled like site pipes (e.g. "300 DIA. RCP RRJ PIPE AT 1 IN 250"), ending "CONNECT INTO EXISTING COUNCIL PIT TO
+    COUNCIL SATISFACTION", with a note "REFER TO DRAWING C02 FOR OUTFALL DRAINAGE DESIGN AND SPECIFICATIONS".
+13. **Outfall pits in the MAIN Pit Schedule today:** the first rows are the council end (e.g. "EX. PIT ... Existing
+    Council Pit", "P0 ... New Council JP", or "CP1"), then P1, P2 ... on site. Outfall pits numbered P0 / CP1, below P1.
+14. **C02 "OUTFALL DRAIN LONGITUDINAL SECTION":** horizontal 1:100, vertical 1:50; pits drawn as solid bars labelled
+    vertically ("EX P 600 x 900", "P0 600 x 900") with CL; existing and proposed crossovers noted over the section;
+    data table rows: DATUM LEVEL R.L., PIPE SIZE, PIPE GRADE, INVERT DEPTH, INVERT LEVEL, SURFACE LEVEL, CHAINAGE.
+    Same C02 carries the orifice pit detail and plan view, bedding, junction pit and penetration details.
+15. **Council approval letter** (engineering plan approval) sits in the job folder with conditions for the outfall
+    (e.g. owner maintains the outfall in the road reserve, service clearances to AS3500.3, permit before works).
