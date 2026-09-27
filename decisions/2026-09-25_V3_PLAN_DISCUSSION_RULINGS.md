@@ -2127,3 +2127,11 @@ Evidence: STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md items 8-13 (a second job's
    repeat; one Undo.
 6. **UX-SSCHED-08, single-column title (27 Sep 11:01):** Tim typed: "the full title doesnt fit so for single column keep plain
    title". A one-column block keeps the plain "MEMBER SCHEDULE" title (as built); 2-3 columns show the floor title.
+7. **UX-SSCHED-09, RC beam schedule (27 Sep 11:07):** Tim typed: "there is a specific rc beam schedule in my typical ce file".
+   CE uses that office RC beam schedule (from CE_TYPICAL BLOCKS-LAYERS-SCHEDULES-NOTES.dwg in Drawings Templates), not
+   a new layout. Note: the plugin's 26 Mar snapshot of that file lists "A3 Footing Schedule", "Block Wall Schedule",
+   "FIRST FLOOR MEMBER SCHEDULE - 2 COLUMNS" and "Footing Schedule - Added Comments" but no RC beam schedule by name,
+   so it is newer or unnamed there; whoever builds it reads it from the live typical file first.
+8. **UX-SSCHED-10, slab legend boxes (27 Sep 11:07):** Tim: "Auto from slabs drawn". One legend box per slab type actually on
+   the plan (swatch matching the hatch; thickness, mesh, cover, f'c, membrane and sand text from the slab's settings),
+   updated live.
