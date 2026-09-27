@@ -300,6 +300,15 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 28 Sep 2026 00:03 on Tim's PC — Civil `3.0.8+82b9d315`, Manager `1.1.8+82b9d315`, Structural `1.0.79+d7d2cb09`
+
+1. **Installed by the release chat under Tim's standing override** ("from now until tuesday we build, test and deploy whenever we need"; Tim, 27 Sep night: "keep going...knocking things off the plan"). AutoCAD closed checked twice (00:02:45, 00:02:55); 2,900 files hash-checked after install, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes, native ARX present, 0 stray CE_SHARED files, 0 AdminSasUrl files.
+2. **Backups:** `CE_CVL_SUITE_PRE_efd4a838_20260928-000245.backup`, `CE_SUITE_MANAGER_PRE_efd4a838_20260928-000245.backup`, `CE_STRUC_SUITE_PRE_9edc9bc2_20260928-000245.backup` in `%APPDATA%\Autodesk\ApplicationPlugins`.
+3. **Undo:** close AutoCAD; delete the three new `CE_*.bundle` folders; rename each `..._PRE_*_20260928-000245.backup` back to its `.bundle` name.
+4. **Carries, on top of the 18:57 install:** Civil #302 (DP/lid-class) #304 (surface drainage) #305 (paving/kerb/spoon) #307 (wave-4 fixes) #312 (fall arrows + catchment overlay). Structural #301 (column labels, merged with #269/BUG-184) #303 (bracing panel + tie-downs) #309 (roof geometry, not wired to a command) #310 (CSSOILREPORT/CSWINDCLASS) #311 (CSLOADPATH). Not carried: #276 (admin), #278 (rainfall), #252/#256 (held, superseded by #301) - all held for Tim.
+5. **Build note for the record:** the first three payload-build attempts raced against leftover unfinished builds in the same worktree and produced a stale 3.0.7-stamped DLL; cleared all stale bin/obj/payload_build output and rebuilt watched, one step at a time, before trusting the version read-back. Payload staged at `C:\CEPay\payload` (short path - the usual scratchpad path is too deep for some Copy-Item calls, same class of issue as [[native-build-long-path]]).
+6. **Not yet tested in AutoCAD.** Codex pass 15 queued next.
+
 ## LIVE since 27 Sep 2026 18:57 on Tim's PC — Civil `3.0.7+efd4a838`, Manager `1.1.7+efd4a838`, Structural `1.0.78+9edc9bc2`
 
 1. **Installed by the release chat** (Tim: "AutoCAD is closed, deploy"). AutoCAD closed checked twice (18:57:46, 18:57:56), before the swap and at the end; 2,001 files hash-checked after install, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes (Legacy/Net8/Modern), native ARX present, no stray CE_SHARED files, Manager has 0 AdminSasUrl files.
