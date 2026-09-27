@@ -2181,3 +2181,13 @@ Builds on UX-NOTES-01..06.
    values, seeded as Tim said).
 3. **UX-SYM-03, section cuts:** Tim: "Offer the detail". Placing a section mark offers to generate the linked,
    numbered section on the named sheet (UX-SEC-01/02).
+
+## Framing plan display — 27 Sep 17:18 2026
+
+1. **UX-FRM-11, joists and rafters:** Tim: "Span arrow + tag". One double-headed span arrow across the area with the tag
+   (e.g. FJ1 @ 450 CTS), not every joist; updates with the area.
+2. **UX-FRM-12, beam hover:** Tim: "Mark, size, span, status". e.g. "FB3 · 250 x 90 PFC · 3.6 m · calc approved".
+3. **UX-FRM-13, beam lines:** Tim typed: "at level on layer beams, beams lower on beams lower layer thats it". Beams at
+   the plan's level go on the BEAMS layer; lower beams on the BEAMS LOWER layer; nothing else (no per-material
+   linetypes chosen here). Layer names are Settings values seeded from Tim's words (block "BEAM LOWER" already exists
+   in the typical file).

@@ -98,6 +98,8 @@ Builders: the release chat writes a card per item before code.
     automatically from the levels above/below in the office red style. (UX-NOTES-07..09, UX-LEVEL-01, 02)
     Plan symbols: CE pier object with automatic tags and centres; step symbol, level tags and a magenta SLAB STEP
     line offered at level changes; a section mark offers its linked detail. (UX-SYM-01..03)
+    Framing plan: joists and rafters as one span arrow with tag; beam hover shows mark, size, span and calc status;
+    beams at level on BEAMS, lower beams on BEAMS LOWER, nothing more. (UX-FRM-11..13)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)
