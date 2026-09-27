@@ -1,8 +1,8 @@
 # Structural schedules — CE practice (DRAFT, 27 Sep 2026)
 
 Read-only look at recent structural issue PDFs (Tim chose this study, 27 Sep). Evidence so far is ONE job's footing
-and slab sheets (S02/S03, construction issue); no beam schedule found yet in the sample. Anonymised (DATA-01). Not a
-ruling until Tim confirms.
+and slab sheets (S02/S03, construction issue); no beam schedule found yet in the sample. Anonymised (DATA-01). Items 1-6 CONFIRMED by Tim 27 Sep
+(UX-SSCHED-01..03). Beam schedule table: exists (UX-SSCHED-04), layout still to read.
 
 1. **Footing schedule is sideways:** each footing mark is a COLUMN (PF1, PF2 ... SF1 ... GEB1), with its type written
    small under the mark (PAD FOOTING, STRIP FOOTING, PILE CAP, EDGE BEAM, INTERNAL BEAM). Rows: FOOTING TYPE, WIDTH

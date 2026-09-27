@@ -86,6 +86,9 @@ Builders: the release chat writes a card per item before code.
     mark with a quantity; tags placed at the learned office spot. Marks are types: every member of the same size and
     type shares a mark, most common size is 1; columns C1 and footings F1 tagged by mark only, details in the
     schedule. (UX-MARK-01..06)
+    Schedules copy the office layout: footing and pier schedules sideways (one column per mark, f'c band), marks
+    prefixed by type and numbered per prefix, live wall schedule, standard lintel table, beam schedule table on
+    the framing sheet. (UX-SSCHED-01..04)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)

@@ -2079,3 +2079,18 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
    on. For beams Tim chose **"Same member = same mark"**: a beam shares a mark when section and member type match,
    with quantity in the schedule; this refines UX-MARK-02 (which required identical span and load too). UX-MARK-01's
    no-silent-renumber and offer-before-issue apply when counts change the order.
+
+## Structural schedules layout — 27 Sep 10:10 2026
+
+Evidence: 04_REFERENCE/structural/STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md (one job, anonymised).
+1. **UX-SSCHED-01, footing and pier schedules:** Tim: "Copy exactly". Sideways: one column per mark with its type written
+   under it; rows FOOTING TYPE, WIDTH MINIMUM, DEPTH MINIMUM, REINFORCEMENT, COMMENTS; a band grouping columns by
+   concrete strength; default f'c in the title ("U.N.O."). Bored pier schedule the same.
+2. **UX-SSCHED-02, prefixes:** Tim: "Yes, per prefix". Marks carry type prefixes (PF, SF, CF, PC, BP, CB, EB, IB, RC,
+   W...; "(O)" for existing), numbering restarts per prefix, most common size within that type is 1 (UX-MARK-06);
+   the prefix list is a Settings value.
+3. **UX-SSCHED-03, wall and lintel:** Tim ticked both: the **wall schedule is live** from the walls drawn, one row per
+   wall (type, thickness, vertical/horizontal reinforcement, starter bars, fire rating); the **masonry lintel table** is
+   placed as a standard from Settings.
+4. **UX-SSCHED-04, beams:** Tim: "Beam schedule table". Beam sizes live in a beam schedule table on the framing sheet;
+   its layout will be read from more jobs and confirmed with Tim (not yet seen in the sample).
