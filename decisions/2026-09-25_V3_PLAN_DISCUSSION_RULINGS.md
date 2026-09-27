@@ -2223,3 +2223,13 @@ Builds on UX-NOTES-01..06.
    Long section: **"Generate, office layout"**: CE builds the "OUTFALL DRAIN LONGITUDINAL SECTION" live from the outfall
    run and surface levels (H 1:100, V 1:50; rows DATUM LEVEL R.L., PIPE SIZE, PIPE GRADE, INVERT DEPTH, INVERT LEVEL,
    SURFACE LEVEL, CHAINAGE; pits as vertical-labelled bars; crossovers and services noted).
+
+## Surface levels — 27 Sep 18:37 2026
+
+Builds on the earlier UX-SURV rulings.
+1. **UX-RL-01, source:** Tim: "Survey levels, interpolated". CE reads the survey spot levels (and contours if present)
+   and interpolates at each pit or chainage; anywhere the survey does not cover shows Unknown, never a guess.
+2. **UX-RL-02, source tag:** Tim: "Yes, small source tag". Windows and hover say "from survey", "design" or "typed"; on
+   the drawing they look the same.
+3. **UX-RL-03, design surface:** Tim: "Design levels win where set". Pits in paved or finished areas use the design level
+   (drafter or architect); elsewhere the survey level; the source tag says which.
