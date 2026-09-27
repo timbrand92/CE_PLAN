@@ -2390,3 +2390,12 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    and terrain questions (Settings table), the user confirms; it feeds bracing and tie-downs.
 4. **UX-SOIL-04, where shown (27 Sep 21:10):** Tim: "General notes". Wind class and site class appear in the general notes'
    design-criteria line, filled from the job.
+
+## Structural general notes page — 27 Sep 21:12 2026
+
+Builds on UX-NOTES-01..09.
+1. **UX-NOTES-10:** Tim: "Only sections the job uses". Built from the office notes library; CE includes the sections for
+   materials actually on the job (e.g. no steel notes without steel); more can be ticked in the preview.
+2. **UX-NOTES-11:** Tim chose **"Fixed text"** over filling values from the job. General notes stay office standard text
+   (values such as f'c, cover, bolt and timber grades are as written in the library); job-specific values go on the
+   schedules, legends and design-criteria line instead (UX-SSCHED, UX-SOIL-04).

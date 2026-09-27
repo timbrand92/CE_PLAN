@@ -164,6 +164,8 @@ Builders: the release chat writes a card per item before code.
     Soil: CE reads the geotech report (class, bearing, founding depth) for confirmation and writes founding notes from
     it; wind class set once in the job (suggested, confirmed) and both classes shown in the general notes.
     (UX-SOIL-01..04)
+    General notes page: only the material sections the job uses, office fixed text (job values live in schedules and
+    the design-criteria line). (UX-NOTES-10, 11)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)
