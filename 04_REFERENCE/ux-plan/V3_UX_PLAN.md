@@ -140,6 +140,8 @@ Builders: the release chat writes a card per item before code.
     Lid class suggested from the surface a pit sits in; a moved pit is flagged with a one-click upgrade. (UX-LID-01, 02)
     Downpipes detected from the architect's Xref and confirmed in one preview; DP connection pipes drawn by the
     drafter; roof split between downpipes automatically as an adjustable overlay. (UX-DP-01..03)
+    Trench drains by two points; fall arrows suggested from levels; grated pit catchments overlaid with an overload
+    warning. (UX-SURF-01..03)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

@@ -2267,3 +2267,12 @@ Builds on UX-SRC-01..05 and UX-L3-07..10.
    separate, on request.)
 3. **UX-DP-03, roof catchment:** Tim: "Split roof automatically". CE divides the roof outline between downpipes as a light
    adjustable overlay feeding tank and pipe calcs; Unknown without a roof outline.
+
+## Trench drains, fall arrows, grated pit catchments — 27 Sep 18:57 2026
+
+1. **UX-SURF-01, trench drains:** Tim: "Draw by two points". Pick start and end; drawn in the legend style with width and
+   grate class; outlets to the pit or pipe picked. (Q29 drag vs typed answered: by two points.)
+2. **UX-SURF-02, fall arrows:** Tim: "Suggested from levels". Where levels exist CE suggests FALL arrows toward grated
+   pits; accept or move; arrows pointing away from a pit are flagged.
+3. **UX-SURF-03, grated pit catchment:** Tim: "Yes, show catchment". A light overlay shows each grated pit's paved
+   catchment; an overloaded grate is warned (capacity a Settings value).
