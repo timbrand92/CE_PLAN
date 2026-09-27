@@ -2256,3 +2256,14 @@ Builds on the CDPROFILE decisions (UX-PROFILE) and UX-CPLAN-34.
    table is a Settings value (Q12 driveway class stays a Settings default).
 2. **UX-LID-02:** Tim: "Warn + one-click fix". A pit moved into a heavier-traffic area is flagged in Checks; one click
    upgrades the lid and the schedule remark updates.
+
+## Downpipes and roof water — 27 Sep 18:54 2026
+
+Builds on UX-SRC-01..05 and UX-L3-07..10.
+1. **UX-DP-01, getting DPs in:** Tim: "Detect + confirm". CE finds the architect's DP symbols in the background Xref and
+   offers them as CE downpipes in one preview; wrong ones are unticked (learned proposals, UX-L3-07, when none drawn).
+2. **UX-DP-02, DP connection pipes:** Tim chose **"Draw each"** over the automatic run. The drafter draws each downpipe's
+   connection pipe; CE does not auto-route them. (Level 3 proposals for a whole network, UX-L3-15..19, remain
+   separate, on request.)
+3. **UX-DP-03, roof catchment:** Tim: "Split roof automatically". CE divides the roof outline between downpipes as a light
+   adjustable overlay feeding tank and pipe calcs; Unknown without a roof outline.
