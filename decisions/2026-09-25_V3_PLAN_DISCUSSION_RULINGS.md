@@ -2353,3 +2353,9 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    needs them, never proposed from a grid. CE tags, hatches and schedules them once placed.
 4. **UX-BSMT-04, slab reinforcement notes (27 Sep 19:41):** Tim: "Reo bar tool". Draw the extent; CE writes the bar note in office
    format (e.g. "3-N16-100 CTS x 5500 LG, TOP & BOTTOM") with extent arrows, the length kept live with the extent.
+5. **UX-BSMT-05, reinforcement symbols (27 Sep 19:46):** Tim typed: "we dont show re- entrant corners these are in the detail,
+   create tools if you need". Re-entrant corner trimmer bars are NOT shown on plan (they live in the typical detail);
+   CE does not add them at corners. Bar extent and additional-bar symbols come from tools (the reo bar tool,
+   UX-BSMT-04, using office blocks such as REINFORCEMENT ADDITIONAL) where needed.
+6. **UX-BSMT-06, mesh callouts (27 Sep 19:46):** Tim: "From the slab type". Each slab type carries its mesh in Settings; legends
+   and notes fill from it and update when the slab type changes.
