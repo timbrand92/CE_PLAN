@@ -2313,4 +2313,9 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    levels, split into height bands.
 5. **UX-RW-05, drainage:** Tim: "Offered with the wall". Placing a wall offers an AG drain behind it connected to the
    nearest pit (UX-SURF-04).
-Open: how the wall and post sit relative to the pier in each situation (asked next).
+6. **UX-RW-06, wall/post/pier arrangement (27 Sep 19:31, from a plan sketch):** normal wall: Tim chose **"A: post centred on
+   pier"** (sleepers on the retained side of the post, pier centred under it). Near a boundary: **"B: wall to boundary,
+   pier offset in"** (wall face on or just inside the boundary, pier moved inward so it does not cross). Corners: Tim
+   typed: "post is a mix of pfc and uc togehter, then we also have when a wall ends up against something which uses a
+   pfc". A corner post is a PFC and UC combined; a wall end that stops against something (another wall, building,
+   structure) uses a PFC end post. Post sizes (e.g. 100UC15, 150UC23, 200x75 PFC blocks) chosen from the height band.
