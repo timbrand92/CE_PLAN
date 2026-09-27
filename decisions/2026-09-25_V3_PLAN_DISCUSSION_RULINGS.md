@@ -2348,3 +2348,8 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    a site-cut batter. CE lays out the chosen system around the basement perimeter.
 2. **UX-BSMT-02, basement drainage:** Tim: "Pump pit object + charged main". A pump pit with storage volume and pump duty
    note, a charged main to the nearest pit; checked and listed in the Pit Schedule.
+3. **UX-BSMT-03, suspended slabs and band beams (27 Sep 19:41):** Tim typed: "slab area, beams are located where engineers need
+   them for structural reasons". CE draws the slab area; band beams are placed by the engineer where the structure
+   needs them, never proposed from a grid. CE tags, hatches and schedules them once placed.
+4. **UX-BSMT-04, slab reinforcement notes (27 Sep 19:41):** Tim: "Reo bar tool". Draw the extent; CE writes the bar note in office
+   format (e.g. "3-N16-100 CTS x 5500 LG, TOP & BOTTOM") with extent arrows, the length kept live with the extent.

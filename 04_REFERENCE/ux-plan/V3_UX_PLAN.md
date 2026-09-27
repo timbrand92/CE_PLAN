@@ -153,7 +153,8 @@ Builders: the release chat writes a card per item before code.
     Pools: zone of influence on nearby footings flagged and the pool shell designed when the office does it; civil
     adds a backwash-to-sewer note and leaves the pool out of the catchment. (UX-POOL-01, 02)
     Basements: pier + shotcrete + capping beam, or reinforced block/concrete/AFS/Dincel wall against a site-cut batter,
-    laid out around the perimeter; pump pit object with charged main. (UX-BSMT-01, 02)
+    laid out around the perimeter; pump pit object with charged main; suspended slab area drawn by CE, band beams
+    placed by the engineer (never proposed); reo bar tool writes office bar notes with live lengths. (UX-BSMT-01..04)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)
