@@ -133,7 +133,8 @@ Builders: the release chat writes a card per item before code.
     with the OUTFALL DRAIN PLAN C02 and their own schedule; outfall pits CP1, CP2; the outfall long section is generated
     live in the office layout. (UX-CPLAN-28..34)
     Surface levels come from the survey, interpolated (Unknown outside it), with design levels winning where set and
-    a small source tag in windows. (UX-RL-01..03)
+    a small source tag in windows; with no survey CE asks for an assumed datum and fall (marked Assumed); a later
+    survey fills in and lists new failures; suspect spot levels are flagged and skipped. (UX-RL-01..06)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

@@ -2233,3 +2233,10 @@ Builds on the earlier UX-SURV rulings.
    the drawing they look the same.
 3. **UX-RL-03, design surface:** Tim: "Design levels win where set". Pits in paved or finished areas use the design level
    (drafter or architect); elsewhere the survey level; the source tag says which.
+4. **UX-RL-04, no survey yet (27 Sep 18:40):** Tim chose **"Ask for assumed levels"** over designing with Unknowns. With no survey,
+   CE asks for an assumed datum and fall; levels built from them are marked **Assumed** (as CR-D1b: Assumed, never
+   passed off as surveyed), shown with the "assumed" source tag, and the health line says the job is on assumed levels.
+5. **UX-RL-05, survey arrives later (27 Sep 18:40):** Tim: "Fill in and show changes". CE replaces the assumed/Unknown levels,
+   reruns checks and lists anything that now fails, with fix suggestions.
+6. **UX-RL-06, suspect survey levels (27 Sep 18:40):** Tim: "Flag, don't use". A spot level far off its neighbours is flagged in
+   checks and skipped for interpolation until the drafter confirms it.
