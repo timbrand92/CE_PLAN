@@ -167,7 +167,7 @@ Builders: the release chat writes a card per item before code.
     General notes page: only the material sections the job uses, office fixed text (job values live in schedules and
     the design-criteria line). (UX-NOTES-10, 11)
     Steel: searchable AS/NZS catalogue picker with calc-passing sizes highlighted; galvanising note from exposure.
-    (UX-STEEL-01, 02)
+    Timber uses the same picker (size + grade, multiples); substitution stays a standard note. (UX-STEEL-01..04)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

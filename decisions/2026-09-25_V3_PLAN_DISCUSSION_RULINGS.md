@@ -2406,3 +2406,7 @@ Builds on UX-NOTES-01..09.
    (names already built); sizes a calculation passes are highlighted; recent sizes at the top.
 2. **UX-STEEL-02:** Tim: "From location". External or exposed members get the galvanised note automatically (office rule
    in Settings); internal members follow the general note.
+3. **UX-STEEL-03, timber picking (27 Sep 23:53):** Tim: "Same picker, grade + size". The same searchable picker for timber: size and
+   grade together (e.g. 240x45 MGP10), multiples ("2 No"), passing sizes highlighted from span tables or calc.
+4. **UX-STEEL-04, timber alternatives (27 Sep 23:53):** Tim: "Standard note only". The office substitution note stays on the member
+   schedule sheet; no per-member alternatives.
