@@ -127,6 +127,8 @@ Builders: the release chat writes a card per item before code.
     the object; natural mark order (P1, P2 ... P10). (UX-SCHED-04..06)
 38. **Pit numbering:** P1 at the outlet, rising uphill; main line first, then branches from nearest the outlet;
     later pits take the next free number with a previewed renumber offered before issue. (UX-CPLAN-18..20)
+    C02: orifice pit detail live from the design; one tank detail per tank type; reuse and detention zones
+    dimensioned on the tank section, matching the OSD block. (UX-CPLAN-28..30)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

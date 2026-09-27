@@ -2195,3 +2195,12 @@ Builds on UX-NOTES-01..06.
    panel shows required vs provided per direction, green when enough; values from the computations (UX-SCALC).
 5. **UX-FRM-15, tie-downs (27 Sep 17:21):** Tim: "Symbol + schedule". Tie-downs placed as symbols with a type tag; a tie-down
    schedule or legend fills in automatically.
+
+## Tank and detention details on C02 — 27 Sep 17:24 2026
+
+1. **UX-CPLAN-28, orifice pit detail:** Tim: "Live from the design". Orifice diameter, TWL, invert levels, pit size and
+   outlet pipe fill from the design and update with it (UX-DET-08); missing values show Unknown.
+2. **UX-CPLAN-29, tank detail:** Tim: "One per tank type". Tanks of the same make and size share one detail titled e.g.
+   "WATER TANK WT1 & WT2 DETAIL"; different tanks get their own.
+3. **UX-CPLAN-30, detention split:** Tim: "Dimensioned on the detail". The tank section shows reuse and detention zones
+   with heights and volumes, matching the OSD criteria block (UX-CPLAN-07).
