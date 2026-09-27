@@ -2240,3 +2240,11 @@ Builds on the earlier UX-SURV rulings.
    reruns checks and lists anything that now fails, with fix suggestions.
 6. **UX-RL-06, suspect survey levels (27 Sep 18:40):** Tim: "Flag, don't use". A spot level far off its neighbours is flagged in
    checks and skipped for interpolation until the drafter confirms it.
+
+## Long sections — 27 Sep 18:51 2026
+
+Builds on the CDPROFILE decisions (UX-PROFILE) and UX-CPLAN-34.
+1. **UX-LSEC-01:** Tim: "On request, same layout". Pick a run and CE draws its long section in the outfall section's
+   office layout; not automatic for on-site runs.
+2. **UX-LSEC-02:** Tim: "Shown with clearance". Survey services crossing the run are marked on the section with their
+   clearance, red if under the Settings minimum (with UX-CPLAN-11).
