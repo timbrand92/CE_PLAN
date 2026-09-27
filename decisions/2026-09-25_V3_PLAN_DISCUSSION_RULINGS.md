@@ -2118,3 +2118,12 @@ Evidence: STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md items 8-13 (a second job's
    description in one cell (e.g. "140 x 45 MGP10 TRIMMER BEAM").
 3. **UX-SCHED-04b, long member schedules:** Tim: "Side-by-side blocks first". The member schedule fills blocks across
    the sheet and only overflows to the next sheet when the sheet is full. Refines UX-SCHED-04 for this schedule.
+4. **UX-SSCHED-06, the existing member schedule block (27 Sep 11:01):** Tim: "my framing member schedule block has version
+   with multiple columns review currnet code". Reviewed read-only (practice doc items 14-18): XCLMTXT already inserts
+   the office MEMBER SCHEDULE dynamic block with 1/2/3 COLUMNS visibility states, about 31 rows a column, and refuses a
+   floor needing more than 3 columns. **Keep the office block** as the member schedule; CE builds on it.
+5. **UX-SSCHED-07, more than 3 columns (27 Sep 11:01):** Tim: "Second block beside it". Instead of refusing, CE places a second
+   MEMBER SCHEDULE block (continued) beside the first if it fits on the sheet, otherwise on the next sheet; headers
+   repeat; one Undo.
+6. **UX-SSCHED-08, single-column title (27 Sep 11:01):** Tim typed: "the full title doesnt fit so for single column keep plain
+   title". A one-column block keeps the plain "MEMBER SCHEDULE" title (as built); 2-3 columns show the floor title.

@@ -88,7 +88,8 @@ Builders: the release chat writes a card per item before code.
     Schedules copy the office layout: footing and pier schedules sideways (one column per mark, f'c band), marks
     prefixed by type and numbered per prefix, live wall schedule, standard lintel table, beam schedule table on
     the framing sheet; framing member schedule per floor, MARK | SIZE blocks side by side with group subheadings,
-    overflowing to a next sheet only when full. (UX-SSCHED-01..05, UX-SCHED-04b)
+    built on the office MEMBER SCHEDULE block (1/2/3 columns, plain title at one column), with a second block beside it
+    (or next sheet) instead of refusing past 3 columns. (UX-SSCHED-01..08, UX-SCHED-04b)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)
