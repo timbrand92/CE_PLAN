@@ -2170,3 +2170,14 @@ Builds on UX-NOTES-01..06.
    = under** this level ("(O)" over, plain = at this level, UX-NOTES-09), and chose **"Auto from level above, office
    style"**: CE copies columns and walls from the level above onto the plan as red (O) items, and items below as (U),
    in the office look, following changes on the other level.
+
+## Plan symbols: piers, steps, section cuts — 27 Sep 17:15 2026
+
+1. **UX-SYM-01, bored piers:** Tim: "CE pier object + auto tags". Piers placed singly or as a row at a set spacing;
+   tag and centres dimension added automatically; bored schedule stays live.
+2. **UX-SYM-02, steps:** Tim typed: "all of option 1 plus a magenta likne on layer slab step showing location of step".
+   Where two slab or footing areas have different levels CE offers the STEP symbol and level tags (SSL/FFL) at the
+   join, placed clear, **plus a magenta line on the SLAB STEP layer along the step** (layer name and colour Settings
+   values, seeded as Tim said).
+3. **UX-SYM-03, section cuts:** Tim: "Offer the detail". Placing a section mark offers to generate the linked,
+   numbered section on the named sheet (UX-SEC-01/02).

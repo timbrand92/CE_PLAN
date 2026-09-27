@@ -96,6 +96,8 @@ Builders: the release chat writes a card per item before code.
     Plan notes: learned note picker with leaders; office boxed notes per sheet type; "(O)" = over the current level,
     "Ex." = existing, "(U)" = under. Each plan is given its level once; over/under columns and walls come across
     automatically from the levels above/below in the office red style. (UX-NOTES-07..09, UX-LEVEL-01, 02)
+    Plan symbols: CE pier object with automatic tags and centres; step symbol, level tags and a magenta SLAB STEP
+    line offered at level changes; a section mark offers its linked detail. (UX-SYM-01..03)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)
