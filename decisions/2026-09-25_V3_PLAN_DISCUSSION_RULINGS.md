@@ -2339,3 +2339,12 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    shell structure when the office does it (e.g. the pool/spa drawing S09 seen on a past job).
 2. **UX-POOL-02:** Tim: "Backwash to sewer note only". A standard note that pool backwash goes to sewer, not
    stormwater; the pool area is left out of the stormwater catchment.
+
+## Basements — 27 Sep 19:39 2026
+
+1. **UX-BSMT-01, basement walls:** Tim typed: "either pier, shotcrete and capping beam or reinforced block/conc/afs/dincel
+   wall with a site cut batter". Two wall systems, chosen per job: (a) bored piers with shotcrete infill and a capping
+   beam (laid out like retaining walls, UX-RW); or (b) a reinforced wall (block, concrete, AFS or Dincel) built against
+   a site-cut batter. CE lays out the chosen system around the basement perimeter.
+2. **UX-BSMT-02, basement drainage:** Tim: "Pump pit object + charged main". A pump pit with storage volume and pump duty
+   note, a charged main to the nearest pit; checked and listed in the Pit Schedule.
