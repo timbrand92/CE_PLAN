@@ -2094,3 +2094,13 @@ Evidence: 04_REFERENCE/structural/STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md (o
    placed as a standard from Settings.
 4. **UX-SSCHED-04, beams:** Tim: "Beam schedule table". Beam sizes live in a beam schedule table on the framing sheet;
    its layout will be read from more jobs and confirmed with Tim (not yet seen in the sample).
+
+## Manager day to day — 27 Sep 10:12 2026
+
+Builds on UX-MGR-01..10.
+1. **UX-MGR-11, admin home:** Tim: "Office health at a glance". Who is on which CE version, reports waiting, update
+   ready or not; one action each.
+2. **UX-MGR-12, colleague view:** Tim: "Simple: version + Report + Roll back". Colleagues see their version, Report a
+   problem and Go back to previous version (UX-MGR-05); no admin controls.
+3. **UX-MGR-13, report view:** Tim: "Plain summary + one-click hand-off". Who, when, command, the plain line, the log,
+   and "Send to Claude chat" to raise a bug entry; drawing only if the sender ticked it.

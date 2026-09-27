@@ -287,6 +287,9 @@ Builders: the release chat writes a card per item before code.
 
 ---
 
+**Manager day to day:** admin home shows office health (versions, reports, update state); colleagues see version,
+Report a problem and Roll back only; reports open as a plain summary with "Send to Claude chat". (UX-MGR-11..13)
+
 ## 9. Ask CE (AI assistant)
 
 1. July card AI-01 stands (permissions, preview then one U, no raw commands). New: "Draw these" from QA-against-markup
