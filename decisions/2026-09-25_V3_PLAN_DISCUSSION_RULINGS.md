@@ -2276,3 +2276,9 @@ Builds on UX-SRC-01..05 and UX-L3-07..10.
    pits; accept or move; arrows pointing away from a pit are flagged.
 3. **UX-SURF-03, grated pit catchment:** Tim: "Yes, show catchment". A light overlay shows each grated pit's paved
    catchment; an overloaded grate is warned (capacity a Settings value).
+4. **UX-SURF-04, AG and perimeter drains (27 Sep 19:09):** Tim: "CE run, own style". Drawn like a pipe run in the legend AG style
+   with an outlet to a pit; grade check and label only, no full hydraulics.
+5. **UX-SURF-05, charged and suspended pipes (27 Sep 19:09):** Tim: "Pipe properties". Ticking "charged" or "suspended under slab"
+   on a pipe switches its legend style and label; charged adds the C02 detail (UX-CPLAN-17).
+6. **UX-SURF-06, sewer (27 Sep 19:09):** Tim: "Not CE's job". New house sewer is the plumber's; CE shows existing sewer from survey
+   only (UX-CPLAN-11).
