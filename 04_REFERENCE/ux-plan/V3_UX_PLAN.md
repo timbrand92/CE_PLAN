@@ -159,6 +159,8 @@ Builders: the release chat writes a card per item before code.
     Timber subfloors: CE proposes bearers and stumps from span tables or the engineer places them, either way
     tagged; stumps and piers carry footing marks shared by size. Roofs: trusses by others shown as direction and tag,
     rafters as span arrows; roof point loads carried down to the member below and its calc. (UX-SUB-01..04)
+    Load paths: unsupported post or beam ends flagged with a red marker; a post landing on slab gets an offered
+    thickening or pad. (UX-LOADP-01, 02)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

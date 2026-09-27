@@ -2372,3 +2372,10 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    (UX-FRM-11). CE does not design trusses.
 4. **UX-SUB-04, point loads (27 Sep 19:54):** Tim: "Mark and carry down". A point load marked on the roof plan is carried down to
    the beam or lintel below and into its computation, shown as a small arrow symbol.
+
+## Load paths — 27 Sep 21:06 2026
+
+1. **UX-LOADP-01:** Tim: "Warn if nothing below". Checks flag a post or beam end with no support on the level below
+   (column, wall, beam or footing) with a small red marker, using the level links (UX-LEVEL-01, 02).
+2. **UX-LOADP-02:** Tim: "Offer a thickening/pad". A post from above landing on a slab gets an offered local thickening
+   or pad footing sized from the load, previewed.
