@@ -2379,3 +2379,10 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    (column, wall, beam or footing) with a small red marker, using the level links (UX-LEVEL-01, 02).
 2. **UX-LOADP-02:** Tim: "Offer a thickening/pad". A post from above landing on a slab gets an offered local thickening
    or pad footing sized from the load, previewed.
+
+## Soil report — 27 Sep 21:09 2026
+
+1. **UX-SOIL-01:** Tim: "CE reads it, you confirm". Like the arborist report (UX-SITE-01), CE finds the geotechnical
+   report in the job folder, pulls site class, bearing capacity and founding depth, and asks the user to confirm.
+2. **UX-SOIL-02:** Tim: "From the soil values". Founding notes in schedules and notes are generated from the confirmed
+   values in office wording (Settings) and update if the report changes.
