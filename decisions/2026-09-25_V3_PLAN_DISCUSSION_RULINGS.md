@@ -2088,7 +2088,7 @@ Evidence: 04_REFERENCE/structural/STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md (o
    under it; rows FOOTING TYPE, WIDTH MINIMUM, DEPTH MINIMUM, REINFORCEMENT, COMMENTS; a band grouping columns by
    concrete strength; default f'c in the title ("U.N.O."). Bored pier schedule the same.
 2. **UX-SSCHED-02, prefixes:** Tim: "Yes, per prefix". Marks carry type prefixes (PF, SF, CF, PC, BP, CB, EB, IB, RC,
-   W...; "(O)" for existing), numbering restarts per prefix, most common size within that type is 1 (UX-MARK-06);
+   W...; "(O)" = over the current level, corrected by UX-NOTES-09), numbering restarts per prefix, most common size within that type is 1 (UX-MARK-06);
    the prefix list is a Settings value.
 3. **UX-SSCHED-03, wall and lintel:** Tim ticked both: the **wall schedule is live** from the walls drawn, one row per
    wall (type, thickness, vertical/horizontal reinforcement, starter bars, fire rating); the **masonry lintel table** is
@@ -2148,3 +2148,15 @@ Evidence: STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md items 8-13 (a second job's
    walls drawn, keeping its look (refines UX-SSCHED-03's wall schedule).
 3. **UX-SSCHED-13, typical file changes:** Tim: "New work uses it, offer update". CE reads the current typical file;
    existing drawings keep their block until the drafter accepts the bell offer (UX-SET-09).
+
+## Plan notes and the (O) / Ex. tags — 27 Sep 17:07 2026
+
+Builds on UX-NOTES-01..06.
+1. **UX-NOTES-07, leader notes:** Tim: "Learned note picker". Pick an object, type a few letters; CE suggests the office's
+   usual notes for that situation (learned from past drawings), fills sizes from the object, places with a leader
+   and slides clear (PLACE-01).
+2. **UX-NOTES-08, boxed notes:** Tim: "Office set, placed by sheet". The usual boxed notes are offered per sheet type
+   (footing, framing ...) in their usual spot, wording from Settings.
+3. **UX-NOTES-09, (O) and Ex.:** Tim typed: "o suffic for items over the current level of structure and ex for
+   existing". "(O)" marks an item OVER the current level (e.g. RC1(O), W1(O)); "Ex." marks existing (Ex. FTG, Ex.
+   SEWER). **Corrects** the 27 Sep practice doc and UX-SSCHED-02, which had read "(O)" as existing.

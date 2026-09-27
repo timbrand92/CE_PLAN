@@ -14,7 +14,8 @@ and slab sheets (S02/S03, construction issue); no beam schedule found yet in the
    REINFORCEMENT (VERTICAL, HORIZONTAL) | STARTER BARS | FIRE RATING; notes box under it.
 5. **Masonry lintel schedule:** rows by SPAN range (<1200, 1200-1500 ...) with LINTEL SPECIFICATION; a standard table.
 6. **Marks carry a type prefix:** PF pad footing, SF strip, CF continuous, PC pile cap, BP bored pier, CB capping beam,
-   EB/IB/GEB/GIB edge and internal beams, GPF, W/BW walls, RC column; "(O)" on existing items (e.g. RC1(O)).
+   EB/IB/GEB/GIB edge and internal beams, GPF, W/BW walls, RC column; "(O)" = item OVER the current level (e.g. RC1(O) column over, W1(O) wall over), NOT existing; existing
+   uses "Ex." (Tim corrected 27 Sep, UX-NOTES-09).
 7. **Slab legend boxes** beside the schedule: slab type swatch, thickness, mesh, cover, f'c, membrane and sand notes.
 
 ## Framing member schedule (second job, framing details sheet, read 27 Sep)

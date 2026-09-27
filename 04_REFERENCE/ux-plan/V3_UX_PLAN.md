@@ -93,6 +93,8 @@ Builders: the release chat writes a card per item before code.
     boxes live, one per slab type drawn; schedule blocks come from the office typical file (footing version by sheet
     size and comments, Block Wall Schedule), new work follows file changes and old drawings get an offer.
     (UX-SSCHED-01..13, UX-SCHED-04b)
+    Plan notes: learned note picker with leaders; office boxed notes per sheet type; "(O)" = over the current level,
+    "Ex." = existing. (UX-NOTES-07..09)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)
