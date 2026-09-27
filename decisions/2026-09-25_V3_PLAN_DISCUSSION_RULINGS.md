@@ -2135,3 +2135,7 @@ Evidence: STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md items 8-13 (a second job's
 8. **UX-SSCHED-10, slab legend boxes (27 Sep 11:07):** Tim: "Auto from slabs drawn". One legend box per slab type actually on
    the plan (swatch matching the hatch; thickness, mesh, cover, f'c, membrane and sand text from the slab's settings),
    updated live.
+9. **UX-MARK-08, raft and footing beams (27 Sep 11:08):** asked for release chat 03 (build #285). Tim: "Footings: share by
+   size". EB, IB, BEB and other raft/footing beams follow the footing rule (same width and depth share a mark, most
+   common first), as built in #285, because they sit in the footing schedule. UX-MARK-07 (own mark each) covers
+   framing beams, lintels and rafters in the member schedule.
