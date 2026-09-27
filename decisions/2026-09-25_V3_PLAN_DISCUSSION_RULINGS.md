@@ -2191,3 +2191,7 @@ Builds on UX-NOTES-01..06.
    the plan's level go on the BEAMS layer; lower beams on the BEAMS LOWER layer; nothing else (no per-material
    linetypes chosen here). Layer names are Settings values seeded from Tim's words (block "BEAM LOWER" already exists
    in the typical file).
+4. **UX-FRM-14, bracing (27 Sep 17:21):** Tim: "Tag + running total". Each bracing wall tagged with type and length; a small
+   panel shows required vs provided per direction, green when enough; values from the computations (UX-SCALC).
+5. **UX-FRM-15, tie-downs (27 Sep 17:21):** Tim: "Symbol + schedule". Tie-downs placed as symbols with a type tag; a tie-down
+   schedule or legend fills in automatically.
