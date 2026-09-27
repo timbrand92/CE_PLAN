@@ -90,7 +90,9 @@ Builders: the release chat writes a card per item before code.
     the framing sheet; framing member schedule per floor, MARK | SIZE blocks side by side with group subheadings,
     built on the office MEMBER SCHEDULE block (1/2/3 columns, plain title at one column), with a second block beside it
     (or next sheet) instead of refusing past 3 columns; RC beam schedule from the office typical file; slab legend
-    boxes live, one per slab type drawn. (UX-SSCHED-01..10, UX-SCHED-04b)
+    boxes live, one per slab type drawn; schedule blocks come from the office typical file (footing version by sheet
+    size and comments, Block Wall Schedule), new work follows file changes and old drawings get an offer.
+    (UX-SSCHED-01..13, UX-SCHED-04b)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)

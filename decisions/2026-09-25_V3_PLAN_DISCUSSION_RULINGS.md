@@ -2139,3 +2139,12 @@ Evidence: STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md items 8-13 (a second job's
    size". EB, IB, BEB and other raft/footing beams follow the footing rule (same width and depth share a mark, most
    common first), as built in #285, because they sit in the footing schedule. UX-MARK-07 (own mark each) covers
    framing beams, lintels and rafters in the member schedule.
+
+## Office typical-file schedules — 27 Sep 11:10 2026
+
+1. **UX-SSCHED-11, which footing schedule:** Tim: "By sheet and content". The A3 Footing Schedule on A3 sheets; "Footing
+   Schedule - Added Comments" when any footing has a comment; otherwise the standard one; changeable in the preview.
+2. **UX-SSCHED-12, wall schedule:** Tim: "Use the typical-file block". CE fills the office Block Wall Schedule from the
+   walls drawn, keeping its look (refines UX-SSCHED-03's wall schedule).
+3. **UX-SSCHED-13, typical file changes:** Tim: "New work uses it, offer update". CE reads the current typical file;
+   existing drawings keep their block until the drafter accepts the bell offer (UX-SET-09).
