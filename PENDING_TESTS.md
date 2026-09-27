@@ -300,6 +300,14 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 27 Sep 2026 18:57 on Tim's PC — Civil `3.0.7+efd4a838`, Manager `1.1.7+efd4a838`, Structural `1.0.78+9edc9bc2`
+
+1. **Installed by the release chat** (Tim: "AutoCAD is closed, deploy"). AutoCAD closed checked twice (18:57:46, 18:57:56), before the swap and at the end; 2,001 files hash-checked after install, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes (Legacy/Net8/Modern), native ARX present, no stray CE_SHARED files, Manager has 0 AdminSasUrl files.
+2. **Backups:** `CE_CVL_SUITE_PRE_a7c46308_20260927-185746.backup`, `CE_SUITE_MANAGER_PRE_a7c46308_20260927-185746.backup`, `CE_STRUC_SUITE_PRE_f23e5e77_20260927-185746.backup` in `%APPDATA%\Autodesk\ApplicationPlugins`.
+3. **Undo:** close AutoCAD; delete the three new `CE_*.bundle` folders; rename each `..._PRE_*_20260927-185746.backup` back to its `.bundle` name.
+4. **Carries:** Civil train 7 (#277 #283 #286 #287 #284) + train 8 (#291 housekeeping/pit-catch, #294 CDRENUMBER + schedule, #292 Settings search/history/aliases, #293 F1/tips, #297 BUG-186/187, #296+#298 contextual-tab BUG-180). Structural train 7 (#280 command 5, #285 mark engine, #295 BUG-185 + item 268/265 test fixes). Not carried: #276 (admin), #278 (rainfall) - held for Tim; #252/#256 (column labels) - held, clashes with #269/BUG-184.
+5. **Not yet tested in AutoCAD.** Codex pass 14 planned ~04:05 Mon 28 Sep.
+
 ## LIVE since 27 Sep 2026 02:10 on Tim's PC — Civil `3.0.6+a7c46308`, Manager `1.1.6+a7c46308`, Structural `1.0.77+f23e5e77`
 
 1. **Installed by the release chat** (Tim: "keep working until monday 10am"). AutoCAD closed checked twice (02:09:41, 02:09:52), before the swap and at the end; 2,900 files hash-checked after install, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all lanes, native ARX listed.
