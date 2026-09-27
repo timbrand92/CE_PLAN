@@ -37,7 +37,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-186 *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-188 *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -53,6 +53,34 @@
 
 ---
 
+## BUG-187
+
+**Command / Area:** CD, Existing line then back to Stormwater, Civil 3.0.6. Found by Codex pass 13 (N3), 27 Sep 2026.
+
+**Symptom:** CD from DP1 to P11 (both ends Detected, route 3,116 mm, "Ready to start the pipe"); Existing > More > Drawing > Include known grade OFF, Back > Stormwater: only the end rings show - no proposed pipe and no "AT 1 IN 100" preview label. Cancelled.
+
+**Expected behaviour:** switching back to Stormwater shows the proposed pipe and its grade label in the preview, ready to start.
+
+**Reference:** report step 12 and screenshots N3-* in C:\Lisp Files\_TEST_COPIES_20260923\P13_screenshots; log 10:39:32-10:41:32. Test that catches it: a CD preview test that toggles Existing / Include known grade / Stormwater and asserts the proposed pipe and label are in the preview.
+
+**Status:** OPEN
+
+---
+
+## BUG-186
+
+**Command / Area:** Edit 2 Pipes (CDEDIT batch) "Carry downstream", Civil 3.0.6. Found by Codex pass 13 (N4), 27 Sep 2026.
+
+**Symptom:** selected P10 to P11 and P11 to P8, grade 1 in 100, Carry downstream: the preview correctly showed P8 to P9 lowered 20 mm (18.93, downstream 18.90 to 18.88), but Apply refused: "The pipe batch was refused and rolled back. Nothing was changed. Pipe P8 → P9 changed after the preview." Log 10:37:51: CDEDIT atomic pipe batch failed, InvalidOperationException. Also seen (not proven): after cancelling an earlier preview, a pipe label read 1 IN 96 instead of 1 IN 100.
+
+**Expected behaviour:** Apply writes all three pipes as previewed; ONE U puts them back.
+
+**Reference:** report step 10, screenshots N4-* in P13_screenshots. Likely the "changed after the preview" check compares the downstream pipe against a snapshot taken before the batch's own upstream edits (the batch changes P8's outlet, then sees P8 to P9 as changed). Test that catches it: a batch of two pipes plus a carried downstream pipe applies without the stale-preview refusal, and a genuine outside change still refuses.
+
+**Status:** OPEN
+
+---
+
 ## BUG-185
 
 **Command / Area:** Structural beam commands 1/2 (support to support / point), metre-unit drawings. Found by the train 6 review's scratch probe (640 planner cases), 26 Sep 2026; same result on installed 1.0.76.
@@ -63,7 +91,7 @@
 
 **Reference:** `BeamCommandSourceCompatibility.MatchesAcquiredAxis` (support face / axis reproduction tolerance at 45 degrees with a non-square column, metre drawing unit factor). Low priority: mm drawings and square columns are unaffected.
 
-**Status:** OPEN
+**Status:** IN PROGRESS (fix built 27 Sep: PR #295, 45-degree tie tolerance; Opus review MERGE; ships tonight in Structural 1.0.78; needs an AutoCAD check)
 
 ---
 
@@ -79,7 +107,7 @@
 
 **Proven 26 Sep (core console on 1.0.76 + behaviour tests):** right column +300 moved the LEFT end; left column -300 moved the RIGHT end; vertical beam, top column up moved the BOTTOM end.
 
-**Status:** IN PROGRESS (fix drafted: PR #273 claude/struc-bug184-support-ends - roles mapped to the ends they sit on for commands 1/2, as commands 4/5; old drawings with swapped records: the follow leaves the beam and prints a plain line; re-enables #270's held-back left/down support-to-point beams; awaiting Opus review, train 6 and Tim's AutoCAD check)
+**Status:** FIXED — 2026-09-27 (Codex-accepted, pass 13 on 3.0.6 / 1.0.77; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md, step R6: right-first and top-first supports - only the moved end followed, ONE U restored)
 
 ---
 
@@ -93,7 +121,7 @@
 
 **Reference:** cause proven headless: `DrawingAutoSaveService` (MOVE-only text-anchor repair) took a document lock on Idle after every MOVE; AutoCAD keeps that lock as its own Undo step. Fix drafted: PR #269 (claude/struc-p12-b5-move-one-undo -> claude/struc-d1-prep).
 
-**Status:** IN PROGRESS (fix drafted 26 Sep; awaiting Opus review, train 6 and Tim's AutoCAD check)
+**Status:** FIXED — 2026-09-27 (Codex-accepted, pass 13 on 3.0.6 / 1.0.77; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md, step R5: MOVE +/-300 and ROTATE 90, ONE U restored column, beam end and label)
 
 ---
 
@@ -107,7 +135,7 @@
 
 **Reference:** preview drew 3 items but expected 2 (`BeamSpecialTransientPreviewRenderer.cs`); axis compared against the flipped line (`BeamCommandSourceCompatibility.cs`). Fix drafted: PR #270. About 502 internal codes still show the generic line (question for Tim in release-v3 item 256).
 
-**Status:** IN PROGRESS (fix drafted 26 Sep; awaiting Opus review, train 6 and Tim's AutoCAD check)
+**Status:** FIXED — 2026-09-27 (Codex-accepted, pass 13 on 3.0.6 / 1.0.77; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md, step R4: command 4 point mode and command 1 left/down/diagonal placed, ONE U each)
 
 ---
 
@@ -121,7 +149,7 @@
 
 **Reference:** its class was never added to the assembly's `[assembly: CommandClass(...)]` list. Fixed in PR #265 (merged to claude/struc-d1-prep) with a guard test for any unlisted command class; ships in the next install.
 
-**Status:** IN PROGRESS (fix merged 26 Sep; awaiting the next install and Tim's AutoCAD check)
+**Status:** FIXED — 2026-09-27 (Codex-accepted, pass 13 on 3.0.6 / 1.0.77; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md, step R3: STRUCDEBUG ON/OFF/Status)
 
 ---
 
@@ -149,7 +177,7 @@
 
 **Reference:** the second (after-write) read was stricter than the first and only forgave CE's own errors. Fix drafted: PR #268 (both reads forgive the same things; the stale handle is named in the log). Headless replay of the pass 12 sequence: FAIL on master, PASS with the fix.
 
-**Status:** IN PROGRESS (fix drafted 26 Sep; awaiting Opus review, train 6 and Tim's AutoCAD check)
+**Status:** FIXED — 2026-09-27 (Codex-accepted, pass 13 on 3.0.6 / 1.0.77; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md, step R2: after split / Edit 2 Pipes / U, DP at a clear point placed)
 
 ---
 
@@ -163,7 +191,7 @@
 
 **Reference:** the next command was queued straight away and its cancel left an empty Undo step. Fix drafted: PR #272 (the next item's first question is asked inside the finishing command; a pick is handed over as a world point). Only Tim's AutoCAD can prove a real Esc (a script cannot press Esc). Decision for Tim: Esc at a LATER question of the next item still leaves one empty U step, like any cancelled command - accept (recommended) or move each command's whole set-up into the finishing command (bigger, next train).
 
-**Status:** IN PROGRESS (fix drafted 26 Sep; awaiting Opus review, train 6 and Tim's AutoCAD check)
+**Status:** FIXED — 2026-09-27 (Codex-accepted, pass 13 on 3.0.6 / 1.0.77; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS13_2026-09-27.md, step R1: CD, PIT and DP - Esc at the next first prompt, ONE U removed the last item)
 
 ---
 
@@ -177,7 +205,7 @@
 
 **Reference:** `Modules/Drainage/Assets/Config/command-registry.json` (CDPIPEOBJ entry); `Modules/Drainage/Services/CeCvlRibbonContributor.cs`; guard test `Modules/Drainage.Tests/Services/CeCvlRibbonContributorTests.cs::GetPanels_KeepsEveryVisibleCivilCommandReachable`.
 
-**Release chat, 26 Sep:** Tim already ruled UX-PIPE-08 (decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md, "Items queued for Tuesday, settled early"): CDPIPEOBJ is to be HIDDEN from the ribbon and Help now (still typed for testing) and retired once CD draws the one-piece pipe and Tim accepts it - so "no ribbon button" is intended. Action: mark CDPIPEOBJ hidden in the command registry so the ribbon-reachability guard stops expecting a button (queued with UX-PIPE-08). **Status:** OPEN — not fixed in this session (out of scope: adding it to the ribbon needs the mandatory command/workflow review with Tim first, per AGENTS.md). The guard test still fails on `CDPIPEOBJ` alone; every other command it checks passes.
+**Release chat, 26 Sep:** Tim already ruled UX-PIPE-08 (decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md, "Items queued for Tuesday, settled early"): CDPIPEOBJ is to be HIDDEN from the ribbon and Help now (still typed for testing) and retired once CD draws the one-piece pipe and Tim accepts it - so "no ribbon button" is intended. Action: mark CDPIPEOBJ hidden in the command registry so the ribbon-reachability guard stops expecting a button (queued with UX-PIPE-08). **Status:** IN PROGRESS (27 Sep: CDPIPEOBJ hidden from ribbon and Help, still works typed - PR #291; ships tonight in Civil 3.0.7)
 
 ---
 
