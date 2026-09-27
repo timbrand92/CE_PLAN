@@ -2319,3 +2319,11 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    typed: "post is a mix of pfc and uc togehter, then we also have when a wall ends up against something which uses a
    pfc". A corner post is a PFC and UC combined; a wall end that stops against something (another wall, building,
    structure) uses a PFC end post. Post sizes (e.g. 100UC15, 150UC23, 200x75 PFC blocks) chosen from the height band.
+7. **UX-RW-07, schedule and plan tag (27 Sep 19:33):** Tim typed: "per specs refer to typical schedule, then we also denotes the
+   wall type on plan using a rotated dimension". The retaining wall schedule follows the office typical schedule (from
+   the typical file, UX-SSCHED-13), filled per wall specification; on plan the wall type is shown with a **rotated
+   dimension** along the wall carrying the type (office practice), placed by CE when the wall is laid out.
+8. **UX-RW-08, section detail (27 Sep 19:33):** Tim: "Standard detail, sizes filled". The office retaining wall section from the
+   library with post, pier and height filled per specification (like UX-SEC-03).
+9. **UX-RW-09, which discipline (27 Sep 19:33):** Tim: "Either". A retaining wall can sit on the Civil or the Structural set,
+   whichever the job needs; the other discipline sees it read-only (UX-XDISC-02).

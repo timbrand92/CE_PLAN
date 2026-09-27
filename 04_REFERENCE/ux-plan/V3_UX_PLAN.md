@@ -147,7 +147,8 @@ Builders: the release chat writes a card per item before code.
     concrete paving; kerbs and spoon drains as legend linework. (UX-PAVE-01..03)
     Retaining walls: pick a line and CE lays out the three office blocks (sleeper wall, post, bored pier, each with
     its hatch): posts centred on piers, piers offset inward at boundaries, PFC+UC corner posts, PFC end posts where
-    a wall stops against something; heights from levels; AG drain offered. (UX-RW-01..06)
+    a wall stops against something; heights from levels; AG drain offered; schedule from the office typical schedule;
+    wall type shown on plan by a rotated dimension; standard section filled; on either set. (UX-RW-01..09)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)
