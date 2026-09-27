@@ -20,7 +20,7 @@ raingarden or GIO in the sample). Anonymised (DATA-01). Items 1, 2, 3, 4 callout
 8. **C01 notes:** blocks GENERAL, CIVIL WORKS, STORMWATER DRAINAGE, SITE PREPARATION (standard boilerplate);
    "ON SITE DETENTION CRITERIA" block (PSD, head, orifice dia, TWL, volume required per storage element, total);
    council blocks for some councils (e.g. a full City of Kingston notes block), otherwise the LPD note.
-9. **C02:** either "OUTFALL DRAIN PLAN AND DETAILS" or "STORMWATER DRAINAGE DETAIL SHEET"; recurring details (junction
+9. **C02:** either "OUTFALL DRAIN PLAN AND DETAILS" (when there is an off-property outfall drain, Tim 27 Sep) or "STORMWATER DRAINAGE DETAIL SHEET"; recurring details (junction
    pit, orifice pit, water tank, pipe bedding, services penetration, charged system, sawcut, lap splice, re-entrant
    corner); titled by description ("ORIFICE PIT P1 DETAIL"), no detail numbers seen.
 10. **Legend:** "CIVIL WORKS LEGEND" with a long fixed list (FFL, IL, CL, JP, grated pit, DP, trench drain, AG, kerb,

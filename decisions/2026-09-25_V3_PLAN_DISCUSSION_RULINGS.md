@@ -1775,7 +1775,7 @@ copies this layout exactly.
     levels are never rewritten, only flagged by checks when they disagree.
 14. **UX-CPLAN-14 (26 Sep 11:55):** Tim: "Code only". Sources are tagged DP, IO, OF with no number, as now; a Settings
     switch can add numbers (DP1, DP2) for big jobs.
-15. **UX-CPLAN-15 (26 Sep 11:55):** Tim: "By content". C02 is titled "OUTFALL DRAIN PLAN AND DETAILS" when it carries an
+15. **UX-CPLAN-15 (outfall meaning clarified 27 Sep 18:24 by UX-CPLAN-33) (26 Sep 11:55):** Tim: "By content". C02 is titled "OUTFALL DRAIN PLAN AND DETAILS" when it carries an
     outfall/LPD plan, otherwise "STORMWATER DRAINAGE DETAIL SHEET"; the drafter can overtype it.
 16. **UX-CPLAN-16 (26 Sep 11:55):** Tim: "Auto-pack, then drag". CE lays C02 details on a tidy grid in office order; the
     drafter drags to adjust and CE remembers that arrangement for next time.
@@ -2204,3 +2204,15 @@ Builds on UX-NOTES-01..06.
    "WATER TANK WT1 & WT2 DETAIL"; different tanks get their own.
 3. **UX-CPLAN-30, detention split:** Tim: "Dimensioned on the detail". The tank section shows reuse and detention zones
    with heights and volumes, matching the OSD criteria block (UX-CPLAN-07).
+4. **UX-CPLAN-31, bedding (27 Sep 18:24):** Tim: "Auto by pipe materials used". One bedding detail per pipe material on the job,
+   bedding type and cover from Settings.
+5. **UX-CPLAN-32, penetration and sawcut (27 Sep 18:24):** Tim: "When the plan needs them". A pipe through a footing or wall offers
+   the penetration detail; a pipe under existing paving offers the sawcut detail.
+6. **UX-CPLAN-33, outfall drains (27 Sep 18:24):** Tim typed: "outfall drain is when we have a section of off property to connect
+   to council area but needs tobe paid for and designed by us and our clients". An outfall drain is off-property
+   drainage to reach the council system, designed by CE, paid for by the client. Tim chose **"Separate off-site run +
+   C02 plan"**: the off-property pipes and pits are their own outfall run, checked against the council's rules; C02
+   becomes "OUTFALL DRAIN PLAN AND DETAILS" with an enlarged plan and long section; those pits are marked as council
+   assets. And **"Own schedule"**: a separate OUTFALL DRAIN pit schedule and quantity list for the client's cost and
+   council handover. Clarifies UX-CPLAN-15: the outfall C02 title is used when the job has an off-property outfall,
+   not for an ordinary LPD connection.
