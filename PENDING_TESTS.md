@@ -300,6 +300,14 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 28 Sep 2026 01:57 on Tim's PC — Civil `3.0.9+3d3b359d`, Manager `1.1.9+3d3b359d`, Structural `1.0.80+0fb866ee`
+
+1. **Installed by the release chat under Tim's standing override** (same rule as the two earlier installs tonight). AutoCAD closed checked twice (01:57:36, 01:57:46); 2,900 files hash-checked, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes, native ARX present, 0 stray CE_SHARED files.
+2. **Backups:** `CE_CVL_SUITE_PRE_82b9d315_20260928-015736.backup`, `CE_SUITE_MANAGER_PRE_82b9d315_20260928-015736.backup`, `CE_STRUC_SUITE_PRE_d7d2cb09_20260928-015736.backup` in `%APPDATA%\Autodesk\ApplicationPlugins`.
+3. **Undo:** close AutoCAD; delete the three new `CE_*.bundle` folders; rename each `..._PRE_*_20260928-015736.backup` back to its `.bundle` name.
+4. **Carries, on top of the 00:03 install:** Civil #317 (job record + CDNEWDWG) #320 (CDXREFCOMPARE/CDXREFREPAIR). Structural #316 (timber subfloor CSSUBFLOORGRID/CSTAGBEARERS) #318 (basements CSBSMTWALL/CSPUMPPIT/CSPUMPPITSCHEDULE). NOT carried: #319 (New Sheet layout - held, placeholder template paths, needs Tim's real template + an AutoCAD check first).
+5. **Not yet tested in AutoCAD by Codex.** Three installs tonight (18:57, 00:03, 01:57), none Codex-tested yet - Codex's daily share won't free up until roughly Tim's own AutoCAD hours start (~9:05am), so the next pass needs Tim to pick a window (before 8:30, or his 2-3pm gap, or after 5:30pm) rather than fitting overnight.
+
 ## LIVE since 28 Sep 2026 00:03 on Tim's PC — Civil `3.0.8+82b9d315`, Manager `1.1.8+82b9d315`, Structural `1.0.79+d7d2cb09`
 
 1. **Installed by the release chat under Tim's standing override** ("from now until tuesday we build, test and deploy whenever we need"; Tim, 27 Sep night: "keep going...knocking things off the plan"). AutoCAD closed checked twice (00:02:45, 00:02:55); 2,900 files hash-checked after install, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes, native ARX present, 0 stray CE_SHARED files, 0 AdminSasUrl files.
