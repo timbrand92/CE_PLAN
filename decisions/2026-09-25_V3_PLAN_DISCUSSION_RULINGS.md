@@ -2367,3 +2367,8 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    CE tags and schedules them.
 2. **UX-SUB-02:** Tim: "Symbol + footing mark". Each stump or pier is a symbol with its footing mark, sharing marks by
    size (UX-MARK-06) in the footing schedule.
+3. **UX-SUB-03, roof framing (27 Sep 19:54):** Tim: "Trusses by others, CE shows layout". Truss roofs: truss direction arrow and tag
+   (RT, per manufacturer), girder trusses and point loads shown; rafter roofs: span arrow and tag like joists
+   (UX-FRM-11). CE does not design trusses.
+4. **UX-SUB-04, point loads (27 Sep 19:54):** Tim: "Mark and carry down". A point load marked on the roof plan is carried down to
+   the beam or lintel below and into its computation, shown as a small arrow symbol.

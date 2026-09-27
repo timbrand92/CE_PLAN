@@ -157,7 +157,8 @@ Builders: the release chat writes a card per item before code.
     placed by the engineer (never proposed); reo bar tool writes office bar notes with live lengths; re-entrant corner
     bars stay in the detail, not on plan; mesh text follows the slab type. (UX-BSMT-01..06)
     Timber subfloors: CE proposes bearers and stumps from span tables or the engineer places them, either way
-    tagged; stumps and piers carry footing marks shared by size. (UX-SUB-01, 02)
+    tagged; stumps and piers carry footing marks shared by size. Roofs: trusses by others shown as direction and tag,
+    rafters as span arrows; roof point loads carried down to the member below and its calc. (UX-SUB-01..04)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)
