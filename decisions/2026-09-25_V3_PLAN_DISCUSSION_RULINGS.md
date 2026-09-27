@@ -2294,3 +2294,23 @@ Builds on UX-SRC-01..05 and UX-L3-07..10.
    office pavement detail with thickness and mesh from Settings.
 3. **UX-PAVE-03, kerbs and spoon drains:** Tim: "Linework in legend style". Drawn by picking points in the legend
    linetype with an optional label; spoon drains can outlet to a pit.
+
+## Retaining walls — 27 Sep 19:28 2026
+
+Tim: *"retaining walls are soemthing i have wanted to automate for ages, theres three blocks that work together and
+within we need tro draw them in different ways for different situations"*. No retaining wall code exists in the
+plugin today; the typical-file snapshot (26 Mar) holds SLEEPER RETAINING WALL, SLEEPER RETAINING WALL HATCH, SRW post
+blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin Wall".
+1. **UX-RW-01, the three blocks:** Tim typed: "sleeper wall with hatch in it, post with hatch in it and bored pier block
+   with the hatch". A retaining wall is built from three office blocks that work together: the sleeper wall (with its
+   hatch), the post (with its hatch) and the bored pier (with its hatch).
+2. **UX-RW-02, situations that change the drawing:** Tim ticked posts at spacing along a line, corners and returns, near
+   a boundary or footing, and typed "where the wall and post is placed in relation to the pier". Not ticked: stepped
+   height changes along the slope (heights still come from levels, UX-RW-04).
+3. **UX-RW-03, starting a wall:** Tim: "Pick a line, CE lays it out". Pick or draw the wall line and choose the type; CE
+   places sleeper wall, posts and piers in the office blocks, sized from the height; preview, Apply, one Undo.
+4. **UX-RW-04, heights:** Tim: "From levels both sides". Retained height along the wall comes from survey and design
+   levels, split into height bands.
+5. **UX-RW-05, drainage:** Tim: "Offered with the wall". Placing a wall offers an AG drain behind it connected to the
+   nearest pit (UX-SURF-04).
+Open: how the wall and post sit relative to the pier in each situation (asked next).
