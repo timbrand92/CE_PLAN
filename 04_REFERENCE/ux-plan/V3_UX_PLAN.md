@@ -94,7 +94,8 @@ Builders: the release chat writes a card per item before code.
     size and comments, Block Wall Schedule), new work follows file changes and old drawings get an offer.
     (UX-SSCHED-01..13, UX-SCHED-04b)
     Plan notes: learned note picker with leaders; office boxed notes per sheet type; "(O)" = over the current level,
-    "Ex." = existing. (UX-NOTES-07..09)
+    "Ex." = existing, "(U)" = under. Each plan is given its level once; over/under columns and walls come across
+    automatically from the levels above/below in the office red style. (UX-NOTES-07..09, UX-LEVEL-01, 02)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)

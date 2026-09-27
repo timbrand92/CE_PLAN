@@ -46,3 +46,8 @@ Plugin master, Modules/Structural/Services/ExcelMTextService.cs (XCLMTXT path) a
 17. If the block file cannot be loaded, XCLMTXT falls back to text-only placement.
 18. MemberScheduleService only stores the rows (mark, size, type, note) in the drawing so other commands can look a
     size up by mark; it does not draw anything.
+
+## Over and under items on plans (read 27 Sep, confirmed UX-LEVEL-02)
+
+19. "(O)" = over this level, "(U)" = under, plain = at this level. Over columns: small red square, red text "C1(O)",
+    "GC1(O)" set along the member; walls "BW1(U)", "BW2(O)" beside the wall hatch.

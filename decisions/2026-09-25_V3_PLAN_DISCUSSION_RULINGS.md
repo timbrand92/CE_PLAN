@@ -2160,3 +2160,13 @@ Builds on UX-NOTES-01..06.
 3. **UX-NOTES-09, (O) and Ex.:** Tim typed: "o suffic for items over the current level of structure and ex for
    existing". "(O)" marks an item OVER the current level (e.g. RC1(O), W1(O)); "Ex." marks existing (Ex. FTG, Ex.
    SEWER). **Corrects** the 27 Sep practice doc and UX-SSCHED-02, which had read "(O)" as existing.
+
+## Levels, over and under items — 27 Sep 17:12 2026
+
+1. **UX-LEVEL-01, which level a plan is:** Tim: "Set once per plan". Each plan area or drawing is given its level
+   (Ground, First, Roof ...) when first used; shown on the CE panel; drives titles and schedules.
+2. **UX-LEVEL-02, over/under items:** Tim first said "review current drawings". Read (anonymised): over columns drawn as
+   a small red square with red "C1(O)" / "GC1(O)" text; walls also tagged "(U)" (BW1(U)). Tim then confirmed **"(U)"
+   = under** this level ("(O)" over, plain = at this level, UX-NOTES-09), and chose **"Auto from level above, office
+   style"**: CE copies columns and walls from the level above onto the plan as red (O) items, and items below as (U),
+   in the office look, following changes on the other level.
