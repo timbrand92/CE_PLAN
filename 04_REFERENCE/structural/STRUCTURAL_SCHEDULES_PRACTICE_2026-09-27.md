@@ -27,7 +27,7 @@ and slab sheets (S02/S03, construction issue); no beam schedule found yet in the
     R rafters, TR trimmer, WB wind beam, WP wind post, BL block lintel, GL garage lintel, L lintel, FB floor beam,
     B beam, OR outrigger, LRB lower roof beam, NP nailing plate.
 11. **Same size, different marks:** many floor beams share one section (e.g. several FB = 250 x 90 PFC) yet each has its
-    own mark, because span/cantilever/connection notes differ. **This conflicts with UX-MARK-06 for beams; asked.**
+    own mark, because span/cantilever/connection notes differ. Tim 27 Sep: own mark per beam (UX-MARK-07). Items 8-13 CONFIRMED (UX-SSCHED-05).
 12. **Revision clouds** (red dashed) around changed rows; masonry lintel schedule and timber/steel notes beside it.
 13. **RC beam schedule** on the footing sheet: sideways like footings (BB1, BB2 band beams; width, depth,
     reinforcement), titled "R.C BEAM SCHEDULE (F'c = 32MPa)".

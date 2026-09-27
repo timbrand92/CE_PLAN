@@ -83,12 +83,12 @@ Builders: the release chat writes a card per item before code.
 26. **First day:** one welcome card on the very first start; a one-line tip the first time each command is used;
     an anonymised practice job in Help, never counted. (UX-FIRST-01..03)
 27. **Beam marks:** gaps stay after deletes with a previewed renumber offered before issue; identical beams share a
-    mark with a quantity; tags placed at the learned office spot. Marks are types: every member of the same size and
-    type shares a mark, most common size is 1; columns C1 and footings F1 tagged by mark only, details in the
-    schedule. (UX-MARK-01..06)
+    tags placed at the learned office spot. Beams, lintels and rafters get their own mark each; columns and footings
+    share marks by size, most common size is 1; column and footing tags show the mark only. (UX-MARK-01, 03..07)
     Schedules copy the office layout: footing and pier schedules sideways (one column per mark, f'c band), marks
     prefixed by type and numbered per prefix, live wall schedule, standard lintel table, beam schedule table on
-    the framing sheet. (UX-SSCHED-01..04)
+    the framing sheet; framing member schedule per floor, MARK | SIZE blocks side by side with group subheadings,
+    overflowing to a next sheet only when full. (UX-SSCHED-01..05, UX-SCHED-04b)
 28. **Other people's drawings:** foreign pits/pipes get a quiet Review offer in the bell; older CE drawings upgrade
     on open with one line and one Undo (colleague hold stands); recipients without CE see clean plain linework,
     no proxy box. (UX-DWG-01..03)

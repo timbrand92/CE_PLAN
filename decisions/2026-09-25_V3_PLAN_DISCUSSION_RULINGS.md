@@ -1927,7 +1927,7 @@ Builds on UX-LEARN-01..04 (not replacing them).
 
 1. **UX-MARK-01:** Tim: "Gaps stay, offer tidy". Marks never change on their own after a delete; before issue, Checks
    offers "Renumber marks in order", previewed, one Undo.
-2. **UX-MARK-02 (refined by UX-MARK-06):** Tim: "Share a mark". Identical beams share a mark, the schedule shows the quantity; editing one asks
+2. **UX-MARK-02 (SUPERSEDED 27 Sep 10:58 by UX-MARK-07: beams get their own mark each):** Tim: "Share a mark". Identical beams share a mark, the schedule shows the quantity; editing one asks
    "all of them, or split this one off?".
 3. **UX-MARK-03:** Tim: "Learned office spot". Tags go where the office usually puts them (learned from past drawings,
    the smart tagger idea), sliding clear of other text (PLACE-01).
@@ -2076,7 +2076,8 @@ UX-ARCH-01 restates and details UX-XREF-01 (consistent, asked again by mistake).
 3. **UX-MARK-06, what a mark means:** Tim typed: "they are labelled based on size not placement". A mark is a type:
    every column (or footing) of the same size shares one mark; placement never sets the number. Asked next, Tim chose
    **"Most common first"** (over smallest first): the size used most often is C1 (F1), the next most common C2, and so
-   on. For beams Tim chose **"Same member = same mark"**: a beam shares a mark when section and member type match,
+   on. For beams Tim chose **"Same member = same mark"** *(beam part SUPERSEDED 27 Sep 10:58 by UX-MARK-07 after the member
+   schedule evidence)*: a beam shares a mark when section and member type match,
    with quantity in the schedule; this refines UX-MARK-02 (which required identical span and load too). UX-MARK-01's
    no-silent-renumber and offer-before-issue apply when counts change the order.
 
@@ -2104,3 +2105,16 @@ Builds on UX-MGR-01..10.
    problem and Go back to previous version (UX-MGR-05); no admin controls.
 3. **UX-MGR-13, report view:** Tim: "Plain summary + one-click hand-off". Who, when, command, the plain line, the log,
    and "Send to Claude chat" to raise a bug entry; drawing only if the sender ticked it.
+
+## Framing member schedule and beam marks — 27 Sep 10:58 2026
+
+Evidence: STRUCTURAL_SCHEDULES_PRACTICE_2026-09-27.md items 8-13 (a second job's framing details sheet).
+1. **UX-MARK-07, beam marks:** shown that office drawings give same-size floor beams their own marks (several 250 x 90
+   PFC as FB1, FB2, FB6...), Tim chose **"Own mark per beam"**. Every beam, lintel or rafter line gets its own mark even
+   when sizes match. Columns and footings still share marks by size, most common first (UX-MARK-06 stands for them).
+   Supersedes UX-MARK-02 and the beam part of UX-MARK-06. UX-MARK-01 (no silent renumber, offer before issue) stands.
+2. **UX-SSCHED-05, member schedule layout:** Tim: "Copy exactly". One schedule per floor ("FIRST FLOOR MEMBER
+   SCHEDULE"), MARK | SIZE in blocks side by side, group subheadings (Floor Beams, Lintels, Roof...), size and
+   description in one cell (e.g. "140 x 45 MGP10 TRIMMER BEAM").
+3. **UX-SCHED-04b, long member schedules:** Tim: "Side-by-side blocks first". The member schedule fills blocks across
+   the sheet and only overflows to the next sheet when the sheet is full. Refines UX-SCHED-04 for this schedule.
