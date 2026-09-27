@@ -31,3 +31,17 @@ and slab sheets (S02/S03, construction issue); no beam schedule found yet in the
 12. **Revision clouds** (red dashed) around changed rows; masonry lintel schedule and timber/steel notes beside it.
 13. **RC beam schedule** on the footing sheet: sideways like footings (BB1, BB2 band beams; width, depth,
     reinforcement), titled "R.C BEAM SCHEDULE (F'c = 32MPa)".
+
+## What the current code already does (read-only review, 27 Sep, after Tim: "my framing member schedule block has version with multiple columns review currnet code")
+
+Plugin master, Modules/Structural/Services/ExcelMTextService.cs (XCLMTXT path) and MemberScheduleService.cs:
+14. The office **MEMBER SCHEDULE.dwg** dynamic block is inserted per floor section, with a visibility state
+    **"1 COLUMN" / "2 COLUMNS" / "3 COLUMNS"** picked from the row count, and a stretch distance (Distance2/3/4) set
+    to the column depth. Row spacing 750, column depth capped at 23,250 (about 31 rows per column).
+15. **Maximum is 3 columns.** A floor needing more is refused before insert ("Max supported is 3. Increase
+    Rows/Column or split the schedule before inserting"); nothing continues to another block or sheet.
+16. Title attributes MEMBER_SCHEDULE1..3: with one column the title reads plain "MEMBER SCHEDULE"; with 2-3 columns
+    each block title carries the floor title (e.g. "FIRST FLOOR MEMBER SCHEDULE").
+17. If the block file cannot be loaded, XCLMTXT falls back to text-only placement.
+18. MemberScheduleService only stores the rows (mark, size, type, note) in the drawing so other commands can look a
+    size up by mark; it does not draw anything.
