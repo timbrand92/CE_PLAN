@@ -2248,3 +2248,11 @@ Builds on the CDPROFILE decisions (UX-PROFILE) and UX-CPLAN-34.
    office layout; not automatic for on-site runs.
 2. **UX-LSEC-02:** Tim: "Shown with clearance". Survey services crossing the run are marked on the section with their
    clearance, red if under the Settings minimum (with UX-CPLAN-11).
+
+## Lid classes — 27 Sep 18:53 2026
+
+1. **UX-LID-01:** Tim: "From the surface it sits in". CE suggests the lid class from the area the pit sits in (e.g.
+   garden, footpath, driveway, road) using paving areas or a quick pick, shown in the Pit window; the area-to-class
+   table is a Settings value (Q12 driveway class stays a Settings default).
+2. **UX-LID-02:** Tim: "Warn + one-click fix". A pit moved into a heavier-traffic area is flagged in Checks; one click
+   upgrades the lid and the schedule remark updates.
