@@ -150,6 +150,8 @@ Builders: the release chat writes a card per item before code.
     a wall stops against something; heights from levels; AG drain offered; schedule from the office typical schedule;
     wall type shown on plan by a rotated dimension; standard section filled; on either set; masonry fence walls and
     fence post footings designed too; "fence on top" adds surcharge to a retaining wall. (UX-RW-01..11)
+    Pools: zone of influence on nearby footings flagged and the pool shell designed when the office does it; civil
+    adds a backwash-to-sewer note and leaves the pool out of the catchment. (UX-POOL-01, 02)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)

@@ -2331,3 +2331,11 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
     like other walls, and timber/Colorbond fences get post footings designed too.
 11. **UX-RW-11, fence on a retaining wall (27 Sep 19:35):** Tim: "Tick 'fence on top'". A retaining wall property that adds the
     fence load to the design, picks the post size accordingly and adds a note on plan.
+
+## Pools — 27 Sep 19:37 2026
+
+1. **UX-POOL-01:** Tim typed: "both" (to "outline + zone of influence" and "design the pool shell"). CE shows the pool
+   with its zone of influence on nearby footings flagged (deepen footings, as UX-XDISC-01) **and** designs the pool
+   shell structure when the office does it (e.g. the pool/spa drawing S09 seen on a past job).
+2. **UX-POOL-02:** Tim: "Backwash to sewer note only". A standard note that pool backwash goes to sewer, not
+   stormwater; the pool area is left out of the stormwater catchment.
