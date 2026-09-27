@@ -2216,3 +2216,10 @@ Builds on UX-NOTES-01..06.
    assets. And **"Own schedule"**: a separate OUTFALL DRAIN pit schedule and quantity list for the client's cost and
    council handover. Clarifies UX-CPLAN-15: the outfall C02 title is used when the job has an off-property outfall,
    not for an ordinary LPD connection.
+7. **UX-CPLAN-34, outfall drains from past jobs (27 Sep 18:28):** Tim: "find some outfall drains". Read three past jobs (Civil
+   practice doc items 12-15): outfall pits sat in the main Pit Schedule (EX. PIT / P0 / CP1 rows first). Shown that,
+   Tim kept **"Separate schedule"** (UX-CPLAN-33 stands: a separate OUTFALL DRAIN schedule on the drawing, a change from
+   past practice). Numbering: Tim chose **"CP1, CP2"**: outfall pits are CP1, CP2 ... ("CP" council pits), not P0.
+   Long section: **"Generate, office layout"**: CE builds the "OUTFALL DRAIN LONGITUDINAL SECTION" live from the outfall
+   run and surface levels (H 1:100, V 1:50; rows DATUM LEVEL R.L., PIPE SIZE, PIPE GRADE, INVERT DEPTH, INVERT LEVEL,
+   SURFACE LEVEL, CHAINAGE; pits as vertical-labelled bars; crossovers and services noted).

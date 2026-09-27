@@ -130,7 +130,8 @@ Builders: the release chat writes a card per item before code.
     C02: orifice pit detail live from the design; one tank detail per tank type; reuse and detention zones
     dimensioned on the tank section, matching the OSD block; bedding detail per pipe material; penetration and sawcut
     details offered when needed. Outfall drains (off-property, client-paid) are their own run checked to council rules,
-    with the OUTFALL DRAIN PLAN C02 and their own schedule. (UX-CPLAN-28..33)
+    with the OUTFALL DRAIN PLAN C02 and their own schedule; outfall pits CP1, CP2; the outfall long section is generated
+    live in the office layout. (UX-CPLAN-28..34)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)
