@@ -2386,3 +2386,7 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    report in the job folder, pulls site class, bearing capacity and founding depth, and asks the user to confirm.
 2. **UX-SOIL-02:** Tim: "From the soil values". Founding notes in schedules and notes are generated from the confirmed
    values in office wording (Settings) and update if the report changes.
+3. **UX-SOIL-03, wind class (27 Sep 21:10):** Tim: "Job record, suggested". Set once in the job record; CE suggests it from region
+   and terrain questions (Settings table), the user confirms; it feeds bracing and tie-downs.
+4. **UX-SOIL-04, where shown (27 Sep 21:10):** Tim: "General notes". Wind class and site class appear in the general notes'
+   design-criteria line, filled from the job.
