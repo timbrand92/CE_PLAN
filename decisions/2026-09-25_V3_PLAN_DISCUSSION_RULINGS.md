@@ -2399,3 +2399,10 @@ Builds on UX-NOTES-01..09.
 2. **UX-NOTES-11:** Tim chose **"Fixed text"** over filling values from the job. General notes stay office standard text
    (values such as f'c, cover, bolt and timber grades are as written in the library); job-specific values go on the
    schedules, legends and design-criteria line instead (UX-SSCHED, UX-SOIL-04).
+
+## Steel members — 27 Sep 22:20 2026
+
+1. **UX-STEEL-01:** Tim: "Catalogue picker with search". Type e.g. "250 PFC" or "150UC" and pick from the AS/NZS catalogue
+   (names already built); sizes a calculation passes are highlighted; recent sizes at the top.
+2. **UX-STEEL-02:** Tim: "From location". External or exposed members get the galvanised note automatically (office rule
+   in Settings); internal members follow the general note.
