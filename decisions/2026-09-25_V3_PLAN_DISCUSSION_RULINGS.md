@@ -2359,3 +2359,11 @@ blocks (100UC15 / 150UC23 / 200x75 SRW), RETAINING WALL and "Bored Pier Retainin
    UX-BSMT-04, using office blocks such as REINFORCEMENT ADDITIONAL) where needed.
 6. **UX-BSMT-06, mesh callouts (27 Sep 19:46):** Tim: "From the slab type". Each slab type carries its mesh in Settings; legends
    and notes fill from it and update when the slab type changes.
+
+## Timber subfloors — 27 Sep 19:49 2026
+
+1. **UX-SUB-01:** Tim typed: "both". Two ways, the user's choice: CE proposes a bearer and stump/pier grid from the floor
+   outline and joist direction (span tables in Settings), as a preview to adjust; or the engineer places bearers and
+   CE tags and schedules them.
+2. **UX-SUB-02:** Tim: "Symbol + footing mark". Each stump or pier is a symbol with its footing mark, sharing marks by
+   size (UX-MARK-06) in the footing schedule.
