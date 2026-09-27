@@ -2282,3 +2282,15 @@ Builds on UX-SRC-01..05 and UX-L3-07..10.
    on a pipe switches its legend style and label; charged adds the C02 detail (UX-CPLAN-17).
 6. **UX-SURF-06, sewer (27 Sep 19:09):** Tim: "Not CE's job". New house sewer is the plumber's; CE shows existing sewer from survey
    only (UX-CPLAN-11).
+
+## Paving, pavement detail, kerbs — 27 Sep 19:11 2026
+
+1. **UX-PAVE-01, paved areas:** Tim typed: "a bit of both dpends if we design or they design but ideally we can quick
+   hatch". When CE designs the paving: a quick hatch (pick a closed area or the architect's outline, pick a pavement
+   type; CE hatches in legend style, labels it, and uses it for lid classes and catchments). When the architect
+   designs it: the paving stays in their Xref, and CE can still read the outline for lid classes and catchments.
+   Follows the job mode idea (UX-MODE): whose design it is decides.
+2. **UX-PAVE-02, pavement detail:** Tim: "Offered when paving is drawn". Drawing a concrete pavement area offers the
+   office pavement detail with thickness and mesh from Settings.
+3. **UX-PAVE-03, kerbs and spoon drains:** Tim: "Linework in legend style". Drawn by picking points in the legend
+   linetype with an optional label; spoon drains can outlet to a pit.

@@ -143,6 +143,8 @@ Builders: the release chat writes a card per item before code.
     Trench drains by two points; fall arrows suggested from levels; grated pit catchments overlaid with an overload
     warning; AG and perimeter drains as simple CE runs; charged and suspended set as pipe properties; new sewer is not
     CE's job. (UX-SURF-01..06)
+    Paving: a quick hatch when CE designs it, the architect's outline read when they do; pavement detail offered with
+    concrete paving; kerbs and spoon drains as legend linework. (UX-PAVE-01..03)
     Pit labels show number and cover level at the learned office spot; pipe labels run along the pipe at mid-length,
     leader out when too short, every pipe labelled (no TYP.); one IL text per pipe end at the pit, always shown.
     (UX-CPLAN-21..27)
