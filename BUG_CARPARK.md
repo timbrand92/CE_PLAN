@@ -81,7 +81,7 @@
 
 **Steps for Tim to confirm the fix:** open a job, change a pit's surface level in the Inspector, press Ctrl+S, close, reopen: the new level is still there.
 
-**Status:** IN PROGRESS (28 Sep ~21:30) - built, draft PR #357: CE's pending data now saves at the start of a drawing save and before close (so a CE-only change also brings up the save prompt). Route check: every data change except the Inspector's "Use plan label" (BUG-191) happens inside a command, so the loss window was narrow. Opus review running (lock context at save/close, autosave, net10 tests not yet run).
+**Status:** IN PROGRESS (28 Sep ~22:00) - PR #357 (`5c845164`) review fixes done: close now locks the drawing (Undo irrelevant at close) and marks it modified so the save prompt appears; autosave (.sv$ / unlocked) skipped; warning logged if a flush fails; net10 OutsideCommandUndoPolicy 43/43. Being combined into Civil 3.0.12 tonight; Codex pass 17 Part Q4 tests it.
 
 ---
 
