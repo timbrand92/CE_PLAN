@@ -261,7 +261,20 @@
 
 **Tim's AutoCAD steps:** look along the CE tab: every picture matches its button and sits level with its neighbours, as on CE STRUC.
 
-**Status:** OPEN — waiting for Tim's screenshot; then a window/ribbon job.
+**Status:** IN PROGRESS — 28 Sep 2026, branch `claude/bug172-civil-ribbon-icons` (base `origin/master`
+a945ab93). Measured (not guessed): the Civil and Structural tabs share one layout code path
+(`CE_SHARED`'s `RibbonBuilder`), so there is no separate Civil alignment bug — three buttons drew no
+picture at all (Ask CE / CEASK, Reverse Flow / CDREVERSEFLOW on the Pipe contextual tab, and Close on
+all three contextual tabs), which is what read as "misaligned and wrong" next to Structural's fully-
+pictured rows. Fixed in `CE_SHARED/Services/CeRibbonIconCatalog.cs` (added the missing `CEASK` and
+`CDREVERSEFLOW` catalog entries — `CDASK` was only CEASK's retiring alias, unreachable by the real
+command string) and `Modules/Drainage/Services/CeCvlRibbonContributor.cs` (removed a `ClosePanel`
+override that pointed at a file that never existed, discarding CDCLOSETAB's own real icon).
+`Modules/Structural` untouched. Six more commands (CDPERIMETER, CDTWL, CDDEST, CDPAVE, CDKERB,
+CDSPOONDRAIN) have no real artwork anywhere in the repo and still show the generic wrench — flagged for
+Tim to supply pictures, not faked. New picture-guard test
+`Modules/Drainage.Tests/Services/CivilRibbonPictureCoverageTests.cs`, confirmed red before the fix and
+green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim confirms in AutoCAD.
 
 ---
 
@@ -309,7 +322,7 @@
 
 **Tim's AutoCAD steps:** run CDDESIGN: the question's choices (click or F12) are only Yes and No. Repeat in 2024.
 
-**Status:** OPEN — Claude builder on `claude/bug-174-ce-tag-in-prompts` 24 Sep.
+**Status:** IN PROGRESS — built, MERGED to master, not yet installed/Tim-confirmed. **PR #177** (`claude/bug-174-ce-tag-in-prompts`, merge commit `61b97c96`, merged 2026-09-24) — verified again 2026-09-28 by a fresh builder dispatched to fix this bug: the fix is already on `origin/master`, no further code change needed. `CivilDesignCommand.cs` (CDDESIGN's storm-report offer, the council-from-job-folder offer, both `AskYes` call sites), `SourceDestinationCommand.cs` (CDDEST's "record destinations" ask) and `PipeCrossingSplitService.cs` (the shared `AskOnce` helper) all carry the tag-free wording — confirmed by reading the current source; every remaining "[CE]" in Drainage/Manager is inside a plain `WriteMessage` line, never inside a keyword prompt's message. The general source guard added by that PR, `KeywordPromptBracketTagGuardTests.KeywordPromptMessages_CarryNoBracketTagThatIsNotARealKeyword` (`Modules/Drainage.Tests/Commands/KeywordPromptBracketTagGuardTests.cs`), still passes on current master: re-run 2026-09-28 on net10.0-windows with real AutoCAD 2027 (native `CE_TRANSFORM_2027.arx` built first) — 1/1 passed. Drainage (net48/net8.0-windows/net10.0-windows) and Manager (net48/net8.0-windows/net10.0-windows) both build 0 errors. Never mark fixed until Tim confirms in AutoCAD (his steps below).
 
 ---
 
@@ -341,7 +354,9 @@
 
 **Tim's AutoCAD steps:** delete nothing; type the What's New command (or start AutoCAD after the next version change); check it opens large enough to read without leaning in, the headings and text are easy to read in dark and light, the top line is complete, and every item describes something you can actually find on the ribbon.
 
-**Status:** IN PROGRESS — code built on `codex/whatsnew-readable` at `4465e22d`, three Civil lanes zero errors and 40 focused checks pass. Eight real dark/light top/end pictures inspected. Awaiting a separately authorised install and Tim's AutoCAD confirmation; not fixed yet.
+**Status:** IN PROGRESS — the fix is already on `master` (not just the side branch this entry names). `codex/whatsnew-readable` @ `4465e22d` ("Fix BUG-170 What's New readability and release claims") and the later `deaac3e2` follow-up are both ancestors of `origin/master` (currently `3ce52a6b`, confirmed 28 Sep with `git merge-base --is-ancestor`). No new branch or PR was needed or opened.
+
+**Re-verified 28 Sep 2026 (separate session, checked against current code, not the stale status line):** confirmed the fix is real and unbroken on `master`. `WhatsNewDialog.xaml` is 760×640 (was ~490×530), resizable, with a fixed footer and a scrolling reading list; the code-behind (`WhatsNewDialog.xaml.cs`) renders every heading and body line from `TextPrimaryBrush`/`AccentBrush` with no `TextDecorations` anywhere — the dotted gold underline is gone. `Assets/Config/whats-new.json` (version 3.0.1) no longer makes the "one CE tab" claim or any other checked-off Round-2 claim; its 15 entries (CDEDIT, PIT, CD, CDDESIGN, CDRAINFALL, CDLPD, CDCHECK, CDIMPORTXCIVIL, CDIMPORTLANDXML, CDSURVEY, CDWT, CDDASHBOARD) were each checked by hand against `command-registry.json` — every one exists, none is `hidden`. The exact tests the carpark asked for already exist and pass: `WhatsNewCatalogueTests` (registry+ribbon existence, old-name absence, parse tolerance) and `WhatsNewWindowRenderTests` (real off-screen WPF window, dark/light × 100%/125%, header/footer/subtitle bounds, per-row clipping/trimming checks, PNG capture) — **26/26 passed** on a from-scratch `-p:SkipDevBundle=true` net10.0-windows build (native `CE_TRANSFORM_2027.arx` prerequisite rebuilt first). The eight PNGs under `docs/image/V3_WINDOWS/whatsnew-*.png` were regenerated and inspected directly (dark and light, 100% and 125%): large, high-contrast, plain gold/blue headings, full unclipped subtitle, no dotted underline. Full Civil net10 suite also run as a wider check (no source touched, so this is drift/flake evidence, not a regression check for a real change): 12,081 run, 12,057 passed, 5 failed, 19 skipped — at or inside the documented ~6-failure baseline, none of them What's New tests. Nothing further to fix in code. **Not marked FIXED — Tim has not yet seen this in AutoCAD** (this entry has never recorded an install, and none was authorised in this session).
 
 ---
 
