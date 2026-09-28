@@ -66,6 +66,19 @@
 
 **What ends a slow phase (Tim, 28 Sep, clickable answer):** "Waiting a while". It is not saving, not switching drawings and not a restart. That points to a backlog of CE work, queued while he edits and worked off while AutoCAD sits idle (hypothesis). **Not yet known:** which CE action starts a slow phase. Hypothesis only until measured.
 
+**Code audit (release chat 04, 28 Sep, read-only; each item is what the code does, the effect on AutoCAD is still a hypothesis, nothing measured yet):**
+1. After almost every CE edit command, at the next idle moment, CE throws away and rebuilds all its link memory by reading every object in model space three times (`LinkService.Reactors.cs` 674-696 and 1701-1749, `LinkService.Cache.cs` 727-749). Sometimes twice in a row. The same full rebuild runs after every U/UNDO/REDO, a native MOVE of a pipe, and moving a pit. Top suspect.
+2. At the end of any command that touched a CE object: schedule cells refresh (walks model space) and the draw order is re-applied to every entity on matched layers (`ScheduleLinkService.cs` 353-398, `LayerService.cs` 837-960).
+3. At the start of each CE edit command (PIT, CDEDIT, PITEDIT...), a full project-data sync with several whole-drawing passes, skipped only if nothing changed (`ProjectDataService.cs` 528-597).
+4. The whole project file is re-saved as JSON on each change (350 ms throttle); a save attempted at idle has no lock, fails and retries every 2 s without limit until the next command; automatic QA then runs 7 steps after 3 s of quiet (`ProjectDataService.Persistence.cs`, `CivilProjectQaAutomaticService.cs`).
+5. While a CE object is selected, the contextual ribbon tab is re-shown on every idle tick (`CeContextualTabController.cs` 117, 171-204). Stops when nothing is selected. Quick check: press Esc during a slow phase.
+6. Manager's 60 s status check can rebuild the whole CE ribbon when its message changes (BUG-092 family).
+7. Structural's autosave also watches Civil drawings and saves plus backs up the whole drawing on the main thread after 10 min 15 s of quiet.
+8. Minor: Structural's idle detector logs every second while active (background writer, cheap).
+Checked and fine: selection observer, highlights, attachment queue (holds one), Xref watcher (throttled), no doubled reactors, pipe draw overrule filtered, undo trace gated by CDDEBUG.
+
+**Next step:** add always-on timing lines to items 1-6 (milliseconds, entity count, trigger), install, reproduce with Codex, then fix the worst.
+
 **Test that catches it (to build):** a timing record per CE event handler (how many milliseconds each spends, and how many times it ran) written to one small file, plus an automated check that no handler is subscribed more than once and no per-edit list grows without being emptied.
 
 **Steps for Tim to confirm the fix:** open a real job drawing, draw and edit about 30 CE pipes and pits for 10 minutes (move pits, CDEDIT, PIT, select labels, open the Inspector), then draw a SPLINE with 20 points and pan/zoom: it must feel as quick as on a fresh start.
