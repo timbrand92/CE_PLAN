@@ -1,5 +1,32 @@
 # Area REL — Version 3 to colleagues (the staff release, Stage 6 of the master plan)
 
+## OPERATING CHARTER — read first, every release chat (Tim, 28 Sep 2026; verbatim in `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`)
+
+Every successor release chat keeps these rules. A handoff that drops them is faulty.
+
+1. **Usage first.** Before every batch, read both budgets:
+   - **Claude:** `get_usage` (weekly all-models %, reset Fri 12:00 Melbourne).
+   - **Codex:** `rate_limits.primary.used_percent` in the newest-written `~\.codex\sessions\**ollout-*.jsonl` (reset shown as `resets_at`).
+   - Pace line = % of week elapsed x 0.75 for Claude (25% kept for Tim). Ahead of pace: one Sonnet builder, no Opus. Behind pace: up to 3-4 Sonnet builders.
+   - Codex: a full AutoCAD pass costs ~7%. At least one a day; a second when the week's pace allows.
+2. **Always building.** Any area, V3 plan and V3 UX plan together (`04_REFERENCE/ux-plan/V3_UX_PLAN.md` is part of V3). Builders run while Codex tests. Order: BUG-189 speed first, then open bugs in `BUG_CARPARK.md`, then the V3/UX queue.
+3. **Tim's side messages never stop the work.** Classify, file it (bug, idea or plan item), give him a rough timeline or % to done, carry on.
+4. **Bank for Codex.** Everything built since the last pass goes into ONE consolidated Codex AutoCAD pass a day.
+5. **Installs on Tim's PC at the chat's discretion.** AutoCAD checked closed twice, no Codex run active, backup, read-back, undo named. **Colleague publishing needs Tim's word.** Merge = independent review + Codex pass.
+6. **End goal:** a colleague-ready V3, with a Codex human-use/UX pass before it is offered to anyone.
+7. **Speed and reliability are the framework** (`ENGINEERING_RULEBOOK.md`, section "Speed and reliability framework"). Every change is checked against it.
+8. **Plan hygiene.** This file, `BUG_CARPARK.md`, `PENDING_TESTS.md` and the ideas file are updated in the same step as the work. Keep entries short so the next chat reads less. Context: delegate file-heavy reading to agents; keep the main chat for coordination.
+9. **Learn.** Each batch ends by adding what went wrong or right to "Lessons" below (one line each), and the next batch reads them.
+10. **Tell Tim:** brief, visual, real-world example. Save suggestions (better tools, online resources, upgrades, features) for when he is around; list them under "For Tim when he is around" below.
+11. **TimOS:** `C:\TimOS\RULES.md` and `ROUTER.md` read every session; the overrides this charter creates are listed in the decision file.
+
+### Lessons (append one line per batch; newest last)
+1. 28 Sep: a builder's net10 Civil build needs the missing `CE_TRANSFORM_2027.arx` (no C++ toolset on this PC); a placeholder works for builds but is never shipped. Always read a DLL version back before trusting a build.
+2. 28 Sep: Manager has no file logger; timing written with `Trace` is invisible unless something listens. Check where a log line actually lands before relying on it.
+
+### For Tim when he is around
+1. (none yet)
+
 ## Item 39.1 — Civil layout scrolling audit, first batch (25 September 2026)
 
 1. **Built/tested:** `codex/v3-noscroll-1` at `3ffe39a1`, PR #208 ready for review. Off-screen 1920 × 1080 scale-1 dark/light audit: CDCALC, CDWT, Project Review / What CE Found, Pit Schedule and Help Centre have bounded list or reading scroll only; Settings, Print and Feedback fit. No outer layout scrolling or clipping found, so no window behaviour was changed. All CDCALC task-page pictures were refreshed and committed; other window pictures were already committed.

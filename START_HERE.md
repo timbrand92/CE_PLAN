@@ -1,3 +1,5 @@
+> **Release chat (28 Sep 2026 on): read the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md` first.** It is Tim's standing instruction for how the release chat runs.
+
 > **Release chat handover (24 Sep 10:30):** start at `archive/chat-records-2026-09/HANDOVER_RELEASE_CHAT_2026-09-24_1030.md`.
 
 # START HERE — read this before you do anything
