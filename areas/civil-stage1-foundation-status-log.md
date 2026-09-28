@@ -16,7 +16,7 @@ Update this table whenever a checkpoint, audit, deployment or AutoCAD result cha
 | Shared editor shell | Approved direction | Planning-only visual/decision packets prepared at `77ea1b55`; production shell remains foundation-only | Not staff accepted | Tim visual approval of CD/PIPEEDIT first |
 | PIPEEDIT | Approved | Part-built; first realistic approval mockup prepared | Incomplete | Tim visual approval, then finish Engineering/Connections/Presentation |
 | PITEDIT | Approved | Part-built | Incomplete | Finish levels/details/connections/presentation |
-| Pipe-to-pit physical fit warning | Approved warning-only behaviour | Not built | Not tested | Implement with Pipe/Pit connection evidence, then prove warnings in PIPEEDIT, PITEDIT, CDCHECK and Project Review |
+| Pipe-to-pit physical fit warning | Approved warning-only behaviour | **Built and merged** (PR #160, `0aebf87c`, 24 Sep — this row was stale) | Not yet Tim-tested in AutoCAD | The noise concern (every pit on an existing drawing showing "Fit cannot be confirmed") was fixed same day (fitwarn2): missing evidence is now one quiet summary line, not counted; real warnings unchanged |
 | CDEDIT/batch | Approved | Part-built | Incomplete | Finish routing and same-type one-Undo batch |
 | Editing/annotations | Approved/closed | Partial | Not accepted | Labels, inverts, remarks, levels and fall arrows |
 | Topology/local reassessment | Approved | Source slices exist | Runtime acceptance incomplete | Integrate and prove normal-edit reassessment |
