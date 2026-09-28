@@ -95,6 +95,8 @@
 8. Minor: Structural's idle detector logs every second while active (background writer, cheap).
 Checked and fine: selection observer, highlights, attachment queue (holds one), Xref watcher (throttled), no doubled reactors, pipe draw overrule filtered, undo trace gated by CDDEBUG.
 
+**MEASURED (28 Sep evening, installed 3.0.11, Codex passes 16/16C, timing lines in the Civil log):** the main freeze is found. One pit grip-move -> `ApplyPendingLinkUpdates` took **3,681 ms** (another 3,144 ms; typically 200-540 ms). In that single call CE re-evaluated and rewrote **49 different pipes across the whole network** (~60-75 ms each) and re-saved the whole project data about every 400 ms. Schedule refresh 50-131 ms and draw order under 6 ms were minor; the round-1 incremental cache refresh worked (only one fallback all evening). Round 3 builder dispatched: touch only the moved pit's pipes, skip unchanged writes, one save per command.
+
 **Second audit, Structural + Manager (28 Sep, read-only; hypotheses until measured):**
 1. Structural palette "drawing health" re-reads every object in model space (up to 100,000) at idle every 1-3 minutes while its Job Time tab is visible, plus on drawing switch (`Structural/UI/Palette/MainPalette.xaml.cs` 737, 830-834 -> `DrawingDiagnosticsService.cs` 52-243). Top Structural suspect; matches "slow, then clears".
 2. Structural autosave saves and backs up Civil-only drawings too, on the main thread (`DrawingAutoSaveService.cs` ~283, 524-531); no Civil check exists.
