@@ -29,7 +29,7 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
 
 5. 28 Sep: a Codex AutoCAD pass cannot share the PC with Tim - it loses the window when he uses another program. Schedule passes for when he is off the PC (late evening / early morning / weekends).
 
-6. 28 Sep: the 3.0.11 install bumped the Civil project version but not `Installer/PackageContents.xml` (still 3.0.10; test PackageContents_VersionMatchesCivilAssemblyVersion caught it after the fact). Every version bump: csproj AND PackageContents.xml, and run that test before installing.
+6. 28 Sep: the 3.0.11 release branch bumped the Civil project version but not the repo's `Installer/PackageContents.xml` (still 3.0.10; test PackageContents_VersionMatchesCivilAssemblyVersion fails). The INSTALLED manifest reads AppVersion 3.0.11 (the installer stamps it), so nothing on Tim's PC is wrong. Every version bump: csproj AND PackageContents.xml, and run that test before installing.
 
 ### For Tim when he is around
 1. **BUG-160 (typed bottom level on a grade-held pipe).** Your rule: see the typed and automatic numbers and pick. A grip drag cannot stop mid-drag to ask, so the choice would come the moment you let go: a small window "Keep your 10.30 / Use automatic 10.25". Recommendation: build that window (Codex) and until then change nothing (today's behaviour stays). Alternative: a stop-gap that keeps your typed number and prints a line (you overruled this on 23 Sep, so not done without your word).
