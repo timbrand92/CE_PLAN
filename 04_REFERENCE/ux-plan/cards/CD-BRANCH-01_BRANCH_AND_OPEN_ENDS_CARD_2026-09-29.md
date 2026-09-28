@@ -74,3 +74,6 @@ Authority: `decisions/2026-09-29_PIPE_ENDS_AND_BRANCH_JUNCTIONS.md` (Tim's two r
 1. **Long section of a branch:** show the branch as its own second profile, or only a junction marker on the main? Recommend the marker in this batch and the second profile later.
 2. **Branch crown above the main's crown:** warn only, or ask each time? Recommend warn only (R-27).
 3. **Old downpipes already split on a run:** leave them as drawn? Recommend leave, and offer no automatic change.
+
+
+**Status (29 Sep 2026):** open questions answered by Tim (see decisions/2026-09-29_PIPE_ENDS_AND_BRANCH_JUNCTIONS.md): marker on main, warn only, leave old splits as drawn. Build started.

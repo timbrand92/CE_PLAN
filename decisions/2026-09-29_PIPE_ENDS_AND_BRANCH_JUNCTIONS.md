@@ -9,3 +9,10 @@ Tim's answers (clickable choices, 29 Sep 2026):
 2. **Branch onto a main between pits - level at the junction: "Match inverts"** - the branch invert equals the main's invert at that point (interpolated at the junction chainage). The value/rule lives on the Settings page (R-00), default = match inverts.
 
 Next: a workflow card (AGENTS.md review gate) for "CD branch onto an existing pipe": draw-time acceptance of a mid-span end, junction node on the main (D3), branch invert = main invert at chainage, Pit Schedule / long section display, one Undo; then build.
+
+## Card CD-BRANCH-01 open questions - Tim's answers, 29 Sep 2026 (clickable)
+3. **Long section of a branch:** "Marker on main now" - a junction mark with the branch size on the main's long section; the branch's own profile later.
+4. **Branch crown above the main's crown:** "Warn only" - draw it, amber note, listed in CDCHECK.
+5. **Existing downpipes that split a run the old way:** "Leave as drawn" - no automatic change; only new work uses one-pipe-with-junction.
+
+Interpretation (release chat, not Tim's words): all of the card's open questions are answered, so the card is treated as approved to build under the charter's always-building rule. Tim can still reject it.
