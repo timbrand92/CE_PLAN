@@ -939,6 +939,8 @@ every line since 13 Sep).
 
 **Expected behaviour:** If zero issues are fixable it must say so and why ("0 fixable — N skipped because …"), never silently no-op. (Wrong-proposal content is BUG-057.)
 
+**Built 29 Sep (Sonnet 5.5): PR #366** - CDDASHBOARD "Propose fixes for all" is always clickable and always reports what it proposed and what it skipped, grouped by reason (e.g. "3 fixes proposed across 2 pipes. 5 items skipped: ..."); when nothing is fixable it says so and zooms to the skipped pipes. What gets fixed is unchanged. 7 new tests; full Civil net10 7 known only. Banked. (Uses a message box for the result - Codex UX pass to judge.)
+
 **Status:** OPEN.
 
 ## BUG-065
