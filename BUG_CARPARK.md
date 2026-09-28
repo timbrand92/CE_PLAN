@@ -1576,6 +1576,8 @@ The **real live crash** is the same exception in a path that IS registered: `Lin
 - Check whether the west branch sets `attr.HorizontalMode = TextHorizontalMode.TextLeft` or leaves the default (which may be Right after a Position/AlignmentPoint swap).
 - Compare with the FALL block's `FlipAttributeRotations` helper (`BlockService.cs:904`) — that helper does swap Position↔AlignmentPoint correctly. The callout code may need the same swap, or it may be doing the swap and then re-applying the wrong justification.
 
+**Triage 29 Sep: already fixed in code** (Tim's 15 Sep ruling BUG-128: callout text left-justified both sides, `TextService.GetCalloutTextAlignment`); 8-direction test added in PR #367. Stays open until Codex/Tim confirms.
+
 **Status:** OPEN — deferred to next update after v2.0 ship 2026-05-12.
 
 ---
@@ -1599,6 +1601,8 @@ The **real live crash** is the same exception in a path that IS registered: `Lin
 - The correct fix is to edit the FALL SYMBOL block definition's `AttributeDefinition` objects directly (set `HorizontalMode = TextLeft`, set both Position.X values equal in BCS) rather than fighting `SetAttributeFromBlock` after the fact. Once the definition matches the standard, `SyncBlockAttributesFromDefinition` will propagate correctly.
 - Modifying the block definition can be done either (a) at plugin load time as a one-shot patch to the current drawing's BlockTable, or (b) by editing the source FALL SYMBOL.dwg in the CE block library so all new drawings inherit the fix.
 - Do NOT touch `AlignmentPoint` on the `AttributeReference` after sync — `AdjustAlignment` uses it to recompute Position and resets the position to origin if AlignmentPoint is (0,0,0).
+
+**Built 29 Sep (Sonnet 5.5): PR #367** - `PatchFallAttributeDefinition` still wrote the alignment point as the drawing origin on every FALL SYMBOL insert, dragging both texts to X=0 and stacking "1:80" onto FALL. Now: already-left text untouched; centred/right text left-justified from where it was anchored; alignment point never written. A drawing that already holds a damaged FALL SYMBOL must be PURGEd first. **Found: the BUG-079 fixes on branch `claude/vigorous-wilson-7e7e91` never reached the trunk** (audit dispatched).
 
 **Status:** OPEN — first attempt reverted 2026-05-12 (commit `ca4f5aad`). Deferred to v2.0.1.
 
