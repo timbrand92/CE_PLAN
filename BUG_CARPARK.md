@@ -63,7 +63,7 @@
 
 **Steps for Tim to confirm the fix:** select a pit whose plan label differs from its ID, open the Inspector, press "Use plan label", then type U: only the rename is undone.
 
-**Status:** OPEN (hypothesis from code; route it through a real command, as other palette buttons do).
+**Status:** IN PROGRESS (28 Sep ~23:00) - built, draft PR #359: the button now runs a hidden command CDUSEPLANLABEL (one named Undo, no lock outside a command); guard test that no Inspector button takes a lock; Inspector tests 188/188, full Civil net10 no new failures. Banked for the next install (not in 3.0.12). Needs a light review first.
 
 ---
 
