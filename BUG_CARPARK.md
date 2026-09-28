@@ -77,6 +77,14 @@
 8. Minor: Structural's idle detector logs every second while active (background writer, cheap).
 Checked and fine: selection observer, highlights, attachment queue (holds one), Xref watcher (throttled), no doubled reactors, pipe draw overrule filtered, undo trace gated by CDDEBUG.
 
+**Second audit, Structural + Manager (28 Sep, read-only; hypotheses until measured):**
+1. Structural palette "drawing health" re-reads every object in model space (up to 100,000) at idle every 1-3 minutes while its Job Time tab is visible, plus on drawing switch (`Structural/UI/Palette/MainPalette.xaml.cs` 737, 830-834 -> `DrawingDiagnosticsService.cs` 52-243). Top Structural suspect; matches "slow, then clears".
+2. Structural autosave saves and backs up Civil-only drawings too, on the main thread (`DrawingAutoSaveService.cs` ~283, 524-531); no Civil check exists.
+3. Beam linking erase clean-up scans all of model space after any command that erased something (only when beam linking is on) (`BeamLinkService.CascadeErase.cs` 40-70).
+4. Foundation monitor drains 24 touched objects per idle tick, one transaction each (`FoundationMonitor.cs` 137-234). Bounded.
+5. Manager telemetry heartbeat every 60 s: file only, no drawing access. No background thread touches the drawing anywhere in Structural/Manager.
+**Queued:** Structural speed builder (items 1-3) after the Civil fix lands.
+
 **Next step:** add always-on timing lines to items 1-6 (milliseconds, entity count, trigger), install, reproduce with Codex, then fix the worst.
 
 **Test that catches it (to build):** a timing record per CE event handler (how many milliseconds each spends, and how many times it ran) written to one small file, plus an automated check that no handler is subscribed more than once and no per-edit list grows without being emptied.
