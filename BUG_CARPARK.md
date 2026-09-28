@@ -81,7 +81,7 @@
 
 **Reference:** report step 12 and screenshots N3-* in C:\Lisp Files\_TEST_COPIES_20260923\P13_screenshots; log 10:39:32-10:41:32. Test that catches it: a CD preview test that toggles Existing / Include known grade / Stormwater and asserts the proposed pipe and label are in the preview.
 
-**Status:** OPEN
+**Status:** IN PROGRESS (28 Sep 2026: found already fixed in source before this entry was ever actioned — commit `73c7d402`, "Fix BUG-186 ... and BUG-187 ...", 27 Sep 2026, an ancestor of `origin/master`. Root cause was NOT the CD preview jig/picture — `CdPlanPreviewControl`'s real-drawing picture only ever overlays end rings on the drawing as it already is and never drew a ghost proposed-pipe line in the working state either (confirmed by comparing N3-recognised-route.png against N3-FAIL-stormwater-no-preview-label.png: the picture is pixel-identical). The actual fault was `CdViewModel.ApplyPipeTypeDefaults` silently resetting "Pipe grade: Set my own / 1 in 100" back to "Standard" every time a pipe-type button was pressed, including a press back to a type already configured — fixed with `CdViewModel.HasChosenGrade`. The 3.0.6 build Codex pass 13 tested predates this fix (73c7d402 lands after the `Version: Civil 3.0.7` commit). Verified by reading + added `CdViewModelTests.PipeTypeSwitch_AwayAndBack_KeepsTheVisibleGradePreviewText` (asserts the visible `GradePreviewText`, not just the internal flags) on branch `claude/bug-186-187-cd-cdedit-fixes`, PR pending. Not yet Tim-confirmed in AutoCAD on a build that actually contains the fix (3.0.8+) — do not mark FIXED until then.)
 
 ---
 
@@ -95,7 +95,7 @@
 
 **Reference:** report step 10, screenshots N4-* in P13_screenshots. Likely the "changed after the preview" check compares the downstream pipe against a snapshot taken before the batch's own upstream edits (the batch changes P8's outlet, then sees P8 to P9 as changed). Test that catches it: a batch of two pipes plus a carried downstream pipe applies without the stale-preview refusal, and a genuine outside change still refuses.
 
-**Status:** OPEN
+**Status:** IN PROGRESS (28 Sep 2026: found already fixed in source before this entry was ever actioned — commit `73c7d402`, "Fix BUG-186 ... and BUG-187 ...", 27 Sep 2026, an ancestor of `origin/master`. The hypothesis above is confirmed correct by reading the code: `TryBuildCascadedPreparedTarget` (`PipeEditCommand.Batch.cs`) now captures `beforeEvidence` from `step.Context` BEFORE `ApplyContextToViewModel` rewrites the cascaded pipe's invert-label sides into it. Read the full write path to confirm the "genuine outside change still refuses" half of the suggested test shape also holds: cascaded targets join the SAME `preparedTargets` list the shared, unmodified revalidate comparison walks — no separate or weaker check on the cascade path. The 3.0.6 build Codex pass 13 tested predates this fix (73c7d402 lands after the `Version: Civil 3.0.7` commit) — Codex was correctly reproducing a real, already-fixed-in-source bug against a stale installed build. Added `PipeBatchBeforeEvidenceTests.CascadedTargets_JoinTheSameListTheSharedRevalidateCheckWalks_SoAGenuineOutsideChangeStillRefuses` on branch `claude/bug-186-187-cd-cdedit-fixes`, PR pending. The "1 IN 96" observation remains unproven, not chased further. Not yet Tim-confirmed in AutoCAD on a build that actually contains the fix (3.0.8+) — do not mark FIXED until then.)
 
 ---
 
