@@ -1,8 +1,20 @@
 # Design / CDSETUP workflow card — job mode at setup
 
-**APPROVED — plan only (26 Sep 2026).** Not built, tested in AutoCAD, installed or Tim-accepted.
+**Built, not yet AutoCAD-tested (28 Sep 2026).** Not installed, not Tim-accepted.
 Authority: `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md` UX-DES-01..03 and UX-MODE-01..04.
 This card records the Design/CDSETUP workflow that previously lived only in `../V3_UX_PLAN.md`.
+
+**28 Sep 2026 build note:** the core of this card is built in `Modules/Drainage` (CE_ACAD_PLUGIN, branch
+`claude/ux-des-01-cddesign-job-mode`) — `CivilJobMode` replaces the old Engineer/Draftsperson route in
+`CivilDesignWorkflow`/`CivilDesignState`/the CDDESIGN window, the setup suggestion reads the job folder for a
+markup or supplied design (`SuppliedDesignLookupService`), a "Confirm setup" button returns to drafting in
+From-markup mode, and CE offers to switch a Design-from-scratch job when a markup later appears
+(`LateMarkupOfferRule`). **Deferred, flagged honestly in the PR:** the "Not in markup" quiet chip (the pure
+comparison rule `NotInMarkupChecker` is built and tested, but it is not yet wired to real drawn items or to a
+window); the "differs from supplied design" conflict marking (no structured supplied-design figures are read
+yet — only that a file exists); the late-markup QA comparison list beyond the mode switch itself; and any CE
+ribbon/panel indicator of the current mode outside the CDDESIGN window. None of this has been driven in
+AutoCAD — see the PR and `REGRESSION_LOG.md` for exact build/test evidence.
 
 ## Tim's ruling and supersession
 
