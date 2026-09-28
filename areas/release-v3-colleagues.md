@@ -6,7 +6,7 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
 
 1. **Usage first.** Before every batch, read both budgets:
    - **Claude:** `get_usage` (weekly all-models %, reset Fri 12:00 Melbourne).
-   - **Codex:** `rate_limits.primary.used_percent` in the newest-written `~\.codex\sessions\**ollout-*.jsonl` (reset shown as `resets_at`).
+   - **Codex:** `rate_limits.primary.used_percent` in the newest-written `~\.codex\sessions\**\rollout-*.jsonl` (reset shown as `resets_at`).
    - Pace line = % of week elapsed x 0.75 for Claude (25% kept for Tim). Ahead of pace: one Sonnet builder, no Opus. Behind pace: up to 3-4 Sonnet builders.
    - Codex: a full AutoCAD pass costs ~7%. At least one a day; a second when the week's pace allows.
 2. **Always building.** Any area, V3 plan and V3 UX plan together (`04_REFERENCE/ux-plan/V3_UX_PLAN.md` is part of V3). Builders run while Codex tests. Order: BUG-189 speed first, then open bugs in `BUG_CARPARK.md`, then the V3/UX queue.
