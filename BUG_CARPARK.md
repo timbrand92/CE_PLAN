@@ -635,6 +635,8 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 
 **Reference:** found by the release chat during the 23 Sep night install.
 
+**Built 29 Sep ~06:00: PR #364** - both Compress-Archive calls in build_installer.ps1 replaced with .NET ZipFile (temp name then rename, clear error); isolated test showed identical entries. Will be exercised for real by tonight's install build (include #364 in the combine).
+
 **Status:** OPEN. It must be fixed or understood before the Tuesday colleague package is built.
 
 ---
