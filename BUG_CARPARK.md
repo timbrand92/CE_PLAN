@@ -305,6 +305,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 
 **Reference:** Codex fix job `fixn8` queued for Sunday 27 Sep 00:05 (Codex's Sunday share). Touches CE_SHARED, so Manager must be rebuilt from the same commit.
 
+**Triage 29 Sep (release chat 04): fix found in code, 947a00c2 (PR #296), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
+
 **Status:** OPEN (fix queued)
 
 ---
@@ -849,6 +851,8 @@ every line since 13 Sep).
 
 **Still to confirm in AutoCAD (cheap, same code path):** run CDCALC with detention on, export, and check the computations sheet is actually in the output. If it is missing in real AutoCAD too, this stops being a test problem and becomes a live export defect.
 
+**Triage 29 Sep (release chat 04): fix found in code, 842b2490 / 308ea803 (PR #347), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
+
 **Status:** OPEN
 
 ## BUG-058
@@ -1068,6 +1072,8 @@ every line since 13 Sep).
 **Expected behaviour:** On upstream change, suggest downstream + fall. Tim's ruling (2026-07-03): MIX of "apply standard grade for the DN over the drawn length" and "keep the current fall" — i.e. if a fall is already set, hold it and re-base downstream from the new upstream; otherwise default to the standard/min grade for the pipe size. Builds on the BUG-073 preview wiring.
 
 **Reference:** `Modules/Drainage/ViewModels/CdViewModel.*` + the grade-suggestion engine (`CdCommand.GradeSuggestion.cs`). Parked during CD-smartify field report (2026-07-03).
+
+**Triage 29 Sep (release chat 04): fix found in code, ad285577 (UpstreamDownstreamSuggest), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
 
 **Status:** OPEN (2026-07-03) — building alongside/after BUG-075.
 
@@ -1374,6 +1380,8 @@ The **real live crash** is the same exception in a path that IS registered: `Lin
 **Expected behaviour:** After CDCALC completes, the plugin should offer to generate a fully dimensioned orifice pit detail drawing using CE standard annotations, correct layer/colour/text/dimension settings, and the calculated specifications populated automatically.
 
 **Reference:** `Commands/CalculationsCommand.cs`, CE standard orifice pit detail template
+
+**Triage 29 Sep (release chat 04): fix found in code, orifice pit detail generator + writer, present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
 
 **Status:** OPEN
 
@@ -2844,6 +2852,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Root cause:** not yet established. Candidates: a renumber that updated the record but not the label attribute (or the reverse), or a hand-edited label. Evidence to gather: `CDINSPECTOR` on the pit labelled P9 (does it say P9 or P7?), the pit schedule rows, and whether the labels were typed by hand or produced by a CE renumber.
 
+**Triage 29 Sep (release chat 04): fix found in code, 813b4672 / 4a79f5ee (pit label mismatch warning), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
+
 **Status:** OPEN — logged 2026-09-14; not fixed. Diagnose before touching either the label or the record.
 
 ---
@@ -2853,6 +2863,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** CDINSPECTOR diagnostics text.
 
 **Symptom:** the cover-depth diagnostic reads `Cover depth: 0 mm  âœ—  (min 300 mm)`; the ✗ glyph (`InspectorPaletteService` cover/grade symbols) is rendered as `âœ—`, i.e. UTF-8 bytes shown as Latin-1 somewhere between the service and the palette. Also "Cover depth: 0 mm" on a pit whose cover and invert are both 19.45 — the 0 mm may itself be a data symptom (pit invert = cover level).
+
+**Triage 29 Sep (release chat 04): fix found in code, 813b4672 (Unicode glyphs), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
 
 **Status:** OPEN — reported 2026-09-14 on the fc42544a test drive.
 
