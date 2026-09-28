@@ -37,7 +37,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-192 *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-194 *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -50,6 +50,42 @@
 > **Round 11 (2026-05-25):** 3-item Cross-plan break polish — (R11.1) non-rising-main grade calc now uses combined length for all GradeModes (was inverts-only); (R11.2) breakline-end invert stays hidden across refreshes by persisting `SecondInvertHiddenFromPlan` at draw time; (R11.3) CDEDIT respects breakline suppression on unpaired basement halves too (was paired-only).  Both TFMs compile clean, +2 new unit tests in `GradeAutoCalcTests` pass.  Awaiting AutoCAD verification.  See REGRESSION_LOG.md "Round 11 (2026-05-25)" section for full detail.
 
 > **Round 12 (2026-05-25):** 3-item batch — (R12.1 BUG-XAML) CD command crashed at dialog load with `Cannot find resource named 'BaseWindowStyle'` — `ContinueRisingMainDialog.xaml` + `GradeMismatchDialog.xaml` switched from `StaticResource` to `DynamicResource` for theme-level brushes/styles; (R12.2 BUG-CDGR) Cross-plan break paired halves displayed wildly different grades (1 IN 21 vs 1 IN 3 for the same logical pipe) — `LinkService.UpdatePipeGradeFromInverts` now uses the REAL endpoint inverts (basement.FirstInvert + continuation.SecondInvert) and writes the shared label to BOTH halves; (R12.3 BUG-CDIL) Continuation toggle didn't pre-populate the breakline-end IL on the continuation's First Invert field — new `LinkService.TryGetBreaklinePipeBasicsAndInverts` plus a `vm.FirstInvert = basementSecondInvert` set in `TryAttachContinuationAnchor`.  Both TFMs compile clean.  +1 new unit test `BuildGradeValue_CrossPlanPair_UsesRealEndpointInverts_SharedAcrossHalves` in `GradeAutoCalcTests` (23/23 GradeAutoCalcTests pass on both TFMs).  Awaiting AutoCAD verification.  See REGRESSION_LOG.md "Round 12 (2026-05-25)" section for full detail.
+
+## BUG-193
+
+**Command / Area:** Pit Schedule (PITSCHEDULE), typed SIZE cell (Civil 3.0.12).
+
+**What Codex did (pass 17, 29 Sep 2026, DWG-B copy):** filtered to P6 (ordinary pit, 900 x 900), double-clicked its SIZE cell, typed 1200 x 1200, Tab, Close.
+
+**Expected:** the drawn pit itself resizes to 1200 x 1200 (block, label, cover text), as the feature promised.
+
+**What happened:** the cell went blank and PITEDIT still showed 900 x 900. Screenshots P17_screenshots 172-185 (`C:\Lisp Files\_TEST_COPIES_20260923\`).
+
+**Test that catches it:** the size-parse + apply path with "1200 x 1200" (spaces, lowercase x) and "1200x1200".
+
+**Steps for Tim to confirm the fix:** open the Pit Schedule, type 1200 x 1200 into an ordinary pit's SIZE, close: the pit on the plan is now 1200 x 1200 and PITEDIT agrees.
+
+**Status:** OPEN.
+
+---
+
+## BUG-192
+
+**Command / Area:** Undo/Redo in a CE drawing (Civil 3.0.12).
+
+**What Codex did (pass 17):** five U (PASTECLIP, GROUP, MOVE, INTELLIZOOM, PITEDIT), then REDO twice.
+
+**Expected:** REDO puts back the last undone step.
+
+**What happened:** "Nothing to redo" both times. Hypothesis: CE writes something to the drawing after a U (for example its project-data save or a cache write), which clears AutoCAD's redo. Also possible: the sequence itself (AutoCAD's REDO only follows a U directly). Not proven.
+
+**Test that catches it:** Codex - PIT, U, REDO straight away: the pit comes back; repeat with a pit move.
+
+**Steps for Tim to confirm the fix:** move a pit, U, REDO: the pit goes back to where you moved it.
+
+**Status:** OPEN (reproduce cleanly first).
+
+---
 
 ## BUG-191
 
@@ -81,6 +117,8 @@
 
 **Steps for Tim to confirm the fix:** open a job, change a pit's surface level in the Inspector, press Ctrl+S, close, reopen: the new level is still there.
 
+**Codex pass 17 Q4 PASS (29 Sep, 3.0.12): Ctrl+S then close/reopen kept 525; drawing-tab X prompted, Yes, reopen kept 600; CLOSEALL gave exactly one prompt per drawing. Codex-accepted.**
+
 **Status:** IN PROGRESS (28 Sep ~22:00) - PR #357 (`5c845164`) review fixes done: close now locks the drawing (Undo irrelevant at close) and marks it modified so the save prompt appears; autosave (.sv$ / unlocked) skipped; warning logged if a flush fails; net10 OutsideCommandUndoPolicy 43/43. Being combined into Civil 3.0.12 tonight; Codex pass 17 Part Q4 tests it.
 
 ---
@@ -98,7 +136,9 @@
 2. Civil hooks about 40 AutoCAD events (object changed/added/erased, command ended, selection changed, idle) across LinkService, the Inspector palette, overrules, QA, job time, backup and Xref watchers. A read-only code audit of these for per-edit whole-drawing work and for things that pile up during a session is running.
 3. Civil `debugLogging` is off in `CD_Settings.json`.
 
-**What ends a slow phase (Tim, 28 Sep, clickable answer):** "Waiting a while". It is not saving, not switching drawings and not a restart. That points to a backlog of CE work, queued while he edits and worked off while AutoCAD sits idle (hypothesis). **Not yet known:** which CE action starts a slow phase. Hypothesis only until measured.
+**What ends a slow phase (Tim, 28 Sep, clickable answer):** "Waiting a while". It is not saving, not switching drawings and not a restart. That points to a backlog of CE work, queued while he edits and worked off while AutoCAD sits idle (hypothesis). **Not yet known:** which CE action starts a slow phase.
+
+**MEASURED ON 3.0.12 (Codex pass 17, 28-29 Sep): round 3 works for pit moves - ApplyPendingLinkUpdates now 180-420 ms touching 3-6 pipes (was 3,681 ms / 49 pipes). NEW FINDING: the FIRST command after opening the drawing (here a plain SPLINE) took 3,249 ms, PipeUpdates count=49 with no pit or source moves - CE flushes a queue of all 49 pipes built at drawing open (open-time upgrade or cache load) at the first command end, so the first thing Tim does after opening a job freezes ~3 s. Also: each pipe update still costs ~60 ms (graphics rebuild) - worth halving. Next round (4): skip the open-time pipe updates when nothing changed, and profile the per-pipe cost.** Hypothesis only until measured.
 
 **Code audit (release chat 04, 28 Sep, read-only; each item is what the code does, the effect on AutoCAD is still a hypothesis, nothing measured yet):**
 1. After almost every CE edit command, at the next idle moment, CE throws away and rebuilds all its link memory by reading every object in model space three times (`LinkService.Reactors.cs` 674-696 and 1701-1749, `LinkService.Cache.cs` 727-749). Sometimes twice in a row. The same full rebuild runs after every U/UNDO/REDO, a native MOVE of a pipe, and moving a pit. Top suspect.
@@ -174,6 +214,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 **Expected behaviour:** Apply writes all three pipes as previewed; ONE U puts them back.
 
 **Reference:** report step 10, screenshots N4-* in P13_screenshots. Likely the "changed after the preview" check compares the downstream pipe against a snapshot taken before the batch's own upstream edits (the batch changes P8's outlet, then sees P8 to P9 as changed). Test that catches it: a batch of two pipes plus a carried downstream pipe applies without the stale-preview refusal, and a genuine outside change still refuses.
+
+**REOPENED by Codex pass 17 (29 Sep, 3.0.12, which contains `73c7d402`): B2 FAIL** - New Pipe: Set my own, 1 in 100; switch to Detention, Existing, then back to Stormwater: Standard is selected again and the custom field hidden. The fix does not hold for this sequence (Existing in between). Needs a builder.
 
 **Status:** IN PROGRESS (28 Sep 2026: found already fixed in source before this entry was ever actioned — commit `73c7d402`, "Fix BUG-186 ... and BUG-187 ...", 27 Sep 2026, an ancestor of `origin/master`. The hypothesis above is confirmed correct by reading the code: `TryBuildCascadedPreparedTarget` (`PipeEditCommand.Batch.cs`) now captures `beforeEvidence` from `step.Context` BEFORE `ApplyContextToViewModel` rewrites the cascaded pipe's invert-label sides into it. Read the full write path to confirm the "genuine outside change still refuses" half of the suggested test shape also holds: cascaded targets join the SAME `preparedTargets` list the shared, unmodified revalidate comparison walks — no separate or weaker check on the cascade path. The 3.0.6 build Codex pass 13 tested predates this fix (73c7d402 lands after the `Version: Civil 3.0.7` commit) — Codex was correctly reproducing a real, already-fixed-in-source bug against a stale installed build. Added `PipeBatchBeforeEvidenceTests.CascadedTargets_JoinTheSameListTheSharedRevalidateCheckWalks_SoAGenuineOutsideChangeStillRefuses` on branch `claude/bug-186-187-cd-cdedit-fixes`, PR pending. The "1 IN 96" observation remains unproven, not chased further. Not yet Tim-confirmed in AutoCAD on a build that actually contains the fix (3.0.8+) — do not mark FIXED until then.)
 
@@ -665,6 +707,8 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 **Installed:** 23 Sep 2026 12:18, Civil `3.0.0+aeb03763` on Tim's PC (read back by hand, every lane).
 
 **Codex evidence, 23 Sep about 14:45 (pass 1, steps C1 and C2):** three normal closes of AutoCAD with the CE Inspector open and expanded, on the DWG-A test copy. No crash message; the window closed cleanly each time. **No new crash report:** the newest `acad.exe.*.dmp` is still the 12:12 one, which was a deliberately stopped test instance. That compares with 18 crashing closes between 15 and 23 Sep. C3 and C4 were still to run. This is evidence, not acceptance.
+
+**Codex pass 17 (29 Sep 00:48, Civil 3.0.12): B5 PASS - three normal shutdowns with the Inspector open (QUIT, QUIT with two drawings, main X), no crash report. Codex-accepted** (with the 23 Sep three clean closes). Tim can still reject.
 
 **Status:** IN PROGRESS — installed 23 Sep 12:18; Codex saw three clean closes; **waiting for Tim to confirm in AutoCAD**
 
