@@ -917,6 +917,8 @@ every line since 13 Sep).
 
 **Root cause (diagnosed 2026-07-03):** X01 is recovered via the centroid-polyline fallback (`XcivilEntityScanner.Pits.cs:312-352`) which derives rotation from a 2-point `CI-STRM-DRAN-DPIT-CNTR` polyline's direction (`atan2(dy,dx)−90°`) instead of the real block insertion angle. Independent of the (correct) global UCS transform.
 
+**Built 29 Sep (Sonnet 5.5 builder): PR #365** - when XCIVIL import merges a pit's block with its CNTR line, the block's own rotation now always wins (the CNTR direction only when there is no block); mirrored blocks are folded so a pit is never turned 180 degrees; each pit records where its rotation came from. 11 new tests; full Civil net10 7 known failures only. Banked for the next install.
+
 **Status:** OPEN.
 
 ## BUG-063
