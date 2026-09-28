@@ -11,7 +11,7 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
    - Codex: a full AutoCAD pass costs ~7%. At least one a day; a second when the week's pace allows.
 2. **Always building.** Any area, V3 plan and V3 UX plan together (`04_REFERENCE/ux-plan/V3_UX_PLAN.md` is part of V3). Builders run while Codex tests. Order: BUG-189 speed first, then open bugs in `BUG_CARPARK.md`, then the V3/UX queue.
 3. **Tim's side messages never stop the work.** Classify, file it (bug, idea or plan item), give him a rough timeline or % to done, carry on.
-4. **Bank for Codex.** Everything built since the last pass goes into ONE consolidated Codex AutoCAD pass a day.
+4. **Bank for Codex.** Everything built since the last pass goes into ONE consolidated Codex AutoCAD pass a day. **Codex runner (moved 28 Sep out of an old chat's temp folder):** `C:\Lisp Files\_CODEX_RUNNER\` (not a repo). `codex_usage.sh` (usage), `daily_cap.sh explain` (today's cap), `queue3.sh name|worktree|model|effort|maxpct|cost` runs a brief `<name>.txt` + `common.txt`; results in `out\` and `queue.log`; reports land in `C:\Lisp Files\_TEST_COPIES_20260923\`.
 5. **Installs on Tim's PC at the chat's discretion.** AutoCAD checked closed twice, no Codex run active, backup, read-back, undo named. **Colleague publishing needs Tim's word.** Merge = independent review + Codex pass.
 6. **End goal:** a colleague-ready V3, with a Codex human-use/UX pass before it is offered to anyone.
 7. **Speed and reliability are the framework** (`ENGINEERING_RULEBOOK.md`, section "Speed and reliability framework"). Every change is checked against it.
