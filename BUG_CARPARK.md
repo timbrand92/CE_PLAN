@@ -951,6 +951,8 @@ every line since 13 Sep).
 
 **Expected behaviour:** Pipe ends trim to the pit boundary exactly like hand-drawn CD pipes.
 
+**Built 29 Sep (Sonnet 5.5): PR #368** - XCIVIL import had its own copy of the pit-wall maths (every pit an unrotated square; a near-miss snapped to the pit centre). It now uses CD's own `PitOutline.TrySnapToWall` with the imported pit's real size, type and rotation. Invert levels are unchanged (still read from the pit's level text; not re-worked at the trimmed end) - question for Tim below. 7 new tests; full Civil net10 7 known only. Banked.
+
 **Status:** OPEN.
 
 ## BUG-066
