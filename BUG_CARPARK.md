@@ -999,6 +999,8 @@ every line since 13 Sep).
 
 **Notes:** Import Quality v2 cleared `IsMirroredInX/Y` on raw DBText created via the shared `TextService` — these mirrored strings survive, so they come from a DIFFERENT path. Two hypotheses to check: (a) they are consultant source texts (Civil 3D structure/pipe name labels?) copied across as supplemental content without mirror normalization; (b) they are block ATTRIBUTES or MText (fall-arrow/leader annotations) which the DBText-only guard never touches. Also check the spot-level texts (P18.974 family) for the same fault. Identify the creation site first, then extend the mirror guard there.
 
+**29 Sep (Sonnet 5.5): PR #369 HELD, not banked.** The builder did not find the site that mirrors the imported labels; instead it added a shared 'make text readable' guard to block attributes, source-tag labels and imported pit cover text. That changes existing behaviour broadly (pit attributes on blocks rotated 90-270 degrees would flip and swap justification), without a proven cause. Needs: a Codex reproduction on the original drawing type to find the real source, then a narrow fix. Not installed.
+
 **Status:** OPEN — filed from screenshots; investigate after round-4 retest (the duplicate purge will also remove many of the affected copies).
 
 ## BUG-070
