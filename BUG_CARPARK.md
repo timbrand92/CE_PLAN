@@ -2771,6 +2771,8 @@ Cancel/Undo, locked-layer, Xref and REFEDIT protections.
 path on a transient `DBText` copy that has lost the source grip session, so the current final-write
 safety gate correctly rejects it but also prevents any preview movement.
 
+**Triage 29 Sep: SUPERSEDED in code** - the faulting class `PipeAttachmentFlipGripOverrule` is no longer registered (last wired 25 Aug, `c160b175`; a contract test asserts it stays unregistered). AutoCAD 2027 uses the native grip module `CE_CVL_NATIVE_GRIP_2027.arx`; older lanes use `PipeAttachmentActionGripOverrule`, which has no drag override. Needs an AutoCAD retest of the Slide/Offset/Flip grips (Codex), then close. Removing the dead class is a separate tidy-up (not done).
+
 **Status:** OPEN — decisive runtime evidence captured. Repair must carry verified source-session
 identity into the transient drag preview without allowing the transient copy to become write authority.
 
