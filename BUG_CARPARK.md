@@ -65,7 +65,7 @@
 
 **Steps for Tim to confirm the fix:** open the Pit Schedule, type 1200 x 1200 into an ordinary pit's SIZE, close: the pit on the plan is now 1200 x 1200 and PITEDIT agrees.
 
-**Status:** OPEN.
+**Status:** IN PROGRESS (29 Sep ~05:30) - built, draft PR #362: the schedule treated a typed SIZE as a pending 'override' before the resize check ran, so the resize never fired and the cell blanked. SIZE now always goes straight to the same resize route PITEDIT uses. PitSchedule tests 531/531 both lanes. Note: builder's full-suite count (12,132 total, 5 failures) differs from the usual 12,231 / 7 - the next install gate re-checks by name. Banked for the next install.
 
 ---
 
