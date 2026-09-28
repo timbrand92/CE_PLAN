@@ -16,3 +16,7 @@ Next: a workflow card (AGENTS.md review gate) for "CD branch onto an existing pi
 5. **Existing downpipes that split a run the old way:** "Leave as drawn" - no automatic change; only new work uses one-pipe-with-junction.
 
 Interpretation (release chat, not Tim's words): all of the card's open questions are answered, so the card is treated as approved to build under the charter's always-building rule. Tim can still reject it.
+
+## Codex drafting tests - Tim, 29 Sep 2026
+Tim (verbatim): "with the codex drafting test, instead of making up a job, why don't we make it do an existing job, find a really easy one, but don't tell it the context of which job it is. And that way we can compare what it did versus let's say what the engineer designed slash drafted as well. Or should we do this whole test at a later date once we're more built towards version three?"
+Answers (clickable): **"Both: made-up Thu, real later"** - the synthetic drafting test runs Thu 1 Oct; the real-job comparison runs once branch junctions and the speed work are in (~1-2 weeks). **"Yes, you pick"** - the release chat may choose a simple single-dwelling stormwater job itself (DATA-01 exception granted for this test): only its inputs are copied to `C:\Lisp Files\_TEST_COPIES_*`, the job name/address never enters any repo, report, branch or commit, and Codex is given no job context. Supersedes the 23 Sep "Tim names the project for Part P" (Queued item 15) for this test.
