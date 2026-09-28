@@ -25,3 +25,7 @@ Answers (clickable): **"Both: made-up Thu, real later"** - the synthetic draftin
 Tim (verbatim, abridged): "if it's in the zone of influence of the pit and it doesn't hit ... the pit wall ... some people might draw it to the middle of the pit, and that's not technically the right length ... I think it's on ... what would technically be drawn as the inside of the pit wall ... because that's where a pipe would be in real life."
 Found in code: the pit outline IS the inside opening (a 600 pit = 600 inside); pit MOVES already pull pipe ends to it (`LinkService.PitMoves.cs` ~267, `PitOutline.TrySnapToWall`); new CD pipes do NOT - the end stays where clicked.
 Answer (clickable): **"Snap automatically + note"** - a new pipe end inside a pit's reach is moved to the inside wall face along the pipe's line, shown in the preview, with one command-line line (e.g. "Pipe end moved to the inside wall of P3 (was 300 mm inside the pit)."); Undo restores. Being built with CD-BRANCH-01 part 1 (same draw path).
+
+## CDSLAB falls follow the CDFALL rule - Tim, 29 Sep 2026
+Asked: "CDSLAB still sets fall text its own way. Should it follow the same rule as CDFALL?" Tim: "yes should follow cdslab".
+Interpretation (release chat): yes - CDSLAB's fall symbols use the same FALL SYMBOL 2 rule as CDFALL (arrow follows the fall bearing, block flip for left-pointing falls, cardinal snap, the block evaluates itself, one text-patch path). Builder dispatched on top of PR #370.
