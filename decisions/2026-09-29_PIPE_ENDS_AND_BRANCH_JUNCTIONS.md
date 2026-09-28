@@ -29,3 +29,5 @@ Answer (clickable): **"Snap automatically + note"** - a new pipe end inside a pi
 ## CDSLAB falls follow the CDFALL rule - Tim, 29 Sep 2026
 Asked: "CDSLAB still sets fall text its own way. Should it follow the same rule as CDFALL?" Tim: "yes should follow cdslab".
 Interpretation (release chat): yes - CDSLAB's fall symbols use the same FALL SYMBOL 2 rule as CDFALL (arrow follows the fall bearing, block flip for left-pointing falls, cardinal snap, the block evaluates itself, one text-patch path). Builder dispatched on top of PR #370.
+
+Confirmed by Tim, 29 Sep 2026: "yes follow cdfall sorry" - CDSLAB follows the CDFALL rule (interpretation above is now his word).
