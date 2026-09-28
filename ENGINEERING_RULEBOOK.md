@@ -346,6 +346,22 @@ Kingston 1-in-5 / C 0.4 · Glen Eira ≥50% underground · Manningham orifice 40
 
 ---
 
+## Speed and reliability framework (Tim, 28 Sep 2026: "I WANT PRODUCTIVITY, SPEED AND RELAIBILITY TO BE THE MAIN FRAMEWORK OF THIS PLUGIN")
+
+Applies to every CE change, Claude and Codex. Born from BUG-189 (AutoCAD slow after CE interaction, recovers on waiting).
+
+1. **Drafting never waits on CE.** Ordinary AutoCAD work (LINE, SPLINE, pan, zoom, grips) must feel the same with CE loaded as without it.
+2. **Never re-read the whole drawing because one thing changed.** Event handlers (object changed/added/erased, command ended, selection changed, idle) update only the objects that changed. A full model-space scan is allowed only on drawing open, an explicit repair or audit command, or a recorded fallback that logs why it ran.
+3. **Time budgets.** Any single CE handler: under 10 ms typical, never over 50 ms. Idle work is split into slices of 20 ms or less per idle tick. Work over budget logs a `[PERF]` line.
+4. **Nothing piles up.** Every queue, cache or pending list has a clear owner that empties it, a size cap and a `[PERF-SUMMARY]` count. Every event subscription (`+=`) has a matching removal, and no handler can be added twice.
+5. **Measure before and after.** Every speed fix ships with the before and after timings from the `[PERF]` log (Civil log `%APPDATA%\CE_CVL_SUITE\logs\CE_CVL_SUITE.log`), and an automated guard against the regression.
+6. **Functionality is kept.** A speed fix may change when and how much CE re-reads, never what the drawing ends up showing. Keep the full rebuild as a safety net for rare cases (Undo across many objects, a repair command), with its use logged.
+7. **Logging is cheap and quiet.** Always-on logging goes through the queued background writer. No line every second; state changes and summaries only.
+8. **Reliability.** No background thread touches the drawing or the ribbon (API guardrail 5). A failure in a CE handler must never stop AutoCAD's own command. Warn and record (R-27).
+9. **Productivity.** Fewer clicks and prompts for the same output. Every command is judged by the UI cockpit test: used 30 times a day.
+
+---
+
 ## Autodesk API guardrails (carried from the retired global rule file, 19 Sep 2026)
 
 
