@@ -63,7 +63,7 @@
 
 **Reference:** Modules/Manager/Services/CeBlocksInsertService.cs (the Insert method, lines ~61-113).
 
-**Status:** IN PROGRESS - fix builder dispatched 28 Sep 2026 for the attribute/text-tag part and a live placement+rotation preview jig.
+**Status:** IN PROGRESS - fixed and merged to master, PR #333 (28 Sep 09:55; `AppendAttributesFromDefinition` added, verified by the release chat directly plus the builder's own revert-and-confirm-tests-fail check). Placement/rotation preview jig also built. Installed 28 Sep 11:20 (Civil 3.0.10/Manager 1.1.10) - this is one of the two live fixes Tim was actively blocked by. **Not yet Tim-confirmed in AutoCAD** (his check: place an attribute-tagged block, confirm the tag shows and stays editable; repeat with Explode) - do not mark FIXED until he does. CEBLOCKS smart redesign (tabs/search/recent/stamp mode, PR #337) also merged and installed same cycle; verified it left the attribute fix's code untouched.
 
 **Also raised by Tim, same message, separate/bigger items (own workflow cards, not a quick fix):**
 1. Ribbon visual quality across CE and CE STRUC tabs - "not of the level Apple/Autodesk would build", icons inconsistent/scattered. Needs a design pass with Tim's visual review, not a blind rebuild.
