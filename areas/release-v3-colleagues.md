@@ -38,6 +38,7 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
 
 ### For Tim when he is around
 1. **BUG-160 (typed bottom level on a grade-held pipe).** Your rule: see the typed and automatic numbers and pick. A grip drag cannot stop mid-drag to ask, so the choice would come the moment you let go: a small window "Keep your 10.30 / Use automatic 10.25". Recommendation: build that window (Codex) and until then change nothing (today's behaviour stays). Alternative: a stop-gap that keeps your typed number and prints a line (you overruled this on 23 Sep, so not done without your word).
+3. **Pit Schedule FROM column (BUG-067):** where CE genuinely cannot tell where a pipe comes from, the schedule now prints "Unknown" instead of a blank. OK on a plotted drawing, or would you rather a dash "-" or blank? Recommendation: "Unknown" while drafting so it gets fixed before issue.
 2. **Structural backup of Civil-only drawings** is now OFF by default (Civil keeps its own backup); tick "Also autosave Civil-only drawings" in Structural Settings to restore. Confirm you are happy with off.
 
 ## Item 39.1 — Civil layout scrolling audit, first batch (25 September 2026)

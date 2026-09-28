@@ -965,6 +965,8 @@ every line since 13 Sep).
 
 **Notes:** mostly downstream of BUG-058/059/060/061 — connectivity garbage in, schedule garbage out. Known residual: `PitScheduleBuilder.BuildInletFromDisplay`/`GetOtherEndId` renders "FROM P1" for a pipe whose other end is blank — display should be blank/"(existing)" instead. Re-audit the export after the import fixes land.
 
+**Built 29 Sep ~05:30: PR #363** (on top of BUG-193): the schedule no longer guesses the pit's own ID as the FROM value; a pipe whose upstream end is genuinely unresolved now shows "Unknown" instead of a silent blank (a pit with no inlet stays blank). Builder's full suite reported 8 failures vs the 7 known - the next install gate checks by name. Banked. Tim to confirm "Unknown" is acceptable wording on a plotted schedule (listed under For Tim).
+
 **Status:** OPEN.
 
 ## BUG-068
