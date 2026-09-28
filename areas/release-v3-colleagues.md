@@ -26,7 +26,8 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
 2. 28 Sep: Manager has no file logger; timing written with `Trace` is invisible unless something listens. Check where a log line actually lands before relying on it.
 
 ### For Tim when he is around
-1. (none yet)
+1. **BUG-160 (typed bottom level on a grade-held pipe).** Your rule: see the typed and automatic numbers and pick. A grip drag cannot stop mid-drag to ask, so the choice would come the moment you let go: a small window "Keep your 10.30 / Use automatic 10.25". Recommendation: build that window (Codex) and until then change nothing (today's behaviour stays). Alternative: a stop-gap that keeps your typed number and prints a line (you overruled this on 23 Sep, so not done without your word).
+2. **Structural backup of Civil-only drawings** is now OFF by default (Civil keeps its own backup); tick "Also autosave Civil-only drawings" in Structural Settings to restore. Confirm you are happy with off.
 
 ## Item 39.1 — Civil layout scrolling audit, first batch (25 September 2026)
 
