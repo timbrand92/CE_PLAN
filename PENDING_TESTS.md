@@ -300,6 +300,14 @@ running; its loaded modules were inspected and it was not holding the bundle. **
 
 ---
 
+## LIVE since 28 Sep 2026 11:19 on Tim's PC — Civil `3.0.10+6558776d`, Manager `1.1.10+6558776d`, Structural `1.0.81+ad288199`
+
+1. **Installed by the release chat, Tim: "AUTOCAD IS CLOSED, DEPLOY"** (fourth install today). AutoCAD closed checked twice (11:19:27, 11:19:37); 2,903 files hash-checked, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes, native ARX present, 0 stray CE_SHARED files.
+2. **Backups:** `CE_CVL_SUITE_PRE_3d3b359d_20260928-111927.backup`, `CE_SUITE_MANAGER_PRE_3d3b359d_20260928-111927.backup`, `CE_STRUC_SUITE_PRE_0fb866ee_20260928-111927.backup` in `%APPDATA%\Autodesk\ApplicationPlugins`.
+3. **Undo:** close AutoCAD; delete the three new `CE_*.bundle` folders; rename each `..._PRE_*_20260928-111927.backup` back to its `.bundle` name.
+4. **Carries, on top of the 01:57 install:** BUG-188 (CEBLOCKS text-tag fix, #333), CEBLOCKS smart redesign (#337 - real tabs, search, recent row, stamp mode), BUG-172 (3 missing ribbon icons, #340), #330/#331 (real templates folder + pump pit in Pit Schedule), #334 (Civil job timer - first time installed, one minor known issue: a ~0.5s file-write every 10 min, no off-switch yet), #276 (admin setup fail-closed, Tim's own admin-setup click confirmed done first). Structural: #332 (New Sheet templates pointed at the real folder, AutoCAD-side still unproven).
+5. **Not yet tested in AutoCAD by Codex.** Live lag investigation ongoing (Tim running CEPERFDIAG) - a proactive audit found nothing new tonight causes constant lag; the job timer is the one new always-on feature to suspect first if lag changes after this install.
+
 ## LIVE since 28 Sep 2026 01:57 on Tim's PC — Civil `3.0.9+3d3b359d`, Manager `1.1.9+3d3b359d`, Structural `1.0.80+0fb866ee`
 
 1. **Installed by the release chat under Tim's standing override** (same rule as the two earlier installs tonight). AutoCAD closed checked twice (01:57:36, 01:57:46); 2,900 files hash-checked, 0 mismatches; CE_SHARED identical Civil/Manager per lane; Structural all 3 lanes, native ARX present, 0 stray CE_SHARED files.
