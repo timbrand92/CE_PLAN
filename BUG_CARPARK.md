@@ -757,7 +757,7 @@ every line since 13 Sep).
 
 **Reference:** `Modules/Drainage/Services/LinkService.Utilities.cs` — `ApplyGradeLockToInverts` computes the new level without checking the hand-typed flags; `ProjectDataService.UpdatePipeInvertsByHandle` refuses it for the record, but `WriteGradeLockInvertsToEntities` still writes the plan text. Related idea: IDEAS_INBOX 23 Sep 2026, "locked to a grade or locked to an invert".
 
-**Status:** OPEN
+**Status:** IN PROGRESS (28 Sep evening) - built, draft PR #352 (`425702d3`): a hand-typed bottom level is now kept everywhere (plan, stored levels, schedule) and the grade label re-worked, with one plain line, e.g. "375 pipe P3 to P4: kept your typed bottom level 10.30; the grade now reads 1 in 125. Automatic would have been 10.25." Tim's full ruling (see typed vs automatic side by side and pick) still needs a picker WINDOW from Codex (queued). Opus review running. Not installed.
 
 ---
 
