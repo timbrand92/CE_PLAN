@@ -22,6 +22,7 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
 
 ### Lessons (append one line per batch; newest last)
 1. 28 Sep: a builder's net10 Civil build needs the missing `CE_TRANSFORM_2027.arx` (no C++ toolset on this PC); a placeholder works for builds but is never shipped. Always read a DLL version back before trusting a build.
+3. 28 Sep: the Opus review of the BUG-189 speed fix caught 4 real regressions that source-text contract tests could not (an unnamed Undo step from a document lock at idle, MLINE outlines recreated with new handles, link-data-only edits, a dirty list fed by other commands). Keep the independent review on anything touching reactors, Undo or caches, even under usage pressure.
 2. 28 Sep: Manager has no file logger; timing written with `Trace` is invisible unless something listens. Check where a log line actually lands before relying on it.
 
 ### For Tim when he is around
