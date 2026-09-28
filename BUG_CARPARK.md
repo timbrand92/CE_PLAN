@@ -64,7 +64,7 @@
 2. Civil hooks about 40 AutoCAD events (object changed/added/erased, command ended, selection changed, idle) across LinkService, the Inspector palette, overrules, QA, job time, backup and Xref watchers. A read-only code audit of these for per-edit whole-drawing work and for things that pile up during a session is running.
 3. Civil `debugLogging` is off in `CD_Settings.json`.
 
-**Not yet known:** which CE action starts a slow phase, and what ends it (save, switching drawing, idle, restart). Hypothesis only until measured.
+**What ends a slow phase (Tim, 28 Sep, clickable answer):** "Waiting a while". It is not saving, not switching drawings and not a restart. That points to a backlog of CE work, queued while he edits and worked off while AutoCAD sits idle (hypothesis). **Not yet known:** which CE action starts a slow phase. Hypothesis only until measured.
 
 **Test that catches it (to build):** a timing record per CE event handler (how many milliseconds each spends, and how many times it ran) written to one small file, plus an automated check that no handler is subscribed more than once and no per-edit list grows without being emptied.
 
