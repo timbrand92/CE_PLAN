@@ -242,3 +242,8 @@ Kept from the cards, not a question: CSLOADPATH's "assumed size" pad must NOT be
 
 1. The desk's 07:27 timer fired. Found: Claude weekly 3% (pace plan about 10% by now), the controller's last activity 00:48, none of its overnight timers ran, and Remote Control on the desk had gone off (the Claude app most likely restarted overnight). The desk sent the controller "WAKE" at 07:30 and switched its own Remote Control back on.
 2. Codex overnight: pass 18 finished 05:57 (PASS 47 / FAIL 18 / BLOCKED 21 / NOT TESTED 17 of 103 checks); sweep C1 was running at 07:27 (PASS 9 / FAIL 5 / BLOCKED 4 / NOT TESTED 501 of 519 in scope so far); Codex weekly 81.0% (stop line 90%).
+
+## 30 Sep 2026: Design note, Structural COPY versus the new unit copy (from the controller, Opus-confirmed; recorded by the desk; no question for Tim)
+
+"Structural COPY versus the new unit copy (CSUNITCOPY, PR #402): a plain COPY leaves a copied beam without supports (ST1-14) because it cannot tell which copy came from which original; CSUNITCOPY can, so it links each copied beam to its own copied supports in a NEW link group, which is Tim's 29 Sep answer 'A new link group'. Deliberate difference, Opus-confirmed."
+Also for the record: the unit copy command had a real blocker caught by the Opus review (copying a beam would have moved the ORIGINAL unit's supports and text); it is split onto PR #402 and being fixed; the confirmed part of the unit work (PR #397) is unaffected.
