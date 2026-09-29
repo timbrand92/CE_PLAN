@@ -37,7 +37,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-203 *(BUG-202 = constant lag in a Structural drawing on everything - select, hover, draw/edit, move/copy, pan/zoom - Tim suspects polylines, 29 Sep 2026)* *(BUG-195..201 = Codex exploratory run X1 on Civil 3.0.14 / Structural 1.0.85, 29 Sep 2026: XCLMTXT invents floors, Structural schedule text tiny, branch labels overlap, diameter-only CDEDIT changes grade, calculated level labelled staff-entered, CDCHECK Enter does not finish, pit placement jargon)* *(BUG-194 = selecting a plain rectangle in a Structural drawing opens the CE Pipe ribbon tab, Tim live 29 Sep 2026)* *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-223 *(BUG-205..222 = Codex pass 18 and sweep C1, 30 Sep 2026, on installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 205 CD level-direction choice makes an uphill pipe; 206 OSMODE ended 0; 207 drawn Pit Schedule stale after a pit edit; 208 pipe end grip refused by CE record guard; 209 CDCATCHMENT area 28 million m2; 210 COPY replacement pit unlinked; 211 erase column leaves beam silently; 212 Place schedule fails on a legacy pit; 213 older schedule cannot be re-placed; 214 CEFIND then Esc marks drawing changed; 215 RC needs two U; 216 CDFALLSUGGEST Enter rejected; 217 PD drain shows AG; 218 CSBRACINGPANEL invisible; 219 status bar says v1.1.10; 220 Structural launcher opens unasked; 221 Manager Status cards overlap; 222 Manager Civil settings scroll)* *(BUG-203 and BUG-204 are used, see below; this header said BUG-203 was next until 30 Sep 2026)* *(BUG-202 = constant lag in a Structural drawing on everything - select, hover, draw/edit, move/copy, pan/zoom - Tim suspects polylines, 29 Sep 2026)* *(BUG-195..201 = Codex exploratory run X1 on Civil 3.0.14 / Structural 1.0.85, 29 Sep 2026: XCLMTXT invents floors, Structural schedule text tiny, branch labels overlap, diameter-only CDEDIT changes grade, calculated level labelled staff-entered, CDCHECK Enter does not finish, pit placement jargon)* *(BUG-194 = selecting a plain rectangle in a Structural drawing opens the CE Pipe ribbon tab, Tim live 29 Sep 2026)* *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -85,6 +85,8 @@
 
 **Status:** OPEN (29 Sep 20:30) - built, draft PR #393 (`claude/bug203-quiet`, base rel-20260929c; one helper `ProjectDataService.HasCivilContent` used at open registration, `ReevaluateCivilActivity` and `IsCeOwnedDrawing`; empty record no longer written into a quiet drawing; focused 87 pass; full Civil net10 7 failures = the known 7; PR files verified). Opus review REQUIRED (LinkService, ProjectDataService). One existing test line changed (`CivilQuietModeTests` source-text guard: the string names `HasCivilContent(db)` instead of `IsDrawingActive(db)`; same rule, controller checked; Opus to confirm). Not tested in AutoCAD. Known gap: a CE pipe/pit object with NO project record at all is not detected at open (no model-space scan allowed); it wakes Civil at the next Civil command.
 
+**Codex 30 Sep sweep C1: BLOCKED (wrong fixture).** The test copy DWG-S_SWEEPC1 is a Civil drawing (CDDISCIPLINE: "Civil (set explicitly in this drawing)"; 2 model objects), so Civil silence in a Structural drawing could not be judged. Needs a genuine _STR_ drawing with an empty Civil record. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 7); screenshot `SWEEPC1\screens\dwg-s-discipline-is-civil.png`.
+
 ---
 
 ## BUG-204
@@ -103,16 +105,415 @@
 
 ---
 
+## BUG-205
+
+**Command / Area:** CD (New Pipe window, Start Pipe direction question), Civil 3.0.15 installed.
+
+**What Codex did (pass 18, 30 Sep 2026 05:02, DWG-B_P18 copy):** CD, picked two points, Enter, 225 UPVC Stormwater Standard, typed first IL 18 and second IL 17.8 (both showed "Staff entered"). New Pipe warned "The levels run the other way to how the pipe was drawn. Start Pipe will ask which direction to keep." Start Pipe then asked "Pipe was drawn Open end -> Open end, but the entered levels indicate Open end -> Open end. Is this correct?" (both ends called "Open end", so the two choices look identical). Codex clicked the clickable choice **UseLevelDirection**.
+
+**Expected:** the pipe is made to flow from the 18.00 end to the 17.80 end (downhill), no uphill warning, and the choice shows the actual levels (18.000 -> 17.800) so a drafter can tell the two options apart.
+
+**What happened:** Design Warnings said "Pipe flows uphill - upstream IL 17.800 is 200mm lower than downstream IL 18.000"; the flow arrow pointed left; the pipe was saved anyway (11C76C) with the footer "Warnings are informational - the pipe has been saved."
+
+**Test that catches it:** unit test of the direction resolver: two open ends, entered levels 18.0 and 17.8, choice UseLevelDirection = upstream 18.0, downstream 17.8, no uphill finding; plus a wording test that the question names the levels. Codex repeat of the steps above.
+
+**Steps to confirm the fix (Codex or Tim):** CD two points, type 18 then 17.8, Start Pipe, choose the level direction: the flow arrow runs 18.00 to 17.80 and there is no "flows uphill" warning; the question itself shows the two levels.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 100 "direction prompt consistency", section "05:03 Melbourne - #384 typed level provenance and direction"); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\N384_direction_uphill_FAIL.png`. Civil log 05:02:16-05:02:17 (pipe 11C76C; "CD: uphill check").
+
+**Likely area (hypothesis, not checked):** the CD direction question / level-direction handling added with the #384 batch (PR #384, installed in 3.0.15); the prompt builds its text from the pipe's end labels, which are both "Open end".
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18; not triaged for a fix).
+
+---
+
+## BUG-206
+
+**Command / Area:** AutoCAD system variable OSMODE (Tim's running object snaps), across a whole Codex pass on Civil 3.0.15 / Structural 1.0.86.
+
+**What Codex did (pass 18, 30 Sep 2026):** read CPROFILE and OSMODE at the start (after the first spline): CPROFILE Tim, OSMODE 21759. Read OSMODE again after the RC checks (21759, RC_OSMODE_restored.png). Ran many more commands in three drawing copies (Structural R9/R10/R11, Civil Q3, CDRG, CEBLOCKS, CD, tie-downs, UCS change). At 05:57 before shutdown: CPROFILE Tim, but the OSMODE prompt said <0>.
+
+**Expected:** OSMODE finishes exactly as it started (21759). No CE command leaves Tim's snaps changed, on completion, on Escape or on error.
+
+**What happened:** OSMODE was 0 at the end. Codex typed 21759 and read it back (21759) before closing AutoCAD, so Tim's profile value was put back by Codex, not by CE. Codex did not isolate which command did it and blames none.
+
+**Test that catches it:** Codex: read OSMODE before and after each of RC (Yes, No, Escape at the question, Escape mid-cloud), CDRG (Place, Escape), CEBLOCKS, CDPAVE, CDKERB, CDSPOONDRAIN, CDPERIMETER, CDFALLSUGGEST, CDCATCHMENT, CSTIEDOWN and CD; the one that changes it is the culprit. The sweep C1 run started on 21759 (after Codex's restore), so it does not clear this.
+
+**Steps to confirm the fix (Codex or Tim):** run the list above one command at a time on a copy, reading OSMODE between each: every read is 21759.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 3 PROFILE_CHECK_END, section "Shutdown and P13 resolution"); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\PROFILE_CHECK_END_OSMODE_FAIL.png` and `PROFILE_CHECK_END_OSMODE_RESTORED.png`.
+**Likely area (hypothesis only, nothing verified):** any command that switches snaps off for its own preview and restores later: Structural RC ("Keep OSNAP ON?" question and its queued repeat), the CE snap presets ("Use Drawing now"), CDRG / CEBLOCKS placement. The last read known good was after RC; the failing read came after several later commands.
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18; cause Unknown).
+
+---
+
+## BUG-207
+
+**Command / Area:** Pit Schedule (PITSCHEDULE) drawn table versus Edit Pit / pit grip edits, Civil 3.0.15.
+
+**What Codex did (pass 18, DWG-S_P18 copy, 30 Sep 05:20-05:36):** placed a fresh pit P1 (450 x 450, cover 20.00) and a fresh one-row linked schedule (cover 20.00, works). Double-clicked P1, changed Cover 20.00 to 20.1, Save ("Pit updated."). Then grip-moved P1.
+
+**Expected:** the drawn schedule shows 20.10 straight after the edit finishes. Tim's ruling UX-LIVE-01 (25 Sep 2026, "Straight after each edit"): live labels, schedule and OSD block update as each edit finishes.
+
+**What happened:** the plan text changed to CL 20.1 but the drawn schedule stayed 20.00, also after the grip move. PITSCHEDULE > Placement then said "Civil data changed in Current drawing (DWG-S_P18.dwg). Review the differences; the placed schedule has not changed." Only the manual button "Update existing schedule" brought the drawn table to 20.10 (P1 FROM P2, cover 20.10, P2 cover 20.20). Two cover levels disagreed on the sheet with no warning.
+
+**Test that catches it:** unit/integration: place a linked schedule, edit a pit cover in Edit Pit, run the command-end pass: the drawn cell equals the new cover; or, if the design keeps a manual step, a visible "schedule out of date" mark appears on the drawn schedule at the moment of the edit. Codex repeat of the steps above.
+
+**Steps to confirm the fix (Codex or Tim):** place a pit and a schedule, edit the pit's cover level in Edit Pit and Save, look at the drawn schedule without pressing anything: the new level is there (or the schedule is clearly marked out of date).
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 25 "Q3 fresh linked schedule automatic update", sections "Q3 fresh fixture follow-up" and "Q3 open-end connection / schedule refresh detail"); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\Q3_fresh_schedule_stale_FAIL.png`, `Q3_fresh_move_still_stale.png`, `Q3_manual_update_required.png`, `Q3_manual_update_drawn.png`.
+
+**Design check needed:** the placement text "Review the differences; the placed schedule has not changed" suggests the current build deliberately makes update a manual review step. That conflicts with UX-LIVE-01 as recorded in `C:\CE_PLAN\decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md`. Tim to say which he wants; Codex judged it a FAIL against the brief.
+
+**Likely area (hypothesis only):** ScheduleLinkService.RefreshLinkedCells (log at 05:25 showed 1 call, 0.0 ms, i.e. it ran but changed nothing) and the schedule difference/review service (PitScheduleDifferenceService).
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-208
+
+**Command / Area:** Pipe end grip / STRETCH on a CD-drawn pipe: "CE did not change its linked records" (Civil 3.0.15). Covers pass 18 Q2(b) and Q6 part 1 (both BLOCKED by this).
+
+**What Codex did (pass 18, 30 Sep 05:38, fresh pipe 899 linked P2 -> P1 in DWG-S_P18 copy, created minutes earlier):** selected the pipe outline, activated the upstream end grip, typed `@-800,0` (STRETCH). Earlier the same happened on the older pipe 109E23 in DWG-B_P18 (after an ERASE/COPY of a pit, see BUG-210).
+
+**Expected:** a normal end-grip edit on a fresh CD pipe moves the pipe end and CE's record together (or refuses both), and the message tells the drafter one exact action to take.
+
+**What happened:** the pipe geometry shortened by 800 mm but CE refused the linked records: "[CE Civil] The AutoCAD geometry remains as edited, but CE did not change its linked records. The native edit has incomplete or invalid admission evidence. Run CE Repair/Audit before the next linked edit." The drawing and CE's data now disagree. The older pipe gave a different wording ("missing, damaged or protected linked drawing objects"). Because of this Codex could not build the "move a nearby pit onto the end" test (Q2b) or the 300 -> 375 then 5 m stretch (Q6 part 1). A later CDRG in the same drawing was refused with "The drawing and project do not describe the same complete pipe set" (see BUG-176 line).
+
+**Test that catches it:** Codex: draw a fresh CD pipe between two pits, grip-stretch one end by 800 mm: the record follows (or both are refused); then Edit Pipe and the schedule agree with the drawn pipe. Unit: NativeEditPlan classification of a fresh CE pipe object as admissible.
+
+**Steps to confirm the fix (Codex or Tim):** CD a pipe pit to pit, drag its end grip 800 mm, then open Edit Pipe: it shows the new length and end; no "admission evidence" message.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 20 and 103, section "Q2(b) fresh-fixture retry - 05:38 Melbourne"); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\Q2b_fresh_pipe_guard.png`, `Q2b_setup_guard.png`. Civil log 05:38:05.751 [WARN] [NetworkEdit] GRIP_STRETCH.
+
+**Likely area (hypothesis only):** `Modules/Drainage/Services/NativeEditPlan.cs` (the "incomplete or invalid admission evidence" refusal) and `NativeEditApplyPlan.cs` ("straight-pipe admission evidence is incomplete"), through `LinkService.NativeEdits.cs`.
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-209
+
+**Command / Area:** CDCATCHMENT > New (Civil 3.0.15): area shown and capacity warning.
+
+**What Codex did (pass 18, DWG-B_P18 copy, 30 Sep 03:45):** drew a small closed rectangle beside grated pit P66 (about the size of the 33.3 m2 CDPAVE rectangle), CDCATCHMENT > New, picked its top edge, picked P66, Enter.
+
+**Expected:** a plausible area in square metres (about 28.45 m2 by comparison with the adjacent pavement) and no overload warning.
+
+**What happened:** "[CE] P66's catchment is 28447480.8 m2, over the assumed Class A capacity of 40 m2. Check the grate can take this area, or split the catchment to another pit." A false capacity warning that would send a drafter to split a catchment. Codex's inference (not a code diagnosis): the area is not converted from drawing units (mm2) to m2 before display and comparison. The blue label on the blue fill is also barely readable.
+
+**Test that catches it:** unit: a 5,334 mm x 5,334 mm closed polyline in a millimetre drawing reports about 28.45 m2; capacity comparison uses m2. Codex repeat.
+
+**Steps to confirm the fix (Codex or Tim):** draw a 5.3 m x 5.3 m rectangle, CDCATCHMENT > New, pick its edge and a pit: the message says about 28 m2.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 60, section "R5 catchment continuation"); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\R5_catchment_area_FAIL.png`. No exception in the Civil log.
+
+**Likely area (hypothesis only):** the catchment overlay command added with the fall-arrow/catchment batch (#312): area measured from the picked polyline before unit scaling.
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-210
+
+**Command / Area:** ERASE a pit then COPY another pit onto the junction (Civil 3.0.15): the replacement pit is not linked.
+
+**What Codex did (pass 18, DWG-B_P18 copy, 30 Sep 00:21-00:23):** erased P3 (six pipes attached; message "The pit was erased and the schedule is updated. 6 pipes now have ends that are Not connected yet. U restores everything."). COPY of P2 onto the exposed junction: "1 pit copied and numbered as new" and it took the mark P3.
+
+**Expected:** the replacement pit links to the six pipe ends straight away (or clearly says it did not), and Edit Pipe, Edit Pit and the Pit Schedule all agree.
+
+**What happened:** Edit Pipe named P4 -> P3, but Edit Pit said for every nearby pipe "The pit has no recorded connection to this pipe", and the Pit Schedule showed P3 with blank FROM / inlet / outlet and P2 with "Unknown" for its former P3 inlet. A later, unrelated PIT command (00:50) then linked the six old pipes to the copied P3, so the repair was delayed, not immediate. After this the same drawing refused pipe end edits (BUG-208).
+
+**Test that catches it:** Codex: erase a pit with connected pipes, COPY another pit onto the junction, open Edit Pit and the schedule at once: connections listed. Unit: CloneReconcile after COPY re-links pipe ends within the pit's catch margin.
+
+**Steps to confirm the fix (Codex or Tim):** erase a mid-run pit, copy a neighbouring pit onto the gap, open the Pit Schedule and Edit Pit: both show the pipe connections.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 19, section "Q2(a)"); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\Q2a_schedule_missing_links.png`, `Q2a_pit_no_connections.png`, `Q2a_after_P4_P3new.png`. Log 00:23:00.554 `[CloneReconcile] command=COPY placements=1 repaired-pits=1 repaired-pipes=0 ... regenerated-pipes=0`.
+
+**Likely area (hypothesis only):** the CloneReconcile pass after COPY (repaired-pipes=0), and the pit relink pass (ApplyPendingPitRelinks) not being run for a copied pit. See also the desk's COPY versus CSUNITCOPY design note.
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-211
+
+**Command / Area:** ERASE a Structural column that has a beam attached (Structural 1.0.86, C1 toolbar column + Beam ribbon command `1`).
+
+**What Codex did (pass 18, DWG-S_P18 copy, 30 Sep 02:48):** placed 89 SHS column C1, placed a beam starting on C1 (command `1`: picked C1 first, Enter, picked the free end, accepted default label and preview). Selected C1 and pressed Delete.
+
+**Expected:** a question about the attached beam (delete it too, keep it, detach), as Tim's workflow expects, before the erase completes.
+
+**What happened:** the column vanished silently; the beam and the C1 label stayed. Command history only "_.erase 1 found". Later rotate/scale of a column proved the beam does follow the column, so the link exists; U restored the erase. Codex did not inspect the link record itself.
+
+**Test that catches it:** Codex: place column and beam, erase the column: prompt or clear message about the beam; U puts everything back. Unit: erase of a linked support with a beam raises the question.
+
+**Steps to confirm the fix (Codex or Tim):** place a column and a beam from it, delete the column: CE asks what to do with the beam.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 39, section "P12 - 30 Sep 02:50"); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\P12_support_erased_no_prompt.png`, `P12_erase_exact_text.png`. Structural log 02:48:31.780 BeamLink.ObjectErased 1 call, no prompt.
+
+**Design check needed:** whether the "ask per linked beam" behaviour was ever specified (STRUC-D2 beam-follow work); the brief expected a prompt. Codex records it as a FAIL of the observed workflow.
+
+**Likely area (hypothesis only):** Structural BeamLink.ObjectErased / CommandEnded.ProcessPendingWork (both ran, 0.0 ms, no prompt).
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-212
+
+**Command / Area:** Pit Schedule > Place schedule on a pit from an older drawing (Civil 3.0.15).
+
+**What Codex did (pass 18, DWG-S_P18 copy, 30 Sep 04:51-04:53):** the drawing had no linked schedule ("No linked pit schedule was found"). Grip-moved recognised pit P1 (450 x 450, cover 20.00). Reopened PITSCHEDULE > Continue to Place / update > Place schedule > picked an insertion point.
+
+**Expected:** one new linked schedule.
+
+**What happened:** an error window: "The schedule cells and source record could not be stored together. Nothing was placed; please try again." Nothing was drawn (that part is honest and safe). Log: "Pit schedule placement transaction failed: InvalidOperationException: A schedule row has no permanent identity." Retrying cannot help. A fresh pit placed in the same copy did place a schedule (Q3 fresh pit, PASS), so the fault is a legacy pit with no permanent identity.
+
+**Test that catches it:** Codex: place a schedule for a pit that predates the identity system: either identity is given first, or the message names the pit and the repair. Unit: PitScheduleViewModel placement with a row lacking identity.
+
+**Steps to confirm the fix (Codex or Tim):** open an older drawing, PITSCHEDULE, Place schedule: it places, or names the pit and offers the repair in one click.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 23, section "Q3 fresh schedule case - 04:55"); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\Q3_new_schedule_FAIL.png`, `Q3_S_no_schedule.png`, `Q3_S_move_before.png`. Civil log 04:53:13.163 [ERROR].
+
+**Likely area (hypothesis only):** `Modules/Drainage/ViewModels/PitScheduleViewModel.Schedule.cs` (~line 775, the "Nothing was placed; please try again." text) and `PitScheduleDifferenceService.cs` (row "has no permanent identity").
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-213
+
+**Command / Area:** Pit Schedule > Placement for an older schedule (Civil 3.0.15).
+
+**What Codex did (pass 18, DWG-B_P18 and DWG-A copies, 30 Sep 00:30-01:10):** opened PITSCHEDULE > Placement in drawings whose schedule was placed by an older build.
+
+**Expected:** a way to re-place the older schedule (a "Replace older schedule..." action with a preview and one U), because the window itself says to do so.
+
+**What happened:** the window says "UNLINKED SCHEDULE. An older pit schedule exists without a linked source record. It is preserved; deliberately re-place it before linked status can be shown." but the only button is "Update existing schedule", disabled. No re-place control anywhere. So five live cell-update checks (Q3) could not be run against any old schedule, and P2's schedule updates stayed blocked.
+
+**Test that catches it:** Codex: open an older drawing with an old schedule: a visible, enabled Replace/Re-place action exists and one U undoes it.
+
+**Steps to confirm the fix (Codex or Tim):** open a drawing with an old schedule, PITSCHEDULE > Placement: a Replace older schedule button is there and works.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 22, section "Q1 network and Q2(c) evidence" item Q3 existing schedule); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\Q3_unlinked_schedule.png`, `Q3_disabled_update.png`.
+
+**Likely area (hypothesis only):** the Placement page of the Pit Schedule window (button enable rule for a schedule with no source record).
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-214
+
+**Command / Area:** CEFIND (Civil), and a drawing marked "changed" with no edit (Civil 3.0.15 / Manager 1.1.15, sweep C1).
+
+**What Codex did (sweep C1, 30 Sep 2026, copies):** on a clean fixture (CleanBlank: 0 objects, DBMOD 0, no CE project dictionary) typed CEFIND, then pressed Esc at "Type a pit, tag or pipe to find (e.g. P7, WT1, P3-P4):". Also reproduced on a 5,100-line drawing and on a reopened Blank copy.
+
+**Expected:** Find is read-only. Cancelling leaves a clean drawing clean; closing it gives no "Save changes?" prompt.
+
+**What happened:** the drawing became modified (DBMOD 0 -> 1) before any input; Esc left it modified. U printed "CEFIND" but the flag stayed 1; REDO said "Nothing to redo" (on CleanBlank: "Everything has been redone"). Closing showed a save prompt (answered No). The 27 query cases (words, typos, symbols, 0/negative/999999, 200/300 characters) changed no objects. Second, weaker observation: on a Structural-named copy (cold start 1) merely opening the drawing left DBMOD 1 and a save prompt on close; the log shows the automatic pit-block migration ran, so that one may be by design; Codex records the attribution as Unknown. Also: P2 was visible as a drawn label on DWG-A but CEFIND said not in drawing (ownership Unknown).
+
+**Test that catches it:** Codex: open a clean drawing, CEFIND, Esc, read DBMOD: 0. Unit: CEFIND start-up writes nothing (no dictionary creation, no marker write).
+
+**Steps to confirm the fix (Codex or Tim):** open a drawing you have not touched, type CEFIND, press Esc, close it: no "Save changes?" question.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 78 "CEFIND", item 1 "Cold start 1", Method items 9, 12, 17); evidence `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\cefind-cancel-undo-redo-dirty.png`, `cefind-cleanblank-prompt.png`, `cefind-empty-prompt-dirty.png`, `cefind-unexpected-save-prompt.png`, `cefind-five-undo-redo.png`, `dwg-s-save-prompt-on-close.png`; data `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\cefind-cleanblank-recovery.json`.
+
+**Likely area (hypothesis only):** the CEFIND command's start (a write into the drawing, e.g. the CE_LINKS_MIGRATED_V2 marker, which was the only CE entry on CleanBlank) and the open-time pit-block migration.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1; root cause Unknown).
+
+---
+
+## BUG-215
+
+**Command / Area:** RC (Structural rectangular revision cloud), Structural 1.0.86. Related to BUG-169.
+
+**What Codex did (pass 18, DWG-S_P18 copy, 30 Sep 04:24):** DIMSCALE 20, RC, Yes to Keep OSNAP ON, two corners: cloud drawn (arcs 90). Then U as the very next command.
+
+**Expected:** one U removes the cloud (one Undo step for the cloud and its temporary layer/snap changes).
+
+**What happened:** the first U named "RC" but the cloud stayed; a second U named "REVCLOUD" and removed it. A drafter would think U did nothing.
+
+**Test that catches it:** Codex: RC, then U once: the cloud is gone. Unit/contract: RC creates one Undo step.
+
+**Steps to confirm the fix (Codex or Tim):** draw a cloud with RC, type U once: it disappears.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 92, section "RC BUG-169 - model-space results" item 5); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\RC_immediate_U_FAIL.png`. Structural log 04:26:02 shows only BeamLink.ObjectErased, no cloud error.
+
+**Likely area (hypothesis only):** the RC restore (PR #386): RC queues one silent "RC" after REVCLOUD so Enter repeats RC; that extra command may be the first U step.
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-216
+
+**Command / Area:** CDFALLSUGGEST (Civil 3.0.15): "Enter to finish".
+
+**What Codex did (pass 18, DWG-B_P18 copy, 03:33):** CDFALLSUGGEST near grated P66, entered level 19.23 m, accepted the suggested FALL toward P66 at 1:27.1 (works). At "Next level (1 placed, 0 skipped), or Enter to finish:" pressed Enter.
+
+**Expected:** Enter finishes and prints the placed/skipped count.
+
+**What happened:** "Invalid point." twice and the same prompt. Esc finished ("CDFALLSUGGEST finished. 1 placed, 0 skipped.") and kept the arrow. Same family as BUG-200 (CDCHECK Enter).
+
+**Test that catches it:** Codex: place one suggested fall, press Enter at the next prompt: it finishes. Unit: the prompt accepts an empty result.
+
+**Steps to confirm the fix (Codex or Tim):** CDFALLSUGGEST, place one arrow, press Enter at "Next level": the command ends and reports the count.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 57, section "R5 fall suggestion and check" item 2); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\R5_Enter_finish_FAIL.png`.
+
+**Likely area (hypothesis only):** `Modules/Drainage/Commands/FallSuggestCommand.cs` (~lines 65-66, the prompt text; the point prompt probably lacks AllowNone).
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-217
+
+**Command / Area:** CDPERIMETER (perimeter drain, Civil 3.0.15): the drawn tag.
+
+**What Codex did (pass 18, DWG-B_P18 copy, 04:00):** CDPERIMETER, two vertices, Enter, skip outlet, IL 18 to 17.9, Enter at Accept. Command reported "Perimeter drain PD1 placed ... Grade 1:72.3 - meets the office minimum 1:100" (that part passed).
+
+**Expected:** the drain on the plan carries its own PD tag (PD1), matching the command line and the record.
+
+**What happened:** the line on the plan repeats "AG" text and no PD tag is visible. Prompts also say "AGI vertex" and "Place this AGI drain?" while the preview says perimeter drain. Codex could not tell an intended linetype from a missing tag.
+
+**Test that catches it:** Codex: place a perimeter drain and read the visible text: PD1. Unit: the drawn text for a PD drain is its PD mark.
+
+**Steps to confirm the fix (Codex or Tim):** CDPERIMETER two points, accept: the drain is labelled PD1 on the plan.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 65, section "R6 perimeter drain"); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\R6_PD1_placed.png`. Log 03:58:08.685 "[PD] Registered surface drain PD1 handle=11C769".
+
+**Likely area (hypothesis only):** CDPERIMETER re-uses the AGI drain drawing code (AgiCommand.cs prompts "AGI vertex"), so the drawn text is the AGI tag.
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-218
+
+**Command / Area:** CSBRACINGPANEL (Structural 1.0.86).
+
+**What Codex did (pass 18, DWG-S_P18 copy, 04:08):** typed CSBRACINGPANEL.
+
+**Expected:** the bracing-length panel appears (in front, focused).
+
+**What happened:** command line said "Bracing panel shown. Set required lengths with CSBRACINGREQUIRED." No panel was visible after a refresh; only the existing Structural Time palette showed; the window inventory listed no new panel. Codex records the visible failure, not the cause. No CSBRACINGPANEL error in the Structural log.
+
+**Test that catches it:** Codex: run CSBRACINGPANEL with the Command Hub docked and closed: the panel is on screen. Unit: the panel show call brings the palette forward.
+
+**Steps to confirm the fix (Codex or Tim):** type CSBRACINGPANEL: the bracing panel is visible.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 68, section "R8 partial results"); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\R8_bracing_not_visible.png`.
+
+**Likely area (hypothesis only):** the palette host (auto-hidden or docked behind another tab, as CEBLOCKS and CEASK also show).
+
+**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+
+---
+
+## BUG-219
+
+**Command / Area:** the AutoCAD status-bar text for Manager, and any place where the version is not read from the running assembly (Manager 1.1.15 installed). Earlier sighting: X1 finding 12 (29 Sep), and pass 18 UX 27.
+
+**What Codex did (sweep C1, 30 Sep 2026):** opened CEMANAGER > Module pages for Civil, Manager and Structural (versions and hashes match the installed DLLs: Civil 3.0.15, Manager 1.1.15, Structural 1.0.86), then read the AutoCAD status bar.
+
+**Expected:** every place that shows a version shows the running one.
+
+**What happened:** the status bar says "CE MANAGER v1.1.10" while the Manager module page says 1.1.15. Pass 18 saw the same strip ("still says 1.1.10"). Colleagues would think they are on an old build.
+
+**Test that catches it:** unit: the status-bar version string equals the Manager assembly's product version; Codex: read the status bar and the Module page on the same run.
+
+**Steps to confirm the fix (Codex or Tim):** after an install, the status bar version equals the CEMANAGER Module page version.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 388 "Manager three-version agreement", UX finding 1); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\cemanager-module.png`, `cddiag-heavy-output.png`; pass 18 `P18_screenshots\Q3_manual_update_drawn.png`.
+
+**Likely area (hypothesis only):** a fixed version string in Manager (1.1.10 was the version live on 28 Sep 11:19); `Modules/Manager/Services/CeDiagnosticsService.cs` reads `Plugin.Version`, so check what the status bar reads.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-220
+
+**Command / Area:** AutoCAD start-up, Structural tools launcher window (Structural 1.0.86).
+
+**What Codex did (sweep C1, 30 Sep 2026 06:13, cold start 1):** double-clicked a drawing in Explorer with AutoCAD closed.
+
+**Expected:** a quiet start: the drawing opens and the CE tab appears; no window opens unless the drafter asks for it.
+
+**What happened:** a Structural tools launcher window appeared by itself and had to be closed with X. It appeared on two starts (not on the "no drawing" start). The drawing was ready at 40.8 s and the CE tab at 59.3 s (both include Codex's inspection delay, not a product timing). The drawing was a Civil-discipline copy (CDDISCIPLINE says Civil, set explicitly).
+
+**Test that catches it:** Codex: cold start with a Civil drawing and with a Structural drawing: no window opens unrequested.
+
+**Steps to confirm the fix (Codex or Tim):** close AutoCAD, double-click a drawing: no launcher window appears.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 1 "Cold start 1", UX finding 3); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\cold1-structural-launcher.png`.
+
+**Likely area (hypothesis only):** the Structural start-up / palette launcher (Command Hub) opening on load; not searched in code.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-221
+
+**Command / Area:** CEMANAGER > Status tab layout (Manager 1.1.15).
+
+**What Codex did (sweep C1, 30 Sep 2026):** opened CEMANAGER at its default size 1311 x 1073 and at maximised 1920 x 1080.
+
+**Expected:** each card shows its running version, build hash and "Installed next start" value separately and readable.
+
+**What happened:** in all three cards (Civil, Manager, Structural) the running build/hash text overlaps the "Installed next start" values, at default and maximised size.
+
+**Test that catches it:** Codex: read the Status tab at 1311 x 1073 and 1920 x 1080 at 100% and 150% scale: no overlap. A render test of the card layout with a 40-character hash.
+
+**Steps to confirm the fix (Codex or Tim):** open CEMANAGER > Status: every value is legible and separate.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 517, UX finding 8); screenshot `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\cemanager-status-default.png`. Codex suggestion: short version prominent, full hash in a copyable detail line.
+
+**Likely area (hypothesis only):** the Status card XAML in Manager (version + hash in one row).
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-222
+
+**Command / Area:** CEMANAGER > Settings > Civil form (Manager 1.1.15). Breaks Tim's rule: high-use windows never scroll their layout (tabs or regroup; long lists and help pages may scroll).
+
+**What Codex did (sweep C1, 30 Sep 2026):** opened CEMANAGER > Settings > Civil at 1311 x 1073.
+
+**Expected:** the settings sit in task tabs (as CDS does), all visible without a long vertical scroll.
+
+**What happened:** the whole Civil settings form needs a long vertical scroll to reach the bottom (first field to the last: Reset Civil). Codex ranks it ANNOYING; it is a standing-rule breach.
+
+**Test that catches it:** Codex: open the page at 1311 x 1073: every field reachable without the main scrollbar; or a render test that the form height fits a 1073-high window.
+
+**Steps to confirm the fix (Codex or Tim):** open CEMANAGER > Settings > Civil: fields are grouped in tabs and none needs scrolling.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 518, UX finding 7); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\cemanager-settings-civil.png`, `cemanager-settings-civil-middle.png`, `cemanager-settings-civil-lower.png`, `cemanager-settings-civil-bottom.png`. Codex suggestion: host the same task tabs CDS uses.
+
+**Likely area (hypothesis only):** `CivilSettingsView` in Manager (single long form).
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
 ## BUG-195 .. BUG-201 (Codex exploratory run X1, 29 Sep 2026 14:14-14:51, Civil 3.0.14 / Structural 1.0.85, test copies)
 
 Full steps, screenshots and logs: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_EXPLORE1_REPORT_2026-09-29.md` (finding numbers in brackets). No crash; 0 confirmed slow spots.
 1. **BUG-195 (Structural, X1 #2):** XCLMTXT import of a two-row CSV with no floor column assigned the rows to "First Floor" and "Second Floor" and the review said nothing needed attention. Expected: missing floor asked or left unassigned (Unknown stays Unknown). OPEN. **29 Sep 19:00 (controller 06): fix already on the Structural live line - commit ccd31d62 "Fix BUG-195 and BUG-196", in 1.0.86 installed 17:05 (ancestry checked). Not FIXED: Codex re-test on 1.0.86 first.**
 2. **BUG-196 (Structural, X1 #3):** STRSCHEDCREATE table outlines are drawing-size but the cell text is tiny marks - unreadable. OPEN. **29 Sep 19:00 (controller 06): fix already on the Structural live line - ccd31d62 plus 4a0bc721 (scale and cell margins), in 1.0.86; tests `TableMetrics_*`. Residual: tables already drawn keep old text; the XCLMTXT "MEMBER SCHEDULE" block keeps its fixed sizes 300/200 - **CLOSED by Tim's ruling 29 Sep ~22:50: "No, keep 300 and 200" (decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md)**; do not size it by the other schedules' rule. Not FIXED: Codex re-test STRSCHEDCREATE on 1.0.86 first.**
 3. **BUG-197 (Civil, X1 #5):** a new branch's invert labels overlap each other and its flow arrow clashes with the main's label. OPEN. **29 Sep 19:20 (controller 06): built, draft PR #388 (`claude/bug197`, base rel-20260929c; CD draw now tidies the host main's labels first; 6 new tests, focused 27/27, full Civil net10 7 failures = the known 7; PR files verified). Opus review REQUIRED (LinkService.TextClashTidyUp.cs). Watch for review: a hand-dragged main label under a new branch also moves (Reset Position undoes it). Not tested in AutoCAD.**
-4. **BUG-198 (Civil, X1 #6):** CDEDIT changing ONLY the diameter (100 -> 150) changed the displayed grade (was 1 IN 100). OPEN. **29 Sep 18:45 (controller 06): fix already on the live line - commit 89ad7fc2, in Civil 3.0.15 installed 17:05, tests `Bug198_*` in X1CdLevelsFixesTests (code read by the controller). Not FIXED: Codex re-test in Part Z on 3.0.15 first.**
-5. **BUG-199 (Civil, X1 #7):** CD with only the upstream invert typed: the calculated downstream level (18.41) is labelled "Staff entered" like the typed one. OPEN. **29 Sep 18:45 (controller 06): fix already on the live line - commit 89ad7fc2 (label now "Calculated from grade"), in Civil 3.0.15; tests `Bug199_*`. Not FIXED: Codex re-test in Part Z on 3.0.15 first.**
-6. **BUG-200 (Civil, X1 #10, UX):** CDCHECK "Enter to finish" goes to a second prompt instead of finishing; a typed next command is swallowed. OPEN. **29 Sep 19:05 (controller 06): built, draft PR #387 (`claude/bug200-201`, BUG-200 + BUG-201; 11 new tests; full Civil net10 5 failures = known). Opus review REQUIRED (SpineCheckCommand.cs). Not tested in AutoCAD.**
-7. **BUG-201 (Civil, X1 #9, UX):** ordinary pit placement prints internal diagnostic jargon on the command line. OPEN.
+4. **BUG-198 (Civil, X1 #6):** CDEDIT changing ONLY the diameter (100 -> 150) changed the displayed grade (was 1 IN 100). OPEN. **29 Sep 18:45 (controller 06): fix already on the live line - commit 89ad7fc2, in Civil 3.0.15 installed 17:05, tests `Bug198_*` in X1CdLevelsFixesTests (code read by the controller). Not FIXED: Codex re-test in Part Z on 3.0.15 first.** **Codex 30 Sep pass18: STILL FAILING on installed Civil 3.0.15 (which contains fix 89ad7fc2).** Fresh 225 UPVC pipe at 1 IN 100 (invert labels 18.00 / 17.90); double-click the label, Edit Pipe, change only Diameter to 300, Save: the label became "300 DIA. UPVC PIPE AT 1 IN 99", invert labels unchanged, no warning, command line "Pipe updated." Route differs from X1 (Edit Pipe window Save, not the CDEDIT sequence); not checked whether the `Bug198_*` tests cover it. Screenshot `P18_screenshots\N384_diameter_grade_FAIL.png` (`N384_edit_before.png` before); report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 96).
+5. **BUG-199 (Civil, X1 #7):** CD with only the upstream invert typed: the calculated downstream level (18.41) is labelled "Staff entered" like the typed one. OPEN. **29 Sep 18:45 (controller 06): fix already on the live line - commit 89ad7fc2 (label now "Calculated from grade"), in Civil 3.0.15; tests `Bug199_*`. Not FIXED: Codex re-test in Part Z on 3.0.15 first.** **Codex 30 Sep pass18: PARTLY PASSED on installed Civil 3.0.15.** PASS (Codex-accepted): route to an existing pit with only the upstream 19.5 typed: upstream "Staff entered", downstream 19.47 "Calculated from grade" (`P18_screenshots\Q3_pipe_fixture_calculated.png`); typed 18 and 17.8 both "Staff entered" (`N384_typed_staff_entered.png`). STILL FAILING for a route with two open ends: with the route picked and only IL 18 typed, the downstream field says "Calculated after pipe length is known" and the preview caption says "Unknown" until Start Pipe, although the plan then shows 17.93 / 17.90 (`N384_provenance_unknown.png`). Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 97-99).
+6. **BUG-200 (Civil, X1 #10, UX):** CDCHECK "Enter to finish" goes to a second prompt instead of finishing; a typed next command is swallowed. OPEN. **29 Sep 19:05 (controller 06): built, draft PR #387 (`claude/bug200-201`, BUG-200 + BUG-201; 11 new tests; full Civil net10 5 failures = known). Opus review REQUIRED (SpineCheckCommand.cs). Not tested in AutoCAD.** **Codex 30 Sep pass18: not specifically tested.** Only a hint: CDCHECK (All) completed on the DWG-B_P18 copy (212 objects, 184 connections, 22 findings, no crash) and Enter exited each follow-up prompt (`P18_screenshots\R5_CDCHECK_complete.png`). The BUG-200 fix (PR #387) is not in the installed 3.0.15, so this is not acceptance. The same Enter problem was found in CDFALLSUGGEST: BUG-216.
+7. **BUG-201 (Civil, X1 #9, UX):** ordinary pit placement prints internal diagnostic jargon on the command line. OPEN. **Codex 30 Sep pass18: STILL PRESENT on installed Civil 3.0.15.** PIT placement still prints "Auto inline split skipped: No inline pipe segment found at owner point. considered=50, geometryRejected=36, hitboxRejected=14, nearestPipe=11C584, nearestDistance=1060.128." (and, at a pipe end, the same text followed by hundreds of digits) before "Pit placed successfully." Screenshots `P18_screenshots\BUG192_PIT_placed.png`, `Q3_P2_open_end_placed.png`; report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (journal items under BUG-192 PIT and "Q3 open-end connection"). The fix (PR #387) is not installed.
 Also from X1: **BUG-192 REPRODUCED (X1 #1)** - CD a branch onto a main, U (view), U (CD), then REDO straight away: "Nothing to redo". **BUG-193 still failing on 3.0.14 (X1 #4)** - typing "1200 x 900" in the Pit Schedule SIZE cell shows blank outside the editor. UX (ideas): CD preview omits the pending route and completing loses the view (X1 #8); two "CE Settings" menu entries open different windows (X1 #11); status bar vs Structural Settings show different installed versions (X1 #12).
 
 ---
@@ -151,6 +552,8 @@ Also from X1: **BUG-192 REPRODUCED (X1 #1)** - CD a branch onto a main, U (view)
 
 **Status:** IN PROGRESS (29 Sep ~05:30) - built, draft PR #362: the schedule treated a typed SIZE as a pending 'override' before the resize check ran, so the resize never fired and the cell blanked. SIZE now always goes straight to the same resize route PITEDIT uses. PitSchedule tests 531/531 both lanes. Note: builder's full-suite count (12,132 total, 5 failures) differs from the usual 12,231 / 7 - the next install gate re-checks by name. Banked for the next install.
 
+**Codex 30 Sep pass18: PASSED on installed Civil 3.0.15 (Codex-accepted for this scope only: ordinary pit P1 450 x 450, not the P6 900 x 900 case).** Pit Schedule > Rows, double-click SIZE, typed `1200 x 900`, Enter, Close: the cell kept its text, the drawn pit became 1200 x 900, Edit Pit showed plan size 1200 / 900; log `[PitFit] pit P1 resized 450x450 -> 1200x900`. Screenshots `P18_screenshots\N384_size_before.png`, `N384_size_typed.png`, `N384_size_record.png`. Status left as it is: marking FIXED (Codex-accepted, pass 18) is the controller's call. Small leftover: the row group heading still showed 450 after the edit (POLISH). Report: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 101).
+
 ---
 
 ## BUG-192
@@ -168,6 +571,8 @@ Also from X1: **BUG-192 REPRODUCED (X1 #1)** - CD a branch onto a main, U (view)
 **Steps for Tim to confirm the fix:** move a pit, U, REDO: the pit goes back to where you moved it.
 
 **Status:** OPEN (reproduce cleanly first).
+
+**Codex 30 Sep pass18: STILL FAILING on installed Civil 3.0.15, reproduced five times with no command between U and REDO:** (1) PIT, U, REDO = "Nothing to redo" (`P18_screenshots\BUG192_PIT_REDO_FAIL.png`); (2) fresh pit grip-moved 767 mm, U, REDO (`BUG192_A_grip_REDO_FAIL.png`); (3) CD pipe, U, REDO (`N384_clean_CD_REDO_FAIL.png`); (4) network pit grip move, U, REDO (`Q2c_REDO_failure.png`); (5) five U then two REDO (`P3_REDO2_FAIL.png`). New evidence: the [REDO] diagnostic named a CE writer in (4) and (5): `object changed (DrawOrderTable); CE code: LinkService.OnObjectModified < ProjectDataService.TryLoadFromDrawing < ProjectDataService.ReloadAfterDrawingHistoryChange < LinkService.OnCommandEnded` (Civil log 00:17:06.297 and 02:18:58.047), and one line "96 write(s) reached the drawing between the end of REDO and the start of GRIP_STRETCH; AutoCAD discards its Redo list after a write". In (1)-(3) the clean interval had no [REDO] line. Likely area: ProjectDataService.ReloadAfterDrawingHistoryChange (draw order re-applied after U); BUG-203 (Civil awake in Structural drawings, PR #393, not installed) may add more writes. Report: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 21, 29, 30, 33, 102; section "Complete REDO diagnostic lines").
 
 ---
 
@@ -256,6 +661,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 **TIM'S WORD, 29 Sep 2026 ~12:15, drafting live on Civil 3.0.13: "its working way faster though".** Tim-accepted as a clear speed improvement in real use (rounds 1-4 installed). Kept open only for Codex's timing confirmation on 3.0.14 and the remaining items (Structural speed fix is in 1.0.82 but not yet Codex-timed).
 
 **Status:** IN PROGRESS (28 Sep evening) - Civil fix BUILT, draft PR #350 (`09e15a4a`, on top of timing PR #349): CE refreshes only the objects an edit touched at idle (full re-read kept as a logged safety net above 200 objects, after Undo/Redo, on open, or on error); the double back-to-back re-read removed; draw order re-applied only to touched objects; the endless idle save retry replaced by a proper document lock; Structural idle log only on idle/active changes. NOT changed: schedule-cell refresh (no index yet) and the start-of-command project sync (both still full passes; next round). Builds 0 errors (Civil + Structural, both lanes); full Civil net10 12,117 passed / 8 failed (known AddSystemCommand/Boyd family). Independent Opus review running. Structural speed fix builder running. Not installed, not tested in AutoCAD.
+
+**Codex 30 Sep pass18: speed evidence on installed Civil 3.0.15.** First command in a fresh drawing, a 20-point spline: ApplyPendingLinkUpdates 26.7 ms, PipeUpdates 0.1 ms count=0 (was 3,249 ms count=49 on 3.0.12) = Codex-accepted, `P18_screenshots\Q1_spline.png`. Network pit grip move (six pipes followed): 644.2 ms total (pipe updates 455.4 ms, schedule refresh 185.7 ms); STRETCH 452.6 ms; a later grip 258.0 ms; final spline and pan felt responsive. The "examined/written" counters the brief asked for were absent from the log = BLOCKED. Screenshots `Q1_P3_moved.png`, `P7_STRETCH.png`, `P14_spline20.png`. Report: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 16-18, 32, 35, 42).
 
 ---
 
@@ -397,6 +804,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 
 **Status:** OPEN (fix queued)
 
+**Codex 30 Sep pass18: NOT TESTED.** The Home and Annotate ribbon tabs were absent in the test session, so the Home-then-shift-pick check was skipped as instructed (R12). Sweep C1 items "Home then shift-pick BUG-180" and the contextual-tab items are also NOT TESTED (not reached). Reports: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 46), `CODEX_SWEEPC1_2026-09-30.md` (items 72-77).
+
 ---
 
 ## BUG-179
@@ -506,6 +915,8 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 
 **Tim's ruling (UX-SRC-05, 26 Sep, via the V3 plan discussion chat):** "cdrg and dp are not pipe dependent if anything they are similar to pits which in most cases get placed prior to pipes connecting them" - none of the three options; the premise was wrong. CDRG and DP place anywhere, like pits, before any pipe exists; pipes drawn later connect TO them the way they connect to pits (auto-join UX-PIPE-02b). **Status:** OPEN - diagnostics only in **draft PR #251** (b26695d4); build to Tim's ruling queued. Also needs PR #249 (N8 read-back fix) before any inlet can land in a drawing like DWG-B. Never mark fixed until Tim confirms.
 
+**Codex 30 Sep pass18: BLOCKED again, with a different refusal.** CDRG boundary, Close, Place, picked an ordinary new 225 UPVC pipe on the DWG-B_P18 copy: "The Civil source data could not be verified. Nothing will be placed here. Reason: The drawing and project do not describe the same complete pipe set. Move the source and pick again, or press Esc." Esc removed everything; the inlet landing itself is unproven. The fix for this bug (PR #346) is on the live line; that drawing had earlier been through the pipe-end record guard (BUG-208). Screenshot `P18_screenshots\B3_GIO_data_guard.png`; report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 82, section "05:07 Melbourne - B3 BUG-176"). UX: the message says "move the source and pick again", which cannot fix a whole-drawing mismatch.
+
 ---
 
 ## BUG-175
@@ -593,6 +1004,8 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 **Status:** IN PROGRESS — CODE COMPLETE, MERGED, AND ALREADY INSTALLED; only Tim's AutoCAD confirmation is outstanding. **PR #163** (`claude/struc-layer-restore`, tip `8d382ec0`, base `claude/struc-d1-prep`) merged 25 Sep 2026 — native commands now run REVCLOUD/MLINE inline via `Editor.Command` instead of the deferred `Document.SendStringToExecute`, and one shared helper (`LegacyToolCommon.RestoreCurrentLayer`) puts back the layer the drafter was on (only if it still exists and isn't frozen), used by RC, SFC/SFCT/SFCB/BSFC/BSFCT/BSFCB and the generic `CommandExecutionService.RestoreState` every other CeTextService command already runs through; CML's Enter-repeat fixed the same way (no layer change). **Installed on Tim's PC 25 Sep 18:19 as Structural `1.0.75+838f95ee`** (register #78) and still live in every later cumulative train off `struc-d1-prep` (confirmed present through at least `1.0.80`, 28 Sep) — this is not a pending deploy.
 
 **Re-verified 28 Sep 2026 (separate session, re-diagnosed from current code rather than trusting the note):** confirmed the fix is real and unbroken — `NativeTimToolsService.CreateRevisionCloud` runs `ed.Command("_.REVCLOUD")` inline with the layer captured/restored in a `finally`; `CeTextService.ExecuteSfMline`/`ExecuteClosedMlineCommand` run MLINE the same way; `LegacyToolCommon.RestoreCurrentLayer` checks existence/frozen state before restoring and never throws; `LayerRestoreOnRepeatContractTests` (14 tests, source-contract style — no live AutoCAD Document in this test host) all pass on the current `struc-d1-prep` tip; no later commit has touched the fixed files. All 3 Structural lanes (net48/net8.0-windows/net10.0-windows) still build 0 warnings/0 errors on current `struc-d1-prep`. **Grepped the whole Structural module for the same shape (CLAYER switch + `SendStringToExecute` hand-off) beyond the named commands** — no other match found: `ML` (bare MLINE alias) and Copy-Rotate/Move-Rotate (`CR`/`MR`, legacy Lisp bridge) and the mirror-queue/native-copy-fallback macros use `SendStringToExecute` but never switch CLAYER, so Enter-repeat of them is a no-op (same outcome either way) and there is no layer to lose; every other CLAYER-switching command (BATTER, breakline, load-bearing wall, rafter/joist, level mark, rebar, section mark, dimensions, hatch, SWELD weld mark) already draws synchronously and restores CLAYER itself in a `finally` or via the shared `CommandExecutionService` wrapper, so none of them had this bug. Nothing further to fix in code. Tim's 2027 and 2024 AutoCAD checklist is in REGRESSION_LOG.md ("BUG-169 — commands return to the layer you were on" section). Never mark fixed until Tim confirms in AutoCAD.
+
+**Codex 30 Sep pass18: mostly PASSED on installed Structural 1.0.86 (Codex-accepted, steps + screenshots):** DIMSCALE 100 gives arcs 450 (`P18_screenshots\RC_100_arc450.png`); DIMSCALE 20 with Yes gives 90 (`RC_20_cloud.png`); paper space 4.5 (`RC_paper_arc4p5.png`); inside a viewport 90 (`RC_viewport_arc90.png`); layer CLOUD colour 12 (`RC_layer_colour12.png`); Enter repeats RC and its OSNAP question (`RC_Enter_repeat.png`); Escape mid-cloud leaves nothing (`RC_cancel.png`); the drafter's layer (TIE DOWN) and OSMODE 21759 restored (`RC_OSMODE_restored.png`). One FAIL: the first U after a cloud leaves it, the second removes it = BUG-215. Not tested: comparison with an older drawing's cloud (none in the copies). Report: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 84-92).
 
 ---
 
@@ -950,6 +1363,8 @@ every line since 13 Sep).
 **Triage 29 Sep (release chat 04): fix found in code, 842b2490 / 308ea803 (PR #347), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
 
 **Status:** OPEN
+
+**Codex 30 Sep pass18: BLOCKED (no evidence either way).** CDCALC > Print > Sections and export > Preview package on DWG-B_P18: "Council: not stated"; no council computations sheet available, no export made. Needs a copy with a council set. Screenshot `P18_screenshots\B4_no_council.png`; report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 45 and 83).
 
 ## BUG-058
 
@@ -2970,6 +3385,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN — logged 2026-09-14; not fixed. Diagnose before touching either the label or the record.
 
+**Codex 30 Sep pass18: BLOCKED (fixture not reachable).** Legacy pit P6 showed Inspector "not recorded / Unknown" until Edit Pit was opened; changing the plan label P6 to P66 with EATTEDIT made the recorded number follow at once, so the "label differs from record" state could not be created and the mismatch warning was not exercised. Screenshots `P18_screenshots\T098_Inspector_unknown.png`, `T098_label_synced.png`; report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 43, section "03:09 Melbourne - Inspector triage").
+
 ---
 
 ## BUG-099
@@ -2981,6 +3398,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Triage 29 Sep (release chat 04): fix found in code, 813b4672 (Unicode glyphs), present in the installed Civil 3.0.13. Status stays open until a Codex/Tim check confirms it in AutoCAD; queued for Codex pass 18.**
 
 **Status:** OPEN — reported 2026-09-14 on the fc42544a test drive.
+
+**Codex 30 Sep pass18: BLOCKED (no symbols shown).** Inspector Selected object > Checks (blank), Drawing health > Refresh (11 pits, 49 pipes, Findings dash), On plan: no tick or warning symbol appeared, so neither a garbled nor a correct symbol was seen. Screenshot `P18_screenshots\T099_no_symbols.png`; report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 44).
 
 ---
 
