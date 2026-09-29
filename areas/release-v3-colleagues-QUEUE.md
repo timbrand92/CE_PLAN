@@ -126,11 +126,17 @@ line of the day you make it):
    `7 13 23 10 *` (13:07 once daylight saving starts). Each Friday routine re-creates every recurring timer (item 8 of
    section 1) and schedules the next Friday.
 
-**The watchdog (Tim, 29 Sep: "Yes, daily at 7am").** A scheduled task in the Claude app, `ce-holiday-watchdog`, runs at
-about 07:07 every day in its own fresh session. If this controller (the highest-numbered `build + release / 06+`
-session) has been idle for more than 3 hours, it messages you: re-read sections 1 and 3, re-create your timers, carry
-on. Your 2-hourly heartbeat is what keeps you "active", so a nudge means your timers died: obey it, then write one
-Lessons line. The watchdog survives app restarts; it does not survive the PC being off or logged out.
+**The watchdog (Tim, 29 Sep: "Yes, daily at 7am").** A scheduled task in the Claude app, `ce-holiday-watchdog`, runs a
+tiny session every day at about 07:20 (the app shows 07:20 for the 07:07 it was given). Scheduled runs cannot message
+other chats and stall on approval prompts (both tested 29 Sep), so the watchdog does no work itself: **its completion
+notice is what wakes you.**
+1. **At your first start, subscribe:** `update_scheduled_task` with `taskId: "ce-holiday-watchdog"` and
+   `notifyOnCompletion: true` (this replaces any earlier subscriber; every successor controller does it again).
+2. **When the notice arrives:** run section 1 (rules, meters, `CronList`, re-create missing timers), then carry on.
+3. **Prove it on day 1:** the first morning, write one Lessons line saying whether the 07:20 notice reached you. If it
+   did not, say so in the Friday facts: the run then depends on your timers alone, and after a Claude app restart it
+   waits until Tim messages his desk.
+The watchdog does not help if the PC is off, restarting or logged out.
 
 **The loop.**
 1. **06:00, silent:** read both meters and the desk's hand-over list. Read the last Codex run (`out\<name>.last.txt`, then
@@ -328,8 +334,8 @@ Publishing to colleagues is **not** overridden: never, while Tim is away.
       (`claude/rel-20260929c` a6e0cc87 = #383 #384) and Structural 1.0.86 (`claude/rel-20260929c-struc` 532f9550 = #385
       reviewed + #386, the RC restore after Tim's "YOU RUINED RC", Lesson 10). Tim closes AutoCAD when chat 04 asks. Then
       chat 04 starts no more builders (confirmed by chat 04, 29 Sep, area log 337).
-- [ ] **W0-2 The controller starts** (Tim pastes its prompt): rename; set the timers below; message chat 04 "taken over
-      your Codex timers; cancel yours and stop". **Arm your own Thu 04:07 launch only AFTER chat 04 confirms it has
+- [ ] **W0-2 The controller starts** (Tim pastes its prompt): rename; subscribe to the watchdog (section 3); set the
+      timers below; message chat 04 "taken over your Codex timers; cancel yours and stop". **Arm your own Thu 04:07 launch only AFTER chat 04 confirms it has
       cancelled its timers** (chat 04's 21:03 one-shot otherwise runs pass18 then draft1 itself at Thu 04:07; two
       launches would put two Codex runs on one AutoCAD). No confirmation: don't arm yours.
 - [ ] **W0-3 Wed 30 Sep: no Codex.** Wednesday's even share is spent (cap 58%, used 55%, a pass costs 8%).
@@ -551,8 +557,9 @@ LAST MESSAGE: the report path, the four counts, the FAIL list one line each, bot
    #78, alert the desk.
 5. **The chat compacts or is replaced:** the state lives in this file, the area file top, the carpark, PENDING_TESTS
    and #78. A successor starts at section 1 and re-creates the timers first.
-6. **The Claude app or the PC restarted:** timers are gone, so re-create them first. After a Windows restart nothing runs
-   until Tim logs in, which is why he paused Windows Update.
+6. **The Claude app or the PC restarted:** timers are gone, so re-create them first (the 07:20 watchdog notice is meant to
+   wake you for this). After a Windows restart nothing runs until Tim logs in, which is why he paused Windows Update. If
+   the desk forwards "wake the controller" from Tim, treat it as a watchdog notice.
 7. **The desk chat is missing** from `ListAgents`: carry on; keep section 9 current; send only alerts, with
    `PushNotification`.
 8. **Opus unavailable or its share used up:** nothing flagged by the risk check merges or installs, and no train goes in

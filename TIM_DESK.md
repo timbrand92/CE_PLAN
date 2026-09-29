@@ -70,6 +70,10 @@ except for the urgent cases in section 5.
 4. **A priority change:** an INT line (priority), plus a `SendMessage` if it changes today's work.
 5. **"Stop" or "undo":** a `SendMessage` marked URGENT to the controller at once, then the INT line; tell Tim when the
    controller confirms.
+5b. **"Wake the controller", or no Friday summary arrived, or the controller looks stopped** (its last activity in
+   `list_sessions` is hours old): the Claude app has probably restarted and wiped the timers. Send the controller
+   "WAKE: re-run your section 1 and re-create your timers" (`SendMessage` to its `local_...` session id), re-create your
+   own Friday timer, and tell Tim in one line.
 6. **A status question:** answer from the files (section 6).
 7. **Something for another product** (CE_PM, Hush, finance): its idea or bug file per ROUTER (repositories: a worktree,
    never the main checkout's unsaved files); tell him where.
