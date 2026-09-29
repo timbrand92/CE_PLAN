@@ -147,4 +147,5 @@ anything (usually nothing). Never send routine progress.
 ## 11. Hand-over list
 
 1. INT-001 — 29 Sep 18:10 — priority change + ruling — "TEMPORARY MIDDLE GROUND WHERE BUILDING STARTS AND TESTING HAPPENS OVERNIGHT" (up to 3 builders overnight, run to the limit; installs only in free windows; until Wed 30 Sep 17:40) — `decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, section "29 Sep 2026 about 18:10" — today (SendMessage sent)
-2. The next number is INT-002.
+2. INT-002 — 29 Sep 18:17 — bug (evidence for BUG-202 and BUG-189, not a new bug) — "CURRENT AUTOCAD SESSION IS STARTING TO LAG, THIS ALWAYS HAPPENS, WHY?" — carpark: the controller adds it to BUG-202. Desk read of his session at 18:16: AutoCAD started 17:06, 1.8 GB in use (2.7 GB private), 32 of 64 GB PC memory free, AutoCAD idle at that moment (0.1 of a core) — so not the PC running short; what he was doing when it lagged is not recorded — normal
+3. The next number is INT-003.
