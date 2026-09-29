@@ -224,3 +224,16 @@ The desk told Tim (29 Sep, evening) that a Codex test would run at 04:07 that ni
 
 1. Tim, verbatim: "get it to also think about the user experience of all of these things".
 2. Meaning: tonight's deep sweep (INT-012) must not only test that each thing works; for every command, button, window and message in scope Codex also judges the user experience as a drafter, and reports it as its own ranked list, not a line lost among the fails. The brief already scores wording and clicks; this asks for real UX thinking on every item, including suggestions for how to make it better.
+
+## 30 Sep 2026 (Tue night, about 00:10): Eight answers, C4 and S4 cards (Tim, clickable, via the desk)
+
+Queue section 9, item 13 (C4 card, design and calculations) and item 14 (S4 card, foundations and walls). All eight took the recommendation.
+1. **C4 (a) engineer list:** "Office list in Settings". An office list of engineer names on the Settings page, shared with Structural issue; a typed name is marked "typed".
+2. **C4 (b) Accept all vs sign-off:** "Built, switch OFF until you sign". Build it; the Pipe sizes group ships behind a Settings switch that stays OFF until Tim signs the sizing rule values.
+3. **C4 (c) markup reading:** "Only when a size is stated". "Different" only where the supplied design states a size; everything else "Can't verify", never inferred.
+4. **C4 (d) when Design opens:** "Start, During, Finish by tab". Start when no agreed design exists; During whenever one exists; Finish only by its tab.
+5. **S4 (a) retaining walls:** "Settings table, Unknown until filled". A Settings table by height band with a "fence on top" column; Unknown until Tim fills it; a real wall calculation later in S5.
+6. **S4 (b) fence post footings:** "Settings table, Unknown until filled". By fence type and height.
+7. **S4 (c) bar length rounding:** "Settings value, exact until set". Exact length shown until Tim sets the rounding.
+8. **S4 (d) bar shapes:** "Straight first, others Unknown". Other shapes Unknown until Tim confirms the office shapes.
+Kept from the cards, not a question: CSLOADPATH's "assumed size" pad must NOT be reused for the footing proposal (CE never invents a footing size, ST6-4).
