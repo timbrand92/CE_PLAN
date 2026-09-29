@@ -40,7 +40,7 @@ engineering-judgement item waiting for Tim.
 5. **Claude cap while Tim is away: 90%** of each week (Tim, 29 Sep). **Pace line = % of the week elapsed x 0.90.**
    Over the line: no new builders except fixes for a failed Codex pass; Opus only for merge-blocking reviews. Under it:
    up to 4 Sonnet builders at once. If the 5-hour window passes 80%, pause new builders until it drops.
-6. **Week 0 exception:** Claude is at 94% until Fri 2 Oct 12:00, already over 90%. Until then only Codex launches and a
+6. **Week 0 exception:** Claude was at 95% on 29 Sep about 17:00 (resets Fri 2 Oct 12:00), already over 90%. Until then only Codex launches and a
    five-line read of each result (target 1% in total, taken from Tim's 10%). No builders, no Opus, no install, no merge.
 7. **Codex:** `daily_cap.sh` gives an even share (14% a day; an unused day carries forward). An AutoCAD pass costs about
    7-8%, a sol window build 1-2%. **Unused Codex expires at its reset:** in the last 36 hours, spend what is left on
