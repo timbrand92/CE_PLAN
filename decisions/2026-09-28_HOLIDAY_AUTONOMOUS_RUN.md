@@ -139,3 +139,12 @@ line and PR comment as proof, three hard gates (train contents, install GO, merg
 2. Tim, verbatim, to the clickable question "try builders on Fable, or wait for Fri 12:00?": "i will reset usage once 100% is reached so for now build until 100%".
    Interpreted (desk): the weekly stop line moves from 97% to 100% for now; Tim resets the usage himself when it is reached. Not a Fable ruling: builders stay as they are. Everything else in the 18:10 ruling still holds (installs only in his free windows until Wed 30 Sep 17:40).
 3. Supersedes, for the stop line only, the queue's 97% pause of 29 Sep 19:03. Scope: until Tim says otherwise; the desk will ask him again if the meter reaches 100% and he hasn't reset.
+
+## 29 Sep 2026 about 21:40: Four answers to the controller's questions (Tim, clickable, via the desk)
+
+Tim, 29 Sep: "if other chat has questions for me then send them through in this chat". Questions are the queue's section 9, item 1 (numbers as there). All four answers took the recommendation.
+1. **Question 1, A6 tolerance:** "Keep 50 mm". The allowance stays at 50 mm (Settings, tagged Assumed).
+2. **Question 2, A6 hand-typed levels:** "Leave it out". A level Tim typed by hand is not listed.
+3. **Question 5, Structural front door names:** "The S names". Where two typed names do the same job (SDS/TDS, SDS1/TDS1, STS1/TTS1, SC1/TC1), the S names win. CL1/PCL and CR1/PCR stay as both. NOT answered: the Excel pair question (keep the card's long EXCELCAPTURE names or the shortest name); it stays open.
+4. **Question 9, what CE learns about a person:** "Yes, all four". (a) Numbers only, on the person's own PC. (b) Kept until the person removes it (they can see it, remove it or everything). (c) Learning starts the day it is switched on, not from old drawings. (d) Pressing Cancel does not count as declining a suggestion.
+Still waiting for Tim: questions 3, 4, 6, 7, 8 and the Excel-names part of 5.
