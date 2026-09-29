@@ -83,7 +83,7 @@
 
 **Steps for Tim to confirm the fix:** open a Structural drawing, draft normally: it feels no different, but a U followed by REDO now works there.
 
-**Status:** OPEN (29 Sep 19:10) - fix assigned to a builder tonight (lane F, Opus review required: LinkService).
+**Status:** OPEN (29 Sep 20:30) - built, draft PR #393 (`claude/bug203-quiet`, base rel-20260929c; one helper `ProjectDataService.HasCivilContent` used at open registration, `ReevaluateCivilActivity` and `IsCeOwnedDrawing`; empty record no longer written into a quiet drawing; focused 87 pass; full Civil net10 7 failures = the known 7; PR files verified). Opus review REQUIRED (LinkService, ProjectDataService). One existing test line changed (`CivilQuietModeTests` source-text guard: the string names `HasCivilContent(db)` instead of `IsDrawingActive(db)`; same rule, controller checked; Opus to confirm). Not tested in AutoCAD. Known gap: a CE pipe/pit object with NO project record at all is not detected at open (no model-space scan allowed); it wakes Civil at the next Civil command.
 
 ---
 
