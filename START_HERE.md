@@ -1,4 +1,5 @@
-> **29 Sep 2026: next chat = `CE_ACAD / release-v3-colleagues / plan / 05` - start at the "Handoff 29 Sep 2026 ~15:10" section at the END of `areas/release-v3-colleagues.md`.**
+> **29 Sep 2026 ~17:00 (plan/05 done): the release chat is now `CE_ACAD / release-v3-colleagues / build + release / 06` (Sonnet 5.5) - start at the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md`, then `areas/release-v3-colleagues-QUEUE.md` (the holiday queue, sections 0-4).**
+> *(Superseded 29 Sep ~17:00: "next chat = plan/05 - start at the Handoff 29 Sep ~15:10 section".)*
 
 > **Release chat (28 Sep 2026 on): read the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md` first.** It is Tim's standing instruction for how the release chat runs.
 
