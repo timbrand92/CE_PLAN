@@ -212,6 +212,40 @@
 
 ---
 
+## BUG-235
+
+**Command / Area:** COPY of a pit (relink by proximity) - from the Opus review of PR #417, 30 Sep 2026 ~10:20, read from the code, NOT seen in AutoCAD.
+
+**What happens:** pipes drawn by CD keep their creation-time pit IDs; OTHER pipes go to the nearest touching pit, so a copy placed slightly nearer than the original can take a pipe end from the original; a copy exactly on top of the original: the older pit wins by drawing order, with no warning (the plan: stable identity outranks proximity). Also (undone-ness): the copy's link writes are separate steps and one-Undo of them is unchecked.
+
+**Test that catches it:** copy a pit so its outline touches a pipe end owned by another pit: no end changes owner; copy exactly on top: a plain warning.
+
+**Status:** OPEN (30 Sep ~10:20) - carparked (not new; not a #417 blocker).
+
+---
+
+## BUG-236
+
+**Command / Area:** perimeter drain PD1 tag text (`AgiCommand.Apply.cs` `AppendTagLabel`): from the Opus review of PR #417.
+
+**What happens:** the PD1 text is not linked to its drain: erase, move, copy (the copy shows a second PD1) or renumber leaves it wrong; its height 250 is the shared hard-coded pipe text constant (breaks R-00: text heights belong in Settings).
+
+**Test that catches it:** erase / move / copy a perimeter drain: its PD1 text follows or goes; the height reads from Settings.
+
+**Status:** OPEN (30 Sep ~10:20) - carparked.
+
+---
+
+## BUG-237
+
+**Command / Area:** Structural OOPS after erasing a column (PR #415, Opus review): OOPS brings the column back but NOT its link to the beams.
+
+**Test that catches it:** erase a CE column that supports a beam, OOPS: the beam is linked to it again (or the beam end is flagged Unresolved until relinked).
+
+**Status:** OPEN (30 Sep ~10:20) - carparked.
+
+---
+
 ## BUG-234
 
 **Command / Area:** pipe FROM/TO records after a MOVE or a grip drag (flat or missing levels). Found by the Opus confirm 3 of PR #410 (BUG-208), 30 Sep 2026 ~10:10, read from the code, NOT seen in AutoCAD; older than #410.
