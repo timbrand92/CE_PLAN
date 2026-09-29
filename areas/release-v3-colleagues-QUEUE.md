@@ -382,7 +382,7 @@ Publishing to colleagues is **not** overridden: never, while Tim is away.
       typed bottom level ends, open the choice; the chosen value goes to the plan text, the stored levels and the project
       record together; one Undo. Codex (`bug160win`): a small one-page window "Keep your 10.30 / Use automatic 10.25";
       Enter and Esc both keep the typed value. Builds on part 1 (#354). Opus review (grips, Undo).
-- [ ] **A6 XCIVIL level flag (Tim approved 29 Sep).** Imported pipes keep their imported levels. An end whose imported
+- [ ] **A6 XCIVIL level flag — BUILT 29 Sep 19:25, draft PR #389 (`claude/a6-implvl`; 30 focused + 80 related tests pass; full Civil net10 12,600 passed / 5 known failures; risk check clean, Sonnet review enough; the only existing test file touched has additions only; NOT Codex-tested, NOT in AutoCAD; Settings-window row for the tolerance still to be built by Codex).** (Tim approved 29 Sep.) Imported pipes keep their imported levels. An end whose imported
       level disagrees with the grade at the pit wall by more than a Settings tolerance (R-00) is listed in Project Review
       ("Imported level - check"). Nothing is changed.
 - [ ] **A7 Fix wave:** everything pass 18, draft1 and sweep C1-C3 found (lane F).
@@ -533,7 +533,9 @@ LAST MESSAGE: the report path, the four counts, the FAIL list one line each, bot
 
 1. **Questions waiting for Tim** (add as found; the desk asks at most five each Friday, tap-to-answer, marked "ignore if
    busy: this item just waits"; it records his answers in `decisions\` and puts an INT item on its hand-over list):
-   none yet (29 Sep).
+   1. **A6 tolerance (engineering value, Tim's):** "Imported level - check" flags an imported pipe end more than **50 mm** away from the level the grade gives at the pit wall (Settings, tagged Assumed). Right allowance? Recommendation: keep 50 mm until a real job shows what is normal. Example: an imported invert of 18.50 against a grade-worked 18.43 is 70 mm out, so it is listed.
+   2. **A6 hand-typed levels:** a level Tim typed by hand is NOT listed (builder's judgement, not a ruling). Should it be listed too? Recommendation: leave it out, since typing it was a decision.
+   3. **BUG-196 residual (Structural):** the "MEMBER SCHEDULE" text (XCLMTXT) uses fixed sizes 300/200; size it by the same rule as the other schedules? Recommendation: yes, as a separate small fix after the STRSCHEDCREATE re-test passes.
 2. **Friday facts** (write after the Claude reset and the rules check; replace last week's block; numbers, not prose):
    1. Built this week (UX IDs and bug IDs), Codex-tested (PASS / FAIL counts), installed (versions and dates),
       Tim-accepted (none while away).
@@ -608,7 +610,8 @@ mis-name things, so confirm each family in the code before building it, and tick
 ## 13. Taken from the desk (the controller writes one line per INT item it takes)
 
 Format: `INT-NNN (date) -> queue item / bug ID / "answer recorded, unblocks <item>" / "declined: <reason>"`.
-1. INT-001 (29 Sep ~18:10) -> taken 18:25: Tim's two clicks (decision file, 29 Sep ~18:10 section, read and verified by the controller): up to 3 builders now, run to the limit, overriding his 90% cap until Wed 30 Sep 17:40; installs only in his free windows; Codex overnight as armed. Started 3 Sonnet builders 18:25: `claude/bug200-201` (BUG-200+201, CDCHECK Enter and pit-placement wording), `claude/bug197` (branch invert labels), `claude/a6-implvl` (A6, XCIVIL imported-level flag). Base `claude/rel-20260929c`. After Wed 17:40 the 90% cap returns.
+1. Builder PRs so far (29 Sep evening, all DRAFT, base `claude/rel-20260929c`): #387 BUG-200+201 (Opus review required: SpineCheckCommand.cs), #388 BUG-197 (Opus review required: LinkService.TextClashTidyUp.cs), #389 A6 (no Opus needed). Still running: A5 (`claude/a5-pick`) and UX-MSG (`claude/ux-msg`). Not merged, not installed.
+2. INT-001 (29 Sep ~18:10) -> taken 18:25: Tim's two clicks (decision file, 29 Sep ~18:10 section, read and verified by the controller): up to 3 builders now, run to the limit, overriding his 90% cap until Wed 30 Sep 17:40; installs only in his free windows; Codex overnight as armed. Started 3 Sonnet builders 18:25: `claude/bug200-201` (BUG-200+201, CDCHECK Enter and pit-placement wording), `claude/bug197` (branch invert labels), `claude/a6-implvl` (A6, XCIVIL imported-level flag). Base `claude/rel-20260929c`. After Wed 17:40 the 90% cap returns.
 
 ## 14. Opus log (the controller writes one line per Opus job; the weekly rules check counts it)
 
