@@ -63,7 +63,43 @@
 
 **Earlier plan:** Tim's 2-minute A/B with CEPERFDIAG (turn off one CE watcher at a time); if not CE-Civil, the same test with Structural unloaded (NETLOAD-free session) to prove CE vs the drawing itself.
 
-**Status:** OPEN - investigating.
+**29 Sep ~19:00 update (structural/fix/01, Fable, measured read-only on Tim's live AutoCAD; controller 06 read the report, not yet re-measured):** the lag is mostly NOT CE code. (1) AutoCAD's own main thread was at 50-77% of one core, in AutoCAD native code every sample, no CE frame. (2) CE's timed work is milliseconds. (3) The PC was loaded by builds and test suites (9.4 of 12 cores busy at 18:41) while he drafted; AutoCAD's CPU share fell to 12-28% between test runs. (4) A stray `python3 -` from a bash call spun a core for 40+ min (gone by 18:52). (5) GTX 1050 Ti 4 GB asked for 4.56 GB video memory; 43 GPU-timeout reports and a blue screen at 18:16; driver from Feb 2025; NVIDIA overlay running; unclean shutdown 05:01. **Controller action (done 29 Sep 19:00): builder/test processes run at Below Normal priority (builder_rules.txt), and while acad.exe runs at most 2 builders run at once.** For Tim, through the desk: NVIDIA app > Settings > Features > In-game overlay OFF; update the NVIDIA driver; close Firefox/Revu/ChatGPT while drafting; A/B with AutoCAD GRAPHICSCONFIG hardware acceleration OFF for one session. Real CE defects found: BUG-203, BUG-204 below.
+
+**Status:** OPEN - investigating (mostly environment; CE defects split out as BUG-203/204).
+
+---
+
+## BUG-203
+
+**Command / Area:** Civil waking up inside Structural drawings (Civil 3.0.15 / Structural 1.0.86).
+
+**What Tim did / saw:** drafting in a Structural (_STR_) drawing; laggy session (BUG-202). Found by structural/fix/01, verified in code at a6e0cc87 (not re-verified by the controller).
+
+**What happened:** the Structural drawing carries an EMPTY Civil project record. `ProjectDataService.IsDrawingActive` returns true because the CE_CVL_SUITE_PROJECT dictionary merely exists, so `DrawingDisciplinePolicy.ShouldCivilBeActive(Structural, hasCivilContent=true)` wakes Civil (LinkService.cs ~1320). Result: Civil tidy-up at every command end (250 times in 81 min), a 7-phase check at idle (1,068 calls in a day), a full cache rebuild after every U, Civil writes after U (this is probably the BUG-192 REDO killer, now also in Structural drawings), job-folder search, "CloneReconcile ... CE adoption refused" 16 times. "[PERF] CivilQuiet" appeared 0 times all day.
+
+**Expected:** "has Civil content" means real content (pits > 0, or pipes > 0, or manual rows > 0, or a CE pipe/pit object), not "the dictionary exists"; an empty record is never written or migrated into a quiet drawing. Civil stays quiet in a Structural drawing (Tim's ruling 29 Sep: Structural wakes by itself; Civil-only drawings unaffected).
+
+**Test that catches it:** (1) unit: ShouldCivilBeActive / HasCivilContent with an empty record in a _STR_ name = quiet; with 1 pit = active. (2) Codex: open a copy of a Structural drawing with an empty Civil record, run 5 QLEADERs, read the Civil log: "[PERF] CivilQuiet: skipped" and zero "[TidyUp]" lines; then U, REDO in that drawing.
+
+**Steps for Tim to confirm the fix:** open a Structural drawing, draft normally: it feels no different, but a U followed by REDO now works there.
+
+**Status:** OPEN (29 Sep 19:10) - fix assigned to a builder tonight (lane F, Opus review required: LinkService).
+
+---
+
+## BUG-204
+
+**Command / Area:** Structural settings file (Structural 1.0.86).
+
+**Found by:** structural/fix/01 (29 Sep): `CS_Settings.json` is 2.4 MB: Excel.FloorRules 15,622 entries, MarkPrefixRules 13,748, ActiveScheduleFloors 3,750 (normal is about 30). 58 code paths call SettingsService.SaveSettings, each writing the whole file. Growth path: ExcelMText / XclmTxt rule normalisation (ExcelMTextService.cs ~1757-1814, XclmTxtService.cs ~2055-2084) with no de-duplication. Not the lag; a real bloat defect (slow saves, slow start).
+
+**Expected:** duplicate rules are removed on load and save (NormalizeFloorRules returns distinct rules), lists capped, settings file stays small.
+
+**Test that catches it:** load a settings file with 15,000 duplicate rules = normalised to the unique set; a size guard (< 200 KB) on the saved output.
+
+**Steps for Tim:** none needed beyond a Codex check that Structural Settings still opens and keeps his real rules; his current file must be BACKED UP, then cleaned by the fix, never by hand (his rules are his).
+
+**Status:** OPEN (29 Sep 19:10) - queued for Friday (Structural lane; Claude meter at 97%).
 
 ---
 
