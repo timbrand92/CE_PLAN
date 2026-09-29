@@ -212,6 +212,18 @@
 
 ---
 
+## BUG-234
+
+**Command / Area:** pipe FROM/TO records after a MOVE or a grip drag (flat or missing levels). Found by the Opus confirm 3 of PR #410 (BUG-208), 30 Sep 2026 ~10:10, read from the code, NOT seen in AutoCAD; older than #410.
+
+**What happens (hypothesis):** with flat or missing levels, a pipe that keeps BOTH names still records its OLD pits when it is MOVEd straight onto two other pits, or when one end is gripped directly from pit P2 onto P3 (the stored direction is read as still valid). Suggested fix: `Helpers/ConnectedPipeFlowResolver.cs`: add `&& !storedNamesLeftTheEnds` to the `if (hasStoredDirection)` check for connected ends with flat levels. Keep this case OUT of Tim's MOVE acceptance steps for #410.
+
+**Test that catches it:** move a flat-levelled pipe with both names straight onto two other pits (and grip one end from P2 onto P3): the FROM/TO and pit records name the NEW pits on the correct sides.
+
+**Status:** OPEN (30 Sep ~10:10) - lane F after #410 merges.
+
+---
+
 ## BUG-233
 
 **Command / Area:** the computations sheet (CDCALC), the orifice discharge-coefficient line. Found by the Opus builder of PR #413 while rendering the sheet, 30 Sep 2026 ~09:10; NOT fixed.
