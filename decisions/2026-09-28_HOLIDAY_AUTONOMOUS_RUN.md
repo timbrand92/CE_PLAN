@@ -181,3 +181,9 @@ After INT-006 the controller re-checked section 9 against the plan and closed fi
 1. Tim, verbatim, after the desk relayed that the controller was holding new builders at 99%: "i never asked for anything to stop".
 2. Tim, earlier (21:15, still standing): "i will reset usage once 100% is reached so for now build until 100%". At 22:15 the desk offered three choices for the night; Tim chose "You reset usage now", meaning he resets the weekly usage himself and everything runs.
 3. Meaning (desk): no hold. Builders, Opus reviews and Codex all carry on; the controller does not pause anything to protect a meter, because Tim resets it. If the meter reaches 100% before he has reset, the controller tells the desk and the desk tells Tim; the controller does not stop by itself. Desk error, told to Tim: the desk agreed to the 99% hold too quickly on 29 Sep about 22:15, against his 21:15 word.
+
+## 29 Sep 2026 about 23:55: Usage reset, use about 90% by Fri 2 Oct (Tim, to the desk)
+
+1. Tim, verbatim: "usage has been reset, weekly usage resets on oct 2 so you can probably work a little faster to use 90% by that date, then once it resets it goes back to the regular cycle".
+2. Verified by the desk at 23:55: Claude weekly 0%, 5-hour 0%, Fable weekly 0%; the weekly window resets Fri 2 Oct about 12:00 Melbourne.
+3. Meaning: from now until Fri 2 Oct 12:00 the controller may run faster (up to 3 builders, the Opus reviews first as the Opus rule says) so that the weekly Claude meter lands near 90% at the reset, not sooner (his own 90% cap stands as the stop line) and not far below it (unused usage is wasted at the reset). After the reset the regular weekly cycle and the charter's normal pacing apply. This supersedes the 21:15 "build until 100%" and the 99% hold (both were about running out; the reset removed the problem).
