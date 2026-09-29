@@ -10,7 +10,7 @@ Answers given through clickable choices, 28 Sep 2026 about 17:30 Melbourne time:
    with AutoCAD closed, a backup made and the files read back every time. Publishing to colleagues
    still needs Tim's word. This extends the 23 Sep standing override ("from now until tuesday we build,
    test and deploy whenever we need") for the holiday, for Tim's PC only.
-2. **Claude usage split:** "75% chat, 25% me". This chat uses at most about 75% of each weekly
+2. **Claude usage split:** *(SUPERSEDED for the holiday, 29 Sep 2026: "90%", see the 29 Sep section at the end)* "75% chat, 25% me". This chat uses at most about 75% of each weekly
    Claude allowance. The other 25% is kept for Tim's own work.
 3. **Merging:** "Yes, review + Codex pass". A fix may merge to master once a stronger-model review
    AND a Codex pass in real AutoCAD have both passed. Items needing engineering judgement (council values,
@@ -55,3 +55,30 @@ and Tim leaving the PC on, logged in, with sleep off and Windows Update paused.
 3. **Supersedes** the 28 Sep morning ruling that Claude does not manage Codex usage (memory `usage-management-scope`): the release chat now manages both budgets, first priority.
 
 The working version of this charter, turned into procedure, is at the top of `areas/release-v3-colleagues.md` ("Operating charter").
+
+---
+
+## 29 Sep 2026 about 16:20: Tim's answers to plan/05 (clickable choices, `CE_ACAD / release-v3-colleagues / plan / 05`)
+
+Context given to Tim first: Claude weekly at 94% (reset Fri 2 Oct 12:00); about 160 of the ~505 V3 UX plan items appear
+in commit messages, about 345 do not; four weeks will not finish all of them properly.
+
+1. **What a colleague gets first:** "Everything first". No colleague copy until every V3 item (V3 plan + V3 UX plan) is
+   built and passes. The holiday run builds the whole of V3; the colleague release follows completion and Tim's word.
+   (The recommended "Everyday tools first" was NOT chosen.)
+2. **Claude allowance while Tim is away:** "90% (Recommended)". The release chat may use up to 90% of each weekly Claude
+   allowance during the holiday; 10% is kept for Tim's phone questions. Supersedes the 28 Sep "75% chat, 25% me" for the
+   holiday only; 75/25 returns when Tim is back unless he says otherwise.
+3. **Colleague publishing while away:** "No, ready for my return (Recommended)". Nothing is published to any colleague
+   while Tim is away. The tested copy waits, staged, with a one-page summary for his 15-minute look.
+4. **Four pending recommendations, all ticked (approved):**
+   1. **BUG-160 pick window:** after letting go of a grip drag on a grade-held pipe end whose bottom level was typed, a
+      small window asks "Keep your 10.30 / Use automatic 10.25" (Codex builds the window, Claude the behaviour).
+   2. **"Unknown" in the Pit Schedule FROM column** where CE genuinely cannot tell where a pipe comes from (BUG-067 wording stands).
+   3. **XCIVIL imported pipes keep their imported levels** at the pit wall; anything suspect is flagged in Project Review,
+      nothing changes silently (BUG-065 follow-up).
+   4. **Structural wakes by itself** on any Structural command in a Civil drawing, no Yes/No question; CSWAKE by hand
+      (PERF-DISCIPLINE-01 Structural side stands as built).
+
+Assumption stated to Tim, not yet confirmed by him: he is back about **Mon 26 Oct 2026**.
+The execution queue built from these answers: `areas/release-v3-colleagues-QUEUE.md`.
