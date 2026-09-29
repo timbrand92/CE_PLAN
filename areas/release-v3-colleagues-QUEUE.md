@@ -1,12 +1,14 @@
 # REL execution queue: the holiday run (29 Sep to about 26 Oct 2026)
 
-**Owner:** `CE_ACAD / release-v3-colleagues / build + release / 06` (Sonnet 5.5) and its successors. **Written by**
-plan/05 (Opus 5.5) on 29 Sep 2026 from Tim's answers in `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md` (29 Sep section).
+**Owner:** the controller, `CE_ACAD / release-v3-colleagues / build + release / 06` (Sonnet 5.5), and its successors
+(`/ 07`, `/ 08` ...). **Companion:** Tim's desk, `CE_ACAD / ideas / plan / 01` (charter: `C:\CE_PLAN\TIM_DESK.md`).
+**Written by** plan/05 (Opus 5.5) on 29 Sep 2026 from Tim's answers in `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`
+(both 29 Sep sections).
 
 **Status lives here.** Tick `[x]` with the date and PR/commit in the same step as the work, then commit and push
-`C:\CE_PLAN` at once. The area file `release-v3-colleagues.md` keeps the charter, Lessons, "For Tim" and the log; this
-file keeps the order. **Authority:** Tim's words in `decisions\` > `C:\TimOS\RULES.md` > the OPERATING CHARTER (area file
-top) > this queue. If this queue disagrees with a ruling, the ruling wins: fix the queue and add a Lessons line.
+`C:\CE_PLAN` at once (add files by name, never `git add -A`; ROUTER step 1b). **Authority, highest first:** Tim's words in
+`decisions\` > `C:\TimOS\RULES.md` > the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md` > this queue >
+TimOS skills' default wording. If this queue disagrees with a ruling, the ruling wins: fix the queue and add a Lessons line.
 
 **The goal (Tim, 29 Sep: "Everything first"; charter 28 Sep):** build the whole of V3 (the V3 plan and the V3 UX plan:
 about 345 UX items plus the open bugs), Codex-test it in real AutoCAD, keep it fast and reliable, and have the colleague
@@ -19,43 +21,80 @@ engineering-judgement item waiting for Tim.
 
 ---
 
-## 0. Start of every session (10 minutes)
+## 0. Two chats, one goal (Tim, 29 Sep about 17:15)
 
-1. `C:\TimOS\RULES.md` and `ROUTER.md`.
-2. Area file top only: the charter, Lessons and "For Tim when he is around". Stop at "Item 39.1"; below is history.
-3. This file: sections 1-4 in full; section 5 for the current checkpoint; sections 6-11 when needed.
+1. **The controller (this queue's owner)** builds, tests, runs Codex, installs on Tim's PC and merges, and moves the
+   queue towards the goal. **Tim does not talk to it and it does not talk to Tim.**
+2. **Tim's desk** is the only chat Tim talks to about CE while the run builds: his ideas, the bugs he sees, his rulings,
+   "how's it going", the Friday summary. It never builds, installs, merges or runs Codex.
+3. **One writer per file** (RULES 6.4). Both chats read everything.
+   1. **Controller writes:** this file; `areas/release-v3-colleagues.md` (charter, Lessons, "For Tim", log);
+      `BUG_CARPARK.md`; `PENDING_TESTS.md`; the other area files, cards and contracts; `C:\Lisp Files\_CODEX_RUNNER\*`;
+      GitHub #78 and #24; the plugin repository.
+   2. **Desk writes:** `TIM_DESK.md` (its charter and the hand-over list); `IDEAS_INBOX.md`; `decisions\` (Tim's words,
+      dated); other products' idea and bug files (ROUTER).
+4. **How they talk.**
+   1. **Desk to controller:** new work goes on the hand-over list in `TIM_DESK.md` as `INT-NNN`. The controller reads
+      the list at 06:00 and at every heartbeat, and records each item it takes in section 13 of this file
+      (`INT-NNN -> queue item or bug ID`). **Urgent only** (Tim says stop or undo something, a crash stopping work, an
+      answer that unblocks a lane): the desk also sends a one-line `SendMessage` naming the INT number.
+   2. **Controller to desk:** questions for Tim go in section 9 of this file; the Friday facts go in section 9 after each
+      Claude reset; **alerts** (a rollback, the run stopping, anything touching Tim's files) go by `SendMessage` to the
+      desk, which tells Tim. The controller never pushes to Tim's phone itself unless the desk chat is missing from
+      `ListAgents`.
+   3. **If Tim writes to the controller anyway:** reply one line, "Passing this to your desk chat", forward it with
+      `SendMessage`, carry on.
+5. **Chat 04** (`/ build + release / 04`) stops after tonight's one install and hands its Codex timers to the
+   controller (section 5). From then on, only the controller installs, merges or launches Codex (RULES 8.3).
+
+## 1. Start of every controller session: 10 minutes
+
+**Also do this after every compaction (a summary appears at the top of the chat) and every Friday after the reset.**
+Rules fade from a long chat; re-reading them is cheaper than a broken install.
+1. `C:\TimOS\RULES.md` and `C:\TimOS\ROUTER.md` (sync first: `git pull --ff-only` in `C:\CE_PLAN`).
+2. The top of `areas/release-v3-colleagues.md`: the charter, Lessons and "For Tim when he is around". Stop at
+   "Item 39.1"; below it is history.
+3. This file: sections 0-5 in full; section 6 for the current checkpoint; the rest when needed.
 4. `C:\Lisp Files\_CODEX_RUNNER\builder_rules.txt` (every builder) and `common.txt` (every Codex brief).
-5. Meters: `get_usage` (weekly and 5-hour); `bash "C:/Lisp Files/_CODEX_RUNNER/codex_usage.sh"`; `daily_cap.sh explain`.
-6. What is installed: the ProductVersion of the three Modern DLLs under `%APPDATA%\Autodesk\ApplicationPlugins\`, and
-   GitHub #78. Never trust a remembered version.
+5. The desk's hand-over list (`TIM_DESK.md`, section 4): anything not yet in section 13 is new work.
+6. Meters: `get_usage` (weekly and 5-hour); `bash "C:/Lisp Files/_CODEX_RUNNER/codex_usage.sh"`; `daily_cap.sh explain`.
+7. What is installed: the ProductVersion of the three Modern DLLs under `%APPDATA%\Autodesk\ApplicationPlugins\`, and
+   GitHub #78. Never trust a remembered version (RULES 8.4).
+8. Your timers: list them; re-create any that are missing (section 3, the loop times; section 5 for Week 0).
 
-## 1. Calendar and budgets
+## 2. Calendar and budgets
 
-1. **Tim away** Wed 30 Sep, back about **Mon 26 Oct** (assumed; he has not confirmed it). While he is away, AutoCAD on
-   his PC is free all day, every day. If a person is using the PC, don't start Codex: wait.
+1. **Tim away** Wed 30 Sep, back about **Mon 26 Oct** (assumed; not confirmed by him). While he is away, AutoCAD on his PC
+   is free all day, every day (RULES 1.8's work hours do not apply while he is away). If a person is using the PC, don't
+   start Codex: wait.
 2. **Daylight saving starts Sun 4 Oct** (02:00 becomes 03:00). All times here are Melbourne local.
 3. **Claude week** resets Fri 2 Oct 12:00, then Fri 9, 16 and 23 Oct at **13:00** (same instant, daylight time).
-4. **Codex week** resets Sun 4 Oct **05:01** (it showed 04:01 before daylight saving), then Sun 11, 18 and 25 Oct.
-   Read `resets_at`; don't assume.
-5. **Claude cap while Tim is away: 90%** of each week (Tim, 29 Sep). **Pace line = % of the week elapsed x 0.90.**
-   Over the line: no new builders except fixes for a failed Codex pass; Opus only for merge-blocking reviews. Under it:
-   up to 4 Sonnet builders at once. If the 5-hour window passes 80%, pause new builders until it drops.
-6. **Week 0 exception:** Claude was at 95% on 29 Sep about 17:00 (resets Fri 2 Oct 12:00), already over 90%. Until then only Codex launches and a
-   five-line read of each result (target 1% in total, taken from Tim's 10%). No builders, no Opus, no install, no merge.
+4. **Codex week** resets Sun 4 Oct **05:01** (it showed 04:01 before daylight saving), then Sun 11, 18 and 25 Oct. Read
+   `resets_at`; don't assume.
+5. **Claude cap while Tim is away: 90%** of each week, measured on the account-wide meter (Tim, 29 Sep). **Pace line =
+   % of the week elapsed x 0.90.** Over the line: no new builders except fixes for a failed Codex pass; Opus only for
+   merge-blocking reviews. Under it: up to **3 Sonnet builders at once** (charter 1 and Lesson 4; this overrides the
+   delegate skill's two-worker default for this run). If the 5-hour window passes 80%, start no new builder until it
+   drops. The desk chat runs on Tim's 10% and is small; other products' chats share the same meter, so the pace line
+   slows this run down if they are busy.
+6. **Week 0 exception:** Claude was at 95% on 29 Sep about 17:00 (resets Fri 2 Oct 12:00), already over 90%. Until then:
+   Codex launches and a five-line read of each result only (target 1% in total). No builders, no Opus, no install, no
+   merge.
 7. **Codex:** `daily_cap.sh` gives an even share (14% a day; an unused day carries forward). An AutoCAD pass costs about
    7-8%, a sol window build 1-2%. **Unused Codex expires at its reset:** in the last 36 hours, spend what is left on
    sweep parts.
 8. **Costs (correct these from the meters; one Lessons line per new measurement):** 5 Sonnet builders cost about 2% of
    the Claude week (27 Sep, before Sonnet 5.5). Opus review: not yet measured, so record the before and after of the first
-   three. This chat's own turns cost more as its context grows: sub-agents (Explore, model sonnet) read the big files.
-9. **Planned Claude split per week (estimate, correct it after week A):** this chat about 10 points, builders about 55
-   (roughly 100 builder runs), Opus reviews about 15 (roughly 8), reserve about 10.
+   three. Your own turns cost more as your context grows: sub-agents (Explore, model sonnet) read the big files, and you
+   never paste a large file into the chat.
+9. **Planned Claude split per week (estimate; correct it after week A):** controller about 10 points, builders about 55
+   (roughly 100 builder runs), Opus reviews and the weekly rules check about 15, reserve about 10.
 
-## 2. Lanes and the daily loop (from Fri 2 Oct 12:00)
+## 3. Lanes and the daily loop (from Fri 2 Oct 12:00)
 
 **Lanes.** Parallel builders never touch the same file; each brief lists the files it may change.
 1. **F, fixes:** Codex FAILs and open bugs. Always first.
-2. **C, Civil** (`Modules/Drainage`): waves C1-C6 in section 5.
+2. **C, Civil** (`Modules/Drainage`): waves C1-C6 in section 6.
 3. **S, Structural** (`Modules/Structural`, its own branch chain): waves S1-S5.
 4. **M, Manager, front door and packaging** (`Modules/Manager`): M1-M3. A CE_SHARED change goes to Civil and Manager
    byte-identical, lane for lane (memory "CE_SHARED is one assembly identity").
@@ -63,33 +102,40 @@ engineering-judgement item waiting for Tim.
 6. **W, windows (Codex, sol, ruling B):** every card lists its window work; Claude writes the contract in
    `04_REFERENCE\contracts\`; Codex builds the XAML through `queue3.sh`.
 
+**How to delegate** (TimOS `delegate` skill, loaded before the first dispatch of each session): every job gets a written
+brief (objective, files owned, context, constraints, deliverable, acceptance) and returns a summary only. Builders:
+`general-purpose` agents, model sonnet, `run_in_background`, told not to spawn sub-agents (memory "background split-agent
+racing"). Reviews: `csharp-reviewer` agents (read-only), model opus or sonnet as section 4 says. Reading: `Explore`,
+model sonnet.
+
 **The loop.**
-1. **06:00, silent:** read both meters. Read the last Codex run (`out\<name>.last.txt`, then its report). File every
-   FAIL as a bug (carpark template, next ID). Write every PASS as Codex-accepted (PENDING_TESTS row; carpark status
-   `FIXED — date (Codex-accepted, pass N)`). Engineering-judgement items go to section 8's question list and are never
-   accepted by Codex or Claude.
-2. **Morning, dispatch builders** up to the pace line: lane F first, then the next items of lanes C, S, M and L in
-   section 5's order. One family (2-6 related UX IDs) or one bug per builder. Brief = `builder_rules.txt` plus 5-15 lines:
-   the IDs, the UX-plan line, the card, the files it may touch, the tests, Tim's AutoCAD check steps. Queue Codex window
-   jobs (sol, medium) for the window half.
-3. **Midday, reviews:** Opus (`Agent`, model opus) for anything touching reactors or overrules, Undo, caches or queues,
-   save/close, link logic, grips, or schedule-reading rules; a Sonnet review for the rest. Every review also checks
-   what ELSE changed in the drawing output and the command's properties (Lesson 10, the RC regression of 29 Sep).
-   MERGE-WITH-FIXES goes to a Sonnet fixer on the same branch.
+1. **06:00, silent:** read both meters and the desk's hand-over list. Read the last Codex run (`out\<name>.last.txt`, then
+   its report). File every FAIL as a bug (carpark template, next ID). Write every PASS as Codex-accepted (PENDING_TESTS row;
+   carpark status `FIXED — date (Codex-accepted, pass N)`). Engineering-judgement items go to section 9's questions and are
+   never accepted by Codex or Claude (RULES 4.5).
+2. **Morning, dispatch builders** up to the pace line: lane F first, then any desk items marked "today", then the next
+   items of lanes C, S, M and L in section 6's order. One family (2-6 related UX IDs) or one bug per builder. Brief =
+   `builder_rules.txt` plus 5-15 lines: the IDs, the UX-plan line, the card, the files it may touch, the tests, Tim's
+   AutoCAD check steps. Queue Codex window jobs (sol, medium) for the window half.
+3. **Midday, reviews:** Opus for anything touching reactors or overrules, Undo, caches or queues, save/close, link logic,
+   grips, or schedule-reading rules; Sonnet for the rest. Every review also checks what ELSE changed in the drawing output
+   and the command's properties (Lesson 10, the RC regression of 29 Sep). MERGE-WITH-FIXES goes to a Sonnet fixer on the
+   same branch.
 4. **17:00, the train:** new `claude/rel-YYYYMMDD` (Civil and Manager) from `master`, and `claude/rel-YYYYMMDD-struc`
    from `claude/struc-d1-prep`; merge the reviewed PRs; bump the version in the csproj AND `PackageContents.xml`
    (Lesson 6); build every lane (net48, net8, net10) with `-p:SkipDevBundle=true -nr:false --disable-build-servers`;
-   run the full Civil net10, Manager and Structural suites; **count what ran** (zero discovered is a failure); compare
-   failures **by name** with the known list in `builder_rules.txt`; pre-build the Structural candidate (install recipe,
-   see A2).
-5. **18:00, install on Tim's PC** (charter 5, Lesson 9): AutoCAD closed, checked twice 30 s apart; no Codex run live;
-   rename the old bundles to `*_PRE_<commit>_<stamp>.backup`; copy; SHA256 every file; read ProductVersion back;
-   CE_SHARED identical in Civil and Manager, lane for lane; native ARX unchanged; name the one-step undo; update #78 and
-   the PENDING_TESTS "LIVE since" block.
-6. **19:00, tonight's Codex brief** (template, section 6): the sweep part due, plus Part Z (every fix installed since the
-   last pass, with its REGRESSION_LOG check steps), plus 5-10 old carpark re-tests. Launch with `queue3.sh` when the
-   day's share allows, otherwise at 04:07. **No full test suites on the PC while a Codex pass runs, and no building at
-   all during a long-session speed pass** (it would spoil the timings).
+   run the full Civil net10, Manager and Structural suites; **count what ran** (zero discovered is a failure, RULES 5.4);
+   compare failures **by name** with the known list in `builder_rules.txt`; pre-build the Structural candidate (install
+   recipes: A2).
+5. **18:00, install on Tim's PC.** Load the TimOS `deploy` skill and follow its safety steps (section 4, item 2 says what
+   is overridden). AutoCAD closed, checked twice 30 s apart; no Codex run live; rename the old bundles to
+   `*_PRE_<commit>_<stamp>.backup`; copy; SHA256 every file, and check no hash is empty (deploy skill 5.6); read
+   ProductVersion back; CE_SHARED identical in Civil and Manager, lane for lane; native ARX unchanged; name the one-step
+   undo; update #78 and the PENDING_TESTS "LIVE since" block.
+6. **19:00, tonight's Codex brief** (template, section 7): the sweep part due, plus Part Z (every fix installed since the
+   last pass, with its REGRESSION_LOG check steps), plus 5-10 old carpark re-tests. Launch with `queue3.sh` when the day's
+   share allows, otherwise at 04:07. **No full test suites on the PC while a Codex pass runs, and no building at all
+   during a long-session speed pass** (it would spoil the timings).
 7. **After each pass, merge:** a PR with an independent review AND a Codex PASS on what it changed merges to `master`
    (Civil/Manager) or `claude/struc-d1-prep` (Structural). Merge commits only, never rebase. After merging, diff the
    content; don't trust green (memory "a rebase silently dropped work"). Engineering-judgement items still wait for Tim
@@ -97,88 +143,161 @@ engineering-judgement item waiting for Tim.
 8. **After every Codex run:** copy the CE logs aside (memory "tests can touch Tim's real files"); check `CPROFILE` and
    `OSMODE` in the report ("Tim", 21759); diff `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` with the last baseline and
    put back only single values a test changed, never a blanket restore.
-9. **Heartbeat** every 2 hours, silent unless something happened (Lesson 8). **One Lessons line per day.** Tick this
-   file, the carpark, PENDING_TESTS and IDEAS_INBOX in the same step as the work; commit and push each time (ROUTER 1b).
+9. **Heartbeat** every 2 hours, silent unless something happened (Lesson 8): read the hand-over list, check running
+   builders and Codex, act. **One Lessons line per day.** Tick this file, the carpark and PENDING_TESTS in the same step
+   as the work; commit and push each time.
+10. **Fridays, just after the Claude reset:** re-read section 1; run the **weekly rules check**: one Opus reviewer with
+    fresh context and this checklist, fixing nothing:
+    1. Every install this week has a backup name, two closed checks, non-empty hashes and a read-back in #78.
+    2. Every merge has an independent review and a Codex PASS on what it changed.
+    3. No test was deleted, skipped, muted or loosened to get green (delegate skill 5.6); failures compared by name.
+    4. No carpark or PENDING_TESTS row says FIXED or accepted without Codex or Tim evidence; the four words never merged.
+    5. Usage stayed under the pace line; no rule on the never-alone list (section 4) was crossed.
+    6. Lessons were written; the queue ticks match git and #78.
+    Its findings go in Lessons and in the Friday facts. Then write the Friday facts (section 9) and message the desk
+    "Friday facts ready".
 
-## 3. Standing rules for this run (added to the charter, not replacing it)
+## 4. The rules for this run
 
-1. **Base branch:** until A1 is done, builders branch from the live line named in #78 (29 Sep: `claude/rel-20260929b`;
-   Structural `claude/rel-20260929b-struc`). After A1: `origin/master` and `origin/claude/struc-d1-prep`. Update
-   `builder_rules.txt` in the same hour (on 29 Sep it still named `rel-20260929a`).
-2. **Card before code** (AGENTS.md review gate). Each family gets a short card in `04_REFERENCE\ux-plan\cards\` first:
+**1. TimOS, where each rule bites.**
+1. **RULES 4 (four words):** built, tested, installed, Tim-accepted, plus "Codex-accepted" (4.5); never merged, never a
+   percentage.
+2. **RULES 5 (the real thing):** count tests; open the PDF; look at the window (Codex screenshots); say what was not tested.
+3. **RULES 6 (verify other chats):** every builder's, reviewer's and Codex's claim is checked before it is repeated or
+   acted on: "already fixed" means read the code; "pre-existing failure" means compare names; "installed" means read
+   the DLL.
+4. **RULES 8 (git and installs):** you own git; save after each working piece with a one-line undo; one live version,
+   read from disk; combine, then install once (8.5); every install names its undo (8.6).
+5. **RULES 9 (plans):** status only here and in the area file; decisions only in Tim's words (the desk writes them);
+   record what is learnt the same day (9.9).
+6. **RULES 11 (private data) and ROUTER step 5:** no client name or address in any repo, commit, branch, PR or picture;
+   `C:\CE_DrawingIntelligence` is never opened.
+7. **RULES 12 (never guess)** and the Autodesk API guardrails (`ENGINEERING_RULEBOOK.md`): Unknown stays Unknown; if
+   the documents and the log don't settle it, say "insufficient information" and propose the probe.
+8. **RULES 13 (bugs):** the five things for every bug; FIXED only on Tim's or Codex's evidence.
+9. **RULES 14 (handoffs):** the `handoff` skill at 85-90% context or when the work changes shape (a Friday reset with
+   the context over half full counts); never mid-operation.
+10. **Skills:** `delegate` (every builder or Codex job), `deploy` (every install, with item 2 below), `handoff`,
+    `leak-scan` (automatic on every push; never `--no-verify`). Not used by this run: `overnight`, `tech-watch`.
+
+**2. What Tim's 28 Sep ruling overrides, and nothing more** (RULES 14.6; `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`):
+1. **The deploy skill's trigger line and its hard limit 4.1** ("only on Tim's phrase"): for this run, installs on
+   **Tim's own PC** happen at the controller's discretion (Tim: "Yes, my PC only"). Every other step of the deploy skill
+   stands. Its section 1.4 note about a signing-key mismatch is out of date (corrected 24 Sep: no mismatch); follow the
+   install recipes in A2, not that note.
+2. **RULES 7.1/7.2 (one small task per chat):** this chat builds continuously across areas in daily batches, because
+   Codex tests every batch.
+3. **Charter items 3 and 10** (Tim's messages, updates to Tim) are carried out by the desk (Tim, 29 Sep).
+Publishing to colleagues is **not** overridden: never, while Tim is away.
+
+**3. Never alone.** Put the question in section 9 (or send it to the desk if it blocks a lane) and work on something else:
+1. Any engineering value, council value, design rule, sizing choice or Structural computation result.
+2. Retiring, hiding or renaming a visible command or button (old typed names stay forever, UX-NAMES-01).
+3. Deleting anything: files, branches, working copies, bundles, carpark entries, tests (RULES 6.6 of the charter;
+   ROUTER step 5.8).
+4. Publishing anything to a colleague, the IT Admin folder or a signed approval.
+5. A persistent setting on the PC (a scheduled task, a registry value, a power or update setting), or an AI key, a paid
+   service or a privacy choice.
+6. Changing or reinterpreting one of Tim's rulings; turning an unanswered question into a decision.
+7. Skipping an Opus review on the risk list, merging without a review and a Codex PASS, installing from a failed build.
+8. Changing a test's expectation to get green: that comes back as a question.
+9. Anything not recorded anywhere: say so; don't fill the gap.
+
+**4. If this happens, do that.**
+1. **Codex FAIL** on an item: file the bug; a lane F builder next morning; re-test in the next Part Z; the PR does not merge.
+2. **Codex BLOCKED:** record why; fix the brief or the test drawing; re-run next pass. Blocked twice: a question in
+   section 9.
+3. **Codex says PASS without steps or a screenshot:** treat it as NOT TESTED (RULES 5.6).
+4. **A builder says "already fixed":** read the code yourself; if true, a Part Z re-test, not a new fix.
+5. **A builder says "pre-existing failures":** compare names with the known list; a new name is that builder's
+   regression until proven otherwise.
+6. **Two PRs need the same file:** stack them or run them one after the other; never in parallel.
+7. **A review says DO-NOT-MERGE:** the PR stays out of the train; fix it or park it with the reason.
+8. **The train shows a new failing test name:** find the PR that brought it (one PR at a time), drop it from the train,
+   install without it.
+9. **Over the pace line:** let running builders finish, start none, keep Codex going.
+10. **An urgent desk message from Tim:** do it next, once the current step reaches a safe point, unless it crosses the
+    never-alone list; then reply to the desk with the reason.
+11. **A card needs Tim's answer:** the question goes in section 9; build the parts it doesn't touch.
+12. **Install read-back mismatch, or CE fails Codex's start-up check:** roll back at once (rename the backup back),
+    record it in #78, alert the desk.
+13. **Not sure whether something is engineering judgement:** treat it as judgement.
+14. **Two sources disagree** (a document and the drive, two chats, a skill and a ruling): the drive and Tim's words win;
+    say which was wrong in Lessons (RULES 6.2).
+
+**5. Standing rules from the plan.**
+1. **Base branch:** until A1 is done, builders branch from the live line named in #78 (29 Sep: `claude/rel-20260929c`
+   Civil/Manager and `claude/rel-20260929c-struc` Structural, if chat 04's install went in; otherwise the `b` lines).
+   After A1: `origin/master` and `origin/claude/struc-d1-prep`. Update `builder_rules.txt` in the same hour (on 29 Sep it
+   still named `rel-20260929a`).
+2. **Card before code** (AGENTS.md review gate): each family gets a short card in `04_REFERENCE\ux-plan\cards\` first:
    what the drafter clicks and sees, prompts, window, preview, Escape, one Undo, save/reopen, tests, Codex steps. A card
    built only from Tim's rulings, with no open question, is approved in principle and may be built (practice since
    26 Sep, area log items 195 and 198; Tim can still reject it). A card with an open question: build the parts it
-   doesn't touch, and put the question in section 8.
-3. **Engineering judgement stays Tim's** (RULES 4.5): council values, design rules, sizing, Structural computations.
-   Build them settings-first (R-00) with values tagged Assumed or with their source, mark them "Needs Tim's engineering
-   acceptance", and let Codex accept the mechanics only.
+   doesn't touch; the question goes in section 9.
+3. **Engineering judgement stays Tim's** (RULES 4.5): build settings-first (R-00) with values tagged Assumed or with their
+   source, mark "Needs Tim's engineering acceptance", and let Codex accept the mechanics only.
 4. **The 2022-2024 lane:** every change builds net48, but this PC cannot run AutoCAD 2022-2024. Every report says
-   "2022-2024: built and unit-tested, not AutoCAD-tested". UX-MIX-03 stands: no automatic pipe upgrade on colleagues'
-   PCs until the 2022-2024 enabler is proven.
-5. **Opus reviews are not optional** on the risk list (Lesson 3), even under usage pressure: slow the builders instead.
-6. **Unfinished features ship hidden:** anything not Codex-accepted at a train stays off the ribbon and out of Help (a
-   switch, not a removal). Old typed names stay forever (UX-NAMES-01). Hiding an existing visible command needs Tim.
-7. **Speed framework** (ENGINEERING_RULEBOOK): every PR states its [PERF] effect; any CE handler over 50 ms is a bug.
-8. **Never:** install from a failed build; delete spine IDs; publish to colleagues; open or copy
-   `C:\CE_DrawingIntelligence`; put a client name or address in a repo, commit, branch, PR or screenshot name; create a
-   new build, deploy or versioning script (Codex briefs are not scripts); set up a persistent schedule or change a
-   setting on the PC without Tim.
-9. **Only this chat runs the queue.** No other chat installs, merges or launches Codex while it runs.
+   "2022-2024: built and unit-tested, not AutoCAD-tested". UX-MIX-03 stands: no automatic pipe upgrade on colleagues' PCs
+   until the 2022-2024 enabler is proven.
+5. **Unfinished features ship hidden:** anything not Codex-accepted at a train stays off the ribbon and out of Help (a
+   switch, not a removal).
+6. **Speed framework** (`ENGINEERING_RULEBOOK.md`): every PR states its [PERF] effect; any CE handler over 50 ms is a bug.
+7. **No new build, deploy or versioning scripts** (RULES 10.5); Codex briefs are not scripts.
 
-## 4. Week 0: Codex tests only (Tue 29 Sep to Fri 2 Oct 12:00)
+## 5. Week 0: Codex tests only (Tue 29 Sep to Fri 2 Oct 12:00)
 
-- [ ] **W0-1 Tue evening:** chat 04 does ONE last install if it is pre-built and gated before Tim leaves: Civil 3.0.15
-      (#383, #384) and Structural 1.0.86 (#385 reviewed + #386, the RC restore after Tim's "YOU RUINED RC", Lesson 10).
-      Tim closes AutoCAD when it asks (his today-only rule). Then chat 04 starts no more builders (Claude at 95%). If it is
-      not ready before Tim leaves, it waits for Friday's train (A4).
-- [ ] **W0-2 Tim pastes the build/06 prompt.** build/06 renames itself, asks to turn on Remote Control (so Friday
-      summaries reach Tim's phone), sets the timers below, then messages chat 04: "taken over your Codex timers; cancel
-      yours and stop". Chat 04 confirms and stops.
+- [ ] **W0-1 Tue evening (chat 04):** one last install, pre-built at `C:\CEPay\p15`: Civil 3.0.15 and Manager 1.1.15
+      (`claude/rel-20260929c` a6e0cc87 = #383 #384) and Structural 1.0.86 (`claude/rel-20260929c-struc` 532f9550 = #385
+      reviewed + #386, the RC restore after Tim's "YOU RUINED RC", Lesson 10). Tim closes AutoCAD when chat 04 asks. Then
+      chat 04 starts no more builders (confirmed by chat 04, 29 Sep, area log 337).
+- [ ] **W0-2 The controller starts** (Tim pastes its prompt): rename; set the timers below; message chat 04 "taken over
+      your Codex timers; cancel yours and stop". **Arm your own Thu 04:07 launch only AFTER chat 04 confirms it has
+      cancelled its timers** (chat 04's 21:03 one-shot otherwise runs pass18 then draft1 itself at Thu 04:07; two
+      launches would put two Codex runs on one AutoCAD). No confirmation: don't arm yours.
 - [ ] **W0-3 Wed 30 Sep: no Codex.** Wednesday's even share is spent (cap 58%, used 55%, a pass costs 8%).
-- [ ] **W0-4 Thu 1 Oct 04:07,** in the background: pass 18 on whatever is installed (3.0.15 / 1.0.86 if W0-1 happened,
-      else 3.0.14 / 1.0.85: add the RC check and #383/#384's steps to pass18.txt if W0-1 happened), then synthetic
-      drafting test 1 (Tim's Thursday):
+- [ ] **W0-4 Thu 1 Oct 04:07,** in the background: pass 18 (chat 04 added the RC check and #383/#384's steps), then
+      synthetic drafting test 1 (Tim's Thursday):
       `MAXC=1 bash "C:/Lisp Files/_CODEX_RUNNER/queue3.sh" "pass18|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6-astra|low|auto|8" "draft1|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6-astra|low|auto|8"`
       If the runner skips draft1 for the day's share, it goes first on Friday. Read the two `.last.txt` files only;
       filing waits for Friday 12:00.
-- [ ] **W0-5 Thu:** write `sweepC1.txt`, `sweepC2.txt`, `sweepC3.txt` (section 6) and `bug160win.txt` (A5), short.
+- [ ] **W0-5 Thu:** write `sweepC1.txt`, `sweepC2.txt`, `sweepC3.txt` (section 7) and `bug160win.txt` (A5), short.
 - [ ] **W0-6 Fri 2 Oct 04:07:** in this order until the day's share is used: `draft1` (if skipped), `sweepC1` (cost 8),
       `branchwin` (the queued window job, cost 2), `bug160win` (sol, medium, cost 2).
 - [ ] **W0-7 Sat 3 Oct 04:07:** whatever Friday skipped, then `sweepC2` and `sweepC3`: this spends the last of Codex's
       week before Sun 05:01.
 
-## 5. The queue
+## 6. The queue
 
-### 5a. Week A opening: Fri 2 Oct 12:00, in this order
+### 6a. Week A opening: Fri 2 Oct 12:00, in this order
 
-- [ ] **A1 Converge the trunk.** Nothing has merged to master since 28 Sep; about 35 draft PRs (#349 to #385) sit on
+- [ ] **A1 Converge the trunk.** Nothing has merged to master since 28 Sep; about 37 draft PRs (#349 to #386) sit on
       release branches.
-      1. List every PR in the live lines (`rel-20260929b`, `rel-20260929b-struc`) with its review verdict, its Codex
-         evidence (passes 16, 17, X1, 18 and sweep C1-C3) and the result. A sub-agent does the reading.
+      1. A sub-agent lists every PR in the live lines with its review verdict, its Codex evidence (passes 16, 17, X1, 18
+         and sweep C1-C3) and the result.
       2. Anything that FAILED a pass is fixed on top first (lane F).
       3. One converge PR each: the live Civil/Manager line into `master`, the live Structural line into
          `claude/struc-d1-prep`. Merge commits, never rebase. Afterwards diff `master` against the live line: it must be
          empty apart from what was deliberately held (#88 CDMOVETEST stays off).
       4. Close each constituent draft PR with "merged via #N". Delete nothing.
-      5. Update `builder_rules.txt`: base branches, known-failure list. Same hour.
+      5. Update `builder_rules.txt`: base branches and the known-failure list. Same hour.
 - [ ] **A2 Make the area file cheap to read.** First lift the two install recipes (Civil: memory
-      `codex-runner-and-install-recipe`; Structural: area log item 323) into a short "Install recipes" section at the top.
-      Then move log items 1-335 of `release-v3-colleagues.md`, word for word, to
-      `archive/chat-records-2026-09/REL_LOG_ITEMS_001-335.md`, leaving a one-line pointer. Keep the charter, Lessons,
-      "For Tim", sections 1 to 5c and the 29 Sep handoff. Same for PENDING_TESTS "LIVE since" blocks older than 28 Sep.
-      Moving, never deleting.
+      `codex-runner-and-install-recipe`; Structural: area log item 323; plus the REL-09 hand-install and rollback steps)
+      into a short "Install recipes" section at the top. Then move log items 1-337 of `release-v3-colleagues.md`, word for
+      word, to `archive/chat-records-2026-09/REL_LOG_ITEMS_001-337.md`, leaving a one-line pointer. Keep the charter,
+      Lessons, "For Tim", sections 1 to 5c and the 29 Sep handoff. Same for PENDING_TESTS "LIVE since" blocks older than
+      28 Sep. Moving, never deleting.
 - [ ] **A3 Carpark hygiene** (charter: "constantly being reduced"). A sub-agent sorts every entry not FIXED or WONT FIX:
       (a) V3-era and still real; (b) already fixed in code, with the evidence: goes to Part Z for a Codex re-test;
-      (c) about code V3 retired: propose "WONT FIX — retired in V3", listed for Tim, NOT applied; (d) needs Tim. Bring
-      the Status Summary table up to date (BUG-158, for example, still says OPEN though its fix merged in #347). Then 5-10
-      re-tests a night until (b) is empty.
+      (c) about code V3 retired: propose "WONT FIX — retired in V3" in section 9 for Tim, NOT applied; (d) needs Tim.
+      Bring the Status Summary table up to date (BUG-158, for example, still says OPEN though its fix merged in #347).
+      Then 5-10 re-tests a night until (b) is empty.
 - [ ] **A4 Structural 1.0.86, only if W0-1 did not install it:** confirm #385's review covered the floor-prefix rule
       (1FB1, GB2, B1, PB1, level-prefixed tags) and the Insert blocking change, and that #386 restores RC exactly as it
       was before 8d382ec0 (Lesson 10: diff RC's properties before and after); then the next train.
 - [ ] **A5 BUG-160 part 2, the pick window (Tim approved 29 Sep).** Claude: when a grip drag on a grade-held pipe with a
       typed bottom level ends, open the choice; the chosen value goes to the plan text, the stored levels and the project
-      record together; one Undo. Codex (`bug160win`): a small one-page window "Keep your 10.30 / Use automatic 10.25",
+      record together; one Undo. Codex (`bug160win`): a small one-page window "Keep your 10.30 / Use automatic 10.25";
       Enter and Esc both keep the typed value. Builds on part 1 (#354). Opus review (grips, Undo).
 - [ ] **A6 XCIVIL level flag (Tim approved 29 Sep).** Imported pipes keep their imported levels. An end whose imported
       level disagrees with the grade at the pit wall by more than a Settings tolerance (R-00) is listed in Project Review
@@ -187,9 +306,9 @@ engineering-judgement item waiting for Tim.
 - [ ] **A8 V3-era open bugs,** after A7: BUG-192 (read pass 18's [REDO] line first), BUG-197, 200 and 201 (the rest of
       X1), BUG-069 (#369 held: decide with a review), BUG-180, BUG-172, BUG-171; then category (a) of A3.
 
-### 5b. The waves (take the next item in each lane; the checkpoints are targets, not promises)
+### 6b. The waves (take the next item in each lane; the checkpoints are targets, not promises)
 
-**Lane C, Civil** (the remaining IDs of each family are in section 10)
+**Lane C, Civil** (the remaining IDs of each family are in section 11)
 1. **C1 Foundations every command uses:** UX-LOOK-01 (every window gets the one-page shell, window by window, with the
    Codex review's item 19 "tabs, not scrollbars" folded in), UX-WIN-01..04, UX-CMD-01/03/04, UX-UNDO-01, UX-MSG-01..03
    (the CE bell), UX-FAIL-01/02, UX-PANEL-01/02, UX-SET-02/03/05/06 (06 is the LPD note box), UX-LYR-01..04, UX-LIVE-01,
@@ -231,20 +350,20 @@ engineering-judgement item waiting for Tim.
 2. **L2 CE proposes, Civil** (cards approved in principle): L3-LEVELS, then L3-SOURCES, L3-DETENTION, L3-NETWORK
    (UX-L3-01..26; the chooser is UX-L3-19/20).
 3. **L3 Reading mark-ups and Ask CE:** UX-QA-01..08, UX-AI-01..07. First find out what the AI runtime needs (key, proxy,
-   cost). A key, a paid service or a privacy choice is Tim's: park it with the question.
+   cost). A key, a paid service or a privacy choice is Tim's (never-alone item 5): park it with the question.
 4. **L4 Structural proposals:** UX-SL3-01/02.
 
 **Checkpoints**
 1. **Fri 9 Oct:** A1-A8 done; C1 and S1 built; C2 half built; L1 built; the Civil sweep finished; fewer open bugs than
    on 2 Oct.
-2. **Fri 16 Oct:** C2 and C3 built; S2 built; M1 built; L2 LEVELS and SOURCES built; the Structural sweep finished; real-job
-   comparison 1 done.
+2. **Fri 16 Oct:** C2 and C3 built; S2 built; M1 built; L2 LEVELS and SOURCES built; the Structural sweep finished;
+   real-job comparison 1 done.
 3. **Fri 23 Oct:** C4 and C5 built; S3 built; M2 built; L2 finished; UX human-use pass 1 done.
 4. **Tim's return:** C6 and S4 built; S5, L3 and L4 built or in progress; fix-out done; final full regression passed;
-   the candidate staged (M3); the return page (section 11) written.
-If a checkpoint slips, never cut checks to catch up: say so in the Friday summary with the new date.
+   the candidate staged (M3); the return page (section 12) written.
+If a checkpoint slips, never cut checks to catch up: say so in the Friday facts with the new date.
 
-## 6. The Codex programme
+## 7. The Codex programme
 
 1. **The nightly pass** (one a day; a second when the week allows): the sweep part due, plus Part Z, plus carpark
    re-tests. About 8%.
@@ -269,9 +388,9 @@ If a checkpoint slips, never cut checks to catch up: say so in the Friday summar
 3. **Structural sweep, from Sun 11 Oct:** S1 front door, ribbon families, settings, CSWAKE and staying quiet in Civil
    drawings; S2 beams and columns (commands 1, 2, 4, 5; D2 connected framing; grips; MOVE bringing beams); S3 schedules
    (XCLMTXT, STRSCHED*, member, footing, pier, lintel); S4 tags, marks, notes, symbols, sections, the detail library;
-   S5 foundations, slabs, bracing, lintels, retaining; S6 CEARCHREVIEW (2027 native), sheets and issue, long session.
+   S5 foundations, slabs, bracing, lintels, retaining, RC; S6 CEARCHREVIEW (2027 native), sheets and issue, long session.
 4. **Weekly:** a long-session speed pass, alternating Civil and Structural (C8 and S6 count in their sweep weeks).
-5. **Drafting:** draft1, synthetic (Thu 1 Oct); RJ1, real job (section 7, week B); draft2, a harder synthetic job
+5. **Drafting:** draft1, synthetic (Thu 1 Oct); RJ1, real job (section 8, week B); draft2, a harder synthetic job
    (week C); RJ2 (week D, if RJ1 went well).
 6. **UX human-use pass** (week C, and again before staging): Codex acts as a colleague who has never seen CE, using only
    Help and the colleague notes on a synthetic job, and scores clicks, time, wording and dead ends.
@@ -298,7 +417,7 @@ what happened, what was expected), then UX findings ranked, then the slow [PERF]
 LAST MESSAGE: the report path, the four counts, the FAIL list one line each, both profile checks.
 ```
 
-## 7. Real-job drafting comparison (Tim, 29 Sep: "Both: made-up Thu, real later" and "Yes, you pick")
+## 8. Real-job drafting comparison (Tim, 29 Sep: "Both: made-up Thu, real later" and "Yes, you pick")
 
 1. **When:** once CD-BRANCH-01 (branch pipes, free ends) and the speed work are Codex-accepted; about week B.
 2. **Pick** an easy single-dwelling stormwater job with an issued C01, from the office Projects folder (path in
@@ -311,24 +430,24 @@ LAST MESSAGE: the report path, the four counts, the FAIL list one line each, bot
 4. **Record** the anonymised lessons in the repo (what CE got wrong, what took longest); client detail stays local
    (RULES 9.9).
 
-## 8. Tim while he is away
+## 9. For Tim, through the desk (the controller writes this section; the desk reads it and talks to Tim)
 
-1. **The Friday summary**, just after the Claude reset: a one-line phone push, then in the chat, FOR TIM style,
-   numbered, no tables:
-   1. The four words, counted separately: built, Codex-tested, installed (version), Tim-accepted.
-   2. Three things he would notice in AutoCAD, each with a real example.
+1. **Questions waiting for Tim** (add as found; the desk asks at most five each Friday, tap-to-answer, marked "ignore if
+   busy: this item just waits"; it records his answers in `decisions\` and puts an INT item on its hand-over list):
+   none yet (29 Sep).
+2. **Friday facts** (write after the Claude reset and the rules check; replace last week's block; numbers, not prose):
+   1. Built this week (UX IDs and bug IDs), Codex-tested (PASS / FAIL counts), installed (versions and dates),
+      Tim-accepted (none while away).
+   2. Three things Tim would notice in AutoCAD, each with a concrete example.
    3. Up to three problems.
-   4. Both meters.
-   5. Next week in three lines.
-   6. Up to five tap-to-answer questions (AskUserQuestion) that would unblock building, each marked "ignore if busy:
-      this item just waits".
-2. **Pings between Fridays only for:** an install that stopped AutoCAD or CE starting (with the rollback done); anything
-   touching his real files or data (a leak-scan trip, his settings changed); the run stopping (usage gone early, PC
-   trouble); a question blocking a whole lane for more than two days.
-3. **His messages never stop the work** (charter 3): classify, file, give a rough time or %, carry on.
-4. **Questions waiting for the next Friday** (add as found; ask at most five): none yet (29 Sep).
+   4. Claude and Codex meters.
+   5. The checkpoint status and next week in three lines.
+   6. The rules check's findings.
+3. **Alerts to the desk between Fridays, only for:** an install that stopped AutoCAD or CE starting (with the rollback
+   done); anything touching Tim's real files or data (a leak-scan trip, his settings changed); the run stopping (usage
+   gone early, PC trouble); a question blocking a whole lane for more than two days.
 
-## 9. When something goes wrong
+## 10. When something goes wrong
 
 1. **Claude runs out early:** stop the builders; keep Codex going on sweep parts with launch-only turns; resume at the
    reset.
@@ -336,16 +455,15 @@ LAST MESSAGE: the report path, the four counts, the FAIL list one line each, bot
 3. **A train fails to build or loses tests:** never install (a hard block). Drop the PR from the train or fix it, and
    install tomorrow.
 4. **A read-back mismatch, or CE fails Codex's start-up check:** roll back at once (rename the backup back), record it in
-   #78; ping Tim only if the rollback failed.
+   #78, alert the desk.
 5. **The chat compacts or is replaced:** the state lives in this file, the area file top, the carpark, PENDING_TESTS
-   and #78. A successor starts at section 0 and re-creates the timers first.
+   and #78. A successor starts at section 1 and re-creates the timers first.
 6. **The Claude app or the PC restarted:** timers are gone, so re-create them first. After a Windows restart nothing runs
    until Tim logs in, which is why he paused Windows Update.
-7. **Context:** keep this chat's context small (sub-agents read the files). At a Friday reset with the context over half
-   full, hand off (RULES 14.2, "when the work changes shape"): the handoff goes at the end of the area file; the next chat
-   is `CE_ACAD / release-v3-colleagues / build + release / 07`.
+7. **The desk chat is missing** from `ListAgents`: carry on; keep section 9 current; send only alerts, with
+   `PushNotification`.
 
-## 10. V3 UX items not found in any commit message (from `git log --all`, 29 Sep 2026)
+## 11. V3 UX items not found in any commit message (from `git log --all`, 29 Sep 2026)
 
 About 160 of the plan's roughly 505 item IDs appear in commit messages; the roughly 345 below do not. A commit message can
 mis-name things, so confirm each family in the code before building it, and tick the family here when it is built.
@@ -368,7 +486,7 @@ mis-name things, so confirm each family in the code before building it, and tick
    CHK 01-03; NOTES 01.
 9. **Big features, L1-L4:** LEARN 01-04; L3 01-26; QA 01-08; AI 01-07; SL3 01, 02.
 
-## 11. For Tim's return (one page; the full list is "For Tim when he is around" at the area file top)
+## 12. For Tim's return (one page; the full list is "For Tim when he is around" at the area file top)
 
 1. **Look at the staged copy** (15 minutes), then yes or no to the pilot, and name the colleague (AutoCAD 2027 first).
 2. **The 2022 check** on his VM (AutoCAD 2022 was not installed on the VM on 24 Sep).
@@ -377,10 +495,15 @@ mis-name things, so confirm each family in the code before building it, and tick
    shows "DP" rather than "DP1"; a `_STR_` drawing with CE Civil content is fully Civil-active (log item 330);
    CDPIPEOBJ, a ribbon button or hidden; the CE menu start-up warning on 2022; the Glen Eira rainfall basis (94 against
    105 mm/h); the stray template backup file; BUG-163's 30-second check; everything marked "Needs Tim's engineering
-   acceptance".
+   acceptance"; the carpark entries proposed "WONT FIX — retired in V3" (A3).
 4. **Suggestions saved for him** (charter 10):
    1. A daily wake-up task in the Claude app, so a long run restarts itself after an app restart (a persistent setting:
       needs his yes).
    2. AutoCAD 2022 on his VM with Codex able to test there, so the 2022 lane can be proven without him next time.
    3. Starting the nightly Codex pass from Windows Task Scheduler instead of a Claude turn, to save Claude usage (also
       a persistent setting: needs his yes).
+
+## 13. Taken from the desk (the controller writes one line per INT item it takes)
+
+Format: `INT-NNN (date) -> queue item / bug ID / "answer recorded, unblocks <item>" / "declined: <reason>"`.
+1. None yet (29 Sep).

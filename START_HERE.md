@@ -1,4 +1,5 @@
-> **29 Sep 2026 ~17:00 (plan/05 done): the release chat is now `CE_ACAD / release-v3-colleagues / build + release / 06` (Sonnet 5.5) - start at the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md`, then `areas/release-v3-colleagues-QUEUE.md` (the holiday queue, sections 0-4).**
+> **29 Sep 2026 ~17:30 (plan/05 done): TWO chats run CE while Tim is away (Tim, 29 Sep).** (1) The controller `CE_ACAD / release-v3-colleagues / build + release / 06` builds, tests, runs Codex and installs: start at the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md`, then `areas/release-v3-colleagues-QUEUE.md` sections 0-5. (2) Tim's desk `CE_ACAD / ideas / plan / 01` is the only chat Tim talks to about CE (ideas, bugs he sees, rulings, summaries): start at `TIM_DESK.md`. **Tim talks to the desk, never to the controller.**
+> *(Superseded 29 Sep ~17:30: "the release chat is now build + release / 06 ... sections 0-4" - one chat became two on Tim's word.)*
 > *(Superseded 29 Sep ~17:00: "next chat = plan/05 - start at the Handoff 29 Sep ~15:10 section".)*
 
 > **Release chat (28 Sep 2026 on): read the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md` first.** It is Tim's standing instruction for how the release chat runs.

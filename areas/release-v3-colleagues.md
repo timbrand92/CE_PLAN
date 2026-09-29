@@ -4,7 +4,7 @@
 
 Every successor release chat keeps these rules. A handoff that drops them is faulty.
 
-**HOLIDAY QUEUE (plan/05, 29 Sep 2026): the ordered work while Tim is away is `areas/release-v3-colleagues-QUEUE.md` - read its sections 0-4 after this charter.** Tim, 29 Sep: "Everything first" (no colleague copy until all of V3 passes), Claude cap **90%** while he is away, **no colleague publishing until he is back** (`decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, 29 Sep section).
+**HOLIDAY QUEUE (plan/05, 29 Sep 2026): the ordered work while Tim is away is `areas/release-v3-colleagues-QUEUE.md` - read its sections 0-5 after this charter. TWO CHATS (Tim, 29 Sep ~17:15): the controller (this chat's successors, `build + release / 06` on) builds, tests, runs Codex and installs; Tim's desk `CE_ACAD / ideas / plan / 01` (`TIM_DESK.md`) takes everything Tim says. Charter items 3 and 10 are now done by the desk.** Tim, 29 Sep: "Everything first" (no colleague copy until all of V3 passes), Claude cap **90%** while he is away, **no colleague publishing until he is back** (`decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, 29 Sep section).
 
 1. **Usage first.** Before every batch, read both budgets:
    - **Claude:** `get_usage` (weekly all-models %, reset Fri 12:00 Melbourne).
