@@ -608,7 +608,7 @@ mis-name things, so confirm each family in the code before building it, and tick
 ## 13. Taken from the desk (the controller writes one line per INT item it takes)
 
 Format: `INT-NNN (date) -> queue item / bug ID / "answer recorded, unblocks <item>" / "declined: <reason>"`.
-1. None yet (29 Sep).
+1. INT-001 (29 Sep ~18:10) -> taken 18:25: Tim's two clicks (decision file, 29 Sep ~18:10 section, read and verified by the controller): up to 3 builders now, run to the limit, overriding his 90% cap until Wed 30 Sep 17:40; installs only in his free windows; Codex overnight as armed. Started 3 Sonnet builders 18:25: `claude/bug200-201` (BUG-200+201, CDCHECK Enter and pit-placement wording), `claude/bug197` (branch invert labels), `claude/a6-implvl` (A6, XCIVIL imported-level flag). Base `claude/rel-20260929c`. After Wed 17:40 the 90% cap returns.
 
 ## 14. Opus log (the controller writes one line per Opus job; the weekly rules check counts it)
 
