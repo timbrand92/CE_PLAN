@@ -157,4 +157,5 @@ anything (usually nothing). Never send routine progress.
 7. INT-005 — 29 Sep 22:15 — ruling — clickable answers to queue s9 questions 10 (all four parts as recommended) and 11 (all three as recommended) — `decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, section "29 Sep 2026 about 22:15" — normal (SendMessage sent)
 9. INT-006 — 29 Sep 22:25 — ruling (how to ask) — "theres a plan, questions should only be if the chat is unsure against the plan" — `decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, section "29 Sep 2026 about 22:25" — today (SendMessage sent)
 11. INT-007 — 29 Sep 22:50 — ruling — clickable answers to the four real gaps in queue s9 item 12: Q3 keep XCLMTXT text at 300/200 (against the recommendation), Q6 Keep/Automatic also on MOVE and STRETCH, Q7c quiet grey, Q8c this drawing only — `decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, section "29 Sep 2026 about 22:50" — normal (SendMessage sent)
-12. The next number is INT-008.
+13. INT-008 — 29 Sep 23:10 — stop or undo (a hold is undone) + priority change — "i never asked for anything to stop" (resume builders and Opus reviews now, no hold at 99%; Tim resets usage himself) — `decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, section "29 Sep 2026 about 23:10" — URGENT (SendMessage sent)
+14. The next number is INT-009.
