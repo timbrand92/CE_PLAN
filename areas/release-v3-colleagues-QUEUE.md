@@ -87,9 +87,9 @@ Rules fade from a long chat; re-reading them is cheaper than a broken install.
    the Claude week (27 Sep, before Sonnet 5.5). Opus review: not yet measured, so record the before and after of the first
    three. Your own turns cost more as your context grows: sub-agents (Explore, model sonnet) read the big files, and you
    never paste a large file into the chat.
-9. **Planned Claude split per week (estimate; correct it after week A):** the Opus list first, about 20-25 points (the
-   daily batch review and train sign-off, cards, diagnosis, the weekly check); this chat about 10; builders about 45
-   (roughly 80-90 runs); reserve about 10. Fewer builds than an all-Sonnet run, on purpose: Tim, 29 Sep, "ANYTHING THAT
+9. **Planned Claude split per week (estimate; correct it after week A):** the Opus list first, about 25-30 points (the
+   daily batch review and train sign-off, cards, diagnosis, the engine builders, the weekly check); this chat about 10;
+   Sonnet builders about 40 (roughly 80 runs); reserve about 10. Fewer builds than an all-Sonnet run, on purpose: Tim, 29 Sep, "ANYTHING THAT
    NEEDS OPUS USES OPUS".
 
 ## 3. Lanes and the daily loop (from Fri 2 Oct 12:00)
@@ -176,14 +176,18 @@ without a `model` runs on Sonnet too. So:
    1. Every PR the risk check (item 3) flags: one Opus batch review a day, one call covering several small PRs.
    2. The train sign-off before every install: GO or NO-GO.
    3. A1, the trunk convergence: the plan and the after-merge content check.
-   4. Diagnosis of any bug whose fix has failed Codex twice, and of any regression in something already Codex-accepted
-      or Tim-accepted (the RC case, Lesson 10).
+   4. Diagnosis AND the next fix attempt of any bug whose fix has failed Codex twice, and of any regression in something
+      already Codex-accepted or Tim-accepted (the RC case, Lesson 10).
    5. Cards for L1-L4, S4, S5, C4 and C5, and any card whose behaviour touches the risk paths: Opus writes, Sonnet builds.
    6. A second opinion before dismissing any Codex FAIL as a test mistake.
    7. The weekly rules check (section 3, step 10).
    8. The release-candidate audit before staging (M3).
    9. Every handoff to a successor controller: check it drops no rule (charter: "A handoff that drops them is faulty").
    10. Any change to the install recipes, `queue3.sh`, `daily_cap.sh` or `builder_rules.txt`.
+   11. **Builders (not only reviewers) for the engineering engines:** L2 (CE proposes levels, sources, detention and
+       networks), S5 (Structural computations), and any builder whose brief changes a calculation or design engine
+       (the Calculation, Hydraul, Detention, Orifice, Sizing, NetworkDesign, RunSolve or Structural.DesignCore paths).
+       These run as `general-purpose` agents with `model: "opus"`, told not to spawn sub-agents.
 3. **The risk check.** Run it on every PR before review; any output line means Opus is required:
    ```
    gh pr diff <N> --name-only | grep -E -i 'Reactor|Overrule|Grip|Transform|PipeObject|Native|\.cpp$|\.h$|LinkService|Persistence|Undo|Save|Flush|Cache|Queue|Idle|DocumentLock|UnsavedChanges|ProjectDataService|Spine|Schedule(Builder|Service|LinkService)|PitSchedule.*Service|MemberSchedule|XclMText|StrSched|^Shared/CE_SHARED/|Installer/|PackageContents\.xml|Approval|Signing|ReleaseAuthority|blob-config|Calculation|Hydraul|Detention|Orifice|Boyd|Rational|NetworkDesign|RunSolve|Sizing|Structural\.DesignCore/|Rules/.*(Grade|Invert|Level|Fall|Cover|Velocity|Capacity)|/AI/|CE\.AI\.Core|CE\.Cloud|Telemetry|Credential|Secret' | grep -v -i -E '\.Tests?/|/Tests?/|Tests?\.cs$'
