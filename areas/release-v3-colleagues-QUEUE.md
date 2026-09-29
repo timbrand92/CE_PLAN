@@ -648,4 +648,5 @@ Format: `INT-NNN (date) -> queue item / bug ID / "answer recorded, unblocks <ite
 
 Format: `date time - kind (review / train sign-off / convergence / diagnosis / card / FAIL second opinion / weekly check /
 RC audit / handoff check) - target (PR numbers, branch, bug, card) - verdict - model stamp - Claude weekly % before -> after`.
-1. None yet (29 Sep). The first three lines also give the cost measurement asked for in section 2, item 8.
+1. None before 29 Sep 23:55. The first three lines also give the cost measurement asked for in section 2, item 8. (Meter reads are whole percents: weekly 99% before every Opus job tonight; the cost per job is smaller than the resolution: record each job's `subagent_tokens` instead.)
+2. 30 Sep 00:05 - review - PR #397 (Structural units) - MERGE-WITH-FIXES (XCLMTXT must read the open drawing's job file; test copy bug; two doc notes) - model claude-opus-5-5 - weekly 99% -> 99% (51,511 tokens) - comment https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/397#issuecomment-5890866553. Fixer started 00:07 (`claude/s2-unit`); the fixes touch the XCLMTXT path, so a short Opus confirm is needed after them (gate 4.6.1).
