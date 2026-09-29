@@ -37,7 +37,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-224 *(BUG-223 = CDEDIT / not-drawn-first CD with two same-named ends can still save an uphill pipe, from the #404 Opus review, 30 Sep)* (older note follows) BUG-223 *(BUG-205..222 = Codex pass 18 and sweep C1, 30 Sep 2026, on installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 205 CD level-direction choice makes an uphill pipe; 206 OSMODE ended 0; 207 drawn Pit Schedule stale after a pit edit; 208 pipe end grip refused by CE record guard; 209 CDCATCHMENT area 28 million m2; 210 COPY replacement pit unlinked; 211 erase column leaves beam silently; 212 Place schedule fails on a legacy pit; 213 older schedule cannot be re-placed; 214 CEFIND then Esc marks drawing changed; 215 RC needs two U; 216 CDFALLSUGGEST Enter rejected; 217 PD drain shows AG; 218 CSBRACINGPANEL invisible; 219 status bar says v1.1.10; 220 Structural launcher opens unasked; 221 Manager Status cards overlap; 222 Manager Civil settings scroll)* *(BUG-203 and BUG-204 are used, see below; this header said BUG-203 was next until 30 Sep 2026)* *(BUG-202 = constant lag in a Structural drawing on everything - select, hover, draw/edit, move/copy, pan/zoom - Tim suspects polylines, 29 Sep 2026)* *(BUG-195..201 = Codex exploratory run X1 on Civil 3.0.14 / Structural 1.0.85, 29 Sep 2026: XCLMTXT invents floors, Structural schedule text tiny, branch labels overlap, diameter-only CDEDIT changes grade, calculated level labelled staff-entered, CDCHECK Enter does not finish, pit placement jargon)* *(BUG-194 = selecting a plain rectangle in a Structural drawing opens the CE Pipe ribbon tab, Tim live 29 Sep 2026)* *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
+> **Next BUG ID to use:** BUG-230 *(BUG-224..229 = Codex sweep C1 FINAL report, 30 Sep 2026, installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 224 AutoCAD CRASHED closing a saved drawing copy (blocker); 225 Pit contextual tab Close button does nothing; 226 Civil ribbon tooltip says Civil on an Unknown drawing and offers Both; 227 CDS tooltip promises tiers and pages that are not installed; 228 Data Diagnostics tooltip promises a report, CDDIAG prints counts and "coming in v2.1 (PL-032)"; 229 CDMANAGER Draw Order list shows duplicate rows)* *(BUG-223 = CDEDIT / not-drawn-first CD with two same-named ends can still save an uphill pipe, from the #404 Opus review, 30 Sep)* (older note follows) BUG-223 *(BUG-205..222 = Codex pass 18 and sweep C1, 30 Sep 2026, on installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 205 CD level-direction choice makes an uphill pipe; 206 OSMODE ended 0; 207 drawn Pit Schedule stale after a pit edit; 208 pipe end grip refused by CE record guard; 209 CDCATCHMENT area 28 million m2; 210 COPY replacement pit unlinked; 211 erase column leaves beam silently; 212 Place schedule fails on a legacy pit; 213 older schedule cannot be re-placed; 214 CEFIND then Esc marks drawing changed; 215 RC needs two U; 216 CDFALLSUGGEST Enter rejected; 217 PD drain shows AG; 218 CSBRACINGPANEL invisible; 219 status bar says v1.1.10; 220 Structural launcher opens unasked; 221 Manager Status cards overlap; 222 Manager Civil settings scroll)* *(BUG-203 and BUG-204 are used, see below; this header said BUG-203 was next until 30 Sep 2026)* *(BUG-202 = constant lag in a Structural drawing on everything - select, hover, draw/edit, move/copy, pan/zoom - Tim suspects polylines, 29 Sep 2026)* *(BUG-195..201 = Codex exploratory run X1 on Civil 3.0.14 / Structural 1.0.85, 29 Sep 2026: XCLMTXT invents floors, Structural schedule text tiny, branch labels overlap, diameter-only CDEDIT changes grade, calculated level labelled staff-entered, CDCHECK Enter does not finish, pit placement jargon)* *(BUG-194 = selecting a plain rectangle in a Structural drawing opens the CE Pipe ribbon tab, Tim live 29 Sep 2026)* *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.)*
 >
 > **BUG-082 status correction (2026-07-27):** FIXED in code. Focused tests and controlled Civil/Structural/Manager net48+net10 builds passed with zero new persistent workers. Historical orphan workers remain a separate one-time cleanup.
 
@@ -66,6 +66,149 @@
 **29 Sep ~19:00 update (structural/fix/01, Fable, measured read-only on Tim's live AutoCAD; controller 06 read the report, not yet re-measured):** the lag is mostly NOT CE code. (1) AutoCAD's own main thread was at 50-77% of one core, in AutoCAD native code every sample, no CE frame. (2) CE's timed work is milliseconds. (3) The PC was loaded by builds and test suites (9.4 of 12 cores busy at 18:41) while he drafted; AutoCAD's CPU share fell to 12-28% between test runs. (4) A stray `python3 -` from a bash call spun a core for 40+ min (gone by 18:52). (5) GTX 1050 Ti 4 GB asked for 4.56 GB video memory; 43 GPU-timeout reports and a blue screen at 18:16; driver from Feb 2025; NVIDIA overlay running; unclean shutdown 05:01. **Controller action (done 29 Sep 19:00): builder/test processes run at Below Normal priority (builder_rules.txt), and while acad.exe runs at most 2 builders run at once.** For Tim, through the desk: NVIDIA app > Settings > Features > In-game overlay OFF; update the NVIDIA driver; close Firefox/Revu/ChatGPT while drafting; A/B with AutoCAD GRAPHICSCONFIG hardware acceleration OFF for one session. Real CE defects found: BUG-203, BUG-204 below.
 
 **Status:** OPEN - investigating (mostly environment; CE defects split out as BUG-203/204).
+
+---
+
+## BUG-224
+
+**SEVERITY: BLOCKER. A crash is a blocker (a colleague loses unsaved work).**
+
+**Command / Area:** AutoCAD itself closing a drawing right after "Save As", on the installed build (Civil 3.0.15+a6e0cc87, Manager 1.1.15+a6e0cc87, Structural 1.0.86+532f9550 all loaded). Found by Codex sweep C1, 30 Sep 2026 07:53-07:55 Melbourne, on a COPY. Whether CE is involved is NOT established.
+
+**What Codex did (exact sequence, from the C1 report items 92 and 622):** on CleanBlank_SWEEPC1.dwg (0 model objects, DBMOD 0, no CE project dictionary): (1) ran the CDDISCIPLINE Undo/Redo test: typed CDDISCIPLINE, Civil / Structural / Civil / Structural / Civil (five changes), then five U (each named CDDISCIPLINE) and five REDO (each "Nothing to redo", that is BUG-192); (2) set the discipline to Civil; (3) Save As a new copy `SWEEPC1\Discipline_SWEEPC1.dwg`, which succeeded (115,019 bytes, written 07:53:51); (4) closed that drawing through the AutoCAD COM automation call `Document.Close(false)` (not a user Ctrl+S / CLOSE / X). The call stalled, then AutoCAD exited on its own. Codex's Python got "remote procedure call failed" from Close; the planned reopen step never ran.
+
+**Expected:** the drawing closes; AutoCAD stays up; the saved copy reopens with Civil set.
+
+**What happened:** AutoCAD closed unexpectedly (07:55). The Autodesk Error Report window appeared ("A software problem has caused AutoCAD to close unexpectedly"); Codex did NOT click Send Report and closed the window. Other open test copies lost their unsaved test changes (copies only; nothing of Tim's). Codex started a fresh AutoCAD: the saved Discipline_SWEEPC1 copy opened fine (model 0, DBMOD 0, discipline Civil set explicitly), so the save itself was good.
+
+**Reproduced?** NO repeat is recorded: it happened once, on the first attempt of this sequence, and Codex stopped for evidence and recovery. Whether a normal user close (Ctrl+S then the X, or CLOSE) does the same is UNKNOWN: the COM close route may itself be the trigger.
+
+**Crash evidence (as read, 30 Sep):**
+1. **Windows crash event (Codex-recorded):** faulting application acad.exe 32.0.60.0 (time stamp 0x698193d5); faulting module **coreclr.dll 10.0.1226.42308** (the .NET runtime that hosts the CE plugins; module time stamp 0x6a89b724); exception 0xc0000005 (access violation); fault offset 0x3596cf. Lane: AutoCAD 2027 (CDFEEDBACK reported "AutoCAD 26.0.0.0"; the Civil log says "AutoCAD 2027 native module"); the .NET 10 runtime is the crashed module, so it is the net10 lane. `SWEEPC1\crash-event-summary.txt`.
+2. **A crash dump exists (listed, NOT opened):** `C:\Users\TimothyBrand\AppData\Local\CrashDumps\acad.exe.4120.dmp`, 90.8 MB, written 07:55 30 Sep, plus Autodesk `...\AppData\Local\Autodesk\CER\senddmp.log` (07:55). It holds AutoCAD memory and can hold drawing content: read it where it is, never copy it into a repo. No debugger is installed on this PC (BUG-164 note), so nobody has read the stack yet. **Is CE code on the stack? Insufficient information: the dump has not been read.**
+3. **CE log tail around it (privacy-filtered copies, `SWEEPC1\logs_end\`):** Civil, last lines of the crashed session: `07:52:32.057 [REDO] write after U finished, before the next command: object changed (Xrecord); CE code: LinkService.OnObjectModified`, then `07:52:35.102 Project data reloaded after Undo/Redo: pits=0, pipes=0`, then `07:52:38.091 [PERF-SUMMARY] CivilProjectQaAutomaticService.Advance: 7 call(s)`. Nothing from Civil after 07:52:38 (no line at the 07:53:51 Save As, none at the close, and none of the "unregistered / shut down" lines a normal exit writes; the recovery session's normal exit at 08:00:18 does write them). Structural, last lines: `07:53:51.168 [PERF-SUMMARY] BeamLink.ObjectErased: 2 call(s)`, `07:55:00.592 [PERF-SUMMARY] BeamLink.ObjectModified: 132 call(s), 0.3 ms in last ~70s`, then the next line is the recovery session's start at 07:56:48. I cannot tell from these whether the 132 Structural events or the missing Civil lines relate to the crash.
+4. **Screenshot of the Autodesk report window:** `SWEEPC1\screens\autocad-error-report-after-copy-close.png` (read: it shows only the standard crash dialog).
+5. **Related, relation Unknown:** BUG-164 (crash on AutoCAD QUIT in CE's palette shutdown, same 0xc0000005 class) has its fix installed since 23 Sep and three clean quits were seen (pass 17 too); this crash is on closing one drawing, not quitting, so it is not shown to be BUG-164 coming back. The same session's CDDISCIPLINE Undo/Redo had shown the CE write-after-U pattern (BUG-192).
+
+**Test that catches it:** repeat the exact sequence on a copy, three times, by BOTH routes (the COM `Document.Close(false)` and the user's Ctrl+S then X / CLOSE): no crash and no new `acad.exe.*.dmp` in `C:\Users\TimothyBrand\AppData\Local\CrashDumps\`. Then the same sequence with Civil unloaded, and with Structural unloaded, to find whether CE is involved. Someone with a debugger (WinDbg / dotnet-dump) opens `acad.exe.4120.dmp` in place and reads the faulting stack.
+
+**Steps to confirm the fix (Codex or Tim):** on a copy of a blank Civil drawing: CDDISCIPLINE Civil then Structural then Civil, Save As a new name, close the drawing (X), reopen the saved copy: AutoCAD stays up, the discipline reads Civil, and no new crash report file appears.
+
+**Also blocked by it:** sweep C1 PROFILE_CHECK_END (original session never reached the final read; a fresh-session read gave Tim / 21759, labelled separately) and the "reopen after SaveAs" step of the discipline persistence test.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 622 "Save and close discipline COPY / AutoCAD crash", FAIL item 1, Method items 21-23); `SWEEPC1\crash-event-summary.txt`, `SWEEPC1\FINAL_STATE.txt`, `SWEEPC1\Discipline_SWEEPC1.dwg`; screenshots `SWEEPC1\screens\autocad-error-report-after-copy-close.png` and `cddiscipline-copy-reopened.png`.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1; cause Unknown; not reproduced; CE involvement Unknown).
+
+---
+
+## BUG-225
+
+**Command / Area:** Pit contextual ribbon tab, Close button (Civil 3.0.15 / Manager 1.1.15). The Pipe tab's typed route works; this is the Pit tab button.
+
+**What Codex did (sweep C1, 30 Sep 2026, DWG-S_SWEEPC1 copy):** clicked a pit border (2 model objects): the Pit tab appeared (Edit Pit, Flip Cover Text, Focus, Close). Clicked **Close** once. Repeated a second time. Also pressed Escape while the ribbon held focus.
+
+**Expected:** Close clears the selection and closes the tab, as its tooltip says.
+
+**What happened:** the command line ran CDCLOSETAB and CMDACTIVE went back to 0, but the pit stayed selected (1) and the Pit tab stayed open, twice. Escape sent while the ribbon had focus did not visibly clear it either. Typing CDCLOSETAB (through the command API) closed the tab and cleared the selection. Objects stayed 2. No matching log error; root cause Unknown.
+
+**Test that catches it:** Codex: select a pit, click Close from the ribbon: selection 0 and no Pit tab. Unit: the Close button runs the same clear-selection path as the typed command.
+
+**Steps to confirm the fix (Codex or Tim):** click a pit, click Close on the Pit tab: the tab goes and the pit is no longer selected.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 617, FAIL item 11, UX finding 10); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\context-pit-close-settled.png`, `context-pit-close-repeat.png`, `context-pit-typed-close.png`; data `cdclosetab-pit-after.json`, `cdclosetab-pit-repeat.json`. Codex suggestion: make Close clear the selection reliably from ribbon focus. Related: BUG-194 (contextual tab), BUG-180.
+
+**Likely area (hypothesis only):** the ribbon button's command runs while the ribbon has focus, so the selection clear is not applied (same command works typed).
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-226
+
+**Command / Area:** Civil ribbon tooltip for the discipline switch (CDDISCIPLINE), Civil 3.0.15.
+
+**What Codex did (sweep C1, 30 Sep 2026, CleanBlank copy):** typed CDDISCIPLINE (prompt: "Unknown (not set)", choices Civil / Structural / Clear / Cancel), then hovered the ribbon button.
+
+**Expected:** the tooltip describes the drawing's real state and the real choices.
+
+**What happened:** the tooltip says "This drawing is Civil" on a drawing that reports Unknown, and says to choose Civil, Structural or Both; the prompt has no Both.
+
+**Test that catches it:** Codex: hover the button on an Unknown, a Civil and a Structural drawing: the words match the prompt. Unit: tooltip text built from the current discipline and the prompt's real keyword list.
+
+**Steps to confirm the fix (Codex or Tim):** hover the discipline button on a fresh drawing: it says the drawing is not set and lists Civil, Structural, Clear.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 604, FAIL item 8, UX finding 11); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\ribbon-tooltip-civil.png`, `cddiscipline-cleanblank.png`.
+
+**Likely area (hypothesis only):** static tooltip text in the Civil ribbon definition.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-227
+
+**Command / Area:** Civil ribbon tooltip for Settings (CDS), Civil 3.0.15. Only the installed guidance is the fault; the missing future features are simply not installed.
+
+**What Codex did (sweep C1, 30 Sep 2026):** hovered the Settings button, then opened CDS, CDMANAGER, CDLABELSTYLE, CDPARTS.
+
+**Expected:** the tooltip describes what is installed.
+
+**What happened:** the tooltip promises Personal / Project / Firm tiers and says CDMANAGER, CDLABELSTYLE and CDPARTS open as a page of this window. The installed CDS has six tabs (Drafting, Pipes & Pits, Design, Survey, Display, Advanced) and those three commands open separate windows.
+
+**Test that catches it:** Codex reads the tooltip against the installed window. A wording guard listing the six tabs.
+
+**Steps to confirm the fix (Codex or Tim):** hover Settings: the words match the six tabs and the separate editors.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 605, FAIL item 9, UX finding 12); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\ribbon-tooltip-settings.png`, `cds-default.png`. Codex suggestion: describe the installed six-tab window and the separate editors accurately.
+
+**Likely area (hypothesis only):** ribbon tooltip text written for the planned settings tiers (UX-SET work) ahead of the installed window.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-228
+
+**Command / Area:** Data Diagnostics ribbon tooltip and CDDIAG result text, Civil 3.0.15.
+
+**What Codex did (sweep C1, 30 Sep 2026, Heavy copy, 5,100 lines):** hovered Data Diagnostics, then typed CDDIAG.
+
+**Expected:** the tooltip and the result agree, with no internal ID or future-release promise shown to a colleague.
+
+**What happened:** the tooltip promises to inspect and export a support report. CDDIAG printed counts only ("0 pits, 3 pipes in the data model", from the office template, not from the 5,100 lines), a line "Full diagnostic dialog coming in v2.1 (PL-032)", and a pointer to CDREPAIR > Audit. No export was offered. Object count stayed 5,100.
+
+**Test that catches it:** wording guard: the CDDIAG output contains no "PL-0" internal ID or version promise; the tooltip lists only what the command does.
+
+**Steps to confirm the fix (Codex or Tim):** hover the button and run CDDIAG: the words match; no "PL-032".
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 606 and 90, FAIL item 10, UX findings 7 and 13); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\ribbon-tooltip-settings-4.png`, `cddiag-heavy-output.png`. Codex suggestion: remove the stale release promise and internal ID and offer a direct Audit action; describe only the counts until the report window is installed.
+
+**Likely area (hypothesis only):** the CDDIAG stub message and the ribbon tooltip written for the planned window.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+---
+
+## BUG-229
+
+**Command / Area:** CDMANAGER > Layers > Draw Order list (Civil 3.0.15). An observation, not a Codex FAIL; cause Unknown.
+
+**What Codex did (sweep C1, 30 Sep 2026, Heavy copy):** opened CDMANAGER, read all three tabs and scrolled the entire list. No Add / Reset / Apply / Save used.
+
+**Expected:** each layer appears once in the Draw Order rules.
+
+**What happened:** duplicate rows are visible (for example 20TEXT, 25DIMS, 25TEXT, AGI DRAIN). Codex records the cause as Unknown and gave no suggestion; it may be the saved rule list, the load, or the office template.
+
+**Test that catches it:** Codex/unit: open CDMANAGER on a fresh drawing: no repeated layer name in Draw Order. (Compare BUG-204, where the Structural rule lists gained about 24 duplicates per start.)
+
+**Steps to confirm the fix (Codex or Tim):** open CDMANAGER > Draw Order: every layer name appears once.
+
+**Reference:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 84 "CDMANAGER", UX finding 44 in the UX file); screenshots `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\cdmanager-layers-default.png`, `cdmanager-layer-colours.png`; `cdmanager-draw-order-controls.txt`.
+
+**Likely area (hypothesis only):** the same append-on-load pattern found for the Structural lists in BUG-204; not checked.
+
+**Status:** OPEN (30 Sep 2026, found by Codex sweep C1; look before anyone edits the list).
 
 ---
 
@@ -159,6 +302,8 @@
 **Likely area (hypothesis only, nothing verified):** any command that switches snaps off for its own preview and restores later: Structural RC ("Keep OSNAP ON?" question and its queued repeat), the CE snap presets ("Use Drawing now"), CDRG / CEBLOCKS placement. The last read known good was after RC; the failing read came after several later commands.
 
 **Status:** OPEN (30 Sep 2026, found by Codex pass 18; cause Unknown).
+
+**Codex 30 Sep sweep C1: does NOT clear this bug.** Sweep C1 read CPROFILE Tim / OSMODE 21759 at the start (`SWEEPC1\screens\profile-start-cprofile.png`) but ran almost no CE drawing commands, and AutoCAD crashed (BUG-224) before the end-of-run read, so the original session's final OSMODE is Unknown. A separate fresh recovery session read Tim / 21759 at 07:58 and 07:59 (`SWEEPC1\PROFILE_CHECK_END.json`, `PROFILE_CHECK_RECOVERY.json`, labelled as a different session). Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (items 9 and 10).
 
 ---
 
@@ -340,6 +485,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1; root cause Unknown).
 
+**Codex 30 Sep sweep C1 (final report): unchanged, FAIL confirmed, reproduced on three drawings** (item 78, FAIL item 3, UX finding 2): the clean CleanBlank (0 objects, DBMOD 0, no CE project dictionary; only the CE_LINKS_MIGRATED_V2 marker), the reopened Blank copy and the 5,100-line Heavy copy. CEFIND then Esc: DBMOD 1, 0 objects. One U prints CEFIND but DBMOD stays 1; REDO says "Nothing to redo" (CleanBlank: "Everything has been redone"); five U / five REDO the same. Native CLOSE then showed the Save prompt (answered No). No unique error log line; root cause Unknown. Evidence `SWEEPC1\cefind-cleanblank-recovery.json`, `cefind-empty-undo-redo.json`, screenshots `SWEEPC1\screens\cefind-cleanblank-prompt.png`, `cefind-five-undo-redo.png`. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md`.
+
 ---
 
 ## BUG-215
@@ -450,6 +597,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
 
+**Codex 30 Sep sweep C1 (final report): unchanged, FAIL confirmed** (item 388, FAIL item 5, UX finding 4): the module pages match the installed DLLs (Civil 3.0.15, Manager 1.1.15, Structural 1.0.86, exact hashes) while the status bar reads CE MANAGER v1.1.10. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md`.
+
 ---
 
 ## BUG-220
@@ -471,6 +620,8 @@
 **Likely area (hypothesis only):** the Structural start-up / palette launcher (Command Hub) opening on load; not searched in code.
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+**Codex 30 Sep sweep C1 (final report): unchanged, FAIL confirmed** (item 1 Cold start 1, FAIL item 2, UX finding 5). Final report also says the launcher was NOT seen on the second (no-drawing) start, so it depends on the start; Structural startup silence (BUG-203) was BLOCKED because the fixture is a Civil drawing. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md`.
 
 ---
 
@@ -494,6 +645,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
 
+**Codex 30 Sep sweep C1 (final report): unchanged, FAIL confirmed** (item 517, FAIL item 6, UX finding 9), at default 1311 x 1073 and maximised 1920 x 1080. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md`.
+
 ---
 
 ## BUG-222
@@ -515,6 +668,8 @@
 **Likely area (hypothesis only):** `CivilSettingsView` in Manager (single long form).
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+**Codex 30 Sep sweep C1 (final report): unchanged, FAIL confirmed** (item 518, FAIL item 7, UX finding 8); the sweep's own note: the Civil settings form is a settings layout, not an allowed reading/list scroll. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md`.
 
 ---
 
@@ -587,6 +742,8 @@ Also from X1: **BUG-192 REPRODUCED (X1 #1)** - CD a branch onto a main, U (view)
 **Status:** OPEN (reproduce cleanly first).
 
 **Codex 30 Sep pass18: STILL FAILING on installed Civil 3.0.15, reproduced five times with no command between U and REDO:** (1) PIT, U, REDO = "Nothing to redo" (`P18_screenshots\BUG192_PIT_REDO_FAIL.png`); (2) fresh pit grip-moved 767 mm, U, REDO (`BUG192_A_grip_REDO_FAIL.png`); (3) CD pipe, U, REDO (`N384_clean_CD_REDO_FAIL.png`); (4) network pit grip move, U, REDO (`Q2c_REDO_failure.png`); (5) five U then two REDO (`P3_REDO2_FAIL.png`). New evidence: the [REDO] diagnostic named a CE writer in (4) and (5): `object changed (DrawOrderTable); CE code: LinkService.OnObjectModified < ProjectDataService.TryLoadFromDrawing < ProjectDataService.ReloadAfterDrawingHistoryChange < LinkService.OnCommandEnded` (Civil log 00:17:06.297 and 02:18:58.047), and one line "96 write(s) reached the drawing between the end of REDO and the start of GRIP_STRETCH; AutoCAD discards its Redo list after a write". In (1)-(3) the clean interval had no [REDO] line. Likely area: ProjectDataService.ReloadAfterDrawingHistoryChange (draw order re-applied after U); BUG-203 (Civil awake in Structural drawings, PR #393, not installed) may add more writes. Report: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (checks 21, 29, 30, 33, 102; section "Complete REDO diagnostic lines").
+
+**Codex 30 Sep sweep C1 (final report): STILL FAILING on installed Civil 3.0.15, now on a drawing with NO pits or pipes (CleanBlank, 0 objects).** CDDISCIPLINE Unknown -> Civil, then one U returned "CDDISCIPLINE" and restored Unknown, and the very next REDO said "Nothing to redo"; repeated with five alternating Civil/Structural changes, five U (each named CDDISCIPLINE), five REDO (each "Nothing to redo"), final discipline Unknown, objects 0 throughout. Same pattern with CEFIND (five U, five REDO, "Nothing to redo"). **New evidence, this time with the writer named on an empty drawing:** the Civil log at 07:52:32-33 has `[REDO] write after U finished, before the next command: object changed (Xrecord) / (DBDictionary) / object erased (Xrecord) / (DBDictionary); CE code: LinkService.OnObjectModified` and `...OnObjectErased`, each followed by "Project data reloaded after Undo/Redo: pits=0, pipes=0". Codex records this as correlation only (causality not established). It shows the CE write-after-U happens even with no pits, so BUG-203's hypothesis (an empty Civil record in a Structural drawing) is not the only route. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (item 92, FAIL item 4, UX finding 3); evidence `SWEEPC1\redo-log-extract.txt`, `cddiscipline-five-undo-redo.json`, `cddiscipline-all-undo-commandline.txt`; screenshots `SWEEPC1\screens\cddiscipline-undo-redo-commandline.png`, `cddiscipline-five-redo-commandline.png`, `cddiscipline-redo-lost.png`. The same session then crashed (BUG-224).
 
 ---
 
@@ -819,6 +976,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 **Status:** OPEN (fix queued)
 
 **Codex 30 Sep pass18: NOT TESTED.** The Home and Annotate ribbon tabs were absent in the test session, so the Home-then-shift-pick check was skipped as instructed (R12). Sweep C1 items "Home then shift-pick BUG-180" and the contextual-tab items are also NOT TESTED (not reached). Reports: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (check 46), `CODEX_SWEEPC1_2026-09-30.md` (items 72-77).
+
+**Codex 30 Sep sweep C1: NOT TESTED again.** The current workspace (TIM 2026 SETUP) has no Home tab, so the exact Home-then-shift-pick could not be run; no workspace setting was changed. Related C1 observations on the contextual tab: a single CE pipe selected shows the Pipe tab and Escape / typed CDCLOSETAB clear it (Codex-accepted narrow PASS, objects 1,280 unchanged); the Pit tab Close button does nothing (BUG-225). Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (items 72-77, 612, 613, 617).
 
 ---
 
@@ -1236,6 +1395,8 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 **Codex pass 17 (29 Sep 00:48, Civil 3.0.12): B5 PASS - three normal shutdowns with the Inspector open (QUIT, QUIT with two drawings, main X), no crash report. Codex-accepted** (with the 23 Sep three clean closes). Tim can still reject.
 
 **Status:** IN PROGRESS — installed 23 Sep 12:18; Codex saw three clean closes; **waiting for Tim to confirm in AutoCAD**
+
+**Codex 30 Sep sweep C1: a different crash, relation Unknown (BUG-224).** AutoCAD crashed at 07:55 closing a saved drawing copy through COM `Document.Close(false)`: faulting module coreclr.dll, exception 0xc0000005, dump `acad.exe.4120.dmp` not yet read. This BUG-164 fix (palette shutdown on QUIT) is present in the installed 3.0.15; this crash was on closing one drawing, not quitting, and there is no evidence it is BUG-164 returning. Status of this bug unchanged (still waiting for Tim).
 
 ---
 

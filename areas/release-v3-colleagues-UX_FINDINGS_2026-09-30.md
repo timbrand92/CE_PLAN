@@ -1,14 +1,18 @@
-# UX findings from Codex, 30 Sep 2026 (pass 18 and sweep C1)
+# UX findings from Codex, 30 Sep 2026 (pass 18 and sweep C1 FINAL)
 
 **What this is.** Codex's ranked UX findings from two runs on the INSTALLED build (Civil 3.0.15, Manager 1.1.15, Structural 1.0.86), copies only. Written by the triage step; the controller reads it. Nothing here is Tim-accepted; these are findings, not fixes. Where a finding is also a carpark bug, the bug ID is given (the bug is the record; this file is the reading list).
 
 **Sources.**
 1. **Pass 18:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (103 checks: PASS 47 / FAIL 18 / BLOCKED 21 / NOT TESTED 17). Screenshots in `C:\Lisp Files\_TEST_COPIES_20260923\P18_screenshots\` (names below are files in that folder).
-2. **Sweep C1:** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (519 items in scope, only 14 tested when last read; still being written). Screenshots in `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\`.
+2. **Sweep C1 (FINAL, updated 30 Sep after the report was completed ~08:10):** `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md` (IN SCOPE 631, PASS 11 / FAIL 11 / BLOCKED 5 / NOT TESTED 604; 22 tested, 609 not tested; scope still incomplete, 631 is a discovered minimum). AutoCAD CRASHED at 07:55 (BUG-224); Codex stopped for recovery. Screenshots in `C:\Lisp Files\_TEST_COPIES_20260923\SWEEPC1\screens\` (207, all present). Sweep C2 (`CODEX_SWEEPC2_2026-09-30.md`): AutoCAD never opened, 0 of 43 known commands tested, no UX finding, no verdict.
 
-**Codex's verdicts.** Pass 18: "Faster ordinary drafting and several good defaults, but recovery and agreement between the drawing and its records are not reliable enough yet." Sweep C1: "Not ready for acceptance; startup and version messaging need attention, and most of the deep sweep remains untested."
+**Codex's verdicts.** Pass 18: "Faster ordinary drafting and several good defaults, but recovery and agreement between the drawing and its records are not reliable enough yet." Sweep C1 (final): **"Not ready for a colleague: the save/close crash and unreliable recovery need resolving; this sweep remains incomplete."** (The earlier interim verdict, "Not ready for acceptance; startup and version messaging need attention...", is superseded by this.) Sweep C2: "No defensible usability verdict; the drawing workflow has not been tested."
 
 ---
+
+## BLOCKER (sweep C1 final, ranked first)
+
+0. **BLOCKER - AutoCAD crashed closing a saved copy.** Place: after CDDISCIPLINE changes and Save As, the drawing was closed through the COM `Document.Close(false)` call; the close stalled and AutoCAD exited (Autodesk Error Report). Once, not repeated; the saved copy reopened fine; CE involvement Unknown (dump `acad.exe.4120.dmp` not yet read). Screenshot: `autocad-error-report-after-copy-close.png` (in `SWEEPC1\screens\`). Codex suggestion: diagnose and fix this exact save/close sequence before release. Carpark: **BUG-224**.
 
 ## BLOCKER (Codex ranked these BLOCKER; all nine are pass 18)
 
@@ -57,11 +61,17 @@
 37. **ANNOYING - status bar says CE MANAGER v1.1.10, Manager is 1.1.15.** Screenshots: `cemanager-module.png`, `cddiag-heavy-output.png`. Suggestion: generate every version label from the running assembly. Carpark: **BUG-219**.
 38. **ANNOYING - CEFIND then Esc marks a clean drawing changed; U does not clear it.** Screenshot: `cefind-cancel-undo-redo-dirty.png`. Suggestion: start Find without writing drawing data. Carpark: **BUG-214**.
 39. **ANNOYING - an unsolicited Structural tools launcher opens at start (two of the starts).** Screenshot: `cold1-structural-launcher.png`. Suggestion: open it only on request. Carpark: **BUG-220**.
-40. **ANNOYING - CEASK palette: "No classified drawing" and "AI disconnected - R0/W0" explain nothing; Send still looks available.** Place: type CEASK (palette also stays auto-hidden until clicked). Screenshot: `ceask-empty-disconnected.png`. Suggestion: "Ask CE is unavailable for this drawing", with Help Centre next to the reason.
-41. **ANNOYING - CDDIAG says "Full diagnostic dialog coming in v2.1 (PL-032)".** Screenshot: `cddiag-heavy-output.png`. Suggestion: remove the stale release promise and internal ID; offer a direct Audit action.
+40. **ANNOYING - CEASK palette: "No classified drawing" and "AI disconnected - R0/W0" explain nothing; Send still looks available.** (No carpark bug: answers were BLOCKED because the AI is disconnected and the brief forbids Send.) Place: type CEASK (palette also stays auto-hidden until clicked). Screenshot: `ceask-empty-disconnected.png`. Suggestion: "Ask CE is unavailable for this drawing", with Help Centre next to the reason.
+41. **ANNOYING - CDDIAG says "Full diagnostic dialog coming in v2.1 (PL-032)".** Screenshot: `cddiag-heavy-output.png`. Suggestion: remove the stale release promise and internal ID; offer a direct Audit action. Carpark: **BUG-228** (with the tooltip).
 42. **ANNOYING - CEMANAGER Settings > Civil is one long scrolling form.** Screenshots: `cemanager-settings-civil.png`, `cemanager-settings-civil-bottom.png`. Suggestion: use the same task tabs CDS uses. Carpark: **BUG-222** (breaks the no-scrolling-layout rule).
 43. **ANNOYING - CEMANAGER Status: running hash overlaps "Installed next start" in all three cards.** Screenshot: `cemanager-status-default.png`. Suggestion: short version prominent, full hash in a copyable detail line. Carpark: **BUG-221**.
-44. **ANNOYING - CDMANAGER Draw Order list shows duplicate rows (20TEXT, 25DIMS, 25TEXT, AGI DRAIN and others); cause Unknown.** Screenshot: `cdmanager-layers-default.png`. Codex gave no suggestion; needs a look before anyone edits the list.
+44. **ANNOYING - CDMANAGER Draw Order list shows duplicate rows (20TEXT, 25DIMS, 25TEXT, AGI DRAIN and others); cause Unknown.** Screenshot: `cdmanager-layers-default.png`. Codex gave no suggestion; needs a look before anyone edits the list. Carpark: **BUG-229**.
+
+45a. **ANNOYING - CDDISCIPLINE: Undo restores Unknown, but Redo says "Nothing to redo" (after one change and after five).** Screenshot: `cddiscipline-undo-redo-commandline.png`. Suggestion: preserve AutoCAD Redo after a discipline change. Carpark: **BUG-192** (now seen on an empty drawing, CE write-after-U named in the log).
+45b. **ANNOYING - Pit contextual tab: the Close button runs CDCLOSETAB but the pit stays selected and the tab stays open (twice); the typed command works.** Screenshot: `context-pit-close-settled.png`. Suggestion: make Close clear the selection reliably from ribbon focus. Carpark: **BUG-225**.
+45c. **ANNOYING - Civil ribbon tooltip says "This drawing is Civil" on an Unknown drawing and offers "Both", which the prompt does not have.** Screenshot: `ribbon-tooltip-civil.png`. Suggestion: build the tooltip from the actual drawing and prompt. Carpark: **BUG-226**.
+45d. **ANNOYING - Settings tooltip promises Personal/Project/Firm pages and combined editors the installed CDS does not have (it has six tabs and separate windows).** Screenshot: `ribbon-tooltip-settings.png`. Suggestion: describe the installed six-tab window and the separate editors. Carpark: **BUG-227**.
+45e. **ANNOYING - Data Diagnostics tooltip promises inspect and export, CDDIAG prints counts only.** Screenshot: `ribbon-tooltip-settings-4.png`. Suggestion: describe only the counts until the report window is installed. Carpark: **BUG-228**.
 
 ## POLISH
 
@@ -94,10 +104,11 @@
 4. **Native behaviour holds.** Every part of a pipe opens Edit Pipe by double-click; copied, rotated and scaled columns take their beam ends and labels with them ("One U undoes both"); tie-down placement survived a rotated UCS; native EATTEDIT on a placed office block just works.
 5. **RC cloud.** Repeats with Enter, arc sizes scale correctly (450 / 90 / 4.5), layer and snaps come back, Escape leaves nothing (the one-U problem is BUG-215).
 6. **Guards that refuse to invent numbers.** CSLOADPATH names the missing footing plan; soil and wind commands refuse to guess.
-7. **Sweep C1:** CPROFILE and OSMODE matched the required Tim baseline at the start; CDDISCIPLINE names where the discipline came from and offers a clickable Cancel that prints "No change"; the Manager Help route works and its pages are readable; Cancel in CDS, Label Styles, Parts and Aliases discarded staged edits with the settings file hash unchanged.
+7. **Sweep C1 (final, Codex's own list):** (a) **Settings cancellation** - staged Light theme and a negative cover were discarded; reopening restored Dark and 300 mm and the settings file hash stayed identical (screenshots `cds-cover-negative-unsaved.png`, `cds-cover-reverted.png`; Codex-accepted for that narrow check, the engineering values are not accepted). (b) **Alias protection** - empty, native-conflicting and overlong short names got validation, and Cancel kept the file identical (`aliases-native-clash.png`, `aliases-200-name-validation.png`). (c) **Help reading** - the Manager-hosted guide scrolls in a bounded area, and enlarging a picture then Escape returned to the same reading position (`help-task-enlarged-picture.png`); search for pit, levels, schedule, tank, print, label all return entries. (d) **Typed selection recovery** - a real CE pipe shows the Pipe tab, and Escape or typed CDCLOSETAB clears it with the object count unchanged (`context-pipe-selected.png`, `context-cdclosetab.png`). Also: CPROFILE and OSMODE matched Tim's baseline at the start; CDDISCIPLINE names where the discipline came from and offers a clickable Cancel that prints "No change"; no-drawing start, Explorer double-click open, File > Open and a blank-copy start all work; Start Here to Help Centre is two clicks; the CDFEEDBACK form reads well, warns plainly when text is truncated and Escape discards the draft.
 
 ## What was NOT tested
 
-1. Sweep C1 tested 14 of 519 items when this file was written; the rest (all ribbon commands, all Settings fields, all dialogs) are NOT TESTED, not passed.
+1. Sweep C1 final: IN SCOPE 631, tested 22, NOT TESTED 609 (5 of them BLOCKED, 604 NOT TESTED, reason TIME for nearly all); the rest (every ribbon drawing command, most Settings fields, most dialogs) are NOT TESTED, not passed. Scope is a discovered minimum, not the full total. Sweep C2 tested 0 of 43 known commands (AutoCAD never opened).
 2. Engineering values shown in CDS, CDPARTS and CDRULEBOOK were read and recorded by Codex only; none is accepted (they need Tim's word).
 3. Nothing here is Tim-accepted.
+4. Not observed in sweep C1 (Codex notes): 150% display scaling, saved theme/profile/workspace changes, any Settings Save/Apply/OK, Send, install or publish, the protection cases (locked layer, XREF, REFEDIT, unsupported objects), the Plug-ins fallback (only Autodesk App Manager was in the tab, no CE button; not a fail), the CE right-click items on a selected pipe (only standard AutoCAD items were present; planned, not accepted from this build).
