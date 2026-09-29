@@ -212,6 +212,18 @@
 
 ---
 
+## BUG-232
+
+**Command / Area:** the scoped Pit Schedule refresh after each command (`ScheduleLinkService.Index.cs` lines ~105 and ~278): it writes drawn schedule cells WITHOUT the locked-layer / Xref / reference-edit check. Found by the Opus confirm of PR #409 (BUG-207), 30 Sep 2026 ~09:00, read from the code, NOT seen in AutoCAD; it was like this before #409 and is outside its diff.
+
+**What happens (hypothesis):** after an ordinary command CE refreshes the affected schedule cells without checking whether the cell's layer is locked, in an Xref or in a reference edit; PR #409 added that check only to the full refresh used by PITEDIT and the window. Native protection rule: CE must never write into locked/foreign content.
+
+**Test that catches it:** lock the schedule layer, move a pit, run the command: the cell is skipped and named on the command line; nothing is written; Xref-owned and REFEDIT cells the same.
+
+**Status:** OPEN (30 Sep ~09:00) - lane F after #409 merges.
+
+---
+
 ## BUG-230
 
 **Command / Area:** PAVE, raingarden placement and the site-area readers (`SurfaceEvidenceMapService`, `XrefSiteGeometryService`): drawing units. Found by the Opus review of PR #411 (BUG-209), 30 Sep 2026 ~08:50, read from the code, NOT seen in AutoCAD.
