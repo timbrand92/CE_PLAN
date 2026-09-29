@@ -100,3 +100,13 @@ results back).
    interrupted. Charter: `TIM_DESK.md` at the root of this repository.
 3. Charter items 3 ("Tim's side messages never stop the work") and 10 ("Tell Tim ...") are now carried out by the desk.
    The controller forwards anything Tim sends it to the desk and carries on.
+
+## 29 Sep 2026 about 17:40: Opus where it is needed (Tim, verbatim, to plan/05)
+
+> CAN YOU MAKE SURE THE FIRMER GUARDRAILS ARE SETUP ENSURING THAT ANYHTING THAT NEEDS OPUS USES OPUS, ALSO DO YOU THINK
+> THIS IS THE RIGHT APPROACH?
+
+Built as "The Opus rule", section 4 item 0 of `areas/release-v3-colleagues-QUEUE.md`: a fixed Opus list, a file-path
+risk check that decides it (it flagged 14 of the 25 PRs #362-#386), an explicit `model: "opus"` on every call, a stamp
+line and PR comment as proof, three hard gates (train contents, install GO, merge), Opus first in the budget, an Opus log
+(section 14), and two independent checks (the weekly rules check; the desk's Friday spot-check).

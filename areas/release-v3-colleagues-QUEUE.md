@@ -87,8 +87,10 @@ Rules fade from a long chat; re-reading them is cheaper than a broken install.
    the Claude week (27 Sep, before Sonnet 5.5). Opus review: not yet measured, so record the before and after of the first
    three. Your own turns cost more as your context grows: sub-agents (Explore, model sonnet) read the big files, and you
    never paste a large file into the chat.
-9. **Planned Claude split per week (estimate; correct it after week A):** controller about 10 points, builders about 55
-   (roughly 100 builder runs), Opus reviews and the weekly rules check about 15, reserve about 10.
+9. **Planned Claude split per week (estimate; correct it after week A):** the Opus list first, about 20-25 points (the
+   daily batch review and train sign-off, cards, diagnosis, the weekly check); this chat about 10; builders about 45
+   (roughly 80-90 runs); reserve about 10. Fewer builds than an all-Sonnet run, on purpose: Tim, 29 Sep, "ANYTHING THAT
+   NEEDS OPUS USES OPUS".
 
 ## 3. Lanes and the daily loop (from Fri 2 Oct 12:00)
 
@@ -117,17 +119,21 @@ model sonnet.
    items of lanes C, S, M and L in section 6's order. One family (2-6 related UX IDs) or one bug per builder. Brief =
    `builder_rules.txt` plus 5-15 lines: the IDs, the UX-plan line, the card, the files it may touch, the tests, Tim's
    AutoCAD check steps. Queue Codex window jobs (sol, medium) for the window half.
-3. **Midday, reviews:** Opus for anything touching reactors or overrules, Undo, caches or queues, save/close, link logic,
-   grips, or schedule-reading rules; Sonnet for the rest. Every review also checks what ELSE changed in the drawing output
-   and the command's properties (Lesson 10, the RC regression of 29 Sep). MERGE-WITH-FIXES goes to a Sonnet fixer on the
-   same branch.
+3. **Afternoon, reviews:** run the risk check (section 4, item 0.3) on every new PR. One Opus batch review covers every
+   flagged PR (section 4, item 0); a Sonnet review covers the rest. Every review also checks what ELSE changed in the
+   drawing output and the command's properties (Lesson 10, the RC regression of 29 Sep). MERGE-WITH-FIXES goes to a
+   Sonnet fixer on the same branch, then back to Opus for a short confirm if the fixes touch the risk paths.
 4. **17:00, the train:** new `claude/rel-YYYYMMDD` (Civil and Manager) from `master`, and `claude/rel-YYYYMMDD-struc`
    from `claude/struc-d1-prep`; merge the reviewed PRs; bump the version in the csproj AND `PackageContents.xml`
    (Lesson 6); build every lane (net48, net8, net10) with `-p:SkipDevBundle=true -nr:false --disable-build-servers`;
    run the full Civil net10, Manager and Structural suites; **count what ran** (zero discovered is a failure, RULES 5.4);
    compare failures **by name** with the known list in `builder_rules.txt`; pre-build the Structural candidate (install
    recipes: A2).
-5. **18:00, install on Tim's PC.** Load the TimOS `deploy` skill and follow its safety steps (section 4, item 2 says what
+   **Then the Opus train sign-off:** one Opus call checks every PR's gate evidence (an `OPUS REVIEW` comment on each
+   flagged PR, test counts, failures by name), the files touched by two or more PRs in the train, the version bump in
+   both files, and what else changed. It answers GO or NO-GO; log it in section 14. NO-GO: drop the named PR and ask
+   again, or don't install today.
+5. **18:00, install on Tim's PC, only on GO.** Load the TimOS `deploy` skill and follow its safety steps (section 4, item 2 says what
    is overridden). AutoCAD closed, checked twice 30 s apart; no Codex run live; rename the old bundles to
    `*_PRE_<commit>_<stamp>.backup`; copy; SHA256 every file, and check no hash is empty (deploy skill 5.6); read
    ProductVersion back; CE_SHARED identical in Civil and Manager, lane for lane; native ARX unchanged; name the one-step
@@ -154,10 +160,53 @@ model sonnet.
     4. No carpark or PENDING_TESTS row says FIXED or accepted without Codex or Tim evidence; the four words never merged.
     5. Usage stayed under the pace line; no rule on the never-alone list (section 4) was crossed.
     6. Lessons were written; the queue ticks match git and #78.
+    7. **The Opus rule held:** re-run the risk check on every PR merged or installed this week; each flagged one has an
+       `OPUS REVIEW` comment with a model stamp naming Opus, every install has a GO line in section 14, and section 14's
+       count matches. Any gap is written up plainly in the Friday facts.
     Its findings go in Lessons and in the Friday facts. Then write the Friday facts (section 9) and message the desk
     "Friday facts ready".
 
 ## 4. The rules for this run
+
+**0. The Opus rule (Tim, 29 Sep: "ANYTHING THAT NEEDS OPUS USES OPUS").** You run on Sonnet, and a sub-agent started
+without a `model` runs on Sonnet too. So:
+1. **Always pass `model: "opus"` explicitly** for everything on the Opus list. Never rely on the default.
+2. **The Opus list:**
+   1. Every PR the risk check (item 3) flags: one Opus batch review a day, one call covering several small PRs.
+   2. The train sign-off before every install: GO or NO-GO.
+   3. A1, the trunk convergence: the plan and the after-merge content check.
+   4. Diagnosis of any bug whose fix has failed Codex twice, and of any regression in something already Codex-accepted
+      or Tim-accepted (the RC case, Lesson 10).
+   5. Cards for L1-L4, S4, S5, C4 and C5, and any card whose behaviour touches the risk paths: Opus writes, Sonnet builds.
+   6. A second opinion before dismissing any Codex FAIL as a test mistake.
+   7. The weekly rules check (section 3, step 10).
+   8. The release-candidate audit before staging (M3).
+   9. Every handoff to a successor controller: check it drops no rule (charter: "A handoff that drops them is faulty").
+   10. Any change to the install recipes, `queue3.sh`, `daily_cap.sh` or `builder_rules.txt`.
+3. **The risk check.** Run it on every PR before review; any output line means Opus is required:
+   ```
+   gh pr diff <N> --name-only | grep -E -i 'Reactor|Overrule|Grip|Transform|PipeObject|Native|\.cpp$|\.h$|LinkService|Persistence|Undo|Save|Flush|Cache|Queue|Idle|DocumentLock|UnsavedChanges|ProjectDataService|Spine|Schedule(Builder|Service|LinkService)|PitSchedule.*Service|MemberSchedule|XclMText|StrSched|^Shared/CE_SHARED/|Installer/|PackageContents\.xml|Approval|Signing|ReleaseAuthority|blob-config|Calculation|Hydraul|Detention|Orifice|Boyd|Rational|NetworkDesign|RunSolve|Sizing|Structural\.DesignCore/|Rules/.*(Grade|Invert|Level|Fall|Cover|Velocity|Capacity)|/AI/|CE\.AI\.Core|CE\.Cloud|Telemetry|Credential|Secret'
+   ```
+   Tried on 29 Sep: it flagged 14 of the 25 PRs #362-#386 (the LinkService, schedule, installer, Structural link and
+   native files). A PR whose description changes an engineering calculation or rule is Opus-required even if no path
+   matches. The builder writes "Opus review: required / not required, because <paths>" in its PR body; where it
+   disagrees with the check, the stricter answer wins.
+4. **How to call it.** Reviews and sign-offs: `Agent` with `subagent_type: "csharp-reviewer"` (read-only: it can't edit
+   or spawn) and `model: "opus"`. Cards and diagnosis: `subagent_type: "Plan"` with `model: "opus"`; you write the file
+   from its return. Every Opus brief says: "Start your reply with one line: OPUS <kind> <target> - model <your exact
+   model ID, from your system prompt> - verdict <MERGE | MERGE-WITH-FIXES | DO-NOT-MERGE | GO | NO-GO>."
+5. **Proof, every time.** Post the verdict as a PR comment starting `OPUS REVIEW`, with the stamp line; add one line to
+   section 14 (date, kind, target, verdict, Claude usage before and after).
+6. **The gates. They are not optional and usage never overrides them.**
+   1. A train never carries a flagged PR without an `OPUS REVIEW` comment saying MERGE, or MERGE-WITH-FIXES whose fixes
+      Opus has confirmed (a short second call, needed only when the fixes touch the risk paths).
+   2. No install without an `OPUS SIGN-OFF train <branch> GO` line in section 14.
+   3. No merge to `master` or `claude/struc-d1-prep` of a flagged PR without both its `OPUS REVIEW` and a Codex PASS.
+7. **Opus comes first in the budget.** Reserve about 3 points a day for the Opus list before dispatching builders. If
+   Opus work passes about 30 points in a week, run fewer builders (fewer PRs), never fewer reviews. If Opus is
+   unavailable, nothing flagged merges or installs: build only unflagged items and keep Codex testing.
+8. **Not on the Opus list:** builders, Sonnet reviews of unflagged PRs, Codex briefs, carpark filing, the desk chat.
+   **Opus never replaces Tim:** engineering values and design rules still wait for his word.
 
 **1. TimOS, where each rule bites.**
 1. **RULES 4 (four words):** built, tested, installed, Tim-accepted, plus "Codex-accepted" (4.5); never merged, never a
@@ -234,7 +283,8 @@ Publishing to colleagues is **not** overridden: never, while Tim is away.
    what the drafter clicks and sees, prompts, window, preview, Escape, one Undo, save/reopen, tests, Codex steps. A card
    built only from Tim's rulings, with no open question, is approved in principle and may be built (practice since
    26 Sep, area log items 195 and 198; Tim can still reject it). A card with an open question: build the parts it
-   doesn't touch; the question goes in section 9.
+   doesn't touch; the question goes in section 9. **Cards on the Opus list (L1-L4, S4, S5, C4, C5, and any card touching
+   the risk paths) are written by Opus** (item 0.2.5 above); Sonnet writes the rest.
 3. **Engineering judgement stays Tim's** (RULES 4.5): build settings-first (R-00) with values tagged Assumed or with their
    source, mark "Needs Tim's engineering acceptance", and let Codex accept the mechanics only.
 4. **The 2022-2024 lane:** every change builds net48, but this PC cannot run AutoCAD 2022-2024. Every report says
@@ -271,8 +321,8 @@ Publishing to colleagues is **not** overridden: never, while Tim is away.
 
 ### 6a. Week A opening: Fri 2 Oct 12:00, in this order
 
-- [ ] **A1 Converge the trunk.** Nothing has merged to master since 28 Sep; about 37 draft PRs (#349 to #386) sit on
-      release branches.
+- [ ] **A1 Converge the trunk (on the Opus list: Opus checks the plan before, and the content diff after).** Nothing has
+      merged to master since 28 Sep; about 37 draft PRs (#349 to #386) sit on release branches.
       1. A sub-agent lists every PR in the live lines with its review verdict, its Codex evidence (passes 16, 17, X1, 18
          and sweep C1-C3) and the result.
       2. Anything that FAILED a pass is fixed on top first (lane F).
@@ -462,6 +512,8 @@ LAST MESSAGE: the report path, the four counts, the FAIL list one line each, bot
    until Tim logs in, which is why he paused Windows Update.
 7. **The desk chat is missing** from `ListAgents`: carry on; keep section 9 current; send only alerts, with
    `PushNotification`.
+8. **Opus unavailable or its share used up:** nothing flagged by the risk check merges or installs, and no train goes in
+   without its GO. Build only unflagged items, keep Codex testing, and say so in the Friday facts.
 
 ## 11. V3 UX items not found in any commit message (from `git log --all`, 29 Sep 2026)
 
@@ -507,3 +559,9 @@ mis-name things, so confirm each family in the code before building it, and tick
 
 Format: `INT-NNN (date) -> queue item / bug ID / "answer recorded, unblocks <item>" / "declined: <reason>"`.
 1. None yet (29 Sep).
+
+## 14. Opus log (the controller writes one line per Opus job; the weekly rules check counts it)
+
+Format: `date time - kind (review / train sign-off / convergence / diagnosis / card / FAIL second opinion / weekly check /
+RC audit / handoff check) - target (PR numbers, branch, bug, card) - verdict - model stamp - Claude weekly % before -> after`.
+1. None yet (29 Sep). The first three lines also give the cost measurement asked for in section 2, item 8.

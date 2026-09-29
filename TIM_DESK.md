@@ -91,8 +91,10 @@ except for the urgent cases in section 5.
 ## 7. The Friday summary
 
 **When:** after the controller messages "Friday facts ready", or at 15:00 on Friday if it hasn't.
-1. **Spot-check three claims first:** the installed version (read the DLL), one Codex PASS (open the report), one merge
-   (git log of master).
+1. **Spot-check four claims first:** the installed version (read the DLL), one Codex PASS (open the report), one merge
+   (git log of master), and **the Opus rule**: pick one merged PR that touches a LinkService, schedule, installer or
+   Structural link file and check it carries an `OPUS REVIEW` comment whose stamp names an Opus model
+   (`gh pr view <N> --comments`). If it doesn't, tell Tim plainly and send the controller one message.
 2. **Write FOR TIM in the chat,** in this order:
    1. The four words, separately.
    2. Three things he would notice in AutoCAD, each with a real example.
