@@ -247,3 +247,11 @@ Kept from the cards, not a question: CSLOADPATH's "assumed size" pad must NOT be
 
 "Structural COPY versus the new unit copy (CSUNITCOPY, PR #402): a plain COPY leaves a copied beam without supports (ST1-14) because it cannot tell which copy came from which original; CSUNITCOPY can, so it links each copied beam to its own copied supports in a NEW link group, which is Tim's 29 Sep answer 'A new link group'. Deliberate difference, Opus-confirmed."
 Also for the record: the unit copy command had a real blocker caught by the Opus review (copying a beam would have moved the ORIGINAL unit's supports and text); it is split onto PR #402 and being fixed; the confirmed part of the unit work (PR #397) is unaffected.
+
+## 30 Sep 2026 (Wed, about 08:40): Three answers to items 15 and 16 (Tim, clickable, via the desk)
+
+Queue section 9, item 15 (Structural notes, PR #405) and item 16 (storm frequency on the computations sheet, PR #403). All three took the recommendation.
+1. **15(a) master notes library:** "One shared file, path in Settings". One shared file, its path on the Settings page (R-00); an EXAMPLE library ships so nothing is invented.
+2. **15(b) STEP symbol (UX-SYM-02):** "Use the office's STEP TAG block". Ship the office's own "STEP TAG" block (Tim's, or the standard details library's), never a CE-invented symbol.
+3. **16 storm frequency:** "Fill from the council profile". Fill it from the council profile's sourced storage return period, shown as "from <council> profile" with its source, never silently; otherwise NOT SETTLED until the drafter sets it.
+Also read by the desk (not a ruling): Codex sweep C1 finished 08:14 (PASS 11 / FAIL 11 / BLOCKED 5 / NOT TESTED 604 of 631 in scope; incomplete) and its report records one AutoCAD crash (exception 0xc0000005, acad.exe with coreclr.dll, about 07:55, on a scripted COM Document.Close after a SaveAs); the report says correlation, not CE root cause. The controller diagnosed it from the crash file (BUG-224): CE Civil writes project data into the drawing at close, when AutoCAD is already taking it apart; fix started; Codex repeats the close 3 times by script and 3 by X/CLOSE before and after.
