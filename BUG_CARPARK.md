@@ -65,7 +65,7 @@
 
 **Steps for Tim to confirm the fix:** open a Structural drawing, click any plain rectangle or polyline: the ribbon stays where it was. Then in a Civil drawing click a CE pipe: the Pipe tab appears.
 
-**Status:** OPEN - builder dispatched 29 Sep.
+**Status:** IN PROGRESS (29 Sep ~13:30) - fixed, draft PR #380: `CivilSelectionClassifier.ClassifyEntity` decided the tab by object type (any polyline = pipe; any non-pit block = source). Now it uses CE ownership like the Inspector (C7 pipe object / CE pipe record or data; twin barrels only with a real CE owner; a block is a Source only with CE's source tag). Pits still recognised by block name. CE_SHARED untouched. Watch: older downpipe blocks without CE's source tag will no longer bring up the Source tab. Banked for 3.0.14.
 
 ---
 
