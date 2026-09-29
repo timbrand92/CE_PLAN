@@ -160,3 +160,10 @@ Questions are the queue's section 9, item 1, numbers 10 and 11. All answers took
 2. **Question 11, CD drawing helpers (UX-CMD/UX-UNDO, PR #398):** "Yes, all three". (a) A Codex probe first on naming the Undo step; if AutoCAD can't, print one plain sentence after each CE Undo ("Undid: <what>"). (b) Size and grade typed at the command line as an option in CD, not in draw-first CD. (c) The glow while pointing starts on pits only until Tim has judged the look, then pipes.
 3. Meter, told to Tim: the controller holds new builders at 99% so the Codex run can start at 04:07 Thursday; Opus reviews (#387, #388, #391, #393, #397, #390, #396) wait for Fri 12:00 unless Tim resets usage sooner. Tim said earlier (21:15) "i will reset usage once 100% is reached".
 Still waiting for Tim: questions 3, 4, 6, 7, 8, the Excel names in 5.
+
+## 29 Sep 2026 about 22:25: Questions only when the plan doesn't answer (Tim, to the desk)
+
+1. Tim, verbatim: "theres a plan, questions should only be if the chat is unsure against the plan".
+2. Meaning (desk, plain): before a chat puts a question in the queue's section 9, it checks the plan (the area file, the card, the decisions, the engineering rulebook). If the plan answers it, the chat follows the plan and does not ask; if the plan is silent or two parts of it disagree, the chat asks. This matches RULES 3.1 ("not for things the plan or the code already answer") and the existing rule "do not ask Tim something the plan already answers, and say which document you checked".
+3. What it does NOT change: an unanswered question still never becomes a decision (RULES 3.4), and Tim's word is still needed where the plan itself leaves an engineering value or a privacy choice open.
+4. Applies to: the controller, all builders, and the desk. The still-open section 9 questions (3, 4, 6, 7, 8, the Excel names in 5) are to be re-checked against the plan by the controller; those the plan answers are closed with the document named, and only the rest come back to Tim.
