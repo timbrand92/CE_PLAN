@@ -82,3 +82,21 @@ in commit messages, about 345 do not; four weeks will not finish all of them pro
 
 Assumption stated to Tim, not yet confirmed by him: he is back about **Mon 26 Oct 2026**.
 The execution queue built from these answers: `areas/release-v3-colleagues-QUEUE.md`.
+
+## 29 Sep 2026 about 17:15: two chats, not one (Tim, verbatim, to plan/05)
+
+> IF I WAS TO LEAVE THIS PLAN TO SONNET 5.5 WOULD IT BE ABLE TO MANAGE IT PROPERLY? MAKE SURE THIS PLAN IS WELL BUILT,
+> CLEAR WITH CORRECT RULES AND STRUCTURES, REFER TO TIMOS AS WELL. ALSO WE NEED ONE BUILDING, TERSTING, CODEX LAYOFF
+> CONTROLLER AND PROCEEDING TOWARDS THE GOAL, THEN ANOTHER CHAT THAT MANAGES MY IDEAS AND MANAGES ME SO I DONT INTERRUPT
+> THE MAIN CHAT AND I TALK TOT HAT INSTEAD OF THE MAIN CHAT, THAT WAY IT DOESNT GET DISTRACTED BY ME AND MY IDEAS,
+> SUMMARY MESSAGES AND ANYTHING ELSE
+
+Interpretation (plan/05, not Tim's words): "CODEX LAYOFF" read as "Codex hand-off" (sending work to Codex and taking its
+results back).
+1. **The controller** `CE_ACAD / release-v3-colleagues / build + release / 06`: builds, tests, runs Codex, installs,
+   merges, and moves the queue towards the goal. Tim does not talk to it.
+2. **Tim's desk** `CE_ACAD / ideas / plan / 01`: the only chat Tim talks to about CE while the run builds. It takes his
+   ideas, bug reports, rulings and questions, sends the summaries, and manages the flow so the controller is never
+   interrupted. Charter: `TIM_DESK.md` at the root of this repository.
+3. Charter items 3 ("Tim's side messages never stop the work") and 10 ("Tell Tim ...") are now carried out by the desk.
+   The controller forwards anything Tim sends it to the desk and carries on.
