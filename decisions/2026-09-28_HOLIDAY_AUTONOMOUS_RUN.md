@@ -187,3 +187,10 @@ After INT-006 the controller re-checked section 9 against the plan and closed fi
 1. Tim, verbatim: "usage has been reset, weekly usage resets on oct 2 so you can probably work a little faster to use 90% by that date, then once it resets it goes back to the regular cycle".
 2. Verified by the desk at 23:55: Claude weekly 0%, 5-hour 0%, Fable weekly 0%; the weekly window resets Fri 2 Oct about 12:00 Melbourne.
 3. Meaning: from now until Fri 2 Oct 12:00 the controller may run faster (up to 3 builders, the Opus reviews first as the Opus rule says) so that the weekly Claude meter lands near 90% at the reset, not sooner (his own 90% cap stands as the stop line) and not far below it (unused usage is wasted at the reset). After the reset the regular weekly cycle and the charter's normal pacing apply. This supersedes the 21:15 "build until 100%" and the 99% hold (both were about running out; the reset removed the problem).
+
+## 29 Sep 2026 about 00:05 (Wed 30 Sep): Sleep instructions (Tim, to the desk)
+
+1. Tim, verbatim: "going to sleep, wake me with the summary, please do not stop building unless i stop you, manage the weekly usage and throttle up/down as possible, before i sleep what percentage are we to the final goal?"
+2. **Do not stop building unless Tim stops it.** The controller has standing authority to throttle up or down to keep the weekly meter on the pace plan (about 1.5% an hour, near 90% at the Fri 2 Oct 12:00 reset). It pauses only if Tim says so. Meter troubles go to the desk, not to a stop.
+3. **Wake-up summary:** the desk sends the morning summary at 07:27 Wed 30 Sep (a one-shot timer; the desk chose the time, Tim gave none), with one push line.
+4. **The percentage:** answered with the checkpoints, not a percentage (RULES 4.1, TIM_DESK 2.2): the next checkpoint is Fri 9 Oct.
