@@ -194,3 +194,7 @@ After INT-006 the controller re-checked section 9 against the plan and closed fi
 2. **Do not stop building unless Tim stops it.** The controller has standing authority to throttle up or down to keep the weekly meter on the pace plan (about 1.5% an hour, near 90% at the Fri 2 Oct 12:00 reset). It pauses only if Tim says so. Meter troubles go to the desk, not to a stop.
 3. **Wake-up summary:** the desk sends the morning summary at 07:27 Wed 30 Sep (a one-shot timer; the desk chose the time, Tim gave none), with one push line.
 4. **The percentage:** answered with the checkpoints, not a percentage (RULES 4.1, TIM_DESK 2.2): the next checkpoint is Fri 9 Oct.
+
+## 30 Sep 2026 (just after midnight): Correction, no Codex pass on Wednesday morning (desk error)
+
+The desk told Tim (29 Sep, evening) that a Codex test would run at 04:07 that night. The controller's first message said Codex launches are armed for "Thu/Fri/Sat 04:07", and the desk misread that as Wednesday. The first Codex pass is Thu 1 Oct 04:07; Wednesday's Codex share is spent (55% used against a cap of about 58%; a pass costs about 8%). Tim's wake-up summary must say builders and Opus reviews ran overnight, not Codex. Tim was asleep; nothing he decided depended on this (his reset decision was about the Claude meter, which is right either way).
