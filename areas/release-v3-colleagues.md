@@ -38,6 +38,8 @@ Every successor release chat keeps these rules. A handoff that drops them is fau
 
 8. 29 Sep, Tim: "What do you keep checking in for? Just build, test, send to Codex, and repeat. And keep building whilst Codex is testing." Heartbeat is now every 2 h and SILENT unless something happened; message Tim only for results, installs, Codex outcomes, blockers or his decisions.
 
+9. 29 Sep, Tim waiting with AutoCAD closed: "CAN IT NOT BE FASTER?" Build and verify the whole install payload (all lanes, Structural release candidate, natives staged) BEFORE asking Tim to close AutoCAD; the closed-AutoCAD window is only backup + copy + hash read-back (2-3 min).
+
 ### For Tim when he is around
 1. **BUG-160 (typed bottom level on a grade-held pipe).** Your rule: see the typed and automatic numbers and pick. A grip drag cannot stop mid-drag to ask, so the choice would come the moment you let go: a small window "Keep your 10.30 / Use automatic 10.25". Recommendation: build that window (Codex) and until then change nothing (today's behaviour stays). Alternative: a stop-gap that keeps your typed number and prints a line (you overruled this on 23 Sep, so not done without your word).
 3. **Pit Schedule FROM column (BUG-067):** where CE genuinely cannot tell where a pipe comes from, the schedule now prints "Unknown" instead of a blank. OK on a plotted drawing, or would you rather a dash "-" or blank? Recommendation: "Unknown" while drafting so it gets fixed before issue.
