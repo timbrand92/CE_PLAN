@@ -131,7 +131,8 @@ model sonnet.
    recipes: A2).
    **Then the Opus train sign-off:** one Opus call checks every PR's gate evidence (an `OPUS REVIEW` comment on each
    flagged PR, test counts, failures by name), the files touched by two or more PRs in the train, the version bump in
-   both files, and what else changed. It answers GO or NO-GO; log it in section 14. NO-GO: drop the named PR and ask
+   both files, what else changed, and every test file the train changes (no test removed, skipped or loosened, delegate
+   skill 5.6; the risk check skips test files, so this is where they are caught). It answers GO or NO-GO; log it in section 14. NO-GO: drop the named PR and ask
    again, or don't install today.
 5. **18:00, install on Tim's PC, only on GO.** Load the TimOS `deploy` skill and follow its safety steps (section 4, item 2 says what
    is overridden). AutoCAD closed, checked twice 30 s apart; no Codex run live; rename the old bundles to
@@ -185,7 +186,7 @@ without a `model` runs on Sonnet too. So:
    10. Any change to the install recipes, `queue3.sh`, `daily_cap.sh` or `builder_rules.txt`.
 3. **The risk check.** Run it on every PR before review; any output line means Opus is required:
    ```
-   gh pr diff <N> --name-only | grep -E -i 'Reactor|Overrule|Grip|Transform|PipeObject|Native|\.cpp$|\.h$|LinkService|Persistence|Undo|Save|Flush|Cache|Queue|Idle|DocumentLock|UnsavedChanges|ProjectDataService|Spine|Schedule(Builder|Service|LinkService)|PitSchedule.*Service|MemberSchedule|XclMText|StrSched|^Shared/CE_SHARED/|Installer/|PackageContents\.xml|Approval|Signing|ReleaseAuthority|blob-config|Calculation|Hydraul|Detention|Orifice|Boyd|Rational|NetworkDesign|RunSolve|Sizing|Structural\.DesignCore/|Rules/.*(Grade|Invert|Level|Fall|Cover|Velocity|Capacity)|/AI/|CE\.AI\.Core|CE\.Cloud|Telemetry|Credential|Secret'
+   gh pr diff <N> --name-only | grep -E -i 'Reactor|Overrule|Grip|Transform|PipeObject|Native|\.cpp$|\.h$|LinkService|Persistence|Undo|Save|Flush|Cache|Queue|Idle|DocumentLock|UnsavedChanges|ProjectDataService|Spine|Schedule(Builder|Service|LinkService)|PitSchedule.*Service|MemberSchedule|XclMText|StrSched|^Shared/CE_SHARED/|Installer/|PackageContents\.xml|Approval|Signing|ReleaseAuthority|blob-config|Calculation|Hydraul|Detention|Orifice|Boyd|Rational|NetworkDesign|RunSolve|Sizing|Structural\.DesignCore/|Rules/.*(Grade|Invert|Level|Fall|Cover|Velocity|Capacity)|/AI/|CE\.AI\.Core|CE\.Cloud|Telemetry|Credential|Secret' | grep -v -i -E '\.Tests?/|/Tests?/|Tests?\.cs$'
    ```
    Tried on 29 Sep: it flagged 14 of the 25 PRs #362-#386 (the LinkService, schedule, installer, Structural link and
    native files). A PR whose description changes an engineering calculation or rule is Opus-required even if no path
