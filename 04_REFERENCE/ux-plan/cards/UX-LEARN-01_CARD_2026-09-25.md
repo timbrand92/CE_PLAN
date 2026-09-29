@@ -135,3 +135,63 @@ engineer promotes it (R-10 pattern); Unknown is never filled by a guess. Also lo
    history, both?** *Recommended: a simple count next to the suggestion (e.g. "corrected 3 times"), not a
    full history list — keeps the window calm per the standing cockpit/no-clutter rule, and a full history is
    always available in the underlying ledger file for support/diagnostics if ever needed.*
+
+## 7. BUILD RECORD, slices 1 and 2 (own habits + corrections), 29 Sep 2026 - Claude builder, branch claude/l1-learn
+
+**Status: Built and unit-tested. Nobody has opened it in AutoCAD. Nothing is Tim-accepted. Ships OFF.** Code is in
+`Modules/Drainage/Learning/` (settings, models, feature list, `LearningService`), tests in
+`Modules/Drainage.Tests/Learning/`. Small edits to two existing files: one `Learning` block on `UserSettings`, and one
+line in `SuggestionLedgerService.Append` that hands each event to the learning service.
+
+1. **How it works (AutoCAD terms).** Every time the pit window closes with OK, CE already writes a numbers-only line to its
+   suggestion ledger (the size CE proposed, the size you confirmed). Learning watches that same line. If you confirm the same
+   plan size 3 times, CE calls it your habit. If CE proposed 450 x 450 and you changed it to 600 x 600, CE remembers your
+   version and offers it from the next pit, saying so, with "corrected N times".
+2. **Built as an event-time feed, not a re-read of the ledger file (deviation from card slice 1 wording).** Reading the
+   file later cannot honour the off switch: choices made while it was off would be learned when it was switched back on. Feeding
+   from the one ledger write point means "off" stops recording by construction and there is no second parse to get wrong.
+   The defence-in-depth guard the card asked for is kept in another form: the store accepts only the listed numbers from a
+   listed feature (pit size only), and a test feeds events carrying path/name/handle-shaped keys and checks none reach the file.
+3. **Settings (R-00), all in the person's own settings file:** `learning.enabled` (master, default OFF, queue rule 4.5.5),
+   `learning.learnFromMyChoices` (the person's own switch, UX-LEARN-04, default on once the feature is on),
+   `learning.habitMinRepeats` (OPEN 2: a Settings value; default 3 is an ASSUMED starting figure, Tim to confirm).
+4. **Where it is stored:** one file beside the person's own settings (`learning\what-ce-learned.json`): numbers only, no
+   path, client, job name, handle or person's name. Never the shared, job or drawing-side store; never Manager.
+5. **Off means off:** either switch off = nothing recorded, no suggestion returned. Choices made while off are never learned
+   later. What CE already holds stays listed and removable while off.
+6. **Not built (needs a later slice or Tim):** office learning through Manager (slice 3), promote-to-office-rule (slice 4), citing
+   past CE projects (slice 5, no corpus import exists: `C:\CE_DrawingIntelligence` was not opened), any window.
+7. **Cancel:** the card says Cancel becomes "a learning signal" but gives no rule for what it changes. It is recorded as
+   nothing for now (a cancelled window learns nothing and drops CE's proposal). Tim to say if Cancel should count.
+
+### Window contract (for the Codex window builder; no XAML here)
+
+All calls are on `LearningService.Default` (namespace `CE_CVL_SUITE.Learning`). A window never reads the store file.
+
+1. **Suggestion line in the pit window (and any later window):** call `GetSuggestion("pit_setup")`.
+   1. `Status == Off`: show nothing at all.
+   2. `Status == NotEnoughLearned`: show the quiet line `answer.Message` ("Not enough learned yet") or nothing; never a value.
+   3. `Status == Suggestion`: show `Suggestion.DisplayValue` (e.g. "1200 x 1200 mm"), the reason `Suggestion.Why`, the small
+      source label `Suggestion.SourceLabel` ("Your own habit" / "Your correction" / "You told CE"), and `Suggestion.CorrectedText`
+      ("corrected 3 times") when not blank. Every learned line MUST show `Why`; the type refuses to exist without it.
+   4. The learned line is a suggestion beside CE's engineering proposal, never instead of it, and never fills a box by itself:
+      the drafter presses a Use button, as on the existing suggestion strip. Recommendation, to confirm with Tim: engineering
+      proposal first, learned line second.
+2. **"What CE learned" list (UX-LEARN-03):** `WhatCeLearned()` returns one row per learned decision: `FeatureName`,
+   `Summary` (plain English), `ChoiceLines` (each remembered size and how often), `CorrectedCount`, `IsSuggesting`.
+   Buttons: Correct (asks for the numbers, calls `CorrectLearned(row.Id, values, out message)`, shows `message` if refused),
+   Remove (`RemoveLearned(row.Id)`), Remove everything (`RemoveEverything()`, returns how many). The list works while learning is off.
+3. **Settings page rows:** "Let CE learn from my choices" = `learning.enabled` (default off), "Learn from my own choices" =
+   `learning.learnFromMyChoices`, "Repeats before CE suggests" = `learning.habitMinRepeats`. Each needs a search-catalogue
+   entry (`SettingsValueCatalog`); not done here because the Settings page is Codex's.
+4. **Not wired yet in this slice:** the pit window does not show the learned line until the window work is done. The
+   store fills (when switched on) but nothing reads it on screen; that is deliberate.
+
+### Questions for Tim (privacy is his; recommendation given for each)
+
+1. **What is remembered about a person:** built as numbers only (which pit plan size, how often, how often changed), on that
+   person's own PC. Right? Recommended: yes, never anything else.
+2. **How long is it kept?** Not decided. Recommended: until the person removes it (list or Remove everything); no automatic expiry.
+3. **Should learning start from the day it is switched on, or import what the suggestion ledger already holds?** Built as "from
+   the day it is switched on". Recommended: keep it so; the old ledger was written for diagnostics, not for learning.
+4. **Cancel:** should a cancelled pit window count as "the suggestion was declined"? Recommended: no.
