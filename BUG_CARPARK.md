@@ -212,6 +212,20 @@
 
 ---
 
+## BUG-233
+
+**Command / Area:** the computations sheet (CDCALC), the orifice discharge-coefficient line. Found by the Opus builder of PR #413 while rendering the sheet, 30 Sep 2026 ~09:10; NOT fixed.
+
+**What Tim would see:** the orifice discharge-coefficient line prints an INTERNAL FILE PATH and a GitHub link as its source (for example a docs/evidence path and a link code) instead of the document and page.
+
+**Test that catches it:** render the computations sheet and assert no source line contains a path separator, ".md", "github" or "](#" (the same guard #413 added for the storm-frequency line, applied to every source line).
+
+**Steps for Tim/Codex:** run CDCALC on a detention job with an orifice, open the sheet PDF: every source reads as a document name and page.
+
+**Status:** OPEN (30 Sep ~09:10) - lane F (calculation output: Opus review required).
+
+---
+
 ## BUG-232
 
 **Command / Area:** the scoped Pit Schedule refresh after each command (`ScheduleLinkService.Index.cs` lines ~105 and ~278): it writes drawn schedule cells WITHOUT the locked-layer / Xref / reference-edit check. Found by the Opus confirm of PR #409 (BUG-207), 30 Sep 2026 ~09:00, read from the code, NOT seen in AutoCAD; it was like this before #409 and is outside its diff.
