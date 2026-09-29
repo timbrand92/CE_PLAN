@@ -148,3 +148,15 @@ Tim, 29 Sep: "if other chat has questions for me then send them through in this 
 3. **Question 5, Structural front door names:** "The S names". Where two typed names do the same job (SDS/TDS, SDS1/TDS1, STS1/TTS1, SC1/TC1), the S names win. CL1/PCL and CR1/PCR stay as both. NOT answered: the Excel pair question (keep the card's long EXCELCAPTURE names or the shortest name); it stays open.
 4. **Question 9, what CE learns about a person:** "Yes, all four". (a) Numbers only, on the person's own PC. (b) Kept until the person removes it (they can see it, remove it or everything). (c) Learning starts the day it is switched on, not from old drawings. (d) Pressing Cancel does not count as declining a suggestion.
 Still waiting for Tim: questions 3, 4, 6, 7, 8 and the Excel-names part of 5.
+
+## 29 Sep 2026 about 22:15: Answers to questions 10 and 11 (Tim, clickable, via the desk)
+
+Questions are the queue's section 9, item 1, numbers 10 and 11. All answers took the recommendation.
+1. **Question 10, Structural units (UX-UNIT, PR #397):** Tim first answered "No, ask me one at a time" to accepting all four, then answered each:
+   1. (a) "Window, then base points": a window round the unit's framing, then one base point per target.
+   2. (b) "Yes, pick a mirror line": mirrored units use a mirror line.
+   3. (c) "A new link group": linked copies get a new group, not the original's beam links.
+   4. (d) "Inside each floor's block": unit headings sit inside each floor's schedule block, not replacing the per-floor blocks.
+2. **Question 11, CD drawing helpers (UX-CMD/UX-UNDO, PR #398):** "Yes, all three". (a) A Codex probe first on naming the Undo step; if AutoCAD can't, print one plain sentence after each CE Undo ("Undid: <what>"). (b) Size and grade typed at the command line as an option in CD, not in draw-first CD. (c) The glow while pointing starts on pits only until Tim has judged the look, then pipes.
+3. Meter, told to Tim: the controller holds new builders at 99% so the Codex run can start at 04:07 Thursday; Opus reviews (#387, #388, #391, #393, #397, #390, #396) wait for Fri 12:00 unless Tim resets usage sooner. Tim said earlier (21:15) "i will reset usage once 100% is reached".
+Still waiting for Tim: questions 3, 4, 6, 7, 8, the Excel names in 5.
