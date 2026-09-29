@@ -185,6 +185,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 
 **Steps for Tim to confirm the fix:** open a real job drawing, draw and edit about 30 CE pipes and pits for 10 minutes (move pits, CDEDIT, PIT, select labels, open the Inspector), then draw a SPLINE with 20 points and pan/zoom: it must feel as quick as on a fresh start.
 
+**TIM'S WORD, 29 Sep 2026 ~12:15, drafting live on Civil 3.0.13: "its working way faster though".** Tim-accepted as a clear speed improvement in real use (rounds 1-4 installed). Kept open only for Codex's timing confirmation on 3.0.14 and the remaining items (Structural speed fix is in 1.0.82 but not yet Codex-timed).
+
 **Status:** IN PROGRESS (28 Sep evening) - Civil fix BUILT, draft PR #350 (`09e15a4a`, on top of timing PR #349): CE refreshes only the objects an edit touched at idle (full re-read kept as a logged safety net above 200 objects, after Undo/Redo, on open, or on error); the double back-to-back re-read removed; draw order re-applied only to touched objects; the endless idle save retry replaced by a proper document lock; Structural idle log only on idle/active changes. NOT changed: schedule-cell refresh (no index yet) and the start-of-command project sync (both still full passes; next round). Builds 0 errors (Civil + Structural, both lanes); full Civil net10 12,117 passed / 8 failed (known AddSystemCommand/Boyd family). Independent Opus review running. Structural speed fix builder running. Not installed, not tested in AutoCAD.
 
 ---
