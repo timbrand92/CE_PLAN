@@ -237,3 +237,8 @@ Queue section 9, item 13 (C4 card, design and calculations) and item 14 (S4 card
 7. **S4 (c) bar length rounding:** "Settings value, exact until set". Exact length shown until Tim sets the rounding.
 8. **S4 (d) bar shapes:** "Straight first, others Unknown". Other shapes Unknown until Tim confirms the office shapes.
 Kept from the cards, not a question: CSLOADPATH's "assumed size" pad must NOT be reused for the footing proposal (CE never invents a footing size, ST6-4).
+
+## 30 Sep 2026 07:30: Morning desk note (desk)
+
+1. The desk's 07:27 timer fired. Found: Claude weekly 3% (pace plan about 10% by now), the controller's last activity 00:48, none of its overnight timers ran, and Remote Control on the desk had gone off (the Claude app most likely restarted overnight). The desk sent the controller "WAKE" at 07:30 and switched its own Remote Control back on.
+2. Codex overnight: pass 18 finished 05:57 (PASS 47 / FAIL 18 / BLOCKED 21 / NOT TESTED 17 of 103 checks); sweep C1 was running at 07:27 (PASS 9 / FAIL 5 / BLOCKED 4 / NOT TESTED 501 of 519 in scope so far); Codex weekly 81.0% (stop line 90%).
