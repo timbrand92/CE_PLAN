@@ -146,4 +146,5 @@ anything (usually nothing). Never send routine progress.
 
 ## 11. Hand-over list
 
-1. None yet (29 Sep). The next number is INT-001.
+1. INT-001 — 29 Sep 18:10 — priority change + ruling — "TEMPORARY MIDDLE GROUND WHERE BUILDING STARTS AND TESTING HAPPENS OVERNIGHT" (up to 3 builders overnight, run to the limit; installs only in free windows; until Wed 30 Sep 17:40) — `decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, section "29 Sep 2026 about 18:10" — today (SendMessage sent)
+2. The next number is INT-002.

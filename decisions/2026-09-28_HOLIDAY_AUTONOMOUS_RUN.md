@@ -122,3 +122,13 @@ line and PR comment as proof, three hard gates (train contents, install GO, merg
    session is unavailable in unattended sessions"), and it stalls on an approval prompt when it writes a file, so it
    cannot take over the work either. The watchdog therefore wakes the controller through the task's own completion
    notice (see the queue, section 3).
+
+## 29 Sep 2026 about 18:10: Temporary middle ground until Wed 30 Sep 5:40pm (Tim, to the desk, via the controller's question)
+
+1. Tim to the controller, verbatim: "CAN WE START THE PROCESS, I NEVER ASKED FOR YOU TO STOP". The controller replied that the run has started and building is held only by the meters (Claude weekly 95% against Tim's own 90% cap; Codex 55% against today's cap of 44%). The desk read the meter itself: Claude weekly 95%, resets Fri 2 Oct 12:00 Melbourne.
+2. Tim, verbatim: "SO FOR NOW TEMPORARILY UNTIL WEDNESDAY 5:40PM WHEN BUILDERS START I NEED A SORT OF TEMPORARY MIDDLE GROUND WHERE BUILDING STARTS AND TESTING HAPPENS OVERNIGHT BUT I WILL STILL BE WORKING DURING WORK HOURS, DOES THAT MAKE SENSE?"
+   Interpreted (desk, confirmed by Tim's two clicks below): "Wednesday 5:40pm" is Wed 30 Sep 2026, 17:40 Melbourne, tomorrow. Until then, building and Codex testing run overnight and Tim keeps working in AutoCAD in his work hours.
+3. Tim's clicks, asked with the risk stated (the meter has 5% left; it could lock him out of Claude until Fri 12:00, including Wed work hours):
+   1. **Builders:** "Up to 3 builders, run to the limit". This overrides his own 90% weekly cap (RULES 14.6), scope: from tonight until Wed 30 Sep 17:40 only. The controller stops builders at the limit and keeps Codex going (queue section 10, item 1).
+   2. **Installs:** "Only in your free windows". During this middle ground the release chat installs only after 5:30pm, before 8:30am, or 2:00 to 3:00pm, never while AutoCAD is in use.
+4. After Wed 30 Sep 17:40 the run continues under the existing charter and the queue's calendar; the 90% cap applies again to Tim's own use.
