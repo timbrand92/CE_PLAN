@@ -60,7 +60,10 @@ Rules fade from a long chat; re-reading them is cheaper than a broken install.
 6. Meters: `get_usage` (weekly and 5-hour); `bash "C:/Lisp Files/_CODEX_RUNNER/codex_usage.sh"`; `daily_cap.sh explain`.
 7. What is installed: the ProductVersion of the three Modern DLLs under `%APPDATA%\Autodesk\ApplicationPlugins\`, and
    GitHub #78. Never trust a remembered version (RULES 8.4).
-8. Your timers: list them; re-create any that are missing (section 3, the loop times; section 5 for Week 0).
+8. **Your timers: `CronList`, then re-create any that are missing** (the timer set is in section 3). **Timers live only
+   in this session and recurring ones expire after 7 days** (CronCreate's own rule), so they vanish when the Claude app
+   restarts and die a week after they were made. **Every Friday routine deletes and re-creates all recurring timers**,
+   and so does any session start or watchdog nudge that finds one missing or older than 5 days.
 
 ## 2. Calendar and budgets
 
@@ -81,8 +84,11 @@ Rules fade from a long chat; re-reading them is cheaper than a broken install.
    Codex launches and a five-line read of each result only (target 1% in total). No builders, no Opus, no install, no
    merge.
 7. **Codex:** `daily_cap.sh` gives an even share (14% a day; an unused day carries forward). An AutoCAD pass costs about
-   7-8%, a sol window build 1-2%. **Unused Codex expires at its reset:** in the last 36 hours, spend what is left on
-   sweep parts.
+   7-8%, a sol window build 1-2%. **Always launch with `maxpct` = `auto` and a cost**, so `queue3.sh` itself refuses a
+   job that would pass the day's share; never type a fixed cap to force one through. The one exception: **unused Codex
+   expires at its reset**, so in the last 36 hours spend what is left on sweep parts. A skipped job goes first the next
+   day. **If a Codex run fails to start** (login expired, CLI error in `out\<name>.log`): alert the desk (Tim may need to
+   log Codex in again), keep building, hold merges until a pass runs.
 8. **Costs (correct these from the meters; one Lessons line per new measurement):** 5 Sonnet builders cost about 2% of
    the Claude week (27 Sep, before Sonnet 5.5). Opus review: not yet measured, so record the before and after of the first
    three. Your own turns cost more as your context grows: sub-agents (Explore, model sonnet) read the big files, and you
@@ -109,6 +115,22 @@ brief (objective, files owned, context, constraints, deliverable, acceptance) an
 `general-purpose` agents, model sonnet, `run_in_background`, told not to spawn sub-agents (memory "background split-agent
 racing"). Reviews: `csharp-reviewer` agents (read-only), model opus or sonnet as section 4 says. Reading: `Explore`,
 model sonnet.
+
+**The timer set** (`CronCreate`, local time, off-minutes on purpose; write each ID and its creation date in the Lessons
+line of the day you make it):
+1. **Heartbeat,** recurring `13 */2 * * *`: read the hand-over list, check builders and Codex, act or stay silent.
+2. **Daily,** recurring: `3 6 * * *` morning read; `57 16 * * *` train; `7 18 * * *` install; `7 19 * * *` Codex brief
+   and launch.
+3. **Codex early launch,** one-shot `7 4 <day> <month> *` on any night a brief is waiting for the next day's share.
+4. **Friday routine,** one-shot each week for the next reset: `7 12 2 10 *` for 2 Oct, then `7 13 9 10 *`, `7 13 16 10 *`,
+   `7 13 23 10 *` (13:07 once daylight saving starts). Each Friday routine re-creates every recurring timer (item 8 of
+   section 1) and schedules the next Friday.
+
+**The watchdog (Tim, 29 Sep: "Yes, daily at 7am").** A scheduled task in the Claude app, `ce-holiday-watchdog`, runs at
+about 07:07 every day in its own fresh session. If this controller (the highest-numbered `build + release / 06+`
+session) has been idle for more than 3 hours, it messages you: re-read sections 1 and 3, re-create your timers, carry
+on. Your 2-hourly heartbeat is what keeps you "active", so a nudge means your timers died: obey it, then write one
+Lessons line. The watchdog survives app restarts; it does not survive the PC being off or logged out.
 
 **The loop.**
 1. **06:00, silent:** read both meters and the desk's hand-over list. Read the last Codex run (`out\<name>.last.txt`, then
@@ -413,9 +435,9 @@ Publishing to colleagues is **not** overridden: never, while Tim is away.
    on 2 Oct.
 2. **Fri 16 Oct:** C2 and C3 built; S2 built; M1 built; L2 LEVELS and SOURCES built; the Structural sweep finished;
    real-job comparison 1 done.
-3. **Fri 23 Oct:** C4 and C5 built; S3 built; M2 built; L2 finished; UX human-use pass 1 done.
-4. **Tim's return:** C6 and S4 built; S5, L3 and L4 built or in progress; fix-out done; final full regression passed;
-   the candidate staged (M3); the return page (section 12) written.
+3. **Fri 23 Oct:** C4 and C5 built; S3 built; M2 built; L2 finished; the Manager sweep finished; UX human-use pass 1 done.
+4. **Tim's return:** C6 and S4 built; S5, L3 and L4 built or in progress; fix-out done; the final full sweep of all three
+   modules passed with its coverage count; the candidate staged (M3); the return page (section 12) written.
 If a checkpoint slips, never cut checks to catch up: say so in the Friday facts with the new date.
 
 ## 7. The Codex programme
@@ -444,6 +466,22 @@ If a checkpoint slips, never cut checks to catch up: say so in the Friday facts 
    drawings; S2 beams and columns (commands 1, 2, 4, 5; D2 connected framing; grips; MOVE bringing beams); S3 schedules
    (XCLMTXT, STRSCHED*, member, footing, pier, lintel); S4 tags, marks, notes, symbols, sections, the detail library;
    S5 foundations, slabs, bracing, lintels, retaining, RC; S6 CEARCHREVIEW (2027 native), sheets and issue, long session.
+3b. **Manager sweep (Tim, 29 Sep: "TEST EVERY BUTTON, TOOL, FUNCTION, SYSTEM, AND USER EXPERIENCE FOR BOTH CIVIL AND
+   STRUCTURAL MODULES AND TEST THE MANAGER AS WELL"), after the Structural sweep, about Sat 17 Oct:**
+   1. **MG1 Front door:** CEMANAGER and every tab, button and field; the one-glance status page; the versions of all three
+      modules; CE_VERSION / About; What's New; Help; Report a problem / Feedback; Settings.
+   2. **MG2 Updates and safety, look but never act:** the update check shows the right state; the rollback screen up to its
+      confirmation, then Cancel; problem reports saved with the version; the admin page; the logs. **Never approve,
+      publish, install or roll back from a Codex run**: the controller rehearses a real rollback itself (M3).
+   3. **MG3 The system:** all three modules loading together at start-up (one CE tab, no doubled ribbon, the shared
+      library identical), start-up time and splash, a second start, a drawing opened by double-click, several drawings
+      open, closing and reopening AutoCAD, the [PERF] summary.
+3c. **Every sweep proves "every".** Each part starts by listing every command, ribbon button, window and tab in its scope
+   (from the CE ribbon, the command register and the Help list) and ends with "in scope N, tested M, not tested K", each
+   untested one with its reason. After a sweep's last part, the controller merges the lists: every CE command must
+   appear as tested, or as NOT TESTED with a reason and a queue item to test it.
+3d. **The final full sweep (week D, on the staged candidate):** Civil, Structural and Manager again, every command at
+   least once, with UX notes only on what changed since the first sweeps. Its coverage count goes on Tim's return page.
 4. **Weekly:** a long-session speed pass, alternating Civil and Structural (C8 and S6 count in their sweep weeks).
 5. **Drafting:** draft1, synthetic (Thu 1 Oct); RJ1, real job (section 8, week B); draft2, a harder synthetic job
    (week C); RJ2 (week D, if RJ1 went well).

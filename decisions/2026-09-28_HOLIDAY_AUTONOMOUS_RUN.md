@@ -110,3 +110,15 @@ Built as "The Opus rule", section 4 item 0 of `areas/release-v3-colleagues-QUEUE
 risk check that decides it (it flagged 14 of the 25 PRs #362-#386), an explicit `model: "opus"` on every call, a stamp
 line and PR comment as proof, three hard gates (train contents, install GO, merge), Opus first in the budget, an Opus log
 (section 14), and two independent checks (the weekly rules check; the desk's Friday spot-check).
+
+## 29 Sep 2026 about 18:05: Codex tests everything, and the watchdog (Tim, to plan/05)
+
+1. Tim, verbatim: "AT SOME POINT I WANT CODEX TO TEST EVERY BUTTON, TOOL, FUNCTION, SYSTEM, AND USER EXPERIENCE FOR BOTH
+   CIVIL AND STRUCTURAL MODULES AND TEST THE MANAGER AS WELL". Built into the queue's section 7: the Civil sweep (C1-C8),
+   the Structural sweep (S1-S6), a new Manager sweep (MG1-MG3), a coverage count in every sweep part, and a final full
+   sweep of all three modules before the candidate is staged.
+2. Tim, clickable: "Yes, daily at 7am" to a daily watchdog task in the Claude app that keeps the run going if the app
+   restarts. Found by testing on 29 Sep: a scheduled run is refused when it messages another chat ("Messaging another
+   session is unavailable in unattended sessions"), and it stalls on an approval prompt when it writes a file, so it
+   cannot take over the work either. The watchdog therefore wakes the controller through the task's own completion
+   notice (see the queue, section 3).

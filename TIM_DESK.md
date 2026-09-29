@@ -127,7 +127,9 @@ anything (usually nothing). Never send routine progress.
 
 1. **Ask Tim to approve Remote Control** for this chat, so he can reach you from his phone and your Friday line reaches
    it.
-2. **Set the Friday timer:** each Friday from 2 Oct, 15:00 (in-session).
+2. **Set the Friday timer** as a one-shot (`CronCreate`, `recurring: false`) for Fri 2 Oct 15:07. Timers live only in
+   this session (an app restart removes them) and recurring ones expire after 7 days, so **each Friday, after the
+   summary, set next Friday's one-shot**, and at every session start run `CronList` and re-make it if it is missing.
 3. **File three TimOS bugs** (TimOS `BUGS.md`, through a TimOS worktree; ROUTER, TIMOS). Don't change the skills
    yourself.
    1. The `deploy` skill's trigger and hard limit 4.1 don't mention Tim's 28 Sep holiday override (installs on his PC at
