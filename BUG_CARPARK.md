@@ -869,6 +869,8 @@ every line since 13 Sep).
 
 **Status:** ON HOLD (28 Sep ~20:10) - PR #352 stays draft, NOT merged. Opus review DO-NOT-MERGE: (1) the "typed" flag is unreliable: pressing OK in Pipe Edit marks BOTH levels typed whenever the boxes are filled (`PipeEditCommand.Update.cs` ~1398-1399, ~1515-1516), even a level CE calculated or a diameter-only save, so after any Pipe Edit save the pipe would freeze its bottom level (this flag bug also affects master: the record refuses updates while plan text changes, widening the original symptom); (2) keeping the typed value with a message is the Claude proposal Tim SUPERSEDED on 23 Sep - he wants to see both numbers and pick; (3) the message repeats on every later update; (4) wrong grade in the message on cross-plan breaklines. **Next:** fix the typed flag first (only a level the user actually changed is typed); then design the pick step as a workflow card (a grip drag cannot stop to ask mid-drag, so the choice has to come at the end of the move, e.g. a small preview window) and ask Tim. Stop-gap question queued for Tim.
 
+**Tim, 29 Sep 2026 (plan/05, clickable): APPROVED the pick window** - when you let go of a grip drag on a grade-held pipe end whose bottom level was typed, a small window asks "Keep your 10.30 / Use automatic 10.25". Part 2 = Codex builds the window (ruling B) + Claude builds the behaviour on top of part 1 (#354). Queue item A5 in `areas/release-v3-colleagues-QUEUE.md`. The stop-gap is not needed.
+
 ---
 
 ## BUG-158
@@ -991,7 +993,7 @@ every line since 13 Sep).
 
 **Expected behaviour:** Pipe ends trim to the pit boundary exactly like hand-drawn CD pipes.
 
-**Built 29 Sep (Sonnet 5.5): PR #368** - XCIVIL import had its own copy of the pit-wall maths (every pit an unrotated square; a near-miss snapped to the pit centre). It now uses CD's own `PitOutline.TrySnapToWall` with the imported pit's real size, type and rotation. Invert levels are unchanged (still read from the pit's level text; not re-worked at the trimmed end) - question for Tim below. 7 new tests; full Civil net10 7 known only. Banked.
+**Built 29 Sep (Sonnet 5.5): PR #368** - XCIVIL import had its own copy of the pit-wall maths (every pit an unrotated square; a near-miss snapped to the pit centre). It now uses CD's own `PitOutline.TrySnapToWall` with the imported pit's real size, type and rotation. Invert levels are unchanged (still read from the pit's level text; not re-worked at the trimmed end) - question for Tim below. 7 new tests; full Civil net10 7 known only. Banked. **Tim, 29 Sep 2026 (plan/05, clickable): keep the imported levels; flag anything suspect in Project Review, nothing changes silently** - the flag is queue item A6.
 
 **Status:** OPEN.
 
@@ -1013,7 +1015,7 @@ every line since 13 Sep).
 
 **Notes:** mostly downstream of BUG-058/059/060/061 — connectivity garbage in, schedule garbage out. Known residual: `PitScheduleBuilder.BuildInletFromDisplay`/`GetOtherEndId` renders "FROM P1" for a pipe whose other end is blank — display should be blank/"(existing)" instead. Re-audit the export after the import fixes land.
 
-**Built 29 Sep ~05:30: PR #363** (on top of BUG-193): the schedule no longer guesses the pit's own ID as the FROM value; a pipe whose upstream end is genuinely unresolved now shows "Unknown" instead of a silent blank (a pit with no inlet stays blank). Builder's full suite reported 8 failures vs the 7 known - the next install gate checks by name. Banked. Tim to confirm "Unknown" is acceptable wording on a plotted schedule (listed under For Tim).
+**Built 29 Sep ~05:30: PR #363** (on top of BUG-193): the schedule no longer guesses the pit's own ID as the FROM value; a pipe whose upstream end is genuinely unresolved now shows "Unknown" instead of a silent blank (a pit with no inlet stays blank). Builder's full suite reported 8 failures vs the 7 known - the next install gate checks by name. Banked. Tim to confirm "Unknown" is acceptable wording on a plotted schedule (listed under For Tim). **Tim, 29 Sep 2026 (plan/05, clickable): "Unknown" APPROVED** for the FROM column where CE genuinely cannot tell.
 
 **Status:** OPEN.
 
