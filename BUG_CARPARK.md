@@ -99,7 +99,7 @@
 
 **Steps for Tim:** none needed beyond a Codex check that Structural Settings still opens and keeps his real rules; his current file must be BACKED UP, then cleaned by the fix, never by hand (his rules are his).
 
-**Status:** OPEN (29 Sep 19:10) - queued for Friday (Structural lane; Claude meter at 97%).
+**Status:** OPEN (29 Sep 23:10) - built, draft PR #399 (`claude/bug204-dedupe`, base rel-20260929c-struc). Root cause: the three rule lists start seeded with defaults and every load APPENDED the saved file onto them (about 24 per start); commit 34d8a295 had only fixed tie-down types. Fix: replace on load; remove exact duplicates on every load/save; nothing distinct is ever dropped; no cap. Sonnet review enough. Overlaps #392 in UserSettings.cs (same train). Back up Tim's CS_Settings.json before installing. Not tested in AutoCAD.
 
 ---
 
