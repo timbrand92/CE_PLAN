@@ -59,7 +59,9 @@
 
 **Evidence so far:** every CE handler with a timing line is fast (Civil ApplyPendingLinkUpdates 0-4 ms per call; Structural BeamLink/FoundationMonitor/AutoSave under 1 ms per call). Civil's automatic QA ran 1,095 times today (~4 s total) - so Civil may still be active in his drawing. Not timed: CE draw/grip/osnap overrules (Civil pipe overrules are XData-filtered; Structural beam grip overrule on every Polyline/Line with an extension-dictionary filter; Structural support grip on every block), the native C7 pipe object / grip ARX, and AutoCAD itself. Lag on pan/zoom points at drawing/display, not command-end work (hypothesis).
 
-**Next:** Tim's 2-minute A/B with CEPERFDIAG (turn off one CE watcher at a time); if not CE-Civil, the same test with Structural unloaded (NETLOAD-free session) to prove CE vs the drawing itself.
+**Tim's CEPERFDIAG A/B (29 Sep ~16:55): "NO CHANGE THE EXACT SAME" with each of the 8 Civil watchers off - the Civil watchers are ruled out.** Next: one session with CE Structural moved aside (then Civil), same drawing, to prove CE vs the drawing itself.
+
+**Earlier plan:** Tim's 2-minute A/B with CEPERFDIAG (turn off one CE watcher at a time); if not CE-Civil, the same test with Structural unloaded (NETLOAD-free session) to prove CE vs the drawing itself.
 
 **Status:** OPEN - investigating.
 
