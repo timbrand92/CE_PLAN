@@ -824,3 +824,5 @@ _"These things must still work" on a colleague install:_
 **Rules broken this session and the cost:** backslash paths garbled by inline Python/printf four times (fixed each time; use the Write tool for Windows paths); asked Tim to close AutoCAD before the payload was built (he waited ~8 min; Lesson 9); noisy 40-minute check-ins (Lesson 8).
 
 **Files chat 04 owned:** this area file's log items 301-333, BUG_CARPARK entries BUG-189..201, `C:\Lisp Files\_CODEX_RUNNER\` (runner + briefs).
+
+334. **29 Sep ~15:30: X1 Civil fixes built (PR #384, base rel-20260929b)** - BUG-198 diameter-only CDEDIT keeps the chosen grade label (rounded levels were re-deriving 1 IN 102); BUG-199 CE-filled levels show "Calculated from grade", typed ones "Staff entered"; BUG-193 the Pit Schedule SIZE converter dropped the typed text on commit - now resizes, or a status message when it cannot; BUG-192 no writer found in code - `PostUndoWriteWatch` logs a [REDO] line for any drawing write between an Undo and the next command (Codex pass 18 will show it). Full Civil net10 5 known. **Banked for Civil 3.0.15: #383, #384.**
