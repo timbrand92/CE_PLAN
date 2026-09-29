@@ -219,3 +219,8 @@ The desk told Tim (29 Sep, evening) that a Codex test would run at 04:07 that ni
 2. Rule for every progress answer and the Friday summary: give TWO figures, **Built X%** and **Codex-tested Y%** of the V3 plan (UX items plus open bugs), each an estimate with what was counted (queue ticks, the UX plan card list, PENDING_TESTS, the Codex reports). Do not headline "Tim-accepted 0%". The four words (built, tested, installed, accepted) stay separate in the detail (RULES 4.1); this supplies the two he wants as the headline. This supersedes the desk's "never a percentage" line in TIM_DESK.md section 2.2 for this purpose; the desk gave Tim no percentage at 00:05 and told him so.
 3. The controller treats thorough Codex testing (coverage counts, Part Z) as the main quality gate. Tim: he barely tests, Codex does it, so it must be tested well.
 4. Tim to confirm the wording when awake; nothing in it is engineering judgement.
+
+## 30 Sep 2026 (Tue night, about 23:55): Codex thinks about the user experience of everything (Tim, to the desk)
+
+1. Tim, verbatim: "get it to also think about the user experience of all of these things".
+2. Meaning: tonight's deep sweep (INT-012) must not only test that each thing works; for every command, button, window and message in scope Codex also judges the user experience as a drafter, and reports it as its own ranked list, not a line lost among the fails. The brief already scores wording and clicks; this asks for real UX thinking on every item, including suggestions for how to make it better.
