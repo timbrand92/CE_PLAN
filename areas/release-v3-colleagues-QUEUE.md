@@ -330,11 +330,11 @@ Publishing to colleagues is **not** overridden: never, while Tim is away.
 
 ## 5. Week 0: Codex tests only (Tue 29 Sep to Fri 2 Oct 12:00)
 
-- [ ] **W0-1 Tue evening (chat 04):** one last install, pre-built at `C:\CEPay\p15`: Civil 3.0.15 and Manager 1.1.15
+- [x] **W0-1 DONE 29 Sep 17:05 (chat 04; read back by controller 06 at 17:45: Civil 3.0.15+a6e0cc87, Manager 1.1.15+a6e0cc87, Structural 1.0.86+532f9550 all match the installed DLLs).** Tue evening (chat 04): one last install, pre-built at `C:\CEPay\p15`: Civil 3.0.15 and Manager 1.1.15
       (`claude/rel-20260929c` a6e0cc87 = #383 #384) and Structural 1.0.86 (`claude/rel-20260929c-struc` 532f9550 = #385
       reviewed + #386, the RC restore after Tim's "YOU RUINED RC", Lesson 10). Tim closes AutoCAD when chat 04 asks. Then
       chat 04 starts no more builders (confirmed by chat 04, 29 Sep, area log 337).
-- [ ] **W0-2 The controller starts** (Tim pastes its prompt): rename; subscribe to the watchdog (section 3); set the
+- [x] **W0-2 DONE 29 Sep ~17:50 (controller 06): renamed; watchdog subscribed; chat 04 confirmed it cancelled 62588dfa, 20668077, 0ba4e769; controller timers set: Thu 1 Oct 04:07 launch c39c63c2, Thu 10:07 write briefs 97b29288, Fri 2 Oct 04:07 launch 7272996b, Fri 12:07 Friday routine f0a0536a, Sat 3 Oct 04:07 launch 752aef08. Recurring timers (heartbeat, daily) are created by the Friday routine.** The controller starts (Tim pastes its prompt): rename; subscribe to the watchdog (section 3); set the
       timers below; message chat 04 "taken over your Codex timers; cancel yours and stop". **Arm your own Thu 04:07 launch only AFTER chat 04 confirms it has
       cancelled its timers** (chat 04's 21:03 one-shot otherwise runs pass18 then draft1 itself at Thu 04:07; two
       launches would put two Codex runs on one AutoCAD). No confirmation: don't arm yours.
