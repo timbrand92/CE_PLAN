@@ -31,3 +31,7 @@ Asked: "CDSLAB still sets fall text its own way. Should it follow the same rule 
 Interpretation (release chat): yes - CDSLAB's fall symbols use the same FALL SYMBOL 2 rule as CDFALL (arrow follows the fall bearing, block flip for left-pointing falls, cardinal snap, the block evaluates itself, one text-patch path). Builder dispatched on top of PR #370.
 
 Confirmed by Tim, 29 Sep 2026: "yes follow cdfall sorry" - CDSLAB follows the CDFALL rule (interpretation above is now his word).
+
+## Pit Schedule and branch junctions - Tim, 29 Sep 2026 (supersedes the part-2 "Junction on P3-P2 at 6.4 m" wording)
+Tim (verbatim): "[Pit] schedule does not need to show the junctions. If a pipe goes from P3 to P2 and it has branches off of it, we don't need to mention the branch. But let's say the pipe goes from multiple downpipes to P3 pit, then in the pit schedule it needs to show in the from category, it needs to show DPs."
+Rule: the Pit Schedule never shows a junction. A main's row (P3 -> P2) is unchanged whatever branches join it. A pipe arriving at a pit whose upstream collects MORE THAN ONE downpipe (directly or through branch junctions) shows FROM "DPs" (the existing combined downpipe label); a single downpipe shows its own tag (e.g. DP1).
