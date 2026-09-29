@@ -198,3 +198,10 @@ After INT-006 the controller re-checked section 9 against the plan and closed fi
 ## 30 Sep 2026 (just after midnight): Correction, no Codex pass on Wednesday morning (desk error)
 
 The desk told Tim (29 Sep, evening) that a Codex test would run at 04:07 that night. The controller's first message said Codex launches are armed for "Thu/Fri/Sat 04:07", and the desk misread that as Wednesday. The first Codex pass is Thu 1 Oct 04:07; Wednesday's Codex share is spent (55% used against a cap of about 58%; a pass costs about 8%). Tim's wake-up summary must say builders and Opus reviews ran overnight, not Codex. Tim was asleep; nothing he decided depended on this (his reset decision was about the Claude meter, which is right either way).
+
+## 30 Sep 2026 (still Tue night, about 23:15): A Codex pass tonight (Tim, to the desk)
+
+1. Tim, verbatim: "can we do a codex run tongiht also, making sure we manage codex weekly usage?"
+2. Read by the desk at 23:10: Codex weekly used 55.0%, resets Sun 4 Oct 04:01 (the queue says 05:01 after daylight saving). The controller had ruled "no Codex on Wednesday" because Wednesday's even share (cap 58%) was spent and a pass costs about 8% (the controller's estimate).
+3. Ruling (Tim's word, RULES 14.6): one Codex pass in the early hours of Wed 30 Sep (the queue's early-launch one-shot, 04:07), borrowing from Thursday's share. Sum by the desk: 55% plus about 8% is about 63%; Thursday's cap is about 72%, so a Thursday pass at about 71% still fits; Friday about 79%, Saturday about 87%, leaving about 13% spare. Thin if a pass costs more than 8%. Managing the meter: the pass's STOP line is set by the controller from `daily_cap.sh`, the desk recommends no higher than 66% for this pass (so Thursday keeps a full pass); the run stops at its stop line, closes AutoCAD without saving and copies the logs (queue section 7). Tim's PC: AutoCAD is closed and he is asleep, copies only.
+4. Supersedes the queue's W0-3 "Wed 30 Sep: no Codex" for tonight only.
