@@ -167,3 +167,11 @@ Still waiting for Tim: questions 3, 4, 6, 7, 8, the Excel names in 5.
 2. Meaning (desk, plain): before a chat puts a question in the queue's section 9, it checks the plan (the area file, the card, the decisions, the engineering rulebook). If the plan answers it, the chat follows the plan and does not ask; if the plan is silent or two parts of it disagree, the chat asks. This matches RULES 3.1 ("not for things the plan or the code already answer") and the existing rule "do not ask Tim something the plan already answers, and say which document you checked".
 3. What it does NOT change: an unanswered question still never becomes a decision (RULES 3.4), and Tim's word is still needed where the plan itself leaves an engineering value or a privacy choice open.
 4. Applies to: the controller, all builders, and the desk. The still-open section 9 questions (3, 4, 6, 7, 8, the Excel names in 5) are to be re-checked against the plan by the controller; those the plan answers are closed with the document named, and only the rest come back to Tim.
+
+## 29 Sep 2026 about 22:50: The four real gaps (Tim, clickable, via the desk)
+
+After INT-006 the controller re-checked section 9 against the plan and closed five questions with the document named (the desk verified one: "Open Hub" retired, `decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md` line 553). Four real gaps remained (queue section 9, item 12). Tim's answers:
+1. **Q3, Structural MEMBER SCHEDULE text (XCLMTXT):** "No, keep 300 and 200". This is AGAINST the recommendation. The text keeps its fixed sizes 300 and 200; do not size it by the other schedules' rule. (BUG-196 residual: the fixed sizes are the accepted behaviour.)
+2. **Q6, grip-drag Keep or Automatic (PR #391):** "Yes, on MOVE and STRETCH too". The Keep/Automatic question also appears on a plain MOVE or STRETCH of a pipe with a typed level (recommendation carried: once per pipe, Enter keeps the typed level).
+3. **Q7c, Manager status for a module that is not installed:** "Quiet grey".
+4. **Q8c, "Keep as a free end":** "This drawing only". Stored in the drawing; the whole-job version is not built now.
