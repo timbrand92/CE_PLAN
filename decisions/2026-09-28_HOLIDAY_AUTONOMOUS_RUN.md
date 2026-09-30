@@ -343,3 +343,7 @@ Tim, verbatim: "IN FUTURE IF WE NEED TO BUILD WITH CODEX OR HAVE SPARE WEEKLY US
 
 1. The controller could not find "GPT Sol 6.1" (codex-cli 0.156.0 lists gpt-6-astra, gpt-6-sol "previous generation", gpt-6-luna, gpt-5.6-sol/terra/luna, gpt-5.5).
 2. Tim, clickable: "Yes, update it (Recommended)": the controller may update the Codex command-line tool on his PC in a free window (after 17:30 while AutoCAD is closed), check Codex still works, then look for Sol 6.1 again. Tim also picked "I'll type the name in Other" for the exact model name but no name arrived with the answer: the exact name is STILL UNKNOWN; the desk asks him to type it. Builders stay on gpt-6-sol meanwhile.
+
+## 30 Sep 2026 (Wed, about 16:50): The exact Codex model name (Tim, screenshot of his Codex app)
+
+Tim sent a screenshot of the Codex app's model picker: the model reads "GPT-6.1 Sol" (mode "Light", effort slider, "Select effort"). So the display name is **GPT-6.1 Sol**. The command-line slug is NOT shown and is not guessed (a likely form is `gpt-6.1-sol`, unverified); the controller finds it after the CLI update. Builders stay on `gpt-6-sol` until then.
