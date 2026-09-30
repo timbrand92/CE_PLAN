@@ -12,5 +12,5 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 8. **Wed 30 Sep 15:28** — OPUS CONFIRM #424 head dd551cfd (Manager, M-SET-01 stage 1): MERGE, 0 findings. Usage: unknown.
 9. **Wed 30 Sep 15:28** — OPUS CONFIRM #425 head 699da9d4 (Manager, M-SET-01 stage 2): MERGE, 1 LOW. Usage: unknown.
 10. **Wed 30 Sep 15:36** — Older Structural drafts #378, #382, #385, #386: every head is already inside `claude/rel-20260929c-struc` (checked with git merge-base), so they are shipped history, not open work. No review posted. Worth closing by the controller. Opus review of #392 and #399 (whole PR) running. #431 head unchanged (345d74f9), no slice 2 PR yet. Usage: unknown.
-11. **Wed 30 Sep ~15:42** — OPUS REVIEW #392 head b81e1446 (whole PR, first Opus review): MERGE-WITH-FIXES, 2 LOW. Usage: unknown.
-12. **Wed 30 Sep ~15:42** — OPUS REVIEW #399 head 4e88c6e5 (whole PR, first Opus review): MERGE, 2 LOW. Usage: unknown.
+11. **Wed 30 Sep 15:33** — OPUS REVIEW #392 head b81e1446 (whole PR, first Opus review): MERGE-WITH-FIXES, 2 LOW. Usage: unknown.
+12. **Wed 30 Sep 15:33** — OPUS REVIEW #399 head 4e88c6e5 (whole PR, first Opus review): MERGE, 2 LOW. Usage: unknown.
