@@ -59,7 +59,7 @@
 
 **Expected behaviour:** every reach comes from Settings in millimetres and is converted to the drawing's units; unitless drawings get a plain-English note instead of a silent wrong search.
 
-**Reference:** PR #453 body and the Opus review of it.
+**Reference:** PR #453 body and the Opus review of it. Opus review of #453 also lists: branch-junction tolerance `CivilSpineProjector.JunctionToleranceMm` (NewPipeEnds.cs:28, EndpointPreview.cs:288, BranchJunctionDisplay.cs:44, TextClashTidyUp.cs:710, SpineCheckCommand.cs:77), pit-record lookup PipeTruthResolverService.cs:17/648, SlabCommand.cs:1140 (500), BreaklineAnchorMath.cs:285-291 (50), Registration/Split ConnectionHitboxRadius, a pit with a missing block falls back to its mm sizes (PitOutline.cs:90, 600 m wide in a metre drawing), unitless drawing with 6-digit eastings should warn.
 
 **Status:** OPEN (1 Oct 09:50)
 
