@@ -1,6 +1,6 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
-## M-SET-01 Move My Settings (Manager) - NOT BUILT YET (queued 30 Sep 2026 11:17; parts A-C started, D-E to follow): TIM'S AUTOCAD CHECKLIST (or a special Codex brief: AutoCAD must close itself and a second PC is needed)
+## M-SET-01 Move My Settings (Manager) - BUILT as draft PRs #424 (tool) and #425 (button + packaging), Opus fixes in progress, NOT merged, NOT installed (30 Sep 2026 11:55): TIM'S AUTOCAD CHECKLIST (or a special Codex brief: AutoCAD must close itself and a second PC is needed)
 
 The steps are in `C:\CE_PLAN\CHAT_PROMPT_MANAGER_SETTINGS_TRANSFER_01.md` ("Test steps for Tim or Codex in AutoCAD", six steps): Save my settings with an unsaved drawing (asked to save first; close message; AutoCAD closes; the tool waits, saves a package to the OneDrive CE folder, Start AutoCAD reopens on the same profile); Cancel at the save question and at the close message (nothing happens); Load my settings on a second PC (newest package preselected, backup line, VERIFICATION PASSED, no false MenuFile warning, autosave folder created if missing, ribbon/TOOLPALETTES/PLOT present); Undo last settings move; the same on 2022-2024 and 2025-2026; double-clicking the exe alone opens as today. "Assumed, Tim to confirm": the OneDrive folder name for packages; whether staff see the button or only admins. Not for Codex to accept: only Tim accepts.
 
