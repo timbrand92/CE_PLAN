@@ -334,3 +334,7 @@ The controller (real clock 15:23) asked for a second Team-account worker as an i
 1. Tim closes AutoCAD for the day at "About 5:30pm" (Wed 30 Sep). The install (needs AutoCAD closed) can start after that: earliest about 18:00, then the Codex tests once Tim has used his Codex reset token and a fresh reading is taken.
 2. The PC stays on, signed in and connected while Tim is away: "Yes, on and signed in".
 3. Controller's plan (16:21, relayed): train candidates being built now, Civil+Manager `claude/rel-20260930t1` (33 PRs) and Structural `claude/rel-20260930t1-struc` (10 PRs); left out on purpose: #414, #427 and #433 (no Land use window field yet), #424 and #425 (Manager settings tool, Tim-only tests), #437; full suites after 17:30, then Opus sign-off, version bump, package, install, hash check. Note: #427 (Kingston 5 years) is the release-gate item Tim ruled on; it waits for the Land use field.
+
+## 30 Sep 2026 (Wed, about 16:35): Codex model for building and spare usage (Tim)
+
+Tim, verbatim: "IN FUTURE IF WE NEED TO BUILD WITH CODEX OR HAVE SPARE WEEKLY USAGE THEN WE CAN USE GPT SOL 6.1". Meaning: for Codex BUILDING, and whenever Codex weekly usage is spare, use the model Tim calls "GPT Sol 6.1". The three Codex builders launched at 16:23 run on `gpt-6-sol`; the controller confirms the exact Codex model identifier for "GPT Sol 6.1" (the desk does not guess it) and uses it for the next launches.
