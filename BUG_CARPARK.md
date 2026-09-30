@@ -268,7 +268,9 @@
 
 **Seen on disk 30 Sep ~11:45:** 285 AutoCAD log files (named after real jobs, several with street addresses) in the root of the plugin's main checkout `C:\Lisp Files\CE_ACAD_PLUGIN`, oldest 23 Sep, newest 10:50 today, so AutoCAD is writing them now. Checked: ignored by git (`.gitignore` `*.log`), **none tracked, none ever committed on any branch**. Not in OneDrive. Clean-up = set the log folder back, then move the files out (listing them for Tim's yes first; never bulk-delete).
 
-**Status:** OPEN (30 Sep 2026 ~11:20) - for a plugin chat; do not edit Tim's profile without his yes.
+**Clean-up, Tim 30 Sep ~11:55: \"yes clean up the log files\".** Done ~12:00 (via a WMI-started process, i.e. the real disk): 290 logs MOVED (not deleted) from the plugin checkout root to `%LocalAppData%\Autodesk\AutoCAD 2027\R26.0\enu\Logs moved from plugin folder 2026-09-30` (290 counted there from outside the app). 1 left: the log AutoCAD had open (acad.exe was running; a copy is also in the new folder). Tim's AutoCAD settings NOT touched (AutoCAD open) - Tim to set OPTIONS > Files > Log File Location himself; after that, one final sweep of new logs.
+
+**Status:** OPEN - (2) log files moved; log folder setting waits for Tim's click; (1) TRUSTEDPATHS duplicates for a plugin chat, do not edit Tim's profile without his yes.
 
 ---
 
