@@ -226,6 +226,22 @@
 
 ---
 
+## BUG-239
+
+**Command / Area:** Tim's REAL AutoCAD 2027 profile `Tim` (read from his own settings export `AutoCAD_2027_ADMINISTRATOR_20260930.ceacad`, made by the settings tool from his desktop, 30 Sep 2026 ~10:42; not the Claude app's private copy - see BUG-238). Found by the CE_AcadSettings chat while checking Tim's 2027 -> 2026 import log.
+
+**What happens:** (1) Trusted Locations (TRUSTEDPATHS) holds the CE Civil bundle folder `%AppData%\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Win64\Modern` 15 times over: something adds it on every load without checking it is already there, so the list keeps growing. Source not found yet (the test harness saves and restores TRUSTEDPATHS, it does not add). (2) Log File Location (LOGFILEPATH) = `C:\lisp files\ce_acad_plugin\`, the plugin's code folder: if AutoCAD's log is ever switched on, logs holding drawing names and job paths land inside a git working copy.
+
+**Expected:** each trusted folder listed once; the log folder is a normal AppData folder, never a code folder.
+
+**Test that catches it:** load the plugin 3 times (restart AutoCAD between): TRUSTEDPATHS contains the bundle folder exactly once. Read LOGFILEPATH after a Codex/Claude test run: unchanged.
+
+**Steps for Tim:** none needed now. Nothing on his PC was changed. Fix and clean-up only on his word (the clean-up edits his live profile).
+
+**Status:** OPEN (30 Sep 2026 ~11:20) - for a plugin chat; do not edit Tim's profile without his yes.
+
+---
+
 ## BUG-238
 
 **Command / Area:** Tim's own AutoCAD 2027 profile on the work PC (`<<Unnamed Profile>>`), Options > Files. Not CE plugin code as far as known. Found read-only by the CE_AcadSettings chat (CE_ACAD / general / fix / 01), 30 Sep 2026 ~10:30.
