@@ -280,3 +280,9 @@ Also read by the desk (not a ruling): Codex sweep C1 finished 08:14 (PASS 11 / F
 1. Controller's measurement (relayed, not re-measured by the desk): on CE's 14 issued sheets, 1 in 5 gives 26 to 30% less storage than the issued sheets (which used 1 in 10). Example given to Tim: an issued 10 m3 tank would come out about 7.2 m3.
 2. Tim, clickable: "Yes, 5 years stands (Recommended)". Confirms the 12:15 ruling (Kingston residential 5 years with source, K02). Older issued sheets are not changed.
 3. Tim, clickable, where land use (residential or commercial) is set per job: "Job setup, one Land use field (Recommended)". One "Land use" field in job setup (CDSETUP) that CDCALC reads; nothing filled in for the drafter; until set, the sheet says NOT SETTLED for councils where it matters. A Kingston job that is actually commercial then uses 10 years per K02.
+
+## 30 Sep 2026 (Wed, about 14:20): The desk manages the Team worker (Tim's word overrides the desk charter, scope stated)
+
+1. Tim, verbatim, after being asked to paste a start prompt into the black window: "CAN YOU MANAGE IT NOT ME?"
+2. Override (RULES 14.6), scope: the desk chat may LAUNCH, WATCH and RELAUNCH the Team-account worker as a hidden non-interactive Claude Code run (`claude -p`, model opus, `--permission-mode bypassPermissions`, started from the Team settings folder, Below Normal priority) using `C:\CE_PLAN\CHAT_PROMPT_TEAM_LANE_01.md`. This departs from TIM_DESK.md section 9 item 2 ("never dispatch builders") for this one worker only. The desk still never builds, installs, merges or runs Codex itself; the worker's own limits (own worktree, SkipDevBundle, never install/merge/Codex, one build at a time) are unchanged.
+3. Started 14:15 (PID recorded in the desk's notes); its lane is Structural S4 slices 1 and 2 (queue section 0A). Tim's open interactive window on the Team account is left idle and can be closed.
