@@ -266,6 +266,8 @@
 
 **Steps for Tim:** none needed now. Nothing on his PC was changed. Fix and clean-up only on his word (the clean-up edits his live profile).
 
+**Seen on disk 30 Sep ~11:45:** 285 AutoCAD log files (named after real jobs, several with street addresses) in the root of the plugin's main checkout `C:\Lisp Files\CE_ACAD_PLUGIN`, oldest 23 Sep, newest 10:50 today, so AutoCAD is writing them now. Checked: ignored by git (`.gitignore` `*.log`), **none tracked, none ever committed on any branch**. Not in OneDrive. Clean-up = set the log folder back, then move the files out (listing them for Tim's yes first; never bulk-delete).
+
 **Status:** OPEN (30 Sep 2026 ~11:20) - for a plugin chat; do not edit Tim's profile without his yes.
 
 ---
