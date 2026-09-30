@@ -347,3 +347,7 @@ Tim, verbatim: "IN FUTURE IF WE NEED TO BUILD WITH CODEX OR HAVE SPARE WEEKLY US
 ## 30 Sep 2026 (Wed, about 16:50): The exact Codex model name (Tim, screenshot of his Codex app)
 
 Tim sent a screenshot of the Codex app's model picker: the model reads "GPT-6.1 Sol" (mode "Light", effort slider, "Select effort"). So the display name is **GPT-6.1 Sol**. The command-line slug is NOT shown and is not guessed (a likely form is `gpt-6.1-sol`, unverified); the controller finds it after the CLI update. Builders stay on `gpt-6-sol` until then.
+
+## 30 Sep 2026 (Wed, about 19:40): Codex reset done, Tim unreachable for about 24 hours (Tim)
+
+Tim, verbatim: "codex usage reset ill be on the plan for the next 24 hours" (read by the desk as "on the plane": his flight left at 20:15 Wed 30 Sep). So: (1) the Codex usage reset was done by Tim at about 19:40; the controller takes the fresh reading (`codex_usage.sh fresh-pct`) and notes the new week's reset time; the desk has not verified the number; (2) Tim cannot be reached until about Thu 1 Oct evening; questions wait (the desk asks only what the plan does not answer, and holds them); (3) unchanged: free rein on the PC (INT-021), Codex stop line 90% on the fresh week, the Claude pace plan near 90% at Fri 2 Oct 12:00 (Team worker: Sat 3 Oct about 13:00), installs by the controller with the hard blocks.
