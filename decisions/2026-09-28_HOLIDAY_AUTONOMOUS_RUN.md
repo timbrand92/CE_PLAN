@@ -338,3 +338,8 @@ The controller (real clock 15:23) asked for a second Team-account worker as an i
 ## 30 Sep 2026 (Wed, about 16:35): Codex model for building and spare usage (Tim)
 
 Tim, verbatim: "IN FUTURE IF WE NEED TO BUILD WITH CODEX OR HAVE SPARE WEEKLY USAGE THEN WE CAN USE GPT SOL 6.1". Meaning: for Codex BUILDING, and whenever Codex weekly usage is spare, use the model Tim calls "GPT Sol 6.1". The three Codex builders launched at 16:23 run on `gpt-6-sol`; the controller confirms the exact Codex model identifier for "GPT Sol 6.1" (the desk does not guess it) and uses it for the next launches.
+
+## 30 Sep 2026 (Wed, about 16:45): Codex command-line update approved (Tim, clickable)
+
+1. The controller could not find "GPT Sol 6.1" (codex-cli 0.156.0 lists gpt-6-astra, gpt-6-sol "previous generation", gpt-6-luna, gpt-5.6-sol/terra/luna, gpt-5.5).
+2. Tim, clickable: "Yes, update it (Recommended)": the controller may update the Codex command-line tool on his PC in a free window (after 17:30 while AutoCAD is closed), check Codex still works, then look for Sol 6.1 again. Tim also picked "I'll type the name in Other" for the exact model name but no name arrived with the answer: the exact name is STILL UNKNOWN; the desk asks him to type it. Builders stay on gpt-6-sol meanwhile.
