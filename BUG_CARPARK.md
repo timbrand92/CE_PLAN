@@ -87,7 +87,7 @@
 
 **Expected behaviour:** one batch, one transaction where possible, with a quiet progress line.
 
-**Status:** IN PROGRESS (1 Oct 09:50): draft PR #453 (head 777845f3) built and unit-tested only, Opus review running, not yet in AutoCAD
+**Status:** OPEN (1 Oct 09:40)
 
 ---
 
