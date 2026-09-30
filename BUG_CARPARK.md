@@ -300,7 +300,9 @@
 
 **Clean-up, Tim 30 Sep ~11:55: \"yes clean up the log files\".** Done ~12:00 (via a WMI-started process, i.e. the real disk): 290 logs MOVED (not deleted) from the plugin checkout root to `%LocalAppData%\Autodesk\AutoCAD 2027\R26.0\enu\Logs moved from plugin folder 2026-09-30` (290 counted there from outside the app). 1 left: the log AutoCAD had open (acad.exe was running; a copy is also in the new folder). Tim's AutoCAD settings NOT touched (AutoCAD open) - Tim to set OPTIONS > Files > Log File Location himself; after that, one final sweep of new logs.
 
-**Status:** OPEN - (2) log files moved; log folder setting waits for Tim's click; (1) TRUSTEDPATHS duplicates for a plugin chat, do not edit Tim's profile without his yes.
+**~12:10:** Tim: "done" (changed Log File Location in OPTIONS). Real registry still showed the old value at 12:10 while AutoCAD stayed open, and AutoCAD kept its open log in the old folder (1 file; copy taken). Not known when AutoCAD writes the setting (Autodesk internals). Check after AutoCAD's next restart: registry value = the AppData folder, new logs land there, plugin folder has no new logs; then move the last one. Log names are AutoCAD's own (drawing name + code), so moving kept them: 290 logs from 44 drawings, job numbers in the names where the drawing name has one.
+
+**Status:** OPEN - (2) log files moved; log folder setting changed by Tim, confirm after AutoCAD restart; (1) TRUSTEDPATHS duplicates for a plugin chat, do not edit Tim's profile without his yes.
 
 ---
 
