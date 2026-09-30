@@ -8,3 +8,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 4. **Wed 30 Sep 15:26** — OPUS CONFIRM #397 head 8aa589a5: content is the same as the confirmed 8d0797e8; **merge #402 only, never #397** (#402 contains it). 0 findings. Usage: unknown.
 5. **Wed 30 Sep 15:26** — OPUS CONFIRM #394 head fddc3931: MERGE, both earlier fixes done, 0 findings. Usage: unknown.
 6. **Wed 30 Sep 15:29** — Correction: my sub-agents stamped lines 2-5 as "05:26" (UTC) in the PR comments; the headers were edited to "15:26 Melbourne". The brief now forces Melbourne time.
+7. **Wed 30 Sep 15:27** — OPUS CONFIRM #430 head 0910c8a5 (increment from d0c9584f): **MERGE-WITH-FIXES**, earlier findings all done; 2 new (0 HIGH, 1 MED, 1 LOW). MED: a level set before a plan's first save then SAVEAS still shows as confirmed in the copy (and possibly a template via QNEW, unverified); fix is in the file-name comparison. Usage: unknown.
