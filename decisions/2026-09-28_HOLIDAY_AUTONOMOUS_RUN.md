@@ -328,3 +328,9 @@ The controller (real clock 15:23) asked for a second Team-account worker as an i
 2. Meaning (desk): Tim wants the Codex weekly usage taken from 84% to 100% before he leaves for the flight, then he uses his reset token (he must do that himself, before he leaves) so the new week is fresh for the holiday. Codex can spend usage NOW without touching AutoCAD by BUILDING (the "W, windows" lane: Codex builds the XAML windows from Claude's contracts through `queue3.sh`, queue section 3 lane W and section 7). For this drain only, the Codex stop line is 100% (supersedes 90%). After the reset, the 90% line applies again to the tests overnight.
 3. Sequence: (a) Codex builder jobs now, low priority, own working copies, no AutoCAD; (b) at 100% the desk tells Tim; (c) Tim resets before he leaves (his action); (d) the controller takes a fresh Codex reading; (e) after Tim has left the PC free, the reviewed train is installed and the sweeps run overnight (INT-021).
 4. Open: what time Tim leaves for the airport (asked).
+
+## 30 Sep 2026 (Wed, about 16:30): Finish time and the PC stays on (Tim, clickable)
+
+1. Tim closes AutoCAD for the day at "About 5:30pm" (Wed 30 Sep). The install (needs AutoCAD closed) can start after that: earliest about 18:00, then the Codex tests once Tim has used his Codex reset token and a fresh reading is taken.
+2. The PC stays on, signed in and connected while Tim is away: "Yes, on and signed in".
+3. Controller's plan (16:21, relayed): train candidates being built now, Civil+Manager `claude/rel-20260930t1` (33 PRs) and Structural `claude/rel-20260930t1-struc` (10 PRs); left out on purpose: #414, #427 and #433 (no Land use window field yet), #424 and #425 (Manager settings tool, Tim-only tests), #437; full suites after 17:30, then Opus sign-off, version bump, package, install, hash check. Note: #427 (Kingston 5 years) is the release-gate item Tim ruled on; it waits for the Land use field.
