@@ -303,3 +303,10 @@ Correction (desk, same day): the section above is stamped "about 14:20" and says
 ## 30 Sep 2026 (Wed, about 14:20): Remote Control switched on for the Team organisation (Tim)
 
 Tim, verbatim: "REMOTE CONTROL IS ON". Desk check: the Team account's `policy-limits.json` was refreshed at 14:19:52 and no longer lists `allow_remote_control: false`. The desk restarted the Team worker twice (resume of its own session `39370bc7-277f`, working copy `s4sch`, Remote Control on, Below Normal, bypassPermissions); the first restart had no prompt and would have sat idle, so it was relaunched with a "carry on" prompt (final worker PID 25088 at 14:20). Not yet verified by the desk that it appears in the browser at claude.ai/code (Tim to look for "CE Team lane 01").
+
+## 30 Sep 2026 (Wed, about 15:10): The desk manages everything and all the usage (Tim)
+
+1. Tim, verbatim: "CAN YOU MANAGE EVERYTHING FROM HERE NOW?" and "WILL YOU MANAGE TEAM WORKER USAGE AS WELL AS YOURSELF AND CLAUDE". Answer given: yes, all three meters.
+2. Scope: (a) the main Claude account (desk, controller, builders, Tim's own use in the last 10%): target near 90% at Fri 2 Oct 12:00, read with `get_usage`; (b) the Team account (the Team worker): the desk can read it itself with `claude -p /usage` from the Team settings folder; at 15:07 it read session 5%, week 1%, resets Sat 3 Oct about 13:00; target near 90% by then (about 1.3% an hour), so it is far under pace and the desk asks the controller for more Team-lane work or starts a second Team worker (total builds across both accounts stay at 3); (c) the desk's own use: kept small (no sub-agents, batched checks). Codex meter as before.
+3. Standing check: the app task `ce-desk-hourly-check` (created 15:06, hourly at about 54 past) wakes the desk each hour, like the controller's watchdog. It only runs while the Claude app is open.
+4. Unchanged: the desk still never builds, installs, merges or runs Codex itself; Tim's override for the Team worker (launch, watch, relaunch) stands.
