@@ -87,7 +87,7 @@
 
 **Symptom:** (1) these still read drawing units as millimetres in a metre drawing: CD's detention required-length trim, the Pit Schedule charged-main length, the imported-level review, the repair-audit length checks, the detention system window and the label style service. (2) erasing a pit clears the end-owner choice its surviving pipes had for it (set by hand, a split pipe or a downpipe change) and OOPS does not put it back (pipes touching the pit re-join by position). (3) the Pipe tab shows the route in mm ("30000 mm") while the main Edit Pipe window shows metres. (4) a pipe that reads but then fails the second label check still stops the whole batch (kept so "carry downstream" can never write it).
 
-**Status:** OPEN (2 Oct 03:00).
+**Status:** OPEN (2 Oct 03:00). Opus review of #507 (2 Oct 03:20, MERGE-WITH-FIXES) adds: CDCALC prefill and Design Review read pit-to-pit distance as millimetres (`PipeGeometryHelper.TryComputePipeLengthM`): 1000 times short in metre drawings; tidy-up lines in metre drawings say "moved 1175 mm" (unit of that figure not checked); the CDPIPEOBJ message and the detention window / Pit Schedule charged main / imported-level review still unconverted. KEY FINDING already routed to the builder: CE pipe OBJECTS (every pipe CD draws on Tim's PC) have no MLINE band, so a units lookup through `MlineId.Database` falls back to mm.
 
 ---
 
