@@ -79,7 +79,7 @@
 
 **Symptom:** after typing `(command "_.-LAYER" "_LOCK" "25TEXT" "")` the AutoCAD main window disappeared; exception window titled `Exception in AcSmNav.arx ARX Command`, then `FATAL ERROR: Unhandled e0434352h Exception at 905F41CAh` (a managed .NET exception that escaped). Codex did not attribute it to CE; `AcSmNav.arx` is Autodesk's own (Sheet Set / navigation). Cause UNKNOWN: investigation running (Opus a1d3bb4852ccf8d97, report `CRASH_C5_INVESTIGATION_2026-10-02.md`). After the crash the Codex S3 pass could not start AutoCAD normally ("No Profile name exists: Tim", "Customization file load failed ... acad", WebView data-directory error, then "Security - Unsigned Executable File" for CE_STRUC_SUITE.dll: every CE DLL is NotSigned, old and new, so the prompt is not new with 1.0.88; Tim's R26.0 Tim profile has empty TRUSTEDPATHS in the registry view that was read).
 
-**Status:** OPEN (2 Oct 02:40). Do not call it a CE fault until the investigation says so.
+**Status:** OPEN (2 Oct 02:20). Do not call it a CE fault until the investigation says so.
 
 ---
 
@@ -89,7 +89,7 @@
 
 **Symptom:** pit, number and cover text and pipe all come back and one U removes them together (PASS), but there is NO CE line on OOPS (the log has the BUG-267/BUG-285 lines "4 item(s) back, 1 pit list(s) rejoined" but nothing reaches the command line), and the pipe's main label was only partly visible and its far IL text and arrow were not visually verified (Unknown). The erase line says "5 pipes now have ends that are Not connected yet" with no mention of OOPS bringing them back.
 
-**Status:** OPEN (2 Oct 02:40).
+**Status:** OPEN (2 Oct 02:20).
 
 ---
 
@@ -99,7 +99,7 @@
 
 **Symptom:** pipes 109E23 and 109ED4 selected: "[CE] 2 pipes selected — opening the batch editor." then "[CE] The pipe batch was refused because every selected pipe could not be read exactly." The log says 109ED4's pipe-text-layer child has no exact supported text role (unclassified, recorded before CE stored text roles). One older pipe makes the whole selection refuse, so the batch Design grade preview and Apply of #492 could not be tested (C5-02 FAIL, C5-03/04 BLOCKED). Expected: name the unreadable pipe, offer to leave it out or repair it (CDREPAIR / upgrade, in a command, one Undo), and open the editor for the others (R-27: no new hard block; plain English). Single-pipe edit of 109E23 worked: header "Flow: P2 -> P3" correct after Save.
 
-**Status:** OPEN (2 Oct 02:40).
+**Status:** OPEN (2 Oct 02:20).
 
 ---
 
@@ -109,7 +109,7 @@
 
 **Symptom:** METRE2 (INSUNITS 6), CD pipe 30 drawing units long, DN100, levels 9.30/9.00; CDEDIT shows `Measured route: 30 mm`, `Fall: 0.300m over 0.0m (1 in 0)`, `Available Fall: 300 mm`, and "No suggestion: Neither the upstream nor the downstream pit has a known invert level". The route length is read as 30 mm, not 30 m (BUG-293 family: #491 fixed the suggestion strip but not the length display), so the fall reads "1 in 0". Flow entry could not be tested.
 
-**Status:** OPEN (2 Oct 02:40).
+**Status:** OPEN (2 Oct 02:20).
 
 ---
 
