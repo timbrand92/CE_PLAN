@@ -101,6 +101,20 @@
 
 ---
 
+## BUG-272
+
+**Command / Area:** Structural drawing-health palette (MainPalette): compares the drawing's Database object by reference.
+
+**Symptom:** found by the PR #459 builder (1 Oct): `MainPalette.AttachEntityDeltaTracking` compares `doc.Database` by reference; on AutoCAD 2027 every read of `doc.Database` is a new managed object, so the comparison always fails and the event handlers are attached again on every health scan (handler build-up, wasted work).
+
+**Expected behaviour:** compare by Equals / the Document object (stable), attach once per drawing.
+
+**Reference:** `Modules/Structural` MainPalette.AttachEntityDeltaTracking; the 2027 Database identity facts in queue section 3G.
+
+**Status:** OPEN (1 Oct 11:55)
+
+---
+
 ## BUG-271
 
 **Command / Area:** Civil pit/pipe search in non-millimetre drawings: the remaining fixed distances (same family as BUG-230 and BUG-270).
