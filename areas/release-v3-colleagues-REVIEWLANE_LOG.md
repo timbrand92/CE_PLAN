@@ -179,3 +179,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 155. **Fri 02 Oct 00:28** — #486 @ fcb4bcb3: OPUS CONFIRM **MERGE-WITH-FIXES** (PR text only). Both 22:15 MEDs closed. Still needs #440 first. Usage: unknown (headless).
 156. **Fri 02 Oct 00:28** — #485 @ 894a4579: OPUS CONFIRM **MERGE**. 22:18 MED and LOW closed in the diff; no new findings. Usage: unknown (headless).
 157. **Fri 02 Oct 00:28** — #488 @ aeaef7ad: OPUS CONFIRM **MERGE-WITH-FIXES**. MED 1 (skewed wall past beam end) only partly closed, engine-only; 1 new LOW. After #485. Usage: unknown (headless).
+158. **Fri 02 Oct 00:28** — #497 Manager commit 31689f09 only: OPUS REVIEW **MERGE** (Manager part), 2 LOW; release-train question on 1.1.19. Civil commits not reviewed (outside lane). Usage: unknown (headless).
