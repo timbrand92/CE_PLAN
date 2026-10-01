@@ -263,7 +263,7 @@
 
 **Command / Area:** Structural footing memory and REDO (#481 x #459 read, Team lane 2 Oct).
 
-**Symptom:** (1) footing memory is not cleared at drawing close if FoundationMonitor never attached; pointer reuse could hand a new drawing the old register (fix: Invalidate in `RedoWindowGuard.OnDocumentToBeDestroyed`). (2) every command reads the Database before the undo-family test. (3) #481 LOW 4: `LoadCore` normal-transaction read (`FoundationRegistryService.cs:228`); the drawing-switch inventory test checks file names only; `Database.BeginSave` proof still a follow-up. (4) BUG-304 stays: the Idle redraw has never taken LockDocument (`FoundationService.cs:1593`); needs a 2024 test.
+**Symptom:** (1) footing memory is not cleared at drawing close if FoundationMonitor never attached; pointer reuse could hand a new drawing the old register (fix: Invalidate in `RedoWindowGuard.OnDocumentToBeDestroyed`). (2) every command reads the Database before the undo-family test. (3) #481 LOW 4: `LoadCore` normal-transaction read (`FoundationRegistryService.cs:228`); the drawing-switch inventory test checks file names only; `Database.BeginSave` proof still a follow-up. (4) BUG-304 stays: the Idle redraw has never taken LockDocument (`FoundationService.cs:1593`); needs a 2024 test. **Correction (2 Oct, S-5 builder):** (4) is stale: on S-4 the Idle redraw DOES take LockDocument (#480, `FoundationService.cs:505`); what was left was its extra Undo step, moved into the editing command's own end on `claude/rel-20261004u` (BUG-334 item 1; see BUG-304). (S-5 also makes close forget the schedule out-of-date note with the footing memory: `FoundationRegistryService.ForgetDrawing`.)
 
 **Status:** OPEN (2 Oct 00:30).
 
@@ -374,6 +374,8 @@
 **Command / Area:** Structural S-3 sign-off (1 Oct): footing follow on AutoCAD 2024.
 
 **Symptom:** the queue-47 check 2 (does ONE U take back both a footing MOVE and its redraw) cannot be settled on 2027: the footing follow never runs there (BUG-279 item 0, PR #480 held out of S-3). On AutoCAD 2024 the follow now runs at Idle with no lock, so it may stop following a MOVE after #481/#459. Untested (no 2024 on this PC).
+
+**Correction (2 Oct, S-5 builder, BUG-334 item 1):** stale since S-4: #480 runs the follow on 2027 and takes `LockDocument` at Idle (`FoundationService.cs:505` on c84a3629), which is its own Undo step. Branch `claude/rel-20261004u` (S-5) moves the redraw into the editing command's own end (`FoundationMonitor.OnCommandEnded`); the AutoCAD 2027 core console measured one U taking back MOVE or ERASE plus a write made in its CommandEnded under the lock (receipts `C:\Autodesk\CERef\Colleague-20260913\verification\claude-s5-bug334-undo-probe\`). Still open here: AutoCAD 2024/2025/2026 not measured; full AutoCAD window and grip edits need Codex.
 
 **Status:** OPEN (1 Oct 21:25)
 
