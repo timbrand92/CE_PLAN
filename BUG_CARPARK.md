@@ -743,7 +743,7 @@
 
 **Reference:** BUG-192 (entry above); fix candidate PR #414 (BUG-192 v2) is NOT in the install; headless proof run 1 Oct 04:05 (result in the queue).
 
-**Status:** OPEN - the top blocker (1 Oct 04:20).
+**Status:** OPEN - the top blocker (1 Oct 04:20). UPDATE 2 Oct 00:20: Codex control D (plain AutoCAD 2027, ALL CE bundles off, `CODEX_VERIFYC4D_2026-10-01.md`): plain AutoCAD keeps REDO only in the plain baseline (LINE, U, REDO) and LOSES it after U + wheel zoom + typed -PAN (with or without an automatic save), U + switch drawing tab and back, U + 136 s idle with an automatic save, U + hatch pick (native Hatch Editor ribbon), U + QSAVE. Those sequences (Codex A1c, A2 open g, A3, A4) are NATIVE AutoCAD behaviour, NOT a CE fault: drop them from CE re-tests. What is left for CE: the pick / copy / edit cases proven working in 3.0.18 stay as the pass list. Final closing waits for Tim's confirmation in AutoCAD.
 
 ---
 
