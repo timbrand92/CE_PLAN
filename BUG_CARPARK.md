@@ -79,9 +79,9 @@
 
 **Symptom:** found by the review lane (PR #459, 11:29, rule #1 one code path per behaviour): Structural `RedoWindowRegistry.cs` / `RedoWindowGuard.cs` (PR #459) and Civil `Modules/Drainage/Services/RedoWindowGuard.cs` (PR #452) hold the same rules; they have already drifted (Structural has the LISP-end re-arm, Civil does not).
 
-**Controller decision (1 Oct 13:05, controller 06):** two copies are ACCEPTED for the colleagues' release because Civil and Structural ship as separate bundles from separate branch chains and a shared source file would have to live in CE_SHARED (Civil + Manager one assembly identity; Structural's own CE_SHARED copy is unrelated). CONVERGE DATE: before the unified single-plugin host (V3 cutover): one AutoCAD-free source file linked into both, and the LISP-end re-arm added to Civil. Until then any change to one copy is mirrored into the other in the same train, and a parity test pins the shared rule table (UNDO sub-options that do not open the window: BEGIN, END, MARK, CONTROL, GROUP, AUTO).
+**Controller decision (1 Oct 12:25, controller 06):** two copies are ACCEPTED for the colleagues' release because Civil and Structural ship as separate bundles from separate branch chains and a shared source file would have to live in CE_SHARED (Civil + Manager one assembly identity; Structural's own CE_SHARED copy is unrelated). CONVERGE DATE: before the unified single-plugin host (V3 cutover): one AutoCAD-free source file linked into both, and the LISP-end re-arm added to Civil. Until then any change to one copy is mirrored into the other in the same train, and a parity test pins the shared rule table (UNDO sub-options that do not open the window: BEGIN, END, MARK, CONTROL, GROUP, AUTO).
 
-**Status:** OPEN (1 Oct 13:05)
+**Status:** OPEN (1 Oct 12:25)
 
 ---
 
