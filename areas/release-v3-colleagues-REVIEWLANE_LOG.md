@@ -168,3 +168,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    Usage: unknown (headless).
 145. **Thu 01 Oct 22:19** — HEADLESS RUN 7 ended. OPUS CONFIRMs posted on #481 (MERGE), #480 (MERGE-WITH-FIXES, carpark only), #486, #465, #485 and #488 (all MERGE-WITH-FIXES, with exact fixes). S-3 holds none of the new heads. Usage: unknown (headless).
 146. **Thu 01 Oct 22:29** — HEADLESS RUN 8 started. Priority: re-confirm #424 @ d474ae23, then open Structural/Manager heads newer than their newest OPUS comment. Usage: unknown (headless).
+147. **Thu 01 Oct 22:33** — #424 @ d474ae23: OPUS CONFIRM **MERGE**. All four 12:08 findings closed in the diff; R-27 items still closed; 0 test lines removed; 2 notes, no blockers. **#425 head e319b6ea still lacks d474ae23**: it must take it before merging. Usage: unknown (headless).
