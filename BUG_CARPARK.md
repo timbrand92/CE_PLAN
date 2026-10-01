@@ -167,7 +167,7 @@
 
 **Expected behaviour:** a copy made by SAVEAS or copy-to-another-folder shows the level as an unconfirmed suggestion until the drafter confirms it (canonical source path compared).
 
-**Status:** OPEN (1 Oct 11:50)
+**Status:** OPEN (1 Oct 11:50) - fix built on PR #430 head 841c35ec by team lane 01 (13:34): once the drawing has a name, a level set before the first save is a suggestion until confirmed once; NOT AutoCAD-tested; Opus review required.
 
 ---
 
