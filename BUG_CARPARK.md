@@ -529,6 +529,8 @@
 
 **Status:** OPEN (30 Sep ~12:50) - lane F after #428; first read whether the linking-on branch is reachable at all.
 
+**Update (team lane 01, Thu 1 Oct 13:55):** reachable (the linking tick box is in CE Settings, default OFF). Fix built in draft PR #466, NOT AutoCAD-tested. **For Tim to rule (Opus review of #466, finding 3):** when the drafter answers **Yes** (erase the beam and the other column too) and then types OOPS, AutoCAD brings back only the column. #466 does NOT bring the beam back; it prints one line saying how (U, U). Civil #443 (perimeter drain text) does the opposite: CE puts back what it erased, at the end of OOPS. Recommendation: match Civil (CE brings the beam, its label and its other column back at OOPS's end, one U) as a follow-up, so OOPS means the same thing in both suites. Until Tim answers, #466 keeps the warning only.
+
 ---
 
 ## BUG-249
