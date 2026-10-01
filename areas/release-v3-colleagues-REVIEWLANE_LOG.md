@@ -173,3 +173,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 149. **Fri 02 Oct 00:17** — HEADLESS RUN 9 started. Scope: Team PRs #493-#496 (and newer), BUILDER FIX heads on #465/#485/#486/#488, then S-4 readiness vs rel-20261003s / rel-20261003t. Usage: unknown (headless).
 150. **Fri 02 Oct 00:27** — #496 @ d9cb6b38: OPUS REVIEW **DO-NOT-MERGE**, 5 findings (2 MED: pier diameter and strip width still used as mm in a metre drawing, so CSLOADPATH still says 'all supported'). Usage: unknown (headless).
 151. **Fri 02 Oct 00:27** — #495 @ b91677ae: OPUS REVIEW **MERGE-WITH-FIXES**, 3 findings (2 LOW, 1 NOTE). Merge after #496. Usage: unknown (headless).
+152. **Fri 02 Oct 00:27** — #493 @ 57d5aabc: OPUS REVIEW **MERGE-WITH-FIXES**, 6 findings (2 MED: stale leftover save restored after a hand reset; Save over real file while unopened). Usage: unknown (headless).
