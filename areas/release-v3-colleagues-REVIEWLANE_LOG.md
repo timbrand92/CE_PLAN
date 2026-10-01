@@ -197,3 +197,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 166. **Fri 02 Oct 02:02** — #500 @ 4f953aef (BUILDER FIX head): OPUS REVIEW **MERGE**, MED 1 + LOW 2 fixed; 0 new. Usage: unknown (headless).
 167. **Fri 02 Oct 02:03** — #488 @ 6d9a2e7b (BUILDER FIX head): OPUS REVIEW **MERGE**, MED skew-past-end + LOW locked marker fixed; 0 new (merge notes stand). Usage: unknown (headless).
 168. **Fri 02 Oct 02:03** — #493 @ 1817b2db (BUILDER FIX head): OPUS REVIEW **MERGE**, 2 MED + 3 LOW fixed; 1 NOTE (LF-only source test). Usage: unknown (headless).
+169. **Fri 02 Oct 02:03** — #496 @ 440783c2 (BUILDER FIX head): OPUS REVIEW **MERGE**, 2 MED + 2 LOW fixed or carparked; 2 LOW left (marker text height, misplaced doc comment); controller: carpark strip-width units. Usage: unknown (headless).
