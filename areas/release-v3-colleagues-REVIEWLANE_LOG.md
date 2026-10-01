@@ -176,3 +176,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 152. **Fri 02 Oct 00:27** — #493 @ 57d5aabc: OPUS REVIEW **MERGE-WITH-FIXES**, 6 findings (2 MED: stale leftover save restored after a hand reset; Save over real file while unopened). Usage: unknown (headless).
 153. **Fri 02 Oct 00:27** — #494 @ 54be6df6: OPUS REVIEW **MERGE**, 3 LOW follow-ups. Merge after #493. Usage: unknown (headless).
 154. **Fri 02 Oct 00:28** — #465 @ b4ddbdb4: OPUS CONFIRM **MERGE**. 22:15 MED closed in the diff; Tim's 'Palettes as left' question still open, not decided. Usage: unknown (headless).
+155. **Fri 02 Oct 00:28** — #486 @ fcb4bcb3: OPUS CONFIRM **MERGE-WITH-FIXES** (PR text only). Both 22:15 MEDs closed. Still needs #440 first. Usage: unknown (headless).
