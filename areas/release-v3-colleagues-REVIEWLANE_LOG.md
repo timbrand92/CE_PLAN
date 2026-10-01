@@ -189,3 +189,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    6. **Manager:** #497's Manager commit 31689f09 is MERGE but rides a Civil PR; confirm 1.1.19 not yet shipped or split it out. #424 @ d474ae23 still MERGE; #425 still lacks it.
    Usage: unknown (headless).
 160. **Fri 02 Oct 00:35** — #498 @ f4b85082 (new, base s): OPUS REVIEW **MERGE**, 2 LOW + 1 NOTE (background-copy memory gap, carpark). Add #498 to S-4 readiness item 1. HEADLESS RUN 9 ended: 10 reviews posted (4 new Team PRs, 4 fix confirms, #497 Manager commit, #498). Usage: unknown (headless).
+161. **Fri 02 Oct 00:38** — #499 @ 30238f9c (new, base s, opened during run 9): OPUS REVIEW **MERGE-WITH-FIXES**, 6 findings (3 MED: third units helper, layout dots become specks, RB 200 m spacing). Not S-4 ready. Run 9 final: 11 reviews posted. Usage: n/a; Usage: unknown (headless).
