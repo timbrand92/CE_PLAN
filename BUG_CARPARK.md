@@ -55,7 +55,9 @@
 
 **Command / Area:** Structural, several readers and writers (the AutoCAD 2027 Database identity lesson, queue 3G: every read of `doc.Database`, `ObjectId.Database` or `WorkingDatabase` returns a NEW managed object, so `ReferenceEquals` on two of them never matches; Equals, == and the Document object work).
 
-**Symptom (read in code by team lane 01 while fixing BUG-275, 1 Oct; NOT measured in AutoCAD):** these still compare by reference. Fixed in PR #464: `MainPalette.xaml.cs` (BUG-275) and `FoundationService.FindDocumentForDatabase` (a footing stretched with AutoCAD's own grips was never redrawn, an erased footing never set aside). Still open, highest risk first:
+**Symptom (read in code by team lane 01 while fixing BUG-275, 1 Oct; NOT measured in AutoCAD; the 2027 behaviour is observed in probe DB-IDENTITY-01, AutoCAD 2027 core console, PR #443):** these still compare by reference. Fixed in PR #464: `MainPalette.xaml.cs` only (BUG-275). Still open, highest risk first:
+0. **`FoundationService.FindDocumentForDatabase`: re-enable ONLY with guards (Opus review of #464, finding 1).** It never matches in 2027, so a footing stretched or moved with AutoCAD's own grips is not redrawn and an erased footing is not set aside. Switching it to `Equals` alone turns on an idle-time redraw with no U/UNDO/REDO/MREDO skip, no `LockDocument` and no plain failure line: U, REDO and one-U would break. Needed together: (a) the Undo/REDO skip (draft #468, BUG-274, adds it in `FoundationMonitor.QueueCandidate`); (b) `doc.LockDocument()` around the monitor's `RegenerateSystem`; (c) one plain command-line line when a monitor redraw fails ("CE could not redraw footing X after your edit: run FREGEN"); (d) Codex runs stretch, U, REDO and ERASE, U in 2027. Left as a reference compare on purpose, marked in the code and pinned by a guard test in #464.
+0b. **Database-keyed `ConditionalWeakTable`s (Opus review of #464, finding 3):** `Services/DrawingDisciplineGate.cs:36` (callers `DrawingDisciplineDb.cs:52-53, :80-89, :108-111, :195`): in 2027 `CSWAKE` may not stick (it says switched on, the next check finds no entry) and the one-second cache never hits, so the PERF-DISCIPLINE-01 gate does nothing. `Services/DrawingIntelligence/ArchitecturalChangeReviewReceiptInbox.cs:24`: `TakeCurrent(database)` (`ArchitecturalChangeReviewCommandRunner.cs:151`) may never find its receipt. Key them by Document, or by `UnmanagedObject` with a close hook.
 1. `Services/DrawingIntelligence/ArchitecturalOccurrenceAutoCadReader.cs:653` and `Services/Checklist/CeLegacyChecklistAutoCadReader.cs:169`: `ReferenceEquals(id.Database, _database)`: every id may read as "not this drawing", so these read-only features may find nothing in 2027.
 2. `Services/ConnectedDesign/Commit/AutoCadBeamCommitEvidenceReader.cs:317, :338` (`ReferenceEquals(current, _database)`) and `AutoCadBeamExtensionAtomicWriter.cs:144` (`ReferenceEquals(_capture.Context?.Database, _database)`): safe only if both sides are the very same captured object; otherwise lintel boundary evidence and beam extension commits are refused.
 3. `TransactionManager` / `TopTransaction` compared by reference (`SbeamAtomicEditWriter.cs:262-263`, `SbeamCompoundStore.cs:103-104`, the two readers above, `StructuralIntelligenceGate2ReadOnlyHarness.cs:147-148`): whether AutoCAD 2027 also hands out new TransactionManager wrappers is NOT known (Autodesk internals): measure first.
@@ -65,9 +67,21 @@
 
 **Test that catches it:** the source guard from PR #464 (`Bug275DatabaseIdentityGuardTests`) widened to all of Structural once these are fixed; plus a core-console probe for item 3.
 
-**Steps to confirm (Codex, AutoCAD 2027, a copy):** stretch a footing line with AutoCAD's own grip: its outline follows (PR #464). For item 2: place a lintel between two walls and extend a beam with the CE grip: both commit. For item 1: run the checklist and the architectural review on a drawing with content: they find it.
+**Steps to confirm (Codex, AutoCAD 2027, a copy):** for item 0, once its guards are built: stretch a footing line with AutoCAD's own grip: its outline follows; U puts both back; REDO brings the stretch back; ERASE a footing line then ONE U brings line and outline back. For item 0b: CSWAKE on a Civil drawing, then a Structural command: it stays awake. For item 2: place a lintel between two walls and extend a beam with the CE grip: both commit. For item 1: run the checklist and the architectural review on a drawing with content: they find it.
 
-**Status:** OPEN (1 Oct 18:40). Two sites fixed in PR #464, the rest above.
+**Status:** OPEN (filed 1 Oct about 12:10 by the PC clock; an earlier stamp here read 18:40 by mistake). Updated 1 Oct 12:50 after the Opus review of #464: only the palette is fixed there; the footing lookup is item 0 above.
+
+---
+
+## BUG-279
+
+**Command / Area:** Civil and Structural: the "redo window" rules (hold background work after U/REDO until the next command) exist as TWO copies.
+
+**Symptom:** found by the review lane (PR #459, 11:29, rule #1 one code path per behaviour): Structural `RedoWindowRegistry.cs` / `RedoWindowGuard.cs` (PR #459) and Civil `Modules/Drainage/Services/RedoWindowGuard.cs` (PR #452) hold the same rules; they have already drifted (Structural has the LISP-end re-arm, Civil does not).
+
+**Controller decision (1 Oct 13:05, controller 06):** two copies are ACCEPTED for the colleagues' release because Civil and Structural ship as separate bundles from separate branch chains and a shared source file would have to live in CE_SHARED (Civil + Manager one assembly identity; Structural's own CE_SHARED copy is unrelated). CONVERGE DATE: before the unified single-plugin host (V3 cutover): one AutoCAD-free source file linked into both, and the LISP-end re-arm added to Civil. Until then any change to one copy is mirrored into the other in the same train, and a parity test pins the shared rule table (UNDO sub-options that do not open the window: BEGIN, END, MARK, CONTROL, GROUP, AUTO).
+
+**Status:** OPEN (1 Oct 13:05)
 
 ---
 
