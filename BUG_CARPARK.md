@@ -117,7 +117,7 @@
 
 **Symptom:** the pit RECORD of a pit inserted at scale 0.001 still stores the scaled size (0.6 "mm"): the cause of the 0x0 mm tooltip, wrong Pit Schedule / CDCHECK sizes and a wrong detention length; Edit Pit and Resize writing sizes to scaled pits share it. #497 fixes only the reach/outline reads. Also: scaled-pit linework reads are not cached (cost on a big metre job not measured); CDDESIGN During tab does not compare the orifice head or the detention answer; MOVE logged pipe levels 9.30/9.30 after 9.30/9.00 was entered (Codex C4C, not looked at).
 
-**Status:** OPEN (2 Oct 00:40).
+**Status:** OPEN (2 Oct 00:40). Added 2 Oct 01:00 from the Opus review of #497: (4) an offered council accepted from the job folder or letters, then Close, is silently not kept (no "not saved" line); (5) areas taken from the STORM report are saved by Save Draft as if typed, so where they came from is lost on reopen; (6) the Manager version guard (`ManagerReleasePayload_HasTrackedManifestAndThreeLaneLocalAssets`) has been red since the missing `PrepareReleaseCandidateRoot` target; (7) two IL-shape tests (FinalLandingProducer..., RefusedNativeCallback...) fail on the base tip in a Debug build and are not on the known-failure list.
 
 ---
 
