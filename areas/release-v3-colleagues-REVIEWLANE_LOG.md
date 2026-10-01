@@ -178,3 +178,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 154. **Fri 02 Oct 00:28** — #465 @ b4ddbdb4: OPUS CONFIRM **MERGE**. 22:15 MED closed in the diff; Tim's 'Palettes as left' question still open, not decided. Usage: unknown (headless).
 155. **Fri 02 Oct 00:28** — #486 @ fcb4bcb3: OPUS CONFIRM **MERGE-WITH-FIXES** (PR text only). Both 22:15 MEDs closed. Still needs #440 first. Usage: unknown (headless).
 156. **Fri 02 Oct 00:28** — #485 @ 894a4579: OPUS CONFIRM **MERGE**. 22:18 MED and LOW closed in the diff; no new findings. Usage: unknown (headless).
+157. **Fri 02 Oct 00:28** — #488 @ aeaef7ad: OPUS CONFIRM **MERGE-WITH-FIXES**. MED 1 (skewed wall past beam end) only partly closed, engine-only; 1 new LOW. After #485. Usage: unknown (headless).
