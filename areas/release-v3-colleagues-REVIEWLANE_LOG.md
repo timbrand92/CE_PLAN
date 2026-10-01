@@ -167,3 +167,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    5. Clock note: lines 142-143 and the #485/#488 comments say 22:18; the real post time was 22:17.
    Usage: unknown (headless).
 145. **Thu 01 Oct 22:19** — HEADLESS RUN 7 ended. OPUS CONFIRMs posted on #481 (MERGE), #480 (MERGE-WITH-FIXES, carpark only), #486, #465, #485 and #488 (all MERGE-WITH-FIXES, with exact fixes). S-3 holds none of the new heads. Usage: unknown (headless).
+146. **Thu 01 Oct 22:29** — HEADLESS RUN 8 started. Priority: re-confirm #424 @ d474ae23, then open Structural/Manager heads newer than their newest OPUS comment. Usage: unknown (headless).
