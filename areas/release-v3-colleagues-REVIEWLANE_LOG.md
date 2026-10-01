@@ -180,3 +180,11 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 156. **Fri 02 Oct 00:28** — #485 @ 894a4579: OPUS CONFIRM **MERGE**. 22:18 MED and LOW closed in the diff; no new findings. Usage: unknown (headless).
 157. **Fri 02 Oct 00:28** — #488 @ aeaef7ad: OPUS CONFIRM **MERGE-WITH-FIXES**. MED 1 (skewed wall past beam end) only partly closed, engine-only; 1 new LOW. After #485. Usage: unknown (headless).
 158. **Fri 02 Oct 00:28** — #497 Manager commit 31689f09 only: OPUS REVIEW **MERGE** (Manager part), 2 LOW; release-train question on 1.1.19. Civil commits not reviewed (outside lane). Usage: unknown (headless).
+159. **Fri 02 Oct 00:30** — S-4 READINESS for the controller (checked by ancestry against origin/claude/rel-20261003s @ e0d9aa92 and rel-20261003t @ 8af6149b; t = s + the 1.0.88 version bump only).
+   1. **MERGE at head, NOT in s or t:** #481 @ 73ff537f (s holds the older 3f2d03f9; take the increment), #485 @ 894a4579, #465 @ b4ddbdb4, #494 @ 54be6df6 (after #493), and #480 @ 9d7ec877 (MERGE-WITH-FIXES, carpark-only fixes, so code-ready).
+   2. **Not ready (fixes wanted first):** #488 @ aeaef7ad (MED 1 skew past beam end, engine-only), #493 @ 57d5aabc (2 MED settings safety), #495 @ b91677ae (2 LOW, after #496), #496 @ d9cb6b38 (**DO-NOT-MERGE**), #486 @ fcb4bcb3 (PR text only, but needs #440, not in any S train).
+   3. **Already in s and t:** #482 @ 1589cfe0, #483 @ 26321e13, #471, #476.
+   4. **Conflicts to expect against t:** #485 in FoundationService.cs + REGRESSION_LOG.md; #488 in FoundationRegistryService.cs (take t's), FoundationService.LoadPath.cs, REGRESSION_LOG.md.
+   5. **Suggested S-4 order:** #481 increment, #480, #485, #465, then #493 -> #494 once #493 is fixed, #496 -> #495 once fixed, #488 once fixed. #498 (new, base s) under review now.
+   6. **Manager:** #497's Manager commit 31689f09 is MERGE but rides a Civil PR; confirm 1.1.19 not yet shipped or split it out. #424 @ d474ae23 still MERGE; #425 still lacks it.
+   Usage: unknown (headless).
