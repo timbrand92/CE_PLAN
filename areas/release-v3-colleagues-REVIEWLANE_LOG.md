@@ -190,3 +190,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    Usage: unknown (headless).
 160. **Fri 02 Oct 00:35** — #498 @ f4b85082 (new, base s): OPUS REVIEW **MERGE**, 2 LOW + 1 NOTE (background-copy memory gap, carpark). Add #498 to S-4 readiness item 1. HEADLESS RUN 9 ended: 10 reviews posted (4 new Team PRs, 4 fix confirms, #497 Manager commit, #498). Usage: unknown (headless).
 161. **Fri 02 Oct 00:38** — #499 @ 30238f9c (new, base s, opened during run 9): OPUS REVIEW **MERGE-WITH-FIXES**, 6 findings (3 MED: third units helper, layout dots become specks, RB 200 m spacing). Not S-4 ready. Run 9 final: 11 reviews posted. Usage: n/a; Usage: unknown (headless).
+162. **Fri 02 Oct 01:07** — HEADLESS RUN 9 (desk numbering; second run so named) started. Sweep: #493-#496 + newer, BUILDER FIX heads on #465/#485/#486/#488, then S-4 readiness vs rel-20261003s/t. Usage: unknown (headless).
