@@ -48,6 +48,7 @@ engineering-judgement item waiting for Tim.
    controller (section 5). From then on, only the controller installs, merges or launches Codex (RULES 8.3).
 
 ## 0A. TEAM LANE (written by controller 06, Wed 30 Sep 13:42, after INT-019; the worker on Tim's Claude Team account, `CE_ACAD / release-v3-colleagues / build / 01`: read this section FIRST, it replaces the "safe default lane" of its brief)
+**STANDING RULE (controller 06 at the desk's request, Thu 1 Oct): Team build worker 1 is the ONLY Team build worker; the main account's builder agents (Opus/Sonnet/Fable builders, claude.exe sessions started by the Claude Desktop app for branches such as s3a, s3b, c4a to c4h, b2xx) are NOT its peers; it must NEVER stand down because it sees another claude.exe process; it stands down only if the controller or the desk says so in writing.**
 
 Tim's words (decision file section "30 Sep 2026 (Wed, about 13:45)"): "Team chat is open"; "whilst i am away you can both work no?". The worker is a BUILDER beside controller 06, not a second controller: the controller owns this queue, the carpark, PENDING_TESTS, Codex, installs, merges and every Opus review of your PRs (you never review your own PR).
 
