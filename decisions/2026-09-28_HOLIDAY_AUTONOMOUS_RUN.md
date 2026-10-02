@@ -375,3 +375,8 @@ Friday checks done at 15:21-15:30: installed DLLs Civil 3.0.21 / Manager 1.1.21 
 Tim: "how hard would it be for you to test autocad with a cli or dcp from github?" (read as MCP). Desk found several open-source AutoCAD MCP servers (descriptions only). Tim's answers: 1. "a" (yes, vet it read-only, no download or install) and asked for it to be an Opus agent with a brief summary of findings; 2. "a" (if it passes vetting, ask him before installing).
 - **INT-032:** vetting by an Opus agent, read-only; report at C:\Lisp Files\_TEST_COPIES_20260923\MCP_AUTOCAD_VETTING_2026-10-03.md.
 - **INT-033:** NO install without asking Tim first; test copies only; never his real drawings or settings.
+
+## Sat 3 Oct 2026 about 01:05 — Tim: Codex could use the MCP and its own screen driving, with Claude / the Team chat testing too
+
+Tim: "i was thinking we could get codex to use the mcp and its own depending on what its testing whilst you can also test or the team chat".
+- **INT-034 (design direction, not an install approval; INT-033 still applies):** split the test lanes by what is being tested. (1) Typed-command / U-REDO / data checks go through the MCP (once vetted and Tim says install); (2) CE windows, palettes, ribbon clicks stay on Codex's screen driving; (3) headless accoreconsole probes (no UI, parallel-safe) stay with Claude / the Team chat. Desk caution recorded: ONE interactive AutoCAD session at a time on the PC (one real profile, shared settings files; the S4 "occupied" run showed the collision), so interactive testers (Codex screen, MCP by Codex, MCP by Claude) take turns through the controller's schedule; only the headless lane runs alongside. To check after vetting: that Codex (CLI 0.159.2) can load the chosen MCP server.
