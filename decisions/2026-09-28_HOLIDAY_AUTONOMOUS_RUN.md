@@ -355,3 +355,10 @@ Tim, verbatim: "codex usage reset ill be on the plan for the next 24 hours" (rea
 ## Fri 2 Oct 2026 about 07:22 — desk answer to controller 06: install C-6 now
 
 Controller proposed installing Civil 3.0.21 / Manager 1.1.21 (b4e075d8, Opus-finalized GO) now, skipping a separate adversarial pass so Codex can start verifyC6. Desk answered YES (desk interpretation, not Tim's words; Tim has no ruling against it). Conditions: Tim's install rules unchanged (AutoCAD closed twice, backups, hash verify, Structural untouched); the known mm-drawing Pit Schedule grade label 1000x goes in the install note and verifyC6 as an expected FAIL case and is fixed before colleagues/Tim see it; the C-6 adversarial reviews are DEFERRED to after the 12:00 weekly reset, not waived. For Tim's return page: he may want to say whether that deferral was acceptable.
+
+## Fri 2 Oct 2026 about 14:20 — Tim answered four parked questions (clickable, Tim's chosen options in quotes)
+
+1. **INT-025 Template units:** "Yes, some are" — some office Civil templates are UNITS = Metres with millimetre-size pits. So the mixed-units hold-and-warn guard (BUG-338, C-7) is needed, not optional; which templates is still to be named.
+2. **INT-026 Structural footings in a non-mm drawing:** "Convert units automatically" — NOT the controller's current build (refuse with one plain line). Supersedes parked item 4f's recommendation. Desk read: convert and carry on, with one plain line saying it converted (R-27: warn and record, no hard block).
+3. **INT-027 Palette edit when CDRUNSOLVE/CDPROPAGATE is cancelled:** "Accept the rollback (Recommended)" — Cancel returns to before the command, edits included (BUG-311 stays as built).
+4. **INT-028 Beam linking OOPS:** "Keep the confirmation line (Recommended)" — one question first; beam linking is off by default.
