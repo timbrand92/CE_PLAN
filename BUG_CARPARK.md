@@ -89,6 +89,12 @@
 
 ---
 
+**UPDATE 3 Oct 04:25 (driver run 3, REAL AutoCAD, DRIVER_RUN3_2026-10-03.md): BUG-357 REPRODUCES.** Modern fixture, pipe layer STORMWATER PIPE LOCKED, pit 11C657 MOVEd alone 500 mm north: pit and cover text move, BOTH pipes stay behind (correct, native protection), the command line prints ONLY the MOVE prompts (no CE line), and BOTH pipe labels silently change from "1 IN 100" to "1 IN 101" (positions, all four inverts and cover levels unchanged; Civil log "pipes relinked", no grade line); one U restores everything including the 1 IN 100 labels; REDO brings back exactly the moved state. Nothing protected is written; the label re-words with NO message. Fix per R-27 (one plain CE line, no block, no Tim question): Sonnet a75c9f31ca51a3cf6, branch claude/c9-pit-move-locked-pipes-line.
+
+**UPDATE BUG-358 S-05 U ladder (exact):** U1 echoes "FREGENALL GROUP" (table back to 5 columns, pad still erased); U2 echoes NOTHING, UNDOMARKS stays 0, nothing visible changes (Civil log: only a project reload, no object writes); U3 echoes "ERASE" (pad, outline, table all back): three U with one empty step in the middle: needs a CODE READ of CE's undo handling around FREGENALL (the empty U2 is probably a begin/end undo-mark pair or a reload that opens its own undo group). Candidate for the Team build worker (Structural, base origin/claude/rel-20261008u 3d83cde1; NO Opus-free: Undo path: Opus review required). Also: no wedge in 3 sessions of about 40 commands without CDCHECK or a bare LINE.
+
+---
+
 ## BUG-357
 
 **Command / Area:** modern-pipe fixture job (Sonnet a43d8cd6fb3475128, headless on copies, 3 Oct; report `FIXTURE_MODERN_PIPE_2026-10-03.md`), installed Civil 3.0.23.
