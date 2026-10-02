@@ -29,3 +29,10 @@ Add one plain-English line under NEW. The daily TIMS IDEAS run sorts + routes it
 ## PROCESSED
 
 - **2026-09-19** — *(pointer)* the old drainage suite's parking lot (94 KB, 4 Jun 2026) is archived at `archive\previous-plugins\CE_CVL_SUITE_PARKING_LOT_2026-06-04.md`. Tim decides whether anything in it is still wanted.
+
+## Sat 3 Oct 2026 (Tim, via the desk): usage-launch watch, window-testing scope, human-style testing
+
+- **INT-037 Usage and launch watch:** Tim wants rumours and official news of upcoming launches and usage resets for Claude and Codex tracked, so all usage is spent before a reset even while he is away. Desk design: official sources and the meters' own reset times drive spending; rumours only trigger PREPARING work (never spending on a rumour alone); a read-only Sonnet sweep twice a day writes a short note; first sweep running 3 Oct (USAGE_LAUNCH_WATCH_2026-10-03.md).
+- **INT-038 Window and ribbon testing:** the new `ui` driver functions (Windows accessibility tree) should cover all CE windows and, as far as Windows exposes it, the ribbon; a mapping session records every control name; what it cannot see (grips, dragging, parts of the ribbon, dynamic input) stays with Codex's screen control.
+- **INT-039 Human-style testing:** journey runs (steps, seconds, clicks, messages, surprises), a plain-English scan of every visible word in CE windows (Tim's no-jargon and no-scroll rules), accessibility checks; findings become UX cards for Tim's command review, never silent plugin changes.
+- **INT-040 Shared testing:** Codex and Claude both use the driver, the window functions and Codex's own screen control, taking turns on ONE interactive AutoCAD through a shared lock file (C:\ce_rc_drv\ACAD_LOCK.json); only headless checks run alongside.
