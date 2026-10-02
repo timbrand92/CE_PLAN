@@ -983,6 +983,8 @@ RC audit / handoff check) - target (PR numbers, branch, bug, card) - verdict - m
 
 79. 2 Oct 14:30 - **TIM ANSWERED INT-025..028 (desk 14:25):** (1) some office templates ARE UNITS Metres with mm-size pits: the mixed-units hold (#540/#516, BUG-338) stays required; which templates still to be named. (2) Structural footings in cm/metre/inch: CONVERT automatically (not refuse, not ask): carpark BUG-344, S-7 plan changed (convert + one plain line per R-27; HOLD a command with a plain line only if the audit finds unrouted mm constants). (3) BUG-311 palette rollback on Cancel: accepted as built. (4) Beam linking OOPS: confirmation line kept as built. No code change for 3 and 4.
 
+80. 2 Oct 14:40 - **S-7 IS ON THE TEAM BUILD WORKER (desk 14:37):** branch claude/s7-footing-convert-units off S-6 head b71cb7bf, draft PR(s), log in TEAMLANE2_LOG. I do NOT start my own S-7 builder; I take its PR(s) through the normal Opus review (when budget allows) and the next Structural train.
+
 ## 15. HANDOFF: controller 06 to its successor `CE_ACAD / release-v3-colleagues / build + release / 07` (written Wed 30 Sep 08:30; keep it current; a successor starts at section 1 above, then reads THIS section first)
 
 1. **Read order for the successor:** RULES.md, ROUTER.md, START_HERE.md, the top of `areas/release-v3-colleagues.md` (charter, Lessons 1-14, "For Tim"), this file sections 0-5, then THIS section, then section 13 (newest entries 1a-1z7 at its top) and section 14 (the Opus log). The state lives here, in `BUG_CARPARK.md` (BUG-205..229 from Codex) and `PENDING_TESTS.md`, not in the chat.
