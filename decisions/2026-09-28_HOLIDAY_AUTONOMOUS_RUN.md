@@ -389,3 +389,7 @@ Tim: "dont worry about it, even though its for our business its for my personal 
 ## Sat 3 Oct 2026 about 03:20 — desk rulings on the S7 footing-units card (Tim reviews on return)
 
 The Team build worker's card S7_FOOTING_DRAW_UNITS_CARD section 8 asked the desk four things (all follow Tim's INT-026 "Convert units automatically"): 1. mixed-units hold wording: ACCEPTED "Check what the drawing is really drawn in (LIST one footing) before changing anything" (no UNITS advice); 2. PFC / SF / THC DO convert (no retirement without Tim's command review); 3. depth stays millimetres in the record (a schedule number, never drawn): confirmed; 4. CSPIER centres keep picking, a picked distance read as drawing units, no typed-only restriction. These are desk interpretations, not Tim's words; listed for his return.
+
+## Sat 3 Oct 2026 about 05:25 — Tim: "can we upgrade our mcp to work on the ui windows as well"
+
+- **INT-036:** Tim asked to extend the own-authored AutoCAD driver (C:\Lisp Files\_ACAD_DRIVER) so it can also drive CE's own windows. Desk reading: yes, through Windows UI Automation (the accessibility tree, built into Windows; no third-party code), separate from the typed-command COM path. Sonnet driver agent building it with deny lists (never Save/Delete/Purge etc.), acad.exe-only windows, test-copy rule for writes, offline tests on a toy window. A supervised mapping session (UI_MAP_PLAN.md) follows to record the control names of the CE windows. No install of anything beyond our own script.
