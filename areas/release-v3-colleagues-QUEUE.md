@@ -985,6 +985,8 @@ RC audit / handoff check) - target (PR numbers, branch, bug, card) - verdict - m
 
 80. 2 Oct 14:40 - **S-7 IS ON THE TEAM BUILD WORKER (desk 14:37):** branch claude/s7-footing-convert-units off S-6 head b71cb7bf, draft PR(s), log in TEAMLANE2_LOG. I do NOT start my own S-7 builder; I take its PR(s) through the normal Opus review (when budget allows) and the next Structural train.
 
+81. 2 Oct 14:41 - **C-7 BUILDER DONE:** claude/rel-20261006b head 3bcfa859 (7 commits on 8541c569: unified mixed-units helper, #538 cell side check + Carry downstream stops, #540 split typed level + detention units before write, #537 MakePitItsOwn, #513 mirror rule). Drainage net10 15,094 run, 5 known + 34 CalculationsWindowViewModelTests run-order failures (pass alone); Manager 415/415. ONE Opus finalizer a89d383716bb6676e started (branch claude/rel-20261006c if it fixes anything; report C7_OPUS_FINALIZER_2026-10-02.md). Leftovers = BUG-345. Next: Sonnet payload (Civil 3.0.22 / Manager 1.1.22), install window, then verifyC7.
+
 ## 15. HANDOFF: controller 06 to its successor `CE_ACAD / release-v3-colleagues / build + release / 07` (written Wed 30 Sep 08:30; keep it current; a successor starts at section 1 above, then reads THIS section first)
 
 1. **Read order for the successor:** RULES.md, ROUTER.md, START_HERE.md, the top of `areas/release-v3-colleagues.md` (charter, Lessons 1-14, "For Tim"), this file sections 0-5, then THIS section, then section 13 (newest entries 1a-1z7 at its top) and section 14 (the Opus log). The state lives here, in `BUG_CARPARK.md` (BUG-205..229 from Codex) and `PENDING_TESTS.md`, not in the chat.
