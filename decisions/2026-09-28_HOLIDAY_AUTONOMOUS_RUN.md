@@ -393,3 +393,7 @@ The Team build worker's card S7_FOOTING_DRAW_UNITS_CARD section 8 asked the desk
 ## Sat 3 Oct 2026 about 05:25 — Tim: "can we upgrade our mcp to work on the ui windows as well"
 
 - **INT-036:** Tim asked to extend the own-authored AutoCAD driver (C:\Lisp Files\_ACAD_DRIVER) so it can also drive CE's own windows. Desk reading: yes, through Windows UI Automation (the accessibility tree, built into Windows; no third-party code), separate from the typed-command COM path. Sonnet driver agent building it with deny lists (never Save/Delete/Purge etc.), acad.exe-only windows, test-copy rule for writes, offline tests on a toy window. A supervised mapping session (UI_MAP_PLAN.md) follows to record the control names of the CE windows. No install of anything beyond our own script.
+
+## Sat 3 Oct 2026 about 05:30 — Tim: Codex reset expected today or tomorrow
+
+Tim: "codex should get a reset today or tomorrow". Desk: the Wed 7 Oct 20:52 reset date is OPEN (earlier reset possible). Controller told to have the window-only Codex pass ready, check the meter fresh at most every 2 hours, treat a reading below about 30% as reset, install any pending build first, then run the pass; 90% stop line and a reserve of about 10 points for the last two days of the new window unchanged.
