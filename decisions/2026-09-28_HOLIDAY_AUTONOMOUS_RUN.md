@@ -369,3 +369,9 @@ Controller proposed installing Civil 3.0.21 / Manager 1.1.21 (b4e075d8, Opus-fin
 2. **INT-030 17-degree wall landing:** "At the pit centre" — landing sits exactly on the pit centre.
 3. **INT-031 Which templates are Metres with mm pits:** "Ask Codex to read them on copies" — Codex reads the template units from COPIES (never the originals) and reports; fits inside the combined pass if budget allows, else the next Codex window after the Wed 7 Oct reset. Desk read: Codex-read-only, no edits.
 Friday checks done at 15:21-15:30: installed DLLs Civil 3.0.21 / Manager 1.1.21 / Structural 1.0.90 (read); Codex PASS S4-04 in CODEX_VERIFYS4 report; #484 merged 1 Oct into claude/rel-20261003a (master unchanged since 28 Sep); Opus stamps present on #494/#480/#481 (claude-opus-5-5). Figures last counted Wed 30 Sep: Built 42% (273/657), Codex-tested 3% (18/657); controller asked for a fresh count.
+
+## Sat 3 Oct 2026 about 00:50 — Tim asked about testing AutoCAD through a GitHub MCP/CLI
+
+Tim: "how hard would it be for you to test autocad with a cli or dcp from github?" (read as MCP). Desk found several open-source AutoCAD MCP servers (descriptions only). Tim's answers: 1. "a" (yes, vet it read-only, no download or install) and asked for it to be an Opus agent with a brief summary of findings; 2. "a" (if it passes vetting, ask him before installing).
+- **INT-032:** vetting by an Opus agent, read-only; report at C:\Lisp Files\_TEST_COPIES_20260923\MCP_AUTOCAD_VETTING_2026-10-03.md.
+- **INT-033:** NO install without asking Tim first; test copies only; never his real drawings or settings.
