@@ -99,6 +99,8 @@
 
 **Status:** OPEN. Not fixed until Tim confirms in AutoCAD.
 
+
+**UPDATE 3 Oct 09:30 (Sonnet source read, `CSREOBAR_FAILURE_READ_2026-10-03.md`): CSREOBAR failure = a REAL CODE FAULT in 1.0.92 (the typed chain was RIGHT; a driver/fixture problem is ruled out).** 'CE could not draw the reo bar' is the catch-all at ReoBarService.cs:200; the preview builds its objects (line 145) and sets their layers (743, 762, 767) BEFORE the code that creates the layers runs (157-158): if the drawing has no 35CONT or no 25TEXT layer (the DRV2_S1 test copy probably has neither) the new object is refused, the throw sits before the 'Preview:' line (786) and the trailing Yes lands at Command: (CSBARSCHEDULE creates its layer first, line 241, so it works). Not yet proven (the DWG is compressed): next step (about 5 minutes, driver, copy): read (tblsearch "LAYER" "35CONT") and (tblsearch "LAYER" "25TEXT"); turn on CEADMIN / DEBUG / CETEXT / ON then rerun the chain to read the real exception line '[FOUNDATION-DIAG ...] ReoBar.Place: CSREOBAR failed ::' (NOT CEDEBUG: it rewrites Tim's CS_Settings.json); create only the missing layer(s) with -LAYER N and rerun: the Preview and BM1 lines should then appear. Hidden command (#440), office drawings with both layers probably do not hit it; no test runs the real path (pure rules + source-text only). Fix for the next Structural train (create the layers before building the objects; add a test that places a bar in a drawing WITHOUT the layers): Team build worker. 'worked on 1.0.91' in the driver report is wrong: ReoBarService.cs is new in 1.0.92.
 ---
 
 ## BUG-365
