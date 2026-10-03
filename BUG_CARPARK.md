@@ -212,6 +212,8 @@
 
 ## BUG-380
 
+**UPDATE 4 Oct 06:31:** Confirm LPD (#543) grey vs hide: Tim INT-050, 4 Oct ~07:00, verbatim 'CONFIRM LPD BUTTON - WHATEVER YOU RECOMMEND' (desk reading: GREY with a plain hover reason on the four non-Start tabs, the default as built; no change). #547 (footing drawing conversion): card shown to Tim in chat (INT-049), still HELD until he says approve.
+
 **UPDATE 4 Oct 06:22:** BUG-380 W3-05 FEDIT edge pick: DECIDED by Tim, INT-042 (see BUG-355 item 1 and the card FEDIT-OUTLINE-PICK_CARD_2026-10-04.md). The BLOCKED W3-02 / W3-06 notes stay open. #544 CLOSED unmerged 4 Oct (INT-044, pipe lands on the pit WALL, supersedes INT-030).
 
 **Command / Area:** Codex verifyW3 (3 Oct 19:42-20:49 PC clock, usage 9% -> 12%; `CODEX_VERIFYW3_2026-10-03.md`, evidence `VERIFYW3\`) on installed Civil 3.0.26 / Manager 1.1.26 / Structural 1.0.94: **3 PASS, 1 FAIL, 2 BLOCKED.** Not Tim-accepted.
@@ -353,6 +355,8 @@
 ---
 
 ## BUG-366
+
+**UPDATE 4 Oct 06:31:** Settings Enter question: Tim INT-047, 4 Oct ~07:00, verbatim 'SETTINGS WINDOW - YES' to the desk's wording 'should Enter save the whole window?'. AMBIGUOUS against the older wording: NO change queued; the desk confirms with Tim. (Item stays: keep Enter as built.)
 
 **Command / Area:** desk driver session 8 (typed forms) on the INSTALLED Structural 1.0.92 / Civil 3.0.24 (report `DRIVER_RUN8_2026-10-03.md`, 18 min, clean run).
 
@@ -559,6 +563,8 @@
 
 ## BUG-351
 
+**UPDATE 4 Oct 06:31:** BUG-351 (b) typed Pit Schedule level on a fixed-grade pipe: Tim INT-046, 4 Oct ~07:00, verbatim 'BUG 351B - ONLY CHANGE THAT END' (desk reading: the typed level changes ONLY THAT END of the pipe, as it works today; no behaviour change). DECIDED. Optional if cheap: the pipe label (keeps 1 IN 100 while the levels give about 1 in 67) shows the achieved grade or a plain note: warn, do not block. (a) was decided earlier (INT-045: pit numbers stay as typed).
+
 **UPDATE 4 Oct 06:22:** BUG-351 (a): Tim INT-045, 4 Oct 06:30, verbatim 'pit numbers , yes' (desk reading: pit numbers stay exactly as typed; typing C2 keeps C2, not PC2). DECIDED. To Team: stop the PC prefix on a typed new pit number; small, test first. Item (b) still unanswered.
 
 **Command / Area:** C-8 builder leftovers and questions for Tim (Opus builder ab3dca0d34ffd4f33, PR #548 claude/c8-probe-fixes d2b393f7, 3 Oct).
@@ -662,6 +668,8 @@
 ---
 
 ## BUG-342
+
+**UPDATE 4 Oct 06:31:** BUG-342 part 1 (paste/INSERT into a drawing with NO drainage): Tim INT-048, 4 Oct ~07:00, verbatim 'PASTE - YEP' (desk reading: YES, a paste of CE pits/pipes into a drawing with no drainage wakes Civil for that paste with one plain line (run CDREPAIR), only for CE pits/pipes). DECIDED. #567 (quiet paste catcher, card CARD_PASTE_QUIET_CATCHER_2026-10-03) may ship once its review fixes pass: needs the card, an Opus verdict and a Team builder for the fixes; no longer on HOLD for the question.
 
 **Command / Area:** Civil C-6 adversarial review 2 (CDDESIGN setup, paste, OOPS/ERASE/COPY/ARRAY; Opus a3bd56e68fb7e4091, 2 Oct 11:15; report `C6_OPUS_ADV_2_DESIGN_PASTE_OOPS_2026-10-02.md`; installed 3.0.21). Sound: all CDDESIGN saves happen inside the command (one U, nothing after U), changing the council keeps every other rulebook value, no layer unlocked, no new hard block, no exception escapes a handler.
 
