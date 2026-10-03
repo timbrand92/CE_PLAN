@@ -22,3 +22,11 @@ study/01 run 1 started Sun 04 Oct 2026 06:41 AUSEST (Melbourne/Sydney clock)
 10. Eight short questions for you are in section 7 of the card. The first: turn on "markers from the floor above" on your PC for a week? Recommendation: yes.
 
 study/01 run 2 started Sun 04 Oct 2026 07:54 (Melbourne)
+
+study/01 run 2 done 07:57 (card commit 8cf8b21):
+1. Fixed the wrong fact: the per-plan level IS built and installed (CSPLANLEVEL, PlanLevelRecord, Settings level list, used by the load trace). Checked read-only on rel-20261015w 5807a1a9. JOBS_PROCESS_STUDY did not repeat the error.
+2. Q1 now says: set each plan's level once with CSPLANLEVEL first, or the markers only say "from the level above".
+3. Renumber: CSMARKSRENUMBER already previews and asks Yes or No. Added a build prerequisite: a non-interactive form that writes the preview to the report and applies only on the drafter's accept.
+4. "One Undo" reworded: a headless saved copy has no Undo. Safety = copies only + a report of every change + the original untouched.
+5. FREGENALL and STRSCHEDSYNC stay allowed, marked "writes graphics or table: copy only, locked layers reported". Quiet hours are a Setting (not an AGENTS.md rule). The assistant works by commands and files, never by polling windows (about 1 core lost, driver run 16).
+6. Q7 now asks the DEFAULT title block for NEW jobs. Added Q9: copies only for the first month (rec yes). Not applied: the controller's optional "one source of truth" (Manning's n) note, which was outside the six fixes.
