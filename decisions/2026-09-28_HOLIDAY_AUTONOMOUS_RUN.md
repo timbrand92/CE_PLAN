@@ -397,3 +397,7 @@ The Team build worker's card S7_FOOTING_DRAW_UNITS_CARD section 8 asked the desk
 ## Sat 3 Oct 2026 about 05:30 — Tim: Codex reset expected today or tomorrow
 
 Tim: "codex should get a reset today or tomorrow". Desk: the Wed 7 Oct 20:52 reset date is OPEN (earlier reset possible). Controller told to have the window-only Codex pass ready, check the meter fresh at most every 2 hours, treat a reading below about 30% as reset, install any pending build first, then run the pass; 90% stop line and a reserve of about 10 points for the last two days of the new window unchanged.
+
+## Sat 3 Oct 2026 about 16:35 — Tim: restart the Codex testing (recorded by desk plan/02)
+
+Tim, verbatim, in the old desk chat (plan/01) about 16:20: "you can fire up the codex testing again". The desk plan/02 read this in the old desk's transcript before passing it on. Meaning: restart the Codex mouse pass (verifyW2b) from the first unfinished item, 20-point ceiling, skipping the real hover (Codex cannot hover) and the CPU read (invalid while a computer-control tool is attached; the old desk will run a clean test later). Controller told "Tim agreed" at 16:35. Codex BUILD run stays paused until C: free is above 20 GB (12 GB at 16:30). Finding to follow up: idle AutoCAD used about 1 core while Codex computer-control was attached and 0.03 without (possible cause of Tim's lag).
