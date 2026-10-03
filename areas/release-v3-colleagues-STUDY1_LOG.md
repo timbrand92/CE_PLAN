@@ -20,3 +20,5 @@ study/01 run 1 started Sun 04 Oct 2026 06:41 AUSEST (Melbourne/Sydney clock)
 8. The assistant is an overnight helper limited to that boring end. It works on copies only, and its results are proposals. It never sets a size, span, load, footing or bracing count, and it respects locked layers and Xrefs.
 9. CE would learn tag and text placement from your drawings. It proposes and you confirm. Every value goes on the Settings page. Being different is never blocked.
 10. Eight short questions for you are in section 7 of the card. The first: turn on "markers from the floor above" on your PC for a week? Recommendation: yes.
+
+study/01 run 2 started Sun 04 Oct 2026 07:54 (Melbourne)
