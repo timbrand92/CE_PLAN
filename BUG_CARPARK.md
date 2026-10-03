@@ -233,6 +233,8 @@
 
 **Status:** OPEN. 10 driver/Codex checks in the report. Not fixed until Tim confirms in AutoCAD.
 
+
+**UPDATE 3 Oct 15:00 PC (driver session 14, `DRIVER_RUN14_2026-10-03.md`): BUG-363 item 1 FIXED in REAL AutoCAD (Civil 3.0.25, installed C-10).** MOVE of the OLD COPY pit 11C88F alone (0,-500) on OLDCOPY_C10.dwg: the copy went (10000,-83000) to (10000,-83500), the original pit 11C657 stayed at (10000,-80000), both pipes and all nine texts stayed put; BOTH pipe labels (11C80D, 11C844) read '225 DIA. UPVC PIPE AT 1 IN 100' before and after; no CE line; one U echoes MOVE and restores exactly; U then REDO re-does it, labels still 1 IN 100; settings unchanged. Not tested: the same MOVE with the pipe layer locked on this copy + a Pit Schedule read (optional); grip-drag (Codex W1). Nothing accepted by Tim.
 ---
 
 ## BUG-362
