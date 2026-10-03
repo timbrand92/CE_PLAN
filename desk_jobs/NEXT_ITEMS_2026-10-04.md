@@ -1,0 +1,4 @@
+# Next items to add to the Team workers' next runs (desk 02, Sun 4 Oct 06:40)
+- build/02 (next run after 60): FEDIT-OUTLINE-PICK card C:\CE_PLAN\04_REFERENCE\ux-plan\cards\FEDIT-OUTLINE-PICK_CARD_2026-10-04.md (INT-042, Tim: "fedit yep click outlien edit"): a click on a pad/strip outline edits that footing; unknown owner = one plain line and nothing changed; native locks unchanged; tests; base rel-20261015w once S-16 is installed, else rel-20261015v. Read the card completely first.
+- build/03 (next run after 12): INT-043 BUG-386: rename the Pit Schedule menu item "Revert Row Override" to "Stop overriding" (and its hover/help text everywhere it is named, incl. the Help page and tests); behaviour unchanged; Civil, base rel-20261015f or 909f4bbd; small.
+- Both: #627, #629, #628, #630 MEDIUM fixes (already in the current runs).
