@@ -277,6 +277,8 @@
 
 **Status:** investigated: driver mechanism (see BUG-359). Stays OPEN only for the interactive-prompt measurement above. Not fixed until Tim confirms.
 
+
+**UPDATE 3 Oct 16:35 PC (Codex verifyW2 first run, `CODEX_VERIFYW2_2026-10-03.md`; the strongest lag lead so far):** with Codex's computer-control client attached, AutoCAD idle measured **1.026 cores over 20 s, 1.053 at the PIT insertion prompt, 1.041 at a bare LINE prompt: the SAME ~1 core in every state**; the desk's COM driver at idle (no UI-automation client attached) measured **0.03**. So the ~1 to 1.9 cores seen in the 'wedges' (and probably Tim's lag whenever a screen-control or UI-automation client is attached) is most likely the cost of that CLIENT (accessibility polling/screenshots of AutoCAD's WPF windows and palettes: CE Inspector, ribbon, CE palettes), not a CE loop and not the prompt. TEST TO RUN after verifyW2b (clean attach/detach, desk driver): idle AutoCAD with nothing attached (CPU 20 s), then attach `ui windows` / `ui tree` polling (CPU 20 s), then detach (20 s), then close CE Inspector / hide CE palettes and repeat; if the cost drops with the palettes hidden, the fix is in what the palettes expose to accessibility (AutomationPeers) or poll. Not CE busy loop until that test says otherwise. The 'Command search' palette could not be closed by ui close (Esc closes it).
 ---
 
 ## BUG-359
