@@ -5,3 +5,4 @@ These are the headless Team-worker briefs. To relaunch a worker (only when it is
 - `review01_job_latest.txt`: Team reviewer (log REVIEWLANE_LOG.md): add new PR numbers to its priority list.
 - `build03_job_latest.txt`: second Team build worker build/03 (log TEAMLANE3_LOG.md): test-hygiene sweep, Manager plain-English sweep, quiet-start wording.
 Driver sessions: write a fresh Sonnet prompt from the rules in TIM_DESK.md section 12c item 17 and C:\Lisp Files\_ACAD_DRIVER\README.md; see C:\Lisp Files\_TEST_COPIES_20260923\DRIVER_RUN14_2026-10-03.md for the last proven prompt shape (copies only, complete one-line chains, STOP rule, wedge rule, no python, lock name exact, report path).
+- `build03` run 2 job (Sat 3 Oct 17:00) is made from build03_job_latest.txt with a new item 2 (Civil wording sweep + bj1 LOW leftovers); launch it only after the Codex mouse pass ends and C: is at least 12 GB.
