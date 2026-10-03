@@ -1,0 +1,7 @@
+# Desk job files (written Sat 3 Oct 2026 by CE_ACAD / ideas / plan / 01 for its successor)
+
+These are the headless Team-worker briefs. To relaunch a worker (only when it is NOT already running: check `Get-CimInstance Win32_Process -Filter "Name='cmd.exe'"` for a command line containing the job file name), copy the file to your own scratchpad, bump the 'RUN N' number and the 'started ... about HH:MM' text, and run it as in TIM_DESK.md section 5 (`CLAUDE_CONFIG_DIR=%USERPROFILE%\.claude-team`, `claude -p --model opus --permission-mode bypassPermissions --output-format text < job.txt > job.log`, BelowNormal priority, working directory C:\Lisp Files\CE_ACAD_PLUGIN).
+- `build02_job_latest.txt`: Team build worker build/02 (log areas/release-v3-colleagues-TEAMLANE2_LOG.md); its items a-g and 6-16 are done, item 10 BUG-372 is its newest; add the controller's NEW items at the end.
+- `review01_job_latest.txt`: Team reviewer (log REVIEWLANE_LOG.md): add new PR numbers to its priority list.
+- `build03_job_latest.txt`: second Team build worker build/03 (log TEAMLANE3_LOG.md): test-hygiene sweep, Manager plain-English sweep, quiet-start wording.
+Driver sessions: write a fresh Sonnet prompt from the rules in TIM_DESK.md section 12c item 17 and C:\Lisp Files\_ACAD_DRIVER\README.md; see C:\Lisp Files\_TEST_COPIES_20260923\DRIVER_RUN14_2026-10-03.md for the last proven prompt shape (copies only, complete one-line chains, STOP rule, wedge rule, no python, lock name exact, report path).
