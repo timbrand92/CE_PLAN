@@ -172,6 +172,8 @@
 
 ## BUG-386
 
+**UPDATE 4 Oct 06:22:** BUG-386 Revert Row Override: Tim INT-043, 4 Oct 06:30, verbatim 'revert row override i think stop overriding' (desk reading: rename the menu item to 'Stop overriding'; behaviour unchanged: the typed value stays, one U undoes it; NOT 'put the original back'). DECIDED. To Team: rename the menu item (and any hover/help text); small, test first.
+
 **Command / Area:** Pit Schedule Revert Row Override on pit C1 keeps the TYPED cover (Codex verifyW4 W4-02, repeat of the 3 Oct W3-04 reading): C1 cover 18.74 typed 18.80, Revert Row Override: row AND plan label stay at 18.80 (CL 18.80), pit stays C1 (no PC1), inlet 16.87 / outlet 16.82 unchanged, no prompt; one U ("Command: U" then "PITSCHEDULE") brings the plan back to CL 18.74. So "Revert" clears the override flag but leaves the value the drafter typed in the drawing. **Question for Tim/the desk (not a defect until answered):** should Revert Row Override bring the cover back to the drawing's/record's value (18.74) or only stop tracking the override? A plain-English name that says what it does ("Stop overriding this row" vs "Put the original value back") may be the fix. **Status:** OPEN (question).
 
 **Codex verifyW4 result (4 Oct 00:54-01:26 PC clock, 13% -> 15%): W4-01 BLOCKED (input fault: keys went to the AutoCAD parent window and Esc closed the schedule; Revert fix on P3 still NOT proven), W4-02 PASS as a reading (BUG-386), W4-03 FAIL (BUG-385), W4-04 PASS in substance (the brief wrongly expected both pipes' labels to change: only the selected pipe P8 -> P11 became "300 DIA. UPVC PIPE AT 1 IN 100", P11 -> P12 stayed 225, as designed; "Pipe updated."; CLAYER/OSMODE/DBMOD unchanged; one U restores 225; no Design Warnings window appeared).** END OSMODE 5375 = START, SAVETIME unchanged. CD_Settings.json written 7 times by CE during the pass (BUG-306 family; hash changed ACD64E79 -> 67270C52, 15,270 -> 15,273 bytes); Structural settings unchanged.
@@ -209,6 +211,8 @@
 ---
 
 ## BUG-380
+
+**UPDATE 4 Oct 06:22:** BUG-380 W3-05 FEDIT edge pick: DECIDED by Tim, INT-042 (see BUG-355 item 1 and the card FEDIT-OUTLINE-PICK_CARD_2026-10-04.md). The BLOCKED W3-02 / W3-06 notes stay open. #544 CLOSED unmerged 4 Oct (INT-044, pipe lands on the pit WALL, supersedes INT-030).
 
 **Command / Area:** Codex verifyW3 (3 Oct 19:42-20:49 PC clock, usage 9% -> 12%; `CODEX_VERIFYW3_2026-10-03.md`, evidence `VERIFYW3\`) on installed Civil 3.0.26 / Manager 1.1.26 / Structural 1.0.94: **3 PASS, 1 FAIL, 2 BLOCKED.** Not Tim-accepted.
 
@@ -495,6 +499,8 @@
 
 ## BUG-355
 
+**UPDATE 4 Oct 06:22:** BUG-355 item 1 (FEDIT edge pick): Tim INT-042, 4 Oct 06:30, verbatim 'fedit yep click outlien edit': a click on a pad/strip OUTLINE edits that pad/strip. DECIDED. Command card written: 04_REFERENCE/ux-plan/cards/FEDIT-OUTLINE-PICK_CARD_2026-10-04.md; Team builds from it (BUG-380 is the same item).
+
 **Command / Area:** findings of the first driver run on the INSTALLED Structural 1.0.91 / Civil 3.0.23 (desk's Sonnet driver, 3 Oct 02:30 to 03:03, report `DRIVER_RUN1_C8_S7_2026-10-03.md`; 4 PASS, 3 FAIL on one expectation each, 5 BLOCKED).
 
 **PASS:** S-01, S-02, S-03 (Structural 1.0.91: pad MOVE / STRETCH then U and REDO bring back pad AND outline together) and C-01 (Civil 3.0.23: pit MOVE, U, REDO; pipe end and cover text follow).
@@ -552,6 +558,8 @@
 ---
 
 ## BUG-351
+
+**UPDATE 4 Oct 06:22:** BUG-351 (a): Tim INT-045, 4 Oct 06:30, verbatim 'pit numbers , yes' (desk reading: pit numbers stay exactly as typed; typing C2 keeps C2, not PC2). DECIDED. To Team: stop the PC prefix on a typed new pit number; small, test first. Item (b) still unanswered.
 
 **Command / Area:** C-8 builder leftovers and questions for Tim (Opus builder ab3dca0d34ffd4f33, PR #548 claude/c8-probe-fixes d2b393f7, 3 Oct).
 
