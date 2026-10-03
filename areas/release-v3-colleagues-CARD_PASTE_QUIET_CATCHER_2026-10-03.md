@@ -1,6 +1,6 @@
 # Workflow card: the quiet paste catcher (BUG-342 part 1 / BUG-366)
 
-**Status: DESIGN ACCEPTED BY THE DESK, 3 Oct 2026 (controller 06). Tim has not seen this card (he is overseas).** The code is built on a HOLD draft PR (branch `claude/c11-quiet-paste-catcher`, base `claude/rel-20261010c`) and stays OUT of the next train until the desk says accepted. Nothing here is Installed or Tim-accepted.
+**Status: APPROVED BY TIM 4 Oct 2026 (INT-048, his words "PASTE - YEP"; desk reading: a paste of CE pits or pipes into a drawing with no drainage wakes Civil for that paste with one plain line, run CDREPAIR, only for CE pits and pipes). Opus review MED 1 + LOW 2 fixed on #567 head ff0da1bf (build/04, 4 Oct); Opus re-review needed. Earlier: DESIGN ACCEPTED BY THE DESK, 3 Oct 2026 (controller 06).** The code is built on a HOLD draft PR (branch `claude/c11-quiet-paste-catcher`, base `claude/rel-20261010c`) and stays OUT of the next train until the desk says accepted. Nothing here is Installed or Tim-accepted.
 
 Authority: `PASTE_NO_DRAINAGE_READ_2026-10-03.md` (the source read and Option A), BUG-342 and BUG-366 in `BUG_CARPARK.md`, `DRIVER_RUN8_2026-10-03.md` (the real PASTECLIP that printed nothing), #393 (Civil stays quiet in Structural drawings), R-27 (warn, never block), the native protection rule (never unlock a layer).
 
