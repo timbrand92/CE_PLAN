@@ -177,7 +177,7 @@
 
 **Also the S-18 finalizer (c651e623, GO, #652 stays in): LOW 1 Re-link accepts any object (circle, Xref insert) and redraws the footing from it (pre-existing); LOW 2 an Undo mark AutoCAD refuses fails silently (`LegacyToolCommon.cs:451`): add a log line; FIRST CHECKS AFTER INSTALL: delete PF2, U, REDO; LINE, FST, Cancel, U; locked-copy + #653 footer; DBMOD after FST + Cancel then Zoom and U; Re-link, Escape, U; ERASE a pad and U twice. If one fails: stop using FST Delete on real jobs; revert the #652 merge 9bc9f247 in the next Structural train.**
 
-**Status:** OPEN (items 2-6 to the Team; 1 and the S-18 first checks to Codex W9). UPDATE 4 Oct 19:40 (Codex bj6): already covered by PR #671 (branch claude/pit-place-dot-noise, in the Monday Civil list); check in AutoCAD after #671 is installed: place two pits, no duplicate message. UPDATE 4 Oct 19:40 (Codex bj6): the printer is OUTSIDE the repo: Tim's own support file C:SERSTIMOTHYBRANDAPPDATAROAMINGAUTODESKAUTOCAD 2027R26.0ENUSUPPORT_SUITE_STARTUP.LSP (ACAD.LSP LOADS IT; LINE 76 CALLS THE RETIRED STRUCPLUS LOADER; LINE 41 AREA). EDITING TIM'S SUPPORT FILE NEEDS SEPARATE AUTHORISATION (SETTINGS/SUPPORT FILES ARE NOT TOUCHED WITHOUT IT): ASK THE DESK TO PUT IT TO TIM, WITH THE EXACT TWO-LINE EDIT, OR THE INSTALLER SHOULD OWN THAT FILE.
+**Status:** OPEN (items 2-6 to the Team; 1 and the S-18 first checks to Codex W9).
 
 ---
 
