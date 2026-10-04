@@ -65,3 +65,15 @@ shown"), UX-STRUC-13 (roof down), UX-LOAD-01 (markers from above). Rules R-00, R
    a 300 mm arrow pointing down onto beam B3 with "P1 from roof".
 4. **"Into its computation":** today only listed against the member (no beam calc uses it). Rec: listed now, the
    S5 beam calculation reads it later. Example: beam B3 row: "P1 18 kN from roof".
+
+## 6. OPEN QUESTIONS (added by Team build 02, run 78, 5 Oct 2026; slices 1 and 2 are built, OFF: PR #735 engine, PR #737 CSPOINTLOAD + reader)
+
+1. **Where do you see point loads drawn today?** The plugin has no point-load symbol, so none was invented. Rec: a plain
+   red circle and tag ("P1 18 kN") on the roof plan (that is what CSPOINTLOAD draws now), and a plain arrow on the beam
+   below only after you name an office block or an old job to copy. Example: send one drawing where a girder truss
+   point load is shown today.
+2. **Roof with no drawing for the next level down:** the roof over a two-storey house sits on First even though the list
+   also has Second. Is it right that CE skips to the nearest lower level that has a drawing? Rec: yes (built that way).
+   Example: Roof, Second (no drawing), First (drawing): the load goes to First.
+3. **A beam's mark:** CE uses the beam's own label text (first line) as the name it lists the load against. Rec: yes.
+   Example: label "B3" lists "P1 18 kN from roof" against B3; a beam with no label is left out and counted.
