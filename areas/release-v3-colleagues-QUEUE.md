@@ -1201,6 +1201,8 @@ RC audit / handoff check) - target (PR numbers, branch, bug, card) - verdict - m
 
 181. Sun 4 Oct 16:41 - **CODEX bj4_windows ENDED 16:41 (usage 26%->27%): W-2 BUILT = draft PR #698 (CDLAYOUTGAPS result window, stacked on #682, branch codex/w2-layout-gaps-window @ 58d9b53c; 3 lanes 0 errors, LayoutGapsWindowTests 10/10, NetworkGapReaderTests 14/14, full suite 15,779 pass / 2 red: BackTest_GlenEira (known flake) and DuplicateCommandScan_CommandCounts_MatchStudyEvidence (to check); Opus review REQUIRED). W-1 STOPPED (engine #692 preview and issue disagree: BUG-398). W-3 STOPPED (levels/detention: no clear single approved choice).** C: 17.4 GB free. Next Codex run queued: W9b after 17:30.
 
+182. Sun 4 Oct 17:03 - **CODEX bj5_issue_preview_fix ENDED 17:02 (27%): BUG-398 fix BUILT = draft PR #704 (codex/w1b-issue-preview-fix @ a730f2fb, stacked on #692; unticked sheets keep existing revision/date; 115 focused tests pass incl 7 new; 6 builds 0 errors; full suite NOT run: C: fell to 6.38 GB; now 16 GB). Opus review REQUIRED; BUG-398 stays OPEN. Add #692+#704 to S-19 review list. W9b starts 17:30.
+
 ## 15. HANDOFF: controller 06 to its successor `CE_ACAD / release-v3-colleagues / build + release / 07` (written Wed 30 Sep 08:30; keep it current; a successor starts at section 1 above, then reads THIS section first)
 
 1. **Read order for the successor:** RULES.md, ROUTER.md, START_HERE.md, the top of `areas/release-v3-colleagues.md` (charter, Lessons 1-14, "For Tim"), this file sections 0-5, then THIS section, then section 13 (newest entries 1a-1z7 at its top) and section 14 (the Opus log). The state lives here, in `BUG_CARPARK.md` (BUG-205..229 from Codex) and `PENDING_TESTS.md`, not in the chat.
