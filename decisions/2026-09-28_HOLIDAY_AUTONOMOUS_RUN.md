@@ -448,3 +448,34 @@ Tim, verbatim: "you were meant to manage and control all three and make sure you
 ## Sun 4 Oct 2026 about 23:20 — Tim: clean the C drive as needed (desk plan/01)
 
 Tim, verbatim: "clean c drive as you need and dont remove important stugg". INT-058 (ruling, answers the disk question asked at 21:45 and 22:30): the desk and the controller may CLEAN C: as needed, but must not remove anything important (no drawings, projects, code, keys, worktrees of other chats, Codex history or settings). Scope as the desk applied it at 23:20: deleted the 1,384 background-task output files older than 24 h in the old session folder (about 8.4 GB; newer files, scratchpad and transcript left) and the old %TEMP% items o3wb5cfc, lestw1e0 (Visual Studio installer temp) and bug160_master_check; C: went from 14 GB to 27 GB. NOT covered by these words, still asked separately: excluding the work folders from Windows Search indexing (a system setting; the indexer was writing 120 to 330 MB/s and made C: swing 2 to 14 GB) and pruning Codex's own history (7.2 GB sqlite, a 3.7 GB rollout). Builds resume with the gate: Team builders stop below 13 GB, Codex builds hold at 15 GB.
+
+## Mon 5 Oct 2026 about 01:30 — Tim answers the 24 return questions (typed choices in the desk chat; desk plan/01)
+
+Tim answered by tapping options (his choices in quotes). INT-059 (ruling, all items; answers the questions in `04_REFERENCE\ux-plan\cards\TIM_RETURN_QUESTIONS_2026-10-04.md`, `STRUCT_QUESTIONS_FOR_TIM_2026-10-04.md`, `L3_QUESTIONS_FOR_TIM_2026-10-04.md` and the roof-down card section 7):
+
+1. **First overnight jobs:** "All three (Recommended)": schedule refresh + checks + PDF set, on copies only, one morning report.
+2. **Same-day re-issue:** "Replace earlier set (Recommended)": drawings and PDFs always match; the old same-day set is replaced as a whole.
+3. **Old Pit Schedule table:** "Accept the first edit (Recommended)".
+4. **Steepest proposed pipe:** Tim: "we can allow very steep pipes make it a setting"; starting value "No limit, warn only (Recommended)" (plain warning above 1 in 10; never a block); the value is a Settings value. (Supersedes the 1 in 20 recommendation.)
+5. **Downpipe spacing:** "12 m (Recommended)" (low corners and valleys included; Settings value).
+6. **Architect's downpipe symbols:** "Broad search (Recommended)" (DP / DOWNPIPE / RWDP names; each confirmed by the drafter).
+7. **Layout choices:** "Pits / pipe / set-off (Recommended)" (A fewest pits, B shortest pipe, C usual set-off).
+8. **Learning before layouts are offered:** "5 networks (Recommended)" (Settings value).
+9. **Repeated markup comments:** "Place and meaning (Recommended)".
+10. **Compare an engineer's edits with:** "Latest saved copy (Recommended)" (falls back to the last issue and says which was used).
+11. **Print differences:** "Warn on any departure (Recommended)" (never stops the issue).
+12. **Default title block for new jobs:** Tim: "both options are needed". There is NO single default: a new job asks which title block (A1 horizontal or A3 classic) at creation; old jobs keep theirs.
+13. **Handing work over:** "Drafter button, copies first (Recommended)" (copies only for the first month, then a separate decision before originals).
+14. **New Pit cover level after a restart:** "Blank (Recommended)" (Recall last settings stays available; answers BUG-401 / #705).
+15. **Markers from the floor above:** "Trial 1 week (Recommended)" (on Tim's PC only, after each plan's level is set with CSPLANLEVEL).
+16. **Typed pit numbers, capitals only (p5 over P5):** Tim chose "Restore P5": capitals ARE tidied back to the existing number (so #687 matches Tim; the reviewer's #687 objection is withdrawn).
+17. **A pit typed as "8" beside an existing P8:** Tim chose "Refuse" (a hard refusal; his own ruling, overrides the desk's warn-and-accept recommendation; BUG-396 a).
+18. **"C 2" (with a space) beside an existing C2:** "Warn and accept (Recommended)" (BUG-396 b; so #670 must be a warning, not a refusal: build/03 run 23/24 made it so).
+19. **Charged rising pipe flips on a grip drag:** "Keep, with a message (Recommended)" (one plain line saying it flipped; BUG-396 c).
+20. **Settings window, Enter:** "Yes, save all (Recommended)" (INT-047 settled).
+21. **Support file ce_suite_startup.lsp, StrucPlus lines:** "Yes, remove (Recommended)". Done by the desk 5 Oct: backup `ce_suite_startup.lsp.bak-20261005-before-strucplus-removal` beside it; line 76 `(ce:load-strucplus-lisp)` in `s::startup` is now a comment (the defun stays, never called). Takes effect at the next AutoCAD start; closes BUG-402.
+22. **Issue with no sheet ticked and a blank new revision:** "Allow (Recommended)" (#692/#704 preview).
+23. **A level typed in the Pit window:** "Never move it (Recommended)" (same as a level typed in Edit Pipe).
+24. **Clearances (footing and service distances in metres):** NOT answered yet: Tim has not typed the numbers; stays Unknown, on the Settings page, never a quiet default.
+
+Also INT-060 (done by Tim in the same chat): Tim said "yes search as you need" about the Windows Search indexing; this is a Windows system setting, so the desk did NOT change it and gave Tim the click steps (Settings > Privacy & security > Searching Windows > Find my files > Classic, or exclude the work folders); still Tim's to do at the PC.
