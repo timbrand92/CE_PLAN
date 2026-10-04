@@ -479,3 +479,7 @@ Tim answered by tapping options (his choices in quotes). INT-059 (ruling, all it
 24. **Clearances (footing and service distances in metres):** NOT answered yet: Tim has not typed the numbers; stays Unknown, on the Settings page, never a quiet default.
 
 Also INT-060 (done by Tim in the same chat): Tim said "yes search as you need" about the Windows Search indexing; this is a Windows system setting, so the desk did NOT change it and gave Tim the click steps (Settings > Privacy & security > Searching Windows > Find my files > Classic, or exclude the work folders); still Tim's to do at the PC.
+
+## Mon 5 Oct 2026 about 06:35 — Tim: use the Team account to 100% every week (desk plan/01)
+
+Tim, verbatim: "you can use team to 100% every werk". INT-061 (priority, standing; supersedes the 90% Team target of 12f and 12g item 34): the Team account (separate allowance, headless Opus/Sonnet workers) is to be used up to 100% by every weekly reset. Today's reading (Tim's screenshot 06:15): 47% used, resets Sat 10 Oct 5:00 AM.
