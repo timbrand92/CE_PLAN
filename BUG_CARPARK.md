@@ -129,7 +129,7 @@
 
 ## BUG-402
 
-**Command / Area:** AutoCAD start-up message (Codex W9d, 4 Oct 19:31): the command line prints '[CE_StrucPlus] LISP not found: C:\ProgramData\Autodesk\ApplicationPlugins\CE_STRUCPLUS.bundle\Contents\CE_StrucPlus.lsp' although no CE_STRUCPLUS bundle is installed (leftover loader reference). Noise for every drafter at start-up. Codex build bj6 item N-2 (4 Oct 19:40) looks for the printer; if it lives outside the repo (old autoload) it is reported. Also seen: four '[CE] Background not found: <xref> Type CDXREFREPAIR' lines when returning to the Civil fixture (xref paths in the fixture, expected). **Status:** OPEN (LOW).
+**Command / Area:** AutoCAD start-up message (Codex W9d, 4 Oct 19:31): the command line prints '[CE_StrucPlus] LISP not found: C:\ProgramData\Autodesk\ApplicationPlugins\CE_STRUCPLUS.bundle\Contents\CE_StrucPlus.lsp' although no CE_STRUCPLUS bundle is installed (leftover loader reference). Noise for every drafter at start-up. Codex build bj6 item N-2 (4 Oct 19:40) looks for the printer; if it lives outside the repo (old autoload) it is reported. Also seen: four '[CE] Background not found: <xref> Type CDXREFREPAIR' lines when returning to the Civil fixture (xref paths in the fixture, expected). **Status:** OPEN (LOW). UPDATE 4 Oct 19:40 (Codex bj6): the printer is OUTSIDE the repo: Tim's own support file ce_suite_startup.lsp in his AppData Roaming Autodesk AutoCAD 2027 R26.0 enu Support folder (acad.lsp loads it; line 76 calls the retired StrucPlus loader). Editing it needs Tim's separate authorisation (desk to ask), or the installer should own that file.
 
 ---
 
@@ -145,7 +145,7 @@
 
 ## BUG-400
 
-**Command / Area:** Civil PIT 'Continue placement' (Codex W9c W9-08, 4 Oct): the command line shows 'Duplicate definition of block _Dot ignored.' each time a pit is placed. Harmless AutoCAD message from inserting a second definition of the _Dot block, but noise for the drafter; find the inserter that re-defines _Dot from a file and make it insert the existing definition. **Status:** OPEN (LOW, observation).
+**Command / Area:** Civil PIT 'Continue placement' (Codex W9c W9-08, 4 Oct): the command line shows 'Duplicate definition of block _Dot ignored.' each time a pit is placed. Harmless AutoCAD message from inserting a second definition of the _Dot block, but noise for the drafter; find the inserter that re-defines _Dot from a file and make it insert the existing definition. **Status:** OPEN (LOW, observation). UPDATE 4 Oct 19:40 (Codex bj6): already covered by PR #671 (branch claude/pit-place-dot-noise, in the Monday Civil list); check in AutoCAD after #671 is installed: place two pits, no duplicate message.
 
 ---
 
