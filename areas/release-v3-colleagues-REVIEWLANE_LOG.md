@@ -956,3 +956,45 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - #792/#793 heads not re-listed this run (taken from run 125).
    - Usage: unknown (headless).
 797. **Thu 08 Oct 10:06** — HEADLESS RUN 127 started (desk plan/02 priority: #805 BUG-256 REDO-safe, #800 #791 #803 #801 #804 #802 #813, then C-24/S-25 lists). Usage: unknown (headless).
+798. **Thu 08 Oct 10:13** — Run 127 reviews (read only, all read by me; no sub-reviewer). 12 OPUS comments.
+   - **#805 @ 00020c33 MERGE (BUG-256, REDO):** judged with the code, the marker can no longer end REDO.
+     - `GradeNoteMarker.RemoveStale` asks `RedoWindowGuard.DeferWhileRedoOpen` before any transaction. Its only caller is the end-of-command refresh, which the baseline already gives open-close reads after U/UNDO/REDO.
+     - The C-23 red call-graph test goes green. 2 LOWs: a REGRESSION_LOG item filed under the C-22 section; byte-order marks added to 2 files.
+     - **C-23 holds d6b122f4: merge the delta 20a0ee96+00020c33 into C-23.**
+   - **#800 @ 21c6b776 MERGE-WITH-FIXES (MEDIUM 1):** after the rebase onto CL5, `MaxLabel` compares with `GetMaxVelocityMs`, which now reads the live Settings. So a changed Settings speed is labelled "unconfirmed" or "CE office rule", never "your Settings value". Fix: compare with the shipped table.
+   - **#791 @ 4acc7af3 MERGE:** clean rebase onto C-23; tests pass detention by name.
+   - **#803 @ 761e80c2 MERGE:** test-only (NonParallelizable).
+   - **#801 @ 698a7c2d MERGE:** one message string.
+   - **#809 @ 74463246 MERGE:** run 125 MEDIUM fixed (CDCHECK cover and step irons read the one reader).
+   - **#808 @ 9cf0f20c MERGE:** said-once memory forgotten on drawing close.
+   - **#804 @ b10a0ec8 MERGE (OFF):** clean rebase onto S-24.
+   - **#802 @ bb555f34 MERGE (OFF):** clean rebase onto S-24.
+   - **#813 @ 8f35f954 DO-NOT-MERGE (duplicate):** the same FADOPT fix is already in the S-24 finalizer 37a99f27; recommend closing it.
+   - **#812 @ 37598c92 MERGE-WITH-FIXES (MEDIUM 1, new BUG-437):** Enter inserts the label 1 drawing unit from the column centre, which puts it on the column and depends on the drawing units. Fix: Enter runs the right text command as the <R> path does.
+   - **#811 @ 47804bde MERGE-WITH-FIXES (MEDIUM 1, new):** a damaged office admin list falls back to the PC's local list. Fix: fail closed when the shared file exists but cannot be read.
+   - Usage: unknown (headless).
+799. **Thu 08 Oct 10:13** — **Corrected lists (current heads; newest real Opus MERGE on each head).** New since run 126: C-23 assembled as rel-20261008f (850967b2); S-24 assembled as rel-20261008z (90ce00bc, Structural 1.0.107).
+   - **C-23 fix-in (deltas onto PRs already in C-23):**
+     - **#805 00020c33 (top priority: clears the C-23 red)**
+     - #803 761e80c2
+     - #801 698a7c2d
+   - **C-24 (Civil/Manager), plain MERGE = 2 new + the 3 deltas above if C-23 is not re-cut:**
+     - #791 4acc7af3 (needs C-23's CL5)
+     - #809 74463246
+   - **C-24 out:**
+     - #800 (MWF)
+     - #811 (MWF)
+     - #781 / #768 (as before)
+   - **S-25 (Structural), plain MERGE = 3:**
+     - #808 9cf0f20c (delta over b514586b in S-24)
+     - #804 b10a0ec8 (OFF)
+     - #802 bb555f34 (OFF; conflicts with #806 already in S-24: keep both sides)
+   - **S-25 out:**
+     - #812 (MWF)
+     - #813 (duplicate of 37a99f27: close)
+800. **Thu 08 Oct 10:13** — HEADLESS RUN 127 ended. 12 OPUS comments (MERGE 8, MWF 3, DNM 1).
+   - **Not checked:**
+     - no build, test or merge-tree trial (conflicts are by reading);
+     - nothing in AutoCAD;
+     - #791 and #800 checked only as rebase deltas against their reviewed heads.
+   - Usage: unknown (headless).
