@@ -163,3 +163,9 @@ choices", 26 Sep 01:17); Hold grade / hold levels (`decisions/2026-09-23_HOLD_GR
 
 1. **Slice 3, Claude's half, built (draft PR #750):** `EditGhostPlan.ForLevels(result, tickedPitIds, pitPositions, textHeightMm, decimals)`: one dashed new-level label per ticked pit that Accept would really change (it asks `LevelsProposalSelection`, so a tick Accept would leave out has no ghost). The transient draw and clear (`TransientDrawableSet`) waits for Codex's window.
 2. Already built since this plan was written: slice 1 (#679), slice 2 (#691), the check-these-levels entry (#697), a Pit-window level is never moved (#724, INT-059 item 23), steepest pipe a Settings value with no limit and a warning above 1 in 10 (#722, INT-059 item 4). The "1 in 20" text in section 0 item 3 and section 5 item 1 is superseded by INT-059.
+
+## 8b. Build/04 run 21 notes (Wed 7 Oct 2026)
+
+1. **Open item, recorded as the Opus review of #697 asked:** the "check these levels" entry (#697) uses CDRULES' rulebook (R-03 grade, R-04 cover, R-08 pit drop), NOT CDCALC / CDRUNSOLVE's classic engine (`NetworkDesignService`). The classic engine reads the office minimum cover (`DesignStandards.MinCoverMm`); the rulebook can take a council or project minimum cover. So "can never pass here and then be called short by the calculation" is proven for CDRULES only. *Recommended:* the code owner rules that the rulebook is the one engine for this check (Tim's council values already live there); the classic solve then reads the same values in a later change. Until ruled, plan slice 2 item 3 stays open.
+2. **#697 fix rounds done (run 21):** a top-of-line pit with two outlets is "does not apply", a stale pipe label no longer pulls in another pit, pipes are named as CDRULES names them.
+3. **#750 fix round done:** the ghost label is the level taken from the change set Accept writes, so the picture and Accept cannot differ.
