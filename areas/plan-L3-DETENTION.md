@@ -119,3 +119,9 @@ block all revert together. 7. Cancel and Escape: "Cancelled - drawing unchanged.
 
 1. **Slice 5 built (draft PR #752):** the "Draft: calculation not approved" marking (`DetentionDraftBannerRule`). Pure; the caller passes what the CDCALC approval check already says, so staleness is never worked out twice.
 2. Built so far: slice 1 (#694), slice 2 without the footing half (#699), slice 3 ghost and chooser contract (#708), slice 5 (#752). Not built: slice 4 (complete Accept, one Undo: writes through CDWT, the pipe path and the pit-detention path, needs its own Opus review), 6, 7. The footing and service distances still wait for Tim (section 5 item 1).
+
+## 8b. Build/04 run 21 notes (Wed 7 Oct 2026)
+
+1. **Slice 4, plan half, built (draft PR #756, stacked on #708):** `DetentionAcceptPlanner` lists what Accept would write for the chosen option (storage pipe or tank through CDWT, orifice pit, overflow, on-site detention block) and what it leaves out and why. The storage is written exactly when the dashed picture shows it; no half system; a failing council check or short storage is a warning, never a block.
+2. **NOT built: the writer.** CDWT, the pipe-drawing path and the D+F Apply preview in one transaction (one Undo, never unlocking or exploding) can only be proven in AutoCAD. *Recommended:* Opus design review of the planned shape, then a Codex run on a copy. Needs the controller's go.
+3. **Question for Tim (small), with a recommendation:** where does the on-site detention block go? The plan only says the D+F card's Apply preview decides. *Recommended:* beside the orifice pit, on the same layer as the existing OSD block, unticked in the preview. Example: orifice pit at the end of the storage pipe, block placed 1 m east of it. Until answered the plan lists the block as "not written: where it goes is not decided".
