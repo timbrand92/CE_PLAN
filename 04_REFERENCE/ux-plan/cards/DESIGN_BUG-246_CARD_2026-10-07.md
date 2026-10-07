@@ -12,7 +12,7 @@ Status: **DRAFT, not approved.** The fix is built and reviewed, and it waits on 
 
 1. **May Refresh in the Pit Schedule window now change drawn schedule text?**
    - **Recommended:** yes, but only cells that are out of date, and U undoes them.
-   - **Job:** Friday you moved P4 with the schedule layer locked. Monday you unlock it and press Refresh. P4's IL and depth cells update. If you say no, Refresh only reports them and you run Update existing schedule instead.
+   - **Job:** Friday you moved P4 with the schedule layer locked. Monday you unlock it and press Refresh. P4's IL and depth cells update. If you say no, Refresh only reports them. They update the next time P4 is edited or the whole schedule is refreshed, as today.
 2. **Should CE look at the drawn cells each time the window opens, or store a list in the drawing?**
    - **Recommended:** look each time. It still works after the drawing is closed and reopened, and nothing new is saved in the drawing.
    - **Job:** you close the drawing on Friday and open it on Monday. The window still says OUT OF DATE for P4. The cost is a slightly longer open on a very large schedule (not yet timed).
