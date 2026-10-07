@@ -1,6 +1,6 @@
 # CE Pilot Checklist: Day 1 on your own real job (copies first)
 
-Written Wed 7 Oct 2026, Melbourne time. **Corrected Thu 8 Oct 2026 for the versions installed 8 Oct** (Civil 3.0.34, Manager 1.1.34, Structural 1.0.104) against the installed code and Codex runs W10 to W17 (corrections listed in `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). For Tim and the 2 to 3 colleagues piloting CE.
+Written Wed 7 Oct 2026, Melbourne time. **Corrected Thu 8 Oct 2026** against the installed code and Codex runs W10 to W17 (corrections listed in `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). **Installed now: Civil 3.0.35, Manager 1.1.35, Structural 1.0.104** (Structural 1.0.105 is to follow). Every "proven in AutoCAD" line below was seen on 3.0.34 / 1.0.104 or earlier; no Codex pass has seen 3.0.35 yet. Updated for Tim's rulings INT-068 and INT-069 (8 Oct): a ruling is not a fix, and each ruled change is marked "Tim has ruled; not built yet" where that is true. For Tim and the colleagues piloting CE.
 Sources: the Opus train reports C-19, C-20, S-19, S-20 and S-21, Codex runs W10c to W17, release queue items 196 to 211, and the release ladder in V3_OVERALL_PLAN.md.
 
 ---
@@ -8,6 +8,8 @@ Sources: the Opus train reports C-19, C-20, S-19, S-20 and S-21, Codex runs W10c
 ## 1. ANSWER FIRST
 
 1. **What the pilot is for.** To find out whether CE works on a real job, not a test drawing. Automated checks and Codex have tested CE on test copies. The plan's ladder is: automated checks, drawing evidence, Tim acceptance, real-work Pilot, Staff Stable. **The Tim-acceptance step has not happened yet:** Tim has accepted nothing in these releases.
+   - **Tim has ruled (INT-069, "15. as recommended"):** Tim runs this Day 1 checklist HIMSELF on one real job copy BEFORE any colleague pilot. That has not been done. No colleague starts until Tim has.
+   - **First pilot colleague (INT-069, "16. as recommended"):** on AutoCAD 2027, installed by hand (AutoCAD closed, the old folder renamed to `_PRE_V3.backup`, the new one copied in). **Colleague's name: ________ (NOT SUPPLIED YET). Where results are sent: ________ (NOT SUPPLIED YET).** Tim to fill both in. Nobody should guess them.
 2. **How long.** Day 1 is about 2 to 3 hours of your normal work (an estimate, not measured). The whole pilot is the plan's selected 2 to 3 people over ten working days.
 3. **Who stops it.** You stop your own day the moment a STOP RULE in section 6 happens. Only Tim ends the pilot.
 4. **The one rule.** Work on a COPY of the job. Never save over the original. Nothing here needs the original.
@@ -18,17 +20,17 @@ Sources: the Opus train reports C-19, C-20, S-19, S-20 and S-21, Codex runs W10c
 ## 2. BEFORE YOU START
 
 1. **Copy the job folder.** Copy the whole job folder to a new folder, for example `JobName_CE_PILOT`. Open only drawings from the copy. Check the folder path in the AutoCAD title bar before you touch anything.
-2. **AutoCAD version.** Use the version you normally use. CE is proven most on AutoCAD 2027 (every Codex run was on 2027). If yours is 2022 to 2024, say so on every report.
+2. **AutoCAD version.** The first pilot colleague is on AutoCAD 2027 (Tim's ruling). Every Codex run was on 2027. If yours is 2022 to 2024, say so on every report, and tell Tim before you start: those years have never been opened.
 3. **Open the drawing first.** Open your copy as the FIRST drawing in a freshly started AutoCAD. The file list shifts after a close and Codex opened the wrong drawing twice that way.
-4. **Read the CE versions.** They should be:
-   - **Civil:** 3.0.34
-   - **Manager:** 1.1.34
-   - **Structural:** 1.0.104
+4. **Read the CE versions.** Installed now on Tim's PC:
+   - **Civil:** 3.0.35
+   - **Manager:** 1.1.35
+   - **Structural:** 1.0.104 (1.0.105 is to follow; if Tim has installed it, expect that number)
 5. **Where to read them.**
-   - **Status bar** (bottom of AutoCAD): "CE MANAGER v1.1.34 [Modern]", "CE CVL SUITE v3.0.34" and "CE STRUC SUITE v1.0.104". "[Modern]" is the AutoCAD 2027 copy; on another AutoCAD year that word differs.
-   - **Or type `CEHEALTH`.** It prints "[CEHEALTH] Checking the CE tools on this PC...", "[OK] CE Civil Suite v3.0.34", "[OK] CE Structural Suite v1.0.104", "[OK] The office IT folder (where CE updates come from) can be reached.", then "[CEHEALTH] All checks passed." (proven in AutoCAD on Tim's PC). Manager is not listed by CEHEALTH.
+   - **Status bar** (bottom of AutoCAD): "CE MANAGER v1.1.35 [Modern]", "CE CVL SUITE v3.0.35" and "CE STRUC SUITE v1.0.104". "[Modern]" is the AutoCAD 2027 copy; on another AutoCAD year that word differs. (The status-bar lines were seen with the 3.0.34 numbers.)
+   - **Or type `CEHEALTH`.** It prints "[CEHEALTH] Checking the CE tools on this PC...", "[OK] CE Civil Suite v3.0.35", "[OK] CE Structural Suite v1.0.104", "[OK] The office IT folder (where CE updates come from) can be reached.", then "[CEHEALTH] All checks passed." (Codex saw these four lines with v3.0.34 for Civil.) Manager is not listed by CEHEALTH.
    - **If a number is lower, or a line is not OK:** stop and tell Tim before doing anything else.
-6. **Do NOT press F2.** In this setup F2 runs the CE command CLEAN (it purges, restyles and regenerates your drawing). That is BUG-411. To see the command history type `TEXTSCR`. To go back to the drawing type `GRAPHSCR`.
+6. **Do NOT press F2 expecting a save.** In the setup Codex tested, F2 runs the CE command CLEAN (it purges, restyles and regenerates the drawing). Tim has ruled F2 is **left as it is for now** ("leave as is for now, commonly used by me to save"); BUG-411 stays open and the desk will check what F2 does for Tim before anyone changes it. To save your copy type `QSAVE`. To see the command history type `TEXTSCR`, and `GRAPHSCR` to go back to the drawing.
 7. **Never save over the original.** On Day 1 you may save your copy. Do not use Save As to the original name or folder.
 8. **Do not change any CE setting on Day 1.** Do not open the CE Settings window (`CDS`), `CDRULEBOOK`, Beam Settings or `ABFLIPAUTO`. A settings command once rewrote Tim's own settings file during a test (BUG-409). Tim sets values.
 9. **Know the typed U and REDO rules.**
@@ -66,6 +68,8 @@ Each line: Do, then what you should see, then what to write down if you do not s
 
 Pits P5 and P8 are used as examples. Use your own numbers.
 
+**Ground rule (Tim, INT-069 "6. as recommended"): renumber pits ONLY in Edit Pit (step 1 and 2).** Never renumber in the Pit Schedule window. Steps 3 to 5 are other renumber routes: a colleague skips them during the pilot; they are for Tim's own Day 1 run and none is proven in AutoCAD. INT-069 says the Pit Schedule window fix is installed in Civil 3.0.35 (PR 766), but no one has seen it in AutoCAD and BUG-426 (open) says a typed 9 then p1 still shows 9. So the ground rule stands until a Codex or Tim pass shows the window right.
+
 1. [ ] **Rename in Edit Pit to a free number.**
    - **Do:** type `PITEDIT`, pick P5. In "Pit number" type 9 (no pit 9 or P9 exists), press Save. Then `PITSCHEDULE` to look, close it.
    - **You should see:** "Pit updated."; P5 becomes 9 on the plan label, in the schedule row and in the pipes' From and To. One `U` takes it back.
@@ -85,7 +89,7 @@ Pits P5 and P8 are used as examples. Use your own numbers.
    - **Do:** double-click P5's plan label and type 8 (P8 exists).
    - **You should see:** "Pit ID must be one compact identifier such as P1 or SPS1. The visible text was kept; linked Civil data was not changed. Run CDEDIT to review it."
    - **Then:** do NOT move that label. Moving it renames the pit. Write down what the label shows.
-6. [ ] **DO NOT renumber pits in the Pit Schedule window.** In AutoCAD it accepted "2" beside P2 and "p1" over P1 with no warning (Codex W14, BUG-420, not fixed in 3.0.34). Renumber with Edit Pit (step 2). If you did type a number there by mistake, write down the row and what it shows.
+6. [ ] **DO NOT renumber pits in the Pit Schedule window.** On 3.0.33 it accepted "2" beside P2 and "p1" over P1 with no warning (Codex W14, BUG-420; not retested since). Renumber with Edit Pit (steps 1 and 2). Tim has ruled that a FREE number typed in this window simply waits as a pending override until you press Review, Update or Stop overriding; that is how it works and is not being changed. If you did type a number there by mistake, write down the row and what it shows.
 
 ### 3C. Move, copy, erase, then U and REDO
 
@@ -119,6 +123,7 @@ All of these passed on test copies in real AutoCAD (Codex W12, W13, W14). The po
    - **You should see, in order:** "Select the first two points to start the polyline, or E to use a line you have drawn." then "Specify first point or [Existing line] [Existing]:" then "Specify second point:" then "Select point 3 (or Enter for straight pipe):". Pick pit 1, pit 2, press Enter. The New Pipe window asks for the invert levels. Type the real levels from your job. Click Start Pipe.
    - **Then:** "[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop." Press Esc.
    - **If not, write down:** which prompt changed or what the window asked.
+   - **Same level at both ends:** if you type the same invert at both ends the window says "Pipe is essentially flat - no measurable fall" and the label today still reads "1 IN 100" (BUG-427, seen by Codex W18). **Tim has ruled** the label should read FLAT with no grade figure (Option A; Tim to confirm). **Not built yet.** Write down what your label says.
 2. [ ] **Undo and redo the pipe.**
    - **Do:** `U`, wait 12 seconds, `REDO`.
    - **You should see:** U echoes "CD" and the pipe goes. REDO says "Everything has been redone" and brings back the pipe, the flow arrow and both invert labels. Proven in AutoCAD (W13).
@@ -207,6 +212,7 @@ Use a structural copy. If CE says Civil tools are off in this drawing, that is t
 
 1. [ ] **FSF strip footing.**
    - **You should see, in this order:** "Enter text <SF1>:" (proven in AutoCAD), then, only if that mark has no size yet, "Enter width for SF 1 <300>:" (seen on 1.0.102), then "Enter depth <0 to skip>:", then the centreline.
+   - **Tim has ruled:** an unknown footing width asks for it with the Settings value pre-filled (today 300 mm; screw pile 150 mm). Not built yet as a ruling; whether the <300> comes from Settings is not checked.
    - **Then:** one `U` removes the strip and its label. Not proven yet.
 2. [ ] **FPFC pad footing.** Not proven yet beyond the first question.
    - **You should see, in this order:** "Enter text <PF1>:" (proven), then, only if that mark has no size yet, "Enter X size for PF 1" with a default, "Enter Y size <same as X>:", "Enter depth <0 to skip>:", the centre point, then "Additional rotation around center <0>:".
@@ -236,7 +242,7 @@ Write it down the moment something is not as listed. Do not tidy it up later.
 4. **The drawing name** and the folder it was in (check it was your copy).
 5. **The command and the step.** For example "CD, after the New Pipe window, pressed Start Pipe".
 6. **What you expected, and what happened.** One sentence each.
-7. **Where to send it.** Send it to Tim. The checklist sources name no other channel, so Tim will tell you the place (email or Teams). Use "CE pilot" and the date at the top.
+7. **Where to send it.** Send to: ________ (**NOT SUPPLIED YET.** Tim has not named the results channel; do not guess one). Use "CE pilot" and the date at the top.
 8. **Do not send the drawing.** Client drawings stay on your machine. Tim will ask if he needs one.
 
 ---

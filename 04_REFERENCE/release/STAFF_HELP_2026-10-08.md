@@ -1,10 +1,10 @@
 # CE staff help: one page per job (Thursday 8 October 2026, Melbourne time)
 
-**For Civil 3.0.34, Manager 1.1.34 and Structural 1.0.104.** Type CEHEALTH to check your own versions.
+**Installed now: Civil 3.0.35, Manager 1.1.35 and Structural 1.0.104** (Structural 1.0.105 is to follow). Every SEEN mark below was seen on 3.0.34 / 1.0.104 or earlier; no Codex pass has seen 3.0.35 yet. Type CEHEALTH to check your own versions. A step marked **Tim has ruled; not built yet** is a decision, not a fix: it is not in the installed version.
 
 1. **How to read the marks.** **SEEN** means Codex watched it work in real AutoCAD on a test copy, on the date shown. Tim has not yet accepted it. **NOT SEEN** means built and unit-tested only. Nobody has watched it in AutoCAD yet. Where the words differ from yours, tell Tim.
 2. **The one rule.** Work on a COPY of the job until Tim says otherwise.
-3. **Never press F2 on the drawing screen.** In this setup it runs CLEAN (purge, restyle, regen). To read the whole command line, type TEXTSCR, then GRAPHSCR to come back.
+3. **F2 runs CLEAN.** In a CE drawing, F2 runs the CE command CLEAN (purge, restyle, regen) instead of opening the text window. Do not press F2 expecting a save. Tim has ruled F2 is left as it is for now ("leave as is for now, commonly used by me to save"); nothing is changing yet. To read the whole command line, type TEXTSCR, then GRAPHSCR to come back.
 
 ---
 
@@ -40,6 +40,7 @@
 10. **Cancel in the window.** CE prints "[CE] CD command cancelled." and draws nothing.
 11. **One U takes back the whole pipe** (pipe, flow arrow and both invert labels). The U line reads CD. SEEN 7 Oct.
 12. **An older pipe** may ask a question when you edit it later. See "Edit a pipe".
+13. **Same level typed at both ends.** The window says "Pipe is essentially flat - no measurable fall" and the pipe is saved, but today the label still reads "1 IN 100" (BUG-427, seen W18). **Tim has ruled; not built yet:** the label will read FLAT with no grade figure (Option A; Tim to confirm). Write down what your label says.
 
 ---
 
@@ -53,7 +54,7 @@
 6. **After a refusal the window opens again** with your typed number still in it. Fix the number and press Save, or press Cancel. The button reads "Save", though the line says "Update".
 7. **A number nobody uses** saves with "Pit updated." The pit's row and its pipes' From and To should follow. NOT SEEN: the pit Codex used had no pipes.
 8. **Undo.** One U takes it back (the U line reads PITEDIT). SEEN 8 Oct.
-9. **Do not renumber in the Pit Schedule window yet.** See "The Pit Schedule", step 9.
+9. **Pilot ground rule: renumber pits only in Edit Pit** (Tim, INT-069). Never renumber in the Pit Schedule window. See "The Pit Schedule", step 9.
 
 ---
 
@@ -78,7 +79,7 @@
 6. **Restore Row** clears every override on the row and puts every cell back to the pit's own value. NOT SEEN.
 7. **Close the window.** One U takes back the whole Pit Schedule visit (every edit made in it), not just the last click. The U line reads PITSCHEDULE. SEEN 8 Oct.
 8. **A placed table.** A cell on a locked layer, in an Xref or in a reference edit is never written. CE names what it skipped. NOT SEEN.
-9. **Pit numbers: use Edit Pit, not this window.** On 7 Oct this window accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420, still open, not retested). Edit Pit refuses both.
+9. **Pit numbers: use Edit Pit, not this window.** On 7 Oct (3.0.33) this window accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420, not retested). Edit Pit refuses both. Tim's ruling: a FREE number typed in this window waits as a pending override until you press Review, Update or Stop overriding (that is how it works now). Civil 3.0.35 carries a window fix (PR 766) that nobody has seen in AutoCAD, and BUG-426 (open) says a typed 9 then p1 still shows 9. So the ground rule stands: renumber only in Edit Pit.
 10. **Warnings column.** A warning is information. It never stops you. See "How to read a warning".
 
 ---
@@ -125,7 +126,7 @@
 ## 9. When CE refuses
 
 1. **A refusal changes nothing.** The command line says why and says "Nothing was changed" or "nothing was unlocked".
-2. **Read the whole line.** Type TEXTSCR to see it all, then GRAPHSCR. Do not press F2.
+2. **Read the whole line.** Type TEXTSCR to see it all, then GRAPHSCR. F2 runs CLEAN in a CE drawing (see the top of this page).
 3. **Pit number in use.** See "Edit a pit", steps 4 and 5. Type a number no other pit uses.
 4. **Support block.** STS1 on a line says "Object must be a support block." On an ordinary block it says "That is not a support block, so nothing changed. Type the command again and pick a support block." SEEN 8 Oct.
 5. **Locked layers, Xrefs and reference edits are never changed.** CE skips them and says so. It will not unlock a layer. For example Foundations re-link says "(nothing was unlocked)". Unlock the layer yourself only if you meant to change that object. NOT SEEN.
@@ -138,8 +139,8 @@
 
 1. **When.** Something looks wrong and you want Tim to see your logs.
 2. **Type CESUPPORT.** CE prints "[CESUPPORT] Creating support bundle..." then "[CESUPPORT] Bundle saved: " and the file path. NOT SEEN.
-3. **It is queued for the office.** CE prints "It will be uploaded to the IT Admin folder on the next refresh."
-4. **The file name carries your computer's name** (CE_SUPPORT_ then the computer name, date and time). It zips CE's own log folder and, if you have one, a "CE Diagnostics" folder on your desktop.
+3. **It is queued for the office.** CE prints "It will be uploaded to the IT Admin folder on the next refresh." **Tim has ruled; not built yet:** CESUPPORT will never upload by itself. The current build's wording says it will upload, so treat that line as wrong and still send the file to Tim yourself.
+4. **The file name carries your computer's name** (CE_SUPPORT_ then the computer name, date and time). It zips CE's own log folder and, if you have one, a "CE Diagnostics" folder on your desktop. **Tim has ruled; not built yet:** PC names stay out of the file name and drawing paths in the bundle become job numbers.
 5. **Send it to Tim.** No other support route is recorded. Tim will say where.
 6. **Write these seven things down too.** Version (type CEHEALTH and copy the lines), the exact command and clicks, the drawing name, what you expected, what you saw (exact words), what one U did, and the time (Melbourne).
 7. **Do not send the drawing.** Tim will ask if he needs one. Do not delete CE's log files.
@@ -153,16 +154,17 @@
 2. **Close AutoCAD first,** and make sure no Codex test is running.
 3. **Civil and Manager go back together.** They share a file and one new with one old gives a missing CE ribbon. **Structural goes back alone.**
 4. **The method.** Rename the live folder to a ".backup" name (never delete it), rename the matching "_PRE_" backup to the live name, read the version off the file, start AutoCAD.
-5. **The backups on this PC today (named, not opened).** Civil and Manager pair: CE_CVL_SUITE_PRE_d2575455_20261008-005047.backup and CE_SUITE_MANAGER_PRE_d2575455_20261008-005047.backup (the 3.0.33 and 1.1.33 pair). Structural: CE_STRUC_SUITE_PRE_6f2e9763_20261008-005612.backup (1.0.103).
+5. **The backups on this PC (named, not opened; read before the 3.0.35 install).** Civil and Manager pair: CE_CVL_SUITE_PRE_d2575455_20261008-005047.backup and CE_SUITE_MANAGER_PRE_d2575455_20261008-005047.backup (the 3.0.33 and 1.1.33 pair). Structural: CE_STRUC_SUITE_PRE_6f2e9763_20261008-005612.backup (1.0.103). The 3.0.35 / 1.1.35 install on 8 Oct 03:59 also kept the 3.0.34 / 1.1.34 pair as `*_PRE_62514a67_*.backup`; its full file names were not read here.
 6. **Your settings are not touched.**
-7. **The full steps, with the exact commands, are in ROLLBACK_GUIDE_2026-10-07.md** in this folder. Use that file. This page is only a summary.
+7. **Manager "Roll Back Release".** **Tim has ruled; not built yet:** PCs will go back at their next AutoCAD start, with an "are you sure" question. BUG-425 records that today the button does nothing, so do not rely on it; use the steps above.
+8. **The full steps, with the exact commands, are in ROLLBACK_GUIDE_2026-10-07.md** in this folder. Use that file. This page is only a summary.
 
 ---
 
 ## 12. Structural (versions 1.0.104): roof, upper floors, ground floor, footings last
 
 1. **ROOF: BT1, bracing truss.** Type BT1. CE prints "=== BT1 - BRACING TRUSS (Universal BRACING block) ===" and, the first time in a drawing, "The BRACING block is loaded into this drawing." The repeat does not print it again. Then "Specify first point of bracing truss:". Esc prints "Operation cancelled." SEEN 8 Oct.
-2. **BT1, after the first point.** CE asks "Specify second point of bracing (drag preview, ENTER for 0°/2700): " and "Bracing truss number [1-9] <1>: ". NOT SEEN. A brace longer than 2700 is still cut to 2700.
+2. **BT1, after the first point.** CE asks "Specify second point of bracing (drag preview, ENTER for 0°/2700): " and "Bracing truss number [1-9] <1>: ". NOT SEEN. A brace longer than 2700 is still cut to 2700 today. **Tim has ruled; not built yet:** a brace over 2700 mm will keep its drawn length and warn.
 3. **UPPER FLOORS: beam command 1.** (There is no command called BEAM. The beam commands are 1, 2, 4, 5 and BDL.) Type 1. CE asks "Select the first support (a support block or a line), or press Enter to pick points:". Press Enter, then "Specify the START point:", "Specify the END point or [Object]:", "Enter text <bd1>:" (Enter takes it), and "Beam preview [Accept/Cancel] <Accept>:". Each shows once. SEEN 7 Oct.
 4. **Result.** "Beam placed. One UNDO removes the complete beam." One U removes it. A second run cancelled at the first question prints "Beam cancelled. Nothing was written." SEEN 7 Oct.
 5. **UPPER FLOORS: BTX, beam text to MTEXT.** Type BTX. CE asks "Select beam TEXT/MTEXT to convert:". Select text and CE asks "Choose suffix [NONE/CANT/CONT/BOTH/LOWER/PORTAL/PF/OTHER] <NONE>:". Result: "BTX done: 1 TEXT changed to MTEXT, 0 MTEXT changed to TEXT, 0 skipped." One U takes it back. SEEN 8 Oct.

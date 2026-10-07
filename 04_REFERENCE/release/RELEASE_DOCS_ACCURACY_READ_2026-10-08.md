@@ -107,3 +107,16 @@
 4. **Which colleague, which AutoCAD year, and how installed?** You ruled "By hand, AutoCAD closed" (23 Sep). The hand steps (rename to `_PRE_V3.backup`, copy in) are still marked proposed. **Recommend:** a 2027 colleague first, installed by those steps, so the rollback guide's renames work on their PC too.
 5. **Pilot with the Pit Schedule window fault open (BUG-420)?** The checklist now says never renumber in the window and use Edit Pit. **Recommend:** go ahead with that instruction rather than wait for the fix.
 6. **F2 runs CLEAN (BUG-411).** Keep F2 on CLEAN, or move CLEAN off F2 so F2 opens the text window again? **Recommend:** move it off F2; colleagues will press F2 by habit.
+
+---
+
+## Tim's answers (INT-069), 8 Oct
+
+Tim, verbatim, in the decisions file (`decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`): INT-068 "4. as recommended" and INT-069 "... 6. as recommended ... 7. as recommended ... 9. leave as is for now, commonly used by me to save ... 15. as recommended 16. as recommended 17. as recommended". The chat list numbers differ from the six questions above, so each is mapped here. These are rulings, not fixes: the four release documents now say "Tim has ruled; not built yet" where that is true. Nothing is accepted.
+
+1. **Question 1, steep pipes in CDFIXFLATPIPES: YES, as recommended** (INT-068 item 4). A pipe held at 1 in 5 keeps the "steep, check it" line; warn above 1 in 10, never block. The wording is in 3.0.34; Codex has not seen it.
+2. **Question 2, old real-named report files: YES, delete them** (INT-069 item 7), in Civil and Manager at start-up as Structural already does. Tim's ruling goes further: scramble the names inside the Manager report and keep PC names out of support-bundle file names. Not built.
+3. **Question 3, pilot before your own acceptance: Tim runs the Day 1 checklist himself on one real job copy first** (INT-069 item 15). Done in the checklist.
+4. **Question 4, which colleague, AutoCAD year, how installed: a colleague on AutoCAD 2027, installed by hand** (old folder renamed to `_PRE_V3.backup`, new copied in) (INT-069 item 16). **Still open: the colleague's name and the results channel were not supplied.** Left as marked blanks in the checklist.
+5. **Question 5, pilot with the Pit Schedule window fault open: GO, with the Edit Pit-only ground rule** (INT-069 item 6). Tim's ruling adds that the window fix is installed in 3.0.35; nobody has seen it in AutoCAD and BUG-426 is open, so the rule stays in the documents.
+6. **Question 6, F2 runs CLEAN: NOT TAKEN.** The recommendation was to move CLEAN off F2. Tim chose the other way: "leave as is for now, commonly used by me to save" (INT-069 item 9). BUG-411 stays open; the desk will check what F2 does for Tim. The documents say F2 runs CLEAN in a CE drawing and not to press it expecting a save, and claim nothing more.
