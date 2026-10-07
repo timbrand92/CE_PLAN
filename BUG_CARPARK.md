@@ -133,7 +133,7 @@
 
 ## BUG-418
 
-**Command / Area:** NATIVE-PROTECTION BYPASS (HIGH), source audit 7 Oct: **strip footing commands re-layer objects across the WHOLE drawing**: `CeTextService.cs:4301-4380`, run when SF, BSF or STRIPLAYERSMERGE starts, moves objects in EVERY block definition and erases old layers; failures are swallowed, so locked objects are skipped without telling the drafter. **Fix:** touch only the objects the command made, skip locked layers/Xrefs and say so. **Status:** OPEN (HIGH; Team; read, not run in AutoCAD).
+**Command / Area:** NATIVE-PROTECTION BYPASS (HIGH), source audit 7 Oct: **strip footing commands re-layer objects across the WHOLE drawing**: `CeTextService.cs:4301-4380`, run when SF, BSF or STRIPLAYERSMERGE starts, moves objects in EVERY block definition and erases old layers; failures are swallowed, so locked objects are skipped without telling the drafter. **Fix:** touch only the objects the command made, skip locked layers/Xrefs and say so. **Status:** RULED 7 Oct (INT-065, Tim: "some things are worth running in the background a layer tify up is one of those things if done properly"): the tidy-up STAYS in SF/BSF/STRIPLAYERSMERGE and runs quietly IF done properly: never touches locked-layer objects, Xref content or anything while REFEDIT is open; erases an old layer only when empty, unlocked and unused; speaks only when it skips (one plain line each); never swallows a failure. Draft #764 (build/02) does that: Opus review next, then S-22. BUG-417 (X-Civil import) is NOT decided by this: #765 stays DRAFT.
 
 ## BUG-419
 
