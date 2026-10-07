@@ -917,3 +917,41 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - #809's long-section/schedule/fall-arrow raw readers not traced.
    - Usage: unknown (headless).
 793. **Thu 08 Oct 07:46** — HEADLESS RUN 126 started (PC clock AUSEST). Usage: unknown (headless).
+794. **Thu 08 Oct 07:48** — Run 126 reviews (read only, all read by me; no sub-reviewer).
+   - **#810 @ 1f7df70c MERGE** (new, BUG-434): CLAYER is put back in `finally` before the Undo group ends, Esc at ROTATE included; the _Dot read is quiet. 2 LOWs; one is for Tim: the layer is now put back after a successful C1 too.
+   - **#806 @ ac16f26b MERGE (OFF)**: two faces of one wall within 350 mm (Settings) are joined into one lintel. 1 new LOW. 350 mm is for Tim to confirm. The #802 conflict still stands.
+   - **#805 @ d6b122f4 MERGE**: run 124 MEDIUMs 1-3 fixed (lock checked before the layer helper, REFEDIT refused, Settings switch on by default). 4 new LOWs, including no row in the Settings window and two lines for one lock.
+   - **#803 @ 1ed31afb MERGE**: run 124 HIGH 1 and MEDIUMs 2-4 fixed. 1 new LOW: the tests change the shared Kingston profile.
+   - **Unchanged heads, verdicts stand:** #809 MWF (CDCHECK still reads old TG 0.000); #808 (the BUG-433 PR) MERGE; #800 MERGE.
+   - Usage: unknown (headless).
+795. **Thu 08 Oct 07:48** — **Corrected lists (current heads; newest real Opus MERGE on each head).** No new release branch since rel-20261008e (C-22) and rel-20261008y (S-23).
+   - **C-23 (Civil/Manager), plain MERGE = 12:**
+     - #797 cd953541
+     - #796 e5f8ffbe (with #788: take #796's CeSupportBundleService.cs whole)
+     - #801 379b67a9 (after #796)
+     - #791 10a3b9c9
+     - #790 bca27f7c (merge #800 first: adjacent lines)
+     - #789 e793838c
+     - #807 2175f147
+     - #794 9a9deb74
+     - #800 589d4ce3
+     - #795 2f665b2f
+     - **#803 1ed31afb (new in list)**
+     - **#805 d6b122f4 (new in list)**
+   - **C-23 out:** #809 (MWF), #781/#768.
+   - **S-24 (Structural), plain MERGE = 9:**
+     - #798 5d19c35f and #792 543d9ac5 (deltas only)
+     - #793 5d47f50b
+     - #799 f159e83e
+     - #804 39edfb8f (OFF)
+     - #802 84e46f35 (OFF)
+     - #808 b514586b
+     - **#810 1f7df70c (new; base rel-20261008y)**
+     - **#806 ac16f26b (new in list, OFF; base tl2-roof-area-setout; conflicts with #802, keep both sides)**
+   - **S-24 out:** none newly.
+796. **Thu 08 Oct 07:48** — HEADLESS RUN 126 ended. 4 OPUS comments (MERGE 4).
+   - **Not checked:**
+     - no build, test or merge-tree trial (conflicts are by reading);
+     - nothing in AutoCAD;
+     - #792/#793 heads not re-listed this run (taken from run 125).
+   - Usage: unknown (headless).
