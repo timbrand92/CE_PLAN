@@ -15,7 +15,7 @@ Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install
 6. **Plainer words everywhere**: Manager, CEHEALTH, CDCHECK, Structural beam, bracing and footing messages. Wording is the biggest change in Structural.
 
 **Where each version stands (read from the installed program files 8 Oct):**
-0. **Installed now (8 Oct 03:59): Civil 3.0.35 and Manager 1.1.35**, with Structural 1.0.104 unchanged. Structural 1.0.105 is to follow. The 3.0.35 changes (PR 762, 763, 766, 747, 774, 777) are NOT described below and no Codex pass has seen 3.0.35 yet. Everything below is written for 3.0.34 / 1.1.34 / 1.0.104, which 3.0.35 contains.
+0. **Installed now: Civil 3.0.35 and Manager 1.1.35 (8 Oct 03:59) and Structural 1.0.105 (8 Oct 04:21).** The 3.0.35 changes (PR 762, 763, 766, 747, 774, 777) and the 1.0.105 changes are NOT described below. Codex has since looked at 3.0.35 (W20, a short check) and 1.0.105 (W19, the U and REDO cases); see the staff help and known limitations pages for what it saw. Everything below is written for 3.0.34 / 1.1.34 / 1.0.104, which 3.0.35 contains.
 1. **Installed and in use before that (from Thu 8 Oct 00:50):** Civil 3.0.34 and Manager 1.1.34 (installed 8 Oct 00:50), Structural 1.0.104 (installed 8 Oct 00:56).
 2. **Earlier installs, still inside these:** Civil 3.0.33, Manager 1.1.33 (7 Oct 21:16) and Structural 1.0.103 (7 Oct 21:21); Civil 3.0.32, Manager 1.1.32 and Structural 1.0.102 (5 Oct).
 3. **Check your own version:** the AutoCAD status bar shows "CE MANAGER v1.1.34 [Modern]", "CE CVL SUITE v3.0.34" and "CE STRUC SUITE v1.0.104". Or type CEHEALTH: it prints one line for Civil and one for Structural (not Manager), then a line about the office IT folder.
@@ -225,7 +225,7 @@ Nothing here is promised beyond what is installed.
 
 ## 5A. DECIDED, NOT YET BUILT (Tim's rulings INT-066, INT-068, INT-069, 8 Oct)
 
-A ruling is not a fix. None of these is in the installed Civil 3.0.35, Manager 1.1.35 or Structural 1.0.104 unless a line says so, and none has been seen in AutoCAD. Tim has accepted nothing.
+A ruling is not a fix. None of these is in the installed Civil 3.0.35, Manager 1.1.35 or Structural 1.0.105 unless a line says so, and none has been seen in AutoCAD. Tim has accepted nothing.
 
 1. **UPVC pipe speed limit.** Tim: "1. as recommended" (INT-068). The authority is the CPAA Hydraulics Design Manual. The figures read from it become PROPOSED Settings values for Tim to tick "Confirmed". Until then 3 m/s stays the one unconfirmed value and Civil Design stays at 6. (The manual has been read; it gives no UPVC figure. See CPAA_VELOCITY_READ_2026-10-08.md.)
 2. **Two new warnings, never blocks, figures on Settings.** Pit outlet speed (AS/NZS 3500.3 clause 5.4.11.2(d): 1.5 m/s recommended, 2.0 m/s shall not exceed). Detention pipe flatter than 1 in 200 for pipes 225 mm and larger, and "orifice not required" at 12 L/s or less.
@@ -238,7 +238,7 @@ A ruling is not a fix. None of these is in the installed Civil 3.0.35, Manager 1
 9. **Flat pipe label (BUG-427).** The label reads FLAT with no grade figure when both ends are typed the same (Option A; Tim to confirm in one line). Today it still reads 1 IN 100. Built only as a draft.
 10. **F2 is left as it is for now.** Tim: "leave as is for now, commonly used by me to save". F2 runs CLEAN in a CE drawing; nothing is changing yet.
 11. **Structural framing cards A to E approved, roof first:** roof area setout, floor joist span arrow, framing legend, lintel/support proposals, level above and below (O)/(U). Nothing built.
-12. **Still open with Tim:** the seven design cards (he is answering them himself), the pilot colleague's name and the results channel. Tim runs the Day 1 checklist himself on one real job copy before any colleague pilot.
+12. **Still open with Tim:** the seven design cards (he is answering them himself), the pilot colleague is Max (Tim, INT-071) and results go to the SharePoint folder CE Plugin Pilot Results in the Engineering library (INT-072), but Tim has not yet confirmed that Max can write to that library (open). Tim runs the Day 1 checklist himself on one real job copy before any colleague pilot.
 
 ---
 

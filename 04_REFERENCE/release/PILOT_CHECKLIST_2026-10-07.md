@@ -1,6 +1,6 @@
 # CE Pilot Checklist: Day 1 on your own real job (copies first)
 
-Written Wed 7 Oct 2026, Melbourne time. **Corrected Thu 8 Oct 2026** against the installed code and Codex runs W10 to W17 (corrections listed in `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). **Installed now: Civil 3.0.35, Manager 1.1.35, Structural 1.0.104** (Structural 1.0.105 is to follow). Every "proven in AutoCAD" line below was seen on 3.0.34 / 1.0.104 or earlier; no Codex pass has seen 3.0.35 yet. Updated for Tim's rulings INT-068 and INT-069 (8 Oct): a ruling is not a fix, and each ruled change is marked "Tim has ruled; not built yet" where that is true. For Tim and the colleagues piloting CE.
+Written Wed 7 Oct 2026, Melbourne time. **Corrected Thu 8 Oct 2026** against the installed code and Codex runs W10 to W17 (corrections listed in `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). **Installed now: Civil 3.0.35, Manager 1.1.35, Structural 1.0.105.** Every "proven in AutoCAD" line below was seen on 3.0.34 / 1.0.104 or earlier, except the lines that name Codex W19 (seen on Structural 1.0.105) or W20 (seen on Civil 3.0.35); those say so. Pilot colleague and results folder added Thu 8 Oct from Tim's INT-071 and INT-072. Updated for Tim's rulings INT-068 and INT-069 (8 Oct): a ruling is not a fix, and each ruled change is marked "Tim has ruled; not built yet" where that is true. For Tim and the colleagues piloting CE.
 Sources: the Opus train reports C-19, C-20, S-19, S-20 and S-21, Codex runs W10c to W17, release queue items 196 to 211, and the release ladder in V3_OVERALL_PLAN.md.
 
 ---
@@ -9,7 +9,9 @@ Sources: the Opus train reports C-19, C-20, S-19, S-20 and S-21, Codex runs W10c
 
 1. **What the pilot is for.** To find out whether CE works on a real job, not a test drawing. Automated checks and Codex have tested CE on test copies. The plan's ladder is: automated checks, drawing evidence, Tim acceptance, real-work Pilot, Staff Stable. **The Tim-acceptance step has not happened yet:** Tim has accepted nothing in these releases.
    - **Tim has ruled (INT-069, "15. as recommended"):** Tim runs this Day 1 checklist HIMSELF on one real job copy BEFORE any colleague pilot. That has not been done. No colleague starts until Tim has.
-   - **First pilot colleague (INT-069, "16. as recommended"):** on AutoCAD 2027, installed by hand (AutoCAD closed, the old folder renamed to `_PRE_V3.backup`, the new one copied in). **Colleague's name: ________ (NOT SUPPLIED YET). Where results are sent: ________ (NOT SUPPLIED YET).** Tim to fill both in. Nobody should guess them.
+   - **First pilot colleague (INT-069, "16. as recommended"):** on AutoCAD 2027, installed by hand (AutoCAD closed, the old folder renamed to `_PRE_V3.backup`, the new one copied in). **The pilot colleague is Max** (Tim, INT-071 item 8: "Max - IDK"; no surname was given, so this page says only Max).
+   - **Where Max saves results (Tim, INT-072 item 1):** the SharePoint folder **CE Plugin Pilot Results** in the Engineering library: https://residentialstructures.sharepoint.com/Engineering/CE%20Plugin%20Pilot%20Results (on your PC, the synced copy of that folder in your Engineering library). Tim's words: "a need to set it up though and make sure it happens".
+   - **OPEN ITEM, not done: Tim still has to confirm that Max can write to the Engineering library.** Do not assume it works. Until Tim confirms it, do not use any other place. Sharing is Tim's to grant.
 2. **How long.** Day 1 is about 2 to 3 hours of your normal work (an estimate, not measured). The whole pilot is the plan's selected 2 to 3 people over ten working days.
 3. **Who stops it.** You stop your own day the moment a STOP RULE in section 6 happens. Only Tim ends the pilot.
 4. **The one rule.** Work on a COPY of the job. Never save over the original. Nothing here needs the original.
@@ -25,10 +27,10 @@ Sources: the Opus train reports C-19, C-20, S-19, S-20 and S-21, Codex runs W10c
 4. **Read the CE versions.** Installed now on Tim's PC:
    - **Civil:** 3.0.35
    - **Manager:** 1.1.35
-   - **Structural:** 1.0.104 (1.0.105 is to follow; if Tim has installed it, expect that number)
+   - **Structural:** 1.0.105
 5. **Where to read them.**
-   - **Status bar** (bottom of AutoCAD): "CE MANAGER v1.1.35 [Modern]", "CE CVL SUITE v3.0.35" and "CE STRUC SUITE v1.0.104". "[Modern]" is the AutoCAD 2027 copy; on another AutoCAD year that word differs. (The status-bar lines were seen with the 3.0.34 numbers.)
-   - **Or type `CEHEALTH`.** It prints "[CEHEALTH] Checking the CE tools on this PC...", "[OK] CE Civil Suite v3.0.35", "[OK] CE Structural Suite v1.0.104", "[OK] The office IT folder (where CE updates come from) can be reached.", then "[CEHEALTH] All checks passed." (Codex saw these four lines with v3.0.34 for Civil.) Manager is not listed by CEHEALTH.
+   - **Status bar** (bottom of AutoCAD): "CE MANAGER v1.1.35 [Modern]", "CE CVL SUITE v3.0.35" and "CE STRUC SUITE v1.0.105". "[Modern]" is the AutoCAD 2027 copy; on another AutoCAD year that word differs. (The status-bar lines were seen with the 3.0.34 numbers; nobody has read them on the newer ones.)
+   - **Or type `CEHEALTH`.** It prints "[CEHEALTH] Checking the CE tools on this PC...", "[OK] CE Civil Suite v3.0.35", "[OK] CE Structural Suite v1.0.105", "[OK] The office IT folder (where CE updates come from) can be reached.", then "[CEHEALTH] All checks passed." (Codex saw these four lines with v3.0.34 for Civil and v1.0.104 for Structural.) Manager is not listed by CEHEALTH.
    - **If a number is lower, or a line is not OK:** stop and tell Tim before doing anything else.
 6. **Do NOT press F2 expecting a save.** In the setup Codex tested, F2 runs the CE command CLEAN (it purges, restyles and regenerates the drawing). Tim has ruled F2 is **left as it is for now** ("leave as is for now, commonly used by me to save"); BUG-411 stays open and the desk will check what F2 does for Tim before anyone changes it. To save your copy type `QSAVE`. To see the command history type `TEXTSCR`, and `GRAPHSCR` to go back to the drawing.
 7. **Never save over the original.** On Day 1 you may save your copy. Do not use Save As to the original name or folder.
@@ -68,23 +70,22 @@ Each line: Do, then what you should see, then what to write down if you do not s
 
 Pits P5 and P8 are used as examples. Use your own numbers.
 
-**Ground rule (Tim, INT-069 "6. as recommended"): renumber pits ONLY in Edit Pit (step 1 and 2).** Never renumber in the Pit Schedule window. Steps 3 to 5 are other renumber routes: a colleague skips them during the pilot; they are for Tim's own Day 1 run and none is proven in AutoCAD. INT-069 says the Pit Schedule window fix is installed in Civil 3.0.35 (PR 766), but no one has seen it in AutoCAD and BUG-426 (open) says a typed 9 then p1 still shows 9. So the ground rule stands until a Codex or Tim pass shows the window right.
+**Ground rule (Tim, INT-069 "6. as recommended"): renumber pits ONLY in Edit Pit (step 1 and 2).** Never renumber in the Pit Schedule window. Steps 3 to 5 are other renumber routes: a colleague skips them during the pilot; they are for Tim's own Day 1 run and none is proven in AutoCAD. INT-069 says the Pit Schedule window fix is installed in Civil 3.0.35 (PR 766), but no one has seen it in AutoCAD and BUG-426 (open) says a typed 9 then p1 still shows 9. **Seen on 3.0.35 (Codex W20):** in the window a bare 2, p2 or P2 over P1 was refused with "[CE] Pit number 2 is the same pit number as P2 (another pit), so this pit keeps P1. Type a number no other pit uses."; p1 and "P 1" stayed P1; "P 2" was accepted with "[CE] P 2 looks like P2 (another pit). Check the numbering." The free-number-then-p1 case (BUG-426) was not reached. So the ground rule stands until Tim has seen the window right.
 
 1. [ ] **Rename in Edit Pit to a free number.**
    - **Do:** type `PITEDIT`, pick P5. In "Pit number" type 9 (no pit 9 or P9 exists), press Save. Then `PITSCHEDULE` to look, close it.
    - **You should see:** "Pit updated."; P5 becomes 9 on the plan label, in the schedule row and in the pipes' From and To. One `U` takes it back.
-   - **If not, write down:** which of the three did not change. Not proven yet (Codex did this on a pit with no pipes and did not read the row).
+   - **If not, write down:** which of the three did not change. **Seen in AutoCAD on 3.0.34 (Codex W18), on a pit WITH pipes:** the plan label, the schedule row and the pipe's From all read 77, and the window said "Pit updated." **Not proven yet:** this rename's own U.
 2. [ ] **Edit Pit: a number another pit already has.**
    - **Do:** `PITEDIT`, pick P5, type P8 (a P8 exists), press Save. Then try just 8.
-   - **You should see:** "[CE] Pit number P8 is already used by another pit (P8), so this pit keeps P5. Type a number no other pit uses. Nothing was changed. Your entries have been kept — correct them and press Update again." (for 8: "... is the same pit number as P8 (another pit) ..."). The window opens again with your number still typed: press Cancel. The schedule still has one P5 and one P8. Proven in AutoCAD (W16). The sentence says "Update": the button is Save.
+   - **You should see:** "[CE] Pit number P8 is already used by another pit (P8), so this pit keeps P5. Type a number no other pit uses. Nothing was changed. Your entries have been kept — correct them and press Update again." (for 8: "... is the same pit number as P8 (another pit) ..."). The window opens again with your number still typed: press Cancel. The schedule still has one P5 and one P8. Proven in AutoCAD (W16). On 3.0.34 the sentence said "Update"; on 3.0.35 it ends "... correct them and press Save again." and the button reads Save (seen, W20, with 2 typed).
 3. [ ] **A placed table cell.**
    - **Do:** double-click a pit number cell in a placed Pit Schedule table and type 8 (P8 exists).
    - **You should see:** "[CE] 8 is the same pit number as P8 (another pit). P5 kept." and the cell reads P5 again.
    - **Known limit:** double-click typing in a placed cell may not reach CE at all (release notes, section 6, item 6). If nothing happens, write that down. Not proven yet.
 4. [ ] **A plan label double-click.**
-   - **Do:** double-click a pit's plan label and type c2 where no C2 exists.
-   - **You should see:** label, schedule and pipes read c2 (small c).
-   - **If not, write down:** the three readings. Not proven yet.
+   - **Do not use this route.** Seen on 3.0.35 (Codex W20, BUG-430): double-clicking a pit's plan label opens AutoCAD's own attribute editor, NOT Edit Pit. **Use `PITEDIT` instead** (step 1).
+   - **If you try it anyway, write down:** which window opened and whether the label, schedule and pipes changed. Typing c2 into the label itself is not proven.
 5. [ ] **A label typed as a bare number.**
    - **Do:** double-click P5's plan label and type 8 (P8 exists).
    - **You should see:** "Pit ID must be one compact identifier such as P1 or SPS1. The visible text was kept; linked Civil data was not changed. Run CDEDIT to review it."
@@ -141,7 +142,7 @@ All of these passed on test copies in real AutoCAD (Codex W12, W13, W14). The po
 2. [ ] **Override a cover, then stop overriding.**
    - **Do:** change a cover level in a cell (the footer says "Override enabled for linked row."), then right-click that row and choose Stop overriding.
    - **You should see:** the cover you typed STAYS, the override mark goes, and the bottom left reads "Stopped overriding this row. The values you typed stay." Proven in AutoCAD (W16).
-   - **Then:** close the window and press `U` once. It takes back the whole Pit Schedule visit (every edit in it). Write down what the cover and the plan label show after that U.
+   - **Then:** close the window and press `U` once. It takes back the whole Pit Schedule visit (every edit in it). Write down what the cover and the plan label show after that U. On 3.0.35 Codex saw the U line read PITSCHEDULE and REDO say "Everything has been redone" (W20). **Open (BUG-430 item 2):** the override tick stays ticked on the pit-number cell after Stop overriding; write it down if you see it.
 3. [ ] **Message "CE could not save its pipe and pit record with this command. It will be saved with your next command."** This appeared once after a pit placement on 3.0.32 (BUG-412). If you see it, write it down with what you did just before.
 
 ### 3F. CDRULES All on an old metre job
@@ -183,7 +184,7 @@ Use a structural copy. If CE says Civil tools are off in this drawing, that is t
 1. [ ] **Beam command 1 (proven in AutoCAD).**
    - **Do:** type `1`. At the first question press Enter to pick points.
    - **You should see, each once:** "Select the first support (a support block or a line), or press Enter to pick points:", "Specify the START point:", "Specify the END point or [Object]:", "Enter text <bd1>:", "Beam preview [Accept/Cancel] <Accept>:".
-   - **Result:** "Beam placed. One UNDO removes the complete beam." One `U` removes it. A second run cancelled at the first question says "Beam cancelled. Nothing was written."
+   - **Result:** "Beam placed. One UNDO removes the complete beam." One `U` removes it. **Seen on Structural 1.0.105 (Codex W19):** `U` (echo 1), wait 12 seconds, `REDO` said "Everything has been redone". A second run cancelled at the first question says "Beam cancelled. Nothing was written."
    - **Note:** BEAM is not a command. The beam commands are `1`, `2`, `4`, `5` and `BDL`.
 2. [ ] **BDL beam lower.**
    - **You should see:** "BEAM LOWER offset distance <n>:" then "Enter BEAM LOWER text <BR7>:" once each. Enter takes the default. Not proven yet.
@@ -220,9 +221,10 @@ Use a structural copy. If CE says Civil tools are off in this drawing, that is t
 3. [ ] **FEDIT (proven in AutoCAD).**
    - **Seen in AutoCAD:** "[FEDIT] You picked CE's outline: editing PF1, the footing nearest your pick." then "[FEDIT] Current: PF1, Pad footing, 600x600" then "[FEDIT] PF1 updated."
    - **Do:** change the X size, then `U`. The old size must return. Then `REDO` straight away: "Everything has been redone" (proven, W15 and W17). Do not type `LIST` between U and REDO.
+   - **Also seen on 1.0.105 (Codex W19):** FEDIT to 700x700 with the Bracing panel open: U echo FEDIT, REDO said "Everything has been redone"; the panel's 5-second timer did not break REDO. ERASE of a footing outline with the panel open also redid. **Not proven:** the footing's size after REDO.
 4. [ ] **FST delete then U (proven in AutoCAD).**
    - **Do:** type `FST`, Foundation systems tab, select PF2, Delete Selected Element, Yes, OK, close, then `U`.
-   - **You should see:** PF2 back on the drawing and back in FST's list.
+   - **You should see:** PF2 back on the drawing and back in FST's list. **Seen on 1.0.105 (W19):** after the U the outline was back, and REDO took it away again ("Everything has been redone"). The exact U and REDO lines for FST were not recorded.
 5. [ ] **FST re-link.** Not proven yet. On a line on a LOCKED layer you should get "That line is on locked layer '...', so CE did not re-link the footing (nothing was unlocked). Unlock the layer and try Re-link again." The layer must still be locked afterwards. On an Xref: "That is an Xref, which CE does not change, so CE did not re-link the footing. Pick a line drawn in this drawing."
 6. [ ] **Centimetre or inch drawing.** Not proven yet. A grip resize says "PF1 is now <a> x <b> mm." in millimetres (700-ish, not 70). After AutoCAD's own STRETCH: "PF1 was resized in the drawing; CE's footing record now says 800 x 600 mm. ..." (not "80 x 60").
 7. [ ] **Odd units.** Proven in AutoCAD: in a decimetre drawing FPFC says "This drawing's units are decimetres. CE footings convert millimetres, centimetres, metres, inches and feet only, so CE has not run this command. Check what the drawing is really drawn in (LIST one footing) before changing anything." Nothing is drawn.
@@ -242,7 +244,8 @@ Write it down the moment something is not as listed. Do not tidy it up later.
 4. **The drawing name** and the folder it was in (check it was your copy).
 5. **The command and the step.** For example "CD, after the New Pipe window, pressed Start Pipe".
 6. **What you expected, and what happened.** One sentence each.
-7. **Where to send it.** Send to: ________ (**NOT SUPPLIED YET.** Tim has not named the results channel; do not guess one). Use "CE pilot" and the date at the top.
+7. **Where to save it.** Put the CE support report (type `CESUPPORT`) and your notes in the SharePoint folder **CE Plugin Pilot Results** in the Engineering library: https://residentialstructures.sharepoint.com/Engineering/CE%20Plugin%20Pilot%20Results (or the synced copy of that folder in your Engineering library). Make a sub-folder named by the date inside it, for example `2026-10-12`, and put that day's files in it. **Job NUMBERS only: no client names, no addresses.**
+   - **OPEN ITEM: Tim has not yet confirmed that Max can write to the Engineering library.** If you cannot save there, stop and tell Tim. Do not use another place.
 8. **Do not send the drawing.** Client drawings stay on your machine. Tim will ask if he needs one.
 
 ---
@@ -270,4 +273,4 @@ Write it down the moment something is not as listed. Do not tidy it up later.
 4. [ ] **Check the original.** Open the original job folder. The "date modified" on every original drawing must be from before today. No new files in it.
 5. [ ] **Check nothing else was saved.** The only new files should be inside your copy folder.
 6. [ ] **Read the versions at the start of tomorrow** (status bar or `CEHEALTH`), the same three numbers.
-7. [ ] **Send your notes** from section 5 to Tim, including "no problems" if there were none.
+7. [ ] **Save your notes** from section 5 and the CE support report into today's date sub-folder in the CE Plugin Pilot Results folder (section 5, item 7), and tell Tim. Write "no problems" if there were none. (OPEN: Tim must still confirm Max can write there.)

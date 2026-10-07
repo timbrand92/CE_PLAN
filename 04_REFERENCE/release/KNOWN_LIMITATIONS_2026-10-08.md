@@ -1,6 +1,6 @@
-# Known limitations, Thursday 8 October 2026 (installed now: Civil 3.0.35, Manager 1.1.35, Structural 1.0.104)
+# Known limitations, Thursday 8 October 2026 (installed now: Civil 3.0.35, Manager 1.1.35, Structural 1.0.105)
 
-**Answer first.** Nothing here is Tim-accepted. Codex has watched part of it work in real AutoCAD on test copies, up to its 8 Oct W18 run (Civil 3.0.34, Structural 1.0.104). Civil 3.0.35 and Manager 1.1.35 are installed (8 Oct 03:59) but no Codex pass has seen them yet. Structural 1.0.105 is to follow. The rest is built and unit-tested only. Never a real job yet.
+**Answer first.** Nothing here is Tim-accepted. Codex has watched part of it work in real AutoCAD on test copies, up to its 8 Oct W20 run. W18 was on Civil 3.0.34 and Structural 1.0.104; W19 on Structural 1.0.105 (the U and REDO cases); W20 on Civil 3.0.35 (a short check). Manager 1.1.35 is installed (8 Oct 03:59) but no Codex pass has looked at it. The rest is built and unit-tested only. Never a real job yet.
 **A ruling is not a fix.** Section 4 lists what Tim has ruled (INT-065 to INT-069). Unless a line says "built", it is NOT in the installed version.
 
 ---
@@ -21,11 +21,13 @@
 4. **The footing "resized in the drawing" millimetre sentence.** It prints after a grip or STRETCH resize, not after FEDIT. Not seen yet.
 5. **REDO after switching drawing tabs.** It says "Nothing to redo". A known limit.
 6. **Old metre-drawing grades.** CDRULES on a metre drawing printed no R-03 lines.
-7. **Pit Schedule window pit numbers.** On 7 Oct (3.0.33) it accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420). Civil 3.0.35 carries a fix (PR 766) that nobody has seen in AutoCAD. BUG-426 (open, MEDIUM): typing p1 after a typed 9 still leaves 9 in the cell.
+7. **Pit Schedule window pit numbers.** On 7 Oct (3.0.33) it accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420). Civil 3.0.35 carries a fix (PR 766) that nobody has seen in AutoCAD. BUG-426 (open, MEDIUM): typing p1 after a typed 9 still leaves 9 in the cell. **W20 on 3.0.35:** a bare 2, p2 or P2 over P1 was refused; p1 and "P 1" stayed P1; the BUG-426 case was not reached.
 8. **Edit Pipe window saving, whole CDRENUMBER, Recall Last, two-drawing text edits.** Not seen: the older-pipe question stopped Codex, CDRENUMBER defaults to No, the Recall Last button was not visible, and the double-click opened Edit Pit.
 9. **STS1 on a real support block, eye check of ERASE and PIT undo.** Only the refusals and the undo lines were seen.
 10. **CESUPPORT, CESETTINGS (Structural), BDL, beams 2, 4 and 5, Foundations re-link.** Not run by Codex.
 11. **AutoCAD 2022 to 2024.** Built and unit-tested. Never opened.
+12. **Double-clicking a pit's plan label (BUG-430, seen by Codex W20 on 3.0.35).** It opens AutoCAD's own attribute editor, not Edit Pit. **Colleagues: use PITEDIT to change a pit.** Also open: the override tick stays ticked on the pit-number cell after Stop overriding.
+13. **Structural writes new default rows into your settings file at its first start after an upgrade (BUG-429, seen by Codex W19 on 1.0.105).** About 20 new rows were added and none of your own values changed. It is harmless: all the new features are off. Tim has ruled that CE will log one line saying so (INT-071 item 6); that line is not built.
 
 ## 3. What CE refuses by design
 
@@ -57,6 +59,6 @@
 ## 5. Still open, and acceptance
 
 1. **Design cards (seven cards, 19 questions).** Tim: "send through to me". He answers them himself; not approved.
-2. **Pilot colleague's name and the send-to channel.** Not supplied yet.
+2. **Pilot colleague and results folder.** The pilot colleague is **Max** (Tim: "Max - IDK"; no surname given). Results go to the SharePoint folder **CE Plugin Pilot Results** in the Engineering library (https://residentialstructures.sharepoint.com/Engineering/CE%20Plugin%20Pilot%20Results), in a sub-folder named by the date, job numbers only. **OPEN: Tim still has to confirm that Max can write to the Engineering library.** It is not known to work.
 3. **Nothing is Tim-accepted yet.** Each "Codex saw it work" means a test copy with evidence on file. Council values, design rules and sizing still need Tim's word.
 4. **Pilot order (Tim's ruling).** Tim runs the Day 1 checklist himself on one real job copy before any colleague pilot. That has not happened.

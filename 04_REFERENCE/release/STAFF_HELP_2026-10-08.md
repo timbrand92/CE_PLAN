@@ -1,6 +1,6 @@
 # CE staff help: one page per job (Thursday 8 October 2026, Melbourne time)
 
-**Installed now: Civil 3.0.35, Manager 1.1.35 and Structural 1.0.104** (Structural 1.0.105 is to follow). Every SEEN mark below was seen on 3.0.34 / 1.0.104 or earlier; no Codex pass has seen 3.0.35 yet. Type CEHEALTH to check your own versions. A step marked **Tim has ruled; not built yet** is a decision, not a fix: it is not in the installed version.
+**Installed now: Civil 3.0.35, Manager 1.1.35 and Structural 1.0.105.** Every SEEN mark below was seen on 3.0.34 / 1.0.104 or earlier, except the marks that name Codex W19 (seen on Structural 1.0.105) or W20 (seen on Civil 3.0.35). Type CEHEALTH to check your own versions. A step marked **Tim has ruled; not built yet** is a decision, not a fix: it is not in the installed version.
 
 1. **How to read the marks.** **SEEN** means Codex watched it work in real AutoCAD on a test copy, on the date shown. Tim has not yet accepted it. **NOT SEEN** means built and unit-tested only. Nobody has watched it in AutoCAD yet. Where the words differ from yours, tell Tim.
 2. **The one rule.** Work on a COPY of the job until Tim says otherwise.
@@ -46,13 +46,13 @@
 
 ## 3. Edit a pit
 
-1. **Three ways in.** Type PITEDIT ("Select pit block to edit:"; SEEN 8 Oct), or double-click a pit's cover text (SEEN 7 Oct), or type CDEDIT ("Select a pit, pipe, source or CE text to edit: "; NOT SEEN). All open the Edit Pit window.
+1. **Three ways in.** Type PITEDIT ("Select pit block to edit:"; SEEN 8 Oct), or double-click a pit's cover text (SEEN 7 Oct), or type CDEDIT ("Select a pit, pipe, source or CE text to edit: "; NOT SEEN). All open the Edit Pit window. **Do not double-click the pit's plan label:** on 3.0.35 that opened AutoCAD's own attribute editor, not Edit Pit (Codex W20, BUG-430). Use PITEDIT.
 2. **Change what you need,** then press Save. CE prints "Pit updated."
 3. **Capitals.** Type p10 over P10 and CE saves capital P10. SEEN 8 Oct.
-4. **A number another pit uses is refused.** Type P9 when a P9 exists. CE prints "[CE] Pit number P9 is already used by another pit (P9), so this pit keeps P10. Type a number no other pit uses. Nothing was changed. Your entries have been kept — correct them and press Update again." SEEN 8 Oct.
+4. **A number another pit uses is refused.** Type P9 when a P9 exists. CE prints "[CE] Pit number P9 is already used by another pit (P9), so this pit keeps P10. Type a number no other pit uses. Nothing was changed. Your entries have been kept — correct them and press Update again." SEEN 8 Oct. On 3.0.35 the line ends "press Save again." SEEN W20 (typed 2 beside P2).
 5. **The same thing without the P.** Type 9 when P9 exists. CE prints "[CE] Pit number 9 is the same pit number as P9 (another pit), so this pit keeps P10. Type a number no other pit uses. Nothing was changed. Your entries have been kept — correct them and press Update again." SEEN 8 Oct.
 6. **After a refusal the window opens again** with your typed number still in it. Fix the number and press Save, or press Cancel. The button reads "Save", though the line says "Update".
-7. **A number nobody uses** saves with "Pit updated." The pit's row and its pipes' From and To should follow. NOT SEEN: the pit Codex used had no pipes.
+7. **A number nobody uses** saves with "Pit updated." The pit's row and its pipes' From and To should follow. SEEN 8 Oct on 3.0.34 (Codex W18), on a pit WITH pipes: the plan label, the schedule row and the pipe's From all read 77. The rename's own undo is NOT SEEN.
 8. **Undo.** One U takes it back (the U line reads PITEDIT). SEEN 8 Oct.
 9. **Pilot ground rule: renumber pits only in Edit Pit** (Tim, INT-069). Never renumber in the Pit Schedule window. See "The Pit Schedule", step 9.
 
@@ -75,11 +75,11 @@
 2. **Change a cell.** Click the cell, press F2 (inside this window F2 edits the cell), type the new value, press Enter. The footer says "Override enabled for linked row." and the row shows override styling. SEEN 8 Oct.
 3. **What that means.** The row now holds the value you typed. For a cover level the plan label follows (it read CL 18.82 after the test). SEEN 8 Oct.
 4. **Right-click a row** for the menu: Restore Cell, Restore Row, Enable Row Override, Stop overriding.
-5. **Stop overriding.** Hover text: "Stop treating this row as an override. The values you typed stay." The footer then reads "Stopped overriding this row. The values you typed stay." The cover stays as typed and the override styling goes. SEEN 8 Oct.
+5. **Stop overriding.** Hover text: "Stop treating this row as an override. The values you typed stay." The footer then reads "Stopped overriding this row. The values you typed stay." The cover stays as typed and the override styling goes. SEEN 8 Oct, and the footer again on 3.0.35 (W20). On 3.0.35 the override tick stayed ticked on the pit-number cell after Stop overriding (BUG-430, open).
 6. **Restore Row** clears every override on the row and puts every cell back to the pit's own value. NOT SEEN.
-7. **Close the window.** One U takes back the whole Pit Schedule visit (every edit made in it), not just the last click. The U line reads PITSCHEDULE. SEEN 8 Oct.
+7. **Close the window.** One U takes back the whole Pit Schedule visit (every edit made in it), not just the last click. The U line reads PITSCHEDULE. SEEN 8 Oct; on 3.0.35 REDO after it also said "Everything has been redone" (W20).
 8. **A placed table.** A cell on a locked layer, in an Xref or in a reference edit is never written. CE names what it skipped. NOT SEEN.
-9. **Pit numbers: use Edit Pit, not this window.** On 7 Oct (3.0.33) this window accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420, not retested). Edit Pit refuses both. Tim's ruling: a FREE number typed in this window waits as a pending override until you press Review, Update or Stop overriding (that is how it works now). Civil 3.0.35 carries a window fix (PR 766) that nobody has seen in AutoCAD, and BUG-426 (open) says a typed 9 then p1 still shows 9. So the ground rule stands: renumber only in Edit Pit.
+9. **Pit numbers: use Edit Pit, not this window.** On 7 Oct (3.0.33) this window accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420, not retested). Edit Pit refuses both. Tim's ruling: a FREE number typed in this window waits as a pending override until you press Review, Update or Stop overriding (that is how it works now). Civil 3.0.35 carries a window fix (PR 766) that nobody has seen in AutoCAD, and BUG-426 (open) says a typed 9 then p1 still shows 9. **Seen on 3.0.35 (W20):** a bare 2, p2 or P2 over P1 was refused ("[CE] Pit number 2 is the same pit number as P2 (another pit), so this pit keeps P1. Type a number no other pit uses."); p1 and "P 1" stayed P1; "P 2" was accepted with "[CE] P 2 looks like P2 (another pit). Check the numbering." The BUG-426 case was not reached. So the ground rule stands: renumber only in Edit Pit.
 10. **Warnings column.** A warning is information. It never stops you. See "How to read a warning".
 
 ---
@@ -88,7 +88,7 @@
 
 1. **One U takes back one whole CE action.** A pit with its label and cover text, a pipe with its arrow and labels, a beam, a Pit Schedule visit: each is one U.
 2. **U prints the name of what it took back.** Names seen: PIT, CD, PITEDIT, PITSCHEDULE, MOVE, COPY, ERASE, FEDIT, BTX, Grip Edit, CDDISCIPLINE. (Codex did not check by eye that an erased object returns.) If the name is not what you meant, tell Tim.
-3. **To REDO, wait.** After U, wait about 10 seconds with nothing typed or clicked (Codex waited 12). Then type REDO. CE prints "Everything has been redone". SEEN 7 Oct.
+3. **To REDO, wait.** After U, wait about 10 seconds with nothing typed or clicked (Codex waited 12). Then type REDO. CE prints "Everything has been redone". SEEN 7 Oct. On Structural 1.0.105 the same was seen for beam command 1, FEDIT (with the Bracing panel open), ERASE of a footing outline, and FST delete PF2 then U (W19).
 4. **Type nothing between U and REDO.** A LIST, TEXTSCR or GRAPHSCR in between becomes the thing U and REDO act on. Codex saw U take back GRAPHSCR instead of PIT.
 5. **Do not rely on REDO after switching drawing tabs.** It says "Nothing to redo". Seen 7 Oct. This is a known limit.
 6. **Cancel with Esc.** PIT prints "PIT command cancelled.", CD prints "[CE] CD command cancelled.", a beam prints "Beam cancelled. Nothing was written."
@@ -141,7 +141,7 @@
 2. **Type CESUPPORT.** CE prints "[CESUPPORT] Creating support bundle..." then "[CESUPPORT] Bundle saved: " and the file path. NOT SEEN.
 3. **It is queued for the office.** CE prints "It will be uploaded to the IT Admin folder on the next refresh." **Tim has ruled; not built yet:** CESUPPORT will never upload by itself. The current build's wording says it will upload, so treat that line as wrong and still send the file to Tim yourself.
 4. **The file name carries your computer's name** (CE_SUPPORT_ then the computer name, date and time). It zips CE's own log folder and, if you have one, a "CE Diagnostics" folder on your desktop. **Tim has ruled; not built yet:** PC names stay out of the file name and drawing paths in the bundle become job numbers.
-5. **Send it to Tim.** No other support route is recorded. Tim will say where.
+5. **Where it goes.** For the pilot (Max): save the support report and your notes in the SharePoint folder **CE Plugin Pilot Results** in the Engineering library (https://residentialstructures.sharepoint.com/Engineering/CE%20Plugin%20Pilot%20Results, or the synced copy of that folder in your Engineering library), in a sub-folder named by the date, for example 2026-10-12. Job numbers only: no client names, no addresses. **OPEN ITEM: Tim has not yet confirmed that Max can write to the Engineering library.** If you cannot save there, tell Tim. For anyone else no support route is recorded: send it to Tim.
 6. **Write these seven things down too.** Version (type CEHEALTH and copy the lines), the exact command and clicks, the drawing name, what you expected, what you saw (exact words), what one U did, and the time (Melbourne).
 7. **Do not send the drawing.** Tim will ask if he needs one. Do not delete CE's log files.
 8. **To look at the logs yourself,** type CEMANAGERLOGS. It opens the log folder.
@@ -161,7 +161,7 @@
 
 ---
 
-## 12. Structural (versions 1.0.104): roof, upper floors, ground floor, footings last
+## 12. Structural (installed 1.0.105; the marks below were seen on 1.0.104 unless they say W19): roof, upper floors, ground floor, footings last
 
 1. **ROOF: BT1, bracing truss.** Type BT1. CE prints "=== BT1 - BRACING TRUSS (Universal BRACING block) ===" and, the first time in a drawing, "The BRACING block is loaded into this drawing." The repeat does not print it again. Then "Specify first point of bracing truss:". Esc prints "Operation cancelled." SEEN 8 Oct.
 2. **BT1, after the first point.** CE asks "Specify second point of bracing (drag preview, ENTER for 0°/2700): " and "Bracing truss number [1-9] <1>: ". NOT SEEN. A brace longer than 2700 is still cut to 2700 today. **Tim has ruled; not built yet:** a brace over 2700 mm will keep its drawn length and warn.
@@ -173,7 +173,7 @@
 8. **GROUND FLOOR.** Nothing here has Codex evidence yet.
 9. **ANY LEVEL: RC, revision cloud.** Type RC. CE asks "Keep OSNAP ON? [Yes/No] <No>:", then the normal AutoCAD revision cloud questions. A rectangular cloud is drawn. One U removes it. SEEN 7 Oct.
 10. **FOOTINGS (LAST): FEDIT.** Type FEDIT. CE asks "Select a footing to edit:". Pick the footing outline. CE prints "[FEDIT] You picked CE's outline: editing PF1, the footing nearest your pick." then "[FEDIT] Current: PF1, Pad footing, 600x600".
-11. **FEDIT questions.** "Enter new label text <PF1>: ", "Enter new X size <600>: ", "Enter new Y size <600>: ", "Enter new depth <0>: ", then the footing type. CE redraws and prints "[FEDIT] PF1 updated." One U takes it back; REDO after a wait brings the new size back. SEEN 8 Oct.
+11. **FEDIT questions.** "Enter new label text <PF1>: ", "Enter new X size <600>: ", "Enter new Y size <600>: ", "Enter new depth <0>: ", then the footing type. CE redraws and prints "[FEDIT] PF1 updated." One U takes it back; REDO after a wait brings the new size back. SEEN 8 Oct. On 1.0.105 FEDIT to 700x700 with the Bracing panel open: U echo FEDIT, REDO said "Everything has been redone" (W19). Not seen: the footing's size after that REDO.
 12. **Propose footings.** Typing CSFDNPROPOSE prints only "Propose footings is not switched on in this version. Nothing was proposed or drawn." It is switched off on purpose. SEEN 8 Oct.
 
 ---
@@ -188,6 +188,6 @@
 6. **STS1 success.** Codex only saw refusals. Nothing records a real support block being switched.
 7. **FEDIT footing-type question.** The exact words of the last FEDIT question were not in the evidence, so I did not quote them.
 8. **The 12 s REDO wait.** Codex used 12 seconds. I wrote "about 10". The real minimum is not recorded.
-9. **Rollback guide is out of date by one install.** It says Civil 3.0.33, Manager 1.1.33 and Structural 1.0.103 are live. Today they are 3.0.34, 1.1.34 and 1.0.104. The backup names on page 11 were read from the folder; the versions inside them were not opened.
-10. **Pit Schedule window renumbering.** BUG-420 was not retested on 3.0.34, so the page 5 step 9 advice rests on the 7 Oct run.
+9. **Rollback guide is out of date by two installs.** It says Civil 3.0.33, Manager 1.1.33 and Structural 1.0.103 are live. Today they are 3.0.35, 1.1.35 and 1.0.105. The backup names on page 11 were read from the folder; the versions inside them were not opened.
+10. **Pit Schedule window renumbering.** BUG-420 was retested on 3.0.35 (W20): the refusals were seen (page 5, step 9). The ground rule stays because it is Tim's ruling (INT-069) and the BUG-426 case was not reached.
 11. **Pit Schedule menu items** Restore Cell, Restore Row and Enable Row Override are read from the window's source. Only Stop overriding was seen.
