@@ -916,3 +916,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - #800 rebase on #772 not re-checked;
      - #809's long-section/schedule/fall-arrow raw readers not traced.
    - Usage: unknown (headless).
+793. **Thu 08 Oct 07:46** — HEADLESS RUN 126 started (PC clock AUSEST). Usage: unknown (headless).
