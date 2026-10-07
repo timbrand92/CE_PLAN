@@ -11,7 +11,7 @@ Status: **DRAFT, not approved.** This is the rest of "CE proposes the full netwo
 ## Questions
 
 1. **Whose drawings does CE learn layouts from?**
-   - **Recommended:** each person's own networks first, kept as numbers only on their own PC (your 28 Sep privacy rule). The window says "from your own past drawings". Office-wide learning comes later, as its own step.
+   - **Recommended:** each person's own networks first, kept as numbers only on their own PC (your 29 Sep privacy rule). The window says "from your own past drawings". Office-wide learning comes later, as its own step.
    - **Job:** a drafter who has drawn 5 networks with learning on gets option C with their usual 1.0 m set-off from the house. A new starter sees "Not enough learned yet", even though the office has drawn hundreds.
 2. **May a layout propose changing a pit or pipe already drawn?**
    - **Recommended:** yes, but only as a separate unticked row that you must tick.
