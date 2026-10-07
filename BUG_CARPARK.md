@@ -150,6 +150,8 @@
 **Command / Area:** STRAY TEXT TYPED INTO AUTOCAD DURING CODEX PASSES (observed 4 times: 14:34 4 Oct 'Esc cancelled /plan'; 17:51 4 Oct '/' and 'plan'; 19:27 7 Oct 'and', 'follow', 'it.'; 21:28 7 Oct 'follow UCSFOLLOW', 'it.'): short words arrive at the AutoCAD command line that no tool of ours typed; the 7 Oct ones read like speech but are NOT speech: the words "and follow it" are the last words of Codex's own LAUNCHER text (verifyWnn.txt: "...then follow it EXACTLY and in full as if it were this message"), so the Codex agent's screen-control tool typed a fragment of its own instructions into AutoCAD (a mis-targeted type action), and the first two (4 Oct "/plan") may be the same kind. **Not CE, not Tim.** Harm so far: none (Esc twice cleared each), but it breaks a mouse pass. **Fix idea:** rewrite the launcher so it contains no short everyday words that AutoCAD can accept as a command or system variable (UCSFOLLOW appeared because "follow" was typed), and tell Codex to click the command line and screenshot before every type. **Status:** OPEN (Codex-tool glitch, low harm: Esc twice clears it).
 
 ---
+- **Update 8 Oct 02:06 (W17):** a fifth episode, AFTER the launchers were reworded to "carry out every step of that file exactly". While Codex typed `(setvar "SAVETIME" 0)` the command line showed untyped text `follow UCSFOLLOW`, `Enter new value for UCSFOLLOW <0>:` and `it.`: the same word "follow" and "it." again, so the fragment probably comes from the brief text itself (the brief says "follow ..." in its rules), not only from the launcher. Esc twice, no value submitted to UCSFOLLOW, no harm. Next step: find every sentence in the brief files that contains the word "follow" and reword it ("carry out", "keep to").
+
 
 ## BUG-422
 
