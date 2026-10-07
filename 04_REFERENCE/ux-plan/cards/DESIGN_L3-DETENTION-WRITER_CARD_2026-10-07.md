@@ -23,7 +23,7 @@ Status: **DRAFT, not approved.** This is the last step of "CE proposes detention
 ## What stays safe
 
 1. Esc or Cancel draws nothing and leaves no dashed preview. One Accept is one Undo, covering the pipe or tank, the orifice pit, the overflow and the block together.
-2. A locked layer, an Xref or a reference edit is never unlocked, detached or exploded. CE refuses that piece in plain words, and it never draws half a system without saying so.
+2. A locked layer, an Xref or a reference edit is never unlocked, detached or exploded. If the storage itself cannot be drawn, CE draws nothing and says why in plain words. It never draws half a system.
 3. Every distance, option count and on/off switch sits on the Settings page. A tank depth is never invented. It stays Unknown until a tank is picked from the library.
 4. CE warns and carries on. A failed check is shown, never hidden, and never blocks Accept.
 
