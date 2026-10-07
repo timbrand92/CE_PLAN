@@ -955,3 +955,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - nothing in AutoCAD;
      - #792/#793 heads not re-listed this run (taken from run 125).
    - Usage: unknown (headless).
+797. **Thu 08 Oct 10:06** — HEADLESS RUN 127 started (desk plan/02 priority: #805 BUG-256 REDO-safe, #800 #791 #803 #801 #804 #802 #813, then C-24/S-25 lists). Usage: unknown (headless).
