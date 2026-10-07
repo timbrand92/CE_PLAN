@@ -195,6 +195,15 @@
 
 **Status:** OPEN (MEDIUM to confirm). Filed 8 Oct by the controller. Not fixed until Tim confirms in AutoCAD.
 
+**Team build/04 run 36 investigation (8 Oct, read-only, nothing changed; engineering call for Tim):**
+1. **Why the label says 1 IN 100.** Two causes. (a) In Custom grade mode New Pipe writes the typed grade verbatim whatever the levels are (CdCommand.Grade.cs:186) and the +/-10% mismatch question is skipped when the fall is nil (line 234), so a flat pipe gets no question. (b) In Default mode with both levels typed the same, ComputeActualGradeLabel returns the fixed text 100 when the fall is zero (CdCommand.Grade.cs:318, same call in CDEDIT PipeEditCommand.GradeText.cs:263); it is not even the Settings default grade. The label is written once, at save; relink skips a flat pipe (ScheduleLinkService.PlanLabelGradeText returns blank for no fall), so nothing ever refreshes it. The 'essentially flat' line (DesignValidationService.cs:329) only informs.
+2. **Why CDFIXFLATPIPES leaves it.** By design: it only repairs the old metre-drawing fault. In a millimetre drawing it says the pipe was set flat some other way (for example both levels typed the same) and lists it 'to check by hand' (FlatPipeRepairPolicy.cs:206); it also never writes a typed bottom level. This is correct under Tim's rules (INT-059 item 23 a typed level is never moved; 23 Sep hold-grade ruling: nothing typed is silently kept or overwritten).
+3. **Rules that bear on it.** Engineering rulebook: the label shows the ACHIEVED grade, exact (locked); a flat pipe has no achieved grade, so the fixed 100 breaks that rule. R-27 / Unknown stays Unknown: the label must not invent a fall. No Tim ruling yet says what a flat label reads.
+4. **Option A (recommended): the label reads FLAT (no grade figure) and no grade is held when both ends are typed the same.** The typed levels stay; the drafter sees the truth on the plan; CDFIXFLATPIPES keeps leaving it alone but its reason line says plainly 'both levels were typed the same: CE leaves them'. Small change, no new question.
+5. **Option B: ask at save.** 'Both levels are 18.500, so the pipe is flat. Keep it flat, or let CE work the second level from 1 in 100?' Keep flat gives the same label as A; the other writes a fall (a level CE works out, shown in the preview as Tim ruled). More faithful to a drafter who forgot the second level, but adds a question to every flat save, including deliberate flat pipes.
+6. **Footing region after STRETCH then U/REDO (item 2):** noted only. Not investigated here (Structural, build/02 lane).
+
+
 ---
 
 
