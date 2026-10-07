@@ -178,3 +178,9 @@ UX-LEARN-01, job mode UX-MODE-01..04. Implementation call (not Tim's words): num
 1. Office-wide learning and promoting a learned value to an office rule (UX-LEARN-01 slices 3-4).
 2. L3-DETENTION (build item 3) and L3-NETWORK (item 4, `plan-L3-NETWORK.md`).
 3. Any import of past jobs (not allowed).
+
+## 8. Build/04 run 20 notes (Wed 7 Oct 2026) - for the controller and the desk
+
+1. **Slice 4, Claude's half, built (draft PR #751, stacked on #706):** `SourcesProposalSelection` (ticks to one change set), `EditGhostPlan.ForSources` (dashed symbol outline, number above, thin line to the tank or pit), and `docs/workflows/L3-SOURCES_WINDOW_CONTRACT.md` for Codex.
+2. **Question for Tim (small, engineering-light), with a recommendation:** a ticked downpipe whose tank or pit is Unknown - may Accept place it anyway? *Recommended (built):* no. Accept leaves it out and says "Downpipe 2: not placed. Pick its tank or pit first." so an Unknown is never written quietly. Example: 14 downpipes proposed, 2 with no tank matched: 12 go in, the window names the 2 and the drafter picks their tanks, then ticks them again.
+3. **Gap, card section 7 Q5 (the catchment ghost):** the model holds a catchment's name and area, not its shape, so the ghost cannot draw the catchment outline yet. *Recommended:* a roof-rule downpipe carries the index of the roof outline it came from, an architect-symbol downpipe takes the nearest roof outline, and the outline is labelled with the report's area when the name matches, else "estimated". Needs a small field on `DownpipeCandidate` in slice 5; not built.

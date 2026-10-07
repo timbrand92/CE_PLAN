@@ -114,3 +114,8 @@ block all revert together. 7. Cancel and Escape: "Cancelled - drawing unchanged.
 
 1. Levels, sources, network (`plan-L3-LEVELS.md`, `plan-L3-SOURCES.md`, `plan-L3-NETWORK.md`).
 2. The council RFI reader (UX-RFI-01..03) and the issue-to-issue comparison: their own cards.
+
+## 8. Build/04 run 20 notes (Wed 7 Oct 2026)
+
+1. **Slice 5 built (draft PR #752):** the "Draft: calculation not approved" marking (`DetentionDraftBannerRule`). Pure; the caller passes what the CDCALC approval check already says, so staleness is never worked out twice.
+2. Built so far: slice 1 (#694), slice 2 without the footing half (#699), slice 3 ghost and chooser contract (#708), slice 5 (#752). Not built: slice 4 (complete Accept, one Undo: writes through CDWT, the pipe path and the pit-detention path, needs its own Opus review), 6, 7. The footing and service distances still wait for Tim (section 5 item 1).

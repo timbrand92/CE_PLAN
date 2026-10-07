@@ -158,3 +158,8 @@ choices", 26 Sep 01:17); Hold grade / hold levels (`decisions/2026-09-23_HOLD_GR
 2. The shared "Level 3 proposals" entry in Project Review (card L3-SOURCES §7 Q4, still OPEN): CDRUNSOLVE is the entry
    for levels by the implementation call.
 3. Learning (UX-LEARN-01) for levels: the card needs none for this proposal's first build.
+
+## 8. Build/04 run 20 notes (Wed 7 Oct 2026)
+
+1. **Slice 3, Claude's half, built (draft PR #750):** `EditGhostPlan.ForLevels(result, tickedPitIds, pitPositions, textHeightMm, decimals)`: one dashed new-level label per ticked pit that Accept would really change (it asks `LevelsProposalSelection`, so a tick Accept would leave out has no ghost). The transient draw and clear (`TransientDrawableSet`) waits for Codex's window.
+2. Already built since this plan was written: slice 1 (#679), slice 2 (#691), the check-these-levels entry (#697), a Pit-window level is never moved (#724, INT-059 item 23), steepest pipe a Settings value with no limit and a warning above 1 in 10 (#722, INT-059 item 4). The "1 in 20" text in section 0 item 3 and section 5 item 1 is superseded by INT-059.
