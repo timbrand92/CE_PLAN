@@ -175,3 +175,9 @@ enough is learned (decisions file, "Release-chat L3 cards, open choices", 26 Sep
 1. L3-DETENTION (build item 3): it owns the chooser and the clash check; write `plan-L3-DETENTION.md` before slice 3 here.
 2. Office-wide learning, promoting a learned habit to an office rule, any past-job import (not allowed).
 3. Levels and sources (`plan-L3-LEVELS.md`, `plan-L3-SOURCES.md`).
+
+## 8. Build/04 run 20 notes (Wed 7 Oct 2026)
+
+1. **Slice 4, measuring half, built (draft PR #754, stacked on #693):** `LayoutHabitMeasure`: the numbers a hand-drawn network teaches (closest pipe to the building and boundary in mm, middle run between pits in m, pit at every turn as 1 or 2, top-pit depth). Pure, nothing stored. One new Settings value `networkLayoutProposal.turnToleranceDeg` = 10, a measuring limit marked "CE starting value, to confirm".
+2. **Question for the controller (not Tim's engineering), with a recommendation:** where does a hand-drawn network get recorded, and per person or office-wide? *Recommended (plan slice 4 item 3):* per person first, fed from the existing suggestion ledger when the drafter finishes a PIT/pipe run with learning on, counted toward the 5-network bar one per drawing; the proposal says "your own past drawings". Needs a new "network seen" event type in `LearningService` (it keeps window choices only today) and a numbers-only count that survives the learning store's no-zero rule (so 1 = yes, 2 = no was used).
+3. **Slice 3 (consume the shared clash check and chooser) not built:** it needs layout options to feed (slice 5), which need learned numbers. The shared pieces it will call exist: the clash check (#699) and the chooser contract (#708).
