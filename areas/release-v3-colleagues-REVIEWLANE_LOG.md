@@ -881,3 +881,38 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    Clock: PC clock (AUSEST). Usage: unknown (headless).
 
 789. **Thu 08 Oct 07:25** — HEADLESS RUN 125 started (PC clock AUSEST). Usage: unknown (headless).
+790. **Thu 08 Oct 07:29** — Run 125 reviews (read only).
+   - **#809 @ c4e2dc75 MERGE-WITH-FIXES**, 1 MEDIUM + 1 LOW: CDCHECK minimum cover (RulebookEngine :408), step irons (:531) and network-health shallow-pit (CivilNetworkHealthService :236) still read an old TG "0.000" as RL 0, so CDCHECK still warns "cover -45300 mm". Route them through KnownCoverLevelRl.
+   - **#808 @ b514586b MERGE**, 2 LOWs: the said-once memory is never cleared on close (pointer reuse), and a BOM was dropped.
+   - **#800 @ 589d4ce3 MERGE**: run 123 findings 1-4 fixed; 1 LOW left (a second 0.6 constant). The #772/#790 order still stands.
+   - **#795 @ 2f665b2f MERGE**: Civil first, Manager refused if Civil failed, install errors caught; the known staged-gap is stated.
+   - **#797 @ cd953541 MERGE**: tests only.
+   - Usage: unknown (headless).
+791. **Thu 08 Oct 07:29** — **Corrected lists (current heads; newest real Opus MERGE on each head).** No new release branch since rel-20261008e (C-22) and rel-20261008y (S-23).
+   - **C-23 (Civil/Manager), plain MERGE = 10:**
+     - #797 **cd953541** (moved; MERGE)
+     - #796 e5f8ffbe (with #788: take #796's CeSupportBundleService.cs whole)
+     - #801 379b67a9 (after #796)
+     - #791 10a3b9c9
+     - #790 bca27f7c (merge #800 first: adjacent lines)
+     - #789 e793838c
+     - #807 2175f147
+     - #794 9a9deb74
+     - **#800 589d4ce3 (new in list)**
+     - **#795 2f665b2f (new in list)**
+   - **C-23 out:** #809 (MERGE-WITH-FIXES, CDCHECK still reads old TG 0.000), #803 (MWF), #805 (MWF), #781/#768.
+   - **S-24 (Structural), plain MERGE = 7:**
+     - #798 5d19c35f and #792 543d9ac5 (deltas only)
+     - #793 5d47f50b
+     - #799 f159e83e
+     - #804 39edfb8f (OFF)
+     - #802 84e46f35 (OFF)
+     - **#808 b514586b (new; base rel-20261008y)**
+   - **S-24 out:** #806 (MWF).
+792. **Thu 08 Oct 07:29** — HEADLESS RUN 125 ended. 5 OPUS comments (MERGE 4, MWF 1).
+   - **Not checked:**
+     - no build, test or merge-tree trial (conflicts are by reading);
+     - nothing in AutoCAD;
+     - #800 rebase on #772 not re-checked;
+     - #809's long-section/schedule/fall-arrow raw readers not traced.
+   - Usage: unknown (headless).
