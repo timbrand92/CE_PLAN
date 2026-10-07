@@ -812,3 +812,70 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 783. **Thu 08 Oct 06:13** — HEADLESS RUN 123 ended. 12 OPUS comments: MERGE #798 #792 #793 #796 #791 #790; MERGE-WITH-FIXES #789 #794 #795 #799 #800; DO-NOT-MERGE #801. Not checked: no build or test run, nothing in AutoCAD, nothing installed; no merge-tree trial (conflicts by reading only); #800 callers of DesignValidationService not all traced by me; #801 claim that each PC salts with its own secret not verified by me. Clock: PC clock (AUSEST). Usage: unknown (headless).
 784. **Thu 08 Oct 06:45** — HEADLESS RUN 124 started (desk PRIORITY 00000000000000000000000000000000000: Opus review every PR without a real Opus comment on its current head, newest first: build/04 run 40 (#803 neighbours, #807), build/02 run 106 (#806 on #792, #802), build/03 run 55 (#801, #795, #797), #799 #789 fix heads; corrected C-23 / S-24). Usage: unknown (headless).
 785. **Thu 08 Oct 06:46** — **#807 @ 2175f147 MERGE** (Xref tick clears the stale-cells badge; one helper; LOW final newline). **#797 @ 712e2f79 MERGE** (fix round: path-trick tests, Plugin.PluginId = same name; LOWs: TestCase @"a" should be a\b; trace-file check conditional). Both read whole by me. Usage: unknown (headless).
+786. **Thu 08 Oct 06:52** — **Run 124 reviews, 11 OPUS comments in total, each head re-checked just before posting.** Opus sub-reviewers wrote #801-#806. I re-read their HIGH and MEDIUM findings at each head. #807, #797, #799 and #789 I read myself.
+   - **#807 @ 2175f147 MERGE.**
+   - **#797 @ 712e2f79 MERGE** (2 test LOWs).
+   - **#806 @ 8508b6ed MERGE-WITH-FIXES** (CSLINTELPROPOSE, OFF, hidden, no ribbon entry).
+     - MEDIUM: a brick wall wider than 150 mm gets two lintels for one opening; fix: add drawn.Add after result.Add.
+     - MEDIUM for Tim: the largest opening is unlimited by default.
+     - 3 LOWs.
+     - Safe while OFF.
+   - **#802 @ 84e46f35 MERGE** (CSFLOORSETOUT, OFF, hidden).
+     - LOW: it edits the shared roof draw file, so re-run the CSROOFSETOUT check.
+     - LOW: a duplicate typed mark is not checked.
+     - It conflicts with #806 in registry/settings/log: keep both sides.
+   - **#804 @ 39edfb8f MERGE** (CSFRAMINGLEGEND, OFF, hidden; 5 LOWs: a hand-edited title is lost, orphans when only the title is erased, layout factors fixed in code).
+   - **#805 @ 40c7b4b6 MERGE-WITH-FIXES** (non-plotting grade marker).
+     - MEDIUM: a locked marker layer gives no marker and no message.
+     - MEDIUM: no REFEDIT check, so the marker can join a block edit.
+     - MEDIUM gate: it is new plan output, ON for everyone with no Settings switch; needs OFF or the desk recording that Tim's INT-071 10c yes covers it.
+     - 3 LOWs.
+   - **#803 @ 000bc604 MERGE-WITH-FIXES** (BUG-251 Kingston commercial).
+     - HIGH: the "existing site C" handed to the design is the office Settings 0.35, so a commercial job never shows Unknown; fix: pass null until a job field exists.
+     - MEDIUM: DetentionInputs leaves out ExistingSiteC.
+     - MEDIUM: the C warning appears even when the PSD is council-provided.
+     - MEDIUM for Tim: flows still use Tc 5 min with no warning at 1000 m2 and over.
+   - **#801 @ 379b67a9 MERGE, after #796.**
+     - The HIGH is fixed: #796 is underneath, a guard in every zip and outbox path, and a real-layout test.
+     - The '__' regex and both-codes lookup are fixed.
+     - Optional LOW.
+   - **#795 @ 3848a083 MERGE-WITH-FIXES.**
+     - Earlier pair check fixed.
+     - New MEDIUM: Civil's install fails after both builds were ready and Manager still goes back alone; fix: a goBackFailed set.
+     - LOW: an error thrown by install stops the loop part-way.
+   - **#799 @ f159e83e MERGE** (the false sentence is gone; LOWs carried).
+   - **#789 @ e793838c MERGE** (Pit Schedule writes FLAT for a level Custom/default pipe; CDFIXFLATPIPES compares unrounded like the label writers).
+
+   Usage: unknown (headless).
+787. **Thu 08 Oct 06:52** — **Corrected lists (current heads; the newest real Opus MERGE is on each head).**
+   - **C-22:** in rel-20261008e.
+   - **C-23 (Civil/Manager), plain MERGE = 8:**
+     - #797 712e2f79
+     - #796 e5f8ffbe (with #788: take #796's CeSupportBundleService.cs whole)
+     - #801 379b67a9 (after #796; it already contains it)
+     - #791 10a3b9c9
+     - #790 bca27f7c
+     - #789 e793838c
+     - #807 2175f147 (base rel-20261008e)
+     - #794 9a9deb74 (only condition was #783 underneath, now in rel-20261008e)
+   - **C-23 out:** #795 and #800 (MERGE-WITH-FIXES), #803 (HIGH), #805 (MEDIUMs + OFF gate), #781/#768.
+   - **S-23 is assembled in rel-20261008y** (7ff53894, Structural 1.0.106).
+     - **FLAG for the controller:** it merged #798 at 4fe2479a and #792 at 7a87b75e, the OLDER heads. Both were MERGE there, so they are not blockers, but the newer heads 5d19c35f (#798: colleague login hashed in the log) and 543d9ac5 (#792: 3 LOWs) are NOT in y. Take them as follow-ups in S-24.
+     - #793 is not in y.
+   - **S-24 (Structural), plain MERGE = 6:**
+     - #798 5d19c35f and #792 543d9ac5, the deltas only
+     - #793 5d47f50b (stacked on #792)
+     - #799 f159e83e
+     - #804 39edfb8f (OFF)
+     - #802 84e46f35 (OFF, on #792; re-run CSROOFSETOUT)
+   - **S-24 out:** #806 (MERGE-WITH-FIXES; it conflicts with #802 in registry/settings: keep both).
+788. **Thu 08 Oct 06:52** — HEADLESS RUN 124 ended. 11 OPUS comments.
+   - **MERGE:** #807 #797 #802 #804 #801 #799 #789.
+   - **MERGE-WITH-FIXES:** #806 #805 #803 #795.
+   - **Not checked:**
+     - no build or test run, nothing in AutoCAD, nothing installed;
+     - no merge-tree trial (conflicts are by reading);
+     - #805's locked-layer path, and whether gradeText is blank for every Custom pipe in #789's callers, were not traced by me;
+     - #803's area-in-every-caller was not traced.
+
+   Clock: PC clock (AUSEST). Usage: unknown (headless).
