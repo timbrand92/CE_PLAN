@@ -154,3 +154,10 @@ Not asked, because the rulebook already answers them: the 600 mm cover fallback 
 3. **Other audit patterns:** hard blocks (P2: Civil Design refusals, survey intake block, slab boundary refusals, tank split hiding numbers), native-protection bypasses (P4, BUG-417/418), raw error text (P5), and every LOW finding. Three LOW neighbours sit in files above and may ride along only if the builder is already there: `PitEditCommand.cs:1034-1035` (CL2), `PipeSizeNetworkReviewService.cs:687,827,850` (CL2), `LongitudinalSectionService.cs:314` pit sump depth 0.30 m (no cluster).
 4. **Manager and CE_SHARED:** the audit found no pattern 1 or 3 MEDIUM there. I did not check whether `s20asm` carries its own copies of the Drainage files above (audit not-audited item 8); each Civil PR must be applied to master only, and Structural PRs to the Structural chain only.
 5. **Not verified by me:** the Settings window XAML (I read the settings classes and `SettingsValueCatalog.cs`, not the window layout), the current Codex row backlog, and any behaviour at run time. Nothing in this plan is built, tested, installed or accepted.
+
+## UPDATE 8 Oct 00:12 (INT-066, Tim's answers via the desk)
+
+1. **Q2 wall pair gap:** keep 350 mm.
+2. **Q3 brace over 2700 mm:** keeps its drawn length and WARNS (never cut): CL4 builds 'keep length and warn' (build/02 run 95).
+3. **Q1 UPVC speed:** 'whatever the design document from creative engineering says'. CE's own guide (Civil Stuff\CIVIL AND DRAINAGE DESIGN GUIDEBOOK.pdf, 33 pages) names NO maximum pipe speed: UNCONFIRMED. CL5 step 1 (one table read by every screen) is fine; do NOT lower Civil Design from 6 to 3 m/s (CL5 step 2) until Tim names the authority (CPAA Hydraulics Design Manual or AS/NZS 3500.3: the desk is asking him). Keep the 'Confirmed' tick OFF and warn plainly.
+4. **CL3 detention numbers to check as Settings values (from the guide):** minimum detention pipe grade 1:200 for pipes 225 and greater; an orifice is required only above 12 L/s.
