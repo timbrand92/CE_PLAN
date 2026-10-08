@@ -200,3 +200,4 @@ One line per job: time (Melbourne), item, PR, state, usage.
 - Fri 09 Oct 09:00 Melbourne: build/04 headless run 58 started. Job: redo-guard BUG-457, HUNT-C items, login in DWG, Esc at pit label, Batch 5. SONNET.
 - Fri 09 Oct 09:19 Melbourne: run 58 step 1 done: #870 (BUG-457 a,b) and #838 fix pushed (c). Starting HUNT-C items.
 - Fri 09 Oct 09:48 Melbourne: run 58 HUNT-C stacked DRAFT PRs done: #880 C-01 REFEDIT, #881 C-07 schedule read-only, #882 C-02/03 locked label/cover layers, #883 C-04 truthful sentences, #884 C-05 tolerance setting, #885 C-06 decimals setting (chain, base rel-20261009g); #870 BUG-457 a,b; #838 c. Next: login stored in DWG.
+- Fri 09 Oct 10:04 Melbourne: run 58: #888 login in DWG (coded id default, privacy.drawingPersonName), #891 Esc at ordinary pit label (linking.pitLabelOnEsc OFF). Next: Batch 5.
