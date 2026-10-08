@@ -1,5 +1,15 @@
 # Area REL — Version 3 to colleagues (the staff release, Stage 6 of the master plan)
 
+## COLLEAGUE RELEASE GATE (added 9 Oct)
+
+Things that must be true before any colleague installs CE. No earlier gate list existed in this file; this is the first. Each item names the carpark entry. Tim's call on every item that says so.
+
+1. **Tim is the CE administrator before any colleague installs:** run Manager > Set up CE administrator on Tim's PC with the office folder synced and check the shared admin list file exists in the office policies folder (BUG-476). Nobody else writes it.
+2. **Roll Back is hidden** until the installer's older-version path is proven (BUG-477, BUG-441).
+3. **The real update route a colleague can follow is built, or the update messages are reworded** so they stop naming an installer nobody can run (BUG-478).
+4. **The old install scripts and builds in the office folder are moved to an OLD folder** (BUG-483; Tim's call, it is publishing).
+5. **The Manager fault report and CEMANAGERDIAG must code the login, PC name and folders before any colleague uses them** (BUG-488). Until then colleagues are told not to press them.
+
 ## OPERATING CHARTER — read first, every release chat (Tim, 28 Sep 2026; verbatim in `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`)
 
 Every successor release chat keeps these rules. A handoff that drops them is faulty.
