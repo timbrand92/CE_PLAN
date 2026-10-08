@@ -1,9 +1,51 @@
+**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:30 PC clock).
+
 # Batch 1 card: labels on the Civil plan (Day 1 workflow), 9 Oct 2026
 
 **Status: DRAFT. Not approved. No code may start until Tim answers `TIM_BATCH_QUESTIONS_2026-10-09.md` and approves this card.**
-Written by design lane run 4 (headless, Opus), Fri 9 Oct 2026 about 03:00 Melbourne (PC clock). Read-only on plugin code: "today"
-below is read from the code on `master` (`Modules/Drainage`), not seen in AutoCAD, and not proof of what the installed Civil 3.0.38
-does. Every "today" line carries its file reference at the end of this card.
+Written by design lane run 4 (headless, Opus), Fri 9 Oct 2026 about 03:00 Melbourne (PC clock). Read-only on plugin code.
+~~"Today" below is read from the code on `master` (`Modules/Drainage`), not seen in AutoCAD, and not proof of what the installed Civil
+3.0.38 does.~~ *(Superseded 9 Oct 2026, run 6: master stopped at 650c0c19 on 28 Sep. Every "today" claim was re-read on the installed
+release commit 446162c2 = Civil 3.0.39; the verdicts are in "Re-check on the release commit" below and the code references at the end
+are now release line numbers.)* Still read in code, not seen in AutoCAD. Every "today" line carries its file reference at the end of this card.
+
+## Re-check on the release commit (run 6, 9 Oct 2026)
+
+1. **Card 1.1, plastic pits get no plan label: CONFIRMED.** `Commands/PitCommand.cs:423-462` labels a pit only when
+   `PitPresetLocks.CanNumberAndSchedule(plastic, manual override)` allows it; cancelling the label pick on an overridden plastic pit
+   still says "Plastic pit retained unnumbered (no label)" (`PitCommand.cs:458-462`, `562-573`). `Rules/PitPresetLocks.cs:40` and
+   `Services/PitAnnotationTextFormatter.cs` are unchanged since master.
+2. **Card 1.2, no lasting "placed by hand" mark: CONFIRMED.** The tidy only skips labels dragged in the SAME command
+   (`userMovedHandles`, `Services/LinkService.TextClashTidyUp.cs:74-81, 209, 219`; the hold message "placed by hand, so it stays" is
+   `Rules/TextClashTidyUpRule.cs:117`). No stored mark on any label was found anywhere in `Modules/Drainage`. Reset Position is still
+   on the grip action (`Services/LinkService.PipeAttachmentActions.cs:109, 239`).
+3. **Card 1.3, Edit Pipe does not re-tidy labels: CONFIRMED.** No tidy call in any `Commands/PipeEditCommand*.cs`; a size change still
+   only shifts the label for the wider pipe (`Commands/PipeEditCommand.Update.cs:658, 710`). The tidy runs after CD
+   (`Services/PipeCreationService.cs:575`), a source split (`Services/SourcePlacementService.cs:1213`), Pit Edit save
+   (`Commands/PitEditCommand.cs:400`) and **also the Pit Edit grip resize** (`Commands/PitEditCommand.Resize.cs:141`, new since master),
+   all through `Services/LinkService.PitMoves.cs:529-534`; and after MOVE / grip / STRETCH (`Services/LinkService.Reactors.cs:733,
+   748, 1280, 1369`). Still not shown in any preview.
+4. **Card 1.4, no Tidy labels command: CONFIRMED.** No `CDTIDYLABELS` or similar in Drainage or Manager. The three nearest commands
+   still exist: `CDANNOTATIONEDIT` (`Commands/AnnotationEditCommand.cs:24`), `CDPIPEATTACHMENTACTION`
+   (`Commands/PipeAttachmentActionCommand.cs:14`), `CDPITCOVERFLIP` (`Commands/PitCoverTextFlipCommand.cs:17`).
+5. **Card 1.5, what tidying avoids: CONFIRMED.** Obstacles are still only polylines, text, multiline text, callouts, dimensions,
+   tables and blocks (`Services/LinkService.TextClashTidyUp.cs:566-567`); Xref blocks are dropped (`:787`); hatches, regions and
+   lines are not read. A label on a locked layer stays put (`:196-200`; already on master).
+6. **Card 1.6, short pipe needs clicks for its callout: CONFIRMED.** Callout above 95% of pipe length (`Services/TextService.cs:91-93,
+   158`), two-line wrap above 80% (`:173`), then "Snap callout arrow to pipe" and a drag (`:397-436`).
+7. **Card 1.7, no TYP.: CONFIRMED.** No "TYP" string in Drainage code.
+8. **Card 1.8, Pit Schedule sort: CONFIRMED.** `Helpers/PitIdComparer.cs` unchanged (LPD, OG, P-numbers, CP-numbers, then plain
+   text); the window sorts with it (`ViewModels/PitScheduleViewModel.Data.cs:261, 700`); the 90% saved-order rule is `:886`. Still
+   not read: whether the printed table follows the window.
+9. **Card 1.9, MIRROR / ROTATE readability: CONFIRMED.** Text is made readable only on a flip (`KeepFlippedTextReadable`,
+   `Services/LinkService.PipeAttachmentGrip.cs:1067`). New since master but NOT about readability: MIRROR with "Erase source objects =
+   Yes" now hands the original pit's number and record to the mirrored copy (`Services/ProjectDataService.MirrorCarry.cs`,
+   `Services/LinkService.Reactors.cs:1108-1114`). Card 1.9's test list should include that case (step 9 of Tim's checklist).
+10. **Related bug BUG-197: CHANGED.** The fix is in the release: CD now also slides the MAIN's label off a new branch
+    (`Rules/BranchHostLabelTidyRule.cs`, `Services/LinkService.TextClashTidyUp.cs:150`, `Services/PipeCreationService.cs`
+    `TidyBranchHostLabels`). Card 1.3 builds on it; it is not work to do again.
+11. **Not re-checked:** BUG-329 item 2 (Pit Schedule sync resets a hand-moved pipe label); `ScheduleLinkService.cs` changed by about
+    1,500 lines since master, so a builder must re-test it before relying on card 1.2's example.
 
 **Items (9):** UX-PIT-01, UX-LBL-01, UX-LBL-02, UX-LBL-03, UX-LBL-04, UX-CPLAN-24, UX-CPLAN-25, UX-SCHED-06, UX-EDIT-03.
 **Commands touched:** PIT and PP (place a pit), CD (draw a pipe), CDEDIT / PIPEEDIT / PITEDIT, PITSCHEDULE, AutoCAD's MOVE, ROTATE,
@@ -16,8 +58,8 @@ up to a Settings distance, never more than 500 mm from the pipe end, then flip; 
 plan (`CE_ACAD_PLUGIN\docs\workflows\CV-01I_SMART_ANNOTATION_TIDY_UP_PLAN.md`, NOT approved: its preview layout is reused only as a
 starting sketch).
 
-**Related open bugs (do not fix twice):** BUG-197 (a new branch's invert labels overlap; draft PR #388 tidies the main's labels on
-draw), BUG-329 item 2 (every Pit Schedule sync puts the pipe label back at its default spot, undoing hand moves), BUG-322 item 1 and
+**Related open bugs (do not fix twice):** BUG-197 (a new branch's invert labels overlap; ~~draft PR #388 tidies the main's labels on
+draw~~ *superseded 9 Oct 2026, run 6: the fix is in release 446162c2, `Rules/BranchHostLabelTidyRule.cs`*), BUG-329 item 2 (every Pit Schedule sync puts the pipe label back at its default spot, undoing hand moves), BUG-322 item 1 and
 BUG-309 (labels re-placed with millimetre offsets in a metre drawing), BUG-069 (imported labels read backwards), BUG-072 and BUG-045
 (pit label jumps or is left behind).
 
@@ -152,6 +194,7 @@ BUG-309 (labels re-placed with millimetre offsets in a metre drawing), BUG-069 (
 8. Sort: P1, P2, P10; SPS2 before SPS10; P1A after P1.
 9. ROTATE 180 and MIRROR (MIRRTEXT 0 and 1): every CE label reads the right way; one U restores.
 10. Undo and REDO after each of the above (Day 1 rule: REDO straight after U with nothing typed between).
+11. *(Added 9 Oct 2026, run 6.)* MIRROR with "Erase source objects = Yes": the copy keeps the pit number AND its labels read the right way.
 
 ## Example drawings
 
@@ -171,9 +214,12 @@ BUG-309 (labels re-placed with millimetre offsets in a metre drawing), BUG-069 (
 8. **Sort:** PITSCHEDULE with P1, P2 and P10: they read in that order.
 9. **Rotate and mirror:** ROTATE a pit and its pipes 180 degrees, then MIRROR them. **Should see:** no label upside down or backwards. One `U` each puts it back.
 
-## Code references (read on master, 9 Oct)
+## Code references
 
-All under `C:\Lisp Files\CE_ACAD_PLUGIN\Modules\Drainage\`: `Commands/PitCommand.cs:421-460, 455-458, 553-576`;
+**On release 446162c2 (run 6, 9 Oct 2026):** the file:line references in "Re-check on the release commit" at the top replace the list
+below wherever they differ.
+
+~~Read on master, 9 Oct~~ *(superseded 9 Oct 2026, run 6: master line numbers, kept for history).* All under `C:\Lisp Files\CE_ACAD_PLUGIN\Modules\Drainage\`: `Commands/PitCommand.cs:421-460, 455-458, 553-576`;
 `Rules/PitPresetLocks.cs:38-56`; `Services/PitAnnotationTextFormatter.cs:25-26`; `Services/QuickModeService.cs:63-114`;
 `Services/TextService.cs:152-192, 393-460`; `Rules/LabelPlacementRule.cs:7-119`; `Models/UserSettings.cs:474-485`;
 `Services/LinkService.TextClashTidyUp.cs:22-40, 74-131, 155-200, 488-632` (its header comment at line 23 says callouts are not moved;
