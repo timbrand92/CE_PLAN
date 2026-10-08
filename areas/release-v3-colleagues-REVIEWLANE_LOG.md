@@ -999,3 +999,27 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - #791 and #800 checked only as rebase deltas against their reviewed heads.
    - Usage: unknown (headless).
 801. **Thu 08 Oct 14:02** — HEADLESS RUN 128 started (desk plan/02 priority: build/02 run 111, build/04 runs 45-46, #800 #811 #812, newer heads of #801-#804, new PRs). Usage: unknown (headless).
+802. **Thu 08 Oct 14:05** — Run 128 reviews (read only, all read by me; no sub-reviewer). 2 OPUS comments.
+   - **#815 @ f8bc54e3 MERGE (BUG-438, C1/TS1 number step):** the default is only set when there is remembered text, and the shared CeQuestion text helper only switches AutoCAD's copy off when a default exists (covers the two Beam text questions too). Linking-off line correct; linking-on lines unchanged. 1 LOW optional.
+   - **#814 @ 9c89763c MERGE (BUG-440, zero-length pipe):** skip only under 0.01 mm, after the locked-layer line and the prepare step, in both X-Civil and LandXML loops; skipped pipe never reaches ProjectData. 1 LOW (raw handle in the report line, same as its neighbours).
+   - **build/04 run 46 (route file only):** no PR, nothing to review.
+   - **#800 #811 #812:** heads unchanged since the run 127 MWF comments (21c6b776, 47804bde, 37598c92); fixes still owed. **#801 #802 #803 #804:** heads unchanged, MERGE stands (all now in C-24/S-25).
+   - Usage: unknown (headless).
+803. **Thu 08 Oct 14:05** — **Corrected lists (current heads; newest real Opus MERGE on each head).** Installed: Civil 3.0.38 / Manager 1.1.38 = rel-20261008g 3e59c62a (C-24); Structural 1.0.108 = rel-20261009b d7879e79 (S-25). Checked by git ancestry: every run 127 C-24/S-25 MERGE PR is in those branches.
+   - **C-25 (Civil/Manager), plain MERGE = 1:**
+     - #814 9c89763c (base rel-20261008f)
+   - **C-25 out:**
+     - #800 (MWF, MEDIUM: compare with the shipped speed table)
+     - #811 (MWF, MEDIUM: fail closed on a damaged shared admin list)
+     - #781 / #768 (as before)
+   - **S-26 (Structural), plain MERGE = 1:**
+     - #815 f8bc54e3 (base rel-20261008z)
+   - **S-26 out:**
+     - #812 (MWF, BUG-437 Enter path); when fixed it touches SupportBlockCommands.cs like #815: different regions by reading, keep both sides
+     - #813 (duplicate: close)
+804. **Thu 08 Oct 14:05** — HEADLESS RUN 128 ended. 2 OPUS comments (MERGE 2).
+   - **Not checked:**
+     - no build, test or merge-tree trial (conflicts by reading);
+     - nothing in AutoCAD;
+     - open PRs below #776 (200 open in total) not re-scanned this run.
+   - Usage: unknown (headless).
