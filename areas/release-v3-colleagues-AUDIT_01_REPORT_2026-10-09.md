@@ -2,7 +2,7 @@
 
 Helper: CE_ACAD / release-v3-colleagues / audit / 01. Read-only. Code read with `git show` / `git grep` at the release commits only:
 Civil 3.0.40 + Manager 1.1.40 = **1200744d** (rel-20261009e), Structural 1.0.110 = **9babe787** (rel-20261009f).
-I also checked that none of the Civil/Manager files named in Audit A changed in C-27 (**319ba688**, rel-20261009g): all unchanged, so every Civil/Manager finding below applies to C-27 too.
+I also checked that none of the Civil/Manager files named in Audit A changed in C-27 (**319ba688**, rel-20261009g): all unchanged, so every Civil/Manager finding below applies to C-27 too. The hunt_mgr helper logged that Civil 3.0.41 / Manager 1.1.41 (**660487d1**) is already installed; the same ten files are unchanged there too.
 No AutoCAD, no accoreconsole, no builds, no tests run. Every file:line below is at the release commit named.
 
 ---
