@@ -1179,3 +1179,41 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Not checked:** no build, test or AutoCAD; the conflicts were judged from read-only merge-tree trials.
    - Usage: unknown (headless).
 822. **Fri 09 Oct 03:59** — HEADLESS RUN 133 started (desk plan/03 04:10: #823 e169d6ae grade-key fix, #827 BUG-447 X-Civil end-matching; corrected C-27 / S-28 lists). Usage: unknown (headless).
+823. **Fri 09 Oct 04:02** — Run 133 reviews (read only; read by me, no sub-reviewer):
+   - **#823 @ e169d6ae MERGE:**
+     - The run 132 MEDIUM is fixed. The grade key is now the effective setting: blank, "default" and "defaultMin" are one key, "defaultStd" is separate, and a typed grade is reduced to its number in custom mode only.
+     - Redo safety is unchanged: only the key function moved.
+     - 1 LOW: use the shared MathHelper.TryParseGrade, because "100 MIN." would still read as a change.
+   - **#827 @ 74771c6f MERGE-WITH-FIXES** (build/03 had posted no newer head):
+     - Works:
+       - a pipe between two different pits still matches both ends (the new path needs the same pit object at both ends);
+       - the far end stays open at true length (wall and fallback snaps are skipped);
+       - one report line per pipe.
+     - Fixes wanted:
+       - HIGH: REGRESSION_LOG is rewritten whole (line-ending flip, +40k/-40k).
+       - MEDIUM: Phase B can still record a DIFFERENT pit up to 3.2 m away as the far end's pit while the end is drawn open. Skip pit ownership on that end.
+       - MEDIUM: the report line names the pipe by a raw handle and layer. Use drafting words (length, from P8).
+       - LOW: the note is added before the insert.
+   - **#828 @ 8e945bbe MERGE (NEW; stacked on #827, merge after #827's fixes):** the X-Civil distances move to Settings, with defaults equal to the old numbers and a fallback line for bad figures.
+     - LOW: no Settings window row yet (Codex).
+     - LOW: the no-pit 600 mm stays built in.
+   - Usage: unknown (headless).
+824. **Fri 09 Oct 04:02** — **Corrected lists.** rel-20261009e (C-26) and rel-20261009f (S-27) were NOT yet on origin when I read them, so these lists assume C-26 = entry 820's seven and S-27 = entry 820's four. Re-check by ancestry once they are pushed.
+   - **C-27 (Civil/Manager), plain MERGE = 1:**
+     - #823 e169d6ae: 3 commits over C-24, which holds #805. If C-26 took nothing of #823, take all three.
+   - **C-27 optional (OFF engines):** as entry 815. NETWORK: #682 → #693 → #754 → #698. SOURCES: #680 → #706 → #751 → #755 → #821.
+   - **C-27 OUT:**
+     - #827: MERGE-WITH-FIXES.
+     - #828: waits for #827.
+     - #824: superseded by #826; close it.
+     - #781 and #768: as before.
+   - **S-28 (Structural), plain MERGE = 0 new.**
+     - Every Structural MERGE PR (#812 #818 #825 #804) is in the S-27 list.
+     - Any of those S-27 drops moves to S-28.
+     - #813 is a duplicate: close it.
+825. **Fri 09 Oct 04:02** — HEADLESS RUN 133 ended. 3 OPUS comments: MERGE 2 (#823, #828) and MERGE-WITH-FIXES 1 (#827).
+   - **Not checked:**
+     - no build, test or AutoCAD;
+     - the C-26 and S-27 contents were not verified (branches not pushed);
+     - relink after import (LinkService.RelinkAllPipesToPits) was not traced for the open far end.
+   - Usage: unknown (headless).
