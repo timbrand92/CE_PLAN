@@ -1024,3 +1024,35 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - open PRs below #776 (200 open in total) not re-scanned this run.
    - Usage: unknown (headless).
 805. **Fri 09 Oct 01:38** — HEADLESS RUN 129 started (desk plan/02 priority: build/02 run 112, build/03 run 59, build/04 run 47, re-check #814 #815, new PRs). Usage: unknown (headless).
+806. **Fri 09 Oct 01:40** — Run 129 reviews (read only, all read by me; no sub-reviewer). 6 OPUS comments.
+   - **#820 @ 58a079b8 MERGE (BUG-432 round 3, build/04 run 47):** the fix planner, detention collector and Inspector read cover through `KnownCoverLevelRl`; a real 0.000 on other pits stays a level. No findings. Stacked on #809 (already in C-24).
+   - **#819 @ 7ad024e7 MERGE (BUG-442 Edit Pipe FLAT, build/04 run 47):** same shared `AreSameLevel` as the plan label; real-fall pipes unchanged. No findings. Stacked on #789 (already in C-24).
+   - **#818 @ d7610d62 MERGE (BUG-443 legend/floor LOWs, build/02 run 112, OFF):** an erased title repairs the same legend; a retyped title is kept; a taken floor mark is asked again. 1 LOW: the Enter message names the old suggestion before moving it on.
+   - **#817 @ 796ad58a MERGE-WITH-FIXES (MEDIUM 1, #805 wording, build/04 run 47):** the sentence "Typed level is waiting" fires for the first typed cell of ANY kind (Lid Type, Remarks, Pit No). Fix: "Your typed value is waiting..." or name the column.
+   - **#816 @ b8bd05e0 MERGE-WITH-FIXES (MEDIUM 1, BUG-442 CESUPPORT zip, build/03 run 59):** the top level of CE_CVL_SUITE\logs holds `cdcheck-<DRAWING NAME>-...txt/.csv`. They would go into the zip, or into the notes page, with the drawing (client) name in the file name. Fix: an allow-list of the plugin log names, and count the rest without naming them. LOW: rotated `.log.1/.log.2` are left out.
+   - **#812 @ 12521645 MERGE (BUG-437 re-review, build/02 run 112):** the run 127 MEDIUM is fixed. Enter runs the right text command through the same path as L/R; no point is made up. 1 LOW: the raw command name appears in the message.
+   - Usage: unknown (headless).
+807. **Fri 09 Oct 01:40** — **Corrected lists (current heads; newest real Opus MERGE on each head).** Installed is unchanged since run 128: C-24 rel-20261008g 3e59c62a, S-25 rel-20261009b d7879e79. Checked by git ancestry: the bases of the stacked PRs (#789 #809 #796 #801 in C-24; #810 in S-25) are already in those branches, so each stacked PR brings only its own commits.
+   - **C-26 (Civil/Manager), plain MERGE = 3:**
+     - #814 9c89763c
+     - #819 7ad024e7
+     - #820 58a079b8
+   - **C-26 out:**
+     - #817 (MWF: wording names "level" for any cell)
+     - #816 (MWF: drawing names in the support zip)
+     - #800 (MWF)
+     - #811 (MWF)
+     - #781 / #768 (as before)
+   - **S-27 (Structural), plain MERGE = 3:**
+     - #815 f8bc54e3
+     - #812 12521645 (touches SupportBlockCommands.cs like #815: different regions by reading, keep both sides)
+     - #818 d7610d62 (OFF)
+   - **S-27 out:**
+     - #813 (duplicate: close)
+808. **Fri 09 Oct 01:40** — HEADLESS RUN 129 ended. 6 OPUS comments (MERGE 4, MWF 2).
+   - **Not checked:**
+     - no build, test or merge-tree trial;
+     - nothing in AutoCAD;
+     - #817 and #818 tests are partly source-text checks only;
+     - open PRs below #806 not re-scanned.
+   - Usage: unknown (headless).
