@@ -7,7 +7,7 @@ questions") builders MAY build this card on the **Recommended** answers below, a
 a Settings value and OFF where it changes what a drafter sees, nothing retired, no old command removed, locked layers / Xref / REFEDIT
 protection unchanged. Tim's answer by number in `TIM_BATCH_QUESTIONS_4_5_2026-10-09.md` (questions 9 to 15) replaces a recommended
 default in a follow-up.
-Written by design lane run 7 (headless, Opus), Fri 9 Oct 2026 about 07:00 Melbourne (PC clock). Read-only on plugin code. "Today" is
+Written by design lane run 7 (headless, Opus), Fri 9 Oct 2026 about 06:10 Melbourne (PC clock). Read-only on plugin code. "Today" is
 read from the Structural release commit `9babe787` (branch `claude/rel-20261009f`) and the Codex reports in
 `C:\Lisp Files\_TEST_COPIES_20260923`. Code lines are not proof of what installed Structural 1.0.110 does on screen.
 **Numbering:** this is **Batch 13** in `REVIEW_BATCHES_2026-10-09.md` ("framing plan, roof down"), the first Structural batch. The

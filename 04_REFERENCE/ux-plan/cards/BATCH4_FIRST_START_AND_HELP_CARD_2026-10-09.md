@@ -6,7 +6,7 @@
 questions") builders MAY build this card on the **Recommended** answers below, as DRAFT PRs, tests red first, every new behaviour behind
 a Settings value and OFF or hidden where it changes what a drafter sees, nothing retired. Tim's answer by number in
 `TIM_BATCH_QUESTIONS_4_5_2026-10-09.md` (questions 1 to 8) replaces any recommended default in a follow-up.
-Written by design lane run 7 (headless, Opus), Fri 9 Oct 2026 about 06:30 Melbourne (PC clock). Read-only on plugin code. "Today"
+Written by design lane run 7 (headless, Opus), Fri 9 Oct 2026 about 06:10 Melbourne (PC clock). Read-only on plugin code. "Today"
 below is read from the Civil release commit `446162c2` (branch `claude/rel-20261009c`, NOT `master`, which stopped at `650c0c19` on
 28 Sep) and from the Codex reports in `C:\Lisp Files\_TEST_COPIES_20260923` (named per line). Code lines are not proof of what installed
 Civil 3.0.39 does on screen. File references are at the end.
