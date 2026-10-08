@@ -2,6 +2,25 @@
 
 # Batch 3 card: how every CE window feels, 9 Oct 2026
 
+## Tim's answers (Fri 9 Oct about 08:30, INT-075; note added by design run 8)
+
+Tim answered `TIM_BATCH_QUESTIONS_2_3_2026-10-09.md` by number. For this card (questions 8 to 14), verbatim: "8. ideally no blue please our
+colours are gold, black and white /grey 9. as recommended 10. as recommended 11. as recommended 12. as recommended 13. as recommended
+14. lets complete final images before colleague release", and "15. answers above". So:
+1. **Question 8 OVERRIDES the recommendation: NO BLUE.** CE's colours are gold, black and white / grey. The light-theme main button and
+   accent are **not blue** (`#1E5AA8` in `Themes/LightTheme.xaml:14` must go); the 4 Sep deep blue is superseded (9 Oct). The card's
+   recommendation "keep it as is (blue in light, gold in dark)" and card 3.1's "question 8 (keep blue, or gold in both)" are **superseded
+   9 Oct by this answer**. Which gold / black / grey shade sits on a white window is Codex's window work, shown to Tim as a light and dark
+   picture.
+2. **Questions 9 to 13 as recommended:** Enter on a highlighted row does that row's job, elsewhere Enter is the main button; preview 0.3 s;
+   Project Review stays a window that holds AutoCAD, the everyday list is the Checks palette; Pit Schedule stays a window that holds AutoCAD;
+   every window fits 1920 x 1080 at 150% with nothing cut off.
+3. **Question 14:** ribbon tooltip pictures are made as **FINAL images before the colleague release**, not a rough first pass.
+4. **House rule from the same answers:** **plain name and command name together** during the transition (ribbon labels, tooltips, window
+   titles, help), e.g. "Pit Schedule (PITSCHEDULE)", behind a Settings switch "Show AutoCAD command names", default ON; the plain name stays
+   the main name.
+5. Builders build on these answers without waiting (INT-073). Windows are Codex's.
+
 ## Re-check on the release commit (run 6, 9 Oct 2026)
 
 1. **CONFIRMED on 446162c2:** Pit Schedule minimum width 1440, not resizable, centred on the screen (`Dialogs/PitScheduleDialog.xaml:7-9`)
@@ -77,7 +96,8 @@ Standards); Codex Explore 1 item 12 (Manager and Structural show different versi
      ("Save", "Apply", "Place", "Close" only where nothing is changed).
    - Tabs only for separate topics (Settings, CDCALC). No hidden content: what was in a collapsed section moves to a tab or stays shown
      (Codex UI/UX review: Pit Schedule's collapsed "Schedule setup", Civil Hub's expander).
-   - Light theme primary button: question 8 (keep blue, or gold in both).
+   - ~~Light theme primary button: question 8 (keep blue, or gold in both).~~ *(superseded 9 Oct: Tim answered "no blue", gold, black
+     and white / grey; see "Tim's answers" at the top)*
    - The tabbed fallback windows stay only until each workshop window fits at 150% scaling (card 3.6), then are retired with Tim's yes.
 7. **Discovery:** nothing to learn; every window looks the same.
 8. **Order and pictures:** one window per pull request, with a light and a dark picture, before and after.
