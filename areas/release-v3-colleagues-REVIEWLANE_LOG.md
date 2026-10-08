@@ -1258,3 +1258,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 832. **Fri 09 Oct 06:07** — HEADLESS RUN 135 ended.
    - **Not checked:** no build, test or AutoCAD.
    - Usage: unknown (headless).
+833. **Fri 09 Oct 07:00** — HEADLESS RUN 136 started (desk plan/03 07:10: re-review fix rounds #833 #832 #835 #836, new #837 #839, #831 #834 if fixed; C-28/S-28 lists).
