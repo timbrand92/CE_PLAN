@@ -1138,3 +1138,43 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - #682, #693, #754, #680, #706, #751 and #698 were not re-read: their existing MERGE stands on unchanged heads.
    - Usage: unknown (headless).
 818. **Fri 09 Oct 03:19** — HEADLESS RUN 132 started (desk plan/03 03:25: #826 BUG-435 re-cut 964c25ba, #823 follow-up f7438000, PRs with no Opus comment on head; corrected C-26 / S-27 lists). Usage: unknown (headless).
+819. **Fri 09 Oct 03:24** — Run 132 reviews (read only; read by me, no sub-reviewer):
+   - **#826 @ 964c25ba MERGE** (the re-cut of #824 on rel-20261008g, one commit):
+     - No other code path opens or edits acad.cuix. I searched C#, LISP, PowerShell and XML for MENUNAME, WorkspaceRoot, WSToolbar, MainCuix, .ce_bak and acad.cuix.
+     - The partial menu still loads: TryLoadPartialMenu is untouched and pinned by test 3.
+     - 1 LOW: a stale "before touching the main CUIX" comment.
+     - Close #824.
+   - **#823 @ f7438000 MERGE-WITH-FIXES (MEDIUM):**
+     - Works: a grade-only edit now clears the marker, and old three-value markers are judged on their levels only.
+     - Problem: the key compares the raw stored words. Edit Pipe Save writes "defaultMin" (Update.cs:1814), but split, repair and recovery write "default", and a new pipe starts blank. So a diameter-only re-save of a split pipe erases a CHECK marker that is still true. The same applies to "1 IN 100" against "100".
+     - Fix: key on the effective grade, or compare only when both sides are "custom"; add two tests.
+   - **#804 @ 782c7ee6 MERGE (OFF):** the fix round for my LOWs 3-5 (layout numbers into Settings with the same defaults, a faster scan, plainer wording). 1 LOW: LayerTable.Has() on a hand-typed name.
+   - **Every other open PR** already has a real Opus comment on its current head (checked #800 to #825).
+   - Usage: unknown (headless).
+820. **Fri 09 Oct 03:24** — **Corrected lists (current heads, newest real Opus MERGE on each; checked by ancestry).**
+   - **C-25 / S-26:** unchanged from entry 816. None of the C-26 PRs below is in C-25 (rel-20261009c).
+   - **C-26 (Civil/Manager), plain MERGE = 7:**
+     - #819 7ad024e7
+     - #800 87926100
+     - #811 88f48907
+     - #816 3a9f1bba
+     - #822 a771fee7
+     - **#826 964c25ba (NEW):** in place of #824. Against C-25 it conflicts only in REGRESSION_LOG: keep both.
+     - #817: cherry-pick 796ad58a and 70568a1d only.
+   - **C-26 OUT:**
+     - **#823 (f7438000): MERGE-WITH-FIXES.** Its earlier head 38cd9e42 was MERGE, but the branch has moved and the fix round needs the grade-key fix. Wait for the next head; do not take 38cd9e42 separately.
+     - #824 (superseded by #826).
+     - #781 and #768: as before.
+   - **C-26 optional (OFF engines):** as entry 815. NETWORK: #682 → #693 → #754 → #698. SOURCES: #680 → #706 → #751 → #755 → #821.
+   - **S-27 (Structural), plain MERGE = 4:**
+     - #812 b7aaa225
+     - #818 f89af2ca
+     - #825 aba8e946
+     - **#804 782c7ee6 (NEW):** one commit over S-26, which already holds b10a0ec8. It CONFLICTS in FramingLegendPlanner.cs, FramingLegendService.cs and its test file with the BUG-443 legend code already in S-26.
+       - In all three files, keep both sides.
+       - On the title line, keep the S-26 kept-title line but replace `h * 1.4` with `h * layout.TitleHeightFactor`.
+       - Merge #818 before #804 if both are taken.
+   - **S-27 OUT:** #813 (duplicate: close).
+821. **Fri 09 Oct 03:24** — HEADLESS RUN 132 ended. 3 OPUS comments: MERGE 2 (#826, #804) and MERGE-WITH-FIXES 1 (#823).
+   - **Not checked:** no build, test or AutoCAD; the conflicts were judged from read-only merge-tree trials.
+   - Usage: unknown (headless).
