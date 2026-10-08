@@ -1,4 +1,24 @@
+**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:40 PC clock).
+
 # Batch 2 card: checking the network (Day 1 steps 12 and 13), 9 Oct 2026
+
+## Re-check on the release commit (run 6, 9 Oct 2026)
+
+This card was already written against 446162c2. Run 6 re-read every file:line in "Code references" on that commit:
+1. **CONFIRMED (all):** the Ends/Fit/Items one-prompt switch (`Commands/SpineCheckCommand.cs:176-180`); the "A pipe end left pit P4: it is
+   now Not connected yet. CDCHECK lists it until you connect it." line (`Rules/NativeEditEndpointOwnerRule.cs:146-162`, called from
+   `Services/LinkService.Reactors.cs:1326-1333`); the pit-erase line (`Services/PitEraseFreeEndsMessagePolicy.cs:42-43`); the only
+   "What CE Found" palette (`Services/DrawingCheckPaletteService.cs:65`); the commands CDCHECKCURRENT, CDDASHBOARD, CDINSPECTOR, CDRULES,
+   CEPERFDIAG at the lines given; every "Select ..." prompt quoted in card 2.4 at the lines given; no `ProgressMeter` anywhere in
+   Modules or Shared; the progress bar in `Controls/CeEditorShell.xaml` still used by no window; no "ignore a finding" store or Ignored list.
+2. **CONFIRMED, the four files the card read on master:** automatic Project QA still waits 3 seconds
+   (`Services/CivilProjectQaAutomaticService.cs:52`); since master it also skips Structural-only drawings and waits while REDO is still
+   possible (BUG-256). `Services/Spine/SpineDecisionLedger.cs` gained "a source sits on this main" records (CD-BRANCH-01), still no
+   ignore. `Rules/RulebookEngine.cs` gained two warning-only rules since master: R-31 speed in the pipe leaving a pit and R-32
+   detention pipe 225 and up no flatter than 1 in 200 (INT-068 items 2 and 3, Tim 8 Oct). **CHANGED for card 2.2 only in this
+   sense:** the Rules tab of the Checks palette must show these two warnings too.
+3. **Wording fix:** "installed Civil 3.0.38" below ~~is~~ *(superseded 9 Oct 2026, run 6)*: 446162c2 is installed Civil **3.0.39**.
+   The W35/W36 Codex observations quoted below were on 3.0.38 and still match the 3.0.39 code.
 
 **Status: DRAFT. Not approved. No code may start until Tim answers `TIM_BATCH_QUESTIONS_2_3_2026-10-09.md` (questions 1 to 7) and
 approves this card.**
