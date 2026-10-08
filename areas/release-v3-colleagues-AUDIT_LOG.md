@@ -24,3 +24,5 @@ Helper: CE_ACAD / release-v3-colleagues / audit / 01 (read-only; started by desk
 9. **Fri 9 Oct 2026 09:40 (PC clock)** — hunt2_civil run 2 ended. 15 draft findings HUNT2-C-01..15 (1 HIGH, 10 MEDIUM, 4 LOW) in areas/release-v3-colleagues-HUNT2_CIVIL_2026-10-09.md, read at 660487d1 (Civil 3.0.41); code reading only, nothing run, none seen in AutoCAD.
 
 12. **Fri 9 Oct 2026 09:41 (PC clock)** — main_day1_verify started (Day 1 page verification against Civil/Manager rel-20261009g and Structural rel-20261009f, code and Codex reports reading only).
+
+12. **Fri 9 Oct 2026 09:41 (PC clock)** — r00_civil run 3 started (R-00 audit, Civil: hard-coded engineering numbers at rel-20261009g, code reading only).
