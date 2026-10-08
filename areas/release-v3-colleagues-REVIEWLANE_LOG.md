@@ -1241,3 +1241,20 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Not checked:** no build, test or AutoCAD; the C-26 contents (branch not pushed).
    - Usage: unknown (headless).
 830. **Fri 09 Oct 06:00** — HEADLESS RUN 135 started (desk plan/03 06:10: #829 #830 #831 #834 and newer #832 #833 #835 #836).
+831. **Fri 09 Oct 06:07** — Run 135 reviews (8 OPUS comments; #831-#836 read by Opus sub-agents, key findings spot-checked by me):
+   - **#829 @ 8650d036 MERGE.** Same as #817 70568a1d, now on the Civil train; wording only, redo-safe. Close #817 once #829 merges.
+   - **#830 @ c955fd94 MERGE.** Heading from the installed version (one source with the gate). 1 LOW, optional.
+   - **#831 @ d0026084 MERGE-WITH-FIXES** (safe with switch OFF; old text identical). 2 MEDIUM: the switch does nothing under the CE.Host ribbon; tooltip words typed in C# not in the command list. 2 LOW.
+   - **#832 @ 46de23dd MERGE-WITH-FIXES.** HIGH: default ON. MED-HIGH: PITEDIT keeps the label from the old record, so pipes renamed P12 while the pit stays P7. MEDIUM: PITEDIT ignores the setting. 1 LOW.
+   - **#833 @ d8ee3ddf DO-NOT-MERGE.** HIGH: default ON. HIGH: the X-Civil import matches PDF rows to pits by this order, so natural order changes which pit gets which cover level. MEDIUM: the compare can loop (SP1 / SP-1 / SP-A).
+   - **#834 @ 616be215 MERGE-WITH-FIXES.** Engine only, writes nothing. MEDIUM: false records for a pit of unknown size. MEDIUM: switch defaults ON. 2 LOW.
+   - **#835 @ 36d7c492 MERGE-WITH-FIXES.** HIGH: default ON. MEDIUM: a split drops the mark; Edit Pipe and the Pit Schedule sync ignore the mark (log promises it); the mark is set from one route only.
+   - **#836 @ 196bef43 DO-NOT-MERGE as titled.** HIGH: an unused 4th copy, not the one shared result. HIGH: counts would differ from CDCHECK. 2 MEDIUM (double count; handles shown). Also mistitled UX-DI-02 (it is card 2.2).
+   - **INT-073 pattern for the builders:** all four Batch 1/2 switches (#832 #833 #834 #835) default ON. INT-073 says OFF.
+   - **C-26 (rel-20261009e 2162e2f5) is on origin.** By ancestry it holds #826 #814 #819 #820 #816 #811 #822. It does NOT hold #823 #827 #828.
+   - **C-27 (Civil/Manager), plain MERGE, in this order:** #823 e169d6ae (#805 is already in C-24), #827 2ad19c3a, #828 a68a5ba3, #829 8650d036, #830 c955fd94.
+   - **C-27 OUT:** #832 #833 #834 #835 #836 (fixes above); #824 (superseded by #826, already in C-26).
+   - **S-28 (Structural): plain MERGE = 0.** #831 needs fixes before the switch is turned on. It is safe to merge OFF only if the controller accepts MERGE-WITH-FIXES.
+832. **Fri 09 Oct 06:07** — HEADLESS RUN 135 ended.
+   - **Not checked:** no build, test or AutoCAD.
+   - Usage: unknown (headless).
