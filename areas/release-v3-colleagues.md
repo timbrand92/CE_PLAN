@@ -11,6 +11,7 @@ Things that must be true before any colleague installs CE. No earlier gate list 
 5. **The Manager fault report and CEMANAGERDIAG must code the login, PC name and folders before any colleague uses them** (BUG-488). Until then colleagues are told not to press them.
 6. **Publish Issue stamps only the sheets the drafter ticked (or a colleague issuing a set stamps every sheet in the job): decide and fix before any colleague issues a set** (BUG-495 S-01). Today it gives the typed revision and issue date to every Structural sheet, including sheets left out, which breaks Tim's 14 Sep ruling.
 7. **The job record (wind class, soil) lives with the job, not under one PC's drawing path** (BUG-496 S-02). Today a colleague, a copy or a Save As starts with an empty record. Tim's call: keep it in the drawing, in the job folder, or say plainly it is for this PC only.
+8. **The X-Civil and LandXML imports read the source drawing's units (or stop and ask): a millimetre drawing must never come in 1000 times too big without a word** (BUG-505 HUNT2-C-01). Today a millimetre X-Civil drawing can land 1000 times too far out and 1000 times too big with no message, because CE guesses the units from the first small pit or short pipe it finds and never reads the drawing's own UNITS. Not seen in AutoCAD yet.
 
 ## OPERATING CHARTER — read first, every release chat (Tim, 28 Sep 2026; verbatim in `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`)
 
