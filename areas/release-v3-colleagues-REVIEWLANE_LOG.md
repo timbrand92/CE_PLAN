@@ -1137,3 +1137,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - the merge-tree trials were read only;
      - #682, #693, #754, #680, #706, #751 and #698 were not re-read: their existing MERGE stands on unchanged heads.
    - Usage: unknown (headless).
+818. **Fri 09 Oct 03:19** — HEADLESS RUN 132 started (desk plan/03 03:25: #826 BUG-435 re-cut 964c25ba, #823 follow-up f7438000, PRs with no Opus comment on head; corrected C-26 / S-27 lists). Usage: unknown (headless).
