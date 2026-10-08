@@ -1217,3 +1217,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - the C-26 and S-27 contents were not verified (branches not pushed);
      - relink after import (LinkService.RelinkAllPipesToPits) was not traced for the open far end.
    - Usage: unknown (headless).
+826. **Fri 09 Oct 04:40** — HEADLESS RUN 134 started (#827 re-review at 2ad19c3a, #828 a68a5ba3, then unreviewed PRs; C-27/S-28 lists).
