@@ -1,4 +1,4 @@
-**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:30 PC clock).
+**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:25 PC clock).
 
 # Batch 1 card: labels on the Civil plan (Day 1 workflow), 9 Oct 2026
 

@@ -1,4 +1,4 @@
-**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:45 PC clock).
+**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:25 PC clock).
 
 # Batch 3 card: how every CE window feels, 9 Oct 2026
 
