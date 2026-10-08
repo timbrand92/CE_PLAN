@@ -1,64 +1,64 @@
-# Known limitations, Thursday 8 October 2026 (installed now: Civil 3.0.35, Manager 1.1.35, Structural 1.0.105)
+# Known limitations, Friday 9 October 2026 (installed now: Civil 3.0.38, Manager 1.1.38, Structural 1.0.108)
 
-**Answer first.** Nothing here is Tim-accepted. Codex has watched part of it work in real AutoCAD on test copies, up to its 8 Oct W20 run. W18 was on Civil 3.0.34 and Structural 1.0.104; W19 on Structural 1.0.105 (the U and REDO cases); W20 on Civil 3.0.35 (a short check). Manager 1.1.35 is installed (8 Oct 03:59) but no Codex pass has looked at it. The rest is built and unit-tested only. Never a real job yet.
-**A ruling is not a fix.** Section 4 lists what Tim has ruled (INT-065 to INT-069). Unless a line says "built", it is NOT in the installed version.
+**Answer first.** Tim has accepted nothing. Codex watched part of this work in real AutoCAD on test copies, up to its W36 run on Thu 8 Oct (Civil 3.0.38). Structural 1.0.108 and Manager 1.1.38 have only been seen as status-bar lines and a first start (W33, W37). Never a real job yet. **SEEN** = Codex watched it on the version and run shown. **NOT SEEN** = built only.
+**A ruling is not a fix.** Section 4 says what Tim ruled and whether it is built. Companion pages: `DAY1_FOR_TIM_2026-10-09.md` (your 24 steps) and `STAFF_HELP_2026-10-08.md`.
 
 ---
 
-## 1. Switched OFF in this version
+## 1. Gaps you WILL meet (stated once, here; none is a stop rule)
 
-1. **Level 3 engines.** The levels-proposal engine is off by default. Several Level 3 pieces (detention banner, new-level labels, profile schedule preview) are in the code with nothing calling them yet.
-2. **Propose footings (CSFDNPROPOSE).** Hidden and off. It prints only "Propose footings is not switched on in this version. Nothing was proposed or drawn." Codex saw that on 8 Oct.
-3. **The issue-preview window.** Not in these versions. Its engine stack is queued for the next Structural train.
-4. **Auto-join of pipe ends and the CE bell.** Both off by default.
-5. **Others.** Older queue entries (29 Sep) say more new tools ship off (CD cursor glow, Keep/Automatic grip drag, notes commands such as CSGENNOTES). Not re-confirmed.
+1. **No "C1" label on a new column (BUG-438).** C1 and TS1 place the column, then print "[CR1] DefaultValue is not set." whatever you answer. SEEN 1.0.107 (W31). A cancelled or finished C1 now leaves your current layer as it was: SEEN 1.0.107.
+2. **Enter refused at the support-text spot (BUG-437).** "Pick desired support text location" printed "Invalid point." on 1.0.106 (W26). Click a point. Not re-tried on 1.0.108.
+3. **Start-up menu lines (BUG-435, BUG-437).** "Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL" (and the STRUC and Manager ones), then "; error: syntax error". Old menu names in your AutoCAD profile; the CE tabs and menus are there. SEEN 8 Oct (W24 to W31).
+4. **Manager Roll Back Release does nothing (BUG-425, BUG-441).** Do not press it. Go back a version by hand with the rollback guide.
+5. **Flat pipe: the Edit Pipe window still shows "grade 1 in 100" beside two equal inverts (BUG-442).** The plan label reads FLAT. SEEN 3.0.37 (W32).
+6. **CESUPPORT zip holds only its index file (BUG-442).** 856 bytes, "1 files, 0 left out". No log, no report. SEEN 3.0.37 (W32). Send your own screenshots and notes as well.
+7. **Typed Pit Schedule levels only wait.** The plan changes at Stop overriding, not at Enter. One U takes back the visit. REDO works only straight after U: any typed command in between ends it (REGEN seen; AutoCAD's rule, BUG-445). REGEN, LIST, TEXTSCR, GRAPHSCR and a wheel zoom each leave their own undo step, so check the U line. SEEN 3.0.38 (W35, W36).
+8. **Double-clicking a pit's plan label opens AutoCAD's attribute editor, not Edit Pit (BUG-430).** Use PITEDIT. The override tick also stays ticked on the pit-number cell. SEEN 3.0.35 (W20).
+9. **The import can make a zero-length pipe (BUG-440).** CDIMPORTXCIVIL made a pipe from P8 to P8 whose two ends are the same point. SEEN 3.0.36 (W29). The import's single U and REDO passed.
+10. **Structural rewrites CS_Settings.json once per install that adds rows (BUG-429).** None of your values change. 1.0.108 did it 8 Oct 12:39 (26,901 to 28,361 bytes). The CE log says so (seen for 1.0.107); the command line does not.
+11. **File > New opens a test template (BUG-440).** Your profile's default template points to a test copy. Not CE code.
 
-## 2. What Codex has NOT yet proven in real AutoCAD
+## 2. Switched OFF in these versions
 
-1. **Edit Pit free-number rename on a pit with pipes.** Seen on 3.0.34 (W18: label, schedule and pipe From all read 77); its own U is unproven.
-2. **Machines page of the Admin Dashboard.** CE asked to make the PC the office administrator; Codex said No.
-3. **Steep-pipe wording (CDFIXFLATPIPES).** No test drawing has had a pipe flattened the old way, so the steep line and the Yes/No question were never shown.
-4. **The footing "resized in the drawing" millimetre sentence.** It prints after a grip or STRETCH resize, not after FEDIT. Not seen yet.
-5. **REDO after switching drawing tabs.** It says "Nothing to redo". A known limit.
-6. **Old metre-drawing grades.** CDRULES on a metre drawing printed no R-03 lines.
-7. **Pit Schedule window pit numbers.** On 7 Oct (3.0.33) it accepted a bare "2" over P1 and lower-case "p1" with no warning (BUG-420). Civil 3.0.35 carries a fix (PR 766) that nobody has seen in AutoCAD. BUG-426 (open, MEDIUM): typing p1 after a typed 9 still leaves 9 in the cell. **W20 on 3.0.35:** a bare 2, p2 or P2 over P1 was refused; p1 and "P 1" stayed P1; the BUG-426 case was not reached.
-8. **Edit Pipe window saving, whole CDRENUMBER, Recall Last, two-drawing text edits.** Not seen: the older-pipe question stopped Codex, CDRENUMBER defaults to No, the Recall Last button was not visible, and the double-click opened Edit Pit.
-9. **STS1 on a real support block, eye check of ERASE and PIT undo.** Only the refusals and the undo lines were seen.
-10. **CESUPPORT, CESETTINGS (Structural), BDL, beams 2, 4 and 5, Foundations re-link.** Not run by Codex.
-11. **AutoCAD 2022 to 2024.** Built and unit-tested. Never opened.
-12. **Double-clicking a pit's plan label (BUG-430, seen by Codex W20 on 3.0.35).** It opens AutoCAD's own attribute editor, not Edit Pit. **Colleagues: use PITEDIT to change a pit.** Also open: the override tick stays ticked on the pit-number cell after Stop overriding.
-13. **Structural writes new default rows into your settings file at its first start after an upgrade (BUG-429, seen by Codex W19 on 1.0.105).** About 20 new rows were added and none of your own values changed. It is harmless: all the new features are off. Tim has ruled that CE will log one line saying so (INT-071 item 6); that line is not built.
+1. **Level 3 engines.** Levels proposals, detention banner, new-level labels and profile schedule preview have no caller.
+2. **Structural, roof first.** CSROOFSETOUT (roof area setout) and CSPOINTLOAD (roof point loads) are hidden and OFF. SEEN 1.0.107 (W31): "switched off in Settings ... The Settings page for it is still to be built."
+3. **Structural, upper floors.** CSFLOORSETOUT (floor setout) and CSFRAMINGLEGEND (framing legend) are hidden and OFF, new in 1.0.108: NOT SEEN. CSLINTELPROPOSE (lintel proposals) is OFF: SEEN 1.0.107.
+4. **Structural, footings last.** CSFDNPROPOSE prints "Propose footings is not switched on in this version." SEEN 1.0.104 (W17).
+5. **Issue-preview window** is not in these versions. Its switches are off.
+6. **Also off by default:** auto-join of pipe ends and the CE bell. Other new tools (CD cursor glow, notes commands) were not re-confirmed.
 
-## 3. What CE refuses by design
+## 3. Built but NOT SEEN in AutoCAD
 
-1. **Only two hard blocks, by Tim's rule.** Deleting the spine IDs, and pushing an update on a failed build. Everything else should warn and record.
-2. **Locked layers, Xrefs and reference edits are never changed.** CE skips them and says so. It does not unlock.
-3. **The 7 Oct source audit found places that do not follow this and are still open:** Civil Design stops on missing site inputs, survey intake can be blocked, slab boundary edits can be refused. Today a brace over 2700 mm is still cut to 2700 (Tim has ruled otherwise, section 4).
-4. **Two places still unlock or re-layer today:** CDIMPORTXCIVIL (BUG-417) and the strip-footing layer tidy-up (SF, BSF, STRIPLAYERSMERGE). Tim has ruled on both (section 4); neither fix is installed.
+1. **A brace over 2700 mm keeps its drawn length and warns (1.0.105 and later; BB warns too from 1.0.106).** Read in code by the finalizers. NOT SEEN.
+2. **Steep pipe wording in CDFIXFLATPIPES (3.0.34).** No test drawing has had a pipe flattened the old way. The 1 in 10 warning is not on the Settings window.
+3. **Pit-outlet speed warning 1.5 and 2.0 m/s (3.0.37).** The two figures sit in the settings file, not yet a row on the Settings window. Detention pipe flatter than 1 in 200 and the per-council orifice figure (3.0.38): NOT SEEN.
+4. **Kingston commercial: 1 in 10 storm, Tc 7 minutes under 1000 m2 (3.0.37).** NOT SEEN. Saved Kingston CDRULES runs show Stale once.
+5. **Skips a locked layer and says so:** CDIMPORTXCIVIL (3.0.36); strip-footing layer tidy-up (1.0.106); sheet sync skipping a drawing a colleague holds open (1.0.106). NOT SEEN.
+6. **Unknown footing width now ASKS in FADOPT (1.0.107),** with 300 mm pre-filled (screw pile 150 mm). NOT SEEN.
+7. **Old real-named Civil and Manager report files deleted at start-up (3.0.36, 3.0.37).** NOT SEEN.
+8. **The CHECK marker's layer and that it does not plot; Edit Pipe Save removing the marker.** Not read. The marker, U and REDO themselves are SEEN 3.0.38.
+9. **Same-day re-issue replaces the earlier PDF set (1.0.105).** NOT SEEN.
+10. **Never opened:** AutoCAD 2022 to 2024; CESETTINGS (Structural); beams 2, 4, 5 and BDL; STS1 on a real support block; REDO after switching drawing tabs; the Admin Dashboard Machines page; changing a value in Edit Pipe and pressing Save.
 
-## 4. Tim has ruled; NOT built unless a line says built
+## 4. Tim has ruled (INT-065 to INT-072): built or not
 
-1. **UPVC speed authority = the CPAA Hydraulics Design Manual** (INT-068, "1. as recommended"). The figures it gives become PROPOSALS for Tim to tick "Confirmed". Until then 3 m/s stays the one unconfirmed value and Civil Design stays at 6, so the two screens can still disagree. The manual has been read (CPAA_VELOCITY_READ_2026-10-08.md, proposals only): it names no UPVC figure.
-2. **Pit-outlet speed warning** (AS/NZS 3500.3 clause 5.4.11.2(d)): 1.5 m/s recommended, 2.0 m/s shall not exceed. Warning only, never a block, both figures as Settings rows. Not built.
-3. **Detention (CE guide):** warn on a detention pipe flatter than 1 in 200 for pipes 225 mm and larger; show "orifice not required" at 12 L/s or less. Warnings only, both figures on Settings. Not built.
-4. **Steep pipe held at 1 in 5** keeps the "steep, check it" line, not "Check by hand". Warn above 1 in 10, never block. The wording is in 3.0.34; Codex has not seen it. The values are still not on the Settings window.
-5. **Wall pair gap 350 mm kept** (INT-066 B). **A brace over 2700 mm keeps its drawn length and warns** (INT-066 C). The brace change is not built.
-6. **Pit numbers.** A free number typed in the Pit Schedule window waits as a pending override until Review, Update or Stop overriding (no change). **Pilot ground rule: colleagues renumber pits only in Edit Pit.** INT-069 says the window fix is installed in 3.0.35; it is not seen in AutoCAD (item 7 above), so the ground rule stays.
-7. **Privacy.** Delete the old real-named Civil report files (Civil and Manager at start-up, as Structural already does). Scramble the names inside the Manager report. Keep PC names out of support-bundle file names. Not built.
-8. **CDIMPORTXCIVIL on a locked layer: skip it and say so** (BUG-417; draft PR 765 waits for review). Not built.
-9. **F2 is LEFT AS IS for now.** Tim: "leave as is for now, commonly used by me to save". In the setup Codex tested, F2 runs CE's CLEAN command (purge, restyle, regen) in a CE drawing, so colleagues must not press F2 expecting a save. BUG-411 stays open and nothing moves; the desk will check what F2 does for Tim before anyone changes it.
-10. **Manager Roll Back Release:** PCs go back at their next AutoCAD start, with an "are you sure". Not built; BUG-425 records that today the button does nothing.
-11. **Approving a Civil update also approves the matching Manager update.** Not built; BUG-425 records that today Civil can update without Manager.
-12. **CESUPPORT never uploads by itself.** Drawing paths become job numbers. Not built (the code queues the bundle for upload today).
-13. **Sheet sync skips sheets a colleague has open, and says which.** Not built.
-14. **Unknown footing width asks, with the Settings value pre-filled** (today 300 mm; screw pile 150 mm). Not built.
-15. **Flat pipe label (BUG-427): it reads FLAT with no grade figure** when both ends are typed the same (Option A, the later recommendation; Tim to confirm in one line). Built only as a draft; today the label still says 1 IN 100.
-16. **Strip-footing layer tidy-up** stays and runs quietly if done properly (INT-065, draft PR 764, not in 1.0.104). **Same-day re-issue** replaces the earlier set. Neither is built.
-17. **Five Structural framing cards (A to E) approved, roof first:** roof area setout, floor joist span arrow, framing legend, lintel/support proposals, level above and below (O)/(U). Approved to build; nothing built.
+1. **UPVC speed authority = the CPAA manual (INT-068).** The manual names NO UPVC figure, so 3 m/s stays the one unconfirmed value and Civil Design stays at 6. Not changed.
+2. **Flat pipe label reads FLAT: BUILT 3.0.37, SEEN (W32).** Label "100 DIA. UPVC PIPE FLAT"; Edit Pipe Save keeps it.
+3. **Label grade on a held-grade pipe (INT-071 item 10).** Built 3.0.38 as a CHECK marker and a command-line line. SEEN (W35, W36). The line says the label grade is STILL 1 IN 100; whether that is what you meant is for you to judge.
+4. **Pit numbers.** Renumber only in Edit Pit. The window's refusals SEEN 3.0.35 (W20); BUG-426 (a typed number, then p1) not reached.
+5. **Privacy.** CESUPPORT never uploads: BUILT, SEEN 3.0.37 ("It has not been sent anywhere."); zip name coded: SEEN. Drawing paths cut to job numbers: stated by CE, zip not opened. Old report files deleted: section 3, item 7.
+6. **Manager updates.** Roll Back and Approve act on Civil and Manager as one pair (3.0.37): NOT SEEN and Roll Back changes nothing today (gap 4).
+7. **Wall pair gap 350 mm kept.** **F2 left as is** ("commonly used by me to save"); F2 runs CLEAN in a CE drawing, so use QSAVE; BUG-411 open.
+8. **Five Structural framing cards, roof first:** roof area setout and floor setout (OFF), framing legend (OFF), lintel proposals (OFF), level above and below (O)/(U) (not reported built).
 
-## 5. Still open, and acceptance
+## 5. Still open for Tim
 
-1. **Design cards (seven cards, 19 questions).** Tim: "send through to me". He answers them himself; not approved.
-2. **Pilot colleague and results folder.** The pilot colleague is **Max** (Tim: "Max - IDK"; no surname given). Results go to the SharePoint folder **CE Plugin Pilot Results** in the Engineering library (https://residentialstructures.sharepoint.com/Engineering/CE%20Plugin%20Pilot%20Results), in a sub-folder named by the date, job numbers only. **OPEN: Tim still has to confirm that Max can write to the Engineering library.** It is not known to work.
-3. **Nothing is Tim-accepted yet.** Each "Codex saw it work" means a test copy with evidence on file. Council values, design rules and sizing still need Tim's word.
-4. **Pilot order (Tim's ruling).** Tim runs the Day 1 checklist himself on one real job copy before any colleague pilot. That has not happened.
+1. **W30 settings tick:** yes or no for the column grip with beam linking ON.
+2. **Default template** in your AutoCAD profile points to a test copy (gap 11).
+3. **BUG-061 gone?** Codex could not reproduce it on the W26-26 copy (zero-length pipe aside). Closes only when you say.
+4. **Tc a, b or c** for big Kingston commercial lots; **the two clearance distances** (footing, service; metres); **lintel tolerance 350 mm.**
+5. **Floor-arrow order** (Joists, Bearers, Subfloor is not quite roof-down) and the legend words "DENOTES POST UNDER".
+6. **Max's write access** to the Engineering library, folder CE Plugin Pilot Results. Not known to work.
+7. **UPVC speed authority:** the CPAA manual gives no figure (item 4.1). **Label-grade ruling:** item 4.3.
+8. **The seven design cards** are with you; not approved. **Tim runs Day 1 himself first.** That has not happened.

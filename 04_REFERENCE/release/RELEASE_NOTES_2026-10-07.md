@@ -1,13 +1,13 @@
 # What changed in your CE tools
 
-**Civil 3.0.30 to 3.0.34. Manager 1.1.30 to 1.1.34. Structural 1.0.100 to 1.0.104.**
-Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install reports of 4 to 7 Oct. **Corrected Thu 8 Oct 2026** by an accuracy read against the installed code and the Codex AutoCAD reports W10 to W17 (list of corrections: `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`).
+**Civil 3.0.30 to 3.0.38. Manager 1.1.30 to 1.1.38. Structural 1.0.100 to 1.0.108.** Installed now on Tim's PC: **Civil 3.0.38, Manager 1.1.38, Structural 1.0.108.**
+Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install reports of 4 to 7 Oct. **Corrected Thu 8 Oct 2026** by an accuracy read against the installed code and the Codex AutoCAD reports W10 to W17 (list of corrections: `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). **Updated Fri 9 Oct 2026:** new section 1A lists what installs 35 to 43 brought and what Codex saw (reports W18 to W37); sections 2 to 6 are still written for 3.0.34 / 1.1.34 / 1.0.104 and carry notes where a later install changed them. **Tim has accepted nothing.** The known gaps are listed once, on `KNOWN_LIMITATIONS_2026-10-08.md`.
 
 ---
 
 ## 1. Answer first: what a drafter will notice
 
-1. **Pit numbers stay as you type them.** Type C2 and you get C2, not PC2. Type "8" in New Pit or Edit Pit when P8 exists and CE refuses it with a sentence naming P8. **Exception:** the Pit Schedule window itself does not refuse it yet (section 5, item 3).
+1. **Pit numbers stay as you type them.** Type C2 and you get C2, not PC2. Type "8" in New Pit or Edit Pit when P8 exists and CE refuses it with a sentence naming P8. From 3.0.35 the Pit Schedule window refuses it too (section 1A, item 1); renumber pits only in Edit Pit all the same.
 2. **New Pit opens with the cover level blank** after you restart AutoCAD. Place stays greyed out until you type a cover level.
 3. **Prompts show each default once.** Structural questions that used to read "<600> <600>" now read "<600>" once. Enter still takes the default.
 4. **FST: each change you make in the window is one U.** Delete a footing, close FST, press U, and the footing comes back.
@@ -15,16 +15,55 @@ Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install
 6. **Plainer words everywhere**: Manager, CEHEALTH, CDCHECK, Structural beam, bracing and footing messages. Wording is the biggest change in Structural.
 
 **Where each version stands (read from the installed program files 8 Oct):**
-0. **Installed now: Civil 3.0.35 and Manager 1.1.35 (8 Oct 03:59) and Structural 1.0.105 (8 Oct 04:21).** The 3.0.35 changes (PR 762, 763, 766, 747, 774, 777) and the 1.0.105 changes are NOT described below. Codex has since looked at 3.0.35 (W20, a short check) and 1.0.105 (W19, the U and REDO cases); see the staff help and known limitations pages for what it saw. Everything below is written for 3.0.34 / 1.1.34 / 1.0.104, which 3.0.35 contains.
-1. **Installed and in use before that (from Thu 8 Oct 00:50):** Civil 3.0.34 and Manager 1.1.34 (installed 8 Oct 00:50), Structural 1.0.104 (installed 8 Oct 00:56).
+0. **Installed now (read from the program files 9 Oct): Civil 3.0.38 and Manager 1.1.38 (8 Oct 12:36), Structural 1.0.108 (8 Oct 12:29).** Section 1A lists what installs 35 to 43 brought. Sections 2 to 6 below were written for 3.0.34 / 1.1.34 / 1.0.104, which the installed versions contain; where a later install changed a line, the line says so.
+1. **Installed from Thu 8 Oct 00:50 (install 33 and 34):** Civil 3.0.34 and Manager 1.1.34 (00:50), Structural 1.0.104 (00:56). Then 3.0.35 and 1.1.35 (03:59), Structural 1.0.105 (04:21), 3.0.36 and 1.1.36 (06:31), Structural 1.0.106 (07:07), Structural 1.0.107 (09:46), 3.0.37 and 1.1.37 (10:57), Structural 1.0.108 (12:29), 3.0.38 and 1.1.38 (12:36).
 2. **Earlier installs, still inside these:** Civil 3.0.33, Manager 1.1.33 (7 Oct 21:16) and Structural 1.0.103 (7 Oct 21:21); Civil 3.0.32, Manager 1.1.32 and Structural 1.0.102 (5 Oct).
-3. **Check your own version:** the AutoCAD status bar shows "CE MANAGER v1.1.34 [Modern]", "CE CVL SUITE v3.0.34" and "CE STRUC SUITE v1.0.104". Or type CEHEALTH: it prints one line for Civil and one for Structural (not Manager), then a line about the office IT folder.
+3. **Check your own version:** the AutoCAD status bar shows "CE MANAGER v1.1.38 [Modern]", "CE CVL SUITE v3.0.38" and "CE STRUC SUITE v1.0.108". SEEN on exactly these numbers, 8 Oct (W33). Or type CEHEALTH: it prints one line for Civil and one for Structural (not Manager), then a line about the office IT folder. Codex saw CEHEALTH only on 3.0.34 / 1.0.104.
 
 **What has been tested, in plain words:**
 1. **Built and unit-tested:** every item in this note.
-2. **Seen working by Codex in real AutoCAD (copies of test drawings, Tim's PC):** the items marked "Codex saw it". Runs: W10 to W13 on 3.0.32 / 1.0.102, W14 and W15 on 3.0.33 / 1.0.103, W16 and W17 on 3.0.34 / 1.0.104.
+2. **Seen working by Codex in real AutoCAD (copies of test drawings, Tim's PC):** the items marked "Codex saw it" or SEEN. Runs: W10 to W13 on 3.0.32 / 1.0.102, W14 and W15 on 3.0.33 / 1.0.103, W16 to W18 on 3.0.34 / 1.0.104, W19 and W20 on 1.0.105 and 3.0.35, W24 to W31 on 3.0.36 and 1.0.106 / 1.0.107, W32 on 3.0.37, W33 to W36 on 3.0.38 (W33 also read 1.0.108's version and first start; W37 on 9 Oct did only the start check).
 3. **Everything else says "not checked in AutoCAD".**
 4. **Accepted by Tim:** nothing in this note is recorded as accepted by Tim.
+
+---
+
+## 1A. Installed 8-9 Oct (installs 35 to 43): Civil 3.0.35 to 3.0.38, Manager 1.1.35 to 1.1.38, Structural 1.0.105 to 1.0.108
+
+Each line names the version it came in. **SEEN** = Codex watched it in real AutoCAD on a test copy (run shown). **NOT SEEN** = built and unit-tested only. Tim has accepted none of it. A gap that Codex found is not repeated here: see the known limitations page.
+
+### 1A.1 Civil and Manager
+
+1. **Pit Schedule window checks a typed pit number at once (3.0.35).** A bare 2, p2 or P2 typed over P1 (P2 exists) is refused: "[CE] Pit number 2 is the same pit number as P2 (another pit), so this pit keeps P1. Type a number no other pit uses." p1 and "P 1" stay P1. "P 2" is accepted with "[CE] P 2 looks like P2 (another pit). Check the numbering." SEEN 3.0.35 (W20). The "typed 9, then p1 still shows 9" case has a fix in 3.0.36: NOT SEEN.
+2. **Edit Pit refusal says "press Save" (3.0.35).** The line ends "... correct them and press Save again." and the button reads Save. SEEN 3.0.35 (W20).
+3. **Pit Schedule words (3.0.35 to 3.0.37).** Stop overriding keeps saying "Stopped overriding this row. The values you typed stay." (SEEN 3.0.35 and 3.0.38). A typed level only WAITS as an override: the plan changes at Stop overriding, not at Enter (SEEN 3.0.38, W33, W34). The Xref badge no longer sticks on OUT OF DATE (3.0.37): NOT SEEN.
+4. **Grade-check CHECK marker on the plan (3.0.38).** After a level is typed on a pipe with its own grade (Set my own) and you choose Stop overriding, the plan shows your level and a red marker like "CHECK: LABEL GRADE 1 IN 100, LEVELS GIVE ABOUT 1 IN 61", and the command line says the label grade is still 1 IN 100 and only the typed end changed. One U takes back the level and the marker together; REDO after 12 seconds returns both. SEEN 3.0.38 (W35, W36), also with one mouse click and Esc twice in the wait. A first version was taken out on 8 Oct because the finalizer could not prove REDO safe; this is the rebuilt one. Its layer, that it does not plot, and Edit Pipe Save removing it: NOT SEEN.
+5. **FLAT label (3.0.37).** A pipe typed with the same level at both ends reads "100 DIA. UPVC PIPE FLAT" with no grade figure; Edit Pipe Save keeps FLAT. U echoes CD and REDO works. SEEN 3.0.37 (W32).
+6. **CDFIXFLATPIPES steep wording (built 3.0.34, still the same).** A pipe held at 1 in 5 is offered with "steep, check it" instead of "Check by hand". NOT SEEN: a pipe typed flat is listed "to check by hand" and no test drawing has had a pipe flattened the old way.
+7. **Pit-outlet speed warning (3.0.37).** A pipe leaving a pit faster than 1.5 m/s (recommended) or 2.0 m/s (limit), AS/NZS 3500.3 clause 5.4.11.2(d), gives a warning in PIPEEDIT and CDRULES, never a block. The two figures are kept in the settings file, not yet a row on the Settings window. NOT SEEN.
+8. **Detention warning and orifice (3.0.38).** CDRULES warns on a detention pipe flatter than 1 in 200 for 225 mm and larger. "Orifice not required at 12 L/s or less" is a blank per-council value, so CE sizes as before. NOT SEEN.
+9. **Kingston commercial figures (3.0.37).** A commercial lot under 1000 m2: minor storm 1 in 10, time of concentration 7 minutes; pre-development C is the lower of the existing site C and 0.7 (Unknown until typed). Saved Kingston CDRULES runs show Stale once. NOT SEEN.
+10. **CDIMPORTXCIVIL and LandXML import skip a locked layer and say so (3.0.36).** They never unlock. The import itself ran on 3.0.36 (the window works; one U and REDO take back the whole import: SEEN W29), but no locked layer was tried. Also in 3.0.36: missing data is never drawn or printed as zero; a missing ground level is never read as level 0 (Edit Pipe says when cover was not checked); one set of pipe-sizing standards; a trench grate placed with no cover level stores a blank (3.0.38). NOT SEEN.
+11. **CESUPPORT (3.0.37).** It NEVER uploads by itself: "Support file saved on this PC: ... It has not been sent anywhere. If support asks for it, send it yourself (email, or the job's support folder)." The zip is made in a "CE Support" folder on the Desktop with a coded file name. SEEN 3.0.37 (W32). Drawing paths cut to job numbers: stated by CE, not checked (zip not opened).
+12. **Old real-named report files (3.0.36 Civil, 3.0.37 Manager).** Civil deletes its own old report named with a login and computer name when it starts; Manager's reports carry coded names and its old real-named report is deleted; glued logins are hidden in the machine report. NOT SEEN. An administrator-only "Who is this?" name book turns a coded id back into a PC (3.0.37): NOT SEEN.
+13. **Manager background work (1.1.36).** It skips unchanged files, scans off AutoCAD's own thread, and writes the office files safely. NOT SEEN; it may help the lag.
+14. **Manager Roll Back and Approve act on Civil and Manager as one pair (1.1.37).** NOT SEEN. Roll Back changes nothing today (known limitations page).
+
+### 1A.2 Structural, roof first, footings last
+
+1. **ROOF: a brace over 2700 mm keeps its drawn length and warns (1.0.105).** It used to be cut to 2700. From 1.0.106 BB warns like AB, and the limit is judged in millimetres. Markup AI refuses a brace when the default brace length in Settings is blank. An older bracing block with no stored length is left as it is, with one line saying so. The finalizers checked this in the code: **NOT SEEN in AutoCAD.**
+2. **ROOF: CSPOINTLOAD (1.0.105) and CSROOFSETOUT (1.0.106) are hidden and OFF.** SEEN 1.0.107 (W31): "The roof area setout is switched off in Settings (Roof area setout), so nothing was drawn. The Settings page for it is still to be built."
+3. **UPPER FLOORS: plainer failures (1.0.105).** STS1 and its sister commands say "STS1 could not switch this support block because its layer ... is locked. Nothing was changed. Unlock the layer, then run STS1 again." instead of "eOnLockedLayer". BTX with nothing selected says "No TEXT or MTEXT was selected. Nothing changed." (1.0.104 said "There is no TEXT or MTEXT in that window."). SBEAM names the missing size. NOT SEEN.
+4. **UPPER FLOORS: smaller changes (1.0.106).** A BTX that changes nothing leaves no undo step; BT1 writes the reason to the CE log if its block fails to load; the Structural report hides a login glued to letters or digits. NOT SEEN.
+5. **UPPER FLOORS: sheet sync skips a drawing a colleague holds open and names it (1.0.106).** Its log line carries no login (1.0.107). NOT SEEN.
+6. **UPPER FLOORS: the current layer comes back after C1, TS1 and DS (1.0.107).** Also when you cancel. SEEN 1.0.107 (W31). The "C1" label gap is on the known limitations page.
+7. **UPPER FLOORS: CSLINTELPROPOSE (1.0.107), CSFLOORSETOUT and CSFRAMINGLEGEND (1.0.108) are hidden and OFF.** CSLINTELPROPOSE SEEN 1.0.107 (W31), the same two-sentence reply. The other two: NOT SEEN.
+8. **GROUND FLOOR:** nothing new.
+9. **FOOTINGS: the strip-footing layer tidy-up (SF, BSF, STRIPLAYERSMERGE) runs quietly and never unlocks a layer (1.0.106).** NOT SEEN.
+10. **FOOTINGS: FADOPT now ASKS an unknown footing width (1.0.107):** "The width of ... is not known. Width in mm <300>:", shown once; Enter takes the Settings value (300 mm; screw pile 150 mm). NOT SEEN.
+11. **FOOTINGS: footing resize lines (1.0.105).** After a grip or STRETCH resize every line reads millimetres to one decimal ("PF1 is now 700 x 600 mm."; a 24-inch pad reads 609.6 in both lines). NOT SEEN.
+12. **Same-day re-issue of a sheet set (1.0.105).** The earlier PDFs are held aside and removed only when the new set is complete. The first re-issue after the install keeps the old behaviour. NOT SEEN.
+13. **Settings file.** The first start of each new Structural version wrote its new default rows into CS_Settings.json: SEEN for 1.0.105 (20 keys, W19), 1.0.106 (W24), 1.0.107 (W29, with the CE log line) and 1.0.108 (26,901 to 28,361 bytes, W33). None of your values changed.
 
 ---
 
@@ -40,7 +79,7 @@ Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install
 6. **CDFIXFLATPIPES now offers steep pipes it used to refuse.** A flattened pipe whose label held 1 in 5 used to read "Check by hand". It is now offered with "; steep: 1 in 5 is steeper than 1 in 10 (Settings warning) - check it", and a typed Yes writes the levels. Tim's steep-pipe ruling (no fixed limit, warn above 1 in 10, never block) was about proposed levels; applying it here is the release chat's reading. **Tim should see this once.** Codex saw only the "No flat pipes found: every pipe with a recorded grade falls. Nothing was changed." line (W16); the steep line is not checked in AutoCAD.
 7. **The steep-pipe values are not on the Settings window yet.** The warning (1 in 10) and the limit (none) live only in the settings file, although the message says "Settings warning".
 8. **CDRULES wording.** A pit at the top of a line with two pipes leaving it and no main outlet chosen now says "no incoming pipe" instead of "main outlet needs confirmation". Not checked in AutoCAD.
-9. **Report files no longer carry your login (Civil and Manager).** New machine report files are named with 16-character codes, not your Windows login or computer name. Codex saw the new names (W16, W17). The old real-named Civil file stays on the PC, the Manager report still has the real names inside it, and a support bundle (CESUPPORT) is still named with the computer name. Tim has ruled all three should be cleaned up (section 5A, item 4); not built yet.
+9. **Report files no longer carry your login (Civil and Manager).** New machine report files are named with 16-character codes, not your Windows login or computer name. Codex saw the new names (W16, W17). The old real-named Civil file stayed on the PC in 3.0.34; the later installs delete it, code the Manager report and code the support bundle name (section 1A.1, items 11 and 12).
 10. **Civil 3.0.34 and Manager 1.1.34 must be installed together.** They share CE_SHARED, and it changed in this release.
 
 ### 2B. Structural 1.0.104
@@ -75,7 +114,7 @@ Tim's rulings (5 Oct) are what these follow. Items 1 to 4 apply to a placed Pit 
 2. **"8" beside P8 is refused.** The pit keeps its own number and a sentence names P8: "[CE] 8 is the same pit number as P8 (another pit). P5 kept."
 3. **"C 2" beside C2 is allowed with a warning.** The rename goes ahead and the command line says "C 2 looks like C2 (another pit). Check the numbering."
 4. **A free number stays exactly as typed.** Only spaces at the ends are trimmed.
-5. **The Pit Schedule window (PITSCHEDULE) does NOT refuse yet.** The code has the sentence "Pit number 8 is the same pit number as P8 (another pit), so this pit keeps P5." but in AutoCAD Codex typed "2" over P1 (P2 exists) and "p1" over P1: the cell took both and no line appeared (W14, BUG-420, still open in 3.0.34). Do not renumber in this window until it is fixed. It also accepts "C 2" with no warning (section 5).
+5. **The Pit Schedule window (PITSCHEDULE) did NOT refuse on 3.0.33 and 3.0.34.** Codex typed "2" over P1 (P2 exists) and "p1" over P1: the cell took both and no line appeared (W14). **From 3.0.35 it refuses them** (section 1A.1, item 1; SEEN W20). Renumber in Edit Pit all the same (Tim's pilot rule).
 6. **A placed Pit Schedule table cell:** a refused number puts the old number back in the cell. A cell on a locked layer, in an Xref or in a reference edit is never written.
 7. **A plan pit label:** moving a label with MOVE reads the number you typed and applies the same rules. Double-click typing in a label also works for lettered numbers such as C2 (see section 5 for bare numbers).
 8. **A pit you already have as PC2 can be corrected (3.0.31).** Type C2 on its row in the Pit Schedule, then right-click and choose Stop overriding. It becomes C2 on the plan, in the table and in both pipes' From and To. Not checked in AutoCAD, and the window route has the fault in item 5.
@@ -214,31 +253,32 @@ Nothing here is promised beyond what is installed.
 2. **In 1.0.102 CSFDNPROPOSE said "Unknown command".** Codex saw this, as intended. From 1.0.103 it is a known command that does nothing.
 3. **The footing-proposal engine is OFF by default.** When it is eventually switched on, proposed footing sizes read "Unknown", never 0.
 4. **Steepest-pipe limit.** Tim ruled: no fixed limit, a Settings value, a warning above 1 in 10, never a block. **3.0.34 now follows this** in its values (no limit, warn above 1 in 10), but the values are not on the Settings window yet, and the levels proposal that uses them is still OFF. CDFIXFLATPIPES uses them now (section 2A, item 6). Tim confirmed on 8 Oct ("4. as recommended", INT-068): a flattened pipe held at 1 in 5 is offered with the "steep, check it" line, not "Check by hand". Codex has not seen that line.
-5. **Same-day re-issue replaces the earlier set; issue with no sheet ticked.** Tim ruled both. The issue-set changes are not in these releases.
+5. **Same-day re-issue replaces the earlier set; issue with no sheet ticked.** Tim ruled both. The same-day re-issue is built in 1.0.105 (section 1A.2, item 12; NOT SEEN). The issue preview window is not in any installed version.
 6. **"A level typed in the Pit window is never moved".** Tim ruled this. The rename routes in 3.0.33 already keep to it. The separate Pit-window change for it is not in these releases.
 7. **The two Civil changes held out of 3.0.33 are now in 3.0.34.** The steep-pipe change no longer brings back a fixed 1-in-20 limit, and the "Stop overriding" sentence now shows (section 2A).
-8. **Roof and floor point-load carry-down, member schedule from plan, title block question for new jobs, downpipe layouts.** Tim ruled on all of them. None is in these releases.
+8. **Roof and floor point-load carry-down, member schedule from plan, title block question for new jobs, downpipe layouts.** Tim ruled on all of them. Roof point loads (1.0.105), roof setout (1.0.106), floor setout and framing legend (1.0.108) are built hidden and OFF. The member schedule is built with its switch OFF. The title block question and downpipe layouts are not in the installed versions.
 9. **Clearances (footing and service distances in metres).** Tim has not typed the numbers. They stay Unknown and will live on the Settings page.
 10. **Charged rising pipe flips on a grip drag.** Tim ruled "keep it, with a one-line message that it flipped". The sources do not confirm that message is in these builds.
 
 ---
 
-## 5A. DECIDED, NOT YET BUILT (Tim's rulings INT-066, INT-068, INT-069, 8 Oct)
+## 5A. DECIDED: BUILT OR NOT, at 9 Oct (Tim's rulings INT-065 to INT-072)
 
-A ruling is not a fix. None of these is in the installed Civil 3.0.35, Manager 1.1.35 or Structural 1.0.105 unless a line says so, and none has been seen in AutoCAD. Tim has accepted nothing.
+A ruling is not a fix. "Built" means it is in the installed Civil 3.0.38, Manager 1.1.38 or Structural 1.0.108; it is NOT proven unless SEEN is shown. Tim has accepted nothing.
 
-1. **UPVC pipe speed limit.** Tim: "1. as recommended" (INT-068). The authority is the CPAA Hydraulics Design Manual. The figures read from it become PROPOSED Settings values for Tim to tick "Confirmed". Until then 3 m/s stays the one unconfirmed value and Civil Design stays at 6. (The manual has been read; it gives no UPVC figure. See CPAA_VELOCITY_READ_2026-10-08.md.)
-2. **Two new warnings, never blocks, figures on Settings.** Pit outlet speed (AS/NZS 3500.3 clause 5.4.11.2(d): 1.5 m/s recommended, 2.0 m/s shall not exceed). Detention pipe flatter than 1 in 200 for pipes 225 mm and larger, and "orifice not required" at 12 L/s or less.
-3. **Pit numbers.** Colleagues renumber pits only in Edit Pit during the pilot. A free number typed in the Pit Schedule window waits as a pending override until Review, Update or Stop overriding (that is how it works now).
-4. **Privacy.** Delete the old real-named Civil report files (Civil and Manager at start-up), scramble the names inside the Manager report, keep PC names out of support-bundle file names. CESUPPORT never uploads by itself, and drawing paths in it become job numbers.
-5. **Locked layers.** CDIMPORTXCIVIL skips a locked layer and says so (BUG-417; draft PR 765). A brace over 2700 mm keeps its drawn length and warns (it is still cut to 2700 today). The strip-footing layer tidy-up stays and runs quietly if done properly (draft PR 764). The 350 mm wall pair gap is kept.
-6. **Manager updates.** Roll Back Release: PCs go back at their next AutoCAD start, with an "are you sure". Approving a Civil update also approves the matching Manager update. (BUG-425 records that today the button does nothing and Civil can update without Manager.)
-7. **Sheet sync** skips sheets a colleague has open and says which.
-8. **Footings.** An unknown footing width asks for it, with the Settings value pre-filled (today 300 mm; screw pile 150 mm).
-9. **Flat pipe label (BUG-427).** The label reads FLAT with no grade figure when both ends are typed the same (Option A; Tim to confirm in one line). Today it still reads 1 IN 100. Built only as a draft.
-10. **F2 is left as it is for now.** Tim: "leave as is for now, commonly used by me to save". F2 runs CLEAN in a CE drawing; nothing is changing yet.
-11. **Structural framing cards A to E approved, roof first:** roof area setout, floor joist span arrow, framing legend, lintel/support proposals, level above and below (O)/(U). Nothing built.
-12. **Still open with Tim:** the seven design cards (he is answering them himself), the pilot colleague is Max (Tim, INT-071) and results go to the SharePoint folder CE Plugin Pilot Results in the Engineering library (INT-072), but Tim has not yet confirmed that Max can write to that library (open). Tim runs the Day 1 checklist himself on one real job copy before any colleague pilot.
+1. **UPVC pipe speed limit.** Tim: "1. as recommended" (INT-068): the authority is the CPAA Hydraulics Design Manual. The manual has been read and names NO uPVC figure (it gives 8 m/s for precast concrete), so 3 m/s stays the one unconfirmed value and Civil Design stays at 6. Not changed.
+2. **Pit-outlet speed warning** (1.5 and 2.0 m/s): BUILT 3.0.37, NOT SEEN, no Settings row yet. **Detention pipe flatter than 1 in 200:** BUILT 3.0.38, NOT SEEN. The orifice figure is a blank per-council value (INT-070).
+3. **Pit numbers.** Colleagues renumber pits only in Edit Pit during the pilot. A free number typed in the Pit Schedule window waits as a pending override until Review, Update or Stop overriding (that is how it works).
+4. **Privacy.** BUILT and NOT SEEN: Civil and Manager delete their old real-named report files at start-up, Manager's report carries coded names. BUILT and SEEN 3.0.37: CESUPPORT never uploads by itself and its file name is coded. Drawing paths in it become job numbers: stated by CE, not checked.
+5. **Locked layers.** CDIMPORTXCIVIL skips a locked layer and says so (3.0.36, NOT SEEN). A brace over 2700 mm keeps its drawn length and warns (1.0.105, NOT SEEN). The strip-footing layer tidy-up runs quietly (1.0.106, NOT SEEN). The 350 mm wall pair gap is kept.
+6. **Manager updates.** Roll Back and Approve act on Civil and Manager as one pair: built 1.1.37, NOT SEEN. Roll Back changes nothing today and must not be pressed.
+7. **Sheet sync** skips sheets a colleague has open and says which: built 1.0.106, NOT SEEN.
+8. **Footings.** An unknown footing width asks for it with the Settings value pre-filled: built in FADOPT 1.0.107, NOT SEEN (300 mm; screw pile 150 mm).
+9. **Flat pipe label.** Tim: "5. yes" (INT-070). BUILT 3.0.37 and SEEN: the label reads FLAT. The Edit Pipe window still shows 1 in 100.
+10. **Label grade on a held-grade pipe (INT-071 item 10).** Built 3.0.38 as the CHECK marker and a command-line line, SEEN. Tim's words were "10. answers below 1. yes 2. yes 3. warning on plan implenmented well would be good"; the line says the label grade is still 1 IN 100, and whether that is what he meant is for him to judge.
+11. **F2 is left as it is for now.** Tim: "leave as is for now, commonly used by me to save". F2 runs CLEAN in a CE drawing; nothing is changing.
+12. **Structural framing cards A to E approved, roof first:** roof area setout (1.0.106) and floor setout (1.0.108) are built OFF, framing legend (1.0.108) OFF, lintel and support proposals (1.0.107) OFF. Level above and below (O)/(U) is not in any report as built.
+13. **Still open with Tim:** the seven design cards; the Tc choice (a, b or c) for big Kingston commercial lots; the footing and service clearance distances; the lintel tolerance 350 mm; the floor-arrow order and the "DENOTES POST UNDER" legend wording; the settings tick for W30; the default template in his AutoCAD profile; whether BUG-061 is gone; Max's write access to the Engineering library (INT-071, INT-072). Tim runs the Day 1 checklist himself on one real job copy before any colleague pilot; that has not happened.
 
 ---
 
@@ -246,18 +286,18 @@ A ruling is not a fix. None of these is in the installed Civil 3.0.35, Manager 1
 
 1. **F2 runs CLEAN.** In the setup Codex tested, pressing F2 runs the CE Structural command CLEAN (purge, restyle, regen on the open drawing) instead of opening the text window. Use TEXTSCR and GRAPHSCR to flip the text window. Do not press F2 expecting a save. Logged as BUG-411, still open. Tim has ruled "leave as is for now, commonly used by me to save": nothing is being changed, and the desk will check what F2 does for him first.
 2. **Edit Pit pit-number clash: fixed in 3.0.34.** Before 3.0.34, Edit Pit could remove another pit's record when you typed its number. 3.0.34 refuses it (section 2A, item 1). Anyone still on 3.0.33 or older: do not renumber in Edit Pit.
-3. **The Pit Schedule window did not check pit numbers on 3.0.33 (BUG-420, BUG-415).** In AutoCAD it accepted "2" beside P2, "p1" over P1 and "C 2" beside C2 with no line. Tim's pilot ground rule: renumber pits ONLY in Edit Pit. INT-069 says a window fix is in 3.0.35 (PR 766), but nobody has seen it in AutoCAD and BUG-426 (open, MEDIUM) says a typed 9 then p1 still shows 9, so the rule stands.
+3. **The Pit Schedule window did not check pit numbers on 3.0.33 (BUG-420, BUG-415).** In AutoCAD it accepted "2" beside P2, "p1" over P1 and "C 2" beside C2 with no line. The window fix (PR 766) is in 3.0.35 and Codex saw its refusals (W20). BUG-426 ("typed 9, then p1 still shows 9") has a fix in 3.0.36 that nobody has seen. Tim's pilot ground rule stands: renumber pits ONLY in Edit Pit.
 4. **A plan label typed as a bare number by double-click is refused with a generic sentence.** "Pit ID must be one compact identifier such as P1 or SPS1." The label keeps showing what you typed. A later MOVE of that label then renames the pit, to "12" quietly if 12 is free. Nothing is lost, but it is late and quiet.
 5. **A stale table cell can rename a pit on MOVE.** A placed table cell that still shows an old number (because its layer was locked at the last refresh) is read as typed when you MOVE it after unlocking. Read in the code, not checked in AutoCAD.
 6. **Double-click typing in a placed table cell may not reach CE.** CE pauses while TEXTEDIT, MTEDIT or DDEDIT run, and no other route was found. If you type C2 over P5 and nothing changes after the next refresh, this is why. Same as 3.0.30. Not checked in AutoCAD.
-7. **Look-alike numbers.** On 3.0.31 and 3.0.32 a typed "8" beside P8 was accepted as two pits. From 3.0.33 New Pit refuses it, and from 3.0.34 Edit Pit refuses it. The Pit Schedule window still accepts it (item 3). "C 2" beside C2 is accepted, by Tim's ruling, with a warning (except in the window).
+7. **Look-alike numbers.** On 3.0.31 and 3.0.32 a typed "8" beside P8 was accepted as two pits. From 3.0.33 New Pit refuses it, from 3.0.34 Edit Pit refuses it and from 3.0.35 the Pit Schedule window refuses it (item 3). "C 2" beside C2 is accepted, by Tim's ruling, with a warning.
 8. **Pit placement message.** After placing a pit on 3.0.32, Codex saw once: "CE could not save its pipe and pit record with this command. It will be saved with your next command." The cause is not yet found (BUG-412). Codex did not see it on 3.0.33 (W14). Say so if you see it.
 9. **CDRECOVERINVERTS may skip many pipes on old drawings.** It will not guess. The final line counts the skips, so read it.
 10. **Undo after Stop overriding.** The window has no Undo button. After you close it, one U takes back the whole Pit Schedule visit. Check what U brings back, including the plan label text.
 11. **FST Undo cases not all completed.** Delete plus one U passed twice. Other cases, including U after an FST Zoom (it should take back only the zoom), are not checked. If, after an FST Delete, U does nothing, or takes back two commands, or brings back a footing on the drawing but not in FST, stop using FST Delete on real jobs and tell Tim.
-12. **Footing resize lines round differently in an inch drawing (1.0.104).** After STRETCH the first line can read "609.6 x 609.6 mm" and the next "610 x 610 mm". Both are millimetres.
-13. **A support block on a locked layer gives raw words.** STS1 prints "[CE_STRUC_SUITE] TS1 switch failed: eOnLockedLayer". Nothing is unlocked or changed.
-14. **Old real-named report files stay.** Civil's old machine report named with your login and computer name is kept on the PC; the Manager report still has the real names inside it; CESUPPORT bundles are named with the computer name. Tim has now ruled these should go (BUG-423; section 5A, item 4). Not built yet.
+12. **Footing resize lines in an inch drawing (1.0.104).** After STRETCH the first line could read "609.6 x 609.6 mm" and the next "610 x 610 mm". From 1.0.105 both read 609.6 (section 1A.2, item 11; NOT SEEN).
+13. **A support block on a locked layer (1.0.104).** STS1 printed "[CE_STRUC_SUITE] TS1 switch failed: eOnLockedLayer". From 1.0.105 it says in plain words that the layer is locked and nothing changed (section 1A.2, item 3; NOT SEEN). Nothing is ever unlocked.
+14. **Old real-named report files (BUG-423).** In 3.0.34 Civil's old machine report named with your login and computer name stayed on the PC. The later installs delete it, code the Manager report and code the CESUPPORT file name (section 1A.1, items 11 and 12). NOT SEEN, except the coded CESUPPORT name.
 15. **Not measured on a real job:** the cost of the extra record read when you start a text edit, and PITSCHEDULE's extra scans on a large drawing.
 16. **AutoCAD 2022 to 2024.** These builds were built and unit-tested. The reports list failures that come from the older reference files in the test host, not from the product. Nothing here was opened in those versions.
 17. **Old test failure.** One long-known Civil calculation test (Glen Eira detention back-test, 34.6 % against 30 %) is still red. It is not new and not touched by this release.
@@ -285,7 +325,14 @@ A ruling is not a fix. None of these is in the installed Civil 3.0.35, Manager 1
 
 ## 8. Where this came from
 
-Reports read: the Opus finalizer reports for each train (C-17 to C-20, S-18 to S-21), the matching assembly reports, the payload reports for the installs, the install logs (`C:\ce_rc_scratch\install_c30.log`, `install_c31s.log`, `install_c32.log`, `install_c33s.log`), the Codex reports W10 to W17 and the release queue (items 160 to 211), plus Tim's rulings in the 28 Sep to 8 Oct decisions file (INT-059 to INT-066).
+**Updated 9 Oct for installs 35 to 43:** the Opus train reports C-21 to C-24 and S-22 to S-25 (assembly and finalizer), the Codex reports W18 to W37 in `C:\Lisp Files\_TEST_COPIES_20260923`, release queue items 209 to 224, BUG-425 to BUG-445, and Tim's rulings INT-066 to INT-072.
+1. **Civil 3.0.35 and Manager 1.1.35 (installed 8 Oct 03:59):** PR #762, #763, #766, #747, #774, #777.
+2. **Civil 3.0.36 and Manager 1.1.36 (06:31):** PR #765, #769, #771, #772, #773, #785, #782, #783, #784, #786, #788.
+3. **Civil 3.0.37 and Manager 1.1.37 (10:57):** PR #797, #796, #801, #790, #789, #807, #794, #795, #803 (#805 was taken out for REDO safety; #791 and #800 skipped).
+4. **Civil 3.0.38 and Manager 1.1.38 (12:36):** the rebuilt #805, #803 and #801 follow-ups, #791, #809.
+5. **Structural 1.0.105 (04:21):** PR #775, #735, #737, #736, the issue stack #692 > #704 > #700 > #702 > #721 > #743, #776, #770, #728. **1.0.106 (07:07):** #778, #779, #780, #764, #787, #798, #792. **1.0.107 (09:46):** #793, #799, #808, #810, #806. **1.0.108 (12:29):** #804 (framing legend, OFF) and #802 (floor setout, OFF).
+
+Earlier reports read: the Opus finalizer reports for each train (C-17 to C-20, S-18 to S-21), the matching assembly reports, the payload reports for the installs, the install logs (`C:\ce_rc_scratch\install_c30.log`, `install_c31s.log`, `install_c32.log`, `install_c33s.log`), the Codex reports W10 to W17 and the release queue (items 160 to 211), plus Tim's rulings in the 28 Sep to 8 Oct decisions file (INT-059 to INT-066).
 
 1. **Civil 3.0.31 (installed 4 Oct):** PR #637, #660, #645, #654, #659, #646, #643, #641, #656, #634, #663, #655, #661.
 2. **Civil 3.0.32 (installed 5 Oct):** PR #666, #671, #669, #681, #685, #683, #658, #677, #684.
