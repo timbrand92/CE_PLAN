@@ -1096,3 +1096,44 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **#824 @ 60c0401f MERGE-WITH-FIXES (MEDIUM):** no other code touches acad.cuix. BUT it was cut from the Structural train, whose Civil CuiMenuGeneratorService is an older copy (about 100 lines differ from C-24). Its test 3 pins QueueAutoCadLoad, which C-24 does not have. Re-cut it on rel-20261008g, keeping TryLoadPartialMenu.
    - **#825 @ aba8e946 MERGE** (OFF, typed only): one Undo, locked layers, REFEDIT and Xref all OK. 2 LOWs: an orphaned copy after "Start again" on a locked layer; the wording when it is off.
    - Usage: unknown (headless).
+815. **Fri 09 Oct 02:46** — Run 131, rest of the reviews:
+   - **#812 b7aaa225, #818 f89af2ca, #822 a771fee7:** still MERGE on their current heads (my run 130 comments are on these heads).
+   - **Stacked Civil chains:** every PR has a real Opus MERGE on its current head.
+     - L3-NETWORK: #682 f411c1cc, #693 da7574c9, #754 639c231b; Codex #698 7145fb33 is stacked on #682.
+     - L3-SOURCES: #680 26d00f8a, #706 23dc964c, #751 d2d4ddf9, #755 e3b5dcbf, #821 0608a8f1.
+     - #755 re-read on its head today: MERGE again, with 1 LOW (an empty prefix would let bare drawn numbers repeat).
+   - **ONE-LINE MERGE ORDER:** two independent chains.
+     - NETWORK: #682 → #693 → #754, then #698 (the Codex window).
+     - SOURCES: #680 → #706 → #751 → #755 → #821.
+   - **Conflicts (read-only merge-tree trial against rel-20261008g; no build):** all are keep-both.
+     - Each chain conflicts with the train only in REGRESSION_LOG.
+     - The two chains conflict with each other in Drainage UserSettings.cs: keep both properties, NetworkLayoutProposal then SourcesProposal.
+     - #698 against #693 in LayoutGapsCommand.cs: keep the proposal line first, then the window call.
+     - All five bases are the old train rel-20261015h, which is inside C-24.
+816. **Fri 09 Oct 02:46** — **Corrected lists (current heads, newest real Opus MERGE on each; checked by ancestry).**
+   - **Trains already built:**
+     - C-25 = rel-20261009c: it took #814 and #820, but **NOT #819**.
+     - S-26 = rel-20261009d: it took #815, plus #812 @ 12521645 and #818 @ d7610d62 (the OLD heads).
+   - **C-26 (Civil/Manager), plain MERGE = 7:**
+     - #819 7ad024e7: one commit over C-25; it was left out of C-25.
+     - #800 87926100
+     - #811 88f48907
+     - #816 3a9f1bba
+     - #822 a771fee7
+     - #823 38cd9e42: one commit over C-24; #805 is already in C-24.
+     - #817: CHERRY-PICK 796ad58a and 70568a1d only (its base is the Structural train).
+   - **C-26 optional (OFF engines):** the two chains above, in the order given.
+   - **C-26 OUT:**
+     - #824: MERGE-WITH-FIXES. Re-cut it on rel-20261008g; its test pins code the Civil train does not have.
+     - #781 and #768: as before.
+   - **S-27 (Structural), plain MERGE = 3:**
+     - #812: one wording commit, b7aaa225.
+     - #818: one wording commit, f89af2ca.
+     - #825 aba8e946: CSLEVELCARRY, OFF and hidden. Four commits over rel-20261009b.
+   - **S-27 OUT:** #813 (duplicate: close).
+817. **Fri 09 Oct 02:46** — HEADLESS RUN 131 ended. 4 OPUS comments: MERGE 3 (#823, #825, #755 re-read) and MERGE-WITH-FIXES 1 (#824).
+   - **Not checked:**
+     - no build or test; nothing in AutoCAD;
+     - the merge-tree trials were read only;
+     - #682, #693, #754, #680, #706, #751 and #698 were not re-read: their existing MERGE stands on unchanged heads.
+   - Usage: unknown (headless).
