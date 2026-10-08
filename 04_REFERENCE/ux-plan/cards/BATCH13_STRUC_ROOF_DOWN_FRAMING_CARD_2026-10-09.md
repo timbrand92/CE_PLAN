@@ -2,6 +2,26 @@
 
 # Batch 13 card: the framing plans, roof down (first Structural roof-down batch), 9 Oct 2026
 
+## Tim's answers (Fri 9 Oct about 08:30, INT-075; note added by design run 8)
+
+Tim answered `TIM_BATCH_QUESTIONS_4_5_2026-10-09.md` by number. For this card (questions 9 to 15), verbatim: "9. p1 for purlins p1 for
+timber posts both apply, typically they dont appear on the same jobs 10. depends on project and layouts 11. as recommended 12. as
+recommended 13. as recommended 14. as recommended 15. as recommended". So:
+1. **Question 9 OVERRIDES the recommendation:** "P1" is used for **both** purlins and timber posts; they typically do not appear on the same
+   job. **No separate purlin letter.** If both appear on one job, CE warns (R-27) and never blocks. Card 13.2's "P is a timber post ...
+   purlins tag P1 today ...: the clash is the question" and recommended answer 3 below are **superseded 9 Oct**: the roof groups keep P for
+   posts AND purlins, and the member schedule lists whichever the job has.
+2. **Question 10 OVERRIDES the recommendation:** the member schedule's position "depends on project and layouts". Desk interpretation: CE
+   **asks each time, per layout, and remembers it per project** (offers the last answer for that layout as the default). Card 13.2's "first
+   time asks Framing / Separate, default Framing" and recommended answer 4 below are **superseded 9 Oct**.
+3. **Questions 11 to 15 as recommended:** beam hover status words "calc approved", "calc done, not approved", "no calc yet", "Unknown";
+   tie-down TD1 strap / TD2 bolted / TD3 proprietary stay placeholders until Tim names them; one "Roof-down help" switch, trialled on Tim's PC
+   for a week; beam layers stay BEAM / BEAM LOWER (no S); past-job counting later, after Tim sees the first ten counts.
+4. **House rules from the same answers:** **no blue** in any window (gold, black, white / grey); **plain name and command name together**
+   during the transition, e.g. "Member schedule from plan (CSMEMBERSCHEDULE)", behind a Settings switch "Show AutoCAD command names",
+   default ON.
+5. Builders build on these answers without waiting (INT-073, extended to this card by the desk at 08:05). Windows are Codex's.
+
 **Status: DRAFT. Not approved by Tim.** Under INT-073 (Tim, Fri 9 Oct about 05:50: "the builds should not be hung on me answering
 questions") builders MAY build this card on the **Recommended** answers below, as DRAFT PRs, tests red first, every new behaviour behind
 a Settings value and OFF where it changes what a drafter sees, nothing retired, no old command removed, locked layers / Xref / REFEDIT
@@ -212,8 +232,10 @@ PROPOSALS_2026-10-07.md`; `CARD_UX-FRM-05_ROOF-AREA-SETOUT_2026-10-07.md`; `CARD
 
 1. One "Roof-down help" switch, default OFF; Tim's PC trial turns it on.
 2. CSPLANLEVEL asked inside the first roof-down command on an unlevelled plan.
-3. Roof groups as in 13.2; P stays a post (purlins keep P1 only as the rafter tool's tag until Tim answers).
-4. Member schedule "Last place" memory per job; first time asks Framing / Separate, default Framing.
+3. ~~Roof groups as in 13.2; P stays a post (purlins keep P1 only as the rafter tool's tag until Tim answers).~~ *(superseded 9 Oct by
+   Tim's answer 9: P1 for purlins and timber posts both; warn if both on one job; see "Tim's answers" at the top)*
+4. ~~Member schedule "Last place" memory per job; first time asks Framing / Separate, default Framing.~~ *(superseded 9 Oct by Tim's
+   answer 10: ask each time per layout, remember per project; see the top)*
 5. Bracing Wall option added beside today's two clicks; one U per placement.
 6. Wall line = within 300 mm on one straight line (Settings).
 7. Beam hover OFF by default; every beam "no calc yet" until UX-SCALC stores results.
