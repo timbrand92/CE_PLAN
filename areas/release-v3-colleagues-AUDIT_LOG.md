@@ -14,3 +14,5 @@ Helper: CE_ACAD / release-v3-colleagues / audit / 01 (read-only; started by desk
 8. **Fri 9 Oct 2026 08:59 (PC clock)** — audit run 1 ended. Report: areas/release-v3-colleagues-AUDIT_01_REPORT_2026-10-09.md. A: 11 privacy routes ranked (blocker: "Send a fault report" / CEMANAGERDIAG writes real login, PC name and user folder to the office IT folder; zip still carries drawing names logged without ".dwg" and folder/PDF paths; login written into drawings by connection decisions). B: nothing found writing between U and REDO in Structural 1.0.110 (code reading); TS1, R1, FSF, FPFC, grips, Sheets update, autosave-on not walked by Codex; scan blind to async and late-bound COM calls. C: Structural rewrites CS_Settings.json at start-up when it gains default rows (seen W43-04); Civil and Structural save settings at start-up after each new version. Code reading only, nothing run.
 
 9. **Fri 9 Oct 2026 09:21 (PC clock)** — hunt3_cross (run 2) started. Read-only: jargon, window words, blue, Settings labels, double-read Settings, CE_SHARED drift.
+
+9. **Fri 9 Oct 2026 09:21 (PC clock)** — hunt2_civil run 2 started (Civil design tools beyond Day 1, code reading only).
