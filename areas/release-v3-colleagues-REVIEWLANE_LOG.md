@@ -1178,3 +1178,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 821. **Fri 09 Oct 03:24** — HEADLESS RUN 132 ended. 3 OPUS comments: MERGE 2 (#826, #804) and MERGE-WITH-FIXES 1 (#823).
    - **Not checked:** no build, test or AutoCAD; the conflicts were judged from read-only merge-tree trials.
    - Usage: unknown (headless).
+822. **Fri 09 Oct 03:59** — HEADLESS RUN 133 started (desk plan/03 04:10: #823 e169d6ae grade-key fix, #827 BUG-447 X-Civil end-matching; corrected C-27 / S-28 lists). Usage: unknown (headless).
