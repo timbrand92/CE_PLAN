@@ -1057,3 +1057,36 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - open PRs below #806 not re-scanned.
    - Usage: unknown (headless).
 809. **Fri 09 Oct 02:20** — HEADLESS RUN 130 started (desk plan/03 priority: fix rounds #816 #811 #800 #817, new #821, any PR without an Opus comment on its head). Usage: unknown (headless).
+810. **Fri 09 Oct 02:27** — Run 130 reviews (read only; all read by me, no sub-reviewer). 8 OPUS comments, all MERGE.
+   - **#818 @ f89af2ca MERGE:** run 129 LOW fixed. The taken-mark line moves the suggestion on first.
+   - **#817 @ 70568a1d MERGE:** MEDIUM fixed. "Your typed value is waiting...", one constant.
+   - **#812 @ b7aaa225 MERGE:** LOW fixed. No raw command name in the Enter line.
+   - **#816 @ 3a9f1bba MERGE:** MEDIUM fixed. An allow-list of the plugin log names; other files are counted, never named; rotated logs are in. 1 LOW (follow-up): the main Structural logs sit in %APPDATA%\TIM_CE_CADTOOLS\logs, which the zip does not read. This fails safe.
+   - **#811 @ 88f48907 MERGE:** MEDIUM and both LOWs fixed. A damaged shared admin list fails closed; the local list is used only when no shared list exists.
+   - **#800 @ 87926100 MERGE:** MEDIUM fixed. MaxLabel compares with the new ShippedMaxVelocityMs (the shipped table), never the live Settings.
+   - **#821 @ 0608a8f1 MERGE (L3-SOURCES PlaceMany engine, OFF, stacked on #755 e3b5dcbf, which is MERGE and not yet in any train):** each downpipe goes through the one Place step; REFEDIT stops the lot; locked layer or taken number leaves out only that one, named. 3 LOWs for the caller slice. One U is not proven: the caller must run Accept as ONE command.
+   - **#822 @ a771fee7 MERGE (NEW, test hygiene):** Manager tests can no longer reach the real OneDrive IT Admin folder. AutoCAD behaviour is unchanged. 1 LOW: a comment-only line in UserSettings.cs.
+   - Scan of all 60 open PRs: no other PR has a head newer than its newest Opus comment.
+   - Usage: unknown (headless).
+811. **Fri 09 Oct 02:27** — **Corrected lists (current heads; newest real Opus MERGE on each head; bases checked by ancestry against rel-20261008g (C-24) and rel-20261009b (S-25)).**
+   - **C-25 (building now):** #814 9c89763c, #819 7ad024e7, #820 58a079b8. All unchanged and still MERGE.
+   - **S-26 (building now):** #815 f8bc54e3, #812, #818.
+     - Take the NEW heads: #812 b7aaa225 and #818 f89af2ca (both MERGE).
+     - If the train already took 12521645 / d7610d62, the one wording commit of each goes into S-27.
+   - **C-26 (Civil/Manager), plain MERGE = 5:**
+     - #800 87926100
+     - #811 88f48907
+     - #816 3a9f1bba
+     - #822 a771fee7
+     - #817 70568a1d: **CHERRY-PICK its two commits (796ad58a, 70568a1d); do not merge the branch.** Its base is the Structural branch rel-20261009b, so a merge would pull about 1380 Structural-train commits. The changed line ("Override enabled for linked row.") is in rel-20261008g at PitScheduleViewModel.Data.cs:1209. The constant's insert point differs, so expect a trivial conflict there.
+     - The C-26 PRs touch different files, except REGRESSION_LOG (keep both sides).
+   - **C-26 optional (OFF engine):** #755 e3b5dcbf then #821 0608a8f1, in that order.
+   - **C-26 out:** #781 / #768 (as before).
+   - **S-27 (Structural):** none new beyond the S-26 follow-ups above.
+   - **S-27 out:** #813 (duplicate: close).
+812. **Fri 09 Oct 02:27** — HEADLESS RUN 130 ended. 8 OPUS comments (MERGE 8).
+   - **Not checked:**
+     - no build, test or merge-tree trial (the #817 cherry-pick conflict was judged by reading);
+     - nothing in AutoCAD;
+     - #755 was not re-read.
+   - Usage: unknown (headless).
