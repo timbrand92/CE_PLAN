@@ -2,6 +2,22 @@
 
 # Batch 2 card: checking the network (Day 1 steps 12 and 13), 9 Oct 2026
 
+## Tim's answers (Fri 9 Oct about 08:30, INT-075; note added by design run 8)
+
+Tim answered `TIM_BATCH_QUESTIONS_2_3_2026-10-09.md` by number. For this card (questions 1 to 7), verbatim: "1. as recommended 2. as
+recommended 3. as recommended 4. as recommended 5. as recommended 6. as recommended - send this report back to tim / admin for fixing or
+improving 7. as recommended", and "15. answers above". So:
+1. **Approved on the recommended answers** (questions 1 to 7): amber ring + Checks row for a pulled-off pipe end; one Checks palette with
+   Connections, Rules and Ignored tabs; CDCHECK and CDRULES answers kept with one line pointing to the palette; an Ignore kept in the drawing
+   with reason, name and date, back when the object changes; Show where at about a third of the screen with a glow, Esc clears; the pause
+   offer after about 2 s on three edits running; only conveniences may be paused.
+2. **Question 6 adds (card 2.7):** when a drafter pauses a slow feature, CE also **sends a report to Tim / the office admin** (the "Send to
+   admin" route: feature name, the measured delay, how often; no drawing names) so it can be fixed or improved.
+3. **House rules from the same answers:** **no blue** in any CE window, the Checks palette included (gold, black and white / grey; Tim's
+   question 8); **plain name and command name together** during the transition, e.g. "Checks (CDCHECK)", behind a Settings switch "Show
+   AutoCAD command names", default ON.
+4. Builders build on these answers without waiting (INT-073). Nothing is accepted without Tim or a Codex PASS in AutoCAD.
+
 ## Re-check on the release commit (run 6, 9 Oct 2026)
 
 This card was already written against 446162c2. Run 6 re-read every file:line in "Code references" on that commit:
