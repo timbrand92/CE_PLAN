@@ -1329,3 +1329,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 840. **Fri 09 Oct 07:39** — HEADLESS RUN 137 ended.
    - **Not checked:** no build, test or AutoCAD; C-27 contents (branch not pushed); #838 #840 #841 (unchanged heads, run 136 verdicts stand).
    - Usage: unknown (headless).
+841. **Fri 09 Oct 08:00** — HEADLESS RUN 138 started (desk plan/03 08:10 list: #837 32fded17, #839 8a93aa53, #847 a4474f71, #848, #831/#843/#842/#844 fix heads, build/04 run 56 PRs).
