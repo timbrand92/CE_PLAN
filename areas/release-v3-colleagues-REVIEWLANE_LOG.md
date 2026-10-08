@@ -998,3 +998,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - nothing in AutoCAD;
      - #791 and #800 checked only as rebase deltas against their reviewed heads.
    - Usage: unknown (headless).
+801. **Thu 08 Oct 14:02** — HEADLESS RUN 128 started (desk plan/02 priority: build/02 run 111, build/04 runs 45-46, #800 #811 #812, newer heads of #801-#804, new PRs). Usage: unknown (headless).
