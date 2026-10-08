@@ -1023,3 +1023,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - nothing in AutoCAD;
      - open PRs below #776 (200 open in total) not re-scanned this run.
    - Usage: unknown (headless).
+805. **Fri 09 Oct 01:38** — HEADLESS RUN 129 started (desk plan/02 priority: build/02 run 112, build/03 run 59, build/04 run 47, re-check #814 #815, new PRs). Usage: unknown (headless).
