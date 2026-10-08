@@ -1296,3 +1296,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
 836. **Fri 09 Oct 07:09** — HEADLESS RUN 136 ended.
    - **Not checked:** no build, test or AutoCAD; C-27 contents (branch not pushed).
    - Usage: unknown (headless).
+837. **Fri 09 Oct 07:35** — HEADLESS RUN 137 started (desk plan/03 07:50: INT-074 plastic pit = PP cover text only, judge #832; re-review #836 #837 #839 #831 #843 #834, new #842 #844 #845; C-28/S-28 lists).
