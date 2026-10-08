@@ -10,3 +10,4 @@ Helper: CE_ACAD / release-v3-colleagues / audit / 01 (read-only; started by desk
 3. **Fri 9 Oct 2026 08:54 (PC clock)** — hunt_civil run 1 ended. 15 draft findings HUNT-C-01..15 (1 HIGH, 6 MEDIUM, 8 LOW), code reading only, none seen in AutoCAD. Report: areas/release-v3-colleagues-HUNT_CIVIL_2026-10-09.md.
 
 2. **Fri 9 Oct 2026 08:55 (PC clock)** — hunt_struc run 1 ended. 15 findings HUNT-S-01..15 in areas/release-v3-colleagues-HUNT_STRUC_2026-10-09.md (code reading only, nothing run).
+7. **Fri 9 Oct 2026 08:56 (PC clock)** — hunt_mgr run 1 ended. Report: areas/release-v3-colleagues-HUNT_MANAGER_2026-10-09.md (15 findings, 2 HIGH). Installed was already Civil 3.0.41 / Manager 1.1.41 (660487d1), Manager code identical to 1200744d apart from version stamps.
