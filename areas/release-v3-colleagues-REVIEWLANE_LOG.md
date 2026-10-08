@@ -1091,3 +1091,8 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - #755 was not re-read.
    - Usage: unknown (headless).
 813. **Fri 09 Oct 02:40** — HEADLESS RUN 131 started (desk plan/03 priorities: #823 #824 #825, re-check #812 #818 #822, then stacked Civil chain #682 #693 #754 #755 and its merge order; corrected C-26 / S-27 lists). Usage: unknown (headless).
+814. **Fri 09 Oct 02:44** — Run 131 reviews (read only; read by me, no sub-reviewer):
+   - **#823 @ 38cd9e42 MERGE** (after #805 00020c33): redo-safe; the guard is still asked, and it runs inside the Edit Pipe command, so one U covers both. Confirmed that an edit changing only the grade setting leaves the marker (it compares levels only). LOW follow-up.
+   - **#824 @ 60c0401f MERGE-WITH-FIXES (MEDIUM):** no other code touches acad.cuix. BUT it was cut from the Structural train, whose Civil CuiMenuGeneratorService is an older copy (about 100 lines differ from C-24). Its test 3 pins QueueAutoCadLoad, which C-24 does not have. Re-cut it on rel-20261008g, keeping TryLoadPartialMenu.
+   - **#825 @ aba8e946 MERGE** (OFF, typed only): one Undo, locked layers, REFEDIT and Xref all OK. 2 LOWs: an orphaned copy after "Start again" on a locked layer; the wording when it is off.
+   - Usage: unknown (headless).
