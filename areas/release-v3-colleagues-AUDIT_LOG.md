@@ -30,3 +30,5 @@ Helper: CE_ACAD / release-v3-colleagues / audit / 01 (read-only; started by desk
 13. **Fri 9 Oct 2026 09:41 (PC clock)** — main_r00_struc run 3 started (R-00 audit, Structural hard-coded engineering values at rel-20261009f 9babe787, code reading only).
 
 10. **Fri 9 Oct 2026 09:47 (PC clock)** — hunt3_cross (run 2) ended. 46 findings (jargon 12, ribbon/window words 8, blue 14, Settings labels 5, double-read Settings 4, CE_SHARED 3); code reading only, nothing run or seen. Report: areas/release-v3-colleagues-HUNT3_CROSS_2026-10-09.md.
+
+18. **Fri 9 Oct 2026 09:55 (PC clock)** — main_r00_struc run 3 ended. R-00 audit of Structural at rel-20261009f 9babe787 in areas/release-v3-colleagues-R00_STRUC_2026-10-09.md: 40 ranked items plus 25 one-liners (24 of the top 40 have no Settings name; 6 in the settings file only; 3 hard blocks). Code reading only, nothing run.
