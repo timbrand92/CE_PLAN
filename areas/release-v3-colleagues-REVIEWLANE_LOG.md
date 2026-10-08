@@ -1362,3 +1362,16 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Own slip:** a mistyped git pull started a rebase of CE_PLAN onto origin/master. I aborted it before any change; the log commit is intact.
    - Usage: unknown (headless).
 845. **Fri 09 Oct 08:21** — HEADLESS RUN 139 started (desk plan/03 08:25 list: INT-073/074/075; new heads from build/04 57, build/03 68-69, build/02 118-119). Usage: unknown (headless).
+846. **Fri 09 Oct 08:25** — Run 139 reviews (Opus sub-agents, read only; quoted from what they returned):
+   - #849 7d8a6f09 **MERGE-WITH-FIXES** (was MERGE): per the desk decision the plastic-pit per-pit 'number and schedule' opt-in stays; I checked it is not the default (PitPresetLocks.cs:56). One wording fix to REGRESSION_LOG item 1. Code unchanged.
+   - #841 cecd1e1c **MERGE-WITH-FIXES**: all 4 earlier fixes done (offer OFF, Undo/Redo re-reads from the drawing). Still wanted: checklist item 4; INT-075 B2 item 6 admin report not built (list it or build it OFF).
+   - #852 f50414e3 **MERGE-WITH-FIXES** (3 LOW), #851 55527a37 **MERGE-WITH-FIXES** (3 LOW; the switch turns on five things, the card says four), #854 7a854324 **MERGE** (3 notes).
+   - #853 153ff099 **MERGE-WITH-FIXES** (rebase on moved rel-20261009g; 3 LOW), #855 677a855e **MERGE-WITH-FIXES** (2 MEDIUM: recent jobs saved in CD_Settings.json would carry Tim's job folders to colleagues; damaged list crashes the drop-down), #856 15fd3c1c **MERGE-WITH-FIXES** (2 MEDIUM: practice-job job-time check has no switch; copy accepts any file).
+   - Batch 13 card: no purlin letter other than P introduced (INT-075 item 9 respected). No new UI colours in any PR.
+847. **Fri 09 Oct 08:25** — **Corrected lists:**
+   - **C-27 (rel-20261009g):** by ancestry contains #823 #826 #827 #828 #829 #830. Not re-reviewed.
+   - **C-28 (Civil/Manager), plain MERGE, in this order:** #835 81f36c52; #833 77e4e37d; #834 9d0ce5f4; #845 4267f824. Base rel-20261009c; keep every block in UserSettings.cs / REGRESSION_LOG clashes.
+   - **C-28 OUT, waiting for fixes:** #849 (log wording only; can join once reworded); #837 then #847 and #839; #836, #838, #840, #841; #842, #844, #850; Batch 4 stack #853 > #855 > #856 (C-29 at earliest, base rel-20261009g). Close #832 and #824.
+   - **S-28 (Structural), plain MERGE, in this order:** #848 b448275f; #854 7a854324 (REGRESSION_LOG clash only).
+   - **S-28 OUT:** #852 then #851 (LOW fixes; both clash in UserSettings.cs), #846 (one-line fix), #831, #843.
+848. **Fri 09 Oct 08:25** — HEADLESS RUN 139 ended. Not checked: no build, test or AutoCAD; heads unchanged since run 138 (#831 #836-#840 #842-#848 #850) not re-read. Usage: unknown (headless).
