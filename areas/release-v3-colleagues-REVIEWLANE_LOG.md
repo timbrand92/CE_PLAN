@@ -1218,3 +1218,25 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - relink after import (LinkService.RelinkAllPipesToPits) was not traced for the open far end.
    - Usage: unknown (headless).
 826. **Fri 09 Oct 04:40** — HEADLESS RUN 134 started (#827 re-review at 2ad19c3a, #828 a68a5ba3, then unreviewed PRs; C-27/S-28 lists).
+827. **Fri 09 Oct 04:50** — Run 134 reviews (read only; read by me, no sub-reviewer):
+   - **#827 @ 2ad19c3a MERGE:** all run 133 fixes are in.
+     - REGRESSION_LOG now adds 12 lines only.
+     - The open far end skips pit ownership, so no different pit gets recorded.
+     - The report line is in drafting words (length in m, from P8).
+     - The note is added only after the pipe is drawn, in both import paths.
+     - A pipe between two different pits still matches both ends.
+   - **#828 @ a68a5ba3 MERGE:** restacked on #827; the patch is identical to 8e945bbe (same patch-id). Merge after #827.
+   - Every open PR from #789 to #828 has an OPUS comment on its current head. Nothing else is unreviewed.
+828. **Fri 09 Oct 04:50** — **Corrected lists:**
+   - **S-27 (rel-20261009f) is on origin.** By ancestry it holds #812 b7aaa225, #818 f89af2ca, #825 aba8e946 and #804 782c7ee6: all four, as listed.
+   - **C-26 (rel-20261009e) is still NOT on origin**, so its contents were not verified.
+   - **C-27 (Civil/Manager), plain MERGE, in this order:**
+     - #823 e169d6ae (if C-26 did not take it);
+     - #826 964c25ba (if C-26 did not take it);
+     - #827 2ad19c3a, then #828 a68a5ba3.
+   - **C-27 optional (OFF engines):** as entry 824.
+   - **C-27 OUT:** #824 (superseded by #826: close it), #781, #768.
+   - **S-28 (Structural): plain MERGE = 0 new.** #813 is a duplicate: close it.
+829. **Fri 09 Oct 04:50** — HEADLESS RUN 134 ended. 2 OPUS comments, both MERGE (#827, #828).
+   - **Not checked:** no build, test or AutoCAD; the C-26 contents (branch not pushed).
+   - Usage: unknown (headless).
