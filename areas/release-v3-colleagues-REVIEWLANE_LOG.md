@@ -1090,3 +1090,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
      - nothing in AutoCAD;
      - #755 was not re-read.
    - Usage: unknown (headless).
+813. **Fri 09 Oct 02:40** — HEADLESS RUN 131 started (desk plan/03 priorities: #823 #824 #825, re-check #812 #818 #822, then stacked Civil chain #682 #693 #754 #755 and its merge order; corrected C-26 / S-27 lists). Usage: unknown (headless).
