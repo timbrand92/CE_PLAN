@@ -1,0 +1,17 @@
+# Tim: Set A, your own engineering calls (Fri 9 Oct 2026)
+
+Reply by number, or "all recommended". These are the ones the builders cannot decide for you (INT-073 does not cover them).
+
+1. **One tick in the Structural Settings, for a test.** Codex turns beam linking ON, runs the column and beam Undo/Redo checks, then turns it back OFF and saves. A copy of your settings is taken first. **Recommend:** yes. Example: it proves a beam moves with its columns and one U puts both back.
+2. **Your normal template for File > New.** AutoCAD's default currently points to a test copy left from an earlier experiment (`...\_TEST_COPIES_20260923\BISECT_STRUCT_ONLY\office_template_copy.dwt`). **Recommend:** send me your normal template's path; I change nothing until you do.
+3. **Kingston commercial lots of 1000 m² and over.** The flows calculate on a 5-minute time of concentration with no warning. (a) calculate and warn on the flows too; (b) don't calculate until the designer types a time of concentration; (c) ask when CDDESIGN starts. **Recommend:** (a). Example: a 1200 m² lot shows flows with "Tc 5 min is a placeholder: set yours".
+4. **Typed pit levels.** Type a level in the Pit Schedule and press Enter: it waits until you right-click the row and choose Stop overriding, then the plan, the text and the red CHECK marker are written. **Recommend:** keep, with clearer wording. Example: same as the pit number, which you ruled the same way.
+5. **Held-grade pipe, level typed.** The red marker warns "the label grade is 1 IN 100 but its levels now give about 1 IN 61" and the label still says 1 IN 100. **Recommend:** keep the warning, don't change the label by itself (warn, don't block).
+6. **Esc at "Enter a number to append" on C1.** Today the column stays and the line says "Support text command failed: Command cancelled." **Recommend:** Esc removes the column, like every other cancelled CE command.
+7. **Clearance distances in metres** (footing to services, and the second one): I need your two numbers. No recommendation: engineering call. Example: "footing to a service pipe, at least 0.6 m".
+8. **Lintels.** Face tolerance 150 mm, wall-line join 350 mm (two faces of one wall), 300 mm, 2 degrees, and a largest-opening limit. **Recommend:** keep 150 / 350 / 300 / 2 degrees; send the largest opening you would ever give a lintel.
+9. **Max's surname, and write access to "CE Plugin Pilot Results"** (SharePoint, Engineering). **Recommend:** you tell me his surname and say yes; I do not change sharing myself.
+10. **Wording.** The floor arrow asks Joists / Bearers / Subfloor: right order for roof-down? And the legend says "DENOTES POST UNDER": your words? **Recommend:** tell me your order and your words.
+11. **BUG-061 (import splits a run).** On your test job it is not reproduced: the real defect was one pipe with both ends on one spot, now fixed. **Recommend:** leave it open until you see the import on a job of your own.
+12. **Start-up menu lines.** "Menu item failed to load ..." and "; error: syntax error" at AutoCAD start are harmless. **Recommend:** leave for now; the click-by-click clean-up is in your Day 1 page for when you want it.
+13. **Disk.** One yes to delete about 12 GB of old build leftovers (old install copies, old release archives, two old Temp folders). Not the rollback copies. **Recommend:** yes. List: `areas\release-v3-colleagues-DISK_CANDIDATES_LIST.md`. Reply "yes disk".
