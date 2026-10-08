@@ -1297,3 +1297,35 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Not checked:** no build, test or AutoCAD; C-27 contents (branch not pushed).
    - Usage: unknown (headless).
 837. **Fri 09 Oct 07:35** — HEADLESS RUN 137 started (desk plan/03 07:50: INT-074 plastic pit = PP cover text only, judge #832; re-review #836 #837 #839 #831 #843 #834, new #842 #844 #845; C-28/S-28 lists).
+838. **Fri 09 Oct 07:39** — Run 137 reviews: 10 OPUS comments. #832 was judged by me; the rest were read by Opus sub-agents, and I spot-checked the key lines with git grep.
+   - **#832 @ c86963eb DO-NOT-MERGE (Tim INT-074 item 1).** A plastic pit is labelled only by PP in its cover text. The whole PR is the plastic-pit plan label, so close it. My run 136 MERGE is withdrawn. Optional: a separate guard test that PIT / PP draws no label block.
+   - **#834 @ 9d0ce5f4 MERGE.** All 4 findings fixed; default OFF; engine only. Keep it open: #836 sits on it.
+   - **#836 @ 5fa85227 MERGE-WITH-FIXES.** The new head only merges in #834's fixes. Both MEDIUMs stand:
+     - What CE Found open-end items are still dropped wholesale;
+     - the handle is still shown in pipe-end rows.
+   - **#837 @ 6f703971 MERGE-WITH-FIXES.** The locked-layer, Enter for All and rebase findings are fixed. MEDIUM: "All" uses SelectAll with no current-space filter (INT-074 item 7). LOW: the "placed by hand" count includes labels that do not clash.
+   - **#839 @ c75ffa08 MERGE-WITH-FIXES.** Default OFF and the rebase are fixed. LOW-MEDIUM: the re-tidy runs with runtime linking live. Gap: it re-tidies after Save, not in the preview (INT-074 item 4).
+   - **#831 @ c9c93a45 MERGE-WITH-FIXES** (safe OFF). The CE.Host tooltip body now follows the switch, but the title is still the command name. The words are still typed in C#.
+   - **#843 @ 85d74b19 MERGE-WITH-FIXES.** It missed RoofPointLoadAcrossDrawings.cs:404 ("still to be built"), the bug itself. Also a LOW grammar point.
+   - **#842 @ 47a1970d MERGE-WITH-FIXES** (safe OFF; do not switch ON). HIGH when ON: a hatch is avoided by its whole outer box. 2 MEDIUM: Xref blocks and frozen layers; the obstacle limit.
+   - **#844 @ 65faa54a MERGE-WITH-FIXES.** MEDIUM: the leader text always goes on the upper side, ignoring the label side.
+   - **#845 @ 4267f824 MERGE.** Guard test only. LOW: one test compares a call with itself.
+   - **INT-074 gaps for the card** (not blockers while hidden or OFF): pit labels and cover levels in the tidy (item 5); avoiding blocks (item 6); rearranging neighbours or moving out with a leader (item 12).
+839. **Fri 09 Oct 07:39** — **Corrected lists:**
+   - **C-27 (rel-20261009g):** not on origin yet. By ancestry, #823 #827 #828 #829 #830 are not in rel-20261009e, so the planned content stands.
+   - **C-28 (Civil/Manager), plain MERGE, in this order:**
+     - #835 81f36c52;
+     - #833 77e4e37d;
+     - #834 9d0ce5f4;
+     - #845 4267f824.
+     - All are based on rel-20261009c. Expect text conflicts in UserSettings.cs (around lines 362-410) and REGRESSION_LOG: keep every block.
+   - **REMOVED from C-28:** #832 (Tim's INT-074 ruling: close it).
+   - **C-28 OUT, waiting for fixes:**
+     - #836 (needs #834 first), then #838, #840, #841;
+     - #837 and #839 (both on #835);
+     - #842 and #844.
+     - #824: close it (superseded).
+   - **S-28 (Structural): plain MERGE = 0.** #831 and #843 are MERGE-WITH-FIXES. Both are safe OFF if the controller accepts MERGE-WITH-FIXES.
+840. **Fri 09 Oct 07:39** — HEADLESS RUN 137 ended.
+   - **Not checked:** no build, test or AutoCAD; C-27 contents (branch not pushed); #838 #840 #841 (unchanged heads, run 136 verdicts stand).
+   - Usage: unknown (headless).
