@@ -16,3 +16,5 @@ Helper: CE_ACAD / release-v3-colleagues / audit / 01 (read-only; started by desk
 9. **Fri 9 Oct 2026 09:21 (PC clock)** — hunt3_cross (run 2) started. Read-only: jargon, window words, blue, Settings labels, double-read Settings, CE_SHARED drift.
 
 9. **Fri 9 Oct 2026 09:21 (PC clock)** — hunt2_civil run 2 started (Civil design tools beyond Day 1, code reading only).
+
+10. **Fri 9 Oct 2026 09:21 (PC clock)** — hunt2_struc run 2 started (Structural beyond Day 1 at rel-20261009f 9babe787, code reading only).
