@@ -2,7 +2,7 @@
 # Usage: pwsh -NoProfile -File launch_job.ps1 -JobFile <full path to the job .txt> -Model sonnet|opus
 # The job text is fed to `claude -p`; the log goes beside the job file (<job>.log). Below Normal priority, hidden window.
 param([Parameter(Mandatory=$true)][string]$JobFile, [string]$Model = 'sonnet', [switch]$Main)
-if ($Main) { Remove-Item Env:CLAUDE_CONFIG_DIR -ErrorAction SilentlyContinue } else { $env:CLAUDE_CONFIG_DIR = "$env:USERPROFILE\.claude-team" }  # -Main = the Max 20 account (desk plan/03, 9 Oct): use it to spend the main weekly meter before its reset
+if ($Main) { Remove-Item Env:CLAUDE_CONFIG_DIR -ErrorAction SilentlyContinue } else { $env:CLAUDE_CONFIG_DIR = "$env:USERPROFILE\.claude-team" }  # -Main DOES NOT WORK (9 Oct 08:30: 'OAuth session expired and could not be refreshed' for headless claude -p on the Max config): spend the Max meter with background Agent subagents from the desk chat instead
 $log = [IO.Path]::ChangeExtension($JobFile, '.log')
 $cmd = "claude -p --model $Model --permission-mode bypassPermissions --output-format text < `"$JobFile`" > `"$log`" 2>&1"
 $p = Start-Process cmd.exe -ArgumentList '/c', $cmd -WorkingDirectory 'C:\Lisp Files\CE_ACAD_PLUGIN' -WindowStyle Hidden -PassThru
