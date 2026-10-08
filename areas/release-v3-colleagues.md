@@ -9,6 +9,8 @@ Things that must be true before any colleague installs CE. No earlier gate list 
 3. **The real update route a colleague can follow is built, or the update messages are reworded** so they stop naming an installer nobody can run (BUG-478).
 4. **The old install scripts and builds in the office folder are moved to an OLD folder** (BUG-483; Tim's call, it is publishing).
 5. **The Manager fault report and CEMANAGERDIAG must code the login, PC name and folders before any colleague uses them** (BUG-488). Until then colleagues are told not to press them.
+6. **Publish Issue stamps only the sheets the drafter ticked (or a colleague issuing a set stamps every sheet in the job): decide and fix before any colleague issues a set** (BUG-495 S-01). Today it gives the typed revision and issue date to every Structural sheet, including sheets left out, which breaks Tim's 14 Sep ruling.
+7. **The job record (wind class, soil) lives with the job, not under one PC's drawing path** (BUG-496 S-02). Today a colleague, a copy or a Save As starts with an empty record. Tim's call: keep it in the drawing, in the job folder, or say plainly it is for this PC only.
 
 ## OPERATING CHARTER — read first, every release chat (Tim, 28 Sep 2026; verbatim in `decisions/2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`)
 
