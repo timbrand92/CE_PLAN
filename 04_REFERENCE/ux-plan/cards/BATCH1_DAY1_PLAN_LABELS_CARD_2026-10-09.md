@@ -1,5 +1,8 @@
 **Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:25 PC clock).
 
+**TIM'S ANSWERS RECORDED 9 Oct 2026 (INT-074, decisions file last section). Card APPROVED with these changes: Card 1.1 is now KEEP: a plastic pit is labelled on the plan ONLY by 'PP' in its cover level text (CE standard); NO separate P-number label for plastic pits (Tim: "ce standards are that plastic pits are labelled just using the pp in cover level text"); Q3: keep as per standard but upgrade to work within the system (tidy, flip and checks treat the PP cover text like any other cover text); Q12: no clear spot = first rearrange neighbouring CE labels to make room, or move the label out with a leader, only then leave it and list it; Q10: automatic readable-after-rotate/mirror, same idea as the cover-level flip; all other questions: as recommended.**
+
+
 # Batch 1 card: labels on the Civil plan (Day 1 workflow), 9 Oct 2026
 
 **Status: DRAFT. Not approved. No code may start until Tim answers `TIM_BATCH_QUESTIONS_2026-10-09.md` and approves this card.**
