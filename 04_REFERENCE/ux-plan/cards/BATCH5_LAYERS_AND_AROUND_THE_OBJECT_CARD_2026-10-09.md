@@ -9,7 +9,7 @@ questions"), extended by the desk at 08:05 to every batch card with recommended 
 drafter sees, nothing retired, no old command removed, locked layers / Xref / REFEDIT protection unchanged. Tim's answer by number in
 `TIM_BATCH_QUESTIONS_6_7_2026-10-09.md` (questions 1 to 8) replaces a recommended default in a follow-up. **Engineering numbers are not
 covered** (the zone of influence angle, question 8): they stay blank and CE says "not set" until Tim types them (RULES 12, R-00).
-Written by design lane run 8 (headless, Opus), Fri 9 Oct 2026 about 09:00 Melbourne (PC clock). Read-only on plugin code. Code lines are
+Written by design lane run 8 (headless, Opus), Fri 9 Oct 2026 about 08:50 Melbourne (PC clock). Read-only on plugin code. Code lines are
 not proof of what installed Civil 3.0.40 does on screen.
 **Numbering:** this is **Batch 5** in `REVIEW_BATCHES_2026-10-09.md` ("layers and around the object"), the first Civil pits/pipes batch
 after Day 1. The question file calls it "card 6" (the sixth batch carded): same thing.
