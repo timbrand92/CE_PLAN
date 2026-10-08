@@ -1,7 +1,7 @@
 # What changed in your CE tools
 
-**Civil 3.0.30 to 3.0.38. Manager 1.1.30 to 1.1.38. Structural 1.0.100 to 1.0.108.** Installed now on Tim's PC: **Civil 3.0.38, Manager 1.1.38, Structural 1.0.108.**
-Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install reports of 4 to 7 Oct. **Corrected Thu 8 Oct 2026** by an accuracy read against the installed code and the Codex AutoCAD reports W10 to W17 (list of corrections: `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). **Updated Fri 9 Oct 2026:** new section 1A lists what installs 35 to 43 brought and what Codex saw (reports W18 to W37); sections 2 to 6 are still written for 3.0.34 / 1.1.34 / 1.0.104 and carry notes where a later install changed them. **Tim has accepted nothing.** The known gaps are listed once, on `KNOWN_LIMITATIONS_2026-10-08.md`.
+**Civil 3.0.30 to 3.0.40. Manager 1.1.30 to 1.1.40. Structural 1.0.100 to 1.0.110.** Installed now on Tim's PC: **Civil 3.0.40, Manager 1.1.40, Structural 1.0.110.**
+Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install reports of 4 to 7 Oct. **Corrected Thu 8 Oct 2026** by an accuracy read against the installed code and the Codex AutoCAD reports W10 to W17 (list of corrections: `RELEASE_DOCS_ACCURACY_READ_2026-10-08.md`). **Updated Fri 9 Oct 2026:** new section 1A lists what installs 35 to 43 brought and what Codex saw (reports W18 to W37); sections 2 to 6 are still written for 3.0.34 / 1.1.34 / 1.0.104 and carry notes where a later install changed them. **Updated again Fri 9 Oct 2026, 07:30:** section 1A now also lists installs 44 to 47 (Civil 3.0.39 and 3.0.40, Manager 1.1.39 and 1.1.40, Structural 1.0.109 and 1.0.110) and what Codex saw (W39 to W45). **Tim has accepted nothing.** The known gaps are listed once, on `KNOWN_LIMITATIONS_2026-10-08.md`.
 
 ---
 
@@ -15,20 +15,21 @@ Written Wed 7 Oct 2026 (Melbourne time) from the finalizer, assembly and install
 6. **Plainer words everywhere**: Manager, CEHEALTH, CDCHECK, Structural beam, bracing and footing messages. Wording is the biggest change in Structural.
 
 **Where each version stands (read from the installed program files 8 Oct):**
-0. **Installed now (read from the program files 9 Oct): Civil 3.0.38 and Manager 1.1.38 (8 Oct 12:36), Structural 1.0.108 (8 Oct 12:29).** Section 1A lists what installs 35 to 43 brought. Sections 2 to 6 below were written for 3.0.34 / 1.1.34 / 1.0.104, which the installed versions contain; where a later install changed a line, the line says so.
+0. **Installed now (as reported at 07:30 on 9 Oct): Civil 3.0.40 and Manager 1.1.40 (9 Oct 06:54, build 1200744d, install 47, train C-26), Structural 1.0.110 (9 Oct 05:57, build 9babe787, install 46, train S-27).** Section 1A lists what installs 35 to 47 brought. Sections 2 to 6 below were written for 3.0.34 / 1.1.34 / 1.0.104, which the installed versions contain; where a later install changed a line, the line says so.
 1. **Installed from Thu 8 Oct 00:50 (install 33 and 34):** Civil 3.0.34 and Manager 1.1.34 (00:50), Structural 1.0.104 (00:56). Then 3.0.35 and 1.1.35 (03:59), Structural 1.0.105 (04:21), 3.0.36 and 1.1.36 (06:31), Structural 1.0.106 (07:07), Structural 1.0.107 (09:46), 3.0.37 and 1.1.37 (10:57), Structural 1.0.108 (12:29), 3.0.38 and 1.1.38 (12:36).
+1a. **Installed Fri 9 Oct, before the versions above:** Civil 3.0.39 and Manager 1.1.39 (build e8e9e0dc, 03:31) and Structural 1.0.109 (build 5aff4fe6, 03:52). Then Structural 1.0.110 (build 9babe787, install 46, 05:57, train S-27) and Civil 3.0.40 with Manager 1.1.40 (build 1200744d, install 47, 06:54, train C-26).
 2. **Earlier installs, still inside these:** Civil 3.0.33, Manager 1.1.33 (7 Oct 21:16) and Structural 1.0.103 (7 Oct 21:21); Civil 3.0.32, Manager 1.1.32 and Structural 1.0.102 (5 Oct).
-3. **Check your own version:** the AutoCAD status bar shows "CE MANAGER v1.1.38 [Modern]", "CE CVL SUITE v3.0.38" and "CE STRUC SUITE v1.0.108". SEEN on exactly these numbers, 8 Oct (W33). Or type CEHEALTH: it prints one line for Civil and one for Structural (not Manager), then a line about the office IT folder. Codex saw CEHEALTH only on 3.0.34 / 1.0.104.
+3. **Check your own version:** the AutoCAD status bar shows "CE MANAGER v1.1.40 [Modern]", "CE CVL SUITE v3.0.40" and "CE STRUC SUITE v1.0.110". SEEN on exactly these numbers, 9 Oct (W45). Or type CEHEALTH: it prints one line for Civil and one for Structural (not Manager), then a line about the office IT folder. CEHEALTH ends "[CEHEALTH] All checks passed." SEEN on 3.0.40 / 1.1.40 / 1.0.110, 9 Oct (W45).
 
 **What has been tested, in plain words:**
 1. **Built and unit-tested:** every item in this note.
-2. **Seen working by Codex in real AutoCAD (copies of test drawings, Tim's PC):** the items marked "Codex saw it" or SEEN. Runs: W10 to W13 on 3.0.32 / 1.0.102, W14 and W15 on 3.0.33 / 1.0.103, W16 to W18 on 3.0.34 / 1.0.104, W19 and W20 on 1.0.105 and 3.0.35, W24 to W31 on 3.0.36 and 1.0.106 / 1.0.107, W32 on 3.0.37, W33 to W36 on 3.0.38 (W33 also read 1.0.108's version and first start; W37 on 9 Oct did only the start check).
+2. **Seen working by Codex in real AutoCAD (copies of test drawings, Tim's PC):** the items marked "Codex saw it" or SEEN. Runs: W10 to W13 on 3.0.32 / 1.0.102, W14 and W15 on 3.0.33 / 1.0.103, W16 to W18 on 3.0.34 / 1.0.104, W19 and W20 on 1.0.105 and 3.0.35, W24 to W31 on 3.0.36 and 1.0.106 / 1.0.107, W32 on 3.0.37, W33 to W36 on 3.0.38 (W33 also read 1.0.108's version and first start; W37 on 9 Oct did only the start check), W39 to W45 on 9 Oct (those named in these pages: W41, W43 and W44 on Structural 1.0.110; W45 on 3.0.40 / 1.1.40 / 1.0.110).
 3. **Everything else says "not checked in AutoCAD".**
 4. **Accepted by Tim:** nothing in this note is recorded as accepted by Tim.
 
 ---
 
-## 1A. Installed 8-9 Oct (installs 35 to 43): Civil 3.0.35 to 3.0.38, Manager 1.1.35 to 1.1.38, Structural 1.0.105 to 1.0.108
+## 1A. Installed 8-9 Oct (installs 35 to 47): Civil 3.0.35 to 3.0.40, Manager 1.1.35 to 1.1.40, Structural 1.0.105 to 1.0.110
 
 Each line names the version it came in. **SEEN** = Codex watched it in real AutoCAD on a test copy (run shown). **NOT SEEN** = built and unit-tested only. Tim has accepted none of it. A gap that Codex found is not repeated here: see the known limitations page.
 
@@ -48,6 +49,12 @@ Each line names the version it came in. **SEEN** = Codex watched it in real Auto
 12. **Old real-named report files (3.0.36 Civil, 3.0.37 Manager).** Civil deletes its own old report named with a login and computer name when it starts; Manager's reports carry coded names and its old real-named report is deleted; glued logins are hidden in the machine report. NOT SEEN. An administrator-only "Who is this?" name book turns a coded id back into a PC (3.0.37): NOT SEEN.
 13. **Manager background work (1.1.36).** It skips unchanged files, scans off AutoCAD's own thread, and writes the office files safely. NOT SEEN; it may help the lag.
 14. **Manager Roll Back and Approve act on Civil and Manager as one pair (1.1.37).** NOT SEEN. Roll Back changes nothing today (known limitations page).
+15. **Civil 3.0.39 and Manager 1.1.39 (9 Oct 03:31, build e8e9e0dc).** What these two brought is not listed on this page. NOT SEEN as separate versions; their contents are inside 3.0.40 and 1.1.40.
+16. **Edit Pipe window: a read-only grade preview line (3.0.40).** Beside equal inverts it says "Grade: FLAT (same inverts)". Built, NOT SEEN: Codex found only the grade selector, which still reads 1 in 100 (W45).
+17. **uPVC and steel speed-limit wording (3.0.40).** It says "your Settings value" only when someone set one. NOT SEEN.
+18. **Damaged administrator list, and the Manager trace file (1.1.40).** A damaged administrator list is now handled, and the real Windows login no longer goes into the Manager trace file. NOT SEEN.
+19. **CESUPPORT zip holds the CE logs of the last 14 days (3.0.40).** It now holds 10 files plus its index, and the 8 items left out are listed with reasons. No real login or computer name is inside. SEEN 3.0.40, 9 Oct (W45).
+20. **Civil no longer patches `acad.cuix` (3.0.40).** NOT SEEN. The three start-up "Menu item failed to load" lines were STILL there on 3.0.40 (W45); the known limitations page and the Day 1 page say how to clear them by hand.
 
 ### 1A.2 Structural, roof first, footings last
 
@@ -64,6 +71,14 @@ Each line names the version it came in. **SEEN** = Codex watched it in real Auto
 11. **FOOTINGS: footing resize lines (1.0.105).** After a grip or STRETCH resize every line reads millimetres to one decimal ("PF1 is now 700 x 600 mm."; a 24-inch pad reads 609.6 in both lines). NOT SEEN.
 12. **Same-day re-issue of a sheet set (1.0.105).** The earlier PDFs are held aside and removed only when the new set is complete. The first re-issue after the install keeps the old behaviour. NOT SEEN.
 13. **Settings file.** The first start of each new Structural version wrote its new default rows into CS_Settings.json: SEEN for 1.0.105 (20 keys, W19), 1.0.106 (W24), 1.0.107 (W29, with the CE log line) and 1.0.108 (26,901 to 28,361 bytes, W33). None of your values changed.
+14. **Structural 1.0.109 (9 Oct 03:52, build 5aff4fe6).** What it brought is not listed on this page. NOT SEEN as a separate version.
+15. **UPPER FLOORS: the column label is back (1.0.110).** C1 and TS1 now place the "C1" label. At "Pick desired support text location" click a point or press Enter; with Enter, CE says "Label on the right: enter its text, then click where it goes." (it used to say "Text placed at the right" before anything was placed). Esc removes the half-placed column; one U takes column and label together. SEEN 1.0.110, 9 Oct 06:05 to 06:09 (W43: C1 with a pick, C1 with Enter, TS1).
+16. **UPPER FLOORS: CSLEVELCARRY (1.0.110) is hidden and OFF.** It is the expert command that carries a level from the other drawing. Typed, it prints a switched-off sentence. NOT SEEN.
+17. **UPPER FLOORS: the framing legend title height comes from Settings (1.0.110).** NOT SEEN.
+18. **ROOF: BT1 prompts, U/REDO and Esc.** SEEN 1.0.110, 9 Oct (W41). R1 asks for three objects (left, right, top/near side) and draws nothing without the third; finishing R1 is NOT SEEN.
+19. **GROUND FLOOR: CSREOBAR.** Full prompt run, one U to remove the bar and REDO to restore it. SEEN 1.0.110, 9 Oct 06:32 (W44).
+20. **FOOTINGS: FPFC and FEDIT.** FPFC with an existing PF1 asks to increment and draws PF5 (SEEN 1.0.110, W44; label text not seen). FEDIT size 700 survived U and REDO (SEEN 1.0.110, 9 Oct 06:40, W44). FSF: Enter at the centerline question ended the command silently (BUG-454, a known gap).
+21. **Settings file growth (1.0.110).** The first start after install added 13 new default rows once (28,361 to 28,872 bytes). Nothing set by Tim changed. The CE log says so.
 
 ---
 
@@ -264,7 +279,7 @@ Nothing here is promised beyond what is installed.
 
 ## 5A. DECIDED: BUILT OR NOT, at 9 Oct (Tim's rulings INT-065 to INT-072)
 
-A ruling is not a fix. "Built" means it is in the installed Civil 3.0.38, Manager 1.1.38 or Structural 1.0.108; it is NOT proven unless SEEN is shown. Tim has accepted nothing.
+A ruling is not a fix. "Built" means it is in the installed Civil 3.0.40, Manager 1.1.40 or Structural 1.0.110; it is NOT proven unless SEEN is shown. Tim has accepted nothing.
 
 1. **UPVC pipe speed limit.** Tim: "1. as recommended" (INT-068): the authority is the CPAA Hydraulics Design Manual. The manual has been read and names NO uPVC figure (it gives 8 m/s for precast concrete), so 3 m/s stays the one unconfirmed value and Civil Design stays at 6. Not changed.
 2. **Pit-outlet speed warning** (1.5 and 2.0 m/s): BUILT 3.0.37, NOT SEEN, no Settings row yet. **Detention pipe flatter than 1 in 200:** BUILT 3.0.38, NOT SEEN. The orifice figure is a blank per-council value (INT-070).
@@ -326,6 +341,7 @@ A ruling is not a fix. "Built" means it is in the installed Civil 3.0.38, Manage
 ## 8. Where this came from
 
 **Updated 9 Oct for installs 35 to 43:** the Opus train reports C-21 to C-24 and S-22 to S-25 (assembly and finalizer), the Codex reports W18 to W37 in `C:\Lisp Files\_TEST_COPIES_20260923`, release queue items 209 to 224, BUG-425 to BUG-445, and Tim's rulings INT-066 to INT-072.
+**Updated 9 Oct, 07:30, for installs 44 to 47:** the install facts (builds e8e9e0dc, 5aff4fe6, 9babe787 and 1200744d, trains C-26 and S-27) and the Codex reports W39 to W45 as relayed to this page by the release desk. The PR numbers of these four installs are NOT listed here.
 1. **Civil 3.0.35 and Manager 1.1.35 (installed 8 Oct 03:59):** PR #762, #763, #766, #747, #774, #777.
 2. **Civil 3.0.36 and Manager 1.1.36 (06:31):** PR #765, #769, #771, #772, #773, #785, #782, #783, #784, #786, #788.
 3. **Civil 3.0.37 and Manager 1.1.37 (10:57):** PR #797, #796, #801, #790, #789, #807, #794, #795, #803 (#805 was taken out for REDO safety; #791 and #800 skipped).
