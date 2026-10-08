@@ -1330,3 +1330,34 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Not checked:** no build, test or AutoCAD; C-27 contents (branch not pushed); #838 #840 #841 (unchanged heads, run 136 verdicts stand).
    - Usage: unknown (headless).
 841. **Fri 09 Oct 08:00** — HEADLESS RUN 138 started (desk plan/03 08:10 list: #837 32fded17, #839 8a93aa53, #847 a4474f71, #848, #831/#843/#842/#844 fix heads, build/04 run 56 PRs).
+842. **Fri 09 Oct 08:10** — Run 138 reviews: 9 OPUS comments, each read by an Opus sub-agent; the lane spot-checked the #839 HIGH and the #846 MEDIUM with git show.
+   - **#837 @ 32fded17 MERGE-WITH-FIXES.** Both run 137 findings are fixed. New LOW: working in a paper-space viewport, "All" tidies nothing and "Select" drops the picked pipes. Use Model when TILEMODE=1 or CVPORT<>1.
+   - **#847 @ a4474f71 MERGE-WITH-FIXES** (OFF). MEDIUM: a label already reported "no clear spot" can later be slid aside as a neighbour, so it is counted as both left and moved. LOW: the preview lines lack the "to make room for" words.
+   - **#839 @ 8a93aa53 MERGE-WITH-FIXES.** HIGH: the new second pause of linking inside Edit Pipe can wipe the edit's queued refresh (BUG-189 risk). Remove it. My run 137 "linking live" finding was wrong, and this fix is what caused the HIGH. The preview gap (item 4) is still open, so keep it OFF.
+   - **#850 @ 7ed88e43 MERGE-WITH-FIXES** (safe OFF, not hooked up). MEDIUM: a third "upside down" rule that disagrees with GeometryHelper (95 degrees). MEDIUM: MIRRTEXT 1 is not handled. Fix both before hook-up.
+   - **#838 @ 5d9993f1 MERGE-WITH-FIXES.** All run 136 findings are fixed and it is on #836 5fa85227. MEDIUM: missing Checks settings counts as Ignore ON. LOW: an unmatched reference never comes back.
+   - **#840 @ 29b6ae46 MERGE-WITH-FIXES.** The glow is OFF, fixed, and it sits on #838 5d9993f1. MEDIUM: Show where untwists a twisted view. 2 LOW.
+   - **#846 @ 9520b54d MERGE-WITH-FIXES** (Structural, BUG-454). MEDIUM: a missed click at the centreline question now ends FSF/FREB/FRIB silently. Fix: only Esc stops. The root cause is not proven, so Codex should re-drive W41/W44.
+   - **#848 @ b448275f MERGE** (Structural wording). 2 optional LOWs.
+   - **#849 @ 7d8a6f09 MERGE** (OFF). It meets INT-074 items 1 and 2 for plastic pits. MEDIUM, wording only: the REGRESSION_LOG claim leaves out that an old opt-in still gives a plastic pit a P-number label when "manual number and schedule" is ticked.
+   - **Question for the desk to put to Tim:** should that opt-in go, under INT-074 item 1? Also, Esc at an ordinary pit's label pick (item 2, first half) is in no PR yet.
+843. **Fri 09 Oct 08:10** — **Corrected lists:**
+   - **C-27 (rel-20261009g 0daeefd6):** by ancestry it contains #823 #827 #828 #829 #830. Not re-reviewed (it is with its finalizer).
+   - **C-28 (Civil/Manager), plain MERGE, in this order:**
+     - #835 81f36c52;
+     - #833 77e4e37d;
+     - #834 9d0ce5f4;
+     - #845 4267f824;
+     - #849 7d8a6f09.
+     - All are based on rel-20261009c and none is in C-27. Expect text conflicts in UserSettings.cs and REGRESSION_LOG: keep every block.
+   - **C-28 OUT, waiting for fixes:**
+     - #837, then #847 (stacked) and #839;
+     - #836, then #838 and #840, then #841;
+     - #842, #844 and #850. #850 and #842 are safe OFF if the controller takes MERGE-WITH-FIXES.
+     - Close #832 (INT-074) and #824 (superseded).
+   - **S-28 (Structural), plain MERGE:** #848 b448275f.
+   - **S-28 OUT:** #846 (one-line fix), #831 and #843 (no fix heads yet).
+844. **Fri 09 Oct 08:10** — HEADLESS RUN 138 ended.
+   - **Not checked:** no build, test or AutoCAD; #831 #836 #841 #842 #843 #844 (heads unchanged, earlier verdicts stand).
+   - **Own slip:** a mistyped git pull started a rebase of CE_PLAN onto origin/master. I aborted it before any change; the log commit is intact.
+   - Usage: unknown (headless).
