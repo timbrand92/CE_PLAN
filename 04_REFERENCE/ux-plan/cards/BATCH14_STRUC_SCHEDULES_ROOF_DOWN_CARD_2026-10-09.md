@@ -10,7 +10,7 @@ drafter sees, nothing retired, no old command removed, locked layers / Xref / RE
 `TIM_BATCH_QUESTIONS_6_7_2026-10-09.md` (questions 9 to 15) replaces a recommended default in a follow-up. **Engineering values are not
 covered:** the lintel specifications, concrete strengths and wall reinforcement are never typed by CE; they stay blank / UNKNOWN until Tim or
 the drafter types them (RULES 12, R-00, ST6-4).
-Written by design lane run 8 (headless, Opus), Fri 9 Oct 2026 about 09:15 Melbourne (PC clock). Read-only on plugin code. Code lines are
+Written by design lane run 8 (headless, Opus), Fri 9 Oct 2026 about 08:55 Melbourne (PC clock). Read-only on plugin code. Code lines are
 not proof of what installed Structural 1.0.110 does on screen.
 **Numbering:** this is **Batch 14** in `REVIEW_BATCHES_2026-10-09.md` ("member schedules"), the second Structural batch after Batch 13. The
 question file calls it "card 7": same thing.
