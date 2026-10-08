@@ -1,4 +1,28 @@
+**Code read on rel-20261009c 446162c2** (installed Civil 3.0.39; re-checked by design run 6, Fri 9 Oct 2026 about 05:45 PC clock).
+
 # Batch 3 card: how every CE window feels, 9 Oct 2026
+
+## Re-check on the release commit (run 6, 9 Oct 2026)
+
+1. **CONFIRMED on 446162c2:** Pit Schedule minimum width 1440, not resizable, centred on the screen (`Dialogs/PitScheduleDialog.xaml:7-9`)
+   and blocking (`Commands/PitScheduleCommand.cs:34`); Settings and Project Review not resizable (`Dialogs/AdvancedSettingsDialog.xaml:8`,
+   `Dialogs/DesignCheckDashboardDialog.xaml:8`); only the Civil Hub remembers its position (`Dialogs/CivilHubDialog.xaml.cs:456-460`);
+   the Pit Schedule position settings exist and are unused (`Models/UserSettings.cs:857-862`); preview waits 0.5 s
+   (`Helpers/PreviewDebounce.cs:13`); the Edit Pipe dry-run preview is still not switched on (`Commands/PipeEditCommand.cs:145`); accent
+   blue `#1E5AA8` in light and gold `#C9A84C` in dark (`Themes/LightTheme.xaml:14`, `Themes/DarkTheme.xaml:15`); Inspector palette
+   420 x 820 (`Services/InspectorPaletteService.cs:339`); workshop editors centred on AutoCAD, others on the screen
+   (`Services/DialogService.cs:76, 109, 166`); the ribbon tooltip "Type:" line (`Shared/CE_SHARED/Services/RibbonBuilder.cs:455`); the
+   Structural tooltip builder (`Modules/Structural/Services/RibbonCommandHubService.cs:208`).
+2. **CONFIRMED, "the shared frame is unused":** `Controls/CeEditorShell.xaml` is placed in no window. Other files mention only its
+   settings store and the "workshopLayout" switch (`Commands/PipeEditCommand.cs:129`, `Services/DialogService.cs:43`,
+   `Services/InspectorPaletteService.cs:65`); these are not the frame itself.
+3. **CONFIRMED, "XCLM text is the only window with Alt shortcuts":** a wider search on the release found one more match,
+   `CeSharedTitleMappingWindow.xaml:92`, but that is the file name "CS_Settings.json" in a label, not a shortcut.
+4. **New since master, does not change the card:** both themes gained a readable error-text colour and screen-reader names for blank
+   table cells (BUG-360), which helps UX-ACC-01. `Services/InspectorPaletteService.cs` (+329 lines) and `Services/DialogService.cs`
+   (+90 lines) changed, but the palette size and centring the card quotes are the same.
+5. The "detail from local master" files (`Controls/StatusChip.xaml`, `Helpers/WorkshopEditorFocus.cs`, `Services/WindowSizingService.cs`,
+   `CeCvlRibbonContributor.cs`) are **unchanged** between master and 446162c2, so what was read there holds for the release.
 
 **Status: DRAFT. Not approved. No code may start until Tim answers `TIM_BATCH_QUESTIONS_2_3_2026-10-09.md` (questions 8 to 14) and
 approves this card.**
