@@ -1259,3 +1259,40 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Not checked:** no build, test or AutoCAD.
    - Usage: unknown (headless).
 833. **Fri 09 Oct 07:00** — HEADLESS RUN 136 started (desk plan/03 07:10: re-review fix rounds #833 #832 #835 #836, new #837 #839, #831 #834 if fixed; C-28/S-28 lists).
+834. **Fri 09 Oct 07:09** — Run 136 reviews: 9 OPUS comments, read by Opus sub-agents; defaults and stacking spot-checked by me with git:
+   - **#832 @ c86963eb MERGE.** All run 135 findings fixed: default OFF; Edit Pit keeps the label only when it should; 350 mm moved to Settings. 2 LOW.
+   - **#833 @ 77e4e37d MERGE.** All fixed: default OFF; X-Civil uses a fixed copy of the old order (the same as before the PR); the compare is now a consistent order (no loop).
+   - **#835 @ 81f36c52 MERGE.** All fixed: default OFF; a split keeps the mark; the log no longer promises Edit Pipe and Pit Schedule. LOW: the PR description still says default on.
+   - **#836 @ b0480818 MERGE-WITH-FIXES.** OFF gives the same output as before. 2 MEDIUM:
+     - What CE Found open-end items are dropped wholesale, not matched by pipe;
+     - pipe-end rows still show the drawing handle.
+   - **#837 @ 6a732cff MERGE-WITH-FIXES (hidden CDTIDYLABELS).** 2 MEDIUM:
+     - a label on a locked layer is reported as "move it by hand";
+     - Enter for All may end silently.
+     - LOW: stacked on the old #835 head 36d7c492; rebase onto 81f36c52.
+   - **#839 @ cf407791 MERGE-WITH-FIXES.** HIGH: linking.editPipeRetidyLabels defaults ON. LOW: stacked on the old #835 head; rebase.
+   - **#838 @ 636952cf DO-NOT-MERGE as stacked.**
+     - HIGH: built on the old #836 head 196bef43 (conflicts; a call to a constructor that no longer exists).
+     - HIGH: allowIgnoreFinding defaults ON.
+     - 3 MEDIUM, including: the whole record is compared, so moving a label brings a finding back; the cached project record is patched outside Undo.
+   - **#840 @ 46e0d1e5 MERGE-WITH-FIXES.** HIGH: ShowWhereGlow defaults ON. MEDIUM: "no Undo step" is not guaranteed.
+   - **#841 @ 9ea6d494 MERGE-WITH-FIXES.** HIGH: OfferToPauseSlowFeature defaults ON. MEDIUM: Undo of a Pause may not stick (cached record; same flaw as #838).
+   - **#831 d0026084 and #834 616be215:** no fix head yet; their run 135 MERGE-WITH-FIXES stands.
+   - **INT-073 pattern again:** the new switches in #838, #839, #840 and #841 all default ON. Builders: make every new switch default false.
+835. **Fri 09 Oct 07:09** — **Corrected lists:**
+   - **C-27 (rel-20261009g)** is not on origin yet. By ancestry, #823 #827 #828 #829 #830 are NOT in C-26 (rel-20261009e 1200744d), so the planned C-27 content is right.
+   - **C-28 (Civil/Manager), plain MERGE, in this order:**
+     - #835 81f36c52;
+     - #832 c86963eb;
+     - #833 77e4e37d.
+     - All three are based on rel-20261009c and each adds a setting near UserSettings.cs line 362-371 and a REGRESSION_LOG entry. Expect text conflicts there: keep every block.
+     - If C-27 drops any of #823 #827 #828 #829 #830, it moves to the head of C-28 (#827 before #828).
+   - **C-28 OUT, waiting for fixes:**
+     - #836: then #838, #840, #841, in that order;
+     - #837 and #839: after a rebase onto #835 81f36c52, and #839 default OFF;
+     - #834: the #836 stack sits on it;
+     - #824: superseded; close it.
+   - **S-28 (Structural): plain MERGE = 0.** #831 is still MERGE-WITH-FIXES on d0026084, with no fix head.
+836. **Fri 09 Oct 07:09** — HEADLESS RUN 136 ended.
+   - **Not checked:** no build, test or AutoCAD; C-27 contents (branch not pushed).
+   - Usage: unknown (headless).
