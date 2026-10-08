@@ -1361,3 +1361,4 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **Not checked:** no build, test or AutoCAD; #831 #836 #841 #842 #843 #844 (heads unchanged, earlier verdicts stand).
    - **Own slip:** a mistyped git pull started a rebase of CE_PLAN onto origin/master. I aborted it before any change; the log commit is intact.
    - Usage: unknown (headless).
+845. **Fri 09 Oct 08:21** — HEADLESS RUN 139 started (desk plan/03 08:25 list: INT-073/074/075; new heads from build/04 57, build/03 68-69, build/02 118-119). Usage: unknown (headless).
