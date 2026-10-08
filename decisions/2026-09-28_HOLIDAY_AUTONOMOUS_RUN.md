@@ -584,3 +584,13 @@ BATCHES 4+5
 1-8, 11-15: as recommended. 9: OVERRIDES: 'P1' is used for BOTH purlins and timber posts, they typically do not appear on the same job: NO separate purlin letter; if both appear on one job warn (R-27), do not block. 10: 'depends on project and layouts': the member schedule position is not fixed: ask each time per layout and remember it per project (interpretation).
 
 TRANSITION NAMES (Tim's closing remark): where a plain-English name replaces an AutoCAD-style name, show BOTH during the transition (e.g. 'Tidy labels (CDTIDYLABELS)'): ribbon labels, menus, tooltips, window titles, help; a Settings switch 'Show AutoCAD command names' defaulting ON for the transition; the plain name stays the main name. Filed in IDEAS_INBOX and given to the builders.
+
+## Fri 9 Oct 2026 about 10:00 (real PC clock) — Tim answers the desk's list of six waiting items (desk plan/03)
+
+Tim, verbatim: "yes admin, name by the actual user, bt1 can be whatever width possible, yes, send them again, wdym". **INT-076.** Numbering = the desk's list in chat at about 09:20 (1 administrator, 2 time-log naming, 3 BT1 and the Longest-wall-brace limit, 4 beam linking default, 5 Batch 5/14 questions 8, 10, 14, 15, 6 the two clearance distances). Desk interpretation of each:
+1. **YES: make Tim the CE administrator, once, on his PC, before any colleague installs** (Manager > Admin Dashboard > Yes writes his Windows name to the office policy `admin-users.json`). Authorises one Codex step (or Tim doing it himself); after it the desk reads the file back.
+2. Time logs: "name by the actual user": the time-log files and the weekly export keep naming each person by their own user name (Windows login) as the code does today; nothing to build.
+3. BT1: "can be whatever width possible": a bracing truss is NOT limited by the 'Longest wall brace' limit; BT1 accepts any width; remove nothing, add no limit.
+4. "yes" to the beam linking default: desk reads it as YES, beam linking ON by default; NOT yet applied because the question was not a yes/no one: the desk asks Tim to confirm in one line before any default changes.
+5. 'send them again': the Batch 5/14 question file resent; questions 8, 10, 14, 15 still need Tim's own numbers or meaning.
+6. 'wdym' (the two clearance distances): explained in chat: two minimum gaps in metres for the detention/storage pipe and tank checks: (a) footing clearance: how far a storage pipe or tank must stay from a footing; (b) service clearance: how far from an existing service. STILL UNANSWERED.
