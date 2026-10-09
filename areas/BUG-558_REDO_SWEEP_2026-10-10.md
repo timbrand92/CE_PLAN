@@ -64,8 +64,10 @@ Almost all are reads, so the fix is usually one word: `StartOpenCloseTransaction
    `TryLoadFromDrawing` → `StartTransaction` at `ProjectDataService.Persistence.cs:692` ✔, then
    `RebuildRuntimeCaches` → `StartTransaction` at `LinkService.Cache.cs:492` ✔, `:535` ✔, `:636` ✔. If the reload
    fails, `ScheduleHistoryReloadRetry` (`Persistence.cs:769-826`) repeats it on Idle. Gate: only
-   `IsCeOwned != true` returns early. Whether a transaction INSIDE CommandEnded of U kills REDO the same way as
-   one after it is being measured headless now (tests U_HOOK_TR / OCT / NONE) and will be added here.
+   `IsCeOwned != true` returns early. **MEASURED 07:08 (core console, CIRCLE, U, REDO with a CommandEnded(U) handler):** a read-only
+   `StartTransaction` + Commit inside CommandEnded of U -> **"Nothing to redo"**; the same read with
+   `StartOpenCloseTransaction` -> "Everything has been redone"; an empty handler -> redone. So this chain alone
+   breaks REDO after every U in a CE-owned Civil drawing, and the one-word fix is proven to keep it.
    Fix: all four only read → `StartOpenCloseTransaction` (`Cache.cs:54` already does).
 2. **Automatic Project QA, 3 s after U/REDO.** `CivilProjectQaAutomaticService.cs:272-281` ✔ marks affected on
    U/UNDO/REDO, a 3 s quiet timer hooks Idle, `AdvanceOnIdle` → `CreateSession` →
