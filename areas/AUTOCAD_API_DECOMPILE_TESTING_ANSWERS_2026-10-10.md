@@ -96,7 +96,7 @@ vanilla keeps REDO.
 ## R2-2. Does plugin code with NO command kill REDO? MEASURED (06:25 and 06:33, 16 runs)
 
 Method: CIRCLE, U, then plugin .NET code called from a LISP function (no command starts; CommandInProgress shows
-only the LISP call), then REDO. Core console (no graphics window). Evidence: `C:\Tools\AcadProbeuns61010-062510\`
+only the LISP call), then REDO. Core console (no graphics window). Evidence: `C:\Tools\AcadProbe\runs\20261010-062510\`
 and `...-063316\`.
 
 **REDO KILLED ("Nothing to redo"):**
