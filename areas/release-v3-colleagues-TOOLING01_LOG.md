@@ -285,3 +285,38 @@ Brief from desk plan/03: the four driver gaps from claude driver run 11 (NEXT_FI
 2. Nothing was proven in AutoCAD.
 
 RUN 6 ENDED.
+
+---
+
+# RUN 7 (Sat 10 Oct 2026, about 07:20 to 07:40 PC clock, headless Sonnet)
+
+Brief from desk plan/03: two synthetic fixtures for Codex W54, the undo-safety check (layer 2) as driver journeys, the Redo prediction journey, and the Opus review round 7 output when it lands. **AutoCAD was NOT run.** Original `acad_driver.ps1` untouched; the driver copy `acad_driver_witness.ps1` was not changed this run; no product code changed; no recorder change, so the pin is unchanged.
+
+## Answer first
+
+1. **Fixture 1, markup PDF: made.** `C:\ce_rc_vc7\SYNTHETIC_markup_sample.pdf` (1,390 bytes). One A4 landscape page: title block box ("SYNTHETIC TEST SITE"), a sketch of three pits SP1 to SP3, three typed red markups and one hand-drawn-looking red loop round SP3. PdfPig reads it back as 1 page with all that text. Not opened in AutoCAD or CE.
+2. **Fixture 2, consultant drawing copy: made.** `C:\Lisp Files\_TEST_COPIES_20260923\BUG061\SYNTHETIC_xcivil_style_consultant_copy.dwg` (10,632 bytes; the chooser folder named in CODEX_VERIFYW54, "Choose X-Civil drawing" opened at BUG061). Written with ACadSharp 3.4.29, read back: 3 pit outlines on `C-SWD-PIT(G)`, 2 pipe outlines on `C-SWD-PIPE(G)`, labels on the two `_LBL` layers (layer names taken from the X-Civil scanner source). Made-up names and sizes only. Open risk: the sample may be too thin for "Read source" to find pits and pipes; if so the desk should say what the scanner wants.
+3. **README line:** `C:\Lisp Files\_TEST_COPIES_20260923\FIXTURES_SYNTHETIC_README.md` says both are synthetic, where they are and which Codex checks use them. (The folder BUG061 already held one real 4 MB consultant copy `W26-26_consultant_copy.dwg`; left alone.)
+4. **Undo-safety layer 2: three journeys, templates only.** `C:\Lisp Files\_ACAD_DRIVER\journeys\undo_safety\1_civil_wait_15s_and_switch.json` (15 driver calls), `2_civil_select_and_palette.json` (15), `3_structural_wait_switch_select.json` (19). All at most 25 calls, each ends in REDO and a reader walk. Guide: `journeys\undo_safety.md`.
+5. **Redo prediction journey: made.** `journeys\undo_safety\4_redo_prediction_cvl_name.json` (12 calls). Two copies of DRV1_B1, `DRV1_PLAIN_B1.dwg` (control) and `DRV1_CVL_B1.dwg`. Token form read from `DrawingDisciplinePolicy.cs` on rel-20261009t: the regex `_(STR|CVL)_` over the whole path (underscore, CVL, underscore), then the sheet token C01 to C99 (file name only); `LinkService` sets IsCeOwned true when that discipline comes out Civil. The test checks the CVL name matches and the plain name matches neither rule. Prediction written into the file: without the one-word StartOpenCloseTransaction fix the plain copy keeps REDO and the CVL copy says "Nothing to redo" with the reader PASS; with the fix both keep it. The tester reads the installed build's product version first (bundle folder `Contents\Win64\Modern`).
+6. **Offline test:** `tests\Test-UndoSafetyJourneys.ps1`, 41 of 41 (started RED: 11 of 13 failed with no files; two bugs in my own test found and fixed while greening). Old pilot test `Test-WitnessPilotJourneys.ps1` still 57 of 57. The files live in a subfolder so the original driver test that counts the example journeys is unaffected.
+7. **Item 4 (Opus review round 7): not landed.** The newest REVIEWLANE entry is 958 (Opus tooling review run 4, 05:27 PC clock); nothing after it names tooling01. The open items from entries 953 to 957 were handled in run 5. Nothing to fix; check again next run.
+
+## Things the driver cannot do (said in the guide, not improvised)
+
+1. **Hover:** no mouse. Spec line 4 is a Codex step (U, hover a pit 3 s, REDO, read the log).
+2. **A real click:** journeys 2 and 3 select with a LISP `sssetfirst`. It changes the same pick-first set, but it is LISP, so the recorder logs `LispWillStart` and the reader reports FAIL naming it. That FAIL is the tester's own action; the journeys say so and tell the tester to judge by the REDO text plus every event after that line.
+3. **Open the palette inside the wait:** typing CDINSPECTOR is a command, and any command between U and REDO ends REDO by AutoCAD's rule, so the palette is opened BEFORE the U. Closing it in the wait is tried once with `ui close` (may be refused: docked palette).
+
+## For Opus to review
+
+1. Whether the `sssetfirst` stand-in for a click is acceptable, or the reader should get an opt-in "allow this LISP first line" switch (I did not touch the reader: it is PR #977's).
+2. Journey 3 assumes DRV2_S1 holds a beam and a footing; the journey tells the tester to check, not guess.
+3. Journey 4 reads the bundle's `Modern` folder DLL as the loaded build; the tester is told to say which folder they read.
+
+## Not done
+
+1. **Items 4 and 5 of run 1 are still not started** (TH-01 "what got drawn" table scenario with ACadSharp and PdfPig; window pictures for Edit Pit and Edit Pipe, plus the `ui tree` ribbon check). This run's brief was the four items above.
+2. Nothing proven in AutoCAD. Built and tested offline only; not installed; not accepted.
+
+RUN 7 ENDED.
