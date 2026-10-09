@@ -1728,8 +1728,8 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - Not checked: no build, test, AutoCAD or accoreconsole run.
    - Not proven on a real PC: the timing gap between the check and the copy (found by reading), the real AppData folders, or the office IT folder.
    - Usage: unknown (headless).
-902. **Fri 09 Oct 08:04** — TEAM REVIEW run 10 (Opus claude-opus-5-5, read only, no sub-agents). Scope: #954 re-review at the build/03 run 79 head 78bea5b5. Totals: 1 MERGE, 0 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
-903. **Fri 09 Oct 08:04** — **#954 @ 78bea5b5 MERGE (PRIVACY, switch ON only).** PR comment 6076983341.
+902. **Fri 09 Oct 19:04** — TEAM REVIEW run 10 (Opus claude-opus-5-5, read only, no sub-agents). Scope: #954 re-review at the build/03 run 79 head 78bea5b5. Totals: 1 MERGE, 0 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+903. **Fri 09 Oct 19:04** — **#954 @ 78bea5b5 MERGE (PRIVACY, switch ON only).** PR comment 6076983341.
    - Closed (entry 899 HIGH): the plugins' folder no longer goes through UploadOutbox or File.Copy. UploadPluginOutbox reads each file ONCE into memory and decides on that text. It writes the same checked text with File.WriteAllText to the office path, then deletes the source. Nothing copies a plugin file by path. A file rewritten after its read is at worst deleted unsent.
    - Failures: a non-Civil file (also no PluginId, over 2 MB, or unreadable) is deleted, never written. A failed delete keeps the file waiting, still unsent. A failed cut or regex writes nothing. A failed write keeps the source for the next pass. A failed source delete after the write leaves only checked text in the office folder.
    - Civil: every text value except PluginId goes through CeSupportBundleScrub.Scrub, identical to #941 @ 50213ba6. The private book and private\ folders are skipped. Old support zips are deleted.
@@ -1739,8 +1739,8 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - NOTES (not blocking): text inside arrays and dictionary keys is not cut, but Civil's records have neither. The login file-name check runs only in the old-file pass, so a real-named machine file from an OLD Civil written in the milliseconds before the listing would go under that name. #944 in the same payload prevents this.
    - INT-073 to INT-078: consistent (switch OFF, nothing visible, no colour, no drawing names in admin reports).
    - Position: base #947 @ c88d3bdb is in the head. Only CeAdminStorageService.cs, its tests and REGRESSION_LOG changed since 3c42ef08, so entry 899's trial merges stand (clash only at the REGRESSION_LOG top).
-904. **Fri 09 Oct 08:04** — **C-35 IN: #954 @ 78bea5b5.** It goes straight after #947 (c88d3bdb) in C-34, and ships only in a payload that also holds #941 @ 50213ba6 and #944 @ 10492156. Otherwise C-35 is as in entry 896. S-35 unchanged (entry 877).
-905. **Fri 09 Oct 08:04** — TEAM REVIEW run 10 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+904. **Fri 09 Oct 19:04** — **C-35 IN: #954 @ 78bea5b5.** It goes straight after #947 (c88d3bdb) in C-34, and ships only in a payload that also holds #941 @ 50213ba6 and #944 @ 10492156. Otherwise C-35 is as in entry 896. S-35 unchanged (entry 877).
+905. **Fri 09 Oct 19:04** — TEAM REVIEW run 10 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
    - Not checked: no build, test, AutoCAD or accoreconsole run, and no fresh trial merge.
    - Not proven on a real PC: the real AppData folders, the office IT folder, or the timing on a busy PC.
    - Usage: unknown (headless).
