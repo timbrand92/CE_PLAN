@@ -418,8 +418,10 @@ Facts read from the 2027 wrapper (managed side only):
    whatever `add` says. `Dispose()` on that object then deletes nothing; it only empties the wrapper. Any later
    read through that wrapper hands a null pointer to native code (measured: AutoCAD dies, see 10).
    `OpenCloseTransaction` differs: `add=false` leaves .NET owning it, and `Dispose()` then deletes it.
-3. **`BlockReference.Name` opens the block definition on every read.** In a loop over many blocks, read
-   `BlockTableRecord` (an id) and cache names per id.
+3. **`BlockReference.Name` opens the block definition on every read**, but measured cheap (~3 ms per 2,000
+   plain blocks). The real cost is CE's own effective-name routine on DYNAMIC blocks (a separate transaction per
+   block: ~110 ms per 2,000 CE pits vs ~29 ms with a cache per definition id) and reading
+   `DynamicBlockReferencePropertyCollection` (~270 ms per 2,000). Cache per definition id in any whole-drawing loop.
 4. **`Database.SaveAs(name, version)` (two-argument form) accepts only R14 to 2018 DWG formats**; older
    ones return an error. 2027 still writes the 2018 format (`DwgVersion.Current` = `Newest` = AC1032), so
    `Current` is always safe.
@@ -465,7 +467,11 @@ the full AutoCAD window was not tested and may differ.
     `CeContextualTabController`. Just before hiding, AutoCAD raises the public
     `RibbonServices.RibbonPaletteSet.ContextualTabDisplayed`; its `e.HiddenTabs` is the very list it then
     hides, so removing CE's tab from it keeps the tab up without an Idle watchdog (read, not yet tried).
-16. Lookup helper: `bash C:\Tools\AcadDecomp\tools\acad-error.sh eLockViolation` (or a number) gives the
+16. **2024 (net48 lane) has the same transaction, dispose and equality logic** (read from the 24.1 copy,
+    not run); 2027 only adds `GC.KeepAlive` calls and the Database Equals/GetHashCode pair. A dictionary keyed
+    by Database and fetching a disposed-then-reused id were measured safe in 2027 (tests G1, D7).
+    Full write-up with the plugin audits: `04_REFERENCE\AUTOCAD_API_DECOMPILE_FINDINGS_2026-10-10.md`.
+17. Lookup helper: `bash C:\Tools\AcadDecomp\tools\acad-error.sh eLockViolation` (or a number) gives the
     error's number and the ObjectARX functions documented to return it.
 
 ---
