@@ -1,0 +1,28 @@
+**Head sha:** `claude/rel-20261009q` = `0f00f5fb98875ca7bf77b93b883467ee9c30fa45`. It is Opus's `4ddd5957` plus one version-only commit, pushed by fast-forward with the leak scan clean. Local and origin match and the worktree is clean. Candidate: `C:\ce_rc_scratch\s1032\CE_STRUC_SUITE.bundle`. Built and file-checked only; nothing installed and nothing opened in AutoCAD.
+
+**Verify line:** `struc: manifest 2007 files, verified 2007, bad 0, extra 0`.
+
+**Versions:**
+- **Product DLLs:** `CE_STRUC_SUITE.dll` reads `1.0.114+0f00f5fb` on all three lanes.
+- **DesignCore:** reads `1.0.0+0f00f5fb`.
+- **Package and shared files:** AppVersion is `1.0.114`, with zero CE_SHARED files.
+- **Native ARX:** restored to the installed bytes (`6DE0A45B...`), so the native object is unchanged.
+
+**Tests and build:**
+- **Contract tests:** `RuntimeLaneContractTests` passed 12 of 12 (0 failed).
+- **Build:** 0 errors, 6 warnings, and no C++ files changed since 9babe787.
+
+**Registry diff:** none. It has 371 entries in all three lanes and matches the installed bundle exactly.
+
+**Stale-build proof:** 30 of 30 string checks OK, 0 flagged. Each string is in the candidate and absent from the installed bundle, s1029, s1030 and s1031.
+
+**Wall-option fix:** its test is not in the bundle, so I could not string-probe it. The candidate DLL differs from s1031 by hash on all three lanes, which shows it is a new build, not that the fix works.
+
+**Tim's settings:** the three settings hashes are unchanged before and after. Only logs and admin-outbox records changed, matching another session's AutoCAD running during my work. The installed DLLs are unchanged.
+
+**Odd things:**
+1. **Settings hash:** Structural CS_Settings is `D43EFEB1...` (29,249 bytes), not the `D3890D56...` (28,872 bytes) in the brief. It was already that way before I started.
+2. **Installed version:** the installed bundle is 1.0.113, equal to s1031, not 1.0.110 as the brief said. I compared against what is installed now, plus s1029, s1030 and s1031.
+3. **AutoCAD wait:** another session had acad.exe up until about 08:26. The build did not wait for it; the test ran only after three clear checks 60 s apart.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1032_REPORT.md`.

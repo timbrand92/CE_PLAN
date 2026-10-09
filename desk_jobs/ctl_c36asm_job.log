@@ -1,0 +1,27 @@
+The build hasn't started because other sessions are still running dotnet builds. I'm ending this turn here and will carry on when the background wait finishes.
+
+**Done so far (not a finished report):**
+
+1. **Base:** `origin/claude/rel-20261009r` is at f34abfeb. It is a descendant of 2c094c3a, so the base check passed. The new branch is `claude/rel-20261009w`, in the worktree `.claude\worktrees\c36asm`.
+2. **Merged, plain `--no-ff`, in order:** #1002, #994, #1007, #997 and #1003.
+   - Each head matched `gh pr view`, and each PR is open. The review lane log's newest verdict for each is MERGE.
+   - After every merge, the merge numstat matched the PR's own numstat.
+   - Only `REGRESSION_LOG.md` conflicted (on #994, #1007 and #997). It was resolved byte-safe, keeping every entry, with 0 control characters added.
+   - Nothing changed under `Shared/`, in either registry JSON file, or in any csproj, props or version file.
+3. **Skipped:** #948 and #960.
+   - #948 would bring 10 commits, not its own 1 to 3. The other commits belong to #912 (pit status) and the #910 follow-up.
+   - #960 would bring 16 commits. Those are the #926 wrong-layer rules (9e6d8981, 26775280), the #910 reader fix and all of #948.
+   - They go into the big next train after #910, #912 and #926.
+4. **New Settings, all neutral:**
+   - `crossingServices`: `showOnLongSections` is off, `minimumClearanceMm` is blank, and there is a seeded service-layer list.
+   - `showProgressWhenSlow` is off.
+   - `progressAfterSeconds` is 1.0, and only matters if the switch is turned on.
+5. **Assembly log entry:** committed as 596a73c2. It says a drafter gets the Manager menu back by closing and restarting AutoCAD.
+6. **Hygiene baseline differs from the brief:** the Structural `CS_Settings.json` is now D43EFEB1, 29,249 bytes (the brief said D3890D56, 28,872). The installed Civil DLLs read 3.0.44+b7eed25, not 3.0.41. Someone else changed these before I started. I touched neither.
+7. **Redo-window scan:** I listed every `StartTransaction` in the touched files, but I have not yet sorted them into reachable and not reachable.
+   - The Idle-deferred and switch-time reads in `LinkService.Cache.cs` (lines 537, 602, 724, 979) are now conditional. They use `StartOpenCloseTransaction` when `lightRead` or `_lightIdleReads` is set.
+   - `ProjectDataService.Persistence.cs:831` and the plain `StartTransaction` at `LinkService.Reactors.cs:374` and `:1944` still need classifying.
+   - The Manager `MENUBAR` write at `CeSuiteManagerMenuService.cs:790` only runs when the value differs.
+   - The compiled guard tests will have the final say.
+
+**Still to do:** the whole-solution build, the net10 and net48 tests, the hygiene check at the end, `git clean -fdXq`, the push, and `TRAIN_C36_ASSEMBLY_REPORT.md`. Nothing has been built or tested yet. Another session's dotnet test runs were active, and AutoCAD is running.
