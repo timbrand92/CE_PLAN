@@ -1512,3 +1512,61 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - **S-33 (Structural, on S-32), plain MERGE, in this order:** #929 1adb10bd; #930 68b9f794; #933 137c3e45; #940 9e8ad52e. Clashes: #930 x #933 in command-registry.json, UserSettings.cs and SettingsService.cs (both add at the same spot): keep both; #930 carries #906's UserSettings/SettingsService lines next to #902/#904 (already resolved in S-32: keep all); #940 x #893 in UserSettings.cs (both after ScrewPileDiameterMm): keep both; REGRESSION_LOG top.
    - **S-33 OUT:** #927 (fixes 1-2, then MERGE with its flip commit); #935 then #937 (MEDIUM); #939 (close, duplicate of #893). Unchanged from S-32 OUT: #852 then #851, #831, #843.
 866. **Fri 09 Oct 13:03** — TEAM REVIEW run 3 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted. Not checked: no build, test, AutoCAD or accoreconsole; I did not read Tim's settings files; pair trials show textual clashes only, not a full C-33/S-33 chain build; I did not prove the #927 refusal path in AutoCAD, whether any Civil 3D or 12d export really mislabels LandXML units (#931 is a guard against a risk, not an observed file), or whether the S01 lintel table on real jobs is a table object (#933). Usage: unknown (headless).
+867. **Fri 09 Oct 14:11** — TEAM REVIEW run 4 (Opus claude-opus-5-5, read only, no sub-agents). Scope: every open PR whose current head had no real OPUS REVIEW comment: 29 heads. That is 8 new PRs (#941-#948: build/02 run 123-124, build/03 run 73-74, build/04 run 61) and 21 fix or merge-down heads (#836 #838 #839 #840 #841 #849 #850 #858 #881 #892 #901 #910 #918 #920 #926 #927 #928 #931 #935 #936 #937). Each verdict was posted on its PR at 14:11 and judged against INT-073 to INT-078. Totals: 29 MERGE, 0 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+   - #927 1f722d64 **MERGE, including the default-flip commit 1b20b0e6** (INT-078). Both requested fixes landed.
+      1. The tick reads "Link columns and beam text to their beam", in the window and in the Settings label map, with a test.
+      2. The policy version is now st3b2b-command-settings.5, with the INT-078 comment and a version-pin test. The reader feeds Beams.LegacyReactorEngineEnabled (default OFF), so a default job gives the same yes/no.
+      - Nit: drop the stray "needs Opus review." line in the code comment.
+      - Tim's stored false stays until W47.
+   - #935 66d76516 **MERGE**: marked record (saved in the JSON) trusted only; record padded to the table's data rows. #937 a32c2b85 **MERGE** after #935: merged fix plus the 3-column erase-and-refresh test.
+   - #942 df1dc990 **MERGE**: DS1/TS1 words in MemberSchedule Settings, defaults identical. #943 4bcde397 **MERGE**: BP layer BoredPierPlan.BpLayerName, default BORED PIER (optional LOW: unusable name to fall back with one line). #946 b8f774e0 **MERGE**: dormant Structural support bundle deleted, nothing referenced it, Manager CESUPPORT the only one.
+   - Checks chain: #836 ab7bccad **MERGE** (same-pipe dedupe, verified the production item sets its handle; no handle in rows); #838 63d025d5 **MERGE** (merge-down only); #840 f527b9c5 **MERGE** (twist kept, old glow cleared); #841 9085c855 **MERGE** (words/log); #858 bdf921c1 **MERGE** (merge-down only).
+   - #839 b8eea610 **MERGE**: HIGH fixed, no second Suspend/Resume inside Edit Pipe. The switch stays OFF until the preview version is built. Its base is #835 (in C-28), so it does not wait for #837/#847.
+   - Log/wording-only fix heads: #849 86fc6c44 **MERGE** (log), #918 32fcc3bf **MERGE** (log), #920 e4c4326e **MERGE** (log).
+   - #850 1c263a73 **MERGE**, OFF and not hooked up: one upside-down rule plus a sweep test. MEDIUM 3 and LOW 4 must be fixed before hook-up.
+   - #881 761db5a4 **MERGE** (Move to set off when read-only). #901 331a4786 **MERGE** (both LOWs).
+   - #892 2b692f3c **MERGE**: source UNITS decide on a non-mm job drawing; asked after Proceed when unusable. LandXML must-do in entry 868.
+   - #910 3dd48251 **MERGE**: readers accept old and renamed names. Follow-up LOW before anyone renames SLAB PERIMETER: SlabService.cs:2069 and :2136 still compare the exact name. #926 26775280 **MERGE** (merge-down only).
+   - #928 9dd4f8e4 **MERGE** (keys labelled not used yet; fraction reader, JsonIgnore, tested). #931 f46ca782 **MERGE** (believable-size guard, report line, tested).
+   - #936 c5190ad1 **MERGE** ("ask your CE administrator"; admin keeps the installer words). #947 c88d3bdb **MERGE** after #936 (#873/#874 LOWs).
+   - Privacy routes, ON as protections: #941 50213ba6 **MERGE** (Manager failure reports through the support-zip cleaner); #944 10492156 **MERGE** (drawing name as a one-way code; the admin dashboard now shows a code); #945 42c1bae2 **MERGE** (attribute tag and length only; Codex evidence that read values from the log will see lengths).
+   - #948 6ad82601 **MERGE**, OFF and not hooked up: statusLayers is its own group, grey 8. Before hook-up: the layer readers must accept the two status layers, and DASHED must be loaded or fall back.
+   - INT checks:
+      1. No new key in a Design Standards group. New keys sit in Structural MemberSchedule and BoredPierPlan, and in Civil statusLayers and detention (tolerance keys, labelled not used).
+      2. No blue.
+      3. No new command or ribbon entry.
+      4. Every new visible behaviour is OFF, a truthful sentence, a protection (#941 #944 #945), or Tim's INT-078 ruling (#927).
+      5. Typed answers and engineering numbers are unchanged at stock. #931 changes imported sizes only where a file states its unit, and it is guarded and reported.
+      6. Unknown stays Unknown. No hard block added.
+868. **Fri 09 Oct 14:11** — **Corrected lists.** Base: C-30 = rel-20261009l e636e17d and S-30 = rel-20261009m 88175c8c, both on origin. No C-31 to C-33 or S-31 to S-33 branch exists yet, so C-34 sits on C-31 (entry 859) + C-32 (entry 862) + C-33 (entry 865), and S-34 on S-31 + S-32 + S-33 the same way. Checked with one read-only git merge-tree chain per line, through every earlier list into the new items (objects only, no refs changed). Every step also clashes at the REGRESSION_LOG top: keep every entry.
+   - **Corrections to earlier lists (take the newer head):**
+      1. C-31: #901 at 331a4786 (not 130e6763).
+      2. C-32: #881 at 761db5a4 (not 354be3b6); #882 to #885 merge on top with no code clash. #918 at 32fcc3bf (not ca10019b). #920 at e4c4326e (not 6ae16dde).
+   - **C-34 (Civil/Manager, on C-33), plain MERGE, in this order:** #836 ab7bccad; #838 63d025d5; #840 f527b9c5; #841 9085c855; #858 bdf921c1 (a stacked chain, bottom-up); #839 b8eea610; #849 86fc6c44; #850 1c263a73; #892 2b692f3c; #931 f46ca782; #910 3dd48251; #926 26775280; #948 6ad82601; #928 9dd4f8e4; #936 c5190ad1; #947 c88d3bdb; #941 50213ba6; #944 10492156; #945 42c1bae2.
+   - **C-34 clashes:**
+      1. UserSettings.cs: #839, #849, #850, #892, #931 and #948 each add a property or group next to the C-31 to C-33 additions. Keep all.
+      2. **MUST-DO in LandXmlParser.cs.** #892 conflicts with #911 (C-32), and #931 conflicts with both.
+         - In ParseStruct/ParsePipe, keep #892's `LandXmlLinearUnit coordUnits` parameter AND #931's `SizeUnits sizeUnits = null` parameter, and pass both at the two call sites.
+         - Keep #911's five placeholder/no-invert markers and #892's UnitsGuessedMarker.
+         - In ReportLines, keep #911's five markers, #892's UnitsGuessedMarker and #931's SizeUnitsMarker.
+      3. The Checks chain, #910 > #926 > #948, #936 > #947 and #941/#944/#945 were clean apart from the log.
+   - **C-34 OUT:**
+      - #837 > #847, #842 and #844 (MERGE-WITH-FIXES, no fix pushed).
+      - #907: close (duplicate of #920).
+      - #824: MERGE-WITH-FIXES, unchanged; close.
+   - **S-34 (Structural, on S-33), plain MERGE, in this order:** #927 1f722d64 (its head carries the INT-078 default flip 1b20b0e6); #935 66d76516; #937 a32c2b85; #942 df1dc990; #943 4bcde397; #946 b8f774e0.
+   - **S-34 clashes, all additive, keep all:**
+      1. #937 adds ScheduleSet.PierTableWithoutLayerAndHandle next to the #929/#930/#933 Settings blocks in UserSettings.cs and SettingsService.cs.
+      2. #942 adds two MemberSchedule properties next to #859's in UserSettings.cs.
+      3. #943 adds one BoredPierLayerName helper line beside the #893/#879 helper lines at the top of FoundationService.cs.
+      4. #942 and #943 each add one label line after TimberSubfloor.BearerSpanTable in SettingsService.LoadRecovery.cs: keep both.
+      5. #927, #935 and #946 were clean apart from the log.
+   - **S-34 OUT:**
+      - #939: close (duplicate of #893).
+      - Unchanged: #852 then #851, #831, #843.
+869. **Fri 09 Oct 14:11** — TEAM REVIEW run 4 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run.
+   - The merge-tree chains show textual clashes only, and later steps carry earlier conflict markers, so a clash list after a conflicted file is indicative. They do not show whether the merged C-34/S-34 code compiles.
+   - I did not read Tim's settings files.
+   - I did not prove #840's twist sign against VIEWTWIST, #892's prompts, #927's tick in AutoCAD, or that #944's hashed drawing name still suits the admin dashboard.
+   - Usage: unknown (headless).
