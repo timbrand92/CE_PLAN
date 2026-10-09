@@ -1,0 +1,15 @@
+{"seq":1,"ts":"2026-10-10T05:08:52.4440639+11:00","mono":219526967875,"ev":"DocumentAttached","doc":"CLD16_B1.dwg"}
+{"seq":2,"ts":"2026-10-10T05:09:27.4135570+11:00","mono":219561936894,"ev":"LockModeChanged","idle":3276,"cmd":"CIRCLE","prev":"Write","now":"NotLocked"}
+{"seq":3,"ts":"2026-10-10T05:09:27.4167362+11:00","mono":219561940076,"ev":"CommandWillStart","idle":3276,"cmd":"CIRCLE"}
+{"seq":4,"ts":"2026-10-10T05:09:27.4204888+11:00","mono":219561943822,"ev":"CommandEnded","idle":3276,"cmd":"CIRCLE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":5,"ts":"2026-10-10T05:09:27.4207424+11:00","mono":219561944073,"ev":"LockModeChanged","idle":3276,"cmd":"#CIRCLE","prev":"NotLocked","now":"Write"}
+{"seq":6,"ts":"2026-10-10T05:09:27.4414943+11:00","mono":219561964831,"ev":"LockModeChanged","idle":3277,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":7,"ts":"2026-10-10T05:09:27.4417696+11:00","mono":219561965097,"ev":"LockModeChanged","idle":3277,"cmd":"#","prev":"NotLocked","now":"Write"}
+{"seq":8,"ts":"2026-10-10T05:09:28.9271878+11:00","mono":219563450498,"ev":"LockModeChanged","idle":3435,"cmd":"MOVE","prev":"Write","now":"NotLocked"}
+{"seq":9,"ts":"2026-10-10T05:09:28.9296392+11:00","mono":219563452947,"ev":"CommandWillStart","idle":3435,"cmd":"MOVE"}
+{"seq":10,"ts":"2026-10-10T05:09:28.9344187+11:00","mono":219563457727,"ev":"SysVarChanged","idle":3435,"name":"*COMPLETABLESTATE","changed":true}
+{"seq":11,"ts":"2026-10-10T05:09:28.9356713+11:00","mono":219563458978,"ev":"SysVarChanged","idle":3435,"name":"*COMPLETABLESTATE","changed":true}
+{"seq":12,"ts":"2026-10-10T05:09:28.9384101+11:00","mono":219563461717,"ev":"CommandEnded","idle":3435,"cmd":"MOVE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":13,"ts":"2026-10-10T05:09:28.9385323+11:00","mono":219563461838,"ev":"LockModeChanged","idle":3435,"cmd":"#MOVE","prev":"NotLocked","now":"Write"}
+{"seq":14,"ts":"2026-10-10T05:10:32.2765439+11:00","mono":219626798980,"ev":"LockModeChanged","idle":9834,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":15,"ts":"2026-10-10T05:10:32.2825151+11:00","mono":219626804949,"ev":"DocumentClosing"}
