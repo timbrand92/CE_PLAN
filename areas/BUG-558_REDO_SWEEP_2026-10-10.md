@@ -100,3 +100,29 @@ Totals: Drainage 5 unprompted chains (~20 sites) + 6 click sites; Manager 1 + 1;
 **Suggested fix order for builders:** item 1 (four lines), item 2, `BlockService.cs:227`, item 4 XREF reader and
 watcher. Then the Cecil rule in `UNDO_SAFETY_CHECK_SPEC_2026-10-10.md` stops them coming back. Each fix is
 "done" only when the driver's U → wait → switch → REDO routine says "Everything has been redone".
+
+## 4. Reconciliation (07:35 question): why driver runs 3, 4, 6, 9 kept REDO
+
+**Yes, there is a gate: `state.IsCeOwned`.** `LinkService.Reactors.cs:702` (`if (state.IsCeOwned != true) return;`)
+skips the U-end reload/rebuild unless the drawing is CE-owned. The flag is set:
+1. **At registration** (`LinkService.cs:1158-1174`, first activation/open): `true` only if the drawing's discipline
+   is Civil (explicit NOD tag `CE_CVL_DISCIPLINE`, or a `CVL` token in the file name,
+   `DrawingDisciplinePolicy.ParseFilenameDiscipline`) or it already holds a CE project record
+   (`ProjectDataService.IsDrawingActive`: NOD `CE_CVL_SUITE_PROJECT`). Structural (tag or `STR` token) and
+   ordinary untagged drawings with no project record start `false`.
+2. **Mid-session, the moment a CE link writer runs** (`MarkDrawingAsCeOwned`, `LinkService.Cache.cs:194`):
+   `WritePitLinkData` (`LinkService.Persistence.cs:790`), `WritePipeLinkData` (`:810`, i.e. placing a CD pipe),
+   `LinkService.NetworkEdits.cs:274`, `LinkService.Spine.cs:183/540/579`. It never goes back to false in the session.
+
+So an untagged test copy with no project record kept REDO after MOVE + U (runs 3, 4, 6, 9: not owned, the branch
+returns at `:702`). After the first CD pipe it is owned, and from then on **every U in that drawing runs the four
+read `StartTransaction`s and loses REDO**.
+
+**Exposure:** every real Civil job drawing. They carry the `CVL` file-name token or tag, or a saved CE project
+record, so they are owned from the moment they open, not just after a new pipe.
+
+**Caution for BUG-558:** this chain acts on the drawing where U was typed (`OnCommandEnded` uses `sender`,
+`Reactors.cs:466`). In BUG-558 the U is in the STRUCTURAL drawing, which is never CE-owned, so this chain does
+NOT explain BUG-558. That bug still rests on the New Pipe plan-preview lead in §1 (split test A/B). Two separate
+REDO bugs, then: (a) U in any owned Civil drawing (proven chain, fix = OpenClose); (b) BUG-558 across a switch
+(lead, needs the split test).
