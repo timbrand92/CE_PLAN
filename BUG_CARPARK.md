@@ -7270,6 +7270,6 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Next step:** find which start-up file prints it (the Claude tester can read the history right after a launch; the full text of the line and the line before it).
 
-**Status:** OPEN (seen by Codex W49). Never FIXED until Tim confirms in AutoCAD.
+**UPDATE 10 Oct 02:40, Codex W46 (CODEX_VERIFYW46_20261010_0222.md item 7): the START-UP TEXT in full, in this order: 'Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL' / 'Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager' / '; error: syntax error' / 'CE CVL loaded: CE_CVL_SUITE v3.0.41.0 [Modern]' / 'Start with CD, PIT, PITSCHEDULE, or CDEDIT.' / 'Use CDHELP for workflow guidance and CDREPAIR for recovery.' So the syntax error comes right AFTER the two stale-menu lines (BUG-435: the old CE menus in Tim's acad.cuix still listed under CE_CVL_SUITE_MENU, CE_STRUC_SUITE_MENU, CE_SUITE_MANAGER_MENU, plus two unresolved partial files SP2006 and TIM_CAD_SUITE); likely the same cause, to be proven by Tim's manual menu clean-up (DAY1 section). Also seen: AutoCAD warns the automatic-save folder and the Activity Insights log folder are invalid.** **Status:** OPEN (seen by Codex W49). Never FIXED until Tim confirms in AutoCAD.
 
 ---
