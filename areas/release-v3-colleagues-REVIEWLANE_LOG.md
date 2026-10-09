@@ -1570,3 +1570,48 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - I did not read Tim's settings files.
    - I did not prove #840's twist sign against VIEWTWIST, #892's prompts, #927's tick in AutoCAD, or that #944's hashed drawing name still suits the admin dashboard.
    - Usage: unknown (headless).
+870. **Fri 09 Oct 16:56** — TEAM REVIEW run 5 (Opus claude-opus-5-5, read only, no sub-agents).
+   - **Priority 1:** #949, the BUG-549 PRIVACY BLOCKER.
+   - **Priority 2:** every open PR whose current head had no OPUS REVIEW comment, which was #739, #719, #711 and the new #950 and #951. All heads from #850 to #948 already had a newer OPUS REVIEW.
+   - Six verdicts posted, each judged against INT-073 to INT-078: 4 MERGE, 2 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+871. **Fri 09 Oct 16:56** — **#949 @ 35cac4e1 MERGE (PRIVACY, 0 blocking findings, 3 notes).**
+   - Read Markup PDF (Hybrid and Hand), CEMARKUPBENCH (through the orchestrator) and Ask AI (through MarkupAIChatService) all ask MarkupAIOffPcPolicy first. It always says no, before any key is read or any HttpClient is built, so ON still sends nothing.
+   - Sweep of Structural, DesignCore, Manager and Shared: those two files are the only AI key readers or AI callers. None of these folders references CE.AI.Core, so the Anthropic client cannot be reached. Manager's HTTP code is update delivery only.
+   - The test is behavioural. A real 127.0.0.1 listener with a fake key counts requests, and every test expects 0.
+   - Matches Tim's words: UX-QA-05 "Yes, Claude only, page only (Recommended)" and "Don't send; say so (Recommended)".
+   - Notes for a follow-up:
+      - a. The REGRESSION_LOG step 7(b) wording: on a fresh PC the chat is OFF by default, so it shows "disabled in settings".
+      - b. Hand mode should suggest Bluebeam or tagging by hand.
+      - c. The pyautocad worker's `pip install` is a separate network call; log it apart from this PR.
+872. **Fri 09 Oct 16:56** — **#739 @ af6098e8 MERGE.**
+   - All 2 HIGH, 3 MEDIUM and 4 LOW points from 5 Oct are closed. MEDIUM 6, LOW 11 and "same mark on two floors" are logged for Tim, not decided.
+   - One LOW for later: when this plan has no level set, CE still opens every DWG; skip the loop instead.
+   - Clash with rel-20261009n in command-registry.json (CSPOINTLOAD and CSROOFSETOUT): additive, keep all.
+873. **Fri 09 Oct 16:56** — **#719 @ 51613b0a MERGE.** The MEDIUM is closed: the hint now reads "Not available yet: the preview window is still being checked. Leave it off." #704's head is already in rel-20261009n. Only REGRESSION_LOG clashes.
+874. **Fri 09 Oct 16:56** — **#711 @ 03df7389 MERGE (Civil), with clash steps and one condition.**
+   - The empty word lists now warn and still save. Round-trip tests were added.
+   - Clash steps against C-30 (rel-20261009l):
+      1. AdvancedSettingsDialog.xaml: keep the release's three "Last cover level in New Pit" elements. Drop the release's `</StackPanel>` straight after them, and balance the panels.
+      2. The SurveyTab list in AdvancedSettingsViewModel.cs gets all 8 names.
+   - Condition: run `Bug306RememberedValuesFileTests.TheRecentStripsAndPitScheduleFilters_LeaveCdSettingsByteIdentical` on the C-35 tip and on C-30. If it fails only with #711, leave #711 out.
+   - Note: the warning uses AccentBrush, which is still blue on the light theme until BUG-517.
+875. **Fri 09 Oct 16:56** — **#950 @ 943cd638 MERGE-WITH-FIXES (1 MEDIUM).**
+   - The privacy part is correct. The gate (cloud seat, approved provider, Standard project, title-block area) runs before the prompt, and it fails closed. Enter = No. Every page is blanked, then sent one per request, and only on the CE Worker route. The tests count sends.
+   - Fix: a page whose call or parse fails is skipped, but the result is still Success. Name the failed pages in one line ("Page 2 of 3 could not be read, so any schedule rows on it are missing...") and add a test.
+876. **Fri 09 Oct 16:56** — **#951 @ fe3adc80 MERGE-WITH-FIXES (1 privacy fix).**
+   - Pages are blanked and sent one per request, all or nothing. The tests count sends.
+   - Fix: the live-screen "Analyse markups" route must send nothing on a layout tab (TILEMODE 0), because the title block can be anywhere on screen (Tim: "Don't send; say so"). Say "Use From file... with the PDF sheet, or analyse from the Model tab", and add a test.
+   - Safe today only because the title-block area is blank by default. The fix must land before anyone sets the area.
+877. **Fri 09 Oct 16:56** — **Lists (new items only; the earlier C-34/S-34 lists of entry 868 stand).**
+   - **S-35 (Structural, on S-34), plain MERGE, in this order:**
+      1. #949 35cac4e1 (PRIVACY BLOCKER, base rel-20261009n).
+      2. #719 51613b0a.
+      3. #739 af6098e8 (command-registry clash additive, keep all).
+   - #949 trial merges with #927, #942 and #943 clash only at the REGRESSION_LOG top.
+   - **C-35 (Civil):** #711 03df7389, with the clash steps and the Bug306 condition of entry 874.
+   - **C-35 OUT until fixed:** #950, then #951 (stacked on #950).
+878. **Fri 09 Oct 16:56** — TEAM REVIEW run 5 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run, and no full S-35/C-35 chain trial.
+   - Not trial-merged: #950 and #951 against the C-34 list.
+   - Not proven on a real PC: the real PDF render, the screen capture, or the CE Cloud seat call.
+   - Usage: unknown (headless).
