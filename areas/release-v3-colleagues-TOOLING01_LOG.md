@@ -248,3 +248,40 @@ Brief from desk plan/03 after Claude driver run 10. **AutoCAD was NOT run** (a t
 2. No real-key helper-window test ran (`-WithFocusTest` is written, skipped because acad.exe is running).
 
 RUN 5 ENDED.
+
+---
+
+# RUN 6 (Sat 10 Oct 2026, about 06:45 to 07:25 PC clock, headless Sonnet)
+
+Brief from desk plan/03: the four driver gaps from claude driver run 11 (NEXT_FIXES "Added Sat 10 Oct 08:20"), plus the witness additions (CommandInProgress / IsApplicationContext, Idle handlers, transactions). **AutoCAD was NOT run.** Offline only. Original `acad_driver.ps1` untouched (c9ba503d...). Driver copy `acad_driver_witness.ps1` now SHA256 cee16d59... (was 03f1d07e...).
+
+## Answer first
+
+1. **Item 1, CDASK palette invisible: found, it was an allow-list gap, not a hidden window.** CE builds the CE Assistant palette exactly like the CE Inspector palette (a docked PaletteSet). The driver lists docked palettes only if their title is on the allow-list; "CE Inspector" is, "CE Assistant" was not. Fixed in the copy (read-only, exact title). Not proven in AutoCAD.
+2. **Item 2, CEMARKUP:** `CEMARKUP` (review window) and `CEMARKUP Visual Preview` (the CEMARKUPVIEW window) are now read-only on the allow-list. **There is no CEMARKUPPARSE source-mode / project-type window**: those are two command-line keyword questions after a file picker.
+3. **Item 3, CEMARKUPPARSE one-line form: documented as NOT provable offline.** It needs FILEDIA 0 to turn the picker into a command-line question; never run. A Codex checklist line is in the driver README (section "Run 6 changes", point 4).
+4. **Item 4, network proof: designed and tested offline (21 of 21).** Three scripts in `_ACAD_DRIVER\network_proof\`: a read-only sampler (every 250 ms, all TCP states, plus DNS names resolved), a fake AI endpoint on 127.0.0.1 (logs method, path, header names and body length only), and an on/off switch for the user-level `CE_CLOUD_URL`. **The switch changes Tim's real variable for the test, so it needs his yes; nothing was run against the real CE_CLOUD_URL (checked: still set, untouched).** Key finding: the driver opens a drawing through Explorer, so AutoCAD takes its environment from Explorer; a `$env:` change in the driver window would never reach it. Hence the user-level switch plus a Windows environment broadcast.
+5. **Witness recorder (PR #977, commit 5f07ef9f, same branch):** every `SysVarChanged` line now carries `cmdInProgress` and `isAppContext`; new `IdleHandlers` line (subscribed Idle handlers, names only) at the end of U/UNDO/MREDO and before REDO; the reader prints both and notes an idle-list change inside a wait; `-Verbose2` prints Idle ticks per wait. Reader tests 38 of 38 (was 27; three new fixtures, red first), LogClass tests 20 of 20, build 0 errors.
+6. **Transactions: NOT hookable.** AutoCAD 2027's managed `TransactionManager` (both the DatabaseServices and ApplicationServices classes) has **no events at all**; read from the DLL metadata of acdbmgd.dll and accoremgd.dll with System.Reflection.Metadata (the type list showed only LongTransactionManager with events: Aborted, CheckedIn, CheckingIn, CheckedOut, CheckingOut). So a StartTransaction that kills REDO cannot be logged. A first attempt (TransactionStarted/Ended hooks) did not compile for that reason and was removed; nothing dead was left in the recorder. Attribution is by elimination (README "What it cannot see"): REDO says "Nothing to redo" while the reader says PASS = a StartTransaction or same-value write; a logged SysVarChanged = SetSystemVariable or SetCurrentView. For the exact caller the code has to be searched (the RED source-check tests build/02 and build/03 own).
+7. **"Which CE Idle handlers run": only "which are subscribed" is feasible.** The `IdleHandlers` line reads the Application.Idle event's own delegate by reflection (a field read, no drawing access). I could NOT check offline whether this build keeps it in a readable field (acmgd.dll is mixed-mode and cannot be loaded outside AutoCAD); the line says `unavailable` if not. The first pilot answers it. Which handler actually ran needs a hook inside each handler (product code).
+
+## Files and what Opus should review
+
+1. **Driver copy diff:** `C:\Lisp Files\_ACAD_DRIVER\PATCH_run6_2026-10-10.diff` (one list, 3 titles, all READ-ONLY, never-touch lists unchanged). Test `tests\Test-Run6Driver.ps1` 20 checks (red first: 3 failed on the run 5 copy). Old tests re-run green: allow-list 45/45, witness load 82/82. (Test-DriverUiAndEsc, Test-Run5Driver and Test-WitnessPilotJourneys re-run green after the edit: 78, 97, 57.) The long `Test-AcadDriver.ps1` and `-WithFocusTest` were not run (they need helper windows).
+2. **New:** `_ACAD_DRIVER\network_proof\` (3 scripts + `tests\Test-NetworkProof.ps1`, 21 checks, loopback only, a made-up variable name for the on/off test). README text in `_ACAD_DRIVER\README.md`, section "Run 6 changes".
+3. **Recorder:** `tools\witness-recorder` on branch `claude/tooling01-witness-recorder` (worktree C:\ce-tt01), commit 5f07ef9f, in draft PR #977: `IdleHandlerSnapshot.cs` (new), `WitnessPlugin.cs`, the reader, fixtures, README section "Run 6 additions". Comment on the PR: needs Opus review.
+4. **THE PIN HAS NOT BEEN CHANGED.** The driver's `witness load` pins DLL SHA256 49E79D6D... (commit 6c0662f0). The rebuilt recorder from 5f07ef9f is **2EAAB604 6859 6365 4408 2BCA C72A 1A2E 7051 76DE 8485 8F3B 9D0B 9A27 BBF6 F910** (full: `2EAAB6046859636544082BCAC72A1A2E705176DE84858F3B9D0B9A27BBF6F910`), version text `1.0.0+5f07ef9f1fa4d19f6b4fe0cfdd9d27fe444bd419`. Until Opus reviews the recorder diff and edits `$script:WitnessPinnedSha256`, `witness load` will still (correctly) load only the OLD recorder, which lacks the new lines. The file in `C:\ce_rc_scratch\witness_bin` was not replaced.
+5. **Open question for Opus:** should a wait that contains an `IdleHandlers` change ever FAIL? It is only a note now.
+
+## For Tim / Codex (the lines that cannot be done by the driver)
+
+1. Read the CDASK wording: open CDASK, type any question, press Send, read the sentence under the box ("AI features are switched off on this PC ... Nothing was sent."). About 1 minute.
+2. CEMARKUPPARSE, Hand mode, with FILEDIA 0 on a made-up PDF: see driver README point 4 (never run).
+3. The network proof with the fake endpoint needs Tim's yes first (it changes `CE_CLOUD_URL` for the test and puts it back).
+
+## Not done
+
+1. Items 4 and 5 of run 1 (TH-01 table scenario with ACadSharp and PdfPig, window pictures) are still not started: this run was the run 11 gaps only.
+2. Nothing was proven in AutoCAD.
+
+RUN 6 ENDED.
