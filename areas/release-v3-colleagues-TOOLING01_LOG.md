@@ -194,3 +194,57 @@ Brief from desk plan/03 after Claude driver run 7. **AutoCAD was NOT run.** Offl
 3. The old driver regression test (about 5.5 minutes with helper windows) was not re-run; only the targeted tests above.
 
 RUN 4 ENDED.
+
+---
+
+# RUN 5 (Sat 10 Oct 2026, about 06:15 to 06:35 PC clock, headless Sonnet)
+
+Brief from desk plan/03 after Claude driver run 10. **AutoCAD was NOT run** (a tester was using it). Offline only. Source: `release-v3-colleagues-CLAUDE_DRIVER_RUN10_2026-10-10.md` sections 3, 5, 6 and REVIEWLANE_LOG 953 to 958 (the copy read as Opus left it: SHA256 9d7418d5... before my edits, pin 49E79D6D...).
+
+## Answer first
+
+1. **Typed answers to the CD first question: blocked by AutoCAD, not the driver.** While a CE command waits at a question AutoCAD refuses COM, so `type` fails ("rejected the text four times"). Two ways now: the proven ONE-call newline form, and a NEW `answer` sub-command (real keys, one answer line, same guards as `esc`). **`answer` is UNPROVEN: built and tested offline only.**
+2. **#867 (FEDIT Esc): the gap was `esc`.** Its command list had no Structural names and it needed a prompt ending in a colon. Both fixed in the copy. The printed sentence ("[FEDIT] Cancelled. Nothing was changed.") still has to be seen in AutoCAD.
+3. **Manager windows are on the allow-list READ-ONLY** (`CE Suite Manager`, `CE Suite Manager | *`, `Creative Engineering Manager*`): tree, read, scan, wait, close only. The "Unsaved ..." question windows stay refused.
+4. **Four wedges: guards added** (bare CD, chain on a layout tab, empty Enter that would repeat a CE command, a BUSY message that names the waiting prompt). Wedge 3 (FEDIT) and wedge 4 (metre copy that was mm) are covered by the `esc` fix plus a written rule: read INSUNITS and CTAB first.
+5. **`DRIVER_TESTER_GUIDE.md`** written, 54 lines.
+6. **Tests:** new `tests\Test-Run5Driver.ps1` 97 of 97 (run against the run 4 copy first: it failed, so it is red-first). The four older files still pass: allow-list 45/45, ui+esc 78/78, witness load 82/82, journeys 57/57. **Not run:** the old 5.5-minute `Test-AcadDriver.ps1` (helper windows while a tester has AutoCAD) and `-WithFocusTest` (refuses while acad.exe runs).
+
+## 1. Why a CD prompt cannot be typed into per call
+
+1. The driver's `type` uses SendCommand. AutoCAD answers RPC "call rejected" while a command waits at a question; the driver retries four times and gives up. Nothing the driver does changes that.
+2. What gets through: the whole sequence in one string (CD, the two points, the Enter for a straight pipe, joined by line breaks, never spaces because a space is Enter). Proven in run 10 (New Pipe window in 9.5 s).
+3. `answer "<text>"`: keybd_event virtual keys to AutoCAD's main window, the same route as `esc`. Text must match `^[-0-9.,; ]*$`, 80 characters at most, checked in PowerShell and again in the native code (it presses only digits, - . , ; space, then Enter). Refused unless: lock yours; test copy; one acad.exe and it is the owned one; CMDACTIVE above 0 (idle = refused, because Enter would repeat the last command); no dialog; a CE prompt waiting (same evidence as `esc`); main window enabled and in front. If the window loses the foreground mid-line the result says to run `esc`. It never uses SendCommand, so it cannot reach the deny list.
+
+## 2. #867
+
+1. Run 10: `esc` refused at FEDIT's "Select new type" because `$script:CeCommandPattern` was Civil only.
+2. Now added (non-AutoCAD names only): FEDIT FDELETE FST FSF FSTEXPORT FREGEN FREGENALL FFL FFLMARKER FADOPT FLMK C1 C2 BT1 R1 TS1 TTS1 STS1 TC1 SC1 SC2 CL1 CR1 DS1 DSET DSET1 FJ1 SDS SDS1 TDS TDS1 STRSCHED* STRUC* STLCONN* BSET* BEAMLINK* CEHEALTH CEHELP CEPALETTE CEPROPS CESETTINGS CEADMIN*. Tests keep STRETCH, SECTION, LABEL, CL, ML, DIV, R, LD, LINE, CENTERLINE, FSTX, C11, C3 refused.
+3. The last line may now also be a sentence that starts Select / Pick / Specify / Enter / Choose / Click / Type / Press and ends with a full stop or question mark (CD's first question). "Pipe placed." still does not count.
+
+## 3. The four wedges: cause and guard
+
+1. **Wedge 1, bare `CD -Force`:** CD asks its first question at once; `esc` refused it and `type` was rejected. Guard: a bare CD is refused unless `-ExpectPrompt` or `-ExpectWindow` is given. Recovery now exists too (`esc` accepts the first question).
+2. **Wedge 2, C1 answer chain on a layout tab:** CE stopped itself, the leftover lines landed at `Command:`. Guard: a chain that starts a guarded CE command (C1 C2 BT1 R1 TS1 TTS1 STS1 TC1 SC1 SC2 CL1 CR1 FEDIT CD) is refused when CTAB is not Model. A bare `-Force` word (how guard tests are sent) still passes. Limit: it reads CTAB only when COM answers.
+3. **Wedge 3, FEDIT new-type prompt:** `esc` refused (section 2). Fixed by the `esc` change. Also the BUSY message now says "a CE command is waiting at a prompt (<last line>) ... use answer or esc, do not retry type".
+4. **Wedge 4, "metre" copy that was mm:** a tester assumption, not a driver bug (INSUNITS was 4). No machine guard is possible for a bare guard test (the tester wants the stop). Written rule in the guide and README: read INSUNITS first. The `esc` fix is the recovery.
+5. **Extra (Opus 957.1):** an empty `type` Enter is refused when the last line is a bare `Command:` and the newest command echo was a CE command (it would repeat it). The old `PendingWarning` wording is untouched (an old test pins it); the new hint is its own field `data.prompt_hint`.
+
+## 4. Files
+
+1. `C:\Lisp Files\_ACAD_DRIVER\acad_driver_witness.ps1` (copy; SHA256 03f1d07ef7aa...; was 9d7418d5...). `acad_driver.ps1` UNTOUCHED (c9ba503d...).
+2. `PATCH_run5_2026-10-10.diff` (303 lines: the driver copy and `Test-WitnessPilotJourneys.ps1`; reverse-applied on a copy and it gave the run 4 files back byte for byte). New files not in the patch: `tests\Test-Run5Driver.ps1`, `DRIVER_TESTER_GUIDE.md`. Changed in place: `README.md` (new section "Run 5 changes"), `journeys\witness_pilot\5_cd_pipe_then_switch_draft.json` (D1a to D1d replaced by one proven call; planned 19).
+
+## For Opus to review
+
+1. **`answer` sends real keys.** Read `SendAnswerToFrame` (3 keybd_event kinds: digits and OEM keys without Shift, then Return) and `Invoke-AnswerSub` (guards in the same order as `esc`). Question: is "idle = refused" strict enough?
+2. **The wider `esc` command list and the prompt-sentence rule** (a plain AutoCAD prompt starting "Select ..." with a full stop after a CE echo and CMDACTIVE above 0 would count).
+3. **Manager read-only entries** (the "Creative Engineering Manager*" entry takes a Manager window out of the writable `Creative Engineering*` entry).
+4. **Not run in AutoCAD, not Tim-accepted.** Whether the keys reach the command line when the drawing has focus is the open question for the first tester run.
+
+## Not done
+
+1. Items 4 and 5 of run 1 (TH-01 table scenario, window pictures) are still not started.
+2. No real-key helper-window test ran (`-WithFocusTest` is written, skipped because acad.exe is running).
+
+RUN 5 ENDED.
