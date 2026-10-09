@@ -163,3 +163,34 @@ Authority as run 1 (Tim, INT-080). Brief from desk plan/03: (1) the Opus run 2 f
 6. **Environment notes:** C: had 21 GB free at the start (above 12). Worktree `C:\ce-tt01` is on branch `claude/tooling01-witness-recorder`. The old driver regression test needs about 5.5 minutes and uses helper windows; run it only when AutoCAD is closed.
 
 RUN 3 ENDED. Built and tested offline only: not tested in AutoCAD, not installed, not Tim-accepted.
+
+---
+
+# RUN 4 (Sat 10 Oct 2026, about 04:55 to 05:25 PC clock, headless Sonnet)
+
+Brief from desk plan/03 after Claude driver run 7. **AutoCAD was NOT run.** Offline only. The AutoCAD API decompile answer file (`AUTOCAD_API_DECOMPILE_TESTING_ANSWERS_2026-10-10.md`) did not exist yet (git fetch and merge origin/main: already up to date), so the cause below is a best fit from the code, not confirmed.
+
+## Answer first
+
+1. **Recorder blindness (run 7 C4): fixed in code, not yet proved in AutoCAD.** Most likely cause: each object handler found its log by comparing the event's sender with `Document.Database`; if that did not match, the line was dropped silently (looks exactly like "nothing happened"). Now each drawing's hooks carry their own log (no lookup), a line is always written (a missing field shows as `?`), and two new lines show which hook is silent if C4 still fails: `HookCounts` after every command end, and `ObjectOpenedForModify` (second route, answers calibration C3 directly; the reader ignores it). Branch `claude/tooling01-witness-recorder`, commit 6c0662f0. Tests: 20 of 20 (the 2 source checks were red first against the old plugin code) and the reader still 31 of 31.
+2. **Driver allow-list: done in the copy.** `New Pipe*`, `Edit Pit*`, `Design Warnings*` added (`Edit Pipe*`, `New Pit*` were there). Never-touch lists unchanged (checked by test). 21 of 21 offline checks (7 red first). Separate patch `PATCH_allowlist_2026-10-10.diff`.
+3. **Journey 5 and esc: done.** CD word, each point and the bare straight-pipe Enter are four separate `type` calls (planned calls 22 of 25); the one-call newline form from run 7 is the written fallback. `esc` now accepts a CE command at a prompt that has no `[CE]` text. 70 of 70 in `Test-DriverUiAndEsc.ps1` (3 red first), 82 of 82 `Test-WitnessLoad.ps1`, 57 of 57 journey checks.
+
+## Before the next run (desk)
+
+1. **The pin is stale.** The recorder DLL changed, so `witness check` will refuse. New SHA256 `6a9d3e3fb4dd0a8122a7eeb855fd2457ac1d6f1f2ee876b53161d78b56b30201`. Copy the DLL and its .sha256 into `C:\ce_rc_scratch\witness_bin` and edit line 130 of `acad_driver_witness.ps1` (`$script:WitnessPinnedSha256`). I did not touch the pin: it is a security control, so the edit is for the desk after Opus.
+2. **Opus must review:** (a) the esc change again (`PATCH_esc_cdprompt_2026-10-10.diff`: the new kind-2 evidence, the CE command whole-word list, the "last line ends with a colon" rule), (b) the allow-list lines (`PATCH_allowlist_2026-10-10.diff`), (c) the recorder hooks. Open question for Opus: add `Continue placement` to the never-click control words (the allow-list lets a tester click it today; only the journey text forbids it).
+3. The older `PATCH_witness_load_2026-10-10.diff` (whole copy against the original) is now out of date; the three newer patch files are the reviewed increments. `acad_driver.ps1` is untouched.
+
+## What changed, where
+
+1. Recorder: `tools\witness-recorder\CE.Witness\WitnessPlugin.cs`, new `ObjectEventFormat.cs` (the pure event-to-line part), README section "Run 4 change", `tests\Test-WitnessLogClass.ps1`. Worktree `C:\ce-tt01`.
+2. Driver folder `C:\Lisp Files\_ACAD_DRIVER`: `acad_driver_witness.ps1`, `PATCH_allowlist_2026-10-10.diff`, `PATCH_esc_cdprompt_2026-10-10.diff`, `tests\Test-CeWindowAllowList.ps1` (new), `tests\Test-DriverUiAndEsc.ps1`, `tests\Test-WitnessPilotJourneys.ps1`, `journeys\witness_pilot\5_...json` and `1_...json`, README section "Run 4 changes".
+
+## Not done
+
+1. Nothing was run in AutoCAD. The root cause is unconfirmed: if C4 fails again, `HookCounts` says whether the hook fired at all.
+2. Items 4 and 5 of run 1 (TH-01 table scenario, window pictures) not touched this run.
+3. The old driver regression test (about 5.5 minutes with helper windows) was not re-run; only the targeted tests above.
+
+RUN 4 ENDED.
