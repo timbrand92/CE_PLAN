@@ -403,6 +403,38 @@ with a REGRESSION_LOG entry and a manual checklist (see plugin-work.md).
 If the docs do not cover it and the log does not show it, say "insufficient information"
 and propose the probe that would settle it (accoreconsole probe, Snoop, MgdDbg).
 
+## 8. Read the .NET wrapper before guessing (added 10 Oct 2026)
+AutoCAD's .NET layer (acdbmgd, acmgd, accoremgd, AdWindows, AcWindows) is decompiled, read-only, at
+`C:\Tools\AcadDecomp\2027\` (and `2026\`, from the 25.1 reference copies). ObjectARX help is unpacked at
+`C:\Tools\ArxDocs\`. Never copy that code into a repo; never commit it. Search it with Git Bash grep (paths pass
+260 characters). Most calls go straight into native code: the wrapper shows what .NET does, not what AutoCAD
+does inside, so guardrail 1 still applies to everything past the wrapper.
+
+Facts read from the 2027 wrapper (managed side only):
+1. **After Commit or Abort, .NET checks nothing.** An object from `GetObject` keeps its pointer and
+   `IsDisposed` stays false; every property read passes straight to native code. What native code then does
+   is UNVERIFIED (probe pending). Treat any read after Commit as unsafe: copy Handle, Name and points out
+   before Commit.
+2. **`Transaction.AddNewlyCreatedDBObject` always hands ownership to the transaction** (AutoDelete false),
+   whatever `add` says. `Dispose()` on that object then deletes nothing; it only empties the wrapper. Any later
+   read through that wrapper hands a null pointer to native code (expect a crash, not an error message).
+   `OpenCloseTransaction` differs: `add=false` leaves .NET owning it, and `Dispose()` then deletes it.
+3. **`BlockReference.Name` opens the block definition on every read.** In a loop over many blocks, read
+   `BlockTableRecord` (an id) and cache names per id.
+4. **`Database.SaveAs(name, version)` (two-argument form) accepts only R14 to 2018 DWG formats**; older
+   ones return an error. 2027 still writes the 2018 format (`DwgVersion.Current` = `Newest` = AC1032), so
+   `Current` is always safe.
+5. **2026 to 2027 public API** for DatabaseServices, EditorInput and ApplicationServices: no types added or
+   removed. The one real change: `Database` gained `Equals(db1, db2)` and `GetHashCode()` based on its runtime
+   id. A `Dictionary<Database, …>` now keys on that id in 2027 and on the wrapper pointer in 2026.
+6. **`CommandEnded` and `DocumentToBeDestroyed` are plain relays** of the native notifications. Whether the
+   drawing is locked inside them, and whether `DocumentToBeDestroyed` comes after "Save changes?", is not
+   documented: UNVERIFIED, probe pending.
+7. **The headless `/isolate` switch currently fails on Tim's PC** ("Can't find 'TempDirectory' registry
+   value"): the AutoCAD profile "Tim" has no TempDirectory value (the built-in Unnamed profile has one). This
+   blocks the accoreconsole probe and, by the same switch, `tools\headless-proof\Run-HeadlessProof.ps1`.
+   Recorded 10 Oct 2026; fixing it changes Tim's AutoCAD profile, so it waits for his word.
+
 ---
 
 ## Plugin work: every change has three deliverables (carried from the retired global rule file, 19 Sep 2026)
