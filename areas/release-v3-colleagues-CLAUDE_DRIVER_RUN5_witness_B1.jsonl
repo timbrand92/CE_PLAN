@@ -1,0 +1,9 @@
+{"seq":1,"ts":"2026-10-10T02:53:59.7924981+11:00","mono":211434427987,"ev":"DocumentAttached","doc":"CLD13_B1.dwg"}
+{"seq":2,"ts":"2026-10-10T02:55:17.8166057+11:00","mono":211512451023,"ev":"SysVarChanged","idle":2474,"name":"VIEWBACKSTATUS","changed":true}
+{"seq":3,"ts":"2026-10-10T02:55:17.8769927+11:00","mono":211512511416,"ev":"SysVarChanged","idle":2474,"name":"VIEWBACKSTATUS","changed":true}
+{"seq":4,"ts":"2026-10-10T02:55:17.9382289+11:00","mono":211512572660,"ev":"SysVarChanged","idle":2474,"name":"VIEWBACKSTATUS","changed":true}
+{"seq":5,"ts":"2026-10-10T02:56:06.2797611+11:00","mono":211560913512,"ev":"SysVarChanged","idle":4821,"name":"VIEWBACKSTATUS","changed":true}
+{"seq":6,"ts":"2026-10-10T02:56:06.3260677+11:00","mono":211560959820,"ev":"SysVarChanged","idle":4821,"name":"VIEWBACKSTATUS","changed":true}
+{"seq":7,"ts":"2026-10-10T02:56:06.3985957+11:00","mono":211561032348,"ev":"SysVarChanged","idle":4821,"name":"VIEWBACKSTATUS","changed":true}
+{"seq":8,"ts":"2026-10-10T02:56:37.1916524+11:00","mono":211591824974,"ev":"LockModeChanged","idle":6220,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":9,"ts":"2026-10-10T02:56:37.2272111+11:00","mono":211591860536,"ev":"DocumentClosing"}
