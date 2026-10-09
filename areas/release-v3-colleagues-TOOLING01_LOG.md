@@ -86,3 +86,18 @@ Authority as run 1. Brief: do the Opus review fixes first (entries 934 to 939 of
 
 - Driver note now says: use the copy only after Opus confirms the fixes; the pin is a driver constant; `witness load` works once per AutoCAD session (quit to run again); reader exit code 2 is a finding; a new question about the DLL hold. The reader is now a stable copy in `C:\ce_rc_scratch\witness_reader` (so the pilot does not depend on which branch a worktree is on). `journey validate` accepts the file.
 - **Ready to launch once the desk has Opus confirm the driver fixes.** Nothing else blocks it except a free PC (and Tim's word on the driver copy).
+
+## D. Next tooling item started (research route 2, second scenario): DRAFT PR #980 (stacked on #978)
+
+- **PR:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/980, branch `claude/tooling01-fall-and-pit-label-checks`, base = #978's branch (retarget to master after #978 merges). Needs Opus review.
+- **What:** new test-only step `pitLabel`; scenarios `TH01_CDFALL_Label_Rotation` (four symbols at 0, 90, 180, 270 degrees) and `TH01_PIT_Label_Position` (label 1500 mm east and 800 mm north of each pit); new assertions `attributeRotation`, `attributeNearInsert`, `blockNearBlock`. 13 new tests, 31 of 31 pass, written first and failing before. `CE.TestHarness` builds, 0 errors. REGRESSION_LOG entry added.
+- **Not run in AutoCAD: SKIPPED.** Unproven: saved label rotation versus what the eye sees on a flipped symbol; the real label-to-symbol distance (5000 mm is a guess); and a **finding**: ACadSharp 3.4.29 reads a left-aligned attribute's first point offset by the insert point (on real test copy DRV1_B1 the alignment point is sane, the first point is not), so the position check uses the alignment point for text that is not left/baseline aligned. A left-aligned FALL attribute may therefore read wrong on the first real run; the failure message says so.
+- **Route 3 (window pictures, ribbon):** done in run 1 as #979; nothing further built. The driver `ui ribbon` read still needs Tim's approval and an Opus review (not built).
+
+## Skipped, and needs Tim or Opus (run 2)
+
+1. **Opus:** confirm the driver fixes (patch and copy), #977 at 42b02c79, #978 at 1d6a05e6, #980. Then the desk can launch the pilot.
+2. **Tim:** accept `witness load` in the driver at all; read-only ribbon call; approve window candidates; the Autodesk cloud runner and a second PC stay not authorised.
+3. **Left in place:** `C:\ce_rc_scratch\witness_bin` (DLL AD8A22D3... plus `.sha256`), `C:\ce_rc_scratch\witness_reader` (stable copy of the two reader scripts), `C:\ce_rc_scratch\golden_proof`. Worktree `C:\ce-tt01` cleaned (git clean -fdXq), on branch `claude/tooling01-fall-and-pit-label-checks`.
+
+RUN 2 ENDED. Reviewed only: not tested in AutoCAD, not installed, not Tim-accepted.
