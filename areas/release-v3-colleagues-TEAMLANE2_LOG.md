@@ -555,3 +555,4 @@ build/02 headless run 1 started by the desk, real clock Thu 01 Oct 2026 20:30 AE
 - Fri 09 Oct 21:55 AEST headless run 126 started. Job: (1) drawing name in usage/machine report like #944, (2) AB/BB units + footing layout check, (3) Batch 15, (4) Batch 14 rest, (5) R-00 rows, (6) HUNT2-S-01.
 - Fri 09 Oct 22:20 AEST run 126 progress: item 1 DRAFT #955 (Structural drawing name coded). Next: item 2 AB/BB units + footing layout check.
 - Fri 09 Oct 22:50 AEST run 126 progress 2: item 2 DRAFT #956 (AB/BB units hold; footing layout-before-units). Next: Batch 15.
+- Fri 09 Oct 23:40 AEST run 126 progress 3: item 3 DRAFT #957 (Batch 15: CEMARKUPCHECK roof-down list, OFF by Settings; drawn-check engine tested, not wired: no member-size reader on base). Next: item 4 leftovers, 5, 6.
