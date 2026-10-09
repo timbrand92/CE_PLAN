@@ -7252,7 +7252,7 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 ## BUG-561
 
-**Command / Area:** PITEDIT (Edit Pit), a detention pit whose label is changed from C1 to C99 (number only), then Save. Civil 3.0.41, Codex W49-04ii, 10 Oct 01:40, report CODEX_VERIFYW49_2026-10-10.md item 19 and 34. MEDIUM (looks wrong on the drawing; nothing lost).
+**Command / Area:** PITEDIT (Edit Pit), a detention pit whose label is changed from C1 to C99 (number only), then Save. Civil 3.0.41, Codex W49-04ii, 10 Oct 01:40, report CODEX_VERIFYW49_2026-10-10.md item 19 and 34. HIGH (desk 10 Oct 02:40: wrong output on the drawing; first called MEDIUM).
 
 **What happens:** after the number-only Save ('Pit updated.') the detention pit's GRATE side and SOLID COVER side were swapped on the drawing. U put them back; REDO swapped them again, so it is the Save itself, not the Undo. The schedule row after the change was not checked. Pit labelled C99 / pipe C99 to STUB is correct.
 
