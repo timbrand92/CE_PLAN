@@ -1,0 +1,19 @@
+{"seq":1,"ts":"2026-10-10T03:09:41.0035527+11:00","mono":212375626056,"ev":"DocumentAttached","doc":"CLD14_B1.dwg"}
+{"seq":2,"ts":"2026-10-10T03:11:00.9503459+11:00","mono":212455571747,"ev":"LockModeChanged","idle":4790,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":3,"ts":"2026-10-10T03:11:06.9821720+11:00","mono":212461603489,"ev":"LockModeChanged","idle":5718,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":4,"ts":"2026-10-10T03:11:06.9822687+11:00","mono":212461603581,"ev":"LockModeChanged","idle":5718,"cmd":"(sssetfirst nil (ssadd (handent \"109D56\") (ssadd)))","prev":"Write","now":"NotLocked"}
+{"seq":5,"ts":"2026-10-10T03:11:06.9857330+11:00","mono":212461607047,"ev":"LispWillStart","idle":5718,"first":"(sssetfirst nil (ssadd (handent \"109D56\") (ssadd)))"}
+{"seq":6,"ts":"2026-10-10T03:11:06.9861110+11:00","mono":212461607425,"ev":"SysVarChanged","idle":5718,"name":"*ERRNO","changed":true}
+{"seq":7,"ts":"2026-10-10T03:11:06.9862156+11:00","mono":212461607527,"ev":"SysVarChanged","idle":5718,"name":"*ERRNO","changed":true}
+{"seq":8,"ts":"2026-10-10T03:11:06.9862674+11:00","mono":212461607580,"ev":"SysVarChanged","idle":5718,"name":"*ERRNO","changed":true}
+{"seq":9,"ts":"2026-10-10T03:11:06.9862919+11:00","mono":212461607603,"ev":"SysVarChanged","idle":5718,"name":"*ERRNO","changed":true}
+{"seq":10,"ts":"2026-10-10T03:11:07.0086539+11:00","mono":212461629976,"ev":"LockModeChanged","idle":5718,"cmd":"#(sssetfirst nil (ssadd (handent \"109D56\") (ssadd)))","prev":"NotLocked","now":"Write"}
+{"seq":11,"ts":"2026-10-10T03:11:09.5458738+11:00","mono":212464167154,"ev":"LockModeChanged","idle":5853,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":12,"ts":"2026-10-10T03:11:09.6024777+11:00","mono":212464223763,"ev":"LockModeChanged","idle":5877,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":13,"ts":"2026-10-10T03:11:09.6025437+11:00","mono":212464223819,"ev":"LockModeChanged","idle":5877,"cmd":"MOVE","prev":"Write","now":"NotLocked"}
+{"seq":14,"ts":"2026-10-10T03:11:09.6092111+11:00","mono":212464230491,"ev":"CommandWillStart","idle":5877,"cmd":"MOVE"}
+{"seq":15,"ts":"2026-10-10T03:11:10.4277194+11:00","mono":212465048987,"ev":"LockModeChanged","idle":5877,"cmd":"","prev":"Write","now":"Write"}
+{"seq":16,"ts":"2026-10-10T03:11:10.4310492+11:00","mono":212465052317,"ev":"LockModeChanged","idle":5877,"cmd":"#","prev":"Write","now":"Write"}
+{"seq":17,"ts":"2026-10-10T03:11:10.4316265+11:00","mono":212465052893,"ev":"CommandEnded","idle":5877,"cmd":"MOVE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":18,"ts":"2026-10-10T03:11:10.4349224+11:00","mono":212465056191,"ev":"LockModeChanged","idle":5877,"cmd":"#MOVE","prev":"NotLocked","now":"Write"}
+
