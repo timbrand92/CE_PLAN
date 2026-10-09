@@ -413,11 +413,10 @@ does inside, so guardrail 1 still applies to everything past the wrapper.
 Facts read from the 2027 wrapper (managed side only):
 1. **After Commit or Abort, .NET checks nothing.** An object from `GetObject` keeps its pointer and
    `IsDisposed` stays false; every property read passes straight to native code. What native code then does
-   is UNVERIFIED (probe pending). Treat any read after Commit as unsafe: copy Handle, Name and points out
-   before Commit.
+   was measured: see 8 and 9 below. Copy Handle, Name and points out before Commit.
 2. **`Transaction.AddNewlyCreatedDBObject` always hands ownership to the transaction** (AutoDelete false),
    whatever `add` says. `Dispose()` on that object then deletes nothing; it only empties the wrapper. Any later
-   read through that wrapper hands a null pointer to native code (expect a crash, not an error message).
+   read through that wrapper hands a null pointer to native code (measured: AutoCAD dies, see 10).
    `OpenCloseTransaction` differs: `add=false` leaves .NET owning it, and `Dispose()` then deletes it.
 3. **`BlockReference.Name` opens the block definition on every read.** In a loop over many blocks, read
    `BlockTableRecord` (an id) and cache names per id.
@@ -429,11 +428,45 @@ Facts read from the 2027 wrapper (managed side only):
    id. A `Dictionary<Database, …>` now keys on that id in 2027 and on the wrapper pointer in 2026.
 6. **`CommandEnded` and `DocumentToBeDestroyed` are plain relays** of the native notifications. Whether the
    drawing is locked inside them, and whether `DocumentToBeDestroyed` comes after "Save changes?", is not
-   documented: UNVERIFIED, probe pending.
-7. **The headless `/isolate` switch currently fails on Tim's PC** ("Can't find 'TempDirectory' registry
-   value"): the AutoCAD profile "Tim" has no TempDirectory value (the built-in Unnamed profile has one). This
-   blocks the accoreconsole probe and, by the same switch, `tools\headless-proof\Run-HeadlessProof.ps1`.
-   Recorded 10 Oct 2026; fixing it changes Tim's AutoCAD profile, so it waits for his word.
+   documented; measured in 14 below.
+7. **The headless `/isolate` switch failed on Tim's PC** ("Can't find 'TempDirectory' registry value"): the
+   AutoCAD profile "Tim" had no TempDirectory value. FIXED 10 Oct 2026 03:34 on Tim's word ("do what you need
+   to"): added `HKCU\Software\Autodesk\AutoCAD\R26.0\ACAD-A101:409\Profiles\Tim\General Configuration\TempDirectory`
+   = `C:\Users\TimothyBrand\AppData\Local\Temp` (copied from the Unnamed profile). Undo: delete that one value.
+
+MEASURED in AutoCAD 2027 accoreconsole, 10 Oct 2026, 24 tests, evidence in
+`C:\Tools\AcadProbe\runs\20261010-033521\` (probe source `C:\Tools\AcadProbe\src\Probe.cs`). Core console only;
+the full AutoCAD window was not tested and may differ.
+8. **Reading after Commit/Abort/Dispose of the transaction silently returns the real values** (Handle, Name,
+   Position, GetPoint3dAt, all transaction kinds). No error. It works today but is undocumented: keep copying
+   values out before Commit.
+9. **Writing to an object after its transaction ended kills AutoCAD** (process gone, no .NET exception to
+   catch). Same for **writing to an object open only for read**. Never write unless `IsWriteEnabled`.
+10. **Reading an object after `Dispose()`** (transaction-owned new object) **kills AutoCAD** (access
+    violation, 0xC0000005). Dispose-then-Abort and Dispose-then-Commit are both safe: no double delete; Commit
+    keeps the object in the drawing.
+11. **Locked layers:** `GetObject(id, ForWrite, false, forceOpenOnLockedLayer: true)` opens for write and the
+    edit commits (the layer stays locked). `ForRead` + force, then `UpgradeOpen()`, is refused with
+    eOnLockedLayer (both transaction kinds). Plain `ForWrite` is refused with eOnLockedLayer. CE's native
+    protection rule (AGENTS.md) still decides whether CE may ever use the force flag.
+12. **`Database.Insert(name, sourceDb, true)` onto an existing block name REDEFINES it in place**: same
+    ObjectId, contents replaced. The 4-argument overload and `WblockCloneObjects(..., Replace)` behave the same.
+13. **`SaveAs` back over a side database's own file** works when it was read with `OpenForReadAndAllShare`,
+    with or without `CloseInput(true)` (tiny test drawing; for big drawings call `CloseInput(true)` first, as
+    the rest of the file may still be read lazily). With `OpenForReadAndReadShare` or `...WriteNoShare` it fails
+    with eFilerError and leaves the file untouched.
+14. **Events:** inside `CommandEnded` the drawing is still write-locked by the ending command and writing
+    worked. Inside `DocumentToBeDestroyed` `LockMode()` says Write and `IsApplicationContext` is true, but
+    **writing there killed AutoCAD**: never write in DocumentToBeDestroyed. In the console it fired after the
+    "discard changes?" answer; the full-AutoCAD "Save changes?" order is still unverified.
+15. **Ribbon (read in AcWindows 2027):** on every selection change AutoCAD hides every visible tab marked
+    `IsContextualTab` that its own CUIX rules did not ask for. `RibbonControl.ShowContextualTab` sets that
+    mark, which is why CE's tab was hidden again (Test Day 5-09) and needs the Idle watchdog in
+    `CeContextualTabController`. Just before hiding, AutoCAD raises the public
+    `RibbonServices.RibbonPaletteSet.ContextualTabDisplayed`; its `e.HiddenTabs` is the very list it then
+    hides, so removing CE's tab from it keeps the tab up without an Idle watchdog (read, not yet tried).
+16. Lookup helper: `bash C:\Tools\AcadDecomp\tools\acad-error.sh eLockViolation` (or a number) gives the
+    error's number and the ObjectARX functions documented to return it.
 
 ---
 
