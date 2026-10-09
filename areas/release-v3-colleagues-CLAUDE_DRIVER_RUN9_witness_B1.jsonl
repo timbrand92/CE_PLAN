@@ -1,0 +1,84 @@
+{"seq":1,"ts":"2026-10-10T05:22:33.6687332+11:00","mono":220348181216,"ev":"DocumentAttached","doc":"CLD17_B1.dwg"}
+{"seq":2,"ts":"2026-10-10T05:22:33.6709823+11:00","mono":220348183465,"ev":"CommandEnded","idle":0,"cmd":"NETLOAD","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":3,"ts":"2026-10-10T05:22:33.6725278+11:00","mono":220348185008,"ev":"LockModeChanged","idle":0,"cmd":"#NETLOAD","prev":"NotLocked","now":"Write"}
+{"seq":4,"ts":"2026-10-10T05:22:33.9287349+11:00","mono":220348441215,"ev":"LockModeChanged","idle":12,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":5,"ts":"2026-10-10T05:22:33.9312753+11:00","mono":220348443755,"ev":"SysVarChanged","idle":12,"name":"*SYSVARMONITORDIFNUMBER","changed":true}
+{"seq":6,"ts":"2026-10-10T05:22:33.9441802+11:00","mono":220348456660,"ev":"SysVarChanged","idle":12,"name":"FILEDIA","changed":true}
+{"seq":7,"ts":"2026-10-10T05:22:34.3213026+11:00","mono":220348833776,"ev":"LockModeChanged","idle":79,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":8,"ts":"2026-10-10T05:22:34.3213707+11:00","mono":220348833838,"ev":"LockModeChanged","idle":79,"cmd":"(progn (princ (strcat \"\\nSYSB \" (vl-princ-to-string (list (getvar \"OSMODE\") (getvar \"SAVETIME\") (getvar \"CLAYER\") (getvar \"DWGNAME\") (getvar \"WRITESTAT\"))))) (princ))","prev":"Write","now":"NotLocked"}
+{"seq":9,"ts":"2026-10-10T05:22:34.3263745+11:00","mono":220348838848,"ev":"LispWillStart","idle":79,"first":"(progn (princ (strcat \"\\nSYSB \" (vl-princ-to-string (list (getvar \"OSMODE\") (getvar \"SAVETIME\") (getvar \"CLAYER\") (getva"}
+{"seq":10,"ts":"2026-10-10T05:22:34.3583752+11:00","mono":220348870850,"ev":"LockModeChanged","idle":79,"cmd":"#(progn (princ (strcat \"\\nSYSB \" (vl-princ-to-string (list (getvar \"OSMODE\") (getvar \"SAVETIME\") (getvar \"CLAYER\") (getvar \"DWGNAME\") (getvar \"WRITESTAT\"))))) (princ))","prev":"NotLocked","now":"Write"}
+{"seq":11,"ts":"2026-10-10T05:23:59.6413103+11:00","mono":220434152617,"ev":"LockModeChanged","idle":6277,"cmd":"(progn (sssetfirst nil (ssadd (handent \"109D56\") (ssadd))) (princ (strcat \"\\nSEL \" (itoa (sslength (cadr (ssgetfirst)))))) (princ))","prev":"Write","now":"NotLocked"}
+{"seq":12,"ts":"2026-10-10T05:23:59.6468224+11:00","mono":220434158116,"ev":"LispWillStart","idle":6277,"first":"(progn (sssetfirst nil (ssadd (handent \"109D56\") (ssadd))) (princ (strcat \"\\nSEL \" (itoa (sslength (cadr (ssgetfirst))))"}
+{"seq":13,"ts":"2026-10-10T05:23:59.6473501+11:00","mono":220434158642,"ev":"SysVarChanged","idle":6277,"name":"*ERRNO","changed":true}
+{"seq":14,"ts":"2026-10-10T05:23:59.6474352+11:00","mono":220434158724,"ev":"SysVarChanged","idle":6277,"name":"*ERRNO","changed":true}
+{"seq":15,"ts":"2026-10-10T05:23:59.6474786+11:00","mono":220434158768,"ev":"SysVarChanged","idle":6277,"name":"*ERRNO","changed":true}
+{"seq":16,"ts":"2026-10-10T05:23:59.6475030+11:00","mono":220434158792,"ev":"SysVarChanged","idle":6277,"name":"*ERRNO","changed":true}
+{"seq":17,"ts":"2026-10-10T05:23:59.6605033+11:00","mono":220434171797,"ev":"SysVarChanged","idle":6277,"name":"*ERRNO","changed":true}
+{"seq":18,"ts":"2026-10-10T05:23:59.6605985+11:00","mono":220434171887,"ev":"SysVarChanged","idle":6277,"name":"*ERRNO","changed":true}
+{"seq":19,"ts":"2026-10-10T05:23:59.6738838+11:00","mono":220434185182,"ev":"LockModeChanged","idle":6277,"cmd":"#(progn (sssetfirst nil (ssadd (handent \"109D56\") (ssadd))) (princ (strcat \"\\nSEL \" (itoa (sslength (cadr (ssgetfirst)))))) (princ))","prev":"NotLocked","now":"Write"}
+{"seq":20,"ts":"2026-10-10T05:24:00.5717716+11:00","mono":220435083055,"ev":"LockModeChanged","idle":6353,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":21,"ts":"2026-10-10T05:24:00.6138992+11:00","mono":220435125186,"ev":"LockModeChanged","idle":6374,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":22,"ts":"2026-10-10T05:24:00.6139579+11:00","mono":220435125233,"ev":"LockModeChanged","idle":6374,"cmd":"MOVE","prev":"Write","now":"NotLocked"}
+{"seq":23,"ts":"2026-10-10T05:24:00.6224989+11:00","mono":220435133785,"ev":"CommandWillStart","idle":6374,"cmd":"MOVE"}
+{"seq":24,"ts":"2026-10-10T05:24:02.0367847+11:00","mono":220436548049,"ev":"LockModeChanged","idle":6374,"cmd":"","prev":"Write","now":"Write"}
+{"seq":25,"ts":"2026-10-10T05:24:02.0426054+11:00","mono":220436553868,"ev":"LockModeChanged","idle":6374,"cmd":"#","prev":"Write","now":"Write"}
+{"seq":26,"ts":"2026-10-10T05:24:02.0431945+11:00","mono":220436554453,"ev":"CommandEnded","idle":6374,"cmd":"MOVE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":27,"ts":"2026-10-10T05:24:02.0504058+11:00","mono":220436561676,"ev":"LockModeChanged","idle":6374,"cmd":"#MOVE","prev":"NotLocked","now":"Write"}
+{"seq":28,"ts":"2026-10-10T05:24:02.9300734+11:00","mono":220437441326,"ev":"LockModeChanged","idle":6493,"cmd":"U","prev":"Write","now":"NotLocked"}
+{"seq":29,"ts":"2026-10-10T05:24:02.9363537+11:00","mono":220437447604,"ev":"CommandWillStart","idle":6493,"cmd":"U"}
+{"seq":30,"ts":"2026-10-10T05:24:03.0206276+11:00","mono":220437531872,"ev":"CommandEnded","idle":6493,"cmd":"U","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":31,"ts":"2026-10-10T05:24:03.0232403+11:00","mono":220437534487,"ev":"LockModeChanged","idle":6493,"cmd":"#U","prev":"NotLocked","now":"Write"}
+{"seq":32,"ts":"2026-10-10T05:24:18.8878316+11:00","mono":220453398871,"ev":"LockModeChanged","idle":7456,"cmd":"REDO","prev":"Write","now":"NotLocked"}
+{"seq":33,"ts":"2026-10-10T05:24:18.8934611+11:00","mono":220453404497,"ev":"CommandWillStart","idle":7456,"cmd":"REDO"}
+{"seq":34,"ts":"2026-10-10T05:24:19.0143228+11:00","mono":220453525352,"ev":"CommandEnded","idle":7456,"cmd":"REDO","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":35,"ts":"2026-10-10T05:24:19.0217189+11:00","mono":220453532757,"ev":"LockModeChanged","idle":7456,"cmd":"#REDO","prev":"NotLocked","now":"Write"}
+{"seq":36,"ts":"2026-10-10T05:24:29.1417856+11:00","mono":220463652675,"ev":"LockModeChanged","idle":8369,"cmd":"(progn (sssetfirst nil (ssadd (handent \"109D56\") (ssadd))) (princ (strcat \"\\nSEL \" (itoa (sslength (cadr (ssgetfirst)))))) (princ))","prev":"Write","now":"NotLocked"}
+{"seq":37,"ts":"2026-10-10T05:24:29.1458214+11:00","mono":220463656711,"ev":"LispWillStart","idle":8369,"first":"(progn (sssetfirst nil (ssadd (handent \"109D56\") (ssadd))) (princ (strcat \"\\nSEL \" (itoa (sslength (cadr (ssgetfirst))))"}
+{"seq":38,"ts":"2026-10-10T05:24:29.1603999+11:00","mono":220463671290,"ev":"SysVarChanged","idle":8369,"name":"*ERRNO","changed":true}
+{"seq":39,"ts":"2026-10-10T05:24:29.1605421+11:00","mono":220463671424,"ev":"SysVarChanged","idle":8369,"name":"*ERRNO","changed":true}
+{"seq":40,"ts":"2026-10-10T05:24:29.1605658+11:00","mono":220463671447,"ev":"SysVarChanged","idle":8369,"name":"*ERRNO","changed":true}
+{"seq":41,"ts":"2026-10-10T05:24:29.1605832+11:00","mono":220463671464,"ev":"SysVarChanged","idle":8369,"name":"*ERRNO","changed":true}
+{"seq":42,"ts":"2026-10-10T05:24:29.1661117+11:00","mono":220463677005,"ev":"SysVarChanged","idle":8369,"name":"*ERRNO","changed":true}
+{"seq":43,"ts":"2026-10-10T05:24:29.1663334+11:00","mono":220463677217,"ev":"SysVarChanged","idle":8369,"name":"*ERRNO","changed":true}
+{"seq":44,"ts":"2026-10-10T05:24:29.1839812+11:00","mono":220463694868,"ev":"LockModeChanged","idle":8369,"cmd":"#(progn (sssetfirst nil (ssadd (handent \"109D56\") (ssadd))) (princ (strcat \"\\nSEL \" (itoa (sslength (cadr (ssgetfirst)))))) (princ))","prev":"NotLocked","now":"Write"}
+{"seq":45,"ts":"2026-10-10T05:24:29.9465693+11:00","mono":220464457447,"ev":"LockModeChanged","idle":8468,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":46,"ts":"2026-10-10T05:24:29.9658742+11:00","mono":220464476757,"ev":"LockModeChanged","idle":8489,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":47,"ts":"2026-10-10T05:24:29.9659495+11:00","mono":220464476820,"ev":"LockModeChanged","idle":8489,"cmd":"MOVE","prev":"Write","now":"NotLocked"}
+{"seq":48,"ts":"2026-10-10T05:24:29.9699922+11:00","mono":220464480866,"ev":"CommandWillStart","idle":8489,"cmd":"MOVE"}
+{"seq":49,"ts":"2026-10-10T05:24:30.6839119+11:00","mono":220465194777,"ev":"LockModeChanged","idle":8489,"cmd":"","prev":"Write","now":"Write"}
+{"seq":50,"ts":"2026-10-10T05:24:30.6842462+11:00","mono":220465195108,"ev":"LockModeChanged","idle":8489,"cmd":"#","prev":"Write","now":"Write"}
+{"seq":51,"ts":"2026-10-10T05:24:30.6844813+11:00","mono":220465195343,"ev":"CommandEnded","idle":8489,"cmd":"MOVE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":52,"ts":"2026-10-10T05:24:30.6851202+11:00","mono":220465195984,"ev":"LockModeChanged","idle":8489,"cmd":"#MOVE","prev":"NotLocked","now":"Write"}
+{"seq":53,"ts":"2026-10-10T05:24:31.3519434+11:00","mono":220465862800,"ev":"LockModeChanged","idle":8581,"cmd":"U","prev":"Write","now":"NotLocked"}
+{"seq":54,"ts":"2026-10-10T05:24:31.3553842+11:00","mono":220465866241,"ev":"CommandWillStart","idle":8581,"cmd":"U"}
+{"seq":55,"ts":"2026-10-10T05:24:31.3999652+11:00","mono":220465910818,"ev":"CommandEnded","idle":8581,"cmd":"U","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":56,"ts":"2026-10-10T05:24:31.4020240+11:00","mono":220465912883,"ev":"LockModeChanged","idle":8581,"cmd":"#U","prev":"NotLocked","now":"Write"}
+{"seq":57,"ts":"2026-10-10T05:24:48.1917859+11:00","mono":220482702410,"ev":"LockModeChanged","idle":9711,"cmd":"REDO","prev":"Write","now":"NotLocked"}
+{"seq":58,"ts":"2026-10-10T05:24:48.1965481+11:00","mono":220482707172,"ev":"CommandWillStart","idle":9711,"cmd":"REDO"}
+{"seq":59,"ts":"2026-10-10T05:24:48.2656386+11:00","mono":220482776261,"ev":"CommandEnded","idle":9711,"cmd":"REDO","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":60,"ts":"2026-10-10T05:24:48.2697481+11:00","mono":220482780375,"ev":"LockModeChanged","idle":9711,"cmd":"#REDO","prev":"NotLocked","now":"Write"}
+{"seq":61,"ts":"2026-10-10T05:24:56.5280917+11:00","mono":220491038606,"ev":"LockModeChanged","idle":10587,"cmd":"PIT","prev":"Write","now":"NotLocked"}
+{"seq":62,"ts":"2026-10-10T05:24:56.5388111+11:00","mono":220491049319,"ev":"CommandWillStart","idle":10587,"cmd":"PIT"}
+{"seq":63,"ts":"2026-10-10T05:25:17.4358233+11:00","mono":220511946041,"ev":"CommandEnded","idle":10587,"cmd":"PIT","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":64,"ts":"2026-10-10T05:25:17.4499399+11:00","mono":220511960167,"ev":"LockModeChanged","idle":10587,"cmd":"#PIT","prev":"NotLocked","now":"Write"}
+{"seq":65,"ts":"2026-10-10T05:27:19.4824204+11:00","mono":220633990956,"ev":"LockModeChanged","idle":20543,"cmd":"AUTO_SAVE","prev":"Write","now":"NotLocked"}
+{"seq":66,"ts":"2026-10-10T05:27:19.5463221+11:00","mono":220634054855,"ev":"LockModeChanged","idle":20543,"cmd":"#AUTO_SAVE","prev":"NotLocked","now":"Write"}
+{"seq":67,"ts":"2026-10-10T05:28:18.6811321+11:00","mono":220693188864,"ev":"LockModeChanged","idle":25965,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":68,"ts":"2026-10-10T05:28:18.6812686+11:00","mono":220693188983,"ev":"LockModeChanged","idle":25965,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":69,"ts":"2026-10-10T05:28:18.6812878+11:00","mono":220693189002,"ev":"LockModeChanged","idle":25965,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":70,"ts":"2026-10-10T05:28:18.6813382+11:00","mono":220693189052,"ev":"LockModeChanged","idle":25965,"cmd":"#","prev":"NotLocked","now":"Write"}
+{"seq":71,"ts":"2026-10-10T05:28:18.6813493+11:00","mono":220693189063,"ev":"LockModeChanged","idle":25965,"cmd":"","prev":"AutoWrite","now":"NotLocked"}
+{"seq":72,"ts":"2026-10-10T05:28:18.9235411+11:00","mono":220693431258,"ev":"LockModeChanged","idle":26007,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":73,"ts":"2026-10-10T05:28:18.9235874+11:00","mono":220693431299,"ev":"LockModeChanged","idle":26007,"cmd":"CEHEALTH","prev":"Write","now":"NotLocked"}
+{"seq":74,"ts":"2026-10-10T05:28:18.9292945+11:00","mono":220693437011,"ev":"CommandWillStart","idle":26007,"cmd":"CEHEALTH"}
+{"seq":75,"ts":"2026-10-10T05:28:19.3191328+11:00","mono":220693826840,"ev":"CommandEnded","idle":26007,"cmd":"CEHEALTH","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":76,"ts":"2026-10-10T05:28:19.3196998+11:00","mono":220693827408,"ev":"LockModeChanged","idle":26007,"cmd":"#CEHEALTH","prev":"NotLocked","now":"Write"}
+{"seq":77,"ts":"2026-10-10T05:28:19.9663897+11:00","mono":220694474097,"ev":"LockModeChanged","idle":26104,"cmd":"(progn (princ (strcat \"\\nSYSA \" (vl-princ-to-string (list (getvar \"OSMODE\") (getvar \"SAVETIME\") (getvar \"CLAYER\") (getvar \"DWGNAME\"))))) (princ))","prev":"Write","now":"NotLocked"}
+{"seq":78,"ts":"2026-10-10T05:28:19.9706075+11:00","mono":220694478310,"ev":"LispWillStart","idle":26104,"first":"(progn (princ (strcat \"\\nSYSA \" (vl-princ-to-string (list (getvar \"OSMODE\") (getvar \"SAVETIME\") (getvar \"CLAYER\") (getva"}
+{"seq":79,"ts":"2026-10-10T05:28:19.9982443+11:00","mono":220694505946,"ev":"LockModeChanged","idle":26104,"cmd":"#(progn (princ (strcat \"\\nSYSA \" (vl-princ-to-string (list (getvar \"OSMODE\") (getvar \"SAVETIME\") (getvar \"CLAYER\") (getvar \"DWGNAME\"))))) (princ))","prev":"NotLocked","now":"Write"}
+{"seq":80,"ts":"2026-10-10T05:28:29.0988117+11:00","mono":220703606393,"ev":"LockModeChanged","idle":27190,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":81,"ts":"2026-10-10T05:28:29.0989750+11:00","mono":220703606547,"ev":"SysVarChanged","idle":27190,"name":"LOGFILEMODE","changed":true}
+{"seq":82,"ts":"2026-10-10T05:28:29.1212871+11:00","mono":220703628865,"ev":"LockModeChanged","idle":27202,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":83,"ts":"2026-10-10T05:28:29.1213630+11:00","mono":220703628933,"ev":"LockModeChanged","idle":27202,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":84,"ts":"2026-10-10T05:28:29.1403336+11:00","mono":220703647909,"ev":"DocumentClosing"}
