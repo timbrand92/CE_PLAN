@@ -1680,3 +1680,28 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - Not checked: no build, test, AutoCAD or accoreconsole run, and no fresh trial merge of the C-35 tips.
    - Not proven on a real PC: the TILEMODE read, the screen capture, or the start-up order of the plugins' folder.
    - Usage: unknown (headless).
+893. **Fri 09 Oct 18:27** — TEAM REVIEW run 8 (Opus claude-opus-5-5, read only, no sub-agents). Scope: the build/03 run 77 fix heads, #954 0e51479e and #951 c5e5b9f0. Totals: 1 MERGE, 1 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+894. **Fri 09 Oct 18:27** — **#954 @ 0e51479e MERGE-WITH-FIXES (1 HIGH, 1 MEDIUM, privacy, switch ON only).**
+   - Closed (entry 890): every file in every subfolder written before the first-ON time is deleted, never uploaded (the name book is skipped, the real-name machine rule is kept). The usage and coded-machine tests would fail on c4229aa0. The wording is fixed (an unreadable time is replaced with now; only an unwritable time stops the upload).
+   - Switch OFF (default): correct, and nothing in the plugins' folder is read, deleted or stamped.
+   - HIGH: Structural (rel-20261009n and every S-34/S-35 head) still writes the REAL drawing file name into the same folder after first ON: usage DrawingName (AdminTelemetryService.cs lines 364/428) and the machine report "Active drawing: <name>" (line 307). Its ReportField only removes the login, PC name and user folder, and there is no Structural twin of #944.
+      - Fix in #954: upload only records with "PluginId": "CE_CVL_SUITE"; delete, never upload, all others and any file that cannot be read (fail closed).
+      - RED tests: a Structural usage file after first ON is not uploaded; a Structural machine file after first ON is not uploaded; a Civil record after first ON still goes.
+      - File a BUG for Structural to code the drawing name like #944.
+   - MEDIUM: plugin failure Message/Details keep drawing and job-folder paths (the scrub removes only the login, PC name and user folder). Fix: rewrite them with CeSupportBundleScrub.Scrub before copying (the #941 cutter); a file that cannot be parsed is deleted. Add a RED test with D:\Jobs\24-100 Smith St\C101.dwg.
+   - Position confirmed: the base is #947's branch and the head contains c88d3bdb, so it goes straight after #947 in C-34. Trial merges with #941, #944 and #945 clash only at the REGRESSION_LOG top.
+   - Condition: it ships only in a payload that also has #944 and #941.
+895. **Fri 09 Oct 18:27** — **#951 @ c5e5b9f0 MERGE.** The LOW of entry 887 is closed: three tests drive CaptureUnlessLayoutTab with a counting fake. TILEMODE 0 gives 0 pictures and the refusal; unreadable TILEMODE gives 0 pictures and the refusal; TILEMODE 1 gives 1 picture. The production caller is unchanged. Trial merges of c5e5b9f0 with #952 e19ac7a4 and #953 488c3767 auto-merge MarkupAnalysisService.cs and clash only at the REGRESSION_LOG top.
+896. **Fri 09 Oct 18:27** — **Final C-35 (Civil/Manager, on C-34), plain MERGE, in merge order:**
+   1. #711 03df7389, with the clash steps and the Bug306 condition of entry 874.
+   2. #950 38068fbb.
+   3. #951 c5e5b9f0 (replaces 75a52a4b).
+   4. #952 e19ac7a4.
+   5. #953 488c3767.
+   - Items 2 to 5 are one stack, bottom-up. #952 and #953 merge on top of c5e5b9f0 (REGRESSION_LOG only). The clashes of entry 883 stand.
+   - **C-35 OUT:** #954 (fixes of entry 894). When fixed, it goes straight after #947 in C-34, and only together with #944 and #941.
+   - S-35 is unchanged (entry 877).
+897. **Fri 09 Oct 18:27** — TEAM REVIEW run 8 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run, and no full C-35 chain trial.
+   - Not proven on a real PC: the TILEMODE read, the start-up order of the plugins' folder, or the office IT folder.
+   - Usage: unknown (headless).
