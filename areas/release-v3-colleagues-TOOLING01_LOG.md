@@ -320,3 +320,51 @@ Brief from desk plan/03: two synthetic fixtures for Codex W54, the undo-safety c
 2. Nothing proven in AutoCAD. Built and tested offline only; not installed; not accepted.
 
 RUN 7 ENDED.
+
+
+---
+
+# RUN 8 (Sat 10 Oct 2026, about 07:50 to 08:20 PC clock, headless Sonnet)
+
+Brief from desk plan/03: the #864 `launch -Env` test route, the Opus review round 7 output, a one-screen witness summary, all offline driver tests re-run, and the tester guide brought up to date. **AutoCAD was NOT run** (one acad.exe, pid 53004, was already running when I looked: not mine, not touched). Original `acad_driver.ps1` untouched; no product code changed; the recorder pin is unchanged.
+
+## Answer first
+
+1. **`launch -Env` built on the driver COPY and tested offline: 51 of 51 (red first: the test could not even find the new function on the pre-edit copy).** Command: `D launch "<test copy>" -Env CE_LOG_DIR_OVERRIDE=C:\ce_rc_scratch\fault_test`. Only that one name; only a folder strictly inside `C:\ce_rc_scratch`; only the fixed `acad.exe`; started straight from the driver's own process with that variable added to that one process; nothing Windows-wide, nothing in the registry. Without `-Env`, `launch` is unchanged (Explorer hand-off). **NOT usable until Opus reviews the diff** (`PATCH_run8_launch_env_2026-10-10.diff`, 104 lines).
+2. **Opus review round 7: not landed.** The newest REVIEWLANE entry is still 958 (Opus tooling review run 4, 05:30). Nothing after it names tooling01, and nothing is addressed to me. Check again next run.
+3. **Witness summary: built, 29 of 29 tests (red first: 28 of 29 failed with the script missing).** `reader\Summarise-WitnessLog.ps1` on branch `claude/tooling01-witness-recorder` (commit bb099b57, pushed, PR #977). It prints the PASS or FAIL line (copied from the reader, so they can never disagree), then per walk: U time, REDO time, wait length, events between by type, system-variable names with counts, the VIEWBACKSTATUS count, and a totals line. About 10 lines for two walks. The reader itself is unchanged.
+4. **All offline driver tests re-run, all green** (counts in section "Test counts" below).
+5. **`DRIVER_TESTER_GUIDE.md` brought up to date** with sections 7 and 8 (witness first, copies named CLD<NN> with a hash check, the 60-call habit, versions first, the summary tool, autosave spoilers, Esc rules, the window allow-list, BUG-560 drift, no second AutoCAD, the `-Env` caveat).
+
+## The design question you asked: what the Explorer hand-off was protecting against (also in the driver README, section "Run 8")
+
+1. **Start-up path:** a double-click goes Explorer, then `AcLauncher.exe /O "<drawing>"` (read from the file-association entry, read only), then AutoCAD. A direct `acad.exe "<drawing>"` skips AcLauncher, so start-up is not byte-for-byte what a user gets. Reports must say "started directly".
+2. **Parentage:** under Explorer, AutoCAD outlives the driver window; started directly it is a child of the driver's process and can be ended with it.
+3. **Secrets:** a direct start would pass on the driver window's whole environment, including any key or token the tester's tool keeps there. So names containing KEY, TOKEN, SECRET, PASSWORD, PASSWD, CREDENTIAL, ANTHROPIC, OPENAI, AUTH or CLAUDE are removed from the child, and their NAMES (never values) are printed. `CE_CLOUD_URL` is left alone on purpose.
+
+## Items for Opus to decide
+
+1. Is a name-substring scrub the right way to keep secrets from AutoCAD, or should the child get a minimal fixed environment instead (safer, but risks leaving out something AutoCAD or a CE add-in needs)?
+2. Does skipping `AcLauncher.exe /O` matter for what #864 tests? Unknown; the first use should be a plain `launch -Env` on a test copy, then `witness load`, then the fault-report step.
+3. The new function names to read in the diff: `Test-LaunchEnvSpec`, `New-DirectLaunchStartInfo`; the only `Process.Start` in the file is in the `launch` branch after the spec check (the test asserts one occurrence).
+
+## Test counts (Sat 10 Oct, after the edits)
+
+1. Driver copy tests in `_ACAD_DRIVER\tests`: Test-CeWindowAllowList 45 of 45, Test-DriverUiAndEsc 78 of 78, Test-Run5Driver 97 of 97, Test-Run6Driver 20 of 20, **Test-Run8LaunchEnv 51 of 51 (new)**, Test-UndoSafetyJourneys 41 of 41, Test-WitnessLoad 82 of 82, Test-WitnessPilotJourneys 57 of 57.
+2. `network_proof\tests\Test-NetworkProof.ps1`: 21 of 21 (one earlier call exited 1 while a long driver test was running in parallel; the re-run alone was 21 of 21: likely the shared port 18080).
+3. Recorder tests (branch worktree C:\ce-tt01): Test-WitnessReader 38 of 38, Test-WitnessLogClass 20 of 20, **Test-WitnessSummary 29 of 29 (new)**.
+4. The long `Test-AcadDriver.ps1` (it starts small helper windows, not AutoCAD): see the line at the end of this section.
+
+## Files
+
+1. Driver folder (not a git repo): `acad_driver_witness.ps1` (copy, edited), `PATCH_run8_launch_env_2026-10-10.diff`, `tests\Test-Run8LaunchEnv.ps1`, `README.md` (section "Run 8"), `DRIVER_TESTER_GUIDE.md`.
+2. Recorder branch `claude/tooling01-witness-recorder`, commit bb099b57: `reader\Summarise-WitnessLog.ps1`, `tests\Test-WitnessSummary.ps1`, README section "Run 8". The pin is NOT changed; no DLL rebuilt (no C# changed).
+
+## Not done
+
+1. Items 4 and 5 of run 1 (TH-01 "what got drawn" table scenario with ACadSharp and PdfPig; window pictures and the `ui tree` ribbon check) are still not started: this run's brief was the five items above.
+2. The Explorer fallback for #864 stays as the desk wrote it (one line in the next Tim question batch) until Opus clears `launch -Env`.
+3. Nothing was proven in AutoCAD.
+5. **`Test-AcadDriver.ps1` (the long one, against the ORIGINAL `acad_driver.ps1`, which I did not touch): 675 passed, 2 failed.** The two: "CMDACTIVE 0 but AutoCAD is spinning: the alarm is raised" and "the idle CPU reading is a number for a real process". Both start a busy helper process and measure its CPU for two seconds, so they depend on how busy the PC is (other workers were building and another AutoCAD, pid 53004, was running). They cannot be caused by this run's edits (those are in the copy only). Not re-run on a quiet PC; the desk may want one re-run after 17:30.
+
+RUN 8 ENDED.
