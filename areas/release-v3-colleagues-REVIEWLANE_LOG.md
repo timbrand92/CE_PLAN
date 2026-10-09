@@ -1615,3 +1615,34 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - Not trial-merged: #950 and #951 against the C-34 list.
    - Not proven on a real PC: the real PDF render, the screen capture, or the CE Cloud seat call.
    - Usage: unknown (headless).
+879. **Fri 09 Oct 17:27** — TEAM REVIEW run 6 (Opus claude-opus-5-5, read only, no sub-agents). Scope: every open PR whose current head had no real OPUS REVIEW comment. That is 3 new heads: #952, #953 and #954 (build/03 run 75).
+   - #950 (943cd638) and #951 (fe3adc80) have no fix heads yet, so they were not re-reviewed. The fixes of entries 875 and 876 still stand.
+   - Totals: 2 MERGE, 1 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+880. **Fri 09 Oct 17:27** — **#952 @ 4b4f68b3 MERGE (stacked on #951).**
+   - With only ANTHROPIC_API_KEY set, nothing goes to Anthropic directly. Both page-sending paths use ResolveCloudOnly, which refuses when there is no CE Cloud URL. The direct key no longer counts as a credential, and the chat builds no conversation without the cloud URL.
+   - The tests prove the refusal by its sentence (the service has no fake seam).
+   - Optional LOW: the same test for the X-Civil extraction service.
+881. **Fri 09 Oct 17:27** — **#953 @ 4143861b MERGE (stacked on #952).**
+   - The "AI features" master switch is OFF by default, and an old settings file loads OFF.
+   - It gates the chat, Analyse markups, From file, Project AI access, the seat call (so Apply is refused) and the X-Civil prompt (it is never asked).
+   - The new key ai.featuresEnabled is in the AI group, not Design Standards, and the CDRULES rulebook does not read it.
+   - The tests are behavioural.
+   - Tim's own CDASK stops until he turns the switch ON (his "AI off / as is" answer is still open).
+882. **Fri 09 Oct 17:27** — **#954 @ c1b33b78 MERGE-WITH-FIXES (1 MEDIUM, privacy).**
+   - Correct with the switch OFF.
+   - Fix before anyone turns the switch ON: the plugins' folder still holds a backlog from older versions, real-named machine files and failure text from before #944. On the plugin pass:
+      1. Delete, never upload, the machines\ files whose name carries the real login or PC name (reuse RemoveOldRealNamedMachineReport).
+      2. Delete, never upload, the failures\ files written before the switch was first found ON.
+      3. Add a test for each.
+   - Clash with C-34 #936 > #947:
+      1. CeAdminStorageService.cs: keep #947's try/catch, put the UploadAllOutboxes call inside the try, and put the two new methods after it.
+      2. CeOneGlanceStatus.cs: keep all four switch keys.
+883. **Fri 09 Oct 17:27** — **Corrected C-35 (Civil/Manager, on C-34), plain MERGE, in merge order:**
+   1. #711 03df7389, with the clash steps and the Bug306 condition of entry 874.
+   - **Waiting, then plain MERGE in this order once the #950 and #951 fix heads pass review:** #950, then #951, then #952 4b4f68b3, then #953 4143861b. It is one stack, bottom-up. In the trial, #953's tip against every C-34 item clashed only in UserSettings.cs with #849/#850/#948, and those clashes are base-only (already there before this stack). #711 is the known clash of entry 874.
+   - **C-35 OUT:** #950 and #951 (fixes of entries 875 and 876) and #954 (fix of entry 882).
+   - S-35 is unchanged (entry 877).
+884. **Fri 09 Oct 17:27** — TEAM REVIEW run 6 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run.
+   - Not proven on a real PC: the CE Cloud route, or the start-up order of the plugins' folder on a colleague PC.
+   - Usage: unknown (headless).
