@@ -101,3 +101,65 @@ Authority as run 1. Brief: do the Opus review fixes first (entries 934 to 939 of
 3. **Left in place:** `C:\ce_rc_scratch\witness_bin` (DLL AD8A22D3... plus `.sha256`), `C:\ce_rc_scratch\witness_reader` (stable copy of the two reader scripts), `C:\ce_rc_scratch\golden_proof`. Worktree `C:\ce-tt01` cleaned (git clean -fdXq), on branch `claude/tooling01-fall-and-pit-label-checks`.
 
 RUN 2 ENDED. Reviewed only: not tested in AutoCAD, not installed, not Tim-accepted.
+
+
+---
+
+# RUN 3 (Sat 10 Oct 2026, started about 03:00 PC clock, headless Sonnet)
+
+Authority as run 1 (Tim, INT-080). Brief from desk plan/03: (1) the Opus run 2 fixes first, then (2) the five items in `NEXT_FIXES_2026-10-08.md` section "Added Sat 10 Oct 03:15" (Claude driver run 5 findings), all in the COPY `acad_driver_witness.ps1` plus patch files, `acad_driver.ps1` untouched. **AutoCAD was NOT run by this worker.** It was not running at all when I finished the driver work (run 6 had closed it at about 03:14), so the one test that moves the keyboard focus could run safely. Built and tested offline only. Nothing is installed, nothing is Tim-accepted, nothing here has been tried in a real AutoCAD.
+
+## Answer first
+
+1. **Opus run 2 fix on #980: done.** Dynamic blocks (FALL SYMBOL, PIT BLOCK, SPOT LEVEL) are saved under anonymous names (`*U184` and so on); the checks now read the real name back. Proved on the real test copy DRV1_B1. 35 of 35 tests pass (2 were red first).
+2. **Run 5 item 1 (the window the driver could not see): reproduced offline and fixed in the copy.** The cause on this PC is an OWNED window of a DISABLED owner (what a CE window is while AutoCAD's main frame is disabled behind it): the Windows window list has it, the UI Automation list does not. A window on the second monitor, and one no monitor covers, were listed fine, so "second monitor" on its own was NOT the cause here. The driver now merges both lists. Not proved: the real New Pipe window.
+3. **Run 5 item 2 (Esc): new sub-command `esc` in the copy, a separate patch file, needs Opus.** One Esc key, only with the lock held, on a test copy, with AutoCAD busy, a CE prompt in the newest command-line lines, the main window enabled and in front. It sends nothing otherwise and says which rule failed first. Proved offline: the decision (15 cases), the log reading (8), the refusals, and a REAL Esc to a helper window that logs every key: exactly one key down, one key up.
+4. **Item 3 (tester note): done.** "Never go round the driver" is at the top of the driver README, in `witness_pilot.md` and in every journey file, and a test checks each journey carries it.
+5. **Item 4 (split the pilot): done.** Five short journeys, planned driver calls 11, 8, 9, 13 and 19 (cap 25). Calibration C1 to C4 is journey 1, the REGEN spoiler is journey 3, the Pit Schedule route is journey 4, journey 5 is a DRAFT for the run 5 versus run 6 difference (a CD pipe before a drawing switch). Not run.
+6. **Item 5 (the missing dash): skipped as told, it is build/04's.**
+7. **Bonus, run 6 finding: the witness reader could not read a log AutoCAD still holds open. Fixed** on PR #977's branch (the reader opens it shared and ignores a half-written last line). 31 of 31 reader tests (3 red first).
+
+## What changed, where
+
+1. **Driver copy:** `C:\Lisp Files\_ACAD_DRIVER\acad_driver_witness.ps1`. **`acad_driver.ps1` is UNCHANGED** (SHA256 c9ba503d463610d0..., and reverse-applying the full patch to the copy gives it back byte for byte; checked).
+2. **Patch files (all in `C:\Lisp Files\_ACAD_DRIVER`):**
+   1. `PATCH_ui_windows_2026-10-10.diff` (114 lines): the window fix only, on top of the run 2 copy Opus already cleared.
+   2. `PATCH_esc_2026-10-10.diff` (198 lines): the Esc key only, a **separate patch**. Applying 1 then 2 to the run 2 copy gives exactly the new copy (checked with `patch` and `cmp`).
+   3. `PATCH_witness_load_2026-10-10.diff` (481 lines): regenerated, the whole copy against the original. The run 2 version Opus read is kept as `PATCH_witness_load_2026-10-10.run2_as_reviewed.diff`.
+3. **New tests (in `_ACAD_DRIVER\tests`):** `Test-DriverUiAndEsc.ps1` (66 checks with the focus test; written first: 48 of 61 failed against the run 2 copy), `Test-WitnessPilotJourneys.ps1` (56), plus helpers `UiTestWindowNoFocus.ps1` (helper windows that never take the keyboard focus, so a test run cannot disturb AutoCAD or another tester) and `UiTestKeyLog.ps1`. `Test-WitnessLoad.ps1` still 82 of 82.
+4. **README:** new sections "Windows the driver could not see" and "esc", the tester rule at the top, and "Witness load" item 8 corrected (it HAS now been tested in AutoCAD: runs 5 and 6, loaded in 1.3 to 1.7 s, SECURELOAD 0, no prompt).
+
+## Item 1 in detail: windows the driver could not see
+
+1. **Reproduced, not guessed.** A helper window that is an owned window of a disabled owner is missing from the UI Automation desktop list and present in the Windows (EnumWindows) list of the same process. That matches run 5: `ui windows`, `ui tree`, `ui wait` and `-ExpectWindow` all said "no such window" while it was open.
+2. **The fix:** `Get-UiWindows` merges the UI Automation list with a read-only Win32 list by window handle (each window once). A window UI Automation calls off screen but Win32 shows with a real size counts as visible. Untitled windows only Win32 knows are left out (noise). `ui windows` now shows `source` (`uia` or `win32`) and `owned_window`. Same allow-list, same never-touch list, same pid filter: a newly seen window is still refused if its title is not on the allow-list.
+3. **Checks (all offline, none takes focus):** the owned window is listed, allowed, found by `Find-UiWindow`, `Wait-UiWindow` and `Get-UiTargetWindow`, its tree shows the "Start Pipe" button and the button can be pressed through UI Automation; second-monitor and beyond-every-monitor windows are listed; no duplicates; no hidden helper windows; a closed window disappears; the pid filter holds.
+4. **Regression:** the old driver test (`Test-AcadDriver.ps1` with the path swapped to the copy). The run 2 copy scored 686 passed, 7 failed. After my changes the copy scored 692 passed, 5 failed on the first run and **693 passed, 2 failed on the second, after the journeys folder was tidied**. **Both remaining failures were already failing before my change:** the PostEsc count (`witness load` from run 1 adds a third call, so the original test expects two) and the perf-code check. The stubborn Command search close test is flaky (failed on both copies in the first runs, passed the second time). The journeys-folder count failure is gone, see item 4.
+
+## Item 2 in detail: esc
+
+1. **Use:** `D esc -Who "Claude" -Text`. No words.
+2. **It sends one Esc key only when ALL are true (the first failure is reported):** the shared lock is held by the caller; the active drawing is an approved test copy (the same guard as `type`; while AutoCAD is busy, from the strict cache); AutoCAD is not idle (CMDACTIVE above 0, or COM rejecting calls because a prompt waits), with CMDACTIVE bit 8 (a dialog) refusing; the newest 40 command-line lines show a `[CE]` line with no `Command:` line after it; AutoCAD's main window (exactly one acad.exe) is enabled; and right before the key the main window really is the foreground window (it brings it to the front; if Windows will not allow that, nothing is sent).
+3. **Why the evidence is the command-line log:** while a prompt waits, AutoCAD refuses COM reads, so the command name (CMDNAMES) cannot be read. The `[CE]` line is how run 5's CD prompt looked in the history.
+4. **Idle is not an error:** "nothing to cancel", `esc_sent` 0. It never repeats the key; it looks at the result for up to 4 s and reports `command_ended`.
+5. **Not in the lock list on purpose** (its lock check is stricter and happens before AutoCAD is touched), so the original driver's lock list is unchanged and a test says so. `type` still refuses control characters, so Esc cannot be typed.
+6. **What Opus should look at hardest:** (a) the native `SendEscToFrame` (the only key route in the whole driver: process check, enabled check, foreground check right before the key, exactly two `keybd_event` calls for 0x1B, no Alt or other key); (b) the focus change itself (AttachThreadInput then SetForegroundWindow): it moves the keyboard to AutoCAD, so it must only run on a PC nobody else is using; (c) `Test-CePromptWaiting`: is `[CE]` really at the pick prompts in the log? Unverified; a CE command whose prompt carries no `[CE]` is refused, never Esc'd; (d) that Esc into AutoCAD with its main window enabled cannot reach a CE window (a CE window disables the main window, which the decision refuses).
+7. **Not tested:** the key into a real AutoCAD with a CE prompt waiting.
+
+## Item 4 in detail: the split pilot
+
+1. **Files:** `journeys\witness_pilot\1_calibration_c1_to_c4.json`, `2_clean_walk.json`, `3_regen_spoiler.json`, `4_pit_schedule_walk_w35_route.json`, `5_cd_pipe_then_switch_draft.json`; the guide `journeys\witness_pilot.md` (rewritten). Each journey launches its own AutoCAD, loads the recorder once and ends with `quit`.
+2. **The old all-in-one file moved** to `witness_pilot\0_superseded_all_in_one.json` (marked SUPERSEDED). Having `witness_pilot.json` in the journeys folder had broken the original driver test that expects exactly three example journeys there; with nothing left in the root, that failure is gone.
+3. **Checks:** every journey at most 25 driver calls and the planned count equals the real count; it is a template (`journey run` refuses it, `journey validate` accepts it); it starts with `witness check` and `lock acquire`, loads once, ends with `quit`; no typed step uses a refused word; only journey 5 uses `esc`; no step uses SendKeys, PostMessage or UI Automation of its own; journey 1 has C1 to C4 and reads SECURELOAD and TRUSTEDPATHS before the load; journey 3 puts the REGEN between the U and the REDO. This test was written after the files (not red first); its first run had 16 failures, all faults in my test code except one real one (the old file left in the root).
+4. **Journey 5 is a DRAFT:** the New Pipe control names are not mapped (it says to read them with `ui tree`), and the typed `CD` line is the run 5 form, not proven through this driver.
+
+## Skipped, not done, or needs someone
+
+1. **Needs Opus:** the three patch files (above all `PATCH_esc_2026-10-10.diff`), PR #980 (the dynamic-name fix, head 6e0c177a), PR #977 (reader fix, head fcf1562a). Until Opus confirms the esc and ui windows changes, the tester must not use `esc` and journey 5 must not run.
+2. **Needs Tim:** accept `esc` in the driver at all (it is the only key route the driver would ever have). The Autodesk cloud runner and a second PC or VM stay not authorised.
+3. **Not run, by instruction:** anything in AutoCAD. The pilot is ready for the Claude driver tester.
+4. **Not done (not asked or not authorised):** run 6 also asked for MOVE of a pre-selected object in one line, or a select-by-handle call (it cost 2 calls). That loosens the pickfirst guard, so it is Tim's and Opus's call, not mine. The run 5 missing dash is build/04's.
+5. **Known gap:** `esc` can only be as good as the `[CE]` marker in the log; the first real use will show it.
+6. **Environment notes:** C: had 21 GB free at the start (above 12). Worktree `C:\ce-tt01` is on branch `claude/tooling01-witness-recorder`. The old driver regression test needs about 5.5 minutes and uses helper windows; run it only when AutoCAD is closed.
+
+RUN 3 ENDED. Built and tested offline only: not tested in AutoCAD, not installed, not Tim-accepted.
