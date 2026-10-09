@@ -126,3 +126,50 @@ record, so they are owned from the moment they open, not just after a new pipe.
 NOT explain BUG-558. That bug still rests on the New Pipe plan-preview lead in §1 (split test A/B). Two separate
 REDO bugs, then: (a) U in any owned Civil drawing (proven chain, fix = OpenClose); (b) BUG-558 across a switch
 (lead, needs the split test).
+
+## 5. CORRECTION and re-check on the release heads (08:05 question)
+
+**Correction (mine):** §3 audited `master` 650c0c19. The installed Civil is **3.0.44 = `b7eed253` =
+`origin/claude/rel-20261009o` head** (read from the bundle DLL ProductVersion, 10 Oct ~08:15), which is not on
+master. On that head most §3 items are already fixed: U-end reload/rebuild use light (OpenClose) reads
+(BUG-192 v2), and a per-drawing `RedoWindowGuard.DeferWhileRedoOpen` gates the Idle link refresh
+(`LinkService.Reactors.cs:2330`), Automatic QA (`CivilProjectQaAutomaticService.cs:423`), XREF notice
+(`CivilBackgroundXrefNoticeService.cs:88`), Inspector (`InspectorPaletteService.cs:386/556/745/1120`), pit-schedule
+watcher (`PitScheduleXrefWatcherAutoCadAdapter.cs:109`), migration (`PitBlockMigrationService.cs:156`), pipe upgrade
+(`PipeObjectUpgradeOnOpenService.cs:108`), grade marker (`GradeNoteMarker.cs:159`). Structural `rel-20261009p`
+(2e0cf385) skips the U family in `BeamLinkService.Reactors.cs:320`.
+
+**Still unguarded on the release heads:**
+1. `BlockService.GetEffectiveBlockName` (`BlockService.cs:~266`): `StartTransaction` per dynamic block; safe only
+   where its caller is guarded.
+2. Manager `CeSuiteManagerMenuService.cs:797` `SetSystemVariable("MENUBAR", 1)` from DocumentActivated / Idle while
+   the menu install keeps failing.
+3. Click-started items of §3.7 (by design).
+
+## 6. BUG-558 on the release head: the guard is PER DRAWING (lead, file and line)
+
+`RedoWindowGuard` keys every window by the drawing where the U was typed (`RedoWindowGuard.cs:131` `KeyOf(database)`;
+`IsOpen`/`DeferWhileRedoOpen` at `:96`/`:124`). Every background job asks only about ITS OWN drawing. In BUG-558 the
+U is in the Structural drawing, so the Civil drawing's window is closed, and all pending Civil work runs the
+moment the Civil drawing becomes current:
+1. **What CD placement leaves pending:** `LinkService.Reactors.cs:860-864` sets
+   `state.PendingCacheRebuildAndAttachments = true` and hooks Idle at every CE editor command end (CD included).
+   The Idle handler (`Reactors.cs:2282`, `OnApplicationIdlePostSave`) loops over ALL documents, asks
+   `DeferWhileRedoOpen(doc.Database)` (`:2330`, Civil = not open), then runs `TryRebuildCachesDeferred` only when
+   that document is the ACTIVE one (`:2336`, `ReferenceEquals(doc, activeDoc)`). If the user leaves the Civil
+   drawing before that Idle tick, the rebuild waits and fires on the next activation of the Civil drawing.
+2. That rebuild calls `RunIdleCacheRefresh` → `RebuildRuntimeCaches(db, state, trigger, fallbackReason)`
+   (`LinkService.Cache.cs`, `lightReads` defaults to false at `:860`) → full `StartTransaction` reads
+   (`Cache.cs:535-537` etc.) under a Read lock, and a WRITE lock + registrations if callouts were queued
+   (`Reactors.cs:2475-2490`).
+3. The same per-drawing gap applies to Automatic QA (armed by CD, 3 s quiet timer, `:423` asks only the Civil
+   drawing) and the XREF notice/watcher on activation.
+
+**Not established:** whether a transaction or lock on the Civil drawing can destroy the Structural drawing's REDO
+(cross-drawing; the core console has one drawing, so it cannot be measured headless). The run data fit it: lost
+only after a CD pipe (pending work exists), kept with a fresh Civil copy (nothing pending), kept in vanilla.
+
+**Cheapest decisive experiment (build + driver):** make the guard global for background work: defer when ANY
+open drawing has its REDO window open (e.g. a `Registry.IsOpenAnywhere()` check inside `DeferWhileRedoOpen`), and
+make the deferred rebuild pass `lightReads: true`. Re-run run 10. Kept → root cause confirmed and fixed in one
+change. Still lost → the cause is outside these background jobs (then log which jobs ran at the switch).
