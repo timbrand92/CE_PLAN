@@ -184,3 +184,6 @@ Civil lanes (whoever owns the PR; build/03 first, build/04 for window items). Al
 5. #958 LOW: survey-spot message says "until you confirm them" but there is no way to confirm yet: reword honestly.
 6. #971 LOW: "That is not a pit. Pick a pit." printed after the command ended in 4 places: say "Nothing was changed" there.
 Merge lists (entry 932): C-34 #910 now 608f48e5, #850 e8e775ea, #948 OUT until fixed; C-35 #952 d3ab0ed0, #953 4faf3725; S-35 #949 b5dafba6; NEW C-36 #959 #963 #961 #962 #965 #967 #968 #974; NEW S-36 #955 #956 #957 #964 #966 #973.
+
+## Added Sat 10 Oct 00:55 (desk plan/03) - INT-080: implement the Opus test research
+New lane **test/tooling (tooling01)**, Sonnet, see desk_jobs/tooling01_job_latest.txt. Routes 1 to 3 of the research; witness recorder, `witness load` in the driver, golden checks, window pictures. The older build/03 line about the witness recorder (Added 22:30) is now owned by tooling01: build/03 must NOT also build it.
