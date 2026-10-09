@@ -1705,3 +1705,26 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - Not checked: no build, test, AutoCAD or accoreconsole run, and no full C-35 chain trial.
    - Not proven on a real PC: the TILEMODE read, the start-up order of the plugins' folder, or the office IT folder.
    - Usage: unknown (headless).
+898. **Fri 09 Oct 18:47** — TEAM REVIEW run 9 (Opus claude-opus-5-5, read only, no sub-agents). Scope: #954 re-review at the build/03 run 78 head 3c42ef08. Totals: 0 MERGE, 1 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+899. **Fri 09 Oct 18:47** — **#954 @ 3c42ef08 MERGE-WITH-FIXES (1 HIGH, privacy, switch ON only; 1 LOW optional).** PR comment 6076756843.
+   - Closed (entry 894 HIGH): only records whose first "PluginId" is CE_CVL_SUITE may go. Every Structural file, any file over 2 MB, any unreadable file and any file with no PluginId is deleted, never uploaded. Every record class has PluginId first, and an escaped \"PluginId\" cannot match.
+   - Closed (entry 894 MEDIUM): a Civil failure's Message and Details go through CeSupportBundleScrub.Scrub (the #941 cutter, identical at #941's head 50213ba6), unescaped and escaped again. A record that cannot be rewritten is deleted. A file that cannot be deleted stops the plugin pass.
+   - The 3 + 1 tests (Structural usage, Structural machine, unreadable or no-PluginId, Civil failure with D:\Jobs\24-100 Smith St\C101.dwg) are behavioural, and each would fail at 0e51479e.
+   - Switch OFF (default): a missing, broken or oversized switch file reads OFF. TryClearPluginBacklog is never called: no stamp, nothing read, deleted or rewritten.
+   - With #944 in the payload, Civil records carry no real login, PC name or drawing name (coded names, DrawingName and "Active drawing:" coded, SourceRoot and StatusSummary scrubbed, coded machine file name).
+   - HIGH: the check and the copy are two passes. ScreenPluginRecords lists and checks the folder, then UploadOutbox lists it again and File.Copy's every file by path. Anything written in between goes unchecked:
+      - a Structural usage record (real DrawingName, queued on a background thread at command end);
+      - Structural's machine file ("Active drawing: <real name>", rewritten on every drawing-tab switch);
+      - a new Civil failure (Details "Recent acad.err: <current folder>", often the job folder).
+     The upload runs on a background thread 15 s after start and from the Manager windows, while drawings are open.
+      - Fix: upload the plugins' folder through its own per-file loop. Read each file once; delete it if it is not Civil; clean it if it is a failure; File.WriteAllText the CHECKED text to the office path (not File.Copy), then delete the source. UploadOutbox stays as it is for the Manager's own folder.
+      - RED test: a test-only hook on PluginBacklogRules (for example AfterBacklogCleared), invoked after the old-file pass and before the plugin copy, drops a Structural usage record and a Civil failure with the job path. Assert the Structural record is not uploaded and the Civil one arrives with no "Smith St" and no "C101.dwg". Fails at 3c42ef08.
+   - LOW (optional): run the cutter over every string value of a Civil record, and delete any machines\ file named with __<this login>__ on any PC name. This guards a Manager newer than Civil, and roaming profiles.
+   - NOTE (for #941's cutter, not this PR): a job folder whose name holds a stop word ("Cannot St") or ". " is cut short and the rest of the name stays. Non-drawing files under \AppData\ or \Temp\ (a .pdf, an autosave .sv$) keep their names.
+   - INT-073 to INT-078: consistent (OFF switch, nothing visible, no colour, no drawing names in admin reports, time logs not in this folder).
+   - Position confirmed: the base is #947's branch @ c88d3bdb and c88d3bdb is in the head, so it goes straight after #947 in C-34. Trial merges with #941 50213ba6, #944 10492156 and #945 42c1bae2 clash only at the REGRESSION_LOG top. It ships only in a payload that also holds #944 and #941.
+900. **Fri 09 Oct 18:47** — **C-35 unchanged from entry 896.** C-35 OUT: #954 (the HIGH of entry 899). When fixed, it goes straight after #947 in C-34, and only together with #944 and #941. S-35 unchanged (entry 877).
+901. **Fri 09 Oct 18:47** — TEAM REVIEW run 9 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run.
+   - Not proven on a real PC: the timing gap between the check and the copy (found by reading), the real AppData folders, or the office IT folder.
+   - Usage: unknown (headless).
