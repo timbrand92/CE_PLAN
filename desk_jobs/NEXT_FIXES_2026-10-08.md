@@ -174,3 +174,13 @@
 ## Added 22:30 Fri 9 Oct from the AutoCAD test options research (areas\release-v3-colleagues-AUTOCAD_TEST_OPTIONS_RESEARCH_2026-10-09.md; read its FOR TIM section)
 - **build/03 (test tooling, a NEW separate test-only project, never shipped in a bundle, never in a payload):** the WITNESS RECORDER: a small test-only .NET add-on loaded into full AutoCAD on test copies that writes, with the time, every command start/end, every drawing lock, every object added/changed/erased and every system variable change to a log file under C:\ce_rc_scratch (no CE code shared, so it does not inherit CE's blind spots). First pilot: Pit Schedule level, U, wait 12 s, REDO; then the same with a deliberate REGEN in the wait to prove the witness catches it. Build it and its README; LOADING it needs NETLOAD, which the driver refuses on purpose: do NOT change the driver's deny list; Tim's OK is asked (batch). Second: a 'what got drawn' reader (ACadSharp or the headless probe) for the CDCALC criteria table; do not use Windows' built-in PDF renderer for drawing PDFs (it drops dashed lines).
 - **Codex division of labour:** the driver sets up and reads back; Codex does only the hand action (grips, hover, drag, live previews, looks right). Cut Codex steps per item accordingly in the next briefs.
+
+## Added Fri 9 Oct 23:20 (desk plan/03) - Opus round 6 review (log entries 906 to 933) - FIX FIRST, each PR has its exact fix as a comment
+Civil lanes (whoever owns the PR; build/03 first, build/04 for window items). All behind Settings, switch OFF default, test RED first, plain English, no blue.
+1. #948 HIGH (layers by status): accept the status layers (e.g. STORMWATER DEMOLISH) ONLY for objects already known as CE pipes/pits; a plain line on that layer must be ignored by CDREPAIR. Add the test. #960 is stacked on #948 and waits for it.
+2. #969 MEDIUM (design level, new pit): a slab with one unknown level must offer NO level.
+3. #972 MEDIUM (assumed levels): the assumed level must show in the New Pit "Survey RL" box ONLY with the new switch ON (default OFF).
+4. #970 MEDIUM (pump pit labels): the renamed SPS1 label must use the new Settings height, not the fixed 250.
+5. #958 LOW: survey-spot message says "until you confirm them" but there is no way to confirm yet: reword honestly.
+6. #971 LOW: "That is not a pit. Pick a pit." printed after the command ended in 4 places: say "Nothing was changed" there.
+Merge lists (entry 932): C-34 #910 now 608f48e5, #850 e8e775ea, #948 OUT until fixed; C-35 #952 d3ab0ed0, #953 4faf3725; S-35 #949 b5dafba6; NEW C-36 #959 #963 #961 #962 #965 #967 #968 #974; NEW S-36 #955 #956 #957 #964 #966 #973.
