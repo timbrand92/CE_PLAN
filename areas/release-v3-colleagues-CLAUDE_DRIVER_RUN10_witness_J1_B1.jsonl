@@ -1,0 +1,44 @@
+{"seq":1,"ts":"2026-10-10T05:53:24.3986842+11:00","mono":222198885622,"ev":"DocumentAttached","doc":"CLD18_B1.dwg"}
+{"seq":2,"ts":"2026-10-10T05:53:24.4004040+11:00","mono":222198887343,"ev":"CommandEnded","idle":0,"cmd":"NETLOAD","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":3,"ts":"2026-10-10T05:53:24.4006446+11:00","mono":222198887582,"ev":"HookCounts","idle":0,"appended":0,"modified":0,"erased":0,"openedForModify":0,"faults":0}
+{"seq":4,"ts":"2026-10-10T05:53:24.4016152+11:00","mono":222198888554,"ev":"LockModeChanged","idle":0,"cmd":"#NETLOAD","prev":"NotLocked","now":"Write"}
+{"seq":5,"ts":"2026-10-10T05:53:24.4526207+11:00","mono":222198939563,"ev":"LockModeChanged","idle":15,"cmd":"","prev":"ProtectedAutoWrite","now":"NotLocked"}
+{"seq":6,"ts":"2026-10-10T05:53:24.4621193+11:00","mono":222198949062,"ev":"SysVarChanged","idle":15,"name":"*SYSVARMONITORDIFNUMBER","changed":true}
+{"seq":7,"ts":"2026-10-10T05:53:24.4623369+11:00","mono":222198949273,"ev":"SysVarChanged","idle":15,"name":"FILEDIA","changed":true}
+{"seq":8,"ts":"2026-10-10T05:53:32.1939114+11:00","mono":222206680750,"ev":"LockModeChanged","idle":630,"cmd":"#","prev":"NotLocked","now":"AutoWrite"}
+{"seq":9,"ts":"2026-10-10T05:53:32.1939902+11:00","mono":222206680818,"ev":"LockModeChanged","idle":630,"cmd":"CIRCLE","prev":"Write","now":"NotLocked"}
+{"seq":10,"ts":"2026-10-10T05:53:32.1979173+11:00","mono":222206684752,"ev":"CommandWillStart","idle":630,"cmd":"CIRCLE"}
+{"seq":11,"ts":"2026-10-10T05:53:32.2326673+11:00","mono":222206719507,"ev":"ObjectOpenedForModify","idle":630,"handle":"2","class":"BlockTableRecord","layerId":""}
+{"seq":12,"ts":"2026-10-10T05:53:32.2335805+11:00","mono":222206720413,"ev":"ObjectModified","idle":630,"handle":"2","class":"BlockTableRecord","layerId":""}
+{"seq":13,"ts":"2026-10-10T05:53:32.2336746+11:00","mono":222206720502,"ev":"ObjectOpenedForModify","idle":630,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":14,"ts":"2026-10-10T05:53:32.2338120+11:00","mono":222206720641,"ev":"ObjectAppended","idle":630,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":15,"ts":"2026-10-10T05:53:32.2339238+11:00","mono":222206720753,"ev":"ObjectModified","idle":630,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":16,"ts":"2026-10-10T05:53:32.2339576+11:00","mono":222206720787,"ev":"ObjectOpenedForModify","idle":630,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":17,"ts":"2026-10-10T05:53:32.2340005+11:00","mono":222206720829,"ev":"ObjectModified","idle":630,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":18,"ts":"2026-10-10T05:53:32.2353793+11:00","mono":222206722211,"ev":"CommandEnded","idle":630,"cmd":"CIRCLE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":19,"ts":"2026-10-10T05:53:32.2354109+11:00","mono":222206722238,"ev":"HookCounts","idle":630,"appended":1,"modified":3,"erased":0,"openedForModify":3,"faults":0}
+{"seq":20,"ts":"2026-10-10T05:53:32.2357202+11:00","mono":222206722550,"ev":"LockModeChanged","idle":630,"cmd":"#CIRCLE","prev":"NotLocked","now":"Write"}
+{"seq":21,"ts":"2026-10-10T05:53:34.0633115+11:00","mono":222208550120,"ev":"LockModeChanged","idle":801,"cmd":"(entget (entlast))","prev":"Write","now":"NotLocked"}
+{"seq":22,"ts":"2026-10-10T05:53:34.0662711+11:00","mono":222208553077,"ev":"LispWillStart","idle":801,"first":"(entget (entlast))"}
+{"seq":23,"ts":"2026-10-10T05:53:34.0737628+11:00","mono":222208560570,"ev":"LockModeChanged","idle":801,"cmd":"#(entget (entlast))","prev":"NotLocked","now":"Write"}
+{"seq":24,"ts":"2026-10-10T05:53:35.7958475+11:00","mono":222210282632,"ev":"LockModeChanged","idle":1031,"cmd":"(entmod (entget (entlast)))","prev":"Write","now":"NotLocked"}
+{"seq":25,"ts":"2026-10-10T05:53:35.7991124+11:00","mono":222210285900,"ev":"LispWillStart","idle":1031,"first":"(entmod (entget (entlast)))"}
+{"seq":26,"ts":"2026-10-10T05:53:35.7996969+11:00","mono":222210286489,"ev":"ObjectOpenedForModify","idle":1031,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":27,"ts":"2026-10-10T05:53:35.7998231+11:00","mono":222210286602,"ev":"ObjectModified","idle":1031,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":28,"ts":"2026-10-10T05:53:35.8119246+11:00","mono":222210298710,"ev":"LockModeChanged","idle":1031,"cmd":"#(entmod (entget (entlast)))","prev":"NotLocked","now":"Write"}
+{"seq":29,"ts":"2026-10-10T05:53:37.7732800+11:00","mono":222212260038,"ev":"LockModeChanged","idle":1430,"cmd":"(entmod (append (entget (entlast)) (list (cons 62 1))))","prev":"Write","now":"NotLocked"}
+{"seq":30,"ts":"2026-10-10T05:53:37.7759872+11:00","mono":222212262743,"ev":"LispWillStart","idle":1430,"first":"(entmod (append (entget (entlast)) (list (cons 62 1))))"}
+{"seq":31,"ts":"2026-10-10T05:53:37.7764843+11:00","mono":222212263237,"ev":"ObjectOpenedForModify","idle":1430,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":32,"ts":"2026-10-10T05:53:37.7765567+11:00","mono":222212263307,"ev":"ObjectModified","idle":1430,"handle":"11C55A","class":"Circle","layerId":"20C5"}
+{"seq":33,"ts":"2026-10-10T05:53:37.7834148+11:00","mono":222212270169,"ev":"LockModeChanged","idle":1430,"cmd":"#(entmod (append (entget (entlast)) (list (cons 62 1))))","prev":"NotLocked","now":"Write"}
+{"seq":34,"ts":"2026-10-10T05:53:47.4695251+11:00","mono":222221956147,"ev":"LockModeChanged","idle":2053,"cmd":"REDRAW","prev":"NotLocked","now":"NotLocked"}
+{"seq":35,"ts":"2026-10-10T05:53:47.4726559+11:00","mono":222221959275,"ev":"CommandWillStart","idle":2053,"cmd":"REDRAW"}
+{"seq":36,"ts":"2026-10-10T05:53:47.4733854+11:00","mono":222221960004,"ev":"CommandEnded","idle":2053,"cmd":"REDRAW","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":37,"ts":"2026-10-10T05:53:47.4734009+11:00","mono":222221960017,"ev":"HookCounts","idle":2053,"appended":1,"modified":5,"erased":0,"openedForModify":5,"faults":0}
+{"seq":38,"ts":"2026-10-10T05:53:47.4734798+11:00","mono":222221960097,"ev":"LockModeChanged","idle":2053,"cmd":"#REDRAW","prev":"NotLocked","now":"NotLocked"}
+{"seq":39,"ts":"2026-10-10T05:54:10.1973387+11:00","mono":222244683648,"ev":"LockModeChanged","idle":3258,"cmd":"CD","prev":"Write","now":"NotLocked"}
+{"seq":40,"ts":"2026-10-10T05:54:10.2001049+11:00","mono":222244686411,"ev":"CommandWillStart","idle":3258,"cmd":"CD"}
+{"seq":41,"ts":"2026-10-10T05:54:10.2038060+11:00","mono":222244690112,"ev":"ObjectOpenedForModify","idle":3258,"handle":"104331","class":"Xrecord","layerId":""}
+{"seq":42,"ts":"2026-10-10T05:54:10.2038791+11:00","mono":222244690182,"ev":"ObjectModified","idle":3258,"handle":"104330","class":"DBDictionary","layerId":""}
+{"seq":43,"ts":"2026-10-10T05:54:10.2038931+11:00","mono":222244690196,"ev":"ObjectModified","idle":3258,"handle":"104331","class":"Xrecord","layerId":""}
+{"seq":44,"ts":"2026-10-10T05:54:10.2144602+11:00","mono":222244700768,"ev":"SysVarChanged","idle":3258,"name":"OSMODE","changed":true}
