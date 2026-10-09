@@ -1,0 +1,47 @@
+{"seq":1,"ts":"2026-10-10T04:34:03.1050490+11:00","mono":217437657733,"ev":"DocumentAttached","doc":"CLD15_S1.dwg"}
+{"seq":2,"ts":"2026-10-10T04:34:03.3778337+11:00","mono":217437930476,"ev":"LockModeChanged","idle":5998,"cmd":"#DOCINIT","prev":"NotLocked","now":"Write"}
+{"seq":3,"ts":"2026-10-10T04:34:03.3863611+11:00","mono":217437939002,"ev":"LockModeChanged","idle":5998,"cmd":"(load \"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2027\\\\Express\\\\acetDelayLoad.fas\")","prev":"Write","now":"NotLocked"}
+{"seq":4,"ts":"2026-10-10T04:34:03.3871246+11:00","mono":217437939764,"ev":"LispWillStart","idle":5998,"first":"(load \"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2027\\\\Express\\\\acetDelayLoad.fas\")"}
+{"seq":5,"ts":"2026-10-10T04:34:03.4095109+11:00","mono":217437962153,"ev":"LockModeChanged","idle":5998,"cmd":"#(load \"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2027\\\\Express\\\\acetDelayLoad.fas\")","prev":"NotLocked","now":"Write"}
+{"seq":6,"ts":"2026-10-10T04:34:03.4095537+11:00","mono":217437962191,"ev":"LockModeChanged","idle":5998,"cmd":"\u0001s::startup-load","prev":"Write","now":"NotLocked"}
+{"seq":7,"ts":"2026-10-10T04:34:03.4099049+11:00","mono":217437962543,"ev":"LispWillStart","idle":5998,"first":"s::startup-load"}
+{"seq":8,"ts":"2026-10-10T04:34:03.4190597+11:00","mono":217437971701,"ev":"LockModeChanged","idle":5998,"cmd":"#\u0001s::startup-load","prev":"NotLocked","now":"Write"}
+{"seq":9,"ts":"2026-10-10T04:34:03.5629595+11:00","mono":217438115601,"ev":"LockModeChanged","idle":5998,"cmd":"\u0001s::startup","prev":"Write","now":"NotLocked"}
+{"seq":10,"ts":"2026-10-10T04:34:03.5633951+11:00","mono":217438116031,"ev":"LispWillStart","idle":5998,"first":"s::startup"}
+{"seq":11,"ts":"2026-10-10T04:34:03.5660633+11:00","mono":217438118701,"ev":"LockModeChanged","idle":5998,"cmd":"#\u0001s::startup","prev":"NotLocked","now":"Write"}
+{"seq":12,"ts":"2026-10-10T04:34:03.8214542+11:00","mono":217438374091,"ev":"LockModeChanged","idle":5999,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":13,"ts":"2026-10-10T04:34:03.8240470+11:00","mono":217438376681,"ev":"SysVarChanged","idle":5999,"name":"NOMUTT","changed":true}
+{"seq":14,"ts":"2026-10-10T04:34:03.8356165+11:00","mono":217438388254,"ev":"SysVarChanged","idle":5999,"name":"NOMUTT","changed":true}
+{"seq":15,"ts":"2026-10-10T04:34:03.8465455+11:00","mono":217438399180,"ev":"LockModeChanged","idle":5999,"cmd":"#","prev":"NotLocked","now":"Write"}
+{"seq":16,"ts":"2026-10-10T04:34:03.8476597+11:00","mono":217438400293,"ev":"LockModeChanged","idle":5999,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":17,"ts":"2026-10-10T04:34:03.8478493+11:00","mono":217438400481,"ev":"LockModeChanged","idle":5999,"cmd":"#","prev":"NotLocked","now":"Write"}
+{"seq":18,"ts":"2026-10-10T04:34:04.9171729+11:00","mono":217439469793,"ev":"LockModeChanged","idle":6082,"cmd":"CIRCLE","prev":"Write","now":"NotLocked"}
+{"seq":19,"ts":"2026-10-10T04:34:04.9202313+11:00","mono":217439472851,"ev":"CommandWillStart","idle":6082,"cmd":"CIRCLE"}
+{"seq":20,"ts":"2026-10-10T04:34:04.9240236+11:00","mono":217439476643,"ev":"CommandEnded","idle":6082,"cmd":"CIRCLE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":21,"ts":"2026-10-10T04:34:04.9242522+11:00","mono":217439476869,"ev":"LockModeChanged","idle":6082,"cmd":"#CIRCLE","prev":"NotLocked","now":"Write"}
+{"seq":22,"ts":"2026-10-10T04:34:06.6904736+11:00","mono":217441243071,"ev":"LockModeChanged","idle":6224,"cmd":"U","prev":"Write","now":"NotLocked"}
+{"seq":23,"ts":"2026-10-10T04:34:06.6936619+11:00","mono":217441246256,"ev":"CommandWillStart","idle":6224,"cmd":"U"}
+{"seq":24,"ts":"2026-10-10T04:34:06.6938911+11:00","mono":217441246483,"ev":"SysVarChanged","idle":6224,"name":"CIRCLERAD","changed":true}
+{"seq":25,"ts":"2026-10-10T04:34:06.6986029+11:00","mono":217441251196,"ev":"CommandEnded","idle":6224,"cmd":"U","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":26,"ts":"2026-10-10T04:34:06.6988701+11:00","mono":217441251462,"ev":"LockModeChanged","idle":6224,"cmd":"#U","prev":"NotLocked","now":"Write"}
+{"seq":27,"ts":"2026-10-10T04:34:27.1948507+11:00","mono":217461747167,"ev":"LockModeChanged","idle":7455,"cmd":"REDO","prev":"Write","now":"NotLocked"}
+{"seq":28,"ts":"2026-10-10T04:34:27.2003829+11:00","mono":217461752698,"ev":"CommandWillStart","idle":7455,"cmd":"REDO"}
+{"seq":29,"ts":"2026-10-10T04:34:27.2023136+11:00","mono":217461754626,"ev":"SysVarChanged","idle":7455,"name":"CIRCLERAD","changed":true}
+{"seq":30,"ts":"2026-10-10T04:34:27.2088241+11:00","mono":217461761137,"ev":"CommandEnded","idle":7455,"cmd":"REDO","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":31,"ts":"2026-10-10T04:34:27.2094614+11:00","mono":217461761772,"ev":"LockModeChanged","idle":7455,"cmd":"#REDO","prev":"NotLocked","now":"Write"}
+{"seq":32,"ts":"2026-10-10T04:35:07.2092742+11:00","mono":217501761037,"ev":"LockModeChanged","idle":9671,"cmd":"CIRCLE","prev":"Write","now":"NotLocked"}
+{"seq":33,"ts":"2026-10-10T04:35:07.2127323+11:00","mono":217501764494,"ev":"CommandWillStart","idle":9671,"cmd":"CIRCLE"}
+{"seq":34,"ts":"2026-10-10T04:35:07.2175197+11:00","mono":217501769278,"ev":"CommandEnded","idle":9671,"cmd":"CIRCLE","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":35,"ts":"2026-10-10T04:35:07.2176353+11:00","mono":217501769392,"ev":"LockModeChanged","idle":9671,"cmd":"#CIRCLE","prev":"NotLocked","now":"Write"}
+{"seq":36,"ts":"2026-10-10T04:35:08.9091233+11:00","mono":217503460864,"ev":"LockModeChanged","idle":9801,"cmd":"U","prev":"Write","now":"NotLocked"}
+{"seq":37,"ts":"2026-10-10T04:35:08.9121346+11:00","mono":217503463875,"ev":"CommandWillStart","idle":9801,"cmd":"U"}
+{"seq":38,"ts":"2026-10-10T04:35:08.9125528+11:00","mono":217503464287,"ev":"SysVarChanged","idle":9801,"name":"CIRCLERAD","changed":true}
+{"seq":39,"ts":"2026-10-10T04:35:08.9166746+11:00","mono":217503468410,"ev":"CommandEnded","idle":9801,"cmd":"U","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":40,"ts":"2026-10-10T04:35:08.9168994+11:00","mono":217503468633,"ev":"LockModeChanged","idle":9801,"cmd":"#U","prev":"NotLocked","now":"Write"}
+{"seq":41,"ts":"2026-10-10T04:35:29.3602758+11:00","mono":217523911736,"ev":"LockModeChanged","idle":11154,"cmd":"REDO","prev":"Write","now":"NotLocked"}
+{"seq":42,"ts":"2026-10-10T04:35:29.3642969+11:00","mono":217523915761,"ev":"CommandWillStart","idle":11154,"cmd":"REDO"}
+{"seq":43,"ts":"2026-10-10T04:35:29.3657022+11:00","mono":217523917155,"ev":"SysVarChanged","idle":11154,"name":"CIRCLERAD","changed":true}
+{"seq":44,"ts":"2026-10-10T04:35:29.3719915+11:00","mono":217523923445,"ev":"CommandEnded","idle":11154,"cmd":"REDO","UNDOCTL":"53","UNDOMARKS":"0","DBMOD":"1"}
+{"seq":45,"ts":"2026-10-10T04:35:29.3722249+11:00","mono":217523923677,"ev":"LockModeChanged","idle":11154,"cmd":"#REDO","prev":"NotLocked","now":"Write"}
+{"seq":46,"ts":"2026-10-10T04:35:50.2435169+11:00","mono":217544794685,"ev":"LockModeChanged","idle":13242,"cmd":"","prev":"Write","now":"NotLocked"}
+{"seq":47,"ts":"2026-10-10T04:35:50.2629068+11:00","mono":217544814074,"ev":"DocumentClosing"}
