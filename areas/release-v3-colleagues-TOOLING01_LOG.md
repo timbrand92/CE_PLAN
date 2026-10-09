@@ -48,3 +48,41 @@ Headless Sonnet run started Sat 10 Oct 2026 about 00:35 PC clock. Authority: Tim
 4. **Master is stale** (memory note): I branched all three PRs from `origin/master` (`650c0c19`) as told; the witness and ui-contract folders are standalone and merge cleanly onto any train. The `criteriaTable` dispatch edit and the window tests touch files that the release trains may also have changed, so rebase risk is there.
 5. **Not done, not authorised:** Autodesk cloud runner, second PC or VM.
 6. **Left in place:** `C:\ce_rc_scratch\witness_bin` (DLL plus pinned hash for the pilot) and `C:\ce_rc_scratch\golden_proof`.
+
+---
+
+# RUN 2 (Sat 10 Oct 2026, started about 01:00 PC clock, headless Sonnet)
+
+Authority as run 1. Brief: do the Opus review fixes first (entries 934 to 939 of the review lane log, and `C:\Lisp Files\_ACAD_DRIVER\REVIEW_witness_load_2026-10-10.md`), RED test first, on the existing branches (no new PRs). AutoCAD was NOT run. Reviewed only: not tested in AutoCAD, not installed, not Tim-accepted.
+
+## A. Driver copy `acad_driver_witness.ps1` + patch: all six driver fixes DONE (needs Opus to confirm)
+
+`acad_driver.ps1` is UNCHANGED (SHA256 c9ba503d...89ee; reverse-applying the new patch to the copy gives it back byte for byte). Offline tests `tests\Test-WitnessLoad.ps1`: new checks written first (many failed), then **82 of 82 pass** (was 49).
+
+1. **HIGH, pin in the driver:** `$script:WitnessPinnedSha256` is a constant in the driver. The `.sha256` file next to the DLL is optional and only a cross-check (if it disagrees, refused). Test: DLL and `.sha256` both swapped (they agree with each other) is refused.
+2. **MEDIUM, TOCTOU:** the DLL is opened once with share = Read only, hashed from that handle, and the handle is held until the load finishes, times out or is refused (a `finally`). Tests: while held, write, rename and delete of the DLL and rename of its parent folder all fail; a plain read-only open (what AutoCAD does) still works; the handle is released after.
+3. **MEDIUM, folder contents:** exactly the DLL and optionally its `.sha256`; any other file (`.deps.json`, `.exe`, `.config`, `.txt`, a second DLL) or any sub-folder is refused, and a junction or link on the folder path (the folder or any parent) is refused. Tests include real junctions.
+4. **MEDIUM, prompt titles:** exactly `*Security*`, `*Unsigned*`, `*File Loading*`, Esc only. `windows_seen` is still recorded.
+5. **LOW, rejected send:** `Assert-WitnessSendAccepted` throws BUSY ("nothing was sent") straight after the send for `rejected`, `error*` or `unavailable`: no wait, no ^C^C, no alarm. Tested as a function and as the order inside the load block.
+6. **LOW, second load:** the recorder now writes the acad process id in its `WitnessLoaded` line; `Get-WitnessAlreadyLoaded` refuses with "already loaded in this AutoCAD" when a session file names a running acad.exe and was created after that process started (so a reused id does not count). Checked before AutoCAD is touched.
+- **Files:** copy `_ACAD_DRIVER\acad_driver_witness.ps1`; patch `PATCH_witness_load_2026-10-10.diff` (regenerated, 254 lines); README section "Witness load" rewritten.
+- **Pin now:** `AD8A22D32B3A9E25321B5F3FD8B19AB0F9FD60CC067D3E90B2CA22977B43ED25` = the DLL built from PR #977 head 42b02c79. Staged in `C:\ce_rc_scratch\witness_bin` with a matching `.sha256`; `witness check` reads it as ok_to_load. Any rebuild means a one-line reviewed edit of the constant (that is the point).
+- **Unknown, for the pilot:** whether AutoCAD can open the DLL for its own load while the driver holds it with share = Read. A normal read-only open works in the test; AutoCAD's load mode is unverified. The pilot asks.
+
+## B. #977 witness recorder: DONE (branch `claude/tooling01-witness-recorder`, head 42b02c79, PR comment follows)
+
+1. **MEDIUM, no session fallbacks:** lock and system-variable lines now go ONLY to the active recorded drawing's own log; no `?? _session`. DocumentSkipped writes no file name.
+2. **MEDIUM, cut-short U:** the reader exits 2 ("the log ends after a U with no REDO following it") when a wait is still open at the end; a real failure earlier still wins (exit 1, noting the cut-short walk). RED fixtures `u_no_redo_at_end`, `u_only`, `fail_then_u_no_redo` were written first (2 of 3 failed), then the reader fixed.
+3. **LOW, line cap:** each log holds at most 200,000 lines, then one `LogCapReached` line. Behaviour test by reflection on the real DLL (`tests\Test-WitnessLogClass.ps1`): a cap of 5 gives 5 lines plus the cap line. (This test was written after the code, not strictly red first.)
+4. **LOW, re-check after SAVEAS:** the test-copy rule is judged again at every command start and end; a drawing moved out of a test folder writes one `RecordingStopped` line (no name) and is detached. The rule itself is tested on the DLL (SAVEAS to a project folder = not recorded). The wiring (that the handler calls it) is source-checked only; it cannot be run without AutoCAD.
+- **Tests:** reader 27 of 27 (was 19); log class 11 of 11. DLL rebuilt (0 warnings, 0 errors).
+- **Pilot note taken:** a lock line with no command name between U and REDO fails the walk even when the driver's own COM calls caused it; the calibration pair shows whether that happens.
+
+## C. #978 what got drawn: DONE (branch `claude/tooling01-what-got-drawn`, head 1d6a05e6)
+
+- `ReflectedStep.Require` (new, `Tests\CE.TestHarness.Runner`) throws a clear message when `AnchorAtTopLeft`, `ExplodeAndPopulate` (and now `LoadBlockDefinition`) is not found; the criteria-table step uses it. 3 tests written first (the project did not compile without the helper = RED), then **18 of 18 pass** in `CE.TestHarness.AssertionTests` (was 15). `CE.TestHarness` builds, 0 errors. The end-to-end TH-01 run is still not done (needs AutoCAD closed to run, and the PC).
+
+## Pilot files updated (`C:\Lisp Files\_ACAD_DRIVER\journeys\witness_pilot.json` and `.md`)
+
+- Driver note now says: use the copy only after Opus confirms the fixes; the pin is a driver constant; `witness load` works once per AutoCAD session (quit to run again); reader exit code 2 is a finding; a new question about the DLL hold. The reader is now a stable copy in `C:\ce_rc_scratch\witness_reader` (so the pilot does not depend on which branch a worktree is on). `journey validate` accepts the file.
+- **Ready to launch once the desk has Opus confirm the driver fixes.** Nothing else blocks it except a free PC (and Tim's word on the driver copy).
