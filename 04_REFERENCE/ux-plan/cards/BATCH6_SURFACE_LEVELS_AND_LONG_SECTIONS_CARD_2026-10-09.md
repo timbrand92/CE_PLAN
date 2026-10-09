@@ -11,7 +11,7 @@ drafter sees, nothing retired, no old command removed, locked layers / Xref / RE
 `TIM_BATCH_QUESTIONS_8_9_2026-10-09.md` (questions 1 to 8) replaces a recommended default in a follow-up. **Engineering values are not
 covered:** the minimum clearance to a crossing service is Tim's number (question 8); until he types it CE says "clearance not set, not
 checked" and never invents one (R-00, RULES 12).
-Written by design lane run 9 (headless, Opus), Fri 9 Oct 2026 about 16:20 Melbourne (PC clock). Read-only on plugin code. Code lines are
+Written by design lane run 9 (headless, Opus), Fri 9 Oct 2026 about 16:10 Melbourne (PC clock). Read-only on plugin code. Code lines are
 not proof of what installed Civil 3.0.41 does on screen.
 **Numbering:** this is **Batch 6** in `REVIEW_BATCHES_2026-10-09.md`; the question file calls it "card 8".
 

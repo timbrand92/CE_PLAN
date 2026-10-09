@@ -12,7 +12,7 @@ questions with Tim's 5 Oct answers, orders everything roof down, and gives every
 DRAFT PRs, tests red first, every new behaviour behind a Settings value and OFF, nothing retired, no old command removed, locked layers /
 Xref / REFEDIT protection unchanged. Tim's answer by number in `TIM_BATCH_QUESTIONS_8_9_2026-10-09.md` (questions 9 to 15) replaces a
 recommended default in a follow-up.
-Written by design lane run 9 (headless, Opus), Fri 9 Oct 2026 about 16:35 Melbourne (PC clock). Read-only on plugin code. Code lines are
+Written by design lane run 9 (headless, Opus), Fri 9 Oct 2026 about 16:13 Melbourne (PC clock). Read-only on plugin code. Code lines are
 not proof of what installed Structural 1.0.110 does on screen.
 **Numbering:** this is **Batch 15** in `REVIEW_BATCHES_2026-10-09.md` ("QA against the engineer's markup"); the question file calls it
 "card 9". The next Structural batch after it is Batch 16 (detail library and tags).
