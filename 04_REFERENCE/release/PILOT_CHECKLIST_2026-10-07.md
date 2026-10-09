@@ -7,6 +7,9 @@ First written Wed 7 Oct 2026, Melbourne time. Corrected Thu 8 Oct 2026 against t
 **A ruling is not a fix, and nothing is accepted.** Each ruled change is marked "Tim has ruled; not built yet" where that is true. Tim has accepted nothing in these releases.
 Sources: the Opus train reports C-19 to C-24 and S-19 to S-25, Codex runs W10c to W36, release queue items 196 to 224, BUG-425 to BUG-445 in `BUG_CARPARK.md`, Tim's rulings INT-066 to INT-072, and the release ladder in V3_OVERALL_PLAN.md.
 
+
+**Before any colleague uses CE (read this first):** NO COLLEAGUE INSTALL, PILOT OR CESUPPORT HAND-OUT BEFORE STRUCTURAL 1.0.113 IS INSTALLED (desk condition, 9 Oct): 1.0.113 is the first Structural build with the markup upload fix (BUG-549, PR #949), and until then a PC that has an OpenAI key set could send a whole markup PDF off the PC. AND NEVER set OPENAI_API_KEY as a Windows environment variable on any PC that runs CE (Tim's PC has none, so nothing leaves it today). Do not hand a CESUPPORT zip to a colleague, and do not start a pilot, until that is true.
+
 ---
 
 ## 1. ANSWER FIRST
