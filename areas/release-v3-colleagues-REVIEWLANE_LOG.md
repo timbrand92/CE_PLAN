@@ -1744,3 +1744,43 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - Not checked: no build, test, AutoCAD or accoreconsole run, and no fresh trial merge.
    - Not proven on a real PC: the real AppData folders, the office IT folder, or the timing on a busy PC.
    - Usage: unknown (headless).
+906. **Fri 09 Oct 23:15** — TEAM REVIEW run 11 (Opus claude-opus-5-5, read only, no sub-agents). Scope: every open PR whose current head had no real OPUS REVIEW comment. That is 26 heads: build/02 runs 126 and 127 (#955 #956 #957 #964 #966 #973), build/03 run 80 (#958 #959 #963 #969 #972 #974), build/04 run 62 (#910 #948 #960 #961 #962 #965 #967 #968 #970 #971), the restacks #952 and #953, and the new follow-up heads #949 and #850. Totals: 20 MERGE, 6 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+   - The PR comments went up at 23:03-23:04 and 23:13 (real clock). The stamps inside them (23:09 and 23:16) were written a few minutes ahead of the clock.
+   - All 567 open PRs were scanned, not only the newest 300. Below #788, only #516, #537, #538, #540 and #548 lack a header-format comment, and each already has an Opus review at its current head in the older format (C-7/C-8 era). Nothing to do there.
+907. **#948 @ 05c07578 MERGE-WITH-FIXES, 1 HIGH.** The follow-up put the status layers into LayerService.IsCeLayer whatever the switch says. So with the switch OFF, a plain polyline on STORMWATER DEMOLISH counts as a CE pipe for CDREPAIR's pipe finder and orphan register, the Inspector and the breakline. Fix: take the status layers out of IsCeLayer. Accept them only for objects already proven to be CE (pipe object or record). Add a RED test that a plain polyline on STORMWATER DEMOLISH is not a pipe candidate. LOW: tag CE's TO BE REMOVED text before the erase step is hooked up.
+908. **#960 @ f899b0ac MERGE (OFF, not called).** Merge only after #948's fix, because it is stacked on it. Before hook-up: do not pre-tick a pit that sits on a status layer.
+909. **#910 @ 608f48e5 MERGE.** Both spoon pickers use the shared CE layer reader.
+910. **#972 @ c0dc4996 MERGE-WITH-FIXES, 1 MEDIUM.** Once CDASSUMEDLEVELS is set, the New Pit window offers an assumed level in the "Survey RL" box with no switch in front of it. Fix: offer it only with `offerAssumedLevelsWhenNoSurvey` ON (OFF), plus a RED test. Clash with #962 at the top of PitCommand.cs: keep both.
+911. **#969 @ 4d0fe22b MERGE-WITH-FIXES, 1 MEDIUM.** A slab with one unknown level still gives a level, from the known points only. Fix: skip any slab with an unknown control point, plus a RED test. LOW: take only P-prefixed SPOT LEVEL values as design.
+912. **#963 @ 602f5e02 MERGE.** Source word stored, null for old pits.
+913. **#959 @ dcfe5bdc MERGE.** 3 m reach; 0 = old behaviour; old call PINNED.
+914. **#958 @ a6d30fef MERGE-WITH-FIXES, 1 LOW.** "...will not be used until you confirm them": there is no way to confirm yet. Fix: "...will not be used. They are listed below."
+915. **#974 @ 32afc0ee MERGE (OFF).** Long section rows. OFF is today's layout to the bit. INVERT DEPTH is never 0.
+916. **#970 @ ee2d9e4d MERGE-WITH-FIXES, 1 MEDIUM.** The bare-SPS-to-SPS1 rename still uses the 250 constant. Fix: GetSpsLabelHeight("SPS1"). Take #967 first.
+917. **#971 @ 46c07930 MERGE-WITH-FIXES, 1 LOW.** "Pick a pit." is printed after the command has already ended, in four places. Fix: "That is not a pit. Nothing was changed." there.
+918. **#968 @ 67b63a74 MERGE.** One rule for Save, the preview and the cover corner.
+919. **#967 @ cbe41302 MERGE.** Next free SPS number.
+920. **#965 @ dc4f3772 MERGE.** CDCHECK clears only its own jump selection.
+921. **#962 @ d3250e90 MERGE.** Esc ends PIT and PITEDIT at the reopen prompt.
+922. **#961 @ adff5b45 MERGE.** A level pipe gets the flat warning, not the uphill box.
+923. **#955 @ 837a6519 MERGE (PRIVACY).** Structural machine and usage reports code the drawing name. This closes entry 899's Structural HIGH.
+924. **#956 @ bdb2c3d0 MERGE.** AB/BB units hold; layout line before the units line. That AB misdraws in a metre drawing is not proven, but it follows the R1/BT1 pattern.
+925. **#957 @ e71c96b1 MERGE (OFF, hidden).** CEMARKUPCHECK. LOWs: AllowSpaces on the level prompt, drop SLAB from the footing words, and the package is not per drawing.
+926. **#964 @ 6d60c238 MERGE.** Supports sizes are Settings values. LOW: MarkupAI still hard-codes 89 SHS.
+927. **#966 @ ee1fdecd MERGE.** Publish Issue stamps only the sheets in the issue (protection ON).
+928. **#973 @ 9508e3f0 MERGE.** Test only. The removed baseline lines come back with (xN) counts. The Sheets Update finding is a proposal.
+929. **#952 @ d3ab0ed0 and #953 @ 4faf3725 MERGE.** These are merges of #951 c5e5b9f0 only (remerge-diff clean, same code delta).
+930. **#949 @ b5dafba6 MERGE.** A new PC no longer downloads Python packages; Hand mode says what to do instead.
+931. **#850 @ e8e775ea MERGE (OFF, not hooked up).** Mirrored and Aligned/Fit/baseline-left text are left alone.
+932. **Fri 09 Oct 23:15** — **Corrected lists (plain MERGE, merge order).** Nothing here is in any rel-* branch on origin yet (checked).
+   - **C-34 (Civil/Manager):** #836 ab7bccad; #838 63d025d5; #840 f527b9c5; #841 9085c855; #858 bdf921c1; #839 b8eea610; #849 86fc6c44; #850 **e8e775ea**; #892 2b692f3c; #931 f46ca782; #910 **608f48e5**; #926 26775280; #928 9dd4f8e4; #936 c5190ad1; #947 c88d3bdb; #954 78bea5b5; #941 50213ba6; #944 10492156; #945 42c1bae2. **OUT: #948** (HIGH, entry 907). #954 still ships only with #941 and #944.
+   - **C-35 (Civil):** #711 03df7389 (clash steps of entry 874); #950 38068fbb; #951 c5e5b9f0; #952 **d3ab0ed0**; #953 **4faf3725**. #952 and #953 now contain c5e5b9f0, so the REGRESSION_LOG clash of entry 896 is gone.
+   - **S-35 (Structural):** #949 **b5dafba6**; #719 51613b0a; #739 af6098e8.
+   - **C-36 (Civil, new, on C-35):** #959 dcfe5bdc; #963 602f5e02 (stacked on #959); #961 adff5b45; #962 d3250e90; #965 dc4f3772; #967 cbe41302; #968 67b63a74; #974 32afc0ee. Trial chain on rel-20261009l: REGRESSION_LOG top only.
+   - **C-36 OUT until fixed:** #958, #969 (then #972 stacked on it), #970 (after #967), #971, and #960 (after #948's fix).
+   - **S-36 (Structural, new, on S-35):** #955 837a6519; #956 bdb2c3d0; #957 e71c96b1; #964 6d60c238; #966 ee1fdecd; #973 9508e3f0. Trial chain on rel-20261009n after #949 b5dafba6: REGRESSION_LOG top only.
+933. **Fri 09 Oct 23:15** — TEAM REVIEW run 11 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run (the driver tester has AutoCAD until 23:45).
+   - Not trial-merged: C-36 and S-36 against the full C-31 to C-35 and S-32 to S-35 chains, only against their base lines.
+   - Not proven on a real PC: any of the drawing writes (SPS label move, Esc paths, survey skip, sheets stamp, long section rows).
+   - Usage: unknown (headless).
