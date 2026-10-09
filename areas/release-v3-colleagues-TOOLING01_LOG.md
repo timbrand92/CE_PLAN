@@ -25,4 +25,26 @@ Headless Sonnet run started Sat 10 Oct 2026 about 00:35 PC clock. Authority: Tim
 1. The Autodesk cloud runner and a second PC or VM (Tim's decision, not authorised).
 2. Any run in AutoCAD (Codex and the Claude tester own those windows).
 
-(items 4 and 5 follow below when done)
+
+4. **Item 4, "what got drawn": BUILT and UNIT-TESTED. The end-to-end AutoCAD run was NOT done: SKIPPED (an acad.exe was running, and the harness refuses to start then).**
+   - **Draft PR:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/978 (branch `claude/tooling01-what-got-drawn`). Needs Opus review.
+   - **What:** new harness step `criteriaTable` (in the test-only partial class; places the CDCALC criteria table at a fixed point with CE's own steps, the same calls as the headless proof) and a `criteriaTable` assertion in `DwgAssertionRunner` that reads the SAVED drawing with ACadSharp 3.4.29: top-left corner at the pick (0.5 mm), row count 6, and VOLUME REQUIRED reads NOT SET. Scenario `TH01_CDCALC_Criteria_NotSet.scenario.json`. `PdfTextCompare` (PdfPig 0.1.9) for sheet text; no golden PDFs yet.
+   - **Tests:** 15 of 15 pass, in a NEW project `Tests\CE.TestHarness.AssertionTests`. The assertion tests failed first (6 of 7), the PDF tests were written together with the helper (not strictly red-first). Why a new project: `CE.TestHarness.Tests` does NOT build on master (a Manager window file `SettingsWorkspacePage.xaml.cs` has a missing reference, error CS0234, unrelated to this work). I did not fix that.
+   - **Built:** `CE.TestHarness` (net10.0-windows only; net48 and net8 lanes not built here). To build it in the worktree I copied an existing `CE_TRANSFORM_2027.arx` into the gitignored `bin` folder the Civil project expects, because the native build output was missing. That copy is not committed.
+   - **Not proved:** that the real placed table reads back the way the synthetic one does (text alignment points, outline extents). The first real run will show it. The criteria block master must be findable next to the staged Civil DLL or the step fails with a clear message.
+5. **Item 5, window pictures and ribbon: BUILT and UNIT-TESTED off screen. Not AutoCAD-tested.**
+   - **Draft PR:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/979 (branch `claude/tooling01-window-pictures`). Needs Opus review.
+   - **Pictures:** Edit Pit and Edit Pipe, light and dark, 1712 x 889 at 96 DPI, made-up values; per-colour tolerance 6 of 255, fail above 0.01 percent of pixels. The four pictures are in `Modules\Drainage.Tests\Dialogs\WindowGoldens\candidates\` as **UNAPPROVED candidates**. `approved\` is empty, so the four compare-with-approved tests are INCONCLUSIVE (skipped) by design, never green. Only Tim or a Codex-accepted pass moves one across.
+   - **Proof the compare fails when it should:** compare tests written first (6 of 6 failed), then 10 passed: two draws of each window are identical (4); one label made longer in a throwaway copy of the live window is caught for all four windows, with a red difference picture (4); the compare on made-up pictures (6). A sample difference picture: `C:\ce_rc_scratch\golden_proof\editpit-light-longer-label-DIFFERENCE.png`. I looked at the candidate and the difference picture: the Pit window shows "No preview for this pit" off screen (the real preview needs AutoCAD).
+   - **How the proof was done:** "change one label length in a throwaway copy" was done on the live in-memory window inside the test, not by editing a XAML file; nothing was written to any source file.
+   - **Test host needs the AutoCAD 2027 folder on PATH** (the Autodesk assemblies' native parts), otherwise NUnit says "failed to load". Written in the WindowGoldens README.
+   - **Ribbon:** `tools\ui-contract`: expected CE tabs from the plan (today: CE, CE STRUC, CE Tools; V3 target: one CE tab, not built) and a comparer, 8 of 8 checks against the real tab strip read on 3 Oct. **A claim in the research note is wrong:** it says a driver `ui tree "Autodesk AutoCAD 2027"` can read the CE tabs. The driver refuses the AutoCAD main window (`Autodesk AutoCAD*` is on its UiWindowDeny list), and the 3 Oct ribbon files came from a one-off supervised probe. A read-only `ui ribbon` call would need Tim's approval and an Opus review. I did not build it.
+
+## Skipped, and things that need Tim or Opus
+
+1. **Opus review needed:** PRs #977, #978, #979 and the driver patch `PATCH_witness_load_2026-10-10.diff` (watch `Invoke-WitnessSub`, TOCTOU on the DLL, the guessed trust-prompt titles).
+2. **Tim's decisions:** (a) does he accept the `witness load` allowance in the driver at all (it is the first NETLOAD the driver ever sends); (b) a read-only ribbon call for the driver; (c) whether the four window candidates may be approved from a Codex look at the real windows.
+3. **Pilot not run:** it needs AutoCAD, the Claude driver tester and a free PC. The desk launches it. Pilot files: `_ACAD_DRIVER\journeys\witness_pilot.json` and `.md`. The PC had an acad.exe running at the start of this run.
+4. **Master is stale** (memory note): I branched all three PRs from `origin/master` (`650c0c19`) as told; the witness and ui-contract folders are standalone and merge cleanly onto any train. The `criteriaTable` dispatch edit and the window tests touch files that the release trains may also have changed, so rebase risk is there.
+5. **Not done, not authorised:** Autodesk cloud runner, second PC or VM.
+6. **Left in place:** `C:\ce_rc_scratch\witness_bin` (DLL plus pinned hash for the pilot) and `C:\ce_rc_scratch\golden_proof`.
