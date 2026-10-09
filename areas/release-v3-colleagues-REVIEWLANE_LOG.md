@@ -1646,3 +1646,37 @@ Only writer: review lane 01 (queue section 0B). Read-only Opus reviews of Struct
    - Not checked: no build, test, AutoCAD or accoreconsole run.
    - Not proven on a real PC: the CE Cloud route, or the start-up order of the plugins' folder on a colleague PC.
    - Usage: unknown (headless).
+885. **Fri 09 Oct 18:05** — TEAM REVIEW run 7 (Opus claude-opus-5-5, read only, no sub-agents). Scope: the build/03 run 76 fix heads, #950, #951, #952 (optional test), #953 (restack) and #954. No other open PR has a head newer than its OPUS REVIEW.
+   - Totals: 4 MERGE, 1 MERGE-WITH-FIXES, 0 DO-NOT-MERGE.
+886. **Fri 09 Oct 18:05** — **#950 @ 38068fbb MERGE.** The MEDIUM of entry 875 is closed.
+   - A page that fails is named in one line: "Page 2 of 3 could not be read, so any schedule rows on it are missing. Check the schedule against the PDF." The line is shown once.
+   - The tests are behavioural (fake sender: one failed page, two failed pages, no failed page).
+887. **Fri 09 Oct 18:05** — **#951 @ 75a52a4b MERGE.** The fix of entry 876 is closed (Tim: "Don't send; say so (Recommended)", rulings line 772).
+   - On a layout tab, or when TILEMODE cannot be read, there is no capture and no request, and the user is told so.
+   - Checked: the CDASK chat does not register get_markup_image, so this is the only live screen route.
+   - LOW for later: the tests check only the yes/no decision. Add two tests through TileModeReaderForTests (returns 0, and throws) that call CaptureUnlessLayoutTab.
+888. **Fri 09 Oct 18:05** — **#952 @ e19ac7a4 MERGE.** The optional X-Civil test is added: with only the direct key, it stops at the credential check before the file is read. The merge combined only REGRESSION_LOG.
+889. **Fri 09 Oct 18:05** — **#953 @ 488c3767 MERGE.** Restack merges only (REGRESSION_LOG). The code is the same as 4143861b (entry 881).
+890. **Fri 09 Oct 18:05** — **#954 @ c4229aa0 MERGE-WITH-FIXES (1 MEDIUM, privacy).**
+   - Correct with the switch OFF.
+   - Done: real-named machine files are deleted, failures older than the first-ON time are deleted, the clash steps of entry 882 are followed, and the tests are behavioural and isolated.
+   - Fix (I missed this in entry 882): the "older than first ON" rule must cover every file in the plugins' folder, not only failures\. Two more places hold old private text:
+      - usage\ records written before #944 carry the real drawing file name;
+      - the coded machine file written before #944 carries "Active drawing: <real name>".
+   - Add a test for a usage record and one for an old coded machine file.
+   - Notes:
+      - a. An unreadable time is overwritten with "now". That is safe, but the log wording says "send nothing".
+      - b. Change the PR base to b03/hunt-m10-m14-low-fixes, or merge it straight after #947.
+891. **Fri 09 Oct 18:05** — **Corrected C-35 (Civil/Manager, on C-34), plain MERGE, in merge order:**
+   1. #711 03df7389, with the clash steps and the Bug306 condition of entry 874.
+   2. #950 38068fbb.
+   3. #951 75a52a4b.
+   4. #952 e19ac7a4.
+   5. #953 488c3767.
+   - Items 2 to 5 are one stack, bottom-up. The clashes of entry 883 stand (UserSettings.cs base-only with #849/#850/#948).
+   - **C-35 OUT:** #954 (fix of entry 890). When fixed, it goes after #947 of C-34.
+   - S-35 is unchanged (entry 877).
+892. **Fri 09 Oct 18:05** — TEAM REVIEW run 7 ended. Reviewed only: not built, not tested, not installed, not Tim-accepted.
+   - Not checked: no build, test, AutoCAD or accoreconsole run, and no fresh trial merge of the C-35 tips.
+   - Not proven on a real PC: the TILEMODE read, the screen capture, or the start-up order of the plugins' folder.
+   - Usage: unknown (headless).
