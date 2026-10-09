@@ -471,7 +471,13 @@ the full AutoCAD window was not tested and may differ.
     not run); 2027 only adds `GC.KeepAlive` calls and the Database Equals/GetHashCode pair. A dictionary keyed
     by Database and fetching a disposed-then-reused id were measured safe in 2027 (tests G1, D7).
     Full write-up with the plugin audits: `04_REFERENCE\AUTOCAD_API_DECOMPILE_FINDINGS_2026-10-10.md`.
-17. Lookup helper: `bash C:\Tools\AcadDecomp\tools\acad-error.sh eLockViolation` (or a number) gives the
+17. **REDO (measured, core console, 10 Oct 06:25):** REDO survives only if nothing in between ends it. Killers
+    with NO command running: any `StartTransaction` (even read-only, aborted or empty), `SetCurrentView` (even the
+    same view; sets VIEWBACKSTATUS 0 to 1), `SetSystemVariable` (even the same value), any write, and any command
+    at all (even an empty one). Safe: `StartOpenCloseTransaction` reads, `Regen`, `UpdateScreen`,
+    `SetImpliedSelection`, `LockDocument`. So CE code on Idle, events and palettes must read with
+    `StartOpenCloseTransaction` only. Details: `areas\AUTOCAD_API_DECOMPILE_TESTING_ANSWERS_2026-10-10.md`.
+18. Lookup helper: `bash C:\Tools\AcadDecomp\tools\acad-error.sh eLockViolation` (or a number) gives the
     error's number and the ObjectARX functions documented to return it.
 
 ---

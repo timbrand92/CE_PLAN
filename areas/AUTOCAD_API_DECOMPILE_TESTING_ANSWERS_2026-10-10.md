@@ -93,13 +93,33 @@ vanilla keeps REDO.
    COM `ZoomExtents/ZoomWindow/ZoomCenter`, the ZOOM/PAN/VIEW commands. Whether each pushes the previous-view
    list is native; R2-2 measures the REDO side.
 
-## R2-2. Does a view change with no command kill REDO
+## R2-2. Does plugin code with NO command kill REDO? MEASURED (06:25 and 06:33, 16 runs)
 
-Measuring now in the core console with plugin code called from LISP (no command starts):
-`SetCurrentView` (same and different view), `Editor.Regen`, `UpdateScreen`, `SetImpliedSelection`,
-`LockDocument` Write and Read, read transaction, same-value write, `SetSystemVariable`. Queued behind the
-driver's AutoCAD lock (held until about 07:50); results will be appended here. Caveat: the core console has
-no graphics window, so a view change there may not behave like the full AutoCAD window.
+Method: CIRCLE, U, then plugin .NET code called from a LISP function (no command starts; CommandInProgress shows
+only the LISP call), then REDO. Core console (no graphics window). Evidence: `C:\Tools\AcadProbeuns61010-062510\`
+and `...-063316\`.
+
+**REDO KILLED ("Nothing to redo"):**
+1. `Editor.SetCurrentView(...)`, even with the SAME view. **VIEWBACKSTATUS went 0 to 1** (same view and a different
+   view): that is the signature your witness logged. A plugin view change kills REDO with no command line entry.
+2. **Any `TransactionManager.StartTransaction()`**: read-only + Commit, read-only + **Abort**, and even one that
+   opens nothing. VIEWBACKSTATUS stayed 0.
+3. A same-value write + Commit.
+4. `Application.SetSystemVariable` with the same value, both a drawing variable (CLAYER) and a registry one (OSMODE).
+
+**REDO KEPT ("Everything has been redone"):**
+`StartOpenCloseTransaction` read + Commit; `Editor.Regen()`; `Editor.UpdateScreen()`;
+`Editor.SetImpliedSelection(...)`; `LockDocument()` Write + dispose; `LockDocument(Read)` + dispose;
+`Editor.GetCurrentView()`; a do-nothing LISP function.
+
+**For the Cecil guard and for every CE Idle, event or palette path:** between a user's U and REDO, never call
+`StartTransaction` (use `StartOpenCloseTransaction` for reads), never `SetCurrentView`, never `SetSystemVariable`
+(even to the same value), never write, and never run a command. For BUG-558 the VIEWBACKSTATUS changes on each
+drawing point at a view change (SetCurrentView or AutoCAD's own view restore) on the Structural drawing itself.
+That is native or other code; in CE Civil nothing calls SetCurrentView on a switch by reading. The candidates are
+anything that runs on the Structural drawing when it becomes current again: Structural module handlers (not
+traced here), Civil code acting on `MdiActiveDocument` at Idle, or AutoCAD itself. Not tested: the full AutoCAD
+window, real document switches.
 
 ## R2-3. CE code that can run when the Civil drawing becomes current again (master 650c0c19)
 
