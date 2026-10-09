@@ -76,3 +76,64 @@ tested and may differ.
 NOT loaded, draw a circle, `U`, switch to another open drawing and back with Ctrl+Tab, then `REDO`. If that alone
 says "Nothing to redo", the lost REDO is AutoCAD's own behaviour and not a CE bug. Repeat with CE loaded only if
 vanilla keeps REDO.
+
+---
+
+# Round 2 (06:30 questions, BUG-558 with a CD pipe), answered 06:40
+
+## R2-1. What writes VIEWBACKSTATUS
+
+1. **Nothing in the managed layer.** No `.cs` file in the decompiled acdbmgd, acmgd, accoremgd, AcWindows or
+   AdWindows (2027) mentions VIEWBACKSTATUS, and the ObjectARX 2027 help has no page for it. It is set inside
+   native AutoCAD only. By its documented meaning (whether ZOOM Previous is available) it moves when the
+   previous-view list changes; what pushes that list on a drawing switch is native and NOT established here.
+2. The only managed call found that writes a view into AutoCAD's undo controller is
+   `Autodesk.AutoCAD.Internal.ViewUtil.GsLensLength` (setter → `acgsWriteViewToUndoController`). CE does not use it.
+3. Managed calls that change the current view: `Editor.SetCurrentView`, `Editor.UpdateTiledViewportsFromDatabase`,
+   COM `ZoomExtents/ZoomWindow/ZoomCenter`, the ZOOM/PAN/VIEW commands. Whether each pushes the previous-view
+   list is native; R2-2 measures the REDO side.
+
+## R2-2. Does a view change with no command kill REDO
+
+Measuring now in the core console with plugin code called from LISP (no command starts):
+`SetCurrentView` (same and different view), `Editor.Regen`, `UpdateScreen`, `SetImpliedSelection`,
+`LockDocument` Write and Read, read transaction, same-value write, `SetSystemVariable`. Queued behind the
+driver's AutoCAD lock (held until about 07:50); results will be appended here. Caveat: the core console has
+no graphics window, so a view change there may not behave like the full AutoCAD window.
+
+## R2-3. CE code that can run when the Civil drawing becomes current again (master 650c0c19)
+
+**Runs by itself on DocumentActivated (no click):**
+1. `LinkService.cs:1085` `OnDocumentActivated` → `RegisterDocument`: bounded init, reuses the cache, no view,
+   no lock found.
+2. `InspectorPaletteService.cs:428` → Idle once: `AttachToDocument`, `EvaluateAutoShow` (by drawing NAME, and
+   off when `WorkshopInspectorEnabled`, the default), `RefreshInspector`, `ScheduleContributorSync`. No zoom in
+   that path (zooms at `:913/:935/:2487/:2597` are button-driven).
+3. `PitBlockMigrationService.cs:~55` → Idle once → `LockDocument()` WRITE (`:104`), `Migrate`, maybe
+   `Editor.Regen` (`:110`). Once per database only (`_migratedDatabases`), so not on a repeat switch.
+4. `CompoundEditModeService.cs:103` → `AttachToDocument` only.
+5. `CivilHelpHost.cs:790` → `Attach` + `ContextChanged` (reads context; `ExecuteInCommandContextAsync` at
+   `:729` and `CommandAsync("MR")` at `:737` are help-button paths).
+6. `ThemeCommandRefreshService.cs:25`, `WorkspaceMenuInstallerService.cs:21` (menu install only when the
+   version or path changed), `CeContextualTabController` attach (`SetImpliedSelection` at `:278` is
+   selection-driven).
+7. `PipeObjectUpgradeOnOpenService.cs` Idle: only for a drawing still pending since DocumentCreated, so not
+   on a repeat switch.
+
+**Runs on Idle when something was left pending by the CD pipe (worth checking in the witness timing):**
+8. `LinkService.Reactors.cs` deferred work (`TryRebuildCachesDeferred`, `ApplyPendingLinkUpdates`): takes a
+   WRITE lock when callouts need registering (`:1769`). U1 says a Write lock outside a command is its own
+   nameless Undo step. It acts on its own (Civil) document.
+9. `CeZoomHighlightService` fade: `OnIdleFade` → `ClearHighlightNow` → `MdiActiveDocument.Editor.UpdateScreen()`
+   (`:312`). Note it uses whichever drawing is CURRENT when Idle fires, which may be the Structural one after
+   the switch. Only if a zoom-highlight was started (CEFIND, schedule row, Inspector "Connected pipe",
+   Design Check), not by CD itself.
+
+**View changes in CE (none automatic on a switch, by reading):** `CdCommand.cs:703` (CD AutoZoom, inside the
+CD command, before your U); `DrawingService.ApplyZoomWindowWorld` → `SetCurrentView` (`:717`) callers:
+CEFIND, Pit Schedule, Inspector buttons, Hub navigation, Project QA, Detention view-model; `GoBack` buttons.
+No `ZoomExtents`, `ViewportTableRecord` or `UpdateTiledViewports` use found in Drainage, Manager or Shared.
+
+**Read, not run. Not traced:** Structural module handlers (struc-d1-prep), and what native AutoCAD itself does
+on activation. Suggestion for the witness: log `doc.CommandInProgress` and `Application.DocumentManager.IsApplicationContext`
+with each VIEWBACKSTATUS line, plus Idle handlers entered (a counter per CE handler), to pin which one runs.
