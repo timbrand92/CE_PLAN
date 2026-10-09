@@ -226,3 +226,4 @@ One line per job: time (Melbourne), item, PR, state, usage.
 - Sat 10 Oct 09:26 Melbourne (PC clock): build/04 headless run 67 started. Job: BUILD_QUEUE_V3 section 3 in order. SONNET.
 - Sat 10 Oct 09:35 Melbourne (PC clock): run 67: DRAFT #1017 queue item 4 (Q12 leader-out engine, stacked on #1009, switch OFF, not wired, 8 tests pass). Next: item 6, 7, 8.
 - Sat 10 Oct 09:40 Melbourne (PC clock): run 67: DRAFT #1020 queue item 8 (CDCHECK status-bar progress + Esc, stacked on #1003, switch OFF, 30 tests pass, net48 0 errors; settings files unchanged around test runs). Next: item 6, 7.
+- Sat 10 Oct 09:46 Melbourne (PC clock): run 67: DRAFT #1022 queue item 9 (wrong-layer check reads CE pipes, pipe labels, level texts; stacked on #960; switch OFF; 22 tests, net48 0 errors; settings files unchanged). Next: item 10.
