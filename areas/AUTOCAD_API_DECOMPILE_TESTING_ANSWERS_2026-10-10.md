@@ -157,3 +157,47 @@ No `ZoomExtents`, `ViewportTableRecord` or `UpdateTiledViewports` use found in D
 **Read, not run. Not traced:** Structural module handlers (struc-d1-prep), and what native AutoCAD itself does
 on activation. Suggestion for the witness: log `doc.CommandInProgress` and `Application.DocumentManager.IsApplicationContext`
 with each VIEWBACKSTATUS line, plus Idle handlers entered (a counter per CE handler), to pin which one runs.
+
+---
+
+# Round 3 (21:20 question, BUG-558 on Civil 3.0.46 = `origin/claude/rel-20261009w` 2388c329), answered by reading
+
+## R3-1. What a PLACED pipe does that an opened-and-cancelled window does not
+
+1. **AutoZoom changes the Civil drawing's view.** `Settings.Options.AutoZoom` defaults to **true**
+   (`Models/UserSettings.cs:799`, copied into the CD window at `ViewModels/CdViewModel.Commands.cs:120`). After
+   placement `Commands/CdCommand.cs:765-769` calls `DrawingService.ZoomToPointsWithPadding` →
+   `ApplyZoomWindowWorld` (`Services/DrawingService.cs`) → `ed.SetCurrentView(view)`. Measured earlier:
+   `SetCurrentView` sets VIEWBACKSTATUS 0 → 1 (a ZOOM Previous now exists for that drawing). This happens inside
+   the CD command, before the user's U in Structural; it does not itself touch REDO.
+2. Inside the command too: `OsnapService.SetDrawingMode` / `Cleanup` (OSMODE, CLAYER via `SetSystemVariable`,
+   `CdCommand.cs:84/226/245/763`), the Design Warnings dialog (`CdCommand.cs:1020`, modal `ShowDialog`), the pipe,
+   text and arrow writes. All inside CD, all before the U.
+3. Left behind for later (survives to the next activation): `PendingCacheRebuildAndAttachments` + the Idle hook
+   (round 2 §6 in `BUG-558_REDO_SWEEP`), `PendingPipeAttachmentGripRefreshes` (`LinkService.PipeAttachmentGrip.cs:239/282`;
+   runs at Idle for that drawing even when it is not active, but reads through `StartOpenCloseTransaction`: safe),
+   and Automatic QA's 3 s timer. No overrule or reactor is added at the first pipe that is not already there.
+
+## R3-2. Why VIEWBACKSTATUS fires on BOTH drawings at the switch (inference, not proven)
+
+VIEWBACKSTATUS is a per-drawing (viewport) value. After AutoZoom the Civil drawing has 1 (previous view
+available); the Structural and control drawings have 0. AutoCAD raises `SystemVariableChanged` for per-drawing
+variables when the active drawing changes and the value differs, so the witness (which logs into the ACTIVE
+drawing's file) sees 0→1 entering Civil and 1→0 coming back. The cancelled-window and untouched controls were never
+zoomed, so the values match and nothing fires. **So VIEWBACKSTATUS is most likely a marker of "this drawing was
+zoomed by CD", not the thing that destroys REDO.** Not readable in managed code (no managed writer of VIEWBACKSTATUS
+exists, see R2-1); this is the reading that fits the data.
+
+**No CE code reacts to it:** the only `SystemVariableChanged` handlers on 3.0.46 (`CeManagerAppearanceService.cs:42`,
+`PluginManagerWindow.Help.cs:50`, `RibbonBuilder.cs:516`, Structural `ThemeManager.cs:309`) all return unless the
+variable is COLORTHEME.
+
+## R3-3. The split that settles it (for tester run 17)
+
+1. **CE ON, no pipe:** in the Civil copy type `ZOOM W` (or `ZOOM E`) only. Then Structural CIRCLE, U, switch to
+   Civil and back, REDO. Lost → the zoom history difference is the trigger, not the pipe.
+2. **CE OFF (vanilla, bundles parked as in run 8):** same as 1. Lost → AutoCAD's own behaviour when switching
+   between drawings with different ZOOM Previous history; CE's only lever is AutoZoom (turn it off or zoom
+   without SetCurrentView, e.g. leave the view alone). Kept → CE reacts to something at activation; then rerun 1
+   with the witness logging every CE Idle and DocumentActivated handler entered.
+3. **CE ON, pipe placed with AutoZoom OFF** (Settings, Auto zoom unticked). Kept → AutoZoom is the trigger.
