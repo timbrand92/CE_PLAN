@@ -37,5 +37,16 @@ while ($true) {
   $p.WaitForExit()
   $secs = ((Get-Date) - $t0).TotalSeconds
   Add-Content "$dir\lane_loop_$Lane.log" ("{0} run {1} ended after {2:N0} s" -f (Get-Date -Format 'ddd HH:mm'), $m, $secs)
-  if ($secs -lt 120) { Start-Sleep -Seconds 900 } else { Start-Sleep -Seconds 30 }   # instant failure (limit/error): back off 15 min
+  $tail = if (Test-Path $log) { Get-Content $log -Tail 5 -ErrorAction SilentlyContinue | Out-String } else { '' }
+  if ($tail -match 'weekly limit') {
+    # Team weekly limit hit: the message says 'resets 2pm (Australia/Sydney)'. Sleep until the next 2pm Sydney plus 3 minutes.
+    $hour = 14; if ($tail -match 'resets (\d{1,2})(am|pm)') { $hour = [int]$Matches[1] % 12; if ($Matches[2] -eq 'pm') { $hour += 12 } }
+    $tz = [TimeZoneInfo]::FindSystemTimeZoneById('AUS Eastern Standard Time')
+    $nowSyd = [TimeZoneInfo]::ConvertTime((Get-Date), $tz)
+    $next = $nowSyd.Date.AddHours($hour).AddMinutes(3); if ($next -le $nowSyd) { $next = $next.AddDays(1) }
+    $wait = [int](($next - $nowSyd).TotalSeconds)
+    Add-Content "$dir\lane_loop_$Lane.log" ("{0} weekly limit hit: sleeping {1} min until {2} Sydney" -f (Get-Date -Format 'ddd HH:mm'), [int]($wait / 60), $next.ToString('ddd HH:mm'))
+    Start-Sleep -Seconds $wait
+  }
+  elseif ($secs -lt 120) { Start-Sleep -Seconds 900 } else { Start-Sleep -Seconds 30 }   # instant failure (limit/error): back off 15 min
 }
