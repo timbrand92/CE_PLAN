@@ -1,0 +1,14 @@
+Report written to `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_S34_FINALIZER_REPORT.md`. Nothing remains to run.
+
+**FOR TIM / CONTROLLER 06**
+
+1. **GO.** Train `claude/rel-20261009v` is at `f4c97a1c`, pushed (leak scan clean, origin equals local). It holds the 1.0.114 version merge and one small fix of mine. Built and unit-tested only. Nobody has opened it in AutoCAD.
+2. **Beam commands 1, 2 and 4 are no longer refused with the linking tick ON.** The refusal now fires only on the hidden file key for the old command-8 engine, which defaults OFF. New installs get linking ON with the tick labelled "Link columns and beam text to their beam". Tim's PC stays OFF because his settings file already stores false, and a stored value is never rewritten. A colleague's truly fresh install gets linking ON, per the INT-078 ruling.
+3. **My one commit (`f4c97a1c`):** a BP layer name AutoCAD refuses, such as BORED/PIER, would have stopped BP with an error after the diameter question. BP now falls back to BORED PIER and says so in one line. Nothing changes at the default.
+4. **The 1.0.114 merge was already sitting unpushed in the `s34asm` worktree** from an earlier finalizer attempt. I verified it is byte-identical to a fresh merge and kept it. No controller merge is needed: I worked in the worktree itself.
+5. **Tests:** Structural net10 4844 of 4844 passed. Net48 4107 passed, 36 failed (the same old 36 in nine files this train does not touch), 698 not executed. DesignCore 2045 per lane with the same 6 old failures. Builds 9 of 9 at 0 errors. The only differences from the assembler are my one test and three S-33 finalizer tests the assembler never ran in a full net10 pass.
+6. **Tim's settings files are untouched by me.** His Structural file had changed at 14:04, before I ran anything (now 33,198 bytes), likely by the Codex settings-rows job or an AutoCAD session. It still stores linking false.
+7. **Findings:** one MEDIUM (fixed, item 3), seven LOWs, none blocking. The report lists them with file and line, plus a Codex checklist: beam command 1 with the tick ON and OFF, a linked beam moved then U then REDO, pier table SYNC after an erase, DS1 and TS1 words, BP with a bad layer name, CESUPPORT.
+8. **Process note:** other sessions kept 7 to 24 dotnet processes running the whole afternoon, so I waited 68 minutes for one quiet window to build, then ran test chunks at Below Normal priority with a bounded wait before each. AutoCAD was never running during my runs.
+
+OPUS SIGN-OFF train claude/rel-20261009v GO (f4c97a1c43c396d2b2c2d424a549d3b6c6954925)
