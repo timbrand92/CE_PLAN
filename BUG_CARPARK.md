@@ -71,6 +71,8 @@
 
 **Status:** OPEN (filed 1 Oct about 12:10 by the PC clock; an earlier stamp here read 18:40 by mistake). Updated 1 Oct 12:50 after the Opus review of #464: only the palette is fixed there; the footing lookup is item 0 above.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #471, #476, #480 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-360
@@ -94,6 +96,8 @@
 **Driver/Codex checks (S-9):** CSREOBAR plain chain on DRV2_S1 with NO 35CONT made first (Preview, BM1 line, 3 objects, 35CONT now exists, no units line); one U (bar and layer gone), REDO brings both; answer No (nothing, no layer); a LOCKED 35CONT (plain line, still locked; also a FROZEN 35CONT: thawed?); undo count; FEDIT on a strip near a pad (names SF1; Escape nothing; shared corner 'That is a CE outline...'); foot drawing INSUNITS 2 (a 2-unit bar 'feet, converted', 'x 610 LG'; INSUNITS 0 'not set' line; 4 no line); CSBARSCHEDULE after (BM1 5500, one U removes only the table).
 
 **Status:** OPEN. Not fixed until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #568 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 
 **UPDATE 3 Oct 10:55 PC (driver session 10 on the INSTALLED Structural 1.0.93, `DRIVER_RUN10_2026-10-03.md`; both CS_Settings.json identical before/after every chain): BUG-367 CONFIRMED in real AutoCAD.** (1) CSREOBAR thaws AND recolours a FROZEN 35CONT silently (frozen colour 7 came out thawed colour 2; one U restores frozen, colour 7). (2) Typed STR UNLOCKS a locked 25TEXT or 35CONT silently (35CONT also recoloured 7 to 2), and the U after STR removes the stirrup but leaves the layer UNLOCKED and the NEW 35CONT in place: the layer change is OUTSIDE the undo group (worse than first suspected). Fix: shared EnsureLayer for STR / RBL / RBC and CSREOBAR (never change an existing layer's lock/freeze/colour; a locked layer = plain line) AND put layer creation inside the undo (Team build worker job 46 items 16a/16b; extends #568).
@@ -212,6 +216,8 @@
 
 **Status:** OPEN (LOW). Filed 8 Oct by the controller. Not fixed until Tim confirms in AutoCAD.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #787 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-429
@@ -219,6 +225,8 @@
 **Command / Area:** Structural 1.0.105 rewrites Tim's `%APPDATA%\CE_STRUC_SUITE\CS_Settings.json` at the FIRST start after the install (found by Codex W19, 8 Oct 04:26, reported as a settings FAIL): 24,377 -> 25,791 bytes, SHA256 DA5B5B44... -> 2FBE34BB...; the controller diffed the pre-install copy (C:\ce_rc_scratch\settings_pre_1036) against the live file (keys only): 20 keys ADDED, 0 removed, 0 changed: BraceLength.MaxLengthMm 2700 / DefaultLengthMm 2700, MarkupAI.QaEnabled false / QaSameItemDistanceMm null, CeSheets.IssueJobWidePdfEnabled / IssueDwgSnapshotEnabled / IssuePreviewEnabled all false + IssueDwgSnapshotFolderName 'DWG snapshot', RoofPointLoads.* (CarryDown, MarkerEnabled false, layer 'CE ROOF POINT LOAD', radius 150, text height 100, DrawingsShareOrigin false), MemberSchedule.* (Enabled false, groups, titles, levels Ground/First/Second). So the new version writes its new default Settings rows into the user's file when it first loads: harmless (all engines OFF, no existing value touched) but it means (1) the file hash changes on every upgrade that adds Settings rows, so every Codex hash baseline must be re-taken after an install (new Structural hash 2FBE34BB...), (2) a colleague's file changes on upgrade, (3) the write has no 'Settings saved successfully' log line (the check found none). Question for the Team: should an upgrade write only when the user changes a value (read-only defaults), so a settings file never changes by itself? Not a defect for the pilot.
 
 **Status:** OPEN (LOW, design question). Filed 8 Oct by the controller. Tim's file was NOT restored (no word from the desk or Tim).
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #799 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -252,6 +260,8 @@
 
 **Status:** OPEN (LOW). Filed 8 Oct by the controller. Not fixed until Tim confirms in AutoCAD.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #808 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-434
@@ -259,6 +269,8 @@
 **Command / Area:** CODEX W21 on installed Structural 1.0.105 (8 Oct 07:01, CODEX_VERIFYW21_2026-10-08.md; usage 29 -> 30%; PASS 1 / BLOCKED 2 by a brief fault, no product failure). **(1) MEDIUM to confirm (C1 / TS1 leave the current layer changed when cancelled):** the current layer was "0"; after C1 was started and cancelled at its rotation question the layer toolbar showed SUPPORT COLUMN, and after TS1 was started and cancelled the current layer ended as SUPPORT (the final reading was (5375 "SUPPORT" 21)); OSMODE stayed 5375. The command changes CLAYER to its own layer and Esc does not put it back (the BUG-387 / BUG-206 family: a command that is cancelled must leave CLAYER as it found it). **(2) LOW:** C1 and TS1 still print 'Duplicate definition of block _Dot ignored.' at their first placement (the same message BUG-400 removed from BT1 and PIT in 1.0.103 / 3.0.33). **(3) Real prompts for the record (installed 1.0.105):** C1: 'Specify insertion point for C1:' then AutoCAD's own ROTATE: 'Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0' / 'Select objects: 1 found' / 'Specify base point: _non' / 'Specify rotation angle or [Copy/Reference] <0>:' (Enter = 0); TS1: 'Specify insertion point for TS1:' then the same ROTATE lines. **(4) Not reached:** the column-grip Undo/Redo case (D2 'click a CE grip on a column'): the brief did not know the rotation question; retest queued as W24 (Enter at the rotation question, keyboard only: a click on the command strip hit 'Reference').
 
 **Status:** OPEN (MEDIUM to confirm). Filed 8 Oct by the controller. Not fixed until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #810 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -295,6 +307,8 @@
 **Update 8 Oct 10:34 (CODEX W31 on installed Structural 1.0.107, second start):** the 'append a number' error is NOT about a bare Enter: typing the NUMBER 1 gives exactly the same lines ('Text placed at the top right (CR1).' / 'Enter a number to append to 'C' (or press Enter to exit): 1' / '[CR1] DefaultValue is not set.' / 'Support text command failed: CE text command 'CR1' failed.' / 'No beam found nearby, so the support is not linked...'), and a bare Enter fails the same way: so the CR1 support-text command fails at its number step whatever is answered, on this fixture, and the column gets no 'C1' label (the column block itself is placed). **#810 PASSES on 1.0.107:** C1 cancelled at the text-location question leaves CLAYER '0' (start '0'), the half-placed column disappears, no 'Duplicate definition of block _Dot ignored.'; a FINISHED C1 also leaves CLAYER '0'; U echo 'C1 GROUP', REDO echo 'GROUP C1' / 'Everything has been redone', column back. **Hidden commands on 1.0.107 print TWO sentences, not one (fine, plain English):** CSLINTELPROPOSE 'The lintel and support proposals are switched off in Settings (Lintel and support proposals), so nothing was drawn. The Settings page for it is still to be built.'; CSROOFSETOUT 'The roof area setout is switched off in Settings (Roof area setout), so nothing was drawn. The Settings page for it is still to be built.'; CSPOINTLOAD 'Roof point loads are switched off in Settings (Roof point loads), so nothing was placed. The Settings page for it is still to be built.'
 
 **Status:** OPEN (MEDIUM). Filed 8 Oct by the controller. Not fixed until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #815 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -337,6 +351,8 @@
 **Command / Area:** S-25 Opus finalizer findings (8 Oct, TRAIN_S25_FINALIZER_REPORT.md; GO at e65bf1e4; no HIGH). **MEDIUM FIXED in the finalizer's one commit e65bf1e4:** #802 CSFLOORSETOUT 'Spacing in mm <450>:' showed '<450>' twice (same pattern as the roof setout; the question now writes its default once and Enter takes the Settings value 450 joist / 1800 bearer / 450 subfloor joist; new test red-then-green). **LOW (8, none blocks), two need Tim's word:** the floor arrow asks 'Joists/Bearers/Subfloor' which is not quite roof-down order; the legend wording 'DENOTES POST UNDER' is not Tim's own words yet. **Worth a Team item:** if a drafter erases only the legend TITLE, the next CSFRAMINGLEGEND run draws a SECOND legend and leaves the old rows behind (command OFF + hidden: no drafter can hit it yet). **Proved by reading:** CSROOFSETOUT is unchanged on this build (#802's new draw routine is a plain split; the roof still passes the same layer, text height, arrow head, colour and messages as 1.0.107). **First start on a copy of Tim's real CS_Settings.json (temp folder; his file untouched):** only FramingLegend (five office rows) and FloorSetout added, Enabled false, exactly one line 'Settings file updated with new default rows (CS_Settings.json). No value you set was changed.', a second start writes nothing. Registry 369 unique commands, all nine built copies identical. Revert recipe if S-25 must ship without #802: `git revert --no-edit e65bf1e4` then `git revert --no-edit -m 1 c70619dd` (dry run clean, 368-command registry). Tests at the new head: Structural net10 4419 of 4419; net48 36 reds (same known); builds 0 errors x6; not run: DesignCore (no DesignCore file changed), net8 Structural, Drainage, Manager, Installer.
 
 **Status:** OPEN (LOW). Filed 8 Oct by the controller.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #818 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -803,6 +819,8 @@
 
 **Status:** Structural 1.0.94 proofs done; LOW items open. Not accepted until Tim confirms.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #570 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-369
@@ -817,6 +835,8 @@
 
 **Status:** OPEN (LOW). Not fixed until Tim confirms in AutoCAD.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #571 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-368
@@ -828,6 +848,8 @@
 **Not tested:** FEDIT strip-near-pad (#562): the driver cannot give FEDIT a real pick (every pick says 'That is a CE outline...' even on a free pad edge): needs a REAL mouse pick: verifyW1 item W1-19. RBL mark not run (no typed form; the switch is in Tim's Settings). INSUNITS 0 skipped on purpose (it opens a 'Lighting - Insert Units' dialog that blocks the driver for minutes).
 
 **Status:** OPEN (MED). Team build worker job 46 items 16a/16b. Not fixed until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #569 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -910,6 +932,8 @@
 **By reading (to drive):** ERASE + FREGENALL is two U now (U1 echoes FREGENALL, U2 ERASE); other commands keep their Undo; STR/STIRRUP/BWT/BARWEIGHT typed unchanged and gone from ribbon, menus, toolbars; CSREOBAR/CSBARSCHEDULE hidden but typed they run; 12 Codex/driver checks in the finalizer report.
 
 **Status:** OPEN (LOW). Not fixed until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #562, #563 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1036,6 +1060,8 @@
 
 **Status:** OPEN. Codex checks (35 steps) are in section 5 of the report and feed verifyC8. Not fixed until Tim confirms in AutoCAD.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #553, #554 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-351
@@ -1088,6 +1114,8 @@
 
 **Status:** OPEN. Not fixed until Tim confirms in AutoCAD. PR head has since moved to 2d4a330f: the stage-2 assembler must merge the head and then claude/s7-opus-fixes and an Opus confirm follows.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #545 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-347
@@ -1131,6 +1159,8 @@
 **Plan (S-7, queued, one Opus builder per product per train; none before Sat 3 Oct 12:00 desk throttle):** replace the question with the conversion. The one conversion already exists (`DrawingUnitRule.MillimetresInDrawingUnits` / `SizingDrawingUnitsPerMm`) and is already used by the load path, rebar spacing, schedule sizing and the FADOPT label reach. Per command the builder decides CONVERT or HOLD (plain line saying why): CONVERT where every size read or written goes through the helper (FADOPT, FSTEXPORT, CSFOOTINGSCHEDULE, CSRCBEAMSCHEDULE, REB, RIB, THC, load path); HOLD with a plain line until audited the drawing commands with hard-coded millimetre geometry (PFC, SF, BP, SCREWPILE, STUMPFOOTING, FEDIT grips/kite/outline/offsets/text heights) if the audit finds any constant not routed through the helper. Mixed-units drawings (INSUNITS says metres but footings drawn in mm) need the same evidence-based hold as Civil BUG-338/#540. Tests: pure rule tests per unit (cm, m, in, ft), source guard that no footing command reads a typed size without the helper, accoreconsole probe of one pad in a metre drawing.
 
 **Status:** OPEN, queued for S-7. Decision recorded (decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md INT-026). Not fixed until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #542, #547 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1214,6 +1244,8 @@
 
 **Status:** OPEN (2 Oct 07:30).
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #523, #525 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-335
@@ -1253,6 +1285,8 @@
 **Symptom:** (1) `SbeamEditAutoCadEvidenceReaderTests` (compiled proof) is still unproven on S-4: the test host stalls past 600 s. (2) #505 (BUG-314 (3): reading the footing record after U) is NOT in S-4: it must ship BEFORE the footing-grips switch goes on. #506 (stacked on #485) and #486 (needs #440) go to S-5. (3) when the start-up save is skipped, old `.CS_Settings.json.save-*.tmp` leftovers survive, and if the drafter deletes `CS_Settings.json` on purpose before the next real save the old save is put back at the next start (#494 x #493, LOW). (4) CSLOADPATH's own drawing check runs outside #485's schedule refresh, so a pad brought back by OOPS there updates the schedule only at the next footing command (LOW). (5) schedules size decimetre/yard/km drawings as millimetres while the load path measures them truly (by design, #485 vs #496). (6) `LoadPathEngine.cs` has a doubled `<summary>` comment (cosmetic). Merge slip found and FIXED by the finalizer: `FoundationMonitor.cs` merged without conflict but said the erased-footing note before collecting the erased footings (ERASE of a scheduled pad printed nothing and the schedule was not marked out of date).
 
 **Status:** OPEN (2 Oct 04:00).
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #512 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1390,6 +1424,8 @@
 
 **Status:** OPEN (2 Oct 00:30).
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #504 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-315
@@ -1400,6 +1436,8 @@
 
 **Status:** OPEN (2 Oct 00:30).
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #506, #509 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-314
@@ -1409,6 +1447,8 @@
 **Symptom:** (1) footing memory is not cleared at drawing close if FoundationMonitor never attached; pointer reuse could hand a new drawing the old register (fix: Invalidate in `RedoWindowGuard.OnDocumentToBeDestroyed`). (2) every command reads the Database before the undo-family test. (3) #481 LOW 4: `LoadCore` normal-transaction read (`FoundationRegistryService.cs:228`); the drawing-switch inventory test checks file names only; `Database.BeginSave` proof still a follow-up. (4) BUG-304 stays: the Idle redraw has never taken LockDocument (`FoundationService.cs:1593`); needs a 2024 test. **Correction (2 Oct, S-5 builder):** (4) is stale: on S-4 the Idle redraw DOES take LockDocument (#480, `FoundationService.cs:505`); what was left was its extra Undo step, moved into the editing command's own end on `claude/rel-20261004u` (BUG-334 item 1; see BUG-304). (S-5 also makes close forget the schedule out-of-date note with the footing memory: `FoundationRegistryService.ForgetDrawing`.)
 
 **Status:** OPEN (2 Oct 00:30).
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #505 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1530,6 +1570,8 @@
 
 **Status:** OPEN (1 Oct 21:25)
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #494, #510 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-302
@@ -1537,6 +1579,8 @@
 **Command / Area:** Structural PR #482 wording: the code cites 'Tim's ruling for #457' (unset units: measure nothing) but that ruling is not in decisions/; after a Yes in a metre drawing the FADOPT label search reaches 1000x too far (as in 1.0.87).
 
 **Status:** OPEN (1 Oct 21:25)
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #495 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1557,6 +1601,8 @@
 **Symptom:** (1) after a failed swap there is no settings file: the next start loads standard values with no warning (the kept temp file is never read back); (2) the save dialog's 'may have changed' wording contradicts 'Not saved'; (3) the CESETTINGS banner adds the message again on every refused save.
 
 **Status:** OPEN (1 Oct 19:55)
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #493 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1836,6 +1882,8 @@
 
 **Status:** OPEN (1 Oct 12:00). Not a regression: with BUG-272 fixed (#455) it fires only on a real file problem.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #467 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-272
@@ -1854,6 +1902,8 @@
 
 **Status:** OPEN (1 Oct 10:25), being built by team lane 01.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #455 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-275
@@ -1867,6 +1917,8 @@
 **Reference:** `Modules/Structural` MainPalette.AttachEntityDeltaTracking; the 2027 Database identity facts in queue section 3G.
 
 **Status:** OPEN (1 Oct 11:55)
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #464 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1960,6 +2012,8 @@
 
 **Status:** OPEN (1 Oct 04:20)
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #445 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-264
@@ -1969,6 +2023,8 @@
 **Expected behaviour:** bounded, scrollable task lists with one visible entry per action.
 
 **Status:** OPEN (1 Oct 04:20) - Codex window/ribbon item.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #456 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -1983,6 +2039,8 @@
 **Reference:** unit tools OFF; parity with 1.0.86 not established (no baseline run).
 
 **Status:** OPEN (1 Oct 04:20)
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #446 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -2163,6 +2221,8 @@
 **Steps for Tim/Codex:** as above with the setting on.
 
 **Status:** OPEN (30 Sep ~12:50) - lane F after #428; first read whether the linking-on branch is reachable at all.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #466 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 **Update (team lane 01, Thu 1 Oct 13:55):** reachable (the linking tick box is in CE Settings, default OFF). Fix built in draft PR #466, NOT AutoCAD-tested. **For Tim to rule (Opus review of #466, finding 3):** when the drafter answers **Yes** (erase the beam and the other column too) and then types OOPS, AutoCAD brings back only the column. #466 does NOT bring the beam back; it prints one line saying how (U, U). Civil #443 (perimeter drain text) does the opposite: CE puts back what it erased, at the end of OOPS. Recommendation: match Civil (CE brings the beam, its label and its other column back at OOPS's end, one U) as a follow-up, so OOPS means the same thing in both suites. Until Tim answers, #466 keeps the warning only.
 
@@ -2527,6 +2587,8 @@
 
 **Status:** OPEN (30 Sep ~10:20) - carparked.
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #428 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-234
@@ -2640,6 +2702,8 @@
 **Steps for Tim:** none needed beyond a Codex check that Structural Settings still opens and keeps his real rules; his current file must be BACKED UP, then cleaned by the fix, never by hand (his rules are his).
 
 **Status:** OPEN (29 Sep 23:10) - built, draft PR #399 (`claude/bug204-dedupe`, base rel-20260929c-struc). Root cause: the three rule lists start seeded with defaults and every load APPENDED the saved file onto them (about 24 per start); commit 34d8a295 had only fixed tie-down types. Fix: replace on load; remove exact duplicates on every load/save; nothing distinct is ever dropped; no cap. Sonnet review enough. Overlaps #392 in UserSettings.cs (same train). Back up Tim's CS_Settings.json before installing. Not tested in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #399 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
@@ -2800,6 +2864,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex pass 18).
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #415 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-212
@@ -2890,6 +2956,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex pass 18).
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #418 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-216
@@ -2956,6 +3024,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex pass 18).
 
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #415 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
 ---
 
 ## BUG-219
@@ -3001,6 +3071,8 @@
 **Likely area (hypothesis only):** the Structural start-up / palette launcher (Command Hub) opening on load; not searched in code.
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1).
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #465 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 **Codex 30 Sep sweep C1 (final report): unchanged, FAIL confirmed** (item 1 Cold start 1, FAIL item 2, UX finding 5). Final report also says the launcher was NOT seen on the second (no-drawing) start, so it depends on the start; Structural startup silence (BUG-203) was BLOCKED because the fixture is a Civil drawing. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_SWEEPC1_2026-09-30.md`.
 
@@ -6346,6 +6418,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** S-27 Opus finalizer findings (9 Oct, TRAIN_S27_FINALIZER_REPORT.md; GO at 52bdb4b5 = e325135e + the finalizer's one wording commit; nothing HIGH or MEDIUM). **The commit:** a bare Enter at "Pick desired support text location" printed "Text placed at the right." before anything was placed (#812 had only dropped "(CR1)"); it now reads "Label on the right: enter its text, then click where it goes." with a pin test (RED on the old line, 5 of 5 green now) and an 8-line REGRESSION_LOG entry. Codex W39-02 was NOT a code fault (the "Enter text for 'C' or <1>:" question was right because W39-01 had used 1); W40 proved the real route. **Checked and fine:** the hand-merged framing legend (#804: heading drawn once, retyped heading kept and moved, all five layout numbers from Settings, 9 legend tests present); CSLEVELCARRY (#825: off and hidden, switch checked first, never unlocks a layer, never reads Xref content, refuses read-only drawings and REFEDIT, one Undo, registry valid at 370); #818 (roof/floor setout unchanged while off); Tim's Structural CS_Settings.json will grow once, by exactly the 13 new keys, no existing value changes. **Seven LOWs, none blocking:** (1) the picked-point line still shows "(CR1)" and says "placed" before the number question (SupportBlockCommands.cs:929); (2) Esc at the text step keeps the column and prints "Support text command failed: Command cancelled." (old S-26 LOW 1, needs Tim's choice); (3) the CSLEVELCARRY off sentence still says the Settings page is "still to be built" (LevelCarryCommandService.cs:37); (4) a few CSLEVELCARRY layout numbers are still in the code (label gap, the 5% "equally near" margin: Settings-first rule); (5) CSLEVELCARRY "Start again": an old copy on a locked layer drops out of CE's record and is never tidied later; (6) if the other level's drawing cannot be opened the reason goes only to the log (the drafter still gets "could not read ... nothing was changed"); (7) the legend tests check code text and number rules, not the drawn heading size: Codex must look at it.
 
 **Status:** OPEN (LOWs). Filed 9 Oct by the controller. Never FIXED until Tim confirms in AutoCAD.
+
+**Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #848 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
 
 ---
 
