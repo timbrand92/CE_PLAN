@@ -7396,5 +7396,5 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Next step (Structural lane, RED test first):** read MENUBAR first and only set it when the drafter has not chosen otherwise, or leave it alone when the Manager switch is on; no write at all when the value already equals 1 (a same-value SetSystemVariable also kills REDO). Verify in AutoCAD with MENUBAR 0 before the update and after the first start.
 
-Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorService.cs about line 1421, once per session, never between U and REDO. **Status:** OPEN (filed by controller 06 from review round 10 entry 974 item 2). Never FIXED until Tim confirms in AutoCAD.
+Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorService.cs about line 1421, once per session, never between U and REDO. **Status:** OPEN (filed by controller 06 from review round 10 entry 974 item 2). Never FIXED until Tim confirms in AutoCAD. **Run 205 (Structural lane, 12 Oct):** DRAFT PR #1245 (Settings MenuBar.LeaveAlone OFF = today; MENUBAR read first and never rewritten when already 1; RED first; needs Opus review; not AutoCAD-tested).
 
