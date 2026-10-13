@@ -1528,6 +1528,8 @@
 
 ## BUG-307
 
+**Codex V3/UX verification, 13 Oct 2026, installed Civil source 48662ddd:** re-ran the complete net10 Civil suite. This is its only executed failure: BackTest_GlenEira24115_Computed_WithinTolerance, 1.69 m³ vs 2.58 m³, 34.577% against 30% allowed. No duplicate bug assigned, tolerance unchanged, engineering cause not established. Local TRX `C:\Lisp Files\_TEST_COPIES_20260923\V3UX_20261013\civil-full.trx`. Next proof: compare the historical fixture's explicit soft-ground coefficient and method with the approved council rule; test both stated assumptions without changing production defaults, then obtain Tim's engineering ruling if the historical sheet and current rule differ. **Still OPEN; automated failure confirmed, not a proven wrong result on an issued drawing.**
+
 **Command / Area:** Civil AutoDesign back-test `BackTest_GlenEira24115` (pre-existing, found 1 Oct by the PR #491 builder and confirmed on base 3.0.19 by the Opus review).
 
 **Symptom:** stored volume (SSR) 1.69 m3 against the sheet's 2.58 m3 (34.6% off the 30% allowance); discharge (PSD) 6.54 against 5.87 L/s. AutoDesign is the Boyd's storage engine and does not use pipe cover. Probable cause (not verified): job 24-115 in the test does not fix the after-development soft-ground figure at 0.35 as job 23-129 does, so it runs on the newer 0.30 default. Whether the TEST or the ENGINE is wrong is an engineering question (report both figures to Tim).
