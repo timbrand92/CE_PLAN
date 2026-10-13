@@ -59,12 +59,13 @@
 
 **Expected behaviour:** anexplicitentered350mmdepth staysknownacrossplacement/Undo/Redo/editor/schedule, or theworkflowclearlysaysitonlysavedalibraryproposal. Neverreplaceknowninputwithzero/Unknownsilently. Unknowndisplayisrightfortrulyunenteredstrength/reinforcement, distinctfromthislostreadback.
 
-**Reference:** screens134-144localV3UX_20261014; FSTrow1depth350(screen138), FEDIT0(screen140), Cancel900x700(screen142), schedulewarning143/actualtable144. Noengineeringcapacityapproval. Exactpointwheredepthstopsreachingelementrecordnotyetisolated; testafterRedo, donotassumeinitialplacementversusRedo cause.
+**Reference:** screens134-144localV3UX_20261014; FSTrow1depth350(screen138), FEDIT0(screen140), Cancel900x700(screen142), schedulewarning143/actualtable144. Noengineeringcapacityapproval. Initial point was unisolated in the first receipt; superseded by the independent PF2 check below.
 
 **Regression/retest:** explicit350depth->editor350/schedule350beforeANDafterUndo/Redo; Save/reopenretains350, width-onlyeditkeepsdepth; unknowncase remainsUnknown. Behaviour-ownerModifycardneededbeforecode. FullmarkkeyBUG578andtinylabelBUG454areseparate.
 
 **Status:** OPEN
 
+**Fresh isolation, 14 Oct 07:24 Melbourne:** PF2 placed with X800/Y800/depth450, point-2000,2000 and rotation0. Before any Undo/Redo of PF2, FEDIT offers depth0 and the live schedule shows PF2 depthUNKNOWN. Initial placement/readback is sufficient to reproduce. In contrast FEDIT explicitly re-entered PF1 depth350 with width1000; actual schedule updated immediately and still reads350 after FEDIT Undo/Redo and later PF2 creation. Screens145-153. Keep OPEN; editing depth again is a workaround. Proposed regression must inspect the element/editor/schedule immediately after FPFC, before recovery tests.
 ## BUG-578
 
 **Command / Area:** FST size-library Key field and FPFC pad-size lookup, realStructural1.0.116+f180b349,14Oct2026.
