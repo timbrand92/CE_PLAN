@@ -1,0 +1,64 @@
+# CE V3 real AutoCAD UI and functionality report — interim, 14 October 2026
+
+1. **Result first:** the complete product has not been verified, and 50% real AutoCAD coverage has not been reached. This report separates observed results, historical evidence and work not yet exercised. It is evidence attached to the release area, not a new plan. Author: this Codex test chat; exact request in decisions/2026-10-14_REAL_AUTOCAD_50_PERCENT.md.
+2. **Installed source checked today:** Civil 3.0.49+48662dddb2dc36d09a121642f36aecc2465cc673; Structural 1.0.116+f180b349a88617070a8517b563b2df7b5854131e. Yesterday Manager was read as 1.1.49; today's Manager DLL has not yet been separately read. No candidate was installed by this chat.
+3. **Today's real application attempt:** opened the existing FIX_MODERN_PIPE_W1.dwg copy through Explorer, at about 00:24 Melbourne. AutoCAD process 62380 and returned window title confirm launch. Startup changed the window handle; refreshed it. Both subsequent state-capture attempts failed with `foreground window did not report a process id`. No reliable AutoCAD screenshot, command, click or new product verdict followed. The tool failure is not a plugin failure. Further UI input stopped under the Computer Use recovery rule. The test drawing remains open; no Save or settings edit was issued. Shared Codex lock was acquired before launch and released when control failed. Do not assume AutoCAD was closed or its startup left drawing memory unchanged.
+4. **Usage:** desktop account weekly meter 11% at this batch's start. No reset credit, Claude dispatch, paid provider request or installation by this chat. Group related cases; preserve screenshots before changing source or drawing. Avoid rerunning large unit suites when the missing evidence is a real drawing result.
+
+## What the percentage means
+
+1. **The quoted 7% is not a present-day measurement.** The most recent recount file found is PROGRESS_COUNT_2026-10-09b.md: 66 of 984 IDs tested, 8 of 984 with a PASS. That recount carries earlier counts forward and explicitly calls itself a text-matching estimate. October 7 was 57/849; these are distinct snapshots.
+2. **The inventory mixes 509 UX IDs and open carpark entries.** Its own fresh expansion was 501 UX IDs, leaving eight unidentifiable historic entries. The current carpark has 519 headed entries, 23 with a strict FIXED status, versus 498/23 on October 9. Keeping the old 509 gives 1,005 inventory entries and requires 503 distinct tested entries for 50%. This is arithmetic on the old method, not a verified coverage claim. A new range-expansion attempt gives 503 UX IDs and needs reconciliation against the older 501 list before replacing the denominator.
+3. **A window opened is not all its features tested.** A whole case needs setup, expected result, exact installed source, actual steps, observed drawing/window result and screenshot. PASS and FAIL count as exercised; BLOCKED, NOT TESTED and partial cases do not count as a whole item. Repeating an ID does not add coverage. A source audit, build, rendered unit-test window or Claude driver report does not become Codex real AutoCAD evidence.
+4. **Two coverage views must accompany each future recount:** the comparable overall V3/UX/open-bug inventory, and built/installed workflows eligible for this PC. Keep actual passes beside exercised cases. Do not silently remove unbuilt items, old-version requirements or engineering questions to reach 50%.
+
+## UI and interaction findings personally seen by this chat on 13 October
+
+1. **Pit Schedule presentation — narrow PASS:** dark theme at 1920 x 1080 fits the window, footer remains visible and long rows scroll within their area. Search P8 displays 2 listed of 30 output rows, with 30 to be placed. The disclosure is honest: filtering the window does not pretend to filter the drawing output. Actual placement, export and multi-sheet continuation were not tested.
+2. **Schedule editing — partial:** double-clicking a size cell entered inline editing; Esc cancelled without typing. The ruling says row editing, so the absence of a separate editor is not a confirmed bug. Saving a cell, object readback, Enter, Undo, locked-layer treatment and save/reopen remain unproven by this case.
+3. **Plain wording — FAIL, BUG-360:** selecting P8's outlet exposes `(Handle 11C807)` in the footer. A drafter should see the pipe name and diameter, not an internal identifier. Both ordinary and fallback messages need the same correction; PR #1192 overlaps the file, so no competing production edit was made.
+4. **Inspect Drawing recovery — narrow PASS:** PIT -> New Pit -> Inspect Drawing -> actual reopen prompt -> Esc ends the command without reopening. Inspector -> Open Edit Pit -> Inspect Drawing -> actual PITEDIT reopen prompt -> Esc also cancels. Enter-return and New Pipe routes remain untested.
+5. **Value visibility — observed, not engineering approval:** Edit Pit showed 450 x 450 mm, cover level 21.000 and preview invert 19.80. Reading an engineering value does not establish that the rule or design is correct. No Save pressed.
+6. **Theme — installed-source compiled view FAIL, not real AutoCAD light-theme verdict:** the light calculation Print page showed blue styling against Tim's gold/black/white/grey ruling, recorded under BUG-517. The existing no-blue candidate has a newly rendered black/grey view and 21 targeted checks passing. It has not been installed or viewed in AutoCAD, nor has its actual printed output been inspected. Original baseline image was overwritten by a reused build-output path; that evidence-storage mistake is disclosed in the verification record.
+7. **Safety — previous batch PASS:** three live settings files retained identical hashes, lengths and timestamps; snaps, current layer and autosave interval restored/read back; test DWG discarded without saving. These are cleanup results, not acceptance of every command.
+
+## Complete workflow coverage map — all 22 installed-fix groups remain visible
+
+1. **Start, close, Save As:** previous copy launch and discard/exit verified. Save As, busy-drawing close, crash reproduction and all startup paths still need representative cases. Historical W65 clean exit is separate from the route that crashed.
+2. **Ribbon, tabs, tooltips and windows:** individual schedule/editor observations above. Every ribbon trigger, context menu, keyboard path, scaling level, theme, focus and tooltip needs its own route inventory. Do not tick every window from one screenshot.
+3. **New Pipe:** diameter/material/grade, typed inverts, endpoint snapping, free ends, repeated placement, preview, Cancel and one Undo/Redo remain to be checked here.
+4. **Edit Pipe:** plan label, record, Inspector and schedule must agree after changing each relevant field; marker refresh and equal-invert representation need cases. No whole workflow accepted here.
+5. **Batch pipes:** mixed recorded/older objects, excluded-object explanation, common values, downstream preview and one Undo need fresh cases. W64 was incomplete and not accepted.
+6. **Move, copy, erase and paste:** fresh-copy isolation per case; labels, connectivity, renumbering, geometry and one Undo/Redo checked visually. BUG-257 remains a confirmed historical W65 failure; do not count Undo echo alone as proof.
+7. **Pit and Edit Pit:** two Inspect Drawing Esc routes passed. Renumber, duplicate refusal, pit growth, detention cover orientation, connections, locked layers, repeated placement, Enter-return and save/reopen remain.
+8. **Pit Schedule:** fit/search disclosure passed narrowly; raw handle failed. Cell Apply, plan coordination, overrides/revert, natural ordering, output, Excel/PDF and continued headers remain.
+9. **Calculations, councils and sheets:** actual input -> calculation -> drawn/printed output -> approval/issue -> reopen must be followed. BUG-307 historical drainage mismatch stays open; no tolerance or engineering value changed to obtain a pass.
+10. **Catchments, paving, raingardens and falls:** boundary/area, destination, units, imported source, preview, resulting geometry and connections remain. W65 raingarden input failed in the tool before the assertion; not a product verdict.
+11. **X-Civil and LandXML imports:** source-unit readback, comparison, preview, duplicates, incomplete levels, cancellation and one Undo remain. Import-unit risk BUG-505 requires real fixtures in both units.
+12. **Metre and other drawing units:** do not infer success from millimetre drawings. Levels, lengths, sizes, labels and printed output need a separate controlled unit case.
+13. **Locked layers, Xrefs and protected objects:** refusal must precede a change; no unlock/clone/explode bypass. W65 lock refusal did not exercise the requested held-back recovery, so it is partial.
+14. **Plain command wording:** observed raw handle failure; broad prompt, warning, status and error text review remains. Internal jargon in accessibility names requires distinct evidence from visible text.
+15. **Startup, launcher and settings:** actual file used, Cancel unchanged, Save/readback in isolated profile, restart and aliases remain. Settings candidate's 221 unit checks do not count as real AutoCAD coverage.
+16. **Roof, floor and wind:** source values, geometric outputs, edits, resuming, units and engineering assumptions remain to be exercised here.
+17. **Beams:** placement, marks, labels, grips, dependencies, schedule and Undo/Redo remain. Structural calculation tests are not a drawing-output acceptance.
+18. **Columns, supports and bracing:** marks, support relationships, linked edits, quantities, required/provided bracing and protection remain.
+19. **Annotation, revision clouds, bars and schedules:** selection, conversion, readability, scale, symbols, output and one Undo remain.
+20. **Sheets and issue:** ticked-sheet scope, revisions, preview, publish output, warning truth and closed-drawing sync remain. BUG-495 issue scope is a release gate; do not publish a real job to test it.
+21. **Footings:** FST/FEDIT/FDELETE, placed geometry, grips, mark/schedule agreement, linked members, Escape, protection and Undo/Redo remain. Structural proof-harness stall BUG-568 must not be bypassed by removing cases.
+22. **Manager, updates, blocks and settings:** installed status, admin visibility, offline/error states, library insertion, settings transfer and rollback remain. Do not send fault reports or invoke live updates as incidental tests. Installer contract failures BUG-478 remain separate from AutoCAD window acceptance.
+
+## The full check applied to each feature
+
+1. **Discovery:** ribbon, context route, typed command/old alias, tooltip and Help describe the same available behaviour.
+2. **Window:** fit and scaling, contrast/theme, grouping, labels/units/source, keyboard/tab order, Enter/Esc, focus, preview, resizing and saved location.
+3. **Drawing:** correct objects, quantities, layers, geometry, levels, labels, connections, Inspector/schedule agreement and protection.
+4. **Recovery:** Cancel before/after preview, Escape at each prompt, one Undo, delayed Redo with no intervening inspection command, failed input, retained entries and fresh-copy reset.
+5. **Durability and output:** save/reopen only owned test copies, cross-drawing behaviour, visible output, print/PDF and version compatibility. Any denied or unavailable route remains blocked, never assumed.
+6. **Performance:** duration, large selection/drawing, progress/Cancel, repeated editing and startup/exit. Report observed times, not an invented responsiveness score.
+
+## Evidence and follow-up
+
+1. **Previous personally checked evidence:** areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md and local C:\Lisp Files\_TEST_COPIES_20260923\V3UX_20261013. New startup/settings receipt folder: V3UX_20261014; zero new product assertions accepted today.
+2. **Reports reviewed for context:** PROGRESS_COUNT_2026-10-09b, CODEX_VERIFYW62/64/65 and the 191-fix installed ticklist. There are 127 CODEX_*.md reports on disk; their presence is not proof every case ran. A full latest-verdict mapping and screenshot audit is still unfinished.
+3. **Code repairs already banked:** draft #1253 installer test discovery and #1254 Structural proof input/constructor/screenshot isolation. Independent review pending, including required Opus constructor-guard review; neither merged or installed. No production UI or engineering behaviour changed in this report batch.
+4. **Immediate blocker:** recover reliable Windows state capture before any further real AutoCAD input. User asked whether the test drawing is visible/responsive. Resume on fresh copies and preserve evidence by case/source. No automatic future run has been scheduled and no 50% result claimed.
