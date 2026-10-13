@@ -3300,6 +3300,8 @@
 
 ---
 
+**Codex re-test FAIL, 14 Oct2026 Manager1.1.49:** CEMANAGER SettingsCivil stillscrollsentireform atdefault1311x1073 andmax1920x1080. TopPromptdefaults/Textoffsets/Grade/Invert/Flowarrow cannotshowbottomDesignStandards/Survey/CDDialog/Debugging/ResetCivil withoutscroll. Draggedactualscrollbar toreadbottom; footerApply/Discardstayvisible. Screens182-185 localV3UX_20261014. Noentrieschanged/Apply/Resetpressed. KeepOPEN; comparewithCDS tasktabs before proposing a secondsettingsbehaviour.
+
 ## BUG-195 .. BUG-201 (Codex exploratory run X1, 29 Sep 2026 14:14-14:51, Civil 3.0.14 / Structural 1.0.85, test copies)
 
 Full steps, screenshots and logs: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_EXPLORE1_REPORT_2026-09-29.md` (finding numbers in brackets). No crash; 0 confirmed slow spots.
