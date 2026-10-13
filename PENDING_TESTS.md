@@ -1,4 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
+## Codex V3 / UX verification, 13 October 2026 — narrow passes and remaining work
+
+1. **Evidence:** areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md records exact source, test totals, failures and local screenshot receipts. This batch does not supersede the older checklists or accept untested workflows.
+2. **Codex-accepted on installed Civil 3.0.49:** New Pit -> Inspect Drawing -> Escape cancels without reopening; Inspector -> Open Edit Pit -> Inspect Drawing -> Escape does the same. Pit Schedule dark 1080p fits with footer visible; searching P8 honestly shows 2 listed / 30 output rows. Output placement/export, Enter-return and PP remain untested. BUG-360 raw Handle wording was still visible.
+3. **Test-tool drafts:** #1253 restores installer test discovery with an optional explicit Git executable; #1254 repairs exact Structural version/output proof inputs, constructor-forwarding guards and test screenshot isolation. Neither merged or installed. Independent review remains, including required Opus review of the constructor guard. No new AutoCAD test is needed solely for these test-tool changes; the production behaviours they assess remain separately pending.
+4. **Candidate UI, not accepted:** no-blue #1043 has 21 targeted checks passing and a freshly inspected compiled light calculation view; stacked Settings #1252 has 221 checks passing but no visual candidate inspection. After an authorised coordinated install, open CDS and visit every page in Light and Dark; confirm labels, units, bounds, keyboard/Cancel and staged values, then read saved values from an isolated test profile. Open Calculations -> Print -> Sections and export, verify grey/black styling, preview and inspect actual output. Do not save over Tim's live settings for this acceptance batch.
+5. **Open blockers:** BUG-307 drainage historical calculation mismatch; BUG-478 installer contracts (36 failures); BUG-568 structural proof-harness stall. The aborted Structural run is not a pass. Remaining AutoCAD workflows, drawing output and older releases stay unproven; consolidate them by related workflow cards rather than sending Tim the historical backlog.
+
 
 ## M-SET-01 Move My Settings (Manager) - BUILT as draft PRs #424 (tool) and #425 (button + packaging), Opus fixes in progress, NOT merged, NOT installed (30 Sep 2026 11:55): TIM'S AUTOCAD CHECKLIST (or a special Codex brief: AutoCAD must close itself and a second PC is needed)
 
