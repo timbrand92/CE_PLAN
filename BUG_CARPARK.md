@@ -3219,6 +3219,7 @@
 
 **Likely area (hypothesis only):** the palette host (auto-hidden or docked behind another tab, as CEBLOCKS and CEASK also show).
 
+**Codex real AutoCAD narrow PASS,14 October2026, Structural1.0.116+f180b349:** CSBRACINGPANEL appears visibly top right with Command Hub closed. Empty totals settle to0mm/required not set; Refresh and X close work. Reopening after actual2700mm horizontalAB reports2700mm East–West and0mm North–South, requirements not set. Screens253–255/275 localV3UX_20261014, verification130/134. Docked-Hub route and full unit/direction/requirement cases remain; do not mark wholebracing accepted.
 **Status:** OPEN (30 Sep 2026, found by Codex pass 18).
 
 **Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #415 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
