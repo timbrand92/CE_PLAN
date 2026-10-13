@@ -66,6 +66,8 @@
 **Status:** OPEN
 
 **Fresh isolation, 14 Oct 07:24 Melbourne:** PF2 placed with X800/Y800/depth450, point-2000,2000 and rotation0. Before any Undo/Redo of PF2, FEDIT offers depth0 and the live schedule shows PF2 depthUNKNOWN. Initial placement/readback is sufficient to reproduce. In contrast FEDIT explicitly re-entered PF1 depth350 with width1000; actual schedule updated immediately and still reads350 after FEDIT Undo/Redo and later PF2 creation. Screens145-153. Keep OPEN; editing depth again is a workaround. Proposed regression must inspect the element/editor/schedule immediately after FPFC, before recovery tests.
+**Strip route extension, 14 Oct:** FSF SF1 width400/depth300, native two-point straight line, successful outline and one Undo/delayedRedo. FEDIT correctly reads width400 but depth0; inspection cancelled. Screen157. Include strip placement in the proposed depth-retention guard; immediate-before-Undo proof is already established separately for PF2.
+
 ## BUG-578
 
 **Command / Area:** FST size-library Key field and FPFC pad-size lookup, realStructural1.0.116+f180b349,14Oct2026.
