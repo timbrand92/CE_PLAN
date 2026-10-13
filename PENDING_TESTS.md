@@ -1335,3 +1335,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Built, not installed:** draftPR1255 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1255, commit8789a8ed on codex/manager-header-contrast-20261014, exact installedManager48662ddd base. Modern/net48 builds0errors/0warnings; existingthemechecks3/3PASS; source-derivedstaticpictures inspected. Whitewordmark now follows liveheaderforeground; no settingswrites or behaviourchanges.
 2. **Real acceptance after combined authorisedinstallation:** CEMANAGER -> SettingsGeneral -> Light: read CEwordmark and subtitle; Discard restoresDark and savedsettingsunchanged. RepeatFollowAutoCAD and150%scaling. Check renderharness limitations in verification144-145; never count this candidate as realAutoCADcoverage. BUG580 remainsOPEN. No Timtesting requested before installation.
+
+## Floor/roof and bracing-truss runtime update,14October2026
+
+1. **Narrow Codex-accepted, Structural1.0.116+f180b349:** BT1 number0/10refused,9accepted, default2700mm/0degreeBT9/body, oneUndo/delayedRedo, liveprovidedNS0/EW2700, actualsave/reopen samebody/mark/total. R1 PointmodeEscape restorescontrols; RJSET correctpage/CancelbuttoncloseswithoutSave. Verification146-151/screens311-332.
+2. **Blocked output stays pending:** CSROOFSETOUT/CSFLOORSETOUT installedcommands disclose offdefault and Settingspage stilltobebuilt; onlythatdisclosuretested. R1/FJ1/P1 successsavesliveSettings; needsverifiedisolatedprofilebeforeplacement. No wholeUX-FRM05/11/14accepted, and no Timmanualrepeatrequested for narrowpasses.
+3. **Drafting observation:** BT9textcrossesitscircle atreadablezoom; proposalinIDEAS_INBOX. Approvedexpectedbubblelayout/actualplotcheck neededbeforeanysymbolchange. Noassertednewengineeringbugorblockrewrite. Controls/settingsrestored, ownedfixtureclosed, lease released. Accountweekly27%, 50%unverified.

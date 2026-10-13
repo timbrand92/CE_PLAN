@@ -2,8 +2,8 @@
 
 1. **Result first:** the complete product has not been verified, and 50% real AutoCAD coverage has not been reached. This report separates observed results, historical evidence and work not yet exercised. It is evidence attached to the release area, not a new plan. Author: this Codex test chat; exact request in decisions/2026-10-14_REAL_AUTOCAD_50_PERCENT.md.
 2. **Installed source checked today:** Civil 3.0.49+48662dddb2dc36d09a121642f36aecc2465cc673; Structural 1.0.116+f180b349a88617070a8517b563b2df7b5854131e. Manager 1.1.49+48662dddb2dc36d09a121642f36aecc2465cc673 was separately read at 00:30. No candidate was installed by this chat.
-3. **Current real AutoCAD result, 14 October2026:** personally exercised Civil pits/pipes/schedules, Structural settings/supports/beams/footings, wind and A/B bracing on owned copies. Detailed receipts63-143. Fourteen new bugs570-583 remain OPEN, plus evidence on existing bugs. Latest: normal brace switch/recovery and saved A/B-pair reopen pass; locked selected brace switch fails with an unhandled error (BUG583). No whole-product acceptance or50% claim.
-4. **Usage:** account weekly meter26% in the latest batch, versus11% at the original start. This is account-wide, not this chat's isolated spend. No reset credit, paid provider request, Claude dispatch or installation. Group real drawing cases and avoid repeating completed large suites; preserve10% reserve.
+3. **Current real AutoCAD result, 14 October2026:** personally exercised Civil pits/pipes/schedules, Structural settings/supports/beams/footings, wind and A/B bracing on owned copies. Detailed receipts63-151. Fourteen new bugs570-583 remain OPEN, plus evidence on existing bugs. Latest: normal brace switch/recovery and saved A/B-pair reopen pass; locked selected brace switch fails with an unhandled error (BUG583). No whole-product acceptance or50% claim.
+4. **Usage:** account weekly meter27% in the latest batch, versus11% at the original start. This is account-wide, not this chat's isolated spend. No reset credit, paid provider request, Claude dispatch or installation. Group real drawing cases and avoid repeating completed large suites; preserve10% reserve.
 
 ## What the percentage means
 
@@ -161,3 +161,10 @@
 
 1. **Draft repair1255:** CEwordmark now takes existing headerforeground so Light is dark/readable and Dark is pale. Shapes/proportions/height retained. Approved Batch3scope; separate exactinstalledManager sourcecopy used. No command or engineeringchanges.
 2. **Evidence:** modern/net48 buildsboth0errors/0warnings, existingappearancechecks3/3PASS, source-derivedstaticheaderbefore/after inspected. Not installed or driven in AutoCAD; BUG580 remainsOPEN. Livepreview/Discard/FollowAutoCAD/150% and subtitle runtime symptom need acceptance after combined authorisedinstall. No wholecoveragecredit or50%claim.
+
+## Floor/roof and bracing-truss runtime results,14October2026
+
+1. **Installed availability gap:** CSROOFSETOUT/CSFLOORSETOUT both state offdefault/nooutput and missingSettingspage. Their accepted-output paths remainBLOCKED, ratherthan countedcomplete. R1/FJ1/P1 savesliveSettings on success; output needsverifiedisolatedprofile. R1 Object/Pointprompt, PointEscape and correctRJSETpage/Cancel passnarrowly.
+2. **Bracingtruss output/recovery/persistence:** number0and10rejected,9accepted;2700mmhorizontalBT9/bodyplaced, oneUndo/delayedRedo, actualsave/reopenbody/mark/panelEW2700/NS0passed. Requiredlengthsremainnotset. Noengineeringadequacyaccepted.
+3. **Visualimprovement parked:** BT9textwiderthanbubble/circlelinecrossesletters, screenshot320; IDEAS_INBOX preservesobservation. Compareapprovedsymbolandnormalplotbeforechange. Thisisnot a redesignedblockorfixedbug.
+4. **Evidence/cleanup:** verification146-151, localcaseledger9narrowPASS/2BLOCKED, screens311-332. Settingsunchanged, controlsrestored, fixtureclosed/lease released. Weekly27%accountused; full50%coverageaudit incomplete. CandidateManagerrepair1255stilluninstalled.
