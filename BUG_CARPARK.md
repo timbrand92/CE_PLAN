@@ -2934,6 +2934,8 @@
 
 ## BUG-213
 
+**Fresh real AutoCAD FAIL, 14 Oct 2026 05:29, Civil3.0.49:** same dead end still present on FIX_MODERN_PIPE_W1 copy. Source says older/unlinked schedule preserved and deliberately re-place; Placement only offers disabled Update existing schedule, no enabled replacement action. Screenshots local V3UX_20261014/39-schedule-source-legacy.png and40-schedule-legacy-deadend.png. Export works separately; no old-table replacement attempted, no copy saved. Existing expected workflow/retest unchanged; not fixed.
+
 **Command / Area:** Pit Schedule > Placement for an older schedule (Civil 3.0.15).
 
 **What Codex did (pass 18, DWG-B_P18 and DWG-A copies, 30 Sep 00:30-01:10):** opened PITSCHEDULE > Placement in drawings whose schedule was placed by an older build.
