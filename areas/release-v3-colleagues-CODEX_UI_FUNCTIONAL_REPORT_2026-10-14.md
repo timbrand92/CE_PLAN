@@ -156,3 +156,8 @@
 2. **Failure BUG583:** ABS on one locked B opens unhandled eOnLockedLayer; stack names Abswitch/AbsShort. Continue recovers; geometry, totals and lock remain. Expected plain refusal. Mixedselection and lockedtarget not tested; behaviour repair remains Claude-owned and no fix installed.
 3. **Remaining:** diagonal/metre/rotated-plan cases, other braces, Xref/REFEDIT, mixedselection, automaticflip and required-length edits under isolatedsettings. Local wind/bracing ledger22 exact assertions:20PASS/2FAIL. This supersedes earlier pending B/vertical/lateCancel/disk branches only; it does not accept whole UX-FRM14 or BUG503.
 4. **Cleanup:** ownedpair saved/reopened/closed, CEsettings unchanged, autosave5/snaps5375/layer0/mmunits4 and both brace-layer locks restored. Own controllease released. Synthetic N2 is only a persistence fixture, no engineering adequacy accepted. Goalactive; next related tests and approved UI fixes remain.
+
+## Manager header contrast repair candidate,14October2026
+
+1. **Draft repair1255:** CEwordmark now takes existing headerforeground so Light is dark/readable and Dark is pale. Shapes/proportions/height retained. Approved Batch3scope; separate exactinstalledManager sourcecopy used. No command or engineeringchanges.
+2. **Evidence:** modern/net48 buildsboth0errors/0warnings, existingappearancechecks3/3PASS, source-derivedstaticheaderbefore/after inspected. Not installed or driven in AutoCAD; BUG580 remainsOPEN. Livepreview/Discard/FollowAutoCAD/150% and subtitle runtime symptom need acceptance after combined authorisedinstall. No wholecoveragecredit or50%claim.

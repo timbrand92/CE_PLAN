@@ -70,8 +70,9 @@
 1. **Area/status:** CEMANAGER General theme preview, Manager1.1.49+48662ddd, OPEN. Personally seen14Oct2026 on AutoCAD2027, default1311x1073.
 2. **Trigger/expected:** SettingsGeneral -> UIThemeLight (stage only). Expected: the CE identity and SuiteManager subtitle remain readable on the light header, with the approved neutral theme colours.
 3. **Observed:** the white CREATIVE ENGINEERING brand and white SuiteManager subtitle retain their dark-theme colour against the nearly-white header and become barely visible. Other body text switches dark correctly; blue APPEARANCE remains existingBUG517. Actualscreen186. Discard immediately restoresDark/nochanges, screen187; allthree watchedsettings hashes/lengths/timestamps matchSTART. NoApply pressed.
-4. **Proposed guard:** use a light-appropriate brand/subtitle asset or foreground; inspect the actual header in Light/Dark/FollowAutoCAD at supportedwindow/DPI sizes. Keep live theme preview and Discard behaviour. User-facing visual repair needs its reviewedcard beforecode; no deployment by thischat.
+4. **Proposed guard:** use a light-appropriate brand/subtitle asset or foreground; inspect the actual header in Light/Dark/FollowAutoCAD at supportedwindow/DPI sizes. Keep live theme preview and Discard behaviour. Standing approved Batch3/INT075 already authorises this neutral contrast correction; no separate new approval is required. No deployment by thischat.
 5. **Acceptance steps:** CEMANAGER -> SettingsGeneral -> Light; read both headernameandSuiteManagersubtitle without zoom; Discard restoresDark and savedsettings unchanged. After authorisedcandidateinstall alsoApply/reopen in isolatedprofile. Screenshot186/187 localV3UX_20261014. This is legibility, distinct from existing blue-colour BUG517.
+6. **Candidate14October2026:** draftPR1255, commit8789a8ed, based on installed48662ddd. Existing white-wordmark transparency now masks the live UiHeroHeaderTextBrush, preserving originalproportions/22pxheight. Both modern/net48 builds0warnings/0errors; existingappearancechecks3/3PASS; static source-derived Light/Dark renders personally inspected. Not installed, no realAutoCAD candidateacceptance; subtitle sourcebrush alreadyappropriate, runtime symptom still to check. Combine with approved theme work before installation. BUG580 remainsOPEN. Verification144-145 holds limitations and regressionchecklist.
 ## BUG-579
 
 **Command / Area:** FPFC depth, FEDIT readback and CSFOOTINGSCHEDULE, installedStructural1.0.116+f180b349, real14Oct2026.
@@ -7645,3 +7646,4 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Evidence:** Codex verification receipt141; local-only screenshots301-305 under V3UX_20261014. Source read at f180b349: Modules/Structural/Commands/BracingCommands.cs Abswitch opens selected block ForWrite without a selected-layer preflight or catch. Stack confirms this command; no full AutoCAD crash or drawing-loss claim. Claude behaviour repair lane; not changed or deployed by this testing chat.
 
 **Status:** OPEN - reproduced in real AutoCAD14October2026. No fix installed or accepted.
+
