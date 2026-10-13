@@ -1,0 +1,5 @@
+# Tim's instruction: test everything built against V3 and UX
+
+1. **Tim, 13 October 2026, Melbourne:** "check against the overall ui /ux and v3 plans i need you to test as much as you can whilst managing weekly usage, the goal is to get everrything that is built so far tested with all issues, improvements and upgrades being made by you or claude and added to the plan /bug documents"
+2. **Scope:** test existing built work against MASTER_PLAN.md and 04_REFERENCE/ux-plan/V3_UX_PLAN.md; record evidence and gaps in the existing release area, bugs in BUG_CARPARK.md and proposals in IDEAS_INBOX.md. This instruction does not approve an unreviewed engineering decision or retire an existing workflow.
+3. **Verification owner:** CE_ACAD / release-v3-colleagues / test / 01, Codex desktop thread 01a1340f-889f-7ea3-a1dd-6eca1fb8dd8a. Isolated code checkout C:\ce-uxv13. Own evidence record: areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md. Existing controller, desk, queues and builder files remain with their owners.
