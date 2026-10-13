@@ -1414,6 +1414,8 @@
 
 ## BUG-318
 
+**Codex 13 Oct 2026, installed Structural source f180b349:** an ordinary Structural.Tests run still overwrites fourteen tracked structural-ribbon dark/light PNGs (RibbonPresentationTests.cs:269), without CE_UPDATE_DOC_SCREENSHOTS opt-in. Actual generated pictures preserved locally under V3UX_20261013/structural-ribbon-renders; only this chat's rewritten files restored. Proposed targeted repair: ordinary screenshots go to TestContext's output V3_WINDOWS folder; explicit CE_UPDATE_DOC_SCREENSHOTS=1 retains the approved documentation-refresh route. Guard: ordinary render leaves git diff empty for the fourteen pictures; explicit refresh still targets documentation. **Still OPEN; testing-tools follow-up, no UI behaviour change.**
+
 **Command / Area:** test hygiene (from the PR #497 builder, 2 Oct): (1) four `CalculationsWindowViewModelTests` fail only in some run orders and are not on the known-failure list; (2) test runs rewrite and add `docs/image/V3_WINDOWS/*.png` files in the working tree (the Opus finalizer had to restore 135 and delete 12 by hand); (3) `ManagerReleasePayload_HasTrackedManifestAndThreeLaneLocalAssets` was already red on the train for a missing target, which is why the Manager 1.1.10 status-bar drift (BUG-219) was never caught.
 
 **Status:** OPEN (2 Oct 00:40).
