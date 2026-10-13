@@ -262,6 +262,8 @@
 
 ---
 
+**Additional actual wording failure, 14 Oct2026 Civil3.0.49:** directMR selecteda lockedplainrectangle onownedlayer0. Safe refusal beforebasepoint, lockretained, geometryunchanged; but visiblefirstline says CE transform stopped (eOnLockedLayer). Drawing changes rolled back. The nextline correctlyexplainslockedobject/attribute. Screen212localV3UX_20261014. Keepinternalerrorcodeinlogs anduseplainvisiblewording; do notweakenlocked-objectguard. Source/repairownerbehaviourlane, reviewedcardbeforecode.
+
 ## BUG-367
 
 **Command / Area:** Structural train S-9 Opus finalizer (af428d0674b61956d, branch claude/rel-20261013s fb7cd0bb GO, no fixes; report `S9_OPUS_FINALIZER_2026-10-03.md`). Checked by reading: #566 layers created before any object gets them (existing LOCKED 35CONT: plain line 'Layer 35CONT is locked, so CE drew no reo bar...', nothing unlocked, no crash; one U also removes a 35CONT CE just made: wanted), #562 strip-or-pad test matches the outline builder type for type, #563 reo bars use the footing schedule's unit rule (2 ft bar reads 'x 610 LG'; mm unchanged); no merge slips; 11092 -> 11117 test lines.
