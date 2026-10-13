@@ -3274,6 +3274,8 @@
 
 ---
 
+**Codex re-test FAIL, 14 Oct 2026, Manager1.1.49+48662ddd:** actualCEMANAGER Status at1311x1073 and maximised1920x1080. Allthree Runningnow version/hash labels still overlap Installednextstart numbers; maximising retains fixed-widthcards. UnderlyingUIA values match actualrunning Civil3.0.49,Manager1.1.49,Structural1.0.116, but visibletext merges. Screens170/171 localV3UX_20261014. KeepOPEN; every card needs full40-characterhash and next-start value legible without collision at bothsizes.
+
 ## BUG-222
 
 **Command / Area:** CEMANAGER > Settings > Civil form (Manager 1.1.15). Breaks Tim's rule: high-use windows never scroll their layout (tabs or regroup; long lists and help pages may scroll).
