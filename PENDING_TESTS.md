@@ -1313,3 +1313,9 @@ Two commands ported from the retired root LISP file CLOSED MLINE.lsp (Tim, 20 Se
 ## NOTE 9 Oct 2026 - REDO after switching drawings (BUG-558, not reproduced)
 
 Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four missing xrefs) after U, switch to another drawing, switch back, REDO; run 3 could not reproduce it (5 of 5 PASS on fresh copies); run 4 repeats run 2's exact order. If it recurs, note whether UNDO 2 or an autosave ('Automatic save to ...' in the history) came first. Codex brief W49 item W49-07b repeats the switch check on a Civil drawing without missing xrefs. Autosave between U and REDO is AutoCAD's own rule, not a CE fault.
+
+## Codex free-ended pipe follow-up,14 October2026
+
+1. **Narrow Codex-accepted, installed Civil3.0.49:** draw-first free-ended225UPVC with firstIL19.50 and calculated second19.40; actual grade1in100/right arrow, repeatEscape, oneU/delayedREDO, editor readback and actual QSAVE/CLOSE/disk reopen. Diameter-only edit225->300 retains levels/grade/direction; Undo restores225. Verification receipts121-126, local screens217-246.
+2. **Outstanding:** BUG582 NewPipe calculated-end preview/status falsely Unknown; BUG572 first Inspector selection after reopen cannot read saved records until editor opened; BUG256 controlled diameter-edit delayedRedo fails with autosave0 and no intervening action. No whole pipe-edit acceptance. Other types, multiple edit, protected objects and units remain pending.
+3. **Coverage and usage:** source-traceable inventory508 UX IDs; historical509 mismatch and whole-case latest-verdict evidence still being reconciled. No50% claim. Account weekly24%; holiday hours override allows testing whenever needed until29October, no new installation authority implied.
