@@ -1560,3 +1560,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **608/609OPEN:** realStructural1.0.116NAfirstitem0/3withoutreason/persistsreopen;closed-DWGpalettekeepsstalestatesandcontrols. Codexprompt/contextdisplayplusClaudecanonicalrecord/targetcontract. No productionrepairinstalled.
 2. **Representativeacceptance:** Xref4templateCancelleavesnone;Apply0/4,N/Ablank/Cancelkeeps0/4,validsyntheticreason0/3withtraceablereason/user/timeafterreopen/report. UndoNArestores0/4. CloseAclears/disables;Bwithoutchecklistshowsnone;returnAloadsitsownrecord. AutomaticFail/Unknowncannotbemanuallypassed. NativeUndoRedo/protection/olderruntimeindependent.
 3. **Evidence:** verification325-327/local782-802/checklistledger. Syntheticmanualtickcontrolsarenotengineeringacceptance;missedclick784/unexpectedHelp800excluded. SavedNAfaultB39551DBpreserved,copyclosed,threeCEpreferencesunchanged,paletteopened/resizedintentionally.
+
+
+### Codex Structural checklist context/Undo —15October2026
+
+1. **Narrow native PASS:** ordinaryA/B context isolation, itemnoteCancel/reopenblank and Escape.609 remains stale at finaldocumentclose;608 still reasonlessN/A.
+2. **610OPEN representative check:** fresh saved four-itemA (firstN/A), UndoN/A0/4, immediate nativeUndo0/3/Redo0/4 BEFORE switching, retain same four identities; thenA/B switching and actualsave/reopen agree. Currentdiagnostic insteadshowedNoChecklistafterUndo/reactivation; record-losscauseunproved,after-switchNothingtoredonotattributedtoCE. Claude storage/Undo plus Codex context display, no productionrepairinstalled.
+3. **Evidence:** verification328-331/local803-818; savedA/B and threepreferencesunchanged; no client drawings or engineering approvals.2027 and2024 acceptance separate.

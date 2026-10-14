@@ -405,3 +405,10 @@
 2. **608OPEN:** N/Arequiresnoreason,immediatelyexcludesfirstitem0/3;QSAVE/close/reopenretainsreasonlessNA. Existingwindowpromptneedsdurablereason/decisioncontractfromcanonicalstorage,notaprompt-onlyfix.
 3. **609OPEN:** withnoDWGopen,palettekeepslastchecklistandactive-lookingcontrols;afterdiscardkeepsdiscarded0/4whilefilepreserves0/3. No wrong-targetwriteproved. Clear/disablecontextmustfollowactivedrawingidentity.
 4. **Evidence/limits:** savedfaultB39551DBlocalonly,copyclosed,threepreferencesunchanged;paletteopened/resizedduringtest. NativeUndoRedo,automaticFail/Unknownprotection,QA01convergence,reports,A-Bswitch/protection/olderruntimeunproved.305narrowchecks237PASS52FAIL6BLOCKED10UNPROVEN;50%wholecoverageUNKNOWN,weekly73%used/10%reserve.
+
+
+### 15 October — checklist drawing context, notes and Undo
+
+1. **Codex-accepted narrowly:** ordinary A/B switching shows each drawing's own checklist; B has none, A restores its saved0/3. Item Note Cancel discards typed text, reopen blank; Escape returns safely. Last-drawing stale display609 remains OPEN.
+2. **610OPEN:** after UndoN/A0/4 and nativeUndo, activation back toA shows NoChecklist. Exact record loss/grouping unproved; Redo after drawing switches cannot isolate CE failure. Needs immediateUndoRedo and record evidence before switching. No persisted loss claimed.
+3. **Evidence:** local803-818 and context-cleanup-proof; both drawings closed SaveNo, hashes and three preferences unchanged.310narrowchecks241PASS53FAIL6BLOCKED10UNPROVEN;508hashedfiles/zero integrity faults. Whole50%UNKNOWN; older runtime, automaticQA protection, report and exact recovery remain untested.
