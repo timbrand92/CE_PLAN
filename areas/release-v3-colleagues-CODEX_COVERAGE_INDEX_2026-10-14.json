@@ -18,35 +18,35 @@
     "bugHeadings": 569,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 38,
-    "narrowCases": 519,
+    "caseLedgers": 39,
+    "narrowCases": 523,
     "narrowVerdicts": {
-      "PASS": 407,
+      "PASS": 411,
       "FAIL": 90,
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 1015,
+    "uniqueEvidenceFiles": 1027,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 964,
-    "uniqueMetadataFiles": 51,
+    "uniqueScreenshotFiles": 972,
+    "uniqueMetadataFiles": 55,
     "caseLinkedUxIds": 14,
     "caseLinkedBugIds": 62,
-    "newNativeExecutionsInLatestReconciliation": 6,
+    "newNativeExecutionsInLatestReconciliation": 4,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1022
+    "retainedDeclaredEvidenceFiles": 1034
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "519 bounded native checks across38 ledgers are not complete V3 features; full inventory and built/installed eligibility remain incomplete. 50% is UNKNOWN.",
+    "reason": "523 bounded native checks across39 ledgers are not complete V3 features; full inventory and built/installed eligibility remain incomplete. 50% is UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -25188,7 +25188,11 @@
             "hatch-gap-case-ledger.json::HG-03",
             "hatch-gap-case-ledger.json::HG-04",
             "hatch-gap-case-ledger.json::HG-05",
-            "hatch-gap-case-ledger.json::HG-06"
+            "hatch-gap-case-ledger.json::HG-06",
+            "hatch-gap-recovery-case-ledger.json::HGR-01",
+            "hatch-gap-recovery-case-ledger.json::HGR-02",
+            "hatch-gap-recovery-case-ledger.json::HGR-03",
+            "hatch-gap-recovery-case-ledger.json::HGR-04"
           ],
           "associatedWorkflowCaseKeys": [
             "hatch-batch-gap-case-ledger.json::HB-04",
@@ -25197,7 +25201,11 @@
             "hatch-gap-case-ledger.json::HG-03",
             "hatch-gap-case-ledger.json::HG-04",
             "hatch-gap-case-ledger.json::HG-05",
-            "hatch-gap-case-ledger.json::HG-06"
+            "hatch-gap-case-ledger.json::HG-06",
+            "hatch-gap-recovery-case-ledger.json::HGR-01",
+            "hatch-gap-recovery-case-ledger.json::HGR-02",
+            "hatch-gap-recovery-case-ledger.json::HGR-03",
+            "hatch-gap-recovery-case-ledger.json::HGR-04"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
@@ -30959,10 +30967,10 @@
         }
       ],
       "associatedEntryCount": 77,
-      "associatedCaseCount": 519,
+      "associatedCaseCount": 523,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 38
+      "currentLedgerCount": 39
     }
   },
   "currentNewBugStatusAudit": {
@@ -31023,8 +31031,8 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 55,
-    "ownLeaseReleased": false,
+    "newNativeChecks": 59,
+    "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
       "quote": "lets take usage to 0% left then i will reset"
@@ -31032,13 +31040,13 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1015,
-    "retainedDeclaredFiles": 1022,
-    "directScreens": 964,
-    "directMetadata": 51,
+    "directCaseLinkedFiles": 1027,
+    "retainedDeclaredFiles": 1034,
+    "directScreens": 972,
+    "directMetadata": 55,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All519 cases38 ledgers; all1022 retained files rehashed; seven unlinked setup/cleanup screenshots excluded from direct count."
+    "scope": "All523 cases39 ledgers; all1034 retained files rehashed; seven unlinked setup/cleanup screenshots excluded from direct count."
   }
 }

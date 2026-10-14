@@ -2,18 +2,20 @@
 
 ## Current position — 15 October 2026, Melbourne
 
-1. **Testing:** 519 recorded checks in real AutoCAD across 38 evidence ledgers: **407 PASS, 90 FAIL, 6 BLOCKED and 16 UNPROVEN**. These are specific checks, not 513 complete features.
-2. **Progress since the usage override:** 55 new native checks executed after Tim said, “lets take usage to 0% left then i will reset”. Separately, 98 earlier checks were recovered from existing evidence; those were not new executions.
+1. **Testing:** 523 recorded checks in real AutoCAD across 39 evidence ledgers: **411 PASS, 90 FAIL, 6 BLOCKED and 16 UNPROVEN**. These are specific checks, not 513 complete features.
+2. **Progress since the usage override:** 59 new native checks executed after Tim said, “lets take usage to 0% left then i will reset”. Separately, 98 earlier checks were recovered from existing evidence; those were not new executions.
 3. **Overall target:** 50% of the complete V3/UX scope is **not yet verified**. The earlier 7% was a historical text-matching estimate. The complete eligible feature inventory still needs reconciliation, so no current whole-product percentage is claimed.
-4. **Evidence and scope:** 1,015 directly case-linked files: 964 screenshots and 51 metadata files. Seven additional setup/cleanup screenshots are retained separately. All 1,022 retained files were rehashed successfully; no missing or changed evidence files found. The index retains all 526 explicit UX ruling IDs, 569 root bug records and 523 installed catalogue entries. Cases link to 77 catalogue records; that does not mean 77 workflows are accepted.
+4. **Evidence and scope:** 1,027 directly case-linked files: 972 screenshots and 55 metadata files. Seven additional setup/cleanup screenshots are retained separately. All 1,034 retained files were rehashed successfully; no missing or changed evidence files found. The index retains all 526 explicit UX ruling IDs, 569 root bug records and 523 installed catalogue entries. Cases link to 77 catalogue records; that does not mean 77 workflows are accepted.
 5. **Bugs:** 50 new bugs, BUG-570 through BUG-619, remain OPEN. Repairs saved in draft pull requests are candidates; they have not been installed or accepted through these tests. No deployment was performed by this chat.
 6. **Usage:** reset confirmed by Tim; latest account-wide meter **1% used, 99% remaining**. Tim’s instruction supersedes the former 10% reserve. Continue useful work until exhausted; Tim redeems any reset. No reset or paid provider request used.
-7. **Latest safe state:** owned batch and saved gap copies open for continued work; drawing controls restored to their prior values; own test-station lease held. The older unresponsive BUG-595 session remains untouched. Source drawings and saved settings have unchanged hashes.
-8. **Still untested:** remaining built commands, complete workflow mapping, gap Undo/Redo/reopen and moved-boundary behaviour, plotting, protected-object variants, scale/units/UCS combinations, calculation links and older AutoCAD versions. Engineering decisions still need Tim’s acceptance.
+7. **Latest safe state:** all owned test drawings closed; drawing controls restored to their prior values; own test-station lease released. The older unresponsive BUG-595 session remains untouched. Source drawings and saved settings have unchanged hashes.
+8. **Still untested:** remaining built commands, complete workflow mapping, gap placement Undo/Redo, grip/stretch/rotation, plotting, protected-object variants, scale/units/UCS combinations, calculation links and older AutoCAD versions. Engineering decisions still need Tim’s acceptance.
 
-9. **Record audit:** all 519 case keys are unique, all 38 ledgers are represented, and calculated verdict totals match. The earlier 1,022 case-linked count included seven unlinked setup/cleanup screenshots; corrected without adding or changing any native result.
+9. **Record audit:** all 523 case keys are unique, all 39 ledgers are represented, and calculated verdict totals match. The earlier 1,034 case-linked count included seven unlinked setup/cleanup screenshots; corrected without adding or changing any native result.
 
 ## Latest native results
+
+1. **Gap follow-through — 4 further PASS:** the saved hatch survives actual close/reopen with matching native properties. Moving only its open boundary 500 mm moves the hatch too, even with gap tolerance restored to zero. One Undo restores both; Redo after 34.7 seconds restores the move with identical native records. This proves MOVE recovery, not Undo of original CE hatch creation. Both test copies closed without saving the movement trial; saved drawings/settings hashes unchanged.
 
 1. **Gap assistance — 6 new checks:** 5 PASS, 1 FAIL. A 5 mm tolerance creates one native associative concrete hatch across a measured 2 mm opening and safely refuses a 20 mm opening. Both outlines retain their original open geometry; the prior hatch survives the refused attempt exactly. Negative tolerance is refused; controls restored and owned copy saved. Preview-before-Apply remains missing (BUG-615). Gap Undo/Redo, moved-boundary association, reopen, plots and protected-content cases remain untested.
 
@@ -27,7 +29,7 @@
 
 ## What this means on a drawing — explanation for Tim, 15 October
 
-1. **Context:** 513 specific checks were driven in real AutoCAD 2027 on Tim’s PC, using installed plugins and owned metric synthetic drawings/copies. These include ordinary use, awkward inputs, Escape, Undo/Redo and selected save/reopen scenarios. They do not establish complete production-job or older-version reliability.
+1. **Context:** 523 specific checks were driven in real AutoCAD 2027 on Tim’s PC, using installed plugins and owned metric synthetic drawings/copies. These include ordinary use, awkward inputs, Escape, Undo/Redo and selected save/reopen scenarios. They do not establish complete production-job or older-version reliability.
 2. **Civil exercised:** parts of pit/pipe creation and editing, schedules, levels and fall arrows, rainfall/catchments, drainage calculators/exports, profiles, LandXML, drawing checks and comparison. Working parts coexist with wrong/stale retained information, schedule wording/layout faults and import/report gaps. Each passing case is narrow.
 3. **Structural exercised:** parts of supports, beams/footings, rafters/joists/purlins, wind/bracing, steel sections, RC beams/columns, checklists, hatches and Xref utilities. Native hatch association, separate batch output and Xref property preservation pass in recorded cases. RC outline/reinforcement separation, wrong retained widths, checklist persistence and failed audit/change/copy operations remain open.
 4. **UI/UX evidence:** actual windows were inspected for fit, visible buttons/footers, search and selection, preview updates, wording and safe cancellation. Drawing output was checked separately. A tidy window does not prove correct output or the approved workflow.
