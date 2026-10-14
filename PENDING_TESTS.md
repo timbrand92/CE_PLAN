@@ -1573,3 +1573,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Supersedes cause-isolation remainder:** native819-824 proves NoChecklistafterUndo/QSAVE/reopenwithoutdrawing-switchornotes.610HIGH/OPEN; actualinternal deletionversusunreadablerecordunproved. IndependentimmediateRedo825-831beforeanyswitchrecoversfouritems0/4andsurvivesreopen.
 2. **Remainingrepairacceptance:** oneUndoofN/Aeditrestoresreadablefour-itemchecklistand0/3;Redo0/4;actualrecordandpaletteagree,thenA/Bswitch/save/reopen. PreservecanonicalQAauthority/identity;Claude storage/Undo andCodexrefresh. ImmediateRedoPASSdoesnotclose610.2024/protectedtargets/otheredittypesstillpending.
+
+
+### Codex609lifecycle regressionready—15October2026
+
+1. **PR1260/6e01714a:**tests-onlychild1254;3modern2PASS1FAIL/zero skipped104ms. Compiledclose/no-currentrefreshroutefails,activationandlistenercleanupcontrolsPASS. net48build0errors10warnings25.67s,noruntimePASS. REDdontmergealone; no productionrepairinstalled.
+2. **Combineandnativeacceptance:** lastdrawingcloseclearschecklist/showsNo drawing open/disablesdrawingactions;Bwithoutchecklistnone,returnAownrecord. Timing/rapid-switch/protections/2024separate. Exact610Undo/readbackfailureseparate;immediateRedoPASSdoesnotcloseit.

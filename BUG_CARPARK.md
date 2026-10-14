@@ -8070,6 +8070,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Retest:** Achecklist0of3,closeA,No drawing open/actionsdisabled;openBwithoutchecklistshowsNoChecklist;reopenAretains0of3;fastA/Bswitchneveruseswrongrecord. WarmUIafterdiscardcannotpresentdiscardedstateascurrent. Save/readback/protection/olderruntimeandwrong-targetmutationguardseparate. Local794/795/802.
 
 
+6. **Compiled regression guard banked,15October:** draftPR1260/6e01714abaff48143e29837a74a95592c4fe1517, tests-only child of1254. Three modern checks executed2PASS1FAIL/0skipped/104ms: activation reaches checklistread and disposal removes document listeners; close/no-current-drawing refresh route FAIL. Real compiled MainPalette inspected, including nestedcallbacks; no constructor/drawing/template/preference opened by guard. This is wiring, not actual event timing/disabled-action acceptance.
+7. **Build/ownership:** correctednet48testproject0errors10warnings25.67s,no runtimePASS. Initialabsolute-referenceomissionfailed76setuperrors,notpluginfault. MainPalette/ChecklistPanel source matchesinstalledf180b349 and ancestor verified; PR464 alreadyincluded, but other pending palettefilechanges mean no overlapping productionedit. Newownedtest/REGLOGonly; original1254unchanged. Combineguardwithcanonicalcloselifecyclerepair;REDdontmergealone.609OPEN/no install.
+
 ## BUG-610
 
 **Status:** OPEN — observed in real AutoCAD 2027, installed Structural1.0.116+f180b349, 15 October2026.

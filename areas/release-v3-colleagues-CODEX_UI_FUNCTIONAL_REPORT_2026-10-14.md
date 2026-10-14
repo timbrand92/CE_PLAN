@@ -419,3 +419,9 @@
 1. **610 now HIGH:** oneN/Achange/nativeUndo/QSAVE/reopenwithoutdrawing-switchornotes givesNoChecklist. Persistentunavailability proved; deletionversusunreadableinternalrecordunproved. Originalbaselineintact.
 2. **ImmediateRedo works narrowly:** secondfreshcopyUndo/immediateRedo before anyswitchreports Everythingredone;save/reopenretainsfouritems0/4. ThisdoesnotacceptUndo or fix610. Bothreadbacksclosednormally/preferencesunchanged.
 3. **Currentrecord:**312narrowchecks243PASS53FAIL6BLOCKED10UNPROVEN;526hashedfiles/0integrityfaults. Overall50%UNKNOWN. Native2024/protectedtargets/automaticQA/report andrepairacceptancepending;weekly75%account-wideused/10%reserve.
+
+
+### 15 October — checklist close regression ready
+
+1. **Banked tests-only:** PR1260/6e01714a, child of1254; threecompiledwiringchecks2PASS1FAIL/zero skipped/104ms. ActivationandlistenercleanupPASS,closerefreshFAIL. Correctednet48build0errors10warnings25.67s,no runtimePASS.
+2. **Limits:** no productionrepairinstalled,609/610OPEN;eventtiming/disabledactionsstillneednativeacceptance. Sourcechecksdonotaddto312nativeassertionsor50%coverage. Original1254unchanged;newREDguardmustcombinewithmatchingrepair. Nextdistinctinstalledsectioncommandsnotyetcase-covered.
