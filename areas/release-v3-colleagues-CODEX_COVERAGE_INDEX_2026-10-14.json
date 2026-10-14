@@ -17,25 +17,26 @@
     "bugHeadings": 563,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 28,
-    "narrowCases": 395,
+    "caseLedgers": 29,
+    "narrowCases": 436,
     "narrowVerdicts": {
-      "PASS": 308,
-      "FAIL": 67,
+      "PASS": 340,
+      "FAIL": 75,
       "BLOCKED": 6,
-      "UNPROVEN": 14
+      "UNPROVEN": 15
     },
-    "uniqueEvidenceFiles": 705,
+    "uniqueEvidenceFiles": 813,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 677,
-    "uniqueMetadataFiles": 28,
+    "uniqueScreenshotFiles": 783,
+    "uniqueMetadataFiles": 30,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 43,
+    "caseLinkedBugIds": 49,
     "newNativeExecutionsInLatestReconciliation": 0,
-    "earlierCasesAddedInLatestReconciliation": 37
+    "earlierCasesAddedInLatestReconciliation": 41,
+    "earlierCasesRecoveredThisTurn": 78
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -7137,7 +7138,11 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-structural-case-ledger.json::ES-29",
+        "early-structural-case-ledger.json::ES-32",
+        "early-structural-case-ledger.json::ES-34"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7150,7 +7155,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-structural-case-ledger.json::ES-27"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7163,7 +7170,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-structural-case-ledger.json::ES-17"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7176,7 +7185,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-structural-case-ledger.json::ES-13"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7189,7 +7200,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-structural-case-ledger.json::ES-04"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -12284,7 +12297,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-structural-case-ledger.json::ES-26"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -14168,7 +14183,7 @@
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 7:52:25 am",
+  "capturedMelbourne": "15/10/2026, 7:56:36 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -14274,7 +14289,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 7:52:25 am",
+      "capturedMelbourne": "15/10/2026, 7:56:36 am",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -14611,7 +14626,7 @@
           ]
         }
       ],
-      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted. Earlier Civil37cases now reconciled from original14October receipts63-80/121-128, not newly executed; addedCDS/PIT/CDEDIT associations,38records/395currentcases. EarlierStructural/Manager receipts still pending; mappingCompletefalse.",
+      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted. Earlier Civil37cases now reconciled from original14October receipts63-80/121-128, not newly executed; addedCDS/PIT/CDEDIT associations,38records/395currentcases. EarlierStructural/Manager receipts still pending; mappingCompletefalse. EarlierStructural41cases reconciled from81-103/114,notnewruns;17additional command records now associated,55records/436cases.23settingspagesremainone layoutgroup;inconclusiveCancelUNPROVEN;579depth failures and454tinylabel retained.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -17805,11 +17820,74 @@
           "label": "CE Settings",
           "group": "",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-01",
+            "early-structural-case-ledger.json::ES-02",
+            "early-structural-case-ledger.json::ES-03",
+            "early-structural-case-ledger.json::ES-04",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-01",
+              "numbers": [
+                81
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CESETTINGS13main pages plusnestedsections23distinctpages visuallyfit1080p/footer; one layout group,not23functionalPASSorengineeringapproval."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-02",
+              "numbers": [
+                82
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "StageGeneralpause5->6,navigate,Escapecloses; settingsunchanged and reopen5. No staged-change warning observed; Save/Reset nottested."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-03",
+              "numbers": [
+                82
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Original Cancelbutton clicks/retry didnotvisiblyclose; exacttarget/actioncompletionunproven. Escape route separatelyPASS,notprovenCancelproductfailure."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-04",
+              "numbers": [
+                83
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "StructuralSettingsInstallation says1.0.1.0 while actualinstalled/status1.0.116+f180b349,not correctinstalledversion."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                81
+              ],
+              "command": "CESETTINGS",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::8::CEMARKUPDWGEXPORT",
@@ -19623,11 +19701,74 @@
           "label": "Beam Regular",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-17",
+            "early-structural-case-ledger.json::ES-19",
+            "early-structural-case-ledger.json::ES-20",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-17",
+              "numbers": [
+                91
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "UnitlessINSUNITS0 regular1typedtwice/toolbar,lower2andspecial4producegenericpromptfailedretry;liveflushedlogneedsmm/metres/inches. Misleadingrefusal,nounsupported-unitoutputclaim."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-19",
+              "numbers": [
+                92
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "AfterexplicitownedINSUNITS4,regular1C1andsteelend/B1previewAcceptwritescyanline/whiteB1,keepssupports. No sizing/linking/gripacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-20",
+              "numbers": [
+                92
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "RegularbeamoneUndo removesline+B1only;quiet12secondRedo restoresboth/supportsretained."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                91
+              ],
+              "command": "1",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::130::2",
@@ -19637,11 +19778,64 @@
           "label": "Beam Lower",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-17",
+            "early-structural-case-ledger.json::ES-21",
+            "early-structural-case-ledger.json::ES-22",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-17",
+              "numbers": [
+                91
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "UnitlessINSUNITS0 regular1typedtwice/toolbar,lower2andspecial4producegenericpromptfailedretry;liveflushedlogneedsmm/metres/inches. Misleadingrefusal,nounsupported-unitoutputclaim."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-21",
+              "numbers": [
+                93
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Lower2sameC1bothendsplainlyrefuses/endswithoutnewoutput."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-22",
+              "numbers": [
+                93
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Lower2C1/DS2/B2yellowpreviewCancelremovespreview/mark,retainsB1/supports. Acceptedloweroutputnotexecuted."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                91
+              ],
+              "command": "2",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::131::4",
@@ -19651,11 +19845,44 @@
           "label": "Beam Special",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-17",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-17",
+              "numbers": [
+                91
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "UnitlessINSUNITS0 regular1typedtwice/toolbar,lower2andspecial4producegenericpromptfailedretry;liveflushedlogneedsmm/metres/inches. Misleadingrefusal,nounsupported-unitoutputclaim."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                91
+              ],
+              "command": "4",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::132::5",
@@ -19665,11 +19892,44 @@
           "label": "Beam Offset",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-18",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-18",
+              "numbers": [
+                91
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Offsetbeam5typepromptEscape reports honestcancel/nothingwritten."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                91
+              ],
+              "command": "5",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::133::8",
@@ -20356,11 +20616,84 @@
           "label": "Column Marker",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-05",
+            "early-structural-case-ledger.json::ES-06",
+            "early-structural-case-ledger.json::ES-07",
+            "early-structural-case-ledger.json::ES-16",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-05",
+              "numbers": [
+                84
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "C1point0,0/rotation0/rightside/number1/label500,0/Top drawsbody+C1 and honestlysaysbeamlinkingoff."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-06",
+              "numbers": [
+                84
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "C1oneU removesbody+mark;quiet12secondRedoGROUPC1 restoresboth, actualsnaps5375/layer0/scale1/autosave0readback."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-07",
+              "numbers": [
+                85
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "SecondC1at2000,0 rotationEscape removesunfinishedbody andkeepsacceptedfirstC1."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-16",
+              "numbers": [
+                90
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "QSAVE/close/reopenretainsC1/DS2bodymarksandconvertedsteelcolumn;readbacksnaps5375/layer0/autosave0/unlockedtestlayer. No linkedbeamidentityacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                84
+              ],
+              "command": "C1",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::167::C2",
@@ -20384,11 +20717,64 @@
           "label": "Double Stud Marker",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-08",
+            "early-structural-case-ledger.json::ES-09",
+            "early-structural-case-ledger.json::ES-16",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-08",
+              "numbers": [
+                86
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "DSwallorientationfallbackplainlyrequestsrotation;Enter0completesunmarkedDS andhonestlinkingoffmessage."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-09",
+              "numbers": [
+                86
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "DSoneUndo/quiet12secondRedo removes/restoresDSonly,keepsC1andmark."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-16",
+              "numbers": [
+                90
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "QSAVE/close/reopenretainsC1/DS2bodymarksandconvertedsteelcolumn;readbacksnaps5375/layer0/autosave0/unlockedtestlayer. No linkedbeamidentityacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                86
+              ],
+              "command": "DS",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::169::DS1",
@@ -20398,11 +20784,64 @@
           "label": "Double Stud Marker with Tag",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-10",
+            "early-structural-case-ledger.json::ES-16",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-10",
+              "numbers": [
+                87
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "DS1point2000,2000/rotation90/pickedlabel2500,2000/number2drawsDS2atrequestedpointwithoutsecondlabelpointquestion."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-16",
+              "numbers": [
+                90
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "QSAVE/close/reopenretainsC1/DS2bodymarksandconvertedsteelcolumn;readbacksnaps5375/layer0/autosave0/unlockedtestlayer. No linkedbeamidentityacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                87
+              ],
+              "command": "DS1",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::170::SC1",
@@ -20412,11 +20851,44 @@
           "label": "Change to Column Marker",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-15",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-15",
+              "numbers": [
+                89
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "SC1selectiononownedlockedSUPPORTCOLUMNrefused;layerflags4/shapeunchanged,manuallyrestoredtestlayerflags0/snaps5375/layer0. NoXref/REFEDITacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                89
+              ],
+              "command": "SC1",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::171::SC2",
@@ -20426,11 +20898,84 @@
           "label": "Change Column Type",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-12",
+            "early-structural-case-ledger.json::ES-13",
+            "early-structural-case-ledger.json::ES-14",
+            "early-structural-case-ledger.json::ES-16",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-12",
+              "numbers": [
+                88
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "SC2key9selects250x90PFC,Enter/rotation0/labelsideEscape keepsconvertedcolumnasreviewedscope."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-13",
+              "numbers": [
+                88
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Columnselectorhas9choicesandkey9worksbutcaptionincorrectlyPress1-8."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-14",
+              "numbers": [
+                88
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "SC2oneUndo/quiet12secondRedo restorespriorDS/convertedsteelrespectively,otheracceptedC1/DS2remain."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-16",
+              "numbers": [
+                90
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "QSAVE/close/reopenretainsC1/DS2bodymarksandconvertedsteelcolumn;readbacksnaps5375/layer0/autosave0/unlockedtestlayer. No linkedbeamidentityacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                88
+              ],
+              "command": "SC2",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::172::SDS",
@@ -20538,11 +21083,44 @@
           "label": "Triple Stud Marker with Tag",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-11",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-11",
+              "numbers": [
+                87
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "TS1offersrememberedrotation90;Escapeatlabelside removesunfinishedTS1andkeepsC1/DS/DS2."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                87
+              ],
+              "command": "TS1",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::180::TTS1",
@@ -21961,11 +22539,94 @@
           "label": "Tracked Pad Footing",
           "group": "Foundations",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-25",
+            "early-structural-case-ledger.json::ES-26",
+            "early-structural-case-ledger.json::ES-27",
+            "early-structural-case-ledger.json::ES-29",
+            "early-structural-case-ledger.json::ES-32",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-25",
+              "numbers": [
+                96
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FPFCexplicit900x700/depth350point-2000,0/rotation0drawsrectangle;oneUndo/quiet12secondRedo removes/restorespad."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-26",
+              "numbers": [
+                96
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FPFCPF1labelactualtextheight2.5on25TEXT/DIMSCALE1 isunreadableatpreparedview5000;notzerolabelentitiesorplotproof."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-27",
+              "numbers": [
+                96
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSTacceptedfullkeyPF1=600x600x300buttypedPF1placementlookupnormalisesnumeric1;librarythencontainsnumeric1=900x700x350andunusedPF1row."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-29",
+              "numbers": [
+                97
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FPFCexplicitdepth350notcarriedtoFEDITdefault0/scheduledepthUNKNOWN;originalafterRedo pathdoesnotisolateUndoasanecessarytrigger."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-32",
+              "numbers": [
+                99
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FreshPF2explicit800x800/depth450beforeanyUndo:FEDITdefaultdepth0/scheduleUNKNOWNwhilePF1workaround350retained. UndoRedo notnecessaryfor579."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                96
+              ],
+              "command": "FPFC",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::281::FSF",
@@ -21975,11 +22636,64 @@
           "label": "Tracked Strip Footing",
           "group": "Foundations",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-33",
+            "early-structural-case-ledger.json::ES-34",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-33",
+              "numbers": [
+                100
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSFstraighttwo-pointSF1width400/depth300/centrelineoutput;oneUndo/quiet12secondRedo restoresstriponly,retainspads/supports/B1."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-34",
+              "numbers": [
+                100
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSFafterRedoFEDITcorrectlyfindsnearestSF1/StripW400butdepthdefault0despiteexplicit300. Noinitial-beforeUndostripisolationclaim."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                100
+              ],
+              "command": "FSF",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::282::REB",
@@ -22101,11 +22815,104 @@
           "label": "Edit Footing",
           "group": "Foundations",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-28",
+            "early-structural-case-ledger.json::ES-29",
+            "early-structural-case-ledger.json::ES-30",
+            "early-structural-case-ledger.json::ES-31",
+            "early-structural-case-ledger.json::ES-32",
+            "early-structural-case-ledger.json::ES-34",
+            "early-structural-case-ledger.json::ES-39",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-28",
+              "numbers": [
+                97
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FEDITreadsPF1/900x700;stageX1000/Escape thenrepeatreads900x700,stagedwidthdiscarded."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-29",
+              "numbers": [
+                97
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FPFCexplicitdepth350notcarriedtoFEDITdefault0/scheduledepthUNKNOWN;originalafterRedo pathdoesnotisolateUndoasanecessarytrigger."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-30",
+              "numbers": [
+                98
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FEDITretainsPF1,width900->1000,Y700,explicitdepth350/typeNo;actualoutlineandschedule1000x700/depth350update."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-31",
+              "numbers": [
+                98
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "AfterseparateUndoofinspectionZoom,nextUndoFEDITrestores900outline;quiet12secondRedoFEDITrestores1000. SchedulepostUndotoosmall/unaccepted;notclaimfirstUundidFEDIT."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-32",
+              "numbers": [
+                99
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FreshPF2explicit800x800/depth450beforeanyUndo:FEDITdefaultdepth0/scheduleUNKNOWNwhilePF1workaround350retained. UndoRedo notnecessaryfor579."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-34",
+              "numbers": [
+                100
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSFafterRedoFEDITcorrectlyfindsnearestSF1/StripW400butdepthdefault0despiteexplicit300. Noinitial-beforeUndostripisolationclaim."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-39",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FEDITPF1afterdiskreopenreads1000x700anddepth350workaround;Escapecancelsinspection. Initial579notfixed."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                97
+              ],
+              "command": "FEDIT",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::291::FDELETE",
@@ -22115,11 +22922,54 @@
           "label": "Delete Footing System",
           "group": "Foundations",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-35",
+            "early-structural-case-ledger.json::ES-36",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-35",
+              "numbers": [
+                101
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FDELETEselectedstripconfirmationnameswholeFootingNetwork/all3;defaultNoEnterpreservesall."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-36",
+              "numbers": [
+                101
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FDELETEexplicitYesdeletesowned3footingsonly,keepssupports/B1;oneUndo/quietRedo restores/removesall3;finalUndo restoresfixture. Notindividual-elementdeletionacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                101
+              ],
+              "command": "FDELETE",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::292::CSMARKSRENUMBER",
@@ -22482,11 +23332,84 @@
           "label": "Foundations Manager",
           "group": "Foundations",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-23",
+            "early-structural-case-ledger.json::ES-24",
+            "early-structural-case-ledger.json::ES-27",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-38",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-23",
+              "numbers": [
+                94
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSTlibraryAddPF/stagePF1/600x600x300/Cancelcloses;reopenlibraryempty. FooterdisclosesimmediatesystemactionsarenotrolledbackbylibraryCancel."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-24",
+              "numbers": [
+                95
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSTSaveSizeLibraryreportsSaved/reopenPF1/600x600x300. Drawinglibraryonly,notglobalsettings/engineeringcapacity."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-27",
+              "numbers": [
+                96
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSTacceptedfullkeyPF1=600x600x300buttypedPF1placementlookupnormalisesnumeric1;librarythencontainsnumeric1=900x700x350andunusedPF1row."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-37",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved/reopenedB1/supports/twopads/strip and FSTnumeric1/2/PF1/SF1librarypersist;FoundationSystemsreports3linkedfootingelements. Noalllibrarybucketacceptance."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-38",
+              "numbers": [
+                102
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FSTZoomSelectedPF1keepsmanageropen;afterCancelactualviewfitsselectedPF1outline."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                94
+              ],
+              "command": "FST",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::312::FSTEXPORT",
@@ -22510,11 +23433,74 @@
           "label": "Footing schedule",
           "group": "Foundations",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-structural-case-ledger.json::ES-29",
+            "early-structural-case-ledger.json::ES-30",
+            "early-structural-case-ledger.json::ES-32",
+            "early-structural-case-ledger.json::ES-40",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-29",
+              "numbers": [
+                97
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FPFCexplicitdepth350notcarriedtoFEDITdefault0/scheduledepthUNKNOWN;originalafterRedo pathdoesnotisolateUndoasanecessarytrigger."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-30",
+              "numbers": [
+                98
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FEDITretainsPF1,width900->1000,Y700,explicitdepth350/typeNo;actualoutlineandschedule1000x700/depth350update."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-32",
+              "numbers": [
+                99
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "FreshPF2explicit800x800/depth450beforeanyUndo:FEDITdefaultdepth0/scheduleUNKNOWNwhilePF1workaround350retained. UndoRedo notnecessaryfor579."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-40",
+              "numbers": [
+                103
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "AfterdiskreopenactualfootingscheduleretainsPF1/1000x700/depth350andPF2/800x800/SF1width400depthUNKNOWN;truthfulpersistenceofknown/Unknownstates,not579repairorengineeringapproval."
+            },
+            {
+              "caseKey": "early-structural-case-ledger.json::ES-41",
+              "numbers": [
+                114
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Autosave5/snaps5375/layer0/ownedlayerflags0restored;ownedfixtureQSAVE/CLOSEleavesnoDWG;all3settingshash/length/UTCtimestampsmatchSTART. NooriginalSave/deploy/provider."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                97
+              ],
+              "command": "CSFOOTINGSCHEDULE",
+              "scope": "Earlier bounded route observation; outputs, failures and unknowns kept separate."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::314::CSRCBEAMSCHEDULE",
@@ -23701,11 +24687,11 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 38,
-      "associatedCaseCount": 395,
+      "associatedEntryCount": 55,
+      "associatedCaseCount": 436,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 28
+      "currentLedgerCount": 29
     }
   },
   "currentNewBugStatusAudit": {
