@@ -1659,3 +1659,5 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Observed:** two independent associative native hatches, grouped Undo/Redo and gap-tolerance Escape pass narrowly in 2027. Saved in a separate synthetic batch drawing; original audit specimen unchanged.
 2. **Still open:** BUG-615 also applies to batch placement: library thumbnail then immediate commit, without the approved drawing preview and adjustment stage. Actual gap bridging, batch reopen, protected objects, plotting and 2024 remain untested.
+
+**Codex ST-05 update,15October — gap assistance:** measured2mm opening bridges at5mm tolerance;20mm opening safely refuses; both outlines remain open with unchanged geometry and prior hatch survives refusal. Negative input and control restoration pass narrowly. HG-01–06:5PASS1FAIL, BUG615 preview/Apply stillOPEN. Next grouped acceptance: gap Undo/Redo, move/grip open boundary, save/reopen, islands/scale/units/UCS/protection/plot; no wholeworkflow acceptance. Evidence in existing Codex V3UX verification/report/index.

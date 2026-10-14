@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "8155F265AE6CB78D22823FB9FF751C2F1E4DB60065CCEB3BAA63AA20298871AE",
+    "currentBugsSha256": "63799CC9E3E79463B105B7E4F45AA9967B4A0D5AF6A4A01E6414F08A5D14EA84",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087"
   },
@@ -18,35 +18,35 @@
     "bugHeadings": 569,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 37,
-    "narrowCases": 513,
+    "caseLedgers": 38,
+    "narrowCases": 519,
     "narrowVerdicts": {
-      "PASS": 402,
-      "FAIL": 89,
+      "PASS": 407,
+      "FAIL": 90,
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 1004,
+    "uniqueEvidenceFiles": 1015,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 957,
-    "uniqueMetadataFiles": 47,
+    "uniqueScreenshotFiles": 964,
+    "uniqueMetadataFiles": 51,
     "caseLinkedUxIds": 14,
     "caseLinkedBugIds": 62,
-    "newNativeExecutionsInLatestReconciliation": 5,
+    "newNativeExecutionsInLatestReconciliation": 6,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1011
+    "retainedDeclaredEvidenceFiles": 1022
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "513 bounded native checks across37 ledgers are not complete V3 features; full inventory and built/installed eligibility remain incomplete. 50% is UNKNOWN.",
+    "reason": "519 bounded native checks across38 ledgers are not complete V3 features; full inventory and built/installed eligibility remain incomplete. 50% is UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -19929,7 +19929,8 @@
       "currentCaseKeys": [
         "hatch-output-case-ledger.json::CHOUT-13",
         "hatch-alias-case-ledger.json::CAH-12",
-        "hatch-batch-gap-case-ledger.json::HB-05"
+        "hatch-batch-gap-case-ledger.json::HB-05",
+        "hatch-gap-case-ledger.json::HG-06"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -19939,7 +19940,7 @@
     },
     {
       "id": "BUG-616",
-      "headingLine": 8170,
+      "headingLine": 8172,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19954,7 +19955,7 @@
     },
     {
       "id": "BUG-617",
-      "headingLine": 8179,
+      "headingLine": 8181,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19969,7 +19970,7 @@
     },
     {
       "id": "BUG-618",
-      "headingLine": 8190,
+      "headingLine": 8192,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19984,7 +19985,7 @@
     },
     {
       "id": "BUG-619",
-      "headingLine": 8200,
+      "headingLine": 8202,
       "statusCandidates": [
         "OPEN"
       ],
@@ -25181,10 +25182,22 @@
           "hiddenInCatalogue": false,
           "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
           "nativeTriggerEvidenceCaseKeys": [
-            "hatch-batch-gap-case-ledger.json::HB-04"
+            "hatch-batch-gap-case-ledger.json::HB-04",
+            "hatch-gap-case-ledger.json::HG-01",
+            "hatch-gap-case-ledger.json::HG-02",
+            "hatch-gap-case-ledger.json::HG-03",
+            "hatch-gap-case-ledger.json::HG-04",
+            "hatch-gap-case-ledger.json::HG-05",
+            "hatch-gap-case-ledger.json::HG-06"
           ],
           "associatedWorkflowCaseKeys": [
-            "hatch-batch-gap-case-ledger.json::HB-04"
+            "hatch-batch-gap-case-ledger.json::HB-04",
+            "hatch-gap-case-ledger.json::HG-01",
+            "hatch-gap-case-ledger.json::HG-02",
+            "hatch-gap-case-ledger.json::HG-03",
+            "hatch-gap-case-ledger.json::HG-04",
+            "hatch-gap-case-ledger.json::HG-05",
+            "hatch-gap-case-ledger.json::HG-06"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
@@ -30946,10 +30959,10 @@
         }
       ],
       "associatedEntryCount": 77,
-      "associatedCaseCount": 513,
+      "associatedCaseCount": 519,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 37
+      "currentLedgerCount": 38
     }
   },
   "currentNewBugStatusAudit": {
@@ -30994,7 +31007,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 0,
+    "usedPercent": 1,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792625799,
     "reportedResetMelbourne": "22/10/2026, 10:36:39 am",
@@ -31010,8 +31023,8 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 49,
-    "ownLeaseReleased": true,
+    "newNativeChecks": 55,
+    "ownLeaseReleased": false,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
       "quote": "lets take usage to 0% left then i will reset"
@@ -31019,13 +31032,13 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1004,
-    "retainedDeclaredFiles": 1011,
-    "directScreens": 957,
-    "directMetadata": 47,
+    "directCaseLinkedFiles": 1015,
+    "retainedDeclaredFiles": 1022,
+    "directScreens": 964,
+    "directMetadata": 51,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All513cases37ledgers;all1011retainedfilesrehashed.7setup/cleanupimagesnotdirectlylinkedexcludedfromcoveragecount."
+    "scope": "All519 cases38 ledgers; all1022 retained files rehashed; seven unlinked setup/cleanup screenshots excluded from direct count."
   }
 }

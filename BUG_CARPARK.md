@@ -8167,6 +8167,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 8. **BUG-615 batch route follow-through, 15 October:** CEHATCHBATCH on two preselected rectangles creates two separate native associative concrete hatches, but commits directly from the library thumbnail without the approved drawing preview and adjustment stage. HB-05 FAIL extends615; no extra bug or installed repair. Batch output, grouped Undo/Redo and gap-tolerance cancellation pass narrowly. Actual gap bridging remains untested.
 
 
+**15 October native gap follow-through:** CEHATCHGAP default5mm bridges a measured2mm opening and safely refuses20mm; original polyline geometry stays open/unchanged. Native associative output passes narrowly. Actual drawing preview/Scale-Angle-Origin/Apply is still absent (HG-06); BUG-615 remains OPEN. Local evidence1073–1079/hatch-gap-case-ledger.json. No gap Undo/Redo/reopen/plot/protected-content acceptance.
+
 ## BUG-616
 
 1. **Command / area:** Structural XRL, MEDIUM OPEN. ApprovedST5-11 review-before-change missing in installed1.0.116+f180b349.
