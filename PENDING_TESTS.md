@@ -1419,3 +1419,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Narrow realpasses:** installedCivil3.0.49, newblankdraft/noexamplearea; committedsyntheticinputs; explicitUseBoyds transfer; preview-before-export and change-invalidates-export; Draft/unknownbasisdisclosure. Verification223-226/screens562-576.
 2. **Unresolved:** existing249fixedrainfalllist/source;507missinginputlooks0;515lastrowwarningnotvisible. Sourcewarningsbuiltbutnotshown: Codexwindowrepairpacketneedsownershipcheck; engineeringformula/stormlist remainsbehaviourowner. Noactualfix/engineeringacceptanceorwholeBUGclosure.
 3. **Next:** reopenowned CODEX_CALCULATIONS_20261014.dwg andcheckdraft restoration, then actualPDF/XLSXandrenderedpages,rainfallchange/downstreamconsumer,othercalculatorbranches/2024. Do notaskTimtorepeatrecordednarrowpasses. Savedfixture/localcases12=9PASS3FAIL;controls/settingsunchanged/copyclosed/lease released;weekly36%,50%stillunverified.
+## Calculation warning window candidate1257,14October2026
+
+1. **Built/tested only:**4ede9332/draftPR1257 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1257,existingwarningdisplay.24focusedPASS/net48build0errors;light/darkrenderpicturesinspected. Nothinginstalled,norealAutoCADcandidateacceptance.
+2. **Aftercombinedrelease:** CDCALCfreshsyntheticdraft/Boydsblankinputsinstructionvisible;700/500/200m2/PSD2leavefield ->9.42m3/30minplusexistinglongerstormwarningbesideinputs. Repeatlight/dark/150%/saved-draftreopen. Keep1216warningwording/switchand22colourhunks;507zeros/249rainfallstillOPEN.
+3. **Remainder:** completeitemcoveragecrosswalk/currentpercentage, actualdraftdiskrestore/exportedPDF/XLSXandremainingcalculatorbranches. Goalactive;weekly37%,noreset/provider/installation. Verification227-229.
