@@ -300,3 +300,9 @@
 
 1. **RealAutoCADPASS:** addedC2andareaeditpersistafterDWGreopenwithTypedinsources,jobcurveARI10/Tc15/manualOFF. Rows8.08/16.16,total24.24;preparedcatchment-onlypackageusesexactrestoredrows/totalandnamesjobrainfallsource. NoactualnewPDF/XLSXorissuedapproval;row-source/destinationoutputstillunproved.
 2. **Latestcheckedledger:**17ledgers213narrowassertions173PASS32FAIL5BLOCKED3UNPROVEN;315uniqueevidencefilesallhash/sizeverified. Scope/percentageunchangedunverified. Ownfixture/preferencespreserved,readbackclosed/lease released,receipts261-263/screens628-632.
+
+## 15October2026 — actual report intake faults
+
+1. **HIGH BUG594:** actualfile-readerrejectscurrentBlueFactorPDFsandfallsbacktoolderSTORM110m2insteadofcurrent170m2. SyntheticPDFspersonallyviewed;jobfound/textlayervalid. Directfile-reader3guards1PASS2FAIL;PR1258a711f3d3tests-only. Repair:ClaudeownedTryReportsusesexistingformatdispatcher,newest-first/provenancepreserved.
+2. **HIGH operational BUG595,investigate:** afterEscapeparenttargetchanged,bothcalcwindowsdisappearedandnativecommandentry/normalClosedidnotcomplete. Causeunknown,24huptimehealthwarningpresent. OnlyownsyntheticDWGopen;on-diskfixture/preferencesunchanged. NativecleanupNOTPASS,ownlease1791986256retained;commandlinevisibilityrestoreunproved,noforcekill/deploy.
+3. **Coverage:**9newnarrowassertions4PASS3FAIL1UNPROVEN1BLOCKED,633-639/localreport-intake/cases.json;actualconfirmation/source-destinationdisk/export/Unknownrowstillunproved. Fullscope/50%unverified;receipts264-268.

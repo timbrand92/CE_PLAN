@@ -1461,3 +1461,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Prior row-reopen remainder now proven narrowly:** realinstalledCivil3.0.49+48662ddd,629showsC1area500/C0.9/Q8.08,C2area1000/C0.9/Q16.16,total24.24,Typedinsources/recordedjobcurve;630preparedpackageconsumesrowsandtotal. SavedfixturehashunchangedaftercloseNo. Screens628-632/receipts261-263. This isexistinginstalledrowbehaviour,notPR1259candidateacceptance.
 2. **Stillpending:** PR1259combinedexportintegration/install/retest,actualrating-reportintake,otherrowedits/previewinvalidation/protections/olderruntime/Apply/approval/outputprovenance. NoextraTimmanualrequest.
+
+## 15October2026 — BUG594/595 report intake and native recovery
+
+1. **BUG594:** PR1258nowa711f3d3,tests-onlyreader3executed1PASS2FAIL;realAutoCADBlueFactor-onlyreadfailsandolderSTORMisofferedinstead. ClaudeownsTryReportsroutingrepairtoexistingParseAnyRatingReport;bankredguardswithrepair,nofixinstalled.
+2. **Representative retest:** ownreport-intakejobhascurrentBlueFactor170m2roof/tank,50bypass,12Unknown;olderSTORM110. Correctcurrentreport/3rowsoffered;Cancel/Escapenomutation,confirmone/source/destination/disk/exportprovenance;repeatformat/scanned/empty/missingfolderandlegacy2024disclosure.
+3. **BUG595 recoveryfirst:** AutoCADstillopenwithonlyownsyntheticfixture;normalcommandentry/Closedidnotcompleteaftertargetchange. Ownlease1791986256retained;source/helper/sessioncauseunproven. Recoverproperdialog/prompt/commandlinevisibilitybeforenextnativebatch;noforcekill/deployorblanketacceptance. Receipts264-268.

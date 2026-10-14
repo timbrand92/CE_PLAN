@@ -7851,3 +7851,24 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **15October candidate, window/draft only:** Codex draftPR1259, dbb1dac1: unavailable row/total displays Unknown; prior row flows/ticks cleared, invalid saved results null, valid recovery unchanged. Modern53focused+36surroundingPASS; net48build0errors/286warnings, runtimeZEROdiscoverynotPASS. CaptureCatchments still formats compatibility zero: Claude must consume newHasFlow/HasTotalFlow on preview/PDF/XLSX and approval; this slice isNOTend-to-endfix. Notinstalled, sourcewindowappearance/candidateAutoCAD/olderruntimeunproved. KeepOPEN; representative checklist inREGLOG/PENDING. Receipts249-252.
 
 7. **15Oct BUG593 candidate appearance follow-up:** PR1259 now07160dee;4WPFrenderchecksPASS,invalidDark/LightPNGspersonallyinspected,Unknownrows/totalandwarningmarks. Realinstalled48662dddbatch618stillreproducesrestoredinvalidtick/8.08; candidateNOTinstalled. ExportsstillneedClaudeavailabilityintegration;keepOPEN. Verification253-257.
+
+## BUG-594
+
+**Status:** OPEN — Codex real AutoCAD2027,15October2026,Civil3.0.49+48662ddd; service repair not built/installed.
+**Severity:** HIGH — newer Blue Factor rating report refused; older STORM report offered instead.
+
+1. **Steps/expected:** owned synthetic job contains currentBlueFactor170m2 roof/tank,50m2paved/bypass,12m2Unknown and olderBlueFactor120m2. CDCALC > Catchments > Add from rating report should read the current PDF, name source and offer current rows for confirmation, preserving unknown destination.
+2. **Actual:**634 says checked2files/none readable,althoughbothtext-layerPDFsidentifyBlueFactorandwerevisuallyinspected. AddanolderSTORMpositivecontrol110m2roof/tank;636nowoffersCODEX_SYNTHETIC_LEGACY.pdf/110m2,skippingnewerBlueFactor170m2. ExistingC1/C2andtotal24.24retained635. No report row confirmed/issued/engineeringaccepted.
+3. **Cause/repair owner:** Services/StormReportReader.cs TryReports180callsStormReport.Parse,whichrecognisesSTORMonly. ExistingRules/StormReport.cs154ParseAnyRatingReportdispatchesBlueFactororSTORM;pureBlueFactorparsertestsnevercoveredactualfile-readerroute. Claude service repair must use that one dispatcher,retainnewest-firstsearch/fallbackandUnknown/sourceprovenance;noinventedvalues.
+4. **Guard:** PR1258a711f3d3addsRatingReportReaderRegressionTests usinggeneratedtext-layerPDFsandproductionRead:3executed1PASS(STORM),2FAIL(BlueFactorandnewestmixedreport),0skipped. Tests-onlyRED,doNOTmergealone. SourcePDFs/renders/metadataandTRXremainlocalreport-intake;receipts264-268/screens633-639.
+5. **Retest:** currentBlueFactor170/50/12rowsmustbeofferedratherthanolderSTORM110;correctsourceandUnknowndestination;Cancel/Escapeaddsnone,confirmonerowthenreadsource/destination/flow,save/reopenandinspectexportedprovenance. RepeatBlueFactor-only,STORM-only,mixednewest,empty/scanned/unknownreports,missingfolderandlegacy2024disclosure. Engineeringchoiceunchanged.
+
+## BUG-595
+
+**Status:** OPEN / INVESTIGATE — native recovery unresolved; cause unproven;15October2026.
+**Severity:** HIGH operationally — AutoCAD command entry/normal close did not complete after nested report-pick target changed.
+
+1. **Observed sequence:**636report-pickmodalwasvisibleoverCDCALCbutnotseparatelyreturnedbywindowlisting. Escape senttoCDCALCparentreturnedwindowisnotausableappwindow. FreshlistingthenomittedCDCALCand637showedmainAutoCADwithownedtestDWGstillopen. ThisisNOTsuccessfulCancel/Escapeproof.
+2. **Remaining state:** attemptedtyped_CLOSEnotvisible,observedFile>Close/normalapplicationCloseandmainEscdidnotclosetheDWG. AccessibilitydocumenthistoryendedatCDCALC,drawingviewportreporteddisabled;commandvalueactiontimedout. Nativehealthhistoryrecommendedrestartat24huptime. No claimaboutAutoCADinternalsorwhetherthisisplugin,helpertargetingoroldsessionfault.638/639retainactualunrecoveredstate;638filenamerenamedtoavoidfalselyclaimingaSavequestion.
+3. **Safety:** onlyownedCODEX_REPORT_INTAKE_20261015.dwgopen;on-disk155589bytes/SHAEBC9602DB98F5968FDBEC905B04C7B8FE673DC2411A943AD4AF8E588BBAD3702unchanged.All3CEpreferencehash/size/mtimeunchanged.No confirmedreportrow,placement,force-termination,deployorprovidercall. AutoCADnotclosed;commandlinevisibilityrecoverynotconfirmed. Ownlease1791986256retainedwithrecovery-notetoavoidpretendingstationfree.
+4. **Next:** recovernormalnativecommand/dialogstateandpropercommandlinevisibility,thenfresh-sessionretestwithactualnested-dialogCancelbutton/target;verifyCDCALCremainsopen,rowsunchanged,normalcommandpromptandCloseworkafterreturn. Onlythenattributeafaultorimplementapprovedwindow/hostrepair. Do not forcekillorcallaUIblockedleaseaverifiedwait. Goalremainsactive;independentsource/testworkavailable.

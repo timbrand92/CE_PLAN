@@ -9,28 +9,28 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "8505719CFD8C0DA7FB0B7DC9057ECB5D249C4D1CE43A8DDB35F5E487D6AF2779",
+    "currentBugsSha256": "A7AB1F7D10D8CBC95E4010572D8558EDB813AA71F693AA217EBAA91244A3D7B8",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
     "traceableUxIds": 508,
-    "bugHeadings": 543,
+    "bugHeadings": 545,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 12,
-    "caseLedgers": 17,
-    "narrowCases": 213,
+    "caseLedgers": 18,
+    "narrowCases": 222,
     "narrowVerdicts": {
-      "PASS": 173,
-      "FAIL": 32,
-      "BLOCKED": 5,
-      "UNPROVEN": 3
+      "PASS": 177,
+      "FAIL": 35,
+      "BLOCKED": 6,
+      "UNPROVEN": 4
     },
-    "uniqueEvidenceFiles": 315,
+    "uniqueEvidenceFiles": 322,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 311,
+    "uniqueScreenshotFiles": 318,
     "uniqueMetadataFiles": 4,
     "caseLinkedUxIds": 5,
     "caseLinkedBugIds": 16
@@ -410,7 +410,7 @@
         "sourceLine": 215,
         "required": "Approved D+F card: shared job rainfall/source, reviewed inputs and drawing proposal, honest sheet and durability",
         "status": "PARTIAL / CURRENT FAIL",
-        "evidence": "Receipts219-257: installed rainfall record/source, draft restore, actual three-page PDF/three-tab XLSX, invalid pipe/catchment consumers, add/Enter-commit row and missing-report guidance. Source candidates1257/1259 separate. Receipts261-263/screens628-632 verify added/edited two-row disk restoration and prepared-package consumer.",
+        "evidence": "Receipts219-257: installed rainfall record/source, draft restore, actual three-page PDF/three-tab XLSX, invalid pipe/catchment consumers, add/Enter-commit row and missing-report guidance. Source candidates1257/1259 separate. Receipts261-263/screens628-632 verify added/edited two-row disk restoration and prepared-package consumer. Receipts264-268 actualBlueFactorintakeFAIL594/legacycontrol;recoveryunresolved595.",
         "remaining": "Unknown export integration, source provenance/fixed Boyd rainfall249, actual report intake, remaining tabs/Apply/approval/protections/older runtime and full requirement acceptance.",
         "wholeScopeVerified": false
       },
@@ -457,7 +457,16 @@
         "catchment-rows/cases.json::CR-07",
         "catchment-rows/cases.json::CR-08",
         "catchment-rows/cases.json::CR-09",
-        "catchment-rows/cases.json::CR-10"
+        "catchment-rows/cases.json::CR-10",
+        "report-intake/cases.json::RI-01",
+        "report-intake/cases.json::RI-02",
+        "report-intake/cases.json::RI-03",
+        "report-intake/cases.json::RI-04",
+        "report-intake/cases.json::RI-05",
+        "report-intake/cases.json::RI-06",
+        "report-intake/cases.json::RI-07",
+        "report-intake/cases.json::RI-08",
+        "report-intake/cases.json::RI-09"
       ]
     },
     {
@@ -13674,6 +13683,35 @@
         "calculator-consumers/cases.json::invalid-catchment-stale-row",
         "calculator-consumers/cases.json::invalid-catchment-disk-restoration",
         "catchment-rows/cases.json::CR-01"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-594",
+      "headingLine": 7855,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "report-intake/cases.json::RI-02",
+        "report-intake/cases.json::RI-04"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-595",
+      "headingLine": 7866,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "report-intake/cases.json::RI-08"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
