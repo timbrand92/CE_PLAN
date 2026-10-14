@@ -1532,3 +1532,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Supersedes cause uncertainty above:** BUG605failsBEFOREUndo/Redo inindependentfreshimport752; savedpostRedoreadback748alsofails. RepairinitialprovidedILmapping/recordsandthenprovebothinitialandUndoRedo/diskreadback. No requirementforTimtoisolatecausehimself.
 2. **Same-source control:** secondidenticalXMLstillfourpit-schedulerows756; stableidentity/fullgeometryduplication/overridesNOTyetaccepted. Bothcopiesclosednormally,initialcontrolsavedlocalonly.
 3. **Representative acceptance still pending:** correct49.000/48.850inplan/schedule/Inspector,before/afterUndoRedo/reopen;missingInvertstaysUnknown;previewbeforeApply,sourceawarewords,stableidentityandchangedrevisionoverrides/protections,2027and2024separate. Bugs602-605OPEN. No code/deploychangehere.
+
+### Codex consultant drawing check — 15 October2026
+
+1. **606OPEN:** nativeCDCHECKDWGresultwindow/summaryworks,butreportwritesbesidesourceDWG. Claudeownsreportdestination;useexistingapprovedCEreportlocation. NativecontrolsEscape/missingfilepass,sourceDWGhashunchanged.
+2. **Representative retest:** currentandexternalDWG,sourcehash/foldermanifestunchangedbychecker,actualreportatapprovedlocation,visibleon-disk/unsavedlimitation;missing/read-only/corruptsourcesplain,2027and2024separate. Exactin-memorynonmutationandengineeringQAtruthremainunproved.
+3. **Evidence:** verification315-317/local761-768/drawing-checkactualreport;freshsessionempty,preferencesunchanged,no productionfixinstalled. CodexcontinuesauthorisedcopieswithoutTimdrivingeachtest.

@@ -375,3 +375,9 @@
 1. **Fault isolated:** savedpostRedoDWG747/748stilllosesprovidedILs; independentcleanbaselineinitialimport749-752alreadyblank49.000/48.850/fourwarnings BEFORE Undo/Redo. Recoveryisnotrequired. Covers50.000/49.500and600x600/300sizesretained. BUG605OPEN;exactextraction/writerstageunproved.
 2. **Repeat:** sameunchangedXMLagain754-756leavesfourpit-schedulerows. Noextra schedulepitrowsobserved;objectidentity,allgeometryandapprovedoverridepreservationremainunproved. NativeCV07previewgate/sourcewords603/604stillfail.
 3. **Durability/cleanup:** initialimportfaultsavedseparately753,unsavedrepeatdiscarded;bothcopiesnormallyclosed760,threepreferencesunchanged. Current283narrowchecks222PASS48FAIL6BLOCKED7UNPROVEN,445hashedfiles. Fiftypercentwholecoverageunverified;unitsmatrix/protectedtargets/overrides/plots/olderAutoCADandremainingCivil/Structural/Managerremain.
+
+### 15 October — consultant drawing check
+
+1. **Observed:** nativeCDCHECKDWGcurrentEntershowsone-line87.1%summaryandseven-findingwindowfits966x654;UXIMP02directionobserved. Nativehistoryplainlyexcludesunsavedchanges. Escapeandmissingfilefinishnormallywithoutnewreport. Findings/ASvaluesnotengineeringaccepted.
+2. **Fault:** new606OPEN—reportcreatedbesidesourceDWGcontraryCV7-12;sourceDWGhashunchanged. NativeDWLlockfilesfromopeningarenotthefault. Claudecommandreportdestinationrepair,existingwindowifcontractneeded.
+3. **Limits:** copyclosedNo/threepreferencesunchanged;exactin-memorynonmutation,external/read-onlyDWG,changedunsavedgeometry,QAtruthandolderruntimeunproved. Current290narrowchecks227PASS49FAIL6BLOCKED8UNPROVEN,454hashedfiles;50%wholecoverageunverified.
