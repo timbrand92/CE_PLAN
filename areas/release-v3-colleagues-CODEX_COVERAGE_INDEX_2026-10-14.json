@@ -16,24 +16,26 @@
     "traceableUxIds": 508,
     "bugHeadings": 563,
     "duplicateBugHeadings": 0,
-    "currentUxScopeReviews": 15,
-    "caseLedgers": 27,
-    "narrowCases": 358,
+    "currentUxScopeReviews": 16,
+    "caseLedgers": 28,
+    "narrowCases": 395,
     "narrowVerdicts": {
-      "PASS": 280,
-      "FAIL": 58,
+      "PASS": 308,
+      "FAIL": 67,
       "BLOCKED": 6,
       "UNPROVEN": 14
     },
-    "uniqueEvidenceFiles": 622,
+    "uniqueEvidenceFiles": 705,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 600,
-    "uniqueMetadataFiles": 22,
-    "caseLinkedUxIds": 10,
-    "caseLinkedBugIds": 36
+    "uniqueScreenshotFiles": 677,
+    "uniqueMetadataFiles": 28,
+    "caseLinkedUxIds": 14,
+    "caseLinkedBugIds": 43,
+    "newNativeExecutionsInLatestReconciliation": 0,
+    "earlierCasesAddedInLatestReconciliation": 37
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -2887,12 +2889,22 @@
       "sourceTokens": [
         "UX-LIVE-01"
       ],
-      "currentScopeReview": null,
+      "currentScopeReview": {
+        "id": "UX-LIVE-01",
+        "status": "PARTIAL / COVER-EDIT PASS",
+        "required": "Straight after each edit: live drawing labels, schedule and OSD update; retained Tim ruling cited in BUG207.",
+        "evidence": "Original14October receipts78/screens62-64, reconciledEC25-26:connectedpitcover21.00->21.10 immediatelyupdatesplan+linkedtabledepth1.10; oneUndo/quietRedo restoresboth. Re-viewed62 confirmsfilename stale is incorrect.",
+        "remaining": "Grips,openends,other edit routes,OSD and older runtime. No wholeUX-LIVE01 closure.",
+        "wholeScopeVerified": false
+      },
       "historicalCandidateReports": [
         "CODEX_SWEEPC1_2026-09-30.md"
       ],
       "wholeScopeVerified": null,
-      "currentCaseKeys": []
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-25",
+        "early-civil-case-ledger.json::EC-26"
+      ]
     },
     {
       "id": "UX-LOAD-01",
@@ -5135,7 +5147,10 @@
       },
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
-      "currentCaseKeys": []
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-11",
+        "early-civil-case-ledger.json::EC-12"
+      ]
     },
     {
       "id": "UX-SCHED-03",
@@ -5148,7 +5163,9 @@
       "currentScopeReview": null,
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
-      "currentCaseKeys": []
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-12"
+      ]
     },
     {
       "id": "UX-SCHED-04",
@@ -6857,7 +6874,9 @@
         "CODEX_SWEEPC1_2026-09-30.md"
       ],
       "wholeScopeVerified": null,
-      "currentCaseKeys": []
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-09"
+      ]
     },
     {
       "id": "UX-WIN-04",
@@ -7077,7 +7096,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-30"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7181,7 +7202,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-27"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7194,7 +7217,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-23"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7208,7 +7233,9 @@
         "OPEN"
       ],
       "currentCaseKeys": [
-        "flat-pipe/case-ledger.json::FLAT-INSPECTOR-TYPE"
+        "flat-pipe/case-ledger.json::FLAT-INSPECTOR-TYPE",
+        "early-civil-case-ledger.json::EC-18",
+        "early-civil-case-ledger.json::EC-35"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -7222,7 +7249,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-12"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7235,7 +7264,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-09"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -9585,7 +9616,8 @@
         "wind-bracing-case-ledger.json::AB-ONE-UNDO-DELAYED-REDO",
         "wind-bracing-case-ledger.json::BB-PANEL-OPEN-UNDO-REDO",
         "wind-bracing-case-ledger.json::ABS-PANEL-OPEN-UNDO-REDO",
-        "flat-pipe/case-ledger.json::FLAT-DELAYED-REDO"
+        "flat-pipe/case-ledger.json::FLAT-DELAYED-REDO",
+        "early-civil-case-ledger.json::EC-33"
       ],
       "historicalCandidateReports": [
         "CODEX_VERIFYW21_2026-10-08.md",
@@ -10071,7 +10103,10 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-25",
+        "early-civil-case-ledger.json::EC-26"
+      ],
       "historicalCandidateReports": [
         "CODEX_VERIFYC1_2026-10-01.md"
       ],
@@ -10151,7 +10186,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-civil-case-ledger.json::EC-13"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -14131,7 +14168,7 @@
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 7:42:54 am",
+  "capturedMelbourne": "15/10/2026, 7:52:25 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -14237,7 +14274,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 7:42:54 am",
+      "capturedMelbourne": "15/10/2026, 7:52:25 am",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -14574,7 +14611,7 @@
           ]
         }
       ],
-      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted.",
+      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted. Earlier Civil37cases now reconciled from original14October receipts63-80/121-128, not newly executed; addedCDS/PIT/CDEDIT associations,38records/395currentcases. EarlierStructural/Manager receipts still pending; mappingCompletefalse.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -14623,7 +14660,15 @@
             "flat-pipe/case-ledger.json::FLAT-EDITOR-LEVELS",
             "flat-pipe/case-ledger.json::FLAT-DISK-LABEL-LEVELS",
             "flat-pipe/case-ledger.json::FLAT-INSPECTOR-TYPE",
-            "flat-pipe/case-ledger.json::PREFERENCE-PRESERVATION"
+            "flat-pipe/case-ledger.json::PREFERENCE-PRESERVATION",
+            "early-civil-case-ledger.json::EC-15",
+            "early-civil-case-ledger.json::EC-16",
+            "early-civil-case-ledger.json::EC-19",
+            "early-civil-case-ledger.json::EC-28",
+            "early-civil-case-ledger.json::EC-29",
+            "early-civil-case-ledger.json::EC-30",
+            "early-civil-case-ledger.json::EC-34",
+            "early-civil-case-ledger.json::EC-37"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -14647,6 +14692,81 @@
               ],
               "scope": "Shared preference control only."
             }
+          ],
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-15",
+              "numbers": [
+                71
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CD recognises P1/P2;225UPVC explicit20.000/19.800; grade-mismatch actual48 chosen; trimmed plan output/arrowP1->P2. No engineering acceptance."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-16",
+              "numbers": [
+                72
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "OneUndo removes connectedpipe/labels/arrow only, keepspits; quiet12secondRedo restoresvisibleoutput."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-19",
+              "numbers": [
+                74
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved connected pipe geometry/labels/arrow and editor values survive close/reopen; ConnectionsP1->P2/drawn9550mm/OnPlantextarrow retained."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-28",
+              "numbers": [
+                121,
+                122
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Free-endedCD explicitly allows unknown owners; typed19.50/calculated19.40 produces225UPVC1in100/knownlevels/rightarrow; Inspector/editor retain values and unknown From/Toowners honestly."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-29",
+              "numbers": [
+                122
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "OneUndo/quiet12secondRedo removes/restores whole freepipe/labels/arrow only."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-30",
+              "numbers": [
+                123
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Calculated downstream19.40 exists but secondpreviewring/status sayILUnknown/directionUnknown; placementmessagelevelsUnknown contradictsdrawn/stored19.50/19.40."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-34",
+              "numbers": [
+                126
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Actualsave/close/reopen freepipe keeps225UPVC/1in100/19.50/19.40/arrow; editreadbackknown/calculatedcaptionscorrect."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-37",
+              "numbers": [
+                128
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "SAVETIME5 restored/readback; finalownedcopyclose250leavesnoDWG; all3CEsettingshash/length/UTCtimestamps matchSTART. FinalpostcleanupDWGversionnotreopened."
+            }
           ]
         },
         {
@@ -14657,11 +14777,84 @@
           "label": "Pit Layout (PIT)",
           "group": "Draft",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-civil-case-ledger.json::EC-04",
+            "early-civil-case-ledger.json::EC-05",
+            "early-civil-case-ledger.json::EC-06",
+            "early-civil-case-ledger.json::EC-07",
+            "early-civil-case-ledger.json::EC-08",
+            "early-civil-case-ledger.json::EC-14"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-04",
+              "numbers": [
+                65
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "New PIT starts cover blank/Continue disabled; explicit21.000 enables Continue and plan-text footer."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-05",
+              "numbers": [
+                65
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "New pit length450->900 updates preview900x450."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-06",
+              "numbers": [
+                65
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "P13 body/label/CL21.000 placed; repeatEscape keeps accepted output."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-07",
+              "numbers": [
+                65
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "One nativeUndo removes P13 body/label/CL; untouched12seconds/Redo restores all. F2/CLEAN tester error excluded."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-08",
+              "numbers": [
+                66
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Inspector afterRedo reads900x450/CL21.000/bottomUnknown without inventing invert."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-14",
+              "numbers": [
+                70
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Clean owned blank test produces P1/P2,450x450,explicit21.000/20.800 covers; repeatallocatesP2blank andEscape keepsboth. Unexpected civil-tagging prompt corrected beforeplacement."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                65
+              ],
+              "command": "PIT",
+              "scope": "Earlier actual route; individual bounded checks, no alias/full-workflow acceptance."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::4::PP",
@@ -14688,11 +14881,187 @@
           "label": "Edit Pit or Pipe (CDEDIT)",
           "group": "Draft",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-civil-case-ledger.json::EC-09",
+            "early-civil-case-ledger.json::EC-10",
+            "early-civil-case-ledger.json::EC-17",
+            "early-civil-case-ledger.json::EC-18",
+            "early-civil-case-ledger.json::EC-19",
+            "early-civil-case-ledger.json::EC-25",
+            "early-civil-case-ledger.json::EC-26",
+            "early-civil-case-ledger.json::EC-27",
+            "early-civil-case-ledger.json::EC-28",
+            "early-civil-case-ledger.json::EC-31",
+            "early-civil-case-ledger.json::EC-32",
+            "early-civil-case-ledger.json::EC-33",
+            "early-civil-case-ledger.json::EC-34",
+            "early-civil-case-ledger.json::EC-35",
+            "early-civil-case-ledger.json::EC-36",
+            "early-civil-case-ledger.json::EC-37"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-09",
+              "numbers": [
+                66
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Edit Pit header/footer P77 while settled large preview remainsP13 beforeSave."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-10",
+              "numbers": [
+                66,
+                67
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saving P13->P77 updates actual plan/Inspector and subsequent schedule row."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-17",
+              "numbers": [
+                73
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Existing Pipe editor reads225/UPVC/grade48/endlevels; stage300/Cancel retains225drawing/Inspector. Static drawing-background preview not diagnosed as newly implemented ghost."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-18",
+              "numbers": [
+                73,
+                74
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Inspector TypeUnknown despite editorStormwater; after diskreopen firstselection says not recorded/allUnknown while editor reads known storedpipe. No drawing data-loss claim."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-19",
+              "numbers": [
+                74
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saved connected pipe geometry/labels/arrow and editor values survive close/reopen; ConnectionsP1->P2/drawn9550mm/OnPlantextarrow retained."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-25",
+              "numbers": [
+                78
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "EditP1cover21.00->21.10 updates actualplan and linked schedulecover21.10/depth1.10 immediately. Screenshot62filename stale is superseded by actualimage."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-26",
+              "numbers": [
+                78
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "One nativeU CDEDIT restoresplan/schedulecover21.00/depth1.00; quiet12secondRedo restores21.10/1.10. Grip/open-end remainder untested."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-27",
+              "numbers": [
+                79
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Connectedpit editor blankBottom despite proven outgoingIL20.000; after coverSave Inspector bottomUnknown while scheduledepth1.10 and pipeILremaincorrect. No engineering data-loss claim."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-28",
+              "numbers": [
+                121,
+                122
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Free-endedCD explicitly allows unknown owners; typed19.50/calculated19.40 produces225UPVC1in100/knownlevels/rightarrow; Inspector/editor retain values and unknown From/Toowners honestly."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-31",
+              "numbers": [
+                124
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Diameter-only EditPipe225->300 savesactual300/1in100 whileknown19.50/19.40/arrow/10000mm remain; grade-modewording uncertainty retained."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-32",
+              "numbers": [
+                125
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Clean controlledSAVETIME0 repeat Save300 followedone nativeU CDEDIT restores225. Earlierclipboard/UndoZoomcontaminatedattempts excluded."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-33",
+              "numbers": [
+                125
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "ControlledSAVETIME0/oneU CDEDIT/untouched12seconds/nativeRedo saysNothingtoredo; nointerveningclipboard/Escape/view/save/selection/autosave/switch. Rootcauseunproved."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-34",
+              "numbers": [
+                126
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Actualsave/close/reopen freepipe keeps225UPVC/1in100/19.50/19.40/arrow; editreadbackknown/calculatedcaptionscorrect."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-35",
+              "numbers": [
+                126
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Firstselectedfreepipeafterreopen Inspector settlesnotrecorded/allUnknown untileditorloadsrecords; geometry/storedvalues survive."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-36",
+              "numbers": [
+                127
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "UpstreamHidden-only Save removesonlyupstreamILannotation,retainsstored19.50/19.40/mainlabel/arrow/downstream;oneU CDEDIT restoresupstreamtext. Diskhiddenstate/Redo untested."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-37",
+              "numbers": [
+                128
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "SAVETIME5 restored/readback; finalownedcopyclose250leavesnoDWG; all3CEsettingshash/length/UTCtimestamps matchSTART. FinalpostcleanupDWGversionnotreopened."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                66
+              ],
+              "command": "CDEDIT",
+              "scope": "Earlier actual route; individual bounded checks, no alias/full-workflow acceptance."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::6::CDSL",
@@ -15076,7 +15445,18 @@
             "schedule-write/case-ledger.json::Opposite upstream stays 20.00",
             "schedule-write/case-ledger.json::Native single Undo restores 19.80",
             "schedule-write/case-ledger.json::Untouched 12-second delayed Redo",
-            "schedule-write/case-ledger.json::Save/reopen drawing and schedule retain 20.00/19.75"
+            "schedule-write/case-ledger.json::Save/reopen drawing and schedule retain 20.00/19.75",
+            "early-civil-case-ledger.json::EC-10",
+            "early-civil-case-ledger.json::EC-11",
+            "early-civil-case-ledger.json::EC-12",
+            "early-civil-case-ledger.json::EC-13",
+            "early-civil-case-ledger.json::EC-20",
+            "early-civil-case-ledger.json::EC-21",
+            "early-civil-case-ledger.json::EC-22",
+            "early-civil-case-ledger.json::EC-23",
+            "early-civil-case-ledger.json::EC-24",
+            "early-civil-case-ledger.json::EC-25",
+            "early-civil-case-ledger.json::EC-26"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -15107,6 +15487,109 @@
                 "schedule-write/case-ledger.json::Save/reopen drawing and schedule retain 20.00/19.75"
               ],
               "scope": "Existing downstream-end schedule edit/write/Undo/disk; preserve failed Redo."
+            }
+          ],
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-10",
+              "numbers": [
+                66,
+                67
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Saving P13->P77 updates actual plan/Inspector and subsequent schedule row."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-11",
+              "numbers": [
+                67,
+                68
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Actual Excel export retains31outputrows+2headers despite P77 search showing1/31; Checking tab exists. Row counts corroborated by saved exported-values metadata; not31distinctpits or full source correctness."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-12",
+              "numbers": [
+                68
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Native Excel100% headers clip/numeric-as-text markers; saved inspection confirms numeric H3 text and continuation-source pit identity omitted. Actual workbook opens successfully."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-13",
+              "numbers": [
+                69
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Old schedule replacement route reproduces existing legacy-table dead end; do not generalise to newly placed linked schedule."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-20",
+              "numbers": [
+                75
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Reopened schedule two output rows correctly read P1outlet225/20.000/cover21.000/depth1.00 and P2inlet225/19.800/cover20.800/depth1.00."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-21",
+              "numbers": [
+                75
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Schedule Place insertionEscape returns samewindow without linked schedule."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-22",
+              "numbers": [
+                75
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Retry nativepoint0,-5000 places new linked two-row schedule and closes review; prior failed toolpointinputs excluded."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-23",
+              "numbers": [
+                76
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Immediately afterplacement/ZoomExtents only,Changesoffers21.000->21.00 and20.800->20.80; numericallyidentical precision-onlydiffs."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-24",
+              "numbers": [
+                77
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Updateexisting closes review and leaves one linked schedule in original location, no new insertion prompt."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-25",
+              "numbers": [
+                78
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "EditP1cover21.00->21.10 updates actualplan and linked schedulecover21.10/depth1.10 immediately. Screenshot62filename stale is superseded by actualimage."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-26",
+              "numbers": [
+                78
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "One nativeU CDEDIT restoresplan/schedulecover21.00/depth1.00; quiet12secondRedo restores21.10/1.10. Grip/open-end remainder untested."
             }
           ]
         },
@@ -15696,11 +16179,54 @@
           "label": "Preferences (CDS)",
           "group": "Layers",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-civil-case-ledger.json::EC-01",
+            "early-civil-case-ledger.json::EC-02",
+            "early-civil-case-ledger.json::EC-03"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-01",
+              "numbers": [
+                64
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CDS cover search returns four relevant results and opens Design."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-02",
+              "numbers": [
+                64
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "All six CDS task pages visually fit at1080p with footer visible; layout only, not every control."
+            },
+            {
+              "caseKey": "early-civil-case-ledger.json::EC-03",
+              "numbers": [
+                64
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Staged cover-1mm/Light changes cancel; reopening restores300mm/Dark and all3 settings hashes/length/timestamps remain original. Negative validation/Save untested."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                64
+              ],
+              "command": "CDS",
+              "scope": "Earlier actual route; individual bounded checks, no alias/full-workflow acceptance."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::40::CDIMPORTCOMPARE",
@@ -23175,9 +23701,11 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 35,
-      "associatedCaseCount": 358,
-      "current27LedgerCaseAssociationComplete": true
+      "associatedEntryCount": 38,
+      "associatedCaseCount": 395,
+      "current27LedgerCaseAssociationComplete": true,
+      "currentLedgerCaseAssociationComplete": true,
+      "currentLedgerCount": 28
     }
   },
   "currentNewBugStatusAudit": {
