@@ -1538,3 +1538,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **606OPEN:** nativeCDCHECKDWGresultwindow/summaryworks,butreportwritesbesidesourceDWG. Claudeownsreportdestination;useexistingapprovedCEreportlocation. NativecontrolsEscape/missingfilepass,sourceDWGhashunchanged.
 2. **Representative retest:** currentandexternalDWG,sourcehash/foldermanifestunchangedbychecker,actualreportatapprovedlocation,visibleon-disk/unsavedlimitation;missing/read-only/corruptsourcesplain,2027and2024separate. Exactin-memorynonmutationandengineeringQAtruthremainunproved.
 3. **Evidence:** verification315-317/local761-768/drawing-checkactualreport;freshsessionempty,preferencesunchanged,no productionfixinstalled. CodexcontinuesauthorisedcopieswithoutTimdrivingeachtest.
+
+### Codex LandXML regression guard ready —15October2026
+
+1. **PR1258 d82d2dc4:**tests-only10modern5PASS5FAIL,zero skipped. Existingmapperknown/UnknowncontrolsPASS;duplicateevidenceandmissingsharedmapperwiringFAIL. net48build0errors286warnings28.49sec,no runtimePASS. RED,dontmergealone.
+2. **Claudeintegration:** useonecanonicalprovidedlevelassignmentinLandXMLentry;deduplicatenamespaceenumeration,retainUnknown/multiple-endsemantics. Thenactual49.000/48.850plan/schedule/Inspectorbefore/afterUndoRedo/reopen. CV07preview/source/identity/protectionsandolderruntimeacceptedseparately. No productionfixinstalled.

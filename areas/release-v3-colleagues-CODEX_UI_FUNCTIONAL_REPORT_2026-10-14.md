@@ -381,3 +381,8 @@
 1. **Observed:** nativeCDCHECKDWGcurrentEntershowsone-line87.1%summaryandseven-findingwindowfits966x654;UXIMP02directionobserved. Nativehistoryplainlyexcludesunsavedchanges. Escapeandmissingfilefinishnormallywithoutnewreport. Findings/ASvaluesnotengineeringaccepted.
 2. **Fault:** new606OPEN—reportcreatedbesidesourceDWGcontraryCV7-12;sourceDWGhashunchanged. NativeDWLlockfilesfromopeningarenotthefault. Claudecommandreportdestinationrepair,existingwindowifcontractneeded.
 3. **Limits:** copyclosedNo/threepreferencesunchanged;exactin-memorynonmutation,external/read-onlyDWG,changedunsavedgeometry,QAtruthandolderruntimeunproved. Current290narrowchecks227PASS49FAIL6BLOCKED8UNPROVEN,454hashedfiles;50%wholecoverageunverified.
+
+### 15 October — LandXML regression chain isolated
+
+1. **Tests-onlybanked:** PR1258/d82d2dc4,tenchecks5PASS5FAIL/zero skipped. Sharedmapperpreservesknownlevels/fournamespaceformsandUnknowncontrol;parserduplicatesoneInvert(fourfails),LandXMLentryomitscanonicalmappercall(wiringfail). Duplicatesalonearenotprovedcauseofnativeblanklevels.
+2. **Scope:** net48build0errors286warnings28.49sec,no runtimePASS. No productionrepairorinstallation;Claudeownsparser/command/writer. Native290checksremainunchanged,50%wholecoverageunverified. Combinedrepairmustpassplan/schedule/Inspector,recoveryandsavedreadback.

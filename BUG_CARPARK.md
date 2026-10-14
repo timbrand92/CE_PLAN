@@ -8013,6 +8013,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 7. **Fresh no-Undo control:** separate baseline copy CODEX_LANDXML_NO_UNDO_20261015, same explicit XML. Source750/Recorded751 then immediate PITSCHEDULE752, with NO Undo/Redo, zoom, pan or QSAVE between import and schedule. P91/P92 remain600x600/300mm/CL50.000/49.500; provided49.000/48.850 invert cells already blank, four warnings. Undo/Redo is NOT required to reproduce605. This narrows failure to initial import/record presentation path; exact extraction versus writer cause still unproved. Old saved postRedo fault independently persists747/748. Both synthetic copies currently open; native cleanup follows.
 
 
+8. **Repeatable guard banked:** PR1258/d82d2dc4c32366968e658b2d80e3f7639251a087 adds tests only. Tenmodernexecuted5PASS5FAIL/zero skipped/1.7126sec: sharedmapperretains49.000/48.850 for1.0/1.1/1.2/no namespace; missinglevelcontrolUnknownPASS. FourparserguardsFAILbecauseoneInvertproducestwoevidenceentries; compiled-callguardFAILbecauseLandXMLentrydoesnotcallsharedmapper. X-Civilentrydoescallmapper. Missingassignmentconnectionisidentified;duplicationdoesnotaloneproveblanklevelcause. Claudeproductionownershippreserved. net48build0errors286warnings28.49sec,no runtimePASS/install. Do notmergeREDguardalone; nativeplan/schedule/Inspector/Undo/readbackstillrequirecombinedrepair.
+
 ## BUG-606
 
 **Status:** OPEN — installedCivil3.0.49+48662ddd,realAutoCAD2027,15October2026.
