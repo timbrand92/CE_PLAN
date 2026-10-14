@@ -9,31 +9,31 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "8849666CE246F66B45D0149979DF95E9998BEF15DF9AD87C14F22AD624B78AB2",
+    "currentBugsSha256": "0E8D3E6063333879B75046D42B9AF77636BDF293BCDEF8A97A141113687A012D",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
     "traceableUxIds": 508,
-    "bugHeadings": 562,
+    "bugHeadings": 563,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 15,
-    "caseLedgers": 26,
-    "narrowCases": 330,
+    "caseLedgers": 27,
+    "narrowCases": 342,
     "narrowVerdicts": {
-      "PASS": 256,
-      "FAIL": 56,
+      "PASS": 265,
+      "FAIL": 57,
       "BLOCKED": 6,
-      "UNPROVEN": 12
+      "UNPROVEN": 14
     },
-    "uniqueEvidenceFiles": 563,
+    "uniqueEvidenceFiles": 588,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 544,
-    "uniqueMetadataFiles": 19,
+    "uniqueScreenshotFiles": 568,
+    "uniqueMetadataFiles": 20,
     "caseLinkedUxIds": 10,
-    "caseLinkedBugIds": 35
+    "caseLinkedBugIds": 36
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -14059,10 +14059,24 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-613",
+      "headingLine": 8122,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "structural-rc/cases.json::RC-09"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 6:47:36 am",
+  "capturedMelbourne": "15/10/2026, 7:05:46 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",

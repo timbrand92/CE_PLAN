@@ -446,3 +446,11 @@
 1. **612confirmedwithoutUndo:**freshsecond200PFCfailsSBEAMEDITfromoutlineandlabelimmediatelyafterplacement.NoUndoRedo/save/navigationneeded;exactcauseunknown.No repairinstalled.
 2. **Saved:**bothsyntheticmembers162345/5D1D62E6,normalclose871.Civil/sharedCSpreferencesunchanged,StructuralCSchangedafterplacement;exactfielddiffunavailable. Current330checks256PASS56FAIL6BLOCKED12UNPROVEN,563hashedfiles/0integrityfaults;43newbugs570-612OPEN.
 3. **Stillunfinished:**wholebuilt/V3percentageUNKNOWN,50%notmet;RC/elevations/scale/protection/plot/olderruntimeandfullinventoryremain.79%weeklyused/21%left,10%reserve.GoalACTIVE;continuefromnextapprovedworkflow.
+
+
+### 15 October — real RC beam preview, output and assembly gap
+
+1. **Codex-accepted narrowly:**visualtype/ligaturechoicesfit;zero-widthpreviewclearsandPlacewarns;top-barcheckboxenablesfieldsandadds2previewbars.ActualPlain300x500testdrawsfivebars/coggedlig/labels/dimensions.OneUndo removesvisibleRCoperationtogether;save/reopenrestoredspecimenretainsoutput.Noengineeringapproval.
+2. **613MEDIUMOPEN:**selectoutline/nativeMOVEmovesoutlinealone,leavingreinforcement/labels/dimensions.ThisfailsapprovedonecompounddetailST8-9/10;Claude-managednativeassemblyrepairrequired.Existingplan-gap,norecentregressionclaim.
+3. **Unproved/improve:**RedoNothingafterautosavebetweenUndoRedo,nocauseattribution.Propertiesoutlinearea375/perimeter80;scaleintentneedsreconciliationwithDIMSCALE/20,notengineeringfailureclaim.Two-windowworkflowandpreviewmissingactualcogremainST8-5/8improvements.OtherRCshapes/columns/units/protection/plot/calclinks/2024pending.
+4. **Recorded:**342narrowchecks265PASS57FAIL6BLOCKED14UNPROVEN,588hashedfileszero integrityfaults;44newbugs570-613OPEN.Overall50%UNKNOWN.LocalRC192033/AC7FD95Fclosednormally,sourceand3CEprefsunchanged.

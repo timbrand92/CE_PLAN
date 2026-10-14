@@ -1597,3 +1597,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Freshplacementalsofails:**200PFCimmediateSBEAMEDITwithoutUndoRedofailsfromoutlineandlabel865-869;UndoRedoisnotnecessarytrigger.Bothspecimenssavedlocallyandclosed870-871. No repairinstalled.
 2. **Nextrepairguard:**actualwriter-to-readerroundtripbeforeUndo,theneditedsize/UndoRedo/save-reopen;canonicalnativeownerClaude. Source-onlytestsnotnativeacceptance.CodexcontinueRC/remainingsectionspluswholeworkflowcoverageandowner-safe611statusrepair.
+
+
+### Codex RCBEAM native batch —15October2026
+
+1. **NarrowPASS:**Plainbeamvisualpicker/livepreview,zero-widthvalidation,top-barcountpreview,actualfivebar/coggedlig/labels/dimensionoutput,oneUndovisiblecleanup,savedreopenedoutput.OnlyPlaingeometryexecuted,notallType1-8orcolumns.
+2. **613OPEN:**outline-onlynativeMOVEstrandsreinforcement/annotation.ST8-9/10repairacceptanceallcomponentsMOVE/ROTATE/ERASEtogether,COPYnewmeaning/identity,UndoRedo/save-reopen/protectionand2024.Claude nativewriter;Codexexactpreviewwindow.Previewcurrentlyomitsactualcog/twowindowsnotapprovedsinglevisualworkflow.
+3. **Remainder:**RedoafterautosaveNothingtoredoUNPROVENcausation;nativeProperties375area/80lengthwith300x500UI/note1:1needsdrawing/detailscalecontractbeforegeometryacceptance.WholeST08/engineering/plot/otherRCformsremainunproved.Local872-896/structural-rc/cases.json;freshmainempty,sourceandprefsunchanged.
