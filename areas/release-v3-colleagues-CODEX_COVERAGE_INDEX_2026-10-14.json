@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "5232B753351267313CB573593399C45C2F2C7E0CA08C7EFE4866C337454AFBB0",
+    "currentBugsSha256": "EED8F9E800E5FA9E56B629F11DF8EDC4EF6D3982BFA9E1F997D39251F04628F5",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
@@ -7197,7 +7197,14 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": "**Status:** OPEN"
+      "currentStatusSourceLine": "**Status:** OPEN",
+      "repairCandidate": {
+        "commit": "b2e56d16",
+        "pullRequest": "https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1261",
+        "state": "BUILT_NOT_INSTALLED",
+        "nativeAccepted": false,
+        "dateMelbourne": "2026-10-15"
+      }
     },
     {
       "id": "BUG-575",

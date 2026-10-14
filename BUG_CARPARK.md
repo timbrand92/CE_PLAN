@@ -128,7 +128,7 @@
 
 **Reference:** screenshots105/106 in local V3UX_20261014; SC2 on an owned DSsupport, no privatejob. Minorwording/layoutfault, notfailedninthtype.
 
-**Regression/retest:** generate instruction from actualoptioncount; run C2andSC2, readall9choices, press9andEnter, verify ninthtypeaccepted; Cancel must leaveoriginalsupport. Preserve tested key9 success. No code changed pending window review/owner check.
+**Regression/retest:** generate instruction from actualoptioncount; run C2andSC2, readall9choices, press9andEnter, verify ninthtypeaccepted; Cancel must leaveoriginalsupport. Preserve tested key9 success. Candidate b2e56d16 / draft PR1261 (15 October): instruction uses the supplied choice count capped at nine keyboard shortcuts; selection/geometry unchanged. ST-02/ST2-2 reviewed; fetched remote history and all registered working copies showed no pending dialog edits. Modern/legacy builds passed zero errors/warnings (1.90s/10.71s), safe flags and explicit legacy references; initial shell-path failures corrected with the independence guard retained. Not installed or visually accepted; OPEN until C2/SC2 dark/light and Cancel/Escape checks above pass. Undo: revert b2e56d16.
 
 **Status:** OPEN
 

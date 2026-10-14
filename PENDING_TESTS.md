@@ -1616,3 +1616,7 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Already exercised in installed2027:** rectangular400x400/fourbarandcircular450mm/eightbarvisibleoutput,oneUndo/delayedRedo,bothsavedreadback. Area358-361/localRC19-28. ExistingBUG613nowalsofailsrectangularcolumnMOVE;preserveitOPEN. No wholeST08orengineeringacceptance.
 2. **Remaining representative acceptance:** repairedoutlineMOVEcarriesbars/tie/hatch/label/dimensions;verifyexactdimensions/cover/scaleandplot,thenprotectedcontent,COPY/ROTATE/ERASE,linksand2024. KeepthisinexistingST08batchratherthanindividualmanualbacklog.
+
+### BUG-576 — column picker instruction candidate (15 October, PR1261)
+
+1. **After the combined authorised release:** C2 and SC2 show nine choices and Press 1–9; key9 then Enter selects 250x90 PFC. Cancel/Escape leaves the owned support unchanged; inspect dark/light appearances. Candidate b2e56d16 has modern/legacy builds only, no installed acceptance. Existing successful key9 evidence105–106 is the control. BUG remains OPEN.

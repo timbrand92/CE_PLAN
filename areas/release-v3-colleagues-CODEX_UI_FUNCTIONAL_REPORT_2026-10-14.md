@@ -9,6 +9,8 @@
 5. **Usage:**85% of the account weekly allowance used,15% remaining; preserve10% reserve. No reset credit, paid provider request or installation used by this chat.
 6. **Still to prove:**remaining built commands and controls, complete workflow mapping, scale/units/UCS, protected objects, plotting, calculation links and older AutoCAD versions. Engineering choices still need Tim’s acceptance. Current synthetic specimens are saved locally; the test session has no drawing open.
 
+7. **Latest repair candidate:** BUG-576 column-picker instruction now includes the ninth keyboard choice in draft [PR1261](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1261), b2e56d16. Modern and legacy builds pass; not installed or observed in AutoCAD. OPEN status and native check count unchanged.
+
 ## Initial position — 14 October 2026 (superseded summary; history retained)
 
 1. **Result first:** the complete product has not been verified, and 50% real AutoCAD coverage has not been reached. This report separates observed results, historical evidence and work not yet exercised. It is evidence attached to the release area, not a new plan. Author: this Codex test chat; exact request in decisions/2026-10-14_REAL_AUTOCAD_50_PERCENT.md.
