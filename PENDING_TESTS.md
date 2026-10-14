@@ -1504,3 +1504,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Exercised:** explicit start/route, blankdatumgate, insertionEscape, readyknownrows, scaleinvalidation, safe missingDASHDOT2refusal, explicitstandardmetriclinetypeload, realplacement, oneUndo and delayedRedo. Screens681-703/verification291-295. BUG599 late dependency disclosure OPEN.
 2. **Next fixture:** local V3UX_20261014/profiles/CODEX_PROFILE_20261015.dwg saved158219bytes/SHA2F66797A610C6EE1D2D80FB582500D3A5205CD594280D39BDCCD8AF7C3A553D9. Freshsession778113170empty; old87364294stillunresolved595; ownlease1791986256 retained. Diskreadback/update, fullreadable row/plot, branches/curves/Unknown/realzero, stalegeometry/target and lockedlayer/Xref/REFEDIT/olderruntime remain unproven.
 3. **Repair and improvements:** Claude profileadapter/writer should disclose dependency599 at preparation while preserving refusal. Codex review improvements: readable plain route identity rather than pipehandle2C3 (existing wording360), practical insertioncoordinate display with exact detail, and a larger/centred review chart retaining correctscale ratio; no independentaxisstretch or hidden engineeringchange. These are review notes, not built upgrades or accepted layout.
+
+
+### Codex native profile follow-through — 15 October2026
+
+1. **Installed:** Civil3.0.49+48662ddd. Real saved-sectionrows/updateCancel/exacttarget/scaleinvalidation andupdateddiskreadbackrecorded296-301; no wholeUX-LSEC01/02acceptance.
+2. **Open repairs:** BUG599 lateDASHDOT2disclosure;600multilinetitlecollision;601existingsectiondoesnotvisiblyrefreshuntilREGEN. Claudeownsonewriter/command, Codexreviewwindow. Preserveatomicprotections.
+3. **Representative retest:** P1/P2route9.55m,datum18,H100/V10; changeH200/repreviewexistingtarget/Apply immediatelyshows1:200; Undoimmediately1:100/Redo1:200,save/reopen; alltitle/scalelinesseparated. Repeatlockedlayer/Xref/REFEDIT,missingassets,long/branchedrouteandolderruntime. Fullplot/engineeringclearancestillpending. CodexcancontinuecopieswithoutTimdrivingeachcase.
+4. **Progress:**270narrowchecksare214PASS44FAIL6BLOCKED6UNPROVEN,not50%wholecoverage. Bugs599-601remainOPEN;repaircandidates1259areuninstalled. Savedupdatedfixturestayslocalonly.

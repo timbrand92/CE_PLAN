@@ -346,3 +346,12 @@
 2. **New fault:** Ready/Applyenabled precedes missingDASHDOT2 disclosure (BUG599). Apply refuses safely and consumespreview. Explicitstandardmetriclinetypeload thenfreshpreviewallowsactualprofileplacement. OneUndo removes and untoucheddelayedRedo restores it. Wholegeometryseen, complete tinyrotatedtext/plotreadability unproven.
 3. **UI review notes:** route exposes pipehandle2C3, insertioncoordinates have excessiveprecision, dropdown and chart useblue, and short-route plot is small/left-biased. Preserve accurateverticalexaggeration when enlarging/centring; do notstretchaxes independently. These findings do not establish engineeringerrors or authorise a secondwriter.
 4. **Remaining:** saved actualprofile still needsdiskreadback/update, readable rows/plot, branch/curve/Unknown/zero/stale/protectedtarget andolderruntime checks. Native13narrowcases11PASS1FAIL1UNPROVEN,23screens. Current260assertions207PASS42FAIL6BLOCKED5UNPROVEN/21ledgers/386evidencefiles;30newbugs570-599OPEN. GoalACTIVE,overall50%notverified;weekly63%account-wide.
+
+
+### 15 October — saved profile rows and existing-section update
+
+1. **Verified:** original saved section retains readable225mmUPVC/grade1in48/velocity2.12m/s/fullflow84.25L/s,0.00/9.55mchainages,covers21.10/20.80m,inverts20.00/19.80m. Earlier84.26transcription superseded by closer native readback.
+2. **Update gate:** saved linkedsection8AF resolves exactoriginalposition; targetEscape returnsApplydisabled; H100to200invalidatesoldpreview; freshsame-targetReady/VE20; Appliedconsumesreceipt.
+3. **Drawing faults:** BUG600 wrappedtitle intersects table andscale. BUG601 updateleavesold1:100image visible evenafterUndo/Redoandzoom; nativeREGEN revealscorrectnarrower1:200section. NativeUndo/Redorecognitionisrecorded,completevisiblegeometryrollback remainsUNPROVEN.
+4. **Durability:** updatedsection/rows surviveQSAVE/close/reopen; finalcopyclosed,threepreferencefilesunchanged. No locked-layer/Xref/REFEDIT,post-update linkedmetadata,fullplotorengineeringacceptance.
+5. **Evidence scope:** current21ledgers270narrowchecks214PASS44FAIL6BLOCKED6UNPROVEN;404uniquecase-linkedfileshash-verified. Overall50%remainunverified,not270wholefeatures. Weekly65%usedaccount-wide;10%reserve. Verification296-301andlocal704-723.
