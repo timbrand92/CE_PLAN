@@ -2322,6 +2322,8 @@
 
 ## BUG-256
 
+**Fresh Codex flat-placement failure, 14 October 2026:** Civil3.0.49+48662ddd, ownedemptybay, CD100UPVC/bothinverts18.500. ActualFLATlabelandbothlevelsconfirmed378. SAVETIME0 beforehand; oneUechoCD removesentirepipe379; untouched12seconds/nativeREDO says Nothingtoredo380. No selection, pan, inspection, Save or autosave intervened. This is a new placement-route reproduction, separate from prior diameter-edit failure. Other placement routes passing do not close the whole bug; no rootcause claimed. Verification168.
+
 **Command / Area:** REDO after U in Civil AND Structural drawings (the BUG-192 family) in the installed Civil 3.0.16 / Structural 1.0.87: "Nothing to redo" after U in EVERY case tested.
 
 **Symptom (Codex verification 1 Oct 02:05 and 04:03, AutoCAD 2027, reports CODEX_VERIFYC1 and CODEX_VERIFYS1):** Civil: COPY a pit onto a free end (V1.05), a pit copied far from every pipe (V1.03), COPY Multiple + Escape (V2.03), grip stretch with Automatic (V5.03), tab X + Cancel (V3.01): one U works, REDO says "Nothing to redo". Structural: ERASE a column (W1.03), RC (W2.01), copied column (W7.02), ten Structural commands and five-step U/REDO (W9: Rebar Line, Level Mark, schedule "REDO must immediately follow the U"). U itself works and restores everything. Civil log lines after the U show CE writing to the block/viewport/layer table records before the next command (Codex reading, cause not established).
