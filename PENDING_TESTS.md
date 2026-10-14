@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Codex spot-level/manual-fall follow-up,14October2026
+
+1. **NarrowCodex-accepted:** Civil3.0.49+48662ddd, CDSL explicitP18.600/blankplaceholder, early/lateEscape/repeat/oneUndo/delayedRedo; CDFALL threeEscape stages/blank-zero reask/east1:80/oneUndo-delayedRedo. Save/close/reopen retains bothspot symbols andfall. Receipts201-206/screens480-503.
+2. **Remaining:** SpotLevelribbon route inconclusive; repeat actualicon/button. Linked-survey existing-level display and suggestions fromlevels, other bearings/UCS/units/protectedlayers/REFEDIT, words/negative/decimalratios, spotinvalidinput/edit/grips/plot/2024 remain. No wholeUX-SURV-03/UX-SURF-02 acceptance or50%credit.
+3. **Safety:** ownedcopyclosed,controlsrestored/all3settings unchanged/ownlease released.18narrowassertions17PASS/1UNPROVEN;weekly34%. No newbug/code/deploy/provider/reset.
+
 ## Codex existing Pit Schedule follow-up,14October2026
 
 0. **Regression draft only:**1256/commitb56b2250 onexactCivil48662ddd,9checks6PASS/3FAIL. DeliberatelyRED/doNOTmergealone; no runtimefix/install. PendingFilters881/641/618 andData1192 need coordinatedrepair. Candidate stillneeds actualtyped-note/Stop/Update/recovery/diskreplay afterrepair,plus586regressiongreen. Receipts199-200.

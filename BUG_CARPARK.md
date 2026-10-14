@@ -2337,6 +2337,9 @@
 
 ## BUG-256
 
+**14October2026 narrow positive recovery controls:** installedCivil3.0.49+48662ddd, ownedcopy. CDSL18.600 andmanualCDFALL east1:80 each oneU removes output;12seconds untouched delayedREDO restores output(487/488,497/498). SAVETIME0,no interveningselection/view/inspection/save/drawingswitch. Bothpersist aftersavedrawing/reopen501. These command-specific passes do not close the confirmeddiameter/flat/schedule failures elsewhere in256; use them as positive controls for coordinatedrepair. Verification203-206.
+
+
 **14October2026 existing Pit Schedule Update extension:** custom note single-paste/Stop/Update reports existing2rowsupdated. One nativeUechoesPITSCHEDULE and returns defaultnote(471); untouched12seconds/nativeREDO reports Nothing to redo(472). SAVETIME0, no selection/pan/inspection/save/autosave/drawing switch betweenU/Redo. Immediate firstUpdate table was offscreen(470); repeatUpdateactual474 anddisk477 proves custom note reaches output separately. RecoveryFAIL; no cause assertion or wholeBUGacceptance.
 
 
