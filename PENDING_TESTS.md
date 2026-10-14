@@ -1429,3 +1429,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Evidence attached:**reportcompanionCODEX_COVERAGE_INDEX_2026-10-14.json contains508UXIDs/539bugheadings/sourcehashes/12partialscopeaudits.14caseledgers172assertions(144PASS/22FAIL/4BLOCKED/2UNPROVEN)notwhole-itemcoverage.265evidencefilesverifiedpresent/hashmatches.
 2. **Stillpending:** fullcase-to-UX/bugmapping,historical/currentversionscreenshotreview,eligibility/statusreconciliationandtruthfuloverallpercentage. Old7%notcurrent;994/497arithmeticprovisional. Noitemacceptedfromopenedwindow,buildorpartialcase.
 3. **Nextrealchecks:** savedcalculationdraftreopen,actualPDF/XLSXandrenderedoutputs,rainfall-changeconsumption. Preserve1257combinedreleaseacceptancecheckand507zero/249rainfallremainders. Goalactive;noTimrepeatrequestedforrecordednarrowpasses.
+## Codex actual calculation exports —14October2026
+
+1. **Recorded:** installedCivil3.0.49+48662ddd, receipts234-239:14narrowassertions9PASS4FAIL1UNPROVEN. Saved draft/cancellation pass;3actualPDFpageslegible and nativeExcelopens3tabs. No completeUX-CALC04or50%acceptance.
+2. **Repair/retest:** BUG590eachpage/tabactualdraft/approvedstateandidentity; BUG591typednumericvalues/Unknown distinction;249acceptedBoydsrowprovenance/sharedrainfall;515warning1257candidateawaitscombinedinstallation. Criticaldurationtransferreviewopen;noautomaticPSDtransferassumed. No faultfixinstalled.
+3. **Remaining:** selectedsections/overflow/WSUD/approvalinvalidation/readfailures/2024; calculatorconsumers/drawingApply. Ownedcopyclosed/preferencesunchanged; do notaskTimtorepeatcompletedbatch. Continueownership-awareauthorisedrepairs.
