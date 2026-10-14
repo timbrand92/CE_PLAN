@@ -1634,3 +1634,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 3. **Usage instruction:** Tim supersedes10%reserve15October: useallowanceto0%,thenTimresets. Do notstopat90%; saveeachcoherentbatch.
 
 4. **Alias evidence follow-through15October:** EH/CH/WH/LBH/LBUH/BLH1:100 preselection/nativeproperties/save-reopen now observed narrowly; WHorigin Propertiesedit/persistence and BLHUndoRedo pass.12newcases11PASS1FAIL; same615livepreview/Applygap acrossaliases remainsOPEN. No allpreset/plot/protection/H2A/oldversion acceptance inferred.
+
+
+### Codex native Xref follow-through —15October2026
+
+1. **Installed narrowresults:** XRLINFO/normalXRLtransfer/nonlayerpropertypreservation/oneUndoRedo/mixedlockedprotection/sourcefilehash/save-reopen exercised inAutoCAD2027 onownedcopies.9checks7PASS2FAIL; no2024/fullworkflowacceptance.
+2. **Open616/617:** Addapprovedhighlightedpreview/counts/Apply withEscapenochange. Preflightlockedreferences inplainEnglish; failedrunmustnotcreateemptytargetlayer. Preserveexistingnativeprotectionandallreference/sourceproperties. Claude serviceowner; nofixcandidateinstalled.
+3. **Grouped remainingacceptance:** Same two-referencefixture, thenoverlay/paperspace/targetlocked/nested/unloaded/missingpaths/Xclip/REFEDITandlargecancel. OneUndo/Redo/save-reopen; compare sourcehashes. Do nothandTim individualhistoricaltestbacklog.

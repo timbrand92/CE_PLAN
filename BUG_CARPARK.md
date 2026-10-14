@@ -8162,3 +8162,23 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Related improvement:** after selecting an object or point thenEscape, messages say No objects/points selected. Prefer Selection cancelled; the cancellation itself worked and created no hatch. This wording observation does not create another fault count.
 
 7. **Native alias follow-through,15October:** EH/CH/WH/LBH/LBUH/BLH at verified100/1000 allplaceone nativeassociativeHATCH throughpreselectedObjects; EH/WH/LBH/LBUH/BLH reproduce missingdrawingpreview/Apply, extending615 ratherthanallocatinganotherbug. WHasksoriginbeforeselection, no visiblepatternreviewthenApply. AliasledgerCAH-12FAIL/screens982/989/990/992/994/996;11positivecontrolsincludeWHorigincancel, BLHsingleUndo41.133secondRedo, nativePropertiesoriginX50000/Y40000edit/persistence and6matchingnativepropertyrowsafterreopen. No repair built or installed.
+
+
+## BUG-616
+
+1. **Command / area:** Structural XRL, MEDIUM OPEN. ApprovedST5-11 review-before-change missing in installed1.0.116+f180b349.
+2. **Steps / actual:** Attach one syntheticDWG twice, on0 andCODEX_XRL_SECOND. TypeXRL. Counts2instances/1unique appear, then bothmoveimmediatelyto configuredXREF. No highlightedpreview/Apply.
+3. **Expected:** Count and highlight affectedreferences first, explicitApply, Escape makesnochange. Onlyreferenceobjectschange; onesingleUndo restoresall. ConfiguredXREFname alone isnot separatelyjudgedhere.
+4. **Evidence:** xrl-case-ledger.json XRL-08FAIL/screens1014–1016 under localV3UX_20261014. Positivecontrols XRL-02/03/04 verify nativepropertiesexceptlayerunchanged, exactsingleUndo andRedo. SourceDWGhashunchanged.
+5. **Guard / confirmation:** Onsame two-referencefixture, launchXRL; inspectcounts/highlightbeforechange, Escapecompareoriginals; rerunApply/Undo/Redo/save-reopen. Includeoverlays/paperspace/protectedlayers later.
+6. **Ownership / status:** Claude command/service lane; noimplementation/deploybyCodex. OPEN, notfixed orwholeworkflowaccepted.
+
+## BUG-617
+
+1. **Command / area:** Structural XRL/XRLFAST locked-reference refusal and failed-run drawing sideeffect, MEDIUM OPEN.
+2. **Steps:** SyntheticreferenceCC2on0 andCC3onCODEX_XRL_SECOND; lockonlysecondlayer withnativeLayercommand, ensuretargetXREFabsent, typeXRL.
+3. **Actual:** Prints[XRL] Error: eOnLockedLayer. BothreferencesrollbackexactlyT/T, lockflag4remains, butnewemptyXREFlayer survives failedrun. XRLFASTalsoprintsrawerror; XRLSILENTreturnswithoutvisiblefeedback. Noexceptiondialog/fullcrash/protectionbypassclaim.
+4. **Expected:** Nameblockedlayerandreferences inplain draftingterms; preserve lock and drawing state onrefusal. Preflight/transactionguardmustnotleave target-layerchanges afterfailure. Donotsilentlyunlockorskipwithoutreviewedintent.
+5. **Evidence:** XRL-09FAIL/screens1020–1025/nativeexport. XRL-05PASS proves mixedreferencegeometryrollbackandnativeprotection, notsuccessfulworkflow. Sourcefilehashunchanged. ReadserviceEnsureLayerbeforeUndoMarkScopecorroboratessideeffect; actualnativeevidenceprimary.
+6. **Guard / confirmation:** Run normal/fast/silent onmixed unlocked+lockedfixture; compare referenceproperties, layerflagsandlayer-tablebefore/after. Expectplainrefusal,no newtargetlayer, no movedreferences. Retestnormalunlockedcase/oneUndo separately.
+7. **Ownership / status:** Claude command/service lane; distinctfromABSBUG583. OPEN; nofixbuilt/installed/accepted.
