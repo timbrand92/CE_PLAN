@@ -425,3 +425,10 @@
 
 1. **Banked tests-only:** PR1260/6e01714a, child of1254; threecompiledwiringchecks2PASS1FAIL/zero skipped/104ms. ActivationandlistenercleanupPASS,closerefreshFAIL. Correctednet48build0errors10warnings25.67s,no runtimePASS.
 2. **Limits:** no productionrepairinstalled,609/610OPEN;eventtiming/disabledactionsstillneednativeacceptance. Sourcechecksdonotaddto312nativeassertionsor50%coverage. Original1254unchanged;newREDguardmustcombinewithmatchingrepair. Nextdistinctinstalledsectioncommandsnotyetcase-covered.
+
+
+### 15 October — real steel/timber section window
+
+1. **Works narrowly:** SBEAMwindowfits;PFCfamily/search200updatespreview/properties;no-matchclearsanddisablesPlace,clearrecovers. SideelevationAwaychangesbothinnerflangelineshidden together;frontviewretainsselection. Timberblankrejectsincompletedimensions;90x240preview/propertiesandSectionrectangleagree. Noengineeringapprovaloractualplacement.
+2. **611LOWOPEN:** Timberkeepsa false No local steel sections match that search message evenwithvaliddimensions/Placeenabled. Existingwindowstatusrepairpending;do notchangegeometryorsuppressgenuinecataloguewarnings.
+3. **Cleanup/limits:** Cancelnormal,CloseNo,baselineandthreepreferencesunchanged. Actualplacement/edit/UndoRedo/scale/UCS/hollows/plot/reopen/protection/linkedcalcs/olderruntimepending.324narrowchecks253PASS54FAIL6BLOCKED11UNPROVEN,542hashedfiles;full50%UNKNOWN.

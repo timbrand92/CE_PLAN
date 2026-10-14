@@ -1579,3 +1579,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **PR1260/6e01714a:**tests-onlychild1254;3modern2PASS1FAIL/zero skipped104ms. Compiledclose/no-currentrefreshroutefails,activationandlistenercleanupcontrolsPASS. net48build0errors10warnings25.67s,noruntimePASS. REDdontmergealone; no productionrepairinstalled.
 2. **Combineandnativeacceptance:** lastdrawingcloseclearschecklist/showsNo drawing open/disablesdrawingactions;Bwithoutchecklistnone,returnAownrecord. Timing/rapid-switch/protections/2024separate. Exact610Undo/readbackfailureseparate;immediateRedoPASSdoesnotcloseit.
+
+
+### Codex Structural sections native window —15October2026
+
+1. **NarrowPASS:** installedSBEAMPFCsearch/no-matchgating/recovery,sideflangeTowardAway/frontpreview,Timberblank/90x240SectionpreviewandCancel. Noactualsectionplaced.611LOWOPENfalseTimbersteel-searchstatus;Codexexistingwindowstatusrepairmustpreservevalid/invalidsteelbehaviour.
+2. **Representative remaining:** onePFCsectionandoneelevationplacedatknownpoint/scale,Inspector/SBEAMEDITsameviewandidentity,oneUndoRedo/save-reopen,correcthiddenlines/hollowinnerwalls/nativeplot,protectedtargets;oneRCbeam/column,linkedcalculationstaleness and2024separate. Noengineeringvalueapprovalfrompreview. Local836-850/sectionledger,baseline161895ADBC0B48intact.
