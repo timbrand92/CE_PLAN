@@ -14130,7 +14130,7 @@
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 7:24:10 am",
+  "capturedMelbourne": "15/10/2026, 7:25:18 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -14236,7 +14236,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 7:24:10 am",
+      "capturedMelbourne": "15/10/2026, 7:25:18 am",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -14573,7 +14573,7 @@
           ]
         }
       ],
-      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks.",
+      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -14621,7 +14621,8 @@
             "flat-pipe/case-ledger.json::FLAT-DELAYED-REDO",
             "flat-pipe/case-ledger.json::FLAT-EDITOR-LEVELS",
             "flat-pipe/case-ledger.json::FLAT-DISK-LABEL-LEVELS",
-            "flat-pipe/case-ledger.json::FLAT-INSPECTOR-TYPE"
+            "flat-pipe/case-ledger.json::FLAT-INSPECTOR-TYPE",
+            "flat-pipe/case-ledger.json::PREFERENCE-PRESERVATION"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -14633,6 +14634,17 @@
               ],
               "typedCommand": "CD",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                168
+              ],
+              "caseKeys": [
+                "flat-pipe/case-ledger.json::PREFERENCE-PRESERVATION"
+              ],
+              "scope": "Shared preference control only."
             }
           ]
         },
@@ -14698,7 +14710,14 @@
             "spot-fall/case-ledger.json::SPOT04",
             "spot-fall/case-ledger.json::SPOT05",
             "spot-fall/case-ledger.json::SPOT06",
-            "spot-fall/case-ledger.json::SPOT07"
+            "spot-fall/case-ledger.json::SPOT07",
+            "spot-fall/case-ledger.json::DISK01",
+            "spot-fall/case-ledger.json::CLEAN01",
+            "spot-fall/case-ledger.json::RIBBON01",
+            "linked-fall/case-ledger.json::Spot Level ribbon icon starts CDSL",
+            "linked-fall/case-ledger.json::Explicit proposed P21.500 drawn",
+            "linked-fall/case-ledger.json::Save close reopen keeps spot and three arrows",
+            "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -14710,6 +14729,57 @@
               ],
               "typedCommand": "CDSL",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                204,
+                206
+              ],
+              "caseKeys": [
+                "spot-fall/case-ledger.json::DISK01",
+                "spot-fall/case-ledger.json::CLEAN01"
+              ],
+              "scope": "Shared disk/cleanup evidence; not duplicate checks."
+            },
+            {
+              "receiptNumbers": [
+                202
+              ],
+              "caseKeys": [
+                "spot-fall/case-ledger.json::RIBBON01"
+              ],
+              "scope": "Earlier text click remains UNPROVEN; later actual icon case is separate."
+            },
+            {
+              "receiptNumbers": [
+                213
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Spot Level ribbon icon starts CDSL",
+                "linked-fall/case-ledger.json::Explicit proposed P21.500 drawn"
+              ],
+              "scope": "Actual ribbon icon route and spot placement."
+            },
+            {
+              "receiptNumbers": [
+                215,
+                217
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Save close reopen keeps spot and three arrows"
+              ],
+              "scope": "Shared spot/three-arrow disk survival."
+            },
+            {
+              "receiptNumbers": [
+                218
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
+              ],
+              "scope": "Shared controls/cleanup only."
             }
           ]
         },
@@ -14999,7 +15069,13 @@
             "schedule-placement/case-ledger.json::SCHED-OUTPUT-07",
             "schedule-placement/case-ledger.json::SCHED-LAYOUT-08",
             "schedule-placement/case-ledger.json::SCHED-DISK-09",
-            "schedule-placement/case-ledger.json::SCHED-CLEANUP-10"
+            "schedule-placement/case-ledger.json::SCHED-CLEANUP-10",
+            "schedule-write/case-ledger.json::Staged P2 inlet value",
+            "schedule-write/case-ledger.json::Stop overriding writes downstream 19.75",
+            "schedule-write/case-ledger.json::Opposite upstream stays 20.00",
+            "schedule-write/case-ledger.json::Native single Undo restores 19.80",
+            "schedule-write/case-ledger.json::Untouched 12-second delayed Redo",
+            "schedule-write/case-ledger.json::Save/reopen drawing and schedule retain 20.00/19.75"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -15012,6 +15088,24 @@
               ],
               "typedCommand": "PITSCHEDULE",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                172,
+                173,
+                174
+              ],
+              "caseKeys": [
+                "schedule-write/case-ledger.json::Staged P2 inlet value",
+                "schedule-write/case-ledger.json::Stop overriding writes downstream 19.75",
+                "schedule-write/case-ledger.json::Opposite upstream stays 20.00",
+                "schedule-write/case-ledger.json::Native single Undo restores 19.80",
+                "schedule-write/case-ledger.json::Untouched 12-second delayed Redo",
+                "schedule-write/case-ledger.json::Save/reopen drawing and schedule retain 20.00/19.75"
+              ],
+              "scope": "Existing downstream-end schedule edit/write/Undo/disk; preserve failed Redo."
             }
           ]
         },
@@ -15119,7 +15213,82 @@
             "calculations/cases.json::Preference files unchanged",
             "calculations/cases.json::Boyds rows use recorded rainfall or declare source unknown",
             "calculations/cases.json::Missing input yields visibly Unknown rather than zero result",
-            "calculations/cases.json::Last-row critical duration warning visible to drafter"
+            "calculations/cases.json::Last-row critical duration warning visible to drafter",
+            "calculations/export-cases.json::draft-restored",
+            "calculations/export-cases.json::boyds-results-restored",
+            "calculations/export-cases.json::boyds-last-row-warning",
+            "calculations/export-cases.json::preview-requires-reprepare",
+            "calculations/export-cases.json::xlsx-save-cancel",
+            "calculations/export-cases.json::xlsx-created",
+            "calculations/export-cases.json::pdf-print-cancel",
+            "calculations/export-cases.json::pdf-created",
+            "calculations/export-cases.json::pdf-layout",
+            "calculations/export-cases.json::xlsx-native-view",
+            "calculations/export-cases.json::rainfall-attribution",
+            "calculations/export-cases.json::section-draft-status",
+            "calculations/export-cases.json::xlsx-numeric-types",
+            "calculations/export-cases.json::critical-duration-transfer",
+            "calculator-consumers/cases.json::restored-pipe-draft",
+            "calculator-consumers/cases.json::native-pipe-list",
+            "calculator-consumers/cases.json::native-prefill",
+            "calculator-consumers/cases.json::pipe-readable-name",
+            "calculator-consumers/cases.json::invalid-pipe-display",
+            "calculator-consumers/cases.json::invalid-pipe-prepared-package",
+            "calculator-consumers/cases.json::pipe-valid-recovery",
+            "calculator-consumers/cases.json::pipe-preview-invalidation",
+            "calculator-consumers/cases.json::catchment-source-restored",
+            "calculator-consumers/cases.json::catchment-ari-consumer",
+            "calculator-consumers/cases.json::manual-intensity-result",
+            "calculator-consumers/cases.json::no-selected-sections",
+            "calculator-consumers/cases.json::manual-export-source",
+            "calculator-consumers/cases.json::invalid-catchment-stale-row",
+            "calculator-consumers/cases.json::invalid-catchment-disk-restoration",
+            "calculator-consumers/cases.json::catchment-valid-recovery",
+            "calculator-consumers/cases.json::pipe-disk-persistence",
+            "catchment-rows/cases.json::CR-01",
+            "catchment-rows/cases.json::CR-02",
+            "catchment-rows/cases.json::CR-03",
+            "catchment-rows/cases.json::CR-04",
+            "catchment-rows/cases.json::CR-05",
+            "catchment-rows/cases.json::CR-06",
+            "catchment-rows/cases.json::CR-07",
+            "catchment-rows/cases.json::CR-08",
+            "catchment-rows/cases.json::CR-09",
+            "catchment-rows/cases.json::CR-10",
+            "report-intake/cases.json::RI-01",
+            "report-intake/cases.json::RI-02",
+            "report-intake/cases.json::RI-03",
+            "report-intake/cases.json::RI-04",
+            "report-intake/cases.json::RI-05",
+            "report-intake/cases.json::RI-06",
+            "report-intake/cases.json::RI-07",
+            "report-intake/cases.json::RI-08",
+            "report-intake/cases.json::RI-09",
+            "report-intake/fresh-cases.json::RF-01",
+            "report-intake/fresh-cases.json::RF-02",
+            "report-intake/fresh-cases.json::RF-03",
+            "report-intake/fresh-cases.json::RF-04",
+            "report-intake/fresh-cases.json::RF-05",
+            "report-intake/fresh-cases.json::RF-06",
+            "report-intake/fresh-cases.json::RF-07",
+            "report-intake/fresh-cases.json::RF-08",
+            "report-intake/fresh-cases.json::RO-01",
+            "report-intake/fresh-cases.json::RO-02",
+            "report-intake/fresh-cases.json::RO-03",
+            "report-intake/fresh-cases.json::RO-04",
+            "report-intake/fresh-cases.json::RO-05",
+            "calculator-remaining/cases.json::RC-01",
+            "calculator-remaining/cases.json::RC-02",
+            "calculator-remaining/cases.json::RC-03",
+            "calculator-remaining/cases.json::RC-04",
+            "calculator-remaining/cases.json::RC-05",
+            "calculator-remaining/cases.json::RC-06",
+            "calculator-remaining/cases.json::RC-07",
+            "calculator-remaining/cases.json::RR-01",
+            "calculator-remaining/cases.json::RR-02",
+            "calculator-remaining/cases.json::RR-03",
+            "calculator-remaining/cases.json::RR-04",
+            "calculator-remaining/cases.json::RR-05"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -15131,6 +15300,154 @@
               ],
               "typedCommand": "CDCALC",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                234,
+                235,
+                236,
+                237,
+                238
+              ],
+              "caseKeys": [
+                "calculations/export-cases.json::draft-restored",
+                "calculations/export-cases.json::boyds-results-restored",
+                "calculations/export-cases.json::boyds-last-row-warning",
+                "calculations/export-cases.json::preview-requires-reprepare",
+                "calculations/export-cases.json::xlsx-save-cancel",
+                "calculations/export-cases.json::xlsx-created",
+                "calculations/export-cases.json::pdf-print-cancel",
+                "calculations/export-cases.json::pdf-created",
+                "calculations/export-cases.json::pdf-layout",
+                "calculations/export-cases.json::xlsx-native-view",
+                "calculations/export-cases.json::rainfall-attribution",
+                "calculations/export-cases.json::section-draft-status",
+                "calculations/export-cases.json::xlsx-numeric-types",
+                "calculations/export-cases.json::critical-duration-transfer"
+              ],
+              "scope": "Nested calculator/report/print/persistence evidence reached from CDCALC. Individual child features and outcomes remain distinct; no whole-command acceptance."
+            },
+            {
+              "receiptNumbers": [
+                243,
+                244,
+                245,
+                246,
+                247,
+                248
+              ],
+              "caseKeys": [
+                "calculator-consumers/cases.json::restored-pipe-draft",
+                "calculator-consumers/cases.json::native-pipe-list",
+                "calculator-consumers/cases.json::native-prefill",
+                "calculator-consumers/cases.json::pipe-readable-name",
+                "calculator-consumers/cases.json::invalid-pipe-display",
+                "calculator-consumers/cases.json::invalid-pipe-prepared-package",
+                "calculator-consumers/cases.json::pipe-valid-recovery",
+                "calculator-consumers/cases.json::pipe-preview-invalidation",
+                "calculator-consumers/cases.json::catchment-source-restored",
+                "calculator-consumers/cases.json::catchment-ari-consumer",
+                "calculator-consumers/cases.json::manual-intensity-result",
+                "calculator-consumers/cases.json::no-selected-sections",
+                "calculator-consumers/cases.json::manual-export-source",
+                "calculator-consumers/cases.json::invalid-catchment-stale-row",
+                "calculator-consumers/cases.json::invalid-catchment-disk-restoration",
+                "calculator-consumers/cases.json::catchment-valid-recovery",
+                "calculator-consumers/cases.json::pipe-disk-persistence"
+              ],
+              "scope": "Nested calculator/report/print/persistence evidence reached from CDCALC. Individual child features and outcomes remain distinct; no whole-command acceptance."
+            },
+            {
+              "receiptNumbers": [
+                254,
+                255,
+                256,
+                261,
+                262
+              ],
+              "caseKeys": [
+                "catchment-rows/cases.json::CR-01",
+                "catchment-rows/cases.json::CR-02",
+                "catchment-rows/cases.json::CR-03",
+                "catchment-rows/cases.json::CR-04",
+                "catchment-rows/cases.json::CR-05",
+                "catchment-rows/cases.json::CR-06",
+                "catchment-rows/cases.json::CR-07",
+                "catchment-rows/cases.json::CR-08",
+                "catchment-rows/cases.json::CR-09",
+                "catchment-rows/cases.json::CR-10"
+              ],
+              "scope": "Nested calculator/report/print/persistence evidence reached from CDCALC. Individual child features and outcomes remain distinct; no whole-command acceptance."
+            },
+            {
+              "receiptNumbers": [
+                264,
+                265,
+                266,
+                268
+              ],
+              "caseKeys": [
+                "report-intake/cases.json::RI-01",
+                "report-intake/cases.json::RI-02",
+                "report-intake/cases.json::RI-03",
+                "report-intake/cases.json::RI-04",
+                "report-intake/cases.json::RI-05",
+                "report-intake/cases.json::RI-06",
+                "report-intake/cases.json::RI-07",
+                "report-intake/cases.json::RI-08",
+                "report-intake/cases.json::RI-09"
+              ],
+              "scope": "Nested calculator/report/print/persistence evidence reached from CDCALC. Individual child features and outcomes remain distinct; no whole-command acceptance."
+            },
+            {
+              "receiptNumbers": [
+                274,
+                275,
+                286,
+                287
+              ],
+              "caseKeys": [
+                "report-intake/fresh-cases.json::RF-01",
+                "report-intake/fresh-cases.json::RF-02",
+                "report-intake/fresh-cases.json::RF-03",
+                "report-intake/fresh-cases.json::RF-04",
+                "report-intake/fresh-cases.json::RF-05",
+                "report-intake/fresh-cases.json::RF-06",
+                "report-intake/fresh-cases.json::RF-07",
+                "report-intake/fresh-cases.json::RF-08",
+                "report-intake/fresh-cases.json::RO-01",
+                "report-intake/fresh-cases.json::RO-02",
+                "report-intake/fresh-cases.json::RO-03",
+                "report-intake/fresh-cases.json::RO-04",
+                "report-intake/fresh-cases.json::RO-05"
+              ],
+              "scope": "Nested calculator/report/print/persistence evidence reached from CDCALC. Individual child features and outcomes remain distinct; no whole-command acceptance."
+            },
+            {
+              "receiptNumbers": [
+                277,
+                278,
+                280,
+                282,
+                284
+              ],
+              "caseKeys": [
+                "calculator-remaining/cases.json::RC-01",
+                "calculator-remaining/cases.json::RC-02",
+                "calculator-remaining/cases.json::RC-03",
+                "calculator-remaining/cases.json::RC-04",
+                "calculator-remaining/cases.json::RC-05",
+                "calculator-remaining/cases.json::RC-06",
+                "calculator-remaining/cases.json::RC-07",
+                "calculator-remaining/cases.json::RR-01",
+                "calculator-remaining/cases.json::RR-02",
+                "calculator-remaining/cases.json::RR-03",
+                "calculator-remaining/cases.json::RR-04",
+                "calculator-remaining/cases.json::RR-05"
+              ],
+              "scope": "Nested calculator/report/print/persistence evidence reached from CDCALC. Individual child features and outcomes remain distinct; no whole-command acceptance."
             }
           ]
         },
@@ -15194,7 +15511,11 @@
             "spot-fall/case-ledger.json::FALL05",
             "spot-fall/case-ledger.json::FALL06",
             "spot-fall/case-ledger.json::FALL07",
-            "spot-fall/case-ledger.json::FALL08"
+            "spot-fall/case-ledger.json::FALL08",
+            "spot-fall/case-ledger.json::DISK01",
+            "spot-fall/case-ledger.json::CLEAN01",
+            "linked-fall/case-ledger.json::Save close reopen keeps spot and three arrows",
+            "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -15206,6 +15527,38 @@
               ],
               "typedCommand": "CDFALL",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                204,
+                206
+              ],
+              "caseKeys": [
+                "spot-fall/case-ledger.json::DISK01",
+                "spot-fall/case-ledger.json::CLEAN01"
+              ],
+              "scope": "Shared disk/cleanup evidence; not duplicate checks."
+            },
+            {
+              "receiptNumbers": [
+                215,
+                217
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Save close reopen keeps spot and three arrows"
+              ],
+              "scope": "Shared spot/three-arrow disk survival."
+            },
+            {
+              "receiptNumbers": [
+                218
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
+              ],
+              "scope": "Shared controls/cleanup only."
             }
           ]
         },
@@ -15233,7 +15586,18 @@
             "suggested-fall/case-ledger.json::One U removes whole accepted arrow",
             "suggested-fall/case-ledger.json::Quiet delayed Redo restores whole arrow",
             "suggested-fall/case-ledger.json::Save close reopen retains southward 1:5.3",
-            "suggested-fall/case-ledger.json::Controls/settings restored and actual copy closed"
+            "suggested-fall/case-ledger.json::Controls/settings restored and actual copy closed",
+            "linked-fall/case-ledger.json::Existing P-prefixed spot read automatically",
+            "linked-fall/case-ledger.json::Move Escape skips without arrow",
+            "linked-fall/case-ledger.json::Accept Escape skips without default placement",
+            "linked-fall/case-ledger.json::Explicit-level Escape skips and keeps earlier arrow",
+            "linked-fall/case-ledger.json::Enter default accepts existing-level suggestion",
+            "linked-fall/case-ledger.json::Second accept and next-point Escape finish 2placed3skipped",
+            "linked-fall/case-ledger.json::One U removes both arrows but keeps earlier spot",
+            "linked-fall/case-ledger.json::Quiet delayed Redo restores both arrows",
+            "linked-fall/case-ledger.json::Save close reopen keeps spot and three arrows",
+            "linked-fall/case-ledger.json::Starting and cancelling Suggest Fall restores warning",
+            "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -15245,6 +15609,53 @@
               ],
               "typedCommand": "CDFALLSUGGEST",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                213,
+                214
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Existing P-prefixed spot read automatically",
+                "linked-fall/case-ledger.json::Move Escape skips without arrow",
+                "linked-fall/case-ledger.json::Accept Escape skips without default placement",
+                "linked-fall/case-ledger.json::Explicit-level Escape skips and keeps earlier arrow",
+                "linked-fall/case-ledger.json::Enter default accepts existing-level suggestion",
+                "linked-fall/case-ledger.json::Second accept and next-point Escape finish 2placed3skipped",
+                "linked-fall/case-ledger.json::One U removes both arrows but keeps earlier spot",
+                "linked-fall/case-ledger.json::Quiet delayed Redo restores both arrows"
+              ],
+              "scope": "Existing spot read, Skip/Accept/Move/Escape and command-run recovery."
+            },
+            {
+              "receiptNumbers": [
+                215,
+                217
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Save close reopen keeps spot and three arrows"
+              ],
+              "scope": "Shared spot/three-arrow disk survival."
+            },
+            {
+              "receiptNumbers": [
+                217
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Starting and cancelling Suggest Fall restores warning"
+              ],
+              "scope": "Starting/cancelling suggestions changes subsequent check visibility; cross-command causal limit retained."
+            },
+            {
+              "receiptNumbers": [
+                218
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
+              ],
+              "scope": "Shared controls/cleanup only."
             }
           ]
         },
@@ -16305,11 +16716,65 @@
           "label": "Checks (CDCHECK)",
           "group": "Schedule",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "linked-fall/case-ledger.json::Warm CE Check flags only wrong-way control",
+            "linked-fall/case-ledger.json::CE Check Enter finishes show-where",
+            "linked-fall/case-ledger.json::Clicked Problems shows 2 of 10 connection rows",
+            "linked-fall/case-ledger.json::Wrong-way warning missing immediately after reopen in All and Problems",
+            "linked-fall/case-ledger.json::Full saved list omits displayed fall-direction warning",
+            "linked-fall/case-ledger.json::Starting and cancelling Suggest Fall restores warning",
+            "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                215,
+                216,
+                217
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Warm CE Check flags only wrong-way control",
+                "linked-fall/case-ledger.json::CE Check Enter finishes show-where",
+                "linked-fall/case-ledger.json::Clicked Problems shows 2 of 10 connection rows",
+                "linked-fall/case-ledger.json::Wrong-way warning missing immediately after reopen in All and Problems",
+                "linked-fall/case-ledger.json::Full saved list omits displayed fall-direction warning"
+              ],
+              "scope": "Connection-check window/review/listing and cold-state failures, not consultant DWG checker."
+            },
+            {
+              "receiptNumbers": [
+                217
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Starting and cancelling Suggest Fall restores warning"
+              ],
+              "scope": "Starting/cancelling suggestions changes subsequent check visibility; cross-command causal limit retained."
+            },
+            {
+              "receiptNumbers": [
+                218
+              ],
+              "caseKeys": [
+                "linked-fall/case-ledger.json::Controls/settings restored fixture closed lease released"
+              ],
+              "scope": "Shared controls/cleanup only."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                215,
+                217
+              ],
+              "typedCommand": "CDCHECK",
+              "scope": "Exact command entered; all retained case outcomes remain bounded."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::110::CDCONFIRM",
@@ -16993,7 +17458,12 @@
             "purlin-lap/case-ledger.json::P1-Yes-Undo-delayed-Redo",
             "purlin-lap/case-ledger.json::P1-No-disk-readback",
             "purlin-lap/case-ledger.json::P1-Yes-disk-readback",
-            "purlin-lap/case-ledger.json::P1-position-accuracy"
+            "purlin-lap/case-ledger.json::P1-position-accuracy",
+            "rafter-joist/joist-purlin-case-ledger.json::P1-LAP-ESCAPE",
+            "rafter-joist/joist-purlin-case-ledger.json::P1-UNDO-DELAYED-REDO",
+            "rafter-joist/joist-purlin-case-ledger.json::DRAFTING-CONTROLS",
+            "rafter-joist/joist-purlin-case-ledger.json::SETTINGS-UNCHANGED",
+            "purlin-lap/case-ledger.json::Drafting-controls-settings-cleanup"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -17005,6 +17475,38 @@
               ],
               "typedCommand": "P1",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                161
+              ],
+              "caseKeys": [
+                "rafter-joist/joist-purlin-case-ledger.json::P1-LAP-ESCAPE",
+                "rafter-joist/joist-purlin-case-ledger.json::P1-UNDO-DELAYED-REDO"
+              ],
+              "scope": "Earlier lap Escape/output and recovery; separate from normal lap-choice batch."
+            },
+            {
+              "receiptNumbers": [
+                159,
+                161
+              ],
+              "caseKeys": [
+                "rafter-joist/joist-purlin-case-ledger.json::DRAFTING-CONTROLS",
+                "rafter-joist/joist-purlin-case-ledger.json::SETTINGS-UNCHANGED"
+              ],
+              "scope": "Shared fixture controls/cleanup; not extra command acceptance."
+            },
+            {
+              "receiptNumbers": [
+                192
+              ],
+              "caseKeys": [
+                "purlin-lap/case-ledger.json::Drafting-controls-settings-cleanup"
+              ],
+              "scope": "Cleanup only."
             }
           ]
         },
@@ -19191,7 +19693,9 @@
           "associatedWorkflowCaseKeys": [
             "rafter-joist/joist-purlin-case-ledger.json::FJ1-UNDO-DELAYED-REDO",
             "rafter-joist/joist-purlin-case-ledger.json::FJ1-EXACT-SPAN-WIDTH",
-            "rafter-joist/joist-purlin-case-ledger.json::FJ1-DISK-WIDTH"
+            "rafter-joist/joist-purlin-case-ledger.json::FJ1-DISK-WIDTH",
+            "rafter-joist/joist-purlin-case-ledger.json::DRAFTING-CONTROLS",
+            "rafter-joist/joist-purlin-case-ledger.json::SETTINGS-UNCHANGED"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -19203,6 +19707,19 @@
               ],
               "typedCommand": "FJ1",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                159,
+                161
+              ],
+              "caseKeys": [
+                "rafter-joist/joist-purlin-case-ledger.json::DRAFTING-CONTROLS",
+                "rafter-joist/joist-purlin-case-ledger.json::SETTINGS-UNCHANGED"
+              ],
+              "scope": "Shared fixture controls/cleanup; not extra command acceptance."
             }
           ]
         },
@@ -19221,7 +19738,8 @@
             "rafter-joist/case-ledger.json::R1-UNDO-DELAYED-REDO",
             "rafter-joist/case-ledger.json::R1-EXACT-WIDTH",
             "rafter-joist/case-ledger.json::R1-DISK-WIDTH",
-            "rafter-joist/case-ledger.json::R1-PREFERENCE-PRESERVATION"
+            "rafter-joist/case-ledger.json::R1-PREFERENCE-PRESERVATION",
+            "floor-roof/case-ledger.json::R1-POINT-ESCAPE"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -19233,6 +19751,17 @@
               ],
               "typedCommand": "R1",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                149
+              ],
+              "caseKeys": [
+                "floor-roof/case-ledger.json::R1-POINT-ESCAPE"
+              ],
+              "scope": "Point-mode cancellation only."
             }
           ]
         },
@@ -21170,7 +21699,8 @@
             "plan-level/case-ledger.json::LEVEL-ESCAPE-KEEPS",
             "plan-level/case-ledger.json::LEVEL-DISK-READBACK",
             "plan-level/case-ledger.json::LEVEL-KNOWN-ENTER-KEEP",
-            "plan-level/case-ledger.json::LEVEL-CLEAR-NEVER-SET-WORDING"
+            "plan-level/case-ledger.json::LEVEL-CLEAR-NEVER-SET-WORDING",
+            "plan-level/case-ledger.json::PREFERENCE-PRESERVATION"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -21182,6 +21712,18 @@
               ],
               "typedCommand": "CSPLANLEVEL",
               "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                180,
+                181
+              ],
+              "caseKeys": [
+                "plan-level/case-ledger.json::PREFERENCE-PRESERVATION"
+              ],
+              "scope": "Shared preference control; no disabled-output acceptance."
             }
           ]
         },
@@ -21294,7 +21836,8 @@
           "nativeTriggerEvidenceCaseKeys": [],
           "associatedWorkflowCaseKeys": [
             "plan-level/case-ledger.json::FRAMING-LEGEND-OFF-DISCLOSURE",
-            "plan-level/case-ledger.json::FRAMING-LEGEND-ACTUAL-OUTPUT"
+            "plan-level/case-ledger.json::FRAMING-LEGEND-ACTUAL-OUTPUT",
+            "plan-level/case-ledger.json::PREFERENCE-PRESERVATION"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -21306,6 +21849,18 @@
               ],
               "typedCommand": "CSFRAMINGLEGEND",
               "scope": "Disabled-entry disclosure only; output remains BLOCKED."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                180,
+                181
+              ],
+              "caseKeys": [
+                "plan-level/case-ledger.json::PREFERENCE-PRESERVATION"
+              ],
+              "scope": "Shared preference control; no disabled-output acceptance."
             }
           ]
         },
@@ -22339,7 +22894,8 @@
           "nativeTriggerEvidenceCaseKeys": [],
           "associatedWorkflowCaseKeys": [
             "plan-level/case-ledger.json::LEVEL-CARRY-OFF-DISCLOSURE",
-            "plan-level/case-ledger.json::LEVEL-CARRY-ACTUAL-OUTPUT"
+            "plan-level/case-ledger.json::LEVEL-CARRY-ACTUAL-OUTPUT",
+            "plan-level/case-ledger.json::PREFERENCE-PRESERVATION"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -22351,6 +22907,18 @@
               ],
               "typedCommand": "CSLEVELCARRY",
               "scope": "Disabled-entry disclosure only; output remains BLOCKED."
+            }
+          ],
+          "supplementaryWorkflowEvidence": [
+            {
+              "receiptNumbers": [
+                180,
+                181
+              ],
+              "caseKeys": [
+                "plan-level/case-ledger.json::PREFERENCE-PRESERVATION"
+              ],
+              "scope": "Shared preference control; no disabled-output acceptance."
             }
           ]
         },
@@ -22523,8 +23091,9 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 32,
-      "associatedCaseCount": 232
+      "associatedEntryCount": 33,
+      "associatedCaseCount": 342,
+      "current27LedgerCaseAssociationComplete": true
     }
   },
   "currentNewBugStatusAudit": {
