@@ -8073,7 +8073,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 ## BUG-610
 
 **Status:** OPEN — observed in real AutoCAD 2027, installed Structural1.0.116+f180b349, 15 October2026.
-**Severity:** MEDIUM — checklist becomes unavailable after N/A change, native Undo and drawing reactivation; exact record-loss cause unproved.
+**Severity:** HIGH — checklist becomes unavailable after a single N/A edit and native Undo; saving/reopening preserves the failure. Exact deletion versus unreadable storage remains unproved.
 
 1. **Steps:** open saved syntheticA with Xref four-item checklist/firstitemN/A (0/3), also open syntheticB without checklist. Ordinary A/B switching correctly restores each record804-807. OnA open itemnote, type disposable text/Cancel, reopen blank/Escape. Click UndoN/A (0/4), focus native command input, CtrlZ. SwitchB, thenA.
 2. **Expected:** one item change is one reversible operation; A retains the checklist and correct item state. The visible palette must follow the current record after Undo and reactivation.
@@ -8082,3 +8082,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Acceptance:** savedA0/3; UndoN/A0/4; one nativeUndo restores0/3 and immediateRedo0/4, with all four original item identities retained; switchB shows none/returnA shows its own state. Save/reopen must agree, protected targets and2024runtime separate. Exact current record mutation, cause and native repair remain unproved. Evidence local811-818; approvedST09/ST9-10 and one-operation Undo rule.
 
 6. **609 scope refinement:** native803 reconfirms stale no-DWG display. Opening B without checklist804 clears it, A805 restores its own saved0/3, ordinary B806/A807 switching isolates both correctly. This does not close609 or prove rapid-switch/wrong-target mutation safety.
+
+7. **Independent single-edit disk control, supersedes switch prerequisite uncertainty:** new copy starts8190/3; UndoN/A8200/4; focused nativeCtrlZ821; QSAVE822/Close823/reopen824 shows No Checklist. NO note interaction, drawing switch, zoom or second checklist edit between initialread and Undo/save. Saved160233bytes/SHACD7DD6799866DC1D3C09815161CD4505110DE340572EC84C7C7D7DA757F57535. Unavailability survives disk; actual internal deletion versus unreadable record still not distinguished. Original baseline remains159460/B39551DB.
+8. **Immediate Redo control:** independent freshcopy8250/3, UndoN/A8260/4; nativeUndo827 then immediateRedo828 BEFORE any switch/extra command: Everything has been redone. QSAVE829/Close830/reopen831 retains fouritems0/4. Saved160776bytes/SHA1FCAD8A7E9A299D84C63765B20E745C45824E8732113EB16EBB2FAED6D2E6EA8. This narrow positive control separates working immediate Redo from after-switch Nothing to redo; it does not make Undo correct.
+9. **Cleanup/retest:** readback copies closed SaveNo832-835; preferences unchanged, original baseline unchanged. Prior instruction to isolate immediateUndoRedo is now performed; next Claude repair must preserve readable checklist on Undo and correct canonical record, with Codex palette refresh. Do not mark610fixed from this Redo PASS. Native2024/protectedtargets and other checklist edits remain untested.

@@ -1567,3 +1567,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Narrow native PASS:** ordinaryA/B context isolation, itemnoteCancel/reopenblank and Escape.609 remains stale at finaldocumentclose;608 still reasonlessN/A.
 2. **610OPEN representative check:** fresh saved four-itemA (firstN/A), UndoN/A0/4, immediate nativeUndo0/3/Redo0/4 BEFORE switching, retain same four identities; thenA/B switching and actualsave/reopen agree. Currentdiagnostic insteadshowedNoChecklistafterUndo/reactivation; record-losscauseunproved,after-switchNothingtoredonotattributedtoCE. Claude storage/Undo plus Codex context display, no productionrepairinstalled.
 3. **Evidence:** verification328-331/local803-818; savedA/B and threepreferencesunchanged; no client drawings or engineering approvals.2027 and2024 acceptance separate.
+
+
+### Codex610single-editisolation completed—15October2026
+
+1. **Supersedes cause-isolation remainder:** native819-824 proves NoChecklistafterUndo/QSAVE/reopenwithoutdrawing-switchornotes.610HIGH/OPEN; actualinternal deletionversusunreadablerecordunproved. IndependentimmediateRedo825-831beforeanyswitchrecoversfouritems0/4andsurvivesreopen.
+2. **Remainingrepairacceptance:** oneUndoofN/Aeditrestoresreadablefour-itemchecklistand0/3;Redo0/4;actualrecordandpaletteagree,thenA/Bswitch/save/reopen. PreservecanonicalQAauthority/identity;Claude storage/Undo andCodexrefresh. ImmediateRedoPASSdoesnotclose610.2024/protectedtargets/otheredittypesstillpending.

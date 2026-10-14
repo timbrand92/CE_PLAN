@@ -412,3 +412,10 @@
 1. **Codex-accepted narrowly:** ordinary A/B switching shows each drawing's own checklist; B has none, A restores its saved0/3. Item Note Cancel discards typed text, reopen blank; Escape returns safely. Last-drawing stale display609 remains OPEN.
 2. **610OPEN:** after UndoN/A0/4 and nativeUndo, activation back toA shows NoChecklist. Exact record loss/grouping unproved; Redo after drawing switches cannot isolate CE failure. Needs immediateUndoRedo and record evidence before switching. No persisted loss claimed.
 3. **Evidence:** local803-818 and context-cleanup-proof; both drawings closed SaveNo, hashes and three preferences unchanged.310narrowchecks241PASS53FAIL6BLOCKED10UNPROVEN;508hashedfiles/zero integrity faults. Whole50%UNKNOWN; older runtime, automaticQA protection, report and exact recovery remain untested.
+
+
+### 15 October — checklist Undo isolated with saved-file controls
+
+1. **610 now HIGH:** oneN/Achange/nativeUndo/QSAVE/reopenwithoutdrawing-switchornotes givesNoChecklist. Persistentunavailability proved; deletionversusunreadableinternalrecordunproved. Originalbaselineintact.
+2. **ImmediateRedo works narrowly:** secondfreshcopyUndo/immediateRedo before anyswitchreports Everythingredone;save/reopenretainsfouritems0/4. ThisdoesnotacceptUndo or fix610. Bothreadbacksclosednormally/preferencesunchanged.
+3. **Currentrecord:**312narrowchecks243PASS53FAIL6BLOCKED10UNPROVEN;526hashedfiles/0integrityfaults. Overall50%UNKNOWN. Native2024/protectedtargets/automaticQA/report andrepairacceptancepending;weekly75%account-wideused/10%reserve.
