@@ -2,6 +2,8 @@
 
 ## Codex existing Pit Schedule follow-up,14October2026
 
+0. **Regression draft only:**1256/commitb56b2250 onexactCivil48662ddd,9checks6PASS/3FAIL. DeliberatelyRED/doNOTmergealone; no runtimefix/install. PendingFilters881/641/618 andData1192 need coordinatedrepair. Candidate stillneeds actualtyped-note/Stop/Update/recovery/diskreplay afterrepair,plus586regressiongreen. Receipts199-200.
+
 1. **NarrowCodex-accepted:** installedCivil3.0.49+48662ddd, complete single custom-note paste/Stop overriding/Update writes note in the existingtwo-row table and retains it aftersavedrawing/reopen. Receipts193-198/screens457-479. Ordinary typing and finishedlayout are not accepted.
 2. **OPENfailures/retest:**586normaltypinglosesnote,587drawnremarks crossrowborders,573stale/precisiondifferences,256delayedRedoNothingtoredo. Firstrepeat exactnativecharactersequence and savedtwo-rowlayout afterrepairs; preserveengineeringwarnings. Windows586ownershipaudit next; Claudeoutput/recovery packetsrecorded, nochatdispatch.
 3. **Remaining:** newplacement/pointCancel, multi-inlet/longnotes, protectedobjects, plotPDF, metres,2024 andfullUXmapping. Controlsrestored/all3settingsunchanged/owncopyclosed/lease released. Weekly33%;50%targetunfinished.

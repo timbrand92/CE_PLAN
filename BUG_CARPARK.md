@@ -7705,6 +7705,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ## BUG-586
 
+**RED regression banked,14October2026:** draftPR1256 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1256, commitb56b2250, exactinstalledCivilbase48662ddd. Nineproduction-parserchecks execute6PASS/3FAIL/0skipped,38ms; three failures reproduce erasedinlinecustomnote, legitimatephrase-containingnote, and trailingcharacter. Tests only, intentionallyRED; do not mergealone. No runtime repair. PendingFiltersfilework in881/641/618 andData1192 recordedforcoordination. Ownershipaudit17PRpages/844open;20widePRfilelistsweretruncated, so notclaimedascompleteclearance. Native/WPFtypedstaging andwarninggeneration stillrequireintegratedrepairandrealAutoCADreplay.
+
+
 **Command / Area:** Pit Schedule custom remarks, UX-SCHED-01b/05, real AutoCAD2027/Civil3.0.49+48662ddd on an owned synthetic two-pit drawing,14October2026. MEDIUM, OPEN.
 
 **Trigger and actual result:** PITSCHEDULE, selectP2, Custom Remarks initially With Step Irons. Native c reaches the intended edit box (465). CtrlA/whole CODEX CHECK paste leaves CODEX CHECK With Step Irons in field and grid (466). One subsequent native x removes the entire custom note, leaving only With Step Irons (467). Initial full combined-note paste also lost custom text (462-464). This is reproducible user-input loss; ambiguous UIA focused-element metadata alone is not evidence of focus loss.
