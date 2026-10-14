@@ -1625,3 +1625,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Recorded:** CEHATCH search/no-match/Materials/20-scale preview/Cancel pass narrowly;50/500 concrete preview and Place refuse. No placed hatch accepted by this batch.
 2. **Remaining grouped check:** approved scale policy20/50/100 and actual plot density, native associative output from owned Objects/Points boundaries, islands/origin/angle, HATCHEDIT, Cancel/Escape, Undo/Redo, save/reopen and protected/Xref content. Reuse the synthetic hatch specimen and existing ST-05 card; Claude owns the command repair. No guessed engineering formula.
+
+
+### Codex15October — ST05hatch output follow-through
+
+1. **Observed now:** CH1:20 Objects/Points nativeassociation, HATCHEDIT, outerboundaryandislandMOVE, cancellation, singleUndo/delayedRedo andsave/reopen onownedcopy.13narrowchecks12PASS1FAIL; notwholeST05acceptance.
+2. **Remaining grouped acceptance:** BUG614normal1:50 andBUG615actualdrawingpreview/Apply; remainingpresets/1:100/plotdensity/draworder/nestedislands/protectedlayers/Xrefs/REFEDIT/grips/H2Arollback/olderversions. Retain acceptedCHnativeoutput while addingreviewstage. Nativepropertiesmustremaineditable/associative.
+3. **Usage instruction:** Tim supersedes10%reserve15October: useallowanceto0%,thenTimresets. Do notstopat90%; saveeachcoherentbatch.

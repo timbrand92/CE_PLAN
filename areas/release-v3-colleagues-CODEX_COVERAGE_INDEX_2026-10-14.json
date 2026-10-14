@@ -9,33 +9,33 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "4C90B964227695474CC09734816417F418548DAFB3CF3980436133AD57615146",
+    "currentBugsSha256": "DD5216445CFAA0F218AB3B3A5FC63B3CD3C2281E2E8C917BDA7D3FE111EBBE67",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 564,
+    "bugHeadings": 565,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 31,
-    "narrowCases": 464,
+    "caseLedgers": 32,
+    "narrowCases": 477,
     "narrowVerdicts": {
-      "PASS": 361,
-      "FAIL": 81,
+      "PASS": 373,
+      "FAIL": 82,
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 880,
+    "uniqueEvidenceFiles": 907,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 848,
-    "uniqueMetadataFiles": 32,
+    "uniqueScreenshotFiles": 874,
+    "uniqueMetadataFiles": 33,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 57,
-    "newNativeExecutionsInLatestReconciliation": 0,
+    "caseLinkedBugIds": 58,
+    "newNativeExecutionsInLatestReconciliation": 13,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
@@ -45,7 +45,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "Full V3 union, installed/built eligibility and whole-scope historical/current-version audits remain incomplete. Detailed rulings add18 explicit UX IDs omitted from the508-ID summary index (526 total). Superseded/process items retained and classified.464 narrow assertions,57 case-linked bug IDs and14 case-linked UX IDs do not establish unique whole-item testing or acceptance.",
+    "reason": "FullV3union, built/installedeligibility and whole-scope audits remain incomplete.526 explicitUXIDs,565bugrecords and477bounded assertions do not establish whole-item50%coverage. Latest13newCHnativechecks12PASS1FAIL; no wholeworkflowaccepted.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -19918,10 +19918,25 @@
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
       "currentStatusSourceLine": "MEDIUM OPEN; native1:50 refusal, Claude-owned scale behaviour, no repair installed."
+    },
+    {
+      "id": "BUG-615",
+      "headingLine": 8155,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "hatch-output-case-ledger.json::CHOUT-13"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": "MEDIUM OPEN; CH lacks approved live preview/Apply stage; no repair installed."
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 8:02:13 am",
+  "capturedMelbourne": "2026-10-15",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -25296,9 +25311,25 @@
           "label": "Concrete Hatch",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-output-case-ledger.json::CHOUT-01"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-output-case-ledger.json::CHOUT-01",
+            "hatch-output-case-ledger.json::CHOUT-02",
+            "hatch-output-case-ledger.json::CHOUT-03",
+            "hatch-output-case-ledger.json::CHOUT-04",
+            "hatch-output-case-ledger.json::CHOUT-05",
+            "hatch-output-case-ledger.json::CHOUT-06",
+            "hatch-output-case-ledger.json::CHOUT-07",
+            "hatch-output-case-ledger.json::CHOUT-08",
+            "hatch-output-case-ledger.json::CHOUT-09",
+            "hatch-output-case-ledger.json::CHOUT-10",
+            "hatch-output-case-ledger.json::CHOUT-11",
+            "hatch-output-case-ledger.json::CHOUT-12",
+            "hatch-output-case-ledger.json::CHOUT-13"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -30734,19 +30765,19 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 60,
-      "associatedCaseCount": 464,
+      "associatedEntryCount": 61,
+      "associatedCaseCount": 477,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 31
+      "currentLedgerCount": 32
     }
   },
   "currentNewBugStatusAudit": {
     "dateMelbourne": "2026-10-15",
-    "ids": "BUG570through614",
-    "count": 45,
-    "explicitOpen": 45,
-    "method": "Existing570-613 OPEN markers preserved; new614 explicitly OPEN. No source/build evidence closes native faults."
+    "ids": "BUG570through615",
+    "count": 46,
+    "explicitOpen": 46,
+    "method": "All570–614 OPEN statuses retained;615 approved-preview/Apply workflow gap newly OPEN. No installed repair acceptance inferred."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -30783,8 +30814,8 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 90,
-    "reservePercent": 10,
+    "usedPercent": 93,
+    "reservePercent": 0,
     "reportedResetUnixSeconds": 1792472291,
     "reportedResetMelbourne": "2026-10-20 15:58:11 AEDT",
     "resumptionAutomation": {
@@ -30798,8 +30829,12 @@
       ],
       "endsMelbourne": "2026-10-29"
     },
-    "heavyWorkDeferred": true,
-    "newNativeChecks": 0,
-    "ownLeaseReleased": true
+    "heavyWorkDeferred": false,
+    "newNativeChecks": 13,
+    "ownLeaseReleased": false,
+    "reserveSupersededBy": {
+      "dateMelbourne": "2026-10-15",
+      "quote": "lets take usage to 0% left then i will reset"
+    }
   }
 }
