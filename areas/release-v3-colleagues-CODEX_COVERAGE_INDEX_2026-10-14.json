@@ -14130,7 +14130,7 @@
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 7:12:29 am",
+  "capturedMelbourne": "15/10/2026, 7:24:10 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -14236,7 +14236,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 7:12:29 am",
+      "capturedMelbourne": "15/10/2026, 7:24:10 am",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -14573,7 +14573,7 @@
           ]
         }
       ],
-      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained.",
+      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -14613,11 +14613,28 @@
           "label": "Pipe Layout (CD)",
           "group": "Draft",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "flat-pipe/case-ledger.json::FLAT-LABEL",
+            "flat-pipe/case-ledger.json::FLAT-UNDO",
+            "flat-pipe/case-ledger.json::FLAT-DELAYED-REDO",
+            "flat-pipe/case-ledger.json::FLAT-EDITOR-LEVELS",
+            "flat-pipe/case-ledger.json::FLAT-DISK-LABEL-LEVELS",
+            "flat-pipe/case-ledger.json::FLAT-INSPECTOR-TYPE"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                168
+              ],
+              "typedCommand": "CD",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::3::PIT",
@@ -14672,11 +14689,29 @@
           "label": "Civil Spot Level (CDSL)",
           "group": "Draft",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "spot-fall/case-ledger.json::SPOT01",
+            "spot-fall/case-ledger.json::SPOT02",
+            "spot-fall/case-ledger.json::SPOT03",
+            "spot-fall/case-ledger.json::SPOT04",
+            "spot-fall/case-ledger.json::SPOT05",
+            "spot-fall/case-ledger.json::SPOT06",
+            "spot-fall/case-ledger.json::SPOT07"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                202
+              ],
+              "typedCommand": "CDSL",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::7::CDCATCHMENT",
@@ -14952,11 +14987,33 @@
           "label": "Pit Schedule",
           "group": "Schedule",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "schedule-placement/case-ledger.json::SCHED-UPDATE-01",
+            "schedule-placement/case-ledger.json::SCHED-DIFF-02",
+            "schedule-placement/case-ledger.json::SCHED-REMARK-03",
+            "schedule-placement/case-ledger.json::SCHED-REMARK-04",
+            "schedule-placement/case-ledger.json::SCHED-RECOVERY-05",
+            "schedule-placement/case-ledger.json::SCHED-RECOVERY-06",
+            "schedule-placement/case-ledger.json::SCHED-OUTPUT-07",
+            "schedule-placement/case-ledger.json::SCHED-LAYOUT-08",
+            "schedule-placement/case-ledger.json::SCHED-DISK-09",
+            "schedule-placement/case-ledger.json::SCHED-CLEANUP-10"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                193,
+                196
+              ],
+              "typedCommand": "PITSCHEDULE",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::27::CDRENUMBER",
@@ -15048,11 +15105,34 @@
           "label": "Calculations",
           "group": "Calculations",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "calculations/cases.json::Installed window opens and footer fits",
+            "calculations/cases.json::New draft areas and discharge start blank",
+            "calculations/cases.json::Committed synthetic inputs calculate shown arithmetic",
+            "calculations/cases.json::Boyds transfer requires explicit button",
+            "calculations/cases.json::Exports disabled until package preview",
+            "calculations/cases.json::Prepared package names Draft and missing design basis",
+            "calculations/cases.json::Changing required volume invalidates prepared exports",
+            "calculations/cases.json::Drawing controls and entity count unchanged",
+            "calculations/cases.json::Preference files unchanged",
+            "calculations/cases.json::Boyds rows use recorded rainfall or declare source unknown",
+            "calculations/cases.json::Missing input yields visibly Unknown rather than zero result",
+            "calculations/cases.json::Last-row critical duration warning visible to drafter"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                223
+              ],
+              "typedCommand": "CDCALC",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::32::PITDELETE",
@@ -15104,11 +15184,30 @@
           "label": "Fall Symbol (CDFALL)",
           "group": "Edit Tools",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "spot-fall/case-ledger.json::FALL01",
+            "spot-fall/case-ledger.json::FALL02",
+            "spot-fall/case-ledger.json::FALL03",
+            "spot-fall/case-ledger.json::FALL04",
+            "spot-fall/case-ledger.json::FALL05",
+            "spot-fall/case-ledger.json::FALL06",
+            "spot-fall/case-ledger.json::FALL07",
+            "spot-fall/case-ledger.json::FALL08"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                204
+              ],
+              "typedCommand": "CDFALL",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::36::CDFALLSUGGEST",
@@ -15118,11 +15217,36 @@
           "label": "Suggest Fall Arrow (CDFALLSUGGEST)",
           "group": "Edit Tools",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "suggested-fall/case-ledger.json::Enter finishes empty session",
+            "suggested-fall/case-ledger.json::Missing spot asks explicit level",
+            "suggested-fall/case-ledger.json::Blank level skips without guessing",
+            "suggested-fall/case-ledger.json::Level below both covers skips",
+            "suggested-fall/case-ledger.json::Valid 21.50 suggests P1 1:9.2",
+            "suggested-fall/case-ledger.json::Clicked Skip echoes S and draws nothing",
+            "suggested-fall/case-ledger.json::Clicked Move echoes M and asks new position",
+            "suggested-fall/case-ledger.json::Moved point asks level again and recomputes P2 1:5.3",
+            "suggested-fall/case-ledger.json::Clicked Accept echoes A and draws at moved point",
+            "suggested-fall/case-ledger.json::Enter finishes with one placed three skipped",
+            "suggested-fall/case-ledger.json::One U removes whole accepted arrow",
+            "suggested-fall/case-ledger.json::Quiet delayed Redo restores whole arrow",
+            "suggested-fall/case-ledger.json::Save close reopen retains southward 1:5.3",
+            "suggested-fall/case-ledger.json::Controls/settings restored and actual copy closed"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                208
+              ],
+              "typedCommand": "CDFALLSUGGEST",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::37::CDANNOTATIONEDIT",
@@ -16857,11 +16981,32 @@
           "label": "Purlin Marker",
           "group": "",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "purlin-lap/case-ledger.json::P1-No-completion",
+            "purlin-lap/case-ledger.json::P1-No-width",
+            "purlin-lap/case-ledger.json::P1-No-Undo-delayed-Redo",
+            "purlin-lap/case-ledger.json::P1-Yes-completion",
+            "purlin-lap/case-ledger.json::P1-Yes-lap-property",
+            "purlin-lap/case-ledger.json::P1-Yes-base-width",
+            "purlin-lap/case-ledger.json::P1-Yes-Undo-delayed-Redo",
+            "purlin-lap/case-ledger.json::P1-No-disk-readback",
+            "purlin-lap/case-ledger.json::P1-Yes-disk-readback",
+            "purlin-lap/case-ledger.json::P1-position-accuracy"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                188
+              ],
+              "typedCommand": "P1",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::20::ML",
@@ -18661,11 +18806,27 @@
           "label": "Set Wind Class",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::WIND-REGION-ESCAPE",
+            "wind-bracing-case-ledger.json::WIND-INVALID-TERRAIN",
+            "wind-bracing-case-ledger.json::WIND-BLANK-CLASS",
+            "wind-bracing-case-ledger.json::WIND-N2-SYNTHETIC-RECALL",
+            "wind-bracing-case-ledger.json::WIND-N2-DRAWING-REOPEN"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                131
+              ],
+              "typedCommand": "CSWINDCLASS",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::145::CSUNITTAGS",
@@ -18719,11 +18880,37 @@
           "label": "A-Bracing",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::AB-DEFAULT-2700",
+            "wind-bracing-case-ledger.json::AB-ONE-UNDO-DELAYED-REDO",
+            "wind-bracing-case-ledger.json::AB-DISK-REOPEN",
+            "wind-bracing-case-ledger.json::AB-LOCKED-OUTPUT",
+            "wind-bracing-case-ledger.json::AB-PAIR-DISK-REOPEN"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                133
+              ],
+              "typedCommand": "AB",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "verifiedAliasRoutes": [
+            {
+              "typedCommand": "STRUCAB",
+              "caseKeys": [
+                "wind-bracing-case-ledger.json::STRUCAB-LOCKED-OUTPUT"
+              ],
+              "scope": "Locked output-layer refusal only; ordinary placement and other alias routes unproven.",
+              "receipt": 138
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::149::ABFLIPAUTO",
@@ -18747,11 +18934,24 @@
           "label": "Bracing Panel",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::BRACING-PANEL-EMPTY",
+            "wind-bracing-case-ledger.json::BRACING-PANEL-AB-TOTAL"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                130
+              ],
+              "typedCommand": "CSBRACINGPANEL",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::151::CSBRACINGREQUIRED",
@@ -18806,11 +19006,25 @@
           "label": "Switch A/B Bracing",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::ABS-A-TO-B",
+            "wind-bracing-case-ledger.json::ABS-PANEL-OPEN-UNDO-REDO",
+            "wind-bracing-case-ledger.json::ABS-LOCKED-SOURCE"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                140
+              ],
+              "typedCommand": "ABS",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::155::ABSWITCH",
@@ -18836,11 +19050,37 @@
           "label": "B-Bracing",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::BB-FIRST-POINT-ESCAPE",
+            "wind-bracing-case-ledger.json::BB-VERTICAL-MANUAL-FLIP",
+            "wind-bracing-case-ledger.json::BB-PANEL-OPEN-UNDO-REDO",
+            "wind-bracing-case-ledger.json::BB-LOCKED-OUTPUT",
+            "wind-bracing-case-ledger.json::BB-LATE-FLIP-ESCAPE"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                137
+              ],
+              "typedCommand": "BB",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ],
+          "verifiedAliasRoutes": [
+            {
+              "typedCommand": "STRUCBB",
+              "caseKeys": [
+                "wind-bracing-case-ledger.json::STRUCBB-LOCKED-OUTPUT"
+              ],
+              "scope": "Locked output-layer refusal only; ordinary placement and other alias routes unproven.",
+              "receipt": 138
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::157::BT1",
@@ -18850,11 +19090,27 @@
           "label": "Bracing Truss",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "floor-roof/case-ledger.json::BT-NUMBER-BOUNDS",
+            "floor-roof/case-ledger.json::BT9-PLACEMENT",
+            "floor-roof/case-ledger.json::BT9-UNDO-REDO",
+            "floor-roof/case-ledger.json::BT9-PANEL-TOTAL",
+            "floor-roof/case-ledger.json::BT9-DISK-REOPEN"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                147
+              ],
+              "typedCommand": "BT1",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::158::STRUCAB",
@@ -18864,11 +19120,23 @@
           "label": "A-Bracing",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::STRUCAB-LOCKED-OUTPUT"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                138
+              ],
+              "typedCommand": "STRUCAB",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::159::STRUCABS",
@@ -18892,11 +19160,23 @@
           "label": "B-Bracing",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "wind-bracing-case-ledger.json::STRUCBB-LOCKED-OUTPUT"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                138
+              ],
+              "typedCommand": "STRUCBB",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::161::FJ1",
@@ -18906,11 +19186,25 @@
           "label": "Floor Joist Marker",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "rafter-joist/joist-purlin-case-ledger.json::FJ1-UNDO-DELAYED-REDO",
+            "rafter-joist/joist-purlin-case-ledger.json::FJ1-EXACT-SPAN-WIDTH",
+            "rafter-joist/joist-purlin-case-ledger.json::FJ1-DISK-WIDTH"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                159
+              ],
+              "typedCommand": "FJ1",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::162::R1",
@@ -18920,11 +19214,27 @@
           "label": "Rafter Marker",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "rafter-joist/case-ledger.json::R1-UNCHANGED-TAG-PLACEMENT",
+            "rafter-joist/case-ledger.json::R1-UNDO-DELAYED-REDO",
+            "rafter-joist/case-ledger.json::R1-EXACT-WIDTH",
+            "rafter-joist/case-ledger.json::R1-DISK-WIDTH",
+            "rafter-joist/case-ledger.json::R1-PREFERENCE-PRESERVATION"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                153
+              ],
+              "typedCommand": "R1",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::163::RJSET",
@@ -18934,11 +19244,23 @@
           "label": "Rafter/Joist Settings",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "floor-roof/case-ledger.json::RJSET-SHORTCUT-CANCEL"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                149
+              ],
+              "typedCommand": "RJSET",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::164::BATLINE",
@@ -20835,11 +21157,33 @@
           "label": "Plan Level",
           "group": "Structural",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "plan-level/case-ledger.json::LEVEL-UNKNOWN-ENTER",
+            "plan-level/case-ledger.json::LEVEL-LIST-GROUND",
+            "plan-level/case-ledger.json::LEVEL-DELAYED-REDO-RESTORES-GROUND",
+            "plan-level/case-ledger.json::LEVEL-CUSTOM-WITH-SPACE",
+            "plan-level/case-ledger.json::LEVEL-CUSTOM-ONE-UNDO-READBACK",
+            "plan-level/case-ledger.json::LEVEL-UNKNOWN-CLEAR-READBACK",
+            "plan-level/case-ledger.json::LEVEL-NUMERIC-CUSTOM-9",
+            "plan-level/case-ledger.json::LEVEL-ESCAPE-KEEPS",
+            "plan-level/case-ledger.json::LEVEL-DISK-READBACK",
+            "plan-level/case-ledger.json::LEVEL-KNOWN-ENTER-KEEP",
+            "plan-level/case-ledger.json::LEVEL-CLEAR-NEVER-SET-WORDING"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                180
+              ],
+              "typedCommand": "CSPLANLEVEL",
+              "scope": "Exact typed route observed; associated cases retain their individual outcomes and limitations."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::299::CSPOINTLOAD",
@@ -20863,11 +21207,24 @@
           "label": "Roof Area Setout",
           "group": "Structural",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_DISABLED_ENTRY_ONLY",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "floor-roof/case-ledger.json::ROOF-OFF-DISCLOSURE",
+            "floor-roof/case-ledger.json::ROOF-ACCEPTED-OUTPUT"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                146
+              ],
+              "typedCommand": "CSROOFSETOUT",
+              "scope": "Disabled-entry disclosure only; output remains BLOCKED."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::301::CSWALLMARK",
@@ -20933,11 +21290,24 @@
           "label": "Framing Legend",
           "group": "Structural",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_DISABLED_ENTRY_ONLY",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "plan-level/case-ledger.json::FRAMING-LEGEND-OFF-DISCLOSURE",
+            "plan-level/case-ledger.json::FRAMING-LEGEND-ACTUAL-OUTPUT"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                181
+              ],
+              "typedCommand": "CSFRAMINGLEGEND",
+              "scope": "Disabled-entry disclosure only; output remains BLOCKED."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::306::CSFLOORSETOUT",
@@ -20947,11 +21317,24 @@
           "label": "Floor Span Arrow",
           "group": "Structural",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_DISABLED_ENTRY_ONLY",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "floor-roof/case-ledger.json::FLOOR-OFF-DISCLOSURE",
+            "floor-roof/case-ledger.json::FLOOR-ACCEPTED-OUTPUT"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                146
+              ],
+              "typedCommand": "CSFLOORSETOUT",
+              "scope": "Disabled-entry disclosure only; output remains BLOCKED."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::307::CSMEMBERSCHED",
@@ -21952,11 +22335,24 @@
           "label": "Level Carry (Over and Under)",
           "group": "Structural",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_DISABLED_ENTRY_ONLY",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "plan-level/case-ledger.json::LEVEL-CARRY-OFF-DISCLOSURE",
+            "plan-level/case-ledger.json::LEVEL-CARRY-ACTUAL-OUTPUT"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                181
+              ],
+              "typedCommand": "CSLEVELCARRY",
+              "scope": "Disabled-entry disclosure only; output remains BLOCKED."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::374::CEMARKUPCHECK",
@@ -22126,7 +22522,9 @@
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         }
-      ]
+      ],
+      "associatedEntryCount": 32,
+      "associatedCaseCount": 232
     }
   },
   "currentNewBugStatusAudit": {
