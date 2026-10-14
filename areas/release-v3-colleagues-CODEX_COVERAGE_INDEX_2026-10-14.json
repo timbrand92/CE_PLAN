@@ -17,26 +17,27 @@
     "bugHeadings": 563,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 29,
-    "narrowCases": 436,
+    "caseLedgers": 30,
+    "narrowCases": 456,
     "narrowVerdicts": {
-      "PASS": 340,
-      "FAIL": 75,
+      "PASS": 354,
+      "FAIL": 80,
       "BLOCKED": 6,
-      "UNPROVEN": 15
+      "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 813,
+    "uniqueEvidenceFiles": 859,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 783,
-    "uniqueMetadataFiles": 30,
+    "uniqueScreenshotFiles": 828,
+    "uniqueMetadataFiles": 31,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 49,
+    "caseLinkedBugIds": 54,
     "newNativeExecutionsInLatestReconciliation": 0,
-    "earlierCasesAddedInLatestReconciliation": 41,
-    "earlierCasesRecoveredThisTurn": 78
+    "earlierCasesAddedInLatestReconciliation": 20,
+    "earlierCasesRecoveredThisTurn": 20,
+    "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -7112,7 +7113,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-manager-transform-case-ledger.json::EM-12"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7125,7 +7128,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-manager-transform-case-ledger.json::EM-07"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -7306,7 +7311,8 @@
       ],
       "currentCaseKeys": [
         "plan-level/case-ledger.json::LEVEL-CLEAR-NEVER-SET-WORDING",
-        "calculator-consumers/cases.json::pipe-readable-name"
+        "calculator-consumers/cases.json::pipe-readable-name",
+        "early-manager-transform-case-ledger.json::EM-20"
       ],
       "historicalCandidateReports": [
         "CODEX_VERIFYW61_20261012.md"
@@ -10277,7 +10283,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-manager-transform-case-ledger.json::EM-02"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -10301,7 +10309,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-manager-transform-case-ledger.json::EM-01"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -10313,7 +10323,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "early-manager-transform-case-ledger.json::EM-05"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -14183,7 +14195,7 @@
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 7:56:36 am",
+  "capturedMelbourne": "15/10/2026, 8:02:13 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -14289,7 +14301,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 7:56:36 am",
+      "capturedMelbourne": "15/10/2026, 8:02:13 am",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -14626,7 +14638,7 @@
           ]
         }
       ],
-      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted. Earlier Civil37cases now reconciled from original14October receipts63-80/121-128, not newly executed; addedCDS/PIT/CDEDIT associations,38records/395currentcases. EarlierStructural/Manager receipts still pending; mappingCompletefalse. EarlierStructural41cases reconciled from81-103/114,notnewruns;17additional command records now associated,55records/436cases.23settingspagesremainone layoutgroup;inconclusiveCancelUNPROVEN;579depth failures and454tinylabel retained.",
+      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted. Earlier Civil37cases now reconciled from original14October receipts63-80/121-128, not newly executed; addedCDS/PIT/CDEDIT associations,38records/395currentcases. EarlierStructural/Manager receipts still pending; mappingCompletefalse. EarlierStructural41cases reconciled from81-103/114,notnewruns;17additional command records now associated,55records/436cases.23settingspagesremainone layoutgroup;inconclusiveCancelUNPROVEN;579depth failures and454tinylabel retained. EarlierManager/MR20casesreconciled104-113,notnewruns;59associatedcataloguerecords/456uniquechecks. MRdeclaredin2bundleslinksameobservedtypedroute,actualhandlerownerunresolved,nottwoimplementationsaccepted. Sharedcleanup114reusesES41.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -16344,11 +16356,44 @@
           "label": "Help & Status",
           "group": "Help & Status",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-manager-transform-case-ledger.json::EM-13",
+            "early-manager-transform-case-ledger.json::EM-14"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-13",
+              "numbers": [
+                110
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CDHELPopensdifferentHTMLguide;explicitCloseworks beforedirectMR. ParentEscapeclosure separatelyunproven."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-14",
+              "numbers": [
+                110
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "ParentEscapefocusedcommandstrip;nativeHTMLHelpEscapeclosure notestablished. Childomittedfromskylistbutvisibleintree/image;nofalseClosefailure."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                110
+              ],
+              "command": "CDHELP",
+              "scope": "Earlier bounded UIroute,notallcontrols/fullworkflowacceptance."
+            }
+          ]
         },
         {
           "key": "CE_CVL_SUITE.bundle::47::CESTARTHERE",
@@ -17174,11 +17219,76 @@
           "label": "Move Rotate (MR)",
           "group": "Edit Tools",
           "hiddenInCatalogue": true,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "TYPED_ROUTE_OBSERVED_OWNER_UNRESOLVED",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-manager-transform-case-ledger.json::EM-15",
+            "early-manager-transform-case-ledger.json::EM-16",
+            "early-manager-transform-case-ledger.json::EM-17",
+            "early-manager-transform-case-ledger.json::EM-18",
+            "early-manager-transform-case-ledger.json::EM-19",
+            "early-manager-transform-case-ledger.json::EM-20",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-15",
+              "numbers": [
+                110
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "DirectMRopensSelectobjects;Escapecancelswithoutchange. ThisdoesnotrepairguideStarttool."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-16",
+              "numbers": [
+                111
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Native1000x500rectangleMRbase1000,-2000/destination4000,-2000/90degreeactualvertices4000,-2000;4000,-3000;4500,-3000;4500,-2000,correctforobservedANGDIR1/ANGBASE0/UCSempty. PriorANGDIRnotcaptured;no unchangedbasisclaim."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-17",
+              "numbers": [
+                111
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "OneUndoMRrestoresoriginalrectangle;quiet12secondRedoMRrestoresrotatedresult. NoCEobject/mixed/protected/UCS/diskacceptance."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-18",
+              "numbers": [
+                112
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "MRlatesessionbase4000,-2000/destination5000,-2000/Escapeatrotationremovesghostandretainsoriginalfourvertices;snaps5375/layer0/autosave0readback."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-19",
+              "numbers": [
+                113
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "MRlockedlayer0rectangle1foundrefusedbeforebasepoint;flags4retained/no movement;manuallyrestoredownedlayerflags0/snaps5375/layer0. NoXref/REFEDIT/mixedproof."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-20",
+              "numbers": [
+                113
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "LockedMRrefusal exposesinternal eOnLockedLayer code alongsideplainexplanation;protectionseparatelyPASS."
+            }
+          ],
+          "catalogueOwnerResolution": "CivilandStructuraldeclareMR;onetypedroutewasobserved,actualhandlerownerunresolved. Do notcredittwoimplementations."
         },
         {
           "key": "CE_CVL_SUITE.bundle::104::MOVEROT",
@@ -22224,11 +22334,76 @@
           "label": "Move and rotate",
           "group": "Utilities",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "TYPED_ROUTE_OBSERVED_OWNER_UNRESOLVED",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-manager-transform-case-ledger.json::EM-15",
+            "early-manager-transform-case-ledger.json::EM-16",
+            "early-manager-transform-case-ledger.json::EM-17",
+            "early-manager-transform-case-ledger.json::EM-18",
+            "early-manager-transform-case-ledger.json::EM-19",
+            "early-manager-transform-case-ledger.json::EM-20",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-15",
+              "numbers": [
+                110
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "DirectMRopensSelectobjects;Escapecancelswithoutchange. ThisdoesnotrepairguideStarttool."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-16",
+              "numbers": [
+                111
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Native1000x500rectangleMRbase1000,-2000/destination4000,-2000/90degreeactualvertices4000,-2000;4000,-3000;4500,-3000;4500,-2000,correctforobservedANGDIR1/ANGBASE0/UCSempty. PriorANGDIRnotcaptured;no unchangedbasisclaim."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-17",
+              "numbers": [
+                111
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "OneUndoMRrestoresoriginalrectangle;quiet12secondRedoMRrestoresrotatedresult. NoCEobject/mixed/protected/UCS/diskacceptance."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-18",
+              "numbers": [
+                112
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "MRlatesessionbase4000,-2000/destination5000,-2000/Escapeatrotationremovesghostandretainsoriginalfourvertices;snaps5375/layer0/autosave0readback."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-19",
+              "numbers": [
+                113
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "MRlockedlayer0rectangle1foundrefusedbeforebasepoint;flags4retained/no movement;manuallyrestoredownedlayerflags0/snaps5375/layer0. NoXref/REFEDIT/mixedproof."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-20",
+              "numbers": [
+                113
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "LockedMRrefusal exposesinternal eOnLockedLayer code alongsideplainexplanation;protectionseparatelyPASS."
+            }
+          ],
+          "catalogueOwnerResolution": "CivilandStructuraldeclareMR;onetypedroutewasobserved,actualhandlerownerunresolved. Do notcredittwoimplementations."
         },
         {
           "key": "CE_STRUC_SUITE.bundle::259::MTS",
@@ -24568,11 +24743,146 @@
           "label": "Suite Manager",
           "group": "Manager",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
+          "nativeAvailability2027": "OBSERVED_FROM_EARLIER_RECEIPT",
           "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "associatedWorkflowCaseKeys": [
+            "early-manager-transform-case-ledger.json::EM-01",
+            "early-manager-transform-case-ledger.json::EM-02",
+            "early-manager-transform-case-ledger.json::EM-03",
+            "early-manager-transform-case-ledger.json::EM-04",
+            "early-manager-transform-case-ledger.json::EM-05",
+            "early-manager-transform-case-ledger.json::EM-06",
+            "early-manager-transform-case-ledger.json::EM-07",
+            "early-manager-transform-case-ledger.json::EM-08",
+            "early-manager-transform-case-ledger.json::EM-09",
+            "early-manager-transform-case-ledger.json::EM-10",
+            "early-manager-transform-case-ledger.json::EM-11",
+            "early-manager-transform-case-ledger.json::EM-12",
+            "early-structural-case-ledger.json::ES-41"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "earlierNativeReceiptReferences": [
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-01",
+              "numbers": [
+                104
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CEMANAGERdefault1311x1073andmax1920x1080Statuscards overlap Runningnowversion/hash with Installednextstart onall3cards; underlyingversionscorrect."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-02",
+              "numbers": [
+                105
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Manager/Civil/StructuralModulepages showseparatereadable running/nextstartversions1.1.49+48662ddd/3.0.49+48662ddd/1.0.116+f180b349matchingDLL/status. Statuscardoverlapremains."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-03",
+              "numbers": [
+                105
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "ManagerViewCommands lists10ready/0retired;Advanced/Retiredtogglesretain10. Hiddenpalette-onlyCEBLOCKINSERTexplainsmodule11,notmissingcommandfailure/all523acceptance."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-04",
+              "numbers": [
+                105
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CommandsearchblocksreturnsoneCEBLOCKS,absentqueryexplicitnomatches/0,clearrestores10;childClose returnsModulepage."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-05",
+              "numbers": [
+                106
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "ManagerCivilSettingsstillonefullformscrollatdefaultandmax;DesignStandards/Survey/CDDialog/Debugging/Resethiddenbelowinitialviewport;ApplyDiscardfooterfits. Noengineeringsettingacceptance."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-06",
+              "numbers": [
+                107
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "GeneralDark->Light previewsactualthemeimmediately andshowsUnsavedchanges/enabledApplyDiscard. NoApply/Save tested."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-07",
+              "numbers": [
+                107
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "Lightpreviewwhitebrand/subtitleonpaleheaderbarelyvisible; sameblueappearanceobservationseparate517,notnewcolourmetric."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-08",
+              "numbers": [
+                107,
+                108
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "DiscardreturnsactualDark/Nochanges/disabledApplyDiscard;all3settingshash/length/UTCtimestampsmatchSTART,correctedcomparisonnotfalsefirstflags."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-09",
+              "numbers": [
+                109
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "StagedLight/Close opensApplyDiscardStaywarning;StayreturnsLight/unsavedpagewithoutApply."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-10",
+              "numbers": [
+                109
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "RepeatunsavedClose/DiscardclosesManager;reopenactualDark,3settingsunchanged. Closefirsthovernotcountedfailure."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-11",
+              "numbers": [
+                110
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "CivilHelp/Stepbystepguidesload;oneinstalledMoveRotateguideinstructionsandbeforeafterpicturevisible. Allguide/searchroutesnotaccepted."
+            },
+            {
+              "caseKey": "early-manager-transform-case-ledger.json::EM-12",
+              "numbers": [
+                110
+              ],
+              "executedMelbourne": "2026-10-14",
+              "reconciledMelbourne": "2026-10-15",
+              "scope": "EnabledguideStarttoolminimisesManagerbuttwofreshdrawingcapturesnoMRprompt;restoredManagerbuttondisabledFinishcurrentAutoCADcommandfirst. Rootcauseunproved."
+            }
+          ],
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                104
+              ],
+              "command": "CEMANAGER",
+              "scope": "Earlier bounded UIroute,notallcontrols/fullworkflowacceptance."
+            }
+          ]
         },
         {
           "key": "CE_SUITE_MANAGER.bundle::3::CEMANAGERREFRESH",
@@ -24687,11 +24997,11 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 55,
-      "associatedCaseCount": 436,
+      "associatedEntryCount": 59,
+      "associatedCaseCount": 456,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 29
+      "currentLedgerCount": 30
     }
   },
   "currentNewBugStatusAudit": {
