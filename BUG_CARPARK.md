@@ -1258,6 +1258,8 @@
 
 ## BUG-351
 
+**Latest authority reconciliation,14October2026:** INT075,9OctSetA4/5 explicitly keeps typedlevels pending untilStopoverriding and keepsheldgradelabelwithwarning. This lateranswergoverns overINT071,8Octlabel-updaterecommendation. Freshconnectedendproof172-175matchesthatapprovedroute; olderall-cellpreviewrequirementisnotwholesaleacceptedanddepth/remarks/othercellsremain. No new missing-preview/unchanged-labelbug inferred from approvedStopoverridingcase. Verification177.
+
 **Fresh Codex connected-end write/readback PASS narrowly,14October2026:** installedCivil3.0.49+48662ddd, owned synthetic225UPVC P1->P2 fixture. P2 inlet19.800->19.750, Enter stages; selectP2/right-clickStop overriding writesactualend. P1 remains20.00 inplan, refreshedschedule andactualEditPipe403; P2 reads19.75. Redwarning discloses retainedlabelgrade48 versusabout38 achieved; farendnotmoved as INT046 requires. QSAVE/CLOSE/reopen406/407 retainsbothlevels andP2depth1.05. Narrow351b write/persistence Codex-accepted; nativeUndo restores19.80 but delayedRedoFAIL underBUG256. Does not close351: C2rename, unconnectedendoldrecord, ARRAY andotherparts remain. Verification172-175/local390-409screens.
 
 **Codex evidence-scope audit, 14 October 2026:** W63-08 on Civil3.0.48 is a staged-window display PASS only. Personally viewed before/after images show P2 inlet16.96 ->17.01 with P3 outlet17.25/P2 outlet17.08 unchanged; the window says the typed value is waiting and Stop overriding writes it to the drawing. No pipe-record, actual drawing write or persistence was proven. Do not close this whole multi-part bug from that PASS. Verification166; no current rerun in this audit.
