@@ -8009,3 +8009,5 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 
 6. **BUG605 disk follow-through:** actualsavedpostRedoDWG reopened747;PITSCHEDULE748retains600x600/300/covers50.000/49.500 butbothprovidedpit/pipeendILsblank/fourUnknownwarnings. Missingvaluesarepersistent,notonlywarmwindowstate. FreshnoUndocontrolnext,causenotyetattributed;605OPEN.
+
+7. **Fresh no-Undo control:** separate baseline copy CODEX_LANDXML_NO_UNDO_20261015, same explicit XML. Source750/Recorded751 then immediate PITSCHEDULE752, with NO Undo/Redo, zoom, pan or QSAVE between import and schedule. P91/P92 remain600x600/300mm/CL50.000/49.500; provided49.000/48.850 invert cells already blank, four warnings. Undo/Redo is NOT required to reproduce605. This narrows failure to initial import/record presentation path; exact extraction versus writer cause still unproved. Old saved postRedo fault independently persists747/748. Both synthetic copies currently open; native cleanup follows.
