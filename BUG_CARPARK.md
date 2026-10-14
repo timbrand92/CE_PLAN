@@ -8006,3 +8006,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 3. **Actual:**744fourdataissues:bothpitinvertsUnknownandbothpipeendinvertsUnknown;schedulecellsblank. Covers50.000/49.500,sizes600x600/pipe300retained. Actualparserdebugreads2invertsperstruct(theXMLhasoneInvertperelement) beforecreation. This establishespostsequencemissingvalues; originalimportversusrecoverycause remainsunproven. No inventedzero.
 4. **Repair owner/guard:** ClaudeownsLandXMLextraction/nativewriter/projectrecords/recovery. FirstcomparefreshimportbeforeUndoandsavedreadback,thenuseonecanonicalprovidedILmapping;preserveUnknownforactuallymissinginputs. Guardexplicitpositiveinverts,missinginverts/sump-onlycontrol,UndoRedo/diskreadback. No newengineeringdefaults.
 5. **Retest:** samefixturebeforeandafteroneoperationUndoRedo,andafterreopen,correct49.000/48.850inplanpipeends/schedule/Inspector;missingXMLInvertstaysUnknownwithwarning. Duplicates/units/protectedtargetsandolderruntime separate. Local744/positive-debug/metricXML,verification308-310.
+
+
+6. **BUG605 disk follow-through:** actualsavedpostRedoDWG reopened747;PITSCHEDULE748retains600x600/300/covers50.000/49.500 butbothprovidedpit/pipeendILsblank/fourUnknownwarnings. Missingvaluesarepersistent,notonlywarmwindowstate. FreshnoUndocontrolnext,causenotyetattributed;605OPEN.
