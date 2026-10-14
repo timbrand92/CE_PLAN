@@ -7653,7 +7653,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ## BUG-584
 
-**Command / Area:** R1 rafter-span drawing size, installedStructural1.0.116+f180b349. MEDIUM: accepted bay dimensions do not reach the placed dynamicblock, with no visible refusal or warning. FJ1/P1 share code but not yet reproduced.
+**Command / Area:** R1 rafter-span drawing size, installedStructural1.0.116+f180b349. MEDIUM: accepted bay dimensions do not reach the placed dynamicblock, with no visible refusal or warning. FJ1 now reproduced; P1 shares code but not yet reproduced.
 
 **Observed:** syntheticmmfixture, allfour picks in Pointmode. Nativekeyboard left50000,20000; right@8000,0; near@-4000,-1000; far@0,-4000. These define8000mmwidth/4000mmdepth. Enter retains existingRT1tag. CE says PlacedRT1onlayerRAFTERS. AutoCADProperties of that new RAFTER-JOISTV2 shows INTERNAL_DISTANCE2400, OUTER_DISTANCE2600, ARROW_DISTANCE4000, scale1/1/1, mmblockunits/unitfactor1. The short transverse span line agrees with the2400/2600properties. Earlier clickbasedwidebay also retained2400/2600 (screen338); typedrepeat excludes click-history interception as explanation.
 
@@ -7664,5 +7664,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Regression / confirmation:** on syntheticmmcopy repeat the four points above, Enterstoredtag; selectnewspan -> Ctrl1, read8000/8200/4000. Verifyactual geometry byDIST/plot, source-nativepoint/object routes,4000/8000variation, rotatedbay, FJ1/P1 andsave/reopen; oneUndo restores prior drawing. Valuesmust eitheragree or visiblyrefuse/ask. Reviewbehaviourcard before repair; Claude behaviour lane. No fixinstalled.
 
 **Disk repeat,14October2026:** aftersave/close/reopen, nativeProperties of same6F0 stillreads2400/2600/4000 (screens348/349, receipt156). Failurepersists on disk; geometryrecovery passes separately.
+
+**FJ1 extension,14October2026:** nativePoint65000,5000 ->@6000,0 ->@-3000,-1000 ->@0,-6000, EnterDJ1. Actualhandle825/JOISTS/mm/scales1 retains2400/2600widths, arrow6000correctlychanges. Expected6000/6200/6000. Screens352-359/receipts159-160. OneUndo/delayedRedo passes; P1pending.
 
 **Status:** OPEN - reproduced in real AutoCAD14October2026.
