@@ -312,3 +312,9 @@
 1. **Native recovery remains unresolved:** observed system-menu Close did not close the owned test drawing. Screenshot640; no Save question or clean Cancel is claimed. Source Close/Escape routes alone do not establish the cause. Own lease remains held; saved fixture unchanged.
 2. **BUG592 guards saved:** PR1258/ecd48404 adds21focusedchecks,2PASS19FAIL,0skipped. Missing/invalid inputs and overflow become saved/prepared numeric results; unavailable-draft restore fails. Valid-grade recovery and advisory controls pass. Tests-only, no installed repair. Pending627/642 ownership must be coordinated for production integration.
 3. **Honest scope:** realAutoCADledger222checks unchanged;323evidencefiles. Source checks excluded from feature coverage. Whole-itempercentage remains unverified,50%unfinished. Weekly54%; goalACTIVE,receipt269-272, independent work continues.
+
+## 15 October — fresh-session report confirmation and persistence
+
+1. **Native testing resumed:** separate installedAutoCADsessionopenedownedfreshfixtureandacceptedcommands. Oldsessionfault595remainsOPEN; freshsessionusable/nowempty, no forcedtermination or installation.
+2. **RealPASS:** actualreportCancelleavesCDCALC/tworows/24.24unchanged. SelectionthenAddcreatesone110m2/Ratingreport/Tank/1.78row,total26.02. Duplicateofferdisabled. NativeSave/Close/reopenkeepsarea,sourcelabel,destinationandflows. All3CEpreferencesunchanged,freshsavedfixturepreserved. Screens641-654/receipts273-276.
+3. **StillFAIL/unproved:** newerBlueFactorstillbypassedforolderSTORM594. Unknowndestination/currentreport/intakekeyboardEscape/actualexportprovenance/engineering/2024notaccepted. Ledger230narrowchecks184PASS36FAIL6BLOCKED4UNPROVEN,wholepercentageunverified. Weekly55%;nextremainingbuiltworkflowsusefreshsession,goalACTIVE.

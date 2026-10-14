@@ -7865,6 +7865,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Guard:** PR1258a711f3d3addsRatingReportReaderRegressionTests usinggeneratedtext-layerPDFsandproductionRead:3executed1PASS(STORM),2FAIL(BlueFactorandnewestmixedreport),0skipped. Tests-onlyRED,doNOTmergealone. SourcePDFs/renders/metadataandTRXremainlocalreport-intake;receipts264-268/screens633-639.
 5. **Retest:** currentBlueFactor170/50/12rowsmustbeofferedratherthanolderSTORM110;correctsourceandUnknowndestination;Cancel/Escapeaddsnone,confirmonerowthenreadsource/destination/flow,save/reopenandinspectexportedprovenance. RepeatBlueFactor-only,STORM-only,mixednewest,empty/scanned/unknownreports,missingfolderandlegacy2024disclosure. Engineeringchoiceunchanged.
 
+6. **15 October fresh-session evidence:** samewrongolderreportoffer644repeats594. LegacypositivecontrolCancel/explicitconfirm/duplicateguard/nativeSave+reopenPASS645-652; actualrow110m2/Ratingreport/Tank/1.78,total26.02. ThisdoesNOTacceptnewerBlueFactor170/50/12orUnknown-destinationroute. Keep594OPEN; existingfile-readerguards/Clauderepaircontractunchanged.
+
 ## BUG-595
 
 **Status:** OPEN / INVESTIGATE — native recovery unresolved; cause unproven;15October2026.
@@ -7876,3 +7878,5 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Next:** recovernormalnativecommand/dialogstateandpropercommandlinevisibility,thenfresh-sessionretestwithactualnested-dialogCancelbutton/target;verifyCDCALCremainsopen,rowsunchanged,normalcommandpromptandCloseworkafterreturn. Onlythenattributeafaultorimplementapprovedwindow/hostrepair. Do not forcekillorcallaUIblockedleaseaverifiedwait. Goalremainsactive;independentsource/testworkavailable.
 
 5. **15 October recovery follow-through:** actual native system menu opened via Alt+Space, its observed Close was clicked, but AutoCAD remained on the same owned DWG with no Save question. Screenshot640. Source inspection found pick Escape bound to CancelCommand and parent Close IsCancel=true; this does not establish where the input was delivered or the cause. No speculative repair/force shutdown. Own lease retained, disk hash unchanged. Independent BUG592 regression work continued; goal remains ACTIVE.
+
+6. **15 October usable fresh-session workaround, not root-cause repair:** launchedexistingAutoCAD, newmain778113170 opensownedfreshcopy/acceptscommandinput. Actualreport-childCancelkeepsparentopen; confirmation/draftsave/nativeClose/diskreopenwork. Old87364294sessionnotclosed/recovered,595remainsOPEN. Bewarecapturebeforeactivationcanreturnoldprocessscreenwithnewwindowmetadata: activateexactreturnedwindowthenverifyactualtitle/drawing. Screens641-654/receipts273-276. No parent-Escape acceptance/forcekill/install. Reusefreshsession ratherthanlaunchingmoreinstances.
