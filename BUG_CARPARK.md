@@ -2337,6 +2337,9 @@
 
 ## BUG-256
 
+**14October2026 suggested-fall positive recovery control:** installedCivil3.0.49+48662ddd, owncopy,movedP2suggestionFALL1:5.3. OneU516 removesarrow/label, untouched12seconds/REDO517 restoresboth. SAVETIME0, no interveningselection/view/inspection/save/autosave/drawingswitch. Laterdisk520retainsoutput. Existingdiameter/flat/schedulefailures remainOPEN; no wholeBUGclosure. Verification210-212.
+
+
 **14October2026 narrow positive recovery controls:** installedCivil3.0.49+48662ddd, ownedcopy. CDSL18.600 andmanualCDFALL east1:80 each oneU removes output;12seconds untouched delayedREDO restores output(487/488,497/498). SAVETIME0,no interveningselection/view/inspection/save/drawingswitch. Bothpersist aftersavedrawing/reopen501. These command-specific passes do not close the confirmeddiameter/flat/schedule failures elsewhere in256; use them as positive controls for coordinatedrepair. Verification203-206.
 
 
@@ -3189,6 +3192,9 @@
 
 ## BUG-216
 
+**14October2026 narrow Codex-accepted current Enter route:** installedCivil3.0.49+48662ddd CDFALLSUGGEST Enter at emptynextpoint finishes0/0(506); aftermoved21.50 suggestionacceptedtoP2 Enterfinishes1placed3skipped(515). Arrow survivesoneU/delayedRedo/save-reopen520. ActualnativeGUI onownsyntheticcopy; verification207-212. Historicalfailure retained; no older-release/allEnterpromptacceptance inferred.
+
+
 **Command / Area:** CDFALLSUGGEST (Civil 3.0.15): "Enter to finish".
 
 **What Codex did (pass 18, DWG-B_P18 copy, 03:33):** CDFALLSUGGEST near grated P66, entered level 19.23 m, accepted the suggested FALL toward P66 at 1:27.1 (works). At "Next level (1 placed, 0 skipped), or Enter to finish:" pressed Enter.
@@ -3868,6 +3874,9 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 ---
 
 ## BUG-168
+
+**14October2026 additional clickedkeyword proof:** installedCivil3.0.49+48662ddd CDFALLSUGGEST actualSkipclick echoesS/noarrow511; actualMoveclick echoesM/newpoint512; actualAcceptclick echoesA/arrow514. Not typedshortcut surrogates. NarrowCodex-acceptedchoices only; otherCivil/Manager prompts and2024 remain unproven. Verification209.
+
 
 **Command / Area:** CE command-line keywords in Drainage and Manager; first seen in CDGRIPDIAG.
 
