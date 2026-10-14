@@ -5,11 +5,13 @@
 1. **Testing:** 513 recorded checks in real AutoCAD across 37 evidence ledgers: **402 PASS, 89 FAIL, 6 BLOCKED and 16 UNPROVEN**. These are specific checks, not 513 complete features.
 2. **Progress since the usage override:** 49 new native checks executed after Tim said, “lets take usage to 0% left then i will reset”. Separately, 98 earlier checks were recovered from existing evidence; those were not new executions.
 3. **Overall target:** 50% of the complete V3/UX scope is **not yet verified**. The earlier 7% was a historical text-matching estimate. The complete eligible feature inventory still needs reconciliation, so no current whole-product percentage is claimed.
-4. **Evidence and scope:** 1,011 distinct case-linked files: 964 screenshots and 47 metadata files. The index retains all 526 explicit UX ruling IDs, 569 root bug records and 523 installed catalogue entries. Cases link to 77 catalogue records; that does not mean 77 workflows are accepted.
+4. **Evidence and scope:** 1,004 directly case-linked files: 957 screenshots and 47 metadata files. Seven additional setup/cleanup screenshots are retained separately. All 1,011 retained files were rehashed successfully; no missing or changed evidence files found. The index retains all 526 explicit UX ruling IDs, 569 root bug records and 523 installed catalogue entries. Cases link to 77 catalogue records; that does not mean 77 workflows are accepted.
 5. **Bugs:** 50 new bugs, BUG-570 through BUG-619, remain OPEN. Repairs saved in draft pull requests are candidates; they have not been installed or accepted through these tests. No deployment was performed by this chat.
-6. **Usage:** latest account-wide meter **99% used, 1% remaining**. Tim’s instruction supersedes the former 10% reserve. Continue useful work until exhausted; Tim redeems any reset. No reset or paid provider request used.
+6. **Usage:** reset confirmed by Tim; fresh account-wide meter **0% used, 100% remaining**. Tim’s instruction supersedes the former 10% reserve. Continue useful work until exhausted; Tim redeems any reset. No reset or paid provider request used.
 7. **Latest safe state:** all owned test drawings closed; drawing controls restored to their prior values; test-station lease released. The older unresponsive BUG-595 session remains untouched. Source drawings and saved settings have unchanged hashes.
 8. **Still untested:** remaining built commands, complete workflow mapping, actual gap bridging, plotting, protected-object variants, scale/units/UCS combinations, calculation links and older AutoCAD versions. Engineering decisions still need Tim’s acceptance.
+
+9. **Record audit:** all 513 case keys are unique, all 37 ledgers are represented, and calculated verdict totals match. The earlier 1,011 case-linked count included seven unlinked setup/cleanup screenshots; corrected without adding or changing any native result.
 
 ## Latest native results
 

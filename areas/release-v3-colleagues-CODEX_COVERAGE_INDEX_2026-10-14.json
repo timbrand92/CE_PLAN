@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "1E1EA332063C79883B5D0AE69336AA7090302FE4DDD6D99AD0C3F74FF9C94199",
+    "currentBugsSha256": "8155F265AE6CB78D22823FB9FF751C2F1E4DB60065CCEB3BAA63AA20298871AE",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087"
   },
@@ -26,12 +26,12 @@
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 1011,
+    "uniqueEvidenceFiles": 1004,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 964,
+    "uniqueScreenshotFiles": 957,
     "uniqueMetadataFiles": 47,
     "caseLinkedUxIds": 14,
     "caseLinkedBugIds": 62,
@@ -39,7 +39,8 @@
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
-    "numericBugAssociationsRestored": 4
+    "numericBugAssociationsRestored": 4,
+    "retainedDeclaredEvidenceFiles": 1011
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -19938,7 +19939,7 @@
     },
     {
       "id": "BUG-616",
-      "headingLine": 8167,
+      "headingLine": 8170,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19953,7 +19954,7 @@
     },
     {
       "id": "BUG-617",
-      "headingLine": 8176,
+      "headingLine": 8179,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19968,7 +19969,7 @@
     },
     {
       "id": "BUG-618",
-      "headingLine": 8187,
+      "headingLine": 8190,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19983,7 +19984,7 @@
     },
     {
       "id": "BUG-619",
-      "headingLine": 8197,
+      "headingLine": 8200,
       "statusCandidates": [
         "OPEN"
       ],
@@ -30993,10 +30994,10 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 99,
+    "usedPercent": 0,
     "reservePercent": 0,
-    "reportedResetUnixSeconds": 1792472291,
-    "reportedResetMelbourne": "2026-10-20 15:58:11 AEDT",
+    "reportedResetUnixSeconds": 1792625799,
+    "reportedResetMelbourne": "22/10/2026, 10:36:39 am",
     "resumptionAutomation": {
       "id": "ce-autocad-testing-resume-after-weekly-reset",
       "kind": "heartbeat",
@@ -31014,6 +31015,17 @@
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
       "quote": "lets take usage to 0% left then i will reset"
-    }
+    },
+    "resetConfirmedByTim": true
+  },
+  "evidenceIntegrityAudit": {
+    "directCaseLinkedFiles": 1004,
+    "retainedDeclaredFiles": 1011,
+    "directScreens": 957,
+    "directMetadata": 47,
+    "duplicateCaseKeys": 0,
+    "conflictingHashes": 0,
+    "missingOrMismatchedFiles": 0,
+    "scope": "All513cases37ledgers;all1011retainedfilesrehashed.7setup/cleanupimagesnotdirectlylinkedexcludedfromcoveragecount."
   }
 }
