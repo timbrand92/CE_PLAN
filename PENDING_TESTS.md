@@ -1409,3 +1409,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 ### Codex real P1 normal-lap evidence, 14 October2026
 1. **Partial only:** explicitNo/Yes lap0/1200 and both oneUndo/delayedRedo/diskreadback exercised on installedStructural1.0.116+f180b349. BUG584 wrongbasewidth persists; BUG585 Escape stillOPEN. Do notacceptwholeframingworkflow orwholebugfromrecovery/lapPASS.
 2. **Nextguard:** fourabsolutePointcoordinates with actual intermediatepoint proof, compare placementposition/span, then object/protected-layer/Xref/REFEDIT/rotation/units/olderrelease cases. Report and exactownedcopy provenance in verification188-192.
+## Codex job rainfall evidence, 14 October2026
+
+1. **Specific route Codex-accepted:** installedCivil3.0.49+48662ddd, synthetic ownedcopy: fallbackwarning, inputrefusals, validseven-rowpreview, approval/editinvalidates, Escape, nativefileimport/source, Save and realDWGsave-close-reopen. Exactreceipts219-222/screens546-561,15narrowPASS. No engineering-site acceptance or wholeUX-CALC04 acceptance.
+2. **Remaining representative checks:** singleUndo/delayedRedo of savedcurve; confirmedoffice replacement and diskreadback; clipboard/filecancel/readfailure/parservariants; realdownstreamcalculationusingcurve;2024/otherDPI/themes/multipleDWGs. Avoid askingTim torepeat recorded narrowpasses. Hoverbuttoncontrast/current-versus-proposed wording observations retained in report for bounded UI repair review.
+3. **Safety and coverage:** controls/restored, threepreferences unchanged, ownedcopyclosed, ownlease released;36%accountweeklyusage. No installation/provider/reset. Overall50%target remains unverified.
