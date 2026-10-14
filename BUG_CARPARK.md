@@ -7802,6 +7802,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ## BUG-590
 
+
+**Regression guards banked,14October2026:** draftPR1258 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1258, commit36043dbe, installedbase48662ddd. Sevenproductionexportchecks run1PASS/6FAIL/0skipped. RealWPFpageglyphs identifydraftandissuedjob/status missingonpages2-4, includingoverflow; twoXLSXtabstatuschecks andtwonumeric-typechecksfail. Finalnet48test-projectbuild0errors/46warnings. Tests only, intentionallyRED, do notmergealone; no runtimefixorinstalledacceptance. Source-basedchecks supplementrealAutoCAD234-239, no percentagecredit. Preserveexisting403/1043runtimefilework. Verification240-242.
+
 **Status:** OPEN — 14 October2026, real installed Civil3.0.49+48662ddd.
 **Severity:** MEDIUM — calculation export sections lose draft issue status.
 
@@ -7811,6 +7814,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Retest:** draft detention/pipe/catchment/WSUD selections, each PDF page/XLSX tab and overflow; compare approved synthetic package separately. Editing must invalidate preparation and old approval.
 
 ## BUG-591
+
+
+**Regression guards banked,14October2026:** draftPR1258 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1258, commit36043dbe, installedbase48662ddd. Sevenproductionexportchecks run1PASS/6FAIL/0skipped. RealWPFpageglyphs identifydraftandissuedjob/status missingonpages2-4, includingoverflow; twoXLSXtabstatuschecks andtwonumeric-typechecksfail. Finalnet48test-projectbuild0errors/46warnings. Tests only, intentionallyRED, do notmergealone; no runtimefixorinstalledacceptance. Source-basedchecks supplementrealAutoCAD234-239, no percentagecredit. Preserveexisting403/1043runtimefilework. Verification240-242.
 
 **Status:** OPEN — 14 October2026, real installed Civil3.0.49+48662ddd.
 **Severity:** MEDIUM — calculation spreadsheet numbers exported as text.

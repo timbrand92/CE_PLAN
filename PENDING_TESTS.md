@@ -1434,3 +1434,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Recorded:** installedCivil3.0.49+48662ddd, receipts234-239:14narrowassertions9PASS4FAIL1UNPROVEN. Saved draft/cancellation pass;3actualPDFpageslegible and nativeExcelopens3tabs. No completeUX-CALC04or50%acceptance.
 2. **Repair/retest:** BUG590eachpage/tabactualdraft/approvedstateandidentity; BUG591typednumericvalues/Unknown distinction;249acceptedBoydsrowprovenance/sharedrainfall;515warning1257candidateawaitscombinedinstallation. Criticaldurationtransferreviewopen;noautomaticPSDtransferassumed. No faultfixinstalled.
 3. **Remaining:** selectedsections/overflow/WSUD/approvalinvalidation/readfailures/2024; calculatorconsumers/drawingApply. Ownedcopyclosed/preferencesunchanged; do notaskTimtorepeatcompletedbatch. Continueownership-awareauthorisedrepairs.
+
+## BUG590/591 regression package —14October2026
+
+1. **Banked:** draftPR1258 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1258 /36043dbe. Tests-onlyRED:7executed1PASS6FAIL0skip,net48build0errors46warnings. DoNOTmergealone;fixbothproductionfaultsandruntheseguards.
+2. **Actualretestaftercombinedrepair:** everyPDFpageincludingoverflowandeveryXLSXtabretainsdraft/issuedstateandjobidentity; numericcellsworkwithoutconversion,Unknownandzeroareseparate. Preservefrozenapprovalandpending403/1043. InstalledfaultsstillOPEN;theseunitchecksarenotnewAutoCADcoverage.

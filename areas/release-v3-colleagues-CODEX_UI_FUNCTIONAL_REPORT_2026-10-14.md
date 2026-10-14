@@ -267,3 +267,8 @@
 1. **Verified narrowly:** saved draft retains9.42m3/30min/inputs; nativePDF/XLSXcancel safe. Actual3pagePDF rendered/read; all3XLSXtabsopened in nativeExcel100%. No blankleadpage/clipping in testedPDF. Evidence234-239/screens577-591/localcalculations/export-cases.json:14assertions9PASS4FAIL1UNPROVEN, separatefromearlier172snapshot.
 2. **Faults:** new590 laterPDFpages/XLSXtabsomitdraftstatus; new591 numericcellsstoredastext. Existing249extended: output namesjobrainfall besideBoydsresultfromfixedrows. Existing515warningmissing; bluePDFconfirms517. Newbugsnow22(570-591),not20. CriticaldurationprovenanceUNPROVENpendingworkflow/source review.
 3. **Safety/remainder:** copy/Excelclosed,3preferences/nativecontrolsunchanged,ownerlease released. No installation/provider/build. Noall-exports/engineering/2024/50%acceptance. Nextownership-awareexportrepair/retest. Weekly38%account-wide.
+
+## Calculation export repair guards —14October2026
+
+1. **Built and run:** draftPR1258/36043dbe adds7focusedproductionexportchecks,1PASS6FAIL0skipped. RealpaginatedWPFdraft/issuedcases showmissingidentityonpages2-4includingoverflow; worksheetstatusandnumerictypesalsofail. Finalnet48test-projectbuild0errors46warnings. Exactreceipts240-242.
+2. **Repair still required:** tests-onlyRED,doNOTmergealone. No productionfixorinstallation;590/591OPEN. Pending403/1043runtimefileownershiprecorded, nooverlappingedits. Thisisrepairguard evidence,separatefromactualAutoCAD234-239andpercentage; weekly38%.
