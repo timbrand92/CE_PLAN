@@ -1424,3 +1424,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Built/tested only:**4ede9332/draftPR1257 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1257,existingwarningdisplay.24focusedPASS/net48build0errors;light/darkrenderpicturesinspected. Nothinginstalled,norealAutoCADcandidateacceptance.
 2. **Aftercombinedrelease:** CDCALCfreshsyntheticdraft/Boydsblankinputsinstructionvisible;700/500/200m2/PSD2leavefield ->9.42m3/30minplusexistinglongerstormwarningbesideinputs. Repeatlight/dark/150%/saved-draftreopen. Keep1216warningwording/switchand22colourhunks;507zeros/249rainfallstillOPEN.
 3. **Remainder:** completeitemcoveragecrosswalk/currentpercentage, actualdraftdiskrestore/exportedPDF/XLSXandremainingcalculatorbranches. Goalactive;weekly37%,noreset/provider/installation. Verification227-229.
+## Coverage index and untested remainder,14October2026
+
+1. **Evidence attached:**reportcompanionCODEX_COVERAGE_INDEX_2026-10-14.json contains508UXIDs/539bugheadings/sourcehashes/12partialscopeaudits.14caseledgers172assertions(144PASS/22FAIL/4BLOCKED/2UNPROVEN)notwhole-itemcoverage.265evidencefilesverifiedpresent/hashmatches.
+2. **Stillpending:** fullcase-to-UX/bugmapping,historical/currentversionscreenshotreview,eligibility/statusreconciliationandtruthfuloverallpercentage. Old7%notcurrent;994/497arithmeticprovisional. Noitemacceptedfromopenedwindow,buildorpartialcase.
+3. **Nextrealchecks:** savedcalculationdraftreopen,actualPDF/XLSXandrenderedoutputs,rainfall-changeconsumption. Preserve1257combinedreleaseacceptancecheckand507zero/249rainfallremainders. Goalactive;noTimrepeatrequestedforrecordednarrowpasses.
