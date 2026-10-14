@@ -1526,3 +1526,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **603/604:** Readsourcewritesbeforeapprovedpreview/Applyandresultsusefalseschedulesourcewords. Claudeintake/writercontract,Codexexistingreviewpresentation. Detachedpreview/transform/source-awarefieldsbeforeanywrite.
 2. **605:** explicit49.000/48.850ILmissingafterUndoRedo,whilecovers/sizesretained;freshbeforeUndoanddiskreadbackmustisolatecause. Samefixturepositive/Unknown/sump-onlycontrolsandoneUndo/Redo,geometry/schedule/Inspectoragreement. No productionfixinstalled.
 3. **Evidence:** verification306-310/native733-746/localLandXMLreport/debug/XML;savedpostRedoDWG9B4DCBE4,localonly. FullCV07/engineering/olderruntimeacceptancepending.
+
+### Codex LandXML initial-import isolation — 15 October2026
+
+1. **Supersedes cause uncertainty above:** BUG605failsBEFOREUndo/Redo inindependentfreshimport752; savedpostRedoreadback748alsofails. RepairinitialprovidedILmapping/recordsandthenprovebothinitialandUndoRedo/diskreadback. No requirementforTimtoisolatecausehimself.
+2. **Same-source control:** secondidenticalXMLstillfourpit-schedulerows756; stableidentity/fullgeometryduplication/overridesNOTyetaccepted. Bothcopiesclosednormally,initialcontrolsavedlocalonly.
+3. **Representative acceptance still pending:** correct49.000/48.850inplan/schedule/Inspector,before/afterUndoRedo/reopen;missingInvertstaysUnknown;previewbeforeApply,sourceawarewords,stableidentityandchangedrevisionoverrides/protections,2027and2024separate. Bugs602-605OPEN. No code/deploychangehere.

@@ -369,3 +369,9 @@
 1. **Works narrowly:** sourceReadcreates2pits/1pipe;afterRedo schedulehasP91/P92,600x600mm,300mmpipe,cover50.000/49.500m. ImportUndo removesvisibleP91/pipe andRedo1restores,afterseparateAutoCADnavigationstepsareundone. Entirelink/levelrecoveryisnotaccepted.
 2. **Fails:** BUG603Readwrites/autotranslatesbeforepreview/Apply. BUG604resultsfalselysayfromschedule. BUG605providedIL49.000/48.850areblankinpostRedo schedule/pipeends;beforeUndocontrolneededtoseparatewrite/recoverycause. ExistingUnknownwarningsarecorrectforcurrentmissingrecords.
 3. **Saved remainder:** exactpostRedoDWGsaved/closed;preferencesunchanged. Diskreadback,freshimportnoUndo,fullsourceunits/position/levels,duplicates/overrides,protectedtargets/2024/plotremain.7newnarrowchecks3PASS3FAIL1UNPROVEN;282total,50%wholecoverageunproved.
+
+### 15 October — LandXML initial-import control and repeat
+
+1. **Fault isolated:** savedpostRedoDWG747/748stilllosesprovidedILs; independentcleanbaselineinitialimport749-752alreadyblank49.000/48.850/fourwarnings BEFORE Undo/Redo. Recoveryisnotrequired. Covers50.000/49.500and600x600/300sizesretained. BUG605OPEN;exactextraction/writerstageunproved.
+2. **Repeat:** sameunchangedXMLagain754-756leavesfourpit-schedulerows. Noextra schedulepitrowsobserved;objectidentity,allgeometryandapprovedoverridepreservationremainunproved. NativeCV07previewgate/sourcewords603/604stillfail.
+3. **Durability/cleanup:** initialimportfaultsavedseparately753,unsavedrepeatdiscarded;bothcopiesnormallyclosed760,threepreferencesunchanged. Current283narrowchecks222PASS48FAIL6BLOCKED7UNPROVEN,445hashedfiles. Fiftypercentwholecoverageunverified;unitsmatrix/protectedtargets/overrides/plots/olderAutoCADandremainingCivil/Structural/Managerremain.
