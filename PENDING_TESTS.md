@@ -1379,3 +1379,7 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Specific route now Codex-accepted:** Civil3.0.49, new100UPVC/Standard/freeends, both18.500. ActualFLATlabel/editor/preview/numericalreadback/save-reopen pass. Screens375-378/381-387, receipts168-170. Prior generic flat-label pending note is superseded for thisroute only.
 2. **Still failing:** BUG256 oneUndo succeeds but controlleddelayedRedo saysNothingtoredo; BUG572 InspectorTypeUnknown despite correct100/UPVC/18.500/18.500. Nowholebugclosed.
 3. **Remaining:** held/custom-grade variants, repair command, protection/units andBUG427Structural subcase. NewPipe absent-preview observation awaits contract/source review. Settings/controls restored, ownedcopyclosed,lease released. Account29%;50%stillunverified.
+
+### Codex real P1 normal-lap evidence, 14 October2026
+1. **Partial only:** explicitNo/Yes lap0/1200 and both oneUndo/delayedRedo/diskreadback exercised on installedStructural1.0.116+f180b349. BUG584 wrongbasewidth persists; BUG585 Escape stillOPEN. Do notacceptwholeframingworkflow orwholebugfromrecovery/lapPASS.
+2. **Nextguard:** fourabsolutePointcoordinates with actual intermediatepoint proof, compare placementposition/span, then object/protected-layer/Xref/REFEDIT/rotation/units/olderrelease cases. Report and exactownedcopy provenance in verification188-192.

@@ -7673,7 +7673,10 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ## BUG-584
 
-**Command / Area:** R1 rafter-span drawing size, installedStructural1.0.116+f180b349. MEDIUM: accepted bay dimensions do not reach the placed dynamicblock, with no visible refusal or warning. FJ1 now reproduced; P1 shares code but not yet reproduced.
+**NormalP1 extension,14October2026:** defaultP1, fourPoint picks starting80000,17000 then@6000,0 / @-3000,-1000 / @0,-6000, explicitNo. Actual5C9/PURLINS/mm/unitfactor1/scales1: INTERNAL2400/OUTER2600/ARROW6000 (442), persistsafterdisk455 withlap0. ExplicitYes in asecondplacement, same6000 span/depthinput offsets:6F0 reads3600/3800/6000/lap1200 (447/448), persists453/454. Lap1200 extends actualcrossbar butdoesnotrepairwrongbasewidth. Each normalplacement passesoneUndo/untouched12secondRedo. No wholeworkflowacceptance. Three relativepicks' intermediateWCS valuesnotindependentlyread; bothinsertions82000,13000, soabsolute-pointpositionguardstillpending/no positionrootcauseclaim. Verification188-192; nofixinstalled.
+
+
+**Command / Area:** R1 rafter-span drawing size, installedStructural1.0.116+f180b349. MEDIUM: accepted bay dimensions do not reach the placed dynamicblock, with no visible refusal or warning. FJ1 and normalP1 now reproduced; see the dated extension above.
 
 **Observed:** syntheticmmfixture, allfour picks in Pointmode. Nativekeyboard left50000,20000; right@8000,0; near@-4000,-1000; far@0,-4000. These define8000mmwidth/4000mmdepth. Enter retains existingRT1tag. CE says PlacedRT1onlayerRAFTERS. AutoCADProperties of that new RAFTER-JOISTV2 shows INTERNAL_DISTANCE2400, OUTER_DISTANCE2600, ARROW_DISTANCE4000, scale1/1/1, mmblockunits/unitfactor1. The short transverse span line agrees with the2400/2600properties. Earlier clickbasedwidebay also retained2400/2600 (screen338); typedrepeat excludes click-history interception as explanation.
 
@@ -7695,6 +7698,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 ---
 
 ## BUG-585
+
+**Normalpaths follow-up,14October2026:** explicitNo/Yes placements nowexercised; actualsavedlap0/1200 retainedafterreopen andeachoneUndo/delayedRedo passes. Wrongbasewidth extends584, not585. ThisdoesnotrepairEscapeatlapquestion;585remainsOPEN. Verification188-192/screens437-455.
+
 
 **Command / Area:** P1 purlin lateEscape, installedStructural1.0.116+f180b349. MEDIUM: cancelling the lapquestion stillcommits a new purlin.
 
