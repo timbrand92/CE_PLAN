@@ -1610,3 +1610,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Already exercised in installed2027:** ST08 RCRECTCOL opening/600x400mm live-preview/Cancel; RCCIRCCOL opening/zero-diameter warning/Cancel. Six boundedPASSchecks including unchanged specimen/settings cleanup; verificationarea356-357/localRC13-18. No fullroworengineeringacceptance.
 2. **Representative remainder:** place one rectangular or circular column with explicitly reviewed dimensions/reinforcement; compare preview and drawn bars/cover/dimensions, move complete detail, singleUndo/Redo, save/reopen, plot and2024. ExistingST08card governs; no extra individual manual backlog or install requested.
+
+
+### Codex column-output evidence —15October2026
+
+1. **Already exercised in installed2027:** rectangular400x400/fourbarandcircular450mm/eightbarvisibleoutput,oneUndo/delayedRedo,bothsavedreadback. Area358-361/localRC19-28. ExistingBUG613nowalsofailsrectangularcolumnMOVE;preserveitOPEN. No wholeST08orengineeringacceptance.
+2. **Remaining representative acceptance:** repairedoutlineMOVEcarriesbars/tie/hatch/label/dimensions;verifyexactdimensions/cover/scaleandplot,thenprotectedcontent,COPY/ROTATE/ERASE,linksand2024. KeepthisinexistingST08batchratherthanindividualmanualbacklog.
