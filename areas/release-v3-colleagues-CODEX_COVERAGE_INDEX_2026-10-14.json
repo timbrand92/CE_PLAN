@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "A7AB1F7D10D8CBC95E4010572D8558EDB813AA71F693AA217EBAA91244A3D7B8",
+    "currentBugsSha256": "9BF4F0B5D1EB0E494D61D4FBBAD75459E84CF829951BAD39DC25CDA11788B190",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
@@ -25,15 +25,15 @@
       "BLOCKED": 6,
       "UNPROVEN": 4
     },
-    "uniqueEvidenceFiles": 322,
+    "uniqueEvidenceFiles": 323,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 318,
+    "uniqueScreenshotFiles": 319,
     "uniqueMetadataFiles": 4,
     "caseLinkedUxIds": 5,
-    "caseLinkedBugIds": 16
+    "caseLinkedBugIds": 18
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -13674,7 +13674,7 @@
     },
     {
       "id": "BUG-593",
-      "headingLine": 7840,
+      "headingLine": 7842,
       "statusCandidates": [
         "OPEN"
       ],
@@ -13690,7 +13690,7 @@
     },
     {
       "id": "BUG-594",
-      "headingLine": 7855,
+      "headingLine": 7857,
       "statusCandidates": [
         "OPEN"
       ],
@@ -13705,7 +13705,7 @@
     },
     {
       "id": "BUG-595",
-      "headingLine": 7866,
+      "headingLine": 7868,
       "statusCandidates": [
         "OPEN"
       ],

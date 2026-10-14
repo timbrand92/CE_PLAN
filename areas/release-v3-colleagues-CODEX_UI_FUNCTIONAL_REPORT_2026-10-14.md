@@ -306,3 +306,9 @@
 1. **HIGH BUG594:** actualfile-readerrejectscurrentBlueFactorPDFsandfallsbacktoolderSTORM110m2insteadofcurrent170m2. SyntheticPDFspersonallyviewed;jobfound/textlayervalid. Directfile-reader3guards1PASS2FAIL;PR1258a711f3d3tests-only. Repair:ClaudeownedTryReportsusesexistingformatdispatcher,newest-first/provenancepreserved.
 2. **HIGH operational BUG595,investigate:** afterEscapeparenttargetchanged,bothcalcwindowsdisappearedandnativecommandentry/normalClosedidnotcomplete. Causeunknown,24huptimehealthwarningpresent. OnlyownsyntheticDWGopen;on-diskfixture/preferencesunchanged. NativecleanupNOTPASS,ownlease1791986256retained;commandlinevisibilityrestoreunproved,noforcekill/deploy.
 3. **Coverage:**9newnarrowassertions4PASS3FAIL1UNPROVEN1BLOCKED,633-639/localreport-intake/cases.json;actualconfirmation/source-destinationdisk/export/Unknownrowstillunproved. Fullscope/50%unverified;receipts264-268.
+
+## 15 October — continued recovery and pipe availability checks
+
+1. **Native recovery remains unresolved:** observed system-menu Close did not close the owned test drawing. Screenshot640; no Save question or clean Cancel is claimed. Source Close/Escape routes alone do not establish the cause. Own lease remains held; saved fixture unchanged.
+2. **BUG592 guards saved:** PR1258/ecd48404 adds21focusedchecks,2PASS19FAIL,0skipped. Missing/invalid inputs and overflow become saved/prepared numeric results; unavailable-draft restore fails. Valid-grade recovery and advisory controls pass. Tests-only, no installed repair. Pending627/642 ownership must be coordinated for production integration.
+3. **Honest scope:** realAutoCADledger222checks unchanged;323evidencefiles. Source checks excluded from feature coverage. Whole-itempercentage remains unverified,50%unfinished. Weekly54%; goalACTIVE,receipt269-272, independent work continues.
