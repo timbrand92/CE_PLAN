@@ -1543,3 +1543,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **PR1258 d82d2dc4:**tests-only10modern5PASS5FAIL,zero skipped. Existingmapperknown/UnknowncontrolsPASS;duplicateevidenceandmissingsharedmapperwiringFAIL. net48build0errors286warnings28.49sec,no runtimePASS. RED,dontmergealone.
 2. **Claudeintegration:** useonecanonicalprovidedlevelassignmentinLandXMLentry;deduplicatenamespaceenumeration,retainUnknown/multiple-endsemantics. Thenactual49.000/48.850plan/schedule/Inspectorbefore/afterUndoRedo/reopen. CV07preview/source/identity/protectionsandolderruntimeacceptedseparately. No productionfixinstalled.
+
+### Codex reference comparison score —15October2026
+
+1. **607OPEN:** added-networkreferencecorrectlylists2missingpits/1missingpipeyetOVERALLSCORE100%. Claudecomparisonformatterrepair;sharedfieldsubscoreandassetcompletenessmustbedisclosedhonestly,no competingengine.
+2. **Representativeacceptance:** identical2pit/2pipecontrolmatches;addedP91/P92/300pipecontrolshowsexactMISSINGcountswithoutoverall100%;reverseEXTRAandchangedlevel/sizecasesseparate. KeepownershipUnknown/stored-cachecaveatvisible,verifyfiles/sourcefolderandlivegeometryunchanged. OlderAutoCADseparate.
+3. **Evidence:** native769-781/localcomparisonledger/reporttext;cleanrunafterdiscardingoperatorF2/CLEANchanges. Currentcopyclosed,all3DWGhash/bytes/mtimeand3preferencesunchanged. Fullin-memorynonmutationunproved. No repairinstalled.

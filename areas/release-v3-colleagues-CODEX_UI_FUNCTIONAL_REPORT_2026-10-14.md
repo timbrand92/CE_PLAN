@@ -386,3 +386,10 @@
 
 1. **Tests-onlybanked:** PR1258/d82d2dc4,tenchecks5PASS5FAIL/zero skipped. Sharedmapperpreservesknownlevels/fournamespaceformsandUnknowncontrol;parserduplicatesoneInvert(fourfails),LandXMLentryomitscanonicalmappercall(wiringfail). Duplicatesalonearenotprovedcauseofnativeblanklevels.
 2. **Scope:** net48build0errors286warnings28.49sec,no runtimePASS. No productionrepairorinstallation;Claudeownsparser/command/writer. Native290checksremainunchanged,50%wholecoverageunverified. Combinedrepairmustpassplan/schedule/Inspector,recoveryandsavedreadback.
+
+### 15 October — reference comparison controls and misleading score
+
+1. **Nativeworksnarrowly:** explicitreferencepicker/Cancel,identicalstoredrecordsmatch2pits2pipes/18fields,added-networkreferencecorrectlylistsP91/P92and300pipeMISSING. CacheownershipUnknown/pendingchangescaveatisexplicit. Thisisnotcurrentgeometryorengineeringacceptance.
+2. **New607:** added-networkreportstillendsOVERALLSCORE100%(18/18fields)despite2missingpits/1pipe. Matched-fieldsubscoremustnotimplycompleteagreement. Claudeformatterowner;actual779showsmissingpipe+100%together.
+3. **Operatorcorrection/limits:** initialF2historyattemptfollowedbyCLEAN;discardedunsavedandcleanretestusednativehistorybutton. No cleanupmutationattributedtocomparison. All3DWGs/hash/mtimeandCEpreferencesunchanged,copyclosed. Exactin-memorynonmutation,EXTRA/changed/invalidreference/protected/olderruntimeunproved.
+4. **Progress:**296narrowchecks231PASS50FAIL6BLOCKED9UNPROVEN,471hashedfiles;50%wholecoverageunverified. Weekly72%usedaccount-wide/10%reserve. TennewLandXMLsourceguardsareseparatefromnativecounts.
