@@ -8182,3 +8182,13 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence:** XRL-09FAIL/screens1020–1025/nativeexport. XRL-05PASS proves mixedreferencegeometryrollbackandnativeprotection, notsuccessfulworkflow. Sourcefilehashunchanged. ReadserviceEnsureLayerbeforeUndoMarkScopecorroboratessideeffect; actualnativeevidenceprimary.
 6. **Guard / confirmation:** Run normal/fast/silent onmixed unlocked+lockedfixture; compare referenceproperties, layerflagsandlayer-tablebefore/after. Expectplainrefusal,no newtargetlayer, no movedreferences. Retestnormalunlockedcase/oneUndo separately.
 7. **Ownership / status:** Claude command/service lane; distinctfromABSBUG583. OPEN; nofixbuilt/installed/accepted.
+
+
+## BUG-618
+
+1. **Command / area:** Structural CXREF, MEDIUM OPEN. Copyingloadedregularreferencefails, blockingassociatedPXREFworkflow. Installed1.0.116+f180b349 inAutoCAD2027.
+2. **Steps:** OpenownedsyntheticCODEX_XRL_20261015.dwg withregularrelative-pathCODEX_RC_COLUMNS_20261015attachedtwice. TypeCXREF,selectfirstreferenceonunlockedlayer0(leftpipevisibleintestview).
+3. **Actual:** [CXREF] Error: eInvalidKey; noclipboardfilecreated. NativeBLOCKflags36/path..\structural-rc\CODEX_RC_COLUMNS_20261015.dwg; loadedreferenceCC2position100000/0,scale1/rotation0. CC3onlockedsecondlayerremainsuntouched; failureselectedfirstunlockedinstance. No modalexception/fullcrash/rootcauseclaim.
+4. **Expected:** Copythisvalidloadedreference with itsdocumentedstate; reportplainlywhatwascopied. ThenPXREFmustofferapprovedST5-12originalcoordinates/picklocation,previewandunitcheck. Fullsuccessfulpaste/unloaded/overlay/Xclip/overrides notyettestedbecausecopyfailed.
+5. **Evidence / guard:** xref-settings-copy-case-ledger.json XC-06FAIL/screens1042–1045/nativepropertyexport. Clipboardabsentbefore/after; host/source/settingsfilehashesunchanged. PositivecontrolsCXREFEscapeandPXREFemptyclipboardrefusalpass. RepeatonsamefixtureandminimalfreshnativeXref, tracefailurewithoutbypassingprotection. Comparefullcopy/pasteproperties/Undo/save-reopenafterrepair.
+6. **Ownership / status:** Claude command/service lane NativeCopyPasteXrefService. OPEN; nofixbuilt/installed/accepted.

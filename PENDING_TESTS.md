@@ -1641,3 +1641,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Installed narrowresults:** XRLINFO/normalXRLtransfer/nonlayerpropertypreservation/oneUndoRedo/mixedlockedprotection/sourcefilehash/save-reopen exercised inAutoCAD2027 onownedcopies.9checks7PASS2FAIL; no2024/fullworkflowacceptance.
 2. **Open616/617:** Addapprovedhighlightedpreview/counts/Apply withEscapenochange. Preflightlockedreferences inplainEnglish; failedrunmustnotcreateemptytargetlayer. Preserveexistingnativeprotectionandallreference/sourceproperties. Claude serviceowner; nofixcandidateinstalled.
 3. **Grouped remainingacceptance:** Same two-referencefixture, thenoverlay/paperspace/targetlocked/nested/unloaded/missingpaths/Xclip/REFEDITandlargecancel. OneUndo/Redo/save-reopen; compare sourcehashes. Do nothandTim individualhistoricaltestbacklog.
+
+
+### Codex Xref settings/copy —15October2026
+
+1. **Observed:** XRLCONFIGtab/values, editCancel/fileunchanged/reopen, cleanEscape, CXREFEscapeandPXREFemptyclipboardrefusalpassnarrowlyin2027. Savevalidation/invalidvalues/otherresolutions/2024notaccepted.
+2. **Open618:** RepairCXREFloaded-referenceeInvalidKey beforefullST5-12pasteacceptance. UseownedCODEX_XRLfixture; firstreferenceunlocked. Aftercopyworks, verifytype/path/insertion/scale/rotation/Xclip/layeroverrides, original/pickpreview/unitcheck, missingpaths/Cancel/Undo/save-reopen. Claude serviceowner; nofixinstalled.
