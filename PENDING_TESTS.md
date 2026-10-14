@@ -1632,3 +1632,5 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Observed now:** CH1:20 Objects/Points nativeassociation, HATCHEDIT, outerboundaryandislandMOVE, cancellation, singleUndo/delayedRedo andsave/reopen onownedcopy.13narrowchecks12PASS1FAIL; notwholeST05acceptance.
 2. **Remaining grouped acceptance:** BUG614normal1:50 andBUG615actualdrawingpreview/Apply; remainingpresets/1:100/plotdensity/draworder/nestedislands/protectedlayers/Xrefs/REFEDIT/grips/H2Arollback/olderversions. Retain acceptedCHnativeoutput while addingreviewstage. Nativepropertiesmustremaineditable/associative.
 3. **Usage instruction:** Tim supersedes10%reserve15October: useallowanceto0%,thenTimresets. Do notstopat90%; saveeachcoherentbatch.
+
+4. **Alias evidence follow-through15October:** EH/CH/WH/LBH/LBUH/BLH1:100 preselection/nativeproperties/save-reopen now observed narrowly; WHorigin Propertiesedit/persistence and BLHUndoRedo pass.12newcases11PASS1FAIL; same615livepreview/Applygap acrossaliases remainsOPEN. No allpreset/plot/protection/H2A/oldversion acceptance inferred.

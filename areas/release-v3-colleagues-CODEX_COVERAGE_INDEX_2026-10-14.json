@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "DD5216445CFAA0F218AB3B3A5FC63B3CD3C2281E2E8C917BDA7D3FE111EBBE67",
+    "currentBugsSha256": "885A2C115A2424372BA3123EFD00FDEA4FF59128629517B09815B4B79FF06EF9",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087"
   },
@@ -18,24 +18,24 @@
     "bugHeadings": 565,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 32,
-    "narrowCases": 477,
+    "caseLedgers": 33,
+    "narrowCases": 489,
     "narrowVerdicts": {
-      "PASS": 373,
-      "FAIL": 82,
+      "PASS": 384,
+      "FAIL": 83,
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 907,
+    "uniqueEvidenceFiles": 938,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 874,
-    "uniqueMetadataFiles": 33,
+    "uniqueScreenshotFiles": 902,
+    "uniqueMetadataFiles": 36,
     "caseLinkedUxIds": 14,
     "caseLinkedBugIds": 58,
-    "newNativeExecutionsInLatestReconciliation": 13,
+    "newNativeExecutionsInLatestReconciliation": 12,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
@@ -45,7 +45,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "FullV3union, built/installedeligibility and whole-scope audits remain incomplete.526 explicitUXIDs,565bugrecords and477bounded assertions do not establish whole-item50%coverage. Latest13newCHnativechecks12PASS1FAIL; no wholeworkflowaccepted.",
+    "reason": "FullV3union, built/installedeligibility and whole-scope audits remain incomplete.526 explicitUXIDs,565bugrecords and489bounded assertions do not establish whole-item50%coverage. Latest13newCHnativechecks12PASS1FAIL; no wholeworkflowaccepted. Latest12aliaschecks11PASS1FAIL;25newnativechecks across two batches this turn. No completeST05oroverall50%claim.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -19926,7 +19926,8 @@
         "OPEN"
       ],
       "currentCaseKeys": [
-        "hatch-output-case-ledger.json::CHOUT-13"
+        "hatch-output-case-ledger.json::CHOUT-13",
+        "hatch-alias-case-ledger.json::CAH-12"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -25297,9 +25298,17 @@
           "label": "Diagonal Hatch — Colour 150",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-07"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-07",
+            "hatch-alias-case-ledger.json::CAH-08",
+            "hatch-alias-case-ledger.json::CAH-09",
+            "hatch-alias-case-ledger.json::CAH-11",
+            "hatch-alias-case-ledger.json::CAH-12"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -25328,7 +25337,9 @@
             "hatch-output-case-ledger.json::CHOUT-10",
             "hatch-output-case-ledger.json::CHOUT-11",
             "hatch-output-case-ledger.json::CHOUT-12",
-            "hatch-output-case-ledger.json::CHOUT-13"
+            "hatch-output-case-ledger.json::CHOUT-13",
+            "hatch-alias-case-ledger.json::CAH-02",
+            "hatch-alias-case-ledger.json::CAH-11"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
@@ -25341,9 +25352,15 @@
           "label": "Earth Hatch",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-01"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-01",
+            "hatch-alias-case-ledger.json::CAH-11",
+            "hatch-alias-case-ledger.json::CAH-12"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -25369,9 +25386,15 @@
           "label": "Load-Bearing Wall Over Hatch",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-05"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-05",
+            "hatch-alias-case-ledger.json::CAH-11",
+            "hatch-alias-case-ledger.json::CAH-12"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -25383,9 +25406,15 @@
           "label": "Load-Bearing Wall Under Hatch",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-06"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-06",
+            "hatch-alias-case-ledger.json::CAH-11",
+            "hatch-alias-case-ledger.json::CAH-12"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -25411,9 +25440,17 @@
           "label": "Waffle Slab Hatch",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-03"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-alias-case-ledger.json::CAH-03",
+            "hatch-alias-case-ledger.json::CAH-04",
+            "hatch-alias-case-ledger.json::CAH-10",
+            "hatch-alias-case-ledger.json::CAH-11",
+            "hatch-alias-case-ledger.json::CAH-12"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -30765,11 +30802,11 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 61,
-      "associatedCaseCount": 477,
+      "associatedEntryCount": 66,
+      "associatedCaseCount": 489,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 32
+      "currentLedgerCount": 33
     }
   },
   "currentNewBugStatusAudit": {
@@ -30814,7 +30851,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 93,
+    "usedPercent": 94,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792472291,
     "reportedResetMelbourne": "2026-10-20 15:58:11 AEDT",
@@ -30830,7 +30867,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 13,
+    "newNativeChecks": 25,
     "ownLeaseReleased": false,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
