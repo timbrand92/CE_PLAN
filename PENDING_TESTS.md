@@ -1549,3 +1549,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **607OPEN:** added-networkreferencecorrectlylists2missingpits/1missingpipeyetOVERALLSCORE100%. Claudecomparisonformatterrepair;sharedfieldsubscoreandassetcompletenessmustbedisclosedhonestly,no competingengine.
 2. **Representativeacceptance:** identical2pit/2pipecontrolmatches;addedP91/P92/300pipecontrolshowsexactMISSINGcountswithoutoverall100%;reverseEXTRAandchangedlevel/sizecasesseparate. KeepownershipUnknown/stored-cachecaveatvisible,verifyfiles/sourcefolderandlivegeometryunchanged. OlderAutoCADseparate.
 3. **Evidence:** native769-781/localcomparisonledger/reporttext;cleanrunafterdiscardingoperatorF2/CLEANchanges. Currentcopyclosed,all3DWGhash/bytes/mtimeand3preferencesunchanged. Fullin-memorynonmutationunproved. No repairinstalled.
+
+### Codex607regressionready—15October2026
+
+1. **PR1258/0f2022b5:**ninechecks5PASS4FAIL/zero skipped;fourmissing/extraassetsoverall100%failures,matching/changedcover/nonmutation/existingcontrolsPASS. net48build0errors286warnings31.33sec,no runtimePASS. Tests-onlyRED/combinematchingClaudeformatterrepair.
+2. **Nativeacceptanceremains:** identicalandaddednetworkcontrols,nofalseoverall100%,reverseEXTRA/changedvalues,ownershipUnknown/cachecaveat,exactin-memory/filesourcenonmutation,olderruntime. No newproductionfixinstalled.

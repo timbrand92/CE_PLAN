@@ -393,3 +393,8 @@
 2. **New607:** added-networkreportstillendsOVERALLSCORE100%(18/18fields)despite2missingpits/1pipe. Matched-fieldsubscoremustnotimplycompleteagreement. Claudeformatterowner;actual779showsmissingpipe+100%together.
 3. **Operatorcorrection/limits:** initialF2historyattemptfollowedbyCLEAN;discardedunsavedandcleanretestusednativehistorybutton. No cleanupmutationattributedtocomparison. All3DWGs/hash/mtimeandCEpreferencesunchanged,copyclosed. Exactin-memorynonmutation,EXTRA/changed/invalidreference/protected/olderruntimeunproved.
 4. **Progress:**296narrowchecks231PASS50FAIL6BLOCKED9UNPROVEN,471hashedfiles;50%wholecoverageunverified. Weekly72%usedaccount-wide/10%reserve. TennewLandXMLsourceguardsareseparatefromnativecounts.
+
+### 15 October — comparison regression guards
+
+1. **Banked:** PR1258/0f2022b5,nineactualmodernchecks5PASS4FAIL,zero skipped. Missing/extraassetcasesreproducemisleadingoverall100%;matching,changedcover,nonmutatingsnapshotandexistingpitcontrolsPASS. net48build0errors286warnings31.33sec,noruntimePASS.
+2. **Limits:** tests-onlyRED,Claudeformatterrepairpending,notinstalled.Native296checksandwholepercentageunchanged;extra/changedsourcecasesnotnativeaccepted.
