@@ -355,3 +355,10 @@
 3. **Drawing faults:** BUG600 wrappedtitle intersects table andscale. BUG601 updateleavesold1:100image visible evenafterUndo/Redoandzoom; nativeREGEN revealscorrectnarrower1:200section. NativeUndo/Redorecognitionisrecorded,completevisiblegeometryrollback remainsUNPROVEN.
 4. **Durability:** updatedsection/rows surviveQSAVE/close/reopen; finalcopyclosed,threepreferencefilesunchanged. No locked-layer/Xref/REFEDIT,post-update linkedmetadata,fullplotorengineeringacceptance.
 5. **Evidence scope:** current21ledgers270narrowchecks214PASS44FAIL6BLOCKED6UNPROVEN;404uniquecase-linkedfileshash-verified. Overall50%remainunverified,not270wholefeatures. Weekly65%usedaccount-wide;10%reserve. Verification296-301andlocal704-723.
+
+
+### 15 October — installed catalogue and LandXML intake
+
+1. **Inventory:** liveCivil137/Structural375/Manager11catalogueentries,523includingaliases/internal/sharednames. Snapshot/sourcehashesareintheexistingcoverageindex. This isnot523functionalacceptancesorapercentagedenominator. Link/Transformtrialbundlesarenotassumedabsentbecauseunrelatedcataloguepathsaremissing.
+2. **Native intake:** LandXMLSourcefits,Readisdisableduntilfilechosen,pickerCancelreturnsblank. Empty-networkXMLReadabortreports0pits/0pipes. BUG602:reviewclosesandfailure/retryisleftonlyincommandhistory/log. Safeabortcountscorrect;exactin-memorygeometrynonmutationnotproved.
+3. **Cleanup:** copyclosedNo,savedbaselineunchanged,threepreferencefilesunchanged. Positiveimport,units/Z/RLs,alignment,preview-beforewrite,duplicates/overrides/reimport,recovery/protectionandolderruntimeareoutstanding.5narrowcases4PASS1FAIL,notfullCV07acceptance.275totalchecks218PASS45FAIL6BLOCKED6UNPROVEN.

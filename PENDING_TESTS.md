@@ -1512,3 +1512,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **Open repairs:** BUG599 lateDASHDOT2disclosure;600multilinetitlecollision;601existingsectiondoesnotvisiblyrefreshuntilREGEN. Claudeownsonewriter/command, Codexreviewwindow. Preserveatomicprotections.
 3. **Representative retest:** P1/P2route9.55m,datum18,H100/V10; changeH200/repreviewexistingtarget/Apply immediatelyshows1:200; Undoimmediately1:100/Redo1:200,save/reopen; alltitle/scalelinesseparated. Repeatlockedlayer/Xref/REFEDIT,missingassets,long/branchedrouteandolderruntime. Fullplot/engineeringclearancestillpending. CodexcancontinuecopieswithoutTimdrivingeachcase.
 4. **Progress:**270narrowchecksare214PASS44FAIL6BLOCKED6UNPROVEN,not50%wholecoverage. Bugs599-601remainOPEN;repaircandidates1259areuninstalled. Savedupdatedfixturestayslocalonly.
+
+
+### Codex LandXML failure review — 15 October2026
+
+1. **Real installed observation:** Civil3.0.49 Sourceblank/Readdisabled andpickerCancelpass; empty-networkReadreports0pits0pipes/aborted. BUG602OPEN:failurewindowdisappears,no visiblechoose-another-file/resultreview.
+2. **Repair/retest:** ClaudecommandhandoffpassesabortedreceipttoexistingCodeximportreviewwindow. Empty/malformed/missinginputskeepplainfailure/retry; validtwo-pitcontrolshowsproposedunits/levels/assetsbeforeApply. ThenoneUndo/Redo,save/reopen,reimport/overridesandprotectedtargets;2027and2024/net48separate. No runtimefixbuiltorinstalledthisbatch.
+3. **Evidence:** verification302-305/localLandXMLcases/report/screens;fourpassesandonefailure are narrowcases. Full50%unverified. KeepallV3/UXscopeandinstalledcatalogue inventorydistinct.
