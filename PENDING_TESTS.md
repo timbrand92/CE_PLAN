@@ -1347,3 +1347,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Narrow Codex-accepted:** R1 unchangedstoredRT1tag placement, completeoneUndo/delayedRedo withautosave0, diskbody/mark retention and unchangedglobalsettings. Receipts152-158/screens333-350. EarlierblanketR1/FJ1/P1 profileblock is superseded for unchangeddefaulttag route only.
 2. **Confirmed failure:** BUG584 exact8000x4000mm four-pointbay yieldsinternal2400/outer2600/arrow4000; wrongwidthvalues persistafterdiskreopen. No fixinstalled; correctspangeometry notaccepted. RelatedFJ1/P1, alternatewidth/depth/object/rotated/protected routes remainpending; require behaviourreview before repair.
 3. **Engineering boundary:** BT9panel2700 numericalreadback does not approve rooftrussescontributing towallprovidedtotal. ExistingBUG499 nowhasobservedevidence, expectedaggregationstillTimengineeringcall. No Timrepeatrequested for recordednarrowpasses. Settings/controlsrestored andlease released;weekly28%,50%unverified.
+
+## Floorjoist sizing and purlin lateCancel,14October2026
+
+1. **Narrowpasses:** FJ1 storedDJ1 output/oneUndo/delayedRedo; P1 outputrecovery; unchangedglobalsettings/draftingcontrols. Receipts159-164/screens351-371. Noengineeringcapacityacceptance.
+2. **Failed:** BUG584FJ1 exact6000x6000mm bayretains2400/2600width, arrow6000correct; persistsafterreopen. BUG585P1 EscapeatApplylap stillplacesbody/tag. BothOPEN, Claude behaviourrepairlane, nofixinstalled.
+3. **Remaining:** normalP1Yes/No/exactsize/object/rotated/protected/metre andpurlindiskreadback. No Timrepeatneededforrecordednarrowpasses. Account28%, overall50%unverified.

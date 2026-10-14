@@ -7667,6 +7667,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **FJ1 extension,14October2026:** nativePoint65000,5000 ->@6000,0 ->@-3000,-1000 ->@0,-6000, EnterDJ1. Actualhandle825/JOISTS/mm/scales1 retains2400/2600widths, arrow6000correctlychanges. Expected6000/6200/6000. Screens352-359/receipts159-160. OneUndo/delayedRedo passes; P1pending.
 
+**FJ1 diskreadback:** same825 retains2400/2600/6000 aftersave/reopen369 (receipt163). P1clickbay365also shows2400/2600 but exacttypedP1widthcomparisonremainspending.
+
 **Status:** OPEN - reproduced in real AutoCAD14October2026.
 
 
@@ -7683,5 +7685,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Evidence:** verification161; sourceRafterJoistCommands.cs purlinLap branch onlyassignswhenTryPromptKeywordstrue anddoesnotreturnwhenfalse. Thisexplains candidatecontrolflow, actualGUIproves output. No capacityorcrashclaim. OtherP1Escapeboundaries/lapYes notyettested.
 
 **Regression / confirmation:** syntheticmmcopy, fourPointbay, defaultstoredtagEnter, Escapeatlapquestion. Expectno newobject andplaincancel; compare priorgeometry. RepeatNo/Yes normalpaths andoneUndo/Redo; protectlockedlayers/Xref. Claude behaviourlane; reviewexistingworkflowcardbeforecode, nofixinstalled.
+
+**Recovery observed:** oneUndo removesentireunwantedP1output363 anduntouched12seconds/delayedREDO restores364 withautosave0. ThisworkarounddoesnotfixEscape. Sameblock945identified365.
 
 **Status:** OPEN - reproducedinrealAutoCAD14October2026.
