@@ -13921,5 +13921,78 @@
       },
       "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24"
     }
-  ]
+  ],
+  "installedCommandInventory": {
+    "capturedMelbourne": "15/10/2026, 04:10:05",
+    "method": "Installed registry entries are catalogue candidates, not runtime tested functions or coverage denominator",
+    "totalEntries": 523,
+    "uniqueTypedNames": 518,
+    "bundles": [
+      {
+        "bundle": "CE_CVL_SUITE.bundle",
+        "source": "C:/Users/TimothyBrand/AppData/Roaming/Autodesk/ApplicationPlugins/CE_CVL_SUITE.bundle/Contents/Assets/Config/command-registry.json",
+        "sha256": "70B38C3EB64509FA9A517F5548E8046EF3834BF009C8C815EB9B5D67198B02C0",
+        "entries": 137,
+        "hiddenEntries": 73,
+        "groups": [
+          "CE",
+          "Draft",
+          "Sources",
+          "Layers/Prefs",
+          "Schedule",
+          "Calculations",
+          "Edit Tools",
+          "Layers",
+          "Import / Export",
+          "Repair",
+          "Help & Status",
+          "Links",
+          "Design",
+          "Settings",
+          "Layout",
+          "Internal",
+          "Site"
+        ]
+      },
+      {
+        "bundle": "CE_STRUC_SUITE.bundle",
+        "source": "C:/Users/TimothyBrand/AppData/Roaming/Autodesk/ApplicationPlugins/CE_STRUC_SUITE.bundle/Contents/Win64/Modern/Assets/Config/command-registry.json",
+        "sha256": "26F4EF6A7992032CDD794D5DD5AD430993F399D503DD9033596C529195407365",
+        "entries": 375,
+        "hiddenEntries": 62,
+        "groups": [
+          "",
+          "Structural",
+          "Administration",
+          "Annotation",
+          "Footings",
+          "Scheduling",
+          "Hatching",
+          "Schedules",
+          "Beams",
+          "Foundations",
+          "Utilities",
+          "Section Details",
+          "Line styles"
+        ]
+      },
+      {
+        "bundle": "CE_SUITE_MANAGER.bundle",
+        "source": "C:/Users/TimothyBrand/AppData/Roaming/Autodesk/ApplicationPlugins/CE_SUITE_MANAGER.bundle/Contents/Win64/Modern/Assets/Config/command-registry.json",
+        "sha256": "881E46E32C432E3AEC5F8597A650CA93ACEA810DCB4D808E4011AFD17C2F35E0",
+        "entries": 11,
+        "hiddenEntries": 1,
+        "groups": [
+          "Manager",
+          "Diagnostics",
+          "Admin",
+          "Updates"
+        ]
+      }
+    ],
+    "caseMappingComplete": false,
+    "verifiedRuntimeAvailableCount": null,
+    "wholeFeatureDenominator": null,
+    "next": "Classify canonical workflows/aliases/internal commands and map current installed native evidence; full508UX scope remains unchanged."
+  }
 }
