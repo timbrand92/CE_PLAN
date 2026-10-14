@@ -1647,3 +1647,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Observed:** XRLCONFIGtab/values, editCancel/fileunchanged/reopen, cleanEscape, CXREFEscapeandPXREFemptyclipboardrefusalpassnarrowlyin2027. Savevalidation/invalidvalues/otherresolutions/2024notaccepted.
 2. **Open618:** RepairCXREFloaded-referenceeInvalidKey beforefullST5-12pasteacceptance. UseownedCODEX_XRLfixture; firstreferenceunlocked. Aftercopyworks, verifytype/path/insertion/scale/rotation/Xclip/layeroverrides, original/pickpreview/unitcheck, missingpaths/Cancel/Undo/save-reopen. Claude serviceowner; nofixinstalled.
+
+
+### Codex existing-hatch Audit/Change —15October2026
+
+1. **Open619:** Report-onlyCEHATCHAUDITandCEHATCHCHANGEApplyfail eInvalidKey in2027synthetic24-hatchfixture. All24originalnativehatchespreservedexactly; modeEscapepasses. No servicefixinstalled.
+2. **Grouped acceptance:** Reportmustfinishcounts/findingsread-only; changingoneBLHtoConcreteSlabmustretainboundary/islands/background/nativeediting, thenUndo/Redo/save-reopen. Includecustom/protected/unsupportedhatchesand2024. Traceactualerrorbeforechoosingrepair; donotinferitfrom618sameerrorwording.

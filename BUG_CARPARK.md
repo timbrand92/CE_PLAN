@@ -8192,3 +8192,14 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Expected:** Copythisvalidloadedreference with itsdocumentedstate; reportplainlywhatwascopied. ThenPXREFmustofferapprovedST5-12originalcoordinates/picklocation,previewandunitcheck. Fullsuccessfulpaste/unloaded/overlay/Xclip/overrides notyettestedbecausecopyfailed.
 5. **Evidence / guard:** xref-settings-copy-case-ledger.json XC-06FAIL/screens1042–1045/nativepropertyexport. Clipboardabsentbefore/after; host/source/settingsfilehashesunchanged. PositivecontrolsCXREFEscapeandPXREFemptyclipboardrefusalpass. RepeatonsamefixtureandminimalfreshnativeXref, tracefailurewithoutbypassingprotection. Comparefullcopy/pasteproperties/Undo/save-reopenafterrepair.
 6. **Ownership / status:** Claude command/service lane NativeCopyPasteXrefService. OPEN; nofixbuilt/installed/accepted.
+
+
+## BUG-619
+
+1. **Command / area:** Structural existing-hatch Audit and Change Preset, MEDIUM OPEN. Twooperationsfailbeforefirstchange; sharedrootcause notyetproven. Installed1.0.116+f180b349/AutoCAD2027.
+2. **Audit reproduction:** OpenownedsyntheticCODEX_HATCH_AUDIT_20261015.dwg(24nativehatches,105entities), DIMSCALE100/LTSCALE1000. CEHATCHAUDIT, ReturnforReport. PrintsCEHATCHAUDITerror:eInvalidKey/Failedbeforefirstdrawingchange; no auditcounts/findingsproduced.
+3. **Change reproduction:** CEHATCHCHANGE, nativeLastselectionselectsoneBLHhatchC39, Return. GallerydefaultConcreteSlabAR-CONC/HATCH11/scale1. ClickApplypreset. PrintseInvalidKey/Failedbeforefirstdrawingchange; originalBLHremains.
+4. **Expected:** Reportcompletesread-onlywithcounts/traceablefindings. Applypreset changesthe selected supportednativehatch,preservingapprovednativefactsandoneUndo. Ifunsupported,plain actionableexplanation identifiesit. Neverloseoriginalhatches.
+5. **Evidence / positivecontrol:** hatch-audit-change-case-ledger.json HA-01/HA-03FAIL;1048–1058/twonativeexports/proof. Fullnativeentgetincludingxdata forall24hatchesmatchesexactlyTaftereachfailure; total105/24unchanged. AuditEscapeatmodepromptpasses. Controls1/1/5/0restored. No repair-mode/Undo/fullworkflowacceptance.
+6. **Guard / next:** ReproduceonthisfixtureandminimalfreshCH/BLHhatches; captureunderlyingerrorwithoutchangingusergeometry. VerifyReportonmixedstandard/custom/unsupported/protectedhatches; Applypreset/Cancel/Undo/Redo/save-reopen separately. Do notinferrootcausefromsameerrorwordinginCXREF618.
+7. **Ownership / status:** Claude command/service lane HatchUpgradeCommands; OPEN. No fixbuilt/installed/accepted.

@@ -9,33 +9,33 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "4B89AA9AC3658E1795C3C26631581ED919D05623BA8AF797A049A6FBD45E9C42",
+    "currentBugsSha256": "F3228436AC3FEF67CCCFF03EC765BD5A8F2C9D76D4C22027603B25BDC2E9E817",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 568,
+    "bugHeadings": 569,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 35,
-    "narrowCases": 504,
+    "caseLedgers": 36,
+    "narrowCases": 508,
     "narrowVerdicts": {
-      "PASS": 396,
-      "FAIL": 86,
+      "PASS": 398,
+      "FAIL": 88,
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 980,
+    "uniqueEvidenceFiles": 994,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 939,
-    "uniqueMetadataFiles": 41,
+    "uniqueScreenshotFiles": 950,
+    "uniqueMetadataFiles": 44,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 61,
-    "newNativeExecutionsInLatestReconciliation": 6,
+    "caseLinkedBugIds": 62,
+    "newNativeExecutionsInLatestReconciliation": 4,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
@@ -45,7 +45,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "504 bounded nativechecks across35ledgers are notcompleteV3features; fullunionandbuilt/installedeligibility incomplete. 50%UNKNOWN.",
+    "reason": "508 bounded nativechecks across36ledgers are notcompleteV3features; fullunionandbuilt/installedeligibility incomplete. 50%UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -19979,6 +19979,22 @@
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
       "currentStatusSourceLine": "MEDIUM OPEN; CXREFeInvalidKeyoncopysyntheticloadedreference."
+    },
+    {
+      "id": "BUG-619",
+      "headingLine": 8197,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "hatch-audit-change-case-ledger.json::HA-01",
+        "hatch-audit-change-case-ledger.json::HA-03"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": "MEDIUM OPEN; AuditReportandChangePresetfail eInvalidKey."
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -25119,9 +25135,15 @@
           "label": "Change Hatch Preset",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-audit-change-case-ledger.json::HA-03",
+            "hatch-audit-change-case-ledger.json::HA-04"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-audit-change-case-ledger.json::HA-03",
+            "hatch-audit-change-case-ledger.json::HA-04"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -25133,9 +25155,17 @@
           "label": "Hatch Audit",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-audit-change-case-ledger.json::HA-01",
+            "hatch-audit-change-case-ledger.json::HA-02",
+            "hatch-audit-change-case-ledger.json::HA-04"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-audit-change-case-ledger.json::HA-01",
+            "hatch-audit-change-case-ledger.json::HA-02",
+            "hatch-audit-change-case-ledger.json::HA-04"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -30899,19 +30929,19 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 73,
-      "associatedCaseCount": 504,
+      "associatedEntryCount": 75,
+      "associatedCaseCount": 508,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 35
+      "currentLedgerCount": 36
     }
   },
   "currentNewBugStatusAudit": {
     "dateMelbourne": "2026-10-15",
-    "ids": "BUG570through618",
-    "count": 49,
-    "explicitOpen": 49,
-    "method": "All570–618OPEN;618CXREFfailure newlynativeobserved. No installedrepairacceptance."
+    "ids": "BUG570through619",
+    "count": 50,
+    "explicitOpen": 50,
+    "method": "All570–619OPEN;619hatchAudit/Changefailure newlynativeobserved. No installedrepairacceptance."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -30964,7 +30994,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 40,
+    "newNativeChecks": 44,
     "ownLeaseReleased": false,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
