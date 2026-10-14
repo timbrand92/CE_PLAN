@@ -278,3 +278,8 @@
 1. **Works narrowly:** native pipe discovery and diameter/roughness fill; typed grade recovery and disk persistence; grade edit invalidates export. Catchments consumes saved job rainfall when ARI changes, manual110 gives13.75 and prepared output explicitly labels manual source. Empty section selection disables preview.
 2. **Fails:** BUG592 invalid pipe inputs display/prepare zero results; BUG593 invalid rainfall leaves a stale catchment flow/tick beside total0, including preview and reopened draft. Existing360 raw handles also reproduced. Recovery back to valid inputs works. No repairs installed.
 3. **Evidence:** receipts243-248/screens592-616,17checks12PASS5FAIL, synthetic saved fixture and exact hashes. No whole-feature/50% acceptance. Remaining tabs/row intake/editing/Apply/otherunits/protection/2024 remain. Copy closed, preferences/controls unchanged, lease released. Weekly40%; newbugsnow24(570-593).
+
+## 15 October2026 — repair follow-through
+
+1. **BUG593 window/draft candidate saved:** PR1259/dbb1dac1 adds explicit available/Unknown state, clears oldcatchmentflow/tickoninvalidrainfall, savesunavailableflowsasnullandrecoversvalidresults. Modern53focused+36surroundingPASS, net48build0errors/286warnings. Runtimezerodiscoveryonnet48 isNOTPASS. No candidateAutoCAD/sourcewindowrender/installation/acceptance.
+2. **End-to-end remaining:** exportservice mustreadsameHasFlow/HasTotalFlowstate forUnknowninsteadofnumeric0inpreview/PDF/XLSX;approvalconsumersmustrespectit. Bug remainsOPEN; no50%creditfromunitchecks. Planverificationreceipts249-252/PENDING containcombined-releaseguardandexactsynthesictest. Weekly49%account-wide,10%reserve.
