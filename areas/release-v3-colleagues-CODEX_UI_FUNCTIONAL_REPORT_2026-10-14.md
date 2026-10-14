@@ -398,3 +398,10 @@
 
 1. **Banked:** PR1258/0f2022b5,nineactualmodernchecks5PASS4FAIL,zero skipped. Missing/extraassetcasesreproducemisleadingoverall100%;matching,changedcover,nonmutatingsnapshotandexistingpitcontrolsPASS. net48build0errors286warnings31.33sec,noruntimePASS.
 2. **Limits:** tests-onlyRED,Claudeformatterrepairpending,notinstalled.Native296checksandwholepercentageunchanged;extra/changedsourcecasesnotnativeaccepted.
+
+### 15 October — real Structural drawing checklist
+
+1. **Works narrowly:** blankselectorApplydisabled;Residentialtemplatecounts64/55/46/4;Xref4selectionCancelkeepsNoChecklist,Applycreates0/4. Nativepaletteheightresizeexposesitems. UndoN/Arestores0/4;syntheticmanualtick1/4/25%+user/time,clear0/4. Noengineeringacceptance.
+2. **608OPEN:** N/Arequiresnoreason,immediatelyexcludesfirstitem0/3;QSAVE/close/reopenretainsreasonlessNA. Existingwindowpromptneedsdurablereason/decisioncontractfromcanonicalstorage,notaprompt-onlyfix.
+3. **609OPEN:** withnoDWGopen,palettekeepslastchecklistandactive-lookingcontrols;afterdiscardkeepsdiscarded0/4whilefilepreserves0/3. No wrong-targetwriteproved. Clear/disablecontextmustfollowactivedrawingidentity.
+4. **Evidence/limits:** savedfaultB39551DBlocalonly,copyclosed,threepreferencesunchanged;paletteopened/resizedduringtest. NativeUndoRedo,automaticFail/Unknownprotection,QA01convergence,reports,A-Bswitch/protection/olderruntimeunproved.305narrowchecks237PASS52FAIL6BLOCKED10UNPROVEN;50%wholecoverageUNKNOWN,weekly73%used/10%reserve.
