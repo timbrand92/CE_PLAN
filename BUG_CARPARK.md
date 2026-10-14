@@ -1258,6 +1258,8 @@
 
 ## BUG-351
 
+**Fresh Codex connected-end write/readback PASS narrowly,14October2026:** installedCivil3.0.49+48662ddd, owned synthetic225UPVC P1->P2 fixture. P2 inlet19.800->19.750, Enter stages; selectP2/right-clickStop overriding writesactualend. P1 remains20.00 inplan, refreshedschedule andactualEditPipe403; P2 reads19.75. Redwarning discloses retainedlabelgrade48 versusabout38 achieved; farendnotmoved as INT046 requires. QSAVE/CLOSE/reopen406/407 retainsbothlevels andP2depth1.05. Narrow351b write/persistence Codex-accepted; nativeUndo restores19.80 but delayedRedoFAIL underBUG256. Does not close351: C2rename, unconnectedendoldrecord, ARRAY andotherparts remain. Verification172-175/local390-409screens.
+
 **Codex evidence-scope audit, 14 October 2026:** W63-08 on Civil3.0.48 is a staged-window display PASS only. Personally viewed before/after images show P2 inlet16.96 ->17.01 with P3 outlet17.25/P2 outlet17.08 unchanged; the window says the typed value is waiting and Stop overriding writes it to the drawing. No pipe-record, actual drawing write or persistence was proven. Do not close this whole multi-part bug from that PASS. Verification166; no current rerun in this audit.
 
 **UPDATE 4 Oct 06:31:** BUG-351 (b) typed Pit Schedule level on a fixed-grade pipe: Tim INT-046, 4 Oct ~07:00, verbatim 'BUG 351B - ONLY CHANGE THAT END' (desk reading: the typed level changes ONLY THAT END of the pipe, as it works today; no behaviour change). DECIDED. Optional if cheap: the pipe label (keeps 1 IN 100 while the levels give about 1 in 67) shows the achieved grade or a plain note: warn, do not block. (a) was decided earlier (INT-045: pit numbers stay as typed).
@@ -2325,6 +2327,8 @@
 ---
 
 ## BUG-256
+
+**Fresh Codex schedule-write failure,14October2026:** Civil3.0.49+48662ddd, owned two-pit225UPVC fixture. PITSCHEDULE P2 inlet19.800->19.750, Stop overriding writes only that end; actual plan/editor read20.00->19.75. Close/Escape, one nativeU echoesPITSCHEDULE/restores19.80. Untouched12seconds/nativeREDO says Nothingtoredo; SAVETIME0, no inspection/selection/pan/save/drawing switch between. Screens398/399; fresh schedule400 rereads restored19.800. Extends existingBUG256; OPEN, no rootcause. Verification172-175. Re-test this route after repair alongside flat placement and diameter edit, with no intervening drawing commands.
 
 **Fresh Codex flat-placement failure, 14 October 2026:** Civil3.0.49+48662ddd, ownedemptybay, CD100UPVC/bothinverts18.500. ActualFLATlabelandbothlevelsconfirmed378. SAVETIME0 beforehand; oneUechoCD removesentirepipe379; untouched12seconds/nativeREDO says Nothingtoredo380. No selection, pan, inspection, Save or autosave intervened. This is a new placement-route reproduction, separate from prior diameter-edit failure. Other placement routes passing do not close the whole bug; no rootcause claimed. Verification168.
 

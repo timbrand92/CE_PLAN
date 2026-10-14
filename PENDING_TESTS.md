@@ -1,4 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
+
+## Codex connected schedule end-write follow-up,14October2026,12:15 Melbourne
+
+1. **Narrow Codex-accepted:** installedCivil3.0.49+48662ddd; PITSCHEDULE P2 inlet19.800->19.750/Enter/Stop overriding changes actual downstream only, preserves upstream20.00 and survives savedrawing/reopen inplan andschedule. ApprovedINT046/BUG351b route, receipts172-175/screens390-409. No wholeBUG351 acceptance.
+2. **Recovery failure remains:** one nativeUndo restores19.80, controlled delayedRedo reportsNothingtoredo withautosave0 andnointerveningdrawingaction. Added to existingBUG256; re-test schedule write, diameter edit andflatplacementafterrepair.
+3. **Remainder:** typedC2rename, unconnectedend oldrecord, ARRAY, window-internalUndo, protectedobjects, placed-schedule update/plot andallother schedulevariants remain. Redgrade-warning text crossespipe: readability observation, noengineeringrulechange. Ownedcopyclosed,controllease released, controls/restored andall3settingsunchanged. Weekly30%; overall50%recount unfinished.
+
 ## Codex V3 / UX verification, 13 October 2026 — narrow passes and remaining work
 
 1. **Evidence:** areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md records exact source, test totals, failures and local screenshot receipts. This batch does not supersede the older checklists or accept untested workflows.
