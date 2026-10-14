@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Codex plan-level / framing entry follow-up,14October2026,12:46Melbourne
+
+1. **NarrowCodex-accepted:** installedStructural1.0.116+f180b349, CSPLANLEVELinitialUnknown/Enterkeep, numberedGround,customLoft1,oneUndoactualrecordreadback,controlleddelayedRedoGround,explicitUnknownclear,numericcustomname9,Escapekeep,and9savedrawing/reopen/Enterkeep. Receipts179-183/screens410-431;no wholeUX-LEVEL-01acceptance.
+2. **Outstanding:** BUG360falsenever-setwordingafterclear. CEpanelleveldisplay/title/scheduleconsumers,template/SaveAscopyconfirmation,read-only/REFEDIT,otherunits/olderversionsremain. CSFRAMINGLEGEND/CSLEVELCARRYhonestlydiscloseOFF; actualoutput/update/protectionstillBLOCKED,nomachinefeatureflagchanged.
+3. **Cleanup/coverage:** ownedfixtureclosed,controlsrestored,all3settingsunchanged,owncontrollease released.16narrowcases13PASS/1FAIL/2BLOCKED,includingoffdisclosure/cleanup;weekly31%. Overallunique-IDrecount/50%targetstillunfinished.
+
+
 ## Codex connected schedule end-write follow-up,14October2026,12:15 Melbourne
 
 1. **Narrow Codex-accepted:** installedCivil3.0.49+48662ddd; PITSCHEDULE P2 inlet19.800->19.750/Enter/Stop overriding changes actual downstream only, preserves upstream20.00 and survives savedrawing/reopen inplan andschedule. ApprovedINT046/BUG351b route, receipts172-175/screens390-409. No wholeBUG351 acceptance.

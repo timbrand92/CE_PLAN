@@ -261,6 +261,8 @@
 
 ## BUG-360
 
+**Plan-level wording FAIL,14October2026:** Structural1.0.116+f180b349, ownedcopy. CSPLANLEVEL1/Enter setsGround(413); laterUnknown/Enter clears(419); rerun420 says This plan's level is Unknown (never set). TheUnknownvalueiscorrect,butnever-sethistoryisfalse. Lowwordingextension,no newduplicateID. Expected plain This plan's level is Unknown (oraccurateclearedstatus). GuardCurrentLevelLines forclearedUnknown; testrealstepsabove/oneUndo/save-reopenafterrepair. Servicewordingownedbybehaviourlane;notchangedhere. Verification179-183.
+
 **Codex V3/UX check, 13 Oct 2026 18:14 Melbourne, installed Civil 3.0.49:** real Pit Schedule footer still exposes an internal handle: `Outlet pipe selected: P8 -> P11, 225 dia (Handle 11C807).` Trigger: open FIX_MODERN_PIPE_W1 test copy, PITSCHEDULE, search P8, double-click its outlet diameter cell. Expected: plain pipe name and size only. Evidence: local `C:\Lisp Files\_TEST_COPIES_20260923\V3UX_20261013\09-schedule-doubleclick.png`; source `PitScheduleViewModel.cs` BuildPlanSelectionInfo, both null-pipe fallback and normal branch. Proposed guard: both messages contain no Handle/internal ID, normal case still names P8 and P11 and 225 mm. Retest: same clicks, confirm the footer names the pipe without its internal identifier; close without saving. **OPEN, confirmed in AutoCAD; not fixed.** PR #1192 currently overlaps this file; route the wording change through its owner or a coordinated follow-up. No duplicate bug ID assigned.
 
 **Command / Area:** UI accessibility names and jargon in Civil/Structural windows (desk UI mapping session 5, 3 Oct; `UI_MAP_2026-10-03.md`, raw files in `C:\Lisp Files\_ACAD_DRIVER\ui_map\`).
