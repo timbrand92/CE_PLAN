@@ -1604,3 +1604,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **NarrowPASS:**Plainbeamvisualpicker/livepreview,zero-widthvalidation,top-barcountpreview,actualfivebar/coggedlig/labels/dimensionoutput,oneUndovisiblecleanup,savedreopenedoutput.OnlyPlaingeometryexecuted,notallType1-8orcolumns.
 2. **613OPEN:**outline-onlynativeMOVEstrandsreinforcement/annotation.ST8-9/10repairacceptanceallcomponentsMOVE/ROTATE/ERASEtogether,COPYnewmeaning/identity,UndoRedo/save-reopen/protectionand2024.Claude nativewriter;Codexexactpreviewwindow.Previewcurrentlyomitsactualcog/twowindowsnotapprovedsinglevisualworkflow.
 3. **Remainder:**RedoafterautosaveNothingtoredoUNPROVENcausation;nativeProperties375area/80lengthwith300x500UI/note1:1needsdrawing/detailscalecontractbeforegeometryacceptance.WholeST08/engineering/plot/otherRCformsremainunproved.Local872-896/structural-rc/cases.json;freshmainempty,sourceandprefsunchanged.
+
+
+### Codex column-review evidence —15October2026
+
+1. **Already exercised in installed2027:** ST08 RCRECTCOL opening/600x400mm live-preview/Cancel; RCCIRCCOL opening/zero-diameter warning/Cancel. Six boundedPASSchecks including unchanged specimen/settings cleanup; verificationarea356-357/localRC13-18. No fullroworengineeringacceptance.
+2. **Representative remainder:** place one rectangular or circular column with explicitly reviewed dimensions/reinforcement; compare preview and drawn bars/cover/dimensions, move complete detail, singleUndo/Redo, save/reopen, plot and2024. ExistingST08card governs; no extra individual manual backlog or install requested.

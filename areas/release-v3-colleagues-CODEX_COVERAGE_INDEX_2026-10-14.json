@@ -18,20 +18,20 @@
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 15,
     "caseLedgers": 27,
-    "narrowCases": 342,
+    "narrowCases": 348,
     "narrowVerdicts": {
-      "PASS": 265,
+      "PASS": 271,
       "FAIL": 57,
       "BLOCKED": 6,
       "UNPROVEN": 14
     },
-    "uniqueEvidenceFiles": 588,
+    "uniqueEvidenceFiles": 599,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 568,
-    "uniqueMetadataFiles": 20,
+    "uniqueScreenshotFiles": 578,
+    "uniqueMetadataFiles": 21,
     "caseLinkedUxIds": 10,
     "caseLinkedBugIds": 36
   },
@@ -14130,7 +14130,7 @@
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 7:25:18 am",
+  "capturedMelbourne": "15/10/2026, 7:29:54 am",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -14236,7 +14236,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 7:25:18 am",
+      "capturedMelbourne": "15/10/2026, 7:29:54 am",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -14573,7 +14573,7 @@
           ]
         }
       ],
-      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion.",
+      "method": "Literal installed catalogue inventory, preserving bundle entries and all declared aliases. Primary and alias names do not establish distinct features or runtime availability. Nine exact case associations are a first mapping batch, not all tests completed. Hidden does not mean unbuilt; overlapping names do not establish runtime conflict. Whole508UX and bug scope retained. Second batch: 23 primary catalogue records linked by contemporaneous exact-route receipts to selected existing cases. Four disabled entries remain output-blocked. CSPLANLEVEL explicitly excludes CSLEVELCARRY cases. Two explicit alias locked-layer cases do not accept all aliases or duplicate checks. All342 cases in the current27 native ledgers now have at least one catalogue association. Shared cleanup/readback cases may link multiple commands but count once. CDCALC nested tabs/buttons retain separate case scopes; CDCHECK is distinct from CDCHECKDWG. Earlier historical receipts and complete V3/UX workflow eligibility are not reconciled, so this is not whole-inventory mapping completion. Column follow-through: six new bounded real checks RC13-18 linked to RCRECTCOL/RCCIRCCOL, giving35 associated records and348 unique current cases. Entire commands and reinforcement/output correctness remain unaccepted.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -22183,11 +22183,27 @@
           "label": "Rectangular Column Section",
           "group": "Section Details",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "structural-rc/cases.json::RC-13"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "structural-rc/cases.json::RC-13",
+            "structural-rc/cases.json::RC-14",
+            "structural-rc/cases.json::RC-18"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                356
+              ],
+              "typedCommand": "RCRECTCOL",
+              "scope": "Review/preview/Cancel only; circular zero-diameter validation. No column drawing output or engineering acceptance."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::324::RCCIRCCOL",
@@ -22197,11 +22213,28 @@
           "label": "Circular Column Section",
           "group": "Section Details",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "structural-rc/cases.json::RC-15"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "structural-rc/cases.json::RC-15",
+            "structural-rc/cases.json::RC-16",
+            "structural-rc/cases.json::RC-17",
+            "structural-rc/cases.json::RC-18"
+          ],
           "wholeWorkflowAccepted": false,
-          "aliasRoutesVerified": false
+          "aliasRoutesVerified": false,
+          "nativeRouteReceiptReferences": [
+            {
+              "file": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
+              "numbers": [
+                356
+              ],
+              "typedCommand": "RCCIRCCOL",
+              "scope": "Review/preview/Cancel only; circular zero-diameter validation. No column drawing output or engineering acceptance."
+            }
+          ]
         },
         {
           "key": "CE_STRUC_SUITE.bundle::325::BSSLAB",
@@ -23091,8 +23124,8 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 33,
-      "associatedCaseCount": 342,
+      "associatedEntryCount": 35,
+      "associatedCaseCount": 348,
       "current27LedgerCaseAssociationComplete": true
     }
   },

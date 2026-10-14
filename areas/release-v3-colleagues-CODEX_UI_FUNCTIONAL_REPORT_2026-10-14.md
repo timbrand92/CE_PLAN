@@ -3,10 +3,10 @@
 ## Current position — 15 October 2026, Melbourne
 
 1. **Target:** 50% of the complete V3/UX inventory is not yet verified. The earlier7% was a historical text-matching estimate. No current whole-product percentage is claimed.
-2. **Real AutoCAD evidence:**342 recorded checks across27 ledgers:265PASS,57FAIL,6BLOCKED,14UNPROVEN.588 distinct case-linked files have matching sizes/hashes. These are bounded checks, not342 complete features.
+2. **Real AutoCAD evidence:**348 recorded checks across27 ledgers:271PASS,57FAIL,6BLOCKED,14UNPROVEN.599 distinct case-linked files have matching sizes/hashes. These are bounded checks, not342 complete features.
 3. **Faults recorded:**44 new bugs,570–613, remain explicitly OPEN. Latest: freshly placed steel sections cannot open for editing612; moving an RC outline strands its bars, ligature and annotation613. Fix candidates and regression tests remain separate from installed repairs.
-4. **Full scope kept:**all508 traceable UX IDs and563 root bug records remain indexed. The installed catalogues contain523 entries,518 distinct primary names and541 typed names including declared aliases. These counts do not establish a feature denominator. All catalogue entries are now listed; All342 cases in the current27 native ledgers now link to33 catalogue records, including four disabled-entry disclosures and distinct calculator child actions. This is not33 accepted workflows: earlier historical receipts and the complete V3/UX eligibility inventory still need reconciliation.
-5. **Usage:**81% of the account weekly allowance used,19% remaining; preserve10% reserve. No reset credit, paid provider request or installation used by this chat.
+4. **Full scope kept:**all508 traceable UX IDs and563 root bug records remain indexed. The installed catalogues contain523 entries,518 distinct primary names and541 typed names including declared aliases. These counts do not establish a feature denominator. All catalogue entries are now listed; All348 cases in the current27 native ledgers now link to35 catalogue records, including four disabled-entry disclosures and distinct calculator child actions. This is not35 accepted workflows: earlier historical receipts and the complete V3/UX eligibility inventory still need reconciliation.
+5. **Usage:**82% of the account weekly allowance used,18% remaining; preserve10% reserve. No reset credit, paid provider request or installation used by this chat.
 6. **Still to prove:**remaining built commands and controls, complete workflow mapping, scale/units/UCS, protected objects, plotting, calculation links and older AutoCAD versions. Engineering choices still need Tim’s acceptance. Current synthetic specimens are saved locally; the test session has no drawing open.
 
 ## Initial position — 14 October 2026 (superseded summary; history retained)
@@ -465,3 +465,10 @@
 2. **613MEDIUMOPEN:**selectoutline/nativeMOVEmovesoutlinealone,leavingreinforcement/labels/dimensions.ThisfailsapprovedonecompounddetailST8-9/10;Claude-managednativeassemblyrepairrequired.Existingplan-gap,norecentregressionclaim.
 3. **Unproved/improve:**RedoNothingafterautosavebetweenUndoRedo,nocauseattribution.Propertiesoutlinearea375/perimeter80;scaleintentneedsreconciliationwithDIMSCALE/20,notengineeringfailureclaim.Two-windowworkflowandpreviewmissingactualcogremainST8-5/8improvements.OtherRCshapes/columns/units/protection/plot/calclinks/2024pending.
 4. **Recorded:**342narrowchecks265PASS57FAIL6BLOCKED14UNPROVEN,588hashedfileszero integrityfaults;44newbugs570-613OPEN.Overall50%UNKNOWN.LocalRC192033/AC7FD95Fclosednormally,sourceand3CEprefsunchanged.
+
+
+## RC column review follow-through —15October2026
+
+1. **Works in real AutoCAD2027:** RCRECTCOL fits with controls/preview/actions; changing400x400mm to600x400mm updates the preview proportions. Cancel returns without visible column output. RCCIRCCOL opens diameter450mm/eight-bar preview; zero diameter clears preview and Place gives a clear positive-number warning. Cancel returns safely. Six boundedPASSchecks include cleanup, screens897-906.
+2. **Preserved:** normaldrawingclose/SaveNo leaves fresh session empty. Saved RC192033bytes/SHAAC7FD95F and all3CEpreferencehash/bytes unchanged;599case-linkedfilesnowrehashedwith0problems. No newbug, repair or install. Weekly82%account-wide/18%remaining/10%reserve.
+3. **Still unproven:** column placement, exact reinforcement/cover, drawing scale, duplicated bar-count dropdown purpose, member/calculation links, protected objects, complete move/copy/erase, plotting and2024. This does not accept wholeST08 or supersede proposed column-window review scope. GoalACTIVE/50%unfinished.
