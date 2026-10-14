@@ -1359,3 +1359,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Schedule write remains pending:** W63-08 staged inlet/number display is not a BUG351 drawing-write or save/reopen acceptance. Apply the approved typed-end route, read that actual pipe end, compare the other end and label, then Undo and reopen. Prior window display evidence remains valid narrowly.
 2. **Flat pipe output remains pending:** W61-04 proves a single informational warning and recovery; its overlapping existing pipes do not prove the new label correctly represents equal inverts. Use an empty owned bay, type equal levels, inspect that new pipe alone, read its editor/record/label and save/reopen. BUG427 stays OPEN.
 3. **Coverage:** refreshed535 headed bugs/52 FIXED-text candidates/8 no explicit status; 508 traceable UX IDs. Historical statuses and old results still need item-by-item evidence mapping. No new 50% claim. Verification165-167; local source hashes preserved.
+
+## Flat-pipe isolated result,14October2026
+
+1. **Specific route now Codex-accepted:** Civil3.0.49, new100UPVC/Standard/freeends, both18.500. ActualFLATlabel/editor/preview/numericalreadback/save-reopen pass. Screens375-378/381-387, receipts168-170. Prior generic flat-label pending note is superseded for thisroute only.
+2. **Still failing:** BUG256 oneUndo succeeds but controlleddelayedRedo saysNothingtoredo; BUG572 InspectorTypeUnknown despite correct100/UPVC/18.500/18.500. Nowholebugclosed.
+3. **Remaining:** held/custom-grade variants, repair command, protection/units andBUG427Structural subcase. NewPipe absent-preview observation awaits contract/source review. Settings/controls restored, ownedcopyclosed,lease released. Account29%;50%stillunverified.

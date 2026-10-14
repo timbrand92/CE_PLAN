@@ -179,6 +179,8 @@
 ---
 ## BUG-572
 
+**Flat-pipe extension, 14 October 2026:** actual new isolated100UPVC flatpipe, editor correctly readsStormwater/18.500/18.500; after editorCancel, Inspector383 reads diameter100/materialUPVC/bothinverts18.500 but TypeUnknown and a Pipe-arrow heading with no end names. No blanket claim all valuesUnknown; actual numericalreadback works. Verification169; existingfault notfixed.
+
 **Persistence follow-up:** after QSAVE/CLOSE/OPEN of the owned drawing, plan output persisted. First pipe selection showed all values Unknown and said the pipe was not recorded; Open Edit Pipe correctly read 225 UPVC, grade48, P1/P2, IL20.000/19.800. Cancel then restored Inspector values except Type. This is a lazy record-loading inconsistency, not proven DWG data loss. Screens51-55. Connections correctly read P1 -> P2 and drawn length9550mm once loaded. Add this first-selection route to the regression/retest above.
 
 
@@ -380,6 +382,8 @@
 ---
 
 ## BUG-427
+
+**Fresh narrow output PASS, 14 October 2026, Civil3.0.49+48662ddd:** isolated owned empty bay, CD100UPVC/Standard, both inverts explicitly18.500. Actual new label reads100DIA.UPVCPIPEFLAT; both plan levels18.500. Editor and preview retain both levels/FLAT, and actual save/reopen retains them (375-378,381-387; verification168-170). This accepts that specific free-end/default-grade label route, not every held-grade mode or the Structural subcase. OneUndo removes output; controlleddelayedRedo fails under existingBUG256. WholeBUG427 staysOPEN.
 
 **Codex evidence-scope audit, 14 October 2026:** W61-04 PASS checks the single informational flat warning and recovery, not the held-grade pipe-label requirement. Actual screenshot personally viewed; existing overlapping pipes prevent attribution of the visible1in100 labels to the new pipe. New record/label/readback remains unproven, and the Structural subcase is separate. No whole-bug PASS inferred. Verification167; use an empty synthetic bay for the next replay.
 
