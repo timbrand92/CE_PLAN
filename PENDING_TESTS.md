@@ -1620,3 +1620,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 ### BUG-576 — column picker instruction candidate (15 October, PR1261)
 
 1. **After the combined authorised release:** C2 and SC2 show nine choices and Press 1–9; key9 then Enter selects 250x90 PFC. Cancel/Escape leaves the owned support unchanged; inspect dark/light appearances. Candidate b2e56d16 has modern/legacy builds only, no installed acceptance. Existing successful key9 evidence105–106 is the control. BUG remains OPEN.
+
+### ST-05 hatch follow-through — BUG-614 (15 October)
+
+1. **Recorded:** CEHATCH search/no-match/Materials/20-scale preview/Cancel pass narrowly;50/500 concrete preview and Place refuse. No placed hatch accepted by this batch.
+2. **Remaining grouped check:** approved scale policy20/50/100 and actual plot density, native associative output from owned Objects/Points boundaries, islands/origin/angle, HATCHEDIT, Cancel/Escape, Undo/Redo, save/reopen and protected/Xref content. Reuse the synthetic hatch specimen and existing ST-05 card; Claude owns the command repair. No guessed engineering formula.
