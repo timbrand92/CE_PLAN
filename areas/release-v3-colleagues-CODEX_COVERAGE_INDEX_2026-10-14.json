@@ -18,19 +18,19 @@
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 12,
     "caseLedgers": 17,
-    "narrowCases": 210,
+    "narrowCases": 213,
     "narrowVerdicts": {
-      "PASS": 170,
+      "PASS": 173,
       "FAIL": 32,
       "BLOCKED": 5,
       "UNPROVEN": 3
     },
-    "uniqueEvidenceFiles": 310,
+    "uniqueEvidenceFiles": 315,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 306,
+    "uniqueScreenshotFiles": 311,
     "uniqueMetadataFiles": 4,
     "caseLinkedUxIds": 5,
     "caseLinkedBugIds": 16
@@ -410,7 +410,7 @@
         "sourceLine": 215,
         "required": "Approved D+F card: shared job rainfall/source, reviewed inputs and drawing proposal, honest sheet and durability",
         "status": "PARTIAL / CURRENT FAIL",
-        "evidence": "Receipts219-257: installed rainfall record/source, draft restore, actual three-page PDF/three-tab XLSX, invalid pipe/catchment consumers, add/Enter-commit row and missing-report guidance. Source candidates1257/1259 separate.",
+        "evidence": "Receipts219-257: installed rainfall record/source, draft restore, actual three-page PDF/three-tab XLSX, invalid pipe/catchment consumers, add/Enter-commit row and missing-report guidance. Source candidates1257/1259 separate. Receipts261-263/screens628-632 verify added/edited two-row disk restoration and prepared-package consumer.",
         "remaining": "Unknown export integration, source provenance/fixed Boyd rainfall249, actual report intake, remaining tabs/Apply/approval/protections/older runtime and full requirement acceptance.",
         "wholeScopeVerified": false
       },
@@ -454,7 +454,10 @@
         "catchment-rows/cases.json::CR-04",
         "catchment-rows/cases.json::CR-05",
         "catchment-rows/cases.json::CR-06",
-        "catchment-rows/cases.json::CR-07"
+        "catchment-rows/cases.json::CR-07",
+        "catchment-rows/cases.json::CR-08",
+        "catchment-rows/cases.json::CR-09",
+        "catchment-rows/cases.json::CR-10"
       ]
     },
     {

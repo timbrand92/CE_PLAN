@@ -1456,3 +1456,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **PR1259 head07160dee:**4actualWPFgrid/totalrenderchecksPASS;invalidDark/LightPNGspersonallyinspected. This provescandidatewindowbindings/display,notinstalledAutoCAD or exportintegration. Originalcombined-releasecheckstillpending;bugOPEN.
 2. **New real row evidence:** savedsyntheticcatchment-rows/CODEX_CATCHMENT_ROWS_20261015.dwgcontainsC1area500/C0.9,C2area1000/C0.9,jobcurveARI10/Tc15/manualOFF,row8.08/16.16,total24.24. NextCodexreopenmustprovepersistedrows/source/total;thisbatchsavedbutdidnotreopen. AddandEnter-committedareaeditPASS,no-jobreportguidancePASS,actualreportintakeBLOCKED;receipts254-257.
+
+### 15October2026 row disk-readback completed by Codex
+
+1. **Prior row-reopen remainder now proven narrowly:** realinstalledCivil3.0.49+48662ddd,629showsC1area500/C0.9/Q8.08,C2area1000/C0.9/Q16.16,total24.24,Typedinsources/recordedjobcurve;630preparedpackageconsumesrowsandtotal. SavedfixturehashunchangedaftercloseNo. Screens628-632/receipts261-263. This isexistinginstalledrowbehaviour,notPR1259candidateacceptance.
+2. **Stillpending:** PR1259combinedexportintegration/install/retest,actualrating-reportintake,otherrowedits/previewinvalidation/protections/olderruntime/Apply/approval/outputprovenance. NoextraTimmanualrequest.

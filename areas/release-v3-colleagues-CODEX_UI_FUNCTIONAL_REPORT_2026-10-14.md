@@ -295,3 +295,8 @@
 1. **Recorded realAutoCAD assertions:**17ledgers/210narrowcases=170PASS32FAIL5BLOCKED3UNPROVEN.310referencedfiles306screens4metadata allhash/sizechecked,0integrityproblems. This excludescandidateunit/WPFchecks; repeats,cleanupandpartialassertionsremainidentified. Previous172-casebaselinepreserved,notlost.
 2. **Plan index:**508traceableUXIDs,543rootbugentries; updatedexistingcoverageindex15Octcapturededitionwithnew590-593andcasekeys. Status-text53FIXEDcandidatesremaindated14Octsnapshot,notcurrentacceptedclosure. Whole-itemcoverage/currentpercentstillunverified,old994/497denominatorunvalidated. Do not interpret210assertionsas210completedfeatures.
 3. **Next:**savedrowreopen/previewconsumers,syntheticreportintake,remainingcalculator/profile/drawingoutputroutesanduncoveredbuiltworkflowsacrossCivil/Structural/Manager. Fullscopepreserved,51%accountweeklyusage,10%reserve. Receipts258-260.
+
+## 15October2026 — saved-row consumer follow-through
+
+1. **RealAutoCADPASS:** addedC2andareaeditpersistafterDWGreopenwithTypedinsources,jobcurveARI10/Tc15/manualOFF. Rows8.08/16.16,total24.24;preparedcatchment-onlypackageusesexactrestoredrows/totalandnamesjobrainfallsource. NoactualnewPDF/XLSXorissuedapproval;row-source/destinationoutputstillunproved.
+2. **Latestcheckedledger:**17ledgers213narrowassertions173PASS32FAIL5BLOCKED3UNPROVEN;315uniqueevidencefilesallhash/sizeverified. Scope/percentageunchangedunverified. Ownfixture/preferencespreserved,readbackclosed/lease released,receipts261-263/screens628-632.
