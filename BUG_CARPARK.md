@@ -179,6 +179,8 @@
 ---
 ## BUG-572
 
+**NativepipeTypeUnknowncausecorroborated,14October2026:** actualownedpipe2C3entget432: CE_CVL_PIPE_OBJECT onSTORMWATERPIPE,legacyCE_CVL_PIPEXDataabsent. OwnPIPE_LINKread433explicitlystoresPipeType0(StormwaterPipeenum); prioractualEditPipe403correctlyshowsStormwater. CompactInspectorPaletteService858-860onlyreadslegacyXDatafortype,ignorescurrentlinktype. Repairownerbehaviourlane:reusecaller-transactionread-onlylink/canonicalboundedcurrent-evidencepath,notlayerdefaultornewwindowguessing. Keepinvalid/missingtypeUnknown; testnative/legacy/missing/conflictingtype andU->selection->Redo(nohiddenwrite). FulltruthresolverhasGetPipeByHandleloadpathsoinspectbeforeusinginpassivepalette. Thisdoesnotclosefirstselectionloading/heading/other572parts. Verification184-187/local432-435;OPEN,nofixinstalled.
+
 **Flat-pipe extension, 14 October 2026:** actual new isolated100UPVC flatpipe, editor correctly readsStormwater/18.500/18.500; after editorCancel, Inspector383 reads diameter100/materialUPVC/bothinverts18.500 but TypeUnknown and a Pipe-arrow heading with no end names. No blanket claim all valuesUnknown; actual numericalreadback works. Verification169; existingfault notfixed.
 
 **Persistence follow-up:** after QSAVE/CLOSE/OPEN of the owned drawing, plan output persisted. First pipe selection showed all values Unknown and said the pipe was not recorded; Open Edit Pipe correctly read 225 UPVC, grade48, P1/P2, IL20.000/19.800. Cancel then restored Inspector values except Type. This is a lazy record-loading inconsistency, not proven DWG data loss. Screens51-55. Connections correctly read P1 -> P2 and drawn length9550mm once loaded. Add this first-selection route to the regression/retest above.
