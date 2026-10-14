@@ -1482,3 +1482,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **BUG596windowcandidate:**1259/2dca5f15,6focusedmodernWPFPASS,net48build0errors286warnings. Combinependingwindowrepairsbeforeinstall. ChargedSystem48.5/97m mustlabelwholefriction0.1438/0.2876m,retainedtotal0.2165/0.3603m;Dark/Light/older2024. CandidateNOTinstalled/accepted.
 2. **BUG597:** savedownedCODEX_CALC_REMAINING_20261015.dwg154217bytes/SHA76BE6236806FADA06A5B687B1D9F23DD8E779DE9A6266B1477BEB516131681BE containsblankchargedarea/length97. Reopenreadbackstillpending;repairmustshowUnavailable/Unknownthroughall5resultsandsaveddraftwithoutstalequantities. Testvalidrecoveryandinputedgecases. Pump/WSUDremainintentionallyread-only;donotbypassthemoraccepttheirengineeringrules. Oldnativefault595unresolved;reusefresh778113170empty,leaseheld.
+
+## Codex — 15 October charged restore follow-through
+
+1. **Observed failure:** saved blank area and97m length reopen with starting48.5m results; restore390m2 and the97m figures recover. Explicithead0 is a real calculatedzero capacity with warning. Screens665-671; originalinvalidfixture preserved.
+2. **Repair integration:** PR1258/927d0f7b has21charged regression checks,4PASS17FAIL0skipped. Pending1159 owns overlappingmodel work; combine availability changes with it and Codex display integration. Preserve independently known results and explicit zeros; unavailable results are nullable. Finalnet48build0errors46warnings, no runtimepass. RED tests do not merge alone.
+3. **Representative native retest:** install the combined reviewed candidate through the authorised release lane; reopen saved invalidfixture and see Unknown for dependentquantities, restorearea390/97m then clear/save/reopen again. Check explicithead0capacity, other missingfields, all outputconsumers, themes and olderAutoCAD. No engineeringrule approval claimed. Oldsession595unresolved; fresh778113170usable/empty, lease retained.

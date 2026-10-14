@@ -324,3 +324,9 @@
 1. **Charged:** committedlengthchangeupdateslosses/capacity;whole-frictionunitm/mwrong596. Blankcommittedcatchmentwarnsbutholdspreviousfivefigures597. No engineeringcapacityacceptance.
 2. **Legacyprotection:** pumptotal321resistsedit;WSUDread-onlyreviewwarningvisible/treatmentcheckboxresistschange. Numbers/rulesarenotapprovedbythesechecks.
 3. **Repairbanked:**1259/2dca5f15correctschargedunitto m only;6focusedWPFPASS,bothDark/LightPNGspersonallyviewed,net48build0errors286warnings. Notinstalled;596/597OPEN,593exportdependencyunchanged. Nativecopyclosed/savedinvalidfixturepreserved,preferencesunchanged;reopentestpending. Ledger237narrowchecks189PASS38FAIL6BLOCKED4UNPROVEN,wholepercentunverified;weekly58%,receipts277-280.
+
+## 15 October — charged restore, recovery and repair integration
+
+1. **Real AutoCAD:** blank area and97m survive disk reopen, but displayed losses become the48.5m starting quantities. The needs-checking footer is visible. Re-entering390m2 recovers97m results. Explicitzero head yields realzero capacity with warning; it must remain distinct from Unknown. BUG597 staysOPEN.
+2. **Saved guards:** PR1258/927d0f7b,21charged checks4PASS17FAIL0skipped; actualDark/Lightresult bindings and nullable drafts included. Guards preserve independently known quantities and explicitzero controls; fixtures type all inputs independently of Settings. Pending1159 touches the same productionmodel, so the repair must be integrated with that work. No overlappingmodel edit or installedfix.
+3. **Recording:** native ledger now242narrow assertions193PASS39FAIL6BLOCKED4UNPROVEN; percentage stillunverified. Source tests excluded. Saved invalidfixture and3CEpreferences preserved, freshcopyclosed/usable sessionretained; oldsessionfaultunresolved. Weekly60%, receipts281-284.
