@@ -1488,3 +1488,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Observed failure:** saved blank area and97m length reopen with starting48.5m results; restore390m2 and the97m figures recover. Explicithead0 is a real calculatedzero capacity with warning. Screens665-671; originalinvalidfixture preserved.
 2. **Repair integration:** PR1258/927d0f7b has21charged regression checks,4PASS17FAIL0skipped. Pending1159 owns overlappingmodel work; combine availability changes with it and Codex display integration. Preserve independently known results and explicit zeros; unavailable results are nullable. Finalnet48build0errors46warnings, no runtimepass. RED tests do not merge alone.
 3. **Representative native retest:** install the combined reviewed candidate through the authorised release lane; reopen saved invalidfixture and see Unknown for dependentquantities, restorearea390/97m then clear/save/reopen again. Check explicithead0capacity, other missingfields, all outputconsumers, themes and olderAutoCAD. No engineeringrule approval claimed. Oldsession595unresolved; fresh778113170usable/empty, lease retained.
+
+
+## Codex 15 October — report-area provenance BUG598
+
+1. **Actual failure:** committed typed120 m² still says Rating report after imported110 m²; screens673/674, verification285-286. No repair installed.
+2. **Follow-through:** preserve original area/source, honest manual badge and notifications, repeated/same-value/invalid edits, Cancel, preview invalidation, duplicate intake, draft save/reopen and actual PDF/XLSX. Existing PR1259 Codex window/viewmodel slice; Claude output integration.
