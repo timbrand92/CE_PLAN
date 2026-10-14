@@ -1,4 +1,15 @@
-# CE V3 real AutoCAD UI and functionality report — interim, 14 October 2026
+# CE V3 real AutoCAD UI and functionality report — interim, updated 15 October 2026
+
+## Current position — 15 October 2026, Melbourne
+
+1. **Target:** 50% of the complete V3/UX inventory is not yet verified. The earlier7% was a historical text-matching estimate. No current whole-product percentage is claimed.
+2. **Real AutoCAD evidence:**342 recorded checks across27 ledgers:265PASS,57FAIL,6BLOCKED,14UNPROVEN.588 distinct case-linked files have matching sizes/hashes. These are bounded checks, not342 complete features.
+3. **Faults recorded:**44 new bugs,570–613, remain explicitly OPEN. Latest: freshly placed steel sections cannot open for editing612; moving an RC outline strands its bars, ligature and annotation613. Fix candidates and regression tests remain separate from installed repairs.
+4. **Full scope kept:**all508 traceable UX IDs and563 root bug records remain indexed. The installed catalogues contain523 entries,518 distinct primary names and541 typed names including declared aliases. These counts do not establish a feature denominator. All catalogue entries are now listed; nine exact route-to-case associations are a first mapping batch, not the total workflows tested.
+5. **Usage:**81% of the account weekly allowance used,19% remaining; preserve10% reserve. No reset credit, paid provider request or installation used by this chat.
+6. **Still to prove:**remaining built commands and controls, complete workflow mapping, scale/units/UCS, protected objects, plotting, calculation links and older AutoCAD versions. Engineering choices still need Tim’s acceptance. Current synthetic specimens are saved locally; the test session has no drawing open.
+
+## Initial position — 14 October 2026 (superseded summary; history retained)
 
 1. **Result first:** the complete product has not been verified, and 50% real AutoCAD coverage has not been reached. This report separates observed results, historical evidence and work not yet exercised. It is evidence attached to the release area, not a new plan. Author: this Codex test chat; exact request in decisions/2026-10-14_REAL_AUTOCAD_50_PERCENT.md.
 2. **Installed source checked today:** Civil 3.0.49+48662dddb2dc36d09a121642f36aecc2465cc673; Structural 1.0.116+f180b349a88617070a8517b563b2df7b5854131e. Manager 1.1.49+48662dddb2dc36d09a121642f36aecc2465cc673 was separately read at 00:30. No candidate was installed by this chat.

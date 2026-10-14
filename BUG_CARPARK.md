@@ -7731,6 +7731,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ## BUG-586
 
+**Status:** OPEN — the banked regression remains tests-only; no runtime repair is installed or accepted. Explicit marker added15October2026; earlier evidence retained.
+
+
 **RED regression banked,14October2026:** draftPR1256 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1256, commitb56b2250, exactinstalledCivilbase48662ddd. Nineproduction-parserchecks execute6PASS/3FAIL/0skipped,38ms; three failures reproduce erasedinlinecustomnote, legitimatephrase-containingnote, and trailingcharacter. Tests only, intentionallyRED; do not mergealone. No runtime repair. PendingFiltersfilework in881/641/618 andData1192 recordedforcoordination. Ownershipaudit17PRpages/844open;20widePRfilelistsweretruncated, so notclaimedascompleteclearance. Native/WPFtypedstaging andwarninggeneration stillrequireintegratedrepairandrealAutoCADreplay.
 
 
