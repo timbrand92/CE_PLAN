@@ -1353,3 +1353,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Narrowpasses:** FJ1 storedDJ1 output/oneUndo/delayedRedo; P1 outputrecovery; unchangedglobalsettings/draftingcontrols. Receipts159-164/screens351-371. Noengineeringcapacityacceptance.
 2. **Failed:** BUG584FJ1 exact6000x6000mm bayretains2400/2600width, arrow6000correct; persistsafterreopen. BUG585P1 EscapeatApplylap stillplacesbody/tag. BothOPEN, Claude behaviourrepairlane, nofixinstalled.
 3. **Remaining:** normalP1Yes/No/exactsize/object/rotated/protected/metre andpurlindiskreadback. No Timrepeatneededforrecordednarrowpasses. Account28%, overall50%unverified.
+
+## Evidence scope corrections, 14 October 2026
+
+1. **Schedule write remains pending:** W63-08 staged inlet/number display is not a BUG351 drawing-write or save/reopen acceptance. Apply the approved typed-end route, read that actual pipe end, compare the other end and label, then Undo and reopen. Prior window display evidence remains valid narrowly.
+2. **Flat pipe output remains pending:** W61-04 proves a single informational warning and recovery; its overlapping existing pipes do not prove the new label correctly represents equal inverts. Use an empty owned bay, type equal levels, inspect that new pipe alone, read its editor/record/label and save/reopen. BUG427 stays OPEN.
+3. **Coverage:** refreshed535 headed bugs/52 FIXED-text candidates/8 no explicit status; 508 traceable UX IDs. Historical statuses and old results still need item-by-item evidence mapping. No new 50% claim. Verification165-167; local source hashes preserved.
