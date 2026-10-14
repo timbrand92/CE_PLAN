@@ -30780,5 +30780,26 @@
     "source": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
     "sourceSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
     "note": "Includes superseded and process records for traceability. Neither is silently treated as a current native feature. Later rulings, approved cards and engineering/programme requirements still need complete union/eligibility reconciliation. No native percentage inferred."
+  },
+  "usageCheckpoint": {
+    "dateMelbourne": "2026-10-15",
+    "usedPercent": 90,
+    "reservePercent": 10,
+    "reportedResetUnixSeconds": 1792472291,
+    "reportedResetMelbourne": "2026-10-20 15:58:11 AEDT",
+    "resumptionAutomation": {
+      "id": "ce-autocad-testing-resume-after-weekly-reset",
+      "kind": "heartbeat",
+      "status": "ACTIVE",
+      "targetThreadId": "01a1340f-889f-7ea3-a1dd-6eca1fb8dd8a",
+      "scheduledMelbourne": [
+        "2026-10-20 16:05",
+        "2026-10-27 16:05"
+      ],
+      "endsMelbourne": "2026-10-29"
+    },
+    "heavyWorkDeferred": true,
+    "newNativeChecks": 0,
+    "ownLeaseReleased": true
   }
 }
