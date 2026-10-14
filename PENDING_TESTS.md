@@ -1653,3 +1653,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Open619:** Report-onlyCEHATCHAUDITandCEHATCHCHANGEApplyfail eInvalidKey in2027synthetic24-hatchfixture. All24originalnativehatchespreservedexactly; modeEscapepasses. No servicefixinstalled.
 2. **Grouped acceptance:** Reportmustfinishcounts/findingsread-only; changingoneBLHtoConcreteSlabmustretainboundary/islands/background/nativeediting, thenUndo/Redo/save-reopen. Includecustom/protected/unsupportedhatchesand2024. Traceactualerrorbeforechoosingrepair; donotinferitfrom618sameerrorwording.
+
+
+### Codex batch hatching and gap cancellation — 15 October 2026
+
+1. **Observed:** two independent associative native hatches, grouped Undo/Redo and gap-tolerance Escape pass narrowly in 2027. Saved in a separate synthetic batch drawing; original audit specimen unchanged.
+2. **Still open:** BUG-615 also applies to batch placement: library thumbnail then immediate commit, without the approved drawing preview and adjustment stage. Actual gap bridging, batch reopen, protected objects, plotting and 2024 remain untested.

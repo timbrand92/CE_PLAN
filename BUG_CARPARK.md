@@ -8203,3 +8203,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence / positivecontrol:** hatch-audit-change-case-ledger.json HA-01/HA-03FAIL;1048–1058/twonativeexports/proof. Fullnativeentgetincludingxdata forall24hatchesmatchesexactlyTaftereachfailure; total105/24unchanged. AuditEscapeatmodepromptpasses. Controls1/1/5/0restored. No repair-mode/Undo/fullworkflowacceptance.
 6. **Guard / next:** ReproduceonthisfixtureandminimalfreshCH/BLHhatches; captureunderlyingerrorwithoutchangingusergeometry. VerifyReportonmixedstandard/custom/unsupported/protectedhatches; Applypreset/Cancel/Undo/Redo/save-reopen separately. Do notinferrootcausefromsameerrorwordinginCXREF618.
 7. **Ownership / status:** Claude command/service lane HatchUpgradeCommands; OPEN. No fixbuilt/installed/accepted.
+
+
+8. **BUG-615 batch route follow-through, 15 October:** CEHATCHBATCH on two preselected rectangles creates two separate native associative concrete hatches, but commits directly from the library thumbnail without the approved drawing preview and adjustment stage. HB-05 FAIL extends615; no extra bug or installed repair. Batch output, grouped Undo/Redo and gap-tolerance cancellation pass narrowly. Actual gap bridging remains untested.

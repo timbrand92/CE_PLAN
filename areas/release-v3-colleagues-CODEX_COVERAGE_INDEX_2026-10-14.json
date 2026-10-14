@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "F3228436AC3FEF67CCCFF03EC765BD5A8F2C9D76D4C22027603B25BDC2E9E817",
+    "currentBugsSha256": "1E1EA332063C79883B5D0AE69336AA7090302FE4DDD6D99AD0C3F74FF9C94199",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087"
   },
@@ -18,24 +18,24 @@
     "bugHeadings": 569,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 36,
-    "narrowCases": 508,
+    "caseLedgers": 37,
+    "narrowCases": 513,
     "narrowVerdicts": {
-      "PASS": 398,
-      "FAIL": 88,
+      "PASS": 402,
+      "FAIL": 89,
       "BLOCKED": 6,
       "UNPROVEN": 16
     },
-    "uniqueEvidenceFiles": 994,
+    "uniqueEvidenceFiles": 1011,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 950,
-    "uniqueMetadataFiles": 44,
+    "uniqueScreenshotFiles": 964,
+    "uniqueMetadataFiles": 47,
     "caseLinkedUxIds": 14,
     "caseLinkedBugIds": 62,
-    "newNativeExecutionsInLatestReconciliation": 4,
+    "newNativeExecutionsInLatestReconciliation": 5,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
@@ -45,7 +45,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "508 bounded nativechecks across36ledgers are notcompleteV3features; fullunionandbuilt/installedeligibility incomplete. 50%UNKNOWN.",
+    "reason": "513 bounded native checks across37 ledgers are not complete V3 features; full inventory and built/installed eligibility remain incomplete. 50% is UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -19927,7 +19927,8 @@
       ],
       "currentCaseKeys": [
         "hatch-output-case-ledger.json::CHOUT-13",
-        "hatch-alias-case-ledger.json::CAH-12"
+        "hatch-alias-case-ledger.json::CAH-12",
+        "hatch-batch-gap-case-ledger.json::HB-05"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -25177,9 +25178,13 @@
           "label": "Hatch Gap Assistance",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-batch-gap-case-ledger.json::HB-04"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-batch-gap-case-ledger.json::HB-04"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -25191,9 +25196,19 @@
           "label": "Batch Hatch",
           "group": "Hatching",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_FROM_EXACT_CASE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "hatch-batch-gap-case-ledger.json::HB-01",
+            "hatch-batch-gap-case-ledger.json::HB-02",
+            "hatch-batch-gap-case-ledger.json::HB-03",
+            "hatch-batch-gap-case-ledger.json::HB-05"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "hatch-batch-gap-case-ledger.json::HB-01",
+            "hatch-batch-gap-case-ledger.json::HB-02",
+            "hatch-batch-gap-case-ledger.json::HB-03",
+            "hatch-batch-gap-case-ledger.json::HB-05"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false
         },
@@ -30929,11 +30944,11 @@
           "aliasRoutesVerified": false
         }
       ],
-      "associatedEntryCount": 75,
-      "associatedCaseCount": 508,
+      "associatedEntryCount": 77,
+      "associatedCaseCount": 513,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 36
+      "currentLedgerCount": 37
     }
   },
   "currentNewBugStatusAudit": {
@@ -30978,7 +30993,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 96,
+    "usedPercent": 99,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792472291,
     "reportedResetMelbourne": "2026-10-20 15:58:11 AEDT",
@@ -30994,8 +31009,8 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 44,
-    "ownLeaseReleased": false,
+    "newNativeChecks": 49,
+    "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
       "quote": "lets take usage to 0% left then i will reset"
