@@ -439,3 +439,10 @@
 1. **Works narrowly:**200PFCplacedatknownpoint,Escapeendsoneplacement;nativeUndo/Redo namesSBEAM,actualoutline/labelvisibleafterwards. Saved/reopenedfilepreservesvisiblegeometry. FullrecordUndoanddimension/plotaccuracyunproved.
 2. **612MEDIUMOPEN:**SBEAMEDITcannotreadtheplacedsectionafterRedo;actualsave/close/reopenrepeatssamefailure. FreshnoUndo placementcontrolnext;causeandrecordinternalsunproved. Claude canonicalread/write,notawindowdefaultworkaround.
 3. **Evidence/scope:**local852-864,328narrowchecks255PASS55FAIL6BLOCKED12UNPROVEN,555hashedfileszero integrityfaults.50%wholecoverageUNKNOWN;fullST08,protectedtargets/olderruntime/engineeringunaccepted. CurrenttestdrawingOPEN,noinstall.
+
+
+### 15 October — fresh section read control and current position
+
+1. **612confirmedwithoutUndo:**freshsecond200PFCfailsSBEAMEDITfromoutlineandlabelimmediatelyafterplacement.NoUndoRedo/save/navigationneeded;exactcauseunknown.No repairinstalled.
+2. **Saved:**bothsyntheticmembers162345/5D1D62E6,normalclose871.Civil/sharedCSpreferencesunchanged,StructuralCSchangedafterplacement;exactfielddiffunavailable. Current330checks256PASS56FAIL6BLOCKED12UNPROVEN,563hashedfiles/0integrityfaults;43newbugs570-612OPEN.
+3. **Stillunfinished:**wholebuilt/V3percentageUNKNOWN,50%notmet;RC/elevations/scale/protection/plot/olderruntimeandfullinventoryremain.79%weeklyused/21%left,10%reserve.GoalACTIVE;continuefromnextapprovedworkflow.

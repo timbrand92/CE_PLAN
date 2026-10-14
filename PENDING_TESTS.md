@@ -1591,3 +1591,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Supersedes noactualplacement:**200PFCnativeplaced/finished,UndoRedo commandroundtripandactualsavedreopenedvisiblegeometry observed. FullmanagedrecordUndoRedoacceptanceunproved.
 2. **612OPEN:**SBEAMEDIToutlinecannotreadrecordafterRedoandafterQSAVE/close/reopen. FreshnoUndo controlpending. Repairacceptance:place200,editreadoutline+label,Cancelunchanged;200to250preview,oneUndo200/Redo250,save/reopenedit250. Claude nativecanonicalrecord;Codexwindowacceptance. Scale/hollows/elevations/protection/plot/RC/2024remainseparate.
+
+
+### Codex612freshcontrolresolved—15October2026
+
+1. **Freshplacementalsofails:**200PFCimmediateSBEAMEDITwithoutUndoRedofailsfromoutlineandlabel865-869;UndoRedoisnotnecessarytrigger.Bothspecimenssavedlocallyandclosed870-871. No repairinstalled.
+2. **Nextrepairguard:**actualwriter-to-readerroundtripbeforeUndo,theneditedsize/UndoRedo/save-reopen;canonicalnativeownerClaude. Source-onlytestsnotnativeacceptance.CodexcontinueRC/remainingsectionspluswholeworkflowcoverageandowner-safe611statusrepair.
