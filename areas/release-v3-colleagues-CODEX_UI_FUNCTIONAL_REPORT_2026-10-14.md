@@ -330,3 +330,11 @@
 1. **Real AutoCAD:** blank area and97m survive disk reopen, but displayed losses become the48.5m starting quantities. The needs-checking footer is visible. Re-entering390m2 recovers97m results. Explicitzero head yields realzero capacity with warning; it must remain distinct from Unknown. BUG597 staysOPEN.
 2. **Saved guards:** PR1258/927d0f7b,21charged checks4PASS17FAIL0skipped; actualDark/Lightresult bindings and nullable drafts included. Guards preserve independently known quantities and explicitzero controls; fixtures type all inputs independently of Settings. Pending1159 touches the same productionmodel, so the repair must be integrated with that work. No overlappingmodel edit or installedfix.
 3. **Recording:** native ledger now242narrow assertions193PASS39FAIL6BLOCKED4UNPROVEN; percentage stillunverified. Source tests excluded. Saved invalidfixture and3CEpreferences preserved, freshcopyclosed/usable sessionretained; oldsessionfaultunresolved. Weekly60%, receipts281-284.
+
+
+## Report-area manual override —15 October2026
+
+1. **Works narrowly:** editing imported D1 Roof110 to120 m² and pressing Enter recalculates1.78 to1.94 L/s,total26.18. Native save/close/reopen retains input, Tank and flows. Copy closes normally; preferences unchanged.
+2. **Fails:** source remains Rating report after the typed edit and actual disk reopen; BUG598 OPEN, screenshots673/674/678. This wrongly attributes a manual design input to documentary evidence.
+3. **Repair banked:** PR1259/2f6bfa13, latest4a2f90f8, labels the changed input Typed in and retains original report area/source in the persisted tooltip.65modern focused checks actually PASS, zero skipped; two check materialised source bindings in Dark/Light. Net48compile0errors286warnings37.09s. Initial zero-discovery runs were loader failures, not PASS. Candidate not installed or AutoCAD-accepted; full side-by-side intake and actual PDF/XLSX provenance remain pending. Old falsely labelled drafts cannot reconstruct original report area.
+4. **Current totals:**247narrow native assertions196PASS41FAIL6BLOCKED4UNPROVEN across20ledgers;363unique evidence files359screens4metadata.29new bugs570-598 allOPEN. Whole-product percentage remains unverified;50% goal ACTIVE and unfinished. Results are recorded continuously in the existing shared plan/bug/test registers.

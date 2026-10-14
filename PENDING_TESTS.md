@@ -1494,3 +1494,6 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Actual failure:** committed typed120 m² still says Rating report after imported110 m²; screens673/674, verification285-286. No repair installed.
 2. **Follow-through:** preserve original area/source, honest manual badge and notifications, repeated/same-value/invalid edits, Cancel, preview invalidation, duplicate intake, draft save/reopen and actual PDF/XLSX. Existing PR1259 Codex window/viewmodel slice; Claude output integration.
+
+
+3. **BUG598 candidate banked:** PR1259 latest4a2f90f8, manual slice2f6bfa13;65modernPASS/zero skipped,net48compile0errors. Source detail retains original110/report source and badge becomes Typed in on edits. This is window/draft only, not installed. Actual save/reopen reproduces installed failure678. After combined installation retest in AutoCAD; full side-by-side review, preview invalidation, duplicate intake and actual exports remain open.

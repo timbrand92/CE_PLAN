@@ -9,31 +9,31 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "049CA1D2B8717A906B6E002E0D3D2BC036BE51075217E14614B7B79D86A95D44",
+    "currentBugsSha256": "A2DD556C0E77A2004F817309D26FD9572AF14A60F5D997671044C002332F6382",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
     "traceableUxIds": 508,
-    "bugHeadings": 547,
+    "bugHeadings": 548,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 12,
     "caseLedgers": 20,
-    "narrowCases": 242,
+    "narrowCases": 247,
     "narrowVerdicts": {
-      "PASS": 193,
-      "FAIL": 39,
+      "PASS": 196,
+      "FAIL": 41,
       "BLOCKED": 6,
       "UNPROVEN": 4
     },
-    "uniqueEvidenceFiles": 354,
+    "uniqueEvidenceFiles": 363,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 350,
+    "uniqueScreenshotFiles": 359,
     "uniqueMetadataFiles": 4,
     "caseLinkedUxIds": 5,
-    "caseLinkedBugIds": 20
+    "caseLinkedBugIds": 21
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -410,7 +410,7 @@
         "sourceLine": 215,
         "required": "Approved D+F card: shared job rainfall/source, reviewed inputs and drawing proposal, honest sheet and durability",
         "status": "PARTIAL / CURRENT FAIL",
-        "evidence": "Receipts219-257: installed rainfall record/source, draft restore, actual three-page PDF/three-tab XLSX, invalid pipe/catchment consumers, add/Enter-commit row and missing-report guidance. Source candidates1257/1259 separate. Receipts261-263/screens628-632 verify added/edited two-row disk restoration and prepared-package consumer. Receipts264-268 actualBlueFactorintakeFAIL594/legacycontrol;recoveryunresolved595.",
+        "evidence": "Receipts219-257: installed rainfall record/source, draft restore, actual three-page PDF/three-tab XLSX, invalid pipe/catchment consumers, add/Enter-commit row and missing-report guidance. Source candidates1257/1259 separate. Receipts261-263/screens628-632 verify added/edited two-row disk restoration and prepared-package consumer. Receipts264-268 actualBlueFactorintakeFAIL594/legacycontrol;recoveryunresolved595. Receipts285-290: committed report110->manual120 recalculation and disk persistence; source falsely remains Rating report (598). Window/draft candidate1259 tested separately, not installed.",
         "remaining": "Unknown export integration, source provenance/fixed Boyd rainfall249, actual report intake, remaining tabs/Apply/approval/protections/older runtime and full requirement acceptance.",
         "wholeScopeVerified": false
       },
@@ -486,7 +486,12 @@
         "calculator-remaining/cases.json::RR-02",
         "calculator-remaining/cases.json::RR-03",
         "calculator-remaining/cases.json::RR-04",
-        "calculator-remaining/cases.json::RR-05"
+        "calculator-remaining/cases.json::RR-05",
+        "report-intake/fresh-cases.json::RO-01",
+        "report-intake/fresh-cases.json::RO-02",
+        "report-intake/fresh-cases.json::RO-03",
+        "report-intake/fresh-cases.json::RO-04",
+        "report-intake/fresh-cases.json::RO-05"
       ]
     },
     {
@@ -13763,6 +13768,21 @@
       "currentCaseKeys": [
         "calculator-remaining/cases.json::RC-04",
         "calculator-remaining/cases.json::RR-02"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-598",
+      "headingLine": 7910,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "report-intake/fresh-cases.json::RO-02",
+        "report-intake/fresh-cases.json::RO-04"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
