@@ -362,3 +362,10 @@
 1. **Inventory:** liveCivil137/Structural375/Manager11catalogueentries,523includingaliases/internal/sharednames. Snapshot/sourcehashesareintheexistingcoverageindex. This isnot523functionalacceptancesorapercentagedenominator. Link/Transformtrialbundlesarenotassumedabsentbecauseunrelatedcataloguepathsaremissing.
 2. **Native intake:** LandXMLSourcefits,Readisdisableduntilfilechosen,pickerCancelreturnsblank. Empty-networkXMLReadabortreports0pits/0pipes. BUG602:reviewclosesandfailure/retryisleftonlyincommandhistory/log. Safeabortcountscorrect;exactin-memorygeometrynonmutationnotproved.
 3. **Cleanup:** copyclosedNo,savedbaselineunchanged,threepreferencefilesunchanged. Positiveimport,units/Z/RLs,alignment,preview-beforewrite,duplicates/overrides/reimport,recovery/protectionandolderruntimeareoutstanding.5narrowcases4PASS1FAIL,notfullCV07acceptance.275totalchecks218PASS45FAIL6BLOCKED6UNPROVEN.
+
+
+### 15 October — actual positive LandXML import and recovery
+
+1. **Works narrowly:** sourceReadcreates2pits/1pipe;afterRedo schedulehasP91/P92,600x600mm,300mmpipe,cover50.000/49.500m. ImportUndo removesvisibleP91/pipe andRedo1restores,afterseparateAutoCADnavigationstepsareundone. Entirelink/levelrecoveryisnotaccepted.
+2. **Fails:** BUG603Readwrites/autotranslatesbeforepreview/Apply. BUG604resultsfalselysayfromschedule. BUG605providedIL49.000/48.850areblankinpostRedo schedule/pipeends;beforeUndocontrolneededtoseparatewrite/recoverycause. ExistingUnknownwarningsarecorrectforcurrentmissingrecords.
+3. **Saved remainder:** exactpostRedoDWGsaved/closed;preferencesunchanged. Diskreadback,freshimportnoUndo,fullsourceunits/position/levels,duplicates/overrides,protectedtargets/2024/plotremain.7newnarrowchecks3PASS3FAIL1UNPROVEN;282total,50%wholecoverageunproved.

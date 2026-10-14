@@ -1519,3 +1519,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Real installed observation:** Civil3.0.49 Sourceblank/Readdisabled andpickerCancelpass; empty-networkReadreports0pits0pipes/aborted. BUG602OPEN:failurewindowdisappears,no visiblechoose-another-file/resultreview.
 2. **Repair/retest:** ClaudecommandhandoffpassesabortedreceipttoexistingCodeximportreviewwindow. Empty/malformed/missinginputskeepplainfailure/retry; validtwo-pitcontrolshowsproposedunits/levels/assetsbeforeApply. ThenoneUndo/Redo,save/reopen,reimport/overridesandprotectedtargets;2027and2024/net48separate. No runtimefixbuiltorinstalledthisbatch.
 3. **Evidence:** verification302-305/localLandXMLcases/report/screens;fourpassesandonefailure are narrowcases. Full50%unverified. KeepallV3/UXscopeandinstalledcatalogue inventorydistinct.
+
+
+### Codex LandXML positive import faults — 15 October2026
+
+1. **603/604:** Readsourcewritesbeforeapprovedpreview/Applyandresultsusefalseschedulesourcewords. Claudeintake/writercontract,Codexexistingreviewpresentation. Detachedpreview/transform/source-awarefieldsbeforeanywrite.
+2. **605:** explicit49.000/48.850ILmissingafterUndoRedo,whilecovers/sizesretained;freshbeforeUndoanddiskreadbackmustisolatecause. Samefixturepositive/Unknown/sump-onlycontrolsandoneUndo/Redo,geometry/schedule/Inspectoragreement. No productionfixinstalled.
+3. **Evidence:** verification306-310/native733-746/localLandXMLreport/debug/XML;savedpostRedoDWG9B4DCBE4,localonly. FullCV07/engineering/olderruntimeacceptancepending.
