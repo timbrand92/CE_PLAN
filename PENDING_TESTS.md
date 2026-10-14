@@ -1585,3 +1585,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **NarrowPASS:** installedSBEAMPFCsearch/no-matchgating/recovery,sideflangeTowardAway/frontpreview,Timberblank/90x240SectionpreviewandCancel. Noactualsectionplaced.611LOWOPENfalseTimbersteel-searchstatus;Codexexistingwindowstatusrepairmustpreservevalid/invalidsteelbehaviour.
 2. **Representative remaining:** onePFCsectionandoneelevationplacedatknownpoint/scale,Inspector/SBEAMEDITsameviewandidentity,oneUndoRedo/save-reopen,correcthiddenlines/hollowinnerwalls/nativeplot,protectedtargets;oneRCbeam/column,linkedcalculationstaleness and2024separate. Noengineeringvalueapprovalfrompreview. Local836-850/sectionledger,baseline161895ADBC0B48intact.
+
+
+### Codex Structural section placement/edit —15October2026
+
+1. **Supersedes noactualplacement:**200PFCnativeplaced/finished,UndoRedo commandroundtripandactualsavedreopenedvisiblegeometry observed. FullmanagedrecordUndoRedoacceptanceunproved.
+2. **612OPEN:**SBEAMEDIToutlinecannotreadrecordafterRedoandafterQSAVE/close/reopen. FreshnoUndo controlpending. Repairacceptance:place200,editreadoutline+label,Cancelunchanged;200to250preview,oneUndo200/Redo250,save/reopenedit250. Claude nativecanonicalrecord;Codexwindowacceptance. Scale/hollows/elevations/protection/plot/RC/2024remainseparate.

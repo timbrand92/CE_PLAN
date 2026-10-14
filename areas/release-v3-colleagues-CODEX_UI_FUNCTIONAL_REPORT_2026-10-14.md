@@ -432,3 +432,10 @@
 1. **Works narrowly:** SBEAMwindowfits;PFCfamily/search200updatespreview/properties;no-matchclearsanddisablesPlace,clearrecovers. SideelevationAwaychangesbothinnerflangelineshidden together;frontviewretainsselection. Timberblankrejectsincompletedimensions;90x240preview/propertiesandSectionrectangleagree. Noengineeringapprovaloractualplacement.
 2. **611LOWOPEN:** Timberkeepsa false No local steel sections match that search message evenwithvaliddimensions/Placeenabled. Existingwindowstatusrepairpending;do notchangegeometryorsuppressgenuinecataloguewarnings.
 3. **Cleanup/limits:** Cancelnormal,CloseNo,baselineandthreepreferencesunchanged. Actualplacement/edit/UndoRedo/scale/UCS/hollows/plot/reopen/protection/linkedcalcs/olderruntimepending.324narrowchecks253PASS54FAIL6BLOCKED11UNPROVEN,542hashedfiles;full50%UNKNOWN.
+
+
+### 15 October — actual section output and edit failure
+
+1. **Works narrowly:**200PFCplacedatknownpoint,Escapeendsoneplacement;nativeUndo/Redo namesSBEAM,actualoutline/labelvisibleafterwards. Saved/reopenedfilepreservesvisiblegeometry. FullrecordUndoanddimension/plotaccuracyunproved.
+2. **612MEDIUMOPEN:**SBEAMEDITcannotreadtheplacedsectionafterRedo;actualsave/close/reopenrepeatssamefailure. FreshnoUndo placementcontrolnext;causeandrecordinternalsunproved. Claude canonicalread/write,notawindowdefaultworkaround.
+3. **Evidence/scope:**local852-864,328narrowchecks255PASS55FAIL6BLOCKED12UNPROVEN,555hashedfileszero integrityfaults.50%wholecoverageUNKNOWN;fullST08,protectedtargets/olderruntime/engineeringunaccepted. CurrenttestdrawingOPEN,noinstall.
