@@ -318,3 +318,9 @@
 1. **Native testing resumed:** separate installedAutoCADsessionopenedownedfreshfixtureandacceptedcommands. Oldsessionfault595remainsOPEN; freshsessionusable/nowempty, no forcedtermination or installation.
 2. **RealPASS:** actualreportCancelleavesCDCALC/tworows/24.24unchanged. SelectionthenAddcreatesone110m2/Ratingreport/Tank/1.78row,total26.02. Duplicateofferdisabled. NativeSave/Close/reopenkeepsarea,sourcelabel,destinationandflows. All3CEpreferencesunchanged,freshsavedfixturepreserved. Screens641-654/receipts273-276.
 3. **StillFAIL/unproved:** newerBlueFactorstillbypassedforolderSTORM594. Unknowndestination/currentreport/intakekeyboardEscape/actualexportprovenance/engineering/2024notaccepted. Ledger230narrowchecks184PASS36FAIL6BLOCKED4UNPROVEN,wholepercentageunverified. Weekly55%;nextremainingbuiltworkflowsusefreshsession,goalACTIVE.
+
+## 15 October — charged, pump and WSUD checks with a window repair
+
+1. **Charged:** committedlengthchangeupdateslosses/capacity;whole-frictionunitm/mwrong596. Blankcommittedcatchmentwarnsbutholdspreviousfivefigures597. No engineeringcapacityacceptance.
+2. **Legacyprotection:** pumptotal321resistsedit;WSUDread-onlyreviewwarningvisible/treatmentcheckboxresistschange. Numbers/rulesarenotapprovedbythesechecks.
+3. **Repairbanked:**1259/2dca5f15correctschargedunitto m only;6focusedWPFPASS,bothDark/LightPNGspersonallyviewed,net48build0errors286warnings. Notinstalled;596/597OPEN,593exportdependencyunchanged. Nativecopyclosed/savedinvalidfixturepreserved,preferencesunchanged;reopentestpending. Ledger237narrowchecks189PASS38FAIL6BLOCKED4UNPROVEN,wholepercentunverified;weekly58%,receipts277-280.

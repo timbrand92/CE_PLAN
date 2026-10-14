@@ -1477,3 +1477,8 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Real legacy intake narrowlyPASS:** observedCancelunchanged,explicitone-rowconfirm,duplicateguard,anddiskpersisted110m2/Ratingreport/Tank/Q1.78,total26.02. CurrentBlueFactor/Unknowndestination stillblocked594; keyboardEsc/actualPDF/XLSXprovenance/older2024/engineeringnotaccepted. Verification273-276/screens641-654; savedownCODEX_REPORT_FRESH fixture154253bytes/SHA89D41EDD48376AFA84D3A25AB6AAB4F5C8209CE136AFF65A7552FD8DC57902D5.
 2. **Nativeworkaround:** newmain778113170usableandnowempty; old87364294sessionunresolved595. Ownleaseheldwithaccuratenote,all3CEpreferencesunchanged. Reusefreshinstance; donotlaunchmoreorclaimoldrecovery. Nextactualmanualoverride/source/exportandremainingcharged/pump/WSUD/profiles;wholegoalactive/50%unverified.
+
+## Codex15October — charged-loss unit candidate and stale results
+
+1. **BUG596windowcandidate:**1259/2dca5f15,6focusedmodernWPFPASS,net48build0errors286warnings. Combinependingwindowrepairsbeforeinstall. ChargedSystem48.5/97m mustlabelwholefriction0.1438/0.2876m,retainedtotal0.2165/0.3603m;Dark/Light/older2024. CandidateNOTinstalled/accepted.
+2. **BUG597:** savedownedCODEX_CALC_REMAINING_20261015.dwg154217bytes/SHA76BE6236806FADA06A5B687B1D9F23DD8E779DE9A6266B1477BEB516131681BE containsblankchargedarea/length97. Reopenreadbackstillpending;repairmustshowUnavailable/Unknownthroughall5resultsandsaveddraftwithoutstalequantities. Testvalidrecoveryandinputedgecases. Pump/WSUDremainintentionallyread-only;donotbypassthemoraccepttheirengineeringrules. Oldnativefault595unresolved;reusefresh778113170empty,leaseheld.

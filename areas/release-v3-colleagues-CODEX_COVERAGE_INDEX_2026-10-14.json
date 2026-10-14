@@ -9,31 +9,31 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "CF973986C0B5A3A74DA0C144871111D76F996ED394A555DA61E4BC445D729B51",
+    "currentBugsSha256": "25BBA4F141FF5298B1E9E35C5EA7989DDB7305ECE5C7B3128E3D36C7A931E2FA",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
     "traceableUxIds": 508,
-    "bugHeadings": 545,
+    "bugHeadings": 547,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 12,
-    "caseLedgers": 19,
-    "narrowCases": 230,
+    "caseLedgers": 20,
+    "narrowCases": 237,
     "narrowVerdicts": {
-      "PASS": 184,
-      "FAIL": 36,
+      "PASS": 189,
+      "FAIL": 38,
       "BLOCKED": 6,
       "UNPROVEN": 4
     },
-    "uniqueEvidenceFiles": 337,
+    "uniqueEvidenceFiles": 347,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 333,
+    "uniqueScreenshotFiles": 343,
     "uniqueMetadataFiles": 4,
     "caseLinkedUxIds": 5,
-    "caseLinkedBugIds": 18
+    "caseLinkedBugIds": 20
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -474,7 +474,14 @@
         "report-intake/fresh-cases.json::RF-05",
         "report-intake/fresh-cases.json::RF-06",
         "report-intake/fresh-cases.json::RF-07",
-        "report-intake/fresh-cases.json::RF-08"
+        "report-intake/fresh-cases.json::RF-08",
+        "calculator-remaining/cases.json::RC-01",
+        "calculator-remaining/cases.json::RC-02",
+        "calculator-remaining/cases.json::RC-03",
+        "calculator-remaining/cases.json::RC-04",
+        "calculator-remaining/cases.json::RC-05",
+        "calculator-remaining/cases.json::RC-06",
+        "calculator-remaining/cases.json::RC-07"
       ]
     },
     {
@@ -13722,6 +13729,34 @@
       "currentCaseKeys": [
         "report-intake/cases.json::RI-08",
         "report-intake/fresh-cases.json::RF-01"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-596",
+      "headingLine": 7884,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "calculator-remaining/cases.json::RC-03"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-597",
+      "headingLine": 7895,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "calculator-remaining/cases.json::RC-04"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
