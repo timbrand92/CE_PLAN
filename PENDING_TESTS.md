@@ -1497,3 +1497,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 
 3. **BUG598 candidate banked:** PR1259 latest4a2f90f8, manual slice2f6bfa13;65modernPASS/zero skipped,net48compile0errors. Source detail retains original110/report source and badge becomes Typed in on edits. This is window/draft only, not installed. Actual save/reopen reproduces installed failure678. After combined installation retest in AutoCAD; full side-by-side review, preview invalidation, duplicate intake and actual exports remain open.
+
+
+## Codex15October — linked profile native follow-through
+
+1. **Exercised:** explicit start/route, blankdatumgate, insertionEscape, readyknownrows, scaleinvalidation, safe missingDASHDOT2refusal, explicitstandardmetriclinetypeload, realplacement, oneUndo and delayedRedo. Screens681-703/verification291-295. BUG599 late dependency disclosure OPEN.
+2. **Next fixture:** local V3UX_20261014/profiles/CODEX_PROFILE_20261015.dwg saved158219bytes/SHA2F66797A610C6EE1D2D80FB582500D3A5205CD594280D39BDCCD8AF7C3A553D9. Freshsession778113170empty; old87364294stillunresolved595; ownlease1791986256 retained. Diskreadback/update, fullreadable row/plot, branches/curves/Unknown/realzero, stalegeometry/target and lockedlayer/Xref/REFEDIT/olderruntime remain unproven.
+3. **Repair and improvements:** Claude profileadapter/writer should disclose dependency599 at preparation while preserving refusal. Codex review improvements: readable plain route identity rather than pipehandle2C3 (existing wording360), practical insertioncoordinate display with exact detail, and a larger/centred review chart retaining correctscale ratio; no independentaxisstretch or hidden engineeringchange. These are review notes, not built upgrades or accepted layout.

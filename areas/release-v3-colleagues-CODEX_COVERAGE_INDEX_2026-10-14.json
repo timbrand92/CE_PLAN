@@ -9,31 +9,31 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "A2DD556C0E77A2004F817309D26FD9572AF14A60F5D997671044C002332F6382",
+    "currentBugsSha256": "74C684CAEC8FF19D8BF7CD96B6DF1FBCA9B4FA10543FCAC23265B92DC5D08863",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json"
   },
   "counts": {
     "traceableUxIds": 508,
-    "bugHeadings": 548,
+    "bugHeadings": 549,
     "duplicateBugHeadings": 0,
-    "currentUxScopeReviews": 12,
-    "caseLedgers": 20,
-    "narrowCases": 247,
+    "currentUxScopeReviews": 14,
+    "caseLedgers": 21,
+    "narrowCases": 260,
     "narrowVerdicts": {
-      "PASS": 196,
-      "FAIL": 41,
+      "PASS": 207,
+      "FAIL": 42,
       "BLOCKED": 6,
-      "UNPROVEN": 4
+      "UNPROVEN": 5
     },
-    "uniqueEvidenceFiles": 363,
+    "uniqueEvidenceFiles": 386,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 359,
+    "uniqueScreenshotFiles": 382,
     "uniqueMetadataFiles": 4,
-    "caseLinkedUxIds": 5,
-    "caseLinkedBugIds": 21
+    "caseLinkedUxIds": 7,
+    "caseLinkedBugIds": 22
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -2971,10 +2971,31 @@
       "sourceTokens": [
         "UX-LSEC-01, 02"
       ],
-      "currentScopeReview": null,
+      "currentScopeReview": {
+        "id": "UX-LSEC-01",
+        "status": "PARTIAL / CURRENT FAIL",
+        "required": "Approved CV06 profile review/atomic writer and Batch6 long sections: exact routes, known/Unknown inputs, accurate review/output, safe preview/Apply and durability",
+        "evidence": "Verification291-295/screens681-703: actual starting-pit/insertionCancel, explicitroute/scale, frozenpreview/invalidation, dependencyFAIL599/refusal, standardmetricassetload, realdrawnprofile and oneUndo/delayedRedo.",
+        "remaining": "Actual saved-profile readback/update, fullreadable rows/plot, branch/curve/Unknown/zero/stale/protectedtargets andolderruntime;dependency599repair.",
+        "wholeScopeVerified": false
+      },
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
-      "currentCaseKeys": []
+      "currentCaseKeys": [
+        "profiles/cases.json::PF-01",
+        "profiles/cases.json::PF-02",
+        "profiles/cases.json::PF-03",
+        "profiles/cases.json::PF-04",
+        "profiles/cases.json::PF-05",
+        "profiles/cases.json::PF-06",
+        "profiles/cases.json::PF-07",
+        "profiles/cases.json::PF-08",
+        "profiles/cases.json::PF-09",
+        "profiles/cases.json::PF-10",
+        "profiles/cases.json::PF-11",
+        "profiles/cases.json::PF-12",
+        "profiles/cases.json::PF-13"
+      ]
     },
     {
       "id": "UX-LSEC-02",
@@ -2984,10 +3005,31 @@
       "sourceTokens": [
         "UX-LSEC-01, 02"
       ],
-      "currentScopeReview": null,
+      "currentScopeReview": {
+        "id": "UX-LSEC-02",
+        "status": "PARTIAL / CURRENT FAIL",
+        "required": "Approved CV06 profile review/atomic writer and Batch6 long sections: exact routes, known/Unknown inputs, accurate review/output, safe preview/Apply and durability",
+        "evidence": "Verification291-295/screens681-703: actual starting-pit/insertionCancel, explicitroute/scale, frozenpreview/invalidation, dependencyFAIL599/refusal, standardmetricassetload, realdrawnprofile and oneUndo/delayedRedo.",
+        "remaining": "Actual saved-profile readback/update, fullreadable rows/plot, branch/curve/Unknown/zero/stale/protectedtargets andolderruntime;dependency599repair.",
+        "wholeScopeVerified": false
+      },
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
-      "currentCaseKeys": []
+      "currentCaseKeys": [
+        "profiles/cases.json::PF-01",
+        "profiles/cases.json::PF-02",
+        "profiles/cases.json::PF-03",
+        "profiles/cases.json::PF-04",
+        "profiles/cases.json::PF-05",
+        "profiles/cases.json::PF-06",
+        "profiles/cases.json::PF-07",
+        "profiles/cases.json::PF-08",
+        "profiles/cases.json::PF-09",
+        "profiles/cases.json::PF-10",
+        "profiles/cases.json::PF-11",
+        "profiles/cases.json::PF-12",
+        "profiles/cases.json::PF-13"
+      ]
     },
     {
       "id": "UX-LYR-01",
@@ -13783,6 +13825,20 @@
       "currentCaseKeys": [
         "report-intake/fresh-cases.json::RO-02",
         "report-intake/fresh-cases.json::RO-04"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true
+    },
+    {
+      "id": "BUG-599",
+      "headingLine": 7925,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentCaseKeys": [
+        "profiles/cases.json::PF-07"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
