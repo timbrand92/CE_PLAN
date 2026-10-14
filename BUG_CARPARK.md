@@ -8011,3 +8011,15 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **BUG605 disk follow-through:** actualsavedpostRedoDWG reopened747;PITSCHEDULE748retains600x600/300/covers50.000/49.500 butbothprovidedpit/pipeendILsblank/fourUnknownwarnings. Missingvaluesarepersistent,notonlywarmwindowstate. FreshnoUndocontrolnext,causenotyetattributed;605OPEN.
 
 7. **Fresh no-Undo control:** separate baseline copy CODEX_LANDXML_NO_UNDO_20261015, same explicit XML. Source750/Recorded751 then immediate PITSCHEDULE752, with NO Undo/Redo, zoom, pan or QSAVE between import and schedule. P91/P92 remain600x600/300mm/CL50.000/49.500; provided49.000/48.850 invert cells already blank, four warnings. Undo/Redo is NOT required to reproduce605. This narrows failure to initial import/record presentation path; exact extraction versus writer cause still unproved. Old saved postRedo fault independently persists747/748. Both synthetic copies currently open; native cleanup follows.
+
+
+## BUG-606
+
+**Status:** OPEN — installedCivil3.0.49+48662ddd,realAutoCAD2027,15October2026.
+**Severity:** MEDIUM — consultant drawing check writes a report beside the source DWG.
+
+1. **Steps:** open isolatedCODEX_DWG_CHECK_20261015.dwg,runCDCHECKDWG,Enter=currentdrawing. ApprovedCV07/CV7-12 requires non-writing snapshots and reports only in approvedCE/projectreportlocation.
+2. **Actual:** results763opens sevenfindings; filesystembefore contained onlyDWG,after includesactualCODEX_DWG_CHECK_20261015_CDCHECKDWG_timestamp.txt besideDWG. NativeDWGlockfiles are from openingandareNOTthefault. SourceDWGhash remainsADBC0B485B8AB7D7741E4989AEA7C5A60B5B38F3D98B31087FFEF91D8B32FFA9. No sourceDWGoverwriteproved.
+3. **Expected:** sourcefolderunchangedbychecker; chooseexistingapprovedCEreportdestination,showwhereitwassaved. Window read-onlydrawingclaimdoesnotdisclosereportfolderwrite.
+4. **Repair owner/guard:** ClaudeCheckDwgCommand reportdestination; sourceTryWriteReportNextToDwg confirmswritepath. Useexistingreportlocations/settings,nosecondreportmanager. Guardwritablesourcefoldergetsnonewreport,approveddestinationreceivesexactreport; currenton-disk/unsavedlimitationvisibletouser. Codexexistingresultwindowcontractifneeded.
+5. **Retest:** savedcurrentDWGandseparateexternalDWG,runcheck,verifyDWGhashandfoldermanifestunchangedexceptpre-existingAutoCADlocks;actualreportopensfromapproveddestination. Unsavedcurrentchangesclearlyexcluded,Cancel/missing/read-onlysourcesplain;2027and2024separate. Findings/standardvaluesnotengineeringacceptedhere. Local761-763/drawing-check/actual-report.txt;currentcopystillopen,resultmodalopen.
