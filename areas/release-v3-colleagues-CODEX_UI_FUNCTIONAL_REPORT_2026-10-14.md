@@ -283,3 +283,9 @@
 
 1. **BUG593 window/draft candidate saved:** PR1259/dbb1dac1 adds explicit available/Unknown state, clears oldcatchmentflow/tickoninvalidrainfall, savesunavailableflowsasnullandrecoversvalidresults. Modern53focused+36surroundingPASS, net48build0errors/286warnings. Runtimezerodiscoveryonnet48 isNOTPASS. No candidateAutoCAD/sourcewindowrender/installation/acceptance.
 2. **End-to-end remaining:** exportservice mustreadsameHasFlow/HasTotalFlowstate forUnknowninsteadofnumeric0inpreview/PDF/XLSX;approvalconsumersmustrespectit. Bug remainsOPEN; no50%creditfromunitchecks. Planverificationreceipts249-252/PENDING containcombined-releaseguardandexactsynthesictest. Weekly49%account-wide,10%reserve.
+
+## 15October2026 — window appearance and real row testing
+
+1. **Repair appearance:** PR1259/07160dee,4actualWPFdisplaychecksPASS,Dark/Lightvalid/invalid; invalidPNGspersonallyviewed,Unknowninallrows/total,warnings,andfooterfits1280x960. Candidateappearanceonly; noinstalledrepairclaim/exportintegrationstillpending.
+2. **RealAutoCADrowchecks:** AddcreatesC2withTypedinsourceandupdatestotal. Area500->1000onC2 doublesitsflowafterEntercommitsrow,C1unchanged,total24.24onrounded64.6jobcurve. Tabmoveswithinrowwitholdresultstillvisibleuntilcommit. Nojobfolderintakegivesplainmissing-reportguidanceandpreservesrows. ActualreportreadingremainsBLOCKEDhere. Existinginvalidrainfallfailure593repeated,notnewbug.
+3. **Evidence/limits:** receipts253-257/screens617-627/localcatchment-rows/cases.json7narrowcases5PASS1FAIL1BLOCKED. Savedownfixture155589bytes/SHAEBC9602DB98F5968FDBEC905B04C7B8FE673DC2411A943AD4AF8E588BBAD3702. No newrowdiskreopen/U/Redo/Remove/approval/PDF/XLSX/olderruntime/engineeringacceptance. Draftingcontrols/preferencesretained,copyclosed/lease released. Overallcoveragepercentageunverified.
