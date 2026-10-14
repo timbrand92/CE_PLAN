@@ -272,3 +272,9 @@
 
 1. **Built and run:** draftPR1258/36043dbe adds7focusedproductionexportchecks,1PASS6FAIL0skipped. RealpaginatedWPFdraft/issuedcases showmissingidentityonpages2-4includingoverflow; worksheetstatusandnumerictypesalsofail. Finalnet48test-projectbuild0errors46warnings. Exactreceipts240-242.
 2. **Repair still required:** tests-onlyRED,doNOTmergealone. No productionfixorinstallation;590/591OPEN. Pending403/1043runtimefileownershiprecorded, nooverlappingedits. Thisisrepairguard evidence,separatefromactualAutoCAD234-239andpercentage; weekly38%.
+
+## Pipe flow and Catchments consumers — 14 October2026
+
+1. **Works narrowly:** native pipe discovery and diameter/roughness fill; typed grade recovery and disk persistence; grade edit invalidates export. Catchments consumes saved job rainfall when ARI changes, manual110 gives13.75 and prepared output explicitly labels manual source. Empty section selection disables preview.
+2. **Fails:** BUG592 invalid pipe inputs display/prepare zero results; BUG593 invalid rainfall leaves a stale catchment flow/tick beside total0, including preview and reopened draft. Existing360 raw handles also reproduced. Recovery back to valid inputs works. No repairs installed.
+3. **Evidence:** receipts243-248/screens592-616,17checks12PASS5FAIL, synthetic saved fixture and exact hashes. No whole-feature/50% acceptance. Remaining tabs/row intake/editing/Apply/otherunits/protection/2024 remain. Copy closed, preferences/controls unchanged, lease released. Weekly40%; newbugsnow24(570-593).

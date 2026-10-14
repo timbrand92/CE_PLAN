@@ -1439,3 +1439,9 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 1. **Banked:** draftPR1258 https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1258 /36043dbe. Tests-onlyRED:7executed1PASS6FAIL0skip,net48build0errors46warnings. DoNOTmergealone;fixbothproductionfaultsandruntheseguards.
 2. **Actualretestaftercombinedrepair:** everyPDFpageincludingoverflowandeveryXLSXtabretainsdraft/issuedstateandjobidentity; numericcellsworkwithoutconversion,Unknownandzeroareseparate. Preservefrozenapprovalandpending403/1043. InstalledfaultsstillOPEN;theseunitchecksarenotnewAutoCADcoverage.
+
+## Pipe flow/Catchments real checks — 14 October2026
+
+1. **Recorded:** receipts243-248;17narrowchecks12PASS5FAIL on installedCivil3.0.49. Native selection, valid recovery, ARI/manual source and draft persistence exercised. No completeUX-CALC04.
+2. **Repair next:**592 unavailable pipe results distinct from zero in tab/export;593 invalidate stale row flow/tick on invalid rainfall, including draft restore and prepared package. Existing360 readable pipe identity. Reuse owned invalid fixture; do not ask Tim to repeat completed cases.
+3. **Remaining:** row add/remove/edit/report intake; invalid/range/nonfinite inputs; other calculator tabs; actual repairedPDF/XLSX; approval/Apply/units/UCS/protection/2024. No repair installed.
