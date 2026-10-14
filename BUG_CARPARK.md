@@ -180,6 +180,9 @@
 **Status:** OPEN — confirmed in real AutoCAD, MEDIUM review accuracy. No production code started.
 
 ---
+
+**15 October evidence-index correction:** original schedule-placement/case-ledger.json::SCHED-DIFF-02 explicitly records this bug via its numeric bug field; that link is now restored in the current coverage index after rehashing its referenced evidence. Existing native verdict FAIL retained; no new execution or repair acceptance.
+
 ## BUG-572
 
 **NativepipeTypeUnknowncausecorroborated,14October2026:** actualownedpipe2C3entget432: CE_CVL_PIPE_OBJECT onSTORMWATERPIPE,legacyCE_CVL_PIPEXDataabsent. OwnPIPE_LINKread433explicitlystoresPipeType0(StormwaterPipeenum); prioractualEditPipe403correctlyshowsStormwater. CompactInspectorPaletteService858-860onlyreadslegacyXDatafortype,ignorescurrentlinktype. Repairownerbehaviourlane:reusecaller-transactionread-onlylink/canonicalboundedcurrent-evidencepath,notlayerdefaultornewwindowguessing. Keepinvalid/missingtypeUnknown; testnative/legacy/missing/conflictingtype andU->selection->Redo(nohiddenwrite). FulltruthresolverhasGetPipeByHandleloadpathsoinspectbeforeusinginpassivepalette. Thisdoesnotclosefirstselectionloading/heading/other572parts. Verification184-187/local432-435;OPEN,nofixinstalled.
@@ -2364,6 +2367,8 @@
 **Status:** OPEN - the top blocker (1 Oct 04:20). UPDATE 2 Oct 00:20: Codex control D (plain AutoCAD 2027, ALL CE bundles off, `CODEX_VERIFYC4D_2026-10-01.md`): plain AutoCAD keeps REDO only in the plain baseline (LINE, U, REDO) and LOSES it after U + wheel zoom + typed -PAN (with or without an automatic save), U + switch drawing tab and back, U + 136 s idle with an automatic save, U + hatch pick (native Hatch Editor ribbon), U + QSAVE. Those sequences (Codex A1c, A2 open g, A3, A4) are NATIVE AutoCAD behaviour, NOT a CE fault: drop them from CE re-tests. What is left for CE: the pick / copy / edit cases proven working in 3.0.18 stay as the pass list. Final closing waits for Tim's confirmation in AutoCAD.
 
 ---
+
+**15 October evidence-index correction:** original schedule-placement/case-ledger.json::SCHED-RECOVERY-06 explicitly records this bug via its numeric bug field; that link is now restored in the current coverage index after rehashing its referenced evidence. Existing native verdict FAIL retained; no new execution or repair acceptance.
 
 ## BUG-255
 
@@ -7751,6 +7756,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ---
 
+**15 October evidence-index correction:** original schedule-placement/case-ledger.json::SCHED-REMARK-03 explicitly records this bug via its numeric bug field; that link is now restored in the current coverage index after rehashing its referenced evidence. Existing native verdict FAIL retained; no new execution or repair acceptance.
+
 ## BUG-587
 
 **Command / Area:** Drawn Pit Schedule remarks layout, UX-SCHED-02/05, real AutoCAD2027/Civil3.0.49+48662ddd,14October2026. MEDIUM, OPEN.
@@ -7766,6 +7773,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Ownership/status:** Claude drawn-output services; Codex window/readback evidence. OPEN, not repaired or accepted.
 
 ---
+
+**15 October evidence-index correction:** original schedule-placement/case-ledger.json::SCHED-LAYOUT-08 explicitly records this bug via its numeric bug field; that link is now restored in the current coverage index after rehashing its referenced evidence. Existing native verdict FAIL retained; no new execution or repair acceptance.
 
 ## BUG-585
 
