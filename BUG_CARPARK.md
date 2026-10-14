@@ -7663,4 +7663,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Regression / confirmation:** on syntheticmmcopy repeat the four points above, Enterstoredtag; selectnewspan -> Ctrl1, read8000/8200/4000. Verifyactual geometry byDIST/plot, source-nativepoint/object routes,4000/8000variation, rotatedbay, FJ1/P1 andsave/reopen; oneUndo restores prior drawing. Valuesmust eitheragree or visiblyrefuse/ask. Reviewbehaviourcard before repair; Claude behaviour lane. No fixinstalled.
 
+**Disk repeat,14October2026:** aftersave/close/reopen, nativeProperties of same6F0 stillreads2400/2600/4000 (screens348/349, receipt156). Failurepersists on disk; geometryrecovery passes separately.
+
 **Status:** OPEN - reproduced in real AutoCAD14October2026.
