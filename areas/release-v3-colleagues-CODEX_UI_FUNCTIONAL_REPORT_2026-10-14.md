@@ -2,8 +2,8 @@
 
 1. **Result first:** the complete product has not been verified, and 50% real AutoCAD coverage has not been reached. This report separates observed results, historical evidence and work not yet exercised. It is evidence attached to the release area, not a new plan. Author: this Codex test chat; exact request in decisions/2026-10-14_REAL_AUTOCAD_50_PERCENT.md.
 2. **Installed source checked today:** Civil 3.0.49+48662dddb2dc36d09a121642f36aecc2465cc673; Structural 1.0.116+f180b349a88617070a8517b563b2df7b5854131e. Manager 1.1.49+48662dddb2dc36d09a121642f36aecc2465cc673 was separately read at 00:30. No candidate was installed by this chat.
-3. **Current real AutoCAD result, 14 October2026:** personally exercised Civil pits/pipes/schedules, Structural settings/supports/beams/footings, wind and A/B bracing on owned copies. Detailed receipts63-212. Eighteen new bugs570-587 remain OPEN, plus evidence on existing bugs. Latest: R1 andFJ1 retainwrong2400/2600mmwidthvaluesafterreopen (BUG584); EscapeatP1lapquestion stillplacesoutput (BUG585). OneUndo/delayedRedo removes/restores theseoutputs separately. No whole-product acceptance or50% claim.
-4. **Usage:** account weekly meter34% in the latest batch, versus11% at the original start. This is account-wide, not this chat's isolated spend. No reset credit, paid provider request, Claude dispatch or installation. Group real drawing cases and avoid repeating completed large suites; preserve10% reserve.
+3. **Current real AutoCAD result, 14 October2026:** personally exercised Civil pits/pipes/schedules, Structural settings/supports/beams/footings, wind and A/B bracing on owned copies. Detailed receipts63-218. Twenty new bugs570-589 remain OPEN, plus evidence on existing bugs. Latest: R1 andFJ1 retainwrong2400/2600mmwidthvaluesafterreopen (BUG584); EscapeatP1lapquestion stillplacesoutput (BUG585). OneUndo/delayedRedo removes/restores theseoutputs separately. No whole-product acceptance or50% claim.
+4. **Usage:** account weekly meter35% in the latest batch, versus11% at the original start. This is account-wide, not this chat's isolated spend. No reset credit, paid provider request, Claude dispatch or installation. Group real drawing cases and avoid repeating completed large suites; preserve10% reserve.
 
 ## Latest schedule batch —14October2026
 
@@ -22,6 +22,12 @@
 1. **Works narrowly:** unknown levels are explained/skipped; a level below both covers has no invented downhill direction. Clicking Skip, Move and Accept takes the correct branch. Moving a 21.50m suggestion from aboveP1 to aboveP2 recalculates the target and ratio from1:9.2 to1:5.3; accepted output points south towardsP2. Enter finishes both empty and placed sessions.
 2. **Recovery and durability:** oneUndo and untouched12secondRedo remove/restore the entire arrow; save/close/reopen retains1:5.3 and the direction. Receipts207-212/screens504-522,14narrowassertions14PASS. These provide positive controls forBUG216/168/256; they do not close other command failures. No newbug allocated.
 3. **Remaining UI/functionality:** only command text was observed beforeAccept, no graphical arrow preview; no requirement or change approval inferred. Existing spot-level automatic read, away-arrow flags, MoveEscape, multipleacceptedoperations, missing/equalpitcovers, protectedobjects, otherunits/UCS, edits/plot/2024 remain unproven. UX-SURF-02 is partial; no whole-ID percentagecredit. Controls restored, settings unchanged, copy closed, own lease released; weekly34%.
+
+## Existing spot-level suggestions and saved review — 14 October 2026
+
+1. **Functional passes:** actualSpotLevelribboniconstartsCDSL; P21.500isreadautomaticallybySuggestedFall. EscapeatMove/Accept/levelquestionleavesnounwantedarrow;defaultEnteraccepts,twoarrowrepeatfinishes2placed3skipped. OneUndo/delayedRedoremoves/restoresboth. Save/reopenkeepsspotandallthreefalls.
+2. **Review faults:** warmCECheckflagsdeliberatewrong1:80arrowandnotcorrectsuggestions. ItsFull list savedTXTomitsthatwarning(588). Immediatelyafterreopen,AllandProblemssilentlymisswrongarrow(589);startingandcancellingSuggestedFallrestoresthewarning. These areoutstandingClaude-ownedrepairpackets,notfixed. RawinternalIDsaddtoexistingwording360.
+3. **Evidence and scope:** receipts213-218/screens523-545/local18assertions16PASS2FAIL. UX-SURF-02corepathsareexercisedwithfailures;wholeworkflowremainsunaccepted pendingcoldreview/export/protection/units/UCS/rotation/plot/2024. Weekly35%;settingsunchanged,controlsrestored,owncopyclosed/lease released. No build/install/provider/fullsuiterepetition.
 
 ## What the percentage means
 

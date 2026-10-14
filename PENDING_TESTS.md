@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Codex existing-level fall/review follow-up,14October2026
+
+1. **Narrow Codex-accepted:** Civil3.0.49+48662ddd,SpotLevelribbonicon,automaticP21.500read,Move/Accept/levelEscape,defaultEnter/tworepeat,oneUndo/delayedRedoandallsavedgeometryretained. WarmCDCHECKflagswrongnorth1:80whilecorrectsouthsuggestionsunflagged. Receipts213-218/screens523-545.
+2. **Retest after repair:**588actualsavedlistmustincludevisibleP2awaywarning;589CDCHECKfirstafterreopenmustdetectitwithoutanotherCEcommand. Rawhandles/IDsremain360. Claude-ownedconcretesource/guardpacketsinbugregister;nochatdispatch/install. Remainingprotection/equal-missingcovers/nopits/metres/UCS/rotation/plot/2024.
+3. **Safety/coverage:**18narrowassertions16PASS2FAIL;settingsunchanged/controlsrestored/copyclosed/ownlease released,weekly35%. No whole-IDcredit;50%targetactive.
+
 ## Codex suggested-fall follow-up,14October2026
 
 1. **Narrow Codex-accepted:** Civil3.0.49+48662ddd, explicitlevel missing/belowcover skips, clickedSkip/Move/Accept, move recalculatesP1/1:9.2 toP2/1:5.3, Enterfinish, oneUndo/delayedRedo and save/reopen. Receipts207-212/screens504-522.
