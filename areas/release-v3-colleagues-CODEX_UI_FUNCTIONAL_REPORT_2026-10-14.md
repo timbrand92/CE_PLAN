@@ -2,8 +2,14 @@
 
 1. **Result first:** the complete product has not been verified, and 50% real AutoCAD coverage has not been reached. This report separates observed results, historical evidence and work not yet exercised. It is evidence attached to the release area, not a new plan. Author: this Codex test chat; exact request in decisions/2026-10-14_REAL_AUTOCAD_50_PERCENT.md.
 2. **Installed source checked today:** Civil 3.0.49+48662dddb2dc36d09a121642f36aecc2465cc673; Structural 1.0.116+f180b349a88617070a8517b563b2df7b5854131e. Manager 1.1.49+48662dddb2dc36d09a121642f36aecc2465cc673 was separately read at 00:30. No candidate was installed by this chat.
-3. **Current real AutoCAD result, 14 October2026:** personally exercised Civil pits/pipes/schedules, Structural settings/supports/beams/footings, wind and A/B bracing on owned copies. Detailed receipts63-192. Sixteen new bugs570-585 remain OPEN, plus evidence on existing bugs. Latest: R1 andFJ1 retainwrong2400/2600mmwidthvaluesafterreopen (BUG584); EscapeatP1lapquestion stillplacesoutput (BUG585). OneUndo/delayedRedo removes/restores theseoutputs separately. No whole-product acceptance or50% claim.
-4. **Usage:** account weekly meter32% in the latest batch, versus11% at the original start. This is account-wide, not this chat's isolated spend. No reset credit, paid provider request, Claude dispatch or installation. Group real drawing cases and avoid repeating completed large suites; preserve10% reserve.
+3. **Current real AutoCAD result, 14 October2026:** personally exercised Civil pits/pipes/schedules, Structural settings/supports/beams/footings, wind and A/B bracing on owned copies. Detailed receipts63-198. Eighteen new bugs570-587 remain OPEN, plus evidence on existing bugs. Latest: R1 andFJ1 retainwrong2400/2600mmwidthvaluesafterreopen (BUG584); EscapeatP1lapquestion stillplacesoutput (BUG585). OneUndo/delayedRedo removes/restores theseoutputs separately. No whole-product acceptance or50% claim.
+4. **Usage:** account weekly meter33% in the latest batch, versus11% at the original start. This is account-wide, not this chat's isolated spend. No reset credit, paid provider request, Claude dispatch or installation. Group real drawing cases and avoid repeating completed large suites; preserve10% reserve.
+
+## Latest schedule batch —14October2026
+
+1. **Works narrowly:** whole-note paste/Stop overriding/Update existing schedule writes the custom note; save/close/reopen retains it and the two450x450pit rows. No fresh-placement acceptance from this existing fixture.
+2. **Fails:** ordinary typing can erase the custom note (586); drawn remarks cross row borders and remain wrong after reopen (587); changes include already-drawncover and precision-onlylevels (573); controlleddelayedRedo saysNothingtoredo afterUndo (256). Exact receipts193-198/screens457-479.
+3. **Repair and remainder:** Codex view-model repair586 needs currentownershipaudit before code. Claude owns drawnlayout/recovery/services. Protectedobjects/newplacement/multi-inlet/plotPDF/otherunits/2024 remain untested.10narrowassertions6PASS/4FAIL do not become10wholeUXIDs or change the historicalpercentage. Controls/restored, settingsunchanged, ownedcopyclosedandlease released.
 
 ## What the percentage means
 

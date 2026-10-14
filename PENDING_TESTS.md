@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Codex existing Pit Schedule follow-up,14October2026
+
+1. **NarrowCodex-accepted:** installedCivil3.0.49+48662ddd, complete single custom-note paste/Stop overriding/Update writes note in the existingtwo-row table and retains it aftersavedrawing/reopen. Receipts193-198/screens457-479. Ordinary typing and finishedlayout are not accepted.
+2. **OPENfailures/retest:**586normaltypinglosesnote,587drawnremarks crossrowborders,573stale/precisiondifferences,256delayedRedoNothingtoredo. Firstrepeat exactnativecharactersequence and savedtwo-rowlayout afterrepairs; preserveengineeringwarnings. Windows586ownershipaudit next; Claudeoutput/recovery packetsrecorded, nochatdispatch.
+3. **Remaining:** newplacement/pointCancel, multi-inlet/longnotes, protectedobjects, plotPDF, metres,2024 andfullUXmapping. Controlsrestored/all3settingsunchanged/owncopyclosed/lease released. Weekly33%;50%targetunfinished.
+
 ## Codex plan-level / framing entry follow-up,14October2026,12:46Melbourne
 
 1. **NarrowCodex-accepted:** installedStructural1.0.116+f180b349, CSPLANLEVELinitialUnknown/Enterkeep, numberedGround,customLoft1,oneUndoactualrecordreadback,controlleddelayedRedoGround,explicitUnknownclear,numericcustomname9,Escapekeep,and9savedrawing/reopen/Enterkeep. Receipts179-183/screens410-431;no wholeUX-LEVEL-01acceptance.
