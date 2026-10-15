@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex surface-drainage workflow — 15 October 2026
+
+1. **Recorded; no Tim action required:** nine new CDSTRIP checks,6PASS/2FAIL/1UNPROVEN. Geometry/spacing/preview and bounded Undo/Redo pass. NewBUG-647 records the missing compound/real-asset behaviour: native MOVE strands children and the strip remains a pit-type record.
+2. **Next native contexts:** reopen the saved strip specimen and compare geometry/project; Top/Bottom justification, explicitClose, one-way choice, COPY/protection/UCS/metres/plot. Repeat Escape after the drawing path is already current to isolate the first-invocation path write. CDFW, CDWT, CDSOURCE andCDAGI remain distinct untested families here.
+3. **Coverage:**725 scoped checks/65 batches; all15CV-04 decisions reviewed against nine checks, with other tools explicitly untested. Complete built workflow/context denominator remains open;50%tested unknown.
+
 ### Codex paper-space text — 15 October 2026
 
 1. **Recorded; no Tim action required:** fournewchecks2PASS/2FAIL. Layout1/PAPER25CsheetclickwritesTEXTtoModelwithoutwarning:existingBUG-629extended. CurrentlineweightDefaulttoByLayerrepeatsBUG-646. Original17settingsrestored,53oldrecordsunchanged,copy saved/closed/sourceand3prefsunchanged.

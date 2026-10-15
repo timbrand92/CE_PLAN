@@ -1,5 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Surface drainage: strip-drain native workflow — 15 October 2026
+
+1. **Current total:**725 scoped checks across65 batches:564PASS,132FAIL,7BLOCKED,22UNPROVEN. This new family adds nine checks: six passes, two failures and one unproven result. Whole50%tested remains unknown.
+2. **Drawing passes:** a25m run plus10m return produces an open100mm MLINE, five floor wastes, four high-point lines and eight arrows. The centre-justified corner waste sits exactly at the bend; end insets are50mm and the largest waste gap is9.95m. The full geometry preview appears before Accept.
+3. **Recovery passes:** Escape leaves the52 original objects and14 monitored settings unchanged. One Undo of the accepted strip restores those objects and the pre-placement project record; Redo after64.781seconds restores the exact70 objects and accepted project. One read-only capture occurred between Undo and Redo.
+4. **NewBUG-647:** moving only the strip multiline by1m strands all17 children and leaves its stored position unchanged. The strip is still stored as a pit-type record, contrary toCV4-3. The test move was undone before saving.
+5. **Qualification:** the first cancelled invocation changes only the stored drawingPath to the renamed copy. Engineering fields stay exact, but strict zero-write cancellation remains unproven. No hidden engineering change is claimed. Actual plot, saved-state reopen, Top/Bottom/Close/one-way/protected contexts and the other four surface tools remain.
+6. **Plan / evidence:** all15CV-04 decisions now have a scoped evidence/remainder review. Installed catalogue association is101of523 entries, not a coverage percentage. All1,567 linked native evidence files rehashed without faults; seven older unlinked files remain separate. Source drawing and three preference files unchanged; specimen closed and own lease released. Weekly37%used/63%remaining. No Tim action required.
+
 ## Paper-space text placement — 15 October 2026
 
 1. **Current total:**716scoped checks across64batches:558PASS,130FAIL,7BLOCKED,21UNPROVEN. Fournewchecks:twopasses/twofailures. Whole50%tested remainsunknown; datedoldertotalsbelowarehistory.
