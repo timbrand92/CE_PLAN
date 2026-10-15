@@ -1,6 +1,14 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Allowance checkpoint —16 October2026
+
+1. **Testing stopped at the requested usage limit:** account100%used/ordinaryusageunavailable. No new native batch;762checks/70ledgers unchanged. Goal remainsACTIVE.
+2. **Resume:** verify ordinary allowance restored, thenCDWT and remaining source/schedule contexts plus27canonicalcard reviews. Account reports reset22October17:13Melbourne; no reset credit available or redeemed.
+3. **Credit qualification:** account paid balance declined between readings; attribution to thischat unestablished. No further test batch started after allowance unavailable.
+
+
+
 ### Structural schedules and publishing —16 October2026
 
 1. **Scope reconciled; no Tim action needed:** all15 ST-07requirements reviewed, threePARTIAL/twelveUNTESTED. ES-40 saved footing schedule values are bounded evidence only.

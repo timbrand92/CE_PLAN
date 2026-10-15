@@ -55567,7 +55567,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-16",
-    "usedPercent": 99,
+    "usedPercent": 100,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -55589,7 +55589,12 @@
       "dateMelbourne": "2026-10-15",
       "quote": "lets take usage to 0% left then i will reset"
     },
-    "resetConfirmedByTim": true
+    "resetConfirmedByTim": true,
+    "ordinaryUsageAllowed": false,
+    "rateLimitReachedType": "rate_limit_reached",
+    "accountCreditBalanceObserved": "62431.2616635000",
+    "creditObservation": "Previous account-wide observation62498.3763810000; current62431.2616635000. Attribution to this chat not established. No further test batch started after ordinary allowance unavailable; no reset redemption.",
+    "nextAction": "Resume only after ordinary allowance restored or explicit further funding authority. First allowance-blocked goal turn; goal remains ACTIVE. Native762/70 unchanged; nextCDWT and source gaps, remaining27card audits/context eligibility."
   },
   "evidenceIntegrityAudit": {
     "directCaseLinkedFiles": 1698,
