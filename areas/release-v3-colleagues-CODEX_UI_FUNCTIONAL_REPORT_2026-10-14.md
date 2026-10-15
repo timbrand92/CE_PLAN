@@ -1,5 +1,12 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Current source editing and connection review — 15 October2026
+
+1. **Currentposition:**678individualchecks/58ledgers:529PASS,122FAIL,7BLOCKED,20UNPROVEN.1454directfiles(1268screens/186metadata)freshlyrehashedwithoutfaults;1461retainedincluding7oldunlinked. Whole50%UNKNOWN. Earliercountsbelowaredatedsnapshots.
+2. **New practical passes:**nativeMOVEofDPblockalone500mm east movesitsunselectedlabel500mm;only2of56ordinaryrecordschange. DP1/IO1tags,labelreferencesandblock-localconnectiontuplesretain. InverseMOVErestoreswholecapturedbaseline;notUndoRedo.
+3. **Laterconnectionrecognition:**actualCD/canvasmovedDP→IO identifiesDP1/IO1andshowsbothinvertlevelsUnknown/blank. ThispartofUXSRC05works. Connectioncreationnotcompleted:attempted20.000entry/Tabdidnotreachverifiedlevelinput;toolfocusversusproductcontributionunresolved. OneBLOCKEDcase,no productfailureinvented. Escapecloses;allcapturedrecords/controls/tags unchanged.
+4. **Safety/remainder:**originalcontrolsrestored,originalspecimen/trialDWGhashesandactual/legacypreferencesunchanged,trialnormallyclosedNo/ownlease released/other595untouched. PermanentIDs/embeddedproject/actualpipecreation/levelcalculations/connectedgeometryfollow/COPY/UndoRedo/plots/othercontextsremain. CV03now14checks2ledgers/all15decisionsreviewed;wholefalse. Weekly26%used74%leftaccountwide.
+
 ## Current source-placement results — 15 October 2026
 
 1. **Current position:**672individualchecks/57ledgers:524PASS,122FAIL,6BLOCKED,20UNPROVEN.1437directevidencefiles(1261screens/176metadata)freshlyrehashedwithoutfaults;1444retainedincluding7oldunlinked. Whole50%coverageUNKNOWN. Earliercountsbelowaredatedsnapshots.

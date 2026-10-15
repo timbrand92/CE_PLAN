@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex source edit and connection review — 15 October2026
+
+1. **Recorded:**6nativechecks5PASS/1BLOCKED.MOVE500mmofDPalonecarrieslabel;inversemoverestoresfullcapturedbaseline.NativeCDrecognisesDP1→IO1withUnknownlevels;Escapepreservesallcapturedrecords/controls/tags. NoTimactionrequired.
+2. **Stillpending:**verifiedknownlevelentryandactualconnectioncreation/recovery;inputattemptretainedblankboxes/focusdiameter100,toolfocusversusproductcontributionunknown.No productbuginferred. Permanentidentity/embeddedproject/connectedexistingpipefollow/COPY/UCS/protection/plots/olderruntimeunproved.678checks58ledgers529P122F7B20U;whole50%UNKNOWN.
+
 ### Codex CV03 DP/IO sample — 15 October2026
 
 1. **Recorded;noTimactionrequired:**8nativechecks7PASS/1UNPROVEN,source-placementledger. DPfirstEscape/free-standingplacement,IOoverlaprefusal/repick/directtypedoneUndo38.778sRedo,andfourrecords/ninecontrolsSavecloseopenhaveboundedpasses. DP31.984sRedo samplelaunchedviaAutoLISP GROUP,nottype-routeUndoacceptance.
