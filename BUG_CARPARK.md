@@ -8515,3 +8515,22 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Evidence / owner:** V3UX_20261014/catchment-curves-case-ledger.json CV-03, screens1349/1353, native area/post records. Installed Civil3.0.49+48662ddd, prior verified SHA8B5DE63487681867E60F52BA76A19FE16F26F1A246E2992AF7574305B14783BB. UX-SURF-03 decision2277. Claude owns command/geometry/calculation path; no behaviour edit, deployment or Claude dispatch by this test. Saved failure specimen retained locally; no curved-placement save/reopen acceptance claimed.
 
 **Status:** OPEN —15Oct2026, native numerical defect.
+
+
+## BUG-644
+
+**Command / Area:** 25L and EBT text placement, Structural1.0.116 / AutoCAD2027. **Priority: MEDIUM.**
+
+**What Codex did:** on an owned millimetre/model-space/World-UCS copy at DIMSCALE100, typed25L, entered PROVIDE 2-N12 TRIMMERS, then pressed physicalF/Return at the insertion prompt. Later typedEBT, enteredEB1, clicked insertion and accepted0 rotation.
+
+**Expected:** approved ST-04 decisions5/7 require complete live text preview, applicable Flip/Rotate/reference controls before the final insertion click, and final output matching the preview. Prompts should describe generic note entry accurately. Preserve the existing aliases and sound native output.
+
+**What happened:** F is rejected as Invalid point. 25L asks Top/Bottom only after insertion click; EBT asks second-point rotation after insertion. 25L misleadingly asks for a number appended to25, although its native output correctly preserves the entered note without that prefix. EBT enteredEB1 correctly outputsEB1, notEBEB1. No numeric-prefix or parent-ownership defect inferred. Full moving-preview agreement remains unproved.
+
+**Test that catches it:** drive the approved representative generic note and prefixed tag workflows. Check complete preview and applicableF/R/Tab controls before final acceptance; compare native content, alignment, rotation and height with the preview. Keep first/lateEscape, original controls, oneUndo/delayedRedo and save/reopen guards. Check shared alias configuration rather than rebuilding each alias independently.
+
+**Steps to confirm:** use the local CODEX_TEXT_PLACEMENT_20261015 copy or a fresh baseline. Type25L and PROVIDE 2-N12 TRIMMERS; F must flip the preview instead of rejecting a point, with side choice visible before final click. EBT with1 andEB1 must preview/outputEB1; test an explicitly selected beam separately for ownership. At1:100, existing2.5mm plotted preset gives250mm native text. No new engineering convention approved here.
+
+**Evidence / owner:** local text-placement-case-ledger.json TX-03, screens1401–1403/1406 and native post records. InstalledStructural1.0.116+f180b349a88617070a8517b563b2df7b5854131e, SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Approved04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md. Claude owns command behaviour; concrete repair/retest recorded, no code edit/deploy/message sent.
+
+**Status:** OPEN —15Oct2026; observed installed route misses approved interaction.

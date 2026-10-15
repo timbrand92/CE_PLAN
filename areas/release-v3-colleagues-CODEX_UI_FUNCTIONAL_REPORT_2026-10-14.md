@@ -1,5 +1,13 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Latest native text placement — 15 October 2026
+
+1. **Current total:**696 scoped checks across61batches:544PASS,125FAIL,7BLOCKED,20UNPROVEN. Seven new checks, six passes and one failure. Overall50%tested remains unknown; failed executed checks still count as testing performed. Earlier totals below are dated snapshots.
+2. **Practical passes:** typed25L keeps PROVIDE 2-N12 TRIMMERS as native editable-type TEXT,250mm high at1:100. EBT enteredEB1 producesEB1 without doubling. FirstEscape preserves the captured baseline. OneUndo and delayed39.665-secondRedo recover the note visually. Native EDIT itself was not driven.
+3. **Approved UI gap:** F rejects Flip as Invalid point; side/rotation choices occur after the insertion click. NewMEDIUM BUG-644 records this ST-04 interaction gap and the misleading generic-note prefix prompt. Correct content is retained; no prefix-output or ownership fault invented.
+4. **Safety/evidence:** all52baseline ordinaryrecords retained; exactlytwoTEXT added.12monitoredcontrols restored, originaldrawing unchanged,3settingsfiles byteequal, savedlocalcopy closed and ownlease released.1494directfiles(1293screens/201metadata) freshlyrehashed without faults;1501retained including7olderunlinkedfiles.
+5. **Remaining:** numericEBT1, lateEscape, fullpreview/reference/rotation, explicitparentownership, nativeEDIT/MOVE/COPY, R2LTXT, savedstate reopen, other units/scales/UCS/protection/plots/olderruntime and sharedaliasmapping. No Tim action required. Goal checkedACTIVE; no reset, provider call, code change or deployment.
+
 ## Whole-workflow coverage map — 15 October 2026
 
 1. **Testing and acceptance are separate:** a failed test still counts as testing performed. Your target is 50% tested. Passing every required check is a separate acceptance measure. Neither overall percentage can yet be calculated reliably because the built-workflow inventory and required test contexts are incomplete.

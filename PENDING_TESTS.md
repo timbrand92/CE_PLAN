@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex ST-04 text placement — 15 October 2026
+
+1. **Recorded; no Tim action required:** seven new realAutoCAD checks, sixPASS/oneFAIL. Generic25L content/height, enteredEB1 prefix, firstEscape, oneUndo/delayedRedo and drawing/settings preservation have bounded passes. F rejects Flip and placement options come after the insertion click: newBUG-644 against approvedST4-5/7.
+2. **Next:** numericEBT1, lateEscape, reference/rotation/preview, explicitbeamownership, nativeEDIT/MOVE/COPY, R2LTXT, save-reopen, other units/scales/UCS/protection/plots/olderruntime and sharedaliasconfiguration. Current696checks/61batches; whole50%tested unknown. No broadST04 acceptance.
+
+
 ### Codex next broad workflow batch — 15 October 2026
 
 1. **ST-04 text and tags:** full approved card read. Next native checks: independent 25L note; EBT prefix with entered1 and enteredEB1; Flip/Rotate/reference preview; native editable output; Cancel and original controls; one Undo/Redo; ownership and bounded R2LTXT conversion. Check alias mappings through the shared implementation; do not make Tim repeat all56 catalogue candidates. No Tim action required.
