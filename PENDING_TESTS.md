@@ -1679,3 +1679,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Native sample:** RD Radius on1000mmcircle previews/places nativeR1000; oneUndo/22.309secondRedo pass. CompletedcommandleavesTIMLEADERinsteadStandard, extendsBUG621. Lengthmodearc-selectionEscapeaddsnone.6checks5PASS1FAIL; radius trial notsaved/reopened.
 2. **Remaining:** actualDiameter/Lengthoutputs, unsupported/broken/protected geometry, association afterradiusedit, grips, scales/UCS/paper/plots/olderAutoCAD. Approved ST3-5geometry-first differs installedtype-first: retain workflowgap; no silent redesign. Q/QD/MLL/MLR andlinkedlevel/section familiespending. CE_ARCDIMregistryentryassociated throughdeclaredRDalias; primarytypednameunverified.
 3. **Cleanup:** controls/Lengthdefaultrestored, unsavedtrialdiscarded/savedbaselineunchanged. Settingssave normalised an installation timestamp to equivalentUTC; exactsemanticdiffcheckedbefore originalbytesrestored. No unrelated preference overwritten.
+
+
+### Codex ST-03 left/right note leaders — 15 October 2026
+
+1. **Recorded:** MLL/MLR native objects and paragraph text; readable MLR preview/output at1:100 with2.5mm text/3mm arrows; clean immediate Undo/delayed Redo for MLR; both objects persist after actual save/close/reopen.10 checks:7PASS2FAIL1UNPROVEN.
+2. **BUG622 acceptance:** preserve arrow point and note; F flips left/right during placement, F again flips back. Actual preview/output must agree; Escape adds none. Verify native editable object, oneUndo/Redo and reopen at supported scales/UCS/paper space/protected layers. Claude command/service repair card recorded; no installed fix.
+3. **Remaining:** clean MLL recovery (earlier input-cancel history contaminated grouping), complete cancellation paths, native editing/grips, placement precision, plots, legacy runtime and fullstyle portability/nonmutation. Q/QD remain untested by this batch. Original controls/preferences restored and all owned drawings closed.

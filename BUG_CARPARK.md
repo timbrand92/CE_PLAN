@@ -8240,3 +8240,15 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 8. **Cleanup:** controls restored manually; synthetic dimensions saved separately and read back, then closed. Original GAP drawing and Structural settings hashes unchanged. No client drawing modified.
 
 9. **15October native RD extension:** Radius mode on known1000mmcircle previews/places native radial DIMENSION. OneUndo/22.309secondquietRedo pass. Native readback after command/recovery reports TIM LEADER instead of captured Standard; this extends the restoration defect to completed RD use. E00/measurement1000/layer25DIMS/circleD68retained. radius-case-ledger.json RD-04FAIL,1107/1113/readback. No nativefault asserted for Q/QD/MLL/MLR. Trialdiscarded, originalcontrols/preferencesrestored.
+
+
+## BUG-622 — MLL and MLR reject the approved F side-toggle
+
+1. **Status / area:** MEDIUM OPEN. Structural annotation, approved ST-03 decision ST3-6. Actual AutoCAD2027; installedStructural1.0.116+f180b349, DLL SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Claude command/service ownership.
+2. **What the drafter does:** run MLL, pick arrow point, enter a note, reach left-side text placement. Press F then Enter. Repeat MLR at right-side placement.
+3. **Expected:** F switches the side of the complete live note/landing/arrow preview, retaining the arrow point and entered text; click places on the chosen side. This is explicitly approved in ST3-6.
+4. **Observed:** both commands print Invalid point and remain on their original side. They provide no Flip option. Ordinary placement afterwards creates valid native MLeaders. This is a missing approved workflow feature, not a claim of a recent regression.
+5. **Evidence:** mleader-case-ledger.json ML-02/ML-05 FAIL; local1119–1120 and1125–1126. Native E08/E09 records retain left/right directions and paragraph content. Installed-commit MLeaderCalloutService.cs sampler uses a fixed readonly side and point-only prompt without Flip keyword; inspected command/service files exactly match installedf180 by git diff.
+6. **Repair card — Modify:** keep working arrow→note→native preview, native object/layer and successful MLR Undo/Redo/save-reopen behaviour. Add the approved F interaction to the shared placement path, with the preview and final output agreeing. Preserve typed text, arrow point, styles/settings and Escape rollback. No production edit, dispatch or installation in this batch.
+7. **Test that catches it:** start each side; F switches once, F again switches back. Text, arrow point and paragraph breaks remain identical. Place after flipping and inspect native object, one Undo/delayed Redo and save/reopen. Escape after either flip adds no object.
+8. **Real AutoCAD confirmation:** on an owned metric drawing at1:100 with2.5mm text/3mm arrows, MLL→arrow→two-line note→F→click right; MLR→arrow→note→F→click left. Both previews and saved results must face the new side. Repeat supported scales, rotatedUCS/paper space and protected-layer refusal. Whole ST-03 remains unaccepted.
