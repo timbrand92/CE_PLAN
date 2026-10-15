@@ -9,39 +9,39 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "4E18F94964B7C312D38A9241BEDE6B4F0CE60BD424E5C539D868C31C70BB717C",
+    "currentBugsSha256": "EE10D9DF18D3051C4E0C2EAD51502AB538826322A14746BDA642846C99445680",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "C077D25B08145DC0A3B8F5F6BF154740D82430190B21934C812B12D046E73F2D"
+    "currentCaseIndexSha256": "1D7663BD31D3A5590B61EFCCC105732556C54C0EFE668A4B0FA7B61224911E09"
   },
   "counts": {
     "traceableUxIds": 526,
     "bugHeadings": 596,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 21,
-    "caseLedgers": 63,
-    "narrowCases": 712,
+    "caseLedgers": 64,
+    "narrowCases": 716,
     "narrowVerdicts": {
-      "PASS": 556,
-      "FAIL": 128,
+      "PASS": 558,
+      "FAIL": 130,
       "BLOCKED": 7,
       "UNPROVEN": 21
     },
-    "uniqueEvidenceFiles": 1528,
+    "uniqueEvidenceFiles": 1539,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1315,
-    "uniqueMetadataFiles": 213,
+    "uniqueScreenshotFiles": 1322,
+    "uniqueMetadataFiles": 217,
     "caseLinkedUxIds": 19,
     "caseLinkedBugIds": 90,
-    "newNativeExecutionsInLatestReconciliation": 7,
+    "newNativeExecutionsInLatestReconciliation": 4,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1535,
+    "retainedDeclaredEvidenceFiles": 1546,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
     "currentDetailedApprovedWorkflowAudits": 5,
     "historicalCanonicalCardsIndexed": 39
@@ -50,7 +50,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "712 scoped native checks across63ledgers are not complete V3workflows. Eligiblebuiltworkflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed checks count as testing performed.",
+    "reason": "716 scoped native checks across64ledgers are not complete V3workflows. Eligiblebuiltworkflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed checks count as testing performed.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -20848,7 +20848,8 @@
         "OPEN"
       ],
       "currentCaseKeys": [
-        "breakline-case-ledger.json::BL-06"
+        "breakline-case-ledger.json::BL-06",
+        "text-paper-case-ledger.json::TP-01"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -20858,7 +20859,7 @@
     },
     {
       "id": "BUG-630",
-      "headingLine": 8365,
+      "headingLine": 8367,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20869,11 +20870,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8367
+      "currentStatusSourceLine": 8369
     },
     {
       "id": "BUG-631",
-      "headingLine": 8374,
+      "headingLine": 8376,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20884,11 +20885,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8376
+      "currentStatusSourceLine": 8378
     },
     {
       "id": "BUG-632",
-      "headingLine": 8383,
+      "headingLine": 8385,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20899,11 +20900,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8385
+      "currentStatusSourceLine": 8387
     },
     {
       "id": "BUG-633",
-      "headingLine": 8393,
+      "headingLine": 8395,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20914,11 +20915,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8395
+      "currentStatusSourceLine": 8397
     },
     {
       "id": "BUG-634",
-      "headingLine": 8402,
+      "headingLine": 8404,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20929,11 +20930,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8404
+      "currentStatusSourceLine": 8406
     },
     {
       "id": "BUG-635",
-      "headingLine": 8411,
+      "headingLine": 8413,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20945,11 +20946,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8413
+      "currentStatusSourceLine": 8415
     },
     {
       "id": "BUG-636",
-      "headingLine": 8421,
+      "headingLine": 8423,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20960,11 +20961,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8423
+      "currentStatusSourceLine": 8425
     },
     {
       "id": "BUG-637",
-      "headingLine": 8430,
+      "headingLine": 8432,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20975,7 +20976,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8432
+      "currentStatusSourceLine": 8434
     },
     {
       "id": "BUG-638",
@@ -20989,12 +20990,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "headingLine": 8440,
-      "currentStatusSourceLine": 8442
+      "headingLine": 8442,
+      "currentStatusSourceLine": 8444
     },
     {
       "id": "BUG-639",
-      "headingLine": 8450,
+      "headingLine": 8452,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21003,12 +21004,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8452,
+      "currentStatusSourceLine": 8454,
       "evidenceLevel": "documentation-filesystem-audit"
     },
     {
       "id": "BUG-640",
-      "headingLine": 8460,
+      "headingLine": 8462,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21019,11 +21020,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8462
+      "currentStatusSourceLine": 8464
     },
     {
       "id": "BUG-641",
-      "headingLine": 8469,
+      "headingLine": 8471,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21034,11 +21035,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8485
+      "currentStatusSourceLine": 8487
     },
     {
       "id": "BUG-642",
-      "headingLine": 8487,
+      "headingLine": 8489,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21050,11 +21051,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8503
+      "currentStatusSourceLine": 8505
     },
     {
       "id": "BUG-643",
-      "headingLine": 8510,
+      "headingLine": 8512,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21065,11 +21066,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8526
+      "currentStatusSourceLine": 8528
     },
     {
       "id": "BUG-644",
-      "headingLine": 8529,
+      "headingLine": 8531,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21080,11 +21081,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8545
+      "currentStatusSourceLine": 8547
     },
     {
       "id": "BUG-645",
-      "headingLine": 8548,
+      "headingLine": 8550,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21095,22 +21096,23 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8566
+      "currentStatusSourceLine": 8568
     },
     {
       "id": "BUG-646",
-      "headingLine": 8569,
+      "headingLine": 8571,
       "statusCandidates": [
         "OPEN"
       ],
       "currentCaseKeys": [
-        "text-scale-case-ledger.json::TS-02"
+        "text-scale-case-ledger.json::TS-02",
+        "text-paper-case-ledger.json::TP-02"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8585
+      "currentStatusSourceLine": 8587
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -21257,6 +21259,13 @@
       "scope": "ST04scale7newchecks5PASS2FAIL;existing531nativefollowup/new646lineweight",
       "narrowCases": 712,
       "caseLedgers": 63,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "Paper25C4newchecks2PASS2FAIL;existing629wrongspace/646currentlineweight extended",
+      "narrowCases": 716,
+      "caseLedgers": 64,
       "wholeOverallPercent": null
     }
   ],
@@ -33619,14 +33628,19 @@
           "hiddenInCatalogue": false,
           "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
           "nativeTriggerEvidenceCaseKeys": [
-            "text-scale-case-ledger.json::TS-01"
+            "text-scale-case-ledger.json::TS-01",
+            "text-paper-case-ledger.json::TP-01"
           ],
           "associatedWorkflowCaseKeys": [
             "text-scale-case-ledger.json::TS-01",
             "text-scale-case-ledger.json::TS-02",
             "text-scale-case-ledger.json::TS-04",
             "text-scale-case-ledger.json::TS-06",
-            "text-scale-case-ledger.json::TS-07"
+            "text-scale-case-ledger.json::TS-07",
+            "text-paper-case-ledger.json::TP-01",
+            "text-paper-case-ledger.json::TP-02",
+            "text-paper-case-ledger.json::TP-03",
+            "text-paper-case-ledger.json::TP-04"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -45572,11 +45586,15 @@
             "text-placement-case-ledger.json::TX-05",
             "text-edit-case-ledger.json::TE-03",
             "text-scale-case-ledger.json::TS-03",
-            "text-scale-case-ledger.json::TS-05"
+            "text-scale-case-ledger.json::TS-05",
+            "text-paper-case-ledger.json::TP-01",
+            "text-paper-case-ledger.json::TP-02",
+            "text-paper-case-ledger.json::TP-03",
+            "text-paper-case-ledger.json::TP-04"
           ],
           "candidateCaseVerdicts": {
-            "PASS": 16,
-            "FAIL": 3,
+            "PASS": 18,
+            "FAIL": 5,
             "BLOCKED": 0,
             "UNPROVEN": 1
           },
@@ -45585,7 +45603,7 @@
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
           "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": 23,
+          "requirementReviewedNativeCaseCount": 27,
           "additionalCurrentAuthorityMappings": [
             {
               "command": "R2LTXT",
@@ -46181,13 +46199,13 @@
           "reason": "12historicallymappedentries,no currentcaseassociation; sheets/Excel/publishingneedfulljobcontext."
         }
       ],
-      "currentExecutionCount": 712,
-      "newNativeExecutionsThisReconciliation": 7
+      "currentExecutionCount": 716,
+      "newNativeExecutionsThisReconciliation": 4
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 34,
+    "usedPercent": 36,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -46203,7 +46221,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 248,
+    "newNativeChecks": 252,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -46212,14 +46230,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1528,
-    "retainedDeclaredFiles": 1535,
-    "directScreens": 1315,
-    "directMetadata": 213,
+    "directCaseLinkedFiles": 1539,
+    "retainedDeclaredFiles": 1546,
+    "directScreens": 1322,
+    "directMetadata": 217,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All712cases/63ledgers directnativeevidencefilesfreshlyrehashed;7oldunlinked retained separate. Staticmappingaudit notcountedasnativeevidence. Whole50%unknown."
+    "scope": "All716cases/64ledgers directnativeevidencefreshlyrehashed;7oldunlinkedretainedseparate. Sourceauditseparate;whole50%unknown."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -46906,9 +46924,9 @@
     "ST-04": {
       "source": "04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md",
       "sourceSha256": "A69631F2B9A9D48AFE79CBEBE5B819719AAFC212F9AE1D605643245850C0D369",
-      "scope": "All15 approved decisions reviewed against23scoped nativecases/3ledgers plus distinctsource mappingaudit. EBTscale and25Ccurrentlineweight now fail. Wholeworkflow remains unaccepted.",
-      "nativeCaseCount": 23,
-      "nativeLedgerCount": 3,
+      "scope": "All15approveddecisionsreviewedagainst27scopednativecases/4ledgers plusdistinctsourcemappingaudit. Paper25Cwrongspaceandlineweightfailures. Wholeworkflowunaccepted.",
+      "nativeCaseCount": 27,
+      "nativeLedgerCount": 4,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -46947,10 +46965,11 @@
           "id": "ST4-4",
           "required": "Create native TEXT/MTEXT using individually **Approved** CE styles and assets. Do not insert and explode anonymous palette blocks to create ordinary text. Candidate assets remain Preview-only.",
           "assessment": "PARTIAL",
-          "reason": "Native TEXT outputs observed. Individually Approved style/asset provenance and any internal temporary block use remain unverified.",
+          "reason": "Native TEXT outputs observed. Individually Approved style/asset provenance and any internal temporary block use remain unverified. Paper25CcreatesnativeTEXTbutwritesModelspacewhileLayout1/PAPERremainsactive;BUG629extension.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
-            "text-edit-case-ledger.json::TE-06"
+            "text-edit-case-ledger.json::TE-06",
+            "text-paper-case-ledger.json::TP-01"
           ],
           "wholeRequirementAccepted": false
         },
@@ -46989,12 +47008,13 @@
           "id": "ST4-8",
           "required": "Heights are based on plotted paper size and drawing/viewport scale—not a blindly hard-coded model-space height. Existing 18/25/35/50/70 conventions begin as Baseline Candidates until catalogued as Approved.",
           "assessment": "FAIL",
-          "reason": "WithDIMSCALE50,25Cheight125 whileEBT250;earlierDIMSCALE100EBTalso250. NativeEBT scaleadaptation gap extends531. Mathematicalpaper-equivalent2.5mm/5mmat1:50 is not an actualplot. Othercontexts andApprovedheightconventionsremain.",
+          "reason": "WithDIMSCALE50,25Cheight125 whileEBT250;earlierDIMSCALE100EBTalso250. NativeEBT scaleadaptation gap extends531. Mathematicalpaper-equivalent2.5mm/5mmat1:50 is not an actualplot. Othercontexts andApprovedheightconventionsremain. Papercontext25Cheight2.5storedinModel,notacceptedpaperplacement/plot.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
             "text-edit-case-ledger.json::TE-06",
             "text-scale-case-ledger.json::TS-01",
-            "text-scale-case-ledger.json::TS-04"
+            "text-scale-case-ledger.json::TS-04",
+            "text-paper-case-ledger.json::TP-01"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47051,7 +47071,7 @@
           "id": "ST4-14",
           "required": "Esc at any prompt leaves nothing behind. Restore the previous layer, style and snaps; no forced save; no hidden placement state; one Undo removes the complete result.",
           "assessment": "FAIL",
-          "reason": "Earlierboundedfirst/lateEscape/oneUndo/Redo guards remain. New25Ccompletion changesCELWEIGHTDefault-3toByLayer-1 whileother13settingsrestore;BUG646. Earlier12-settingchecks omittedCELWEIGHT. BroaderCancel/error/aliascontexts remain.",
+          "reason": "Earlierboundedfirst/lateEscape/oneUndo/Redo guards remain. New25Ccompletion changesCELWEIGHTDefault-3toByLayer-1 whileother13settingsrestore;BUG646. Earlier12-settingchecks omittedCELWEIGHT. BroaderCancel/error/aliascontexts remain. PapercontextrepeatDefaulttoByLayer;other16controlsand53oldrecordsunchanged,17originalcontrolsrestored.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-04",
             "text-edit-case-ledger.json::TE-08",
@@ -47060,7 +47080,10 @@
             "text-placement-case-ledger.json::TX-04",
             "text-scale-case-ledger.json::TS-02",
             "text-scale-case-ledger.json::TS-05",
-            "text-scale-case-ledger.json::TS-07"
+            "text-scale-case-ledger.json::TS-07",
+            "text-paper-case-ledger.json::TP-02",
+            "text-paper-case-ledger.json::TP-03",
+            "text-paper-case-ledger.json::TP-04"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47068,12 +47091,13 @@
           "id": "ST4-15",
           "required": "Test the shared behaviours rather than making Timothy test every alias. Automated checks verify every alias-to-preset mapping; Timothy performs about five representative AutoCAD placements in under ten minutes.",
           "assessment": "PARTIAL",
-          "reason": "Read-only mapping audit reconciles all56historical catalogue candidates,66text-service declarations and65known dispatch targets without source registration collisions. Native evidence remains16scopedcases/2ledgers; nested helpers, representative zero-angle/scale/protection/project contexts and compiled data guards remain. Native25C now represents zero-angle placement,so all3simple methods haveboundednativeexamples. This isnotallalias/contextacceptance.",
+          "reason": "Read-only mapping audit reconciles all56historical catalogue candidates,66text-service declarations and65known dispatch targets without source registration collisions. Native evidence now27scopedcases/4ledgers; nested helpers, representative zero-angle/scale/protection/project contexts and compiled data guards remain. Native25C now represents zero-angle placement,so all3simple methods haveboundednativeexamples. This isnotallalias/contextacceptance.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
             "text-edit-case-ledger.json::TE-06",
             "text-edit-case-ledger.json::TE-07",
-            "text-scale-case-ledger.json::TS-01"
+            "text-scale-case-ledger.json::TS-01",
+            "text-paper-case-ledger.json::TP-01"
           ],
           "wholeRequirementAccepted": false,
           "supportingSourceAudit": "installedCommandInventory.textPresetSourceAudit"

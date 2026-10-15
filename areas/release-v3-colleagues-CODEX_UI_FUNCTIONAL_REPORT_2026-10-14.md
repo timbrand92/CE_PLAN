@@ -1,5 +1,12 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Paper-space text placement — 15 October 2026
+
+1. **Current total:**716scoped checks across64batches:558PASS,130FAIL,7BLOCKED,21UNPROVEN. Fournewchecks:twopasses/twofailures. Whole50%tested remainsunknown; datedoldertotalsbelowarehistory.
+2. **Wrong destination:** onLayout1/PAPER outside the viewport, typed25C PAPER NOTE and clicked the sheet. No note appeared there and no warning was given. NativeTEXT893 was created inModelspace instead. ExistingBUG-629 now includes this text route alongside its originalBL evidence.
+3. **Current setting leak:** currentlineweight changed DefaulttoByLayer, extendingBUG-646. Other16monitoredsettings and53pre-existingdrawingrecords were unchanged. All17originalsettingsrestored;failurecopy saved/closed,sourceandthreepreferencefilesunchanged.
+4. **Evidence / plan:** ST-04now27scopedchecks/fourbatches. All1,539linkednativeevidencefilesfreshlyrecheckedwithoutfaults;sevenolderunlinkedfilesseparate. Actualplot,activeviewport,reopenofthisspecimenandUndoRedo remainuntested. Next complete thesecontexts andparent-labelnativeediting/broadereligibleworkflowmatrix. Weekly36%used/64%remaining account-wide. GoalACTIVE;noTimactionrequired.
+
 ## Native text scale comparison — 15 October 2026
 
 1. **Current total:**712 scoped checks across63 batches:556PASS,128FAIL,7BLOCKED,21UNPROVEN. Seven new checks:five passes and two failures. Overall50%tested remains unknown; older totals below are dated snapshots.

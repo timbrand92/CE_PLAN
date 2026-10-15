@@ -8362,6 +8362,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Fix confirmation:** actual clicked placement in paper space must belong to that layout; repeat model space and active viewport, supported scales/UCS, Escape, native edits, one Undo/Redo and reopen. Do not redirect foreign/protected content or bypass normal protections.
 
 
+7. **15October2026 native text extension — OPEN:** typed25C on Layout1/PAPER, nativeCTABLayout1/TILEMODE0/CVPORT1 andDIMSCALE1 before/after; entered PAPER NOTE and physicallyclicked500,700 outside the model viewport. Command silentlycompleted, sheetnoteabsent. NewTEXT893 has410Model/67=0,height2.5,25TEXT/Standard/0deg; all53existingordinaryrecordsunchanged. This broadens the observed wrong-space symptom beyondBL; no assertion that ST3-11 itself governs text. Expected text placement is on the clicked sheet or a visible refusal. text-paper-case-ledger.json TP-01/screens1432–1435/nativebeforeafter. Actualplot/activeviewport/UndoRedo/reopen unexecuted. Claude behaviour owner; nofix/deploy.
+
 ## BUG-630 — Section mark bypasses the approved complete preview and placement review
 
 1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/installed Structural1.0.116+f180,15October2026. Approved ST3-9; existing V3 implementation gap, no recent regression claimed.
@@ -8583,3 +8585,5 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Evidence / owner:** text-scale-case-ledger.json TS-02, screens1424/1425 and text-scale baseline/post25C readbacks. InstalledStructural1.0.116+f180b349a88617070a8517b563b2df7b5854131e SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. The version-named source CeTextService.cs5476 setsCELWEIGHT-1; full restoration-path cause remains to be diagnosed. Related restoration failures BUG-169 and BUG-621 retain their own scopes. Earlier12-control text tests omittedCELWEIGHT and never proved its preservation. Claude owns behaviour; no code change or deployment.
 
 **Status:** OPEN —15October2026; native current-setting leak.
+
+**15October2026 paper-space repeat — OPEN:** text-paper-case-ledger.json TP-02 confirms25C Default(-3)→ByLayer(-1) also inLayout1/PAPER/CVPORT1/DIMSCALE1;other16monitoredcontrolsunchanged. TP-03preserves53existingordinaryrecords. TP-04restoresall17originalcontrols;failurecopyexplicitlysavedandnormallyclosed/sourceand3prefsunchanged. Explicitweight,Cancel/error,nextnativeLINEandactualplotremainuntested. Screens1432/1435/1436andnativecaptures. No newbugnumber/nofixclaim.

@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex paper-space text — 15 October 2026
+
+1. **Recorded; no Tim action required:** fournewchecks2PASS/2FAIL. Layout1/PAPER25CsheetclickwritesTEXTtoModelwithoutwarning:existingBUG-629extended. CurrentlineweightDefaulttoByLayerrepeatsBUG-646. Original17settingsrestored,53oldrecordsunchanged,copy saved/closed/sourceand3prefsunchanged.
+2. **Next:** actualactiveviewport/plot,save-reopen andboundedUndoRedo;propermetrefixture;explicitlineweight/Cancel/nextLINE;ownedlabelEDIT/MOVE/COPYandindependentprojectdefaults;completeeligiblebuiltworkflow/contextmatrix.716checks/64batches,whole50%testedUNKNOWN. Failedexecutedchecks countastestingperformed,acceptanceseparate.
+
 ### Codex text scale and current lineweight — 15 October 2026
 
 1. **Recorded; no Tim action required:** seven new checks, fivePASS/twoFAIL. DIMSCALE50 gives25C height125mm versusEBT250mm: existingBUG-531 now has scoped native evidence.25C changes current lineweightDefault toByLayer: newBUG-646. All14 monitored settings restored; owned specimen saved and closed.
