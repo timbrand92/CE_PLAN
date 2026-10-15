@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex DP-to-IO connection — 15 October 2026
+
+1. **Input limitation resolved; no Tim action required:** actual New Pipe physical digit entry works. Completed 100 mm UPVC connection from saved DP1 to IO1 with 20.00/19.97 labels; repeat Escape and one Undo/Redo pass narrowly. Six new checks: five PASS, one FAIL against existing BUG-582. Earlier SE05 remains historical BLOCKED, not a current input blocker.
+2. **Remaining:** current preview/direction consistency BUG-582, full connection data/provenance, connected MOVE/COPY, saved-state reopen, plots/protected contexts/other units/UCS/older runtime, CDRG and other source families. Current 684 checks / 59 batches; whole 50% unknown.
+
+
 ### Codex source edit and connection review — 15 October2026
 
 1. **Recorded:**6nativechecks5PASS/1BLOCKED.MOVE500mmofDPalonecarrieslabel;inversemoverestoresfullcapturedbaseline.NativeCDrecognisesDP1→IO1withUnknownlevels;Escapepreservesallcapturedrecords/controls/tags. NoTimactionrequired.

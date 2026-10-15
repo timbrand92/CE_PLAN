@@ -1,5 +1,15 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Latest DP-to-IO connection result — 15 October 2026
+
+1. **Current total:** 684 detailed checks across 59 batches: 534 PASS, 123 FAIL, 7 BLOCKED and 20 UNPROVEN. The 50% whole-workflow target remains unknown. Earlier totals below are dated snapshots.
+2. **Input obstacle resolved:** individual keystrokes in the actual New Pipe window entered 20 m. The known-end calculation showed 19.97 m; completing the callout created the 100 mm UPVC connection between saved DP1 and IO1, with both level labels and a downward arrow.
+3. **Recovery:** Escape stopped the repeat while keeping the pipe. One Undo removed the completed connection; Redo after 9.432 seconds restored it. Full Undo data and exact before/after Redo equality were not captured.
+4. **Existing fault reproduced:** BUG-582 also affects this source-to-source route: the editor still calls IO1 and direction Unknown despite the calculated level. Output labels are 20.00/19.97. No additional bug or numerical data loss inferred.
+5. **Plan and safety:** this advances CV-03 and UX-SRC-05; CDRG and the whole card remain unaccepted. All 56 baseline ordinary records stayed unchanged. Original drawing and both settings files are unchanged; controls restored, local specimen saved and closed. Save/reopen, plots, protected contexts, other units/UCS and older AutoCAD remain untested for this route.
+6. **Evidence and usage:** 1,466 directly linked files freshly rehashed without faults; 1,473 retained including seven earlier unlinked files. Weekly usage is 27% used / 73% remaining, account-wide.
+
+
 ## Current source editing and connection review — 15 October2026
 
 1. **Currentposition:**678individualchecks/58ledgers:529PASS,122FAIL,7BLOCKED,20UNPROVEN.1454directfiles(1268screens/186metadata)freshlyrehashedwithoutfaults;1461retainedincluding7oldunlinked. Whole50%UNKNOWN. Earliercountsbelowaredatedsnapshots.
