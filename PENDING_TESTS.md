@@ -1672,3 +1672,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Recorded native sample:** AD5000mm andLD4000mm placement/nativepreviews; ADoneUndo/delayedRedo/source-lineassociation; bothdimensionssave/close/reopen.12boundedchecks10PASS2FAIL, no wholeST03acceptance.
 2. **BUG621 repair acceptance:** beforeAD/LD chooseStandard/currentgreen3/Continuous/0.25mm; cancel first/late and complete placements. All prior styles/layers/snaps/appearance mustrestore; existing style definitions unchanged. Retain native geometry/association/recovery/reopen passes. Claudecommand/serviceowner; no installedrepair.
 3. **Remaining grouped coverage:** Q/QD/RD/MLL/MLR, linkedlevelmarks/update and sections/breaklines/dimensionrepair; LDplacementUndo/Redo; grip/stretch/rotation; protected layers/Xref/REFEDIT; scale/units/UCS/paper/plot;2022–2024native lane. Engineering intent still needs Tim where relevant. Evidence remains local in existing V3UX_20261014 store; no individual backlog handed to Tim.
+
+
+### Codex ST-03 radius follow-through —15October2026
+
+1. **Native sample:** RD Radius on1000mmcircle previews/places nativeR1000; oneUndo/22.309secondRedo pass. CompletedcommandleavesTIMLEADERinsteadStandard, extendsBUG621. Lengthmodearc-selectionEscapeaddsnone.6checks5PASS1FAIL; radius trial notsaved/reopened.
+2. **Remaining:** actualDiameter/Lengthoutputs, unsupported/broken/protected geometry, association afterradiusedit, grips, scales/UCS/paper/plots/olderAutoCAD. Approved ST3-5geometry-first differs installedtype-first: retain workflowgap; no silent redesign. Q/QD/MLL/MLR andlinkedlevel/section familiespending. CE_ARCDIMregistryentryassociated throughdeclaredRDalias; primarytypednameunverified.
+3. **Cleanup:** controls/Lengthdefaultrestored, unsavedtrialdiscarded/savedbaselineunchanged. Settingssave normalised an installation timestamp to equivalentUTC; exactsemanticdiffcheckedbefore originalbytesrestored. No unrelated preference overwritten.

@@ -8228,7 +8228,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Repair status:** no code changed, no repair installed, no native PASS/FAIL added. Link: existing Codex V3UX report/verification receipts406–407.
 
 
-## BUG-621 — Cancelling dimensions leaves the drafter’s style and appearance changed
+## BUG-621 — Dimension commands leave the drafter’s style and appearance changed
 
 1. **Status / scope:** MEDIUM OPEN. Native AD and LD in AutoCAD2027, installed Structural1.0.116+f180b349; approved ST-03 decisions ST3-2 and ST3-14. Claude command/service ownership; no production edit or installation.
 2. **What the drafter does:** in an owned metric model-space drawing, restore Standard dimension style, layer0, DIMSCALE100/LTSCALE1000. Run AD then Escape at the first extension-point prompt. Separately restore Standard and set current colour green3, linetype Continuous and lineweight0.25mm; run LD then Escape at its first prompt.
@@ -8238,3 +8238,5 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Test that catches it:** run the actual snapshot/setup/restore path with deliberately nondefault current properties. Verify exact restoration after first/late Escape, success and failure; retain each existing dimension style definition. Guard AD and LD separately, then related leaders without assuming shared source proves native behaviour.
 7. **Real AutoCAD confirmation:** repeat both cancellation recipes; inspect current dimension style and Properties before drawing the next ordinary line. All prior properties must match. Place aligned5000mm and horizontal4000mm dimensions; retain native previews, association when source moves, oneUndo/Redo and save/reopen. Repeat protected content and supported older runtimes. Existing sample geometry/reopen passes do not close this cancellation fault.
 8. **Cleanup:** controls restored manually; synthetic dimensions saved separately and read back, then closed. Original GAP drawing and Structural settings hashes unchanged. No client drawing modified.
+
+9. **15October native RD extension:** Radius mode on known1000mmcircle previews/places native radial DIMENSION. OneUndo/22.309secondquietRedo pass. Native readback after command/recovery reports TIM LEADER instead of captured Standard; this extends the restoration defect to completed RD use. E00/measurement1000/layer25DIMS/circleD68retained. radius-case-ledger.json RD-04FAIL,1107/1113/readback. No nativefault asserted for Q/QD/MLL/MLR. Trialdiscarded, originalcontrols/preferencesrestored.
