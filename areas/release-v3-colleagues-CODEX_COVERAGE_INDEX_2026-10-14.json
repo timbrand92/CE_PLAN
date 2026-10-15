@@ -9,39 +9,39 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "B3F98A02AFBDE2019760968908818366E8EAB13689C161F51B9FBE7B6F385B20",
+    "currentBugsSha256": "4F1D27280B638D7BB50E599F980D1CB22E6C67014E0189E5BF659B5B516D96B3",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "474FF3A73152CEF67A3C865193877E1B2B2E0DAC009AD408D2A860FA248FFCE1"
+    "currentCaseIndexSha256": "670FFA0D819DFFE43864058F34A069CD3A2492F10DF66014BA7CE70D3D4F1C6B"
   },
   "counts": {
     "traceableUxIds": 526,
     "bugHeadings": 590,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 19,
-    "caseLedgers": 51,
-    "narrowCases": 629,
+    "caseLedgers": 52,
+    "narrowCases": 634,
     "narrowVerdicts": {
-      "PASS": 489,
-      "FAIL": 116,
+      "PASS": 493,
+      "FAIL": 117,
       "BLOCKED": 6,
       "UNPROVEN": 18
     },
-    "uniqueEvidenceFiles": 1334,
+    "uniqueEvidenceFiles": 1349,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1198,
-    "uniqueMetadataFiles": 136,
+    "uniqueScreenshotFiles": 1207,
+    "uniqueMetadataFiles": 142,
     "caseLinkedUxIds": 17,
     "caseLinkedBugIds": 81,
-    "newNativeExecutionsInLatestReconciliation": 9,
+    "newNativeExecutionsInLatestReconciliation": 5,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1341
+    "retainedDeclaredEvidenceFiles": 1356
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -20669,7 +20669,8 @@
         "radius-case-ledger.json::RD-04",
         "quick-leaders-case-ledger.json::QL-02",
         "quick-leaders-case-ledger.json::QL-04",
-        "arc-modes-case-ledger.json::AM-03"
+        "arc-modes-case-ledger.json::AM-03",
+        "arc-edit-case-ledger.json::AE-02"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -20679,7 +20680,7 @@
     },
     {
       "id": "BUG-622",
-      "headingLine": 8258,
+      "headingLine": 8261,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20695,7 +20696,7 @@
     },
     {
       "id": "BUG-623",
-      "headingLine": 8270,
+      "headingLine": 8273,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20706,11 +20707,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8268
+      "currentStatusSourceLine": 8271
     },
     {
       "id": "BUG-624",
-      "headingLine": 8282,
+      "headingLine": 8285,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20721,11 +20722,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8280
+      "currentStatusSourceLine": 8283
     },
     {
       "id": "BUG-625",
-      "headingLine": 8293,
+      "headingLine": 8296,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20736,11 +20737,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8291
+      "currentStatusSourceLine": 8294
     },
     {
       "id": "BUG-626",
-      "headingLine": 8303,
+      "headingLine": 8306,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20751,11 +20752,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8301
+      "currentStatusSourceLine": 8304
     },
     {
       "id": "BUG-627",
-      "headingLine": 8312,
+      "headingLine": 8315,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20766,11 +20767,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8310
+      "currentStatusSourceLine": 8313
     },
     {
       "id": "BUG-628",
-      "headingLine": 8322,
+      "headingLine": 8325,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20781,11 +20782,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8324
+      "currentStatusSourceLine": 8327
     },
     {
       "id": "BUG-629",
-      "headingLine": 8331,
+      "headingLine": 8334,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20796,11 +20797,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8333
+      "currentStatusSourceLine": 8336
     },
     {
       "id": "BUG-630",
-      "headingLine": 8341,
+      "headingLine": 8344,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20811,11 +20812,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8343
+      "currentStatusSourceLine": 8346
     },
     {
       "id": "BUG-631",
-      "headingLine": 8350,
+      "headingLine": 8353,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20826,11 +20827,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8352
+      "currentStatusSourceLine": 8355
     },
     {
       "id": "BUG-632",
-      "headingLine": 8359,
+      "headingLine": 8362,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20841,11 +20842,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8361
+      "currentStatusSourceLine": 8364
     },
     {
       "id": "BUG-633",
-      "headingLine": 8369,
+      "headingLine": 8372,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20856,11 +20857,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8371
+      "currentStatusSourceLine": 8374
     },
     {
       "id": "BUG-634",
-      "headingLine": 8378,
+      "headingLine": 8381,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20871,11 +20872,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8380
+      "currentStatusSourceLine": 8383
     },
     {
       "id": "BUG-635",
-      "headingLine": 8387,
+      "headingLine": 8390,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20887,11 +20888,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8389
+      "currentStatusSourceLine": 8392
     },
     {
       "id": "BUG-636",
-      "headingLine": 8397,
+      "headingLine": 8400,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20902,11 +20903,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8399
+      "currentStatusSourceLine": 8402
     },
     {
       "id": "BUG-637",
-      "headingLine": 8406,
+      "headingLine": 8409,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20917,7 +20918,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8408
+      "currentStatusSourceLine": 8411
     },
     {
       "id": "BUG-638",
@@ -20931,12 +20932,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "headingLine": 8416,
-      "currentStatusSourceLine": 8418
+      "headingLine": 8419,
+      "currentStatusSourceLine": 8421
     },
     {
       "id": "BUG-639",
-      "headingLine": 8426,
+      "headingLine": 8429,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20945,12 +20946,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8428,
+      "currentStatusSourceLine": 8431,
       "evidenceLevel": "documentation-filesystem-audit"
     },
     {
       "id": "BUG-640",
-      "headingLine": 8436,
+      "headingLine": 8439,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20961,11 +20962,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8438
+      "currentStatusSourceLine": 8441
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 5:30:25 pm",
+  "capturedMelbourne": "15/10/2026, 5:48:56 pm",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -20997,6 +20998,12 @@
       "nativeCases": 629,
       "ledgers": 51,
       "latest": "RDLength/Diameter9checks7PASS2FAIL;621extended/new640. Whole50%UNKNOWN."
+    },
+    {
+      "dateMelbourne": "15/10/2026, 5:48:56 pm",
+      "nativeCases": 634,
+      "ledgers": 52,
+      "latest": "Five native editing/cancellation/refusal checks4PASS1FAIL;621extended,no newbug. Whole50%UNKNOWN."
     }
   ],
   "installedCommandInventory": {
@@ -27607,7 +27614,12 @@
             "arc-modes-case-ledger.json::AM-06",
             "arc-modes-case-ledger.json::AM-07",
             "arc-modes-case-ledger.json::AM-08",
-            "arc-modes-case-ledger.json::AM-09"
+            "arc-modes-case-ledger.json::AM-09",
+            "arc-edit-case-ledger.json::AE-01",
+            "arc-edit-case-ledger.json::AE-02",
+            "arc-edit-case-ledger.json::AE-03",
+            "arc-edit-case-ledger.json::AE-04",
+            "arc-edit-case-ledger.json::AE-05"
           ],
           "associatedWorkflowCaseKeys": [
             "radius-case-ledger.json::RD-01",
@@ -27624,7 +27636,12 @@
             "arc-modes-case-ledger.json::AM-06",
             "arc-modes-case-ledger.json::AM-07",
             "arc-modes-case-ledger.json::AM-08",
-            "arc-modes-case-ledger.json::AM-09"
+            "arc-modes-case-ledger.json::AM-09",
+            "arc-edit-case-ledger.json::AE-01",
+            "arc-edit-case-ledger.json::AE-02",
+            "arc-edit-case-ledger.json::AE-03",
+            "arc-edit-case-ledger.json::AE-04",
+            "arc-edit-case-ledger.json::AE-05"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -27643,7 +27660,7 @@
               }
             ],
             "currentApprovedWorkflowMappingVerified": true,
-            "verifiedScope": "ST3-5 Radius,Length,Diameter viaRD;currentLength/Diameterpreview/output/recovery/persistence boundedpasses,lateEscapestyle621andgeometry-firstmismatch640. PrimaryCE_ARCDIMunproved."
+            "verifiedScope": "ST3-5 Radius,Length,Diameter viaRD;currentLength/Diameterpreview/output/recovery/persistence boundedpasses,lateEscapestyle621andgeometry-firstmismatch640. PrimaryCE_ARCDIMunproved. ReopenedLength/Diameterdimensionsfollow500mm sourceMOVE;DiameterlateEscapestyleleak persists;Lengthwholecirclerefusal preservesstate. No radius/grip/rotation or moved-statepersistenceproof."
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false,
@@ -40090,10 +40107,10 @@
         }
       ],
       "associatedEntryCount": 91,
-      "associatedCaseCount": 629,
+      "associatedCaseCount": 634,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 51
+      "currentLedgerCount": 52
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -40330,7 +40347,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 1,
+    "usedPercent": 2,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -40346,7 +40363,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 165,
+    "newNativeChecks": 170,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -40355,14 +40372,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1334,
-    "retainedDeclaredFiles": 1341,
-    "directScreens": 1198,
-    "directMetadata": 136,
+    "directCaseLinkedFiles": 1349,
+    "retainedDeclaredFiles": 1356,
+    "directScreens": 1207,
+    "directMetadata": 142,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All629cases51ledgers direct evidence freshlyrehashed;7priorunlinkedsetup/cleanup excluded. Currentfailedsetup1297alsoexcluded. WholecoverageUNKNOWN."
+    "scope": "All634cases52ledgers direct evidence freshlyrehashed;7priorunlinked retainedfiles excluded;failedsetup1297excluded. WholecoverageUNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -40494,8 +40511,8 @@
       "source": "04_REFERENCE/CARDS/ST-03_ANNOTATION_DIMENSIONS.md",
       "sourceSha256": "ABF506736239C1D3AD777EC398FB05C2CA230B64EDAB9A83661727D48CC43835",
       "scope": "All15 approved decisions reviewed against current evidence. Assessment is not extra execution or whole-card acceptance. Current-index absence does not prove no other chat/history ever ran it.",
-      "nativeCaseCount": 106,
-      "nativeLedgerCount": 12,
+      "nativeCaseCount": 111,
+      "nativeLedgerCount": 13,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -40517,7 +40534,8 @@
             "quick-leaders-case-ledger.json::QL-02",
             "quick-leaders-case-ledger.json::QL-04",
             "mll-clean-case-ledger.json::MC-07",
-            "arc-modes-case-ledger.json::AM-03"
+            "arc-modes-case-ledger.json::AM-03",
+            "arc-edit-case-ledger.json::AE-02"
           ]
         },
         {
@@ -40545,7 +40563,7 @@
         {
           "id": "ST3-5",
           "assessment": "PARTIAL_WITH_FAILURE",
-          "reason": "RD Radius R1000 plusLength1571/Diameter2000 nativepreview/output/recovery passnarrowly. CurrentLength/Diameteractualsave/reopenretain155printedrecords/ninecontrols; geometry-firstapprovedsequencefails640,lateLengthEscapestylefails621. Unsupported/associationediting/protection/scales/units/UCS/paper/plots/olderruntime remain.",
+          "reason": "RD Radius R1000 plusLength1571/Diameter2000 nativepreview/output/recovery passnarrowly. CurrentLength/Diameteractualsave/reopenretain155printedrecords/ninecontrols; geometry-firstapprovedsequencefails640,lateLengthEscapestylefails621. Unsupported/associationediting/protection/scales/units/UCS/paper/plots/olderruntime remain. DiameterlateEscape preserves155records butstyleleaks621;Lengthwholecirclerefusal isclear/state-preserving. Source-only500mmMOVEofreopenedfixturesupdatesbothdimensions.",
           "caseKeys": [
             "radius-case-ledger.json::RD-01",
             "radius-case-ledger.json::RD-03",
@@ -40558,7 +40576,12 @@
             "arc-modes-case-ledger.json::AM-06",
             "arc-modes-case-ledger.json::AM-07",
             "arc-modes-case-ledger.json::AM-08",
-            "arc-modes-case-ledger.json::AM-09"
+            "arc-modes-case-ledger.json::AM-09",
+            "arc-edit-case-ledger.json::AE-01",
+            "arc-edit-case-ledger.json::AE-02",
+            "arc-edit-case-ledger.json::AE-03",
+            "arc-edit-case-ledger.json::AE-04",
+            "arc-edit-case-ledger.json::AE-05"
           ]
         },
         {
@@ -40661,12 +40684,14 @@
         {
           "id": "ST3-13",
           "assessment": "PARTIAL_WITH_FAILURE",
-          "reason": "AD associative source movement passes. Generic leader position retention, level/section compounds and full MOVE/COPY/EDIT/ERASE matrix remain. No destructive native action added by this audit. Native FFL MOVE separates triangle from tail/value (627). Native SM cut-line MOVE strands remaining section components(631).",
+          "reason": "AD associative source movement passes. Generic leader position retention, level/section compounds and full MOVE/COPY/EDIT/ERASE matrix remain. No destructive native action added by this audit. Native FFL MOVE separates triangle from tail/value (627). Native SM cut-line MOVE strands remaining section components(631). ReopenedRDLength/Diameterunselecteddimensions followonlysourcearc/circle500mmMOVE,narrowpass;radius/grip/rotation andfullmatrixremain.",
           "caseKeys": [
             "dimensions-case-ledger.json::DM-06",
             "quick-leaders-case-ledger.json::QL-09",
             "levels-case-ledger.json::LV-07",
-            "sectionmarks-case-ledger.json::SM-05"
+            "sectionmarks-case-ledger.json::SM-05",
+            "arc-edit-case-ledger.json::AE-03",
+            "arc-edit-case-ledger.json::AE-04"
           ]
         },
         {
@@ -40679,13 +40704,14 @@
             "mll-clean-case-ledger.json::MC-03",
             "mll-clean-case-ledger.json::MC-05",
             "mll-clean-case-ledger.json::MC-06",
-            "arc-modes-case-ledger.json::AM-03"
+            "arc-modes-case-ledger.json::AM-03",
+            "arc-edit-case-ledger.json::AE-02"
           ]
         },
         {
           "id": "ST3-15",
           "assessment": "PARTIAL",
-          "reason": "106 boundednativechecks12ledgers inAutoCAD2027;fullselection/scale/space/UCS/protection/edit/recovery/performance/plot/olderrelease matrixincomplete.",
+          "reason": "111boundednativechecks13ledgers inAutoCAD2027;fullselection/edit/protection/scale/units/UCS/space/recovery/performance/plot/olderrelease matrixincomplete.",
           "caseKeys": []
         }
       ]
@@ -40695,7 +40721,7 @@
     "dateMelbourne": "2026-10-15",
     "issue": "Shared index still551/42ledgers although prior saved report/local index563/43. Q/QD12cases and8diagnosticfiles were absent from shared summary; local case receipts retained.",
     "resolution": "Recomputed current counters from all572cases44ledgers, restored Q/QD associations and added9newMLLchecks; no rerun or duplicate new-case credit.",
-    "currentLocalCaseIndexSha256": "474FF3A73152CEF67A3C865193877E1B2B2E0DAC009AD408D2A860FA248FFCE1"
+    "currentLocalCaseIndexSha256": "670FFA0D819DFFE43864058F34A069CD3A2492F10DF66014BA7CE70D3D4F1C6B"
   },
   "candidateRepairEvidence": [
     {

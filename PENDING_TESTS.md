@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Codex native dimension editing follow-through,15 October2026
+
+1. **Narrow Codex-accepted:**reopened native arc/circle dimensions follow a500mm source-only MOVE;oneUndo/delayedRedo works visually. DiameterlateEscape preserves objects; Lengthwholecircle refusal is clear and state-preserving. Fivechecks4PASS1FAIL.
+2. **Retest after repair:**621DiameterlateEscape must restore previousstyle plusallothercontrols; existing640geometry-first andotherannotationbugs stayOPEN. Working native associativity must be retained. No repair installed.
+3. **Remaining:**radius/angle/grip/rotation edits, moved-state persistence, broken/protectedgeometry, otherunits/scales/UCS/paper/plot/olderruntime. NextprimaryLevelMark/RC andremainingbuiltworkflows; no wholefamilyacceptance. Source/prefs unchanged, controlsrestored, trialdiscarded/lease released.634checks,whole50%UNKNOWN.
+
 ## Codex RD Length/Diameter follow-through,15October2026
 
 1. **Narrow Codex-accepted:**installed Structural1.0.116/f180,actualRD Length1571mm/Diameter2000mm previews/output, LengthlaterEscape preserves entities, eachoneUndo/delayedRedo,andactualsave/close/reopen readback. Ninechecks7PASS2FAIL; no wholeST03acceptance.

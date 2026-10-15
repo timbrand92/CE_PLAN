@@ -8255,6 +8255,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 8. **15 October later placement Escape evidence:** actual RD → Length → select a radius1,000mm quarter-circle → Escape at the native placement preview. Every captured ordinary object/Xdata representation is unchanged, but DIMSTYLE changes Standard → TIM LEADER while the other eight staged controls match. AM-02/03, screenshots1300–1301 and arc-modes baseline/cancel readbacks extend this existing bug. Original controls restored after testing; no repair installed.
 
+
+9. **Diameter cancellation follow-through,15 October2026:** RD → Diameter → select native circle → Escape at placement preview preserves all155 captured ordinary records/Xdata. DIMSTYLE still changes Standard → TIM LEADER while the other eight staged controls match. AE-01/02, screenshots1315–1316 and arc-edit baseline/cancel readbacks extend BUG621. Originalninecontrols and rememberedLength restored; exactpreferences/sourceDWG preserved. No repair installed.
+
 ## BUG-622 — MLL and MLR reject the approved F side-toggle
 
 1. **Status / area:** MEDIUM OPEN. Structural annotation, approved ST-03 decision ST3-6. Actual AutoCAD2027; installedStructural1.0.116+f180b349, DLL SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Claude command/service ownership.
