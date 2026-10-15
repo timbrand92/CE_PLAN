@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex overload follow-through — 15 October2026
+
+1. **Recorded, no Tim action required:** six nativechecks4PASS/1FAIL/1UNPROVEN, localcatchment-overloadledger.120m² versus110m²warningPASS;overlaidwarningreadabilityexisting642FAIL. Current664checks56ledgers517P122F6B19U;whole50%UNKNOWN.
+2. **Still to prove:** editablegratecapacitySettingsauthority/recalculation,exactthreshold/otherclasses,curvedrepair643,perpitregions641/readability642,units/protection/plot/olderruntime/fulljob. CDSDesign/Pipes&Pits/Advanced inspected/nochange/Cancel;alternate/allroutes notexhausted. Settingsfilebaselineafterplacementlimitswholeintervalclaims. NoTimengineeringacceptanceof110m²assumption.
+
 ## Curved paving, refusal and cancellation —15October2026
 
 1. **Six checks: four PASS, two FAIL.** Native AutoCAD measures the rounded paving outline as22.283m²; CE reports16m²,28.197%low (newHIGHBUG643). The hatch follows the curve correctly. Correct-looking shading is not acceptance of the calculated area.

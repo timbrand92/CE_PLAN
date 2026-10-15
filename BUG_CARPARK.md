@@ -8490,6 +8490,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Status:** OPEN —15Oct2026;notfixed.
 
 
+**15 October overload follow-through:** local catchment-overload-case-ledger CO-03/screenshot1360 confirms the same blue overlay/overlapping label also obscures the120m² over-capacity warning. Command-line warning and native MTEXT correctly say120m² exceeds ClassC110m²; this does not close642 or earlier209. No new bug number.
+
 ## BUG-643
 
 **Command / Area:** CDCATCHMENT New — curved paved boundary, Civil 3.0.49 / AutoCAD 2027. **Priority: HIGH.**

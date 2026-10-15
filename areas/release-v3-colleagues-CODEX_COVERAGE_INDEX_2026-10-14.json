@@ -9,31 +9,31 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "D9EFDE73D0AC364E6D46B8DFFA4F28C9DB0F2FFE056C49BE533E6107DE429533",
+    "currentBugsSha256": "B1FD19C57A9F1978B30081F3126B599B7E1DCECE59A75C76D1CBD5272CEDB023",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "F66578709F36D2A1C8319309CCA07AED23836C97DD0391BF10B7B6D344EB887C"
+    "currentCaseIndexSha256": "870C8E700D395AEF24163ADC4EEBCAE75B3A38E306015D0E41901675FFE159D6"
   },
   "counts": {
     "traceableUxIds": 526,
     "bugHeadings": 593,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 20,
-    "caseLedgers": 55,
-    "narrowCases": 658,
+    "caseLedgers": 56,
+    "narrowCases": 664,
     "narrowVerdicts": {
-      "PASS": 513,
-      "FAIL": 121,
+      "PASS": 517,
+      "FAIL": 122,
       "BLOCKED": 6,
-      "UNPROVEN": 18
+      "UNPROVEN": 19
     },
-    "uniqueEvidenceFiles": 1404,
+    "uniqueEvidenceFiles": 1415,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1239,
-    "uniqueMetadataFiles": 165,
+    "uniqueScreenshotFiles": 1246,
+    "uniqueMetadataFiles": 169,
     "caseLinkedUxIds": 18,
     "caseLinkedBugIds": 85,
     "newNativeExecutionsInLatestReconciliation": 6,
@@ -41,14 +41,14 @@
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1411,
+    "retainedDeclaredEvidenceFiles": 1422,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount."
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "658 bounded native checks across55ledgers are not complete V3workflows. Full built/installed eligibility and acceptance mapping incomplete;50%UNKNOWN.",
+    "reason": "664 bounded native checks across56ledgers are not complete V3workflows. Full built/installed eligibility and acceptance mapping incomplete;50%UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -11669,8 +11669,8 @@
         "sourceLine": 2277,
         "required": "Lightoverlay shows each gratedpit pavedcatchment; overloadedgrate warned using Settingscapacity",
         "status": "PARTIAL / CURRENT VISUAL FAIL",
-        "evidence": "Ten nativechecks8PASS2FAIL;84m2symmetricsplit42each,oneUndo/delayedRedo/HideShow/reopen. 641perpitregionsmissing;642readability. Curved boundary native AREA22.283m2 versus CE16m2, high643; open refusal and lateEscape have bounded passes.",
-        "remaining": "Repair643/641/642 and wording360; overload/Settings authority/units/self-intersection/protection/plots/olderruntime; no whole acceptance.",
+        "evidence": "Ten nativechecks8PASS2FAIL;84m2symmetricsplit42each,oneUndo/delayedRedo/HideShow/reopen. 641perpitregionsmissing;642readability. Curved boundary native AREA22.283m2 versus CE16m2, high643; open refusal and lateEscape have bounded passes. Overloadsample120m2 exceeds displayed110m2; command-line and native label warn correctly. Labelreadability stillfails642; editablecapacitySettings route unproven.",
+        "remaining": "Repair643/641/642 and wording360; editableSettingscapacity/recomputation/thresholdboundaries/otherclasses/units/self-intersection/protection/plots/olderruntime; no whole acceptance.",
         "wholeScopeVerified": false
       },
       "historicalCandidateReports": [],
@@ -11679,7 +11679,11 @@
         "catchment-overlay-case-ledger.json::CT-01",
         "catchment-overlay-case-ledger.json::CT-02",
         "catchment-overlay-case-ledger.json::CT-03",
-        "catchment-curves-case-ledger.json::CV-03"
+        "catchment-curves-case-ledger.json::CV-03",
+        "catchment-overload-case-ledger.json::CO-01",
+        "catchment-overload-case-ledger.json::CO-02",
+        "catchment-overload-case-ledger.json::CO-03",
+        "catchment-overload-case-ledger.json::CO-05"
       ],
       "rulingSource": {
         "path": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
@@ -21008,7 +21012,8 @@
         "OPEN"
       ],
       "currentCaseKeys": [
-        "catchment-overlay-case-ledger.json::CT-03"
+        "catchment-overlay-case-ledger.json::CT-03",
+        "catchment-overload-case-ledger.json::CO-03"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": false,
@@ -21018,7 +21023,7 @@
     },
     {
       "id": "BUG-643",
-      "headingLine": 8493,
+      "headingLine": 8495,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21029,7 +21034,7 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8509
+      "currentStatusSourceLine": 8511
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -21089,6 +21094,19 @@
       "nativeCases": 658,
       "ledgers": 55,
       "latest": "Six curve/guard checks4PASS2FAIL;newHIGH643 curvedarea28.2percentlow,wording360extended. Whole50%UNKNOWN."
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "Overload native follow-through",
+      "cases": 664,
+      "ledgers": 56,
+      "verdicts": {
+        "PASS": 517,
+        "FAIL": 122,
+        "BLOCKED": 6,
+        "UNPROVEN": 19
+      },
+      "wholePercent": null
     }
   ],
   "installedCommandInventory": {
@@ -22174,7 +22192,12 @@
             "catchment-curves-case-ledger.json::CV-03",
             "catchment-curves-case-ledger.json::CV-04",
             "catchment-curves-case-ledger.json::CV-05",
-            "catchment-curves-case-ledger.json::CV-06"
+            "catchment-curves-case-ledger.json::CV-06",
+            "catchment-overload-case-ledger.json::CO-01",
+            "catchment-overload-case-ledger.json::CO-02",
+            "catchment-overload-case-ledger.json::CO-03",
+            "catchment-overload-case-ledger.json::CO-04",
+            "catchment-overload-case-ledger.json::CO-06"
           ],
           "associatedWorkflowCaseKeys": [
             "catchment-overlay-case-ledger.json::CT-01",
@@ -22192,7 +22215,12 @@
             "catchment-curves-case-ledger.json::CV-03",
             "catchment-curves-case-ledger.json::CV-04",
             "catchment-curves-case-ledger.json::CV-05",
-            "catchment-curves-case-ledger.json::CV-06"
+            "catchment-curves-case-ledger.json::CV-06",
+            "catchment-overload-case-ledger.json::CO-01",
+            "catchment-overload-case-ledger.json::CO-02",
+            "catchment-overload-case-ledger.json::CO-03",
+            "catchment-overload-case-ledger.json::CO-04",
+            "catchment-overload-case-ledger.json::CO-06"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -40254,10 +40282,10 @@
         }
       ],
       "associatedEntryCount": 93,
-      "associatedCaseCount": 658,
+      "associatedCaseCount": 663,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 55
+      "currentLedgerCount": 56
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -40484,7 +40512,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 17,
+    "usedPercent": 20,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -40500,7 +40528,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 194,
+    "newNativeChecks": 200,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -40509,14 +40537,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1404,
-    "retainedDeclaredFiles": 1411,
-    "directScreens": 1239,
-    "directMetadata": 165,
+    "directCaseLinkedFiles": 1415,
+    "retainedDeclaredFiles": 1422,
+    "directScreens": 1246,
+    "directMetadata": 169,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All658cases55ledgers direct evidence freshly rehashed. Seven prior unlinked retained files excluded. Whole50%UNKNOWN."
+    "scope": "All664cases56ledgers direct evidence freshly rehashed. Seven prior unlinked retained files excluded. Whole50%UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -40858,7 +40886,7 @@
     "dateMelbourne": "2026-10-15",
     "issue": "Shared index still551/42ledgers although prior saved report/local index563/43. Q/QD12cases and8diagnosticfiles were absent from shared summary; local case receipts retained.",
     "resolution": "Recomputed current counters from all572cases44ledgers, restored Q/QD associations and added9newMLLchecks; no rerun or duplicate new-case credit.",
-    "currentLocalCaseIndexSha256": "F66578709F36D2A1C8319309CCA07AED23836C97DD0391BF10B7B6D344EB887C",
+    "currentLocalCaseIndexSha256": "870C8E700D395AEF24163ADC4EEBCAE75B3A38E306015D0E41901675FFE159D6",
     "uxCaseLinkCounting": "18UXrecords have explicitcurrentCaseKeys, including3crosscuttingrequirementlinks STD03/SEL01/LYR01 stored in sharedUXrecords. Localledger ids alone show15; do notdropapprovedcaseassociations because linked from requirement side."
   },
   "candidateRepairEvidence": [

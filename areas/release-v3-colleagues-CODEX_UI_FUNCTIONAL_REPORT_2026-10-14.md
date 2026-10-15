@@ -1,5 +1,12 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Current overload follow-through — 15 October 2026
+
+1. **Current total:**664 individual native checks across56ledgers:517PASS,122FAIL,6BLOCKED,19UNPROVEN.1415direct files(1246screens/169metadata) freshly rehashed,zero faults. Fifty per cent wholeV3/UXcoverage remainsUNKNOWN. Earlier counts below are dated snapshots.
+2. **New practical result:**120m² rectangular paving assigned toP1 produces correct command-line/native-label warning against displayedClassC110m² and suggests checking/splitting. Existing642/209readability stillfails. Six newchecks:4PASS/1FAIL/1UNPROVEN;no newbug.
+3. **Settings remainder:** Preferences→CDS→Design/Pipes&Pits/Advanced inspected without finding capacitycontrol;alternate/allroutes notexhausted,no values saved. EditableSettingscapacity/recomputation unproven. ActualCDSsettingsfilebaseline startsafterplacement,beforetabinspection;equalafterCancel,notwholeintervalproof. Legacyfile equality is separate. Layerfooter usedwrongunderscore-name,nilnotprotectionproof.
+4. **Safe scope:**all53originalordinaryrecords unchanged,onlyhatch/labeladded,ninestagedcontrols equal/originalsrestored. Sourceunchanged,savedcopy normallyclosed/ownlease released/other595sessionuntouched. No newUndoRedo/reopen/plot/thresholdboundary/otherclasses/units/releasesproof. Weekly20%used80%leftaccount-wide.
+
 ## Current position —15 October2026, Melbourne
 
 1. **Testing:**658 real AutoCAD checks across55 ledgers: **513PASS,121FAIL,6BLOCKED,18UNPROVEN**. These are bounded checks, not complete features.
