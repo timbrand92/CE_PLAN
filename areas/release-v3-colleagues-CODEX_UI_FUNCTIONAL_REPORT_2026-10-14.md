@@ -27,6 +27,13 @@
 6. **Saved specimens:** latest batch drawing has 109 entities and 26 hatches, saved separately as CODEX_HATCH_BATCH_20261015.dwg, 174155 bytes, SHA256 35C880FB93C40DBEFFC68C1FD706DF28C0256FEDA55DD42F03CD4985524380A9. The original audit and hatch specimens remain unchanged. Batch save succeeded; batch reopen and actual gap bridging have not been tested.
 7. **Latest repair candidate:** BUG-576’s column-picker instruction includes the ninth keyboard choice in draft [PR1261](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1261). Modern and legacy builds pass. The changed window is not installed or accepted in AutoCAD.
 
+## Installed-command and plan reconciliation —15October
+
+1. **Current installed list:** all three registry files were reread and their hashes match the recorded versions:137 Civil,375 Structural and11 Manager entries,523 in total. Registry presence does not prove the command runs.
+2. **Evidence gaps:**77 catalogue records have at least one case association in this Codex index;446 have none here. The gaps comprise120 Civil,316 Structural and10 Manager entries;317 are visible and129 hidden. This does not establish that other chats or older reports never tested them.
+3. **Plan matching:** the dated command-to-card document supplies339 parseable command rows, despite its historical354-row header. Exact module/name/declared-alias matching supplies historical card candidates for330 current entries;193 have no match. These links are retained with source lines and hash for review, not treated as current workflow acceptance.
+4. **Meaning for50%:**523 current checks and523 catalogue entries are coincidentally equal; they measure different things. The built/installed whole-workflow denominator remains incomplete. Next reconcile unmatched entries and retrieve existing native evidence, then test the missing workflow stages. No percentage or acceptance increased by this document audit.
+
 ## What this means on a drawing — explanation for Tim, 15 October
 
 1. **Context:** 523 specific checks were driven in real AutoCAD 2027 on Tim’s PC, using installed plugins and owned metric synthetic drawings/copies. These include ordinary use, awkward inputs, Escape, Undo/Redo and selected save/reopen scenarios. They do not establish complete production-job or older-version reliability.
