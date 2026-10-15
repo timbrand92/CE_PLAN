@@ -1,5 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Latest connected-source editing — 15 October 2026
+
+1. **Current total:** 689 detailed checks across 60 batches: 538 PASS, 124 FAIL, 7 BLOCKED, 20 UNPROVEN. Whole-workflow coverage remains unknown; 50% is unproved. Earlier totals below are dated snapshots.
+2. **Saved connection:** reopening a renamed copy retained all 61 captured ordinary drawing records, including the pipe and its labels. This is not proof of every stored ownership or project record.
+3. **Movement failure:** ordinary MOVE of DP1 alone by 500 mm carried its DP label but left the pipe, invert labels and arrow behind. Native coordinates confirm the gap. Recorded against existing BUG-358 and CV3-14; renamed-path/owner restoration could contribute and remains to be checked.
+4. **Recovery and safety:** one Undo restored the arrangement; Redo after 27.17 seconds replayed the move. An inverse move restored the full captured baseline. Original controls, drawing files and both settings files are preserved; temporary trial closed normally.
+5. **Remaining:** original-path ownership control, connected editing/COPY, moved-state save/reopen, full project data, plots/protection/other units/UCS and older releases. Five new checks: four passes, one failure. All 1,478 directly linked files rehashed without faults; seven earlier unlinked files remain separate. Last weekly meter: 27% used / 73% remaining.
+
+
 ## Latest DP-to-IO connection result — 15 October 2026
 
 1. **Current total:** 684 detailed checks across 59 batches: 534 PASS, 123 FAIL, 7 BLOCKED and 20 UNPROVEN. The 50% whole-workflow target remains unknown. Earlier totals below are dated snapshots.

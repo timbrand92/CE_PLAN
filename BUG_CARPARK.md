@@ -1198,6 +1198,10 @@
 
 ---
 
+**15 October 2026, CV-03 compound movement gap (MEDIUM, needs behaviour/ownership review):** actual typed MOVE on a reopened, renamed filesystem copy of the saved DP1-to-IO1 sample: choose Block Reference in AutoCAD selection cycling (one found), base0,0, second500,0. DP8C3 and unselected DP label8CA move500mm east; native pipe97A, both IL texts and arrow remain unchanged, leaving a500mm gap. No CE warning observed in this move. This extends the already recorded non-pit/source carry limitation, not a new root-cause claim. CV3-14 requires block/label/data/connections to act as one compound. Renamed-path/ownership restoration contribution is unproved; repeat on the original same-path source and inspect owner links before deciding the repair.
+
+**Guard/retest:** source-to-pipe native fixture; assert selected DP and linked endpoint retain the intended connection, IO stays fixed, labels/arrow/data agree, one Undo/Redo, then save/reopen. Include renamed copy, source-original path and any reviewed repair route; no proximity reassignment, protected-object bypass or automatic engineering change. Native evidence screens1393–1399, connected-move ledger CM02. OneUndo/27.17secondRedo passes visually; inverseMOVE restores61ordinaryrecords/ninecontrols exactly. Source and trial file hashes/preferences unchanged; moved-state disk persistence not tested. This does not accept the existing protected-pit findings or Structural Undo ladder.
+
 ## BUG-357
 
 **Command / Area:** modern-pipe fixture job (Sonnet a43d8cd6fb3475128, headless on copies, 3 Oct; report `FIXTURE_MODERN_PIPE_2026-10-03.md`), installed Civil 3.0.23.

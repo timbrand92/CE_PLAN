@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex connected-source editing — 15 October 2026
+
+1. **Recorded; no Tim action required:** renamed-copy disk reopen preserves 61 ordinary records. Direct typed MOVE of DP1 by 500 mm moves its DP label but leaves the pipe behind: existing BUG-358 / CV3-14 compound gap. One Undo/27.17-second Redo works visually; inverse move restores the captured baseline. Five checks: four PASS, one FAIL.
+2. **Next evidence:** compare original-path and renamed-copy ownership, then connected MOVE/COPY and moved-state persistence. No full project dictionary, plots, protected contexts, other units/UCS or older-release acceptance. Current 689 checks / 60 batches; whole 50% unknown.
+
+
 ### Codex DP-to-IO connection — 15 October 2026
 
 1. **Input limitation resolved; no Tim action required:** actual New Pipe physical digit entry works. Completed 100 mm UPVC connection from saved DP1 to IO1 with 20.00/19.97 labels; repeat Escape and one Undo/Redo pass narrowly. Six new checks: five PASS, one FAIL against existing BUG-582. Earlier SE05 remains historical BLOCKED, not a current input blocker.

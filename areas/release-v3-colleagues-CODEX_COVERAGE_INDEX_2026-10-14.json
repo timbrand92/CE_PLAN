@@ -9,46 +9,46 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "D46F905B6060E007162786E0683700DDEB49E44E35D163FEB170F0EEB91CE457",
+    "currentBugsSha256": "91EB4B38FDC6F135716986BC7B3F1CEC8DE00F9DC8ED2E3D6BE006F500321138",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "B4DE751779C3ADCE0547D116F9784D22F53F7E49C757052E1CC22FD64F6005A1"
+    "currentCaseIndexSha256": "67ECC08BD5784441CEB6B3B178F70883136FF54DA7D0DAEC9E616CA6D0350F0A"
   },
   "counts": {
     "traceableUxIds": 526,
     "bugHeadings": 593,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 21,
-    "caseLedgers": 59,
-    "narrowCases": 684,
+    "caseLedgers": 60,
+    "narrowCases": 689,
     "narrowVerdicts": {
-      "PASS": 534,
-      "FAIL": 123,
+      "PASS": 538,
+      "FAIL": 124,
       "BLOCKED": 7,
       "UNPROVEN": 20
     },
-    "uniqueEvidenceFiles": 1466,
+    "uniqueEvidenceFiles": 1478,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1276,
-    "uniqueMetadataFiles": 190,
+    "uniqueScreenshotFiles": 1283,
+    "uniqueMetadataFiles": 195,
     "caseLinkedUxIds": 19,
-    "caseLinkedBugIds": 85,
-    "newNativeExecutionsInLatestReconciliation": 6,
+    "caseLinkedBugIds": 86,
+    "newNativeExecutionsInLatestReconciliation": 5,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1473,
+    "retainedDeclaredEvidenceFiles": 1485,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount."
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "684 bounded nativechecks across59ledgers are not complete V3workflows. Full built/installed eligibility and acceptance mapping incomplete;50%UNKNOWN.",
+    "reason": "689 bounded nativechecks across60ledgers are not complete V3workflows. Full built/installed eligibility and acceptance mapping incomplete;50%UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -10394,8 +10394,8 @@
         "sourceLine": 956,
         "required": "DP/CDRG placed beforepipesexist;laterpipesconnecttothem",
         "status": "PARTIAL / NATIVE DP TO IO CONNECTION CREATED AND VISUAL UNDO REDO PASS",
-        "evidence": "SC01 actualmodalphysical20entry resolves earlierSE05inputlimitation. SC02 completes100UPVCsource-to-sourcepipe/20.00and19.97labels;SC05oneUndo9.432secondRedo. Existing582preview/directionUnknown persists.",
-        "remaining": "CDRG independence/later connection;fullsourceconnectiondata/provenance/connectedMOVE/COPY,save-reopen,units/protection/plots/olderruntime.",
+        "evidence": "SC01 actualmodalphysical20entry resolves earlierSE05inputlimitation. SC02 completes100UPVCsource-to-sourcepipe/20.00and19.97labels;SC05oneUndo9.432secondRedo. Existing582preview/directionUnknown persists. CM01diskreopenretains61ordinaryrecords;fullconnectiondataunproved.",
+        "remaining": "CDRG independence/laterconnection;fullsourceconnectiondata/provenance;CM02connectedMOVEgapinrenamedcopy/ownercontextreview;COPY,units/protection/plots/olderruntime.",
         "wholeScopeVerified": false
       },
       "historicalCandidateReports": [],
@@ -10406,7 +10406,8 @@
         "source-edit-case-ledger.json::SE-05",
         "source-connection-case-ledger.json::SC-01",
         "source-connection-case-ledger.json::SC-02",
-        "source-connection-case-ledger.json::SC-05"
+        "source-connection-case-ledger.json::SC-05",
+        "connected-move-case-ledger.json::CM-01"
       ],
       "rulingSource": {
         "path": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
@@ -14323,7 +14324,9 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "connected-move-case-ledger.json::CM-02"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
@@ -14332,7 +14335,7 @@
     },
     {
       "id": "BUG-357",
-      "headingLine": 1201,
+      "headingLine": 1205,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14341,11 +14344,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1203
+      "currentStatusSourceLine": 1207
     },
     {
       "id": "BUG-355",
-      "headingLine": 1213,
+      "headingLine": 1217,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14354,11 +14357,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1215
+      "currentStatusSourceLine": 1219
     },
     {
       "id": "BUG-356",
-      "headingLine": 1227,
+      "headingLine": 1231,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14367,11 +14370,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1229
+      "currentStatusSourceLine": 1233
     },
     {
       "id": "BUG-354",
-      "headingLine": 1237,
+      "headingLine": 1241,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14380,11 +14383,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1239
+      "currentStatusSourceLine": 1243
     },
     {
       "id": "BUG-353",
-      "headingLine": 1249,
+      "headingLine": 1253,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14395,11 +14398,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1251
+      "currentStatusSourceLine": 1255
     },
     {
       "id": "BUG-352",
-      "headingLine": 1261,
+      "headingLine": 1265,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14408,11 +14411,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1263
+      "currentStatusSourceLine": 1267
     },
     {
       "id": "BUG-351",
-      "headingLine": 1275,
+      "headingLine": 1279,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14423,11 +14426,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1277
+      "currentStatusSourceLine": 1281
     },
     {
       "id": "BUG-350",
-      "headingLine": 1297,
+      "headingLine": 1301,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14438,11 +14441,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1299
+      "currentStatusSourceLine": 1303
     },
     {
       "id": "BUG-349",
-      "headingLine": 1309,
+      "headingLine": 1313,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14451,11 +14454,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1311
+      "currentStatusSourceLine": 1315
     },
     {
       "id": "BUG-348",
-      "headingLine": 1323,
+      "headingLine": 1327,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14464,11 +14467,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1325
+      "currentStatusSourceLine": 1329
     },
     {
       "id": "BUG-347",
-      "headingLine": 1337,
+      "headingLine": 1341,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14477,11 +14480,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1339
+      "currentStatusSourceLine": 1343
     },
     {
       "id": "BUG-346",
-      "headingLine": 1347,
+      "headingLine": 1351,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14492,11 +14495,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1349
+      "currentStatusSourceLine": 1353
     },
     {
       "id": "BUG-345",
-      "headingLine": 1359,
+      "headingLine": 1363,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14505,11 +14508,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1361
+      "currentStatusSourceLine": 1365
     },
     {
       "id": "BUG-344",
-      "headingLine": 1369,
+      "headingLine": 1373,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14518,11 +14521,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1371
+      "currentStatusSourceLine": 1375
     },
     {
       "id": "BUG-343",
-      "headingLine": 1383,
+      "headingLine": 1387,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14531,11 +14534,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1385
+      "currentStatusSourceLine": 1389
     },
     {
       "id": "BUG-342",
-      "headingLine": 1393,
+      "headingLine": 1397,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14546,11 +14549,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1395
+      "currentStatusSourceLine": 1399
     },
     {
       "id": "BUG-341",
-      "headingLine": 1405,
+      "headingLine": 1409,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14559,11 +14562,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1407
+      "currentStatusSourceLine": 1411
     },
     {
       "id": "BUG-340",
-      "headingLine": 1415,
+      "headingLine": 1419,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14572,11 +14575,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1417
+      "currentStatusSourceLine": 1421
     },
     {
       "id": "BUG-339",
-      "headingLine": 1425,
+      "headingLine": 1429,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14587,11 +14590,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1427
+      "currentStatusSourceLine": 1431
     },
     {
       "id": "BUG-338",
-      "headingLine": 1435,
+      "headingLine": 1439,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14600,11 +14603,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1437
+      "currentStatusSourceLine": 1441
     },
     {
       "id": "BUG-337",
-      "headingLine": 1445,
+      "headingLine": 1449,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14613,11 +14616,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1447
+      "currentStatusSourceLine": 1451
     },
     {
       "id": "BUG-336",
-      "headingLine": 1455,
+      "headingLine": 1459,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14626,11 +14629,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1457
+      "currentStatusSourceLine": 1461
     },
     {
       "id": "BUG-335",
-      "headingLine": 1467,
+      "headingLine": 1471,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14639,11 +14642,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1469
+      "currentStatusSourceLine": 1473
     },
     {
       "id": "BUG-334",
-      "headingLine": 1477,
+      "headingLine": 1481,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14652,11 +14655,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1479
+      "currentStatusSourceLine": 1483
     },
     {
       "id": "BUG-333",
-      "headingLine": 1487,
+      "headingLine": 1491,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14665,11 +14668,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1489
+      "currentStatusSourceLine": 1493
     },
     {
       "id": "BUG-332",
-      "headingLine": 1497,
+      "headingLine": 1501,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14678,11 +14681,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1499
+      "currentStatusSourceLine": 1503
     },
     {
       "id": "BUG-331",
-      "headingLine": 1509,
+      "headingLine": 1513,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14694,11 +14697,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1511
+      "currentStatusSourceLine": 1515
     },
     {
       "id": "BUG-330",
-      "headingLine": 1517,
+      "headingLine": 1521,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14707,11 +14710,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1519
+      "currentStatusSourceLine": 1523
     },
     {
       "id": "BUG-329",
-      "headingLine": 1527,
+      "headingLine": 1531,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14720,11 +14723,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1529
+      "currentStatusSourceLine": 1533
     },
     {
       "id": "BUG-328",
-      "headingLine": 1537,
+      "headingLine": 1541,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14733,11 +14736,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1539
+      "currentStatusSourceLine": 1543
     },
     {
       "id": "BUG-326",
-      "headingLine": 1547,
+      "headingLine": 1551,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14746,11 +14749,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1549
+      "currentStatusSourceLine": 1553
     },
     {
       "id": "BUG-325",
-      "headingLine": 1557,
+      "headingLine": 1561,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14759,11 +14762,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1559
+      "currentStatusSourceLine": 1563
     },
     {
       "id": "BUG-324",
-      "headingLine": 1567,
+      "headingLine": 1571,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14774,11 +14777,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1569
+      "currentStatusSourceLine": 1573
     },
     {
       "id": "BUG-323",
-      "headingLine": 1577,
+      "headingLine": 1581,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14787,11 +14790,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1579
+      "currentStatusSourceLine": 1583
     },
     {
       "id": "BUG-322",
-      "headingLine": 1587,
+      "headingLine": 1591,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14800,11 +14803,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1589
+      "currentStatusSourceLine": 1593
     },
     {
       "id": "BUG-321",
-      "headingLine": 1597,
+      "headingLine": 1601,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14813,11 +14816,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1599
+      "currentStatusSourceLine": 1603
     },
     {
       "id": "BUG-320",
-      "headingLine": 1607,
+      "headingLine": 1611,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14826,11 +14829,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1609
+      "currentStatusSourceLine": 1613
     },
     {
       "id": "BUG-319",
-      "headingLine": 1617,
+      "headingLine": 1621,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14839,11 +14842,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1619
+      "currentStatusSourceLine": 1623
     },
     {
       "id": "BUG-318",
-      "headingLine": 1627,
+      "headingLine": 1631,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14852,11 +14855,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1629
+      "currentStatusSourceLine": 1633
     },
     {
       "id": "BUG-316",
-      "headingLine": 1637,
+      "headingLine": 1641,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14865,11 +14868,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1639
+      "currentStatusSourceLine": 1643
     },
     {
       "id": "BUG-315",
-      "headingLine": 1649,
+      "headingLine": 1653,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14878,11 +14881,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1651
+      "currentStatusSourceLine": 1655
     },
     {
       "id": "BUG-314",
-      "headingLine": 1661,
+      "headingLine": 1665,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14891,11 +14894,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1663
+      "currentStatusSourceLine": 1667
     },
     {
       "id": "BUG-317",
-      "headingLine": 1673,
+      "headingLine": 1677,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14906,11 +14909,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1675
+      "currentStatusSourceLine": 1679
     },
     {
       "id": "BUG-313",
-      "headingLine": 1683,
+      "headingLine": 1687,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14919,11 +14922,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1685
+      "currentStatusSourceLine": 1689
     },
     {
       "id": "BUG-312",
-      "headingLine": 1693,
+      "headingLine": 1697,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14934,11 +14937,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1695
+      "currentStatusSourceLine": 1699
     },
     {
       "id": "BUG-311",
-      "headingLine": 1703,
+      "headingLine": 1707,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14947,11 +14950,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1705
+      "currentStatusSourceLine": 1709
     },
     {
       "id": "BUG-310",
-      "headingLine": 1713,
+      "headingLine": 1717,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14960,11 +14963,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1715
+      "currentStatusSourceLine": 1719
     },
     {
       "id": "BUG-309",
-      "headingLine": 1723,
+      "headingLine": 1727,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14973,11 +14976,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1725
+      "currentStatusSourceLine": 1729
     },
     {
       "id": "BUG-308",
-      "headingLine": 1733,
+      "headingLine": 1737,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14986,11 +14989,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1735
+      "currentStatusSourceLine": 1739
     },
     {
       "id": "BUG-307",
-      "headingLine": 1743,
+      "headingLine": 1747,
       "statusCandidates": [
         "OPEN"
       ],
@@ -14999,11 +15002,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1745
+      "currentStatusSourceLine": 1749
     },
     {
       "id": "BUG-306",
-      "headingLine": 1755,
+      "headingLine": 1759,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15016,11 +15019,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1757
+      "currentStatusSourceLine": 1761
     },
     {
       "id": "BUG-305",
-      "headingLine": 1765,
+      "headingLine": 1769,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15031,11 +15034,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1767
+      "currentStatusSourceLine": 1771
     },
     {
       "id": "BUG-304",
-      "headingLine": 1775,
+      "headingLine": 1779,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15044,11 +15047,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1777
+      "currentStatusSourceLine": 1781
     },
     {
       "id": "BUG-303",
-      "headingLine": 1787,
+      "headingLine": 1791,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15057,11 +15060,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1789
+      "currentStatusSourceLine": 1793
     },
     {
       "id": "BUG-302",
-      "headingLine": 1797,
+      "headingLine": 1801,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15070,11 +15073,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1799
+      "currentStatusSourceLine": 1803
     },
     {
       "id": "BUG-300",
-      "headingLine": 1807,
+      "headingLine": 1811,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15083,11 +15086,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1809
+      "currentStatusSourceLine": 1813
     },
     {
       "id": "BUG-299",
-      "headingLine": 1817,
+      "headingLine": 1821,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15096,11 +15099,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1819
+      "currentStatusSourceLine": 1823
     },
     {
       "id": "BUG-298",
-      "headingLine": 1829,
+      "headingLine": 1833,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15109,11 +15112,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1831
+      "currentStatusSourceLine": 1835
     },
     {
       "id": "BUG-297",
-      "headingLine": 1839,
+      "headingLine": 1843,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15122,11 +15125,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1841
+      "currentStatusSourceLine": 1845
     },
     {
       "id": "BUG-296",
-      "headingLine": 1849,
+      "headingLine": 1853,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15135,11 +15138,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1851
+      "currentStatusSourceLine": 1855
     },
     {
       "id": "BUG-295",
-      "headingLine": 1859,
+      "headingLine": 1863,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15148,11 +15151,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1861
+      "currentStatusSourceLine": 1865
     },
     {
       "id": "BUG-294",
-      "headingLine": 1869,
+      "headingLine": 1873,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15163,11 +15166,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1871
+      "currentStatusSourceLine": 1875
     },
     {
       "id": "BUG-293",
-      "headingLine": 1881,
+      "headingLine": 1885,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15176,11 +15179,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1883
+      "currentStatusSourceLine": 1887
     },
     {
       "id": "BUG-292",
-      "headingLine": 1893,
+      "headingLine": 1897,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15189,11 +15192,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1895
+      "currentStatusSourceLine": 1899
     },
     {
       "id": "BUG-291",
-      "headingLine": 1903,
+      "headingLine": 1907,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15202,11 +15205,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1905
+      "currentStatusSourceLine": 1909
     },
     {
       "id": "BUG-290",
-      "headingLine": 1913,
+      "headingLine": 1917,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15215,11 +15218,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1915
+      "currentStatusSourceLine": 1919
     },
     {
       "id": "BUG-289",
-      "headingLine": 1925,
+      "headingLine": 1929,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15228,11 +15231,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1927
+      "currentStatusSourceLine": 1931
     },
     {
       "id": "BUG-288",
-      "headingLine": 1935,
+      "headingLine": 1939,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15241,11 +15244,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1937
+      "currentStatusSourceLine": 1941
     },
     {
       "id": "BUG-287",
-      "headingLine": 1945,
+      "headingLine": 1949,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15256,11 +15259,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1947
+      "currentStatusSourceLine": 1951
     },
     {
       "id": "BUG-286",
-      "headingLine": 1957,
+      "headingLine": 1961,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15269,11 +15272,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1959
+      "currentStatusSourceLine": 1963
     },
     {
       "id": "BUG-285",
-      "headingLine": 1967,
+      "headingLine": 1971,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15286,11 +15289,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1969
+      "currentStatusSourceLine": 1973
     },
     {
       "id": "BUG-284",
-      "headingLine": 1977,
+      "headingLine": 1981,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15299,11 +15302,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1979
+      "currentStatusSourceLine": 1983
     },
     {
       "id": "BUG-283",
-      "headingLine": 1989,
+      "headingLine": 1993,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15312,11 +15315,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 1991
+      "currentStatusSourceLine": 1995
     },
     {
       "id": "BUG-282",
-      "headingLine": 2001,
+      "headingLine": 2005,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15325,11 +15328,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2003
+      "currentStatusSourceLine": 2007
     },
     {
       "id": "BUG-281",
-      "headingLine": 2013,
+      "headingLine": 2017,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15338,11 +15341,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2015
+      "currentStatusSourceLine": 2019
     },
     {
       "id": "BUG-280",
-      "headingLine": 2025,
+      "headingLine": 2029,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15351,11 +15354,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2027
+      "currentStatusSourceLine": 2031
     },
     {
       "id": "BUG-278",
-      "headingLine": 2037,
+      "headingLine": 2041,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15366,11 +15369,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2039
+      "currentStatusSourceLine": 2043
     },
     {
       "id": "BUG-277",
-      "headingLine": 2051,
+      "headingLine": 2055,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15379,11 +15382,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2053
+      "currentStatusSourceLine": 2057
     },
     {
       "id": "BUG-276",
-      "headingLine": 2063,
+      "headingLine": 2067,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15392,11 +15395,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2065
+      "currentStatusSourceLine": 2069
     },
     {
       "id": "BUG-274",
-      "headingLine": 2075,
+      "headingLine": 2079,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15405,11 +15408,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2077
+      "currentStatusSourceLine": 2081
     },
     {
       "id": "BUG-273",
-      "headingLine": 2091,
+      "headingLine": 2095,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15418,11 +15421,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2093
+      "currentStatusSourceLine": 2097
     },
     {
       "id": "BUG-272",
-      "headingLine": 2109,
+      "headingLine": 2113,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15431,11 +15434,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2111
+      "currentStatusSourceLine": 2115
     },
     {
       "id": "BUG-275",
-      "headingLine": 2129,
+      "headingLine": 2133,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15444,11 +15447,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2131
+      "currentStatusSourceLine": 2135
     },
     {
       "id": "BUG-271",
-      "headingLine": 2145,
+      "headingLine": 2149,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15457,11 +15460,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2147
+      "currentStatusSourceLine": 2151
     },
     {
       "id": "BUG-270",
-      "headingLine": 2159,
+      "headingLine": 2163,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -15470,11 +15473,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2161
+      "currentStatusSourceLine": 2165
     },
     {
       "id": "BUG-269",
-      "headingLine": 2173,
+      "headingLine": 2177,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15483,11 +15486,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2175
+      "currentStatusSourceLine": 2179
     },
     {
       "id": "BUG-268",
-      "headingLine": 2185,
+      "headingLine": 2189,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15498,11 +15501,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2187
+      "currentStatusSourceLine": 2191
     },
     {
       "id": "BUG-267",
-      "headingLine": 2199,
+      "headingLine": 2203,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15514,11 +15517,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2201
+      "currentStatusSourceLine": 2205
     },
     {
       "id": "BUG-266",
-      "headingLine": 2211,
+      "headingLine": 2215,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15527,11 +15530,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2213
+      "currentStatusSourceLine": 2217
     },
     {
       "id": "BUG-265",
-      "headingLine": 2225,
+      "headingLine": 2229,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15540,11 +15543,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2227
+      "currentStatusSourceLine": 2231
     },
     {
       "id": "BUG-264",
-      "headingLine": 2239,
+      "headingLine": 2243,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15553,11 +15556,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2241
+      "currentStatusSourceLine": 2245
     },
     {
       "id": "BUG-263",
-      "headingLine": 2251,
+      "headingLine": 2255,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15566,11 +15569,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2253
+      "currentStatusSourceLine": 2257
     },
     {
       "id": "BUG-262",
-      "headingLine": 2267,
+      "headingLine": 2271,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15579,11 +15582,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2269
+      "currentStatusSourceLine": 2273
     },
     {
       "id": "BUG-261",
-      "headingLine": 2281,
+      "headingLine": 2285,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15594,11 +15597,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2283
+      "currentStatusSourceLine": 2287
     },
     {
       "id": "BUG-260",
-      "headingLine": 2293,
+      "headingLine": 2297,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15609,11 +15612,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2295
+      "currentStatusSourceLine": 2299
     },
     {
       "id": "BUG-259",
-      "headingLine": 2307,
+      "headingLine": 2311,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15622,11 +15625,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2309
+      "currentStatusSourceLine": 2313
     },
     {
       "id": "BUG-258",
-      "headingLine": 2319,
+      "headingLine": 2323,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15635,11 +15638,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2321
+      "currentStatusSourceLine": 2325
     },
     {
       "id": "BUG-257",
-      "headingLine": 2331,
+      "headingLine": 2335,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15650,11 +15653,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2333
+      "currentStatusSourceLine": 2337
     },
     {
       "id": "BUG-256",
-      "headingLine": 2347,
+      "headingLine": 2351,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15673,11 +15676,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2349
+      "currentStatusSourceLine": 2353
     },
     {
       "id": "BUG-255",
-      "headingLine": 2377,
+      "headingLine": 2381,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15688,11 +15691,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2379
+      "currentStatusSourceLine": 2383
     },
     {
       "id": "BUG-254",
-      "headingLine": 2391,
+      "headingLine": 2395,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15703,11 +15706,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2393
+      "currentStatusSourceLine": 2397
     },
     {
       "id": "BUG-253",
-      "headingLine": 2407,
+      "headingLine": 2411,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15716,11 +15719,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2409
+      "currentStatusSourceLine": 2413
     },
     {
       "id": "BUG-252",
-      "headingLine": 2421,
+      "headingLine": 2425,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15731,11 +15734,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2423
+      "currentStatusSourceLine": 2427
     },
     {
       "id": "BUG-251",
-      "headingLine": 2435,
+      "headingLine": 2439,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15744,11 +15747,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2437
+      "currentStatusSourceLine": 2441
     },
     {
       "id": "BUG-250",
-      "headingLine": 2449,
+      "headingLine": 2453,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15757,11 +15760,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2451
+      "currentStatusSourceLine": 2455
     },
     {
       "id": "BUG-249",
-      "headingLine": 2467,
+      "headingLine": 2471,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15772,11 +15775,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2469
+      "currentStatusSourceLine": 2473
     },
     {
       "id": "BUG-248",
-      "headingLine": 2485,
+      "headingLine": 2489,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15785,11 +15788,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2487
+      "currentStatusSourceLine": 2491
     },
     {
       "id": "BUG-247",
-      "headingLine": 2499,
+      "headingLine": 2503,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15798,11 +15801,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2501
+      "currentStatusSourceLine": 2505
     },
     {
       "id": "BUG-246",
-      "headingLine": 2513,
+      "headingLine": 2517,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15811,11 +15814,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2515
+      "currentStatusSourceLine": 2519
     },
     {
       "id": "BUG-244",
-      "headingLine": 2527,
+      "headingLine": 2531,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15826,11 +15829,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2529
+      "currentStatusSourceLine": 2533
     },
     {
       "id": "BUG-245",
-      "headingLine": 2543,
+      "headingLine": 2547,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15839,11 +15842,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2545
+      "currentStatusSourceLine": 2549
     },
     {
       "id": "BUG-242",
-      "headingLine": 2557,
+      "headingLine": 2561,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15852,11 +15855,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2559
+      "currentStatusSourceLine": 2563
     },
     {
       "id": "BUG-243",
-      "headingLine": 2571,
+      "headingLine": 2575,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15865,11 +15868,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2573
+      "currentStatusSourceLine": 2577
     },
     {
       "id": "BUG-239",
-      "headingLine": 2585,
+      "headingLine": 2589,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15878,11 +15881,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2587
+      "currentStatusSourceLine": 2591
     },
     {
       "id": "BUG-202",
-      "headingLine": 2599,
+      "headingLine": 2603,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15893,11 +15896,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2601
+      "currentStatusSourceLine": 2605
     },
     {
       "id": "BUG-224",
-      "headingLine": 2617,
+      "headingLine": 2621,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15908,11 +15911,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2619
+      "currentStatusSourceLine": 2623
     },
     {
       "id": "BUG-225",
-      "headingLine": 2650,
+      "headingLine": 2654,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15921,11 +15924,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2652
+      "currentStatusSourceLine": 2656
     },
     {
       "id": "BUG-226",
-      "headingLine": 2672,
+      "headingLine": 2676,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15934,11 +15937,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2674
+      "currentStatusSourceLine": 2678
     },
     {
       "id": "BUG-227",
-      "headingLine": 2694,
+      "headingLine": 2698,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15947,11 +15950,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2696
+      "currentStatusSourceLine": 2700
     },
     {
       "id": "BUG-228",
-      "headingLine": 2716,
+      "headingLine": 2720,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15960,11 +15963,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2718
+      "currentStatusSourceLine": 2722
     },
     {
       "id": "BUG-229",
-      "headingLine": 2738,
+      "headingLine": 2742,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15973,11 +15976,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2740
+      "currentStatusSourceLine": 2744
     },
     {
       "id": "BUG-240",
-      "headingLine": 2760,
+      "headingLine": 2764,
       "statusCandidates": [
         "OPEN"
       ],
@@ -15986,22 +15989,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2762
+      "currentStatusSourceLine": 2766
     },
     {
       "id": "BUG-238",
-      "headingLine": 2782,
+      "headingLine": 2786,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2784
+      "currentStatusSourceLine": 2788
     },
     {
       "id": "BUG-235",
-      "headingLine": 2798,
+      "headingLine": 2802,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16010,11 +16013,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2800
+      "currentStatusSourceLine": 2804
     },
     {
       "id": "BUG-236",
-      "headingLine": 2810,
+      "headingLine": 2814,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16025,11 +16028,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2812
+      "currentStatusSourceLine": 2816
     },
     {
       "id": "BUG-237",
-      "headingLine": 2822,
+      "headingLine": 2826,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16040,11 +16043,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2824
+      "currentStatusSourceLine": 2828
     },
     {
       "id": "BUG-234",
-      "headingLine": 2834,
+      "headingLine": 2838,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16055,11 +16058,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2836
+      "currentStatusSourceLine": 2840
     },
     {
       "id": "BUG-233",
-      "headingLine": 2846,
+      "headingLine": 2850,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16068,11 +16071,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2848
+      "currentStatusSourceLine": 2852
     },
     {
       "id": "BUG-232",
-      "headingLine": 2860,
+      "headingLine": 2864,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16083,11 +16086,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2862
+      "currentStatusSourceLine": 2866
     },
     {
       "id": "BUG-230",
-      "headingLine": 2872,
+      "headingLine": 2876,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16096,11 +16099,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2874
+      "currentStatusSourceLine": 2878
     },
     {
       "id": "BUG-231",
-      "headingLine": 2886,
+      "headingLine": 2890,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16109,11 +16112,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2888
+      "currentStatusSourceLine": 2892
     },
     {
       "id": "BUG-223",
-      "headingLine": 2898,
+      "headingLine": 2902,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16124,11 +16127,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2900
+      "currentStatusSourceLine": 2904
     },
     {
       "id": "BUG-203",
-      "headingLine": 2912,
+      "headingLine": 2916,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16139,11 +16142,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2914
+      "currentStatusSourceLine": 2918
     },
     {
       "id": "BUG-204",
-      "headingLine": 2932,
+      "headingLine": 2936,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16152,11 +16155,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2934
+      "currentStatusSourceLine": 2938
     },
     {
       "id": "BUG-205",
-      "headingLine": 2950,
+      "headingLine": 2954,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16167,11 +16170,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2952
+      "currentStatusSourceLine": 2956
     },
     {
       "id": "BUG-206",
-      "headingLine": 2972,
+      "headingLine": 2976,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16180,11 +16183,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2974
+      "currentStatusSourceLine": 2978
     },
     {
       "id": "BUG-207",
-      "headingLine": 2995,
+      "headingLine": 2999,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16198,11 +16201,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 2997
+      "currentStatusSourceLine": 3001
     },
     {
       "id": "BUG-208",
-      "headingLine": 3024,
+      "headingLine": 3028,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16213,11 +16216,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3026
+      "currentStatusSourceLine": 3030
     },
     {
       "id": "BUG-209",
-      "headingLine": 3046,
+      "headingLine": 3050,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16226,11 +16229,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3048
+      "currentStatusSourceLine": 3052
     },
     {
       "id": "BUG-210",
-      "headingLine": 3068,
+      "headingLine": 3072,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16241,11 +16244,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3070
+      "currentStatusSourceLine": 3074
     },
     {
       "id": "BUG-211",
-      "headingLine": 3090,
+      "headingLine": 3094,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16254,11 +16257,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3092
+      "currentStatusSourceLine": 3096
     },
     {
       "id": "BUG-212",
-      "headingLine": 3116,
+      "headingLine": 3120,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16269,11 +16272,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3118
+      "currentStatusSourceLine": 3122
     },
     {
       "id": "BUG-213",
-      "headingLine": 3138,
+      "headingLine": 3142,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16284,11 +16287,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3140
+      "currentStatusSourceLine": 3144
     },
     {
       "id": "BUG-214",
-      "headingLine": 3162,
+      "headingLine": 3166,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16297,11 +16300,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3164
+      "currentStatusSourceLine": 3168
     },
     {
       "id": "BUG-215",
-      "headingLine": 3186,
+      "headingLine": 3190,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16317,13 +16320,13 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 3018,
+      "currentStatusSourceLine": 3022,
       "currentStatus": "FIXED — Codex-accepted AutoCAD2027/Structural1.0.116 original one-Undo model-space defect",
       "currentStatusScope": "Original BUG215 conditions only; no whole revision workflow/olderruntime acceptance"
     },
     {
       "id": "BUG-216",
-      "headingLine": 3212,
+      "headingLine": 3216,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16332,11 +16335,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3214
+      "currentStatusSourceLine": 3218
     },
     {
       "id": "BUG-217",
-      "headingLine": 3237,
+      "headingLine": 3241,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16345,11 +16348,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3239
+      "currentStatusSourceLine": 3243
     },
     {
       "id": "BUG-218",
-      "headingLine": 3259,
+      "headingLine": 3263,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16360,11 +16363,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3261
+      "currentStatusSourceLine": 3265
     },
     {
       "id": "BUG-219",
-      "headingLine": 3284,
+      "headingLine": 3288,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16375,11 +16378,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3286
+      "currentStatusSourceLine": 3290
     },
     {
       "id": "BUG-220",
-      "headingLine": 3308,
+      "headingLine": 3312,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16388,11 +16391,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3310
+      "currentStatusSourceLine": 3314
     },
     {
       "id": "BUG-221",
-      "headingLine": 3334,
+      "headingLine": 3338,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16403,11 +16406,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3336
+      "currentStatusSourceLine": 3340
     },
     {
       "id": "BUG-222",
-      "headingLine": 3360,
+      "headingLine": 3364,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16418,11 +16421,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3362
+      "currentStatusSourceLine": 3366
     },
     {
       "id": "BUG-195",
-      "headingLine": 3386,
+      "headingLine": 3390,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
@@ -16432,7 +16435,7 @@
     },
     {
       "id": "BUG-194",
-      "headingLine": 3400,
+      "headingLine": 3404,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16441,11 +16444,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3402
+      "currentStatusSourceLine": 3406
     },
     {
       "id": "BUG-193",
-      "headingLine": 3418,
+      "headingLine": 3422,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16456,11 +16459,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3420
+      "currentStatusSourceLine": 3424
     },
     {
       "id": "BUG-192",
-      "headingLine": 3438,
+      "headingLine": 3442,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16472,11 +16475,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3440
+      "currentStatusSourceLine": 3444
     },
     {
       "id": "BUG-191",
-      "headingLine": 3460,
+      "headingLine": 3464,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16485,11 +16488,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3462
+      "currentStatusSourceLine": 3466
     },
     {
       "id": "BUG-190",
-      "headingLine": 3476,
+      "headingLine": 3480,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16498,11 +16501,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3478
+      "currentStatusSourceLine": 3482
     },
     {
       "id": "BUG-189",
-      "headingLine": 3496,
+      "headingLine": 3500,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16511,11 +16514,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3498
+      "currentStatusSourceLine": 3502
     },
     {
       "id": "BUG-188",
-      "headingLine": 3550,
+      "headingLine": 3554,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16524,11 +16527,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3552
+      "currentStatusSourceLine": 3556
     },
     {
       "id": "BUG-187",
-      "headingLine": 3570,
+      "headingLine": 3574,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16539,11 +16542,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3572
+      "currentStatusSourceLine": 3576
     },
     {
       "id": "BUG-186",
-      "headingLine": 3584,
+      "headingLine": 3588,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16554,11 +16557,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3586
+      "currentStatusSourceLine": 3590
     },
     {
       "id": "BUG-185",
-      "headingLine": 3602,
+      "headingLine": 3606,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16567,11 +16570,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3604
+      "currentStatusSourceLine": 3608
     },
     {
       "id": "BUG-184",
-      "headingLine": 3616,
+      "headingLine": 3620,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16580,11 +16583,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3618
+      "currentStatusSourceLine": 3622
     },
     {
       "id": "BUG-183",
-      "headingLine": 3632,
+      "headingLine": 3636,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16593,11 +16596,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3634
+      "currentStatusSourceLine": 3638
     },
     {
       "id": "BUG-182",
-      "headingLine": 3646,
+      "headingLine": 3650,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16606,11 +16609,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3648
+      "currentStatusSourceLine": 3652
     },
     {
       "id": "BUG-181",
-      "headingLine": 3660,
+      "headingLine": 3664,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16619,11 +16622,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3662
+      "currentStatusSourceLine": 3666
     },
     {
       "id": "BUG-180",
-      "headingLine": 3674,
+      "headingLine": 3678,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16635,11 +16638,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3676
+      "currentStatusSourceLine": 3680
     },
     {
       "id": "BUG-179",
-      "headingLine": 3694,
+      "headingLine": 3698,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16648,11 +16651,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3696
+      "currentStatusSourceLine": 3700
     },
     {
       "id": "BUG-178",
-      "headingLine": 3708,
+      "headingLine": 3712,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16661,11 +16664,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3710
+      "currentStatusSourceLine": 3714
     },
     {
       "id": "BUG-177",
-      "headingLine": 3722,
+      "headingLine": 3726,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16674,11 +16677,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3724
+      "currentStatusSourceLine": 3728
     },
     {
       "id": "BUG-171",
-      "headingLine": 3736,
+      "headingLine": 3740,
       "statusCandidates": [
         "IN PROGRESS",
         "IN PROGRESS"
@@ -16690,11 +16693,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3738
+      "currentStatusSourceLine": 3742
     },
     {
       "id": "BUG-172",
-      "headingLine": 3758,
+      "headingLine": 3762,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16703,11 +16706,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3760
+      "currentStatusSourceLine": 3764
     },
     {
       "id": "BUG-176",
-      "headingLine": 3787,
+      "headingLine": 3791,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16719,11 +16722,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3789
+      "currentStatusSourceLine": 3793
     },
     {
       "id": "BUG-175",
-      "headingLine": 3805,
+      "headingLine": 3809,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16735,11 +16738,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3807
+      "currentStatusSourceLine": 3811
     },
     {
       "id": "BUG-174",
-      "headingLine": 3821,
+      "headingLine": 3825,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16750,11 +16753,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3823
+      "currentStatusSourceLine": 3827
     },
     {
       "id": "BUG-173",
-      "headingLine": 3837,
+      "headingLine": 3841,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16765,11 +16768,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3839
+      "currentStatusSourceLine": 3843
     },
     {
       "id": "BUG-170",
-      "headingLine": 3853,
+      "headingLine": 3857,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16778,11 +16781,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3855
+      "currentStatusSourceLine": 3859
     },
     {
       "id": "BUG-169",
-      "headingLine": 3871,
+      "headingLine": 3875,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16793,11 +16796,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3873
+      "currentStatusSourceLine": 3877
     },
     {
       "id": "BUG-168",
-      "headingLine": 3895,
+      "headingLine": 3899,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16806,11 +16809,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 3897
+      "currentStatusSourceLine": 3901
     },
     {
       "id": "BUG-167",
-      "headingLine": 4006,
+      "headingLine": 4010,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16819,11 +16822,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4008
+      "currentStatusSourceLine": 4012
     },
     {
       "id": "BUG-166",
-      "headingLine": 4035,
+      "headingLine": 4039,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16835,11 +16838,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4037
+      "currentStatusSourceLine": 4041
     },
     {
       "id": "BUG-165",
-      "headingLine": 4064,
+      "headingLine": 4068,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16848,11 +16851,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4066
+      "currentStatusSourceLine": 4070
     },
     {
       "id": "BUG-164",
-      "headingLine": 4084,
+      "headingLine": 4088,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16861,11 +16864,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4086
+      "currentStatusSourceLine": 4090
     },
     {
       "id": "BUG-163",
-      "headingLine": 4116,
+      "headingLine": 4120,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [
@@ -16874,11 +16877,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4118
+      "currentStatusSourceLine": 4122
     },
     {
       "id": "BUG-162",
-      "headingLine": 4157,
+      "headingLine": 4161,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16887,11 +16890,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4159
+      "currentStatusSourceLine": 4163
     },
     {
       "id": "BUG-161",
-      "headingLine": 4183,
+      "headingLine": 4187,
       "statusCandidates": [
         "FIXED"
       ],
@@ -16900,11 +16903,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4185
+      "currentStatusSourceLine": 4189
     },
     {
       "id": "BUG-160",
-      "headingLine": 4205,
+      "headingLine": 4209,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [
@@ -16913,11 +16916,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4207
+      "currentStatusSourceLine": 4211
     },
     {
       "id": "BUG-158",
-      "headingLine": 4229,
+      "headingLine": 4233,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16928,11 +16931,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4231
+      "currentStatusSourceLine": 4235
     },
     {
       "id": "BUG-058",
-      "headingLine": 4257,
+      "headingLine": 4261,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16941,11 +16944,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4259
+      "currentStatusSourceLine": 4263
     },
     {
       "id": "BUG-059",
-      "headingLine": 4271,
+      "headingLine": 4275,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16954,11 +16957,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4273
+      "currentStatusSourceLine": 4277
     },
     {
       "id": "BUG-060",
-      "headingLine": 4287,
+      "headingLine": 4291,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -16967,11 +16970,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4289
+      "currentStatusSourceLine": 4293
     },
     {
       "id": "BUG-061",
-      "headingLine": 4301,
+      "headingLine": 4305,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16985,11 +16988,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4303
+      "currentStatusSourceLine": 4307
     },
     {
       "id": "BUG-062",
-      "headingLine": 4309,
+      "headingLine": 4313,
       "statusCandidates": [
         "OPEN"
       ],
@@ -16998,11 +17001,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4311
+      "currentStatusSourceLine": 4315
     },
     {
       "id": "BUG-063",
-      "headingLine": 4321,
+      "headingLine": 4325,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17011,11 +17014,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4323
+      "currentStatusSourceLine": 4327
     },
     {
       "id": "BUG-064",
-      "headingLine": 4331,
+      "headingLine": 4335,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17024,11 +17027,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4333
+      "currentStatusSourceLine": 4337
     },
     {
       "id": "BUG-065",
-      "headingLine": 4343,
+      "headingLine": 4347,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17037,11 +17040,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4345
+      "currentStatusSourceLine": 4349
     },
     {
       "id": "BUG-066",
-      "headingLine": 4355,
+      "headingLine": 4359,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17050,11 +17053,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4357
+      "currentStatusSourceLine": 4361
     },
     {
       "id": "BUG-067",
-      "headingLine": 4365,
+      "headingLine": 4369,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17063,11 +17066,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4367
+      "currentStatusSourceLine": 4371
     },
     {
       "id": "BUG-068",
-      "headingLine": 4377,
+      "headingLine": 4381,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17076,11 +17079,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4379
+      "currentStatusSourceLine": 4383
     },
     {
       "id": "BUG-069",
-      "headingLine": 4389,
+      "headingLine": 4393,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17089,11 +17092,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4391
+      "currentStatusSourceLine": 4395
     },
     {
       "id": "BUG-070",
-      "headingLine": 4403,
+      "headingLine": 4407,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17102,11 +17105,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4405
+      "currentStatusSourceLine": 4409
     },
     {
       "id": "BUG-071",
-      "headingLine": 4415,
+      "headingLine": 4419,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17115,11 +17118,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4417
+      "currentStatusSourceLine": 4421
     },
     {
       "id": "BUG-072",
-      "headingLine": 4427,
+      "headingLine": 4431,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17128,11 +17131,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4429
+      "currentStatusSourceLine": 4433
     },
     {
       "id": "BUG-073",
-      "headingLine": 4439,
+      "headingLine": 4443,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17141,11 +17144,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4441
+      "currentStatusSourceLine": 4445
     },
     {
       "id": "BUG-074",
-      "headingLine": 4451,
+      "headingLine": 4455,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17154,11 +17157,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4453
+      "currentStatusSourceLine": 4457
     },
     {
       "id": "BUG-075",
-      "headingLine": 4463,
+      "headingLine": 4467,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17167,11 +17170,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4465
+      "currentStatusSourceLine": 4469
     },
     {
       "id": "BUG-076",
-      "headingLine": 4475,
+      "headingLine": 4479,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17180,11 +17183,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4477
+      "currentStatusSourceLine": 4481
     },
     {
       "id": "BUG-077",
-      "headingLine": 4489,
+      "headingLine": 4493,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17193,11 +17196,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4491
+      "currentStatusSourceLine": 4495
     },
     {
       "id": "BUG-078",
-      "headingLine": 4501,
+      "headingLine": 4505,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17206,11 +17209,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4503
+      "currentStatusSourceLine": 4507
     },
     {
       "id": "BUG-079",
-      "headingLine": 4513,
+      "headingLine": 4517,
       "statusCandidates": [
         "FIXED",
         "FIXED",
@@ -17226,11 +17229,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4515
+      "currentStatusSourceLine": 4519
     },
     {
       "id": "BUG-080",
-      "headingLine": 4567,
+      "headingLine": 4571,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17239,11 +17242,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4569
+      "currentStatusSourceLine": 4573
     },
     {
       "id": "BUG-056",
-      "headingLine": 4581,
+      "headingLine": 4585,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17252,11 +17255,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4583
+      "currentStatusSourceLine": 4587
     },
     {
       "id": "BUG-057",
-      "headingLine": 4621,
+      "headingLine": 4625,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17265,11 +17268,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4623
+      "currentStatusSourceLine": 4627
     },
     {
       "id": "BUG-053",
-      "headingLine": 4639,
+      "headingLine": 4643,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17278,11 +17281,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4641
+      "currentStatusSourceLine": 4645
     },
     {
       "id": "BUG-054",
-      "headingLine": 4678,
+      "headingLine": 4682,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17291,11 +17294,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4680
+      "currentStatusSourceLine": 4684
     },
     {
       "id": "BUG-051",
-      "headingLine": 4702,
+      "headingLine": 4706,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17304,11 +17307,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4704
+      "currentStatusSourceLine": 4708
     },
     {
       "id": "BUG-049",
-      "headingLine": 4718,
+      "headingLine": 4722,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17317,11 +17320,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4720
+      "currentStatusSourceLine": 4724
     },
     {
       "id": "BUG-001",
-      "headingLine": 4732,
+      "headingLine": 4736,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17330,22 +17333,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4734
+      "currentStatusSourceLine": 4738
     },
     {
       "id": "BUG-002",
-      "headingLine": 4769,
+      "headingLine": 4773,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4771
+      "currentStatusSourceLine": 4775
     },
     {
       "id": "BUG-003",
-      "headingLine": 4785,
+      "headingLine": 4789,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17354,11 +17357,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4787
+      "currentStatusSourceLine": 4791
     },
     {
       "id": "BUG-004",
-      "headingLine": 4801,
+      "headingLine": 4805,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17367,11 +17370,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4803
+      "currentStatusSourceLine": 4807
     },
     {
       "id": "BUG-005",
-      "headingLine": 4822,
+      "headingLine": 4826,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17380,11 +17383,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4824
+      "currentStatusSourceLine": 4828
     },
     {
       "id": "BUG-006",
-      "headingLine": 4838,
+      "headingLine": 4842,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17393,11 +17396,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4840
+      "currentStatusSourceLine": 4844
     },
     {
       "id": "BUG-008",
-      "headingLine": 4852,
+      "headingLine": 4856,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17406,11 +17409,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4854
+      "currentStatusSourceLine": 4858
     },
     {
       "id": "BUG-009",
-      "headingLine": 4868,
+      "headingLine": 4872,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17419,22 +17422,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4870
+      "currentStatusSourceLine": 4874
     },
     {
       "id": "BUG-007",
-      "headingLine": 4886,
+      "headingLine": 4890,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4888
+      "currentStatusSourceLine": 4892
     },
     {
       "id": "BUG-010",
-      "headingLine": 4942,
+      "headingLine": 4946,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17443,11 +17446,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4944
+      "currentStatusSourceLine": 4948
     },
     {
       "id": "BUG-011",
-      "headingLine": 4964,
+      "headingLine": 4968,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17456,11 +17459,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4966
+      "currentStatusSourceLine": 4970
     },
     {
       "id": "BUG-012",
-      "headingLine": 4988,
+      "headingLine": 4992,
       "statusCandidates": [
         "OPEN"
       ],
@@ -17469,11 +17472,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 4990
+      "currentStatusSourceLine": 4994
     },
     {
       "id": "BUG-013",
-      "headingLine": 5014,
+      "headingLine": 5018,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17482,11 +17485,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5016
+      "currentStatusSourceLine": 5020
     },
     {
       "id": "BUG-014",
-      "headingLine": 5032,
+      "headingLine": 5036,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17495,11 +17498,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5034
+      "currentStatusSourceLine": 5038
     },
     {
       "id": "BUG-015",
-      "headingLine": 5048,
+      "headingLine": 5052,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17508,11 +17511,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5050
+      "currentStatusSourceLine": 5054
     },
     {
       "id": "BUG-016",
-      "headingLine": 5075,
+      "headingLine": 5079,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17521,22 +17524,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5077
+      "currentStatusSourceLine": 5081
     },
     {
       "id": "BUG-017",
-      "headingLine": 5105,
+      "headingLine": 5109,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5107
+      "currentStatusSourceLine": 5111
     },
     {
       "id": "BUG-018",
-      "headingLine": 5131,
+      "headingLine": 5135,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17545,11 +17548,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5133
+      "currentStatusSourceLine": 5137
     },
     {
       "id": "BUG-019",
-      "headingLine": 5162,
+      "headingLine": 5166,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17558,11 +17561,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5164
+      "currentStatusSourceLine": 5168
     },
     {
       "id": "BUG-020",
-      "headingLine": 5176,
+      "headingLine": 5180,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17571,11 +17574,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5178
+      "currentStatusSourceLine": 5182
     },
     {
       "id": "BUG-021",
-      "headingLine": 5200,
+      "headingLine": 5204,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17584,44 +17587,44 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5202
+      "currentStatusSourceLine": 5206
     },
     {
       "id": "BUG-022",
-      "headingLine": 5232,
+      "headingLine": 5236,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5234
+      "currentStatusSourceLine": 5238
     },
     {
       "id": "BUG-023",
-      "headingLine": 5259,
+      "headingLine": 5263,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5261
+      "currentStatusSourceLine": 5265
     },
     {
       "id": "BUG-024",
-      "headingLine": 5297,
+      "headingLine": 5301,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5299
+      "currentStatusSourceLine": 5303
     },
     {
       "id": "BUG-025",
-      "headingLine": 5341,
+      "headingLine": 5345,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17630,11 +17633,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5343
+      "currentStatusSourceLine": 5347
     },
     {
       "id": "BUG-026",
-      "headingLine": 5367,
+      "headingLine": 5371,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17643,11 +17646,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5369
+      "currentStatusSourceLine": 5373
     },
     {
       "id": "BUG-027",
-      "headingLine": 5389,
+      "headingLine": 5393,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17656,11 +17659,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5391
+      "currentStatusSourceLine": 5395
     },
     {
       "id": "BUG-028",
-      "headingLine": 5414,
+      "headingLine": 5418,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17669,11 +17672,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5416
+      "currentStatusSourceLine": 5420
     },
     {
       "id": "BUG-029",
-      "headingLine": 5431,
+      "headingLine": 5435,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17682,11 +17685,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5433
+      "currentStatusSourceLine": 5437
     },
     {
       "id": "BUG-030",
-      "headingLine": 5447,
+      "headingLine": 5451,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17695,11 +17698,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5449
+      "currentStatusSourceLine": 5453
     },
     {
       "id": "BUG-031",
-      "headingLine": 5463,
+      "headingLine": 5467,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17708,11 +17711,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5465
+      "currentStatusSourceLine": 5469
     },
     {
       "id": "BUG-032",
-      "headingLine": 5479,
+      "headingLine": 5483,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17721,11 +17724,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5481
+      "currentStatusSourceLine": 5485
     },
     {
       "id": "BUG-033",
-      "headingLine": 5495,
+      "headingLine": 5499,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17734,11 +17737,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5497
+      "currentStatusSourceLine": 5501
     },
     {
       "id": "BUG-034",
-      "headingLine": 5513,
+      "headingLine": 5517,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17747,11 +17750,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5515
+      "currentStatusSourceLine": 5519
     },
     {
       "id": "BUG-035",
-      "headingLine": 5529,
+      "headingLine": 5533,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17760,11 +17763,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5531
+      "currentStatusSourceLine": 5535
     },
     {
       "id": "BUG-036",
-      "headingLine": 5547,
+      "headingLine": 5551,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17773,11 +17776,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5549
+      "currentStatusSourceLine": 5553
     },
     {
       "id": "BUG-037",
-      "headingLine": 5563,
+      "headingLine": 5567,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17786,11 +17789,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5565
+      "currentStatusSourceLine": 5569
     },
     {
       "id": "BUG-038",
-      "headingLine": 5583,
+      "headingLine": 5587,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17799,22 +17802,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5585
+      "currentStatusSourceLine": 5589
     },
     {
       "id": "BUG-040",
-      "headingLine": 5602,
+      "headingLine": 5606,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5604
+      "currentStatusSourceLine": 5608
     },
     {
       "id": "BUG-041",
-      "headingLine": 5618,
+      "headingLine": 5622,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17823,11 +17826,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5620
+      "currentStatusSourceLine": 5624
     },
     {
       "id": "BUG-042",
-      "headingLine": 5634,
+      "headingLine": 5638,
       "statusCandidates": [
         "IN PROGRESS",
         "IN PROGRESS",
@@ -17863,11 +17866,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5636
+      "currentStatusSourceLine": 5640
     },
     {
       "id": "BUG-087",
-      "headingLine": 5876,
+      "headingLine": 5880,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17876,11 +17879,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5878
+      "currentStatusSourceLine": 5882
     },
     {
       "id": "BUG-086",
-      "headingLine": 5894,
+      "headingLine": 5898,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17889,11 +17892,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5896
+      "currentStatusSourceLine": 5900
     },
     {
       "id": "BUG-085",
-      "headingLine": 5916,
+      "headingLine": 5920,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17902,11 +17905,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5918
+      "currentStatusSourceLine": 5922
     },
     {
       "id": "BUG-088",
-      "headingLine": 5934,
+      "headingLine": 5938,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17915,11 +17918,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5936
+      "currentStatusSourceLine": 5940
     },
     {
       "id": "BUG-089",
-      "headingLine": 5948,
+      "headingLine": 5952,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17928,22 +17931,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5950
+      "currentStatusSourceLine": 5954
     },
     {
       "id": "BUG-090",
-      "headingLine": 5964,
+      "headingLine": 5968,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5966
+      "currentStatusSourceLine": 5970
     },
     {
       "id": "BUG-091",
-      "headingLine": 5981,
+      "headingLine": 5985,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -17952,11 +17955,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 5983
+      "currentStatusSourceLine": 5987
     },
     {
       "id": "BUG-084",
-      "headingLine": 6019,
+      "headingLine": 6023,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17965,11 +17968,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6021
+      "currentStatusSourceLine": 6025
     },
     {
       "id": "BUG-083",
-      "headingLine": 6046,
+      "headingLine": 6050,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17978,11 +17981,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6048
+      "currentStatusSourceLine": 6052
     },
     {
       "id": "BUG-082",
-      "headingLine": 6071,
+      "headingLine": 6075,
       "statusCandidates": [
         "FIXED"
       ],
@@ -17991,11 +17994,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6073
+      "currentStatusSourceLine": 6077
     },
     {
       "id": "BUG-050",
-      "headingLine": 6103,
+      "headingLine": 6107,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18004,11 +18007,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6105
+      "currentStatusSourceLine": 6109
     },
     {
       "id": "BUG-052",
-      "headingLine": 6126,
+      "headingLine": 6130,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -18017,11 +18020,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6128
+      "currentStatusSourceLine": 6132
     },
     {
       "id": "BUG-093",
-      "headingLine": 6161,
+      "headingLine": 6165,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18032,11 +18035,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6163
+      "currentStatusSourceLine": 6167
     },
     {
       "id": "BUG-092",
-      "headingLine": 6184,
+      "headingLine": 6188,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -18045,11 +18048,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6186
+      "currentStatusSourceLine": 6190
     },
     {
       "id": "BUG-094",
-      "headingLine": 6209,
+      "headingLine": 6213,
       "statusCandidates": [
         "IN PROGRESS"
       ],
@@ -18058,11 +18061,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6211
+      "currentStatusSourceLine": 6215
     },
     {
       "id": "BUG-095",
-      "headingLine": 6223,
+      "headingLine": 6227,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18071,33 +18074,33 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6225
+      "currentStatusSourceLine": 6229
     },
     {
       "id": "BUG-096",
-      "headingLine": 6237,
+      "headingLine": 6241,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6239
+      "currentStatusSourceLine": 6243
     },
     {
       "id": "BUG-097",
-      "headingLine": 6251,
+      "headingLine": 6255,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6253
+      "currentStatusSourceLine": 6257
     },
     {
       "id": "BUG-098",
-      "headingLine": 6262,
+      "headingLine": 6266,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18109,11 +18112,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6264
+      "currentStatusSourceLine": 6268
     },
     {
       "id": "BUG-099",
-      "headingLine": 6280,
+      "headingLine": 6284,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18124,11 +18127,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6282
+      "currentStatusSourceLine": 6286
     },
     {
       "id": "BUG-144",
-      "headingLine": 6294,
+      "headingLine": 6298,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18137,11 +18140,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6296
+      "currentStatusSourceLine": 6300
     },
     {
       "id": "BUG-145",
-      "headingLine": 6308,
+      "headingLine": 6312,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18150,11 +18153,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6310
+      "currentStatusSourceLine": 6314
     },
     {
       "id": "BUG-146",
-      "headingLine": 6322,
+      "headingLine": 6326,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18163,11 +18166,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6324
+      "currentStatusSourceLine": 6328
     },
     {
       "id": "BUG-147",
-      "headingLine": 6336,
+      "headingLine": 6340,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18176,11 +18179,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6338
+      "currentStatusSourceLine": 6342
     },
     {
       "id": "BUG-139",
-      "headingLine": 6350,
+      "headingLine": 6354,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18189,11 +18192,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6352
+      "currentStatusSourceLine": 6356
     },
     {
       "id": "BUG-140",
-      "headingLine": 6364,
+      "headingLine": 6368,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18202,11 +18205,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6366
+      "currentStatusSourceLine": 6370
     },
     {
       "id": "BUG-141",
-      "headingLine": 6378,
+      "headingLine": 6382,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18215,11 +18218,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6380
+      "currentStatusSourceLine": 6384
     },
     {
       "id": "BUG-142",
-      "headingLine": 6392,
+      "headingLine": 6396,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18228,11 +18231,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6394
+      "currentStatusSourceLine": 6398
     },
     {
       "id": "BUG-143",
-      "headingLine": 6406,
+      "headingLine": 6410,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18241,11 +18244,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6408
+      "currentStatusSourceLine": 6412
     },
     {
       "id": "BUG-127",
-      "headingLine": 6420,
+      "headingLine": 6424,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18254,11 +18257,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6422
+      "currentStatusSourceLine": 6426
     },
     {
       "id": "BUG-128",
-      "headingLine": 6434,
+      "headingLine": 6438,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18267,11 +18270,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6436
+      "currentStatusSourceLine": 6440
     },
     {
       "id": "BUG-129",
-      "headingLine": 6448,
+      "headingLine": 6452,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18280,11 +18283,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6450
+      "currentStatusSourceLine": 6454
     },
     {
       "id": "BUG-130",
-      "headingLine": 6462,
+      "headingLine": 6466,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18293,11 +18296,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6464
+      "currentStatusSourceLine": 6468
     },
     {
       "id": "BUG-131",
-      "headingLine": 6476,
+      "headingLine": 6480,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18306,11 +18309,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6478
+      "currentStatusSourceLine": 6482
     },
     {
       "id": "BUG-132",
-      "headingLine": 6490,
+      "headingLine": 6494,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18319,11 +18322,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6492
+      "currentStatusSourceLine": 6496
     },
     {
       "id": "BUG-133",
-      "headingLine": 6504,
+      "headingLine": 6508,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18332,11 +18335,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6506
+      "currentStatusSourceLine": 6510
     },
     {
       "id": "BUG-134",
-      "headingLine": 6518,
+      "headingLine": 6522,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18345,11 +18348,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6520
+      "currentStatusSourceLine": 6524
     },
     {
       "id": "BUG-135",
-      "headingLine": 6532,
+      "headingLine": 6536,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18358,11 +18361,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6534
+      "currentStatusSourceLine": 6538
     },
     {
       "id": "BUG-136",
-      "headingLine": 6546,
+      "headingLine": 6550,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18371,11 +18374,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6548
+      "currentStatusSourceLine": 6552
     },
     {
       "id": "BUG-137",
-      "headingLine": 6560,
+      "headingLine": 6564,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18384,11 +18387,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6562
+      "currentStatusSourceLine": 6566
     },
     {
       "id": "BUG-138",
-      "headingLine": 6574,
+      "headingLine": 6578,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18397,11 +18400,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6576
+      "currentStatusSourceLine": 6580
     },
     {
       "id": "BUG-106",
-      "headingLine": 6588,
+      "headingLine": 6592,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18410,11 +18413,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6590
+      "currentStatusSourceLine": 6594
     },
     {
       "id": "BUG-105",
-      "headingLine": 6598,
+      "headingLine": 6602,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18423,11 +18426,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6600
+      "currentStatusSourceLine": 6604
     },
     {
       "id": "BUG-104",
-      "headingLine": 6608,
+      "headingLine": 6612,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18436,11 +18439,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6610
+      "currentStatusSourceLine": 6614
     },
     {
       "id": "BUG-103",
-      "headingLine": 6620,
+      "headingLine": 6624,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18449,11 +18452,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6622
+      "currentStatusSourceLine": 6626
     },
     {
       "id": "BUG-102",
-      "headingLine": 6632,
+      "headingLine": 6636,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18462,11 +18465,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6634
+      "currentStatusSourceLine": 6638
     },
     {
       "id": "BUG-101",
-      "headingLine": 6644,
+      "headingLine": 6648,
       "statusCandidates": [
         "FIXED"
       ],
@@ -18475,33 +18478,33 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6646
+      "currentStatusSourceLine": 6650
     },
     {
       "id": "BUG-100",
-      "headingLine": 6656,
+      "headingLine": 6660,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6658
+      "currentStatusSourceLine": 6662
     },
     {
       "id": "BUG-449",
-      "headingLine": 6668,
+      "headingLine": 6672,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6670
+      "currentStatusSourceLine": 6674
     },
     {
       "id": "BUG-450",
-      "headingLine": 6676,
+      "headingLine": 6680,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18510,11 +18513,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6678
+      "currentStatusSourceLine": 6682
     },
     {
       "id": "BUG-451",
-      "headingLine": 6686,
+      "headingLine": 6690,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18523,11 +18526,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6688
+      "currentStatusSourceLine": 6692
     },
     {
       "id": "BUG-452",
-      "headingLine": 6694,
+      "headingLine": 6698,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18536,11 +18539,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6696
+      "currentStatusSourceLine": 6700
     },
     {
       "id": "BUG-453",
-      "headingLine": 6702,
+      "headingLine": 6706,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18549,11 +18552,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6704
+      "currentStatusSourceLine": 6708
     },
     {
       "id": "BUG-454",
-      "headingLine": 6710,
+      "headingLine": 6714,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18564,11 +18567,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6712
+      "currentStatusSourceLine": 6716
     },
     {
       "id": "BUG-455",
-      "headingLine": 6719,
+      "headingLine": 6723,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18577,11 +18580,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6721
+      "currentStatusSourceLine": 6725
     },
     {
       "id": "BUG-456",
-      "headingLine": 6727,
+      "headingLine": 6731,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18590,11 +18593,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6729
+      "currentStatusSourceLine": 6733
     },
     {
       "id": "BUG-457",
-      "headingLine": 6735,
+      "headingLine": 6739,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18603,11 +18606,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6737
+      "currentStatusSourceLine": 6741
     },
     {
       "id": "BUG-458",
-      "headingLine": 6743,
+      "headingLine": 6747,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18621,11 +18624,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6745
+      "currentStatusSourceLine": 6749
     },
     {
       "id": "BUG-459",
-      "headingLine": 6751,
+      "headingLine": 6755,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18639,11 +18642,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6753
+      "currentStatusSourceLine": 6757
     },
     {
       "id": "BUG-460",
-      "headingLine": 6759,
+      "headingLine": 6763,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18657,11 +18660,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6761
+      "currentStatusSourceLine": 6765
     },
     {
       "id": "BUG-461",
-      "headingLine": 6767,
+      "headingLine": 6771,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18670,11 +18673,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6769
+      "currentStatusSourceLine": 6773
     },
     {
       "id": "BUG-462",
-      "headingLine": 6775,
+      "headingLine": 6779,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18683,11 +18686,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6777
+      "currentStatusSourceLine": 6781
     },
     {
       "id": "BUG-463",
-      "headingLine": 6783,
+      "headingLine": 6787,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18696,11 +18699,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6785
+      "currentStatusSourceLine": 6789
     },
     {
       "id": "BUG-464",
-      "headingLine": 6791,
+      "headingLine": 6795,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18714,11 +18717,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6793
+      "currentStatusSourceLine": 6797
     },
     {
       "id": "BUG-465",
-      "headingLine": 6799,
+      "headingLine": 6803,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18727,11 +18730,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6801
+      "currentStatusSourceLine": 6805
     },
     {
       "id": "BUG-466",
-      "headingLine": 6807,
+      "headingLine": 6811,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18743,11 +18746,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6809
+      "currentStatusSourceLine": 6813
     },
     {
       "id": "BUG-467",
-      "headingLine": 6815,
+      "headingLine": 6819,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18756,11 +18759,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6817
+      "currentStatusSourceLine": 6821
     },
     {
       "id": "BUG-468",
-      "headingLine": 6823,
+      "headingLine": 6827,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18769,11 +18772,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6825
+      "currentStatusSourceLine": 6829
     },
     {
       "id": "BUG-469",
-      "headingLine": 6831,
+      "headingLine": 6835,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18785,11 +18788,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6833
+      "currentStatusSourceLine": 6837
     },
     {
       "id": "BUG-470",
-      "headingLine": 6839,
+      "headingLine": 6843,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18798,11 +18801,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6841
+      "currentStatusSourceLine": 6845
     },
     {
       "id": "BUG-471",
-      "headingLine": 6847,
+      "headingLine": 6851,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18811,11 +18814,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6849
+      "currentStatusSourceLine": 6853
     },
     {
       "id": "BUG-472",
-      "headingLine": 6855,
+      "headingLine": 6859,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18824,11 +18827,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6857
+      "currentStatusSourceLine": 6861
     },
     {
       "id": "BUG-473",
-      "headingLine": 6863,
+      "headingLine": 6867,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18837,11 +18840,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6865
+      "currentStatusSourceLine": 6869
     },
     {
       "id": "BUG-474",
-      "headingLine": 6871,
+      "headingLine": 6875,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18850,11 +18853,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6873
+      "currentStatusSourceLine": 6877
     },
     {
       "id": "BUG-475",
-      "headingLine": 6879,
+      "headingLine": 6883,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18863,22 +18866,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6881
+      "currentStatusSourceLine": 6885
     },
     {
       "id": "BUG-476",
-      "headingLine": 6887,
+      "headingLine": 6891,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6889
+      "currentStatusSourceLine": 6893
     },
     {
       "id": "BUG-477",
-      "headingLine": 6895,
+      "headingLine": 6899,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18887,11 +18890,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6897
+      "currentStatusSourceLine": 6901
     },
     {
       "id": "BUG-478",
-      "headingLine": 6903,
+      "headingLine": 6907,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18900,11 +18903,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6905
+      "currentStatusSourceLine": 6909
     },
     {
       "id": "BUG-479",
-      "headingLine": 6913,
+      "headingLine": 6917,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18913,11 +18916,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6915
+      "currentStatusSourceLine": 6919
     },
     {
       "id": "BUG-480",
-      "headingLine": 6921,
+      "headingLine": 6925,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18926,11 +18929,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6923
+      "currentStatusSourceLine": 6927
     },
     {
       "id": "BUG-481",
-      "headingLine": 6929,
+      "headingLine": 6933,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18939,11 +18942,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6931
+      "currentStatusSourceLine": 6935
     },
     {
       "id": "BUG-482",
-      "headingLine": 6937,
+      "headingLine": 6941,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18952,11 +18955,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6939
+      "currentStatusSourceLine": 6943
     },
     {
       "id": "BUG-483",
-      "headingLine": 6945,
+      "headingLine": 6949,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18965,11 +18968,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6947
+      "currentStatusSourceLine": 6951
     },
     {
       "id": "BUG-484",
-      "headingLine": 6953,
+      "headingLine": 6957,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18978,11 +18981,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6955
+      "currentStatusSourceLine": 6959
     },
     {
       "id": "BUG-485",
-      "headingLine": 6961,
+      "headingLine": 6965,
       "statusCandidates": [
         "OPEN"
       ],
@@ -18991,11 +18994,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6963
+      "currentStatusSourceLine": 6967
     },
     {
       "id": "BUG-486",
-      "headingLine": 6969,
+      "headingLine": 6973,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19004,11 +19007,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6971
+      "currentStatusSourceLine": 6975
     },
     {
       "id": "BUG-487",
-      "headingLine": 6977,
+      "headingLine": 6981,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19017,11 +19020,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6979
+      "currentStatusSourceLine": 6983
     },
     {
       "id": "BUG-488",
-      "headingLine": 6985,
+      "headingLine": 6989,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19030,11 +19033,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6987
+      "currentStatusSourceLine": 6991
     },
     {
       "id": "BUG-489",
-      "headingLine": 6993,
+      "headingLine": 6997,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19043,11 +19046,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 6995
+      "currentStatusSourceLine": 6999
     },
     {
       "id": "BUG-490",
-      "headingLine": 7001,
+      "headingLine": 7005,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19056,11 +19059,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7003
+      "currentStatusSourceLine": 7007
     },
     {
       "id": "BUG-491",
-      "headingLine": 7009,
+      "headingLine": 7013,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19069,11 +19072,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7011
+      "currentStatusSourceLine": 7015
     },
     {
       "id": "BUG-492",
-      "headingLine": 7017,
+      "headingLine": 7021,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19082,11 +19085,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7019
+      "currentStatusSourceLine": 7023
     },
     {
       "id": "BUG-493",
-      "headingLine": 7025,
+      "headingLine": 7029,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19095,11 +19098,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7027
+      "currentStatusSourceLine": 7031
     },
     {
       "id": "BUG-494",
-      "headingLine": 7033,
+      "headingLine": 7037,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19108,11 +19111,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7035
+      "currentStatusSourceLine": 7039
     },
     {
       "id": "BUG-495",
-      "headingLine": 7041,
+      "headingLine": 7045,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19121,11 +19124,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7043
+      "currentStatusSourceLine": 7047
     },
     {
       "id": "BUG-496",
-      "headingLine": 7049,
+      "headingLine": 7053,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19137,11 +19140,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7051
+      "currentStatusSourceLine": 7055
     },
     {
       "id": "BUG-497",
-      "headingLine": 7057,
+      "headingLine": 7061,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19150,11 +19153,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7059
+      "currentStatusSourceLine": 7063
     },
     {
       "id": "BUG-498",
-      "headingLine": 7065,
+      "headingLine": 7069,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19163,11 +19166,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7067
+      "currentStatusSourceLine": 7071
     },
     {
       "id": "BUG-499",
-      "headingLine": 7073,
+      "headingLine": 7077,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19176,11 +19179,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7075
+      "currentStatusSourceLine": 7079
     },
     {
       "id": "BUG-500",
-      "headingLine": 7082,
+      "headingLine": 7086,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19189,11 +19192,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7084
+      "currentStatusSourceLine": 7088
     },
     {
       "id": "BUG-501",
-      "headingLine": 7090,
+      "headingLine": 7094,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19202,11 +19205,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7092
+      "currentStatusSourceLine": 7096
     },
     {
       "id": "BUG-502",
-      "headingLine": 7098,
+      "headingLine": 7102,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19215,11 +19218,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7100
+      "currentStatusSourceLine": 7104
     },
     {
       "id": "BUG-503",
-      "headingLine": 7106,
+      "headingLine": 7110,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19228,11 +19231,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7108
+      "currentStatusSourceLine": 7112
     },
     {
       "id": "BUG-504",
-      "headingLine": 7114,
+      "headingLine": 7118,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19244,11 +19247,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7116
+      "currentStatusSourceLine": 7120
     },
     {
       "id": "BUG-505",
-      "headingLine": 7123,
+      "headingLine": 7127,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19257,11 +19260,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7125
+      "currentStatusSourceLine": 7129
     },
     {
       "id": "BUG-506",
-      "headingLine": 7131,
+      "headingLine": 7135,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19270,11 +19273,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7133
+      "currentStatusSourceLine": 7137
     },
     {
       "id": "BUG-507",
-      "headingLine": 7139,
+      "headingLine": 7143,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19283,11 +19286,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7141
+      "currentStatusSourceLine": 7145
     },
     {
       "id": "BUG-508",
-      "headingLine": 7151,
+      "headingLine": 7155,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19296,11 +19299,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7153
+      "currentStatusSourceLine": 7157
     },
     {
       "id": "BUG-509",
-      "headingLine": 7159,
+      "headingLine": 7163,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19309,11 +19312,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7161
+      "currentStatusSourceLine": 7165
     },
     {
       "id": "BUG-510",
-      "headingLine": 7167,
+      "headingLine": 7171,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19322,11 +19325,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7169
+      "currentStatusSourceLine": 7173
     },
     {
       "id": "BUG-511",
-      "headingLine": 7175,
+      "headingLine": 7179,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19335,11 +19338,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7177
+      "currentStatusSourceLine": 7181
     },
     {
       "id": "BUG-512",
-      "headingLine": 7183,
+      "headingLine": 7187,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19348,11 +19351,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7185
+      "currentStatusSourceLine": 7189
     },
     {
       "id": "BUG-513",
-      "headingLine": 7191,
+      "headingLine": 7195,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19361,11 +19364,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7193
+      "currentStatusSourceLine": 7197
     },
     {
       "id": "BUG-514",
-      "headingLine": 7199,
+      "headingLine": 7203,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19374,11 +19377,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7201
+      "currentStatusSourceLine": 7205
     },
     {
       "id": "BUG-515",
-      "headingLine": 7207,
+      "headingLine": 7211,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19389,11 +19392,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7209
+      "currentStatusSourceLine": 7213
     },
     {
       "id": "BUG-516",
-      "headingLine": 7219,
+      "headingLine": 7223,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19402,11 +19405,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7221
+      "currentStatusSourceLine": 7225
     },
     {
       "id": "BUG-517",
-      "headingLine": 7227,
+      "headingLine": 7231,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19415,11 +19418,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7229
+      "currentStatusSourceLine": 7233
     },
     {
       "id": "BUG-518",
-      "headingLine": 7237,
+      "headingLine": 7241,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19428,11 +19431,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7239
+      "currentStatusSourceLine": 7243
     },
     {
       "id": "BUG-519",
-      "headingLine": 7245,
+      "headingLine": 7249,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19441,11 +19444,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7247
+      "currentStatusSourceLine": 7251
     },
     {
       "id": "BUG-520",
-      "headingLine": 7253,
+      "headingLine": 7257,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19454,11 +19457,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7255
+      "currentStatusSourceLine": 7259
     },
     {
       "id": "BUG-521",
-      "headingLine": 7261,
+      "headingLine": 7265,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19467,11 +19470,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7263
+      "currentStatusSourceLine": 7267
     },
     {
       "id": "BUG-522",
-      "headingLine": 7269,
+      "headingLine": 7273,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19480,11 +19483,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7271
+      "currentStatusSourceLine": 7275
     },
     {
       "id": "BUG-523",
-      "headingLine": 7277,
+      "headingLine": 7281,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19493,11 +19496,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7279
+      "currentStatusSourceLine": 7283
     },
     {
       "id": "BUG-524",
-      "headingLine": 7285,
+      "headingLine": 7289,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19506,11 +19509,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7287
+      "currentStatusSourceLine": 7291
     },
     {
       "id": "BUG-525",
-      "headingLine": 7293,
+      "headingLine": 7297,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19519,11 +19522,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7295
+      "currentStatusSourceLine": 7299
     },
     {
       "id": "BUG-526",
-      "headingLine": 7301,
+      "headingLine": 7305,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19532,11 +19535,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7303
+      "currentStatusSourceLine": 7307
     },
     {
       "id": "BUG-527",
-      "headingLine": 7309,
+      "headingLine": 7313,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19545,11 +19548,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7311
+      "currentStatusSourceLine": 7315
     },
     {
       "id": "BUG-528",
-      "headingLine": 7317,
+      "headingLine": 7321,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19558,11 +19561,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7319
+      "currentStatusSourceLine": 7323
     },
     {
       "id": "BUG-529",
-      "headingLine": 7325,
+      "headingLine": 7329,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19571,11 +19574,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7327
+      "currentStatusSourceLine": 7331
     },
     {
       "id": "BUG-530",
-      "headingLine": 7333,
+      "headingLine": 7337,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19584,11 +19587,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7335
+      "currentStatusSourceLine": 7339
     },
     {
       "id": "BUG-531",
-      "headingLine": 7341,
+      "headingLine": 7345,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19597,11 +19600,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7343
+      "currentStatusSourceLine": 7347
     },
     {
       "id": "BUG-532",
-      "headingLine": 7349,
+      "headingLine": 7353,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19610,11 +19613,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7351
+      "currentStatusSourceLine": 7355
     },
     {
       "id": "BUG-533",
-      "headingLine": 7357,
+      "headingLine": 7361,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19623,11 +19626,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7359
+      "currentStatusSourceLine": 7363
     },
     {
       "id": "BUG-534",
-      "headingLine": 7365,
+      "headingLine": 7369,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19636,11 +19639,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7367
+      "currentStatusSourceLine": 7371
     },
     {
       "id": "BUG-535",
-      "headingLine": 7373,
+      "headingLine": 7377,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19649,11 +19652,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7375
+      "currentStatusSourceLine": 7379
     },
     {
       "id": "BUG-536",
-      "headingLine": 7383,
+      "headingLine": 7387,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19662,11 +19665,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7385
+      "currentStatusSourceLine": 7389
     },
     {
       "id": "BUG-537",
-      "headingLine": 7393,
+      "headingLine": 7397,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19675,11 +19678,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7395
+      "currentStatusSourceLine": 7399
     },
     {
       "id": "BUG-538",
-      "headingLine": 7401,
+      "headingLine": 7405,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19688,11 +19691,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7403
+      "currentStatusSourceLine": 7407
     },
     {
       "id": "BUG-539",
-      "headingLine": 7409,
+      "headingLine": 7413,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19701,11 +19704,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7411
+      "currentStatusSourceLine": 7415
     },
     {
       "id": "BUG-540",
-      "headingLine": 7417,
+      "headingLine": 7421,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19714,11 +19717,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7419
+      "currentStatusSourceLine": 7423
     },
     {
       "id": "BUG-541",
-      "headingLine": 7425,
+      "headingLine": 7429,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19727,11 +19730,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7427
+      "currentStatusSourceLine": 7431
     },
     {
       "id": "BUG-542",
-      "headingLine": 7433,
+      "headingLine": 7437,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19740,11 +19743,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7435
+      "currentStatusSourceLine": 7439
     },
     {
       "id": "BUG-543",
-      "headingLine": 7441,
+      "headingLine": 7445,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19753,11 +19756,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7443
+      "currentStatusSourceLine": 7447
     },
     {
       "id": "BUG-544",
-      "headingLine": 7449,
+      "headingLine": 7453,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19766,11 +19769,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7451
+      "currentStatusSourceLine": 7455
     },
     {
       "id": "BUG-545",
-      "headingLine": 7457,
+      "headingLine": 7461,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19779,11 +19782,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7459
+      "currentStatusSourceLine": 7463
     },
     {
       "id": "BUG-546",
-      "headingLine": 7465,
+      "headingLine": 7469,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19792,11 +19795,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7467
+      "currentStatusSourceLine": 7471
     },
     {
       "id": "BUG-547",
-      "headingLine": 7473,
+      "headingLine": 7477,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19805,11 +19808,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7475
+      "currentStatusSourceLine": 7479
     },
     {
       "id": "BUG-548",
-      "headingLine": 7482,
+      "headingLine": 7486,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19818,11 +19821,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7484
+      "currentStatusSourceLine": 7488
     },
     {
       "id": "BUG-549",
-      "headingLine": 7490,
+      "headingLine": 7494,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19831,11 +19834,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7492
+      "currentStatusSourceLine": 7496
     },
     {
       "id": "BUG-550",
-      "headingLine": 7498,
+      "headingLine": 7502,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19844,11 +19847,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7500
+      "currentStatusSourceLine": 7504
     },
     {
       "id": "BUG-551",
-      "headingLine": 7506,
+      "headingLine": 7510,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19857,11 +19860,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7508
+      "currentStatusSourceLine": 7512
     },
     {
       "id": "BUG-552",
-      "headingLine": 7514,
+      "headingLine": 7518,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19870,11 +19873,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7516
+      "currentStatusSourceLine": 7520
     },
     {
       "id": "BUG-553",
-      "headingLine": 7524,
+      "headingLine": 7528,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19883,11 +19886,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7526
+      "currentStatusSourceLine": 7530
     },
     {
       "id": "BUG-554",
-      "headingLine": 7534,
+      "headingLine": 7538,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19896,11 +19899,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7536
+      "currentStatusSourceLine": 7540
     },
     {
       "id": "BUG-555",
-      "headingLine": 7542,
+      "headingLine": 7546,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19909,11 +19912,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7544
+      "currentStatusSourceLine": 7548
     },
     {
       "id": "BUG-556",
-      "headingLine": 7550,
+      "headingLine": 7554,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19922,11 +19925,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7552
+      "currentStatusSourceLine": 7556
     },
     {
       "id": "BUG-557",
-      "headingLine": 7558,
+      "headingLine": 7562,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19935,11 +19938,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7560
+      "currentStatusSourceLine": 7564
     },
     {
       "id": "BUG-558",
-      "headingLine": 7566,
+      "headingLine": 7570,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
@@ -19949,7 +19952,7 @@
     },
     {
       "id": "BUG-559",
-      "headingLine": 7578,
+      "headingLine": 7582,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19958,11 +19961,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7580
+      "currentStatusSourceLine": 7584
     },
     {
       "id": "BUG-560",
-      "headingLine": 7590,
+      "headingLine": 7594,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19971,11 +19974,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7592
+      "currentStatusSourceLine": 7596
     },
     {
       "id": "BUG-561",
-      "headingLine": 7602,
+      "headingLine": 7606,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19984,11 +19987,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7604
+      "currentStatusSourceLine": 7608
     },
     {
       "id": "BUG-562",
-      "headingLine": 7614,
+      "headingLine": 7618,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19997,11 +20000,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7616
+      "currentStatusSourceLine": 7620
     },
     {
       "id": "BUG-563",
-      "headingLine": 7626,
+      "headingLine": 7630,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20010,11 +20013,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7628
+      "currentStatusSourceLine": 7632
     },
     {
       "id": "BUG-564",
-      "headingLine": 7638,
+      "headingLine": 7642,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20023,11 +20026,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7640
+      "currentStatusSourceLine": 7644
     },
     {
       "id": "BUG-565",
-      "headingLine": 7650,
+      "headingLine": 7654,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [
@@ -20036,44 +20039,44 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7652
+      "currentStatusSourceLine": 7656
     },
     {
       "id": "BUG-569",
-      "headingLine": 7664,
+      "headingLine": 7668,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7666
+      "currentStatusSourceLine": 7670
     },
     {
       "id": "BUG-568",
-      "headingLine": 7672,
+      "headingLine": 7676,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7674
+      "currentStatusSourceLine": 7678
     },
     {
       "id": "BUG-567",
-      "headingLine": 7681,
+      "headingLine": 7685,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7683
+      "currentStatusSourceLine": 7687
     },
     {
       "id": "BUG-566",
-      "headingLine": 7689,
+      "headingLine": 7693,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20082,11 +20085,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7691
+      "currentStatusSourceLine": 7695
     },
     {
       "id": "BUG-583",
-      "headingLine": 7702,
+      "headingLine": 7706,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20101,7 +20104,7 @@
     },
     {
       "id": "BUG-584",
-      "headingLine": 7719,
+      "headingLine": 7723,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20121,7 +20124,7 @@
     },
     {
       "id": "BUG-586",
-      "headingLine": 7745,
+      "headingLine": 7749,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20136,7 +20139,7 @@
     },
     {
       "id": "BUG-587",
-      "headingLine": 7769,
+      "headingLine": 7773,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20151,7 +20154,7 @@
     },
     {
       "id": "BUG-585",
-      "headingLine": 7787,
+      "headingLine": 7791,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20166,7 +20169,7 @@
     },
     {
       "id": "BUG-588",
-      "headingLine": 7806,
+      "headingLine": 7810,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20179,7 +20182,7 @@
     },
     {
       "id": "BUG-589",
-      "headingLine": 7814,
+      "headingLine": 7818,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20192,7 +20195,7 @@
     },
     {
       "id": "BUG-590",
-      "headingLine": 7823,
+      "headingLine": 7827,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20207,7 +20210,7 @@
     },
     {
       "id": "BUG-591",
-      "headingLine": 7836,
+      "headingLine": 7840,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20222,7 +20225,7 @@
     },
     {
       "id": "BUG-592",
-      "headingLine": 7850,
+      "headingLine": 7854,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20238,7 +20241,7 @@
     },
     {
       "id": "BUG-593",
-      "headingLine": 7862,
+      "headingLine": 7866,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20255,7 +20258,7 @@
     },
     {
       "id": "BUG-594",
-      "headingLine": 7877,
+      "headingLine": 7881,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20272,7 +20275,7 @@
     },
     {
       "id": "BUG-595",
-      "headingLine": 7890,
+      "headingLine": 7894,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20288,7 +20291,7 @@
     },
     {
       "id": "BUG-596",
-      "headingLine": 7904,
+      "headingLine": 7908,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20303,7 +20306,7 @@
     },
     {
       "id": "BUG-597",
-      "headingLine": 7915,
+      "headingLine": 7919,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20319,7 +20322,7 @@
     },
     {
       "id": "BUG-598",
-      "headingLine": 7930,
+      "headingLine": 7934,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20335,7 +20338,7 @@
     },
     {
       "id": "BUG-599",
-      "headingLine": 7945,
+      "headingLine": 7949,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20350,7 +20353,7 @@
     },
     {
       "id": "BUG-600",
-      "headingLine": 7960,
+      "headingLine": 7964,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20365,7 +20368,7 @@
     },
     {
       "id": "BUG-601",
-      "headingLine": 7972,
+      "headingLine": 7976,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20380,7 +20383,7 @@
     },
     {
       "id": "BUG-602",
-      "headingLine": 7984,
+      "headingLine": 7988,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20395,7 +20398,7 @@
     },
     {
       "id": "BUG-603",
-      "headingLine": 7996,
+      "headingLine": 8000,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20410,7 +20413,7 @@
     },
     {
       "id": "BUG-604",
-      "headingLine": 8007,
+      "headingLine": 8011,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20425,7 +20428,7 @@
     },
     {
       "id": "BUG-605",
-      "headingLine": 8019,
+      "headingLine": 8023,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20440,7 +20443,7 @@
     },
     {
       "id": "BUG-606",
-      "headingLine": 8038,
+      "headingLine": 8042,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20455,7 +20458,7 @@
     },
     {
       "id": "BUG-607",
-      "headingLine": 8052,
+      "headingLine": 8056,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20470,7 +20473,7 @@
     },
     {
       "id": "BUG-608",
-      "headingLine": 8068,
+      "headingLine": 8072,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20485,7 +20488,7 @@
     },
     {
       "id": "BUG-609",
-      "headingLine": 8081,
+      "headingLine": 8085,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20500,7 +20503,7 @@
     },
     {
       "id": "BUG-610",
-      "headingLine": 8096,
+      "headingLine": 8100,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20515,7 +20518,7 @@
     },
     {
       "id": "BUG-611",
-      "headingLine": 8114,
+      "headingLine": 8118,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20562,7 +20565,7 @@
     },
     {
       "id": "BUG-612",
-      "headingLine": 8132,
+      "headingLine": 8136,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20578,7 +20581,7 @@
     },
     {
       "id": "BUG-613",
-      "headingLine": 8148,
+      "headingLine": 8152,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20594,7 +20597,7 @@
     },
     {
       "id": "BUG-614",
-      "headingLine": 8159,
+      "headingLine": 8163,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20609,7 +20612,7 @@
     },
     {
       "id": "BUG-615",
-      "headingLine": 8169,
+      "headingLine": 8173,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20627,7 +20630,7 @@
     },
     {
       "id": "BUG-616",
-      "headingLine": 8186,
+      "headingLine": 8190,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20642,7 +20645,7 @@
     },
     {
       "id": "BUG-617",
-      "headingLine": 8195,
+      "headingLine": 8199,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20657,7 +20660,7 @@
     },
     {
       "id": "BUG-618",
-      "headingLine": 8206,
+      "headingLine": 8210,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20672,7 +20675,7 @@
     },
     {
       "id": "BUG-619",
-      "headingLine": 8216,
+      "headingLine": 8220,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20688,7 +20691,7 @@
     },
     {
       "id": "BUG-620",
-      "headingLine": 8226,
+      "headingLine": 8230,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20701,7 +20704,7 @@
     },
     {
       "id": "BUG-621",
-      "headingLine": 8245,
+      "headingLine": 8249,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20722,7 +20725,7 @@
     },
     {
       "id": "BUG-622",
-      "headingLine": 8269,
+      "headingLine": 8273,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20738,7 +20741,7 @@
     },
     {
       "id": "BUG-623",
-      "headingLine": 8281,
+      "headingLine": 8285,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20749,11 +20752,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8279
+      "currentStatusSourceLine": 8283
     },
     {
       "id": "BUG-624",
-      "headingLine": 8293,
+      "headingLine": 8297,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20764,11 +20767,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8291
+      "currentStatusSourceLine": 8295
     },
     {
       "id": "BUG-625",
-      "headingLine": 8304,
+      "headingLine": 8308,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20779,11 +20782,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8302
+      "currentStatusSourceLine": 8306
     },
     {
       "id": "BUG-626",
-      "headingLine": 8314,
+      "headingLine": 8318,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20794,11 +20797,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8312
+      "currentStatusSourceLine": 8316
     },
     {
       "id": "BUG-627",
-      "headingLine": 8323,
+      "headingLine": 8327,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20809,11 +20812,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8321
+      "currentStatusSourceLine": 8325
     },
     {
       "id": "BUG-628",
-      "headingLine": 8333,
+      "headingLine": 8337,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20824,11 +20827,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8335
+      "currentStatusSourceLine": 8339
     },
     {
       "id": "BUG-629",
-      "headingLine": 8342,
+      "headingLine": 8346,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20839,11 +20842,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8344
+      "currentStatusSourceLine": 8348
     },
     {
       "id": "BUG-630",
-      "headingLine": 8352,
+      "headingLine": 8356,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20854,11 +20857,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8354
+      "currentStatusSourceLine": 8358
     },
     {
       "id": "BUG-631",
-      "headingLine": 8361,
+      "headingLine": 8365,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20869,11 +20872,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8363
+      "currentStatusSourceLine": 8367
     },
     {
       "id": "BUG-632",
-      "headingLine": 8370,
+      "headingLine": 8374,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20884,11 +20887,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8372
+      "currentStatusSourceLine": 8376
     },
     {
       "id": "BUG-633",
-      "headingLine": 8380,
+      "headingLine": 8384,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20899,11 +20902,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8382
+      "currentStatusSourceLine": 8386
     },
     {
       "id": "BUG-634",
-      "headingLine": 8389,
+      "headingLine": 8393,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20914,11 +20917,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8391
+      "currentStatusSourceLine": 8395
     },
     {
       "id": "BUG-635",
-      "headingLine": 8398,
+      "headingLine": 8402,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20930,11 +20933,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8400
+      "currentStatusSourceLine": 8404
     },
     {
       "id": "BUG-636",
-      "headingLine": 8408,
+      "headingLine": 8412,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20945,11 +20948,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8410
+      "currentStatusSourceLine": 8414
     },
     {
       "id": "BUG-637",
-      "headingLine": 8417,
+      "headingLine": 8421,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20960,7 +20963,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8419
+      "currentStatusSourceLine": 8423
     },
     {
       "id": "BUG-638",
@@ -20974,12 +20977,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "headingLine": 8427,
-      "currentStatusSourceLine": 8429
+      "headingLine": 8431,
+      "currentStatusSourceLine": 8433
     },
     {
       "id": "BUG-639",
-      "headingLine": 8437,
+      "headingLine": 8441,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20988,12 +20991,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8439,
+      "currentStatusSourceLine": 8443,
       "evidenceLevel": "documentation-filesystem-audit"
     },
     {
       "id": "BUG-640",
-      "headingLine": 8447,
+      "headingLine": 8451,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21004,11 +21007,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8449
+      "currentStatusSourceLine": 8453
     },
     {
       "id": "BUG-641",
-      "headingLine": 8456,
+      "headingLine": 8460,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21019,11 +21022,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8472
+      "currentStatusSourceLine": 8476
     },
     {
       "id": "BUG-642",
-      "headingLine": 8474,
+      "headingLine": 8478,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21035,11 +21038,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8490
+      "currentStatusSourceLine": 8494
     },
     {
       "id": "BUG-643",
-      "headingLine": 8497,
+      "headingLine": 8501,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21050,7 +21053,7 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8513
+      "currentStatusSourceLine": 8517
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -21155,6 +21158,13 @@
       "scope": "Actual DP1toIO1connectioncreated;inputlimitationresolved;existingBUG582reproduced;6checks5PASS1FAIL",
       "narrowCases": 684,
       "caseLedgers": 59,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "DPtoIOdiskreopenPASS;nativeDPmoveleavespipebehindinrenamedcopy;existingBUG358linked;5checks4PASS1FAIL",
+      "narrowCases": 689,
+      "caseLedgers": 60,
       "wholeOverallPercent": null
     }
   ],
@@ -40629,7 +40639,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 220,
+    "newNativeChecks": 225,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -40638,14 +40648,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1466,
-    "retainedDeclaredFiles": 1473,
-    "directScreens": 1276,
-    "directMetadata": 190,
+    "directCaseLinkedFiles": 1478,
+    "retainedDeclaredFiles": 1485,
+    "directScreens": 1283,
+    "directMetadata": 195,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All684 cases across59ledgers direct evidence freshly rehashed. Seven prior unlinked retainedfiles excluded. Whole50%UNKNOWN."
+    "scope": "All689cases/60ledgers direct evidence freshlyrehashed;7priorunlinkedretainedfiles excluded. Whole50%UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -40985,9 +40995,9 @@
     "CV-03": {
       "source": "04_REFERENCE/CARDS/CV-03_SOURCE_BLOCKS.md",
       "sourceSha256": "C442EF86FE769578575D65DFE831181BC630C22590A7456EA847EBF9022E2887",
-      "scope": "15approveddecisionsreviewedagainst8currentnativecases;cardhistoricalimplementationheadingsnotcurrentstatus. DP/IOmanualfree-standingonly. PermanentIDs/embeddedproject/wholepipelineunproven;LispDPgroupnottypedDPoneUndo. SE01nativeMOVE500mm/inverse label-follow/readback;SE03CDrecognisesDP1IO1Unknown;SE05creationblockedinput—notproductfailure. Only4literalextensionkeysread,nopermanentIDproof. CurrentSC01-06 resolves priorinputlimitationandcompletesDPtoIOpipe;existing582persists. Wholecardfalse.",
-      "nativeCaseCount": 20,
-      "nativeLedgerCount": 3,
+      "scope": "15approveddecisionsreviewedagainst8currentnativecases;cardhistoricalimplementationheadingsnotcurrentstatus. DP/IOmanualfree-standingonly. PermanentIDs/embeddedproject/wholepipelineunproven;LispDPgroupnottypedDPoneUndo. SE01nativeMOVE500mm/inverse label-follow/readback;SE03CDrecognisesDP1IO1Unknown;SE05creationblockedinput—notproductfailure. Only4literalextensionkeysread,nopermanentIDproof. CurrentSC01-06 resolves priorinputlimitationandcompletesDPtoIOpipe;existing582persists. Wholecardfalse. CM01diskreopen61ordinaryrecordsPASS;CM02nativeDPmoveleavespipebehindinrenamedcopy,owner/pathcontributionunknown;wholecardfalse.",
+      "nativeCaseCount": 25,
+      "nativeLedgerCount": 4,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -41102,7 +41112,7 @@
         {
           "id": "CV3-14",
           "required": "Compoundsource/data/connections/oneUndo",
-          "status": "PARTIAL",
+          "status": "PARTIAL_WITH_FAILURE",
           "currentCaseKeys": [
             "source-placement-case-ledger.json::SP-03",
             "source-placement-case-ledger.json::SP-05",
@@ -41117,7 +41127,12 @@
             "source-connection-case-ledger.json::SC-03",
             "source-connection-case-ledger.json::SC-04",
             "source-connection-case-ledger.json::SC-05",
-            "source-connection-case-ledger.json::SC-06"
+            "source-connection-case-ledger.json::SC-06",
+            "connected-move-case-ledger.json::CM-01",
+            "connected-move-case-ledger.json::CM-02",
+            "connected-move-case-ledger.json::CM-03",
+            "connected-move-case-ledger.json::CM-04",
+            "connected-move-case-ledger.json::CM-05"
           ],
           "wholeRequirementAccepted": false
         },
@@ -41144,7 +41159,12 @@
             "source-connection-case-ledger.json::SC-03",
             "source-connection-case-ledger.json::SC-04",
             "source-connection-case-ledger.json::SC-05",
-            "source-connection-case-ledger.json::SC-06"
+            "source-connection-case-ledger.json::SC-06",
+            "connected-move-case-ledger.json::CM-01",
+            "connected-move-case-ledger.json::CM-02",
+            "connected-move-case-ledger.json::CM-03",
+            "connected-move-case-ledger.json::CM-04",
+            "connected-move-case-ledger.json::CM-05"
           ],
           "wholeRequirementAccepted": false
         }
