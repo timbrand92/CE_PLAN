@@ -1,5 +1,13 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Current source-placement results — 15 October 2026
+
+1. **Current position:**672individualchecks/57ledgers:524PASS,122FAIL,6BLOCKED,20UNPROVEN.1437directevidencefiles(1261screens/176metadata)freshlyrehashedwithoutfaults;1444retainedincluding7oldunlinked. Whole50%coverageUNKNOWN. Earliercountsbelowaredatedsnapshots.
+2. **New Civil family:**DPfirstEscape leaves52originalrecords/ninecontrolsunchanged. Free-standingDPcreatesblock+DPtext/DP1message;repeatEscape keepsit. OneUndo/delayed31.984secondRedo worksfortheAutoLISP-launchedsampleonly;notdirecttypedDPoneUndoacceptance.
+3. **DirecttypedIO:**overlapwithDPrefusedwithredwarning;clearrepickcreatesIO1/block+text. Escape stopsrepeat,oneUndo removesIOwhileDPstays,38.778secondRedo restores. Allpriorordinaryrecordsunchangedafterplacement.
+4. **Savedoutput:**fournewnativeblock/textrecordsandninerestoredcontrols persistthroughSave/close/reopen. Whole56-recordequalityfailsbecauseunrelated7F3anonymousnameU13→U12;other55equal,definitionequivalenceunproved. Originalsourceandbothactualdisplayed/legacypreferencesunchanged;ownedwindowempty/exactleasereleased.
+5. **V3/UXremainder:**CV03all15decisionsreviewedandcase-linkedwhereevidenceexists. Eightnewchecks7PASS/1UNPROVEN;fullmovingghostnotproved. Pipeconnections/splits/internalIDs/COPY/MOVE/UCS/protection/largeplans/plot/olderruntimeandarchitectXrefdetection/roofcatchmentsremain. No newbugorfixedclaim.95of523catalogueentrieshavecaseassociations;thisisnotwholefeaturecoverage. Weekly24%used76%leftaccountwide.
+
 ## Current overload follow-through — 15 October 2026
 
 1. **Current total:**664 individual native checks across56ledgers:517PASS,122FAIL,6BLOCKED,19UNPROVEN.1415direct files(1246screens/169metadata) freshly rehashed,zero faults. Fifty per cent wholeV3/UXcoverage remainsUNKNOWN. Earlier counts below are dated snapshots.

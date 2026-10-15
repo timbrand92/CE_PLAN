@@ -12,43 +12,43 @@
     "currentBugsSha256": "B1FD19C57A9F1978B30081F3126B599B7E1DCECE59A75C76D1CBD5272CEDB023",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "870C8E700D395AEF24163ADC4EEBCAE75B3A38E306015D0E41901675FFE159D6"
+    "currentCaseIndexSha256": "1FF1C5714654CCDA3F16D1808E648998E60E8CE0B65744EE611509D3DCEFDC31"
   },
   "counts": {
     "traceableUxIds": 526,
     "bugHeadings": 593,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 20,
-    "caseLedgers": 56,
-    "narrowCases": 664,
+    "caseLedgers": 57,
+    "narrowCases": 672,
     "narrowVerdicts": {
-      "PASS": 517,
+      "PASS": 524,
       "FAIL": 122,
       "BLOCKED": 6,
-      "UNPROVEN": 19
+      "UNPROVEN": 20
     },
-    "uniqueEvidenceFiles": 1415,
+    "uniqueEvidenceFiles": 1437,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1246,
-    "uniqueMetadataFiles": 169,
+    "uniqueScreenshotFiles": 1261,
+    "uniqueMetadataFiles": 176,
     "caseLinkedUxIds": 18,
     "caseLinkedBugIds": 85,
-    "newNativeExecutionsInLatestReconciliation": 6,
+    "newNativeExecutionsInLatestReconciliation": 8,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1422,
+    "retainedDeclaredEvidenceFiles": 1444,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount."
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "664 bounded native checks across56ledgers are not complete V3workflows. Full built/installed eligibility and acceptance mapping incomplete;50%UNKNOWN.",
+    "reason": "672 bounded native checks across57ledgers are not complete V3workflows. Full built/installed eligibility and acceptance mapping incomplete;50%UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -21107,6 +21107,19 @@
         "UNPROVEN": 19
       },
       "wholePercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "CV03 DP/IO source placement native evidence",
+      "cases": 672,
+      "ledgers": 57,
+      "verdicts": {
+        "PASS": 524,
+        "FAIL": 122,
+        "BLOCKED": 6,
+        "UNPROVEN": 20
+      },
+      "wholePercent": null
     }
   ],
   "installedCommandInventory": {
@@ -22311,9 +22324,23 @@
           "label": "Downpipe (DP)",
           "group": "Sources",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_NATIVE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "source-placement-case-ledger.json::SP-01",
+            "source-placement-case-ledger.json::SP-02",
+            "source-placement-case-ledger.json::SP-03",
+            "source-placement-case-ledger.json::SP-06",
+            "source-placement-case-ledger.json::SP-07",
+            "source-placement-case-ledger.json::SP-08"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "source-placement-case-ledger.json::SP-01",
+            "source-placement-case-ledger.json::SP-02",
+            "source-placement-case-ledger.json::SP-03",
+            "source-placement-case-ledger.json::SP-06",
+            "source-placement-case-ledger.json::SP-07",
+            "source-placement-case-ledger.json::SP-08"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -22333,7 +22360,12 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "primaryNameRouteVerified": true,
+          "observedTypedRoutes": [
+            "DP"
+          ],
+          "currentRequirementReview": "CV-03approvedcardreviewed;manualfree-standingplacement/refusal/recovery/persistenceonly. DPplacementlaunchedviaAutoLISP;directtypedDPcancelobserved. IOtypednative. UXDP01architectdetect/DP03roofsplitseparateunproven."
         },
         {
           "key": "CE_CVL_SUITE.bundle::11::IO",
@@ -22343,9 +22375,21 @@
           "label": "Inspection Opening (IO)",
           "group": "Sources",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_NATIVE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "source-placement-case-ledger.json::SP-04",
+            "source-placement-case-ledger.json::SP-05",
+            "source-placement-case-ledger.json::SP-06",
+            "source-placement-case-ledger.json::SP-07",
+            "source-placement-case-ledger.json::SP-08"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "source-placement-case-ledger.json::SP-04",
+            "source-placement-case-ledger.json::SP-05",
+            "source-placement-case-ledger.json::SP-06",
+            "source-placement-case-ledger.json::SP-07",
+            "source-placement-case-ledger.json::SP-08"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -22365,7 +22409,12 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "primaryNameRouteVerified": true,
+          "observedTypedRoutes": [
+            "IO"
+          ],
+          "currentRequirementReview": "CV-03approvedcardreviewed;manualfree-standingplacement/refusal/recovery/persistenceonly. DPplacementlaunchedviaAutoLISP;directtypedDPcancelobserved. IOtypednative. UXDP01architectdetect/DP03roofsplitseparateunproven."
         },
         {
           "key": "CE_CVL_SUITE.bundle::12::OF",
@@ -40281,11 +40330,11 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 93,
-      "associatedCaseCount": 663,
+      "associatedEntryCount": 95,
+      "associatedCaseCount": 671,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 56
+      "currentLedgerCount": 57
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -40512,7 +40561,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 20,
+    "usedPercent": 24,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -40528,7 +40577,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 200,
+    "newNativeChecks": 208,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -40537,14 +40586,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1415,
-    "retainedDeclaredFiles": 1422,
-    "directScreens": 1246,
-    "directMetadata": 169,
+    "directCaseLinkedFiles": 1437,
+    "retainedDeclaredFiles": 1444,
+    "directScreens": 1261,
+    "directMetadata": 176,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All664cases56ledgers direct evidence freshly rehashed. Seven prior unlinked retained files excluded. Whole50%UNKNOWN."
+    "scope": "All672cases57ledgers direct evidence freshly rehashed. Seven prior unlinked retained files excluded. Whole50%UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -40880,13 +40929,154 @@
           "caseKeys": []
         }
       ]
+    },
+    "CV-03": {
+      "source": "04_REFERENCE/CARDS/CV-03_SOURCE_BLOCKS.md",
+      "sourceSha256": "C442EF86FE769578575D65DFE831181BC630C22590A7456EA847EBF9022E2887",
+      "scope": "15approveddecisionsreviewedagainst8currentnativecases;cardhistoricalimplementationheadingsnotcurrentstatus. DP/IOmanualfree-standingonly. PermanentIDs/embeddedproject/wholepipelineunproven;LispDPgroupnottypedDPoneUndo.",
+      "nativeCaseCount": 8,
+      "nativeLedgerCount": 1,
+      "wholeWorkflowAccepted": false,
+      "requirements": [
+        {
+          "id": "CV3-1",
+          "required": "Include raingarden/GIOrelationship",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-2",
+          "required": "Familiarcommands/hiddenTGredirect",
+          "status": "PARTIAL",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-01",
+            "source-placement-case-ledger.json::SP-04"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-3",
+          "required": "Commonsafeplacementbackbone",
+          "status": "PARTIAL",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-02",
+            "source-placement-case-ledger.json::SP-04"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-4",
+          "required": "Targetedupdates/largeplantiming",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-5",
+          "required": "Complete liveghostbeforeclick",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-07"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-6",
+          "required": "NexthighestneverrecycledinternalIDs",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-7",
+          "required": "Cleanfamiliarlabels/internaluniqueIDs",
+          "status": "PARTIAL",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-02",
+            "source-placement-case-ledger.json::SP-04"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-8",
+          "required": "Correctsource/network/surfaceassettypes",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-9",
+          "required": "DistinctFOtype/approvedgraphics",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-10",
+          "required": "SkippedlevelsUnknownnotzero",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-11",
+          "required": "Overlap/proposedsplitpreviewandrefusal",
+          "status": "PARTIAL",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-04"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-12",
+          "required": "CurrentUCS/optionalrotation",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-13",
+          "required": "CDTAGtypes/duplicatevalidation",
+          "status": "UNPROVEN",
+          "currentCaseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-14",
+          "required": "Compoundsource/data/connections/oneUndo",
+          "status": "PARTIAL",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-03",
+            "source-placement-case-ledger.json::SP-05",
+            "source-placement-case-ledger.json::SP-06"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "CV3-15",
+          "required": "Fullsourcematrix/recovery/largeplan",
+          "status": "PARTIAL",
+          "currentCaseKeys": [
+            "source-placement-case-ledger.json::SP-01",
+            "source-placement-case-ledger.json::SP-02",
+            "source-placement-case-ledger.json::SP-03",
+            "source-placement-case-ledger.json::SP-04",
+            "source-placement-case-ledger.json::SP-05",
+            "source-placement-case-ledger.json::SP-06",
+            "source-placement-case-ledger.json::SP-07",
+            "source-placement-case-ledger.json::SP-08"
+          ],
+          "wholeRequirementAccepted": false
+        }
+      ]
     }
   },
   "recordingReconciliation": {
     "dateMelbourne": "2026-10-15",
     "issue": "Shared index still551/42ledgers although prior saved report/local index563/43. Q/QD12cases and8diagnosticfiles were absent from shared summary; local case receipts retained.",
     "resolution": "Recomputed current counters from all572cases44ledgers, restored Q/QD associations and added9newMLLchecks; no rerun or duplicate new-case credit.",
-    "currentLocalCaseIndexSha256": "870C8E700D395AEF24163ADC4EEBCAE75B3A38E306015D0E41901675FFE159D6",
+    "currentLocalCaseIndexSha256": "1FF1C5714654CCDA3F16D1808E648998E60E8CE0B65744EE611509D3DCEFDC31",
     "uxCaseLinkCounting": "18UXrecords have explicitcurrentCaseKeys, including3crosscuttingrequirementlinks STD03/SEL01/LYR01 stored in sharedUXrecords. Localledger ids alone show15; do notdropapprovedcaseassociations because linked from requirement side."
   },
   "candidateRepairEvidence": [

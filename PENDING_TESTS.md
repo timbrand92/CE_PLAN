@@ -1,5 +1,10 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex CV03 DP/IO sample — 15 October2026
+
+1. **Recorded;noTimactionrequired:**8nativechecks7PASS/1UNPROVEN,source-placementledger. DPfirstEscape/free-standingplacement,IOoverlaprefusal/repick/directtypedoneUndo38.778sRedo,andfourrecords/ninecontrolsSavecloseopenhaveboundedpasses. DP31.984sRedo samplelaunchedviaAutoLISP GROUP,nottype-routeUndoacceptance.
+2. **RemaininginCV03card:**fullghost/finalagreement,DPdirecttypedplacementrecovery,IDs/embeddeddata/pipeconnections/splits/retag/COPY/MOVE/otherfamilies/units/scales/UCS/paper/protectedcontexts/largeplan/plot/olderruntime. All15decisionsreviewed;wholecardand50%unaccepted. Current672checks57ledgers524P122F6B20U;no newbug.
+
 ### Codex overload follow-through — 15 October2026
 
 1. **Recorded, no Tim action required:** six nativechecks4PASS/1FAIL/1UNPROVEN, localcatchment-overloadledger.120m² versus110m²warningPASS;overlaidwarningreadabilityexisting642FAIL. Current664checks56ledgers517P122F6B19U;whole50%UNKNOWN.
