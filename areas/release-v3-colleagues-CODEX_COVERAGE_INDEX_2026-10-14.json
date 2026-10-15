@@ -9,39 +9,39 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "7544C569C358E0EEE3190FC5FCFE506CDA13DA131A2246FD1EF1FCBE52C9DC63",
+    "currentBugsSha256": "D0E12C59DFD0B0E3E9CD419F638B33CB9BD1D66EA0BE881CF8A1D325CC85A94D",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "BC7A37131C6FCD2AFC5B3F37FD3CE87ADD22EEDBDDD8549A329E012F34DB28BB"
+    "currentCaseIndexSha256": "AF0E9E1B01A3A726919787CF276C58CCFC9B1A2783BEBD966F53CCC149F8069A"
   },
   "counts": {
     "traceableUxIds": 526,
     "bugHeadings": 600,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 22,
-    "caseLedgers": 68,
-    "narrowCases": 753,
+    "caseLedgers": 69,
+    "narrowCases": 754,
     "narrowVerdicts": {
-      "PASS": 584,
+      "PASS": 585,
       "FAIL": 138,
       "BLOCKED": 7,
       "UNPROVEN": 24
     },
-    "uniqueEvidenceFiles": 1656,
+    "uniqueEvidenceFiles": 1667,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1372,
-    "uniqueMetadataFiles": 284,
+    "uniqueScreenshotFiles": 1376,
+    "uniqueMetadataFiles": 291,
     "caseLinkedUxIds": 20,
     "caseLinkedBugIds": 94,
-    "newNativeExecutionsInLatestReconciliation": 0,
+    "newNativeExecutionsInLatestReconciliation": 1,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1663,
+    "retainedDeclaredEvidenceFiles": 1674,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
     "currentDetailedApprovedWorkflowAudits": 11,
     "historicalCanonicalCardsIndexed": 39,
@@ -52,7 +52,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "753 scoped native checks remain unchanged. Eleven approved cards and 165 numbered requirements now have detailed evidence reconciliation. All 39 canonical sources and 600 numbered source requirements are indexed. Built workflow/context eligibility, unnumbered CV01J and later V3/UI/UX union remain incomplete, so whole 50% tested is UNKNOWN. Failed executed tests count as testing performed; acceptance is separate.",
+    "reason": "754 scoped native checks recorded, including a new saved floor-waste persistence check. Eleven approved cards and 165 numbered requirements now have detailed evidence reconciliation. All 39 canonical sources and 600 numbered source requirements are indexed. Built workflow/context eligibility, unnumbered CV01J and later V3/UI/UX union remain incomplete, so whole 50% tested is UNKNOWN. Failed executed tests count as testing performed; acceptance is separate.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -21186,7 +21186,8 @@
       ],
       "currentCaseKeys": [
         "floor-waste-case-ledger.json::FW-03",
-        "floor-waste-control-case-ledger.json::FC-03"
+        "floor-waste-control-case-ledger.json::FC-03",
+        "floor-waste-reopen-case-ledger.json::FR-01"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -21388,6 +21389,13 @@
       "scope": "ST-02 and ST-06: 30 approved requirements reconciled against existing native evidence; no new native execution.",
       "narrowCases": 753,
       "caseLedgers": 68,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-16",
+      "scope": "One new native saved floor-waste persistence PASS; BUG650 qualified with recovered pit inverts on reopen, no fix claim.",
+      "narrowCases": 754,
+      "caseLedgers": 69,
       "wholeOverallPercent": null
     }
   ],
@@ -25508,7 +25516,8 @@
             "floor-waste-control-case-ledger.json::FC-07",
             "floor-waste-control-case-ledger.json::FC-08",
             "floor-waste-control-case-ledger.json::FC-09",
-            "floor-waste-control-case-ledger.json::FC-10"
+            "floor-waste-control-case-ledger.json::FC-10",
+            "floor-waste-reopen-case-ledger.json::FR-01"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -41339,11 +41348,11 @@
         }
       ],
       "associatedEntryCount": 103,
-      "associatedCaseCount": 752,
+      "associatedCaseCount": 753,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 68,
-      "latestAssociationReconciliation": "10nativeCDFW controlchecks added; successful placement, nativeMOVEofsourceonly, complete oneUndo/delayedRedo and warned overlap. No new catalogue route/alias credit."
+      "currentLedgerCount": 69,
+      "latestAssociationReconciliation": "Saved CDFW persistence readback associated with workflow; no new typed-command availability credit. 753 of754case keys associated; one historical cleanup unassociated."
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-16",
@@ -45091,10 +45100,11 @@
             "floor-waste-control-case-ledger.json::FC-07",
             "floor-waste-control-case-ledger.json::FC-08",
             "floor-waste-control-case-ledger.json::FC-09",
-            "floor-waste-control-case-ledger.json::FC-10"
+            "floor-waste-control-case-ledger.json::FC-10",
+            "floor-waste-reopen-case-ledger.json::FR-01"
           ],
           "candidateCaseVerdicts": {
-            "PASS": 26,
+            "PASS": 27,
             "FAIL": 8,
             "BLOCKED": 0,
             "UNPROVEN": 3
@@ -45104,7 +45114,7 @@
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
           "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": 37,
+          "requirementReviewedNativeCaseCount": 38,
           "nativeBuiltComponents": [
             "CDSTRIP centre/open native creation",
             "Complete pre-Accept geometry preview",
@@ -45114,7 +45124,8 @@
             "CDFW free placement/unique FW1–FW2 source records",
             "CDFW owner label carried by nativeMOVE",
             "CDFW free/red overlap previews and refused-pick Cancel",
-            "CDFW oneUndo/delayedRedo fullordinary/project evidence"
+            "CDFW oneUndo/delayedRedo fullordinary/project evidence",
+            "Saved floor-waste source identities, bodies and owned labels persist after native reopen"
           ],
           "nativeRequiredGaps": [
             "Real strip/AGI asset storage",
@@ -45124,7 +45135,7 @@
             "Other justifications/Close/oneway/units/UCS/protection/plots",
             "CDFW/CDWT/CDSOURCE native workflows",
             "CDFWCancelstoredpitinverts650",
-            "CDFW connectedlanding/nativeCOPY/nonrecycleddelete/save-reopen/plot"
+            "CDFW connectedlanding/nativeCOPY/nonrecycleddelete/plot"
           ]
         },
         {
@@ -46508,8 +46519,8 @@
         "Review remaining 28 canonical cards, unnumbered CV01J and later V3/UI/UX scope; establish built workflow and required context eligibility.",
         "Drive uncovered installed workflows in real AutoCAD copies; retain saved floor-waste reopening, COPY, connected landings, protection, units/UCS and plotting gaps."
       ],
-      "currentExecutionCount": 753,
-      "newNativeExecutionsThisReconciliation": 0
+      "currentExecutionCount": 754,
+      "newNativeExecutionsThisReconciliation": 1
     },
     "canonicalRequirementInventory": {
       "dateMelbourne": "2026-10-16",
@@ -49897,7 +49908,8 @@
                 "strip-drain-case-ledger.json::SD-07",
                 "floor-waste-case-ledger.json::FW-04",
                 "floor-waste-control-case-ledger.json::FC-02",
-                "floor-waste-control-case-ledger.json::FC-06"
+                "floor-waste-control-case-ledger.json::FC-06",
+                "floor-waste-reopen-case-ledger.json::FR-01"
               ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -49914,7 +49926,8 @@
               "currentCaseKeys": [
                 "strip-drain-case-ledger.json::SD-08",
                 "agi-case-ledger.json::AG-08",
-                "floor-waste-control-case-ledger.json::FC-02"
+                "floor-waste-control-case-ledger.json::FC-02",
+                "floor-waste-reopen-case-ledger.json::FR-01"
               ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -49997,7 +50010,8 @@
                 "floor-waste-control-case-ledger.json::FC-02",
                 "floor-waste-control-case-ledger.json::FC-07",
                 "floor-waste-control-case-ledger.json::FC-08",
-                "floor-waste-control-case-ledger.json::FC-09"
+                "floor-waste-control-case-ledger.json::FC-09",
+                "floor-waste-reopen-case-ledger.json::FR-01"
               ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -50115,7 +50129,8 @@
                 "floor-waste-control-case-ledger.json::FC-05",
                 "floor-waste-control-case-ledger.json::FC-06",
                 "floor-waste-control-case-ledger.json::FC-09",
-                "floor-waste-control-case-ledger.json::FC-10"
+                "floor-waste-control-case-ledger.json::FC-10",
+                "floor-waste-reopen-case-ledger.json::FR-01"
               ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -55480,12 +55495,12 @@
       "currentDetailedRequirementCount": 165,
       "auditSchemaReconciliation": "CV03status/currentCaseKeys preserved alongside othercardsassessment/caseKeys. Range-summary headings prefer exact decisiontable rows; no false requirement accepted from a heading range.",
       "numberedRequirementsWithDetailedAudit": 165,
-      "localAuditSha256": "4D04EF07B450210BDE9CFEF34FE6685A2C8454D5F8DCCE8A3845C47F9D19BF02"
+      "localAuditSha256": "1DA864EC55C24B914AF017D036CC4A73D24030753ED1E903FFCAA5D743749B7E"
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-16",
-    "usedPercent": 87,
+    "usedPercent": 91,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -55501,7 +55516,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 289,
+    "newNativeChecks": 290,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -55510,14 +55525,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1656,
-    "retainedDeclaredFiles": 1663,
-    "directScreens": 1372,
-    "directMetadata": 284,
+    "directCaseLinkedFiles": 1667,
+    "retainedDeclaredFiles": 1674,
+    "directScreens": 1376,
+    "directMetadata": 291,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All753cases/68ledgers freshly rehashed;7older unlinked files separate. Static source excluded;whole50%UNKNOWN."
+    "scope": "All754 cases/69 ledgers freshly rehashed; seven older unlinked native files separate. Static source receipts excluded; whole50%UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -56387,9 +56402,9 @@
     "CV-04": {
       "source": "04_REFERENCE/CARDS/CV-04_SURFACE_DRAINAGE.md",
       "sourceSha256": "74AB4A33861D6CA15347049A7CBE1BE8FDC394E7B4AF545E23836688726ECEBF",
-      "scope": "All15approveddecisions reviewed;37nativechecks/4ledgers. CDSTRIP/CDAGI/CDFW actualcreation now observed; wholecard remains unaccepted.",
-      "nativeCaseCount": 37,
-      "nativeLedgerCount": 4,
+      "scope": "All15 approved decisions reviewed;38 native checks/five ledgers. CDSTRIP/CDAGI/CDFW creation and bounded floor-waste saved persistence observed; whole card remains unaccepted.",
+      "nativeCaseCount": 38,
+      "nativeLedgerCount": 5,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -56409,12 +56424,13 @@
           "id": "CV4-2",
           "required": "Use one surface-drainage backbone sharing CV-03 identity, preview and connection rules.",
           "assessment": "FAIL",
-          "reason": "Observed strip remains loose ordinary entities; native MOVE strands children. Shared identity/compound behaviour not satisfied; BUG647. Other source families not inferred. CDFW refuses because freshSD1/AGI1 lack pit identities; mixing CE surface workflows fails here647. IndependentFW1 source/label identity and1000mmnativeMOVE pass. This does not cure the mixedsurface647 refusal.",
+          "reason": "Observed strip remains loose ordinary entities; native MOVE strands children. Shared identity/compound behaviour not satisfied; BUG647. Other source families not inferred. CDFW refuses because freshSD1/AGI1 lack pit identities; mixing CE surface workflows fails here647. IndependentFW1 source/label identity and1000mmnativeMOVE pass. This does not cure the mixedsurface647 refusal. Saved FW1/FW2 bodies, labels and source identity graphs persist after reopen. Pit invert strings return after save/reopen; BUG650 in-session blanking remains open, permanent loss is not established.",
           "caseKeys": [
             "strip-drain-case-ledger.json::SD-07",
             "floor-waste-case-ledger.json::FW-04",
             "floor-waste-control-case-ledger.json::FC-02",
-            "floor-waste-control-case-ledger.json::FC-06"
+            "floor-waste-control-case-ledger.json::FC-06",
+            "floor-waste-reopen-case-ledger.json::FR-01"
           ],
           "wholeRequirementAccepted": false
         },
@@ -56422,11 +56438,12 @@
           "id": "CV4-3",
           "required": "Store strip drains, FWs, tanks, AGIs and generic sources as their real asset types—not fake pits.",
           "assessment": "FAIL",
-          "reason": "Accepted SD1 is stored in pits[] as STRIPDRAIN with pit-shaped defaults, contrary to real-asset requirement; BUG647. AGI1 also in pits[]/AGI with450/450 and900defaults; actual entity/outlet handles do not establish a real asset type. CDFW control storesFW1 as a CE-CIV-SRC block identity/extension record with ownedlabel, not an addedpits[] row. This floor-waste component passes while strip/AGI storage remainsfailed.",
+          "reason": "Accepted SD1 is stored in pits[] as STRIPDRAIN with pit-shaped defaults, contrary to real-asset requirement; BUG647. AGI1 also in pits[]/AGI with450/450 and900defaults; actual entity/outlet handles do not establish a real asset type. CDFW control storesFW1 as a CE-CIV-SRC block identity/extension record with ownedlabel, not an addedpits[] row. This floor-waste component passes while strip/AGI storage remainsfailed. Saved FW1/FW2 bodies, labels and source identity graphs persist after reopen. Pit invert strings return after save/reopen; BUG650 in-session blanking remains open, permanent loss is not established.",
           "caseKeys": [
             "strip-drain-case-ledger.json::SD-08",
             "agi-case-ledger.json::AG-08",
-            "floor-waste-control-case-ledger.json::FC-02"
+            "floor-waste-control-case-ledger.json::FC-02",
+            "floor-waste-reopen-case-ledger.json::FR-01"
           ],
           "wholeRequirementAccepted": false
         },
@@ -56475,7 +56492,7 @@
           "id": "CV4-8",
           "required": "`CDFW` uses stable `FW` identities, non-recycled numbering and the shared placement/overlap preview.",
           "assessment": "PARTIAL / CURRENT FAIL",
-          "reason": "Independent control places distinctFW1/FW2 sourceidentities, greenfree landingpreview and redwarned/refusedsamepointpick. RepeatCancel exact56records/settings/NOD. Nonrecycled numbering afterdeletion/nativeCOPY/connectedlandings remain unproved; mixedsurfaceSD/AGI refusal647 persists.",
+          "reason": "Independent control places distinctFW1/FW2 sourceidentities, greenfree landingpreview and redwarned/refusedsamepointpick. RepeatCancel exact56records/settings/NOD. Nonrecycled numbering afterdeletion/nativeCOPY/connectedlandings remain unproved; mixedsurfaceSD/AGI refusal647 persists. Saved FW1/FW2 bodies, labels and source identity graphs persist after reopen. Pit invert strings return after save/reopen; BUG650 in-session blanking remains open, permanent loss is not established.",
           "caseKeys": [
             "floor-waste-case-ledger.json::FW-02",
             "floor-waste-case-ledger.json::FW-03",
@@ -56484,7 +56501,8 @@
             "floor-waste-control-case-ledger.json::FC-02",
             "floor-waste-control-case-ledger.json::FC-07",
             "floor-waste-control-case-ledger.json::FC-08",
-            "floor-waste-control-case-ledger.json::FC-09"
+            "floor-waste-control-case-ledger.json::FC-09",
+            "floor-waste-reopen-case-ledger.json::FR-01"
           ],
           "wholeRequirementAccepted": false
         },
@@ -56546,7 +56564,7 @@
           "id": "CV4-15",
           "required": "Apply each compound atomically with one Undo and targeted nearby updates. Automated evidence covers cancel, copy, UCS, block origin and large drawings; Timothy checks one strip, tank and AGI in about five minutes.",
           "assessment": "PARTIAL",
-          "reason": "Strip and AGI oneUndo/delayedRedo exact ordinary objects and decoded project. RepeatAGI Cancel NOD exact; firstrename invocation updates path/unitmetadata. COPY/UCS/protection/large drawings/tank remain. CDFW firstEscape fails project-data preservation: existingpit inverts blank650 despite exactgeometry/settings; FWCancel/refusal not atomically accepted. IndependentCDFW oneUndo restores all52records/controls and originalproject (including pitinverts), delayedRedo restores54placedrecords/project; source-only nativeMOVE carriesownedlabel. SamepointrefusalCancel leaves56records/controls/capturedNODexact. Placementstillclears pitinverts650.",
+          "reason": "Strip and AGI oneUndo/delayedRedo exact ordinary objects and decoded project. RepeatAGI Cancel NOD exact; firstrename invocation updates path/unitmetadata. COPY/UCS/protection/large drawings/tank remain. CDFW firstEscape fails project-data preservation: existingpit inverts blank650 despite exactgeometry/settings; FWCancel/refusal not atomically accepted. IndependentCDFW oneUndo restores all52records/controls and originalproject (including pitinverts), delayedRedo restores54placedrecords/project; source-only nativeMOVE carriesownedlabel. SamepointrefusalCancel leaves56records/controls/capturedNODexact. Placementstillclears pitinverts650. Saved FW1/FW2 bodies, labels and source identity graphs persist after reopen. Pit invert strings return after save/reopen; BUG650 in-session blanking remains open, permanent loss is not established.",
           "caseKeys": [
             "strip-drain-case-ledger.json::SD-02",
             "strip-drain-case-ledger.json::SD-05",
@@ -56567,7 +56585,8 @@
             "floor-waste-control-case-ledger.json::FC-05",
             "floor-waste-control-case-ledger.json::FC-06",
             "floor-waste-control-case-ledger.json::FC-09",
-            "floor-waste-control-case-ledger.json::FC-10"
+            "floor-waste-control-case-ledger.json::FC-10",
+            "floor-waste-reopen-case-ledger.json::FR-01"
           ],
           "wholeRequirementAccepted": false
         }

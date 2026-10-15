@@ -1,6 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Saved floor-waste persistence —16 October 2026
+
+1. **New native PASS:** reopening the saved control retains FW1/FW2 bodies, labels and both source identity graphs. Original14drawing controls match. This proves bounded floor-waste persistence; all56objects exist, but one unrelated anonymous block name changes and its definition equivalence was not tested. Whole drawing/NOD equality is not claimed.
+2. **BUG650 qualification:** previously blank pit invert strings return20.000/19.800 after save/reopen. Earlier in-session blanking stays a confirmed open fault; permanent loss is not established. The exact recovery point and downstream consequences still need isolation.
+3. **Current:**754checks/69batches:585PASS,138FAIL,7BLOCKED,24UNPROVEN. Evidence1667directfiles freshly rehashed without mismatch. Closed without saving; fixture unchanged and owned lease released. No install/fix claimed. Weekly91%used/9%remaining; whole50%testedUNKNOWN. COPY, connected landings, protections, units/UCS, older runtime and plots remain.
+
+
+
 ## Structural requirements reconciled — 16 October 2026
 
 1. **What worked in AutoCAD:** support insertion/switching, brace placement and Undo/Redo, saved support/brace/joist drawings, pad/strip placement, footing library edits and whole-network deletion confirmation have bounded existing evidence. This review reuses 46 support/bracing cases and 19 foundation cases; it adds no execution.

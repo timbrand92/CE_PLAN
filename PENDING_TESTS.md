@@ -1,6 +1,14 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Saved floor-waste persistence —16 October2026
+
+1. **Codex-accepted narrow result:** saved FW1/FW2 bodies, labels and source identity graphs persist on native reopen. One new PASS, total754checks/69batches. No Tim action needed.
+2. **650 remains OPEN with qualification:** pit invert strings return after save/reopen; earlier in-session blanking is confirmed, permanent loss is unproved. Isolate recovery timing and downstream effects.
+3. **Still pending:** floor-waste COPY, connected landings, deletion/number reuse, protections, units/UCS, older runtime/plots; CDWT/CDSOURCE and remaining approved scope/context mapping.50%UNKNOWN.
+
+
+
 ### Structural coverage reconciliation — 16 October 2026
 
 1. **Recorded; no Tim action needed:** ST-02 and ST-06 full approved cards reviewed,30 requirements. Existing46 support/bracing cases and19 foundation cases reused; no new AutoCAD execution. Detailed reviews now11cards/165requirements.
