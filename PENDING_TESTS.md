@@ -1,6 +1,13 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Canonical scope and source recovery —16 October2026
+
+1. **No Tim action needed:**600 numbered source requirements indexed across38cards, plus unnumberedCV01J retained. Five missing foundation records recovered with exactrevision/hash/canonicalIDs; original planlinks stillBUG639OPEN.
+2. **New detailed reviews:** CV06/CV07/CV08all45requirements. Review/import existingnativeevidence ispartial; all15Civilrepairrequirements untested in this current index. No newnativecasecount:753/68.
+3. **Next:** remaining30canonicalcardreviews; unionlaterV3/UXrulings and builteligibleworkflow/context mapping. Prioritise nativeuncoveredrepair/dashboard/site/tank/source contexts; retain savedFWreopen/COPY/connected/protection/plot checks. Whole50%testedUNKNOWN; no resetorcredits used.
+
+
 ### Codex independent floor-waste control —16 October2026
 
 1. **Recorded; no Tim action needed:**10newchecks9PASS1FAIL,total753/68. FW1/FW2 creation, permanent source/label records, oneUndo/delayedRedo, source-only nativeMOVE carryinglabel and warnedoverlap refusal/Cancel pass in the statedcontrol.

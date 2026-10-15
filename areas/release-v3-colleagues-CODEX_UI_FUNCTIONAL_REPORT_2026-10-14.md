@@ -1,6 +1,15 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Coverage inventory: foundation sources recovered —16 October2026
+
+1. **Native total unchanged:**753 scoped checks across68batches. This pass reviews their scope; it adds no AutoCAD test or pass.
+2. **All39 canonical source records are retrievable:**34 are in the plan; five missing foundation documents were recovered from an exact saved code revision. Their canonical IDs match. Their75 numbered decisions are included in the600 numbered requirements now indexed with source locations. The broken plan links remain BUG639.
+3. **Three more full cards reviewed:** calculations/profilesCV06, importCV07 and repairCV08. Their45requirements bring detailed reviews to9cards/135requirements. Existing calculations/profile and import results cover parts of those workflows. No current native result establishes the Civil repair commands or held repair engine.
+4. **Important gaps:** branched profiles, dashboard read-only behaviour/stale fixes, survey/alignment/provenance, revision/override-safe import and all15repairrequirements. Existing faults such as pre-Applyimportwrites, missing imported inverts and misleading calculator results remain failures. Historical not-started headings and old green source-test counts are not current installed truth.
+5. **Why50%stillunknown:**600numbered requirements are a traceable source inventory, not a count of built workflows or required real-world test contexts. Unnumberedcontinuation scope, approvalrefinements and laterV3/UXrequirements must still be reconciled. Failed executed checks count as tested; acceptance remains separate. Weekly80%used20%remaining. No new install or code change.
+
+
 ## Floor-waste control: placement, ownership and recovery —16 October2026
 
 1. **Current:**753 scoped checks across68 batches:584PASS,138FAIL,7BLOCKED,24UNPROVEN. This batch adds10 checks:9passes and1failure. Whole50%tested is still unverified because the eligible built workflow/context inventory is incomplete.
