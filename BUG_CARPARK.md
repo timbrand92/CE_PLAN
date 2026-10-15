@@ -3011,7 +3011,9 @@
 
 **Likely area (hypothesis only):** ScheduleLinkService.RefreshLinkedCells (log at 05:25 showed 1 call, 0.0 ms, i.e. it ran but changed nothing) and the schedule difference/review service (PitScheduleDifferenceService).
 
-**Status:** OPEN (30 Sep 2026, found by Codex pass 18).
+**Status:** FIXED — 15 Oct 2026, Codex-accepted for Structural 1.0.116 / AutoCAD 2027, original model-space one-Undo defect only.
+
+**Superseded status:** OPEN (30 Sep 2026, found by Codex pass 18); superseded by the native replay below on 15 Oct 2026.
 
 ---
 
@@ -3198,6 +3200,8 @@
 **Status:** OPEN (30 Sep 2026, found by Codex pass 18).
 
 **Installed-fix note (Structural lane run 160, Sat 10 Oct 2026):** fix PR #418 is inside Structural 1.0.114 (release head 0f00f5fb, checked by commit subject). Status above is left as written because this entry may have several items: read each against the PR before closing. Needs Tim's or Codex's confirmation in AutoCAD; not FIXED until then.
+
+**Native confirmation — 15 Oct 2026:** installed Structural1.0.116+f180 DLL SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Owned millimetre/model-space/World-UCS copy: RC at DIMSCALE20, Keep OSNAP Yes, two canvas corners. Immediate CtrlZ removes only new cloud; untouched31.329seconds then CtrlY restores it. DIMSCALE100/defaultNo also passes oneUndo/67.757secondRedo. Two native CLOSED CLOUD polylines123C/123D; all155 original ordinary entity/Xdata records unchanged at captured printed precision. Twelve staged controls match after each completion; originals restored. Save/normalclose/reopen retains all157 records/twelvecontrols after only session-address normalisation. Screens1324–1337 and local revcloud-case-ledger.json under V3UX_20261014; eight narrow PASS checks, no whole workflow credit. No full firstUndo record capture, cancellation/repeat/paper/protection/UCS/plot/olderrelease proof. ST09 historical mapping does not define manualRC; UX-REG-03 proposed clouds/triangles remains unproven. No source change or deployment by this test.
 
 ---
 

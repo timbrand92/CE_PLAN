@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Native revision-cloud regression — 15 October 2026
+
+1. **Eight checks PASS:** actualRC at1:100/defaultNo and1:20/KeepOSNAPYes creates closed nativeCLOUD polylines. ImmediateoneUndo removes each cloud; untouched67.757/31.329secondRedo restores it. Original BUG215 now scoped Codex-accepted for Structural1.0.116/AutoCAD2027.
+2. **Drawing/settings:** all155 original ordinary entity/Xdata printed records unchanged;12stagedcontrols equal after each completion. Original12restored; explicitSave/normalclose/reopen retains all157records/controls after onlysessionaddressnormalisation. Source/preferences intact, ownwindowempty/exactlease released, older595session untouched. Screens1324–1337/localrevcloudledger; printed precision, no fullUndo-record equality claim.
+3. **V3 limits:** ST09 historicalcandidate does not specify manualRC; no wholecard acceptance. UX-REG-03 CE-proposed clouds/triangles remains unproven. Cancel/repeat/protection/otherunits/scales/UCS/paper/plot/olderruntime remain. No code/deploy.
+
+
 ## Codex native dimension editing follow-through,15 October2026
 
 1. **Narrow Codex-accepted:**reopened native arc/circle dimensions follow a500mm source-only MOVE;oneUndo/delayedRedo works visually. DiameterlateEscape preserves objects; Lengthwholecircle refusal is clear and state-preserving. Fivechecks4PASS1FAIL.
