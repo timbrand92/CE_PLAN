@@ -1,6 +1,14 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Structural schedules and publishing —16 October2026
+
+1. **Scope reconciled; no Tim action needed:** all15 ST-07requirements reviewed, threePARTIAL/twelveUNTESTED. ES-40 saved footing schedule values are bounded evidence only.
+2. **Native gaps:** Excel import/Apply/Undo, workbook/calculation provenance and links, floor identities/learning, controlled schedule edits, MOVE/COPY/ERASE, sheet scan/QA/isolated PDF publishing/overwrite protection. Native execution totals unchanged762/70.
+3. **Next:** remaining27card reviews and built/context eligibility, CDWT and source gaps.50%UNKNOWN.
+
+
+
 ### Generic source native results —16 October2026
 
 1. **Recorded; no Tim action needed:** CDSOURCE8checks7PASS1FAIL. Categories, roof-drain placement/origin/identity and oneUndo/delayedRedo have bounded evidence. Total762checks/70batches.

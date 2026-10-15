@@ -1,6 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Structural schedules and publishing evidence gap —16 October2026
+
+1. **All15 ST-07 requirements reconciled:** threePARTIAL/twelveUNTESTED. Existing footing schedule readback proves bounded saved values only; no new AutoCAD execution.
+2. **Not yet established in real AutoCAD:** Excel import/preview/Apply, floor mapping, workbook provenance, calculation links, conflict-safe schedule edits, native view MOVE/COPY/ERASE, read-only sheet scan, QA gate, isolated complete PDF publishing and overwrite protection. Installed command names do not establish working routes.
+3. **Current:**12approvedcards/180numberedrequirements reviewed; remaining27cards plus unnumbered/laterV3UX/contexteligibility. Native762checks/70batches unchanged. Whole50%testedUNKNOWN. Weekly99%used1%remaining. No new acceptance or fix claimed.
+
+
+
 ## Generic source placement —16 October2026
 
 1. **Eight new real AutoCAD checks:** sevenPASS/oneFAIL. Total762checks/70batches:592PASS,139FAIL,7BLOCKED,24UNPROVEN. TypedCDSOURCE now observed; four of five familiar CV04commands have current native creation evidence. CDWT remains untested.

@@ -36,14 +36,14 @@
     "uniqueMetadataFiles": 309,
     "caseLinkedUxIds": 20,
     "caseLinkedBugIds": 94,
-    "newNativeExecutionsInLatestReconciliation": 8,
+    "newNativeExecutionsInLatestReconciliation": 0,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
     "retainedDeclaredEvidenceFiles": 1705,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
-    "currentDetailedApprovedWorkflowAudits": 11,
+    "currentDetailedApprovedWorkflowAudits": 12,
     "historicalCanonicalCardsIndexed": 39,
     "canonicalNumberedRequirementsIndexed": 600,
     "canonicalCardSourcesRetrievable": 39
@@ -52,7 +52,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "762 scoped native checks recorded, including eight new CDSOURCE checks. Eleven approved cards and 165 numbered requirements now have detailed evidence reconciliation. All 39 canonical sources and 600 numbered source requirements are indexed. Built workflow/context eligibility, unnumbered CV01J and later V3/UI/UX union remain incomplete, so whole 50% tested is UNKNOWN. Failed executed tests count as testing performed; acceptance is separate.",
+    "reason": "762 scoped native checks recorded, including eight new CDSOURCE checks. Twelve approved cards and 180 numbered requirements now have detailed evidence reconciliation. All 39 canonical sources and 600 numbered source requirements are indexed. Built workflow/context eligibility, unnumbered CV01J and later V3/UI/UX union remain incomplete, so whole 50% tested is UNKNOWN. Failed executed tests count as testing performed; acceptance is separate.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -21402,6 +21402,13 @@
     {
       "dateMelbourne": "2026-10-16",
       "scope": "Eight native CDSOURCE checks sevenPASS/oneFAIL; categoryCancel repeats650, source origin/identity/UndoRedo observed.",
+      "narrowCases": 762,
+      "caseLedgers": 70,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-16",
+      "scope": "ST-07 all15requirements reviewed; threePARTIAL/twelveUNTESTED. One existing bounded footing schedule readback; no new native execution.",
       "narrowCases": 762,
       "caseLedgers": 70,
       "wholeOverallPercent": null
@@ -46191,12 +46198,21 @@
             "BLOCKED": 0,
             "UNPROVEN": 0
           },
-          "currentDetailedRequirementAudit": null,
-          "currentBuiltEligibility": "UNRESOLVED; catalogue presence and historical source are insufficient",
+          "currentDetailedRequirementAudit": "approvedWorkflowRequirementAudits.ST-07",
+          "currentBuiltEligibility": "PARTIAL_OBSERVED: bounded existing footing schedule readback. Single schedule authority, Excel import, controlled sync, Sheets/Issue and publishing native behaviour remain unproved.",
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
-          "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": null
+          "mappingAuthority": "Full approved card plus Tim refinements read16October2026; ES-40 readback exception reviewed separately from empty historical candidate-case mapping.",
+          "requirementReviewedNativeCaseCount": 1,
+          "nativeBuiltComponents": [
+            "Existing footing schedule values retained after reopening, ES-40"
+          ],
+          "nativeRequiredGaps": [
+            "Single schedule authority and stable row/element/calculation/provenance links",
+            "Excel parsing/review/Apply/Undo, floors and governed learning",
+            "Refresh/sync conflict preview and native view MOVE/COPY/ERASE",
+            "Read-only sheet scan, QA gate, isolated complete PDF publishing and overwrite protection"
+          ]
         },
         {
           "id": "ST-08",
@@ -46548,11 +46564,11 @@
         }
       ],
       "priorities": [
-        "Review remaining 28 canonical cards, unnumbered CV01J and later V3/UI/UX scope; establish built workflow and required context eligibility.",
+        "Review remaining27 canonical cards, unnumbered CV01J and later V3/UI/UX scope; establish built workflow and required context eligibility.",
         "Drive uncovered installed workflows in real AutoCAD copies; retain saved floor-waste reopening, COPY, connected landings, protection, units/UCS and plotting gaps."
       ],
       "currentExecutionCount": 762,
-      "newNativeExecutionsThisReconciliation": 8
+      "newNativeExecutionsThisReconciliation": 0
     },
     "canonicalRequirementInventory": {
       "dateMelbourne": "2026-10-16",
@@ -53331,8 +53347,10 @@
               "sourceEndLine": 50,
               "sourceForm": "decision-table-row",
               "required": "ST-07 owns structural schedules, spreadsheet intake, calculation links, sheet management and issue publishing. It provides one schedule authority—not separate foundation, bracing, pier and Excel schedule engines.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-40"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53343,7 +53361,7 @@
               "sourceEndLine": 51,
               "sourceForm": "decision-table-row",
               "required": "`CESHEETS` becomes the canonical Sheets/Issue workspace. `XCLMTXT` remains the direct Excel shortcut. Familiar aliases redirect to the same workflows. Ghost `XCLMTXTINDEX` remains hidden until a real corpus feature exists.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53355,8 +53373,10 @@
               "sourceEndLine": 52,
               "sourceForm": "decision-table-row",
               "required": "Use one semantic schedule model containing stable row identity, element links, values, source, revision, approval and staleness. Render it using Approved AS-01 schedule graphics/native tables—not loose MText or exploded blocks.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-40"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53367,7 +53387,7 @@
               "sourceEndLine": 53,
               "sourceForm": "decision-table-row",
               "required": "Every imported value records workbook, worksheet, cell/named result, source revision/hash and import time. Project paths remain private and are excluded from sanitised logs/support bundles.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53379,7 +53399,7 @@
               "sourceEndLine": 54,
               "sourceForm": "decision-table-row",
               "required": "**Link engineering computations to drawing elements.** A schedule row may link one or more CE elements to the exact calculation result that supports it. Selecting the row highlights the elements; selecting an element opens its schedule/calculation evidence.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53391,7 +53411,7 @@
               "sourceEndLine": 55,
               "sourceForm": "decision-table-row",
               "required": "The calculation engine/workbook remains the engineering authority. The schedule is a coordinated view, not another calculator. Calculation–drawing disagreement displays both values as a conflict; CE never silently chooses one.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53403,7 +53423,7 @@
               "sourceEndLine": 56,
               "sourceForm": "decision-table-row",
               "required": "Keep Mezzanine and Second Floor distinct in stored data. A project may deliberately display or combine them only through an explicit project mapping. Unresolved floor/title/mark becomes `Unknown`, not a guessed classification.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53415,7 +53435,7 @@
               "sourceEndLine": 57,
               "sourceForm": "decision-table-row",
               "required": "Stop silently learning office defaults from live drafting. Existing local learned answers become Candidate suggestions only. Future corpus evidence may recommend floor/title mappings after EV gates; Timothy approves every promoted default.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53427,7 +53447,7 @@
               "sourceEndLine": 58,
               "sourceForm": "decision-table-row",
               "required": "Excel workflow: **select source → inspect detected worksheet/profile → review rows and Unknowns → choose schedule sections → preview actual schedule → Apply → one Undo**. No schedule objects appear before Apply.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53439,7 +53459,7 @@
               "sourceEndLine": 59,
               "sourceForm": "decision-table-row",
               "required": "Refresh is normally one-way from authoritative elements/calculations into the schedule. Editing a schedule cell that would alter engineering produces a change preview for the linked elements; it never immediately writes back like the current `STRSCHEDSYNC`.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53451,8 +53471,10 @@
               "sourceEndLine": 60,
               "sourceForm": "decision-table-row",
               "required": "MOVE preserves the schedule’s placed position. COPY creates a project-specific snapshot unless deliberately creating another linked view. ERASE removes only the view—not its elements or calculations. Reopen retains all links and provenance.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-40"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53463,7 +53485,7 @@
               "sourceEndLine": 61,
               "sourceForm": "decision-table-row",
               "required": "`CESHEETS` provides one surface for scan, sheet order, title-block fields, registers, validation, preview and issue. Project scanning is genuinely read-only. “Update Drawings” shows every affected DWG/field before Apply.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53475,7 +53497,7 @@
               "sourceEndLine": 62,
               "sourceForm": "decision-table-row",
               "required": "Publishing requires the deterministic QA-01 Ready-to-Issue gate. Preview shows exact sheets, layout order, revisions, paper sizes, page setups and output filenames. Existing issued PDFs are never silently overwritten.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53487,7 +53509,7 @@
               "sourceEndLine": 63,
               "sourceForm": "decision-table-row",
               "required": "Keep publishing isolated from the active drawing. It must not switch Timothy’s layout tab, view or UCS. Plotting stays on AutoCAD’s required main drawing thread, uses temporary output, verifies completion, then finalises the issue package. A failed page cannot masquerade as a complete issue.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53499,7 +53521,7 @@
               "sourceEndLine": 64,
               "sourceForm": "decision-table-row",
               "required": "Automate workbook parsing, mapping, schedule comparison, sheet scanning and PDF inspection on disposable fixtures. Timothy checks one import, one calculation link and one small issue package in approximately 10–12 minutes.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53509,7 +53531,7 @@
           "extractionComplete": false,
           "remainingScope": "Approval/refinement prose, later rulings and unnumbered workflow/context decomposition remain. Extracted source rows are not the complete eligible-built denominator.",
           "sourceRetrievable": true,
-          "currentDetailedAudit": null,
+          "currentDetailedAudit": "approvedWorkflowRequirementAudits.ST-07",
           "unnumberedScopeRequiresReview": true,
           "currentInstalledCandidateEntryKeys": [
             "CE_STRUC_SUITE.bundle::45::CE_MEMBERLABEL",
@@ -55535,18 +55557,17 @@
         "sha256": "1A80B99A6C2CB1C1ADA206FB0EBD6395671ACD1F96E78B551DC7D644D8424193"
       },
       "newDetailedAudits": [
-        "ST-02",
-        "ST-06"
+        "ST-07"
       ],
-      "currentDetailedRequirementCount": 165,
+      "currentDetailedRequirementCount": 180,
       "auditSchemaReconciliation": "CV03status/currentCaseKeys preserved alongside othercardsassessment/caseKeys. Range-summary headings prefer exact decisiontable rows; no false requirement accepted from a heading range.",
-      "numberedRequirementsWithDetailedAudit": 165,
-      "localAuditSha256": "098883560A5D2855CD7C39273D10C953385244E33EF5452A545EE0853D69E96A"
+      "numberedRequirementsWithDetailedAudit": 180,
+      "localAuditSha256": "A4350BCBE1BC418DED52DD7E34DF2B71CC90A220DEF9CE47475831599C930C13"
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-16",
-    "usedPercent": 98,
+    "usedPercent": 99,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -57456,6 +57477,143 @@
             "early-structural-case-ledger.json::ES-37",
             "early-structural-case-ledger.json::ES-40"
           ],
+          "wholeRequirementAccepted": false
+        }
+      ]
+    },
+    "ST-07": {
+      "source": "04_REFERENCE/CARDS/ST-07_SCHEDULES_SHEETS_EXCEL.md",
+      "sourceSha256": "034FC771CC2A31A62FFD97D37FECA9BC768BA3F72BD153532D0BB93C6DCBF75C",
+      "scope": "Full approved ST-07 card and Tim approval/refinements reviewed16October2026. All15 numbered requirements reconciled. Existing ES-40 footing schedule readback only; no new native execution or FSTEXPORT invocation.",
+      "nativeCaseCount": 1,
+      "nativeLedgerCount": 1,
+      "nativeCaseBasis": "One existing footing schedule persistence readback outside the historical route mapping. No importer, refresh/sync or publishing execution established.",
+      "wholeWorkflowAccepted": false,
+      "requirements": [
+        {
+          "id": "ST7-1",
+          "required": "ST-07 owns structural schedules, spreadsheet intake, calculation links, sheet management and issue publishing. It provides one schedule authority—not separate foundation, bracing, pier and Excel schedule engines.",
+          "assessment": "PARTIAL",
+          "reason": "An existing footing schedule view is observed. One shared authority across foundations/bracing/piers/Excel is not proved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-40"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-2",
+          "required": "`CESHEETS` becomes the canonical Sheets/Issue workspace. `XCLMTXT` remains the direct Excel shortcut. Familiar aliases redirect to the same workflows. Ghost `XCLMTXTINDEX` remains hidden until a real corpus feature exists.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-3",
+          "required": "Use one semantic schedule model containing stable row identity, element links, values, source, revision, approval and staleness. Render it using Approved AS-01 schedule graphics/native tables—not loose MText or exploded blocks.",
+          "assessment": "PARTIAL",
+          "reason": "Footing schedule values were read after reopen. Stable row identity, semantic links, source revision, approval, staleness and approved/native graphics are not established by that readback.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-40"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-4",
+          "required": "Every imported value records workbook, worksheet, cell/named result, source revision/hash and import time. Project paths remain private and are excluded from sanitised logs/support bundles.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-5",
+          "required": "**Link engineering computations to drawing elements.** A schedule row may link one or more CE elements to the exact calculation result that supports it. Selecting the row highlights the elements; selecting an element opens its schedule/calculation evidence.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-6",
+          "required": "The calculation engine/workbook remains the engineering authority. The schedule is a coordinated view, not another calculator. Calculation–drawing disagreement displays both values as a conflict; CE never silently chooses one.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-7",
+          "required": "Keep Mezzanine and Second Floor distinct in stored data. A project may deliberately display or combine them only through an explicit project mapping. Unresolved floor/title/mark becomes `Unknown`, not a guessed classification.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-8",
+          "required": "Stop silently learning office defaults from live drafting. Existing local learned answers become Candidate suggestions only. Future corpus evidence may recommend floor/title mappings after EV gates; Timothy approves every promoted default.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-9",
+          "required": "Excel workflow: **select source → inspect detected worksheet/profile → review rows and Unknowns → choose schedule sections → preview actual schedule → Apply → one Undo**. No schedule objects appear before Apply.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-10",
+          "required": "Refresh is normally one-way from authoritative elements/calculations into the schedule. Editing a schedule cell that would alter engineering produces a change preview for the linked elements; it never immediately writes back like the current `STRSCHEDSYNC`.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-11",
+          "required": "MOVE preserves the schedule’s placed position. COPY creates a project-specific snapshot unless deliberately creating another linked view. ERASE removes only the view—not its elements or calculations. Reopen retains all links and provenance.",
+          "assessment": "PARTIAL",
+          "reason": "ES-40 proves bounded saved footing schedule values survive reopening. MOVE position, COPY snapshot, ERASE view-only behaviour and all element/calculation/provenance links remain untested.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-40"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-12",
+          "required": "`CESHEETS` provides one surface for scan, sheet order, title-block fields, registers, validation, preview and issue. Project scanning is genuinely read-only. “Update Drawings” shows every affected DWG/field before Apply.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-13",
+          "required": "Publishing requires the deterministic QA-01 Ready-to-Issue gate. Preview shows exact sheets, layout order, revisions, paper sizes, page setups and output filenames. Existing issued PDFs are never silently overwritten.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-14",
+          "required": "Keep publishing isolated from the active drawing. It must not switch Timothy’s layout tab, view or UCS. Plotting stays on AutoCAD’s required main drawing thread, uses temporary output, verifies completion, then finalises the issue package. A failed page cannot masquerade as a complete issue.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST7-15",
+          "required": "Automate workbook parsing, mapping, schedule comparison, sheet scanning and PDF inspection on disposable fixtures. Timothy checks one import, one calculation link and one small issue package in approximately 10–12 minutes.",
+          "assessment": "UNTESTED",
+          "reason": "No requirement-specific native evidence in the current762-case index establishes this approved workflow. Catalogue names, historical planning status and code/unit checks do not establish installed AutoCAD behaviour.",
+          "caseKeys": [],
           "wholeRequirementAccepted": false
         }
       ]
