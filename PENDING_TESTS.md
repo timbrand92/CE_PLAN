@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Native grated-pit catchment overlay — 15 October2026
+
+1. **Tenchecks:8PASS/2FAIL:** actualtypedCDCATCHMENTNew,84m2rectangle/twoClassCpits→42m2each. OneUndo/delayed29.389secondRedo/HideShowpass. New641: onewholehatchdoesnotidentifyeachpitregion;new642:blueonblue/overlappingP1labelandwashed-outbaseinformation.
+2. **Savedoutput:** all3overlayrecords/nineoriginalcontrols/layerpersistafterSave/normalclose/reopen. Layernonplot290=0readback;noactualplot. Whole56recordequalityfailsbecauseunrelatedoriginaldynamicblock7F3nameU13→U12;other55records equal,definitionequivalenceunproved,noproductfaultassigned. All53baselineordinaryrecords unchangedafterplacement.
+3. **Context/remaining:** realAutoCAD2027/Civil3.0.49,mm/modelspace/WorldUCS. Newselectionviaactualcanvas;HideShowviaAutoLISPnativekeywordarguments. Originalninecontrols restored/sourceunchanged/ownwindowempty/exactlease released/old595untouched. Preferencefilebaseline notcaptured. Clear/deletionnotexecuted. Overload/capacitySettings/Cancel/irregulargeometry/otherunits/protection/plot/olderruntime remain;UX-SURF-03partialFAIL,whole50%UNKNOWN.
+
+
 ## Native revision-cloud regression — 15 October 2026
 
 1. **Eight checks PASS:** actualRC at1:100/defaultNo and1:20/KeepOSNAPYes creates closed nativeCLOUD polylines. ImmediateoneUndo removes each cloud; untouched67.757/31.329secondRedo restores it. Original BUG215 now scoped Codex-accepted for Structural1.0.116/AutoCAD2027.
