@@ -9,39 +9,39 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "67026EA6AE89C9083D91B2A95CECB39968212610FA99DCA7FB28E6BBDE4EC1A3",
+    "currentBugsSha256": "4E18F94964B7C312D38A9241BEDE6B4F0CE60BD424E5C539D868C31C70BB717C",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "740CA7C414FC0AD60770A3B8121482A7816EE9FA2608ECDC9DB327389B8EFEF2"
+    "currentCaseIndexSha256": "C077D25B08145DC0A3B8F5F6BF154740D82430190B21934C812B12D046E73F2D"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 595,
+    "bugHeadings": 596,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 21,
-    "caseLedgers": 62,
-    "narrowCases": 705,
+    "caseLedgers": 63,
+    "narrowCases": 712,
     "narrowVerdicts": {
-      "PASS": 551,
-      "FAIL": 126,
+      "PASS": 556,
+      "FAIL": 128,
       "BLOCKED": 7,
       "UNPROVEN": 21
     },
-    "uniqueEvidenceFiles": 1515,
+    "uniqueEvidenceFiles": 1528,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1307,
-    "uniqueMetadataFiles": 208,
+    "uniqueScreenshotFiles": 1315,
+    "uniqueMetadataFiles": 213,
     "caseLinkedUxIds": 19,
-    "caseLinkedBugIds": 88,
-    "newNativeExecutionsInLatestReconciliation": 0,
+    "caseLinkedBugIds": 90,
+    "newNativeExecutionsInLatestReconciliation": 7,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1522,
+    "retainedDeclaredEvidenceFiles": 1535,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
     "currentDetailedApprovedWorkflowAudits": 5,
     "historicalCanonicalCardsIndexed": 39
@@ -50,7 +50,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "705 scoped native checks across62ledgers are not complete V3workflows. Eligible built workflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed tests count as testing performed.",
+    "reason": "712 scoped native checks across63ledgers are not complete V3workflows. Eligiblebuiltworkflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed checks count as testing performed.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -19604,16 +19604,19 @@
       "statusCandidates": [
         "OPEN"
       ],
-      "currentCaseKeys": [],
+      "currentCaseKeys": [
+        "text-scale-case-ledger.json::TS-04"
+      ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7347
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 7358,
+      "nativeScope": "EBT scale comparison atDIMSCALE50/100; remainingR00labelheightsnotaccepted."
     },
     {
       "id": "BUG-532",
-      "headingLine": 7353,
+      "headingLine": 7362,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19622,11 +19625,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7355
+      "currentStatusSourceLine": 7364
     },
     {
       "id": "BUG-533",
-      "headingLine": 7361,
+      "headingLine": 7370,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19635,11 +19638,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7363
+      "currentStatusSourceLine": 7372
     },
     {
       "id": "BUG-534",
-      "headingLine": 7369,
+      "headingLine": 7378,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19648,11 +19651,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7371
+      "currentStatusSourceLine": 7380
     },
     {
       "id": "BUG-535",
-      "headingLine": 7377,
+      "headingLine": 7386,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19661,11 +19664,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7379
+      "currentStatusSourceLine": 7388
     },
     {
       "id": "BUG-536",
-      "headingLine": 7387,
+      "headingLine": 7396,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19674,11 +19677,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7389
+      "currentStatusSourceLine": 7398
     },
     {
       "id": "BUG-537",
-      "headingLine": 7397,
+      "headingLine": 7406,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19687,11 +19690,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7399
+      "currentStatusSourceLine": 7408
     },
     {
       "id": "BUG-538",
-      "headingLine": 7405,
+      "headingLine": 7414,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19700,11 +19703,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7407
+      "currentStatusSourceLine": 7416
     },
     {
       "id": "BUG-539",
-      "headingLine": 7413,
+      "headingLine": 7422,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19713,11 +19716,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7415
+      "currentStatusSourceLine": 7424
     },
     {
       "id": "BUG-540",
-      "headingLine": 7421,
+      "headingLine": 7430,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19726,11 +19729,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7423
+      "currentStatusSourceLine": 7432
     },
     {
       "id": "BUG-541",
-      "headingLine": 7429,
+      "headingLine": 7438,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19739,11 +19742,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7431
+      "currentStatusSourceLine": 7440
     },
     {
       "id": "BUG-542",
-      "headingLine": 7437,
+      "headingLine": 7446,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19752,11 +19755,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7439
+      "currentStatusSourceLine": 7448
     },
     {
       "id": "BUG-543",
-      "headingLine": 7445,
+      "headingLine": 7454,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19765,11 +19768,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7447
+      "currentStatusSourceLine": 7456
     },
     {
       "id": "BUG-544",
-      "headingLine": 7453,
+      "headingLine": 7462,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19778,11 +19781,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7455
+      "currentStatusSourceLine": 7464
     },
     {
       "id": "BUG-545",
-      "headingLine": 7461,
+      "headingLine": 7470,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19791,11 +19794,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7463
+      "currentStatusSourceLine": 7472
     },
     {
       "id": "BUG-546",
-      "headingLine": 7469,
+      "headingLine": 7478,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19804,23 +19807,10 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7471
+      "currentStatusSourceLine": 7480
     },
     {
       "id": "BUG-547",
-      "headingLine": 7477,
-      "statusCandidates": [
-        "OPEN"
-      ],
-      "currentCaseKeys": [],
-      "historicalCandidateReports": [],
-      "wholeScopeVerified": null,
-      "hasExplicitStatusMarker": true,
-      "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7479
-    },
-    {
-      "id": "BUG-548",
       "headingLine": 7486,
       "statusCandidates": [
         "OPEN"
@@ -19833,8 +19823,8 @@
       "currentStatusSourceLine": 7488
     },
     {
-      "id": "BUG-549",
-      "headingLine": 7494,
+      "id": "BUG-548",
+      "headingLine": 7495,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19843,11 +19833,24 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7496
+      "currentStatusSourceLine": 7497
+    },
+    {
+      "id": "BUG-549",
+      "headingLine": 7503,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-14",
+      "currentStatusSourceLine": 7505
     },
     {
       "id": "BUG-550",
-      "headingLine": 7502,
+      "headingLine": 7511,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19856,11 +19859,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7504
+      "currentStatusSourceLine": 7513
     },
     {
       "id": "BUG-551",
-      "headingLine": 7510,
+      "headingLine": 7519,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19869,11 +19872,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7512
+      "currentStatusSourceLine": 7521
     },
     {
       "id": "BUG-552",
-      "headingLine": 7518,
+      "headingLine": 7527,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19882,11 +19885,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7520
+      "currentStatusSourceLine": 7529
     },
     {
       "id": "BUG-553",
-      "headingLine": 7528,
+      "headingLine": 7537,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19895,11 +19898,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7530
+      "currentStatusSourceLine": 7539
     },
     {
       "id": "BUG-554",
-      "headingLine": 7538,
+      "headingLine": 7547,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19908,11 +19911,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7540
+      "currentStatusSourceLine": 7549
     },
     {
       "id": "BUG-555",
-      "headingLine": 7546,
+      "headingLine": 7555,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19921,11 +19924,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7548
+      "currentStatusSourceLine": 7557
     },
     {
       "id": "BUG-556",
-      "headingLine": 7554,
+      "headingLine": 7563,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19934,11 +19937,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7556
+      "currentStatusSourceLine": 7565
     },
     {
       "id": "BUG-557",
-      "headingLine": 7562,
+      "headingLine": 7571,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19947,11 +19950,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7564
+      "currentStatusSourceLine": 7573
     },
     {
       "id": "BUG-558",
-      "headingLine": 7570,
+      "headingLine": 7579,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
@@ -19961,7 +19964,7 @@
     },
     {
       "id": "BUG-559",
-      "headingLine": 7582,
+      "headingLine": 7591,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19970,11 +19973,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7584
+      "currentStatusSourceLine": 7593
     },
     {
       "id": "BUG-560",
-      "headingLine": 7594,
+      "headingLine": 7603,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19983,11 +19986,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7596
+      "currentStatusSourceLine": 7605
     },
     {
       "id": "BUG-561",
-      "headingLine": 7606,
+      "headingLine": 7615,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19996,11 +19999,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7608
+      "currentStatusSourceLine": 7617
     },
     {
       "id": "BUG-562",
-      "headingLine": 7618,
+      "headingLine": 7627,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20009,11 +20012,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7620
+      "currentStatusSourceLine": 7629
     },
     {
       "id": "BUG-563",
-      "headingLine": 7630,
+      "headingLine": 7639,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20022,11 +20025,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7632
+      "currentStatusSourceLine": 7641
     },
     {
       "id": "BUG-564",
-      "headingLine": 7642,
+      "headingLine": 7651,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20035,11 +20038,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7644
+      "currentStatusSourceLine": 7653
     },
     {
       "id": "BUG-565",
-      "headingLine": 7654,
+      "headingLine": 7663,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [
@@ -20048,32 +20051,21 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7656
+      "currentStatusSourceLine": 7665
     },
     {
       "id": "BUG-569",
-      "headingLine": 7668,
+      "headingLine": 7677,
       "statusCandidates": [],
       "currentCaseKeys": [],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7670
+      "currentStatusSourceLine": 7679
     },
     {
       "id": "BUG-568",
-      "headingLine": 7676,
-      "statusCandidates": [],
-      "currentCaseKeys": [],
-      "historicalCandidateReports": [],
-      "wholeScopeVerified": null,
-      "hasExplicitStatusMarker": true,
-      "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7678
-    },
-    {
-      "id": "BUG-567",
       "headingLine": 7685,
       "statusCandidates": [],
       "currentCaseKeys": [],
@@ -20084,8 +20076,19 @@
       "currentStatusSourceLine": 7687
     },
     {
+      "id": "BUG-567",
+      "headingLine": 7694,
+      "statusCandidates": [],
+      "currentCaseKeys": [],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-14",
+      "currentStatusSourceLine": 7696
+    },
+    {
       "id": "BUG-566",
-      "headingLine": 7693,
+      "headingLine": 7702,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20094,11 +20097,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-14",
-      "currentStatusSourceLine": 7695
+      "currentStatusSourceLine": 7704
     },
     {
       "id": "BUG-583",
-      "headingLine": 7706,
+      "headingLine": 7715,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20113,7 +20116,7 @@
     },
     {
       "id": "BUG-584",
-      "headingLine": 7723,
+      "headingLine": 7732,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20133,7 +20136,7 @@
     },
     {
       "id": "BUG-586",
-      "headingLine": 7749,
+      "headingLine": 7758,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20148,7 +20151,7 @@
     },
     {
       "id": "BUG-587",
-      "headingLine": 7773,
+      "headingLine": 7782,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20163,7 +20166,7 @@
     },
     {
       "id": "BUG-585",
-      "headingLine": 7791,
+      "headingLine": 7800,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20178,7 +20181,7 @@
     },
     {
       "id": "BUG-588",
-      "headingLine": 7810,
+      "headingLine": 7819,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20191,7 +20194,7 @@
     },
     {
       "id": "BUG-589",
-      "headingLine": 7818,
+      "headingLine": 7827,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20204,7 +20207,7 @@
     },
     {
       "id": "BUG-590",
-      "headingLine": 7827,
+      "headingLine": 7836,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20219,7 +20222,7 @@
     },
     {
       "id": "BUG-591",
-      "headingLine": 7840,
+      "headingLine": 7849,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20234,7 +20237,7 @@
     },
     {
       "id": "BUG-592",
-      "headingLine": 7854,
+      "headingLine": 7863,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20250,7 +20253,7 @@
     },
     {
       "id": "BUG-593",
-      "headingLine": 7866,
+      "headingLine": 7875,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20267,7 +20270,7 @@
     },
     {
       "id": "BUG-594",
-      "headingLine": 7881,
+      "headingLine": 7890,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20284,7 +20287,7 @@
     },
     {
       "id": "BUG-595",
-      "headingLine": 7894,
+      "headingLine": 7903,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20300,7 +20303,7 @@
     },
     {
       "id": "BUG-596",
-      "headingLine": 7908,
+      "headingLine": 7917,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20315,7 +20318,7 @@
     },
     {
       "id": "BUG-597",
-      "headingLine": 7919,
+      "headingLine": 7928,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20331,7 +20334,7 @@
     },
     {
       "id": "BUG-598",
-      "headingLine": 7934,
+      "headingLine": 7943,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20347,7 +20350,7 @@
     },
     {
       "id": "BUG-599",
-      "headingLine": 7949,
+      "headingLine": 7958,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20362,7 +20365,7 @@
     },
     {
       "id": "BUG-600",
-      "headingLine": 7964,
+      "headingLine": 7973,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20377,7 +20380,7 @@
     },
     {
       "id": "BUG-601",
-      "headingLine": 7976,
+      "headingLine": 7985,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20392,7 +20395,7 @@
     },
     {
       "id": "BUG-602",
-      "headingLine": 7988,
+      "headingLine": 7997,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20407,7 +20410,7 @@
     },
     {
       "id": "BUG-603",
-      "headingLine": 8000,
+      "headingLine": 8009,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20422,7 +20425,7 @@
     },
     {
       "id": "BUG-604",
-      "headingLine": 8011,
+      "headingLine": 8020,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20437,7 +20440,7 @@
     },
     {
       "id": "BUG-605",
-      "headingLine": 8023,
+      "headingLine": 8032,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20452,7 +20455,7 @@
     },
     {
       "id": "BUG-606",
-      "headingLine": 8042,
+      "headingLine": 8051,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20467,7 +20470,7 @@
     },
     {
       "id": "BUG-607",
-      "headingLine": 8056,
+      "headingLine": 8065,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20482,7 +20485,7 @@
     },
     {
       "id": "BUG-608",
-      "headingLine": 8072,
+      "headingLine": 8081,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20497,7 +20500,7 @@
     },
     {
       "id": "BUG-609",
-      "headingLine": 8085,
+      "headingLine": 8094,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20512,7 +20515,7 @@
     },
     {
       "id": "BUG-610",
-      "headingLine": 8100,
+      "headingLine": 8109,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20527,7 +20530,7 @@
     },
     {
       "id": "BUG-611",
-      "headingLine": 8118,
+      "headingLine": 8127,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20574,7 +20577,7 @@
     },
     {
       "id": "BUG-612",
-      "headingLine": 8136,
+      "headingLine": 8145,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20590,7 +20593,7 @@
     },
     {
       "id": "BUG-613",
-      "headingLine": 8152,
+      "headingLine": 8161,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20606,7 +20609,7 @@
     },
     {
       "id": "BUG-614",
-      "headingLine": 8163,
+      "headingLine": 8172,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20621,7 +20624,7 @@
     },
     {
       "id": "BUG-615",
-      "headingLine": 8173,
+      "headingLine": 8182,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20639,7 +20642,7 @@
     },
     {
       "id": "BUG-616",
-      "headingLine": 8190,
+      "headingLine": 8199,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20654,7 +20657,7 @@
     },
     {
       "id": "BUG-617",
-      "headingLine": 8199,
+      "headingLine": 8208,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20669,7 +20672,7 @@
     },
     {
       "id": "BUG-618",
-      "headingLine": 8210,
+      "headingLine": 8219,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20684,7 +20687,7 @@
     },
     {
       "id": "BUG-619",
-      "headingLine": 8220,
+      "headingLine": 8229,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20700,7 +20703,7 @@
     },
     {
       "id": "BUG-620",
-      "headingLine": 8230,
+      "headingLine": 8239,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20713,7 +20716,7 @@
     },
     {
       "id": "BUG-621",
-      "headingLine": 8249,
+      "headingLine": 8258,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20734,7 +20737,7 @@
     },
     {
       "id": "BUG-622",
-      "headingLine": 8273,
+      "headingLine": 8282,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20750,7 +20753,7 @@
     },
     {
       "id": "BUG-623",
-      "headingLine": 8285,
+      "headingLine": 8294,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20761,11 +20764,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8283
+      "currentStatusSourceLine": 8292
     },
     {
       "id": "BUG-624",
-      "headingLine": 8297,
+      "headingLine": 8306,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20776,11 +20779,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8295
+      "currentStatusSourceLine": 8304
     },
     {
       "id": "BUG-625",
-      "headingLine": 8308,
+      "headingLine": 8317,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20791,11 +20794,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8306
+      "currentStatusSourceLine": 8315
     },
     {
       "id": "BUG-626",
-      "headingLine": 8318,
+      "headingLine": 8327,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20806,11 +20809,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8316
+      "currentStatusSourceLine": 8325
     },
     {
       "id": "BUG-627",
-      "headingLine": 8327,
+      "headingLine": 8336,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20821,11 +20824,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8325
+      "currentStatusSourceLine": 8334
     },
     {
       "id": "BUG-628",
-      "headingLine": 8337,
+      "headingLine": 8346,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20836,11 +20839,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8339
+      "currentStatusSourceLine": 8348
     },
     {
       "id": "BUG-629",
-      "headingLine": 8346,
+      "headingLine": 8355,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20851,11 +20854,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8348
+      "currentStatusSourceLine": 8357
     },
     {
       "id": "BUG-630",
-      "headingLine": 8356,
+      "headingLine": 8365,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20866,11 +20869,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8358
+      "currentStatusSourceLine": 8367
     },
     {
       "id": "BUG-631",
-      "headingLine": 8365,
+      "headingLine": 8374,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20881,11 +20884,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8367
+      "currentStatusSourceLine": 8376
     },
     {
       "id": "BUG-632",
-      "headingLine": 8374,
+      "headingLine": 8383,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20896,11 +20899,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8376
+      "currentStatusSourceLine": 8385
     },
     {
       "id": "BUG-633",
-      "headingLine": 8384,
+      "headingLine": 8393,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20911,11 +20914,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8386
+      "currentStatusSourceLine": 8395
     },
     {
       "id": "BUG-634",
-      "headingLine": 8393,
+      "headingLine": 8402,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20926,11 +20929,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8395
+      "currentStatusSourceLine": 8404
     },
     {
       "id": "BUG-635",
-      "headingLine": 8402,
+      "headingLine": 8411,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20942,11 +20945,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8404
+      "currentStatusSourceLine": 8413
     },
     {
       "id": "BUG-636",
-      "headingLine": 8412,
+      "headingLine": 8421,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20957,11 +20960,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8414
+      "currentStatusSourceLine": 8423
     },
     {
       "id": "BUG-637",
-      "headingLine": 8421,
+      "headingLine": 8430,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20972,7 +20975,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8423
+      "currentStatusSourceLine": 8432
     },
     {
       "id": "BUG-638",
@@ -20986,12 +20989,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "headingLine": 8431,
-      "currentStatusSourceLine": 8433
+      "headingLine": 8440,
+      "currentStatusSourceLine": 8442
     },
     {
       "id": "BUG-639",
-      "headingLine": 8441,
+      "headingLine": 8450,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21000,12 +21003,12 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8443,
+      "currentStatusSourceLine": 8452,
       "evidenceLevel": "documentation-filesystem-audit"
     },
     {
       "id": "BUG-640",
-      "headingLine": 8451,
+      "headingLine": 8460,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21016,11 +21019,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8453
+      "currentStatusSourceLine": 8462
     },
     {
       "id": "BUG-641",
-      "headingLine": 8460,
+      "headingLine": 8469,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21031,11 +21034,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8476
+      "currentStatusSourceLine": 8485
     },
     {
       "id": "BUG-642",
-      "headingLine": 8478,
+      "headingLine": 8487,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21047,11 +21050,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8494
+      "currentStatusSourceLine": 8503
     },
     {
       "id": "BUG-643",
-      "headingLine": 8501,
+      "headingLine": 8510,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21062,11 +21065,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8517
+      "currentStatusSourceLine": 8526
     },
     {
       "id": "BUG-644",
-      "headingLine": 8520,
+      "headingLine": 8529,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21077,11 +21080,11 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8536
+      "currentStatusSourceLine": 8545
     },
     {
       "id": "BUG-645",
-      "headingLine": 8539,
+      "headingLine": 8548,
       "statusCandidates": [
         "OPEN"
       ],
@@ -21092,7 +21095,22 @@
       "wholeScopeVerified": false,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8557
+      "currentStatusSourceLine": 8566
+    },
+    {
+      "id": "BUG-646",
+      "headingLine": 8569,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "text-scale-case-ledger.json::TS-02"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": false,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8585
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -21232,6 +21250,13 @@
       "scope": "ST04 source mapping56catalogue candidates/66declarations/65targets and context priorities;0newnativeexecutions",
       "narrowCases": 705,
       "caseLedgers": 62,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "ST04scale7newchecks5PASS2FAIL;existing531nativefollowup/new646lineweight",
+      "narrowCases": 712,
+      "caseLedgers": 63,
       "wholeOverallPercent": null
     }
   ],
@@ -33592,9 +33617,17 @@
           "label": "2.5 mm Text — Centred",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "text-scale-case-ledger.json::TS-01"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "text-scale-case-ledger.json::TS-01",
+            "text-scale-case-ledger.json::TS-02",
+            "text-scale-case-ledger.json::TS-04",
+            "text-scale-case-ledger.json::TS-06",
+            "text-scale-case-ledger.json::TS-07"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -34875,7 +34908,8 @@
           "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
           "nativeTriggerEvidenceCaseKeys": [
             "text-placement-case-ledger.json::TX-05",
-            "text-edit-case-ledger.json::TE-03"
+            "text-edit-case-ledger.json::TE-03",
+            "text-scale-case-ledger.json::TS-03"
           ],
           "associatedWorkflowCaseKeys": [
             "text-placement-case-ledger.json::TX-03",
@@ -34885,7 +34919,12 @@
             "text-edit-case-ledger.json::TE-01",
             "text-edit-case-ledger.json::TE-02",
             "text-edit-case-ledger.json::TE-03",
-            "text-edit-case-ledger.json::TE-09"
+            "text-edit-case-ledger.json::TE-09",
+            "text-scale-case-ledger.json::TS-03",
+            "text-scale-case-ledger.json::TS-04",
+            "text-scale-case-ledger.json::TS-05",
+            "text-scale-case-ledger.json::TS-06",
+            "text-scale-case-ledger.json::TS-07"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -41099,12 +41138,12 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 99,
-      "associatedCaseCount": 704,
+      "associatedEntryCount": 100,
+      "associatedCaseCount": 711,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 62,
-      "latestAssociationReconciliation": "15October:9newST04checks;99entries associated including25R/R2LTXT. Wholefeature denominator unresolved."
+      "currentLedgerCount": 63,
+      "latestAssociationReconciliation": "15Oct7newnative25C/EBTscalechecks;100catalogueentries case-associated. Notwholefeaturecoverage."
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -44061,13 +44100,21 @@
         "sha256": "BF3CC661C90B90C4B3FE3CA29C6E97F6C5029B3C19C2C658A0DB8F8B7E30F604",
         "includedInNativeCaseEvidenceCounts": false
       }
+    },
+    "textPresetNativeFollowup": {
+      "dateMelbourne": "2026-10-15",
+      "caseKeys": [
+        "text-scale-case-ledger.json::TS-01",
+        "text-scale-case-ledger.json::TS-04"
+      ],
+      "scope": "Sourceheight riskconfirmednarrowlyforEBTatDIMSCALE50;25Cnativepositivecontrol. Other32fixedheightpresetsnotalltested. Staticauditretainsitsdatedscope."
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-645",
-    "count": 76,
-    "explicitOpen": 76,
-    "method": "All76 new records remainOPEN.645 records the controlled conversion preview/position gap; scoped old215 acceptance remains separate."
+    "ids": "BUG-570 through BUG-646",
+    "count": 77,
+    "explicitOpen": 77,
+    "method": "All77newrecords remainOPEN;646native25Clineweightleak. Existing531nowhasEBTnative scale evidence;wide scope open. Old215scoped acceptance separate."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -45504,8 +45551,13 @@
             "CE_STRUC_SUITE.bundle::236::TSR"
           ],
           "visibleCandidateEntries": 56,
-          "caseAssociatedCandidateEntries": 3,
+          "caseAssociatedCandidateEntries": 4,
           "candidateCaseKeys": [
+            "text-scale-case-ledger.json::TS-01",
+            "text-scale-case-ledger.json::TS-02",
+            "text-scale-case-ledger.json::TS-04",
+            "text-scale-case-ledger.json::TS-06",
+            "text-scale-case-ledger.json::TS-07",
             "text-placement-case-ledger.json::TX-01",
             "text-placement-case-ledger.json::TX-02",
             "text-placement-case-ledger.json::TX-03",
@@ -45518,11 +45570,13 @@
             "text-edit-case-ledger.json::TE-09",
             "text-edit-case-ledger.json::TE-06",
             "text-placement-case-ledger.json::TX-05",
-            "text-edit-case-ledger.json::TE-03"
+            "text-edit-case-ledger.json::TE-03",
+            "text-scale-case-ledger.json::TS-03",
+            "text-scale-case-ledger.json::TS-05"
           ],
           "candidateCaseVerdicts": {
-            "PASS": 11,
-            "FAIL": 1,
+            "PASS": 16,
+            "FAIL": 3,
             "BLOCKED": 0,
             "UNPROVEN": 1
           },
@@ -45531,7 +45585,7 @@
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
           "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": 16,
+          "requirementReviewedNativeCaseCount": 23,
           "additionalCurrentAuthorityMappings": [
             {
               "command": "R2LTXT",
@@ -46127,13 +46181,13 @@
           "reason": "12historicallymappedentries,no currentcaseassociation; sheets/Excel/publishingneedfulljobcontext."
         }
       ],
-      "currentExecutionCount": 705,
-      "newNativeExecutionsThisReconciliation": 0
+      "currentExecutionCount": 712,
+      "newNativeExecutionsThisReconciliation": 7
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 31,
+    "usedPercent": 34,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -46149,7 +46203,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 241,
+    "newNativeChecks": 248,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -46158,14 +46212,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1515,
-    "retainedDeclaredFiles": 1522,
-    "directScreens": 1307,
-    "directMetadata": 208,
+    "directCaseLinkedFiles": 1528,
+    "retainedDeclaredFiles": 1535,
+    "directScreens": 1315,
+    "directMetadata": 213,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All705cases/62ledgers directfiles freshlyrehashed;7olderunlinked retained separate. Whole50%unknown."
+    "scope": "All712cases/63ledgers directnativeevidencefilesfreshlyrehashed;7oldunlinked retained separate. Staticmappingaudit notcountedasnativeevidence. Whole50%unknown."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -46852,9 +46906,9 @@
     "ST-04": {
       "source": "04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md",
       "sourceSha256": "A69631F2B9A9D48AFE79CBEBE5B819719AAFC212F9AE1D605643245850C0D369",
-      "scope": "All15 approved decisions reviewed against16 scoped native cases/2ledgers; text placement and conversion have partial evidence. Historical not-started headers are not live availability. Whole ST04 acceptance unproved.",
-      "nativeCaseCount": 16,
-      "nativeLedgerCount": 2,
+      "scope": "All15 approved decisions reviewed against23scoped nativecases/3ledgers plus distinctsource mappingaudit. EBTscale and25Ccurrentlineweight now fail. Wholeworkflow remains unaccepted.",
+      "nativeCaseCount": 23,
+      "nativeLedgerCount": 3,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -46934,11 +46988,13 @@
         {
           "id": "ST4-8",
           "required": "Heights are based on plotted paper size and drawing/viewport scale—not a blindly hard-coded model-space height. Existing 18/25/35/50/70 conventions begin as Baseline Candidates until catalogued as Approved.",
-          "assessment": "PARTIAL",
-          "reason": "250mm native text at controlled1:100 observed; other scales, viewport contexts and Approved asset conventions unproved.",
+          "assessment": "FAIL",
+          "reason": "WithDIMSCALE50,25Cheight125 whileEBT250;earlierDIMSCALE100EBTalso250. NativeEBT scaleadaptation gap extends531. Mathematicalpaper-equivalent2.5mm/5mmat1:50 is not an actualplot. Othercontexts andApprovedheightconventionsremain.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
-            "text-edit-case-ledger.json::TE-06"
+            "text-edit-case-ledger.json::TE-06",
+            "text-scale-case-ledger.json::TS-01",
+            "text-scale-case-ledger.json::TS-04"
           ],
           "wholeRequirementAccepted": false
         },
@@ -46994,14 +47050,17 @@
         {
           "id": "ST4-14",
           "required": "Esc at any prompt leaves nothing behind. Restore the previous layer, style and snaps; no forced save; no hidden placement state; one Undo removes the complete result.",
-          "assessment": "PARTIAL",
-          "reason": "First and lateEscape preserve captures; note/conversion oneUndo/delayedRedo,12controls restored/no forcedDWGsave. Every alias/prompt/hidden-state guard unproved.",
+          "assessment": "FAIL",
+          "reason": "Earlierboundedfirst/lateEscape/oneUndo/Redo guards remain. New25Ccompletion changesCELWEIGHTDefault-3toByLayer-1 whileother13settingsrestore;BUG646. Earlier12-settingchecks omittedCELWEIGHT. BroaderCancel/error/aliascontexts remain.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-04",
             "text-edit-case-ledger.json::TE-08",
             "text-edit-case-ledger.json::TE-09",
             "text-placement-case-ledger.json::TX-01",
-            "text-placement-case-ledger.json::TX-04"
+            "text-placement-case-ledger.json::TX-04",
+            "text-scale-case-ledger.json::TS-02",
+            "text-scale-case-ledger.json::TS-05",
+            "text-scale-case-ledger.json::TS-07"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47009,11 +47068,12 @@
           "id": "ST4-15",
           "required": "Test the shared behaviours rather than making Timothy test every alias. Automated checks verify every alias-to-preset mapping; Timothy performs about five representative AutoCAD placements in under ten minutes.",
           "assessment": "PARTIAL",
-          "reason": "Read-only mapping audit reconciles all56historical catalogue candidates,66text-service declarations and65known dispatch targets without source registration collisions. Native evidence remains16scopedcases/2ledgers; nested helpers, representative zero-angle/scale/protection/project contexts and compiled data guards remain.",
+          "reason": "Read-only mapping audit reconciles all56historical catalogue candidates,66text-service declarations and65known dispatch targets without source registration collisions. Native evidence remains16scopedcases/2ledgers; nested helpers, representative zero-angle/scale/protection/project contexts and compiled data guards remain. Native25C now represents zero-angle placement,so all3simple methods haveboundednativeexamples. This isnotallalias/contextacceptance.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
             "text-edit-case-ledger.json::TE-06",
-            "text-edit-case-ledger.json::TE-07"
+            "text-edit-case-ledger.json::TE-07",
+            "text-scale-case-ledger.json::TS-01"
           ],
           "wholeRequirementAccepted": false,
           "supportingSourceAudit": "installedCommandInventory.textPresetSourceAudit"

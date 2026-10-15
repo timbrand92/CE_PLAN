@@ -7346,7 +7346,16 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Command / Area:** R00_STRUC items 24, 25 and 21 (MEDIUM; text heights). What the drafter sees: label text follows a '2.5 mm x DIMSCALE' rule that is written out in 23 separate places (counted as lines across 12 files). The one Settings value for it, Layouts.LabelPlotHeightMm = 2.5 (Modules/Structural/Models/UserSettings.cs 1628), is read by only two commands: Services/ReoBarService.cs 936 and Services/ScheduleService.cs 135, 157. Examples of the other places: Commands/RebarCommands.cs 91, 93, 210, 325, 472; Services/FoundationService.cs 5071, 5140 (footing labels; 250 when DIMSCALE is not set, from the constant at line 37); Commands/ColumnDetailCommands.cs 19; Commands/SectionDetailCommands.cs 19; Commands/SbeamCommandRunner.cs 15. Item 25: tie-down, pump pit, bored pier and subfloor labels are a fixed 100 drawing units and ignore DIMSCALE: Services/TieDownService.cs 66, Services/PumpPitService.cs 243, Services/BoredPierPlacementService.cs 402, Services/TimberSubfloorService.cs 336, 362. I think that at 1:100 that prints about 1 mm high, against the 2.5 mm rule elsewhere; nobody has looked at one on paper. Item 21: beam labels are a fixed 250 (main) and 180 (suffix, colour 6), not scaled by DIMSCALE: Services/BeamDraftingStandards.cs 96, 99, 102, 108, used for the CANT, CONT, LOWER suffixes in Services/BeamService.cs 570-578. The code says 'do not change without consulting Tim', so any change needs Tim's word. A wrong size on paper is the risk: a label too small to read on a printed plan, or text that differs between commands on one drawing. Right result: every label reads one Settings value (the existing Layouts.LabelPlotHeightMm, shown on the Settings page as 'Label height on paper (mm)'), with beam main and suffix heights as their own Text sizes boxes (proposed TextSizes.BeamLabelMm, TextSizes.BeamSuffixMm). Smallest fix: one shared helper that returns the label height from the Settings value and DIMSCALE, used by all 23 places; then the beam heights as two boxes. To SEE it: place a tie-down, a pump pit and a bored pier label at 1:100, plot or measure the text height on paper and compare with a footing label (right: both 2.5 mm); change Label plot height on the Settings page and see which commands follow (today only reo bars and the schedules). Source file: C:\CE_PLAN\areas\release-v3-colleagues-R00_STRUC_2026-10-09.md (Structural R-00 audit, 9 Oct; nothing built or run; none seen in AutoCAD). Code locations are at the installed Structural release 9babe787 (origin/claude/rel-20261009f).
 
-**Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
+**Historical status (9 October; superseded for the scoped EBT route):** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
+
+
+**15 October 2026 — native scale follow-up, EBT only:** on an owned millimetre/model-space/World-UCS drawing with DIMSCALE50, direct typed25C CHECK SCALE creates nativeTEXT888,125mm high. Direct typedEBT/entered2/default0rotation creates nativeTEXT889 EB2,250mm high. Earlier DIMSCALE100 EBT samples were also250mm. This confirms an EBT scale-adaptation gap against ST4-8; it does not prove every other label family faulty. The two heights correspond mathematically to2.5mm and5mm at1:50; no actual viewport/plot measurement was made. All original ordinary records were retained.
+
+**Regression / repair evidence:** compare native text heights across DIMSCALE50/100 using the same configured plotted-height authority; verify25C,EBT and representative support/18/mirrored routes, then metre drawings and paper space. Retain prefix content, placement, Cancel, oneUndo and settings restoration. Existing engineering values and proposed Settings boxes still need their own approved repair; this test authorises no new size convention.
+
+**Local evidence:** text-scale-case-ledger.json TS-04, screens1425/1426/1428, native before/after records; Structural1.0.116+f180b349 SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. No new scale-bug number, code edit, installation or closure.
+
+**Status:** OPEN —15October2026; EBT now has scoped native evidence, the wider R00 label-height scope remains open.
 
 ---
 
@@ -8555,3 +8564,22 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Evidence / owner:** localtext-edit-case-ledger.json TE-07, screens1416–1420 and native before/after records. InstalledStructural1.0.116+f180b349a88617070a8517b563b2df7b5854131e, SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Exact approved ST-04 card re-read. Claude owns command behaviour; no code change, deployment or message sent.
 
 **Status:** OPEN —15Oct2026; approved conversion review/position gap.
+
+
+## BUG-646
+
+**Command / Area:** 25C text placement changes current lineweight, Structural1.0.116 / AutoCAD2027. **Priority: MEDIUM.**
+
+**What Codex did:** on an owned millimetre/model-space/World-UCS copy, captured current lineweight Default(CELWEIGHT-3), layer0 and the other13 monitored settings. Set DIMSCALE50 and disabled snaps/autosave for the controlled test. Typed25C, entered CHECK SCALE and clicked insertion.
+
+**Expected:** placing a note must restore the drafter’s current appearance settings. The next ordinary line must retain the previous current lineweight choice. The note may use its own approved layer without leaving the current lineweight changed.
+
+**What happened:** command completed with correct native text, but current lineweight changed from Default(-3) to ByLayer(-1). All other13 monitored controls and52 original ordinary records were unchanged. The toolbar and native before/after readbacks agree. EBT was run afterwards from the already-changed state, so this test does not independently implicateEBT. No next-line plot impact or cancellation route was executed.
+
+**Test that catches it:** start25C with Default and an explicit0.25mm current lineweight. Complete placement, then cancel separately at each prompt; the exact prior lineweight and other current properties must return. Verify any shared fix on representative angle, side and zero-angle text routes, without changing existing object properties.
+
+**Steps to confirm:** in a fresh local test copy, choose Default in AutoCAD’s current lineweight control. Type25C, enter CHECK SCALE and click a clear point. The lineweight control must still say Default. Repeat with0.25mm and withEscape; inspect the next nativeLINE as a separate follow-up.
+
+**Evidence / owner:** text-scale-case-ledger.json TS-02, screens1424/1425 and text-scale baseline/post25C readbacks. InstalledStructural1.0.116+f180b349a88617070a8517b563b2df7b5854131e SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. The version-named source CeTextService.cs5476 setsCELWEIGHT-1; full restoration-path cause remains to be diagnosed. Related restoration failures BUG-169 and BUG-621 retain their own scopes. Earlier12-control text tests omittedCELWEIGHT and never proved its preservation. Claude owns behaviour; no code change or deployment.
+
+**Status:** OPEN —15October2026; native current-setting leak.

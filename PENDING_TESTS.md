@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex text scale and current lineweight — 15 October 2026
+
+1. **Recorded; no Tim action required:** seven new checks, fivePASS/twoFAIL. DIMSCALE50 gives25C height125mm versusEBT250mm: existingBUG-531 now has scoped native evidence.25C changes current lineweightDefault toByLayer: newBUG-646. All14 monitored settings restored; owned specimen saved and closed.
+2. **Next:** actual viewport/plot and saved-state reopen; proper metre and paper-space fixtures; lineweight onCancel/explicit0.25mm/other text families; parent-labelEDIT/MOVE/COPY, independent project defaults and broader eligible jobs. Current712checks/63batches; whole50%tested unknown.
+
+
 ### Codex text-family shared mapping controls — 15 October 2026
 
 1. **Next native batch:** on fresh owned millimetre/World-UCS copies at1:50, place25C andEBT. Compare native heights against the1:100 controls and intended plotted size; check the previously untested zero-angle path. Then cover metre and paper-space contexts, before treating shared shortcuts as equivalent.

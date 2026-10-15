@@ -1,5 +1,13 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Native text scale comparison — 15 October 2026
+
+1. **Current total:**712 scoped checks across63 batches:556PASS,128FAIL,7BLOCKED,21UNPROVEN. Seven new checks:five passes and two failures. Overall50%tested remains unknown; older totals below are dated snapshots.
+2. **Scale failure confirmed:** with DIMSCALE50,25C creates125mm-high text andEBT creates250mm-high text. EBT also created250mm text at DIMSCALE100 in the earlier controls. This extends existingBUG-531. At1:50 the new heights correspond to2.5mm and5mm; an actual plot is still untested.
+3. **NewBUG-646:** completing25C changes current lineweight fromDefault toByLayer. The other13 monitored settings stayed unchanged. Earlier12-setting checks did not include lineweight, so they were never proof of this property. All14 settings were restored before saving the test specimen.
+4. **Passes:** correct CHECK SCALE andEB2 content, representative zero-angle placement, original drawing-record preservation, oneUndo and Redo after55.548seconds. Original drawing and three settings files unchanged; local specimen saved and closed. All1,528 direct native evidence files rechecked without faults; seven older unlinked files remain separate.
+5. **Plan / remainder:** ST-04 now has23 scoped checks in three batches; height and settings requirements have known failures. Every simple placement method has a representative native route, but every alias/context is not accepted. Metre/paper-space/plot/protected contexts, parent-label editing and independent-project defaults remain. Weekly usage34%used,66%remaining account-wide. No Tim action required.
+
 ## Text shortcut mapping audit — 15 October 2026
 
 1. **All 56 historical text-family catalogue entries now have a source route:** each matches a command declaration and a handled target in the revision named by the installed Structural DLL. The66 declarations into the text service cover65 distinct targets; no missing target or duplicate source registration was found. This is a source check, not another66 AutoCAD tests.
