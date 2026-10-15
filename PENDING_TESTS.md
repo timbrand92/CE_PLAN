@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Curved paving, refusal and cancellation —15October2026
+
+1. **Six checks: four PASS, two FAIL.** Native AutoCAD measures the rounded paving outline as22.283m²; CE reports16m²,28.197%low (newHIGHBUG643). The hatch follows the curve correctly. Correct-looking shading is not acceptance of the calculated area.
+2. **Safe guards:** an open polyline is refused and reasked; cancelling leaves all54 original ordinary records and nine staged controls unchanged. After selectingP1, physicalEscape adds nothing; the message incorrectly says no pit was picked (existingBUG360). Outline selection used nativeAutoLISPentity arguments, P1/Enter/Escape actualUI.
+3. **Safety/remainder:** originalninecontrols restored/readback, source/preferences unchanged, failure specimen saved locally and normally closed; exact ownlease released/other595session untouched. No curvedplacementUndoRedo/save-reopen/otherunits/overload/protection/plot/olderruntime proof. SetupHelp/invalidinput/deselect recovery excluded from producttests. UX-SURF-03 remains partialFAIL. BUG642 blue-text symptom cross-referenced to prior209; its additional overlap/base occlusion remains open.
+
+
 ## Native grated-pit catchment overlay — 15 October2026
 
 1. **Tenchecks:8PASS/2FAIL:** actualtypedCDCATCHMENTNew,84m2rectangle/twoClassCpits→42m2each. OneUndo/delayed29.389secondRedo/HideShowpass. New641: onewholehatchdoesnotidentifyeachpitregion;new642:blueonblue/overlappingP1labelandwashed-outbaseinformation.

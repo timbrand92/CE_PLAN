@@ -1,15 +1,21 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
-## Current position — 15 October2026, Melbourne
+## Current position —15 October2026, Melbourne
 
-1. **Testing:**652 recorded real AutoCAD checks across54 ledgers: **509 PASS,119 FAIL,6 BLOCKED,18 UNPROVEN**. These are checks within workflows, not complete features.
-2. **New work:**188 native checks after the use-to-zero override;98 earlier recovered checks remain separate. Latestcatchmentbatch:10checks8PASS2FAIL,new641/642;old215scopedaccepted.
-3. **Overall target:**50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical7% text matching is not real workflow coverage.
-4. **Evidence:**1,390 directly linked files:1,232 screenshots/158 supporting files, freshly rehashed with zero problems. Seven earlier unlinked files remain separate:1,397 retained. Failedsetup1297 excluded.526UX IDs/590rootbugheadings/523catalogue entries;93 associations are not accepted workflows.
-5. **Bugs/repairs:**73 newBUG570–642 remain OPEN. BUG215 originaloneUndo defect now scoped Codex-accepted; no newbug/code/install.
-6. **Usage:**fresh account meter4%used/96%remaining; no reset redeemed or paid provider request.
-7. **Safety:**originalcontrols/preferences/defaultLength restored, sourceDWG unchanged; temporaryedits discarded normally, ownedwindowempty/exactlease released. Older595session untouched.
-8. **Remaining:**fullbuiltworkflow inventory and complete job journeys; radius/grip/rotation edits, broken/protectedobjects, units/scales/UCS/paper/plots/olderreleases. Whole-workflow denominator remains unvalidated.
+1. **Testing:**658 real AutoCAD checks across55 ledgers: **513PASS,121FAIL,6BLOCKED,18UNPROVEN**. These are bounded checks, not complete features.
+2. **Latest:**six curved-boundary/guard checks, fourPASS/twoFAIL.194 nativechecks after the usage override;98 earlier recovered checks remain separate.
+3. **Overall target:**50% of complete V3/UX scope remains UNKNOWN/incomplete; historical7% text matching is not a current measure.
+4. **Evidence:**1,404 directly linked files:1,239screenshots and165supporting files, freshly rehashed with zero problems. Seven earlier unlinked files remain separate:1,411retained.526UX IDs/593rootbugheadings/523catalogue entries;93associations are not accepted workflows.
+5. **Bugs/repairs:**74newBUG570–643remainOPEN; latest643 reports curved paving area28.2%low. OldBUG215 has scoped native acceptance. No code edit or install in this batch.
+6. **Usage:**fresh account meter17%used/83%remaining; no reset redeemed or paid provider request.
+7. **Safety:**originalcontrols restored, source/preferences unchanged, owned test drawing saved/closed and exact lease released. Other595session untouched.
+8. **Remaining:**full built-workflow inventory/job journeys; units/scales/UCS/paper/protection/output/olderreleases and repair acceptance. Whole-workflow denominator remains unvalidated.
+
+## Curved paving, refusal and cancellation —15October2026
+
+1. **Six checks: four PASS, two FAIL.** Native AutoCAD measures the rounded paving outline as22.283m²; CE reports16m²,28.197%low (newHIGHBUG643). The hatch follows the curve correctly. Correct-looking shading is not acceptance of the calculated area.
+2. **Safe guards:** an open polyline is refused and reasked; cancelling leaves all54 original ordinary records and nine staged controls unchanged. After selectingP1, physicalEscape adds nothing; the message incorrectly says no pit was picked (existingBUG360). Outline selection used nativeAutoLISPentity arguments, P1/Enter/Escape actualUI.
+3. **Safety/remainder:** originalninecontrols restored/readback, source/preferences unchanged, failure specimen saved locally and normally closed; exact ownlease released/other595session untouched. No curvedplacementUndoRedo/save-reopen/otherunits/overload/protection/plot/olderruntime proof. SetupHelp/invalidinput/deselect recovery excluded from producttests. UX-SURF-03 remains partialFAIL. BUG642 blue-text symptom cross-referenced to prior209; its additional overlap/base occlusion remains open.
 
 ## Native grated-pit catchment overlay — 15 October2026
 
@@ -25,7 +31,7 @@
 
 ## Real-world explanation requested by Tim — 15 October 2026
 
-1. **What the numbers mean:** 652 individual checks, not complete tools: 509 passed, 119 failed, six were blocked and 18 remain unproven. A passing pit placement does not accept its editor, schedule, plotting and every recovery route. Fifty per cent of complete V3/UX scope is not established; the old seven per cent was a historical text estimate.
+1. **What the numbers mean:** 658 individual checks, not complete tools: 513 passed, 121 failed, six were blocked and 18 remain unproven. A passing pit placement does not accept its editor, schedule, plotting and every recovery route. Fifty per cent of complete V3/UX scope is not established; the old seven per cent was a historical text estimate.
 2. **Where testing happened:** real AutoCAD 2027 on Tim's PC, with installed Civil 3.0.49, Structural 1.0.116 and Manager 1.1.49 in the recorded batches. Owned metric synthetic drawings/copies were used, predominantly millimetre/model-space samples at the recorded settings. These are controlled drafting tests, not a complete live client job, engineering certification, all supported releases or all drawing units.
 3. **Civil work exercised:** creating/renaming pits; connected and free-ended pipes; selected diameter and cover changes; Inspector and schedule agreement; schedule editing/export; spot levels and fall arrows; rainfall, calculation previews, profiles, LandXML and drawing comparisons. Examples that passed include selected linked cover/schedule updates and retained suggested fall direction/ratio. Failures include blank imported invert levels, stale cold checks, misleading comparison score and schedule text/layout/recovery faults. These families are partially exercised, not wholly accepted.
 4. **Structural work exercised:** supports, selected beams/footings, roof-member/bracing samples, steel/timber picker and steel output, RC beam/column details, checklists, dimensions, leaders, floor-level marks, hatches and Xref utilities. Examples that passed include selected native associative dimensions/hatches, Undo/Redo and saved-record readback. Failures include unreadable newly placed steel sections when editing, separated RC/level-mark components on MOVE, ordinary-note overwrite by LMU, checklist Undo persistence and Xref copying.
@@ -33,7 +39,7 @@
 6. **How this tests the UX plan:** the window must make the task understandable, show units/source and valid choices, preview the actual change, and let the drafter cancel safely. A readable hatch window is not a pass for the approved preview-before-Apply requirement when the drawing changes immediately. A floor-level mark that displays 12.345 still fails the agreed source/Manual review and compound editing experience. Those failures are requirement gaps, not optional decoration.
 7. **How this tests V3:** approved workflow cards supply the expected whole drawing experience. ST-03 dimensions/leaders/levels has 111 checks across thirteen ledgers against its 15 decisions; ST-05 hatches/Xrefs has 67 across nine against its 15 decisions. Both remain partial with failures. ST-08 section/detail tests likewise do not establish complete editable, coordinated assemblies. Case links, requirement gaps and bug references are retained in the existing coverage index; registry association alone earns no acceptance.
 8. **What still needs testing:** remaining commands and variants, remaining section/breakline/dimension-repair stages, genuine linked-level updating, repairs after installation, drawing-unit and 1:20/1:50/1:100 matrices, paper space, rotated UCS, locked layers/Xrefs/REFEDIT, mixed and older objects, large drawings/performance, plots/PDFs and older AutoCAD releases. End-to-end job proof must follow setup → drawing/editing → calculations → schedules → check → plot → save/reopen → revision, checking that all representations agree.
-9. **Recording and repairs:** 1,390 directly linked evidence files accompany the cases; 73 newly raised bugs570–642 remain OPEN. Existing bug evidence is also retained. Draft UI repair candidates are built/render-tested separately and are not installed native passes. Breaklines, sections and dimension repair now have narrow native evidence, with scale/current-space, compound movement/readability and dimension-conversion failures. This explanation adds no test or percentage; it makes the recorded scope and limits explicit.
+9. **Recording and repairs:** 1,404 directly linked evidence files accompany the cases; 74 newly raised bugs570–643 remain OPEN. Existing bug evidence is also retained. Draft UI repair candidates are built/render-tested separately and are not installed native passes. Breaklines, sections and dimension repair now have narrow native evidence, with scale/current-space, compound movement/readability and dimension-conversion failures. This explanation adds no test or percentage; it makes the recorded scope and limits explicit.
 
 ## Native source-move and Diameter cancellation results — 15 October2026
 
