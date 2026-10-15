@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex next broad workflow batch — 15 October 2026
+
+1. **ST-04 text and tags:** full approved card read. Next native checks: independent 25L note; EBT prefix with entered1 and enteredEB1; Flip/Rotate/reference preview; native editable output; Cancel and original controls; one Undo/Redo; ownership and bounded R2LTXT conversion. Check alias mappings through the shared implementation; do not make Tim repeat all56 catalogue candidates. No Tim action required.
+2. **ST-01 remainder:** BDL paired output/movement/copy, BEXT owned-label extension and Cancel, BTX identity-preserving conversion, beam/support MOVE/COPY relationships and rotated UCS. All15 requirements reviewed against existing evidence; historical NotStarted headers are not live availability statements.
+3. **Measurement:** failed executed tests count as testing performed. Whole50%tested and acceptance remain separate and unknown until eligiblebuiltworkflow/scenario/contextmapping is complete.39historicalcards/523catalogueentries/689checks are not interchangeable denominators. No newnativecredit in this mapping pass.
+
+
 ### Codex connected-source editing — 15 October 2026
 
 1. **Recorded; no Tim action required:** renamed-copy disk reopen preserves 61 ordinary records. Direct typed MOVE of DP1 by 500 mm moves its DP label but leaves the pipe behind: existing BUG-358 / CV3-14 compound gap. One Undo/27.17-second Redo works visually; inverse move restores the captured baseline. Five checks: four PASS, one FAIL.

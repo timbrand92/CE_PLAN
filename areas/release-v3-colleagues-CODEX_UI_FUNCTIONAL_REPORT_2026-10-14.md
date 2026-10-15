@@ -1,5 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Whole-workflow coverage map — 15 October 2026
+
+1. **Testing and acceptance are separate:** a failed test still counts as testing performed. Your target is 50% tested. Passing every required check is a separate acceptance measure. Neither overall percentage can yet be calculated reliably because the built-workflow inventory and required test contexts are incomplete.
+2. **Full historical card map now recorded:** all 39 canonical cards are indexed, including foundation and evidence work. The current catalogue has 523 entries; 324 have a historical canonical-card candidate and 199 do not. These are planning associations, not current built or tested feature counts.
+3. **Beam requirements reviewed:** ST-01 now joins ST-03, ST-05 and CV-03 with a detailed requirement review. Existing beam evidence covers placement/cancellation/recovery narrowly. Paired beams, extension, conversion and MOVE/COPY ownership remain untested here. No additional AutoCAD execution is claimed for this reconciliation.
+4. **Next broad native family:** ST-04 text and tag placement has 56 historically mapped catalogue entries with no direct association in this case index. Its approved plan calls for shared-behaviour and alias-mapping checks plus representative generic notes, prefixed tags, preview controls, ownership and conversion. Hidden/disabled routes require availability checks.
+5. **Totals unchanged:** 689 native checks across 60 batches; 538 PASS, 124 FAIL, 7 BLOCKED, 20 UNPROVEN. The current index does not prove that another chat or an older record never tested an unassociated tool. Whole V3/UX scope also includes later rulings and programme gates beyond these historical cards.
+
+
 ## Latest connected-source editing — 15 October 2026
 
 1. **Current total:** 689 detailed checks across 60 batches: 538 PASS, 124 FAIL, 7 BLOCKED, 20 UNPROVEN. Whole-workflow coverage remains unknown; 50% is unproved. Earlier totals below are dated snapshots.
