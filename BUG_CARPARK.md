@@ -8242,6 +8242,10 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 9. **15October native RD extension:** Radius mode on known1000mmcircle previews/places native radial DIMENSION. OneUndo/22.309secondquietRedo pass. Native readback after command/recovery reports TIM LEADER instead of captured Standard; this extends the restoration defect to completed RD use. E00/measurement1000/layer25DIMS/circleD68retained. radius-case-ledger.json RD-04FAIL,1107/1113/readback. No nativefault asserted for Q/QD/MLL/MLR. Trialdiscarded, originalcontrols/preferencesrestored.
 
 
+
+
+**15 October native Q/QD extension (Codex):** at DIMSCALE100, first-point Escape leaves118 entities unchanged and restores layer0/snaps21759, but Q leaves TIM LEADER active and QD leaves TIM DOT LEADER instead of prior Standard. Native before/after exports and screens1137–1143 in quick-leaders-case-ledger.json QL-02/04. Staged100/1000/autosave0/DIMTXT2.5 are test controls, not new command mutations. Restore all captured controls after the batch; no fix installed. Add Q/QD early and later cancellation to the shared restore regression/AutoCAD checklist.
+
 ## BUG-622 — MLL and MLR reject the approved F side-toggle
 
 1. **Status / area:** MEDIUM OPEN. Structural annotation, approved ST-03 decision ST3-6. Actual AutoCAD2027; installedStructural1.0.116+f180b349, DLL SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Claude command/service ownership.
@@ -8252,3 +8256,12 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Repair card — Modify:** keep working arrow→note→native preview, native object/layer and successful MLR Undo/Redo/save-reopen behaviour. Add the approved F interaction to the shared placement path, with the preview and final output agreeing. Preserve typed text, arrow point, styles/settings and Escape rollback. No production edit, dispatch or installation in this batch.
 7. **Test that catches it:** start each side; F switches once, F again switches back. Text, arrow point and paragraph breaks remain identical. Place after flipping and inspect native object, one Undo/delayed Redo and save/reopen. Escape after either flip adds no object.
 8. **Real AutoCAD confirmation:** on an owned metric drawing at1:100 with2.5mm text/3mm arrows, MLL→arrow→two-line note→F→click right; MLR→arrow→note→F→click left. Both previews and saved results must face the new side. Repeat supported scales, rotatedUCS/paper space and protected-layer refusal. Whole ST-03 remains unaccepted.
+
+
+## BUG-623 — Q note is blank inside native text editor on the tested fixture
+
+1. **Status and scope:** MEDIUM OPEN — investigation required. Observed in real AutoCAD2027, installed Structural1.0.116/f180. This is a fixture-specific editing failure; CE command cause, inherited drawing style and machine font/environment causes are not yet separated. No general Q/QD editing failure or recent regression claimed.
+2. **Action and expected result:** place Q on the owned metric copy at1:100, enter CODEX ARROW and finish normally; double-click its readable note. Native text editor should show the existing note for ordinary editing, as ST3-4/13 requires.
+3. **Observed:** native MTEDIT/Text Editor opens but the note is blank; command history reports Undefined shape messages. Native MTEXT E72 retains CODEX ARROW, Standard style,250modelmm height; STYLE Standard font and bigfont fields are empty. MTEXTED is Internal. The drawing displays the note before and after editor Escape; no persisted text loss observed.
+4. **Evidence and guard:** local V3UX_20261014/quick-leaders-case-ledger.json QL-09/10; screens1152–1155, quick-leaders-editor-context.txt and complete pre-save/reopen records. Add a native ordinary-MText control using the same inherited style, then a clean-template/known-font control. Do not rewrite an existing global style to hide the symptom. Owner investigation: annotation/standards command-service owner; no production edit or dispatch.
+5. **AutoCAD retest:** reopen a copy of CODEX_QUICK_LEADERS_20261015.dwg, double-click CODEX ARROW and confirm readable content, edit a word, close editor, verify note and leader remain linked; one Undo/Redo and save/reopen must preserve expected text. Repeat QD and normal native MText controls. Successful editing remains unaccepted until this passes.

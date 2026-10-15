@@ -1,17 +1,20 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
-## Current position — 15 October 2026, Melbourne
+## Current position —15 October2026, Melbourne
 
-1. **Testing:** 551 recorded checks in real AutoCAD across 42 evidence ledgers: **433 PASS, 95 FAIL, 6 BLOCKED and 17 UNPROVEN**. These are specific checks, not 551 complete features.
-2. **New work:** 87 new native checks after Tim’s usage-reserve override. Separately, 98 earlier checks recovered from evidence were not new executions. Latest MLeader batch: 10 checks, 7 PASS, 2 FAIL and 1 UNPROVEN.
-3. **Overall target:** 50% of complete V3/UX scope remains **UNKNOWN/incomplete**. The historical 7% was a text-matching estimate; the complete eligible built/installed workflow inventory remains unfinished.
-4. **Evidence:** 1,091 directly case-linked files: 1,021 screenshots and 70 metadata files. Seven additional setup/cleanup screenshots retained separately. All 1,098 retained files rehashed successfully; 551 unique case keys and 42 ledgers. Full 526 explicit UX IDs, 572 root bug records and 523 installed catalogue entries retained. Cases associate with 82 catalogue records, not 82 accepted workflows.
-5. **Bugs:** 53 new bugs, BUG-570 through BUG-622, remain OPEN. BUG-620 is a source finding awaiting native reproduction. Repair candidates remain separate from installed, AutoCAD-accepted fixes. No deployment by this chat.
-6. **Usage:** latest account-wide meter 9% used, 91% remaining after reset. Tim’s use-to-0% instruction supersedes the former reserve. No reset redeemed or paid provider request.
-7. **Safe state:** both note leaders saved and read back; all owned drawings closed, controls restored, source dimension drawing and Structural preferences unchanged, own test lease released. Older BUG-595 session untouched.
-8. **Remaining:** Q/QD, clean MLL recovery, all cancellation stages, editing/grips, protected content, scales/units/UCS/paper space, plots, older AutoCAD, remaining commands and whole job journeys. Engineering decisions still need Tim where relevant.
+1. **Testing:**563 recorded checks in real AutoCAD across43 evidence ledgers: **442 PASS,98 FAIL,6 BLOCKED,17 UNPROVEN**. These are specific checks, not563 complete features.
+2. **New work:**99 new native checks after Tim’s usage-reserve override;98 recovered earlier cases are separate. Latest Q/QD batch12checks:9PASS/3FAIL.
+3. **Overall target:**50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical7% was text matching; the complete eligible built/installed workflow inventory remains unfinished.
+4. **Evidence:**1,124 directly linked files:1,047 screenshots/77 metadata. Seven setup/cleanup images separate; all1,131 retained files rehashed without problems.563 unique case keys/43ledgers.526 explicit UX IDs,573 root bug headings and523 installed catalogue entries;84 catalogue records have a case association, not84 accepted workflows.
+5. **Bugs:**54 new BUG570–623 remain OPEN.620 is source-only;623 is observed blank native editing on the fixture with cause unproved. Repair candidates remain separate from installed, AutoCAD-accepted fixes. No deployment by this chat.
+6. **Usage:**latest account-wide meter10%used/90%remaining. Use-to0% overrides former reserve; no reset redeemed or paid provider request.
+7. **Safe state:** quick leaders saved/read back; all owned drawings closed;11 captured drafting controls restored exactly; source drawings and Structural preferences unchanged; own lease released. OlderBUG595 session untouched.
+8. **Remaining:** clean MLL recovery, leader edit/font controls, later cancellation, grips/protections/scales/units/UCS/paper/plots/older AutoCAD, remaining commands and whole job journeys. Engineering decisions need Tim where relevant.
 
 ## Latest native results
+
+1. **Quick leaders —12 checks:9PASS/3FAIL:** Q filled-arrow and QD dot follow native point/width/text flow, produce linked LEADER/MTEXT on25DIMS with250mm model text at1:100. Immediate single Undo and untouched38.007s/36.693s Redo pass respectively. Complete records survive actual save/close/reopen; first-prompt Escape adds nothing.
+2. **Faults and limits:** both cancellation routes retain CE dimension styles instead of Standard (BUG621). Q double-click opens a blank native editor with Undefined shape warnings (BUG623); inherited Standard font fields are empty, cause unproved. Escape preserves text. Clean-template/native-MText controls and successful editing remain pending; no global style rewritten.
 
 1. **Left/right note leaders — 10 checks:** 7 PASS, 2 FAIL, 1 UNPROVEN. Both create native MLeaders on 25DIMS and retain paragraph text. The right note previews and places two readable lines at the tested 1:100/2.5mm text setting. Its immediate Undo and delayed 32.761-second Redo pass. Both complete native records survive save/close/reopen.
 2. **BUG-622 and limits:** F is rejected as Invalid point in both MLL and MLR, contrary to approved ST3-6. Left-leader recovery is UNPROVEN as a clean command test: earlier cancelled clipboard input appears in its Undo history. The tiny first left note came from inherited 0.18mm text settings; it is not called a scale defect. No repair installed.
@@ -43,13 +46,13 @@
 
 ## What this means on a drawing — explanation for Tim, 15 October
 
-1. **Context:** 551 specific checks were driven in real AutoCAD 2027 on Tim’s PC, using installed plugins and owned metric synthetic drawings/copies. These include ordinary use, awkward inputs, Escape, Undo/Redo and selected save/reopen scenarios. They do not establish complete production-job or older-version reliability.
+1. **Context:** 563 specific checks were driven in real AutoCAD 2027 on Tim’s PC, using installed plugins and owned metric synthetic drawings/copies. These include ordinary use, awkward inputs, Escape, Undo/Redo and selected save/reopen scenarios. They do not establish complete production-job or older-version reliability.
 2. **Civil exercised:** parts of pit/pipe creation and editing, schedules, levels and fall arrows, rainfall/catchments, drainage calculators/exports, profiles, LandXML, drawing checks and comparison. Working parts coexist with wrong/stale retained information, schedule wording/layout faults and import/report gaps. Each passing case is narrow.
 3. **Structural exercised:** parts of supports, beams/footings, rafters/joists/purlins, wind/bracing, steel sections, RC beams/columns, checklists, hatches and Xref utilities. Native hatch association, separate batch output and Xref property preservation pass in recorded cases. RC outline/reinforcement separation, wrong retained widths, checklist persistence and failed audit/change/copy operations remain open.
 4. **UI/UX evidence:** actual windows were inspected for fit, visible buttons/footers, search and selection, preview updates, wording and safe cancellation. Drawing output was checked separately. A tidy window does not prove correct output or the approved workflow.
 5. **V3 relationship:** exact cases are compared with approved cards and UX rulings. ST-05 requires review of the actual drawing before Apply; sound hatch geometry or XRL Undo does not satisfy that missing step. All 526 explicit UX IDs and the wider V3 scope remain in view. Eligible built/installed scope and complete workflow mapping are unfinished; no 50% claim.
 6. **Remaining job context:** prove start-drawing → project setup → draw/edit → calculate → schedule → check → plot → close/reopen → revise, retaining consistent information throughout. Remaining commands/presets, actual gap bridging, Xref paste fidelity, plots, mixed protected content, scale/units/UCS, large drawings, failure recovery and older releases need further tests.
-7. **Repair status:** 53 new bugs remain OPEN. Draft repair candidates, builds, installed versions and Codex-accepted drawing behaviour remain separate facts. Command/service faults are recorded for their repair owner; this report does not claim another chat has implemented them. Engineering decisions still need Tim.
+7. **Repair status:** 54 new bugs remain OPEN. Draft repair candidates, builds, installed versions and Codex-accepted drawing behaviour remain separate facts. Command/service faults are recorded for their repair owner; this report does not claim another chat has implemented them. Engineering decisions still need Tim.
 
 ## Initial position — 14 October 2026 (superseded summary; history retained)
 

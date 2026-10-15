@@ -1686,3 +1686,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Recorded:** MLL/MLR native objects and paragraph text; readable MLR preview/output at1:100 with2.5mm text/3mm arrows; clean immediate Undo/delayed Redo for MLR; both objects persist after actual save/close/reopen.10 checks:7PASS2FAIL1UNPROVEN.
 2. **BUG622 acceptance:** preserve arrow point and note; F flips left/right during placement, F again flips back. Actual preview/output must agree; Escape adds none. Verify native editable object, oneUndo/Redo and reopen at supported scales/UCS/paper space/protected layers. Claude command/service repair card recorded; no installed fix.
 3. **Remaining:** clean MLL recovery (earlier input-cancel history contaminated grouping), complete cancellation paths, native editing/grips, placement precision, plots, legacy runtime and fullstyle portability/nonmutation. Q/QD remain untested by this batch. Original controls/preferences restored and all owned drawings closed.
+
+
+## Codex Q/QD native follow-through —15 October2026
+
+1. **Narrow Codex-accepted:** native arrow/dot preview/output and linked LEADER/MTEXT25DIMS at1:100; first-point Escape adds nothing; each immediate oneUndo/delayedRedo; both full records survive save/close/reopen.12checks9PASS3FAIL, quick-leaders-case-ledger.json/screens1137–1162, receipts416–418.
+2. **Fault retests:** BUG621 Q/QD cancellation must restore prior Standard style and all drawing controls. BUG623 Q note must remain readable inside native editor; first isolate ordinary native MText/same Standard style and clean-template/known-font controls. Existing fixture has empty Standard font fields; do not assume CE caused them or rewrite global definitions. Confirm actual edit/Undo/Redo/reopen after repair.
+3. **Still untested:** Q/QD later-stage Escape, multiline/width/multiple vertices/native grips/stretch/text movement, definitions portability/nonmutation, other scales/UCS/paper/units/protections/plots/older versions. CleanMLL grouping remains separate. No wholeST03/50% acceptance. Capturedcontrols/settings restored, saved copy/source drawings preserved, owneddrawingsclosed/lease released.
