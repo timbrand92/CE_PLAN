@@ -1,6 +1,13 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Codex independent floor-waste control —16 October2026
+
+1. **Recorded; no Tim action needed:**10newchecks9PASS1FAIL,total753/68. FW1/FW2 creation, permanent source/label records, oneUndo/delayedRedo, source-only nativeMOVE carryinglabel and warnedoverlap refusal/Cancel pass in the statedcontrol.
+2. **Open failure650:** successfulplacement clears existingpitinverts too; oneUndo restores them. Mixedsurface647 refusal remains. No repair or installation claimed.
+3. **Remainder:** savedFWreopen, connectedpipe landings, nativeCOPY/deletionnumbergaps, protections, units/UCS, olderAutoCAD andplot. BroaderCDWT/CDSOURCE and complete eligiblebuiltworkflow/context inventory remain; whole50%testedUNKNOWN.
+
+
 ### Codex floor-waste Cancel and mixedsurface result —16October2026
 
 1. **Recorded;noTimaction:**5checks3PASS2FAIL,total743/67. NewHIGH650:CDFWfirstEscape clearsstoredP1/P2inverts despiteunchangeddrawing.647extended:CDFWrefuses freshSD1/AGI1withoutpitidentities. BothremainOPEN,no fixinstalled.

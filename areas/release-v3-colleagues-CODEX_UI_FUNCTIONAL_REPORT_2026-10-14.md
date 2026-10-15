@@ -1,6 +1,15 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Floor-waste control: placement, ownership and recovery —16 October2026
+
+1. **Current:**753 scoped checks across68 batches:584PASS,138FAIL,7BLOCKED,24UNPROVEN. This batch adds10 checks:9passes and1failure. Whole50%tested is still unverified because the eligible built workflow/context inventory is incomplete.
+2. **Passes in this context:** on a millimetre/World-UCS/Model copy atDIMSCALE100, CDFW places distinct FW1 andFW2 sources. Native records hold their own permanent source identities and label links, without extra pit rows. Moving onlyFW1 by1000mm carries its unselected label; the52otherobjects stay exact.
+3. **Recovery and preview:** oneUndo restores originalobjects/settings/project, andRedo after73.893seconds restores the placement. Greenfree landingpreview is visible. A pick overFW2 receives a redwarning and is refused; Escape leavesall56objects/settings/capturedNODexact. Deletion/nonrecycling, COPY and connectedpipe landings are not accepted by these checks.
+4. **Failure remains:** successful placement also clears existing pitinverts, extending650. OneUndo restores them, but accepting the placement leaves them blank. Pipelevels remain unchanged; endpointidentity keys added by initialisation are recorded separately. The earlier mixedsurface647 refusal remains open.
+5. **Evidence and safety:** floor-waste-control-case-ledger.json FC01–10;14screens1475–1488 and23metadata, including source/label extensiongraphs. All1656directevidencefiles rehashed0faults. Originalcontrols restored, copy saved/closed, source/3prefsunchanged andownlease released. No code/install change. SavedFWreopen/plot/protection/otherunitsUCS/runtime still need testing. Weekly69%used31%remaining; next priority is the builtworkflow/context inventory for coverage.
+
+
 ## Floor wastes: Cancel changes existing pit records —16October2026
 
 1. **Current:**743scopedchecks/67batches:575PASS,137FAIL,7BLOCKED,24UNPROVEN. Five newchecks:3passes/2failures. Whole50%tested remains unverified; eligiblebuiltworkflow/context inventory incomplete.
