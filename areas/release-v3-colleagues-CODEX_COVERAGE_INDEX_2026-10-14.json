@@ -36,7 +36,7 @@
     "uniqueMetadataFiles": 208,
     "caseLinkedUxIds": 19,
     "caseLinkedBugIds": 88,
-    "newNativeExecutionsInLatestReconciliation": 9,
+    "newNativeExecutionsInLatestReconciliation": 0,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
@@ -21226,6 +21226,13 @@
       "narrowCases": 705,
       "caseLedgers": 62,
       "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "ST04 source mapping56catalogue candidates/66declarations/65targets and context priorities;0newnativeexecutions",
+      "narrowCases": 705,
+      "caseLedgers": 62,
+      "wholeOverallPercent": null
     }
   ],
   "installedCommandInventory": {
@@ -33397,7 +33404,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 45,
+            "target": "18B",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 743,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::182::18L",
@@ -33429,7 +33446,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 42,
+            "target": "18L",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 697,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::183::18R",
@@ -33461,7 +33488,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 43,
+            "target": "18R",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 700,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::184::18T",
@@ -33493,7 +33530,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 44,
+            "target": "18T",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 740,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::185::25B",
@@ -33525,7 +33572,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 41,
+            "target": "25B",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 737,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::186::25C",
@@ -33557,7 +33614,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 39,
+            "target": "25C",
+            "handler": "ExecuteZeroAngleText",
+            "dispatchLine": 729,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::187::25L",
@@ -33604,7 +33671,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 35,
+            "target": "25L",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 691,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::188::25LC",
@@ -33636,7 +33713,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 37,
+            "target": "25LC",
+            "handler": "ExecuteZeroAngleText",
+            "dispatchLine": 723,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::189::25R",
@@ -33673,7 +33760,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 36,
+            "target": "25R",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 694,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::190::25RC",
@@ -33705,7 +33802,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 38,
+            "target": "25RC",
+            "handler": "ExecuteZeroAngleText",
+            "dispatchLine": 726,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::191::25T",
@@ -33737,7 +33844,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 40,
+            "target": "25T",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 734,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::192::BEBB",
@@ -33769,7 +33886,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 11,
+            "target": "BEBB",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 632,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::193::BEBT",
@@ -33801,7 +33928,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 10,
+            "target": "BEBT",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 629,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::194::BIBB",
@@ -33833,7 +33970,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 16,
+            "target": "BIBB",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 644,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::195::BIBT",
@@ -33865,7 +34012,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 15,
+            "target": "BIBT",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 641,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::196::BPCL",
@@ -33897,7 +34054,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 68,
+            "target": "BPCL",
+            "handler": "ExecuteColumnOverText",
+            "dispatchLine": 776,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::197::BPCR",
@@ -33929,7 +34096,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 69,
+            "target": "BPCR",
+            "handler": "ExecuteColumnOverText",
+            "dispatchLine": 777,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::198::BPFCL",
@@ -33961,7 +34138,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 65,
+            "target": "BPFCL",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 769,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::199::BPFCR",
@@ -33993,7 +34180,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 66,
+            "target": "BPFCR",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 770,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::200::BPL",
@@ -34025,7 +34222,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 27,
+            "target": "BPL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 673,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::201::BPR",
@@ -34057,7 +34264,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 28,
+            "target": "BPR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 676,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::202::BSFB",
@@ -34089,7 +34306,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 21,
+            "target": "BSFB",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 656,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::203::BSFCB",
@@ -34121,7 +34348,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 76,
+            "target": "BSFCB",
+            "handler": "ExecuteSfMline",
+            "dispatchLine": 789,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::204::BSFCT",
@@ -34153,7 +34390,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 75,
+            "target": "BSFCT",
+            "handler": "ExecuteSfMline",
+            "dispatchLine": 788,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::205::BSFT",
@@ -34185,7 +34432,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 20,
+            "target": "BSFT",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 653,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::206::BTHCL",
@@ -34217,7 +34474,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 58,
+            "target": "BTHCL",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 756,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::207::BTHCR",
@@ -34249,7 +34516,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 59,
+            "target": "BTHCR",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 757,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::208::CEDEBUG",
@@ -34281,7 +34558,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 90,
+            "target": "CEDEBUG",
+            "handler": "AdminCommandService.SetAllDebugState",
+            "dispatchLine": 808,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::209::CEMCOPY",
@@ -34313,7 +34600,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 88,
+            "target": "C",
+            "handler": "ExecuteCopyMultiple",
+            "dispatchLine": 802,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::210::CL1",
@@ -34345,7 +34642,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 30,
+            "target": "CL1",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 679,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::211::COPYM",
@@ -34377,7 +34684,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 87,
+            "target": "C",
+            "handler": "ExecuteCopyMultiple",
+            "dispatchLine": 802,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::212::CR1",
@@ -34409,7 +34726,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 31,
+            "target": "CR1",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 682,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::213::DSL",
@@ -34441,7 +34768,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 49,
+            "target": "DSL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 709,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::214::DSR",
@@ -34473,7 +34810,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 50,
+            "target": "DSR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 712,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::215::EBB",
@@ -34505,7 +34852,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 9,
+            "target": "EBB",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 626,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::216::EBT",
@@ -34549,7 +34906,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 8,
+            "target": "EBT",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 623,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::217::IBB",
@@ -34581,7 +34948,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 14,
+            "target": "IBB",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 638,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::218::IBT",
@@ -34613,7 +34990,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 13,
+            "target": "IBT",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 635,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::219::PCL",
@@ -34645,7 +35032,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 32,
+            "target": "PCL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 685,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::220::PCR",
@@ -34677,7 +35074,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 33,
+            "target": "PCR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 688,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::221::PFCL",
@@ -34709,7 +35116,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 61,
+            "target": "PFCL",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 761,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::222::PFCR",
@@ -34741,7 +35158,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 62,
+            "target": "PFCR",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 762,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::223::PFL",
@@ -34773,7 +35200,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 25,
+            "target": "PFL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 667,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::224::PFR",
@@ -34805,7 +35242,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 26,
+            "target": "PFR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 670,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::225::SFB",
@@ -34837,7 +35284,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 19,
+            "target": "SFB",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 650,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::226::SFCB",
@@ -34869,7 +35326,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 73,
+            "target": "SFCB",
+            "handler": "ExecuteSfMline",
+            "dispatchLine": 784,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::227::SFCT",
@@ -34901,7 +35368,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 72,
+            "target": "SFCT",
+            "handler": "ExecuteSfMline",
+            "dispatchLine": 783,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::228::SFT",
@@ -34933,7 +35410,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 18,
+            "target": "SFT",
+            "handler": "ExecuteAnglePointText",
+            "dispatchLine": 647,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::229::SL",
@@ -34965,7 +35452,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 47,
+            "target": "SL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 703,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::230::SR",
@@ -34997,7 +35494,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 48,
+            "target": "SR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 706,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::231::THCL",
@@ -35029,7 +35536,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 54,
+            "target": "THCL",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 748,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::232::THCR",
@@ -35061,7 +35578,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 55,
+            "target": "THCR",
+            "handler": "ExecuteRectWithText",
+            "dispatchLine": 749,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::233::THL",
@@ -35093,7 +35620,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 23,
+            "target": "THL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 661,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::234::THR",
@@ -35125,7 +35662,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 24,
+            "target": "THR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 664,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::235::TSL",
@@ -35157,7 +35704,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 51,
+            "target": "TSL",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 715,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::236::TSR",
@@ -35189,7 +35746,17 @@
             "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
-          "installedMetadataUxReferencesAreAcceptanceEvidence": false
+          "installedMetadataUxReferencesAreAcceptanceEvidence": false,
+          "sourcePresetMappingAudit": {
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "wrapperSource": "Modules/Structural/Commands/CeTextCommands.cs",
+            "wrapperLine": 52,
+            "target": "TSR",
+            "handler": "ExecuteTopBottomText",
+            "dispatchLine": 718,
+            "verified": true,
+            "scope": "Textual source routing only; nativeavailability/wholeacceptanceunchanged."
+          }
         },
         {
           "key": "CE_STRUC_SUITE.bundle::237::CLEAN",
@@ -40629,6 +41196,2871 @@
         }
       ],
       "scope": "Registrysubgrouponly;FFL/RL/SSL/NGLandothergroupsremainseparate. Acaseassociationisnotacceptanceofallvariants/discoveryroutes. Hiddenentriesneedavailabilitycheckbeforeassumingbuiltworkflow."
+    },
+    "textPresetSourceAudit": {
+      "capturedMelbourne": "15/10/2026, 10:40:00 pm",
+      "method": "Read-only source audit at the commit named by the installed DLL product version. Not compiled execution, decompilation or native AutoCAD testing. Uncommitted build inputs cannot be excluded from product-version provenance alone.",
+      "installedStructural": {
+        "productVersion": "1.0.116+f180b349a88617070a8517b563b2df7b5854131e",
+        "sha256": "47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388"
+      },
+      "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+      "sources": [
+        {
+          "path": "Modules/Structural/Commands/CeTextCommands.cs",
+          "sha256": "4970E939136808693E42DD654495951D6873604FEC53738A44C9D6576A852EBC"
+        },
+        {
+          "path": "Modules/Structural/Services/CeTextService.cs",
+          "sha256": "B15887F9BAAAC9E0B37DE6763E29FED54185244721F3451B7625E38DF1596E1F"
+        }
+      ],
+      "summary": {
+        "historicalST04Candidates": 56,
+        "candidatesWithMatchingWrapperAndDispatch": 56,
+        "ceTextWrapperDeclarations": 66,
+        "distinctCeTextWrapperTargets": 65,
+        "knownServiceCommands": 65,
+        "distinctSwitchCases": 65,
+        "knownWithoutCase": [],
+        "wrappersWithoutCase": [],
+        "duplicateOrMissingSourceRegistrations": [],
+        "sourceFamilies": {
+          "ExecuteAnglePointText": 16,
+          "ExecuteTopBottomText": 20,
+          "ExecuteZeroAngleText": 3,
+          "ExecuteRectWithText": 12,
+          "ExecuteColumnOverText": 3,
+          "ExecuteSfMline": 6,
+          "ExecuteStripFootingCommand": 1,
+          "ExecuteClosedMlineCommand": 1,
+          "ExecuteCopyMultiple": 1,
+          "ExecuteConvertRightToLeftText": 1,
+          "AdminCommandService.SetAllDebugState": 1
+        },
+        "simplePlacementRoutesWithTextSpec": 39,
+        "nativeExecutionsAdded": 0,
+        "nativeChecksTotal": 705
+      },
+      "candidateMappings": [
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::181::18B",
+          "command": "18B",
+          "wrapper": {
+            "command": "18B",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "18B",
+            "line": 45
+          },
+          "route": {
+            "command": "18B",
+            "line": 743,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "string.Empty",
+              "Layer": "\"18TEXT\"",
+              "Color": "6",
+              "Height": "180",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::182::18L",
+          "command": "18L",
+          "wrapper": {
+            "command": "18L",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "18L",
+            "line": 42
+          },
+          "route": {
+            "command": "18L",
+            "line": 697,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"18\"",
+              "Layer": "\"18TEXT\"",
+              "Color": "6",
+              "Height": "180",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"18\", Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::183::18R",
+          "command": "18R",
+          "wrapper": {
+            "command": "18R",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "18R",
+            "line": 43
+          },
+          "route": {
+            "command": "18R",
+            "line": 700,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"18\"",
+              "Layer": "\"18TEXT\"",
+              "Color": "6",
+              "Height": "180",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"18\", Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::184::18T",
+          "command": "18T",
+          "wrapper": {
+            "command": "18T",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "18T",
+            "line": 44
+          },
+          "route": {
+            "command": "18T",
+            "line": 740,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "string.Empty",
+              "Layer": "\"18TEXT\"",
+              "Color": "6",
+              "Height": "180",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::185::25B",
+          "command": "25B",
+          "wrapper": {
+            "command": "25B",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25B",
+            "line": 41
+          },
+          "route": {
+            "command": "25B",
+            "line": 737,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "string.Empty",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::186::25C",
+          "command": "25C",
+          "wrapper": {
+            "command": "25C",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25C",
+            "line": 39
+          },
+          "route": {
+            "command": "25C",
+            "line": 729,
+            "handler": "ExecuteZeroAngleText",
+            "properties": {
+              "Prefix": "\"25\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "1",
+              "VJust": "2"
+            },
+            "call": "ExecuteZeroAngleText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 1, VJust = 2 }, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::187::25L",
+          "command": "25L",
+          "wrapper": {
+            "command": "25L",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25L",
+            "line": 35
+          },
+          "route": {
+            "command": "25L",
+            "line": 691,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"25\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": true,
+          "nativeAvailability": "OBSERVED_NATIVE_ROUTE"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::188::25LC",
+          "command": "25LC",
+          "wrapper": {
+            "command": "25LC",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25LC",
+            "line": 37
+          },
+          "route": {
+            "command": "25LC",
+            "line": 723,
+            "handler": "ExecuteZeroAngleText",
+            "properties": {
+              "Prefix": "\"25\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteZeroAngleText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 2, VJust = 2 }, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::189::25R",
+          "command": "25R",
+          "wrapper": {
+            "command": "25R",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25R",
+            "line": 36
+          },
+          "route": {
+            "command": "25R",
+            "line": 694,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"25\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": true,
+          "nativeAvailability": "OBSERVED_NATIVE_ROUTE"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::190::25RC",
+          "command": "25RC",
+          "wrapper": {
+            "command": "25RC",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25RC",
+            "line": 38
+          },
+          "route": {
+            "command": "25RC",
+            "line": 726,
+            "handler": "ExecuteZeroAngleText",
+            "properties": {
+              "Prefix": "\"25\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteZeroAngleText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 0, VJust = 2 }, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::191::25T",
+          "command": "25T",
+          "wrapper": {
+            "command": "25T",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "25T",
+            "line": 40
+          },
+          "route": {
+            "command": "25T",
+            "line": 734,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "string.Empty",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "Get25TextHeight()",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::192::BEBB",
+          "command": "BEBB",
+          "wrapper": {
+            "command": "BEBB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BEBB",
+            "line": 11
+          },
+          "route": {
+            "command": "BEBB",
+            "line": 632,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"BEB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BEB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::193::BEBT",
+          "command": "BEBT",
+          "wrapper": {
+            "command": "BEBT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BEBT",
+            "line": 10
+          },
+          "route": {
+            "command": "BEBT",
+            "line": 629,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"BEB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BEB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::194::BIBB",
+          "command": "BIBB",
+          "wrapper": {
+            "command": "BIBB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BIBB",
+            "line": 16
+          },
+          "route": {
+            "command": "BIBB",
+            "line": 644,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"BIB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BIB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::195::BIBT",
+          "command": "BIBT",
+          "wrapper": {
+            "command": "BIBT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BIBT",
+            "line": 15
+          },
+          "route": {
+            "command": "BIBT",
+            "line": 641,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"BIB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BIB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::196::BPCL",
+          "command": "BPCL",
+          "wrapper": {
+            "command": "BPCL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BPCL",
+            "line": 68
+          },
+          "route": {
+            "command": "BPCL",
+            "line": 776,
+            "handler": "ExecuteColumnOverText",
+            "properties": {},
+            "call": "ExecuteColumnOverText(ctx, cmd, prefix: \"BP\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::197::BPCR",
+          "command": "BPCR",
+          "wrapper": {
+            "command": "BPCR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BPCR",
+            "line": 69
+          },
+          "route": {
+            "command": "BPCR",
+            "line": 777,
+            "handler": "ExecuteColumnOverText",
+            "properties": {},
+            "call": "ExecuteColumnOverText(ctx, cmd, prefix: \"BP\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::198::BPFCL",
+          "command": "BPFCL",
+          "wrapper": {
+            "command": "BPFCL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BPFCL",
+            "line": 65
+          },
+          "route": {
+            "command": "BPFCL",
+            "line": 769,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BPF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BPF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::199::BPFCR",
+          "command": "BPFCR",
+          "wrapper": {
+            "command": "BPFCR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BPFCR",
+            "line": 66
+          },
+          "route": {
+            "command": "BPFCR",
+            "line": 770,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BPF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BPF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::200::BPL",
+          "command": "BPL",
+          "wrapper": {
+            "command": "BPL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BPL",
+            "line": 27
+          },
+          "route": {
+            "command": "BPL",
+            "line": 673,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"BP\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"BP\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::201::BPR",
+          "command": "BPR",
+          "wrapper": {
+            "command": "BPR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BPR",
+            "line": 28
+          },
+          "route": {
+            "command": "BPR",
+            "line": 676,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"BP\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"BP\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::202::BSFB",
+          "command": "BSFB",
+          "wrapper": {
+            "command": "BSFB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BSFB",
+            "line": 21
+          },
+          "route": {
+            "command": "BSFB",
+            "line": 656,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"BSF\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BSF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::203::BSFCB",
+          "command": "BSFCB",
+          "wrapper": {
+            "command": "BSFCB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BSFCB",
+            "line": 76
+          },
+          "route": {
+            "command": "BSFCB",
+            "line": 789,
+            "handler": "ExecuteSfMline",
+            "properties": {},
+            "call": "ExecuteSfMline(ctx, prefix: \"BSF\", memoryBucket: \"BSF\");"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::204::BSFCT",
+          "command": "BSFCT",
+          "wrapper": {
+            "command": "BSFCT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BSFCT",
+            "line": 75
+          },
+          "route": {
+            "command": "BSFCT",
+            "line": 788,
+            "handler": "ExecuteSfMline",
+            "properties": {},
+            "call": "ExecuteSfMline(ctx, prefix: \"BSF\", memoryBucket: \"BSF\");"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::205::BSFT",
+          "command": "BSFT",
+          "wrapper": {
+            "command": "BSFT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BSFT",
+            "line": 20
+          },
+          "route": {
+            "command": "BSFT",
+            "line": 653,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"BSF\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BSF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::206::BTHCL",
+          "command": "BTHCL",
+          "wrapper": {
+            "command": "BTHCL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BTHCL",
+            "line": 58
+          },
+          "route": {
+            "command": "BTHCL",
+            "line": 756,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BTH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BTH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::207::BTHCR",
+          "command": "BTHCR",
+          "wrapper": {
+            "command": "BTHCR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "BTHCR",
+            "line": 59
+          },
+          "route": {
+            "command": "BTHCR",
+            "line": 757,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BTH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BTH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::208::CEDEBUG",
+          "command": "CEDEBUG",
+          "wrapper": {
+            "command": "CEDEBUG",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "CEDEBUG",
+            "line": 90
+          },
+          "route": {
+            "command": "CEDEBUG",
+            "line": 808,
+            "handler": "AdminCommandService.SetAllDebugState",
+            "properties": {},
+            "call": "bool allDebugEnabled = AdminCommandService.SetAllDebugState(\"TOGGLE\");"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::209::CEMCOPY",
+          "command": "CEMCOPY",
+          "wrapper": {
+            "command": "CEMCOPY",
+            "flags": "CommandFlags.Modal | CommandFlags.UsePickSet",
+            "service": "CeTextService",
+            "target": "C",
+            "line": 88
+          },
+          "route": {
+            "command": "C",
+            "line": 802,
+            "handler": "ExecuteCopyMultiple",
+            "properties": {},
+            "call": "ExecuteCopyMultiple(ctx);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::210::CL1",
+          "command": "CL1",
+          "wrapper": {
+            "command": "CL1",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "CL1",
+            "line": 30
+          },
+          "route": {
+            "command": "CL1",
+            "line": 679,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"C\"",
+              "Layer": "\"SUPPORT TEXT COLUMN\"",
+              "Color": "3",
+              "Height": "200",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"C\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::211::COPYM",
+          "command": "COPYM",
+          "wrapper": {
+            "command": "COPYM",
+            "flags": "CommandFlags.Modal | CommandFlags.UsePickSet",
+            "service": "CeTextService",
+            "target": "C",
+            "line": 87
+          },
+          "route": {
+            "command": "C",
+            "line": 802,
+            "handler": "ExecuteCopyMultiple",
+            "properties": {},
+            "call": "ExecuteCopyMultiple(ctx);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::212::CR1",
+          "command": "CR1",
+          "wrapper": {
+            "command": "CR1",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "CR1",
+            "line": 31
+          },
+          "route": {
+            "command": "CR1",
+            "line": 682,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"C\"",
+              "Layer": "\"SUPPORT TEXT COLUMN\"",
+              "Color": "3",
+              "Height": "200",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"C\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::213::DSL",
+          "command": "DSL",
+          "wrapper": {
+            "command": "DSL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "DSL",
+            "line": 49
+          },
+          "route": {
+            "command": "DSL",
+            "line": 709,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"DS\"",
+              "Layer": "\"SUPPORT TEXT\"",
+              "Color": "2",
+              "Height": "200",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"DS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::214::DSR",
+          "command": "DSR",
+          "wrapper": {
+            "command": "DSR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "DSR",
+            "line": 50
+          },
+          "route": {
+            "command": "DSR",
+            "line": 712,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"DS\"",
+              "Layer": "\"SUPPORT TEXT\"",
+              "Color": "2",
+              "Height": "200",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"DS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::215::EBB",
+          "command": "EBB",
+          "wrapper": {
+            "command": "EBB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "EBB",
+            "line": 9
+          },
+          "route": {
+            "command": "EBB",
+            "line": 626,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"EB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"EB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::216::EBT",
+          "command": "EBT",
+          "wrapper": {
+            "command": "EBT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "EBT",
+            "line": 8
+          },
+          "route": {
+            "command": "EBT",
+            "line": 623,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"EB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"EB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": true,
+          "nativeAvailability": "OBSERVED_NATIVE_ROUTE"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::217::IBB",
+          "command": "IBB",
+          "wrapper": {
+            "command": "IBB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "IBB",
+            "line": 14
+          },
+          "route": {
+            "command": "IBB",
+            "line": 638,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"IB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"IB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::218::IBT",
+          "command": "IBT",
+          "wrapper": {
+            "command": "IBT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "IBT",
+            "line": 13
+          },
+          "route": {
+            "command": "IBT",
+            "line": 635,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"IB\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"IB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::219::PCL",
+          "command": "PCL",
+          "wrapper": {
+            "command": "PCL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "PCL",
+            "line": 32
+          },
+          "route": {
+            "command": "PCL",
+            "line": 685,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"PC\"",
+              "Layer": "\"SUPPORT TEXT COLUMN\"",
+              "Color": "3",
+              "Height": "200",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PC\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::220::PCR",
+          "command": "PCR",
+          "wrapper": {
+            "command": "PCR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "PCR",
+            "line": 33
+          },
+          "route": {
+            "command": "PCR",
+            "line": 688,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"PC\"",
+              "Layer": "\"SUPPORT TEXT COLUMN\"",
+              "Color": "3",
+              "Height": "200",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PC\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::221::PFCL",
+          "command": "PFCL",
+          "wrapper": {
+            "command": "PFCL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "PFCL",
+            "line": 61
+          },
+          "route": {
+            "command": "PFCL",
+            "line": 761,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"PF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"PF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::222::PFCR",
+          "command": "PFCR",
+          "wrapper": {
+            "command": "PFCR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "PFCR",
+            "line": 62
+          },
+          "route": {
+            "command": "PFCR",
+            "line": 762,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"PF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"PF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::223::PFL",
+          "command": "PFL",
+          "wrapper": {
+            "command": "PFL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "PFL",
+            "line": 25
+          },
+          "route": {
+            "command": "PFL",
+            "line": 667,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"PF\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::224::PFR",
+          "command": "PFR",
+          "wrapper": {
+            "command": "PFR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "PFR",
+            "line": 26
+          },
+          "route": {
+            "command": "PFR",
+            "line": 670,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"PF\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::225::SFB",
+          "command": "SFB",
+          "wrapper": {
+            "command": "SFB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "SFB",
+            "line": 19
+          },
+          "route": {
+            "command": "SFB",
+            "line": 650,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"SF\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"SF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::226::SFCB",
+          "command": "SFCB",
+          "wrapper": {
+            "command": "SFCB",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "SFCB",
+            "line": 73
+          },
+          "route": {
+            "command": "SFCB",
+            "line": 784,
+            "handler": "ExecuteSfMline",
+            "properties": {},
+            "call": "ExecuteSfMline(ctx, prefix: \"SF\", memoryBucket: \"SF\");"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::227::SFCT",
+          "command": "SFCT",
+          "wrapper": {
+            "command": "SFCT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "SFCT",
+            "line": 72
+          },
+          "route": {
+            "command": "SFCT",
+            "line": 783,
+            "handler": "ExecuteSfMline",
+            "properties": {},
+            "call": "ExecuteSfMline(ctx, prefix: \"SF\", memoryBucket: \"SF\");"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::228::SFT",
+          "command": "SFT",
+          "wrapper": {
+            "command": "SFT",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "SFT",
+            "line": 18
+          },
+          "route": {
+            "command": "SFT",
+            "line": 647,
+            "handler": "ExecuteAnglePointText",
+            "properties": {
+              "Prefix": "\"SF\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "1",
+              "VJust": "1"
+            },
+            "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"SF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::229::SL",
+          "command": "SL",
+          "wrapper": {
+            "command": "SL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "SL",
+            "line": 47
+          },
+          "route": {
+            "command": "SL",
+            "line": 703,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "string.Empty",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "200",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::230::SR",
+          "command": "SR",
+          "wrapper": {
+            "command": "SR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "SR",
+            "line": 48
+          },
+          "route": {
+            "command": "SR",
+            "line": 706,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "string.Empty",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "200",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::231::THCL",
+          "command": "THCL",
+          "wrapper": {
+            "command": "THCL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "THCL",
+            "line": 54
+          },
+          "route": {
+            "command": "THCL",
+            "line": 748,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"TH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"TH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::232::THCR",
+          "command": "THCR",
+          "wrapper": {
+            "command": "THCR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "THCR",
+            "line": 55
+          },
+          "route": {
+            "command": "THCR",
+            "line": 749,
+            "handler": "ExecuteRectWithText",
+            "properties": {},
+            "call": "ExecuteRectWithText(ctx, cmd, prefix: \"TH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"TH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::233::THL",
+          "command": "THL",
+          "wrapper": {
+            "command": "THL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "THL",
+            "line": 23
+          },
+          "route": {
+            "command": "THL",
+            "line": 661,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"TH\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TH\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::234::THR",
+          "command": "THR",
+          "wrapper": {
+            "command": "THR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "THR",
+            "line": 24
+          },
+          "route": {
+            "command": "THR",
+            "line": 664,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"TH\"",
+              "Layer": "\"25TEXT\"",
+              "Color": "7",
+              "Height": "250",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TH\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::235::TSL",
+          "command": "TSL",
+          "wrapper": {
+            "command": "TSL",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "TSL",
+            "line": 51
+          },
+          "route": {
+            "command": "TSL",
+            "line": 715,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"TS\"",
+              "Layer": "\"SUPPORT TEXT\"",
+              "Color": "2",
+              "Height": "200",
+              "HJust": "2",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        },
+        {
+          "catalogueKey": "CE_STRUC_SUITE.bundle::236::TSR",
+          "command": "TSR",
+          "wrapper": {
+            "command": "TSR",
+            "flags": "CommandFlags.Modal",
+            "service": "CeTextService",
+            "target": "TSR",
+            "line": 52
+          },
+          "route": {
+            "command": "TSR",
+            "line": 718,
+            "handler": "ExecuteTopBottomText",
+            "properties": {
+              "Prefix": "\"TS\"",
+              "Layer": "\"SUPPORT TEXT\"",
+              "Color": "2",
+              "Height": "200",
+              "HJust": "0",
+              "VJust": "2"
+            },
+            "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+          },
+          "sourceMappingVerified": true,
+          "hasNativeWorkflowCaseAssociation": false,
+          "nativeAvailability": "UNVERIFIED"
+        }
+      ],
+      "allServiceCases": [
+        {
+          "command": "EBT",
+          "line": 623,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"EB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"EB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "EBB",
+          "line": 626,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"EB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"EB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "BEBT",
+          "line": 629,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"BEB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BEB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "BEBB",
+          "line": 632,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"BEB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BEB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "IBT",
+          "line": 635,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"IB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"IB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "IBB",
+          "line": 638,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"IB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"IB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "BIBT",
+          "line": 641,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"BIB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BIB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "BIBB",
+          "line": 644,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"BIB\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BIB\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "SFT",
+          "line": 647,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"SF\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"SF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "SFB",
+          "line": 650,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"SF\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"SF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "BSFT",
+          "line": 653,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"BSF\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BSF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "BSFB",
+          "line": 656,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "\"BSF\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = \"BSF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "THL",
+          "line": 661,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"TH\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TH\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+        },
+        {
+          "command": "THR",
+          "line": 664,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"TH\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TH\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+        },
+        {
+          "command": "PFL",
+          "line": 667,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"PF\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+        },
+        {
+          "command": "PFR",
+          "line": 670,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"PF\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PF\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+        },
+        {
+          "command": "BPL",
+          "line": 673,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"BP\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"BP\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+        },
+        {
+          "command": "BPR",
+          "line": 676,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"BP\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "250",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"BP\", Layer = \"25TEXT\", Color = 7, Height = 250, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+        },
+        {
+          "command": "CL1",
+          "line": 679,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"C\"",
+            "Layer": "\"SUPPORT TEXT COLUMN\"",
+            "Color": "3",
+            "Height": "200",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"C\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+        },
+        {
+          "command": "CR1",
+          "line": 682,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"C\"",
+            "Layer": "\"SUPPORT TEXT COLUMN\"",
+            "Color": "3",
+            "Height": "200",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"C\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+        },
+        {
+          "command": "PCL",
+          "line": 685,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"PC\"",
+            "Layer": "\"SUPPORT TEXT COLUMN\"",
+            "Color": "3",
+            "Height": "200",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PC\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+        },
+        {
+          "command": "PCR",
+          "line": 688,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"PC\"",
+            "Layer": "\"SUPPORT TEXT COLUMN\"",
+            "Color": "3",
+            "Height": "200",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"PC\", Layer = \"SUPPORT TEXT COLUMN\", Color = 3, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+        },
+        {
+          "command": "25L",
+          "line": 691,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"25\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+        },
+        {
+          "command": "25R",
+          "line": 694,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"25\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+        },
+        {
+          "command": "18L",
+          "line": 697,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"18\"",
+            "Layer": "\"18TEXT\"",
+            "Color": "6",
+            "Height": "180",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"18\", Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 2, VJust = 2 }, noSpacingMode: false, flipTopBottom: false);"
+        },
+        {
+          "command": "18R",
+          "line": 700,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"18\"",
+            "Layer": "\"18TEXT\"",
+            "Color": "6",
+            "Height": "180",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"18\", Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 0, VJust = 2 }, noSpacingMode: false, flipTopBottom: true);"
+        },
+        {
+          "command": "SL",
+          "line": 703,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "string.Empty",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "200",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+        },
+        {
+          "command": "SR",
+          "line": 706,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "string.Empty",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "200",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+        },
+        {
+          "command": "DSL",
+          "line": 709,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"DS\"",
+            "Layer": "\"SUPPORT TEXT\"",
+            "Color": "2",
+            "Height": "200",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"DS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+        },
+        {
+          "command": "DSR",
+          "line": 712,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"DS\"",
+            "Layer": "\"SUPPORT TEXT\"",
+            "Color": "2",
+            "Height": "200",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"DS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+        },
+        {
+          "command": "TSL",
+          "line": 715,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"TS\"",
+            "Layer": "\"SUPPORT TEXT\"",
+            "Color": "2",
+            "Height": "200",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 2, VJust = 2 }, noSpacingMode: true, flipTopBottom: false);"
+        },
+        {
+          "command": "TSR",
+          "line": 718,
+          "handler": "ExecuteTopBottomText",
+          "properties": {
+            "Prefix": "\"TS\"",
+            "Layer": "\"SUPPORT TEXT\"",
+            "Color": "2",
+            "Height": "200",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteTopBottomText(ctx, cmd, new TextSpec { Prefix = \"TS\", Layer = \"SUPPORT TEXT\", Color = 2, Height = 200, HJust = 0, VJust = 2 }, noSpacingMode: true, flipTopBottom: true);"
+        },
+        {
+          "command": "25LC",
+          "line": 723,
+          "handler": "ExecuteZeroAngleText",
+          "properties": {
+            "Prefix": "\"25\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "2",
+            "VJust": "2"
+          },
+          "call": "ExecuteZeroAngleText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 2, VJust = 2 }, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "25RC",
+          "line": 726,
+          "handler": "ExecuteZeroAngleText",
+          "properties": {
+            "Prefix": "\"25\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "0",
+            "VJust": "2"
+          },
+          "call": "ExecuteZeroAngleText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 0, VJust = 2 }, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "25C",
+          "line": 729,
+          "handler": "ExecuteZeroAngleText",
+          "properties": {
+            "Prefix": "\"25\"",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "1",
+            "VJust": "2"
+          },
+          "call": "ExecuteZeroAngleText(ctx, cmd, new TextSpec { Prefix = \"25\", Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 1, VJust = 2 }, usePrefixForNumericOnly: true);"
+        },
+        {
+          "command": "25T",
+          "line": 734,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "string.Empty",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: false);"
+        },
+        {
+          "command": "25B",
+          "line": 737,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "string.Empty",
+            "Layer": "\"25TEXT\"",
+            "Color": "7",
+            "Height": "Get25TextHeight()",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"25TEXT\", Color = 7, Height = Get25TextHeight(), HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: false);"
+        },
+        {
+          "command": "18T",
+          "line": 740,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "string.Empty",
+            "Layer": "\"18TEXT\"",
+            "Color": "6",
+            "Height": "180",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: false, usePrefixForNumericOnly: false);"
+        },
+        {
+          "command": "18B",
+          "line": 743,
+          "handler": "ExecuteAnglePointText",
+          "properties": {
+            "Prefix": "string.Empty",
+            "Layer": "\"18TEXT\"",
+            "Color": "6",
+            "Height": "180",
+            "HJust": "1",
+            "VJust": "1"
+          },
+          "call": "ExecuteAnglePointText(ctx, cmd, new TextSpec { Prefix = string.Empty, Layer = \"18TEXT\", Color = 6, Height = 180, HJust = 1, VJust = 1 }, mirrorAcrossRefLine: true, usePrefixForNumericOnly: false);"
+        },
+        {
+          "command": "THCL",
+          "line": 748,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"TH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"TH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+        },
+        {
+          "command": "THCR",
+          "line": 749,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"TH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"TH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+        },
+        {
+          "command": "THC",
+          "line": 752,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"TH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"TH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+        },
+        {
+          "command": "BTHCL",
+          "line": 756,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BTH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BTH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+        },
+        {
+          "command": "BTHCR",
+          "line": 757,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BTH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BTH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+        },
+        {
+          "command": "BTHC",
+          "line": 758,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BTH\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BTH\", rectLayer: \"SLAB INTERNAL BEAM\", rectColor: 2, chooseSideByPick: true);"
+        },
+        {
+          "command": "PFCL",
+          "line": 761,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"PF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"PF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+        },
+        {
+          "command": "PFCR",
+          "line": 762,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"PF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"PF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+        },
+        {
+          "command": "PFC",
+          "line": 765,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"PF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"PF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+        },
+        {
+          "command": "BPFCL",
+          "line": 769,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BPF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BPF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+        },
+        {
+          "command": "BPFCR",
+          "line": 770,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BPF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BPF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+        },
+        {
+          "command": "BPFC",
+          "line": 771,
+          "handler": "ExecuteRectWithText",
+          "properties": {},
+          "call": "ExecuteRectWithText(ctx, cmd, prefix: \"BPF\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, memoryBucket: \"BPF\", rectLayer: \"STRIP FOOTINGS\", rectColor: 3, chooseSideByPick: true);"
+        },
+        {
+          "command": "BPCL",
+          "line": 776,
+          "handler": "ExecuteColumnOverText",
+          "properties": {},
+          "call": "ExecuteColumnOverText(ctx, cmd, prefix: \"BP\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, chooseSideByPick: true);"
+        },
+        {
+          "command": "BPCR",
+          "line": 777,
+          "handler": "ExecuteColumnOverText",
+          "properties": {},
+          "call": "ExecuteColumnOverText(ctx, cmd, prefix: \"BP\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, chooseSideByPick: true);"
+        },
+        {
+          "command": "BPC",
+          "line": 778,
+          "handler": "ExecuteColumnOverText",
+          "properties": {},
+          "call": "ExecuteColumnOverText(ctx, cmd, prefix: \"BP\", textLayer: \"25TEXT\", textColor: 7, textHeight: 250, isRightCommand: true, chooseSideByPick: true);"
+        },
+        {
+          "command": "SFCT",
+          "line": 783,
+          "handler": "ExecuteSfMline",
+          "properties": {},
+          "call": "ExecuteSfMline(ctx, prefix: \"SF\", memoryBucket: \"SF\");"
+        },
+        {
+          "command": "SFCB",
+          "line": 784,
+          "handler": "ExecuteSfMline",
+          "properties": {},
+          "call": "ExecuteSfMline(ctx, prefix: \"SF\", memoryBucket: \"SF\");"
+        },
+        {
+          "command": "SFC",
+          "line": 785,
+          "handler": "ExecuteSfMline",
+          "properties": {},
+          "call": "ExecuteSfMline(ctx, prefix: \"SF\", memoryBucket: \"SF\");"
+        },
+        {
+          "command": "BSFCT",
+          "line": 788,
+          "handler": "ExecuteSfMline",
+          "properties": {},
+          "call": "ExecuteSfMline(ctx, prefix: \"BSF\", memoryBucket: \"BSF\");"
+        },
+        {
+          "command": "BSFCB",
+          "line": 789,
+          "handler": "ExecuteSfMline",
+          "properties": {},
+          "call": "ExecuteSfMline(ctx, prefix: \"BSF\", memoryBucket: \"BSF\");"
+        },
+        {
+          "command": "BSFC",
+          "line": 790,
+          "handler": "ExecuteSfMline",
+          "properties": {},
+          "call": "ExecuteSfMline(ctx, prefix: \"BSF\", memoryBucket: \"BSF\");"
+        },
+        {
+          "command": "SF",
+          "line": 793,
+          "handler": "ExecuteStripFootingCommand",
+          "properties": {},
+          "call": "ExecuteStripFootingCommand(ctx, cmd);"
+        },
+        {
+          "command": "CML",
+          "line": 797,
+          "handler": "ExecuteClosedMlineCommand",
+          "properties": {},
+          "call": "ExecuteClosedMlineCommand(ctx, cmd);"
+        },
+        {
+          "command": "C",
+          "line": 802,
+          "handler": "ExecuteCopyMultiple",
+          "properties": {},
+          "call": "ExecuteCopyMultiple(ctx);"
+        },
+        {
+          "command": "R2LTXT",
+          "line": 805,
+          "handler": "ExecuteConvertRightToLeftText",
+          "properties": {},
+          "call": "ExecuteConvertRightToLeftText(ctx, cmd);"
+        },
+        {
+          "command": "CEDEBUG",
+          "line": 808,
+          "handler": "AdminCommandService.SetAllDebugState",
+          "properties": {},
+          "call": "bool allDebugEnabled = AdminCommandService.SetAllDebugState(\"TOGGLE\");"
+        }
+      ],
+      "allCommandWrappers": [
+        {
+          "command": "EBT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "EBT",
+          "line": 8
+        },
+        {
+          "command": "EBB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "EBB",
+          "line": 9
+        },
+        {
+          "command": "BEBT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BEBT",
+          "line": 10
+        },
+        {
+          "command": "BEBB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BEBB",
+          "line": 11
+        },
+        {
+          "command": "IBT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "IBT",
+          "line": 13
+        },
+        {
+          "command": "IBB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "IBB",
+          "line": 14
+        },
+        {
+          "command": "BIBT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BIBT",
+          "line": 15
+        },
+        {
+          "command": "BIBB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BIBB",
+          "line": 16
+        },
+        {
+          "command": "SFT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SFT",
+          "line": 18
+        },
+        {
+          "command": "SFB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SFB",
+          "line": 19
+        },
+        {
+          "command": "BSFT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BSFT",
+          "line": 20
+        },
+        {
+          "command": "BSFB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BSFB",
+          "line": 21
+        },
+        {
+          "command": "THL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "THL",
+          "line": 23
+        },
+        {
+          "command": "THR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "THR",
+          "line": 24
+        },
+        {
+          "command": "PFL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PFL",
+          "line": 25
+        },
+        {
+          "command": "PFR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PFR",
+          "line": 26
+        },
+        {
+          "command": "BPL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPL",
+          "line": 27
+        },
+        {
+          "command": "BPR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPR",
+          "line": 28
+        },
+        {
+          "command": "CL1",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "CL1",
+          "line": 30
+        },
+        {
+          "command": "CR1",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "CR1",
+          "line": 31
+        },
+        {
+          "command": "PCL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PCL",
+          "line": 32
+        },
+        {
+          "command": "PCR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PCR",
+          "line": 33
+        },
+        {
+          "command": "25L",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25L",
+          "line": 35
+        },
+        {
+          "command": "25R",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25R",
+          "line": 36
+        },
+        {
+          "command": "25LC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25LC",
+          "line": 37
+        },
+        {
+          "command": "25RC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25RC",
+          "line": 38
+        },
+        {
+          "command": "25C",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25C",
+          "line": 39
+        },
+        {
+          "command": "25T",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25T",
+          "line": 40
+        },
+        {
+          "command": "25B",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "25B",
+          "line": 41
+        },
+        {
+          "command": "18L",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "18L",
+          "line": 42
+        },
+        {
+          "command": "18R",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "18R",
+          "line": 43
+        },
+        {
+          "command": "18T",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "18T",
+          "line": 44
+        },
+        {
+          "command": "18B",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "18B",
+          "line": 45
+        },
+        {
+          "command": "SL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SL",
+          "line": 47
+        },
+        {
+          "command": "SR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SR",
+          "line": 48
+        },
+        {
+          "command": "DSL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "DSL",
+          "line": 49
+        },
+        {
+          "command": "DSR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "DSR",
+          "line": 50
+        },
+        {
+          "command": "TSL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "TSL",
+          "line": 51
+        },
+        {
+          "command": "TSR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "TSR",
+          "line": 52
+        },
+        {
+          "command": "THCL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "THCL",
+          "line": 54
+        },
+        {
+          "command": "THCR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "THCR",
+          "line": 55
+        },
+        {
+          "command": "THC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "THC",
+          "line": 56
+        },
+        {
+          "command": "FTHC",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "THC",
+          "line": 57
+        },
+        {
+          "command": "BTHCL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BTHCL",
+          "line": 58
+        },
+        {
+          "command": "BTHCR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BTHCR",
+          "line": 59
+        },
+        {
+          "command": "BTHC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BTHC",
+          "line": 60
+        },
+        {
+          "command": "PFCL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PFCL",
+          "line": 61
+        },
+        {
+          "command": "PFCR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PFCR",
+          "line": 62
+        },
+        {
+          "command": "PFC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "PFC",
+          "line": 63
+        },
+        {
+          "command": "FPFC",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "PFC",
+          "line": 64
+        },
+        {
+          "command": "BPFCL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPFCL",
+          "line": 65
+        },
+        {
+          "command": "BPFCR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPFCR",
+          "line": 66
+        },
+        {
+          "command": "BPFC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPFC",
+          "line": 67
+        },
+        {
+          "command": "BPCL",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPCL",
+          "line": 68
+        },
+        {
+          "command": "BPCR",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPCR",
+          "line": 69
+        },
+        {
+          "command": "BPC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BPC",
+          "line": 70
+        },
+        {
+          "command": "SFCT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SFCT",
+          "line": 72
+        },
+        {
+          "command": "SFCB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SFCB",
+          "line": 73
+        },
+        {
+          "command": "SFC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SFC",
+          "line": 74
+        },
+        {
+          "command": "BSFCT",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BSFCT",
+          "line": 75
+        },
+        {
+          "command": "BSFCB",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BSFCB",
+          "line": 76
+        },
+        {
+          "command": "BSFC",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "BSFC",
+          "line": 77
+        },
+        {
+          "command": "SF",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "SF",
+          "line": 78
+        },
+        {
+          "command": "FSF",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "SF",
+          "line": 79
+        },
+        {
+          "command": "REB",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "REB",
+          "line": 80
+        },
+        {
+          "command": "RIB",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "RIB",
+          "line": 81
+        },
+        {
+          "command": "FADOPT",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "FADOPT",
+          "line": 82
+        },
+        {
+          "command": "FREGEN",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "FREGEN",
+          "line": 83
+        },
+        {
+          "command": "FREGENALL",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "FREGENALL",
+          "line": 84
+        },
+        {
+          "command": "CML",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "CML",
+          "line": 85
+        },
+        {
+          "command": "COPYM",
+          "flags": "CommandFlags.Modal | CommandFlags.UsePickSet",
+          "service": "CeTextService",
+          "target": "C",
+          "line": 87
+        },
+        {
+          "command": "CEMCOPY",
+          "flags": "CommandFlags.Modal | CommandFlags.UsePickSet",
+          "service": "CeTextService",
+          "target": "C",
+          "line": 88
+        },
+        {
+          "command": "R2LTXT",
+          "flags": "CommandFlags.Modal | CommandFlags.UsePickSet | CommandFlags.Redraw",
+          "service": "CeTextService",
+          "target": "R2LTXT",
+          "line": 89
+        },
+        {
+          "command": "CEDEBUG",
+          "flags": "CommandFlags.Modal",
+          "service": "CeTextService",
+          "target": "CEDEBUG",
+          "line": 90
+        },
+        {
+          "command": "FST",
+          "flags": "CommandFlags.Modal | CommandFlags.NoUndoMarker",
+          "service": "FoundationService",
+          "target": "FST",
+          "line": 91
+        },
+        {
+          "command": "FEDIT",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "FEDIT",
+          "line": 92
+        },
+        {
+          "command": "BP",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "BP",
+          "line": 93
+        },
+        {
+          "command": "SCREWPILE",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "SCREWPILE",
+          "line": 94
+        },
+        {
+          "command": "STUMPFOOTING",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "STUMPFOOTING",
+          "line": 95
+        },
+        {
+          "command": "FDELETE",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "FDELETE",
+          "line": 96
+        },
+        {
+          "command": "FSTEXPORT",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "FSTEXPORT",
+          "line": 97
+        },
+        {
+          "command": "CSMARKSRENUMBER",
+          "flags": "CommandFlags.Modal",
+          "service": "FoundationService",
+          "target": "MARKSRENUMBER",
+          "line": 100
+        }
+      ],
+      "sourceRisks": [
+        {
+          "id": "HEIGHT_CONTEXT",
+          "finding": "Seven25-text routes call Get25TextHeight(DIMSCALE*2.5 in ordinarymm context);32other simpleplacementroutes pass fixed180/200/250 heights. No scale-dependent adjustment appears between these specs and CreateTextEntity on the inspected angle/topbottom/zero paths. Native1:50/1:100/mm-metre/paperspace controls needed before declaring scope or effect.",
+          "lines": [
+            624,
+            692,
+            698,
+            833,
+            902,
+            1008,
+            5479,
+            4630,
+            4654
+          ],
+          "nativeBugDeclared": false
+        },
+        {
+          "id": "LAST_TEXT_SCOPE",
+          "finding": "Inspected private static LastTextByCommand dictionary is keyed only by command; GetLastText/SetLastText do not include drawing/project key. Current native evidence only shows defaults in copies of same drawing lineage. Independentproject/nativeisolation remains untested; no contamination declared.",
+          "lines": [
+            22,
+            5513,
+            5523
+          ],
+          "nativeBugDeclared": false
+        },
+        {
+          "id": "MULTIPLE_PLACEMENT_PATHS",
+          "finding": "Dispatch has11 handler families, including utilities and retained footing geometry.39simple text presets use3 placementmethods;25L/R additionally use Ce25TextPlacementService. This does not prove every alias shares preview/ownership/height behaviour. Keep legacy routes per transition approval; no retirement/rebuild authorised by this audit.",
+          "lines": [
+            620,
+            833,
+            902,
+            977,
+            1008
+          ],
+          "nativeBugDeclared": false
+        },
+        {
+          "id": "MODELSPACE_WRITER",
+          "finding": "Inspected sharedCreateTextEntityCore opens ModelSpace explicitly. Generic text paper-space/current-space behaviour needs native checks; no new layout fault declared from source alone.",
+          "lines": [
+            4643,
+            4646
+          ],
+          "nativeBugDeclared": false
+        }
+      ],
+      "limitations": [
+        "Registration scan excludes comment-only rows but is textual, not compiled reflection.",
+        "No native availability or whole workflow acceptance inferred for unexecuted aliases.",
+        "No test coverage percentage derived from39presets/56candidates/65servicecases/66declarations.",
+        "No existing code, build, installation, settings or drawings changed.",
+        "Later UX rulings and full eligible built workflow/scenario denominator remain incomplete."
+      ],
+      "localSupportingEvidence": {
+        "file": "Local only: V3UX_20261014/text-command-source-mapping-audit.json",
+        "bytes": 90779,
+        "sha256": "BF3CC661C90B90C4B3FE3CA29C6E97F6C5029B3C19C2C658A0DB8F8B7E30F604",
+        "includedInNativeCaseEvidenceCounts": false
+      }
     }
   },
   "currentNewBugStatusAudit": {
@@ -42113,7 +45545,14 @@
               ],
               "historicalCandidateMapUnchanged": true
             }
-          ]
+          ],
+          "currentSourceRouteReconciliation": {
+            "historicalCandidates": 56,
+            "matchingSourceRoutes": 56,
+            "sourceCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+            "nativeExecutionsAdded": 0,
+            "scope": "Revision named by installed product-version; notbinaryequivalence proof."
+          }
         },
         {
           "id": "ST-05",
@@ -42689,7 +46128,7 @@
         }
       ],
       "currentExecutionCount": 705,
-      "newNativeExecutionsThisReconciliation": 9
+      "newNativeExecutionsThisReconciliation": 0
     }
   },
   "usageCheckpoint": {
@@ -43442,12 +46881,13 @@
           "id": "ST4-3",
           "required": "Every alias becomes a preset containing its role, prefix, layer, plotted height, justification, preferred side and rotation behaviour. All presets use one placement backbone.",
           "assessment": "PARTIAL",
-          "reason": "25L/25R/EBT presets have native results; common backbone and complete alias-to-preset mapping remain unverified.",
+          "reason": "All56 historical catalogue candidates match source declarations/dispatch at the revision named by installed product-version.39simple presets use3methods and25L/Radd a specialised placement service; complete shared preview/ownership/height behaviour remains unproved.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
             "text-edit-case-ledger.json::TE-06"
           ],
-          "wholeRequirementAccepted": false
+          "wholeRequirementAccepted": false,
+          "supportingSourceAudit": "installedCommandInventory.textPresetSourceAudit"
         },
         {
           "id": "ST4-4",
@@ -43568,14 +47008,15 @@
         {
           "id": "ST4-15",
           "required": "Test the shared behaviours rather than making Timothy test every alias. Automated checks verify every alias-to-preset mapping; Timothy performs about five representative AutoCAD placements in under ten minutes.",
-          "assessment": "UNPROVEN",
-          "reason": "Three placement aliases and bounded conversion driven; complete shared alias-to-preset mapping and broad context matrix unverified.",
+          "assessment": "PARTIAL",
+          "reason": "Read-only mapping audit reconciles all56historical catalogue candidates,66text-service declarations and65known dispatch targets without source registration collisions. Native evidence remains16scopedcases/2ledgers; nested helpers, representative zero-angle/scale/protection/project contexts and compiled data guards remain.",
           "caseKeys": [
             "text-edit-case-ledger.json::TE-03",
             "text-edit-case-ledger.json::TE-06",
             "text-edit-case-ledger.json::TE-07"
           ],
-          "wholeRequirementAccepted": false
+          "wholeRequirementAccepted": false,
+          "supportingSourceAudit": "installedCommandInventory.textPresetSourceAudit"
         }
       ]
     }

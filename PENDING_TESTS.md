@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex text-family shared mapping controls — 15 October 2026
+
+1. **Next native batch:** on fresh owned millimetre/World-UCS copies at1:50, place25C andEBT. Compare native heights against the1:100 controls and intended plotted size; check the previously untested zero-angle path. Then cover metre and paper-space contexts, before treating shared shortcuts as equivalent.
+2. **Separate project isolation:** test remembered engineering marks with two deliberately independent synthetic project contexts. Defaults observed in renamed copies do not prove or refute isolation.
+3. **Source audit recorded:** all56 historical catalogue candidates match a command declaration/dispatch in the installed-version-named revision. No new native credit; parent-labelEDIT/MOVE/COPY, conversion contexts and broader eligible jobs remain. No Tim action required.
+
+
 ### Codex ST-04 persistence/conversion —15October2026
 
 1. **Recorded; no Timactionrequired:**9newchecks7PASS/1FAIL/1UNPROVEN. Savedtextproperties,EBT1prefix,late25LEscape,centredtagskip andconversiononeUndo/45.128sRedo haveboundedpasses. WholeDWGreopenequalityunproved dueunrelatedanonymousblockrenaming. NewBUG645:eligibleconversionchangesletteringpositionwithoutapprovedpreview/Apply.

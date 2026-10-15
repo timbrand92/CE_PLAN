@@ -1,5 +1,12 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Text shortcut mapping audit — 15 October 2026
+
+1. **All 56 historical text-family catalogue entries now have a source route:** each matches a command declaration and a handled target in the revision named by the installed Structural DLL. The66 declarations into the text service cover65 distinct targets; no missing target or duplicate source registration was found. This is a source check, not another66 AutoCAD tests.
+2. **Representative tests cannot cover every path yet:** the source has39 simple text presets across three placement methods, plus retained footing and utility routes. The tested25L/25R notes andEBT tag cover two of those simple methods; zero-angle placement still needs a representative native check. Nested geometry and transition routes keep their separate gates.
+3. **Next useful controls:** seven25-text routes calculate height from drawing scale;32 other simple presets supply fixed heights. Compare25C andEBT at1:50, then test metre and paper-space contexts. Remembered-text storage also needs an independent-project check; the current evidence only covers copies of the same drawing lineage. These are source-led test priorities, not newly proved runtime defects.
+4. **Counts unchanged:**705 scoped native checks across62 batches. Whole50%tested remains unknown. The mapping audit adds no native passes or acceptance and does not prove a reproducible binary build. No code, drawing, setting or installation changed.
+
 ## Latest text persistence and conversion — 15 October 2026
 
 1. **Current total:** 705 scoped checks across 62 batches: 551 PASS, 126 FAIL, 7 BLOCKED, 21 UNPROVEN. Nine new checks: seven passes, one failure, one unproven. Overall 50% tested remains unknown. Earlier totals below are dated snapshots.
