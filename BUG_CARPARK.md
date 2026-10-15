@@ -8252,6 +8252,9 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **15 October native Q/QD extension (Codex):** at DIMSCALE100, first-point Escape leaves118 entities unchanged and restores layer0/snaps21759, but Q leaves TIM LEADER active and QD leaves TIM DOT LEADER instead of prior Standard. Native before/after exports and screens1137–1143 in quick-leaders-case-ledger.json QL-02/04. Staged100/1000/autosave0/DIMTXT2.5 are test controls, not new command mutations. Restore all captured controls after the batch; no fix installed. Add Q/QD early and later cancellation to the shared restore regression/AutoCAD checklist.
 
+
+8. **15 October later placement Escape evidence:** actual RD → Length → select a radius1,000mm quarter-circle → Escape at the native placement preview. Every captured ordinary object/Xdata representation is unchanged, but DIMSTYLE changes Standard → TIM LEADER while the other eight staged controls match. AM-02/03, screenshots1300–1301 and arc-modes baseline/cancel readbacks extend this existing bug. Original controls restored after testing; no repair installed.
+
 ## BUG-622 — MLL and MLR reject the approved F side-toggle
 
 1. **Status / area:** MEDIUM OPEN. Structural annotation, approved ST-03 decision ST3-6. Actual AutoCAD2027; installedStructural1.0.116+f180b349, DLL SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Claude command/service ownership.
@@ -8428,3 +8431,12 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** brokenlinks cover draftingregister,StructuralLevel3,V3plan,Septemberreconciliation,andsevenfoundation/sharedworkflowreviewpaths. The cardindex is a preservedhistoricalcopy, so its39approved/39durable header is not a currentimplementation/test denominator. Five plausible relocated/superseded candidates exist; equivalence/authority has not been established merely by name. Six exactbasenames were not found in the plan fileinventory;thisdoesnotprove their source records neverexisted.
 5. **Evidence/guard:** currentcoverageindex authorityInventoryAudit.historicalCardIndexReferenceAudit lists all11writtenlinks andcandidatepaths withsourcehash. Re-resolve all45references; each must eitherreachtheexactsourceorcarryanexplicitdatedsupersession/currentpointer. Checksemantics/hash/provenancebeforecalling anarchiveequivalent.
 6. **Repair/remainder:** preservethecopiedhistoricaltext;correctnavigationthroughreviewedcurrentpointers or a clearlylabelledoverlay, coordinatedwithplanowner. Ownreportnowlinksthecurrentmastermap/separateshistoricalrecords;the11originallinksremainOPEN. No nativecheck/percentagecredit, no duplicateplan or commandapproval created.
+
+
+## BUG-640 — RD asks for dimension type before selecting the geometry
+
+1. **Status / scope:** MEDIUM OPEN. AutoCAD2027, installed Structural1.0.116+f180b349. Approved ST-03/ST3-5 explicitly requires select arc/circle → choose Length/Radius/Diameter → native preview → placement. Claude owns command behaviour; no code or installed repair.
+2. **Reproduction:** open an owned metric model-space copy with an ordinary arc and circle. Type RD. Before selecting anything, the command asks Dimension arc type [Length Radius Diameter ?]. Choose Length or Diameter; only then does it ask for geometry.
+3. **Expected / observed:** geometry selection comes first under the approved card. Both tested modes instead ask type first. This is an approved workflow mismatch; the measured length/diameter themselves pass in the controlled samples. Unsupported/broken-object handling remains untested.
+4. **Evidence:** arc-modes-case-ledger.json AM-09, screenshots1299/1300/1305; original card source retained. Native quarter-circle1571mm and circle diameter2000mm outputs, recovery and save/reopen are separate bounded passes, not acceptance of the prompt order.
+5. **Repair guard / native confirmation:** preserve working native output and remembered type while implementing the reviewed geometry-first flow. In AutoCAD, select an arc/circle first, then choose each applicable mode, inspect the native preview and click placement. Escape at every stage must add nothing and restore drafting controls; unsupported geometry needs a clear refusal. Retest association, oneUndo/delayedRedo and save/reopen.

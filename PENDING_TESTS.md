@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+## Codex RD Length/Diameter follow-through,15October2026
+
+1. **Narrow Codex-accepted:**installed Structural1.0.116/f180,actualRD Length1571mm/Diameter2000mm previews/output, LengthlaterEscape preserves entities, eachoneUndo/delayedRedo,andactualsave/close/reopen readback. Ninechecks7PASS2FAIL; no wholeST03acceptance.
+2. **Retest after repair:**621lateEscape must restore Standard andallpriorcontrols;640mustselectgeometry beforeofferingtype, as approvedST3-5. Keep working native output/rememberedtype; repeat recovery/persistence. No repair installed.
+3. **Continue autonomously:**DiameterlaterEscape, unsupported/broken geometry, source editing/association/grips, protectedcontent, units/scales/UCS/paper/plots/olderruntime remain. Originalcontrols/prefs/source preserved; ownedcopyclosed/exactlease released.629totalchecks/51ledgers,whole50%UNKNOWN.
+
 ## Codex existing-level fall/review follow-up,14October2026
 
 1. **Narrow Codex-accepted:** Civil3.0.49+48662ddd,SpotLevelribbonicon,automaticP21.500read,Move/Accept/levelEscape,defaultEnter/tworepeat,oneUndo/delayedRedoandallsavedgeometryretained. WarmCDCHECKflagswrongnorth1:80whilecorrectsouthsuggestionsunflagged. Receipts213-218/screens523-545.
