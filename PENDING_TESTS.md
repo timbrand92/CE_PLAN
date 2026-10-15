@@ -1,5 +1,11 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Codex ST-04 persistence/conversion —15October2026
+
+1. **Recorded; no Timactionrequired:**9newchecks7PASS/1FAIL/1UNPROVEN. Savedtextproperties,EBT1prefix,late25LEscape,centredtagskip andconversiononeUndo/45.128sRedo haveboundedpasses. WholeDWGreopenequalityunproved dueunrelatedanonymousblockrenaming. NewBUG645:eligibleconversionchangesletteringpositionwithoutapprovedpreview/Apply.
+2. **Next:** nativeEDIT/MOVE/COPY onexplicitparentlabel,conversionCancel/mixed/protectedcontexts,convertedstate save-reopen,sharedaliasmapping/otherunits/scales/UCS/paper/plot/olderruntime andbroadereligiblebuiltfamilies. All15ST04decisionsreviewed,wholeunaccepted.705checks/62batches;whole50%testedunknown.
+
+
 ### Codex ST-04 text placement — 15 October 2026
 
 1. **Recorded; no Tim action required:** seven new realAutoCAD checks, sixPASS/oneFAIL. Generic25L content/height, enteredEB1 prefix, firstEscape, oneUndo/delayedRedo and drawing/settings preservation have bounded passes. F rejects Flip and placement options come after the insertion click: newBUG-644 against approvedST4-5/7.

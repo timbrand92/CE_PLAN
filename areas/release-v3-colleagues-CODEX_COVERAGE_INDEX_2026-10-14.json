@@ -9,48 +9,48 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "FD3BC3EE23B86499E4F2A84400B558040BD5432DE645E074B465B93B6D51A6E0",
+    "currentBugsSha256": "67026EA6AE89C9083D91B2A95CECB39968212610FA99DCA7FB28E6BBDE4EC1A3",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "3A6E5A52C6F19869B734636F6F1356D61D9195A943CD4ABBBA69C48137FCDB4C"
+    "currentCaseIndexSha256": "740CA7C414FC0AD60770A3B8121482A7816EE9FA2608ECDC9DB327389B8EFEF2"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 594,
+    "bugHeadings": 595,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 21,
-    "caseLedgers": 61,
-    "narrowCases": 696,
+    "caseLedgers": 62,
+    "narrowCases": 705,
     "narrowVerdicts": {
-      "PASS": 544,
-      "FAIL": 125,
+      "PASS": 551,
+      "FAIL": 126,
       "BLOCKED": 7,
-      "UNPROVEN": 20
+      "UNPROVEN": 21
     },
-    "uniqueEvidenceFiles": 1494,
+    "uniqueEvidenceFiles": 1515,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1293,
-    "uniqueMetadataFiles": 201,
+    "uniqueScreenshotFiles": 1307,
+    "uniqueMetadataFiles": 208,
     "caseLinkedUxIds": 19,
-    "caseLinkedBugIds": 87,
-    "newNativeExecutionsInLatestReconciliation": 7,
+    "caseLinkedBugIds": 88,
+    "newNativeExecutionsInLatestReconciliation": 9,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1501,
+    "retainedDeclaredEvidenceFiles": 1522,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
-    "currentDetailedApprovedWorkflowAudits": 4,
+    "currentDetailedApprovedWorkflowAudits": 5,
     "historicalCanonicalCardsIndexed": 39
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "696 bounded nativechecks across61ledgers are not complete V3workflows. Eligiblebuiltworkflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executedtests countastestingperformed.",
+    "reason": "705 scoped native checks across62ledgers are not complete V3workflows. Eligible built workflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed tests count as testing performed.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -21078,6 +21078,21 @@
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
       "currentStatusSourceLine": 8536
+    },
+    {
+      "id": "BUG-645",
+      "headingLine": 8539,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "text-edit-case-ledger.json::TE-07"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": false,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8557
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -21203,6 +21218,13 @@
       "scope": "ST04 native25L/EBT7checks6PASS1FAIL/newBUG644/safetyfinish;whole50%unknown",
       "narrowCases": 696,
       "caseLedgers": 61,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-15",
+      "scope": "ST04 persistence/numeric/lateEscape/eligible conversion9checks7PASS1FAIL1UNPROVEN;all15requirementsreviewed/new645",
+      "narrowCases": 705,
+      "caseLedgers": 62,
       "wholeOverallPercent": null
     }
   ],
@@ -27279,9 +27301,17 @@
           "label": "Change Text from Right to Left",
           "group": "",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "text-edit-case-ledger.json::TE-05",
+            "text-edit-case-ledger.json::TE-07"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "text-edit-case-ledger.json::TE-05",
+            "text-edit-case-ledger.json::TE-07",
+            "text-edit-case-ledger.json::TE-08",
+            "text-edit-case-ledger.json::TE-09"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -27289,7 +27319,19 @@
             "sourceSha256": "995B0865ACD9FF13F378E62916F9CA6E14867DA651080801D476A8273890BE9F",
             "historicalCardCandidates": [],
             "historicalReferences": [],
-            "currentApprovedWorkflowMappingVerified": false
+            "currentApprovedWorkflowMappingVerified": true,
+            "currentApprovedWorkflowCards": [
+              "ST-04"
+            ],
+            "currentAuthority": {
+              "source": "04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md",
+              "sourceSha256": "A69631F2B9A9D48AFE79CBEBE5B819719AAFC212F9AE1D605643245850C0D369",
+              "requirements": [
+                "ST4-1",
+                "ST4-11"
+              ],
+              "note": "Current exactcard explicitlynames R2LTXT; historicalnomatch retained ashistory. Doesnotprove wholeworkflow acceptance."
+            }
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
@@ -33528,7 +33570,8 @@
           "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
           "nativeTriggerEvidenceCaseKeys": [
             "text-placement-case-ledger.json::TX-01",
-            "text-placement-case-ledger.json::TX-02"
+            "text-placement-case-ledger.json::TX-02",
+            "text-edit-case-ledger.json::TE-04"
           ],
           "associatedWorkflowCaseKeys": [
             "text-placement-case-ledger.json::TX-01",
@@ -33536,7 +33579,11 @@
             "text-placement-case-ledger.json::TX-03",
             "text-placement-case-ledger.json::TX-04",
             "text-placement-case-ledger.json::TX-06",
-            "text-placement-case-ledger.json::TX-07"
+            "text-placement-case-ledger.json::TX-07",
+            "text-edit-case-ledger.json::TE-01",
+            "text-edit-case-ledger.json::TE-02",
+            "text-edit-case-ledger.json::TE-04",
+            "text-edit-case-ledger.json::TE-09"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -33599,9 +33646,14 @@
           "label": "2.5 mm Text — Right",
           "group": "Structural",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
+          "nativeTriggerEvidenceCaseKeys": [
+            "text-edit-case-ledger.json::TE-06"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "text-edit-case-ledger.json::TE-06",
+            "text-edit-case-ledger.json::TE-09"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -34465,13 +34517,18 @@
           "hiddenInCatalogue": false,
           "nativeAvailability2027": "OBSERVED_NATIVE_ROUTE",
           "nativeTriggerEvidenceCaseKeys": [
-            "text-placement-case-ledger.json::TX-05"
+            "text-placement-case-ledger.json::TX-05",
+            "text-edit-case-ledger.json::TE-03"
           ],
           "associatedWorkflowCaseKeys": [
             "text-placement-case-ledger.json::TX-03",
             "text-placement-case-ledger.json::TX-05",
             "text-placement-case-ledger.json::TX-06",
-            "text-placement-case-ledger.json::TX-07"
+            "text-placement-case-ledger.json::TX-07",
+            "text-edit-case-ledger.json::TE-01",
+            "text-edit-case-ledger.json::TE-02",
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-09"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -40475,12 +40532,12 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 97,
-      "associatedCaseCount": 695,
+      "associatedEntryCount": 99,
+      "associatedCaseCount": 704,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 61,
-      "latestAssociationReconciliation": "15October:7newST04cases/25LandEBTactualtypedroutes;97catalogueentries associated, notwholefeatures."
+      "currentLedgerCount": 62,
+      "latestAssociationReconciliation": "15October:9newST04checks;99entries associated including25R/R2LTXT. Wholefeature denominator unresolved."
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -40575,10 +40632,10 @@
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-644",
-    "count": 75,
-    "explicitOpen": 75,
-    "method": "All75newrecords remainOPEN; old215 scoped nativeacceptance separate.644 approvedtextplacementinteractiongap, notcontentprefixorownershipfault."
+    "ids": "BUG-570 through BUG-645",
+    "count": 76,
+    "explicitOpen": 76,
+    "method": "All76 new records remainOPEN.645 records the controlled conversion preview/position gap; scoped old215 acceptance remains separate."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -42015,28 +42072,48 @@
             "CE_STRUC_SUITE.bundle::236::TSR"
           ],
           "visibleCandidateEntries": 56,
-          "caseAssociatedCandidateEntries": 2,
+          "caseAssociatedCandidateEntries": 3,
           "candidateCaseKeys": [
             "text-placement-case-ledger.json::TX-01",
             "text-placement-case-ledger.json::TX-02",
             "text-placement-case-ledger.json::TX-03",
             "text-placement-case-ledger.json::TX-04",
-            "text-placement-case-ledger.json::TX-05",
             "text-placement-case-ledger.json::TX-06",
-            "text-placement-case-ledger.json::TX-07"
+            "text-placement-case-ledger.json::TX-07",
+            "text-edit-case-ledger.json::TE-01",
+            "text-edit-case-ledger.json::TE-02",
+            "text-edit-case-ledger.json::TE-04",
+            "text-edit-case-ledger.json::TE-09",
+            "text-edit-case-ledger.json::TE-06",
+            "text-placement-case-ledger.json::TX-05",
+            "text-edit-case-ledger.json::TE-03"
           ],
           "candidateCaseVerdicts": {
-            "PASS": 6,
+            "PASS": 11,
             "FAIL": 1,
             "BLOCKED": 0,
-            "UNPROVEN": 0
+            "UNPROVEN": 1
           },
-          "currentDetailedRequirementAudit": null,
+          "currentDetailedRequirementAudit": "approvedWorkflowRequirementAudits.ST-04",
           "currentBuiltEligibility": "UNRESOLVED; catalogue presence and historical source are insufficient",
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
           "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": null
+          "requirementReviewedNativeCaseCount": 16,
+          "additionalCurrentAuthorityMappings": [
+            {
+              "command": "R2LTXT",
+              "entryKey": "CE_STRUC_SUITE.bundle::17::R2LTXT",
+              "source": "04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md",
+              "caseKeys": [
+                "text-edit-case-ledger.json::TE-05",
+                "text-edit-case-ledger.json::TE-07",
+                "text-edit-case-ledger.json::TE-08",
+                "text-edit-case-ledger.json::TE-09"
+              ],
+              "historicalCandidateMapUnchanged": true
+            }
+          ]
         },
         {
           "id": "ST-05",
@@ -42611,13 +42688,13 @@
           "reason": "12historicallymappedentries,no currentcaseassociation; sheets/Excel/publishingneedfulljobcontext."
         }
       ],
-      "currentExecutionCount": 696,
-      "newNativeExecutionsThisReconciliation": 7
+      "currentExecutionCount": 705,
+      "newNativeExecutionsThisReconciliation": 9
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 27,
+    "usedPercent": 31,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -42633,7 +42710,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 225,
+    "newNativeChecks": 241,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -42642,14 +42719,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1494,
-    "retainedDeclaredFiles": 1501,
-    "directScreens": 1293,
-    "directMetadata": 201,
+    "directCaseLinkedFiles": 1515,
+    "retainedDeclaredFiles": 1522,
+    "directScreens": 1307,
+    "directMetadata": 208,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All696cases/61ledgers direct files freshly rehashed;7older unlinked retainedfiles separate. Whole50%unknown."
+    "scope": "All705cases/62ledgers directfiles freshlyrehashed;7olderunlinked retained separate. Whole50%unknown."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -43328,6 +43405,175 @@
             "early-structural-case-ledger.json::ES-22",
             "early-structural-case-ledger.json::ES-37",
             "early-structural-case-ledger.json::ES-41"
+          ],
+          "wholeRequirementAccepted": false
+        }
+      ]
+    },
+    "ST-04": {
+      "source": "04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md",
+      "sourceSha256": "A69631F2B9A9D48AFE79CBEBE5B819719AAFC212F9AE1D605643245850C0D369",
+      "scope": "All15 approved decisions reviewed against16 scoped native cases/2ledgers; text placement and conversion have partial evidence. Historical not-started headers are not live availability. Whole ST04 acceptance unproved.",
+      "nativeCaseCount": 16,
+      "nativeLedgerCount": 2,
+      "wholeWorkflowAccepted": false,
+      "requirements": [
+        {
+          "id": "ST4-1",
+          "required": "ST-04 owns structural text, short tags and controlled text conversion. Footing rectangles and strip geometry belong to ST-06; long standard notes belong to ST-07/AS-01.",
+          "assessment": "PARTIAL",
+          "reason": "Text/tag and conversion routes driven; footing/long-note responsibility boundaries not inspected.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-06",
+            "text-edit-case-ledger.json::TE-07"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-2",
+          "required": "Add one canonical **CE Text** workspace in the AutoCAD Plugin standards browser. Keep existing command aliases permanently for staff muscle memory.",
+          "assessment": "UNTESTED",
+          "reason": "Three familiar placement aliases run; canonical CE Text workspace not inspected.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-3",
+          "required": "Every alias becomes a preset containing its role, prefix, layer, plotted height, justification, preferred side and rotation behaviour. All presets use one placement backbone.",
+          "assessment": "PARTIAL",
+          "reason": "25L/25R/EBT presets have native results; common backbone and complete alias-to-preset mapping remain unverified.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-06"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-4",
+          "required": "Create native TEXT/MTEXT using individually **Approved** CE styles and assets. Do not insert and explode anonymous palette blocks to create ordinary text. Candidate assets remain Preview-only.",
+          "assessment": "PARTIAL",
+          "reason": "Native TEXT outputs observed. Individually Approved style/asset provenance and any internal temporary block use remain unverified.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-06"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-5",
+          "required": "Normal workflow: **select reference if applicable → enter text → live preview → Flip/Rotate → click**. The accepted preview and final result must be identical.",
+          "assessment": "FAIL",
+          "reason": "Observed flow asks side/rotation after insertion; complete live preview before final click unproved, applicableF rejects. BUG644.",
+          "caseKeys": [
+            "text-placement-case-ledger.json::TX-03"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-6",
+          "required": "Prefix commands show the complete result before placement. Example: `EBT` + `1` previews `EB1`. Typing `EB1` must not create `EBEB1`. CE never invents the structural designation.",
+          "assessment": "PARTIAL",
+          "reason": "Entered1 and enteredEB1 both outputEB1; complete prefixed pre-placement preview unproved.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-placement-case-ledger.json::TX-05"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-7",
+          "required": "`L/R/T/B` aliases select only the starting position. During preview, **F = flip side**, **R = change reference/alignment**, and **Tab = ranked alternative** where available.",
+          "assessment": "FAIL",
+          "reason": "PhysicalF/Return rejected as Invalid point in25L insertion; R/Tab/reference variants remain.",
+          "caseKeys": [
+            "text-placement-case-ledger.json::TX-03"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-8",
+          "required": "Heights are based on plotted paper size and drawing/viewport scale—not a blindly hard-coded model-space height. Existing 18/25/35/50/70 conventions begin as Baseline Candidates until catalogued as Approved.",
+          "assessment": "PARTIAL",
+          "reason": "250mm native text at controlled1:100 observed; other scales, viewport contexts and Approved asset conventions unproved.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-06"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-9",
+          "required": "Generic notes remain independent. Beam, support and foundation labels store an explicit relationship to their parent; proximity is never sufficient proof of ownership.",
+          "assessment": "UNPROVEN",
+          "reason": "Generic note and free tag routes driven without explicit parent fixture; parent dictionaries and ownership not inspected.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-10",
+          "required": "MOVE preserves a deliberate position. COPY gives owned labels fresh identity with the copied parent. EDIT preserves location and ownership. ERASE label does not erase its parent. TEXT↔MTEXT preserves links.",
+          "assessment": "UNTESTED",
+          "reason": "Actual nativeEDIT/MOVE/COPY and text-to-MTEXT ownership lifecycle not driven for these specimens.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-11",
+          "required": "`R2LTXT` operates only on recognised eligible text. Before Apply, show the selected count and preview. Preserve content, rotation, position and ownership; complete as one Undo.",
+          "assessment": "FAIL",
+          "reason": "Centred tag skipped; eligible25R converts immediately without preview/Apply and visibly shifts. OneUndo/delayedRedo pass narrowly. BUG645.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-05",
+            "text-edit-case-ledger.json::TE-07",
+            "text-edit-case-ledger.json::TE-08"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-12",
+          "required": "Last-used text may appear as a visible default within the current drawing/session. Engineering marks and values must not silently carry into another project.",
+          "assessment": "PARTIAL",
+          "reason": "Visible last-used defaults observed after reopening a renamed copy of same drawing lineage; unrelated-project isolation not tested.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-04"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-13",
+          "required": "The future Pattern Atlas can recommend clearer positions and flag plotted-sheet clashes. A manual position wins over soft preferences; genuine clashes remain visible QA findings.",
+          "assessment": "UNTESTED",
+          "reason": "Pattern Atlas recommendations and plotted clash QA not driven.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-14",
+          "required": "Esc at any prompt leaves nothing behind. Restore the previous layer, style and snaps; no forced save; no hidden placement state; one Undo removes the complete result.",
+          "assessment": "PARTIAL",
+          "reason": "First and lateEscape preserve captures; note/conversion oneUndo/delayedRedo,12controls restored/no forcedDWGsave. Every alias/prompt/hidden-state guard unproved.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-04",
+            "text-edit-case-ledger.json::TE-08",
+            "text-edit-case-ledger.json::TE-09",
+            "text-placement-case-ledger.json::TX-01",
+            "text-placement-case-ledger.json::TX-04"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST4-15",
+          "required": "Test the shared behaviours rather than making Timothy test every alias. Automated checks verify every alias-to-preset mapping; Timothy performs about five representative AutoCAD placements in under ten minutes.",
+          "assessment": "UNPROVEN",
+          "reason": "Three placement aliases and bounded conversion driven; complete shared alias-to-preset mapping and broad context matrix unverified.",
+          "caseKeys": [
+            "text-edit-case-ledger.json::TE-03",
+            "text-edit-case-ledger.json::TE-06",
+            "text-edit-case-ledger.json::TE-07"
           ],
           "wholeRequirementAccepted": false
         }

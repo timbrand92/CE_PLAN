@@ -1,5 +1,15 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+## Latest text persistence and conversion — 15 October 2026
+
+1. **Current total:** 705 scoped checks across 62 batches: 551 PASS, 126 FAIL, 7 BLOCKED, 21 UNPROVEN. Nine new checks: seven passes, one failure, one unproven. Overall 50% tested remains unknown. Earlier totals below are dated snapshots.
+2. **New passes:** the saved note and EB1 retained their captured text properties through reopening. EBT with entered1 created EB1, 250mm high at1:100. Escape at the final25L side prompt preserved all55 captured records and12 monitored settings. R2LTXT skipped a centred tag.
+3. **New failure BUG-645:** converting an eligible25R RIGHT NOTE changed the drawing immediately without the approved preview/Apply step. The lettering visibly shifted. The words,45degree angle, height and style remained. OneUndo and Redo after45.128seconds worked; the other55 captured records stayed unchanged.
+4. **Persistence limitation:** whole-drawing equality remains unproven. An unrelated block name changed fromU13 toU12; its definition was not compared. The other53 records matched. No plugin fault inferred. The converted specimen was saved, but has not been reopened yet.
+5. **Plan alignment:** all15 approved ST-04 decisions are now reviewed against16 checks in two batches. The whole workflow remains unaccepted. The historical command map omitted R2LTXT; its current link to ST-04 is now supported by the exact approved card.
+6. **Safety and evidence:** original drawing unchanged; three settings files unchanged;12 monitored drawing settings restored. Local failure specimen saved and closed, test-station lease released. All1,515 directly linked evidence files were rechecked without faults. Seven older unlinked files remain separate.
+7. **Remaining:** explicit parent-label editing, MOVE/COPY relationships, conversion cancellation and mixed/protected selections, shared alias mappings, other units/scales/UCS, paper space, plots and older AutoCAD. Weekly usage:31% used,69% remaining account-wide. No Tim action required.
+
 ## Latest native text placement — 15 October 2026
 
 1. **Current total:**696 scoped checks across61batches:544PASS,125FAIL,7BLOCKED,20UNPROVEN. Seven new checks, six passes and one failure. Overall50%tested remains unknown; failed executed checks still count as testing performed. Earlier totals below are dated snapshots.

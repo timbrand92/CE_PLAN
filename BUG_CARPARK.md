@@ -8534,3 +8534,24 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Evidence / owner:** local text-placement-case-ledger.json TX-03, screens1401–1403/1406 and native post records. InstalledStructural1.0.116+f180b349a88617070a8517b563b2df7b5854131e, SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Approved04_REFERENCE/CARDS/ST-04_TEXT_PLACEMENT.md. Claude owns command behaviour; concrete repair/retest recorded, no code edit/deploy/message sent.
 
 **Status:** OPEN —15Oct2026; observed installed route misses approved interaction.
+
+
+## BUG-645
+
+**Command / Area:** R2LTXT controlled text conversion, Structural1.0.116 / AutoCAD2027. **Priority: MEDIUM.**
+
+**What Codex did:** on an owned millimetre/model-space/World-UCS copy at1:100, typed25R, entered RIGHT NOTE, clicked insertion and acceptedTop. TypedR2LTXT, selected that note on the canvas, saw1found and pressedEnter to finish selection. Separately selected centredEB1 as an ineligible control.
+
+**Expected:** approved ST4-11 requires recognised eligible text, selected count and preview before Apply. Preserve content, rotation, position and ownership, with oneUndo. A drafter must see the proposed change before the drawing changes.
+
+**What happened:** the eligible note converted immediately after selection completion, without a separate preview/Apply step. The report said scanned1,converted1,skipped0,paddingAdjusted1. The lettering visibly shifted down/left. NativeTEXT8E9 retained45degree rotation,250mm height,Standard style and the words RIGHT NOTE; padding moved from leading to trailing and justification changed0to2. Group10 changed(4956.4,4184.02)to(3197.05,2424.67); alignment11 remained(4868.01,4272.41). Preserving an alignment anchor did not preserve the visible lettering position. Other55 captured ordinary records and12 monitored settings stayed unchanged. No semantic word loss or ownership defect inferred.
+
+**Positive controls:** centredEB1 reported converted0/skipped1. All55 prior records were retained in the next capture after25R added oneTEXT. OneUndoR2LTXT visually restored the note; Redo after45.128seconds with no intervening drawing command replayed conversion. All56 final records equalled the post-conversion capture after settings restoration. No fullUndo snapshot or converted-state disk-reopen proof.
+
+**Test that catches it:** before Apply, show eligible/unsupported counts and the proposed result. Cancel must preserve the complete captured state. Apply must retain visible position, words,angle,height,style and explicit ownership, while unselected content stays unchanged. Cover leading/trailing padding, angled/horizontal notes, mixed/locked/Xref selections, oneUndo/delayedRedo and save/reopen.
+
+**Steps to confirm:** create a fresh25R RIGHT NOTE at1:100 and finishTop. RunR2LTXT,select it,Enter. A preview with count must appear before any change. Cancel must preserve the note. Apply must retain visible placement with oneUndo. LocalCODEX_TEXT_EDIT_20261015.dwg retains the already-converted failure; use a fresh source copy or new note to replay.
+
+**Evidence / owner:** localtext-edit-case-ledger.json TE-07, screens1416–1420 and native before/after records. InstalledStructural1.0.116+f180b349a88617070a8517b563b2df7b5854131e, SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Exact approved ST-04 card re-read. Claude owns command behaviour; no code change, deployment or message sent.
+
+**Status:** OPEN —15Oct2026; approved conversion review/position gap.
