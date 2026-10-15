@@ -8361,3 +8361,30 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** part of A disappears against the solid white right half of each bubble; left strokes remain visible and S02 below is readable. Native records still contain complete A twice. This is visual readability, not lost text. Colour/draw-order contributions and PDF/physical plotted appearance remain unproved.
 5. **Evidence/guard:** SM-04;1239/1243/1244 and full output/reopen records. Check both dark/light actual drawing and exported plot with single/multi-character identifiers and all directions. Claude drawing-output owner; no competing window-only repair or install.
 6. **Fix confirmation:** complete identifier and sheet must remain legible at approved paper size with both half-fill directions, through MOVE/COPY/scale/edit, one UndoRedo and reopening. Confirm intended bubble text positioning against approved drafting presentation before geometry changes.
+
+
+## BUG-633 — DSET refuses an ordinary native linear dimension
+
+1. **Status/severity:** OPEN / MEDIUM. Observed15October2026, actual AutoCAD2027/installed Structural1.0.116+f180; approved ST3-12. Existing workflow gap; no recent regression claimed.
+2. **Steps and observed:** On a metric model-space copy in AutoCAD2027, installed Structural1.0.116+f180, type DSET. Click the ordinary native 5000mm linear dimension at its line and text. Both clicks return Please select a dimension. DSET1 accepts the same line click as one dimension.
+3. **Expected and limits:** The recognised native dimension should be selectable for controlled review. Exact-type selection filtering is a source suspect, not a proved root cause.
+4. **Evidence/guard:** dimrepair-case-ledger.json DR-01; screenshots1247–1251/1253 and dimrepair-baseline-native.txt.
+5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. After repair, select native aligned/rotated dimensions through both line and text, including preselection; refuse other objects safely. Verify review/Cancel/Apply, protections, one UndoRedo and reopen.
+
+
+## BUG-634 — DSET1 converts an unrecognised dimension style without controlled review
+
+1. **Status/severity:** OPEN / MEDIUM. Observed15October2026, actual AutoCAD2027/installed Structural1.0.116+f180; approved ST3-12. Existing workflow gap; no recent regression claimed.
+2. **Steps and observed:** Select the native dimension using deliberately unrecognised CODEX_UNRECOGNISED style with DSET1. Enter completes selection and immediately reports Converted1, changing its measurement factor from1 to0.2. No existing/proposed scope preview or explicit Apply is offered.
+3. **Expected and limits:** Approved ST3-12 requires unrecognised styles unchanged and reported, with controlled selection, proposed scale/style, Preview and Apply.
+4. **Evidence/guard:** dimrepair-case-ledger.json DR-02; screenshots1252–1254, dimrepair-baseline-native.txt/dset1-result-native.txt.
+5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. An unrecognised style must remain unchanged and be reported. On supported styles, review only selected scope and apply explicitly. Check leaders/mixed objects/protection, every Escape stage, one UndoRedo and no forced save.
+
+
+## BUG-635 — DSET1 reports conversion but displayed measurement stays unchanged after reopening
+
+1. **Status/severity:** OPEN / HIGH. Observed15October2026, actual AutoCAD2027/installed Structural1.0.116+f180; approved ST3-12. Existing workflow gap; no recent regression claimed.
+2. **Steps and observed:** After DSET1 converts the selected5000mm dimension, its stored factor is0.2 but visible measurement remains5000. Explicit REGEN does not change it. Native anonymous dimension-block text also reads5000. Actual QSAVE, normal close and reopen retain the mismatch.
+3. **Expected and limits:** If factor0.2 is intentionally approved, a5000mm measurement should display1000. The unrecognised-style conversion itself is separately unapproved under634. No physical/PDF plot was tested; root cause is unproved.
+4. **Evidence/guard:** dimrepair-case-ledger.json DR-03/05; screenshots1254/1255/1257, dset1-result-native.txt/dset1-graphics-native.txt/dimrepair-reopen-native.txt.
+5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. With a supported style and explicitly approved change, confirm stored factor, visible text and rendered plot agree immediately, after regeneration, one UndoRedo and actual reopen. Include text overrides and other native dimension types without silently changing unrecognised styles.

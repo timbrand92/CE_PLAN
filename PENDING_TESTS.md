@@ -1740,3 +1740,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **BUG631:** normal MOVE from line/bubble/text must carry whole recognised section; COPY fresh identity and duplicate-reference confirmation, safe edit/erase, one UndoRedo and reopen. Current cut-line click selects1and strands remainder; UndoMOVE restores exact11records.
 3. **BUG632:** complete identifier must stay readable against half-fill at both ends, in dark/light drawing and plot/PDF, for all directions/sizes/labels. Native A/S02 data and persistence pass narrowly; visual identifier currently partly hidden.
 4. **Evidence:** sectionmarks-case-ledger7checks4PASS3FAIL;16screens1231–1246/sixmetadata. Source/settings preserved, owned window empty/lease released; no repair installed. Original placement UndoRedo, protections/units/scales/UCS/paper/performance/older release remain.
+
+
+## Dimension repair native failures — 15 October 2026
+
+1. **BUG633:** DSET must select ordinary native dimensions through line/text and preselection. DSET1 is the positive control for the actual specimen. Do not accept arbitrary non-dimension objects.
+2. **BUG634:** unrecognised styles remain unchanged/reported; supported selections show existing/proposed scope/style before Preview/Apply. Check every cancellation, mixed leaders/objects, protection and one UndoRedo.
+3. **BUG635:** approved factor must agree with visible native measurement immediately, after REGEN/reopen and rendered plot. Current5000mm specimen stores0.2 yet displays5000. Saved wrong-state retention is not acceptance.
+4. **Recorded/remainder:** six checks3PASS3FAIL,13screens1247–1259/sixmetadata. DSET1 no forced save in this sample; DUP remains unexecuted and needs its own scope/no-forced-save test. Ninecontrols/source/preferences preserved, owned drawing closed/lease released. No original UndoRedo, plot, supported-style or whole-family acceptance.

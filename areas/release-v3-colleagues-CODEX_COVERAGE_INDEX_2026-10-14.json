@@ -9,45 +9,45 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "26ED15E7F338584B6D9D0FC730346C7C4EC6F7E1B245F82A685CFA17B8296F69",
+    "currentBugsSha256": "D8A4199097520BAA590ACBD62B00D5F4D024510262722B81A0F4FF1E854C925E",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "218FFC2A236D5E346A48F27EF05393E58942DAB64980EEE1420D7134F72A9332"
+    "currentCaseIndexSha256": "BAA653C4EF65D7953E0CA2358944AE752F2834E301FF8035F9CC3508E726D571"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 582,
+    "bugHeadings": 585,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 47,
-    "narrowCases": 596,
+    "caseLedgers": 48,
+    "narrowCases": 602,
     "narrowVerdicts": {
-      "PASS": 466,
-      "FAIL": 107,
+      "PASS": 469,
+      "FAIL": 110,
       "BLOCKED": 6,
       "UNPROVEN": 17
     },
-    "uniqueEvidenceFiles": 1239,
+    "uniqueEvidenceFiles": 1258,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1131,
-    "uniqueMetadataFiles": 108,
+    "uniqueScreenshotFiles": 1144,
+    "uniqueMetadataFiles": 114,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 74,
-    "newNativeExecutionsInLatestReconciliation": 7,
+    "caseLinkedBugIds": 77,
+    "newNativeExecutionsInLatestReconciliation": 6,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1246
+    "retainedDeclaredEvidenceFiles": 1265
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "596 bounded native checks across47ledgers are not complete V3 workflows. Full built/installed eligibility and acceptance mapping remain incomplete;50% UNKNOWN.",
+    "reason": "602 bounded native checks across48ledgers are not complete V3 workflows. Full built/installed eligibility and acceptance mapping remain incomplete;50% UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -20229,6 +20229,51 @@
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
       "currentStatusSourceLine": 8358
+    },
+    {
+      "id": "BUG-633",
+      "headingLine": 8366,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "dimrepair-case-ledger.json::DR-01"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8368
+    },
+    {
+      "id": "BUG-634",
+      "headingLine": 8375,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "dimrepair-case-ledger.json::DR-02"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8377
+    },
+    {
+      "id": "BUG-635",
+      "headingLine": 8384,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "dimrepair-case-ledger.json::DR-03"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8386
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -27810,9 +27855,13 @@
           "label": "Set Dimension Measurement Factor",
           "group": "Annotation",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "EXERCISED_WITH_FAILURES",
+          "nativeTriggerEvidenceCaseKeys": [
+            "dimrepair-case-ledger.json::DR-01"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "dimrepair-case-ledger.json::DR-01"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -27842,9 +27891,17 @@
           "label": "Convert Dimension Measurements to One Fifth",
           "group": "Annotation",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "EXERCISED_WITH_FAILURES",
+          "nativeTriggerEvidenceCaseKeys": [
+            "dimrepair-case-ledger.json::DR-02"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "dimrepair-case-ledger.json::DR-02",
+            "dimrepair-case-ledger.json::DR-03",
+            "dimrepair-case-ledger.json::DR-04",
+            "dimrepair-case-ledger.json::DR-05",
+            "dimrepair-case-ledger.json::DR-06"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -39287,11 +39344,11 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 88,
-      "associatedCaseCount": 596,
+      "associatedEntryCount": 90,
+      "associatedCaseCount": 602,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 47
+      "currentLedgerCount": 48
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -39306,9 +39363,9 @@
       "historicalCandidateMatches": 330,
       "noHistoricalCandidateMatches": 193,
       "ambiguousHistoricalCardMatches": 0,
-      "entriesWithCurrentCaseAssociation": 88,
-      "entriesWithoutCurrentCaseAssociation": 435,
-      "visibleEntriesWithoutCurrentCaseAssociation": 306,
+      "entriesWithCurrentCaseAssociation": 90,
+      "entriesWithoutCurrentCaseAssociation": 433,
+      "visibleEntriesWithoutCurrentCaseAssociation": 304,
       "hiddenEntriesWithoutCurrentCaseAssociation": 129,
       "moduleBreakdown": [
         {
@@ -39320,8 +39377,8 @@
         {
           "bundle": "CE_STRUC_SUITE.bundle",
           "total": 375,
-          "caseAssociated": 70,
-          "noCaseAssociation": 305
+          "caseAssociated": 72,
+          "noCaseAssociation": 303
         },
         {
           "bundle": "CE_SUITE_MANAGER.bundle",
@@ -39336,10 +39393,10 @@
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-632",
-    "count": 63,
-    "explicitOpen": 63,
-    "method": "All63new records explicitlyOPEN.620source-only;623context-dependent.630section preview,631compoundMOVE,632identifierreadability now native-reproduced; no bug closed."
+    "ids": "BUG-570 through BUG-635",
+    "count": 66,
+    "explicitOpen": 66,
+    "method": "All66new records explicitlyOPEN.620source-only;623context-dependent.633selection,634controlled-review,635stale dimension graphics native-reproduced. No bug closed."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -39376,7 +39433,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 26,
+    "usedPercent": 28,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792625799,
     "reportedResetMelbourne": "22/10/2026, 10:36:39 am",
@@ -39392,7 +39449,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 132,
+    "newNativeChecks": 138,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -39401,14 +39458,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1239,
-    "retainedDeclaredFiles": 1246,
-    "directScreens": 1131,
-    "directMetadata": 108,
+    "directCaseLinkedFiles": 1258,
+    "retainedDeclaredFiles": 1265,
+    "directScreens": 1144,
+    "directMetadata": 114,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All596cases47ledgers direct evidence rehashed;7prior unlinked setup/cleanup images remain excluded. Whole coverage UNKNOWN."
+    "scope": "All602cases48ledgers direct evidence rehashed;7prior unlinkedsetup/cleanupfilesremainexcluded. WholecoverageUNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -39540,8 +39597,8 @@
       "source": "04_REFERENCE/CARDS/ST-03_ANNOTATION_DIMENSIONS.md",
       "sourceSha256": "ABF506736239C1D3AD777EC398FB05C2CA230B64EDAB9A83661727D48CC43835",
       "scope": "All15 approved decisions reviewed against current evidence. Assessment is not extra execution or whole-card acceptance. Current-index absence does not prove no other chat/history ever ran it.",
-      "nativeCaseCount": 73,
-      "nativeLedgerCount": 8,
+      "nativeCaseCount": 79,
+      "nativeLedgerCount": 9,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -39665,9 +39722,16 @@
         },
         {
           "id": "ST3-12",
-          "assessment": "UNTESTED",
-          "reason": "Controlled dimension repair selection/scope/preview/Apply, unknown-style preservation and no forced save remain untested here.",
-          "caseKeys": []
+          "assessment": "FAIL",
+          "reason": "DSET refuses ordinary native dimension(633);DSET1 converts unknownstyle without controlled scope/Preview/Apply(634), storedfactor/display mismatch persists afterREGEN/reopen(635). No forced save in DSET1 sample;DUP and full recovery/protection/plot matrix untested.",
+          "caseKeys": [
+            "dimrepair-case-ledger.json::DR-01",
+            "dimrepair-case-ledger.json::DR-02",
+            "dimrepair-case-ledger.json::DR-03",
+            "dimrepair-case-ledger.json::DR-04",
+            "dimrepair-case-ledger.json::DR-05",
+            "dimrepair-case-ledger.json::DR-06"
+          ]
         },
         {
           "id": "ST3-13",
@@ -39695,7 +39759,7 @@
         {
           "id": "ST3-15",
           "assessment": "PARTIAL",
-          "reason": "73 bounded native checks across eight ledgers in AutoCAD2027; section and breakline failures now reproduced. Fullmatrix, older release, performance and plots remain incomplete.",
+          "reason": "79 bounded native checks across nine ledgers in AutoCAD2027. Full selection/scale/space/UCS/protection/edit/recovery/performance/plot and older-release matrix remains incomplete.",
           "caseKeys": []
         }
       ]
