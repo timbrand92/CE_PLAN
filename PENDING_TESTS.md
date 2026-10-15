@@ -1732,3 +1732,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **BUG628:** compare BL20/50/100 and another supported scale; native zigzag must have consistent paper dimensions.20/100 output passes narrowly;50 currently40% size. Verify actual plot/PDF after repair.
 2. **BUG629:** BL from Layout1 paper space must remain on Layout1; test actual clicked points, model/active viewport, scale/UCS/protection and saved readback. Current native output incorrectly belongs to Model.
 3. **Evidence/remainder:** seven checks5PASS2FAIL,13screens1218–1230/ninemetadata. First/second Escape and full native-record persistence pass; full cursor preview, rotated UCS, native editing, isolated UndoRedo/protections/older runtime remain. No repair installed.
+
+
+## Section mark native failures — 15 October 2026
+
+1. **BUG630:** identifier/sheet first, complete following line/bubbles/fill/labels preview and final placement confirmation. Current SM asks geometry first and draws immediately after sheet entry. Check later Escape and all directions/F.
+2. **BUG631:** normal MOVE from line/bubble/text must carry whole recognised section; COPY fresh identity and duplicate-reference confirmation, safe edit/erase, one UndoRedo and reopen. Current cut-line click selects1and strands remainder; UndoMOVE restores exact11records.
+3. **BUG632:** complete identifier must stay readable against half-fill at both ends, in dark/light drawing and plot/PDF, for all directions/sizes/labels. Native A/S02 data and persistence pass narrowly; visual identifier currently partly hidden.
+4. **Evidence:** sectionmarks-case-ledger7checks4PASS3FAIL;16screens1231–1246/sixmetadata. Source/settings preserved, owned window empty/lease released; no repair installed. Original placement UndoRedo, protections/units/scales/UCS/paper/performance/older release remain.

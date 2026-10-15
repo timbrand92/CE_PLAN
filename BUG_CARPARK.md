@@ -8333,3 +8333,31 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** success message, but new FB8 is LWPOLYLINE with DXF410 Model/67=0 and the model-space owner. Active paper context is captured immediately before command in the same native evaluation. Wrong owner persists after save/close/reopen.
 5. **Evidence/guard:** breakline-case-ledger.json BL-06;1225/1226; breakline-paper-native.txt, full pre-save/reopen records. Source explicitly appends to ModelSpace. Claude command/writer owner; no source edit/dispatch/install.
 6. **Fix confirmation:** actual clicked placement in paper space must belong to that layout; repeat model space and active viewport, supported scales/UCS, Escape, native edits, one Undo/Redo and reopen. Do not redirect foreign/protected content or bypass normal protections.
+
+
+## BUG-630 — Section mark bypasses the approved complete preview and placement review
+
+1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/installed Structural1.0.116+f180,15October2026. Approved ST3-9; existing V3 implementation gap, no recent regression claimed.
+2. **Steps:** owned model-space metric copy, DIMSCALE100; type SM, Enter Pick, click start400,650/end1200,650; accept direction; enter A and S02.
+3. **Expected:** identifier/sheet confirmed first; complete cut line, both bubbles, hatch/view side and labels visible before final placement.
+4. **Observed:** asks points and direction before identifier/sheet. Direction screen is blank of complete mark; after sheet Enter output is written immediately, without final preview/Apply/click. No F-key rejection test claimed.
+5. **Evidence/guard:** sectionmarks-case-ledger.json SM-02;1234–1239. Source SectionMarkCommands follows that order and directly creates entities after sheet input. Claude command/preview owner; no edit/dispatch/install.
+6. **Fix confirmation:** drive approved full sequence with readable complete preview, both directions, Enter/Escape at every stage, final confirmation, one UndoRedo and reopen; scales/UCS/paper/protection/older runtime. Preserve working output data and simple placement.
+
+## BUG-631 — Moving the section cut line leaves both bubbles and references behind
+
+1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-10 compound editing.
+2. **Steps:** place section A/S02 with SM; normal MOVE; click cut line1000,650, Enter selection, base1000,650→1000,550. PICKSTYLE1 captured; native reports1found.
+3. **Expected:** cut line, both bubbles/hatches/identifiers/sheet refs move together as one recognised section.
+4. **Observed:** only cut line moves; both end markers and A/S02 labels remain. Native U MOVE restores original arrangement; full11component record comparison returns T. Trial restored before save, no saved split specimen claim.
+5. **Evidence/guard:** SM-05/06;1240–1243 plus section-output-native.txt/section-before-save-native.txt. Require equal displacement across owned components after ordinary selection, with unrelated nearby objects unchanged. Claude compound/record owner; no repair installed.
+6. **Fix confirmation:** MOVE from line/bubble/label, COPY fresh identity with duplicate-reference confirmation, edit, safe erase, UndoRedo/reopen and protection/UCS/space/scale matrix. Do not solve with broad nearby-object selection.
+
+## BUG-632 — Section identifiers are partly hidden against the filled bubble half
+
+1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026. Dark model-space owned metric sample at1:100; both bubbles have filled right half.
+2. **Steps:** SM, default Left view, A identifier and S02 sheet; inspect both bubbles immediately and after save/close/reopen.
+3. **Expected:** complete identifier clearly readable beside its view-direction graphics, in preview and output.
+4. **Observed:** part of A disappears against the solid white right half of each bubble; left strokes remain visible and S02 below is readable. Native records still contain complete A twice. This is visual readability, not lost text. Colour/draw-order contributions and PDF/physical plotted appearance remain unproved.
+5. **Evidence/guard:** SM-04;1239/1243/1244 and full output/reopen records. Check both dark/light actual drawing and exported plot with single/multi-character identifiers and all directions. Claude drawing-output owner; no competing window-only repair or install.
+6. **Fix confirmation:** complete identifier and sheet must remain legible at approved paper size with both half-fill directions, through MOVE/COPY/scale/edit, one UndoRedo and reopening. Confirm intended bubble text positioning against approved drafting presentation before geometry changes.
