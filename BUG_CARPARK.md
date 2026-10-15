@@ -8388,3 +8388,22 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 3. **Expected and limits:** If factor0.2 is intentionally approved, a5000mm measurement should display1000. The unrecognised-style conversion itself is separately unapproved under634. No physical/PDF plot was tested; root cause is unproved.
 4. **Evidence/guard:** dimrepair-case-ledger.json DR-03/05; screenshots1254/1255/1257, dset1-result-native.txt/dset1-graphics-native.txt/dimrepair-reopen-native.txt.
 5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. With a supported style and explicitly approved change, confirm stored factor, visible text and rendered plot agree immediately, after regeneration, one UndoRedo and actual reopen. Include text overrides and other native dimension types without silently changing unrecognised styles.
+
+
+## BUG-636 — DUP changes unselected dimensions across the drawing without controlled review
+
+1. **Status/severity:** OPEN / HIGH. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-12 forbids accidental whole-drawing conversion and requires unknown styles unchanged/reported.
+2. **Steps/context:** owned synthetic metric model-space copy; native baseline captured, DIMSCALE staged20. Type DUP and Enter without selecting objects. AtDIMSCALE1 it safely refuses; that positive control is separate.
+3. **Expected:** select intended dimensions/leaders, inspect existing/proposed scale/style and scope, Preview then explicitApply; unknown styles unchanged/reported.
+4. **Observed:** immediately reports setting0.2 on8dimensions and changing one scale20 dimension. Native readback confirms all8dimensionrecords changed across Standard/TIM LEADER/CODEX_UNRECOGNISED; unrecognised1098 gains100scaleoverride. DIMSCALE20→100/LTSCALE1→1000. No selected scope/Preview/Apply; no unknown-style report. Two unrelated note changes separately637.
+5. **Evidence/guard:** dimcancel-case-ledger.json DC-04;1269/1270/1275/1276;dup-before-native.txt/dup-after-native.txt. DUP did not forceSave in this sample withSAVETIME0; DWG hashunchanged. Immediate U acknowledged; after delayedRedo/secondU complete native object/control baseline equalityT. Full postRedo record equality unproven.
+6. **Repair/confirmation:** Claude command/native writer owner; no competing production edit/install. Review only explicitly selected scope, preserve/report unknown styles and foreign/protected objects, cancel unchanged, Apply asoneUndo; verify saved-file hash until drafterSave, actual plot and reopening across model/paper/scales/UCS/older releases.
+
+## BUG-637 — Running DUP also rewrites unrelated pit-schedule remarks
+
+1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027, Civil3.0.49/Structural1.0.116 recorded installed sources,15October2026. Root cause and responsible cross-command mechanism unproved.
+2. **Steps/context:** same owned synthetic drawing, captured all ordinary entities/Xdata beforeDUP atDIMSCALE20; no schedule editor opened. TypeDUP, repeat afterUndo/Redo/Undo, capture full records.
+3. **Expected:** a dimension repair must leave unrelated schedule wording, paragraph structure and user remarks unchanged.
+4. **Observed:** alongside8dimensionrecords, two MTEXT records change.42E changes Class C Grated Lid - With Step Irons to Class C Grated Lid followed by paragraph With Step Irons.44E changes Class C Grated Lid - CODEX CHECK With Step Irons to Class C Grated Lid With Step Irons Codex Check. Text extent records also change. Do not infer leader changes from the10record total: the extra two areMTEXT.
+5. **Evidence/guard:** DC-09;1275/1276;dup-before-native.txt/dup-after-native.txt. Native secondU restores the full original entity/control snapshotT (dup-undo-native.txt); sourceDWG unchanged after normalcloseNo. Changed state was not saved/reopened or plotted. Existing schedule typing/layout bugs586/587 are separate triggers; sharedcause not established.
+6. **Repair/confirmation:** coordinated Civil schedule/Structural command owners. A dimension-only command must preserve exact unrelated notes and overrides through command/REGEN/UndoRedo/save-reopen. Exercise schedules with custom remarks, generated warnings, paragraphs/capitalisation and changed pit data; legitimate schedule updates remain an explicit separate case. No fix built/installed.

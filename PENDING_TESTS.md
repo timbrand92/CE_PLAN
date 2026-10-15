@@ -1748,3 +1748,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **BUG634:** unrecognised styles remain unchanged/reported; supported selections show existing/proposed scope/style before Preview/Apply. Check every cancellation, mixed leaders/objects, protection and one UndoRedo.
 3. **BUG635:** approved factor must agree with visible native measurement immediately, after REGEN/reopen and rendered plot. Current5000mm specimen stores0.2 yet displays5000. Saved wrong-state retention is not acceptance.
 4. **Recorded/remainder:** six checks3PASS3FAIL,13screens1247–1259/sixmetadata. DSET1 no forced save in this sample; DUP remains unexecuted and needs its own scope/no-forced-save test. Ninecontrols/source/preferences preserved, owned drawing closed/lease released. No original UndoRedo, plot, supported-style or whole-family acceptance.
+
+
+## DUP scope and unrelated-note failures — 15 October 2026
+
+1. **BUG636:** replace implicit whole-drawing conversion with approved selectedscope/existing-proposedPreview/Apply; preserve/report unknown styles. NativeDUPat20nowchanges8dimensionswithoutselection; at1refusesunchanged.
+2. **BUG637:** unrelated schedule remarks must remain exact during dimensioncommands/REGEN/recovery. TwoMTEXTnotes change wording/paragraph/capitalisation duringDUP; rootcauseunproved. Preserve legitimate explicit scheduleupdates separately.
+3. **Positive controls:** firstDSETEscape/selectedDSET1Escape exactrecords/controls unchanged;DUPno-forcedSave sample;secondUndo restoresallcapturedrecords/controls. DelayedRedoacknowledged,butfullpostRedorecordequalityunproven. OriginalDSET1recovery,protectedmixedobjects/spaceUCSunitsplots/olderruntime remain.
+4. **Evidence:** dimcancel-case-ledger9checks6PASS2FAIL1UNPROVEN;19screens1260–1278/ninemetadata. Originalcontrols/source/preferencespreserved;testclosedNo/exactleasereleased. HistoricalDUP-unexecuted statements are superseded by thisboundedbatch only. No codefix/install.
