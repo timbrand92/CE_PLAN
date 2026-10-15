@@ -8314,3 +8314,22 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** triangle moves alone while the tail and12.345 remain at their previous positions. This was an ordinary drawing click, not direct modification of its database record. Immediate U MOVE restores it; complete three-record equality against the pre-move capture is verified. Movement trial was undone before Save; no saved split specimen claimed.
 5. **Evidence/guard:** levels-case-ledger.json LV-07; screenshots1206–1209, ffl-output-native.txt and levels-before-save-native.txt. Require equal displacement for all owned mark components after normal MOVE and retained relationships after reopening.
 6. **Repair/confirmation:** Claude native compound/record owner; no production repair installed. On an owned copy, move by triangle, tail and label separately; each must carry the recognised whole set. Verify COPY fresh identity, edit, safe erase, Undo/Redo and reopen while unrelated nearby text stays untouched. Repeat remaining level-mark types/protection/units/scales/UCS/paper and older releases.
+
+
+## BUG-628 — Breakline zigzag does not scale consistently at 1:50
+
+1. **Status/severity:** OPEN / MEDIUM. Observed15October2026 in actual AutoCAD2027, installed Structural1.0.116+f180b349. Approved ST3-11 requires plotted-scale sizing beyond1:20/1:100. Existing V3 gap, no recent regression claimed.
+2. **Steps/context:** owned metric model-space copy; native BL between112000,113000 and118000,113000 at DIMSCALE20; repeat parallel at50 and100. Point arguments supplied through native AutoCAD AutoLISP command; actual output and complete entity records inspected.
+3. **Expected:** same plotted zigzag proportions at20/50/100. Reference20 and100 both give2mm half-height/2mm width/1.5mm extension on paper.
+4. **Observed:** FAA at20 has40mm half-height/40mm width/30mm extension; FAB at50 has the same40/40/30; FAC at100 has200/200/150. Therefore50 would plot0.8/0.8/0.6mm, only40% of the reference size. This is native geometry plus scale arithmetic; no physical/PDF plot inspected.
+5. **Evidence/guard:** breakline-case-ledger.json BL-05;1223/1224, breakline-scales-native.txt. All four output records survive actual save/close/reopen. Source BreaklineCommands.GetBreakDimensions special-cases100 and otherwise returns20 sizes. Claude command/geometry owner; no production edit or install.
+6. **Fix confirmation:** use copies; place BL at20/50/100 and another supported scale; compare measured and plotted zigzag dimensions, clean single-polyline output, preview, Escape, Undo/Redo, rotated UCS/current-space/protection and reopen. Preserve simple two-point workflow.
+
+## BUG-629 — Paper-space BL writes its breakline into model space
+
+1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026. Approved ST3-11 requires current model or paper space.
+2. **Steps/context:** on owned copy click Layout1; confirm PAPER and native CTAB Layout1/TILEMODE0/CVPORT1. DIMSCALE1; run native BL with50,50 and150,50 via AutoCAD AutoLISP command arguments.
+3. **Expected:** one breakline in active Layout1 paper space, visible on the sheet at the chosen points.
+4. **Observed:** success message, but new FB8 is LWPOLYLINE with DXF410 Model/67=0 and the model-space owner. Active paper context is captured immediately before command in the same native evaluation. Wrong owner persists after save/close/reopen.
+5. **Evidence/guard:** breakline-case-ledger.json BL-06;1225/1226; breakline-paper-native.txt, full pre-save/reopen records. Source explicitly appends to ModelSpace. Claude command/writer owner; no source edit/dispatch/install.
+6. **Fix confirmation:** actual clicked placement in paper space must belong to that layout; repeat model space and active viewport, supported scales/UCS, Escape, native edits, one Undo/Redo and reopen. Do not redirect foreign/protected content or bypass normal protections.

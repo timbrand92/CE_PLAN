@@ -9,45 +9,45 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "7E70A53DB83ADFCCEB339CDA19AF37D3291EE6CC852E66F3907D5E1755897107",
+    "currentBugsSha256": "2B699D7429A8EFE59054EA344A26C7443BB0D5C8767F7C368EDC7F010B9C5DEE",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "FA7F31D32BF43D9F10C6F32E7794D0E8222ED94D070E94269F866B3723F18CD6"
+    "currentCaseIndexSha256": "651FC097674778C54FAAA3F73CD89D41EA1E5659DF8410778F0D15475ED1E35D"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 577,
+    "bugHeadings": 579,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 45,
-    "narrowCases": 582,
+    "caseLedgers": 46,
+    "narrowCases": 589,
     "narrowVerdicts": {
-      "PASS": 457,
-      "FAIL": 102,
+      "PASS": 462,
+      "FAIL": 104,
       "BLOCKED": 6,
       "UNPROVEN": 17
     },
-    "uniqueEvidenceFiles": 1195,
+    "uniqueEvidenceFiles": 1217,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1102,
-    "uniqueMetadataFiles": 93,
+    "uniqueScreenshotFiles": 1115,
+    "uniqueMetadataFiles": 102,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 69,
-    "newNativeExecutionsInLatestReconciliation": 10,
+    "caseLinkedBugIds": 71,
+    "newNativeExecutionsInLatestReconciliation": 7,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1202
+    "retainedDeclaredEvidenceFiles": 1224
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "551 bounded native checks across 42 ledgers are not whole V3 features. Complete built/installed workflow eligibility and acceptance mapping remain incomplete; overall 50% is UNKNOWN.",
+    "reason": "589 bounded native checks across46ledgers are not complete V3 workflows. Complete built/installed eligibility and acceptance mapping remain incomplete;50% UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -20154,6 +20154,36 @@
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
       "currentStatusSourceLine": 8307
+    },
+    {
+      "id": "BUG-628",
+      "headingLine": 8319,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "breakline-case-ledger.json::BL-05"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8321
+    },
+    {
+      "id": "BUG-629",
+      "headingLine": 8328,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "breakline-case-ledger.json::BL-06"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8330
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -28090,9 +28120,20 @@
           "label": "Breakline",
           "group": "Annotation",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "EXERCISED_WITH_FAILURES",
+          "nativeTriggerEvidenceCaseKeys": [
+            "breakline-case-ledger.json::BL-01",
+            "breakline-case-ledger.json::BL-02"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "breakline-case-ledger.json::BL-01",
+            "breakline-case-ledger.json::BL-02",
+            "breakline-case-ledger.json::BL-03",
+            "breakline-case-ledger.json::BL-04",
+            "breakline-case-ledger.json::BL-05",
+            "breakline-case-ledger.json::BL-06",
+            "breakline-case-ledger.json::BL-07"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -28109,7 +28150,7 @@
                 "decision": "Mapped to approved card; implementation not started"
               }
             ],
-            "currentApprovedWorkflowMappingVerified": false
+            "currentApprovedWorkflowMappingVerified": true
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
@@ -39187,11 +39228,11 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 86,
-      "associatedCaseCount": 582,
+      "associatedEntryCount": 87,
+      "associatedCaseCount": 589,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 45
+      "currentLedgerCount": 46
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -39206,9 +39247,9 @@
       "historicalCandidateMatches": 330,
       "noHistoricalCandidateMatches": 193,
       "ambiguousHistoricalCardMatches": 0,
-      "entriesWithCurrentCaseAssociation": 86,
-      "entriesWithoutCurrentCaseAssociation": 437,
-      "visibleEntriesWithoutCurrentCaseAssociation": 308,
+      "entriesWithCurrentCaseAssociation": 87,
+      "entriesWithoutCurrentCaseAssociation": 436,
+      "visibleEntriesWithoutCurrentCaseAssociation": 307,
       "hiddenEntriesWithoutCurrentCaseAssociation": 129,
       "moduleBreakdown": [
         {
@@ -39220,8 +39261,8 @@
         {
           "bundle": "CE_STRUC_SUITE.bundle",
           "total": 375,
-          "caseAssociated": 68,
-          "noCaseAssociation": 307
+          "caseAssociated": 69,
+          "noCaseAssociation": 306
         },
         {
           "bundle": "CE_SUITE_MANAGER.bundle",
@@ -39236,10 +39277,10 @@
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-627",
-    "count": 58,
-    "explicitOpen": 58,
-    "method": "All58new records explicitlyOPEN.620sourceonly;623intermittentediting;625ordinarynoteoverwrite,626missingFFLreview,627splitFFLmovement native reproduced. No closure inferred."
+    "ids": "BUG-570 through BUG-629",
+    "count": 60,
+    "explicitOpen": 60,
+    "method": "All60new records explicitly OPEN;620source-only;623context-dependent.628scale and629paper-space now native-reproduced. No closure inferred."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -39276,7 +39317,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 23,
+    "usedPercent": 25,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792625799,
     "reportedResetMelbourne": "22/10/2026, 10:36:39 am",
@@ -39292,7 +39333,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 118,
+    "newNativeChecks": 125,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -39301,14 +39342,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1195,
-    "retainedDeclaredFiles": 1202,
-    "directScreens": 1102,
-    "directMetadata": 93,
+    "directCaseLinkedFiles": 1217,
+    "retainedDeclaredFiles": 1224,
+    "directScreens": 1115,
+    "directMetadata": 102,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All582cases45ledgers and1202retainedfiles rehashed;7unlinkedsetup/cleanupimages excluded from direct count."
+    "scope": "All589cases/46ledgers direct evidence rehashed;7 prior unlinked setup/cleanup files remain excluded. Full workflow percentage UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -39440,8 +39481,8 @@
       "source": "04_REFERENCE/CARDS/ST-03_ANNOTATION_DIMENSIONS.md",
       "sourceSha256": "ABF506736239C1D3AD777EC398FB05C2CA230B64EDAB9A83661727D48CC43835",
       "scope": "All15 approved decisions reviewed against current evidence. Assessment is not extra execution or whole-card acceptance. Current-index absence does not prove no other chat/history ever ran it.",
-      "nativeCaseCount": 59,
-      "nativeLedgerCount": 6,
+      "nativeCaseCount": 66,
+      "nativeLedgerCount": 7,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
@@ -39543,9 +39584,17 @@
         },
         {
           "id": "ST3-11",
-          "assessment": "UNTESTED",
-          "reason": "BL current-space polyline, plotted scale, rotated UCS, preview and cancellation remain untested here.",
-          "caseKeys": []
+          "assessment": "FAIL",
+          "reason": "Native BL first/second Escape preserves objects/controls;20/100 output clean and full records persist.50scale inconsistent(628),paper placement writesModel(629). Complete following preview, rotated UCS, native editing/protections/UndoRedo/plot/older release remain.",
+          "caseKeys": [
+            "breakline-case-ledger.json::BL-01",
+            "breakline-case-ledger.json::BL-02",
+            "breakline-case-ledger.json::BL-03",
+            "breakline-case-ledger.json::BL-04",
+            "breakline-case-ledger.json::BL-05",
+            "breakline-case-ledger.json::BL-06",
+            "breakline-case-ledger.json::BL-07"
+          ]
         },
         {
           "id": "ST3-12",
@@ -39578,7 +39627,7 @@
         {
           "id": "ST3-15",
           "assessment": "PARTIAL",
-          "reason": "59 bounded native checks across six ledgers on AutoCAD2027; full required matrix/older runtime and performance remain incomplete.",
+          "reason": "66 bounded native checks across seven ledgers in AutoCAD2027; scale/current-space matrix now has breakline failures628/629. Full required matrix/older runtime/performance remain incomplete.",
           "caseKeys": []
         }
       ]

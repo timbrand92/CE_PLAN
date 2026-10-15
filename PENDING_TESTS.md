@@ -1725,3 +1725,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Candidate:** draft[PR1262](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262),30e0cffe, isolated installed-sourcef180 base. Window status/contrast only;16modern guards pass and both standalone builds0errors0warnings. Candidate not installed; bugOPEN.
 2. **Native replay after coordinated install:** SBEAM→PFC→search200→200ZZZ. Genuine no-match must be readable, clear stale geometry and disable Place. Clear search; recover choices. Timber with blank dimensions must show timber guidance and no steel warning;90x240mm must show correct preview/enablePlace. Return to steel and repeat no-match/clear. Run Dark/Light, keyboard/Cancel; catalogue-load failures must stay visible.
 3. **Separate:** no wholeST08, placement/compound/member-edit/plot/protection/legacy native acceptance. Render guards exercised compiled windows outside AutoCAD, never accepted a placement or wrote live preferences. Native count582 unchanged. Revert candidate commits to undo; no deployment performed.
+
+
+## Native BL scale and current-space failures — 15 October 2026
+
+1. **BUG628:** compare BL20/50/100 and another supported scale; native zigzag must have consistent paper dimensions.20/100 output passes narrowly;50 currently40% size. Verify actual plot/PDF after repair.
+2. **BUG629:** BL from Layout1 paper space must remain on Layout1; test actual clicked points, model/active viewport, scale/UCS/protection and saved readback. Current native output incorrectly belongs to Model.
+3. **Evidence/remainder:** seven checks5PASS2FAIL,13screens1218–1230/ninemetadata. First/second Escape and full native-record persistence pass; full cursor preview, rotated UCS, native editing, isolated UndoRedo/protections/older runtime remain. No repair installed.

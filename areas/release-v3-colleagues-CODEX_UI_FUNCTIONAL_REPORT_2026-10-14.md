@@ -2,13 +2,13 @@
 
 ## Current position — 15 October 2026, Melbourne
 
-1. **Testing:** 582 recorded real AutoCAD checks across 45 evidence ledgers: **457 PASS, 102 FAIL, 6 BLOCKED, 17 UNPROVEN**. These are checks within workflows, not 582 complete features.
-2. **New work:** 118 new native checks after Tim’s use-to-zero override; 98 recovered earlier checks remain separate. Latest level batch: 10 checks, 7 PASS and 3 FAIL.
+1. **Testing:** 589 recorded real AutoCAD checks across 46 evidence ledgers: **462 PASS, 104 FAIL, 6 BLOCKED, 17 UNPROVEN**. These are checks within workflows, not 582 complete features.
+2. **New work:** 125 new native checks after Tim’s use-to-zero override; 98 recovered earlier checks remain separate. Latest breakline batch: seven checks, five PASS and two FAIL.
 3. **Overall target:** 50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical 7% text matching is not real workflow coverage.
-4. **Evidence:** 1,195 directly linked files: 1,102 screenshots and 93 metadata files. Seven setup/cleanup images remain separate; all 1,202 retained files rehashed without problems. There are 526 explicit UX IDs, 577 root bug headings and 523 installed catalogue entries. Eighty-six catalogue records have a case association; this is not 86 accepted workflows.
-5. **Bugs:** 58 new BUG-570–627 remain OPEN. Latest: ordinary-note overwrite625, missing floor-level review626 and split marker movement627. No repair installed by this chat.
-6. **Usage:** account-wide meter23% used,77% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
-7. **Safe state:** owned drawings closed/current empty window independently verified;13original drafting controls and remembered SSL type restored. Source/saved specimen/preferences preserved; own lease released; older BUG595 session untouched.
+4. **Evidence:** 1,217 directly linked files: 1,115 screenshots and 102 metadata files. Seven setup/cleanup images remain separate; all 1,224 retained files rehashed without problems. There are 526 explicit UX IDs, 579 root bug headings and 523 installed catalogue entries. Eighty-seven catalogue records have a case association; this is not 86 accepted workflows.
+5. **Bugs:** 60 new BUG-570–629 remain OPEN. Latest: breakline1:50 scale628 and paper-space output629. No repair installed by this chat.
+6. **Usage:** account-wide meter25% used,75% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
+7. **Safe state:** owned drawings closed/current empty window independently verified;captured original drafting controls restored. Source/saved specimen/preferences preserved; own lease released; older BUG595 session untouched.
 8. **Remaining:** genuine level-source updates, later cancellation, other level types, sections, breaklines, controlled dimension repair, complete job journeys, protections/scales/UCS/paper/plots/older releases and eligible built-workflow denominator.
 
 ## Real-world explanation requested by Tim — 15 October 2026
@@ -22,6 +22,12 @@
 7. **How this tests V3:** approved workflow cards supply the expected whole drawing experience. ST-03 dimensions/leaders/levels has 59 checks across six ledgers against its 15 decisions; ST-05 hatches/Xrefs has 67 across nine against its 15 decisions. Both remain partial with failures. ST-08 section/detail tests likewise do not establish complete editable, coordinated assemblies. Case links, requirement gaps and bug references are retained in the existing coverage index; registry association alone earns no acceptance.
 8. **What still needs testing:** remaining commands and variants, section marks/breaklines, genuine linked-level updating, repairs after installation, drawing-unit and 1:20/1:50/1:100 matrices, paper space, rotated UCS, locked layers/Xrefs/REFEDIT, mixed and older objects, large drawings/performance, plots/PDFs and older AutoCAD releases. End-to-end job proof must follow setup → drawing/editing → calculations → schedules → check → plot → save/reopen → revision, checking that all representations agree.
 9. **Recording and repairs:** 1,195 directly linked evidence files accompany the cases; 58 newly raised bugs570–627 remain OPEN. Existing bug evidence is also retained. Draft UI repair candidates are built/render-tested separately and are not installed native passes. Unstarted breakline checks add no credit. This explanation adds no test or percentage; it makes the recorded scope and limits explicit.
+
+## Native breakline results — 15 October 2026
+
+1. **Seven checks: five PASS, two FAIL.** First/second Escape add no objects and restore captured controls. At20/100 one clean six-vertex native polyline has consistent calculated paper dimensions. At50 it would plot at40% of those dimensions(BUG628). In Layout1 paper space, BL writes into Model(BUG629).
+2. **Persistence:** actual save/close/reopen preserves complete four-polyline records and restored controls. Source/preferences unchanged, final owned window empty and exact lease released. Native point arguments for scale/space placements supplied through AutoCAD AutoLISP; actual prompts/cancellations driven separately. No actual plot or full cursor-preview acceptance.
+3. **Remaining:** preview motion, rotated UCS, protected layers/Xrefs/REFEDIT, native editing, isolated UndoRedo, plot and older releases. ST03 now66checks/sevenledgers, still incomplete. New total589checks/46ledgers,462PASS104FAIL6BLOCKED17UNPROVEN;50%wholecoverage UNKNOWN.
 
 ## Repair candidate — 15 October 2026
 
