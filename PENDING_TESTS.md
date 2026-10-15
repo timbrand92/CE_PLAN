@@ -1665,3 +1665,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 **ST-05 follow-through,15October:** gap hatch save/close/reopen now passes;500mm whole-boundary MOVE follows,oneUndo and delayed34.7sRedo pass with exactnativepostRedorecords. Four additionalPASS,HGR-01–04. This supersedes the earlier gap-reopen/whole-boundary-MOVE remainder only. Original CE gap-placement Undo/Redo,grip/stretch/rotation,islands,protectedcontent,scales/units/UCS/plots/older releases remain. BUG615 staysOPEN.
 
 **ST-05 save-only gate —BUG620:** source for installed Structural version still purges unused definitions and changes Xref layers before FASTSAVE. Native reproduction pending; source finding only. After command-owner repair, verify dirty disposable fixture saves without changing any drawing/symbol/reference data, then reopen; include save-failure refusal. Full15ST5decision review is now in existing coverage index, with67nativecases linked narrowly.
+
+
+### Codex ST-03 dimensions follow-through —15October2026
+
+1. **Recorded native sample:** AD5000mm andLD4000mm placement/nativepreviews; ADoneUndo/delayedRedo/source-lineassociation; bothdimensionssave/close/reopen.12boundedchecks10PASS2FAIL, no wholeST03acceptance.
+2. **BUG621 repair acceptance:** beforeAD/LD chooseStandard/currentgreen3/Continuous/0.25mm; cancel first/late and complete placements. All prior styles/layers/snaps/appearance mustrestore; existing style definitions unchanged. Retain native geometry/association/recovery/reopen passes. Claudecommand/serviceowner; no installedrepair.
+3. **Remaining grouped coverage:** Q/QD/RD/MLL/MLR, linkedlevelmarks/update and sections/breaklines/dimensionrepair; LDplacementUndo/Redo; grip/stretch/rotation; protected layers/Xref/REFEDIT; scale/units/UCS/paper/plot;2022–2024native lane. Engineering intent still needs Tim where relevant. Evidence remains local in existing V3UX_20261014 store; no individual backlog handed to Tim.
