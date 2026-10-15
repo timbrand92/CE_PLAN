@@ -9,39 +9,39 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "50B875C109035D9B710DA7621E52AE777590A77983BC316C6456059E25AC6173",
+    "currentBugsSha256": "F8B322AB92AD15DA270DC788AE5B8A7712418EA59A70BA5568B2BF2938362F68",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "EC26A6BEB5F14586AFD4834FB4B4F7A3FF0A03867EBF5109FA0A496E975B9CC2"
+    "currentCaseIndexSha256": "18DB57E7C98D028DB6173720DF53E9E77A2E85AC65D0E933FB6EC8EC99CE6055"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 599,
+    "bugHeadings": 600,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 22,
-    "caseLedgers": 66,
-    "narrowCases": 738,
+    "caseLedgers": 67,
+    "narrowCases": 743,
     "narrowVerdicts": {
-      "PASS": 572,
-      "FAIL": 135,
+      "PASS": 575,
+      "FAIL": 137,
       "BLOCKED": 7,
       "UNPROVEN": 24
     },
-    "uniqueEvidenceFiles": 1602,
+    "uniqueEvidenceFiles": 1619,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1350,
-    "uniqueMetadataFiles": 252,
+    "uniqueScreenshotFiles": 1358,
+    "uniqueMetadataFiles": 261,
     "caseLinkedUxIds": 20,
-    "caseLinkedBugIds": 93,
-    "newNativeExecutionsInLatestReconciliation": 13,
+    "caseLinkedBugIds": 94,
+    "newNativeExecutionsInLatestReconciliation": 5,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1609,
+    "retainedDeclaredEvidenceFiles": 1626,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
     "currentDetailedApprovedWorkflowAudits": 6,
     "historicalCanonicalCardsIndexed": 39
@@ -50,7 +50,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "738 scoped native checks across66ledgers do not establish whole V3 coverage. Eligible built workflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed checks count as testing performed.",
+    "reason": "743scoped nativechecks across67ledgers are not complete V3 coverage. Eligiblebuiltworkflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed checks counttested.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -11734,8 +11734,8 @@
         "sourceLine": 2279,
         "required": "CE run, own style; legend AG style/outlet to pit; grade check and label only, no full hydraulics.",
         "status": "PARTIAL / CURRENT FAIL",
-        "evidence": "Native10m/3vertex/open AGI with selectedP2, correct descending1:50 preview, accepted actualpolyline/outlet record, AG_LINE lettering and bounded Cancel/Undo/Redo. BUG648 missing drawing grade label; BUG649 rising200mm falsely passes minimum fall.",
-        "remaining": "Saved AGI reopen, native MOVE/COPY, plot/clean-PC assets, closed geometry, units/UCS/protection, perimeter and charged/suspended contexts.",
+        "evidence": "Native10m/3vertex/open AGI with selectedP2, correct descending1:50 preview, accepted actualpolyline/outlet record, AG_LINE lettering and bounded Cancel/Undo/Redo. BUG648 missing drawing grade label; BUG649 rising200mm falsely passes minimum fall. Actual savedAGIreopen all71capturedobjects and decodedproject exact16Oct FW01.",
+        "remaining": "Native MOVE/COPY, plots/clean-PC assets, closed/units/UCS/protection, perimeter/charged/suspended contexts; CDFW interoperates poorly with existing strip/AGI assets.",
         "wholeScopeVerified": false
       },
       "historicalCandidateReports": [],
@@ -11744,7 +11744,8 @@
         "agi-case-ledger.json::AG-05",
         "agi-case-ledger.json::AG-06",
         "agi-case-ledger.json::AG-07",
-        "agi-case-ledger.json::AG-11"
+        "agi-case-ledger.json::AG-11",
+        "floor-waste-case-ledger.json::FW-01"
       ],
       "rulingSource": {
         "path": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
@@ -21136,7 +21137,8 @@
       "currentCaseKeys": [
         "strip-drain-case-ledger.json::SD-07",
         "strip-drain-case-ledger.json::SD-08",
-        "agi-case-ledger.json::AG-08"
+        "agi-case-ledger.json::AG-08",
+        "floor-waste-case-ledger.json::FW-04"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
@@ -21173,6 +21175,21 @@
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-16",
       "currentStatusSourceLine": 8613
+    },
+    {
+      "id": "BUG-650",
+      "headingLine": 8620,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "floor-waste-case-ledger.json::FW-03"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-16",
+      "currentStatusSourceLine": 8622
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -21340,6 +21357,13 @@
       "scope": "13AGI/strip-reopen checks8PASS3FAIL2UNPROVEN;new648/649 and647storage evidence",
       "narrowCases": 738,
       "caseLedgers": 66,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-16",
+      "scope": "CDFWmixedsurface5nativechecks3PASS2FAIL;new650pitinvertslost onEscape,647sourceinteroperability",
+      "narrowCases": 743,
+      "caseLedgers": 67,
       "wholeOverallPercent": null
     }
   ],
@@ -25434,9 +25458,18 @@
           "label": "Floor Waste (CDFW)",
           "group": "Sources",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED",
+          "nativeTriggerEvidenceCaseKeys": [
+            "floor-waste-case-ledger.json::FW-02",
+            "floor-waste-case-ledger.json::FW-03",
+            "floor-waste-case-ledger.json::FW-04"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "floor-waste-case-ledger.json::FW-02",
+            "floor-waste-case-ledger.json::FW-03",
+            "floor-waste-case-ledger.json::FW-04",
+            "floor-waste-case-ledger.json::FW-05"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -25453,7 +25486,7 @@
                 "decision": "Mapped to approved card; implementation not started"
               }
             ],
-            "currentApprovedWorkflowMappingVerified": false
+            "currentApprovedWorkflowMappingVerified": true
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
@@ -25522,7 +25555,8 @@
             "agi-case-ledger.json::AG-10",
             "agi-case-ledger.json::AG-11",
             "agi-case-ledger.json::AG-12",
-            "agi-case-ledger.json::AG-13"
+            "agi-case-ledger.json::AG-13",
+            "floor-waste-case-ledger.json::FW-01"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -41264,12 +41298,12 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 102,
-      "associatedCaseCount": 737,
+      "associatedEntryCount": 103,
+      "associatedCaseCount": 742,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 66,
-      "latestAssociationReconciliation": "AGIactualnative route and saved-strip persistence;no alias/wholeworkflow credit.13newchecks."
+      "currentLedgerCount": 67,
+      "latestAssociationReconciliation": "CDFWtypedprompt/Escape and clicked refusal on mixedsurface fixture. AGIreopenactualevidence. No FWplacement/alias availability credit."
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-16",
@@ -41284,16 +41318,16 @@
       "historicalCandidateMatches": 330,
       "noHistoricalCandidateMatches": 193,
       "ambiguousHistoricalCardMatches": 0,
-      "entriesWithCurrentCaseAssociation": 102,
-      "entriesWithoutCurrentCaseAssociation": 421,
-      "visibleEntriesWithoutCurrentCaseAssociation": 292,
+      "entriesWithCurrentCaseAssociation": 103,
+      "entriesWithoutCurrentCaseAssociation": 420,
+      "visibleEntriesWithoutCurrentCaseAssociation": 291,
       "hiddenEntriesWithoutCurrentCaseAssociation": 129,
       "moduleBreakdown": [
         {
           "bundle": "CE_CVL_SUITE.bundle",
           "total": 137,
-          "caseAssociated": 22,
-          "noCaseAssociation": 115
+          "caseAssociated": 23,
+          "noCaseAssociation": 114
         },
         {
           "bundle": "CE_STRUC_SUITE.bundle",
@@ -44237,10 +44271,10 @@
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-649",
-    "count": 80,
-    "explicitOpen": 80,
-    "method": "All80 new root records remain OPEN;648missingAGgrade label and649reversegrade falsepass native.647extended only for AGI real-asset storage. Existing scope acceptance remains separate."
+    "ids": "BUG-570 through BUG-650",
+    "count": 81,
+    "explicitOpen": 81,
+    "method": "81newrecordsOPEN;650 CDFW Escape clears existing pitinverts.647 mixedsurface source-refusal extended. No repair accepted."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -44933,7 +44967,7 @@
             "CE_CVL_SUITE.bundle::80::CDAGI"
           ],
           "visibleCandidateEntries": 5,
-          "caseAssociatedCandidateEntries": 2,
+          "caseAssociatedCandidateEntries": 3,
           "candidateCaseKeys": [
             "strip-drain-case-ledger.json::SD-01",
             "strip-drain-case-ledger.json::SD-02",
@@ -44956,20 +44990,25 @@
             "agi-case-ledger.json::AG-10",
             "agi-case-ledger.json::AG-11",
             "agi-case-ledger.json::AG-12",
-            "agi-case-ledger.json::AG-13"
+            "agi-case-ledger.json::AG-13",
+            "floor-waste-case-ledger.json::FW-01",
+            "floor-waste-case-ledger.json::FW-02",
+            "floor-waste-case-ledger.json::FW-03",
+            "floor-waste-case-ledger.json::FW-04",
+            "floor-waste-case-ledger.json::FW-05"
           ],
           "candidateCaseVerdicts": {
-            "PASS": 14,
-            "FAIL": 5,
+            "PASS": 17,
+            "FAIL": 7,
             "BLOCKED": 0,
             "UNPROVEN": 3
           },
           "currentDetailedRequirementAudit": "approvedWorkflowRequirementAudits.CV-04",
-          "currentBuiltEligibility": "PARTIAL_OBSERVED: real installed CDSTRIP and CDAGI creation/preview/Accept/Undo routes. Real-asset storage contradicted; AGIgrade label absent/risinggrade falsepass. CDFW/CDWT/CDSOURCE not native-driven in current index.",
+          "currentBuiltEligibility": "PARTIAL_OBSERVED: CDSTRIP/CDAGI actualcreation and CDFWinsertionprompt/refusal/Cancel. Mixedsurface interoperation fails647;CDFWCancelclears existingpitinverts650. CDWT/CDSOURCE not yet native-driven in this index.",
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
           "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": 22,
+          "requirementReviewedNativeCaseCount": 27,
           "nativeBuiltComponents": [
             "CDSTRIP centre/open native creation",
             "Complete pre-Accept geometry preview",
@@ -44983,7 +45022,9 @@
             "AGI grade label648",
             "Reversegrade falsepass649",
             "Other justifications/Close/oneway/units/UCS/protection/plots",
-            "CDFW/CDWT/CDSOURCE native workflows"
+            "CDFW/CDWT/CDSOURCE native workflows",
+            "CDFWsuccessfulplacement aftermixedsurface refusal",
+            "CDFWCancelstoredpitinverts650"
           ]
         },
         {
@@ -46349,13 +46390,13 @@
           "reason": "12historicallymappedentries,no currentcaseassociation; sheets/Excel/publishingneedfulljobcontext."
         }
       ],
-      "currentExecutionCount": 738,
-      "newNativeExecutionsThisReconciliation": 13
+      "currentExecutionCount": 743,
+      "newNativeExecutionsThisReconciliation": 5
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-16",
-    "usedPercent": 53,
+    "usedPercent": 58,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -46371,7 +46412,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 274,
+    "newNativeChecks": 279,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -46380,14 +46421,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1602,
-    "retainedDeclaredFiles": 1609,
-    "directScreens": 1350,
-    "directMetadata": 252,
+    "directCaseLinkedFiles": 1619,
+    "retainedDeclaredFiles": 1626,
+    "directScreens": 1358,
+    "directMetadata": 261,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All738cases/66ledgers freshly rehashed;7older unlinked files separate. Static source audit excluded. Whole50%UNKNOWN."
+    "scope": "All743cases/67ledgers freshly rehashed;7older unlinked files separate. Static source excluded;whole50%UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -47257,19 +47298,20 @@
     "CV-04": {
       "source": "04_REFERENCE/CARDS/CV-04_SURFACE_DRAINAGE.md",
       "sourceSha256": "74AB4A33861D6CA15347049A7CBE1BE8FDC394E7B4AF545E23836688726ECEBF",
-      "scope": "All15approveddecisions reviewed;22nativechecks/2ledgers,CDSTRIP and CDAGI bounded contexts.Wholecardunaccepted.",
-      "nativeCaseCount": 22,
-      "nativeLedgerCount": 2,
+      "scope": "All15approveddecisions reviewed;27nativechecks/3ledgers.CDSTRIP/CDAGI boundedcreation;CDFW actualprompt/refusal/Cancel.Wholecardunaccepted.",
+      "nativeCaseCount": 27,
+      "nativeLedgerCount": 3,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
           "id": "CV4-1",
           "required": "Keep all five familiar commands.",
           "assessment": "PARTIAL",
-          "reason": "CDSTRIP and CDAGI actual native routes available; CDFW/CDWT/CDSOURCE remain.",
+          "reason": "CDSTRIP/CDAGI creation routes and CDFW prompt/refusal observed. CDWT/CDSOURCE remain native-unverified.",
           "caseKeys": [
             "strip-drain-case-ledger.json::SD-01",
-            "agi-case-ledger.json::AG-05"
+            "agi-case-ledger.json::AG-05",
+            "floor-waste-case-ledger.json::FW-02"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47277,9 +47319,10 @@
           "id": "CV4-2",
           "required": "Use one surface-drainage backbone sharing CV-03 identity, preview and connection rules.",
           "assessment": "FAIL",
-          "reason": "Observed strip remains loose ordinary entities; native MOVE strands children. Shared identity/compound behaviour not satisfied; BUG647. Other source families not inferred.",
+          "reason": "Observed strip remains loose ordinary entities; native MOVE strands children. Shared identity/compound behaviour not satisfied; BUG647. Other source families not inferred. CDFW refuses because freshSD1/AGI1 lack pit identities; mixing CE surface workflows fails here647.",
           "caseKeys": [
-            "strip-drain-case-ledger.json::SD-07"
+            "strip-drain-case-ledger.json::SD-07",
+            "floor-waste-case-ledger.json::FW-04"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47338,9 +47381,13 @@
         {
           "id": "CV4-8",
           "required": "`CDFW` uses stable `FW` identities, non-recycled numbering and the shared placement/overlap preview.",
-          "assessment": "UNTESTED",
-          "reason": "This requirement was read; its own native workflow/context has not been executed in this batch.",
-          "caseKeys": [],
+          "assessment": "PARTIAL / CURRENT FAIL",
+          "reason": "CDFW actualinsertionprompt and Cancel tested; a clear placementclick refuses due existingSD1/AGI1 fake-pit identity gap647. SuccessfulFWtag/stable/nonrecyclednumbering/overlappreview remainunproved.",
+          "caseKeys": [
+            "floor-waste-case-ledger.json::FW-02",
+            "floor-waste-case-ledger.json::FW-03",
+            "floor-waste-case-ledger.json::FW-04"
+          ],
           "wholeRequirementAccepted": false
         },
         {
@@ -47387,12 +47434,13 @@
           "id": "CV4-14",
           "required": "`CDAGI` ships its approved line type with CE. Remove Timothy’s personal template dependency; preview open/closed geometry and store the actual entity—not copied coordinates in remarks.",
           "assessment": "PARTIAL",
-          "reason": "Native open3vertex LWPOLYLINE on AGI DRAIN; full AG_LINE contains AG lettering, actual entityHandle936 stored. Clean staff-PC/template independence, closed run, plot/protection/UCS contexts unproved. Grade label absent648; reversegradeverdictwrong649 under UX-SURF-04.",
+          "reason": "Native open3vertex LWPOLYLINE on AGI DRAIN; full AG_LINE contains AG lettering, actual entityHandle936 stored. Clean staff-PC/template independence, closed run, plot/protection/UCS contexts unproved. Grade label absent648; reversegradeverdictwrong649 under UX-SURF-04. SavedAGIreopen preservesall71capturedordinaryrecords and decodedproject.",
           "caseKeys": [
             "agi-case-ledger.json::AG-05",
             "agi-case-ledger.json::AG-06",
             "agi-case-ledger.json::AG-07",
-            "agi-case-ledger.json::AG-11"
+            "agi-case-ledger.json::AG-11",
+            "floor-waste-case-ledger.json::FW-01"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47400,7 +47448,7 @@
           "id": "CV4-15",
           "required": "Apply each compound atomically with one Undo and targeted nearby updates. Automated evidence covers cancel, copy, UCS, block origin and large drawings; Timothy checks one strip, tank and AGI in about five minutes.",
           "assessment": "PARTIAL",
-          "reason": "Strip and AGI oneUndo/delayedRedo exact ordinary objects and decoded project. RepeatAGI Cancel NOD exact; firstrename invocation updates path/unitmetadata. COPY/UCS/protection/large drawings/tank remain.",
+          "reason": "Strip and AGI oneUndo/delayedRedo exact ordinary objects and decoded project. RepeatAGI Cancel NOD exact; firstrename invocation updates path/unitmetadata. COPY/UCS/protection/large drawings/tank remain. CDFW firstEscape fails project-data preservation: existingpit inverts blank650 despite exactgeometry/settings; FWCancel/refusal not atomically accepted.",
           "caseKeys": [
             "strip-drain-case-ledger.json::SD-02",
             "strip-drain-case-ledger.json::SD-05",
@@ -47411,7 +47459,11 @@
             "agi-case-ledger.json::AG-09",
             "agi-case-ledger.json::AG-10",
             "agi-case-ledger.json::AG-12",
-            "agi-case-ledger.json::AG-13"
+            "agi-case-ledger.json::AG-13",
+            "floor-waste-case-ledger.json::FW-02",
+            "floor-waste-case-ledger.json::FW-03",
+            "floor-waste-case-ledger.json::FW-04",
+            "floor-waste-case-ledger.json::FW-05"
           ],
           "wholeRequirementAccepted": false
         }

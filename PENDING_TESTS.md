@@ -1,6 +1,13 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Codex floor-waste Cancel and mixedsurface result —16October2026
+
+1. **Recorded;noTimaction:**5checks3PASS2FAIL,total743/67. NewHIGH650:CDFWfirstEscape clearsstoredP1/P2inverts despiteunchangeddrawing.647extended:CDFWrefuses freshSD1/AGI1withoutpitidentities. BothremainOPEN,no fixinstalled.
+2. **Nextnativecontext:** separate originalpit/pipe fixture withoutSD1/AGI1 forsuccessfulCDFWplacement,stableFWnumbering,preview,UndoRedo/nativeMOVE-COPY/save-reopen;thenmixedsurface regression afterauthorisedrepair. Do notupgrade ordeleteassets tohide thefailedcontext.
+3. **Nowobserved:** savedAGIreopen71objects/projectexact;firstCDFWCancelgeometry/settingsonlyPASS whileengineeringrecordFAIL. Failurecopypreserved/originalsourceandprefsunchanged. Whole50%tested UNKNOWN.
+
+
 ### Codex AG drain native results —16October2026
 
 1. **Recorded; no Tim action needed:**13new scoped checks8PASS/3FAIL/2UNPROVEN, total738/66. Exact normalAGI preview/outlet/UndoRedo/repeatCancel pass. BUG648missing drawing grade label; HIGH649rising200mm toward outlet falsely passes minimumgrade.647AGI fake-pit storage evidence added.

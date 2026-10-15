@@ -1,6 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Floor wastes: Cancel changes existing pit records —16October2026
+
+1. **Current:**743scopedchecks/67batches:575PASS,137FAIL,7BLOCKED,24UNPROVEN. Five newchecks:3passes/2failures. Whole50%tested remains unverified; eligiblebuiltworkflow/context inventory incomplete.
+2. **Confirmed fault650:** startingCDFW and pressingEscape before picking clears storedP1/P2 invertlevels20.000/19.800 to blank. All71drawnobjects and14stagedcontrols stay exact; labels still show the previous levels. This is a Cancel fault,not a successful placement or pipe-level-loss claim.
+3. **Workflow interaction647:** a secondCDFW run refuses a clear placementpick because newlycreatedSD1/AGI1are treated as pits without CEidentities. It asks forCDSPINEUPGRADE. No upgrade attempted and noFWplaced. StableFWnumbering,overlap preview and placementUndo remain unproved in this context. A separate control drawing is next.
+4. **Passes and evidence:** actualsavedAGIreopen preservesall71capturedordinaryrecords/project. CDFWCancel preservesdrawnobjects/settings only. Originalcontrols restored, failurecopy saved/closed,source/3prefsunchanged,ownlease released/otherwindowuntouched. floor-waste-case-ledger.jsonFW01–05/screens1467–1474/9metadata. All1619directevidencefiles rehashed0faults. No fix/build/install. Weekly58%used42%remaining.
+
+
 ## AG drains: resumed native test and new faults —16 October2026
 
 1. **Current:**738scoped checks/66batches:572PASS,135FAIL,7BLOCKED,24UNPROVEN. This batch adds13checks:8passes,3failures,2unproven. Whole50%tested remains unknown; failed executed checks count as testing performed.
