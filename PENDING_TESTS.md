@@ -1764,3 +1764,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **BUG635:** knownTIM LEADERnowreproduces0.2stored/5000displayedafterRedo/REGEN/savecloseopen;unknownstyleisnotrequired. Confirmnativegraphicsandrenderedplotagreewithapprovedfactorafterrepair.
 3. **Narrowpasses:** selectedscopeonly110Bchanged,0.5dimension1118skippedexact,allotherobjects/control/layerpreserved;postRedonativeexpectedstateafter51.691secondquietdelay. FirstUndofullrecordcapturestillmissing. All3savedrecords/gfx/lock/originalcontrolsretainexactafterreopen. NoforcedsavebeforeexplicitQSAVE.
 4. **Evidence/remainder:** dimprotection-case-ledger9checks7PASS2FAIL,18screens1279–1296/sevenmetadata;source/preferencespreserved,owncopyclosed/exactlease released. Fullnativegrips/otherdimensiontypes/spaces/UCS/units/scales/plots/olderruntimeandwholecardacceptance remain. No sourcefix/install.
+
+
+## Requirement coverage and unexercised annotation routes — 15 October 2026
+
+1. **Actualcommandroutes:** CE_LEVELMARK/LMprimarytriggerseparatefromtestedFFL;RCRevisionCloudagainstST09;RDLength/DiameteralongsideexistingRadiussample. Checkcurrentapprovedbehaviourbeforecodechanges,actualnativeavailability,preview/cancel/output/edit/Undo/reopen.
+2. **Hiddenentries:** CSGENNOTES/CSLEADERNOTE/CSBOXNOTES/CSSLABSTEPneedavailability/featuregatedisclosurechecksfirst;registryentryaloneisnotbuiltfeatureacceptance. Notes/stepsneedtheirownlaterUXrulingsandapprovedworkflowreview.
+3. **Cross-cuttingUX:** existingcasekeysnowlinkedtoSTD03/FAIL01/SEL01/LYR01;completecommandmatrixstillrequired. No-forcedSaveisboundedpositiveevidence;valid-object/wrong-targetfiltersandfailurehandlinghaveknownfaults;Settings-derivedlayercreationunproved. No whole-IDorpercentagecredit.
+4. **Authority639:** resolve11brokenhistoricalcardindexlinksagainstexactprovenance/currentpointerswithoutrewritingverbatimapprovaltextorsubstitutingsupersededarchives. CurrentmasterV3gatesincludingstandaloneCivilandcolleaguepilotremaininthecoverageaudit. No newnativecasesinthisreconciliation.
