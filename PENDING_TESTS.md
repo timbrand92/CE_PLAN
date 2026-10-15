@@ -1710,3 +1710,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Level marks:** FFL/RL/SSL/NGL must offer trusted source or Manual/Unknown, complete following preview and F flip. Check each prompt’s Escape, native object set, state restoration and save/reopen. Inspect any preference changes before restoring only owned test changes.
 2. **Safe update:** on a synthetic ordinary note beside a genuine level mark, LMU must refuse the ordinary note and only propose changes to recognised marks/references. Source accepts TEXT/MTEXT broadly; this is a source risk pending native reproduction, not an additional executed test.
 3. **Sections, breaklines and repairs:** full section preview with identifier/sheet/both bubbles; compound MOVE/COPY/EDIT; BL model/paper/scales/UCS; dimension repair scope/preview/Apply with no forced save. Approved card ST03 and its 15-decision audit remain the authority. No full-card acceptance.
+
+
+## Native level safety failures — 15 October 2026
+
+1. **BUG625:** LMU must refuse ordinary TEXT/MTEXT, preserve unrelated nearby notes, and propose only recognised CE mark/reference changes before Apply. Native overwrite now reproduced; source-risk-only status is superseded. Test real recognised mark/source propagation, every cancellation stage, one Undo/Redo and reopening.
+2. **BUG626:** complete FFL/RL/SSL/NGL trusted-source or Manual/Unknown flow, full following preview, F flip and final click. Current FFL entered-value/output recovery passes narrowly; do not rebuild those working parts unnecessarily.
+3. **BUG627:** normal MOVE from any recognised mark component must carry symbol/tail/value/source together. Check COPY fresh identity, edit, safe erase, recovery and reopen across protection/scale/UCS/paper/legacy contexts.
+4. **Recorded:** levels-case-ledger.json10checks7PASS3FAIL, screenshots1190–1217 and8metadata; receipts426–430. Captured13controls and rememberedSSL restored; source/saved files preserved, own drawing closed/lease released. No repair installed or engineering acceptance.

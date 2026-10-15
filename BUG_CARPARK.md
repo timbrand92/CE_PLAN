@@ -8279,3 +8279,32 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** mll-clean-case-ledger.json MC-06, screenshots1179/1180/1183/1187 and full native output/reopen exports, local only. Compare actual chosen placement against preview and final text/arrow/landing coordinates. Native record matches after reopen, normalising only session memory addresses. Root cause, snap involvement and other conditions remain unproved. Distinct from Civil pipe-callout justification BUG011 and F-toggle BUG622.
 6. **Repair responsibility:** Claude command/service owner; no production edit, dispatch or deployment in this batch. Inspect MLeaderCalloutService layout/text extents/side placement under captured controls. Preserve working multiline, three-stage Escape, exact state restoration and one Undo/Redo. Do not globally rewrite existing styles or bypass protected layers.
 7. **AutoCAD fix confirmation:** use owned synthetic metric drawing, stage1:100/2.5mm text/3mm arrows; MLL arrow→two-line note→click clearly left. Preview and output must agree at chosen point. Repeat MLR right, long/short notes, native edits, snaps on/off, supported scales/UCS/paper/protected layers, Undo/Redo and reopen. Do not call full ST03 accepted from one placement.
+
+
+## BUG-625 — Level Update overwrites ordinary notes without recognising a CE level mark
+
+1. **Status/severity:** OPEN / HIGH. Observed 15 October 2026 in real AutoCAD 2027, installed Structural 1.0.116+f180b349a88617070a8517b563b2df7b5854131e.
+2. **What the drafter does:** run LMU, select an ordinary note, finish selection, enter 10.500. Owned native TEXT F41 on layer0 has GENERAL NOTE KEEP and no CE tags.
+3. **Expected:** approved ST3-8 permits recognised CE level marks only; a general note is refused and preserved. Recognised changes show affected marks/references, Preview and Apply before writing.
+4. **Observed:** selection reports one found and accepts the ordinary note. Enter replaces its complete contents with 10.500 and reports Updated1level label. No recognition refusal, affected-reference review or Preview/Apply. Full native readback proves only content changed on the same F41; wrong contents survive save/close/reopen.
+5. **Guard/evidence:** levels-case-ledger.json LV-01, screenshots1190–1194/1197, levels-baseline-native.txt/lmu-result-native.txt. One immediate Undo restores the original note; quiet50.866-second Redo restores the wrong replacement (LV-02). These recovery passes do not accept the unsafe update. Local synthetic evidence only.
+6. **Repair responsibility:** Claude command/record owner. LevelMarkCommands.cs inspected bytes match installed f180 source; selection accepts TEXT/MTEXT and directly writes each selected object. Use recognised ownership/source relationships, not proximity, loose type filtering or a window-only warning. No production edit, dispatch, build or install in this batch.
+7. **Real AutoCAD confirmation:** place an ordinary note beside a genuine CE level mark on an owned copy. LMU must preserve the ordinary note, show the recognised affected set and proposed value/source, then change only that set after Apply. Cancel at each stage; verify one Undo/Redo, reopening, locked/Xref/REFEDIT protection and both supported runtime lanes. Existing notes must never become levels accidentally.
+
+## BUG-626 — FFL bypasses the approved source review and complete placement preview
+
+1. **Status/severity:** OPEN / MEDIUM. Real AutoCAD2027 / Structural1.0.116/f180,15October2026; approved ST3-7. Existing V3 implementation gap, not claimed a recent regression.
+2. **What the drafter does:** type FFL, pick a point, accept Right, type12.345 and Enter.
+3. **Expected:** choose trusted source or Manual, confirm the value, see the complete marker following the cursor, F flips side, then click to place. Source/value/type belong to the linked mark; Unknown must remain explicit.
+4. **Observed:** installed flow is point→side→value→immediate drawing output. It offers no source/Manual choice, no complete following preview, no placement F stage or final placement click. A readable triangle/tail/12.345 is drawn, but that does not fulfil the approved workflow. No claim that blank input invents zero; that case was not run.
+5. **Evidence/guard:** levels-case-ledger.json LV-04/05/06; screenshots1198/1201–1205 and ffl-output-native.txt. Native F42polyline/F43line/F44text are created; immediate one Undo and quiet66.046-second Redo pass.
+6. **Repair/confirmation:** Claude command/service/compound owner; no code edited or deployed. Replay trusted-source and Manual paths, readable complete preview, F both ways, Escape at every prompt, one Undo/Redo and reopen. Repeat FFL/RL/SSL/NGL, scale/current-space/UCS and protected content. Preserve working entered-value and recovery paths.
+
+## BUG-627 — Moving an FFL triangle leaves its tail and level value behind
+
+1. **Status/severity:** OPEN / MEDIUM. Real AutoCAD2027 / Structural1.0.116/f180,15October2026; approved ST3-7 and ST3-13. Separate annotation family from RC compound BUG613.
+2. **What the drafter does:** create FFL12.345, run normal MOVE, click its triangle and move it right. Native selection reports1found; PICKSTYLE1 is captured.
+3. **Expected:** the complete owned level mark—symbol, tail, label/value and source relationship—moves together.
+4. **Observed:** triangle moves alone while the tail and12.345 remain at their previous positions. This was an ordinary drawing click, not direct modification of its database record. Immediate U MOVE restores it; complete three-record equality against the pre-move capture is verified. Movement trial was undone before Save; no saved split specimen claimed.
+5. **Evidence/guard:** levels-case-ledger.json LV-07; screenshots1206–1209, ffl-output-native.txt and levels-before-save-native.txt. Require equal displacement for all owned mark components after normal MOVE and retained relationships after reopening.
+6. **Repair/confirmation:** Claude native compound/record owner; no production repair installed. On an owned copy, move by triangle, tail and label separately; each must carry the recognised whole set. Verify COPY fresh identity, edit, safe erase, Undo/Redo and reopen while unrelated nearby text stays untouched. Repeat remaining level-mark types/protection/units/scales/UCS/paper and older releases.

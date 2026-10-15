@@ -2,17 +2,19 @@
 
 ## Current position — 15 October 2026, Melbourne
 
-1. **Testing:** 572 recorded checks in real AutoCAD across 44 evidence ledgers: **450 PASS, 99 FAIL, 6 BLOCKED, 17 UNPROVEN**. These are specific checks, not 572 complete features.
-2. **New work:** 108 new native checks after Tim’s use-to-zero override. The 98 recovered earlier checks are separate. Latest MLL batch: 9 checks, 8 PASS and 1 FAIL.
+1. **Testing:** 582 recorded real AutoCAD checks across 45 evidence ledgers: **457 PASS, 102 FAIL, 6 BLOCKED, 17 UNPROVEN**. These are checks within workflows, not 582 complete features.
+2. **New work:** 118 new native checks after Tim’s use-to-zero override; 98 recovered earlier checks remain separate. Latest level batch: 10 checks, 7 PASS and 3 FAIL.
 3. **Overall target:** 50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical 7% text matching is not real workflow coverage.
-4. **Evidence:** 1,159 directly linked files: 1,074 screenshots and 85 metadata files. Seven setup/cleanup images remain separate; all 1,166 retained files rehashed without problems. There are 526 explicit UX IDs, 574 root bug headings and 523 installed catalogue entries. Eighty-four catalogue records have a case association; this is not 84 accepted workflows.
-5. **Bugs:** 55 new BUG-570–624 remain OPEN. BUG-620 is source-only; BUG-623 is an intermittent native editor failure; BUG-624 is left-note placement. This chat has installed no repair.
-6. **Usage:** latest account-wide meter is 13% used, 87% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
-7. **Safe state:** owned drawings closed and current empty window independently verified. Twelve captured drafting controls restored; source drawing and Structural preferences unchanged; own lease released. Older BUG-595 session untouched.
-8. **Recording correction:** the shared coverage index lagged the report/local index by the previous Q/QD batch and diagnostic files. It is now reconciled from retained receipts; these are not new executions.
-9. **Remaining:** complete job journeys, uncovered commands, native editing/grips, protected content, scales/units/UCS/paper space, plotted output, older releases and a complete eligible built-workflow denominator. Engineering decisions still need Tim where relevant.
+4. **Evidence:** 1,195 directly linked files: 1,102 screenshots and 93 metadata files. Seven setup/cleanup images remain separate; all 1,202 retained files rehashed without problems. There are 526 explicit UX IDs, 577 root bug headings and 523 installed catalogue entries. Eighty-six catalogue records have a case association; this is not 86 accepted workflows.
+5. **Bugs:** 58 new BUG-570–627 remain OPEN. Latest: ordinary-note overwrite625, missing floor-level review626 and split marker movement627. No repair installed by this chat.
+6. **Usage:** account-wide meter15% used,85% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
+7. **Safe state:** owned drawings closed/current empty window independently verified;13original drafting controls and remembered SSL type restored. Source/saved specimen/preferences preserved; own lease released; older BUG595 session untouched.
+8. **Remaining:** genuine level-source updates, later cancellation, other level types, sections, breaklines, controlled dimension repair, complete job journeys, protections/scales/UCS/paper/plots/older releases and eligible built-workflow denominator.
 
 ## Latest native results
+
+1. **Level safety batch — 10 checks, 7 PASS and 3 FAIL:** LMU overwrites an ordinary note (625); FFL skips approved source/preview placement (626); ordinary MOVE splits its triangle from tail/value (627).
+2. **Working parts retained:** FFL first Escape adds nothing; entered12.345 draws readable output; LMU and FFL each pass immediate one Undo/delayed Redo; complete saved note/marker records survive actual close/reopen. Original13controls/preferences/default type restored. No whole level workflow acceptance.
 
 1. **Clean MLL:** Escape at arrow, note-entry and placement-preview stages adds nothing and preserves all 12 captured controls. Native paragraph output, immediate one Undo, quiet 52.337-second Redo and complete native-record save/close/reopen pass. Nine checks: 8 PASS, 1 FAIL; screenshots 1169–1189.
 2. **Placement fails BUG-624:** clicking left at the left-note prompt produces text right of the arrow; the wrong layout persists after reopening. Root cause remains unproved; F-toggle BUG-622 remains open. Whole ST-03 is not accepted. Original controls restored, source/preferences preserved and own copy closed/lease released.
@@ -562,3 +564,10 @@
 3. **Approved behaviour still failing:** restore the drafter’s previous settings (621), F side-toggle (622), and left-note placement agreeing with the selected point (624). Later readable editor controls do not erase the initial blank-editor failure (623).
 4. **Next missing families:** level marks with trusted source or Manual/Unknown; safe level updating; section marks with both bubbles/sheet reference; compound movement/copy/edit; breaklines across scales/current space/UCS; controlled dimension repair. Source reading suggests LMU accepts arbitrary ordinary text, but native reproduction has not run.
 5. **Remaining contexts:** other scales, paper space, rotated UCS, protected layers/Xrefs/REFEDIT, style portability, plots, large drawings and older releases. Current-index gaps are not proof no earlier chat ever tested them. Full V3 and 50% remain incomplete.
+
+
+## Level marks and ordinary-note safety — 15 October 2026
+
+1. **Real drawing risk:** LMU turns GENERAL NOTE KEEP into10.500 on the same ordinary text object. This directly contradicts the approved recognised-level-only boundary. Undo/Redo recovers reliably in this sample, but does not make the selection safe. BUG625 HIGH OPEN.
+2. **Workflow and editing:** FFL displays12.345, but never offers source/Manual review or a complete following preview before placing (626). Selecting/moving its triangle strands its tail/value (627). These are approved V3 gaps, not cosmetic preferences.
+3. **Evidence and remainder:** complete records persist; moved trial restored before save.59 ST03 checks/six ledgers now support the15-decision audit. Remaining types, later Escape, source-linked genuine-mark updates, other native edits, protection/scale/UCS/paper/plots/older runtime and whole workflow coverage remain.
