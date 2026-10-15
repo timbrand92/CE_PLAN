@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dateMelbourne": "2026-10-15",
+  "dateMelbourne": "2026-10-14",
   "purpose": "Evidence index attached to the existing Codex report, not a new plan or bug register. Unknown states are retained, not counted as tested.",
   "sources": {
     "ux": "04_REFERENCE/ux-plan/V3_UX_PLAN.md",
@@ -9,45 +9,45 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "122E599C422115D731CE96BA4AE3501A913222E6642933AD40216FF62D341D4B",
+    "currentBugsSha256": "D7C1AAB6972A233090B6C4384261D73D2C920F9547B75DC468F1A4647907041A",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "C3E2094AB338036E521885ABED9DBE8D5782138ECF6334916548725BB02D5913"
+    "currentCaseIndexSha256": "F7DDB614A8C85F6DA779694162B9D05120CB5A45F1A671C3B4A808D9FA1E775B"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 573,
+    "bugHeadings": 574,
     "duplicateBugHeadings": 0,
     "currentUxScopeReviews": 16,
-    "caseLedgers": 43,
-    "narrowCases": 563,
+    "caseLedgers": 44,
+    "narrowCases": 572,
     "narrowVerdicts": {
-      "PASS": 442,
-      "FAIL": 98,
+      "PASS": 450,
+      "FAIL": 99,
       "BLOCKED": 6,
       "UNPROVEN": 17
     },
-    "uniqueEvidenceFiles": 1132,
+    "uniqueEvidenceFiles": 1159,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1053,
-    "uniqueMetadataFiles": 79,
+    "uniqueScreenshotFiles": 1074,
+    "uniqueMetadataFiles": 85,
     "caseLinkedUxIds": 14,
-    "caseLinkedBugIds": 65,
-    "newNativeExecutionsInLatestReconciliation": 0,
+    "caseLinkedBugIds": 66,
+    "newNativeExecutionsInLatestReconciliation": 9,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1139
+    "retainedDeclaredEvidenceFiles": 1166
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "563 bounded native checks across43 ledgers are not whole V3 features. Complete built/installed workflow eligibility and acceptance mapping remain incomplete; overall50% UNKNOWN.",
+    "reason": "551 bounded native checks across 42 ledgers are not whole V3 features. Complete built/installed workflow eligibility and acceptance mapping remain incomplete; overall 50% is UNKNOWN.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -20061,7 +20061,22 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": "MEDIUM OPEN investigation; initial blank Q native editor, later readable after reopen plus font/control setup; cause/context unisolated, no fix installed."
+      "currentStatusSourceLine": 8263
+    },
+    {
+      "id": "BUG-624",
+      "headingLine": 8273,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "mll-clean-case-ledger.json::MC-06"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-15",
+      "currentStatusSourceLine": 8275
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -20508,7 +20523,7 @@
           ]
         }
       ],
-      "method": "Exact installed primary/declared-alias routes linked to individual native case keys. Shared cleanup and persistence may link several entries but count once.523 catalogue entries include aliases/hidden/shared names and are not an accepted-feature denominator.84 entries have at least one association; full built/installed V3 eligibility remains incomplete.",
+      "method": "Exact typed command/declared-alias case associations; includes Q/QD native batch previously saved in report/localindex but omitted fromsharedindex. Association is not fullworkflow acceptance.",
       "mappingComplete": false,
       "wholeFeatureDenominator": null,
       "entries": [
@@ -27790,8 +27805,7 @@
                 "decision": "Mapped to approved card; implementation not started"
               }
             ],
-            "currentApprovedWorkflowMappingVerified": true,
-            "verifiedScope": "Bounded ST3-2/4/13/14 checks; first-cancel style restoration fails; Q native editor fails on fixture; whole workflow unaccepted."
+            "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false,
@@ -27841,8 +27855,7 @@
                 "decision": "Mapped to approved card; implementation not started"
               }
             ],
-            "currentApprovedWorkflowMappingVerified": true,
-            "verifiedScope": "Bounded ST3-2/4/13/14 checks; first-cancel style restoration fails; Q native editor fails on fixture; whole workflow unaccepted."
+            "currentApprovedWorkflowMappingVerified": false
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false,
@@ -27922,14 +27935,32 @@
             "mleader-case-ledger.json::ML-02",
             "mleader-case-ledger.json::ML-03",
             "mleader-case-ledger.json::ML-09",
-            "mleader-case-ledger.json::ML-10"
+            "mleader-case-ledger.json::ML-10",
+            "mll-clean-case-ledger.json::MC-01",
+            "mll-clean-case-ledger.json::MC-02",
+            "mll-clean-case-ledger.json::MC-03",
+            "mll-clean-case-ledger.json::MC-04",
+            "mll-clean-case-ledger.json::MC-05",
+            "mll-clean-case-ledger.json::MC-06",
+            "mll-clean-case-ledger.json::MC-07",
+            "mll-clean-case-ledger.json::MC-08",
+            "mll-clean-case-ledger.json::MC-09"
           ],
           "associatedWorkflowCaseKeys": [
             "mleader-case-ledger.json::ML-01",
             "mleader-case-ledger.json::ML-02",
             "mleader-case-ledger.json::ML-03",
             "mleader-case-ledger.json::ML-09",
-            "mleader-case-ledger.json::ML-10"
+            "mleader-case-ledger.json::ML-10",
+            "mll-clean-case-ledger.json::MC-01",
+            "mll-clean-case-ledger.json::MC-02",
+            "mll-clean-case-ledger.json::MC-03",
+            "mll-clean-case-ledger.json::MC-04",
+            "mll-clean-case-ledger.json::MC-05",
+            "mll-clean-case-ledger.json::MC-06",
+            "mll-clean-case-ledger.json::MC-07",
+            "mll-clean-case-ledger.json::MC-08",
+            "mll-clean-case-ledger.json::MC-09"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -39040,10 +39071,10 @@
         }
       ],
       "associatedEntryCount": 84,
-      "associatedCaseCount": 563,
+      "associatedCaseCount": 572,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 43
+      "currentLedgerCount": 44
     },
     "planMappingReconciliation": {
       "dateMelbourne": "2026-10-15",
@@ -39088,10 +39119,10 @@
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-623",
-    "count": 54,
-    "explicitOpen": 54,
-    "method": "All new records explicitly OPEN;620 source-only,623 native fixture editing failure with cause unproved."
+    "ids": "BUG-570 through BUG-624",
+    "count": 55,
+    "explicitOpen": 55,
+    "method": "All55new records remain explicitlyOPEN.620source-only,623intermittentnativeeditor context,624observedMLLplacement. No closure inferred."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -39128,7 +39159,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 10,
+    "usedPercent": 13,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792625799,
     "reportedResetMelbourne": "22/10/2026, 10:36:39 am",
@@ -39144,7 +39175,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 99,
+    "newNativeChecks": 108,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -39153,14 +39184,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1132,
-    "retainedDeclaredFiles": 1139,
-    "directScreens": 1053,
-    "directMetadata": 79,
+    "directCaseLinkedFiles": 1159,
+    "retainedDeclaredFiles": 1166,
+    "directScreens": 1074,
+    "directMetadata": 85,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All563cases43ledgers and1139retained files rehashed;7unlinkedsetup/cleanupimages excluded. Native font diagnostics add evidence, no plugin check count."
+    "scope": "All572cases44ledgers and1166retainedfiles rehashed;7unlinkedsetup/cleanupimages excluded from direct count."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -39288,5 +39319,11 @@
         }
       ]
     }
+  },
+  "recordingReconciliation": {
+    "dateMelbourne": "2026-10-15",
+    "issue": "Shared index still551/42ledgers although prior saved report/local index563/43. Q/QD12cases and8diagnosticfiles were absent from shared summary; local case receipts retained.",
+    "resolution": "Recomputed current counters from all572cases44ledgers, restored Q/QD associations and added9newMLLchecks; no rerun or duplicate new-case credit.",
+    "currentLocalCaseIndexSha256": "F7DDB614A8C85F6DA779694162B9D05120CB5A45F1A671C3B4A808D9FA1E775B"
   }
 }

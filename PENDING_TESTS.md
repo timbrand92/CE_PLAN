@@ -1696,3 +1696,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 
 
 **BUG623 diagnostic remainder —15 October:** native Standard control and repeat Q editor became readable after reopen plus temporary font/control creation; existing Standard definition unchanged. Initial blank editor is not consistently reproduced. Repeat immediately after clean reopen before controls, then isolate native controls separately; retain both outcomes. Temporary controls discarded, no new plugin check counted, no repair installed or accepted. Evidence1163–1168,receipt419.
+
+
+## Codex clean MLL follow-through —15October2026
+
+1. **Narrow Codex-accepted:** arrow/note/preview Escape leave122objects and12capturedcontrols unchanged; nativeparagraphMLeaderoutput; immediateoneUndo/52.337secondquietRedo; fullnativeobjectsave/close/reopen.9checks8PASS1FAIL, receipts420–423. EarliercontaminatedML03remainsUNPROVEN asitsownsample.
+2. **BUG624repairretest:** MLL arrow→two-line note→clickclearlyleft; previewandfinalnote/leader mustmatchselectedlocation/side. RepeatMLRright,long/shortnotes,snapson/off,scales,UCS,paper/protection,UndoRedo/reopen. Rootcauseunproved; command/serviceowner,noinstalledrepair. Ftoggle622remainsseparate.
+3. **Remaining:** nativeedits/grips,paragraphstyles/portabledefinitions,fullnonmutation,levels/sections/breaklines,otherannotationpaths/plots/legacyruntime andwholeST03/V3coverage. Source/preferencesintact,all12originalcontrolsrestored,owncopyclosed/lease released.

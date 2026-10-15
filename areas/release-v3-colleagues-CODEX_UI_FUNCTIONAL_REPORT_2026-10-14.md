@@ -2,16 +2,19 @@
 
 ## Current position —15 October2026, Melbourne
 
-1. **Testing:**563 recorded checks in real AutoCAD across43 evidence ledgers: **442 PASS,98 FAIL,6 BLOCKED,17 UNPROVEN**. These are specific checks, not563 complete features.
-2. **New work:**99 new native checks after Tim’s usage-reserve override;98 recovered earlier cases are separate. Latest Q/QD batch12checks:9PASS/3FAIL.
-3. **Overall target:**50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical7% was text matching; the complete eligible built/installed workflow inventory remains unfinished.
-4. **Evidence:**1,132 directly linked files:1,053 screenshots/79 metadata. Seven setup/cleanup images separate; all1,139 retained files rehashed without problems.563 unique case keys/43ledgers.526 explicit UX IDs,573 root bug headings and523 installed catalogue entries;84 catalogue records have a case association, not84 accepted workflows.
-5. **Bugs:**54 new BUG570–623 remain OPEN.620 is source-only;623 is observed blank native editing on the fixture with cause unproved. Repair candidates remain separate from installed, AutoCAD-accepted fixes. No deployment by this chat.
-6. **Usage:**latest account-wide meter10%used/90%remaining. Use-to0% overrides former reserve; no reset redeemed or paid provider request.
-7. **Safe state:** quick leaders saved/read back; all owned drawings closed;11 captured drafting controls restored exactly; source drawings and Structural preferences unchanged; own lease released. OlderBUG595 session untouched.
-8. **Remaining:** clean MLL recovery, leader edit/font controls, later cancellation, grips/protections/scales/units/UCS/paper/plots/older AutoCAD, remaining commands and whole job journeys. Engineering decisions need Tim where relevant.
+1. **Testing:**572 recorded checks in real AutoCAD across44evidenceledgers:450PASS,99FAIL,6BLOCKED,17UNPROVEN. Specific checks,not572completefeatures.
+2. **Newwork:**108newnativechecks after Tim’s use-to0override;98recoveredearlierchecks separate. LatestMLL9checks8PASS1FAIL.
+3. **Target:**50%completeV3/UX remainsUNKNOWN/incomplete;historical7%textmatching is not realworkflowcoverage.
+4. **Evidence:**1159directfiles1074screens85metadata;7unlinkedsetup/cleanupseparate,all1166retainedrehashed0problems.526UXIDs/574rootbugheadings/523installedcatalogueentries;84records case-associated,not84acceptedworkflows.
+5. **Bugs:**55newBUG570–624OPEN.620sourceonly;623intermittenteditorcontext;624leftnoteplacement. No repairinstalled bythischat.
+6. **Usage/safety:**weekly13%used87%left;use-to0supersedesformerreserve. AllownedDWGsclosed/currentemptywindowverified,12controlsrestored,source/preferencesunchanged,ownlease released;old595untouched.
+7. **Recordingcorrection:** sharedcoverageJSONlaggedreport/localindexbyQ/QD12cases anddiagnosticfiles;nowreconciledfromretainedreceipts,noextraexecutioncredit.
+8. **Remaining:**fulljobjourneys,uncoveredcommands,grips/editing/protections/scales/units/UCS/paper/plots/legacyruntime andeligiblebuiltworkflowdenominator.
 
 ## Latest native results
+
+1. **Clean MLL:** three-stage Escape adds nothing and preserves12capturedcontrols. Nativeparagraphoutput,immediateoneUndo/quiet52.337secondRedo andfullrecordsave/close/reopen pass.9checks8PASS1FAIL,screens1169–1189.
+2. **Placement fails BUG624:** click left at left-note prompt yields text rightofarrow; wronglayoutpersists. Rootcauseunproved;Ftoggle622remainsopen. FullST03notaccepted.12originalcontrolsrestored,source/preferencespreserved,owncopyclosed/lease released.
 
 1. **Editing diagnostic follow-through:** native Standard MText control and repeat Q editor are readable after reopening plus temporary Arial-style/control creation. Standard definition remains unchanged; no edit committed or repair proved. Initial blank editor remains a recorded intermittent/context failure (BUG623). Controls discarded and saved file/preferences unchanged. Eight additional evidence files; no new plugin case or percentage credit.
 
