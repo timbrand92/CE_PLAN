@@ -1,6 +1,15 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Generic source placement —16 October2026
+
+1. **Eight new real AutoCAD checks:** sevenPASS/oneFAIL. Total762checks/70batches:592PASS,139FAIL,7BLOCKED,24UNPROVEN. TypedCDSOURCE now observed; four of five familiar CV04commands have current native creation evidence. CDWT remains untested.
+2. **What works in this context:** approved source categories first; default roof-drain placement; picked-point symbol centre without old211moffset; permanent source identity and owned label records; oneUndo andRedo after53.922seconds. All56existingobjects remain exact. Tested on millimetres/World-UCS/Model atDIMSCALE100.
+3. **Confirmed failure:** Escape at the first category question blanks existing pitinverts20.000/19.800, extending650. Geometry/settings remain exact. The earlier saved-reopen recovery qualification remains; permanent loss and a fix are not claimed.
+4. **Still untested:** Custom/duplicate rejection, other categories, full moving preview/overlap, connected placement, MOVE/COPY, savedgeneric-source reopening, protection/units/UCS/olderruntime/plots. Source specimen saved/closed; original controls restored/source drawing unchanged/own lease released. Weekly98%used2%remaining. Whole50%testedUNKNOWN.
+
+
+
 ## Saved floor-waste persistence —16 October 2026
 
 1. **New native PASS:** reopening the saved control retains FW1/FW2 bodies, labels and both source identity graphs. Original14drawing controls match. This proves bounded floor-waste persistence; all56objects exist, but one unrelated anonymous block name changes and its definition equivalence was not tested. Whole drawing/NOD equality is not claimed.

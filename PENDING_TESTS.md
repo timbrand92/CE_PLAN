@@ -1,6 +1,14 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Generic source native results —16 October2026
+
+1. **Recorded; no Tim action needed:** CDSOURCE8checks7PASS1FAIL. Categories, roof-drain placement/origin/identity and oneUndo/delayedRedo have bounded evidence. Total762checks/70batches.
+2. **650 extended:** Escape before category selection blanks stored pitinverts; otherdrawingobjects/controls exact. Reopen recovery still qualifies permanent-loss claims. No fix/install.
+3. **Next:** CDWT; Custom/duplicates, source preview/overlap/MOVE/COPY/connected/reopen, protection/units/UCS/plot; remaining28canonicalcards/laterV3UX/contexteligibility.50%UNKNOWN.
+
+
+
 ### Saved floor-waste persistence —16 October2026
 
 1. **Codex-accepted narrow result:** saved FW1/FW2 bodies, labels and source identity graphs persist on native reopen. One new PASS, total754checks/69batches. No Tim action needed.
