@@ -1,5 +1,12 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+
+### Codex AG drain native results —16October2026
+
+1. **Recorded; no Tim action needed:**13new scoped checks8PASS/3FAIL/2UNPROVEN, total738/66. Exact normalAGI preview/outlet/UndoRedo/repeatCancel pass. BUG648missing drawing grade label; HIGH649rising200mm toward outlet falsely passes minimumgrade.647AGI fake-pit storage evidence added.
+2. **Next native contexts:** reopen savedAGI, parent MOVE/COPY and grade-label repair regression, plot and cleanstaffPC assets, closed/perimeter/charged/suspended/unitsUCS/protection; CDFW/CDWT/CDSOURCE. Savedstrip18entity/project persistence now observed; wholeDWGdefinitionequivalence stillunproved.
+3. **Limits:** firstAGI Cancel path/unitmetadata changes keep strictzero-write unproved. Engineeringjudgement remains Tim; tested percentageUNKNOWN eligiblebuiltworkflow/context denominator incomplete. Bothnewbugs OPEN, nofix/build/install.
+
 ### Codex surface-drainage workflow — 15 October 2026
 
 1. **Recorded; no Tim action required:** nine new CDSTRIP checks,6PASS/2FAIL/1UNPROVEN. Geometry/spacing/preview and bounded Undo/Redo pass. NewBUG-647 records the missing compound/real-asset behaviour: native MOVE strands children and the strip remains a pit-type record.

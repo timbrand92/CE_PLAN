@@ -1,5 +1,14 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
+
+## AG drains: resumed native test and new faults —16 October2026
+
+1. **Current:**738scoped checks/66batches:572PASS,135FAIL,7BLOCKED,24UNPROVEN. This batch adds13checks:8passes,3failures,2unproven. Whole50%tested remains unknown; failed executed checks count as testing performed.
+2. **What works here:** millimetres/World-UCS/Model, normal staged1:100 controls. A10m bent open AG run previews before placement, links selectedP2 and correctly reports1:50 for20.200→20.000m. Exact drawing/project readbacks pass oneUndo and delayedRedo. RepeatCancel leaves captured objects/settings/NOD exact. AG_LINE contains AG lettering.
+3. **Faults:** BUG648 no drawing grade label after Accept. BUG649 reverse20.000→20.200m still says it meets minimumfall despite rising200mm towardP2. Reverse test uses originalDIMSCALE1/restored controls; cancelled without acceptance. AGI fake-pit storage extends647; AGI nativeMOVE untested. No fix or installation claimed.
+4. **Persistence and limits:** saved-strip reopen passes18ownedentities/project, while whole-DWG equality is unproved due unrelated anonymousblockname change. FirstAGI Cancel updates path/unitmetadata despite keeping geometry/engineering fields; repeatCancel passes. SavedAGIreopen/plots/COPY/protection/closed/otherunitsUCS/cleanstaffPC/perimeter/charged/suspended andCDFW/CDWT/CDSOURCE still need native checks.
+5. **Evidence and safety:** agi-case-ledger.json/AG-01–13,local screenshots1451–1466 and19metadata files. All1602directfiles rehashed with0faults. Normaloutput saved/closed,source and3prefsunchanged,ownlease released,otherwindowuntouched. InstalledCivil3.0.49+48662ddd/hash8B5DE634 freshread. Weekly53%used47%left; no reset/credit redemption. Full report is interim, not whole workflow acceptance.
+
 ## Surface drainage: strip-drain native workflow — 15 October 2026
 
 1. **Current total:**725 scoped checks across65 batches:564PASS,132FAIL,7BLOCKED,22UNPROVEN. This new family adds nine checks: six passes, two failures and one unproven result. Whole50%tested remains unknown.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dateMelbourne": "2026-10-14",
+  "dateMelbourne": "2026-10-16",
   "purpose": "Evidence index attached to the existing Codex report, not a new plan or bug register. Unknown states are retained, not counted as tested.",
   "sources": {
     "ux": "04_REFERENCE/ux-plan/V3_UX_PLAN.md",
@@ -9,39 +9,39 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "AE3134FD7ED4DAFCB02F569CCBB286565BBDC4CA6E7B0EAF8176750959C1385C",
+    "currentBugsSha256": "50B875C109035D9B710DA7621E52AE777590A77983BC316C6456059E25AC6173",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "27270749B40EC3944954E44CE7C338BBBE69CD4DED81BCA815329DD024BB97F5"
+    "currentCaseIndexSha256": "EC26A6BEB5F14586AFD4834FB4B4F7A3FF0A03867EBF5109FA0A496E975B9CC2"
   },
   "counts": {
     "traceableUxIds": 526,
-    "bugHeadings": 597,
+    "bugHeadings": 599,
     "duplicateBugHeadings": 0,
-    "currentUxScopeReviews": 21,
-    "caseLedgers": 65,
-    "narrowCases": 725,
+    "currentUxScopeReviews": 22,
+    "caseLedgers": 66,
+    "narrowCases": 738,
     "narrowVerdicts": {
-      "PASS": 564,
-      "FAIL": 132,
+      "PASS": 572,
+      "FAIL": 135,
       "BLOCKED": 7,
-      "UNPROVEN": 22
+      "UNPROVEN": 24
     },
-    "uniqueEvidenceFiles": 1567,
+    "uniqueEvidenceFiles": 1602,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1334,
-    "uniqueMetadataFiles": 233,
-    "caseLinkedUxIds": 19,
-    "caseLinkedBugIds": 91,
-    "newNativeExecutionsInLatestReconciliation": 9,
+    "uniqueScreenshotFiles": 1350,
+    "uniqueMetadataFiles": 252,
+    "caseLinkedUxIds": 20,
+    "caseLinkedBugIds": 93,
+    "newNativeExecutionsInLatestReconciliation": 13,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1574,
+    "retainedDeclaredEvidenceFiles": 1609,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
     "currentDetailedApprovedWorkflowAudits": 6,
     "historicalCanonicalCardsIndexed": 39
@@ -50,7 +50,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "725 scoped native checks across65ledgers do not establish complete V3 workflow coverage. Eligible built workflow/scenario/context denominator remains incomplete;50%tested UNKNOWN. Failed executed checks count as testing performed.",
+    "reason": "738 scoped native checks across66ledgers do not establish whole V3 coverage. Eligible built workflow/scenario/context denominator incomplete;50%tested UNKNOWN. Failed executed checks count as testing performed.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -11729,10 +11729,23 @@
       "sourceTokens": [
         "UX-SURF-01..06"
       ],
-      "currentScopeReview": null,
+      "currentScopeReview": {
+        "id": "UX-SURF-04",
+        "sourceLine": 2279,
+        "required": "CE run, own style; legend AG style/outlet to pit; grade check and label only, no full hydraulics.",
+        "status": "PARTIAL / CURRENT FAIL",
+        "evidence": "Native10m/3vertex/open AGI with selectedP2, correct descending1:50 preview, accepted actualpolyline/outlet record, AG_LINE lettering and bounded Cancel/Undo/Redo. BUG648 missing drawing grade label; BUG649 rising200mm falsely passes minimum fall.",
+        "remaining": "Saved AGI reopen, native MOVE/COPY, plot/clean-PC assets, closed geometry, units/UCS/protection, perimeter and charged/suspended contexts.",
+        "wholeScopeVerified": false
+      },
       "historicalCandidateReports": [],
-      "wholeScopeVerified": null,
-      "currentCaseKeys": [],
+      "wholeScopeVerified": false,
+      "currentCaseKeys": [
+        "agi-case-ledger.json::AG-05",
+        "agi-case-ledger.json::AG-06",
+        "agi-case-ledger.json::AG-07",
+        "agi-case-ledger.json::AG-11"
+      ],
       "rulingSource": {
         "path": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
         "sha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
@@ -21122,17 +21135,48 @@
       ],
       "currentCaseKeys": [
         "strip-drain-case-ledger.json::SD-07",
-        "strip-drain-case-ledger.json::SD-08"
+        "strip-drain-case-ledger.json::SD-08",
+        "agi-case-ledger.json::AG-08"
       ],
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
       "currentStatusSourceLine": 8594
+    },
+    {
+      "id": "BUG-648",
+      "headingLine": 8603,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "agi-case-ledger.json::AG-07"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-16",
+      "currentStatusSourceLine": 8605
+    },
+    {
+      "id": "BUG-649",
+      "headingLine": 8611,
+      "statusCandidates": [
+        "OPEN"
+      ],
+      "currentCaseKeys": [
+        "agi-case-ledger.json::AG-11"
+      ],
+      "historicalCandidateReports": [],
+      "wholeScopeVerified": null,
+      "hasExplicitStatusMarker": true,
+      "statusSnapshotDateMelbourne": "2026-10-16",
+      "currentStatusSourceLine": 8613
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
-  "capturedMelbourne": "15/10/2026, 8:30:28 pm",
+  "capturedMelbourne": "2026-10-16",
   "snapshotHistory": [
     {
       "dateMelbourne": "2026-10-14",
@@ -21290,6 +21334,13 @@
       "narrowCases": 725,
       "caseLedgers": 65,
       "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-16",
+      "scope": "13AGI/strip-reopen checks8PASS3FAIL2UNPROVEN;new648/649 and647storage evidence",
+      "narrowCases": 738,
+      "caseLedgers": 66,
+      "wholeOverallPercent": null
     }
   ],
   "installedCommandInventory": {
@@ -21370,7 +21421,7 @@
     "typedNameOverlapCount": 22,
     "correction": "15October: earlier518uniqueTypedNames countedprimarynamesonly;541includesdeclaredaliases. This iscataloguetext,notruntimeavailabilityorfeaturedenominator.",
     "routeAudit": {
-      "capturedMelbourne": "15/10/2026, 8:02:13 am",
+      "capturedMelbourne": "2026-10-16",
       "catalogueEntryCount": 523,
       "uniquePrimaryNames": 518,
       "declaredAliasReferences": 40,
@@ -25318,7 +25369,9 @@
             "strip-drain-case-ledger.json::SD-06",
             "strip-drain-case-ledger.json::SD-07",
             "strip-drain-case-ledger.json::SD-08",
-            "strip-drain-case-ledger.json::SD-09"
+            "strip-drain-case-ledger.json::SD-09",
+            "agi-case-ledger.json::AG-01",
+            "agi-case-ledger.json::AG-02"
           ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
@@ -25445,9 +25498,32 @@
           "label": "AGI Drain (CDAGI)",
           "group": "Sources",
           "hiddenInCatalogue": false,
-          "nativeAvailability2027": "UNVERIFIED",
-          "nativeTriggerEvidenceCaseKeys": [],
-          "associatedWorkflowCaseKeys": [],
+          "nativeAvailability2027": "OBSERVED",
+          "nativeTriggerEvidenceCaseKeys": [
+            "agi-case-ledger.json::AG-03",
+            "agi-case-ledger.json::AG-04",
+            "agi-case-ledger.json::AG-05",
+            "agi-case-ledger.json::AG-06",
+            "agi-case-ledger.json::AG-07",
+            "agi-case-ledger.json::AG-08",
+            "agi-case-ledger.json::AG-09",
+            "agi-case-ledger.json::AG-10",
+            "agi-case-ledger.json::AG-11",
+            "agi-case-ledger.json::AG-12"
+          ],
+          "associatedWorkflowCaseKeys": [
+            "agi-case-ledger.json::AG-03",
+            "agi-case-ledger.json::AG-04",
+            "agi-case-ledger.json::AG-05",
+            "agi-case-ledger.json::AG-06",
+            "agi-case-ledger.json::AG-07",
+            "agi-case-ledger.json::AG-08",
+            "agi-case-ledger.json::AG-09",
+            "agi-case-ledger.json::AG-10",
+            "agi-case-ledger.json::AG-11",
+            "agi-case-ledger.json::AG-12",
+            "agi-case-ledger.json::AG-13"
+          ],
           "wholeWorkflowAccepted": false,
           "aliasRoutesVerified": false,
           "planMappingReview": {
@@ -25464,7 +25540,7 @@
                 "decision": "Mapped to approved card; implementation not started"
               }
             ],
-            "currentApprovedWorkflowMappingVerified": false
+            "currentApprovedWorkflowMappingVerified": true
           },
           "installedMetadataUxReferences": [],
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
@@ -41188,15 +41264,15 @@
           "installedMetadataUxReferencesAreAcceptanceEvidence": false
         }
       ],
-      "associatedEntryCount": 101,
-      "associatedCaseCount": 724,
+      "associatedEntryCount": 102,
+      "associatedCaseCount": 737,
       "current27LedgerCaseAssociationComplete": true,
       "currentLedgerCaseAssociationComplete": true,
-      "currentLedgerCount": 65,
-      "latestAssociationReconciliation": "15Oct:9newCV04strip checks plus prior4paper checks reconciled; derived counters recomputed from actual entry associations. Not wholeworkflow coverage."
+      "currentLedgerCount": 66,
+      "latestAssociationReconciliation": "AGIactualnative route and saved-strip persistence;no alias/wholeworkflow credit.13newchecks."
     },
     "planMappingReconciliation": {
-      "dateMelbourne": "2026-10-15",
+      "dateMelbourne": "2026-10-16",
       "currentInstalledRegistryHashesUnchanged": true,
       "source": "04_REFERENCE/CARDS/COMMAND_TO_CARD_COVERAGE.md",
       "sourceSha256": "995B0865ACD9FF13F378E62916F9CA6E14867DA651080801D476A8273890BE9F",
@@ -41208,16 +41284,16 @@
       "historicalCandidateMatches": 330,
       "noHistoricalCandidateMatches": 193,
       "ambiguousHistoricalCardMatches": 0,
-      "entriesWithCurrentCaseAssociation": 101,
-      "entriesWithoutCurrentCaseAssociation": 422,
-      "visibleEntriesWithoutCurrentCaseAssociation": 293,
+      "entriesWithCurrentCaseAssociation": 102,
+      "entriesWithoutCurrentCaseAssociation": 421,
+      "visibleEntriesWithoutCurrentCaseAssociation": 292,
       "hiddenEntriesWithoutCurrentCaseAssociation": 129,
       "moduleBreakdown": [
         {
           "bundle": "CE_CVL_SUITE.bundle",
           "total": 137,
-          "caseAssociated": 21,
-          "noCaseAssociation": 116
+          "caseAssociated": 22,
+          "noCaseAssociation": 115
         },
         {
           "bundle": "CE_STRUC_SUITE.bundle",
@@ -44161,10 +44237,10 @@
     }
   },
   "currentNewBugStatusAudit": {
-    "ids": "BUG-570 through BUG-646",
-    "count": 77,
-    "explicitOpen": 77,
-    "method": "All77newrecords remainOPEN;646native25Clineweightleak. Existing531nowhasEBTnative scale evidence;wide scope open. Old215scoped acceptance separate."
+    "ids": "BUG-570 through BUG-649",
+    "count": 80,
+    "explicitOpen": 80,
+    "method": "All80 new root records remain OPEN;648missingAGgrade label and649reversegrade falsepass native.647extended only for AGI real-asset storage. Existing scope acceptance remains separate."
   },
   "authorityInventoryAudit": {
     "dateMelbourne": "2026-10-15",
@@ -44291,7 +44367,7 @@
       "scope": "PreservestheentireV3objective;doesnotturn620checks,523catalogueentriesor39historicalcardsintoafeaturedenominator."
     },
     "workflowCardEvidenceMap": {
-      "dateMelbourne": "2026-10-15",
+      "dateMelbourne": "2026-10-16",
       "source": "04_REFERENCE/CARDS/INDEX.md",
       "sourceSha256": "D418E8A9296DB7567E3F559B2788465E852415CE0E0BDD092B3A1AF4542DE16F",
       "historicalCanonicalCardCount": 39,
@@ -44857,7 +44933,7 @@
             "CE_CVL_SUITE.bundle::80::CDAGI"
           ],
           "visibleCandidateEntries": 5,
-          "caseAssociatedCandidateEntries": 1,
+          "caseAssociatedCandidateEntries": 2,
           "candidateCaseKeys": [
             "strip-drain-case-ledger.json::SD-01",
             "strip-drain-case-ledger.json::SD-02",
@@ -44867,30 +44943,47 @@
             "strip-drain-case-ledger.json::SD-06",
             "strip-drain-case-ledger.json::SD-07",
             "strip-drain-case-ledger.json::SD-08",
-            "strip-drain-case-ledger.json::SD-09"
+            "strip-drain-case-ledger.json::SD-09",
+            "agi-case-ledger.json::AG-01",
+            "agi-case-ledger.json::AG-02",
+            "agi-case-ledger.json::AG-03",
+            "agi-case-ledger.json::AG-04",
+            "agi-case-ledger.json::AG-05",
+            "agi-case-ledger.json::AG-06",
+            "agi-case-ledger.json::AG-07",
+            "agi-case-ledger.json::AG-08",
+            "agi-case-ledger.json::AG-09",
+            "agi-case-ledger.json::AG-10",
+            "agi-case-ledger.json::AG-11",
+            "agi-case-ledger.json::AG-12",
+            "agi-case-ledger.json::AG-13"
           ],
           "candidateCaseVerdicts": {
-            "PASS": 6,
-            "FAIL": 2,
+            "PASS": 14,
+            "FAIL": 5,
             "BLOCKED": 0,
-            "UNPROVEN": 1
+            "UNPROVEN": 3
           },
           "currentDetailedRequirementAudit": "approvedWorkflowRequirementAudits.CV-04",
-          "currentBuiltEligibility": "PARTIAL_OBSERVED: installed legacyCDSTRIP creation/preview/Accept/Undo routes are real and testable. Desired real-asset/compound behaviour contradicts native evidence. Other four surface families remain unverified; historical not-started header is not today’s installed truth.",
+          "currentBuiltEligibility": "PARTIAL_OBSERVED: real installed CDSTRIP and CDAGI creation/preview/Accept/Undo routes. Real-asset storage contradicted; AGIgrade label absent/risinggrade falsepass. CDFW/CDWT/CDSOURCE not native-driven in current index.",
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
           "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": 9,
+          "requirementReviewedNativeCaseCount": 22,
           "nativeBuiltComponents": [
             "CDSTRIP centre/open native creation",
             "Complete pre-Accept geometry preview",
-            "One-operation Undo/Redo"
+            "One-operation Undo/Redo",
+            "CDAGI open polyline/AG_LINE with outlet link",
+            "AGI complete preview/oneUndoRedo"
           ],
           "nativeRequiredGaps": [
-            "Real strip asset identity/storage",
-            "Child MOVE ownership",
-            "Other justifications/Close/one-way/contexts",
-            "CDFW/CDWT/CDSOURCE/CDAGI native workflows"
+            "Real strip/AGI asset storage",
+            "Strip child MOVE ownership",
+            "AGI grade label648",
+            "Reversegrade falsepass649",
+            "Other justifications/Close/oneway/units/UCS/protection/plots",
+            "CDFW/CDWT/CDSOURCE native workflows"
           ]
         },
         {
@@ -46256,13 +46349,13 @@
           "reason": "12historicallymappedentries,no currentcaseassociation; sheets/Excel/publishingneedfulljobcontext."
         }
       ],
-      "currentExecutionCount": 725,
-      "newNativeExecutionsThisReconciliation": 9
+      "currentExecutionCount": 738,
+      "newNativeExecutionsThisReconciliation": 13
     }
   },
   "usageCheckpoint": {
-    "dateMelbourne": "2026-10-15",
-    "usedPercent": 37,
+    "dateMelbourne": "2026-10-16",
+    "usedPercent": 53,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -46278,7 +46371,7 @@
       "endsMelbourne": "2026-10-29"
     },
     "heavyWorkDeferred": false,
-    "newNativeChecks": 261,
+    "newNativeChecks": 274,
     "ownLeaseReleased": true,
     "reserveSupersededBy": {
       "dateMelbourne": "2026-10-15",
@@ -46287,14 +46380,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1567,
-    "retainedDeclaredFiles": 1574,
-    "directScreens": 1334,
-    "directMetadata": 233,
+    "directCaseLinkedFiles": 1602,
+    "retainedDeclaredFiles": 1609,
+    "directScreens": 1350,
+    "directMetadata": 252,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All725cases/65ledgers native evidence freshly rehashed;7older unlinked files retained separately. Static source audit separate;50%UNKNOWN."
+    "scope": "All738cases/66ledgers freshly rehashed;7older unlinked files separate. Static source audit excluded. Whole50%UNKNOWN."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {
@@ -47164,18 +47257,19 @@
     "CV-04": {
       "source": "04_REFERENCE/CARDS/CV-04_SURFACE_DRAINAGE.md",
       "sourceSha256": "74AB4A33861D6CA15347049A7CBE1BE8FDC394E7B4AF545E23836688726ECEBF",
-      "scope": "All15 approved decisions read;9scoped native checks in1ledger on existingCDSTRIP. Wholecard unaccepted; other4families remain.",
-      "nativeCaseCount": 9,
-      "nativeLedgerCount": 1,
+      "scope": "All15approveddecisions reviewed;22nativechecks/2ledgers,CDSTRIP and CDAGI bounded contexts.Wholecardunaccepted.",
+      "nativeCaseCount": 22,
+      "nativeLedgerCount": 2,
       "wholeWorkflowAccepted": false,
       "requirements": [
         {
           "id": "CV4-1",
           "required": "Keep all five familiar commands.",
           "assessment": "PARTIAL",
-          "reason": "CDSTRIP is available and driven. Other four familiar command routes still require native evidence.",
+          "reason": "CDSTRIP and CDAGI actual native routes available; CDFW/CDWT/CDSOURCE remain.",
           "caseKeys": [
-            "strip-drain-case-ledger.json::SD-01"
+            "strip-drain-case-ledger.json::SD-01",
+            "agi-case-ledger.json::AG-05"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47193,9 +47287,10 @@
           "id": "CV4-3",
           "required": "Store strip drains, FWs, tanks, AGIs and generic sources as their real asset types—not fake pits.",
           "assessment": "FAIL",
-          "reason": "Accepted SD1 is stored in pits[] as STRIPDRAIN with pit-shaped defaults, contrary to real-asset requirement; BUG647.",
+          "reason": "Accepted SD1 is stored in pits[] as STRIPDRAIN with pit-shaped defaults, contrary to real-asset requirement; BUG647. AGI1 also in pits[]/AGI with450/450 and900defaults; actual entity/outlet handles do not establish a real asset type.",
           "caseKeys": [
-            "strip-drain-case-ledger.json::SD-08"
+            "strip-drain-case-ledger.json::SD-08",
+            "agi-case-ledger.json::AG-08"
           ],
           "wholeRequirementAccepted": false
         },
@@ -47291,21 +47386,32 @@
         {
           "id": "CV4-14",
           "required": "`CDAGI` ships its approved line type with CE. Remove Timothy’s personal template dependency; preview open/closed geometry and store the actual entity—not copied coordinates in remarks.",
-          "assessment": "UNTESTED",
-          "reason": "This requirement was read; its own native workflow/context has not been executed in this batch.",
-          "caseKeys": [],
+          "assessment": "PARTIAL",
+          "reason": "Native open3vertex LWPOLYLINE on AGI DRAIN; full AG_LINE contains AG lettering, actual entityHandle936 stored. Clean staff-PC/template independence, closed run, plot/protection/UCS contexts unproved. Grade label absent648; reversegradeverdictwrong649 under UX-SURF-04.",
+          "caseKeys": [
+            "agi-case-ledger.json::AG-05",
+            "agi-case-ledger.json::AG-06",
+            "agi-case-ledger.json::AG-07",
+            "agi-case-ledger.json::AG-11"
+          ],
           "wholeRequirementAccepted": false
         },
         {
           "id": "CV4-15",
           "required": "Apply each compound atomically with one Undo and targeted nearby updates. Automated evidence covers cancel, copy, UCS, block origin and large drawings; Timothy checks one strip, tank and AGI in about five minutes.",
           "assessment": "PARTIAL",
-          "reason": "One Undo and delayed Redo restore exact objects and decoded project. Escape preserves geometry/settings/engineering fields but renames stored drawingPath. Copy/UCS/protection/large drawings/tank/AGI still untested.",
+          "reason": "Strip and AGI oneUndo/delayedRedo exact ordinary objects and decoded project. RepeatAGI Cancel NOD exact; firstrename invocation updates path/unitmetadata. COPY/UCS/protection/large drawings/tank remain.",
           "caseKeys": [
             "strip-drain-case-ledger.json::SD-02",
             "strip-drain-case-ledger.json::SD-05",
             "strip-drain-case-ledger.json::SD-06",
-            "strip-drain-case-ledger.json::SD-09"
+            "strip-drain-case-ledger.json::SD-09",
+            "agi-case-ledger.json::AG-03",
+            "agi-case-ledger.json::AG-04",
+            "agi-case-ledger.json::AG-09",
+            "agi-case-ledger.json::AG-10",
+            "agi-case-ledger.json::AG-12",
+            "agi-case-ledger.json::AG-13"
           ],
           "wholeRequirementAccepted": false
         }
