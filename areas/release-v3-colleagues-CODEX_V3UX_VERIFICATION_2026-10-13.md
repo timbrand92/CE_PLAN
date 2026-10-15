@@ -736,3 +736,400 @@
 533. **Coverage gaps:** workbook/cell/hash provenance, calculation-to-element links/conflicts, distinct floors and governed learning, preview-beforeApply/Undo, controlled engineering cell edits, schedule MOVE/COPY/ERASE, read-only sheet scanning, QA gate, PDF overwrite protection and isolated complete publishing remain untested. Ten installed catalogue route candidates do not establish runtime availability; ghost visibility/retirement still unproved. Detailedapprovedaudits12cards/180numberedrequirements; remaining27cards plusCV01J/laterV3UX/builtcontextunion. Native762/70unchanged592P139F7B24U;1698directfiles/1705retained unchanged. Weekly99used1left/noresetorpaidcreditsconsumed. GoalACTIVE/whole50%UNKNOWN. NextCDWT and native source/schedule gaps; do not count staticaudit as executedtests. No UI/source/build/install/agents/messages. Undo:revertthisdocumentationcommit.
 
 534. **Allowance exhausted —16 October2026:** previous goal turn PROGRESSec19a50d/fullST07audit. Fresh account meter100%used, ordinaryUsageAllowed=false/rate_limit_reached, resetcredits0. Reported weekly reset22October2026at17:13:22Melbourne. No native batch started this turn. Account paid-credit balance62431.2616635000 versusprevious62498.3763810000; account-wide decline observed, attribution tothischat unestablished. No further paid work authorised by this testing lane. GoalACTIVE/first allowance-blocked turn; not complete/paused. Native762checks/70ledgers unchanged. Restart: check ordinary allowance, thenCDWT,sourceCustom/duplicates/MOVE/COPY/connected/reopen/protection/units/UCS/plots,remaining27canonicalcards/laterV3UX/contexteligibility. Existing resumption heartbeat retained; no duplicate created. Owned AutoCAD lastverifiedempty/lease released in97318364; notfreshUIcheckedthisturn. Undo:revertthisdocumentationcheckpoint.
+
+
+## Handoff 16 October 2026 03:39 Melbourne from CE_ACAD / release-v3-colleagues / test / 01 to Claude
+
+1. **Tim's instruction and Claude's discretion:** Tim asked, verbatim, "give me a handoff for claude with everything you have done and allow them to decide how to proceed". This is the transfer package for the existing Claude release/controller chat. Claude decides whether to prioritise repairs, candidate integration, more native tests or denominator reconciliation after checking current authority and available usage. The suggested next items below are options, not a mandated sequence. Do not ask Tim to relay old findings or make routine implementation choices.
+
+2. **Chat/model:** source Codex thread01a1340f-889f-7ea3-a1dd-6eca1fb8dd8a, conventional name CE_ACAD / release-v3-colleagues / test / 01. Intended recipient is the existing Claude CE release controller; retain its current name/settings. If starting a genuinely new continuation, NAME THIS CHAT: CE_ACAD / release-v3-colleagues / test / 02. No new chat, worker or Claude message was created/sent by this handoff. Codex model/thinking setting not established from an authoritative setting read; no invented model claim. Claude chooses its own model/thinking appropriate to cross-workflow review and fixes.
+
+3. **Authority/read order:** C:/TimOS/RULES.md, ROUTER.md, C:/CE_PLAN/START_HERE.md; existing release charter/holiday decisions; decisions/2026-10-13_TEST_ALL_BUILT_V3_UX.md; 04_REFERENCE/ux-plan/V3_UX_PLAN.md and decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md. Source AGENTS/START_HERE claims that only Tim can drive AutoCAD are stale against RULES4.5 amendment27Sep: scoped Codex native PASS with screenshots/steps can be Codex-accepted. Engineering judgement remains Tim's. No new deploy or paid-credit authority is created by this handoff; Claude checks the authority applicable to its own lane.
+
+4. **Live installation freshly checked for this handoff:** Civil3.0.49+48662dddb2dc36d09a121642f36aecc2465cc673, ModernDLL SHA8B5DE63487681867E60F52BA76A19FE16F26F1A246E2992AF7574305B14783BB. Structural1.0.116+f180b349a88617070a8517b563b2df7b5854131e, SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Manager1.1.49+48662dddb2dc36d09a121642f36aecc2465cc673, SHADFC3F5F2CC84B410EA95CF5931BA2310AA66D56D37B4B9EBDEC403FC8A48354D. Paths under %APPDATA%/Autodesk/ApplicationPlugins/CE_<suite>.bundle/Contents/Win64/Modern/. These are installed facts, not acceptance of the entire build. #24 updated23Sep00:11:45UTC and #78 updated13Oct09:03:39UTC; timestamps freshly read, bodies are not fresh deployment proof. Reread DLLs/#24/#78/REGRESSION_LOG before integrating.
+
+5. **Saved state/branches:** plan main pushed at65414964305435cb6d9d6e0d80264df7d50968c1 before this handoff, HEAD/origin/main0/0. Previous substantive saves:97318364 CDSOURCE, ec19a50d ST07audit, f8e5608c FWreopen,967cfa1e ST02/ST06audit,ecd531b8 source recovery/Civil audits. This handoff is committed separately. Main code checkout C:/Lisp Files/CE_ACAD_PLUGIN remains old master650c0c19 with other chats' work: never edit/reset it. C:/ce-uxv13 is currently codex/timber-picker-status-20261015 at30e0cffe; do not assume it is Civil48662ddd. Other own worktrees: C:/ce-calc-warnings-uxv13; C:/Users/TimothyBrand/.codex/worktrees/{manager-header-contrast,pit-remark-regression,calc-export-regression,catchment-result-state}/CE_ACAD_PLUGIN. Their exact heads are in the PR list below. Preserve existing branches and all other chats' worktrees.
+
+6. **Safe stop/usage:** no dotnet/testhost/vstest process was returned by the handoff process check. Two acad processes12844/62380 remain; do not terminate them. C:/ce_rc_drv/ACAD_LOCK.json freshly absent. Last native close verified owned window778113170 empty; other window87364294/CODEX_REPORT_INTAKE_20261015.dwg was left untouched and has unresolved input/recovery fault595. Windows were not freshly UI-inspected for this handoff, so reselect returned windows before input. WeeklyCodex meter last100%used/ordinaryUsageAllowed=false, no reset credits; reported reset22Oct17:13Melbourne. Testing hit the requested zero allowance and stopped. Account paid balance fell during account-wide observations; attribution to this chat is unproved. Repeated automatic continuations occurred after blocking; do not describe them as testing progress or proof of no credit cost. Check Claude's own budget separately. A saved heartbeat named ce-autocad-testing-resume-after-weekly-reset was recorded for20/27Oct16:05 through29Oct; not revalidated or modified here. Coordinate it if taking over to avoid duplicate writers/test sessions.
+
+7. **Done—native evidence:** current machine-linked index contains762 scoped native checks in70ledgers:592PASS,139FAIL,7BLOCKED,24UNPROVEN. Direct evidence1698files=1389screens+309metadata;1705retained includes7olderunlinked files. Fresh hash verification at last native batch found0missing/mismatch/conflicting hashes and0duplicatecasekeys.298new native checks since use-to-zero override;98earlier recovered checks are separate accounting, not freshly rerun. PASS may be a bounded control/cleanup/window assertion, not full workflow acceptance. Failed executed checks count testing performed; acceptance is separate.
+
+8. **Done—full audit trail, not a second plan:** this area file items1–534, companion areas/release-v3-colleagues-CODEX_UI_FUNCTIONAL_REPORT_2026-10-14.md, areas/release-v3-colleagues-CODEX_COVERAGE_INDEX_2026-10-14.json, BUG_CARPARK.md and PENDING_TESTS.md are the authoritative saved records. Local-only receipts under C:/Lisp Files/_TEST_COPIES_20260923/V3UX_20261013 and V3UX_20261014. Current local762case index is V3UX_20261014/coverage-case-index-current.json: exact scope/outcome/casekey/planCard/bug associations/file hashes. Every ledger below is relative to V3UX_20261014. Read the actual cases and screenshots before reusing an assertion; the one-line ledger descriptions below are only navigation. No DWGs/screens/client-bearing evidence go into the plan/code repository.
+
+9. **Done—coverage reconciliation:**526explicitUXIDs/600rootBUGheadings/22UXscope reviews,20UXIDs have explicit currentCaseKeys;94bugIDs case-linked.523installedcatalogue entries,104case-associated;761of762casekeys route-associated (one historical cleanup unassociated). Civil/Structural/Manager catalogue presence is not native route availability. All39canonical source records retrieved:34plan/archive files plus5foundation documents recovered read-only from immutable code48662ddd/docs/workflows (FND01,CT01,TH01,RS01,PD01).600numbered source requirements across38cards indexed, with unnumberedCV01J retained. BUG639 stillOPEN because11written source links remain unresolved despite recovered content. Static inventory/recovery receipts are local canonical-requirement-inventory-20261016.json and canonical-source-recovery-20261016.json, excluded from native counts.
+
+10. **Half-done—whole V3/UI/UX denominator:** twelve detailed full-card audits cover180numbered requirements:ST01–07,CV03,CV04,CV06,CV07,CV08. Exact assessments/casekeys are approvedWorkflowRequirementAudits in the shared JSON.27cards still need detailed review, plus approval prose/refinements, unnumberedCV01J and laterV3/UX union. Built component eligibility and required contexts are incomplete. Historical7%was text-matching and is not a verified current percentage. Neither762/526 nor104/523 nor180/600 proves the requested50%. Whole tested percent and whole accepted count remain UNKNOWN. Do not set completion by selecting an easier denominator; preserve all built Civil, Structural, Manager and cross-cutting scope.
+
+11. **Done—automated/source checks, separate from native:** full Civil at48662ddd console17217total/17197PASS/1FAIL/19SKIP; TRX17245total/17198executed,47NotExecuted. Difference explicitly retained. Failure is existing307 GlenEira historical backtest:1.69m³ vs2.58m³/34.577% against30%; do not change engineering values/tolerances. Initial DesignCore509PASS on Civil branch is separate from exactStructural. Manager corrected Temp-log fixture749PASS/0FAIL; initial3Temp-guard failures were runner setup. Shared CE.AI.Core42, Harness55, Spine81, Diagnostics19, CommandTruth64, shared test-harness/windows101, release-contract16 allPASS; no live provider call implied. Civil produced394windowPNGoutputs, not all personally inspected. Installer suite280executed244PASS36FAIL0SKIP, existing478. ExactStructuralDesignCore repaired2056PASS/0FAIL; Standalone net48/net8/net10 and HostedModern builds0errors at1.0.116+f180. BroadStructural suite never completed cleanly: later4331PASS/0executedfailures/1unexecuted still ResultSummaryFailed/TestRunAborted; excluded hostile compiled proofs not accepted. See area19–48 and local TRX/logs for all earlier/failed attempts. No aggregate all-tests-green claim.
+
+12. **Root causes/diagnostic findings:** inherited process PATH8193characters exceeded cmd8191limit and caused9009 for otherwise-present git/powershell; bound only child-process PATH, no machine/user environment change. Missing AutoCAD folder on runner PATH caused ZERO test discovery; rerun with actual dependencies and count executed tests. Structural proof tests had stale1.0.78version assumptions, wrong Standalone/x64receipt lookup and an overstrict constructor-wrapper guard; test-only1254 repairs these. Native dump hot stack in Mono.Cecil hostile mutated-assembly serialization explains stronger timeout locality, but exact malformed-fixture cause remains unisolated. Inspector type only reads legacyCE_CVL_PIPE while full editor also readsPIPE_LINK; diagnosed read-path mismatch, servicefix belongs behaviour lane. Other suspected internals stay hypotheses unless logs/source/native probes establish them.
+
+13. **Half-done—ten banked PRs:** all freshly read from GitHub for this handoff as OPEN/DRAFT/unmerged; none installed by Codex. Claude decides independent review, whether to combine/rebase/cherry-pick and what merits release under its own authority. Keep test-only RED guards with their actual repair, never merge them merely to clear the list. Exact list follows.
+
+1. **PR1253—Installer test Git executable/path escape:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1253; head26ea12a275a6a2688885be95a46bf00fcc7d83f6; baseclaude/rel-20261010b. Test tooling; installer suite remains244PASS/36FAIL, not shipping acceptance.
+
+2. **PR1254—Structural receipt/version/screenshot/constructor proof repairs:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1254; head3af7d6b24874742d0f56ec4e98b80f661deaa548; baseclaude/rel-20261009y. Test tooling; DesignCore2056PASS. Broader Structural run still aborted. Constructor guard exception needs independent review.
+
+3. **PR1255—Manager Light header logo contrast, BUG580:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1255; head8789a8eddec984258782646fb99733f7da7b90bf; baseclaude/rel-20261010b. Window-only candidate; modern/net48 build and3appearance checks; candidate pictures inspected, no installed native acceptance.
+
+4. **PR1256—Pit Schedule custom remarks, BUG586:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1256; headb56b225046990b7d195b4749aa2c2329d1a04802; baseclaude/rel-20261010b. RED tests only. Do not merge alone or mistake guards for a fix.
+
+5. **PR1257—Existing Boyd warning displayed beside inputs, BUG515/507 context:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1257; head4ede9332a2e1f83df9559c6a7b0820a14048a31a; baseclaude/rel-20261010b. Window-only warning candidate;24focusedPASS and net48 build. No formula, Unknown-as-zero or fixed-rainfall repair; source pictures inspected, not installed.
+
+6. **PR1258—Calculation/import/comparison regression guards:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1258; head0f2022b517867ad5b6e215922a80d039af71bbdb; baseclaude/rel-20261010b. Expanded RED tests-only bank: frozen exports, rating-report format/newest ordering, pipe/charged result availability, later import/comparison guards. Inspect final diff/REGRESSION_LOG; separate run receipts, not an aggregate green suite. Do not merge alone.
+
+7. **PR1259—Calculation window Unknown state/manual-source provenance/loss units:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1259; head4a2f90f8d6fc0c16df427be57da141019c0bdca9; baseclaude/rel-20261010b. Window/draft candidate for593,596,598. Latest65modernPASS; net48 builds, no runtime pass. Full export/approval consumer integration and real AutoCAD candidate retest remain.
+
+8. **PR1260—Checklist close lifecycle, BUG609:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1260; head6e01714abaff48143e29837a74a95592c4fe1517; basecodex/v3-ux-struc-test-20261013. RED tests only, stacked on1254.3modern checks2PASS/1FAIL; no production lifecycle fix.
+
+9. **PR1261—Ninth column-picker keyboard instruction, BUG576:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1261; headb2e56d16b00b2dcc57cfeb293aba1a32f9701906; baseclaude/rel-20261009y. Window caption candidate; both builds0errors/0warnings. Corrected window not rendered/installed/native accepted.
+
+10. **PR1262—False Timber steel-search status/readable section feedback, BUG611:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262; head30e0cffe6e7750c0337dc836a3843bbf26122f9a; baseclaude/rel-20261009y. Window candidate;16focusedmodernPASS, original-condition guards fail twice, both builds0errors/0warnings;14renders. Corrected PR base from master so9intendedfiles only. Native bug remainsOPEN.
+
+14. **Recent failures that change the next action:** BUG650 occurs when CDFW or CDSOURCE is cancelled before placement: P1/P2 stored inverts20.000/19.800 become blank while ordinary geometry and controls remain unchanged. Successful floor-waste placement repeats it. One Undo of that placement restores the original project; Undo of CDSOURCE restores only its post-earlier-Cancel baseline.
+
+    **Critical qualification:** saved floor-waste reopening returns both known invert strings. Permanent loss is NOT established. Isolate save/reopen timing and downstream consumers before claiming cause, persistence or repair.
+
+    **Other surface failures:** BUG647 covers loose strip-drain children/fake pit storage, AGI fake-pit storage and CDFW refusal after those fresh CE sources. BUG648 is the absent AG grade label;649 is a rising AG drain towards its selected outlet receiving a passing grade verdict. All remain open.
+
+
+15. **What recent source controls actually prove:** isolatedFW1/FW2 have distinct CE-CIV-SRC sourcegraphs and ownedlabels; source-onlyMOVE carries label1000mm, otherobjects exact; oneUndo/delayedRedo and warned/refusedoverlapCancel exact withincapturedscope. SavedFWreopen retains fourbody/labelrecords and sourcegraphs; unrelatedanonymousblocknamechangedU13→U12,definitionequivalenceunproved. CDSOURCEoffersapprovedcategoriesfirst/Customlast, placesROOF DRAIN1, pickedpoint(-3051.11,-1879.92,0)matchesSOURCEinsert; SOURCE/nestedorigin/circlecentreszero,old211moffsetabsentinthismm/WorldUCSinstance. No addedfakepitrow. OneUndo/delayedRedo53.922s exact. Custom/duplicates/connectedMOVE/COPY/othercategories/fullmovingpreview/plots remain. Last specimen C:/Lisp Files/_TEST_COPIES_20260923/V3UX_20261014/linked-fall/CODEX_GENERIC_SOURCE_20261016.dwg162567bytes/SHA478B58D9DF7EBB465982DA2362D298D8767FB0B472F8E1E5701AD12BA78A63D9; not reopened. FWcontrol162116/SHA9F1EE7DAF77CB50C594669B5F831DD228DA481D64271416BF75464713DEE00D7 was reopened. Sourceoriginal157421/SHA4EB759D161594FE63AE3162CDFD530836ED3D43107841DA6760BF51170AA57A0 unchanged at its last use.
+
+16. **Untested work remains substantial:** CDWT modes, capacities, compound grouping and Cancel; source Custom and duplicate rejection; connected editing, protected objects, different units/UCS, paper space, older AutoCAD, plots and performance. Structural gaps include shared supports, foundation hosts, COPY identities, regeneration and reinforcement.
+
+    **Schedules/publishing:** Excel intake, calculation links, engineering-edit previews, native view MOVE/COPY/ERASE, read-only sheet scan, QA gate, complete isolated PDF publishing and overwrite protection remain unproved. ST07 has three partial and twelve untested requirements; ES40 is only saved footing-value readback, not a new FSTEXPORT invocation.
+
+    **Repair/migration:** all15 CV08 requirements remain untested in the current native index. Held source/test claims and catalogue entries do not prove a public native route. Claude chooses the next risk and coverage balance.
+
+
+17. **Parking lot/bugs:**81newBUG570–650wereOPENatlastfullstatusaudit; no claim they are fixed bycandidatePRs. Onecarpark only,C:/CE_PLAN/BUG_CARPARK.md, everycase has reproduction/expected/observed/guard/retestor explicitlimits. Existingbugs such as307/360/478/517/567/568 also received evidence. BUG215 has a separate scoped nativeacceptance entry, not a global53historicalFIXEDrecount. Improvements/upgrades are logged as requirement gaps and approved workflow differences inreport/index, not silently treatedasnewbugs orTimdecisions. No newstandaloneidea register created. The bugheadingnavigation listbelow coversall81newIDs; shortbareheadingsrequireopeningtheirbody.
+
+18. **Questions reserved for Tim:** no new decision is needed for this handoff. Existing engineering judgement remains his, including BUG307 historical coefficient/value interpretation and unresolved sizing, standards or output conventions. Check the saved decisions first; never convert an unanswered question into a default. Consolidate representative visual/engineering acceptance only where evidence cannot settle intent; do not hand Tim81individual manual checks.
+
+
+19. **Mistakes and qualifications:** earlier checkpoint replies ended too soon and needed Tim to request continuation. A shared coverage summary lagged its saved local ledger; recordingReconciliation rebuilt it and recovered Q/QD cases and numeric bug links without rerun credit. One render-test edit occurred during compilation; final verification was repeated after edits stopped.
+
+    **Runner/review corrections:** git status masked a dotnet exit, so retained TRX/abort text established failure. PR1262 initially had the wrong base and2347unrelated files; it was retargeted to installed Structural source, leaving9intended files. Incorrect Temp paths, zero discovery and stale receipts were corrected with failed attempts retained.
+
+    **UI and usage:** some clipboard/focus attempts opened Help/PASTECLIP or targeted the wrong field; input was reobserved, corrected and not counted as a product fault. Generated images alone are not native acceptance. Automatic turns continued after allowance exhaustion despite a blocked goal; they added no tests and account-credit attribution remains unproved.
+
+
+20. **Ownership:** Codex owned the five plan files named in item8 and only its PR/worktree changes plus regression entries. Other chats have dirty QUEUE and desk_jobs files in C:/CE_PLAN. Never stage the whole folder, reset, rebase, force, clean or prune their work. Claude may take responsibility for these handed-over records after coordinating writers; this handoff does not transfer unrelated controller files.
+
+    **Integration boundary:** specific PR ownership is not blanket ownership of shared runtime files. Inspect pending PRs and working copies before edits. Every build/test retains -p:SkipDevBundle=true -nr:false --disable-build-servers. No new build/deploy/versioning script was created. This testing lane made no deployment or provider request.
+
+
+21. **Native continuation method:** use the supported computer-use tool and a returned window; verify its actual title and drawing before input. Acquire C:/ce_rc_drv/ACAD_LOCK.json with create-new and release only exact owned content. Test drawing copies only; capture installed version, original controls and relevant preferences. One UI action then a fresh observation; use the main screenshot ID rather than a tooltip crop.
+
+    **Evidence boundaries:** typed commands/clicks prove UI routes. Read-only AutoLISP ordinary entity/Xdata, named-object dictionaries and targeted source/label graphs prove only the captured data. Normalise session entity addresses, never real differences. Ordinary-object/NOD equality is not whole-DWG or symbol-table equivalence. Record delayed Redo elapsed time and intervening commands.
+
+    **Cleanup:** restore original controls, close normally, verify fixture/source/preference hashes and release the lease. Never kill the old BUG595 session or take another owner’s window/lease. Revalidate these conditions because the last native close is historical to this handoff.
+
+
+22. **Complete native ledger navigation:** these70batches sum762currentcasekeys. P/F/B/Uarechecks,notwholefeatures. Exactsteps/outcomes/screensareineachledgerandcurrentcaseindex.
+
+1. **wind-bracing-case-ledger.json—22checks:** PASS 20, FAIL 2. First recorded scope: Visible panel; zero provided lengths, required not set; Refresh and X work
+
+2. **floor-roof/case-ledger.json—11checks:** PASS 9, BLOCKED 2. First recorded scope: Disabled entry states no output and missing Settings page
+
+3. **rafter-joist/case-ledger.json—5checks:** PASS 3, FAIL 2. First recorded scope: Actual RT1 output, default tag retained
+
+4. **rafter-joist/joist-purlin-case-ledger.json—7checks:** PASS 4, FAIL 3. First recorded scope: FJ1-UNDO-DELAYED-REDO
+
+5. **purlin-lap/case-ledger.json—11checks:** PASS 8, FAIL 2, UNPROVEN 1. First recorded scope: P1-No-completion
+
+6. **flat-pipe/case-ledger.json—7checks:** PASS 5, FAIL 2. First recorded scope: New100UPVC/free-end/Standard route
+
+7. **schedule-write/case-ledger.json—6checks:** PASS 5, FAIL 1. First recorded scope: Staged P2 inlet value
+
+8. **schedule-placement/case-ledger.json—10checks:** PASS 6, FAIL 4. First recorded scope: Existing-schedule detection and two-row step navigation; not fresh placement
+
+9. **plan-level/case-ledger.json—16checks:** PASS 13, FAIL 1, BLOCKED 2. First recorded scope: LEVEL-UNKNOWN-ENTER
+
+10. **spot-fall/case-ledger.json—18checks:** PASS 17, UNPROVEN 1. First recorded scope: First insertion Escape; no visible symbol
+
+11. **suggested-fall/case-ledger.json—14checks:** PASS 14. First recorded scope: Enter finishes empty session
+
+12. **linked-fall/case-ledger.json—18checks:** PASS 16, FAIL 2. First recorded scope: Spot Level ribbon icon starts CDSL
+
+13. **rainfall/cases.json—15checks:** PASS 15. First recorded scope: Window and footer fit actual screen
+
+14. **calculations/cases.json—12checks:** PASS 9, FAIL 3. First recorded scope: Installed window opens and footer fits
+
+15. **calculations/export-cases.json—14checks:** PASS 9, FAIL 4, UNPROVEN 1. First recorded scope: Saved 9.42m3 restored, advisory notice remains
+
+16. **calculator-consumers/cases.json—17checks:** PASS 12, FAIL 5. First recorded scope: Restored300/.013/100 display96.70Lps/1.37mps
+
+17. **catchment-rows/cases.json—10checks:** FAIL 1, PASS 8, BLOCKED 1. First recorded scope: Restored manual zero must not retain a ticked numerical row
+
+18. **report-intake/cases.json—9checks:** PASS 4, FAIL 3, UNPROVEN 1, BLOCKED 1. First recorded scope: Folder climb finds synthetic job and checks two PDFs
+
+19. **report-intake/fresh-cases.json—13checks:** PASS 10, FAIL 3. First recorded scope: Separate installed AutoCAD session opened the owned fresh copy and accepted command input; old session not recovered
+
+20. **calculator-remaining/cases.json—12checks:** PASS 9, FAIL 3. First recorded scope: Charged tab/input/result/footer fits actual1558x990 window; layout only, no engineering acceptance
+
+21. **profiles/cases.json—23checks:** PASS 18, FAIL 3, UNPROVEN 2. First recorded scope: CDPROFILE starting-pit Escape returns native prompt without opening review or placing a profile
+
+22. **landxml/cases.json—13checks:** PASS 8, FAIL 4, UNPROVEN 1. First recorded scope: Actual LandXML Source window fits1146x753 with plain source summary and Read disabled without chosen source
+
+23. **drawing-check/cases.json—7checks:** PASS 5, FAIL 1, UNPROVEN 1. First recorded scope: Current saved drawing check opens real seven-finding list,summary87.1%/3layers/3QA/1scheduleissue;fits966x654. No engineering acceptance.
+
+24. **comparison/cases.json—6checks:** PASS 4, FAIL 1, UNPROVEN 1. First recorded scope: ExplicitreferenceDWGpicker770andCancel771returntonativecommand;noautomaticcorpusreference.
+
+25. **structural-checklist/cases.json—16checks:** PASS 12, FAIL 3, UNPROVEN 1. First recorded scope: CECHECKLISTopensper-drawingNoChecklist;actualblanktemplateselectorApplydisableduntilprojecttypechosen.
+
+26. **structural-sections/cases.json—18checks:** PASS 13, FAIL 3, UNPROVEN 2. First recorded scope: Actual SBEAM window opens/fits1326x951 with header/catalogue/preview/properties/scale and visibleCancel/Place.
+
+27. **structural-rc/cases.json—28checks:** PASS 24, UNPROVEN 2, FAIL 2. First recorded scope: ActualRCBEAM visualpicker fits,PlainplusType1-8thumbnailchoices visiblewithCancel/Place. OnlyPlainexecuted,ninechoicesnotninegeometriesaccepted.
+
+28. **early-civil-case-ledger.json—37checks:** PASS 28, FAIL 9. First recorded scope: CDS cover search returns four relevant results and opens Design.
+
+29. **early-structural-case-ledger.json—41checks:** PASS 32, UNPROVEN 1, FAIL 8. First recorded scope: CESETTINGS13main pages plusnestedsections23distinctpages visuallyfit1080p/footer; one layout group,not23functionalPASSorengineeringapproval.
+
+30. **early-manager-transform-case-ledger.json—20checks:** FAIL 5, PASS 14, UNPROVEN 1. First recorded scope: CEMANAGERdefault1311x1073andmax1920x1080Statuscards overlap Runningnowversion/hash with Installednextstart onall3cards; underlyingversionscorrect.
+
+31. **hatch-library-case-ledger.json—8checks:** PASS 7, FAIL 1. First recorded scope: Installed CEHATCH opens real library; named preset cards, default concrete-slab live preview and layer/pattern/colour/scale/angle details visible. One window assertion, not all presets accepted.
+
+32. **hatch-output-case-ledger.json—13checks:** PASS 12, FAIL 1. First recorded scope: CH Objects at DIMSCALE20/LTSCALE200, selected closed rectangle and Enter creates one concrete hatch. No other boundary selected.
+
+33. **hatch-alias-case-ledger.json—12checks:** PASS 11, FAIL 1. First recorded scope: EH preselected rectangle/Objects creates one EARTH native associativeHATCH C30/HATCH EARTH/scale40/angle0.785398/layercolour11 at verified100/1000. Output only, no plotted-density approval.
+
+34. **xrl-case-ledger.json—9checks:** PASS 7, FAIL 2. First recorded scope: XRLINFO accurately reports2instances/1unique/2regular/0overlay and configuredXREF colour7 Continuous; read-only information.
+
+35. **xref-settings-copy-case-ledger.json—6checks:** PASS 5, FAIL 1. First recorded scope: XRLCONFIG directlyopensStructuralSettings/XrefLayer, visibleXREF/7/Continuous matchactualXRLINFOconfiguration; allthreefieldlabels/Save/Cancelvisible atcurrent1920screen. Otherresolutions/keyboard/taborder notaccepted.
+
+36. **hatch-audit-change-case-ledger.json—4checks:** FAIL 2, PASS 2. First recorded scope: CEHATCHAUDIT at100/1000/24nativehatches/105entities defaultsReport; acceptingReportfails eInvalidKey beforeproducingcounts/findings. Commandstatesfailedbeforefirstdrawingchange.
+
+37. **hatch-batch-gap-case-ledger.json—5checks:** PASS 4, FAIL 1. First recorded scope: CEHATCHBATCHuses2preselectedclosedrectanglesC98/C99 at100/1000. ConcreteSlabcreates2independentnativeHATCHC9B/C9C,AR-CONC/HATCH11/scale1/angle0/assoc1/oneloop/boundarylinkeach;107→109entities,24→26hatches.
+
+38. **hatch-gap-case-ledger.json—6checks:** PASS 5, FAIL 1. First recorded scope: Negative gap tolerance -1 refused with Value must be positive and repeated tolerance question; subsequent default5 accepted.
+
+39. **hatch-gap-recovery-case-ledger.json—4checks:** PASS 4. First recorded scope: Gap-created native hatchD01 survives actual close/reopen of exact savedDWG;27hatches112entities/HPGAPTOL0. Full hatch record matches before save after normalising session entity addresses; boundary geometry still open.
+
+40. **dimensions-case-ledger.json—12checks:** PASS 10, FAIL 2. First recorded scope: AD opens native aligned-dimension prompt; first Escape leaves114entities unchanged and restores layer0/snaps21759.
+
+41. **radius-case-ledger.json—6checks:** PASS 5, FAIL 1. First recorded scope: RD Radius selects known R1000circle; livepreview and actual native radial DIMENSION E00 on25DIMS,1000mm. Native circle/link retained after Redo.
+
+42. **mleader-case-ledger.json—10checks:** PASS 7, FAIL 2, UNPROVEN 1. First recorded scope: MLL arrow→note→left-placement creates one native MULTILEADER E08 on25DIMS, left dogleg-1 and retained two-paragraph MText. Inherited0.18mmtext atscale100 gives18mmmodelheight; no readability acceptance.
+
+43. **quick-leaders-case-ledger.json—12checks:** PASS 9, FAIL 3. First recorded scope: Q at1:100 first-point Escape adds no object:118 before/after; layer0 and snaps21759 restored.
+
+44. **mll-clean-case-ledger.json—9checks:** PASS 8, FAIL 1. First recorded scope: MLL arrow-point Escape retains122objects; no output added.
+
+45. **levels-case-ledger.json—10checks:** FAIL 3, PASS 7. First recorded scope: LMU accepts native ordinary TEXT F41 GENERAL NOTE KEEP onlayer0/noCEtags; entered10.500 replaces whole note immediately without affected-reference preview/Apply. Approved ST3-8 recognition boundary fails.
+
+46. **breakline-case-ledger.json—7checks:** PASS 5, FAIL 2. First recorded scope: First-point Escape adds no object:127 before/after; all10 staged controls identical.
+
+47. **sectionmarks-case-ledger.json—7checks:** PASS 4, FAIL 3. First recorded scope: Typed SM initial Pick/? prompt Escape adds no objects:132 before/after; eight staged controls unchanged.
+
+48. **dimrepair-case-ledger.json—6checks:** FAIL 3, PASS 3. First recorded scope: Typed DSET rejects actual native RotatedDimension1098 at line1000,653 and text807,648 with Please select a dimension. DSET1 same line click accepts1found as positive control. Escape returns normally.
+
+49. **dimcancel-case-ledger.json—9checks:** PASS 6, FAIL 2, UNPROVEN 1. First recorded scope: DSET first selection Escape returns No dimension selected; complete captured entity/Xdata records and nine staged controls equal native baseline.
+
+50. **dimprotection-case-ledger.json—9checks:** PASS 7, FAIL 2. First recorded scope: ActualDSET1 clicks900,568and710,710 selecttwoTIM LEADERdimensions;reportsConverted1Skipped1. After nativeUndo/delayedRedo, completeordinaryentityrecordcomparison shows onlyeligible110Bchanged, nativefactor0.2; allotherobjects/controls/layerrecordunchanged. Scope/dataonly;approvedPreviewApplystillabsent.
+
+51. **arc-modes-case-ledger.json—9checks:** PASS 7, FAIL 2. First recorded scope: Length selects the quarter-circle, previews and places native ARC_DIMENSION11A2 on25DIMS; native printed measurement1570.8 and displayed rounded1571mm agree with radius1000 quarter-circle.
+
+52. **arc-edit-case-ledger.json—5checks:** PASS 4, FAIL 1. First recorded scope: RD Diameter Escape at actual placement preview adds nothing; all155capturedordinaryentity/Xdata representations match baseline. Prior dimensions remain.
+
+53. **revcloud-case-ledger.json—8checks:** PASS 8. First recorded scope: At DIMSCALE100/default No OSNAP, two canvas corners create closed red CLOUD polyline123C; first460,500/opposite720,900. One ineffective click on command overlay was corrected, no output credit.
+
+54. **catchment-overlay-case-ledger.json—10checks:** PASS 8, FAIL 2. First recorded scope: ActualtypedCDCATCHMENT New selects84m2closedrectangle andP1/P2; reports42m2each. 14mx6m rectangle, pits0,0and10000,0,INSUNITS4. Capacity110m2 readback is not engineering approval.
+
+55. **catchment-curves-case-ledger.json—6checks:** PASS 4, FAIL 2. First recorded scope: Native CDCATCHMENT New refuses staged open polyline, explains closed boundary required, reasks; Enter cancellation retains all54ordinaryentity/Xdatarecords/ninecontrols. Empty overlaylayer creation recorded, not claimed full database equality.
+
+56. **catchment-overload-case-ledger.json—6checks:** PASS 4, FAIL 1, UNPROVEN 1. First recorded scope: Native AREA/Object measures the staged 12m x 10m rectangular boundary as120000000mm2. CDCATCHMENT reports120m2 for actual selected P1.
+
+57. **source-placement-case-ledger.json—8checks:** PASS 7, UNPROVEN 1. First recorded scope: Direct typed DP at first insertion prompt then physicalEscape leaves all52ordinaryentity/Xdatarecords/ninestagedcontrols exactlyequalbaseline aftersessionaddressnormalisation.
+
+58. **source-edit-case-ledger.json—6checks:** PASS 5, BLOCKED 1. First recorded scope: NativeMOVE selectingonlyDPblock8C3 viaAutoLISP moves500mm east;unselectedlabel8CA follows500mm. Onlythese2of56ordinaryrecordschange;other54/ninestagedcontrols retained.
+
+59. **source-connection-case-ledger.json—6checks:** PASS 5, FAIL 1. First recorded scope: Actual typed CD and canvas DP/IO picks recognise saved DP1/IO1. Click actual modal first invert; individual physical2 then0 enters20m. Previous SE05 input limitation resolved for this route; no claim clipboard entry works.
+
+60. **connected-move-case-ledger.json—5checks:** PASS 4, FAIL 1. First recorded scope: Actual disk reopen of renamedcopy retains all61ordinaryentity/Xdata printed records aftersessionaddressnormalisation; originalninecontrols displayed4/1/1/21759/0/BYLAYER/ByLayer/5/0. No fullprojectdictionary/plotclaim.
+
+61. **text-placement-case-ledger.json—7checks:** PASS 6, FAIL 1. First recorded scope: 25L first prompt physical Escape leaves all52 ordinary records and12 staged controls exactly unchanged.
+
+62. **text-edit-case-ledger.json—9checks:** PASS 7, UNPROVEN 1, FAIL 1. First recorded scope: Actual reopen of renamed filesystem copy retains complete native TEXT888/889 records:content,250mmheight,rotation,style,alignment; all53of54ordinaryrecords equal saved capture. Original12controls displayed before staging. No fullprojectdictionary proof.
+
+63. **text-scale-case-ledger.json—7checks:** PASS 5, FAIL 2. First recorded scope: Direct typed25C CHECK SCALE/canvas400900 creates native centredTEXT888/25TEXT/Standard/0deg/height125 atDIMSCALE50; content retained withno25prefix. This represents the zero-angle sourcepath,notallaliases.
+
+64. **text-paper-case-ledger.json—4checks:** FAIL 2, PASS 2. First recorded scope: Native Layout1/TILEMODE0/CVPORT1 before and after. Typed25C PAPER NOTE, physicalsheetclick500700outsideviewport. No visible note/refusal;newTEXT893 is410Model/67=0,height2.5,25TEXT/Standard/0deg. Extends629wrongspace;notblanketST3rulingtransferredtotext.
+
+65. **strip-drain-case-ledger.json—9checks:** PASS 6, UNPROVEN 1, FAIL 2. First recorded scope: Typed CDSTRIP, default Center, typed 1000,1000 /26000,1000 /26000,11000, Enter to finish. Complete native preview showed open3vertices/5floorwastes/8arrows with high-point lines before Accept. One-way option and every preview detail not accepted.
+
+66. **agi-case-ledger.json—13checks:** PASS 8, UNPROVEN 2, FAIL 3. First recorded scope: Actual reopen of renamed saved-strip copy preserves all18strip entities and decoded accepted strip project. Bounded strip persistence only.
+
+67. **floor-waste-case-ledger.json—5checks:** PASS 3, FAIL 2. First recorded scope: Actual reopen of saved AGI renamed filesystem copy: all71captured ordinary entity/Xdata records equal saved final capture, decoded project exact including AGI entity/outlet/grade. Full block/symbol-table equivalence and plot untested.
+
+68. **floor-waste-control-case-ledger.json—10checks:** PASS 9, FAIL 1. First recorded scope: TypedCDFW and physicalcanvas350500 place native FLOOR WASTE block8C2 on DOWNPIPES plus TEXT8C9 FW/250mm on GUIDELINES at DIMSCALE100. All52old ordinaryrecords and14stagedcontrols unchanged. No nearby connection reported; connection-to-pipe not tested.
+
+69. **floor-waste-reopen-case-ledger.json—1checks:** PASS 1. First recorded scope: Saved floor-waste FW1/FW2 bodies, labels and source identity/ownership persistence PASS in AutoCAD2027/Civil3.0.49: all four ordinary records and both source extension graphs exact, first label graph exact, second label names correct owner/250mm offsets. All56ordinary objects present;55records exact, unrelated7F3 anonymous name U13→U12 unproved definition equivalence. Both previously blank pit invert strings return20.000/19.800; all other decoded project fields exact. Whole drawing/NOD exactness not claimed. Read-only reopen, original14controls exact, closed without save and fixture hash unchanged; own lease released, other session untouched.
+
+70. **generic-source-case-ledger.json—8checks:** PASS 7, FAIL 1. First recorded scope: Typed CDSOURCE offers Roof drain, Air-conditioning unit, Overflow pipe, Hot-water unit then Custom; Roof drain default. Approved categories are first; deeper Custom/duplicate controls not yet tested.
+
+23. **New bug navigation—all81IDs:**
+
+1. **BUG-582 — Calculated free-end level is still Unknown in the editor preview and direction message.** See the single carpark body and linked case evidence.
+
+2. **BUG-581 — Manager Help Start tool minimises without launching its drawing prompts.** See the single carpark body and linked case evidence.
+
+3. **BUG-580 — Manager Light theme makes the header name disappear.** See the single carpark body and linked case evidence.
+
+4. **BUG-579.** See the single carpark body and linked case evidence.
+
+5. **BUG-578.** See the single carpark body and linked case evidence.
+
+6. **BUG-577.** See the single carpark body and linked case evidence.
+
+7. **BUG-576.** See the single carpark body and linked case evidence.
+
+8. **BUG-575.** See the single carpark body and linked case evidence.
+
+9. **BUG-574.** See the single carpark body and linked case evidence.
+
+10. **BUG-573.** See the single carpark body and linked case evidence.
+
+11. **BUG-572.** See the single carpark body and linked case evidence.
+
+12. **BUG-571.** See the single carpark body and linked case evidence.
+
+13. **BUG-570.** See the single carpark body and linked case evidence.
+
+14. **BUG-583.** See the single carpark body and linked case evidence.
+
+15. **BUG-584.** See the single carpark body and linked case evidence.
+
+16. **BUG-586.** See the single carpark body and linked case evidence.
+
+17. **BUG-587.** See the single carpark body and linked case evidence.
+
+18. **BUG-585.** See the single carpark body and linked case evidence.
+
+19. **BUG-588.** See the single carpark body and linked case evidence.
+
+20. **BUG-589.** See the single carpark body and linked case evidence.
+
+21. **BUG-590.** See the single carpark body and linked case evidence.
+
+22. **BUG-591.** See the single carpark body and linked case evidence.
+
+23. **BUG-592.** See the single carpark body and linked case evidence.
+
+24. **BUG-593.** See the single carpark body and linked case evidence.
+
+25. **BUG-594.** See the single carpark body and linked case evidence.
+
+26. **BUG-595.** See the single carpark body and linked case evidence.
+
+27. **BUG-596.** See the single carpark body and linked case evidence.
+
+28. **BUG-597.** See the single carpark body and linked case evidence.
+
+29. **BUG-598.** See the single carpark body and linked case evidence.
+
+30. **BUG-599.** See the single carpark body and linked case evidence.
+
+31. **BUG-600.** See the single carpark body and linked case evidence.
+
+32. **BUG-601.** See the single carpark body and linked case evidence.
+
+33. **BUG-602.** See the single carpark body and linked case evidence.
+
+34. **BUG-603.** See the single carpark body and linked case evidence.
+
+35. **BUG-604.** See the single carpark body and linked case evidence.
+
+36. **BUG-605.** See the single carpark body and linked case evidence.
+
+37. **BUG-606.** See the single carpark body and linked case evidence.
+
+38. **BUG-607.** See the single carpark body and linked case evidence.
+
+39. **BUG-608.** See the single carpark body and linked case evidence.
+
+40. **BUG-609.** See the single carpark body and linked case evidence.
+
+41. **BUG-610.** See the single carpark body and linked case evidence.
+
+42. **BUG-611.** See the single carpark body and linked case evidence.
+
+43. **BUG-612 — SBEAMEDIT cannot read newly placed 200PFC after Undo/Redo and saved reopening.** See the single carpark body and linked case evidence.
+
+44. **BUG-613 — RC beam and rectangular-column outlines move separately and strand detail components.** See the single carpark body and linked case evidence.
+
+45. **BUG-614 — scale-aware Structural hatches refuse 1:50.** See the single carpark body and linked case evidence.
+
+46. **BUG-615 — concrete hatch commits before the approved live preview and Apply step.** See the single carpark body and linked case evidence.
+
+47. **BUG-616.** See the single carpark body and linked case evidence.
+
+48. **BUG-617.** See the single carpark body and linked case evidence.
+
+49. **BUG-618.** See the single carpark body and linked case evidence.
+
+50. **BUG-619.** See the single carpark body and linked case evidence.
+
+51. **BUG-620 — FASTSAVE still purges and moves Xrefs before saving.** See the single carpark body and linked case evidence.
+
+52. **BUG-621 — Dimension commands leave the drafter’s style and appearance changed.** See the single carpark body and linked case evidence.
+
+53. **BUG-622 — MLL and MLR reject the approved F side-toggle.** See the single carpark body and linked case evidence.
+
+54. **BUG-623 — Q note is blank inside native text editor on the tested fixture.** See the single carpark body and linked case evidence.
+
+55. **BUG-624 — MLL left-side placement puts the note right of its arrow.** See the single carpark body and linked case evidence.
+
+56. **BUG-625 — Level Update overwrites ordinary notes without recognising a CE level mark.** See the single carpark body and linked case evidence.
+
+57. **BUG-626 — FFL bypasses the approved source review and complete placement preview.** See the single carpark body and linked case evidence.
+
+58. **BUG-627 — Moving an FFL triangle leaves its tail and level value behind.** See the single carpark body and linked case evidence.
+
+59. **BUG-628 — Breakline zigzag does not scale consistently at 1:50.** See the single carpark body and linked case evidence.
+
+60. **BUG-629 — Paper-space BL writes its breakline into model space.** See the single carpark body and linked case evidence.
+
+61. **BUG-630 — Section mark bypasses the approved complete preview and placement review.** See the single carpark body and linked case evidence.
+
+62. **BUG-631 — Moving the section cut line leaves both bubbles and references behind.** See the single carpark body and linked case evidence.
+
+63. **BUG-632 — Section identifiers are partly hidden against the filled bubble half.** See the single carpark body and linked case evidence.
+
+64. **BUG-633 — DSET refuses an ordinary native linear dimension.** See the single carpark body and linked case evidence.
+
+65. **BUG-634 — DSET1 converts an unrecognised dimension style without controlled review.** See the single carpark body and linked case evidence.
+
+66. **BUG-635 — DSET1 reports conversion but displayed measurement stays unchanged after reopening.** See the single carpark body and linked case evidence.
+
+67. **BUG-636 — DUP changes unselected dimensions across the drawing without controlled review.** See the single carpark body and linked case evidence.
+
+68. **BUG-637 — Running DUP also rewrites unrelated pit-schedule remarks.** See the single carpark body and linked case evidence.
+
+69. **BUG-638 — DSET1 opens an unhandled-error dialog when a dimension is on a locked layer.** See the single carpark body and linked case evidence.
+
+70. **BUG-639 — Historical workflow-card index has eleven unresolved local document links.** See the single carpark body and linked case evidence.
+
+71. **BUG-640 — RD asks for dimension type before selecting the geometry.** See the single carpark body and linked case evidence.
+
+72. **BUG-641.** See the single carpark body and linked case evidence.
+
+73. **BUG-642.** See the single carpark body and linked case evidence.
+
+74. **BUG-643.** See the single carpark body and linked case evidence.
+
+75. **BUG-644.** See the single carpark body and linked case evidence.
+
+76. **BUG-645.** See the single carpark body and linked case evidence.
+
+77. **BUG-646.** See the single carpark body and linked case evidence.
+
+78. **BUG-647 — Strip drain remains loose geometry with a pit record; MOVE strands its children.** See the single carpark body and linked case evidence.
+
+79. **BUG-648 — AG drain grade is checked but never labelled on the drawing.** See the single carpark body and linked case evidence.
+
+80. **BUG-649 — AG drain rising towards its selected outlet receives a passing grade verdict.** See the single carpark body and linked case evidence.
+
+81. **BUG-650 — Cancelling CDFW clears existing pit invert records before any placement.** See the single carpark body and linked case evidence.
+
+24. **Claude decides how to proceed:** the full goal remains incomplete. Tim has asked Claude to choose the next steps within the project rules and its current release authority. This handoff does not mandate merging, installing or claiming50%coverage. No task was dispatched and no AutoCAD input occurred during handoff preparation. Undo this handoff append by reverting its commit; preserve all preceding tests, bug qualifications and candidate PRs.
