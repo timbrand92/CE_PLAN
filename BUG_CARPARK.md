@@ -8208,3 +8208,21 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence / positivecontrol:** hatch-audit-change-case-ledger.json HA-01/HA-03FAIL;1048–1058/twonativeexports/proof. Fullnativeentgetincludingxdata forall24hatchesmatchesexactlyTaftereachfailure; total105/24unchanged. AuditEscapeatmodepromptpasses. Controls1/1/5/0restored. No repair-mode/Undo/fullworkflowacceptance.
 6. **Guard / next:** ReproduceonthisfixtureandminimalfreshCH/BLHhatches; captureunderlyingerrorwithoutchangingusergeometry. VerifyReportonmixedstandard/custom/unsupported/protectedhatches; Applypreset/Cancel/Undo/Redo/save-reopen separately. Do notinferrootcausefromsameerrorwordinginCXREF618.
 7. **Ownership / status:** Claude command/service lane HatchUpgradeCommands; OPEN. No fixbuilt/installed/accepted.
+
+## BUG-620 — FASTSAVE still purges and moves Xrefs before saving
+
+**Status:** MEDIUM OPEN — source finding at the commit identified by the installed Structural DLL; native reproduction pending.
+
+**Command / Area:** FASTSAVE, approved ST-05 decision ST5-14. Claude command/service repair ownership.
+
+**What the drafter does:** types FASTSAVE to save an owned drawing.
+
+**Expected:** save only. Existing Xref layers, styles, definitions and drawing objects remain unchanged. Approved ST5-14 explicitly prohibits purge, style conversion, Xref movement or drafting alteration. The later Never-you-save ruling keeps explicit FASTSAVE saving; no exception authorising its cleanup stages was found in the reviewed rulings.
+
+**Observed in source, not a native verdict:** installed Structural product version1.0.116+f180b349a88617070a8517b563b2df7b5854131e; installed DLL SHA25647B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. LegacyPortCommands.cs14–15 calls CleanPipelineService.Run(lightweight:true). CleanPipelineService.cs104–115 unconditionally runs -PURGE ALL and NormalizeXrefsToLayer before the lightweight condition at118; saving is later at143 onward. The inspected files in C:/ce-uxv13 match f180 exactly (git diff against installed commit empty). No FASTSAVE action or purge was run in AutoCAD by this audit. This is distinct from existing S2-013 extra-Undo-step evidence.
+
+**Test that catches it:** on a disposable metric fixture, include an unused layer/block/style and two loaded synthetic Xrefs on different known layers. Record all object/symbol/reference properties. After FASTSAVE, the DWG is saved and the complete drawing data remains equal to baseline, including unused definitions and both Xref layers. A headless outcome guard should exercise the actual save-only path and refuse any drawing mutation.
+
+**Real AutoCAD confirmation:** open that fixture; dirty it with a harmless owned annotation edit; FASTSAVE; verify that annotation is saved, no cleanup happens, both Xrefs stay on their layers and every unused definition remains. Close/reopen and recheck. Repeat save-failure/read-only handling without reporting a successful save. Purge/deletion through Windows UI requires the computer-use skill action-time confirmation; this session instead recorded the source finding and continued independent authorised checks.
+
+**Repair status:** no code changed, no repair installed, no native PASS/FAIL added. Link: existing Codex V3UX report/verification receipts406–407.

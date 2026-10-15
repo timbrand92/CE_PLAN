@@ -6,7 +6,7 @@
 2. **Progress since the usage override:** 59 new native checks executed after Tim said, “lets take usage to 0% left then i will reset”. Separately, 98 earlier checks were recovered from existing evidence; those were not new executions.
 3. **Overall target:** 50% of the complete V3/UX scope is **not yet verified**. The earlier 7% was a historical text-matching estimate. The complete eligible feature inventory still needs reconciliation, so no current whole-product percentage is claimed.
 4. **Evidence and scope:** 1,027 directly case-linked files: 972 screenshots and 55 metadata files. Seven additional setup/cleanup screenshots are retained separately. All 1,034 retained files were rehashed successfully; no missing or changed evidence files found. The index retains all 526 explicit UX ruling IDs, 569 root bug records and 523 installed catalogue entries. Cases link to 77 catalogue records; that does not mean 77 workflows are accepted.
-5. **Bugs:** 50 new bugs, BUG-570 through BUG-619, remain OPEN. Repairs saved in draft pull requests are candidates; they have not been installed or accepted through these tests. No deployment was performed by this chat.
+5. **Bugs:** 51 new bugs, BUG-570 through BUG-620, remain OPEN; BUG-620 is a source finding awaiting native reproduction. Repairs saved in draft pull requests are candidates; they have not been installed or accepted through these tests. No deployment was performed by this chat.
 6. **Usage:** reset confirmed by Tim; latest account-wide meter **1% used, 99% remaining**. Tim’s instruction supersedes the former 10% reserve. Continue useful work until exhausted; Tim redeems any reset. No reset or paid provider request used.
 7. **Latest safe state:** all owned test drawings closed; drawing controls restored to their prior values; own test-station lease released. The older unresponsive BUG-595 session remains untouched. Source drawings and saved settings have unchanged hashes.
 8. **Still untested:** remaining built commands, complete workflow mapping, gap placement Undo/Redo, grip/stretch/rotation, plotting, protected-object variants, scale/units/UCS combinations, calculation links and older AutoCAD versions. Engineering decisions still need Tim’s acceptance.
@@ -26,6 +26,12 @@
 5. **Batch hatching and gap cancellation — 5 checks:** 4 PASS and 1 FAIL. Two preselected rectangles received separate native associative concrete hatches. The batch Undo group removed both; Redo restored both with identical saved native properties. A selection-only history entry introduced during test input was removed first; no immediate-first-CtrlZ claim is made. Gap-tolerance Escape added nothing. Batch placement also lacks the approved drawing preview (existing BUG-615).
 6. **Saved specimens:** latest batch drawing has 109 entities and 26 hatches, saved separately as CODEX_HATCH_BATCH_20261015.dwg, 174155 bytes, SHA256 35C880FB93C40DBEFFC68C1FD706DF28C0256FEDA55DD42F03CD4985524380A9. The original audit and hatch specimens remain unchanged. Batch save succeeded; batch reopen and actual gap bridging have not been tested.
 7. **Latest repair candidate:** BUG-576’s column-picker instruction includes the ninth keyboard choice in draft [PR1261](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1261). Modern and legacy builds pass. The changed window is not installed or accepted in AutoCAD.
+
+## ST-05 approved-workflow review —15October
+
+1. **All15 approved decisions reviewed:**67 native checks across9 ledgers support parts of the workflow. Preview/Apply,1:50 scale, Xref preview and copying still fail; explicit ownership, safe hatch conversion, cleanup, all presets and older-version cases remain incomplete. Native MOVE recovery does not prove original gap-placement Undo.
+2. **New source finding BUG-620:** FASTSAVE still runs purge and moves Xrefs before saving, contrary to approved save-only ST5-14. The source files match the commit named by the installed Structural DLL. No cleanup operation was executed and no native test result was added. Repair remains with the command/service owner; bugOPEN.
+3. **Acceptance:** the card is not accepted as a whole. Exact evidence links and missing requirements now appear against each approved ST5 decision in the existing coverage index.
 
 ## Installed-command and plan reconciliation —15October
 
