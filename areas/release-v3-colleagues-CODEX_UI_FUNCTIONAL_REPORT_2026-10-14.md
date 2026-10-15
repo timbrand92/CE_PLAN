@@ -577,3 +577,6 @@
 1. **Real drawing risk:** LMU turns GENERAL NOTE KEEP into10.500 on the same ordinary text object. This directly contradicts the approved recognised-level-only boundary. Undo/Redo recovers reliably in this sample, but does not make the selection safe. BUG625 HIGH OPEN.
 2. **Workflow and editing:** FFL displays12.345, but never offers source/Manual review or a complete following preview before placing (626). Selecting/moving its triangle strands its tail/value (627). These are approved V3 gaps, not cosmetic preferences.
 3. **Evidence and remainder:** complete records persist; moved trial restored before save.59 ST03 checks/six ledgers now support the15-decision audit. Remaining types, later Escape, source-linked genuine-mark updates, other native edits, protection/scale/UCS/paper/plots/older runtime and whole workflow coverage remain.
+
+
+**PR1262 review scope:** initial comparison to master included unrelated release history. Corrected to existing installed-source branch claude/rel-20261009y (f180b349); GitHub confirms exactly9intendedfiles. Candidate remains draft and uninstalled.

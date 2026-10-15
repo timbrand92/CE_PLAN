@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "DB1B11E18D69135FD7088FC15797A5ADF6326754E61402BA3479B7501B060F23",
+    "currentBugsSha256": "7E70A53DB83ADFCCEB339CDA19AF37D3291EE6CC852E66F3907D5E1755897107",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
     "currentCaseIndexSha256": "FA7F31D32BF43D9F10C6F32E7794D0E8222ED94D070E94269F866B3723F18CD6"
@@ -19899,12 +19899,16 @@
         "installed": false,
         "nativeCandidateAccepted": false,
         "nativeCaseCountChanged": false,
-        "scope": "Window-only status/contrast repair. Original native611remainsOPEN. Build/test/candidate-render evidence kept separate from582nativecases."
+        "scope": "Window-only status/contrast repair. Original native611remainsOPEN. Build/test/candidate-render evidence kept separate from582nativecases.",
+        "baseRef": "claude/rel-20261009y",
+        "baseCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+        "reviewChangedFiles": 9,
+        "initialWrongBaseCorrected": true
       }
     },
     {
       "id": "BUG-612",
-      "headingLine": 8122,
+      "headingLine": 8124,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19920,7 +19924,7 @@
     },
     {
       "id": "BUG-613",
-      "headingLine": 8138,
+      "headingLine": 8140,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19936,7 +19940,7 @@
     },
     {
       "id": "BUG-614",
-      "headingLine": 8149,
+      "headingLine": 8151,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19951,7 +19955,7 @@
     },
     {
       "id": "BUG-615",
-      "headingLine": 8159,
+      "headingLine": 8161,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19969,7 +19973,7 @@
     },
     {
       "id": "BUG-616",
-      "headingLine": 8176,
+      "headingLine": 8178,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19984,7 +19988,7 @@
     },
     {
       "id": "BUG-617",
-      "headingLine": 8185,
+      "headingLine": 8187,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19999,7 +20003,7 @@
     },
     {
       "id": "BUG-618",
-      "headingLine": 8196,
+      "headingLine": 8198,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20014,7 +20018,7 @@
     },
     {
       "id": "BUG-619",
-      "headingLine": 8206,
+      "headingLine": 8208,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20030,7 +20034,7 @@
     },
     {
       "id": "BUG-620",
-      "headingLine": 8216,
+      "headingLine": 8218,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20043,7 +20047,7 @@
     },
     {
       "id": "BUG-621",
-      "headingLine": 8235,
+      "headingLine": 8237,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20062,7 +20066,7 @@
     },
     {
       "id": "BUG-622",
-      "headingLine": 8253,
+      "headingLine": 8255,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20078,7 +20082,7 @@
     },
     {
       "id": "BUG-623",
-      "headingLine": 8265,
+      "headingLine": 8267,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20089,11 +20093,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8263
+      "currentStatusSourceLine": 8265
     },
     {
       "id": "BUG-624",
-      "headingLine": 8277,
+      "headingLine": 8279,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20104,11 +20108,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8275
+      "currentStatusSourceLine": 8277
     },
     {
       "id": "BUG-625",
-      "headingLine": 8288,
+      "headingLine": 8290,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20119,11 +20123,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8286
+      "currentStatusSourceLine": 8288
     },
     {
       "id": "BUG-626",
-      "headingLine": 8298,
+      "headingLine": 8300,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20134,11 +20138,11 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8296
+      "currentStatusSourceLine": 8298
     },
     {
       "id": "BUG-627",
-      "headingLine": 8307,
+      "headingLine": 8309,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20149,7 +20153,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8305
+      "currentStatusSourceLine": 8307
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -39613,7 +39617,11 @@
       "installed": false,
       "nativeCandidateAccepted": false,
       "nativeCaseCountChanged": false,
-      "scope": "Window-only status/contrast repair. Original native611remainsOPEN. Build/test/candidate-render evidence kept separate from582nativecases."
+      "scope": "Window-only status/contrast repair. Original native611remainsOPEN. Build/test/candidate-render evidence kept separate from582nativecases.",
+      "baseRef": "claude/rel-20261009y",
+      "baseCommit": "f180b349a88617070a8517b563b2df7b5854131e",
+      "reviewChangedFiles": 9,
+      "initialWrongBaseCorrected": true
     }
   ]
 }
