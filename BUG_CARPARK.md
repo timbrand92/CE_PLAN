@@ -8389,6 +8389,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Evidence/guard:** dimrepair-case-ledger.json DR-03/05; screenshots1254/1255/1257, dset1-result-native.txt/dset1-graphics-native.txt/dimrepair-reopen-native.txt.
 5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. With a supported style and explicitly approved change, confirm stored factor, visible text and rendered plot agree immediately, after regeneration, one UndoRedo and actual reopen. Include text overrides and other native dimension types without silently changing unrecognised styles.
 
+7. **Recognised CE style now reproduced,15October:** nativeTIM LEADER110B,5000mm geometriclength,selectedwith1118factor0.5. DSET1reportsConverted1Skipped1;immediateCtrlZacknowledged,CtrlYafter51.691secondsrestoresnative0.2overrideonlyon110B. Visibleandanonymousgraphics\\A1;5000persistafterexplicitREGENandactualsavecloseopen. AllthreecompleteDIMENSIONrecords/eligiblegraphics/lockedlayer/nineoriginalcontrols match afteronlysession-addressnormalisation. Thisremovesunknownstyleasnecessaryprecondition;rootcauseunproved. dimprotection-case-ledger DP-03;1283/1285/1286/1292–1295. Skipped0.5recordunchanged;noPDFphysicalplot.
 
 ## BUG-636 — DUP changes unselected dimensions across the drawing without controlled review
 
@@ -8407,3 +8408,13 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** alongside8dimensionrecords, two MTEXT records change.42E changes Class C Grated Lid - With Step Irons to Class C Grated Lid followed by paragraph With Step Irons.44E changes Class C Grated Lid - CODEX CHECK With Step Irons to Class C Grated Lid With Step Irons Codex Check. Text extent records also change. Do not infer leader changes from the10record total: the extra two areMTEXT.
 5. **Evidence/guard:** DC-09;1275/1276;dup-before-native.txt/dup-after-native.txt. Native secondU restores the full original entity/control snapshotT (dup-undo-native.txt); sourceDWG unchanged after normalcloseNo. Changed state was not saved/reopened or plotted. Existing schedule typing/layout bugs586/587 are separate triggers; sharedcause not established.
 6. **Repair/confirmation:** coordinated Civil schedule/Structural command owners. A dimension-only command must preserve exact unrelated notes and overrides through command/REGEN/UndoRedo/save-reopen. Exercise schedules with custom remarks, generated warnings, paragraphs/capitalisation and changed pit data; legitimate schedule updates remain an explicit separate case. No fix built/installed.
+
+
+## BUG-638 — DSET1 opens an unhandled-error dialog when a dimension is on a locked layer
+
+1. **Status/severity:** OPEN / HIGH. ActualAutoCAD2027/Structural1.0.116+f180,15October2026; approvedST3-12/14 and normalAutoCADprotection. AutoCAD continued; no crash or data-corruption claim.
+2. **Steps/context:** ownedmetricmodelcopy, nativeTIM LEADERdimension1126 on deliberately lockedCODEX_DIM_LOCK. TypeDSET1,clickdimensionline710,852 (1found),Enterselection.
+3. **Expected:** explain that the dimension is on a locked layer and leave it unchanged, without an unhandledexception or changing/unlocking protectedcontent.
+4. **Observed:** AutoCAD modal says Unhandled exception and eOnLockedLayer. Details stack names AutodeskTransaction.GetObject and DimensionCommands.SetDimensionsOneToPointTwo. Continue returns to drawing. Fullnative ordinaryentity/Xdata/control/layer snapshot afterContinue equals pre-attempt snapshotT; lockpreserved. Data protection passes narrowly; commanderror handlingfails.
+5. **Evidence/guard:** dimprotection-case-ledger DP-05/06;1287–1292;dimprotection-after-redo-native.txt/dimprotection-locked-after-native.txt. Validunlockedconversion/skippedfactor control testedbefore. No Xref/REFEDIT/mixedlockedbatch verdict.
+6. **Repair/confirmation:** Claude command/native-owner; no sourceedit/install fromthischat. Check/refuse protectedtargets beforewrite, present plain draftingfeedback, and preserve normalnativeprotections/transactionrollback. Test locked-onlyandmixedeligible/locked selections,cancel,oneUndoRedoandactualreopen. Never silentlyunlock or bypass. Stack corroborates write-openfailure; broaderrootcauseaudit remains.

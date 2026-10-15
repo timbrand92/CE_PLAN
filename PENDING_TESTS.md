@@ -1756,3 +1756,11 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **BUG637:** unrelated schedule remarks must remain exact during dimensioncommands/REGEN/recovery. TwoMTEXTnotes change wording/paragraph/capitalisation duringDUP; rootcauseunproved. Preserve legitimate explicit scheduleupdates separately.
 3. **Positive controls:** firstDSETEscape/selectedDSET1Escape exactrecords/controls unchanged;DUPno-forcedSave sample;secondUndo restoresallcapturedrecords/controls. DelayedRedoacknowledged,butfullpostRedorecordequalityunproven. OriginalDSET1recovery,protectedmixedobjects/spaceUCSunitsplots/olderruntime remain.
 4. **Evidence:** dimcancel-case-ledger9checks6PASS2FAIL1UNPROVEN;19screens1260–1278/ninemetadata. Originalcontrols/source/preferencespreserved;testclosedNo/exactleasereleased. HistoricalDUP-unexecuted statements are superseded by thisboundedbatch only. No codefix/install.
+
+
+## Recognised-style dimension and locked-layer follow-through — 15 October 2026
+
+1. **BUG638:** DSET1lockedtargetmustrefuseplainlywithoutUnhandledException;preserveentireprotectedrecord/layerlockandrollbackanyeligiblechangesinamixedbatch. Nativeerrorandunchanged-statepositivecontrolnowrecorded. Xref/REFEDITandmixedlockedbatchremain.
+2. **BUG635:** knownTIM LEADERnowreproduces0.2stored/5000displayedafterRedo/REGEN/savecloseopen;unknownstyleisnotrequired. Confirmnativegraphicsandrenderedplotagreewithapprovedfactorafterrepair.
+3. **Narrowpasses:** selectedscopeonly110Bchanged,0.5dimension1118skippedexact,allotherobjects/control/layerpreserved;postRedonativeexpectedstateafter51.691secondquietdelay. FirstUndofullrecordcapturestillmissing. All3savedrecords/gfx/lock/originalcontrolsretainexactafterreopen. NoforcedsavebeforeexplicitQSAVE.
+4. **Evidence/remainder:** dimprotection-case-ledger9checks7PASS2FAIL,18screens1279–1296/sevenmetadata;source/preferencespreserved,owncopyclosed/exactlease released. Fullnativegrips/otherdimensiontypes/spaces/UCS/units/scales/plots/olderruntimeandwholecardacceptance remain. No sourcefix/install.
