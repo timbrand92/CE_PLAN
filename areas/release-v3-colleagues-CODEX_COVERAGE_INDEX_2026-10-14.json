@@ -43,7 +43,7 @@
     "numericBugAssociationsRestored": 4,
     "retainedDeclaredEvidenceFiles": 1663,
     "statusFixedTextCandidatesScope": "Historical53 text candidates retained; separate15Oct scoped native acceptance of BUG215 recorded, not a fresh global FIXED recount.",
-    "currentDetailedApprovedWorkflowAudits": 9,
+    "currentDetailedApprovedWorkflowAudits": 11,
     "historicalCanonicalCardsIndexed": 39,
     "canonicalNumberedRequirementsIndexed": 600,
     "canonicalCardSourcesRetrievable": 39
@@ -52,7 +52,7 @@
     "verifiedCurrentOverallPercent": null,
     "verifiedCurrentWholeItemCount": null,
     "targetPercent": 50,
-    "reason": "753 native scoped checks remain unchanged. All39canonical source records are retrievable (34planfiles+5immutableGitrecoveries), with600numbered source requirements indexed. These are not the eligiblebuiltworkflow/context denominator: unnumberedCV01J, approvalrefinements/laterV3UXunion and componenteligibility/context mapping remain. Whole50%tested UNKNOWN; failedexecutedchecks counttested.",
+    "reason": "753 scoped native checks remain unchanged. Eleven approved cards and 165 numbered requirements now have detailed evidence reconciliation. All 39 canonical sources and 600 numbered source requirements are indexed. Built workflow/context eligibility, unnumbered CV01J and later V3/UI/UX union remain incomplete, so whole 50% tested is UNKNOWN. Failed executed tests count as testing performed; acceptance is separate.",
     "historical7Percent": "Historical text-matching estimate only; not carried forward as current verified evidence.",
     "provisionalInventoryArithmetic": {
       "ux": 508,
@@ -21379,6 +21379,13 @@
     {
       "dateMelbourne": "2026-10-16",
       "scope": "Canonical600numberedrequirements indexed,75foundationrows recoveredfromimmutableGit;45CV06/07/08requirements reviewed, no newnativeexecution",
+      "narrowCases": 753,
+      "caseLedgers": 68,
+      "wholeOverallPercent": null
+    },
+    {
+      "dateMelbourne": "2026-10-16",
+      "scope": "ST-02 and ST-06: 30 approved requirements reconciled against existing native evidence; no new native execution.",
       "narrowCases": 753,
       "caseLedgers": 68,
       "wholeOverallPercent": null
@@ -45648,12 +45655,14 @@
             "BLOCKED": 0,
             "UNPROVEN": 0
           },
-          "currentDetailedRequirementAudit": null,
-          "currentBuiltEligibility": "UNRESOLVED; catalogue presence and historical source are insufficient",
+          "currentDetailedRequirementAudit": "approvedWorkflowRequirementAudits.ST-02",
+          "currentBuiltEligibility": "PARTIAL_OBSERVED; tested components listed separately from approved upgrade gaps and untested contexts; whole workflow eligibility unresolved.",
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
-          "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": null
+          "mappingAuthority": "Full approved card and Tim approval/refinements reviewed 16 October 2026; existing scoped native evidence reconciled requirement by requirement.",
+          "requirementReviewedNativeCaseCount": 46,
+          "nativeBuiltComponents": "Support insertion/switching, AB/BB/BT, ABS, R1/FJ1 point placement, bounded Undo/Redo and save/reopen.",
+          "nativeRequiredGaps": "Shared touching beams; physical-centre insertion; schedule provenance; complete preview and retained-rotation switching; native support MOVE/COPY; AB cap/MAX preview; R1/FJ1 geometry fault584; UCS/protection/performance."
         },
         {
           "id": "ST-03",
@@ -46100,12 +46109,14 @@
             "BLOCKED": 0,
             "UNPROVEN": 0
           },
-          "currentDetailedRequirementAudit": null,
-          "currentBuiltEligibility": "UNRESOLVED; catalogue presence and historical source are insufficient",
+          "currentDetailedRequirementAudit": "approvedWorkflowRequirementAudits.ST-06",
+          "currentBuiltEligibility": "PARTIAL_OBSERVED; tested components listed separately from approved upgrade gaps and untested contexts; whole workflow eligibility unresolved.",
           "wholeWorkflowAccepted": false,
           "denominatorEligible": null,
-          "mappingAuthority": "Historical mapping candidate only; current exact requirement reconciliation pending",
-          "requirementReviewedNativeCaseCount": null
+          "mappingAuthority": "Full approved card and Tim approval/refinements reviewed 16 October 2026; existing scoped native evidence reconciled requirement by requirement.",
+          "requirementReviewedNativeCaseCount": 19,
+          "nativeBuiltComponents": "Pad/strip placement, footing edit/library, whole-network deletion confirmation and bounded Undo/Redo/save/reopen.",
+          "nativeRequiredGaps": "Host relationships; fresh COPY identities; scoped regeneration; element-only deletion; reinforcement/pier/assets; single schedule ownership; depth/mark faults578/579; older runtime/protection/plots."
         },
         {
           "id": "ST-07",
@@ -46494,10 +46505,8 @@
         }
       ],
       "priorities": [
-        "Complete remaining30 detailedcanonicalcardreviews and unnumberedCV01J decomposition",
-        "UnionlaterV3/UXrulings and distinguishbuilteligible components/context requirements",
-        "NativebroaderCivilrepair/dashboard/site/tank/source gaps identified by approvedrequirements",
-        "Retain failedchecks as testingperformed; do notsubstitute600requirementsor523commands for denominator"
+        "Review remaining 28 canonical cards, unnumbered CV01J and later V3/UI/UX scope; establish built workflow and required context eligibility.",
+        "Drive uncovered installed workflows in real AutoCAD copies; retain saved floor-waste reopening, COPY, connected landings, protection, units/UCS and plotting gaps."
       ],
       "currentExecutionCount": 753,
       "newNativeExecutionsThisReconciliation": 0
@@ -51828,8 +51837,15 @@
                   "required": "ST2-15 for approval"
                 }
               ],
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-05",
+                "early-structural-case-ledger.json::ES-08",
+                "early-structural-case-ledger.json::ES-10",
+                "early-structural-case-ledger.json::ES-11",
+                "early-structural-case-ledger.json::ES-12",
+                "early-structural-case-ledger.json::ES-15"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51841,8 +51857,12 @@
               "sourceForm": "decision-table-row",
               "required": "Lock the support catalogue: DS 90×90 without label; DS1 90×90; TS1 135×90; C1 89 SHS; C2 uses its approved SHS/RHS/PFC picker.",
               "example": "Running `C2` shows the member-size picker before placement.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-08",
+                "early-structural-case-ledger.json::ES-12",
+                "early-structural-case-ledger.json::ES-13"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51854,8 +51874,10 @@
               "sourceForm": "decision-table-row",
               "required": "Support insertion uses the block’s physical centre—not its lower corner—as the cursor point.",
               "example": "The crosshair sits where the support will actually land.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "UNPROVEN",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-10"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51867,8 +51889,10 @@
               "sourceForm": "decision-table-row",
               "required": "When a clear stud-wall pair exists, centre the support within the approximately 90 mm wall and align it automatically. Otherwise show an orientation preview controlled by the cursor.",
               "example": "Pick the wall intersection once; press `R` only if a 90° rotation is needed.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-08"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51880,8 +51904,13 @@
               "sourceForm": "decision-table-row",
               "required": "A label-bearing support is one compound: block, typed support data and its label. After placement, the label follows the cursor with the real text box visible; click left/right/top/bottom.",
               "example": "No separate cryptic `DSL/DSR/TSL/TSR` workflow for staff.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-05",
+                "early-structural-case-ledger.json::ES-06",
+                "early-structural-case-ledger.json::ES-10",
+                "early-structural-case-ledger.json::ES-16"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51893,7 +51922,7 @@
               "sourceForm": "decision-table-row",
               "required": "Use the active structural schedule to prefill size and mark, but visibly show the source and permit an override before placement.",
               "example": "“C2 — 150×100 RHS from schedule”; Enter accepts it.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -51906,8 +51935,10 @@
               "sourceForm": "decision-table-row",
               "required": "On placement, highlight every beam end that genuinely touches the support footprint. One support may link to several beams. Ambiguous candidates require confirmation.",
               "example": "A column supporting three beams links to all three—not merely the nearest one.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "UNTESTED",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-05"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51919,8 +51950,11 @@
               "sourceForm": "decision-table-row",
               "required": "Support switching uses preselection or one support pick. Show the target outline before Apply; retain centre, rotation, mark, label location and all beam relationships.",
               "example": "Select DS1, run `STS1`, preview the larger footprint, click Accept.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL / APPROVED UPGRADE GAP",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-12",
+                "early-structural-case-ledger.json::ES-14"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51932,8 +51966,10 @@
               "sourceForm": "decision-table-row",
               "required": "Switching should not automatically ask for rotation again. Rotation is retained unless Timothy presses `R`. Labels are retained by ownership, never collected from a 260 mm proximity circle.",
               "example": "A nearby column note cannot be erased during a support switch.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL / APPROVED UPGRADE GAP",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-12"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51945,7 +51981,7 @@
               "sourceForm": "decision-table-row",
               "required": "Support MOVE/COPY/ERASE follows ST-01: moving a support updates every linked beam end; copying gives fresh identity and no inherited links unless the beams were copied with it; erasing flags affected beams.",
               "example": "Copying one column cannot steal the original beams.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -51958,8 +51994,11 @@
               "sourceForm": "decision-table-row",
               "required": "Keep the fast AB/BB workflow: first endpoint → live final-block preview → second endpoint. Enter at the second point retains the familiar 2700 mm horizontal default.",
               "example": "The preview shows the actual brace, not merely a guide line.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "wind-bracing-case-ledger.json::AB-DEFAULT-2700",
+                "wind-bracing-case-ledger.json::BB-VERTICAL-MANUAL-FLIP"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51971,8 +52010,11 @@
               "sourceForm": "decision-table-row",
               "required": "AB remains capped at 2700 mm; BB and BT remain uncapped. When AB exceeds 2700, the preview visibly stops at 2700 and displays `MAX`, rather than shortening after the click.",
               "example": "Timothy sees the capped result before placement.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "UNTESTED",
+              "currentCaseKeys": [
+                "wind-bracing-case-ledger.json::AB-DEFAULT-2700",
+                "floor-roof/case-ledger.json::BT9-PLACEMENT"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51984,8 +52026,13 @@
               "sourceForm": "decision-table-row",
               "required": "Auto-flip provides the initial preview. Press `F` to flip before the final click. `ABS` batch-switches A↔B without moving, resizing or reflipping the brace. BT numbering is entered/accepted before placement so the preview shows the finished mark.",
               "example": "No post-insertion “Toggle flip? Yes/No” interruption.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL / APPROVED UPGRADE GAP",
+              "currentCaseKeys": [
+                "wind-bracing-case-ledger.json::ABS-A-TO-B",
+                "wind-bracing-case-ledger.json::BB-VERTICAL-MANUAL-FLIP",
+                "floor-roof/case-ledger.json::BT-NUMBER-BOUNDS",
+                "floor-roof/case-ledger.json::BT9-PLACEMENT"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -51997,8 +52044,14 @@
               "sourceForm": "decision-table-row",
               "required": "Rebuild `R1/FJ1`: select the two boundaries being spanned → CE derives direction and span → move the finished marker preview within the bay → click → enter/accept the tag. Four-point input remains a fallback only. Auto-placement becomes a suggestion, never an unseen decision. Keep `P1` hidden until its lap rules are approved.",
               "example": "Placing a floor-joist marker becomes two boundary picks plus one visual placement click.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "FAIL",
+              "currentCaseKeys": [
+                "floor-roof/case-ledger.json::R1-POINT-ESCAPE",
+                "rafter-joist/case-ledger.json::R1-EXACT-WIDTH",
+                "rafter-joist/case-ledger.json::R1-DISK-WIDTH",
+                "rafter-joist/joist-purlin-case-ledger.json::FJ1-EXACT-SPAN-WIDTH",
+                "rafter-joist/joist-purlin-case-ledger.json::FJ1-DISK-WIDTH"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -52010,8 +52063,15 @@
               "sourceForm": "decision-table-row",
               "required": "All workflows are one Undo and leave nothing after Esc. No whole-drawing beam search during support placement. Automated tests cover sizes, UCS, switching, copied labels and shared supports; Timothy tests one support, one AB brace and one R1 marker in **10 minutes maximum**.",
               "example": "Smooth cursor movement with no support/beam scan lag.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-06",
+                "early-structural-case-ledger.json::ES-07",
+                "early-structural-case-ledger.json::ES-11",
+                "early-structural-case-ledger.json::ES-15",
+                "wind-bracing-case-ledger.json::AB-ONE-UNDO-DELAYED-REDO",
+                "wind-bracing-case-ledger.json::ABS-LOCKED-SOURCE"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -52020,7 +52080,7 @@
           "extractionComplete": false,
           "remainingScope": "Approval/refinement prose, later rulings and unnumbered workflow/context decomposition remain. Extracted source rows are not the complete eligible-built denominator.",
           "sourceRetrievable": true,
-          "currentDetailedAudit": null,
+          "currentDetailedAudit": "approvedWorkflowRequirementAudits.ST-02",
           "unnumberedScopeRequiresReview": true,
           "currentInstalledCandidateEntryKeys": [
             "CE_STRUC_SUITE.bundle::148::AB",
@@ -52956,8 +53016,12 @@
               "sourceEndLine": 40,
               "sourceForm": "decision-table-row",
               "required": "ST-06 owns raft beams, thickenings, strip/pad footings, bored piers, screw piles, stump footings and reinforcement placement. ST-07 owns schedules.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-24",
+                "early-structural-case-ledger.json::ES-25",
+                "early-structural-case-ledger.json::ES-33"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -52968,8 +53032,12 @@
               "sourceEndLine": 41,
               "sourceForm": "decision-table-row",
               "required": "`FST` becomes the canonical **Foundation workspace**. Preserve frequent aliases including `THC`, `PFC`, `SF`, `REB`, `RIB`, `BP`, `SPW`, `RBL` and `RBC`.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-23",
+                "early-structural-case-ledger.json::ES-24",
+                "early-structural-case-ledger.json::ES-28"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -52980,8 +53048,12 @@
               "sourceEndLine": 42,
               "sourceForm": "decision-table-row",
               "required": "The drawn driver is the geometry authority; its embedded CE record owns type, mark, size, depth, source and approval status. The size library is project information—not an automatic engineering designer.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "FAIL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-27",
+                "early-structural-case-ledger.json::ES-29",
+                "early-structural-case-ledger.json::ES-32"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -52992,8 +53064,13 @@
               "sourceEndLine": 43,
               "sourceForm": "decision-table-row",
               "required": "Missing size/depth becomes **Unknown**, never zero. User-entered values are marked Manual/Designed with their source. CE cannot invent a footing size from the mark or from historical popularity.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "FAIL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-29",
+                "early-structural-case-ledger.json::ES-32",
+                "early-structural-case-ledger.json::ES-34",
+                "early-structural-case-ledger.json::ES-40"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53004,8 +53081,11 @@
               "sourceEndLine": 44,
               "sourceForm": "decision-table-row",
               "required": "Placement workflow: **select/draw geometry → choose type/mark/size → live complete preview → Flip/Rotate if relevant → Apply**. Preselection is supported so existing linework can be converted without redrawing it.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-25",
+                "early-structural-case-ledger.json::ES-33"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53016,7 +53096,7 @@
               "sourceEndLine": 45,
               "sourceForm": "decision-table-row",
               "required": "`REB`, `RIB` and `THC` require an explicitly selected raft/slab host. The relationship is permanent. Moving the host rechecks its foundation elements; CE never chooses a host merely because it is nearby.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53028,7 +53108,7 @@
               "sourceEndLine": 46,
               "sourceForm": "decision-table-row",
               "required": "`FADOPT` becomes Preview-only initially. It lists proposed geometry, labels and types individually. Timothy confirms ambiguous matches; proximity alone cannot adopt or relabel anything.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53040,8 +53120,11 @@
               "sourceEndLine": 47,
               "sourceForm": "decision-table-row",
               "required": "Every footing element is one compound: driver geometry, generated outlines/hatch, label and design data. The raft host is shared and is not owned or deleted by any individual beam/thickening.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-37",
+                "early-structural-case-ledger.json::ES-39"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53052,8 +53135,11 @@
               "sourceEndLine": 48,
               "sourceForm": "decision-table-row",
               "required": "MOVE updates only the selected foundation group. COPY creates fresh identities and links to the correct host. EDIT preserves manual label placement. ERASE offers **Element only** or **Entire system**, showing exact counts before Apply.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL / APPROVED UPGRADE GAP",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-35",
+                "early-structural-case-ledger.json::ES-36"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53064,7 +53150,7 @@
               "sourceEndLine": 49,
               "sourceForm": "decision-table-row",
               "required": "`FREGEN` preserves authored positions and approved values. `FREGENALL` is an explicit Manager action with a preview count. No regeneration on drawing open and no whole-drawing scan while drafting.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53076,7 +53162,7 @@
               "sourceEndLine": 50,
               "sourceForm": "decision-table-row",
               "required": "Consolidate `BP`, `SPW`, `SPW3`, `SPW6` and `SPWC` on one bored-pier engine while retaining aliases. Preview clearly selects **At cut: green/solid** or **Below: yellow/hidden**, plus 300/450/600 diameter and approved hatch state.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53088,7 +53174,7 @@
               "sourceEndLine": 51,
               "sourceForm": "decision-table-row",
               "required": "Screw-pile and stump-footing graphics must come from stable, individually Approved AS-01 assets in the Plugin bundle. If the asset is missing, placement is blocked—never substitute an approximate circle or use `C:\\Lisp Files`.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53100,7 +53186,7 @@
               "sourceEndLine": 52,
               "sourceForm": "decision-table-row",
               "required": "`RBL` and `RBC` become compounds. The preview displays bar size, spacing/count, zone, orientation and exact final label. For `RBC`, state explicitly that the picked radius is the **bar-centre radius**, avoiding cover ambiguity.",
-              "currentAssessment": "NOT_RECONCILED",
+              "currentAssessment": "UNTESTED",
               "currentCaseKeys": [],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
@@ -53112,8 +53198,10 @@
               "sourceEndLine": 53,
               "sourceForm": "decision-table-row",
               "required": "Permanently remove `STR` and `BWT` from ordinary command registration as already ruled. `FSTEXPORT` redirects to the single ST-07 schedule engine so the drawing cannot contain two disagreeing footing schedules.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "UNPROVEN",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-40"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53124,8 +53212,16 @@
               "sourceEndLine": 54,
               "sourceForm": "decision-table-row",
               "required": "Automate foundation geometry, host relationships, copy identity, regeneration, deletion, schedules and rebar arrangements. Timothy’s final AutoCAD check is approximately six representative actions in 10–12 minutes.",
-              "currentAssessment": "NOT_RECONCILED",
-              "currentCaseKeys": [],
+              "currentAssessment": "PARTIAL",
+              "currentCaseKeys": [
+                "early-structural-case-ledger.json::ES-25",
+                "early-structural-case-ledger.json::ES-30",
+                "early-structural-case-ledger.json::ES-31",
+                "early-structural-case-ledger.json::ES-33",
+                "early-structural-case-ledger.json::ES-36",
+                "early-structural-case-ledger.json::ES-37",
+                "early-structural-case-ledger.json::ES-40"
+              ],
               "eligibleBuiltWorkflowUnit": null,
               "eligibilityReason": "Requirement source indexed; each built component and required scenario/context still needs explicit eligibility reconciliation. Presence, a candidate command or an unrelated case is insufficient.",
               "wholeRequirementAccepted": false
@@ -53134,7 +53230,7 @@
           "extractionComplete": false,
           "remainingScope": "Approval/refinement prose, later rulings and unnumbered workflow/context decomposition remain. Extracted source rows are not the complete eligible-built denominator.",
           "sourceRetrievable": true,
-          "currentDetailedAudit": null,
+          "currentDetailedAudit": "approvedWorkflowRequirementAudits.ST-06",
           "unnumberedScopeRequiresReview": true,
           "currentInstalledCandidateEntryKeys": [
             "CE_STRUC_SUITE.bundle::39::CE_REBARLINE",
@@ -55378,19 +55474,18 @@
         "sha256": "1A80B99A6C2CB1C1ADA206FB0EBD6395671ACD1F96E78B551DC7D644D8424193"
       },
       "newDetailedAudits": [
-        "CV-06",
-        "CV-07",
-        "CV-08"
+        "ST-02",
+        "ST-06"
       ],
-      "currentDetailedRequirementCount": 135,
+      "currentDetailedRequirementCount": 165,
       "auditSchemaReconciliation": "CV03status/currentCaseKeys preserved alongside othercardsassessment/caseKeys. Range-summary headings prefer exact decisiontable rows; no false requirement accepted from a heading range.",
-      "numberedRequirementsWithDetailedAudit": 135,
-      "localAuditSha256": "6B789B832F2EEE904A272EA0CA32F01D44D4E17097BCBCBD9174243FEE989A0A"
+      "numberedRequirementsWithDetailedAudit": 165,
+      "localAuditSha256": "4D04EF07B450210BDE9CFEF34FE6685A2C8454D5F8DCCE8A3845C47F9D19BF02"
     }
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-16",
-    "usedPercent": 80,
+    "usedPercent": 87,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792649602,
     "reportedResetMelbourne": "22/10/2026, 5:13:22 pm",
@@ -56933,6 +57028,355 @@
           "assessment": "UNTESTED",
           "reason": "Exact requirement has no current native proof reviewed here; catalogue presence and historical source/test claims do not establish current AutoCAD behaviour.",
           "caseKeys": [],
+          "wholeRequirementAccepted": false
+        }
+      ]
+    },
+    "ST-02": {
+      "source": "04_REFERENCE/CARDS/ST-02_SUPPORTS_BRACING_JOISTS.md",
+      "sourceSha256": "D37FFC8EA69734EA07116FF645F73CE5E0B643F7A3E517051A1DAED5ED7C0333",
+      "scope": "Fullcanonicalcard plus Timapproval/refinements read16October2026; all15numberedrequirements reviewed. ExistingnarrowPASS cases retain originalscopes; approvedreplacement/workflow gaps do not create newnativeexecutions.",
+      "nativeCaseCount": 46,
+      "nativeLedgerCount": 5,
+      "nativeCaseBasis": "Currentroute-associatedcase scopes; no newexecution.",
+      "wholeWorkflowAccepted": false,
+      "requirements": [
+        {
+          "id": "ST2-1",
+          "required": "Preserve insert commands `DS/DS1/TS1/C1/C2`. `SDS/SDS1/STS1/SC1/SC2` mean **switch to that type**. Keep old `TDS/TDS1/TTS1/TC1` as hidden aliases.",
+          "assessment": "PARTIAL",
+          "reason": "C1/DS/DS1/TS1 insertion andSC1/SC2 switching routes observed. C2insertion, otherS-switches andhiddencompatibilityaliases remainunproved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-05",
+            "early-structural-case-ledger.json::ES-08",
+            "early-structural-case-ledger.json::ES-10",
+            "early-structural-case-ledger.json::ES-11",
+            "early-structural-case-ledger.json::ES-12",
+            "early-structural-case-ledger.json::ES-15"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-2",
+          "required": "Lock the support catalogue: DS 90×90 without label; DS1 90×90; TS1 135×90; C1 89 SHS; C2 uses its approved SHS/RHS/PFC picker.",
+          "assessment": "PARTIAL",
+          "reason": "UnmarkedDS placement andSC2memberpicker observed; exactphysical90x90/135x90/89SHS assetcatalogue andC2insertion notverified. Selectorcaption fault576 staysopen.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-08",
+            "early-structural-case-ledger.json::ES-12",
+            "early-structural-case-ledger.json::ES-13"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-3",
+          "required": "Support insertion uses the block’s physical centre—not its lower corner—as the cursor point.",
+          "assessment": "UNPROVEN",
+          "reason": "Insertionpoints appearasrequested; no nativephysicalblockcentre/boundinggeometry comparison establishes cursor-to-centre for every support.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-10"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-4",
+          "required": "When a clear stud-wall pair exists, centre the support within the approximately 90 mm wall and align it automatically. Otherwise show an orientation preview controlled by the cursor.",
+          "assessment": "PARTIAL",
+          "reason": "No-clearwall fallback plainlyasksrotation; actual90mmwallpair centring/alignment andRoverride nottested.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-08"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-5",
+          "required": "A label-bearing support is one compound: block, typed support data and its label. After placement, the label follows the cursor with the real text box visible; click left/right/top/bottom.",
+          "assessment": "PARTIAL",
+          "reason": "Bodies/labels placed andsave-reopened; oneUndo restoresC1compound. Completecursor text-boxpreview andownership undernativeedits remainunproved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-05",
+            "early-structural-case-ledger.json::ES-06",
+            "early-structural-case-ledger.json::ES-10",
+            "early-structural-case-ledger.json::ES-16"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-6",
+          "required": "Use the active structural schedule to prefill size and mark, but visibly show the source and permit an override before placement.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-7",
+          "required": "On placement, highlight every beam end that genuinely touches the support footprint. One support may link to several beams. Ambiguous candidates require confirmation.",
+          "assessment": "UNTESTED",
+          "reason": "Earlysupportmessage saysbeamlinkingoff. No enabled sharedsupportfixture provesalltouchingbeamends/ambiguouscandidateconfirmation.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-05"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-8",
+          "required": "Support switching uses preselection or one support pick. Show the target outline before Apply; retain centre, rotation, mark, label location and all beam relationships.",
+          "assessment": "PARTIAL / APPROVED UPGRADE GAP",
+          "reason": "SC2converts aselectedsupport andUndoRedo restoresit, but approvedtarget-outline-beforeApply andretention ofallbeam/labelrelationships are notestablished. ExistingoldworkflowPASS isnotnewworkflowacceptance.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-12",
+            "early-structural-case-ledger.json::ES-14"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-9",
+          "required": "Switching should not automatically ask for rotation again. Rotation is retained unless Timothy presses `R`. Labels are retained by ownership, never collected from a 260 mm proximity circle.",
+          "assessment": "PARTIAL / APPROVED UPGRADE GAP",
+          "reason": "SC2testincludesrotation andlabelsidequestions; approvedretainedrotation/no-reprompt/ownership-onlylabelretention stillneeds exactpreviewworkflowevidence. No unrelatednote-lossclaim invented.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-12"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-10",
+          "required": "Support MOVE/COPY/ERASE follows ST-01: moving a support updates every linked beam end; copying gives fresh identity and no inherited links unless the beams were copied with it; erasing flags affected beams.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-11",
+          "required": "Keep the fast AB/BB workflow: first endpoint → live final-block preview → second endpoint. Enter at the second point retains the familiar 2700 mm horizontal default.",
+          "assessment": "PARTIAL",
+          "reason": "ABdefault2700 output andBBverticalmanualflip work. Livefinishedblock endpointpreview/Entersecondpoint/otherdrawingdirections unproved.",
+          "caseKeys": [
+            "wind-bracing-case-ledger.json::AB-DEFAULT-2700",
+            "wind-bracing-case-ledger.json::BB-VERTICAL-MANUAL-FLIP"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-12",
+          "required": "AB remains capped at 2700 mm; BB and BT remain uncapped. When AB exceeds 2700, the preview visibly stops at 2700 and displays `MAX`, rather than shortening after the click.",
+          "assessment": "UNTESTED",
+          "reason": "2700mm control isnot anAB-over-cap/MAXpreview test or proofBB/BTareuncapped.",
+          "caseKeys": [
+            "wind-bracing-case-ledger.json::AB-DEFAULT-2700",
+            "floor-roof/case-ledger.json::BT9-PLACEMENT"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-13",
+          "required": "Auto-flip provides the initial preview. Press `F` to flip before the final click. `ABS` batch-switches A↔B without moving, resizing or reflipping the brace. BT numbering is entered/accepted before placement so the preview shows the finished mark.",
+          "assessment": "PARTIAL / APPROVED UPGRADE GAP",
+          "reason": "ABSswitch changesAtoB withoutlengthchange andBTnumberbounds/BT9output observed. BBstillusesYesflip prompt in testedpath; approvedF-before-finalclick andfinishedBTpreview notestablished.",
+          "caseKeys": [
+            "wind-bracing-case-ledger.json::ABS-A-TO-B",
+            "wind-bracing-case-ledger.json::BB-VERTICAL-MANUAL-FLIP",
+            "floor-roof/case-ledger.json::BT-NUMBER-BOUNDS",
+            "floor-roof/case-ledger.json::BT9-PLACEMENT"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-14",
+          "required": "Rebuild `R1/FJ1`: select the two boundaries being spanned → CE derives direction and span → move the finished marker preview within the bay → click → enter/accept the tag. Four-point input remains a fallback only. Auto-placement becomes a suggestion, never an unseen decision. Keep `P1` hidden until its lap rules are approved.",
+          "assessment": "FAIL",
+          "reason": "R1/FJ1exactspan/width output failures584 persistafterreopen. Pointfallback andUndoRedo work; defaulttwo-boundary previewworkflow andP1hiding/lapapproval remainunproved.",
+          "caseKeys": [
+            "floor-roof/case-ledger.json::R1-POINT-ESCAPE",
+            "rafter-joist/case-ledger.json::R1-EXACT-WIDTH",
+            "rafter-joist/case-ledger.json::R1-DISK-WIDTH",
+            "rafter-joist/joist-purlin-case-ledger.json::FJ1-EXACT-SPAN-WIDTH",
+            "rafter-joist/joist-purlin-case-ledger.json::FJ1-DISK-WIDTH"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST2-15",
+          "required": "All workflows are one Undo and leave nothing after Esc. No whole-drawing beam search during support placement. Automated tests cover sizes, UCS, switching, copied labels and shared supports; Timothy tests one support, one AB brace and one R1 marker in **10 minutes maximum**.",
+          "assessment": "PARTIAL",
+          "reason": "Severalplacement/cancel/UndoRedo/save-reopen/lockedoutput controls pass. ABSlocked-source UIerror583 remains; whole-drawingscan/performance/UCS/copiedlabels/sharedsupports notproved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-06",
+            "early-structural-case-ledger.json::ES-07",
+            "early-structural-case-ledger.json::ES-11",
+            "early-structural-case-ledger.json::ES-15",
+            "wind-bracing-case-ledger.json::AB-ONE-UNDO-DELAYED-REDO",
+            "wind-bracing-case-ledger.json::ABS-LOCKED-SOURCE"
+          ],
+          "wholeRequirementAccepted": false
+        }
+      ]
+    },
+    "ST-06": {
+      "source": "04_REFERENCE/CARDS/ST-06_FOUNDATIONS_REBAR.md",
+      "sourceSha256": "C00F1CB513438A24DCA8D6DF28779D9AA95CC4CCF746157B6B96E3DA4DA09B9E",
+      "scope": "Fullcanonicalcard plus Timapproval/refinements read16October2026; all15numberedrequirements reviewed. ExistingnarrowPASS cases retain originalscopes; approvedreplacement/workflow gaps do not create newnativeexecutions.",
+      "nativeCaseCount": 19,
+      "nativeLedgerCount": 1,
+      "nativeCaseBasis": "18route-associatedcases plus already-recordedES40 schedule/persistence readback; not newFSTEXPORT invocation.",
+      "wholeWorkflowAccepted": false,
+      "requirements": [
+        {
+          "id": "ST6-1",
+          "required": "ST-06 owns raft beams, thickenings, strip/pad footings, bored piers, screw piles, stump footings and reinforcement placement. ST-07 owns schedules.",
+          "assessment": "PARTIAL",
+          "reason": "Pad/stripfoundation andsize-library paths observed; rebar/piers/hostscope andsingleST07scheduleownership notverified.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-24",
+            "early-structural-case-ledger.json::ES-25",
+            "early-structural-case-ledger.json::ES-33"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-2",
+          "required": "`FST` becomes the canonical **Foundation workspace**. Preserve frequent aliases including `THC`, `PFC`, `SF`, `REB`, `RIB`, `BP`, `SPW`, `RBL` and `RBC`.",
+          "assessment": "PARTIAL",
+          "reason": "FSTlibrarySave/Cancel andFPFC/FSF/FEDIT available. FullFoundationworkspace/frequentaliasparity notproved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-23",
+            "early-structural-case-ledger.json::ES-24",
+            "early-structural-case-ledger.json::ES-28"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-3",
+          "required": "The drawn driver is the geometry authority; its embedded CE record owns type, mark, size, depth, source and approval status. The size library is project information—not an automatic engineering designer.",
+          "assessment": "FAIL",
+          "reason": "Explicitpaddepth350/450notreliablycarriedtoFEDIT/schedule579;fullPF1keynormalises tonumeric1inplacement578. Drawnrectangleworks butcompleteauthoredrecordauthority fails.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-27",
+            "early-structural-case-ledger.json::ES-29",
+            "early-structural-case-ledger.json::ES-32"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-4",
+          "required": "Missing size/depth becomes **Unknown**, never zero. User-entered values are marked Manual/Designed with their source. CE cannot invent a footing size from the mark or from historical popularity.",
+          "assessment": "FAIL",
+          "reason": "Explicitknownpaddepth becomeseditor0/scheduleUnknown579. This islossofknownauthoring,notproofCEstoredzero orperformedsizing. CorrectUnknownschedule alone doesnotacceptthelostdepth.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-29",
+            "early-structural-case-ledger.json::ES-32",
+            "early-structural-case-ledger.json::ES-34",
+            "early-structural-case-ledger.json::ES-40"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-5",
+          "required": "Placement workflow: **select/draw geometry → choose type/mark/size → live complete preview → Flip/Rotate if relevant → Apply**. Preselection is supported so existing linework can be converted without redrawing it.",
+          "assessment": "PARTIAL",
+          "reason": "Explicit900x700pad/straight400mmstrip creationworks. Preselection/completefinalpreview/FlipRotate/Applycontexts remainunproved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-25",
+            "early-structural-case-ledger.json::ES-33"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-6",
+          "required": "`REB`, `RIB` and `THC` require an explicitly selected raft/slab host. The relationship is permanent. Moving the host rechecks its foundation elements; CE never chooses a host merely because it is nearby.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-7",
+          "required": "`FADOPT` becomes Preview-only initially. It lists proposed geometry, labels and types individually. Timothy confirms ambiguous matches; proximity alone cannot adopt or relabel anything.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-8",
+          "required": "Every footing element is one compound: driver geometry, generated outlines/hatch, label and design data. The raft host is shared and is not owned or deleted by any individual beam/thickening.",
+          "assessment": "PARTIAL",
+          "reason": "Libraryreports3linkedfootingelementsafterreopen. Completeownedlabel/hatch/host relationships andnativeMOVE/COPY notproved; sharedraftnotdriven.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-39"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-9",
+          "required": "MOVE updates only the selected foundation group. COPY creates fresh identities and links to the correct host. EDIT preserves manual label placement. ERASE offers **Element only** or **Entire system**, showing exact counts before Apply.",
+          "assessment": "PARTIAL / APPROVED UPGRADE GAP",
+          "reason": "FDELETEselectedstripshowsall3whole-networkconfirmation;defaultNo preservesall andYes/removalUndoRedo work. Element-onlychoice, sharedhostpreservation, freshCOPYidentity andmanual-labelEDIT remainunproved.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-35",
+            "early-structural-case-ledger.json::ES-36"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-10",
+          "required": "`FREGEN` preserves authored positions and approved values. `FREGENALL` is an explicit Manager action with a preview count. No regeneration on drawing open and no whole-drawing scan while drafting.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-11",
+          "required": "Consolidate `BP`, `SPW`, `SPW3`, `SPW6` and `SPWC` on one bored-pier engine while retaining aliases. Preview clearly selects **At cut: green/solid** or **Below: yellow/hidden**, plus 300/450/600 diameter and approved hatch state.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-12",
+          "required": "Screw-pile and stump-footing graphics must come from stable, individually Approved AS-01 assets in the Plugin bundle. If the asset is missing, placement is blocked—never substitute an approximate circle or use `C:\\Lisp Files`.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-13",
+          "required": "`RBL` and `RBC` become compounds. The preview displays bar size, spacing/count, zone, orientation and exact final label. For `RBC`, state explicitly that the picked radius is the **bar-centre radius**, avoiding cover ambiguity.",
+          "assessment": "UNTESTED",
+          "reason": "Requirement-specific native context not proved by the currentcases reviewed here. Catalogue names/history do not prove installed behaviour.",
+          "caseKeys": [],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-14",
+          "required": "Permanently remove `STR` and `BWT` from ordinary command registration as already ruled. `FSTEXPORT` redirects to the single ST-07 schedule engine so the drawing cannot contain two disagreeing footing schedules.",
+          "assessment": "UNPROVEN",
+          "reason": "No nativeSTR/BWTretirement orFSTEXPORTsingle-engineproof in currentcases. Registeredcataloguecandidates do notbythemselves proveordinaryruntimeexposure; ES40isreadbacknotFSTEXPORTinvocation.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-40"
+          ],
+          "wholeRequirementAccepted": false
+        },
+        {
+          "id": "ST6-15",
+          "required": "Automate foundation geometry, host relationships, copy identity, regeneration, deletion, schedules and rebar arrangements. Timothy’s final AutoCAD check is approximately six representative actions in 10–12 minutes.",
+          "assessment": "PARTIAL",
+          "reason": "Nativepad/strip/edit/library/systemdeleteconfirmation/UndoRedo/reopen checks exist. Regeneration/hosts/COPY/rebar/olderruntime/protection/plots remain. No newnativecount.",
+          "caseKeys": [
+            "early-structural-case-ledger.json::ES-25",
+            "early-structural-case-ledger.json::ES-30",
+            "early-structural-case-ledger.json::ES-31",
+            "early-structural-case-ledger.json::ES-33",
+            "early-structural-case-ledger.json::ES-36",
+            "early-structural-case-ledger.json::ES-37",
+            "early-structural-case-ledger.json::ES-40"
+          ],
           "wholeRequirementAccepted": false
         }
       ]

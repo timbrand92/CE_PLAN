@@ -1,6 +1,15 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
 
+## Structural requirements reconciled — 16 October 2026
+
+1. **What worked in AutoCAD:** support insertion/switching, brace placement and Undo/Redo, saved support/brace/joist drawings, pad/strip placement, footing library edits and whole-network deletion confirmation have bounded existing evidence. This review reuses 46 support/bracing cases and 19 foundation cases; it adds no execution.
+2. **Failures remain:** R1/FJ1 marker dimensions are wrong (584), and authored footing depths and full marks are not reliably retained (578/579). Locked ABS switching has a UI fault (583). Successful placement alone does not accept the approved whole workflow.
+3. **Still required by the approved plan:** supports connecting to every touching beam, complete previews, switching without needless rotation questions, native MOVE/COPY ownership, foundation hosts and regeneration, element-only deletion, reinforcement and approved pier assets. These gaps are now linked to their exact approved requirement and existing test cases where relevant.
+4. **Coverage position:** 11 full cards/165 numbered requirements reconciled; 600 numbered source requirements indexed. The remaining28 cards, unnumbered continuation and later V3/UI/UX scope still need built/context reconciliation. Native total remains753 checks:584PASS,138FAIL,7BLOCKED,24UNPROVEN. Whole50%tested remains unknown; failed executed tests count as testing performed. Weekly87%used/13%remaining.
+
+
+
 ## Coverage inventory: foundation sources recovered —16 October2026
 
 1. **Native total unchanged:**753 scoped checks across68batches. This pass reviews their scope; it adds no AutoCAD test or pass.

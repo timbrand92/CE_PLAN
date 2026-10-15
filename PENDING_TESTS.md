@@ -1,6 +1,14 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### Structural coverage reconciliation — 16 October 2026
+
+1. **Recorded; no Tim action needed:** ST-02 and ST-06 full approved cards reviewed,30 requirements. Existing46 support/bracing cases and19 foundation cases reused; no new AutoCAD execution. Detailed reviews now11cards/165requirements.
+2. **Outstanding native contexts:** shared touching beams, physical-centre support insertion, schedule provenance, complete switching/brace previews, support MOVE/COPY; foundation hosts/COPY/regeneration/element-only deletion, piers and reinforcement. Existing faults576/578/579/583/584 stay open.
+3. **Next:** review remaining28cards plus unnumberedCV01J/laterV3UX scope and built/context eligibility; drive uncovered installed workflows on copies. Saved floor-waste reopening, COPY/connected landing/protection/units/UCS/plot remain pending. Total753/68unchanged; whole50%testedUNKNOWN.
+
+
+
 ### Canonical scope and source recovery —16 October2026
 
 1. **No Tim action needed:**600 numbered source requirements indexed across38cards, plus unnumberedCV01J retained. Five missing foundation records recovered with exactrevision/hash/canonicalIDs; original planlinks stillBUG639OPEN.
