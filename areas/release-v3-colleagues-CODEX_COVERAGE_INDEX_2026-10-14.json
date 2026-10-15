@@ -9,10 +9,10 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "660214A3B7CF7A6678C54F3D6910B6F22D07F91246BDE70F998A6135CA8690BF",
+    "currentBugsSha256": "122E599C422115D731CE96BA4AE3501A913222E6642933AD40216FF62D341D4B",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
-    "currentCaseIndexSha256": "5256FBECB8E1B21732D910B1C3F3197CFE7464BD446F795F9DF2BF1214B40EED"
+    "currentCaseIndexSha256": "C3E2094AB338036E521885ABED9DBE8D5782138ECF6334916548725BB02D5913"
   },
   "counts": {
     "traceableUxIds": 526,
@@ -27,21 +27,21 @@
       "BLOCKED": 6,
       "UNPROVEN": 17
     },
-    "uniqueEvidenceFiles": 1124,
+    "uniqueEvidenceFiles": 1132,
     "evidenceIntegrityProblems": 0,
     "historicalCandidateReports": 127,
     "statusFixedTextCandidates": 53,
     "bugEntriesWithoutExplicitStatusMarker": 3,
-    "uniqueScreenshotFiles": 1047,
-    "uniqueMetadataFiles": 77,
+    "uniqueScreenshotFiles": 1053,
+    "uniqueMetadataFiles": 79,
     "caseLinkedUxIds": 14,
     "caseLinkedBugIds": 65,
-    "newNativeExecutionsInLatestReconciliation": 12,
+    "newNativeExecutionsInLatestReconciliation": 0,
     "earlierCasesAddedInLatestReconciliation": 0,
     "earlierCasesRecoveredThisTurn": 0,
     "earlierInitialBatchesRecoveredAcrossReconciliationTurns": 98,
     "numericBugAssociationsRestored": 4,
-    "retainedDeclaredEvidenceFiles": 1131
+    "retainedDeclaredEvidenceFiles": 1139
   },
   "coverage": {
     "verifiedCurrentOverallPercent": null,
@@ -20061,7 +20061,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": "MEDIUM OPEN; native Q note blank in editor on fixture; inherited style/environment versus CE cause unproved."
+      "currentStatusSourceLine": "MEDIUM OPEN investigation; initial blank Q native editor, later readable after reopen plus font/control setup; cause/context unisolated, no fix installed."
     }
   ],
   "statusMethod": "Status text candidates accept standalone or inline markers and either bold-colon format; historical FIXED is not current verified acceptance. Missing marker is not proof of missing status in all prose formats. Existing status candidates are explicitly the dated 14 October snapshot, not revalidated closures. New590-593 status OPEN checked15October. Root ## headings counted; ###BUG036-R5 is a subheading, not another bug. Exact bare-title regex misses titled bugs. Current profile follow-through recount uses unique case-linked files only; full Undo/Redo visibility is unproven under BUG601.",
@@ -39153,14 +39153,14 @@
     "resetConfirmedByTim": true
   },
   "evidenceIntegrityAudit": {
-    "directCaseLinkedFiles": 1124,
-    "retainedDeclaredFiles": 1131,
-    "directScreens": 1047,
-    "directMetadata": 77,
+    "directCaseLinkedFiles": 1132,
+    "retainedDeclaredFiles": 1139,
+    "directScreens": 1053,
+    "directMetadata": 79,
     "duplicateCaseKeys": 0,
     "conflictingHashes": 0,
     "missingOrMismatchedFiles": 0,
-    "scope": "All563cases43ledgers and1131retained files rehashed;7unlinkedsetup/cleanupimages excluded from direct count."
+    "scope": "All563cases43ledgers and1139retained files rehashed;7unlinkedsetup/cleanupimages excluded. Native font diagnostics add evidence, no plugin check count."
   },
   "approvedWorkflowRequirementAudits": {
     "ST-05": {

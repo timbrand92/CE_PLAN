@@ -5,13 +5,15 @@
 1. **Testing:**563 recorded checks in real AutoCAD across43 evidence ledgers: **442 PASS,98 FAIL,6 BLOCKED,17 UNPROVEN**. These are specific checks, not563 complete features.
 2. **New work:**99 new native checks after Tim’s usage-reserve override;98 recovered earlier cases are separate. Latest Q/QD batch12checks:9PASS/3FAIL.
 3. **Overall target:**50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical7% was text matching; the complete eligible built/installed workflow inventory remains unfinished.
-4. **Evidence:**1,124 directly linked files:1,047 screenshots/77 metadata. Seven setup/cleanup images separate; all1,131 retained files rehashed without problems.563 unique case keys/43ledgers.526 explicit UX IDs,573 root bug headings and523 installed catalogue entries;84 catalogue records have a case association, not84 accepted workflows.
+4. **Evidence:**1,132 directly linked files:1,053 screenshots/79 metadata. Seven setup/cleanup images separate; all1,139 retained files rehashed without problems.563 unique case keys/43ledgers.526 explicit UX IDs,573 root bug headings and523 installed catalogue entries;84 catalogue records have a case association, not84 accepted workflows.
 5. **Bugs:**54 new BUG570–623 remain OPEN.620 is source-only;623 is observed blank native editing on the fixture with cause unproved. Repair candidates remain separate from installed, AutoCAD-accepted fixes. No deployment by this chat.
 6. **Usage:**latest account-wide meter10%used/90%remaining. Use-to0% overrides former reserve; no reset redeemed or paid provider request.
 7. **Safe state:** quick leaders saved/read back; all owned drawings closed;11 captured drafting controls restored exactly; source drawings and Structural preferences unchanged; own lease released. OlderBUG595 session untouched.
 8. **Remaining:** clean MLL recovery, leader edit/font controls, later cancellation, grips/protections/scales/units/UCS/paper/plots/older AutoCAD, remaining commands and whole job journeys. Engineering decisions need Tim where relevant.
 
 ## Latest native results
+
+1. **Editing diagnostic follow-through:** native Standard MText control and repeat Q editor are readable after reopening plus temporary Arial-style/control creation. Standard definition remains unchanged; no edit committed or repair proved. Initial blank editor remains a recorded intermittent/context failure (BUG623). Controls discarded and saved file/preferences unchanged. Eight additional evidence files; no new plugin case or percentage credit.
 
 1. **Quick leaders —12 checks:9PASS/3FAIL:** Q filled-arrow and QD dot follow native point/width/text flow, produce linked LEADER/MTEXT on25DIMS with250mm model text at1:100. Immediate single Undo and untouched38.007s/36.693s Redo pass respectively. Complete records survive actual save/close/reopen; first-prompt Escape adds nothing.
 2. **Faults and limits:** both cancellation routes retain CE dimension styles instead of Standard (BUG621). Q double-click opens a blank native editor with Undefined shape warnings (BUG623); inherited Standard font fields are empty, cause unproved. Escape preserves text. Clean-template/native-MText controls and successful editing remain pending; no global style rewritten.
