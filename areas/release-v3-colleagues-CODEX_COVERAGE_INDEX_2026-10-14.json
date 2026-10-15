@@ -34,7 +34,7 @@
     "bugEntriesWithoutExplicitStatusMarker": 3,
     "uniqueScreenshotFiles": 1232,
     "uniqueMetadataFiles": 158,
-    "caseLinkedUxIds": 15,
+    "caseLinkedUxIds": 18,
     "caseLinkedBugIds": 84,
     "newNativeExecutionsInLatestReconciliation": 10,
     "earlierCasesAddedInLatestReconciliation": 0,
@@ -40823,7 +40823,8 @@
     "dateMelbourne": "2026-10-15",
     "issue": "Shared index still551/42ledgers although prior saved report/local index563/43. Q/QD12cases and8diagnosticfiles were absent from shared summary; local case receipts retained.",
     "resolution": "Recomputed current counters from all572cases44ledgers, restored Q/QD associations and added9newMLLchecks; no rerun or duplicate new-case credit.",
-    "currentLocalCaseIndexSha256": "06DD9A72FD7540100CF85474C6D673EFE6C8E3452DFC7BCB04738E8D81B07949"
+    "currentLocalCaseIndexSha256": "06DD9A72FD7540100CF85474C6D673EFE6C8E3452DFC7BCB04738E8D81B07949",
+    "uxCaseLinkCounting": "18UXrecords have explicitcurrentCaseKeys, including3crosscuttingrequirementlinks STD03/SEL01/LYR01 stored in sharedUXrecords. Localledger ids alone show15; do notdropapprovedcaseassociations because linked from requirement side."
   },
   "candidateRepairEvidence": [
     {
