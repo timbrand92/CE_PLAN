@@ -9,7 +9,7 @@
     "bugsSha256": "9960B714464B48746275781EFED407CE2B33F9C5ECC2D2610D8FFE7631B32D24",
     "currentEvidence": "areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md",
     "sourceRulings": "decisions/2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md",
-    "currentBugsSha256": "8B525566848DC002207FBCBE95111857FDD5A0AB78A02DE1C76C9D11B13B06E0",
+    "currentBugsSha256": "DB1B11E18D69135FD7088FC15797A5ADF6326754E61402BA3479B7501B060F23",
     "currentCaseIndex": "Local only: V3UX_20261014/coverage-case-index-current.json",
     "rulingSha256": "494610C1DDAD174905814C6BEE9A496FC592B630CA8D5A0872B25B58A5099087",
     "currentCaseIndexSha256": "FA7F31D32BF43D9F10C6F32E7794D0E8222ED94D070E94269F866B3723F18CD6"
@@ -19872,11 +19872,39 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": "**Status:** OPEN — installedStructural1.0.116+f180b349, realAutoCAD2027,15October2026."
+      "currentStatusSourceLine": "**Status:** OPEN — installedStructural1.0.116+f180b349, realAutoCAD2027,15October2026.",
+      "repairCandidate": {
+        "bug": "BUG-611",
+        "pullRequest": "https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262",
+        "head": "30e0cffe6e7750c0337dc836a3843bbf26122f9a",
+        "branch": "codex/timber-picker-status-20261015",
+        "dateMelbourne": "2026-10-15",
+        "focusedModernTests": {
+          "total": 16,
+          "pass": 16,
+          "fail": 0
+        },
+        "originalConditionGuardFailures": 2,
+        "standaloneModernBuild": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "standaloneNet48Build": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "compiledWindowRenders": 14,
+        "proofSha256": "44E7E4145A7DB46019196CA0EE0843A97C4E52B0F95595CE1DEAEA46E580FF01",
+        "localProof": "V3UX_20261014/candidate-sbeam611/candidate-proof.json",
+        "installed": false,
+        "nativeCandidateAccepted": false,
+        "nativeCaseCountChanged": false,
+        "scope": "Window-only status/contrast repair. Original native611remainsOPEN. Build/test/candidate-render evidence kept separate from582nativecases."
+      }
     },
     {
       "id": "BUG-612",
-      "headingLine": 8118,
+      "headingLine": 8122,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19892,7 +19920,7 @@
     },
     {
       "id": "BUG-613",
-      "headingLine": 8134,
+      "headingLine": 8138,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19908,7 +19936,7 @@
     },
     {
       "id": "BUG-614",
-      "headingLine": 8145,
+      "headingLine": 8149,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19923,7 +19951,7 @@
     },
     {
       "id": "BUG-615",
-      "headingLine": 8155,
+      "headingLine": 8159,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19941,7 +19969,7 @@
     },
     {
       "id": "BUG-616",
-      "headingLine": 8172,
+      "headingLine": 8176,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19956,7 +19984,7 @@
     },
     {
       "id": "BUG-617",
-      "headingLine": 8181,
+      "headingLine": 8185,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19971,7 +19999,7 @@
     },
     {
       "id": "BUG-618",
-      "headingLine": 8192,
+      "headingLine": 8196,
       "statusCandidates": [
         "OPEN"
       ],
@@ -19986,7 +20014,7 @@
     },
     {
       "id": "BUG-619",
-      "headingLine": 8202,
+      "headingLine": 8206,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20002,7 +20030,7 @@
     },
     {
       "id": "BUG-620",
-      "headingLine": 8212,
+      "headingLine": 8216,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20015,7 +20043,7 @@
     },
     {
       "id": "BUG-621",
-      "headingLine": 8231,
+      "headingLine": 8235,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20034,7 +20062,7 @@
     },
     {
       "id": "BUG-622",
-      "headingLine": 8249,
+      "headingLine": 8253,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20050,7 +20078,7 @@
     },
     {
       "id": "BUG-623",
-      "headingLine": 8261,
+      "headingLine": 8265,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20065,7 +20093,7 @@
     },
     {
       "id": "BUG-624",
-      "headingLine": 8273,
+      "headingLine": 8277,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20080,7 +20108,7 @@
     },
     {
       "id": "BUG-625",
-      "headingLine": 8284,
+      "headingLine": 8288,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20095,7 +20123,7 @@
     },
     {
       "id": "BUG-626",
-      "headingLine": 8294,
+      "headingLine": 8298,
       "statusCandidates": [
         "OPEN"
       ],
@@ -20110,7 +20138,7 @@
     },
     {
       "id": "BUG-627",
-      "headingLine": 8303,
+      "headingLine": 8307,
       "statusCandidates": [
         "OPEN"
       ],
@@ -39244,7 +39272,7 @@
   },
   "usageCheckpoint": {
     "dateMelbourne": "2026-10-15",
-    "usedPercent": 15,
+    "usedPercent": 23,
     "reservePercent": 0,
     "reportedResetUnixSeconds": 1792625799,
     "reportedResetMelbourne": "22/10/2026, 10:36:39 am",
@@ -39557,5 +39585,35 @@
     "issue": "Shared index still551/42ledgers although prior saved report/local index563/43. Q/QD12cases and8diagnosticfiles were absent from shared summary; local case receipts retained.",
     "resolution": "Recomputed current counters from all572cases44ledgers, restored Q/QD associations and added9newMLLchecks; no rerun or duplicate new-case credit.",
     "currentLocalCaseIndexSha256": "F7DDB614A8C85F6DA779694162B9D05120CB5A45F1A671C3B4A808D9FA1E775B"
-  }
+  },
+  "candidateRepairEvidence": [
+    {
+      "bug": "BUG-611",
+      "pullRequest": "https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262",
+      "head": "30e0cffe6e7750c0337dc836a3843bbf26122f9a",
+      "branch": "codex/timber-picker-status-20261015",
+      "dateMelbourne": "2026-10-15",
+      "focusedModernTests": {
+        "total": 16,
+        "pass": 16,
+        "fail": 0
+      },
+      "originalConditionGuardFailures": 2,
+      "standaloneModernBuild": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "standaloneNet48Build": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "compiledWindowRenders": 14,
+      "proofSha256": "44E7E4145A7DB46019196CA0EE0843A97C4E52B0F95595CE1DEAEA46E580FF01",
+      "localProof": "V3UX_20261014/candidate-sbeam611/candidate-proof.json",
+      "installed": false,
+      "nativeCandidateAccepted": false,
+      "nativeCaseCountChanged": false,
+      "scope": "Window-only status/contrast repair. Original native611remainsOPEN. Build/test/candidate-render evidence kept separate from582nativecases."
+    }
+  ]
 }

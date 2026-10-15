@@ -1718,3 +1718,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **BUG626:** complete FFL/RL/SSL/NGL trusted-source or Manual/Unknown flow, full following preview, F flip and final click. Current FFL entered-value/output recovery passes narrowly; do not rebuild those working parts unnecessarily.
 3. **BUG627:** normal MOVE from any recognised mark component must carry symbol/tail/value/source together. Check COPY fresh identity, edit, safe erase, recovery and reopen across protection/scale/UCS/paper/legacy contexts.
 4. **Recorded:** levels-case-ledger.json10checks7PASS3FAIL, screenshots1190–1217 and8metadata; receipts426–430. Captured13controls and rememberedSSL restored; source/saved files preserved, own drawing closed/lease released. No repair installed or engineering acceptance.
+
+
+## BUG611 Timber section status candidate — 15 October 2026
+
+1. **Candidate:** draft[PR1262](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262),30e0cffe, isolated installed-sourcef180 base. Window status/contrast only;16modern guards pass and both standalone builds0errors0warnings. Candidate not installed; bugOPEN.
+2. **Native replay after coordinated install:** SBEAM→PFC→search200→200ZZZ. Genuine no-match must be readable, clear stale geometry and disable Place. Clear search; recover choices. Timber with blank dimensions must show timber guidance and no steel warning;90x240mm must show correct preview/enablePlace. Return to steel and repeat no-match/clear. Run Dark/Light, keyboard/Cancel; catalogue-load failures must stay visible.
+3. **Separate:** no wholeST08, placement/compound/member-edit/plot/protection/legacy native acceptance. Render guards exercised compiled windows outside AutoCAD, never accepted a placement or wrote live preferences. Native count582 unchanged. Revert candidate commits to undo; no deployment performed.

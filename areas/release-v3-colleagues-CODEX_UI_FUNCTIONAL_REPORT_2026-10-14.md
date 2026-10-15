@@ -7,9 +7,15 @@
 3. **Overall target:** 50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical 7% text matching is not real workflow coverage.
 4. **Evidence:** 1,195 directly linked files: 1,102 screenshots and 93 metadata files. Seven setup/cleanup images remain separate; all 1,202 retained files rehashed without problems. There are 526 explicit UX IDs, 577 root bug headings and 523 installed catalogue entries. Eighty-six catalogue records have a case association; this is not 86 accepted workflows.
 5. **Bugs:** 58 new BUG-570–627 remain OPEN. Latest: ordinary-note overwrite625, missing floor-level review626 and split marker movement627. No repair installed by this chat.
-6. **Usage:** account-wide meter15% used,85% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
+6. **Usage:** account-wide meter23% used,77% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
 7. **Safe state:** owned drawings closed/current empty window independently verified;13original drafting controls and remembered SSL type restored. Source/saved specimen/preferences preserved; own lease released; older BUG595 session untouched.
 8. **Remaining:** genuine level-source updates, later cancellation, other level types, sections, breaklines, controlled dimension repair, complete job journeys, protections/scales/UCS/paper/plots/older releases and eligible built-workflow denominator.
+
+## Repair candidate — 15 October 2026
+
+1. **Timber status repair prepared:** draft[PR1262](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262) removes the false steel-search warning from Timber and keeps genuine no-match feedback readable in both themes. Existing geometry and catalogue-error path retained.
+2. **Checked:**16focused modern tests pass; the new guard fails against the original condition in both themes. Actual compiled window frames inspected. Modern and older standalone builds both pass with zero errors/warnings.
+3. **Acceptance still pending:** no install or native candidate test. BUG611 remains OPEN;582 native checks and overall50% position do not increase from build/render tests. Native replay checklist is in PENDING_TESTS and the code regression log.
 
 ## Latest native results
 
