@@ -39318,6 +39318,144 @@
           "caseKeys": []
         }
       ]
+    },
+    "ST-03": {
+      "source": "04_REFERENCE/CARDS/ST-03_ANNOTATION_DIMENSIONS.md",
+      "sourceSha256": "ABF506736239C1D3AD777EC398FB05C2CA230B64EDAB9A83661727D48CC43835",
+      "scope": "All15 approved decisions reviewed against current evidence. Assessment is not extra execution or whole-card acceptance. Current-index absence does not prove no other chat/history ever ran it.",
+      "nativeCaseCount": 49,
+      "nativeLedgerCount": 5,
+      "wholeWorkflowAccepted": false,
+      "requirements": [
+        {
+          "id": "ST3-1",
+          "assessment": "PARTIAL",
+          "reason": "Native dimensions and leaders use CE layers in tested samples. Shared standards resolution across all annotation families, scales and spaces remains unproved.",
+          "caseKeys": [
+            "dimensions-case-ledger.json::DM-03",
+            "mll-clean-case-ledger.json::MC-04"
+          ]
+        },
+        {
+          "id": "ST3-2",
+          "assessment": "FAIL",
+          "reason": "AD/LD/Q/QD/RD leave changed drafting styles/settings (BUG621). MLL restores the captured controls narrowly; full first-use style portability and definition nonmutation remain.",
+          "caseKeys": [
+            "dimensions-case-ledger.json::DM-02",
+            "dimensions-case-ledger.json::DM-09",
+            "quick-leaders-case-ledger.json::QL-02",
+            "quick-leaders-case-ledger.json::QL-04",
+            "mll-clean-case-ledger.json::MC-07"
+          ]
+        },
+        {
+          "id": "ST3-3",
+          "assessment": "PARTIAL",
+          "reason": "AD5000 and LD4000 native preview/output; AD source movement and save/reopen pass. Full selection, native grips, vertical LD and other contexts remain.",
+          "caseKeys": [
+            "dimensions-case-ledger.json::DM-03",
+            "dimensions-case-ledger.json::DM-06",
+            "dimensions-case-ledger.json::DM-10",
+            "dimensions-case-ledger.json::DM-11"
+          ]
+        },
+        {
+          "id": "ST3-4",
+          "assessment": "PARTIAL_WITH_FAILURE",
+          "reason": "Q arrow and QD dot preserve native flow and linked objects, recovery and persistence. First Q native editor was blank; later control context readable. Actual edit completion and wider leader geometry remain.",
+          "caseKeys": [
+            "quick-leaders-case-ledger.json::QL-05",
+            "quick-leaders-case-ledger.json::QL-07",
+            "quick-leaders-case-ledger.json::QL-09",
+            "quick-leaders-case-ledger.json::QL-11"
+          ]
+        },
+        {
+          "id": "ST3-5",
+          "assessment": "PARTIAL",
+          "reason": "RD Radius R1000 preview/output and recovery pass. Installed mode-before-geometry differs from approved geometry-first. Actual Length/Diameter output and persistence remain.",
+          "caseKeys": [
+            "radius-case-ledger.json::RD-01",
+            "radius-case-ledger.json::RD-03",
+            "radius-case-ledger.json::RD-05"
+          ]
+        },
+        {
+          "id": "ST3-6",
+          "assessment": "FAIL",
+          "reason": "Native MLL/MLR paragraphs and recovery/persistence pass in samples. F toggle rejected (622), clean MLL placement lands on wrong side (624).",
+          "caseKeys": [
+            "mleader-case-ledger.json::ML-02",
+            "mleader-case-ledger.json::ML-05",
+            "mll-clean-case-ledger.json::MC-05",
+            "mll-clean-case-ledger.json::MC-06",
+            "mll-clean-case-ledger.json::MC-09"
+          ]
+        },
+        {
+          "id": "ST3-7",
+          "assessment": "UNTESTED",
+          "reason": "FFL/RL/SSL/NGL trusted source or Manual/Unknown, complete following preview, F flip and linked compound have no native case in this current index.",
+          "caseKeys": []
+        },
+        {
+          "id": "ST3-8",
+          "assessment": "UNTESTED_SOURCE_RISK",
+          "reason": "LMU arbitrary-text protection, affected-reference preview and Apply have no native case here. LevelMarkCommands.cs inspected source accepts TEXT/MTEXT broadly; source concern is not a native result. Reproduce on owned synthetic ordinary note before attributing a runtime failure.",
+          "caseKeys": []
+        },
+        {
+          "id": "ST3-9",
+          "assessment": "UNTESTED",
+          "reason": "SM/SECTION identifier, sheet reference, both bubbles and full cut/view-direction preview are untested in current index.",
+          "caseKeys": []
+        },
+        {
+          "id": "ST3-10",
+          "assessment": "UNTESTED",
+          "reason": "Section compound MOVE/COPY/EDIT, fresh copy identity and duplicate-reference warning remain untested here.",
+          "caseKeys": []
+        },
+        {
+          "id": "ST3-11",
+          "assessment": "UNTESTED",
+          "reason": "BL current-space polyline, plotted scale, rotated UCS, preview and cancellation remain untested here.",
+          "caseKeys": []
+        },
+        {
+          "id": "ST3-12",
+          "assessment": "UNTESTED",
+          "reason": "Controlled dimension repair selection/scope/preview/Apply, unknown-style preservation and no forced save remain untested here.",
+          "caseKeys": []
+        },
+        {
+          "id": "ST3-13",
+          "assessment": "PARTIAL",
+          "reason": "AD associative source movement passes. Generic leader position retention, level/section compounds and full MOVE/COPY/EDIT/ERASE matrix remain. No destructive native action added by this audit.",
+          "caseKeys": [
+            "dimensions-case-ledger.json::DM-06",
+            "quick-leaders-case-ledger.json::QL-09"
+          ]
+        },
+        {
+          "id": "ST3-14",
+          "assessment": "FAIL",
+          "reason": "Captured cancellation and single-operation recovery pass narrowly, but changed settings621 and wrong chosen placement624 fail the safety/position intent. QA hard-clash/Unknown findings remain untested.",
+          "caseKeys": [
+            "dimensions-case-ledger.json::DM-09",
+            "mll-clean-case-ledger.json::MC-01",
+            "mll-clean-case-ledger.json::MC-03",
+            "mll-clean-case-ledger.json::MC-05",
+            "mll-clean-case-ledger.json::MC-06"
+          ]
+        },
+        {
+          "id": "ST3-15",
+          "assessment": "PARTIAL",
+          "reason": "49 bounded native checks across five ledgers on AutoCAD2027. 2022/legacy, 1:20/1:50/1:100 matrix, model/paper, rotated UCS, style/Xref/protection and large-drawing responsiveness remain incomplete.",
+          "caseKeys": []
+        }
+      ]
     }
   },
   "recordingReconciliation": {

@@ -1703,3 +1703,10 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 1. **Narrow Codex-accepted:** arrow/note/preview Escape leave122objects and12capturedcontrols unchanged; nativeparagraphMLeaderoutput; immediateoneUndo/52.337secondquietRedo; fullnativeobjectsave/close/reopen.9checks8PASS1FAIL, receipts420–423. EarliercontaminatedML03remainsUNPROVEN asitsownsample.
 2. **BUG624repairretest:** MLL arrow→two-line note→clickclearlyleft; previewandfinalnote/leader mustmatchselectedlocation/side. RepeatMLRright,long/shortnotes,snapson/off,scales,UCS,paper/protection,UndoRedo/reopen. Rootcauseunproved; command/serviceowner,noinstalledrepair. Ftoggle622remainsseparate.
 3. **Remaining:** nativeedits/grips,paragraphstyles/portabledefinitions,fullnonmutation,levels/sections/breaklines,otherannotationpaths/plots/legacyruntime andwholeST03/V3coverage. Source/preferencesintact,all12originalcontrolsrestored,owncopyclosed/lease released.
+
+
+## ST-03 next missing workflow families — 15 October 2026
+
+1. **Level marks:** FFL/RL/SSL/NGL must offer trusted source or Manual/Unknown, complete following preview and F flip. Check each prompt’s Escape, native object set, state restoration and save/reopen. Inspect any preference changes before restoring only owned test changes.
+2. **Safe update:** on a synthetic ordinary note beside a genuine level mark, LMU must refuse the ordinary note and only propose changes to recognised marks/references. Source accepts TEXT/MTEXT broadly; this is a source risk pending native reproduction, not an additional executed test.
+3. **Sections, breaklines and repairs:** full section preview with identifier/sheet/both bubbles; compound MOVE/COPY/EDIT; BL model/paper/scales/UCS; dimension repair scope/preview/Apply with no forced save. Approved card ST03 and its 15-decision audit remain the authority. No full-card acceptance.

@@ -1,20 +1,21 @@
 # CE V3 real AutoCAD UI and functionality report — interim
 
-## Current position —15 October2026, Melbourne
+## Current position — 15 October 2026, Melbourne
 
-1. **Testing:**572 recorded checks in real AutoCAD across44evidenceledgers:450PASS,99FAIL,6BLOCKED,17UNPROVEN. Specific checks,not572completefeatures.
-2. **Newwork:**108newnativechecks after Tim’s use-to0override;98recoveredearlierchecks separate. LatestMLL9checks8PASS1FAIL.
-3. **Target:**50%completeV3/UX remainsUNKNOWN/incomplete;historical7%textmatching is not realworkflowcoverage.
-4. **Evidence:**1159directfiles1074screens85metadata;7unlinkedsetup/cleanupseparate,all1166retainedrehashed0problems.526UXIDs/574rootbugheadings/523installedcatalogueentries;84records case-associated,not84acceptedworkflows.
-5. **Bugs:**55newBUG570–624OPEN.620sourceonly;623intermittenteditorcontext;624leftnoteplacement. No repairinstalled bythischat.
-6. **Usage/safety:**weekly13%used87%left;use-to0supersedesformerreserve. AllownedDWGsclosed/currentemptywindowverified,12controlsrestored,source/preferencesunchanged,ownlease released;old595untouched.
-7. **Recordingcorrection:** sharedcoverageJSONlaggedreport/localindexbyQ/QD12cases anddiagnosticfiles;nowreconciledfromretainedreceipts,noextraexecutioncredit.
-8. **Remaining:**fulljobjourneys,uncoveredcommands,grips/editing/protections/scales/units/UCS/paper/plots/legacyruntime andeligiblebuiltworkflowdenominator.
+1. **Testing:** 572 recorded checks in real AutoCAD across 44 evidence ledgers: **450 PASS, 99 FAIL, 6 BLOCKED, 17 UNPROVEN**. These are specific checks, not 572 complete features.
+2. **New work:** 108 new native checks after Tim’s use-to-zero override. The 98 recovered earlier checks are separate. Latest MLL batch: 9 checks, 8 PASS and 1 FAIL.
+3. **Overall target:** 50% of complete V3/UX scope remains **UNKNOWN/incomplete**. Historical 7% text matching is not real workflow coverage.
+4. **Evidence:** 1,159 directly linked files: 1,074 screenshots and 85 metadata files. Seven setup/cleanup images remain separate; all 1,166 retained files rehashed without problems. There are 526 explicit UX IDs, 574 root bug headings and 523 installed catalogue entries. Eighty-four catalogue records have a case association; this is not 84 accepted workflows.
+5. **Bugs:** 55 new BUG-570–624 remain OPEN. BUG-620 is source-only; BUG-623 is an intermittent native editor failure; BUG-624 is left-note placement. This chat has installed no repair.
+6. **Usage:** latest account-wide meter is 13% used, 87% remaining. Use-to-zero supersedes the former reserve. No reset redeemed or paid provider request.
+7. **Safe state:** owned drawings closed and current empty window independently verified. Twelve captured drafting controls restored; source drawing and Structural preferences unchanged; own lease released. Older BUG-595 session untouched.
+8. **Recording correction:** the shared coverage index lagged the report/local index by the previous Q/QD batch and diagnostic files. It is now reconciled from retained receipts; these are not new executions.
+9. **Remaining:** complete job journeys, uncovered commands, native editing/grips, protected content, scales/units/UCS/paper space, plotted output, older releases and a complete eligible built-workflow denominator. Engineering decisions still need Tim where relevant.
 
 ## Latest native results
 
-1. **Clean MLL:** three-stage Escape adds nothing and preserves12capturedcontrols. Nativeparagraphoutput,immediateoneUndo/quiet52.337secondRedo andfullrecordsave/close/reopen pass.9checks8PASS1FAIL,screens1169–1189.
-2. **Placement fails BUG624:** click left at left-note prompt yields text rightofarrow; wronglayoutpersists. Rootcauseunproved;Ftoggle622remainsopen. FullST03notaccepted.12originalcontrolsrestored,source/preferencespreserved,owncopyclosed/lease released.
+1. **Clean MLL:** Escape at arrow, note-entry and placement-preview stages adds nothing and preserves all 12 captured controls. Native paragraph output, immediate one Undo, quiet 52.337-second Redo and complete native-record save/close/reopen pass. Nine checks: 8 PASS, 1 FAIL; screenshots 1169–1189.
+2. **Placement fails BUG-624:** clicking left at the left-note prompt produces text right of the arrow; the wrong layout persists after reopening. Root cause remains unproved; F-toggle BUG-622 remains open. Whole ST-03 is not accepted. Original controls restored, source/preferences preserved and own copy closed/lease released.
 
 1. **Editing diagnostic follow-through:** native Standard MText control and repeat Q editor are readable after reopening plus temporary Arial-style/control creation. Standard definition remains unchanged; no edit committed or repair proved. Initial blank editor remains a recorded intermittent/context failure (BUG623). Controls discarded and saved file/preferences unchanged. Eight additional evidence files; no new plugin case or percentage credit.
 
@@ -552,3 +553,12 @@
 2. **Working samples:** readable Module versions, command-list toggles/search/no-result recovery, theme preview/Discard, unsaved Close/Stay/Discard, Help content, directMR start/cancellation, exact clockwise rectangle output, oneUndo/delayedRedo, lateCancel and locked-layer protection. Settings Discard fingerprints match the original files.
 3. **Failures and gaps:** Status version overlap221; full-form CivilSettings222; invisible Light header580; guide Starttool581; raw locked-layer error360. HelpEscape remains unproven. MR appears in two bundle catalogues; one actual typed route was exercised, its handler owner is unresolved. These are not two accepted implementations. Theme Apply/restart, updates, blocks/transfer/offline, CE/mixed transforms, Xrefs/REFEDIT, otherUCS and older versions remain untested.
 4. **Current record:**456 bounded checks/30ledgers,354PASS80FAIL6BLOCKED16UNPROVEN;859 hashed files,0problems. Initial14October missing batches now account for98 recovered earlier checks. Full V3/UX eligibility and50% remain unverified.
+
+
+## ST-03 approved workflow review — 15 October 2026
+
+1. **All 15 approved decisions reviewed:** 49 native checks across five ledgers support parts of dimensions and leaders. This review adds no native check or percentage credit. Exact requirement-to-case links are saved in the existing coverage index.
+2. **Drawing work demonstrated:** aligned/linear/radius output; tested dimension associativity; native arrow/dot/multileader objects; selected Escape, Undo/Redo and save/reopen routes. Generic leader editing remains inconsistent on the fixture.
+3. **Approved behaviour still failing:** restore the drafter’s previous settings (621), F side-toggle (622), and left-note placement agreeing with the selected point (624). Later readable editor controls do not erase the initial blank-editor failure (623).
+4. **Next missing families:** level marks with trusted source or Manual/Unknown; safe level updating; section marks with both bubbles/sheet reference; compound movement/copy/edit; breaklines across scales/current space/UCS; controlled dimension repair. Source reading suggests LMU accepts arbitrary ordinary text, but native reproduction has not run.
+5. **Remaining contexts:** other scales, paper space, rotated UCS, protected layers/Xrefs/REFEDIT, style portability, plots, large drawings and older releases. Current-index gaps are not proof no earlier chat ever tested them. Full V3 and 50% remain incomplete.
