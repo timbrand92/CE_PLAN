@@ -12775,7 +12775,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 56
+      "currentStatusSourceLine": "1. **Area/status:** CD draw-first New Pipe, installed Civil3.0.49+48662ddd, AutoCAD2027, OPEN; personally exercised14October2026 on owned synthetic drawing. Layout/info consistency, no numerical data loss claimed."
     },
     {
       "id": "BUG-581",
@@ -12790,7 +12790,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 63
+      "currentStatusSourceLine": "1. **Area/status:** CEMANAGER Help -> Step-by-step guides -> Move and rotate, Civil3.0.49/Manager1.1.49+48662ddd, OPEN, personally exercised14Oct2026 AutoCAD2027 on owned Structuralfixture."
     },
     {
       "id": "BUG-580",
@@ -12805,7 +12805,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 70
+      "currentStatusSourceLine": "1. **Area/status:** CEMANAGER General theme preview, Manager1.1.49+48662ddd, OPEN. Personally seen14Oct2026 on AutoCAD2027, default1311x1073."
     },
     {
       "id": "BUG-579",
@@ -12822,7 +12822,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 78,
+      "currentStatusSourceLine": "**Status:** OPEN",
       "nativeScopeAssessment": {
         "id": "BUG-579",
         "result": "PARTIAL_REPRODUCTION_LINKED",
@@ -12851,7 +12851,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 95,
+      "currentStatusSourceLine": "**Status:** OPEN",
       "nativeScopeAssessment": {
         "id": "BUG-578",
         "result": "CONFIRMED_NATIVE_SYMPTOM",
@@ -12878,7 +12878,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 109,
+      "currentStatusSourceLine": "**Status:** OPEN",
       "nativeScopeAssessment": {
         "id": "BUG-577",
         "result": "CONFIRMED_NATIVE_SYMPTOM",
@@ -12905,7 +12905,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 123,
+      "currentStatusSourceLine": "**Status:** OPEN",
       "repairCandidate": {
         "commit": "b2e56d16",
         "pullRequest": "https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1261",
@@ -12939,7 +12939,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 137,
+      "currentStatusSourceLine": "**Status:** OPEN — MEDIUM support/installation truth, confirmed in AutoCAD; no production code started.",
       "nativeScopeAssessment": {
         "id": "BUG-575",
         "result": "CONFIRMED_NATIVE_SYMPTOM",
@@ -12966,7 +12966,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 152,
+      "currentStatusSourceLine": "**Status:** OPEN — MEDIUM readback consistency, confirmed in AutoCAD; no production code started.",
       "nativeScopeAssessment": {
         "id": "BUG-574",
         "result": "CONFIRMED_NATIVE_SYMPTOM",
@@ -12994,7 +12994,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 167,
+      "currentStatusSourceLine": "**Status:** OPEN — confirmed in real AutoCAD, MEDIUM review accuracy. No production code started.",
       "nativeScopeAssessment": {
         "id": "BUG-573",
         "result": "CONFIRMED_NATIVE_SYMPTOMS",
@@ -13024,7 +13024,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 188,
+      "currentStatusSourceLine": "**Status:** OPEN — real AutoCAD reproduced, MEDIUM information consistency; no broader type-case acceptance claimed.",
       "nativeScopeAssessment": {
         "id": "BUG-572",
         "result": "PARTIAL_REPRODUCTION_LINKED",
@@ -13053,7 +13053,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 211,
+      "currentStatusSourceLine": "**Status:** OPEN — confirmed export output defects; content/row-count route passed separately.",
       "nativeScopeAssessment": {
         "id": "BUG-571",
         "result": "CONFIRMED_NATIVE_SYMPTOMS",
@@ -13080,7 +13080,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 229,
+      "currentStatusSourceLine": "**Status:** OPEN — screenshot-backed preview failure. No fix or acceptance claimed.",
       "nativeScopeAssessment": {
         "id": "BUG-570",
         "result": "PARTIAL_REPRODUCTION_LINKED",
@@ -20055,7 +20055,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7696
+      "currentStatusSourceLine": "**Status:** OPEN - reproduced in real AutoCAD14October2026. No fix installed or accepted."
     },
     {
       "id": "BUG-584",
@@ -20075,7 +20075,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7713
+      "currentStatusSourceLine": "**Status:** OPEN - reproduced in real AutoCAD14October2026."
     },
     {
       "id": "BUG-586",
@@ -20090,7 +20090,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7739
+      "currentStatusSourceLine": "**Status:** OPEN — the banked regression remains tests-only; no runtime repair is installed or accepted. Explicit marker added15October2026; earlier evidence retained."
     },
     {
       "id": "BUG-587",
@@ -20105,7 +20105,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7763
+      "currentStatusSourceLine": "**Ownership/status:** Claude drawn-output services; Codex window/readback evidence. OPEN, not repaired or accepted."
     },
     {
       "id": "BUG-585",
@@ -20120,7 +20120,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7781
+      "currentStatusSourceLine": "**Status:** OPEN - reproducedinrealAutoCAD14October2026."
     },
     {
       "id": "BUG-588",
@@ -20133,7 +20133,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7800
+      "currentStatusSourceLine": "1. **Status:** OPEN, MEDIUM; Civil3.0.49+48662ddd, personallyobserved14October2026; Claude ownscommand/reportbehaviour."
     },
     {
       "id": "BUG-589",
@@ -20146,7 +20146,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 7808
+      "currentStatusSourceLine": "1. **Status:** OPEN,HIGH; Civil3.0.49+48662ddd,personallyobserved14October2026; Claude ownsChecks reader/drawing-recordservice."
     },
     {
       "id": "BUG-590",
@@ -20161,7 +20161,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7817
+      "currentStatusSourceLine": "**Status:** OPEN — 14 October2026, real installed Civil3.0.49+48662ddd."
     },
     {
       "id": "BUG-591",
@@ -20176,7 +20176,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7830
+      "currentStatusSourceLine": "**Status:** OPEN — 14 October2026, real installed Civil3.0.49+48662ddd."
     },
     {
       "id": "BUG-592",
@@ -20192,7 +20192,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7844
+      "currentStatusSourceLine": "**Status:** OPEN — Codex real AutoCAD, 14 October2026, Civil3.0.49+48662ddd."
     },
     {
       "id": "BUG-593",
@@ -20209,7 +20209,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7856
+      "currentStatusSourceLine": "**Status:** OPEN — Codex real AutoCAD, 14 October2026, Civil3.0.49+48662ddd."
     },
     {
       "id": "BUG-594",
@@ -20226,7 +20226,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7871
+      "currentStatusSourceLine": "**Status:** OPEN — Codex real AutoCAD2027,15October2026,Civil3.0.49+48662ddd; service repair not built/installed."
     },
     {
       "id": "BUG-595",
@@ -20242,7 +20242,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7884
+      "currentStatusSourceLine": "**Status:** OPEN / INVESTIGATE — native recovery unresolved; cause unproven;15October2026."
     },
     {
       "id": "BUG-596",
@@ -20257,7 +20257,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7898
+      "currentStatusSourceLine": "**Status:** OPEN — actualinstalledCivil3.0.49+48662ddd; windowrepaircandidatebuilt/tested,notinstalled."
     },
     {
       "id": "BUG-597",
@@ -20273,7 +20273,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7909
+      "currentStatusSourceLine": "**Status:** OPEN — actualinstalledCivil3.0.49+48662ddd,15October2026."
     },
     {
       "id": "BUG-598",
@@ -20289,7 +20289,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7924
+      "currentStatusSourceLine": "**Status:** OPEN — Codex real AutoCAD 2027, 15 October 2026; Civil 3.0.49+48662ddd. No repair installed."
     },
     {
       "id": "BUG-599",
@@ -20304,7 +20304,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7939
+      "currentStatusSourceLine": "**Status:** OPEN — real installed AutoCAD2027,15October2026,Civil3.0.49+48662ddd."
     },
     {
       "id": "BUG-600",
@@ -20319,7 +20319,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7954
+      "currentStatusSourceLine": "**Status:** OPEN — real installed AutoCAD2027,Civil3.0.49+48662ddd,15October2026."
     },
     {
       "id": "BUG-601",
@@ -20334,7 +20334,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7966
+      "currentStatusSourceLine": "**Status:** OPEN — installed AutoCAD2027/Civil3.0.49+48662ddd,15October2026."
     },
     {
       "id": "BUG-602",
@@ -20349,7 +20349,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7978
+      "currentStatusSourceLine": "**Status:** OPEN — installed Civil3.0.49+48662ddd,realAutoCAD2027,15October2026."
     },
     {
       "id": "BUG-603",
@@ -20364,7 +20364,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 7990
+      "currentStatusSourceLine": "**Status:** OPEN — installed Civil3.0.49+48662ddd,AutoCAD2027,15October2026."
     },
     {
       "id": "BUG-604",
@@ -20379,7 +20379,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8001
+      "currentStatusSourceLine": "**Status:** OPEN — sameinstalled/nativepositiveLandXMLbatch."
     },
     {
       "id": "BUG-605",
@@ -20394,7 +20394,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8013
+      "currentStatusSourceLine": "**Status:** OPEN — realAutoCAD2027/Civil3.0.49+48662ddd,15October2026."
     },
     {
       "id": "BUG-606",
@@ -20409,7 +20409,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8032
+      "currentStatusSourceLine": "**Status:** OPEN — installedCivil3.0.49+48662ddd,realAutoCAD2027,15October2026."
     },
     {
       "id": "BUG-607",
@@ -20424,7 +20424,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8046
+      "currentStatusSourceLine": "**Status:** OPEN — realAutoCAD2027,installedCivil3.0.49+48662ddd,15October2026."
     },
     {
       "id": "BUG-608",
@@ -20439,7 +20439,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8062
+      "currentStatusSourceLine": "**Status:** OPEN — Structural1.0.116+f180b349,realAutoCAD2027,15October2026."
     },
     {
       "id": "BUG-609",
@@ -20454,7 +20454,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8075
+      "currentStatusSourceLine": "**Status:** OPEN — sameinstalledStructural1.0.116/realAutoCAD2027."
     },
     {
       "id": "BUG-610",
@@ -20469,7 +20469,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8090
+      "currentStatusSourceLine": "**Status:** OPEN — observed in real AutoCAD 2027, installed Structural1.0.116+f180b349, 15 October2026."
     },
     {
       "id": "BUG-611",
@@ -20484,7 +20484,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8108,
+      "currentStatusSourceLine": "**Status:** OPEN — installedStructural1.0.116+f180b349, realAutoCAD2027,15October2026.",
       "repairCandidate": {
         "bug": "BUG-611",
         "pullRequest": "https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1262",
@@ -20532,7 +20532,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8126
+      "currentStatusSourceLine": "1. **Status / severity / owner:** OPEN — MEDIUM. Observed15October2026, installedStructural1.0.116+f180b349. Claude owns native section record/read/write; Codex owns eventual window acceptance. Approved ST-08, sourceitem159. No repairinstalled; UndoRedo cause notestablished."
     },
     {
       "id": "BUG-613",
@@ -20548,7 +20548,7 @@
       "historicalCandidateReports": [],
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
-      "currentStatusSourceLine": 8142
+      "currentStatusSourceLine": "1. **Status / severity / owner:** OPEN — MEDIUM,15October2026,installedStructural1.0.116+f180b349. Nativebehaviour/manageddetailClaude;Codexwindowpreviewacceptance. ApprovedST8-9/10requiresonecompounddetail. Thisisanevidencedexistingplan-gap,notaclaimrecentregression."
     },
     {
       "id": "BUG-614",
@@ -20563,7 +20563,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8153
+      "currentStatusSourceLine": "MEDIUM OPEN; native1:50 refusal, Claude-owned scale behaviour, no repair installed."
     },
     {
       "id": "BUG-615",
@@ -20581,7 +20581,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8163
+      "currentStatusSourceLine": "MEDIUM OPEN; CH lacks approved live preview/Apply stage; no repair installed."
     },
     {
       "id": "BUG-616",
@@ -20596,7 +20596,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8180
+      "currentStatusSourceLine": "MEDIUM OPEN; nativeXrefworkflowfailure, nofixinstalled."
     },
     {
       "id": "BUG-617",
@@ -20611,7 +20611,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8189
+      "currentStatusSourceLine": "MEDIUM OPEN; nativeXrefworkflowfailure, nofixinstalled."
     },
     {
       "id": "BUG-618",
@@ -20626,7 +20626,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8200
+      "currentStatusSourceLine": "MEDIUM OPEN; CXREFeInvalidKeyoncopysyntheticloadedreference."
     },
     {
       "id": "BUG-619",
@@ -20642,7 +20642,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8210
+      "currentStatusSourceLine": "MEDIUM OPEN; AuditReportandChangePresetfail eInvalidKey."
     },
     {
       "id": "BUG-620",
@@ -20655,7 +20655,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8220
+      "currentStatusSourceLine": "MEDIUM OPEN; source finding FASTSAVE runs purge/Xref layer movement before save; native reproduction pending."
     },
     {
       "id": "BUG-621",
@@ -20675,7 +20675,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8239
+      "currentStatusSourceLine": "MEDIUM OPEN; AD/LD cancellation and completed RD leave previous dimensionstyle unrestored; LD also resets appearance."
     },
     {
       "id": "BUG-622",
@@ -20691,7 +20691,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8260
+      "currentStatusSourceLine": "MEDIUM OPEN; MLL/MLR F side-toggle rejected as Invalid point, approved ST3-6."
     },
     {
       "id": "BUG-623",
@@ -20706,7 +20706,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8272
+      "currentStatusSourceLine": 8268
     },
     {
       "id": "BUG-624",
@@ -20721,7 +20721,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8284
+      "currentStatusSourceLine": 8280
     },
     {
       "id": "BUG-625",
@@ -20736,7 +20736,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8295
+      "currentStatusSourceLine": 8291
     },
     {
       "id": "BUG-626",
@@ -20751,7 +20751,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8305
+      "currentStatusSourceLine": 8301
     },
     {
       "id": "BUG-627",
@@ -20766,7 +20766,7 @@
       "wholeScopeVerified": null,
       "hasExplicitStatusMarker": true,
       "statusSnapshotDateMelbourne": "2026-10-15",
-      "currentStatusSourceLine": 8314
+      "currentStatusSourceLine": 8310
     },
     {
       "id": "BUG-628",
