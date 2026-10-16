@@ -102,6 +102,42 @@ at 10 Oct, `04_REFERENCE\CIVIL3D_API_FIRST_LOOK_2026-10-10.md`); (3) a free libr
 understanding how AutoCAD behaves, never for copying code into the plugin (licence). Same for other vendors' products
 (12d, DRAINS, Civil 3D itself).
 
+## RULINGS B — batch 1 answers (Sat 17 Oct 2026, about 04:20 Melbourne)
+
+Questions as put (chat reply, 17 Oct): 1 one plan in job order; 2 Structural in the colleague release; 3 release ~10
+finished tools per discipline, hide the rest; 4 a tool switches ON once Codex passes it in AutoCAD; 5 CE panel shows
+job stages with a tick and one button (guide, not compulsory); 6 one Checks door (CDHUB, CDCHECKCURRENT fold in;
+CDCHECK/CDRULES typed only); 7 headless read of 6-10 copied Structural jobs, results local only; 8 Manager = versions,
+updates, rollback, Report a problem only; drafting tools on the ribbon; 9 first day = splash, one welcome card whose
+Show me opens Start Here, tip once, made-up practice job in Help; 10 weekly 20-minute question session.
+
+Tim's words:
+> "yes to everything but
+> -point 3, lets release with all features and then clean it up as we go along. id prefer to clean it up before
+> issuing ideally
+> -point 2, given structural is far away from ehere i want it, initially i wanted to release just civil and manager
+> and then release structural when ready thoughts? also i always want the bleeding edge of whats built on my machine.
+> ideally manager can handle all of this
+>
+> talk to me on a monday morning each week
+>
+> colleagues all use autocad only"
+
+1. **B1 (Q1, 4, 5, 6, 7, 8, 9): YES** as put.
+2. **B2 (Q3) — all features ship, tidy first where possible.** Interpretation: the colleague release is NOT trimmed to
+   10 tools; every working feature ships. The tidy-up (one tab, job-stage order, names, switches ON after a Codex
+   pass) is done before the colleague release where it can be, and continues after. Supersedes the planning chat's
+   Q3 proposal.
+3. **B3 (Q2) — Civil + Manager go to colleagues first; Structural follows "when ready".** Planning chat agreed in chat
+   (17 Oct): Structural is the furthest from the bar, and this matches MASTER_PLAN §C.3. Structural keeps being
+   built and planned (its job-order plan is part of the one plan) and installs on Tim's PC only.
+4. **B4 — two install lanes, run by Manager.** Tim's PC always gets the newest build that has passed ("bleeding
+   edge"), Civil + Manager + Structural. Colleagues get only versions marked as a release, Civil + Manager. Manager
+   is to handle both. (Planned, not built; ruling A pause applies to building it.)
+5. **B5 (Q10) — weekly question session: Monday morning.** A scheduled task `ce-monday-questions` starts a chat
+   every Monday 08:40 Melbourne with the week's batch (set up 17 Oct).
+6. **B6 — colleagues run plain AutoCAD only** (confirms 1a below).
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
