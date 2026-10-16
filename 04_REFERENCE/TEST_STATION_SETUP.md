@@ -1,5 +1,12 @@
 # CE Test Station — Tim's virtual machine: set-up and standing orders
 
+> **17 Oct 2026 — the Test Station moves to a spare physical work PC** (ruling D5, `decisions\2026-10-17_V3_ALIGNMENT_RESET.md`).
+> Tim: *"i have a spare pc with autocad on it already , happy with the rest"*. The VM below never got past set-up
+> (nothing installed, no run). Changes from the VM plan: (1) the test PC also BUILDS (the C++/ObjectARX toolchain is
+> installed there), so Tim's PC only drafts and receives installs; (2) acceptance is "Robot-accepted" (D7), not Tim's
+> word; (3) set-up is started by Tim pasting `04_REFERENCE\TEST_PC_START_PROMPT.md` into Claude on the test PC.
+> Everything else below (bridge files, never-list, client-data rules) still applies until the one plan rewrites it.
+
 **Why:** Tim, 24 Sep 2026 about 11:40 (verbatim): *"I WANT TO MOVE THE TESTING OF THE CE ACAD PLUGIN AND EVERYTHING TO
 ANOTHER VIRTUAL MACHINE SO IT CAN RUN REGARDLESS OF ME WORKING ON THIS CURRENT DEVICE"*. Written by the release chat on
 Tim's PC. **Read `C:\TimOS\RULES.md` first; it is the only rulebook.** Then `C:\CE_PLAN\START_HERE.md` and

@@ -194,7 +194,9 @@ Tim's words:
 4. **D4 — the AI picks model and thinking level per job**, aiming at efficiency inside the limits.
 5. **D5 — a separate work PC (no purchase) for AutoCAD testing, and possibly building.** Supersedes the 24 Sep VM
    plan in `04_REFERENCE\TEST_STATION_SETUP.md` (never got past set-up: nothing installed, no run). Open condition:
-   that PC's AutoCAD needs a licence not in use on another PC at the same time (planning chat to confirm with Tim).
+   that PC's AutoCAD needs a licence not in use on another PC at the same time. 17 Oct ~05:15 Tim: *"i have a spare
+   pc with autocad on it already , happy with the rest"*; the signed-in account is checked during set-up
+   (`04_REFERENCE\TEST_PC_START_PROMPT.md` step 3).
 6. **D6 — nothing deleted. Every unfinished piece of work (the ~900 open PRs) is compiled, checked against the plan,
    and either becomes part of the one plan or is recorded as covered elsewhere.** Supersedes the planning chat's
    "keep ~30, close the rest" proposal.
