@@ -79,3 +79,49 @@ schedules 7, text 5, Esc/prompts 5, protection 4, privacy 3.
 ## 5. Open questions put to Tim on 17 Oct (answers go to the decisions file)
 
 See the chat reply of 17 Oct; recorded there as "batch 1" once answered.
+
+## 6. Research 17 Oct: faster, cheaper pipeline (ruling C2, C4) — reviewer's summary, proposals only
+
+1. **Work-in-progress cap** (DORA small batches): no new build while more than ~10 PRs are open; at most 3 builders; one
+   item per builder from build to merge. One-off sort of the 889 drafts (keep ~30, close the rest with a note; closing
+   is not deleting, branches stay).
+2. **One main line per product + GitHub merge queue / auto-merge on green checks.** Make the shipping `rel-` line the
+   main line; never rebase.
+3. **Test machine with its own AutoCAD** as a GitHub self-hosted runner (service). Testing while Tim drafts probably
+   needs a second AutoCAD seat (Autodesk named-user: install on 3 devices, use one at a time; forum quote, Autodesk
+   virtualisation page returned 403). Price not checked.
+4. **Automatic gate on every PR:** existing headless proof + TH-01 scenarios + ACadSharp (MIT) reads of output drawings
+   + offscreen window PNG compare. No CI workflow folder exists in the repo today.
+5. **Speed gate:** time every headless step, parse `[PERF]` lines, budgets from the rulebook (10 ms typical / 50 ms max
+   per CE handler), median of 5, fail at ~20% slower than last accepted; start-up time measured.
+6. **Robustness suite:** fixed nasty drawings (locked layers, missing/mirrored Xrefs, rotated UCS, mm vs m, damaged,
+   50,000 objects), bad input, cancelled prompts (EV6-11/12). Undo/Redo needs full AutoCAD (Idle never fires in the
+   core console). Escape in core console unverified.
+7. **Gold benchmark EV-06 done cheaply:** object compare via ACadSharp by meaning (layer, block, text, position within
+   EV-02 tolerances) + plot both to PDF, raster, pixel/perceptual diff (ImageMagick compare / diff-pdf; never
+   Windows.Data.Pdf). 3 jobs per discipline first; ≤30 exception cards for Tim. CE pipe object needs its proxy graphics.
+8. **Two update channels in Manager:** stage signed build outside ApplicationPlugins, swap at next AutoCAD start, keep
+   previous folder for one-click rollback (Velopack-style wait-for-exit). Paused under ruling A.
+9. **Cut what agents read:** split BUG_CARPARK / QUEUE / REVIEWLANE_LOG into open + archive; CLAUDE.md/AGENTS.md
+   under ~100 lines, rest into skills; don't edit context files mid-run (breaks the cache). Est. 20-40% fewer tokens.
+10. **Model per job:** Sonnet / gpt-6.1-sol build; Opus reviews green PRs only; reviewer is never the writer.
+11. **Until a test machine exists:** `dotnet build -lowPriority`, `-maxcpucount:2`, tests in a CPU-capped job object.
+12. **Design Automation (cloud AutoCAD)** for a nightly net48 2022-2026 check on made-up drawings: 2 Flex tokens per
+    processing hour, 100-900 s per run, no OPEN/NEW. Unproven that CE loads there.
+
+**Open CAD Studio (Rust, GPL-3.0; github.com/HakanSeven12/OpenCADStudio):** no golden-image tests and no drainage code
+worth taking. Worth copying: (a) verified save — list layers/blocks/counts/extents, save, reopen, compare, fingerprint;
+(b) `reference_acceptance.ps1` pattern — open every output DWG read-only in accoreconsole, AUDIT without fixing, pass only
+on zero errors; (c) ribbon and commands from one hand-written job-ordered data file; (d) typed command session with a
+done/waiting reply for robots; (e) domain data on objects as XDATA, calculations in a CAD-free library. Storm Sewer
+plugin (no licence) = checklist ideas only (cover, slope, velocity, capacity, size progression, flood colouring).
+EPA SWMM 5 is public domain if detention checking over a storm is ever needed.
+
+**Proposed pipeline (8 steps, not yet ruled):** idea → card at Monday session (job stage, expected output, gold example,
+speed budget; ≤5 ready cards per discipline) → cheap-model build, small PR (≤3 builders, ≤10 open PRs) → automatic gate on
+the test machine (2 retries then parked) → one Opus review of green PRs, merge queue (≤5 waiting) → nightly driver +
+Codex mouse-only checks + gold benchmark (≤30 cards) → Tim's channel swaps in at next start → Tim marks a release →
+colleagues' channel (Civil + Manager only until Structural is ready).
+
+Could not verify: AutoCAD seat price / VM licence terms; CE loading in Design Automation; Escape in core console; a
+maintained NUnit-in-AutoCAD runner for 2027; which ApplicationPlugins copy wins when duplicated.
