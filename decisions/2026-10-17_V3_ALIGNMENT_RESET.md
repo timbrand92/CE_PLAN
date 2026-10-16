@@ -161,6 +161,50 @@ Tim's words:
    big drawings, locked layers) as part of "done", tested automatically, and AutoCAD slowness is measured, not felt.
    Earlier evidence: memory/plan note 29 Sep (AutoCAD main thread busy, PC starved by builds and tests).
 
+## RULINGS D (Sat 17 Oct 2026, about 05:00 Melbourne)
+
+> "what I mean by looks exactly like ours is, you know, the schedule blocks need to look like ours. Basically, the
+> drawing need to export similar to how ours is. Obviously, each job has a different way that it's laid out and drawn,
+> but in terms of the elements on the drawing, we need to manage all of that. Also, we need to manage weekly usage
+> limits, and I want you to work autonomously between you and Codex. And let's think about any other subscription
+> that we need to get to build this slash test it faster or better. And then obviously what model and thinking is
+> required for this stuff, and just making sure that this is all checked and working and built and everything is done
+> efficiently, effectively, and under good time schedule within usage limits each week and working throughout the day
+> so we don't lose time. Obviously, time is of the essence, and it's one of the most important factors in this whole
+> thing. In terms of questions that you've asked me, let's think about doing the tests and the AutoCAD on a separate
+> PC. I can definitely sort that out without having to sort of pay for anything and sort it out. We've got plenty at
+> work that we can work from. So if that's something that needs to be set up, how do I manage it between you building
+> and maybe you build on that computer as well, and how I continue working on my own computer? Let's think about
+> that. In terms of clearing out the old unfinished pile, I don't know what you mean by this, but maybe be a bit more
+> clear with what that means. And yeah, I don't really want to delete anything. I just want to compile everything,
+> make sure we haven't missed anything, make sure that it all becomes part of our plan. Obviously, the most important
+> thing is time, efficiency, and working towards helping creative engineering with drafting and engineering and
+> making it look and feel the same as our current drawings are now. What should accept mean? Yeah, look, I don't want
+> to be massively testing things ages. I'm not one to test. I think that needs to be done by a computer or by AI by
+> itself without me engaging with it. Then obviously, you know, I don't need to be involved in that process. You come
+> up with whatever the best way about it going is."
+
+1. **D1 — "looks like ours" means the ELEMENTS, not the sheet layout.** Schedule blocks, labels, symbols, text,
+   layers, linetypes and exported output must match CE's existing drawings; how each job is laid out varies and is
+   not compared. Refines C3. The gold check (EV-06) compares element by element.
+2. **D2 — autonomous Claude + Codex, managed inside weekly usage limits, working through the day.** Time is "one of
+   the most important factors".
+3. **D3 — look at other subscriptions** that would build or test faster or better (planning chat to recommend with
+   figures).
+4. **D4 — the AI picks model and thinking level per job**, aiming at efficiency inside the limits.
+5. **D5 — a separate work PC (no purchase) for AutoCAD testing, and possibly building.** Supersedes the 24 Sep VM
+   plan in `04_REFERENCE\TEST_STATION_SETUP.md` (never got past set-up: nothing installed, no run). Open condition:
+   that PC's AutoCAD needs a licence not in use on another PC at the same time (planning chat to confirm with Tim).
+6. **D6 — nothing deleted. Every unfinished piece of work (the ~900 open PRs) is compiled, checked against the plan,
+   and either becomes part of the one plan or is recorded as covered elsewhere.** Supersedes the planning chat's
+   "keep ~30, close the rest" proposal.
+7. **D7 — acceptance is done by computer/AI, not Tim.** Tim: "I don't need to be involved in that process. You come up
+   with whatever the best way about it going is." This overrides RULES 4.5 for testing (RULES 14.6 override; scope:
+   CE_ACAD, from 17 Oct 2026). Planning chat's design, to be written into the one plan: "Robot-accepted" = every
+   automatic gate green + Codex/driver check in real AutoCAD on the test PC with screenshots + 5 working days on Tim's
+   PC with no new bug against it. Tim can still reject anything. Engineering judgement (council values, design rules,
+   sizing) still goes to the Monday session as questions, not tests.
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
