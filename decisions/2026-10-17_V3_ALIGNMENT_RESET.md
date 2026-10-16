@@ -138,6 +138,22 @@ Tim's words:
    every Monday 08:40 Melbourne with the week's batch (set up 17 Oct).
 6. **B6 — colleagues run plain AutoCAD only** (confirms 1a below).
 
+## RULINGS C (Sat 17 Oct 2026, about 04:35 Melbourne)
+
+> "lets learn from open cad studio, i dont plan on selling this program anytime soon so no need to worry about that.
+> yes the slow part is as you said how can we make this more efficient and not as costly do research find solutions.
+> the issues i have with using built in tools is everything we draw must look exactly like it currently does in our
+> existing drawings both gor civil and structural. do you need more evidence for this on both sides?"
+
+1. **C1 — Open CAD Studio (GPL-3.0) may be studied and reused.** Tim: the plugin is not for sale "anytime soon",
+   so the GPL concern is waived for internal CE use. Planning chat note: if CE ever sells or gives the plugin outside
+   the company, GPL-derived parts must be reviewed first.
+2. **C2 — research the slow, costly part** (review, merge, install, testing) and bring solutions. Under way 17 Oct.
+3. **C3 — HARD output rule: everything CE draws must look exactly like CE's existing drawings, Civil and
+   Structural.** Built-in AutoCAD tools (T10) may only be used where their output can be made to match exactly.
+   Same direction as "Copy exactly" (UX-CPLAN-06, UX-SSCHED-01, UX-SSCHED-05). The approved but never-started EV-06
+   Gold Drawing Benchmark (`04_REFERENCE\CARDS\EV-06_GOLD_BENCHMARK.md`) is the planned way to prove it.
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
