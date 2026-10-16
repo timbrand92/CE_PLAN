@@ -154,6 +154,13 @@ Tim's words:
    Same direction as "Copy exactly" (UX-CPLAN-06, UX-SSCHED-01, UX-SSCHED-05). The approved but never-started EV-06
    Gold Drawing Benchmark (`04_REFERENCE\CARDS\EV-06_GOLD_BENCHMARK.md`) is the planned way to prove it.
 
+4. **C4 — performance, speed, reliability and robustness are first-class** (17 Oct, about 04:40):
+   > "Performance and speed and reliability and robustness are all really important when it comes to this program as
+   > well. So when we are building, testing and implementing, we need to make sure that this is also focused on."
+   Planning chat's reading: every plan item carries a speed budget and a robustness check (bad input, Escape, Undo,
+   big drawings, locked layers) as part of "done", tested automatically, and AutoCAD slowness is measured, not felt.
+   Earlier evidence: memory/plan note 29 Sep (AutoCAD main thread busy, PC starved by builds and tests).
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
