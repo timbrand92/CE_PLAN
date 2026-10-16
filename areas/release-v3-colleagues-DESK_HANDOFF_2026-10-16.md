@@ -52,3 +52,9 @@ NAME THIS CHAT (if starting fresh): CE_ACAD / ideas / plan / 04. Otherwise keep 
 7. Old fix queue: NEXT_FIXES_2026-10-08.md
 8. Robot driver: the folder _ACAD_DRIVER under C:\Lisp Files, file acad_driver_witness.ps1 (use only this copy); guide DRIVER_TESTER_GUIDE.md
 9. The desk's private memory notes are not stored in this repository; this handoff is the shared copy of what they say.
+
+## 8. Addendum Fri 16 Oct 21:00 (after compaction)
+1. Found and fixed: the three lane job files had grown to about 750 KB each (about 290 stale RUN lines), so every Team run re-read about 190k tokens of junk. lane_loop.ps1 now strips old RUN lines; the files are about 6 KB; backups sit beside them as .bak_16oct.
+2. The lane loops were restarted with a new -NotBefore gate (Sat 17 Oct 14:03), so they still start by themselves at the Team reset.
+3. Tim asked to build on the Max account now (Max week 2 percent used, resets Fri 23 Oct 13:00, ceiling 95 percent, so about 14 points a day). Two Sonnet Max builders are running: lane 03 (Civil, BUG-650 first, then #1259 export fix) and lane 02 (Structural). They take a build lock folder (desk_jobs\build.lock) before each build and log a CLAIM line in their TEAMLANE log before each item so the Team lanes skip claimed items.
+4. Slip: an empty python3 heredoc spun a python process (killed within minutes, nothing written). Never run python from the desk shell.

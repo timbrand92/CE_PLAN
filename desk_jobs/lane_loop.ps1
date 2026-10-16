@@ -1,7 +1,7 @@
 # Desk helper (10 Oct 2026): keeps ONE builder lane running forever. Runs headless Team 'claude -p' jobs back to back (synchronously),
 # bumps the RUN number each time, stops when C:\CE_PLAN\desk_jobs\STOP_LANES.flag or STOP_<lane>.flag exists.
 # Usage (hidden, background): Start-Process pwsh -WindowStyle Hidden -ArgumentList '-NoProfile','-File','C:\CE_PLAN\desk_jobs\lane_loop.ps1','-Lane','04'
-param([Parameter(Mandatory = $true)][ValidateSet('02', '03', '04')][string]$Lane, [string]$Model = 'sonnet', [switch]$WaitForLogDone)
+param([Parameter(Mandatory = $true)][ValidateSet('02', '03', '04')][string]$Lane, [string]$Model = 'sonnet', [switch]$WaitForLogDone, [datetime]$NotBefore = [datetime]'2000-01-01')
 $ErrorActionPreference = 'Continue'
 $env:CLAUDE_CONFIG_DIR = "$env:USERPROFILE\.claude-team"
 $dir = 'C:\CE_PLAN\desk_jobs'
@@ -21,10 +21,11 @@ if ($WaitForLogDone) {   # a run of this lane is already in flight: wait until i
 }
 while ($true) {
   if ((Test-Path "$dir\STOP_LANES.flag") -or (Test-Path "$dir\STOP_$Lane.flag")) { break }
+  while ((Get-Date) -lt $NotBefore) { if ((Test-Path "$dir\STOP_LANES.flag") -or (Test-Path "$dir\STOP_$Lane.flag")) { exit }; Start-Sleep -Seconds 60 }
   $src = "$dir\build${Lane}_job_latest.txt"
   $lines = [System.Collections.Generic.List[string]](Get-Content -LiteralPath $src -Encoding UTF8)
   if ($lines[0] -match 'HEADLESS RUN (\d+)') { $n = [int]$Matches[1]; $m = $n + 1; $lines[0] = $lines[0] -replace "HEADLESS RUN $n", "HEADLESS RUN $m" } else { $m = 0 }
-  $lines = [System.Collections.Generic.List[string]]($lines | Where-Object { $_ -notmatch '^RUN \d+ \(desk plan/03' })
+  $lines = [System.Collections.Generic.List[string]]($lines | Where-Object { $_ -notmatch '^RUN \d+ \(desk (plan/03|lane_loop)' })
   $lines.Insert(1, ("RUN $m (desk lane_loop, {0} PC clock; SONNET): LANE = build/$Lane. {1}" -f (Get-Date -Format 'ddd dd MMM HH:mm'), $common))
   $job = "C:\Users\TIMOTH~1\AppData\Local\Temp\claude\loop_build${Lane}_$m.txt"
   New-Item -ItemType Directory -Force (Split-Path $job) | Out-Null
