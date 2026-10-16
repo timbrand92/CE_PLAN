@@ -105,6 +105,11 @@ understanding how AutoCAD behaves, never for copying code into the plugin (licen
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
-1a. Do colleagues run plain AutoCAD, or Civil 3D? (decides whether Civil 3D's own pipe networks and surfaces can be
+1a. ANSWERED 17 Oct about 04:05: *"colleagues use regular autocad but we could inclrporate civil 3d stuff if it
+    helps"*. Planning chat's reading: the plugin must run on plain AutoCAD; Civil 3D can be used for importing
+    consultants' Civil 3D work and as a source of ideas, never as something colleagues must have. Tim also asked
+    how browser CAD projects (Open CAD Studio, GPL-3.0, opencadstudio.com) exist without copying decompiled code;
+    answered in chat (own code reading the DWG file format; copyright covers code, not formats or ideas).
+    Original question: Do colleagues run plain AutoCAD, or Civil 3D? (decides whether Civil 3D's own pipe networks and surfaces can be
     reused). Not found in the plan on 17 Oct; the 10 Oct "Civil 3D yes" covers research only.
 2. Whether wiring already-built items counts as "new" under ruling A (planning chat's reading: yes, paused).
