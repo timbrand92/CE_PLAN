@@ -85,7 +85,26 @@ controller) the same night.
 9. **T9 Speed and always-on:** 4 weeks in, slower than expected; building and testing should run constantly in the
    background while Tim works.
 
+## Tim's brain dump, part 2 (17 Oct, about 03:35), verbatim
+
+> "It would be great if we could decompile or use resources already on the internet to help us to build programs or
+> elements of what we're building in this plugin that are already reliable, that are already working, that are already
+> built, so that it can speed up the whole process. Obviously, I understand that building our own stuff is going to
+> take a little longer, but it feels night and day length difference. And if we can sort of make the process a lot
+> easier and faster, that would be great somehow. And obviously, some of the stuff that we're building doesn't relate
+> to what other people are using or doing, but surely it can't be too difficult to do."
+
+**Theme T10 Reuse before build** (planning chat's proposal, not yet a ruling): for every plan item, check in this
+order and record which was used: (1) something AutoCAD already does (tables, fields, sheet sets, dynamic blocks,
+data extraction, layer states); (2) Autodesk's own documented API and samples (incl. the Civil 3D API, already looked
+at 10 Oct, `04_REFERENCE\CIVIL3D_API_FIRST_LOOK_2026-10-10.md`); (3) a free library whose licence allows company use
+(MIT, Apache, BSD); (4) only then build CE's own. Decompiled Autodesk code (`C:\Tools\AcadDecomp`) is for
+understanding how AutoCAD behaves, never for copying code into the plugin (licence). Same for other vendors' products
+(12d, DRAINS, Civil 3D itself).
+
 ## Open (Tim to answer; never fill these in)
 
-1. Tim's brain dump continues — part 2 onward to be added here.
+1. Tim's brain dump continues — part 3 onward to be added here.
+1a. Do colleagues run plain AutoCAD, or Civil 3D? (decides whether Civil 3D's own pipe networks and surfaces can be
+    reused). Not found in the plan on 17 Oct; the 10 Oct "Civil 3D yes" covers research only.
 2. Whether wiring already-built items counts as "new" under ruling A (planning chat's reading: yes, paused).
