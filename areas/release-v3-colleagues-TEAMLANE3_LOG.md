@@ -686,3 +686,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Fri 16 Oct 20:55 real clock - CLAIM BUG-650 (+574, 290 same path) claimed by Max builder (build/03, worktree mx03, base d36f9545 C-39).
 - Fri 16 Oct 21:05 real clock - RELEASED the BUG-650 claim above: the Max builder session could not edit files (a harness hook refuses Edit/Write outside the session's own worktree). Nothing was built or pushed. BUG-650 is free for anyone.
 - Fri 16 Oct 21:12 real clock - CLAIM BUG-650 (+574, 290): retry by Max builder (build/03, own worktree agent-a53c177c, branch claude/mx03b-shared-pit-invert, base d36f9545 C-39).
+- Fri 16 Oct 21:50 real clock - BUILT BUG-650 (+574, 290 same path): DRAFT PR #1263 off claude/rel-20261010e d36f9545 (branch claude/mx03b-shared-pit-invert, head da006db6). A label with no IL line never blanks a stored invert; CDFW/CDSOURCE bind without saving. 8 new tests (4 red first). Not AutoCAD-run. Needs Opus review.
