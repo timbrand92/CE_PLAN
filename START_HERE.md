@@ -1,11 +1,12 @@
 > **STATE 16 Oct 2026 ~18:15 (desk plan/03, acting controller). READ THIS BLOCK FIRST; the older banners below are history.**
 > 1. **Who runs what:** the controller chat `build + release / 06` has been silent since Tue 13 Oct; the desk chat `CE_ACAD / ideas / plan / 03` is acting controller (builders, trains, installs, reviews, testing hand-offs). Tim's rule: nothing is FIXED until he confirms it in AutoCAD.
 > 2. **Installed on Tim's PC (read the DLLs, never trust this line):** Civil 3.0.50 + Manager 1.1.50 and Structural 1.0.117 (earlier: 3.0.49 / 1.0.116). Installed 16 Oct 17:47 and 17:52 (desk, verified file by file): Civil 3.0.50 / Manager 1.1.50 (C-39, d36f9545) and Structural 1.0.117 (S-37, 0dfbd1d6); not yet driven in AutoCAD.
-> 3. **Usage (all three meters are at or near their ceilings):** Claude main (Max) reset Fri 16 Oct 13:00 and is the only budget until Sat 14:00; Claude Team week is 100% used, resets Sat 17 Oct 14:00; Codex week is 100% used, resets Thu 22 Oct 17:13. Codex wrote a heartbeat to restart its AutoCAD testing at 16:05 on 20/27 Oct: coordinate it, never run two writers.
+> 3. **Usage (updated Sat 17 Oct 03:30):** Claude main (Max) reset Fri 16 Oct 13:00, next reset Fri 23 Oct 13:00, ceiling 95%; since Tim's word on 16 Oct (about 21:00) the desk runs 3 to 4 Sonnet builders plus Opus reviewers on Max (isolated worktrees, build lock `desk_jobs/build.lock`, claims in the TEAMLANE logs) and keeps the week on the pace line to 95% at the reset. Claude Team week is 100% used, resets Sat 17 Oct 14:00 (lane loops restart 14:03 by themselves; job files were un-bloated from 750 KB to 6 KB on 16 Oct). Codex week is 100% used, resets Thu 22 Oct 17:13. Codex wrote a heartbeat to restart its AutoCAD testing at 16:05 on 20/27 Oct: coordinate it, never run two writers.
+> 3a. **The honest figures (gap audit 17 Oct, `areas/release-v3-colleagues-PLAN_GAP_AUDIT_2026-10-17.md`, replaces the old "built 60 / installed 53 percent" guess):** of 284 audited plan lines 238 are built as an engine, about 107 are wired to a command, 77 are installed, about 10 of the wired-and-installed ones have a Codex check (all on 3.0.49 / 1.0.116, none yet on the installed builds), and 0 are accepted by Tim. 131 items are ENGINE ONLY (nothing calls them). About 182 of the 10 Oct plan PRs have never had an Opus review. Almost everything installed that changes a drawing is switched OFF and its Settings page is still an uninstalled PR.
 > 4. **Codex's native campaign (13 to 16 Oct):** 762 scoped native AutoCAD checks in 70 ledgers: 592 PASS, 139 FAIL, 7 BLOCKED, 24 UNPROVEN; 81 new open bugs BUG-570..650; ten draft PRs #1253..#1262. Handoff: `areas/release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md` section 'Handoff 16 October 2026'. Desk check 16 Oct: all 1,698 evidence files present with matching sizes, recount of the index equals the stated totals, all 81 bugs are in `BUG_CARPARK.md`.
 > 5. **Desk handoff (read after any compaction): `areas/release-v3-colleagues-DESK_HANDOFF_2026-10-16.md`.** Triage (16 Oct): `areas/release-v3-colleagues-CODEX_BUG_TRIAGE_2026-10-16.md` (fix queues per lane, questions for Tim) and the independent review of the ten PRs in `REVIEWLANE_LOG.md`.
 > 6. **Open items for Tim:** `REMINDERS_FOR_TIM.md` (repeat at the top of the first morning report) and the question batches in `04_REFERENCE/ux-plan/cards/`.
-> 7. **Machine safety (16 Oct):** a runaway background Python filled C: for 11 hours (12 Oct); `desk_jobs/desk_tick.ps1` now prints a disk alarm under 25 GB; lane loops wait 2 h after any run shorter than 15 min (400 empty runs per lane had burned the Team week); old `_PRE_` install backups were thinned to the newest five per product (log `desk_jobs/pre_backup_cleanup_2026-10-16.log`). Two Codex AutoCAD sessions (pids 12844 and 62380) are still open on test copies: close them normally before any new AutoCAD test.
+> 7. **Machine safety (16 Oct):** a runaway background Python filled C: for 11 hours (12 Oct); `desk_jobs/desk_tick.ps1` now prints a disk alarm under 25 GB; lane loops wait 2 h after any run shorter than 15 min (400 empty runs per lane had burned the Team week); old `_PRE_` install backups were thinned to the newest five per product (log `desk_jobs/pre_backup_cleanup_2026-10-16.log`). The two old Codex AutoCAD sessions are closed (pid 12844 closed normally; pid 62380 was stopped by the desk on 16 Oct, log `desk_jobs/acad_cleanup_2026-10-16.log`); still check that no acad.exe or Codex run is live before any robot test. Do not run python from the desk shell (an empty python heredoc spun a process on 16 Oct and was killed).
 >
 > **29 Sep 2026 ~17:30 (plan/05 done): TWO chats run CE while Tim is away (Tim, 29 Sep).** (1) The controller `CE_ACAD / release-v3-colleagues / build + release / 06` builds, tests, runs Codex and installs: start at the OPERATING CHARTER at the top of `areas/release-v3-colleagues.md`, then `areas/release-v3-colleagues-QUEUE.md` sections 0-5. (2) Tim's desk `CE_ACAD / ideas / plan / 01` is the only chat Tim talks to about CE (ideas, bugs he sees, rulings, summaries): start at `TIM_DESK.md`. **Tim talks to the desk, never to the controller.**
 > *(Superseded 29 Sep ~17:30: "the release chat is now build + release / 06 ... sections 0-4" - one chat became two on Tim's word.)*
@@ -83,7 +84,8 @@ chat. A chat ending must never take the test list with it.
 
 1. **Built something? Add it there**, with its branch, commit and the exact steps Tim should follow.
 2. **Never tick a row yourself.** A green build, a passing test run and an AutoCAD result are three different
-   facts. Only Tim's word moves a row to Accepted.
+   facts. Only Tim's word moves a row to Accepted (RULES 4.5, amended 27 Sep, also allows "Codex-accepted" for a
+   Codex PASS in real AutoCAD on copies with screenshots; engineering-judgement items still need Tim).
 3. Steps must be specific, and must say which lane: 2027 **and** 2024/net48, since 2022 to 2024 users are in
    scope.
 
@@ -143,9 +145,10 @@ chat. A chat ending must never take the test list with it.
 
 ```bash
 cd C:\CE_PLAN
-git pull                      # before you read
+git fetch; git merge --no-edit origin/main   # before you read (never git pull --rebase, never origin master)
 # ... edit an area file, a decision, a council file ...
-git add -A && git commit -m "..." && git push
+git add <the files you edited, by name>      # never git add -A: the repo carries other chats' uncommitted edits
+git commit -m "..."; git push origin HEAD:main
 ```
 
 Rules for editing:
