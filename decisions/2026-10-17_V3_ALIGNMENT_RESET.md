@@ -37,7 +37,55 @@
 3. **Gap audit 17 Oct:** 284 plan lines, 238 built as an engine, about 107 wired to a command, 77 installed, 0 accepted
    by Tim; 131 built but not reachable from AutoCAD.
 
+## RULING A — pause new items, keep fixing (Sat 17 Oct 2026, about 03:20 Melbourne)
+
+> "Okay, for now let's pause building of new items, but let's continue the fixing of existing items. The bug fixes
+> are really important."
+
+**Interpretation (planning chat):** no builder starts a new plan item or new engine until the one aligned plan replaces
+the five. Bug fixes from `BUG_CARPARK.md`, review fixes on existing PRs and Codex testing carry on. Wiring an
+already-built item to a command counts as a NEW item until Tim says otherwise. Passed to the desk (acting
+controller) the same night.
+
+## Tim's brain dump, part 1 (17 Oct, about 03:20), verbatim
+
+> "What I feel at the moment is that every time I get grand ideas in my head and I want to implement them, and then,
+> you know, things like the Apple and Autodesk feel, you know, it kind of feels like whenever I open a chat or a new
+> one, it doesn't quite fully understand what I think version 3 plan is, and then, you know, when I audit, it just
+> builds a whole new thing, and then there's on different workspaces and all sorts. It's just all so confusing, and
+> it's not really managing me, whereas I just want to give it a plan, let it build, and then when I have a new idea,
+> it implements it, and then the versioning control works. Testing is all done by Codex. It feels like the civil is
+> really good and kind of working how I want it, or at least, you know, the plan, the final plan is something that is
+> something I would, you know, feel accomplished having. It feels like the structural isn't up to that same level. It
+> feels like there's no data and evidence model that you're following, even though we've got one. It doesn't feel like
+> the program, it feels like the program is built, because I built it this way, from the function up as opposed to,
+> you know, our workflow down. And it doesn't understand the context of what our workflow is and how it can improve
+> it and how it can make it easy for the end user to use the program to make their life easier, if that makes sense.
+> Often I get told that it's too hard to use, or nobody knows all the commands, or, you know, it doesn't really match
+> how people work. And there's also like too many bugs and issues and problems. So all of that is really quite
+> annoying. And also it just feels like every time I want to make an update, there's no real way of handling that
+> nicely. And the testing process is bad, and it's long, and all of this building takes ages. Like, we've been working
+> on this for 4 weeks. It's just taking way longer than I was expecting, and it's hardly tested at all, and I don't
+> want to be the one testing it. I don't have the time for that. And then also how we can manage building and working
+> at the same time, and yeah, it's just a muddled, jumbled thing, and I just want it to be so much easier for me when I
+> go in there and always have something constantly building at the same time. And testing."
+
+### Sorted into themes (planning chat's sorting, for Tim to correct)
+
+1. **T1 Continuity:** a new chat does not know Tim's V3; an audit spawns a new plan or a new working copy.
+2. **T2 Managing Tim:** Tim gives a plan and ideas; the system slots each idea in, builds it, versions it. Tim does
+   not manage the AI.
+3. **T3 Workflow down, not function up:** the plugin is organised by tool, not by how a CE job runs; the evidence
+   model exists but is not followed.
+4. **T4 Easy to use:** colleagues say it is too hard, nobody knows all the commands, it does not match how they work.
+5. **T5 Structural below Civil:** Civil's final plan is one Tim would be proud of; Structural's is not at that level.
+6. **T6 Reliability:** too many bugs.
+7. **T7 Updates:** no clean way to take a change from idea to installed version.
+8. **T8 Testing:** Codex tests, not Tim; today it is slow, long and covers little.
+9. **T9 Speed and always-on:** 4 weeks in, slower than expected; building and testing should run constantly in the
+   background while Tim works.
+
 ## Open (Tim to answer; never fill these in)
 
-1. Whether new feature building pauses while the alignment plan is written (bug fixes continuing either way).
-2. Tim's own list of "things in my head that don't work how I think they should" — being collected in this chat.
+1. Tim's brain dump continues — part 2 onward to be added here.
+2. Whether wiring already-built items counts as "new" under ruling A (planning chat's reading: yes, paused).
