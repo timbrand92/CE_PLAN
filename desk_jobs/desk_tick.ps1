@@ -16,3 +16,11 @@ foreach ($l in 'TEAMLANE2_LOG', 'TEAMLANE3_LOG', 'TEAMLANE4_LOG') {
   $f = "C:\CE_PLAN\areas\release-v3-colleagues-$l.md"
   if (Test-Path $f) { "{0}: {1}" -f $l, ((Get-Item $f).LastWriteTime.ToString('ddd HH:mm')) }
 }
+# Team usage (real figure, one tiny haiku call) - added 12 Oct
+try { & pwsh -NoProfile -File C:\CE_PLAN\desk_jobs\team_usage.ps1 } catch { 'Team usage: read failed' }
+# Disk alarm (12 Oct): a runaway task output file filled C: for 11 hours
+$freeGb = [math]::Round((Get-PSDrive C).Free / 1GB)
+if ($freeGb -lt 25) {
+  "DISK ALARM: C: has only $freeGb GB free. Biggest task output files:"
+  Get-ChildItem 'C:\Users\TimothyBrand\AppData\Local\Temp\claude' -Recurse -Filter *.output -File -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 3 | ForEach-Object { "  {0:N1} GB {1}" -f ($_.Length / 1GB), $_.FullName }
+}
