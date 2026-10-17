@@ -219,6 +219,18 @@ Tim's words:
    the test machine until then. Robot gates, the pile compile and the one plan are process work, not new plugin items,
    so ruling A does not pause them.
 
+## RULING F (Sat 17 Oct 2026, about 05:50 Melbourne)
+
+> "lets issue to max on monday 9th novermber. i also would like to check your plan before we execute, so you go on
+> with that and then show me visually so i can cehck or show me without software jargon"
+
+1. **F1 — colleague release (Civil + Manager) to Max on Monday 9 November 2026.** Supersedes the 29 Sep target
+   (`2026-09-23_V3_COLLEAGUE_RELEASE.md`). Pilot colleague "Max" from 8 Oct (INT-071).
+2. **F2 — Tim checks the one plan before it is executed**, shown visually, no software jargon.
+   Planning chat's reading: until Tim has checked it, only these continue: bug fixes (ruling A), testing, reading and
+   measuring that feeds the plan (element catalogue, pile compile, speed baseline). Structural changes (one code line,
+   ribbon reorganisation, robot gate as a hard block, Manager channels) wait for his check.
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
