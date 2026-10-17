@@ -283,6 +283,22 @@ Page: https://claude.ai/artifact/MARLzjbaDrfS6zg3WkRDWi (version 2), copy in
 5. **H5 — new concern: quick changes on a drafted job "without being interrupted".** Proposal put to Tim in chat
    (17 Oct): once a drawing has been issued, CE goes quiet by itself (see chat). Open until answered.
 
+## RULINGS I (Sat 17 Oct 2026, about 07:25 Melbourne)
+
+> "with the library we need to build it and then start confirming the details and add what needs adding, need to
+> also get details from robot checked jobs.
+> ce shouldnt go quiet but it should allow chnages to be made fast and quickly if needed, yes to your suggestion"
+
+1. **I1 — library in three steps:** build it from the Standard Details folder; Tim confirms the details (picture
+   cards at Monday sessions); add what is missing. **Details found in the atlas jobs (custom and job-specific) are
+   harvested into the library candidates too.** Brief updated (job 1 step 5, job 2 step 3).
+2. **I2 — quick changes on a drafted job (H5): CE does NOT go quiet; changes must be fast and uninterrupted.**
+   Yes to the proposal's behaviour: everything stays in step (labels, levels, schedules, tags), grips / MOVE /
+   Properties change things directly with no window unless double-clicked, nothing pops up to block the change,
+   changes since the last revision are counted on the CE panel, and Issue lists them and suggests the sheets to
+   re-issue. Supersedes the planning chat's "goes quiet by itself" wording; normal guidance (Checks, offers in the
+   bell) stays on.
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.

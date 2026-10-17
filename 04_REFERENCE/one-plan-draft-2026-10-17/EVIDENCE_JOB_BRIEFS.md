@@ -22,6 +22,9 @@ show some details are open by someone: open copies only, never the originals).
    duplicates, details that exist in both Civil and Structural folders, and anything odd. No person or company
    names from file names in the repo.
 4. **Done when:** every DWG is listed as read or "could not read (reason)"; zero silent skips.
+5. **Then (ruling I1):** turn the index into picture cards for Tim to confirm at Monday sessions (keep / fix /
+   retire, about 20 per session, grouped by category), and list what is missing. Details harvested by job 2 join
+   the same card queue as "found on real jobs, not in the library".
 
 ## Job 2 — CE drawing atlas across job types (H1: Tim "yes")
 
@@ -33,7 +36,9 @@ show some details are open by someone: open copies only, never the originals).
 3. **For each job (issued PDFs and the final DWGs):** sheet list and order; which standard details were used and
    which details were custom (drawn for this job); schedules used and their layout; architectural background
    set-up (how many Xref inserts, clips, colour overrides per level, any cleaned template xref); layers, text
-   heights, linetypes, title block variant; Civil vs Structural sheets in the same set.
+   heights, linetypes, title block variant; Civil vs Structural sheets in the same set. **Harvest every detail
+   drawn on the job (ruling I1):** picture + title + which job type, matched against the library index; unmatched
+   and repeated custom details become library candidates.
 4. **Output for Tim:** a picture atlas (per job type: typical sheet set, typical details, what is special) and per
    element "is this our standard?" pictures. Client-identifying material stays in the local-only store; only job
    numbers and generic lessons go to CE_PLAN. Ready for Tim's Monday 26 Oct session (about 20 minutes).
