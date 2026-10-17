@@ -611,3 +611,4 @@ One line per job: time (Melbourne), item, PR, state, usage.
 - Sat 17 Oct 21:09 real clock (read from the PC clock) - desk: Hunt Civil E fixes queued in triage section 5
 - Sat 17 Oct 22:20 PC clock: build/04 headless run 367 started (lane_loop; bug fixes only per pause ruling A).
 - Sat 17 Oct 22:50 PC clock: build/04 run 367: Hunt E line 3 (BUG-675, 678) DONE: DRAFT PR #1318 (base rel-20261018a / Civil 3.0.52, needs Opus review): turned pit now judged by its own sides in the CD fit check, and label/cover text step along the pit's own axes in Edit Pit and CDEDIT batch. 33 related net10 tests pass; not AutoCAD-tested.
+- Sat 17 Oct 22:26 PC clock: build/04 run 367: Hunt E line 7 BUG-687 DONE (Q-only change in Edit Pipe now saves; 54 tests pass). DRAFT PR https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1319 (base rel-20261018a / Civil 3.0.52, needs Opus review); not AutoCAD-tested.
