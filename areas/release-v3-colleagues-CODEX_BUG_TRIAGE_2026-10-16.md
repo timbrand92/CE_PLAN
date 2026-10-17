@@ -121,6 +121,29 @@ Added Sat 17 Oct 2026 night by the desk (job "file the hunt findings and queue t
 10. **BUG-694 (MEDIUM, plausible): a level typed in the Pit Schedule on a breakline pipe updates one half only.** File and function: `Services/LinkService.ScheduleLevels.cs:59-134`; `ViewModels/PitScheduleViewModel.Data.cs:1870-1885` (`MirrorGradeLockToPartnerHalf`). Failing test first: both halves take the typed level.
 11. **BUG-685 (HOLD, needs Tim's ruling): "Work it out from the grade" rounds a typed 10.125 to 10.13.** Do not build. Two rules conflict (a typed level is never moved, INT-059 item 23; the rulebook locks inverts to 2 dp). Add to the section 4 questions for Tim; recommendation: keep the typed level exact and round only the calculated end. If he agrees: `Helpers/MathHelper.cs:319-333`; failing test first: `ApplyCalculatedInvertRule(10.125, 10.025, 2, 20, preserveInlet: true)` keeps 10.125.
 
+### Codex look L1B and L2 fixes (18 Oct, installed Civil 3.0.54 / Structural 1.0.118)
+
+Added Sun 18 Oct 2026 by the desk (job "file the Codex look results as bugs"). Source: CODEX_LOOK_L1B_20261018_0922.md and CODEX_LOOK_L2_20261018_1001.md (catchment and Structural looks). L3, L4 and L5 had no real results (L3 and L5 stopped at the start check, L4 never started), so nothing is queued from them. No item here is HIGH: none puts a wrong number on a drawing. Ordered by how much a drafter loses.
+
+**Shared root causes:** catchment drawing is one routine that writes both the fill and the labels (BUG-641, 642) but they are two separate faults (no per-pit boundary; label placement), so two fixes. The DOTS fault (BUG-748) is the hatch-density-by-scale rule only; do not touch the AR-CONC hatch.
+
+#### build/03 Civil engine: 2 lines, MEDIUM first
+
+1. **BUG-641 (MEDIUM): the catchment fill shows one block, not one region per pit.** Draw each grated pit's share as its own region with a visible edge at the shared boundary (x=5000 in the symmetric two-pit case), keeping pits, pipes and the paved outline unchanged. Failing test first: a pure test that two pits sharing an 84 m2 outline produce two regions of 42 m2 whose union is the outline and whose shared edge is the midline; today it returns one region. The way paving is shared between pits is already a Tim design call (QUESTIONS section C item 4): use the recommended default behind a Settings switch.
+2. **BUG-642 (MEDIUM): the P1 catchment wording lands on the pipe wording.** Place the catchment label clear of existing pit and pipe text and keep it inside the view the user zoomed to. Failing test first: a pure placement test that the label box does not intersect the pipe-label box in the two-pit case (P1 label against the 1 IN 48 pipe text); today the boxes overlap. Check with a Codex look afterwards, since the colour and backing are already improved.
+
+#### build/04 Civil windows, schedules: none new
+
+Nothing from L1B or L2 belongs to windows, schedules or spot levels.
+
+#### build/02 Structural: 3 lines, MEDIUM first
+
+1. **BUG-748 (MEDIUM): the DOTS hatch gets denser with scale (dots at 1:20, bands at 1:50, solid at 1:100).** One fix: derive the DOTS spacing from the plotted scale so paper density is constant. Failing test first: a pure test that the pattern scale times the drawing scale gives the same paper spacing at 20, 50 and 100 (within 20 percent); today 1:100 gives a spacing so small the dots merge. The 1:50 number is not approved: use the recommended default from QUESTIONS section F item 2 behind a Settings switch and say so in the log.
+2. **BUG-749 (MEDIUM-LOW until reproduced): Section Mark identifier answer ends in a paste command.** First prove whether CE or the Codex typing caused it. Failing test first: a pure test that the identifier step takes B and 01 as answers with SectionMarkIdentifierInClearHalf both false and true and moves to the sheet question; if it passes today, queue a second Codex look rather than a fix, and keep BUG-632 (identifier against the filled half) waiting behind it.
+3. **BUG-454 (look, not fix): footing label readability.** Height is now 250 units = 2.5 mm at 1:100, so no code change is queued; ask for another Codex look at a closer zoom to see the PF label legible. A failing test is only needed if that look shows it unreadable.
+
+**Not queued (already approved or fixed-looking):** BUG-614 and BUG-628 were NOT SEEN on 1.0.118 (hatches accepted at 1:50, break about 2.1 mm at 20, 50 and 100). They stay OPEN until a real pass that includes the CEHATCH window route and a plot check. The dimension at 1:50 is a question (QUESTIONS section F item 1), not a bug.
+
 ## 7. Hunt Civil B fixes (18 Oct)
 
 Added Sun 18 Oct 2026 by the desk (job "file the hunt findings and queue the fixes"). Source: `areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md` (49 findings, read-only code audit of installed Civil 3.0.53: survey, spot levels, LandXML, X-Civil import, source tags; nothing seen in AutoCAD). Filed as BUG-699 to BUG-747 in `BUG_CARPARK.md` (49 new, none duplicates; BUG-743 and BUG-723 carry "related" notes to BUG-432 and BUG-512). Sections 1 to 6 and the Hunt Civil E section above are unchanged. Ruling A (17 Oct): keep fixing bugs. Nothing is closed, and nothing is FIXED without a real AutoCAD pass. Same rules as section 3: one DRAFT PR per line, failing test first, Settings-backed, no hard blocks.
