@@ -1,47 +1,84 @@
 <title>CE Version 3 Plan</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: a set of drawing sheets. Each job stage is a sheet with a title-block strip; Civil and Structural sit side by side. */
+/* Layout: drawing-sheet sections with title-block strips; mock AutoCAD ribbon and CE window drawn in HTML. */
 :root{
   --bg:#f6f5f1; --sheet:#ffffff; --ink:#1b1a17; --muted:#5f5b52; --rule:#d9d5ca;
   --gold:#b8891a; --gold-soft:#f3e7c4; --ok:#2f7a45; --warn:#a4570f; --later:#77736a;
+  --cad:#2b2d31; --cad-ink:#e8e6e1; --cad-rule:#45474d;
   --display:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
   --mono:"IBM Plex Mono",Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#141412; --sheet:#1d1c19; --ink:#efece4; --muted:#aaa497; --rule:#3a3832;
-  --gold:#e0b44a; --gold-soft:#3a3120; --ok:#6cc08a; --warn:#e39a52; --later:#9a958a; color-scheme:dark}}
+  --gold:#e0b44a; --gold-soft:#3a3120; --ok:#6cc08a; --warn:#e39a52; --later:#9a958a;
+  --cad:#232428; --cad-ink:#e8e6e1; --cad-rule:#3b3d43; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#141412; --sheet:#1d1c19; --ink:#efece4; --muted:#aaa497; --rule:#3a3832;
-  --gold:#e0b44a; --gold-soft:#3a3120; --ok:#6cc08a; --warn:#e39a52; --later:#9a958a; color-scheme:dark}
+  --gold:#e0b44a; --gold-soft:#3a3120; --ok:#6cc08a; --warn:#e39a52; --later:#9a958a;
+  --cad:#232428; --cad-ink:#e8e6e1; --cad-rule:#3b3d43; color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);padding-inline:16px;padding-block:24px 48px}
-.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:30px}
 h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
-h1{font-size:2.3rem;font-weight:700;letter-spacing:.01em}
-h2{font-size:1.55rem;font-weight:700}
-h3{font-size:1.1rem;font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+h1{font-size:2.3rem;font-weight:700}
+h2{font-size:1.6rem;font-weight:700}
+h3{font-size:1.08rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
 p{margin:0}
+section{display:flex;flex-direction:column;gap:14px}
 .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-.lede{max-width:65ch;color:var(--muted)}
+.lede{max-width:68ch;color:var(--muted)}
 .sheet{background:var(--sheet);border:1px solid var(--rule);display:flex;flex-direction:column}
-.sheet-body{padding:20px;display:flex;flex-direction:column;gap:16px}
+.sheet-body{padding:20px;display:flex;flex-direction:column;gap:14px}
 .tb{border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em}
 .tb span{padding:6px 12px;border-right:1px solid var(--rule)}
-.tb span:last-child{border-right:0;margin-left:auto;color:var(--gold);font-weight:500}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.col{min-width:0;display:flex;flex-direction:column;gap:8px}
-.col h3{color:var(--muted);font-size:.95rem}
-ul,ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px}
-.btn{font-family:var(--mono);font-size:.82rem;background:var(--gold-soft);padding:1px 6px;white-space:nowrap}
-.tag{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;padding:1px 6px;border:1px solid currentColor;margin-right:6px;white-space:nowrap}
+.tb span:last-child{border-right:0;margin-left:auto;color:var(--gold)}
+ul,ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:5px}
+.btn{font-family:var(--mono);font-size:.8rem;background:var(--gold-soft);padding:1px 6px;white-space:nowrap}
+.tag{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;padding:1px 6px;border:1px solid currentColor;margin-right:6px;white-space:nowrap}
 .t-now{color:var(--ok)} .t-nov{color:var(--warn)} .t-later{color:var(--later)}
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule)}
-.ba div{padding:10px 14px;min-width:0}
-.ba .before{color:var(--muted);border-right:1px solid var(--rule)}
-.ba .after{background:var(--gold-soft)}
-.ba b{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
-.shifts{display:flex;flex-direction:column;gap:10px}
+.concepts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.concept{background:var(--sheet);border:1px solid var(--rule);padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.concept .k{font-family:var(--display);font-size:1.25rem;font-weight:700}
+.concept .num{font-family:var(--mono);font-size:.72rem;color:var(--gold)}
+.concept p{color:var(--muted);font-size:.94rem}
+pre.mermaid{background:var(--sheet);border:1px solid var(--rule);padding:12px;overflow-x:auto;margin:0}
+/* mock ribbon */
+.ribbon-wrap{overflow-x:auto;border:1px solid var(--cad-rule)}
+.ribbon{background:var(--cad);color:var(--cad-ink);display:flex;min-width:860px;font-size:.78rem}
+.panel{border-right:1px solid var(--cad-rule);padding:8px 10px 0;display:flex;flex-direction:column;gap:6px;flex:1}
+.panel .tools{display:flex;flex-wrap:wrap;gap:4px}
+.panel .tools span{border:1px solid var(--cad-rule);padding:3px 6px;white-space:nowrap}
+.panel .tools span.big{border-color:var(--gold);color:var(--gold)}
+.panel .pname{border-top:1px solid var(--cad-rule);text-align:center;padding:3px 0;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.ribbon-tab{background:var(--cad);color:var(--gold);font-family:var(--mono);font-size:.75rem;padding:5px 12px;border-bottom:2px solid var(--gold);display:inline-block}
+/* mock window */
+.win{max-width:520px;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 6px 24px rgba(0,0,0,.12)}
+.win-h{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--rule)}
+.logo{font-family:var(--display);font-weight:700;background:var(--ink);color:var(--gold);padding:2px 7px}
+.win-h .sum{flex:1;min-width:0}
+.win-h .st{font-family:var(--mono);font-size:.72rem;color:var(--ok)}
+.win-b{padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:.9rem}
+.win-b label{color:var(--muted);font-size:.78rem;display:block}
+.win-b .v{border:1px solid var(--rule);padding:3px 8px;font-family:var(--mono);font-size:.82rem}
+.win-b .v.amber{border-color:var(--warn);color:var(--warn)}
+.win-f{display:flex;align-items:center;gap:8px;padding:10px 14px;border-top:1px solid var(--rule);font-size:.85rem}
+.win-f .left{flex:1;color:var(--muted)}
+.win-f .cancel{border:1px solid var(--rule);padding:4px 12px}
+.win-f .go{background:var(--gold);color:#1b1a17;padding:4px 14px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.two>*{min-width:0}
+/* walkthrough */
+.step{display:grid;grid-template-columns:3.2rem 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)}
+.step .s{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1}
+.step .s small{display:block;font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.05em}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.trio div{min-width:0;font-size:.93rem}
+.trio b{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.trio .save b{color:var(--ok)}
+.feel{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.feel>div{min-width:0;padding-left:12px;border-left:3px solid var(--gold)}
+.feel p{color:var(--muted);font-size:.93rem}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .wk{border-top:4px solid var(--gold);background:var(--sheet);padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .wk.max{border-top-color:var(--ok)}
@@ -49,190 +86,199 @@ ul,ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px}
 .q{display:grid;grid-template-columns:2.2rem 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--rule)}
 .q .n{font-family:var(--display);font-size:1.4rem;font-weight:700;color:var(--gold)}
 .q .rec{color:var(--ok);font-weight:600}
-.key{display:flex;flex-wrap:wrap;gap:12px;font-size:.9rem;color:var(--muted)}
-pre.mermaid{background:var(--sheet);border:1px solid var(--rule);padding:12px;overflow-x:auto;margin:0}
-.rules{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
-.rule{min-width:0;padding-left:12px;border-left:3px solid var(--gold)}
-.rule p{color:var(--muted);font-size:.93rem}
 .reply{background:var(--ink);color:var(--bg);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
 .reply b{color:var(--gold)}
-@media (max-width:760px){.cols,.ba,.rules{grid-template-columns:1fr}.ba .before{border-right:0;border-bottom:1px solid var(--rule)}.timeline{grid-template-columns:1fr 1fr}h1{font-size:1.9rem}}
+.note{font-size:.88rem;color:var(--muted)}
+@media (max-width:760px){.concepts,.feel,.two,.trio{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr}h1{font-size:1.9rem}.win-b{grid-template-columns:1fr}}
 @media (max-width:440px){.timeline{grid-template-columns:1fr}}
 </style>
 
 <div class="wrap">
 
 <header style="display:flex;flex-direction:column;gap:10px">
-  <span class="eyebrow">Draft for Tim to check · 17 Oct 2026 · nothing changes until you say yes</span>
-  <h1>CE Version 3: one plan, in the order a job runs</h1>
-  <p class="lede">This replaces the five plans that grew on top of each other. It follows a CE job from setting it up to issuing it, with Civil and Structural side by side. Every answer you have already given is filed at the stage where a drafter meets it. Civil and Manager go to Max on <b>Monday 9 November</b>. Structural stays on your PC until you say it is ready.</p>
-  <div class="key"><span><span class="tag t-now">Now</span>bug fixes, running already</span><span><span class="tag t-nov">By 9 Nov</span>after you approve this page</span><span><span class="tag t-later">Later</span>after Max has it</span></div>
+  <span class="eyebrow">Draft 2 for Tim · 17 Oct 2026 · how CE works for the person drawing</span>
+  <h1>CE Version 3: how it feels to draw a job with it</h1>
+  <p class="lede">This page is about the experience: what a drafter clicks and sees, and how every CE tool fits together so a job gets drawn faster, more consistently and with fewer mistakes. It is built from the answers you have already given on how CE should look and behave. Delivery dates are at the bottom.</p>
 </header>
 
-<section class="sheet"><div class="sheet-body">
-  <h2>The six big changes</h2>
-  <div class="shifts">
-    <div class="ba"><div class="before"><b>Before</b>Civil and Structural are two separate programs underneath, with two ribbon tabs. Structural's tab shows up to 313 commands.</div><div class="after"><b>After</b>One program, one CE tab, tools laid out in job order. About 40 Structural tools grouped into families.</div></div>
-    <div class="ba"><div class="before"><b>Before</b>Most new tools are installed but switched off. You install an update and see nothing change.</div><div class="after"><b>After</b>A tool switches on by itself once the robots and Codex pass it in AutoCAD.</div></div>
-    <div class="ba"><div class="before"><b>Before</b>Seven different "check" commands, each giving a different count.</div><div class="after"><b>After</b>One Checks list. "Network OK: 24 pipes, 11 pits checked", or what needs fixing.</div></div>
-    <div class="ba"><div class="before"><b>Before</b>About 900 pieces of half-finished work. You did the testing.</div><div class="after"><b>After</b>At most 10 pieces waiting at once. Robots and Codex test on a separate PC, and you are not involved.</div></div>
-    <div class="ba"><div class="before"><b>Before</b>Nobody checks that CE's output looks like your drawings.</div><div class="after"><b>After</b>A robot compares every schedule block, label, symbol and layer with your real past drawings.</div></div>
-    <div class="ba"><div class="before"><b>Before</b>Installing means "AutoCAD is closed, deploy" and file-by-file checks.</div><div class="after"><b>After</b>Manager updates CE when you next open AutoCAD: "CE updated to 3.0.52. Roll back?" <span class="tag t-later">Later</span></div></div>
-  </div>
-</div></section>
-
-<section style="display:flex;flex-direction:column;gap:14px">
-  <h2>The job, stage by stage</h2>
-  <p class="lede">Each sheet below is one stage of a job. The ribbon will follow this same order, and the CE panel shows the stages with a tick and one button each. It is a guide you can follow, never a set of steps you are forced through.</p>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li><span class="btn">New job</span> copies the A1 or A3 office template into the job folder and fills in the title block.</li>
-      <li><span class="btn">Job set-up</span>: job details once, then council, land use, and markup or from scratch.</li>
-      <li><span class="tag t-nov">By 9 Nov</span>both buttons first on the CE tab, and proven on a copy.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Job details and the new job drawing from the office template.</li>
-      <li><span class="tag t-later">Ready</span>the job record saved with the job, not on one PC (BUG-496).</li></ul></div>
-  </div></div><div class="tb"><span>S1</span><span>Set up the job</span><span>Sheet 1 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li><span class="btn">Survey</span>: one window for DWG, LandXML and X-Civil surveys, shown before anything goes into the drawing.</li>
-      <li><span class="tag t-now">Now</span>being fixed: LandXML pits coming in with blank inverts (BUG-605).</li>
-      <li>No survey yet? Levels are marked Assumed. A level past the survey edge stays Unknown, never the nearest spot height.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Attach the architect's drawings as xrefs, with one colour override per level.</li>
-      <li>Set each plan's level once, then set up the sheets.</li>
-      <li><span class="tag t-later">Later</span>clean-up of the architect's background, and "what moved" between revisions.</li></ul></div>
-  </div></div><div class="tb"><span>S2</span><span>Backgrounds and survey</span><span>Sheet 2 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li>LPD, then catchments from the rating report (confirmed once), then downpipes and pits, then pipes, then tank and OSD.</li>
-      <li>Catchment areas are entered in one place, the Catchments tab, instead of three.</li>
-      <li><span class="tag t-now">Now</span>being fixed: cancelling blanks pit inverts; areas with arcs measured wrong; blank boxes showing 0.00 instead of "Unknown".</li>
-      <li><span class="tag t-nov">By 9 Nov</span>one-page Edit Pipe and Edit Pit windows that look like New Pipe. Detention pit next to PIT. OSD "Apply to drawing".</li></ul></div>
-    <div class="col"><h3>Structural: roof down</h3><ul>
-      <li>Roof, then upper floors, then ground and slab, then <b>footings last</b>. Loads are carried down from each level to the next.</li>
-      <li>Markers from the level above are built, but switched off today.</li>
-      <li><span class="tag t-later">Ready</span>the roof-down chain works across separate drawings, and footings are proposed from the loads above.</li></ul></div>
-  </div></div><div class="tb"><span>S3</span><span>Design and framing</span><span>Sheet 3 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li>Labels place themselves, for example "100 DIA. UPVC PIPE AT 1 IN 100" at the middle of each pipe.</li>
-      <li><span class="tag t-nov">By 9 Nov</span><span class="btn">Tidy labels</span> clears clashes on a whole sheet in one go, with a preview and one Undo. Robot-checked against labels on 3 real jobs.</li>
-      <li>Long sections on request, always for outfall drains.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Member tags, reo, sections and details.</li>
-      <li><span class="tag t-later">Ready</span>each object type on one agreed layer (BUG-532), and no prompt default shown twice.</li></ul></div>
-  </div></div><div class="tb"><span>S4</span><span>Draw and label</span><span>Sheet 4 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li><span class="tag t-nov">By 9 Nov</span>one <span class="btn">Checks</span> list. Click a problem to zoom to it, fix it or ignore it with a reason, and apply all the safe fixes with one Undo.</li>
-      <li>The other check commands still work if you type them, but come off the ribbon.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Check the drawing against the engineer's markup, through the same Checks list.</li></ul></div>
-  </div></div><div class="tb"><span>S5</span><span>Check</span><span>Sheet 5 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li>C01: plan, Pit Schedule, legend, standard notes and OSD criteria block. C02: details.</li>
-      <li><span class="tag t-now">Now</span>being fixed: Pit Schedule remarks getting lost; placed text and Excel export not matching.</li>
-      <li><span class="tag t-nov">By 9 Nov</span>robot compares the Pit Schedule with 3 real C01s, column by column.</li>
-      <li><span class="tag t-later">Later</span>one <span class="btn">Set up C01 and C02</span> that places legend, notes and details for you.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Member, footing and pier schedules copied exactly from your existing ones.</li>
-      <li><span class="tag t-later">Ready</span>schedules and title blocks pass the robot comparison on 3 real jobs.</li></ul></div>
-  </div></div><div class="tb"><span>S6</span><span>Sheets, schedules, notes</span><span>Sheet 6 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li><span class="btn">Calculations</span> (CDCALC): catchments, detention, pipe flow and print, in one window.</li>
-      <li><span class="tag t-now">Now</span>being fixed: DRAFT and job number on every export page; an unknown storm frequency quietly becoming 10 years.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Member sizes still come from Excel today.</li>
-      <li><span class="tag t-later">Later</span>"Design this member", with timber span tables as a check first.</li></ul></div>
-  </div></div><div class="tb"><span>S7</span><span>Calculations</span><span>Sheet 7 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li>For 9 Nov, Max issues the way he does today, with AutoCAD's own Publish.</li>
-      <li><span class="tag t-nov">By 9 Nov</span>robot checks that no CE marker or preview colour ever prints.</li>
-      <li><span class="tag t-later">Later</span>the same <span class="btn">Issue</span> as Structural, plus a Council pack: drawings, comps, rating report and LPD letter.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li><span class="tag t-later">Ready</span>one Issue step with a preview: revision letter, status, drawing register, dated PDF folder and a copy of the drawing.</li></ul></div>
-  </div></div><div class="tb"><span>S8</span><span>Issue</span><span>Sheet 8 of 9</span></div></article>
-
-  <article class="sheet"><div class="sheet-body"><div class="cols">
-    <div class="col"><h3>Civil</h3><ul>
-      <li>Compare a new background or survey against the old one, fix broken xref paths, then renumber before re-issue.</li>
-      <li><span class="tag t-nov">By 9 Nov</span>proof that Max's drawings show pipes and pits correctly on a PC without CE.</li></ul></div>
-    <div class="col"><h3>Structural</h3><ul>
-      <li>Revise and re-issue only the sheets that changed.</li></ul></div>
-  </div></div><div class="tb"><span>S9</span><span>After issue</span><span>Sheet 9 of 9</span></div></article>
-</section>
-
-<section class="sheet"><div class="sheet-body">
-  <h2>House rules every CE command follows, Civil and Structural alike</h2>
-  <div class="rules">
-    <div class="rule"><b>One look.</b><p>Every window uses the New Pipe header and footer in gold, black and grey, all on one page.</p></div>
-    <div class="rule"><b>One CE tab, in job order.</b><p>Each button shows its plain name and its command, for example "Pit Schedule (PITSCHEDULE)".</p></div>
-    <div class="rule"><b>Old names still work.</b><p>Typing PIT or 1 still works, even when the button has moved.</p></div>
-    <div class="rule"><b>Preview, then one Undo.</b><p>No "Are you sure?" after a preview. Escape leaves nothing half-drawn.</p></div>
-    <div class="rule"><b>CE never saves your drawing.</b><p>It reminds you if autosave is off.</p></div>
-    <div class="rule"><b>Every number lives on Settings.</b><p>Each one is marked council, job or office, with its source and edition. CE warns you; it never blocks you.</p></div>
-    <div class="rule"><b>Looks like ours.</b><p>Schedule blocks, labels, symbols, text, layers and linetypes match your existing drawings, and a robot checks it.</p></div>
-    <div class="rule"><b>Fast and solid.</b><p>Every command has a speed limit. It is tested on a 50,000-object drawing, locked layers, xrefs and bad input.</p></div>
-    <div class="rule"><b>Your protections stay.</b><p>Locked layers, xrefs and REFEDIT are never bypassed.</p></div>
-    <div class="rule"><b>Manager only manages.</b><p>Versions, updates, roll back and Report a problem. Drafting tools live on the CE tab.</p></div>
-  </div>
-</div></section>
-
-<section style="display:flex;flex-direction:column;gap:12px">
-  <h2>How work gets built from now on</h2>
+<section>
+  <h2>The idea in one sentence</h2>
+  <p class="lede" style="font-size:1.15rem;color:var(--ink)"><b>You draw the real things once (pits, pipes, beams, footings), and CE keeps everything that depends on them in step for you:</b> labels, levels, schedules, notes, the OSD block, checks and title blocks. You never type the same number twice, and the drawing always matches the design.</p>
 <pre class="mermaid">
 flowchart TD
-A[Your idea or bug] --> B[Monday: becomes a card at its job stage]
-B --> C[Cheaper AI builds one small piece]
-C --> D[Robots on the test PC: works, fast, solid, looks like ours]
-D -->|fails twice| P[Parked with the reason]
-D --> E[Strong AI reviews it, then it joins CE]
-E --> F[Codex checks it in real AutoCAD overnight]
-F --> G[Your PC gets it at next AutoCAD start]
-G --> H[You mark a release: colleagues get it]
+J[The Job: number, council, mode, title block] --> O[What you draw: pits, pipes, tanks, beams, posts, footings]
+S[Settings: every number and office standard] --> O
+O -->|change one thing| L[Labels, levels and tags follow]
+O --> T[Schedules, OSD block, legend, notes fill themselves]
+O --> C[Checks list watches it all]
+T --> SH[Sheets and Issue: PDF set, register, revisions]
+C --> SH
 </pre>
-  <p class="lede">At most 3 builders work at once, and at most 10 pieces wait for checking. Codex and the Claude accounts are paced so each week lasts until its reset. Something counts as accepted when every robot check passes, Codex has checked it in AutoCAD, and it has run 5 working days on your PC with no new bug. You can still reject anything.</p>
 </section>
 
-<section style="display:flex;flex-direction:column;gap:12px">
-  <h2>The road to Max, Monday 9 November</h2>
-  <div class="timeline">
-    <div class="wk"><span class="when">17 to 25 Oct · you are away</span><b>Fix and measure</b><ul><li>Shared bug fixes</li><li>Today's command speeds measured</li><li>Unfinished work sorted into this plan</li><li>Robots read real drawings to learn every element</li></ul></div>
-    <div class="wk"><span class="when">26 Oct to 1 Nov</span><b>Build the "By 9 Nov" items</b><ul><li>One CE tab in job order</li><li>Checks list, Tidy labels, Edit windows</li><li>Robot gate switched on</li><li>Test PC set up on 29 Oct</li></ul></div>
-    <div class="wk"><span class="when">2 to 6 Nov</span><b>Freeze and prove</b><ul><li>Fixes only</li><li>Full robot and Codex run</li><li>Runs on your PC for 5 working days</li><li>Max's AutoCAD year checked</li></ul></div>
-    <div class="wk max"><span class="when">Mon 9 Nov</span><b>Max gets Civil and Manager</b><ul><li>Installed with one-step roll back</li><li>First-day welcome card</li><li>Report a problem button</li></ul></div>
+<section>
+  <h2>Six things a drafter needs to understand, and that's all</h2>
+  <div class="concepts">
+    <div class="concept"><span class="num">1 · Job</span><span class="k">Set it up once</span><p>Job number, address, council, rating report, and markup or from scratch. Every title block, note and check reads from here. Change the council and the notes and checks follow.</p></div>
+    <div class="concept"><span class="num">2 · Objects</span><span class="k">Things that know each other</span><p>A pit knows its pipes. A pipe knows its two pits and its grade. A beam knows the post under it, and that post knows the footing below. Move a pit and its pipes follow, with a preview.</p></div>
+    <div class="concept"><span class="num">3 · Live output</span><span class="k">Text you never retype</span><p>Pipe labels, IL text, pit labels, member tags, the Pit Schedule, member schedules and the OSD block all update themselves. Hand-typed text is kept and only flagged.</p></div>
+    <div class="concept"><span class="num">4 · Settings</span><span class="k">Every number in one place</span><p>Minimum cover, text heights, layers, council values. Each is marked council, job or office, with where it came from. CE warns you; it never blocks you.</p></div>
+    <div class="concept"><span class="num">5 · Checks</span><span class="k">One list watching the drawing</span><p>It stays quiet when all is well ("Network OK, 24 pipes"). Click a problem to zoom to it. Safe fixes are pre-ticked and apply with one Undo.</p></div>
+    <div class="concept"><span class="num">6 · Sheets</span><span class="k">From drawing to PDF set</span><p>New sheet with title block and viewport at office scale. Issue picks the sheets that changed, the next revision letter and the dated folder.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>The front door: one CE tab, laid out in job order</h2>
+  <p class="lede">Left to right is the order a job runs. Gold buttons are the five or so daily tools in each panel; everything else sits in a drop-down or is typed. The middle panels switch between Civil and Structural depending on the drawing. Select a pipe, pit or beam and its own tab appears, as in AutoCAD. <span class="tag t-nov">Proposed layout</span></p>
+  <div><span class="ribbon-tab">CE · Civil drawing</span>
+  <div class="ribbon-wrap"><div class="ribbon">
+    <div class="panel"><div class="tools"><span class="big">New job</span><span class="big">Job set-up</span><span>Jobs ▾</span></div><div class="pname">Job</div></div>
+    <div class="panel"><div class="tools"><span class="big">Survey</span><span>Spot level</span><span>Compare ▾</span><span>Xrefs ▾</span></div><div class="pname">Background</div></div>
+    <div class="panel"><div class="tools"><span class="big">LPD</span><span class="big">Source ▾</span><span class="big">Pit ▾</span><span class="big">Pipe</span><span>Tank</span><span>Detention pit</span><span>Site ▾</span></div><div class="pname">Design</div></div>
+    <div class="panel"><div class="tools"><span class="big">Edit</span><span class="big">Tidy labels</span><span>Long section</span><span>Solve levels</span></div><div class="pname">Draw and label</div></div>
+    <div class="panel"><div class="tools"><span class="big">Checks</span><span>Proposals</span><span>Repair ▾</span></div><div class="pname">Check</div></div>
+    <div class="panel"><div class="tools"><span class="big">Pit Schedule</span><span>New sheet</span><span>Library</span></div><div class="pname">Sheets</div></div>
+    <div class="panel"><div class="tools"><span class="big">Calculations</span><span>Rainfall</span></div><div class="pname">Calcs</div></div>
+    <div class="panel"><div class="tools"><span>Issue</span><span>Settings</span><span>Help</span></div><div class="pname">Issue · CE</div></div>
+  </div></div></div>
+  <div><span class="ribbon-tab">CE · Structural drawing</span>
+  <div class="ribbon-wrap"><div class="ribbon">
+    <div class="panel"><div class="tools"><span class="big">New job</span><span class="big">Job set-up</span></div><div class="pname">Job</div></div>
+    <div class="panel"><div class="tools"><span class="big">Xrefs ▾</span><span>Plan level</span><span>Compare</span></div><div class="pname">Background</div></div>
+    <div class="panel"><div class="tools"><span class="big">Beam ▾</span><span class="big">Post ▾</span><span>Joists / rafters</span><span>Lintel</span><span>Bracing</span><span>Tie-down</span></div><div class="pname">Framing (roof down)</div></div>
+    <div class="panel"><div class="tools"><span class="big">Footing ▾</span><span>Pier</span><span>Slab / raft ▾</span><span>Reo</span></div><div class="pname">Footings</div></div>
+    <div class="panel"><div class="tools"><span class="big">Tag</span><span>Text ▾</span><span>Hatch ▾</span><span>Section</span></div><div class="pname">Annotate</div></div>
+    <div class="panel"><div class="tools"><span class="big">Checks</span><span>Markup check</span></div><div class="pname">Check</div></div>
+    <div class="panel"><div class="tools"><span class="big">Schedules ▾</span><span>Notes</span><span>Library</span></div><div class="pname">Sheets</div></div>
+    <div class="panel"><div class="tools"><span class="big">Issue</span><span>Settings</span><span>Help</span></div><div class="pname">Issue · CE</div></div>
+  </div></div></div>
+  <p class="note">Every button shows its plain name, and the tooltip shows the command, for example "Pit Schedule (PITSCHEDULE)". Old typed names such as PIT, CD and 1 keep working forever. Structural goes from about 313 visible commands to about 40, grouped in families.</p>
+</section>
+
+<section>
+  <h2>Every CE window looks and behaves the same</h2>
+  <div class="two">
+    <div class="win" aria-label="Example CE window">
+      <div class="win-h"><span class="logo">CE</span><span class="sum"><b>Edit Pipe</b> · P3 to P2 · 100 DIA. UPVC at 1 in 100</span><span class="st">● OK</span></div>
+      <div class="win-b">
+        <div><label>Diameter</label><div class="v">100</div></div>
+        <div><label>Material</label><div class="v">UPVC</div></div>
+        <div><label>Upstream invert (from P3)</label><div class="v">98.420</div></div>
+        <div><label>Grade</label><div class="v amber">1 in 100 · held</div></div>
+        <div><label>Cover at worst point</label><div class="v">0.42 m</div></div>
+        <div><label>Surface level source</label><div class="v">Survey</div></div>
+      </div>
+      <div class="win-f"><span class="left">Show where · Hold grade</span><span class="cancel">Cancel</span><span class="go">Apply</span></div>
+    </div>
+    <ol>
+      <li><b>Header:</b> the CE mark, a one-line summary of what you are editing, and its status at top right.</li>
+      <li><b>One page:</b> no scrolling and no hidden tabs. Tabs appear only for genuinely separate topics.</li>
+      <li><b>Live preview:</b> the drawing shows the change as you type, in a preview colour until you Apply.</li>
+      <li><b>Footer:</b> extra tools at the bottom left; Cancel and the gold Apply at the bottom right. Enter applies and Escape cancels.</li>
+      <li><b>Same window for new and edit:</b> New Pipe and Edit Pipe look identical, and so will New Beam and Edit Beam.</li>
+      <li><b>It opens where you left it</b> and remembers your last sizes the next day.</li>
+    </ol>
   </div>
 </section>
 
 <section class="sheet"><div class="sheet-body">
-  <h2>Your questions (reply "all yes" to take every recommendation)</h2>
-  <div>
-    <div class="q"><span class="n">1</span><div><b>Is this plan right?</b> Once you approve it, the "By 9 Nov" items get built. <span class="rec">Recommend: yes.</span></div></div>
-    <div class="q"><span class="n">2</span><div><b>Pit Schedule:</b> you type DEPTH 1.20 and the row turns amber. One click on Update changes the pit, the plan text and the schedule together, with one Undo. <span class="rec">Recommend: yes.</span></div></div>
-    <div class="q"><span class="n">3</span><div><b>Minimum pipe cover:</b> keep 300 mm as the default, as you set on 24 Sep, or use 600 mm? At 300, a pipe with 350 mm cover passes. At 600, it gets flagged as shallow. <span class="rec">Recommend: 300.</span></div></div>
-    <div class="q"><span class="n">4</span><div><b>OSD criteria block:</b> you place it once. After that it fills itself from the design, so change the orifice from 63 to 60 mm and the block shows 60. Anything you typed by hand is kept and flagged. <span class="rec">Recommend: yes.</span></div></div>
-    <div class="q"><span class="n">5</span><div><b>Issuing on 9 Nov:</b> Max uses AutoCAD's own Publish for now, and CE's Issue button comes after. <span class="rec">Recommend: yes.</span></div></div>
-    <div class="q"><span class="n">6</span><div><b>Structural "ready"</b> means: one CE tab, every stage reachable, schedules pass the robot comparison on 3 real jobs, no hard blocks, Undo and Escape bugs closed, 5 clean days on your PC, and then <i>you</i> say the words. <span class="rec">Recommend: yes.</span></div></div>
-    <div class="q"><span class="n">7</span><div><b>Australian Standard editions</b> for Structural go on Settings, one row per standard with its edition and source, marked "Assumed until confirmed". <span class="rec">Recommend: yes.</span></div></div>
-    <div class="q"><span class="n">8</span><div><b>The five old plans</b> get filed away as replaced, with nothing deleted. <span class="rec">Recommend: yes.</span></div></div>
+  <h2>How it feels, minute to minute</h2>
+  <div class="feel">
+    <div><b>Placing keeps going.</b><p>Click Pit and place P1, P2, P3. The window opens for each and it carries on until Enter. Pipes snap to a pit within 75 mm and never guess between two.</p></div>
+    <div><b>The cursor tells you.</b><p>Size, grade and length show beside the cursor while you draw, and turn the warning colour the moment cover or grade fails.</p></div>
+    <div><b>Change once, everything follows.</b><p>Lower P3 by 100 mm. The pipes regrade in the preview, and the labels, IL text, Pit Schedule and OSD block update. One Undo puts it all back.</p></div>
+    <div><b>AutoCAD's own commands still work.</b><p>Erase a pit and its pipes are left with free ends, and CE says so. Copy makes real CE copies, renumbered. Trim, Extend, Mirror and Rotate keep the text readable.</p></div>
+    <div><b>Everything is one click away.</b><p>Double-click or use Edit to get the window, Ctrl+1 for values, right-click for a short CE group. Select a pipe and the Pipe tab appears.</p></div>
+    <div><b>Finding things.</b><p>Type P7 or B12 in the CE find box to zoom to it. Click any schedule or Checks row to zoom, then Back. The arrow keys walk you along the network.</p></div>
+    <div><b>Quiet unless it matters.</b><p>One bell collects the minor messages. Only a failure, a colleague holding the drawing or an update ready pops up. The CE panel shows one health line.</p></div>
+    <div><b>Unknown stays Unknown.</b><p>No survey level? It says "Unknown" or "Assumed", never a made-up 0.00. Your typed values are always kept.</p></div>
+    <div><b>Your protections are kept.</b><p>CE never unlocks a layer, edits inside an xref or saves your drawing for you.</p></div>
+    <div><b>It learns your office.</b><p>Where pit labels sit and where tags go are learnt from your past drawings. Every suggestion says why, and never changes an engineering rule.</p></div>
   </div>
 </div></section>
+
+<section>
+  <h2>A Civil job, start to finish</h2>
+  <p class="lede">Each step shows what you do, what CE does for you, and where the time or quality gain comes from.</p>
+  <div class="sheet"><div class="sheet-body" style="gap:0">
+    <div class="step"><span class="s">1<small>JOB</small></span><div><b>Start the job</b><div class="trio"><div><b>You</b>Click New job and pick A1 or A3, then fill in Job set-up once.</div><div><b>CE</b>Copies the template into the job folder, fills the title block and sets the council's notes and checks.</div><div class="save"><b>Gain</b>No title block typing, and the right council rules from the start.</div></div></div></div>
+    <div class="step"><span class="s">2<small>SURVEY</small></span><div><b>Bring in the survey and background</b><div class="trio"><div><b>You</b>Pick the survey file and look over the preview.</div><div><b>CE</b>Surface levels come from the survey, existing services are greyed on EX layers, and bad points are flagged and skipped.</div><div class="save"><b>Gain</b>Every pit cover level comes from the survey, never typed by hand.</div></div></div></div>
+    <div class="step"><span class="s">3<small>DESIGN</small></span><div><b>LPD, catchments, downpipes, pits, pipes</b><div class="trio"><div><b>You</b>Place the LPD, confirm the catchments once, then place downpipes and pits and draw pipes between them.</div><div><b>CE</b>Catchments come from the rating report, the LPD note places itself, pits number P1 from the outlet, and grade and cover show at the cursor.</div><div class="save"><b>Gain</b>No areas typed twice, and numbering in office order automatically.</div></div></div></div>
+    <div class="step"><span class="s">4<small>OSD</small></span><div><b>Tank and detention</b><div class="trio"><div><b>You</b>Open Calculations and check storage and the orifice.</div><div><b>CE</b>Works out storage and the orifice, then Apply to drawing fills the OSD criteria block and orifice pit detail.</div><div class="save"><b>Gain</b>The drawn block always matches the calculation sheet.</div></div></div></div>
+    <div class="step"><span class="s">5<small>LABELS</small></span><div><b>Labels and tidy-up</b><div class="trio"><div><b>You</b>Click Tidy labels on the sheet.</div><div><b>CE</b>Every pipe is labelled "100 DIA. UPVC PIPE AT 1 IN 100" at mid-length, and clashes are cleared with a preview.</div><div class="save"><b>Gain</b>The hour of nudging text before printing is gone.</div></div></div></div>
+    <div class="step"><span class="s">6<small>CHECK</small></span><div><b>Check</b><div class="trio"><div><b>You</b>Open Checks and work down the list.</div><div><b>CE</b>Cover, grade, velocity and council rules are checked, with wrong layers and missing legend items pre-ticked to fix.</div><div class="save"><b>Gain</b>Problems found before the council finds them.</div></div></div></div>
+    <div class="step"><span class="s">7<small>SHEETS</small></span><div><b>C01 and C02</b><div class="trio"><div><b>You</b>Place the Pit Schedule and set up the sheets.</div><div><b>CE</b>The Pit Schedule matches your office layout column for column, and typing in a cell changes the pit. Legend, notes and details are offered.</div><div class="save"><b>Gain</b>Schedules never disagree with the plan.</div></div></div></div>
+    <div class="step"><span class="s">8<small>ISSUE</small></span><div><b>Comps and issue</b><div class="trio"><div><b>You</b>Approve the calculations, then issue.</div><div><b>CE</b>The computations sheet names the engineer. Issue picks the changed sheets, the next revision and the dated PDF folder. <span class="tag t-later">Later</span></div><div class="save"><b>Gain</b>Revisions and the register stay right automatically.</div></div></div></div>
+  </div></div>
+</section>
+
+<section>
+  <h2>A Structural job, roof down</h2>
+  <div class="sheet"><div class="sheet-body" style="gap:0">
+    <div class="step"><span class="s">1<small>SET UP</small></span><div><b>Job, backgrounds, levels</b><div class="trio"><div><b>You</b>Attach the architect's drawings and give each plan its level once.</div><div><b>CE</b>Applies the office colour override per level and shares the job record with Civil.</div><div class="save"><b>Gain</b>Both disciplines use one title block record.</div></div></div></div>
+    <div class="step"><span class="s">2<small>ROOF</small></span><div><b>Roof framing</b><div class="trio"><div><b>You</b>Place beams, rafters as span arrows, and posts.</div><div><b>CE</b>Tags in office style (RB, C1, DS1), beam marks numbered, and roof point loads sent down to the member below.</div><div class="save"><b>Gain</b>Loads are never lost between levels.</div></div></div></div>
+    <div class="step"><span class="s">3<small>UPPER</small></span><div><b>Upper floors</b><div class="trio"><div><b>You</b>Frame the floor.</div><div><b>CE</b>Posts and walls from above appear in the office red "(O)" style. A post with nothing under it gets a red marker.</div><div class="save"><b>Gain</b>No more missed posts or unsupported beam ends.</div></div></div></div>
+    <div class="step"><span class="s">4<small>GROUND</small></span><div><b>Ground and slab</b><div class="trio"><div><b>You</b>Draw the slab, raft or subfloor.</div><div><b>CE</b>Raft beams are scheduled automatically, the slab legend is live, and a post landing on the slab gets a thickening offered.</div><div class="save"><b>Gain</b>The legend and schedule never go stale.</div></div></div></div>
+    <div class="step"><span class="s">5<small>FOOTINGS</small></span><div><b>Footings last</b><div class="trio"><div><b>You</b>Accept or adjust the proposed footings.</div><div><b>CE</b>Pads and strips are proposed from what sits above, marks are shared by size, and piers are set out.</div><div class="save"><b>Gain</b>Every load traced to the ground.</div></div></div></div>
+    <div class="step"><span class="s">6<small>SHEETS</small></span><div><b>Schedules, notes, details</b><div class="trio"><div><b>You</b>Place the schedules.</div><div><b>CE</b>The member schedule per floor, the sideways footing schedule and the general notes contain only what the job uses, in the exact office blocks.</div><div class="save"><b>Gain</b>No more hand-built schedules, which was a slow step in the jobs studied.</div></div></div></div>
+    <div class="step"><span class="s">7<small>CHECK</small></span><div><b>Check against the engineer's markup</b><div class="trio"><div><b>You</b>Load the markup PDF.</div><div><b>CE</b>The markup is faded under the plan with a list to tick: To do, Drafted, Needs clarification, Checked.</div><div class="save"><b>Gain</b>Nothing in the markup gets missed.</div></div></div></div>
+    <div class="step"><span class="s">8<small>ISSUE</small></span><div><b>Issue</b><div class="trio"><div><b>You</b>Click Issue.</div><div><b>CE</b>Previews the revision, status, register, PDF set and a copy of the drawing.</div><div class="save"><b>Gain</b>4 to 20 issues per job become one click each.</div></div></div></div>
+  </div></div>
+  <p class="note">Structural goes to colleagues only once you say it is ready. Until then it runs on your PC.</p>
+</section>
+
+<section class="sheet"><div class="sheet-body">
+  <h2>Where the speed and quality come from</h2>
+  <ol>
+    <li><b>Nothing typed twice.</b> The job, levels, sizes and areas are entered once, and every label, schedule and block reads them.</li>
+    <li><b>Nothing out of step.</b> Change the drawing and the text follows inside the same Undo, so the plan, schedule and calculations always agree.</li>
+    <li><b>Looks like ours.</b> Every schedule block, label, symbol, layer and linetype matches your existing drawings, and a robot checks it against real past jobs.</li>
+    <li><b>Mistakes caught early.</b> One Checks list watches cover, grade, council rules, unsupported posts and missing legend items while you work.</li>
+    <li><b>Fewer clicks.</b> Placing keeps going, Enter repeats with your last sizes, and the five daily tools in each panel are the big buttons.</li>
+    <li><b>Fast and solid.</b> Every command has a speed limit, and anything over a second shows progress with Cancel. Big drawings, locked layers and xrefs are all tested.</li>
+  </ol>
+</div></section>
+
+<section class="sheet"><div class="sheet-body">
+  <h2>Where today's plugin does not match this yet</h2>
+  <ol>
+    <li><b>Structural feels like a different program.</b> It has its own tab of about 313 commands sorted by object type, older-style windows and its own settings file.</li>
+    <li><b>Checking has seven doors</b> that give different counts.</li>
+    <li><b>Most new tools are switched off,</b> so the "everything follows" feel is not visible yet.</li>
+    <li><b>Only 4 Civil windows</b> have the New Pipe look, and Edit Pipe does not look like New Pipe yet.</li>
+    <li><b>The Pit Schedule waits</b> when you type a level, instead of changing the pit.</li>
+    <li><b>No one-click issue</b> in either discipline yet.</li>
+  </ol>
+</div></section>
+
+<section class="sheet"><div class="sheet-body">
+  <h2>Questions on how it should feel (reply "all yes" to take every recommendation)</h2>
+  <div>
+    <div class="q"><span class="n">1</span><div><b>The ribbon above:</b> panels left to right in job order, with Civil and Structural sharing the Job, Check, Sheets and Issue panels. <span class="rec">Recommend: yes, as drawn.</span></div></div>
+    <div class="q"><span class="n">2</span><div><b>Double-click any CE object to open its Edit window,</b> the same window as when it was placed. <span class="rec">Recommend: yes.</span></div></div>
+    <div class="q"><span class="n">3</span><div><b>Structural gets the same windows as Civil:</b> New Beam and Edit Beam look like New Pipe, with the same header and the same gold Apply. <span class="rec">Recommend: yes.</span></div></div>
+    <div class="q"><span class="n">4</span><div><b>One CE Properties palette</b> for pipes, pits, beams and footings alike, instead of separate Civil and Structural ones. <span class="rec">Recommend: yes.</span></div></div>
+    <div class="q"><span class="n">5</span><div><b>Pit Schedule:</b> you type DEPTH 1.20 and the row turns amber. One click on Update changes the pit, the plan text and the schedule together, with one Undo. <span class="rec">Recommend: yes.</span></div></div>
+    <div class="q"><span class="n">6</span><div><b>OSD criteria block:</b> you place it once, then it fills itself from the design. Change the orifice from 63 to 60 mm and it shows 60. Anything typed by hand is kept and flagged. <span class="rec">Recommend: yes.</span></div></div>
+    <div class="q"><span class="n">7</span><div><b>Minimum pipe cover default:</b> 300 mm, as you set on 24 Sep, or 600 mm? <span class="rec">Recommend: 300.</span></div></div>
+    <div class="q"><span class="n">8</span><div><b>Is anything about how you and your colleagues actually work missing from the two job walkthroughs?</b> Tell me in your own words and it goes into the plan.</div></div>
+  </div>
+</div></section>
+
+<section>
+  <h2>The road to Max, Monday 9 November</h2>
+  <div class="timeline">
+    <div class="wk"><span class="when">17 to 25 Oct · you are away</span><b>Fix and measure</b><ul><li>Shared bug fixes</li><li>Today's command speeds measured</li><li>Unfinished work sorted into this plan</li><li>Robots learn every element from real drawings</li></ul></div>
+    <div class="wk"><span class="when">26 Oct to 1 Nov</span><b>Build what you approve here</b><ul><li>Civil tab in job order</li><li>Checks list, Tidy labels, Edit windows</li><li>Robot checks switched on</li><li>Test PC set up on 29 Oct</li></ul></div>
+    <div class="wk"><span class="when">2 to 6 Nov</span><b>Freeze and prove</b><ul><li>Fixes only</li><li>Full robot and Codex run</li><li>5 working days on your PC</li><li>Max's AutoCAD year checked</li></ul></div>
+    <div class="wk max"><span class="when">Mon 9 Nov</span><b>Max gets Civil and Manager</b><ul><li>One-step roll back</li><li>Welcome card on first start</li><li>Report a problem button</li></ul></div>
+  </div>
+</section>
 
 <section class="reply">
   <b>Not in the 9 November release</b>
-  <span>Structural, until you say it is ready. CE's own Issue button. Automatic set-up of C01 and C02. Level 3 design proposals. Pump station tool. Automatic updates through Manager. All of these stay in the plan, in job order, for after Max has started.</span>
+  <span>Structural (until you say ready), CE's own Issue button, automatic C01 and C02 set-up, CE design proposals, the pump station tool and automatic updates through Manager. All of them stay in this plan for after Max has started.</span>
 </section>
 
 </div>
