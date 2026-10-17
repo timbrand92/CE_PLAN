@@ -207,6 +207,18 @@ Tim's words:
    PC with no new bug against it. Tim can still reject anything. Engineering judgement (council values, design rules,
    sizing) still goes to the Monday session as questions, not tests.
 
+## RULING E (Sat 17 Oct 2026, about 05:25 Melbourne)
+
+> "im away from work until 29th so we can test and build as we need until that day"
+
+1. **E1 — until Thu 29 Oct 2026, building and AutoCAD testing may run at any hour on Tim's PC**, for all CE work
+   (not only the Codex verification goal of the 14 Oct override, `2026-10-14_HOLIDAY_TESTING_HOURS_UNTIL_29_OCTOBER.md`,
+   which this widens). RULES 1.8 / ROUTER AutoCAD windows are overridden for this period (RULES 14.6). Return hour on
+   29 Oct not given; do not invent one. Installs on Tim's PC continue under the release charter.
+2. **Consequence (planning chat):** the spare test PC is at work, so its set-up waits until Tim is back; Tim's own PC is
+   the test machine until then. Robot gates, the pile compile and the one plan are process work, not new plugin items,
+   so ruling A does not pause them.
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
