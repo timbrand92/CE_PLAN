@@ -125,3 +125,32 @@ colleagues' channel (Civil + Manager only until Structural is ready).
 
 Could not verify: AutoCAD seat price / VM licence terms; CE loading in Design Automation; Escape in core console; a
 maintained NUnit-in-AutoCAD runner for 2027; which ApplicationPlugins copy wins when duplicated.
+
+## 7. Planning work list (planning chat, 17 Oct ~05:40) — what still has to be planned before the one plan is done
+
+Tim, 17 Oct ~05:35: *"you will manage codex, team and max accounts to be building/testing and manage weekly usage
+whilst continuing to work autonomously throughout the week, what else do we need to plan out here?"*
+
+Owner of day-to-day running (builders, Codex, Team, Max, usage pacing): the desk chat (acting controller). Owner of the
+items below: the planning chat, until the one plan is handed to the desk.
+
+1. **The one plan in job order** (B1): Civil and Structural side by side per stage; every ruling filed where a drafter
+   meets it; five old plans marked superseded and archived.
+2. **House rules** for every command, both disciplines: look, ribbon from one job-ordered data file, Settings, Undo,
+   prompts, Escape, errors, help, names.
+3. **One code line**: bring Civil and Structural back together safely (no rebase; content-diff after every step).
+4. **Element catalogue** (D1 + EV-03): every element on CE drawings (schedule blocks, labels, symbols, text styles,
+   layers, linetypes, title blocks) with its standard, read from real drawings by a headless robot (local-only store).
+5. **Gold set and the robot gate** (EV-06 + research §6): tests, speed budgets, robustness suite, element compare.
+6. **Pile compile** (D6): all ~900 open PRs sorted into the plan, covered elsewhere, or duplicate. Nothing deleted.
+7. **Bug root causes**: the ~9 shared fixes from the 16 Oct triage first.
+8. **Weekly operating rhythm and usage budget** across Max, Team and Codex (model per job, WIP caps, the Monday
+   session, robot-accepted D7); replaces the 28 Sep charter where they disagree.
+9. **Manager two-channel updates** (B4): Tim's PC every passing build; colleagues marked releases; rollback.
+10. **Colleague release plan (Civil + Manager)**: target date (open), pilot colleague "Max" (8 Oct, INT-071), first day,
+    how colleagues report problems, removing old installs (stale Manager 1.0.0 in ProgramData), rollback.
+11. **Structural to "ready"**: its own job-order stages and evidence, released after Civil (B3).
+12. **Paper diet**: split huge logs into open + archive, short context files, one START_HERE page.
+13. **Idea intake**: a new idea becomes a card filed at its job stage at the Monday session; never a new plan.
+14. **Speed baseline**: measure today's command times and AutoCAD start-up before changing anything.
+15. **Test PC set-up** on Tim's return (29 Oct), `04_REFERENCE\TEST_PC_START_PROMPT.md`.
