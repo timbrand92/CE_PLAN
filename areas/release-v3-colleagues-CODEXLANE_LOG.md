@@ -1,2 +1,2 @@
-﻿# release-v3-colleagues â€” CODEX lane log
+﻿# release-v3-colleagues — CODEX lane log
 - Sun 18 Oct 2026 09:16 (PC clock): bj32 Civil Settings rows ENDED. PR #1370 (draft, base rel-20261018c). 23 rows added on Newer tools in CDS and Manager Civil; not done: checks.showProgressWhenSlow and checks.progressAfterSeconds (no reader); consultantCheckReportBesideDwg and landXmlSumpLevelAsInvert deliberately left without boxes. Built and unit-tested only; not installed; nobody opened the window in AutoCAD.
