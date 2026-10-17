@@ -761,3 +761,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Sun 18 Oct 06:56 PC clock: desk: Hunt Civil E fixes queued in triage section 5; Hunt Civil B fixes (BUG-699 to 747) queued in triage section 7
 - Sun 18 Oct 08:05 real clock (read from the PC clock) - build/03 headless run 351 started
 - Sun 18 Oct 08:12 real clock (read from the PC clock) - build/03 run 351 BUILT BUG-699/709 (triage s7 line 6): DRAFT PR #1352 (claude/b3-survey-rl-range-699, base rel-20261018c; Settings survey.surveyRlMinM/MaxM -100/3000, 0/500 = old) and BUG-733 (line 3): DRAFT PR #1353 (claude/b3-xcivil-pits-733). RED first on both, net10 filtered green, not AutoCAD. Needs Opus review.
+- Sun 18 Oct 08:16 real clock (read from the PC clock) - build/03 run 351 BUILT BUG-730 (triage s7 line 4): DRAFT PR on claude/b3-xcivil-schedule-730 (base rel-20261018c); RED first, 406 X-Civil green net10, not AutoCAD. Needs Opus review.
