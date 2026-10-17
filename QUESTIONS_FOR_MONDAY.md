@@ -27,6 +27,5 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 
 ## E. Added Sat 17 Oct evening
 1. **BUG-531 text heights:** 25C text and EBT text come out different heights at DIMSCALE 50 (125 against 250). Which height is right, or should both follow the Label plot height setting? Recommend both follow one Settings value.
-2. **H2 confirm:** the four working situations (from markup; designing and drafting at once; engineer designing only; two people at once) match the office, and an engineer-checks-the-drafter step gets its own flow.
-3. **H5:** once a drawing is issued, CE goes quiet by itself so quick changes are not interrupted: yes or no.
+2. **H2 confirm (H5 is answered: CE does NOT go quiet, rulings I2):** the four working situations (from markup; designing and drafting at once; engineer designing only; two people at once) match the office, and an engineer-checks-the-drafter step gets its own flow.
 4. **Robot staging by LISP:** may the robot use (setvar ...) lines to set CELWEIGHT or DIMSCALE on unsaved TEST copies (never on your real drawings)? Recommend yes.
