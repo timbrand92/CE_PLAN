@@ -231,6 +231,34 @@ Tim's words:
    measuring that feeds the plan (element catalogue, pile compile, speed baseline). Structural changes (one code line,
    ribbon reorganisation, robot gate as a hard block, Manager channels) wait for his check.
 
+## RULINGS G — plan page draft 2 questions (Sat 17 Oct 2026, about 07:00 Melbourne)
+
+Page: https://claude.ai/artifact/MARLzjbaDrfS6zg3WkRDWi (version 2), copy in
+`04_REFERENCE\one-plan-draft-2026-10-17\ce-v3-one-plan.html`. Tim:
+
+> "all yes, what about setup of architerctural backgrounds, what about difference ebtween an engineer working and a
+> draftsperson or a person design and drafting simulataneously and one is drafting from a plan. also how does it
+> handle details, custom sections and jobs with basements or commercial or industrial projects. i am still not
+> convinced the full data/evidence model understands all of our job types, details and how we draft"
+
+1. **G1 ribbon** as drawn on the page: one CE tab, panels left to right in job order (Job, Background, Design,
+   Draw and label, Check, Sheets, Calcs, Issue for Civil; Job, Background, Framing roof down, Footings, Annotate,
+   Check, Sheets, Issue for Structural), shared Job/Check/Sheets/Issue panels. YES.
+2. **G2** double-click any CE object opens its Edit window, the same window as when placed. YES.
+3. **G3** Structural windows match Civil (New Beam / Edit Beam look like New Pipe). YES.
+4. **G4** one CE Properties palette for all CE objects, Civil and Structural. YES.
+5. **G5** Pit Schedule typed value: row turns amber, one click Update changes pit + plan text + schedule, one Undo.
+   YES. Settles UX-SCHED-01b vs INT-075 Set A 4.
+6. **G6** OSD criteria block: placed once, then fills itself live from the design; hand-typed values kept and flagged.
+   YES. Settles UX-CALC-02 / UX-DET-08 / UX-CPLAN-07.
+7. **G7** minimum pipe cover default 300 mm. YES (Settings value; Set C Q5 closed).
+8. **G8 — Tim is NOT convinced the evidence model covers CE's job types, details and drafting.** Raised: architectural
+   background set-up; engineer vs draftsperson vs one person designing and drafting at once vs drafting from a
+   plan; details and custom sections; basements, commercial and industrial jobs. Planning chat checked 17 Oct:
+   no job-type catalogue exists in CE_PLAN; the background set-up card (`STRUC-ARCH-BACKGROUND_CARD_2026-09-26`) is
+   blocked because only one prepared Xref was ever read; basements are ruled (UX-BSMT-01..06), commercial and
+   industrial appear only as Civil council values. Tim's concern is upheld. The plan is NOT yet approved (F2 open).
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
