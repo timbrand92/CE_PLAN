@@ -24,3 +24,9 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 1. Colleagues get Civil + Manager first, all working features, plain AutoCAD only. Structural installs on his PC only until he says it is ready.
 2. His PC always gets the newest passing build of all three; colleagues only builds marked as a release; Manager to run both lanes (planned, not built, paused by ruling A).
 3. A tool switches ON by default once Codex passes it in AutoCAD (Q4 = YES): the desk applies this in the next fix train for anything already Codex-passed.
+
+## E. Added Sat 17 Oct evening
+1. **BUG-531 text heights:** 25C text and EBT text come out different heights at DIMSCALE 50 (125 against 250). Which height is right, or should both follow the Label plot height setting? Recommend both follow one Settings value.
+2. **H2 confirm:** the four working situations (from markup; designing and drafting at once; engineer designing only; two people at once) match the office, and an engineer-checks-the-drafter step gets its own flow.
+3. **H5:** once a drawing is issued, CE goes quiet by itself so quick changes are not interrupted: yes or no.
+4. **Robot staging by LISP:** may the robot use (setvar ...) lines to set CELWEIGHT or DIMSCALE on unsaved TEST copies (never on your real drawings)? Recommend yes.
