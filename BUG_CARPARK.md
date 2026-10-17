@@ -9202,6 +9202,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Expected behaviour:** CDSYNC re-links without changing any pipe size.
 
+**Follow-up (Opus review, 18 Oct 2026):** Drawings already hit by CDSYNC before the fix stay at size 100 until each pipe is opened and saved in Edit Pipe (the size comes back from the label; not proven): a repair command or a one-time recovery from the pipe labels may be needed. Older pipes that still carry CE's old pipe data may lose a size typed in the Pit Schedule because CDSYNC still takes the old size first (LOW, not checked).
+
 **Reference:** `Modules/Drainage/Commands/LinkCommands.cs` CdSync (calls `LinkService.RegisterPipe` with a diameter read by `TryGetPipeInfo`); the test drawing's 49 pipes were converted to CE pipe objects at open ("[C7] upgrade: converted=49"). I have NOT verified the cause. Report: `areas/release-v3-colleagues-CLAUDE_DRIVER_RUN25_CIVIL3053_2026-10-18.md`, check 2.
 
 **Status:** OPEN
