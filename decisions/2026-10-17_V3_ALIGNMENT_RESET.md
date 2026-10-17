@@ -259,6 +259,30 @@ Page: https://claude.ai/artifact/MARLzjbaDrfS6zg3WkRDWi (version 2), copy in
    blocked because only one prepared Xref was ever read; basements are ruled (UX-BSMT-01..06), commercial and
    industrial appear only as Civil council values. Tim's concern is upheld. The plan is NOT yet approved (F2 open).
 
+## RULINGS H (Sat 17 Oct 2026, about 07:15 Melbourne)
+
+> "what about situations when a job is drafted and we need to make quick changes without being interrupted.
+> 1. yes
+> 2. yes
+> 3. yes i want to start building the library if we can, you should know where everything is lcoated
+> 4. yes"
+
+1. **H1 — the robot may read about 60 real issued jobs from the office Projects folder,** read-only, from copies,
+   identifying material kept local only, to build the CE drawing atlas across job types (DATA-01 authorisation,
+   scope: this atlas). Brief: `04_REFERENCE\one-plan-draft-2026-10-17\EVIDENCE_JOB_BRIEFS.md` job 2.
+2. **H2 — the four working situations match how the office works** (from markup; designing and drafting at once;
+   engineer designing only; two people at once). Planning chat's reading of "yes" to the example: an
+   engineer-checks-the-drafter step exists and gets its own flow in the plan (check plot "For engineer",
+   UX-REG-13..15, plus the markup check list). Confirm at the next Monday session.
+3. **H3 — custom detail "Save to library", this job only by default; an engineer promotes it to the office
+   library.** Tim also: "i want to start building the library if we can". Library catalogue starts now from
+   `...\Creative Engineering - Drafting\Standard Details` (184 DWG on 17 Oct). Brief job 1.
+4. **H4 — Civil items not dependent on the atlas start building now:** Checks list, Tidy labels, Edit windows
+   (one-page, G2/G3). Planning chat's reading: this is Tim's approval for those three under F2; everything else
+   in the plan stays unapproved until the atlas is in.
+5. **H5 — new concern: quick changes on a drafted job "without being interrupted".** Proposal put to Tim in chat
+   (17 Oct): once a drawing has been issued, CE goes quiet by itself (see chat). Open until answered.
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
