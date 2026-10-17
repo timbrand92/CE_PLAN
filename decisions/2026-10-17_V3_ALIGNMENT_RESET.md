@@ -299,6 +299,14 @@ Page: https://claude.ai/artifact/MARLzjbaDrfS6zg3WkRDWi (version 2), copy in
    re-issue. Supersedes the planning chat's "goes quiet by itself" wording; normal guidance (Checks, offers in the
    bell) stays on.
 
+3. **I3 (17 Oct ~07:35) — confirm and add details INSIDE the plugin.** Tim: *"there needs to be a confirm or add
+   functgion for the details within the plugin"*. Planning chat's design for the plan: the CE Library palette gets
+   (a) a "To confirm" list of candidate details (from the Standard Details catalogue and the atlas harvest), each
+   with picture, Confirm / Fix / Retire; (b) "Add detail": select linework in the drawing, give a title and
+   category, saved for this job by default, "Propose to office library" for an engineer to confirm (H3,
+   UX-DET-01..02). Monday picture cards are only the stop-gap until this is built. Build timing: after the plan is
+   approved (ruling A / F2).
+
 ## Open (Tim to answer; never fill these in)
 
 1. Tim's brain dump continues — part 3 onward to be added here.
