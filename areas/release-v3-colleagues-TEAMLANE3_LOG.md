@@ -759,3 +759,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Sun 18 Oct 06:04 real clock (read from the PC clock) - build/03 headless run 350 started
 - Sun 18 Oct 06:05 real clock (read from the PC clock) - build/03 run 350 ENDED: no bug work left. Opus entries 1119-1126 cover only #1338/#1339/#1340 (build/04 and Max builder PRs); #1338 MEDIUM already fixed by build/04 at 1041f89b, so not touched. Triage and burn-down files unchanged since 17 Oct 21:09 / 10 Oct; no new carpark bugs for this lane. Built nothing, no build or test run, no settings file touched. AutoCAD (acad) IS running now, so no tests were started. C: 20.9 GB free.
 - Sun 18 Oct 06:56 PC clock: desk: Hunt Civil E fixes queued in triage section 5; Hunt Civil B fixes (BUG-699 to 747) queued in triage section 7
+- Sun 18 Oct 08:05 real clock (read from the PC clock) - build/03 headless run 351 started
