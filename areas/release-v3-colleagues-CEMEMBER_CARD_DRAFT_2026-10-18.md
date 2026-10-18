@@ -1,4 +1,4 @@
-# CEMEMBER command card - DRAFT, not yet approved by Tim (18 Oct 2026)
+# CEMEMBER command card - approved by Tim on 19 Oct 2026 ("yes"), subject to the lip lines in section 3 and the open items in section 11; no code yet (first written 18 Oct 2026)
 
 Source: design session "CE_ACAD / structural / sbeam design / 01" with Tim. Every rule below was drawn back to Tim as a picture and he confirmed it, except where marked OPEN.
 Replaces the old SBEAM command (Modules/Structural/Commands/SectionDetailCommands.cs, StructuralDetailService.cs, SteelSectionPickerDialog). Classification for the review gate: REBUILD the dialog and the elevation rules, KEEP the section outline + 10H hatch behaviour, KEEP the BL-style break line.
@@ -45,10 +45,12 @@ Z purlin (Lysaght Zed, two different flange widths; four orientations, same idea
 - Side elevation (flanges toward the viewer): 25cont edges and 18cont at one thickness in from each edge.
 - Top elevation: 25cont outer extents; 18cont line where the top flange ends at the web; 18hidden line for the far flange's inner edge running under the top flange. Tim confirmed this picture ("yes correct").
 
-C purlin (Lysaght Cee): behaves like the PFC: side = flange lines 18cont (toward) or 18hidden (away); top = web inner face 18hidden. NOTE: Tim did not confirm this one explicitly; it is inferred from the PFC and from the C purlin row he saw in the pictures without objecting. Also the Z purlin SIDE elevation (flange lines 18cont) was shown but not called out by Tim; only the Z top elevation was explicitly confirmed.
+C purlin (Lysaght Cee) and Z purlin side elevation (Tim, 19 Oct 2026, asked whether they behave like the PFC: "kind of, it shows flange and flange lip if that makes sense?" and for the Z "kin dof but same as per q3"; asked about lips: "yes"):
+- The elevations show BOTH the flange line and the flange lip line. They follow the same toward/away rule as the PFC: 18cont when on the near side, 18hidden when on the far side.
+- Flange line = one thickness in from the edge. Flange lip line = one lip depth in from the edge (lip depth from the Lysaght table). A picture of this was shown to Tim on 19 Oct; his reply to that picture decides the exact positions. Until then this is a proposal.
+- C purlin top elevation = web inner face 18hidden (inferred from the PFC, not separately confirmed). Lip lines in the TOP elevation are not yet decided.
 
-OPEN: the lips on Z and C purlins. The old command draws them in the section but not in the elevations. The elevations may need a line at the lip depth.
-OPEN: rules for BT, CT (tees cut from UB/UC), round bar, square bar and flat bar were not discussed with Tim. Do not guess them.
+DEFERRED (Tim, 19 Oct 2026: "not for now"): tees (BT, CT) and round, square and flat bars are NOT in the first release. Their data is kept apart in section-catalogue_DEFERRED_tees_and_bars.json. Their line rules were never discussed.
 
 ## 4. Orientation
 Only the odd-shaped members (PFC, angles, Z, C) get an orientation picker: four small pictures to click. The orientation replaces the old "flanges toward / away" switch, because it already says which way the flanges point. UB, UC, WB, WC, SHS, RHS, CHS, tees and bars have one orientation.
@@ -84,9 +86,19 @@ Bottom right: Reset to default, Cancel, Place.
 - Drawing-output check: draw each member in each view into a test DWG and compare entity layers, counts and coordinates against the rules above.
 - Tim's AutoCAD checklist (not yet written): one UB, one PFC in all four orientations, one angle in all four, one SHS, one Z purlin, section in front and beyond, break line sizes at 1:20 and 1:100, Escape, Undo, Enter-to-repeat.
 
-## 10. Questions still open for Tim
-- Warn or stop when LTSCALE is not 10 x DIMSCALE.
-- Lips in the purlin elevations.
-- Rules for tees and bars.
-- Top hats (no source for the data).
-- Which section list numbers he accepts (the draft needs his review; hollow-section figures are partly calculated and steelweb.info figures have no accuracy guarantee).
+## 10. Tim's answers, 19 Oct 2026 (full text in decisions/2026-10-19_CEMEMBER_ANSWERS.md)
+- LTSCALE not 10 x DIMSCALE: WARN and carry on, record a line ("yes as per recommeneded").
+- Purlin lips in the elevations: yes, shown (see section 3).
+- C purlin and Z purlin side: flange line plus flange lip line (see section 3).
+- Tees and bars: not for now.
+- Paid ASI tables: not bought ("nope we can get from elsewhere"); top hats: to come from elsewhere.
+- Section numbers: Tim accepted the plan to check ten rows ("look good"): 310UB32.0, 250UC72.9, 380PFC, 230PFC, 100x100x6 EA, 100x100x6 SHS, 200x100x6 RHS, 114.3 CHS, Z15015, 900WB282. Not yet done.
+- Hollow sizes InfraBuild stocks but the list lacks: added to the draft ("yes"): 8 SHS and 23 RHS, properties calculated.
+- Names: supplier names with decimals, e.g. 530UB92.4 ("yep why not").
+- This card: approved ("yes"), subject to the lip line positions above being confirmed from the picture. No code has started. The Tim AutoCAD checklist is still to be written.
+
+## 11. Still open
+- Lip line positions (side) and any lip lines in the TOP elevation.
+- The C purlin top elevation rule (inferred).
+- The ten-row check of the section numbers.
+- Where top hat and hollow-section property data comes from (Tim: "elsewhere").
