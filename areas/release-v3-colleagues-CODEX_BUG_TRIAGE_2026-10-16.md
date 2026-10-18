@@ -144,6 +144,33 @@ Nothing from L1B or L2 belongs to windows, schedules or spot levels.
 
 **Not queued (already approved or fixed-looking):** BUG-614 and BUG-628 were NOT SEEN on 1.0.118 (hatches accepted at 1:50, break about 2.1 mm at 20, 50 and 100). They stay OPEN until a real pass that includes the CEHATCH window route and a plot check. The dimension at 1:50 is a question (QUESTIONS section F item 1), not a bug.
 
+### Codex look L3 and L4 fixes (18 Oct, installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118)
+
+Added Sun 18 Oct 2026 by the desk (job "file the Codex look results as bugs"). Source: CODEX_LOOK_L3_20261018_1052.md (21 looks, 15 PASS, 6 FAIL) and CODEX_LOOK_L4_20261018_1119.md (17 looks, 2 PASS, 5 DIFFERENT, 3 BLOCKED, 7 NOT TESTED). Not queued: L1 (10:27) was BLOCKED on picking and viewer problems (the same catchment fixture worked in L1B), L5 stopped at its start check, and L4's seven live-cursor looks need a mouse the Codex tool does not have; those are re-look jobs, not code. No item here is HIGH: none puts a wrong number on a drawing. Ordered by how much a drafter loses; one fix per root cause. Nothing is FIXED without a real AutoCAD pass.
+
+**Shared root causes:** none shared. The double-click on the pit label (BUG-430) and on the schedule table cell (BUG-396) are separate routes. BUG-749 (paste command) is queued as a Codex re-look, not a fix: it has now happened on two different commands with the same typing method.
+
+#### build/03 Civil engine: none new
+
+Nothing from L3 or L4 belongs to the engine. BUG-641 and BUG-642 stay as queued from L1B.
+
+#### build/04 Civil UI, windows, schedules: 5 lines, MEDIUM first
+
+1. **BUG-430 (MEDIUM): double-click on a pit label opens AutoCAD's own attribute editor, not Edit Pit.** The double-click on the pipe and on the invert text already opens Edit Pipe. Failing test first: the double-click handler for a block named PIT LABEL2 with tag PIT_LABEL resolves to Edit Pit for the owning pit (the old name was PIT LABEL; whether the handler only knows the old name is a guess, check first); today it returns no CE target.
+2. **BUG-396 (MEDIUM): double-click on a placed Pit Schedule table cell opens AutoCAD's own text editor and never renames the pit.** Needs the route first (the finalizer found none). Failing test first: renaming the P2 cell to C2 renames the pit and its plan label together, and a second edit is refused if C2 is taken. Check the 'Undefined shape' messages (BUG-623) with the same drawing, since they appeared on this editor too.
+3. **BUG-221 (MEDIUM): Manager status cards, version text runs into the 'Installed next start' text.** Failing test first: a render test of the card layout with a 40-character hash at 1311 x 1073 and 1920 x 1080, no text boxes overlapping; the recommended layout is a short version on top and the full hash in a copyable detail line.
+4. **BUG-753 (MEDIUM-LOW): the Checks list names pipes by internal id.** Failing test first: the row text for a pipe with no tag contains no 'CE-CIV-PIPE-' id and still says which pipe; then a Codex look with a faster capture to see the Show where glow.
+5. **BUG-754 (LOW-MEDIUM): Manager Dark theme tab text is pale on near-white.** Failing test first: tab foreground against background reaches 4.5 to 1 in Dark, Light and Follow AutoCAD. Do after BUG-221 (same window).
+
+#### build/02 Structural: 4 lines, MEDIUM first
+
+1. **BUG-751 (MEDIUM): CEHATCH cards show words ('No preview: the drawing scale is not valid') instead of pictures, and the Waffle preview is empty at DIMSCALE 1.** Failing test first: a pure test that a card image is produced for every library entry at scales 1, 20, 50 and 100. Do not change the 1:50 density rule here (BUG-614 and BUG-748 own it).
+2. **BUG-750 (MEDIUM-LOW): SBEAM Side Elevation draws two solid lines inside the flange edges.** Failing test first: the Side Elevation geometry for 610UB125 has no horizontal segment between the flange edge and the web. Ask Tim before removing the dashed centre lines in Front Elevation (not part of the expectation).
+3. **BUG-752 (LOW): long folder paths clipped on three Structural Settings pages.** Failing test first: a render check of System > Installation, Workbook files and Markup service with a 120-character path at 1407 x 965: wrapped or shown in full.
+4. **BUG-755 (LOW): RC beam Type 2 and Type 6 pictures reach the top edge of their boxes.** Failing test first: each thumbnail's drawn bounds lie inside its picture box.
+
+**Questions queued:** QUESTIONS_FOR_MONDAY.md section G item 1 (what a double-click on a downpipe should do).
+
 ## 7. Hunt Civil B fixes (18 Oct)
 
 Added Sun 18 Oct 2026 by the desk (job "file the hunt findings and queue the fixes"). Source: `areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md` (49 findings, read-only code audit of installed Civil 3.0.53: survey, spot levels, LandXML, X-Civil import, source tags; nothing seen in AutoCAD). Filed as BUG-699 to BUG-747 in `BUG_CARPARK.md` (49 new, none duplicates; BUG-743 and BUG-723 carry "related" notes to BUG-432 and BUG-512). Sections 1 to 6 and the Hunt Civil E section above are unchanged. Ruling A (17 Oct): keep fixing bugs. Nothing is closed, and nothing is FIXED without a real AutoCAD pass. Same rules as section 3: one DRAFT PR per line, failing test first, Settings-backed, no hard blocks.
