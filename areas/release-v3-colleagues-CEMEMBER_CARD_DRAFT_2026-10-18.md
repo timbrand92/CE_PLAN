@@ -1,4 +1,4 @@
-# CEMEMBER command card - approved by Tim on 19 Oct 2026 ("yes"), subject to the lip lines in section 3 and the open items in section 11; no code yet (first written 18 Oct 2026)
+# CEMEMBER command card - approved by Tim on 19 Oct 2026 ("yes"); open items are in section 11; no code yet (first written 18 Oct 2026)
 
 Source: design session "CE_ACAD / structural / sbeam design / 01" with Tim. Every rule below was drawn back to Tim as a picture and he confirmed it, except where marked OPEN.
 Replaces the old SBEAM command (Modules/Structural/Commands/SectionDetailCommands.cs, StructuralDetailService.cs, SteelSectionPickerDialog). Classification for the review gate: REBUILD the dialog and the elevation rules, KEEP the section outline + 10H hatch behaviour, KEEP the BL-style break line.
@@ -47,7 +47,7 @@ Z purlin (Lysaght Zed, two different flange widths; four orientations, same idea
 
 C purlin (Lysaght Cee) and Z purlin side elevation (Tim, 19 Oct 2026, asked whether they behave like the PFC: "kind of, it shows flange and flange lip if that makes sense?" and for the Z "kin dof but same as per q3"; asked about lips: "yes"):
 - The elevations show BOTH the flange line and the flange lip line. They follow the same toward/away rule as the PFC: 18cont when on the near side, 18hidden when on the far side.
-- Flange line = one thickness in from the edge. Flange lip line = one lip depth in from the edge (lip depth from the Lysaght table). A picture of this was shown to Tim on 19 Oct; his reply to that picture decides the exact positions. Until then this is a proposal.
+- Flange line = one thickness in from the edge. Flange lip line = one lip depth in from the edge (lip depth from the Lysaght table). CONFIRMED by Tim on 19 Oct 2026 from a picture: "Yes, the lip picture is right: flange line one thickness in, lip line one lip depth in, 18cont toward and 18hidden away."
 - C purlin top elevation = web inner face 18hidden (inferred from the PFC, not separately confirmed). Lip lines in the TOP elevation are not yet decided.
 
 DEFERRED (Tim, 19 Oct 2026: "not for now"): tees (BT, CT) and round, square and flat bars are NOT in the first release. Their data is kept apart in section-catalogue_DEFERRED_tees_and_bars.json. Their line rules were never discussed.
@@ -95,10 +95,11 @@ Bottom right: Reset to default, Cancel, Place.
 - Section numbers: Tim accepted the plan to check ten rows ("look good"): 310UB32.0, 250UC72.9, 380PFC, 230PFC, 100x100x6 EA, 100x100x6 SHS, 200x100x6 RHS, 114.3 CHS, Z15015, 900WB282. Not yet done.
 - Hollow sizes InfraBuild stocks but the list lacks: added to the draft ("yes"): 8 SHS and 23 RHS, properties calculated.
 - Names: supplier names with decimals, e.g. 530UB92.4 ("yep why not").
-- This card: approved ("yes"), subject to the lip line positions above being confirmed from the picture. No code has started. The Tim AutoCAD checklist is still to be written.
+- This card: approved ("yes"). The side-elevation lip line positions are confirmed (19 Oct). No code has started. The Tim AutoCAD checklist is still to be written.
 
 ## 11. Still open
-- Lip line positions (side) and any lip lines in the TOP elevation.
-- The C purlin top elevation rule (inferred).
-- The ten-row check of the section numbers.
-- Where top hat and hollow-section property data comes from (Tim: "elsewhere").
+- The C purlin top elevation rule (web inner face 18hidden): inferred from the PFC, not separately confirmed.
+- Lip lines in the TOP elevation: decided NO ("nope they interfere", 19 Oct 2026).
+- Section numbers: Tim checked ten rows and said "looks right" (19 Oct 2026). The rest of the draft list is not individually checked.
+- Where top hat and hollow-section property data comes from: Tim, "we will do it later" (PARKED).
+- The Tim AutoCAD checklist: Tim, "lets do it later" (PARKED). No code starts until it is written and agreed.
