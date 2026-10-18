@@ -30,3 +30,4 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-18 15:33 | ROBOT | Run 30: Edit Pipe cascade end to end PASS; BUG-698/712/742 PASS; quick-edit PASS; Tidy labels finding | CLAUDE_DRIVER_RUN30
 2026-10-18 16:30 | DECISION | Control room design: captains, short reports, state in files | CONTROL_ROOM_2026-10-18
 2026-10-18 17:00 | DECISION | Continuity record and this log created; upkeep rule set | DESK_CONTINUITY_RECORD
+2026-10-18 17:30 | DECISION | Executive baseline written (continuity record section 14); Tim asked to compact the desk chat | DESK_CONTINUITY_RECORD 14
