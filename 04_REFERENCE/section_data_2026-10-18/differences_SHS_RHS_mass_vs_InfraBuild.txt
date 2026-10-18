@@ -1,0 +1,32 @@
+Counter({'RHS': 85, 'SHS': 82})
+{'SHS': [92, 19, 15, 18], 'RHS': [83, 16, 12, 21], 'CHS': [37, 0, 0, 37]}
+no mass in list but InfraBuild has it: 101
+400x400x12.5SHS: list 143 vs InfraBuild 148.0
+400x400x10SHS: list 116 vs InfraBuild 120.0
+300x300x16SHS: list 131 vs InfraBuild 136.0
+300x300x12.5SHS: list 105 vs InfraBuild 109.0
+300x300x10SHS: list 85.0 vs InfraBuild 88.4
+300x300x8SHS: list 68.7 vs InfraBuild 71.6
+250x250x16SHS: list 107 vs InfraBuild 111.0
+250x250x12.5SHS: list 85.6 vs InfraBuild 89.0
+250x250x10SHS: list 69.5 vs InfraBuild 72.7
+250x250x8SHS: list 56.4 vs InfraBuild 59.1
+200x200x12.5SHS: list 66.8 vs InfraBuild 69.4
+200x200x10SHS: list 54.5 vs InfraBuild 57.0
+200x200x8SHS: list 44.4 vs InfraBuild 46.5
+200x200x5SHS: list 28.5 vs InfraBuild 29.9
+150x150x5SHS: list 21.4 vs InfraBuild 22.1
+400x200x16RHS: list 141 vs InfraBuild 136.0
+350x250x16RHS: list 141 vs InfraBuild 136.0
+300x200x16RHS: list 116 vs InfraBuild 111.0
+300x200x12.5RHS: list 93.4 vs InfraBuild 89.0
+300x200x10RHS: list 76.4 vs InfraBuild 72.7
+300x200x8RHS: list 61.8 vs InfraBuild 59.1
+250x150x16RHS: list 91.0 vs InfraBuild 85.5
+250x150x12.5RHS: list 73.6 vs InfraBuild 69.4
+250x150x10RHS: list 60.4 vs InfraBuild 57.0
+250x150x8RHS: list 49.1 vs InfraBuild 46.5
+200x100x8RHS: list 37.1 vs InfraBuild 33.9
+200x100x5RHS: list 24.1 vs InfraBuild 22.1
+not stocked/listed in InfraBuild book: 76
+InfraBuild stocked but not in list: [('RHS', 100.0, 50.0, 1.6), ('RHS', 102.0, 76.0, 3.5), ('RHS', 102.0, 76.0, 5.0), ('RHS', 102.0, 76.0, 6.0), ('RHS', 127.0, 51.0, 3.5), ('RHS', 127.0, 51.0, 5.0), ('RHS', 127.0, 51.0, 6.0), ('RHS', 150.0, 50.0, 6.0), ('RHS', 150.0, 100.0, 8.0), ('RHS', 152.0, 76.0, 5.0), ('RHS', 152.0, 76.0, 6.0), ('RHS', 300.0, 200.0, 6.0), ('RHS', 300.0, 200.0, 9.0), ('RHS', 350.0, 250.0, 8.0), ('RHS', 350.0, 300.0, 8.0), ('RHS', 350.0, 300.0, 10.0), ('RHS', 350.0, 300.0, 12.5), ('RHS', 350.0, 300.0, 16.0), ('RHS', 400.0, 200.0, 8.0), ('RHS', 400.0, 300.0, 8.0), ('RHS', 400.0, 300.0, 10.0), ('RHS', 400.0, 300.0, 12.5), ('RHS', 400.0, 300.0, 16.0), ('SHS', 30.0, 30.0, 2.5), ('SHS', 30.0, 30.0, 3.0), ('SHS', 50.0, 50.0, 6.0), ('SHS', 89.0, 89.0, 2.0), ('SHS', 100.0, 100.0, 8.0), ('SHS', 100.0, 100.0, 10.0), ('SHS', 125.0, 125.0, 8.0), ('SHS', 125.0, 125.0, 10.0)]
