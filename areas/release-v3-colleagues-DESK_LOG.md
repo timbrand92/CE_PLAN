@@ -42,3 +42,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-18 20:30 | DECISION | Whole-plan recount: 548 items; whole plan built 75 / installed 55 / ON 33 / tested 2 / accepted 0 percent; 9 Nov scope 390 items: built 74 / installed 47 / tested 2 | V3_RECOUNT_2026-10-18 (continuity record 15)
 2026-10-18 20:40 | REVIEW | Opus review of drafts #1382..#1409 launched on Team (pid 71980) | desk_jobs/review_drafts_1382_1409_job.txt
 2026-10-18 20:41 | METER | Max 34% (pace ~31, slightly ahead), Team 18% (on pace), Codex 15% (ahead, idle); C: 22 GB | desk_tick
+2026-10-18 21:40 | REVIEW | Opus review of #1382..#1409 done (entries 1191..1226): 21 MERGE, 7 MERGE-WITH-FIXES (#1383 1395 1396 1401 1402 1406 1408), 0 hold; Civil 801 tests pass, Manager 757, Structural 305; 3 questions for Tim | REVIEWLANE 1191-1226
+2026-10-18 21:42 | FIX | Sonnet fixer for the 7 launched on Team | desk_jobs/fix_review_1382_1409_job.txt
