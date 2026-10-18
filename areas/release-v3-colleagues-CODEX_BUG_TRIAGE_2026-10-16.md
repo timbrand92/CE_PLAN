@@ -289,3 +289,22 @@ Added Sun 18 Oct 2026 by the desk (headless job). Source: `areas/release-v3-coll
 9. **BUG-799 (MEDIUM): "SOURCE UNLOADED" wording and host-relative path.** `PitScheduleStatusService.cs:104, 301-305`.
 10. **BUG-808 (LOW): outlet against the largest inlet.** `PitScheduleViewModel.Data.cs:2189-2212`.
 11. **BUG-809 items (4) and (5) (LOW): palette close keeps your selection; the "Record pipe ends off pit" setting works or hides.** `Services/DrawingCheckPaletteService.cs:266-319`; `Services/Checks/ChecksResultReader.cs:170`.
+
+## 10. Run 31 fixes (18 Oct)
+
+Added Sun 18 Oct 2026 by the desk (headless job). Source: `areas/release-v3-colleagues-CLAUDE_DRIVER_RUN31_V2_2026-10-18.md` (robot pass 10, real AutoCAD 2027 on test copies, Civil 3.0.55). Filed as BUG-813 to BUG-817, plus "still seen" or "PASS" notes on BUG-141, 372, 698, 740 and 746. Nothing here is Tim-accepted. Tooling problems are not in this queue.
+
+**Shared root cause:** the tag and tidy-label family prints reasons from internal ids and the CE log (BUG-372, 814, 816): one helper that names the pit or tag in words, used by CDTAG, CDFIXTAGS, tidy labels and CDCHECKS.
+
+### build/03 Civil engine, shared: 3 lines
+
+1. **BUG-813 (MEDIUM-HIGH): CDFIXTAGS rename did not apply.** Cause not proven. Start with a real fixture: two ordinary source blocks that are not pit blocks, both "DP3". Failing test first: `ProposeRepairs` then apply on that fixture renames the second block to DP4 in one undo step; also a pit block tagged as a source gets one identity. `Services/SourceTagService.cs` (the capture that raises "no unique matching drawing/project spine identity") and `Commands/SourceTagRepairCommand.cs`. Do not close BUG-740, 741, 744 or 746 on this run.
+2. **BUG-141 (still seen) and BUG-816: the start invert text beside a pit is called "on the pit".** Lane 03 finds why the obstacle test treats text about 20 px clear of the pit box as on it (obstacle box too large, or the pit's pick area). Failing test first: a pure placement case, a 20 m pipe with the start text just clear of the pit, expects a clear spot (the run 31 numbers: inverts 18.000 and 17.900, 20 m). Also find which setting controls the automatic "no clear spot" line when Tidy labels is off.
+3. **BUG-815 (LOW-MEDIUM): R-06 applies to detention pipes only, with Settings values.** `Rules` R-06 check behind CDCHECKS. Failing test first: a 100 mm downpipe is not flagged by R-06.
+
+### build/04 Civil windows, commands, wording: 2 lines
+
+1. **BUG-814 (LOW): plain-words refusals.** CDTAG retag refusal says "WT2 is already on another source. Choose a different number." (as the untagged path does); CDFIXTAGS refusal in words; CDCHECKS rows name pits, not handles (with BUG-372, 753, 754). Failing test first: the message text for a duplicate retag contains the tag name.
+2. **BUG-817 (LOW): opening the Pit Schedule adds no undo step unless it changes the drawing.** Next tester watches DBMOD first; fix only if it does write.
+
+**Tooling problems (not bugs, for the driver owner):** add Start Pipe and Checks Close to the `slow_press` list (they hit the 30 s watchdog though the action worked); Pit Schedule needs `ui tree -Depth 6` and a higher node cap (399 of 400 with one extra row); a typed point cannot pick an already-tagged block, so CDTAG Remove and Set cannot be driven by typed points; the driver prints a false "ALARM: AutoCAD may be waiting at a prompt" after CDTAG, CDSYNC and pipe placement; a fixture with two ordinary doubled source blocks and one with a multi-word tag ("ROOF DRAIN 1") is missing (BUG-741 and BUG-744 blocked); the BUG-650 check needs P8's "Pit bottom level" read before the CDFW cancel.
