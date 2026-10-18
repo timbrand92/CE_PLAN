@@ -1,0 +1,22 @@
+16 Lysaght rows
+--- Z in list vs Lysaght ---
+ZC400 t3.0 list: depth 400 width 100 lip 48 mass 16.39 | not in Lysaght table (400 deep?)
+ZC350 t3.0 list: depth 350 width 100 lip 43 mass 14.98 | Lysaght Z35030: depth 350 flanges 129/121 lip 30.0 mass 15.23
+ZC300 t2.4 list: depth 300 width 100 lip 38 mass 10.85 | Lysaght Z30024: depth 300 flanges 100/93 lip 27.0 mass 10.09
+ZC250 t2.4 list: depth 250 width 75 lip 20 mass 8.29 | Lysaght Z25024: depth 254 flanges 79/73 lip 21.0 mass 8.16
+ZC200 t2.4 list: depth 200 width 75 lip 20 mass 7.35 | Lysaght Z20024: depth 203 flanges 79/73 lip 21.5 mass 7.24
+ZC150 t1.9 list: depth 150 width 65 lip 15 mass 4.62 | Lysaght Z15019: depth 152 flanges 65/61 lip 17.5 mass 4.51
+ZC100 t1.5 list: depth 100 width 50 lip 15 mass 2.71 | Lysaght Z10015: depth 102 flanges 53/49 lip 13.5 mass 2.62
+--- C in list vs Lysaght ---
+C10015 list: depth 100 width 65 lip 15 | Lysaght C10015: depth 102 flange 51 lip 13.5 mass 2.62
+C15015 list: depth 150 width 65 lip 15 | Lysaght C15015: depth 152 flange 64 lip 15.5 mass 3.59
+C15019 list: depth 150 width 65 lip 15 | Lysaght C15019: depth 152 flange 64 lip 16.5 mass 4.51
+C20015 list: depth 200 width 75 lip 20 | Lysaght C20015: depth 203 flange 76 lip 15.5 mass 4.49
+C20019 list: depth 200 width 75 lip 20 | Lysaght C20019: depth 203 flange 76 lip 19.0 mass 5.74
+C20024 list: depth 200 width 75 lip 20 | Lysaght C20024: depth 203 flange 76 lip 21.0 mass 7.24
+C25019 list: depth 250 width 75 lip 20 | Lysaght C25019: depth 254 flange 76 lip 18.5 mass 6.5
+C25024 list: depth 250 width 75 lip 20 | Lysaght C25024: depth 254 flange 76 lip 20.5 mass 8.16
+C30024 list: depth 300 width 100 lip 38 | Lysaght C30024: depth 300 flange 96 lip 27.5 mass 10.09
+C30030 list: depth 300 width 100 lip 38 | Lysaght C30030: depth 300 flange 96 lip 31.5 mass 12.76
+C35030 list: depth 350 width 100 lip 43 | Lysaght C35030: depth 350 flange 125 lip 30.0 mass 15.23
+C40030 list: depth 400 width 100 lip 48 | not in Lysaght table
