@@ -1,0 +1,30 @@
+corner radius 1.0t: median mass error 3.01%  max 7.9%;  median Ix error 5.32%  max 15.7%  (n=95)
+corner radius 1.5t: median mass error 1.77%  max 5.3%;  median Ix error 3.06%  max 10.7%  (n=95)
+corner radius 2.0t: median mass error 0.63%  max 3.1%;  median Ix error 0.80%  max 5.4%  (n=95)
+corner radius 2.5t: median mass error 0.27%  max 5.0%;  median Ix error 0.65%  max 6.6%  (n=95)
+corner radius 3.0t: median mass error 1.64%  max 6.9%;  median Ix error 3.12%  max 13.5%  (n=95)
+chosen corner radius = 2.5 x t; max mass error 5.0%, max Ix error 6.6% on 95 rows with supplier figures
+hollow rows with at least one calculated field: {'SHS': 92, 'RHS': 83, 'CHS': 37}
+Lysaght purlin properties read for 32 of 32 rows (checked against area and radius of gyration)
+steelweb pages read: 46 equal angles, 19 unequal angles, 38 tees
+angle properties added from steelweb: {'EA': 46, 'UA': 19}; disagreements with InfraBuild: []
+PFC zy filled for 10 of 10 rows
+tees added: 23 BT and 15 CT
+bars added: 26 rounds, 6 squares, 66 flats; mass/geometry mismatches: []
+UB 28 no mass 0 no ix 0
+UC 13 no mass 0 no ix 0
+PFC 10 no mass 0 no ix 0
+WB 23 no mass 0 no ix 0
+WC 18 no mass 0 no ix 0
+EA 46 no mass 0 no ix 0
+UA 19 no mass 0 no ix 0
+SHS 92 no mass 0 no ix 0
+RHS 83 no mass 0 no ix 0
+CHS 37 no mass 0 no ix 0
+ZC 16 no mass 0 no ix 0
+CP 16 no mass 0 no ix 0
+BT 23 no mass 0 no ix 0
+CT 15 no mass 0 no ix 0
+RB 26 no mass 0 no ix 0
+SQ 6 no mass 0 no ix 0
+FB 66 no mass 0 no ix 0
