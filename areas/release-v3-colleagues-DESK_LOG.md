@@ -38,3 +38,7 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-18 18:25 | ROBOT | Run 31 done: PASS 10 FAIL 1 BLOCKED 2 UNPROVEN 2 FINDING 1; cascade Yes/Apply/U/REDO PASS, CDSYNC sizes PASS, quick edits PASS, CDCHECKS PASS; CDFIXTAGS rename not written (fixture?), tidy labels IL beside pit not moved; settings restored by hash | CLAUDE_DRIVER_RUN31_V2
 2026-10-18 18:35 | FILE | Launched filing job (Hunt Civil I/J/K, L/M, run 31) pid 78084 and Opus whole-plan recount pid 24532 on Team | desk_jobs/file_hunt_ijk_lm_run31_job.txt, recount_v3_job.txt
 2026-10-18 18:36 | METER | Max 33% (pace ~30, slightly ahead), Team 16% (on pace), Codex 15% (ahead, idle); C: 23 GB; ruling: Tim noted plan is 500+ items; recount launched | desk_tick
+2026-10-18 20:25 | FILE | Filed Hunt I/J/K BUG-756..778, Hunt L/M BUG-779..812, run 31 BUG-813..817; triage sections 8, 9, 10 | BUG_CARPARK, CODEX_BUG_TRIAGE
+2026-10-18 20:30 | DECISION | Whole-plan recount: 548 items; whole plan built 75 / installed 55 / ON 33 / tested 2 / accepted 0 percent; 9 Nov scope 390 items: built 74 / installed 47 / tested 2 | V3_RECOUNT_2026-10-18 (continuity record 15)
+2026-10-18 20:40 | REVIEW | Opus review of drafts #1382..#1409 launched on Team (pid 71980) | desk_jobs/review_drafts_1382_1409_job.txt
+2026-10-18 20:41 | METER | Max 34% (pace ~31, slightly ahead), Team 18% (on pace), Codex 15% (ahead, idle); C: 22 GB | desk_tick
