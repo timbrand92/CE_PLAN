@@ -45,7 +45,7 @@ Z purlin (Lysaght Zed, two different flange widths; four orientations, same idea
 - Side elevation (flanges toward the viewer): 25cont edges and 18cont at one thickness in from each edge.
 - Top elevation: 25cont outer extents; 18cont line where the top flange ends at the web; 18hidden line for the far flange's inner edge running under the top flange. Tim confirmed this picture ("yes correct").
 
-C purlin (Lysaght Cee): behaves like the PFC: side = flange lines 18cont (toward) or 18hidden (away); top = web inner face 18hidden.
+C purlin (Lysaght Cee): behaves like the PFC: side = flange lines 18cont (toward) or 18hidden (away); top = web inner face 18hidden. NOTE: Tim did not confirm this one explicitly; it is inferred from the PFC and from the C purlin row he saw in the pictures without objecting. Also the Z purlin SIDE elevation (flange lines 18cont) was shown but not called out by Tim; only the Z top elevation was explicitly confirmed.
 
 OPEN: the lips on Z and C purlins. The old command draws them in the section but not in the elevations. The elevations may need a line at the lip depth.
 OPEN: rules for BT, CT (tees cut from UB/UC), round bar, square bar and flat bar were not discussed with Tim. Do not guess them.
