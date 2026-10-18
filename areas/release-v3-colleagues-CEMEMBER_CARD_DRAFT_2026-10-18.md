@@ -98,7 +98,8 @@ Bottom right: Reset to default, Cancel, Place.
 - This card: approved ("yes"). The side-elevation lip line positions are confirmed (19 Oct). No code has started. The Tim AutoCAD checklist is still to be written.
 
 ## 11. Still open
-- Any lip lines in the TOP elevation of the C and Z purlins.
-- The C purlin top elevation rule (inferred).
-- The ten-row check of the section numbers.
-- Where top hat and hollow-section property data comes from (Tim: "elsewhere").
+- The C purlin top elevation rule (web inner face 18hidden): inferred from the PFC, not separately confirmed.
+- Lip lines in the TOP elevation: decided NO ("nope they interfere", 19 Oct 2026).
+- Section numbers: Tim checked ten rows and said "looks right" (19 Oct 2026). The rest of the draft list is not individually checked.
+- Where top hat and hollow-section property data comes from: Tim, "we will do it later" (PARKED).
+- The Tim AutoCAD checklist: Tim, "lets do it later" (PARKED). No code starts until it is written and agreed.
