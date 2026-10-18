@@ -1,0 +1,14 @@
+You are an independent Opus reviewer. READ-ONLY on code: do not edit the driver, the allow-list, the self-test or any AutoCAD file. Do NOT start AutoCAD or accoreconsole. Do NOT touch Tim's settings files. You may write ONE file: C:\CE_PLAN\areas\release-v3-colleagues-DRIVER_V2_FIXES2_REVIEW_2026-10-18.md (then git add/commit/push that file only in C:\CE_PLAN; if push is refused, pull --rebase and push again).
+
+Context: Tim (a civil engineer, not a coder) lets a PowerShell robot drive AutoCAD 2027 on test copies. Driver v2 is C:\Lisp Files\_ACAD_DRIVER\acad_driver_witness_v2.ps1 with the pinned allow-list acad_driver_witness_v2.allowlist.json. The msgbox-answer verb was reviewed GO-WITH-CONDITIONS (C:\CE_PLAN\areas\release-v3-colleagues-DRIVER_V2_MSGBOX_REVIEW_2026-10-18.md). A fix round answered it: C:\CE_PLAN\areas\release-v3-colleagues-DRIVER_V2_FIXES2_2026-10-18.md (read its ANSWER FIRST block, then sections B, C and the settings guard section).
+
+Expected hashes (sha256 first 12): driver 120EE24D15B2, allow-list 5B542F2145F4, self-test DDE1359D5A2A. Check them first; if different, say so and review what is on disk.
+
+Review these, with line numbers:
+1. The three MEDIUM findings of the earlier review (blind route, answer once, check the box not only the title): are they really closed? Look for any path that can send a second answer, or press a button in a box that is not exactly the Recalculate Yes/No box.
+2. Review LOW 4 and LOW 5 (left open): decide fix-now / accept / later, with a reason.
+3. The slow_press watchdog: can an allow-listed window name typed by the tester raise the watchdog on a verb that should stay at 30 s? Is the 300 s cap and the call cap intact?
+4. The settings guard: a HARD TIMEOUT no longer restores settings while the driver-launched AutoCAD is still running. Check the three cases: AutoCAD still running under the same lock; AutoCAD gone; lock expired or taken by another holder. Does `quit` and the next lock-first run always restore Tim's four real settings files, verified by hash? Any way a real settings file ends up changed and not restored?
+5. Anything that would let the driver touch a real drawing, a real settings file, the Settings window, or use -Force.
+
+Verdict at the top: GO / GO-WITH-CONDITIONS / NO-GO for using driver v2 (new hashes) in the next robot pass (pass 10) on test copies. List each condition as a numbered item with severity. Keep the file under 120 lines. Final reply to me: under 80 words, verdict plus the file path.
