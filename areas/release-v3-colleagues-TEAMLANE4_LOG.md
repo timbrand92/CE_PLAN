@@ -653,3 +653,4 @@ One line per job: time (Melbourne), item, PR, state, usage.
 - Sun 18 Oct 2026 desk: Hunt Civil L/M fixes queued in triage section 9 (BUG-779 to BUG-812).
 - Sun 18 Oct 2026 desk: Run 31 fixes queued in triage section 10 (BUG-813 to BUG-817).
 - Sun 18 Oct 20:14 PC clock: build/04 headless run 380 started (lane_loop; bug fixes only per pause ruling A).
+- Sun 18 Oct 20:25 PC clock: build/04 run 380 CLAIM: BUG-758 window half (hide older tab in CDCALC), then BUG-779, 780, 783, 784 in that order (triage section 9 build/04).
