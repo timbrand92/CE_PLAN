@@ -212,3 +212,37 @@ Added Sun 18 Oct 2026 by the desk (job "file the hunt findings and queue the fix
 8. **BUG-718 (LOW): unitless-metre reach, mm assumption in the level review, PC-culture level text.** File and function: `Services/DesignLevelService.cs:104-106`; `Services/ImportedLevelReviewService.cs:133`; `Services/PitConnectedLevelAnalysisService.cs:240`. Failing test first: levels format with a full stop on a decimal-comma culture.
 
 **Left to Tim, none new:** no engineering ruling is needed for these. BUG-719 and BUG-728 need one real Civil 3D LandXML export to confirm the attribute names and slope sign before the fix is called safe.
+
+## 8. Hunt Civil I/J/K fixes (18 Oct)
+
+Added Sun 18 Oct 2026 by the desk (headless job). Source: `areas/release-v3-colleagues-HUNT_CIVIL_IJK_2026-10-12.md` (code audit of Civil 3.0.55, nothing seen in AutoCAD). Filed as BUG-756 to BUG-778. Spoon drain metres (IJK-24) is a note on BUG-338; the WSUD series-credit question (IJK-18) is in QUESTIONS_FOR_MONDAY section H. Every fix: failing test first, DRAFT PR, Settings-backed, Unknown stays Unknown.
+
+**Shared root causes (one fix each):**
+
+1. **The CDPROFILE review turns bad or missing levels into numbers instead of Unknown** (BUG-757, 759, 760, 761, 762): all in `ProfileRouteReviewService.Prepare` and `ProfileRouteEvidenceCaptureService`. One PR with five failing tests.
+2. **A pipe's own size and grade are mixed with its neighbour's** (BUG-756, 763): the pit row holds the pipe leaving the pit, the grade holds the pipe arriving. Use `OutgoingDiameterMm` and `OutgoingGradeOneIn` everywhere.
+3. **Boundary marks use straight pit-to-pit lines** (BUG-764, 768): one pure projection helper.
+4. **Second long-section writer without safety checks** (BUG-758, 766): hide the old tab in CDCALC, run `TryAdmit` in the writer.
+
+### build/03 Civil engine, hydraulics, long section maths: 11 lines, HIGH first
+
+1. **BUG-756 (HIGH): pipe top line drawn at the next pipe's size.** `Services/LongitudinalSectionService.cs:1385`, `ProfileRouteReviewService.cs:389-391`, `ViewModels/LongitudinalSectionViewModel.cs:412`. Test first: pure helper `CrownDiameterForSegment`, 225 then 375 gives 225. Root cause 2, with BUG-763.
+2. **BUG-757 (HIGH): TG "0.000" cover read as RL 0.00.** `ProfileRouteReviewService.cs:381`, use `PitData.KnownCoverLevelRl()`. Test first: `Prepare` with a TG pit at "0.000" gives cover not known. Root cause 1.
+3. **BUG-758 (HIGH): write-side check for the older section tab.** `LongitudinalSectionService.InsertSection` (:378) and `UpdateExistingSection` (:425) call `TryAdmit`; `ParseDouble` blank must not become 0.0 (`LongitudinalSectionViewModel.cs:1714-1721`). Test first: `TryAdmit` on a 0.0 cover refuses; source guard. The window half (hiding the tab) is in build/04.
+4. **BUG-759 (MEDIUM-HIGH): datum above the lowest invert less sump.** `ProfileRouteReviewService.cs:61-67`. Test first: `Prepare` with datum above an invert is Refused. Root cause 1.
+5. **BUG-762 (MEDIUM): invert above cover hidden as depth 0.** `ProfileRouteReviewService.cs:413-416`. Test first: `Prepare` not Ready. Root cause 1.
+6. **BUG-761 (MEDIUM): uphill pipe shows a falling grade.** `ProfileRouteEvidenceCaptureService.cs:719-722`, `MathHelper.cs:57`. Test first: `ComputeEstablishedGrade(20, 10.00, 10.20)` is not 100. Root cause 1.
+7. **BUG-760 (MEDIUM): level pipe stops the section.** `ProfileRouteEvidenceCaptureService.cs:590-614`, `MathHelper.cs:58-59`, writer `LongitudinalSectionService.cs:224-231`. Test first: `ComputeEstablishedGrade(20, 10.00, 10.00)` and `Prepare` Ready. Root cause 1.
+8. **BUG-764 (MEDIUM): boundary marks on the real pipe.** `LongitudinalSectionViewModel.cs:1296-1390`. Test first: chord versus bent polyline case in a pure helper. With BUG-768 (`ProfileRouteReviewService.cs:843-844`).
+9. **BUG-777 (MEDIUM, engineering result): CDTWL default is the highest obvert.** `Rules/TopWaterLevelCandidates.cs:73-84`. Test first: 225 at 10.000 and 375 at 9.990 gives 10.365.
+10. **BUG-775 (MEDIUM, latent): crossing clearance to outside of pipe; units; layer match.** `Rules/CrossingServiceRule.cs:121-124, :100, :69`. Test first: `Evaluate("WATER", 9.70, 10.00, 375, 300)` is UnderMinimum. Do before card 6.8 wires it in. With BUG-776 (`PipeCrossingSplitPolicy.BuildDoneMessage`).
+11. **BUG-765, 769, 770, 778, 772 (LOW-MEDIUM and LOW):** survey-level text only on survey layers (`LongitudinalSectionViewModel.cs:1230-1272`); default schedule set from the route (`ProfileRouteEvidenceCaptureService.cs:45-54`); `LongSectionBridge.cs:99`; `PumpSizingService.cs:278`; WSUD input checks (`WsudViewModel.cs:164-169`). One small test each.
+
+### build/04 Civil windows, commands, schedules: 6 lines, HIGH first
+
+1. **BUG-758 (HIGH): hide the "Older longitudinal" tab in CDCALC.** `CalculationsV2Dialog.xaml.cs:40-73` (as the CDPROFILE constructor does at :93), send the drafter to CDPROFILE. Hide, never delete. Test first: source guard that the CDCALC constructor hides the tab. With BUG-766 (junction marks on the reviewed path, `LongitudinalSectionService.cs:1045-1058`).
+2. **BUG-763 (MEDIUM): review grid shows one pipe.** `ViewModels/ProfileRouteReviewViewModel.cs:44-51`. Test first: grade shown equals `OutgoingGradeOneIn`. Root cause 2.
+3. **BUG-771 (MEDIUM): CDRG Enter closes the outline; Undo removes one point.** `Commands/SourceBlockInsertCommands.cs:915-934, :455-459, :480-484`. Needs AutoCAD: add to Codex's CDRG run. With BUG-773 (`RaingardenPlacementPlan.cs:195-198, :133`; test pure on `TryCreate`).
+4. **BUG-774 (MEDIUM): spoon drain ignores a repeated pick.** `Commands/SpoonDrainCommand.cs:85-90`. Test first: `SpoonDrainRunPlan.TryCreate` with (0,0), (10,0), (10,0), (20,0). Then the BUG-338 note: read INSUNITS.
+5. **BUG-767 (LOW): widen the section frame for the existing-pipe stubs.** `LongitudinalSectionService.cs:1494-1515, :1672-1700`. Test first after moving the chainage rule into a pure helper.
+6. **BUG-772 (LOW-MEDIUM): WSUD refuses impervious above site and negatives.** `ViewModels/WsudViewModel.cs:164-169`.
