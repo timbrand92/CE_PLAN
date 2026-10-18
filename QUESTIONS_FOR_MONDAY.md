@@ -68,3 +68,5 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 3. **The ten-row check of the section numbers** (310UB32.0, 250UC72.9, 380PFC, 230PFC, 100x100x6 EA, 100x100x6 SHS, 200x100x6 RHS, 114.3 CHS, Z15015, 900WB282): not done yet. The draft list does not enter the repo until it is.
 4. **Hollow-section properties and top hat data from "elsewhere":** please send them when you have them.
 5. **The Tim AutoCAD checklist for CEMEMBER:** still to be written and agreed before code starts (the design chat proposed: one UB, one PFC in all four orientations, one angle in all four, one SHS, one Z purlin, section in front and beyond, break line sizes at 1:20 and 1:100, Escape, Undo, Enter-to-repeat). Recommend you approve that list as written.
+
+6. **H2 update (19 Oct, later):** Tim confirmed the side-elevation lip line positions ("Yes, the lip picture is right"). Still to answer: lip lines in the TOP elevation, and the C purlin top elevation rule.
