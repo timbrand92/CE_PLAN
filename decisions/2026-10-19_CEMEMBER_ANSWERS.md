@@ -12,3 +12,10 @@ Tim answered the ten questions the design chat sent him on 18 Oct. His words are
 8. **Add the hollow sizes InfraBuild stocks but the list lacks?** Tim: "yes". DONE in the draft: 8 SHS and 23 RHS added, properties calculated.
 9. **Supplier names with decimals (530UB92.4, 310UB32.0)?** Tim: "yep why not". DECISION: yes.
 10. **Approve the CEMEMBER card?** Tim: "yes". DECISION: the card (`areas/release-v3-colleagues-CEMEMBER_CARD_DRAFT_2026-10-18.md`) is approved by Tim on 19 Oct 2026. The lip line positions in 3 and 4 are confirmed. No code has started. The Tim AutoCAD checklist is still to be written and agreed before code starts.
+
+## Follow-up answers, 19 Oct 2026 (later the same day)
+Tim answered the four items left after the ten questions. His words are in quotes.
+11. **Ten-row check of the section numbers** (310UB32.0, 250UC72.9, 380PFC, 230PFC, 100x100x6 EA, 100x100x6 SHS, 200x100x6 RHS, 114.3 CHS, Z15015, 900WB282): Tim: "looks right". DONE for those ten rows of the DRAFT list. The rest of the list is not individually checked, and the draft is still not in section-catalogue.json.
+12. **Lip lines in the TOP elevation of the C and Z purlins?** Tim: "nope they interfere". DECISION: no lip lines in the top elevation. (The side elevation keeps the flange line and the lip line.) The C purlin top elevation rule (web inner face on 18hidden) is still the session's inference and was not separately answered.
+13. **Source for top hats and hollow-section properties:** Tim: "we will do it later". PARKED.
+14. **The Tim AutoCAD checklist:** Tim: "lets do it later". PARKED. No code starts until it is written and agreed.
