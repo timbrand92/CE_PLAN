@@ -49,3 +49,4 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-18 22:10 | RULING | Tim: leave LBUH dots (and SBEAM design) until he is home Thu 29 Oct; work on something else | REMINDERS_FOR_TIM 4
 2026-10-18 22:12 | INCIDENT | My Sonnet fixer (pid 51284) duplicated fix rounds the lane builders had already pushed (#1395 1396 1401 1402 1406 1408 heads at 21:46); stopped it, nothing of its was pushed, worktrees removed | git heads checked
 2026-10-18 22:14 | REVIEW | Opus review of new drafts #1410..#1435 plus re-review of the 7 lane fix rounds launched on Team (pid 65668) | desk_jobs/review_drafts_1410_1435_job.txt
+2026-10-18 22:20 | RULING | CORRECTION by Tim: only LBUH is parked to Thu 29 Oct; SBEAM design is being worked on now (I wrongly parked it). SBEAM design card from his chat is the input for the Structural fix; do not build SBEAM changes before it | REMINDERS_FOR_TIM 4
