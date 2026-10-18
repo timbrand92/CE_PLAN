@@ -1,0 +1,104 @@
+--- UB/UC ---
+610UB125 (real 610UB125.0): r 13.0 vs 14.0
+610UB113 (real 610UB113.0): r 13.0 vs 14.0
+610UB101 (real 610UB101.0): r 13.0 vs 14.0
+530UB92 (real 530UB92.4): r 13.0 vs 14.0
+530UB82 (real 530UB82.0): r 13.0 vs 14.0
+460UB82 (real 460UB82.1): r 10.0 vs 11.4
+460UB74 (real 460UB74.6): r 10.0 vs 11.4
+460UB67 (real 460UB67.1): r 10.0 vs 11.4
+410UB60 (real 410UB59.7): r 10.0 vs 11.4
+410UB54 (real 410UB53.7): r 10.0 vs 11.4
+360UB57 (real 360UB56.7): r 10.0 vs 11.4
+360UB51 (real 360UB50.7): r 10.0 vs 11.4
+360UB45 (real 360UB44.7): r 10.0 vs 11.4
+310UB46 (real 310UB46.2): r 9.0 vs 11.4
+310UB40 (real 310UB40.4): r 9.0 vs 11.4
+250UB37 (real 250UB37.3): r 8.0 vs 8.9
+250UB31 (real 250UB31.4): r 8.0 vs 8.9
+200UB30 (real 200UB29.8): r 8.0 vs 8.9
+200UB25 (real 200UB25.4): r 8.0 vs 8.9
+200UB22 (real 200UB22.3): r 8.0 vs 8.9; Ix 20.5 vs 21.0; Iy 2.67 vs 2.75; Zx 203 vs 208.0; Zy 40.2 vs 41.3
+180UB16 (real 180UB16.1): Iy 0.82 vs 0.853; Zx 120 vs 123.0; Zy 18.3 vs 19.0
+150UB18 (real 150UB18.0): Ix 8.11 vs 9.05; Zx 105 vs 117.0
+150UB14 (real 150UB14.0): Ix 6.06 vs 6.66; Zx 80.8 vs 88.8
+310UC158 (real 310UC158.0): r 15.0 vs 16.5
+310UC137 (real 310UC137.0): r 15.0 vs 16.5
+310UC118 (real 310UC118.0): r 15.0 vs 16.5
+310UC97 (real 310UC96.8): r 15.0 vs 16.5
+250UC90 (real 250UC89.5): no root radius
+250UC73 (real 250UC72.9): r 13.0 vs 14.0
+200UC60 (real 200UC59.5): r 10.0 vs 11.4
+200UC52 (real 200UC52.2): r 10.0 vs 11.4
+200UC46 (real 200UC46.2): r 10.0 vs 11.4
+150UC37 (real 150UC37.2): r 8.0 vs 8.9
+150UC30 (real 150UC30.0): r 8.0 vs 8.9
+150UC23 (real 150UC23.4): r 8.0 vs 8.9; Iy 4.1 vs 3.98; Zy 54.0 vs 52.4
+--- PFC ---
+380PFC: tw 13.5 vs 10.0; Iy 5.75 vs 6.48
+300PFC: tw 12 vs 8.0; Ix 74.3 vs 72.4; Iy 3.55 vs 4.04; Zx 495 vs 483.0
+250PFC: tf 14 vs 15.0; tw 9 vs 8.0; Ix 48.4 vs 45.1; Iy 3.2 vs 3.64; Zx 387 vs 361.0
+230PFC: tf 12.5 vs 12.0; tw 9.5 vs 6.5; Ix 28.8 vs 26.8; Iy 1.38 vs 1.76; Zx 251 vs 233.0
+200PFC: tf 9.5 vs 12.0; Ix 22.2 vs 19.1; Iy 1.38 vs 1.65; Zx 222 vs 191.0
+180PFC: tf 10.5 vs 11.0; Ix 16.7 vs 14.1; Iy 1.44 vs 1.51; Zx 186 vs 157.0
+150PFC: tw 5.5 vs 6.0; Ix 10.8 vs 8.34; Zx 144 vs 111.0
+125PFC: tf 8.5 vs 7.5; tw 5 vs 4.7; mass 13.3 vs 11.9; Ix 5.94 vs 3.97; Iy 0.77 vs 0.658; Zx 95.0 vs 63.5
+100PFC: tf 8.5 vs 6.7; tw 5 vs 4.2; Ix 2.37 vs 1.74; Iy 0.33 vs 0.267; Zx 47.4 vs 34.7
+75PFC: tf 6.5 vs 6.1; tw 5 vs 3.8; Ix 0.95 vs 0.683; Iy 0.14 vs 0.12; Zx 25.3 vs 18.2
+--- EA ---
+200x200x26EA: mass 48.7 vs 76.8; Ix 35.4 vs 56.8
+200x200x20EA: mass 38.2 vs 60.1; Ix 28.5 vs 45.7
+200x200x18EA: mass 34.6 vs 54.4; Ix 26.1 vs 41.7
+200x200x16EA: mass 31.0 vs 48.7; Ix 23.6 vs 37.6
+200x200x13EA: mass 25.5 vs 40.0; Ix 19.7 vs 31.2
+150x150x19EA: mass 27.2 vs 42.1; Ix 11.5 vs 17.6
+150x150x16EA: t 16 vs actual 15.8; mass 23.2 vs 35.4; Ix 10.0 vs 15.1
+150x150x12EA: mass 17.7 vs 27.3; Ix 7.81 vs 11.9
+150x150x10EA: t 10 vs actual 9.5; mass 14.9 vs 21.9; Ix 6.68 vs 9.61
+125x125x16EA: t 16 vs actual 15.8; mass 18.9 vs 29.1; Ix 5.62 vs 8.43
+125x125x12EA: mass 14.4 vs 22.5; Ix 4.39 vs 6.69
+125x125x10EA: t 10 vs actual 9.5; mass 12.1 vs 18.0; Ix 3.75 vs 5.44
+125x125x8EA: t 8 vs actual 7.8; mass 9.78 vs 14.9; Ix 3.08 vs 4.55
+100x100x12EA: mass 11.2 vs 17.7; Ix 2.18 vs 3.29
+100x100x10EA: t 10 vs actual 9.5; mass 9.42 vs 14.2; Ix 1.87 vs 2.7
+100x100x8EA: t 8 vs actual 7.8; mass 7.63 vs 11.8; Ix 1.55 vs 2.27
+100x100x6EA: mass 5.78 vs 9.16; Ix 1.2 vs 1.78
+90x90x10EA: t 10 vs actual 9.5; mass 8.39 vs 12.7; Ix 1.35 vs 1.93
+90x90x8EA: t 8 vs actual 7.8; mass 6.81 vs 10.6; Ix 1.12 vs 1.63
+90x90x6EA: mass 5.16 vs 8.22; Ix 0.87 vs 1.28
+75x75x10EA: t 10 vs actual 9.5; mass 6.86 vs 10.5; Ix 0.76 vs 1.08
+75x75x8EA: t 8 vs actual 7.8; mass 5.59 vs 8.73; Ix 0.63 vs 0.913
+75x75x6EA: mass 4.25 vs 6.81; Ix 0.49 vs 0.722
+75x75x5EA: t 5 vs actual 4.6; mass 3.56 vs 5.27; Ix 0.42 vs 0.563
+65x65x10EA: t 10 vs actual 9.5; mass 5.87 vs 9.02; toe 5.0 vs 3.0; Ix 0.48 vs 0.691
+65x65x8EA: t 8 vs actual 7.8; mass 4.8 vs 7.51; Ix 0.4 vs 0.589
+65x65x6EA: mass 3.66 vs 5.87; Ix 0.31 vs 0.471
+65x65x5EA: t 5 vs actual 4.6; mass 3.07 vs 4.56; Ix 0.27 vs 0.371
+50x50x8EA: t 8 vs actual 7.8; mass 3.58 vs 5.68; Ix 0.17 vs 0.253
+50x50x6EA: mass 2.76 vs 4.46; Ix 0.14 vs 0.205
+50x50x5EA: t 5 vs actual 4.6; mass 2.32 vs 3.48
+50x50x3EA: mass 1.42 vs 2.31
+45x45x6EA: mass 2.45 vs 3.97
+45x45x5EA: t 5 vs actual 4.6; mass 2.07 vs 3.1
+45x45x3EA: mass 1.27 vs 2.06
+40x40x6EA: mass 2.15 vs 3.5
+40x40x5EA: t 5 vs actual 4.6; mass 1.82 vs 2.73
+40x40x3EA: mass 1.12 vs 1.83
+EA mismatched 38 of 38
+EA in InfraBuild but not in list: ['55x55x6', '55x55x5', '30x30x6', '30x30x5', '30x30x3', '25x25x6', '25x25x5', '25x25x3']
+--- UA ---
+150x100x10UA: t 10 vs actual 9.5; mass 18.84 vs 18.0
+150x90x16UA: t 16 vs actual 15.8
+150x90x10UA: t 10 vs actual 9.5; mass 18.06 vs 17.3
+150x90x8UA: t 8 vs actual 7.8; mass 14.57 vs 14.3
+125x75x10UA: t 10 vs actual 9.5; mass 14.92 vs 14.2
+125x75x8UA: t 8 vs actual 7.8; mass 12.06 vs 11.8
+100x75x10UA: t 10 vs actual 9.5; mass 12.95 vs 12.4
+100x75x8UA: t 8 vs actual 7.8; mass 10.49 vs 10.3
+75x50x8UA: t 8 vs actual 7.8; mass 7.35 vs 7.23; r 8.0 vs 7.0; toe 5.0 vs 3.0
+75x50x6UA: r 8.0 vs 7.0; toe 5.0 vs 3.0
+75x50x5UA: t 5 vs actual 4.6; mass 4.71 vs 4.4; r 8.0 vs 7.0; toe 4.5 vs 3.0
+65x50x8UA: t 8 vs actual 7.8; mass 6.72 vs 6.59
+65x50x5UA: t 5 vs actual 4.6; mass 4.32 vs 4.02
+UA missing from list: []
+TFB real: [(('TFB', '125', '13.1'), 125.0, 65.0, 8.5, 5.0), (('TFB', '100', '7.2'), 100.0, 45.0, 6.0, 4.0)]
