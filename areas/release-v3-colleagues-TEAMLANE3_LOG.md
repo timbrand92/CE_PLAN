@@ -813,3 +813,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Sun 18 Oct 16:50 real clock (read from the PC clock) - build/03 headless run 358 started.
 - Sun 18 Oct 16:51 real clock (read from the PC clock) - build/03 run 358 ENDED: no bug work left. No new OPUS REVIEW after the C-44 finalizer (entry 1190); BUG-697/698 and 746-755 are all claimed in a lane log with PRs; the items from run 357 (IJK-03/05/19/X1) still need windows, a design call or Tim. No code touched, no build run.
 - Sun 18 Oct 2026 desk: Hunt Civil I/J/K fixes queued in triage section 8 (BUG-756 to BUG-778).
+- Sun 18 Oct 2026 desk: Hunt Civil L/M fixes queued in triage section 9 (BUG-779 to BUG-812).

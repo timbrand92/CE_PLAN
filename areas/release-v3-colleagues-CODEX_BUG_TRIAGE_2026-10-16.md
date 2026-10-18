@@ -246,3 +246,46 @@ Added Sun 18 Oct 2026 by the desk (headless job). Source: `areas/release-v3-coll
 4. **BUG-774 (MEDIUM): spoon drain ignores a repeated pick.** `Commands/SpoonDrainCommand.cs:85-90`. Test first: `SpoonDrainRunPlan.TryCreate` with (0,0), (10,0), (10,0), (20,0). Then the BUG-338 note: read INSUNITS.
 5. **BUG-767 (LOW): widen the section frame for the existing-pipe stubs.** `LongitudinalSectionService.cs:1494-1515, :1672-1700`. Test first after moving the chainage rule into a pure helper.
 6. **BUG-772 (LOW-MEDIUM): WSUD refuses impervious above site and negatives.** `ViewModels/WsudViewModel.cs:164-169`.
+
+## 9. Hunt Civil L/M fixes (18 Oct)
+
+Added Sun 18 Oct 2026 by the desk (headless job). Source: `areas/release-v3-colleagues-HUNT_CIVIL_LM_2026-10-12.md` (52 findings, read-only audit of Civil 3.0.55: Pit Schedule, Checks and QA, repair, legacy migration, X-Civil schedule import). Filed as BUG-779 to BUG-812 (34 entries; related findings grouped). Every fix: failing test first, DRAFT PR, Settings-backed, Unknown stays Unknown, native layer-lock protection respected.
+
+**Shared root causes (one fix each):**
+
+1. **The Pit Schedule builder, the Xref rows and the redesign review each copy the inlet-merge and row-mapping code** (BUG-780, 784, 786, 787, 798): pull one pure `ConsolidateInlets` and one row-ordering/override-key function and make all three callers use it (design rule #1).
+2. **The drawn table, the window and redesign Apply each work out a cell's text their own way** (BUG-779, 783, 785, 791, 792, 807): one `BuildCellText`, one depth function, one "should this edit change the record?" decision, DELETE mapped to blank in one place.
+3. **The level cascade maps drawn direction to flow direction wrongly** (BUG-782, with BUG-654 and 797): one pure `MapPinnedEnds` and one lock check.
+4. **Repair buttons write without a preview and report candidates, not results** (BUG-789, 796, 803, 810): one preview-and-Yes/No wrapper, as CDFIXFLATPIPES has.
+5. **Checks and QA ignore failures and Settings** (BUG-790, 794, 800, 801, 802, 808, 809): one "could not check" row type and one Settings-backed standards source.
+
+### build/03 Civil engine, import services, cascade, shared: 14 lines, HIGH first
+
+1. **BUG-782 (HIGH): cascade protects the wrong end.** `Services/LinkService.RepairAudit.InvertPropagation.cs:425-426, 793-794`. Test first: pure `MapPinnedEnds`, pipe drawn from the low end, typed 10.20 stays. Do with BUG-654 and BUG-797 (`:733, :790, :810`, refuse a locked pipe layer).
+2. **BUG-781 (HIGH): X-Civil schedule rows paired to pits by position.** `Services/XcivilScheduleService.cs:308-329, 395-430`; `XcivilImportService.cs:773`. Test first: `AssignImportedSchedulePitIdsByOrder` with one row filtered out maps the third row to P2 today. Unknown stays Unknown.
+3. **BUG-785 (HIGH): one depth rule in the refresh path.** `Services/ScheduleLinkService.cs:2598-2610, 2786`; `NetworkRedesignScheduleReviewService.cs:155-157, 1012-1031`. Test first: `BuildDepthText` against the window rule for an SPS pit. Child of BUG-540.
+4. **BUG-788 (HIGH, plausible): SAVEAS Xrefs merge.** `Services/PitScheduleXrefDiscoveryCore.cs:56`, `PitScheduleXrefDiscoveryService.cs:394-398`. Test first: `Discover` with two probes sharing a fingerprint. With BUG-799 (`PitScheduleStatusService.cs:104, 301-305`).
+5. **BUG-790 (MEDIUM-HIGH): Design Review ignores Settings.** `Services/DesignReviewService.cs:33`, `DesignValidationService.cs:195-204`. Test first: Settings stub with a different minimum grade.
+6. **BUG-789 (MEDIUM-HIGH): Recover Inverts redraws nothing.** `Commands/LinkCommands.cs:2257-2267`, `LinkService.Persistence.cs:25-48`. Check for text before storing.
+7. **BUG-794 (MEDIUM): "no issues" when no PDF was read.** `Services/PdfScheduleSanityService.cs:103-106`. Test first: `BuildPreflightLines(CheckSchedule(null))`. With BUG-804 (page selection, `XcivilVisionScheduleExtractionService.cs:274-277`) and BUG-805 (`XcivilVisionScheduleParser.cs:161`, `XcivilScheduleService.cs:523-526, 1165-1182`).
+8. **BUG-796 (MEDIUM): preview and Yes/No for four repair buttons; honest counts.** `Commands/LinkCommands.cs:201-300, 2187`; `Commands/HubCommands.cs:636, 665`. With BUG-803 (`LinkService.CloneRepair.cs:39-46, 93, 113`) and BUG-795 (`BrokenXrefPathRepairService.cs:52-60`: exclude the host, prefer matching folders).
+9. **BUG-793 (MEDIUM): pit-block migration checks for CE data and a version stamp.** `Services/PitBlockMigrationService.cs:150-237`.
+10. **BUG-801, 800, 802 (MEDIUM): QA marked stale by CE writes; "could not check" row; ignore fingerprint with cover levels.** `Services/CivilProjectQaAutomaticService.cs:261-269, 677-690`; `Services/Checks/ChecksResultReader.cs:93-160`; `Services/Checks/IgnoredChecks.cs:204-260`.
+11. **BUG-809, 808 (LOW-MEDIUM): small Checks and QA fixes.** `Services/MinimumCoverForChecks.cs:25` first (`Choose(false, null, 0.0)`), then `ConsultantDwgCheckService.cs:186-201`, `DesignReviewService.cs:64`.
+12. **BUG-807 (LOW): no "-0.00"; half rounds away from zero on net10.** `Services/PitScheduleLevelText.cs:27`, `Rules/PipeEndClassification.cs:231`. Test first: `Format(-0.004, 2)` is "0.00".
+13. **BUG-806 (LOW, latent): orifice mapper head from the orifice IL.** `Services/OrificeDetailFieldMap.cs:98-113`. Before it is wired up.
+14. **BUG-811, 810, 812 (LOW): rejoin step, import log race, audit commands read-only, new-pit sort.** `InvertPropagation.cs:302-353`; `XcivilVisionFallbackOrchestrator.cs:208-231`; `Commands/LinkCommands.cs:722`; `AuditPasses.cs:102-163`; `NetworkRedesignScheduleReviewService.cs:886-905`. Note: build/03 owns the pure `ConsolidateInlets` and `MapPinnedEnds` extractions; build/04 owns the window callers.
+
+### build/04 Civil windows, schedules, QA, repair, notes: 11 lines, HIGH first
+
+1. **BUG-779 (HIGH): moving the table must not change records.** `Services/ScheduleLinkService.cs:226-332`. Test first: pure "should this cell change the record?" decision; unchanged cell text and overridden fields do nothing. Root cause 2.
+2. **BUG-780 (HIGH): merged inlet rows map the wrong pipe.** `ViewModels/PitScheduleViewModel.Data.cs:309-326, 724-734`; `NetworkRedesignScheduleReviewService.cs:133-151`. Test first: P3 19.40, DP1 19.60, DP2 19.60, AG1 19.90 gives AG its own diameter. Root cause 1.
+3. **BUG-783 (HIGH): DELETE token blanks everywhere.** `Services/ScheduleLinkService.cs:1887-1932, 2496`; `PitScheduleViewModel.Filters.cs:29-58`. Test first: `RefreshLinkedCellFromRecord` with Cover="DELETE" gives blank. Remarks wording waits for QUESTIONS_FOR_MONDAY section I item 1.
+4. **BUG-784 (HIGH): FROM keeps C1.** `Services/PitScheduleBuilder.cs:209-217, 151, 248-249`; `ScheduleLinkService.cs:2548`. Test first: `BuildInletFromDisplay` with pit C1 gives "C1".
+5. **BUG-786 and 787 (HIGH, MEDIUM-HIGH): row order and overrides by pit group.** `PitScheduleViewModel.Data.cs:859-930`; `Schedule.cs:450-586, 651-661`. Test first: add an inlet to P5 of a 10-row schedule; the new row stays in P5's group; an override keyed by pit survives.
+6. **BUG-791 (MEDIUM-HIGH): pit size is never an override; untouched cells add none.** `Dialogs/PitScheduleDialog.xaml.cs:218`. Window code-behind: AutoCAD check by Codex.
+7. **BUG-792 (MEDIUM, LOW-MEDIUM): refuse unclean typed numbers; put an ignored cell back with a message.** `Services/ScheduleLinkService.cs:3290, 226-337`.
+8. **BUG-798 (MEDIUM): pit columns repeat on a continuation sheet.** `Services/PitScheduleContinuationLayout.cs:116`. Test first: two rows, one row per sheet, second sheet's first cell "P12".
+9. **BUG-799 (MEDIUM): "SOURCE UNLOADED" wording and host-relative path.** `PitScheduleStatusService.cs:104, 301-305`.
+10. **BUG-808 (LOW): outlet against the largest inlet.** `PitScheduleViewModel.Data.cs:2189-2212`.
+11. **BUG-809 items (4) and (5) (LOW): palette close keeps your selection; the "Record pipe ends off pit" setting works or hides.** `Services/DrawingCheckPaletteService.cs:266-319`; `Services/Checks/ChecksResultReader.cs:170`.

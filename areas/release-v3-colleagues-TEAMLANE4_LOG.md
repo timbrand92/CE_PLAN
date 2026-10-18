@@ -650,3 +650,4 @@ One line per job: time (Melbourne), item, PR, state, usage.
 - Sun 18 Oct 18:13 PC clock: build/04 headless run 379 started (lane_loop; bug fixes only per pause ruling A).
 - Sun 18 Oct 18:16 PC clock: build/04 run 379 RUN ENDED. no bug work left. Checked: carpark unchanged since 11:54 (highest BUG-755, none unclaimed for build/04); review-lane log last written 13:30 and no new Opus comment on #1341-#1351 or #1387-#1390 beyond those answered in runs 375/376; still waiting on others: BUG-396 and BUG-430 (driver run in AutoCAD), BUG-681/682/683 (CD order redesign card), BUG-679 Align options (window wiring), BUG-685 HOLD. Nothing built or tested; no worktree touched.
 - Sun 18 Oct 2026 desk: Hunt Civil I/J/K fixes queued in triage section 8 (BUG-756 to BUG-778).
+- Sun 18 Oct 2026 desk: Hunt Civil L/M fixes queued in triage section 9 (BUG-779 to BUG-812).
