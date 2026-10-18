@@ -44,3 +44,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-18 20:41 | METER | Max 34% (pace ~31, slightly ahead), Team 18% (on pace), Codex 15% (ahead, idle); C: 22 GB | desk_tick
 2026-10-18 21:40 | REVIEW | Opus review of #1382..#1409 done (entries 1191..1226): 21 MERGE, 7 MERGE-WITH-FIXES (#1383 1395 1396 1401 1402 1406 1408), 0 hold; Civil 801 tests pass, Manager 757, Structural 305; 3 questions for Tim | REVIEWLANE 1191-1226
 2026-10-18 21:42 | FIX | Sonnet fixer for the 7 launched on Team | desk_jobs/fix_review_1382_1409_job.txt
+2026-10-18 22:05 | RULING | Tim: CDCALC Older longitudinal tab -> do what the review recommends (keep it visible by default, hide is one switch; revisit when CDPROFILE draws branch ticks) | #1408 fix round
+2026-10-18 22:06 | DECISION | Tim wants a design chat for SBEAM (cannot open new chat from desk): brief and paste prompt written | areas/release-v3-colleagues-SBEAM_DESIGN_SESSION_BRIEF.md
