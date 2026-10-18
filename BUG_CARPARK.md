@@ -61,6 +61,8 @@
 
 **Reference:** `decisions\2026-10-18_CEMEMBER_DESIGN.md` section C item 1; area `areas\structural.md` (CEMEMBER). Tim lists these as open items, not decisions.
 
+**More detail (card draft, 18 Oct 2026):** the list change and the drawing-code change must go in TOGETHER. The code must learn the fields `widthNarrow` (Zed second flange), `thickness` versus `nominalThickness` (angles), no `rootRadius` for welded WB/WC, `zyOtherSide` (PFC) and the BT / CT / RB / SQ / FB types. The old command draws the PFC web's outer face as a hidden line on top of the 25cont edge (a double line, which Tim's "we never put two lines on top of each other" rule forbids) and ignores the Z and C purlin lips in the elevations. Card: `areas/release-v3-colleagues-CEMEMBER_CARD_DRAFT_2026-10-18.md` (DRAFT, not approved).
+
 **Status:** OPEN
 
 ## BUG-818 — Structural section list (section-catalogue.json) has wrong sizes, masses, properties and sections that do not exist
@@ -72,6 +74,8 @@
 **Expected behaviour:** the list matches the supplier catalogues; calculated figures are labelled as calculated; only sections that exist are offered. A corrected 17-type DRAFT list (UB, UC, PFC, WB, WC, EA, UA, SHS, RHS, CHS, Lysaght Z and C, BT and CT tees, round, square and flat bars) exists on the session PC in CE_Reference\Corrected_Draft: it is a draft, Tim has NOT reviewed it, and it must NOT go into the repo until he has. Top hats: no source found. The paid ASI Design Capacity Tables are the proper check for the hollow-section properties (open).
 
 **Reference:** `decisions\2026-10-18_CEMEMBER_DESIGN.md` sections B and C; area `areas\structural.md` (CEMEMBER). Related: BUG-819 (drawing code). Nothing is to be changed in the repo until Tim reviews the draft list.
+
+**More detail (card draft and results note, 18 Oct 2026):** unequal angles also have nominal not actual thickness and the 75x50 radii differ; 101 hollow-section rows had no mass although InfraBuild lists it, about 27 of 35 comparable masses were out by 3 to 6%, and three Ix values were wrong (200x200x5 SHS, 150x150x5 SHS, 200x100x5 RHS); eight equal-angle sizes are missing (55x55x6/5, 30x30x6/5/3, 25x25x6/5/3); eight welded sizes are missing (1200WB249, 1000WB215, 900WB175, 800WB122, 700WB115, 500WC228, 400WC144, 350WC197); Lysaght sells Z/C10010 to Z/C35030 (16 catalogue numbers, 100 to 350 deep). Evidence: `04_REFERENCE/section_data_2026-10-18/` (`WHAT_CHANGED.md`, `differences_*.txt`, `section-catalogue_CORRECTED_DRAFT.json`). **The corrected draft is reference only: Tim has not reviewed it and it is NOT to be copied into `section-catalogue.json` yet.** Weakest numbers: calculated hollow-section figures and anything from steelweb.info (no accuracy guarantee); the paid ASI Design Capacity Tables are the proper check; hollow sections InfraBuild stocks but the list lacks (RHS 102x76, 127x51, 152x76, 300x200x6, SHS 30x30x2.5 and others) were not added; top hats have no source.
 
 **Status:** OPEN
 
