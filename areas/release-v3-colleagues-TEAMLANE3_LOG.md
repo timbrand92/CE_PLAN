@@ -856,3 +856,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Mon 19 Oct 17:13 real clock (read from the PC clock) - build/03 run 371: triage 13 line 2 BUG-824 = DRAFT (b03/bug-824-installer-dbx): command-free .dbx treated like command-free .arx. Tests compiled, not run. Needs Opus review.
 - Mon 19 Oct 17:18 real clock (read from the PC clock) - Max builder CLAIM: BUG-836 (triage 13 line 19)
 - Mon 19 Oct 17:20 real clock (read from the PC clock) - Max builder CLAIM: BUG-834 (triage 13 line 10; slice lines 10-18, branch b03/bug-834-old-stage off claude/rel-20261019a)
+- Mon 19 Oct 17:23 real clock (read from the PC clock) - Max builder: BUG-836 and BUG-837 (triage 13 lines 19, 20) DRAFT PR #1445 (b03/bug-836-devices-behind). Max builder CLAIM: BUG-838 (triage 13 line 21)
