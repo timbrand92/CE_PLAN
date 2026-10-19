@@ -876,3 +876,5 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Mon 19 Oct 17:59 real clock (read from the PC clock) - build/03 run 371: triage 13 lines 13-14: BUG-844 = DRAFT #1467 (half-copied report skipped, red 3/4); BUG-845 = DRAFT (b03/bug-845-admin-buttons-catch, source guards red 3/3). Needs Opus review.
 - Mon 19 Oct 18:01 real clock (read from the PC clock) - build/03 run 371: triage 13 lines 15-16: BUG-842+848 = DRAFT (b03/bug-842-848-files-half-written; red 4/5). Needs Opus review.
 - Mon 19 Oct 18:04 real clock (read from the PC clock) - build/03 run 371: triage 13 lines 17,19,20: BUG-835+836+837 = DRAFT (b03/bug-835-851-836-837; red 5/13). Needs Opus review.
+- Mon 19 Oct 18:09 real clock (read from the PC clock) - build/03 run 371: triage 13 lines 24,26: BUG-849 = DRAFT #1471 (online-only admin list says not downloaded); BUG-853 = DRAFT (b03/bug-853-click-log, capped, no drawing name). Needs Opus review.
+- Mon 19 Oct 18:12 real clock (read from the PC clock) - build/03 run 371: triage 13 line 18 BUG-851 = DRAFT (b03/bug-851-disable-main-only; red 2/4). Needs Opus review.
