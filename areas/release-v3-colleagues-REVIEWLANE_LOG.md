@@ -3040,3 +3040,16 @@ OPUS SIGN-OFF train claude/rel-20261020a GO (65507bc34beca79927e31533d8d0d98ac20
 1376. **Totals: 3 PRs: 1 MERGE (#1481), 2 MERGE-WITH-FIXES (#1482 MEDIUM: keep the detention tank's outer walls in its footprint, LOW checklist wording; #1441 LOW: the missing space, then MERGE), 0 HOLD, 0 REJECT.** Questions for Tim: none.
 
 OPUS REVIEW 1481-1482 done. Built and unit-tested only: nothing installed, nothing tested in AutoCAD, nothing Tim-accepted or Codex-accepted.
+
+## FINALIZER TRAIN C-48 (Opus, Team, 20 Oct)
+
+1377. **Tue 20 Oct 06:58 onward** - OPUS FINALIZER train C-48 (Opus 5.5, claude-opus-5-5, Team, headless, desk plan/03, own worktree `C:\ce-fin\c47`; nothing installed, deployed or version-edited; no AutoCAD, no accoreconsole). Input `claude/rel-20261020b` @ 69fdb56d, checked against origin first and last (matched). One PR on the installed line 5e0dae9c (C-47): #1481. Report: `TRAIN_C48_FINALIZER_REPORT_2026-10-20.md`.
+1378. **Re-review:** no MERGE-WITH-FIXES PR was merged and no unreviewed PR was merged. #1481 merged at its reviewed head 039bedf6 (entry 1370 MERGE); the merge diff equals the reviewed change (3 files, +30 -0). Re-read: both R-06 "no detention length is recorded" rows (`RulebookEngine.cs` 490, 495) are caught; a missing-diameter row keeps the old line. **No `Shared/` file changes.** #1441 not in the train (live head still 438ed483, space fix not pushed).
+1379. **New defaults: none.** No switch, default or Settings key added or changed. The fix line wording is the bug itself. Switches without a row: none new (standing: C-47's two, C-45's 32).
+1380. **Installer gate:** the train touches no Installer, Manager, Shared or build file, so `CeOfficialReleaseGate` cannot be affected. #1475 shipped in C-47. Installer tests not run (rule).
+1381. **Builds and tests at the final head:** whole solution Release **0 errors, 889 warnings**. Civil net10 full **18,865 run, 18,844 pass, 19 skipped, 2 failed** (Glen Eira, known; blank-page PDF, known intermittent, passed 1 of 1 on re-run; same pair as the assembly run). Manager net10 **824 of 824**. Civil net48 focused (RuleFixAdvisor, RulebookDetention, RedoSafe, DoubleClick) **168 of 168**. Not run: Installer, full net48, CommandTruth, TestHarness, Spine, Diagnostics, AI.Core, ReleaseTests, Structural, AutoCAD.
+1382. **Do not mark FIXED:** BUG-854, plus the entry 1366 and 1375 lists. Built and unit-tested only.
+1383. **Hygiene.** Build lock held only while each command ran. Tim's settings files SHA-256 (first 8) before and after: CD_Settings.json acd64e79, CS_Settings.json 622a246f, Structural CS_Settings.json 24d8e5f7, settings.json efe307c4: unchanged. AutoCAD not running. Worktree `C:\ce-fin\c47` (1.8 GB) removed with `git worktree remove --force`, my logs and Temp folders deleted. No PR closed or merged; `DESK_LOG.md` not edited. The brief's push target `claude/rel-20261020a` is the installed C-47 line; I made no commits, so nothing was pushed.
+1384. **Tue 20 Oct, about 07:25** - OPUS FINALIZER train C-48 ended. **GO.** Final head `69fdb56dd6258b1c86bf5c7534134b0e05d06980` (no finalizer commit). Civil only: Manager and the Installer do not change (CE_SHARED unchanged). Held: #1482 (fix round needed), #1441 (space fix not pushed).
+
+OPUS SIGN-OFF train claude/rel-20261020b GO (69fdb56dd6258b1c86bf5c7534134b0e05d06980)
