@@ -1019,6 +1019,8 @@
 
 **Status:** OPEN
 
+**Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118):** STILL SEEN (observation only): L3-06a PASS for the nine beam and seven ligature pictures (real, matching captions), but the Type 2 and Type 6 drawings still meet or crop the top edge of their boxes. Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-06a-beams-close.png.
+
 ## BUG-754 — Manager Dark theme: tab text is pale on near-white tab backgrounds
 
 **Command / Area:** CEMANAGER window in the Dark theme, Manager 1.1.54, real AutoCAD 2027, 18 Oct 2026. LOW-MEDIUM (observation, not judged against a written criterion).
@@ -1043,6 +1045,8 @@
 
 **Status:** OPEN
 
+**Codex look L4 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56):** PARTLY SEEN: L4-05-row1 and L4-05-row3 DIFFERENT, UNSURE. The rows no longer print the internal id: they read '(!) unnamed pipe and TG1: unnamed pipe flows from TG1: Unresolved ...' and '(!) unnamed pipe and WT10: unnamed pipe flows to WT10 ...'. But the pipe still has no name or position to tell two such rows apart (see also BUG-814). Show where moved the view to TG1 and to WT10/WT11 but no soft glow was plainly visible in the immediate or the 2-second-later capture; fade time unknown, so the glow is not judged. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-19-checks-row1-immediate.png, L4-20-checks-row1-later.png, L4-21-checks-row3-immediate.png.
+
 ## BUG-752 — Structural Settings: long folder paths are clipped at the right edge
 
 **Command / Area:** Structural Settings (CESETTINGS), installed Structural 1.0.118, real AutoCAD 2027, 18 Oct 2026. LOW.
@@ -1054,6 +1058,8 @@
 **Reference:** CODEX_LOOK_L3_20261018_1052.md, look L3-04 (FAIL, SURE); evidence L3-04-01-general.png to L3-04-23-markup.png and the -close.jpg files. Test: a render check of those three pages with a 120-character path at 1407 x 965.
 
 **Status:** OPEN
+
+**Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118):** STILL SEEN: L3-04 FAIL, SURE. Long paths still clipped on Installation (Loaded plugin file, Ribbon file), Workbook files (Last workbook folder, Saved workbook session, Source workbook) and Markup service (Last markup folder). The other 20 pages fit. Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-04-12b-installation.png, L3-04-13-schedules.png, L3-04-13e-markup-service.png.
 
 ## BUG-751 — CEHATCH library: cards show words instead of pictures; Waffle preview is empty
 
@@ -1067,6 +1073,8 @@
 
 **Status:** OPEN
 
+**Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118):** STILL SEEN: L3-06b FAIL, SURE. Five cards (Load-bearing wall over, Load-bearing wall under, Earth, Concrete, Waffle) and the Waffle live preview show 'No preview: the drawing scale is not valid'; no magenta Waffle. Structural copy at scale 1:1 (DIMSCALE 1). Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-06b-cards.png, L3-06b-waffle-preview.png.
+
 ## BUG-750 — SBEAM Side and Front Elevation draw inner flange lines
 
 **Command / Area:** Structural SBEAM window (Steel / Timber Beam Section), 610UB125 [UB], installed Structural 1.0.118, real AutoCAD 2027, 18 Oct 2026. MEDIUM-LOW.
@@ -1078,6 +1086,8 @@
 **Reference:** CODEX_LOOK_L3_20261018_1052.md, look L3-06c (FAIL, SURE); evidence L3-17-sbeam-side.png, L3-17-sbeam-side-close.jpg, L3-18-sbeam-front.png. Test: a pure test that the Side Elevation geometry for 610UB125 has no horizontal segment between the flange edge and the web.
 
 **Status:** OPEN (18 Oct 2026 note: SUPERSEDED BY DESIGN, not closed (D6). Tim's CEMEMBER design replaces SBEAM and settles which lines are drawn: see decisions/2026-10-18_CEMEMBER_DESIGN.md. Draft PR 1384 stays open and is not merged.)
+
+**Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118):** STILL SEEN: L3-06c FAIL, SURE. 610UB125 [UB] Side Elevation still shows solid lines inside the top and bottom flange outlines, and Front Elevation still shows dashed web lines. Structural was not updated (still 1.0.118), so this is expected; the entry stays OPEN, superseded by the CEMEMBER design, not closed. Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-06c-sbeam-ub.png, L3-06c-flanges-close.png.
 
 ## BUG-748 — DOTS hatch density does not agree across drawing scales (solid pink at 1:100)
 
@@ -1104,6 +1114,8 @@
 **Reference:** CODEX_LOOK_L2_20261018_1001.md, look L2-01 (BLOCKED / SURE); evidence L2-01-blocked-pasteclip.png, L2-01-id-prompt.png. Test: drive SM with the setting both false and true and typed identifiers B and 01, and a pure test that the identifier prompt consumes its answer. Related: BUG-632, BUG-630.
 
 **Status:** OPEN
+
+**Codex look L4 (19 Oct, installed Civil 3.0.56):** THIRD occurrence: L4-06a Q, at 'Enter first line of annotation text <Mtext>:' typing CODEX ARROW again produced '_pasteclip / Specify insertion point:'; Esc twice, U echoed 'GROUP PASTECLIP'. Same typing method in every case, so it still points at how Codex sends text, not at CE. The Q note editor was not reached again. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-30-q-unexpected-pasteclip.png.
 
 ## BUG-747
 
@@ -2279,6 +2291,8 @@
 4. **Proposed guard:** use a light-appropriate brand/subtitle asset or foreground; inspect the actual header in Light/Dark/FollowAutoCAD at supportedwindow/DPI sizes. Keep live theme preview and Discard behaviour. Standing approved Batch3/INT075 already authorises this neutral contrast correction; no separate new approval is required. No deployment by thischat.
 5. **Acceptance steps:** CEMANAGER -> SettingsGeneral -> Light; read both headernameandSuiteManagersubtitle without zoom; Discard restoresDark and savedsettings unchanged. After authorisedcandidateinstall alsoApply/reopen in isolatedprofile. Screenshot186/187 localV3UX_20261014. This is legibility, distinct from existing blue-colour BUG517.
 6. **Candidate14October2026:** draftPR1255, commit8789a8ed, based on installed48662ddd. Existing white-wordmark transparency now masks the live UiHeroHeaderTextBrush, preserving originalproportions/22pxheight. Both modern/net48 builds0warnings/0errors; existingappearancechecks3/3PASS; static source-derived Light/Dark renders personally inspected. Not installed, no realAutoCAD candidateacceptance; subtitle sourcebrush alreadyappropriate, runtime symptom still to check. Combine with approved theme work before installation. BUG580 remainsOPEN. Verification144-145 holds limitations and regressionchecklist.
+
+**Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56):** L3-01c PASS, SURE: staged Light shows dark readable header text; Discard restored Dark; title X closed. Status left OPEN for the desk, not marked FIXED. L3-01d DIFFERENT, SURE: the UI Theme list is words only (Follow AutoCAD, Light, Dark) with no preview pictures; a design question, queued for Tim as QUESTIONS_FOR_MONDAY section I item 1. Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-01c-light.png, L3-01d-theme-choices.png.
 ## BUG-579
 
 **Command / Area:** FPFC depth, FEDIT readback and CSFOOTINGSCHEDULE, installedStructural1.0.116+f180b349, real14Oct2026.
@@ -2650,6 +2664,8 @@
 
 **Status:** OPEN (LOW-MED). Filed 8 Oct by the controller. Not fixed until Tim confirms in AutoCAD.
 
+**Codex look L4 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56, double-click switch ON):** STILL SEEN: L4-01a DIFFERENT, SURE. Double-click on the P8 pit label again opened AutoCAD's own Enhanced Attribute Editor (block PIT LABEL 2, tag PIT_LABEL, value P8), not Edit Pit. Cancel, no change. Pipe line and IL text double-clicks DID open Edit Pipe P8 to P11 (L4-01b, L4-01c PASS). This is a bug, not a different expectation: Tim's 17 Oct ruling G2 says double-click any CE object opens its Edit window. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-05-pit-doubleclick.png, L4-53-pit-closeup.png.
+
 ---
 
 ## BUG-431
@@ -2969,6 +2985,8 @@
 **Also the S-18 finalizer (c651e623, GO, #652 stays in): LOW 1 Re-link accepts any object (circle, Xref insert) and redraws the footing from it (pre-existing); LOW 2 an Undo mark AutoCAD refuses fails silently (`LegacyToolCommon.cs:451`): add a log line; FIRST CHECKS AFTER INSTALL: delete PF2, U, REDO; LINE, FST, Cancel, U; locked-copy + #653 footer; DBMOD after FST + Cancel then Zoom and U; Re-link, Escape, U; ERASE a pad and U twice. If one fails: stop using FST Delete on real jobs; revert the #652 merge 9bc9f247 in the next Structural train.**
 
 **Status:** OPEN (items 2-6 to the Team; 1 and the S-18 first checks to Codex W9).
+
+**Codex look L4 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56):** STILL SEEN: L4-08 DIFFERENT, SURE. Double-click on the P2 cell of the placed Pit Schedule table opened AutoCAD's own Text Editor (MTEDIT), not a CE window. Typed C2 (after Ctrl+A) and Close Text Editor: the table read C2 while the plan label stayed P2; one U restored the table. Command line printed '** Undefined shape 80' and '** Undefined shape 50'. This is a bug, not a different expectation: the approved design (D-pack) says double-click on a placed schedule opens the Pit Schedule window at that cell. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-46-sched-doubleclick.png, L4-49-sched-editor-closed.png, L4-59-sched-closeup.png.
 
 ---
 
@@ -5576,6 +5594,8 @@
 ---
 
 **Codex re-test FAIL, 14 Oct 2026, Manager1.1.49+48662ddd:** actualCEMANAGER Status at1311x1073 and maximised1920x1080. Allthree Runningnow version/hash labels still overlap Installednextstart numbers; maximising retains fixed-widthcards. UnderlyingUIA values match actualrunning Civil3.0.49,Manager1.1.49,Structural1.0.116, but visibletext merges. Screens170/171 localV3UX_20261014. KeepOPEN; every card needs full40-characterhash and next-start value legible without collision at bothsizes.
+
+**Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56):** L3-01a and L3-01b PASS, SURE: the three status cards are separate and readable at the default 1311 x 1073 window and maximised 1920 x 1080; the version text no longer runs into the 'Installed next start' text. Left OPEN, not marked FIXED, for the desk. Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-01a-default.png, L3-01b-maximised.png.
 
 ## BUG-222
 
@@ -10533,6 +10553,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 
 **BUG-623 diagnostic follow-through —15 October:** actual reopened specimen plus two newly created ordinary MText controls and temporary CODEX_Q_EDIT_CONTROL/Arial style: native Standard control editor is readable, and repeated Q note editor is also readable. Native Standard style definition remains exactly unchanged, including empty font fields; E72 still has Standard/text CODEX ARROW. Both editors cancelled; no edit committed. Because reopen, new style and control objects all intervened, this does not isolate font loading or prove a CE repair. Initial blank editor remains valid evidence; failure is intermittent/context-dependent. Next repeat Q editor immediately after clean reopen, before any style/control creation; compare native controls in a separate copy. All temporary controls/style discarded, saved178926/2C3E and preferences unchanged, lease released. Evidence1163–1168 plus font-controls-native/proof. No extra plugin cases or percentage credit.
+
+**Codex look L4 (19 Oct, installed Civil 3.0.56):** the native text editor with '** Undefined shape 80 / 50' was seen again on the Pit Schedule table cell (L4-08, see BUG-396); Q itself (L4-06a) was BLOCKED again by the paste-command input fault (BUG-749). Evidence: CODEX_LOOK_L4_20261019_1502.md.
 
 
 ## BUG-624 — MLL left-side placement puts the note right of its arrow
