@@ -848,3 +848,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Mon 19 Oct 14:26 real clock (read from the PC clock) - desk: Run 32 fixes queued in triage section 11
 - Mon 19 Oct 16:22 real clock (read from the PC clock) - build/03 headless run 370 started.
 - Mon 19 Oct 16:29 Melbourne (PC clock): desk: Codex L3/L4 and Manager hunt fixes queued in triage section 12 and 13
+- Mon 19 Oct 16:32 real clock (read from the PC clock) - build/03 run 370: triage 11 line 1 (BUG-815 second attempt) fix pushed on #1436 at 82ceaf4e: twin-pipes tick now stored only on a detention pipe by CD and Edit Pipe (red first; Drainage net10 18419 pass, 3 known fail). Cause still unproven; run 31 copy needs downpipes re-saved to clear. Needs Opus re-review.
