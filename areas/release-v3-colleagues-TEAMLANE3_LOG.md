@@ -854,3 +854,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Mon 19 Oct 17:09 real clock (read from the PC clock) - build/03 headless run 371 started.
 - Mon 19 Oct 17:12 real clock (read from the PC clock) - build/03 run 371: triage 13 line 1 BUG-823 = DRAFT #1442 (b03/bug-823-staged-receipt): installer names ce-update-stage.json as the one allowed extra file. Tests compiled, not run (Installer.Tests rule). Needs Opus review.
 - Mon 19 Oct 17:13 real clock (read from the PC clock) - build/03 run 371: triage 13 line 2 BUG-824 = DRAFT (b03/bug-824-installer-dbx): command-free .dbx treated like command-free .arx. Tests compiled, not run. Needs Opus review.
+- Mon 19 Oct 17:18 real clock (read from the PC clock) - Max builder CLAIM: BUG-836 (triage 13 line 19)
