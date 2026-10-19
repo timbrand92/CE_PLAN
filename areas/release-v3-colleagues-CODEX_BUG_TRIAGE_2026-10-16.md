@@ -330,3 +330,72 @@ Added Mon 19 Oct 2026 by the desk (headless job). Source: `areas/release-v3-coll
 4. **BUG-822 (LOW): a "What's New" palette opened partway through a session.** Find which step opens it; failing test first: What's New opens only at first start after an update or on request.
 
 **Not in the queue:** BUG-698, 740 numbering, 742, 789 (two-text case), the Edit Pipe cascade regression (BUG-782 and 797 apply/U/REDO) PASS on the robot; they stay OPEN until Tim or Codex accepts. The locked-layer and low-end cases for BUG-782 and 797 were not tested.
+
+## 12. Codex looks L3 and L4 on 3.0.56 (19 Oct)
+
+Added Mon 19 Oct 2026 by the desk (headless job). Sources: `CODEX_LOOK_L3_20261019_1427.md` (PASS 17, FAIL 3, DIFFERENT 1) and `CODEX_LOOK_L4_20261019_1502.md` (PASS 2, DIFFERENT 5, BLOCKED 10, UNSURE 3), real AutoCAD 2027 on test copies, installed Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118. No new BUG numbers: every finding matched an existing bug and got a "Codex look L3/L4 (19 Oct)" note (BUG-750, 751, 752, 753, 755, 749, 580, 221, 430, 396, 623). Nothing here is Tim-accepted. Structural is still 1.0.118, so the three Structural FAILs are unchanged from 18 Oct. The ten BLOCKED looks are tool gaps, listed in ROBOT_GAPS_2026-10-19.md, not in this queue.
+
+**Shared root cause (lanes 03 and 04):** double-click on a CE object does not reach one shared router for every object type. Pipe and IL text work; the pit label (a block with attributes) and the placed schedule table cell are handed to AutoCAD's own editor (BUG-430, BUG-396), and the downpipe prints a command-line prompt (QUESTIONS_FOR_MONDAY section G item 1). Tim's ruling G2 (17 Oct): double-click any CE object opens its Edit window.
+
+### build/03 Civil engine, Manager, shared: 1 line
+
+1. **BUG-430 (MEDIUM-LOW): double-click on the P8 pit label opens AutoCAD's Enhanced Attribute Editor, not Edit Pit.** The double-click redirect (`CompoundEditModeService`) handles the pipe and the IL text but not the PIT LABEL 2 attribute block. Failing test first: a double-click on the pit label block (tag PIT_LABEL) is routed to the Edit Pit command for that pit, with the switch ON. Fold the downpipe case in once Tim answers section G item 1.
+
+### build/04 Civil windows, schedules, QA: 2 lines
+
+1. **BUG-396 (MEDIUM): double-click on a placed Pit Schedule table cell opens AutoCAD's own Text Editor, and the plan label does not follow.** It also prints "Undefined shape 80" and "Undefined shape 50" (BUG-623). Approved design: double-click on a placed schedule opens the Pit Schedule window at that cell. Failing test first: a double-click on a cell of a linked table raises the Pit Schedule window on that pit's row, and a typed rename changes table, plan label and pit data in one undo step. Check BUG-396 item 1 (a table-cell edit may never reach CE) first. Shared root cause with BUG-430.
+2. **BUG-753 and BUG-814 (LOW-MEDIUM): Checks rows name the pipe "unnamed pipe" with no pit names to tell two apart, or still by handle on other drawings.** Failing test first: a row for a pipe with no id says "unnamed pipe" with its From pit and To pit, never an id or handle. The Show where glow was not seen (UNSURE, fade time unknown): the next Codex look takes the capture faster; no fix until it is seen to fail.
+
+### build/02 Structural: 3 lines
+
+1. **BUG-751 (MEDIUM): CEHATCH library cards and the Waffle preview show "No preview: the drawing scale is not valid" on a Structural copy with DIMSCALE 1.** Five cards (Load-bearing wall over and under, Earth, Concrete, Waffle). Failing test first: the card image for every library entry is produced at scales 1, 20, 50 and 100; the scale note may show beside a picture, never in place of it. Related: BUG-614, BUG-748.
+2. **BUG-752 (LOW): long folder paths are clipped on three Structural Settings pages.** System > Installation (Loaded plugin file, Ribbon file), Schedules > Workbook files (three paths), Schedules > Markup service (Last markup folder). Failing test first: a render check of those pages with a 120-character path at 1407 x 965 shows the whole path (wrapped or scrolling).
+3. **BUG-755 (LOW): RC beam Type 2 and Type 6 pictures meet the top edge of their boxes.** Failing test first: each thumbnail's drawn bounds lie inside its picture box with a margin.
+
+**Not in the queue:** BUG-750 (SBEAM inner flange lines) is superseded by the CEMEMBER design and stays OPEN (D6), no fix. BUG-749 (paste command at a Q or Section Mark prompt) is not shown to be a CE fault: all three occurrences came from how Codex typed. BUG-580 and BUG-221 passed (Manager Light header, status cards); they stay OPEN until Tim or Codex accepts, and need no builder work.
+
+## 13. Manager, installer, admin, update route and settings hunt (19 Oct)
+
+Added Mon 19 Oct 2026 by the desk (headless job). Source: `areas/release-v3-colleagues-HUNT_MANAGER_INSTALL_2026-10-12.md` (read-only audit of Civil 3.0.56 / Manager 1.1.56 on `rel-20261019a` and Structural 1.0.118 on `rel-20261017s`; nothing was run or seen in AutoCAD). Filed as BUG-823 to BUG-853 (HUNT-MI-n is BUG-(822+n)); none was already in the carpark (BUG-425, 476, 485, 489 and 491 are neighbours, cross-referenced). Nothing here is Tim-accepted. **Colleague install day:** BUG-823 and BUG-824 together mean the Manager update route cannot finish anything today.
+
+**Shared root causes:** (a) BUG-823, 824, 834 are the installer and the release check (one package-root rule, one module-type rule). (b) BUG-825, 827, 831 are the Civil settings load and save path: one safe-write and "never overwrite a file we never opened" fix, plus a migrate-once flag. (c) BUG-830 and 839 are one fault: the Civil settings page applies its whole opening snapshot instead of only the fields changed. (d) BUG-836 and 837 are one version-comparison helper (strip "v" and "+..."). (e) BUG-842, 844 and 848 are report and settings files read or sent while half written.
+
+### build/03 Civil engine, Manager, shared: 26 lines, HIGH first
+
+1. **BUG-823 (HIGH): the installer refuses every update Manager gets ready.** The receipt beside the three signed files breaks the "exactly three files" rule. `CeUpdateStagingService.cs`, `SafeBundleInstaller.cs:240-249`, `OfficialReleaseGate.cs:732-735,1943-1957`. Failing test first: `InstallerApplicationTests` `Run_ActivateStaged_InstallsAndWritesCompletedResultRecord` (should be red now; check it is run, BUG-247). Root cause (a).
+2. **BUG-824 (HIGH): the installer refuses Civil 3.0.56, and Manager on a PC with it, over the .dbx file.** `SafeBundleInstaller.cs:446-459,509-543`. Failing test first: a `SafeBundleInstallerTests` case with a command-free .dbx ComponentEntry installs. Root cause (a).
+3. **BUG-825 (HIGH, engineering result): Civil puts a maximum velocity of 3.0 m/s back to 6.0 and label heights under 200 to 250 at every start.** `Services/SettingsService.cs:145-170,200-210`. Failing test first: test scope with 3.0 on disk, reload, still 3.0; the move runs once behind a flag. Root cause (b). The step-iron 1000 to 900 part waits on QUESTIONS_FOR_MONDAY section I item 6.
+4. **BUG-827 (HIGH): an unreadable Civil settings file is overwritten with standard values at the next save.** `SettingsService.cs:235-240,472-482,522-561`. Failing test first: file opened with no sharing, reload, then save is refused and the bytes are unchanged. Root cause (b).
+5. **BUG-831 (MEDIUM): Civil writes its settings file in place.** `SettingsService.cs:608-620`. Failing test first: a source guard against `File.WriteAllText` on the settings path. Do with item 4. Root cause (b).
+6. **BUG-829 (MEDIUM-HIGH): a colleague can still take the administrator role.** `CeAdminPolicyService.cs:47-69,122-127,164-167`. Failing test first: only the local list exists, a colleague seeds the shared list, `GetPolicySnapshot` for "tim" still says administrator (promote the local list when the folder is reachable).
+7. **BUG-828 (MEDIUM): a CE ribbon click during a running command types the command name into it.** `RibbonBuilder.cs:695`. Failing test first: the string sent starts with two cancels when a command is active.
+8. **BUG-832 (MEDIUM): a failed Civil stage does not stop Manager being staged alone; the status line ignores Manager.** `CeApprovedReleaseService.cs:602-608`. Failing test first: `StageManagedUpdates` with a failing Civil install delegate never calls Manager's.
+9. **BUG-833 (MEDIUM): one staging error turns off the status dot and report upload for the session.** `Plugin.cs:140-161`, `CeApprovedReleaseService.cs:604`. Failing test first: a throwing install delegate returns notes, not an exception.
+10. **BUG-834 (MEDIUM): the installer installs any old stage.** `SafeBundleInstaller.cs:133-329`. Failing test first: a stage older than the approval is refused or warned. Waits on QUESTIONS_FOR_MONDAY section I item 5 for which.
+11. **BUG-850 (MEDIUM): Manager rebuilds the Civil tab and ignores "Show the old CE tabs".** `CeUnifiedRibbonService.cs:127-133`. Failing test first: a source guard, one builder owns the tab.
+12. **BUG-843 (MEDIUM): name matching in the administrator list fails** ("users" lower case, "CE\tim", leading space). `CeAdminPolicyService.cs:57`. Failing test first: `["CE\\tim"]` for user "tim" is administrator. The Add administrator button waits on QUESTIONS_FOR_MONDAY section I item 4.
+13. **BUG-844 (MEDIUM): one half-copied report blanks the Admin Dashboard.** `CeAdminAnalyticsService.cs:208-227`. Failing test first: `LoadDashboard` with a 0-byte usage file still returns the others. Root cause (e).
+14. **BUG-845 (MEDIUM): Create bundle and Mark as Investigated have no error catch.** `PluginAdminWindow.xaml.cs:182-192,329-344`. Failing test first: a source guard that both catch.
+15. **BUG-842 (LOW): CE Blocks settings fall back to defaults and are then saved.** `CeBlocksSettings.cs:39-85`. Failing test first: a locked file on load then Save leaves the original bytes. Root cause (e).
+16. **BUG-848 (LOW): the upload can send a half-written .tmp file.** `CeAdminStorageService.cs:170-192`. Failing test first: a .tmp in the folder is left alone. Root cause (e).
+17. **BUG-835 (LOW-MEDIUM): approving the same version twice loses the real roll-back version.** `CeApprovedReleaseService.cs:100,119-128`. Failing test first (after a small seam): same version twice keeps the first roll-back.
+18. **BUG-851 (LOW-MEDIUM): Disable on Restart also disables the pipe-object file and native grips.** `CePluginRegistryService.cs:251-256`. Failing test first: on a copy of Civil's manifest only the main dll entries change.
+19. **BUG-836 (LOW): devices behind is wrong for Structural.** `CeAdminAnalyticsService.cs:46-48,156-158`. Failing test first: "v1.0.118" against approved "1.0.119" counts as behind. Root cause (d).
+20. **BUG-837 (LOW): no restart message from 3.0.99 to 3.0.100.** `CeOneGlanceStatus.cs:134-135`. Failing test first: `CompareVersions("3.0.100", "3.0.99+abc")` is greater than 0. Root cause (d).
+21. **BUG-838 (LOW): read-only synced files can leave old folders behind.** `CeUpdateStagingService.cs:607,784-798`. Failing test first: a read-only source file is staged and the old folder is removed.
+22. **BUG-846 (LOW): fixed salt when the privacy code file cannot be saved.** `Shared/CE_SHARED/Services/CePiiHash.cs:128-135` (Structural has the same pattern, `StructuralPiiHash.cs:53`; lane 02 can take that half). Failing test first: with an unwritable folder two sessions give different codes.
+23. **BUG-847 (LOW): the support-zip cleaner keeps names under AppData and Temp.** `CeSupportBundleScrub.cs:19,53,67-90`. Failing test first: a Temp PDF named after a job and an autosave .sv$ both come out coded.
+24. **BUG-849 (LOW): an online-only admin list is reported as "damaged".** `CeAdminPolicyService.cs:77-79`. Failing test first: an offline-file read error says "not downloaded".
+25. **BUG-852 (LOW): ribbon buttons call commands from modules that may not be installed.** `CeToolsRibbonDefinitionService.cs:18`. Failing test first: a cross-module guard. Waits on QUESTIONS_FOR_MONDAY section I item 7.
+26. **BUG-853 (LOW): the ribbon click log grows for ever and records drawing names.** `RibbonBuilder.cs:705-716`. Failing test first: a source guard that the log is capped and has no drawing name.
+
+### build/04 Civil windows, schedules, QA: 2 lines
+
+1. **BUG-830 (MEDIUM-HIGH): Reset Civil in CEMANAGER resets values the page does not show** (LPD note, templates folder, confirmed clearances and more). `CivilSettingsView.xaml:197-200`, `AdvancedSettingsViewModel.cs:1045-1105,1512-1606`. Failing test first: `AdvancedSettingsViewModel` with a fake writer, Reset then Apply leaves the hidden values alone. Root cause (c).
+2. **BUG-839 (MEDIUM): the CEMANAGER Civil page can undo a change just saved in CDS.** `CeCivilSettingsBridge.cs:20`, `AdvancedSettingsViewModel.cs:1174,1259,1512`. Failing test first: two view-model copies on one file, the second Apply keeps the first's cover depth. Root cause (c): fix 1 and 2 together.
+
+### build/02 Structural: 3 lines
+
+1. **BUG-826 (HIGH): Structural Reset Defaults wipes every setting in one click.** `CeSettingsDialog.xaml:18`, `CeSettingsDialog.xaml.cs:459-462`, `SettingsService.cs:108-121,510-520`. Failing test first: after the reset logic comes out of the window code, reset keeps the migration flags and the lists with no page, and a kept copy exists.
+2. **BUG-840 (MEDIUM): a second AutoCAD's routine save reverts a change made in the first.** `SettingsService.cs:122-137,919-931`, `LoadRecovery.cs:955`. Failing test first: two settings copies on one file, each routine save leaves the other's field alone.
+3. **BUG-841 (LOW-MEDIUM): CESETTINGS ignores a mistyped number and closes as if it saved.** `CeSettingsDialog.xaml.cs:257-270,563-592`. Failing test first (after parsing leaves the window code): "1,200" is refused with the box named.
