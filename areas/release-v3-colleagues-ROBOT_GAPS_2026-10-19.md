@@ -15,3 +15,11 @@ Source: `areas/release-v3-colleagues-CLAUDE_DRIVER_RUN32_V2_2026-10-19.md`. Thes
 11. **Pit Schedule read is at the node cap.** `ui tree -Depth 6` read 399 of 400 nodes with one new pit; one more row truncates. Smallest change: raise the node cap, or add a "schedule rows" verb.
 12. **Tidy labels Apply, U and REDO of an apply, locked layer and timing figure were not tested.** Why: the case never got past "No clear spot found". Smallest change: none until the tidy bug is fixed; then repeat on the same fixture.
 13. **Cosmetic false alarm "AutoCAD may be waiting at a prompt" after CDTAG and CDSYNC** (completed true, no command active). Smallest change: have the driver check the active-command flag before warning.
+
+## Codex L4 blocked looks (19 Oct)
+
+Source: `CODEX_LOOK_L4_20261019_1502.md` (Codex mouse look on installed Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118). 10 of 17 looks BLOCKED; none is a product fault. Product outcome for each is untested.
+
+1. **L4-02 (Tidy labels on two clashing labels), L4-03a (end grip), L4-03b (label grip), L4-03c (arrow grip), L4-04 (grip copy against plain COPY), L4-06b (pad grip and schedule), L4-06c (rebar live length), L4-09 (CEBLOCKS live placement): the mouse tool cannot move the cursor without clicking.** Every one of these needs click, move without click, screenshot, click. Smallest change: a mouse verb that moves the cursor and holds (hover or drag with the button held), and a Ctrl-held click for L4-04.
+2. **L4-06a (Q leader note): typed text became a paste command.** Typing CODEX ARROW at 'Enter first line of annotation text <Mtext>:' produced '_pasteclip / Specify insertion point:' (the third time, after BUG-749). Smallest change: send text to the prompt by a different input method (typed keys, not a paste shortcut) and confirm the prompt shows the text before Enter. Not a CE fault yet.
+3. **L4-06d (Structural checklist splitter): the splitter target could not be found.** A 150-pixel drag from the apparent divider did nothing visible, and no close control for the docked palette was identified (it stayed docked until AutoCAD exit). UNSURE. Smallest change: name the splitter and the close control in the look card, or read them from the window tree; then repeat. If the palette truly has no close control, that is a new finding for the Structural lane.
