@@ -315,6 +315,8 @@
 
 **Status:** OPEN
 
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): UNPROVEN:** CEMANAGERADMIN opened read-only and the Dashboard says "Behind Approved 2", but the Machines and Updates tabs were not read (that needs a tab click, forbidden to the robot), so it is not known which machine is behind or which version it reads. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 11.
+
 ---
 
 ## BUG-834 — The installer will install any old stage left on disk: no check against the current approval, no downgrade guard
@@ -455,6 +457,8 @@
 
 **Status:** OPEN
 
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): PASS through the settings guard only (not through the Settings window):** with oldStartingValuesMoved true and maximumPipeVelocity 3.0 set before launch, a 20 m 225 mm pipe at 1 in 10 gave "Full-bore velocity 4.64 m/s exceeds maximum 3.00 m/s", no "CE moved the maximum pipe velocity" line appeared and the file was not rewritten. Not run: the control (6.0 gives no warning) and the old-file path (3.0 with no flag moves to 6.0 once and says so). Needs the Settings page save-and-restart on Tim's PC for the full chain. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 9. Not marked FIXED.
+
 ---
 
 ## BUG-824 — The installer refuses Civil 3.0.56, and Manager on any PC with Civil 3.0.56, because of the .dbx pipe-object file
@@ -497,6 +501,8 @@
 
 **Status:** OPEN
 
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): STILL SEEN (no claim about the cause):** a docked "Creative Engineering | What's New" palette was in the window list in session 1 after the cascade, CDSYNC and MOVE (quit closed it); in session 2 none was listed 35 s after launch or at quit six minutes later. So it opens some minutes after start-up or after one of the commands run; which one is not known. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, C item 3.
+
 ---
 
 ## BUG-821 — CDTAG ignores a block that is already selected and asks for a pick
@@ -524,6 +530,8 @@
 **Reference:** CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 17.2. The report says the code counts a pipe as having text when either end has one (`HasDrawnInvertText`). Related BUG-789. Needs Tim's call: leave as designed or draw the missing end.
 
 **Status:** OPEN
+
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): wording PASS, question still open:** with one of the two IL texts of a pipe erased, Recover Inverts now prints "[CE] 6 pipes have only one of their two invert texts, so nothing was drawn for them (pipe AGI -> C1, pipe TG1 -> C1, pipe AGI -> C1, pipe AGI -> P1, pipe AGI -> P1, and 1 more). Add the missing text by hand." On the untouched fresh copy the same command says 5 pipes, so the sixth is the pipe I erased. STILL SEEN: it still draws nothing for such a pipe, and the totals line still says "26 already had invert text" although those pipes are inside that number and the line right below says they were not drawn. Tim's question (should CE draw the missing end?) stays open. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 8 and C item 6.4.
 
 ---
 
@@ -587,6 +595,8 @@
 
 **Status:** OPEN
 
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): STILL SEEN:** after a typed MOVE of P3 with the Tidy labels switch ON, four lines still end '(on "the block Drawing Border")' (pipe P3 -> P2 label, pipe P4 -> P3 label, start invert text, end invert text). Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 7 and C item 6.3.
+
 ---
 
 ## BUG-815 — CDCHECKS rule R-06 says "detention diameter" for 100 and 150 mm downpipes
@@ -602,6 +612,8 @@
 **Status:** OPEN
 
 **run 32 (19 Oct, installed Civil 3.0.56 / C-45): STILL SEEN:** the review said fix #1436 stopped a 100 or 150 downpipe counting as a detention pipe whenever a "0" sits in its detention-length field. The robot still sees "detention diameter 100 mm outside 225600 mm" rows on 100 and 150 mm downpipes (1093C7, 109430, 10AAB6, 1136A4, AGI to C1, AGI to P1, WT1, WT2, WT10, WT11, WT12 and others), with the same counts as 3.0.55 ("63 to look at, 243 OK, 312 not known"). So the fix did not take effect on that drawing. Cause unproven: it may be a different code path, a stale stored value, or the switch/default; do not guess. The robot could not read the pipe record (no extended data on 1093C7). Evidence: CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 6.
+
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): STILL SEEN:** CDCHECKS on the same downpipe fixture still says "63 to look at, 243 OK, 312 not known" (the same three numbers as 3.0.55 and 3.0.56); 14 of the 20 printed rows are R-06 "detention diameter 100 mm (or 150 mm) outside 225600 mm" rows, the same 14 as run 32. The review said fix #1436 stopped a 100 or 150 downpipe counting as a detention pipe whenever a "0" sits in its detention-length field; on this drawing the fix did not take effect. Cause unproven: it may be a different code path, a stale stored value, or the switch/default; do not guess. NEW EVIDENCE: Edit Pipe on a 100 mm downpipe of the fixture (handle 1093C7) reads "Detention pipe, 100 mm, UPVC" with the Detention button ON and an EMPTY "Required detention pipe length" box (Twin detention pipes off, no inverts set), so the pipe's own record says Detention with no length; this is not the stored-length-zero case #1436 changed. Not known: whether the fixture already carried the flag or CE set it when it upgraded 49 pipes to CE pipe objects on opening. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 4 (and 4.2).
 
 ---
 
@@ -619,6 +631,8 @@
 
 **run 32 (19 Oct, installed Civil 3.0.56 / C-45):** part 2 (CDFIXTAGS refusal wording): PASS, the DP3 line now reads "CE could not match this source block to the drawing's own records, so nothing was changed. Run CDREPAIR, then try again." (B item 13). Part 3 (CDCHECKS names pipes by handle): STILL SEEN: the R-06 rows still say "1093C7", "109CCF and WT10", "10993C and 10996E", never "unnamed pipe"; the rows come from `RulebookEngine.PipeMark`, which falls back to the handle (B item 7). Part 1 (CDTAG retag of a tagged source): UNPROVEN, CDTAG ignored the pick-first selection (B item 14, see BUG-821). The untagged-name refusal reads plainly: "[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed." run 32: PASS for that line (B item 12; see BUG-742). Robot evidence only.
 
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): part 3 wording PASS, STILL SEEN for the rest:** the CDCHECKS rows now say "unnamed pipe" for an untagged pipe, for example "unnamed pipe and WT4: unnamed pipe flows to WT4: Unresolved" and "unnamed pipe: R-06 unnamed pipe: warn ..."; none of the 20 printed rows shows a handle, and named pipes still show their names (WT10 to IO8, AGI to C1). Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 5. Part 1 (CDTAG retag of a tagged source) and part 4 (the "AGI 1" spacing) were not run. Still built and tested only, not Tim-accepted; not marked FIXED.
+
 ---
 
 ## BUG-813 — CDFIXTAGS: answering Yes renamed nothing on the run 31 fixture ("The captured object has no unique matching drawing/project spine identity")
@@ -634,6 +648,8 @@
 **Status:** OPEN
 
 **run 32 (19 Oct, installed Civil 3.0.56 / C-45): STILL SEEN:** the DP3 pair is again proposed as "DP3 block at X 64027.96, Y -69576.42 -> DP4"; answering Yes gives "No block was renamed. 4 were not renamed" (the three AGI blocks refused as designed, the DP3 block refused with "CE could not match this source block to the drawing's own records"). The reason is now in plain words, but the rename still does not apply, and the fixture is still two pit blocks, so a fixture fault is not ruled out. CDREPAIR opened but was not run, CDFIXTAGS was not re-run. Evidence: CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 13.
+
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): not run.** CDFIXTAGS was not opened (the fixture and allow-list gaps still stand, see the robot gaps file). Status unchanged from run 32: STILL SEEN. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, C item 4 and D item 6.
 
 ---
 
@@ -861,6 +877,8 @@
 
 **run 32 (19 Oct, 3.0.56): the cascade Apply, U and REDO regression PASSES; the locked-layer case itself was NOT tested.** Edit Pipe cascade answered Yes, Apply, U, REDO worked, two further U steps put the Pit Schedule back with 0 differences (CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B items 1 to 3). A locked pipe layer was not tried (B item 16). Robot evidence only.
 
+**run 33: PASS (19 Oct, 3.0.57):** Edit Pipe cascade answered Yes, Apply, U, REDO worked as in run 32 (levels changed, sizes unchanged). The locked-layer case was not tested. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 1. Robot pass only; not marked FIXED.
+
 ---
 
 ## BUG-796 — Four Repair Center buttons change the drawing with no preview or Yes/No; their reports count candidates, not successes
@@ -1074,6 +1092,8 @@
 **Status:** OPEN
 
 **run 32 (19 Oct, 3.0.56): the cascade Apply, U and REDO regression PASSES; the low-end hand-typed level case itself was NOT tested** (UNPROVEN, B item 16: judged it might raise the Uphill message box the driver cannot answer). Evidence: CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B items 1 to 3 and 16. Robot evidence only.
+
+**run 33: PASS (19 Oct, 3.0.57):** Edit Pipe cascade answered Yes, Apply, U, REDO: REDO said "Everything has been redone"; the Pit Schedule showed the cascade levels (P1 17.18, P2 17.33, P3 17.50, P4 17.45, C1 17.07), sizes unchanged. The locked-layer and low-end cases were not tested. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 1. Robot pass only; not marked FIXED.
 
 ---
 
@@ -3678,6 +3698,8 @@
 **Also seen by CLAUDE_DRIVER_RUN31_V2 (18 Oct, 3.0.55):** after a typed MOVE of P3 the line still reads 'no clear spot ... (on "the block Drawing Border")', and CDCHECKS rows still name pipes by handle (see BUG-814, BUG-816).
 
 **run 32 (19 Oct, installed Civil 3.0.56 / C-45): STILL SEEN:** the new tidy line "No clear spot found: pipe 11C65B start invert text" and the Recover Inverts line "Pipe 11C65B" name an unnamed pipe by handle; the P3 to P2 label line still says (on "the block Drawing Border"). Evidence: CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B items 17 and 18.
+
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): name half PASS, Drawing Border half STILL SEEN:** the tidy line now says "a pipe's start invert text" and names the other pipes by name (pipe P3 -> P2 label, pipe P4 -> P3 ...), never a handle (new pit P8, 20 m pipe). The typed-MOVE lines still end '(on "the block Drawing Border")' and the placement line still says '(on "pit P8")' with the text visibly clear of the pit (see BUG-141 and BUG-816). Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B items 6 and 7.
 
 ---
 
@@ -9065,6 +9087,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **run 32 (19 Oct, installed Civil 3.0.56 / C-45): STILL SEEN:** same fixture (new pit P8, 20 m pipe, inverts 18.000 / 17.900). Placement printed 'a pipe's start invert text: no clear spot among its usual positions, left where it is (on "pit P8")'; CDTIDYLABELS (All) said "Will move 0 · Placed by hand (left alone) 0 · No clear spot found 2". The close-up (tidy32_close.png) shows the pit's box ending about x = 673 and "IL 18.000" starting about x = 700 (about 27 pixels clear), not touching. Evidence: CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 18. Still not Tim-accepted.
 
+**run 33 (19 Oct night, installed Civil 3.0.57 / C-46): STILL SEEN:** new pit P8, 20 m pipe, inverts 18.000 / 17.900: placement printed "a pipe's start invert text: no clear spot among its usual positions, left where it is (on "pit P8")"; CDTIDYLABELS (All) said "Will move 0 · Placed by hand (left alone) 0 · No clear spot found 5" (four of the five come from the typed MOVE of P3 kept by its REDO, the fifth is the new pipe's start invert text). The close-up (tidy33_close.png) shows the pit box ending about x = 657 and "IL 18.000" starting about x = 690, about 30 pixels clear, not touching. Nothing ever reached "Will move", so Apply, U and REDO of an apply, a locked layer and the timing figure are still untested. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B items 6 and 7.
+
 ---
 
 ## BUG-142
@@ -11353,3 +11377,5 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **run 31 (18 Oct, 3.0.55): PASS.** CDSYNC (typed) relinked 11 pits and 49 pipes and the Pit Schedule read before and after showed 0 differences; sizes 450, 375, 150 and 100 unchanged (CLAUDE_DRIVER_RUN31_V2_2026-10-18.md, B item 9). Real AutoCAD 2027, test copy, Claude robot; not Codex-accepted, not Tim-accepted.
 
 **run 32: PASS (19 Oct, 3.0.56).** CDSYNC again relinked 11 pits and 49 pipes; the Pit Schedule read before and after showed 0 differences, sizes 450 / 375 / 150 / 100 unchanged (CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 4). Robot evidence only; not FIXED until Tim or Codex accepts.
+
+**run 33: PASS (19 Oct, 3.0.57).** CDSYNC again relinked 11 pits and 49 pipes; the Pit Schedule read before and after showed 0 differences, sizes unchanged (CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 2). Robot pass only; not marked FIXED.
