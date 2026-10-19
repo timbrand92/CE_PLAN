@@ -706,3 +706,4 @@ One line per job: time (Melbourne), item, PR, state, usage.
 - Tue 20 Oct 02:40 desk: a Team Sonnet fixer (pid 50324) is handling the Opus review fixes on #1474, #1475 and #1477; an Opus review of #1478-#1480 is running. Do NOT touch those PRs.
 - Tue 20 Oct 02:46 PC clock: build/04 headless run 397 started (lane_loop; bug fixes only per pause ruling A).
 - Tue 20 Oct 02:52 PC clock: build/04 run 397: no bug work left. Checked: triage section 14 build/04 lines (BUG-813 already built as #1478 in run 396, awaiting its Opus review which the desk says is running; BUG-822 needs a window list from the robot, unchanged), BUG_CARPARK (23:35 desk notes only), REVIEWLANE_LOG: no fix list for any build/04 PR. Nothing built, nothing pushed to the plugin repo.
+- Tue 20 Oct 04:48 PC clock: build/04 headless run 398 started (lane_loop; bug fixes only per pause ruling A).
