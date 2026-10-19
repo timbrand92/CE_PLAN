@@ -74,3 +74,7 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-19 12:25 | ROBOT | Run 32 (robot pass 11, Civil 3.0.56) launched on Team Sonnet pid 67804 | desk_jobs/tester_run32.txt
 2026-10-19 12:30 | CLEAN | deleted superseded candidate folders c1027..c1038 (2 GB) and 7 more old worktrees; C: 23.1 GB (floor 12) | scratch scripts
 2026-10-19 12:31 | METER | Max 40% (pace ~42, a little behind), Team 25% (5h 0%, pace ~28, a little behind), Codex 15% (ahead, idle) | desk_tick
+2026-10-19 13:02 | ROBOT | Run 32 (robot pass 11, Civil 3.0.56) done: PASS 7, FAIL 4, BLOCKED 4, UNPROVEN 4; regressions (cascade, CDSYNC, quick edits) PASS; BUG-815 R-06 false downpipe rows STILL SEEN; tidy labels IL still not moved; CDFIXTAGS rename still not proven (wording fixed); CDTAG plain refusal PASS; Recover Inverts PASS; settings restored by hash | CLAUDE_DRIVER_RUN32_V2
+2026-10-19 14:30 | CODEX | Launched Codex looks L3 (windows/pictures) and L4 (mouse) on Civil 3.0.56 via launch_codex_c45.ps1 (pwsh pid 80824), gpt-6.1-sol low, about 10 points | desk_jobs/launch_codex_c45.ps1
+2026-10-19 14:31 | FILE | Filing job for run 32 launched (Sonnet, Team) | desk_jobs/file_run32_job.txt
+2026-10-19 14:32 | METER | Max 41% (pace ~44, a little behind), Team 27% (5h 10%; pace ~30, behind), Codex 15% (pace ~17, on pace); C: 22 GB | desk_tick
