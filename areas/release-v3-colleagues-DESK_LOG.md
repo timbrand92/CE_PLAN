@@ -100,3 +100,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-19 23:05 | INSTALL | Civil 3.0.57 / Manager 1.1.57 (C-46 0bbf4882): every file matched the candidate (828 + 78), CE_SHARED identical, settings unchanged; installed 14 minutes after the payload report (watcher worked) | QUEUE 277, install_c46_desk.log
 2026-10-19 23:08 | ROBOT | Run 33 (robot pass 12, Civil 3.0.57) launched on Team Sonnet | desk_jobs/tester_run33.txt
 2026-10-19 23:10 | METER | Max 44%, Team 31%, Codex ~45% (hold); C: 17.4 GB | install
+2026-10-19 23:33 | ROBOT | Run 33 (robot pass 12, Civil 3.0.57) done: PASS 7, STILL FAILS 2 (BUG-815 R-06 false downpipe rows; Tidy labels start invert text), BLOCKED 1, UNPROVEN 1; regressions PASS; unnamed-pipe wording PASS; Recover Inverts one-text line PASS; BUG-825 typed velocity PASS via the settings guard | CLAUDE_DRIVER_RUN33_V2
+2026-10-19 23:40 | FILE | Filing job for run 33 launched (pid 75780); continuity record section 16 written (state, next train, lessons) | desk_jobs/file_run33_job.txt
