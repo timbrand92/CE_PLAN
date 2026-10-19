@@ -857,3 +857,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Mon 19 Oct 17:18 real clock (read from the PC clock) - Max builder CLAIM: BUG-836 (triage 13 line 19)
 - Mon 19 Oct 17:20 real clock (read from the PC clock) - Max builder CLAIM: BUG-834 (triage 13 line 10; slice lines 10-18, branch b03/bug-834-old-stage off claude/rel-20261019a)
 - Mon 19 Oct 17:23 real clock (read from the PC clock) - Max builder: BUG-836 and BUG-837 (triage 13 lines 19, 20) DRAFT PR #1445 (b03/bug-836-devices-behind). Max builder CLAIM: BUG-838 (triage 13 line 21)
+- Mon 19 Oct 17:36 real clock (read from the PC clock) - Max builder: BUG-834 = DRAFT #1444 (installer warns on older stage; refuses older than approved via optional --approved-version; Installer tests compiled, not run). Max builder CLAIM: BUG-850 (triage 13 line 11)
