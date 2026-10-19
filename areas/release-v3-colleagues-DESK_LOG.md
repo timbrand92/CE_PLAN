@@ -78,3 +78,6 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-19 14:30 | CODEX | Launched Codex looks L3 (windows/pictures) and L4 (mouse) on Civil 3.0.56 via launch_codex_c45.ps1 (pwsh pid 80824), gpt-6.1-sol low, about 10 points | desk_jobs/launch_codex_c45.ps1
 2026-10-19 14:31 | FILE | Filing job for run 32 launched (Sonnet, Team) | desk_jobs/file_run32_job.txt
 2026-10-19 14:32 | METER | Max 41% (pace ~44, a little behind), Team 27% (5h 10%; pace ~30, behind), Codex 15% (pace ~17, on pace); C: 22 GB | desk_tick
+2026-10-19 16:25 | CODEX | Looks L3 and L4 on Civil 3.0.56 done: L3 PASS 17 FAIL 3 DIFFERENT 1; L4 PASS 2 DIFFERENT 5 BLOCKED 10 (no FAIL); Codex weekly reading 45% (was 15% on Sun 11:44; the jump to 43% by Mon 14:25 was NOT from desk jobs: cause unknown, pace line ~19%) so no more Codex launches until the pace line catches up | CODEX_LOOK_L3_20261019_1427, L4_20261019_1502
+2026-10-19 16:27 | FILE | Run 32 filed (BUG-820..822, triage section 11, ROBOT_GAPS 13 gaps); launched filing job for Codex L3/L4 and the Manager hunt (pid 77004) | file_l3l4_manager_hunt_job.txt
+2026-10-19 16:30 | METER | Max 41% (pace ~46, behind), Team 28% (pace ~31, behind), Codex 45% (pace ~19, AHEAD, hold) | desk_tick
