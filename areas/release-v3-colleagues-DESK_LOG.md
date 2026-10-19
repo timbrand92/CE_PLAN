@@ -97,3 +97,6 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-19 22:45 | METER | Max 44% (pace ~46, a touch behind), Team 31% (pace ~35, behind), Codex ~45% (pace ~22, hold); C: 19.9 GB | desk_tick
 2026-10-19 22:55 | GO | Train C-46 Opus finalizer GO: branch claude/rel-20261019b final head 1de8d3fd (REGRESSION_LOG entry only, no code change); 25 PRs stay; installer release gate change #1442 still safe; no new switches; Civil net10 18830 run 1 red (Glen Eira), Manager 815/815, net48 focused 279/279; Manager must ship with Civil and the Installer files | TRAIN_C46_FINALIZER_REPORT
 2026-10-19 22:57 | PAYLOAD | Payload 76 (candidate c1043, Civil 3.0.57 / Manager 1.1.57) launched on Team Sonnet; lesson from payload 75 (CRLF version commit) written into the brief | desk_jobs/payload76_c46_job.txt
+2026-10-19 23:05 | INSTALL | Civil 3.0.57 / Manager 1.1.57 (C-46 0bbf4882): every file matched the candidate (828 + 78), CE_SHARED identical, settings unchanged; installed 14 minutes after the payload report (watcher worked) | QUEUE 277, install_c46_desk.log
+2026-10-19 23:08 | ROBOT | Run 33 (robot pass 12, Civil 3.0.57) launched on Team Sonnet | desk_jobs/tester_run33.txt
+2026-10-19 23:10 | METER | Max 44%, Team 31%, Codex ~45% (hold); C: 17.4 GB | install
