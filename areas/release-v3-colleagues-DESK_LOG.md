@@ -112,3 +112,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 2026-10-20 03:18 | FIX | Fixer 2 for #1478 and #1479 launched (pid 68128); C-47 assembler job staged | fix_1478_1479_job.txt, train_c47_assembler_job.txt
 2026-10-20 03:33 | FIX | Fixer 2 done: #1478 66744813 (CDTAG wording), #1479 89f8ac9d (detention pipe with no length keeps a not-known row showing size and range; carries the later #1436 commits); entries 1356-1358 | fix_1478_1479_job
 2026-10-20 03:34 | ASSEMBLE | Train C-47 assembler launched on Team Sonnet (pid 66884): branch claude/rel-20261020a from installed 0bbf4882; candidates #1474 #1475 #1477 #1478 #1479 #1480 | desk_jobs/train_c47_assembler_job.txt
+2026-10-20 04:05 | ASSEMBLE | C-47 assembled: branch claude/rel-20261020a head ad43f0cd, 6 PRs (#1475 #1474 #1477 #1478 #1480 #1479), nothing under Shared/, whole solution 0 errors, Civil net10 18863 run 1 red (Glen Eira), Manager 824/824, net48 focused 185/185; #1441 has an unreviewed later commit 438ed483 (left out) | TRAIN_C47_ASSEMBLY_REPORT
+2026-10-20 04:16 | REVIEW | Opus finalizer for C-47 launched on Team | desk_jobs/train_c47_finalizer_job.txt
