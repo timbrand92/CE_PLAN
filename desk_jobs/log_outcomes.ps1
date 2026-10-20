@@ -105,6 +105,10 @@ $tokenRx = New-Object Text.RegularExpressions.Regex('^(?:\[(?!PERF)[A-Za-z0-9 ]+
 $tokenSkip = @('CDGRIPROUTE', 'CDPIPEATTACHMENTACTION')
 $lineRx = New-Object Text.RegularExpressions.Regex('^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d\.\d{3}) \[(INF|DBG|WRN|ERR|FTL|VRB)\] (?:\d{4}-\d\d-\d\d \d\d:\d\d:\d\d\.\d{3} \[\w+\] )?(.*)$', 'Compiled')
 $guardRx = New-Object Text.RegularExpressions.Regex("UcsGuardService . '([A-Za-z0-9_.\-]+)' (starting|ended|cancelled)", 'Compiled')
+# From the build that carries the "command outcome lines" change: CE itself writes ONE INFO line when a CE command ends, with debug logging on or off:
+#   "Command outcome: CDSYNC completed 250 ms"  (completed | cancelled | failed; "(time unknown)" if the start was not seen).
+# It is the run's end marker. Setting: Options.CommandOutcomeLines (on by default).
+$outcomeRx = New-Object Text.RegularExpressions.Regex('^Command outcome: ([A-Z0-9_]+) (completed|cancelled|failed) (?:(\d+) ms|\(time unknown\))$', 'Compiled')
 
 function Get-EventKind([string]$lvl, [string]$msg) {
   if ($msg -match $noiseRx) { return 'noise' }
@@ -189,6 +193,7 @@ function Read-CivilStructured {
   if (-not (Test-Path -LiteralPath $dir)) { return }
   $files = Get-ChildItem -LiteralPath $dir -Filter 'ce_cvl_structured_*.log' | Where-Object { Test-InWindow $_ 0 } | Sort-Object Name
   $open = @{}                                    # UcsGuard sessions by command name
+  $guardClosed = @{}                             # command name -> time its debug-ON guard run closed
   $stack = New-Object 'System.Collections.Generic.List[object]'
   $adhoc = @{}                                   # token sessions by command name
   foreach ($fi in $files) {
@@ -217,6 +222,31 @@ function Read-CivilStructured {
         } elseif ($open.ContainsKey($name)) {
           $s = $open[$name]; [void]$stack.Remove($s); $open.Remove($name)
           Close-Session $s $what $ts
+          $guardClosed[$name] = $ts
+        }
+        $last = $null; continue
+      }
+      $om = $outcomeRx.Match($msg)
+      if ($om.Success) {
+        $name = $om.Groups[1].Value; $what = $om.Groups[2].Value
+        $isFail = ($what -eq 'failed')
+        $script:evSeq++
+        $oe = @{ Ts = $ts; Seq = $script:evSeq; Lvl = 'INF'; Msg = $msg; Kind = $(if ($isFail) { 'fail' } else { $null }); Sess = $null; InList = $false; File = $fi.Name; Completion = $false }
+        if ($open.ContainsKey($name)) {
+          # debug ON: the guard's own ended / cancelled line closes this run; the outcome line only adds a failure
+          if ($isFail) { $oe.Sess = $open[$name]; $open[$name].Events.Add($oe) }
+        }
+        elseif ($guardClosed.ContainsKey($name) -and ((([datetime]$ts) - ([datetime]$guardClosed[$name])).TotalSeconds -le 2)) {
+          # debug ON and the guard already closed this run a moment ago: the same run, not a second one (a failure is lost here)
+        }
+        else {
+          $gap = if ($gapSec.ContainsKey($name)) { $gapSec[$name] } else { 120 }
+          $a = $adhoc[$name]
+          if ($a -and ((([datetime]$ts) - ([datetime]$a.End)).TotalSeconds -le $gap)) { $sess = $a; [void]$adhoc.Remove($name) }
+          else { if ($a) { Close-Session $a $null $null; [void]$adhoc.Remove($name) }; $sess = New-Session 'Civil' $name $ts 'outcome' $fi.Name }
+          $oe.Sess = $sess
+          if ($isFail) { $sess.Events.Add($oe) }
+          Close-Session $sess $(if ($what -eq 'cancelled') { 'cancelled' } else { 'completed' }) $ts
         }
         $last = $null; continue
       }
