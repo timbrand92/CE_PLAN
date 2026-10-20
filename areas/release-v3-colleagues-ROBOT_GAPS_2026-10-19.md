@@ -58,3 +58,14 @@ These are driver or fixture problems, not product bugs. Source: CLAUDE_DRIVER_RU
 3. **Still open: CDSURVEY has no typed form** (BUG-709 UNPROVEN). It needs a survey XREF or survey DWG and answers the driver cannot type. Smallest change: a fixture drawing with a survey XREF attached, plus a typed form for the answers.
 4. **Still open: the same-plan break question (BUG-683) is blocked at "More..." on the New Pipe window** (run 32 item 1): the press allow-list refuses it. Not retried.
 5. **Cosmetic false alarm "AutoCAD may be waiting at a prompt" after CDSYNC** seen again (gap 13); `status` right after showed CMDACTIVE=0.
+
+## Run 37 (20 Oct, Civil 3.0.61): two gaps carried, one CE wording gap filed
+
+Source: CLAUDE_DRIVER_RUN37_V2_2026-10-20.md.
+
+1. **Callout drag words ("Would sit on top of ...") still have no typed form.** They appear only while a callout point is dragged with the mouse, and the driver has no hover or drag verb. UNPROVEN for the third run. Smallest change: a drag verb (press, move, release at drawing points) on the driver allow-list.
+2. **The Tidy labels "Will move 1 ..." line does not name which pipe's text moves** when an ordinary block is the cause. That is a CE wording gap, not a driver gap: filed as BUG-856 (LOW).
+3. **PIT leaves a "Pick the next pit" prompt after the label step**, so a typed CD command behind it is rejected as BUSY. The pass must send `esc-prompt` until "[CE] Stopped" before a typed CD. Tooling note for the driver notes.
+4. **Stale helper name after a second lock:** four `settings-temp set` calls were refused with "LOCKED by Claude-run37b" because the helper kept the session 1 name. Refused safely, nothing changed. Tooling note: pass the holder name from the current lock.
+5. **Still open and carried:** CDSURVEY (BUG-709) and the same-plan break (BUG-683) have no typed form; not asked this run. Cosmetic "AutoCAD may be waiting at a prompt" false alarm after CDSYNC seen again (gap 13).
+6. **Closed again by the log route:** a block's extents are read from the CE debug log (settings guard before launch). The sheet-frame line prints no numbers; low-priority wish list for the desk.
