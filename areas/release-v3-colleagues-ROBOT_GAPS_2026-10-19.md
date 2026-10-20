@@ -48,3 +48,13 @@ These are driver or fixture problems, not product bugs. Source: CLAUDE_DRIVER_RU
 1. **Gap 12 (Tidy labels Apply, U and REDO) is partly closed.** Reachable now: put the start text onto the pit with a typed MOVE, then `CDTIDYLABELS`nAll`nYes` (Apply), `U` and `REDO` all work. Still untested: Apply on a locked layer and the timing figure.
 2. **Still open: a block's extents cannot be read** (run 34 gap 1), and it is now the only missing evidence for the BUG-141 Drawing Border half (second attempt that did not take). Smallest change: allow one read-only LISP line (`-AllowLisp`, as already used to read a text's handle) that prints a block's name, layer and bounding box by handle; or a Codex Properties look at the Drawing Border and "SC" blocks. Proposal only, no command is added by this note.
 3. **Cosmetic false alarm "AutoCAD may be waiting at a prompt" after CDSYNC** seen again (gap 13). The same words on the first CDTIDYLABELS were a real wait at "Move this label now?", so the alarm cannot be silenced blindly: the driver should check the active-command flag before warning.
+
+## Run 36 (20 Oct, Civil 3.0.60): one gap closed, two carried, one tooling note
+
+These are driver or fixture problems, not product bugs. Source: CLAUDE_DRIVER_RUN36_V2_2026-10-20.md.
+
+1. **Run 34 gap 1 and run 35 item 2 (a block's extents cannot be read) are closed by a different route.** Turn debug logging on and read the CE log: it prints the block's name, layer, corners and the search window it was kept against. No new driver verb is needed. Still missing: a log line for a TEXT obstacle (the "SC" text), proposed as a lane 04 fix queue line (triage file section 17).
+2. **Tooling note: debug logging must be set through the settings guard BEFORE launch.** CE reads `options.debugLogging` at AutoCAD start, so a mid-session set does nothing. Run 36 set it before `launch`, read it back from the file (line 158), and the guard restored it to `false` afterwards.
+3. **Still open: CDSURVEY has no typed form** (BUG-709 UNPROVEN). It needs a survey XREF or survey DWG and answers the driver cannot type. Smallest change: a fixture drawing with a survey XREF attached, plus a typed form for the answers.
+4. **Still open: the same-plan break question (BUG-683) is blocked at "More..." on the New Pipe window** (run 32 item 1): the press allow-list refuses it. Not retried.
+5. **Cosmetic false alarm "AutoCAD may be waiting at a prompt" after CDSYNC** seen again (gap 13); `status` right after showed CMDACTIVE=0.

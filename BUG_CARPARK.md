@@ -79,6 +79,9 @@
 
 **Status:** OPEN
 
+
+**run 36: PASS (20 Oct, 3.0.60)** (#1481): 30 of 30 R-06 "unknown" rows in the saved CDRULES All text end "Enter the detention length, or untick Detention (CDEDIT)"; 0 with the old wording. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 8.
+
 ---
 
 ## BUG-853 — The CE ribbon click log grows for ever and records drawing names
@@ -567,6 +570,9 @@
 
 **run 35: PASS (20 Oct, 3.0.59) for the totals line (#1441), evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md B item 5.** On the untouched copy: '25 pipes recovered, 0 invert texts written, 20 already had invert text, 24 skipped' then '5 pipes have only one of their two invert texts, so nothing was drawn for them'. 25 less 5 is 20, so one-text pipes are no longer counted as already having text. Robot evidence only, NOT marked FIXED. Tim's question (should CE draw the missing end?) is still open.
 
+
+**run 36: PASS (20 Oct, 3.0.60)** for the totals line (#1441): "25 pipes recovered, 0 invert texts written, 20 already had invert text, 24 skipped", and the one-of-two list of 5 pipes. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 7.
+
 ---
 
 ## BUG-819 — Structural section drawing code: purlin second flange width, purlin lips, actual angle thickness, welded sections with a root radius
@@ -653,6 +659,9 @@
 **run 34 (20 Oct, installed Civil 3.0.58 / C-47): PASS on the downpipe fixture, evidence CLAUDE_DRIVER_RUN34_V2_2026-10-20.md B items 1, 2, 3 and 12.** CDCHECKS now says 42 to look at, 234 OK, 342 not known (3.0.57 said 63, 243, 312). R-06 "outside" rows among the 20 printed: 14 down to 0. The full CDRULES All list has 0 "outside" rows and 0 R-06 warnings in 38 R-06 rows. The 100 and 150 mm downpipes marked Detention with an empty length now show a "not known" row naming the size and the range in words. Robot evidence only on a test copy, not Tim-accepted, NOT marked FIXED. History: runs 32 and 33 saw the false rows STILL SEEN on 3.0.56 and 3.0.57 although #1436 was meant to fix them (the #1436 fix did not take effect on that drawing; cause never proven). Open question for Tim: QUESTIONS_FOR_MONDAY.md section I (main pipes marked Detention with no length now read "not judged"). Small wording fault filed as BUG-854.
 
 **run 35: still PASS on the downpipe fixture (20 Oct, 3.0.59), evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md B items 7 and 11.** CDCHECKS 42 to look at, 234 OK, 342 not known (same as run 34); 0 of the old 14 printed R-06 rows; the saved list holds 0 'outside' rows and 0 R-06 warnings in 38 R-06 rows. Robot evidence only, NOT marked FIXED.
+
+
+**run 36: PASS (20 Oct, 3.0.60)** on the downpipe fixture: CDCHECKS 42 to look at, 234 OK, 342 not known; none of the 20 printed rows is R-06; CDRULES All has 0 old-style false R-06 rows. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 8.
 
 ---
 
@@ -2111,6 +2120,8 @@
 
 **Status:** OPEN
 
+**run 36: UNPROVEN (20 Oct, 3.0.60; no typed form; see robot gaps).** CDSURVEY needs a survey XREF or survey DWG and answers the driver cannot type; the switch survey.surveyReadsMTextAndMoreTags was not turned on. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 4.
+
 ## BUG-708
 
 **Command / Area:** CDSURVEY result window (HUNT Civil B finding A10, installed Civil 3.0.53).
@@ -2398,6 +2409,8 @@
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding E3. Code: Commands/CdCommand.cs:476-540, 586; CdCommand.SamePlanBreak.Atomic.cs:106; LinkService.SamePlanBreak.Apply/.Finalize/.Pair.cs.
 
 **Status:** OPEN
+
+**run 36: UNPROVEN (20 Oct, 3.0.60; no typed form; see robot gaps).** The same-plan break question is blocked at "More..." on the New Pipe window (robot gaps run 32 item 1); not retried. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 5.
 
 ## BUG-682
 
@@ -9160,6 +9173,12 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **run 35 (20 Oct, installed Civil 3.0.59 / C-49): STILL SEEN, Drawing Border half (#1480, linking.tidyIgnoresSheetFrame, ON by default), evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md B item 15 and C item 2.** After a typed MOVE of the pipe: 'pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on the block Drawing Border)' and 'pipe P4 -> P3 label ... (on SC)'; CDTIDYLABELS still lists pipe P3 -> P2 label as 'No clear spot found'. This is the second attempt (#1480 in C-47) that did not take; C-49 did not target it. Cause not proven: the border block's extents have never been read against the label's search window. Queued first on lane 04, CODEX_BUG_TRIAGE section 16.
 
+
+**run 36 (20 Oct, installed Civil 3.0.60 / C-50): the #1483 diagnostic worked (debug logging ON), CAUSE of the Drawing Border half found, evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md answer-first items 2 to 5 and B item 1. Still STILL SEEN on behaviour; NOT FIXED.** The border block (layer BLOCKS, 79,500 x 56,700 drawing units, 3.03 x and 10.22 x the search window) fails ONLY the "wholly surrounds the search window" test, on the right side by 3,381 units (spare room left/bottom/right/top 56640.01/27601.77/-3381.13/23549.92), because pit P2 and its PIT LABEL block lie just outside the border. So #1480 was right in intent but its surround rule is too strict for this drawing. A fix draft PR is being made by the desk (see REVIEWLANE_LOG). A second Tidy-labels run with the pit moved gave the same cause (right spare room -3,400.11).
+
+**run 36 (20 Oct, 3.0.60): the "SC" text obstacle is UNPROVEN, not reproduced.** The log has no line for a text obstacle (only the one-line "no clear spot ... (on ...)" report; on this run the P4 -> P3 label named the text "THICKEN SPOON DRAIN AT STORMWA..."). Next small PR proposed: a text-obstacle diagnostic line, no behaviour change (see fix queue section 17, lane 04). Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 3 and C item 3.
+
+**run 36: PASS (20 Oct, 3.0.60) for the pit-body half** (New pit P8, 20 m pipe, linking.tidyPitByBodyOutline at its default: no "no clear spot (on pit P8)" line; the log shows P8 only as an obstacle measured by its body outline). Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 6.
 ---
 
 ## BUG-142

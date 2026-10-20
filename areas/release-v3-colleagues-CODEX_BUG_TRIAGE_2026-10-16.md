@@ -458,3 +458,13 @@ Added Tue 20 Oct 2026 by the desk (headless job). Source: `areas/release-v3-coll
 2. **BUG-822 (LOW): the "What's New" palette opens partway through a session.** Seen again on run 35 (session 1, closed by quit). Unchanged from the run 34 queue. Failing test first: What's New opens only at first start after an update or on request.
 
 **Unchanged and not re-queued:** BUG-813 (CDFIXTAGS rename: still refuses on the pit blocks; the two-ordinary-source-blocks fixture is still missing, run 34 queue line 2 stands), CDTAG used-name refusal (BUG-742 and BUG-814 wording).
+
+## 17. Run 36 fix queue (20 Oct)
+
+Source: CLAUDE_DRIVER_RUN36_V2_2026-10-20.md (robot pass 15, installed Civil 3.0.60 / Manager 1.1.60, train C-50). The report names no other new product problem.
+
+### build/04 Civil UI, schedules, QA: 1 line
+
+1. **BUG-141 text obstacle (LOW, diagnostic only, NO behaviour change): add one CE log line when a TEXT is kept as an obstacle in the label tidy-up.** The Drawing Border half now has its evidence (the border fails only the "wholly surrounds the search window" test, right side short by 3,381 units, because pit P2 and its PIT LABEL lie outside the border); but the "SC" text obstacle seen on run 35 could not be reproduced and the log has no line for a text obstacle, so nobody can say what it was. The line, written with debug logging on, in the same style as the existing block line: the text's words, its handle, its layer, its corners in drawing units, and the search window it was kept against. Failing test first: a TEXT inside a pipe label's search window produces the line; no TEXT produces none; the tidy-up result is identical with and without the line. Do not touch the border rule: the desk is making that fix PR itself (see REVIEWLANE_LOG).
+
+**Not queued (PASS on the robot's copies, run 36):** BUG-141 pit-body half, BUG-820 totals (#1441), BUG-854 wording (#1481), BUG-815, the Edit Pipe cascade, CDSYNC and quick-edit rows. They stay OPEN until Tim or Codex accepts. **UNPROVEN, nothing to build:** BUG-709 and BUG-683 (no typed form for either; see the robot gaps file, run 36).
