@@ -470,3 +470,12 @@ Source: CLAUDE_DRIVER_RUN36_V2_2026-10-20.md (robot pass 15, installed Civil 3.0
 
 **Run 37 note on the lane 04 line above (20 Oct, Civil 3.0.61 / C-51, evidence CLAUDE_DRIVER_RUN37_V2_2026-10-20.md C items 1 and 2):** the border half now passes on the robot, so the text-obstacle diagnostic is now THE missing evidence for the last BUG-141 symptom. The P3 -> P2 label is still blocked, now by a text "SC" (layer SLAB SC, height 250, several in the window). Without the log line (words, handle, layer, corners, the window) the robot cannot tell which SC text was named. Still diagnostic only, no behaviour change. No other new fix line from run 37: the report names no other real product problem. The Tidy labels "would move" wording gap is filed as BUG-856 (LOW, wording only, not queued).
 **Not queued (PASS on the robot's copies, run 36):** BUG-141 pit-body half, BUG-820 totals (#1441), BUG-854 wording (#1481), BUG-815, the Edit Pipe cascade, CDSYNC and quick-edit rows. They stay OPEN until Tim or Codex accepts. **UNPROVEN, nothing to build:** BUG-709 and BUG-683 (no typed form for either; see the robot gaps file, run 36).
+
+
+## 18. Run 38 fix queue (20 Oct)
+
+Source: CLAUDE_DRIVER_RUN38_V2_2026-10-20.md (robot pass 17, installed Civil 3.0.62 / Manager 1.1.62, train C-52). 10 of 10 checks PASS on the robot's copy.
+
+**The BUG-141 chain is complete with no new fix line.** The text-obstacle diagnostic (#1485) works: the log named four SC texts on layer SLAB SC, and one of them (SC 10B734) really overlaps the P3 -> P2 label's box. The remaining "No clear spot" is a genuine overlap on a crowded drawing, not a Tidy labels fault. The two real causes the chain found (hidden pit circle #1482, border block #1484) both PASS on the robot. BUG-141 stays OPEN until Tim or Codex confirms in AutoCAD; it is proposed for closure by Tim, and the desk does not close it.
+
+**No other real product problem named.** The report's lesser notes are already filed and not re-queued: the sheet-frame log line prints no numbers (run 37 note, low), the CDSYNC "95 to 96" Pit Schedule count (BUG-855), and the cosmetic "waiting at a prompt" alarm after CDSYNC. **Optional, not queued, Tim's call:** one more log line listing which alternative spots were tried and what stopped each (report D item 4); only worth building if Tim wants the SC question settled by evidence rather than by hand.
