@@ -157,3 +157,5 @@ Technical detail goes below the line, short.
 9. **Do NOT:** write plain FIXED; close or delete a PR/branch; launch Max Agent builders while Max is above pace; run bare python; answer Yes to a Manager first-administrator question in a test; edit the driver without a new-hash plan; start AutoCAD while a robot/Codex job holds the lock.
 
 26. **MODEL ROUTING RULE (Tim 21 Oct):** C:\CE_PLAN\MODEL_ROUTING.md (+ amendment at the end of C:\TimOS\RULES.md, memory model-routing-haiku-for-cheap-tasks). Haiku = mechanical/read-only; Sonnet = build/test; Opus = review/judgement; never Haiku for AutoCAD/C# logic. First Haiku trial: haiku_jobfile_check_job.txt (JOBFILE_CHECK_2026-10-21.md).
+
+27. **Haiku vs Sonnet trial: DEFERRED to after the weekly reset** (Tim 21 Oct: 'maybe do the test after weekly usage reset'). Plan: areas/MODEL_TRIAL_PLAN_2026-10-21.md. Start Fri 23 Oct ~13:30 (Max resets Fri 23 Oct 13:00), or earlier if Tim says run it now. Scratch worktrees from setup were removed.
