@@ -969,6 +969,8 @@
 
 **Codex V2 (20 Oct 2026): V2-05 NOT TESTED** (the cascade and the REDO echo were seen, but the changed pipes were not brought into view, so inverts, labels and arrows through U and REDO were not judged; CODEX_VERIFY_V2_20261020_1909.md). Codex acceptance pending: retry queued 20 Oct (verifyV2b_retry).
 
+**Codex V2b (20 Oct 2026, Civil 3.0.65): V2-05 NOT TESTED** (CODEX_VERIFY_V2b_20261020_2102.md). The cascade ran (Yes, Apply, "Updated 4 pipes and 3 pits from P3 (IL 17.50)", U and REDO echoes right, P3 -> P2 and P2 visibly restored in the view), but P1, C1 and STUB were outside the one view, so the whole run through U and REDO was not judged. Not marked FIXED: the retry needs a ZOOM window that holds P1, C1 and STUB (coordinates wanted, see ROBOT_GAPS). The locked-pipe-layer case itself has still not been tested by anyone.
+
 ---
 
 ## BUG-796 — Four Repair Center buttons change the drawing with no preview or Yes/No; their reports count candidates, not successes
@@ -1191,6 +1193,8 @@
 **run 35: PASS (20 Oct, 3.0.59), evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md B item 8.** Edit Pipe, answer Yes, Apply: 'Updated 4 pipes and 3 pits from P3 (IL 17.50)'; U and REDO worked. Locked layer and low-end cases still untested. Robot evidence only, NOT marked FIXED.
 
 **Codex V2 (20 Oct 2026): V2-05 NOT TESTED** (the cascade and the REDO echo were seen, but the changed pipes were not brought into view, so inverts, labels and arrows through U and REDO were not judged; CODEX_VERIFY_V2_20261020_1909.md). Codex acceptance pending: retry queued 20 Oct (verifyV2b_retry).
+
+**Codex V2b (20 Oct 2026, Civil 3.0.65): V2-05 NOT TESTED** (CODEX_VERIFY_V2b_20261020_2102.md). The cascade ran (Yes, Apply, "Updated 4 pipes and 3 pits from P3 (IL 17.50)", U and REDO echoes right, P3 -> P2 and P2 visibly restored in the view), but P1, C1 and STUB were outside the one view, so the whole run through U and REDO was not judged. Not marked FIXED: the retry needs a ZOOM window that holds P1, C1 and STUB (coordinates wanted, see ROBOT_GAPS). The pipe-drawn-from-the-low-end case itself has still not been tested by anyone.
 
 ---
 
@@ -3432,6 +3436,8 @@
 **Codex V1 (20 Oct 2026): NOT TESTED** (setup blocked: the long TRUSTEDPATHS result filled the command history; CODEX_VERIFY_V1_20261020_1859.md V1-01). Codex acceptance pending: retry queued 20 Oct (verifyV1_robot_gaps rerun, brief fixed).
 
 **run V1 20 Oct: STILL SEEN on 3.0.65 (Codex V1-01 FAIL): fix draft PR #1502** (the click bind no longer saves a record owed to the previous drawing; if REDO is still lost with one drawing open the cause is elsewhere: capture list in REVIEWLANE_LOG entry 1511). Not FIXED.
+
+**V1 retry 20 Oct (Codex, Civil 3.0.65): still seen, FAIL UNSURE** (CODEX_VERIFY_V1_20261020_2034.md V1-01). After U, a new LINE, right-click P3 and "CE: Select this run": CE said "[CE] Selected P3 only - it has no run through it." and REDO answered "Nothing to redo". The refusal line is plainly readable; whether the new line was visibly gone is UNSURE (low contrast on dense linework). Fix draft PR #1502 is not in 3.0.65. Not FIXED.
 ---
 
 ## BUG-413
@@ -9195,7 +9201,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Reference:** Modules/Drainage — REGRESSION_LOG.md "R3 fix batch".
 
-**Status:** FIXED (Codex-accepted, Civil 3.0.64, 20 Oct 2026) for the Drawing Border half only; the pit-body half is NOT yet Codex-accepted (see below).
+**Status:** FIXED (Codex-accepted, both halves, Civil 3.0.65, 20 Oct 2026): Drawing Border half on 3.0.64 (V2-07, V2-08), pit-body half on 3.0.65 (V2-06). See the Codex V2b paragraph below.
+
+**Codex V2b (20 Oct 2026, Civil 3.0.65): pit-body half PASS SURE (V2-06), BUG-141 is now FIXED (Codex-accepted, both halves, Civil 3.0.65, 20 Oct 2026).** Evidence: Claude robot runs 35 to 41 PASS for the pit body (CLAUDE_DRIVER_RUN35_V2 to RUN41_V2) AND Codex V2-06 PASS (CODEX_VERIFY_V2b_20261020_2102.md): new pit P8 with a 20 m pipe, inverts 18.000 / 17.900. Start invert not named as blocked, no "no clear spot (on pit P8)" line, Tidy labels said "No CE label needs to move", and IL 18.000 sits clear to the right of the pit body (about 30 capture pixels from the outer outline, no overlap). The Grade mismatch box appeared as expected (see BUG-857). Drawing Border half was Codex-accepted on 3.0.64 (V2-07 and V2-08). Both halves are accepted, so the entry is FIXED. The "no clear spot" still printed for pipe P3 -> P2 in the Tim fixture is a genuine overlap with an SC slab note (run 38, texts on layer SLAB SC), and Tim said on 20 Oct: "yes leave it". That is a real obstacle, not this bug. Entry kept, nothing deleted (D6).
 
 **Evidence, Drawing Border half (20 Oct 2026):** Claude robot PASS run 37 (CLAUDE_DRIVER_RUN37_V2_2026-10-20.md, switch ON and OFF) AND Codex PASS V2-07 and V2-08 SURE (CODEX_VERIFY_V2_20261020_1909.md): switch ON, the warning names "SC" and the debug line says the Drawing Border was "treated as the sheet frame, not an obstacle"; switch OFF, the warning names "the block Drawing Border" and the debug line says "kept as an obstacle ... because the switch Linking.TidyIgnoresSheetFrame is OFF".
 
@@ -9980,6 +9988,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Codex V1 (20 Oct 2026): NOT TESTED** (setup blocked: the long TRUSTEDPATHS result filled the command history; CODEX_VERIFY_V1_20261020_1859.md V1-02). Codex acceptance pending: retry queued 20 Oct (verifyV1_robot_gaps rerun, brief fixed).
 
+**Codex V1 retry (20 Oct 2026, Civil 3.0.65): BLOCKED, not tested** (CODEX_VERIFY_V1_20261020_2034.md V1-02). The first prompt was "CE: This drawing isn't tagged yet. Is this a Civil drainage drawing? [Yes/No] <Yes>:", not the X-Civil import window; the brief answered No, the drawing was tagged Structural and CDIMPORTXCIVIL was cancelled, so the file dialog, the CHECK THE SCALE sentence and the Proceed question were never reached. Cause is the fixture: the empty import target is not tagged Civil. Retry with the corrected brief (a target already tagged Civil, or an authorised first answer Yes to that question). Not FIXED.
+
 ---
 
 ## BUG-506
@@ -10083,6 +10093,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **run 40: PASS (20 Oct, 3.0.64).** With Tim's settings (both copies 150) CDRULES Values prints "freeboard 150 mm" and CDTWL prints "150 mm is wanted". A changed freeboard was not tested this run. Still OPEN until Tim or Codex confirms in AutoCAD.
 
 **Codex V2 (20 Oct 2026): NOT TESTED, freeboard (b)** (V2-03: the Values and CDTWL freeboard lines scrolled out of view, CODEX_VERIFY_V2_20261020_1909.md; the saved All list did show "freeboard 150 mm (office)" but that is not the Values line). Not marked FIXED: retry. Codex acceptance pending: retry queued 20 Oct (verifyV2b_retry). Freeboard values are an engineering-judgement item: Tim's word is still needed for the value itself.
+
+**Codex V2b (20 Oct 2026, Civil 3.0.65): V2-03 PASS SURE, FIXED (Codex-accepted, Civil 3.0.65, 20 Oct 2026).** Evidence: Claude robot run 39 PASS (CLAUDE_DRIVER_RUN39_V2_2026-10-20.md, then run 40 on 3.0.64) AND Codex V2-03 PASS (CODEX_VERIFY_V2b_20261020_2102.md): CDRULES Values reads "R-06 detention ... freeboard 150 mm (office)" and CDTWL reads "150 mm is wanted", both 150 mm. This is a consistency fix (the two screens now read one value), not an engineering value: Codex compared only that the two are equal. Whether 150 mm is the right freeboard stays Tim's engineering call and is not part of this closing. The entry stays here, nothing deleted (D6).
 ---
 
 ## BUG-517
@@ -11563,6 +11575,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Reference:** Civil Tidy labels report wording; evidence CLAUDE_DRIVER_RUN37_V2_2026-10-20.md B item 5. LOW (wording only, no drawing change). Test that would catch it: a fixture with one text moved onto an ordinary block, run Tidy labels, assert the "would move" line contains the pipe name. Steps for Tim: move any pipe invert text onto a plain block, type CDTIDYLABELS then All, and read the "Will move" line: it should name the pipe.
 
 **Status:** OPEN
+
+**run 41 (20 Oct, installed Civil 3.0.65 / C-55, #1486): robot PASS, Codex acceptance pending.** The Tidy labels "would move" line now names the pipe, for both the open END and the open START (CLAUDE_DRIVER_RUN41_V2_2026-10-20.md answer-first items 2 and 3). Codex has not looked at it yet (the V2b run did not reach a "would move" line: Tidy labels said "Will move 0"). Status stays OPEN until a Codex PASS exists (queue section 8 (b)).
 
 ---
 
