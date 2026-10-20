@@ -136,3 +136,5 @@ Technical detail goes below the line, short.
 3. **Lane orders in force:** lane 03 scale model (one scale source: DIMSCALE; LTSCALE = 10 x DIMSCALE), BUG-531, DP1 double-click window; lane 04 BUG-825, BUG-834, BUG-852 (Version into Manager), BUG-737 (pit floor). Orders are in line 1 of build02/03/04_job_latest.txt (the lane loops re-read them every run).
 4. **Tim's own settings changed:** CE_STRUC_SUITE\CS_Settings.json SHA-256 is now F68EEB5E343C (was 24D8E5F7D87B): every robot brief must expect the new hash (tester_run40.txt done; later briefs are made from it). Stale Manager 1.0.0 removal needs Tim as administrator (command in the decisions file).
 5. **Deleted on Tim's instruction:** _TEST_COPIES_20260923\V3UX_20261013 (7.3 GB). C: 23.4 GB.
+
+21. **Parked by Tim 20 Oct (later message):** all Manager administrator work (stale Manager 1.0.0 removal, BUG-476 wording check in tests, QUESTIONS I4 Add administrator). Do not test, ask or build these until Tim reopens them; see decisions/2026-10-20_TIM_ANSWERS.md item 16. The Codex verify brief (codex_week_20oct_briefs_job output, Job B) must have BUG-476 removed.
