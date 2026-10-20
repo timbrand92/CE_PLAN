@@ -1,6 +1,6 @@
-# CEMEMBER: Tim's AutoCAD checklist (DRAFT for Tim to approve, written 20 Oct 2026, build/02)
+# CEMEMBER acceptance checklist (robot and Codex) - written 20 Oct 2026, build/02; renamed 20 Oct 2026 evening (Tim: all checking and testing is done by AI)
 
-**Status: NOT RUNNABLE YET.** Nothing here can be tested today. So far only the line rules and the placing maths are built and unit-tested (draft PRs #1487, #1488, #1489, #1490). There is no CEMEMBER command, no window and no Settings page rows yet. This list is what Tim will be asked to run once the command exists, written now so he can approve or change it first (the card says no AutoCAD test is asked until the checklist is agreed). Test on a COPY of a drawing, never a real one.
+**Status (20 Oct 21:45): PARTLY RUNNABLE once the next Structural bundle is installed.** Draft PRs #1487-#1490 (line rules, placing maths), #1500 (Z purlin), #1501 (section list rows), #1504 (the hidden typed command CEMEMBER, elevations only). Sections A to D (side and top elevations) can be run from #1504. NOT yet runnable: section view (in front / beyond, nine base points), the window, Enter-to-repeat with the previous choices, SBEAMEDIT on CEMEMBER members. The command asks its questions on the command line (View, Section name, how it sits, Points sit on, Break lines at); there is no window yet. Z purlin orientation words (TopRight, TopLeft, LeftUp, LeftDown) are a DRAFT DEFAULT. Run on a COPY of a drawing, never a real one. Codex runs this as a verify brief; it is no longer for Tim.
 
 Before starting: type `DIMSCALE` and `LTSCALE`. Normal for a 1:100 sheet is DIMSCALE 100 and LTSCALE 1000. Write the two numbers down.
 
