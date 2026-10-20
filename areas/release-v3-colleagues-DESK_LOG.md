@@ -221,3 +221,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - 2026-10-21 04:35 TICK: Max 69% (5h 6%; pace ~63: ahead; this desk chat is the burner at 74 percent context), Team 50% (pace ~65: behind -> more Team work released), Codex 5% (on pace ~5.5), C: 12-16 GB (floor 12): SUPERSEDED holds 24 installer archives 8.9 GB (ask Tim: yes to remove all but the newest 3), robot pass 22 running (acad up), lanes 02 and 04 'no bug work left' -> PLAN ITEMS RESUME for lanes 02 and 04 (decisions item 18; LANE_ORDERS_21OCT_PLAN.md). Lane 03 finishing review fixes. chain_c57 assembling.
 
 - 2026-10-21 04:45 TICK 2: Max 70% (ahead; chat 77%), Team 50% (behind), Codex 5% (on pace), C: 12.8 -> 15.6 GB after removing 11 clean+pushed old worktree directories (79 kept). Robot pass 22 running (guard present = normal). Full-state section 25 written in the continuity record for the next desk chat.
+
+- 2026-10-21 05:10 TIM: 'make it a rule to use haiku for the correct tasks is important'. Rule written: MODEL_ROUTING.md, RULES.md amendment, memory, continuity item 26. First Haiku job launched on Team (job-file damage check; launch_job.ps1 -Model haiku works).
