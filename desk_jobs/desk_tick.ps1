@@ -24,3 +24,6 @@ if ($freeGb -lt 25) {
   "DISK ALARM: C: has only $freeGb GB free. Biggest task output files:"
   Get-ChildItem 'C:\Users\TimothyBrand\AppData\Local\Temp\claude' -Recurse -Filter *.output -File -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 3 | ForEach-Object { "  {0:N1} GB {1}" -f ($_.Length / 1GB), $_.FullName }
 }
+
+# 20 Oct: build jobs leave ~5.5 GB of .NET workload-manifest folders in Temp; clear them each tick (scripts\clean_dotnet_tmp.ps1).
+& 'C:\CE_PLAN\desk_jobs\scripts\clean_dotnet_tmp.ps1'
