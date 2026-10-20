@@ -138,3 +138,5 @@ Technical detail goes below the line, short.
 5. **Deleted on Tim's instruction:** _TEST_COPIES_20260923\V3UX_20261013 (7.3 GB). C: 23.4 GB.
 
 21. **Parked by Tim 20 Oct (later message):** all Manager administrator work (stale Manager 1.0.0 removal, BUG-476 wording check in tests, QUESTIONS I4 Add administrator). Do not test, ask or build these until Tim reopens them; see decisions/2026-10-20_TIM_ANSWERS.md item 16. The Codex verify brief (codex_week_20oct_briefs_job output, Job B) must have BUG-476 removed.
+
+22. **Reply template change (Tim 20 Oct 2026, "can you show percetages in each message"):** every FOR TIM block now has a PERCENTAGES section under the headline: whole plan and 9 Nov scope (built, installed, switched on, tested on the installed build, accepted, each N of M and X percent, COUNTED or ESTIMATED, from the latest recount), bugs (closed, awaiting Tim, built not installed, open no fix), and live meters (Max, Team, Codex weekly percent and C: free). Memory: tim-wants-percentages-every-message.
