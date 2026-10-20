@@ -1,0 +1,7 @@
+# PLAN QUEUE, lane 04 (Civil / Manager / installer), from LANE_ORDERS_21OCT_PLAN (started Wed 21 Oct 2026)
+
+1. **Manager update route, BUG-823 and BUG-824 (installer refuses the staged receipt and the .dbx file):** DONE earlier, DRAFT #1442 and #1443, both already inside rel-20261020j and rel-20261020k. BUG-834 (#1492) also inside. Needs Codex acceptance.
+2. **BUG-478 / UX-MGR-04 slice 1, the finish-update request:** DRAFT #1508 (pure planner, 7 tests pass, nothing starts). Status: built, unit-tested, needs Opus review.
+3. **BUG-478 / UX-MGR-04 slice 2, start the installer after the last AutoCAD closes:** NOT BUILT. Needs a Settings switch (OFF), the card (areas file) and an Opus look at the process-start design because it is the one step that runs a program. Window words: Codex.
+4. **Civil Settings pages #1208, #1246, #1251, #1252:** NOT merge-ready. All four are Codex window PRs on old bases (rel-20261009g, rel-20261009x, two codex branches), none inside rel-20261020k, and all four edit CivilSettingsView.xaml, AdvancedSettingsViewModel.cs and SettingsValueCatalog.cs, which the Fixes tab rework (bj34, #1494/#1495) has since changed. Owed: Codex to re-cut them as window rows on rel-20261020k. Lane 04 did not rebase them.
+5. **Wiring the built engines (21 Civil engines, 17 sheet set-up engines, CDPITDETENTION):** NOT STARTED this run. Each needs a command card first (AGENTS.md review gate).
