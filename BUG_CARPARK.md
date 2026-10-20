@@ -11612,6 +11612,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** Modules/Structural/Services/StructuralDetailService.cs BuildZcSectionVertices; test SbeamAutoCadPlacementAdapterTests.ZcProductionVertexBuilder_MatchesSharedTranslatedEnvelope only checks the box, not the shape.
 
-**Status:** OPEN
+**Fix built 21 Oct 2026 (lane 02, run 475): DRAFT #1510 off rel-20261020s, needs Opus review.** Clean 12-point Z, 2 x flange minus web thickness wide (245 for a 250 / 125 / 20 / 5 Z); the two pinned Z tests changed (labelled, desk yes). RED first, 89 SBEAM placement tests pass net10-windows, net48 0 warnings. Not run in AutoCAD.
+
+**Status:** OPEN (fix drafted, not installed, not accepted)
 
 ---
