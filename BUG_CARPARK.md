@@ -3430,6 +3430,8 @@
 **run 40 (20 Oct, installed Civil 3.0.64 / C-54): UNPROVEN.** The fix (#1170) is built and installed, but "CE: Select this run" and "CE: Select whole network" exist only as AutoCAD right-click menu items (CivilNetworkSelectContextMenuService.cs); the driver cannot right-click. So this needs Tim or Codex by hand: type U, right-click a pit, choose "CE: Select this run", then REDO must still work. Plain U then REDO was seen working on the Edit Pipe cascade, but that is not this case. Not FIXED.
 
 **Codex V1 (20 Oct 2026): NOT TESTED** (setup blocked: the long TRUSTEDPATHS result filled the command history; CODEX_VERIFY_V1_20261020_1859.md V1-01). Codex acceptance pending: retry queued 20 Oct (verifyV1_robot_gaps rerun, brief fixed).
+
+**run V1 20 Oct: STILL SEEN on 3.0.65 (Codex V1-01 FAIL): fix draft PR #1502** (the click bind no longer saves a record owed to the previous drawing; if REDO is still lost with one drawing open the cause is elsewhere: capture list in REVIEWLANE_LOG entry 1511). Not FIXED.
 ---
 
 ## BUG-413
