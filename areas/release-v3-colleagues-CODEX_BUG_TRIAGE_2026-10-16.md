@@ -500,3 +500,11 @@ Source: CLAUDE_DRIVER_RUN40_V2_2026-10-20.md (robot pass 19, installed Civil 3.0
 **No real product problem found, so no new lane line.** BUG-820, BUG-854, BUG-815, BUG-516 and BUG-141 pass again. BUG-522 passes for the matched-copies case only. All stay OPEN until Tim or Codex confirms in AutoCAD.
 
 **UNPROVEN, nothing to build:** BUG-416 (the right-click items cannot be driven; needs Tim or Codex by hand) and the BUG-522 mismatch case (needs different CE_SHARED files). One launch anomaly is noted in the robot gaps file, run 40; one occurrence, watch only.
+
+## 21. Codex V1/V2 (20 Oct)
+
+Source: CODEX_VERIFY_V1_20261020_1859.md (V1: setup BLOCKED, 0 of 4 tested, V1-04 parked by Tim) and CODEX_VERIFY_V2_20261020_1909.md (V2: PASS 5, BLOCKED 1, NOT TESTED 2; installed Civil 3.0.64 / Manager 1.1.64, train C-54).
+
+**No lane line: no product fault that needs a builder today.** V2-01, V2-02, V2-04, V2-07 and V2-08 passed, so BUG-820 (totals half), BUG-854, BUG-815 (R-06 wording) and BUG-141 (Drawing Border half) are marked FIXED (Codex-accepted) in the carpark. V1 and the other V2 looks are tooling gaps, retried by the briefs verifyV1_robot_gaps (fixed) and verifyV2b_retry.
+
+**Two small findings, no build yet (Tim's call first):** (1) BUG-857, LOW: the New Pipe "Grade mismatch" box has only Use 1 IN 198 and Keep 1 IN 100; its X does not cancel and the pipe is placed with the typed 1 IN 100. (2) Watch only, one occurrence: after CDSYNC, a U echoed PITSCHEDULE, not CDSYNC (the Pit Schedule window leaves its own undo mark). Codex also saw CDSYNC count 11 pits and 49 pipes, the brief said 12 and 50: probably the robot having added one pit and one pipe in its own run 40 copy (run 40 did add them), not a fault; not proven.
