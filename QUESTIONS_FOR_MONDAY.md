@@ -1,5 +1,8 @@
 # Questions queued for Tim's Monday 08:40 session (desk plan/03 keeps this list)
 
+**ANSWERED Tue 20 Oct 2026 evening (Tim, in the desk chat; his words are in decisions/2026-10-20_TIM_ANSWERS.md):** K11 (pause until he is back, then full steam on V3; earlier if bug fixes finish; colleague release ready for 9 Nov), H1 (CEMEMBER: build now), I8 ("not judged": yes), I9 / BUG-141 SC label (yes leave it), I3 (deploy-chat route: yes), I6 BUG-825 (once only: yes), I5 BUG-834 (warn, refuse older than approved: yes), I7 BUG-852 (move Version into Manager), E1 BUG-531 (one Settings value: yes), E4 robot setvar on test copies (yes), G1 / I2 DP1 double-click window (yes), F1 / F2 / B4 / BUG-748 scales (one scale source from DIMSCALE, LTSCALE = 10 x DIMSCALE; all scales supported; hatch density by paper area), F pit depth (pit floor), A2 stale Manager 1.0.0 (yes: NOT DONE, needs administrator; command in the decisions file), A3 two Structural warnings (yes: DONE on his PC, new hash F68EEB5E343C). Do not ask these again.
+
+
 Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md): questions for Tim wait for the weekly Monday morning session (scheduled task ce-monday-questions) unless something is urgent. Builders still never wait for answers: each question below has a recommended default that is built or kept as a DRAFT behind a Settings switch; Tim's answer replaces it. Last updated Sat 17 Oct 2026 by the desk.
 
 ## A. Open items repeated from REMINDERS_FOR_TIM.md
