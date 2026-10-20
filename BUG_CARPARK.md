@@ -501,6 +501,8 @@
 
 **run 33 (19 Oct night, installed Civil 3.0.57 / C-46): PASS through the settings guard only (not through the Settings window):** with oldStartingValuesMoved true and maximumPipeVelocity 3.0 set before launch, a 20 m 225 mm pipe at 1 in 10 gave "Full-bore velocity 4.64 m/s exceeds maximum 3.00 m/s", no "CE moved the maximum pipe velocity" line appeared and the file was not rewritten. Not run: the control (6.0 gives no warning) and the old-file path (3.0 with no flag moves to 6.0 once and says so). Needs the Settings page save-and-restart on Tim's PC for the full chain. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, B item 9. Not marked FIXED.
 
+**Step-iron half: FIXED (Codex-accepted, Civil 3.0.66, 21 Oct 2026).** Robot run 42 (20 Oct, 3.0.66): PASS for Tim's own 900 file, two starts, no "CE moved the step-iron depth" line (0 matches in 972 and 457 new log lines; CLAUDE_DRIVER_RUN42_V2_2026-10-20.md B items 1 to 2). Codex V3-02 PASS (CODEX_VERIFY_V3_20261021_0259.md item 14): with a deliberate stepIronMinDepthMm 1000 and options.oldStartingValuesMoved true set through the settings guard, the depth stayed 1000 through two starts and the first close, no migration line on the command line or in the three latest logs of each log folder, then Tim's settings were restored by hash (C2 equals A2). Not covered: the old-file path (no marker, 1000 moves to 900 once and prints its line) still needs only a unit test. The velocity and joint-label-height halves are not part of this line and stay as recorded above (run 33, guard only); the entry stays OPEN for them (D6: never closed or deleted).
+
 ---
 
 ## BUG-824 — The installer refuses Civil 3.0.56, and Manager on any PC with Civil 3.0.56, because of the .dbx pipe-object file
@@ -9990,6 +9992,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Codex V1 retry (20 Oct 2026, Civil 3.0.65): BLOCKED, not tested** (CODEX_VERIFY_V1_20261020_2034.md V1-02). The first prompt was "CE: This drawing isn't tagged yet. Is this a Civil drainage drawing? [Yes/No] <Yes>:", not the X-Civil import window; the brief answered No, the drawing was tagged Structural and CDIMPORTXCIVIL was cancelled, so the file dialog, the CHECK THE SCALE sentence and the Proceed question were never reached. Cause is the fixture: the empty import target is not tagged Civil. Retry with the corrected brief (a target already tagged Civil, or an authorised first answer Yes to that question). Not FIXED.
 
+**Codex V3-04 (21 Oct 2026, Civil 3.0.66): BLOCKED, operator deviation; retry with a corrected brief** (CODEX_VERIFY_V3_20261021_0259.md item 12). Codex answered Y to the untagged question, the X-Civil import window opened, Choose DWG and Read source reached the "Pit and pipe schedule" page ("Check the schedule first"), and Codex then clicked Import to drawing, which imported (61 objects, "Post-import QA: 52 data sanity findings") with no "Proceed with import?" question. No verdict. What the desk found in the source (read-only, rel-20261020j): in the window route there is NO command-line "Proceed with import?" question (that is the headless route only); the window's "Import to drawing" button is the Yes and Close is the No. The CHECK THE SCALE sentence is printed on the command line before that page opens, so it sits behind the modal window; the window page itself does not show it. Corrected brief verifyV3b_c56 reads it from the command history after Close. Not FIXED.
+
 ---
 
 ## BUG-506
@@ -11191,6 +11195,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Codex look L4 (19 Oct, installed Civil 3.0.56):** the native text editor with '** Undefined shape 80 / 50' was seen again on the Pit Schedule table cell (L4-08, see BUG-396); Q itself (L4-06a) was BLOCKED again by the paste-command input fault (BUG-749). Evidence: CODEX_LOOK_L4_20261019_1502.md.
 
+**Codex V1-03 (20 Oct, 3.0.65) and V3-05 (21 Oct 2026, Civil 3.0.66), DP1 label: NOT a new bug, a third place for this one.** Double-click on the green DP label of a Detention Pit (DP1) enters TEXTEDIT (in-place text editing) and the command history shows "** Undefined shape 68" and "** Undefined shape 80", three of each, alternating. Esc twice, nothing typed, nothing changed. The desk checked the carpark: the same message family is already filed here (Q note, BUG-396 Pit Schedule cell: shapes 80 and 50) and in the 14 Oct Codex report; this is the first time on a plain CE label and the first time shape 68 is named. A plain label showing it points away from Q/leader-only causes toward the font the drawing's text style uses (an SHX shape font), which is what the first diagnostic was already investigating; no new id filed. Same drawing context: the DP1 block double-click prints the Set/Remove prompt (Action for tag "DP1" [Set/Remove] <Set>:), no window, and a nearby pipe opens Edit Pipe (see ROBOT_GAPS_2026-10-19.md item 5; lane 03 is building the DP edit window). Evidence: CODEX_VERIFY_V3_20261021_0259.md item 13 (V3-37-DP-label-SEEN-0.png). Not FIXED.
+
 
 ## BUG-624 — MLL left-side placement puts the note right of its arrow
 
@@ -11577,6 +11583,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Status:** OPEN
 
 **run 41 (20 Oct, installed Civil 3.0.65 / C-55, #1486): robot PASS, Codex acceptance pending.** The Tidy labels "would move" line now names the pipe, for both the open END and the open START (CLAUDE_DRIVER_RUN41_V2_2026-10-20.md answer-first items 2 and 3). Codex has not looked at it yet (the V2b run did not reach a "would move" line: Tidy labels said "Will move 0"). Status stays OPEN until a Codex PASS exists (queue section 8 (b)).
+
+**robot PASS (runs 41, 42); Codex V3-01 (21 Oct 2026, Civil 3.0.66) saw the pipe names present but its block placement did not reproduce the robot counts; acceptance pending a retry with the robot's exact placement.** Codex's preview named both pipes ("pipe P8 -> open end start invert text. Move it by hand." and "pipe open end -> P8 start invert text. Move it by hand."), and the old unnamed wording was not seen. But with its block placement the counts were 0 / 0 / 2 and there was no "Move this label now?" question, where the robot got 1 / 0 / 1 with "would move 275 mm". The Codex invert text sat 62.5 mm lower than the robot's (y -79880 against -79817.5), so the block probably did not overlap it the same way. Counts that differ are DIFFERENT, not FAIL. Retry brief verifyV3b_c56 uses the robot's exact placement. Evidence: CODEX_VERIFY_V3_20261021_0259.md item 6. Not FIXED.
 
 ---
 
