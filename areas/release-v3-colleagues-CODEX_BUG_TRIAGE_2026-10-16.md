@@ -479,3 +479,16 @@ Source: CLAUDE_DRIVER_RUN38_V2_2026-10-20.md (robot pass 17, installed Civil 3.0
 **The BUG-141 chain is complete with no new fix line.** The text-obstacle diagnostic (#1485) works: the log named four SC texts on layer SLAB SC, and one of them (SC 10B734) really overlaps the P3 -> P2 label's box. The remaining "No clear spot" is a genuine overlap on a crowded drawing, not a Tidy labels fault. The two real causes the chain found (hidden pit circle #1482, border block #1484) both PASS on the robot. BUG-141 stays OPEN until Tim or Codex confirms in AutoCAD; it is proposed for closure by Tim, and the desk does not close it.
 
 **No other real product problem named.** The report's lesser notes are already filed and not re-queued: the sheet-frame log line prints no numbers (run 37 note, low), the CDSYNC "95 to 96" Pit Schedule count (BUG-855), and the cosmetic "waiting at a prompt" alarm after CDSYNC. **Optional, not queued, Tim's call:** one more log line listing which alternative spots were tried and what stopped each (report D item 4); only worth building if Tim wants the SC question settled by evidence rather than by hand.
+
+
+## 19. Run 39 fix queue (20 Oct)
+
+Source: CLAUDE_DRIVER_RUN39_V2_2026-10-20.md (robot pass 18, installed Civil 3.0.63 / Manager 1.1.63, train C-53). Counts: PASS 9, FAIL 0, BLOCKED 1, UNPROVEN 2.
+
+**No real product problem found, so no new lane line.** BUG-516 passes (CDRULES Values and CDTWL both print 150, and both print 200 when the Design Standards copy is 200). BUG-557 passes with a limit (file modified time only). BUG-820, BUG-854, BUG-815 and the BUG-141 pit half pass again. All stay OPEN until Tim or Codex confirms in AutoCAD.
+
+**Driver, not product:** BUG-505 is BLOCKED because dialog-path fails in the driver (missing Windows UI Automation type). It is the next driver-v3 task for the desk; see the robot gaps file, run 39. No plugin change is needed to unblock it.
+
+**UNPROVEN, nothing to build:** BUG-476 (Manager windows are read-only for the driver) and the command-name guard (UX-NAMES-01 and 06, #1166; a source test, 9 of 139 commands spot-checked fine). BUG-556 is a code removal with nothing to drive.
+
+**Manager release-build guard finding (78 -> 75): FIXED ON THE BRANCH at 0d3b1f49 (fix job entry 1487).** It is awaiting Opus re-review in the next train. It is built and unit-tested only; nobody has opened it in AutoCAD.

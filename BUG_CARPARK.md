@@ -84,6 +84,9 @@
 
 **run 37: PASS (20 Oct, 3.0.61)**: 30 of 30 R-06 "unknown" rows in the saved CDRULES All text end "Enter the detention length, or untick Detention (CDEDIT)"; 0 with the old wording. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN37_V2_2026-10-20.md B item 9.
 
+
+**run 39: PASS (20 Oct, installed Civil 3.0.63 / C-53).** All 30 unknown R-06 rows end "Enter the detention length, or untick Detention (CDEDIT)"; 0 with the old diameter wording. Still OPEN until Tim or Codex confirms in AutoCAD.
+
 ---
 
 ## BUG-853 — The CE ribbon click log grows for ever and records drawing names
@@ -577,6 +580,9 @@
 
 **run 37: PASS (20 Oct, 3.0.61)** for the totals line: "25 pipes recovered, 0 invert texts written, 20 already had invert text, 24 skipped", same as runs 35 and 36. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN37_V2_2026-10-20.md B item 8.
 
+
+**run 39: PASS (20 Oct, 3.0.63).** Recover Inverts totals: "25 pipes recovered, 0 invert texts written, 20 already had invert text, 24 skipped"; the one-of-two warning names the 5 pipes. Still OPEN until Tim or Codex confirms in AutoCAD.
+
 ---
 
 ## BUG-819 — Structural section drawing code: purlin second flange width, purlin lips, actual angle thickness, welded sections with a root radius
@@ -668,6 +674,9 @@
 **run 36: PASS (20 Oct, 3.0.60)** on the downpipe fixture: CDCHECKS 42 to look at, 234 OK, 342 not known; none of the 20 printed rows is R-06; CDRULES All has 0 old-style false R-06 rows. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 8.
 
 **run 37: PASS (20 Oct, 3.0.61)**: the R-06 detention rows read "not known" with the length wording and none is a false pass or false warning (402 findings across 12 rules; 5 warnings, 342 unknown, 55 pass). CDCHECKS itself was not run this time. Robot evidence only, NOT marked FIXED. Evidence CLAUDE_DRIVER_RUN37_V2_2026-10-20.md B item 9.
+
+
+**run 39: PASS (20 Oct, 3.0.63).** CDRULES All R-06 fix line is the length wording on 30 of 30 unknown rows. Still OPEN until Tim or Codex confirms in AutoCAD.
 
 ---
 
@@ -9191,6 +9200,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **run 37 (20 Oct, 3.0.61): the callout drag words ("Would sit on top of ...") are UNPROVEN** (no typed form; mouse drag only). Evidence B item 6.
 
 **run 38 (20 Oct, installed Civil 3.0.62 / C-52): the #1485 text-obstacle diagnostic WORKS (debug logging ON):** for the P3 -> P2 label (the note text "450 DIA. STORMPRO PIPE AT 1 IN 194 19.40m DET...", handle 1101B4) the log names four SC texts on layer SLAB SC against the search window; ONE of them, SC 10B734 (63430.54..63689.24, -24443.43..-24045.75), really overlaps the label's own box (60059.7..67983.4 x, -24407.5..-23465.8 y); the other three and 13 more texts (CL, CJ, IL texts) do not touch the label. CONCLUSION: the remaining "No clear spot" on P3 -> P2 is a GENUINE overlap on a crowded drawing, not a Tidy labels fault; nothing further to fix in the rule. The two real causes found by this chain (hidden pit circle #1482, border block #1484) both PASS on the robot. BUG-141 stays OPEN only until Tim or Codex confirms in AutoCAD; proposed for closure by Tim (not closed by the desk, D6; not marked FIXED). Caveats from the report: the overlap is measured with the LISP bounding box, not proven to be the exact box CE uses; the "(on ...)" word names the first thing the label's current spot overlaps, not why every alternative spot failed (candidate spots are not logged, report D item 4). Evidence CLAUDE_DRIVER_RUN38_V2_2026-10-20.md answer-first items 2 to 6 and B items 1 to 3. Robot evidence only.
+
+**run 39: PASS (20 Oct, 3.0.63) for the pit-body half.** New pit P8 and a 20 m pipe added with debug logging OFF: no "no clear spot ... (on "pit P8")" line; Tidy labels names only "pipe P3 -> P2 label" (the genuine SC overlap, run 38). Still OPEN until Tim or Codex confirms in AutoCAD.
+
 ---
 
 ## BUG-142
@@ -9696,6 +9708,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** SEEN by Codex 10 Oct 00:31 (W53, PASS 3 of 3, installed Civil 3.0.41 / Manager 1.1.41 / Structural 1.0.110, report CODEX_VERIFYW53_2026-10-10.md): Manager > Admin Dashboard asked 'Set up CE administrator - make this Windows account the office administrator?', Yes wrote the shared admin list (policiesdmin-users.json in the IT Admin / CE Plugin Admin folder, 26 bytes, exactly ONE administrator, equal to the current Windows login, no local copy), and the success sentence said it was recorded in the shared IT Admin folder. Settings files unchanged, SAVETIME back to 5, no drawing saved. NOT claimed: that the file has reached other PCs (2,597 files in that folder, 7 flagged cloud-only, so sync is not shown) and nothing about colleague roles. The ORIGINAL finding (no administrator list, so nobody could be administrator) is closed on Tim's PC only; the fault still needs a decision for colleague PCs. Never FIXED until Tim confirms in AutoCAD. Original status: OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Manager and installer bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+
+**run 39 (20 Oct, 3.0.63): UNPROVEN.** The first-administrator question sits behind a Set-up button in a Manager window, and Manager windows are read-only for the driver, so the wording could not be read. Nothing answered, no administrator created. Not FIXED.
+
 ---
 
 ## BUG-477
@@ -9932,6 +9947,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the second Civil bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+
+**run 39 (20 Oct, 3.0.63): BLOCKED by a DRIVER fault.** The X-Civil import window opened and "Choose DWG..." opened the Choose X-Civil drawing file dialog, but the driver verb dialog-path failed with "Unable to find type [System.Windows.Automation.AutomationElement]", so no file was chosen and the CHECK THE SCALE line was never reached. The open file dialog then stopped quit and needed quit -Kill. See the robot gaps file, run 39. Not FIXED.
+
 ---
 
 ## BUG-506
@@ -10027,6 +10045,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** HUNT2-C-12 to HUNT2-C-15 (four LOWs, grouped): (a) HUNT2-C-12: CDTWL measures detention pipe storage from pit centre to pit centre (Rules/DetentionBranchCollector.cs 237 and 309-322); a bent run is under-counted and the part of the pipe inside each pit is counted twice because the pit's own volume is counted too (Rules/DetentionStorageMath.cs 106-125); I think a 15 m twin 375 run between two 600 pits double counts about 0.13 m3 of about 3.3 m3, roughly 4 per cent, well over the 0.5 per cent 'matches' tolerance, which is fixed in code (Rules/StorageDesignedVsDrawn.cs 10-12 and 30-31), so CDTWL can say 'The drawing holds more than the sheet says' over a difference its own method made; right result: pipe storage from the drawn pipe length between the inside pit walls and the tolerance on the Settings page; smallest fix: use the pipe's own drawn length less half of each pit's width along the pipe; no bent-pipe or pit-overlap test found. (b) HUNT2-C-13 (breaks R-00): two different freeboard settings both named detentionFreeboardMm, one under Pipe (Models/UserSettings.cs 505-506, read by CDTWL, Services/DetentionTwlService.cs 361-364) and one under Design Standards (Models/UserSettings.cs 1374-1375, read into the rulebook at Rules/RulebookValues.cs 237 and only printed at Commands/RulesCommand.cs 240); CDRULES prints 'R-06 detention: ... freeboard 150 mm' but no rule in Rules/RulebookEngine.cs checks it, so change one and the two disagree; neither is on the Settings window; right result: one freeboard on the Settings window, used by CDTWL and shown by CDRULES; smallest fix: read the rulebook freeboard in DetentionTwlService.FreeboardMm() and retire the Pipe copy (read it once for old files). (c) HUNT2-C-14: every no-detention CDDESIGN says 'Inner-metro site - no OSD required; recommend WSUD water-sensitive landscaping tank (size separately)', whatever the council, and the drafter, not the council, decided there was no detention (Services/AutoDesignService.cs 131-133); the 'no council profiles' note also fixes 'storage 1-in-10' and 'Co 0.6' in the words (270-273) while the Tc and storm beside them come from Settings; a Casey job is not inner-metro; right result: 'Detention switched off for this design. Confirm the council does not need on-site detention before issue.'; smallest fix: say the inner-metro sentence only for the inner-metro profile. (d) HUNT2-C-15: LandXML sizes ignore the file's own size units; the parser reads only linearUnit and only to decide metres for positions (Helpers/LandXmlParser.cs 400-408); pipe and pit sizes use 'under 10 means metres, otherwise millimetres' (374-388) and the file's diameterUnit and widthUnit are never read, so a 12 inch pipe imports as 12 mm (a wrong size on a design); I think this is rare on Victorian jobs but a consultant file from a US-set-up Civil 3D template would do it; right result: sizes converted from the stated unit, and where none is stated, the current rule plus a line saying so; smallest fix: read diameterUnit and widthUnit from the Metric (or Imperial) element and convert; no test for size units. To SEE them: (a) CDTWL on a job with a detention run, then measure the drawn pipe wall to wall with LIST and work the storage by hand; (b) set the Design Standards freeboard to 300 on a copy of the settings file, CDRULES reads 300, CDTWL still warns against 150; (c) a copy of a Casey job, CDDESIGN with detention unticked, read the notes; (d) a LandXML copy with diameterUnit="inch" and a 12 diameter, import and read the label. All four are LOW, found by reading code; none seen in AutoCAD. Source file: C:\CE_PLAN\areas\release-v3-colleagues-HUNT2_CIVIL_2026-10-09.md (second Civil bug hunt, 9 Oct; code read at the installed Civil 3.0.41 commit 660487d1; nothing built or run; none seen in AutoCAD). File paths are inside Modules/Drainage/.
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the second Civil bug hunt. Never FIXED until Tim confirms in AutoCAD.
+
+
+**run 39 (20 Oct, installed Civil 3.0.63 / C-53): PASS.** With Tim's settings (both copies 150) CDRULES Values and CDTWL both print 150. With the Design Standards copy set to 200 and the Pipe copy at 150 (set through the guard, restored) both print 200. The reverse (Pipe copy changed) was not tested. Still OPEN until Tim or Codex confirms in AutoCAD.
 
 ---
 
@@ -10370,6 +10391,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the carpark clerk from the off-PC calls audit (areas/release-v3-colleagues-OFF_PC_CALLS_2026-10-09.md, code read only at Structural 1.0.112 = 24238160 and Civil 3.0.43 / Manager 1.1.43 = e636e17d). Never FIXED until Tim confirms in AutoCAD.
 
+
+**run 39 (20 Oct, 3.0.63): nothing to drive** (code removal, nothing visible in AutoCAD). Stays as filed.
+
 ---
 
 ## BUG-557
@@ -10377,6 +10401,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** OFF-PC CALLS AUDIT, the remaining routes of the 17, grouped (LOW to MEDIUM; each is named with file:line; routes 1-5, 9-11 and 13-16 are BUG-550 to BUG-556). (Route 6, LOW to MEDIUM) Civil CDASK chat panel: Controls/CeAssistantControl.xaml.cs 180-215 and 678-731; tools are project network, review design, check project data (720-722). Sends the typed question, CE pipe and pit data and geometry from the drawing, and tool results (egress audit label 'question,ce-project-data,geometry', 714). On Send. CE Cloud only: direct-key mode is refused ('direct-key authority is not configured for this release', 685); needs a seat grant, a non-Confidential project and access re-checked every round; only Timothy-level authority can mark a project Standard (761-777). In line with the CE Cloud design; not a markup PDF. (Route 7, LOW) Civil CE Cloud seat check, GET /v1/access: Services/CeAiSeatGrantService.cs 94-117, called from CeAssistantControl.xaml.cs 733-738. Sends only the seat token in an x-api-key header; no drawing data; HTTPS only, redirects refused, address must match the approved policy. On CDASK Send, Apply and 'Project AI access'. Fine. (Route 8, LOW) Civil fleet telemetry heartbeat: Services/FleetTelemetryStartupService.cs 49-64, started at PluginInitialization.cs 194; posts to <CE_CLOUD_URL>/v1/telemetry (TelemetryQueueService.cs 131-215). Fixed fields only (install ID, Civil version, AutoCAD release and build type, plus the row count from the CDIMPORTXCIVIL fallback; TelemetryEvent.cs), no free text or paths. It runs at AutoCAD start-up in the background whenever both CE_CLOUD_URL and CE_CLOUD_AUTH are set (they are on Tim's PC), with NO switch in CE Settings; otherwise it only queues to %APPDATA%\CE_CVL_SUITE\telemetry\outbox.jsonl. No job data, but it runs without any Settings switch (Settings-first rule R-00). (Route 12, LOW to MEDIUM) Job time logs: Structural Services/CsvLogger.cs 194-198 writes <data folder>\Time Logs\users\<user>_<yyyy-MM>.csv with job number, ADDRESS, SUBURB, drawing, client and user (tracker created at start-up, CeToolsInitializer.cs 63). Civil Services/JobTimeWeeklyExportService.cs 26-122, called at start-up (CivilJobTimeService.cs 33-35), mirrors a per-user hours CSV to <IT Admin>\CE Diagnostics\Time Logs\weekly exports. THE PROBLEM: Structural finds its data folder at Services/SettingsManager.cs 182-252; if no 'Creative Engineering' folder is found, the last fallback (228-243) takes the FIRST folder whose name starts with 'OneDrive'. On a PC with a personal OneDrive that can be the PERSONAL one, so job addresses and client names would sync to a private Microsoft account. Office time data in office folders is expected; the personal-OneDrive fallback is not. The audit did not check whether any colleague has a personal OneDrive. Fix (audit fix 6, for Tim to rule on): remove the personal-OneDrive fallback; if no company folder is found, say so and keep the log local. (Route 17, LOW) OneDrive cloud-only files pulled down: Modules/Structural/Services/CloudFileHelper.cs (notes, checklists, reports, time logs); opening a cloud-only file makes OneDrive download it from the company SharePoint. Company storage only; fine. ALSO FROM THE AUDIT: the Structural switch 'Share learning data' (MarkupAI.LearningDataOptIn, default ON) is read by nothing (see BUG-550). NOT CHECKED BY THE AUDIT (so these stay open questions): environment variables on any colleague PC; the DEPLOYED CE Cloud worker (the repo's worker is covered in BUG-551); what WebView2 / Edge, AutoCAD or Windows send on their own (SmartScreen, crash reports, Autodesk analytics); whether colleagues' Desktops are backed up to OneDrive; which installer colleagues run for V3; the real start-up order of Manager, Civil and Structural; whether CEMARKUP is on the ribbon in the colleague profile (the registry lists it as not hidden); who owns creativeeng.com.au; third-party DLL behaviour; native ARX/DBX/LISP beyond keyword search; older code on other branches. NOTHING WAS RUN: every finding is from reading code; none was seen happening in AutoCAD. WHAT A DRAFTER SEES: for the CE Cloud routes, nothing beyond the CDASK buttons; for time logs, a file appears in a OneDrive folder. HOW TO SEE IT: for route 12, on a test PC with a personal OneDrive and no company folder, start Structural: right = no time log is written into the personal OneDrive; for route 8, with the Settings switch OFF, start AutoCAD: right = nothing is posted to CE Cloud. AUDIT file: C:\CE_PLAN\areas\release-v3-colleagues-OFF_PC_CALLS_2026-10-09.md.
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the carpark clerk from the off-PC calls audit (areas/release-v3-colleagues-OFF_PC_CALLS_2026-10-09.md, code read only at Structural 1.0.112 = 24238160 and Civil 3.0.43 / Manager 1.1.43 = e636e17d). Never FIXED until Tim confirms in AutoCAD.
+
+
+**run 39 (20 Oct, 3.0.63): PASS with a limit.** The outbox.jsonl line count was 0 before and after in both ON and OFF (the file is a 3-byte marker). Its modified time moves at start-up with the switch ON and does not move with the switch OFF. The evidence cannot show the heartbeat content. Still OPEN; not FIXED.
 
 ---
 
