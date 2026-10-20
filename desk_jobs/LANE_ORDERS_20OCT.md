@@ -26,3 +26,10 @@ These orders OVERRIDE the PAUSE paragraph in your job text where they differ. Ev
 1. The robot may now use (setvar ...) lines for CELWEIGHT or DIMSCALE on TEST copies only (never on real drawings).
 2. Tim switched ON the two Structural warnings in his own settings file (CE_STRUC_SUITE\CS_Settings.json, new SHA-256 F68EEB5E343C, previously 24D8E5F7D87B): the robot briefs must expect the new hash.
 3. Colleague installs go via the deploy chat's route until BUG-823/824 are fixed (Tim: yes).
+
+## Desk answers to lane 02's CEMEMBER questions (Tue 20 Oct 2026 20:35; builders never wait on Tim: INT-073)
+1. **Command route:** REUSE SbeamAtomicPlacementWriter and the compound store, so SBEAMEDIT edits CEMEMBER members (your recommendation, accepted).
+2. **Z purlin orientations:** the card is silent. Take the naming and the 'flange nearer the viewer' rule from the existing Z purlin code and tests in the repo (search for ZP / Z purlin orientation in Modules/Structural and the CEMEMBER design files), implement it as a DRAFT DEFAULT behind a Settings value, mark it 'draft default, Tim to confirm' in the PR and in areas/structural.md; if the repo shows no convention, use: orientation = which way the top flange points (left/right) viewed along the member, flange nearer the viewer = the one on the viewer's side of the web. Tim will confirm on Monday (QUESTIONS_FOR_MONDAY.md).
+3. **Settings rows** for break overshoot 1.5 mm and kink 2 mm: build them with the command (Codex adds the window rows later).
+4. **The 'Tim AutoCAD checklist' file is no longer for Tim** (Tim 20 Oct: all checking and testing is done by AI). Keep the file, rename its heading to 'CEMEMBER acceptance checklist (robot and Codex)'; the desk will give it to Codex as a verify brief.
+5. Keep going: next PRs = remaining section types in the card, the CEMEMBER command and prompts, Escape/Undo/Enter-to-repeat. Write 'no bug work left' only when CEMEMBER foundations through the command are all DRAFT PRs.
