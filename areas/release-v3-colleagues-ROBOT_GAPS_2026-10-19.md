@@ -80,3 +80,10 @@ Source: CLAUDE_DRIVER_RUN39_V2_2026-10-20.md.
 4. **The telemetry outbox file cannot show heartbeat content (BUG-557).** On this PC the file stays a 3-byte marker (0 lines) with the switch ON or OFF, so the only evidence is the modified time (moves at start-up with ON, does not move with OFF). A line-level proof would need the cloud settings unset for a test run, which the robot must not touch. Accepted as a limit of the evidence.
 5. **New typed form for the gaps list: CDTWL.** type "CDTWL`n10`n18.70" -Enter -Force (volume 10 m3, then a top water level of 18.70 m) works; the lone answer "10" at the volume prompt was refused with lost_foreground, so send the whole answer sequence in one type string.
 6. **Carried:** the cosmetic "AutoCAD may be waiting at a prompt" false alarm after CDSYNC (gap 13); the What's New palette is closed by the first quit.
+
+## Run 40 (20 Oct, Civil 3.0.64): right-click items cannot be driven, one launch anomaly
+
+Source: CLAUDE_DRIVER_RUN40_V2_2026-10-20.md.
+
+1. **Right-click menu items cannot be driven.** "CE: Select this run" and "CE: Select whole network" (BUG-416, #1170) exist only as AutoCAD right-click menu items, and the driver has no right-click verb, so the REDO-after-selection check is UNPROVEN. Desk idea only, nothing invented here: either a driver verb that can open a right-click menu, or a typed command that calls the same two actions. Either is a change for the desk to decide; until then it needs Tim or Codex by hand.
+2. **One launch anomaly, watch whether it repeats.** `launch` returned ok:false after 240 s ("AutoCAD did not become idle on the drawing"), but AutoCAD was running and Civil had logged Started. The Explorer hand-off did not open the drawing; the driver's own `open -Writable` worked in 4 s. Earlier launches took 22 to 29 s. One occurrence only: note it, and see whether the next runs show it again before treating it as a fault.

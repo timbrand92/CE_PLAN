@@ -492,3 +492,11 @@ Source: CLAUDE_DRIVER_RUN39_V2_2026-10-20.md (robot pass 18, installed Civil 3.0
 **UNPROVEN, nothing to build:** BUG-476 (Manager windows are read-only for the driver) and the command-name guard (UX-NAMES-01 and 06, #1166; a source test, 9 of 139 commands spot-checked fine). BUG-556 is a code removal with nothing to drive.
 
 **Manager release-build guard finding (78 -> 75): FIXED ON THE BRANCH at 0d3b1f49 (fix job entry 1487).** It is awaiting Opus re-review in the next train. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+## 20. Run 40 fix queue (20 Oct)
+
+Source: CLAUDE_DRIVER_RUN40_V2_2026-10-20.md (robot pass 19, installed Civil 3.0.64 / Manager 1.1.64, train C-54). Counts: PASS 9, FAIL 0, BLOCKED 0, UNPROVEN 2.
+
+**No real product problem found, so no new lane line.** BUG-820, BUG-854, BUG-815, BUG-516 and BUG-141 pass again. BUG-522 passes for the matched-copies case only. All stay OPEN until Tim or Codex confirms in AutoCAD.
+
+**UNPROVEN, nothing to build:** BUG-416 (the right-click items cannot be driven; needs Tim or Codex by hand) and the BUG-522 mismatch case (needs different CE_SHARED files). One launch anomaly is noted in the robot gaps file, run 40; one occurrence, watch only.

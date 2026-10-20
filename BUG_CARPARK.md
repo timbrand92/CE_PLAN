@@ -87,6 +87,8 @@
 
 **run 39: PASS (20 Oct, installed Civil 3.0.63 / C-53).** All 30 unknown R-06 rows end "Enter the detention length, or untick Detention (CDEDIT)"; 0 with the old diameter wording. Still OPEN until Tim or Codex confirms in AutoCAD.
 
+
+**run 40: PASS (20 Oct, 3.0.64).** All 30 unknown R-06 rows in the saved CDRULES All text end "Enter the detention length, or untick Detention (CDEDIT)"; 0 with the old diameter wording. Still OPEN until Tim or Codex confirms in AutoCAD.
 ---
 
 ## BUG-853 — The CE ribbon click log grows for ever and records drawing names
@@ -583,6 +585,8 @@
 
 **run 39: PASS (20 Oct, 3.0.63).** Recover Inverts totals: "25 pipes recovered, 0 invert texts written, 20 already had invert text, 24 skipped"; the one-of-two warning names the 5 pipes. Still OPEN until Tim or Codex confirms in AutoCAD.
 
+
+**run 40: PASS (20 Oct, 3.0.64).** Recover Inverts totals: "25 pipes recovered, 0 invert texts written, 20 already had invert text, 24 skipped"; the one-of-two warning names the 5 pipes. Still OPEN until Tim or Codex confirms in AutoCAD.
 ---
 
 ## BUG-819 — Structural section drawing code: purlin second flange width, purlin lips, actual angle thickness, welded sections with a root radius
@@ -678,6 +682,8 @@
 
 **run 39: PASS (20 Oct, 3.0.63).** CDRULES All R-06 fix line is the length wording on 30 of 30 unknown rows. Still OPEN until Tim or Codex confirms in AutoCAD.
 
+
+**run 40: PASS (20 Oct, 3.0.64).** CDRULES All R-06 rows read "not known" with the length wording and none is a false pass or false warning (411 findings across 12 rules; 5 warnings, 350 unknown, 56 pass, after one extra pit and pipe were added). Still OPEN until Tim or Codex confirms in AutoCAD.
 ---
 
 ## BUG-814 — Plain-words fixes from run 31: CDTAG retag refusal, CDFIXTAGS refusal sentence, CDCHECKS names pipes by handle, "AGI 1" spacing
@@ -3410,6 +3416,8 @@
 
 **Command / Area:** Civil, small items from the C-19 finalizer (LOW): (1) right-click 'Select this run' straight after U, in a drawing whose CE record is not loaded yet, may lose REDO (rare; not reproduced); (2) the #731 test step in REGRESSION_LOG names 'CDSETTINGS' which does not exist: the Settings window command is CDS (controller fixes it in the C-19 Codex checklist); (3) the #705 test step is superseded by #731; (4) #667 open AutoCAD-only question: the save for drawing A runs while drawing B's command starts with no document lock on A (a lock clash is caught and retried at idle): Codex two-drawing test (edit a pit label in A, then at once in B) in block W14. **Status:** OPEN (LOW; W14).
 
+
+**run 40 (20 Oct, installed Civil 3.0.64 / C-54): UNPROVEN.** The fix (#1170) is built and installed, but "CE: Select this run" and "CE: Select whole network" exist only as AutoCAD right-click menu items (CivilNetworkSelectContextMenuService.cs); the driver cannot right-click. So this needs Tim or Codex by hand: type U, right-click a pit, choose "CE: Select this run", then REDO must still work. Plain U then REDO was seen working on the Edit Pipe cascade, but that is not this case. Not FIXED.
 ---
 
 ## BUG-413
@@ -9203,6 +9211,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **run 39: PASS (20 Oct, 3.0.63) for the pit-body half.** New pit P8 and a 20 m pipe added with debug logging OFF: no "no clear spot ... (on "pit P8")" line; Tidy labels names only "pipe P3 -> P2 label" (the genuine SC overlap, run 38). Still OPEN until Tim or Codex confirms in AutoCAD.
 
+
+**run 40: PASS (20 Oct, 3.0.64).** Tidy labels with debug logging OFF and a new pit P8 plus a 20 m pipe added: no "no clear spot ... (on pit P8)" line; every "no clear spot" line names only "pipe P3 -> P2 label" (the genuine SC overlap, run 38), and the line names "SC", not the Drawing Border. Still OPEN until Tim or Codex confirms in AutoCAD.
 ---
 
 ## BUG-142
@@ -10049,6 +10059,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **run 39 (20 Oct, installed Civil 3.0.63 / C-53): PASS.** With Tim's settings (both copies 150) CDRULES Values and CDTWL both print 150. With the Design Standards copy set to 200 and the Pipe copy at 150 (set through the guard, restored) both print 200. The reverse (Pipe copy changed) was not tested. Still OPEN until Tim or Codex confirms in AutoCAD.
 
+
+**run 40: PASS (20 Oct, 3.0.64).** With Tim's settings (both copies 150) CDRULES Values prints "freeboard 150 mm" and CDTWL prints "150 mm is wanted". A changed freeboard was not tested this run. Still OPEN until Tim or Codex confirms in AutoCAD.
 ---
 
 ## BUG-517
@@ -10099,6 +10111,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the cross-cutting bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+
+**run 40 (20 Oct, 3.0.64): PASS for the reachable case.** With equal CE_SHARED copies there is no "different releases" line in the CE log (673 lines, debug logging OFF), and both plug-ins started (CE MANAGER v1.1.64, CE CVL SUITE v3.0.64). The mismatch case is UNPROVEN (it needs different CE_SHARED files; installed files must not be touched). Not FIXED.
 ---
 
 ## BUG-523
