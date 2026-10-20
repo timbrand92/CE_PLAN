@@ -25,4 +25,4 @@ Code with logic in AutoCAD/.NET (transactions, undo/redo, ObjectIds, database wr
 4. Record each Haiku trial result below (task, did it get it right, cost note).
 
 ## 6. Trial log
-- 21 Oct 2026: JOBFILE_CHECK (job-file damage scan) on Haiku: result recorded in desk_jobs/JOBFILE_CHECK_2026-10-21.md.
+- 21 Oct 2026: JOBFILE_CHECK (job-file damage scan) on Haiku, 74 files: it found the 2 files with real 0x07 control characters (fix_1478_1479, train_c48_finalizer: both old and already used) and 0 version mismatches (correct). It also reported 18 "damaged paths" that are mostly false positives of a too-loose pattern (e.g. "(C: Civil ..."). Verdict: GOOD for mechanical scans, tighten patterns; its output is read by the desk.
