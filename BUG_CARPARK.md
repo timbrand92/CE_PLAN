@@ -11600,7 +11600,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** The section outline SBEAM draws for a Z purlin crosses itself: the bottom flange is hung off the wrong side of the web, so the web left face runs straight through the bottom flange. Not seen in AutoCAD yet; found by working the corner points out (the outline from a 250 deep, 125 flange, 20 lip, 5 thick Z has its closing edge crossing the bottom flange top edge). The box is also 2 x flange wide, but a real Z is 2 x flange minus the thickness wide.
 
-**Expected behaviour:** A clean Z: web, a flange each side pointing opposite ways, a lip on each flange, overall width = both flange widths minus the web thickness. CEMEMBER (PR #1507, section view) already draws this shape; SBEAM is left unchanged until CEMEMBER replaces it.
+**Expected behaviour:** A clean Z: web, a flange each side pointing opposite ways, a lip on each flange, overall width = both flange widths minus the web thickness. CEMEMBER (PR #1505, section view) already draws this shape; SBEAM is left unchanged until CEMEMBER replaces it.
 
 **Reference:** Modules/Structural/Services/StructuralDetailService.cs BuildZcSectionVertices; test SbeamAutoCadPlacementAdapterTests.ZcProductionVertexBuilder_MatchesSharedTranslatedEnvelope only checks the box, not the shape.
 
