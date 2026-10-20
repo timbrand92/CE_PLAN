@@ -7,7 +7,7 @@ while (-not (Test-Path $rep)) { if (Test-Path "$d\STOP_CHAIN.flag") { Log 'STOP 
 Start-Sleep 90
 while (Get-CimInstance Win32_Process -Filter "Name='cmd.exe'" | Where-Object { $_.CommandLine -match 'payload87' }) { Start-Sleep 30 }
 $txt = Get-Content $rep -Raw
-if ($txt -notmatch 'verified 828 files, verified 828, bad 0, extra 0' -or $txt -notmatch 'verified 75, bad 0, extra 0') { Log 'payload report not clean: stopping for the desk'; exit }
+if ($txt -notmatch 'verified 828, bad 0, extra 0' -or $txt -notmatch 'verified 75, bad 0, extra 0') { Log 'payload report not clean: stopping for the desk'; exit }
 Log 'payload report clean: installing'
 $out = & pwsh -NoProfile -File "$d\scripts\desk_install_c57.ps1" 2>&1 | Out-String
 Log ($out.Trim().Split("`n")[-1])
