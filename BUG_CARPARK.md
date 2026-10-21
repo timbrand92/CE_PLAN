@@ -11630,4 +11630,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** Codex V4 item 8; robot pass 24 (run 45) had marked this UNPROVEN (no double-click verb). Related: BUG-844 style findings in the L4 look (double-click on a pit label opens AutoCAD's editor). Next step: Codex retry V5-01 trying each part of the symbol, and a code read of which object the hook claims.
 
-**Status:** OPEN (seen once, one part of the symbol only)
+**Status:** OPEN (seen in V4 and V5: no part of the symbol opens the CE window)
+
+**Codex V5 (22 Oct 2026 08:35, Civil 3.0.68): DIFFERENT SURE, BUG-859 confirmed and wider.** Each of the four parts got one double-click: outer circle, red centre and the angled DP text all opened AutoCAD's Enhanced Attribute Editor (Block DOWNPIPE DYNAMIC WITH MASK, Tag DP, Value DP); the green label opened AutoCAD TEXTEDIT. CE's Edit source window opened on NONE. The key doubleClick.sourceEditWindow is absent from Tim's settings files (so the default applies). The placement line said "Tag: DP1" but both visible texts read "DP". Evidence CODEX_VERIFY_V5_20261022_0835.md item 4. Diagnosis + fix draft: Sonnet job fix_bug859_job (22 Oct 10:24), report areas\release-v3-colleagues-BUG859_DIAGNOSIS_REPORT.md.
