@@ -11580,11 +11580,13 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** Civil Tidy labels report wording; evidence CLAUDE_DRIVER_RUN37_V2_2026-10-20.md B item 5. LOW (wording only, no drawing change). Test that would catch it: a fixture with one text moved onto an ordinary block, run Tidy labels, assert the "would move" line contains the pipe name. Steps for Tim: move any pipe invert text onto a plain block, type CDTIDYLABELS then All, and read the "Will move" line: it should name the pipe.
 
-**Status:** OPEN
+**Status:** FIXED (Codex-accepted, Civil 3.0.67, 21 Oct 2026)
 
 **run 41 (20 Oct, installed Civil 3.0.65 / C-55, #1486): robot PASS, Codex acceptance pending.** The Tidy labels "would move" line now names the pipe, for both the open END and the open START (CLAUDE_DRIVER_RUN41_V2_2026-10-20.md answer-first items 2 and 3). Codex has not looked at it yet (the V2b run did not reach a "would move" line: Tidy labels said "Will move 0"). Status stays OPEN until a Codex PASS exists (queue section 8 (b)).
 
 **robot PASS (runs 41, 42); Codex V3-01 (21 Oct 2026, Civil 3.0.66) saw the pipe names present but its block placement did not reproduce the robot counts; acceptance pending a retry with the robot's exact placement.** Codex's preview named both pipes ("pipe P8 -> open end start invert text. Move it by hand." and "pipe open end -> P8 start invert text. Move it by hand."), and the old unnamed wording was not seen. But with its block placement the counts were 0 / 0 / 2 and there was no "Move this label now?" question, where the robot got 1 / 0 / 1 with "would move 275 mm". The Codex invert text sat 62.5 mm lower than the robot's (y -79880 against -79817.5), so the block probably did not overlap it the same way. Counts that differ are DIFFERENT, not FAIL. Retry brief verifyV3b_c56 uses the robot's exact placement. Evidence: CODEX_VERIFY_V3_20261021_0259.md item 6. Not FIXED.
+
+**Codex V3b (21 Oct 2026, Civil 3.0.67): V3-01 PASS SURE, FIXED (Codex-accepted, Civil 3.0.67, 21 Oct 2026).** With the robot's exact placement the counts matched (Will move 1 / Placed by hand 0 / No clear spot found 1) and both previews named the pipe ("pipe P8 -> open end start invert text would move 275 mm (further out)", "pipe open end -> P8 start invert text would move 275 mm (further out)"); the old unnamed wording was absent; Esc gave "Nothing was moved". Robot PASS runs 41, 42, 44, 45. Evidence: CODEX_VERIFY_V3_20261021_1040.md item 5 (and the 0826, 0911, 0954 attempts, all PASS). Note: the retry launcher had looked for the wrong report file name, so these four reports were not seen until 22 Oct (see DESK_LOG 22 Oct 06:30).
 
 ---
 
