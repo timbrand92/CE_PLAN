@@ -1,30 +1,70 @@
-# CDS missing Settings rows — 22 October 2026
+# CDS Settings rows — 22 October brief, completed 23 October 2026 (Melbourne)
 
-1. **PR:** DRAFT #1526 — https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1526. Head `a05fb8aef741bcf14c8f77068dfdb42577a3138e`, branch `cx/settings-rows-c60`, base `claude/rel-20261022m` @ `40ee0a36`. **34 tests added; 109/109 focused net10 and 2/2 picture generation passed; 16 pictures inspected. All three build lanes passed with zero errors; full net10 and focused net48 verification in progress.**
-2. **Scope:** desk plan/03 brief, review entries 1582.5 and 1586; Settings window only. Defaults unchanged. No deployment, AutoCAD launch or writes to Tim's settings files authorised.
-3. **Verified finding:** four requested rows already exist on Newer tools: `linking.tidyLeaderOut`, `doubleClick.opensEditWindow`, `checks.allowIgnoreFinding`, `checks.checksCommandEnabled`. Keep exactly one of each. Six missing: both layer findings, slow progress tick and seconds, removed-pit exclusion, source Edit window.
-4. **Work:** private short worktree `C:\ce-c60`, baseline full Civil net10 suite running with the mandatory skip flag and C-57 reference paths. Every change will use the existing draft, change tracking, Reset, Save and search. All tabs will be rendered dark/light and checked at 150%.
-5. **Remaining:** implement, check defaults and saved keys through real controls in temporary settings files; all three build lanes; full Civil net10 suite; focused net48 suite; inspect pictures; top regression entry; commit named files; draft PR against the current release line; final report.
-6. **Undo:** revert this branch's Settings commit. Nothing installed; real AutoCAD behaviour remains untested by this task.
+1. **PR:** DRAFT [#1526](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1526), against `claude/rel-20261022m`.
+2. **Head:** `cx/settings-rows-c60` at **`f1ab15898e1adef79277f5cfa9eb220497cb6a8d`**. Tested code: `a05fb8aef741bcf14c8f77068dfdb42577a3138e`; the final commit changes only the regression evidence. Base: `40ee0a36f7960145743954b39859eb6c3af92869`, also read from the installed Civil 3.0.70 DLL. Never master.
+3. **Tests added:** **34**, all passing in the full Civil run. Final focused Settings: **109/109 net10**, **109/109 net48**. Separate final picture generation: **2/2**. All 16 pictures inspected.
+4. **Full Civil net10 totals:** **19,188 total; 19,168 passed; 19 skipped; 1 failed**, the known `BackTest_GlenEira24115_Computed_WithinTolerance`. **Zero new failure names.** All three Release build lanes passed with **0 errors**. The exact existing **Settings fits 1920x1080 at 150% (dark)** test passed on both net10 and net48: tallest tab **673 px**, below **690 px** (base 670 px).
+5. **Delivered:** six missing controls added; four requested existing controls retained once. Defaults unchanged. Saved and pushed, no deployment, no AutoCAD run by this task, no acceptance claimed. The existing layer colour/linetype check remains unconnected to the Checks list; the new row saves its existing choice and its tooltip says so.
 
-## Implementation checkpoint — 22 October, Melbourne
+---
 
-1. **Implemented, tests pending:** six controls added; the four existing controls kept once. Fixes holds wrong-layer, office-layer differences and removed-pit exclusion; Display holds slow-check progress and its delay; Newer tools holds source Edit beside the existing pit-label choice.
-2. **Defaults unchanged:** source Edit On, the other eight switches Off, progress delay 1 second. Load and Reset read the existing model. The six new controls reset only with CDS Reset all tabs, so Reset Civil on the separate Manager page cannot change controls that page does not show.
-3. **Test evidence so far:** untouched base full net10: 19,154 total, 19,133 passed, 19 skipped, 2 failed (Glen Eira back-test and blank single-page PDF rendering). Red-first row check: 10 total, 4 passed, exactly the 6 missing rows failed. Added fixture now has 34 cases for real controls, exact-key writes, read-back, Reset, Cancel, old/missing/null groups, concurrent untouched settings, non-blocking progress warnings and two themed render cases.
-4. **Existing limitation discovered:** `layerChecks.layerDiffersRows` is stored and has a pure rule, but no production caller reads it. The new row saves that existing key; its tooltip plainly says the Checks list does not yet show these findings. Behaviour wiring is outside this window brief.
-5. **Coordination correction:** the red-first command did not stop after a failed build-lock acquisition and its cleanup removed the lock. It ran for one second while another foreground Civil test was active. A protective coordination hold was restored; all later commands stop on lock-acquisition failure and clean up only a lock successfully held by this session. No deployment or settings-file write was involved.
+## What Tim will see — existing keys, pages and unchanged defaults
 
-## Saved checkpoint — 22 October, Melbourne
+1. **`layerChecks.wrongLayerRows` — Fixes > Drawing checks — Off.** “List CE objects on the wrong layer”. Existing wrong-layer findings can be included in Checks.
+2. **`layerChecks.layerDiffersRows` — Fixes > Drawing checks — Off.** “List layers with a different colour or linetype”. Saves the existing choice. The model and pure rule exist, but no production caller reads this switch. The tooltip explains that the Checks list does not show these findings yet.
+3. **`checks.showProgressWhenSlow` — Display > Drawing check progress — Off.** “Show progress while a drawing check is busy”. Uses the existing status-bar progress line and Esc cancellation.
+4. **`checks.progressAfterSeconds` — Display > Drawing check progress — 1 second.** “Show progress after (seconds)”. Outside 0.5–30 seconds the existing rule uses 1 second. Finite figures save unchanged; blank, unreadable, NaN or infinite text warns and keeps the saved number. Nothing blocks Save (R-27).
+5. **`checks.leaveOutRemovedPits` — Fixes > Drawing checks — Off.** “Leave out pits marked To be removed when checking fit and fall”. Existing pits are still checked.
+6. **`linking.tidyLeaderOut` — Newer tools > Tidy labels — Off.** Existing row: “Tidy labels may move a label out with a leader”. `linking.tidyLeaderOut` is the exact existing key.
+7. **`doubleClick.sourceEditWindow` — Newer tools > Double-click — On.** “Double-click a downpipe, inlet or overflow to open Edit”. For example DP1 opens its small Edit window. Off returns to the command-line questions; typed CDTAG keeps its questions either way.
+8. **`doubleClick.opensEditWindow` — Newer tools > Double-click — Off.** Existing row: “Double-click also opens Edit for pit labels and the newer CE objects”. Kept separate from source Edit.
+9. **`checks.allowIgnoreFinding` — Newer tools > Checks list — Off.** Existing row: “Allow a finding to be ignored, with your reason, name and date”. No behaviour change.
+10. **`checks.checksCommandEnabled` — Newer tools > Checks list — Off.** Existing row: “Switch on the one Checks list”. Existing next-start ribbon behaviour is unchanged.
 
-1. **Draft verified through gh:** #1526 is Draft, base `claude/rel-20261022m`, head branch `cx/settings-rows-c60`, head `a05fb8ae`. The normal push passed the leak-scan hook. No master merge, rebase, force push or deployment.
-2. **Window checks green:** final focused Settings net10 109/109, including all 34 new cases and the existing 150% test; separate final picture generation 2/2. Tallest tab 673 px (690 px budget). All 16 final dark/light pictures inspected; the capture keeps the entire margin and footer. Also looked at Fixes, Display and Newer tools at 150%. No overlap or layout scrolling. Earlier binding-inventory failure was the strict expected-name list missing the six new controls; the list was extended, equality retained, and the whole focused group rerun green.
-3. **Still in progress:** the three foreground build lanes, full net10 comparison and focused net48 are queued in one fail-closed lock scope. Every command carries the skip, no-reuse, no-server flags and all C-57 ref parameters. No code edits while a test runs in this worktree.
-4. **Live-file evidence:** all four real settings files still match their initial content hashes. The Civil settings timestamp has changed while other suites were active; no timestamp-preservation claim. Tests added here use only fresh synthetic temporary files, never Tim's settings.
-5. **Undo:** revert `a05fb8ae`. Nothing installed or opened in AutoCAD; no acceptance claimed. The exact key/default/page list and all 16 picture paths are in the draft PR.
+## How the window remains consistent
 
-## Build verification — Friday 23 October, Melbourne
+1. **Existing design reused:** CDS header, fixed footer, eight tabs, SettingsPageStyle, SettingsSectionStyle, SettingsLabelStyle, SettingsValueBoxStyle, SettingsTickTextStyle, GoldDividerStyle and the existing theme resources. Pipe/Pit/Batch editor reference and CivilEditorShellTheme read. No new colour, scrolling layout or expander.
+2. **Existing machinery reused:** detached draft, change map and tab dots, search catalogue, history, candidate writer, Save, Cancel and Reset all tabs. Load and Reset read fresh instances of the existing model; UserSettings.cs and DoubleClickSettings.cs were not edited.
+3. **Reset boundary:** the six new CDS-only values reset with Reset all tabs. Reset Civil on the separate Manager page leaves these unshown values alone. An untouched value changed elsewhere while CDS is open survives Save.
+4. **Scope:** 23 changed files: four product UI/view-model files, two test files, REGRESSION_LOG and 16 images. No protected drawing command, drawing save/undo handler, placement service, C7 pipe object, Structural, Shared, Manager or installer source changed. Every prior regression entry retained: final diff against the base is 12 added lines, 0 removed.
 
-1. **All three Release builds passed on code head `a05fb8ae`:** net48, 0 errors / 242 warnings; net8.0-windows, 0 errors / 210 warnings; net10.0-windows, 0 errors / 208 warnings. Each was run directly in the foreground with the mandatory safe-build flags and C-57 reference parameters. Full net10 Civil suite is running next, followed by focused net48 Settings checks in the same exclusive lock scope.
-2. **Queue correction:** the first final-check queue used CreateNew and could keep waiting on an unlocked lock file left by another builder. That added avoidable waiting. The waiting shell alone was stopped before it ran any build/test; the replacement correctly opens the existing shared lock exclusively with OpenOrCreate. It acquired the slot, and all three builds have now completed. No other process was stopped.
-3. **Evidence folder:** `%TEMP%\ce-c60-evidence`; `build-net48.log`, `build-net8.0-windows.log`, `build-net10.0-windows.log`, baseline/focused/picture TRX files; final net10 and net48 TRX files will follow. Logs remain local, outside both repositories. A fresh four-file settings hash/time snapshot was taken after acquiring the final lock.
+## Verification and evidence
+
+1. **Red first:** on the untouched release, the ten-row inventory gave 4 pass and exactly 6 missing-row failures. The four existing rows were not duplicated.
+2. **New cases:** ten real bound controls/defaults; ten actual-control edit/save/exact-key/read-back/reopen/Reset cases; Cancel preserves bytes; seven unusual progress-delay cases; absent/null groups; Manager-page Reset; untouched concurrent settings; two real-page render cases. All 34 passed in the full run.
+3. **Focused net10:** 109 passed, 0 failed, 0 skipped. This includes the existing 150% fit, strict binding inventory, search and lifecycle checks. One intermediate failure was the strict expected-name list lacking the six added controls; the list was extended, equality retained, and the entire focused group rerun green.
+4. **Full net10 base:** 19,154 total, 19,133 passed, 19 skipped, 2 failed: Glen Eira and `LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully` (blank PDF renderer output).
+5. **Full net10 final:** 19,188 total, 19,168 passed, 19 skipped, 1 failed: Glen Eira only. The PDF case passed. Failure names compared directly from TRX: 0 new. Duration 6 min 30 s. Console-summary totals are used consistently with the train reports. TRX discovery additionally includes 28 not-run cases in both runs: base 19,182 / final 19,216 discovered; final 19,169 executed and 47 NotExecuted, of which the console reports 19 as skipped.
+6. **Focused net48:** 109 passed, 0 failed, 0 skipped; includes all 34 new cases and the existing 150% fit. Full net48 and net8 tests were not run.
+7. **Three foreground Release builds:** net48 0 errors / 242 warnings; net8.0-windows 0 errors / 210 warnings; net10.0-windows 0 errors / 208 warnings. Existing warnings left unchanged.
+8. **Flags on every build/test:** `-p:SkipDevBundle=true -nr:false --disable-build-servers`. C-57 refs: `_AcadRef48=C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`; `_AcadRefNet8=C:\TimOS\refs\autocad\autocad-2026-ref`; `_AcadRefNet10` and `_AcadRef100=C:\TimOS\refs\autocad\autocad-net8-ref`. AutoCAD 2027 on PATH for DLL resolution only. A zero-byte native ARX placeholder exists only in the worktree's ignored build output, as in C-57; it was never deployed.
+9. **Local evidence:** `%TEMP%\ce-c60-evidence`: baseline-net10.trx, red-rows.trx, focused2-net10.trx, pictures-net10.trx, final-net10.trx, final-net48.trx; matching logs; three build logs; settings snapshots. Logs are outside both repositories. GitHub reported no hosted checks on this draft.
+10. **Not tested:** AutoCAD behaviour, installed-window appearance, drawing Undo/Redo, full net48, net8 runtime, Manager/Structural/Installer suites. No install or acceptance claimed. The PR remains DRAFT as the specific brief requires.
+
+## Real settings-file observation — no restoration by this task
+
+1. **At 23 October 00:21:54 Melbourne, all four hashes matched the session-start values:** Civil CD_Settings `2d23331f1060`; the other three `622a246f7d3b`, `efe307c4fc74`, `2972ce70c514`.
+2. **The Civil file did change temporarily:** it was observed at `acd64e79a33b`, then returned to `2d23331f1060`. Its timestamp changed. AutoCAD processes launched through Explorer were observed at 00:18:29 and 00:20:03. The writer was not proven; this task never launched AutoCAD and never edited/restored that file. The other three files retained both hash and timestamp.
+3. **The new row tests write only fresh synthetic temporary settings files** using SettingsService.BeginTestScope and the existing production serializer/writer. No real settings contents were copied into the repository.
+
+## Pictures inspected and committed
+
+1. **Drafting:** `docs/image/V3_WINDOWS/settings-dark-1-drafting.png`; `docs/image/V3_WINDOWS/settings-light-1-drafting.png`.
+2. **Pipes & Pits:** `docs/image/V3_WINDOWS/settings-dark-2-pipes-pits.png`; `docs/image/V3_WINDOWS/settings-light-2-pipes-pits.png`.
+3. **Design:** `docs/image/V3_WINDOWS/settings-dark-3-design.png`; `docs/image/V3_WINDOWS/settings-light-3-design.png`.
+4. **Survey:** `docs/image/V3_WINDOWS/settings-dark-4-survey.png`; `docs/image/V3_WINDOWS/settings-light-4-survey.png`.
+5. **Display:** `docs/image/V3_WINDOWS/settings-dark-5-display.png`; `docs/image/V3_WINDOWS/settings-light-5-display.png`.
+6. **Advanced:** `docs/image/V3_WINDOWS/settings-dark-6-advanced.png`; `docs/image/V3_WINDOWS/settings-light-6-advanced.png`.
+7. **Newer tools:** `docs/image/V3_WINDOWS/settings-dark-7-newer tools.png`; `docs/image/V3_WINDOWS/settings-light-7-newer tools.png`.
+8. **Fixes:** `docs/image/V3_WINDOWS/settings-dark-8-fixes.png`; `docs/image/V3_WINDOWS/settings-light-8-fixes.png`.
+
+Real Settings source markup, real view model and themes, STA / RenderTargetBitmap, 1920x1080 scale 1. The capture wraps the untouched content so its outside margin and full footer are included. Every final image inspected; no clipped controls, overlap, scrolling layout or empty tab. Also inspected the changed three pages' 150% previews. These are off-screen WPF pictures, not AutoCAD screenshots.
+
+## Coordination corrections, undo and remaining work
+
+1. **First lock mistake:** the short red-first command continued after a failed lock acquisition and cleanup removed the shared lock. It overlapped another run for its one-second test duration. A coordination hold was restored; later commands stop on acquisition errors and clean up only a held lock.
+2. **Queue mistake:** CreateNew could wait forever on an unlocked file another builder leaves behind. The private waiting shell alone was stopped before it ran any build/test. The replacement uses OpenOrCreate with exclusive sharing; all three builds and both final test lanes then ran in one held scope. No other process was stopped. This added avoidable waiting; it did not change code or live files.
+3. **Undo:** revert the two commits on `cx/settings-rows-c60` (code `a05fb8ae`, evidence `f1ab1589`). Nothing installed. Worktree retained at `C:\ce-c60`.
+4. **Parked existing limitation:** connect layer colour/linetype findings to the Checks list in a separate behaviour brief; the row and tooltip are complete here.
+5. **Later robot check, after a separately authorised install:** on AutoCAD 2027 and 2024, open CDS at 1920x1080 and 150%; inspect Fixes, Display and Newer tools; toggle each choice, Save and reopen; Reset all tabs then Cancel must preserve the previous saved choices. No manual test request for Tim and no bug marked accepted.
+6. **Tim's brief, 22 October:** “Your base is origin/claude/rel-20261022m”; “DEFAULTS DO NOT CHANGE”; “NEVER deploy”. Those specific instructions override the appended master-base and ready-for-review boilerplate.
