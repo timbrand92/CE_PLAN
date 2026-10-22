@@ -1,6 +1,6 @@
 # Testing rebuild: a deterministic test pack (spec, 22 Oct 2026)
 
-Written Thu 22 Oct 2026, about 21:45 to 22:30 Melbourne time, by the desk design job (Opus). **Design only: nothing was built,
+Written Thu 22 Oct 2026, about 21:20 to 21:30 Melbourne time (PC clock), by the desk design job (Opus). **Design only: nothing was built,
 AutoCAD and Codex were not started, no settings file or bundle was touched.**
 Tim, 22 Oct 21:40: "we need to resolve this testing business, it's not good enough".
 
