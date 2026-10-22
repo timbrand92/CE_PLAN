@@ -362,7 +362,9 @@ function Read-OtherSuiteOutcomes {
         if ($kind) {
           $ev = @{ Ts = $ts; Lvl = 'INF'; Msg = $msg; Kind = $kind; File = $fi.Name }
           $s.Events.Add($ev)
-          $allMsgs.Add([pscustomobject]@{ Ts = $ts; Lvl = 'INF'; Msg = $msg; Kind = $kind; Cmd = $name; Suite = $spec.Suite; File = $fi.Name })
+          if ($kind -eq 'fail') {
+            $allMsgs.Add([pscustomobject]@{ Ts = $ts; Lvl = 'INF'; Msg = $msg; Kind = $kind; Cmd = $name; Suite = $spec.Suite; File = $fi.Name })
+          }
         }
         Close-Session $s $(if ($what -eq 'cancelled') { 'cancelled' } else { 'completed' }) $ts
         $explicitOutcomes.Add($s)
