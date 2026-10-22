@@ -1,26 +1,106 @@
-# ANSWER FIRST — Automation IDs for CE windows (22 October 2026)
+# ANSWER FIRST — CE automation IDs (22 October brief; completed 23 October 2026, Melbourne)
 
-1. **Status:** building and checking. No installation or AutoCAD session is authorised for this task. Draft PR #1527: https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1527. Current pushed code head `38e0e9f9`; final picture/report head will follow full validation.
-2. **Branch and base:** `cx/automation-ids-c60`, isolated worktree `C:\ce-ai60`, from fetched `origin/claude/rel-20261022m` at `40ee0a36` (Civil 3.0.70 / Manager 1.1.70). The appended instruction to use master is explicitly superseded by Tim's task brief.
-3. **What Tim will see:** the windows retain their existing appearance, wording and actions. Accessibility tools receive stable control identifiers and plain English names. For example, a robot can find the Import action without matching a screenshot. No Settings default changes.
-4. **File ownership:** this session owns the new accessibility helper and test, its narrow ThemeService attachment, five one-line Edit source attributes, and About CE accessibility attributes. The protected Edit Pipe, Edit Pit, Edit 2 Pipes and New Pit files and view models are not edited. Other chats' uncommitted work in the shared code/plan checkouts is not taken over or staged.
-5. **Test added:** one parameterised STA test walks the actual WPF controls in all eleven requested window types, both themes, every reachable tab twice; checks non-empty, unique IDs and names, WPF automation-peer IDs and stable IDs; captures the real compiled WPF content at 96 dpi. Final counts and picture list pending.
-6. **Exact real-AutoCAD check still owed:** on a disposable drawing after the release owner installs an approved build, use UI Automation to open Edit source (tagged source double-click), Edit Pipe (375 mm pipe), Edit Pit, Edit 2 Pipes, New Pit, CDS, CDCHECKS, What CE Found, CDIMPORTXCIVIL, CE_VERSION and CDHELP. Enumerate each tab and control including disabled controls. Find each action by AutomationId, select each tab, press Show where and Check again in Checks, choose a synthetic DWG and Read source in X-Civil, confirm Import to drawing retains the action ID and updates its Name, and close/cancel every window. Reopen in both themes and confirm IDs match. Compare layouts before/after; use Cancel for drawing edits. This session must not start AutoCAD, deploy, write live settings, or press Import in a live drawing.
-7. **Evidence and lessons:** raw build/test output is kept outside the code worktree in `C:\ce-ai60-evidence`. The C-57 assembly report names the usable reference paths; the misleading `autocad-net8-ref` folder is the net10/2027 reference folder. The Notion Inbox was checked: no New Work items.
-8. **Parked:** real AutoCAD acceptance belongs to the release/test owner; no new engineering or drafting feature is introduced here.
-1. **Progress, 23 October 2026, 00:13 Melbourne:** the expanded metadata checks passed 25/25 (24 window/theme cases plus a real off-screen WPF automation invocation of Close). The retained New Pit fallback is covered as well as the main one-page New Pit window. The further plain-English Settings tab-name assertion also passed in the final focused run (25/25). Full suite and all-lane checks remain pending.
-2. **Lesson:** WPF template scrollbars can already have an AutomationId while having no Name, and repeat the same built-in ID in different inputs. The metadata pass must qualify those IDs and add names even when an ID was already present. Rich tab headers need their own English label rather than their container name.
-3. **Visual finding, not native acceptance:** the unshown About CE render clips its lower version rows and its pale header lacks contrast; it also retains the same light appearance under both Civil theme settings. This task cannot change layout or colour. Record for the Manager owner; the native window has not been checked. Other reviewed frames retain their existing layout, including bounded scrolling lists and drawing-dependent preview placeholders.
+1. **DONE — draft PR #1527:** https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1527. It remains DRAFT, against `claude/rel-20261022m` as requested.
+2. **Branch and final head:** `cx/automation-ids-c60` at `235e0c33acaa8685bc48c6b2893713c593b715bf`. Code was tested at `db729cd6ddf2f9747ea5b7dc8e6d8979d556578b`; the final commit only records the results in REGRESSION_LOG.md. Fetched base `40ee0a36f7960145743954b39859eb6c3af92869`; ancestry checked and final merge reports already up to date. No master merge or rebase.
+3. **What Tim will see:** the same windows, words, colours, layout and actions. A robot can find the buttons, tabs and inputs by their IDs and English names. No existing switch default changed. Nothing installed or deployed.
+4. **Built:** Release net48, net8.0-windows and net10.0-windows all passed with **0 errors**. Final warning counts: 242 / 210 / 208. Times: 25.11 s / 33.20 s / 36.71 s.
+5. **Tested:** final Civil net10 console totals **19,180 total — 19,160 passed, 19 skipped, 1 failed**. The failed test is `BackTest_GlenEira24115_Computed_WithinTolerance`; the untouched release base independently repeats the same failed name and message (34 focused cases: 33 passed, 1 failed). Manager: **853/853 passed**. **26 new checks passed** inside the full Civil run; the focused check including two existing Help render cases passed **28/28**. No new failure remains.
+6. **Pictures:** **70 real-window frames committed and inspected**, 58 WPF plus 12 real Help browser/WPF composites, at 96 dpi in the 1920×1080 desktop envelope. Paths are listed below and in the PR. About's existing unshown render clips lower rows, has a pale header and retains its light appearance in both Civil theme contexts; this is recorded for its owner because this brief forbids layout/colour changes. Drawing-dependent previews show their existing placeholders.
+7. **Acceptance boundary:** built and unit-tested. AutoCAD and accoreconsole were not started; no live settings were changed. Not installed, not native-accepted. The exact real-AutoCAD check below is for the release/test owner on a disposable copy, after a separately approved installation.
 
-1. **Progress, 23 October 2026, 00:39 Melbourne:** code head `38e0e9f9` is pushed; the final focused run passes 25/25, including all eight Settings page names. The installed Civil DLL was read at 00:31 and reports `3.0.70+40ee0a36f7960145743954b39859eb6c3af92869`, matching the requested base. The three explicit build lanes and full suites are queued under the existing build lock.
-2. **Frozen picture evidence:** 58 WPF frames from the passing run are preserved in `C:\ce-ai60-evidence\reviewed-images`. Those reviewed frames, rather than later overwrites from the full suite, will be committed. Help Centre's six browser pages per theme are still to be captured by its existing real-window render test.
+---
 
-1. **Validation correction, 23 October 2026, 00:56 Melbourne:** all three production build lanes passed (net48: 242 warnings/0 errors; net8: 210/0; net10: 208/0). The first full Civil run completed 19,179 tests: 19,127 passed, 19 skipped, 33 failed. I introduced 32 command-registry/ribbon failures by letting the Manager test reference copy its command-registry file over Civil's output. The other failure is the Glen Eira back-test, still to be independently reproduced on the base. This first run is not a pass.
-2. **Fix in progress:** make the Manager reference compile-only, copy only its DLL and its existing diagnostics dependency, and add a SHA-256 guard proving Civil's output registry matches Civil's source. No product action or drawing handler changes. The same 25 focused checks and full Civil suite must pass again after this test-harness correction.
-3. **Manager runner correction:** its first full run was 853 tests, 845 passed/8 failed because I placed the redirected test log folder outside TEMP. Those eight hygiene checks correctly refused that placement. All paths were in this session's own evidence folder, not live settings or the office folder. Rerun with fresh TEMP/TMP and logs underneath it, as the assembly report requires. Raw failed-run evidence is preserved as `civil-registry-collision.*` and `manager-wrong-temp.*`.
-4. **Picture evidence:** both real Help Centre render cases passed and supplied twelve native-browser/WPF composite frames. These join the 58 WPF frames in `C:\ce-ai60-evidence\reviewed-images`; 70 frames in total, pending completion of the Help picture review.
+1. **Implementation and ownership:** `CivilAutomation.cs` attaches metadata through the existing ThemeService setup for the named Civil windows and palette controls. Existing editor IDs are retained; duplicate framework template IDs are qualified. Names stay distinct after the real editor Ready step copies a combo name into its editable text part. Edit source has only five one-line attribute additions. Civil Help has direct attributes so the same controls work standalone and hosted in Manager. About CE has direct attributes. No protected Edit Pipe, Edit Pit, Edit 2 Pipes or New Pit window/view-model file was edited; no commands, save/undo handlers, C7 code, CE Blocks palette, Structural or Shared source changed.
+2. **Purely additive proof:** for SourceEditDialog.xaml, CivilHelpGuideView.xaml and CeVersionWindow.xaml, removing AutomationProperties.AutomationId/Name from base and final XML produces identical XML. The existing one-page pipe/pit composition, CivilEditorShellTheme.xaml and the unchanged dark/light dictionaries are reused. No new style, layout or visible wording.
+3. **New test contract:** 24 window/theme cases cover the eleven requested window modes plus the retained Pit fallback, all tabs twice, hidden/disabled controls, template parts, unique/non-empty IDs and names, IDs published by WPF peers and ID stability between themes. The editor Ready step is exercised without creating a native AutoCAD owner. A Loaded-window test invokes Close through WPF UI Automation and checks the import action keeps its ID while its caption changes. An embedded Help test checks direct metadata without a standalone shell. A SHA-256 guard proves Civil's output command registry matches Civil's source when loading Manager's real About DLL.
+4. **Raw count detail:** the dotnet console operational totals above are the same convention as the train reports. Civil's TRX contains 19,208 records: 19,161 executed (19,160 passed/1 failed), plus 47 NotExecuted records; the console reports 19,180 total and 19 skipped. No pass is claimed for the additional unexecuted records. The 26 new cases were independently counted in the final TRX and all passed.
+5. **Runner corrections, preserved honestly:** the first full Civil run had 33 failures because Manager's transitive content replaced Civil's test command registry; 32 were harness-induced. Manager is now a compile-only reference with its DLL copied explicitly, plus its existing diagnostics dependency. The registry hash guard passes, and the final full run has only the reproduced base failure. Eight initial Manager hygiene failures came from my log redirect being outside TEMP; the final run uses fresh TEMP/TMP with logs inside it and passes 853/853. All paths used were this session's own evidence/temp folders, not live settings or the office folder. Failed-run evidence is retained as civil-registry-collision.* and manager-wrong-temp.*.
+6. **Build/test environment:** every command was foreground, with `-p:SkipDevBundle=true -nr:false --disable-build-servers`. Reference parameters: `_AcadRef48=C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`, `_AcadRefNet8=C:\TimOS\refs\autocad\autocad-2026-ref`, `_AcadRefNet10=C:\TimOS\refs\autocad\autocad-net8-ref`, `_AcadRef100=C:\TimOS\refs\autocad\autocad-net8-ref`, `_AcadRef80=C:\Program Files\Autodesk\AutoCAD 2027`. The misleading autocad-net8-ref directory is the 2027/net10 reference path. AutoCAD 2027 was on PATH; the compile-only native ARX placeholder stayed inside this session's build output. The shared build lock was honoured. No new build/deploy script was created.
+7. **Evidence:** `C:\ce-ai60-evidence\final-build-<tfm>.log`, `civil-final-full.log/.trx`, `manager-final-full.log/.trx`, `base-focused.log/.trx`, and `automation-ready-final.log/.trx`. Shipping worktree `C:\ce-ai60`; untouched release verification worktree `C:\ce-ai60-base`. Installed Civil was read at 00:31 on 23 October and reported `3.0.70+40ee0a36f7960145743954b39859eb6c3af92869`, matching the requested base. The Notion Inbox check found no New Work items. Other chats' unsaved work was neither taken over nor staged.
+8. **Undo:** revert this branch's additive metadata/test/picture commits. No drawing data or settings migration needs reversing.
 
-1. **Progress, 23 October 2026, 01:46 Melbourne:** the corrected full Civil run is 19,179 total, 19,159 passed, 19 skipped, one failed. The failed name is `BackTest_GlenEira24115_Computed_WithinTolerance`; the untouched `40ee0a36` base independently repeats that same failure (34 focused tests: 33 passed, one failed). The corrected Manager run is 853/853 passed. Evidence: `civil-corrected-full.trx`, `base-focused.trx` and `manager-corrected-full.trx`.
-2. **Final coverage additions:** direct IDs and English names on the three Civil Help view controls cover standalone and Manager-hosted Help. The 26 new checks plus two existing native-browser Help render checks passed 28/28. Seventy reviewed frames are committed at `e6d68ea4`; current pushed head is `3e89531b` (also uses English selection-row names).
-3. **Opening-step check still in progress:** the existing editor Ready step copies a combo's name onto its editable text part. The new central metadata pass qualifies that duplicate after Ready, and the actual Ready step is exercised by the window walk. These two final source/test edits are awaiting the shared build slot for the focused run; afterwards save them, rerun all three build lanes and the full suites with fresh TEMP/TMP and logs inside TEMP, then publish final counts. Do not claim the latest edits are tested yet.
-4. **Working copies:** shipping branch is in `C:\ce-ai60`; the untouched release verification copy is `C:\ce-ai60-base` at `40ee0a36`. Only this session's copies are used. The code PR stays draft; no deployment, AutoCAD session, live settings change, rebase or merge of a PR is authorised.
+---
+
+1. **Exact real-AutoCAD check — preparation:** the release/test owner installs an approved payload containing PR #1527 under its separate authority. Use a new anonymous drawing copy containing two CE 375 mm pipes (P1–P2 and P2–P3), a CE pit P2, and a tagged source DP2. Keep Tim's work drawings and settings files unchanged. Where a command is switched off, use the robot's isolated test settings/profile; do not turn on or save Tim's live switches for this check.
+2. **Edit source:** open DP2 by the normal source-edit route. Find `SourceEdit.Tag`, `SourceEdit.ShowLabel`, `SourceEdit.RemoveTag`, `SourceEdit.OK` and `SourceEdit.Cancel` using UI Automation. Check each has its English Name. Put DP3 in the tag input using the value pattern, then invoke Cancel by ID; the drawing remains DP2.
+3. **Pipe, pit and batch editors:** run CDEDIT on one pipe, on pit P2, and on both pipes together; run PIT for New Pit. After each window finishes opening, enumerate its WPF buttons, inputs, tabs, selectors and template parts. No AutomationId/Name may be blank; IDs and names must be unique within that window. Focus editable drop-downs and repeat the check after the editor's Ready step. Visit every tab/More page. Invoke Cancel by ID and confirm no drawing change.
+4. **Settings CDS:** run CDS. Select Drafting, Pipes & Pits, Design, Survey, Display, Advanced, Newer tools and Fixes through the tab selection pattern. Find every checkbox/button/input by ID, including `AdvancedSettingsDialog.OkCommand` (Save) and `.CancelCommand`. Verify Save exposes its invoke pattern without invoking it. Invoke Cancel; no settings file changes.
+5. **Checks:** run CDCHECKS in the isolated test profile. Select both tabs; find Show where, Check again and Close by ID. On a finding with a drawing target, invoke Show where and confirm it zooms to that item; invoke Check again and Close. No drawing item is changed by these actions.
+6. **What CE Found:** run CDCHECKCURRENT in its legacy-view test setting. Visit Summary, Items, Attached and Surfaces, selecting a listed item where available. Check IDs/Names again after selection and after reopening. Invoke the visible show/check/close actions by ID; no image matching.
+7. **X-Civil import:** run CDIMPORTXCIVIL. Select every tab via UI Automation. Invoke Choose DWG, choose an anonymous test DWG copy, then find and invoke Read source by ID. Verify the same action's ID (`CivilImportWindow.ContinueCaption`) remains stable when its Name/caption becomes Import to drawing. Import only into the disposable drawing if the native test proceeds that far; otherwise invoke Close by ID. Check the disabled controls also retain IDs/Names.
+8. **About and Help Centre:** run CE_VERSION and invoke `AboutCE.Close`. Run CDHELP/F1; check `HelpCentre.Guide`, `HelpCentre.OpenInBrowser` and `HelpCentre.Close` both in the standalone Help shell and Manager-hosted Help. Select/read the Help pages and invoke Close by ID. The automated WPF contract covers the browser host and WPF controls; this session did not inspect the native browser's UI Automation subtree inside AutoCAD.
+9. **Themes and evidence:** repeat in dark and light using isolated/staged theme preview, then Cancel. Reopen the windows and compare IDs against the first pass. Record the build/head, action, exact ID/Name, result and a screenshot from real AutoCAD; compare the drawing and settings with their starting state. The About render finding needs a native look and a separate layout/colour task if reproduced. No native acceptance is claimed by this report.
+
+---
+
+1. **Committed picture paths:** all 70 below were manually inspected; the native Help captures combine its actual browser surface with its WPF shell, following the existing render test. Files are unchanged screenshots, not mock-ups.
+1. **Picture:** `docs/image/V3_WINDOWS/automation-about-dark-main.png`.
+2. **Picture:** `docs/image/V3_WINDOWS/automation-about-light-main.png`.
+3. **Picture:** `docs/image/V3_WINDOWS/automation-checks-dark-tab-0-0.png`.
+4. **Picture:** `docs/image/V3_WINDOWS/automation-checks-dark-tab-0-1.png`.
+5. **Picture:** `docs/image/V3_WINDOWS/automation-checks-light-tab-0-0.png`.
+6. **Picture:** `docs/image/V3_WINDOWS/automation-checks-light-tab-0-1.png`.
+7. **Picture:** `docs/image/V3_WINDOWS/automation-found-dark-tab-0-0.png`.
+8. **Picture:** `docs/image/V3_WINDOWS/automation-found-dark-tab-0-1.png`.
+9. **Picture:** `docs/image/V3_WINDOWS/automation-found-dark-tab-0-2.png`.
+10. **Picture:** `docs/image/V3_WINDOWS/automation-found-dark-tab-0-3.png`.
+11. **Picture:** `docs/image/V3_WINDOWS/automation-found-light-tab-0-0.png`.
+12. **Picture:** `docs/image/V3_WINDOWS/automation-found-light-tab-0-1.png`.
+13. **Picture:** `docs/image/V3_WINDOWS/automation-found-light-tab-0-2.png`.
+14. **Picture:** `docs/image/V3_WINDOWS/automation-found-light-tab-0-3.png`.
+15. **Picture:** `docs/image/V3_WINDOWS/automation-help-dark-cd.png`.
+16. **Picture:** `docs/image/V3_WINDOWS/automation-help-dark-cdedit.png`.
+17. **Picture:** `docs/image/V3_WINDOWS/automation-help-dark-design-review.png`.
+18. **Picture:** `docs/image/V3_WINDOWS/automation-help-dark-import-settings.png`.
+19. **Picture:** `docs/image/V3_WINDOWS/automation-help-dark-intro.png`.
+20. **Picture:** `docs/image/V3_WINDOWS/automation-help-dark-start-draw.png`.
+21. **Picture:** `docs/image/V3_WINDOWS/automation-help-light-cd.png`.
+22. **Picture:** `docs/image/V3_WINDOWS/automation-help-light-cdedit.png`.
+23. **Picture:** `docs/image/V3_WINDOWS/automation-help-light-design-review.png`.
+24. **Picture:** `docs/image/V3_WINDOWS/automation-help-light-import-settings.png`.
+25. **Picture:** `docs/image/V3_WINDOWS/automation-help-light-intro.png`.
+26. **Picture:** `docs/image/V3_WINDOWS/automation-help-light-start-draw.png`.
+27. **Picture:** `docs/image/V3_WINDOWS/automation-import-dark-tab-0-0.png`.
+28. **Picture:** `docs/image/V3_WINDOWS/automation-import-dark-tab-0-1.png`.
+29. **Picture:** `docs/image/V3_WINDOWS/automation-import-dark-tab-0-2.png`.
+30. **Picture:** `docs/image/V3_WINDOWS/automation-import-light-tab-0-0.png`.
+31. **Picture:** `docs/image/V3_WINDOWS/automation-import-light-tab-0-1.png`.
+32. **Picture:** `docs/image/V3_WINDOWS/automation-import-light-tab-0-2.png`.
+33. **Picture:** `docs/image/V3_WINDOWS/automation-new-pit-dark-main.png`.
+34. **Picture:** `docs/image/V3_WINDOWS/automation-new-pit-light-main.png`.
+35. **Picture:** `docs/image/V3_WINDOWS/automation-pipe-dark-main.png`.
+36. **Picture:** `docs/image/V3_WINDOWS/automation-pipe-light-main.png`.
+37. **Picture:** `docs/image/V3_WINDOWS/automation-pit-dark-main.png`.
+38. **Picture:** `docs/image/V3_WINDOWS/automation-pit-light-main.png`.
+39. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-dark-tab-0-0.png`.
+40. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-dark-tab-0-1.png`.
+41. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-dark-tab-0-2.png`.
+42. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-dark-tab-0-3.png`.
+43. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-dark-tab-0-4.png`.
+44. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-dark-tab-0-5.png`.
+45. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-light-tab-0-0.png`.
+46. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-light-tab-0-1.png`.
+47. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-light-tab-0-2.png`.
+48. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-light-tab-0-3.png`.
+49. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-light-tab-0-4.png`.
+50. **Picture:** `docs/image/V3_WINDOWS/automation-retained-pit-light-tab-0-5.png`.
+51. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-0.png`.
+52. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-1.png`.
+53. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-2.png`.
+54. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-3.png`.
+55. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-4.png`.
+56. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-5.png`.
+57. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-6.png`.
+58. **Picture:** `docs/image/V3_WINDOWS/automation-settings-dark-tab-0-7.png`.
+59. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-0.png`.
+60. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-1.png`.
+61. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-2.png`.
+62. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-3.png`.
+63. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-4.png`.
+64. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-5.png`.
+65. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-6.png`.
+66. **Picture:** `docs/image/V3_WINDOWS/automation-settings-light-tab-0-7.png`.
+67. **Picture:** `docs/image/V3_WINDOWS/automation-source-dark-main.png`.
+68. **Picture:** `docs/image/V3_WINDOWS/automation-source-light-main.png`.
+69. **Picture:** `docs/image/V3_WINDOWS/automation-two-pipes-dark-main.png`.
+70. **Picture:** `docs/image/V3_WINDOWS/automation-two-pipes-light-main.png`.
