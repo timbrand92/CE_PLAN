@@ -12,3 +12,5 @@
 8. **Saved:** normal branch push passed the global leak-scan hook (36 private terms checked). Draft PR is against the requested release base, not master. Shared build command is waiting for the existing build lock; the job is not finished until its own full totals are recorded.
 
 9. **Three build lanes COMPLETE (23 October):** Release Civil net10: 0 errors, 208 warnings, 45.72 s; net48: 0 errors, 242 warnings, 34.41 s; net8: 0 errors, 210 warnings, 45.80 s. All foreground, SkipDevBundle=true, node reuse off and build servers disabled, C-57 reference paths. Full Civil net10 suite now running from the final tested code. No source edits while it runs.
+
+10. **First full-run findings (run still active):** five introduced failures: two R-31 warning-sentence suffix assertions, two R-32 exact-sentence assertions and one evidence-count assertion. Each needs the new required length note/basis added to its expected result. The appended note also exposed a doubled full stop, to correct after this run finishes. The separate Glen Eira rainfall fixture failure matches Finding 16 of the audit. No source is edited while the suite runs; final totals and rerun remain owed.
