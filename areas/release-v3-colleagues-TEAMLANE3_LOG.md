@@ -963,3 +963,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Fri 23 Oct 07:20 real clock - build/03 run 415: BUG-979 (CDJOINT erases old joints only after every question) finished from run 414's uncommitted work in t3j: RED on base shown, 19/19 CDJOINT group green; DRAFT PR #1559 off rel-20261022m, needs Opus review.
 - Fri 23 Oct 08:00 real clock - build/03 run 415: BUG-980 (CDCALC Pipe Flows second pick refills CE-filled grade/roughness) RED shown (2 of 3 tests), 464 related tests green; DRAFT PR #1561 off rel-20261022m, needs Opus review.
 - Fri 23 Oct 08:45 real clock - build/03 run 415: BUG-1003 (CEFIND finds P1A, C2, P1A-P2) RED shown (5 failed on base), 32 CEFIND tests green; DRAFT PR #1565 off rel-20261022m, needs Opus review.
+- Fri 23 Oct 09:30 real clock - build/03 run 415: BUG-1008 (Pit Schedule Remarks cell opens for typing) RED shown (3 of 5), 816 Pit Schedule tests green; DRAFT PR #1569 off rel-20261022m, needs Opus review.
