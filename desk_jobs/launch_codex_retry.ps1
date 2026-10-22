@@ -17,11 +17,9 @@ function Gate {
   return $true
 }
 function AttachProbe {
-  # 22 Oct 2026: Codex Computer Use needs the node_repl helper attached to the session; about half of the sessions start without it ("native screen tools unavailable"). A 10-second throw-away session tells us first. Final line ATTACHED / MISSING.
-  $p = 'Probe only. Call no tool. Reply with the single word ATTACHED if you have a tool named node_repl, otherwise MISSING.'
-  $out = ''
-  try { $out = ($null | & codex exec --skip-git-repo-check --dangerously-bypass-approvals-and-sandbox --ephemeral -m gpt-6.1-sol -c model_reasoning_effort=low -C 'C:\Lisp Files\_TEST_COPIES_20260923' $p 2>$null | Out-String) } catch { $out = 'ERROR' }
-  $ok = ($out.Trim().Split("`n")[-1].Trim() -eq 'ATTACHED')
+  # 23 Oct 2026 (corrected): Codex Computer Use is the tool mcp__node_repl__js. The earlier probe asked for a tool literally named node_repl and always said MISSING. This probe asks a throw-away session to list its tool names through its exec tool and passes only when a node_repl or sky tool is there.
+  $o = (& 'C:/Program Files/Git/bin/bash.exe' 'C:/CE_PLAN/desk_jobs/codex_cu_probe.sh' 2>$null | Out-String)
+  $ok = ($o -match 'CU_OK')
   $helpers = @(Get-Process codex-computer-use -ErrorAction SilentlyContinue).Count
   $lastEnd = (Get-Content (Join-Path $d 'queue.log') -Tail 40 -ErrorAction SilentlyContinue | Where-Object { $_ -match ' END ' } | Select-Object -Last 1)
   Add-Content 'C:\CE_PLAN\desk_jobs\codex_attach_log.csv' ("{0},{1},{2},{3},{4}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $(if ($ok) { 'ATTACHED' } else { 'MISSING' }), $helpers, $name, ($lastEnd -replace ',', ' '))
