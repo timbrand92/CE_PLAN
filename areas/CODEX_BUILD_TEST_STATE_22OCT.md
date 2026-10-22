@@ -9,3 +9,5 @@
 7. **Not tested yet:** builds, unit suite, window renders, real AutoCAD. No deployment, settings-file write, version bump or Structural edit is authorised by this job. No unrelated parked item added.
 
 8. **Saved/pushed:** source head 85989034 passed the global leak-scan hook and is pushed. PR #1528 is DRAFT against claude/rel-20261022m. Verification is still queued. Installed bundle metadata was read: Civil 3.0.70+40ee0a36; Manager 1.1.70+40ee0a36; Structural 1.0.121+2c9a9694. No installed file was written. This job is dated 22 October; the queue has crossed midnight into 23 October Melbourne time.
+
+9. **Queue lesson (23 October, Melbourne):** current builders reuse desk_jobs/build.lock with FileMode.OpenOrCreate and FileShare.None, retaining the file between runs. A CreateNew wait cannot proceed while that persistent file exists; I used that method temporarily and delayed this job, then corrected it. Only this session's waiting shells were stopped; no other process or lock was removed. Verification now uses the existing exclusive-open protocol. This is operational evidence, not a change to the build process.
