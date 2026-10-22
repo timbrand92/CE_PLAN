@@ -1,6 +1,6 @@
 # CDTWL drawing units — BUG-871 / audit Finding 10
 
-1. **ANSWER FIRST — in progress, 23 October 2026 (Melbourne).** Working on `cx/eng-twl-units-c60` in `C:\ct60`, from `origin/claude/rel-20261022m` at `40ee0a36`. Nothing installed or opened in AutoCAD. PR, final head and totals pending validation.
+1. **ANSWER FIRST — in progress, 23 October 2026 (Melbourne).** Working on `cx/eng-twl-units-c60` in `C:\ct60`, from `origin/claude/rel-20261022m` at `40ee0a36`. Nothing installed or opened in AutoCAD. DRAFT PR #1538: https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1538. Head `9821c80c3149b481fe73a01e10dafa27f09e0f6b`, normally pushed with leak-scan clean. Final totals pending validation.
 2. **Ownership:** this chat owns the new `Bug871TwlDrawingUnitsTests.cs`, the CDTWL collector/service changes, the new `DetentionSettings.twlUsesDrawingUnits` property and the top regression entry. Other chats' uncommitted files are untouched.
 3. **Design:** new Settings switch OFF by default. Only coordinate distances need drawing-unit conversion. Stored RLs are metres; pit/tank/pipe sizes are millimetres already. Use the shared Civil conversion and recorded-position-unit selection; preserve Unitless/missing/disagreeing records as the existing millimetre fallback. No BUG-505 note added.
 4. **Audit worked numbers:** 20 m DN300 full pipe = 1413.716694 L, currently 1.413717 L in a metre drawing. Millimetre and metre versions must agree for full and part-full storage, solved levels and freeboard.
