@@ -144,15 +144,22 @@ function Get-CivilVersion([string]$ts) {
   return $v
 }
 $strucVersion = 'unknown build'
+$managerVersion = 'unknown build'
 $bgPrefix = '('                                   # pseudo-commands (background steps) start with a bracket and are not counted as commands
 try {
   $sdll = Get-ChildItem -LiteralPath (Join-Path $AppData 'Autodesk\ApplicationPlugins\CE_STRUC_SUITE.bundle') -Recurse -Filter 'CE_STRUC_SUITE.dll' -ErrorAction Stop | Select-Object -First 1
   if ($sdll) { $strucVersion = (($sdll.VersionInfo.ProductVersion -replace '\+.*$', '') -replace '(\.0)+$', '') + ' (installed now)' }
 } catch { }
 
+try {
+  $mdll = Get-ChildItem -LiteralPath (Join-Path $AppData 'Autodesk\ApplicationPlugins\CE_SUITE_MANAGER.bundle') -Recurse -Filter 'CE_SUITE_MANAGER.dll' -ErrorAction Stop | Select-Object -First 1
+  if ($mdll) { $managerVersion = (($mdll.VersionInfo.ProductVersion -replace '\+.*$', '') -replace '(\.0)+$', '') + ' (installed now)' }
+} catch { }
+
 # ---------------------------------------------------------------- session machinery
 $script:evSeq = 0
 $sessions = New-Object 'System.Collections.Generic.List[object]'   # finished sessions
+$explicitOutcomes = New-Object 'System.Collections.Generic.List[object]'
 $allMsgs = New-Object 'System.Collections.Generic.List[object]'    # every [ERR]/[WRN] event, for 'new message' tracking
 $counts = @{ filesRead = 0; linesRead = 0; orphanEvents = 0 }
 $sourcesRead = New-Object 'System.Collections.Generic.List[string]'
@@ -184,7 +191,7 @@ function Close-Session($s, [string]$endMark, [string]$ts) {
   elseif ($warn.Count -gt 0) { $outcome = 'WARNED' }
   elseif ($endMark -eq 'ended' -or $endMark -eq 'completed') { $outcome = 'WORKED' }
   $s.Outcome = $outcome
-  $s.Ver = if ($s.Suite -eq 'Civil') { Get-CivilVersion $s.Start } else { $strucVersion }
+  $s.Ver = if ($s.Suite -eq 'Civil') { Get-CivilVersion $s.Start } elseif ($s.Suite -eq 'Manager') { $managerVersion } else { $strucVersion }
   $sessions.Add($s)
 }
 
@@ -328,6 +335,42 @@ function Read-RibbonClicks {
   return $clicks
 }
 
+function Read-OtherSuiteOutcomes {
+  foreach ($spec in @(
+    @{ Suite = 'Structural'; Folder = 'TIM_CE_CADTOOLS\logs'; Pattern = 'ce_struc_structured_*.log' },
+    @{ Suite = 'Manager'; Folder = 'CE_SUITE_MANAGER\logs'; Pattern = 'ce_manager_structured_*.log' }
+  )) {
+    $dir = Join-Path $AppData $spec.Folder
+    if (-not (Test-Path -LiteralPath $dir)) { continue }
+    foreach ($fi in (Get-ChildItem -LiteralPath $dir -Filter $spec.Pattern | Where-Object { Test-InWindow $_ 0 } | Sort-Object Name)) {
+      $counts.filesRead++; $sourcesRead.Add($fi.Name)
+      foreach ($ln in (Read-LogLines $fi.FullName)) {
+        $counts.linesRead++
+        $m = $lineRx.Match($ln)
+        if (-not $m.Success -or $m.Groups[2].Value -ne 'INF') { continue }
+        $ts = $m.Groups[1].Value
+        if ($ts -lt $sinceS -or $ts -gt $untilS) { continue }
+        $msg = $m.Groups[3].Value
+        $om = $outcomeRx.Match($msg)
+        if (-not $om.Success) { continue }
+        $name = $om.Groups[1].Value; $what = $om.Groups[2].Value
+        $s = New-Session $spec.Suite $name $ts 'outcome' $fi.Name
+        if ($om.Groups[3].Success) {
+          $s.Start = ([datetime]$ts).AddMilliseconds(-[double]$om.Groups[3].Value).ToString('yyyy-MM-dd HH:mm:ss.fff')
+        }
+        $kind = if ($what -eq 'failed') { 'fail' } elseif ($what -eq 'refused') { 'refuse' } else { $null }
+        if ($kind) {
+          $ev = @{ Ts = $ts; Lvl = 'INF'; Msg = $msg; Kind = $kind; File = $fi.Name }
+          $s.Events.Add($ev)
+          $allMsgs.Add([pscustomobject]@{ Ts = $ts; Lvl = 'INF'; Msg = $msg; Kind = $kind; Cmd = $name; Suite = $spec.Suite; File = $fi.Name })
+        }
+        Close-Session $s $(if ($what -eq 'cancelled') { 'cancelled' } else { 'completed' }) $ts
+        $explicitOutcomes.Add($s)
+      }
+    }
+  }
+}
+
 function Read-StructuralRuntime {
   $dir = Join-Path $AppData 'CE_STRUC_SUITE\logs\RuntimeDiagnostics'
   $cmdSeen = @{}                                 # name -> list of datetimes, for de-duplication against struct_commands
@@ -458,9 +501,24 @@ Read-CivilStructured
 Read-CivilFileEvidence
 Read-NativeGrip
 $clicks = Read-RibbonClicks
+Read-OtherSuiteOutcomes
 $cmdSeenRt = Read-StructuralRuntime
 Read-StructuralCommands $cmdSeenRt
 Read-StructuralMainLogs
+
+# The explicit end line is authoritative. Runtime/step logs describe the same run, sometimes as cancelled after Esc.
+# Keep repeated explicit runs separate; only discard legacy mirrors inside the recorded run interval.
+foreach ($s in @($sessions.ToArray())) {
+  if ($s.Suite -ne 'Structural' -or $s.Kind -eq 'outcome') { continue }
+  foreach ($e in $explicitOutcomes) {
+    if ($e.Suite -eq $s.Suite -and $e.Cmd -eq $s.Cmd -and
+        ([datetime]$s.End) -ge ([datetime]$e.Start).AddSeconds(-2) -and
+        ([datetime]$s.End) -le ([datetime]$e.End).AddSeconds(2)) {
+      [void]$sessions.Remove($s)
+      break
+    }
+  }
+}
 
 # ---------------------------------------------------------------- state: which [ERR]/[WRN] messages are new
 $state = @{ seenMessages = @{}; candidates = @() }
@@ -569,9 +627,9 @@ Add-Line ("5. **Read:** {0} files, {1} lines; {2} warnings/errors outside any co
 Add-Line ("6. **Background sync steps (not counted above):** {0}. With debug logging off the log only shows that a project-data sync ran, not whether CDSYNC, CDRECOVERINVERTS, PIT or CDEDIT ran it." -f $bgSteps)
 Add-Line
 
-foreach ($suite in 'Civil', 'Structural') {
+foreach ($suite in 'Civil', 'Structural', 'Manager') {
   $list = @($byCmd.Values | Where-Object { $_.Suite -eq $suite } | Sort-Object { $_.Cmd })
-  $n = if ($suite -eq 'Civil') { 2 } else { 3 }
+  $n = if ($suite -eq 'Civil') { 2 } elseif ($suite -eq 'Manager') { '3b' } else { 3 }
   Add-Line ("## {0}. {1}: every command, by outcome" -f $n, $suite)
   Add-Line
   if ($list.Count -eq 0) { Add-Line '1. **No command runs found in this period.**'; Add-Line; continue }
@@ -635,7 +693,7 @@ Add-Line '## 7. What the logs could not tell us'
 Add-Line
 Add-Line '1. **Civil start and end lines exist only when debug logging is ON.** The "UcsGuardService ... starting / ended / cancelled" lines that bracket a command are debug lines (and only from about build 3.0.60). With debug OFF (Tim''s normal setting) only a few commands leave an INFO line that names them (CD, CDEDIT on an older pipe, CDTWL, CDTIDYLABELS, PIT, CDRECOVERINVERTS when it writes text) or a saved findings file (CDRULES All, CDCHECKDWG). CDSYNC, CDINSPECTOR, CDCHECKS, PITSCHEDULE and CDRULES Values are invisible then.'
 Add-Line '2. **Plain command-line answers** such as "Updated 4 pipes..." or "Everything has been redone" are shown on the AutoCAD command line, not saved in the log.'
-Add-Line '3. **Manager** and the checkdwg / xcdimport tools write no per-command outcome here.'
+Add-Line '3. **Manager and Structural:** builds carrying command outcome lines are read directly; older builds still have gaps. The checkdwg / xcdimport tools write no per-command outcome here.'
 Add-Line '4. **Structural build number** is not in its logs; the installed build is read from the plugin file.'
 Add-Line ("5. **Sources read:** {0}." -f (($sourcesRead | Select-Object -Unique) -join ', '))
 
