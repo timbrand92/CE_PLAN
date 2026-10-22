@@ -106,9 +106,9 @@ $tokenSkip = @('CDGRIPROUTE', 'CDPIPEATTACHMENTACTION')
 $lineRx = New-Object Text.RegularExpressions.Regex('^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d\.\d{3}) \[(INF|DBG|WRN|ERR|FTL|VRB)\] (?:\d{4}-\d\d-\d\d \d\d:\d\d:\d\d\.\d{3} \[\w+\] )?(.*)$', 'Compiled')
 $guardRx = New-Object Text.RegularExpressions.Regex("UcsGuardService . '([A-Za-z0-9_.\-]+)' (starting|ended|cancelled)", 'Compiled')
 # From the build that carries the "command outcome lines" change: CE itself writes ONE INFO line when a CE command ends, with debug logging on or off:
-#   "Command outcome: CDSYNC completed 250 ms"  (completed | cancelled | failed; "(time unknown)" if the start was not seen).
+#   "Command outcome: CDSYNC completed 250 ms"  (completed | cancelled | refused | failed; "(time unknown)" if the start was not seen).
 # It is the run's end marker. Setting: Options.CommandOutcomeLines (on by default).
-$outcomeRx = New-Object Text.RegularExpressions.Regex('^Command outcome: ([A-Z0-9_]+) (completed|cancelled|failed) (?:(\d+) ms|\(time unknown\))$', 'Compiled')
+$outcomeRx = New-Object Text.RegularExpressions.Regex('^Command outcome: ([A-Z0-9_]+) (completed|cancelled|refused|failed) (?:(\d+) ms|\(time unknown\))$', 'Compiled')
 
 function Get-EventKind([string]$lvl, [string]$msg) {
   if ($msg -match $noiseRx) { return 'noise' }
@@ -229,12 +229,12 @@ function Read-CivilStructured {
       $om = $outcomeRx.Match($msg)
       if ($om.Success) {
         $name = $om.Groups[1].Value; $what = $om.Groups[2].Value
-        $isFail = ($what -eq 'failed')
+        $isFail = ($what -eq 'failed'); $isRefuse = ($what -eq 'refused')
         $script:evSeq++
-        $oe = @{ Ts = $ts; Seq = $script:evSeq; Lvl = 'INF'; Msg = $msg; Kind = $(if ($isFail) { 'fail' } else { $null }); Sess = $null; InList = $false; File = $fi.Name; Completion = $false }
+        $oe = @{ Ts = $ts; Seq = $script:evSeq; Lvl = 'INF'; Msg = $msg; Kind = $(if ($isFail) { 'fail' } elseif ($isRefuse) { 'refuse' } else { $null }); Sess = $null; InList = $false; File = $fi.Name; Completion = $false }
         if ($open.ContainsKey($name)) {
           # debug ON: the guard's own ended / cancelled line closes this run; the outcome line only adds a failure
-          if ($isFail) { $oe.Sess = $open[$name]; $open[$name].Events.Add($oe) }
+          if ($isFail -or $isRefuse) { $oe.Sess = $open[$name]; $open[$name].Events.Add($oe) }
         }
         elseif ($guardClosed.ContainsKey($name) -and ((([datetime]$ts) - ([datetime]$guardClosed[$name])).TotalSeconds -le 2)) {
           # debug ON and the guard already closed this run a moment ago: the same run, not a second one (a failure is lost here)
@@ -245,7 +245,7 @@ function Read-CivilStructured {
           if ($a -and ((([datetime]$ts) - ([datetime]$a.End)).TotalSeconds -le $gap)) { $sess = $a; [void]$adhoc.Remove($name) }
           else { if ($a) { Close-Session $a $null $null; [void]$adhoc.Remove($name) }; $sess = New-Session 'Civil' $name $ts 'outcome' $fi.Name }
           $oe.Sess = $sess
-          if ($isFail) { $sess.Events.Add($oe) }
+          if ($isFail -or $isRefuse) { $sess.Events.Add($oe) }
           Close-Session $sess $(if ($what -eq 'cancelled') { 'cancelled' } else { 'completed' }) $ts
         }
         $last = $null; continue
