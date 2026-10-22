@@ -24,3 +24,8 @@
 
 1. **Builder mistake, 22 October about 23:41 Melbourne:** the first multi-step build command lacked terminating PowerShell error handling. After an exclusive lock refusal it ran the next step briefly; I stopped my own session with Ctrl+C before any test result. All dotnet arguments still included SkipDevBundle=true. No deployment occurred. The aborted log is civil-net10.log and is NOT test evidence.
 2. **Correction:** use ErrorActionPreference=Stop; acquire the lock before entering try/finally; release only a handle actually acquired. The other foreground build was left running. The stale lock from my stopped shell (105204) was replaced with that observed active build's PID 97492 to preserve the coordination hold. Future runs will wait for a free lock and verify active processes before acquiring it.
+
+## First full-run findings
+
+1. **Four additional reds are source-pin mismatches:** three Bug589CdCheckReadsSavedRecordTests search for the exact old `GatherSpine(Database db)` signature; SpineCommandContractTests searches for the old three-argument BuildSpineRecords call. The changed reader now accepts a detached project snapshot. The guards need to locate the new signature and verify BOTH the supplied-snapshot branch and the original read-only saved-record fallback. No protection assertion will be removed.
+2. **Action:** wait until this foreground sequence finishes before editing any test source, then update those two test files and rerun the full Civil net10 suite and focused net48 guards. The first full run is diagnostic, not the final result. Glen Eira's calculation back-test is also red, matching the C-60 report by name.
