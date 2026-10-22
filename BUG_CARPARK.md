@@ -11750,7 +11750,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** The bottom level is rounded to the NEAREST step, so the pipe can come out flatter than the held grade (CD calculated levels round the drop UP, which is safe).
 
-**Status:** OPEN (Codex build cx_b10_move_pit_grade queued 22 Oct)
+**Status:** OPEN — build in progress, 23 Oct 2026, branch `cx/eng-move-pit-grade-c60`. Audit arithmetic confirmed in code. Preparing a replacement calculation and tests; the live call is in protected `LinkService.Utilities.cs` and must be routed, with a new Settings switch OFF by default. Validation is waiting on the shared build lock. No drawing behaviour changed, installation or AutoCAD acceptance. Report: `areas/CODEX_BUILD_ENG_MOVE_PIT_22OCT.md`.
 
 ## BUG-871
 
