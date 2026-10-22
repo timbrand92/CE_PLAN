@@ -11750,7 +11750,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** The bottom level is rounded to the NEAREST step, so the pipe can come out flatter than the held grade (CD calculated levels round the drop UP, which is safe).
 
-**Status:** OPEN — live wiring BLOCKED; replacement calculation prepared, DRAFT PR #1551, `cx/eng-move-pit-grade-c60` at `356ca792` (23 Oct 2026). Protected `LinkService.Utilities.cs` must be routed behind a Settings switch OFF by default. The 18 added cases reproduced the old arithmetic (13 failed / 5 passed); full Civil baseline 19,154 total / 19,134 passed / 19 skipped / one Glen Eira failure. Final build/unit validation pending. No drawing behaviour changed, installation or AutoCAD acceptance. Report: `areas/CODEX_BUILD_ENG_MOVE_PIT_22OCT.md`.
+**Status:** OPEN — live wiring BLOCKED; replacement calculation built and unit-tested, DRAFT PR #1551, `cx/eng-move-pit-grade-c60` at `356ca792` (23 Oct 2026). Protected `LinkService.Utilities.cs` must be routed behind a Settings switch OFF by default. All 18 added cases pass on net10 and net48 (before: 13 failed / 5 passed); three Civil Release builds have zero errors. Final full Civil net10: 19,172 console total / 19,152 passed / 19 skipped / one Glen Eira failure, the same failure as the 19,154-case baseline; no new failures or non-executed cases. Four settings hashes unchanged. No drawing behaviour changed, installation or AutoCAD acceptance. Report with exact native check and inventory/executed-count reconciliation: `areas/CODEX_BUILD_ENG_MOVE_PIT_22OCT.md`.
 
 ## BUG-871
 
