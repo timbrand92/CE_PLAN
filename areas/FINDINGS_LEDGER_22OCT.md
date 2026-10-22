@@ -2,9 +2,9 @@
 
 Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job plan/03, Sonnet. Compile only: no source changed, nothing built, no AutoCAD, no Codex. Nothing here is built, tested, installed or Tim-accepted unless an entry says so.
 
-**Sources read (10 files, all that existed at 00:10 Fri 23 Oct):** AUDIT_C58_C60_S40_S41 (Opus, "OPUS-A"), AUDIT_ENGINEERING_CIVIL (Opus, "OPUS-E"), AUDIT_UI_WORDING (Opus, "OPUS-UI", 68 lines merged into 40 entries), CODEX_AUDIT_CIVIL ("CDX-C"), CODEX_AUDIT_STRUCTURAL ("CDX-S"), CODEX_AUDIT_GATE ("CDX-G"), CODEX_HUNT_UNDO, CODEX_HUNT_IMPORT, CODEX_HUNT_LABELS, CODEX_HUNT_MANAGER. Also BUG_CARPARK.md (grep only), RELEASE_9NOV_GAP_PLAN and the open PR list.
+**Sources read (13 files, all that existed at 00:25 Fri 23 Oct):** AUDIT_C58_C60_S40_S41 (Opus, "OPUS-A"), AUDIT_ENGINEERING_CIVIL (Opus, "OPUS-E"), AUDIT_UI_WORDING (Opus, "OPUS-UI", 68 lines merged into 40 entries), CODEX_AUDIT_CIVIL ("CDX-C"), CODEX_AUDIT_STRUCTURAL ("CDX-S"), CODEX_AUDIT_GATE ("CDX-G"), CODEX_HUNT_UNDO, CODEX_HUNT_IMPORT, CODEX_HUNT_LABELS, CODEX_HUNT_MANAGER, AUDIT_ENGINEERING_STRUCTURAL (Opus, "OPUS-SE"), CODEX_HUNT_WINDOWS ("HUNT-WINDOWS", 9 findings; its 4,542-line control inventory is not a finding list). Also CARPARK_RECONCILIATION (status context only, see "Register context"), BUG_CARPARK.md (grep only), RELEASE_9NOV_GAP_PLAN and the open PR list.
 
-**Not yet arrived, so NOT in this ledger (see "Late sources" at the end):** AUDIT_ENGINEERING_STRUCTURAL, CARPARK_RECONCILIATION, and eight hunts (settings, windows, records, design, structcmds, privacy, perf, compat).
+**Not yet arrived, so NOT in this ledger (see "Late sources" at the end):** seven hunts (settings, records, design, structcmds, privacy, perf, compat).
 
 **Left out on purpose (already in the carpark, not recounted):** BUG-859 (downpipe double-click does nothing in 3.0.70; round 2 is #1522), BUG-860, BUG-505/725 unit guesses, BUG-781, BUG-804, BUG-719, BUG-729. Findings a source marked "known, not counted" stay out here too.
 
@@ -12,12 +12,12 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 ## ANSWER FIRST (for Tim)
 
-1. **124 distinct findings.** By severity: **HIGH 30, MEDIUM 66, LOW 28.** Eight findings were seen by two sources (the higher severity was kept). The Opus wording audit's 68 lines became 40 entries (same-file wording faults merged).
-2. **By area:** wording and windows 40; Civil engineering numbers 28; release, installer and Manager 16; Civil commands, Undo and Checks 12; Structural 12; Civil labels and Tidy labels 10; Civil imports 6.
-3. **By source (a finding seen by two sources counts under both):** Opus engineering 28; Opus C-58 to S-41 15; Opus wording 40; Codex gate 14; Codex Civil 9; Codex Structural 8; Codex undo hunt 3; Codex import hunt 6; Codex labels hunt 6; Codex Manager hunt 3.
-4. **In the code installed for 9 Nov Civil + Manager (3.0.70 / 1.1.70): 99.** About 25 of those sit behind switches that are OFF by default (Ignore a finding, Tidy labels, wrong-layer rows and similar), so Max will not meet them on day one. Another 2 are bugs inside #1522, which is not installed yet. 11 are release and installer faults (not drafting code). 12 are Structural only (1.0.121), and Structural does not ship to Max.
-5. **Already have a BUG id: 15.** The other 109 are NEW. 82 of the new ones are HIGH or MEDIUM and have a ready entry below (BUG-873 to BUG-954). **Open PR touches 7:** F-001 (#1523), F-002 (#1525) and F-102 (#1526) directly; F-028 and F-062 are faults inside #1522 to fix before it ships; F-020 (#1492) and F-022 (#1503, #1493) only in part.
-6. **Need Tim's engineering or design word: 25** (list below).
+1. **147 distinct findings.** By severity: **HIGH 32, MEDIUM 79, LOW 36.** Eight findings were seen by two sources (the higher severity was kept). The Opus wording audit's 68 lines became 40 entries (same-file wording faults merged).
+2. **By area:** wording and windows 47; Civil engineering numbers 28; Structural 28; release, installer and Manager 16; Civil commands, Undo and Checks 12; Civil labels and Tidy labels 10; Civil imports 6.
+3. **By source (a finding seen by two sources counts under both):** Opus engineering 28; Opus C-58 to S-41 15; Opus wording 40; Codex gate 14; Codex Civil 9; Codex Structural 8; Codex undo hunt 3; Codex import hunt 6; Codex labels hunt 6; Codex Manager hunt 3; Opus Structural engineering 14; Codex windows hunt 9.
+4. **In the code installed for 9 Nov Civil + Manager (3.0.70 / 1.1.70): 106.** About 25 of those sit behind switches that are OFF by default (Ignore a finding, Tidy labels, wrong-layer rows and similar), so Max will not meet them on day one. Another 2 are bugs inside #1522, which is not installed yet. 11 are release and installer faults (not drafting code). 28 are Structural only (1.0.121), and Structural does not ship to Max.
+5. **Already have a BUG id: 16.** The other 131 are NEW. 97 of the new ones are HIGH or MEDIUM and have a ready entry below (BUG-873 to BUG-969). **Open PR touches 7:** F-001 (#1523), F-002 (#1525) and F-102 (#1526) directly; F-028 and F-062 are faults inside #1522 to fix before it ships; F-020 (#1492) and F-022 (#1503, #1493) only in part.
+6. **Need Tim's engineering or design word: 32** (list below).
 7. **A numbering fault in the carpark:** BUG-866 is used twice (CDCHECKIGNORE Undo, and the rainfall-curve note, F-008). The desk should renumber one before appending. BUG-873 is the next free number.
 8. **The 12 most likely to hurt a colleague on 9 Nov** (Max on Civil + Manager, hand install):
    1. **F-004:** pressing Esc to finish CD right after a pipe with a callout label can leave the label unlinked, so erasing the pipe leaves the label behind.
@@ -32,16 +32,16 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
    10. **F-048:** CDTWL on a metre drawing counts every pipe 1,000 times too small, so storage reads short and freeboard wrong.
    11. **F-032:** clicking an Inspector count such as "Flat / backfall pipes" takes a drawing-edit lock even when the count is 0, which can eat the next U or lose REDO.
    12. **F-019:** the installer script rebuilds the native files instead of sealing the tested ones, so Max can get files nobody tested (the "payload 85" fault). The other install blockers (F-016, F-017, F-018) are avoided by the hand install the gap plan chose, but only if that is rehearsed on a standard-user login.
-9. **Also worth a look on 9 Nov:** F-065 (CE_VERSION can say "Not loaded" for a loaded tool, and Max quotes that version in every bug report) and F-083 (the Manager window tells a colleague to run an installer only the administrator can run).
+9. **Also worth a look on 9 Nov:** F-065 (CE_VERSION can say "Not loaded" for a loaded tool, and Max quotes that version in every bug report) and F-083 (the Manager window tells a colleague to run an installer only the administrator can run). On the Structural side (Tim's own PC, not Max): F-125 (XCLMTXT labels unequal angles "EA") and F-126 (XCLMTXT rounds 250UB25.7 to "250 UB 26") put wrong designations on issued schedules.
 10. **What the desk does first:** review #1523, #1525, #1524, #1522 as already planned; give the Sonnet lane the top 20 fix briefs at the end; keep F-016 to F-018 on the "cut, hand install" list.
 
-### Needs Tim's engineering or design word (25), batched
+### Needs Tim's engineering or design word (32), batched
 
 1. **Rainfall note (F-008):** may CDDESIGN say "may be high or low by up to about 8 per cent; storage moves about 2.5 times as much"? (Recommend yes; wording only, the calculation does not change.)
 2. **Cover and levels (F-042, F-043, F-052, F-053):** cover to the OUTSIDE top of the pipe with a wall-thickness table, cover along the pipe between pits, an obvert warning where a pipe gets bigger, and Tim's values for the council numbers still written in code. (Recommend all four after 9 Nov.)
 3. **Grade ladder (F-045, F-074):** is "375 at 1 in 300 but 450 and up at 1 in 200" the office rule? One confirmation fixes both entries.
 4. **Storage figures (F-047, F-050, F-067):** one shared hard-ground C (0.9 or 1.0), pipes counted wall to wall, and whether the stored orifice level is the invert or the centre.
-5. **Structural drawing behaviour (F-055, F-056, F-081):** should a CEMEMBER section follow the UCS; should break marks and hatch density follow paper height on a layout sheet; should CEHATCHAUDIT flag older LBH and LBUH hatches?
+5. **Structural drawing behaviour (F-055, F-056, F-081):** should a CEMEMBER section follow the UCS; should break marks and hatch density follow paper height on a layout sheet; should CEHATCHAUDIT flag older LBH and LBUH hatches? Also (F-127, F-128, F-130, F-132, F-134, F-136, F-137): the LBH look at 1:100, bracing capacity ratings, whether SBEAM or CEMEMBER size is right, the template hatch rule, cited lap/cover/steel-grade values, wind-class shielding, and which side a vertical CEMEMBER member sits.
 6. **Label and Settings choices (F-063, F-064, F-103, F-104):** leader-out distance in paper or ground millimetres; the name stored with an ignored check (Windows login, initials or a Setting); one name for the Settings window; one name for Drawing Standards versus Suite Manager.
 7. **Install and release (F-016, F-017, F-023, F-025, F-026):** the first-install route for a colleague without administrator rights (gap plan: hand install now); the behaviour-switch comparison against a fresh PC; corporate Windows trust (IT); the older-AutoCAD-year hold on one-piece CE pipes and Max's AutoCAD year.
 8. **CD and import (F-033, F-076, F-077):** is the extra U after cancelling the window-first CD acceptable; unitless drawing read as millimetres with one soft line (gap plan question 4, recommend yes); full-bore speed for self-cleansing (information only).
@@ -54,7 +54,7 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 ---
 
-## HIGH (30)
+## HIGH (32)
 
 1. **F-001. The "Command outcome" log line calls a successful Esc-finished PIT, CD or DP "cancelled", and a CE refusal "completed".**
    - **Severity:** HIGH. **Area:** Civil commands, Undo and Checks. **Sources:** OPUS-A finding 1, CDX-C finding 6 (MEDIUM, suspected). **Installed:** Civil 3.0.70 (and Structural 1.0.121 shows three CEMEMBER records as "cancelled", suspected).
@@ -206,9 +206,19 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
     - **For Tim:** the first sentence tells the drafter they can do what the second forbids.
     - **Where:** `Services/Checks/IgnoredChecks.cs:90,93`; `Services/Checks/ChecksResult.cs:305`. **BUG:** NEW (proposed BUG-894). **PR:** none. **Fix kind:** wording. **Lane:** Sonnet fixer. **Test:** the two lines no longer contradict ("a finding to look at, or a not known one").
 
+125. **F-125. XCLMTXT turns every unequal angle except 150x100x10 into "EA" (equal angle) on the member schedule.**
+    - **Severity:** HIGH. **Area:** Structural. **Sources:** OPUS-SE 1. **Installed:** Structural 1.0.121.
+    - **For Tim:** a lintel "150x90x10" comes out "150 x 90 x 10 EA"; a fabricator may order the wrong angle.
+    - **Where:** `Modules/Structural/Services/ExcelMTextService.cs:5784-5791` (`ExpandMemberAbbreviation`, via `ProcessColumn2Text` line 5161). **BUG:** NEW (proposed BUG-895). **PR:** none. **Fix kind:** code (equal legs = EA, unequal = UA). **Lane:** Sonnet fixer. **Test:** "150x90x10 L ]L" gives UA, "100x75x6" gives UA, "100x100x8" gives EA.
+
+139. **F-139. Structural's shared window host copies screen pixels into WPF window sizes, so Drawing Sheets, Settings and others can open too large and run off the monitor at 150%.**
+    - **Severity:** HIGH (conditional on a 150% transform). **Area:** Structural. **Sources:** HUNT-WINDOWS 1. **Installed:** Structural 1.0.121.
+    - **For Tim:** on a 5120 x 1440 screen at 150% the lower buttons of CESHEETS can sit beyond the visible screen.
+    - **Where:** `Modules/Structural/UI/AutoCadWindowHostHelper.cs:49,59,61,102,105,112,118,164`; callers `Commands/SheetsCommands.cs:25,26`, `Services/CeSettingsUiService.cs:39`. **BUG:** NEW (proposed BUG-896). **PR:** none. **Fix kind:** code (convert pixels to WPF units, clamp to the monitor work area). **Lane:** Codex build (a window fix, then a Codex look). **Test:** CESHEETS at 150% on the ultrawide: every footer button's rectangle lies inside the work area.
+
 ---
 
-## MEDIUM (66)
+## MEDIUM (79)
 
 27. **F-027. REDO is sometimes lost after picking a pit (BUG-861); CE's "REDO safe" list was only measured in the headless console, never with a real selection.**
     - **Severity:** MEDIUM (suspected). **Area:** Civil commands, Undo and Checks. **Sources:** OPUS-A 4, CDX-C (trace only). **Installed:** Civil 3.0.70.
@@ -223,77 +233,77 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 29. **F-029. A finding that returns as "Asked again" cannot be ignored again directly.**
     - **Severity:** MEDIUM. **Area:** Civil commands, Undo and Checks. **Sources:** CDX-C 3. **Installed:** Civil 3.0.70 (switch OFF).
     - **For Tim:** the Checks window asks you to reconsider, but CDCHECKIGNORE does not offer it.
-    - **Where:** `Commands/CheckIgnoreCommand.cs:86`; `Services/Checks/IgnoreFindingPicker.cs:18-27`; `IgnoredChecks.cs:151-158`. **BUG:** NEW (proposed BUG-895). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** ignore, change a fingerprinted field, CDCHECKIGNORE Ignore: the row is offered.
+    - **Where:** `Commands/CheckIgnoreCommand.cs:86`; `Services/Checks/IgnoreFindingPicker.cs:18-27`; `IgnoredChecks.cs:151-158`. **BUG:** NEW (proposed BUG-897). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** ignore, change a fingerprinted field, CDCHECKIGNORE Ignore: the row is offered.
 
 30. **F-030. Leader-out planning reserves room using a plain label that will not actually move, so a callout can land on it.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** CDX-C 4. **Installed:** Civil 3.0.70 (switch OFF).
     - **For Tim:** Tidy labels can move a callout onto a plain label and report a clear spot.
-    - **Where:** `Services/LinkService.TextClashTidyUp.cs:426-437`; `Rules/TidyLeaderOutRule.cs:90-141`. **BUG:** NEW (proposed BUG-896). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** the `PlanWithLeaderOut` composition with labels A (0,0)-(100,100) and B: final moved boxes must not clash with held boxes.
+    - **Where:** `Services/LinkService.TextClashTidyUp.cs:426-437`; `Rules/TidyLeaderOutRule.cs:90-141`. **BUG:** NEW (proposed BUG-898). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** the `PlanWithLeaderOut` composition with labels A (0,0)-(100,100) and B: final moved boxes must not clash with held boxes.
 
 31. **F-031. Tidy labels checks obstacles in model space even for a layout pipe, and its search margin does not grow with the leader-out distance.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** CDX-C 5. **Installed:** Civil 3.0.70 (Tidy labels OFF).
     - **For Tim:** a layout label can be moved because of model-space text, or run into text on its own sheet.
-    - **Where:** `Commands/TidyLabelsCommand.cs:169-176`; `Services/LinkService.TextClashTidyUp.cs:28,425,579-747`. **BUG:** NEW (proposed BUG-897). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** model-only MTEXT at the same XY as a layout label: the label is not offered for movement.
+    - **Where:** `Commands/TidyLabelsCommand.cs:169-176`; `Services/LinkService.TextClashTidyUp.cs:28,425,579-747`. **BUG:** NEW (proposed BUG-899). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** model-only MTEXT at the same XY as a layout label: the label is not offered for movement.
 
 32. **F-032. Clicking an Inspector problem count (Flat / backfall pipes, shallow pits and the rest) takes a write lock and a transaction even when the list is empty.**
     - **Severity:** MEDIUM. **Area:** Civil commands, Undo and Checks. **Sources:** HUNT-UNDO U-02. **Installed:** Civil 3.0.70.
     - **For Tim:** clicking a zero count can use up the next U or lose the line you were about to REDO.
-    - **Where:** `Services/InspectorPaletteService.cs:271,2752-2796`; `Controls/InspectorPanelControl.xaml:573`. **BUG:** NEW (proposed BUG-898). **PR:** none. **Fix kind:** code (return at once on an empty list, read-only for the rest). **Lane:** Sonnet fixer. **Test:** LINE, U, click the zero-count button, REDO: line comes back and no transaction is recorded.
+    - **Where:** `Services/InspectorPaletteService.cs:271,2752-2796`; `Controls/InspectorPanelControl.xaml:573`. **BUG:** NEW (proposed BUG-900). **PR:** none. **Fix kind:** code (return at once on an empty list, read-only for the rest). **Lane:** Sonnet fixer. **Test:** LINE, U, click the zero-count button, REDO: line comes back and no transaction is recorded.
 
 33. **F-033. Window-first CD starts an empty next command, so cancelling that window costs a second U.**
     - **Severity:** MEDIUM. **Area:** Civil commands, Undo and Checks. **Sources:** HUNT-UNDO U-03. **Installed:** Civil 3.0.70.
     - **For Tim:** with "Pick the route first" OFF, after one pipe, Cancel on the next window then one U leaves the pipe.
-    - **Where:** `Commands/CdCommand.cs:239,242`; `Services/PlacementContinuationService.cs:78-89`. **BUG:** NEW (proposed BUG-899). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** window-first CD, place one pipe, Cancel the next window, one U removes the pipe.
+    - **Where:** `Commands/CdCommand.cs:239,242`; `Services/PlacementContinuationService.cs:78-89`. **BUG:** NEW (proposed BUG-901). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** window-first CD, place one pipe, Cancel the next window, one U removes the pipe.
 
 34. **F-034. Tidy labels preview does not reserve earlier pipes' proposed moves, so Apply is a different plan from the preview.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** HUNT-LABELS F2. **Installed:** Civil 3.0.70 (OFF).
     - **For Tim:** "Will move 2", then Yes moves 1.
-    - **Where:** `Commands/TidyLabelsCommand.cs:55,78,85`; `Services/LinkService.TextClashTidyUp.cs:159-709`. **BUG:** NEW (proposed BUG-900). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** two overlapping labels: preview count equals applied count.
+    - **Where:** `Commands/TidyLabelsCommand.cs:55,78,85`; `Services/LinkService.TextClashTidyUp.cs:159-709`. **BUG:** NEW (proposed BUG-902). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** two overlapping labels: preview count equals applied count.
 
 35. **F-035. The pit-cover tidy preview checks a translated rectangle, but Apply also changes rotation and anchor, so the text can land on another note.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** HUNT-LABELS F3. **Installed:** Civil 3.0.70 (OFF).
     - **For Tim:** a rotated cover text is offered a clear corner, then turns and lands on a note.
-    - **Where:** `Services/LinkService.TidyPitText.cs:84-120`; `Rules/PitTextTidyRule.cs:31,47`; `Services/LinkService.PitCoverText.cs:135-152`. **BUG:** NEW (proposed BUG-901). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** real MText extents after the write must not touch note B.
+    - **Where:** `Services/LinkService.TidyPitText.cs:84-120`; `Rules/PitTextTidyRule.cs:31,47`; `Services/LinkService.PitCoverText.cs:135-152`. **BUG:** NEW (proposed BUG-903). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** real MText extents after the write must not touch note B.
 
 36. **F-036. On a layout sheet Tidy labels counts a cover text as moved although its writer always refuses it.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** HUNT-LABELS F4. **Installed:** Civil 3.0.70 (OFF).
     - **For Tim:** "Moved 1" and the text has not moved; the reason is only in the CE log.
-    - **Where:** `Services/LinkService.TidyPitText.cs:39-116`; `Services/LinkService.PitCoverText.cs:118`; `Commands/TidyLabelsCommand.cs:104`. **BUG:** NEW (proposed BUG-902). **PR:** none. **Fix kind:** code (wording and counts). **Lane:** Sonnet fixer. **Test:** layout fixture: "Moved" equals real moves and a plain line says why one was left.
+    - **Where:** `Services/LinkService.TidyPitText.cs:39-116`; `Services/LinkService.PitCoverText.cs:118`; `Commands/TidyLabelsCommand.cs:104`. **BUG:** NEW (proposed BUG-904). **PR:** none. **Fix kind:** code (wording and counts). **Lane:** Sonnet fixer. **Test:** layout fixture: "Moved" equals real moves and a plain line says why one was left.
 
 37. **F-037. Tidy labels gives up on a pipe at 1,001 nearby text objects and says CE could not read it.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** HUNT-LABELS F5. **Installed:** Civil 3.0.70 (OFF).
     - **For Tim:** a crowded drawing leaves an easy clash untouched and says "No CE label needs to move".
-    - **Where:** `Services/LinkService.TextClashTidyUp.cs:33,197-203,685,700`; `Rules/TidyLabelsSummaryRule.cs:39`. **BUG:** NEW (proposed BUG-903). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** 2,000 close text objects: L1 is offered its clear move or an honest bounded-work line.
+    - **Where:** `Services/LinkService.TextClashTidyUp.cs:33,197-203,685,700`; `Rules/TidyLabelsSummaryRule.cs:39`. **BUG:** NEW (proposed BUG-905). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** 2,000 close text objects: L1 is offered its clear move or an honest bounded-work line.
 
 38. **F-038. A very small slide-step Setting makes Tidy labels enumerate hundreds of thousands of candidates before the preview.**
     - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** HUNT-LABELS F6. **Installed:** Civil 3.0.70 (OFF).
     - **For Tim:** type 0.001 into Label slide step and AutoCAD seems to hang.
-    - **Where:** `ViewModels/AdvancedSettingsViewModel.cs:1489,1648`; `Services/LinkService.TextClashTidyUp.cs:506,558`; `Rules/LabelPlacementRule.cs:65-97`; `Rules/TidyLeaderOutRule.cs:100,111`. **BUG:** NEW (proposed BUG-904). **PR:** none. **Fix kind:** code (a work budget, no hard block). **Lane:** Sonnet fixer. **Test:** step 0.001: candidate count stays under the budget.
+    - **Where:** `ViewModels/AdvancedSettingsViewModel.cs:1489,1648`; `Services/LinkService.TextClashTidyUp.cs:506,558`; `Rules/LabelPlacementRule.cs:65-97`; `Rules/TidyLeaderOutRule.cs:100,111`. **BUG:** NEW (proposed BUG-906). **PR:** none. **Fix kind:** code (a work budget, no hard block). **Lane:** Sonnet fixer. **Test:** step 0.001: candidate count stays under the budget.
 
 39. **F-039. The import results page lists a skipped pit as "Recorded" and can call a zero-placement import complete.**
     - **Severity:** MEDIUM. **Area:** Civil imports. **Sources:** HUNT-IMPORT 4. **Installed:** Civil 3.0.70.
     - **For Tim:** the command line says the pit was not drawn, the window says Recorded.
-    - **Where:** `Commands/LinkCommands.ImportXcivil.cs:219-229,508-518`; `Services/XcivilImportService.cs:1950,2082`; `Services/LandXmlImportReview.cs:107`. **BUG:** NEW (proposed BUG-905). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** lock STORMWATER PIT, import one pit: the window lists it "Not drawn", not Recorded.
+    - **Where:** `Commands/LinkCommands.ImportXcivil.cs:219-229,508-518`; `Services/XcivilImportService.cs:1950,2082`; `Services/LandXmlImportReview.cs:107`. **BUG:** NEW (proposed BUG-907). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** lock STORMWATER PIT, import one pit: the window lists it "Not drawn", not Recorded.
 
 40. **F-040. LandXML Replace measures the old import to decide the new position, then deletes it, so the replacement can land somewhere else.**
     - **Severity:** MEDIUM. **Area:** Civil imports. **Sources:** HUNT-IMPORT 5. **Installed:** Civil 3.0.70. **Related:** BUG-068.
     - **For Tim:** the same XML lands in different places depending on where the previous import sat.
-    - **Where:** `Services/XcivilImportService.cs:1879,1921` (compare the correct X-Civil caller at `:694`); `XcivilPitInsertionService.cs:806-878`; `XcivilImportReportService.cs:604`. **BUG:** NEW (proposed BUG-906). **PR:** none. **Fix kind:** code (one missing argument). **Lane:** Sonnet fixer. **Test:** clean target A and target B-with-old-import give the same new insertion points within 0.01 mm.
+    - **Where:** `Services/XcivilImportService.cs:1879,1921` (compare the correct X-Civil caller at `:694`); `XcivilPitInsertionService.cs:806-878`; `XcivilImportReportService.cs:604`. **BUG:** NEW (proposed BUG-908). **PR:** none. **Fix kind:** code (one missing argument). **Lane:** Sonnet fixer. **Test:** clean target A and target B-with-old-import give the same new insertion points within 0.01 mm.
 
 41. **F-041. A PDF schedule spanning several pages is reduced to one page.**
     - **Severity:** MEDIUM. **Area:** Civil imports. **Sources:** HUNT-IMPORT 6. **Installed:** Civil 3.0.70. **Related:** BUG-781, BUG-804.
     - **For Tim:** pits on the continuation sheet lose their size and levels.
-    - **Where:** `Modules/tools/Extract-XcivilPdfSchedule.ps1:480,485,538,685,819`; `Services/XcivilScheduleService.cs:308-361`; `XcivilImportService.cs:733`. **BUG:** NEW (proposed BUG-907). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** two-page PDF, P11 on page 1 and P12 on page 2: both rows come back.
+    - **Where:** `Modules/tools/Extract-XcivilPdfSchedule.ps1:480,485,538,685,819`; `Services/XcivilScheduleService.cs:308-361`; `XcivilImportService.cs:733`. **BUG:** NEW (proposed BUG-909). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** two-page PDF, P11 on page 1 and P12 on page 2: both rows come back.
 
 42. **F-042. Cover is measured to the inside top of the pipe; the wall thickness is ignored.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 4. **Installed:** Civil 3.0.70.
     - **For Tim:** a concrete 375 showing 320 mm cover really has about 275 mm, below 300.
-    - **Where:** `Rules/RulebookEngine.cs:466`; `Services/PipeSizingSolver.cs:387-388`. **BUG:** NEW (proposed BUG-908). **PR:** none. **Fix kind:** needs Tim's word (after 9 Nov). **Lane:** Opus design then Sonnet. **Test:** RCP 375, cover 11.000, IL 10.305, wall table 45: Warn "cover 275 mm".
+    - **Where:** `Rules/RulebookEngine.cs:466`; `Services/PipeSizingSolver.cs:387-388`. **BUG:** NEW (proposed BUG-910). **PR:** none. **Fix kind:** needs Tim's word (after 9 Nov). **Lane:** Opus design then Sonnet. **Test:** RCP 375, cover 11.000, IL 10.305, wall table 45: Warn "cover 275 mm".
 
 43. **F-043. Cover is checked only at the two pits, against the lid level, with one figure for every surface.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 5. **Installed:** Civil 3.0.70.
     - **For Tim:** a pipe under a lower garden bed between two raised lids is never checked there.
-    - **Where:** `Rules/RulebookEngine.cs:444-474`; `Services/PipeSizingSolver.cs:353-371`; `Models/UserSettings.cs:1736`. **BUG:** NEW (proposed BUG-909). **PR:** none. **Fix kind:** needs Tim's word (after 9 Nov). **Lane:** Opus design. **Test:** spot levels at 0, 5, 10 m (11.00, 10.65, 10.90): Warn at 5 m, 150 mm.
+    - **Where:** `Rules/RulebookEngine.cs:444-474`; `Services/PipeSizingSolver.cs:353-371`; `Models/UserSettings.cs:1736`. **BUG:** NEW (proposed BUG-911). **PR:** none. **Fix kind:** needs Tim's word (after 9 Nov). **Lane:** Opus design. **Test:** spot levels at 0, 5, 10 m (11.00, 10.65, 10.90): Warn at 5 m, 150 mm.
 
 44. **F-044. Moving a pit with a held grade rounds the bottom level to the nearest step, so the pipe can come out flatter than the held grade.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 6. **Installed:** Civil 3.0.70.
@@ -303,7 +313,7 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 45. **F-045. Different screens judge the same pipe against different minimum grades and covers.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 7. **Installed:** Civil 3.0.70.
     - **For Tim:** the Inspector says OK and CDRULES says Warn on the same DN100 at 1 in 150.
-    - **Where:** `Services/DesignValidationService.cs:350`; `Models/UserSettings.cs:1718,1920-1924`; `Rules/RulebookValues.cs:337-358`; `Services/MinimumCoverForChecks.cs:18-30`. **BUG:** NEW (proposed BUG-910). **PR:** none. **Fix kind:** needs Tim's word (confirm the ladder). **Lane:** Sonnet fixer after the ruling. **Test:** DN100, 15 m, 10.10/10.00: Inspector and R-03 give the same verdict.
+    - **Where:** `Services/DesignValidationService.cs:350`; `Models/UserSettings.cs:1718,1920-1924`; `Rules/RulebookValues.cs:337-358`; `Services/MinimumCoverForChecks.cs:18-30`. **BUG:** NEW (proposed BUG-912). **PR:** none. **Fix kind:** needs Tim's word (confirm the ladder). **Lane:** Sonnet fixer after the ruling. **Test:** DN100, 15 m, 10.10/10.00: Inspector and R-03 give the same verdict.
 
 46. **F-046. The Pit Schedule measures depth to the outlet pipe, not the pit floor (Tim's 20 Oct ruling).**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 8. **Installed:** Civil 3.0.70.
@@ -313,7 +323,7 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 47. **F-047. CDTWL counts some water twice (pipe ends inside pits) and counts water below the orifice that never drains.**
     - **Severity:** MEDIUM (suspected). **Area:** Civil engineering. **Sources:** OPUS-E 9. **Installed:** Civil 3.0.70.
     - **For Tim:** the system holds about 100 L less than CDTWL says, so the top water level comes out low (about 4 per cent on 2,576 L).
-    - **Where:** `Rules/DetentionBranchCollector.cs:323-339`; `Rules/DetentionStorageMath.cs:106-125`; `Models/UserSettings.cs:2221-2222`. **BUG:** NEW (proposed BUG-911). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** orifice pit with 150 mm sump: live storage excludes 54 L and counts 9.4 m of pipe.
+    - **Where:** `Rules/DetentionBranchCollector.cs:323-339`; `Rules/DetentionStorageMath.cs:106-125`; `Models/UserSettings.cs:2221-2222`. **BUG:** NEW (proposed BUG-913). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** orifice pit with 150 mm sump: live storage excludes 54 L and counts 9.4 m of pipe.
 
 48. **F-048. CDTWL ignores the drawing's units when it measures pipes.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 10. **Installed:** Civil 3.0.70.
@@ -323,27 +333,27 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 49. **F-049. The storm sweep is too coarse near the peak and says nothing when the worst storm is the first one.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 11. **Installed:** Civil 3.0.70.
     - **For Tim:** CDDESIGN can under-size storage by 2 to 3 per cent (job 24-115: 1.688 m3 at 5 min, 1.734 m3 at 7 min).
-    - **Where:** `Services/DetentionSizingService.cs:66-67,156-159`. **BUG:** NEW (proposed BUG-912). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** area 640.67, C 0.6511, PSD 6.54: SSR at least 1.73 m3 or a note.
+    - **Where:** `Services/DetentionSizingService.cs:66-67,156-159`. **BUG:** NEW (proposed BUG-914). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** area 640.67, C 0.6511, PSD 6.54: SSR at least 1.73 m3 or a note.
 
 50. **F-050. CDCALC's Boyd's tab and CDDESIGN use different hard-ground C, so one job gets two storage figures.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 12. **Installed:** Civil 3.0.70.
     - **For Tim:** job 24-115 gives 2.58, 3.11 and 1.69 m3 depending on the screen.
-    - **Where:** `ViewModels/BoydsCalcViewModel.cs:233-237`; `Services/AutoDesignService.cs:62-69`. **BUG:** NEW (proposed BUG-913). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** same inputs through both give equal SSR.
+    - **Where:** `ViewModels/BoydsCalcViewModel.cs:233-237`; `Services/AutoDesignService.cs:62-69`. **BUG:** NEW (proposed BUG-915). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** same inputs through both give equal SSR.
 
 51. **F-051. R-30 (council detention-pipe grade) still judges pipes that R-06 says cannot be told from downpipes.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 13. **Installed:** Civil 3.0.70. **Related:** BUG-815, BUG-854.
     - **For Tim:** a 100 mm downpipe left marked Detention gets a council warning while R-06 says "not judged".
-    - **Where:** `Rules/RulebookEngine.cs:95-106,479-497`. **BUG:** NEW (proposed BUG-914). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** Manningham DN100 downpipe, Detention ticked, no length: R-30 is Unknown.
+    - **Where:** `Rules/RulebookEngine.cs:95-106,479-497`. **BUG:** NEW (proposed BUG-916). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** Manningham DN100 downpipe, Detention ticked, no length: R-30 is Unknown.
 
 52. **F-052. The pit drop check compares inverts only, so a pipe getting bigger can back water up the smaller pipe.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 14. **Installed:** Civil 3.0.70.
     - **For Tim:** 150 in at 10.000 and 300 out at 9.980 passes, but the outlet top sits 130 mm above the inlet top.
-    - **Where:** `Rules/PitDropRule.cs:150-156`; `Rules/RulebookEvaluator.cs`. **BUG:** NEW (proposed BUG-915). **PR:** none. **Fix kind:** needs Tim's word (after 9 Nov). **Lane:** Opus design then Sonnet. **Test:** that pit gives Warn "outlet obvert 130 mm above inlet obvert".
+    - **Where:** `Rules/PitDropRule.cs:150-156`; `Rules/RulebookEvaluator.cs`. **BUG:** NEW (proposed BUG-917). **PR:** none. **Fix kind:** needs Tim's word (after 9 Nov). **Lane:** Opus design then Sonnet. **Test:** that pit gives Warn "outlet obvert 130 mm above inlet obvert".
 
 53. **F-053. Engineering numbers are still fixed in code (R-00): council values, pump station, sizing, storm, orifice, level limits.**
     - **Severity:** MEDIUM. **Area:** Civil engineering. **Sources:** OPUS-E 15. **Installed:** Civil 3.0.70.
     - **For Tim:** for example Kingston's 2000 L block, Manningham factor 0.25, pump C 0.90, X-Civil level limit 0 to 250 m that drops real levels on a high site.
-    - **Where:** about 30 files listed in the source (`ReuseCreditService.cs`, `PumpSizingService.cs`, `NetworkDesignService.cs`, `SettingsSizingStandards.cs`, `XcivilLayerRecognition.cs:41-42` and others). **BUG:** NEW (proposed BUG-916). **PR:** none. **Fix kind:** needs Tim's word (values). **Lane:** Sonnet fixer after Tim's values. **Test:** a "no engineering literal" source guard listing those files.
+    - **Where:** about 30 files listed in the source (`ReuseCreditService.cs`, `PumpSizingService.cs`, `NetworkDesignService.cs`, `SettingsSizingStandards.cs`, `XcivilLayerRecognition.cs:41-42` and others). **BUG:** NEW (proposed BUG-918). **PR:** none. **Fix kind:** needs Tim's word (values). **Lane:** Sonnet fixer after Tim's values. **Test:** a "no engineering literal" source guard listing those files.
 
 54. **F-054. The red back-test GE 24-115 (1.69 vs 2.58 m3) is out of date; the engine's formula is right.**
     - **Severity:** MEDIUM (audit), LOW (carpark). **Area:** Civil engineering. **Sources:** OPUS-E 16. **Installed:** Civil 3.0.70 (test only).
@@ -353,109 +363,174 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 55. **F-055. CEMEMBER keeps only X and Y of the picked points (Z set to 0) and draws a section square to the world, not to the UCS.**
     - **Severity:** MEDIUM (Codex), LOW (Opus). **Area:** Structural. **Sources:** CDX-S F3, OPUS-A 7. **Installed:** Structural 1.0.121.
     - **For Tim:** a member picked on a raised UCS lands at Z 0; a section in a rotated UCS sits at 30 degrees on screen.
-    - **Where:** `Commands/CeMemberCommands.cs:125,131,189-191`; `Services/CeMemberLineWriter.cs:124`; `Services/CeMemberSectionWriter.cs:39,43`; house helper `CeStrucCommandBase.cs:94`. **BUG:** NEW (proposed BUG-917). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** UCS origin at Z 1000: lines stay at World Z 1000 or the command refuses before writing.
+    - **Where:** `Commands/CeMemberCommands.cs:125,131,189-191`; `Services/CeMemberLineWriter.cs:124`; `Services/CeMemberSectionWriter.cs:39,43`; house helper `CeStrucCommandBase.cs:94`. **BUG:** NEW (proposed BUG-919). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** UCS origin at Z 1000: lines stay at World Z 1000 or the command refuses before writing.
 
 56. **F-056. "Follows paper" hatch density and CEMEMBER break marks still use the model drawing scale when drawn directly on a layout sheet.**
     - **Severity:** MEDIUM. **Area:** Structural. **Sources:** CDX-S F5. **Installed:** Structural 1.0.121.
     - **For Tim:** a break kink is 100 mm on paper instead of 2 mm at DIMSCALE 50.
-    - **Where:** `Commands/HatchCommands.cs:1655`; `Core/Units/DrawingScaleRule.cs:56`; `Commands/CeMemberCommands.cs:99`; `DesignCore/SteelSections/CeMemberEngine.cs:219`. **BUG:** NEW (proposed BUG-918). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** PSPACE, DIMSCALE 50, CEMEMBER with break lines: overshoot 1.5 mm, kink 2 mm.
+    - **Where:** `Commands/HatchCommands.cs:1655`; `Core/Units/DrawingScaleRule.cs:56`; `Commands/CeMemberCommands.cs:99`; `DesignCore/SteelSections/CeMemberEngine.cs:219`. **BUG:** NEW (proposed BUG-920). **PR:** none. **Fix kind:** needs Tim's word. **Lane:** Opus design. **Test:** PSPACE, DIMSCALE 50, CEMEMBER with break lines: overshoot 1.5 mm, kink 2 mm.
 
 57. **F-057. EBT and 25C text heights ignore drawing units (metre drawings) and annotation scale (DIMSCALE 0).**
     - **Severity:** MEDIUM. **Area:** Structural. **Sources:** CDX-S F6. **Installed:** Structural 1.0.121.
     - **For Tim:** 125 m high text in a metre drawing; at DIMSCALE 0 and 1:50 the text plots 5 mm instead of 2.5 mm.
-    - **Where:** `Services/CeTextService.cs:27,610,625,4655,5482,5492,5520`. **BUG:** NEW (proposed BUG-919). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** INSUNITS 6, DIMSCALE 50, EBT: height 0.125 m.
+    - **Where:** `Services/CeTextService.cs:27,610,625,4655,5482,5492,5520`. **BUG:** NEW (proposed BUG-921). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** INSUNITS 6, DIMSCALE 50, EBT: height 0.125 m.
 
 58. **F-058. CEMEMBER ignores the office DefaultScale Setting when DIMSCALE is 0.**
     - **Severity:** MEDIUM (Codex), LOW (Opus). **Area:** Structural. **Sources:** CDX-S F7, OPUS-A 6. **Installed:** Structural 1.0.121.
     - **For Tim:** an office setting of 1:50 still gives 150/200 mm breaks (the fixed 1:100).
-    - **Where:** `Commands/CeMemberCommands.cs:98`; `Models/UserSettings.cs:895`; `LegacyToolCommon.cs:147`; `DesignCore/SteelSections/CeMemberEngine.cs:188-190`. **BUG:** NEW (proposed BUG-920). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** `CeMember.DefaultScale` 50, DIMSCALE 0: command line says 1:50, overshoot 75 mm.
+    - **Where:** `Commands/CeMemberCommands.cs:98`; `Models/UserSettings.cs:895`; `LegacyToolCommon.cs:147`; `DesignCore/SteelSections/CeMemberEngine.cs:188-190`. **BUG:** NEW (proposed BUG-922). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** `CeMember.DefaultScale` 50, DIMSCALE 0: command line says 1:50, overshoot 75 mm.
 
 59. **F-059. Long staging paths are the clean-profile default, so a colleague with a long Windows profile path may not be able to prepare an update on older AutoCAD.**
     - **Severity:** MEDIUM (suspected). **Area:** Release, installer and Manager. **Sources:** CDX-G 9. **Installed:** Manager 1.1.70.
     - **For Tim:** works on your PC, may fail on Max's.
-    - **Where:** `Modules/Manager/Services/CeUpdateStagingService.cs:109,374`; `CeOneGlanceStatus.cs:245,302,341`; `CeAdminStorageService.cs:32,49`. **BUG:** NEW (proposed BUG-921). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** a profile path over 260 characters: staging succeeds or refuses cleanly before any partial copy.
+    - **Where:** `Modules/Manager/Services/CeUpdateStagingService.cs:109,374`; `CeOneGlanceStatus.cs:245,302,341`; `CeAdminStorageService.cs:32,49`. **BUG:** NEW (proposed BUG-923). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** a profile path over 260 characters: staging succeeds or refuses cleanly before any partial copy.
 
 60. **F-060. If Windows denies creating the settings folder on first run, Civil silently falls back to defaults and does not say why preferences are not remembered.**
     - **Severity:** MEDIUM. **Area:** Release, installer and Manager. **Sources:** CDX-G 11. **Installed:** Civil 3.0.70, Manager 1.1.70.
     - **For Tim:** Max changes a setting and it is gone next time, with no message.
-    - **Where:** `Modules/Drainage/Services/SettingsService.cs:79,93`; `LoggingService.cs:68-98`; `Modules/Manager/Services/CeAdminStorageService.cs:32,51`; `Modules/Manager/Plugin.cs:97`. **BUG:** NEW (proposed BUG-922). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** deny creation of the settings folder: Settings shows a visible "not saved" explanation.
+    - **Where:** `Modules/Drainage/Services/SettingsService.cs:79,93`; `LoggingService.cs:68-98`; `Modules/Manager/Services/CeAdminStorageService.cs:32,51`; `Modules/Manager/Plugin.cs:97`. **BUG:** NEW (proposed BUG-924). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** deny creation of the settings folder: Settings shows a visible "not saved" explanation.
 
-86. **F-086. Manager window uses five names for one update stage ("Installed next start", "Updates ready to get", "Ready next start", "Update ready", "2 · Ready").** MEDIUM. Wording and windows. OPUS-UI 2. Manager 1.1.70. For Tim: a drafter cannot tell whether "Ready" means approved, copied or installed. `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml:50,98,99,139,176`. NEW (proposed BUG-923). No PR. Wording (Approved / Copied, waiting / Starts next time). Sonnet fixer. **Test:** the five strings are gone and the three fixed words appear.
+86. **F-086. Manager window uses five names for one update stage ("Installed next start", "Updates ready to get", "Ready next start", "Update ready", "2 · Ready").** MEDIUM. Wording and windows. OPUS-UI 2. Manager 1.1.70. For Tim: a drafter cannot tell whether "Ready" means approved, copied or installed. `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml:50,98,99,139,176`. NEW (proposed BUG-925). No PR. Wording (Approved / Copied, waiting / Starts next time). Sonnet fixer. **Test:** the five strings are gone and the three fixed words appear.
 
-87. **F-087. The unconnected finish-update messages use "record" and give no next step, and one promises "It will finish when every AutoCAD window is closed" although nothing starts the installer.** MEDIUM. Wording and windows. OPUS-UI 5, 6. Manager 1.1.70 (not shown to anyone yet). `Modules/Manager/Services/CeFinishUpdatePlanner.cs:47,52,56`; `CeFinishUpdateStartRule.cs:36`. NEW (proposed BUG-924). No PR (#1508 and #1515 are the unconnected code). Wording plus a guard. Sonnet fixer. **Test:** the "will finish" line cannot appear until a caller that starts the installer exists.
+87. **F-087. The unconnected finish-update messages use "record" and give no next step, and one promises "It will finish when every AutoCAD window is closed" although nothing starts the installer.** MEDIUM. Wording and windows. OPUS-UI 5, 6. Manager 1.1.70 (not shown to anyone yet). `Modules/Manager/Services/CeFinishUpdatePlanner.cs:47,52,56`; `CeFinishUpdateStartRule.cs:36`. NEW (proposed BUG-926). No PR (#1508 and #1515 are the unconnected code). Wording plus a guard. Sonnet fixer. **Test:** the "will finish" line cannot appear until a caller that starts the installer exists.
 
-88. **F-088. About window (CE_VERSION) smaller wording faults: a ".NET 10" row drafters cannot act on, "CONFLICT — 2 copies" in capitals with no next step, "<path unavailable>", and three names for one window.** MEDIUM. Wording and windows. OPUS-UI 9, 10, 11, 12. Manager 1.1.70. `UI/Dialogs/CeVersionWindow.xaml:4,34,78-79`; `Services/CeVersionReport.cs:97,101`. NEW (proposed BUG-925). No PR. Wording. Sonnet fixer. **Test:** two copies loaded reads "Two copies loaded (3.0.70 and 3.0.69). Close AutoCAD and ask your CE administrator."
+88. **F-088. About window (CE_VERSION) smaller wording faults: a ".NET 10" row drafters cannot act on, "CONFLICT — 2 copies" in capitals with no next step, "<path unavailable>", and three names for one window.** MEDIUM. Wording and windows. OPUS-UI 9, 10, 11, 12. Manager 1.1.70. `UI/Dialogs/CeVersionWindow.xaml:4,34,78-79`; `Services/CeVersionReport.cs:97,101`. NEW (proposed BUG-927). No PR. Wording. Sonnet fixer. **Test:** two copies loaded reads "Two copies loaded (3.0.70 and 3.0.69). Close AutoCAD and ask your CE administrator."
 
-89. **F-089. CDCHECKIGNORE's "switched off" message does not say which tab to tick.** MEDIUM. Wording and windows. OPUS-UI 15. Civil 3.0.70 (switch OFF). `Commands/CheckIgnoreCommand.cs:39`; `Services/Checks/IgnoredChecks.cs:88`. NEW (proposed BUG-926). No PR. Wording. Sonnet fixer. **Test:** the line names CDS > Newer tools > "Allow a finding to be ignored".
+89. **F-089. CDCHECKIGNORE's "switched off" message does not say which tab to tick.** MEDIUM. Wording and windows. OPUS-UI 15. Civil 3.0.70 (switch OFF). `Commands/CheckIgnoreCommand.cs:39`; `Services/Checks/IgnoredChecks.cs:88`. NEW (proposed BUG-928). No PR. Wording. Sonnet fixer. **Test:** the line names CDS > Newer tools > "Allow a finding to be ignored".
 
-90. **F-090. CDCHECKIGNORE says "no CE project record yet" (a software word) with no next step.** MEDIUM. Wording and windows. OPUS-UI 16. Civil 3.0.70 (switch OFF). `Commands/CheckIgnoreCommand.cs:46`. NEW (proposed BUG-927). No PR. Wording. Sonnet fixer. **Test:** the line reads "This drawing has no CE pits or pipes yet, so there is nothing to ignore. Nothing was changed."
+90. **F-090. CDCHECKIGNORE says "no CE project record yet" (a software word) with no next step.** MEDIUM. Wording and windows. OPUS-UI 16. Civil 3.0.70 (switch OFF). `Commands/CheckIgnoreCommand.cs:46`. NEW (proposed BUG-929). No PR. Wording. Sonnet fixer. **Test:** the line reads "This drawing has no CE pits or pipes yet, so there is nothing to ignore. Nothing was changed."
 
-91. **F-091. "CE could not check" means two different things in the Checks window (a value is missing, and CE failed while reading), and the row repeats its own title with no next step.** MEDIUM. Wording and windows. OPUS-UI 20. Civil 3.0.70. `Services/Checks/ChecksResult.cs:153,305-307`. NEW (proposed BUG-928). No PR. Wording. Sonnet fixer. **Test:** header "312 not known (a value is missing)"; the read-failure row tells the drafter to run CDCHECK again.
+91. **F-091. "CE could not check" means two different things in the Checks window (a value is missing, and CE failed while reading), and the row repeats its own title with no next step.** MEDIUM. Wording and windows. OPUS-UI 20. Civil 3.0.70. `Services/Checks/ChecksResult.cs:153,305-307`. NEW (proposed BUG-930). No PR. Wording. Sonnet fixer. **Test:** header "312 not known (a value is missing)"; the read-failure row tells the drafter to run CDCHECK again.
 
-92. **F-092. CDRULES rows use software words: "provenance", "PitSelector size tier", "office seed", "per-type catalogue selection", "fallback velocity".** MEDIUM. Wording and windows. OPUS-UI 21, 23, 24, 25. Civil 3.0.70. `Rules/RulebookEngine.cs:69,250-260,321,411-419`. NEW (proposed BUG-929). No PR. Wording. Sonnet fixer. **Test:** a source guard that none of those words reach a user string.
+92. **F-092. CDRULES rows use software words: "provenance", "PitSelector size tier", "office seed", "per-type catalogue selection", "fallback velocity".** MEDIUM. Wording and windows. OPUS-UI 21, 23, 24, 25. Civil 3.0.70. `Rules/RulebookEngine.cs:69,250-260,321,411-419`. NEW (proposed BUG-931). No PR. Wording. Sonnet fixer. **Test:** a source guard that none of those words reach a user string.
 
-93. **F-093. CDRULES says "no minimum in the rulebook" instead of saying where to set it.** MEDIUM. Wording and windows. OPUS-UI 22. Civil 3.0.70. `Rules/RulebookEngine.cs:345,437,454,625,650`. NEW (proposed BUG-930). No PR. Wording. Sonnet fixer. **Test:** the line reads "No minimum cover set. Set it in CDS > Design."
+93. **F-093. CDRULES says "no minimum in the rulebook" instead of saying where to set it.** MEDIUM. Wording and windows. OPUS-UI 22. Civil 3.0.70. `Rules/RulebookEngine.cs:345,437,454,625,650`. NEW (proposed BUG-932). No PR. Wording. Sonnet fixer. **Test:** the line reads "No minimum cover set. Set it in CDS > Design."
 
-94. **F-094. The council-source window shows raw saved data (JSON with EntityHandle and SpineKey) and legal-sounding sentences.** MEDIUM. Wording and windows. OPUS-UI 26. Civil 3.0.70. `ViewModels/CouncilSourceViewModel.cs:63,80,82`; `Rules/RulebookEngine.cs:134`. NEW (proposed BUG-931). No PR. Wording. Sonnet fixer. **Test:** the window lists values in words ("Diameter 225 mm, upstream IL 10.250"), no handles.
+94. **F-094. The council-source window shows raw saved data (JSON with EntityHandle and SpineKey) and legal-sounding sentences.** MEDIUM. Wording and windows. OPUS-UI 26. Civil 3.0.70. `ViewModels/CouncilSourceViewModel.cs:63,80,82`; `Rules/RulebookEngine.cs:134`. NEW (proposed BUG-933). No PR. Wording. Sonnet fixer. **Test:** the window lists values in words ("Diameter 225 mm, upstream IL 10.250"), no handles.
 
-95. **F-095. "Unknown" and "not known" are both used for the same thing in what a drafter reads (Settings, council rule values, audit lines, pipe length).** MEDIUM. Wording and windows. OPUS-UI 27, 28. Civil 3.0.70. `AdvancedSettingsDialog.xaml:919,1360`; `Rules/CouncilRuleValues.cs:333`; `Commands/LinkCommands.ReadOnlyAudit.cs:25,30,36`; `Rules/RulebookEngine.cs:333`. NEW (proposed BUG-932). No PR. Wording. Sonnet fixer. **Test:** a source guard for "Unknown" in user strings.
+95. **F-095. "Unknown" and "not known" are both used for the same thing in what a drafter reads (Settings, council rule values, audit lines, pipe length).** MEDIUM. Wording and windows. OPUS-UI 27, 28. Civil 3.0.70. `AdvancedSettingsDialog.xaml:919,1360`; `Rules/CouncilRuleValues.cs:333`; `Commands/LinkCommands.ReadOnlyAudit.cs:25,30,36`; `Rules/RulebookEngine.cs:333`. NEW (proposed BUG-934). No PR. Wording. Sonnet fixer. **Test:** a source guard for "Unknown" in user strings.
 
-96. **F-096. CDTAG says "CDTAG removed." when nothing was tagged, and prints "CDTAG applied: tag=DP2. Pipes linked to this block: 2."** MEDIUM. Wording and windows. OPUS-UI 30, 31. Civil 3.0.70. `Commands/SourceTagCommand.cs:311,391`. NEW (proposed BUG-933). No PR. Wording. Sonnet fixer. **Test:** Enter on an empty tag prints "[CE] No tag typed. This block has no source tag."
+96. **F-096. CDTAG says "CDTAG removed." when nothing was tagged, and prints "CDTAG applied: tag=DP2. Pipes linked to this block: 2."** MEDIUM. Wording and windows. OPUS-UI 30, 31. Civil 3.0.70. `Commands/SourceTagCommand.cs:311,391`. NEW (proposed BUG-935). No PR. Wording. Sonnet fixer. **Test:** Enter on an empty tag prints "[CE] No tag typed. This block has no source tag."
 
-97. **F-097. A colleague-facing Settings tooltip names a person and an internal ruling ("Tim decides when to hide it (ruling of 18 Oct)").** MEDIUM. Wording and windows. OPUS-UI 36. Civil 3.0.70. `Dialogs/AdvancedSettingsDialog.xaml:1375`; `CivilSettingsView.xaml:400`; `ViewModels/SettingsValueCatalog.cs`. NEW (proposed BUG-934). No PR. Wording. Sonnet fixer. **Test:** a source guard for personal names in Settings strings.
+97. **F-097. A colleague-facing Settings tooltip names a person and an internal ruling ("Tim decides when to hide it (ruling of 18 Oct)").** MEDIUM. Wording and windows. OPUS-UI 36. Civil 3.0.70. `Dialogs/AdvancedSettingsDialog.xaml:1375`; `CivilSettingsView.xaml:400`; `ViewModels/SettingsValueCatalog.cs`. NEW (proposed BUG-936). No PR. Wording. Sonnet fixer. **Test:** a source guard for personal names in Settings strings.
 
-98. **F-098. A Settings tick that changes nothing the drafter can see ("Nothing draws this row today").** MEDIUM. Wording and windows. OPUS-UI 37. Civil 3.0.70. `AdvancedSettingsDialog.xaml:1369`; `CivilSettingsView.xaml:394`. NEW (proposed BUG-935). No PR. Wording (hide it, or label "(no effect yet)"). Sonnet fixer. **Test:** the row is hidden or carries the label.
+98. **F-098. A Settings tick that changes nothing the drafter can see ("Nothing draws this row today").** MEDIUM. Wording and windows. OPUS-UI 37. Civil 3.0.70. `AdvancedSettingsDialog.xaml:1369`; `CivilSettingsView.xaml:394`. NEW (proposed BUG-937). No PR. Wording (hide it, or label "(no effect yet)"). Sonnet fixer. **Test:** the row is hidden or carries the label.
 
-99. **F-099. Eight Fixes-tab tooltips use software words (stored deletion word, records, drawing identity, Point Order, stored levels, runtime rounding, unlinked, Project QA, native, host drawing).** MEDIUM. Wording and windows. OPUS-UI 38, 39, 40, 41, 42, 43, 44, 45. Civil 3.0.70. `Dialogs/AdvancedSettingsDialog.xaml:1338-1398`; `CivilSettingsView.xaml:363-423`. NEW (proposed BUG-936). No PR. Wording. Sonnet fixer. **Test:** a source guard for those words in the Fixes tab.
+99. **F-099. Eight Fixes-tab tooltips use software words (stored deletion word, records, drawing identity, Point Order, stored levels, runtime rounding, unlinked, Project QA, native, host drawing).** MEDIUM. Wording and windows. OPUS-UI 38, 39, 40, 41, 42, 43, 44, 45. Civil 3.0.70. `Dialogs/AdvancedSettingsDialog.xaml:1338-1398`; `CivilSettingsView.xaml:363-423`. NEW (proposed BUG-938). No PR. Wording. Sonnet fixer. **Test:** a source guard for those words in the Fixes tab.
 
-100. **F-100. The start-up "heartbeat to CE Cloud" tick is worded with software words and does not say plainly what is sent.** MEDIUM. Wording and windows. OPUS-UI 50. Civil 3.0.70. `AdvancedSettingsDialog.xaml:1128-1129`; `CivilSettingsView.xaml:207`. NEW (proposed BUG-937). No PR. Wording. Sonnet fixer. **Test:** the label reads "At start-up, tell the CE office this PC is running CE (CE and AutoCAD versions and a PC code only)".
+100. **F-100. The start-up "heartbeat to CE Cloud" tick is worded with software words and does not say plainly what is sent.** MEDIUM. Wording and windows. OPUS-UI 50. Civil 3.0.70. `AdvancedSettingsDialog.xaml:1128-1129`; `CivilSettingsView.xaml:207`. NEW (proposed BUG-939). No PR. Wording. Sonnet fixer. **Test:** the label reads "At start-up, tell the CE office this PC is running CE (CE and AutoCAD versions and a PC code only)".
 
-101. **F-101. "Furthest a label may move out (mm)" does not say model or paper millimetres (1500 mm is 7.5 mm on a 1:200 sheet).** MEDIUM. Wording and windows. OPUS-UI 51. Civil 3.0.70 (switch OFF). `AdvancedSettingsDialog.xaml:1215-1216,1286`; `CivilSettingsView.xaml:243,313`. Related F-063. NEW (proposed BUG-938). No PR. Wording. Sonnet fixer. **Test:** the label reads "(mm in the model, 1500 = 1.5 m)".
+101. **F-101. "Furthest a label may move out (mm)" does not say model or paper millimetres (1500 mm is 7.5 mm on a 1:200 sheet).** MEDIUM. Wording and windows. OPUS-UI 51. Civil 3.0.70 (switch OFF). `AdvancedSettingsDialog.xaml:1215-1216,1286`; `CivilSettingsView.xaml:243,313`. Related F-063. NEW (proposed BUG-940). No PR. Wording. Sonnet fixer. **Test:** the label reads "(mm in the model, 1500 = 1.5 m)".
 
-102. **F-102. Several new switches have no tick on the Settings page (double-click Edit source window, leave out removed pits, slow-check progress, wrong-layer rows), so the Edit source window is ON and cannot be switched off from Settings.** MEDIUM. Wording and windows. OPUS-UI 52. Civil 3.0.70. `Models/DoubleClickSettings.cs:34`; `Models/UserSettings.cs:1985,2757,2764`. NEW (proposed BUG-939). **PR:** #1526 (adds rows for existing check, progress and double-click settings; confirm it covers all four). Settings row. Codex build (in flight). **Test:** each of the four keys has a row in CDS > Newer tools.
+102. **F-102. Several new switches have no tick on the Settings page (double-click Edit source window, leave out removed pits, slow-check progress, wrong-layer rows), so the Edit source window is ON and cannot be switched off from Settings.** MEDIUM. Wording and windows. OPUS-UI 52. Civil 3.0.70. `Models/DoubleClickSettings.cs:34`; `Models/UserSettings.cs:1985,2757,2764`. NEW (proposed BUG-941). **PR:** #1526 (adds rows for existing check, progress and double-click settings; confirm it covers all four). Settings row. Codex build (in flight). **Test:** each of the four keys has a row in CDS > Newer tools.
 
-103. **F-103. One window has three names: Preferences (ribbon, CD and Edit Pipe buttons), Settings (title bar, Help) and CE Settings (messages).** MEDIUM. Wording and windows. OPUS-UI 55. Civil 3.0.70. `Assets/Config/ce_toolbar_layout.json:189`; `command-registry.json:327`; `Dialogs/CdDialog.xaml:145`; `Dialogs/AdvancedSettingsDialog.xaml:4`. NEW (proposed BUG-940). No PR. Needs Tim's word (one name). Sonnet fixer after the ruling. **Test:** a source guard that "Preferences" is gone from user strings.
+103. **F-103. One window has three names: Preferences (ribbon, CD and Edit Pipe buttons), Settings (title bar, Help) and CE Settings (messages).** MEDIUM. Wording and windows. OPUS-UI 55. Civil 3.0.70. `Assets/Config/ce_toolbar_layout.json:189`; `command-registry.json:327`; `Dialogs/CdDialog.xaml:145`; `Dialogs/AdvancedSettingsDialog.xaml:4`. NEW (proposed BUG-942). No PR. Needs Tim's word (one name). Sonnet fixer after the ruling. **Test:** a source guard that "Preferences" is gone from user strings.
 
-104. **F-104. Two different things are called "CE Manager" (CDMANAGER is the Drawing Standards Manager; CESURVEYREVIEW means Suite Manager).** MEDIUM. Wording and windows. OPUS-UI 56. Civil 3.0.70, Manager 1.1.70. `Assets/Config/command-registry.json:319`; `Modules/Manager/Assets/Config/command-registry.json:33`. NEW (proposed BUG-941). No PR. Needs Tim's word (naming). Sonnet fixer after the ruling. **Test:** CDMANAGER reads "Drawing Standards (CDMANAGER)".
+104. **F-104. Two different things are called "CE Manager" (CDMANAGER is the Drawing Standards Manager; CESURVEYREVIEW means Suite Manager).** MEDIUM. Wording and windows. OPUS-UI 56. Civil 3.0.70, Manager 1.1.70. `Assets/Config/command-registry.json:319`; `Modules/Manager/Assets/Config/command-registry.json:33`. NEW (proposed BUG-943). No PR. Needs Tim's word (naming). Sonnet fixer after the ruling. **Test:** CDMANAGER reads "Drawing Standards (CDMANAGER)".
 
-105. **F-105. Ribbon tooltips use banned words (network topology, schedule drift, compound entity, "Export Entities", "CE data model").** MEDIUM. Wording and windows. OPUS-UI 57. Civil 3.0.70. `Assets/Config/command-registry.json:147,198,252,314,343`. NEW (proposed BUG-942). No PR. Wording. Sonnet fixer. **Test:** a source guard for the banned words.
+105. **F-105. Ribbon tooltips use banned words (network topology, schedule drift, compound entity, "Export Entities", "CE data model").** MEDIUM. Wording and windows. OPUS-UI 57. Civil 3.0.70. `Assets/Config/command-registry.json:147,198,252,314,343`. NEW (proposed BUG-944). No PR. Wording. Sonnet fixer. **Test:** a source guard for the banned words.
 
-106. **F-106. "Repair Center" is US spelling and its tooltip says "sync, rebuild, upgrade and diagnostics".** MEDIUM. Wording and windows. OPUS-UI 58. Civil 3.0.70. `Assets/Config/command-registry.json:351,355`; `ce_toolbar_layout.json:222`. NEW (proposed BUG-943). No PR. Wording. Sonnet fixer. **Test:** the label reads "Repair Centre".
+106. **F-106. "Repair Center" is US spelling and its tooltip says "sync, rebuild, upgrade and diagnostics".** MEDIUM. Wording and windows. OPUS-UI 58. Civil 3.0.70. `Assets/Config/command-registry.json:351,355`; `ce_toolbar_layout.json:222`. NEW (proposed BUG-945). No PR. Wording. Sonnet fixer. **Test:** the label reads "Repair Centre".
 
-107. **F-107. The Manager Refresh tooltip says "upload queued telemetry" and does not say plainly that it sends data.** MEDIUM. Wording and windows. OPUS-UI 59. Manager 1.1.70. `Modules/Manager/Assets/Config/command-registry.json:27`. NEW (proposed BUG-944). No PR. Wording. Sonnet fixer. **Test:** the tooltip says it sends waiting usage notes to the office.
+107. **F-107. The Manager Refresh tooltip says "upload queued telemetry" and does not say plainly that it sends data.** MEDIUM. Wording and windows. OPUS-UI 59. Manager 1.1.70. `Modules/Manager/Assets/Config/command-registry.json:27`. NEW (proposed BUG-946). No PR. Wording. Sonnet fixer. **Test:** the tooltip says it sends waiting usage notes to the office.
 
-108. **F-108. Help lists six Settings tabs; the window has eight (Newer tools and Fixes are missing, "Pipes & Pits" should be "Pipes and Pits").** MEDIUM. Wording and windows. OPUS-UI 61. Civil 3.0.70. `Assets/Help/guide-content.js:95`. NEW (proposed BUG-945). No PR. Wording. Sonnet fixer. **Test:** the Help line names all eight tabs.
+108. **F-108. Help lists six Settings tabs; the window has eight (Newer tools and Fixes are missing, "Pipes & Pits" should be "Pipes and Pits").** MEDIUM. Wording and windows. OPUS-UI 61. Civil 3.0.70. `Assets/Help/guide-content.js:95`. NEW (proposed BUG-947). No PR. Wording. Sonnet fixer. **Test:** the Help line names all eight tabs.
 
-109. **F-109. Help says only the office administrator can switch Checks on; any drafter can tick it in Settings.** MEDIUM. Wording and windows. OPUS-UI 62. Civil 3.0.70. `Assets/Help/guide-content.js:58`. NEW (proposed BUG-946). No PR. Wording. Sonnet fixer. **Test:** the Help line points to CDS > Newer tools.
+109. **F-109. Help says only the office administrator can switch Checks on; any drafter can tick it in Settings.** MEDIUM. Wording and windows. OPUS-UI 62. Civil 3.0.70. `Assets/Help/guide-content.js:58`. NEW (proposed BUG-948). No PR. Wording. Sonnet fixer. **Test:** the Help line points to CDS > Newer tools.
 
-110. **F-110. CD window (used all day) uses software words: "Use single pipe entity", "validation rules", "no invert or grade validation".** MEDIUM. Wording and windows. OPUS-UI 63. Civil 3.0.70. `Dialogs/CdDialog.xaml:238,244,469`. NEW (proposed BUG-947). No PR. Wording. Sonnet fixer. **Test:** the checkbox reads "Draw the pipe as one line".
+110. **F-110. CD window (used all day) uses software words: "Use single pipe entity", "validation rules", "no invert or grade validation".** MEDIUM. Wording and windows. OPUS-UI 63. Civil 3.0.70. `Dialogs/CdDialog.xaml:238,244,469`. NEW (proposed BUG-949). No PR. Wording. Sonnet fixer. **Test:** the checkbox reads "Draw the pipe as one line".
 
-111. **F-111. Inspector and Edit Pit show "Handle", "GIO Handle", "full-detail snapshot" and "reference evidence, not authority".** MEDIUM. Wording and windows. OPUS-UI 64. Civil 3.0.70. `Controls/InspectorPanelControl.xaml:89,266,321`; `Dialogs/PitEditWorkshopDialog.xaml:203`. NEW (proposed BUG-948). No PR. Wording (hide the handle rows for colleagues). Sonnet fixer. **Test:** the handle rows are hidden.
+111. **F-111. Inspector and Edit Pit show "Handle", "GIO Handle", "full-detail snapshot" and "reference evidence, not authority".** MEDIUM. Wording and windows. OPUS-UI 64. Civil 3.0.70. `Controls/InspectorPanelControl.xaml:89,266,321`; `Dialogs/PitEditWorkshopDialog.xaml:203`. NEW (proposed BUG-950). No PR. Wording (hide the handle rows for colleagues). Sonnet fixer. **Test:** the handle rows are hidden.
 
-112. **F-112. Repair Centre and CD help page use software words ("Sync Links", "caches from drawing truth").** MEDIUM. Wording and windows. OPUS-UI 65. Civil 3.0.70. `Dialogs/CdRepairDialog.xaml:46,75`; `Dialogs/CdHelpDialog.xaml:94`. NEW (proposed BUG-949). No PR. Wording. Sonnet fixer. **Test:** the step reads "1. Reconnect pits and pipes".
+112. **F-112. Repair Centre and CD help page use software words ("Sync Links", "caches from drawing truth").** MEDIUM. Wording and windows. OPUS-UI 65. Civil 3.0.70. `Dialogs/CdRepairDialog.xaml:46,75`; `Dialogs/CdHelpDialog.xaml:94`. NEW (proposed BUG-951). No PR. Wording. Sonnet fixer. **Test:** the step reads "1. Reconnect pits and pipes".
 
-113. **F-113. Command-line messages in developer words ("compound root", "no ProjectData record", "slab boundary polyline handle", "not a council profile id", "entity(ies) skipped").** MEDIUM. Wording and windows. OPUS-UI 66. Civil 3.0.70. `Commands/AnnotationEditCommand.cs:57`; `RunSolveCommand.cs:288,467`; `SlabCommand.cs:1229`; `RulebookCommand.cs:158`; `HubCommands.cs:654`. NEW (proposed BUG-950). No PR. Wording. Sonnet fixer. **Test:** a source guard for those phrases.
+113. **F-113. Command-line messages in developer words ("compound root", "no ProjectData record", "slab boundary polyline handle", "not a council profile id", "entity(ies) skipped").** MEDIUM. Wording and windows. OPUS-UI 66. Civil 3.0.70. `Commands/AnnotationEditCommand.cs:57`; `RunSolveCommand.cs:288,467`; `SlabCommand.cs:1229`; `RulebookCommand.cs:158`; `HubCommands.cs:654`. NEW (proposed BUG-952). No PR. Wording. Sonnet fixer. **Test:** a source guard for those phrases.
 
-114. **F-114. CDAUDIT and Recover Inverts print a programmer's dump ("pits=12, pipes=14, duplicate-handle-groups=1", "cached ownership Unknown").** MEDIUM. Wording and windows. OPUS-UI 67. Civil 3.0.70. `Commands/LinkCommands.cs:403,405,2379`; `Commands/LinkCommands.ReadOnlyAudit.cs:36,40`. NEW (proposed BUG-951). No PR. Wording. Sonnet fixer. **Test:** the CDAUDIT line reads "12 pits, 14 pipes. 2 pipes are copies of one another. Type CDREPAIR to fix them."
+114. **F-114. CDAUDIT and Recover Inverts print a programmer's dump ("pits=12, pipes=14, duplicate-handle-groups=1", "cached ownership Unknown").** MEDIUM. Wording and windows. OPUS-UI 67. Civil 3.0.70. `Commands/LinkCommands.cs:403,405,2379`; `Commands/LinkCommands.ReadOnlyAudit.cs:36,40`. NEW (proposed BUG-953). No PR. Wording. Sonnet fixer. **Test:** the CDAUDIT line reads "12 pits, 14 pipes. 2 pipes are copies of one another. Type CDREPAIR to fix them."
 
 122. **F-122. CEHEALTH prints "[OK] CE Civil Suite v3.0.70" (and can end "All checks passed") when Civil is installed but not loaded.**
     - **Severity:** MEDIUM. **Area:** Release, installer and Manager. **Sources:** HUNT-MANAGER MGR-01. **Installed:** Manager 1.1.70.
     - **For Tim:** the command meant to diagnose a missing Civil says Civil is fine, while CE_VERSION says "Not loaded".
-    - **Where:** `Modules/Manager/Commands/PluginManagerCommands.cs:184,191,201,206,211,243`; `Services/CePluginRegistryService.cs:517`; `Services/CeHealthChecks.cs:31`. **BUG:** NEW (proposed BUG-952). **PR:** none. **Fix kind:** code (add a NotLoaded warning). **Lane:** Sonnet fixer. **Test:** NETLOAD only Manager, then CEHEALTH: a "Civil not loaded" warning and no OK line for Civil.
+    - **Where:** `Modules/Manager/Commands/PluginManagerCommands.cs:184,191,201,206,211,243`; `Services/CePluginRegistryService.cs:517`; `Services/CeHealthChecks.cs:31`. **BUG:** NEW (proposed BUG-954). **PR:** none. **Fix kind:** code (add a NotLoaded warning). **Lane:** Sonnet fixer. **Test:** NETLOAD only Manager, then CEHEALTH: a "Civil not loaded" warning and no OK line for Civil.
 
 123. **F-123. A damaged prepared update cannot be repaired by clicking Get update ready again: the old folder blocks the fresh copy every time.**
     - **Severity:** MEDIUM. **Area:** Release, installer and Manager. **Sources:** HUNT-MANAGER MGR-02. **Installed:** Manager 1.1.70.
     - **For Tim:** one missing file in the local copy and Max is stuck with "conflicting identity evidence" even after a restart.
-    - **Where:** `Modules/Manager/Services/CeUpdateStagingService.cs:370,374,399,401,414,417,430`; `UI/Dialogs/PluginManagerWindow.xaml.cs:666,688`; `Services/CePluginInstallerService.cs:242`. **BUG:** NEW (proposed BUG-953). **PR:** none. **Fix kind:** code (quarantine the bad copy and stage a new verified one; keep the rejection test). **Lane:** Sonnet fixer with Opus review. **Test:** remove one listed file from the staged bundle, click Get update ready twice: a complete verified stage results and installed hashes are unchanged.
+    - **Where:** `Modules/Manager/Services/CeUpdateStagingService.cs:370,374,399,401,414,417,430`; `UI/Dialogs/PluginManagerWindow.xaml.cs:666,688`; `Services/CePluginInstallerService.cs:242`. **BUG:** NEW (proposed BUG-955). **PR:** none. **Fix kind:** code (quarantine the bad copy and stage a new verified one; keep the rejection test). **Lane:** Sonnet fixer with Opus review. **Test:** remove one listed file from the staged bundle, click Get update ready twice: a complete verified stage results and installed hashes are unchanged.
 
 124. **F-124. The CE Tools "Updates & Rollback" ribbon button sends an ordinary colleague to an administrator-only route and opens no window.**
     - **Severity:** MEDIUM. **Area:** Release, installer and Manager. **Sources:** HUNT-MANAGER MGR-03. **Installed:** Manager 1.1.70.
     - **For Tim:** Max clicks the prominent button and gets "This Windows account is not set up as a CE administrator" while the normal Manager window has an Updates page he could use.
-    - **Where:** `Modules/Manager/Services/CeToolsRibbonDefinitionService.cs:26`; `Commands/PluginManagerCommands.cs:91,139,148`; `UI/Dialogs/PluginManagerWindow.xaml:161,191`. **BUG:** NEW (proposed BUG-954). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** non-administrator clicks the button: the Manager Updates page opens and no administrator role is granted.
+    - **Where:** `Modules/Manager/Services/CeToolsRibbonDefinitionService.cs:26`; `Commands/PluginManagerCommands.cs:91,139,148`; `UI/Dialogs/PluginManagerWindow.xaml:161,191`. **BUG:** NEW (proposed BUG-956). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** non-administrator clicks the button: the Manager Updates page opens and no administrator role is granted.
+
+126. **F-126. XCLMTXT rounds every UB and UC to a whole number ("250UB25.7" becomes "250 UB 26", a section that does not exist), against Tim's 19 Oct decimals ruling; its own spelling table also disagrees with the section list.**
+    - **Severity:** MEDIUM (the most likely wrong number on an issued Structural drawing). **Area:** Structural. **Sources:** OPUS-SE 2. **Installed:** Structural 1.0.121.
+    - **For Tim:** paste "410UB59.7" from the engineer's schedule and the drawing says "410 UB 60"; typing "410UB59" gives "410 UB 59", so one section gets two names on one job.
+    - **Where:** `Modules/Structural/Services/ExcelMTextService.cs:6061-6078` (`NormalizeUcUbWholeNumbers`, called at 5172) and the spelling table at 249-342. **BUG:** NEW (proposed BUG-957). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** "250UB25.7" output contains "25.7"; "410UB59" and "410UB59.7" never give two designations.
+
+127. **F-127. Since S-41 the load-bearing-wall-over hatch (LBH) at 1:100 is five times sparser (one line every 1.1 m of wall instead of every 225 mm), so a 900 mm nib can show no hatch.**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** OPUS-SE 3. **Installed:** Structural 1.0.121.
+    - **For Tim:** the look of a load-bearing wall changes on every 1:100 plan, and a short wall can read as not load bearing. The finalizer said LBH "has had no look".
+    - **Where:** `Commands/HatchCommands.cs:120-130`; `Core/Units/DrawingScaleRule.cs:58-60`. **BUG:** NEW (proposed BUG-958). **PR:** none. **Fix kind:** needs Tim's word (keep paper density for LBUH, keep LBH at 50?). **Lane:** Opus design. **Test:** `HatchPatternScale(50, 50, 100, 1000, anyScale: true, paperDensity: true)` returns 50 if Tim keeps the office value.
+
+128. **F-128. The bracing panel adds up metres of brace of every type and calls the total "sufficient", with no rating per metre.**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** OPUS-SE 4. **Installed:** Structural 1.0.121.
+    - **For Tim:** 3.6 m of a weak brace shows green against a requirement worked for a strong one (3.6 x 1.5 = 5.4 kN against 20 kN needed).
+    - **Where:** `Modules/Structural.DesignCore/BracingPanelCalculator.cs:157-195`. **BUG:** NEW (proposed BUG-959). **PR:** none. **Fix kind:** needs Tim's word (a rating per bracing type, from AS 1684.2). **Lane:** Opus design. **Test:** a mixed set with no ratings returns "unknown" or a plain warning, not Sufficient.
+
+129. **F-129. TH, PF, BP, column, 18-text and setout tags use a fixed height (250, 200 or 180) at every scale, so they plot 5 mm at 1:50 beside 2.5 mm notes.**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** OPUS-SE 5. **Installed:** Structural 1.0.121. **Related:** BUG-531.
+    - **For Tim:** a PFL label plots 12.5 mm at 1:20 and 5 mm at 1:50.
+    - **Where:** `Services/CeTextService.cs:663-780`; `Models/UserSettings.cs:1424,1491,1537,1692`; `RoofSetoutDrawService.cs:96`, `FloorSetoutCommandService.cs:87`, `LintelProposalService.cs:346`, `LevelCarryDrawService.cs:93`. **BUG:** NEW (proposed BUG-960). **PR:** none. **Fix kind:** code (Tim's ruling "all scales come from the drawing scale" already covers it). **Lane:** Sonnet fixer. **Test:** DIMSCALE 50, PFL "PF1": text height 125, not 250.
+
+130. **F-130. SBEAM and CEMEMBER draw the same member at different sizes at every DIMSCALE except 20 (SBEAM scales depth by DIMSCALE / 20, CEMEMBER draws real size).**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** OPUS-SE 6. **Installed:** Structural 1.0.121.
+    - **For Tim:** at 1:100 a 310UB32 elevation is 298 mm deep from CEMEMBER and 1490 mm from SBEAM over the same 6000 mm span.
+    - **Where:** `DesignCore/SteelSections/SbeamPlacementPlanner.cs:8,23,87-92`; `Services/SbeamAtomicPlacementWriter.cs:300-310`; `CeMemberElevation.cs`, `CeMemberSection.cs`. **BUG:** NEW (proposed BUG-961). **PR:** none. **Fix kind:** needs Tim's word (one ruling decides which is right). **Lane:** Opus design. **Test:** `PlanElevation` at DIMSCALE 100 and `CeMemberElevation.Build` give the same depth once Tim rules.
+
+131. **F-131. The scale-aware hatches (EH, CH, LBH, LBUH) refuse to draw when LTSCALE is not exactly 10 x DIMSCALE, a hard stop that R-27 does not allow.**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** OPUS-SE 7. **Installed:** Structural 1.0.121. **Related:** F-015, BUG-614.
+    - **For Tim:** a drawing at DIMSCALE 100 and LTSCALE 1 gets no hatch at all, while CEMEMBER warns and draws.
+    - **Where:** `Commands/HatchCommands.cs:347-349,1655-1678`; `Core/Units/DrawingScaleRule.cs:63-72`. **BUG:** NEW (proposed BUG-962). **PR:** none. **Fix kind:** code (warn and carry on). **Lane:** Sonnet fixer. **Test:** `HatchPatternScale(8, 40, 100, 1, anyScale: true)` returns 40 with a warning flag, not null.
+
+132. **F-132. The fixed-scale template hatches in the CEHATCH library disagree with their scale-aware twins, and two (Fence wall under, Dot hatch 9) still have the BUG-748 dots-merge fault.**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** OPUS-SE 8. **Installed:** Structural 1.0.121. **Related:** BUG-748.
+    - **For Tim:** at 1:100 "Concrete slab" is AR-CONC 1.0 while CE's own Concrete is 5.0 (five times denser); "Fence wall under" dot rows sit 0.32 mm apart on paper and merge to grey.
+    - **Where:** `Commands/HatchUpgradeCommands.cs:45-58`; `Commands/HatchCommands.cs:85-153`; `FoundationInfillService.cs:618-628`. **BUG:** NEW (proposed BUG-963). **PR:** none. **Fix kind:** needs Tim's word (which rule makes each pair equal). **Lane:** Opus design. **Test:** `PlacementScale(Fence wall under, 100, 1000, true, true)` equals `PlacementScale(LBUH, ...)` once Tim chooses.
+
+140. **F-140. Several Structural windows have minimum sizes bigger than a 1080p screen at 150% (beam picker 1340 x 820, RC member 1060 x 850, Settings 1180 x 850), so their buttons cannot be reached even by dragging smaller.**
+    - **Severity:** MEDIUM. **Area:** Structural. **Sources:** HUNT-WINDOWS 2. **Installed:** Structural 1.0.121.
+    - **For Tim:** the SBEAM picker or Structural Settings cannot show Place or Save on a 1920 x 1080 laptop at 150%.
+    - **Where:** `Modules/Structural/UI/Dialogs/SteelSectionPickerDialog.xaml:5`, `RCMemberDialog.xaml:5`, `CeSettingsDialog.xaml:5`; `Commands/SbeamCommandRunner.cs:30`; `UI/AutoCadWindowHostHelper.cs:104,204`. **BUG:** NEW (proposed BUG-964). **PR:** none. **Fix kind:** code. **Lane:** Codex build (then a Codex look). **Test:** SBEAM at 1920 x 1080 and 150%: Cancel and Place are inside the work area.
+
+141. **F-141. Pressing Enter in the Settings search with no matches saves the whole draft and closes Settings.**
+    - **Severity:** MEDIUM. **Area:** Wording and windows. **Sources:** HUNT-WINDOWS 3. **Installed:** Civil 3.0.70.
+    - **For Tim:** change a value, mistype a search, press Enter, and the change is saved when you were still looking.
+    - **Where:** `Modules/Drainage/Dialogs/AdvancedSettingsDialog.xaml.cs:57,62`; `AdvancedSettingsDialog.xaml:237,1432`; `ViewModels/AdvancedSettingsViewModel.cs:1104,1113`. **BUG:** NEW (proposed BUG-965). **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** change a field, search "zzzz", press Enter: the window stays open and the stored value is unchanged.
+
+142. **F-142. "Remember window position" skips Edit Pipe, Edit Pit, New Pit and CDS because CE's own fitting sets the position to Manual first.**
+    - **Severity:** MEDIUM (switch-dependent). **Area:** Wording and windows. **Sources:** HUNT-WINDOWS 4. **Installed:** Civil 3.0.70.
+    - **For Tim:** with Remember ticked, the most-used editors still reopen at CE's calculated centre.
+    - **Where:** `Services/CeWindowPlacementHook.cs:49,100,101`; `Dialogs/PitWindowLayout.cs:27`; `Dialogs/PipeWindowLayout.cs:13`; `Dialogs/AdvancedSettingsDialog.xaml.cs:82`; `Services/WindowSizingService.cs:173`. **BUG:** NEW (proposed BUG-966). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** `windowPlacement.remember=true`, move PIPEEDIT 200 px left, Cancel, reopen: top-left within 2 px.
+
+143. **F-143. Civil Hub rejects a valid saved position on a second monitor and moves back to the primary screen; other Civil windows also clamp to the primary work area.**
+    - **Severity:** MEDIUM. **Area:** Wording and windows. **Sources:** HUNT-WINDOWS 5. **Installed:** Civil 3.0.70.
+    - **For Tim:** leave Civil Hub on the big second screen and it comes back on the small one.
+    - **Where:** `Dialogs/CivilHubDialog.xaml.cs:419,449,459,467`; `Services/WindowSizingService.cs:189,214,216`; `Services/CeWindowPlacementHook.cs:26`. **BUG:** NEW (proposed BUG-967). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** two monitors, Hub at Left=2200 on monitor 2: reopens within 2 px.
+
+144. **F-144. The Checks palette and "What CE Found" keep their old dark or light look after the theme is changed, even after closing and reopening them.**
+    - **Severity:** MEDIUM. **Area:** Wording and windows. **Sources:** HUNT-WINDOWS 6. **Installed:** Civil 3.0.70 (Checks palette OFF by default).
+    - **For Tim:** choose Light while Checks is dark and it stays dark.
+    - **Where:** `Controls/ChecksListControl.xaml.cs:12`; `Controls/DrawingCheckPanelControl.xaml.cs:11`; `Services/ThemeService.cs:107,118,219,220`; `Services/ChecksListPaletteService.cs:57,59`; `Dialogs/AdvancedSettingsDialog.xaml.cs:24`. **BUG:** NEW (proposed BUG-968). **PR:** none. **Fix kind:** code. **Lane:** Codex build. **Test:** Dark, open CDCHECKS, switch to Light: the palette BackgroundBrush equals LightTheme.xaml.
+
+145. **F-145. Test-critical fields in Manager and the import review lists have no stable name (no AutomationId or label), so an automated check cannot reliably pick "running build" versus "installed build".**
+    - **Severity:** MEDIUM. **Area:** Wording and windows. **Sources:** HUNT-WINDOWS 9. **Installed:** Civil 3.0.70, Manager 1.1.70.
+    - **For Tim:** the robot can read the wrong value and pass the window.
+    - **Where:** `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml:47,52`; `Modules/Drainage/Dialogs/CivilImportWindow.xaml:133,171` (static inventory in the source: 4,542 declarations without a direct identity, mostly labels). **BUG:** NEW (proposed BUG-969). **PR:** none. **Fix kind:** code (see CODEX_BUILD_AUTOMATION_IDS_22OCT.md). **Lane:** Codex build. **Test:** UIA finds the running-build and installed-build fields by name, one match each.
 
 ---
 
-## LOW, grouped by area (28)
+## LOW, grouped by area (36)
 
 ### Civil commands, Undo and Checks (3)
 
@@ -499,7 +574,7 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 77. **F-077. The self-cleansing check uses full-bore speed, so "0.6 m/s met" is optimistic at low flow.** LOW (information only). Civil engineering. OPUS-E 28. Civil 3.0.70. `Rules/RulebookEngine.cs:415`; `Services/PipeSizingSolver.cs:256`. NEW. No PR. Needs Tim's word. Opus design. **Test:** none until Tim rules.
 
-### Wording and windows, Civil + Manager (7)
+### Wording and windows, Civil + Manager (9)
 
 115. **F-115. Manager window labels: "Current drawing session" (it is the AutoCAD session) and a "Module" tab (drafters say Civil, Structural, Manager).** LOW. Wording and windows. OPUS-UI 3, 4. Manager 1.1.70. `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml:115,122`. NEW. No PR. Wording. Sonnet fixer. **Test:** the strings read "This AutoCAD, right now" and "CE tools".
 
@@ -515,7 +590,11 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 121. **F-121. Small ribbon tooltip polish (CDINSPECTOR, CDSTRIP "100mm-wide", CDSOURCE "user-typed source ID", CDPERIMETER "AG-style engine").** LOW. Wording and windows. OPUS-UI 60. Civil 3.0.70. `Assets/Config/command-registry.json` (several entries). NEW. No PR. Wording. Sonnet fixer. **Test:** none beyond reading the four strings.
 
-### Structural (5)
+146. **F-146. The About window (CE_VERSION) is always painted with Manager's light palette while AutoCAD and Manager are dark.** LOW. Wording and windows. HUNT-WINDOWS 7. Manager 1.1.70. `Modules/Manager/UI/Dialogs/CeVersionWindow.xaml:14`, `CeVersionWindow.xaml.cs:17`; `Commands/PluginManagerCommands.cs:31`. NEW. No PR. Code (attach the same appearance service as Manager). Codex build. **Test:** COLORTHEME 0 then CE_VERSION: the About background equals the dark theme value.
+
+147. **F-147. Escape at "Press Enter to reopen CDEDIT:" in Edit 2 Pipes' Inspect Drawing reopens the editor instead of cancelling.** LOW. Wording and windows. HUNT-WINDOWS 8. Civil 3.0.70. `Commands/BatchEditDialogHost.cs:38,43,47,48`. NEW. No PR. Code (honour the cancel). Sonnet fixer. **Test:** Esc at that prompt: no window reappears and both pipe diameters are unchanged.
+
+### Structural (11)
 
 78. **F-078. CEMEMBER draws onto a frozen or off layer and still says "placed".** LOW. Structural. OPUS-A 5. Structural 1.0.121. `SbeamAtomicPlacementWriter.ReadLayerStates`; `SbeamOutputProtectionContract.TryAdmit`. NEW. No PR. Code (warn and carry on, R-27). Sonnet fixer. **Test:** freeze 25CONT, run CEMEMBER: a plain line names the frozen layer.
 
@@ -527,11 +606,23 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 82. **F-082. Settings recovery tells the drafter to check three switches (FollowAnyDrawingScale, HatchDensityFollowsPaper, TagTextFollowsLabelHeight) that have no Settings row.** LOW. Structural. CDX-S F8. Structural 1.0.121. `Services/SettingsService.LoadRecovery.cs:282,828,1321`. NEW. #1526 adds Civil rows only. Wording. Sonnet fixer. **Test:** a damaged OFF value: recovery says the key has no Settings page.
 
+133. **F-133. CEMEMBER refuses the supplier name with decimals ("310UB32.0", "410UB59.7": "no section called ...").** LOW. Structural. OPUS-SE 9. Structural 1.0.121. `DesignCore/SteelSections/CeMemberPrompts.cs:101-117`. NEW. No PR. Code (both forms must work once BUG-818's names land). Sonnet fixer. **Test:** `FindByName(..., "310UB32.0")` returns the 310UB32.0 row.
+
+134. **F-134. Three engineering tables carry wrong or unsafe values, but nothing reads them yet: lap length 40 x bar size (short by 13 to 31 per cent at f'c 32 MPa), one cover value per exposure class regardless of strength, and steel grades 250/350 for UB/UC (from memory the supplier grade is 300).** LOW. Structural. OPUS-SE 10. Structural 1.0.121. `Assets/Config/rebar-catalogue.json`; `Services/StandardsService.cs:91-116`. Related BUG-534. No PR. Needs Tim's word (cited values on the Settings page). Opus design. **Test:** a guard test that fails the day any command reads `standardLapLength`, `GetMinCover` or `GetSteelGrades` uncited.
+
+135. **F-135. The RC section detail invents a bar size when the bar is not in the list (N40 bottom bar drawn as a 16 mm dot, with no message).** LOW. Structural. OPUS-SE 11. Structural 1.0.121. `Commands/SectionDetailCommands.cs:93-100`. NEW. No PR. Code (say UNKNOWN, do not invent). Sonnet fixer. **Test:** BotBarSize "N40": a plain line "N40 is not in the bar list", no 16 mm dot.
+
+136. **F-136. The wind class suggestion has no shielding question, so a fully shielded and an unshielded lot on the same terrain get the same class (often one class apart, N2 against N3).** LOW. Structural. OPUS-SE 12. Structural 1.0.121. `Rules/WindClassSuggestion.cs:33-43,84`. Related BUG-534. No PR. Needs Tim's word. Opus design. **Test:** shielding Full versus None gives different suggestions, or a Basis line says shielding was not considered.
+
+137. **F-137. A vertical CEMEMBER elevation flips "top of member" with the pick order (a 0.01 mm X difference decides which side).** LOW. Structural. OPUS-SE 13. Structural 1.0.121. `DesignCore/SteelSections/CeMemberPlacement.cs:65,66,79,80`. NEW. No PR. Needs Tim's word (or ask which side). Sonnet fixer after the ruling. **Test:** points (0,0),(0,3000) and the reverse give the same side.
+
+138. **F-138. SBEAM writes the section list's wrong stiffness and mass into every member it places, and after the list is corrected SBEAMEDIT may read older members as "changed".** LOW. Structural. OPUS-SE 14. Structural 1.0.121. `SbeamPlacementPersistenceContract.cs:451-454`; `UI/Dialogs/SteelSectionPickerDialog.xaml.cs:242-245`; `SteelSectionPickerDialog.Edit.cs:130-133`. BUG-818 (related). No PR. Code (after the list correction). Sonnet fixer. **Test:** place a 150PFC, then correct the list: SBEAMEDIT reports no change the drafter did not make.
+
 ---
 
 ## NEW BUG ENTRIES
 
-For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top of that file). 82 entries, BUG-873 to BUG-954, in ledger order (every NEW HIGH and MEDIUM finding). **Before appending:** BUG-866 is used twice in the file (CDCHECKIGNORE Undo, and the rainfall note); renumber one. Every entry: **Steps for Tim: none, AI tests it.**
+For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top of that file).  97 entries, BUG-873 to BUG-969, in ledger order (every NEW HIGH and MEDIUM finding). **Before appending:** BUG-866 is used twice in the file (CDCHECKIGNORE Undo, and the rainfall note); renumber one. Every entry: **Steps for Tim: none, AI tests it.**
 
 ## BUG-873
 
@@ -799,6 +890,30 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 ## BUG-895
 
+**Command / Area:** XCLMTXT member schedule, unequal angles, ledger F-125.
+
+**Symptom:** Every unequal angle except 150x100x10 is relabelled "EA" (equal angle): "150x90x10" comes out "150 x 90 x 10 EA". A fabricator may order the wrong angle. HIGH.
+
+**Expected behaviour:** Equal legs give EA, unequal legs give UA.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 1; `Modules/Structural/Services/ExcelMTextService.cs:5784-5791`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-896
+
+**Command / Area:** Structural windows (CESHEETS, CESETTINGS and others sharing the host), ledger F-139.
+
+**Symptom:** The shared host copies screen pixels into WPF window sizes, so at 150% on a large monitor Drawing Sheets and Settings can open too large with the lower buttons beyond the screen. HIGH (conditional on a 150% transform).
+
+**Expected behaviour:** Window sizes are converted from pixels and clamped to the monitor work area.
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 1; `Modules/Structural/UI/AutoCadWindowHostHelper.cs:49-164`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-897
+
 **Command / Area:** CDCHECKIGNORE, "Asked again" rows, ledger F-029.
 
 **Symptom:** A finding that returns as "Asked again" is not offered by CDCHECKIGNORE Ignore; the drafter must first Un-ignore the old entry. MEDIUM (switch OFF).
@@ -809,7 +924,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-896
+## BUG-898
 
 **Command / Area:** CDTIDYLABELS leader-out planning, ledger F-030.
 
@@ -821,7 +936,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-897
+## BUG-899
 
 **Command / Area:** CDTIDYLABELS obstacle space and search margin, ledger F-031.
 
@@ -833,7 +948,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-898
+## BUG-900
 
 **Command / Area:** Inspector problem counts (Flat / backfall pipes and similar), ledger F-032.
 
@@ -845,7 +960,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-899
+## BUG-901
 
 **Command / Area:** CD with "Pick the route first" OFF, ledger F-033.
 
@@ -857,7 +972,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-900
+## BUG-902
 
 **Command / Area:** CDTIDYLABELS preview versus Apply, ledger F-034.
 
@@ -869,7 +984,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-901
+## BUG-903
 
 **Command / Area:** CDTIDYLABELS pit cover text, ledger F-035.
 
@@ -881,7 +996,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-902
+## BUG-904
 
 **Command / Area:** CDTIDYLABELS on a layout sheet, cover text, ledger F-036.
 
@@ -893,7 +1008,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-903
+## BUG-905
 
 **Command / Area:** CDTIDYLABELS in a crowded drawing, ledger F-037.
 
@@ -905,7 +1020,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-904
+## BUG-906
 
 **Command / Area:** CDTIDYLABELS slide step Setting, ledger F-038.
 
@@ -917,7 +1032,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-905
+## BUG-907
 
 **Command / Area:** CDIMPORTXCIVIL and CDIMPORTLANDXML results page, ledger F-039.
 
@@ -929,7 +1044,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-906
+## BUG-908
 
 **Command / Area:** CDIMPORTLANDXML Replace, position, ledger F-040.
 
@@ -941,7 +1056,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-907
+## BUG-909
 
 **Command / Area:** CDIMPORTXCIVIL PDF schedules, ledger F-041.
 
@@ -953,7 +1068,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-908
+## BUG-910
 
 **Command / Area:** CDRULES R-04 cover, ledger F-042.
 
@@ -965,7 +1080,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-909
+## BUG-911
 
 **Command / Area:** CDRULES cover between pits, ledger F-043.
 
@@ -977,7 +1092,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-910
+## BUG-912
 
 **Command / Area:** Inspector, Hub, repair checks versus CDRULES, ledger F-045.
 
@@ -989,7 +1104,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-911
+## BUG-913
 
 **Command / Area:** CDTWL storage volume, ledger F-047.
 
@@ -1001,7 +1116,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-912
+## BUG-914
 
 **Command / Area:** CDDESIGN storm sweep, ledger F-049.
 
@@ -1013,7 +1128,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-913
+## BUG-915
 
 **Command / Area:** CDCALC Boyd's tab versus CDDESIGN, ledger F-050.
 
@@ -1025,7 +1140,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-914
+## BUG-916
 
 **Command / Area:** CDRULES R-30 versus R-06, ledger F-051.
 
@@ -1037,7 +1152,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-915
+## BUG-917
 
 **Command / Area:** CDRULES pit drop where the pipe gets bigger, ledger F-052.
 
@@ -1049,7 +1164,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-916
+## BUG-918
 
 **Command / Area:** Engineering numbers fixed in code (R-00), ledger F-053.
 
@@ -1061,7 +1176,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-917
+## BUG-919
 
 **Command / Area:** CEMEMBER picked plane and UCS, ledger F-055.
 
@@ -1073,7 +1188,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-918
+## BUG-920
 
 **Command / Area:** LBUH, LBH and CEMEMBER break marks on a layout sheet, ledger F-056.
 
@@ -1085,7 +1200,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-919
+## BUG-921
 
 **Command / Area:** EBT and 25C text height, ledger F-057.
 
@@ -1097,7 +1212,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-920
+## BUG-922
 
 **Command / Area:** CEMEMBER DefaultScale Setting, ledger F-058.
 
@@ -1109,7 +1224,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-921
+## BUG-923
 
 **Command / Area:** Manager update staging, long paths, ledger F-059.
 
@@ -1121,7 +1236,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-922
+## BUG-924
 
 **Command / Area:** CE Settings first run when the settings folder cannot be created, ledger F-060.
 
@@ -1133,7 +1248,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-923
+## BUG-925
 
 **Command / Area:** CE Suite Manager window, stage names, ledger F-086.
 
@@ -1145,7 +1260,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-924
+## BUG-926
 
 **Command / Area:** Manager finish-update messages (not connected yet), ledger F-087.
 
@@ -1157,7 +1272,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-925
+## BUG-927
 
 **Command / Area:** CE_VERSION wording, ledger F-088.
 
@@ -1169,7 +1284,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-926
+## BUG-928
 
 **Command / Area:** CDCHECKIGNORE, switch-off message, ledger F-089.
 
@@ -1181,7 +1296,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-927
+## BUG-929
 
 **Command / Area:** CDCHECKIGNORE, empty drawing wording, ledger F-090.
 
@@ -1193,7 +1308,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-928
+## BUG-930
 
 **Command / Area:** Checks window, "could not check", ledger F-091.
 
@@ -1205,7 +1320,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-929
+## BUG-931
 
 **Command / Area:** CDRULES row wording, ledger F-092.
 
@@ -1217,7 +1332,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-930
+## BUG-932
 
 **Command / Area:** CDRULES "no minimum in the rulebook", ledger F-093.
 
@@ -1229,7 +1344,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-931
+## BUG-933
 
 **Command / Area:** Council source window, ledger F-094.
 
@@ -1241,7 +1356,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-932
+## BUG-934
 
 **Command / Area:** "Unknown" versus "not known", ledger F-095.
 
@@ -1253,7 +1368,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-933
+## BUG-935
 
 **Command / Area:** CDTAG messages, ledger F-096.
 
@@ -1265,7 +1380,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-934
+## BUG-936
 
 **Command / Area:** Settings tooltip naming a person, ledger F-097.
 
@@ -1277,7 +1392,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-935
+## BUG-937
 
 **Command / Area:** Settings tick with no visible effect, ledger F-098.
 
@@ -1289,7 +1404,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-936
+## BUG-938
 
 **Command / Area:** Settings Fixes tab tooltips, ledger F-099.
 
@@ -1301,7 +1416,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-937
+## BUG-939
 
 **Command / Area:** Settings, start-up message to CE Cloud, ledger F-100.
 
@@ -1313,7 +1428,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-938
+## BUG-940
 
 **Command / Area:** Settings, "Furthest a label may move out (mm)", ledger F-101.
 
@@ -1325,7 +1440,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-939
+## BUG-941
 
 **Command / Area:** Settings, new switches with no tick, ledger F-102.
 
@@ -1337,7 +1452,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-940
+## BUG-942
 
 **Command / Area:** Settings window name, ledger F-103.
 
@@ -1349,7 +1464,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-941
+## BUG-943
 
 **Command / Area:** Two things called "CE Manager", ledger F-104.
 
@@ -1361,7 +1476,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-942
+## BUG-944
 
 **Command / Area:** Ribbon tooltips, banned words, ledger F-105.
 
@@ -1373,7 +1488,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-943
+## BUG-945
 
 **Command / Area:** Repair Centre ribbon label, ledger F-106.
 
@@ -1385,7 +1500,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-944
+## BUG-946
 
 **Command / Area:** Manager Refresh button tooltip, ledger F-107.
 
@@ -1397,7 +1512,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-945
+## BUG-947
 
 **Command / Area:** Help Centre, Settings tabs, ledger F-108.
 
@@ -1409,7 +1524,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-946
+## BUG-948
 
 **Command / Area:** Help Centre, who can switch Checks on, ledger F-109.
 
@@ -1421,7 +1536,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-947
+## BUG-949
 
 **Command / Area:** CD window wording, ledger F-110.
 
@@ -1433,7 +1548,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-948
+## BUG-950
 
 **Command / Area:** Inspector and Edit Pit wording, ledger F-111.
 
@@ -1445,7 +1560,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-949
+## BUG-951
 
 **Command / Area:** Repair Centre and CD help page wording, ledger F-112.
 
@@ -1457,7 +1572,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-950
+## BUG-952
 
 **Command / Area:** Command-line messages in developer words, ledger F-113.
 
@@ -1469,7 +1584,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-951
+## BUG-953
 
 **Command / Area:** CDAUDIT and Recover Inverts messages, ledger F-114.
 
@@ -1481,7 +1596,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-952
+## BUG-954
 
 **Command / Area:** CEHEALTH, Civil installed but not loaded, ledger F-122.
 
@@ -1493,7 +1608,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-953
+## BUG-955
 
 **Command / Area:** Manager Get update ready, damaged prepared copy, ledger F-123.
 
@@ -1505,7 +1620,7 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
-## BUG-954
+## BUG-956
 
 **Command / Area:** CE Tools > Updates & Rollback button, ledger F-124.
 
@@ -1514,6 +1629,162 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 **Expected behaviour:** The button opens the Manager Updates page for a colleague, or is labelled as an administrator function.
 
 **Reference:** CODEX_HUNT_MANAGER_22OCT.md MGR-03; `Modules/Manager/Services/CeToolsRibbonDefinitionService.cs:26`, `Commands/PluginManagerCommands.cs:91,139,148`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-957
+
+**Command / Area:** XCLMTXT UB and UC names, ledger F-126.
+
+**Symptom:** Every UB and UC is rounded to a whole number ("250UB25.7" becomes "250 UB 26", a section that does not exist), against Tim's 19 Oct decimals ruling, and typing "410UB59" gives "410 UB 59" while "410UB59.7" gives "410 UB 60". MEDIUM (the most likely wrong number on an issued Structural drawing).
+
+**Expected behaviour:** The supplier name is kept as typed; one section never gets two names.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 2; `Modules/Structural/Services/ExcelMTextService.cs:6061-6078,249-342`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-958
+
+**Command / Area:** LBH hatch at 1:100, ledger F-127.
+
+**Symptom:** Since S-41 LBH at 1:100 is hatched five times sparser (one line every 1.1 m of wall instead of 225 mm), so a 900 mm wall nib can show no hatch. MEDIUM (needs Tim's word).
+
+**Expected behaviour:** Tim decides whether LBH keeps its stated 50 at 1:100 (and LBUH keeps paper density).
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 3; `Commands/HatchCommands.cs:120-130`, `Core/Units/DrawingScaleRule.cs:58-60`. Related BUG-748. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-959
+
+**Command / Area:** Bracing panel, ledger F-128.
+
+**Symptom:** The panel adds the metres of brace of every type and shows green when the total reaches the required length, with no rating per metre; a weak brace can show sufficient against a requirement worked for a strong one. MEDIUM (needs Tim's word).
+
+**Expected behaviour:** A rating per bracing type on the Settings page, provided and required in kN; until then "lengths only, types not weighted" and unknown when the types differ.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 4; `Modules/Structural.DesignCore/BracingPanelCalculator.cs:157-195`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-960
+
+**Command / Area:** TH, PF, BP, column, 18-text and setout tag heights, ledger F-129.
+
+**Symptom:** These tags use a fixed height (250, 200 or 180) at every scale, so a PFL label plots 12.5 mm at 1:20 and 5 mm at 1:50 beside 2.5 mm notes. MEDIUM.
+
+**Expected behaviour:** Height follows the label plot height times the drawing scale, as 25C and EBT now do.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 5; `Modules/Structural/Services/CeTextService.cs:663-780`. Related BUG-531. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-961
+
+**Command / Area:** SBEAM versus CEMEMBER member size, ledger F-130.
+
+**Symptom:** At any DIMSCALE except 20 the same member is drawn at different sizes: SBEAM scales depth by DIMSCALE / 20, CEMEMBER draws real size (at 1:100, 298 mm deep from CEMEMBER, 1490 mm from SBEAM). MEDIUM (needs Tim's word).
+
+**Expected behaviour:** One ruling from Tim decides which is right, and both commands follow it.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 6; `DesignCore/SteelSections/SbeamPlacementPlanner.cs:8,23,87-92`, `CeMemberElevation.cs`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-962
+
+**Command / Area:** EH, CH, LBH and LBUH when LTSCALE is not 10 x DIMSCALE, ledger F-131.
+
+**Symptom:** The hatches refuse to draw ("Invalid DIMSCALE/LTSCALE combination") although the pattern scale depends only on DIMSCALE; a drawing at DIMSCALE 100 and LTSCALE 1 gets no hatch. This is a hard stop that R-27 does not allow. MEDIUM.
+
+**Expected behaviour:** Draw the hatch and warn that LTSCALE looks off.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 7; `Commands/HatchCommands.cs:347-349,1655-1678`. Related BUG-614. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-963
+
+**Command / Area:** CEHATCH library fixed presets, ledger F-132.
+
+**Symptom:** The fixed-scale template hatches disagree with their scale-aware twins (at 1:100 "Concrete slab" is 5 times sparser than CE's Concrete), and "Fence wall under" and "Dot hatch 9" still have the dots-merge fault BUG-748 fixed for LBUH. MEDIUM (needs Tim's word).
+
+**Expected behaviour:** Each pair follows one rule chosen by Tim.
+
+**Reference:** AUDIT_ENGINEERING_STRUCTURAL_2026-10-22.md finding 8; `Commands/HatchUpgradeCommands.cs:45-58`. Related BUG-748. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-964
+
+**Command / Area:** Structural window minimum sizes (SBEAM picker, RC member, Structural Settings), ledger F-140.
+
+**Symptom:** Their minimum sizes (up to 1340 x 820) are bigger than a 1080p screen at 150%, so the Place or Save buttons cannot be reached even by dragging smaller. MEDIUM.
+
+**Expected behaviour:** Each window fits a 1080p screen at 150% with its buttons visible.
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 2; `Modules/Structural/UI/Dialogs/SteelSectionPickerDialog.xaml:5`, `RCMemberDialog.xaml:5`, `CeSettingsDialog.xaml:5`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-965
+
+**Command / Area:** CDS (Settings) search, ledger F-141.
+
+**Symptom:** Pressing Enter in the Settings search with no matches saves the whole draft and closes Settings. MEDIUM.
+
+**Expected behaviour:** An unsuccessful search never falls through to Save.
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 3; `Modules/Drainage/Dialogs/AdvancedSettingsDialog.xaml.cs:57,62`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-966
+
+**Command / Area:** Remember window position for Edit Pipe, Edit Pit, New Pit and CDS, ledger F-142.
+
+**Symptom:** With Remember ticked these windows still reopen at CE's calculated centre, because CE's own fitting sets the position to Manual first. MEDIUM (switch-dependent).
+
+**Expected behaviour:** The windows remember where the drafter moved them.
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 4; `Modules/Drainage/Services/CeWindowPlacementHook.cs:49,100,101`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-967
+
+**Command / Area:** Civil Hub position on a second monitor, ledger F-143.
+
+**Symptom:** Civil Hub restores a saved second-monitor position against the primary work area only and moves back to the primary screen; other Civil sizing paths clamp the same way. MEDIUM.
+
+**Expected behaviour:** A valid position on any connected monitor is kept.
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 5; `Modules/Drainage/Dialogs/CivilHubDialog.xaml.cs:419-467`, `Services/WindowSizingService.cs:189-216`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-968
+
+**Command / Area:** Checks palette and What CE Found, theme, ledger F-144.
+
+**Symptom:** The palettes keep their old dark or light look after the theme is changed, even after closing and reopening. MEDIUM (Checks palette OFF by default).
+
+**Expected behaviour:** The palette follows the saved theme.
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 6; `Modules/Drainage/Controls/ChecksListControl.xaml.cs:12`, `Services/ThemeService.cs:107-220`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-969
+
+**Command / Area:** Manager window and import review lists, test names, ledger F-145.
+
+**Symptom:** The running-build and installed-build fields in Manager, and the two import review lists, have no stable name, so an automated check can read the wrong value and pass the window. MEDIUM.
+
+**Expected behaviour:** Each test-critical field has a stable name (see CODEX_BUILD_AUTOMATION_IDS_22OCT.md).
+
+**Reference:** CODEX_HUNT_WINDOWS_22OCT.md finding 9; `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml:47,52`, `Modules/Drainage/Dialogs/CivilImportWindow.xaml:133,171`. Steps for Tim: none, AI tests it.
 
 **Status:** OPEN
 
@@ -1534,22 +1805,33 @@ Base branch for Civil and Manager briefs: `claude/rel-20261022m` (C-60 head `40e
 9. **F-046 (BUG-869), Pit Schedule depth to the pit floor.** Files: `Rules/PitScheduleDepthRule.cs`, the Pit Schedule row builder. Base: Civil. Codex build (cx_b09 queued).
 10. **F-044 (BUG-870), round the held-grade drop up.** Files: `Services/LinkService.Utilities.cs`. Base: Civil. Codex build (cx_b10 queued).
 11. **F-048 (BUG-871), CDTWL units.** Files: `Rules/DetentionBranchCollector.cs`. Base: Civil. Codex build (cx_b11 queued).
-12. **F-032 (BUG-898), empty Inspector lookup touches nothing.** Files: `Services/InspectorPaletteService.cs`. Base: Civil. Sonnet fixer.
+12. **F-032 (BUG-900), empty Inspector lookup touches nothing.** Files: `Services/InspectorPaletteService.cs`. Base: Civil. Sonnet fixer.
 13. **F-054 (BUG-872), repair the back-test fixture.** Files: `Modules/Drainage.Tests/Services/AutoDesignBackTestTests.cs`. Base: Civil. Codex build (cx_b06 queued). Keep the 30 per cent band.
 14. **F-003 (BUG-873), Tidy labels writes nothing before Yes.** Files: `Commands/TidyLabelsCommand.cs`, `Commands/CeCommandBase.cs`. Base: the branch of #1525 (same pattern). Sonnet fixer.
 15. **F-027 (BUG-861), the six-row REDO test.** Files: test lane only, no source. Base: n/a. Codex build (test). Names the step that loses REDO.
-16. **F-039 (BUG-905), import results from real insertion results.** Files: `Commands/LinkCommands.ImportXcivil.cs`, `Services/XcivilImportService.cs`, `Services/LandXmlImportReview.cs`. Base: Civil. Sonnet fixer.
-17. **F-040 (BUG-906), LandXML Replace excludes the objects about to be erased.** Files: `Services/XcivilImportService.cs` (one call site, line 1879). Base: Civil. Sonnet fixer.
+16. **F-039 (BUG-907), import results from real insertion results.** Files: `Commands/LinkCommands.ImportXcivil.cs`, `Services/XcivilImportService.cs`, `Services/LandXmlImportReview.cs`. Base: Civil. Sonnet fixer.
+17. **F-040 (BUG-908), LandXML Replace excludes the objects about to be erased.** Files: `Services/XcivilImportService.cs` (one call site, line 1879). Base: Civil. Sonnet fixer.
 18. **F-013 (BUG-864), never change an existing hidden layer.** Files: `Modules/Structural/Services/StructuralDetailService.cs` (`EnsureLayerInTransaction`), `Modules/Structural/Services/CeMemberLineWriter.cs`. Base: Structural. Desk job already drafted it; no open PR seen, so check the branch before briefing.
-19. **F-014 (BUG-880), CEMEMBER converts catalogue millimetres by drawing units.** Files: `Modules/Structural/Commands/CeMemberCommands.cs`, `Services/CeMemberSectionWriter.cs`, `Services/CeMemberLineWriter.cs`. Base: Structural. Sonnet fixer.
+19. **F-125 (BUG-895), XCLMTXT labels unequal angles UA, not EA.** Files: `Modules/Structural/Services/ExcelMTextService.cs` (`ExpandMemberAbbreviation`, lines 5784-5791). Base: Structural. Sonnet fixer. (Next in line for Structural: F-126 decimals, F-014 CEMEMBER metre drawing, F-015 hatch repair, F-139 window host.)
 20. **F-065 (BUG-891), the About window must never say "Not loaded" after a failed read, and must show the AutoCAD year.** Files: `Modules/Manager/UI/Dialogs/CeVersionWindow.xaml`, `CeVersionWindow.xaml.cs`, `Modules/Manager/Services/CeVersionReport.cs`. Base: Civil/Manager. Sonnet fixer; Codex looks at the window. (Max quotes this version in every bug report. Next in line: F-015 hatch repair, F-122 CEHEALTH, F-084 CDCHECKIGNORE rows beyond 40, F-124 Updates ribbon button.)
 
 **Not in the top 20, already moving:** #1523 (F-001), #1525 (F-002), #1524 (BUG-866 Undo after a re-list), #1522 (F-028 and F-062: fix the scan before it ships), #1526 (Civil Settings rows), #1503 and #1493 (F-022). **After 9 Nov by the gap plan:** F-016, F-017, F-018, F-020, F-021, F-024 (installer work), F-042, F-043, F-052.
 
 ---
 
+## Register context (CARPARK_RECONCILIATION_2026-10-22.md, read as status evidence, not as new defects)
+
+The librarian's reconciliation changes no finding counts above: it says where existing carpark bugs stand on the installed builds, not what new defects exist. Three facts matter to this ledger.
+
+1. **Where the 822 carpark bugs stand on Civil 3.0.70 / Manager 1.1.70 / Structural 1.0.121:** 203 open with no fix; 63 fixed but not installed; 21 installed with a robot or Codex PASS awaiting Codex acceptance; 468 installed and never tested in AutoCAD; 6 installed and still failing; 41 FIXED; 20 superseded or duplicate. 427 status lines are wrong.
+2. **The 6 installed fixes that still FAIL in real AutoCAD** (these are the carpark bugs closest to a ledger finding): BUG-859 (downpipe double-click, round 2 is #1522, and F-028 and F-062 are faults inside that round), BUG-505 (import units: a metre or unitless source can still come in 1000 times too big), BUG-090 (About CE Suite rows still clipped on Manager 1.1.68: relates to F-065, F-088 and F-146), BUG-396, BUG-430 (pit label double-click) and BUG-642 (labels).
+3. **17 bugs were accepted but never marked FIXED** (BUG-002, 005, 006, 008, 100, 164, 169, 189, 190, 193, 218, 221, 449, 466, 516, 580, 698) and 102 entries still ask Tim to test. Those are register clean-up for the desk, listed in sections 3b and 4 of that file.
+4. **Cross-check for the desk:** section 5 of that file lists "the 20 bugs that most block 9 Nov". Compare it with this ledger's top 12 and "FIX BRIEFS TO WRITE" before assigning lanes; the two lists were built independently (that one from carpark state, this one from new audit findings), so any item on both is the strongest candidate.
+
+---
+
 ## Late sources
 
-1. **Checked at Fri 23 Oct 00:09 Melbourne.** The areas folder held 10 source files, all merged above. Two arrived while this ledger was being compiled and were added: the Opus wording audit (40 entries) and the Codex Manager hunt (3 entries).
-2. **Still to come, not merged:** AUDIT_ENGINEERING_STRUCTURAL, CARPARK_RECONCILIATION, and the Codex hunts for settings, windows, records, design, structcmds, privacy, perf and compat. When they land, the desk re-runs this job: new findings take F-125 onward and BUG numbers continue from BUG-955.
-3. **Numbers to re-check after any addition:** the totals in ANSWER FIRST (124 findings; HIGH 30, MEDIUM 66, LOW 28; 82 new carpark entries BUG-873 to BUG-954).
+1. **Checked at Fri 23 Oct 00:25 Melbourne.** The areas folder held 13 source files, all merged above. Five arrived while this ledger was being compiled and were added: the Opus wording audit (40 entries), the Codex Manager hunt (3), the Opus Structural engineering audit (14), the Codex windows hunt (9) and the carpark reconciliation (context only, 0 entries).
+2. **Still to come, not merged:** the Codex hunts for settings, records, design, structcmds, privacy, perf and compat (seven). When they land, the desk re-runs this job: new findings take F-148 onward and BUG numbers continue from BUG-970.
+3. **Numbers to re-check after any addition:** the totals in ANSWER FIRST (147 findings; HIGH 32, MEDIUM 79, LOW 36; 97 new carpark entries BUG-873 to BUG-969). Adding a new HIGH finding shifts every later BUG number in "NEW BUG ENTRIES".
