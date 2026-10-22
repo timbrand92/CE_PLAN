@@ -1,0 +1,6 @@
+# Desk 23 Oct 2026: Codex W3 could not start AutoCAD (Explorer address-suggestion list covered the file list; one attempt rule; all 5 looks NOT TESTED). New start route for every Codex AutoCAD look: run the shell hand-off from PowerShell (same as a double-click, no Explorer clicking); the Explorer route stays as the fallback.
+$f = 'C:\Lisp Files\_CODEX_RUNNER\lookCOMMON_full.txt'
+$t = [IO.File]::ReadAllText($f)
+$old = '5.1 START RULE: start AutoCAD ONLY by double-clicking a test copy in File Explorer'
+$new = '5.1 START RULE (changed 23 Oct 2026): FIRST ROUTE: start AutoCAD by running this in PowerShell (it is the same shell hand-off as a double-click in Explorer, so AutoCAD starts as Tim''s normal user; it is NOT the driver and NOT a build tool): explorer.exe "<full path of the test copy .dwg>" ; then wait up to 90 seconds for the AutoCAD window (screenshot, then check the process with Get-Process acad). If AutoCAD does not appear in 90 seconds, use the OLD ROUTE once: start AutoCAD ONLY by double-clicking a test copy in File Explorer'
+if ($t.Contains($old) -and -not $t.Contains('5.1 START RULE (changed 23 Oct 2026)')) { [IO.File]::WriteAllText($f, $t.Replace($old, $new), (New-Object Text.UTF8Encoding($false))); 'lookCOMMON 5.1 patched' } else { 'already patched or anchor missing' }
