@@ -11758,7 +11758,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** CDTWL ignores the drawing's units when it measures pipes, so volumes and freeboard are wrong on a metre drawing.
 
-**Status:** OPEN (Codex build cx_b11_twl_units queued 22 Oct)
+**Status:** OPEN — built and unit-tested 23 Oct 2026; DRAFT PR #1538, `cx/eng-twl-units-c60` at `9821c80c`. New `detention.twlUsesDrawingUnits` switch OFF. 17 new cases pass; focused net10/net48 each 69/69. Full Civil net10: 19,151 passed, 19 skipped, 1 recorded Glen Eira failure (19,171 console total). Three Civil builds: 0 errors. Not installed or AutoCAD-accepted. Exact check, assumptions, Finding 9 limits and the observed live-settings hash change: `areas/CODEX_BUILD_ENG_TWL_UNITS_22OCT.md`.
 
 ## BUG-872
 
