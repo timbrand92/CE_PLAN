@@ -92,3 +92,9 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 **Update Tue 20 Oct 2026 (Tim: "all checking and testing is done by ai/codex/claude"):** items that wait for Tim to test in AutoCAD are dropped. Item 10 (REDO after right-click) is now Codex V1. Only engineering-judgement questions still need Tim's word. See decisions/2026-10-20_TIM_ANSWERS.md item 17.
 
 12. **CEMEMBER: Z purlin orientation names and which flange is nearer the viewer (lane 02, 20 Oct).** The card is silent; the builder uses a draft default taken from the repo's existing Z purlin convention. Please confirm or give the rule. Also confirmed by the desk (builders never wait): CEMEMBER reuses the SBEAM placement writer and compound store, so SBEAMEDIT edits CEMEMBER members.
+
+## Added 22 Oct 2026 (desk; nothing blocked, builds use the recommended answers as drafts)
+
+1. **Import with no units set (BUG-505):** a consultant drawing whose units are "unitless" (INSUNITS 0) imports without any scale warning, by design. **Recommendation:** keep importing as millimetres but print one soft line: "This drawing has no units set; CE read it as millimetres." (a note, never a block). Say yes or no.
+2. **Double-click on a pit label (pit-label switch):** AutoCAD's own attribute editor opens today. **Recommendation:** the desk tests the Edit Pit window with the switch ON in the next Codex look and turns it ON by default only after that look passes. Say yes or no.
+3. **Double-click on the green DP label (BUG-860):** should it open the same Edit source window as the symbol? **Recommendation:** yes, only when the label belongs to that downpipe, otherwise plain text edit.
