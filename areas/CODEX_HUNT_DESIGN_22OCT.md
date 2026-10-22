@@ -72,17 +72,17 @@
 
    **Exact failure:** `BuildPit` returns null for an unreadable floor, after trying connected inverts, before it reads `KnownCoverLevelRl`. It also returns before that read if dimensions are absent. Candidates, solver ceiling and freeboard warnings all read only the resulting storage items. An unknown storage volume therefore discards an independently known overflow elevation.
 
-   **DETERMINISTIC TEST — fixture:** Millimetre drawing with unique pit identities. Outlet O is the sole detention pit, floor RL 9.900, cover 12.000. P1 has floor 10.000 and cover 12.000. A DN300 pipe joins P1 to O with inverts 10.000/9.900. A second confirmed branch joins LOW to O: its LOW-end invert is blank, O-end invert 9.900. LOW is a normal grated pit with cover 10.200, widths 600/600 mm, blank `InvertLevel`, null `BaseRl`, and no other connection. O and P1 have known positive sizes. The unknown LOW-end invert must remain blank in the saved fixture and displayed label.
+   **DETERMINISTIC TEST — fixture:** Millimetre drawing with unique pit identities. Outlet O at `(0,0)` is the sole detention pit, floor RL 9.900, cover 12.000. P1 at `(10000,0)` has floor 10.000 and cover 12.000. A DN300 pipe joins P1 to O with inverts 10.000/9.900. A second confirmed DN300 branch joins LOW at `(0,10000)` to O: its LOW-end invert is blank, O-end invert 9.900. LOW is a normal grated pit with cover 10.200, widths 600/600 mm, blank `InvertLevel`, null `BaseRl`, and no other connection. O and P1 have widths 1,000/1,000 mm. The unknown LOW-end invert must remain blank in the saved fixture and displayed label.
 
    **Typed steps:** Type `CDTWL`; enter required volume `0.1`; enter TWL `10.500`. Capture the candidate list, final command text and `[TWL]` log entry.
 
-   **Assertion:** The output must name LOW as a known lid at 10.200 and warn that the chosen TWL is 300 mm above it, while leaving LOW's storage unknown. It must not identify 12.000 as the lowest lid in the whole system. Current source omits LOW from lid candidates and all freeboard warnings, reports 1,500 mm clearance against the retained pits, and only mentions LOW in the generic left-out note. A second fixture with LOW's floor known but its widths absent exercises the other early return.
+   **Assertion:** The output must name LOW as a known lid at 10.200 and warn that the chosen TWL is 300 mm above it, while leaving LOW's storage unknown. It must not identify 12.000 as the lowest lid in the whole system. Current source omits LOW from lid candidates and all freeboard warnings, treats the retained pits as providing 1,500 mm clearance, and only mentions LOW in the generic left-out note. A second fixture with LOW's floor known but its widths absent exercises the other early return.
 
    **Correction direction:** Keep level constraints separately from calculable storage pieces. Missing floor or dimensions must not erase a known lid; qualify total capacity where branch data is incomplete.
 
 5. **DESIGN-05 — LOW — exact R-04 and R-29 limits can be falsely flagged through floating-point subtraction. VERIFIED-BY-READING.**
 
-   **File:line:** `Modules/Drainage/Rules/RulebookEngine.cs:466`, `:471`, `:663`, `:668`; contrast the numerical guard already used in `Modules/Drainage/Rules/PitDropRule.cs:155`.
+   **File:line:** `Modules/Drainage/Rules/RulebookEngine.cs:466`, `:470`, `:666`, `:670`; contrast the numerical guard already used in `Modules/Drainage/Rules/PitDropRule.cs:155`.
 
    **What happens in AutoCAD:** A pipe with exactly 300 mm cover can be described as having `cover 300 mm ... below 300 mm`. A pit exactly 900 mm deep can be told it needs step irons even though this rule applies only above the configured threshold. The displayed rounded numbers conceal the numerical error.
 
