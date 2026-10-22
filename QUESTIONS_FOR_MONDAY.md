@@ -98,3 +98,11 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 1. **Import with no units set (BUG-505):** a consultant drawing whose units are "unitless" (INSUNITS 0) imports without any scale warning, by design. **Recommendation:** keep importing as millimetres but print one soft line: "This drawing has no units set; CE read it as millimetres." (a note, never a block). Say yes or no.
 2. **Double-click on a pit label (pit-label switch):** AutoCAD's own attribute editor opens today. **Recommendation:** the desk tests the Edit Pit window with the switch ON in the next Codex look and turns it ON by default only after that look passes. Say yes or no.
 3. **Double-click on the green DP label (BUG-860):** should it open the same Edit source window as the symbol? **Recommendation:** yes, only when the label belongs to that downpipe, otherwise plain text edit.
+
+## Added 22 Oct 2026 late (Opus engineering audit; plain asks for Tim, nothing blocks, drafts use the recommended answers)
+
+1. **Rainfall curve note (BUG-866):** CDDESIGN says the office curve reads "7 to 9 per cent high". On the two Glen Eira sheets checked it reads 6 to 8 per cent LOW, so storage is about 18 per cent short (2.12 m3 instead of 2.58 m3 on job 24-115). **Recommendation:** change the note to "may be high or low by up to about 8 per cent; storage moves about 2.5 times as much", and you decide whether the curve values should be raised. Yes or no, and which?
+2. **Cover (pipe wall):** cover is measured to the inside top of the pipe; AS/NZS 3500.3 measures to the outside top. **Recommendation:** add the pipe wall (about 20 mm UPVC 225, about 45 mm concrete 375: a concrete 375 showing 320 mm cover really has about 275 mm). Yes or no?
+3. **Pit drop where the pipe gets bigger:** **Recommendation:** warn when the outlet obvert (pipe top) sits above the inlet obvert, not only when inverts are wrong. Yes or no?
+4. **Pit Schedule depth:** you ruled "pit floor" on 20 Oct; the build is queued (BUG-869). Nothing to answer unless you want it switched off by default.
+5. **Minimum grade table:** your office table has 375 at 1 in 300 but 450 and larger at 1 in 200, so a bigger pipe must be laid steeper than a smaller one. Is that your rule, or should 450+ be 1 in 300 or flatter?

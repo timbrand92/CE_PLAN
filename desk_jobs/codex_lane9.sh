@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+cd "C:/Lisp Files/_CODEX_RUNNER"
+MAXC=9 bash queue3.sh "cx_b07_real_length|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|98|6" "cx_b08_pipe_material|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|98|6" "cx_b10_move_pit_grade|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|98|6" >> "C:/CE_PLAN/desk_jobs/codex_lane9.out" 2>&1
