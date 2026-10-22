@@ -11695,3 +11695,13 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Symptom:** Every double-click on any block with attributes scans every block in the drawing; in a survey drawing with thousands of point blocks this will lag. BUG-859 round 2 (#1522) keeps the same scan in its first form.
 
 **Status:** OPEN (to review with BUG-859 round 2)
+
+## BUG-866
+
+**Command / Area:** CDCHECKIGNORE Undo after a re-list (robot run 47, finding C.2, Civil 3.0.70; desk plan/03 brief 22 October 2026).
+
+**Symptom:** Ignore a finding, list again and press Esc, then type U: the finding stays ignored. U immediately after Ignore works.
+
+**Expected behaviour:** reading or cancelling the list leaves no Undo step and preserves REDO; one U reverses Ignore or Un-ignore regardless of intervening re-lists.
+
+**Status:** OPEN — Codex building on cx/ignore-undo-c60 from release base 40ee0a36. Cause: full drawing setup before prompts reaches project saves and ordinary transactions. Tests and exact real-AutoCAD acceptance steps: areas/CODEX_BUILD_IGNORE_UNDO_22OCT.md. Related switch-OFF issue: BUG-863. Not AutoCAD-accepted.
