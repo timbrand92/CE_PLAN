@@ -1,0 +1,2 @@
+# Codex conveyor queue: one line per run: name|folder|model|effort|cap|cost. Lines starting # are ignored. A line runs only when C:\Lisp Files\_CODEX_RUNNER\<name>_full.txt exists. Done names are in CONVEYOR_DONE.txt.
+verifyV9b_s41|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
