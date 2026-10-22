@@ -965,3 +965,4 @@ Only writer: build/03 (headless runs started by the desk). One line per step, Me
 - Fri 23 Oct 08:45 real clock - build/03 run 415: BUG-1003 (CEFIND finds P1A, C2, P1A-P2) RED shown (5 failed on base), 32 CEFIND tests green; DRAFT PR #1565 off rel-20261022m, needs Opus review.
 - Fri 23 Oct 09:30 real clock - build/03 run 415: BUG-1008 (Pit Schedule Remarks cell opens for typing) RED shown (3 of 5), 816 Pit Schedule tests green; DRAFT PR #1569 off rel-20261022m, needs Opus review.
 - Fri 23 Oct 10:20 real clock - build/03 run 415: BUG-1007 (CDFALL metre drawing direction pick) DRAFT PR #1573 off rel-20261022m: 640 fall tests green; RED shown as 2 failing metre cases on the old rule in a draft form, final form is a compile-RED; needs Opus review.
+- Fri 23 Oct 11:10 real clock - build/03 run 415: BUG-1012 (long section reads closing side of closed boundary) RED shown by mutation, 136 tests green; DRAFT PR #1578, needs Opus review.
