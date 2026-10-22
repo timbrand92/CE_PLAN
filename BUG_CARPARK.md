@@ -11774,7 +11774,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** importing `250UB25.7 BEAM` prints `250 UB 26 BEAM`; `410UB59.7` prints `410 UB 60`. The expected supplier designation keeps the decimal mass exactly, including `310UB32.0`.
 
-**Status:** OPEN — Codex build on `cx/xclmtxt-s41`, based on Structural 1.0.121. Reachable from schedule insertion and advanced editing; initial preview uses a lighter formatter. Regression tests and workbook fixture: `XclmTxtSteelDesignationTests`. Not installed or AutoCAD-accepted. Report and exact robot check: `areas/CODEX_BUILD_XCLMTXT_23OCT.md`. Catalogue property corrections remain BUG-818.
+**Status:** OPEN — built and unit-tested in draft PR #1533, `cx/xclmtxt-s41`, head `40c9a977`, based on Structural 1.0.121. The same 445 focused tests give 32 failures before and 445 passes after; all three Structural lanes build with 0 errors. Full net10: 5,650 passed; net48: 4,910 passed / the same 39 original-release failures / 698 skipped. Reachable from insertion and advanced editing. Not installed or AutoCAD-accepted. Exact robot check and evidence: `areas/CODEX_BUILD_XCLMTXT_23OCT.md`. Catalogue property corrections remain BUG-818.
 
 ## AUDIT-XCLMTXT-ANGLES (22 October Structural engineering audit, finding 1)
 
@@ -11782,4 +11782,4 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** importing `150x90x10 L ]L LINTEL` prints `150 x 90 x 10 EA LINTEL`. Expected `150 x 90 x 10 UA LINTEL`; equal angles remain EA. The old exception recognises only `150x100x10` and can classify several angles in one cell from that one size.
 
-**Status:** OPEN — same build and report as above. Regression coverage includes all 57 catalogue angle sizes (38 EA, 19 UA), the audit's worked examples and mixed angles in one cell. No Settings switch: incorrect section labels are defects. Not installed or AutoCAD-accepted.
+**Status:** OPEN — built and unit-tested in the same draft PR #1533 and report as above. All 57 catalogue angle sizes (38 EA, 19 UA), worked examples and mixed-angle cells pass; 18 catalogue unequal-angle glyph cases failed before. Plain UA input already kept UA: the defect specifically needs the Excel `L ]L` glyph. No Settings switch: incorrect section labels are defects. Not installed or AutoCAD-accepted; the real placed-schedule check remains pending.
