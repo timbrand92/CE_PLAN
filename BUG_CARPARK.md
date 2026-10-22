@@ -2181,7 +2181,7 @@
 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md, finding A9. Code: Commands/CdSurveyCommand.cs:87 (loaded copy), 317-318 (hash from disk); Services/SurveyIntakeStalenessService.cs:373-375.
 
-**Status:** OPEN
+**Status:** OPEN — built and unit-tested 23 Oct 2026; DRAFT PR #1545, `cx/fb10-c60` at `fba3f674`. All 14 new net10 cases pass (12 also pass on net48); full Civil 19,168 total / 19,148 passed / 19 skipped / 1 failed, with the same Glen Eira failure on the unchanged base. Three Release builds: 0 errors. Not installed or AutoCAD-accepted. Exact FX-10 check and net48 native-test limit: `areas/CODEX_BUILD_FB10_23OCT.md`.
 
 ## BUG-706
 
