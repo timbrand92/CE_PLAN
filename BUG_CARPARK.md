@@ -11696,7 +11696,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (to review with BUG-859 round 2)
 
-## BUG-866
+## BUG-CDCHECKIGNORE-UNDO-C60
 
 **Command / Area:** CDCHECKIGNORE Undo after a re-list (robot run 47, finding C.2, Civil 3.0.70; desk plan/03 brief 22 October 2026).
 
@@ -11704,7 +11704,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Expected behaviour:** reading or cancelling the list leaves no Undo step and preserves REDO; one U reverses Ignore or Un-ignore regardless of intervening re-lists.
 
-**Status:** OPEN — Codex building on cx/ignore-undo-c60 from release base 40ee0a36. Cause: full drawing setup before prompts reaches project saves and ordinary transactions. Tests and exact real-AutoCAD acceptance steps: areas/CODEX_BUILD_IGNORE_UNDO_22OCT.md. Related switch-OFF issue: BUG-863. Not AutoCAD-accepted.
+**Status:** OPEN — BUILT and UNIT-TESTED, draft PR #1524, branch cx/ignore-undo-c60 at e1a59824 (documentation follow-up; tested code 5ba082d9). All three builds 0 errors; Civil net10 console 19,173 total / 19,153 passed / 19 skipped / 1 documented Glen Eira failure; focused net10 and net48 121/121 each. Real-AutoCAD acceptance remains pending. Exact typed checklist and raw/console count detail: areas/CODEX_BUILD_IGNORE_UNDO_22OCT.md. Initial builder alias BUG-866 was replaced after the desk allocated that number to a separate engineering issue; that engineering entry is untouched.
 
 ## BUG-866
 
