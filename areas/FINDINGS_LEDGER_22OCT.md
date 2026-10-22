@@ -2,9 +2,9 @@
 
 Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job plan/03, Sonnet. Compile only: no source changed, nothing built, no AutoCAD, no Codex. Nothing here is built, tested, installed or Tim-accepted unless an entry says so.
 
-**Sources read (13 files, all that existed at 00:25 Fri 23 Oct):** AUDIT_C58_C60_S40_S41 (Opus, "OPUS-A"), AUDIT_ENGINEERING_CIVIL (Opus, "OPUS-E"), AUDIT_UI_WORDING (Opus, "OPUS-UI", 68 lines merged into 40 entries), CODEX_AUDIT_CIVIL ("CDX-C"), CODEX_AUDIT_STRUCTURAL ("CDX-S"), CODEX_AUDIT_GATE ("CDX-G"), CODEX_HUNT_UNDO, CODEX_HUNT_IMPORT, CODEX_HUNT_LABELS, CODEX_HUNT_MANAGER, AUDIT_ENGINEERING_STRUCTURAL (Opus, "OPUS-SE"), CODEX_HUNT_WINDOWS ("HUNT-WINDOWS", 9 findings; its 4,542-line control inventory is not a finding list). Also CARPARK_RECONCILIATION (status context only, see "Register context"), BUG_CARPARK.md (grep only), RELEASE_9NOV_GAP_PLAN and the open PR list.
+**Sources read (14 files, all that existed at 00:35 Fri 23 Oct):** AUDIT_C58_C60_S40_S41 (Opus, "OPUS-A"), AUDIT_ENGINEERING_CIVIL (Opus, "OPUS-E"), AUDIT_UI_WORDING (Opus, "OPUS-UI", 68 lines merged into 40 entries), CODEX_AUDIT_CIVIL ("CDX-C"), CODEX_AUDIT_STRUCTURAL ("CDX-S"), CODEX_AUDIT_GATE ("CDX-G"), CODEX_HUNT_UNDO, CODEX_HUNT_IMPORT, CODEX_HUNT_LABELS, CODEX_HUNT_MANAGER, AUDIT_ENGINEERING_STRUCTURAL (Opus, "OPUS-SE"), CODEX_HUNT_PERF ("HUNT-PERF", 4 findings), CODEX_HUNT_WINDOWS ("HUNT-WINDOWS", 9 findings; its 4,542-line control inventory is not a finding list). Also CARPARK_RECONCILIATION (status context only, see "Register context"), BUG_CARPARK.md (grep only), RELEASE_9NOV_GAP_PLAN and the open PR list.
 
-**Not yet arrived, so NOT in this ledger (see "Late sources" at the end):** seven hunts (settings, records, design, structcmds, privacy, perf, compat).
+**Not yet arrived, so NOT in this ledger (see "Late sources" at the end):** six hunts (settings, records, design, structcmds, privacy, compat).
 
 **Left out on purpose (already in the carpark, not recounted):** BUG-859 (downpipe double-click does nothing in 3.0.70; round 2 is #1522), BUG-860, BUG-505/725 unit guesses, BUG-781, BUG-804, BUG-719, BUG-729. Findings a source marked "known, not counted" stay out here too.
 
@@ -12,11 +12,11 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 ## ANSWER FIRST (for Tim)
 
-1. **147 distinct findings.** By severity: **HIGH 32, MEDIUM 79, LOW 36.** Eight findings were seen by two sources (the higher severity was kept). The Opus wording audit's 68 lines became 40 entries (same-file wording faults merged).
-2. **By area:** wording and windows 47; Civil engineering numbers 28; Structural 28; release, installer and Manager 16; Civil commands, Undo and Checks 12; Civil labels and Tidy labels 10; Civil imports 6.
-3. **By source (a finding seen by two sources counts under both):** Opus engineering 28; Opus C-58 to S-41 15; Opus wording 40; Codex gate 14; Codex Civil 9; Codex Structural 8; Codex undo hunt 3; Codex import hunt 6; Codex labels hunt 6; Codex Manager hunt 3; Opus Structural engineering 14; Codex windows hunt 9.
-4. **In the code installed for 9 Nov Civil + Manager (3.0.70 / 1.1.70): 106.** About 25 of those sit behind switches that are OFF by default (Ignore a finding, Tidy labels, wrong-layer rows and similar), so Max will not meet them on day one. Another 2 are bugs inside #1522, which is not installed yet. 11 are release and installer faults (not drafting code). 28 are Structural only (1.0.121), and Structural does not ship to Max.
-5. **Already have a BUG id: 16.** The other 131 are NEW. 97 of the new ones are HIGH or MEDIUM and have a ready entry below (BUG-873 to BUG-969). **Open PR touches 7:** F-001 (#1523), F-002 (#1525) and F-102 (#1526) directly; F-028 and F-062 are faults inside #1522 to fix before it ships; F-020 (#1492) and F-022 (#1503, #1493) only in part.
+1. **151 distinct findings.** By severity: **HIGH 32, MEDIUM 82, LOW 37.** Eight findings were seen by two sources (the higher severity was kept). The Opus wording audit's 68 lines became 40 entries (same-file wording faults merged).
+2. **By area:** wording and windows 47; Civil engineering numbers 28; Structural 28; release, installer and Manager 16; Civil commands, Undo and Checks 15; Civil labels and Tidy labels 11; Civil imports 6.
+3. **By source (a finding seen by two sources counts under both):** Opus engineering 28; Opus C-58 to S-41 15; Opus wording 40; Codex gate 14; Codex Civil 9; Codex Structural 8; Codex undo hunt 3; Codex import hunt 6; Codex labels hunt 6; Codex Manager hunt 3; Opus Structural engineering 14; Codex windows hunt 9; Codex performance hunt 4.
+4. **In the code installed for 9 Nov Civil + Manager (3.0.70 / 1.1.70): 110.** About 25 of those sit behind switches that are OFF by default (Ignore a finding, Tidy labels, wrong-layer rows and similar), so Max will not meet them on day one. Another 2 are bugs inside #1522, which is not installed yet. 11 are release and installer faults (not drafting code). 28 are Structural only (1.0.121), and Structural does not ship to Max.
+5. **Already have a BUG id: 16.** The other 135 are NEW. 100 of the new ones are HIGH or MEDIUM and have a ready entry below (BUG-873 to BUG-972). **Open PR touches 7:** F-001 (#1523), F-002 (#1525) and F-102 (#1526) directly; F-028 and F-062 are faults inside #1522 to fix before it ships; F-020 (#1492) and F-022 (#1503, #1493) only in part.
 6. **Need Tim's engineering or design word: 32** (list below).
 7. **A numbering fault in the carpark:** BUG-866 is used twice (CDCHECKIGNORE Undo, and the rainfall-curve note, F-008). The desk should renumber one before appending. BUG-873 is the next free number.
 8. **The 12 most likely to hurt a colleague on 9 Nov** (Max on Civil + Manager, hand install):
@@ -218,7 +218,7 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 ---
 
-## MEDIUM (79)
+## MEDIUM (82)
 
 27. **F-027. REDO is sometimes lost after picking a pit (BUG-861); CE's "REDO safe" list was only measured in the headless console, never with a real selection.**
     - **Severity:** MEDIUM (suspected). **Area:** Civil commands, Undo and Checks. **Sources:** OPUS-A 4, CDX-C (trace only). **Installed:** Civil 3.0.70.
@@ -528,11 +528,26 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
     - **For Tim:** the robot can read the wrong value and pass the window.
     - **Where:** `Modules/Manager/UI/Dialogs/PluginManagerWindow.xaml:47,52`; `Modules/Drainage/Dialogs/CivilImportWindow.xaml:133,171` (static inventory in the source: 4,542 declarations without a direct identity, mostly labels). **BUG:** NEW (proposed BUG-969). **PR:** none. **Fix kind:** code (see CODEX_BUILD_AUTOMATION_IDS_22OCT.md). **Lane:** Codex build. **Test:** UIA finds the running-build and installed-build fields by name, one match each.
 
+148. **F-148. A normal pit-record refresh compares every pit with every remembered pit (quadratic), even when all identities are intact, before some commands show their first prompt.**
+    - **Severity:** MEDIUM. **Area:** Civil commands, Undo and Checks. **Sources:** HUNT-PERF PERF-01. **Installed:** Civil 3.0.70.
+    - **For Tim:** with 2,000 pits in a 10,000-entity survey, typing CDSPOONDRAIN makes CE do about 4,000,000 comparisons before asking for a point, and repeats it every time.
+    - **Where:** `Modules/Drainage/Services/ProjectDataRecoveryGuardService.cs:100,117,126,140,169,178`; `Services/ProjectDataService.cs:254,638,660`; `ProjectDataService.Recovery.cs:794`; `Commands/SpoonDrainCommand.cs:39`. **BUG:** NEW (proposed BUG-970). **PR:** none. **Fix kind:** code (index position candidates once; keep the identity-first rule). **Lane:** Sonnet fixer. **Test:** 2,000 identified pits: candidate work roughly doubles from 1,000 to 2,000 pits (not quadruples), and the co-located recovery fixture still restores the right values.
+
+149. **F-149. Tidy labels tests every distant survey text against every pipe's search area (N texts x P pipes) before planning.**
+    - **Severity:** MEDIUM. **Area:** Civil labels and Tidy labels. **Sources:** HUNT-PERF PERF-02. **Installed:** Civil 3.0.70 (Tidy labels OFF).
+    - **For Tim:** 9,000 survey notes and 500 pipes means 4.5 million rectangle tests just to find that the notes are nowhere near a pipe; Yes repeats the work.
+    - **Where:** `Services/LinkService.TextClashTidyUp.cs:142,159,191,330,679-747`; `Commands/TidyLabelsCommand.cs:57,92,154`. **BUG:** NEW (proposed BUG-971). **PR:** none. **Fix kind:** code (a spatial lookup; keep local obstacle completeness). **Lane:** Sonnet fixer. **Test:** 500 pipes and 9,000 distant texts: the distant-text predicate count falls from 4,500,000 to about one test per text.
+
+150. **F-150. Moving each pit searches every pit's label memory, twice on an ordinary MOVE (O(pits x attachments)).**
+    - **Severity:** MEDIUM. **Area:** Civil commands, Undo and Checks. **Sources:** HUNT-PERF PERF-03. **Installed:** Civil 3.0.70.
+    - **For Tim:** moving 1,000 pits with two labels each does about 4,000,000 prefix checks per MOVE even when no label was deleted.
+    - **Where:** `Services/LinkService.PipeMoveHelpers.cs:229,270,423`; `Services/LinkService.PitMoves.cs:235`; `Services/LinkService.SourceMoves.cs:268-302`; `Services/LinkService.Reactors.cs:1136`. **BUG:** NEW (proposed BUG-972). **PR:** none. **Fix kind:** code (key the cache by pit, or prune once per command). **Lane:** Sonnet fixer. **Test:** the second MOVE of 1,000 pits: prefix evaluations drop from 4,000,000 to about the 2,000 own entries; one U restores pits and labels.
+
 ---
 
-## LOW, grouped by area (36)
+## LOW, grouped by area (37)
 
-### Civil commands, Undo and Checks (3)
+### Civil commands, Undo and Checks (4)
 
 61. **F-061. The slow-check progress line is bypassed when the shared Checks list is enabled.**
     - **Severity:** LOW. **Area:** Civil commands. **Sources:** CDX-C 7. **Installed:** Civil 3.0.70 (both switches OFF). **Where:** `Commands/CheckCurrentDrawingCommand.cs:28-33`; `ChecksListCommand.cs:53-65`; `Services/CurrentDrawingCheckService.cs:43-46`. **BUG:** NEW. **PR:** none. **Fix kind:** code. **Lane:** Sonnet fixer. **Test:** with the Checks doorway ON, a 10,000-entity drawing prints a progress line.
@@ -542,6 +557,8 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 64. **F-064. CDCHECKIGNORE stores the drafter's Windows sign-in name inside the drawing.**
     - **Severity:** LOW. **Area:** Civil commands. **Sources:** OPUS-A 12. **Installed:** Civil 3.0.70 (switch OFF). **For Tim:** a DWG sent to a council carries a staff login name. **Where:** `Commands/CheckIgnoreCommand.cs:121`. **BUG:** NEW. **PR:** none. **Fix kind:** needs Tim's word (initials Setting?). **Lane:** Sonnet fixer. **Test:** ignore one finding: the list line shows the chosen name, not the login.
+
+151. **F-151. The record-refresh cache keeps an entry for every closed drawing for the whole AutoCAD session.** LOW. Civil commands. HUNT-PERF PERF-04. Civil 3.0.70. `Modules/Drainage/Services/ProjectDataService.cs:80,238,599,698`; `Services/LinkService.cs:1638,1683`. NEW. No PR. Code (clean up on document close; do not dispose AutoCAD-owned wrappers). Sonnet fixer. **Test:** open, run CDSPOONDRAIN, close 20 copies: the cache holds no key from a closed copy.
 
 ### Civil labels (1)
 
@@ -622,7 +639,7 @@ Compiled Thu 22 Oct 2026 late to Fri 23 Oct early (Melbourne), headless desk job
 
 ## NEW BUG ENTRIES
 
-For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top of that file).  97 entries, BUG-873 to BUG-969, in ledger order (every NEW HIGH and MEDIUM finding). **Before appending:** BUG-866 is used twice in the file (CDCHECKIGNORE Undo, and the rainfall note); renumber one. Every entry: **Steps for Tim: none, AI tests it.**
+For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top of that file).  100 entries, BUG-873 to BUG-972, in ledger order (every NEW HIGH and MEDIUM finding). **Before appending:** BUG-866 is used twice in the file (CDCHECKIGNORE Undo, and the rainfall note); renumber one. Every entry: **Steps for Tim: none, AI tests it.**
 
 ## BUG-873
 
@@ -1788,6 +1805,42 @@ For the desk to append to `C:\CE_PLAN\BUG_CARPARK.md` (the template at the top o
 
 **Status:** OPEN
 
+## BUG-970
+
+**Command / Area:** Pit-record refresh before CDSPOONDRAIN and similar commands, ledger F-148.
+
+**Symptom:** A normal refresh compares every pit with every remembered pit even when all identities are intact: about 4,000,000 comparisons for 2,000 pits before the first prompt, repeated each time. Not measured in AutoCAD. MEDIUM.
+
+**Expected behaviour:** Candidate work grows roughly in step with the pit count, and the repair still chooses the right saved values.
+
+**Reference:** CODEX_HUNT_PERF_22OCT.md PERF-01; `Modules/Drainage/Services/ProjectDataRecoveryGuardService.cs:100-178`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-971
+
+**Command / Area:** CDTIDYLABELS scan cost, ledger F-149.
+
+**Symptom:** Every distant survey text is tested against every pipe's search area (9,000 texts and 500 pipes is 4.5 million tests) before planning starts, and Yes repeats it. MEDIUM (switch OFF).
+
+**Expected behaviour:** Distant text is rejected once or through a bounded lookup, with local obstacles still complete.
+
+**Reference:** CODEX_HUNT_PERF_22OCT.md PERF-02; `Services/LinkService.TextClashTidyUp.cs:142-747`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
+## BUG-972
+
+**Command / Area:** MOVE of pits, label-follow cleanup, ledger F-150.
+
+**Symptom:** After each pit's labels follow, CE searches every remembered label to tidy that pit's entries, twice on an ordinary MOVE: about 4,000,000 prefix checks for 1,000 pits with two labels each, with no label deleted. MEDIUM.
+
+**Expected behaviour:** Only each pit's own entries are examined, or one pass per command.
+
+**Reference:** CODEX_HUNT_PERF_22OCT.md PERF-03; `Services/LinkService.PipeMoveHelpers.cs:229,270,423`, `LinkService.PitMoves.cs:235`. Steps for Tim: none, AI tests it.
+
+**Status:** OPEN
+
 ---
 
 ## FIX BRIEFS TO WRITE (first 20, ranked)
@@ -1832,6 +1885,6 @@ The librarian's reconciliation changes no finding counts above: it says where ex
 
 ## Late sources
 
-1. **Checked at Fri 23 Oct 00:25 Melbourne.** The areas folder held 13 source files, all merged above. Five arrived while this ledger was being compiled and were added: the Opus wording audit (40 entries), the Codex Manager hunt (3), the Opus Structural engineering audit (14), the Codex windows hunt (9) and the carpark reconciliation (context only, 0 entries).
-2. **Still to come, not merged:** the Codex hunts for settings, records, design, structcmds, privacy, perf and compat (seven). When they land, the desk re-runs this job: new findings take F-148 onward and BUG numbers continue from BUG-970.
-3. **Numbers to re-check after any addition:** the totals in ANSWER FIRST (147 findings; HIGH 32, MEDIUM 79, LOW 36; 97 new carpark entries BUG-873 to BUG-969). Adding a new HIGH finding shifts every later BUG number in "NEW BUG ENTRIES".
+1. **Checked at Fri 23 Oct 00:35 Melbourne.** The areas folder held 14 source files, all merged above. Six arrived while this ledger was being compiled and were added: the Opus wording audit (40 entries), the Codex Manager hunt (3), the Opus Structural engineering audit (14), the Codex windows hunt (9), the Codex performance hunt (4) and the carpark reconciliation (context only, 0 entries).
+2. **Still to come, not merged:** the Codex hunts for settings, records, design, structcmds, privacy and compat (six). When they land, the desk re-runs this job: new findings take F-152 onward and BUG numbers continue from BUG-973.
+3. **Numbers to re-check after any addition:** the totals in ANSWER FIRST (151 findings; HIGH 32, MEDIUM 82, LOW 37; 100 new carpark entries BUG-873 to BUG-972). Adding a new HIGH finding shifts every later BUG number in "NEW BUG ENTRIES".
