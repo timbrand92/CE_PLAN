@@ -7,6 +7,7 @@ function Log($t) { Add-Content "$d\codex_conveyor.log" ("{0} {1}" -f (Get-Date -
 function Usage { $q = Get-Content 'C:\Lisp Files\_CODEX_RUNNER\queue.log' -Tail 40 -ErrorAction SilentlyContinue; $m = $q | Select-String 'usage ([\d\.]+)%' -AllMatches | Select-Object -Last 1; if ($m) { [double]$m.Matches[-1].Groups[1].Value } else { 0 } }
 function Cleanup {
   Start-Sleep 90
+  if (Get-CimInstance Win32_Process -Filter "Name='cmd.exe'" | Where-Object { $_.CommandLine -match 'tester_run|evidence_job' }) { Log 'a robot/driver job owns AutoCAD: cleanup skipped'; return $true }
   $a = Get-Process acad -ErrorAction SilentlyContinue
   $g = 'C:\Lisp Files\_ACAD_DRIVER\settings_guard.json'
   if (Test-Path $g) {
