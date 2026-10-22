@@ -11730,7 +11730,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** Every pipe is treated as UPVC. On concrete pipe capacity is over-stated by about 23 per cent (a 375 at 1 in 130 is sized for 200 L/s but carries 154 L/s).
 
-**Status:** OPEN (Codex build cx_b08_pipe_material queued 22 Oct)
+**Status:** OPEN — draft PR #1537, `cx/eng-pipe-material-c60`, tip `c23b59c9` (23 Oct 2026). Material correction implemented behind a new OFF switch; final build/test validation BLOCKED by another session's shared build lock. Initial 20-case run passed; final 23-case set, all three Release builds and full Civil totals remain unverified. Not installed or checked in AutoCAD. Report, assumptions and exact continuation/tester steps: `areas/CODEX_BUILD_ENG_PIPE_MATERIAL_22OCT.md`. Separate existing CDRUNSOLVE zero-flow limitation is recorded there; no production flow was invented.
 
 ## BUG-869
 
@@ -11758,7 +11758,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** CDTWL ignores the drawing's units when it measures pipes, so volumes and freeboard are wrong on a metre drawing.
 
-**Status:** OPEN (Codex build cx_b11_twl_units queued 22 Oct)
+**Status:** OPEN — built and unit-tested 23 Oct 2026; DRAFT PR #1538, `cx/eng-twl-units-c60` at `9821c80c`. New `detention.twlUsesDrawingUnits` switch OFF. 17 new cases pass; focused net10/net48 each 69/69. Full Civil net10: 19,151 passed, 19 skipped, 1 recorded Glen Eira failure (19,171 console total). Three Civil builds: 0 errors. Not installed or AutoCAD-accepted. Exact check, assumptions, Finding 9 limits and the observed live-settings hash change: `areas/CODEX_BUILD_ENG_TWL_UNITS_22OCT.md`.
 
 ## BUG-872
 
