@@ -11730,7 +11730,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** Every pipe is treated as UPVC. On concrete pipe capacity is over-stated by about 23 per cent (a 375 at 1 in 130 is sized for 200 L/s but carries 154 L/s).
 
-**Status:** OPEN (Codex build cx_b08_pipe_material queued 22 Oct)
+**Status:** OPEN — draft PR #1537, `cx/eng-pipe-material-c60`, tip `c23b59c9` (23 Oct 2026). Material correction implemented behind a new OFF switch; final build/test validation BLOCKED by another session's shared build lock. Initial 20-case run passed; final 23-case set, all three Release builds and full Civil totals remain unverified. Not installed or checked in AutoCAD. Report, assumptions and exact continuation/tester steps: `areas/CODEX_BUILD_ENG_PIPE_MATERIAL_22OCT.md`. Separate existing CDRUNSOLVE zero-flow limitation is recorded there; no production flow was invented.
 
 ## BUG-869
 
