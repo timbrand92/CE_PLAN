@@ -11738,7 +11738,11 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** The Pit Schedule still measures depth to the outlet pipe, not the pit floor.
 
-**Status:** OPEN (Codex build cx_b09_pit_floor_depth queued 22 Oct)
+**Status:** OPEN — reproduced in a unit test; build in progress on `cx/eng-pit-floor-c60` (23 Oct 2026). Not installed or accepted. Report: `areas/CODEX_BUILD_ENG_PIT_FLOOR_22OCT.md`.
+
+1. **Reproduction:** cover 11.00, inlet 10.20, outlet 10.15, stored `PitData.InvertLevel` 10.05. Schedule gives 0.85 m; pit-floor depth is 0.95 m, deeper than the unchanged 900 mm step-iron threshold.
+2. **Guard:** `PitScheduleFloorDepthTests.Audit8_Cover11_Outlet1015_Floor1005_Is095` failed before the fix, expected 0.95, actual 0.85. New checks cover unknown floors, Settings OFF, old drawn-cell adoption and exports.
+3. **Real-AutoCAD check for the tester, after authorised installation:** on a synthetic copy make P2 with the above levels and a 600 x 600 pit; open PITSCHEDULE and expect PIT DEPTH 0.95 and With Step Irons. Compare CDSYNC, drawn update and CSV/Excel. An older drawn 0.85 cell must remain 0.85 until Update placed schedule; then 0.95. Check one Undo and save/reopen, repeat with floor blank (0.85), and compare every pipe level, size and grade before/after. No AutoCAD was opened by this builder.
 
 ## BUG-870
 
