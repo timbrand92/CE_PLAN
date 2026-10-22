@@ -230,6 +230,9 @@ function Guest-Guard {
         Assert-That (-not (Test-Path -LiteralPath $p)) "Host folder visible: $p"
     }
     Assert-That (-not (Get-Process acad,accoreconsole -ErrorAction SilentlyContinue)) 'AutoCAD must remain closed.'
+    $identity=[Security.Principal.WindowsIdentity]::GetCurrent()
+    $principal=New-Object Security.Principal.WindowsPrincipal($identity)
+    Assert-That ($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) 'Inside Sandbox only: open Windows PowerShell as administrator and rerun C:\CE_DryRun_Input\clean_pc_install_dryrun.ps1 -Mode Guest. The installer requires administrator rights.'
 }
 function Record-Check([string]$Name, [scriptblock]$Action) {
     try { & $Action | Out-Null; $status='PASS'; $detail='Checked.' }
@@ -430,6 +433,11 @@ switch ($Mode) {
         $null=Check-Candidates $CandidateRoot
         $contract=Get-Content -LiteralPath $DefaultsPath -Raw | ConvertFrom-Json
         Check-DefaultsContract $contract
+        foreach ($name in $script:Pins.Keys) {
+            foreach ($file in @('ce-release.json','ce-release.sig')) {
+                Assert-That (Test-Path -LiteralPath (Join-Path $ReleaseEvidenceRoot "$name\$file") -PathType Leaf) "Signed release input is missing: $name/$file"
+            }
+        }
         Assert-That (-not (Test-Path -LiteralPath $InputRoot)) 'Input folder exists. Use a new folder; never overwrite evidence.'
         Assert-That ([IO.Path]::GetFullPath($InputRoot) -eq 'C:\ce-sandbox\input') 'The supplied WSB maps only C:\ce-sandbox\input.'
         Load-PayloadReader
