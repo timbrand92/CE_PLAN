@@ -106,3 +106,10 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 3. **Pit drop where the pipe gets bigger:** **Recommendation:** warn when the outlet obvert (pipe top) sits above the inlet obvert, not only when inverts are wrong. Yes or no?
 4. **Pit Schedule depth:** you ruled "pit floor" on 20 Oct; the build is queued (BUG-869). Nothing to answer unless you want it switched off by default.
 5. **Minimum grade table:** your office table has 375 at 1 in 300 but 450 and larger at 1 in 200, so a bigger pipe must be laid steeper than a smaller one. Is that your rule, or should 450+ be 1 in 300 or flatter?
+
+## Added 23 Oct 2026 early (Opus Structural engineering audit; plain asks for Tim)
+
+1. **LBH (load-bearing wall hatch) at 1:100:** since S-41 the LBH hatch is 5 times sparser (one line every 1.1 m of wall instead of every 225 mm); a 900 mm wall nib can show no hatch line at all. **Recommendation:** keep the new paper-scale rule for LBUH but give LBH a minimum line spacing so a nib always shows hatch. Yes or no?
+2. **SBEAM vs CEMEMBER size at 1:100:** SBEAM draws a 310UB32 1490 mm deep, CEMEMBER 298 mm. One ruling decides which is right. **Recommendation:** CEMEMBER (real size in model space) is right; SBEAM's size is a paper-scale effect. Confirm?
+3. **Hatch refusal when LTSCALE is not 10 x DIMSCALE:** the scale-aware hatches refuse to draw; R-27 says nothing hard-blocks. **Recommendation:** warn and draw using DIMSCALE (your 20 Oct ruling). Yes or no?
+4. **Fixed label heights (TH, PF, BP, column, 18-text):** fixed 250/200/180 at every scale (5 mm plotted at 1:50). **Recommendation:** make them follow the label height like EBT already does (BUG-531). Yes or no?
