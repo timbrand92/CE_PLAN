@@ -18,3 +18,6 @@
 6. **UI evidence:** no window changes, so no new rendered pictures. The existing one-page editors and shell theme are untouched. The switch is configuration-only in this scope.
 7. **API reference checked:** Autodesk's [redefining a block example](https://blog.autodesk.io/redefining-a-block/) and [Database.Insert contract](https://help.autodesk.com/cloudhelp/2022/ENU/OARX-ManagedRefGuide/files/OARX-ManagedRefGuide-Autodesk_AutoCAD_DatabaseServices_Database_Insert_string_Database__MarshalAsUnmanagedType_U1__bool.html). These support the existing redefine mechanism; they do not substitute for FX-03.
 8. **Undo:** revert the BUG-793 commits. Leaving the switch OFF keeps the existing refresh decision. No deployment rollback is needed because nothing was deployed.
+## Observed while waiting for the build lock
+
+1. **Live settings changed before any FB-03 build/test started:** the hash of Civil's CD_Settings.json differed from this session's initial hash at about 02:15 Melbourne. The other two existing settings files still matched. FB-03 had not acquired the build lock or started dotnet; other sessions were testing. The cause is unknown. Nothing was restored or written by this session. Hash evidence: C:\fb03-evidence\settings-before.json and settings-during-wait.json. A fresh pre-run snapshot will distinguish the FB-03 test window.
