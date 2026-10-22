@@ -108,7 +108,7 @@ $guardRx = New-Object Text.RegularExpressions.Regex("UcsGuardService . '([A-Za-z
 # From the build that carries the "command outcome lines" change: CE itself writes ONE INFO line when a CE command ends, with debug logging on or off:
 #   "Command outcome: CDSYNC completed 250 ms"  (completed | cancelled | refused | failed; "(time unknown)" if the start was not seen).
 # It is the run's end marker. Setting: Options.CommandOutcomeLines (on by default).
-$outcomeRx = New-Object Text.RegularExpressions.Regex('^Command outcome: ([A-Z0-9_]+) (completed|cancelled|refused|failed) (?:(\d+) ms|\(time unknown\))$', 'Compiled')
+$outcomeRx = New-Object Text.RegularExpressions.Regex('^Command outcome: ([A-Z0-9_?]+) (completed|cancelled|refused|failed) (?:(\d+) ms|\(time unknown\))$', 'Compiled')
 
 function Get-EventKind([string]$lvl, [string]$msg) {
   if ($msg -match $noiseRx) { return 'noise' }

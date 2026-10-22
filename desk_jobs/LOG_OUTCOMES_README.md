@@ -2,6 +2,7 @@
 
 1. **Structural and Manager outcome lines (23 Oct build):** reads `TIM_CE_CADTOOLS\logs\ce_struc_structured_*.log` and `CE_SUITE_MANAGER\logs\ce_manager_structured_*.log` at INFO level, using Civil's exact `Command outcome: <CMD> completed|cancelled|refused|failed N ms` format. The existing `Options.CommandOutcomeLines` switch remains ON by default; both modules read Civil's already-loaded value or saved `TIM_CE_CADTOOLS\CD_Settings.json` without initialising or writing settings.
 2. **Counts:** an explicit Structural outcome replaces its older runtime/step mirror within that run's recorded time interval. Two explicit runs remain two runs, even within the same second. Manager has its own section and version; it never borrows Structural's version. Version read from an installed file is labelled "installed now", not proof of the version that produced a historical line.
+3. **Hidden shortcuts:** the outcome reader accepts the existing Structural `?CE` help shortcut as well as letter, number and underscore command names. No typed shortcut was removed or renamed.
 
 **What it is:** a desk tool that reads the CE plugin logs and says, in plain English, whether each command worked, was refused, was cancelled, gave a warning or failed. Tim's own use of CE in the office becomes extra evidence for the desk with no work from him (decisions 2026-10-20 item 17, "all checking and testing is done by AI").
 
