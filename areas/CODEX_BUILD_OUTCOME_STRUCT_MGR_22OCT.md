@@ -1,0 +1,7 @@
+# ANSWER FIRST — Structural and Manager command outcomes
+
+1. **Status (23 Oct 2026, Melbourne):** BUILDING. Two isolated worktrees: C:\co-s / cx/outcome-struct from origin/claude/rel-20261022s2 at 2c9a96942a024888a5ab520600f2d5025de83036; C:\co-m / cx/outcome-mgr from origin/claude/rel-20261022m at 40ee0a36f7960145743954b39859eb6c3af92869. PR numbers, final heads and verified test totals will replace this status as work completes.
+2. **Scope:** extend Civil's existing Options.CommandOutcomeLines switch (default ON, JSON options.commandOutcomeLines) to Structural and Manager. Do not alter that existing default. No new window or drawing behaviour. No deployment, settings writes or AutoCAD launch authorised.
+3. **Semantics:** completed after successful placement followed by Esc; cancelled if nothing done; refused when CE declines; failed for a command failure. Civil #1507 and open semantics fix #1523 read before implementing. The desk reader currently ignores Structural INFO and Manager outcomes; integration must be checked.
+4. **Safety:** shared checkouts contain unrelated unsaved work; leave it untouched. Only this session's named files are staged. Foreground builds/tests always use SkipDevBundle=true, -nr:false and --disable-build-servers, with the C-57 reference parameters. Tests use scratch settings/log roots. No live settings are changed.
+5. **Acceptance:** built and unit-tested status is separate from installed and real-AutoCAD acceptance. Exact future AutoCAD checks and actual totals will be recorded here. Nothing is accepted yet.
