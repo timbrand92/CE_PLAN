@@ -16,11 +16,23 @@ function Gate {
   if (Test-Path $lock) { try { $j = Get-Content $lock -Raw | ConvertFrom-Json; if ([double]$j.expires -gt [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()) { return $false } } catch { return $false } }
   return $true
 }
+function AttachProbe {
+  # 22 Oct 2026: Codex Computer Use needs the node_repl helper attached to the session; about half of the sessions start without it ("native screen tools unavailable"). A 10-second throw-away session tells us first. Final line ATTACHED / MISSING.
+  $p = 'Probe only. Call no tool. Reply with the single word ATTACHED if you have a tool named node_repl, otherwise MISSING.'
+  $out = ''
+  try { $out = ($null | & codex exec --skip-git-repo-check --dangerously-bypass-approvals-and-sandbox --ephemeral -m gpt-6.1-sol -c model_reasoning_effort=low -C 'C:\Lisp Files\_TEST_COPIES_20260923' $p 2>$null | Out-String) } catch { $out = 'ERROR' }
+  $ok = ($out.Trim().Split("`n")[-1].Trim() -eq 'ATTACHED')
+  $helpers = @(Get-Process codex-computer-use -ErrorAction SilentlyContinue).Count
+  $lastEnd = (Get-Content (Join-Path $d 'queue.log') -Tail 40 -ErrorAction SilentlyContinue | Where-Object { $_ -match ' END ' } | Select-Object -Last 1)
+  Add-Content 'C:\CE_PLAN\desk_jobs\codex_attach_log.csv' ("{0},{1},{2},{3},{4}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $(if ($ok) { 'ATTACHED' } else { 'MISSING' }), $helpers, $name, ($lastEnd -replace ',', ' '))
+  return $ok
+}
 for ($i = 1; $i -le $Tries; $i++) {
   if (Test-Path 'C:\CE_PLAN\desk_jobs\STOP_CODEX.flag') { Log 'STOP flag'; exit }
   $w = 0; while (-not (Gate)) { Start-Sleep 60; $w++; if ($w -gt 240) { Log 'gate never opened'; exit } }
   Start-Sleep 125
   if (-not (Gate)) { continue }
+  $pw = 0; while (-not (AttachProbe)) { $pw++; if ($pw -gt 33) { Log 'attach probe never ATTACHED in 25 min'; break }; Start-Sleep 45 }
   $t0 = Get-Date
   Log ("try $i starting $name")
   & $bash -lc ('cd "/c/Lisp Files/_CODEX_RUNNER" && MAXC=1 bash queue3.sh "' + $Line + '"') *>> "C:\CE_PLAN\desk_jobs\codex_retry_$name.out"
