@@ -11767,3 +11767,19 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Symptom:** 1.69 vs 2.58 m3 (34.6 percent error, allowed 30). The audit shows the engine's storage formula equals the issued sheet line for line; the TEST is out of date: the sheet used a 1 in 5 discharge storm, soft-ground C 0.35 and its own rainfall; the engine now uses 1 in 10 (Glen Eira report 20 Jul 2026), C 0.30 (Tim 25 Sep) and the office curve. Fix: hold the sheet's 0.35 and 5.87 L/s as the GE 23-129 test does.
 
 **Status:** OPEN (duplicate of BUG-095 and BUG-307; the queued fix build is tracked here; reconciled 23 Oct 2026)
+
+## AUDIT-XCLMTXT-DECIMALS (22 October Structural engineering audit, finding 2)
+
+**Command / Area:** XCLMTXT member schedule descriptions. MEDIUM.
+
+**Symptom:** importing `250UB25.7 BEAM` prints `250 UB 26 BEAM`; `410UB59.7` prints `410 UB 60`. The expected supplier designation keeps the decimal mass exactly, including `310UB32.0`.
+
+**Status:** OPEN — Codex build on `cx/xclmtxt-s41`, based on Structural 1.0.121. Reachable from schedule insertion and advanced editing; initial preview uses a lighter formatter. Regression tests and workbook fixture: `XclmTxtSteelDesignationTests`. Not installed or AutoCAD-accepted. Report and exact robot check: `areas/CODEX_BUILD_XCLMTXT_23OCT.md`. Catalogue property corrections remain BUG-818.
+
+## AUDIT-XCLMTXT-ANGLES (22 October Structural engineering audit, finding 1)
+
+**Command / Area:** XCLMTXT member schedule angle descriptions. HIGH.
+
+**Symptom:** importing `150x90x10 L ]L LINTEL` prints `150 x 90 x 10 EA LINTEL`. Expected `150 x 90 x 10 UA LINTEL`; equal angles remain EA. The old exception recognises only `150x100x10` and can classify several angles in one cell from that one size.
+
+**Status:** OPEN — same build and report as above. Regression coverage includes all 57 catalogue angle sizes (38 EA, 19 UA), the audit's worked examples and mixed angles in one cell. No Settings switch: incorrect section labels are defects. Not installed or AutoCAD-accepted.
