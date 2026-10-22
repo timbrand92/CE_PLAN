@@ -32,7 +32,7 @@ for ($i = 1; $i -le $Tries; $i++) {
   $w = 0; while (-not (Gate)) { Start-Sleep 60; $w++; if ($w -gt 240) { Log 'gate never opened'; exit } }
   Start-Sleep 125
   if (-not (Gate)) { continue }
-  $pw = 0; while (-not (AttachProbe)) { $pw++; if ($pw -gt 33) { Log 'attach probe never ATTACHED in 25 min'; break }; Start-Sleep 45 }
+  $pw = 0; while (-not (Test-Path 'C:\CE_PLAN\desk_jobs\NO_ATTACH_PROBE.flag') -and -not (AttachProbe)) { $pw++; if ($pw -gt 33) { Log 'attach probe never ATTACHED in 25 min'; break }; Start-Sleep 45 }
   $t0 = Get-Date
   Log ("try $i starting $name")
   & $bash -lc ('cd "/c/Lisp Files/_CODEX_RUNNER" && MAXC=1 bash queue3.sh "' + $Line + '"') *>> "C:\CE_PLAN\desk_jobs\codex_retry_$name.out"
