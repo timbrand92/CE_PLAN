@@ -1915,6 +1915,42 @@
 
    **Window construction:** lines 246.
 
+23. **S — Modules/Structural/UI/Dialogs/CeHatchPresetDialog.cs.**
+
+   **Button construction:** lines 231.
+
+   **ComboBox construction:** lines 54.
+
+   **ScrollViewer construction:** lines 195.
+
+   **TextBlock construction:** lines 50, 51, 52, 176, 210.
+
+   **TextBox construction:** lines 53.
+
+24. **S — Modules/Structural/UI/Dialogs/CeSheetsManagerWindow.xaml.cs.**
+
+   **Button construction:** lines 983, 984, 1322, 1323.
+
+   **ComboBox construction:** lines 1294, 1300.
+
+   **TextBlock construction:** lines 978, 1330, 1332.
+
+   **TextBox construction:** lines 979.
+
+25. **S — Modules/Structural/UI/Dialogs/CeSheetsWindow.xaml.cs.**
+
+   **TextBlock construction:** lines 228.
+
+   **Explicit naming/label assignment in this file:** lines 237. Verify the specific target; not every constructor is covered.
+
+26. **S — Modules/Structural/UI/FstManagerWindow.xaml.cs.**
+
+   **Button construction:** lines 481, 482, 643, 644, 645.
+
+   **TextBlock construction:** lines 476.
+
+   **TextBox construction:** lines 477.
+
 **All XAML Window declarations — breadth check**
 
 1. **Reading convention.** Dimensions are declared WPF units, not physical pixels. Code may subsequently change them. A declaration's presence is not proof that the installed command reaches it. Programmatic windows appear in the C# index, including More options, pit reviews and Manager popup classes.
@@ -2101,6 +2137,6 @@
 
 92. **Modules/Structural/UI/TimeEntryBrowserWindow.xaml.** Title: Job Timer — Edit Time Entries. Declared 1100 × 640; minimum 900 × 500.
 
-**Summary — 75 words**
+**Summary — under 100 words**
 
 1. **Summary.** Nine findings: one HIGH, six MEDIUM, two LOW. The strongest is Structural's pixel/WPF conversion error at 150%. Civil's definite gaps include search Enter saving, ignored window-position memory, primary-monitor clamping and stale palette themes. About remains light; batch Inspect ignores Escape. Test-critical unnamed controls and the full source inventory are recorded without confusing caption-derived or runtime names with failures. No runtime acceptance is claimed. Only this report changed; builds, tests, installation and AutoCAD remain untouched.
