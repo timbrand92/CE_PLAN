@@ -86,4 +86,4 @@
 
 ## Summary
 
-1. **Summary — 74 words.** Three findings remain: an Esc-ended accepted callout pipe can lose its unwritten ownership link; an empty Inspector lookup takes history-changing access; and window-first CD leaves an extra cancelled-command Undo step. Prior audits' faults are excluded. The shared idle saver and guarded history readers were not blamed without evidence. Each finding has a synthetic fixture and observable assertions. Only this findings file changed; no source, settings or drawings were changed, and no build or test ran.
+1. **Summary.** Three findings remain: an Esc-ended accepted callout pipe can lose its unwritten ownership link; an empty Inspector lookup takes history-changing access; and window-first CD leaves an extra cancelled-command Undo step. Prior audits' faults are excluded. The shared idle saver and guarded history readers were not blamed without evidence. Each finding has a synthetic fixture and observable assertions. Only this findings file changed; no source, settings or drawings were changed, and no build or test ran.
