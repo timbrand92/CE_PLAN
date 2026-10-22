@@ -113,3 +113,10 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 2. **SBEAM vs CEMEMBER size at 1:100:** SBEAM draws a 310UB32 1490 mm deep, CEMEMBER 298 mm. One ruling decides which is right. **Recommendation:** CEMEMBER (real size in model space) is right; SBEAM's size is a paper-scale effect. Confirm?
 3. **Hatch refusal when LTSCALE is not 10 x DIMSCALE:** the scale-aware hatches refuse to draw; R-27 says nothing hard-blocks. **Recommendation:** warn and draw using DIMSCALE (your 20 Oct ruling). Yes or no?
 4. **Fixed label heights (TH, PF, BP, column, 18-text):** fixed 250/200/180 at every scale (5 mm plotted at 1:50). **Recommendation:** make them follow the label height like EBT already does (BUG-531). Yes or no?
+
+## Added 23 Oct 2026 early (CEMEMBER design-conformance review; plain asks for Tim)
+
+1. **Z purlin orientation:** confirm the orientation names and that the wide flange goes on top. **Recommendation:** keep the current names but show them as four pictures in the window.
+2. **Unequal angles:** only long-leg-up can be drawn today. **Recommendation:** add long-leg-flat, so a 150x90 ledger angle with the 150 leg lying flat can be drawn.
+3. **C purlin, flanges up, top view:** **Recommendation:** draw the flange lines hidden, because the lips sit over them.
+4. **Corrected steel section list** (you checked the ten rows on 19 Oct: "looks right"): the installed command still uses the OLD list (310UB32.0 is refused, there is no Z15015, the 380PFC web is 13.5 mm not 10 mm). **Recommendation:** put the corrected list in now, together with the code changes it needs. Yes or no?
