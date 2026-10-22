@@ -1,0 +1,9 @@
+# CDTWL drawing units — BUG-871 / audit Finding 10
+
+1. **ANSWER FIRST — in progress, 23 October 2026 (Melbourne).** Working on `cx/eng-twl-units-c60` in `C:\ct60`, from `origin/claude/rel-20261022m` at `40ee0a36`. Nothing installed or opened in AutoCAD. PR, final head and totals pending validation.
+2. **Ownership:** this chat owns the new `Bug871TwlDrawingUnitsTests.cs`, the CDTWL collector/service changes, the new `DetentionSettings.twlUsesDrawingUnits` property and the top regression entry. Other chats' uncommitted files are untouched.
+3. **Design:** new Settings switch OFF by default. Only coordinate distances need drawing-unit conversion. Stored RLs are metres; pit/tank/pipe sizes are millimetres already. Use the shared Civil conversion and recorded-position-unit selection; preserve Unitless/missing/disagreeing records as the existing millimetre fallback. No BUG-505 note added.
+4. **Audit worked numbers:** 20 m DN300 full pipe = 1413.716694 L, currently 1.413717 L in a metre drawing. Millimetre and metre versions must agree for full and part-full storage, solved levels and freeboard.
+5. **Finding 9:** the existing wall-to-wall switch already removes pipe/pit overlap when ON. Keep its OFF default. Prove the audit's 10 m/9.4 m DN225 example and record the existing 54 L sump separately; no sump engineering assumption will be silently introduced.
+6. **Validation pending:** red-first test, all three Civil build lanes, full net10 Civil suite, targeted net48 tests, named-file push and draft PR against the release base. Real AutoCAD check will be recorded for the tester; not run here.
+7. **Sync:** both remotes fetched. Shared code checkout has other chats' untracked files; used fresh clean worktree. CE_PLAN is dirty and diverged (2 local / 3 remote at inspection), so no forced pull and no unrelated work committed. Report saved by name only as expressly requested.
