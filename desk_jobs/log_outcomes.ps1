@@ -574,7 +574,7 @@ $tot = @{}; foreach ($x in $outcomes) { $tot[$x] = 0 }
 $bgSteps = 0
 foreach ($s in $sessions) { if ($s.Cmd.StartsWith($bgPrefix)) { $bgSteps++ } else { $tot[$s.Outcome]++ } }
 $cmdSessions = @($sessions | Where-Object { -not $_.Cmd.StartsWith($bgPrefix) })
-$markerSessions = @($cmdSessions | Where-Object { $_.Kind -eq 'marker' -or $_.Kind -eq 'runtime' -or $_.Kind -eq 'commandlog' -or $_.Kind -eq 'steps' }).Count
+$markerSessions = @($cmdSessions | Where-Object { $_.Kind -eq 'marker' -or $_.Kind -eq 'runtime' -or $_.Kind -eq 'commandlog' -or $_.Kind -eq 'steps' -or $_.Kind -eq 'outcome' }).Count
 $tokenSessions = @($cmdSessions | Where-Object { $_.Kind -eq 'token' -or $_.Kind -eq 'file' }).Count
 
 # ---------------------------------------------------------------- failure candidates (one line per day + command + message)
