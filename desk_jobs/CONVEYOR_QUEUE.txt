@@ -7,3 +7,4 @@ verifyW4_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
 verifyW5_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
 verifyW6_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
 verifyW7_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW8_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
