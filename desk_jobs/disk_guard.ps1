@@ -7,10 +7,11 @@ while (-not (Test-Path "$d\STOP_DISKGUARD.flag")) {
   $f = Free
   if ($f -lt 18) {
     $freed = 0
-    $roots = Get-ChildItem 'C:\' -Directory -Force -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^(ce-|c[a-z]+60|cx)' -and $_.Name -notmatch 'evidence|logs|out$|^ce_rc|^ce-(asm|fx|mx\d*|ta|tr|rv\d*)$' }  # 24 Oct 08:55: the Team and Max builders' own worktrees (ce-asm, ce-fx, ce-mx*, ce-ta, ce-tr, ce-rv*) are never touched: the guard wiped an assembler's build output and cost it about 5 hours
+    # 24 Oct 08:55: builders' own worktrees (ce-asm, ce-fx, ce-mx*, ce-ta, ce-tr, ce-rv*) are never touched; idle means no file written for 90 minutes
+    $roots = Get-ChildItem 'C:\' -Directory -Force -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^(ce-|c[a-z]+60|cx)' -and $_.Name -notmatch 'evidence|logs|out$|^ce_rc|^ce-(asm|fx|mx\d*|ta|tr|rv\d*)$' }
     $roots = @($roots) + @(Get-ChildItem 'C:\Users\TimothyBrand\.codex\worktrees' -Directory -Force -ErrorAction SilentlyContinue)  # 24 Oct: Codex's own job worktrees hold idle build output too
     foreach ($r in $roots) {
-      Get-ChildItem $r.FullName -Directory -Recurse -Force -ErrorAction SilentlyContinue -Depth 6 | Where-Object { $_.Name -in 'bin', 'obj' -and $_.LastWriteTime -lt (Get-Date).AddMinutes(-90) -and -not (Get-ChildItem $_.FullName -Recurse -File -Force -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt (Get-Date).AddMinutes(-90) } | Select-Object -First 1) }  # idle means no FILE written for 90 minutes (a folder's own time only says when it was created) | ForEach-Object {
+      Get-ChildItem $r.FullName -Directory -Recurse -Force -ErrorAction SilentlyContinue -Depth 6 | Where-Object { $_.Name -in 'bin', 'obj' -and $_.LastWriteTime -lt (Get-Date).AddMinutes(-90) -and -not (Get-ChildItem $_.FullName -Recurse -File -Force -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt (Get-Date).AddMinutes(-90) } | Select-Object -First 1) } | ForEach-Object {
         try { $sz = (Get-ChildItem $_.FullName -Recurse -File -Force -ErrorAction SilentlyContinue | Measure-Object Length -Sum).Sum; Remove-Item -LiteralPath $_.FullName -Recurse -Force -ErrorAction Stop; $freed += $sz } catch { }
       }
     }
