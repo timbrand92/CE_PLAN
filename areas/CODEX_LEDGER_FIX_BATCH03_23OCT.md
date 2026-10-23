@@ -9,3 +9,5 @@
 7. **Safety:** no changes to existing switch defaults, Tim's settings, AutoCAD bundles, ProgramData, command aliases or window layouts. No pictures required unless a window changes. Not installed, not AutoCAD-tested, not marked fixed. Notion Inbox search for CE_ACAD returned no entries.
 
 8. **BUG-884 draft saved:** PR [#1647](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1647), branch `cx2/bug-884-portable-approval`, head `066f8e0999266e859689c62f512be1d41e4a1ca4`. Six test cases added. Code validation pending the shared build lock; no passing full-suite count claimed yet. No switch or window changes.
+
+9. **BUG-886 draft saved:** PR [#1648](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1648), branch `cx2/bug-886-office-approval`, head `76e81d44d876211b39fb6548fe87b14572eb433d`. Twelve new cases (5 office-floor and 7 signed temporary activation). Test-only pre-fix commit `f9fbf50f` retained for the red run. All runs remain pending the shared build lock. Missing/damaged/canary office approvals warn; the known office floor cannot be weakened. No new switch or window.
