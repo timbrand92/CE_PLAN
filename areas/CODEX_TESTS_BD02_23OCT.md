@@ -16,7 +16,9 @@
 3. **Disk:** initial C: free space 13.78 GB; 13.64 GB after worktree creation; 13.26 GB after the interrupted restore. Stop below 12 GB. No other session's files or worktrees removed.
 4. **Build launch incident:** an initial inline PowerShell wrapper did not terminate when lock acquisition lost a race. It entered restore; only its own dotnet process tree was stopped. No test count came from it. The corrected wrapper uses terminating errors and acquires the lock before starting dotnet. Evidence `C:\ce-cx\bd02-evidence\focused.log` initially contains that interrupted attempt and will be replaced by the completed focused run.
 5. **Settings:** every new case uses `SettingsService.BeginTestScope` with a fresh `UserSettings` and a unique temporary settings path, disposes it and removes its own temporary file. The LandXML fixture is synthetic and temporary. No live settings file is written. The full suite already has `SettingsIsolationSetup`; live Civil settings hashes are recorded outside the repo for comparison.
-6. **Privacy:** the global pre-push hook is active at `C:/TimOS/skills/leak-scan/hooks`. Initial plugin push passed, with the 36-term local list present. Only synthetic pit IDs and figures are used.
+6. **Build prerequisite:** the first complete net10 compile stopped with MSB3030 because the clean worktree had no `Modules/Shared.Transform.Native2027/bin/x64/Release/CE_TRANSFORM_2027.arx`. Added the zero-byte placeholder documented in the C-57 report, solely in ignored build output. The failed log is retained as `focused-missing-native.log`. This is not a native build or native test.
+7. **Notion Inbox:** checked the Hub Inbox; its one returned item was already Processed and unrelated to CE. No New CE instructions to file.
+8. **Privacy:** the global pre-push hook is active at `C:/TimOS/skills/leak-scan/hooks`. Initial plugin push passed, with the 36-term local list present. Only synthetic pit IDs and figures are used.
 
 ## Audit: what was missing and what would fail before the fix
 
