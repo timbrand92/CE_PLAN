@@ -129,3 +129,5 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 ## Added 24 Oct 2026 early morning (desk plan/03)
 
 3. **Codex's new week (reset happened Sat 24 Oct 04:43; resets again Fri 30 Oct 04:09):** you said to leave the new week's usage alone, so the Codex supervisor is on HOLD and has started nothing new. **Recommendation:** let it run ONLY the AutoCAD looks on the daily tools (about 1 point each, so about 15 looks a day inside the 16-point daily share), because acceptance (1 of 40 daily tools) is the biggest gap to Mon 9 Nov and the runner passes still need Codex looks for anything you must see. **Example on a job:** the Pit Schedule window and a label position can only be accepted by a look at the picture. **Other choice:** keep HOLD until you are back Thu 29 Oct.
+
+> **Question 3 above (Codex new week): ANSWERED 24 Oct 05:30 by Tim** ("codex should be running constantly on testing and reviewing, codex has reset now so back to normal managing of weekly usage until i say so, please get it going and keep it going so we can get acceptance"). HOLD is superseded by PACE. Do not ask again.

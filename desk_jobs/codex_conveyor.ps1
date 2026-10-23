@@ -29,6 +29,8 @@ $idle = 0
 while ($true) {
   if (Test-Path "$d\STOP_CODEX.flag") { Log 'STOP flag'; exit }
   if ((Usage) -ge 90) { Log 'Codex weekly usage 90 percent: stop'; exit }
+  $pm = (Get-Content "$d\CODEX_MODE.txt" -TotalCount 1 -ErrorAction SilentlyContinue); if ($pm -eq 'HOLD') { Log 'mode HOLD: conveyor stops'; exit }
+  if ($pm -eq 'PACE') { $o = & 'C:\Program Files\Git\bin\bash.exe' -c 'bash "/c/Lisp Files/_CODEX_RUNNER/daily_cap.sh"' 2>$null; $cv = 0; if ([int]::TryParse(($o | Select-Object -First 1), [ref]$cv) -and ((Usage) + 1) -gt $cv) { Log ("over today's cap ($cv): waiting 10 minutes"); Start-Sleep 600; continue } }
   $doneList = @(Get-Content $done -ErrorAction SilentlyContinue)
   $next = Get-Content $qf -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $_ -notmatch '^\s*#' -and ($doneList -notcontains $_.Split('|')[0]) } | Select-Object -First 1
   if (-not $next) { Start-Sleep 300; $idle++; if ($idle -gt 72) { Log 'no new queue line for 6 h: stop'; exit }; continue }

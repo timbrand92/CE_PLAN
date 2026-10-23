@@ -14,7 +14,7 @@ while (-not (Test-Path "$d\STOP_SUPERVISOR.flag")) {
   Start-Sleep 120
   $u = Usage
   if ($u -ge 0) {
-    if ($last -ge 0 -and ($last - $u) -ge 15) { Set-Content "$d\CODEX_MODE.txt" 'HOLD'; Log "WEEKLY RESET DETECTED ($last -> $u): mode HOLD. No new Codex job will start; running jobs finish; the new week is left alone." }
+    if ($last -ge 0 -and ($last - $u) -ge 15) { Set-Content "$d\CODEX_MODE.txt" 'PACE'; Log "WEEKLY RESET DETECTED ($last -> $u): mode PACE (Tim 24 Oct 05:30: after a reset Codex goes back to normal managed weekly use: AutoCAD looks and reviews run constantly inside today's daily cap)." }
     $last = $u
   }
   $mode = Mode
@@ -28,14 +28,17 @@ while (-not (Test-Path "$d\STOP_SUPERVISOR.flag")) {
   # filler jobs
   $fill = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'codex' -and $_.CommandLine -match ' exec ' -and $_.CommandLine -match 'cx_(lf|rv)' })
   foreach ($p in $fill) { if (((Get-Date) - $p.CreationDate).TotalMinutes -gt 120) { try { Stop-Process -Id $p.ProcessId -Force; Log "killed filler job older than 120 min (pid $($p.ProcessId))" } catch { } } }
-  if ($mode -eq 'SPEND') {
+  if ($mode -eq 'SPEND' -or $mode -eq 'PACE') {
     if ((Procs 'codex_conveyor\.ps1').Count -eq 0 -and -not (Test-Path "$d\STOP_CODEX.flag")) { Start-Process pwsh -WindowStyle Hidden -ArgumentList "-NoProfile -File $d\codex_conveyor.ps1"; Log 'conveyor was missing: started' }
     $conv = Procs 'codex_conveyor\.ps1'; if ($conv.Count -gt 1) { $conv | Sort-Object CreationDate | Select-Object -SkipLast 1 | ForEach-Object { try { Stop-Process -Id $_.ProcessId -Force; Log "duplicate conveyor killed $($_.ProcessId)" } catch { } } }
     $free = (Get-PSDrive C).Free / 1GB
     $runners = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'bash.exe' -and $_.CommandLine -match 'queue4\.sh' })
-    if ($u -ge 0 -and $u -lt 97 -and $free -gt 11 -and $fill.Count -lt 8 -and $runners.Count -lt 8) {
+    $capNow = 97
+    if ($mode -eq 'PACE') { $o = & $bash -c 'bash "/c/Lisp Files/_CODEX_RUNNER/daily_cap.sh"' 2>$null; $cv = 0; if ([int]::TryParse(($o | Select-Object -First 1), [ref]$cv)) { $capNow = $cv } else { $capNow = 16 } }
+    if ($u -ge 0 -and $u -lt ($capNow - 1) -and $free -gt 11 -and $fill.Count -lt $(if ($mode -eq 'PACE') { 4 } else { 8 }) -and $runners.Count -lt $(if ($mode -eq 'PACE') { 4 } else { 8 })) {
       $doneF = @(Get-Content "$d\FILLER_DONE.txt" -ErrorAction SilentlyContinue)
       $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] } | Select-Object -First 1
+      if ($mode -eq 'PACE') { $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] -and $_.Split('|')[0] -match '^cx_(rv|bd)' } | Select-Object -First 1; if ($next) { $cost = 2; $cf = $next.Split('|'); if ($cf.Count -ge 6) { $cost = [double]$cf[5] }; if (($u + $cost) -gt $capNow) { $next = $null } } }
       if ($next -and $next.Split('|')[0] -like 'cx_bd*' -and $free -lt 14) { $next = $null }  # builds need 14 GB; read-only audits (cx_rd) run from 11 GB (24 Oct 00:30 disk squeeze)
       if ($next) {
         $name = $next.Split('|')[0]

@@ -14,3 +14,9 @@
 **Still needed as before:** a Codex look for anything the drafter must see (window, picture, label position, preview); Tim's word for engineering judgement (council values, design rules, sizing choices). Tim can still reject anything. Written "FIXED (Claude-accepted, build, date)", never plain FIXED; never close or delete an entry (D6).
 
 **Effect on the numbers:** the accepted figure in the recount now counts runner passes that meet the four conditions. Today the 10 runner cases (R01-R10) are PASS-UNREVIEWED: R01-R05, R07 and R10 passed twice; only R08 and R10 have a recorded broken variant; `reviewed_against` is empty on all ten. An Opus review job fills `reviewed_against` and lists what is still missing.
+
+## Addendum, Sat 24 Oct 2026 about 05:30: Codex runs constantly on testing and reviewing (supersedes the HOLD of 04:43)
+
+**Tim's words:** "codex should be running constantly on testing and reviewing, codex has reset now so back to normal managing of weekly usage until i say so, please get it going and keep it going so we can get acceptance".
+
+**Done:** `CODEX_MODE.txt` = PACE. The supervisor starts only testing and reviewing jobs (cx_rv reviews, cx_bd regression tests) and the AutoCAD looks run in the conveyor, all inside the equal daily share (daily_cap.sh: 16 percent today, then +14 a day, week resets Sat 31 Oct about 04:40); the next weekly reset flips the mode to PACE, not HOLD. D-series AutoCAD look briefs for the 30 daily tools are being written (verifyD1..D8_cur) so the lane has looks to run. Superseded: the 04:43 rule "leave the new weekly usage alone".
