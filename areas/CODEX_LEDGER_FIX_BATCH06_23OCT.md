@@ -3,7 +3,7 @@
 ## ANSWER FIRST
 
 1. **BUG-898 — investigating.** No exact-id PR, matching remote branch or coverage in the requested report families. Cause confirmed at Civil base `88bd62f704b66a7e156da572c212812dc4b0c61a`: results relabel the proposed schedule as Recorded without checking insertion.
-2. **BUG-899 — investigating.** Same duplicate checks clear. LandXML measures target extents without excluding earlier import objects, unlike X-Civil.
+2. **BUG-899 — DRAFT PR #1654.** Branch `cx2/bug-899-landxml-position`, head `ca5553d63bb8b24b5429e1c7031d79ad99aae262`. Three new regression cases: base 2 passed / 1 failed (the missing LandXML argument). Fix applied; three Release builds, focused net48 and full Civil net10 checks running.
 3. **BUG-900 — investigating.** Same duplicate checks clear. The PDF reader chooses one pit schedule page and replaces the pipe rows with the best single page.
 4. **BUG-901 — SKIPPED.** Engineering decision required: outside-top cover and wall thickness values. Ledger F-042 and `QUESTIONS_FOR_MONDAY.md` question 2 keep this awaiting Tim's word. No change or tests.
 5. **BUG-902 — SKIPPED.** Engineering decision required: surface levels and cover between pits. Ledger F-043 explicitly needs Tim's word. No change or tests.
