@@ -38,7 +38,8 @@ while (-not (Test-Path "$d\STOP_SUPERVISOR.flag")) {
     if ($u -ge 0 -and $u -lt ($capNow - 1) -and $free -gt 11 -and $fill.Count -lt $(if ($mode -eq 'PACE') { 4 } else { 8 }) -and $runners.Count -lt $(if ($mode -eq 'PACE') { 4 } else { 8 })) {
       $doneF = @(Get-Content "$d\FILLER_DONE.txt" -ErrorAction SilentlyContinue)
       $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] } | Select-Object -First 1
-      if ($mode -eq 'PACE') { $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] -and $_.Split('|')[0] -match '^cx_(rv|bd)' } | Select-Object -First 1; if ($next) { $cost = 2; $cf = $next.Split('|'); if ($cf.Count -ge 6) { $cost = [double]$cf[5] }; if (($u + $cost) -gt $capNow) { $next = $null } } }
+      if ($mode -eq 'PACE') { $pendLooks = @(Get-Content "$d\CONVEYOR_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $_ -notmatch '^\s*#' -and (@(Get-Content "$d\CONVEYOR_DONE.txt" -ErrorAction SilentlyContinue) -notcontains $_.Split('|')[0]) }).Count }
+      if ($mode -eq 'PACE' -and $pendLooks -gt 0) { $next = $null } elseif ($mode -eq 'PACE') { $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] -and $_.Split('|')[0] -match '^cx_(rv|bd)' } | Select-Object -First 1; if ($next) { $cost = 2; $cf = $next.Split('|'); if ($cf.Count -ge 6) { $cost = [double]$cf[5] }; if (($u + $cost) -gt $capNow) { $next = $null } } }
       if ($next -and $next.Split('|')[0] -like 'cx_bd*' -and $free -lt 14) { $next = $null }  # builds need 14 GB; read-only audits (cx_rd) run from 11 GB (24 Oct 00:30 disk squeeze)
       if ($next) {
         $name = $next.Split('|')[0]
