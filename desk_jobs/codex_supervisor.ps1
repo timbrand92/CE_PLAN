@@ -1,5 +1,5 @@
 # Desk 23 Oct 2026: CODEX SUPERVISOR (Tim: "sort codex out, all these breaks and its getting stuck ... manage it so we actually get somewhere"). One loop, every 2 minutes, keeps the whole Codex machine healthy and spends the usage by plan.
-# MODES (file desk_jobs\CODEX_MODE.txt): SPEND (default until the weekly reset: AutoCAD conveyor plus up to 3 parallel filler jobs from FILLER_QUEUE.txt in FAST mode, cap 97 percent) and HOLD (after the reset: no new Codex job of any kind; running jobs finish; the new week's usage is left alone). The mode flips to HOLD by itself when the usage reading drops 15 points or more between two reads (the weekly reset), or by hand (write HOLD to CODEX_MODE.txt). Back to SPEND: write SPEND.
+# MODES (file desk_jobs\CODEX_MODE.txt): SPEND (default until the weekly reset: AutoCAD conveyor plus up to 5 parallel filler jobs (raised from 3 on 23 Oct 19:40: usage was rising only about 5 points an hour; Tim wants the week spent before the reset) from FILLER_QUEUE.txt in FAST mode, cap 97 percent) and HOLD (after the reset: no new Codex job of any kind; running jobs finish; the new week's usage is left alone). The mode flips to HOLD by itself when the usage reading drops 15 points or more between two reads (the weekly reset), or by hand (write HOLD to CODEX_MODE.txt). Back to SPEND: write SPEND.
 # HEALTH DUTIES: (1) exactly one codex_conveyor.ps1 alive in SPEND (start it if missing, kill duplicates); (2) a stuck AutoCAD look: a verify* codex job running more than 75 minutes is killed with its AutoCAD (the janitor then clears the lock); a launch_codex_retry launcher older than 100 minutes that has no live codex child is killed; (3) filler jobs are started only when disk C: is above 12 GB and fewer than 3 filler codex jobs run; (4) a filler job older than 120 minutes is killed; (5) acad_janitor.ps1 and disk_guard.ps1 must be alive (started if missing); (6) everything is logged to codex_supervisor.log with a heartbeat line every 10 minutes. Stop with STOP_SUPERVISOR.flag.
 $d = 'C:\CE_PLAN\desk_jobs'
 $bash = 'C:\Program Files\Git\bin\bash.exe'
@@ -33,7 +33,7 @@ while (-not (Test-Path "$d\STOP_SUPERVISOR.flag")) {
     $conv = Procs 'codex_conveyor\.ps1'; if ($conv.Count -gt 1) { $conv | Sort-Object CreationDate | Select-Object -SkipLast 1 | ForEach-Object { try { Stop-Process -Id $_.ProcessId -Force; Log "duplicate conveyor killed $($_.ProcessId)" } catch { } } }
     $free = (Get-PSDrive C).Free / 1GB
     $runners = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'bash.exe' -and $_.CommandLine -match 'queue4\.sh' })
-    if ($u -ge 0 -and $u -lt 97 -and $free -gt 12 -and $fill.Count -lt 3 -and $runners.Count -lt 3) {
+    if ($u -ge 0 -and $u -lt 97 -and $free -gt 13 -and $fill.Count -lt 5 -and $runners.Count -lt 5) {
       $doneF = @(Get-Content "$d\FILLER_DONE.txt" -ErrorAction SilentlyContinue)
       $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] } | Select-Object -First 1
       if ($next) {
