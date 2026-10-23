@@ -2,12 +2,12 @@
 
 ## ANSWER FIRST
 
-1. **Delivery:** branch `cx3/tests-bd04`, based on `origin/claude/rel-20261023s` (`e6d597c0`, Structural S-42). Draft PR [#1705](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1705), head `d2b7ff26cfc578b7580b90a9870c2b0b766a96bd`; validation pending.
+1. **BLOCKED — remaining validation:** branch `cx3/tests-bd04`, based on `origin/claude/rel-20261023s` (`e6d597c0`, Structural S-42). Draft PR [#1705](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1705), head `c181b138dfbe78b23f3d212c54213d2332b835b0`. New cases pass; C: fell to 11.91 GB, so the required 12 GB stop rule prevents further builds/tests.
 2. **Tests added:** 10 cases: BUG-303 six, BUG-315 two, BUG-858 two. Product code is unchanged. These fill missing scenarios in partly tested fixes; no claim that these bugs previously had no tests at all.
-3. **Totals:** pending foreground builds and test runs; no passing total claimed yet.
-4. **New findings:** none established by execution yet. BUG-818/BUG-819 remain unresolved catalogue/drawing work and are not treated as fixed.
+3. **Totals:** focused net10: **10 total / 10 passed / 0 failed / 0 skipped** (BUG-303 6/6, BUG-315 2/2, BUG-858 2/2). Hosted Structural test build: **0 errors, 12 warnings**. **The required thousand-test totals were NOT obtained.**
+4. **New findings:** none from the ten executed cases; all pass the current fixes. No bug closed. BUG-818/BUG-819 remain unresolved catalogue/drawing work and are not treated as fixed.
 5. **What Tim sees:** no change in AutoCAD. This is a tests-only draft; nothing installed, deployed or accepted.
-6. **Not run:** AutoCAD, core console, deployment, settings changes, window rendering, parent-commit execution (pending); complete lane results to follow.
+6. **Not run:** standalone Structural builds (net48/net8/net10), net48/net8 test builds/runs, full Structural/DesignCore/Civil/Manager/Installer suites, parent-commit execution, AutoCAD, core console, deployment and window rendering. No settings changes made; the three existing settings-file hashes match before/after.
 
 ## Audit and before-fix evidence
 
@@ -24,6 +24,15 @@
 
 ## Validation and handoff
 
-1. **Build safety:** every build/test command must include `-p:SkipDevBundle=true -nr:false --disable-build-servers`; reference paths follow the C-57 assembly report (`_AcadRef48` 2024 refs; `_AcadRefNet8` 2026 refs; `_AcadRefNet10` and `_AcadRef100` 2027 refs). C: began at 13.57 GB; stop below 12 GB. Shared build lock is currently busy.
+1. **Build safety:** every build/test command must include `-p:SkipDevBundle=true -nr:false --disable-build-servers`; reference paths follow the C-57 assembly report (`_AcadRef48` 2024 refs; `_AcadRefNet8` 2026 refs; `_AcadRefNet10` and `_AcadRef100` 2027 refs). C: began at 13.57 GB; stop below 12 GB. The shared build lock delayed the retry by more than 36 minutes. The initial test build stopped at NETSDK1004 (missing Hosted assets); retrying with `-p:EnableUnifiedHostAdapters=true` restored the correct flavour and built successfully. After the focused run C: was 11.91 GB: no further build/test command was started.
 2. **No product edits:** new test files and a top entry in REGRESSION_LOG.md only. BUG_CARPARK.md, DESK_LOG.md, QUEUE.md, settings and installation folders are untouched.
-3. **Undo:** revert this draft's test commit; no installed files need restoring.
+3. **Undo:** revert this draft's commits; no installed files need restoring.
+## Executed evidence and restart point
+
+1. **Source:** new cases were compiled and run at `d2b7ff26cfc578b7580b90a9870c2b0b766a96bd`; final head `c181b138dfbe78b23f3d212c54213d2332b835b0` changes only the validation/checklist lines in REGRESSION_LOG.md. Product files are identical to base `e6d597c0fbc25e78118760887a70810e0890c9a9`. The fixing commits `11413b34`, `e07e99b3`, `1ea2517d` and the office-layer guard `871ad971` are verified ancestors of this base.
+2. **Files:** `Modules/Structural.Tests/Services/Bd04ScheduleRegressionTests.cs` holds eight BUG-303/BUG-315 cases; `Modules/Structural.Tests/UI/Bd04ZPreviewRegressionTests.cs` holds two BUG-858 cases. The only other changed source-repo file is the top REGRESSION_LOG.md entry, with all older text retained.
+3. **Local evidence:** `C:\ce-cx\bd04-evidence\build-net10.log` records the initial restore error; `build-hosted-net10.log` records the successful 2 min 33 s build (12 warnings / 0 errors); `focused.log` and `focused.trx` record 10/10, 0 skipped, 63 ms test duration. TRX counters were read back: total=10, executed=10, passed=10, failed=0, notExecuted=0.
+4. **Settings read-back:** CE_STRUC_SUITE/CS_Settings.json `2972CE70C514`, TIM_CE_CADTOOLS/CD_Settings.json `ACD64E79A33B`, CE_CVL_SUITE/settings.json `EFE307C4FC74`: SHA-256 prefixes match before/after for all three. Tests used a private temporary settings root through the existing assembly setup, plus temporary/log overrides under `C:\ce-cx\bd04-evidence`; no real settings file was written by this task.
+5. **Why still BLOCKED:** the focused tests prove the ten added cases pass, but the requested other build lanes and thousand-test suites remain unverified. The brief explicitly says stop below 12 GB, and 11.91 GB was observed after the focused run. Nothing was deleted to make room. This PR stays draft and is not ready for approval on build/test evidence alone.
+6. **Resume after sufficient disk space and a build slot:** keep this worktree/branch; first build Structural standalone on net48, net8.0-windows and net10.0-windows with the same safe flags/reference paths, then build the hosted test lanes explicitly and run the Structural and DesignCore net10 suites. Record actual totals and named failures; compare any failures with the base. Parent execution is still owed where practical; the present before-fix evidence is diff reasoning only. No AutoCAD start or deployment is authorised by this brief.
+7. **Executed command shape (foreground, Release):** the successful `dotnet build Modules/Structural.Tests/CE_STRUC_SUITE.Tests.csproj -f net10.0-windows` and `dotnet test` of the same project/TFM used `-p:EnableUnifiedHostAdapters=true -p:SkipDevBundle=true -nr:false --disable-build-servers` plus `_AcadRef48=C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`, `_AcadRefNet8=C:\TimOS\refs\autocad\autocad-2026-ref`, `_AcadRefNet10=C:\TimOS\refs\autocad\autocad-net8-ref`, `_AcadRef100=C:\TimOS\refs\autocad\autocad-net8-ref`. The test invocation added `--no-build --filter FullyQualifiedName~Bd04`, TRX logging and the external evidence directory.
