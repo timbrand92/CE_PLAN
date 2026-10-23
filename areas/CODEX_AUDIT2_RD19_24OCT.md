@@ -36,7 +36,7 @@
 
 5. **RD19-02 — MEDIUM — SURE, verified-by-reading: Structural starts schedule-history refresh with its switch OFF.**
 
-   **File:line:** `Modules/Structural/Plugin.cs:152`; `Modules/Structural/Services/XclmTxtCorpusIndexService.cs:32-56`, `:68-106`, `:239-254`, `:323-324`; setting `Modules/Structural/Models/UserSettings.cs:1113`; UI `Modules/Structural/UI/Dialogs/CeSettingsDialog.xaml:633`, `:731`, `:761` and `.xaml.cs:222`, `:431`.
+   **File:line:** `Modules/Structural/Plugin.cs:156`; `Modules/Structural/Services/XclmTxtCorpusIndexService.cs:32-56`, `:68-106`, `:239-254`, `:323-324`; setting `Modules/Structural/Models/UserSettings.cs:1113`; UI `Modules/Structural/UI/Dialogs/CeSettingsDialog.xaml:633`, `:731`, `:761` and `.xaml.cs:222`, `:431`.
 
    **What a drafter sees:** In CESETTINGS, untick **Schedules / Markup > Schedule reading > Background refresh enabled**, save and restart. CE still refreshes its schedule-history data if it is old or missing, even when opening an empty drawing and never using XCLMTXT. The office folders can be read and files downloaded despite the drafter's choice to stop that background work.
 
