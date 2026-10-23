@@ -1,0 +1,193 @@
+{
+  "header": {
+    "run_id": "RUN-20261023-1921-C3.0.72-probe2",
+    "started": "2026-10-23 19:21:10",
+    "finished": "2026-10-23 19:22:25",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "159758F8747CC8C6291C7624322D6A68B819CC6B335FFF677E519389441BA6D7",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 FA25EE9B4897, v3 session 099EB80E4C04, v3 allow-list 2EFE77B989B7, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 C42953CFB6A7, case_runner_lib.ps1 AF77E55105EB, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 159758F8747CC8C6291C7624322D6A68B819CC6B335FFF677E519389441BA6D7; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 23 Oct 2026 19:21 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261023-1921-C3.0.72-probe2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-23 19:21:10",
+      "finished": "2026-10-23 19:22:25",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31921131_B1.dwg",
+      "cases": [
+        "PROBE_REDO"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE_REDO",
+      "title": "probe: REDO after a typed pick of nothing",
+      "kind": "deterministic",
+      "order": 5,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe only",
+      "why_not_unit": "probe only",
+      "not_automated": [],
+      "file_sha256": "E10D9E1930DDEB5528D8D41CF37EC92D722727F70A2FFD436ADD7B19F1252D94",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "step 6 (case pick-first): pick-first FFFFFF: the pick-first set holds 0 object(s); 0 of 1 handle(s) were found in this drawing. A handle that is not found is not selected.",
+      "started": "2026-10-23 19:21:44",
+      "seconds": 17.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $l1",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"FFFFFF\"",
+          "ok": false,
+          "seconds": 1.9,
+          "evidence": "pick-first FFFFFF: the pick-first set holds 0 object(s); 0 of 1 handle(s) were found in this drawing. A handle that is not found is not selected."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 7 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 19:22:02",
+      "session_id": "RUN-20261023-1921-C3.0.72-probe2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

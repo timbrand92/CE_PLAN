@@ -1,0 +1,873 @@
+{
+  "header": {
+    "run_id": "RUN-20261023-2038-C3.0.72-p1A4",
+    "started": "2026-10-23 20:38:38",
+    "finished": "2026-10-23 20:49:16",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "6D4F108BB999545DFFF33DD2EFC3163A1FEDBE5E66783836992AB833CEA68FED",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 FBD8EB84C32A, v3 session 099EB80E4C04, v3 allow-list 459D4D9095CA, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 D82E5F84B7EE, case_runner_lib.ps1 B74B27DA8BA4, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 6D4F108BB999545DFFF33DD2EFC3163A1FEDBE5E66783836992AB833CEA68FED; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 23 Oct 2026 20:38 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 3
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261023-2038-C3.0.72-p1A4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-23 20:38:39",
+      "finished": "2026-10-23 20:49:16",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32038451_B1.dwg",
+      "cases": [
+        "R09",
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R09",
+      "title": "Double-click on the DP1 downpipe circle opens the CE Edit source window",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-859,",
+      "bug": "BUG-859",
+      "known_fail": "BUG-859",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug."
+      ],
+      "file_sha256": "E08D471171A9353A74C1B2E153CB39A51E9B294990780A61AA5569D1795D4631",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Edit source' is NOT in: Enhanced Attribute Editor",
+      "started": "2026-10-23 20:44:23",
+      "seconds": 122.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 60 -> $placed",
+          "ok": true,
+          "seconds": 36.6,
+          "evidence": "typed 'DP 3000,3000': Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 12 -> $tail",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "history: Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnification or height <23920.948>: 3000 | Command: | Comm..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55C AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C564 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"name~^DOWNPIPE\" -> $dp_blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55C DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dp_blocks handle -> $dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55C"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-part",
+          "text": "ent-part $dp outer-circle -> $part",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "outer circle of 11C55C is part block:1 (world radius 75)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 1200\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "typed '_.ZOOM _C 3000,3000 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "v3 view-read : view stored: centre 3,000.000,3,000.000 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 21.3,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-dblclick \"ent {$dp}\" -Part \"{$part}\" -> $dc",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "v3 pt-dblclick ent 11C55C: pt-dblclick: world 3,075.000,3,000.000 -> pixel 2763,706 (exact 2,763.02,706.00); cursor read-back 2763,706; view live (aim check: AutoCAD reports 1 object(s) picked: 11C55C (expected 11C55C); after Esc 0 selected)"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "windows-new",
+          "text": "windows-new $w0 -> $opened",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "new window(s): Enhanced Attribute Editor"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 3 -> $es",
+          "ok": true,
+          "seconds": 12.2,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] ; Enhanced Attribute Editor ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 16.4,
+          "evidence": "closed open CE windows: round 1: 'Enhanced Attribute Editor' <- Cancel : ok=True"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Tag: DP1\"",
+          "ok": true,
+          "expected": "command line has 'Tag: DP1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "contains $opened \"Edit source\"",
+          "ok": false,
+          "expected": "contains 'Edit source'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Edit source' is NOT in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 3,
+          "text": "not-contains $opened \"Enhanced Attribute Editor\"",
+          "ok": false,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Enhanced Attribute Editor' WAS found in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 4,
+          "text": "control $es \"Tag\" value \"DP1\"",
+          "ok": false,
+          "expected": "control 'Tag' value",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'Tag' could not be read"
+        },
+        {
+          "n": 5,
+          "text": "record $opened \"the window(s) the double-click opened\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "RECORDED, not judged: the window(s) the double-click opened = Enhanced Attribute Editor"
+        },
+        {
+          "n": 6,
+          "text": "record $placed \"what the DP command printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N...",
+          "evidence": "RECORDED, not judged: what the DP command printed = Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 96 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 37328 ms",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-23 20:46:26",
+      "session_id": "RUN-20261023-2038-C3.0.72-p1A4-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-859): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R05",
+      "title": "A finished CE command writes one outcome line to the CE log",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDCHECKCURRENT (the drawing check) runs without a window or a question, and the Civil CE log gains exactly one line 'Command outcome: CDCHECKCURRENT completed <n> ms' while it runs.",
+      "why_not_unit": "The line is written by the installed plugin when a real AutoCAD command ends; only a live run shows it reaches the log file that the log watcher reads.",
+      "not_automated": [
+        "The 'cancelled' word is recorded by case R09 (the DP command ended by Esc) and the 'refused' case is recorded by R10 (CDCHECKIGNORE with its switch off); neither word is judged, because BUG-862 says today's words are wrong for both."
+      ],
+      "file_sha256": "BDBDFD1BD95B3C96CDE57F99C492145AC1363734677639031EC1021258D03FA5",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-23 20:46:26",
+      "seconds": 9.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKCURRENT\" -Force -> $check",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed 'CDCHECKCURRENT': Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "log civil has \"Command outcome: CDCHECKCURRENT completed\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: CDCHECKCURRENT completed'",
+          "actual": "1",
+          "evidence": "log: '2026-10-23 20:46:27.943 [INFO] Command outcome: CDCHECKCURRENT completed 271 ms'"
+        },
+        {
+          "n": 2,
+          "text": "log civil count \"Command outcome: CDCHECKCURRENT\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDCHECKCURRENT'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDCHECKCURRENT' (expected 1): 2026-10-23 20:46:27.943 [INFO] Command outcome: CDCHECKCURRENT completed 271 ms"
+        },
+        {
+          "n": 3,
+          "text": "record $check \"what the command line printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically.",
+          "evidence": "RECORDED, not judged: what the command line printed = Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKCURRENT completed 271 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-23 20:46:35",
+      "session_id": "RUN-20261023-2038-C3.0.72-p1A4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R06",
+      "title": "About CE Suite shows the installed version of each suite and closes",
+      "kind": "look",
+      "order": 30,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-852 About window (spec C12)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "The About CE Suite window lists Civil Suite, Structural Suite and Suite Manager, each followed by its installed version (on the first build under test: Civil v3.0.70, Structural v1.0.121, Manager v1.1.70, always compared with the DLLs read live), no row says CONFLICT or Not loaded, and the window closes by its Close button with AutoCAD idle afterwards.",
+      "why_not_unit": "The version rows come from the DLLs AutoCAD actually loaded, and the window must open, show and close inside the real AutoCAD (runs 44 and 46 could not close it by script).",
+      "not_automated": [],
+      "file_sha256": "C783FF31387FB9E7596A0561AB58714433BF5FA14D8D262BB050428DF7DDC9EA",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-23 20:46:35",
+      "seconds": 49.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CE_VERSION\" -Force -ExpectWindow \"About CE Suite\" -> $t",
+          "ok": true,
+          "seconds": 14.3,
+          "evidence": "typed 'CE_VERSION': Command: | Command: CE_VERSION"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"About CE Suite\" -> $about",
+          "ok": true,
+          "seconds": 4.8,
+          "evidence": "ui-dump 'About CE Suite': 22 controls, tabs: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "capture",
+          "text": "capture $about R06_about -> $pic",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "picture R06_about.png 470x390, SHA-256 07A0C4C8D288, blank=False, duplicate_of="
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"About CE Suite\" \"Close\" -> $pr",
+          "ok": true,
+          "seconds": 24.5,
+          "evidence": "pressed 'Close' in /About CE Suite/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] ; CE Civil - What CE Found"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $about \"Close\" exists",
+          "ok": true,
+          "expected": "control 'Close' exists",
+          "actual": "2",
+          "evidence": "'Close' found in 'About CE Suite' (2 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "control-next $about \"Civil Suite\" \"v{$dll_civil}\"",
+          "ok": true,
+          "expected": "v3.0.72",
+          "actual": "v3.0.72",
+          "evidence": "the text after 'Civil Suite' is 'v3.0.72' (expected 'v3.0.72')"
+        },
+        {
+          "n": 3,
+          "text": "control-next $about \"Structural Suite\" \"v{$dll_struc}\"",
+          "ok": true,
+          "expected": "v1.0.122",
+          "actual": "v1.0.122",
+          "evidence": "the text after 'Structural Suite' is 'v1.0.122' (expected 'v1.0.122')"
+        },
+        {
+          "n": 4,
+          "text": "control-next $about \"Suite Manager\" \"v{$dll_mgr}\"",
+          "ok": true,
+          "expected": "v1.1.72",
+          "actual": "v1.1.72",
+          "evidence": "the text after 'Suite Manager' is 'v1.1.72' (expected 'v1.1.72')"
+        },
+        {
+          "n": 5,
+          "text": "control-text $about absent \"CONFLICT\"",
+          "ok": true,
+          "expected": "window lacks 'CONFLICT'",
+          "actual": "0",
+          "evidence": "no control of 'About CE Suite' shows 'CONFLICT'"
+        },
+        {
+          "n": 6,
+          "text": "control-text $about absent \"Not loaded\"",
+          "ok": true,
+          "expected": "window lacks 'Not loaded'",
+          "actual": "0",
+          "evidence": "no control of 'About CE Suite' shows 'Not loaded'"
+        },
+        {
+          "n": 7,
+          "text": "picture-ok $pic",
+          "ok": true,
+          "expected": "picture saved, not blank, not duplicate",
+          "actual": "blank=False duplicate=",
+          "evidence": "picture R06_about.png SHA-256 07A0C4C8D288 blank=False duplicate_of="
+        },
+        {
+          "n": 8,
+          "text": "window-closed $pr",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"About CE Suite\"",
+          "ok": true,
+          "expected": "does not contain 'About CE Suite'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'About CE Suite' is absent from: Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] | CE Civil - What CE Found"
+        }
+      ],
+      "pictures": [
+        {
+          "path": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261023-2038-C3.0.72-p1A4\\pictures\\R06_about.png",
+          "sha256": "07A0C4C8D288CB406AF60B6F33E7CA005D680184E9988D58147DCC13D36DCC68",
+          "width": 470,
+          "height": 390,
+          "blank": false,
+          "duplicate_of": null,
+          "dpi": 96,
+          "window_title": "About CE Suite",
+          "taken": "2026-10-23 20:46:54",
+          "method": "PrintWindow of the window handle read by UI Automation"
+        }
+      ],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 20:47:25",
+      "session_id": "RUN-20261023-2038-C3.0.72-p1A4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)",
+          "look case: a Codex look at the picture has not been recorded (RULES 5.7: a window is never accepted by a machine)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": false
+      },
+      "look_note": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261023-2038-C3.0.72-p1A4\\looks\\R06.md"
+    },
+    {
+      "id": "R07",
+      "title": "The Settings window opens, Cancel closes it, and Tim's four settings files are unchanged",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "Settings window (spec C13 and C14, reduced to open and Cancel)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDS opens 'Creative Engineering | Settings (CDS)' with the tabs Drafting, Pipes and Pits, Design, Survey, Display, Advanced, Newer tools and Fixes, a Cancel and a Save button, and the line 'No changes. Everything shown is saved.'; Cancel closes it; the four settings files have the same SHA-256 as before the window was opened (checked BEFORE the guard's restore runs).",
+      "why_not_unit": "The window loads Tim's real settings file in real AutoCAD; only a live run shows that opening it and pressing Cancel writes nothing.",
+      "not_automated": [
+        "Changing a value and pressing Cancel (spec C14) and the per-tab look (C13): this case proves open, read, Cancel and unchanged files only."
+      ],
+      "file_sha256": "1BC27A975FA980BE7E5C9940104F61698280140B70FE84DC556D2244127A6052",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-23 20:47:25",
+      "seconds": 85.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t",
+          "ok": true,
+          "seconds": 21.0,
+          "evidence": "typed 'CDS': Command: | Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set",
+          "ok": true,
+          "seconds": 10.5,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr",
+          "ok": true,
+          "seconds": 38.6,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] ; CE Civil - What CE Found"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $set \"AdvancedSettingsDialog.CancelCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.CancelCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.CancelCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "control $set \"AdvancedSettingsDialog.OkCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.OkCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.OkCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 3,
+          "text": "control $set \"Settings, Settings Tabs, Drafting\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Drafting' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Drafting' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 4,
+          "text": "control $set \"Settings, Settings Tabs, Pipes and Pits\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Pipes and Pits' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Pipes and Pits' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 5,
+          "text": "control $set \"Settings, Settings Tabs, Advanced\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Advanced' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Advanced' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 6,
+          "text": "control-text $set has \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window shows 'No changes. Everything shown is saved.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 7,
+          "text": "window-closed $pr",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win_end \"Settings (CDS)\"",
+          "ok": true,
+          "expected": "does not contain 'Settings (CDS)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'Settings (CDS)' is absent from: Autodesk AutoCAD 2027 - [CLDV32038451_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 9,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 6 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDS completed 37611 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-23 20:48:50",
+      "session_id": "RUN-20261023-2038-C3.0.72-p1A4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

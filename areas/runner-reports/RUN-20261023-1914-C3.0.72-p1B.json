@@ -1,0 +1,950 @@
+{
+  "header": {
+    "run_id": "RUN-20261023-1914-C3.0.72-p1B",
+    "started": "2026-10-23 19:14:18",
+    "finished": "2026-10-23 19:18:45",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "8CF711D754D4CAE136BAD2B90A44AA88BC2590F149494B23D2F200548CB20D9A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 FA25EE9B4897, v3 session 099EB80E4C04, v3 allow-list 2EFE77B989B7, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 C42953CFB6A7, case_runner_lib.ps1 AF77E55105EB, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 8CF711D754D4CAE136BAD2B90A44AA88BC2590F149494B23D2F200548CB20D9A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 23 Oct 2026 19:14 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 1,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261023-1914-C3.0.72-p1B-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-23 19:14:18",
+      "finished": "2026-10-23 19:18:45",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31914211_B1.dwg",
+      "cases": [
+        "R10",
+        "R08",
+        "R10_BROKEN",
+        "R08_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R10",
+      "title": "CDCHECKIGNORE with the switch off says so in one line and changes nothing",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the switch off, typing CDCHECKIGNORE prints 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' at once, asks no question, and leaves no window or prompt behind; the four settings files are unchanged.",
+      "why_not_unit": "The refusal depends on the switch value CE read from Tim's real settings file when AutoCAD started, and on the real command line showing the one line with no question after it.",
+      "not_automated": [
+        "The 'Command outcome' word for this refusal is recorded, not judged: BUG-862 says it is logged 'completed' and should say 'refused'. BUG-863 (the project record being saved on the off path) is not checked here.",
+        "The switch is read from Tim's file as it is (off). The ON paths of CDCHECKIGNORE (spec C17 to C19) need a settings profile and are not in this case."
+      ],
+      "file_sha256": "257652544A2D3CDC204FBA667D6051830E7541EF7EB88E254314313D977DB7CE",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-23 19:14:56",
+      "seconds": 8.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKIGNORE\" -Force -> $ig",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CDCHECKIGNORE': Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31914211_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $ig \"Ignoring a finding is switched off in CE Settings. Nothing was changed.\"",
+          "ok": true,
+          "expected": "contains 'Ignoring a finding is switched off in CE Settings. Nothing was changed.'",
+          "actual": "Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed.",
+          "evidence": "found 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' in: Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $ig \"Specify\"",
+          "ok": true,
+          "expected": "does not contain 'Specify'",
+          "actual": "Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed.",
+          "evidence": "'Specify' is absent from: Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $win_end \"Ignore\"",
+          "ok": true,
+          "expected": "does not contain 'Ignore'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31914211_B1.dwg]",
+          "evidence": "'Ignore' is absent from: Autodesk AutoCAD 2027 - [CLDV31914211_B1.dwg]"
+        },
+        {
+          "n": 4,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514"
+        },
+        {
+          "n": 5,
+          "text": "log civil count \"Command outcome: CDCHECKIGNORE\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDCHECKIGNORE'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDCHECKIGNORE' (expected 1): 2026-10-23 19:14:58.028 [INFO] Command outcome: CDCHECKIGNORE refused 4 ms"
+        },
+        {
+          "n": 6,
+          "text": "record $ig \"what the command line printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed.",
+          "evidence": "RECORDED, not judged: what the command line printed = Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKIGNORE refused 4 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-23 19:15:04",
+      "session_id": "RUN-20261023-1914-C3.0.72-p1B-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R08",
+      "title": "REDO still works after U and a pick of a pit, five times in a row",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-861 (spec C31)",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Five times: draw a line, U, pick pit P3 (handle 109D56), wait 12 seconds, REDO: the command line says 'Everything has been redone' every time, never 'Nothing to redo'.",
+      "why_not_unit": "Whether REDO survives depends on what CE does in the seconds after a pick (the Inspector refresh) inside a real AutoCAD undo stack.",
+      "not_automated": [
+        "The right-click CE menu half of BUG-861 and BUG-416 (the right-click menu is not read yet), the mouse pick instead of the typed pick, and a second open drawing. This case is the one-drawing, typed-pick control."
+      ],
+      "file_sha256": "2059C96F47946D769FCADB74E2A4AF004A18BAABDF2309DFC5C247F140732C7B",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo",
+      "started": "2026-10-23 19:15:04",
+      "seconds": 169.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line1",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo2",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line3",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u3",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo3",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line4",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u4",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo4",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line5",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u5",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo5",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $redo1 \"Everything has been redone\"",
+          "ok": false,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 2,
+          "text": "contains $redo2 \"Everything has been redone\"",
+          "ok": false,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 3,
+          "text": "contains $redo3 \"Everything has been redone\"",
+          "ok": false,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 4,
+          "text": "contains $redo4 \"Everything has been redone\"",
+          "ok": false,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 5,
+          "text": "contains $redo5 \"Everything has been redone\"",
+          "ok": false,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $redo1 \"Nothing to redo\"",
+          "ok": false,
+          "expected": "does not contain 'Nothing to redo'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Nothing to redo' WAS found in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 7,
+          "text": "record $u1 \"what the first U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | LINE",
+          "evidence": "RECORDED, not judged: what the first U printed = Command: | Command: U | LINE"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 71 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 19:17:54",
+      "session_id": "RUN-20261023-1914-C3.0.72-p1B-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R10_BROKEN",
+      "title": "BROKEN VARIANT of R10: expects the switch to be ON (must FAIL)",
+      "kind": "deterministic",
+      "order": 90,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R10 (Opus review finding 32)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R10",
+      "expected": "This variant is wrong on purpose: it expects CDCHECKIGNORE to ask which finding to ignore. With the switch off CE refuses in one line, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "65154DAAC404CAA6DCD12006251231948362ED8F56674293D2CD0BE78EDAD416",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Which finding' is NOT in: Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed.",
+      "started": "2026-10-23 19:17:54",
+      "seconds": 8.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKIGNORE\" -Force -> $ig",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CDCHECKIGNORE': Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $ig \"Which finding\"",
+          "ok": false,
+          "expected": "contains 'Which finding'",
+          "actual": "Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed.",
+          "evidence": "'Which finding' is NOT in: Command: | Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKIGNORE refused 4 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-23 19:18:02",
+      "session_id": "RUN-20261023-1914-C3.0.72-p1B-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R08_BROKEN",
+      "title": "BROKEN VARIANT of R08: expects REDO to find nothing (must FAIL)",
+      "kind": "deterministic",
+      "order": 91,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R08 (Opus review finding 32)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R08",
+      "expected": "This variant is wrong on purpose: after a line, U, a pick and REDO it expects 'Nothing to redo'. REDO works, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "189BE63FF5202DAAA86B1C179E4F544AD3FBA6803635F50F68C4D0E6CCC33F68",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-23 19:18:02",
+      "seconds": 27.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line1",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed '_.LINE 5000,5000 6000,5000': Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 5000,5000 | Specify next point or [Undo]: 6000,5000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $redo1 \"Nothing to redo\"",
+          "ok": true,
+          "expected": "contains 'Nothing to redo'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "found 'Nothing to redo' in: Command: | Command: REDO | Nothing to redo"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 11 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 19:18:29",
+      "session_id": "RUN-20261023-1914-C3.0.72-p1B-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 0)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

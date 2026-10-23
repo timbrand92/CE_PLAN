@@ -1,0 +1,249 @@
+{
+  "header": {
+    "run_id": "RUN-20261023-2005-C3.0.72-p1C4",
+    "started": "2026-10-23 20:05:51",
+    "finished": "2026-10-23 20:11:09",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "",
+    "pack_sha256": "D2ACD76D8EDC136E23BF58CA0D43B59324D0C821CDCE27B535C7B9C4CB925448",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 FBD8EB84C32A, v3 session 099EB80E4C04, v3 allow-list 459D4D9095CA, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 C42953CFB6A7, case_runner_lib.ps1 F9FDFC668670, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 1 shared setup(s); pack SHA-256 D2ACD76D8EDC136E23BF58CA0D43B59324D0C821CDCE27B535C7B9C4CB925448; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 23 Oct 2026 20:05 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 4,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261023-2005-C3.0.72-p1C4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-23 20:05:52",
+      "finished": "2026-10-23 20:11:09",
+      "result": "BLOCKED",
+      "blocked": null,
+      "error": "launch failed: AutoCAD did not become idle on the drawing within 240 s (AutoCAD is starting (drawing not active yet))",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32005571_B1.dwg",
+      "cases": [
+        "R02",
+        "R03",
+        "R01",
+        "R04"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R02",
+      "title": "A new pipe joins the only pit at its end",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD draws a pipe from the new pit P8; the command line says 'Inserted flow arrow. Flow: P8 -> Open end' and 'End is free: open end flagged, connect it later.' once (the far end is free by design); the pipe's first vertex lies inside the pit's catch reach; the line never says the flow starts from an open end (the BUG-560 drift).",
+      "why_not_unit": "The join is made by the live CD point landing against the real pit in the drawing.",
+      "not_automated": [
+        "Pit Schedule row P8 shows outlet IL 18.000 and the pipe's diameter (D03 assertion 3): the runner cannot read the Pit Schedule rows yet. Not part of this case.",
+        "The pit outline is not read. The catch reach is approximated as a circle of 641 mm around the pit insertion point (half the 600 x 900 default pit diagonal 541 mm plus the 100 mm catch)."
+      ],
+      "file_sha256": "5C427BD8C98BBD350A0B3CB502EAFD7A8C6F2B53BAFC4028B972AD2EDFFD3448",
+      "plan_item": "UX-PIPE-02 (daily case D03)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: launch failed: AutoCAD did not become idle on the drawing within 240 s (AutoCAD is starting (drawing not active yet))",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "session_id": "RUN-20261023-2005-C3.0.72-p1C4-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R03",
+      "title": "One IL text at each pipe end",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD writes exactly two invert-level texts for the new pipe: 'IL 18.000' within 1500 mm of pit P8 (150000,-80000) and 'IL 17.900' nearer the open end (170000,-80000) than P8; no end has a second IL text.",
+      "why_not_unit": "The two texts are placed against the real pit and pipe geometry in the drawing.",
+      "not_automated": [
+        "Whether a leader line is drawn is recorded by the setup's object list only; none is expected because that nuance is not built."
+      ],
+      "file_sha256": "A3884B9981893526324E8F348F84BAF0FA1E369F4FAFDF856EB7FAB62D0722BE",
+      "plan_item": "UX-CPLAN-26 (daily case D12)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: launch failed: AutoCAD did not become idle on the drawing within 240 s (AutoCAD is starting (drawing not active yet))",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "session_id": "RUN-20261023-2005-C3.0.72-p1C4-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R01",
+      "title": "PIT and CD keep placing until Esc, and Esc keeps what was placed",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After PIT and CD each places one object and offers the next, the command line says so; each Esc ends it with the 'Stopped' line and keeps what was placed (one new pit at 150000,-80000, at least one new pipe polyline, texts and arrow); no second New Pit or New Pipe window opens after an Esc; ONE U takes away the new pipe, its IL texts and its arrow and leaves the pit; the Civil log holds one outcome line for PIT and one for CD (the word is recorded, not judged: BUG-862).",
+      "why_not_unit": "The run is a chain of real AutoCAD command instances queued one behind another. Only live AutoCAD shows the next prompt, the Esc ending and what U takes back.",
+      "not_automated": [
+        "Exactly one new pipe object: the composition of the new objects (how many polylines, blocks, texts) has never been read, so it is recorded here and only 'at least one' is asserted.",
+        "The 'Command outcome' words for PIT and CD are recorded, not judged (BUG-862: Esc-ended placements log 'cancelled')."
+      ],
+      "file_sha256": "B5D037F05F67DA3825D056658784A04FF61FC42B4B962DC5F6568B0B503E6280",
+      "plan_item": "UX-STD-01b (daily case D01)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: launch failed: AutoCAD did not become idle on the drawing within 240 s (AutoCAD is starting (drawing not active yet))",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "session_id": "RUN-20261023-2005-C3.0.72-p1C4-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R04",
+      "title": "CE never saves the drawing: the file stays unchanged until the drafter saves",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After placing a pit and a pipe and running CDSYNC, CDRECOVERINVERTS and opening and closing PITSCHEDULE, the drawing file on disk has the same SHA-256 and last-written time as when AutoCAD opened it, and the only new files beside it are CE's own _PRE_C7_ backups.",
+      "why_not_unit": "Only the real file on disk after a real AutoCAD session shows whether anything wrote to it.",
+      "not_automated": [
+        "This case runs AFTER R01 has undone its pipe (U must be the last undoable command in R01), so CDSYNC and CDRECOVERINVERTS work on the fixture drawing itself; the checks only prove they ran and that the file on disk did not change.",
+        "CDREBUILD wording 'it does not save the drawing itself' (D18 assertion 2): CDREBUILD was dropped from this case because it has never been driven and its prompts are unknown."
+      ],
+      "file_sha256": "84202E61BFA4E28C4F9AF3D9F4D55527C300BE6A4904ADB2C8735B288B3889AB",
+      "plan_item": "UX-STD-03 (daily case D18)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: launch failed: AutoCAD did not become idle on the drawing within 240 s (AutoCAD is starting (drawing not active yet))",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "session_id": "RUN-20261023-2005-C3.0.72-p1C4-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

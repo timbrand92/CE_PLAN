@@ -1,0 +1,991 @@
+{
+  "header": {
+    "run_id": "RUN-20261023-1731-C3.0.71-a2",
+    "started": "2026-10-23 17:31:06",
+    "finished": "2026-10-23 17:55:48",
+    "build": {
+      "civil": {
+        "product_version": "3.0.71+88bd62f704b66a7e156da572c212812dc4b0c61a",
+        "file_version": "3.0.71.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.71+88bd62f704b66a7e156da572c212812dc4b0c61a",
+        "file_version": "1.1.71.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.71+88bd62f7 / struc 1.0.122+e6d597c0 / mgr 1.1.71+88bd62f7",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AB8EF98CBC583175B159E51B04A1B42281E410FB4796D2A8CD76B771443720A1",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.71+88bd62f704b66a7e156da572c212812dc4b0c61a; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.71+88bd62f704b66a7e156da572c212812dc4b0c61a",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 2725C4FC2B91, v3 session 099EB80E4C04, v3 allow-list D991C99EA895, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B7F431182925, case_runner_lib.ps1 C0CBDDCE4F20, case_selftest_offline.ps1 D155F63EFBFD",
+      "Pack: 12 case file(s) plus 1 shared setup(s); pack SHA-256 AB8EF98CBC583175B159E51B04A1B42281E410FB4796D2A8CD76B771443720A1; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json 9D27B04C87C3; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 23 Oct 2026 17:31 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 1,
+    "BLOCKED": 10,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-23 17:40:28",
+      "finished": "2026-10-23 17:48:07",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31740321_B1.dwg",
+      "cases": [
+        "R09",
+        "R05",
+        "R06",
+        "R07",
+        "R10",
+        "R08",
+        "R10_BROKEN",
+        "R08_BROKEN"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": null,
+        "max_corrected_px": null,
+        "why": "east edge : the click failed: the shared lock is not held (state: none). Take it first: session-run does, or v2 'lock acquire'.",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-23 17:48:07",
+      "finished": "2026-10-23 17:52:50",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31748102_B1.dwg",
+      "cases": [
+        "R02",
+        "R03",
+        "R01",
+        "R04"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s3",
+      "phase": "rerun",
+      "session_no": 3,
+      "started": "2026-10-23 17:52:50",
+      "finished": "2026-10-23 17:55:48",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31752533_B1.dwg",
+      "cases": [
+        "R02"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "R09",
+      "title": "Double-click on the DP1 downpipe circle opens the CE Edit source window",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-859,",
+      "bug": "BUG-859",
+      "known_fail": "BUG-859",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug."
+      ],
+      "file_sha256": "F266AFF2D35620929F4541E5B2931821B94D99835D3EB53D71155CD9EFCD1C69",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "step 6 (case type): typed 'DP 3000,3000' but the prompt 'Pick the next DP' was not seen",
+      "started": "2026-10-23 17:41:59",
+      "seconds": 67.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -> $placed",
+          "ok": false,
+          "seconds": 29.0,
+          "evidence": "typed 'DP 3000,3000' but the prompt 'Pick the next DP' was not seen"
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 90 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:43:07",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-859): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R05",
+      "title": "A finished CE command writes one outcome line to the CE log",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDCHECKCURRENT (the drawing check) runs without a window or a question, and the Civil CE log gains exactly one line 'Command outcome: CDCHECKCURRENT completed <n> ms' while it runs.",
+      "why_not_unit": "The line is written by the installed plugin when a real AutoCAD command ends; only a live run shows it reaches the log file that the log watcher reads.",
+      "not_automated": [
+        "The 'cancelled' word is recorded by case R09 (the DP command ended by Esc) and the 'refused' case is recorded by R10 (CDCHECKIGNORE with its switch off); neither word is judged, because BUG-862 says today's words are wrong for both."
+      ],
+      "file_sha256": "BDBDFD1BD95B3C96CDE57F99C492145AC1363734677639031EC1021258D03FA5",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-23 17:43:07",
+      "seconds": 38.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKCURRENT\" -Force -> $check",
+          "ok": false,
+          "seconds": 5.0,
+          "evidence": "type refused or failed: BUSY: a CE command is waiting at a prompt (\"[CE] Pick the next DP, or press Esc to stop.\"), so AutoCAD refuses typed text. Nothing was typed. Do not retry type: use answer \"<digits>\" for the next answer, or esc to stop t..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:43:46",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R06",
+      "title": "About CE Suite shows the installed version of each suite and closes",
+      "kind": "look",
+      "order": 30,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-852 About window (spec C12)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "The About CE Suite window lists Civil Suite, Structural Suite and Suite Manager, each followed by its installed version (on the first build under test: Civil v3.0.70, Structural v1.0.121, Manager v1.1.70, always compared with the DLLs read live), no row says CONFLICT or Not loaded, and the window closes by its Close button with AutoCAD idle afterwards.",
+      "why_not_unit": "The version rows come from the DLLs AutoCAD actually loaded, and the window must open, show and close inside the real AutoCAD (runs 44 and 46 could not close it by script).",
+      "not_automated": [],
+      "file_sha256": "C783FF31387FB9E7596A0561AB58714433BF5FA14D8D262BB050428DF7DDC9EA",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-23 17:43:46",
+      "seconds": 37.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CE_VERSION\" -Force -ExpectWindow \"About CE Suite\" -> $t",
+          "ok": false,
+          "seconds": 5.0,
+          "evidence": "type refused or failed: BUSY: a CE command is waiting at a prompt (\"[CE] Pick the next DP, or press Esc to stop.\"), so AutoCAD refuses typed text. Nothing was typed. Do not retry type: use answer \"<digits>\" for the next answer, or esc to stop t..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:44:24",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      },
+      "look_note": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261023-1731-C3.0.71-a2\\looks\\R06.md"
+    },
+    {
+      "id": "R07",
+      "title": "The Settings window opens, Cancel closes it, and Tim's four settings files are unchanged",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDS opens 'Creative Engineering | Settings (CDS)' with the tabs Drafting, Pipes and Pits, Design, Survey, Display, Advanced, Newer tools and Fixes, a Cancel and a Save button, and the line 'No changes. Everything shown is saved.'; Cancel closes it; the four settings files have the same SHA-256 as before the window was opened (checked BEFORE the guard's restore runs).",
+      "why_not_unit": "The window loads Tim's real settings file in real AutoCAD; only a live run shows that opening it and pressing Cancel writes nothing.",
+      "not_automated": [
+        "Changing a value and pressing Cancel (spec C14) and the per-tab look (C13): this case proves open, read, Cancel and unchanged files only."
+      ],
+      "file_sha256": "E33D33CA5A961802FF8C70FFBF1FD11127308B3703B1F56CFCD29FC07547EF05",
+      "plan_item": "Settings window (spec C13 and C14, reduced to open and Cancel)",
+      "result": "BLOCKED",
+      "blocked": "the session was stopped after two tool faults in a row; this case was not tried",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R10",
+      "title": "CDCHECKIGNORE with the switch off says so in one line and changes nothing",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the switch off, typing CDCHECKIGNORE prints 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' at once, asks no question, and leaves no window or prompt behind; the four settings files are unchanged.",
+      "why_not_unit": "The refusal depends on the switch value CE read from Tim's real settings file when AutoCAD started, and on the real command line showing the one line with no question after it.",
+      "not_automated": [
+        "The 'Command outcome' word for this refusal is recorded, not judged: BUG-862 says it is logged 'completed' and should say 'refused'. BUG-863 (the project record being saved on the off path) is not checked here.",
+        "The switch is read from Tim's file as it is (off). The ON paths of CDCHECKIGNORE (spec C17 to C19) need a settings profile and are not in this case."
+      ],
+      "file_sha256": "257652544A2D3CDC204FBA667D6051830E7541EF7EB88E254314313D977DB7CE",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-23 17:44:24",
+      "seconds": 37.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKIGNORE\" -Force -> $ig",
+          "ok": false,
+          "seconds": 4.9,
+          "evidence": "type refused or failed: BUSY: a CE command is waiting at a prompt (\"[CE] Pick the next DP, or press Esc to stop.\"), so AutoCAD refuses typed text. Nothing was typed. Do not retry type: use answer \"<digits>\" for the next answer, or esc to stop t..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:45:01",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R08",
+      "title": "REDO still works after U and a pick of a pit, five times in a row",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-861 (spec C31)",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Five times: draw a line, U, pick pit P3 (handle 109D56), wait 12 seconds, REDO: the command line says 'Everything has been redone' every time, never 'Nothing to redo'.",
+      "why_not_unit": "Whether REDO survives depends on what CE does in the seconds after a pick (the Inspector refresh) inside a real AutoCAD undo stack.",
+      "not_automated": [
+        "The right-click CE menu half of BUG-861 and BUG-416 (the right-click menu is not read yet), the mouse pick instead of the typed pick, and a second open drawing. This case is the one-drawing, typed-pick control."
+      ],
+      "file_sha256": "2059C96F47946D769FCADB74E2A4AF004A18BAABDF2309DFC5C247F140732C7B",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-23 17:45:01",
+      "seconds": 37.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line1",
+          "ok": false,
+          "seconds": 4.9,
+          "evidence": "type refused or failed: BUSY: a CE command is waiting at a prompt (\"[CE] Pick the next DP, or press Esc to stop.\"), so AutoCAD refuses typed text. Nothing was typed. Do not retry type: use answer \"<digits>\" for the next answer, or esc to stop t..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:45:39",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R10_BROKEN",
+      "title": "BROKEN VARIANT of R10: expects the switch to be ON (must FAIL)",
+      "kind": "deterministic",
+      "order": 90,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R10",
+      "expected": "This variant is wrong on purpose: it expects CDCHECKIGNORE to ask which finding to ignore. With the switch off CE refuses in one line, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "65154DAAC404CAA6DCD12006251231948362ED8F56674293D2CD0BE78EDAD416",
+      "plan_item": "red-before-green proof for R10 (Opus review finding 32)",
+      "result": "BLOCKED",
+      "blocked": "the session was stopped after two tool faults in a row; this case was not tried",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R08_BROKEN",
+      "title": "BROKEN VARIANT of R08: expects REDO to find nothing (must FAIL)",
+      "kind": "deterministic",
+      "order": 91,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R08 (Opus review finding 32)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R08",
+      "expected": "This variant is wrong on purpose: after a line, U, a pick and REDO it expects 'Nothing to redo'. REDO works, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "189BE63FF5202DAAA86B1C179E4F544AD3FBA6803635F50F68C4D0E6CCC33F68",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-23 17:45:39",
+      "seconds": 37.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 5000,5000 6000,5000\" -> $line1",
+          "ok": false,
+          "seconds": 4.9,
+          "evidence": "type refused or failed: BUSY: a CE command is waiting at a prompt (\"[CE] Pick the next DP, or press Esc to stop.\"), so AutoCAD refuses typed text. Nothing was typed. Do not retry type: use answer \"<digits>\" for the next answer, or esc to stop t..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:46:16",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R02",
+      "title": "A new pipe joins the only pit at its end",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-PIPE-02 (daily case D03)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD draws a pipe from the new pit P8; the command line says 'Inserted flow arrow. Flow: P8 -> Open end' and 'End is free: open end flagged, connect it later.' once (the far end is free by design); the pipe's first vertex lies inside the pit's catch reach; the line never says the flow starts from an open end (the BUG-560 drift).",
+      "why_not_unit": "The join is made by the live CD point landing against the real pit in the drawing.",
+      "not_automated": [
+        "Pit Schedule row P8 shows outlet IL 18.000 and the pipe's diameter (D03 assertion 3): the runner cannot read the Pit Schedule rows yet. Not part of this case.",
+        "The pit outline is not read. The catch reach is approximated as a circle of 641 mm around the pit insertion point (half the 600 x 900 default pit diagonal 541 mm plus the 100 mm catch)."
+      ],
+      "file_sha256": "9C215A63BAEC3E7CA3456DDAB3A9299297658665D36AA3AE2048FB3BF5CBD770",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "step 5 (setup ui2-press): ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)",
+      "started": "2026-10-23 17:48:36",
+      "seconds": 54.3,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 17:48:58",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31748102_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui2-press",
+          "text": "ui2-press \"New Pit\" \"Continue placement\" -Secs 120 -> $pit_t2",
+          "ok": false,
+          "seconds": 6.7,
+          "evidence": "ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)"
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 17 new line(s) while the case ran, 0 with [ERR]",
+        "re-run in session RUN-20261023-1731-C3.0.71-a2-s3 also FAILED: step 5 (setup ui2-press): ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:49:30",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s2",
+      "attempts": [
+        {
+          "session_id": "RUN-20261023-1731-C3.0.71-a2-s2",
+          "result": "FAIL"
+        },
+        {
+          "session_id": "RUN-20261023-1731-C3.0.71-a2-s3",
+          "result": "FAIL"
+        }
+      ],
+      "rerun": {
+        "id": "R02",
+        "title": "A new pipe joins the only pit at its end",
+        "kind": "deterministic",
+        "order": 20,
+        "slot": "fresh",
+        "fixture": "DRV1_B1",
+        "plan_item": "UX-PIPE-02 (daily case D03)",
+        "bug": "",
+        "known_fail": "",
+        "reviewed_against": "",
+        "variant_of": "",
+        "expected": "CD draws a pipe from the new pit P8; the command line says 'Inserted flow arrow. Flow: P8 -> Open end' and 'End is free: open end flagged, connect it later.' once (the far end is free by design); the pipe's first vertex lies inside the pit's catch reach; the line never says the flow starts from an open end (the BUG-560 drift).",
+        "why_not_unit": "The join is made by the live CD point landing against the real pit in the drawing.",
+        "not_automated": [
+          "Pit Schedule row P8 shows outlet IL 18.000 and the pipe's diameter (D03 assertion 3): the runner cannot read the Pit Schedule rows yet. Not part of this case.",
+          "The pit outline is not read. The catch reach is approximated as a circle of 641 mm around the pit insertion point (half the 600 x 900 default pit diagonal 541 mm plus the 100 mm catch)."
+        ],
+        "file_sha256": "9C215A63BAEC3E7CA3456DDAB3A9299297658665D36AA3AE2048FB3BF5CBD770",
+        "result": "FAIL",
+        "blocked": null,
+        "first_failure": "step 5 (setup ui2-press): ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)",
+        "started": "2026-10-23 17:53:19",
+        "seconds": 44.1,
+        "setup": "SETUP-P8",
+        "setup_note": "shared setup SETUP-P8 run here for the first time at 17:53:32",
+        "steps": [
+          {
+            "n": 1,
+            "phase": "setup",
+            "verb": "copy-info",
+            "text": "copy-info -> $copy0",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "copy CLDV31752533_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+          },
+          {
+            "n": 2,
+            "phase": "setup",
+            "verb": "ms-count",
+            "text": "ms-count -> $n0",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "model space holds 1034 objects"
+          },
+          {
+            "n": 3,
+            "phase": "setup",
+            "verb": "type",
+            "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+            "ok": true,
+            "seconds": 6.4,
+            "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+          },
+          {
+            "n": 4,
+            "phase": "setup",
+            "verb": "ui2-set",
+            "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+            "ok": true,
+            "seconds": 3.2,
+            "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+          },
+          {
+            "n": 5,
+            "phase": "setup",
+            "verb": "ui2-press",
+            "text": "ui2-press \"New Pit\" \"Continue placement\" -Secs 120 -> $pit_t2",
+            "ok": false,
+            "seconds": 2.9,
+            "evidence": "ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)"
+          }
+        ],
+        "assertions": [],
+        "pictures": [],
+        "observations": [
+          "Civil CE log: 17 new line(s) while the case ran, 0 with [ERR]"
+        ],
+        "error": null,
+        "finished": "2026-10-23 17:54:03",
+        "session_id": "RUN-20261023-1731-C3.0.71-a2-s3"
+      },
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R03",
+      "title": "One IL text at each pipe end",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-26 (daily case D12)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD writes exactly two invert-level texts for the new pipe: 'IL 18.000' within 1500 mm of pit P8 (150000,-80000) and 'IL 17.900' nearer the open end (170000,-80000) than P8; no end has a second IL text.",
+      "why_not_unit": "The two texts are placed against the real pit and pipe geometry in the drawing.",
+      "not_automated": [
+        "Whether a leader line is drawn is recorded by the setup's object list only; none is expected because that nuance is not built."
+      ],
+      "file_sha256": "A3884B9981893526324E8F348F84BAF0FA1E369F4FAFDF856EB7FAB62D0722BE",
+      "result": "BLOCKED",
+      "blocked": "the shared setup SETUP-P8 did not finish in case R02: step 5 (setup ui2-press): ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)",
+      "first_failure": null,
+      "started": "2026-10-23 17:49:30",
+      "seconds": 31.8,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:50:02",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s2",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R01",
+      "title": "PIT and CD keep placing until Esc, and Esc keeps what was placed",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-01b (daily case D01)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After PIT and CD each places one object and offers the next, the command line says so; each Esc ends it with the 'Stopped' line and keeps what was placed (one new pit at 150000,-80000, at least one new pipe polyline, texts and arrow); no second New Pit or New Pipe window opens after an Esc; ONE U takes away the new pipe, its IL texts and its arrow and leaves the pit; the Civil log holds one outcome line for PIT and one for CD (the word is recorded, not judged: BUG-862).",
+      "why_not_unit": "The run is a chain of real AutoCAD command instances queued one behind another. Only live AutoCAD shows the next prompt, the Esc ending and what U takes back.",
+      "not_automated": [
+        "Exactly one new pipe object: the composition of the new objects (how many polylines, blocks, texts) has never been read, so it is recorded here and only 'at least one' is asserted.",
+        "The 'Command outcome' words for PIT and CD are recorded, not judged (BUG-862: Esc-ended placements log 'cancelled')."
+      ],
+      "file_sha256": "B46DF2E8E2494365CEC2956F70C1C64DD0B135634B3B304732DB8DCBE6EB9660",
+      "result": "BLOCKED",
+      "blocked": "the shared setup SETUP-P8 did not finish in case R02: step 5 (setup ui2-press): ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)",
+      "first_failure": null,
+      "started": "2026-10-23 17:50:02",
+      "seconds": 31.8,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:50:34",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s2",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R04",
+      "title": "CE never saves the drawing: the file stays unchanged until the drafter saves",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-03 (daily case D18)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After placing a pit and a pipe and running CDSYNC, CDRECOVERINVERTS and opening and closing PITSCHEDULE, the drawing file on disk has the same SHA-256 and last-written time as when AutoCAD opened it, and the only new files beside it are CE's own _PRE_C7_ backups.",
+      "why_not_unit": "Only the real file on disk after a real AutoCAD session shows whether anything wrote to it.",
+      "not_automated": [
+        "This case runs AFTER R01 has undone its pipe (U must be the last undoable command in R01), so CDSYNC and CDRECOVERINVERTS work on the fixture drawing itself; the checks only prove they ran and that the file on disk did not change.",
+        "CDREBUILD wording 'it does not save the drawing itself' (D18 assertion 2): CDREBUILD was dropped from this case because it has never been driven and its prompts are unknown."
+      ],
+      "file_sha256": "595FFF4F5FDD24782355F09B04634CBA90BB8F29111ED241827EC9B7716F805E",
+      "result": "BLOCKED",
+      "blocked": "the shared setup SETUP-P8 did not finish in case R02: step 5 (setup ui2-press): ui press 'New Pit' 'Continue placement': no button named or with id 'Continue placement' in window 'New Pit' (see: ui tree)",
+      "first_failure": null,
+      "started": "2026-10-23 17:50:34",
+      "seconds": 31.8,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-23 17:51:05",
+      "session_id": "RUN-20261023-1731-C3.0.71-a2-s2",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}
