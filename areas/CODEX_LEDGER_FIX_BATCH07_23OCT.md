@@ -3,9 +3,9 @@
 ## ANSWER FIRST
 
 1. **BUG-903 — SKIPPED.** Needs Tim's engineering ruling on the minimum-grade ladder and consistent cover limits. Ledger F-045 and QUESTIONS_FOR_MONDAY.md (22 October late, item 5) leave the grade ladder undecided. PR: none; tests added/run: 0; totals not measured.
-2. **BUG-904 — IN PROGRESS.** Cause confirmed at Civil base 88bd62f704b66a7e156da572c212812dc4b0c61a: the duration ladder starts at five minutes and warns at its longest boundary only. Implement the brief's warning option when the shortest storm governs; retain rainfall, engineering values and calculated storage. Branch cx2/bug-904-storm-peak.
+2. **BUG-904 — DRAFT PR opened; checks pending.** Cause confirmed at Civil base 88bd62f704b66a7e156da572c212812dc4b0c61a: the duration ladder starts at five minutes and warns at its longest boundary only. Implement the brief's warning option when the shortest storm governs; retain rainfall, engineering values and calculated storage. Branch cx2/bug-904-storm-peak; pushed head cb53d0f897afcf79c95e70fb46b5ff4d6ccbc5c9. Six new test cases; full totals pending.
 3. **BUG-905 — SKIPPED.** Needs Tim's engineering word on the hard-ground runoff factor (1.0 versus 0.9); ledger F-050 and the carpark explicitly defer this choice. PR: none; tests added/run: 0; totals not measured.
-4. **BUG-906 — IN PROGRESS.** Cause confirmed at the same base: R-06 calls DetentionHasNoLengthToJudge but R-30 does not. Reuse that same decision and existing ON switch. Branch cx2/bug-906-detention-grade.
+4. **BUG-906 — DRAFT PR #1655; checks pending.** Cause confirmed at the same base: R-06 calls DetentionHasNoLengthToJudge but R-30 does not. Reuse that same decision and existing ON switch. Branch cx2/bug-906-detention-grade; pushed head 52efb49b918875d429c6935dfd1b440047611892. Seven new test cases; before/after and full totals pending.
 5. **BUG-907 — SKIPPED.** Needs Tim's engineering ruling on inlet/outlet obverts, deferred until after 9 November in ledger F-052. QUESTIONS_FOR_MONDAY.md (22 October late, item 3) is still a question. PR: none; tests added/run: 0; totals not measured.
 
 ## Scope and checks
