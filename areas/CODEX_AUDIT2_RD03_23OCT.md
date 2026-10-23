@@ -24,7 +24,7 @@
 
    **For Tim:** CE can offer to keep your level, accept that answer, then refuse the whole run. For example, keeping P1 at RL 10.20 while raising downstream P2 to RL 10.30 stops every change instead of reporting the backfall and carrying on with your decision.
 
-   **File:line:** `Modules/Drainage/Services/LinkService.RepairAudit.InvertPropagation.cs:587`, `:673`, `:686`; `Models/PropagationPlan.cs:167`; `ViewModels/PropagationPreviewViewModel.cs:198`; live call at `Commands/LinkCommands.cs:611` and `:626`.
+   **File:line:** `Modules/Drainage/Services/LinkService.RepairAudit.InvertPropagation.cs:587`, `:673`, `:686`; `Models/PropagationPlan.cs:163`; `ViewModels/PropagationPreviewViewModel.cs:198`; live call at `Commands/LinkCommands.cs:611` and `:626`.
 
    **Exact refusal:** `[CDPROPAGATE] Apply blocked - keeping the level typed by hand on P1 → P2 would leave the pipe flat or running backwards. Nothing was changed. Check that pipe's level, or run CDPROPAGATE and choose Overwrite when it asks about levels set by hand.` The shared writer also returns before any cascade writes when `plan.CanApply` is false, with `[CDPROPAGATE] Apply blocked - flat/negative grade or error in plan.` The preview independently disables Apply with `❌ 1 pipe(s) would have flat/negative grade — Apply blocked. Set an override grade on the affected pipe(s) to continue.` Downstream Edit Pipe cascade uses the same writer, with prefix `[CDEDIT-CASCADE]`.
 
