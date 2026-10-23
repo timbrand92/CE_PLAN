@@ -13,7 +13,7 @@ while (-not (Test-Path "$d\STOP_JANITOR.flag")) {
   else { if (-not $noLockSince) { $noLockSince = Get-Date }; if (((Get-Date) - $noLockSince).TotalMinutes -ge 15) { $expired = $true } }
   if ($live) { $noLockSince = $null; continue }
   if (-not $expired) { continue }
-  $busy = @(Get-CimInstance Win32_Process | Where-Object { ($_.Name -match 'codex' -and $_.CommandLine -match ' exec ') -or ($_.Name -match 'pwsh' -and $_.CommandLine -match 'acad_driver_v3|session-run|v3_selftest|run-pack|run-case') })
+  $busy = @(Get-CimInstance Win32_Process | Where-Object { ($_.Name -match 'codex' -and $_.CommandLine -match ' exec ' -and $_.CommandLine -notmatch 'cx_(lf|rv)') -or ($_.Name -match 'pwsh' -and $_.CommandLine -match 'acad_driver_v3|session-run|v3_selftest|run-pack|run-case') })
   if ($busy.Count -gt 0) { continue }
   $titles = @($acad | ForEach-Object { $_.MainWindowTitle })
   if ($titles | Where-Object { $_ -match '\.dwg' -and $_ -notmatch 'ce_rc_drv|_TEST_COPIES|LOOKS|LKW|LKX|LKV|CLD|DRV' }) { Log ('AutoCAD with a non-test drawing open ("' + ($titles -join '; ') + '"): left alone'); continue }
