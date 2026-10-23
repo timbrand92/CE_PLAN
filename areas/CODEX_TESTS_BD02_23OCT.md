@@ -4,10 +4,10 @@
 
 1. **Delivery:** DRAFT PR [#1702](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1702), branch `cx3/tests-bd02`, initial head `b97850f53c21523368830918a7a47d09234f944c`. Base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`, fetched before the worktree was created. Final validation is still running/pending; this is not a passing handoff.
 2. **Tests added per bug: 12 cases:** BUG-653 four; BUG-652 one; BUG-655 one; BUG-513 one; BUG-542 one; BUG-1019 three; BUG-999 one. All in `Modules/Drainage.Tests/Services/Bd02CivilRegressionTests.cs`. These fill specific behaviour gaps in bugs with partial existing coverage; none of these seven bugs was wholly without tests.
-3. **Totals so far:** focused net10 run **12 total, 12 passed, 0 failed, 0 skipped**, completed 23:33 Melbourne (TRX verified). The sequential three-build and full-Civil validation is running. The historical 11-failure instruction is not assumed to describe this base.
+3. **Totals so far:** focused net10 run **12 total, 12 passed, 0 failed, 0 skipped**, completed 23:33 Melbourne (TRX verified). All three standalone Civil builds passed with 0 errors (net48: 242 warnings; net8: 210; net10 incremental: 2). Full Civil net10 started at 23:39:08 Melbourne and is running. The historical 11-failure instruction is not assumed to describe this base.
 4. **NEW FINDINGS:** none from the 12 completed new cases. Full-suite validation is still running. No product repair is authorised or included. Any failing fixed-bug check will be reported here with its BUG number.
 5. **What Tim sees:** no drawing, command, window or setting changes. This is a test-only branch. No version bump, installation, deployment or AutoCAD acceptance.
-6. **What was NOT run:** AutoCAD/accoreconsole, real drawing output, Undo/Redo, saved-drawing readback, window renders, Installer tests, historical-parent execution. Standalone compilation of the three required lanes and the full Civil suite is in progress, not yet claimed as passed.
+6. **What was NOT run:** AutoCAD/accoreconsole, real drawing output, Undo/Redo, saved-drawing readback, window renders, Installer tests, historical-parent execution. All three standalone Civil compilation lanes passed; the full Civil suite remains in progress.
 
 ## Ownership and safety
 
@@ -42,8 +42,8 @@
 1. **All dotnet commands:** foreground, Release, shared build lock held, `-p:SkipDevBundle=true -nr:false --disable-build-servers`. AutoCAD 2027 directory on this process's PATH; never started AutoCAD. No build or test is launched below 12 GB free.
 2. **Reference parameters from the C-57 report:** `_AcadRef48=C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`; `_AcadRefNet8=C:\TimOS\refs\autocad\autocad-2026-ref`; `_AcadRefNet10` and `_AcadRef100=C:\TimOS\refs\autocad\autocad-net8-ref` (the misleadingly named 2027/net10 reference folder).
 3. **Focused:** `dotnet test Modules/Drainage.Tests/CE_CVL_SUITE.Tests.csproj -f net10.0-windows -c Release --filter FullyQualifiedName~Bd02CivilRegressionTests` plus every flag/reference above, TRX outside the worktree. **12/12 passed, 0 skipped**, `bd02-focused.trx`, completed 23:33 Melbourne. Product and test project compiled for this run.
-4. **Required builds:** `dotnet build Modules/Drainage/CE_CVL_SUITE.csproj -f <net48|net8.0-windows|net10.0-windows> -c Release` plus every flag/reference above. Pending.
-5. **Full Civil:** same net10 test command with no filter. Pending; totals will be read from the TRX, never inferred from a zero exit code or borrowed from another report.
+4. **Required builds:** `dotnet build Modules/Drainage/CE_CVL_SUITE.csproj -f <net48|net8.0-windows|net10.0-windows> -c Release` plus every flag/reference above. **All three passed, 0 errors**: net48 23:33:22–23:35:18 (1 min 54 s); net8 23:35:18–23:39:04 (3 min 42 s); net10 incremental 23:39:04–23:39:08.
+5. **Full Civil:** same net10 test command with no filter. Running since 23:39:08; totals will be read from the TRX, never inferred from a zero exit code or borrowed from another report.
 6. **Historical proof limit:** no parent build or red-before-fix execution yet. The per-case old results above are reasoning from inspected diffs, not observed test results. No product source was temporarily patched to fake a historical run.
 7. **Evidence location:** `C:\ce-cx\bd02-evidence` (logs, TRX, settings hashes); no generated logs added to the code repo.
 
@@ -59,6 +59,6 @@
 
 ## Handoff
 
-1. **Still pending:** three standalone Civil compilation lanes, full Civil totals, final regression-log result, final plugin push and PR-body update. The lock became available at 23:31:50 after a 15-minute timed wait and a further retry; the 12 focused checks passed before proceeding.
+1. **Still pending:** full Civil totals, final regression-log result, final plugin push and PR-body update. All three standalone builds and all 12 new cases passed. The lock became available at 23:31:50 after a 15-minute timed wait and a further retry; the 12 focused checks passed before proceeding.
 2. **Parked:** no product fixes, feature work, deployment or AutoCAD session authorised. Any newly demonstrated remaining fault is reported here, without editing BUG_CARPARK.md, DESK_LOG.md or QUEUE.md.
 3. **Undo:** revert this branch's test/log commits; the installed product has not changed.
