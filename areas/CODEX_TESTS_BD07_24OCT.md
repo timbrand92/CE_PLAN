@@ -33,3 +33,6 @@
 5. **Undo:** revert this branch's tests/log commits. No live setting or installed file needs restoring.
 
 6. **Notion Inbox:** queried all Hub Inbox rows; only an already Processed, unrelated item returned. No New CE instruction to file.
+
+7. **Queue, 04:39 Melbourne:** BD07's current-code runner has waited for the shared build lock since 04:09 and its historical runner since 04:12. No BD07 build or test has started. C: 19.24 GB free at 04:39; both wrappers enforce the 14 GB floor before each launch. Existing runner processes are left alone.
+
