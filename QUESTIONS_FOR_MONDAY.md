@@ -125,3 +125,7 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 
 1. **Pipes with an Unknown material (BUG-868, draft PR #1664):** when a pipe's material is Unknown, which roughness should the design use? **Recommendation:** the Settings roughness (0.013), which is what the builder used, because Unknown is then visible and you can change the number in one place. **Example on a job:** an old pipe picked up from a survey with no material would be sized as if it were smooth concrete rather than UPVC. **Other choice:** treat Unknown as UPVC (smoother, slightly smaller pipes).
 2. **Wording (Max builder, 23 Oct):** should messages say "Unknown" or "not known" when a value is missing? **Recommendation:** "Unknown" everywhere, because it already matches the Pit Schedule and the Settings page. Nothing was changed until you decide.
+
+## Added 24 Oct 2026 early morning (desk plan/03)
+
+3. **Codex's new week (reset happened Sat 24 Oct 04:43; resets again Fri 30 Oct 04:09):** you said to leave the new week's usage alone, so the Codex supervisor is on HOLD and has started nothing new. **Recommendation:** let it run ONLY the AutoCAD looks on the daily tools (about 1 point each, so about 15 looks a day inside the 16-point daily share), because acceptance (1 of 40 daily tools) is the biggest gap to Mon 9 Nov and the runner passes still need Codex looks for anything you must see. **Example on a job:** the Pit Schedule window and a label position can only be accepted by a look at the picture. **Other choice:** keep HOLD until you are back Thu 29 Oct.
