@@ -51,7 +51,7 @@
 4. **Commit messages** name each bug in full: BUG-766; BUG-811 (cascade half); BUG-810; BUG-812.
 5. **The 23 Oct REGRESSION_LOG.md entries** were added at the top of the file in each branch; no existing entry was changed.
 6. **Machine:** my script could not take the desk build lock file (`desk_jobs/build.lock` in CE_PLAN) on any run (a lock file was present when I looked at 01:46), so every build ran without the lock, and I did not delete it. Free space on C: stayed between 23 and 27 GB, above the 12 GB limit. The FB-25 full run took 21 minutes (the other three took about 8) because the PC was busy.
-7. **Worktrees:** `C:-fxb22` to `fb25` created and removed after pushing (others in `C:-fx` are not mine and were left alone). **Mistake to flag:** I wrote my scratch scripts `run.sh` and `prepend.sh` into `C:-fx` without first checking whether another batch had files of those names. If another batch's `run.sh` or `prepend.sh` now behaves differently, mine replaced it; the other batches' own `e11` to `e14` entries and logs were not touched.
+7. **Worktrees:** fb22 to fb25 under C:/ce-fx were created and removed after pushing (the other folders there are not mine and were left alone). **Mistake to flag:** I wrote my scratch scripts run.sh and prepend.sh into C:/ce-fx without first checking whether another batch had files of those names. If another batch's run.sh or prepend.sh now behaves differently, mine replaced it; the other batches' own e11 to e14 entries and logs were not touched.
 
 ## What I did NOT test
 
