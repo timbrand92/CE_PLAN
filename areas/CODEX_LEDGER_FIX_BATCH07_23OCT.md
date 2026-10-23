@@ -3,7 +3,7 @@
 ## ANSWER FIRST
 
 1. **BUG-903 — SKIPPED.** Needs Tim's engineering ruling on the minimum-grade ladder and consistent cover limits. Ledger F-045 and QUESTIONS_FOR_MONDAY.md (22 October late, item 5) leave the grade ladder undecided. PR: none; tests added/run: 0; totals not measured.
-2. **BUG-904 — DRAFT PR opened; checks pending.** Cause confirmed at Civil base 88bd62f704b66a7e156da572c212812dc4b0c61a: the duration ladder starts at five minutes and warns at its longest boundary only. Implement the brief's warning option when the shortest storm governs; retain rainfall, engineering values and calculated storage. Branch cx2/bug-904-storm-peak; pushed head cb53d0f897afcf79c95e70fb46b5ff4d6ccbc5c9. Six new test cases; full totals pending.
+2. **BUG-904 — DRAFT PR #1656; checks pending.** Cause confirmed at Civil base 88bd62f704b66a7e156da572c212812dc4b0c61a: the duration ladder starts at five minutes and warns at its longest boundary only. Implement the brief's warning option when the shortest storm governs; retain rainfall, engineering values and calculated storage. Branch cx2/bug-904-storm-peak; pushed head cb53d0f897afcf79c95e70fb46b5ff4d6ccbc5c9. Six new test cases; full totals pending.
 3. **BUG-905 — SKIPPED.** Needs Tim's engineering word on the hard-ground runoff factor (1.0 versus 0.9); ledger F-050 and the carpark explicitly defer this choice. PR: none; tests added/run: 0; totals not measured.
 4. **BUG-906 — DRAFT PR #1655; checks pending.** Cause confirmed at the same base: R-06 calls DetentionHasNoLengthToJudge but R-30 does not. Reuse that same decision and existing ON switch. Branch cx2/bug-906-detention-grade; pushed head 52efb49b918875d429c6935dfd1b440047611892. Seven new test cases; before/after and full totals pending.
 5. **BUG-907 — SKIPPED.** Needs Tim's engineering ruling on inlet/outlet obverts, deferred until after 9 November in ledger F-052. QUESTIONS_FOR_MONDAY.md (22 October late, item 3) is still a question. PR: none; tests added/run: 0; totals not measured.
@@ -17,6 +17,9 @@
 
 ## Regression evidence
 
-1. **BUG-904 unchanged base:** six new cases executed; 3 passed / 3 failed / 0 skipped. The calculation warning and both real-window display cases fail because the shortest-storm caution is absent. Production source still equals the fetched base. Evidence: C:/cx2/b07logs/904-base.trx and 904-base.log.
+1. **BUG-904 unchanged base:** six new cases executed; 3 passed / 3 failed / 0 skipped. The calculation warning and both real-window display cases fail because the shortest-storm caution is absent. Production source matched the fetched base during that run; the strengthened calculation-to-window cases are queued for a fresh base run. Evidence: C:/cx2/b07logs/904-base.trx and 904-base.log.
 2. **Numerical reproduction:** the supplied synthetic inputs give 1.68791 m³ at 5 minutes and 1.73352 m³ at 7 minutes using the unchanged office curve. This batch takes the requested warning option; it does not claim to refine the sweep or correct every unsampled peak.
 3. **Inbox:** connected Notion Inbox opened, but its row-query tool returned an unavailable-tool error. New Inbox rows could not be verified; no Inbox item was changed.
+
+4. **Pushed draft fixes:** BUG-904 PR #1656 at cb53d0f897afcf79c95e70fb46b5ff4d6ccbc5c9; BUG-906 PR #1655 at 52efb49b918875d429c6935dfd1b440047611892. Both target claude/rel-20261023l and remain draft. Manual and automatic pre-push scans passed, with all 36 local terms present. Build and full-suite totals remain pending; neither draft is claimed green.
+5. **Stronger visible fixture:** the BUG-904 render tests now use CivilDesignService.Run, the actual CDDESIGN calculation-to-results path, with Generic Default council, 640.67 m² whole site, 213.56 m² roof/paved area, pre-development C 0.35, soft-ground C 0.30 and head 0.45 m. This is directly enterable in the existing window; the ledger's discharge-override example remains a separate engine reproduction.
