@@ -33,9 +33,10 @@ while (-not (Test-Path "$d\STOP_SUPERVISOR.flag")) {
     $conv = Procs 'codex_conveyor\.ps1'; if ($conv.Count -gt 1) { $conv | Sort-Object CreationDate | Select-Object -SkipLast 1 | ForEach-Object { try { Stop-Process -Id $_.ProcessId -Force; Log "duplicate conveyor killed $($_.ProcessId)" } catch { } } }
     $free = (Get-PSDrive C).Free / 1GB
     $runners = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'bash.exe' -and $_.CommandLine -match 'queue4\.sh' })
-    if ($u -ge 0 -and $u -lt 97 -and $free -gt 13 -and $fill.Count -lt 5 -and $runners.Count -lt 5) {
+    if ($u -ge 0 -and $u -lt 97 -and $free -gt 11 -and $fill.Count -lt 5 -and $runners.Count -lt 5) {
       $doneF = @(Get-Content "$d\FILLER_DONE.txt" -ErrorAction SilentlyContinue)
       $next = Get-Content "$d\FILLER_QUEUE.txt" -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $doneF -notcontains $_.Split('|')[0] } | Select-Object -First 1
+      if ($next -and $next.Split('|')[0] -like 'cx_bd*' -and $free -lt 14) { $next = $null }  # builds need 14 GB; read-only audits (cx_rd) run from 11 GB (24 Oct 00:30 disk squeeze)
       if ($next) {
         $name = $next.Split('|')[0]
         Add-Content "$d\FILLER_DONE.txt" $name

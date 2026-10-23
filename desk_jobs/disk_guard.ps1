@@ -8,6 +8,7 @@ while (-not (Test-Path "$d\STOP_DISKGUARD.flag")) {
   if ($f -lt 18) {
     $freed = 0
     $roots = Get-ChildItem 'C:\' -Directory -Force -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^(ce-|c[a-z]+60|cx)' -and $_.Name -notmatch 'evidence|logs|out$|^ce_rc' }
+    $roots = @($roots) + @(Get-ChildItem 'C:\Users\TimothyBrand\.codex\worktrees' -Directory -Force -ErrorAction SilentlyContinue)  # 24 Oct: Codex's own job worktrees hold idle build output too
     foreach ($r in $roots) {
       Get-ChildItem $r.FullName -Directory -Recurse -Force -ErrorAction SilentlyContinue -Depth 6 | Where-Object { $_.Name -in 'bin', 'obj' -and $_.LastWriteTime -lt (Get-Date).AddMinutes(-40) } | ForEach-Object {
         try { $sz = (Get-ChildItem $_.FullName -Recurse -File -Force -ErrorAction SilentlyContinue | Measure-Object Length -Sum).Sum; Remove-Item -LiteralPath $_.FullName -Recurse -Force -ErrorAction Stop; $freed += $sz } catch { }
