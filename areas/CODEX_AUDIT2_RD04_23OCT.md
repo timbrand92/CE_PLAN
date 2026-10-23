@@ -50,7 +50,7 @@
 
 3. **RD04-03 — HIGH — SURE / verified-by-reading: LandXML cover and invert elevations are not converted from the source unit to metres.**
 
-   **File:line:** `Modules/Drainage/Helpers/LandXmlParser.cs:125`, `:193`, `:236`, `:261`, `:267`, `:274`; review explicitly appends metres at `Commands/LinkCommands.ImportXcivil.cs:280`; persisted cover at `Services/XcivilPitInsertionService.cs:263`; insertion reached at `Services/XcivilImportService.cs:1983` and following pit-writing code.
+   **File:line:** `Modules/Drainage/Helpers/LandXmlParser.cs:125`, `:193`, `:236`, `:261`, `:267`, `:274`; review explicitly appends metres at `Commands/LinkCommands.ImportXcivil.cs:280`; persisted cover at `Services/XcivilPitInsertionService.cs:263`; insertion reached at `Services/XcivilImportService.cs:1984` and following pit-writing code.
 
    **What the drafter sees:** A millimetre LandXML file supplies cover elevation 100200 for RL 100.200 m. The review says `cover level 100200 m from the LandXML file`, and the imported pit receives that raw cover value. Supplied invert elevations can instead disappear because their unconverted mm values fail a range check intended for metres. The cover error exists in INSUNITS 4 and 6 targets; it is the file's vertical unit, independent of target geometry scale.
 
@@ -77,13 +77,13 @@
 
 4. **RD04-04 — MEDIUM — SURE / verified-by-reading: an open AG/perimeter drain can lose its final vertex and become a closed loop in a metre drawing.**
 
-   **File:line:** `Modules/Drainage/Commands/AgiCommand.Plan.cs:77`, `:123`, `:125`, `:126`; unconverted picked coordinates at `Commands/AgiCommand.cs:403`; accepted output reports the altered shape at `Commands/AgiCommand.Apply.cs:137`.
+   **File:line:** `Modules/Drainage/Commands/AgiCommand.Plan.cs:77`, `:123`, `:125`, `:126`; unconverted picked coordinates at `Commands/AgiCommand.cs:405`; accepted output reports the altered shape at `Commands/AgiCommand.Apply.cs:137`.
 
    **What the drafter sees:** Finish an open run half a metre short of its start, using Enter. CE treats that 500 mm gap as if it were below 1 mm, removes the last corner and previews a closed triangle. Accept draws that altered route. Equivalent mm geometry stays open.
 
    **Exact failure:** The close-on-near-start rule compares drawing-unit distance directly with `SnapClosureToleranceMm=1.0`. For INSUNITS 6 this is a 1 m reach. With four picked vertices it removes the fourth and sets Closed=true, even though the drafter did not choose Close. This is separate from the grade calculation in RD04-02: it changes the route itself.
 
-   **DETERMINISTIC TEST — fixture and steps:** Synthetic INSUNITS 6 Civil drawing, World UCS, no snaps. Type `CDAGI`, Enter for None; pick `0,0`, `10,0`, `10,10`, `0,0.5`; Enter to finish; skip outlet and both level questions with Enter. Assert the preview reads **4 vertices, open**. Reading predicts **3 vertices, closed**. Accept on the disposable copy and inspect the polyline: four vertices, last at (0,0.5), Closed=false are required. Repeat with CDPERIMETER, and in INSUNITS 4 with all XY multiplied by 1000. The mm controls should remain open.
+   **DETERMINISTIC TEST — fixture and steps:** Synthetic INSUNITS 6 Civil drawing, World UCS, no snaps. Type `CDAGI`, Enter for None; pick `0,0`, `10,0`, `10,10`, `0,0.5`; Enter to finish; press Enter to skip the outlet, then Enter to skip the start invert (the end-invert question is not asked once the start is skipped). Assert the preview reads **4 vertices, open**. Reading predicts **3 vertices, closed**. Accept on the disposable copy and inspect the polyline: four vertices, last at (0,0.5), Closed=false are required. Repeat with CDPERIMETER, and in INSUNITS 4 with all XY multiplied by 1000. The mm controls should remain open.
 
    **Smallest fix:** Supply the owning drawing's units to the plan builder and convert the intended 1 mm closure reach to drawing units before comparing. Retain the explicit Close option and the final picked vertex whenever the real gap exceeds that reach.
 
@@ -103,7 +103,7 @@
 
 1. **Known bugs — identifiers only, excluded from new counts:** BUG-209, BUG-230, BUG-242, BUG-243, BUG-270, BUG-271, BUG-281, BUG-287, BUG-296, BUG-309, BUG-321, BUG-322, BUG-323, BUG-328, BUG-330, BUG-331, BUG-393, BUG-406, BUG-505, BUG-516, BUG-648, BUG-649, BUG-663, BUG-695, BUG-696, BUG-700, BUG-701, BUG-705, BUG-710, BUG-718, BUG-719, BUG-725, BUG-729, BUG-745, BUG-758, BUG-810, BUG-871, BUG-994, BUG-1007.
 
-2. **Area checks read without a new units finding.** `DrawingAreaUnits.cs:57` divides square drawing units by the appropriate square-unit factor. `PavementAreaPlan.cs:124` and `PaveCommand.cs:58` use the drawing's units; the raingarden call at `SourceBlockInsertCommands.cs:588` does too. `XrefSiteGeometryService.cs:91` normalises source coordinates to mm; its hatch-boundary reader at `:300` applies that scale, and `SurfaceEvidenceMapService.cs:157` remeasures transformed areas using host units. This establishes conversion in those inspected routes, not general correctness of hatch holes, curved boundaries or all area callers.
+2. **Area checks read without a new units finding.** `DrawingAreaUnits.cs:57` divides square drawing units by the appropriate square-unit factor. `PavementAreaPlan.cs:125` and `PaveCommand.cs:58` use the drawing's units; the raingarden call at `SourceBlockInsertCommands.cs:588` does too. `XrefSiteGeometryService.cs:91` normalises source coordinates to mm; its hatch-boundary reader at `:300` applies that scale, and `SurfaceEvidenceMapService.cs:157` remeasures transformed areas using host units. This establishes conversion in those inspected routes, not general correctness of hatch holes, curved boundaries or all area callers.
 
 3. **What was NOT checked.** No native appearance, plot, performance, Undo/Redo, save/reopen, actual installed binary, live Settings, client drawing or consultant export was checked. No builds or tests were run. Imperial/unitless behaviour, paper-space and viewport scaling, every legacy repair/label path, native C++ pipe rendering, external schema validation and exhaustive hatch-boundary topology were not audited. Structural and Manager code were not assessed for new defects. Proposed test data above is synthetic; it has not been loaded into AutoCAD.
 
