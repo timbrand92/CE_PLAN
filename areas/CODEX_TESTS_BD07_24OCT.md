@@ -3,7 +3,7 @@
 ## ANSWER FIRST — IN PROGRESS
 
 1. **Four tests written:** BUG-773 two (concave raingarden saved centre, both tracing directions); BUG-967 two (actual Blue Factor PDF extraction and reader, Garden/Lawn excluded from hard area, unknown outlet preserved). Not yet counted as passing.
-2. **Draft PR:** [#1725](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1725), branch `cx3/tests-bd07`, head `c6f550c6c252d5f7e935518d9de3b65a87f64809`. Base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`, fetched first. Own worktree `C:\ce-cx\bd07`.
+2. **Draft PR:** [#1725](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1725), branch `cx3/tests-bd07`, head `e14ece596453c3516348f40164114d3ca506fcda`. Base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`, fetched first. Own worktree `C:\ce-cx\bd07`.
 3. **Totals:** pending; foreground builds are waiting for the shared build lock. No zero-test success claimed. Initial C: 21.19 GB free; hard stop below 14 GB.
 4. **New findings:** no new reproduced product failure yet. Source residual: BUG-773's saved-number exact-comparison half remains unchanged; its own regression entry explicitly says it was never fixed. No bug status changed.
 5. **What Tim sees:** no drawing, window or setting changes. Tests only; no product code, default, version or installed file changed.
@@ -36,3 +36,5 @@
 
 7. **Queue, 04:39 Melbourne:** BD07's current-code runner has waited for the shared build lock since 04:09 and its historical runner since 04:12. No BD07 build or test has started. C: 19.24 GB free at 04:39; both wrappers enforce the 14 GB floor before each launch. Existing runner processes are left alone.
 
+
+8. **Runtime lane:** all four new cases target net10 only. The raingarden fixture now has the same NET10_0_OR_GREATER guard as the PDF fixture; net48/net8 product builds remain required. The historical raingarden copy has the identical test body before that preprocessor-only guard, so its net10 assertions are unchanged.
