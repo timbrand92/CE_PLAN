@@ -2,13 +2,14 @@
 
 ## ANSWER FIRST
 
-1. **Status:** validation in progress. Nine new cases in `Modules/Manager.Tests/Services/Bd03ManagerRegressionTests.cs`; focused run 9 passed, 0 failed, 0 skipped. No product source changed.
-2. **Tests per bug:** BUG-425: 1; BUG-832: 1; BUG-835: 1; BUG-842: 1; BUG-848: 2; BUG-1028: 3. These cover missing branches of fixes with existing basic tests, rather than claiming those bugs had no tests at all.
-3. **Branch and base:** `cx3/tests-bd03`, private worktree `C:\ce-cx\bd03`, from fetched `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Draft PR [#1703](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1703), current head `1fcf5b5b6a442cccb2f9fa344c3ee4f9a92e8fea`; final verification pending.
-4. **Totals:** focused Manager 9/9. Full Manager corrected run: 941 total, 940 passed, 1 existing skipped case, 0 failures. Final Manager rerun (including the added approval-log assertion): again 941 total, 940 passed, 1 skipped, 0 failed; all 9 BD03 cases passed. All six Manager/Civil module builds passed with zero errors; Civil full suite is running. The first full Manager invocation put the log override beside TEMP, causing existing containment guards to fail; this is a runner setup error and will be rerun with the override beneath TEMP.
-5. **New findings:** none established by the new cases so far. No bug status changed.
-6. **What a drafter sees:** no change: this branch adds tests only. For example, it checks that a locked Civil approval does not hide another tool's approval.
-7. **Not run:** AutoCAD, accoreconsole, installer tests, deployment, full net48/net8 test suites, or a dedicated BD03 visual inspection. The full Civil suite includes existing off-screen render fixtures; no new window or screenshot deliverable is claimed. No installation or acceptance claimed.
+1. **DONE — draft PR [#1703](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1703).** Branch `cx3/tests-bd03`, head `4cb41a0b91d248408d8639d643aa501fb194f529`. Base `origin/claude/rel-20261023m`, fetched and rechecked at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`; private worktree `C:\ce-cx\bd03`. Never based on master.
+2. **Nine added cases:** BUG-425: 1; BUG-832: 1; BUG-835: 1; BUG-842: 1; BUG-848: 2; BUG-1028: 3. All nine passed in the final full Manager run. These fill missing branches of fixes with existing basic coverage; no claim that the six bugs previously had no tests at all.
+3. **Builds:** all six Release builds (Manager and Civil, net48, net8.0-windows and net10.0-windows) finished with zero errors. No product code, UI, version or default switch changed. Nothing installed or deployed.
+4. **Tests:** Manager: **941 total, 940 passed, 1 skipped, 0 failed**. Civil console: **19,548 total, 19,526 passed, 22 skipped, 0 failed**, exit 0. Combined passed: **20,466**, zero failed. The Civil TRX contains **19,576 result rows, 19,526 Passed and 50 NotExecuted**; that is 28 more skipped rows than the console summary. Both counts are recorded; the adapter discrepancy has not been fully explained and is not extra executed coverage.
+5. **Validation warning:** Civil's `SettingsIsolationSetup` teardown could not delete its isolated `CE_CVL_SUITE.log` because a handle was still open. The adapter still returned exit 0 and zero failed tests. No repair was made. Four monitored live-settings SHA-256 fingerprints match before/after.
+6. **New findings:** none among the six Manager fixes tested. The separate Civil cleanup/count warnings above remain recorded, with no claim that they are new product regressions. No bug status changed. BUG_CARPARK.md, DESK_LOG.md and QUEUE.md were not edited by this job.
+7. **What Tim sees:** no change on the drawing or in Manager; this is tests only. For example, the new tests check that a locked approval does not hide other tools and that two failed ribbon tabs both leave a useful log reason without repeated notices.
+8. **Not run:** AutoCAD, accoreconsole, installer tests, full net48/net8 test suites, a complete parent-commit test suite, native transform execution, a dedicated BD03 visual inspection, or deployment. Only BUG-842's actual parent writer was executed in isolation; the other before-fix claims are from the diffs (including compile-red helpers). Existing Civil render fixtures ran as part of the suite; their pictures were not manually reviewed and no new UI picture deliverable is claimed. No installation or AutoCAD acceptance claimed.
 
 ## Coverage audit and evidence
 
@@ -37,6 +38,14 @@
 3. **Logs and loader:** use a test build/contributor that fails two ribbon tabs: each reason is in the disposable account's Manager log, with one plain ribbon notice. A broken synthetic manager-switches.json also gets its own notice and is left unchanged. Other tabs and typed commands remain available. No fault injection or settings change on Tim's live profile.
 4. **Waiting reports:** put only unfinished synthetic .TMP/.BAK files in the disposable profile's outbox and click Send waiting reports: zero reports sent; files remain on that PC. A real OneDrive race remains unproven.
 
+## Completed test evidence
+
+1. **Tested source:** `1fcf5b5b6a442cccb2f9fa344c3ee4f9a92e8fea`. The delivered follow-up commit changes only REGRESSION_LOG.md to record results; tests and product source are identical to the tested head.
+2. **Manager:** `dotnet test Modules/Manager.Tests/CE_SUITE_MANAGER.Tests.csproj -f net10.0-windows -c Release` plus every safe flag and reference parameter listed below; no filter. Final evidence `C:\ce-cx\bd03-evidence\manager-final.trx` / `.log`; 17 seconds of tests. Earlier focused run was 9/9, not added to the full-suite totals again.
+3. **Civil:** same flags, framework and configuration against `Modules/Drainage.Tests/CE_CVL_SUITE.Tests.csproj`, no filter. Final evidence `civil-final.trx` / `.log`; 12 min 3 s of tests. Console and raw TRX counts are both in ANSWER FIRST. No failed test results, errors or aborted tests are recorded in the raw counters; the isolated-log teardown diagnostic is retained in the console log.
+4. **Initial runner correction:** the first full Manager invocation put the override beside TEMP. Eight existing containment guards failed; after moving the override beneath TEMP, both corrected full runs passed (941 total each). This was an invocation error, not a product fix. No live settings were used by those cases.
+5. **Isolation:** TEMP/TMP `C:\ce-cx\bd03-evidence\temp`; CE_LOG_DIR_OVERRIDE below TEMP for final runs; document screenshot update switch unset. Four existing live settings files were read only for fingerprints, and all four match afterwards. No real office files were used by the new tests.
+
 ## Completed build evidence
 
 1. **Release, net48:** Manager 0 errors / 0 warnings; Civil 0 errors / 242 warnings.
@@ -44,7 +53,7 @@
 3. **Release, net10.0-windows:** Manager 0 errors / 0 warnings; Civil 0 errors / 208 warnings.
 4. **Every invocation:** `-p:SkipDevBundle=true -nr:false --disable-build-servers`; `_AcadRef48=C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`, `_AcadRefNet8=C:\TimOS\refs\autocad\autocad-2026-ref`, `_AcadRefNet10` and `_AcadRef100=C:\TimOS\refs\autocad\autocad-net8-ref` (2027 reference set, as C-57 report). AutoCAD 2027 directory on PATH for DLL resolution only. Builds/tests stayed in the foreground.
 5. **Native limitation:** managed Civil compilation used the C-57 report's zero-byte `CE_TRANSFORM_2027.arx` placeholder, inside this worktree's ignored build input folder. The native transform module was not built or executed. No product source was changed for compilation.
-6. **Evidence:** local only `C:\ce-cx\bd03-evidence`; build logs named `CE_SUITE_MANAGER-<tfm>.log` / `CE_CVL_SUITE-<tfm>.log`; final Manager results `manager-final.trx` / `manager-final.log`. Test redirects sit beneath this run's TEMP folder.
+6. **Evidence:** local only `C:\ce-cx\bd03-evidence`; build logs named `CE_SUITE_MANAGER-<tfm>.log` / `CE_CVL_SUITE-<tfm>.log`; final results `manager-final.trx` / `manager-final.log` and `civil-final.trx` / `civil-final.log`. Test redirects sit beneath this run's TEMP folder.
 
 ## Exact native follow-up setup (future robot session only; not performed by BD03)
 
@@ -55,6 +64,7 @@
 
 ## Safety and handoff
 
-1. **Disk:** initial C: free 13.71 GB; after checkout 13.60 GB. Stop threshold 12 GB, checked before each build/test step. No unrelated worktree was removed.
+1. **Disk:** initial C: free 13.71 GB; after checkout 13.60 GB. Stop threshold 12 GB, checked before each build/test step and throughout long runs; no observed check was below 12 GB. No unrelated worktree was removed.
 2. **Isolation:** no shared checkout files taken over; other chats' unsaved work left alone. Stage by filename only. BUG_CARPARK.md, DESK_LOG.md and QUEUE.md are not edited.
 3. **Undo:** revert this branch's test/log commit; no installed file or drafter setting needs restoring.
+4. **Finish:** 23 October 2026, Melbourne time. Draft PR remains draft. Saved by filename only; final source diff is the new Manager test file plus REGRESSION_LOG.md. The base was fetched again after testing and was unchanged.
