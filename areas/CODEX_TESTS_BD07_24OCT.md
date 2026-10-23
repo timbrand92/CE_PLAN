@@ -1,0 +1,33 @@
+# BD07 — Civil tanks, raingardens, downpipes and Blue Factor regression audit — 24 October 2026, Melbourne
+
+## ANSWER FIRST — IN PROGRESS
+
+1. **Four tests written:** BUG-773 two (concave raingarden saved centre, both tracing directions); BUG-967 two (actual Blue Factor PDF extraction and reader, Garden/Lawn excluded from hard area, unknown outlet preserved). Not yet counted as passing.
+2. **Draft PR:** [#1725](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1725), branch `cx3/tests-bd07`, head `c6f550c6c252d5f7e935518d9de3b65a87f64809`. Base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`, fetched first. Own worktree `C:\ce-cx\bd07`.
+3. **Totals:** pending; foreground builds are waiting for the shared build lock. No zero-test success claimed. Initial C: 21.19 GB free; hard stop below 14 GB.
+4. **New findings:** no new reproduced product failure yet. Source residual: BUG-773's saved-number exact-comparison half remains unchanged; its own regression entry explicitly says it was never fixed. No bug status changed.
+5. **What Tim sees:** no drawing, window or setting changes. Tests only; no product code, default, version or installed file changed.
+6. **Not run:** AutoCAD, accoreconsole, deployment, installer tests, new window pictures or native transform execution. Required builds/full suite and before-fix runs are pending, not passed.
+
+## Coverage audit
+
+1. **Read:** BUG_CARPARK.md, REGRESSION_LOG.md, C-57 assembly report, first-wave BD01/02/03/04 reports and open cx3 PRs #1702/#1703/#1704/#1705/#1723. None covers these four selected scenarios. BD05 report also inspected; BD06 had no report or open PR at this check.
+2. **BUG-773:** RaingardenAreaCentreTests already checks extra points along a rectangle edge, normal rectangles and survey-coordinate precision. It does not check a concave outline's centre reaching a serialised project row in both tracing directions. Added a 20 m2 L shape with centre (2200,2200) mm; the old corner average is (2666.6667,2666.6667) mm.
+3. **BUG-967:** BlueFactorReportTests already checks the ordinary four-row roof/drive/garden/lawn fixture, shortfall notes and Other. RatingReportReaderRegressionTests previously reads roof-only PDFs. Added Garden and Lawn PDF-reader cases with mixed-case surface words and a destination-looking soft-surface name. Only the real roof and paving survive; paving without a named outlet stays Unknown.
+4. **Tanks, covered:** BUG-137 has WaterTankRecordTests, WaterTankAtomicPlacementTests and WaterTankWindowContractTests, including blank/zero/negative Base RL. BUG-139 has R3BatchGuardTests and PitSpineRowBackfillSurfaceDrainTests, including WT16. BUG-020 has existing tank apply/compound and attribute routes; actual source DWG attribute appearance requires AutoCAD and is not claimed proven by unit tests. BUG-163 is explicitly not reproduced, not a known fixed defect. BUG-040 is retired from CDWT. New locked-layer/Xref findings BUG-1081/1083 are open, outside fixed-bug coverage.
+5. **Downpipes, covered:** BUG-281 C5MixedUnitsTests checks stored radius; BUG-695 MillimetresAsDrawingUnitsHuntTests checks metre and millimetre chainage/junction display and end refusal; BUG-815 has detention-rule guards. BUG-859/860 need real pointer/double-click handling and are not newly claimed fixed.
+6. **Spoons, covered:** SpoonDrainRunPlanTests checks the repeated-pick admission route for BUG-774. ByLayerColourRoutesTests and current spoon readback guards cover BUG-966. No duplicate cases added. CDRG ByLayer writer/readback also already has RaingardenAtomicPlacementTests.
+7. **Blue Factor reader:** BUG-594 already has actual PDF reader/newest-report guards. No duplicate added. Selected BUG-967 tests protect the missing integration between extraction, dispatch and area classification.
+
+## Exact real-AutoCAD check — NOT RUN
+
+1. **Raingarden:** in a disposable millimetre drawing, CDRG outline (0,0), (6000,0), (6000,2000), (2000,2000), (2000,6000), (0,6000); finish and place without optional inlet. Saved area must be 20 m2 and saved position (2200,2200,0) mm. Save/reopen and read the same row. Repeat with point order reversed. One U must remove the placement. Keep the existing area-centre switch at its default ON in the disposable profile.
+2. **Rating report:** synthetic PDF under the job's Civil/STORM Report - WSUD folder: Blue Factor; Site area 1000 m2; D1 ROOF TO WT1 Roof, 400m2; YARD Paved, 100m2; ROOF TO WT9 Garden, 500m2. CDCALC > Catchments > Add from rating report: only the roof and paved rows offered, roof/paved total 500 m2 and pervious 500 m2; YARD outlet stays Unknown. Cancel adds none. Repeat Garden as Lawn. Use no live job or Tim settings.
+
+## Safety and evidence
+
+1. **Ownership:** two test files and top REGRESSION_LOG.md entry only. Main checkout's unsaved files untouched; no WIP takeover. No edits to BUG_CARPARK.md, DESK_LOG.md, QUEUE.md, protected files or Structural.
+2. **Before-fix copies:** own detached worktrees `C:\ce-cx\bd07-pre773` at `70a4e24f` (parent of 04930ee3) and `C:\ce-cx\bd07-pre967` at `40ee0a36` (parent of 39ca847c). Only corresponding new test files copied; product source unmodified.
+3. **Safe commands:** every dotnet invocation uses `-p:SkipDevBundle=true -nr:false --disable-build-servers`, C-57 reference paths, process-local TEMP/TMP and log folder beneath TEMP, shared build.lock. Live settings read only for SHA-256 fingerprints. Evidence folder `C:\ce-cx\bd07-evidence`.
+4. **Native build limitation:** C-57's zero-byte CE_TRANSFORM_2027.arx placeholder inside ignored worktree output, never installed or executed.
+5. **Undo:** revert this branch's tests/log commits. No live setting or installed file needs restoring.
