@@ -4,7 +4,7 @@
 
 1. **Four tests written:** BUG-773 two (concave raingarden saved centre, both tracing directions); BUG-967 two (actual Blue Factor PDF extraction and reader, Garden/Lawn excluded from hard area, unknown outlet preserved). Not yet counted as passing.
 2. **Draft PR:** [#1725](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1725), branch `cx3/tests-bd07`, head `e14ece596453c3516348f40164114d3ca506fcda`. Base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`, fetched first. Own worktree `C:\ce-cx\bd07`.
-3. **Builds so far:** net48 0 errors / 242 warnings; net8 0 errors / 210 warnings. Net10 is building; focused/full and before-fix test totals remain pending. No zero-test success claimed. Initial C: 21.19 GB free; hard stop below 14 GB.
+3. **Builds:** all three Civil Release lanes passed: net48 0 errors / 242 warnings; net8 0 errors / 210 warnings; net10 0 errors / 208 warnings. Focused/full and before-fix test totals remain pending. No zero-test success claimed. Initial C: 21.19 GB free; hard stop below 14 GB.
 4. **New findings:** no new reproduced product failure yet. Source residual: BUG-773's saved-number exact-comparison half remains unchanged; its own regression entry explicitly says it was never fixed. No bug status changed.
 5. **What Tim sees:** no drawing, window or setting changes. Tests only; no product code, default, version or installed file changed.
 6. **Not run:** AutoCAD, accoreconsole, deployment, installer tests, new window pictures or native transform execution. Required builds/full suite and before-fix runs are pending, not passed.
@@ -40,3 +40,5 @@
 8. **Runtime lane:** all four new cases target net10 only. The raingarden fixture now has the same NET10_0_OR_GREATER guard as the PDF fixture; net48/net8 product builds remain required. The historical raingarden copy has the identical test body before that preprocessor-only guard, so its net10 assertions are unchanged.
 
 9. **Build slot acquired, 05:53 Melbourne:** net48 Civil build started, followed by net8/net10 and the focused four cases. Historical-parent runner remains queued. C: 20.63 GB free at 05:53. No passing build/test result yet.
+
+10. **Builds complete, 06:09 Melbourne:** all three Release builds exited 0. Focused test project is now compiling/running. Three monitored live-settings SHA-256 fingerprints match the pre-build values in a fresh pre-test check; no restore or settings edit performed.
