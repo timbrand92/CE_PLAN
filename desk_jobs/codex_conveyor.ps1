@@ -1,3 +1,4 @@
+function CurUsage { $x = & 'C:\Program Files\Git\bin\bash.exe' -c 'cd "/c/Lisp Files/_CODEX_RUNNER" && ./codex_usage.sh pct' 2>$null; $v = 0.0; if ([double]::TryParse(($x | Select-Object -First 1), [Globalization.NumberStyles]::Float, [Globalization.CultureInfo]::InvariantCulture, [ref]$v)) { $v } else { 0.0 } }
 # Desk 22 Oct 2026: Codex CONVEYOR. Runs the lines of CONVEYOR_QUEUE.txt one after another with no idle gap (each through launch_codex_retry.ps1), after the C-60 verification chain has finished. After every run it clears a left-over AutoCAD / lock (never when a settings guard holds an unrestored entry: then it stops for the desk). Stops at Codex weekly usage 90 percent, on STOP_CODEX.flag, or when the queue has no new line for 6 hours.
 # Line format: name|folder|model|effort|cap|cost   (the look id is read from the name: verifyV9b_s41 -> V9B, verifyW3_c60 -> W3)
 $d = 'C:\CE_PLAN\desk_jobs'
@@ -28,9 +29,9 @@ Log 'conveyor started'
 $idle = 0
 while ($true) {
   if (Test-Path "$d\STOP_CODEX.flag") { Log 'STOP flag'; exit }
-  if ((Usage) -ge 90) { Log 'Codex weekly usage 90 percent: stop'; exit }
+  if ((CurUsage) -ge 90) { Log 'Codex weekly usage 90 percent: stop'; exit }
   $pm = (Get-Content "$d\CODEX_MODE.txt" -TotalCount 1 -ErrorAction SilentlyContinue); if ($pm -eq 'HOLD') { Log 'mode HOLD: conveyor stops'; exit }
-  if ($pm -eq 'PACE') { $o = & 'C:\Program Files\Git\bin\bash.exe' -c 'bash "/c/Lisp Files/_CODEX_RUNNER/daily_cap.sh"' 2>$null; $cv = 0; if ([int]::TryParse(($o | Select-Object -First 1), [ref]$cv) -and ((Usage) + 1) -gt $cv) { Log ("over today's cap ($cv): waiting 10 minutes"); Start-Sleep 600; continue } }
+  if ($pm -eq 'PACE') { $o = & 'C:\Program Files\Git\bin\bash.exe' -c 'bash "/c/Lisp Files/_CODEX_RUNNER/daily_cap.sh"' 2>$null; $cv = 0; if ([int]::TryParse(($o | Select-Object -First 1), [ref]$cv) -and ((CurUsage) + 1) -gt $cv) { Log ("over today's cap ($cv): waiting 10 minutes"); Start-Sleep 600; continue } }
   $doneList = @(Get-Content $done -ErrorAction SilentlyContinue)
   $next = Get-Content $qf -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $_ -notmatch '^\s*#' -and ($doneList -notcontains $_.Split('|')[0]) } | Select-Object -First 1
   if (-not $next) { Start-Sleep 300; $idle++; if ($idle -gt 72) { Log 'no new queue line for 6 h: stop'; exit }; continue }
