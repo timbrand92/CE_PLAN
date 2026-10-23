@@ -3,7 +3,7 @@
 ## ANSWER FIRST — IN PROGRESS
 
 1. **Tests added per bug:** BUG-628 six executable geometry cases. Product code, settings, defaults and windows are unchanged. Cases are written, not yet counted as passing.
-2. **Branch:** cx3/tests-bd08, head 00a0a23d, private worktree C:\ce-cx\bd08, fetched base origin/claude/rel-20261023s at e6d597c0fbc25e78118760887a70810e0890c9a9 (Structural S-42). Draft PR creation is pending the initial push.
+2. **Branch:** cx3/tests-bd08, head 00a0a23d, private worktree C:\ce-cx\bd08, fetched base origin/claude/rel-20261023s at e6d597c0fbc25e78118760887a70810e0890c9a9 (Structural S-42). Draft PR [#1726](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1726), verified DRAFT against claude/rel-20261023s. Plugin and initial report pushes passed the global leak scan.
 3. **Totals:** pending; another job holds the shared build lock. Initial C: 20.78 GB, most recent 20.29 GB; hard stop below 14 GB.
 4. **New findings:** none established. Known BUG-864 remains open on this base: the S-41 fix preserves renamed office hidden layers but standard hidden-layer names still take the older writer route. No product change or bug-status edit.
 5. **What Tim sees:** no drawing or window change. These checks protect the finished breakline's size on paper, for example 2 mm each side at 1:50 rather than the old 0.8 mm.
