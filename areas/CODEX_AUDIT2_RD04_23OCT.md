@@ -107,7 +107,9 @@
 
 3. **What was NOT checked.** No native appearance, plot, performance, Undo/Redo, save/reopen, actual installed binary, live Settings, client drawing or consultant export was checked. No builds or tests were run. Imperial/unitless behaviour, paper-space and viewport scaling, every legacy repair/label path, native C++ pipe rendering, external schema validation and exhaustive hatch-boundary topology were not audited. Structural and Manager code were not assessed for new defects. Proposed test data above is synthetic; it has not been loaded into AutoCAD.
 
-4. **File and cleanup scope.** Only this report is authorised for writing and committing in CE_PLAN. No BUG_CARPARK, DESK_LOG, QUEUE, source, setting or drawing change is part of the hunt. The detached audit worktree is removed after source reading. The report can be undone by reverting its single-file commit.
+4. **File and cleanup scope.** Only this report is authorised for writing and committing in CE_PLAN. No BUG_CARPARK, DESK_LOG, QUEUE, source, setting or drawing change is part of the hunt. The detached audit worktree is removed after source reading. Undo must affect this report path only; do not revert a shared save or merge.
+
+5. **Save-history exception and recovery.** The initial report was committed by name alone in `97516119`. During four final corrections, another chat committed `1e9adc37`; my use of amend mistakenly replaced that newer commit with `ac031eeb`, combining my corrections with its already-authored RD06 report. This was my error. A comparison proved the RD06 file was unchanged. Merge `dec43ed6` restored the original commit to reachable history without changing any file content or rewriting the remote. The mixed correction commit remains visible; it has not been disguised as a single-file commit. The final record is saved by this report name only. The pre-push leak scan passed, and the clean `C:\ce-cx\rd04` worktree was removed.
 
 **Summary**
 
