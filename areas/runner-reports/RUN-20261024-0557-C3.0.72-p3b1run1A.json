@@ -1,0 +1,1057 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-0557-C3.0.72-p3b1run1A",
+    "started": "2026-10-24 05:57:55",
+    "finished": "2026-10-24 06:04:14",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "CF692484140E437CD0B4BBA056036FAE7202369C9B6E4C49373C7774306DD3EB",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 BC9BD9FBE88E, v3 session 099EB80E4C04, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 6223A606999D, case_runner_lib.ps1 5E2853D350BD, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 5 case file(s) plus 0 shared setup(s); pack SHA-256 CF692484140E437CD0B4BBA056036FAE7202369C9B6E4C49373C7774306DD3EB; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 05:57 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "FAIL_known": 2,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 3
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-0557-C3.0.72-p3b1run1A-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 05:57:57",
+      "finished": "2026-10-24 06:04:14",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30558031_B1.dwg",
+      "cases": [
+        "R12",
+        "R12_BROKEN",
+        "R17",
+        "R17_BROKEN",
+        "R20"
+      ],
+      "calibration": null,
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Codex-D1",
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R12",
+      "title": "Moving a pit with MOVE opens no CE window, and one U puts it back",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "quick MOVE (gap plan section 3 item 7; spec C37-C41 regressions; backlog W1-02)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Pick pit P3 (handle 109D56, at 53777.7,-25569.9), run MOVE with displacement 0,0 to 0,2000: AutoCAD says '1 found', the pit's insertion point is now 2000 mm higher (Y -23569.9, X unchanged), no Edit Pit, Edit Pipe, New Pit, New Pipe or Cascade window opened, and one U (echo word MOVE) puts the pit back at Y -25569.9.",
+      "why_not_unit": "Native MOVE has to drive CE's live link updates inside AutoCAD without a blocking window; only a live drawing shows the pit position and the window list afterwards.",
+      "not_automated": [
+        "The positions of the pit's linked labels, cover text and invert texts after the move and after U (card C41 assertion 1 second half and 3): the label handles and their expected offsets were never recorded, so only the pit's own position is checked.",
+        "A CE message line about a label with no clear spot appears on this drawing after the move; it is recorded, not judged."
+      ],
+      "file_sha256": "DD927AF38B3F722DE0EA34C1595C3193500E06755DCE74D9A133AC86F8C4C35D",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 05:58:58",
+      "seconds": 23.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit0",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win0",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed 'U': Command: | Command: U | MOVE"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $pit0 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 2,
+          "text": "contains $mv \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2..."
+        },
+        {
+          "n": 3,
+          "text": "matches $pit1 \"insertion\\W+53777\\.7\\d*,-23569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-23569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-23569.8'"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $win1 \"Edit Pit\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'Edit Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win1 \"Edit Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'Edit Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win1 \"New Pit\"",
+          "ok": true,
+          "expected": "does not contain 'New Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'New Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win1 \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win1 \"Cascade\"",
+          "ok": true,
+          "expected": "does not contain 'Cascade'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'Cascade' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "text": "contains $u1 \"MOVE\"",
+          "ok": true,
+          "expected": "contains 'MOVE'",
+          "actual": "Command: | Command: U | MOVE",
+          "evidence": "found 'MOVE' in: Command: | Command: U | MOVE"
+        },
+        {
+          "n": 10,
+          "text": "matches $pit2 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win2 \"Edit Pit\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'Edit Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "record $mv \"FULL what MOVE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\").",
+          "evidence": "RECORDED, not judged: FULL what MOVE printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\")."
+        },
+        {
+          "n": 13,
+          "text": "record $win1 \"windows open after the MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open after the MOVE = Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 65 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 05:59:22",
+      "session_id": "RUN-20261024-0557-C3.0.72-p3b1run1A-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R12_BROKEN",
+      "title": "BROKEN VARIANT of R12: expects the pit to stay where it was after MOVE (must FAIL)",
+      "kind": "deterministic",
+      "order": 11,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R12",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R12",
+      "expected": "This variant is wrong on purpose: after a 2000 mm MOVE it expects the pit still at Y -25569.8. The pit has moved, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "BE0D5C18E2A4F303A082494E1EA44DEA88D61F6CA7E14E198735DB5FBA085072",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /insertion\\W+53777\\.7\\d*,-25569\\.8/ in: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+      "started": "2026-10-24 05:59:22",
+      "seconds": 17.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\"",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed 'U': Command: | Command: U | MOVE"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $pit1 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": false,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "no match for /insertion\\W+53777\\.7\\d*,-25569\\.8/ in: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 37 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 05:59:40",
+      "session_id": "RUN-20261024-0557-C3.0.72-p3b1run1A-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R17",
+      "title": "Esc at CD's third point cancels the pipe, draws nothing and opens no pipe window",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-PIPE-03 (daily case D04)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After CD with two typed points the command waits for the third point; one Esc prints '[CE] CD command cancelled.', no New Pipe window opens, nothing new is left in the drawing (no polyline, arrow or text), and the Civil log holds one 'Command outcome: CD cancelled'. The contrast run (two points then Enter) opens New Pipe.",
+      "why_not_unit": "The result depends on AutoCAD's live point prompt answering Esc during real point collection and on nothing being drawn before the pipe window.",
+      "not_automated": [
+        "The contrast run's pipe is not drawn (the New Pipe window is only opened and then cancelled), so the 'exactly one pipe with two vertices' half of card assertion 3 is not checked.",
+        "The exact words of the third-point prompt are recorded, not asserted."
+      ],
+      "file_sha256": "3E520022BEE981AD57DE4F4CE24A57FFF85760718411D9416764BAF282274CB4",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 05:59:40",
+      "seconds": 74.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt_a",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-85000{NL}170000,-85000\" -Force -> $cd_third",
+          "ok": true,
+          "seconds": 14.6,
+          "evidence": "typed 'CD 150000,-85000 170000,-85000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd_esc",
+          "ok": true,
+          "seconds": 11.7,
+          "evidence": "esc-prompt: Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000 | Select point ..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_a",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-85000{NL}170000,-85000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $cd_enter",
+          "ok": true,
+          "seconds": 15.1,
+          "evidence": "typed 'CD 150000,-85000 170000,-85000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000 | Se..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_b",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] ; New Pipe"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed",
+          "ok": true,
+          "seconds": 21.3,
+          "evidence": "closed open CE windows: round 1: 'New Pipe' <- Cancel without saving : ok=True"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd_esc2",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000 | Select point 3 (or Enter fo..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] CD command cancelled.\"",
+          "ok": true,
+          "expected": "command line has '[CE] CD command cancelled.'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: '[CE] CD command cancelled.'"
+        },
+        {
+          "n": 2,
+          "text": "not-contains $win_a \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "text": "equals $cnt_b $cnt_a",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 4,
+          "text": "log civil count \"Command outcome: CD cancelled\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CD cancelled'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CD cancelled' (expected 1): 2026-10-24 06:00:02.435 [INFO] Command outcome: CD cancelled 20025 ms"
+        },
+        {
+          "n": 5,
+          "text": "contains $win_b \"New Pipe\"",
+          "ok": true,
+          "expected": "contains 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] | New Pipe",
+          "evidence": "found 'New Pipe' in: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] | New Pipe"
+        },
+        {
+          "n": 6,
+          "text": "record $cd_third \"the third-point prompt words\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000",
+          "evidence": "RECORDED, not judged: the third-point prompt words = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000"
+        },
+        {
+          "n": 7,
+          "text": "record $cd_esc \"what the Esc printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000 | Select point ...",
+          "evidence": "RECORDED, not judged: what the Esc printed = Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000 | Select point ..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 17 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD cancelled 20025 ms ; Command outcome: CD completed 19872 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 06:00:54",
+      "session_id": "RUN-20261024-0557-C3.0.72-p3b1run1A-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R17_BROKEN",
+      "title": "BROKEN VARIANT of R17: expects a New Pipe window after Esc at the third point (must FAIL)",
+      "kind": "deterministic",
+      "order": 21,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R17",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R17",
+      "expected": "This variant is wrong on purpose: after Esc at the third point CE cancels and no New Pipe window opens; the variant expects one, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "0E7EB3448105B27A8172E8ECB5E8D697BD87AA4CF640C505D278379E0E97AFA3",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'New Pipe' is NOT in: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+      "started": "2026-10-24 06:00:54",
+      "seconds": 16.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-86000{NL}170000,-86000\" -Force",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "typed 'CD 150000,-86000 170000,-86000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-86000 | Specify second point: 170000,-86000"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "esc-prompt: Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-86000 | Specify second point: 170000,-86000 | Select point ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_a",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $win_a \"New Pipe\"",
+          "ok": false,
+          "expected": "contains 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'New Pipe' is NOT in: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 6 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD cancelled 10537 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 06:01:11",
+      "session_id": "RUN-20261024-0557-C3.0.72-p3b1run1A-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R20",
+      "title": "After CDEDIT the pipes you had selected are still selected",
+      "kind": "deterministic",
+      "order": 35,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-06 (daily case D17)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Pick pipe P3 (10A98D) first, run CDEDIT, answer Y, press Save in Edit Pipe with nothing changed: the selection is still exactly 10A98D. Then pick P3 and the new pipe together, run CDEDIT, close the editor that opens by its Cancel: the selection is still exactly those two. No CE window is left open at the end.",
+      "why_not_unit": "Selection restore runs against AutoCAD's live implied selection after a real modal window.",
+      "not_automated": [
+        "The batch editor for two pipes is titled \"Edit 2 Pipes\" on 3.0.72 (read on 24 Oct 2026). If no editor closes by Cancel the step is BLOCKED.",
+        "Whether the first Save changed the drawing is not checked (the drawing's change counter is not read)."
+      ],
+      "file_sha256": "92F18CAE87118DE52257D13EE1691287BBDC41DD768170770AB248C0C76D03E3",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 06:01:11",
+      "seconds": 135.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object~^CeCvlPipeObject$\" \"handle~^(?!10A98D$)\" -> $others",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 41 of 500: 1091A0 STORMWATER PIPE ; 1091E0 STORMWATER PIPE ; 109359 EX DRAIN HATCH ; 109390 EX DRAIN HATCH ; 1093C7 STORMWATER PIPE ; 109430 STORMWATER PIPE ; 1094BE STORMWATER PIPE ; 109500 EX DRAIN HATCH"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $others handle -> $hp8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1091A0"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "pick-first 10A98D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT{NL}Y\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edit1",
+          "ok": true,
+          "seconds": 24.1,
+          "evidence": "typed 'CDEDIT Y': Command: | Command: CDEDIT | This pipe was drawn with an older version of CE. Is the highlighted text \"450 DIA. STORMPRO PIPE AT 1 IN 193 19.30m DET...\" this pipe's label? [Yes/No] <Yes>: Y"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $save_press",
+          "ok": true,
+          "seconds": 18.3,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $sel1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "v3 pick-read : pick-first set: 1 object(s) 10A98D"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D,{$hp8}\"",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "pick-first 10A98D,1091A0: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\" \"1091A0\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (str..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit 2 Pipes\" -TimeoutSec 120 -> $edit2",
+          "ok": true,
+          "seconds": 18.5,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] ; Creative Engineering | Edit 2 Pipes"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed2",
+          "ok": true,
+          "seconds": 37.9,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Edit 2 Pipes' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Edit\\ 2\\ Pipes/ (windows: Creative Engineering | Edit 2..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $sel2",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "v3 pick-read : pick-first set: 2 object(s) 10A98D,1091A0"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win3",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $sel1 \"pick-first set: 1 object(s) 10A98D\"",
+          "ok": true,
+          "expected": "contains 'pick-first set: 1 object(s) 10A98D'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:02:11\",\"elapsed_ms\":2189,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"...",
+          "evidence": "found 'pick-first set: 1 object(s) 10A98D' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:02:11\",\"elapsed_ms\":2189,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"da..."
+        },
+        {
+          "n": 2,
+          "text": "matches $sel2 \"pick-first set: 2 object\"",
+          "ok": true,
+          "expected": "matches /pick-first set: 2 object/",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"hand...",
+          "evidence": "matched 'pick-first set: 2 object'"
+        },
+        {
+          "n": 3,
+          "text": "contains $sel2 \"10A98D\"",
+          "ok": true,
+          "expected": "contains '10A98D'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"hand...",
+          "evidence": "found '10A98D' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A..."
+        },
+        {
+          "n": 4,
+          "text": "contains $sel2 \"{$hp8}\"",
+          "ok": true,
+          "expected": "contains '1091A0'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"hand...",
+          "evidence": "found '1091A0' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A..."
+        },
+        {
+          "n": 5,
+          "text": "contains $win2 \"Edit 2 Pipes\"",
+          "ok": true,
+          "expected": "contains 'Edit 2 Pipes'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] | Creative Engineering | Edit 2 Pipes",
+          "evidence": "found 'Edit 2 Pipes' in: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] | Creative Engineering | Edit 2 Pipes"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win3 \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "record $edit2 \"FULL what CDEDIT printed for the two pipes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT",
+          "evidence": "RECORDED, not judged: FULL what CDEDIT printed for the two pipes = Command: | Command: CDEDIT"
+        },
+        {
+          "n": 8,
+          "text": "record $win2 \"windows open while CDEDIT held the two pipes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] | Creative Engineering | Edit 2 Pipes",
+          "evidence": "RECORDED, not judged: windows open while CDEDIT held the two pipes = Autodesk AutoCAD 2027 - [CLDV30558031_B1.dwg] | Creative Engineering | Edit 2 Pipes"
+        },
+        {
+          "n": 9,
+          "text": "record $closed2 \"what close-windows closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Edit 2 Pipes' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Edit\\ 2\\ Pipes/...",
+          "evidence": "RECORDED, not judged: what close-windows closed = round 1: 'Creative Engineering | Edit 2 Pipes' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Edit\\ 2\\ Pipes/..."
+        },
+        {
+          "n": 10,
+          "text": "record $sel1 \"selection after the first edit\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:02:11\",\"elapsed_ms\":2189,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"10A98D\"]}}}",
+          "evidence": "RECORDED, not judged: selection after the first edit = {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:02:11\",\"elapsed_ms\":2189,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"10A98D\"]}}}"
+        },
+        {
+          "n": 11,
+          "text": "record $sel2 \"selection after the second edit\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handles\":[\"10A98D\",\"1091...",
+          "evidence": "RECORDED, not judged: selection after the second edit = {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-24 06:03:23\",\"elapsed_ms\":1323,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handles\":[\"10A98D\",\"1091..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 81 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDEDIT completed 29715 ms ; Command outcome: CDEDIT completed 43430 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 06:03:26",
+      "session_id": "RUN-20261024-0557-C3.0.72-p3b1run1A-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-0255-C3.0.72-p3b1r1gA",
+    "started": "2026-10-24 02:55:17",
+    "finished": "2026-10-24 03:03:30",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "6F627672E0B0AE73BA274DB7655C516DA214C27CD3257B2FFF089451106E3E99",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 FBD8EB84C32A, v3 session 099EB80E4C04, v3 allow-list 459D4D9095CA, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 6223A606999D, case_runner_lib.ps1 12EEED534D40, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 1 shared setup(s); pack SHA-256 6F627672E0B0AE73BA274DB7655C516DA214C27CD3257B2FFF089451106E3E99; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 02:55 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-0255-C3.0.72-p3b1r1gA-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 02:55:31",
+      "finished": "2026-10-24 03:03:30",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30255441_B1.dwg",
+      "cases": [
+        "R12",
+        "R14"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R12",
+      "title": "Moving a pit with MOVE opens no CE window, and one U puts it back",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "quick MOVE (gap plan section 3 item 7; spec C37-C41 regressions; backlog W1-02)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Pick pit P3 (handle 109D56, at 53777.7,-25569.9), run MOVE with displacement 0,0 to 0,2000: AutoCAD says '1 found', the pit's insertion point is now 2000 mm higher (Y -23569.9, X unchanged), no Edit Pit, Edit Pipe, New Pit, New Pipe or Cascade window opened, and one U (echo word MOVE) puts the pit back at Y -25569.9.",
+      "why_not_unit": "Native MOVE has to drive CE's live link updates inside AutoCAD without a blocking window; only a live drawing shows the pit position and the window list afterwards.",
+      "not_automated": [
+        "The positions of the pit's linked labels, cover text and invert texts after the move and after U (card C41 assertion 1 second half and 3): the label handles and their expected offsets were never recorded, so only the pit's own position is checked.",
+        "A CE message line about a label with no clear spot appears on this drawing after the move; it is recorded, not judged."
+      ],
+      "file_sha256": "DD927AF38B3F722DE0EA34C1595C3193500E06755DCE74D9A133AC86F8C4C35D",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 02:57:11",
+      "seconds": 21.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit0",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win0",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit1",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "typed 'U': Command: | Command: U | MOVE"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit2",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $pit0 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 2,
+          "text": "contains $mv \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2..."
+        },
+        {
+          "n": 3,
+          "text": "matches $pit1 \"insertion\\W+53777\\.7\\d*,-23569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-23569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-23569.8'"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $win1 \"Edit Pit\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'Edit Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win1 \"Edit Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'Edit Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win1 \"New Pit\"",
+          "ok": true,
+          "expected": "does not contain 'New Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'New Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win1 \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win1 \"Cascade\"",
+          "ok": true,
+          "expected": "does not contain 'Cascade'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'Cascade' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "text": "contains $u1 \"MOVE\"",
+          "ok": true,
+          "expected": "contains 'MOVE'",
+          "actual": "Command: | Command: U | MOVE",
+          "evidence": "found 'MOVE' in: Command: | Command: U | MOVE"
+        },
+        {
+          "n": 10,
+          "text": "matches $pit2 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win2 \"Edit Pit\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'Edit Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "record $mv \"FULL what MOVE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\").",
+          "evidence": "RECORDED, not judged: FULL what MOVE printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\")."
+        },
+        {
+          "n": 13,
+          "text": "record $win1 \"windows open after the MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open after the MOVE = Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 68 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 02:57:33",
+      "session_id": "RUN-20261024-0255-C3.0.72-p3b1r1gA-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R14",
+      "title": "CDTWL says the water must stay 150 mm below the pit lid, and names the pits that fail",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDTWL freeboard (gap plan section 3 item 7; regression C39; run 47 B.4.4)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After typing CDTWL with the two answers 10 and 18.70, the command line says 'Only 40 mm between the water and the lid of pit C1 (150 mm is wanted).', says 'Only 110 mm' for two more pits (P1 and P7), says 'That is enough.', asks nothing more, and the Civil log holds one 'Command outcome: CDTWL completed' line.",
+      "why_not_unit": "The result depends on the real pit cover levels and the installed freeboard setting read inside the drawing; the words only exist on the live command line.",
+      "not_automated": [
+        "The 150 mm freeboard is a regression baseline recorded on 22 Oct, not an engineering approval of that figure (engineering judgement stays with Tim).",
+        "The meaning of the two answers (10 and 18.70) is taken from run 47; the prompt words were not read for this case."
+      ],
+      "file_sha256": "B8F08EFC514205ECCB7F569250A1FF450B4CABBE0C740E6F5416832A33D2ED35",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 02:57:33",
+      "seconds": 300.5,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 03:02:22",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30255441_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 28.7,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 86.8,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "the window /^New Pit/ closed after 1 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 21.5,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 17.2,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 13.7,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.0,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 10.4,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 54.2,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 15.9,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 1.0,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C64F CeCvlPipeObject STORMWATER PIPE ; 11C655 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65A AcDbMText 20TEXT IL 18.000 ; 11C65F AcDbMText 20TEXT IL 17.900 ; 11C681 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTWL{NL}10{NL}18.70\" -Force -> $twl",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "typed 'CDTWL 10 18.70': Command: | Command: CDTWL | [CE] Working upstream from detention pit C1. | [CE] CDCALC has no volume recorded for this system ? it shows \"0.0\", which is not a storage requirement. Type the figure from the STORM report, i..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Only 40 mm between the water and the lid of pit C1 (150 mm is wanted).\"",
+          "ok": true,
+          "expected": "command line has 'Only 40 mm between the water and the lid of pit C1 (150 mm is wanted).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Only 40 mm between the water and the lid of pit C1 (150 mm is wanted).'"
+        },
+        {
+          "n": 2,
+          "text": "history count \"Only 110 mm\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'Only 110 mm'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'Only 110 mm' (expected 2)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"That is enough.\"",
+          "ok": true,
+          "expected": "command line has 'That is enough.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] That is enough.'"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $win_end \"New \"",
+          "ok": true,
+          "expected": "does not contain 'New '",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]",
+          "evidence": "'New ' is absent from: Autodesk AutoCAD 2027 - [CLDV30255441_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "text": "log civil count \"Command outcome: CDTWL completed\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDTWL completed'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDTWL completed' (expected 1): 2026-10-24 03:02:24.866 [INFO] Command outcome: CDTWL completed 194 ms"
+        },
+        {
+          "n": 6,
+          "text": "record $twl \"FULL what CDTWL printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTWL | [CE] Working upstream from detention pit C1. | [CE] CDCALC has no volume recorded for this system ? it shows \"0.0\", which is not a storage requirement. Type the figure from the STORM report, in cubic metres. | Detention volume required, in cubic metres (from the STORM report): 10 | [CE] The top water level is the crest of the baffle wall, and its height above the orifice is what sizes the orifice. These are the levels this system could be held to: | [CE] 1) 19.55 the top water level typed into CDCALC (typed by hand) - -810 mm below the lowest lid, holds 28134 L | [CE] 2) 19.01 the lid or grate of pit P6 - the highest in this system (measured from the drawing) - -270 mm below the lowest lid, holds 28134 L | [CE] 3) 18.74 the lid of pit C1 - the first thing water would come out of (measured from the drawing) - 0 mm below the lowest lid, holds 27365 L | [CE] 4) 18.05 the top of the highest detention pipe pipe 10B03B (CE design rule) - 695 mm below the lowest lid, holds 22861 L [CE's usual rule] | [CE] 5) 17.49 the level the required volume on its own would reach (worked out from the volume) - 1249 mm below the lowest lid, holds 10000 L [comparison only] | Which level is the top water level? Type its number, or type a level in metres (e.g. 18.54): 18.70 | [CE] Using 18.70 - your own level, not one CE measured off the drawing. Everything below is worked out from it. | [CE] Detention system above C1 holds water in 8 pits, 7 pipes. | [CE] Top water level 18.70 - the top water level this job is designed to (typed by the engineer). | [CE] CE's usual rule would have given 18.05 (the top of the highest detention pipe). You chose a different level, so that is what is used. | [CE] Holds at that level: pits 9129 L + pipes 17977 L = 27105 L. 10000 L is required. | [CE] That is enough. | [CE] Only 40 mm between the water and the lid of pit C1 (150 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P1 (150 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P7 (150 mm is wanted). | [CE] For comparison, the level the required volume on its own would reach: | [CE] Top water level 17.491 (holds 10000 L of the 27365 L this system can hold). | [CE] Running full at that level (these are the ones doing the detaining): pipe 1135E9. | [CE] Left out: pipe 1091A0 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 1091E0 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 109874 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109A30 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109BBC was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109C55 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109E6D was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 109ED4 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A243 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A8C7 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A901 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A942 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10B083 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 110136 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 110179 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 11035C was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 11362F was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 113659 was left out...",
+          "evidence": "RECORDED, not judged: FULL what CDTWL printed = Command: | Command: CDTWL | [CE] Working upstream from detention pit C1. | [CE] CDCALC has no volume recorded for this system ? it shows \"0.0\", which is not a storage requirement. Type the figure from the STORM report, in cubic metres. | Detention volume required, in cubic metres (from the STORM report): 10 | [CE] The top water level is the crest of the baffle wall, and its height above the orifice is what sizes the orifice. These are the levels this system could be held to: | [CE] 1) 19.55 the top water level typed into CDCALC (typed by hand) - -810 mm below the lowest lid, holds 28134 L | [CE] 2) 19.01 the lid or grate of pit P6 - the highest in this system (measured from the drawing) - -270 mm below the lowest lid, holds 28134 L | [CE] 3) 18.74 the lid of pit C1 - the first thing water would come out of (measured from the drawing) - 0 mm below the lowest lid, holds 27365 L | [CE] 4) 18.05 the top of the highest detention pipe pipe 10B03B (CE design rule) - 695 mm below the lowest lid, holds 22861 L [CE's usual rule] | [CE] 5) 17.49 the level the required volume on its own would reach (worked out from the volume) - 1249 mm below the lowest lid, holds 10000 L [comparison only] | Which level is the top water level? Type its number, or type a level in metres (e.g. 18.54): 18.70 | [CE] Using 18.70 - your own level, not one CE measured off the drawing. Everything below is worked out from it. | [CE] Detention system above C1 holds water in 8 pits, 7 pipes. | [CE] Top water level 18.70 - the top water level this job is designed to (typed by the engineer). | [CE] CE's usual rule would have given 18.05 (the top of the highest detention pipe). You chose a different level, so that is what is used. | [CE] Holds at that level: pits 9129 L + pipes 17977 L = 27105 L. 10000 L is required. | [CE] That is enough. | [CE] Only 40 mm between the water and the lid of pit C1 (150 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P1 (150 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P7 (150 mm is wanted). | [CE] For comparison, the level the required volume on its own would reach: | [CE] Top water level 17.491 (holds 10000 L of the 27365 L this system can hold). | [CE] Running full at that level (these are the ones doing the detaining): pipe 1135E9. | [CE] Left out: pipe 1091A0 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 1091E0 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 109874 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109A30 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109BBC was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109C55 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 109E6D was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 109ED4 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A243 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A8C7 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A901 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10A942 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 10B083 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 110136 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 110179 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe 11035C was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 11362F was left out: one or both of its invert levels are not set. | [CE] Left out: pipe 113659 was left out..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 162 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 167665 ms ; Command outcome: CD completed 98686 ms ; Command outcome: CDTWL completed 194 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 03:02:33",
+      "session_id": "RUN-20261024-0255-C3.0.72-p3b1r1gA-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

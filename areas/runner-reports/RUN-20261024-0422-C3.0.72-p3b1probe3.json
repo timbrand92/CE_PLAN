@@ -1,0 +1,334 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-0422-C3.0.72-p3b1probe3",
+    "started": "2026-10-24 04:22:54",
+    "finished": "2026-10-24 04:28:23",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "90469A037C048EC999AEB8B4C8930E881B02347DB0712EB43DB9C3F281247232",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 FBD8EB84C32A, v3 session 099EB80E4C04, v3 allow-list 459D4D9095CA, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 6223A606999D, case_runner_lib.ps1 5CF8FA1387EF, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 90469A037C048EC999AEB8B4C8930E881B02347DB0712EB43DB9C3F281247232; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 04:22 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-0422-C3.0.72-p3b1probe3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 04:23:12",
+      "finished": "2026-10-24 04:28:23",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30423201_B1.dwg",
+      "cases": [
+        "R90"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R90",
+      "title": "probe: pipe handles and IL texts of the fixture",
+      "kind": "deterministic",
+      "order": 5,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "probe only, delete after use",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "78D7CBBECDF672753D5D6C758F3BFAC26912B598526FF9698BEDD1B1F88217CA",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 04:24:55",
+      "seconds": 57.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $a",
+          "ok": true,
+          "seconds": 18.9,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $b",
+          "ok": true,
+          "seconds": 13.1,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $c",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a \"object~^CeCvlPipeObject$\" -> $pa",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "selected 42 of 500: 1091A0 STORMWATER PIPE ; 1091E0 STORMWATER PIPE ; 109359 EX DRAIN HATCH ; 109390 EX DRAIN HATCH ; 1093C7 STORMWATER PIPE ; 109430 STORMWATER PIPE ; 1094BE STORMWATER PIPE ; 109500 EX DRAIN HATCH"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b \"object~^CeCvlPipeObject$\" -> $pb",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "selected 7 of 500: 110136 STORMWATER PIPE ; 110179 STORMWATER PIPE ; 11035C STORMWATER PIPE ; 1135E9 STORMWATER PIPE ; 11362F STORMWATER PIPE ; 113659 STORMWATER PIPE ; 1136A4 STORMWATER PIPE"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $c \"object~^CeCvlPipeObject$\" -> $pc",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a \"text~^IL \" -> $ta",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b \"text~^IL \" -> $tb",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $c \"text~^IL \" -> $tc",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pa handle -All -> $pah",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "field 'handle' = 1091A0 | 1091E0 | 109359 | 109390 | 1093C7 | 109430 | 1094BE | 109500 | 109835 | 109874 | 1098B6 | 1098E8 | 10993C | 10996E | 109A30 | 109B80 | 109BBC | 109C15 | 109C55 | 109CCF | 109E23 | 109E6D | 10..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pb handle -All -> $pbh",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'handle' = 110136 | 110179 | 11035C | 1135E9 | 11362F | 113659 | 1136A4"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pc handle -All -> $pch",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 10A98D -> $p3",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "ent-read 10A98D: {\"handle\":\"10A98D\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $n \"count\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count = 1034"
+        },
+        {
+          "n": 2,
+          "text": "record $pah \"FULL pipes in first 500\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1091A0 | 1091E0 | 109359 | 109390 | 1093C7 | 109430 | 1094BE | 109500 | 109835 | 109874 | 1098B6 | 1098E8 | 10993C | 10996E | 109A30 | 109B80 | 109BBC | 109C15 | 109C55 | 109CCF | 109E23 | 109E6D | 109ED4 | 109F81 | 10A1D4 | 10A243 | 10A27D | 10A348 | 10A3B0 | 10A3E0 | 10A430 | 10A86B | 10A899 | 10A8C7 | 10A901 | 10A942 | 10A98D | 10A9C9 | 10AA03 | 10AAB6 | 10B03B | 10B083",
+          "evidence": "RECORDED, not judged: FULL pipes in first 500 = 1091A0 | 1091E0 | 109359 | 109390 | 1093C7 | 109430 | 1094BE | 109500 | 109835 | 109874 | 1098B6 | 1098E8 | 10993C | 10996E | 109A30 | 109B80 | 109BBC | 109C15 | 109C55 | 109CCF | 109E23 | 109E6D | 109ED4 | 109F81 | 10A1D4 | 10A243 | 10A27D | 10A348 | 10A3B0 | 10A3E0 | 10A430 | 10A86B | 10A899 | 10A8C7 | 10A901 | 10A942 | 10A98D | 10A9C9 | 10AA03 | 10AAB6 | 10B03B | 10B083"
+        },
+        {
+          "n": 3,
+          "text": "record $pbh \"FULL pipes in 500-999\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "110136 | 110179 | 11035C | 1135E9 | 11362F | 113659 | 1136A4",
+          "evidence": "RECORDED, not judged: FULL pipes in 500-999 = 110136 | 110179 | 11035C | 1135E9 | 11362F | 113659 | 1136A4"
+        },
+        {
+          "n": 4,
+          "text": "record $pch \"FULL pipes 1000+\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL pipes 1000+ = "
+        },
+        {
+          "n": 5,
+          "text": "record $ta \"FULL IL texts first 500\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL IL texts first 500 = "
+        },
+        {
+          "n": 6,
+          "text": "record $tb \"FULL IL texts 500-999\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":684,\"handle\":\"10FEC2\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.67\",\"x\":20982.198211618645,\"y\":-9563.470834462882} | {\"index\":685,\"handle\":\"10FEC6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.58\",\"x\":17282.8634826677,\"y\":-24966.409309333023} | {\"index\":688,\"handle\":\"10FFA1\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.53\",\"x\":17989.820029566163,\"y\":-25291.587571950007} | {\"index\":689,\"handle\":\"10FFA5\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.45\",\"x\":32167.744416021833,\"y\":-25291.58757195} | {\"index\":701,\"handle\":\"1101B8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.25\",\"x\":54327.72379448633,\"y\":-25217.55910576913} | {\"index\":702,\"handle\":\"1101BC\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.13\",\"x\":76369.93631453306,\"y\":-25217.552367489545} | {\"index\":705,\"handle\":\"110361\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.20\",\"x\":107881.69579487847,\"y\":-24792.67886891092} | {\"index\":708,\"handle\":\"110393\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.00\",\"x\":107519.05275178317,\"y\":-22672.381021738347} | {\"index\":714,\"handle\":\"1104BD\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.08\",\"x\":78330.02898037092,\"y\":-25216.857726134174} | {\"index\":715,\"handle\":\"1104C1\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.98\",\"x\":95469.16722039143,\"y\":-25216.606734031804} | {\"index\":823,\"handle\":\"113634\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.50\",\"x\":96857.99168528253,\"y\":-27006.476839453797} | {\"index\":827,\"handle\":\"113662\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.10\",\"x\":96908.6847913974,\"y\":-25031.87204073365} | {\"index\":849,\"handle\":\"114CA4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.93\",\"x\":97375.43748402018,\"y\":-25213.848479446344} | {\"index\":850,\"handle\":\"114CA8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.87\",\"x\":105750.90104356706,\"y\":-23746.110454554124} | {\"index\":942,\"handle\":\"1155B2\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.40\",\"x\":34127.43220720847,\"y\":-25217.606665094474} | {\"index\":943,\"handle\":\"1155B6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.30\",\"x\":52367.6304628793,\"y\":-25217.60666509448} | {\"index\":945,\"handle\":\"115708\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.82\",\"x\":109086.86341313423,\"y\":-23510.80181170934} | {\"index\":946,\"handle\":\"11570C\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.61\",\"x\":110637.12303033507,\"y\":-23516.186962680724} | {\"index\":950,\"handle\":\"1162F0\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.65\",\"x\":21255.280979056544,\"y\":-37915.60042263015} | {\"index\":951,\"handle\":\"1162F4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.58\",\"x\":17873.5682484684,\"y\":-26045.222520546624} | {\"index\":953,\"handle\":\"1168A9\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.98\",\"x\":107991.78633435175,\"y\":-22646.63831870273} | {\"index\":956,\"handle\":\"116952\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.60\",\"x\":2412.950776645849,\"y\":-1204.4797604214264} | {\"index\":957,\"handle\":\"116956\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.00\",\"x\":20688.857823648428,\"y\":-6929.284162426433} | {\"index\":960,\"handle\":\"116980\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.60\",\"x\":35555.17311036947,\"y\":-1106.4170795732578} | {\"index\":961,\"handle\":\"116984\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.00\",\"x\":21684.431865668274,\"y\":-7633.478225914552} | {\"index\":964,\"handle\":\"1169AE\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.40\",\"x\":2412.9578193955394,\"y\":-46472.26426308707} | {\"index\":965,\"handle\":\"1169B2\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.15\",\"x\":20468.183970530314,\"y\":-40505.82031601814} | {\"index\":968,\"handle\":\"1169DC\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18...",
+          "evidence": "RECORDED, not judged: FULL IL texts 500-999 = {\"index\":684,\"handle\":\"10FEC2\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.67\",\"x\":20982.198211618645,\"y\":-9563.470834462882} | {\"index\":685,\"handle\":\"10FEC6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.58\",\"x\":17282.8634826677,\"y\":-24966.409309333023} | {\"index\":688,\"handle\":\"10FFA1\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.53\",\"x\":17989.820029566163,\"y\":-25291.587571950007} | {\"index\":689,\"handle\":\"10FFA5\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.45\",\"x\":32167.744416021833,\"y\":-25291.58757195} | {\"index\":701,\"handle\":\"1101B8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.25\",\"x\":54327.72379448633,\"y\":-25217.55910576913} | {\"index\":702,\"handle\":\"1101BC\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.13\",\"x\":76369.93631453306,\"y\":-25217.552367489545} | {\"index\":705,\"handle\":\"110361\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.20\",\"x\":107881.69579487847,\"y\":-24792.67886891092} | {\"index\":708,\"handle\":\"110393\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.00\",\"x\":107519.05275178317,\"y\":-22672.381021738347} | {\"index\":714,\"handle\":\"1104BD\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.08\",\"x\":78330.02898037092,\"y\":-25216.857726134174} | {\"index\":715,\"handle\":\"1104C1\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.98\",\"x\":95469.16722039143,\"y\":-25216.606734031804} | {\"index\":823,\"handle\":\"113634\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.50\",\"x\":96857.99168528253,\"y\":-27006.476839453797} | {\"index\":827,\"handle\":\"113662\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.10\",\"x\":96908.6847913974,\"y\":-25031.87204073365} | {\"index\":849,\"handle\":\"114CA4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.93\",\"x\":97375.43748402018,\"y\":-25213.848479446344} | {\"index\":850,\"handle\":\"114CA8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.87\",\"x\":105750.90104356706,\"y\":-23746.110454554124} | {\"index\":942,\"handle\":\"1155B2\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.40\",\"x\":34127.43220720847,\"y\":-25217.606665094474} | {\"index\":943,\"handle\":\"1155B6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.30\",\"x\":52367.6304628793,\"y\":-25217.60666509448} | {\"index\":945,\"handle\":\"115708\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.82\",\"x\":109086.86341313423,\"y\":-23510.80181170934} | {\"index\":946,\"handle\":\"11570C\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 16.61\",\"x\":110637.12303033507,\"y\":-23516.186962680724} | {\"index\":950,\"handle\":\"1162F0\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.65\",\"x\":21255.280979056544,\"y\":-37915.60042263015} | {\"index\":951,\"handle\":\"1162F4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.58\",\"x\":17873.5682484684,\"y\":-26045.222520546624} | {\"index\":953,\"handle\":\"1168A9\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.98\",\"x\":107991.78633435175,\"y\":-22646.63831870273} | {\"index\":956,\"handle\":\"116952\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.60\",\"x\":2412.950776645849,\"y\":-1204.4797604214264} | {\"index\":957,\"handle\":\"116956\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.00\",\"x\":20688.857823648428,\"y\":-6929.284162426433} | {\"index\":960,\"handle\":\"116980\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.60\",\"x\":35555.17311036947,\"y\":-1106.4170795732578} | {\"index\":961,\"handle\":\"116984\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.00\",\"x\":21684.431865668274,\"y\":-7633.478225914552} | {\"index\":964,\"handle\":\"1169AE\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.40\",\"x\":2412.9578193955394,\"y\":-46472.26426308707} | {\"index\":965,\"handle\":\"1169B2\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.15\",\"x\":20468.183970530314,\"y\":-40505.82031601814} | {\"index\":968,\"handle\":\"1169DC\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18..."
+        },
+        {
+          "n": 7,
+          "text": "record $tc \"FULL IL texts 1000+\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1000,\"handle\":\"116BB6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53922.49816931846,\"y\":-25007.058065002297} | {\"index\":1003,\"handle\":\"116BE0\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.60\",\"x\":41416.03302753011,\"y\":-1180.0122148961275} | {\"index\":1004,\"handle\":\"116BE4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53376.61454199752,\"y\":-25031.454454978517}",
+          "evidence": "RECORDED, not judged: FULL IL texts 1000+ = {\"index\":1000,\"handle\":\"116BB6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53922.49816931846,\"y\":-25007.058065002297} | {\"index\":1003,\"handle\":\"116BE0\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.60\",\"x\":41416.03302753011,\"y\":-1180.0122148961275} | {\"index\":1004,\"handle\":\"116BE4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53376.61454199752,\"y\":-25031.454454978517}"
+        },
+        {
+          "n": 8,
+          "text": "record $p3 \"FULL pipe 10A98D\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"10A98D\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL pipe 10A98D = {\"handle\":\"10A98D\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 04:25:52",
+      "session_id": "RUN-20261024-0422-C3.0.72-p3b1probe3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}
