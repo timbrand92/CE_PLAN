@@ -3,7 +3,7 @@
 ## ANSWER FIRST — IN PROGRESS
 
 1. **Tests written:** 10 cases: BUG-703 two, BUG-704 two, BUG-783 four, BUG-604 two. Compilation and execution pending; do not count these as passes.
-2. **Branch:** `cx3/tests-bd05`, private worktree `C:\ce-cx\bd05`, base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Draft PR pending.
+2. **Branch:** `cx3/tests-bd05`, private worktree `C:\ce-cx\bd05`, base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Draft PR [#1723](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1723), head `a4cf932b26b88a8cf04161c4b63a0305095dc8fd`. Both plugin and plan pushes passed the global leak scan.
 3. **What changes for a drafter:** no product, drawing, setting, default or window change. These checks protect existing fixes.
 4. **New findings:** none established yet. Existing helper coverage was found for most candidate bugs; this job targets gaps between those helpers and the reading or refresh result.
 5. **Not run yet:** builds, focused/full suites, historical red proof and AutoCAD. AutoCAD, accoreconsole, installation and deployment will not run in this task.
