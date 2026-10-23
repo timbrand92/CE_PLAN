@@ -15,3 +15,78 @@
 5. **Structural close check — NOT RUN / routed to its own lane.** Two synthetic drawings A and B, each with a CE footing driver. Queue A's known driver immediately before its normal close event using the native harness; MOVE A's driver 100 mm, CLOSE and answer No. At Detach completion no pending handle may belong to A; B must remain responsive and unchanged, with no Monitor.OnIdle failure for A. Repeat on the older supported AutoCAD lane. First move the two source guards to Structural.Tests on its own pinned release; a missing current source must fail and cleanup must precede ForgetDrawing inside Detach. This report does not allege a current Structural crash.
 6. **UI, resources and pictures.** No window, layout, command, switch or default was changed. No window resources were required and no new window pictures were generated or committed. Existing Civil window tests are part of the full suite, not real-AutoCAD acceptance. Undo for this test-only branch is to revert its commit; no installed files need restoration.
 7. **Evidence location.** Local receipts and build logs are under `C:\ce-cx\fa05-evidence`, outside the worktree. They are not staged or pushed. The final report will include measured full-suite skips and build totals. No private drawings or Settings content are copied into the report.
+
+
+---
+
+1. **Full Civil receipt — 24 October 2026, Melbourne.** `civil-full.trx`, Release net10: 19,600 discovered result records = 19,540 passed + 32 ordinary skips + 28 Explicit/on-demand exclusions; 0 failed. The console summary is 19,572 total because it excludes those 28 Explicit cases. Duration: 13 min 23 s. Do not collapse the two kinds of non-execution or call all 19,600 passed. No baseline full-suite total is claimed: the before/after proof is the corrected focused 13-case run.
+2. **Live Settings check.** SHA256 of all four pre-existing Settings files was read before validation and after the full run: all unchanged. Settings contents were not copied or edited. The suite uses its existing isolated Settings scope and this session redirects TEMP, TMP and CE_LOG_DIR_OVERRIDE into its own evidence folder. CE_UPDATE_DOC_SCREENSHOTS=0 prevents overwriting committed pictures.
+3. **Every ordinary skip — 32 cases.** The following names come from the saved result file. Ignore attributes remain unconditional where noted; their historical wording is not proof that an installed library is absent.
+
+1. **`AnnotationSystemTests.CreateInvertText_BottomPosition_NoMask_NoBackgroundFill`.** RD09-01 / BUG-1067 UNVERIFIED: Bottom/mask-off needs saved MText position and BackgroundFill readback.
+2. **`AnnotationSystemTests.CreateInvertText_BottomPosition_WithMask_BackgroundFillEnabled`.** RD09-01 / BUG-1067 UNVERIFIED: Bottom/mask-on needs saved MText position and BackgroundFill readback.
+3. **`AnnotationSystemTests.CreateInvertText_TopPosition_NoMask_NoBackgroundFill`.** RD09-01 / BUG-1067 UNVERIFIED: Top/mask-off needs saved MText position and BackgroundFill readback.
+4. **`AnnotationSystemTests.CreateInvertText_TopPosition_WithMask_BackgroundFillEnabled`.** RD09-01 / BUG-1067 UNVERIFIED: Top/mask-on needs saved MText position and BackgroundFill readback.
+5. **`AnnotationSystemTests.GlobalOffsetChange_OnlyAffectsNewAnnotations`.** RD09-01 / BUG-1067 UNVERIFIED: Changing the actual Settings consumer needs old/new pipe offset readback; unrelated data objects prove nothing.
+6. **`AnnotationSystemTests.GripEditEndpoint_InvertsFollow`.** RD09-01 / BUG-1067 UNVERIFIED: Native endpoint grip movement needs endpoint invert-label offset readback.
+7. **`AnnotationSystemTests.GripEditEndpoint_PipeTextFollows`.** RD09-01 / BUG-1067 UNVERIFIED: Native endpoint grip movement needs pipe-label position readback on the changed route.
+8. **`AnnotationSystemTests.InvertText_BottomPosition_IsOppositeOfDefault`.** RD09-01 / BUG-1067 UNVERIFIED: Bottom placement needs actual entity position readback; comparing local strings proves nothing.
+9. **`AnnotationSystemTests.PipeEditOK_NoAnnotationDeleted`.** RD09-01 / BUG-1067 UNVERIFIED: PIPEEDIT Save needs original label-handle readback before and after editing.
+10. **`AnnotationSystemTests.PipeEditOK_TextContentUpdated`.** RD09-01 / BUG-1067 UNVERIFIED: PIPEEDIT Save needs diameter and grade text readback from the existing labels, plus U and REDO.
+11. **`C60AuditSourcePinGuardTests.LayerEnsure_OnlySetsAppearanceOnNewRecords("Services/StructuralDetailService.cs","EnsureLayerInTransaction")`.** BUG-864: existing 18HIDDEN/9HIDDEN2 records get a new linetype; the Civil branch has the older Structural helper. No Structural edits authorised.
+12. **`C60AuditSourcePinGuardTests.TidyCountPass_UsesNoNormalTransaction`.** BUG-863: the tidy count pass still starts a normal transaction before ApplyMoves. Entity positions staying put does not prove a read-only preview.
+13. **`C60AuditSourcePinGuardTests.TidyLabelsPreview_ReachesTheYesQuestionWithoutWritingInitialisation`.** BUG-863: the same writing InitServices helper is called before CDTIDYLABELS preview/No/Escape. Audit CIVIL finding 1; route this residual with BUG-863.
+14. **`LinkRegistrationServiceTests.RegisterAttachment_NullIds_DoesNotThrow`.** Unconditional fixture Ignore: requires a native AutoCAD host. This case supplies null IDs and checks only no exception; library installation alone does not remove the Ignore attribute.
+15. **`LinkRegistrationServiceTests.RegisterPitAttachment_NullIds_DoesNotThrow`.** Unconditional fixture Ignore: requires a native AutoCAD host. This case supplies null IDs and checks only no exception; library installation alone does not remove the Ignore attribute.
+16. **`LinkRegistrationServiceTests.RegisterPit_DefaultObjectId_DoesNotThrow`.** Unconditional fixture Ignore: requires a native AutoCAD host. This case supplies null IDs and checks only no exception; library installation alone does not remove the Ignore attribute.
+17. **`LinkRegistrationServiceTests.RegisterSourceBlockAttachment_NullIds_DoesNotThrow`.** Unconditional fixture Ignore: requires a native AutoCAD host. This case supplies null IDs and checks only no exception; library installation alone does not remove the Ignore attribute.
+18. **`LinkRegistrationServiceTests.RegisterSourceBlock_DefaultObjectId_DoesNotThrow`.** Unconditional fixture Ignore: requires a native AutoCAD host. This case supplies null IDs and checks only no exception; library installation alone does not remove the Ignore attribute.
+19. **`LongSectionBridgeTests.BuildDefaultOptions_ThreePitSection_DatumMatchesLongSection`.** Unconditional Ignore: export-options type is coupled to the AutoCAD service file. This is not a runtime library probe, and no production caller of BuildDefaultOptions was found in the audit. The real options result remains unverified here.
+20. **`LongSectionBridgeTests.BuildDefaultOptions_ThreePitSection_ScalesAre100And50`.** Unconditional Ignore: export-options type is coupled to the AutoCAD service file. This is not a runtime library probe, and no production caller of BuildDefaultOptions was found in the audit. The real options result remains unverified here.
+21. **`LongSectionBridgeTests.BuildDefaultOptions_ThreePitSection_StartAndEndPitIdsSet`.** Unconditional Ignore: export-options type is coupled to the AutoCAD service file. This is not a runtime library probe, and no production caller of BuildDefaultOptions was found in the audit. The real options result remains unverified here.
+22. **`MultiPlanNetworkDrawingStoreTests.EmptyDrawing_ReadsAsNotPresentWithoutCreatingRecord`.** OneTimeSetUp: Requires live AutoCAD host; standalone Database construction can crash AutoCAD 2027 native APIs.
+23. **`MultiPlanNetworkDrawingStoreTests.InvalidNativeDocument_DoesNotCreateDrawingStorage`.** OneTimeSetUp: Requires live AutoCAD host; standalone Database construction can crash AutoCAD 2027 native APIs.
+24. **`MultiPlanNetworkDrawingStoreTests.RollbackRestoresPreviousValidatedNativeRecord`.** OneTimeSetUp: Requires live AutoCAD host; standalone Database construction can crash AutoCAD 2027 native APIs.
+25. **`MultiPlanNetworkDrawingStoreTests.ValidRisingMain_RoundTripsFromDrawingAsOneLogicalPipe`.** OneTimeSetUp: Requires live AutoCAD host; standalone Database construction can crash AutoCAD 2027 native APIs.
+26. **`OwnershipIntegrationTests.RegisterPipe_NoExplicitIds_FallsBackToGeometrySnap`.** RD09-02 / BUG-1068: unimplemented native fallback/readback fixture; must prove empty/unknown endpoints when no pits are near. Body remains UNVERIFIED if the fixture Ignore is removed.
+27. **`OwnershipIntegrationTests.RegisterPipe_WithExplicitPitIds_StoresOwnership`.** RD09-02 / BUG-1068: unimplemented native registration/readback fixture; must read saved P3/P5 links after CD, PIPEEDIT and reopen. Body remains UNVERIFIED if the fixture Ignore is removed.
+28. **`OwnershipIntegrationTests.SetExplicitPipeOwnership_BothEmptyPitIds_DoesNotThrow`.** Unconditional fixture Ignore: requires native host. This is only a null pipe ID/empty names no-throw smoke check; it cannot prove persisted ownership.
+29. **`OwnershipIntegrationTests.SetExplicitPipeOwnership_NullPipeId_DoesNotThrow`.** Unconditional fixture Ignore: requires native host. This is only a null pipe ID no-throw smoke check; it cannot prove persisted ownership.
+30. **`OwnershipIntegrationTests.TwoAdjacentPits_DrawPipeBetweenThem_CorrectIdsAssigned`.** RD09-02 / BUG-1068: unimplemented competing-pit fixture; must read selected P3/P5 ownership, never nearby unselected P9. Body remains UNVERIFIED if the fixture Ignore is removed.
+31. **`TeardownCrashGuardTests.FoundationMonitor_Detach_FlushesStaleObjectIds_BeforeInvalidate`.** RD09-03 / BUG-1069: locator targets the retired CE_STRUC_SUITE sibling folder. The present monorepo source does not satisfy that lookup. Requires the separately pinned Structural repair described above.
+32. **`TeardownCrashGuardTests.FoundationMonitor_Detach_RemoveWhereHasPerIdTryCatch`.** RD09-03 / BUG-1069: locator targets the retired CE_STRUC_SUITE sibling folder. The present monorepo source does not satisfy that lookup. Requires the separately pinned Structural repair described above.
+
+---
+
+1. **Every Explicit/on-demand exclusion — 28 cases.** These appear as NotExecuted in TRX but are excluded from the console total. RD09 inventoried 25; this receipt additionally identifies the StormFrequencySheetRenderCheck proof helper and the two RedoSafeCallGraphTests evidence writers. None has been counted as a pass.
+
+1. **`AnnotationSystemTests.UpdateAnnotationContent_NullId_ReturnsFalse`.** Requires live AutoCAD document — touching ObjectId properties triggers native AutoCAD initialisation that is not available in the unit-test process. Run manually inside AutoCAD via NUnit console runner, or rewrite as a source-inspection test like TeardownCrashGuardTests.
+2. **`CouncilSourcePageRendererTests.Render_LocalK02_EachRecordedHighlightOverlaysRealPassageInk`.** Requires the locally retained, fingerprinted Kingston K02 source PDF.
+3. **`CouncilSourceViewModelTests.Presenter_LocalK02_ProductionFieldAndEachExplicitBranchRenderTheirRecordedPage`.** Requires the locally retained, fingerprinted Kingston K02 source PDF.
+4. **`DetailReplicaComparator.CompareOrificeReplicaAgainstW2626`.** Reads the archive (read-only) — run on demand.
+5. **`DetailReplicaComparator.CompareSpsReplicaAgainst2515`.** Reads the archive (read-only) — run on demand.
+6. **`MasterDetailCaptureTests.CaptureSpsVariants_ToEvidence`.** Writes evidence DWGs — run on demand.
+7. **`MasterDetailCaptureTests.DiscoverZones_PumpStationMaster_ListsSpsDetails`.** Reads the office master (read-only) — run on demand.
+8. **`OrificePitDetailW2626ProofTests.GenerateReplicaDwg_ForSideBySideProof`.** Writes the committed evidence DWG — run on demand.
+9. **`OrificePitDetailW2626ProofTests.GenerateSpsReplicaDwg_ForSideBySideProof`.** Writes the committed evidence DWG — run on demand.
+10. **`PipeFlowSizingParityTests.WriteGolden`.** Writes the parity golden file from the code under test; run on the base commit only.
+11. **`PitBlockCompatibilityProbe.ComparePitBlock2vs3`.** Reads the block DWGs — run on demand.
+12. **`PitBlockCompatibilityProbe.DumpPitBlock3_ShippedVsUpdated`.** Diagnoses the PIT BLOCK 3 layer issue (shipped vs Tim's updated) — run on demand.
+13. **`PitLabelAttributeProbeTests.PipeAttachmentBlocks_ReportWhetherTheyCarryAttributes`.** needs CE_PIT_LABEL_DWG = path to a COPY of a drawing with CE pipes
+14. **`PitLabelAttributeProbeTests.PitLabelBlocks_ReportWhetherTheNumberIsAnAttribute`.** needs CE_PIT_LABEL_DWG = path to a COPY of a drawing with CE pits
+15. **`RedoSafeCallGraphTests.WriteManagerHookReport`.** Explicit diagnostic writer for the Manager hook report. Kept out of ordinary runs so a regression run does not rewrite its own evidence.
+16. **`RedoSafeCallGraphTests.WriteReviewedHookBaseline`.** Explicit baseline writer for reviewed hook evidence. Kept out of ordinary runs so the observed calls cannot silently replace the expected baseline.
+17. **`ReplicationEvidenceTests.DraftEvidenceDetails_ThreeRealJobs_EngineNumbersOnOfficeTemplate`.** OneTimeSetUp: Evidence run — writes docs/evidence/replication_run.md; run on demand
+18. **`ReplicationEvidenceTests.Replicate_All14RealJobs_FromInputsOnly_Twice`.** OneTimeSetUp: Evidence run — writes docs/evidence/replication_run.md; run on demand
+19. **`Sps2515MinerProbe.DumpSpsDetailAnatomy`.** Reads Tim's project archive — run on demand only.
+20. **`StandardDetailLibraryMinerProbe.CatalogueOrificePitsMaster`.** Reads the office standard-details masters — run on demand.
+21. **`StandardDetailLibraryMinerProbe.CataloguePumpStationMaster`.** Reads the office standard-details masters — run on demand.
+22. **`StormFrequencySheetRenderCheck.RenderPageOne`.** Explicit STA visual-proof helper. Reads local inputs and writes an output PDF/image only when selected by name, into C4_RENDER_DIR; it is not routine regression acceptance.
+23. **`SurveyDiagnosticTests.Inspect_SurveyDwg_ReportAllEntities`.** OneTimeSetUp: Diagnostic only — run manually to inspect a survey DWG
+24. **`W2626ConventionMinerProbe.DumpDraftingConventions`.** Reads Tim's project archive — run on demand only.
+25. **`WaterTankPickerTests.TimsMaster_EveryListedBlockHasAPicture`.** needs CE_WT_MASTER = path to a copy of CE Civil WATER TANKS PLAN.dwg or .dxf
+26. **`WaterTankPickerTests.TimsMaster_WhatTheWindowWillList`.** needs CE_WT_MASTER
+27. **`WaterTankPickerTests.TimsMaster_WhichPlansNeedATitle`.** needs CE_WT_MASTER
+28. **`XrefSiteGeometryArchiveValidationTests.Extract_AllKnownArchiveJobs_BoundaryWithinHalfPercent`.** OneTimeSetUp: Reads the office project archive — run manually on Tim's machine
+
+1. **Other conditional gates.** The audit's shared AcadTestHost, per-fixture library gates, missing detail-master gates, timezone data checks and net48 stub gate remain unchanged. They produced no additional non-executed cases in this measured net10 receipt. No claim is made about another machine or framework. Source inventory and explanations remain in CODEX_AUDIT2_RD09_23OCT.md.
