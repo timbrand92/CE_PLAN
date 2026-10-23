@@ -92,4 +92,4 @@ I read the code at each PR's exact head (heads re-checked on GitHub at about 05:
 3. **I did not run #1618's test on the pre-fix commit**, so its "fails without the fix" is reasoned, not seen.
 4. **Trial merges were against installed 1.0.122, each S-43 PR, installed 3.0.72 and C-63 only.** Not against every other open PR, and not against the batch 1 to 9 merge lists as one assembled branch.
 5. **I did not check whether the office's pilot PCs have the approved-address record set**, which decides how much item 6 matters.
-6. **Housekeeping:** an untracked `.codex/` folder appeared in the main checkout `C:\Lisp Files\CE_ACAD_PLUGIN` during this run. It is not mine, and I left it alone.
+6. **Housekeeping:** an untracked `.codex/` folder is in the main checkout `C:\Lisp Files\CE_ACAD_PLUGIN`. It is not mine, and I left it alone.
