@@ -37,7 +37,7 @@
 >
 > **Status values:** `OPEN` · `IN PROGRESS` · `FIXED — YYYY-MM-DD` · `WONT FIX — reason`
 >
-> **Next BUG ID to use:** BUG-1088 (BUG-1035..1084 = 50 findings of the twelve Codex read-only audits of 23 Oct, areas/CODEX_AUDIT2_RD01..RD12_23OCT.md, RD06 none, filed 24 Oct; BUG-1085..1087 = Codex X6 FAILs 24 Oct: CEMANAGER undo step, CE_VERSION undo step, About CE Suite heading contrast; BUG-1030..1034 = Codex W-series acceptance ledger 23 Oct; BUG-873..1029 = 23 Oct findings ledger, areas/FINDINGS_LEDGER_22OCT.md; BUG-866..872 = Opus engineering audit 22 Oct: rainfall curve note, grade on straight distance, UPVC-only sizing, pit schedule depth, move-pit rounding, CDTWL units, outdated back-test; BUG-865 = full-drawing scan on each attribute-editor double-click, Opus audit 22 Oct; BUG-864 = CEMEMBER/SBEAM re-set linetype of existing 18HIDDEN/9HIDDEN2; BUG-863 = CDCHECKIGNORE switch OFF still saves the record; BUG-862 = outcome line says cancelled for Esc-ended PIT/CD and completed for refusals; BUG-861 = REDO lost once in a freshly opened drawing, Codex V4/V6; BUG-860 = green DP label opens TEXTEDIT, Opus 1588; BUG-859 = Codex V4 finding, 22 Oct, double-click on the new DP1 downpipe circle opens the AutoCAD Enhanced Attribute Editor) (BUG-858 = lane 02 finding, 20 Oct, old SBEAM Z purlin section outline crosses itself; BUG-857 = Codex V2 finding, 20 Oct, Grade mismatch box X still places the pipe; BUG-856 = run 37 finding, 20 Oct, Tidy labels "would move" line does not name the pipe; BUG-855 = run 35 finding, 20 Oct, Pit Schedule data-issues count +1 after CDSYNC; BUG-854 = run 34 finding, 20 Oct, R-06 not-known fix line wording; BUG-823..853 = Manager, installer, admin, update route and settings hunt, 31 entries from the 19 Oct read-only audit of Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118, HUNT-MI-n = BUG-(822+n), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_MANAGER_INSTALL_2026-10-12.md; BUG-820..822 = Claude driver run 32 findings, 19 Oct, Civil 3.0.56: Recover Inverts one-of-two texts, CDTAG pick-first, What's New palette; BUG-818..819 = Tim's CEMEMBER design session findings, 18 Oct: section list data and drawing-code gaps; BUG-813..817 = Claude driver run 31 findings, 18 Oct, seen in real AutoCAD on Civil 3.0.55: CDFIXTAGS apply, wording, CDCHECKS R-06, tidy line, Pit Schedule undo step; BUG-779..812 = HUNT Civil L/M findings, 34 entries from the read-only audit of Civil 3.0.55 (Pit Schedule, Checks and QA, repair, X-Civil schedule import), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_CIVIL_LM_2026-10-12.md; BUG-756..778 = HUNT Civil I/J/K findings, 23 entries from the read-only audit of Civil 3.0.55 (long sections, WSUD, CDRG, spoon drains, crossings), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_CIVIL_IJK_2026-10-12.md; BUG-750..755 = Codex look L3 and L4 findings, 18 Oct, seen in real AutoCAD on installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118: SBEAM elevation inner flange lines, CEHATCH library cards without pictures, Structural Settings long paths clipped, Checks list shows internal ids, Manager Dark tab text contrast, RC beam type pictures cropped; BUG-748 and BUG-749 = Codex look L2 findings, 18 Oct, seen in real AutoCAD on installed Structural 1.0.118: DOTS hatch density disagrees across scales; Section Mark identifier answer triggered a paste command; BUG-699..747 = HUNT Civil B findings, 49 entries from the 18 Oct read-only audit of installed Civil 3.0.53 (survey, spot levels, LandXML, X-Civil import, source tags), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md; BUG-697 and BUG-698 = Claude driver run 25 findings, 18 Oct, seen in real AutoCAD on Civil 3.0.53; BUG-652..696 = HUNT Civil E findings, 45 entries from the 17 Oct read-only audit of installed Civil 3.0.51, none seen in AutoCAD; BUG-651 = CDIMPORTXCIVIL command-line 'Proceed with import?' carries on and WRITES the import when Esc is pressed (found by the Opus review of PR #1308, 17 Oct; fix assigned to the Max fixer); BUG-566 = Structural start-up menu load sets MENUBAR to 1 unchecked after every update (review round 10, 12 Oct; breaks the Manager leaveMenuBarAlone switch #1231); BUG-565 = PIT and Edit Pit with the text layer locked still fail the old way in 3.0.44 (Codex W58);  (BUG-564 = FEDIT Esc at the new-type question leaves an empty undo step;  (BUG-563 = the command line prints 'Pipe is essentially flat  no measurable fall' with the dash missing; BUG-560 lowered to MEDIUM and click-based (driver run 5: typed pit centres work); BUG-558: driver run 5 reproduced it 4 of 4 on a plain CIRCLE, NOT time dependent, witness shows nothing from CE; BUG-561 = PITEDIT number-only Save swaps the detention pit's grate and solid cover sides (Codex W49-04ii); BUG-562 = '; error: syntax error' printed at start-up (Codex W49); BUG-558 = REDO lost after a drawing switch REPRODUCED by Codex W49 on Civil (PIT) and Structural (plain CIRCLE); BUG-559 = W48-01 FAIL: the re-import of B365D shows no explanation line for the short P8 pipe; BUG-560 = W48-03/04a BLOCKED: New Pipe says 'Neither end is on a pit' for P10 to P9 with both ends Unknown; BUG-558 = Civil REDO lost after switching drawings (Claude driver run 2, 9 Oct; NOT reproduced in run 3, kept as a note); BUG-550..557 = OFF-PC CALLS AUDIT (9 Oct, 17 routes by which the plugin sends data off the PC; code reading only, none seen in AutoCAD; areas/release-v3-colleagues-OFF_PC_CALLS_2026-10-09.md): BUG-550 HIGH the whole markup / AI family (CEMARKUPPARSE, the CEMARKUP Parse button, CEMARKUPBENCH on every PDF in a folder tree, Ask AI with the full drawing path) goes to OpenAI and the Enable MarkupAI switch is read by nothing; BUG-551 HIGH Civil AI paths (CDIMPORTXCIVIL 'try AI extraction?' sends up to 6 whole pages with Enter = Yes and skips the seat checks; CDASK Analyse markups up to 5 pages with no blanking; the repo's CE Cloud proxy forwards the body unchanged); BUG-552 MEDIUM-HIGH the 'office folder, coded' rule broken in three places (Civil fault text, CEMANAGERDIAG real login, support zips on the Desktop); BUG-553 CEMARKUPRUN pip-installs from the internet; BUG-554 WebView2 download not signature-checked; BUG-555 CDHELP falls back to a domain that is not the company's; BUG-556 Azure upload code still ships (all MEDIUM); BUG-557 the remaining routes grouped; Tim's PC: no OpenAI key set, but CE_CLOUD_URL and CE_CLOUD_AUTH are set so the Civil AI paths go through the CE Cloud proxy today; previously: BUG-550 (BUG-549 = URGENT PRIVACY: Structural Read Markup PDF (default Hybrid and Hand mode) uploads the WHOLE markup PDF, title block included, to OpenAI when an OpenAI key is set on the PC, and the markup chat also goes to OpenAI (breaks Tim 25 Sep rule); COLLEAGUE RELEASE GATE item 10; on Tim's own PC the key is NOT set so nothing leaves today; BUG-548 = S-29 finalizer: GO at 68ace978, no commit, one MEDIUM (lintel values and schedule position in the per-PC side file, BUG-496 weak spot) and seven LOWs; BUG-538..547 = Civil R-00 hard-coded value audit R00_CIVIL, 10 entries, code reading only, none seen in AutoCAD (top findings: the audit found at least 85 engineering numbers in the Civil code and NONE of the top 40 is fully on the Settings page (20 have no Settings name, 13 have a name the command ignores, 5 are only partly covered, 2 have two or three names for one thing); BUG-538 MEDIUM-HIGH council rules written into the code (Bayside 1 in 20, the 50 / 80 mm rising main split, Kingston 500 L per 2000 L, Manningham 0.25, Casey one-third and K 21.9), a council change needs a new build; BUG-539 MEDIUM-HIGH ENGINEERING-RESULT RISK roofs and paving C 0.9 in CDDESIGN and pump sizing with no Settings name while CDCALC uses 1.0 (with BUG-510); BUG-540 MEDIUM-HIGH ENGINEERING-RESULT RISK the Pit Schedule writes 'With Step Irons' deeper than 0.90 m whatever Settings says while CDRULES reads Settings; BUG-541 slab falls fixed in code; BUG-542 the long section has its own roughness list; BUG-543 the CDCALC Detention tab always sizes the orifice with 0.6; BUG-544 MEDIUM-HIGH the 13 values with a name the command ignores; BUG-545 MEDIUM-HIGH two or three names for one value (detention freeboard, pit drop); BUG-546 WINDOW ROWS FOR CODEX (Civil): 35 keys in CD_Settings.json with no box on the Settings page; BUG-547 the remaining ranked values grouped); previously: BUG-538 (BUG-529..537 = Structural R-00 hard-coded value audit R00_STRUC, 9 entries, code reading only, none seen in AutoCAD (top findings: BUG-529 MEDIUM-HIGH the THREE HARD BLOCKS against R-27 (footing size or depth over 10 m refused outright, stirrup cover under 10 silently forced to 10, reo spacing refused outside 50 to 1000); BUG-534 MEDIUM-HIGH five standards tables (AS 3600, AS/NZS 4671, AS 2870, AS 1684.2, AS 4055) with no edition cited in the tables or the output; BUG-530 pad footing 600 has no Settings name and is drawn for old pads with no recorded size; BUG-531 text heights repeated 23 times, only two commands read the Settings value; BUG-532 four objects drawn on two different layer names; BUG-533 required bracing stored on the PC not with the job (with BUG-500, BUG-496); BUG-535 WINDOW ROWS FOR CODEX: six values named in CS_Settings.json with no CESETTINGS box; BUG-536 eight commands ignore an existing Settings name; BUG-537 the remaining ranked values grouped); previously: BUG-529 (BUG-517..528 = cross-cutting bug hunt 3 HUNT3_CROSS, 46 findings, code reading only, none seen in AutoCAD (top findings: BUG-517 'no blue' is not done anywhere, the old deep blue 1E5AA8 is still the light-theme colour in Civil, Manager and Structural windows, in 406 of 410 light-ribbon icons and in help, and the Civil computations sheet prints the practice name and rule line in blue to paper and PDF (COLLEAGUE RELEASE GATE CANDIDATE, look and print); BUG-518 the 'Show AutoCAD command names' switch is built nowhere; BUG-519 Structural prints about 44 lines of program words at every start and names four commands that do not exist (BTXT2MT, BMT2TXT, SBL, BREAKLINE); BUG-520 Settings rows missing (pit-outlet speed, detention minimum grade, FADOPT widths) and lintel tolerances have no per-job layer; BUG-521 ENGINEERING-RESULT RISK the Inspector and Design Check Dashboard use the office minimum cover only while CDRULES uses council > project > office, so they can disagree on one pit; BUG-522 nothing at start-up notices two different CE_SHARED copies; BUG-523..528 = the other findings grouped by heading: command-line jargon, ribbon and window words, other blues, Structural Settings groups, values read from two places (BUG-527 includes the pipe speed limit split and the two job timers), shared helper files); previously: BUG-517 (BUG-505..516 = Civil bug hunt 2 HUNT2-C-01..15, code reading only, none seen in AutoCAD (top finding is a COLLEAGUE RELEASE GATE CANDIDATE: BUG-505 the X-Civil and LandXML imports never read the source drawing's UNITS, so a millimetre job can come in 1000 times too big, silently; then wrong-number risks on designs: BUG-506 CDDESIGN summary prints the connection pipe grade as 1:0; BUG-507 CDCALC Boyd's opens with another job's figures that flow to Detention and CDDESIGN; BUG-508 CDDESIGN flows on the office rainfall curve while storage uses the job curve; BUG-509 summary prints the office C 0.35 while Darebin/Maribyrnong discharge used 0.4; BUG-510 roof runoff C 0.9 versus 1.0 in two tools, neither in Settings; BUG-511 CDDESIGN detention pipe ignores the Settings run and size range; BUG-512 LandXML invents a 375 mm pipe, 600x600 pit and STORMPRO SN12 and marks them 'from the file'; BUG-513 LandXML writes the sump level as the pit IL; BUG-514 CDRULES prints 'Assumed roughness' on every pipe; BUG-515 Boyd's storage silently capped at the last storm row; BUG-516 = four LOWs grouped); previously: BUG-505 (BUG-504 = HUNT2-S-11 on its own: CSWINDCLASS saves a blank wind class as "set", breaks "Unknown stays Unknown"; BUG-495..503 = Structural bug hunt 2 HUNT2-S-01..15 (top two are COLLEAGUE RELEASE GATE CANDIDATES: BUG-495 Publish Issue gives every Structural sheet in the job the new revision and issue date including sheets left out, breaking Tim's 14 Sep ruling, and BUG-496 the wind class and soil job record is saved on this PC under the drawing's full path, not with the job; then BUG-497 STRSCHEDCREATE tables one row too short; BUG-498 schedule refresh never removes erased braces; BUG-499 bracing panel counts BT1 roof trusses as wall bracing; BUG-500 required bracing is one value for the whole PC; BUG-501 C1 size by mark ignoring floor; BUG-502 CSSUBFLOORGRID made-up sizes; BUG-503 = seven LOWs grouped; code reading only, none seen in AutoCAD); BUG-488..494 = Audit 01 (Manager fault report and CEMANAGERDIAG write the real Windows login, PC name and folders into the office IT folder = BLOCKS COLLEAGUE INSTALL; support zip misses drawing names without .dwg and folder and PDF paths; the login is written INSIDE the DWG at pipe-connection confirm and CDDESIGN redesign; other privacy routes; time-log files named by login = Tim's call; start-up settings writes; Structural Undo/Redo: nothing found writing between U and REDO but Codex has NOT walked TS1, R1, FSF, FPFC, grips, Sheets Update drawings, a drawing switch, autosave ON or beam linking ON; code reading only); BUG-476..487 = Manager and installer bug hunt HUNT-M-01..15 (no administrator list: first colleague to click Admin Dashboard becomes THE administrator and Tim is locked out; update messages name an installer nobody can run; Roll Back still offered; an old April Structural approval reads as newer; "CE is current" when the office folder is unreachable; Manager turns the menu bar on at every start; CESUPPORT zip lands in OneDrive; old install scripts and builds in the office folder; CEHEALTH misses Manager; Refresh with no error catch; long staging paths on 2022 to 2024; four LOWs; all from reading code and the drive, none seen in AutoCAD); BUG-466..475 = Structural bug hunt findings HUNT-S-01..15 (FPFC takes the typed mark's size, rotated UCS, roof-down with linking off, FEDIT Esc still saves, FSF picking an outline, metre drawings, layout/REFEDIT, locked layers, FEDIT rename overwrites a size, LOWs); BUG-458..464 = Civil bug hunt findings HUNT-C-01..07 (REFEDIT not checked, locked label layers, "Nothing was changed" sentences, fixed 10 percent, 2-decimal rounding, schedule read-only), BUG-465 = HUNT-C-08..15 (eight LOWs); all from reading code only, none seen in AutoCAD; BUG-457 = second independent Opus review of the Civil redo-safety paths: nothing writes between U and REDO on 3.0.40 or C-27 (code reading only), 3 MEDIUMs about the guard test blind spots, 9 routes Codex has never walked; BUG-456 = C-27 finalizer: GO at 319ba688, one MEDIUM fixed (false "other end open" line for a downpipe branch), 10 LOWs; BUG-455 = Codex W45 on Civil 3.0.40 / Manager 1.1.40: CEHEALTH and CESUPPORT zip PASS, the three start-up lines remain, Edit Pipe window still shows the 1 in 100 grade selector on a flat pipe (the #819 preview line was not seen); BUG-454 = Codex W44 on Structural 1.0.110: FSF Enter at the centreline question ends the command (seen twice), FPFC pad shows no label, R1 needs a third (top) object; CSREOBAR and FEDIT PASS; BUG-453 = Codex W43 on Structural 1.0.110: new C1 wording works, 13 settings keys added and nothing changed, off sentences still say the Settings page is "still to be built"; BUG-452 = C-26 finalizer: GO at 2162e2f5, the #811 login leak fixed, 10 LOWs incl. menu lines may remain on PCs that already have them; BUG-451 = Codex W41 on Structural 1.0.109: DAY1 steps 14/18/19/20 all BLOCKED by brief and operator faults, observations only; BUG-450 = S-27 finalizer: GO at 52bdb4b5, one wording commit, 7 LOWs; BUG-449 = Codex W39 on Structural 1.0.109: C1/TS1 label fix PASS, Esc PASS, beam PASS, Enter at the support text prompt starts the normal text command and prints "Text placed" before the label is placed (wording, S-27); BUG-448 = S-26 finalizer: #815 misread BUG-438, finalizer fix 1fd75ab6, Esc at the number question needs Tim; BUG-447 = C-25 finalizer: the P8 zero-length pipe is a real 1.68 m pipe whose ends were pulled together, wording fixed, end-matching cure is a Team item; BUG-446 = Codex W37: marker layer seen, stale marker stays after Edit Pipe Save, Civil log shrinking; BUG-445 = Codex W35: rebuilt #805 marker works, U/REDO passes, REGEN between U and REDO is native; BUG-444 = C-24 finalizer: rebuilt #805 proven redo-safe, 9 LOWs, W33 test; BUG-443 = S-25 finalizer findings (doubled default fixed, 8 LOWs, legend second-copy item); BUG-442 = Codex W32: FLAT label passes, Edit Pipe window still shows 1 in 100, CESUPPORT zip holds one file; BUG-441 = C-23 finalizer: #805 reverted (REDO risk), Roll Back and Kingston Stale notes, 7 LOWs; BUG-440 = Codex W29: BUG-061 not reproduced, zero-length P8 pipe, import single U passes, profile template points to a test copy; BUG-439 = S-24 finalizer findings (two MEDIUMs fixed, 8 LOWs); BUG-438 = Codex W28: C1 support text CR1 "DefaultValue is not set", column not CE-linked until a beam is linked; BUG-437 = Codex W26: C1/TS1 reject Enter at the support text prompt, old menu names fail at AutoCAD start-up; BUG-436 = Codex W25: BUG-061 re-import 53 vs 45 pipes + P8 to P8 self-pipe, no pipe list to count; BUG-435 = Codex W24: start-up lines "Menu item failed to load" + "; error: syntax error", C1 prompts; BUG-434 = Codex W21: C1/TS1 leave CLAYER changed when cancelled, _Dot message on C1/TS1; BUG-433 = S-23 finalizer LOWs (SF Xref scan, repeated line, Sheets Sync no warnings); BUG-432 = C-22 finalizer findings (CDTG grate cover 0.000 vs blank, MEDIUM advice only); BUG-431 = Kingston K02 label/edition flag + BUG-251 Team item; BUG-430 = Codex W20: pit label double-click opens the Enhanced Attribute Editor, override tick after Stop overriding; BUG-429 = Structural 1.0.105 writes 20 new default keys into the user CS_Settings.json at first start (LOW design question); BUG-428 = S-22 finalizer LOWs (BB brace no warning, limit compared in drawing units); BUG-427 = Codex W18 observations (flat typed pipe keeps a 1 in 100 label; footing region after STRETCH U/REDO); BUG-426 = C-21 finalizer findings (Pit Schedule window p1 case MEDIUM, wording LOWs); BUG-425 = second source audit Structural + Manager, 2 HIGH in the Manager update channel (Roll Back Release does nothing; Civil updates without Manager); BUG-424 = S-21 finalizer LOW findings; BUG-423 = C-20 finalizer findings (CDFIXFLATPIPES steep wording, three places real names remain); BUG-422 = unknown ground level skips the cover check in the Edit Pipe strip; BUG-420 = Pit Schedule window accepts a bare duplicate number (W14), BUG-421 = stray text typed into AutoCAD (voice?); BUG-417 = X-Civil import unlocks locked layers (HIGH), BUG-418 = strip footing commands re-layer the whole drawing (HIGH), BUG-419 = source audit MEDIUM/LOW findings; BUG-414 = Edit Pit rename onto an existing number can delete the other record (older), BUG-415 = pit-number wording gaps, BUG-416 = C-19 small items; BUG-413 = W11c Structural 1.0.102 observations incl. Civil machine-report name with real login; BUG-412 = W10c observations (record-not-saved line, CDRULES prompt); BUG-411 = F2 runs CLEAN; BUG-409 = Codex changed Tim's ABFLIPAUTO setting (restore), BUG-410 = W11 observations on 1.0.102; BUG-408 = Stop overriding status sentence not seen (#681); BUG-405 = report privacy gaps (#662 SourceRoot/StatusSummary, Civil file name), BUG-406 = four old-metre readers left, BUG-407 = #678 fails #686 guards; BUG-404 = C: drive space swings and build stops (Windows Search indexer, installer scratch, Codex snapshots); BUG-403 = quiet paste catcher prints nothing when Civil is already awake and the destination has no record; BUG-402 = StrucPlus LISP not found at start-up; BUG-401 = New Pit cover blank after restart; BUG-399 = FEDIT gap pick misses (observation), BUG-400 = Duplicate definition of block _Dot message; BUG-398 = issue preview vs issue disagree (#692); BUG-397 = Manager CE.Host load list (#684 LOW 2); BUG-396 = C-17 and S-18 finalizer findings; BUG-395 = Codex verifyW8 results; BUG-394 = CSREOBAR doubled defaults + driver run 26; BUG-393 = four places still read old metre records 1000x short; BUG-392 = Codex verifyW7 results: FST Delete on a locked layer PASS but U does not restore the footing in CE record; BUG-391 = driver run 24 results + 7 findings (BEXTEND/FEDIT doubled defaults, INSUNITS, undo step after FST cancel, FADOPT arc/ellipse, CEMANAGER no window, MOVE message); BUG-390 = Codex verifyW6 results: BUG-385 fixed in real AutoCAD; BUG-389 = CDCHECK command-line list prints a raw arrow escape; BUG-388 = FDELETE question prints [Yes/No] twice; BUG-387 = CLAYER nil after a Pit Schedule Revert/U sequence; BUG-385 = Pit Schedule Revert Row Override makes the row disappear; BUG-386 = Revert keeps the typed cover (question); BUG-384 = locked pipe layer batch refusal does not mention the lock (wording); BUG-383 = a fresh open already shows DBMOD 1 before any CE command; BUG-381 = Foundations manager open+close marks the drawing modified; BUG-382 = FST status line log tail; BUG-380 = Codex verifyW3 results (FEDIT edge pick, OSMODE 1151, ribbon menus, Edit Pipe has no layer box); BUG-376 = Pit Schedule blank IL; BUG-377 = raw U+2192 in a warning; BUG-378 = first open skips the old-pipe upgrade; BUG-375 = C-11 finalizer side findings; BUG-374 = Codex verifyW2b results (templates all INSUNITS 4 mm; Edit Pipe Cancel DBMOD; scaled Edit Pit label unclear); BUG-373 = driver session 15: Edit Pipe Cancel marks the drawing modified (DBMOD 17 to 21), CDDESIGN drop-downs read class names; BUG-372 = raw handle and block name in the invert text no-clear-spot line (LOW); BUG-371 items closed by driver runs 12-13 (Civil 3.0.25 all pass); BUG-371 = C-10 finalizer leftovers (2024 names test, BUG-364 cause unsettled, LISP STRETCH undo); BUG-370 = driver session 11 on Structural 1.0.94: undo counts, layer probes, names all PASS; Kind column code words LOW; BUG-369 = S-10 finalizer leftovers (frozen layer draws a hidden bar, LOW); BUG-368 = Structural: extra empty undo step after CSREOBAR and CSBARSCHEDULE (BUG-358 pattern); BUG-367 confirmed in real AutoCAD (frozen layer thawed and recoloured, STR unlocks a locked layer outside the undo); BUG-367 = S-9 finalizer: CE silently resets and UNLOCKS existing layers (RBL, RBC, STR: MED, in 1.0.92 too); BUG-366 = driver session 8: CSREOBAR typed fails (investigating), paste into a no-drainage drawing prints no line (BUG-342 part 1 open); BUG-365 = UI mapping session 7: more unnamed controls and jargon names, Settings Enter saves the window, sheets scan whole folder, crash-inference records after driver kills, Structural telemetry not anonymised; BUG-364 = driver session 6 results: first-use locked-layer line prints raw handles (LOW); LISP PostCommand also spins (still not CE); BUG-363 = C-9 finalizer leftovers (old pit copy MOVE rewords original pit pipe labels LOW-MED); BUG-362 = S-8 finalizer leftovers (LOW); BUG-361 = typed PIT prompt burns 1.5-1.9 cores, hot thread in CE DrawingService.GetPoint (reopens BUG-359); BUG-360 = UI accessibility names and jargon; BUG-359 = AutoCAD wedges caused by the driver leaving a prompt open (CDCHECK first question, bare LINE), not CE; BUG-358 = driver run 2: S-05 extra silent undo step (MED), second AutoCAD wedge (investigating), locked-layer wording; BUG-357 = modern pipe fixture findings (silent grade change when a pit is moved with the pipe layer locked, MED to confirm); BUG-356 = Whats New window modal at first start after an install blocks automation; BUG-355 = first driver run findings (FEDIT outline pick, legacy pipe fixture); BUG-354 = CE_StrucPlus LISP not found at every start (old ce_suite_startup.lsp, not in repo; LOW); BUG-353 = C-8 Opus review leftovers (unconnected-end record 18.10 MED, label grade after schedule edit, ARRAY erase wording); BUG-352 = S-7 finalizer leftovers (raft beams in cm/inch mm-evidence MED, LOWs); BUG-351 = C-8 builder leftovers + two questions for Tim; BUG-350 = headless probe findings on installed 3.0.22 (HIGH pit rename, batch Apply refused, modal box, ARRAY); BUG-349 = installed 1.0.90 Opus review findings (OPEN/NEW counter, FSTEXPORT note, CSLOADPATH, FEDIT five-vertex); BUG-348 = #542 Opus review leftovers (cm-drawn-in-mm detection MED, LOWs, tests append to Tim live Structural log); BUG-347 = Codex verifyC7 observations (palette click, legacy-pipe prompt, ARRAY erase line, fixtures); BUG-346 = C-7 finalizer leftovers (MED copy-label follow, LOWs); BUG-345 = C-7 builder leftovers (LOW); BUG-344 = Structural footings in non-mm drawings: convert automatically per INT-026, S-7; BUG-343 = grade lock: breakline pair halves, held grade on pipes set flat, downToUp, Repair Center cut-off buttons, damaged labels with no repair) (BUG-342 = C-6 adversarial review 2: paste into a drawing with no drainage ignored, pit move drags unowned items, associative ARRAY untested, council swap on one Enter) (BUG-341 = S-5 adversarial review: corner grip makes a kite and the record stays old, memory-only out-of-date note, CMDNAMES nested check unmeasured) (BUG-340 = C-6 adversarial review 3: batch editor confluence level, clash warnings, Simple Pipe + Design grade, double write, broken-pair halves, carry ignores typed levels/locked layers; native locked-layer code sound) (BUG-339 = batch editor Apply fails "affected schedule cell cannot be resolved from the accepted project snapshot", Codex C6-06) (BUG-338 = C-6 adversarial review 1 units: drafter-started writers in UNITS-Metres/mm-drawn drawings, reverse mix undetected, split pipe grade lock half length, metre drawings drawn at mm size) (BUG-337 = Codex C6-04: CD arrow P1 -> P2 but Edit Pipe flow P2 -> P1 with crossed levels in a metre drawing with a scaled pit, unresolved) (BUG-336 = S-5 leftovers) (BUG-335 = S-4 adversarial review 3: native footing edits never recorded, FADOPT doubles, FST delete eWasErased, retyped label reverted) (BUG-334 = S-4 adversarial review 1: HIGH footing redraw is its own Undo step, HIGH schedule out-of-date note never works on 2027, HIGH background-thread drawing work, link migration written at open) (BUG-333 = S-4 adversarial review 2: HIGH failed footing redraw forgets the old outline, settings busy-at-start Save, CSLOADPATH OK in non-mm drawings, units question every command) (BUG-332 = Structural S-4 finalizer leftovers) (BUG-331 = PR #508 builder leftovers: CD refuses pipes 1 m or shorter in a metre drawing (R-27), detention length check, long section, imported-level review, dead code) (BUG-330 = PR #507 builder leftovers: more mm-in-metre places, OOPS end-owner choice, Pipe tab mm vs m) (BUG-328 = HIGH: grade-locked pipe inverts worked out from a length 1000x too short in metre drawings; BUG-329 = #503 review leftovers) (BUG-327 left free) (BUG-323..326 = Codex VERIFYC5 findings: Edit Pipe route length 30 mm in metre drawing, batch editor refuses whole selection for one legacy pipe, OOPS pit+pipe prints no CE line, AutoCAD fatal error AcSmNav.arx during layer lock) (BUG-322 = pipe label offsets in mm after a schedule edit, redesign approvals not cloned, repeated locked-layer line) (BUG-321 = annotation offsets around scaled pits still mm) (BUG-320 = paste/settings follow-ups from PR #501, BUG-306 design is two PRs) (BUG-319 = CDDESIGN area from CDCALC wins, window should say so at typing time) (BUG-314..316 = Structural Team-lane leftovers: footing memory at close, schedule text/legend questions, settings and units follow-ups) (BUG-317/318 = scaled-pit record size and other PR #497 builder leftovers; test hygiene) (BUG-314..316 left free) (BUG-309..313 = C-5 finalizer leftovers: metre-drawing grade label, OOPS shared-key edge, palette change undone on cancel, held-back labels forgotten on close, native C++ locked-layer opens) (BUG-308 = Codex C4C fails: 80 mm end not linked in a metre drawing, 17-degree landing at centre, CDDESIGN setup not remembered, footer buttons only on Start) (BUG-307 = Glen Eira back-test 34.6% off) (BUG-305 = foreign paste prints no CDREPAIR line and labels stay behind, BUG-306 = New Pit writes CD_Settings.json) (BUG-302..304 = #482 wording, S2 default-on findings, footing follow on 2024) (BUG-300 = Structural footing OOPS and #480 redraw design) (BUG-299 = Structural settings save follow-ups) (BUG-295..298 from the C-4 sign-off: redo-window LOWs, #478 raw distances, 100 mm insertion match, CDFIXPIPEENDS half-change) (BUG-294 = four Structural tests read and rewrite Tim's real CS_Settings.json) (BUG-293 = Edit Pipe grade suggestion in metre drawings still /1000) (BUG-292 record-order level fill, BUG-291 Design grade holds the first drawn end, BUG-290 refresh-before-preview commands) (BUG-285..289 = pipe OOPS has no pipe half, CD to a locked pit one-sided, Metres drawing with mm-sized pits 1000x tighter reach, #450 dropped open-end rescan, CDFIXPIPEENDS no schedule refresh) (BUG-284 = ~15 more locked-layer write paths, BUG-283 = CDIMPORTXCIVIL unlocks ~20 layers, BUG-282 = four cover strips still 600, BUG-281 = saved downpipe radius raw 150) (BUG-280 = two copies of the redo-window rules, Civil and Structural, converge before the V3 single-plugin cutover) (BUG-279 = other Structural places compare AutoCAD Database objects by reference, which never matches in 2027; found by team lane 01 while fixing BUG-275, 1 Oct) (BUG-278 = Edit Pipe + Save can undo the CDFIXPIPEENDS repair (PR #460)) (BUG-277 = Structural bar grip-stretch live length (PR #440), BUG-276 = Structural level set before first save carries into a SAVEAS copy (PR #430)) (BUG-275 = Structural MainPalette compares Database by reference, from PR #459 builder) (BUG-274 = after U of any footing edit the footing monitor redraws the outline again outside a command, so REDO is lost and the drawing is marked changed; from the Opus review of PR #449, 1 Oct) (BUG-273 = a failed Structural job-file save shows raw code text or nothing, from the Opus review of PR #455, 1 Oct) (BUG-272 = Structural job data save fails in AutoCAD 2027 with a Newtonsoft "Method not found", Codex VERIFYS1 log, 1 Oct) (BUG-271 = remaining fixed reach literals + unitless drawings) *(BUG-270 = pipe-end and pit search reaches are fixed 100 mm values not converted for metre drawings (the relink reach in `LinkService.RepairAudit.Relink.cs` / `LinkService.Geometry.cs:1257-1260`, `LinkService.PitOutline.cs:394-405`): same family as BUG-230; BUG-269 = `-ARRAY` of 299 pipes spends 48.8 s in the clean-up (each copied pipe's band, labels and arrow redrawn one at a time, about 163 ms each: `CloneRegeneration.cs:22-60`): do it in one batch with a progress line; both from the Opus review of PR #450, 1 Oct)* (older note follows) BUG-269 *(BUG-268 = a copied pipe already saved wrong by 3.0.16 (From/To names or levels crossed after a pit COPY) is NOT repaired by PR #444 and Edit Pipe + Save re-breaks it: needs a repair command (CDSYNC/CDUPGRADE style, in a command, one Undo, a per-pipe log line, names AND keys moved together); BUG-267 = the OOPS gap for PIT labels is probably the same as the perimeter-drain PD text (#443 fixed the drain only); both from the Opus builders of PRs #443/#444, 1 Oct)* (older note follows) BUG-267 *(BUG-256..266 = Codex verification of the 30 Sep install, 1 Oct 2026 (VERIFYC1: 50 scope items PASS 24 / FAIL 14 / BLOCKED 12; VERIFYS1: 27 items PASS 9 / FAIL 17 / BLOCKED 1): 256 REDO lost after U everywhere (Civil and Structural; the BUG-192 family, the top blocker), 257 tab X Cancel then U names CLOSE, 258 OOPS loses the PD text (BUG-236 fix did not work), 259 CDDESIGN Confirm setup loses the outlet / agreed design, 260 Edit Pipe header/arrow/schedule disagree on direction, 261 false uphill warning on a two-free-end size-only save, 262 locked/skipped messages name handles not items, 263 XCLMTXT invisible review issue, 264 Structural Annotate flyouts cut off, 265 CEADMIN restart request with hotspots 0 + debug lines, 266 far pit COPY takes 5 s in a 304-pipe drawing)* (older note follows) BUG-256 *(BUG-255 = Edit Pipe's own pipe-size suggestion strip still uses a fixed 600 mm minimum cover instead of the rulebook value (council, project, office) while the new Project Review size proposals use the rulebook value: two rules for one behaviour; from the Opus builder of PR #437 fixes F3, 30 Sep)* *(BUG-254 = writing a CE record onto a pit or pipe can silently UNLOCK the item's layer, write, then lock it again: `GetOrCreateLinkDictionary` (`LinkService.Persistence.cs` ~:853-857, 923-937) does this and swallows AutoCAD errors, which conflicts with the native-protection rule (never silently unlock); found by the Opus confirm of train fix A2, 30 Sep; NOT verified by a builder yet)* (older note follows) BUG-254 *(BUG-253 = the pipe batch write protection checks exist twice: `RevalidateSizeTargets` (the pipe size writer, PR #437) and the lambda inside `ApplyPipeBatch` (CDEDIT batch): same helper calls in the same order, only the wording differs: fold them into ONE preflight (design rule 1); from the Opus review of PR #437, 30 Sep)* (older note follows) BUG-253 *(BUG-252 = a silent default pipe roughness of 0.013 remains in the grade-only pipe path (`DesignValidationService.cs` ~:162-163 via `PipeSizingSolver.cs` ~:369) and the Inspector (`InspectorPaletteService.cs` ~:3109), and the roughness word "PE" (`DesignValidationService.cs` ~:31) also matches "EXISTING PIPE" and reads it as PVC; from the Opus confirm of PR #434, 30 Sep)* (older note follows) BUG-252 *(BUG-251 = a Kingston COMMERCIAL job (once the Land use field exists) still uses the RESIDENTIAL PSD storm, pre-development C and time of concentration: K02 gives commercial figures (PSD storm 1 in 10, Tc 7 min, pre-development C the lower of existing C or 0.7); fix = `psdAriBySiteCase` / `tcMinutesBySiteCase` with the same `siteCaseByLandUse` mapping; commercial pre-development C needs the site's existing C so it stays Unknown and needs a Tim card; from the Opus review of PR #433, 30 Sep)* (older note follows) BUG-251 *(BUG-250 = with the older beam-linking ("command 8" linking) switched ON, OOPS after erasing a Structural column still does not relink its beams and prints nothing; the #428 relink sits only in the linking-off branch (`BeamLinkService.Reactors.cs` ~:357-377); the default of `LinkingEnabled` was not read; from the Opus review of PR #428, 30 Sep)* (older note follows) BUG-250 *(BUG-249 = the CDCALC Boyds intensity rows (`BoydsCalcViewModel.cs` ~:87-92: 113 mm/h at 5 min) are fixed numbers not linked to any council or return period; the office curve at 5 minutes gives 105 for 10 years and 88.8 for 5 years; found by the Opus review of PR #427, 30 Sep)* (older note follows) BUG-249 *(BUG-248 = OOPS after erasing a perimeter drain brings the drain back with its record but WITHOUT its PD text, and prints nothing; the same class as BUG-237 (columns); from the Opus review of PR #426, 30 Sep)* (older note follows) BUG-248 *(BUG-247 = two Installer.Tests for the Manager release payload already FAIL on the release line: `ManagerPublishing_RunsOnlyAfterOuterBuildAndValidatesCompleteThreeLanePackage` and `ManagerReleasePayload_HasTrackedManifestAndThreeLaneLocalAssets`; found by the Opus review of PR #425, 30 Sep)* (older note follows) BUG-247 *(BUG-246 = a Pit Schedule cell skipped because its layer is locked / in an Xref / in a reference edit is NOT recorded as out of date: the window's OUT OF DATE badge tracks source changes only; from the Opus review of PR #423, 30 Sep)* (older note follows) BUG-246 *(BUG-244 = after a grip drag / move, an IL-text edit or a relink-all the automatic re-link writes the DRAWN-order levels back, so a pipe between two same-named ends can run uphill again and the arrow is left alone; BUG-245 = a pipe from a pit to an open end still follows drawn order; both from the Opus review of PR #422, 30 Sep)* (older note follows) BUG-244 *(BUG-242 = a raingarden or pavement saved in a metre drawing by the OLD code shows a wrong tiny area (0.0006 m2, shown as "0.0 m2") in the Inspector with nothing saying it is stale; BUG-243 = surface overlay labels are a fixed 250 drawing units tall so unreadable in a metre drawing; both from the Opus review of PR #421, 30 Sep; BUG-241 is left free for the CE_AcadSettings chat)* (older note follows) BUG-241 *(BUG-240 = Tim's real 2027 profile: CE bundle folder 15 times in TRUSTEDPATHS, log folder = the plugin code folder, CE_AcadSettings chat 30 Sep)* *(BUG-239 = council rule findings and the CDAUTO proposal report print internal file paths / GitHub links as the source, from the Opus confirm of PR #420, 30 Sep)* (older note follows) BUG-239 *(BUG-238 = WONT FIX: was read from the Claude app's private registry copy, not Tim's real profile - see its entry; this header said BUG-232 while 232-237 were already used)* (older note follows) BUG-232 *(BUG-230 = other commands assume millimetres (PAVE, raingarden, site-area readers), BUG-231 = PluginInitialization.Terminate still saves at shutdown: both from the Opus reviews of #411/#412, 30 Sep)* (older note follows) BUG-230 *(BUG-224..229 = Codex sweep C1 FINAL report, 30 Sep 2026, installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 224 AutoCAD CRASHED closing a saved drawing copy (blocker); 225 Pit contextual tab Close button does nothing; 226 Civil ribbon tooltip says Civil on an Unknown drawing and offers Both; 227 CDS tooltip promises tiers and pages that are not installed; 228 Data Diagnostics tooltip promises a report, CDDIAG prints counts and "coming in v2.1 (PL-032)"; 229 CDMANAGER Draw Order list shows duplicate rows)* *(BUG-223 = CDEDIT / not-drawn-first CD with two same-named ends can still save an uphill pipe, from the #404 Opus review, 30 Sep)* (older note follows) BUG-223 *(BUG-205..222 = Codex pass 18 and sweep C1, 30 Sep 2026, on installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 205 CD level-direction choice makes an uphill pipe; 206 OSMODE ended 0; 207 drawn Pit Schedule stale after a pit edit; 208 pipe end grip refused by CE record guard; 209 CDCATCHMENT area 28 million m2; 210 COPY replacement pit unlinked; 211 erase column leaves beam silently; 212 Place schedule fails on a legacy pit; 213 older schedule cannot be re-placed; 214 CEFIND then Esc marks drawing changed; 215 RC needs two U; 216 CDFALLSUGGEST Enter rejected; 217 PD drain shows AG; 218 CSBRACINGPANEL invisible; 219 status bar says v1.1.10; 220 Structural launcher opens unasked; 221 Manager Status cards overlap; 222 Manager Civil settings scroll)* *(BUG-203 and BUG-204 are used, see below; this header said BUG-203 was next until 30 Sep 2026)* *(BUG-202 = constant lag in a Structural drawing on everything - select, hover, draw/edit, move/copy, pan/zoom - Tim suspects polylines, 29 Sep 2026)* *(BUG-195..201 = Codex exploratory run X1 on Civil 3.0.14 / Structural 1.0.85, 29 Sep 2026: XCLMTXT invents floors, Structural schedule text tiny, branch labels overlap, diameter-only CDEDIT changes grade, calculated level labelled staff-entered, CDCHECK Enter does not finish, pit placement jargon)* *(BUG-194 = selecting a plain rectangle in a Structural drawing opens the CE Pipe ribbon tab, Tim live 29 Sep 2026)* *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.))*
+> **Next BUG ID to use:** BUG-1221 (BUG-1088..1220 = 133 findings of the five Opus Team audits T1 to T5 and the ten Codex read-only audits RD13 to RD22 of 24 Oct, areas/TEAM_AUDIT_T1..T5_24OCT.md and areas/CODEX_AUDIT2_RD13..RD22_24OCT.md, filed 24 Oct, counts in areas/NEW_FINDINGS_FILED_24OCT_B.md; BUG-1035..1084 = 50 findings of the twelve Codex read-only audits of 23 Oct, areas/CODEX_AUDIT2_RD01..RD12_23OCT.md, RD06 none, filed 24 Oct; BUG-1085..1087 = Codex X6 FAILs 24 Oct: CEMANAGER undo step, CE_VERSION undo step, About CE Suite heading contrast; BUG-1030..1034 = Codex W-series acceptance ledger 23 Oct; BUG-873..1029 = 23 Oct findings ledger, areas/FINDINGS_LEDGER_22OCT.md; BUG-866..872 = Opus engineering audit 22 Oct: rainfall curve note, grade on straight distance, UPVC-only sizing, pit schedule depth, move-pit rounding, CDTWL units, outdated back-test; BUG-865 = full-drawing scan on each attribute-editor double-click, Opus audit 22 Oct; BUG-864 = CEMEMBER/SBEAM re-set linetype of existing 18HIDDEN/9HIDDEN2; BUG-863 = CDCHECKIGNORE switch OFF still saves the record; BUG-862 = outcome line says cancelled for Esc-ended PIT/CD and completed for refusals; BUG-861 = REDO lost once in a freshly opened drawing, Codex V4/V6; BUG-860 = green DP label opens TEXTEDIT, Opus 1588; BUG-859 = Codex V4 finding, 22 Oct, double-click on the new DP1 downpipe circle opens the AutoCAD Enhanced Attribute Editor) (BUG-858 = lane 02 finding, 20 Oct, old SBEAM Z purlin section outline crosses itself; BUG-857 = Codex V2 finding, 20 Oct, Grade mismatch box X still places the pipe; BUG-856 = run 37 finding, 20 Oct, Tidy labels "would move" line does not name the pipe; BUG-855 = run 35 finding, 20 Oct, Pit Schedule data-issues count +1 after CDSYNC; BUG-854 = run 34 finding, 20 Oct, R-06 not-known fix line wording; BUG-823..853 = Manager, installer, admin, update route and settings hunt, 31 entries from the 19 Oct read-only audit of Civil 3.0.56 / Manager 1.1.56 / Structural 1.0.118, HUNT-MI-n = BUG-(822+n), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_MANAGER_INSTALL_2026-10-12.md; BUG-820..822 = Claude driver run 32 findings, 19 Oct, Civil 3.0.56: Recover Inverts one-of-two texts, CDTAG pick-first, What's New palette; BUG-818..819 = Tim's CEMEMBER design session findings, 18 Oct: section list data and drawing-code gaps; BUG-813..817 = Claude driver run 31 findings, 18 Oct, seen in real AutoCAD on Civil 3.0.55: CDFIXTAGS apply, wording, CDCHECKS R-06, tidy line, Pit Schedule undo step; BUG-779..812 = HUNT Civil L/M findings, 34 entries from the read-only audit of Civil 3.0.55 (Pit Schedule, Checks and QA, repair, X-Civil schedule import), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_CIVIL_LM_2026-10-12.md; BUG-756..778 = HUNT Civil I/J/K findings, 23 entries from the read-only audit of Civil 3.0.55 (long sections, WSUD, CDRG, spoon drains, crossings), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_CIVIL_IJK_2026-10-12.md; BUG-750..755 = Codex look L3 and L4 findings, 18 Oct, seen in real AutoCAD on installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118: SBEAM elevation inner flange lines, CEHATCH library cards without pictures, Structural Settings long paths clipped, Checks list shows internal ids, Manager Dark tab text contrast, RC beam type pictures cropped; BUG-748 and BUG-749 = Codex look L2 findings, 18 Oct, seen in real AutoCAD on installed Structural 1.0.118: DOTS hatch density disagrees across scales; Section Mark identifier answer triggered a paste command; BUG-699..747 = HUNT Civil B findings, 49 entries from the 18 Oct read-only audit of installed Civil 3.0.53 (survey, spot levels, LandXML, X-Civil import, source tags), none seen in AutoCAD, areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md; BUG-697 and BUG-698 = Claude driver run 25 findings, 18 Oct, seen in real AutoCAD on Civil 3.0.53; BUG-652..696 = HUNT Civil E findings, 45 entries from the 17 Oct read-only audit of installed Civil 3.0.51, none seen in AutoCAD; BUG-651 = CDIMPORTXCIVIL command-line 'Proceed with import?' carries on and WRITES the import when Esc is pressed (found by the Opus review of PR #1308, 17 Oct; fix assigned to the Max fixer); BUG-566 = Structural start-up menu load sets MENUBAR to 1 unchecked after every update (review round 10, 12 Oct; breaks the Manager leaveMenuBarAlone switch #1231); BUG-565 = PIT and Edit Pit with the text layer locked still fail the old way in 3.0.44 (Codex W58);  (BUG-564 = FEDIT Esc at the new-type question leaves an empty undo step;  (BUG-563 = the command line prints 'Pipe is essentially flat  no measurable fall' with the dash missing; BUG-560 lowered to MEDIUM and click-based (driver run 5: typed pit centres work); BUG-558: driver run 5 reproduced it 4 of 4 on a plain CIRCLE, NOT time dependent, witness shows nothing from CE; BUG-561 = PITEDIT number-only Save swaps the detention pit's grate and solid cover sides (Codex W49-04ii); BUG-562 = '; error: syntax error' printed at start-up (Codex W49); BUG-558 = REDO lost after a drawing switch REPRODUCED by Codex W49 on Civil (PIT) and Structural (plain CIRCLE); BUG-559 = W48-01 FAIL: the re-import of B365D shows no explanation line for the short P8 pipe; BUG-560 = W48-03/04a BLOCKED: New Pipe says 'Neither end is on a pit' for P10 to P9 with both ends Unknown; BUG-558 = Civil REDO lost after switching drawings (Claude driver run 2, 9 Oct; NOT reproduced in run 3, kept as a note); BUG-550..557 = OFF-PC CALLS AUDIT (9 Oct, 17 routes by which the plugin sends data off the PC; code reading only, none seen in AutoCAD; areas/release-v3-colleagues-OFF_PC_CALLS_2026-10-09.md): BUG-550 HIGH the whole markup / AI family (CEMARKUPPARSE, the CEMARKUP Parse button, CEMARKUPBENCH on every PDF in a folder tree, Ask AI with the full drawing path) goes to OpenAI and the Enable MarkupAI switch is read by nothing; BUG-551 HIGH Civil AI paths (CDIMPORTXCIVIL 'try AI extraction?' sends up to 6 whole pages with Enter = Yes and skips the seat checks; CDASK Analyse markups up to 5 pages with no blanking; the repo's CE Cloud proxy forwards the body unchanged); BUG-552 MEDIUM-HIGH the 'office folder, coded' rule broken in three places (Civil fault text, CEMANAGERDIAG real login, support zips on the Desktop); BUG-553 CEMARKUPRUN pip-installs from the internet; BUG-554 WebView2 download not signature-checked; BUG-555 CDHELP falls back to a domain that is not the company's; BUG-556 Azure upload code still ships (all MEDIUM); BUG-557 the remaining routes grouped; Tim's PC: no OpenAI key set, but CE_CLOUD_URL and CE_CLOUD_AUTH are set so the Civil AI paths go through the CE Cloud proxy today; previously: BUG-550 (BUG-549 = URGENT PRIVACY: Structural Read Markup PDF (default Hybrid and Hand mode) uploads the WHOLE markup PDF, title block included, to OpenAI when an OpenAI key is set on the PC, and the markup chat also goes to OpenAI (breaks Tim 25 Sep rule); COLLEAGUE RELEASE GATE item 10; on Tim's own PC the key is NOT set so nothing leaves today; BUG-548 = S-29 finalizer: GO at 68ace978, no commit, one MEDIUM (lintel values and schedule position in the per-PC side file, BUG-496 weak spot) and seven LOWs; BUG-538..547 = Civil R-00 hard-coded value audit R00_CIVIL, 10 entries, code reading only, none seen in AutoCAD (top findings: the audit found at least 85 engineering numbers in the Civil code and NONE of the top 40 is fully on the Settings page (20 have no Settings name, 13 have a name the command ignores, 5 are only partly covered, 2 have two or three names for one thing); BUG-538 MEDIUM-HIGH council rules written into the code (Bayside 1 in 20, the 50 / 80 mm rising main split, Kingston 500 L per 2000 L, Manningham 0.25, Casey one-third and K 21.9), a council change needs a new build; BUG-539 MEDIUM-HIGH ENGINEERING-RESULT RISK roofs and paving C 0.9 in CDDESIGN and pump sizing with no Settings name while CDCALC uses 1.0 (with BUG-510); BUG-540 MEDIUM-HIGH ENGINEERING-RESULT RISK the Pit Schedule writes 'With Step Irons' deeper than 0.90 m whatever Settings says while CDRULES reads Settings; BUG-541 slab falls fixed in code; BUG-542 the long section has its own roughness list; BUG-543 the CDCALC Detention tab always sizes the orifice with 0.6; BUG-544 MEDIUM-HIGH the 13 values with a name the command ignores; BUG-545 MEDIUM-HIGH two or three names for one value (detention freeboard, pit drop); BUG-546 WINDOW ROWS FOR CODEX (Civil): 35 keys in CD_Settings.json with no box on the Settings page; BUG-547 the remaining ranked values grouped); previously: BUG-538 (BUG-529..537 = Structural R-00 hard-coded value audit R00_STRUC, 9 entries, code reading only, none seen in AutoCAD (top findings: BUG-529 MEDIUM-HIGH the THREE HARD BLOCKS against R-27 (footing size or depth over 10 m refused outright, stirrup cover under 10 silently forced to 10, reo spacing refused outside 50 to 1000); BUG-534 MEDIUM-HIGH five standards tables (AS 3600, AS/NZS 4671, AS 2870, AS 1684.2, AS 4055) with no edition cited in the tables or the output; BUG-530 pad footing 600 has no Settings name and is drawn for old pads with no recorded size; BUG-531 text heights repeated 23 times, only two commands read the Settings value; BUG-532 four objects drawn on two different layer names; BUG-533 required bracing stored on the PC not with the job (with BUG-500, BUG-496); BUG-535 WINDOW ROWS FOR CODEX: six values named in CS_Settings.json with no CESETTINGS box; BUG-536 eight commands ignore an existing Settings name; BUG-537 the remaining ranked values grouped); previously: BUG-529 (BUG-517..528 = cross-cutting bug hunt 3 HUNT3_CROSS, 46 findings, code reading only, none seen in AutoCAD (top findings: BUG-517 'no blue' is not done anywhere, the old deep blue 1E5AA8 is still the light-theme colour in Civil, Manager and Structural windows, in 406 of 410 light-ribbon icons and in help, and the Civil computations sheet prints the practice name and rule line in blue to paper and PDF (COLLEAGUE RELEASE GATE CANDIDATE, look and print); BUG-518 the 'Show AutoCAD command names' switch is built nowhere; BUG-519 Structural prints about 44 lines of program words at every start and names four commands that do not exist (BTXT2MT, BMT2TXT, SBL, BREAKLINE); BUG-520 Settings rows missing (pit-outlet speed, detention minimum grade, FADOPT widths) and lintel tolerances have no per-job layer; BUG-521 ENGINEERING-RESULT RISK the Inspector and Design Check Dashboard use the office minimum cover only while CDRULES uses council > project > office, so they can disagree on one pit; BUG-522 nothing at start-up notices two different CE_SHARED copies; BUG-523..528 = the other findings grouped by heading: command-line jargon, ribbon and window words, other blues, Structural Settings groups, values read from two places (BUG-527 includes the pipe speed limit split and the two job timers), shared helper files); previously: BUG-517 (BUG-505..516 = Civil bug hunt 2 HUNT2-C-01..15, code reading only, none seen in AutoCAD (top finding is a COLLEAGUE RELEASE GATE CANDIDATE: BUG-505 the X-Civil and LandXML imports never read the source drawing's UNITS, so a millimetre job can come in 1000 times too big, silently; then wrong-number risks on designs: BUG-506 CDDESIGN summary prints the connection pipe grade as 1:0; BUG-507 CDCALC Boyd's opens with another job's figures that flow to Detention and CDDESIGN; BUG-508 CDDESIGN flows on the office rainfall curve while storage uses the job curve; BUG-509 summary prints the office C 0.35 while Darebin/Maribyrnong discharge used 0.4; BUG-510 roof runoff C 0.9 versus 1.0 in two tools, neither in Settings; BUG-511 CDDESIGN detention pipe ignores the Settings run and size range; BUG-512 LandXML invents a 375 mm pipe, 600x600 pit and STORMPRO SN12 and marks them 'from the file'; BUG-513 LandXML writes the sump level as the pit IL; BUG-514 CDRULES prints 'Assumed roughness' on every pipe; BUG-515 Boyd's storage silently capped at the last storm row; BUG-516 = four LOWs grouped); previously: BUG-505 (BUG-504 = HUNT2-S-11 on its own: CSWINDCLASS saves a blank wind class as "set", breaks "Unknown stays Unknown"; BUG-495..503 = Structural bug hunt 2 HUNT2-S-01..15 (top two are COLLEAGUE RELEASE GATE CANDIDATES: BUG-495 Publish Issue gives every Structural sheet in the job the new revision and issue date including sheets left out, breaking Tim's 14 Sep ruling, and BUG-496 the wind class and soil job record is saved on this PC under the drawing's full path, not with the job; then BUG-497 STRSCHEDCREATE tables one row too short; BUG-498 schedule refresh never removes erased braces; BUG-499 bracing panel counts BT1 roof trusses as wall bracing; BUG-500 required bracing is one value for the whole PC; BUG-501 C1 size by mark ignoring floor; BUG-502 CSSUBFLOORGRID made-up sizes; BUG-503 = seven LOWs grouped; code reading only, none seen in AutoCAD); BUG-488..494 = Audit 01 (Manager fault report and CEMANAGERDIAG write the real Windows login, PC name and folders into the office IT folder = BLOCKS COLLEAGUE INSTALL; support zip misses drawing names without .dwg and folder and PDF paths; the login is written INSIDE the DWG at pipe-connection confirm and CDDESIGN redesign; other privacy routes; time-log files named by login = Tim's call; start-up settings writes; Structural Undo/Redo: nothing found writing between U and REDO but Codex has NOT walked TS1, R1, FSF, FPFC, grips, Sheets Update drawings, a drawing switch, autosave ON or beam linking ON; code reading only); BUG-476..487 = Manager and installer bug hunt HUNT-M-01..15 (no administrator list: first colleague to click Admin Dashboard becomes THE administrator and Tim is locked out; update messages name an installer nobody can run; Roll Back still offered; an old April Structural approval reads as newer; "CE is current" when the office folder is unreachable; Manager turns the menu bar on at every start; CESUPPORT zip lands in OneDrive; old install scripts and builds in the office folder; CEHEALTH misses Manager; Refresh with no error catch; long staging paths on 2022 to 2024; four LOWs; all from reading code and the drive, none seen in AutoCAD); BUG-466..475 = Structural bug hunt findings HUNT-S-01..15 (FPFC takes the typed mark's size, rotated UCS, roof-down with linking off, FEDIT Esc still saves, FSF picking an outline, metre drawings, layout/REFEDIT, locked layers, FEDIT rename overwrites a size, LOWs); BUG-458..464 = Civil bug hunt findings HUNT-C-01..07 (REFEDIT not checked, locked label layers, "Nothing was changed" sentences, fixed 10 percent, 2-decimal rounding, schedule read-only), BUG-465 = HUNT-C-08..15 (eight LOWs); all from reading code only, none seen in AutoCAD; BUG-457 = second independent Opus review of the Civil redo-safety paths: nothing writes between U and REDO on 3.0.40 or C-27 (code reading only), 3 MEDIUMs about the guard test blind spots, 9 routes Codex has never walked; BUG-456 = C-27 finalizer: GO at 319ba688, one MEDIUM fixed (false "other end open" line for a downpipe branch), 10 LOWs; BUG-455 = Codex W45 on Civil 3.0.40 / Manager 1.1.40: CEHEALTH and CESUPPORT zip PASS, the three start-up lines remain, Edit Pipe window still shows the 1 in 100 grade selector on a flat pipe (the #819 preview line was not seen); BUG-454 = Codex W44 on Structural 1.0.110: FSF Enter at the centreline question ends the command (seen twice), FPFC pad shows no label, R1 needs a third (top) object; CSREOBAR and FEDIT PASS; BUG-453 = Codex W43 on Structural 1.0.110: new C1 wording works, 13 settings keys added and nothing changed, off sentences still say the Settings page is "still to be built"; BUG-452 = C-26 finalizer: GO at 2162e2f5, the #811 login leak fixed, 10 LOWs incl. menu lines may remain on PCs that already have them; BUG-451 = Codex W41 on Structural 1.0.109: DAY1 steps 14/18/19/20 all BLOCKED by brief and operator faults, observations only; BUG-450 = S-27 finalizer: GO at 52bdb4b5, one wording commit, 7 LOWs; BUG-449 = Codex W39 on Structural 1.0.109: C1/TS1 label fix PASS, Esc PASS, beam PASS, Enter at the support text prompt starts the normal text command and prints "Text placed" before the label is placed (wording, S-27); BUG-448 = S-26 finalizer: #815 misread BUG-438, finalizer fix 1fd75ab6, Esc at the number question needs Tim; BUG-447 = C-25 finalizer: the P8 zero-length pipe is a real 1.68 m pipe whose ends were pulled together, wording fixed, end-matching cure is a Team item; BUG-446 = Codex W37: marker layer seen, stale marker stays after Edit Pipe Save, Civil log shrinking; BUG-445 = Codex W35: rebuilt #805 marker works, U/REDO passes, REGEN between U and REDO is native; BUG-444 = C-24 finalizer: rebuilt #805 proven redo-safe, 9 LOWs, W33 test; BUG-443 = S-25 finalizer findings (doubled default fixed, 8 LOWs, legend second-copy item); BUG-442 = Codex W32: FLAT label passes, Edit Pipe window still shows 1 in 100, CESUPPORT zip holds one file; BUG-441 = C-23 finalizer: #805 reverted (REDO risk), Roll Back and Kingston Stale notes, 7 LOWs; BUG-440 = Codex W29: BUG-061 not reproduced, zero-length P8 pipe, import single U passes, profile template points to a test copy; BUG-439 = S-24 finalizer findings (two MEDIUMs fixed, 8 LOWs); BUG-438 = Codex W28: C1 support text CR1 "DefaultValue is not set", column not CE-linked until a beam is linked; BUG-437 = Codex W26: C1/TS1 reject Enter at the support text prompt, old menu names fail at AutoCAD start-up; BUG-436 = Codex W25: BUG-061 re-import 53 vs 45 pipes + P8 to P8 self-pipe, no pipe list to count; BUG-435 = Codex W24: start-up lines "Menu item failed to load" + "; error: syntax error", C1 prompts; BUG-434 = Codex W21: C1/TS1 leave CLAYER changed when cancelled, _Dot message on C1/TS1; BUG-433 = S-23 finalizer LOWs (SF Xref scan, repeated line, Sheets Sync no warnings); BUG-432 = C-22 finalizer findings (CDTG grate cover 0.000 vs blank, MEDIUM advice only); BUG-431 = Kingston K02 label/edition flag + BUG-251 Team item; BUG-430 = Codex W20: pit label double-click opens the Enhanced Attribute Editor, override tick after Stop overriding; BUG-429 = Structural 1.0.105 writes 20 new default keys into the user CS_Settings.json at first start (LOW design question); BUG-428 = S-22 finalizer LOWs (BB brace no warning, limit compared in drawing units); BUG-427 = Codex W18 observations (flat typed pipe keeps a 1 in 100 label; footing region after STRETCH U/REDO); BUG-426 = C-21 finalizer findings (Pit Schedule window p1 case MEDIUM, wording LOWs); BUG-425 = second source audit Structural + Manager, 2 HIGH in the Manager update channel (Roll Back Release does nothing; Civil updates without Manager); BUG-424 = S-21 finalizer LOW findings; BUG-423 = C-20 finalizer findings (CDFIXFLATPIPES steep wording, three places real names remain); BUG-422 = unknown ground level skips the cover check in the Edit Pipe strip; BUG-420 = Pit Schedule window accepts a bare duplicate number (W14), BUG-421 = stray text typed into AutoCAD (voice?); BUG-417 = X-Civil import unlocks locked layers (HIGH), BUG-418 = strip footing commands re-layer the whole drawing (HIGH), BUG-419 = source audit MEDIUM/LOW findings; BUG-414 = Edit Pit rename onto an existing number can delete the other record (older), BUG-415 = pit-number wording gaps, BUG-416 = C-19 small items; BUG-413 = W11c Structural 1.0.102 observations incl. Civil machine-report name with real login; BUG-412 = W10c observations (record-not-saved line, CDRULES prompt); BUG-411 = F2 runs CLEAN; BUG-409 = Codex changed Tim's ABFLIPAUTO setting (restore), BUG-410 = W11 observations on 1.0.102; BUG-408 = Stop overriding status sentence not seen (#681); BUG-405 = report privacy gaps (#662 SourceRoot/StatusSummary, Civil file name), BUG-406 = four old-metre readers left, BUG-407 = #678 fails #686 guards; BUG-404 = C: drive space swings and build stops (Windows Search indexer, installer scratch, Codex snapshots); BUG-403 = quiet paste catcher prints nothing when Civil is already awake and the destination has no record; BUG-402 = StrucPlus LISP not found at start-up; BUG-401 = New Pit cover blank after restart; BUG-399 = FEDIT gap pick misses (observation), BUG-400 = Duplicate definition of block _Dot message; BUG-398 = issue preview vs issue disagree (#692); BUG-397 = Manager CE.Host load list (#684 LOW 2); BUG-396 = C-17 and S-18 finalizer findings; BUG-395 = Codex verifyW8 results; BUG-394 = CSREOBAR doubled defaults + driver run 26; BUG-393 = four places still read old metre records 1000x short; BUG-392 = Codex verifyW7 results: FST Delete on a locked layer PASS but U does not restore the footing in CE record; BUG-391 = driver run 24 results + 7 findings (BEXTEND/FEDIT doubled defaults, INSUNITS, undo step after FST cancel, FADOPT arc/ellipse, CEMANAGER no window, MOVE message); BUG-390 = Codex verifyW6 results: BUG-385 fixed in real AutoCAD; BUG-389 = CDCHECK command-line list prints a raw arrow escape; BUG-388 = FDELETE question prints [Yes/No] twice; BUG-387 = CLAYER nil after a Pit Schedule Revert/U sequence; BUG-385 = Pit Schedule Revert Row Override makes the row disappear; BUG-386 = Revert keeps the typed cover (question); BUG-384 = locked pipe layer batch refusal does not mention the lock (wording); BUG-383 = a fresh open already shows DBMOD 1 before any CE command; BUG-381 = Foundations manager open+close marks the drawing modified; BUG-382 = FST status line log tail; BUG-380 = Codex verifyW3 results (FEDIT edge pick, OSMODE 1151, ribbon menus, Edit Pipe has no layer box); BUG-376 = Pit Schedule blank IL; BUG-377 = raw U+2192 in a warning; BUG-378 = first open skips the old-pipe upgrade; BUG-375 = C-11 finalizer side findings; BUG-374 = Codex verifyW2b results (templates all INSUNITS 4 mm; Edit Pipe Cancel DBMOD; scaled Edit Pit label unclear); BUG-373 = driver session 15: Edit Pipe Cancel marks the drawing modified (DBMOD 17 to 21), CDDESIGN drop-downs read class names; BUG-372 = raw handle and block name in the invert text no-clear-spot line (LOW); BUG-371 items closed by driver runs 12-13 (Civil 3.0.25 all pass); BUG-371 = C-10 finalizer leftovers (2024 names test, BUG-364 cause unsettled, LISP STRETCH undo); BUG-370 = driver session 11 on Structural 1.0.94: undo counts, layer probes, names all PASS; Kind column code words LOW; BUG-369 = S-10 finalizer leftovers (frozen layer draws a hidden bar, LOW); BUG-368 = Structural: extra empty undo step after CSREOBAR and CSBARSCHEDULE (BUG-358 pattern); BUG-367 confirmed in real AutoCAD (frozen layer thawed and recoloured, STR unlocks a locked layer outside the undo); BUG-367 = S-9 finalizer: CE silently resets and UNLOCKS existing layers (RBL, RBC, STR: MED, in 1.0.92 too); BUG-366 = driver session 8: CSREOBAR typed fails (investigating), paste into a no-drainage drawing prints no line (BUG-342 part 1 open); BUG-365 = UI mapping session 7: more unnamed controls and jargon names, Settings Enter saves the window, sheets scan whole folder, crash-inference records after driver kills, Structural telemetry not anonymised; BUG-364 = driver session 6 results: first-use locked-layer line prints raw handles (LOW); LISP PostCommand also spins (still not CE); BUG-363 = C-9 finalizer leftovers (old pit copy MOVE rewords original pit pipe labels LOW-MED); BUG-362 = S-8 finalizer leftovers (LOW); BUG-361 = typed PIT prompt burns 1.5-1.9 cores, hot thread in CE DrawingService.GetPoint (reopens BUG-359); BUG-360 = UI accessibility names and jargon; BUG-359 = AutoCAD wedges caused by the driver leaving a prompt open (CDCHECK first question, bare LINE), not CE; BUG-358 = driver run 2: S-05 extra silent undo step (MED), second AutoCAD wedge (investigating), locked-layer wording; BUG-357 = modern pipe fixture findings (silent grade change when a pit is moved with the pipe layer locked, MED to confirm); BUG-356 = Whats New window modal at first start after an install blocks automation; BUG-355 = first driver run findings (FEDIT outline pick, legacy pipe fixture); BUG-354 = CE_StrucPlus LISP not found at every start (old ce_suite_startup.lsp, not in repo; LOW); BUG-353 = C-8 Opus review leftovers (unconnected-end record 18.10 MED, label grade after schedule edit, ARRAY erase wording); BUG-352 = S-7 finalizer leftovers (raft beams in cm/inch mm-evidence MED, LOWs); BUG-351 = C-8 builder leftovers + two questions for Tim; BUG-350 = headless probe findings on installed 3.0.22 (HIGH pit rename, batch Apply refused, modal box, ARRAY); BUG-349 = installed 1.0.90 Opus review findings (OPEN/NEW counter, FSTEXPORT note, CSLOADPATH, FEDIT five-vertex); BUG-348 = #542 Opus review leftovers (cm-drawn-in-mm detection MED, LOWs, tests append to Tim live Structural log); BUG-347 = Codex verifyC7 observations (palette click, legacy-pipe prompt, ARRAY erase line, fixtures); BUG-346 = C-7 finalizer leftovers (MED copy-label follow, LOWs); BUG-345 = C-7 builder leftovers (LOW); BUG-344 = Structural footings in non-mm drawings: convert automatically per INT-026, S-7; BUG-343 = grade lock: breakline pair halves, held grade on pipes set flat, downToUp, Repair Center cut-off buttons, damaged labels with no repair) (BUG-342 = C-6 adversarial review 2: paste into a drawing with no drainage ignored, pit move drags unowned items, associative ARRAY untested, council swap on one Enter) (BUG-341 = S-5 adversarial review: corner grip makes a kite and the record stays old, memory-only out-of-date note, CMDNAMES nested check unmeasured) (BUG-340 = C-6 adversarial review 3: batch editor confluence level, clash warnings, Simple Pipe + Design grade, double write, broken-pair halves, carry ignores typed levels/locked layers; native locked-layer code sound) (BUG-339 = batch editor Apply fails "affected schedule cell cannot be resolved from the accepted project snapshot", Codex C6-06) (BUG-338 = C-6 adversarial review 1 units: drafter-started writers in UNITS-Metres/mm-drawn drawings, reverse mix undetected, split pipe grade lock half length, metre drawings drawn at mm size) (BUG-337 = Codex C6-04: CD arrow P1 -> P2 but Edit Pipe flow P2 -> P1 with crossed levels in a metre drawing with a scaled pit, unresolved) (BUG-336 = S-5 leftovers) (BUG-335 = S-4 adversarial review 3: native footing edits never recorded, FADOPT doubles, FST delete eWasErased, retyped label reverted) (BUG-334 = S-4 adversarial review 1: HIGH footing redraw is its own Undo step, HIGH schedule out-of-date note never works on 2027, HIGH background-thread drawing work, link migration written at open) (BUG-333 = S-4 adversarial review 2: HIGH failed footing redraw forgets the old outline, settings busy-at-start Save, CSLOADPATH OK in non-mm drawings, units question every command) (BUG-332 = Structural S-4 finalizer leftovers) (BUG-331 = PR #508 builder leftovers: CD refuses pipes 1 m or shorter in a metre drawing (R-27), detention length check, long section, imported-level review, dead code) (BUG-330 = PR #507 builder leftovers: more mm-in-metre places, OOPS end-owner choice, Pipe tab mm vs m) (BUG-328 = HIGH: grade-locked pipe inverts worked out from a length 1000x too short in metre drawings; BUG-329 = #503 review leftovers) (BUG-327 left free) (BUG-323..326 = Codex VERIFYC5 findings: Edit Pipe route length 30 mm in metre drawing, batch editor refuses whole selection for one legacy pipe, OOPS pit+pipe prints no CE line, AutoCAD fatal error AcSmNav.arx during layer lock) (BUG-322 = pipe label offsets in mm after a schedule edit, redesign approvals not cloned, repeated locked-layer line) (BUG-321 = annotation offsets around scaled pits still mm) (BUG-320 = paste/settings follow-ups from PR #501, BUG-306 design is two PRs) (BUG-319 = CDDESIGN area from CDCALC wins, window should say so at typing time) (BUG-314..316 = Structural Team-lane leftovers: footing memory at close, schedule text/legend questions, settings and units follow-ups) (BUG-317/318 = scaled-pit record size and other PR #497 builder leftovers; test hygiene) (BUG-314..316 left free) (BUG-309..313 = C-5 finalizer leftovers: metre-drawing grade label, OOPS shared-key edge, palette change undone on cancel, held-back labels forgotten on close, native C++ locked-layer opens) (BUG-308 = Codex C4C fails: 80 mm end not linked in a metre drawing, 17-degree landing at centre, CDDESIGN setup not remembered, footer buttons only on Start) (BUG-307 = Glen Eira back-test 34.6% off) (BUG-305 = foreign paste prints no CDREPAIR line and labels stay behind, BUG-306 = New Pit writes CD_Settings.json) (BUG-302..304 = #482 wording, S2 default-on findings, footing follow on 2024) (BUG-300 = Structural footing OOPS and #480 redraw design) (BUG-299 = Structural settings save follow-ups) (BUG-295..298 from the C-4 sign-off: redo-window LOWs, #478 raw distances, 100 mm insertion match, CDFIXPIPEENDS half-change) (BUG-294 = four Structural tests read and rewrite Tim's real CS_Settings.json) (BUG-293 = Edit Pipe grade suggestion in metre drawings still /1000) (BUG-292 record-order level fill, BUG-291 Design grade holds the first drawn end, BUG-290 refresh-before-preview commands) (BUG-285..289 = pipe OOPS has no pipe half, CD to a locked pit one-sided, Metres drawing with mm-sized pits 1000x tighter reach, #450 dropped open-end rescan, CDFIXPIPEENDS no schedule refresh) (BUG-284 = ~15 more locked-layer write paths, BUG-283 = CDIMPORTXCIVIL unlocks ~20 layers, BUG-282 = four cover strips still 600, BUG-281 = saved downpipe radius raw 150) (BUG-280 = two copies of the redo-window rules, Civil and Structural, converge before the V3 single-plugin cutover) (BUG-279 = other Structural places compare AutoCAD Database objects by reference, which never matches in 2027; found by team lane 01 while fixing BUG-275, 1 Oct) (BUG-278 = Edit Pipe + Save can undo the CDFIXPIPEENDS repair (PR #460)) (BUG-277 = Structural bar grip-stretch live length (PR #440), BUG-276 = Structural level set before first save carries into a SAVEAS copy (PR #430)) (BUG-275 = Structural MainPalette compares Database by reference, from PR #459 builder) (BUG-274 = after U of any footing edit the footing monitor redraws the outline again outside a command, so REDO is lost and the drawing is marked changed; from the Opus review of PR #449, 1 Oct) (BUG-273 = a failed Structural job-file save shows raw code text or nothing, from the Opus review of PR #455, 1 Oct) (BUG-272 = Structural job data save fails in AutoCAD 2027 with a Newtonsoft "Method not found", Codex VERIFYS1 log, 1 Oct) (BUG-271 = remaining fixed reach literals + unitless drawings) *(BUG-270 = pipe-end and pit search reaches are fixed 100 mm values not converted for metre drawings (the relink reach in `LinkService.RepairAudit.Relink.cs` / `LinkService.Geometry.cs:1257-1260`, `LinkService.PitOutline.cs:394-405`): same family as BUG-230; BUG-269 = `-ARRAY` of 299 pipes spends 48.8 s in the clean-up (each copied pipe's band, labels and arrow redrawn one at a time, about 163 ms each: `CloneRegeneration.cs:22-60`): do it in one batch with a progress line; both from the Opus review of PR #450, 1 Oct)* (older note follows) BUG-269 *(BUG-268 = a copied pipe already saved wrong by 3.0.16 (From/To names or levels crossed after a pit COPY) is NOT repaired by PR #444 and Edit Pipe + Save re-breaks it: needs a repair command (CDSYNC/CDUPGRADE style, in a command, one Undo, a per-pipe log line, names AND keys moved together); BUG-267 = the OOPS gap for PIT labels is probably the same as the perimeter-drain PD text (#443 fixed the drain only); both from the Opus builders of PRs #443/#444, 1 Oct)* (older note follows) BUG-267 *(BUG-256..266 = Codex verification of the 30 Sep install, 1 Oct 2026 (VERIFYC1: 50 scope items PASS 24 / FAIL 14 / BLOCKED 12; VERIFYS1: 27 items PASS 9 / FAIL 17 / BLOCKED 1): 256 REDO lost after U everywhere (Civil and Structural; the BUG-192 family, the top blocker), 257 tab X Cancel then U names CLOSE, 258 OOPS loses the PD text (BUG-236 fix did not work), 259 CDDESIGN Confirm setup loses the outlet / agreed design, 260 Edit Pipe header/arrow/schedule disagree on direction, 261 false uphill warning on a two-free-end size-only save, 262 locked/skipped messages name handles not items, 263 XCLMTXT invisible review issue, 264 Structural Annotate flyouts cut off, 265 CEADMIN restart request with hotspots 0 + debug lines, 266 far pit COPY takes 5 s in a 304-pipe drawing)* (older note follows) BUG-256 *(BUG-255 = Edit Pipe's own pipe-size suggestion strip still uses a fixed 600 mm minimum cover instead of the rulebook value (council, project, office) while the new Project Review size proposals use the rulebook value: two rules for one behaviour; from the Opus builder of PR #437 fixes F3, 30 Sep)* *(BUG-254 = writing a CE record onto a pit or pipe can silently UNLOCK the item's layer, write, then lock it again: `GetOrCreateLinkDictionary` (`LinkService.Persistence.cs` ~:853-857, 923-937) does this and swallows AutoCAD errors, which conflicts with the native-protection rule (never silently unlock); found by the Opus confirm of train fix A2, 30 Sep; NOT verified by a builder yet)* (older note follows) BUG-254 *(BUG-253 = the pipe batch write protection checks exist twice: `RevalidateSizeTargets` (the pipe size writer, PR #437) and the lambda inside `ApplyPipeBatch` (CDEDIT batch): same helper calls in the same order, only the wording differs: fold them into ONE preflight (design rule 1); from the Opus review of PR #437, 30 Sep)* (older note follows) BUG-253 *(BUG-252 = a silent default pipe roughness of 0.013 remains in the grade-only pipe path (`DesignValidationService.cs` ~:162-163 via `PipeSizingSolver.cs` ~:369) and the Inspector (`InspectorPaletteService.cs` ~:3109), and the roughness word "PE" (`DesignValidationService.cs` ~:31) also matches "EXISTING PIPE" and reads it as PVC; from the Opus confirm of PR #434, 30 Sep)* (older note follows) BUG-252 *(BUG-251 = a Kingston COMMERCIAL job (once the Land use field exists) still uses the RESIDENTIAL PSD storm, pre-development C and time of concentration: K02 gives commercial figures (PSD storm 1 in 10, Tc 7 min, pre-development C the lower of existing C or 0.7); fix = `psdAriBySiteCase` / `tcMinutesBySiteCase` with the same `siteCaseByLandUse` mapping; commercial pre-development C needs the site's existing C so it stays Unknown and needs a Tim card; from the Opus review of PR #433, 30 Sep)* (older note follows) BUG-251 *(BUG-250 = with the older beam-linking ("command 8" linking) switched ON, OOPS after erasing a Structural column still does not relink its beams and prints nothing; the #428 relink sits only in the linking-off branch (`BeamLinkService.Reactors.cs` ~:357-377); the default of `LinkingEnabled` was not read; from the Opus review of PR #428, 30 Sep)* (older note follows) BUG-250 *(BUG-249 = the CDCALC Boyds intensity rows (`BoydsCalcViewModel.cs` ~:87-92: 113 mm/h at 5 min) are fixed numbers not linked to any council or return period; the office curve at 5 minutes gives 105 for 10 years and 88.8 for 5 years; found by the Opus review of PR #427, 30 Sep)* (older note follows) BUG-249 *(BUG-248 = OOPS after erasing a perimeter drain brings the drain back with its record but WITHOUT its PD text, and prints nothing; the same class as BUG-237 (columns); from the Opus review of PR #426, 30 Sep)* (older note follows) BUG-248 *(BUG-247 = two Installer.Tests for the Manager release payload already FAIL on the release line: `ManagerPublishing_RunsOnlyAfterOuterBuildAndValidatesCompleteThreeLanePackage` and `ManagerReleasePayload_HasTrackedManifestAndThreeLaneLocalAssets`; found by the Opus review of PR #425, 30 Sep)* (older note follows) BUG-247 *(BUG-246 = a Pit Schedule cell skipped because its layer is locked / in an Xref / in a reference edit is NOT recorded as out of date: the window's OUT OF DATE badge tracks source changes only; from the Opus review of PR #423, 30 Sep)* (older note follows) BUG-246 *(BUG-244 = after a grip drag / move, an IL-text edit or a relink-all the automatic re-link writes the DRAWN-order levels back, so a pipe between two same-named ends can run uphill again and the arrow is left alone; BUG-245 = a pipe from a pit to an open end still follows drawn order; both from the Opus review of PR #422, 30 Sep)* (older note follows) BUG-244 *(BUG-242 = a raingarden or pavement saved in a metre drawing by the OLD code shows a wrong tiny area (0.0006 m2, shown as "0.0 m2") in the Inspector with nothing saying it is stale; BUG-243 = surface overlay labels are a fixed 250 drawing units tall so unreadable in a metre drawing; both from the Opus review of PR #421, 30 Sep; BUG-241 is left free for the CE_AcadSettings chat)* (older note follows) BUG-241 *(BUG-240 = Tim's real 2027 profile: CE bundle folder 15 times in TRUSTEDPATHS, log folder = the plugin code folder, CE_AcadSettings chat 30 Sep)* *(BUG-239 = council rule findings and the CDAUTO proposal report print internal file paths / GitHub links as the source, from the Opus confirm of PR #420, 30 Sep)* (older note follows) BUG-239 *(BUG-238 = WONT FIX: was read from the Claude app's private registry copy, not Tim's real profile - see its entry; this header said BUG-232 while 232-237 were already used)* (older note follows) BUG-232 *(BUG-230 = other commands assume millimetres (PAVE, raingarden, site-area readers), BUG-231 = PluginInitialization.Terminate still saves at shutdown: both from the Opus reviews of #411/#412, 30 Sep)* (older note follows) BUG-230 *(BUG-224..229 = Codex sweep C1 FINAL report, 30 Sep 2026, installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 224 AutoCAD CRASHED closing a saved drawing copy (blocker); 225 Pit contextual tab Close button does nothing; 226 Civil ribbon tooltip says Civil on an Unknown drawing and offers Both; 227 CDS tooltip promises tiers and pages that are not installed; 228 Data Diagnostics tooltip promises a report, CDDIAG prints counts and "coming in v2.1 (PL-032)"; 229 CDMANAGER Draw Order list shows duplicate rows)* *(BUG-223 = CDEDIT / not-drawn-first CD with two same-named ends can still save an uphill pipe, from the #404 Opus review, 30 Sep)* (older note follows) BUG-223 *(BUG-205..222 = Codex pass 18 and sweep C1, 30 Sep 2026, on installed Civil 3.0.15 / Manager 1.1.15 / Structural 1.0.86: 205 CD level-direction choice makes an uphill pipe; 206 OSMODE ended 0; 207 drawn Pit Schedule stale after a pit edit; 208 pipe end grip refused by CE record guard; 209 CDCATCHMENT area 28 million m2; 210 COPY replacement pit unlinked; 211 erase column leaves beam silently; 212 Place schedule fails on a legacy pit; 213 older schedule cannot be re-placed; 214 CEFIND then Esc marks drawing changed; 215 RC needs two U; 216 CDFALLSUGGEST Enter rejected; 217 PD drain shows AG; 218 CSBRACINGPANEL invisible; 219 status bar says v1.1.10; 220 Structural launcher opens unasked; 221 Manager Status cards overlap; 222 Manager Civil settings scroll)* *(BUG-203 and BUG-204 are used, see below; this header said BUG-203 was next until 30 Sep 2026)* *(BUG-202 = constant lag in a Structural drawing on everything - select, hover, draw/edit, move/copy, pan/zoom - Tim suspects polylines, 29 Sep 2026)* *(BUG-195..201 = Codex exploratory run X1 on Civil 3.0.14 / Structural 1.0.85, 29 Sep 2026: XCLMTXT invents floors, Structural schedule text tiny, branch labels overlap, diameter-only CDEDIT changes grade, calculated level labelled staff-entered, CDCHECK Enter does not finish, pit placement jargon)* *(BUG-194 = selecting a plain rectangle in a Structural drawing opens the CE Pipe ribbon tab, Tim live 29 Sep 2026)* *(BUG-192 = REDO says "Nothing to redo" after U in a CE drawing; BUG-193 = typing a size in the Pit Schedule does not resize the drawn pit; both Codex pass 17, 29 Sep 2026)* *(BUG-191 = Inspector "Use plan label" takes a document lock outside a command, suspected unnamed Undo step (U1 family), found by the BUG-190 builder 28 Sep 2026)* *(BUG-190 = CE project data may not reach the DWG on Ctrl+S/close after a palette edit with no command, found by the BUG-189 re-review, 28 Sep 2026)* *(BUG-189 = AutoCAD goes through slow phases after a lot of CE interaction, native SPLINE stays fast, reported by Tim 28 Sep 2026)* *(BUG-188 = CEBLOCKS drops attribute text tags entirely and has no live placement/rotation preview, found by Tim live in AutoCAD, 28 Sep 2026)* *(BUG-186/187 = Codex pass 13 N4 carry-downstream Apply refused, N3 CD preview missing after Existing, 27 Sep 2026)* *(BUG-185 = 45-degree beam against a non-square column refused in metre drawings, train 6 review probe, 26 Sep 2026)* *(BUG-184 = suspected swapped support ends on command 1/2 beams picked right to left, train 6 review, 26 Sep 2026)* *(BUG-178..183 = Codex pass 12 faults on 3.0.5 / 1.0.76, 26 Sep 2026: carry-on Undo, downpipe rollback, contextual tab, STRUCDEBUG unknown, beam command 4, column MOVE Undo)* *(BUG-177 = CDPIPEOBJ is a visible registry command with no ribbon button, found by the release chat's builder while adding Start Here/My Role, 26 Sep 2026)* *(BUG-176 = CDRG places no grated inlet on an ordinary CD-drawn pipe, found by Codex pass 11, 25 Sep 2026)* *(BUG-175 = Edit Pipe decides rising-main destination and reverse arrow from a crude layer-name guess, found in code 24 Sep 2026)* *(BUG-174 = "[CE]" inside command-line questions is offered as a choice, 24 Sep 2026)* *(BUG-173 = Edit Pipe window should match New Pipe; BUG-172 = Civil ribbon pictures misaligned and wrong; BUG-171 = an upgraded old pipe opens as Detention instead of Stormwater; all 24 Sep 2026)* *(BUG-170 = What's New window small, hard to read and partly untrue, 24 Sep 2026)* *(BUG-169 = Structural RC revision cloud "a bit glitchy", symptoms not yet recorded, 24 Sep 2026)* *(BUG-168 = F12 keyword choices can select the wrong action, 24 Sep 2026)* *(BUG-167 = the release zip step (Compress-Archive) hangs intermittently, 23-24 Sep 2026)* *(BUG-166 = double-clicking an IL label starts TEXTEDIT and Edit Pipe never opens; diagnosed, experiment queued, 23 Sep 2026)* *(BUG-165 = Manager would treat the old 2026.0420 build number as newer than 3.0.0, 23 Sep 2026)* *(BUG-164 = AutoCAD crashed on close - CE's palette shutdown; fix installed 23 Sep 12:18, Codex saw three clean closes, awaiting Tim)* *(BUG-163 = CDWT: AutoCAD cannot continue at the callout point, first seen 16 Sep, logged 23 Sep 2026)* *(BUG-162 = stale Pipe Edit source-text check failing on master since 13 Sep, 23 Sep 2026)* *(BUG-161 = the trunk did not contain what is installed in AutoCAD, 23 Sep 2026; FIXED, PR #87 merged)* *(BUG-160 = grade-held pipe rewrites a hand-typed bottom level on the plan but not in the schedule, 23 Sep 2026)* *(BUG-159 = ordinary rectangle midpoint grips square + no hover menu, 16 Sep 2026)* *(BUG-158 = CDCALC computations sheet silently dropped from export, 16 Sep 2026)* *(2026-09-16: BUG-148 to BUG-157 were already used in REGRESSION_LOG.md by other chats - CDPARTS save/reset, PITEDIT label shift, Pipe/Pit Update truthfulness, save-return signal - so this header was stale and IDs resume above them.)* *(BUG-144 to BUG-147 = R4 batch, 15 Sep 2026)* *(BUG-139 to BUG-143 = R3 batch, 15 Sep 2026)* *(2026-09-15: BUG-127 to BUG-138 are the R2 batch F1–F12; BUG-107 to BUG-126 were used as loose references in older rows and are skipped to avoid a clash.)* *(2026-09-07: BUG-094 to BUG-097 record the CDEDIT repair and lunch verification findings.))*
 >
 > **RUN 35 (Tue 20 Oct 2026, 10:06 to 10:30, robot pass 14 on installed Civil 3.0.59 / Manager 1.1.59, train C-49, evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md):** 16 checks, 15 PASS, 1 STILL FAILS. PASS on the robot's copies (not Tim-accepted, nothing FIXED): BUG-141 pit-body half (the 'no clear spot (on pit P8)' line is gone with linking.tidyPitByBodyOutline ON and returns with it OFF), BUG-820 totals line, BUG-854 fix-line wording (30 of 30 rows), BUG-815 (still 0 false R-06 rows), the Edit Pipe cascade (BUG-797, BUG-782) and CDSYNC rows (BUG-698). STILL FAILS: BUG-141 Drawing Border half (#1480, second attempt that did not take), first line of the lane 04 queue (CODEX_BUG_TRIAGE section 16). New: BUG-855 (Pit Schedule header 95 to 96 data issues after the first CDSYNC, LOW). Unchanged since run 34: BUG-813, CDTAG (BUG-742), What's New palette (BUG-822). Tidy labels Apply, U and REDO are now reachable by robot (gaps file, run 35).
 >
@@ -14593,5 +14593,2133 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Test that catches it:** a render or contrast check that the heading colour against its background meets a readable ratio.
 
 **Steps to confirm in AutoCAD:** type CE_VERSION and look at the heading. Right looks like: dark or clearly contrasting text on the light panel.
+
+**Status:** OPEN
+
+## BUG-1088 — The automatic pipe sizer picks the smallest pipe at any grade, up to 1 in 1
+
+**Command / Area:** CDDESIGN connection pipe, network redesign, CDRUNSOLVE and auto-design (pipe sizing), Civil 3.0.72 (Opus Team audit T1 finding 1, 24 Oct 2026). HIGH, SURE (read end to end and worked by hand).
+
+**Symptom:** The sizer tries pipe sizes smallest first and returns the first one that works at ANY grade, as steep as 1 in 1, limited only by a 6 m/s speed cap. For UPVC: 40 L/s comes out DN100 at about 1 in 2.8 (5.1 m/s) where DN225 at 1 in 200 carries 41.3 L/s; 25 L/s comes out DN100 at 1 in 7; 100 L/s comes out DN150 at 1 in 3.9 where DN375 at 1 in 300 carries 132 L/s. On a job: a 30 m network-redesign pipe at 1 in 3.9 falls 7.7 m, the pits below are metres deep and a council connection cannot be reached, yet the preview offers it as a feasible design. It does not show in CDRUNSOLVE today only because that command feeds no flow (BUG-999); once flows are fed it will.
+
+**Expected behaviour:** The sizer takes the smallest size that works at or flatter than a preferred design grade, and goes steeper only when no size on the ladder works. The preferred grade is a Settings value (needs Tim's ruling on the number).
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 1; `Modules/Drainage/Services/PipeSizingSolver.cs:131,136,168-186`, `Services/SettingsSizingStandards.cs:67-74`, `AutoDesignService.cs:656-680`, `NetworkDesignService.cs:290`. Existing: none (grepped sizer steepest grade; BUG-868 is the UPVC-only assumption, BUG-999 the missing flow). Fix kind: code plus a Settings value. Protected: no. Lane: Opus after Tim's ruling.
+
+**Test that catches it:** unit case: size 40 L/s UPVC and assert the proposed grade is not steeper than the preferred design grade when a larger size at a flatter grade also works.
+
+**Steps to confirm in AutoCAD:** CDDESIGN on a test copy with a 40 L/s connection pipe. Right looks like: a DN225 or larger pipe at a sensible grade (about 1 in 200), not DN100 at 1 in 3.
+
+**Status:** OPEN
+
+## BUG-1089 — CDCALC Pipe Flows warns at its own fixed 0.5 and 3.0 m/s, not the Settings limits
+
+**Command / Area:** CDCALC, Pipe Flows tab, Civil 3.0.72 (T1 finding 2). MEDIUM, SURE (read).
+
+**Symptom:** The tab warns at a fixed 0.5 m/s minimum and 3.0 m/s maximum. CDRULES and Edit Pipe read the Settings 0.6 m/s minimum and the per-material speed caps (UPVC 3, concrete 6). So the two answer opposite ways on the same pipe: a DN300 concrete pipe at 1 in 600 runs at 0.56 m/s, CDCALC shows no warning but CDRULES warns "below 0.6 m/s"; a DN375 concrete pipe at 1 in 20 runs at 3.55 m/s, CDCALC says "check for scour risk" but CDRULES passes it.
+
+**Expected behaviour:** Pipe Flows uses the Settings minimum and the material's speed cap (the general maximum when no material is known), the same as CDRULES.
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 2; `Modules/Drainage/ViewModels/PipeFlowCalcViewModel.cs:268-271`. Existing: none (BUG-1036 is the roughness note on the same tab; BUG-544 is other ignored Settings). Fix kind: code. Protected: no.
+
+**Test that catches it:** unit case: DN300 concrete at 1 in 600 must warn minimum speed; DN375 concrete at 1 in 20 must not warn scour.
+
+**Steps to confirm in AutoCAD:** CDCALC, Pipe Flows, enter DN300 concrete at 1 in 600, then run CDRULES on a matching pipe. Right looks like: both warn "below 0.6 m/s".
+
+**Status:** OPEN
+
+## BUG-1090 — Nothing says the hydraulic grade line and pit losses were not checked
+
+**Command / Area:** CDRULES and the computations sheet (hydraulic checks), Civil 3.0.72 (T1 finding 3). MEDIUM, SURE (searched the whole Civil module).
+
+**Symptom:** CE has no hydraulic grade line (HGL), energy line, pit-loss or surcharge code; every pipe is checked full-bore on its own grade only. The long section and computations sheet show pipes passing and nothing says the HGL was not checked. Frankston, Banyule and Whitehorse ask for an HGL, so a reviewer on a Frankston job could take the sheet as a complete hydraulic check. This breaks R-27 (say Unknown). The missing feature itself is recorded (CE_VS_CIVIL3D compare item 1, COUNCIL_RULES_V3_INTEGRATION G); the missing "not checked" line is new.
+
+**Expected behaviour:** One Unknown row on CDRULES and the computations sheet: "Hydraulic grade line and pit losses: not calculated by CE", raised to a Warn when the job's council profile asks for an HGL.
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 3. Existing: none for the line (grepped HGL, hydraulic grade). Fix kind: code (one row). Protected: no.
+
+**Test that catches it:** a computations-sheet text check that the row is present, and present as Warn for a Frankston profile.
+
+**Steps to confirm in AutoCAD:** CDRULES on a Frankston-profile test copy. Right looks like: a line saying the HGL is not calculated.
+
+**Status:** OPEN
+
+## BUG-1091 — Redesign and auto-design drop the minimum grade for pipes DN450 and larger
+
+**Command / Area:** CDDESIGN, network redesign with "preserve existing sizes", auto-design, Civil 3.0.72 (T1 finding 4). MEDIUM, SURE (read).
+
+**Symptom:** The sizing standards keep the Settings grade ladder only for DN90 to DN375. Settings holds 1 in 200 for DN450 to DN750 and Edit Pipe uses it, but the sizer has no fallback. On a job: an existing DN450 carrying 30 L/s needs only 0.19 m/s, so the 0.6 m/s minimum decides the grade and the redesign proposes 1 in 1,509 (1 in 893 with concrete roughness) where Edit Pipe says 1 in 200.
+
+**Expected behaviour:** The whole Settings ladder is passed to the sizer for every size, so a DN450 or larger pipe gets its Settings minimum grade.
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 4; `SettingsSizingStandards.cs:72`, `Models/PipeSizingModels.cs:38-39`, `NetworkDesignService.PreserveExistingSizes.cs:114-127`. Existing: none (AUDIT_ENGINEERING_CIVIL 22 Oct item 25 covers the exact-size lookup, no BUG number). Fix kind: code after Tim's ruling on the ladder.
+
+**Test that catches it:** unit case: DN450 at 30 L/s must return a grade no flatter than the Settings 1 in 200.
+
+**Steps to confirm in AutoCAD:** network redesign preview with preserve-existing-sizes on a DN450 pipe carrying 30 L/s. Right looks like: grade 1 in 200, not 1 in 1,500.
+
+**Status:** OPEN
+
+## BUG-1092 — A pipe up to 5 mm uphill is reported "essentially flat", not "flows uphill"
+
+**Command / Area:** CDRULES / design validation (adverse grade), Civil 3.0.72 (T1 finding 5). LOW, SURE (read).
+
+**Symptom:** A 5 mm tolerance is applied on both sides of level. A 1 m pipe whose downstream end is 4 mm higher (adverse 1 in 250) gets an amber "Pipe is essentially flat, no measurable fall"; the red "Pipe flows uphill" never shows. The other way, a 2 m pipe with a real 4 mm fall (1 in 500) is told it has "no measurable fall".
+
+**Expected behaviour:** Any negative fall gives the uphill error; the tolerance only affects the "flat" wording.
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 5; `Services/DesignValidationService.cs:296-317`. Existing: none (grepped essentially flat; other hits are different grade checks). Fix kind: code.
+
+**Test that catches it:** unit case: a 1 m pipe with a downstream end 4 mm higher returns the uphill error.
+
+**Steps to confirm in AutoCAD:** draw a 1 m test pipe with IL 10.000 at the start and 10.004 at the end, run CDRULES. Right looks like: "flows uphill" in red.
+
+**Status:** OPEN
+
+## BUG-1093 — Cover check is skipped when a pit lid is exactly RL 0.000
+
+**Command / Area:** CDRUNSOLVE and network redesign (cover check), Civil 3.0.72 (T1 finding 6). LOW, SURE (read).
+
+**Symptom:** The code treats a cover level of exactly 0.0 as "unknown" so no cover finding is raised, while RL 0.001 gets one. On a coastal or low-lying AHD job with a lid at RL 0.000 there is no cover check. Same "zero means unknown" family as BUG-1019, in a different file.
+
+**Expected behaviour:** "Cover known" is its own yes/no, so a real RL 0.000 is checked.
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 6; `Services/NetworkDesignService.cs:387,399`, `NetworkRedesignSolverService.OutputValidation.cs:84`. Existing: none (BUG-1019 is a different file). Fix kind: code.
+
+**Test that catches it:** unit case: a pit with cover RL 0.000 and a pipe crown 0.2 m below must raise a cover finding.
+
+**Steps to confirm in AutoCAD:** test copy with one pit lid at RL 0.000 and a shallow pipe, run network redesign. Right looks like: a cover finding on that pit.
+
+**Status:** OPEN
+
+## BUG-1094 — Inspector shows a pipe up to 20 per cent flatter than the minimum as amber, not red
+
+**Command / Area:** Inspector palette (pipe grade colour), Civil 3.0.72 (T1 finding 7). LOW, UNSURE (the intent is not recorded; needs Tim's word on what amber means).
+
+**Symptom:** The warning band is 1.2 times the minimum grade denominator. Against 1 in 200, a pipe at 1 in 235 fails the minimum but shows amber; only 1 in 241 and flatter shows red. CDRULES warns on both.
+
+**Expected behaviour:** Red for anything flatter than the minimum; if Tim wants a "near the limit" band it is amber just steeper than the minimum.
+
+**Reference:** TEAM_AUDIT_T1_24OCT.md finding 7; `Services/InspectorPaletteService.cs:3293-3302`. Existing: none. Fix kind: code after Tim's word.
+
+**Test that catches it:** unit case: 1 in 235 against a 1 in 200 minimum returns the failing state.
+
+**Steps to confirm in AutoCAD:** select a pipe drawn at 1 in 235 with a 1 in 200 minimum and look at the Inspector. Right looks like: red cross, matching CDRULES.
+
+**Status:** OPEN
+
+## BUG-1095 — The council "minimum after-development C" is never applied (Darebin, Maribyrnong, Boroondara)
+
+**Command / Area:** CDDESIGN, pump sizing and CDCALC Boyd's tab (runoff coefficient), Civil 3.0.72 (Opus Team audit T2 finding 1, 24 Oct 2026). HIGH, SURE (no caller in code; hand calculation shown).
+
+**Symptom:** Darebin 0.8, Maribyrnong 0.75 and Boroondara 0.65 are stored and sourced as a floor, but nothing in the product calls the rule. On a Darebin job (600 m2 lot, 400 m2 roof and paving, 200 m2 garden) CDDESIGN uses C = (400 x 0.9 + 200 x 0.30) / 600 = 0.70 where the council requires at least 0.80. Inflow is 87.5 per cent of the council's, the permitted discharge does not change, so the tank comes out too small (a 300/300 split is 25 per cent low). This also answers open questions C16 and C19: the floor is not applied.
+
+**Expected behaviour:** The weighted C goes through the council floor in CDDESIGN, pump sizing and the Boyd's tab, and the sheet prints "council minimum C governs".
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 1; `Rules/CouncilRuleValues.cs:99-114`, `Services/AutoDesignService.cs:309-321`, `Services/PumpSizingService.cs:211-212`, `Assets/Config/council-profiles.json`. Existing: none (grepped minimum after-development C; BUG-1057..1059 are other council values). Fix kind: code. Protected: no.
+
+**Test that catches it:** unit case: Darebin 600 m2 lot, 400 hard / 200 soft must give C 0.80, not 0.70.
+
+**Steps to confirm in AutoCAD:** CDDESIGN on a Darebin-profile test copy with that lot. Right looks like: C 0.80 on the computations sheet with a "council minimum governs" note.
+
+**Status:** OPEN
+
+## BUG-1096 — The rainwater-tank reuse credit never runs on a real job (R-10)
+
+**Command / Area:** CDDESIGN (reuse credit), Civil 3.0.72 (T2 finding 2). HIGH, SURE (traced end to end).
+
+**Symptom:** The credit is worked out only when the reuse-tank input is set; nothing sets it and the CDDESIGN window has no reuse box. On a Manningham job (gross storage 10 m3, 300 m2 roof to a 3,000 L plumbed tank, 500 m2 impervious) the credit should be 0.25 x 10 x 300/500 = 1.50 m3, net 8.50 m3; the computations show no reuse-credit section at all. BUG-538 assumes the credit reaches the result; it does not.
+
+**Expected behaviour:** CDDESIGN asks for tank litres, connected roof and "plumbed for reuse" (connected roof pre-filled from the rating report) and passes them through.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 2; `Services/AutoDesignOrchestrator.cs:156-157`, `Services/CivilDesignService.cs:145-174`. Existing: none for the missing wiring (BUG-538 related). Fix kind: code plus window. Protected: no.
+
+**Test that catches it:** unit case through CivilDesignService: Manningham inputs must produce a 1.50 m3 credit line.
+
+**Steps to confirm in AutoCAD:** CDDESIGN on a Manningham test copy with a 3,000 L reuse tank. Right looks like: credit 1.50 m3, net 8.50 m3.
+
+**Status:** OPEN
+
+## BUG-1097 — R-13: the 300 mm minimum head on a charged downpipe system is never checked
+
+**Command / Area:** CDCALC Charged System tab and CDRULES, Civil 3.0.72 (T2 finding 3). HIGH, SURE.
+
+**Symptom:** CDRULES prints "R-13 charged minimum head: 300 mm" as if enforced. The Charged System tab warns only on zero inputs and on capacity below design flow. A 100 m2 roof (C 0.9, 126 mm/h), 150 mm pipe 48.5 m long, K 2.95, 100 mm downpipe and 250 mm available head gives 3.15 L/s flow against 13.79 L/s capacity: no warning, although the head is 50 mm under the house rule. The Settings box for the value is missing (BUG-546); the missing check is new.
+
+**Expected behaviour:** A Settings box with a project override, and one warning in the Charged System tab and CDRULES when the head is under it. Warn and record, never block (R-27).
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 3; `Models/UserSettings.cs:1980`, `Rules/RulebookValues.cs:245`, `Rules/RulebookEngine.cs:44`, `ViewModels/ChargedSystemCalcViewModel.cs:211-218`. Existing: none for the check (BUG-546 is the missing box). Fix kind: code plus Settings.
+
+**Test that catches it:** unit case: head 250 mm against a 300 mm minimum returns a warning.
+
+**Steps to confirm in AutoCAD:** CDCALC, Charged System, enter an available head of 250 mm. Right looks like: a warning that the head is under 300 mm.
+
+**Status:** OPEN
+
+## BUG-1098 — The Kingston reuse credit follows the wrong rule and over-credits big tanks
+
+**Command / Area:** reuse credit (Kingston), Civil 3.0.72 (T2 finding 4). HIGH once BUG-1096 is fixed (today it never runs), SURE.
+
+**Symptom:** The code gives 500 L for every complete 2,000 L of tank. Kingston's rule is 500 L for a 2,000 L tank, or 1,000 L for 2,500 L or more; single dwellings only, minimum 2,000 L tank and 50 m2 of roof. A 6,000 L tank credits 1.50 m3 against the council's 1.00 m3 (0.5 m3 over-credit, the unsafe side); 8,000 L credits 2.00 against 1.00; 2,500 L credits 0.50 against 1.00 (too low). The 50 m2 roof, single-dwelling and no-shared-tank checks are missing.
+
+**Expected behaviour:** 500 L under 2,500 L, 1,000 L at 2,500 L and over, none for shared tanks or under 50 m2 of roof, stored as council-profile data (R-00).
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 4; `Services/ReuseCreditService.cs:166-183`; COUNCIL_KINGSTON_ISSUE5_2025.md section 3. Existing: none (grepped Kingston 2,500). Fix kind: code plus data.
+
+**Test that catches it:** unit cases: 2,500 L gives 1.00 m3; 6,000 L gives 1.00 m3; 1,800 L gives none.
+
+**Steps to confirm in AutoCAD:** after BUG-1096, CDDESIGN on a Kingston test copy with a 6,000 L tank. Right looks like: credit 1.00 m3.
+
+**Status:** OPEN
+
+## BUG-1099 — Maroondah and Yarra Ranges: the council's own before-development C and lot-size Tc table are stored but never used
+
+**Command / Area:** CDDESIGN permitted discharge (PSD), Civil 3.0.72 (T2 finding 5). HIGH on Maroondah jobs, SURE on the code (council figures from CE's record, not re-read from the PDF).
+
+**Symptom:** The council rules for before-development C (with the 35 per cent impervious cap) and the lot-size Tc table have no caller. On a bare 600 m2 Maroondah lot at 1-in-5: council method C 0.30, Tc 8 min, I 73.63 mm/h gives PSD 3.68 L/s; CE uses office C 0.35 and Tc 5 min, I 88.80, giving 5.18 L/s. CE's permitted discharge is 41 per cent high, so the tank is too small and the orifice too big.
+
+**Expected behaviour:** The two existing rules are called when a profile carries the cap or the table. Needs Tim's word first: the same Tc also sizes the outlet pipe (open question C17).
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 5; `Services/DetentionSizingService.cs:277-287,309`, `Services/AutoDesignService.cs:404,408`, `Rules/CouncilRuleValues.cs:116-159`. Existing: none (grepped Maroondah Tc). Fix kind: code after Tim's ruling.
+
+**Test that catches it:** unit case: Maroondah 600 m2 bare lot gives PSD 3.68 L/s.
+
+**Steps to confirm in AutoCAD:** CDDESIGN on a Maroondah test copy, 600 m2 bare lot, 1-in-5. Right looks like: PSD 3.68 L/s.
+
+**Status:** OPEN
+
+## BUG-1100 — R-10 "ask on every job" is not built
+
+**Command / Area:** CDDESIGN reuse credit, Monash and Bayside jobs, Civil 3.0.72 (T2 finding 6). MEDIUM, SURE.
+
+**Symptom:** When a council has no reuse rule the service returns only "has no reuse-credit rule in the rulebook". There is no "Needs confirmation" state, no question for the engineer and no saved answer. On a Monash or Bayside job nothing asks how the tank is credited and nothing is recorded as a learning example (R-10, R-LEARN).
+
+**Expected behaviour:** Mark the credit "Needs confirmation", ask for the basis in CDDESIGN and save the answer on the job.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 6; `Services/ReuseCreditService.cs:61-63`. Existing: none. Fix kind: code plus window. Latent until BUG-1096 is fixed.
+
+**Test that catches it:** a case where a Monash profile returns the "needs confirmation" state and a saved answer reloads.
+
+**Steps to confirm in AutoCAD:** after BUG-1096, CDDESIGN on a Monash test copy with a tank. Right looks like: a question asking how the tank is credited, and the answer shown on reopen.
+
+**Status:** OPEN
+
+## BUG-1101 — CDCALC Catchments opens with a made-up catchment and a 15-minute storm
+
+**Command / Area:** CDCALC, Catchments (Rational Method) tab, Civil 3.0.72 (T2 finding 7). MEDIUM, SURE.
+
+**Symptom:** A new job opens CDCALC, Catchments, and already shows "C1, 500 m2, C 0.9" with a total (1-in-5 at 15 min: Q = 6.89 L/s) for a catchment nobody typed. A drafter who types only the area keeps the 15-minute storm: 38 per cent less flow than the office Tc of 5 min (11.1 L/s for the same 500 m2). The tab ignores the Settings Tc and the council's PSD storm (Glen Eira is 1-in-10), and it can go onto the computations sheet. The C 0.9 part alone is BUG-544; the made-up area and 15-minute default are new.
+
+**Expected behaviour:** Start with no rows (Unknown stays Unknown, R-12) and start the storm at the Settings Tc and the job's council PSD storm.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 7; `ViewModels/RationalMethodViewModel.cs:37-38,157,391-392`. Existing: none for the seed row and storm. Fix kind: code.
+
+**Test that catches it:** a case that a fresh view model has zero rows and the Settings Tc.
+
+**Steps to confirm in AutoCAD:** CDCALC on a new job, Catchments. Right looks like: an empty list, storm duration equal to the Settings Tc.
+
+**Status:** OPEN
+
+## BUG-1102 — The council "minimum % of detention underground" is never checked
+
+**Command / Area:** CDWT and CDDESIGN (detention tank location), Civil 3.0.72 (T2 finding 8). MEDIUM, SURE.
+
+**Symptom:** The stored percentage (Banyule and Boroondara 100, Glen Eira 50, Monash 60, Mornington 50, Frankston 50) is read only by the council-source viewer label. CDWT still offers "Tank goes [AboveGround/Underground] <AboveGround>". On a Banyule job an above-ground detention tank goes through with no warning and the council rejects it.
+
+**Expected behaviour:** CDWT and CDDESIGN warn when the above-ground share exceeds 100 minus the council percentage, and default to Underground when the council asks for 100.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 8; `ViewModels/CouncilSourceViewModel.cs:25`, `Commands/WaterTankCommand.cs:628`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: Banyule with an above-ground detention volume returns a warning.
+
+**Steps to confirm in AutoCAD:** CDWT on a Banyule test copy, answer AboveGround. Right looks like: a warning that Banyule requires 100 per cent underground.
+
+**Status:** OPEN
+
+## BUG-1103 — The Charged System tab takes pipe and downpipe sizes in metres with no sense check
+
+**Command / Area:** CDCALC, Charged System tab, Civil 3.0.72 (T2 finding 9). MEDIUM, SURE.
+
+**Symptom:** "Pipe diameter (m)" and "Downpipe dia (m)" take metres where every other CE window uses mm. Typing 150 instead of 0.15 makes a pipe 150 m across: losses show 0.0000 m and capacity comes out a comfortable-looking 26.15 L/s. Typing 100 for the downpipe gives about 26 million L/s. No warning.
+
+**Expected behaviour:** Take mm (divide inside), or warn on any diameter over 2 m.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 9; `Dialogs/CalculationsV2Dialog.xaml:726,734`, `ViewModels/ChargedSystemCalcViewModel.cs:160-202`. Existing: none (grepped Charged System metres). Fix kind: code.
+
+**Test that catches it:** unit case: pipe diameter 150 returns a warning.
+
+**Steps to confirm in AutoCAD:** CDCALC, Charged System, type 150 in Pipe diameter. Right looks like: a clear warning or a unit label in mm.
+
+**Status:** OPEN
+
+## BUG-1104 — R-22 local tank orifice minimum and the "tank flows add up to no more than site PSD" check are never used
+
+**Command / Area:** CDWT / CDDESIGN tank orifices, Civil 3.0.72 (T2 finding 10). MEDIUM, SURE.
+
+**Symptom:** The tank minimum is stored (Manningham 25 mm, Maroondah 20 mm) but the lookup has no caller and the rulebook engine lists R-20..23 as "not evaluated here". A 15 mm tank orifice on a Manningham job gets no warning, and two tanks whose orifice flows add to more than the site PSD get no warning.
+
+**Expected behaviour:** Until R-22 is built, CDRULES says "tank orifice minimum not checked"; then the lookup is called when a tank orifice is sized.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 10; `council-profiles.json:802,834`, `Rules/CouncilRuleValues.cs:534-536`, `Rules/RulebookEngine.cs:47`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: Manningham 15 mm tank orifice returns a warning.
+
+**Steps to confirm in AutoCAD:** CDWT on a Manningham test copy with a 15 mm orifice. Right looks like: a warning citing the 25 mm council minimum.
+
+**Status:** OPEN
+
+## BUG-1105 — The STORM / Blue Factor result is not carried with its source, and nothing compares the report's tank with the drawn reuse share
+
+**Command / Area:** rating report offer, CDWT tank record (R-11, R-12, R-21), Civil 3.0.72 (T2 finding 11). MEDIUM, SURE.
+
+**Symptom:** The rating is only printed; the tank volume read from each report row is used by nothing; the tank record has no link to its report. A report that relies on a 3,000 L tank, against a drawn tank with only 2,000 L of reuse below the outlet, passes silently. A reuse-only job carries no STORM result with its source, and no override reason is recorded.
+
+**Expected behaviour:** Store the rating, report file, date and each tank size on the job; warn when the report's tank litres differ from the drawn reuse litres; allow an override with a typed reason.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 11; `Rules/StormReportOffer.cs:162-163`, `Rules/StormReport.cs:271-273`, `Models/PitData.cs:272-310`, `Commands/WaterTankCommand.Apply.cs:343-357`. Existing: none (BUG-594 and BUG-1033 were matched by the audit as related, not the same). Fix kind: code.
+
+**Test that catches it:** case: report tank 3,000 L against drawn reuse 2,000 L returns a warning.
+
+**Steps to confirm in AutoCAD:** load a rating report naming a 3,000 L tank, then draw a tank with 2,000 L reuse with CDWT. Right looks like: a warning that the two differ.
+
+**Status:** OPEN
+
+## BUG-1106 — A rating report naming a two-word council sets a council CE cannot find
+
+**Command / Area:** CDDESIGN, council set from the rating report, Civil 3.0.72 (T2 finding 12). MEDIUM, SURE by reading (not driven in AutoCAD).
+
+**Symptom:** A report saying "Municipality Glen Eira" prints "Council set to Glen Eira, from the rating report", but the name is saved as the council ID while the profile ID is "glen-eira" and the lookup is by ID only. The design still says the council is outstanding. Same for Mornington Peninsula, Yarra Ranges and every other two-word council; one-word councils such as Kingston work.
+
+**Expected behaviour:** Turn the matched name into the profile's ID (look up by ID, then name) before saving.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 12; `Commands/CivilDesignCommand.cs:576-579,600-608`, `Rules/StormReportOffer.cs:125-141`, `Services/CouncilProfileService.cs:233`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: a report naming "Glen Eira" results in council ID glen-eira.
+
+**Steps to confirm in AutoCAD:** CDDESIGN, offer a rating report naming Glen Eira. Right looks like: the design shows Glen Eira as the council, no "council outstanding" line.
+
+**Status:** OPEN
+
+## BUG-1107 — The raingarden outlet pit is never recorded
+
+**Command / Area:** CDRG and the Inspector (raingarden outlet), Civil 3.0.72 (T2 finding 13). MEDIUM, SURE.
+
+**Symptom:** The outlet fields exist but only spoon-drain code fills them. The Inspector always says "No outlet registered" even after CDRG has placed the grated inlet and pipe.
+
+**Expected behaviour:** Fill the outlet when the inlet or pipe lands on a pit, or change the words to "Outlet not tracked".
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 13; `Models/RaingardenData.cs:38-43`, `Services/RaingardenPlacementPlan.cs:235-243`, `Services/InspectorPaletteService.cs:2247-2248`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: CDRG with a pipe to a pit leaves an outlet record naming the pit.
+
+**Steps to confirm in AutoCAD:** CDRG a raingarden with its inlet pipe to pit P3, select it, read the Inspector. Right looks like: outlet P3.
+
+**Status:** OPEN
+
+## BUG-1108 — Manningham's 2,000 L minimum is tested against the whole tank, not the reuse share
+
+**Command / Area:** reuse credit (Manningham), Civil 3.0.72 (T2 finding 14). MEDIUM (latent while BUG-1096 stands), SURE by reading.
+
+**Symptom:** A 3,000 L tank with 1,500 L of detention has only 1,500 L of reuse, so Manningham gives no credit, but the code credits 0.25 x SSR x roof ratio. The "majority of the tank must be reuse" check is not warned anywhere.
+
+**Expected behaviour:** Pass the reuse litres (total minus detention, as CDWT works out) and test those.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 14; `Services/ReuseCreditService.cs:140`, `Models/ReuseCreditModels.cs:20-25`. Existing: none. Fix kind: code with BUG-1096.
+
+**Test that catches it:** unit case: 3,000 L tank with 1,500 L detention gives no Manningham credit.
+
+**Steps to confirm in AutoCAD:** after BUG-1096, CDDESIGN on a Manningham test copy with that tank. Right looks like: no credit and a plain reason.
+
+**Status:** OPEN
+
+## BUG-1109 — No council value can be edited anywhere in the product
+
+**Command / Area:** CDRULEBOOK / Settings (council values), Civil 3.0.72 (T2 finding 15). MEDIUM, UNSURE (fault or planned work not yet built).
+
+**Symptom:** The council profile service is read-only, Settings has no council section and the "confirm" call has no caller. The only route is editing the shipped `council-profiles.json`, which the next install overwrites. If Kingston changes its PSD storm tomorrow, nobody in the office can change it without a new plugin build. R-00 says the same applies to council values.
+
+**Expected behaviour:** A "Confirm / change value" action in CDRULEBOOK that writes to an office overlay file with the reason recorded.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 15; `Services/CouncilProfileService.cs`, `Rules/CouncilRuleValues.cs:81`. Existing: none (BUG-546 is the other Settings boxes). Fix kind: code plus Settings; needs Tim's word on scope.
+
+**Test that catches it:** case: an overlay value replaces a shipped value and survives a reinstall.
+
+**Steps to confirm in AutoCAD:** CDRULEBOOK, look for a way to change a council value. Right looks like: a Confirm / change action with a reason box.
+
+**Status:** OPEN
+
+## BUG-1110 — CDDESIGN warns about council C values it never uses, and the council's own soft-ground C never wins
+
+**Command / Area:** CDDESIGN warnings (Whitehorse and others), Civil 3.0.72 (T2 finding 16). LOW-MEDIUM, SURE.
+
+**Symptom:** The sheet says "Whitehorse / perviousC: Assumed, no council source" against 0.35, while the design actually used the Settings 0.30, which gets no source line. Tim's CR-A1 point 4 says a published council figure wins; it never does. No numeric difference today because Banyule, Maroondah and Yarra Ranges publish 0.30, equal to Settings.
+
+**Expected behaviour:** Warn only on fields the design read; read the council's soft-ground C when it is Sourced.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 16; `Services/AutoDesignService.cs:316-318,701-707`, `Services/PumpSizingService.cs:75,78`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a council with a Sourced pervious C uses it and the sheet names the source.
+
+**Steps to confirm in AutoCAD:** CDDESIGN on a Whitehorse test copy, read the warnings. Right looks like: no warning about a value the design did not use.
+
+**Status:** OPEN
+
+## BUG-1111 — The before-development "formula" text still says 0.3 while the number beside it is worked from 0.35
+
+**Command / Area:** CDRULES / council source viewer (before-development C), Civil 3.0.72 (T2 finding 17). LOW, SURE.
+
+**Symptom:** 17 council profiles carry the text "(0.3*pervious + 0.9*impervious)/site" while holding perviousC 0.35. CDRULES or the source viewer shows 0.35 with that working beside it; a checker reproducing it gets 0.30. CR-A1 point 3 says the printed working must show the number actually used. First written up 15 Sep (FINDING_PERVIOUS_C_SPLIT), answered by CR-A1, text never corrected. CDDESIGN's own C is right.
+
+**Expected behaviour:** Rebuild the text from the numbers actually used, or drop the formula string.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 17; `council-profiles.json` preDevCFormula, `Rules/CouncilRuleValues.cs:127-135`, `Models/CouncilProfileModels.cs:113`. Existing: none. Fix kind: data.
+
+**Test that catches it:** case: every profile's printed working reproduces its printed number.
+
+**Steps to confirm in AutoCAD:** CDRULEBOOK on a Whitehorse test copy, open the before-development C source. Right looks like: the working shows 0.35.
+
+**Status:** OPEN
+
+## BUG-1112 — WSUD export prints a sample site nobody typed
+
+**Command / Area:** CDCALC WSUD tab export, Civil 3.0.72 (T2 finding 18). LOW, SURE.
+
+**Symptom:** The tab is read-only but its "WSUD / annual load reduction" export box still works and writes "Total site area 1000 m2, Impervious 200 / 700 m2, 630 mm rain" into the computations package as if they were the job's figures (R-12). The drafter cannot correct them.
+
+**Expected behaviour:** Blank starting values, or untick and disable the export while the tab is read-only.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 18; `ViewModels/WsudViewModel.cs:19-24`, `Dialogs/CalculationsV2Dialog.xaml:1309`, `Services/CalculationExportPackage.cs:503-530`. Existing: none (BUG-547 is the fixed targets). Fix kind: code.
+
+**Test that catches it:** case: the export with default inputs writes no sample figures.
+
+**Steps to confirm in AutoCAD:** CDCALC, tick the WSUD export, prepare the package. Right looks like: no 1000 m2 site in the package.
+
+**Status:** OPEN
+
+## BUG-1113 — A Blue Factor catchment that shares its name with another is dropped
+
+**Command / Area:** Blue Factor report reading, Civil 3.0.72 (T2 finding 19). LOW, UNSURE (not known whether Blue Factor allows two catchments with the same name).
+
+**Symptom:** One row is kept per catchment name, because the report lists each catchment twice. Two townhouses each with "ROOF TO WT" (120 m2 and 110 m2) keep only 120 m2, so the tank-connected roof is 110 m2 short.
+
+**Expected behaviour:** Treat a repeat as a duplicate only when name, surface and area all match.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 19; `Rules/BlueFactorReport.cs:98`, `Drainage.Tests/Rules/BlueFactorReportTests.cs:48-55`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: two rows with the same name and different areas both count.
+
+**Steps to confirm in AutoCAD:** read a report with two "ROOF TO WT" rows of different area. Right looks like: both areas counted.
+
+**Status:** OPEN
+
+## BUG-1114 — The office tank library has no Settings page box
+
+**Command / Area:** Settings page (tank library), Civil 3.0.72 (T2 finding 20). LOW, SURE.
+
+**Symptom:** The tank library lives in the settings file only; adding a new supplier tank means editing the file by hand (R-00).
+
+**Expected behaviour:** A tank list on the Settings page.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 20; `Models/UserSettings.cs:1829`. Existing: related to BUG-546 (the missing Settings boxes; the audit lists the tank library among them but raised it as its own finding 20). Fix kind: Settings page.
+
+**Test that catches it:** case: a tank added in Settings appears in CDWT.
+
+**Steps to confirm in AutoCAD:** CDS, look for a tank list. Right looks like: add a tank, open CDWT and see it.
+
+**Status:** OPEN
+
+## BUG-1115 — CDWT on the command line ignores a typed detention of 0
+
+**Command / Area:** CDWT (AutoCAD 2022-2026 command-line route), Civil 3.0.72 (T2 finding 21). LOW, SURE.
+
+**Symptom:** A typed 0 for detention is replaced with the library tank's figure. Nothing shows today because every shipped library tank has 0 detention; once an office tank carries a detention share, 0 can no longer be typed.
+
+**Expected behaviour:** A typed 0 is an answer.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 21; `Commands/WaterTankCommand.cs:501`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: library tank with 1,000 L detention, typed 0, result 0.
+
+**Steps to confirm in AutoCAD:** with a library tank carrying detention, CDWT on 2024 and type 0. Right looks like: the tank has no detention.
+
+**Status:** OPEN
+
+## BUG-1116 — Lots of 1,000 m2 and over get Tc 5 min with no note
+
+**Command / Area:** CDDESIGN time of concentration, Civil 3.0.72 (T2 finding 22). LOW, UNSURE (engineering judgement; Q7 rules out a routed Tc for storage only).
+
+**Symptom:** The office rule is Tc 5 min for lots under 1000 m2. The 1,000 m2 limit is declared but nothing uses it, so a 2,500 m2 residential lot also gets 5 min (Kingston commercial warns, BUG-251). A longer Tc lowers intensity (66.75 mm/h at 10 min against 88.80 at 5), so the permitted discharge, and with it the storage, depends on a choice nobody is told about.
+
+**Expected behaviour:** A note on lots of 1,000 m2 and over: "Tc 5 min used; the office rule covers lots under 1000 m2; confirm".
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 22; `Services/RationalFlowService.cs:57,384-390`. Existing: none (BUG-251 is Kingston commercial). Fix kind: code (note); Tim's word on the rule.
+
+**Test that catches it:** case: a 2,500 m2 lot produces the note.
+
+**Steps to confirm in AutoCAD:** CDDESIGN on a 2,500 m2 residential test lot. Right looks like: the note appears on the sheet.
+
+**Status:** OPEN
+
+## BUG-1117 — ifd-melbourne.json ships but is never read
+
+**Command / Area:** rainfall curve (Assets/Config), Civil 3.0.72 (T2 finding 23). LOW, SURE.
+
+**Symptom:** The file is only mentioned in a comment; the live curve is in code and the coefficients are identical today. An engineer who edits the JSON to update the rainfall changes nothing. The curve being in code is known (BUG-547, R-00 item 16); the dead file is new.
+
+**Expected behaviour:** Delete the file, or read it.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 23; `Services/RationalFlowService.cs:33`, `Rules/RainfallCurve.cs:158-171`. Existing: none (grepped ifd-melbourne). Fix kind: code.
+
+**Test that catches it:** case: changing a coefficient in the JSON changes the 5-minute intensity (or the file is gone).
+
+**Steps to confirm in AutoCAD:** none needed beyond the unit case; a CDRAINFALL read-back confirms 88.80 mm/h at 5 min.
+
+**Status:** OPEN
+
+## BUG-1118 — Downpipe placement preview is a fixed 100 drawing units
+
+**Command / Area:** DP placement preview, Civil 3.0.72 (T2 finding 24). LOW, UNSURE (not seen in AutoCAD).
+
+**Symptom:** The preview marker is plus or minus 100 units with the label 150 units away. In a metre drawing the marker would be 200 m long.
+
+**Expected behaviour:** Scale through the drawing-unit conversion.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 24; `Services/SourcePlacementService.cs:1594-1596`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: preview size in a metre drawing equals the millimetre-drawing size in real length.
+
+**Steps to confirm in AutoCAD:** metre drawing (INSUNITS 6), type DP and move the cursor. Right looks like: a small marker, not 200 m long.
+
+**Status:** OPEN
+
+## BUG-1119 — The background downpipe detector matches layer words by "contains"
+
+**Command / Area:** background downpipe detection (not yet reachable by a command), Civil 3.0.72 (T2 finding 25). LOW, SURE.
+
+**Symptom:** "DP" matches an architect's A-WALL-DPC layer and "STORMWATER" matches any block on that layer, so pits and damp-course blocks would be offered ticked as downpipes. No command calls the code yet.
+
+**Expected behaviour:** Whole-word matching, and layer-only block matches unticked by default.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 25; `Services/BackgroundDownpipeSymbolReader.cs:94-114`, `Services/XrefDownpipeDetectionService.cs:88`. Existing: none. Fix kind: code, before the feature is wired.
+
+**Test that catches it:** case: a block on A-WALL-DPC is not offered as a downpipe.
+
+**Steps to confirm in AutoCAD:** none until a command uses it; confirm by unit case.
+
+**Status:** OPEN
+
+## BUG-1120 — Wording and citations to confirm: STORM "None", Bayside reuse formula, charged downpipe coefficient note
+
+**Command / Area:** STORM report note, Bayside reuse, Charged System comment, Civil 3.0.72 (T2 finding 26). LOW, UNSURE (Tim's call on all three).
+
+**Symptom:** (1) The STORM note says area with no treatment "goes straight out, only the part that reaches the tank is detained"; in a STORM report "None" means no water-quality treatment and an untreated driveway may still drain to detention. Areas are right, only the note. (2) R-10 says a Bayside reuse formula is known but COUNCIL_BAYSIDE_2026.md states none and the profile entry is empty. (3) The comment calls 0.82 a "well-rounded pipe inlet" and the tooltip cites "NCC H2P1", both unverified; the value itself is known (BUG-547).
+
+**Expected behaviour:** Tim confirms the wording, the Bayside formula and the citation; the text then matches.
+
+**Reference:** TEAM_AUDIT_T2_24OCT.md finding 26; `Rules/StormReportOffer.cs:154-156`, `council-profiles.json:236`, `ViewModels/ChargedSystemCalcViewModel.cs:200`. Existing: none. Fix kind: Tim's ruling then text.
+
+**Test that catches it:** a wording check once Tim rules.
+
+**Steps to confirm in AutoCAD:** read the STORM note on a rating report offer. Right looks like: wording that says "no water-quality treatment".
+
+**Status:** OPEN
+
+## BUG-1121 — CEMEMBER takes the only section that starts with what you typed, even when your number was complete
+
+**Command / Area:** CEMEMBER, "Section name" prompt, Structural 1.0.122 (Opus Team audit T3 finding 1, 24 Oct 2026). MEDIUM, SURE (read end to end).
+
+**Symptom:** Type `114.3x6` for a 114.3 x 6.0 CHS handrail post. The list has no 6.0 wall and the only name starting `114.3X6` is `114.3x6.4CHS`, so CEMEMBER says "Pick point 1 of 114.3x6.4CHS" and draws the 6.4 wall. Same: `168.3x6` to 168.3x6.4, `101.6x6` to 101.6x6.4, `60.3x4` to 60.3x4.5, `89x89x3` to 89x89x3.5 SHS. The name is on the command line, so a careful drafter catches it; a fast one will not.
+
+**Expected behaviour:** A prefix only counts when the next character of the section name is a letter, never a digit or decimal point. `310UB3` still finds 310UB32; `114.3x6` says "no section called 114.3x6".
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 1; `Modules/Structural.DesignCore/SteelSections/CeMemberPrompts.cs:101-117`, `Commands/CeMemberCommands.cs:372`. Existing: none (grepped CEMEMBER 114.3; BUG-818 is wrong list figures). Fix kind: code.
+
+**Test that catches it:** unit case: FindByName("114.3x6") returns no match; FindByName("310UB3") returns 310UB32.
+
+**Steps to confirm in AutoCAD:** CEMEMBER, type 114.3x6 at "Section name". Right looks like: CEMEMBER says there is no such section instead of offering 114.3x6.4CHS.
+
+**Status:** OPEN
+
+## BUG-1122 — The office short spellings and the Lysaght purlin names are not found by SBEAM or CEMEMBER
+
+**Command / Area:** SBEAM search, CEMEMBER and XCLMTXT spelling table, Structural 1.0.122 (T3 finding 2). MEDIUM (a refusal, never a wrong section), SURE.
+
+**Symptom:** The section list rounds most UB masses up (`410UB60`, `360UB57`, `250UB26`, `200UB30`, `250UC90`, `200UC60`, `310UC97`) but rounds 74.6 down (`460UB74`). XCLMTXT's table spells them `410UB59`, `360UB56`, `250UB25`, `200UB29`, `250UC89`, `310UC96`. On one job the schedule says 410 UB 59.7, the drafter types `410UB59` in SBEAM and the list goes blank. Typing `460UB75` also finds nothing. A Lysaght name such as `Z15019` finds nothing; the list calls it `ZC150`, which does not carry the 1.9 mm thickness. Decimals and rounded names in general are BUG-818 and the 22 Oct audit.
+
+**Expected behaviour:** Accept depth + family + mass within 0.5 kg/m (`410UB59`, `410UB60` and `410UB59.7` all find 410UB59.7) and the Lysaght Z/C + depth + thickness names, when the BUG-818 list goes in.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 2; `Assets/Config/section-catalogue.json:88,432`, `SbeamSelectionPlanner.cs:225-241`, `CeMemberPrompts.cs:101`, `Services/ExcelMTextService.cs:283-293`. Existing: none for the truncated spellings and purlin names (BUG-818 is the rounded names). Fix kind: code with BUG-818.
+
+**Test that catches it:** unit case: `410UB59`, `460UB75` and `Z15019` each resolve to a section.
+
+**Steps to confirm in AutoCAD:** SBEAM, search 410UB59. Right looks like: the 410UB59.7 section is listed.
+
+**Status:** OPEN
+
+## BUG-1123 — Since 1.0.122, UB and UC rows in the office MEMBERS.csv are never applied
+
+**Command / Area:** XCLMTXT office spelling list, Structural 1.0.122 (T3 finding 3). MEDIUM if the office file has UB/UC rows, otherwise none. SURE about the code path, UNSURE about the file contents (outside the repo, not opened).
+
+**Symptom:** The new decimals fix locks every UB/UC size before the office spelling list runs, then unlocks after. A row such as `250UB26` to `250 UB 25.7` written to correct a common typo is skipped without a word: XCLMTXT prints `250 UB 26`. Before 1.0.122 the row was used.
+
+**Expected behaviour:** Run the office list first and lock the sizes afterwards, or lock only sizes the office list does not name. Then check the real MEMBERS.csv for UB/UC rows.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 3; `Services/ExcelMTextService.cs:5733,5736-5765,~5877`. Existing: none (grepped MEMBERS.csv). Fix kind: code plus a look at the office file.
+
+**Test that catches it:** unit case: an office row for a UB size is applied.
+
+**Steps to confirm in AutoCAD:** if the office MEMBERS.csv has a UB row, XCLMTXT a cell using the left-hand spelling. Right looks like: the right-hand spelling is printed.
+
+**Status:** OPEN
+
+## BUG-1124 — CEMEMBER always stands an unequal angle on its long leg
+
+**Command / Area:** CEMEMBER (UA unequal angles), Structural 1.0.122 (T3 finding 4). MEDIUM, SURE; needs Tim's word (the card defines upright and flat legs but never which UA leg may be upright, so this is a gap, not a decision).
+
+**Symptom:** A 150 x 90 x 10 UA shelf angle under brickwork with the 90 leg up and the 150 leg flat cannot be drawn. The side elevation is always 150 deep and the section always shows the 150 leg standing. The only way is to draw it wrong and ROTATE it, losing the base-point choice.
+
+**Expected behaviour:** For UA only, one more question "Upright leg [Long/Short] <Long>" (recommended); lintels stay as today by default.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 4; `Structural.DesignCore/SteelSections/CeMemberCatalogue.cs:96-99`, `CeMemberPrompts.cs`; decisions/2026-10-18_CEMEMBER_DESIGN.md E1.4. Existing: none. Fix kind: code after Tim's word.
+
+**Test that catches it:** case: a 150x90x10 UA with the short leg upright draws a 90 mm-deep elevation.
+
+**Steps to confirm in AutoCAD:** CEMEMBER a 150x90x10 UA and look for the leg question. Right looks like: you can choose the 90 leg up.
+
+**Status:** OPEN
+
+## BUG-1125 — CEMEMBER cannot draw an RHS laid on its flat
+
+**Command / Area:** CEMEMBER (RHS orientation), Structural 1.0.122 (T3 finding 5). LOW, SURE; a question for Tim (he confirmed "SHS, RHS, CHS, one orientation" on 18 Oct, so not a bug until he says so).
+
+**Symptom:** A 150 x 50 RHS lintel or purlin laid flat has a side elevation 150 deep instead of 50, because RHS is always "depth standing vertical" and gets no orientation question.
+
+**Expected behaviour:** Offer "Standing/Flat" for RHS only (recommended).
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 5; `CeMemberElevation.cs:86`. Existing: none. Fix kind: code after Tim's word.
+
+**Test that catches it:** case: 150x50 RHS flat gives a 50 mm elevation.
+
+**Steps to confirm in AutoCAD:** CEMEMBER a 150x50 RHS and look for a Standing/Flat choice.
+
+**Status:** OPEN
+
+## BUG-1126 — The SBEAM window shows small section properties rounded to one decimal place
+
+**Command / Area:** SBEAM section picker window, Structural 1.0.122 (T3 finding 6). LOW, SURE (display only; the stored record keeps the full figure).
+
+**Symptom:** 40 x 40 x 3 EA shows Ix 0 (list value 0.04); 50 x 50 x 3 EA shows 0.1 (list 0.08); 75 PFC shows Iy 0.1 (list 0.14, 29 per cent off); a 1.12 kg/m angle shows 1.1 kg/m.
+
+**Expected behaviour:** Three significant figures.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 6; `UI/Dialogs/SteelSectionPickerDialog.xaml.cs:651-652`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: FormatDim(0.04) is not "0".
+
+**Steps to confirm in AutoCAD:** SBEAM, pick 40 x 40 x 3 EA. Right looks like: Ix reads 0.04.
+
+**Status:** OPEN
+
+## BUG-1127 — The angle toe radius is drawn on the wrong corner of each leg tip
+
+**Command / Area:** SBEAM and CEMEMBER angle sections (EA, UA), Structural 1.0.122 (T3 finding 7). LOW, SURE about what the code draws (supplier drawings from memory, UNVERIFIED).
+
+**Symptom:** On a 100 x 100 x 10 EA, the 5 mm round is on the tip's back corner (in line with the heel) and the inside corner of the tip is sharp. Supplier drawings put the toe radius on the inside corner of the tip. 5 mm on a section drawn at 1:10 to 1:20.
+
+**Expected behaviour:** Outer tip corners sharp and the arc between the tip face and the inside face.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 7; `Services/StructuralDetailService.cs:235-275`. Existing: none (BUG-819 is angle thickness and welded radius). Fix kind: code.
+
+**Test that catches it:** geometry case: the toe arc sits on the inside corner.
+
+**Steps to confirm in AutoCAD:** SBEAM a 100x100x10 EA and zoom to a tip. Right looks like: the round on the inside corner.
+
+**Status:** OPEN
+
+## BUG-1128 — XCLMTXT writes "PLATE" only when "PL" has a space after it
+
+**Command / Area:** XCLMTXT schedule text, Structural 1.0.122 (T3 finding 8). LOW, SURE.
+
+**Symptom:** `TOP PL & BOT PL` prints `TOP PLATE & BOT PL`; `250 x 16 PL` at the end of a cell stays `PL` while `250 x 16 PL WITH 4/M16` becomes `PLATE WITH`. One schedule then uses both words for the same thing.
+
+**Expected behaviour:** Replace the whole word PL (not followed by a digit) wherever it stands.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 8; `Services/ExcelMTextService.cs:5777-5778`. Existing: none (grepped XCLMTXT PLATE; BUG-974/1014 are other schedule faults). Fix kind: code.
+
+**Test that catches it:** unit cases for PL at start, middle and end of a cell.
+
+**Steps to confirm in AutoCAD:** XCLMTXT a cell "TOP PL & BOT PL". Right looks like: TOP PLATE & BOT PLATE.
+
+**Status:** OPEN
+
+## BUG-1129 — BARWEIGHT and the bar schedule use two different bar mass tables
+
+**Command / Area:** BARWEIGHT and the bar schedule, Structural 1.0.122 (T3 finding 9). LOW (0.1 to 0.2 per cent, but a quantity check will not tie), SURE.
+
+**Symptom:** 100 N20 bars x 6.0 m: BARWEIGHT 600 x 2.47 = 1482.0 kg; bar schedule 600 x 2.466 = 1479.6 kg. 50 N16 x 12 m: 948.0 against 946.8 kg. N40, R6 and R10 get a mass from BARWEIGHT but UNKNOWN on the bar schedule (catalogue has N10 to N36 only).
+
+**Expected behaviour:** One table (design rule 1): BARWEIGHT reads rebar-catalogue.json.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 9; `Services/StandardsService.cs:78-89`, `RebarService.cs:32-38`, `Assets/Config/rebar-catalogue.json:5-12`, `ReoBarService.cs:849-852`. Existing: none (grepped BARWEIGHT; only an undo note). Fix kind: code.
+
+**Test that catches it:** unit case: both routes give 1479.6 kg for 100 N20 at 6 m.
+
+**Steps to confirm in AutoCAD:** BARWEIGHT 100 N20 at 6 m, then add the same bars to a bar schedule. Right looks like: the same kg.
+
+**Status:** OPEN
+
+## BUG-1130 — 250UC89.5 is drawn with square corners; every other UC has fillets
+
+**Command / Area:** SBEAM / CEMEMBER section drawing, Structural 1.0.122 (T3 finding 10). LOW, SURE (real radius about 13 mm, from memory, UNVERIFIED).
+
+**Symptom:** 250UC90 has no root radius so a missing radius is drawn as 0: sharp web-to-flange corners beside a 250UC73 with 13 mm fillets. (400WC328 also has none, which happens to be right for a welded section; BUG-819.)
+
+**Expected behaviour:** Add the radius with the BUG-818 list.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 10; `Assets/Config/section-catalogue.json:432`, `SectionDatabaseService.cs:283-286`. Existing: none. Fix kind: data.
+
+**Test that catches it:** data check that every UC row has a root radius.
+
+**Steps to confirm in AutoCAD:** SBEAM 250UC90 and 250UC73 side by side. Right looks like: fillets on both.
+
+**Status:** OPEN
+
+## BUG-1131 — SBEAM "Estimated weight" takes a length typed in millimetres as metres
+
+**Command / Area:** SBEAM section picker, Structural 1.0.122 (T3 finding 11). LOW, SURE.
+
+**Symptom:** The box says "Optional member length (m)". Type 6000 (the drafter's usual millimetres) for a 310UB32 and the window says 192000 kg. No sense check. The weight is not stored on the drawing.
+
+**Expected behaviour:** Any length over 100 is read as millimetres, with the unit shown beside the result.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 11; `UI/Dialogs/SteelSectionPickerDialog.xaml:145`, `SbeamSelectionPlanner.cs:123-137`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: 6000 for a 310UB32 gives 192 kg.
+
+**Steps to confirm in AutoCAD:** SBEAM, pick 310UB32, type 6000 in the length. Right looks like: 192 kg.
+
+**Status:** OPEN
+
+## BUG-1132 — Placed members will not find their section once the list gets supplier names
+
+**Command / Area:** CEMEMBER edit / SBEAMEDIT (latent), Structural 1.0.122 (T3 finding 12). LOW today, MEDIUM the day the list changes, SURE by reading.
+
+**Symptom:** After BUG-818 renames `310UB32` to `310UB32.0`, grip-editing an existing CEMEMBER beam says "310UB32 is not in the section list, so the member cannot be redrawn. Nothing changed." Lookup is exact name match (spaces and case only). No live caller yet; SBEAMEDIT has the same exposure (22 Oct audit finding 14).
+
+**Expected behaviour:** The new list carries an "old names" field and the lookup accepts it.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 12; `CeMemberReplanner.cs:45-52,126-130`. Existing: none. Fix kind: code with BUG-818.
+
+**Test that catches it:** case: a beam placed with the old name is found after the rename.
+
+**Steps to confirm in AutoCAD:** after BUG-818, edit a beam placed before it. Right looks like: it redraws, no "not in the section list".
+
+**Status:** OPEN
+
+## BUG-1133 — The new XCLMTXT angle rule only works when the angle symbol comes straight after the size
+
+**Command / Area:** XCLMTXT angle symbols, Structural 1.0.122 (T3 finding 13). LOW, UNSURE (not known whether any sheet puts the symbol elsewhere).
+
+**Symptom:** The old code replaced every angle symbol in the cell. The new rule (1.0.122) only handles the symbol after the size, so a cell written `L ]L 150x90x10` or `150x90x10 GALV L ]L` prints the raw characters `L ]L` on the schedule.
+
+**Expected behaviour:** After the size rule, replace any angle symbol left over with EA or UA from the nearest size, or leave a plain warning line.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 13; `Services/ExcelMTextService.cs:5792-5814`. Existing: none (AUDIT-XCLMTXT-ANGLES is the rule itself). Fix kind: code.
+
+**Test that catches it:** case: a cell with the symbol before the size is converted.
+
+**Steps to confirm in AutoCAD:** XCLMTXT a cell `150x90x10 GALV` with the Excel angle symbol after GALV. Right looks like: UA written, no raw symbol characters.
+
+**Status:** OPEN
+
+## BUG-1134 — CSMEMBERSCHED treats "310UB32" and "310 UB 32" as two sizes
+
+**Command / Area:** CSMEMBERSCHED (switched off by default: Settings MemberSchedule.Enabled), Structural 1.0.122 (T3 finding 14). LOW, SURE.
+
+**Symptom:** Sizes are compared as typed, case only. Two FB3 beams, one labelled by SBEAM `310UB32`, one typed `310 UB 32`, give "FB3 Unknown, drawn with different sizes".
+
+**Expected behaviour:** Compare sizes with spaces removed and `x` treated the same in any case.
+
+**Reference:** TEAM_AUDIT_T3_24OCT.md finding 14; `Core/Schedules/MemberScheduleFromPlan.cs:216-227`. Existing: none. Fix kind: code.
+
+**Test that catches it:** unit case: the two spellings count as one size.
+
+**Steps to confirm in AutoCAD:** with the schedule switched on, two FB3 beams labelled both ways. Right looks like: FB3 310 UB 32, no "different sizes".
+
+**Status:** OPEN
+
+## BUG-1135 — An older CE silently deletes newer parts of the job record, and the "newer CE" warning can never fire
+
+**Command / Area:** Civil job record (ProjectData) save, Civil 3.0.72 and earlier builds (Opus Team audit T4-01, 24 Oct 2026). HIGH, SURE.
+
+**Symptom:** The job record has no catch-all for unknown fields (pits and pipes do). The version marker has read "2.2" since 25 Aug, while fields added since (held-back plan labels 2 Oct, IgnoredChecks 9 Oct, PausedFeatures 9 Oct, Project Review approvals 27 Sep) never raised it. The save writes the whole record from the building build's own field list, and normalising stamps the version back to "2.2", so even a later bump shows once and is erased. On a job: Tim ignores three CDCHECKS cover findings and approves the review on 3.0.72; a colleague on an older 3.0.6x build changes one pit's lid type and saves; back on Tim's PC the findings are back, the approval is gone and held-back labels are forgotten. Nobody is told.
+
+**Expected behaviour:** Catch-all for unknown fields on the job record and its nested lists; bump the marker whenever a field is added; never write a lower version over a higher one; hold the save as BUG-971 intends.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-01; `Models/ProjectData.cs:10`, `Services/ProjectDataStorageContract.cs:12`, `ProjectDataService.Persistence.cs:597-609,1121-1124`, `ProjectDataService.Mutations.cs:1967`. Existing: none (BUG-971 is a record that cannot be read; here it reads and still loses data). Fix kind: code. Protected: no. Lane: Opus.
+
+**Test that catches it:** round-trip case: a record with IgnoredChecks written by the new build, loaded and saved by a build that does not know the field, still holds it.
+
+**Steps to confirm in AutoCAD:** on a test copy ignore a CDCHECKS finding on 3.0.72, save, open and save from the older 3.0.6x build, reopen on 3.0.72. Right looks like: the ignored finding is still ignored.
+
+**Status:** OPEN
+
+## BUG-1136 — Structural: a damaged footing register is read as empty, then saved over by the next footing command
+
+**Command / Area:** THC / PFC footing register, Structural 1.0.122 (T4-02). HIGH, SURE (code path).
+
+**Symptom:** Any failure to read the register becomes "no footings"; that empty register is cached and written back by any of the 17 save callers. On a slab plan with 40 pad footings whose register is damaged (see BUG-1154), the next THC places footing 41; footings 1 to 40 stay on screen but no longer follow edits and drop out of the footing schedule. No message.
+
+**Expected behaviour:** Keep "no register" separate from "unreadable register"; when unreadable, refuse every footing save with one plain line and leave the stored register untouched.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-02; `Services/FoundationRegistryService.cs:336-339,409,30`, `FoundationService.cs:1270`. Existing: none (BUG-971 / CODEX_HUNT_RECORDS R-02 are the Civil version). Fix kind: code.
+
+**Test that catches it:** case: a corrupt register causes the next save to be refused and leaves the bytes unchanged.
+
+**Steps to confirm in AutoCAD:** test copy with 40 footings, corrupt the register in a copy, run THC. Right looks like: a refusal line and the original register intact.
+
+**Status:** OPEN
+
+## BUG-1137 — On AutoCAD 2022-2024, one downpipe in a COPY cancels the copy clean-up for every pit and pipe in that copy
+
+**Command / Area:** COPY of pits, pipes and downpipes on the older lane, Civil 3.0.72 (T4-03). HIGH, SURE in code (MIRROR case UNSURE).
+
+**Symptom:** Every copied downpipe goes through the same single write as the pits and pipes, and that routine throws when AutoCAD's copy map is missing (only the 2027 build has it) or the copy is rotated or scaled. The whole write is caught and logged as "inner pass failed"; nothing is committed. On 2022-2024: COPY P1-P6 with their pipes and DP1; every copied pit keeps its original's number, has no schedule row and still claims the original's labels (the BUG-665 symptoms) and the "levels to check" line never prints. On 2027 the same happens if the downpipe's label layer is locked.
+
+**Expected behaviour:** Check each downpipe before the shared write, leave out the ones that would fail with one plain line, and do not let one downpipe abort the pits and pipes.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-03; `Services/LinkService.Utilities.cs:340,529-531`, `LinkService.SpineClones.cs:24-34`, `SourceCloneMapNativeBridge.cs`. Existing: none (BUG-665 and BUG-1070 are the twin clean-up; this is its failure on the older lane). Fix kind: code.
+
+**Test that catches it:** case: a copy set with one downpipe and no copy map still renumbers the pits and pipes.
+
+**Steps to confirm in AutoCAD:** AutoCAD 2024 test copy, COPY P1-P6, their pipes and DP1 together. Right looks like: each copy gets a new pit number and schedule row.
+
+**Status:** OPEN
+
+## BUG-1138 — On a PC without the CE pipe-object enabler, CDSYNC and every relink empty all pits' pipe lists
+
+**Command / Area:** CDSYNC, CDREBUILDLINKS, Pit Schedule relink, CDUPGRADE on a PC without the pipe-object add-on, Civil 3.0.72 (T4-04). MEDIUM, SURE.
+
+**Symptom:** Every pit gets its pipe list cleared but only polyline pipes are registered back; without the enabler CE pipe objects are proxy objects, not polylines. CDSYNC on AutoCAD 2024 reports "Pits relinked: 40, Pipes relinked: 3" and says nothing about the 50 CE pipes it skipped. Back on 2027, moving a pit leaves those pipes behind until someone runs CDSYNC. The pipes' own records survive, so it can be repaired, but nobody is told.
+
+**Expected behaviour:** A shared check that sees CE pipe proxies; these commands then refuse with one plain line, and a one-line notice appears at open.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-04; `Commands/LinkCommands.cs:154-172`, `LinkService.Registration.cs:561`, `LinkService.RepairAudit.Relink.cs:502,526`, `ProjectDataService.cs:852`. Existing: none (grepped enabler). Fix kind: code.
+
+**Test that catches it:** case: with a proxy pipe present, CDSYNC refuses and leaves every pit's pipe list unchanged.
+
+**Steps to confirm in AutoCAD:** open a 3.0.72 drawing with CE pipe objects on a PC without the enabler and run CDSYNC. Right looks like: a refusal naming the pipes it cannot handle.
+
+**Status:** OPEN
+
+## BUG-1139 — Structural: placing a column at the end of a natively COPYed beam makes the copy take over the original beam's links
+
+**Command / Area:** C1 / C2 / DS support placement, Structural 1.0.122 (T4-05). MEDIUM, SURE (label movement UNSURE).
+
+**Symptom:** RegisterBeam keeps the original's attachments and only renames the owner. COPY beam B3 to the next bay, then place a column under the copy: the copy now "owns" B3's label and B3's other column, so a later "beams follow" edit can plan B3's label as the copy's and moving the copy may drag B3's label across.
+
+**Expected behaviour:** Treat a record whose stored owner is a different beam as a copy and start it empty.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-05; `Services/BeamLinkService.cs:74-82,419`, `Commands/SupportBlockCommands.cs:410`, `ConnectedFollowApply.cs:349`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: register a beam copy and assert the original's label and column are not in its record.
+
+**Steps to confirm in AutoCAD:** test copy: COPY beam B3, place a column under the copy, move the copy. Right looks like: B3's label stays with B3.
+
+**Status:** OPEN
+
+## BUG-1140 — A pasted downpipe keeps a link to the original's label, so MOVE or CDREPAIR acts on the wrong object
+
+**Command / Area:** downpipe (DP) copy and paste, CDREPAIR, MOVE, Civil 3.0.72 (T4-06). MEDIUM, mostly SURE (the MOVE trigger is UNSURE).
+
+**Symptom:** Label and hitbox links are plain handle text, and the lookup accepts whatever object has that handle without checking type or owner. Ctrl+C / Ctrl+V of DP1 gives two DP1s; running CDREPAIR (as CE advises after a paste) moves ownership of the original DP1 text to the pasted copy. Pasted from another job, the stored handle can name any object in this drawing and MOVE of the downpipe moves that object.
+
+**Expected behaviour:** Accept a label only if it is text or a circle whose owner note names this downpipe; never overwrite an owner note that names another live downpipe.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-06; `Services/SourceTagService.cs:781-830,858,922`, `LinkService.Utilities.cs:676-688,1335-1339`, `RepairAudit.Relink.cs:169`, `LinkService.SourceMoves.cs:112-162`. Existing: none (BUG-1070 is a different clean-up). Fix kind: code.
+
+**Test that catches it:** case: a pasted downpipe's label link is rejected when the owner note names another downpipe.
+
+**Steps to confirm in AutoCAD:** test copy: Ctrl+C / Ctrl+V DP1, run CDREPAIR. Right looks like: DP1's label stays with the original.
+
+**Status:** OPEN
+
+## BUG-1141 — One unreadable pit record stops CE remembering any pit's links after open or Undo
+
+**Command / Area:** open / U link memory (cache rebuild), Civil 3.0.72 (T4-07). MEDIUM, SURE.
+
+**Symptom:** The pit-record reader throws on bad JSON with no catch; the cache rebuild clears all link memory first, then scans pits with no per-pit catch, and the pipe scan aborts the same way. After opening the drawing (or pressing U) with one damaged pit record (for example from a truncated DXF, see BUG-1154), MOVE of most pits no longer drags their pipes. Nothing appears on the command line.
+
+**Expected behaviour:** Catch per object in the three scans, skip the bad record and print one plain line naming the pit.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-07; `Services/LinkService.Persistence.cs:759`, `LinkService.Cache.cs:527-555,574,744,876-888`. Existing: none (BUG-971 is the job record). Fix kind: code.
+
+**Test that catches it:** case: one corrupt pit record among ten still lets the other nine link, with one named warning.
+
+**Steps to confirm in AutoCAD:** test copy with one pit record damaged, reopen, MOVE a good pit. Right looks like: its pipes follow and one line names the bad pit.
+
+**Status:** OPEN
+
+## BUG-1142 — One unreadable pit record stops new pipes linking to any pit, while the pipe looks saved
+
+**Command / Area:** pipe drawing and Edit Pipe save, Civil 3.0.72 (T4-08). MEDIUM, SURE.
+
+**Symptom:** RemovePipeLinksFromAllOwners reads every pit's record; one bad record aborts LinkPipeEndpointsToPits. RegisterPipe has already saved the pipe's own record in a separate transaction and only logs the failure. New CD pipes and Edit Pipe saves look normal; later moving the pit leaves those pipes behind.
+
+**Expected behaviour:** Skip and name unreadable records during the scan; do not half-register a pipe.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-08; `Services/LinkService.Geometry.cs:1507-1515`, `LinkService.RepairAudit.Linking.cs:297-398`, `LinkService.Registration.cs:578-624`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: with one corrupt pit record, a new pipe still links to its two good pits.
+
+**Steps to confirm in AutoCAD:** test copy with one damaged pit record, draw a pipe between two good pits, move one pit. Right looks like: the pipe follows.
+
+**Status:** OPEN
+
+## BUG-1143 — A damaged Design draft is replaced by the next Save Draft, losing the agreed design for good
+
+**Command / Area:** CDDESIGN draft storage, Civil 3.0.72 (T4-09). MEDIUM, SURE.
+
+**Symptom:** Any read error returns nothing; CDDESIGN prints "could not be read. Starting a fresh draft." (reads as harmless). Save Draft or Confirm setup then overwrites the same stored record, so the agreed outlet, head and detention answers are replaced by a blank draft with no further warning.
+
+**Expected behaviour:** While the draft is unreadable, copy the old record to a backup key before any save, or ask before overwriting.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-09; `Services/CivilProjectStartDraftStorage.cs:36-41,88-99`, `Commands/CivilDesignCommand.cs:51-52,226,233`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: unreadable draft, Save Draft, the old bytes are kept under a backup key.
+
+**Steps to confirm in AutoCAD:** test copy with a damaged draft, open CDDESIGN, Save Draft. Right looks like: a backup is kept or you are asked first.
+
+**Status:** OPEN
+
+## BUG-1144 — A damaged outlet-roles record quietly switches off the redesign outlet check, and Apply then overwrites it
+
+**Command / Area:** network redesign Apply, Civil 3.0.72 (T4-10). MEDIUM, SURE.
+
+**Symptom:** The reader returns nothing on bad JSON and the Apply check is skipped with `if (stored == null) return;`; Apply always rewrites the record. Redesign Apply runs without the "outlets do not match the last saved outlet roles" protection, and the evidence that something was wrong is overwritten. No message.
+
+**Expected behaviour:** Read as missing / readable / damaged, and block Apply with a plain line when the record is damaged.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-10; `Services/NetworkRedesignOutletRoleService.cs:44-62`, `NetworkRedesignApplyTicketService.cs:873-875`, `NetworkRedesignApplyCoordinator.cs:203-206`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: damaged outlet record, Apply is blocked with a line.
+
+**Steps to confirm in AutoCAD:** test copy with a damaged outlet-roles record, redesign Apply. Right looks like: Apply refuses with a plain line.
+
+**Status:** OPEN
+
+## BUG-1145 — An Xref'd Pit Schedule shows "OUT OF DATE" and fails Project QA when nothing on the schedule changed
+
+**Command / Area:** Pit Schedule status and Project QA, Civil 3.0.72 (T4-11). MEDIUM, SURE.
+
+**Symptom:** The fingerprint covers the whole job record (only the drawing path is removed), including ignored checks, paused features, the CDCALC draft, review approvals and the rainfall curve, none of which appear on the schedule. In the stage drawing, ignore one CDCHECKS finding or save a CDCALC draft: the sheet that Xrefs it says "Civil data changed in ...", and final QA fails although no pit or pipe changed.
+
+**Expected behaviour:** Fingerprint only what the schedule uses (pits, pipes, manual rows, outlet overrides, row order).
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-11; `Services/ProjectDataFingerprintService.cs:17-38`, `PitScheduleStatusService.cs:141-147,185`, `PitScheduleQaService.cs:309-315`, `ViewModels/PitScheduleViewModel.Data.cs:246-248,1455`. Existing: none (BUG-799 is unloaded Xrefs). Fix kind: code.
+
+**Test that catches it:** case: ignore a finding, the schedule fingerprint is unchanged.
+
+**Steps to confirm in AutoCAD:** stage drawing Xref'd into a sheet with a placed schedule; ignore a CDCHECKS finding in the stage drawing; reload the sheet. Right looks like: the schedule is still "up to date".
+
+**Status:** OPEN
+
+## BUG-1146 — Structural: two new drawings from the same template share one footing-size memory
+
+**Command / Area:** THCL / footing-size library, Structural 1.0.122 (T4-12). MEDIUM, SURE on code (template-name behaviour comes from the repo's own comment).
+
+**Symptom:** The cache is keyed on the file name; two new drawings from one template report the same name (the footing register was moved off this key on 1 Oct, this cache was not). Drawing1: THCL size 81 = 600x600. Drawing2, new from the same template: THCL 81 silently reuses 600x600, and the next new size writes Drawing1's whole list into Drawing2. Related: RD18-01 (BUG-1199) is the same cache for Undo and close.
+
+**Expected behaviour:** Key the cache by the drawing's native pointer, as FoundationRegistryMemory does.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-12; `Services/CeTextService.cs:5574-5583`, `FoundationRegistryService.cs:19-20`. Existing: none. Fix kind: code with BUG-1199.
+
+**Test that catches it:** case: two documents with the same file name keep separate size memories.
+
+**Steps to confirm in AutoCAD:** two new drawings from one template: THCL 81 as 600x600 in the first; in the second type THCL 81. Right looks like: the second asks for the size.
+
+**Status:** OPEN
+
+## BUG-1147 — Older Structural builds strip newer footing and beam data, with no "newer drawing" refusal
+
+**Command / Area:** footing register, beam links, footing-size library, Structural 1.0.122 and earlier (T4-13). MEDIUM, SURE.
+
+**Symptom:** The footing register checks only for "too old"; FoundationRegistryData has no catch-all for unknown fields; BeamLinkData has no version at all; the footing-size library writes a SCHEMA_VERSION that is never read. CSPOINTLOAD and level carry do refuse newer records. A colleague on an older Structural build silently strips newer data, as BUG-1135 on the Structural side.
+
+**Expected behaviour:** Catch-all for unknown fields, and refuse to save over a newer version.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-13; `Services/FoundationRegistryService.cs:347`, `Models/FoundationModels.cs:227-250`, `BeamLinkPersistenceCodec.cs:24`, `FstMemoryService.cs:115`. Existing: none. Fix kind: code.
+
+**Test that catches it:** round-trip case with an unknown field on each record type.
+
+**Steps to confirm in AutoCAD:** none practical until a newer field exists; confirm by the round-trip case.
+
+**Status:** OPEN
+
+## BUG-1148 — Pasting a pit from a "Save As" sister drawing gives it this drawing's pit values
+
+**Command / Area:** paste of pits between Save As sister drawings, Civil 3.0.72 (T4-14). MEDIUM, SURE logic (how often it happens is UNSURE).
+
+**Symptom:** A paste counts as "made here" when the named handle belongs to a pit here with the same identity, or when neither has one; the row then comes from the local pit and labels are copied from whatever sits at the stored handles. Stage 2 was made by Save As of Stage 1; pasting Stage 2's P4 into Stage 1 gives it Stage 1's P4 size, type and levels, and extra labels can appear beside it.
+
+**Expected behaviour:** When the copy map says "from another drawing", require a matching, non-blank identity before treating the paste as local; copy only labels whose owner note names the source pit.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-14; `Rules/CloneOriginRule.cs:81-103`, `ProjectDataService.Mutations.cs:462-475`, `LinkService.CloneRegeneration.cs:227-341`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a paste from a Save As sister keeps the source pit's own values.
+
+**Steps to confirm in AutoCAD:** Save As Stage 1 to Stage 2, change P4 in Stage 2, copy it into Stage 1. Right looks like: the pasted pit carries Stage 2's values.
+
+**Status:** OPEN
+
+## BUG-1149 — After BIND of a CE Xref, the placed schedule says "SOURCE MISSING" and QA fails permanently
+
+**Command / Area:** Pit Schedule status and QA after Xref BIND, Civil 3.0.72 (T4-15). MEDIUM, code SURE (AutoCAD's Xref list after BIND UNSURE).
+
+**Symptom:** Status matches the stored drawing identity, then only unloaded paths; line 165 shows "could not be found" and QA gives a permanent Fail. Binding Xrefs to issue a set makes final QA fail although the data is now inside the drawing.
+
+**Expected behaviour:** Recognise a bound source and show "source bound, schedule frozen".
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-15; `Services/PitScheduleStatusService.cs:89-110,165`, `PitScheduleQaService.cs:297-307`. Existing: none (BUG-799 is unloaded Xrefs only). Fix kind: code.
+
+**Test that catches it:** case: a bound source yields "frozen", not Fail.
+
+**Steps to confirm in AutoCAD:** sheet with a placed schedule from an Xref'd stage drawing; XREF BIND the stage; reopen Pit Schedule. Right looks like: "source bound" and QA passes.
+
+**Status:** OPEN
+
+## BUG-1150 — CE network pasted into a new drawing goes "quiet" after reopening: pits move without their pipes
+
+**Command / Area:** paste into a new base drawing, then save, close and reopen, Civil 3.0.72 (T4-16). MEDIUM, SURE on code.
+
+**Symptom:** At open, Civil is switched on only if the drawing is tagged Civil, its file name carries the Civil token, or the job record has content (HasCivilContent hard-codes ceObjectPresent false). A paste gives each pit its own identity but no record and advises CDREPAIR, wakes Civil for the session only and writes no tag. Paste the network into a new base "Lot 12.dwg", skip CDREPAIR, save and reopen: MOVE of P3 leaves its pipes, labels and cover text behind and the pit's stored links go stale. Quiet mode only writes a log line.
+
+**Expected behaviour:** HasCivilContent counts CE pit and pipe records in model space, or the drawing is tagged Civil when a paste wakes Civil.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-16; `Services/LinkService.cs:1603-1617`, `ProjectDataService.Persistence.cs:706-707`, `LinkService.ForeignClones.cs:462`, `LinkService.Reactors.cs:96-98`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a drawing with CE pit records and no tag still wakes Civil on open.
+
+**Steps to confirm in AutoCAD:** paste a network into a new drawing, save, close, reopen, MOVE a pit. Right looks like: pipes and labels follow.
+
+**Status:** OPEN
+
+## BUG-1151 — On 2022-2024, moving a pit leaves CE pipe-object ends behind with no message
+
+**Command / Area:** MOVE of a pit with CE pipe objects on a PC without the enabler, Civil 3.0.72 (T4-17). MEDIUM, CE side SURE (AutoCAD's proxy MOVE UNSURE).
+
+**Symptom:** OpenPipeForShapeChange returns nothing for a proxy and the loop skips it. Unlike the locked-layer case, nothing is named. The pit moves and the pipe stays put, with no explanation.
+
+**Expected behaviour:** Use the same proxy check as BUG-1138 and name the pipes that could not follow.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-17; `Services/LinkService.PipeWriteSeam.cs:31-49`, `PitMoves.cs:157-158`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a proxy pipe at a moved pit is named in the output.
+
+**Steps to confirm in AutoCAD:** AutoCAD 2024 without the enabler, MOVE a pit with a CE pipe object. Right looks like: a line naming the pipe that did not follow.
+
+**Status:** OPEN
+
+## BUG-1152 — Twin detention pipes can be left half-upgraded when the pipe-object upgrade is refused
+
+**Command / Area:** detention twin pipes, pipe-object upgrade on open, Civil 3.0.72 (T4-18). MEDIUM, SURE on the order (aftermath UNSURE).
+
+**Symptom:** The barrel-to-centreline rewrite is committed before UpgradePipeInPlace, and DetentionCenterlineRoot is set only on success. After a refused upgrade the twin pipe's main line has become the centreline but its record still calls it a barrel; the next redraw may place the barrels wrongly.
+
+**Expected behaviour:** Do both steps in one transaction, or put the old vertices back on refusal.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-18; `Services/LinkService.PipeObjectUpgrade.cs:142-151,160-164,282-299,325-329`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a refused upgrade leaves the vertices as before.
+
+**Steps to confirm in AutoCAD:** twin detention pipe drawing opened on a PC where the upgrade is refused. Right looks like: geometry unchanged.
+
+**Status:** OPEN
+
+## BUG-1153 — The fixed-outlet (CDLPD) protection in Redesign is skipped when the LPD record cannot be read as exactly one outlet
+
+**Command / Area:** network redesign Apply, CDLPD fixed outlet, Civil 3.0.72 (T4-19). MEDIUM, UNSURE (not proven the outlet level actually moves; the pit may still be protected another way).
+
+**Symptom:** The reader ignores the result of TryGetLpdData and the "existing CDLPD is Fixed" check runs only `if (lpd != null)`.
+
+**Expected behaviour:** Treat "LPD record present but not complete" as a reason to block Apply.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-19; `Services/NetworkRedesignCurrentDrawingReader.cs:868-871`, `NetworkRedesignApplyTicketService.cs:829-830`. Existing: none. Fix kind: code after a check.
+
+**Test that catches it:** case: an incomplete LPD record blocks Apply.
+
+**Steps to confirm in AutoCAD:** test copy with an incomplete CDLPD record, redesign Apply. Right looks like: Apply blocked with a plain line.
+
+**Status:** OPEN
+
+## BUG-1154 — Some large records are saved as one long text value, unlike the rest of CE
+
+**Command / Area:** Structural footing register, footing-size lists, schedule map; Civil CDPROFILE section metadata (DXFOUT / older DWG), 1.0.122 / 3.0.72 (T4-20). MEDIUM, UNSURE (whether AutoCAD cuts or splits long Xrecord strings through DXFOUT/DXFIN or older DWG formats is untested).
+
+**Symptom:** CE's own Civil job record splits at 255 characters ("DXF Text values have a 255 character limit"); these records do not. If AutoCAD cuts them, a large job's footing register comes back unreadable (which feeds BUG-1136 and wipes it) and a long section reads "not a CE longitudinal section block".
+
+**Expected behaviour:** Use the existing 255-character splitter for these records.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-20; `FoundationRegistryService.cs:409`, `FstMemoryService.cs:173`, `ScheduleService.cs:677,807`, `Services/LongitudinalSectionService.cs:3218,3274,3325`, `ProjectDataService.Persistence.cs:1294`. Existing: none. Fix kind: code after a native check.
+
+**Test that catches it:** case: a 5,000-character footing register survives DXFOUT and DXFIN.
+
+**Steps to confirm in AutoCAD:** drawing with 40 footings, DXFOUT, DXFIN into a new drawing. Right looks like: all 40 footings still in the register.
+
+**Status:** OPEN
+
+## BUG-1155 — A loaded Xref whose source was rebuilt is reported "SOURCE MISSING"
+
+**Command / Area:** Pit Schedule Xref discovery and QA, Civil 3.0.72 (T4-21). MEDIUM, UNSURE (AutoCAD behaviour).
+
+**Symptom:** Matching is on the drawing's internal identity; only unloaded Xrefs fall back to the path. If the source is recreated (for example WBLOCK *) it gets a new identity; the Xref is visibly loaded with the same pits yet QA fails.
+
+**Expected behaviour:** When a loaded Xref is at the stored path with a new identity, say "source drawing was recreated, re-place the schedule".
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-21; `Services/PitScheduleXrefDiscoveryService.cs:252`, `PitScheduleStatusService.cs:89-110`. Existing: none (BUG-799). Fix kind: code.
+
+**Test that catches it:** case: loaded Xref at the stored path with a new identity gives the recreated message.
+
+**Steps to confirm in AutoCAD:** WBLOCK * the stage drawing over its path, reload the sheet. Right looks like: "source recreated", not "missing".
+
+**Status:** OPEN
+
+## BUG-1156 — An older CE wipes newer agreed-design answers from the Design draft
+
+**Command / Area:** CDDESIGN Save Draft on an older build, Civil (T4-22). LOW, SURE (code).
+
+**Symptom:** The draft has no version and no catch-all, and CopyDraft rebuilds only the fields that build knows. The orifice head and "detention required" answers agreed on 3.0.72 disappear after a colleague on an older build presses Save Draft; back on 3.0.72 the check says "could not be checked".
+
+**Expected behaviour:** Add a catch-all for unknown fields and carry it through CopyDraft.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-22; `Services/CivilProjectStartDraftStorage.cs:53`, `CivilDesignWindowViewModel.cs:612-633`. Existing: none (see BUG-1135). Fix kind: code.
+
+**Test that catches it:** round-trip case with an unknown draft field.
+
+**Steps to confirm in AutoCAD:** none practical until a field exists; confirm by the round-trip case.
+
+**Status:** OPEN
+
+## BUG-1157 — Edit Pipe saves the level in a separate write that fails silently
+
+**Command / Area:** Edit Pipe (PIPEEDIT) save, Civil 3.0.72 (T4-23). LOW, SURE (only bites when the pipe record is unreadable).
+
+**Symptom:** StorePipeInverts catches everything and only logs. The schedule shows the new IL but the level stored on the pipe stays old; that stored level is what CE falls back to when the IL text is deleted.
+
+**Expected behaviour:** Return saved / not saved and print "not saved".
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-23; `Commands/PipeEditCommand.Update.cs:1873,1880,1888`, `Services/LinkService.Persistence.cs:257-299`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a failing write prints a "not saved" line.
+
+**Steps to confirm in AutoCAD:** pipe with a damaged record, Edit Pipe and change the IL. Right looks like: a "not saved" line.
+
+**Status:** OPEN
+
+## BUG-1158 — "Same drawing" checks use AutoCAD's drawing identity, which a Save As copy keeps
+
+**Command / Area:** CDLPD, multi-LPD authority, CDDESIGN approved outlets, Civil 3.0.72 (T4-24). LOW, UNSURE.
+
+**Symptom:** A new job started by Save As of an old one can load the old job's approved outlets as approved in CDDESIGN.
+
+**Expected behaviour:** Add the drawing path and a CE-written job identity to the check.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-24; `LpdCommand.cs:357`, `MultiLpdDrawingAuthorityReader.cs:135-145`, `CivilDesignCommand.cs:106-109`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a Save As copy does not inherit approved outlets.
+
+**Steps to confirm in AutoCAD:** Save As an approved job to a new name and open CDDESIGN. Right looks like: the outlets show as not yet approved.
+
+**Status:** OPEN
+
+## BUG-1159 — Structural: footing-size entries that do not match the expected pattern are dropped and erased on the next save
+
+**Command / Area:** footing-size library, Structural 1.0.122 (T4-25). LOW, SURE (code).
+
+**Symptom:** Entries that do not match the pattern are skipped (`catch { }`), and a list that is now empty is erased on the next save.
+
+**Expected behaviour:** If fewer entries read back than are stored, do not rewrite that list.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-25; `Services/FstMemoryService.cs:70,151-157,176-207`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: a stored list with one odd entry keeps it after a save.
+
+**Steps to confirm in AutoCAD:** none practical; confirm by the unit case.
+
+**Status:** OPEN
+
+## BUG-1160 — No drawing records which CE version last wrote it
+
+**Command / Area:** job record / discipline marker, Civil and Structural (T4-26). LOW, SURE.
+
+**Symptom:** The drawing stores only "CVL" or "STR", so BUG-1135 and BUG-1147 (an older build stripping newer data) cannot be detected or diagnosed afterwards.
+
+**Expected behaviour:** Store "last written by" and "highest version ever written" in the job record.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-26; `Services/DrawingDisciplineService.cs:21-24,441`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: saving writes both fields and a lower version never lowers the highest.
+
+**Steps to confirm in AutoCAD:** save a drawing on 3.0.72 and read the job record. Right looks like: both fields present.
+
+**Status:** OPEN
+
+## BUG-1161 — Moving or flipping a pipe label forgets its kept wording (for example "APPROX.")
+
+**Command / Area:** pipe label move / flip (CDTEXTSEG, label grips), Civil 3.0.72 (T4-27). LOW, SURE on the omission (visible effect UNSURE).
+
+**Symptom:** BuildAttachmentData copies every field except LinkedDisplayPrefix and LinkedDisplaySuffix (the split path does copy them).
+
+**Expected behaviour:** Copy both fields from the previous entry.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-27; `Services/LinkService.SegmentAnalysis.cs:259-281`, `Split.cs:2604`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: move a label with prefix "APPROX." and assert the prefix remains.
+
+**Steps to confirm in AutoCAD:** give a pipe label the wording "APPROX.", then move or flip it. Right looks like: the wording stays.
+
+**Status:** OPEN
+
+## BUG-1162 — CSPOINTLOAD deletes damaged load groups it says it "never repairs"
+
+**Command / Area:** CSPOINTLOAD (hidden, off by default), Structural 1.0.122 (T4-28). LOW, SURE.
+
+**Symptom:** Damaged groups are skipped, but only the readable loads are written back and SkippedGroups is never checked: earlier loads vanish and the new load is numbered P1 again.
+
+**Expected behaviour:** Refuse to save when any group was skipped.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-28; `Core/Roofs/RoofPointLoadMarkers.cs:108-150`, `PointLoadMarkerService.cs:208-209`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: with one damaged group a new load is refused and the old loads stay.
+
+**Steps to confirm in AutoCAD:** switch on the command on a test copy with one damaged group. Right looks like: a refusal, earlier loads still there.
+
+**Status:** OPEN
+
+## BUG-1163 — DXFOUT may leave out a CE record still waiting to be saved
+
+**Command / Area:** DXFOUT of a drawing with unsaved CE records, Civil 3.0.72 (T4-29). LOW, UNSURE (AutoCAD event).
+
+**Symptom:** Waiting records are written only on QSAVE, SAVE or SAVEAS, so a DXF export made before saving may omit them.
+
+**Expected behaviour:** Also write waiting records when a DXF export starts.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-29; `Services/LinkService.Reactors.cs:2173`, `LinkService.cs:1247`. Existing: none. Fix kind: code after a native check.
+
+**Test that catches it:** case: edit a pit, DXFOUT without saving, DXFIN, pit values present.
+
+**Steps to confirm in AutoCAD:** edit a pit, DXFOUT, DXFIN into a new drawing. Right looks like: the edit is in the DXF.
+
+**Status:** OPEN
+
+## BUG-1164 — On a PC set to comma decimals, Edit Pipe stores levels as typed ("18,14")
+
+**Command / Area:** Edit Pipe on a comma-decimal Windows region, Civil 3.0.72 (T4-30). LOW, SURE (Australian-region PCs not affected).
+
+**Symptom:** The raw text is stored; later readers treat it as missing and CDAUDIT reads it as 1814.
+
+**Expected behaviour:** Store the parsed number, written with a "." decimal point.
+
+**Reference:** TEAM_AUDIT_T4_24OCT.md T4-30; `Commands/PipeEditCommand.cs:574-578`, `PipeEditCommand.Update.cs:1775`, `RepairAudit.AuditPasses.cs:194-196`. Existing: none. Fix kind: code.
+
+**Test that catches it:** culture case: with a comma-decimal culture "18,14" is stored as 18.14.
+
+**Steps to confirm in AutoCAD:** PC with Windows region set to comma decimals, Edit Pipe and type 18,14. Right looks like: IL 18.14 on the pipe and in CDAUDIT.
+
+**Status:** OPEN
+
+## BUG-1165 — An old Civil bundle in the all-users folder supplies the pit blocks first
+
+**Command / Area:** PIT and fall-symbol block lookup on a hand-installed PC (9 Nov colleague install), Civil 3.0.72 (Opus Team audit T5 finding 1, 24 Oct 2026). MEDIUM, SURE.
+
+**Symptom:** The block search order is ProgramData first, then Program Files, then the user's own %APPDATA% copy. If Max once had Civil installed for all users by the old office installer, the hand copy cannot remove that copy without an administrator, and PIT drops the old office pit block and old fall symbols, not the 3.0.72 blocks. No warning; the pit just looks like last year's. The fallback `assemblyDir\Blocks` points at a folder that never exists, so a bundle copied anywhere else finds no blocks at all.
+
+**Expected behaviour:** Search the running bundle's own `Contents\Blocks` first (RuntimePathService.GetBundleRoot()). Until then an administrator checks and clears `C:\ProgramData\Autodesk\ApplicationPlugins` and `C:\Program Files\Autodesk\ApplicationPlugins` before 9 Nov.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 1; `Modules/Drainage/Services/BlockService.cs:101-109`. Existing: BUG-483 (stale ProgramData copies) is known; the block order is new. Fix kind: code. Protected: no.
+
+**Test that catches it:** case: a stale bundle in a fake ProgramData folder and a newer bundle in %APPDATA%; the newer block is the one inserted.
+
+**Steps to confirm in AutoCAD:** test PC with a marked old block in a fake all-users bundle and the new blocks in %APPDATA%; type PIT. Right looks like: the 3.0.72 pit block, not the old one.
+
+**Status:** OPEN
+
+## BUG-1166 — Civil and Manager look for the office folders in different places
+
+**Command / Area:** CDFEEDBACK, CE Blocks, CDNEWDWG, CDWT, job time on a colleague PC, Civil 3.0.72 / Manager 1.1.72 (T5 finding 2). MEDIUM, SURE in the code; Max's OneDrive layout UNSURE.
+
+**Symptom:** Manager checks the OneDrive folder variable first; Civil and CE Blocks look only under `%USERPROFILE%\Creative Engineering\...`. If Max's folders arrived through "Add shortcut to My files" (under `OneDrive - ...`) instead of "Sync": Manager works, CDFEEDBACK says "saved on this PC" every time (Tim never sees the reports), CE Blocks shows "palette files are unavailable: Could not find a part of the path", CDNEWDWG cannot find the templates and CDWT loses its tank window.
+
+**Expected behaviour:** One shared office-folder lookup used by both, and plain wording in CE Blocks. Before 9 Nov: look at where Max's OneDrive puts "Creative Engineering - Drafting".
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 2; `Modules/Manager/Services/CePluginInstallerService.cs:56-78`, `FeedbackService.cs:63`, `CivilJobTimeSettings.cs:134,166-168`, `UserSettings.cs:1392,1417`, `CeBlocksSettings.cs:29`, `CeBlocksPaletteService.cs:24-27`. Existing: none (grepped OneDrive office folder; BUG-492 and BUG-483 are other install items). Fix kind: code.
+
+**Test that catches it:** case: with the office folder only under the OneDrive variable path, Civil finds it.
+
+**Steps to confirm in AutoCAD:** test profile with the office folders only under an "OneDrive - ..." path; CDFEEDBACK and open CE Blocks. Right looks like: report reaches the office folder and the palette opens.
+
+**Status:** OPEN
+
+## BUG-1167 — Settings save office folders as fixed full paths, so copying Tim's settings carries his paths
+
+**Command / Area:** Civil settings file used as colleague starting switches, Civil 3.0.72 (T5 finding 3). MEDIUM, SURE.
+
+**Symptom:** Every value is written out (no "skip defaults"), so Tim's file holds `C:\Users\TimothyBrand\Creative Engineering\...\Standard Details\Civil`, the same for Drawing Templates and `C:\Lisp Files\Computations`; job-time folder likewise. If the desk gives Max "your working switches" by copying Tim's file: CDWT finds no tank master and silently drops to command-line questions, CDNEWDWG finds no templates, and Max's time logs aim at Tim's profile path and fail. Next to F-023 (switch values) but a separate fault.
+
+**Expected behaviour:** Blank every folder path in the copy so each PC works out its own; better, store paths relative to the office root.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 3; `Models/UserSettings.cs:1375,1383,1408`, `SettingsService.cs:717`, `CivilJobTimeSettings.cs:84-88`. Existing: none. Fix kind: code plus the colleague-defaults export.
+
+**Test that catches it:** case: a settings export for a colleague contains no user-profile path.
+
+**Steps to confirm in AutoCAD:** export the colleague defaults and read the file. Right looks like: folder paths blank or relative.
+
+**Status:** OPEN
+
+## BUG-1168 — The job-time folder is fixed on the first start
+
+**Command / Area:** Civil job time logging, first AutoCAD start on a new PC, Civil 3.0.72 (T5 finding 4). MEDIUM, SURE.
+
+**Symptom:** The first folder found is saved for good. If OneDrive has not finished syncing "Creative Engineering - Drafting" when Max first opens AutoCAD on 9 Nov, his time goes to `%APPDATA%\CE_CVL_SUITE` from then on and never reaches the office. With read-only access to Drafting every write fails into the log only.
+
+**Expected behaviour:** Save the folder only when a person picks it; otherwise detect it again at each start. Hand-install step: confirm OneDrive shows Drafting fully synced before the first AutoCAD start.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 4; `Services/CivilJobTimeSettings.cs:84-88`, `JobTimeCsvLogger.cs:55-58`. Existing: none (BUG-492 is the privacy side). Fix kind: code.
+
+**Test that catches it:** case: first start with the folder absent, second start with it present; the second start uses it.
+
+**Steps to confirm in AutoCAD:** start AutoCAD on a test profile with the folder missing, then add it and restart. Right looks like: time logs in the office folder.
+
+**Status:** OPEN
+
+## BUG-1169 — Max's old July Structural may carry an older shared file with the same version number
+
+**Command / Area:** Civil load on a PC with Structural 1.0.41 (July), 9 Nov hand install (T5 finding 5). MEDIUM, UNSURE (load order and first-copy-wins are UNVERIFIED AutoCAD/.NET behaviour).
+
+**Symptom:** Structural shipped its own CE_SHARED, also labelled 1.1.0.0, from 23 Jul to 25 Aug. That copy has 9 service files; Civil 3.0.72 needs `CeRuntimePaths`, which it lacks. If Max's July 1.0.41 is from that window and AutoCAD loads it first, Civil breaks wherever it looks up its own files (help, linetypes, config lists): "command failed" lines on the first job. Not BUG-887 (Civil and Manager).
+
+**Expected behaviour:** Read the AppVersion and date of Max's Structural bundle before 9 Nov; if it holds a CE_SHARED.dll, switch it off or move it aside before the first start.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 5; `Modules/Drainage/Services/RuntimePathService.cs:15-16`, `Modules/Structural/CE_STRUC_SUITE.csproj:159-162,368-380`. Existing: none (BUG-887, BUG-522 are related). Fix kind: release check, then code if confirmed.
+
+**Test that catches it:** case: load an old-style shared file first, then Civil; Civil reports the mismatch rather than failing quietly.
+
+**Steps to confirm in AutoCAD:** on a spare PC install the July Structural then the 3.0.72 pair; type CDHELP and CD_LINETYPE-using commands. Right looks like: no "command failed" lines.
+
+**Status:** OPEN
+
+## BUG-1170 — Going back restores an old Manager that may stage updates by itself
+
+**Command / Area:** rollback to the pre-9 Nov Manager (T5 finding 6). MEDIUM, UNSURE (BUG-165 records the same loop "observed to change nothing" on Tim's PC; Max's current Manager version is not recorded).
+
+**Symptom:** A Manager from before 22 Jul waits 15 seconds after start, reads the office approval file without a signature check and calls InstallOrUpdate; on a "fresh install" that path writes to `C:\ProgramData\Autodesk\ApplicationPlugins`. After a rollback it may try to put 3.0.72 back by itself, or fail quietly on a standard login.
+
+**Expected behaviour:** Record Max's current Manager version before 9 Nov; if older than 22 Jul, the rollback steps restore the old Civil and Manager, then check ProgramData for a new CE folder after the next start.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 6; `Modules/Manager/Services/CeApprovedReleaseService.cs:220-251` at c5250a11, old `CePluginInstallerService.cs:244-253`. Existing: BUG-165 (related). Fix kind: release check.
+
+**Test that catches it:** rollback rehearsal on a standard login with the old Manager restored; no folder appears in ProgramData.
+
+**Steps to confirm in AutoCAD:** rehearse the rollback on a spare standard login, restart AutoCAD twice, list ProgramData. Right looks like: nothing new in ProgramData.
+
+**Status:** OPEN
+
+## BUG-1171 — Civil's reports to Tim never arrive and pile up on a colleague's PC
+
+**Command / Area:** CE admin outbox (Civil telemetry vs Manager upload), Civil 3.0.72 / Manager 1.1.72 (T5 finding 7). LOW, SURE.
+
+**Symptom:** Civil writes admin records to `%APPDATA%\TIM_CE_CADTOOLS\CE_Admin\outbox`; Manager uploads only `%APPDATA%\CE_CADTOOLS\CE_Admin\outbox`. Manager moves the old folder once and Civil then recreates it. Tim's admin view never shows Max's Civil failures, and files carrying drawing names build up in his profile with no clean-up.
+
+**Expected behaviour:** Point Civil at CeAppDataPaths (CE_CADTOOLS), or have Manager upload both folders.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 7; `Shared/CE_SHARED/Services/CeTelemetryStore.cs:60-65`, `Modules/Manager/Services/CeAdminStorageService.cs:33,37-40,151`, `AdminTelemetryService.cs:259,403`. Existing: none. Fix kind: code (shared file, sync by hand with Manager).
+
+**Test that catches it:** case: a Civil failure record lands in the folder Manager uploads.
+
+**Steps to confirm in AutoCAD:** trigger a Civil failure record on a test profile and list both outbox folders. Right looks like: one folder only.
+
+**Status:** OPEN
+
+## BUG-1172 — On AutoCAD 2025/2026 the status bar says "[Modern]"
+
+**Command / Area:** CE status line, Civil 3.0.72 / Manager 1.1.72 (T5 finding 8). LOW, SURE.
+
+**Symptom:** One test is true for both the Net8 and Net10 lanes, so Max on 2026 reads "CE CVL SUITE v3.0.72 [Modern]" over the phone and Tim assumes 2027; a 2027-only tool then looks like a fault.
+
+**Expected behaviour:** Three labels (Legacy, Net8, Modern). Until then, ask Max for his AutoCAD year as well.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 8; `Modules/Drainage/PluginInitialization.cs:28-33`, `Modules/Manager/Plugin.cs:27-31`. Existing: none (4 other carpark lines mention [Modern] in different contexts). Fix kind: code.
+
+**Test that catches it:** case: the Net8 runtime label is "[Net8]".
+
+**Steps to confirm in AutoCAD:** start AutoCAD 2025 or 2026 and read the startup line. Right looks like: a lane name that is not "Modern".
+
+**Status:** OPEN
+
+## BUG-1173 — The colleague pack's backup step saves only 2 of the CE settings folders
+
+**Command / Area:** colleague pack page 02 step 4 and rollback, Manager 1.1.72 (T5 finding 9). LOW, SURE.
+
+**Symptom:** The step copies `%APPDATA%\TIM_CE_CADTOOLS` and `%APPDATA%\CE_CVL_SUITE`. 1.1.72 also writes `%APPDATA%\CE_CADTOOLS` (Manager storage and menu), `%APPDATA%\Creative Engineering\CE Suite Manager` (CE Blocks) and `%APPDATA%\CE_SUITE_MANAGER\logs`. These stay behind on rollback, and the CE Manager pull-down menu may stay loaded with no commands behind it (UNSURE).
+
+**Expected behaviour:** Add the three folders to step 4, and add "MENULOAD, unload CE_SUITE_MANAGER_MENU" to the rollback.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 9; `Modules/Manager/Services/CeAdminStorageService.cs:33`, `CeSuiteManagerMenuService.cs:137`, `CeBlocksSettings.cs:35`, `CommandOutcomeInfoLog.cs:12`. Existing: none. Fix kind: document.
+
+**Test that catches it:** rehearsal: after rollback no CE_CADTOOLS or CE Suite Manager folder remains and the menu is gone.
+
+**Steps to confirm in AutoCAD:** rollback rehearsal on a spare login; open AutoCAD. Right looks like: no CE Manager menu and no leftover folders.
+
+**Status:** OPEN
+
+## BUG-1174 — CDWT skips its window without saying why
+
+**Command / Area:** CDWT, Civil 3.0.72 (T5 finding 10). LOW, SURE.
+
+**Symptom:** With the Standard Details folder missing (BUG-1166 or BUG-1167) the tank picture window never opens and the command line asks the old questions with no reason given.
+
+**Expected behaviour:** One line: "Tank pictures not shown: Standard Details folder not found at <path>."
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 10; `Commands/WaterTankCommand.cs:90-91`. Existing: none. Fix kind: code.
+
+**Test that catches it:** case: missing folder produces the line.
+
+**Steps to confirm in AutoCAD:** point Standard Details at an empty folder and type CDWT. Right looks like: the line naming the missing folder.
+
+**Status:** OPEN
+
+## BUG-1175 — Leftover wording points at Tim's own folders
+
+**Command / Area:** CDSL, CDHELP, CDTRENCHGRATEAUDIT, Civil 3.0.72 (T5 finding 11). LOW, SURE.
+
+**Symptom:** CDSL tells the drafter to put a missing block in "C:\Lisp Files" (Release builds never look there). CDHELP shows "C:\Lisp Files\SUPERSEDED\CE_CVL_SUITE". CDTRENCHGRATEAUDIT is fixed to `C:\Lisp Files\TRENCH GRATE.dwg`. (The last-resort linetype drawing in Tim's profile is harmless; every linetype CE asks for is in acad.lin or the shipped CE_CIVIL.lin.)
+
+**Expected behaviour:** Change the wording and point the audit at the bundle's Blocks folder.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 11; `Commands/SpotLevelCommand.cs:63`, `Dialogs/CdHelpDialog.xaml.cs:41`, `Commands/LinkCommands.cs:755`, `LayerService.cs:262`. Existing: none. Fix kind: code (wording).
+
+**Test that catches it:** a search test that no shipped string contains "C:\Lisp Files".
+
+**Steps to confirm in AutoCAD:** run CDSL with the block missing on a colleague-type profile. Right looks like: wording naming the bundle folder.
+
+**Status:** OPEN
+
+## BUG-1176 — Delivering the package as a downloaded zip can block a helper
+
+**Command / Area:** CDIMPORTXCIVIL PDF schedule helper (9 Nov install by email or Teams zip), Civil 3.0.72 (T5 finding 12). LOW, UNSURE (whether a marked DLL loads on 2022-2024 is UNVERIFIED).
+
+**Symptom:** The helper script runs with RemoteSigned; if the bundle arrives as a downloaded zip Windows marks it, and the PDF pit-schedule part of CDIMPORTXCIVIL would fail quietly.
+
+**Expected behaviour:** Copy from USB or the synced pilot folder, never a downloaded zip, or Unblock the zip before extracting.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 12; `Services/XcivilScheduleService.cs:247-276`. Existing: none. Fix kind: document plus a clear message.
+
+**Test that catches it:** case: with the mark of the web present, the import says why it cannot run the helper.
+
+**Steps to confirm in AutoCAD:** copy the bundle as a downloaded zip on a test login, run CDIMPORTXCIVIL on a PDF schedule. Right looks like: either it works or it says why not.
+
+**Status:** OPEN
+
+## BUG-1177 — The weekly time export can run during Max's AutoCAD start, with no switch to turn it off
+
+**Command / Area:** job-time weekly export at start-up, Civil 3.0.72 (T5 finding 13). LOW, UNSURE (slowdown size UNVERIFIED).
+
+**Symptom:** If the shared marker is more than 6 days old, Max's start reads every person's time log and writes the office export: a slower first start, and Max's AutoCAD becomes the one that publishes everyone's week. The privacy side is BUG-492 (Tim's call); the new part is that there is no switch to turn the timer off. See also BUG-1202 (the same export blocks the start-up thread).
+
+**Expected behaviour:** A `jobTime.enabled` switch, and the export on a background thread.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 13; `Services/JobTimeWeeklyExportService.cs:26-55`, `Models/UserSettings.cs:258-287`. Existing: BUG-492 (privacy); none for the switch. Fix kind: code plus Settings.
+
+**Test that catches it:** case: with the switch off the export never runs.
+
+**Steps to confirm in AutoCAD:** CDS, look for a job-time switch; turn it off and restart. Right looks like: no export written.
+
+**Status:** OPEN
+
+## BUG-1178 — A shared-file mismatch tells a colleague to "run the CE installer again"
+
+**Command / Area:** CE_SHARED mismatch message, Manager 1.1.72 (T5 finding 14). LOW, UNSURE.
+
+**Symptom:** If an older CE plugin loads first, Max is told to run an installer he does not have (hand install). BUG-522 family.
+
+**Expected behaviour:** "Ask your CE administrator" when the user is not the administrator.
+
+**Reference:** TEAM_AUDIT_T5_24OCT.md finding 14; `Modules/Manager/Services/CeSharedCopyCheck.cs:33-35`, `Plugin.cs:186`. Existing: BUG-522 (family). Fix kind: code (wording).
+
+**Test that catches it:** case: a mismatch on a non-administrator profile prints the administrator wording.
+
+**Steps to confirm in AutoCAD:** provoke a shared-file mismatch on a standard login. Right looks like: "ask your CE administrator".
+
+**Status:** OPEN
+
+## BUG-1179 — A failed read of the office approval file can still show "CE is current."
+
+**Command / Area:** Manager update status line / ribbon status tooltip, Manager 1.1.72 (Codex audit RD13-01, 24 Oct 2026). MEDIUM, SURE (verified by reading; not reproduced in AutoCAD).
+
+**Symptom:** A malformed `approved.json` for Civil is caught per file, the module is left out of the list, and the status falls through to "CE is current." because the office folder exists. A colleague believes the installed release is current and stops looking for an update. Distinct from HUNT-M-05 (office folder unreachable, line about 9792) and the Manager-only approval case (about line 400).
+
+**Expected behaviour:** Carry per-module read failures into the status and say "Could not check the office approval for Civil" with a recovery line; still show valid approvals and allow drafting.
+
+**Reference:** CODEX_AUDIT2_RD13_24OCT.md RD13-01; `Modules/Manager/Services/CeApprovedReleaseService.cs:46,51`, `CeReleaseStatusService.cs:127,160,223`, `CeAdminTelemetryService.cs:173,190`. Existing: none for the malformed-file case (grepped CE is current). Fix kind: code.
+
+**Test that catches it:** isolated profile with a valid Civil approval, replace its contents with `{`, refresh Manager, wait up to 65 s; the tooltip must not say "CE is current." and the trace must contain `validation-rejection[approved-release-discovery[CE_CVL_SUITE]]`.
+
+**Steps to confirm in AutoCAD:** as the test above on a disposable profile. Right looks like: the tooltip says Civil's approval could not be checked.
+
+**Status:** OPEN
+
+## BUG-1180 — Drawing Repair says "Nothing has been changed" after a successful repair
+
+**Command / Area:** CEMANAGER, Drawing Repair page, Manager 1.1.72 (RD13-02). MEDIUM, SURE (verified by reading).
+
+**Symptom:** After Fix it writes a missing owner record and the window reads "Items fixed: 1", the banner still says "Nothing has been changed. Inspect only looks." It is an unconditional constant. The drafter cannot rely on the window to say whether the drawing changed.
+
+**Expected behaviour:** The banner describes the current action and result, or becomes the timeless "Inspect only looks. Fix it changes the drawing."; the completion summary stays visible.
+
+**Reference:** CODEX_AUDIT2_RD13_24OCT.md RD13-02; `Modules/Manager/UI/ViewModels/DrawingRepairViewModel.cs:184,299,312`, `UI/Pages/DrawingRepairPage.xaml:92`, `Drainage/Services/LinkService.RepairAudit.Apply.cs:128,137,158`. Existing: none (grepped Nothing has been changed). Fix kind: wording/code.
+
+**Test that catches it:** add the missing assertion to `Manager.Tests/UI/DrawingRepairViewModelTests.cs:57` that the banner no longer claims nothing changed after an applied repair.
+
+**Steps to confirm in AutoCAD:** CEMANAGER, Drawing Repair, Civil, Inspect, Fix it on a drawing with one missing label owner record. Right looks like: no "Nothing has been changed" after the fix.
+
+**Status:** OPEN
+
+## BUG-1181 — Disable on Restart loses its pending-change explanation
+
+**Command / Area:** CEMANAGER, Module page, Disable on Restart, Manager 1.1.72 (RD13-03). LOW, SURE.
+
+**Symptom:** After Civil is disabled for the next start, the refresh rescans from the manifest without the pending flag, and the status shows "Loaded" first because the assembly is in memory. The window never says Civil is running now but will not start next time.
+
+**Expected behaviour:** Persistent window text that Civil is running now but will not automatically start next time, kept across refresh and reopening Manager; separate from an update waiting to install.
+
+**Reference:** CODEX_AUDIT2_RD13_24OCT.md RD13-03; `Modules/Manager/Services/CePluginRegistryService.cs:290,384,517`, `UI/Dialogs/PluginManagerWindow.xaml.cs:559,579`. Existing: none. Fix kind: code.
+
+**Test that catches it:** after Disable on Restart and the refresh, assert the explanation text is present and survives reopening.
+
+**Steps to confirm in AutoCAD:** CEMANAGER, Module, select Civil, Disable on Restart, wait, reopen. Right looks like: a line saying it will not start next time.
+
+**Status:** OPEN
+
+## BUG-1182 — View History can show another module's release notes
+
+**Command / Area:** CEMANAGER, Module page, View History, Manager 1.1.72 (RD13-04). LOW, SURE.
+
+**Symptom:** Note discovery searches the bundle folder, its parent and grandparent for every `*_Update_*.txt` without checking which module owns each, so Civil's history can show Manager changes. A colleague checking whether a fix is in their Civil release can get the wrong answer.
+
+**Expected behaviour:** Associate each notes file with its module through explicit metadata or an exact module-specific name; do not import every match from shared ancestor folders.
+
+**Reference:** CODEX_AUDIT2_RD13_24OCT.md RD13-04; `Modules/Manager/Services/CePluginInstallerService.cs:699-728`, `CePluginRegistryService.cs:190`, `UI/Dialogs/PluginManagerWindow.xaml.cs:706,1275,1333`. Existing: none (grepped View History). Fix kind: code.
+
+**Test that catches it:** office folder with `Civil_Update_20261023.txt` (CIVIL-ONLY-NOTE) and `Manager_Update_20261023.txt` (MANAGER-ONLY-NOTE) beside a Civil bundle; Civil's View History must show only the first.
+
+**Steps to confirm in AutoCAD:** the fixture above, CEMANAGER, Refresh, Module, Civil, View History. Right looks like: CIVIL-ONLY-NOTE only.
+
+**Status:** OPEN
+
+## BUG-1183 — Rearranging pier schedule rows can resize the wrong piers
+
+**Command / Area:** STRSCHEDSYNC, Bored Pier Schedule, Structural 1.0.122 (Codex audit RD14-01). HIGH, SURE (verified by reading; not run in AutoCAD).
+
+**Symptom:** Sync trusts the saved row positions and checks only the row count. After whole rows are swapped (keeping each row's contents together), the handle cell is ignored and the old saved handle is used, so a 300 mm pier and a 600 mm pier exchange their drawn sizes (Visibility1) with no warning. On a job: the drafter reorders the pier schedule to read in grid order, syncs, and the plan piers swap diameters.
+
+**Expected behaviour:** Reconcile the visible handle column with the saved mapping and use a validated row identity, not count equality; if ambiguous, leave only those rows unchanged and say why.
+
+**Reference:** CODEX_AUDIT2_RD14_24OCT.md RD14-01; `Modules/Structural/Core/Schedules/ScheduleRowLink.cs:16-29`, `Services/ScheduleService.cs:664,772-788`, `Commands/UtilityCommands.cs:92`. Existing: none (grepped STRSCHEDSYNC). Fix kind: code.
+
+**Test that catches it:** the RD14-01 fixture: two piers A (300 DIA.) and B (600 DIA.), swap the two data rows with the supplied AutoLISP, STRSCHEDSYNC; A must stay 300 and B 600.
+
+**Steps to confirm in AutoCAD:** BP 300 at 0,0 and BP 600 at 3000,0; STRSCHEDCREATE then STRSCHEDREFRESH; swap data rows 2 and 3; STRSCHEDSYNC. Right looks like: the piers keep their sizes (or CE reports the rows as ambiguous).
+
+**Status:** OPEN
+
+## BUG-1184 — Separate bearer tagging runs give different sizes the same BR1 or SPR1 mark
+
+**Command / Area:** CSTAGBEARERS, Structural 1.0.122 (RD14-02). HIGH, SURE (verified by reading).
+
+**Symptom:** The mark scan looks for BR labels on BEARERS - SUBFLOOR and SPR labels on STUMPS AND PIERS, but the labels are written on 25TEXT, so each run starts again at 1. A 150x50 F17 bearer is BR1, and a 200x75 F17 bearer tagged in a later run is also BR1 (and it forgets across save and reopen). A schedule or detail reference becomes ambiguous.
+
+**Expected behaviour:** Scan the layer where the service actually writes its labels (keeping older labels on the geometry layer working), so distinct sizes get distinct marks.
+
+**Reference:** CODEX_AUDIT2_RD14_24OCT.md RD14-02; `Services/TimberSubfloorService.cs:192-194,253,289-292,334,359`, `Core/Marks/MemberMarkEngine.cs`, `Commands/TimberSubfloorCommands.cs:17`. Existing: none (the carpark entry HUNT2-S-08 near line 9969 is about made-up bearer sizes, not marks; grepped BR1). Fix kind: code.
+
+**Test that catches it:** RD14-02 fixture: three lines tagged 150x50, 200x75, 150x50 in three runs; marks must be BR1, BR2, BR1, and still so after save and reopen.
+
+**Steps to confirm in AutoCAD:** as the fixture (CSTAGBEARERS per line). Right looks like: BR1, BR2, BR1.
+
+**Status:** OPEN
+
+## BUG-1185 — Tag Bearers adds unwanted overlapping or shortcut lines
+
+**Command / Area:** CSTAGBEARERS, Structural 1.0.122 (RD14-03). MEDIUM, SURE.
+
+**Symptom:** Tagging a hand-drawn bearer draws a second Line with identical endpoints on BEARERS - SUBFLOOR (erasing or moving one leaves the other). On a bent polyline it adds a straight line from its first point to its last across the bend. Selecting the same member twice schedules two lines and labels.
+
+**Expected behaviour:** CSTAGBEARERS keeps and deduplicates selected objects and calls a label-only writer; CSSUBFLOORGRID can still create its new lines.
+
+**Reference:** CODEX_AUDIT2_RD14_24OCT.md RD14-03; `Services/TimberSubfloorService.cs:166,215,320-328,491-494`. Existing: none. Fix kind: code.
+
+**Test that catches it:** RD14-03 fixture: one LINE and one three-vertex PLINE tagged; only one framing line per member and no chord.
+
+**Steps to confirm in AutoCAD:** line 0,0 to 3000,0, CSTAGBEARERS, 150x50 F17, No, Yes; then count lines. Right looks like: one line and one label.
+
+**Status:** OPEN
+
+## BUG-1186 — Bearer tagging writes onto locked output layers
+
+**Command / Area:** CSTAGBEARERS, Structural 1.0.122 (RD14-04). MEDIUM, SURE. Protected: yes (native locked-layer rule).
+
+**Symptom:** With 25TEXT locked to protect finished annotation, tagging a bearer still adds its label and prints "Tagged 1 bearer(s)"; the lock flag stays on, suggesting the layer received no changes. Same absence for BEARERS - SUBFLOOR and STUMPS AND PIERS.
+
+**Expected behaviour:** Check the real output layers at Apply, before creating anything; refuse or skip with one named-layer message; never unlock or redirect; no partial objects.
+
+**Reference:** CODEX_AUDIT2_RD14_24OCT.md RD14-04; `Services/TimberSubfloorService.cs:207-215,327-359`, `LegacyToolCommon.cs:15`, `LayerService.cs:177`. Existing: none (BUG-1081 and BUG-1082 are other commands writing to locked layers). Fix kind: code.
+
+**Test that catches it:** lock each output layer in turn; assert no objects added and the layer named.
+
+**Steps to confirm in AutoCAD:** lock 25TEXT, CSTAGBEARERS a line (150x50 F17, No, Yes). Right looks like: a refusal naming 25TEXT, nothing added.
+
+**Status:** OPEN
+
+## BUG-1187 — An invalid layer lineweight in Drawing standards silently becomes Default
+
+**Command / Area:** CEADMINSETTINGS, Drawing Layers, Lineweight cell, Structural 1.0.122 (RD14-05). MEDIUM, SURE.
+
+**Symptom:** The Lineweight cell is free text. A mistyped value is replaced by ByLineWeightDefault and the window says "Updated layer AUDIT-WEIGHT". ByLayer linework changes thickness although that was not what was typed.
+
+**Expected behaviour:** Validate before applying; keep the original on invalid input; show a plain field error; never substitute an office default quietly. A pick-list of valid weights would prevent the typing error.
+
+**Reference:** CODEX_AUDIT2_RD14_24OCT.md RD14-05; `UI/LayerManagerWindow.xaml.cs:187,194,196,364-367`, `LayerService.cs:477`, `LayerManagerWindow.xaml:59`. Existing: none. Fix kind: code.
+
+**Test that catches it:** layer AUDIT-WEIGHT at 0.50 mm; type "typo" and Save; weight must stay 0.50 and the message name the field.
+
+**Steps to confirm in AutoCAD:** CEADMINSETTINGS, Drawing Layers, edit the Lineweight cell to "typo", Save Layer Changes. Right looks like: weight unchanged, plain error.
+
+**Status:** OPEN
+
+## BUG-1188 — A LandXML pipe with no grade prints an invented "AT 1 IN 100"
+
+**Command / Area:** CDIMPORTLANDXML, Civil 3.0.72 (Codex audit RD15-01, 24 Oct 2026). HIGH, SURE (verified by reading).
+
+**Symptom:** When the file gives neither a slope nor invert levels, the label builder substitutes 100 and prints `AT 1 IN 100` on the pipe, and the review row checks only diameter and endpoint names. A drafter could issue a fall the consultant never supplied.
+
+**Expected behaviour:** Omit the grade clause when grade is absent and add a missing-grade check to the review (Unknown, not a new default or a block). Preserve an explicit source grade. Check the X-Civil call sites of the shared builder with the same rule.
+
+**Reference:** CODEX_AUDIT2_RD15_24OCT.md RD15-01; `Helpers/LandXmlParser.cs:369`, `Services/XcivilImportService.cs:1887`, `XcivilEntityScanner.Pipes.cs:1145`, `XcivilLayerRecognition.Visual.cs:195,216`, `XcivilPipeInsertionService.cs:127,181`, `PipeCreationService.cs:319`, `Commands/LinkCommands.ImportXcivil.cs:292`. Existing: none for this label (BUG-699 to BUG-709 are listed by the audit as other LandXML items; grepped 1 IN 100). Fix kind: code.
+
+**Test that catches it:** RD15_GRADE.xml (two pits, one 300 mm RCP pipe, no slope or inverts): no `AT 1 IN 100` label; with `slope="0.005"` the label is `AT 1 IN 200`.
+
+**Steps to confirm in AutoCAD:** CDIMPORTLANDXML on RD15_GRADE.xml, Read source, Import to drawing. Right looks like: no invented grade and the review shows grade as Unknown.
+
+**Status:** OPEN
+
+## BUG-1189 — Approved survey levels stay in use after the survey Xref is moved
+
+**Command / Area:** CDSURVEY and PIT "Survey level nearby", Civil 3.0.72 (RD15-02). HIGH, SURE.
+
+**Symptom:** The stored survey is a separate copy of coordinates; its freshness is checked only when an intake is applied. After the Xref is moved 10 m, New Pit still offers the level at the old position (the drawing shows RL 12.00 here but CE offers RL 20.00) and CDSURVEY still describes the survey as approved. Cancelling at the pick leaves the old survey in use.
+
+**Expected behaviour:** A read-only currency check against saved source identity, Xref transform and units before offering stored levels or publishing a current status; flag stale evidence, allow typed levels, never hard-block PIT.
+
+**Reference:** CODEX_AUDIT2_RD15_24OCT.md RD15-02; `Services/SurveyIntakeApplyCoordinator.cs:47`, `SurveyService.cs:813,830,868,881`, `Commands/PitCommand.cs:150,157`, `SurveyProvenanceEvidenceService.cs:64`. Existing: none (BUG-1053 and BUG-876 to BUG-878 are listed by the audit as other survey items). Fix kind: code.
+
+**Test that catches it:** RD15_STALE.dwg Xref with levels 12.000 at (0,0) and 20.000 at (10,0); approve, MOVE the Xref 10 m, PIT at 10,0,0; must not offer 20.00 silently.
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: the survey is marked as needing a reread; after re-approving, the offer is 12.00.
+
+**Status:** OPEN
+
+## BUG-1190 — Levels inside a nested, rotated survey block land in the wrong places
+
+**Command / Area:** CDSURVEY level reading, Civil 3.0.72 (RD15-03). HIGH, SURE.
+
+**Symptom:** The nested block transform is composed in the wrong order (`nestedRef.BlockTransform * parentTransform`; the X-Civil reader composes it the right way). A level visibly at (0,10) in a survey Xref rotated 90 degrees is stored at (10,0), so New Pit offers a different nearby level (15.00 where 12.00 is correct). Needs a nested block plus a non-commuting outer move, rotation or scale.
+
+**Expected behaviour:** Compose `parentTransform * nestedRef.BlockTransform`, covering rotated, scaled and translated nesting; do not change the direct attribute branch.
+
+**Reference:** CODEX_AUDIT2_RD15_24OCT.md RD15-03; `Services/SurveyService.cs:105,169,186,198-199,210`, `XcivilEntityScanner.cs:359,372`. Existing: none (grepped nested transform; the carpark entry near line 2238 is a different RL-matching item). Fix kind: code.
+
+**Test that catches it:** RD15_NESTED.dwg: block RD15_LEVEL with TEXT 12.000 inserted at (10,0), Xref rotated 90 degrees; the stored point must be X=0, Y=10.
+
+**Steps to confirm in AutoCAD:** CDSURVEY the rotated Xref, approve, PIT at 0,10,0. Right looks like: New Pit offers 12.00 at zero distance.
+
+**Status:** OPEN
+
+## BUG-1191 — Survey Intake cannot show the eleventh and later suspect points
+
+**Command / Area:** CDSURVEY, Survey Intake page, Civil 3.0.72 / Manager 1.1.72 (RD15-04). MEDIUM, SURE.
+
+**Symptom:** The review page receives only ten finding descriptions (`Take(10)`) and an "and 1 more" line; the command line is capped the same. With eleven advisory outliers the eleventh cannot be identified before approval. The point stays Unknown; the issue is the inability to review it.
+
+**Expected behaviour:** Supply all finding descriptions to the existing bounded scrolling list; the command-line summary may stay capped and point to the page.
+
+**Reference:** CODEX_AUDIT2_RD15_24OCT.md RD15-04; `Services/SurveyIntakeReviewSession.cs:25-26`, `Survey/SurveyIntakeReviewView.cs:59`, `Commands/CdSurveyCommand.cs:174`. Existing: none. Fix kind: code.
+
+**Test that catches it:** 32-text fixture (21 values 10.000 to 10.200, 11 values at 100.000); the page must list all eleven including `Spot RL 100.000 at (31.0, 0.0)`.
+
+**Steps to confirm in AutoCAD:** CDSURVEY on that Xref, open Survey Intake, scroll the list, Cancel intake. Right looks like: eleven descriptions.
+
+**Status:** OPEN
+
+## BUG-1192 — The long section can hide a real depression: survey levels more than 1.20 m from the cover line are discarded without a warning
+
+**Command / Area:** CDPROFILE surface line, Civil 3.0.72 (Codex audit RD16-01). HIGH, SURE (verified by reading).
+
+**Symptom:** Survey levels 1.50 m below the pit covers fail all three search passes (limits 0.60, 0.90, 1.20 m), the failure is silent, and the surface seeded from the pit covers is drawn on 70CONT as a straight line. The pipe looks buried 0.80 m below ground where the survey depression is 0.70 m below the crown (pipe crown RL 9.20 against ground RL 10.00 drawn, 8.50 real). Capture marks the surface evidence complete.
+
+**Expected behaviour:** Carry an explicit rejected-survey result into the review and output; do not present an unqualified line through the covers as established surface across that gap; continue with a marked unknown surface. Do not silently widen the tolerance; any retained limits are named Settings values.
+
+**Reference:** CODEX_AUDIT2_RD16_24OCT.md RD16-01; `ViewModels/LongitudinalSectionViewModel.cs:1468,1488,1522,1583,1598`, `Services/ProfileRouteEvidenceCaptureService.cs:315,335`, `ProfileRouteReviewService.cs:608,640`, `LongitudinalSectionService.cs:1598,1263`. Existing: none (BUG-997, BUG-1012 and BUG-1020 are listed by the audit as other profile items). Fix kind: code.
+
+**Test that catches it:** common fixture (P1 0,0 and P2 20000,0, cover RL 10.000) plus an Xref with RL 8.50 spots at 9000 and 11000; the section must not silently show RL 10.00 through the depression; control with RL 9.50.
+
+**Steps to confirm in AutoCAD:** CDPROFILE with datum 8.00 / H100 / V10, Preview New, Apply, inspect the 70CONT polyline. Right looks like: a disclosed unresolved surface or an independently justified one.
+
+**Status:** OPEN
+
+## BUG-1193 — A curved property boundary is treated as a straight chord in the long section
+
+**Command / Area:** CDPROFILE boundary marks, Civil 3.0.72 (RD16-02). MEDIUM, SURE.
+
+**Symptom:** The collector reads only consecutive vertex positions and ignores polyline bulge (ARC entities are not handled either). A boundary with a first-vertex bulge +1 crosses the pipe at 10.00 m in plan but the section marks it at 5.00 m. On a job: a curved lot frontage shows its boundary mark in the wrong place.
+
+**Expected behaviour:** Intersect the real transformed segments, including arcs, with the route; if a curve cannot be resolved, warn and leave that mark unresolved; never manufacture a straight-boundary mark.
+
+**Reference:** CODEX_AUDIT2_RD16_24OCT.md RD16-02; `ViewModels/LongitudinalSectionViewModel.cs:845,893,895,1189,1192,1225,1314,1319`. Existing: none. Fix kind: code.
+
+**Test that catches it:** Xref with an open BOUNDARY polyline (5000,-5000) to (5000,5000), first bulge +1; the mark must be 10000 units right of P1 at H1:100; with bulge 0 it is 5.00 m.
+
+**Steps to confirm in AutoCAD:** CDPROFILE as the fixture, measure the BOUNDARY mark X. Right looks like: 10.00 m from P1.
+
+**Status:** OPEN
+
+## BUG-1194 — CDTEXTSEG picks the nearest leg midpoint, not the pipe leg you clicked
+
+**Command / Area:** CDTEXTSEG and arrow relocation, Civil 3.0.72 (RD16-03). MEDIUM, SURE.
+
+**Symptom:** The chooser measures distance to each leg's midpoint. Clicking directly on the long leg near a bend of a pipe (0,0)-(20000,0)-(20000,1000) at (19000,0) chooses the short vertical leg (1,118 mm to its midpoint against 9,000 to the long leg's), so the label moves around the corner and CE prints "Pipe text moved."
+
+**Expected behaviour:** Rank the clamped perpendicular distance from the pick to each finite segment, with a stable tie-break at shared vertices.
+
+**Reference:** CODEX_AUDIT2_RD16_24OCT.md RD16-03; `Helpers/PipeTextSegmentChooser.cs:116-126`, `Services/PipeTextPlacementService.cs:35,48`, `Commands/CdCommand.Arrows.cs:20,43,87`. Existing: none. Fix kind: code.
+
+**Test that catches it:** NearestSegmentToPoint on the three-point fixture with pick (19000,0) must return 0; pick (20000,500) returns 1.
+
+**Steps to confirm in AutoCAD:** CDTEXTSEG on that pipe, enter 19000,0. Right looks like: the label sits beside the first horizontal leg, parallel to it.
+
+**Status:** OPEN
+
+## BUG-1195 — CDTEXTSEG writes a UCS angle into a World-plane text object
+
+**Command / Area:** CDTEXTSEG with a rotated UCS, Civil 3.0.72 (RD16-04). MEDIUM, SURE.
+
+**Symptom:** With UCS rotated 45 degrees and the view aligned to a diagonal pipe, moving its label places the location correctly but writes the angle (0) as if it were a World angle. Back in World the pipe is at 45 degrees and its text is horizontal.
+
+**Expected behaviour:** Pass the current UCS explicitly so position and angle use the same coordinate system; keep the World-plane output contract.
+
+**Reference:** CODEX_AUDIT2_RD16_24OCT.md RD16-04; `Commands/CdCommand.Arrows.cs:43,206`, `Services/DrawingService.cs:71`, `PipeTextPlacementService.cs:69-99`, `PipeCreationService.cs:985`, `LinkService.cs:1106`. Existing: none (BUG-909 is UCS in Structural). Fix kind: code.
+
+**Test that catches it:** UCS Z 45, CDTEXTSEG a diagonal pipe, midpoint pick 7071.067811865,0; World rotation must be 45 degrees modulo 180.
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: the label is parallel to the pipe in World.
+
+**Status:** OPEN
+
+## BUG-1196 — Pit Schedule refresh ignores a lower second outgoing pipe, so the depth and step-irons note change
+
+**Command / Area:** PITEDIT then drawn Pit Schedule refresh, Civil 3.0.72 (Codex audit RD17-01). HIGH, SURE (verified by reading).
+
+**Symptom:** The window uses every connected pipe except the chosen outlet; the drawn-cell writer (`LowestInletInvertText`) accepts only records whose `To` is the pit, so a second outgoing pipe is omitted. Pit P2 with cover RL 11.00, floor RL 10.20, chosen outlet at 10.40 and a second outlet at 9.90: the window shows 1.10 m "With Step Irons", the drawn refresh writes 0.80 m and drops the note. Reopening the window shows 1.10 again; drawing and window disagree about the same pit. Related BUG-785 (step-iron depth reaching the refresh).
+
+**Expected behaviour:** The drawn depth and note use the same complete, correctly scoped connected-pipe levels as the window, including extra outgoing pipes, with the chosen outlet kept separate; shared pure selection rule; keep the per-cell opt-in for older schedules.
+
+**Reference:** CODEX_AUDIT2_RD17_24OCT.md RD17-01; `Services/ScheduleLinkService.cs:2043-2050,2743-2767,2920,3077-3085`, `Services/PitScheduleBuilder.cs:666,673`, `ViewModels/PitScheduleViewModel.Data.cs:325,371,2152`, `Commands/PitEditCommand.cs:437-439`, `Rules/PitScheduleDepthRule.cs:49-63`. Existing: related BUG-785 (earlier step-iron fix), none for this input difference. Fix kind: code.
+
+**Test that catches it:** RD17-01 fixture (P2/P3/P4 with the numbers above, floor-depth setting ON, step irons 900 mm); PITEDIT change plan length 600 to 900; drawn depth stays 1.10 and remarks keep "With Step Irons".
+
+**Steps to confirm in AutoCAD:** PITSCHEDULE read P2, PITEDIT P2 length, read the drawn cells, reopen PITSCHEDULE. Right looks like: 1.10 m and "With Step Irons" in both.
+
+**Status:** OPEN
+
+## BUG-1197 — Updating one pit schedule can change another schedule's depth heading through a shared block definition
+
+**Command / Area:** PITSCHEDULE update (depth heading migration), Civil 3.0.72 (RD17-02). MEDIUM, SURE for shared-definition fixtures.
+
+**Symptom:** The heading update changes matching text in the selected reference's block definition and nested definitions without checking other references to them. An older copy of the schedule, even on a locked layer, acquires "PIT DEPTH (m)" while keeping its depth-to-outlet figures (0.85 under a heading now meaning pit depth 0.95).
+
+**Expected behaviour:** Isolate the heading for the selected schedule and its owned continuations (private definition or instance-owned heading); do not rewrite a shared definition or update other schedules to match.
+
+**Reference:** CODEX_AUDIT2_RD17_24OCT.md RD17-02; `ViewModels/PitScheduleViewModel.Schedule.cs:1109-1111,1256,1491-1530`, `Services/ScheduleLinkService.cs:93,2043-2048`. Existing: none. Fix kind: code. Protected: yes (locked layer).
+
+**Test that catches it:** two frames A and B sharing a heading definition, B on a locked layer; update A; B must keep "DEPTH TO OUTLET" and 0.85; one U restores the fixture.
+
+**Steps to confirm in AutoCAD:** PITSCHEDULE, Continue to Place / update, accept the update for A, REGEN, read both headings. Right looks like: only A changes.
+
+**Status:** OPEN
+
+## BUG-1198 — Cancelling a Pit Schedule export still saves the schedule's row order into the drawing
+
+**Command / Area:** PITSCHEDULE Export CSV and Export Excel, Civil 3.0.72 (RD17-03). MEDIUM, SURE.
+
+**Symptom:** Both export handlers persist manual rows and flush the project record before checking for rows or opening the file chooser. Click Export CSV, then Cancel: the linked-row sort map is filled and the project Xrecord is written (no rollback), so closing the drawing can ask "Save changes?" although nothing was edited or exported.
+
+**Expected behaviour:** Export a detached snapshot of the displayed rows without persisting row order; keep editing persistence in the editing action.
+
+**Reference:** CODEX_AUDIT2_RD17_24OCT.md RD17-03; `ViewModels/PitScheduleViewModel.Schedule.cs:46-65,106-126`, `PitScheduleViewModel.Filters.cs:491-534`, `Services/ProjectDataService.Mutations.cs:1740-1759`, `ProjectDataService.Persistence.cs:425-458,1099-1126`. Existing: none (BUG-817 is the empty undo mark; grepped export cancel). Fix kind: code.
+
+**Test that catches it:** saved clean drawing with one pit; Export CSV then Cancel; the project record bytes and sort map must be unchanged and no "Project data saved to DWG" line appears.
+
+**Steps to confirm in AutoCAD:** PITSCHEDULE, Export CSV, Cancel, close the schedule, CLOSE. Right looks like: no "Save changes?" question.
+
+**Status:** OPEN
+
+## BUG-1199 — Structural keeps and later re-saves footing sizes that Undo removed
+
+**Command / Area:** THCL and the footing-size library, Structural 1.0.122 (Codex audit RD18-01). HIGH, SURE (stale cache and whole-library write proven from source; native Undo untested).
+
+**Symptom:** The size library is loaded once per drawing file name into a static cache with no invalidation on Undo, Redo, library edits or close. After undoing a 600 x 600 thickening (key 81), the next THCL with key 82 saves both 81=600/600 and 82=900/900, and reusing 81 silently reuses 600 x 600 without asking. Related to BUG-1146.
+
+**Expected behaviour:** Read the current drawing library on each lookup and merge only the newly accepted entry before saving; remove the long-lived cache (or invalidate it on history, save and close). Never write during Undo/Redo.
+
+**Reference:** CODEX_AUDIT2_RD18_24OCT.md RD18-01; `Modules/Structural/Services/CeTextService.cs:24,2167,2196,5544-5574`, `FstMemoryService.cs:88,106,118`, `FoundationService.cs:1173,1189`. Existing: none (BUG-646, BUG-418 are other undo items; BUG-1146 is related). Fix kind: code.
+
+**Test that catches it:** fresh unique drawing; THCL 81 (600x600, centre 0,0, text 500,500); U; THCL 82 (900x900, centre 2000,0); key 81 must stay absent.
+
+**Steps to confirm in AutoCAD:** as the test, reading FST_DATA/TH_MEMORY after each step. Right looks like: only 82 in the library.
+
+**Status:** OPEN
+
+## BUG-1200 — Escape from THCL leaves a saved size, and a later Escape leaves an unlabelled outline
+
+**Command / Area:** THCL cancel points, Structural 1.0.122 (RD18-02). MEDIUM, SURE.
+
+**Symptom:** The size is saved before the centre is asked, so Escape at the centre prompt leaves key 81=600/600 in the library. After the centre is accepted a real polyline is committed before the text-position question, so Escape there leaves a 900 x 900 outline on SLAB INTERNAL BEAM with no TH82 label and a saved size. The drafter must undo a command they thought they cancelled.
+
+**Expected behaviour:** Defer persistent size saving and geometry creation until all inputs are accepted (transient preview); commit outline, label and library change together.
+
+**Reference:** CODEX_AUDIT2_RD18_24OCT.md RD18-02; `Commands/CeTextCommands.cs:54`, `Services/CeTextService.cs:1107-1232,2197,2324`, `FstMemoryService.cs:118`, `CommandExecutionService.cs:110`. Existing: none (BUG-1030 is a different undo step, on CDCALC). Fix kind: code.
+
+**Test that catches it:** two fresh copies: Escape at the centre prompt (no entities, key 81 absent) and Escape at the text prompt (original entity set restored).
+
+**Steps to confirm in AutoCAD:** THCL, 81, N, 600, 600, Esc at the centre; then THCL, 82, N, 900, 900, centre 2000,0, Esc at the text point. Right looks like: no outline and no saved size.
+
+**Status:** OPEN
+
+## BUG-1201 — Cancelling the first CDSL placement leaves an imported SPOT LEVEL block definition
+
+**Command / Area:** CDSL (spot level), Civil 3.0.72 (RD18-03). MEDIUM, SURE.
+
+**Symptom:** The block definition is imported before the first placement prompt. Pressing Escape prints "CDSL command cancelled." but the drawing now has an unused SPOT LEVEL block definition, a real change that can require saving a drawing that appears untouched.
+
+**Expected behaviour:** Check the asset in a detached database and import only after the insertion point and level are accepted; do not purge blocks afterwards.
+
+**Reference:** CODEX_AUDIT2_RD18_24OCT.md RD18-03; `Commands/SpotLevelCommand.cs:56,77,83`, `Services/BlockService.cs:451,458,476,689`. Existing: none (grepped CDSL cancel). Fix kind: code.
+
+**Test that catches it:** saved Civil drawing without SPOT LEVEL; CDSL, Esc; block table names unchanged.
+
+**Steps to confirm in AutoCAD:** CDSL then Escape at the insertion prompt; BLOCK list or CE log. Right looks like: no SPOT LEVEL definition and no "Loaded block" log line.
+
+**Status:** OPEN
+
+## BUG-1202 — Civil's weekly time export runs on the AutoCAD start-up thread
+
+**Command / Area:** AutoCAD start-up, Civil job-time weekly export, Civil 3.0.72 (Codex audit RD19-01). MEDIUM, SURE (duration on Tim's PC unknown).
+
+**Symptom:** With no recent export marker, start-up calls the whole export directly (a comment says "non-blocking" but it is not): it reads every `*.csv` in the time-log folder, builds the CSV and mirrors it to the office before loading continues. A folder with years of sheets, or a cloud-only CSV, can make opening AutoCAD feel stuck before drafting. With only old rows it re-scans every start in the same week. Related BUG-1177.
+
+**Expected behaviour:** Capture settings and paths on the AutoCAD thread, do the file work on one background task; filter candidate monthly files before reading; remember a successful empty-period check.
+
+**Reference:** CODEX_AUDIT2_RD19_24OCT.md RD19-01; `PluginInitialization.cs:216`, `Services/CivilJobTimeService.cs:33-40`, `JobTimeWeeklyExportService.cs:34-158`. Existing: none for the blocking (BUG-492 privacy, BUG-1177 switch). Fix kind: code.
+
+**Test that catches it:** test profile with `AUDITOR_2020-01.csv` and a current-month CSV with a 30-minute row; passive instrumentation must show zero export reads on the start-up thread and the total 0:30.
+
+**Steps to confirm in AutoCAD:** start AutoCAD on a blank drawing with that folder, then type `(princ "\nRD19-01 READY")`. Right looks like: READY appears without waiting for the export.
+
+**Status:** OPEN
+
+## BUG-1203 — Structural schedule-history refresh starts even with "Background refresh enabled" unticked
+
+**Command / Area:** Structural start-up, CESETTINGS, Schedules / Markup, Structural 1.0.122 (RD19-02). MEDIUM, SURE.
+
+**Symptom:** The automatic refresh path never reads the switch (the command-side check comes after the first initialisation). With the box unticked and a missing or over-12-hour cache, AutoCAD still scans the configured folders on a worker, saves a refresh timestamp and loads the cache at start-up, even when XCLMTXT is never used. The drafter's choice to stop the background folder reading is ignored.
+
+**Expected behaviour:** Honour `BackgroundRefreshEnabled` at the common automatic-refresh entry point before changing state or scheduling; keep an explicit user refresh separate; avoid eagerly loading a large cache when disabled.
+
+**Reference:** CODEX_AUDIT2_RD19_24OCT.md RD19-02; `Modules/Structural/Plugin.cs:156`, `Services/XclmTxtCorpusIndexService.cs:32-106,239-254,323-324`, `Models/UserSettings.cs:1113`, `UI/Dialogs/CeSettingsDialog.xaml:633,731,761`, `XclmTxtService.cs:30-34`. Existing: none. Fix kind: code.
+
+**Test that catches it:** profile with the switch false, one empty CorpusRoot, no caches; no refresh task scheduled and LastCorpusRefreshUtc stays empty; with the switch true exactly one refresh.
+
+**Steps to confirm in AutoCAD:** CESETTINGS, untick Background refresh enabled, restart, do not run XCLMTXT. Right looks like: no refresh activity and an empty last-refresh time.
+
+**Status:** OPEN
+
+## BUG-1204 — A discarded first-open link conversion is remembered, so reopening the same old drawing leaves labels unlinked
+
+**Command / Area:** Structural legacy link migration on open, Structural 1.0.122 (RD19-03). MEDIUM, SURE.
+
+**Symptom:** Open an old drawing once (links convert to selectable groups), close without saving, reopen in the same AutoCAD session: the file-name set remembers the discarded conversion and skips it, so object and label no longer move together. Moving the line leaves LABEL-A behind (line at 100,0, label still 500,200). A failed first migration is also remembered.
+
+**Expected behaviour:** Track the current document lifetime instead of a permanent file-name set, remove the entry at document close, do not mark failed work complete; the saved marker stays the cross-session authority.
+
+**Reference:** CODEX_AUDIT2_RD19_24OCT.md RD19-03; `Modules/Structural/Services/LinkMigrationService.cs:22-172`, `LinkService.cs:7-12`, `Models/LinkData.cs:7-15`. Existing: none (BUG-793, BUG-861 are different open/REDO items). Fix kind: code.
+
+**Test that catches it:** RD19_LEGACY.dwg (line plus text with legacy CE_STRUC_LINKS); open, CLOSE No, open again: the group is created again and a second migration line is logged.
+
+**Steps to confirm in AutoCAD:** as the test, then click the line and MOVE with Enter to take the group. Right looks like: label moves with the line.
+
+**Status:** OPEN
+
+## BUG-1205 — Opening a second AutoCAD is recorded as a crash of the first
+
+**Command / Area:** CE admin diagnostics (session record), Civil 3.0.72 (Codex audit RD20-01). MEDIUM, SURE (local diagnostic record; the upload route is parked).
+
+**Symptom:** Every Civil process under one Windows profile shares `sessions/CE_CVL_SUITE.json`. Starting B while A is running reads CleanShutdown=false and writes a Critical "The previous CE CVL session did not close cleanly." The office can investigate a crash that never happened; closing either session can also hide the other's later real abnormal exit.
+
+**Expected behaviour:** A unique owner record per session with process identity and start time; infer an abnormal exit only from an unclean record whose owner is no longer alive; shutdown marks only its own record clean.
+
+**Reference:** CODEX_AUDIT2_RD20_24OCT.md RD20-01; `Shared/CE_SHARED/Services/CeTelemetryStore.cs:74,100`, `Modules/Drainage/Services/AdminTelemetryService.cs:84-176,437,440`, `PluginInitialization.cs:127`. Existing: none (the "did not close cleanly" hits are driver-kill noise, a different cause). Fix kind: code (shared file, sync Manager by hand).
+
+**Test that catches it:** disposable profile, A running, start B, CDDEBUG Status in both; no new crash failure JSON may exist while A lives.
+
+**Steps to confirm in AutoCAD:** as the test, then quit both normally. Right looks like: no "previous session did not close cleanly" record.
+
+**Status:** OPEN
+
+## BUG-1206 — Manager loaded before Civil leaves CE Tools missing until a later status check
+
+**Command / Area:** CE Tools ribbon tab, load order Manager then Civil, Manager 1.1.72 / Civil 3.0.72 (RD20-02). MEDIUM, SURE.
+
+**Symptom:** Manager's ribbon initialiser returns when the shared contributor list is empty, before hooking Idle; Civil registers later with no notification and only queues its own tab. CE Tools (Manager, Version and Health buttons) normally appears only after a 15-second wait, update staging and a 20-second poll that reports a change. Typed Manager commands still work.
+
+**Expected behaviour:** Always queue Manager's initial ribbon build, even with zero contributors; notify Manager when a contributor is added; keep status-only refreshes separate from rebuilding Civil's tab.
+
+**Reference:** CODEX_AUDIT2_RD20_24OCT.md RD20-02; `Modules/Manager/Services/CeUnifiedRibbonService.cs:61,67,156,170`, `Shared/CE_SHARED/Services/CeRibbonRegistry.cs:23`, `PluginInitialization.cs:253`, `Plugin.cs:143-162`, `CeReleaseStatusService.cs:200,234`. Existing: none (BUG-528, BUG-887 are other load-order items). Fix kind: code.
+
+**Test that catches it:** NETLOAD Manager first then Civil; both orders must expose one "CE Tools" tab with a Version button at the next ready Idle.
+
+**Steps to confirm in AutoCAD:** NETLOAD Manager's DLL, then Civil's, look at the ribbon. Right looks like: CE Tools present as in the Civil-first order.
+
+**Status:** OPEN
+
+## BUG-1207 — Two AutoCAD sessions may overwrite lines in the main Civil log
+
+**Command / Area:** CE_CVL_SUITE.log, Civil 3.0.72 (RD20-03). MEDIUM, UNSURE (shared-file construction verified by reading; the lost-line outcome is suspected, not reproduced).
+
+**Symptom:** Each process opens the same log with a long-lived append stream and `FileShare.ReadWrite`, with no session suffix or cross-process lock. A second writer may overwrite the first's bytes, so a support log could lose part of the second session's startup or history while CDDEBUG reports no skipped lines.
+
+**Expected behaviour:** If confirmed: a separate file per session, or serialised append and rotation across processes; no disk waits on the drawing thread.
+
+**Reference:** CODEX_AUDIT2_RD20_24OCT.md RD20-03; `Shared/CE_SHARED/Services/CeLogWriter.cs:133,162,275-360`, `Modules/Drainage/Services/LoggingService.cs:68,92`. Existing: none. Fix kind: probe first, then code.
+
+**Test that catches it:** two CeLogWriter instances on one temp file with A0, B0 (+128 chars), A1 (+4096 chars) written in that order; all three markers must survive on each runtime.
+
+**Steps to confirm in AutoCAD:** run the probe on net48 and net10; if markers survive, close this entry as not reproduced. Right looks like: all three markers once.
+
+**Status:** OPEN
+
+## BUG-1208 — The second AutoCAD can erase a different window's newly saved position
+
+**Command / Area:** window position memory (windowPlacement.remember ON, off by default), Manager 1.1.72 (RD20-04). LOW, SURE.
+
+**Symptom:** Both processes cache the whole `window-places.txt` and replace it on save without re-reading. Arrange Manager in A and About CE in B: B's save writes its stale Manager row, so Manager later opens at its old position.
+
+**Expected behaviour:** Under a cross-process lock, re-read, change only the changed entry, replace atomically with a unique temp file; keep the last good file.
+
+**Reference:** CODEX_AUDIT2_RD20_24OCT.md RD20-04; `Shared/CE_SHARED/Services/CeWindowPlaceStore.cs:138-160`, `Modules/Drainage/Services/CeWindowPlacementHook.cs:154,167`, `Models/UserSettings.cs:2564`. Existing: none (grepped window-places). Fix kind: code.
+
+**Test that catches it:** two sessions, A saves a Manager position, B saves About CE; the file keeps A's Manager row.
+
+**Steps to confirm in AutoCAD:** with remembering ON, drag Manager in A, drag About CE in B, restart A, CEMANAGER. Right looks like: Manager opens where A left it.
+
+**Status:** OPEN
+
+## BUG-1209 — A downpipe cannot be placed directly on a valid pit on AutoCAD 2022-2024
+
+**Command / Area:** DP (downpipe) placement on a pit, older AutoCAD lane, Civil 3.0.72 (Codex audit RD21-01). HIGH, SURE (verified by reading).
+
+**Symptom:** On net48 the exact COPY receipt component (CE_TRANSFORM_2027.arx) is unavailable, the ledger is disabled and the pit is never "association ready", so the pick at a valid pit centre is refused with "Source-to-pit placement is unavailable: Exact source COPY receipts are unavailable on this AutoCAD version." The drafter can place an unjoined downpipe elsewhere but cannot make the direct pit connection. Related BUG-1137 (same lane gap in COPY).
+
+**Expected behaviour:** Decouple ordinary source-to-pit placement from the 2027-only COPY session, using an older-lane association mechanism that also preserves identity through later copies; do not force the readiness flag true (the apply path checks again).
+
+**Reference:** CODEX_AUDIT2_RD21_24OCT.md RD21-01; `Services/SourceCloneMapNativeBridge.cs:35,36,48,185,226`, `LinkService.cs:1598`, `LinkService.SourceLanding.cs:457,497`, `Rules/SourceLanding.cs:114`, `SourcePlacementService.cs:1579`, `BlockService.cs:959`. Existing: none (grepped Source-to-pit; BUG-375, BUG-486 are different). Fix kind: code, protected change, route to owner.
+
+**Test that catches it:** AutoCAD 2022/2023/2024 each: pit P1 at 0,0,0 (600 square, cover RL 20.000), DP, pick 0,0,0; predicted log line "[Source] The pick was refused ..."; 2027 control accepts the same point.
+
+**Steps to confirm in AutoCAD:** as the test, one year at a time. Right looks like: joined placement on every supported year.
+
+**Status:** OPEN
+
+## BUG-1210 — Edit Pipe and Edit Pit lose the real plan and picture selection on the older lane
+
+**Command / Area:** PIPEEDIT, PITEDIT on AutoCAD 2022-2024, Civil 3.0.72 (RD21-02). MEDIUM, SURE.
+
+**Symptom:** On net48 the real plan preview controls and click handlers are compiled out: Edit Pipe shows a generic diagram instead of the actual bent route, and Edit Pit shows a schematic instead of the real block and connected-pipe picture. The drafter cannot click a pipe end to reach its level box or click a pipe tag to select that connection. The numeric editors remain.
+
+**Expected behaviour:** The existing plan controls and their click handlers work on net48 (adapting only real API differences); keep the schematic only when drawing evidence is genuinely unavailable.
+
+**Reference:** CODEX_AUDIT2_RD21_24OCT.md RD21-02; `Dialogs/PipeOnePageLayout.cs:241-251`, `PitOnePageLayout.cs:96-102`, `PipeEditWorkshopDialog.xaml.cs:95`, `PitEditWorkshopDialog.xaml.cs:47`, `Commands/PipeEditCommand.Update.cs:58`, `PitEditCommand.cs:235`, `Controls/CdPlanPreviewControl.cs`, `Controls/PitBlockPreviewControl.cs`. Existing: none (BUG-486 and BUG-526 are listed by the audit as known, different). Fix kind: code.
+
+**Test that catches it:** pipe P1 (0,0) to P2 (10000,5000) bent through (10000,0), inverts 19.000 and 18.850; on 2027 the caption "Real plan, north up." appears and clicking an end ring focuses its level box; on net48 compare.
+
+**Steps to confirm in AutoCAD:** PIPEEDIT the bent pipe, then PITEDIT P1 and click a pipe tag, on 2024 and 2027. Right looks like: the real route and clickable picture on both.
+
+**Status:** OPEN
+
+## BUG-1211 — CDMENU says the Civil menu is loaded after it has been unloaded, but does nothing
+
+**Command / Area:** CDMENU and CDREPAIR "Restore CE Civil Tools", AutoCAD 2022-2024, Civil 3.0.72 (RD21-03). MEDIUM, SURE.
+
+**Symptom:** After CUILOAD unloads CE_CVL_SUITE_MENU, CDMENU prints "[CE] The Civil menu is loaded. If it is still hidden, restart AutoCAD." because the static installed flag short-circuits; the menu stays absent. Repair's "Installed menu: OK" tests only that the menu file exists.
+
+**Expected behaviour:** The explicit restore action rechecks the actual loaded group and reloads it when missing, in the same session; keep the startup optimisation; report loaded only after checking.
+
+**Reference:** CODEX_AUDIT2_RD21_24OCT.md RD21-03; `Services/WorkspaceMenuInstallerService.cs:30,35,127`, `StandaloneCivilRibbonService.cs:34`, `Commands/HubCommands.cs:780,790`, `Dialogs/CdRepairDialog.xaml.cs:45,53`. Existing: none (grepped CDMENU). Fix kind: code.
+
+**Test that catches it:** AutoCAD 2024, CDMENU, CUILOAD unload CE_CVL_SUITE_MENU, CDMENU again, reopen CUILOAD; the group must be back (repeat via CDREPAIR on 2022 and 2023).
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: the group reappears in CUILOAD.
+
+**Status:** OPEN
+
+## BUG-1212 — CDWT loses both tank-selection pictures and the first window on AutoCAD 2022-2024
+
+**Command / Area:** CDWT, older lane, Civil 3.0.72 (RD21-04). MEDIUM, SURE (a deliberate compatibility gap recorded in the project file comments).
+
+**Symptom:** WaterTankDialog and WaterTankPlanBlockPickerDialog are removed on net48; the drafter answers command-line questions ("Adopt a block already in the drawing, or Insert a plan block from the office master?") and chooses shapes from text names with no plan pictures. The requested "window comes first" workflow is not met on this lane (see also BUG-1174).
+
+**Expected behaviour:** Port the two WPF windows and their preview classes to net48 and remove the conditional exclusions; keep the command-line fallback only for an actual window-opening failure.
+
+**Reference:** CODEX_AUDIT2_RD21_24OCT.md RD21-04; `CE_CVL_SUITE.csproj:269-275`, `Commands/WaterTankCommand.cs:92,99,333,425,436,562,614`. Existing: none. Fix kind: code (port).
+
+**Test that catches it:** same synthetic master (round and rectangular plan blocks) on both lanes; 2027 opens "Creative Engineering | Water tank", net48 asks the sentence; corrected net48 offers the window and both pictures.
+
+**Steps to confirm in AutoCAD:** CDWT on 2024 and 2027 with the same master. Right looks like: the same window on both.
+
+**Status:** OPEN
+
+## BUG-1213 — Older AutoCAD cannot open the council evidence behind a value or saved rule finding
+
+**Command / Area:** CDRULEBOOK and CDRULES "Source", AutoCAD 2022-2024, Civil 3.0.72 (RD21-05). MEDIUM, SURE.
+
+**Symptom:** The Source keyword and handler are compiled out of both commands, along with the window, model and renderer; the older-year menu does not explain why Source has vanished. A colleague can see values and run checks but cannot inspect the council evidence or a saved check's retained evidence.
+
+**Expected behaviour:** Keep Source registered on every supported lane; if the PDF renderer cannot be shared, show a read-only fallback with retained source text, file/page reference and an open-source action, saying the in-window PDF picture is unavailable. Never substitute today's values for a saved finding's evidence.
+
+**Reference:** CODEX_AUDIT2_RD21_24OCT.md RD21-05; `Commands/RulebookCommand.cs:43,70,96`, `Commands/RulesCommand.cs:49,61,134`, `CE_CVL_SUITE.csproj:269,270`, `ViewModels/CouncilSourceViewModel.cs`, `Services/CouncilSourcePageRenderer.cs`. Existing: none. Fix kind: code.
+
+**Test that catches it:** drawing with a valid council profile and one saved finding; CDRULEBOOK Source and CDRULES Source on 2024 and 2027.
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: Source is listed and opens evidence on every year.
+
+**Status:** OPEN
+
+## BUG-1214 — The older-year markup file picker offers PDFs that it always rejects
+
+**Command / Area:** CDASK, "From file...", AutoCAD 2022-2024, Civil 3.0.72 (RD21-06). LOW, SURE.
+
+**Symptom:** The picker filter includes PDF unconditionally; selecting a valid redline PDF gives "PDF support requires AutoCAD 2025 or later." and the file never reaches analysis. PNG and JPG work.
+
+**Expected behaviour:** Match the picker filter and guidance to the compiled lane (images only on net48); a PDF supplied through All files can still be rejected; PDF backport is separate work.
+
+**Reference:** CODEX_AUDIT2_RD21_24OCT.md RD21-06; `Services/MarkupFileImageLoader.cs:40,68,203,212`, `Controls/CeAssistantControl.xaml.cs:322,332,349`, `CeAssistantControl.xaml:162`. Existing: none. Fix kind: code.
+
+**Test that catches it:** CDASK on 2024, From file, choose the PDF filter and a one-page PDF; expect the sentence; corrected picker omits PDF.
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: no PDF option on 2022-2024.
+
+**Status:** OPEN
+
+## BUG-1215 — Feedback Help promises a separate "Save report" and send step that does not exist
+
+**Command / Area:** CDHELP Feedback page and CDFEEDBACK, Civil 3.0.72 (Codex audit RD22-01). MEDIUM, SURE.
+
+**Symptom:** Help says "saving is separate from sending it" and tells the drafter to click "Save report". The window has "Send report", which saves locally and copies to the office folder in the same call. A drafter expecting a saved draft sends a report.
+
+**Expected behaviour:** Help names "Send report", explains the immediate office-copy attempt and the local-only fallback when the office folder is unreachable. No behaviour change.
+
+**Reference:** CODEX_AUDIT2_RD22_24OCT.md RD22-01; `Assets/Help/guide-content.js:98`, `Dialogs/FeedbackDialog.xaml:178`, `Commands/FeedbackCommand.cs:52`, `Services/FeedbackService.cs:148-203`. Existing: none. Fix kind: help text.
+
+**Test that catches it:** the Help text contains neither "separate from sending" nor "Save report"; sending with a writable test folder prints "Report sent to the office feedback folder".
+
+**Steps to confirm in AutoCAD:** CDHELP, search CDFEEDBACK, read Feedback. Right looks like: it describes Send report.
+
+**Status:** OPEN
+
+## BUG-1216 — Help retains the previous command for newer Civil tools (CDRAINFALL, CDDESIGN, CDCHECKS, CDRUNSOLVE)
+
+**Command / Area:** CDHELP automatic topic, Civil 3.0.72 (RD22-02). MEDIUM, SURE.
+
+**Symptom:** The tracked-command map lacks CDRAINFALL, CDDESIGN, CDCHECKS and CDRUNSOLVE, so a command outside it leaves the previous name and time intact. Run CDS, close, CDRAINFALL, close, CDHELP within ten minutes: Help opens Settings instead of Rainfall.
+
+**Expected behaviour:** Extend the tracked-command map and resolve aliases to the guide topic; never keep a misleading previous topic when a recognised CE command has no guide page.
+
+**Reference:** CODEX_AUDIT2_RD22_24OCT.md RD22-02; `Services/CdHelpService.cs:40,125,227,230`, `HelpLauncher.cs:39`, `Assets/Help/guide-content.js:52`. Existing: none. Fix kind: code.
+
+**Test that catches it:** CDS, CDRAINFALL, CDHELP in sequence must select "Rainfall · CDRAINFALL".
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: Rainfall page.
+
+**Status:** OPEN
+
+## BUG-1217 — Calculations Help invites input to Pump System and WSUD calculators that are read-only
+
+**Command / Area:** CDHELP Calculations page and CDCALC, Civil 3.0.72 (RD22-03). MEDIUM, SURE.
+
+**Symptom:** Help lists Pump System and WSUD with the working calculators and says to enter inputs and calculate; the real tabs are "Older calculators - Pump System" and "Older calculators - WSUD" and their text boxes are read-only. A drafter starting a new pump or water-quality calculation hits a dead end.
+
+**Expected behaviour:** Use the current tab names and say those two pages are for reading existing calculations only; limit "enter and calculate" to editable pages. Do not enable the parked calculators as a documentation fix.
+
+**Reference:** CODEX_AUDIT2_RD22_24OCT.md RD22-03; `Assets/Help/guide-content.js:63`, `Dialogs/CalculationsV2Dialog.xaml:780,788,1005,1013,1024`. Existing: none (the missing-banner bug is a different entry). Fix kind: help text.
+
+**Test that catches it:** Help text names both pages as read-only; typing into "Pump flow rate (L/s)" leaves it unchanged.
+
+**Steps to confirm in AutoCAD:** CDHELP search CDCALC, then CDCALC and try to type into the two tabs. Right looks like: Help matches what the tabs do.
+
+**Status:** OPEN
+
+## BUG-1218 — Label Styles (CDLABELSTYLE) and Move Arrow (CDMA) have a Help destination with no page
+
+**Command / Area:** CDHELP / F1 from Label Styles, Civil 3.0.72 (RD22-04). LOW, SURE.
+
+**Symptom:** F1 in Label Styles opens the general guide; searching CDLABELSTYLE gives "No matching topic. Try a command name or a shorter word." The guide builds cards only from its panel entries, none for CDLABELSTYLE; CDMA has the same pattern.
+
+**Expected behaviour:** Add short Label Styles and Move Arrow pages (or route each to an equivalent explanation) and make the commands searchable.
+
+**Reference:** CODEX_AUDIT2_RD22_24OCT.md RD22-04; `Services/CdHelpService.cs:49,125`, `Commands/LabelStyleCommands.cs:20,33`, `Assets/Help/guide-content.js:93,135`, `help-pages.js:20,24,64,68`. Existing: none (BUG-1046, CDLABELSTYLE refusing to open on a layout, is a different fault). Fix kind: help content.
+
+**Test that catches it:** CDLABELSTYLE then F1 shows "Label Styles · CDLABELSTYLE"; searching it returns a topic.
+
+**Steps to confirm in AutoCAD:** as the test. Right looks like: a Label Styles page.
+
+**Status:** OPEN
+
+## BUG-1219 — Structural Beam Settings and Rafter/Joist Settings Help describe placing a member, but the commands only open Settings
+
+**Command / Area:** CEHELP (Show advanced commands), "Beam Settings (8)" and RJSET, Structural 1.0.122 (RD22-05). LOW, SURE.
+
+**Symptom:** Help tells the drafter to pick Start point, End point and Text/suffix options (Beam) or Direction, Extent and Tag text (Rafter/Joist). Neither command asks those questions; both open CE Settings on the Beam or Rafter / Joist page.
+
+**Expected behaviour:** Replace both prompt lists with the actual Settings-page route and the current save/close steps; keep the old typed commands.
+
+**Reference:** CODEX_AUDIT2_RD22_24OCT.md RD22-05; `Assets/Config/command-registry.json:2080,2681`, `Commands/BeamSettingsCommand.cs:22`, `RafterJoistCommands.cs:90`, `UI/Dialogs/CommandHelpWindow.xaml.cs:306,337`. Existing: none. Fix kind: help text.
+
+**Test that catches it:** CEHELP entries for 8 and RJSET contain no placement steps; typing RJSET opens CE Settings on Rafter / Joist.
+
+**Steps to confirm in AutoCAD:** CEHELP, tick Show advanced commands, open the two entries, then type RJSET and 8. Right looks like: Help matches the Settings pages.
+
+**Status:** OPEN
+
+## BUG-1220 — Reverse Flow Help promises a change preview and an Apply button that do not exist
+
+**Command / Area:** CDHELP, CDREVERSEFLOW, Civil 3.0.72 (RD22-06). LOW, SURE.
+
+**Symptom:** Help says "Change preview and confirmation" and to check every proposed change before Apply. AutoCAD instead prints a general explanation and asks "Continue? Yes/No" (default No); answering Yes reverses at once. There is no item-specific preview and no Apply.
+
+**Expected behaviour:** Describe the existing command-line Yes/No confirmation, what is swapped (From/To and their end values, arrow flipped) and what stays put; remove the preview and Apply promises.
+
+**Reference:** CODEX_AUDIT2_RD22_24OCT.md RD22-06; `Assets/Help/guide-content.js:101`, `Commands/RibbonContextCommands.cs:46,54,56,63`. Existing: none (grepped Reverse Flow; other hits are acceptance notes). Fix kind: help text.
+
+**Test that catches it:** Help no longer mentions a preview or Apply; on a pipe with inverts 10.00 / 9.90, Enter at "Continue?" prints "[CE] Nothing was changed." and the inverts are unchanged.
+
+**Steps to confirm in AutoCAD:** CDHELP search CDREVERSEFLOW, then run the command on a test pipe and press Enter. Right looks like: Help matches the Yes/No step.
 
 **Status:** OPEN
