@@ -4,8 +4,8 @@
 
 1. **Status:** validation in progress. Nine new cases in `Modules/Manager.Tests/Services/Bd03ManagerRegressionTests.cs`; focused run 9 passed, 0 failed, 0 skipped. No product source changed.
 2. **Tests per bug:** BUG-425: 1; BUG-832: 1; BUG-835: 1; BUG-842: 1; BUG-848: 2; BUG-1028: 3. These cover missing branches of fixes with existing basic tests, rather than claiming those bugs had no tests at all.
-3. **Branch and base:** `cx3/tests-bd03`, private worktree `C:\ce-cx\bd03`, from fetched `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Draft PR and final head pending.
-4. **Totals:** focused Manager 9/9. Full Manager and Civil/build validation pending. The first full Manager invocation put the log override beside TEMP, causing existing containment guards to fail; this is a runner setup error and will be rerun with the override beneath TEMP.
+3. **Branch and base:** `cx3/tests-bd03`, private worktree `C:\ce-cx\bd03`, from fetched `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Draft PR [#1703](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1703), current head `1fcf5b5b6a442cccb2f9fa344c3ee4f9a92e8fea`; final verification pending.
+4. **Totals:** focused Manager 9/9. Full Manager corrected run: 941 total, 940 passed, 1 existing skipped case, 0 failures. Civil/build validation and the final added approval-log assertion rerun pending. The first full Manager invocation put the log override beside TEMP, causing existing containment guards to fail; this is a runner setup error and will be rerun with the override beneath TEMP.
 5. **New findings:** none established by the new cases so far. No bug status changed.
 6. **What a drafter sees:** no change: this branch adds tests only. For example, it checks that a locked Civil approval does not hide another tool's approval.
 7. **Not run:** AutoCAD, accoreconsole, installer tests, deployment, window rendering. No window was changed; no screenshots are claimed. No installation or acceptance claimed.
