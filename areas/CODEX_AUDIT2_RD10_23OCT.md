@@ -40,7 +40,7 @@
 
 2. **RD10-02 — MEDIUM — SURE — the new skipped-write result is treated as a saved Ignore choice. VERIFIED-BY-READING.**
 
-   **File:line.** At #1658 `f007893b`, `Modules/Drainage/Services/ProjectDataService.IgnoredChecks.cs:40` returns normally when the hold prevents writing. Its caller at `:21` cannot distinguish this from a committed save. In base `f7f7d551`, `Services/Checks/IgnoreFindingWriteGate.cs:47` calls the write action and `:48` marks it applied; `Commands/CheckIgnoreCommand.cs:170` then prints success at `:171`. The reverse choice has the same contract at `:197` and `:198`. `Services/ProjectDataService.DrawingOwnedKeys.cs:39` merely returns when the subsequent read fails.
+   **File:line.** At #1658 `f007893b`, `Modules/Drainage/Services/ProjectDataService.IgnoredChecks.cs:40` returns normally when the hold prevents writing. Its caller at `:21` cannot distinguish this from a committed save. In base `f7f7d551`, `Services/Checks/IgnoreFindingWriteGate.cs:44` calls the write action and `:45` marks it applied; `Commands/CheckIgnoreCommand.cs:170` then prints success at `:171`. The reverse choice has the same contract at `:197` and `:198`. `Services/ProjectDataService.DrawingOwnedKeys.cs:39` merely returns when the subsequent read fails.
 
    **What the drafter sees.** CE can first say the Ignore choice was not saved, then say “Ignored” and promise U will take it back. A second attempt can show only the success message, because the safeguard's notice is limited to once per write kind. The finding has not actually been hidden by a saved decision.
 
