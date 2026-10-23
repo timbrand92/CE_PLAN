@@ -120,3 +120,8 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 2. **Unequal angles:** only long-leg-up can be drawn today. **Recommendation:** add long-leg-flat, so a 150x90 ledger angle with the 150 leg lying flat can be drawn.
 3. **C purlin, flanges up, top view:** **Recommendation:** draw the flange lines hidden, because the lips sit over them.
 4. **Corrected steel section list** (you checked the ten rows on 19 Oct: "looks right"): the installed command still uses the OLD list (310UB32.0 is refused, there is no Z15015, the 380PFC web is 13.5 mm not 10 mm). **Recommendation:** put the corrected list in now, together with the code changes it needs. Yes or no?
+
+## Added 23 Oct 2026 evening (desk plan/03)
+
+1. **Pipes with an Unknown material (BUG-868, draft PR #1664):** when a pipe's material is Unknown, which roughness should the design use? **Recommendation:** the Settings roughness (0.013), which is what the builder used, because Unknown is then visible and you can change the number in one place. **Example on a job:** an old pipe picked up from a survey with no material would be sized as if it were smooth concrete rather than UPVC. **Other choice:** treat Unknown as UPVC (smoother, slightly smaller pipes).
+2. **Wording (Max builder, 23 Oct):** should messages say "Unknown" or "not known" when a value is missing? **Recommendation:** "Unknown" everywhere, because it already matches the Pit Schedule and the Settings page. Nothing was changed until you decide.
