@@ -65,6 +65,8 @@
 
 **Status:** OPEN
 
+**Codex W1-03 (23 Oct, 3.0.70):** the header read 95 before and 95 after CDSYNC, but the copy had already been edited by W1-01 and W1-02, so this neither confirms nor clears the robot's 95 to 96.
+
 ---
 
 ## BUG-854 — CDRULES R-06 "not known" rows say "Enter the detention pipe diameter" while the row says to enter the length
@@ -373,6 +375,8 @@
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1444, #1492; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** its installed fix leaves the empty or stale `--approved-version=` bypass and the silent unknown approval (ledger F-020, BUG-886).
+
 ---
 
 ## BUG-833 — One error in a normal update step silently turns off the status dot and report upload for the whole session
@@ -637,7 +641,7 @@
 
 **Reference:** CLAUDE_DRIVER_RUN31_V2_2026-10-18.md, B item 11 (also run 30, item 13). Same family as the undo marks in BUG-805 / Codex W36 (U echoing "PITSCHEDULE" on a typed level). Not seen by Tim. Next tester: watch DBMOD and the drawn table text before and after opening the window.
 
-**Status:** OPEN
+**Status:** OPEN (Codex W2-04 FAIL SURE 23 Oct on Civil 3.0.70: open and Close with no edit, DBMOD 21 to 21, one U echoes PITSCHEDULE; REDO "Everything has been redone"; confirmed independently of the robot)
 
 **run 32 (19 Oct, 3.0.56): STILL SEEN:** after the cascade Apply, one U echoed "PITSCHEDULE" and the second U echoed "CDEDIT"; the Pit Schedule then read 0 differences from the untouched copy (CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 2). DBMOD was not watched.
 
@@ -704,7 +708,7 @@
 
 **Reference:** CLAUDE_DRIVER_RUN31_V2_2026-10-18.md, C item 5 (1) to (4). See also BUG-372 (handle in the tidy line) and BUG-754 / BUG-753 (internal ids in the Checks list).
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1429, #1439; robot or Codex observation PASS recorded, not yet Codex-accepted; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1429, #1439; robot PASS runs 34 and 35; Codex W1-05 BLOCKED 23 Oct: the fresh fixture has no DP3 tags, which the robot builds itself; re-run with the robot's setup)
 
 **run 32 (19 Oct, installed Civil 3.0.56 / C-45):** part 2 (CDFIXTAGS refusal wording): PASS, the DP3 line now reads "CE could not match this source block to the drawing's own records, so nothing was changed. Run CDREPAIR, then try again." (B item 13). Part 3 (CDCHECKS names pipes by handle): STILL SEEN: the R-06 rows still say "1093C7", "109CCF and WT10", "10993C and 10996E", never "unnamed pipe"; the rows come from `RulebookEngine.PipeMark`, which falls back to the handle (B item 7). Part 1 (CDTAG retag of a tagged source): UNPROVEN, CDTAG ignored the pick-first selection (B item 14, see BUG-821). The untagged-name refusal reads plainly: "[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed." run 32: PASS for that line (B item 12; see BUG-742). Robot evidence only.
 
@@ -790,7 +794,7 @@
 
 **Reference:** HUNT_CIVIL_LM, findings LM-24, LM-25, LM-27, LM-28 and LM-29. Code: Commands/SpineCheckCommand.cs:33-38 vs Services/Checks/ChecksResult.cs:299-309; Commands/CheckDwgCommand.cs:80-91; Services/ConsultantDwgCheckService.cs:186-189, :313-316; Services/MinimumCoverForChecks.cs:25; Services/DrawingCheckPaletteService.cs:266-275, :296-319; Services/Checks/ChecksResultReader.cs:170. Test for (3): `Choose(false, null, 0.0)` returns 0 today.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1409, #1418, #1430; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1409, #1418, #1430; item 4 Codex W5-06 BLOCKED 23 Oct: the row clicked was not a drawing object; items 1 to 5 still untested)
 
 ---
 
@@ -889,6 +893,8 @@
 **Reference:** HUNT_CIVIL_LM, finding LM-23. Code: Services/Checks/IgnoredChecks.cs:204-221, :249-260; ProjectDataService.IgnoredChecks.cs:13-15. Test: `IgnoreFingerprint.ForRow` gives the same hash after the cover changes (RED). Fix before the Ignore button ships.
 
 **Status:** OPEN
+
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** ledger F-005 (BUG-875) is the same root (the ignore fingerprint holds only the pipe); fix together.
 
 ---
 
@@ -1055,7 +1061,7 @@
 
 **Reference:** HUNT_CIVIL_LM, finding LM-46. Code: Dialogs/PitScheduleDialog.xaml.cs:218; Schedule.cs:555; ScheduleLinkService.cs:1891; PitScheduleDifferenceService.cs:471-488. Window code-behind: no pure test.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1425; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1425; Codex W2-02 PASS SURE 23 Oct on 3.0.70: F2-Enter leaves the cell plain, a typed Cover is marked gold/italic, a typed size resizes the pit and stays plain; robot cannot judge cell colours and no runner case exists, so not yet Codex-accepted under RULES 13.3)
 
 ---
 
@@ -1099,7 +1105,7 @@
 
 **Reference:** HUNT_CIVIL_LM, finding LM-45. Code: Services/PitScheduleXrefDiscoveryCore.cs:56; PitScheduleXrefDiscoveryService.cs:394-398. Test: `Discover` with two probes sharing a fingerprint but different JSON.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1404; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** REOPENED 23 Oct 2026 (CODEX_SWEEP_S05 S05-01, ledger F-154, Opus check VERIFIED): the Xref fingerprint returns the first Xref's record. PitScheduleXrefDiscoveryService.cs:394-398 returns the first Xref's record for any later Xref with the same FingerprintGuid, so the installed fix (#1404, core only) never sees a SAVEAS copy's different data. Fix the adapter, not the core. Earlier status: OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1404; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
 ---
 
@@ -1155,7 +1161,7 @@
 
 **Reference:** HUNT_CIVIL_LM, finding LM-04. Code: Services/PitScheduleBuilder.cs:209-217, :151, :248-249; Services/ScheduleLinkService.cs:2548. Test: `BuildInletFromDisplay` with a pit C1 of type "Standard" returns "C1".
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1413; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1413; Codex W2-01 NOT TESTED 23 Oct: FIXTURE, DRV1_B1 has no inlet from a non-P pit; real pit names P1 to P7 keep their numbers; needs a fixture with a C or CP pit upstream)
 
 ---
 
@@ -1169,7 +1175,7 @@
 
 **Reference:** HUNT_CIVIL_LM, findings LM-44 and LM-12. Code: Services/ScheduleLinkService.cs:1887-1932, :2496; PitScheduleViewModel.Schedule.cs:644; Filters.cs:29-58; Data.cs:1522-1528. Fix: map DELETE to blank inside `BuildCellText` and `ApplyDepthRemark`. Test: `RefreshLinkedCellFromRecord` with a Cover="DELETE" override.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1412; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1412; Codex W2-03 BLOCKED 23 Oct: the cell right-click menu has no Delete cell item on this build, so the route cannot be reached; see BUG-1031)
 
 ---
 
@@ -1266,7 +1272,7 @@
 
 **Reference:** HUNT_CIVIL_IJK, finding IJK-X1. Code: Rules/TopWaterLevelCandidates.cs:73-84 (`RulebookDefault`). Not seen in AutoCAD. Test: pure test on `RulebookDefault`.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1411; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1411; Codex W1-04 SEEN 23 Oct: the usual-rule row offers 18.05 and names pipe 10B03B; cross-check of invert plus diameter not done; wording fault split out as BUG-1032; engineering default needs the cross-check before acceptance)
 
 ---
 
@@ -1336,7 +1342,7 @@
 
 **Reference:** HUNT_CIVIL_IJK, finding IJK-19. Code: ViewModels/WsudViewModel.cs:164-169. Not seen in AutoCAD. Test: pure test on `WsudViewModel`. (The series-credit question, IJK-18, is in QUESTIONS_FOR_MONDAY section H.)
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1428; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1428; cannot be tested on this build: Codex W5-03, 23 Oct, saw the WSUD tab read-only, typing refused)
 
 ---
 
@@ -1532,7 +1538,7 @@
 
 **Reference:** HUNT_CIVIL_IJK, finding IJK-03. Code: Dialogs/CalculationsV2Dialog.xaml:278, :318-319; CalculationsV2Dialog.xaml.cs:40-73, :93; ViewModels/LongitudinalSectionViewModel.cs:63-66, :542-557, :1714-1721, :1778-1882, :1913; Services/LongitudinalSectionService.cs:378, :425. Test: source guard that `InsertSection` calls `TryAdmit`; `TryAdmit` on a 0.0 cover.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1407, #1408; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1407, #1408; Codex W5-01 PASS SURE 23 Oct for the window half only: the Older longitudinal tab is present by default, ten tabs readable; no robot or runner case; the tab-hidden switch and the engineering half are untested)
 
 ---
 
@@ -1600,7 +1606,7 @@
 
 **Reference:** CODEX_LOOK_L4_20261018_1119.md, looks L4-05-row1 and L4-05-row3 (DIFFERENT, UNSURE); evidence L4-13-checks-open.png, L4-14-checks-row1-immediate.png, L4-16-checks-row3-immediate.png. Test: a pure test that the row text for a pipe with no tag still contains no 'CE-CIV-PIPE-' id; then a Codex look with a faster capture for the glow.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1387, #1388; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** OPEN (fix installed in Civil 3.0.70 via PR #1387, #1388; Codex W3-02 BLOCKED UNSURE 23 Oct: 8 sampled palette views show "unnamed pipe" and no CE-CIV-PIPE- text, but the 618-row list was not read end to end; needs runner case C15 for the full text, then a Codex look)
 
 **Codex look L4 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56):** PARTLY SEEN: L4-05-row1 and L4-05-row3 DIFFERENT, UNSURE. The rows no longer print the internal id: they read '(!) unnamed pipe and TG1: unnamed pipe flows from TG1: Unresolved ...' and '(!) unnamed pipe and WT10: unnamed pipe flows to WT10 ...'. But the pipe still has no name or position to tell two such rows apart (see also BUG-814). Show where moved the view to TG1 and to WT10/WT11 but no soft glow was plainly visible in the immediate or the 2-second-later capture; fade time unknown, so the glow is not judged. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-19-checks-row1-immediate.png, L4-20-checks-row1-later.png, L4-21-checks-row3-immediate.png.
 
@@ -1964,6 +1970,8 @@
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md, finding C7. Code: Helpers/LandXmlParser.cs:189, 446-460. Test first: TryParse.
 
 **Status:** OPEN
+
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** second report of the millimetre LandXML x1000 scale, CODEX_SWEEP_S11 S11-02 (ledger F-171), `LandXmlParser.cs:189, 459`. Also filed as FB-17.
 
 ## BUG-724
 
@@ -7681,6 +7689,8 @@ The **real live crash** is the same exception in a path that IS registered: `Lin
 
 **Status:** FIXED — 2026-05-13 (Tim confirmed; reconciled 23 Oct 2026 from the Status Summary table)
 
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** ledger F-229 (BUG-1023) proposes removing its 90 per cent sort-map rule; if Tim agrees, BUG-008 must be re-tested. Status unchanged until then.
+
 ---
 
 ## BUG-009
@@ -11557,6 +11567,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** FIXED — 2026-10-20 (Codex-accepted, V2-04, Civil 3.0.64; reconciled 23 Oct 2026)
 
+**Codex W1-03 (23 Oct 2026, Civil 3.0.70): PASS SURE, regression still passes.** Rows identical before and after CDSYNC (11 pits, 49 pipes relinked); robot run 46 PASS on 3.0.69.
+
 **run 31 (18 Oct, 3.0.55): PASS.** CDSYNC (typed) relinked 11 pits and 49 pipes and the Pit Schedule read before and after showed 0 differences; sizes 450, 375, 150 and 100 unchanged (CLAUDE_DRIVER_RUN31_V2_2026-10-18.md, B item 9). Real AutoCAD 2027, test copy, Claude robot; not Codex-accepted, not Tim-accepted.
 
 **run 32: PASS (19 Oct, 3.0.56).** CDSYNC again relinked 11 pits and 49 pipes; the Pit Schedule read before and after showed 0 differences, sizes 450 / 375 / 150 / 100 unchanged (CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 4). Robot evidence only; not FIXED until Tim or Codex accepts.
@@ -11601,6 +11613,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Reference:** CODEX_VERIFY_V2_20261020_1909.md item 13 (evidence V2-23-grade-mismatch-0.png). The box is expected on this placement; the retry brief verifyV2b_retry handles it by closing with X.
 
 **Status:** OPEN
+
+**Codex W4-02 (23 Oct, 3.0.70): still seen.** Closing Grade mismatch with X placed the pipe with the typed 1 IN 100. Still needs Tim's call on what X should mean.
 
 ---
 
@@ -11724,6 +11738,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (Codex build cx_b07_real_length_c60 queued 22 Oct)
 
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** second report, CODEX_SWEEP_S08 S08-01. PRs #1530 / #1531 are MERGE-WITH-FIXES in REVIEW_CODEX_PRS_B.
+
 ## BUG-868
 
 **Command / Area:** CDRUNSOLVE, network redesign and size proposals (audit finding 2). HIGH.
@@ -11739,6 +11755,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Symptom:** The Pit Schedule still measures depth to the outlet pipe, not the pit floor.
 
 **Status:** OPEN — built and unit-tested, draft PR #1531, branch `cx/eng-pit-floor-c60`, head `4a438d26` (23 Oct 2026). All 33 added cases pass; final Civil 19,187 total / 19,167 passed / 19 skipped / one Glen Eira failure independently reproduced on untouched base; three Release lanes zero errors. Not installed or real-AutoCAD accepted. Report and exact tester check: `areas/CODEX_BUILD_ENG_PIT_FLOOR_22OCT.md`.
+
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** PRs #1530 / #1531 are MERGE-WITH-FIXES in REVIEW_CODEX_PRS_B.
 
 1. **Reproduction:** cover 11.00, inlet 10.20, outlet 10.15, stored `PitData.InvertLevel` 10.05. Schedule gives 0.85 m; pit-floor depth is 0.95 m, deeper than the unchanged 900 mm step-iron threshold.
 2. **Guard:** `PitScheduleFloorDepthTests.Audit8_Cover11_Outlet1015_Floor1005_Is095` failed before the fix, expected 0.95, actual 0.85. New checks cover unknown floors, Settings OFF, old drawn-cell adoption and exports.
@@ -11775,6 +11793,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Symptom:** importing `250UB25.7 BEAM` prints `250 UB 26 BEAM`; `410UB59.7` prints `410 UB 60`. The expected supplier designation keeps the decimal mass exactly, including `310UB32.0`.
 
 **Status:** OPEN — built and unit-tested in draft PR #1533, `cx/xclmtxt-s41`, head `40c9a977`, based on Structural 1.0.121. The same 445 focused tests give 32 failures before and 445 passes after; all three Structural lanes build with 0 errors. Full net10: 5,650 passed; net48: 4,910 passed / the same 39 original-release failures / 698 skipped. Reachable from insertion and advanced editing. Not installed or AutoCAD-accepted. Exact robot check and evidence: `areas/CODEX_BUILD_XCLMTXT_23OCT.md`. Catalogue property corrections remain BUG-818.
+
+**Note 23 Oct 2026 (from CARPARK_NEW_ENTRIES_23OCT):** add CODEX_SWEEP_S14 S14-03 (rated HIGH there; the saved schedule record and the drawing text also disagree; #1533 fixes both).
 
 ## AUDIT-XCLMTXT-ANGLES (22 October Structural engineering audit, finding 1)
 
