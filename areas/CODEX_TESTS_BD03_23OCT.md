@@ -34,7 +34,7 @@
 
 1. **Approvals/update route:** point a disposable profile at a synthetic office folder with a newer Civil/Manager pair. Hold Civil's approval file: CEMANAGER must still show other valid approvals. Release it and Refresh: Civil returns. Force Civil staging to fail: Manager must stay on its earlier version; an unrelated eligible tool may still prepare. Do not activate or install stages.
 2. **Settings and rollback:** on a disposable profile, hold the CE Blocks settings file after it has loaded, attempt a save, then release it: original settings survive and no `.tmp` remains. Reapprove one signed test release: its earlier rollback identity remains intact. Keep Show Roll Back OFF.
-3. **Logs and loader:** use a test build/contributor that fails two ribbon tabs: each reason is in the redirected Manager log, with one plain ribbon notice. A broken synthetic manager-switches.json also gets its own notice and is left unchanged. Other tabs and typed commands remain available. No fault injection or settings change on Tim's live profile.
+3. **Logs and loader:** use a test build/contributor that fails two ribbon tabs: each reason is in the disposable account's Manager log, with one plain ribbon notice. A broken synthetic manager-switches.json also gets its own notice and is left unchanged. Other tabs and typed commands remain available. No fault injection or settings change on Tim's live profile.
 4. **Waiting reports:** put only unfinished synthetic .TMP/.BAK files in the disposable profile's outbox and click Send waiting reports: zero reports sent; files remain on that PC. A real OneDrive race remains unproven.
 
 ## Completed build evidence
@@ -49,9 +49,9 @@
 ## Exact native follow-up setup (future robot session only; not performed by BD03)
 
 1. **Use a disposable Windows account/VM with synthetic drawings and approved test packages.** Do not change Tim's profile. Use the same code head named in this report, with controlled signed test releases newer than the running pair. No installation was done in this job.
-2. **Office folder:** for that future AutoCAD process set `OneDriveCommercial=C:\ce-bd03-real\Office`; put only synthetic approval/release fixtures beneath `C:\ce-bd03-real\Office\Creative Engineering - IT Admin\releases`. Leave `CE_LOG_DIR_OVERRIDE` unset in AutoCAD; it must not move AutoCAD's real settings into a test folder.
+2. **Office folder:** for that future AutoCAD process set `OneDriveCommercial=C:\ce-bd03-real\Office`; put only synthetic approval/release fixtures beneath `C:\ce-bd03-real\Office\Creative Engineering - IT Admin\CE Plugin Admin\releases`. Leave `CE_LOG_DIR_OVERRIDE` unset in AutoCAD; it must not move AutoCAD's real settings into a test folder.
 3. **Approval check:** hold `releases\CE_CVL_SUITE\approved.json` open with FileShare.None; type CEMANAGER and click Refresh. Manager's other valid approval remains visible; the Manager log names the skipped Civil approval. Release the handle and click Refresh: Civil's offer returns. Nothing is activated.
-4. **Switch/loader check:** in that disposable account only, put `{"oneGlanceStatus":true,}` in `%APPDATA%\CE_SUITE\manager-switches.json`, then start AutoCAD in the separate robot session. Expect one plain notice that normal defaults are in use and a persistent reason in `%APPDATA%\CE_CADTOOLS\CE_Admin\logs\manager-trace.log`; the malformed file must remain byte-for-byte unchanged. Two failing ribbon-contributor checks additionally need a controlled fault-injection fixture, which this tests-only branch does not ship; no native proof is claimed for them.
+4. **Switch/loader check:** in that disposable account only, put `{"oneGlanceStatus":true,}` in `%APPDATA%\CE_SUITE\manager-switches.json`, then start AutoCAD in the separate robot session. Expect one plain notice that normal defaults are in use and a persistent reason in `%LOCALAPPDATA%\CE_SUITE_MANAGER\crash_trace.log`; the malformed file must remain byte-for-byte unchanged. Two failing ribbon-contributor checks additionally need a controlled fault-injection fixture, which this tests-only branch does not ship; no native proof is claimed for them.
 
 ## Safety and handoff
 
