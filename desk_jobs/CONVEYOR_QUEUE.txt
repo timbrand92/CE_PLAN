@@ -11,3 +11,4 @@ verifyW8_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
 verifyX1_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
 verifyX2_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
 verifyX3_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX4_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
