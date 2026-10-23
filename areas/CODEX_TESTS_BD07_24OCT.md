@@ -4,7 +4,7 @@
 
 1. **Four tests written:** BUG-773 two (concave raingarden saved centre, both tracing directions); BUG-967 two (actual Blue Factor PDF extraction and reader, Garden/Lawn excluded from hard area, unknown outlet preserved). Not yet counted as passing.
 2. **Draft PR:** [#1725](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1725), branch `cx3/tests-bd07`, head `e14ece596453c3516348f40164114d3ca506fcda`. Base `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`, fetched first. Own worktree `C:\ce-cx\bd07`.
-3. **Totals:** pending; foreground Release builds started at 05:53 after the shared-lock queue. No zero-test success claimed. Initial C: 21.19 GB free; hard stop below 14 GB.
+3. **Builds so far:** net48 0 errors / 242 warnings; net8 0 errors / 210 warnings. Net10 is building; focused/full and before-fix test totals remain pending. No zero-test success claimed. Initial C: 21.19 GB free; hard stop below 14 GB.
 4. **New findings:** no new reproduced product failure yet. Source residual: BUG-773's saved-number exact-comparison half remains unchanged; its own regression entry explicitly says it was never fixed. No bug status changed.
 5. **What Tim sees:** no drawing, window or setting changes. Tests only; no product code, default, version or installed file changed.
 6. **Not run:** AutoCAD, accoreconsole, deployment, installer tests, new window pictures or native transform execution. Required builds/full suite and before-fix runs are pending, not passed.
