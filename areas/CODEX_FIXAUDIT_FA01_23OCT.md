@@ -26,7 +26,7 @@
 
 14. **Validation so far.** Net48: 0 errors, 242 warnings. Net8: 0 errors, 210 warnings. Net10: 0 errors, 208 warnings. Focused verification: **157 passed / 0 failed / 0 skipped**, including **29 added cases**. Full corrected Civil suite: **FULL_SUITE_PENDING**. Unchanged-release baseline: **19,548 total / 19,526 passed / 22 skipped / 0 failed**. The older brief's eleven failures do not describe this measured release.
 
-15. **What was NOT run.** AutoCAD, accoreconsole, native drawing writes, native Undo/Redo, native transform execution, installation/deployment, Structural/Manager/Installer suites and net48/net8 test suites. WPF pictures do not prove the native pit preview; it displays No preview for this pit without AutoCAD. No bug is marked accepted or closed. Later checks below are for the AI lane; no testing is requested of Tim.
+15. **What was NOT run.** AutoCAD, accoreconsole, real AutoCAD command acceptance, native Undo/Redo or native-transform acceptance, installation/deployment, Structural/Manager/Installer suites and net48/net8 test suites. The unit suite may use AutoCAD libraries outside the application. WPF pictures do not prove the native pit preview; it displays No preview for this pit without AutoCAD. No bug is marked accepted or closed. Later checks are for the AI lane; no testing is requested of Tim.
 
 ---
 
