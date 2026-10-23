@@ -2,9 +2,9 @@
 
 ## ANSWER FIRST
 
-1. **BUG-898 — investigating.** No exact-id PR, matching remote branch or coverage in the requested report families. Cause confirmed at Civil base `88bd62f704b66a7e156da572c212812dc4b0c61a`: results relabel the proposed schedule as Recorded without checking insertion.
+1. **BUG-898 — fix prepared, pass check queued.** Branch `cx2/bug-898-import-results`. All 12 new cases FAILED on the unchanged base (0 passed / 0 skipped). Source tracking, partial/Unknown outcomes and real-window render changes are prepared; no PR or passing result yet. No prior exact-id coverage found.
 2. **BUG-899 — DRAFT PR #1654.** Branch `cx2/bug-899-landxml-position`, head `ca5553d63bb8b24b5429e1c7031d79ad99aae262`. Three new regression cases: base 2 passed / 1 failed (the missing LandXML argument). Fix applied. Civil Release net48, net8.0-windows and net10.0-windows builds: 0 errors each. Focused net48: 9/9 passed. Full Civil net10: 19,454 total, 19,431 passed, 22 skipped, 1 failed (PDF-preview timeout). Isolated timeout rerun: 1/1 passed, 16 s.
-3. **BUG-900 — investigating.** Same duplicate checks clear. The PDF reader chooses one pit schedule page and replaces the pipe rows with the best single page.
+3. **BUG-900 — fix prepared, final before/after check queued.** Branch `cx2/bug-900-pdf-continuation`. Real PDF baseline: 1 single-page case passed, 2 continuation-page cases failed (0 skipped). The final cases also check distinct page-2 sizes, levels and pipe diameter. No PR or passing fixed result yet. No prior exact-id coverage found.
 4. **BUG-901 — SKIPPED.** Engineering decision required: outside-top cover and wall thickness values. Ledger F-042 and `QUESTIONS_FOR_MONDAY.md` question 2 keep this awaiting Tim's word. No change or tests.
 5. **BUG-902 — SKIPPED.** Engineering decision required: surface levels and cover between pits. Ledger F-043 explicitly needs Tim's word. No change or tests.
 
