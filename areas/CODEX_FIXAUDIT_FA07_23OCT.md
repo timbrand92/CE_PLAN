@@ -1,11 +1,11 @@
 **ANSWER FIRST — FA07 / RD12, 24 October 2026, Melbourne — work in progress**
 
-1. **RD12-01 / BUG-1080, HIGH:** confirmed on `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Working on a read-only protection check before shared symbol replacement, including containing references. PR and test evidence pending.
-2. **RD12-02 / BUG-1081, HIGH:** confirmed on that base. Working on actual attribute-layer checks before accepting the tank compound and in Apply, and removal of the forced locked-layer write. PR and test evidence pending.
+1. **RD12-01 / BUG-1080, HIGH:** confirmed on `origin/claude/rel-20261023m` at `f7f7d551552c21db3058ed839abacd1ec8a3b4d4`. Implemented a read-only protection check before shared symbol replacement, including containing references. Committed in dc7870a68e98559025707e48b2867ad4c6804caf; draft PR and test evidence pending.
+2. **RD12-02 / BUG-1081, HIGH:** confirmed on that base. Implemented actual attribute-layer checks before accepting the tank compound and in Apply, and removal of the forced locked-layer write. Committed in dc7870a68e98559025707e48b2867ad4c6804caf; draft PR and test evidence pending.
 3. **RD12-03 / BUG-1082, MEDIUM: skipped.** The placement writer is under Modules/Structural, protected by this Civil brief. The Civil-tree source still lacks the output-layer checks. Route to the Structural lane: check 25DIMS and 25TEXT before the first append and REFEDIT before prompts, with unlocked controls. No engineering value or layout decision is needed.
-4. **RD12-04 / BUG-1083, MEDIUM:** confirmed on the base. Working on the same selected-definition check at pick and Apply so an attached or overlaid Xref remains a background, without a tank tag or layer change.
+4. **RD12-04 / BUG-1083, MEDIUM:** confirmed on the base. Implemented the same selected-definition check at pick and Apply so an attached or overlaid Xref remains a background, without a tank tag or layer change.
 5. **RD12-05 / BUG-1084, MEDIUM: skipped.** Structural is protected, and the audit explicitly requires native confirmation first. The Civil-tree code also lacks the separate REFEDIT guard, but whether AutoCAD permits the working-set selection/write remains unknown. Route the audit's model-space and paper-space cases to the native lane before changing the Structural writer.
-6. **Delivery:** isolated branch `cx4/fa07-native-protection`, own worktree `C:\ce-cx\fa07`, based on the task-specific 23 October release, never master. No other chat's uncommitted work was adopted. No draft PR yet; no fix is accepted or installed.
+6. **Delivery:** isolated branch `cx4/fa07-native-protection`, own worktree `C:\ce-cx\fa07`, based on the task-specific 23 October release, never master. No other chat's uncommitted work was adopted. Pushed head dc7870a68e98559025707e48b2867ad4c6804caf; draft creation is in progress. No fix is accepted or installed.
 7. **Not run yet:** builds, unit tests, AutoCAD, accoreconsole, native Undo/Redo, save/reopen, window rendering, installation or deployment. C: initially 23.80 GB free; stop threshold 14 GB. No Settings, CE_SHARED, BUG_CARPARK, DESK_LOG or QUEUE edits.
 
 ---
