@@ -24,7 +24,7 @@
 
 13. **What Tim would see after later release-lane installation.** Blank Cover level warns and still permits placement or a pit width change. Parts/style editors open from the drawing contexts above. Deleting the last custom style leaves Save available and explains the built-in wording. No Settings key or default changed; these correct existing workflows.
 
-14. **Validation so far.** Net48: 0 errors, 242 warnings. Net8: 0 errors, 210 warnings. Committed-head net10 build: pending. Focused verification: **157 passed / 0 failed / 0 skipped**, including **29 added cases**. Full corrected Civil suite: **FULL_SUITE_PENDING**. Unchanged-release baseline: **19,548 total / 19,526 passed / 22 skipped / 0 failed**. The older brief's eleven failures do not describe this measured release.
+14. **Validation so far.** Net48: 0 errors, 242 warnings. Net8: 0 errors, 210 warnings. Net10: 0 errors, 208 warnings. Focused verification: **157 passed / 0 failed / 0 skipped**, including **29 added cases**. Full corrected Civil suite: **FULL_SUITE_PENDING**. Unchanged-release baseline: **19,548 total / 19,526 passed / 22 skipped / 0 failed**. The older brief's eleven failures do not describe this measured release.
 
 15. **What was NOT run.** AutoCAD, accoreconsole, native drawing writes, native Undo/Redo, native transform execution, installation/deployment, Structural/Manager/Installer suites and net48/net8 test suites. WPF pictures do not prove the native pit preview; it displays No preview for this pit without AutoCAD. No bug is marked accepted or closed. Later checks below are for the AI lane; no testing is requested of Tim.
 
@@ -62,4 +62,4 @@
 
 16. **Storage and cleanup.** Free space checked before every build/test: initial 26.38 GB, latest check 22.59 GB, always above 14 GB. Tests use isolated settings/logs. Settings-hash comparison and removal of this session's worktree are pending final validation. No other worktree will be removed; evidence/images remain outside it.
 
-17. **Summary.** Three findings have code fixes and the office-editor part of RD03-06 is corrected in draft PR #1720. Seven findings are routed for protected code or a printed-schedule wording decision. Twenty-nine cases were added; 157 focused checks pass. Final net10 build and full corrected Civil totals remain pending. Nothing installed or accepted in AutoCAD.
+17. **Summary.** Three findings have code fixes and the office-editor part of RD03-06 is corrected in draft PR #1720. Seven findings are routed for protected code or a printed-schedule wording decision. Twenty-nine cases were added; 157 focused checks pass. All three builds have zero errors; full corrected Civil totals remain pending. Nothing installed or accepted in AutoCAD.
