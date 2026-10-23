@@ -3,7 +3,7 @@
 ## ANSWER FIRST
 
 1. **BUG-898 — investigating.** No exact-id PR, matching remote branch or coverage in the requested report families. Cause confirmed at Civil base `88bd62f704b66a7e156da572c212812dc4b0c61a`: results relabel the proposed schedule as Recorded without checking insertion.
-2. **BUG-899 — DRAFT PR #1654.** Branch `cx2/bug-899-landxml-position`, head `ca5553d63bb8b24b5429e1c7031d79ad99aae262`. Three new regression cases: base 2 passed / 1 failed (the missing LandXML argument). Fix applied; three Release builds, focused net48 and full Civil net10 checks running.
+2. **BUG-899 — DRAFT PR #1654.** Branch `cx2/bug-899-landxml-position`, head `ca5553d63bb8b24b5429e1c7031d79ad99aae262`. Three new regression cases: base 2 passed / 1 failed (the missing LandXML argument). Fix applied. Civil Release net48, net8.0-windows and net10.0-windows builds: 0 errors each. Focused net48: 9/9 passed. Full Civil net10 still running; one PDF-preview timeout reported so far.
 3. **BUG-900 — investigating.** Same duplicate checks clear. The PDF reader chooses one pit schedule page and replaces the pipe rows with the best single page.
 4. **BUG-901 — SKIPPED.** Engineering decision required: outside-top cover and wall thickness values. Ledger F-042 and `QUESTIONS_FOR_MONDAY.md` question 2 keep this awaiting Tim's word. No change or tests.
 5. **BUG-902 — SKIPPED.** Engineering decision required: surface levels and cover between pits. Ledger F-043 explicitly needs Tim's word. No change or tests.
@@ -20,3 +20,9 @@
 1. **BUG-900 reader reproduction:** anonymous two-page PDF, each page with one pit and one pipe schedule row. Unchanged reader returned 1 pit and 1 pipe. Changed reader returned 2 pits and 2 pipes with row indexes 0 and 1. Both PDF pages rendered and inspected. NUnit verification still pending; temporary production changes saved outside the worktree while the exact regression runs against the base.
 2. **Build environment:** shared build lock was held by another Civil run until about 19:05. First BUG-899 test build then stopped because the worktree-native `CE_TRANSFORM_2027.arx` output did not exist. Retried with the C-57 report's 0-byte placeholder under this worktree only. This is not a usable native ARX or a deployable payload. No installed bundle touched.
 3. **Notion Inbox:** checked the connected Inbox. No Civil plugin item was returned; the one returned item belonged to another product and was left alone.
+
+## Current validation notes
+
+1. **C-61 baseline report:** reports 19,451 Civil tests, 19,428 passed, 22 skipped, one `LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully` timeout that passed alone. That is a report from the base finalizer, not a full base run by this batch. The older brief's eleven-failure figure is not used as a claimed result.
+2. **BUG-899:** draft PR https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1654. Clean leak scan on push. Full-suite outcome remains pending; original failure and isolated rerun will both be reported.
+3. **Remaining work:** run BUG-898 and BUG-900 regression cases against the unmodified base, restore the prepared fixes, build and test, inspect import-window pictures, commit/push separate branches and create drafts. No bugs marked fixed and no AutoCAD run.
