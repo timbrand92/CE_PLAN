@@ -46,7 +46,7 @@
 
 2. **RD05-02 — MEDIUM — council velocity bands are ignored by R-01/R-02. SURE against the recorded practice; verified-by-reading. Current council-document applicability beyond those records is UNSURE.**
 
-   **File:line and values.** `Modules/Drainage/Models/UserSettings.cs:1836`: minimum 0.6 m/s. `Services/MaterialVelocityLimits.cs:40`: concrete maximum 6.0 m/s. `Rules/RulebookValues.cs:181` builds the office scour table; `:195` reads only office minimum velocity. `Rules/RulebookEngine.cs:448` computes full-bore velocity; `:463` compares the office maximum and `:472` compares the office minimum. Council selection is available to Resolve but does not change these limits.
+   **File:line and values.** `Modules/Drainage/Models/UserSettings.cs:1836`: minimum 0.6 m/s. `Services/MaterialVelocityLimits.cs:42`: concrete maximum 6.0 m/s. `Rules/RulebookValues.cs:181` builds the office scour table; `:195` reads only office minimum velocity. `Rules/RulebookEngine.cs:448` computes full-bore velocity; `:465` compares the office maximum and `:472` compares the office minimum. Council selection is available to Resolve but does not change these limits.
 
    **What Tim would see.** Picking the council changes the named council and some other rules, but the velocity rows retain the office limits. A passing R-02 or R-01 is therefore not a pass against that council's recorded band. Other rows can still warn; this finding does not claim the whole drawing is reported clean.
 
@@ -78,7 +78,7 @@
 
 4. **RD05-04 — MEDIUM — Maroondah's ordinary DN150 minimum grade is not applied. SURE against the recorded practice; verified-by-reading. Current council PDF not reverified.**
 
-   **File:line and value.** `Modules/Drainage/Models/UserSettings.cs:1956` seeds DN150 at 1 in 100. `Rules/RulebookValues.cs:200` copies only the office grade ladder. `Rules/RulebookEngine.cs:368` chooses that ladder step and `:389` returns Pass. The council field at `Models/CouncilProfileModels.cs:87` represents a detention minimum, not this general DN150 rule.
+   **File:line and value.** `Modules/Drainage/Models/UserSettings.cs:1956` seeds DN150 at 1 in 100. `Rules/RulebookValues.cs:200` copies only the office grade ladder. `Rules/RulebookEngine.cs:368` chooses that ladder step and `:390` returns Pass. The council field at `Models/CouncilProfileModels.cs:87` represents a detention minimum, not this general DN150 rule.
 
    **What Tim would see.** On an ordinary Maroondah gravity drain, R-03 says “actual 1:100, ladder minimum 1:100” and passes. The project's council document calls for 1 in 80.
 
@@ -110,13 +110,13 @@
 
 2. **Minimum grade.** `Models/UserSettings.cs:1752`: global drafting warning 1 in 200. `:1956`: DN90/100/150 = 1 in 100; DN225 = 1 in 200; DN300 = 1 in 250; DN375 = 1 in 300. `:1957`: DN450/525/600/675/750 = 1 in 200. Numerical AS/NZS attribution remains **UNVERIFIED**; `Rules/RulebookValues.cs:343` itself labels an unconfirmed ladder that way. The distinct new council omission is RD05-04.
 
-3. **Maximum grade.** `Models/LevelsProposalSettings.cs:34`: 0 = no maximum; `:48`: warn steeper than 1 in 10. These are sourced to Tim's 5 October INT-059 ruling and are not defects for being permissive. The proposal is OFF by default (`:21`); its warning is not proof every drawing check examines steep pipes. No universal Australian maximum grade is asserted.
+3. **Maximum grade.** `Models/LevelsProposalSettings.cs:34`: 0 = no maximum; `:49`: warn steeper than 1 in 10. These are sourced to Tim's 5 October INT-059 ruling and are not defects for being permissive. The proposal is OFF by default (`:21`); its warning is not proof every drawing check examines steep pipes. No universal Australian maximum grade is asserted.
 
-4. **Velocity defaults.** `Models/UserSettings.cs:1836`: minimum 0.6 m/s. `Services/MaterialVelocityLimits.cs:39`: plastics 3.0; `:40`: concrete 6.0; `:41`: metals 4.0; `:42`: unknown 6.0 m/s. `Services/PipeSpeedLimitSources.cs:19` identifies plastics/metals/unknown as unconfirmed; concrete is labelled an office rule, and the minimum is attributed to a concrete-pipe manual. That manual attribution is **UNVERIFIED** here. No authoritative basis was found in the inspected evidence for treating all these as AS/NZS limits. The new fault is using the office band without the applicable council band, RD05-02; the unconfirmed labels themselves are honest.
+4. **Velocity defaults.** `Models/UserSettings.cs:1836`: minimum 0.6 m/s. `Services/MaterialVelocityLimits.cs:41`: plastics 3.0; `:42`: concrete 6.0; `:43`: metals 4.0; `:44`: unknown 6.0 m/s. `Services/PipeSpeedLimitSources.cs:19` identifies plastics/metals/unknown as unconfirmed; concrete is labelled an office rule, and the minimum is attributed to a concrete-pipe manual. That manual attribution is **UNVERIFIED** here. No authoritative basis was found in the inspected evidence for treating all these as AS/NZS limits. The new fault is using the office band without the applicable council band, RD05-02; the unconfirmed labels themselves are honest.
 
 5. **Pit spacing.** `Models/UserSettings.cs:1851`: 80 m general run-length limit, source not established in the inspected records; RD05-03. `:1966`: detention maximum run 40 m is Tim's R-06 house rule, not a general council spacing rule. One cannot substitute for the other.
 
-6. **Pipe size steps.** `Models/PipeSizingModels.cs:75`: 100, 150, 225, 300, 375, 450, 525, 600, 675, 750 mm. `Services/SettingsSizingStandards.cs:40` uses the office list or this fallback. `Assets/Config/network-catalogue.json:69` onwards seeds 225 mm for its listed pipe types; `Models/UserSettings.cs:1976` supplies a separate 100 mm missing-size reference. These are selection/default figures, not proof of hydraulic adequacy or product availability. An authoritative material/product source for the complete shared size sequence was not established: **UNSURE / sourcing gap**, not a counted claim that a particular size is unmanufacturable. Manufacturer bore/outside-diameter and stock-range validation was not done.
+6. **Pipe size steps.** `Models/PipeSizingModels.cs:75`: 100, 150, 225, 300, 375, 450, 525, 600, 675, 750 mm. `Services/SettingsSizingStandards.cs:40` uses the office list or this fallback. `Assets/Config/network-catalogue.json:61` onwards seeds 225 mm for its listed pipe types; `Models/UserSettings.cs:1976` supplies a separate 100 mm missing-size reference. These are selection/default figures, not proof of hydraulic adequacy or product availability. An authoritative material/product source for the complete shared size sequence was not established: **UNSURE / sourcing gap**, not a counted claim that a particular size is unmanufacturable. Manufacturer bore/outside-diameter and stock-range validation was not done.
 
 7. **Freeboard.** `Models/UserSettings.cs:1055` and `:1972`, `Rules/DetentionTwlSolver.cs:109`: 150 mm pit-lid starting clearance. Tim's R-06 supplies its office authority. It is not a habitable-floor clearance. The council comparison for the latter is RD05-01. Other council distinctions are recorded in `docs/workflows/COUNCIL_RULES_V3_INTEGRATION.md:116`; they were not collapsed into a new universal number.
 
@@ -135,4 +135,3 @@
 **Summary**
 
 1. **Five new findings: one HIGH, three MEDIUM, one LOW.** CDTWL omits habitable-floor freeboard; council velocity, spacing and ordinary pipe-grade requirements do not reach their checks; the fresh standard-edition reference is stale. Office defaults were distinguished from council requirements and unsupported standards claims. Known bugs are excluded. The source paths are verified by reading, with deterministic future tests; no AutoCAD, build or tests were run. Full AS/NZS numerical compliance remains unverified.
-
