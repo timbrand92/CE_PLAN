@@ -2,7 +2,7 @@
 
 ## ANSWER FIRST
 
-1. **Delivery:** branch `cx3/tests-bd04`, based on `origin/claude/rel-20261023s` (`e6d597c0`, Structural S-42). Draft PR and final head pending validation.
+1. **Delivery:** branch `cx3/tests-bd04`, based on `origin/claude/rel-20261023s` (`e6d597c0`, Structural S-42). Draft PR [#1705](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1705), head `d2b7ff26cfc578b7580b90a9870c2b0b766a96bd`; validation pending.
 2. **Tests added:** 10 cases: BUG-303 six, BUG-315 two, BUG-858 two. Product code is unchanged. These fill missing scenarios in partly tested fixes; no claim that these bugs previously had no tests at all.
 3. **Totals:** pending foreground builds and test runs; no passing total claimed yet.
 4. **New findings:** none established by execution yet. BUG-818/BUG-819 remain unresolved catalogue/drawing work and are not treated as fixed.
