@@ -1,0 +1,14 @@
+# ANSWER FIRST - Ledger fix batch 18, 23 October 2026 (Melbourne)
+
+1. **BUG-958 - SKIPPED, protected placement service.** The C-61 base still skips windows whose fitting has set Manual. Correcting CeWindowPlacementHook/WindowSizingService requires the placement services protected by common.txt. No editor or placement service edited. No PR or new test for this bug.
+2. **BUG-959 - SKIPPED, protected placement service.** The C-61 base Civil Hub validates against SystemParameters.WorkArea; WindowSizingService also clamps to that primary area. The complete fix needs the protected placement/sizing path. No partial Hub-only fix. No PR or new test for this bug.
+3. **BUG-960 - IN PROGRESS.** Retained Checks/What CE Found controls own theme dictionaries that ApplyResolvedTheme never refreshes. Regression test written; before/after and build totals pending. Own branch cx2/bug-960-palette-theme, own worktree C:\cx2b18, base origin/claude/rel-20261023l at 88bd62f704b66a7e156da572c212812dc4b0c61a. Nothing installed.
+4. **BUG-961 - SKIPPED, already covered.** Draft PR #1527, cx/automation-ids-c60 at 235e0c33acaa8685bc48c6b2893713c593b715bf. CODEX_BUILD_AUTOMATION_IDS_22OCT.md records 26 new checks, Civil 19,180 console total (19,160 pass, 19 skip, 1 fail) and Manager 853/853. These are prior results, not this batch's tests. Verify its ancestry/source at C-61 before final report.
+5. **BUG-962 - SKIPPED, protected LinkService/tidy-up service.** LinkService.TextClashTidyUp.cs is explicitly protected. Route its spatial lookup change to its owner; preserve every nearby obstacle. No PR or new test for this bug.
+
+---
+
+1. **Coverage checked:** gh pr list --state all --search BUG-<id> for each of the five IDs; remote branch names for each ID; FIX_WAVE2_BATCH*_REPORT.md, FIX_ROUND_*_REPORT.md and CODEX_BUILD_* files in areas. The first three searches returned unrelated PRs #1335/#647/#469; inspect exact bug references before declaring any coverage. No matching remote branch names at the first fetch. #1527 was found via the ledger and its named report.
+2. **Settings/decisions:** QUESTIONS_FOR_MONDAY.md keeps window position memory OFF pending a two-monitor native check. This batch will not change that default. The Checks palette remains OFF by default. BUG-960 repairs existing theme behaviour without a new feature switch or settings migration.
+3. **Boundary:** no AutoCAD/accoreconsole, deployment, ApplicationPlugins/ProgramData writes, live settings edits, rebase, force push, or protected source edits. Existing main-checkout changes belong to other sessions; not taken over or staged.
+4. **Evidence:** C:\cx2b18-evidence. Final counts, PR, head and exact native checks will replace this pending entry after verification. Bugs stay OPEN until separately accepted in real AutoCAD.
