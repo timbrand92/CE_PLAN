@@ -1,0 +1,292 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0754-C3.0.75-b2probe9c",
+    "started": "2026-10-25 07:54:46",
+    "finished": "2026-10-25 07:57:13",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AFD38F7159771CF2630BE71CF7AE406DD99731C377D05F06AE9D9D60B2B5BBCC",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 AFD38F7159771CF2630BE71CF7AE406DD99731C377D05F06AE9D9D60B2B5BBCC; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 07:54 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0754-C3.0.75-b2probe9c-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 07:54:47",
+      "finished": "2026-10-25 07:57:13",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30754501_B1.dwg",
+      "cases": [
+        "PRB9C"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB9C",
+      "proves_bugs": "",
+      "title": "probe: CDPROFILE window after pick",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "2216E057E876194E869458D010F35F7411FA79B924EFA8089305671B4461517A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 07:55:22",
+      "seconds": 92.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}52000,-27000{NL}55500,-24000\" -Force -> $z",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "typed '_.ZOOM _W 52000,-27000 55500,-24000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 52000,-27000 | Specify oppos..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPROFILE{NL}53977.7,-25569.8\" -Force -> $a1",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "typed 'CDPROFILE 53977.7,-25569.8': Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w1",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30754501_B1.dwg] ; Creative Engineering | Profiles (CDPROFILE)"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Profile|Long|CE\" -Optional -TimeoutSec 20 -> $d1",
+          "ok": true,
+          "seconds": 21.0,
+          "evidence": "ui-dump 'Creative Engineering | Profiles (CDPROFILE)': 82 controls, tabs: Profiles"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cw",
+          "ok": true,
+          "seconds": 56.0,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Profiles (CDPROFILE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Profiles\\ \\(CDPROFILE\\)/ (windows: Creative Eng..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w2",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30754501_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $z \"FULL zoom\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 52000,-27000 | Specify opposite corner: 55500,-24000",
+          "evidence": "RECORDED, not judged: FULL zoom = Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 52000,-27000 | Specify opposite corner: 55500,-24000"
+        },
+        {
+          "n": 2,
+          "text": "record $a1 \"FULL pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8",
+          "evidence": "RECORDED, not judged: FULL pick = Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 3,
+          "text": "record $w1 \"windows after pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30754501_B1.dwg] | Creative Engineering | Profiles (CDPROFILE)",
+          "evidence": "RECORDED, not judged: windows after pick = Autodesk AutoCAD 2027 - [CLDV30754501_B1.dwg] | Creative Engineering | Profiles (CDPROFILE)"
+        },
+        {
+          "n": 4,
+          "text": "record $d1 \"FULL dump\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Profiles (CDPROFILE)\",\"handle\":320542332,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[346,32,1574,1000],\"control_count\":82,\"truncated\":false,\"tabs\":[{\"name\":\"Profiles\",\"selected\":true}],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Profiles (CDPROFILE)\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[354,40,1558,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[354,40,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[354,40,22,22]},{\"type\":\"Button\",\"name\":\"Minimize\",\"id\":\"Minimize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1773,33,47,30]},{\"type\":\"Button\",\"name\":\"Maximize\",\"id\":\"Maximize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1820,33,46,30]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1866,33,47,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[389,92,34,34]},{\"type\":\"Text\",\"name\":\"Profiles\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[437,90,1440,23]},{\"type\":\"Text\",\"name\":\"Review a drainage route before placing or updating its long section.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[437,116,1440,13]},{\"type\":\"Tab\",\"name\":\"\",\"id\":\"MainTabs\",\"class\":\"TabControl\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[372,154,1522,790]},{\"type\":\"TabItem\",\"name\":\"Profiles\",\"id\":\"ProfileTab\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[374,156,72,31],\"selected\":true},{\"type\":\"Text\",\"name\":\"Profiles\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[389,163,42,17]},{\"type\":\"Text\",\"name\":\"Linked longitudinal profile\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,212,434,20]},{\"type\":\"Text\",\"name\":\"Choose a start pit and route. Preview before placing or updating the profile.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,232,434,17]},{\"type\":\"Text\",\"name\":\"P3\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,254,434,18]},{\"type\":\"Button\",\"name\":\"Choose Pit\",\"id\":\"\",\"class\":\"Button\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1697,212,91,60]},{\"type\":\"Text\",\"name\":\"Choose Pit\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[1714,234,57,16]},{\"type\":\"Button\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"Button\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1796,212,73,60]},{\"type\":\"Text\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[1813,234,39,16]},{\"type\":\"Text\",\"name\":\"Route (required)\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[386,293,1058,17]},{\"type\":\"ComboBox\",\"name\":\"\",\"id\":\"ProfileRoutePicker\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[386,310,1058,34]},{\"type\":\"Text\",\"name\":\"Schedule set\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1454,293,125,17]},{\"type\":\"ComboBox\",\"name\":\"\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1454,310,125,34]},{\"type\":\"Text\",\"name\":\"Datum RL (m)\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1589,293,90,17]},{\"type\":\"Edit\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1589,310,90,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Horizontal 1:\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1689,293,75,17]},{\"type\":\"Edit\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1689,310,75...",
+          "evidence": "RECORDED, not judged: FULL dump = {\"title\":\"Creative Engineering | Profiles (CDPROFILE)\",\"handle\":320542332,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[346,32,1574,1000],\"control_count\":82,\"truncated\":false,\"tabs\":[{\"name\":\"Profiles\",\"selected\":true}],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Profiles (CDPROFILE)\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[354,40,1558,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[354,40,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[354,40,22,22]},{\"type\":\"Button\",\"name\":\"Minimize\",\"id\":\"Minimize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1773,33,47,30]},{\"type\":\"Button\",\"name\":\"Maximize\",\"id\":\"Maximize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1820,33,46,30]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1866,33,47,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[389,92,34,34]},{\"type\":\"Text\",\"name\":\"Profiles\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[437,90,1440,23]},{\"type\":\"Text\",\"name\":\"Review a drainage route before placing or updating its long section.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[437,116,1440,13]},{\"type\":\"Tab\",\"name\":\"\",\"id\":\"MainTabs\",\"class\":\"TabControl\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[372,154,1522,790]},{\"type\":\"TabItem\",\"name\":\"Profiles\",\"id\":\"ProfileTab\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[374,156,72,31],\"selected\":true},{\"type\":\"Text\",\"name\":\"Profiles\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[389,163,42,17]},{\"type\":\"Text\",\"name\":\"Linked longitudinal profile\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,212,434,20]},{\"type\":\"Text\",\"name\":\"Choose a start pit and route. Preview before placing or updating the profile.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,232,434,17]},{\"type\":\"Text\",\"name\":\"P3\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,254,434,18]},{\"type\":\"Button\",\"name\":\"Choose Pit\",\"id\":\"\",\"class\":\"Button\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1697,212,91,60]},{\"type\":\"Text\",\"name\":\"Choose Pit\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[1714,234,57,16]},{\"type\":\"Button\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"Button\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1796,212,73,60]},{\"type\":\"Text\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[1813,234,39,16]},{\"type\":\"Text\",\"name\":\"Route (required)\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[386,293,1058,17]},{\"type\":\"ComboBox\",\"name\":\"\",\"id\":\"ProfileRoutePicker\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[386,310,1058,34]},{\"type\":\"Text\",\"name\":\"Schedule set\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1454,293,125,17]},{\"type\":\"ComboBox\",\"name\":\"\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1454,310,125,34]},{\"type\":\"Text\",\"name\":\"Datum RL (m)\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1589,293,90,17]},{\"type\":\"Edit\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1589,310,90,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Horizontal 1:\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1689,293,75,17]},{\"type\":\"Edit\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1689,310,75..."
+        },
+        {
+          "n": 5,
+          "text": "record $cw \"close result\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Profiles (CDPROFILE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Profile...",
+          "evidence": "RECORDED, not judged: close result = round 1: 'Creative Engineering | Profiles (CDPROFILE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Profile..."
+        },
+        {
+          "n": 6,
+          "text": "record $w2 \"windows after close\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30754501_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after close = Autodesk AutoCAD 2027 - [CLDV30754501_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "record $c0 \"count before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count before = 1034"
+        },
+        {
+          "n": 8,
+          "text": "record $c1 \"count after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count after = 1034"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 3 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPROFILE completed 60097 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:56:55",
+      "session_id": "RUN-20261025-0754-C3.0.75-b2probe9c-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB9C_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}
