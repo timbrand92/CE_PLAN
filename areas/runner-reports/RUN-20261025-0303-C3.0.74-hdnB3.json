@@ -1,0 +1,771 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0303-C3.0.74-hdnB3",
+    "started": "2026-10-25 03:03:41",
+    "finished": "2026-10-25 03:06:42",
+    "build": {
+      "civil": {
+        "product_version": "3.0.74+a15b414cd691c36efa723a5dbca02deceece6094",
+        "file_version": "3.0.74.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.74+a15b414cd691c36efa723a5dbca02deceece6094",
+        "file_version": "1.1.74.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.74+a15b414c / struc 1.0.123+4af3f37d / mgr 1.1.74+a15b414c",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "F6B47004733159DEB69E5EA1068309EE8B2DE9DE52375473D4F1BC6497B447E6",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.74+a15b414cd691c36efa723a5dbca02deceece6094; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.74+a15b414cd691c36efa723a5dbca02deceece6094",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 0 shared setup(s); pack SHA-256 F6B47004733159DEB69E5EA1068309EE8B2DE9DE52375473D4F1BC6497B447E6; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 03:03 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 3
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0303-C3.0.74-hdnB3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 03:03:42",
+      "finished": "2026-10-25 03:06:42",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30303461_B1.dwg",
+      "cases": [
+        "R05",
+        "R07",
+        "R10"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R05",
+      "proves_bugs": "BUG-862 (the 'cancelled' half only: a command stopped by Esc with nothing placed is logged 'cancelled'; the 'completed after placing' half is R01 v2 and the 'refused' half is R10 v2)",
+      "title": "A finished CE command writes one outcome line with its time, and a command stopped with nothing placed says cancelled",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDCHECKCURRENT (the drawing check) asks no question, opens the CE Civil 'What CE Found' palette (by design) and the Civil CE log gains exactly one line 'Command outcome: CDCHECKCURRENT completed <n> ms'. Then PIT is started and stopped with Esc at its first prompt, placing nothing: the log says 'Command outcome: PIT cancelled' once and never 'PIT completed'.",
+      "why_not_unit": "The line is written by the installed plugin when a real AutoCAD command ends; only a live run shows it reaches the log file that the log watcher reads, and with which word.",
+      "not_automated": [
+        "The 'refused' word is R10 v2 (CDCHECKIGNORE with its switch off); the 'completed after placing and Esc' word is R01 v2.",
+        "Structural and Manager outcome lines (#1547,",
+        "One line for EVERY CE command is not proved: this case covers CDCHECKCURRENT (completed) and PIT (cancelled)."
+      ],
+      "file_sha256": "4E5A615417F86FF76D51E0C9CA012835722D85CCCACE2E8A9029327DD69DDA8A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 03:04:17",
+      "seconds": 21.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKCURRENT\" -Force -> $check",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'CDCHECKCURRENT': Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_check",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] ; CE Civil - What CE Found"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $lg1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 new line(s) in the civil CE log since the case began "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT\" -Force -> $pit_t",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "typed 'PIT': Command: | Command: PIT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_esc",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: *Cancel* | PIT command cancelled."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $lg2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "19 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "log civil has \"Command outcome: CDCHECKCURRENT completed\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: CDCHECKCURRENT completed'",
+          "actual": "1",
+          "evidence": "log: '2026-10-25 03:04:19.442 [INFO] Command outcome: CDCHECKCURRENT completed 216 ms'"
+        },
+        {
+          "n": 2,
+          "text": "log civil count \"Command outcome: CDCHECKCURRENT\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDCHECKCURRENT'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDCHECKCURRENT' (expected 1): 2026-10-25 03:04:19.442 [INFO] Command outcome: CDCHECKCURRENT completed 216 ms"
+        },
+        {
+          "n": 3,
+          "text": "matches $lg1 \"Command outcome: CDCHECKCURRENT completed \\d+ ms\"",
+          "ok": true,
+          "expected": "matches /Command outcome: CDCHECKCURRENT completed \\d+ ms/",
+          "actual": "2026-10-25 03:04:19.442 [INFO] Command outcome: CDCHECKCURRENT completed 216 ms",
+          "evidence": "matched 'Command outcome: CDCHECKCURRENT completed 216 ms'"
+        },
+        {
+          "n": 4,
+          "text": "log civil has \"Command outcome: PIT cancelled\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: PIT cancelled'",
+          "actual": "1",
+          "evidence": "log: '2026-10-25 03:04:33.171 [INFO] Command outcome: PIT cancelled 7346 ms'"
+        },
+        {
+          "n": 5,
+          "text": "log civil count \"Command outcome: PIT\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: PIT'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: PIT' (expected 1): 2026-10-25 03:04:33.171 [INFO] Command outcome: PIT cancelled 7346 ms"
+        },
+        {
+          "n": 6,
+          "text": "log civil absent \"Command outcome: PIT completed\"",
+          "ok": true,
+          "expected": "civil log lacks 'Command outcome: PIT completed'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'Command outcome: PIT completed' (19 new lines read)"
+        },
+        {
+          "n": 7,
+          "text": "record $check \"what the command line printed for CDCHECKCURRENT\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically.",
+          "evidence": "RECORDED, not judged: what the command line printed for CDCHECKCURRENT = Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
+        },
+        {
+          "n": 8,
+          "text": "record $win_check \"windows open after CDCHECKCURRENT (the palette is docked and may not be listed)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "RECORDED, not judged: windows open after CDCHECKCURRENT (the palette is docked and may not be listed) = Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 9,
+          "text": "record $pit_esc \"what the Esc at the first PIT prompt printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PIT | Specify pit insertion point: *Cancel* | PIT command cancelled.",
+          "evidence": "RECORDED, not judged: what the Esc at the first PIT prompt printed = Command: | Command: PIT | Specify pit insertion point: *Cancel* | PIT command cancelled."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 19 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKCURRENT completed 216 ms ; Command outcome: PIT cancelled 7346 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 03:04:39",
+      "session_id": "RUN-20261025-0303-C3.0.74-hdnB3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: the independent review (R05_outcome_line_completed.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R07",
+      "proves_bugs": "",
+      "title": "The Settings window opens with all eight tabs, a changed value is thrown away by Cancel, and the four settings files are unchanged",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "Settings window (spec C13 reduced to the eight tabs; spec C14: a changed value is thrown away by Cancel)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDS opens 'Creative Engineering | Settings (CDS)' with the eight tabs Drafting, Pipes and Pits, Design, Survey, Display, Advanced, Newer tools and Fixes, a Cancel and a Save button, and the line 'No changes. Everything shown is saved.'; changing the Drafting field Label slide step to 123 makes that line go and the field read 123; Cancel closes the window; the four settings files have the same SHA-256 as before the window was opened (checked BEFORE the guard's restore runs).",
+      "why_not_unit": "The window loads the real settings file in real AutoCAD; only a live run shows that opening it and pressing Cancel writes nothing.",
+      "not_automated": [
+        "The per-field look and the discard wording (spec C14) are not judged. C14 itself IS covered: one field (Drafting, Label slide step) is changed to 123 with the settings guard armed, the window shows the change (the No-changes line goes), Cancel closes it, and the four settings files are byte-for-byte unchanged (no Save, no discard prompt answered).",
+        "The per-tab look (C13) and the tab contents are not read: only that all eight tabs exist."
+      ],
+      "file_sha256": "C35F05BD147AE20F8F0A36FEDAB5C7F9E44CB085F1B129DF0C45AE89BB9D4E24",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 03:04:39",
+      "seconds": 83.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t",
+          "ok": true,
+          "seconds": 18.1,
+          "evidence": "typed 'CDS': Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Settings\" \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" \"123\"",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "ui set 'Settings' AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm = 123: SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set2",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr",
+          "ok": true,
+          "seconds": 25.7,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] ; CE Civil - What CE Found"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $set \"AdvancedSettingsDialog.CancelCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.CancelCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.CancelCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "control $set \"AdvancedSettingsDialog.OkCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.OkCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.OkCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 3,
+          "text": "control $set \"Settings, Settings Tabs, Drafting\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Drafting' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Drafting' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 4,
+          "text": "control $set \"Settings, Settings Tabs, Pipes and Pits\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Pipes and Pits' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Pipes and Pits' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 5,
+          "text": "control $set \"Settings, Settings Tabs, Design\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Design' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Design' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 6,
+          "text": "control $set \"Settings, Settings Tabs, Survey\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Survey' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Survey' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 7,
+          "text": "control $set \"Settings, Settings Tabs, Display\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Display' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Display' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 8,
+          "text": "control $set \"Settings, Settings Tabs, Advanced\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Advanced' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Advanced' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 9,
+          "text": "control $set \"Settings, Settings Tabs, Newer tools\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Newer tools' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Newer tools' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 10,
+          "text": "control $set \"Settings, Settings Tabs, Fixes\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Fixes' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Fixes' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 11,
+          "text": "control-text $set has \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window shows 'No changes. Everything shown is saved.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 12,
+          "text": "window-closed $pr",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 13,
+          "text": "not-contains $win_end \"Settings (CDS)\"",
+          "ok": true,
+          "expected": "does not contain 'Settings (CDS)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'Settings (CDS)' is absent from: Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 14,
+          "text": "control $set2 \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"123\"",
+          "ok": true,
+          "expected": "123",
+          "actual": "123",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '123' (expected '123')"
+        },
+        {
+          "n": 15,
+          "text": "control-text $set2 absent \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window lacks 'No changes. Everything shown is saved.'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 16,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30303461_B1_1e1ea6bdc.log)",
+        "Civil CE log: 6 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDS completed 47762 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 03:06:03",
+      "session_id": "RUN-20261025-0303-C3.0.74-hdnB3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: the independent review (R07_settings_window_cancel.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R10",
+      "proves_bugs": "BUG-863 (the off path saves no project record into the drawing: no 'Project data saved to DWG' log line and the drawing's modified flag does not move); BUG-862 (the 'refused' half only)",
+      "title": "CDCHECKIGNORE with the switch off says so in one line, asks nothing, saves nothing and logs 'refused'",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the switch off, typing CDCHECKIGNORE prints 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' at once, asks no question (no command is left active), leaves no window behind, writes no 'Project data saved to DWG' line to the Civil log, leaves the drawing's modified flag (DBMOD) where it was, and logs 'Command outcome: CDCHECKIGNORE refused'; the four settings files are unchanged.",
+      "why_not_unit": "The refusal depends on the switch value CE read from the real settings file when AutoCAD started, and on the real command line, log and drawing showing one line, no question and no save.",
+      "not_automated": [
+        "The switch is read from the settings file as it is (off). The ON paths of CDCHECKIGNORE (spec C17 to C19) need a settings profile and are not in this case; this case counts for the switch-off half of UX-DI-03 only.",
+        "DBMOD is a flag set, so it proves 'not modified again' only if it was still clear or already settled: the case therefore ALSO reads the CE log for a project-record save, which is the exact symptom of BUG-863."
+      ],
+      "file_sha256": "BFE0DD9A76D8E42AF5D0A7463CD968AEFCCED04D035A121AB5582C8271C48D91",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 03:06:03",
+      "seconds": 16.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKIGNORE\" -Force -> $ig",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'CDCHECKIGNORE': Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before yo..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CMDACTIVE -> $ca",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CMDACTIVE = 0"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] ; CE Civil - What CE Found"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $ig \"Ignoring a finding is switched off in CE Settings. Nothing was changed.\"",
+          "ok": true,
+          "expected": "contains 'Ignoring a finding is switched off in CE Settings. Nothing was changed.'",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore...",
+          "evidence": "found 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' in: Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up ..."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $ig \"Specify\"",
+          "ok": true,
+          "expected": "does not contain 'Specify'",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore...",
+          "evidence": "'Specify' is absent from: Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up ..."
+        },
+        {
+          "n": 3,
+          "text": "equals $ca 0",
+          "ok": true,
+          "expected": "0",
+          "actual": "0",
+          "evidence": "value '0' (expected '0')"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $win_end \"Ignore\"",
+          "ok": true,
+          "expected": "does not contain 'Ignore'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'Ignore' is absent from: Autodesk AutoCAD 2027 - [CLDV30303461_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 5,
+          "text": "equals $m0 $m1",
+          "ok": true,
+          "expected": "1",
+          "actual": "1",
+          "evidence": "value '1' (expected '1')"
+        },
+        {
+          "n": 6,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514"
+        },
+        {
+          "n": 7,
+          "text": "log civil has \"Command outcome: CDCHECKIGNORE refused\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: CDCHECKIGNORE refused'",
+          "actual": "1",
+          "evidence": "log: '2026-10-25 03:06:13.513 [INFO] Command outcome: CDCHECKIGNORE refused 5 ms'"
+        },
+        {
+          "n": 8,
+          "text": "log civil count \"Command outcome: CDCHECKIGNORE\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDCHECKIGNORE'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDCHECKIGNORE' (expected 1): 2026-10-25 03:06:13.513 [INFO] Command outcome: CDCHECKIGNORE refused 5 ms"
+        },
+        {
+          "n": 9,
+          "text": "log civil absent \"Project data saved to DWG\"",
+          "ok": true,
+          "expected": "civil log lacks 'Project data saved to DWG'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'Project data saved to DWG' (1 new lines read)"
+        },
+        {
+          "n": 10,
+          "text": "record $ig \"what the command line printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before yo...",
+          "evidence": "RECORDED, not judged: what the command line printed = Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before yo..."
+        },
+        {
+          "n": 11,
+          "text": "record $m0 \"DBMOD before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD before = 1"
+        },
+        {
+          "n": 12,
+          "text": "record $m1 \"DBMOD after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD after = 1"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30303461_B1_191206f80.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKIGNORE refused 5 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 03:06:20",
+      "session_id": "RUN-20261025-0303-C3.0.74-hdnB3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: the independent review (R10_cdcheckignore_switch_off.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1047-C3.0.72-hE1",
+    "started": "2026-10-24 10:47:14",
+    "finished": "2026-10-24 10:50:11",
+    "build": {
+      "civil": {
+        "product_version": "3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "3.0.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+        "file_version": "1.1.72.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.72+f7f7d551 / struc 1.0.122+e6d597c0 / mgr 1.1.72+f7f7d551",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "DD2CA91E3EE5E707DD7D47DACBB5A23470BAF29F09CB1D8CA68BD3B61BD0638A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.72+f7f7d551552c21db3058ed839abacd1ec8a3b4d4",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 6223A606999D, case_runner_lib.ps1 157CBD4687A2, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 DD2CA91E3EE5E707DD7D47DACBB5A23470BAF29F09CB1D8CA68BD3B61BD0638A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 10:47 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1047-C3.0.72-hE1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 10:47:14",
+      "finished": "2026-10-24 10:50:11",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31047181_B1.dwg",
+      "cases": [
+        "R08c_E_sleep_only"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R08c_E_sleep_only",
+      "title": "R08 control E: nothing at all between U and REDO except a 12 second wait",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-861 control arm (R08 hardening, spec C32)",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "The control round says 'Everything has been redone'. Then LINE, U, wait 12 s with nothing else done, REDO says 'Everything has been redone'. If this loses REDO, the loss has nothing to do with the runner's reads or any pick.",
+      "why_not_unit": "Whether REDO survives depends on what happens in a real AutoCAD undo stack in the seconds after a pick.",
+      "not_automated": [
+        "This is a control arm for the R08 question only; it is not a feature test and is never accepted."
+      ],
+      "file_sha256": "007D99E639A3CB4DBAE39E542D9D506C5C14134D0CEA5AA82A8A1A68D9E32ED2",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 10:47:47",
+      "seconds": 90.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 53777.7,-25569.9 1200\"",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed '_.ZOOM _C 53777.7,-25569.9 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 53777.7,-25569.9 | Enter mag..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 19.3,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line0",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "esc-prompt: Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u0",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'U': Command: | Command: U | ZOOM"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo_c",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'REDO': Command: | Command: REDO | ZOOM | Everything has been redone"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line1",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "esc-prompt: Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 20.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed 'U': Command: | Command: U | ZOOM"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'REDO': Command: | Command: REDO | ZOOM | Everything has been redone"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $redo_c \"Everything has been redone\"",
+          "ok": true,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | ZOOM | Everything has been redone",
+          "evidence": "found 'Everything has been redone' in: Command: | Command: REDO | ZOOM | Everything has been redone"
+        },
+        {
+          "n": 2,
+          "text": "contains $redo1 \"Everything has been redone\"",
+          "ok": true,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | ZOOM | Everything has been redone",
+          "evidence": "found 'Everything has been redone' in: Command: | Command: REDO | ZOOM | Everything has been redone"
+        },
+        {
+          "n": 3,
+          "text": "not-contains $redo1 \"Nothing to redo\"",
+          "ok": true,
+          "expected": "does not contain 'Nothing to redo'",
+          "actual": "Command: | Command: REDO | ZOOM | Everything has been redone",
+          "evidence": "'Nothing to redo' is absent from: Command: | Command: REDO | ZOOM | Everything has been redone"
+        },
+        {
+          "n": 4,
+          "text": "record $redo1 \"what REDO printed in this arm\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: REDO | ZOOM | Everything has been redone",
+          "evidence": "RECORDED, not judged: what REDO printed in this arm = Command: | Command: REDO | ZOOM | Everything has been redone"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "Civil CE log: 27 new line(s) while the case ran, 0 with [ERR]",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-24 10:49:17",
+      "session_id": "RUN-20261024-1047-C3.0.72-hE1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "reviewed_against is empty (a person or an Opus review must check the case against its card or bug entry)",
+          "bug case (BUG-861) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

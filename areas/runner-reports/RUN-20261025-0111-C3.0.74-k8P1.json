@@ -1,0 +1,251 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0111-C3.0.74-k8P1",
+    "started": "2026-10-25 01:11:44",
+    "finished": "2026-10-25 01:14:03",
+    "build": {
+      "civil": {
+        "product_version": "3.0.74+a15b414cd691c36efa723a5dbca02deceece6094",
+        "file_version": "3.0.74.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.74+a15b414cd691c36efa723a5dbca02deceece6094",
+        "file_version": "1.1.74.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.74+a15b414c / struc 1.0.123+4af3f37d / mgr 1.1.74+a15b414c",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "EA641F13C04C765B6A26B9D205D86C6B29D32391A6D8716C45703158E8938864",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.74+a15b414cd691c36efa723a5dbca02deceece6094; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.74+a15b414cd691c36efa723a5dbca02deceece6094",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 EA641F13C04C765B6A26B9D205D86C6B29D32391A6D8716C45703158E8938864; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 01:11 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0111-C3.0.74-k8P1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 01:11:44",
+      "finished": "2026-10-25 01:14:03",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30111471_B1.dwg",
+      "cases": [
+        "PRH_R07C"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRH_R07C",
+      "proves_bugs": "",
+      "title": "probe: change one Settings field, then Cancel",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe only",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "02F48B67F521E99093E96FA1F59DEB968B93A7AD620FA3CD7294157E91528735",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 01:12:14",
+      "seconds": 72.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t",
+          "ok": true,
+          "seconds": 14.7,
+          "evidence": "typed 'CDS': Command: | Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set",
+          "ok": true,
+          "seconds": 8.2,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Settings\" \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" \"123\" -> $setres",
+          "ok": true,
+          "seconds": 10.7,
+          "evidence": "ui set 'Settings' AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm = 123: SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set2",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr",
+          "ok": true,
+          "seconds": 25.8,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30111471_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $setres \"set result\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: set result = "
+        },
+        {
+          "n": 2,
+          "text": "record $pr \"cancel result\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"window\":\"Creative Engineering | Settings (CDS)\",\"button\":\"Settings, Cancel\",\"button_id\":\"AdvancedSettingsDialog.CancelCommand\",\"invoke_call\":\"returned\",\"window_closed\":true}",
+          "evidence": "RECORDED, not judged: cancel result = {\"window\":\"Creative Engineering | Settings (CDS)\",\"button\":\"Settings, Cancel\",\"button_id\":\"AdvancedSettingsDialog.CancelCommand\",\"invoke_call\":\"returned\",\"window_closed\":true}"
+        },
+        {
+          "n": 3,
+          "text": "record $win_end \"windows end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30111471_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows end = Autodesk AutoCAD 2027 - [CLDV30111471_B1.dwg]"
+        },
+        {
+          "n": 4,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDS completed 45210 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 01:13:26",
+      "session_id": "RUN-20261025-0111-C3.0.74-k8P1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRH_R07C_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}
