@@ -28,7 +28,7 @@ Why by hand: Tim ruled on 20 Oct 2026 that colleague installs go "by the deploy 
 2. **Rename the old CE folders.** Add `_PRE_V3.backup` to the end of `CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`. This is your way back. AutoCAD does not load a folder whose name ends in `.backup`.
    [SCREENSHOT: the two renamed folders]
 3. **Leave the Structural folder alone** unless Tim says otherwise. [CHECK: Tim to decide, see 06]
-4. **Copy your settings aside.** Copy the folders `%APPDATA%\TIM_CE_CADTOOLS` and `%APPDATA%\CE_CVL_SUITE` to the same place with `_PRE_V3` on the end. Version 3 may rewrite some settings. Nobody has proved whether your old version still reads them after going back.
+4. **Copy your settings aside.** Copy these five folders, each to the same place with `_PRE_V3` on the end (skip any that does not exist): `%APPDATA%\TIM_CE_CADTOOLS`, `%APPDATA%\CE_CVL_SUITE`, `%APPDATA%\CE_CADTOOLS`, `%APPDATA%\Creative Engineering\CE Suite Manager` and `%APPDATA%\CE_SUITE_MANAGER\logs`. Version 3 writes to all five and may rewrite some settings. Nobody has proved whether your old version still reads them after going back.
 5. **Check the all-users plugin folder.** Open `C:\ProgramData\Autodesk\ApplicationPlugins`. If a CE `.bundle` folder there still has a file named exactly `PackageContents.xml`, **stop and tell Tim.** An old Manager there loads first and can hide the CE ribbon. Renaming it needs administrator rights.
    [SCREENSHOT: the ProgramData folder, with or without a CE folder]
 6. **Copy in the two new folders,** `CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`, from the release folder Tim gives you. [CHECK: where the frozen release copy will sit; putting it in the shared IT Admin folder counts as publishing and needs Tim's word]
@@ -89,7 +89,7 @@ Why by hand: Tim ruled on 20 Oct 2026 that colleague installs go "by the deploy 
 2. **Open** `%APPDATA%\Autodesk\ApplicationPlugins`.
 3. **Rename the new folders** by adding `.REMOVED.backup` to the end, rather than deleting them. [CHECK: the desk prefers rename over delete; Tim to confirm]
 4. **Take `_PRE_V3.backup` off the two old folder names.**
-5. **If settings look wrong,** put the `_PRE_V3` settings copies from section 2 step 4 back.
+5. **If settings look wrong,** put the `_PRE_V3` settings copies from section 2 step 4 back (all five folders, so no 3.0 folder is left beside the old ones). The CE Manager pull-down menu can stay loaded with no commands behind it (BUG-1173). If it does, type `MENULOAD`, find `CE_SUITE_MANAGER_MENU` in the list and unload it. [CHECK: the menu name is the one in the code (`CE_SUITE_MANAGER_MENU`); that unloading it removes the menu has not been rehearsed]
 6. **Open AutoCAD** and type `CEHEALTH`.
 
 **Never use Manager's Roll Back Release button.** It is not proven to work on a colleague PC (BUG-441, BUG-477). [CHECK: whether it is hidden in 1.1.70]
