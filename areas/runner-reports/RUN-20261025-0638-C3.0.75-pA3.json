@@ -1,0 +1,1207 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0638-C3.0.75-pA3",
+    "started": "2026-10-25 06:38:07",
+    "finished": "2026-10-25 06:40:27",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "323101A5509DCCEC6C20BB5B08006F1AD4BEB817D1E5E63FF75157A3C7754AC5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 323101A5509DCCEC6C20BB5B08006F1AD4BEB817D1E5E63FF75157A3C7754AC5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 06:38 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0638-C3.0.75-pA3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 06:38:08",
+      "finished": "2026-10-25 06:40:27",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30638121_B1.dwg",
+      "cases": [
+        "R35",
+        "R34"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R35",
+      "proves_bugs": "BUG-711 (typed spot-level input: a number in metres with an optional P, RL or m, or a decimal comma, is accepted and written as P plus 3 decimals; \"18600\" is refused and asked again; read back from the placed blocks LEVEL attributes)",
+      "title": "CDSL writes 18.6m, P18.6, RL18.6, 18,6 and 18.600 as the level P18.600, refuses 18600 and asks again, and Esc then places nothing",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Spot level typed input (triage group V2; daily card D26, the typed-level half); BUG-711",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-711 in BUG_CARPARK.md (expected: a number in metres, optional P or RL, is accepted; bad input is asked again; the text is written as P plus 3 dp) and daily card D26 step 5 (\"18600\" refusal wording). Not claimed: BUG-713 to BUG-716 (the spot-level finder, CDSLAB and the pit design-level offer are not driven) and the survey half of D26.",
+      "variant_of": "",
+      "expected": "CDSL at five points with the levels 18.6m, P18.6, 18.600, RL18.6 and 18,6 prints \"Spot level placed. Level: P18.600\" each time and the five placed SPOT LEVEL blocks (layer 25DIMS) each hold the attribute value P18.600 (never PP18.6, P18.6m or P18,6). CDSL with 18600 prints the refusal sentence and asks again; Esc then prints \"CDSL command cancelled. Nothing was placed.\" and the block count stays at five. The drawing file is unchanged.",
+      "why_not_unit": "The typed answer, the refusal loop and the attribute written into the real SPOT LEVEL block only meet in a live CDSL run.",
+      "not_automated": [
+        "BUG-713 (the spot-level finder ignoring blank blocks), BUG-714 (CDSLAB versus the finder), BUG-715, BUG-716 and the existing-survey-level line of D26 are NOT driven."
+      ],
+      "file_sha256": "81C7A36F125FE44F1AA2EDAA78131F478C55EA9C2CBEE4506CD04EB238273C07",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 06:38:45",
+      "seconds": 32.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30638121_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}150000,-85000{NL}18.6m\" -Force -> $s1",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'CDSL 150000,-85000 18.6m': Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}150500,-85000{NL}P18.6\" -Force -> $s2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDSL 150500,-85000 P18.6': Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}151500,-85000{NL}18.600\" -Force -> $s3",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDSL 151500,-85000 18.600': Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}151000,-85000{NL}18600\" -Force -> $s4",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed 'CDSL 151000,-85000 18600': Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank ..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s4e",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level. | En..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}152000,-85000{NL}RL18.6\" -Force -> $s5",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDSL 152000,-85000 RL18.6': Command: | Command: CDSL | Specify spot level insertion point: 152000,-85000 | Enter proposed spot level (m): RL18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}152500,-85000{NL}18,6\" -Force -> $s6",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDSL 152500,-85000 18,6': Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s6e",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 5; first: 11C559 AcDbBlockReference 25DIMS SPOT LEVEL ; 11C55C AcDbBlockReference 25DIMS SPOT LEVEL ; 11C55F AcDbBlockReference 25DIMS SPOT LEVEL ; 11C562 AcDbBlockReference 25DIMS SPOT LEVEL ; 11C565 AcDbBlockReference 25DIMS SPOT LEVEL"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^SPOT LEVEL$\" \"x~^(150000|150500|151500|152000|152500)$\" -> $spots",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 5 of 5: 11C559 SPOT LEVEL 25DIMS ; 11C55C SPOT LEVEL 25DIMS ; 11C55F SPOT LEVEL 25DIMS ; 11C562 SPOT LEVEL 25DIMS ; 11C565 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"x~^150000$\" \"name~SPOT\" -> $sp1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C559 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"x~^150500$\" \"name~SPOT\" -> $sp2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55C SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"x~^151500$\" \"name~SPOT\" -> $sp3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55F SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"x~^151000$\" \"name~SPOT\" -> $sp4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 5: "
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp1 handle -> $h1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp2 handle -> $h2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55C"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp3 handle -> $h3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55F"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"x~^152000$\" \"name~SPOT\" -> $sp5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C562 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"x~^152500$\" \"name~SPOT\" -> $sp6",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C565 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp5 handle -> $h5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C562"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp6 handle -> $h6",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C565"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp4 handle -> $h4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h1} -> $e1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C559: {\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[1..."
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h2} -> $e2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C55C: {\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[1..."
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h3} -> $e3",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C55F: {\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[151500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[1..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h5} -> $e5",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C562: {\"handle\":\"11C562\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[1..."
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h6} -> $e6",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C565: {\"handle\":\"11C565\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[1..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $spots layer -All -> $lay",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25DIMS | 25DIMS | 25DIMS | 25DIMS | 25DIMS"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30638121_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $s1 \"Spot level placed. Level: P18.600\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P18.600'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600",
+          "evidence": "found 'Spot level placed. Level: P18.600' in: Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 2,
+          "text": "contains $s2 \"Spot level placed. Level: P18.600\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P18.600'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600",
+          "evidence": "found 'Spot level placed. Level: P18.600' in: Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 3,
+          "text": "contains $s3 \"Spot level placed. Level: P18.600\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P18.600'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600",
+          "evidence": "found 'Spot level placed. Level: P18.600' in: Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 4,
+          "text": "contains $s4 \"is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level.\"",
+          "ok": true,
+          "expected": "contains 'is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level.'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or pres...",
+          "evidence": "found 'is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level.' in: Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for..."
+        },
+        {
+          "n": 5,
+          "text": "not-contains $s4 \"Spot level placed\"",
+          "ok": true,
+          "expected": "does not contain 'Spot level placed'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or pres...",
+          "evidence": "'Spot level placed' is absent from: Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for..."
+        },
+        {
+          "n": 6,
+          "text": "contains $s4e \"CDSL command cancelled. Nothing was placed.\"",
+          "ok": true,
+          "expected": "contains 'CDSL command cancelled. Nothing was placed.'",
+          "actual": "Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for...",
+          "evidence": "found 'CDSL command cancelled. Nothing was placed.' in: Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18..."
+        },
+        {
+          "n": 7,
+          "text": "count $sp4 = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $sp4 = 0 (expected = 0)"
+        },
+        {
+          "n": 8,
+          "text": "count $spots = 5",
+          "ok": true,
+          "expected": "count = 5",
+          "actual": "5",
+          "evidence": "count of $spots = 5 (expected = 5)"
+        },
+        {
+          "n": 9,
+          "text": "matches $e1 \"text.:.P18.600.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P18.600.,.insertion/",
+          "actual": "{\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P18.600\",\"insertion'"
+        },
+        {
+          "n": 10,
+          "text": "matches $e2 \"text.:.P18.600.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P18.600.,.insertion/",
+          "actual": "{\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P18.600\",\"insertion'"
+        },
+        {
+          "n": 11,
+          "text": "matches $e3 \"text.:.P18.600.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P18.600.,.insertion/",
+          "actual": "{\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[151500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P18.600\",\"insertion'"
+        },
+        {
+          "n": 12,
+          "text": "matches $e5 \"text.:.P18.600.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P18.600.,.insertion/",
+          "actual": "{\"handle\":\"11C562\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P18.600\",\"insertion'"
+        },
+        {
+          "n": 13,
+          "text": "matches $e6 \"text.:.P18.600.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P18.600.,.insertion/",
+          "actual": "{\"handle\":\"11C565\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P18.600\",\"insertion'"
+        },
+        {
+          "n": 14,
+          "text": "contains $s5 \"Spot level placed. Level: P18.600\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P18.600'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 152000,-85000 | Enter proposed spot level (m): RL18.6 | Spot level placed. Level: P18.600",
+          "evidence": "found 'Spot level placed. Level: P18.600' in: Command: | Command: CDSL | Specify spot level insertion point: 152000,-85000 | Enter proposed spot level (m): RL18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 15,
+          "text": "contains $s6 \"Spot level placed. Level: P18.600\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P18.600'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600",
+          "evidence": "found 'Spot level placed. Level: P18.600' in: Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 16,
+          "text": "not-contains $e1 \"PP18\"",
+          "ok": true,
+          "expected": "does not contain 'PP18'",
+          "actual": "{\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "'PP18' is absent from: {\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotatio..."
+        },
+        {
+          "n": 17,
+          "text": "not-contains $e2 \"PP18\"",
+          "ok": true,
+          "expected": "does not contain 'PP18'",
+          "actual": "{\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "'PP18' is absent from: {\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150500.0,-85000.0,0.0],\"rotatio..."
+        },
+        {
+          "n": 18,
+          "text": "not-contains $e1 \"18.6m\"",
+          "ok": true,
+          "expected": "does not contain '18.6m'",
+          "actual": "{\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "'18.6m' is absent from: {\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotatio..."
+        },
+        {
+          "n": 19,
+          "text": "not-contains $lay \"0TEXT\"",
+          "ok": true,
+          "expected": "does not contain '0TEXT'",
+          "actual": "25DIMS | 25DIMS | 25DIMS | 25DIMS | 25DIMS",
+          "evidence": "'0TEXT' is absent from: 25DIMS | 25DIMS | 25DIMS | 25DIMS | 25DIMS"
+        },
+        {
+          "n": 20,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 21,
+          "text": "record $s1 \"FULL CDSL 18.6m\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18.6m = Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 22,
+          "text": "record $s2 \"FULL CDSL P18.6\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL P18.6 = Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 23,
+          "text": "record $s3 \"FULL CDSL 18.600\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18.600 = Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 24,
+          "text": "record $s4 \"FULL CDSL 18600\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level.",
+          "evidence": "RECORDED, not judged: FULL CDSL 18600 = Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level."
+        },
+        {
+          "n": 25,
+          "text": "record $s4e \"FULL CDSL 18600 then Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level. | Enter proposed spot level (m): *Cancel* | CDSL command cancelled. Nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL CDSL 18600 then Esc = Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level. | Enter proposed spot level (m): *Cancel* | CDSL command cancelled. Nothing was placed."
+        },
+        {
+          "n": 26,
+          "text": "record $s5 \"FULL CDSL RL18.6\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 152000,-85000 | Enter proposed spot level (m): RL18.6 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL RL18.6 = Command: | Command: CDSL | Specify spot level insertion point: 152000,-85000 | Enter proposed spot level (m): RL18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 27,
+          "text": "record $s6 \"FULL CDSL 18,6\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18,6 = Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 28,
+          "text": "record $s6e \"FULL CDSL 18,6 then Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18,6 then Esc = Command: | Command: CDSL | Specify spot level insertion point: 152500,-85000 | Enter proposed spot level (m): 18,6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 29,
+          "text": "record $e1 \"FULL LEVEL attribute of the 18.6m block\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[150100.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[150170.71067811866,-85170.71067811866,0.0],\"bbox\":[150097.5883124789,-85847.43019653931,150845.59731402335,-85099.42119499494]}],\"bbox\":[149829.28932188134,-85847.43019653931,150845.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[150100.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL LEVEL attribute of the 18.6m block = {\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[150100.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[150170.71067811866,-85170.71067811866,0.0],\"bbox\":[150097.5883124789,-85847.43019653931,150845.59731402335,-85099.42119499494]}],\"bbox\":[149829.28932188134,-85847.43019653931,150845.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[150100.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 30,
+          "text": "record $e2 \"FULL LEVEL attribute of the P18.6 block\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[150600.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[150670.71067811866,-85170.71067811866,0.0],\"bbox\":[150597.5883124789,-85847.43019653931,151345.59731402335,-85099.42119499494]}],\"bbox\":[150329.28932188134,-85847.43019653931,151345.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[150600.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL LEVEL attribute of the P18.6 block = {\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[150500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[150600.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[150670.71067811866,-85170.71067811866,0.0],\"bbox\":[150597.5883124789,-85847.43019653931,151345.59731402335,-85099.42119499494]}],\"bbox\":[150329.28932188134,-85847.43019653931,151345.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[150600.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 31,
+          "text": "record $e3 \"FULL LEVEL attribute of the 18.600 block\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[151500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[151600.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[151670.71067811866,-85170.71067811866,0.0],\"bbox\":[151597.5883124789,-85847.43019653931,152345.59731402335,-85099.42119499494]}],\"bbox\":[151329.28932188134,-85847.43019653931,152345.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[151600.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL LEVEL attribute of the 18.600 block = {\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[151500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[151600.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[151670.71067811866,-85170.71067811866,0.0],\"bbox\":[151597.5883124789,-85847.43019653931,152345.59731402335,-85099.42119499494]}],\"bbox\":[151329.28932188134,-85847.43019653931,152345.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[151600.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 32,
+          "text": "record $e5 \"FULL LEVEL attribute of the RL18.6 block\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C562\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[152100.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[152170.71067811866,-85170.71067811866,0.0],\"bbox\":[152097.5883124789,-85847.43019653931,152845.59731402335,-85099.42119499494]}],\"bbox\":[151829.28932188134,-85847.43019653931,152845.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[152100.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL LEVEL attribute of the RL18.6 block = {\"handle\":\"11C562\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152000.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[152100.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[152170.71067811866,-85170.71067811866,0.0],\"bbox\":[152097.5883124789,-85847.43019653931,152845.59731402335,-85099.42119499494]}],\"bbox\":[151829.28932188134,-85847.43019653931,152845.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[152100.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 33,
+          "text": "record $e6 \"FULL LEVEL attribute of the 18,6 block\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C565\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[152600.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[152670.71067811866,-85170.71067811866,0.0],\"bbox\":[152597.5883124789,-85847.43019653931,153345.59731402335,-85099.42119499494]}],\"bbox\":[152329.28932188134,-85847.43019653931,153345.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[152600.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL LEVEL attribute of the 18,6 block = {\"handle\":\"11C565\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[152500.0,-85000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P18.600\",\"insertion\":[152600.0,-85241.42135623732,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[152670.71067811866,-85170.71067811866,0.0],\"bbox\":[152597.5883124789,-85847.43019653931,153345.59731402335,-85099.42119499494]}],\"bbox\":[152329.28932188134,-85847.43019653931,153345.59731402335,-84829.28932188134],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[152600.0,-85241.42135623732]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 34,
+          "text": "record $lay \"layers of the five blocks\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25DIMS | 25DIMS | 25DIMS | 25DIMS | 25DIMS",
+          "evidence": "RECORDED, not judged: layers of the five blocks = 25DIMS | 25DIMS | 25DIMS | 25DIMS | 25DIMS"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 133 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSL completed 157 ms ; Command outcome: CDSL completed 91 ms ; Command outcome: CDSL completed 67 ms ; Command outcome: CDSL cancelled 7126 ms ; Command outcome: CDSL completed 67 ms ; Command outcome: CDSL completed 79 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 06:39:18",
+      "session_id": "RUN-20261025-0638-C3.0.75-pA3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R35_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R34",
+      "proves_bugs": "",
+      "title": "COPY, ROTATE Copy and SCALE Copy of pit P3 each make a real CE pit: a CE line says it was numbered as new and the copy comes with its own PIT LABEL",
+      "kind": "deterministic",
+      "order": 33,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "COPY of a pit (triage group M3; daily card D15); BUG-665",
+      "bug": "",
+      "known_fail": "BUG-665",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-665 in BUG_CARPARK.md (Grip-Ctrl copy, ROTATE Copy and SCALE Copy of a pit or pipe: expected \"the copy gets the same clean-up a COPY gets: new pit number, own labels, own record\") and daily card D15 (COPY: \"1 pit copied and numbered as new\", new pit number, one U). The Grip-Ctrl copy of BUG-665 is not driven. BUG-210, BUG-288, BUG-666 and BUG-671 (other COPY faults of group M3) are not claimed.",
+      "variant_of": "",
+      "expected": "The plain COPY of pit P3 (the control) prints \"1 pit copied and numbered as new.\" and adds one pit block (layer STORMWATER PIT) and one PIT LABEL block (layer STORMWATER PIT LABEL). ROTATE Copy by 90 degrees and SCALE Copy by 1.5 of the same pit must each give the same: a CE line saying one pit was copied and numbered as new, and one new PIT LABEL block beside the new pit block, so the copy has a number of its own and is not a twin of P3.",
+      "why_not_unit": "The copy clean-up runs when AutoCAD ends the native COPY, ROTATE or SCALE command on the live drawing.",
+      "not_automated": [
+        "The new pit's NUMBER is not read (the PIT LABEL attribute is not exposed by the object read, and the Pit Schedule cells are not asserted): the case reads the CE line and the presence of the label block. The Grip-Ctrl copy of BUG-665 is not driven.",
+        "If the rotated or scaled copy gets its label a few seconds after the command, the 8 second wait here would show it; a later label would not be seen."
+      ],
+      "file_sha256": "D7E167D4495294EB3730A7AB097842256A19034AFB2CE77F024D6F6177F60C8B",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "count of $ro_label = 0 (expected = 1)",
+      "started": "2026-10-25 06:39:18",
+      "seconds": 50.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30638121_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_cp",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C559 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C573 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C57A AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT BLOCK\" -> $cp_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C559 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C573 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ROTATE{NL}53777.7,-25569.9{NL}C{NL}90{NL}\" -Force -> $ro",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.ROTATE 53777.7,-25569.9 C 90': Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a co..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $roe",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | Command:"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_ro",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1037 (model space now 1038); by type: AcDbBlockReference 1; first: 11C57F AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT BLOCK\" -> $ro_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C57F PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT LABEL\" -> $ro_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 1: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.SCALE{NL}53777.7,-25569.9{NL}C{NL}1.5{NL}\" -Force -> $sc",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.SCALE 53777.7,-25569.9 C 1.5': Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | Comma..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sce",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | Command:"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $new_sc",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "1 object(s) after index 1038 (model space now 1039); by type: AcDbBlockReference 1; first: 11C599 AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"name~^PIT BLOCK\" -> $sc_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C599 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"name~^PIT LABEL\" -> $sc_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 1: "
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30638121_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $cp \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 2,
+          "text": "count $cp_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $cp_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_label = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $ro_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $ro_label = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $ro_label = 0 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "history count \"pit copied and numbered as new\" = 3",
+          "ok": false,
+          "expected": "3 line(s) with 'pit copied and numbered as new'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'pit copied and numbered as new' (expected 3)"
+        },
+        {
+          "n": 7,
+          "text": "count $sc_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sc_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "count $sc_label = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $sc_label = 0 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30638121_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30638121_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $cp \"FULL COPY (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command:",
+          "evidence": "RECORDED, not judged: FULL COPY (control) = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command:"
+        },
+        {
+          "n": 12,
+          "text": "record $new_cp \"FULL objects the COPY added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762} | {\"index\":1036,\"handle\":\"11C57A\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762} | {\"index\":1036,\"handle\":\"11C57A\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}"
+        },
+        {
+          "n": 13,
+          "text": "record $ro \"FULL ROTATE Copy\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | Command:",
+          "evidence": "RECORDED, not judged: FULL ROTATE Copy = Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | Command:"
+        },
+        {
+          "n": 14,
+          "text": "record $roe \"FULL ROTATE Copy after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | Command:",
+          "evidence": "RECORDED, not judged: FULL ROTATE Copy after the wait = Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | Command:"
+        },
+        {
+          "n": 15,
+          "text": "record $new_ro \"FULL objects the ROTATE Copy added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1037,\"handle\":\"11C57F\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.67543006733,\"y\":-25569.873867640432}",
+          "evidence": "RECORDED, not judged: FULL objects the ROTATE Copy added = {\"index\":1037,\"handle\":\"11C57F\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.67543006733,\"y\":-25569.873867640432}"
+        },
+        {
+          "n": 16,
+          "text": "record $sc \"FULL SCALE Copy\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | Command:",
+          "evidence": "RECORDED, not judged: FULL SCALE Copy = Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | Command:"
+        },
+        {
+          "n": 17,
+          "text": "record $sce \"FULL SCALE Copy after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | Command:",
+          "evidence": "RECORDED, not judged: FULL SCALE Copy after the wait = Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | Command:"
+        },
+        {
+          "n": 18,
+          "text": "record $new_sc \"FULL objects the SCALE Copy added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1038,\"handle\":\"11C599\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.739198539355,\"y\":-25569.863145100997}",
+          "evidence": "RECORDED, not judged: FULL objects the SCALE Copy added = {\"index\":1038,\"handle\":\"11C599\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.739198539355,\"y\":-25569.863145100997}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30638121_B1_143bc22b2.log)",
+        "Civil CE log: 46 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-25 06:40:08",
+      "session_id": "RUN-20261025-0638-C3.0.75-pA3-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-665): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

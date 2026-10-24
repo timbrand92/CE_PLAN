@@ -1,0 +1,754 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0602-C3.0.75-p3b3b8",
+    "started": "2026-10-25 06:02:29",
+    "finished": "2026-10-25 06:07:24",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "2AC3D5C5534B0A9D11580B5504541455E912A07C0365E0E18FA70CDA5F7FA82C",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 0 shared setup(s); pack SHA-256 2AC3D5C5534B0A9D11580B5504541455E912A07C0365E0E18FA70CDA5F7FA82C; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 06:02 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0602-C3.0.75-p3b3b8-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 06:02:31",
+      "finished": "2026-10-25 06:07:24",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30602341_B1.dwg",
+      "cases": [
+        "R38",
+        "R40",
+        "R40_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R38",
+      "proves_bugs": "BUG-376 (Pit Schedule IL (Inlet) and IL (Outlet) blank where the plan shows a level: here the row of pit P3 shows IL (Inlet) and IL (Outlet), and both numbers are IL texts that are drawn on the plan)",
+      "title": "The Pit Schedule row of pit P3 shows its inlet and outlet invert levels (not blank), and they equal the IL texts on the plan; the schedule closes and changes nothing",
+      "kind": "deterministic",
+      "order": 41,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Pit Schedule levels (triage groups S2 and S3; daily cards D21 and D23 neighbour); BUG-376",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-376 in BUG_CARPARK.md (found on DRV17_B1: row P3 had IL (Inlet) and IL (Outlet) blank while the plan showed IL 18.10 at the P3 end of a pipe; expected the schedule to carry the plan's levels) and with daily cards D21 and D23 (the schedule window is read, not edited). Not claimed: the other S2 and S3 bugs (BUG-098, BUG-694, BUG-780, BUG-784, BUG-786, BUG-965, BUG-246, BUG-779, BUG-785, BUG-807, BUG-869): they need cell edits, a twin-inlet drawing, a placed schedule or other data this fixture does not have.",
+      "variant_of": "",
+      "expected": "PITSCHEDULE opens; the row of pit P3 reads FROM P4, inlet dia 450 with IL 17.30, outlet dia 450 with IL 17.25 and cover 18.88; the plan holds the texts IL 17.30 and IL 17.25 (the same levels); the Close button closes the window; the drawing file on disk is unchanged.",
+      "why_not_unit": "The schedule is built by the live window from the links in the real drawing, and the plan texts are real drawing objects.",
+      "not_automated": [
+        "Which plan text belongs to which pipe end is not mapped: the case checks that the schedule's two numbers are among the IL texts drawn on the plan. Cell edits, Refresh and a placed (drawn) schedule are not driven (the grid cells have no accessible id).",
+        "That the window looks right is R25's Codex look; this case reads text only."
+      ],
+      "file_sha256": "29174FB955537BDD379ADBAC0E3C13A9730DB26851438C29FCF7929FF1C3019F",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 06:03:08",
+      "seconds": 117.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "copy CLDV30602341_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 13.1,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m5",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m10",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^IL \" -> $il0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^IL \" -> $il5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^IL \" -> $il10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 text -All -> $il0t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' of an empty list: empty"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il5 text -All -> $il5t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il10 text -All -> $il10t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $plan_il \"{$il0t} | {$il5t} | {$il10t}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $plan_il"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 26.3,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd",
+          "ok": true,
+          "seconds": 32.7,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $psc",
+          "ok": true,
+          "seconds": 26.5,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $psd \"Pit P3\" exists",
+          "ok": true,
+          "expected": "control 'Pit P3' exists",
+          "actual": "2",
+          "evidence": "'Pit P3' found in 'Creative Engineering | Pit Schedule (PITSCHEDULE)' (2 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "matches $psd \"name.:.Pit P3.,.id(?:(?!name.:.Pit ).)*?name.:.P4.(?:(?!name.:.Pit ).)*?name.:.17\\.30.(?:(?!name.:.Pit ).)*?name.:.17\\.25.(?:(?!name.:.Pit ).)*?name.:.18\\.88.\"",
+          "ok": true,
+          "expected": "matches /name.:.Pit P3.,.id(?:(?!name.:.Pit ).)*?name.:.P4.(?:(?!name.:.Pit ).)*?name.:.17\\.30.(?:(?!name.:.Pit ).)*?name.:.17\\.25.(?:(?!name.:.Pit ).)*?name.:.18\\.88./",
+          "actual": "{\"title\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"handle\":417403496,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2160,136,1440,800],\"control_count\":660,\"truncated\":false,\"tabs\":[{\"name\":\"So...",
+          "evidence": "matched 'name\":\"Pit P3\",\"id\":\"\",\"class\":\"DataGridRow\",\"depth\":5,\"enabled\":true,\"offscreen\":true,\"bounds\":[2189,766,1101,26],\"selected\":false},{\"type\":\"Custom\",\"name\":\"P3\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2189,766,80,26],\"value\":\"P3\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"P3\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2191,766,76,24]},{\"type\":\"Custom\",\"name\":\"900 x 900\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2269,766,140,26],\"value\":\"900 x 900\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"900 x 900\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2269,766,140,24]},{\"type\":\"Custom\",\"name\":\"DET X (Grated): blank\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2409,766,95,26],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2411,766,91,24]},{\"type\":\"Custom\",\"name\":\"P4\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2504,766,80,26],\"value\":\"P4\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"P4\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2506,766,76,24]},{\"type\":\"Custom\",\"name\":\"450\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2584,766,90,26],\"value\":\"450\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"450\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2586,766,86,24]},{\"type\":\"Custom\",\"name\":\"17.30\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2674,766,90,26],\"value\":\"17.30\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"17.30\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2676,766,86,24]},{\"type\":\"Custom\",\"name\":\"450\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2764,766,95,26],\"value\":\"450\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"450\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2766,766,91,24]},{\"type\":\"Custom\",\"name\":\"17.25\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2859,766,95,26],\"value\":\"17.25\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"17.25\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2861,766,91,24]},{\"type\":\"Custom\",\"name\":\"18.88\"'"
+        },
+        {
+          "n": 3,
+          "text": "matches $plan_il \"IL 17\\.30\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.30/",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | ...",
+          "evidence": "matched 'IL 17.30'"
+        },
+        {
+          "n": 4,
+          "text": "matches $plan_il \"IL 17\\.25\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.25/",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | ...",
+          "evidence": "matched 'IL 17.25'"
+        },
+        {
+          "n": 5,
+          "text": "window-closed $psc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"Pit Schedule\"",
+          "ok": true,
+          "expected": "does not contain 'Pit Schedule'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg]",
+          "evidence": "'Pit Schedule' is absent from: Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 8,
+          "text": "record $plan_il \"FULL every IL text on the plan\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 | IL 18.60 | IL 18.24",
+          "evidence": "RECORDED, not judged: FULL every IL text on the plan = | IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 9,
+          "text": "record $psc \"FULL what pressing Close reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"window\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"button\":\"Close\",\"button_id\":\"\",\"invoke_call\":\"returned\",\"window_closed\":true}",
+          "evidence": "RECORDED, not judged: FULL what pressing Close reported = {\"window\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"button\":\"Close\",\"button_id\":\"\",\"invoke_call\":\"returned\",\"window_closed\":true}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 7 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 73680 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 06:05:05",
+      "session_id": "RUN-20261025-0602-C3.0.75-p3b3b8-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R38_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R40",
+      "proves_bugs": "BUG-606 (CDCHECKDWG on the current drawing writes no report file beside the source drawing: the folder of the test copy gets only AutoCAD lock files and the CE backup; the report went to the CE logs folder on this PC instead)",
+      "title": "CDCHECKDWG on the current drawing prints one summary line (not a long dump), opens the results window, closes cleanly, and changes nothing in the drawing file",
+      "kind": "deterministic",
+      "order": 45,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDCHECKDWG (daily card D28; triage groups C2 and W2)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with daily card D28 (assertions 1 to 4: the four CE lines in order, one summary line matching the layer recognition pattern, at most 5 new CE lines, window title and Close, one new report file beside the drawing, file hash unchanged). BUG-606 says that report file beside the drawing is wrong (approved CV07: reports go to the approved project report location); on 3.0.75 the command no longer prints \"wrote report\" and no file lands beside the drawing (the report went to the CE logs folder under %APPDATA%, folder TIM_CE_CADTOOLS, subfolder logs, subfolder checkdwg), which is the approved location BUG-606 asks for; the case therefore asserts \"no report beside the drawing\" instead of card step 4 (a new report file beside the drawing).",
+      "variant_of": "",
+      "expected": "CDCHECKDWG with the empty answer prints \"[CE] CDCHECKDWG: checking current drawing (...)\", \"[CE] CDCHECKDWG reading: <path>\", exactly one summary line \"[CE] CDCHECKDWG: <n>.<n>% layer recognition, <n> unrecognized layers, <n> QA findings ...\" and \"[CE] CDCHECKDWG wrote report: <path>\" (four CE lines, no long dump); the report path is in the CE logs folder (logs\beckdwg), not beside the drawing; the window \"Check consultant drawing results (CDCHECKDWG)\" opens and its Close button closes it; no report file appears beside the drawing (only AutoCAD lock files and the CE backup are new in the test-copy folder); the drawing file SHA-256 does not change.",
+      "why_not_unit": "The command reads a real DWG off disk and opens a live window.",
+      "not_automated": [
+        "BUG-790 (design review ignoring office Settings) and BUG-801 (QA going stale) are NOT claimed. The window look is not judged. The \"approved project report location\" itself is not read: the case only shows that nothing is written beside the drawing.",
+        "The report the command now writes to the CE logs folder under %APPDATA% (TIM_CE_CADTOOLS, logs, checkdwg) on this PC is left there (each run adds one small text file); it is not read."
+      ],
+      "file_sha256": "1E354A42E14F954C7E3BD4718FB2742ADB6A18E160BC03BE8EB1D710E4147555",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 06:05:05",
+      "seconds": 72.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30602341_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKDWG{NL}\" -Force -ExpectWindow \"Check consultant\" -TimeoutSec 180 -> $ck",
+          "ok": true,
+          "seconds": 22.6,
+          "evidence": "typed 'CDCHECKDWG': Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CD..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_open",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg] ; Creative Engineering | Check consultant drawing results (CDCHECKDWG)"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Check consultant\" -> $ckd",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "ui-dump 'Creative Engineering | Check consultant drawing results (CDCHECKDWG)': 65 controls, tabs: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Check consultant\" \"Close\" -> $ckc",
+          "ok": true,
+          "seconds": 25.0,
+          "evidence": "pressed 'Close' in /Check consultant/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Check consultant\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Check consultant/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30602341_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $ck \"\\[CE\\] CDCHECKDWG: checking current drawing \\(\"",
+          "ok": true,
+          "expected": "matches /\\[CE\\] CDCHECKDWG: checking current drawing \\(/",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-...",
+          "evidence": "matched '[CE] CDCHECKDWG: checking current drawing ('"
+        },
+        {
+          "n": 2,
+          "text": "contains $ck \"[CE] CDCHECKDWG reading:\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECKDWG reading:'",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-...",
+          "evidence": "found '[CE] CDCHECKDWG reading:' in: Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved change..."
+        },
+        {
+          "n": 3,
+          "text": "matches $ck \"[0-9]+\\.[0-9]% layer recognition, [0-9]+ unrecognized layers?, ([0-9]+ QA findings?|no CE project data)\"",
+          "ok": true,
+          "expected": "matches /[0-9]+\\.[0-9]% layer recognition, [0-9]+ unrecognized layers?, ([0-9]+ QA findings?|no CE project data)/",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-...",
+          "evidence": "matched '73.9% layer recognition, 19 unrecognized layers, 91 QA findings'"
+        },
+        {
+          "n": 4,
+          "text": "history count \"[CE] CDCHECKDWG\" = 4",
+          "ok": true,
+          "expected": "4 line(s) with '[CE] CDCHECKDWG'",
+          "actual": "4",
+          "evidence": "command line holds 4 line(s) containing '[CE] CDCHECKDWG' (expected 4)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"[CE] CDCHECKDWG wrote report:\"",
+          "ok": true,
+          "expected": "command line has '[CE] CDCHECKDWG wrote report:'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30602341_B1_CDCHECKDWG_20261025_060515.txt'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"TIM_CE_CADTOOLS\"",
+          "ok": true,
+          "expected": "command line has 'TIM_CE_CADTOOLS'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30602341_B1_CDCHECKDWG_20261025_060515.txt'"
+        },
+        {
+          "n": 7,
+          "text": "folder-new-only $copy0 \"dwl2?$|_PRE_C7_\"",
+          "ok": true,
+          "expected": "new files only /dwl2?$|_PRE_C7_/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        },
+        {
+          "n": 8,
+          "text": "contains $win_open \"Check consultant drawing results\"",
+          "ok": true,
+          "expected": "contains 'Check consultant drawing results'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)",
+          "evidence": "found 'Check consultant drawing results' in: Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)"
+        },
+        {
+          "n": 9,
+          "text": "window-closed $ckc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 10,
+          "text": "not-contains $win_end \"Check consultant\"",
+          "ok": true,
+          "expected": "does not contain 'Check consultant'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg]",
+          "evidence": "'Check consultant' is absent from: Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 12,
+          "text": "record $ck \"FULL CDCHECKDWG\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CDCHECKDWG reading: C:\\ce_rc_drv\\CLDV30602341_B1.dwg | [CE] CDCHECKDWG: 73.9% layer recognition, 19 unrecognized layers, 91 QA findings, 1 schedule issue",
+          "evidence": "RECORDED, not judged: FULL CDCHECKDWG = Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CDCHECKDWG reading: C:\\ce_rc_drv\\CLDV30602341_B1.dwg | [CE] CDCHECKDWG: 73.9% layer recognition, 19 unrecognized layers, 91 QA findings, 1 schedule issue"
+        },
+        {
+          "n": 13,
+          "text": "record $win_open \"windows while the results were open\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)",
+          "evidence": "RECORDED, not judged: windows while the results were open = Autodesk AutoCAD 2027 - [CLDV30602341_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)"
+        },
+        {
+          "n": 14,
+          "text": "record $copy1 \"FULL copy info after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30602341_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_222552.dwg\",\"CLD10_B1.dwg\",\"CLD10_S1.dwg\",\"CLD101_B1_PRE_C7_20261018_172900.dwg\",\"CLD101_B1.dwg\",\"CLD102_B1_PRE_C7_20261018_174433.dwg\",\"CLD102_B1.dwg\",\"CLD11_B1_PRE_C7_20261009_230550.dwg\",\"CLD11_B1.dwg\",\"CLD11_S1.dwg\",\"CLD12_B1_PRE_C7_20261009_232405.dwg\",\"CLD12_B1.dwg\",\"CLD12_S1.dwg\",\"CLD13_B1_PRE_C7_20261010_023950.dwg\",\"CLD13_B1.dwg\",\"CLD13_S1.dwg\",\"CLD14_B1_PRE_C7_20261010_030921.dwg\",\"CLD14_B1.dwg\",\"CLD14_S1.dwg\",\"CLD15_B1_PRE_C7_20261010_042655.dwg\",\"CLD15_B1.dwg\",\"CLD15_S1.dwg\",\"CLD16_B1.dwg\",\"CLD16_S1.dwg\",\"CLD17_B1_PRE_C7_20261010_052219.dwg\",\"CLD17_B1.dwg\",\"CLD17_S1.dwg\",\"CLD18_B1_PRE_C7_20261010_055307.dwg\",\"CLD18_B1.dwg\",\"CLD18_B2_PRE_C7_20261010_055812.dwg\",\"CLD18_B2.dwg\",\"CLD18_M1.dwg\",\"CLD18_S1.dwg\",\"CLD19_B1_PRE_C7_20261010_061957.dwg\",\"CLD19_B1.dwg\",\"CLD19_S1.dwg\",\"CLD20_B1_PRE_C7_20261010_071101.dwg\",\"CLD20_B1.dwg\",\"CLD20_S1.dwg\",\"CLD20_TGT.dwg\",\"CLD21_B1_PRE_C7_20261010_072234.dwg\",\"CLD21_B1.dwg\",\"CLD21_CVL_B1_PRE_C7_20261010_072218.dwg\",\"CLD21_CVL_B1.dwg\",\"CLD22_B1_PRE_C7_20261010_084533.dwg\",\"CLD22_B1.dwg\",\"CLD22_B2.dwg\",\"CLD23_B1_PRE_C7_20261010_102430.dwg\",\"CLD23_B1.dwg\",\"CLD24_B1_PRE_C7_20261010_140454.dwg\",\"CLD24_B1.dwg\",\"CLD24_B2_PRE_C7_20261010_140820.dwg\",\"CLD24_B2.dwg\",\"CLD24_S1.dwg\",\"CLD25_B1_PRE_C7_20261010_210000.dwg\",\"CLD25_B1.dwg\",\"CLD25_B2.dwg\",\"CLD25_B3.dwg\",\"CLD25_B4.dwg\",\"CLD25_S1.dwg\",\"CLD26_B1_PRE_C7_20261010_211959.dwg\",\"CLD26_B1.dwg\",\"CLD26_B2.dwg\",\"CLD26_B3_PRE_C7_20261010_212336.dwg\",\"CLD26_B3.dwg\",\"CLD26_B4_PRE_C7_20261010_212527.dwg\",\"CLD26_B4.dwg\",\"CLD26_B5.dwg\",\"CLD26_S1.dwg\",\"CLD27_B1_PRE_C7_20261010_213917.dwg\",\"CLD27_B1.dwg\",\"CLD27_B2_PRE_C7_20261010_214231.dwg\",\"CLD27_B2.dwg\",\"CLD27_B3.dwg\",\"CLD27_S1.dwg\",\"CLD27_S2.dwg\",\"CLD27_S3.dwg\",\"CLD28_B1.dwg\",\"CLD28_S1.dwg\",\"CLD321_B1_PRE_C7_20261019_122627.dwg\",\"CLD321_B1.dwg\",\"CLD322_B1_PRE_C7_20261019_124752.dwg\",\"CLD322_B1.dwg\",\"CLD331_B1_PRE_C7_20261019_230837.dwg\",\"CLD331_B1.dwg\",\"CLD332_B1_PRE_C7_20261019_232458.dwg\",\"CLD332_B1.dwg\",\"CLD341_B1_PRE_C7_20261020_052212.dwg\",\"CLD341_B1.dwg\",\"CLD342_B1_PRE_C7_20261020_054122.dwg\",\"CLD342_B1.dwg\",\"CLD35_B1_PRE_C7_20261012_002754.dwg\",\"CLD35_B1.dwg\",\"CLD35_B2.dwg\",\"CLD35_S1.dwg\",\"CLD351_B1_PRE_C7_20261020_100820.dwg\",\"CLD351_B1.dwg\",\"CLD352_B1_PRE_C7_20261020_102521.dwg\",\"CLD352_B1.dwg\",\"CLD361_B1_PRE_C7_20261020_120256.dwg\",\"CLD361_B1.dwg\",\"CLD362_B1.dwg\",\"CLD371_B1_PRE_C7_20261020_133137.dwg\",\"CLD371_B1.dwg\",\"CLD372_B1_PRE_C7_20261020_134629.dwg\",\"CLD372_B1.dwg\",\"CLD381_B1_PRE_C7_20261020_144018.dwg\",\"CLD381_B1.dwg\",\"CLD391_B1_PRE_C7_20261020_153011.dwg\",\"CLD391_B1.dwg\",\"CLD392_B1_PRE_C7_20261020_154257.dwg\",\"CLD392_B1.dwg\",\"CLD393_METRE.dwg\",\"CLD40_B1_PRE_C7_20261012_034744.dwg\",\"CLD40_B1.dwg\",\"CLD40_B1R.dwg\",\"CLD40_S1.dwg\",\"CLD401_B1_PRE_C7_20261020_173941.dwg\",\"CLD401_B1.dwg\",\"CLD41_B1_PRE_C7_20261012_080000.dwg\",\"CLD41_B1.dwg\",\"CLD41_S1.dwg\",\"CLD411_B1_PRE_C7_20261020_200618.dwg\",\"CLD411_B1.dwg\",\"CLD421_B1_PRE_C7_20261020_202235.dwg\",\"CLD421_B1.dwg\",\"CLD422_B1_PRE_C7_20261020_221307.dwg\",\"CLD422_B1.dwg\",\"CLD431_B1_PRE_C7_20261021_041708.dwg\",\"CLD431_B1.dwg\",\"CLD431_S1.dwg\",\"CLD441_B1_PRE_C7_20261021_063930.dwg\",\"CLD441_B1.dwg\",\"CLD441_S1.dwg\",\"CLD442_B1_PRE_C7_20261021_064649.dwg\",\"CLD442_B1.dwg\",\"CLD442_S1.dwg\",\"CLD451_B1_PRE_C7_20261021_185016.dwg\",\"CLD451_B1.dwg\",\"CLD451_S1.dwg\",\"CLD452_B1_PRE_C7_20261021_190216.dwg\",\"CLD452_B1.dwg\",\"CLD461_B1_PRE_C7_20261022_143805.dwg\",\"CLD461_B1.dwg\",\"CLD461_S1.dwg\",\"CLD462_S1.dwg\",\"CLD471_B1_PRE_C7_20261022_203405.dwg\",\"CLD471_B1.dwg\",\"CLD471_R1_PRE_C7_20261022_202804.dwg\",\"CLD471_R1.dwg\",\"CLD472_R2.dwg\",\"CLD472_S1.dwg\",\"CLD473_B1_PRE_C7_20261022_204046.dwg\",\"CLD473_B1.dwg\",\"CLD50_B1_PRE_C7_20261017_141915.dwg\",\"CLD50_B1.dwg\",\"CLD50_S1.dwg\",\"CLD51_B1_PRE_C7_20261017_165657.dwg\",\"CLD51_B1.dwg\",\"CLD51_S1.dwg\",\"CLD52_S1.dwg\",\"...",
+          "evidence": "RECORDED, not judged: FULL copy info after = {\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30602341_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_222552.dwg\",\"CLD10_B1.dwg\",\"CLD10_S1.dwg\",\"CLD101_B1_PRE_C7_20261018_172900.dwg\",\"CLD101_B1.dwg\",\"CLD102_B1_PRE_C7_20261018_174433.dwg\",\"CLD102_B1.dwg\",\"CLD11_B1_PRE_C7_20261009_230550.dwg\",\"CLD11_B1.dwg\",\"CLD11_S1.dwg\",\"CLD12_B1_PRE_C7_20261009_232405.dwg\",\"CLD12_B1.dwg\",\"CLD12_S1.dwg\",\"CLD13_B1_PRE_C7_20261010_023950.dwg\",\"CLD13_B1.dwg\",\"CLD13_S1.dwg\",\"CLD14_B1_PRE_C7_20261010_030921.dwg\",\"CLD14_B1.dwg\",\"CLD14_S1.dwg\",\"CLD15_B1_PRE_C7_20261010_042655.dwg\",\"CLD15_B1.dwg\",\"CLD15_S1.dwg\",\"CLD16_B1.dwg\",\"CLD16_S1.dwg\",\"CLD17_B1_PRE_C7_20261010_052219.dwg\",\"CLD17_B1.dwg\",\"CLD17_S1.dwg\",\"CLD18_B1_PRE_C7_20261010_055307.dwg\",\"CLD18_B1.dwg\",\"CLD18_B2_PRE_C7_20261010_055812.dwg\",\"CLD18_B2.dwg\",\"CLD18_M1.dwg\",\"CLD18_S1.dwg\",\"CLD19_B1_PRE_C7_20261010_061957.dwg\",\"CLD19_B1.dwg\",\"CLD19_S1.dwg\",\"CLD20_B1_PRE_C7_20261010_071101.dwg\",\"CLD20_B1.dwg\",\"CLD20_S1.dwg\",\"CLD20_TGT.dwg\",\"CLD21_B1_PRE_C7_20261010_072234.dwg\",\"CLD21_B1.dwg\",\"CLD21_CVL_B1_PRE_C7_20261010_072218.dwg\",\"CLD21_CVL_B1.dwg\",\"CLD22_B1_PRE_C7_20261010_084533.dwg\",\"CLD22_B1.dwg\",\"CLD22_B2.dwg\",\"CLD23_B1_PRE_C7_20261010_102430.dwg\",\"CLD23_B1.dwg\",\"CLD24_B1_PRE_C7_20261010_140454.dwg\",\"CLD24_B1.dwg\",\"CLD24_B2_PRE_C7_20261010_140820.dwg\",\"CLD24_B2.dwg\",\"CLD24_S1.dwg\",\"CLD25_B1_PRE_C7_20261010_210000.dwg\",\"CLD25_B1.dwg\",\"CLD25_B2.dwg\",\"CLD25_B3.dwg\",\"CLD25_B4.dwg\",\"CLD25_S1.dwg\",\"CLD26_B1_PRE_C7_20261010_211959.dwg\",\"CLD26_B1.dwg\",\"CLD26_B2.dwg\",\"CLD26_B3_PRE_C7_20261010_212336.dwg\",\"CLD26_B3.dwg\",\"CLD26_B4_PRE_C7_20261010_212527.dwg\",\"CLD26_B4.dwg\",\"CLD26_B5.dwg\",\"CLD26_S1.dwg\",\"CLD27_B1_PRE_C7_20261010_213917.dwg\",\"CLD27_B1.dwg\",\"CLD27_B2_PRE_C7_20261010_214231.dwg\",\"CLD27_B2.dwg\",\"CLD27_B3.dwg\",\"CLD27_S1.dwg\",\"CLD27_S2.dwg\",\"CLD27_S3.dwg\",\"CLD28_B1.dwg\",\"CLD28_S1.dwg\",\"CLD321_B1_PRE_C7_20261019_122627.dwg\",\"CLD321_B1.dwg\",\"CLD322_B1_PRE_C7_20261019_124752.dwg\",\"CLD322_B1.dwg\",\"CLD331_B1_PRE_C7_20261019_230837.dwg\",\"CLD331_B1.dwg\",\"CLD332_B1_PRE_C7_20261019_232458.dwg\",\"CLD332_B1.dwg\",\"CLD341_B1_PRE_C7_20261020_052212.dwg\",\"CLD341_B1.dwg\",\"CLD342_B1_PRE_C7_20261020_054122.dwg\",\"CLD342_B1.dwg\",\"CLD35_B1_PRE_C7_20261012_002754.dwg\",\"CLD35_B1.dwg\",\"CLD35_B2.dwg\",\"CLD35_S1.dwg\",\"CLD351_B1_PRE_C7_20261020_100820.dwg\",\"CLD351_B1.dwg\",\"CLD352_B1_PRE_C7_20261020_102521.dwg\",\"CLD352_B1.dwg\",\"CLD361_B1_PRE_C7_20261020_120256.dwg\",\"CLD361_B1.dwg\",\"CLD362_B1.dwg\",\"CLD371_B1_PRE_C7_20261020_133137.dwg\",\"CLD371_B1.dwg\",\"CLD372_B1_PRE_C7_20261020_134629.dwg\",\"CLD372_B1.dwg\",\"CLD381_B1_PRE_C7_20261020_144018.dwg\",\"CLD381_B1.dwg\",\"CLD391_B1_PRE_C7_20261020_153011.dwg\",\"CLD391_B1.dwg\",\"CLD392_B1_PRE_C7_20261020_154257.dwg\",\"CLD392_B1.dwg\",\"CLD393_METRE.dwg\",\"CLD40_B1_PRE_C7_20261012_034744.dwg\",\"CLD40_B1.dwg\",\"CLD40_B1R.dwg\",\"CLD40_S1.dwg\",\"CLD401_B1_PRE_C7_20261020_173941.dwg\",\"CLD401_B1.dwg\",\"CLD41_B1_PRE_C7_20261012_080000.dwg\",\"CLD41_B1.dwg\",\"CLD41_S1.dwg\",\"CLD411_B1_PRE_C7_20261020_200618.dwg\",\"CLD411_B1.dwg\",\"CLD421_B1_PRE_C7_20261020_202235.dwg\",\"CLD421_B1.dwg\",\"CLD422_B1_PRE_C7_20261020_221307.dwg\",\"CLD422_B1.dwg\",\"CLD431_B1_PRE_C7_20261021_041708.dwg\",\"CLD431_B1.dwg\",\"CLD431_S1.dwg\",\"CLD441_B1_PRE_C7_20261021_063930.dwg\",\"CLD441_B1.dwg\",\"CLD441_S1.dwg\",\"CLD442_B1_PRE_C7_20261021_064649.dwg\",\"CLD442_B1.dwg\",\"CLD442_S1.dwg\",\"CLD451_B1_PRE_C7_20261021_185016.dwg\",\"CLD451_B1.dwg\",\"CLD451_S1.dwg\",\"CLD452_B1_PRE_C7_20261021_190216.dwg\",\"CLD452_B1.dwg\",\"CLD461_B1_PRE_C7_20261022_143805.dwg\",\"CLD461_B1.dwg\",\"CLD461_S1.dwg\",\"CLD462_S1.dwg\",\"CLD471_B1_PRE_C7_20261022_203405.dwg\",\"CLD471_B1.dwg\",\"CLD471_R1_PRE_C7_20261022_202804.dwg\",\"CLD471_R1.dwg\",\"CLD472_R2.dwg\",\"CLD472_S1.dwg\",\"CLD473_B1_PRE_C7_20261022_204046.dwg\",\"CLD473_B1.dwg\",\"CLD50_B1_PRE_C7_20261017_141915.dwg\",\"CLD50_B1.dwg\",\"CLD50_S1.dwg\",\"CLD51_B1_PRE_C7_20261017_165657.dwg\",\"CLD51_B1.dwg\",\"CLD51_S1.dwg\",\"CLD52_S1.dwg\",\"..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30602341_B1_1e14bfa26.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKDWG completed 43223 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 06:06:18",
+      "session_id": "RUN-20261025-0602-C3.0.75-p3b3b8-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R40_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R40_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R40: expects the report file beside the drawing and none in the CE logs folder (must FAIL)",
+      "kind": "deterministic",
+      "order": 46,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R40",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R40",
+      "expected": "This variant is wrong on purpose: with the report no longer written beside the drawing, the \"wrote report\" line is absent and the folder holds no CDCHECKDWG text file.",
+      "why_not_unit": "It exists only to prove R40's folder check can go red.",
+      "not_automated": [],
+      "file_sha256": "ED13B7439D68D00ACF6D5A78F0A32C06B3E05140DEB7A59203A8CBD9D8A849D7",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "found: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30602341_B1_CDCHECKDWG_20261025_060627.txt'",
+      "started": "2026-10-25 06:06:18",
+      "seconds": 50.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30602341_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKDWG{NL}\" -Force -ExpectWindow \"Check consultant\" -TimeoutSec 180 -> $ck",
+          "ok": true,
+          "seconds": 14.4,
+          "evidence": "typed 'CDCHECKDWG': Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30602341_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CD..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Check consultant\" \"Close\" -> $ckc",
+          "ok": true,
+          "seconds": 21.4,
+          "evidence": "pressed 'Close' in /Check consultant/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Check consultant\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Check consultant/ closed after 0 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "folder-new-only $copy0 \"CDCHECKDWG.*txt$\"",
+          "ok": true,
+          "expected": "new files only /CDCHECKDWG.*txt$/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"TIM_CE_CADTOOLS\"",
+          "ok": false,
+          "expected": "command line lacks 'TIM_CE_CADTOOLS'",
+          "actual": "1 matching line(s)",
+          "evidence": "found: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30602341_B1_CDCHECKDWG_20261025_060627.txt'"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30602341_B1_12727109a.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKDWG completed 25111 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 06:07:09",
+      "session_id": "RUN-20261025-0602-C3.0.75-p3b3b8-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

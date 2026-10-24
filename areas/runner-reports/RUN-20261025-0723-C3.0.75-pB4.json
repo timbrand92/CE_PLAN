@@ -1,0 +1,1553 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0723-C3.0.75-pB4",
+    "started": "2026-10-25 07:23:46",
+    "finished": "2026-10-25 07:30:07",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "323101A5509DCCEC6C20BB5B08006F1AD4BEB817D1E5E63FF75157A3C7754AC5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 323101A5509DCCEC6C20BB5B08006F1AD4BEB817D1E5E63FF75157A3C7754AC5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 07:23 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0723-C3.0.75-pB4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 07:23:47",
+      "finished": "2026-10-25 07:30:07",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30723511_B1.dwg",
+      "cases": [
+        "R37",
+        "R37b",
+        "R39",
+        "R38"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R37",
+      "proves_bugs": "BUG-217 (CDPERIMETER: the drain on the plan carries its own PD1 tag text, and the prompts say perimeter drain, not AGI vertex / AGI drain; read from the command line and from the placed objects)",
+      "title": "CDPERIMETER with levels 18 and 17.9 says perimeter drain in every prompt (never AGI), places PD1 on the plan with a PD1 text on the drain's layer, and one U takes it back",
+      "kind": "deterministic",
+      "order": 37,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Perimeter drain (triage group R2; daily card D07 neighbour); BUG-217",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-217 in BUG_CARPARK.md (Codex pass 18: expected \"the drain on the plan carries its own PD tag (PD1), matching the command line and the record\"; seen: the plan repeated \"AG\" text and no PD tag, prompts said \"AGI vertex\" and \"Place this AGI drain?\"). BUG-236 (the PD1 text follows the drain on MOVE, ERASE, COPY) is R37b.",
+      "variant_of": "",
+      "expected": "CDPERIMETER with two vertices (150000,-80000 and 152000,-80000), no outlet, levels 18 and 17.9 prints the Preview line with \"Grade: 1:20\" and \"meets the office minimum 1:100\", then \"Place this perimeter drain? [Accept/Cancel] <Accept>:\" and, on Accept, \"Perimeter drain PD1 placed\". One polyline and one text PD1 are added on layer AGI DRAIN. No prompt says \"AGI vertex\" or \"Place this AGI drain\". One U takes both back. The drawing file on disk is unchanged.",
+      "why_not_unit": "The prompts, the tag counter and the drawn tag text all come from the live command in the real drawing.",
+      "not_automated": [
+        "That the PD1 text is visible and readable on the plan (its height, position and colour) is a Codex look; the case reads that a text PD1 exists on the drain's layer. BUG-236 (move, erase, copy) is R37b. The outlet choice and the Charged / Suspended property are not driven."
+      ],
+      "file_sha256": "60891583BAAC5F43963FD56348668D8F6BE15EF94D8EEF8AB754EDF43582F779",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 07:24:17",
+      "seconds": 13.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30723511_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPERIMETER{NL}{NL}150000,-80000{NL}152000,-80000{NL}{NL}{NL}18{NL}17.9{NL}\" -Force -TimeoutSec 90 -> $pd",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed 'CDPERIMETER 150000,-80000 152000,-80000 18 17.9': Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]:..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pde",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"object~^AcDbPolyline$\" -> $pd_line",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 AGI DRAIN"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PD1$\" -> $pd_tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55A PD1 AGI DRAIN"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_line layer -> $line_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = AGI DRAIN"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag layer -> $tag_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = AGI DRAIN"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | CDPERIMETER"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $pd \"Perimeter drain pipe property [None/Charged/Suspended]\"",
+          "ok": true,
+          "expected": "contains 'Perimeter drain pipe property [None/Charged/Suspended]'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Perimeter drain pipe property [None/Charged/Suspended]' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 2,
+          "text": "contains $pd \"Specify first perimeter drain vertex\"",
+          "ok": true,
+          "expected": "contains 'Specify first perimeter drain vertex'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Specify first perimeter drain vertex' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 3,
+          "text": "matches $pd \"Preview: perimeter drain, 2 vertices, open\\. Grade: 1:20\"",
+          "ok": true,
+          "expected": "matches /Preview: perimeter drain, 2 vertices, open\\. Grade: 1:20/",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "matched 'Preview: perimeter drain, 2 vertices, open. Grade: 1:20'"
+        },
+        {
+          "n": 4,
+          "text": "contains $pd \"meets the office minimum 1:100\"",
+          "ok": true,
+          "expected": "contains 'meets the office minimum 1:100'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'meets the office minimum 1:100' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 5,
+          "text": "contains $pd \"Place this perimeter drain? [Accept/Cancel] <Accept>:\"",
+          "ok": true,
+          "expected": "contains 'Place this perimeter drain? [Accept/Cancel] <Accept>:'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Place this perimeter drain? [Accept/Cancel] <Accept>:' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 6,
+          "text": "contains $pd \"Perimeter drain PD1 placed\"",
+          "ok": true,
+          "expected": "contains 'Perimeter drain PD1 placed'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Perimeter drain PD1 placed' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 7,
+          "text": "history absent \"AGI vertex\"",
+          "ok": true,
+          "expected": "command line lacks 'AGI vertex'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'AGI vertex' (15 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "history absent \"Place this AGI drain\"",
+          "ok": true,
+          "expected": "command line lacks 'Place this AGI drain'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Place this AGI drain' (15 lines read)"
+        },
+        {
+          "n": 9,
+          "text": "count $pd_line = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd_line = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $pd_tag = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd_tag = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "equals $line_layer \"AGI DRAIN\"",
+          "ok": true,
+          "expected": "AGI DRAIN",
+          "actual": "AGI DRAIN",
+          "evidence": "value 'AGI DRAIN' (expected 'AGI DRAIN')"
+        },
+        {
+          "n": 12,
+          "text": "equals $tag_layer \"AGI DRAIN\"",
+          "ok": true,
+          "expected": "AGI DRAIN",
+          "actual": "AGI DRAIN",
+          "evidence": "value 'AGI DRAIN' (expected 'AGI DRAIN')"
+        },
+        {
+          "n": 13,
+          "text": "number $c1 = 1036",
+          "ok": true,
+          "expected": "= 1036",
+          "actual": "1036",
+          "evidence": "$c1 = 1036 (expected = 1036)"
+        },
+        {
+          "n": 14,
+          "text": "equals $c2 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 15,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        },
+        {
+          "n": 16,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 17,
+          "text": "record $pd \"FULL CDPERIMETER\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80000 | Next perimeter drain vertex (2 pts) or Enter to finish [Undo]: | Select outlet pit or pipe (Enter to skip): | Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record.",
+          "evidence": "RECORDED, not judged: FULL CDPERIMETER = Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80000 | Next perimeter drain vertex (2 pts) or Enter to finish [Undo]: | Select outlet pit or pipe (Enter to skip): | Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record."
+        },
+        {
+          "n": 18,
+          "text": "record $pde \"FULL after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record.",
+          "evidence": "RECORDED, not judged: FULL after the wait = Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record."
+        },
+        {
+          "n": 19,
+          "text": "record $new \"FULL objects it added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbPolyline\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-80000.0} | {\"index\":1035,\"handle\":\"11C55A\",\"object\":\"AcDbMText\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"PD1\",\"x\":151000.0,\"y\":-79925.0}",
+          "evidence": "RECORDED, not judged: FULL objects it added = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbPolyline\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-80000.0} | {\"index\":1035,\"handle\":\"11C55A\",\"object\":\"AcDbMText\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"PD1\",\"x\":151000.0,\"y\":-79925.0}"
+        },
+        {
+          "n": 20,
+          "text": "record $u1 \"FULL what U echoed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDPERIMETER",
+          "evidence": "RECORDED, not judged: FULL what U echoed = Command: | Command: U | CDPERIMETER"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 21 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPERIMETER completed 308 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:24:30",
+      "session_id": "RUN-20261025-0723-C3.0.75-pB4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R37_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R37b",
+      "proves_bugs": "BUG-236 (the PD1 text is linked to its drain: MOVE of the drain moves the text by the same 1000 mm, ERASE of the drain erases the text; COPY and renumber are not driven)",
+      "title": "The PD1 text of a perimeter drain moves with the drain on MOVE and goes with it on ERASE",
+      "kind": "deterministic",
+      "order": 37,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Perimeter drain tag (triage group R2; daily card D07 neighbour); BUG-236",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-236 in BUG_CARPARK.md (test that catches it: erase / move / copy a perimeter drain: its PD1 text follows or goes; the height reads from Settings). COPY (a second PD1) and the height from Settings are NOT driven here.",
+      "variant_of": "",
+      "expected": "After CDPERIMETER places PD1 (polyline and text PD1 on layer AGI DRAIN), a native MOVE of the drain polyline by 0,1000 moves the PD1 text by 1000 as well (its y is 1000 higher), and ERASE of the drain polyline leaves no PD1 text in the drawing. The drawing file on disk is unchanged.",
+      "why_not_unit": "The link between the drawn tag and its drain is kept by CE watching native MOVE and ERASE in the live drawing.",
+      "not_automated": [
+        "COPY of a drain (a second PD1), renumbering and the text height read from Settings (the other halves of BUG-236) are not driven."
+      ],
+      "file_sha256": "FDA76E61E816F95CD479146FF30407191F194B3CEED6FC0B19CD9D61F3367529",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 07:24:30",
+      "seconds": 34.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30723511_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPERIMETER{NL}{NL}150000,-80000{NL}152000,-80000{NL}{NL}{NL}18{NL}17.9{NL}\" -Force -TimeoutSec 90 -> $pd",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDPERIMETER 150000,-80000 152000,-80000 18 17.9': Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pde",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"object~^AcDbPolyline$\" -> $pd_line",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 AGI DRAIN"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PD1$\" -> $pd_tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55A PD1 AGI DRAIN"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_line handle -> $hline",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag handle -> $htag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55A"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag y -> $ty0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79925"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hline}\"",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,1000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.MOVE 0,0 0,1000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1000"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_move",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_move \"handle~^{$htag}$\" -> $tag_m",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55A PD1 AGI DRAIN"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $tag_m y -> $ty1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -78925"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hline}\"",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ERASE\" -Force -> $er",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.ERASE': Command: | Command: _.ERASE | 1 found"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_erase",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_erase \"handle~^{$htag}$\" -> $tag_e",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_erase \"text~^PD1$\" -> $any_pd1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $pd_tag = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd_tag = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "number $ty1 = -78925 +- 5",
+          "ok": true,
+          "expected": "= -78925",
+          "actual": "-78925",
+          "evidence": "$ty1 = -78925 (expected = -78925 +- 5)"
+        },
+        {
+          "n": 3,
+          "text": "count $tag_e = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $tag_e = 0 (expected = 0)"
+        },
+        {
+          "n": 4,
+          "text": "count $any_pd1 = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $any_pd1 = 0 (expected = 0)"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 7,
+          "text": "record $ty0 \"PD1 text y before the MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-79925",
+          "evidence": "RECORDED, not judged: PD1 text y before the MOVE = -79925"
+        },
+        {
+          "n": 8,
+          "text": "record $ty1 \"PD1 text y after the MOVE (expected 1000 higher)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-78925",
+          "evidence": "RECORDED, not judged: PD1 text y after the MOVE (expected 1000 higher) = -78925"
+        },
+        {
+          "n": 9,
+          "text": "record $mv \"FULL MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1000",
+          "evidence": "RECORDED, not judged: FULL MOVE = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1000"
+        },
+        {
+          "n": 10,
+          "text": "record $er \"FULL ERASE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ERASE | 1 found",
+          "evidence": "RECORDED, not judged: FULL ERASE = Command: | Command: _.ERASE | 1 found"
+        },
+        {
+          "n": 11,
+          "text": "record $after_erase \"FULL objects left by the drain after ERASE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects left by the drain after ERASE = "
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30723511_B1_1c6de2a06.log)",
+        "Civil CE log: 25 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPERIMETER completed 73 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:25:04",
+      "session_id": "RUN-20261025-0723-C3.0.75-pB4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R37b_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R39",
+      "proves_bugs": "BUG-697 (CD, E, pick a plain polyline you drew: the New Pipe window opens and a CE pipe is made; CE does not say \"That line is already a CE pipe\" and does not cancel)",
+      "title": "CD with E (Existing line) on a plain polyline you drew opens New Pipe (it does not say the line is already a CE pipe), and Start Pipe makes one CE pipe along it",
+      "kind": "deterministic",
+      "order": 39,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CD Existing line (triage group N4; daily card D04 neighbour); BUG-697",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-697 in BUG_CARPARK.md (steps: CD, answer E, pick a plain polyline you drew on layer BLOCKS; actual: \"[CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed.\" and \"CD command cancelled\"; the pipe window never opens). BUG-684 (arcs and closed polylines) is in R39b, BUG-187 and BUG-874 are not driven.",
+      "variant_of": "",
+      "expected": "After typing a 3-point open polyline on layer BLOCKS at 150000,-96000 / 155000,-96000 / 160000,-95000 and zooming to it, CD with the answer E and a point on the line opens the New Pipe window (and the command line does not say \"already a CE pipe\"); with the levels 18.000 and 17.900 and Start Pipe, CE places a pipe object (CeCvlPipeObject) whose label reads about \"1 IN 101\" (10.1 m long, 0.1 m fall) and the drawing holds IL texts 18.000 and 17.900. The drawing file on disk is unchanged.",
+      "why_not_unit": "The pick of the drawn line, the New Pipe window and the new pipe object only meet in a live CD run.",
+      "not_automated": [
+        "What becomes of the source polyline after Start Pipe (kept or replaced) is recorded, not judged: the card does not say.",
+        "Arc and closed polylines (BUG-684) are in R39b. That the pipe follows the drawn line exactly (the same vertices) is not compared."
+      ],
+      "file_sha256": "9235FDE253D9D4BC81E915DE5A8A1DCA3E827F30F76EEAA82941976C5C56951F",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 07:25:04",
+      "seconds": 141.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30723511_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-96000{NL}155000,-96000{NL}160000,-95000{NL}\" -Force -> $pl",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed '_.PLINE 150000,-96000 155000,-96000 160000,-95000': Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148000,-98000{NL}162000,-93000\" -Force",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "typed '_.ZOOM _W 148000,-98000 162000,-93000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-98000 | Specify oppo..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $plnew",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbPolyline 1; first: 11C559 AcDbPolyline BLOCKS"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $plnew \"object~^AcDbPolyline$\" -> $src",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C559 BLOCKS"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $src handle -> $hsrc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}155000,-96000\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $cd",
+          "ok": true,
+          "seconds": 15.1,
+          "evidence": "typed 'CD E 155000,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_np",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg] ; New Pipe"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 10.9,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 72.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow A..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1b",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1c",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55A CeCvlPipeObject STORMWATER PIPE ; 11C560 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 101 ; 11C565 AcDbMText 20TEXT IL 18.000 ; 11C56A AcDbMText 20TEXT IL 17.900 ; 11C58C AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"object~^CeCvlPipeObject$\" -> $pipe",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55A STORMWATER PIPE"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C560 225 DIA. UPVC PIPE AT 1 IN 101 25TEXT"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab text -All -> $lab_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 225 DIA. UPVC PIPE AT 1 IN 101"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL \" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C565 IL 18.000 20TEXT ; 11C56A IL 17.900 20TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ils text -All -> $il_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"handle~^{$hsrc}$\" -> $src_after",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 5: "
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $win_np \"New Pipe\"",
+          "ok": true,
+          "expected": "contains 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg] | New Pipe",
+          "evidence": "found 'New Pipe' in: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg] | New Pipe"
+        },
+        {
+          "n": 2,
+          "text": "not-contains $cd \"already a CE pipe\"",
+          "ok": true,
+          "expected": "does not contain 'already a CE pipe'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "'already a CE pipe' is absent from: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existin..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $cd \"Nothing Selected\"",
+          "ok": true,
+          "expected": "does not contain 'Nothing Selected'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "'Nothing Selected' is absent from: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existin..."
+        },
+        {
+          "n": 4,
+          "text": "history absent \"already a CE pipe\"",
+          "ok": true,
+          "expected": "command line lacks 'already a CE pipe'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'already a CE pipe' (30 lines read)"
+        },
+        {
+          "n": 5,
+          "text": "count $pipe = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipe = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "matches $lab_text \"AT 1 IN 10[01]\"",
+          "ok": true,
+          "expected": "matches /AT 1 IN 10[01]/",
+          "actual": "225 DIA. UPVC PIPE AT 1 IN 101",
+          "evidence": "matched 'AT 1 IN 101'"
+        },
+        {
+          "n": 7,
+          "text": "matches $il_text \"IL 18\\.000\"",
+          "ok": true,
+          "expected": "matches /IL 18\\.000/",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "matched 'IL 18.000'"
+        },
+        {
+          "n": 8,
+          "text": "matches $il_text \"IL 17\\.900\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.900/",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "matched 'IL 17.900'"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $cd \"FULL CD E and the point\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000",
+          "evidence": "RECORDED, not judged: FULL CD E and the point = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000"
+        },
+        {
+          "n": 12,
+          "text": "record $e1 \"FULL after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL after Start Pipe = [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop."
+        },
+        {
+          "n": 13,
+          "text": "record $e1b \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 14,
+          "text": "record $e1c \"FULL after the third Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the third Esc = [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 15,
+          "text": "record $lab_text \"label after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "225 DIA. UPVC PIPE AT 1 IN 101",
+          "evidence": "RECORDED, not judged: label after Start Pipe = 225 DIA. UPVC PIPE AT 1 IN 101"
+        },
+        {
+          "n": 16,
+          "text": "record $il_text \"IL texts after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "RECORDED, not judged: IL texts after Start Pipe = IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 17,
+          "text": "record $src_after \"FULL the source polyline after Start Pipe (kept = one row, replaced = none)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL the source polyline after Start Pipe (kept = one row, replaced = none) = "
+        },
+        {
+          "n": 18,
+          "text": "record $after \"FULL objects after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -96112.5, 160022.063065203, -94889.6846739848)\"} | {\"index\":1035,\"handle\":\"11C560\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"225 DIA. UPVC PIPE AT 1 IN 101\",\"x\":157453.4224179047,\"y\":-95267.1120895234} | {\"index\":1036,\"handle\":\"11C565\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-95817.5} | {\"index\":1037,\"handle\":\"11C56A\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.900\",\"x\":159768.0926701991,\"y\":-94860.26725371405} | {\"index\":1038,\"handle\":\"11C58C\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":157301.4324131726,\"y\":-95781.91694426115}",
+          "evidence": "RECORDED, not judged: FULL objects after Start Pipe = {\"index\":1034,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -96112.5, 160022.063065203, -94889.6846739848)\"} | {\"index\":1035,\"handle\":\"11C560\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"225 DIA. UPVC PIPE AT 1 IN 101\",\"x\":157453.4224179047,\"y\":-95267.1120895234} | {\"index\":1036,\"handle\":\"11C565\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-95817.5} | {\"index\":1037,\"handle\":\"11C56A\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.900\",\"x\":159768.0926701991,\"y\":-94860.26725371405} | {\"index\":1038,\"handle\":\"11C58C\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":157301.4324131726,\"y\":-95781.91694426115}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30723511_B1_1464648cd.log)",
+        "Civil CE log: 75 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 115228 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:27:25",
+      "session_id": "RUN-20261025-0723-C3.0.75-pB4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R39_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R38",
+      "proves_bugs": "BUG-376 (Pit Schedule IL (Inlet) and IL (Outlet) blank where the plan shows a level: here the row of pit P3 shows IL (Inlet) and IL (Outlet), and both numbers are IL texts that are drawn on the plan)",
+      "title": "The Pit Schedule row of pit P3 shows its inlet and outlet invert levels (not blank), and they equal the IL texts on the plan; the schedule closes and changes nothing",
+      "kind": "deterministic",
+      "order": 41,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Pit Schedule levels (triage groups S2 and S3; daily cards D21 and D23 neighbour); BUG-376",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-376 in BUG_CARPARK.md (found on DRV17_B1: row P3 had IL (Inlet) and IL (Outlet) blank while the plan showed IL 18.10 at the P3 end of a pipe; expected the schedule to carry the plan's levels) and with daily cards D21 and D23 (the schedule window is read, not edited). Not claimed: the other S2 and S3 bugs (BUG-098, BUG-694, BUG-780, BUG-784, BUG-786, BUG-965, BUG-246, BUG-779, BUG-785, BUG-807, BUG-869): they need cell edits, a twin-inlet drawing, a placed schedule or other data this fixture does not have.",
+      "variant_of": "",
+      "expected": "PITSCHEDULE opens; the row of pit P3 reads FROM P4, inlet dia 450 with IL 17.30, outlet dia 450 with IL 17.25 and cover 18.88; the plan holds the texts IL 17.30 and IL 17.25 (the same levels); the Close button closes the window; the drawing file on disk is unchanged.",
+      "why_not_unit": "The schedule is built by the live window from the links in the real drawing, and the plan texts are real drawing objects.",
+      "not_automated": [
+        "Which plan text belongs to which pipe end is not mapped: the case checks that the schedule's two numbers are among the IL texts drawn on the plan. Cell edits, Refresh and a placed (drawn) schedule are not driven (the grid cells have no accessible id).",
+        "That the window looks right is R25's Codex look; this case reads text only."
+      ],
+      "file_sha256": "29174FB955537BDD379ADBAC0E3C13A9730DB26851438C29FCF7929FF1C3019F",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 07:27:25",
+      "seconds": 140.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30723511_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 11.3,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m5",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m10",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^IL \" -> $il0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^IL \" -> $il5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^IL \" -> $il10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 text -All -> $il0t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' of an empty list: empty"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il5 text -All -> $il5t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il10 text -All -> $il10t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $plan_il \"{$il0t} | {$il5t} | {$il10t}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $plan_il"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 34.5,
+          "evidence": "typed 'PITSCHEDULE': Command: PITSCHEDULE"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd",
+          "ok": true,
+          "seconds": 34.5,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $psc",
+          "ok": true,
+          "seconds": 30.8,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $psd \"Pit P3\" exists",
+          "ok": true,
+          "expected": "control 'Pit P3' exists",
+          "actual": "2",
+          "evidence": "'Pit P3' found in 'Creative Engineering | Pit Schedule (PITSCHEDULE)' (2 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "matches $psd \"name.:.Pit P3.,.id(?:(?!name.:.Pit ).)*?name.:.P4.(?:(?!name.:.Pit ).)*?name.:.17\\.30.(?:(?!name.:.Pit ).)*?name.:.17\\.25.(?:(?!name.:.Pit ).)*?name.:.18\\.88.\"",
+          "ok": true,
+          "expected": "matches /name.:.Pit P3.,.id(?:(?!name.:.Pit ).)*?name.:.P4.(?:(?!name.:.Pit ).)*?name.:.17\\.30.(?:(?!name.:.Pit ).)*?name.:.17\\.25.(?:(?!name.:.Pit ).)*?name.:.18\\.88./",
+          "actual": "{\"title\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"handle\":179179172,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2160,136,1440,800],\"control_count\":660,\"truncated\":false,\"tabs\":[{\"name\":\"So...",
+          "evidence": "matched 'name\":\"Pit P3\",\"id\":\"\",\"class\":\"DataGridRow\",\"depth\":5,\"enabled\":true,\"offscreen\":true,\"bounds\":[2189,766,1101,26],\"selected\":false},{\"type\":\"Custom\",\"name\":\"P3\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2189,766,80,26],\"value\":\"P3\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"P3\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2191,766,76,24]},{\"type\":\"Custom\",\"name\":\"900 x 900\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2269,766,140,26],\"value\":\"900 x 900\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"900 x 900\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2269,766,140,24]},{\"type\":\"Custom\",\"name\":\"DET X (Grated): blank\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2409,766,95,26],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2411,766,91,24]},{\"type\":\"Custom\",\"name\":\"P4\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2504,766,80,26],\"value\":\"P4\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"P4\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2506,766,76,24]},{\"type\":\"Custom\",\"name\":\"450\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2584,766,90,26],\"value\":\"450\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"450\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2586,766,86,24]},{\"type\":\"Custom\",\"name\":\"17.30\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2674,766,90,26],\"value\":\"17.30\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"17.30\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2676,766,86,24]},{\"type\":\"Custom\",\"name\":\"450\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2764,766,95,26],\"value\":\"450\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"450\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2766,766,91,24]},{\"type\":\"Custom\",\"name\":\"17.25\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2859,766,95,26],\"value\":\"17.25\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"17.25\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2861,766,91,24]},{\"type\":\"Custom\",\"name\":\"18.88\"'"
+        },
+        {
+          "n": 3,
+          "text": "matches $plan_il \"IL 17\\.30\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.30/",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | ...",
+          "evidence": "matched 'IL 17.30'"
+        },
+        {
+          "n": 4,
+          "text": "matches $plan_il \"IL 17\\.25\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.25/",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | ...",
+          "evidence": "matched 'IL 17.25'"
+        },
+        {
+          "n": 5,
+          "text": "window-closed $psc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"Pit Schedule\"",
+          "ok": true,
+          "expected": "does not contain 'Pit Schedule'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]",
+          "evidence": "'Pit Schedule' is absent from: Autodesk AutoCAD 2027 - [CLDV30723511_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 8,
+          "text": "record $plan_il \"FULL every IL text on the plan\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 | IL 18.60 | IL 18.24",
+          "evidence": "RECORDED, not judged: FULL every IL text on the plan = | IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 9,
+          "text": "record $psc \"FULL what pressing Close reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"window\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"button\":\"Close\",\"button_id\":\"\",\"invoke_call\":\"returned\",\"window_closed\":true}",
+          "evidence": "RECORDED, not judged: FULL what pressing Close reported = {\"window\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"button\":\"Close\",\"button_id\":\"\",\"invoke_call\":\"returned\",\"window_closed\":true}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30723511_B1_158dfee3f.log)",
+        "Civil CE log: 10 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 88350 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:29:45",
+      "session_id": "RUN-20261025-0723-C3.0.75-pB4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R38_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0522-C3.0.75-p3b3prbH",
+    "started": "2026-10-25 05:22:53",
+    "finished": "2026-10-25 05:24:08",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AE86AC91676A9E8AD3EC64141830FF6E29AF98556B9549FF23893C9CA2554719",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 AE86AC91676A9E8AD3EC64141830FF6E29AF98556B9549FF23893C9CA2554719; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 05:22 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0522-C3.0.75-p3b3prbH-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 05:22:53",
+      "finished": "2026-10-25 05:24:08",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30522561_B1.dwg",
+      "cases": [
+        "PRBH"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRBH",
+      "proves_bugs": "",
+      "title": "probe: existing line, CDCHECKDWG",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "9FDA518459721688CA7B2355452C1907301E111918A55515D7C11948AE131069",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 05:23:21",
+      "seconds": 30.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30522561_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-96000{NL}155000,-96000{NL}160000,-95000{NL}\" -Force -> $pl",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.PLINE 150000,-96000 155000,-96000 160000,-95000': Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $plnew",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbPolyline 1; first: 11C559 AcDbPolyline BLOCKS"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E\" -Force -TimeoutSec 60 -> $cd1",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed 'CD E': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd1e",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: *C..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}155000,-96000\" -Force -TimeoutSec 60 -> $cd2",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "typed 'CD E 155000,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $cdw",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30522561_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -> $cdh",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "history: Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. Backup: C:\\ce_rc_drv\\CLDV30522561_B1_PRE_C7_20261025_052316.dwg | CE CVL loaded: CE_CVL_SUITE v3.0.75.0 [Modern] | Start with CD, PIT, PITSCHEDULE, or CDEDI..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd2e",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Sel..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $cdw2",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30522561_B1.dwg]"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cdcw",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $pl \"FULL pline\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 160000,-95000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]:",
+          "evidence": "RECORDED, not judged: FULL pline = Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 160000,-95000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]:"
+        },
+        {
+          "n": 2,
+          "text": "record $plnew \"FULL pline objects\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbPolyline\",\"layer\":\"BLOCKS\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96000.0}",
+          "evidence": "RECORDED, not judged: FULL pline objects = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbPolyline\",\"layer\":\"BLOCKS\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96000.0}"
+        },
+        {
+          "n": 3,
+          "text": "record $cd1 \"FULL CD E\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E",
+          "evidence": "RECORDED, not judged: FULL CD E = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E"
+        },
+        {
+          "n": 4,
+          "text": "record $cd1e \"FULL CD E esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: *Cancel* | [CE] CD command cancelled.",
+          "evidence": "RECORDED, not judged: FULL CD E esc = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: *Cancel* | [CE] CD command cancelled."
+        },
+        {
+          "n": 5,
+          "text": "record $cd2 \"FULL CD E point\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Selected.",
+          "evidence": "RECORDED, not judged: FULL CD E point = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Selected."
+        },
+        {
+          "n": 6,
+          "text": "record $cdw \"FULL windows after CD E point\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30522561_B1.dwg]",
+          "evidence": "RECORDED, not judged: FULL windows after CD E point = Autodesk AutoCAD 2027 - [CLDV30522561_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "record $cdh \"FULL history after CD E point\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. Backup: C:\\ce_rc_drv\\CLDV30522561_B1_PRE_C7_20261025_052316.dwg | CE CVL loaded: CE_CVL_SUITE v3.0.75.0 [Modern] | Start with CD, PIT, PITSCHEDULE, or CDEDIT. | Use CDHELP for workflow guidance and CDREPAIR for recovery. | Regenerating model. | Command: | Command: | Command: | Command: _.ID Specify point: 19399.1,0 | X = 19399.100 Y = 0.000 Z = 0.000 | Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 160000,-95000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: | Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: *Cancel* | [CE] CD command cancelled. | Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Selected.",
+          "evidence": "RECORDED, not judged: FULL history after CD E point = Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. Backup: C:\\ce_rc_drv\\CLDV30522561_B1_PRE_C7_20261025_052316.dwg | CE CVL loaded: CE_CVL_SUITE v3.0.75.0 [Modern] | Start with CD, PIT, PITSCHEDULE, or CDEDIT. | Use CDHELP for workflow guidance and CDREPAIR for recovery. | Regenerating model. | Command: | Command: | Command: | Command: _.ID Specify point: 19399.1,0 | X = 19399.100 Y = 0.000 Z = 0.000 | Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: 160000,-95000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]: | Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: *Cancel* | [CE] CD command cancelled. | Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Selected."
+        },
+        {
+          "n": 8,
+          "text": "record $cd2e \"FULL CD E point esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Selected. | Pick the drawn polyline to use as the pipe route: *Cancel* | [CE] CD command cancelled.",
+          "evidence": "RECORDED, not judged: FULL CD E point esc = Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000 | Nothing Selected. | Pick the drawn polyline to use as the pipe route: *Cancel* | [CE] CD command cancelled."
+        },
+        {
+          "n": 9,
+          "text": "record $cdw2 \"FULL windows 2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30522561_B1.dwg]",
+          "evidence": "RECORDED, not judged: FULL windows 2 = Autodesk AutoCAD 2027 - [CLDV30522561_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "record $cdcw \"FULL closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL closed = "
+        },
+        {
+          "n": 11,
+          "text": "record $c2 \"count after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1035",
+          "evidence": "RECORDED, not judged: count after = 1035"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 11 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD cancelled 7049 ms ; Command outcome: CD cancelled 9842 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 05:23:51",
+      "session_id": "RUN-20261025-0522-C3.0.75-p3b3prbH-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRBH_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

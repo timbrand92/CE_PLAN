@@ -1,0 +1,1460 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0710-C3.0.75-pB2",
+    "started": "2026-10-25 07:10:04",
+    "finished": "2026-10-25 07:20:11",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "323101A5509DCCEC6C20BB5B08006F1AD4BEB817D1E5E63FF75157A3C7754AC5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 323101A5509DCCEC6C20BB5B08006F1AD4BEB817D1E5E63FF75157A3C7754AC5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 07:10 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0710-C3.0.75-pB2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 07:10:05",
+      "finished": "2026-10-25 07:20:11",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30710091_B1.dwg",
+      "cases": [
+        "R32b",
+        "R33"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R32b",
+      "proves_bugs": "",
+      "title": "A diameter-only save in Edit Pipe keeps the flow arrow where it was, also on a pipe whose levels were typed the other way round",
+      "kind": "deterministic",
+      "order": 26,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Edit Pipe single save (triage group K3; daily card D17 neighbour); BUG-292 (a plain Save reversing a downstream-first pipe), BUG-261 (size-only save of a reversed two-free-end pipe), BUG-260 (arrow and levels disagree)",
+      "bug": "",
+      "known_fail": "BUG-292",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-292 (a downstream-first pipe could be reversed by a plain Save), BUG-261 (size-only save of a two-free-end pipe whose arrow follows the levels) and BUG-260 (arrow, labels and header disagree) as written in BUG_CARPARK.md. The reversed state is reached through Edit Pipe, not through the CD direction question as in BUG-261, so this case is a close match, not an exact one: the desk or the reviewer decides whether BUG-292 or a new entry owns it.",
+      "variant_of": "",
+      "expected": "Pipe A (two free ends, 18.000 / 17.900) is edited to 17.900 / 18.000 (arrow turns round, rotation about 3.1416). A second CDEDIT of pipe A that changes only the diameter to 150 and saves prints \"Pipe updated.\", leaves the arrow turned round (rotation about 3.1416), both IL texts as they were (IL 17.900 left, IL 18.000 right) and the label reading \"150 DIA.\". Control: pipe B (never reversed) keeps its arrow at rotation 0 on the same diameter-only save. The drawing file on disk is unchanged.",
+      "why_not_unit": "The arrow block, the IL texts and the label are rewritten by the live Edit Pipe save into the real drawing.",
+      "not_automated": [
+        "That the picture of the arrow looks right is a Codex look. Pipes on pits (levels from the pits) are not driven."
+      ],
+      "file_sha256": "5AB5BA78EF609AFC5EEA05ADBCDD106F234D8EC1A4A31BA100C8E9A6D27F569F",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+      "started": "2026-10-25 07:10:37",
+      "seconds": 365.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30710091_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 15.0,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Se..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 51.4,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C559 CeCvlPipeObject STORMWATER PIPE ; 11C55F AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C564 AcDbMText 20TEXT IL 18.000 ; 11C569 AcDbMText 20TEXT IL 17.900 ; 11C58B AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"object~^CeCvlPipeObject$\" -> $npA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C559 STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npA handle -> $hpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58B TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58B"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t3",
+          "ok": true,
+          "seconds": 13.9,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t4",
+          "ok": true,
+          "seconds": 55.7,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newB",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C559 CeCvlPipeObject STORMWATER PIPE ; 11C55F AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C564 AcDbMText 20TEXT IL 18.000 ; 11C569 AcDbMText 20TEXT IL 17.900 ; 11C58B AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C590 CeCvlPipeObject STORMWATER PIPE ; 11C596 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C59B AcDbMText 20TEXT IL 18.000 ; 11C5A0 AcDbMText 20TEXT IL 17.900 ; 11C5C2 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"object~^CeCvlPipeObject$\" \"handle~^(?!{$hpA}$)\" -> $npB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C590 STORMWATER PIPE"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npB handle -> $hpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C590"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~ARROW\" \"handle~^(?!{$haA}$)\" -> $arB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5C2 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arB handle -> $haB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5C2"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA",
+          "ok": true,
+          "seconds": 14.3,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 9.8,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.900: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.1,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.000: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA",
+          "ok": true,
+          "seconds": 19.0,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58B: {\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edC",
+          "ok": true,
+          "seconds": 15.3,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.Diameter\" \"150\"",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "ui set 'Edit Pipe' C2.Diameter = 150: "
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svC",
+          "ok": true,
+          "seconds": 20.0,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hC",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ent-read 11C58B: {\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-902..."
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpB}\"",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "pick-first 11C590: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C590\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edD",
+          "ok": true,
+          "seconds": 12.8,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.Diameter\" \"150\"",
+          "ok": true,
+          "seconds": 11.5,
+          "evidence": "ui set 'Edit Pipe' C2.Diameter = 150: "
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svD",
+          "ok": true,
+          "seconds": 26.0,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hD",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5C2: {\"handle\":\"11C5C2\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92200.0,160375.0,-922..."
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C559 CeCvlPipeObject STORMWATER PIPE ; 11C55F AcDbMText 25TEXT 150 DIA. UPVC PIPE AT 1 IN 200 ; 11C564 AcDbMText 20TEXT IL 17.900 ; 11C569 AcDbMText 20TEXT IL 18.000 ; 11C58B AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C590 CeCvlPipeObject STORMWATER PIPE ; 11C596 AcDbMText 25TEXT 150 DIA. UPVC PIPE AT 1 IN 200 ; 11C59B AcDbMText 20TEXT IL 18.000 ; 11C5A0 AcDbMText 20TEXT IL 17.900 ; 11C5C2 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 1[78]\\.\" -> $ilx",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 10: 11C564 IL 17.900 20TEXT ; 11C569 IL 18.000 20TEXT ; 11C59B IL 18.000 20TEXT ; 11C5A0 IL 17.900 20TEXT"
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilx text -All -> $il_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 10: 11C55F 150 DIA. UPVC PIPE AT 1 IN 200 25TEXT ; 11C596 150 DIA. UPVC PIPE AT 1 IN 200 25TEXT"
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab text -All -> $lab_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 57,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA1 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 2,
+          "text": "contains $hC \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $hC \"uphill\"",
+          "ok": true,
+          "expected": "does not contain 'uphill'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'uphill' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $hC \"Warning\"",
+          "ok": true,
+          "expected": "does not contain 'Warning'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'Warning' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 5,
+          "text": "matches $arrowB2 \"rotation.:0\\.0,\"",
+          "ok": true,
+          "expected": "matches /rotation.:0\\.0,/",
+          "actual": "{\"handle\":\"11C5C2\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "matched 'rotation\":0.0,'"
+        },
+        {
+          "n": 6,
+          "text": "contains $hD \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 7,
+          "text": "contains $lab_text \"150 DIA.\"",
+          "ok": true,
+          "expected": "contains '150 DIA.'",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "found '150 DIA.' in: 150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 8,
+          "text": "matches $arrowA2 \"rotation.:3\\.14\"",
+          "ok": false,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]..."
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $arrowA1 \"FULL arrow A after the reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the reversing save = {\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 12,
+          "text": "record $hC \"FULL what CE said after the diameter-only save of pipe A\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe A = Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 13,
+          "text": "record $arrowA2 \"FULL arrow A after the diameter-only save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the diameter-only save = {\"handle\":\"11C58B\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 14,
+          "text": "record $hD \"FULL what CE said after the diameter-only save of pipe B (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe B (control) = Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 15,
+          "text": "record $arrowB2 \"FULL arrow B after the diameter-only save (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C2\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92200.0,160375.0,-92200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow B after the diameter-only save (control) = {\"handle\":\"11C5C2\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92200.0,160375.0,-92200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 16,
+          "text": "record $il_text \"IL texts at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900",
+          "evidence": "RECORDED, not judged: IL texts at the end = IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 17,
+          "text": "record $lab_text \"labels at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "RECORDED, not judged: labels at the end = 150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 232 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 83835 ms ; Command outcome: CD completed 91182 ms ; Command outcome: CDEDIT completed 36426 ms ; Command outcome: CDEDIT completed 28372 ms ; Command outcome: CDEDIT completed 30995 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:16:43",
+      "session_id": "RUN-20261025-0710-C3.0.75-pB2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-292): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R33",
+      "proves_bugs": "BUG-460 (PIT with the pit label layer locked, and again with the cover-text layer locked, is refused before the pit goes in: the New Pit window opens, Continue placement is pressed, CE says the pit was not inserted and names the layer, and the drawing object count does not move); BUG-672 (COPY of a pit with only the cover-text layer locked: the copy keeps its own pit number label, and CE reports the one thing skipped, the cover text, naming layer 25TEXT); BUG-262 (the wording half only: the schedule-cell lines name the pit, the column and the layer; the handle-only lines, the copied-cell line and the invert-text-layer line are not driven)",
+      "title": "With a pit text layer locked, PIT refuses before placing anything and COPY of a pit keeps its number label, names the cover-text layer it skipped, and one U takes the copy back",
+      "kind": "deterministic",
+      "order": 31,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Native protection rule: locked pit text layers (triage group L1); BUG-460, BUG-672, BUG-262 (schedule-cell wording half)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-460 (right result: refused before the pit goes in, like a locked pit layer), BUG-672 (expected: copy what sits on open layers and report the one skipped) and BUG-262 (expected: plain names of pit, layer and schedule column) as written in BUG_CARPARK.md. Not claimed: BUG-458 (REFEDIT), BUG-459 and BUG-565 (Edit Pit on locked text layers: the Edit Pit Save button is not on the driver's press list), BUG-312.",
+      "variant_of": "",
+      "expected": "With the layer STORMWATER PIT LABEL locked, PIT at 150000,-80000 with cover level 19.000 and Continue placement prints \"Pit not inserted - layer 'STORMWATER PIT LABEL' is locked\" and the object count is unchanged. After unlocking it and locking 25TEXT, COPY of pit P3 prints \"1 pit copied and numbered as new\", then says the copied pit got its own number but no label or cover text because layer 25TEXT is locked, and names the schedule cells it could not update with the pit, the column and the layer. The copy is one new pit block on STORMWATER PIT and one new PIT LABEL block on STORMWATER PIT LABEL, no new \"CL\" text, and one U brings the object count back to what it was before the COPY. PIT at 156000,-80000 with 25TEXT locked prints \"Pit not inserted - layer '25TEXT' is locked.\" and the object count is unchanged. The drawing file on disk is unchanged.",
+      "why_not_unit": "It needs AutoCAD's real layer lock, the real New Pit window and the real COPY clean-up.",
+      "not_automated": [
+        "That the layers are STILL locked afterwards is shown only by the refusals; the layer lock flag itself is not read (the case unlocks them with AutoCAD's own -LAYER Unlock between parts).",
+        "The Pit Schedule drawn cells (BUG-246, BUG-312) and Edit Pit with a locked label layer (BUG-459, BUG-565) are not driven."
+      ],
+      "file_sha256": "3E98BA5677B30AE10BBE2CDA11C9CD791FCB9B56AB4BAB0F22D4BE7822898028",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 07:16:43",
+      "seconds": 169.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30710091_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}STORMWATER PIT LABEL{NL}{NL}\" -Force -> $lk1",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "typed '_.-LAYER _LOCK STORMWATER PIT LABEL': Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name lis..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit1",
+          "ok": true,
+          "seconds": 14.6,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 12.7,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit2",
+          "ok": true,
+          "seconds": 22.3,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "the window /^New Pit/ closed after 1 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP again."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_a",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_UNLOCK{NL}STORMWATER PIT LABEL{NL}{NL}\" -Force -> $ul1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.-LAYER _UNLOCK STORMWATER PIT LABEL': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}25TEXT{NL}{NL}\" -Force -> $lk2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.-LAYER _LOCK 25TEXT': Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name lis..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp1",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cp1e",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $newcp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 2; first: 11C559 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C573 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newcp \"name~^PIT BLOCK\" -> $cp_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newcp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C573 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newcp \"text~^CL \" -> $cp_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_pit layer -> $cp_pit_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_label layer -> $cp_label_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT LABEL"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'U': Command: U | COPY"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}156000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit3",
+          "ok": true,
+          "seconds": 21.1,
+          "evidence": "typed 'PIT 156000,-80000': Command: | Command: PIT | Specify pit insertion point: 156000,-80000"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 17.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit4",
+          "ok": true,
+          "seconds": 22.9,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 156000,-80000 | [CE] Pit not inserted - layer '25TEXT' is locked. Unlock the layer, then run PIT or PP again."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e4",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 156000,-80000 | [CE] Pit not inserted - layer '25TEXT' is locked. Unlock the layer, then run PIT or PP again."
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e5",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 156000,-80000 | [CE] Pit not inserted - layer '25TEXT' is locked. Unlock the layer, then run PIT or PP again."
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c3 -> $new_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_UNLOCK{NL}25TEXT{NL}{NL}\" -Force -> $ul2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.-LAYER _UNLOCK 25TEXT': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $pit_e1 \"Pit not inserted - layer 'STORMWATER PIT LABEL' is locked.\"",
+          "ok": true,
+          "expected": "contains 'Pit not inserted - layer 'STORMWATER PIT LABEL' is locked.'",
+          "actual": "Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP again.",
+          "evidence": "found 'Pit not inserted - layer 'STORMWATER PIT LABEL' is locked.' in: Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP..."
+        },
+        {
+          "n": 2,
+          "text": "contains $pit_e1 \"Unlock the layer, then run PIT or PP again.\"",
+          "ok": true,
+          "expected": "contains 'Unlock the layer, then run PIT or PP again.'",
+          "actual": "Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP again.",
+          "evidence": "found 'Unlock the layer, then run PIT or PP again.' in: Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP..."
+        },
+        {
+          "n": 3,
+          "text": "equals $c1 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $win_a \"New Pit\"",
+          "ok": true,
+          "expected": "does not contain 'New Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]",
+          "evidence": "'New Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "text": "contains $cp1 \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 6,
+          "text": "contains $cp1 \"layer 25TEXT is locked\"",
+          "ok": true,
+          "expected": "contains 'layer 25TEXT is locked'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found 'layer 25TEXT is locked' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 7,
+          "text": "matches $cp1 \"Pit schedule cell for P3 \\(lid and remarks\\) not updated: its layer \\(25TEXT\\) is locked\"",
+          "ok": true,
+          "expected": "matches /Pit schedule cell for P3 \\(lid and remarks\\) not updated: its layer \\(25TEXT\\) is locked/",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "matched 'Pit schedule cell for P3 (lid and remarks) not updated: its layer (25TEXT) is locked'"
+        },
+        {
+          "n": 8,
+          "text": "count $cp_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "count $cp_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_label = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $cp_cover = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $cp_cover = 0 (expected = 0)"
+        },
+        {
+          "n": 11,
+          "text": "equals $cp_pit_layer \"STORMWATER PIT\"",
+          "ok": true,
+          "expected": "STORMWATER PIT",
+          "actual": "STORMWATER PIT",
+          "evidence": "value 'STORMWATER PIT' (expected 'STORMWATER PIT')"
+        },
+        {
+          "n": 12,
+          "text": "equals $cp_label_layer \"STORMWATER PIT LABEL\"",
+          "ok": true,
+          "expected": "STORMWATER PIT LABEL",
+          "actual": "STORMWATER PIT LABEL",
+          "evidence": "value 'STORMWATER PIT LABEL' (expected 'STORMWATER PIT LABEL')"
+        },
+        {
+          "n": 13,
+          "text": "count $newcp = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $newcp = 2 (expected = 2)"
+        },
+        {
+          "n": 14,
+          "text": "number $c3 = $c1",
+          "ok": true,
+          "expected": "= 1034",
+          "actual": "1034",
+          "evidence": "$c3 = 1034 (expected = 1034)"
+        },
+        {
+          "n": 15,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30710091_B1.dwg]"
+        },
+        {
+          "n": 16,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 17,
+          "text": "record $lk1 \"FULL -LAYER Lock of the label layer\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name list of layer(s) to lock or <select objects>: STORMWATER PIT LABEL | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: | Command:",
+          "evidence": "RECORDED, not judged: FULL -LAYER Lock of the label layer = Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name list of layer(s) to lock or <select objects>: STORMWATER PIT LABEL | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: | Command:"
+        },
+        {
+          "n": 18,
+          "text": "record $pit_e1 \"FULL PIT with the label layer locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP again.",
+          "evidence": "RECORDED, not judged: FULL PIT with the label layer locked = Command: PIT | Specify pit insertion point: 150000,-80000 | [CE] Pit not inserted - layer 'STORMWATER PIT LABEL' is locked. Unlock the layer, then run PIT or PP again."
+        },
+        {
+          "n": 19,
+          "text": "record $cp1e \"FULL COPY with 25TEXT locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command:",
+          "evidence": "RECORDED, not judged: FULL COPY with 25TEXT locked = [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command:"
+        },
+        {
+          "n": 20,
+          "text": "record $newcp \"FULL objects the COPY added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762}"
+        },
+        {
+          "n": 21,
+          "text": "record $u1 \"FULL what U echoed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: U | COPY",
+          "evidence": "RECORDED, not judged: FULL what U echoed = Command: U | COPY"
+        },
+        {
+          "n": 22,
+          "text": "history has \"Pit not inserted - layer '25TEXT' is locked.\"",
+          "ok": true,
+          "expected": "command line has 'Pit not inserted - layer '25TEXT' is locked.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pit not inserted - layer '25TEXT' is locked. Unlock the layer, then run PIT or PP again.'"
+        },
+        {
+          "n": 23,
+          "text": "equals $c4 $c3",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 24,
+          "text": "record $pit_e5 \"FULL last lines of PIT with 25TEXT locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PIT | Specify pit insertion point: 156000,-80000 | [CE] Pit not inserted - layer '25TEXT' is locked. Unlock the layer, then run PIT or PP again.",
+          "evidence": "RECORDED, not judged: FULL last lines of PIT with 25TEXT locked = Command: | Command: PIT | Specify pit insertion point: 156000,-80000 | [CE] Pit not inserted - layer '25TEXT' is locked. Unlock the layer, then run PIT or PP again."
+        },
+        {
+          "n": 25,
+          "text": "record $c4 \"object count after PIT with 25TEXT locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: object count after PIT with 25TEXT locked = 1034"
+        },
+        {
+          "n": 26,
+          "text": "record $new_b \"FULL objects PIT with 25TEXT locked added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects PIT with 25TEXT locked added = "
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30710091_B1_1946554f9.log)",
+        "Civil CE log: 101 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 34110 ms ; Command outcome: PIT completed 44153 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 07:19:33",
+      "session_id": "RUN-20261025-0710-C3.0.75-pB2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R33_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    }
+  ]
+}

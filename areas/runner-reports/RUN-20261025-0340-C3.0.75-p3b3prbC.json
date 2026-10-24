@@ -1,0 +1,591 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-0340-C3.0.75-p3b3prbC",
+    "started": "2026-10-25 03:40:57",
+    "finished": "2026-10-25 03:43:41",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "94EA4A95909510C78713D8B8345B110B356198F1D61D00CF2DCBA9822A893B84",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 94EA4A95909510C78713D8B8345B110B356198F1D61D00CF2DCBA9822A893B84; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 03:40 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-0340-C3.0.75-p3b3prbC-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 03:40:57",
+      "finished": "2026-10-25 03:43:41",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30341011_B1.dwg",
+      "cases": [
+        "PRBC"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRBC",
+      "proves_bugs": "",
+      "title": "probe: pit text layers, CDSL, DP",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "982D9AA952DAB271D4310C17A2A2D4254F00F144468877FAA55A8120546D2018",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 03:41:30",
+      "seconds": 108.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $p3",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 9.1,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m5",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m10",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"name~LABEL\" -> $lb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 9 of 500: 1090F6 PIT LABEL STORMWATER PIT LABEL ; 10933E PIT LABEL STORMWATER PIT LABEL ; 1096B3 PIT LABEL STORMWATER PIT LABEL ; 10981A PIT LABEL STORMWATER PIT LABEL ; 109E08 PIT LABEL STORMWATER PIT LABEL ; 10A18D PIT LABEL STORMWATER PIT LABEL ; 10A56D PIT LABEL STORMWATER PIT LABEL ; 10A68C PIT LABEL STO..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"name~LABEL\" -> $lb5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"name~LABEL\" -> $lb10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 119F9A PIT LABEL 2 STORMWATER PIT LABEL ; 11A09A PIT LABEL 2 STORMWATER PIT LABEL"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^CL \" -> $cl0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 9 of 500: 1090FD CL 18.74 25TEXT ; 109345 CL 18.42 25TEXT ; 1096BA CL 18.81 25TEXT ; 109821 CL 18.91 25TEXT ; 109E0F CL 18.88 25TEXT ; 10A194 CL 19.01 25TEXT ; 10A574 CL 18.81 25TEXT ; 10A693 CL 18.85 25TEXT"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^CL \" -> $cl5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^CL \" -> $cl10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 119FA1 CL 19.45 25TEXT ; 11A0A1 CL 19.45 25TEXT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"name~SPOT\" -> $sp0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 18 of 500: 10EBC7 SPOT LEVEL 20TEXT ; 10EBCA SPOT LEVEL 20TEXT ; 10EBCD SPOT LEVEL 20TEXT ; 10EBD0 SPOT LEVEL 20TEXT ; 10EBD3 SPOT LEVEL 20TEXT ; 10EBD6 SPOT LEVEL 20TEXT ; 10EBD9 SPOT LEVEL 20TEXT ; 10EBE2 SPOT LEVEL 20TEXT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"name~SPOT\" -> $sp5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 174 of 500: 10EC12 SPOT LEVEL 20TEXT ; 10EC15 SPOT LEVEL 20TEXT ; 10EC18 SPOT LEVEL 20TEXT ; 10EC1B SPOT LEVEL 20TEXT ; 10EC1E SPOT LEVEL 20TEXT ; 10EC21 SPOT LEVEL 20TEXT ; 10EC24 SPOT LEVEL 20TEXT ; 10EC27 SPOT LEVEL 20TEXT"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"name~SPOT\" -> $sp10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}150000,-85000{NL}18.6m\" -Force -> $sl1",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'CDSL 150000,-85000 18.6m': Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sl1e",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}150500,-85000{NL}P18.6\" -Force -> $sl2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDSL 150500,-85000 P18.6': Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sl2e",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}151000,-85000{NL}18600\" -Force -> $sl3",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "typed 'CDSL 151000,-85000 18600': Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank ..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sl3e",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level. | En..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}151500,-85000{NL}18.600\" -Force -> $sl4",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDSL 151500,-85000 18.600': Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sl4e",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $slnew",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 3; first: 11C559 AcDbBlockReference 25DIMS SPOT LEVEL ; 11C55C AcDbBlockReference 25DIMS SPOT LEVEL ; 11C55F AcDbBlockReference 25DIMS SPOT LEVEL"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-95000\" -Force -TimeoutSec 120 -> $dp1",
+          "ok": true,
+          "seconds": 30.8,
+          "evidence": "typed 'DP 150000,-95000': Command: | Command: DP | Specify downpipe insertion point: 150000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp1e",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}152000,-95000\" -Force -TimeoutSec 120 -> $dp2",
+          "ok": true,
+          "seconds": 31.1,
+          "evidence": "typed 'DP 152000,-95000': Command: | Command: DP | Specify downpipe insertion point: 152000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp2e",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 152000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP2. Nothing nearby. The so..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $allnew",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "7 object(s) after index 1034 (model space now 1041); by type: AcDbBlockReference 5; AcDbText 2; first: 11C559 AcDbBlockReference 25DIMS SPOT LEVEL ; 11C55C AcDbBlockReference 25DIMS SPOT LEVEL ; 11C55F AcDbBlockReference 25DIMS SPOT LEVEL ; 11C562 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C56A AcDbText GUIDELINES DP ; 11C573 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C57A AcDbText GUIDELINES DP"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $p3 \"FULL ent-read of pit P3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132359574,-26519.87543006733,54727.726132359574,-24619.87543006733],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53327.726132359574,-26019.87543006733],\"world_end\":[54227.726132359574,-25119.87543006733],\"world_mid\":[53777.726132359574,-25569.87543006733]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53327.726132359574,-25119.87543006733],\"world_end\":[54227.726132359574,-26019.87543006733],\"world_mid\":[53777.726132359574,-25569.87543006733]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53102.726132359574,-25869.87543006733],\"world_end\":[53702.726132359574,-25269.87543006733],\"world_mid\":[53402.726132359574,-25569.87543006733]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53102.726132359574,-25269.87543006733],\"world_end\":[53702.726132359574,-25869.87543006733],\"world_mid\":[53402.726132359574,-25569.87543006733]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[53777.726132359574,-25569.87543006733],\"world_radius\":900.0,\"world_on_line\":[54677.726132359574,-25569.87543006733]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[53777.726132359574,-25569.87543006733],\"world_radius\":950.0,\"world_on_line\":[54727.726132359574,-25569.87543006733]}]}",
+          "evidence": "RECORDED, not judged: FULL ent-read of pit P3 = {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132359574,-26519.87543006733,54727.726132359574,-24619.87543006733],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53327.726132359574,-26019.87543006733],\"world_end\":[54227.726132359574,-25119.87543006733],\"world_mid\":[53777.726132359574,-25569.87543006733]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53327.726132359574,-25119.87543006733],\"world_end\":[54227.726132359574,-26019.87543006733],\"world_mid\":[53777.726132359574,-25569.87543006733]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53102.726132359574,-25869.87543006733],\"world_end\":[53702.726132359574,-25269.87543006733],\"world_mid\":[53402.726132359574,-25569.87543006733]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[53102.726132359574,-25269.87543006733],\"world_end\":[53702.726132359574,-25869.87543006733],\"world_mid\":[53402.726132359574,-25569.87543006733]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[53777.726132359574,-25569.87543006733],\"world_radius\":900.0,\"world_on_line\":[54677.726132359574,-25569.87543006733]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[53777.726132359574,-25569.87543006733],\"world_radius\":950.0,\"world_on_line\":[54727.726132359574,-25569.87543006733]}]}"
+        },
+        {
+          "n": 2,
+          "text": "record $lb0 \"FULL label blocks 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":158,\"handle\":\"1090F6\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":106408.11777806026,\"y\":-22715.600558915525} | {\"index\":168,\"handle\":\"10933E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":120589.93147372222,\"y\":-22968.98858900147} | {\"index\":194,\"handle\":\"1096B3\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":96055.02813988892,\"y\":-24447.108178702565} | {\"index\":197,\"handle\":\"10981A\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":78979.09099821911,\"y\":-24542.16537835954} | {\"index\":239,\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-26238.287379591762} | {\"index\":259,\"handle\":\"10A18D\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":22554.498174244545,\"y\":-8236.153506333561} | {\"index\":290,\"handle\":\"10A56D\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":20305.145935972687,\"y\":-39354.929127747746} | {\"index\":293,\"handle\":\"10A68C\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":16341.877687103086,\"y\":-25222.604141434185} | {\"index\":296,\"handle\":\"10A7AB\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":33577.43237873566,\"y\":-24489.11885940501}",
+          "evidence": "RECORDED, not judged: FULL label blocks 0-499 = {\"index\":158,\"handle\":\"1090F6\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":106408.11777806026,\"y\":-22715.600558915525} | {\"index\":168,\"handle\":\"10933E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":120589.93147372222,\"y\":-22968.98858900147} | {\"index\":194,\"handle\":\"1096B3\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":96055.02813988892,\"y\":-24447.108178702565} | {\"index\":197,\"handle\":\"10981A\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":78979.09099821911,\"y\":-24542.16537835954} | {\"index\":239,\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-26238.287379591762} | {\"index\":259,\"handle\":\"10A18D\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":22554.498174244545,\"y\":-8236.153506333561} | {\"index\":290,\"handle\":\"10A56D\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":20305.145935972687,\"y\":-39354.929127747746} | {\"index\":293,\"handle\":\"10A68C\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":16341.877687103086,\"y\":-25222.604141434185} | {\"index\":296,\"handle\":\"10A7AB\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":33577.43237873566,\"y\":-24489.11885940501}"
+        },
+        {
+          "n": 3,
+          "text": "record $lb5 \"FULL label blocks 500-999\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL label blocks 500-999 = "
+        },
+        {
+          "n": 4,
+          "text": "record $lb10 \"FULL label blocks 1000+\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1029,\"handle\":\"119F9A\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"text\":\"\",\"x\":54436.25902173087,\"y\":-68504.51862284783} | {\"index\":1032,\"handle\":\"11A09A\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"text\":\"\",\"x\":64027.96109487001,\"y\":-68796.65806178618}",
+          "evidence": "RECORDED, not judged: FULL label blocks 1000+ = {\"index\":1029,\"handle\":\"119F9A\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"text\":\"\",\"x\":54436.25902173087,\"y\":-68504.51862284783} | {\"index\":1032,\"handle\":\"11A09A\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"text\":\"\",\"x\":64027.96109487001,\"y\":-68796.65806178618}"
+        },
+        {
+          "n": 5,
+          "text": "record $cl0 \"FULL CL texts 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":159,\"handle\":\"1090FD\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.74\",\"x\":109065.32773890221,\"y\":-24450.729907907833} | {\"index\":169,\"handle\":\"109345\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.42\",\"x\":120072.48863869319,\"y\":-24338.964406291365} | {\"index\":195,\"handle\":\"1096BA\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.81\",\"x\":96229.2678879721,\"y\":-26219.87543006735} | {\"index\":198,\"handle\":\"109821\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.91\",\"x\":77205.85242531679,\"y\":-24927.328049869815} | {\"index\":240,\"handle\":\"109E0F\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-24866.597361625376} | {\"index\":260,\"handle\":\"10A194\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 19.01\",\"x\":20729.406499038916,\"y\":-8702.836747158057} | {\"index\":291,\"handle\":\"10A574\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.81\",\"x\":22086.759083592566,\"y\":-38704.929127747746} | {\"index\":294,\"handle\":\"10A693\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.85\",\"x\":16719.957705872454,\"y\":-25960.403716555444} | {\"index\":297,\"handle\":\"10A7B2\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.86\",\"x\":32927.43237873566,\"y\":-26219.875430067324}",
+          "evidence": "RECORDED, not judged: FULL CL texts 0-499 = {\"index\":159,\"handle\":\"1090FD\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.74\",\"x\":109065.32773890221,\"y\":-24450.729907907833} | {\"index\":169,\"handle\":\"109345\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.42\",\"x\":120072.48863869319,\"y\":-24338.964406291365} | {\"index\":195,\"handle\":\"1096BA\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.81\",\"x\":96229.2678879721,\"y\":-26219.87543006735} | {\"index\":198,\"handle\":\"109821\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.91\",\"x\":77205.85242531679,\"y\":-24927.328049869815} | {\"index\":240,\"handle\":\"109E0F\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-24866.597361625376} | {\"index\":260,\"handle\":\"10A194\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 19.01\",\"x\":20729.406499038916,\"y\":-8702.836747158057} | {\"index\":291,\"handle\":\"10A574\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.81\",\"x\":22086.759083592566,\"y\":-38704.929127747746} | {\"index\":294,\"handle\":\"10A693\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.85\",\"x\":16719.957705872454,\"y\":-25960.403716555444} | {\"index\":297,\"handle\":\"10A7B2\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.86\",\"x\":32927.43237873566,\"y\":-26219.875430067324}"
+        },
+        {
+          "n": 6,
+          "text": "record $cl5 \"FULL CL texts 500-999\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL CL texts 500-999 = "
+        },
+        {
+          "n": 7,
+          "text": "record $cl10 \"FULL CL texts 1000+\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1030,\"handle\":\"119FA1\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 19.45\",\"x\":54938.90301261098,\"y\":-68998.324661697} | {\"index\":1033,\"handle\":\"11A0A1\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 19.45\",\"x\":63566.771930205185,\"y\":-70013.61231363201}",
+          "evidence": "RECORDED, not judged: FULL CL texts 1000+ = {\"index\":1030,\"handle\":\"119FA1\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 19.45\",\"x\":54938.90301261098,\"y\":-68998.324661697} | {\"index\":1033,\"handle\":\"11A0A1\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 19.45\",\"x\":63566.771930205185,\"y\":-70013.61231363201}"
+        },
+        {
+          "n": 8,
+          "text": "record $sp0 \"FULL SPOT 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":482,\"handle\":\"10EBC7\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111840.36593291721,\"y\":-20700.775681186948} | {\"index\":483,\"handle\":\"10EBCA\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111840.2826420036,\"y\":-26800.77567802045} | {\"index\":484,\"handle\":\"10EBCD\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111835.88780044856,\"y\":-212.64124580893258} | {\"index\":485,\"handle\":\"10EBD0\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":96592.23160224546,\"y\":-46.17261247012357} | {\"index\":486,\"handle\":\"10EBD3\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":68758.93663115612,\"y\":-40.724203113946714} | {\"index\":487,\"handle\":\"10EBD6\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":53828.64978788466,\"y\":-3.7927302834723378} | {\"index\":488,\"handle\":\"10EBD9\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":38901.296910609104,\"y\":-42.26306745085458} | {\"index\":489,\"handle\":\"10EBE2\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":75.64756176479204,\"y\":-74.24961787882785} | {\"index\":490,\"handle\":\"10EBEB\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":13.193201751430024,\"y\":-29948.704533402357} | {\"index\":491,\"handle\":\"10EBEE\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":12.638749625049968,\"y\":-47487.928615075085} | {\"index\":492,\"handle\":\"10EBF4\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":22301.89001590524,\"y\":-47490.194331046674} | {\"index\":493,\"handle\":\"10EBF7\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":27191.65723667292,\"y\":-47489.66157076183} | {\"index\":494,\"handle\":\"10EBFD\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":53839.582883997806,\"y\":-46476.40386422399} | {\"index\":495,\"handle\":\"10EC03\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":80477.39844531797,\"y\":-46908.71569154087} | {\"index\":496,\"handle\":\"10EC06\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":96516.5893305214,\"y\":-47185.503238935504} | {\"index\":497,\"handle\":\"10EC09\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108850.71524402637,\"y\":-47440.32682304505} | {\"index\":498,\"handle\":\"10EC0C\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111839.35141325973,\"y\":-47500.775667030844} | {\"index\":499,\"handle\":\"10EC0F\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.51271633989,\"y\":-9950.734718826148}",
+          "evidence": "RECORDED, not judged: FULL SPOT 0-499 = {\"index\":482,\"handle\":\"10EBC7\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111840.36593291721,\"y\":-20700.775681186948} | {\"index\":483,\"handle\":\"10EBCA\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111840.2826420036,\"y\":-26800.77567802045} | {\"index\":484,\"handle\":\"10EBCD\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111835.88780044856,\"y\":-212.64124580893258} | {\"index\":485,\"handle\":\"10EBD0\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":96592.23160224546,\"y\":-46.17261247012357} | {\"index\":486,\"handle\":\"10EBD3\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":68758.93663115612,\"y\":-40.724203113946714} | {\"index\":487,\"handle\":\"10EBD6\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":53828.64978788466,\"y\":-3.7927302834723378} | {\"index\":488,\"handle\":\"10EBD9\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":38901.296910609104,\"y\":-42.26306745085458} | {\"index\":489,\"handle\":\"10EBE2\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":75.64756176479204,\"y\":-74.24961787882785} | {\"index\":490,\"handle\":\"10EBEB\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":13.193201751430024,\"y\":-29948.704533402357} | {\"index\":491,\"handle\":\"10EBEE\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":12.638749625049968,\"y\":-47487.928615075085} | {\"index\":492,\"handle\":\"10EBF4\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":22301.89001590524,\"y\":-47490.194331046674} | {\"index\":493,\"handle\":\"10EBF7\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":27191.65723667292,\"y\":-47489.66157076183} | {\"index\":494,\"handle\":\"10EBFD\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":53839.582883997806,\"y\":-46476.40386422399} | {\"index\":495,\"handle\":\"10EC03\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":80477.39844531797,\"y\":-46908.71569154087} | {\"index\":496,\"handle\":\"10EC06\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":96516.5893305214,\"y\":-47185.503238935504} | {\"index\":497,\"handle\":\"10EC09\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108850.71524402637,\"y\":-47440.32682304505} | {\"index\":498,\"handle\":\"10EC0C\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":111839.35141325973,\"y\":-47500.775667030844} | {\"index\":499,\"handle\":\"10EC0F\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.51271633989,\"y\":-9950.734718826148}"
+        },
+        {
+          "n": 9,
+          "text": "record $sp5 \"FULL SPOT 500-999\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":500,\"handle\":\"10EC12\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.38231825734,\"y\":-19500.734718639884} | {\"index\":501,\"handle\":\"10EC15\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.51271806283,\"y\":-9950.579065021608} | {\"index\":502,\"handle\":\"10EC18\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.43898420686,\"y\":-15350.579810452196} | {\"index\":503,\"handle\":\"10EC1B\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.28468920196,\"y\":-26019.87543024845} | {\"index\":504,\"handle\":\"10EC1E\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.28059283782,\"y\":-26319.878126241038} | {\"index\":505,\"handle\":\"10EC21\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.27649664831,\"y\":-26619.878126986096} | {\"index\":506,\"handle\":\"10EC24\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.20959287927,\"y\":-32150.579062413904} | {\"index\":507,\"handle\":\"10EC27\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.13586111878,\"y\":-37550.57905812982} | {\"index\":508,\"handle\":\"10EC2A\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":104181.11964246536,\"y\":-37550.67110073987} | {\"index\":509,\"handle\":\"10EC2D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.135859163,\"y\":-37550.73471193436} | {\"index\":510,\"handle\":\"10EC30\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.26625753658,\"y\":-28000.73471677724} | {\"index\":511,\"handle\":\"10EC33\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":102643.2886456726,\"y\":-20256.14685018781} | {\"index\":512,\"handle\":\"10EC36\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":102643.21011090696,\"y\":-27245.74478076074} | {\"index\":513,\"handle\":\"10EC39\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":94840.43898428835,\"y\":-15350.543556858334} | {\"index\":514,\"handle\":\"10EC3C\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":89840.43898504505,\"y\":-15350.475288119647} | {\"index\":515,\"handle\":\"10EC3F\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":84840.43898533609,\"y\":-15350.40701565567} | {\"index\":516,\"handle\":\"10EC42\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":80466.4412177638,\"y\":-15350.347294595573} | {\"index\":517,\"handle\":\"10EC45\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":76006.44121832492,\"y\":-15350.286397275064} | {\"index\":518,\"handle\":\"10EC48\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":71717.63054527155,\"y\":-15350.227832917604} | {\"index\":519,\"handle\":\"10EC4B\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":68741.44121854378,\"y\":-15350.187195588383} | {\"index\":520,\"handle\":\"10EC4E\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":68741.36953412135,\"y\":-20600.18719745103} | {\"index\":521,\"handle\":\"10EC51\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":76006.37431216937,\"y\":-20250.286395784948} | {\"index\":522,\"handle\":\"10EC54\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":74327.34489255863,\"y\":-20250.263468485806} | {\"index\":523,\"handle\":\"10EC57\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":89840.37207935516,\"y\":-20250.475287560854} | {\"index\":524,\"handle\":\"10EC5A\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":84840.37207952978,\"y\":-20250.407014165554} | {\"index\":525,\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name...",
+          "evidence": "RECORDED, not judged: FULL SPOT 500-999 = {\"index\":500,\"handle\":\"10EC12\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.38231825734,\"y\":-19500.734718639884} | {\"index\":501,\"handle\":\"10EC15\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.51271806283,\"y\":-9950.579065021608} | {\"index\":502,\"handle\":\"10EC18\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.43898420686,\"y\":-15350.579810452196} | {\"index\":503,\"handle\":\"10EC1B\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.28468920196,\"y\":-26019.87543024845} | {\"index\":504,\"handle\":\"10EC1E\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.28059283782,\"y\":-26319.878126241038} | {\"index\":505,\"handle\":\"10EC21\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.27649664831,\"y\":-26619.878126986096} | {\"index\":506,\"handle\":\"10EC24\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.20959287927,\"y\":-32150.579062413904} | {\"index\":507,\"handle\":\"10EC27\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":97440.13586111878,\"y\":-37550.57905812982} | {\"index\":508,\"handle\":\"10EC2A\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":104181.11964246536,\"y\":-37550.67110073987} | {\"index\":509,\"handle\":\"10EC2D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.135859163,\"y\":-37550.73471193436} | {\"index\":510,\"handle\":\"10EC30\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":108840.26625753658,\"y\":-28000.73471677724} | {\"index\":511,\"handle\":\"10EC33\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":102643.2886456726,\"y\":-20256.14685018781} | {\"index\":512,\"handle\":\"10EC36\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":102643.21011090696,\"y\":-27245.74478076074} | {\"index\":513,\"handle\":\"10EC39\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":94840.43898428835,\"y\":-15350.543556858334} | {\"index\":514,\"handle\":\"10EC3C\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":89840.43898504505,\"y\":-15350.475288119647} | {\"index\":515,\"handle\":\"10EC3F\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":84840.43898533609,\"y\":-15350.40701565567} | {\"index\":516,\"handle\":\"10EC42\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":80466.4412177638,\"y\":-15350.347294595573} | {\"index\":517,\"handle\":\"10EC45\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":76006.44121832492,\"y\":-15350.286397275064} | {\"index\":518,\"handle\":\"10EC48\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":71717.63054527155,\"y\":-15350.227832917604} | {\"index\":519,\"handle\":\"10EC4B\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":68741.44121854378,\"y\":-15350.187195588383} | {\"index\":520,\"handle\":\"10EC4E\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":68741.36953412135,\"y\":-20600.18719745103} | {\"index\":521,\"handle\":\"10EC51\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":76006.37431216937,\"y\":-20250.286395784948} | {\"index\":522,\"handle\":\"10EC54\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":74327.34489255863,\"y\":-20250.263468485806} | {\"index\":523,\"handle\":\"10EC57\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":89840.37207935516,\"y\":-20250.475287560854} | {\"index\":524,\"handle\":\"10EC5A\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":84840.37207952978,\"y\":-20250.407014165554} | {\"index\":525,\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name..."
+        },
+        {
+          "n": 10,
+          "text": "record $sp10 \"FULL SPOT 1000+\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL SPOT 1000+ = "
+        },
+        {
+          "n": 11,
+          "text": "record $sl1 \"FULL CDSL 18.6m\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18.6m = Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 12,
+          "text": "record $sl1e \"FULL CDSL 18.6m then esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18.6m then esc = Command: | Command: CDSL | Specify spot level insertion point: 150000,-85000 | Enter proposed spot level (m): 18.6m | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 13,
+          "text": "record $sl2 \"FULL CDSL P18.6\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL P18.6 = Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 14,
+          "text": "record $sl2e \"FULL CDSL P18.6 then esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL P18.6 then esc = Command: | Command: CDSL | Specify spot level insertion point: 150500,-85000 | Enter proposed spot level (m): P18.6 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 15,
+          "text": "record $sl3 \"FULL CDSL 18600\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level.",
+          "evidence": "RECORDED, not judged: FULL CDSL 18600 = Command: | Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level."
+        },
+        {
+          "n": 16,
+          "text": "record $sl3e \"FULL CDSL 18600 then esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level. | Enter proposed spot level (m): *Cancel* | CDSL command cancelled. Nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL CDSL 18600 then esc = Command: CDSL | Specify spot level insertion point: 151000,-85000 | Enter proposed spot level (m): 18600 | [CE] \"18600\" is not a level in metres (for example 18.600). Type it again, or press Enter for a blank level. | Enter proposed spot level (m): *Cancel* | CDSL command cancelled. Nothing was placed."
+        },
+        {
+          "n": 17,
+          "text": "record $sl4 \"FULL CDSL 18.600\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18.600 = Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 18,
+          "text": "record $sl4e \"FULL CDSL 18.600 then esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600",
+          "evidence": "RECORDED, not judged: FULL CDSL 18.600 then esc = Command: | Command: CDSL | Specify spot level insertion point: 151500,-85000 | Enter proposed spot level (m): 18.600 | Spot level placed. Level: P18.600"
+        },
+        {
+          "n": 19,
+          "text": "record $slnew \"FULL objects added by CDSL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150000.0,\"y\":-85000.0} | {\"index\":1035,\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150500.0,\"y\":-85000.0} | {\"index\":1036,\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":151500.0,\"y\":-85000.0}",
+          "evidence": "RECORDED, not judged: FULL objects added by CDSL = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150000.0,\"y\":-85000.0} | {\"index\":1035,\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150500.0,\"y\":-85000.0} | {\"index\":1036,\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":151500.0,\"y\":-85000.0}"
+        },
+        {
+          "n": 20,
+          "text": "record $dp1 \"FULL DP first\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL DP first = Command: | Command: DP | Specify downpipe insertion point: 150000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        },
+        {
+          "n": 21,
+          "text": "record $dp1e \"FULL DP first esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify downpipe insertion point: 150000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL DP first esc = Specify downpipe insertion point: 150000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 22,
+          "text": "record $dp2 \"FULL DP second\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 152000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP2. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL DP second = Command: | Command: DP | Specify downpipe insertion point: 152000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP2. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        },
+        {
+          "n": 23,
+          "text": "record $dp2e \"FULL DP second esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify downpipe insertion point: 152000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP2. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL DP second esc = Specify downpipe insertion point: 152000,-95000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP2. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 24,
+          "text": "record $allnew \"FULL all new objects\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150000.0,\"y\":-85000.0} | {\"index\":1035,\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150500.0,\"y\":-85000.0} | {\"index\":1036,\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":151500.0,\"y\":-85000.0} | {\"index\":1037,\"handle\":\"11C562\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"DOWNPIPE DYNAMIC WITH MASK\",\"text\":\"\",\"x\":150000.0,\"y\":-95000.0} | {\"index\":1038,\"handle\":\"11C56A\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"DP\",\"x\":150250.0,\"y\":-94750.0} | {\"index\":1039,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"DOWNPIPE DYNAMIC WITH MASK\",\"text\":\"\",\"x\":152000.0,\"y\":-95000.0} | {\"index\":1040,\"handle\":\"11C57A\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"DP\",\"x\":152250.0,\"y\":-94750.0}",
+          "evidence": "RECORDED, not judged: FULL all new objects = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150000.0,\"y\":-85000.0} | {\"index\":1035,\"handle\":\"11C55C\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":150500.0,\"y\":-85000.0} | {\"index\":1036,\"handle\":\"11C55F\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"text\":\"\",\"x\":151500.0,\"y\":-85000.0} | {\"index\":1037,\"handle\":\"11C562\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"DOWNPIPE DYNAMIC WITH MASK\",\"text\":\"\",\"x\":150000.0,\"y\":-95000.0} | {\"index\":1038,\"handle\":\"11C56A\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"DP\",\"x\":150250.0,\"y\":-94750.0} | {\"index\":1039,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"DOWNPIPE DYNAMIC WITH MASK\",\"text\":\"\",\"x\":152000.0,\"y\":-95000.0} | {\"index\":1040,\"handle\":\"11C57A\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"DP\",\"x\":152250.0,\"y\":-94750.0}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 184 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSL completed 168 ms ; Command outcome: CDSL completed 71 ms ; Command outcome: CDSL cancelled 7126 ms ; Command outcome: CDSL completed 66 ms ; Command outcome: DP completed 32408 ms ; Command outcome: DP completed 32313 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 03:43:18",
+      "session_id": "RUN-20261025-0340-C3.0.75-p3b3prbC-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRBC_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}
