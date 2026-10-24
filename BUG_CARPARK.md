@@ -2139,7 +2139,7 @@
 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md, finding B2. Code: Commands/SpotLevelCommand.cs:100-123. Share the fix with BUG-714 (one shared level parser).
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1342; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** FIXED (Claude-accepted, Civil 3.0.75, 25 Oct 2026): runner case R35 passed in two separate sessions on 3.0.75, its broken variant fails, and the independent review (areas\RUNNER_CASE_REVIEW_B3_2026-10-25.md) agrees. Fix installed in Civil 3.0.70 via PR #1342. Not Tim-confirmed in his own drawings.
 
 ## BUG-710
 
@@ -2441,7 +2441,7 @@
 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding E4. Code: Commands/CdCommand.ExistingLine.cs:159-161 (bulge and Closed ignored), 253-288 (source erased).
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1321; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** FIXED (Claude-accepted, Civil 3.0.75, 25 Oct 2026): runner case R39b passed in two separate sessions on 3.0.75, its broken variant fails, and the independent review (areas\RUNNER_CASE_REVIEW_B3_2026-10-25.md) agrees. Fix installed in Civil 3.0.70 via PR #1321. The other half (picking an existing CE pipe still says "already a CE pipe") is not proved. Not Tim-confirmed in his own drawings.
 
 ## BUG-683
 
@@ -16721,5 +16721,21 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Test that catches it:** Help no longer mentions a preview or Apply; on a pipe with inverts 10.00 / 9.90, Enter at "Continue?" prints "[CE] Nothing was changed." and the inverts are unchanged.
 
 **Steps to confirm in AutoCAD:** CDHELP search CDREVERSEFLOW, then run the command on a test pipe and press Enter. Right looks like: Help matches the Yes/No step.
+
+**Status:** OPEN
+
+## BUG-1222
+
+**Command / Area:** CDEDIT (Edit Pipe), size-only save after a pipe's levels were flipped, Civil 3.0.75 (runner case R32b, three runs).
+
+**Symptom:** HIGH, WRONG ANSWER. Flip a pipe's two levels in Edit Pipe and save (the flow arrow turns round, correct). Open Edit Pipe again, change only the diameter to 150 and save: it says "Pipe updated." and nothing else, but the flow arrow goes back to its old direction while the IL texts stay as typed, so the arrow points uphill against its own levels. A pipe never flipped keeps its arrow on the same size-only save.
+
+**Expected behaviour:** The arrow still points from the higher IL to the lower IL (arrow, IL texts and label agree), or CE says plainly that the pipe runs uphill.
+
+**Reference:** areas/RUNNER_CASE_REVIEW_B3_2026-10-25.md item 5.1; runner case R32b. Related, not duplicates: BUG-223 (stays OPEN), BUG-292, BUG-261, BUG-260.
+
+**Test that catches it:** runner case R32b (retag it EXPECT-FAIL BUG-1222 at its next edit).
+
+**Steps to confirm in AutoCAD:** fresh copy of DRV1_B1. CD from 150000,-90000 to 170000,-90000, levels 18.000 then 17.900, Start Pipe, Esc. CDEDIT the pipe, type first level 17.900 and second 18.000, Save. CDEDIT again, change only the diameter to 150, Save. Right looks like: the arrow still points from IL 18.000 to IL 17.900.
 
 **Status:** OPEN
