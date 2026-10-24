@@ -1,0 +1,1259 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1428-C3.0.73-f1",
+    "started": "2026-10-24 14:28:51",
+    "finished": "2026-10-24 14:34:11",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "C4DEA16C464C5FD1E2A5A3852F993ABF1E1E3AF93427DB811E3C43C9FA2BE951",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 C4DEA16C464C5FD1E2A5A3852F993ABF1E1E3AF93427DB811E3C43C9FA2BE951; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 14:28 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1428-C3.0.73-f1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 14:28:54",
+      "finished": "2026-10-24 14:34:11",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31428591_B1.dwg",
+      "cases": [
+        "R12",
+        "R11"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R12",
+      "proves_bugs": "",
+      "title": "Moving a pit with MOVE opens no CE window, and one U puts it back",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "quick MOVE (gap plan section 3 item 7; spec C37-C41 regressions; backlog W1-02)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with card C41 (TEST_CASES_DRAFT_22OCT.md) and robot run 47 B.4.1. Same MOVE and U steps; only the pit's own position is read, the linked label positions of the card are not (see NOT_AUTOMATED).",
+      "variant_of": "",
+      "expected": "Pick pit P3 (handle 109D56, at 53777.7,-25569.9), run MOVE with displacement 0,0 to 0,2000: AutoCAD says '1 found', the pit's insertion point is now 2000 mm higher (Y -23569.9, X unchanged), no Edit Pit, Edit Pipe, New Pit, New Pipe or Cascade window opened, and one U (echo word MOVE) puts the pit back at Y -25569.9.",
+      "why_not_unit": "Native MOVE has to drive CE's live link updates inside AutoCAD without a blocking window; only a live drawing shows the pit position and the window list afterwards.",
+      "not_automated": [
+        "Phase 3 batch 2: the invert texts (IL) within 4000 mm of the pit (six on this drawing) are read before the move, at the pit's new place and after U, and must be the same six objects; two of them must have moved 2000 mm +- 150 (they follow the pit on 3.0.73, probe 24 Oct); the pit's cover text, its name label and the pipe ends are not read (a pipe returns only handle, object and layer through ent-read).",
+        "A CE message line about a label with no clear spot appears on this drawing after the move; it is recorded, not judged."
+      ],
+      "file_sha256": "BE0C1289AA620BEE0A601FC7AF7D4549A259DF7C061183B0798E4B557CA39F09",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 14:29:28",
+      "seconds": 37.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit0",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win0",
+          "ok": true,
+          "seconds": 1.0,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a0",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b0",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ila0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ilb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ila0 handle -All -> $ha0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilb0 handle -All -> $hb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b1",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 91 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"text~^IL \" \"near=53777.7,-23569.8,4000\" -> $ila1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b1 \"text~^IL \" \"near=53777.7,-23569.8,4000\" -> $ilb1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ila1 handle -All -> $ha1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilb1 handle -All -> $hb1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"handle=1101B8\" -> $one_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 1101B8 IL 17.25 20TEXT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $one_a \"54327.72,-25217.56\" -> $moved_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 1101B8 to 54327.72,-25217.56 = 1990.3"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b1 \"handle=116BB6\" -> $one_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BB6 IL 18.24 20TEXT"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $one_b \"53922.50,-25007.06\" -> $moved_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116BB6 to 53922.50,-25007.06 = 1988"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'U': Command: | Command: U | MOVE"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a2",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b2",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a2 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ila2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b2 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ilb2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ila2 handle -All -> $ha2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilb2 handle -All -> $hb2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $pit0 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 2,
+          "text": "contains $mv \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2..."
+        },
+        {
+          "n": 3,
+          "text": "matches $pit1 \"insertion\\W+53777\\.7\\d*,-23569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-23569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-23569.8'"
+        },
+        {
+          "n": 4,
+          "text": "equals $win1 $win0",
+          "ok": true,
+          "expected": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "evidence": "value 'Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]' (expected 'Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]')"
+        },
+        {
+          "n": 5,
+          "text": "contains $u1 \"MOVE\"",
+          "ok": true,
+          "expected": "contains 'MOVE'",
+          "actual": "Command: | Command: U | MOVE",
+          "evidence": "found 'MOVE' in: Command: | Command: U | MOVE"
+        },
+        {
+          "n": 6,
+          "text": "matches $pit2 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 7,
+          "text": "equals $win2 $win0",
+          "ok": true,
+          "expected": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "evidence": "value 'Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]' (expected 'Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]')"
+        },
+        {
+          "n": 8,
+          "text": "count $ila0 = 4",
+          "ok": true,
+          "expected": "count = 4",
+          "actual": "4",
+          "evidence": "count of $ila0 = 4 (expected = 4)"
+        },
+        {
+          "n": 9,
+          "text": "count $ilb0 = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $ilb0 = 2 (expected = 2)"
+        },
+        {
+          "n": 10,
+          "text": "equals $ha1 $ha0",
+          "ok": true,
+          "expected": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "value '1101B8 | 1155B6 | 116A0E | 116A3C' (expected '1101B8 | 1155B6 | 116A0E | 116A3C')"
+        },
+        {
+          "n": 11,
+          "text": "equals $hb1 $hb0",
+          "ok": true,
+          "expected": "116BB6 | 116BE4",
+          "actual": "116BB6 | 116BE4",
+          "evidence": "value '116BB6 | 116BE4' (expected '116BB6 | 116BE4')"
+        },
+        {
+          "n": 12,
+          "text": "number $moved_a = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1990.3",
+          "evidence": "$moved_a = 1990.3 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 13,
+          "text": "number $moved_b = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1988",
+          "evidence": "$moved_b = 1988 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 14,
+          "text": "equals $ha2 $ha0",
+          "ok": true,
+          "expected": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "value '1101B8 | 1155B6 | 116A0E | 116A3C' (expected '1101B8 | 1155B6 | 116A0E | 116A3C')"
+        },
+        {
+          "n": 15,
+          "text": "equals $hb2 $hb0",
+          "ok": true,
+          "expected": "116BB6 | 116BE4",
+          "actual": "116BB6 | 116BE4",
+          "evidence": "value '116BB6 | 116BE4' (expected '116BB6 | 116BE4')"
+        },
+        {
+          "n": 16,
+          "text": "record $mv \"FULL what MOVE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\").",
+          "evidence": "RECORDED, not judged: FULL what MOVE printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\")."
+        },
+        {
+          "n": 17,
+          "text": "record $win1 \"windows open after the MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open after the MOVE = Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "text": "record $ha0 \"handles of the invert texts within 4000 mm of the pit before the move\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "RECORDED, not judged: handles of the invert texts within 4000 mm of the pit before the move = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 19,
+          "text": "record $moved_a \"how far text 1101B8 moved (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1990.3",
+          "evidence": "RECORDED, not judged: how far text 1101B8 moved (mm) = 1990.3"
+        },
+        {
+          "n": 20,
+          "text": "record $moved_b \"how far text 116BB6 moved (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1988",
+          "evidence": "RECORDED, not judged: how far text 116BB6 moved (mm) = 1988"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 65 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:30:06",
+      "session_id": "RUN-20261024-1428-C3.0.73-f1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: the independent review (R12_quick_move_opens_no_window.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R11",
+      "proves_bugs": "",
+      "title": "Edit Pipe on P3 with new levels updates 4 pipes and 3 pits downstream, one U takes it all back, REDO puts it back",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Edit Pipe cascade with U and REDO (gap plan section 3 item 7; regression C40; UX-LBL-02)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with card C40 (TEST_CASES_DRAFT_22OCT.md, spec 5.10 C40) and robot run 47 B.4.5: same route and the same expected lines. Differences: Save is pressed as the button named Edit pipe, Save (renamed on 3.0.72); the new pit P8 is not added; the invert texts are compared as one whole set (before, after the cascade, after U, after REDO), not per pipe, which closes the card's open point that U must restore the old levels.",
+      "variant_of": "",
+      "expected": "Select pipe P3 (10A98D), CDEDIT, answer Y to the older-version question, set the first invert 17.60 and the second 17.50, press Edit pipe, Save (id C2.OkCommand); the box 'Recalculate downstream inverts' answered Yes opens the Cascade Preview; Apply says '[CDEDIT-CASCADE] Updated 4 pipes and 3 pits from P3 (IL 17.50). Min grade: 1:16.'; the invert texts in the drawing change; one U echoes CDEDIT and every invert text reads as before the edit; after a 12 second wait REDO says 'Everything has been redone' and the invert texts read as after the cascade.",
+      "why_not_unit": "The real Edit Pipe window, the downstream recalculation, the invert texts, the project data and AutoCAD's undo stack all take part; only a live drawing shows that one U undoes the whole cascade and that REDO is still available.",
+      "not_automated": [
+        "Which text belongs to which pipe is not mapped: the case compares the whole set of 'IL ' texts (handle and wording, in drawing order) as one string, not one pipe's text. Project data (the stored invert values) is not read.",
+        "The 'Updated 4 pipes and 3 pits' numbers come from run 47 on the drawing with the new pit P8 added; this case runs without P8. A different count is reported as a FAIL for a person to judge."
+      ],
+      "file_sha256": "BECE7698469D7151716F8C2FE350E85F241A58566AEC8EF2CE2502EC578C3DC6",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 14:30:06",
+      "seconds": 222.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m500",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m1000",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m500 \"text~^IL \" -> $il_a0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m1000 \"text~^IL \" -> $il_b0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_a0 text -All -> $ilt_a0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_b0 text -All -> $ilt_b0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $all0 \"{$ilt_a0} || {$ilt_b0}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $all0"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}50000,-30000{NL}80000,-20000\" -Force",
+          "ok": true,
+          "seconds": 4.4,
+          "evidence": "typed '_.ZOOM _W 50000,-30000 80000,-20000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 50000,-30000 | Specify opposite corner:..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "pick-first 10A98D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT{NL}Y\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edit_t1",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "typed 'CDEDIT Y': Command: | Command: CDEDIT | This pipe was drawn with an older version of CE. Is the highlighted text \"450 DIA. STORMPRO PIPE AT 1 IN 193 19.30m DET...\" this pipe's label? [Yes/No] <Yes>: Y"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.60\"",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.60: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"17.50\"",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 17.50: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $save_press",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "msgbox-answer",
+          "text": "msgbox-answer \"*Recalculate*\" Yes",
+          "ok": true,
+          "seconds": 25.4,
+          "evidence": "msgbox-answer '*Recalculate*' Yes: answered 'Yes' to \"CE - Recalculate downstream inverts?\" by BM_CLICK; the box closed [tries: 1]"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui2-press",
+          "text": "ui2-press \"Cascade Preview\" \"Apply\" -Secs 120",
+          "ok": true,
+          "seconds": 51.8,
+          "evidence": "ui press 'Cascade Preview' 'Apply': "
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m500_1",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 227; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 74; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m1000_1",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 13; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 10; AcDbRotatedDimension 1; AcDbText 3; first: 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference 25CONT FALL SYMBOL ; 1197F1 AcDbBlockReference 25CONT FALL SYMBOL ; 119803 AcDbBl..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m500_1 \"text~^IL \" -> $il_a1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 41 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.45 20TEXT ; 1101BC IL 17.33 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m1000_1 \"text~^IL \" -> $il_b1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 34: 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT ; 11C55B IL 17.60 20TEXT ; 11C560 IL 17.50 20TEXT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_a1 text -All -> $ilt_a1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_b1 text -All -> $ilt_b1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $all1 \"{$ilt_a1} || {$ilt_b1}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $all1"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "typed 'U': Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m500_2",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m1000_2",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m500_2 \"text~^IL \" -> $il_a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m1000_2 \"text~^IL \" -> $il_b2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_a2 text -All -> $ilt_a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_b2 text -All -> $ilt_b2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $all2 \"{$ilt_a2} || {$ilt_b2}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $all2"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed 'REDO': Command: | Command: REDO | CDEDIT | Everything has been redone"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m500_3",
+          "ok": true,
+          "seconds": 8.8,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 227; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 74; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m1000_3",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 13; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 10; AcDbRotatedDimension 1; AcDbText 3; first: 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference 25CONT FALL SYMBOL ; 1197F1 AcDbBlockReference 25CONT FALL SYMBOL ; 119803 AcDbBl..."
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m500_3 \"text~^IL \" -> $il_a3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 41 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.45 20TEXT ; 1101BC IL 17.33 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m1000_3 \"text~^IL \" -> $il_b3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 34: 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT ; 11C55B IL 17.60 20TEXT ; 11C560 IL 17.50 20TEXT"
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_a3 text -All -> $ilt_a3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL..."
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_b3 text -All -> $ilt_b3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $all3 \"{$ilt_a3} || {$ilt_b3}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $all3"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Updated 4 pipes and 3 pits from P3 (IL 17.50)\"",
+          "ok": true,
+          "expected": "command line has 'Updated 4 pipes and 3 pits from P3 (IL 17.50)'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] Updated 4 pipes and 3 pits from P3 (IL 17.50). Min grade: 1:16.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Min grade: 1:16\"",
+          "ok": true,
+          "expected": "command line has 'Min grade: 1:16'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] Updated 4 pipes and 3 pits from P3 (IL 17.50). Min grade: 1:16.'"
+        },
+        {
+          "n": 3,
+          "text": "not-contains $all1 $all0",
+          "ok": true,
+          "expected": "does not contain 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24'",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL...",
+          "evidence": "'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24' is absent from: IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17...."
+        },
+        {
+          "n": 4,
+          "text": "contains $all1 \"IL 17.60\"",
+          "ok": true,
+          "expected": "contains 'IL 17.60'",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL...",
+          "evidence": "found 'IL 17.60' in: IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17...."
+        },
+        {
+          "n": 5,
+          "text": "contains $all1 \"IL 17.50\"",
+          "ok": true,
+          "expected": "contains 'IL 17.50'",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL...",
+          "evidence": "found 'IL 17.50' in: IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17...."
+        },
+        {
+          "n": 6,
+          "text": "equals $all1 \"IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 |...",
+          "ok": true,
+          "expected": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 || IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 || IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50",
+          "evidence": "value 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 |...' (expected 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 |...')"
+        },
+        {
+          "n": 7,
+          "text": "contains $u1 \"CDEDIT\"",
+          "ok": true,
+          "expected": "contains 'CDEDIT'",
+          "actual": "Command: | Command: U | CDEDIT",
+          "evidence": "found 'CDEDIT' in: Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 8,
+          "text": "equals $all2 $all0",
+          "ok": true,
+          "expected": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24",
+          "evidence": "value 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 |...' (expected 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 |...')"
+        },
+        {
+          "n": 9,
+          "text": "equals $cnt2 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 10,
+          "text": "contains $redo1 \"Everything has been redone\"",
+          "ok": true,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | CDEDIT | Everything has been redone",
+          "evidence": "found 'Everything has been redone' in: Command: | Command: REDO | CDEDIT | Everything has been redone"
+        },
+        {
+          "n": 11,
+          "text": "equals $all3 $all1",
+          "ok": true,
+          "expected": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 || IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 || IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50",
+          "evidence": "value 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 |...' (expected 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 |...')"
+        },
+        {
+          "n": 12,
+          "text": "equals $cnt3 $cnt1",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 13,
+          "text": "not-contains $win_end \"Cascade\"",
+          "ok": true,
+          "expected": "does not contain 'Cascade'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "evidence": "'Cascade' is absent from: Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $win_end \"Edit Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]",
+          "evidence": "'Edit Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV31428591_B1.dwg]"
+        },
+        {
+          "n": 15,
+          "text": "log civil count \"Command outcome: CDEDIT completed\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDEDIT completed'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDEDIT completed' (expected 1): 2026-10-24 14:32:19.528 [INFO] Command outcome: CDEDIT completed 93459 ms"
+        },
+        {
+          "n": 16,
+          "text": "record $all0 \"FULL invert texts before the edit\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24",
+          "evidence": "RECORDED, not judged: FULL invert texts before the edit = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 17,
+          "text": "record $all1 \"FULL invert texts after the cascade\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 || IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50",
+          "evidence": "RECORDED, not judged: FULL invert texts after the cascade = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.45 | IL 17.33 | IL 18.20 | IL 18.00 | IL 17.28 | IL 17.18 | IL 18.50 | IL 18.10 | IL 17.13 | IL 17.07 | IL 17.02 | IL 16.81 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 || IL 18.60 | IL 18.24 | IL 17.60 | IL 17.50"
+        },
+        {
+          "n": 18,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDEDIT",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 19,
+          "text": "record $redo1 \"FULL what REDO printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: REDO | CDEDIT | Everything has been redone",
+          "evidence": "RECORDED, not judged: FULL what REDO printed = Command: | Command: REDO | CDEDIT | Everything has been redone"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31428591_B1_1183c2409.log)",
+        "Civil CE log: 122 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDEDIT completed 93459 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:33:48",
+      "session_id": "RUN-20261024-1428-C3.0.73-f1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: the independent review (R11_edit_pipe_cascade_u_redo.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

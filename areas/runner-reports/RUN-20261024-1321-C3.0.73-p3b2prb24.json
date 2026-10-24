@@ -1,0 +1,564 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1321-C3.0.73-p3b2prb24",
+    "started": "2026-10-24 13:21:24",
+    "finished": "2026-10-24 13:25:45",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "6554F8213FBC9835E50D6DF6D8142CB912AB811E1BD1CC3B3AE5E01E6463AC94",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 6554F8213FBC9835E50D6DF6D8142CB912AB811E1BD1CC3B3AE5E01E6463AC94; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 13:21 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1321-C3.0.73-p3b2prb24-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 13:21:24",
+      "finished": "2026-10-24 13:25:45",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31321281_B1.dwg",
+      "cases": [
+        "PRB2",
+        "PRB4"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB2",
+      "proves_bugs": "",
+      "title": "probe: CDCHECK words, locked pipe layer, PITEDIT on a pipe",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "01B6F12D84FA8F29B28FEFD2CD7736F337D5C78CD2D7DAC606306FF13BCE2E7A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:22:09",
+      "seconds": 79.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $dbmod0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK\" -Force -> $chk1",
+          "ok": true,
+          "seconds": 11.6,
+          "evidence": "typed 'CDCHECK': Command: | Command: CDCHECK"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $chk_e",
+          "ok": true,
+          "seconds": 10.7,
+          "evidence": "esc-prompt: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: *Cancel*"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $dbmod1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $chk2",
+          "ok": true,
+          "seconds": 8.9,
+          "evidence": "typed 'CDCHECK': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $chk_e2",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_chk",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cw1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "pick-first 10A98D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITEDIT\" -Force -> $pe1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed 'PITEDIT': Command: | Command: PITEDIT"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pe_e",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "esc-prompt: Command: | Command: PITEDIT | Select pit block to edit: *Cancel*"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}STORMWATER PIPE{NL}{NL}\" -Force -> $lock1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed '_.-LAYER _LOCK STORMWATER PIPE': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Ent..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 10A98D: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -> $ce1",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $ce_e",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_ce",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cw2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_UNLOCK{NL}STORMWATER PIPE{NL}{NL}\" -Force -> $unlock1",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.-LAYER _UNLOCK STORMWATER PIPE': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $dbmod0 \"DBMOD at start\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD at start = 1"
+        },
+        {
+          "n": 2,
+          "text": "record $chk1 \"CDCHECK typed alone\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK",
+          "evidence": "RECORDED, not judged: CDCHECK typed alone = Command: | Command: CDCHECK"
+        },
+        {
+          "n": 3,
+          "text": "record $chk_e \"CDCHECK then Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: *Cancel*",
+          "evidence": "RECORDED, not judged: CDCHECK then Esc = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: *Cancel*"
+        },
+        {
+          "n": 4,
+          "text": "record $dbmod1 \"DBMOD after CDCHECK\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD after CDCHECK = 1"
+        },
+        {
+          "n": 5,
+          "text": "record $chk2 \"CDCHECK then Enter\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected...",
+          "evidence": "RECORDED, not judged: CDCHECK then Enter = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected..."
+        },
+        {
+          "n": 6,
+          "text": "record $chk_e2 \"after Enter then Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ...",
+          "evidence": "RECORDED, not judged: after Enter then Esc = [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 7,
+          "text": "record $win_chk \"windows after CDCHECK\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after CDCHECK = Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "record $pe1 \"PITEDIT with a pipe picked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PITEDIT",
+          "evidence": "RECORDED, not judged: PITEDIT with a pipe picked = Command: | Command: PITEDIT"
+        },
+        {
+          "n": 9,
+          "text": "record $pe_e \"PITEDIT then Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PITEDIT | Select pit block to edit: *Cancel*",
+          "evidence": "RECORDED, not judged: PITEDIT then Esc = Command: | Command: PITEDIT | Select pit block to edit: *Cancel*"
+        },
+        {
+          "n": 10,
+          "text": "record $lock1 \"LAYER lock\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Ent...",
+          "evidence": "RECORDED, not judged: LAYER lock = Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Ent..."
+        },
+        {
+          "n": 11,
+          "text": "record $ce1 \"CDEDIT on a locked pipe layer\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again.",
+          "evidence": "RECORDED, not judged: CDEDIT on a locked pipe layer = Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again."
+        },
+        {
+          "n": 12,
+          "text": "record $ce_e \"CDEDIT then Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again.",
+          "evidence": "RECORDED, not judged: CDEDIT then Esc = Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again."
+        },
+        {
+          "n": 13,
+          "text": "record $win_ce \"windows after CDEDIT on locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after CDEDIT on locked = Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg]"
+        },
+        {
+          "n": 14,
+          "text": "record $unlock1 \"LAYER unlock\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E...",
+          "evidence": "RECORDED, not judged: LAYER unlock = Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 32 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 16965 ms ; Command outcome: CDCHECK cancelled 9485 ms ; Command outcome: PITEDIT cancelled 7562 ms ; Command outcome: CDEDIT completed 187 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:23:29",
+      "session_id": "RUN-20261024-1321-C3.0.73-p3b2prb24-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB2_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "PRB4",
+      "proves_bugs": "",
+      "title": "probe: Pit Schedule open, dump, close",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "949CB76EEC76CF7E945023EC4F4D3FA72BB0A46275E1927E8503ECA0E7C91A01",
+      "result": "BLOCKED",
+      "blocked": "v2 HARD TIMEOUT: AutoCAD did not answer in time (a tool or load problem, not a result)",
+      "first_failure": null,
+      "started": "2026-10-24 13:23:29",
+      "seconds": 116.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 32.6,
+          "evidence": "typed 'PITSCHEDULE': Command: PITSCHEDULE"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd",
+          "ok": true,
+          "seconds": 30.0,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $wps",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31321281_B1.dwg] ; Creative Engineering | Pit Schedule (PITSCHEDULE)"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-close",
+          "text": "ui2-close \"Pit Schedule\" -> $psc",
+          "ok": false,
+          "seconds": 34.2,
+          "evidence": "ui close 'Pit Schedule': HARD TIMEOUT: AutoCAD did not answer. A dialog may be open or a command may be waiting at a prompt. Press Esc in AutoCAD; nothing further was sent. If the settings guard held backups: while the test AutoCAD you launched ..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31321281_B1_1beb1b9ca.log)",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 89779 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:25:25",
+      "session_id": "RUN-20261024-1321-C3.0.73-p3b2prb24-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1409-C3.0.73-p3b2discD",
+    "started": "2026-10-24 14:09:25",
+    "finished": "2026-10-24 14:17:03",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "4EECAE6F44BAF836BFA2581F6C5D151F44709215170E6FBD40FAF8DF14DC2A17",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 4EECAE6F44BAF836BFA2581F6C5D151F44709215170E6FBD40FAF8DF14DC2A17; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV15_METRE 5C16AFFD66C7",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 14:09 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1409-C3.0.73-p3b2discD-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 14:09:27",
+      "finished": "2026-10-24 14:17:02",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV15_METRE",
+      "fixture_sha256": "5C16AFFD66C7",
+      "copy": "C:\\ce_rc_drv\\CLDV31409341_B1.dwg",
+      "cases": [
+        "R24"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R24",
+      "proves_bugs": "",
+      "title": "In a metre drawing (INSUNITS 6) a pit and a 20 m pipe are placed in metres and the pipe label reads 1 IN 200",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV15_METRE",
+      "plan_item": "Metre drawing (triage group T1)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With INSUNITS set to 6, a pit placed at 150,-80 and a pipe from 150,-80 to 170,-80 with inverts 18.000 and 17.900 give one pit and one pipe, and the pipe label reads '<size> DIA. <material> PIPE AT 1 IN 200' with its insertion point within 2 units of the middle 160,-80. A pipe that CE measured as 20000 long would read 1 IN 200000.",
+      "why_not_unit": "The drawing unit decides how every length and level is read; only a real drawing in metres shows it.",
+      "not_automated": [
+        "INSUNITS 6 is SET by the driver on a millimetre master; a drawing that was authored in metres (pit blocks and text heights in metres) does not exist here, so the pit block scale is recorded, not judged.",
+        "Edit Pipe and the relink (CDSYNC) in metres (BUG-270, BUG-271, BUG-293, BUG-309, BUG-317, BUG-323, BUG-328, BUG-330, BUG-331, BUG-393) are not driven in this case."
+      ],
+      "file_sha256": "3EAD8D8BFC3AEF013DEB9CC68BDCE2C54E18D79F175384470A1B7C59A71DFA25",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "step 14 (case ui-press): ui-press 'New pipe, Start Pipe' in /New Pipe/ failed: the button 'New pipe, Start Pipe' is disabled",
+      "started": "2026-10-24 14:10:36",
+      "seconds": 349.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar INSUNITS 6",
+          "ok": true,
+          "seconds": 1.0,
+          "evidence": "v3 setvar INSUNITS 6: INSUNITS (drawing): 4 -> 6"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar INSUNITS -> $iu",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "INSUNITS = 6"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 141 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150,-80\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 44.3,
+          "evidence": "typed 'PIT 150,-80': Command: | Command: PIT | Specify pit insertion point: 150,-80"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 39.0,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 96.4,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "the window /^New Pit/ closed after 1 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 11.9,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150,-80 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 36.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150,-80 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or p..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 8.2,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150,-80{NL}170,-80{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $pipe_t1",
+          "ok": true,
+          "seconds": 46.8,
+          "evidence": "typed 'CD 150,-80 170,-80': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150,-80 | Specify second point: 170,-80 | Select point 3..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 10.5,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": false,
+          "seconds": 9.7,
+          "evidence": "ui-press 'New pipe, Start Pipe' in /New Pipe/ failed: the button 'New pipe, Start Pipe' is disabled"
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 35 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 234514 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:16:25",
+      "session_id": "RUN-20261024-1409-C3.0.73-p3b2discD-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

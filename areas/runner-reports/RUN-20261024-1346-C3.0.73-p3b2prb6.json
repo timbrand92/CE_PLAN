@@ -1,0 +1,329 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1346-C3.0.73-p3b2prb6",
+    "started": "2026-10-24 13:46:32",
+    "finished": "2026-10-24 13:48:36",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "3F419424EB29642C3B78A8C21AC193738B36A5C22D4675A60809C522723FE482",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 3F419424EB29642C3B78A8C21AC193738B36A5C22D4675A60809C522723FE482; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 13:46 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1346-C3.0.73-p3b2prb6-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 13:46:32",
+      "finished": "2026-10-24 13:48:36",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31346371_B1.dwg",
+      "cases": [
+        "PRB6"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB6",
+      "proves_bugs": "",
+      "title": "probe: CDCHECK All, Problems, Csv full text",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "43021E3B76E9232D5D4BBE52AD3E9376FBC9030C2A19D0AD9CE9A20141A25FA4",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:47:26",
+      "seconds": 48.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31346371_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $all1",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "typed 'CDCHECK': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $all_e",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 150 -> $h_all",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "history: [ AutoCAD - Sat Oct 24 13:47:12 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Loading AEC Base... | Loading AEC Base Extend..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $prob1",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $prob_e",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 60 -> $h_prob",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "history: [CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 1..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Csv\" -Force -> $csv1",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "typed 'CDCHECK Csv': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Csv | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Conne..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $csv_e",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "esc-prompt: [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full ..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 40 -> $h_csv",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "history: 56. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 57. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 58. Unclassified attached to CE-CIV-PIPE-0766B123-0820-46F..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31346371_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $all1 \"ALL typed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected...",
+          "evidence": "RECORDED, not judged: ALL typed = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected..."
+        },
+        {
+          "n": 2,
+          "text": "record $h_all \"history after All (150 lines)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[ AutoCAD - Sat Oct 24 13:47:12 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Loading AEC Base... | Loa...",
+          "evidence": "RECORDED, not judged: history after All (150 lines) = [ AutoCAD - Sat Oct 24 13:47:12 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Loading AEC Base... | Loa..."
+        },
+        {
+          "n": 3,
+          "text": "record $prob1 \"Problems typed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not ...",
+          "evidence": "RECORDED, not judged: Problems typed = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 4,
+          "text": "record $h_prob \"history after Problems\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE...",
+          "evidence": "RECORDED, not judged: history after Problems = [CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE..."
+        },
+        {
+          "n": 5,
+          "text": "record $csv1 \"Csv typed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Csv | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Conne...",
+          "evidence": "RECORDED, not judged: Csv typed = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Csv | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Conne..."
+        },
+        {
+          "n": 6,
+          "text": "record $h_csv \"history after Csv\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "56. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 57. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 58. Unclassified attached to CE-CIV-PI...",
+          "evidence": "RECORDED, not judged: history after Csv = 56. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 57. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 58. Unclassified attached to CE-CIV-PI..."
+        },
+        {
+          "n": 7,
+          "text": "record $copy1 \"folder after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"path\":\"C:\\\\ce_rc_drv\\\\CLDV31346371_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_22...",
+          "evidence": "RECORDED, not judged: folder after = {\"path\":\"C:\\\\ce_rc_drv\\\\CLDV31346371_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_22..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 6 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 7994 ms ; Command outcome: CDCHECK cancelled 8577 ms ; Command outcome: CDCHECK cancelled 8447 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:48:15",
+      "session_id": "RUN-20261024-1346-C3.0.73-p3b2prb6-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB6_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

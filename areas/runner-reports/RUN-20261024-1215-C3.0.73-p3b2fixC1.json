@@ -1,0 +1,583 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1215-C3.0.73-p3b2fixC1",
+    "started": "2026-10-24 12:15:02",
+    "finished": "2026-10-24 12:28:05",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.122+e6d597c0 / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "5D9F6C6A55F9AACCD0DF39BA534D390431931FBD124D0A2C45798AF62AE5EEC0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 40775AA97B3D, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 1 shared setup(s); pack SHA-256 5D9F6C6A55F9AACCD0DF39BA534D390431931FBD124D0A2C45798AF62AE5EEC0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 12:15 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 2,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1215-C3.0.73-p3b2fixC1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 12:15:02",
+      "finished": "2026-10-24 12:28:05",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31215071_B1.dwg",
+      "cases": [
+        "R13",
+        "R13_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R13",
+      "proves_bugs": "",
+      "title": "CDSYNC warns in one line first, relinks 12 pits and 50 pipes, and one U takes it back",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-REP-01 CDSYNC (daily case D27, CDSYNC half); CDSYNC keeps the schedule (regression C42, reduced)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D27 (CDSYNC half, DAILY_TOOLS_TEST_CASES_2026-10-23.md) and the CDSYNC half of card C42. The Pit Schedule comparison of C42 and the whole CDREBUILD half of D27 are NOT covered.",
+      "variant_of": "",
+      "expected": "Typing CDSYNC prints '[CE] CDSYNC will re-link every pit and pipe in this drawing' and later 'CDSYNC complete. Pits relinked: 12, Pipes relinked: 50' (in that order); the number of objects in the drawing does not change; the Civil log holds one 'Command outcome: CDSYNC completed'; one U echoes CDSYNC.",
+      "why_not_unit": "The order of the warning against the real write is only visible on the live command line, and the relink counts come from the real drawing.",
+      "not_automated": [
+        "THE PIT SCHEDULE FIGURES ARE NOT COMPARED (card C42 assertion 2): the Pit Schedule window cannot be read or closed by the driver on build 3.0.72 (v2 ui close / ui press time out). This case does NOT prove that CDSYNC leaves the schedule alone.",
+        "CDREBUILD (D27 second half) has never been driven; its prompts are unknown."
+      ],
+      "file_sha256": "DA5A8185C561CD54F2972A9F89B416E28B1D6CDA4C09AEB8581D8E21B7FFC827",
+      "result": "BLOCKED",
+      "blocked": "case time limit (300 s)",
+      "first_failure": null,
+      "started": "2026-10-24 12:15:40",
+      "seconds": 308.9,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 12:20:35",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31215071_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 9.9,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 63.2,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "the window /^New Pit/ closed after 1 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 14.9,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 11.5,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 10.3,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "ui-dump 'New Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 129.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31215071_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C64F CeCvlPipeObject STORMWATER PIPE ; 11C655 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65A AcDbMText 20TEXT IL 18.000 ; 11C65F AcDbMText 20TEXT IL 17.900 ; 11C681 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSYNC\" -Force -> $sync",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "typed 'CDSYNC': Command: | Command: CDSYNC | [CE] CDSYNC will re-link every pit and pipe in this drawing to CE's records, from what is currently drawn. One U undoes it. | CDSYNC complete. Pits relinked: 12, Pipes relinked: 50"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": false,
+          "seconds": 0,
+          "evidence": "BLOCKED: the case ran longer than its limit of 300 s"
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 328 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 100834 ms ; Command outcome: CD completed 175618 ms ; Command outcome: CDSYNC completed 5742 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 12:20:49",
+      "session_id": "RUN-20261024-1215-C3.0.73-p3b2fixC1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R13_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R13: expects 11 pits and 49 pipes relinked on the drawing that holds 12 and 50 (must FAIL)",
+      "kind": "deterministic",
+      "order": 42,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R13",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D27 (CDSYNC half, DAILY_TOOLS_TEST_CASES_2026-10-23.md) and the CDSYNC half of card C42. The Pit Schedule comparison of C42 and the whole CDREBUILD half of D27 are NOT covered.",
+      "variant_of": "R13",
+      "expected": "Typing CDSYNC prints '[CE] CDSYNC will re-link every pit and pipe in this drawing' and later 'CDSYNC complete. Pits relinked: 12, Pipes relinked: 50' (in that order); the number of objects in the drawing does not change; the Civil log holds one 'Command outcome: CDSYNC completed'; one U echoes CDSYNC.",
+      "why_not_unit": "The order of the warning against the real write is only visible on the live command line, and the relink counts come from the real drawing.",
+      "not_automated": [
+        "THE PIT SCHEDULE FIGURES ARE NOT COMPARED (card C42 assertion 2): the Pit Schedule window cannot be read or closed by the driver on build 3.0.72 (v2 ui close / ui press time out). This case does NOT prove that CDSYNC leaves the schedule alone.",
+        "CDREBUILD (D27 second half) has never been driven; its prompts are unknown."
+      ],
+      "file_sha256": "7A29DF292DD3D86581A3983EE4046F9F2D0E2D76D3C4F3CC813BF5324FCD04AE",
+      "result": "BLOCKED",
+      "blocked": "case time limit (300 s)",
+      "first_failure": null,
+      "started": "2026-10-24 12:20:49",
+      "seconds": 416.5,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 12:27:18",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31215071_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 20.0,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 36.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 147.6,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "the window /^New Pit/ closed after 2 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 14.7,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 12.9,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "ui-dump 'New Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 91.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": false,
+          "seconds": 0,
+          "evidence": "BLOCKED: the case ran longer than its limit of 300 s"
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own",
+        "Civil CE log: 117 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 222249 ms",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-24 12:27:46",
+      "session_id": "RUN-20261024-1215-C3.0.73-p3b2fixC1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

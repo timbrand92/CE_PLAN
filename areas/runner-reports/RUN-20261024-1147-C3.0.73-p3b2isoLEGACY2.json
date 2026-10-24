@@ -1,0 +1,314 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1147-C3.0.73-p3b2isoLEGACY2",
+    "started": "2026-10-24 11:47:45",
+    "finished": "2026-10-24 11:48:45",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.122+e6d597c0 / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "25764ACFEF36830D5B29F309B0CE7907A56CB6468AE879DD7198DEF025F583A4",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 40775AA97B3D, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 1 shared setup(s); pack SHA-256 25764ACFEF36830D5B29F309B0CE7907A56CB6468AE879DD7198DEF025F583A4; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 11:47 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1147-C3.0.73-p3b2isoLEGACY2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 11:47:46",
+      "finished": "2026-10-24 11:48:45",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31147491_B1.dwg",
+      "cases": [
+        "ISO1_LEAVES",
+        "ISO1_PROBE_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "ISO1_LEAVES",
+      "proves_bugs": "",
+      "title": "Isolation proof part 1: this case draws a circle and prints a marker line, then ends",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "runner fix: no case may pass on another case's leftovers",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After this case the drawing holds one more object than the master (1035 instead of 1034) and the command line shows 'X = 7771'.",
+      "why_not_unit": "It tests the runner itself, in real AutoCAD, with a real reopen of the drawing.",
+      "not_automated": [],
+      "file_sha256": "8B815CF98C4EAAB624E43ACC0767A5E174FBC2DBBC054CA87373B87DE1DA8BCF",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 11:48:15",
+      "seconds": 9.2,
+      "setup": "SETUP-ISO1",
+      "setup_note": "shared setup SETUP-ISO1 run here for the first time at 11:48:15",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n_setup",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n_before",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.CIRCLE{NL}91234,-45678{NL}77\" -Force",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed '_.CIRCLE 91234,-45678 77': Command: | Command: _.CIRCLE | Specify center point for circle or [3P/2P/Ttr (tan tan radius)]: 91234,-45678 | Specify radius of circle or [Diameter]: 77"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ID{NL}7771,8882\" -Force -> $idline",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.ID 7771,8882': Command: | Command: _.ID | Specify point: 7771,8882 | X = 7771.000 Y = 8882.000 Z = 0.000"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n_after",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "number $n_after = 1035",
+          "ok": true,
+          "expected": "= 1035",
+          "actual": "1035",
+          "evidence": "$n_after = 1035 (expected = 1035)"
+        },
+        {
+          "n": 2,
+          "text": "contains $idline \"7771\"",
+          "ok": true,
+          "expected": "contains '7771'",
+          "actual": "Command: | Command: _.ID | Specify point: 7771,8882 | X = 7771.000 Y = 8882.000 Z = 0.000",
+          "evidence": "found '7771' in: Command: | Command: _.ID | Specify point: 7771,8882 | X = 7771.000 Y = 8882.000 Z = 0.000"
+        },
+        {
+          "n": 3,
+          "text": "history has \"7771\"",
+          "ok": true,
+          "expected": "command line has '7771'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'Specify point: 7771,8882'"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "LEGACY SHARED MODE (CASE_RUNNER_LEGACY_SHARED=1): drawing, setup and log start are shared with earlier cases",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 11:48:24",
+      "session_id": "RUN-20261024-1147-C3.0.73-p3b2isoLEGACY2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no ISO1_LEAVES_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "ISO1_PROBE_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of the isolation proof: passes only on the earlier case's leftovers (must FAIL)",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "runner fix: no case may pass on another case's leftovers",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "ISO1_LEAVES",
+      "expected": "This case does nothing itself. It expects the drawing to hold 1035 objects and the command line to hold 'X = 7771', which only an earlier case could have put there.",
+      "why_not_unit": "It tests the runner itself.",
+      "not_automated": [],
+      "file_sha256": "C241BD5616FC1500C7B24BEBAC83AB9A8D29AD75C6A089684487AA917FD93822",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 11:48:24",
+      "seconds": 1.5,
+      "setup": "SETUP-ISO1",
+      "setup_note": "shared setup SETUP-ISO1 was run once in case ISO1_LEAVES at 11:48:15; this case reuses its drawing state, variables, command-line lines and log start",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n_seen",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CMDACTIVE -> $ca",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "CMDACTIVE = 0"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "number $n_seen = 1035",
+          "ok": true,
+          "expected": "= 1035",
+          "actual": "1035",
+          "evidence": "$n_seen = 1035 (expected = 1035)"
+        },
+        {
+          "n": 2,
+          "text": "history has \"7771.000\"",
+          "ok": true,
+          "expected": "command line has '7771.000'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'X = 7771.000 Y = 8882.000 Z = 0.000'"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "LEGACY SHARED MODE (CASE_RUNNER_LEGACY_SHARED=1): drawing, setup and log start are shared with earlier cases",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 11:48:26",
+      "session_id": "RUN-20261024-1147-C3.0.73-p3b2isoLEGACY2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 0)",
+          "no independent review: no ISO1_PROBE_BROKEN_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

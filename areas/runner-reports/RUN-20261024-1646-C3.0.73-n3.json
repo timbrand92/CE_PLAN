@@ -1,0 +1,715 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1646-C3.0.73-n3",
+    "started": "2026-10-24 16:46:23",
+    "finished": "2026-10-24 16:57:19",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "0C89EFAAA590EA5379B8C2CD68E856FF354CFFEFF7FDF44E22B43E5FECCBF4E5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 5AB2CBC1A5A0, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 0C89EFAAA590EA5379B8C2CD68E856FF354CFFEFF7FDF44E22B43E5FECCBF4E5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV15_METRE 5C16AFFD66C7",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 16:46 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1646-C3.0.73-n3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 16:46:24",
+      "finished": "2026-10-24 16:54:20",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV15_METRE",
+      "fixture_sha256": "5C16AFFD66C7",
+      "copy": "C:\\ce_rc_drv\\CLDV31646281_B1.dwg",
+      "cases": [
+        "R24",
+        "R24_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "session_id": "RUN-20261024-1646-C3.0.73-n3-s2",
+      "phase": "rerun",
+      "session_no": 2,
+      "started": "2026-10-24 16:54:20",
+      "finished": "2026-10-24 16:57:19",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV15_METRE",
+      "fixture_sha256": "5C16AFFD66C7",
+      "copy": "C:\\ce_rc_drv\\CLDV31654232_B1.dwg",
+      "cases": [
+        "R24"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R24",
+      "proves_bugs": "",
+      "title": "With INSUNITS 6 a 900 mm pit is placed about 0.9 units wide, not 900 units wide",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV15_METRE",
+      "plan_item": "Metre drawing (triage group T1)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group T1 (no bug text was compared). The fixture is a millimetre drawing switched to INSUNITS 6 after CE loaded: a FAIL may be that artefact. A real metre drawing is needed.",
+      "variant_of": "",
+      "expected": "With INSUNITS 6, PIT at 150,-80 gives a pit block whose outline is about 1.9 units wide (the 1900 mm outline in metres): the bounding box reads about 149.05,-80.95 to 150.95,-79.05. A pit 1900 units wide would swallow a pipe 20 units long (both ends on the same pit).",
+      "why_not_unit": "The drawing unit decides how every length is read; only a real drawing shows the placed pit.",
+      "not_automated": [
+        "A DRAWING AUTHORED IN METRES DOES NOT EXIST HERE. INSUNITS is SET to 6 by the driver on a millimetre master after CE has loaded, so a FAIL may be that artefact and not a CE fault. The desk needs a real metre fixture (a drawing saved with INSUNITS 6, pit and text blocks in metres) before BUG-270, BUG-271, BUG-293, BUG-309, BUG-317, BUG-323, BUG-328, BUG-330, BUG-331 and BUG-393 can be proved.",
+        "CD, Edit Pipe and the relink in metres are not driven: on this drawing CD refuses the pipe (see the header comment)."
+      ],
+      "file_sha256": "1BECEC091BED9D1AC0A99509DA615B541FE096A186F81811854EBC5BD3587231",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/ in: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":...",
+      "started": "2026-10-24 16:46:56",
+      "seconds": 129.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar INSUNITS 6",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 setvar INSUNITS 6: INSUNITS (drawing): 4 -> 6"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar INSUNITS -> $iu",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "INSUNITS = 6"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 141 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150,-80\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 26.7,
+          "evidence": "typed 'PIT 150,-80': Command: | Command: PIT | Specify pit insertion point: 150,-80"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 75.3,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "the window /^New Pit/ closed after 1 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150,-80 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150,-80 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or p..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 141 (model space now 142); by type: AcDbBlockReference 1; first: 10069E AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"object=AcDbBlockReference\" \"name~PIT\" -> $pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 10069E PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pit handle -> $hpit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 10069E"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hpit -> $pit_read",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 10069E: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[-800.0,-1030.0,1100.0,870.0],\"block_par..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "equals $iu \"6\"",
+          "ok": true,
+          "expected": "6",
+          "actual": "6",
+          "evidence": "value '6' (expected '6')"
+        },
+        {
+          "n": 2,
+          "text": "count $pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pit = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "matches $pit_read \"bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0\"",
+          "ok": false,
+          "expected": "matches /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/",
+          "actual": "{\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":...",
+          "evidence": "no match for /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/ in: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":..."
+        },
+        {
+          "n": 4,
+          "text": "record $pit_read \"FULL the new pit as read from the drawing\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[-800.0,-1030.0,1100.0,870.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,-305.0],\"world_end\":[375.0,145.00000000000003],\"world_mid\":[150.0,-79.99999999999999]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,144.99999999999997],\"world_end\":[375.0,-305.0],\"world_mid\":[150.0,-80.00000000000001]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,-379.99999999999994],\"world_end\":[74.99999999999994,220.0],\"world_mid\":[-225.00000000000003,-79.99999999999997]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,220.0],\"world_end\":[74.99999999999994,-380.0],\"world_mid\":[-225.00000000000003,-80.0]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":900.0,\"world_on_line\":[1050.0,-79.99999999999999]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":950.0,\"world_on_line\":[1100.0,-79.99999999999999]}]}",
+          "evidence": "RECORDED, not judged: FULL the new pit as read from the drawing = {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[-800.0,-1030.0,1100.0,870.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,-305.0],\"world_end\":[375.0,145.00000000000003],\"world_mid\":[150.0,-79.99999999999999]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,144.99999999999997],\"world_end\":[375.0,-305.0],\"world_mid\":[150.0,-80.00000000000001]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,-379.99999999999994],\"world_end\":[74.99999999999994,220.0],\"world_mid\":[-225.00000000000003,-79.99999999999997]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,220.0],\"world_end\":[74.99999999999994,-380.0],\"world_mid\":[-225.00000000000003,-80.0]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":900.0,\"world_on_line\":[1050.0,-79.99999999999999]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":950.0,\"world_on_line\":[1100.0,-79.99999999999999]}]}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 30 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 123518 ms",
+        "re-run in session RUN-20261024-1646-C3.0.73-n3-s2 also FAILED: no match for /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/ in: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":..."
+      ],
+      "error": null,
+      "finished": "2026-10-24 16:49:05",
+      "session_id": "RUN-20261024-1646-C3.0.73-n3-s1",
+      "attempts": [
+        {
+          "session_id": "RUN-20261024-1646-C3.0.73-n3-s1",
+          "result": "FAIL"
+        },
+        {
+          "session_id": "RUN-20261024-1646-C3.0.73-n3-s2",
+          "result": "FAIL"
+        }
+      ],
+      "rerun": {
+        "id": "R24",
+        "proves_bugs": "",
+        "title": "With INSUNITS 6 a 900 mm pit is placed about 0.9 units wide, not 900 units wide",
+        "kind": "deterministic",
+        "order": 10,
+        "slot": "fresh",
+        "fixture": "DRV15_METRE",
+        "plan_item": "Metre drawing (triage group T1)",
+        "bug": "",
+        "known_fail": "",
+        "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group T1 (no bug text was compared). The fixture is a millimetre drawing switched to INSUNITS 6 after CE loaded: a FAIL may be that artefact. A real metre drawing is needed.",
+        "variant_of": "",
+        "expected": "With INSUNITS 6, PIT at 150,-80 gives a pit block whose outline is about 1.9 units wide (the 1900 mm outline in metres): the bounding box reads about 149.05,-80.95 to 150.95,-79.05. A pit 1900 units wide would swallow a pipe 20 units long (both ends on the same pit).",
+        "why_not_unit": "The drawing unit decides how every length is read; only a real drawing shows the placed pit.",
+        "not_automated": [
+          "A DRAWING AUTHORED IN METRES DOES NOT EXIST HERE. INSUNITS is SET to 6 by the driver on a millimetre master after CE has loaded, so a FAIL may be that artefact and not a CE fault. The desk needs a real metre fixture (a drawing saved with INSUNITS 6, pit and text blocks in metres) before BUG-270, BUG-271, BUG-293, BUG-309, BUG-317, BUG-323, BUG-328, BUG-330, BUG-331 and BUG-393 can be proved.",
+          "CD, Edit Pipe and the relink in metres are not driven: on this drawing CD refuses the pipe (see the header comment)."
+        ],
+        "file_sha256": "1BECEC091BED9D1AC0A99509DA615B541FE096A186F81811854EBC5BD3587231",
+        "result": "FAIL",
+        "blocked": null,
+        "first_failure": "no match for /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/ in: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":...",
+        "started": "2026-10-24 16:54:54",
+        "seconds": 125.5,
+        "setup": "",
+        "setup_note": null,
+        "steps": [
+          {
+            "n": 1,
+            "phase": "case",
+            "verb": "v3",
+            "text": "v3 setvar INSUNITS 6",
+            "ok": true,
+            "seconds": 0.6,
+            "evidence": "v3 setvar INSUNITS 6: INSUNITS (drawing): 4 -> 6"
+          },
+          {
+            "n": 2,
+            "phase": "case",
+            "verb": "getvar",
+            "text": "getvar INSUNITS -> $iu",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "INSUNITS = 6"
+          },
+          {
+            "n": 3,
+            "phase": "case",
+            "verb": "ms-count",
+            "text": "ms-count -> $n0",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "model space holds 141 objects"
+          },
+          {
+            "n": 4,
+            "phase": "case",
+            "verb": "type",
+            "text": "type \"PIT{NL}150,-80\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+            "ok": true,
+            "seconds": 25.3,
+            "evidence": "typed 'PIT 150,-80': Command: | Command: PIT | Specify pit insertion point: 150,-80"
+          },
+          {
+            "n": 5,
+            "phase": "case",
+            "verb": "ui2-set",
+            "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+            "ok": true,
+            "seconds": 23.2,
+            "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+          },
+          {
+            "n": 6,
+            "phase": "case",
+            "verb": "ui-press",
+            "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+            "ok": true,
+            "seconds": 56.4,
+            "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+          },
+          {
+            "n": 7,
+            "phase": "case",
+            "verb": "await-window-gone",
+            "text": "await-window-gone \"^New Pit\" -Secs 120",
+            "ok": true,
+            "seconds": 1.2,
+            "evidence": "the window /^New Pit/ closed after 1 s"
+          },
+          {
+            "n": 8,
+            "phase": "case",
+            "verb": "esc-prompt",
+            "text": "esc-prompt",
+            "ok": true,
+            "seconds": 6.7,
+            "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150,-80 | Specify pit label insertion point: *Cancel*"
+          },
+          {
+            "n": 9,
+            "phase": "case",
+            "verb": "esc-prompt",
+            "text": "esc-prompt",
+            "ok": true,
+            "seconds": 6.5,
+            "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150,-80 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or p..."
+          },
+          {
+            "n": 10,
+            "phase": "case",
+            "verb": "esc-prompt",
+            "text": "esc-prompt",
+            "ok": true,
+            "seconds": 2.6,
+            "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+          },
+          {
+            "n": 11,
+            "phase": "case",
+            "verb": "wait",
+            "text": "wait",
+            "ok": true,
+            "seconds": 1.3,
+            "evidence": "wait for idle: idle"
+          },
+          {
+            "n": 12,
+            "phase": "case",
+            "verb": "ms-new",
+            "text": "ms-new $n0 -> $new_all",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "1 object(s) after index 141 (model space now 142); by type: AcDbBlockReference 1; first: 10069E AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+          },
+          {
+            "n": 13,
+            "phase": "case",
+            "verb": "select",
+            "text": "select $new_all \"object=AcDbBlockReference\" \"name~PIT\" -> $pit",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "selected 1 of 1: 10069E PIT BLOCK 3 STORMWATER PIT"
+          },
+          {
+            "n": 14,
+            "phase": "case",
+            "verb": "field",
+            "text": "field $pit handle -> $hpit",
+            "ok": true,
+            "seconds": 0.0,
+            "evidence": "field 'handle' = 10069E"
+          },
+          {
+            "n": 15,
+            "phase": "case",
+            "verb": "ent-read",
+            "text": "ent-read $hpit -> $pit_read",
+            "ok": true,
+            "seconds": 0.1,
+            "evidence": "ent-read 10069E: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[-800.0,-1030.0,1100.0,870.0],\"block_par..."
+          }
+        ],
+        "assertions": [
+          {
+            "n": 1,
+            "text": "equals $iu \"6\"",
+            "ok": true,
+            "expected": "6",
+            "actual": "6",
+            "evidence": "value '6' (expected '6')"
+          },
+          {
+            "n": 2,
+            "text": "count $pit = 1",
+            "ok": true,
+            "expected": "count = 1",
+            "actual": "1",
+            "evidence": "count of $pit = 1 (expected = 1)"
+          },
+          {
+            "n": 3,
+            "text": "matches $pit_read \"bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0\"",
+            "ok": false,
+            "expected": "matches /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/",
+            "actual": "{\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":...",
+            "evidence": "no match for /bbox\\W+149\\.0\\d*\\W+-80\\.9\\d*\\W+150\\.9\\d*\\W+-79\\.0/ in: {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":..."
+          },
+          {
+            "n": 4,
+            "text": "record $pit_read \"FULL the new pit as read from the drawing\"",
+            "ok": true,
+            "expected": "recorded only",
+            "actual": "{\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[-800.0,-1030.0,1100.0,870.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,-305.0],\"world_end\":[375.0,145.00000000000003],\"world_mid\":[150.0,-79.99999999999999]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,144.99999999999997],\"world_end\":[375.0,-305.0],\"world_mid\":[150.0,-80.00000000000001]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,-379.99999999999994],\"world_end\":[74.99999999999994,220.0],\"world_mid\":[-225.00000000000003,-79.99999999999997]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,220.0],\"world_end\":[74.99999999999994,-380.0],\"world_mid\":[-225.00000000000003,-80.0]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":900.0,\"world_on_line\":[1050.0,-79.99999999999999]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":950.0,\"world_on_line\":[1100.0,-79.99999999999999]}]}",
+            "evidence": "RECORDED, not judged: FULL the new pit as read from the drawing = {\"handle\":\"10069E\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U24\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150.0,-80.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[-800.0,-1030.0,1100.0,870.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,-305.0],\"world_end\":[375.0,145.00000000000003],\"world_mid\":[150.0,-79.99999999999999]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-74.99999999999997,144.99999999999997],\"world_end\":[375.0,-305.0],\"world_mid\":[150.0,-80.00000000000001]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,-379.99999999999994],\"world_end\":[74.99999999999994,220.0],\"world_mid\":[-225.00000000000003,-79.99999999999997]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[-525.0,220.0],\"world_end\":[74.99999999999994,-380.0],\"world_mid\":[-225.00000000000003,-80.0]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":900.0,\"world_on_line\":[1050.0,-79.99999999999999]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150.00000000000006,-79.99999999999999],\"world_radius\":950.0,\"world_on_line\":[1100.0,-79.99999999999999]}]}"
+          }
+        ],
+        "pictures": [],
+        "observations": [
+          "fresh drawing: first case of this session, the drawing is the copy the session launched",
+          "Civil CE log: 30 new line(s) while the case ran, 0 with [ERR]",
+          "outcome lines seen: Command outcome: PIT completed 120058 ms"
+        ],
+        "error": null,
+        "finished": "2026-10-24 16:57:00",
+        "session_id": "RUN-20261024-1646-C3.0.73-n3-s2"
+      },
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R24_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R24: one expected word is wrong (must FAIL)",
+      "kind": "deterministic",
+      "order": 11,
+      "slot": "fresh",
+      "fixture": "DRV15_METRE",
+      "plan_item": "red-before-green proof for R24",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R24",
+      "expected": "With INSUNITS 6, PIT at 150,-80 gives a pit block whose outline is about 1.9 units wide (the 1900 mm outline in metres): the bounding box reads about 149.05,-80.95 to 150.95,-79.05. A pit 1900 units wide would swallow a pipe 20 units long (both ends on the same pit).",
+      "why_not_unit": "The drawing unit decides how every length is read; only a real drawing shows the placed pit.",
+      "not_automated": [],
+      "file_sha256": "2AB1EF563FC9F164FDAABE3EFABF08DBFEE9FEA5FEBBB0784DD5BDF445FE7E30",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-24 16:49:05",
+      "seconds": 205.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar INSUNITS 6",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar INSUNITS 6: INSUNITS (drawing): 4 -> 6"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar INSUNITS -> $iu",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "INSUNITS = 6"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 141 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150,-80\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 24.0,
+          "evidence": "typed 'PIT 150,-80': Command: PIT | Specify pit insertion point: 150,-80"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 63.5,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": false,
+          "seconds": 3.3,
+          "evidence": "esc-prompt: REFUSED: no key was sent (not_foreground): the AutoCAD main window would not take the keyboard."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 5C16AFFD66C7); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31646281_B1_1723a2d5f.log)",
+        "Civil CE log: 35 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-24 16:52:31",
+      "session_id": "RUN-20261024-1646-C3.0.73-n3-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

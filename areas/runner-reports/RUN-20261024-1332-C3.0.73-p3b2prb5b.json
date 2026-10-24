@@ -1,0 +1,455 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1332-C3.0.73-p3b2prb5b",
+    "started": "2026-10-24 13:32:59",
+    "finished": "2026-10-24 13:38:32",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "9775C6F9726AE420B9EC7D88402752504FDE7790F8A3CF6A4C972CC735E353F4",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 9775C6F9726AE420B9EC7D88402752504FDE7790F8A3CF6A4C972CC735E353F4; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 13:32 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1332-C3.0.73-p3b2prb5b-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 13:32:59",
+      "finished": "2026-10-24 13:38:32",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31333041_B1.dwg",
+      "cases": [
+        "PRB5b"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB5b",
+      "proves_bugs": "",
+      "title": "probe: CDDESIGN dump CDSURVEY CDIMPORTLANDXML CDCALC first words",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "73F93240C3A2C7C38F037A7984A69D4B14FB79D047DE742AB75D36134EE43188",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:33:55",
+      "seconds": 252.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDDESIGN\" -Force -ExpectWindow \"Design\" -TimeoutSec 60 -> $b1",
+          "ok": true,
+          "seconds": 25.8,
+          "evidence": "typed 'CDDESIGN': Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Design\" -> $bd",
+          "ok": true,
+          "seconds": 15.5,
+          "evidence": "ui-dump 'Creative Engineering | Design (CDDESIGN)': 95 controls, tabs: Start | Setup | Areas and route | Results | During"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cb",
+          "ok": true,
+          "seconds": 51.8,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Design\\ \\(CDDESIGN\\)/ (windows: Creative Engineeri..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b2",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set. | [CE] Site and roof areas: already set."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY\" -Force -> $c1",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "typed 'CDSURVEY': Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $wc",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cc",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c2",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "esc-prompt: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDIMPORTLANDXML\" -Force -> $d1",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "typed 'CDIMPORTLANDXML': Command: | Command: CDIMPORTLANDXML"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $wd",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg] ; Creative Engineering | LandXML import"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $cd",
+          "ok": true,
+          "seconds": 53.5,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | LandXML import' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ import/ (windows: Creative Engineering | Lan..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $d2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "esc-prompt: Command: | Command: CDIMPORTLANDXML | CDIMPORTLANDXML cancelled. Nothing was drawn."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCALC\" -Force -> $e1",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "typed 'CDCALC': Command: | Command: CDCALC"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $we",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg] ; Creative Engineering | Calculations (CDCALC)"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $ce",
+          "ok": true,
+          "seconds": 53.7,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Calculations (CDCALC)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Calculations\\ \\(CDCALC\\)/ (windows: Creative E..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "esc-prompt: Command: | Command: CDCALC"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $b1 \"CDDESIGN\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set.",
+          "evidence": "RECORDED, not judged: CDDESIGN = Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set."
+        },
+        {
+          "n": 2,
+          "text": "record $bd \"FULL CDDESIGN dump\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Design (CDDESIGN)\",\"handle\":228920626,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[1920,276,1280,800],\"control_count\":95,\"truncated\":false,\"tabs\":[{\"name\":\"Start\",\"selected\":true},{\"name\":\"Setup\",\"selected\":false},{\"name\":\"Areas and route\",\"selected\":false},{\"name\":\"Results\",\"selected\":false},{\"name\":\"During\",\"selected\":false}],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Design (CDDESIGN)\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[1928,284,1264,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1928,284,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1928,284,22,22]},{\"type\":\"Button\",\"name\":\"Minimize\",\"id\":\"Minimize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3053,277,47,30]},{\"type\":\"Button\",\"name\":\"Maximize\",\"id\":\"Maximize\",\"class\":\"\",\"depth\":2,\"enabled\":false,\"offscreen\":false,\"bounds\":[3100,277,46,30]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3146,277,47,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[1963,335,34,34]},{\"type\":\"Text\",\"name\":\"Design\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2011,332,1146,23]},{\"type\":\"Text\",\"name\":\"Start with the job and its sources. Save a draft when you are ready.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2011,358,1146,14]},{\"type\":\"Tab\",\"name\":\"Design steps\",\"id\":\"TaskTabs\",\"class\":\"TabControl\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[1946,395,864,577]},{\"type\":\"TabItem\",\"name\":\"Start\",\"id\":\"\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1948,397,56,32],\"selected\":true},{\"type\":\"Text\",\"name\":\"Start\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1963,404,26,18]},{\"type\":\"Text\",\"name\":\"The job\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,443,824,14]},{\"type\":\"Text\",\"name\":\"Job reference\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,465,400,15]},{\"type\":\"Edit\",\"name\":\"Job reference\",\"id\":\"StartJobInput\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,480,400,31],\"value\":\"CLDV31333041_B1\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Council shown on the job\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2378,465,200,15]},{\"type\":\"Edit\",\"name\":\"Council shown on the job\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2378,480,200,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Suburb\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2590,465,200,15]},{\"type\":\"Edit\",\"name\":\"Suburb\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2590,480,200,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Drawing units\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,523,124,15]},{\"type\":\"Edit\",\"name\":\"Drawing units\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,538,124,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Level datum\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2102,523,124,15]},{\"type\":\"Edit\",\"name\":\"Level datum\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2102,538,124,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Job mode for this discipline\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2238,523,350,15]},{\"type\":\"ComboBox\",\"name\":\"Job mode for this discipline\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offsc...",
+          "evidence": "RECORDED, not judged: FULL CDDESIGN dump = {\"title\":\"Creative Engineering | Design (CDDESIGN)\",\"handle\":228920626,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[1920,276,1280,800],\"control_count\":95,\"truncated\":false,\"tabs\":[{\"name\":\"Start\",\"selected\":true},{\"name\":\"Setup\",\"selected\":false},{\"name\":\"Areas and route\",\"selected\":false},{\"name\":\"Results\",\"selected\":false},{\"name\":\"During\",\"selected\":false}],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Design (CDDESIGN)\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[1928,284,1264,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1928,284,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1928,284,22,22]},{\"type\":\"Button\",\"name\":\"Minimize\",\"id\":\"Minimize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3053,277,47,30]},{\"type\":\"Button\",\"name\":\"Maximize\",\"id\":\"Maximize\",\"class\":\"\",\"depth\":2,\"enabled\":false,\"offscreen\":false,\"bounds\":[3100,277,46,30]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3146,277,47,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[1963,335,34,34]},{\"type\":\"Text\",\"name\":\"Design\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2011,332,1146,23]},{\"type\":\"Text\",\"name\":\"Start with the job and its sources. Save a draft when you are ready.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2011,358,1146,14]},{\"type\":\"Tab\",\"name\":\"Design steps\",\"id\":\"TaskTabs\",\"class\":\"TabControl\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[1946,395,864,577]},{\"type\":\"TabItem\",\"name\":\"Start\",\"id\":\"\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[1948,397,56,32],\"selected\":true},{\"type\":\"Text\",\"name\":\"Start\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1963,404,26,18]},{\"type\":\"Text\",\"name\":\"The job\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,443,824,14]},{\"type\":\"Text\",\"name\":\"Job reference\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,465,400,15]},{\"type\":\"Edit\",\"name\":\"Job reference\",\"id\":\"StartJobInput\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,480,400,31],\"value\":\"CLDV31333041_B1\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Council shown on the job\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2378,465,200,15]},{\"type\":\"Edit\",\"name\":\"Council shown on the job\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2378,480,200,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Suburb\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2590,465,200,15]},{\"type\":\"Edit\",\"name\":\"Suburb\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2590,480,200,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Drawing units\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,523,124,15]},{\"type\":\"Edit\",\"name\":\"Drawing units\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[1966,538,124,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Level datum\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2102,523,124,15]},{\"type\":\"Edit\",\"name\":\"Level datum\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2102,538,124,31],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Job mode for this discipline\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2238,523,350,15]},{\"type\":\"ComboBox\",\"name\":\"Job mode for this discipline\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offsc..."
+        },
+        {
+          "n": 3,
+          "text": "record $cb \"closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Design\\ \\(...",
+          "evidence": "RECORDED, not judged: closed = round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Design\\ \\(..."
+        },
+        {
+          "n": 4,
+          "text": "record $b2 \"CDDESIGN esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set. | [CE] Site and roof areas: already set.",
+          "evidence": "RECORDED, not judged: CDDESIGN esc = Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set. | [CE] Site and roof areas: already set."
+        },
+        {
+          "n": 5,
+          "text": "record $c1 \"CDSURVEY\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing...",
+          "evidence": "RECORDED, not judged: CDSURVEY = Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 6,
+          "text": "record $wc \"windows after CDSURVEY\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after CDSURVEY = Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "record $c2 \"CDSURVEY esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored.",
+          "evidence": "RECORDED, not judged: CDSURVEY esc = Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        },
+        {
+          "n": 8,
+          "text": "record $cc \"closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: closed = "
+        },
+        {
+          "n": 9,
+          "text": "record $d1 \"CDIMPORTLANDXML\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDIMPORTLANDXML",
+          "evidence": "RECORDED, not judged: CDIMPORTLANDXML = Command: | Command: CDIMPORTLANDXML"
+        },
+        {
+          "n": 10,
+          "text": "record $wd \"windows after CDIMPORTLANDXML\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg] | Creative Engineering | LandXML import",
+          "evidence": "RECORDED, not judged: windows after CDIMPORTLANDXML = Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg] | Creative Engineering | LandXML import"
+        },
+        {
+          "n": 11,
+          "text": "record $d2 \"CDIMPORTLANDXML esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDIMPORTLANDXML | CDIMPORTLANDXML cancelled. Nothing was drawn.",
+          "evidence": "RECORDED, not judged: CDIMPORTLANDXML esc = Command: | Command: CDIMPORTLANDXML | CDIMPORTLANDXML cancelled. Nothing was drawn."
+        },
+        {
+          "n": 12,
+          "text": "record $cd \"closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | LandXML import' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ impo...",
+          "evidence": "RECORDED, not judged: closed = round 1: 'Creative Engineering | LandXML import' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ impo..."
+        },
+        {
+          "n": 13,
+          "text": "record $e1 \"CDCALC\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCALC",
+          "evidence": "RECORDED, not judged: CDCALC = Command: | Command: CDCALC"
+        },
+        {
+          "n": 14,
+          "text": "record $we \"windows after CDCALC\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg] | Creative Engineering | Calculations (CDCALC)",
+          "evidence": "RECORDED, not judged: windows after CDCALC = Autodesk AutoCAD 2027 - [CLDV31333041_B1.dwg] | Creative Engineering | Calculations (CDCALC)"
+        },
+        {
+          "n": 15,
+          "text": "record $ce \"closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Calculations (CDCALC)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Calcul...",
+          "evidence": "RECORDED, not judged: closed = round 1: 'Creative Engineering | Calculations (CDCALC)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Calcul..."
+        },
+        {
+          "n": 16,
+          "text": "record $e2 \"CDCALC esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCALC",
+          "evidence": "RECORDED, not judged: CDCALC esc = Command: | Command: CDCALC"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 37 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDDESIGN completed 64145 ms ; Command outcome: CDSURVEY cancelled 16102 ms ; Command outcome: CDIMPORTLANDXML completed 32138 ms ; Command outcome: CDCALC completed 43758 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:38:08",
+      "session_id": "RUN-20261024-1332-C3.0.73-p3b2prb5b-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB5b_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

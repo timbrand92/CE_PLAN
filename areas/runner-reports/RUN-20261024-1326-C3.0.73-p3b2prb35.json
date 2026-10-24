@@ -1,0 +1,824 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1326-C3.0.73-p3b2prb35",
+    "started": "2026-10-24 13:26:09",
+    "finished": "2026-10-24 13:32:22",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "6554F8213FBC9835E50D6DF6D8142CB912AB811E1BD1CC3B3AE5E01E6463AC94",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 6554F8213FBC9835E50D6DF6D8142CB912AB811E1BD1CC3B3AE5E01E6463AC94; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV15_METRE 5C16AFFD66C7, DRV24_METRE 5C16AFFD66C7, DRV26_METRE 5C16AFFD66C7, DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 13:26 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 3
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 13:26:10",
+      "finished": "2026-10-24 13:28:14",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31326151_B1.dwg",
+      "cases": [
+        "PRB5"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-24 13:28:14",
+      "finished": "2026-10-24 13:29:12",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV15_METRE",
+      "fixture_sha256": "5C16AFFD66C7",
+      "copy": "C:\\ce_rc_drv\\CLDV31328172_B1.dwg",
+      "cases": [
+        "PRB3_15_METRE"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s3",
+      "phase": "main",
+      "session_no": 3,
+      "started": "2026-10-24 13:29:12",
+      "finished": "2026-10-24 13:30:27",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV24_METRE",
+      "fixture_sha256": "5C16AFFD66C7",
+      "copy": "C:\\ce_rc_drv\\CLDV31329153_B1.dwg",
+      "cases": [
+        "PRB3_24_METRE"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s4",
+      "phase": "main",
+      "session_no": 4,
+      "started": "2026-10-24 13:30:27",
+      "finished": "2026-10-24 13:32:22",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV26_METRE",
+      "fixture_sha256": "5C16AFFD66C7",
+      "copy": "C:\\ce_rc_drv\\CLDV31330384_B1.dwg",
+      "cases": [
+        "PRB3_26_METRE"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB5",
+      "proves_bugs": "",
+      "title": "probe: CDPROFILE CDDESIGN CDSURVEY CDIMPORTLANDXML CDCALC first words",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "B7DDB2F2FCF6FBB5EC7381C556FC995A3265289003574B77BA4D1DC9AD3EFEF7",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-24 13:26:43",
+      "seconds": 67.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPROFILE\" -Force -> $a1",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "typed 'CDPROFILE': Command: | Command: CDPROFILE"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $wa",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31326151_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a2",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: | Command: CDPROFILE | Select starting CE pit for profile review: *Cancel*"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $ca",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDDESIGN\" -Force -> $b1",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "typed 'CDDESIGN': Command: | Command: CDDESIGN | [CE] 2 of 6 things this design needs are set. | [CE] The job: already set."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $wb",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31326151_B1.dwg] ; Creative Engineering | Design (CDDESIGN)"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b2",
+          "ok": false,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: REFUSED: the AutoCAD main window is disabled: a window is open in front of it and the key would go to that window. No key was sent."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 3 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPROFILE cancelled 8054 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:27:51",
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "PRB3_15_METRE",
+      "proves_bugs": "",
+      "title": "probe: metre fixture DRV15_METRE",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV15_METRE",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "93FE58836E0B7ABB6F895AA4E5F24F7CADA2027B04B0AA1654D3D41CFFEFE498",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:28:45",
+      "seconds": 4.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar INSUNITS -> $iu",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "INSUNITS = 4"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CLAYER -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CLAYER = 25DIMS"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 141 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "141 object(s) after index 0 (model space now 141); by type: AcDbBlockReference 13; AcDbLine 10; AcDbMText 12; AcDbPolyline 7; AcDbText 99; first: 79C4D AcDbBlockReference BLOCKS Drawing Border ; 848C4 AcDbMText TITLE PROPOSED _ AT\\P_, _ ; FD1FF AcDbBlockReference 0 A$Cd43564a4 ; FD34F AcDbMText 25TEXT GENERAL NOTES ; FD352 AcDbMText 25TEXT BASEMENT RETENTION & FOOTING PLAN & DETAILS ; FD355 AcDbMText 25TEXT GROUND FLOOR SLAB PLAN & DETAILS ; FD358 AcDbMText 25TEXT FIRST FLOOR & ROOF FRAMING PLANS & DETAILS ; FD35B AcDbMText 25TEXT TYPICAL FRAMING DETAILS ; FE1..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object~^CeCvlPipeObject$\" -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 141: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object=AcDbBlockReference\" -> $blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 13 of 141: 79C4D Drawing Border BLOCKS ; FD1FF A$Cd43564a4 0 ; FF881 A$C764a2f0e 0 ; 10025F A$C8f9ab5e2 BLOCKS ; 100260 A$Cde9a55c7 BLOCKS ; 1002C8 A$C66309814 25DIMS ; 1002C9 A$C2541944Z BLOCKS ; 1002D7 A$C7B107945 BLOCKS"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes handle -All -> $hp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $blocks name -All -> $bn",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'name' = Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $iu \"INSUNITS\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "4",
+          "evidence": "RECORDED, not judged: INSUNITS = 4"
+        },
+        {
+          "n": 2,
+          "text": "record $cl \"CLAYER\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25DIMS",
+          "evidence": "RECORDED, not judged: CLAYER = 25DIMS"
+        },
+        {
+          "n": 3,
+          "text": "record $n0 \"objects\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "141",
+          "evidence": "RECORDED, not judged: objects = 141"
+        },
+        {
+          "n": 4,
+          "text": "record $hp \"pipe handles in 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: pipe handles in 0-499 = "
+        },
+        {
+          "n": 5,
+          "text": "record $bn \"block names in 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2",
+          "evidence": "RECORDED, not judged: block names in 0-499 = Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:28:50",
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB3_15_METRE_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "PRB3_24_METRE",
+      "proves_bugs": "",
+      "title": "probe: metre fixture DRV24_METRE",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV24_METRE",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "1A175BA28BF77C8F79E21E071F533E2128B06465F0CCDCD957706002B5C0B3D1",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:29:53",
+      "seconds": 4.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar INSUNITS -> $iu",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "INSUNITS = 4"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CLAYER -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CLAYER = 25DIMS"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 141 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "141 object(s) after index 0 (model space now 141); by type: AcDbBlockReference 13; AcDbLine 10; AcDbMText 12; AcDbPolyline 7; AcDbText 99; first: 79C4D AcDbBlockReference BLOCKS Drawing Border ; 848C4 AcDbMText TITLE PROPOSED _ AT\\P_, _ ; FD1FF AcDbBlockReference 0 A$Cd43564a4 ; FD34F AcDbMText 25TEXT GENERAL NOTES ; FD352 AcDbMText 25TEXT BASEMENT RETENTION & FOOTING PLAN & DETAILS ; FD355 AcDbMText 25TEXT GROUND FLOOR SLAB PLAN & DETAILS ; FD358 AcDbMText 25TEXT FIRST FLOOR & ROOF FRAMING PLANS & DETAILS ; FD35B AcDbMText 25TEXT TYPICAL FRAMING DETAILS ; FE1..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object~^CeCvlPipeObject$\" -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 141: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object=AcDbBlockReference\" -> $blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 13 of 141: 79C4D Drawing Border BLOCKS ; FD1FF A$Cd43564a4 0 ; FF881 A$C764a2f0e 0 ; 10025F A$C8f9ab5e2 BLOCKS ; 100260 A$Cde9a55c7 BLOCKS ; 1002C8 A$C66309814 25DIMS ; 1002C9 A$C2541944Z BLOCKS ; 1002D7 A$C7B107945 BLOCKS"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes handle -All -> $hp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $blocks name -All -> $bn",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'name' = Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $iu \"INSUNITS\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "4",
+          "evidence": "RECORDED, not judged: INSUNITS = 4"
+        },
+        {
+          "n": 2,
+          "text": "record $cl \"CLAYER\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25DIMS",
+          "evidence": "RECORDED, not judged: CLAYER = 25DIMS"
+        },
+        {
+          "n": 3,
+          "text": "record $n0 \"objects\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "141",
+          "evidence": "RECORDED, not judged: objects = 141"
+        },
+        {
+          "n": 4,
+          "text": "record $hp \"pipe handles in 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: pipe handles in 0-499 = "
+        },
+        {
+          "n": 5,
+          "text": "record $bn \"block names in 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2",
+          "evidence": "RECORDED, not judged: block names in 0-499 = Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:29:57",
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s3",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB3_24_METRE_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "PRB3_26_METRE",
+      "proves_bugs": "",
+      "title": "probe: metre fixture DRV26_METRE",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV26_METRE",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "957EDA44DA8CA861EA26776EE10800EC9283D14B11CC8C143E383F8FB209489C",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:31:31",
+      "seconds": 10.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar INSUNITS -> $iu",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "INSUNITS = 4"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CLAYER -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CLAYER = 25DIMS"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 141 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "141 object(s) after index 0 (model space now 141); by type: AcDbBlockReference 13; AcDbLine 10; AcDbMText 12; AcDbPolyline 7; AcDbText 99; first: 79C4D AcDbBlockReference BLOCKS Drawing Border ; 848C4 AcDbMText TITLE PROPOSED _ AT\\P_, _ ; FD1FF AcDbBlockReference 0 A$Cd43564a4 ; FD34F AcDbMText 25TEXT GENERAL NOTES ; FD352 AcDbMText 25TEXT BASEMENT RETENTION & FOOTING PLAN & DETAILS ; FD355 AcDbMText 25TEXT GROUND FLOOR SLAB PLAN & DETAILS ; FD358 AcDbMText 25TEXT FIRST FLOOR & ROOF FRAMING PLANS & DETAILS ; FD35B AcDbMText 25TEXT TYPICAL FRAMING DETAILS ; FE1..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object~^CeCvlPipeObject$\" -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 141: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object=AcDbBlockReference\" -> $blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 13 of 141: 79C4D Drawing Border BLOCKS ; FD1FF A$Cd43564a4 0 ; FF881 A$C764a2f0e 0 ; 10025F A$C8f9ab5e2 BLOCKS ; 100260 A$Cde9a55c7 BLOCKS ; 1002C8 A$C66309814 25DIMS ; 1002C9 A$C2541944Z BLOCKS ; 1002D7 A$C7B107945 BLOCKS"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes handle -All -> $hp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $blocks name -All -> $bn",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'name' = Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $iu \"INSUNITS\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "4",
+          "evidence": "RECORDED, not judged: INSUNITS = 4"
+        },
+        {
+          "n": 2,
+          "text": "record $cl \"CLAYER\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25DIMS",
+          "evidence": "RECORDED, not judged: CLAYER = 25DIMS"
+        },
+        {
+          "n": 3,
+          "text": "record $n0 \"objects\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "141",
+          "evidence": "RECORDED, not judged: objects = 141"
+        },
+        {
+          "n": 4,
+          "text": "record $hp \"pipe handles in 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: pipe handles in 0-499 = "
+        },
+        {
+          "n": 5,
+          "text": "record $bn \"block names in 0-499\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2",
+          "evidence": "RECORDED, not judged: block names in 0-499 = Drawing Border | A$Cd43564a4 | A$C764a2f0e | A$C8f9ab5e2 | A$Cde9a55c7 | A$C66309814 | A$C2541944Z | A$C7B107945 | A$Ce2a00a1c | A$C9fa92ceb | A$Cffe07346 | PIT BLOCK 3 | PIT LABEL 2"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:31:41",
+      "session_id": "RUN-20261024-1326-C3.0.73-p3b2prb35-s4",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB3_26_METRE_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

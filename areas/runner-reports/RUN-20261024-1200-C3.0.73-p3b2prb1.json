@@ -1,0 +1,286 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1200-C3.0.73-p3b2prb1",
+    "started": "2026-10-24 12:00:17",
+    "finished": "2026-10-24 12:01:53",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9",
+        "file_version": "1.0.122.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.122+e6d597c0 / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "639BCBE88A05DD6AD21DFBE4468CD183CDBFA17CDC13119B7487FEA3197F3A25",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.122+e6d597c0fbc25e78118760887a70810e0890c9a9; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 40775AA97B3D, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 639BCBE88A05DD6AD21DFBE4468CD183CDBFA17CDC13119B7487FEA3197F3A25; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 12:00 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1200-C3.0.73-p3b2prb1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 12:00:18",
+      "finished": "2026-10-24 12:01:53",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31200251_B1.dwg",
+      "cases": [
+        "PRB1"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB1",
+      "proves_bugs": "",
+      "title": "probe: IL text positions around P3 before and after MOVE",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "E66F6E063203E6D087DA12C38719E72C1DCFF5D003DC7BF2FF0CD93A5CBF1693",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 12:01:03",
+      "seconds": 29.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a0",
+          "ok": true,
+          "seconds": 9.0,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b0",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ila0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ilb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"object~^CeCvlPipeObject$\" -> $pipesa",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 7 of 500: 110136 STORMWATER PIPE ; 110179 STORMWATER PIPE ; 11035C STORMWATER PIPE ; 1135E9 STORMWATER PIPE ; 11362F STORMWATER PIPE ; 113659 STORMWATER PIPE ; 1136A4 STORMWATER PIPE"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a1",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b1",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 91 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"text~^IL \" \"near=53777.7,-23569.8,4000\" -> $ila1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b1 \"text~^IL \" \"near=53777.7,-23569.8,4000\" -> $ilb1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $ila0 \"A before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":701,\"handle\":\"1101B8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.25\",\"x\":54327.72379448633,\"y\":-25217.55910576913} | {\"index\":943,\"handle\":\"1155B6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"...",
+          "evidence": "RECORDED, not judged: A before = {\"index\":701,\"handle\":\"1101B8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.25\",\"x\":54327.72379448633,\"y\":-25217.55910576913} | {\"index\":943,\"handle\":\"1155B6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"..."
+        },
+        {
+          "n": 2,
+          "text": "record $ilb0 \"B before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1000,\"handle\":\"116BB6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53922.49816931846,\"y\":-25007.058065002297} | {\"index\":1004,\"handle\":\"116BE4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name...",
+          "evidence": "RECORDED, not judged: B before = {\"index\":1000,\"handle\":\"116BB6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53922.49816931846,\"y\":-25007.058065002297} | {\"index\":1004,\"handle\":\"116BE4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name..."
+        },
+        {
+          "n": 3,
+          "text": "record $ila1 \"A after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":701,\"handle\":\"1101B8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.25\",\"x\":54358.11127620838,\"y\":-23227.528935785715} | {\"index\":943,\"handle\":\"1155B6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":...",
+          "evidence": "RECORDED, not judged: A after = {\"index\":701,\"handle\":\"1101B8\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.25\",\"x\":54358.11127620838,\"y\":-23227.528935785715} | {\"index\":943,\"handle\":\"1155B6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":..."
+        },
+        {
+          "n": 4,
+          "text": "record $ilb1 \"B after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1000,\"handle\":\"116BB6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53925.04006553006,\"y\":-23019.047376782684} | {\"index\":1004,\"handle\":\"116BE4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name...",
+          "evidence": "RECORDED, not judged: B after = {\"index\":1000,\"handle\":\"116BB6\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.24\",\"x\":53925.04006553006,\"y\":-23019.047376782684} | {\"index\":1004,\"handle\":\"116BE4\",\"object\":\"AcDbText\",\"layer\":\"20TEXT\",\"name..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 59 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-24 12:01:33",
+      "session_id": "RUN-20261024-1200-C3.0.73-p3b2prb1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB1_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,995 @@
+{
+  "header": {
+    "run_id": "RUN-20261024-1358-C3.0.73-p3b2discB",
+    "started": "2026-10-24 13:58:26",
+    "finished": "2026-10-24 14:04:32",
+    "build": {
+      "civil": {
+        "product_version": "3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "3.0.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+        "file_version": "1.1.73.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.73+5467f705 / struc 1.0.123+4af3f37d / mgr 1.1.73+5467f705",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "4EECAE6F44BAF836BFA2581F6C5D151F44709215170E6FBD40FAF8DF14DC2A17",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.73+5467f7053a2e9275cb450409c142ef9aa26dad53; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.73+5467f7053a2e9275cb450409c142ef9aa26dad53",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 8ED8B9C173F9, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 5 case file(s) plus 0 shared setup(s); pack SHA-256 4EECAE6F44BAF836BFA2581F6C5D151F44709215170E6FBD40FAF8DF14DC2A17; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 24 Oct 2026 13:58 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261024-1358-C3.0.73-p3b2discB-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-24 13:58:26",
+      "finished": "2026-10-24 14:04:32",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31358331_B1.dwg",
+      "cases": [
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R30"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R26",
+      "proves_bugs": "",
+      "title": "CDSURVEY on a drawing with no survey Xref says so, a wrong pick is refused, and nothing is stored",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Survey intake (triage group V1; daily card D26 survey half)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "C2E76B0E0BAD718C81A0FB6A19FA2FA2FFF9E9179953B3768D071163C58CE88A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 13:59:17",
+      "seconds": 31.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31358331_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY{NL}53777.7,-25569.8\" -Force -> $s1",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "typed 'CDSURVEY 53777.7,-25569.8': Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the surv..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s_e",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "esc-prompt: [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the s..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY\" -Force -> $s3",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "typed 'CDSURVEY': Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s3_e",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "esc-prompt: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $s1 \"Current survey: Survey: not loaded\"",
+          "ok": true,
+          "expected": "contains 'Current survey: Survey: not loaded'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click ...",
+          "evidence": "found 'Current survey: Survey: not loaded' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XRE..."
+        },
+        {
+          "n": 2,
+          "text": "contains $s1 \"Click on the survey XREF\"",
+          "ok": true,
+          "expected": "contains 'Click on the survey XREF'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click ...",
+          "evidence": "found 'Click on the survey XREF' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XRE..."
+        },
+        {
+          "n": 3,
+          "text": "history count \"Current survey: Survey: not loaded\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'Current survey: Survey: not loaded'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'Current survey: Survey: not loaded' (expected 2)"
+        },
+        {
+          "n": 4,
+          "text": "history has \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "command line has 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: '[CE] CDSURVEY cancelled - nothing stored.'"
+        },
+        {
+          "n": 5,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 6,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 7,
+          "text": "record $s1 \"FULL what CDSURVEY printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block.",
+          "evidence": "RECORDED, not judged: FULL what CDSURVEY printed after the wrong pick = Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block."
+        },
+        {
+          "n": 8,
+          "text": "record $s_e \"FULL what Esc printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored.",
+          "evidence": "RECORDED, not judged: FULL what Esc printed after the wrong pick = [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSURVEY cancelled 8976 ms ; Command outcome: CDSURVEY cancelled 8350 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 13:59:48",
+      "session_id": "RUN-20261024-1358-C3.0.73-p3b2discB-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R26_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R27",
+      "proves_bugs": "",
+      "title": "CDDESIGN opens the Design window on its Start tab, says how many things are set, and closes without writing anything",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDDESIGN draft (triage group D1; engineering-judgement items stay with Tim)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDDESIGN prints '[CE] 2 of 6 things this design needs are set.'; the window shows five tabs (Start, Setup, Areas and route, Results, During), the line 'Start with the job and its sources. Save a draft when you are ready.' and 'Land use not set.'; closing it leaves no CE window and the drawing file unchanged.",
+      "why_not_unit": "The count of set items and the window come from the real drawing's job data.",
+      "not_automated": [
+        "THE DESIGN NUMBERS ARE NOT DRIVEN: orifice head kept, outlet kept, grade printed, own rainfall and C used (BUG-259, BUG-506, BUG-508 to BUG-511, BUG-515, BUG-1004) need the Setup, Areas and Results tabs filled and engineering values judged by Tim. Only the start of the route is checked."
+      ],
+      "file_sha256": "9C3CD4743B6115F4714247503680293F3B78C6D660ADD5BDF9F34A0C17EBB404",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no command-line line contains '[CE] 2 of 6 things this design needs are set.' (3 lines read)",
+      "started": "2026-10-24 13:59:48",
+      "seconds": 117.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31358331_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDDESIGN\" -Force -ExpectWindow \"Design\" -TimeoutSec 60 -> $d1",
+          "ok": true,
+          "seconds": 22.6,
+          "evidence": "typed 'CDDESIGN': Command: CDDESIGN | [CE] 1 of 6 things this design needs are set."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Design\" -> $dd",
+          "ok": true,
+          "seconds": 29.1,
+          "evidence": "ui-dump 'Creative Engineering | Design (CDDESIGN)': 95 controls, tabs: Start | Setup | Areas and route | Results | During"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed",
+          "ok": true,
+          "seconds": 48.9,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Design\\ \\(CDDESIGN\\)/ (windows: Creative Engineeri..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "esc-prompt: Command: CDDESIGN | [CE] 1 of 6 things this design needs are set. | [CE] The job: already set."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] 2 of 6 things this design needs are set.\"",
+          "ok": false,
+          "expected": "command line has '[CE] 2 of 6 things this design needs are set.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains '[CE] 2 of 6 things this design needs are set.' (3 lines read)"
+        },
+        {
+          "n": 2,
+          "text": "control $dd \"Setup\" exists",
+          "ok": true,
+          "expected": "control 'Setup' exists",
+          "actual": "2",
+          "evidence": "'Setup' found in 'Creative Engineering | Design (CDDESIGN)' (2 control(s))"
+        },
+        {
+          "n": 3,
+          "text": "control $dd \"Areas and route\" exists",
+          "ok": true,
+          "expected": "control 'Areas and route' exists",
+          "actual": "2",
+          "evidence": "'Areas and route' found in 'Creative Engineering | Design (CDDESIGN)' (2 control(s))"
+        },
+        {
+          "n": 4,
+          "text": "control $dd \"Results\" exists",
+          "ok": true,
+          "expected": "control 'Results' exists",
+          "actual": "2",
+          "evidence": "'Results' found in 'Creative Engineering | Design (CDDESIGN)' (2 control(s))"
+        },
+        {
+          "n": 5,
+          "text": "control $dd \"During\" exists",
+          "ok": true,
+          "expected": "control 'During' exists",
+          "actual": "2",
+          "evidence": "'During' found in 'Creative Engineering | Design (CDDESIGN)' (2 control(s))"
+        },
+        {
+          "n": 6,
+          "text": "control-text $dd has \"Start with the job and its sources. Save a draft when you are ready.\"",
+          "ok": true,
+          "expected": "window shows 'Start with the job and its sources. Save a draft when you are ready.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Design (CDDESIGN)' shows 'Start with the job and its sources. Save a draft when you are ready.'"
+        },
+        {
+          "n": 7,
+          "text": "control-text $dd has \"Land use not set.\"",
+          "ok": true,
+          "expected": "window shows 'Land use not set.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Design (CDDESIGN)' shows 'Land use not set.'"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win_end \"Design (CDDESIGN)\"",
+          "ok": true,
+          "expected": "does not contain 'Design (CDDESIGN)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]",
+          "evidence": "'Design (CDDESIGN)' is absent from: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 10,
+          "text": "record $closed \"FULL what close-windows did\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Design\\ \\(CDDESIGN\\)/ (windows: Creative Engineering | Design (CDDESIGN)). | round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel : ok=True",
+          "evidence": "RECORDED, not judged: FULL what close-windows did = round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Design\\ \\(CDDESIGN\\)/ (windows: Creative Engineering | Design (CDDESIGN)). | round 1: 'Creative Engineering | Design (CDDESIGN)' <- Cancel : ok=True"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31358331_B1_143275428.log)",
+        "Civil CE log: 3 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDDESIGN completed 76766 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:01:46",
+      "session_id": "RUN-20261024-1358-C3.0.73-p3b2discB-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R28",
+      "proves_bugs": "",
+      "title": "CDPROFILE asks for a starting pit, takes pit P3, and Esc leaves nothing drawn",
+      "kind": "deterministic",
+      "order": 70,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Long section / CDPROFILE (triage group Q1)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDPROFILE asks 'Select starting CE pit for profile review:'. A pick of pit P3 is accepted and the next prompt or window is recorded; Esc ends it; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the long-section values come from the real drawing.",
+      "not_automated": [
+        "THE DRAWN LONG SECTION IS NOT DRIVEN: datum, grade, depth, cover and rows (BUG-542, BUG-599, BUG-757 to BUG-759, BUG-761 to BUG-763, BUG-768, BUG-769) need the profile to be placed; only the start of the route is checked."
+      ],
+      "file_sha256": "B66C697BFD38FB12EE129B0CA7E6C6CBAD392EF458FA1084D260BB33EC157A51",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 14:01:46",
+      "seconds": 19.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31358331_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPROFILE{NL}53777.7,-25569.8\" -Force -> $p1",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "typed 'CDPROFILE 53777.7,-25569.8': Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_p",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $p_e",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block. | Select starting CE pit for profile review: *Cancel*"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $p1 \"Select starting CE pit for profile review:\"",
+          "ok": true,
+          "expected": "contains 'Select starting CE pit for profile review:'",
+          "actual": "Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block.",
+          "evidence": "found 'Select starting CE pit for profile review:' in: Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block."
+        },
+        {
+          "n": 2,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 3,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 4,
+          "text": "record $p1 \"FULL what CDPROFILE printed after the pit pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block.",
+          "evidence": "RECORDED, not judged: FULL what CDPROFILE printed after the pit pick = Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block."
+        },
+        {
+          "n": 5,
+          "text": "record $win_p \"windows after the pit pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after the pit pick = Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "record $p_e \"FULL what Esc printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block. | Select starting CE pit for profile review: *Cancel*",
+          "evidence": "RECORDED, not judged: FULL what Esc printed = Command: CDPROFILE | Select starting CE pit for profile review: 53777.7,-25569.8 | Select a CE pit block. | Select starting CE pit for profile review: *Cancel*"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31358331_B1_18541308d.log)",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPROFILE cancelled 7656 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:02:06",
+      "session_id": "RUN-20261024-1358-C3.0.73-p3b2discB-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R28_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R29",
+      "proves_bugs": "",
+      "title": "CDIMPORTLANDXML opens its window, and cancelling draws nothing and changes nothing",
+      "kind": "deterministic",
+      "order": 80,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "LandXML import (triage group X1)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDIMPORTLANDXML opens the 'LandXML import' window; closing it leaves the drawing as it was (same object count, file on disk unchanged) and the command line says 'CDIMPORTLANDXML cancelled. Nothing was drawn.'",
+      "why_not_unit": "The window and the 'nothing was drawn' claim are seen on a live drawing.",
+      "not_automated": [
+        "THE IMPORT ITSELF IS NOT DRIVEN: Read source writes nothing, Replace keeps hand-drawn pipes, levels kept (BUG-512, BUG-513, BUG-602 to BUG-605, BUG-721, BUG-722, BUG-732, BUG-876 to BUG-878) need a LandXML file chosen in the window; no synthetic file (FB-16, FB-17) is installed here and a case cannot drive the file chooser."
+      ],
+      "file_sha256": "C0AEBD49B7658587D198BFBE24A5C8AAEAEB6797996210DBA007B9424232170E",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 14:02:06",
+      "seconds": 58.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31358331_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDIMPORTLANDXML\" -Force -ExpectWindow \"LandXML import\" -TimeoutSec 60 -> $x1",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "typed 'CDIMPORTLANDXML': Command: CDIMPORTLANDXML"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"LandXML import\" -> $xd",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui-dump 'Creative Engineering | LandXML import': 25 controls, tabs: Import, Task Tabs, Source | Import, Task Tabs, Results and review"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed",
+          "ok": true,
+          "seconds": 33.4,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | LandXML import' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ import/ (windows: Creative Engineering | Lan..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $x_e",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "esc-prompt: Command: CDIMPORTLANDXML | CDIMPORTLANDXML cancelled. Nothing was drawn."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control-text $xd has \"LandXML\"",
+          "ok": true,
+          "expected": "window shows 'LandXML'",
+          "actual": "5",
+          "evidence": "window 'Creative Engineering | LandXML import' shows 'Creative Engineering | LandXML import'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"CDIMPORTLANDXML cancelled. Nothing was drawn.\"",
+          "ok": true,
+          "expected": "command line has 'CDIMPORTLANDXML cancelled. Nothing was drawn.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDIMPORTLANDXML cancelled. Nothing was drawn.'"
+        },
+        {
+          "n": 3,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $win_end \"LandXML import\"",
+          "ok": true,
+          "expected": "does not contain 'LandXML import'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]",
+          "evidence": "'LandXML import' is absent from: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 6,
+          "text": "record $closed \"FULL what close-windows did\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | LandXML import' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ import/ (windows: Creative Engineering | LandXML import). | round 1: 'Creative Engineering | LandXML import' <- Cancel : ok=False no button 'Cancel' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ import/ (windows: Creative Engineering | LandXML import). | round 1: 'Creative Engineering | LandXML import' <- Close : ok=True",
+          "evidence": "RECORDED, not judged: FULL what close-windows did = round 1: 'Creative Engineering | LandXML import' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ import/ (windows: Creative Engineering | LandXML import). | round 1: 'Creative Engineering | LandXML import' <- Cancel : ok=False no button 'Cancel' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ LandXML\\ import/ (windows: Creative Engineering | LandXML import). | round 1: 'Creative Engineering | LandXML import' <- Close : ok=True"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31358331_B1_139d4fcc9.log)",
+        "Civil CE log: 19 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDIMPORTLANDXML completed 25048 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:03:04",
+      "session_id": "RUN-20261024-1358-C3.0.73-p3b2discB-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R29_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R30",
+      "proves_bugs": "",
+      "title": "CDMANAGER opens the Manager window, and closing it changes nothing",
+      "kind": "deterministic",
+      "order": 90,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Manager window (triage group MG1; gap plan Manager update window)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDMANAGER opens a CE Manager window that names the installed versions; closing it leaves the drawing file unchanged and no CE window open.",
+      "why_not_unit": "The window is built from the real installed bundle.",
+      "not_automated": [
+        "THE SUPPORT ZIP, THE CLICK LOG, A RIBBON CLICK WHILE A COMMAND WAITS, CODED NAMES AND THE MENU BAR (BUG-481, BUG-482, BUG-484, BUG-488 to BUG-490, BUG-828, BUG-847, BUG-853, BUG-1017) ARE NOT DRIVEN. The update button is never pressed (it would change the installed bundle)."
+      ],
+      "file_sha256": "4D5BAC8DE1F99F4612F27B67DC0C544A9A8C5293DF3228BA6794F861F50170C7",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-24 14:03:04",
+      "seconds": 70.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31358331_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDMANAGER\" -Force -> $m1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed 'CDMANAGER': Command: CDMANAGER"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_m",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg] ; Creative Engineering | Drawing Standards Manager"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed",
+          "ok": true,
+          "seconds": 44.3,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Drawing Standards Manager' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Drawing\\ Standards\\ Manager/ (windows: Cre..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $m_e",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: CDMANAGER"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $m1 \"FULL what CDMANAGER printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDMANAGER",
+          "evidence": "RECORDED, not judged: FULL what CDMANAGER printed = Command: CDMANAGER"
+        },
+        {
+          "n": 2,
+          "text": "record $win_m \"windows while CDMANAGER was open\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg] | Creative Engineering | Drawing Standards Manager",
+          "evidence": "RECORDED, not judged: windows while CDMANAGER was open = Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg] | Creative Engineering | Drawing Standards Manager"
+        },
+        {
+          "n": 3,
+          "text": "record $closed \"FULL what close-windows did\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Drawing Standards Manager' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Drawing\\ Standards\\ Manager/ (windows: Creative Engineering | Drawing Standards Manager). | round 1: 'Creative Engineering | Drawing Standards Manager' <- Cancel : ok=False no button 'Cancel' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Drawing\\ Standards\\ Manager/ (windows: Creative Engineering | Drawing Standards Manager). | round 1: 'Creative Engineering | Drawing Standards Manager' <- Close : ok=True",
+          "evidence": "RECORDED, not judged: FULL what close-windows did = round 1: 'Creative Engineering | Drawing Standards Manager' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Drawing\\ Standards\\ Manager/ (windows: Creative Engineering | Drawing Standards Manager). | round 1: 'Creative Engineering | Drawing Standards Manager' <- Cancel : ok=False no button 'Cancel' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Drawing\\ Standards\\ Manager/ (windows: Creative Engineering | Drawing Standards Manager). | round 1: 'Creative Engineering | Drawing Standards Manager' <- Close : ok=True"
+        },
+        {
+          "n": 4,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31358331_B1.dwg]"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31358331_B1_1b1806924.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDMANAGER completed 40886 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-24 14:04:14",
+      "session_id": "RUN-20261024-1358-C3.0.73-p3b2discB-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R30_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}
