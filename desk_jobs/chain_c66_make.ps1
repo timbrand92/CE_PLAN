@@ -6,7 +6,7 @@ $cmd = 'set "CLAUDE_CONFIG_DIR=C:\Users\TimothyBrand\.claude-team"&& set "PATH=%
 Log 'starting make_c66_files_job'
 Start-Process cmd.exe -ArgumentList '/c', $cmd -WorkingDirectory 'C:\Lisp Files\CE_ACAD_PLUGIN' -WindowStyle Hidden -Wait
 Log 'finished make_c66_files_job'
-foreach ($f in 'train_c66_assembler_job.txt', 'train_c66_finalizer_job.txt', 'payload99_c66_job.txt', 'chain_c66.ps1', 'chain_install_c66.ps1', 'scripts\desk_install_c66.ps1') { if (-not (Test-Path "$d\$f")) { Log "missing ${f} - stop"; exit } }
+foreach ($f in 'train_c66_assembler_job.txt', 'train_c66_finalizer_job.txt', 'payload100_c66_job.txt', 'chain_c66.ps1', 'chain_install_c66.ps1', 'scripts\desk_install_c66.ps1') { if (-not (Test-Path "$d\$f")) { Log "missing ${f} - stop"; exit } }
 if (Test-Path "$d\STOP_CHAIN.flag") { Log 'STOP flag'; exit }
 & pwsh -NoProfile -File "$d\chain_c66.ps1"
 Log 'chain_c66 finished'
