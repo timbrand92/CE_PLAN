@@ -2589,6 +2589,8 @@
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1337; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
+**Evidence 25 Oct 2026 (runner R33):** copy a pit with the cover-text layer locked and CE says the copy got "no label or cover text", but the PIT LABEL block with the new number IS drawn (P8); only the cover text on 25TEXT is missing. The sentence overstates.
+
 ## BUG-671
 
 **Command / Area:** COPY of a pipe with only some of its labels (crossing window) (HUNT Civil E finding C7, installed Civil 3.0.51).
@@ -2672,6 +2674,8 @@
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding C1. Code: Services/ExternalMutationCommandPolicy.cs:13-46 (GRIP_*, ROTATE, SCALE listed transform-only), LinkService.Reactors.cs:52-56, LinkService.Utilities.cs:1230, LinkService.cs:522-538, Cache.cs:268-290. Assumes AutoCAD reports the copy under those command names.
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1328; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+
+**Evidence 25 Oct 2026 (Civil 3.0.75, runner R34 R34s R34so):** the fix sits behind the Settings tick linking.cleanUpGripRotateScaleCopies (OFF by default, not in Tim's file). Tick OFF: ROTATE Copy and SCALE Copy both leave a pit with no label or cover text. Tick ON: COPY and SCALE Copy are right; ROTATE Copy still gets its own number but no label and no cover text, about its own centre or a point 5 m away. Monday question 8 is about switching the tick on.
 
 ## BUG-664
 
@@ -11551,7 +11555,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** Source read at b06126db: `Modules/Drainage/Commands/CdCommand.ExistingLine.cs` line 125 treats `PipePickService.TryResolvePipe(...)` returning true as "already a pipe", but `Services/PipePickService.cs` `TryResolvePipe` returns true for ANY polyline (its test is "is a Polyline"). That test has been in CD since the Existing-line feature (commit f93d44db, 5 Sep). I have not run an older build, so I do not know if this ever worked. Report: `areas/release-v3-colleagues-CLAUDE_DRIVER_RUN25_CIVIL3053_2026-10-18.md`, check 1.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1338; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** FIXED (Claude-accepted, Civil 3.0.75, 25 Oct 2026): runner case R39 (CD then E on a plain line opens the new-pipe window, no false "already a CE pipe") passed in two separate sessions on 3.0.75, its broken variant fails, and the independent review (areas\RUNNER_CASE_REVIEW_B3FIX_2026-10-25.md) agrees. The other half (picking an existing CE pipe still says "already a CE pipe") is a separate check. Not Tim-confirmed in his own drawings.
 
 ## BUG-698
 
@@ -11648,6 +11652,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Codex V5 (22 Oct 2026 08:35, Civil 3.0.68): DIFFERENT SURE, BUG-859 confirmed and wider.** Each of the four parts got one double-click: outer circle, red centre and the angled DP text all opened AutoCAD's Enhanced Attribute Editor (Block DOWNPIPE DYNAMIC WITH MASK, Tag DP, Value DP); the green label opened AutoCAD TEXTEDIT. CE's Edit source window opened on NONE. The key doubleClick.sourceEditWindow is absent from Tim's settings files (so the default applies). The placement line said "Tag: DP1" but both visible texts read "DP". Evidence CODEX_VERIFY_V5_20261022_0835.md item 4. Diagnosis + fix draft: Sonnet job fix_bug859_job (22 Oct 10:24), report areas\release-v3-colleagues-BUG859_DIAGNOSIS_REPORT.md.
 
+**Evidence 25 Oct 2026 (Civil 3.0.75, runner R09, runs b3r09a b3w1 b3z4):** AutoCAD's Enhanced Attribute Editor still opens on a double-click of DP1's outer circle. CE's log shows round 3 catching it (hit-test finds DP1, EATTEDIT cancel posted, CDEDIT scheduled) but CDEDIT starts only after AutoCAD's editor is closed, 21 to 37 s later. The drafter sees AutoCAD's editor first, then CE's. Review: areas\RUNNER_CASE_REVIEW_B3FIX_2026-10-25.md.
+
 ## BUG-860
 
 **Command / Area:** Double-click on the green DP label of a downpipe (Civil 3.0.68 / 3.0.69). Found by Codex V4 and V5 (22 Oct 2026); cause explained by Opus (REVIEWLANE_LOG entry 1588 item 9). LOW.
@@ -11690,7 +11696,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Expected behaviour:** The OFF path returns before any read-modify-write.
 
-**Status:** OPEN (fix drafted, same job)
+**Status:** FIXED (Claude-accepted, Civil 3.0.75, 25 Oct 2026): runner case R10 (CDCHECKIGNORE switch off writes nothing into the drawing) passed in two separate sessions on 3.0.75, its broken variants fail, and the independent review (areas\RUNNER_CASE_REVIEW_B3FIX_2026-10-25.md) agrees. Not Tim-confirmed in his own drawings.
 
 ## BUG-864
 
@@ -16737,5 +16743,23 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Test that catches it:** runner case R32b (retag it EXPECT-FAIL BUG-1222 at its next edit).
 
 **Steps to confirm in AutoCAD:** fresh copy of DRV1_B1. CD from 150000,-90000 to 170000,-90000, levels 18.000 then 17.900, Start Pipe, Esc. CDEDIT the pipe, type first level 17.900 and second 18.000, Save. CDEDIT again, change only the diameter to 150, Save. Right looks like: the arrow still points from IL 18.000 to IL 17.900.
+
+**Status:** OPEN
+
+**Evidence 25 Oct 2026 (Civil 3.0.75, runner R32 and R32b, runs b3a1 b3a2):** wider than first filed: after the first Save flips the arrow, a SECOND plain Edit Pipe Save with nothing typed already turns the arrow back to rotation 0. Edit Pipe's own window says "The levels fall from point 2 to point 1; CE records that as the flow direction", so the window knows the right direction and the Save draws the arrow the other way.
+
+## BUG-1223
+
+**Command / Area:** CDFW (floor waste), typed point on an inspection opening that sits on pipe ends, Civil 3.0.75 (runner case R36e, two runs b3x2 and b3x3, 25 Oct 2026).
+
+**Symptom:** MEDIUM, BLOCKS WORK. Type CDFW and give the point of an inspection opening on DRV1_B1. CE prints "[CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc." and places nothing. Nothing changed: no other command ran. Picking again gives the same answer. CE's own log, between the preview and the point, shows about 20 lines "CDRG index filled pipe ... end key ... from physical start/end", then "Landing index changed between preview and pick; re-reading once.", the same fills again, then "The pick was refused: A nearby pipe's Civil record changed while you picked." So CE's own filling of missing pipe end records during the pick looks like the change it then refuses. Code not read.
+
+**Expected behaviour:** either the floor waste is placed and joined, or CE gives one plain reason naming what stops it. Never "changed while you picked" when nothing changed, and never "Pick again" when picking again cannot succeed. Which of the two (place or refuse) is Tim's call.
+
+**Reference:** areas/RUNNER_CASE_REVIEW_B3FIX_2026-10-25.md; runner case R36e. Related, not duplicates: BUG-147, BUG-132, BUG-102.
+
+**Test that catches it:** runner case R36e (retag EXPECT-FAIL BUG-1223 at its next edit); it asserts no "Civil record changed" line.
+
+**Steps to confirm in AutoCAD:** fresh copy of DRV1_B1. Type CDFW, Enter, then type 51777.389,-46593.223, Enter. Right looks like: a floor waste placed, or one plain sentence saying why not. Repeat at 51777.389,-30233.425, 55879.087,-30233.481 and 80936.111,-30304.267.
 
 **Status:** OPEN
