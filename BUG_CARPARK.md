@@ -8810,6 +8810,8 @@ closed-AutoCAD authority and 100/150/200% field proof remain.
 
 ---
 
+**Evidence 26 Oct 2026 (Codex look D8-01, Manager 1.1.78, areas: CODEX_VERIFY_D8_20261026_0623.md):** still FAILS on 3.0.78 / Manager 1.1.78: the About CE Suite window shows the three suite versions but the AutoCAD row is only a top fragment and the Runtime line is unreadable; the heading is readable and Close works.
+
 ## BUG-091
 
 **Command / Area:** Drainage `CD` free-point AutoCalc, `CDEDIT` local pipe Apply and invert-label MTEXT mask.
