@@ -1,0 +1,13 @@
+# TOOL-ARCH-01: trial ArchUnitNET as an automatic guard on how the code is built (25 Oct 2026)
+
+Asked by Tim 25 Oct 2026 (desk chat): "can you implement the ArchUnitNET into the plan so it can be tried and tested by you to see if its worth adding or whatever you recommend doing with it". This is a test-tool trial, not a drafter feature, so the plan-item pause (Tim, until Thu 29 Oct) does not apply; it is not a new build, deploy or versioning script and it touches no product behaviour.
+
+**What it is.** ArchUnitNET (github TNG/ArchUnitNET, Apache-2.0, NuGet packages ArchUnitNET plus the xUnit/NUnit/MSTest extension that matches our test projects) reads the compiled code and lets a normal test say things like "Shared must never use Civil", "windows must not touch the drawing database directly". A rule that breaks fails the build.
+
+**Why it may be worth it.** Many of our rules are policed today by reviewers reading diffs (CE_SHARED isolation, Civil and Structural kept apart, no hard-coded values, windows versus drawing code, protected files). Reviewer time is the slow part. Some of the hand-written text-scan guard tests could become tests that cannot be fooled by a rename.
+
+**The trial (Team job tester-free, no AutoCAD).** desk_jobs\team_archunit_trial.txt, run by Team Sonnet in a private worktree under C:\ce-fx, base the installed Civil/Manager line (claude/rel-20261025o) and the Structural line (claude/rel-20261025s). It adds the package to a NEW private test project only (never to the shipped plug-in, never to CE_SHARED), writes 6 to 10 rules from our real rulebook, runs them on current code, and reports: which rules pass, which fail and whether each failure is a real fault or a false alarm, how long the check takes, what ArchUnitNET cannot see (for example a single line that sets a layer unlocked), and a plain recommendation (adopt as a build guard / adopt for a few rules / drop). Download: the packages come from nuget.org through the normal dotnet restore (a few hundred KB; the job records exact names, versions and sizes).
+
+**Decision after the trial.** The desk reads the report with an independent Opus read of the rules and writes the recommendation to Tim. Adoption (a permanent test project in the repo) needs a REGRESSION_LOG entry and goes through an update train like any other change; nothing is merged by the trial.
+
+Status: queued 25 Oct 2026 (waits for the C-67 build to finish because C: has about 9 GB free).
