@@ -1,4 +1,4 @@
-# Desk 25 Oct 2026: install C-68 (Civil 3.0.78 / Manager 1.1.78; one Civil fix, #1779, and a Manager version re-stamp) when its payload report is clean and AutoCAD is free. Structural is not in this train.
+# Desk 25 Oct 2026: install C-68 (Civil 3.0.76 / Manager 1.1.76) when its payload report is clean and AutoCAD is free. Structural is not in this train.
 # Holds the Codex AutoCAD lane (STOP_CODEX.flag: the conveyor ends after its current job), waits for the payload report PAYLOAD_C1064_REPORT.md, then CLAIMS the shared AutoCAD lock itself the moment it is free (the test runner takes the lock back within seconds otherwise), installs with scripts\desk_install_c68.ps1, releases the lock, lifts the hold and restarts the conveyor. Stop flag STOP_CHAIN.flag.
 $d = 'C:\CE_PLAN\desk_jobs'
 function Log($t) { Add-Content "$d\chain_install_c68.log" ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm'), $t) }
