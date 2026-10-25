@@ -26,7 +26,7 @@ Built and unit-tested by me; not independently reviewed; nobody has opened it in
 
 1. **Fix:** `RefreshAfterPick` (`InspectorPaletteService.cs`): in the redo window, with the switch ON, it asks `RedoWindowGuard.DeferWhileRedoOpen` and returns. No read, no timer chain, no Idle hook. The guard's resume (when the next command STARTS) only hooks that command's END; at the first Idle after the end it asks for the pick again. A U or REDO ends with a new redo window, so it waits again; any other command ends and the pick shows.
 2. **Log line:** `[REDO] Inspector pick (BUG-861: nothing is read between U and REDO) waits for the next command so REDO stays available ...`, once per redo window (the guard's own line).
-3. **Diagnostic (item 2 of the job, the "cannot establish" branch):** `LogFirstPickState` writes `[REDO] first Inspector pick in this drawing (pick seen)` and then `(pick deferred)` or `(pick refreshed)`, once per drawing and session, with `redoWindowOpen`, `UNDOMARKS`, `UNDOCTL` and active transactions. Reads only (`GetSystemVariable` keeps REDO).
+3. **Diagnostic (item 2 of the job, the "cannot establish" branch):** `LogFirstPickState` writes `[REDO] first Inspector pick in this drawing (pick seen)` and then `(pick deferred)` or `(pick refreshed)`, once per drawing and session, with `redoWindowOpen`, `UNDOMARKS` and `UNDOCTL` (the active-transactions read was removed on 25 Oct after review). Reads only (`GetSystemVariable` keeps REDO).
 4. **Switch:** `linking.inspectorPickWaitsAfterUndo` in `LinkingSettings`, ON by default (R-00, R-27: a bug-fix switch ships ON). No Settings page row yet (window-lane decision).
 5. **Files:** `Modules/Drainage/Services/InspectorPaletteService.cs`, `Modules/Drainage/Models/UserSettings.cs`, new `Modules/Drainage.Tests/Services/Bug861RedoFirstClickTests.cs`, `REGRESSION_LOG.md`. `CE_SHARED` unchanged.
 6. **Git:** branch `fb/bug861-redo-first-click`, draft PR https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1779 against `claude/rel-20261025o`. Commit message names BUG-861.
@@ -47,7 +47,7 @@ Built and unit-tested by me; not independently reviewed; nobody has opened it in
 ## Real-AutoCAD check owed (for the robot or a person)
 
 1. On a build that contains PR 1779: `R08x_1_exact` and `R08x_5` must both pass (round 1 REDO says "Everything has been redone").
-2. Then click a pit after a U and a REDO and check the Inspector shows that pit.
+2. Then: U, click pit P3, REDO, type REGEN (the Inspector is meant to still be waiting right after the click and the REDO); the Inspector then shows Pit P3 (click again if it says Nothing selected).
 3. Read the CE log for the three `[REDO]` lines above. If REDO is still lost, send those lines back.
 
 ## Housekeeping
