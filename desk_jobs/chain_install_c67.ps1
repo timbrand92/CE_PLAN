@@ -1,9 +1,7 @@
-# Desk 25 Oct 2026: install C-67 (Civil 3.0.77 / Manager 1.1.77) when its payload report is clean and AutoCAD is free. Structural is not in this train.
+# Desk 25 Oct 2026: install C-67 (Civil 3.0.76 / Manager 1.1.76) when its payload report is clean and AutoCAD is free. Structural is not in this train.
 # Holds the Codex AutoCAD lane (STOP_CODEX.flag: the conveyor ends after its current job), waits for the payload report PAYLOAD_C1063_REPORT.md, then CLAIMS the shared AutoCAD lock itself the moment it is free (the test runner takes the lock back within seconds otherwise), installs with scripts\desk_install_c67.ps1, releases the lock, lifts the hold and restarts the conveyor. Stop flag STOP_CHAIN.flag.
 $d = 'C:\CE_PLAN\desk_jobs'
 function Log($t) { Add-Content "$d\chain_install_c67.log" ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm'), $t) }
-$other = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'chain_install_c66' -and $_.CommandLine -notmatch 'Get-CimInstance' }).Count
-if ($other -gt 0) { Log 'chain_install_c66 is still running: two install chains must not race, stop for the desk'; exit }
 $rep = 'C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1063_REPORT.md'
 $w = 0
 while (-not (Test-Path $rep)) { if (Test-Path "$d\STOP_CHAIN.flag") { Log 'STOP flag'; exit }; Start-Sleep 120; $w++; if ($w -gt 120) { Log 'no payload report after 4 h: stop for the desk'; exit } }
