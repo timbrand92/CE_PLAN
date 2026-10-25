@@ -144,7 +144,7 @@
 
 12. **Position 57 — [#1384](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1384), 3d35f602 — REJECT under Tim's recorded decision. No new finding; RETAINED.**
 
-   **Authority and file:line:** `decisions/2026-10-18_CEMEMBER_DESIGN.md:50` explicitly says #1384 stays open and is not merged. The side-elevation drawing changes are in `Modules/Structural/Services/StructuralDetailService.cs`, with preview changes in `UI/Dialogs/SteelSectionPickerDialog.Preview.cs`; the PR diff introduces a flange-line switch rather than implementing the later agreed view rules. Batch 6 item 3 remains applicable.
+   **Authority and file:line:** `decisions/2026-10-18_CEMEMBER_DESIGN.md:50` explicitly says #1384 stays open and is not merged. The side-elevation drawing changes are in `Modules/Structural/Services/StructuralDetailService.cs:741`, with preview changes in `UI/Dialogs/SteelSectionPickerDialog.Preview.cs:182`; the PR diff introduces a flange-line switch rather than implementing the later agreed view rules. Batch 6 item 3 remains applicable.
 
    **AutoCAD scenario:** the OFF switch suppresses inner flange lines which Tim subsequently said to keep. A technically functioning switch is not evidence the requested design is still wanted.
 
@@ -182,7 +182,7 @@
 
    **What a drafter meets:** on a legacy/partly recovered pipe whose own stored handle is wrong but whose break-symbol link is still correct, CDREBUILD repairs the pipe identity and disconnects its zigzag symbol. A later move no longer has that symbol in the pipe's recorded members. `Services/LinkService.PipeUpdates.cs:318`–`:325` exits symbol-following when both glyph handles are blank. The symbol itself is not erased by this repair, so the expected visible symptom is a stranded symbol. That visible symptom is SUSPECTED until the stated native run; the destructive clearing of the drawing record is verified.
 
-   **Why the later rebuild does not establish a repair:** CDREBUILD calls this routine at `Commands/LinkCommands.cs:221`, then EnsureDrawingDataCurrent at `:232`. That pipeline synchronises project records and levels (`ProjectDataService.cs:650`–`:675`); its pipe metadata refresh at `:1003` reads levels, not missing glyph membership. The glyph assignment search found placement/copy setters, not a CDREBUILD rediscovery step. A general claim that a later relink will restore every cleared child is unsupported. This finding concerns break symbols, not the already-documented clearing of pit labels.
+   **Why the later rebuild does not establish a repair:** CDREBUILD calls this routine at `Commands/LinkCommands.cs:221`, then EnsureDrawingDataCurrent at `:233`. That pipeline synchronises project records and levels (`ProjectDataService.cs:650`–`:675`); its pipe metadata refresh at `:1003` reads levels, not missing glyph membership. The glyph assignment search found placement/copy setters, not a CDREBUILD rediscovery step. A general claim that a later relink will restore every cleared child is unsupported. This finding concerns break symbols, not the already-documented clearing of pit labels.
 
    **Exact failure fixture:** synthetic millimetre DWG with one already-valid legacy CE pipe A, a break symbol G represented by an ordinary polyline with no PipeLinkData, and no locked layers. A's current own entity handle is H; its stored PipeHandle alone is changed in the fixture to an unused valid hexadecimal handle. Its spine key is unique; G's actual handle is correctly stored in BreaklineGlyphHandle. Keep any real partner pipe and endpoint records valid. No other object has the unused handle. Ensure the fixture is opened after preparation so the normal live-copy handler has not repaired it first. This isolates a stale self handle rather than relying on arbitrary WBLOCK handle allocation.
 
@@ -198,5 +198,4 @@
 
 ---
 
-1. **Summary — 85 words.** Four unchanged recommendations remain MERGE; two need fixes, four are held and five are superseded or rejected by Tim's design. The only additional counted finding is #1419's loss of break-symbol ownership during kept-original repair. Its earlier requested corrections are present, but its tests still stop short of the real drawing remapper. Installer #1235 remains held under this brief. No PR, source file, build, test or AutoCAD session was changed or run. All proposed native checks remain outstanding; no bug is marked fixed.
-
+1. **Summary.** Four unchanged recommendations remain MERGE; two need fixes, four are held and five are superseded or rejected by Tim's design. The only additional counted finding is #1419's loss of break-symbol ownership during kept-original repair. Its earlier requested corrections are present, but its tests still stop short of the real drawing remapper. Installer #1235 remains held under this brief. No PR, source file, build, test or AutoCAD session was changed or run. All proposed native checks remain outstanding; no bug is marked fixed.
