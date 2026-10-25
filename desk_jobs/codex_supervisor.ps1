@@ -4,7 +4,7 @@
 $d = 'C:\CE_PLAN\desk_jobs'
 $bash = 'C:\Program Files\Git\bin\bash.exe'
 function Log($t) { Add-Content "$d\codex_supervisor.log" ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm'), $t) }
-function Usage { $o = & $bash -c 'cd "/c/Lisp Files/_CODEX_RUNNER" && ./codex_usage.sh pct' 2>$null; $v = 0.0; if ([double]::TryParse(($o | Select-Object -First 1), [Globalization.NumberStyles]::Float, [Globalization.CultureInfo]::InvariantCulture, [ref]$v)) { $v } else { -1 } }
+function Usage { $o = & $bash -c 'cd "/c/Lisp Files/_CODEX_RUNNER" && ./codex_usage.sh fresh-pct' 2>$null; $v = 0.0; if ([double]::TryParse(($o | Select-Object -First 1), [Globalization.NumberStyles]::Float, [Globalization.CultureInfo]::InvariantCulture, [ref]$v)) { $v } else { -1 } }
 function Mode { if (Test-Path "$d\CODEX_MODE.txt") { (Get-Content "$d\CODEX_MODE.txt" -TotalCount 1).Trim().ToUpper() } else { 'SPEND' } }
 function Procs($pat) { @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match $pat }) }
 if (-not (Test-Path "$d\CODEX_MODE.txt")) { Set-Content "$d\CODEX_MODE.txt" 'SPEND' }
