@@ -1,0 +1,716 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-1457-C3.0.75-b3bprobe2",
+    "started": "2026-10-25 14:57:34",
+    "finished": "2026-10-25 14:58:41",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "38CB6CFAE504419677E1F2A9AE5571AF5510CD7519C6463432CF3A7130EEC2CA",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 A229DC0BAFA1, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 38CB6CFAE504419677E1F2A9AE5571AF5510CD7519C6463432CF3A7130EEC2CA; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 14:57 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-1457-C3.0.75-b3bprobe2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 14:57:34",
+      "finished": "2026-10-25 14:58:41",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31457381_B1.dwg",
+      "cases": [
+        "PRB19B"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB19B",
+      "proves_bugs": "",
+      "title": "probe: all pipe boxes",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "7714005FA85C0D2BF7FB1EB60D7A91F0A090598E168A4DAAB09FAF29292E4B69",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 14:58:05",
+      "seconds": 18.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $c0",
+          "ok": true,
+          "seconds": 9.1,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $c5",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $c10",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $c0 \"object~^CeCvlPipeObject$\" -> $pp0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 42 of 500: 1091A0 STORMWATER PIPE ; 1091E0 STORMWATER PIPE ; 109359 EX DRAIN HATCH ; 109390 EX DRAIN HATCH ; 1093C7 STORMWATER PIPE ; 109430 STORMWATER PIPE ; 1094BE STORMWATER PIPE ; 109500 EX DRAIN HATCH"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp0 \"handle~[0-3]$\" -> $g0_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 17 of 42: 1091A0 STORMWATER PIPE ; 1091E0 STORMWATER PIPE ; 109390 EX DRAIN HATCH ; 109430 STORMWATER PIPE ; 109500 EX DRAIN HATCH ; 109A30 STORMWATER PIPE ; 109B80 STORMWATER SUSPENDED PIPE ; 109E23 STORMWATER PIPE"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_0 handle -All -> $gh0_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1091A0 | 1091E0 | 109390 | 109430 | 109500 | 109A30 | 109B80 | 109E23 | 109F81 | 10A243 | 10A3B0 | 10A3E0 | 10A430 | 10A901 | 10A942 | 10AA03 | 10B083"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_0 note -All -> $gn0_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (107515.244506547, -22828.8954754855, 109517.677712657, -19956.6583450429) | CE pipe object: x,y is the lower-left corner of its boundi..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp0 \"handle~[4-7]$\" -> $g0_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 10 of 42: 1093C7 STORMWATER PIPE ; 109835 STORMWATER PIPE ; 109874 STORMWATER PIPE ; 1098B6 STORMWATER SUSPENDED PIPE ; 109C15 STORMWATER SUSPENDED PIPE ; 109C55 STORMWATER PIPE ; 109ED4 STORMWATER PIPE ; 10A1D4 STORMWATER SUSPENDED PIPE"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_1 handle -All -> $gh0_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1093C7 | 109835 | 109874 | 1098B6 | 109C15 | 109C55 | 109ED4 | 10A1D4 | 10A8C7 | 10AAB6"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_1 note -All -> $gn0_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (102477.362223958, -9062.92088890076, 104370.752426948, -8962.92088794708) | CE pipe object: x,y is the lower-left corner of its boundi..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp0 \"handle~[89AB]$\" -> $g0_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 7 of 42: 109359 EX DRAIN HATCH ; 1098E8 STORMWATER UPVC CHARGED PIPE ; 10A348 STORMWATER SUSPENDED PIPE ; 10A86B STORMWATER SUSPENDED PIPE ; 10A899 STORMWATER SUSPENDED PIPE ; 10A9C9 STORMWATER PIPE ; 10B03B STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_2 handle -All -> $gh0_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 109359 | 1098E8 | 10A348 | 10A86B | 10A899 | 10A9C9 | 10B03B"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_2 note -All -> $gn0_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (119197.488638693, -23238.9644062914, 119647.488638693, 10650.4823798528) | CE pipe object: x,y is the lower-left corner of its boundin..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp0 \"handle~[CDEF]$\" -> $g0_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 8 of 42: 1094BE STORMWATER PIPE ; 10993C STORMWATER SUSPENDED PIPE ; 10996E STORMWATER UPVC CHARGED PIPE ; 109BBC STORMWATER PIPE ; 109CCF STORMWATER SUSPENDED PIPE ; 109E6D STORMWATER PIPE ; 10A27D STORMWATER SUSPENDED PIPE ; 10A98D STORMWATER PIPE"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_3 handle -All -> $gh0_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1094BE | 10993C | 10996E | 109BBC | 109CCF | 109E6D | 10A27D | 10A98D"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g0_3 note -All -> $gn0_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (108989.676422372, -23950.3509748557, 112329.289768822, -23563.7569169609) | CE pipe object: x,y is the lower-left corner of its boundi..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $c5 \"object~^CeCvlPipeObject$\" -> $pp5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 7 of 500: 110136 STORMWATER PIPE ; 110179 STORMWATER PIPE ; 11035C STORMWATER PIPE ; 1135E9 STORMWATER PIPE ; 11362F STORMWATER PIPE ; 113659 STORMWATER PIPE ; 1136A4 STORMWATER PIPE"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp5 \"handle~[0-3]$\" -> $g5_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 7: "
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_0 handle -All -> $gh5_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_0 note -All -> $gn5_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' of an empty list: empty"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp5 \"handle~[4-7]$\" -> $g5_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 7: 110136 STORMWATER PIPE ; 1136A4 STORMWATER PIPE"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_1 handle -All -> $gh5_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 110136 | 1136A4"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_1 note -All -> $gn5_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (41316.0330274977, -25136.1723295679, 53600.9341310118, -824.793933868408) | CE pipe object: x,y is the lower-left corner of its boundi..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp5 \"handle~[89AB]$\" -> $g5_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 7: 110179 STORMWATER PIPE ; 1135E9 STORMWATER PIPE ; 113659 STORMWATER PIPE"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_2 handle -All -> $gh5_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 110179 | 1135E9 | 113659"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_2 note -All -> $gn5_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (53954.7233615052, -25137.0683195159, 66334.4534692725, -825.128148078918) | CE pipe object: x,y is the lower-left corner of its boundi..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp5 \"handle~[CDEF]$\" -> $g5_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 7: 11035C STORMWATER PIPE ; 11362F STORMWATER PIPE"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_3 handle -All -> $gh5_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11035C | 11362F"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g5_3 note -All -> $gn5_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' = CE pipe object: x,y is the lower-left corner of its bounding box (107650.103589726, -27484.5664441172, 109664.472125908, -24672.0177861462) | CE pipe object: x,y is the lower-left corner of its boundi..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $c10 \"object~^CeCvlPipeObject$\" -> $pp10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp10 \"handle~[0-3]$\" -> $g10_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_0 handle -All -> $gh10_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_0 note -All -> $gn10_0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' of an empty list: empty"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp10 \"handle~[4-7]$\" -> $g10_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_1 handle -All -> $gh10_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_1 note -All -> $gn10_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' of an empty list: empty"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp10 \"handle~[89AB]$\" -> $g10_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_2 handle -All -> $gh10_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_2 note -All -> $gn10_2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' of an empty list: empty"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pp10 \"handle~[CDEF]$\" -> $g10_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_3 handle -All -> $gh10_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $g10_3 note -All -> $gn10_3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'note' of an empty list: empty"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $gh0_0 \"FULL h c0 g0\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1091A0 | 1091E0 | 109390 | 109430 | 109500 | 109A30 | 109B80 | 109E23 | 109F81 | 10A243 | 10A3B0 | 10A3E0 | 10A430 | 10A901 | 10A942 | 10AA03 | 10B083",
+          "evidence": "RECORDED, not judged: FULL h c0 g0 = 1091A0 | 1091E0 | 109390 | 109430 | 109500 | 109A30 | 109B80 | 109E23 | 109F81 | 10A243 | 10A3B0 | 10A3E0 | 10A430 | 10A901 | 10A942 | 10AA03 | 10B083"
+        },
+        {
+          "n": 2,
+          "text": "record $gn0_0 \"FULL n c0 g0\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (107515.244506547, -22828.8954754855, 109517.677712657, -19956.6583450429) | CE pipe object: x,y is the lower-left corner of its bounding box (107993.13139683, -22870.0040216414, 111509.699047077, -21717.5703294898) | CE pipe object: x,y is the lower-left corner of its bounding box (119201.845659784, -55697.027000922, 119651.845659784, -24139.0435977886) | CE pipe object: x,y is the lower-left corner of its bounding box (102477.482798403, -38428.2938725771, 104328.860447103, -38326.1516772302) | CE pipe object: x,y is the lower-left corner of its bounding box (112328.044491694, -23950.3522579594, 118972.488638693, -23575.3522579594) | CE pipe object: x,y is the lower-left corner of its bounding box (77880.0552000011, -25146.8260636521, 81077.272591114, -1089.35405445043) | CE pipe object: x,y is the lower-left corner of its bounding box (71148.8471845409, -762.295087618219, 76466.4784700784, -329.601563876301) | CE pipe object: x,y is the lower-left corner of its bounding box (54227.7260635773, -25794.8824924169, 77330.0342190514, -25344.8754300674) | CE pipe object: x,y is the lower-left corner of its bounding box (61016.3478444173, -728.940690994263, 66334.4534692725, -329.922937642275) | CE pipe object: x,y is the lower-left corner of its bounding box (21676.8563566822, -7825.77036259031, 36515.2686082376, -726.198794288303) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.95077666674, -745.804503440857, 8300.82081789541, -371.499194697765) | CE pipe object: x,y is the lower-left corner of its bounding box (333.200729723789, -46444.3587969189, 837.811254024239, -23901.4466200068) | CE pipe object: x,y is the lower-left corner of its bounding box (332.939793713175, -23599.8656641389, 837.811254071903, -1057.19258272338) | CE pipe object: x,y is the lower-left corner of its bounding box (41316.6422288468, -46670.2822499043, 53596.9868527443, -25991.1030003006) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.9578193102, -46675.5521270054, 21197.4065423927, -39760.8055994113) | CE pipe object: x,y is the lower-left corner of its bounding box (17434.2707727391, -38956.3013518287, 21467.0841912648, -25963.6492137905) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.95077666161, -7829.60581038107, 21201.6693682528, -824.261478421423)",
+          "evidence": "RECORDED, not judged: FULL n c0 g0 = CE pipe object: x,y is the lower-left corner of its bounding box (107515.244506547, -22828.8954754855, 109517.677712657, -19956.6583450429) | CE pipe object: x,y is the lower-left corner of its bounding box (107993.13139683, -22870.0040216414, 111509.699047077, -21717.5703294898) | CE pipe object: x,y is the lower-left corner of its bounding box (119201.845659784, -55697.027000922, 119651.845659784, -24139.0435977886) | CE pipe object: x,y is the lower-left corner of its bounding box (102477.482798403, -38428.2938725771, 104328.860447103, -38326.1516772302) | CE pipe object: x,y is the lower-left corner of its bounding box (112328.044491694, -23950.3522579594, 118972.488638693, -23575.3522579594) | CE pipe object: x,y is the lower-left corner of its bounding box (77880.0552000011, -25146.8260636521, 81077.272591114, -1089.35405445043) | CE pipe object: x,y is the lower-left corner of its bounding box (71148.8471845409, -762.295087618219, 76466.4784700784, -329.601563876301) | CE pipe object: x,y is the lower-left corner of its bounding box (54227.7260635773, -25794.8824924169, 77330.0342190514, -25344.8754300674) | CE pipe object: x,y is the lower-left corner of its bounding box (61016.3478444173, -728.940690994263, 66334.4534692725, -329.922937642275) | CE pipe object: x,y is the lower-left corner of its bounding box (21676.8563566822, -7825.77036259031, 36515.2686082376, -726.198794288303) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.95077666674, -745.804503440857, 8300.82081789541, -371.499194697765) | CE pipe object: x,y is the lower-left corner of its bounding box (333.200729723789, -46444.3587969189, 837.811254024239, -23901.4466200068) | CE pipe object: x,y is the lower-left corner of its bounding box (332.939793713175, -23599.8656641389, 837.811254071903, -1057.19258272338) | CE pipe object: x,y is the lower-left corner of its bounding box (41316.6422288468, -46670.2822499043, 53596.9868527443, -25991.1030003006) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.9578193102, -46675.5521270054, 21197.4065423927, -39760.8055994113) | CE pipe object: x,y is the lower-left corner of its bounding box (17434.2707727391, -38956.3013518287, 21467.0841912648, -25963.6492137905) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.95077666161, -7829.60581038107, 21201.6693682528, -824.261478421423)"
+        },
+        {
+          "n": 3,
+          "text": "record $gh0_1 \"FULL h c0 g1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1093C7 | 109835 | 109874 | 1098B6 | 109C15 | 109C55 | 109ED4 | 10A1D4 | 10A8C7 | 10AAB6",
+          "evidence": "RECORDED, not judged: FULL h c0 g1 = 1093C7 | 109835 | 109874 | 1098B6 | 109C15 | 109C55 | 109ED4 | 10A1D4 | 10A8C7 | 10AAB6"
+        },
+        {
+          "n": 4,
+          "text": "record $gn0_1 \"FULL n c0 g1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (102477.362223958, -9062.92088890076, 104370.752426948, -8962.92088794708) | CE pipe object: x,y is the lower-left corner of its bounding box (78230.0308551041, -25794.8886254923, 96429.2711829583, -25344.6221089938) | CE pipe object: x,y is the lower-left corner of its bounding box (78166.6234581733, -46406.7164077792, 81011.1113920808, -25979.8244110051) | CE pipe object: x,y is the lower-left corner of its bounding box (82807.7180493406, -46975.3784151077, 96769.6667844612, -39310.0048388925) | CE pipe object: x,y is the lower-left corner of its bounding box (71152.2050869614, -47172.2383415314, 76468.8239911612, -46753.7012681961) | CE pipe object: x,y is the lower-left corner of its bounding box (71152.1493977044, -46719.5625662949, 77860.9751574033, -26019.8729653197) | CE pipe object: x,y is the lower-left corner of its bounding box (54022.4290578647, -46593.2806497937, 55954.0870596867, -25990.5837785742) | CE pipe object: x,y is the lower-left corner of its bounding box (31190.2240646107, -659.70680809021, 36515.2686082097, -325.877819002072) | CE pipe object: x,y is the lower-left corner of its bounding box (21642.86695578, -46705.1608881102, 36514.4206927099, -39766.0252234001) | CE pipe object: x,y is the lower-left corner of its bounding box (102641.451246901, -32209.180981636, 103627.559272528, -32109.180981636)",
+          "evidence": "RECORDED, not judged: FULL n c0 g1 = CE pipe object: x,y is the lower-left corner of its bounding box (102477.362223958, -9062.92088890076, 104370.752426948, -8962.92088794708) | CE pipe object: x,y is the lower-left corner of its bounding box (78230.0308551041, -25794.8886254923, 96429.2711829583, -25344.6221089938) | CE pipe object: x,y is the lower-left corner of its bounding box (78166.6234581733, -46406.7164077792, 81011.1113920808, -25979.8244110051) | CE pipe object: x,y is the lower-left corner of its bounding box (82807.7180493406, -46975.3784151077, 96769.6667844612, -39310.0048388925) | CE pipe object: x,y is the lower-left corner of its bounding box (71152.2050869614, -47172.2383415314, 76468.8239911612, -46753.7012681961) | CE pipe object: x,y is the lower-left corner of its bounding box (71152.1493977044, -46719.5625662949, 77860.9751574033, -26019.8729653197) | CE pipe object: x,y is the lower-left corner of its bounding box (54022.4290578647, -46593.2806497937, 55954.0870596867, -25990.5837785742) | CE pipe object: x,y is the lower-left corner of its bounding box (31190.2240646107, -659.70680809021, 36515.2686082097, -325.877819002072) | CE pipe object: x,y is the lower-left corner of its bounding box (21642.86695578, -46705.1608881102, 36514.4206927099, -39766.0252234001) | CE pipe object: x,y is the lower-left corner of its bounding box (102641.451246901, -32209.180981636, 103627.559272528, -32109.180981636)"
+        },
+        {
+          "n": 5,
+          "text": "record $gh0_2 \"FULL h c0 g2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "109359 | 1098E8 | 10A348 | 10A86B | 10A899 | 10A9C9 | 10B03B",
+          "evidence": "RECORDED, not judged: FULL h c0 g2 = 109359 | 1098E8 | 10A348 | 10A86B | 10A899 | 10A9C9 | 10B03B"
+        },
+        {
+          "n": 6,
+          "text": "record $gn0_2 \"FULL n c0 g2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (119197.488638693, -23238.9644062914, 119647.488638693, 10650.4823798528) | CE pipe object: x,y is the lower-left corner of its bounding box (80620.5389265363, -47207.5192056552, 80861.0129525859, -46982.7099162236) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.95781931669, -47130.0521508566, 8300.82081785734, -46751.4565028894) | CE pipe object: x,y is the lower-left corner of its bounding box (41316.6569958538, -47181.4954296972, 46640.4785861481, -46719.4630250795) | CE pipe object: x,y is the lower-left corner of its bounding box (31190.0532808336, -47175.6654763835, 36514.4056162948, -46719.392364466) | CE pipe object: x,y is the lower-left corner of its bounding box (17890.227564806, -25794.8754300673, 33127.4323787357, -25344.8754300673) | CE pipe object: x,y is the lower-left corner of its bounding box (17311.3249210406, -25163.6622931349, 21622.8547559764, -8642.36664961669)",
+          "evidence": "RECORDED, not judged: FULL n c0 g2 = CE pipe object: x,y is the lower-left corner of its bounding box (119197.488638693, -23238.9644062914, 119647.488638693, 10650.4823798528) | CE pipe object: x,y is the lower-left corner of its bounding box (80620.5389265363, -47207.5192056552, 80861.0129525859, -46982.7099162236) | CE pipe object: x,y is the lower-left corner of its bounding box (2312.95781931669, -47130.0521508566, 8300.82081785734, -46751.4565028894) | CE pipe object: x,y is the lower-left corner of its bounding box (41316.6569958538, -47181.4954296972, 46640.4785861481, -46719.4630250795) | CE pipe object: x,y is the lower-left corner of its bounding box (31190.0532808336, -47175.6654763835, 36514.4056162948, -46719.392364466) | CE pipe object: x,y is the lower-left corner of its bounding box (17890.227564806, -25794.8754300673, 33127.4323787357, -25344.8754300673) | CE pipe object: x,y is the lower-left corner of its bounding box (17311.3249210406, -25163.6622931349, 21622.8547559764, -8642.36664961669)"
+        },
+        {
+          "n": 7,
+          "text": "record $gh0_3 \"FULL h c0 g3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1094BE | 10993C | 10996E | 109BBC | 109CCF | 109E6D | 10A27D | 10A98D",
+          "evidence": "RECORDED, not judged: FULL h c0 g3 = 1094BE | 10993C | 10996E | 109BBC | 109CCF | 109E6D | 10A27D | 10A98D"
+        },
+        {
+          "n": 8,
+          "text": "record $gn0_3 \"FULL n c0 g3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (108989.676422372, -23950.3509748557, 112329.289768822, -23563.7569169609) | CE pipe object: x,y is the lower-left corner of its bounding box (82807.7170468234, -8173.42988967896, 96767.716053081, -557.383110053087) | CE pipe object: x,y is the lower-left corner of its bounding box (88865.6455974483, -557.466090767793, 89015.64858621, -333.868803624319) | CE pipe object: x,y is the lower-left corner of its bounding box (71148.8481664305, -25119.8774290082, 77864.6813144181, -825.201765049654) | CE pipe object: x,y is the lower-left corner of its bounding box (61016.8230494967, -47171.5390776688, 66345.4344862275, -46753.6286122201) | CE pipe object: x,y is the lower-left corner of its bounding box (55878.531711457, -46683.3741771781, 66345.5416316651, -46518.2786796487) | CE pipe object: x,y is the lower-left corner of its bounding box (41315.897341965, -746.336849499429, 46641.259785491, -319.915317307793) | CE pipe object: x,y is the lower-left corner of its bounding box (34027.4323787357, -25794.8754300673, 53327.7261323596, -25344.8754300673)",
+          "evidence": "RECORDED, not judged: FULL n c0 g3 = CE pipe object: x,y is the lower-left corner of its bounding box (108989.676422372, -23950.3509748557, 112329.289768822, -23563.7569169609) | CE pipe object: x,y is the lower-left corner of its bounding box (82807.7170468234, -8173.42988967896, 96767.716053081, -557.383110053087) | CE pipe object: x,y is the lower-left corner of its bounding box (88865.6455974483, -557.466090767793, 89015.64858621, -333.868803624319) | CE pipe object: x,y is the lower-left corner of its bounding box (71148.8481664305, -25119.8774290082, 77864.6813144181, -825.201765049654) | CE pipe object: x,y is the lower-left corner of its bounding box (61016.8230494967, -47171.5390776688, 66345.4344862275, -46753.6286122201) | CE pipe object: x,y is the lower-left corner of its bounding box (55878.531711457, -46683.3741771781, 66345.5416316651, -46518.2786796487) | CE pipe object: x,y is the lower-left corner of its bounding box (41315.897341965, -746.336849499429, 46641.259785491, -319.915317307793) | CE pipe object: x,y is the lower-left corner of its bounding box (34027.4323787357, -25794.8754300673, 53327.7261323596, -25344.8754300673)"
+        },
+        {
+          "n": 9,
+          "text": "record $gh5_0 \"FULL h c5 g0\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL h c5 g0 = "
+        },
+        {
+          "n": 10,
+          "text": "record $gn5_0 \"FULL n c5 g0\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL n c5 g0 = "
+        },
+        {
+          "n": 11,
+          "text": "record $gh5_1 \"FULL h c5 g1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "110136 | 1136A4",
+          "evidence": "RECORDED, not judged: FULL h c5 g1 = 110136 | 1136A4"
+        },
+        {
+          "n": 12,
+          "text": "record $gn5_1 \"FULL n c5 g1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (41316.0330274977, -25136.1723295679, 53600.9341310118, -824.793933868408) | CE pipe object: x,y is the lower-left corner of its bounding box (102640.602114437, -15400.77567252, 103643.708266032, -15300.7756722723)",
+          "evidence": "RECORDED, not judged: FULL n c5 g1 = CE pipe object: x,y is the lower-left corner of its bounding box (41316.0330274977, -25136.1723295679, 53600.9341310118, -824.793933868408) | CE pipe object: x,y is the lower-left corner of its bounding box (102640.602114437, -15400.77567252, 103643.708266032, -15300.7756722723)"
+        },
+        {
+          "n": 13,
+          "text": "record $gh5_2 \"FULL h c5 g2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "110179 | 1135E9 | 113659",
+          "evidence": "RECORDED, not judged: FULL h c5 g2 = 110179 | 1135E9 | 113659"
+        },
+        {
+          "n": 14,
+          "text": "record $gn5_2 \"FULL n c5 g2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (53954.7233615052, -25137.0683195159, 66334.4534692725, -825.128148078918) | CE pipe object: x,y is the lower-left corner of its bounding box (97290.4301460038, -25726.0907305529, 106779.165480871, -23633.626678213) | CE pipe object: x,y is the lower-left corner of its bounding box (96961.9726495147, -25119.8754300673, 97061.9726495147, -14990.2494039536)",
+          "evidence": "RECORDED, not judged: FULL n c5 g2 = CE pipe object: x,y is the lower-left corner of its bounding box (53954.7233615052, -25137.0683195159, 66334.4534692725, -825.128148078918) | CE pipe object: x,y is the lower-left corner of its bounding box (97290.4301460038, -25726.0907305529, 106779.165480871, -23633.626678213) | CE pipe object: x,y is the lower-left corner of its bounding box (96961.9726495147, -25119.8754300673, 97061.9726495147, -14990.2494039536)"
+        },
+        {
+          "n": 15,
+          "text": "record $gh5_3 \"FULL h c5 g3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "11035C | 11362F",
+          "evidence": "RECORDED, not judged: FULL h c5 g3 = 11035C | 11362F"
+        },
+        {
+          "n": 16,
+          "text": "record $gn5_3 \"FULL n c5 g3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CE pipe object: x,y is the lower-left corner of its bounding box (107650.103589726, -27484.5664441172, 109664.472125908, -24672.0177861462) | CE pipe object: x,y is the lower-left corner of its bounding box (96911.2795433998, -32610.4101963043, 97011.2795433999, -26019.8754300673)",
+          "evidence": "RECORDED, not judged: FULL n c5 g3 = CE pipe object: x,y is the lower-left corner of its bounding box (107650.103589726, -27484.5664441172, 109664.472125908, -24672.0177861462) | CE pipe object: x,y is the lower-left corner of its bounding box (96911.2795433998, -32610.4101963043, 97011.2795433999, -26019.8754300673)"
+        },
+        {
+          "n": 17,
+          "text": "record $gh10_0 \"FULL h c10 g0\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL h c10 g0 = "
+        },
+        {
+          "n": 18,
+          "text": "record $gn10_0 \"FULL n c10 g0\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL n c10 g0 = "
+        },
+        {
+          "n": 19,
+          "text": "record $gh10_1 \"FULL h c10 g1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL h c10 g1 = "
+        },
+        {
+          "n": 20,
+          "text": "record $gn10_1 \"FULL n c10 g1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL n c10 g1 = "
+        },
+        {
+          "n": 21,
+          "text": "record $gh10_2 \"FULL h c10 g2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL h c10 g2 = "
+        },
+        {
+          "n": 22,
+          "text": "record $gn10_2 \"FULL n c10 g2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL n c10 g2 = "
+        },
+        {
+          "n": 23,
+          "text": "record $gh10_3 \"FULL h c10 g3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL h c10 g3 = "
+        },
+        {
+          "n": 24,
+          "text": "record $gn10_3 \"FULL n c10 g3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL n c10 g3 = "
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-25 14:58:23",
+      "session_id": "RUN-20261025-1457-C3.0.75-b3bprobe2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB19B_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}
