@@ -1,0 +1,833 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-1043-C3.0.75-b3p3",
+    "started": "2026-10-25 10:43:39",
+    "finished": "2026-10-25 10:56:33",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "53B90CE405BBCF1DF96E55B1F2883AAA938A9531AD27B7C1437F7DA30102B90F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 0C53D62BB77B, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 1 shared setup(s); pack SHA-256 53B90CE405BBCF1DF96E55B1F2883AAA938A9531AD27B7C1437F7DA30102B90F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 10:43 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 2,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-1043-C3.0.75-b3p3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 10:43:41",
+      "finished": "2026-10-25 10:56:33",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31043451_B1.dwg",
+      "cases": [
+        "PRB_AGI3",
+        "PRB_ZOOM",
+        "R02b"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB_AGI3",
+      "proves_bugs": "",
+      "title": "probe: CDFW at four inspection openings",
+      "kind": "deterministic",
+      "order": 14,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "6DAEF30FA34FC55C10BC31AEE236B8CAAC11C6FCD07B3281C1CB4DC094447057",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 10:44:16",
+      "seconds": 77.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 108F55 -> $e1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 108F55: {\"handle\":\"108F55\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"effective_name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"insertion\":[51777.389356369305,-46593.222599983215,0.0],\"rotation\":0..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 108F67 -> $e2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 108F67: {\"handle\":\"108F67\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"*U108\",\"effective_name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"insertion\":[51777.38935601711,-30233.424677848816,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}51777.389,-46593.223\" -Force -TimeoutSec 90 -> $f1",
+          "ok": true,
+          "seconds": 14.8,
+          "evidence": "typed 'CDFW 51777.389,-46593.223': Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f1e",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel*..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f1f",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}51777.389,-30233.425\" -Force -TimeoutSec 90 -> $f2",
+          "ok": true,
+          "seconds": 13.5,
+          "evidence": "typed 'CDFW 51777.389,-30233.425': Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f2e",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "esc-prompt: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel*..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f2f",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}55879.087,-30233.481\" -Force -TimeoutSec 90 -> $f3",
+          "ok": true,
+          "seconds": 14.1,
+          "evidence": "typed 'CDFW 55879.087,-30233.481': Command: | Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f3e",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: | Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel*..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f3f",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}80936.111,-30304.267\" -Force -TimeoutSec 90 -> $f4",
+          "ok": true,
+          "seconds": 14.6,
+          "evidence": "typed 'CDFW 80936.111,-30304.267': Command: | Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f4e",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: | Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel*..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $f4f",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $lg",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "230 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $e1 \"FULL ent-read 108F55 (attributes)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"108F55\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"effective_name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"insertion\":[51777.389356369305,-46593.222599983215,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[51602.389356369305,-46768.222599983215,52307.274408828605,-46050.09873583513],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[51777.389356369305,-46593.222599983215],\"world_radius\":75.0,\"world_on_line\":[51852.389356369305,-46593.222599983215]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[51777.389356369305,-46593.222599983215],\"world_radius\":175.0,\"world_on_line\":[51952.389356369305,-46593.222599983215]}]}",
+          "evidence": "RECORDED, not judged: FULL ent-read 108F55 (attributes) = {\"handle\":\"108F55\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"effective_name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"insertion\":[51777.389356369305,-46593.222599983215,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[51602.389356369305,-46768.222599983215,52307.274408828605,-46050.09873583513],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[51777.389356369305,-46593.222599983215],\"world_radius\":75.0,\"world_on_line\":[51852.389356369305,-46593.222599983215]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[51777.389356369305,-46593.222599983215],\"world_radius\":175.0,\"world_on_line\":[51952.389356369305,-46593.222599983215]}]}"
+        },
+        {
+          "n": 2,
+          "text": "record $e2 \"FULL ent-read 108F67 (attributes)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"108F67\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"*U108\",\"effective_name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"insertion\":[51777.38935601711,-30233.424677848816,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[51247.50430355781,-30408.424677848816,51952.38935601711,-29690.30081370073],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[51777.38935601711,-30233.424677848816],\"world_radius\":75.0,\"world_on_line\":[51852.38935601711,-30233.424677848816]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[51777.38935601711,-30233.424677848816],\"world_radius\":175.0,\"world_on_line\":[51952.38935601711,-30233.424677848816]}]}",
+          "evidence": "RECORDED, not judged: FULL ent-read 108F67 (attributes) = {\"handle\":\"108F67\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"*U108\",\"effective_name\":\"INSPECTION OPENING DYNAMIC WITH MASK\",\"insertion\":[51777.38935601711,-30233.424677848816,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[51247.50430355781,-30408.424677848816,51952.38935601711,-29690.30081370073],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[51777.38935601711,-30233.424677848816],\"world_radius\":75.0,\"world_on_line\":[51852.38935601711,-30233.424677848816]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[51777.38935601711,-30233.424677848816],\"world_radius\":175.0,\"world_on_line\":[51952.38935601711,-30233.424677848816]}]}"
+        },
+        {
+          "n": 3,
+          "text": "record $f1 \"FULL CDFW at 108F55\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at 108F55 = Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "text": "record $f1e \"FULL after Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after Esc = Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 5,
+          "text": "record $f1f \"FULL after second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after second Esc = Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 6,
+          "text": "record $n1 \"count after 1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count after 1 = 1034"
+        },
+        {
+          "n": 7,
+          "text": "record $f2 \"FULL CDFW at 108F67\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at 108F67 = Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 8,
+          "text": "record $f2e \"FULL after Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after Esc = Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 9,
+          "text": "record $n2 \"count after 2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count after 2 = 1034"
+        },
+        {
+          "n": 10,
+          "text": "record $f3 \"FULL CDFW at 108F79\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at 108F79 = Command: | Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 11,
+          "text": "record $f3e \"FULL after Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after Esc = Command: | Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $n3 \"count after 3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count after 3 = 1034"
+        },
+        {
+          "n": 13,
+          "text": "record $f4 \"FULL CDFW at 108F8B\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at 108F8B = Command: | Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 14,
+          "text": "record $f4e \"FULL after Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after Esc = Command: | Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 15,
+          "text": "record $n4 \"count after 4\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: count after 4 = 1034"
+        },
+        {
+          "n": 16,
+          "text": "record $lg \"FULL new Civil CE log lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-25 10:44:18.174 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-25 10:44:18.174 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-25 10:44:18.207 [INFO] [PERF] ProjectDataService.SaveToDrawing: 31.3 ms jsonLen=243925 | 2026-10-25 10:44:18.207 [INFO] Project data saved to DWG successfully | 2026-10-25 10:44:18.207 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31043451_B1_d4a4e533.json | 2026-10-25 10:44:18.238 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.7 ms jsonLen=246963 | 2026-10-25 10:44:18.238 [INFO] Project data saved to DWG successfully | 2026-10-25 10:44:18.238 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-25 10:44:18.603 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-25 10:44:18.761 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-25 10:44:19.521 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-25 10:44:19.666 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-25 10:44:19.974 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-25 10:44:20.569 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-25 10:44:20.673 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-25 10:44:20.779 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-25 10:44:20.880 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-25 10:44:20.976 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-25 10:44:21.249 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-25 10:44:21.249 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-25 10:44:21.310 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-25 10:44:21.528 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-25 10:44:21.627 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-25 10:44:22.230 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-25 10:44:22.334 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-25 10:44:22.437 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-25 10:44:22.535 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-25 10:44:22.637 [INFO] C...",
+          "evidence": "RECORDED, not judged: FULL new Civil CE log lines = 2026-10-25 10:44:18.174 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-25 10:44:18.174 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-25 10:44:18.207 [INFO] [PERF] ProjectDataService.SaveToDrawing: 31.3 ms jsonLen=243925 | 2026-10-25 10:44:18.207 [INFO] Project data saved to DWG successfully | 2026-10-25 10:44:18.207 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31043451_B1_d4a4e533.json | 2026-10-25 10:44:18.238 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.7 ms jsonLen=246963 | 2026-10-25 10:44:18.238 [INFO] Project data saved to DWG successfully | 2026-10-25 10:44:18.238 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-25 10:44:18.603 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-25 10:44:18.761 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-25 10:44:19.521 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-25 10:44:19.666 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-25 10:44:19.974 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-25 10:44:20.569 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-25 10:44:20.673 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-25 10:44:20.779 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-25 10:44:20.880 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-25 10:44:20.976 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-25 10:44:21.249 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-25 10:44:21.249 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-25 10:44:21.310 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-25 10:44:21.528 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-25 10:44:21.627 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-25 10:44:22.230 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-25 10:44:22.334 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-25 10:44:22.437 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-25 10:44:22.535 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-25 10:44:22.637 [INFO] C..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 230 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 15438 ms ; Command outcome: CDFW cancelled 14848 ms ; Command outcome: CDFW cancelled 15124 ms ; Command outcome: CDFW cancelled 15399 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 10:45:33",
+      "session_id": "RUN-20261025-1043-C3.0.75-b3p3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB_AGI3_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "PRB_ZOOM",
+      "proves_bugs": "",
+      "title": "probe: view before and after a typed CD pipe",
+      "kind": "deterministic",
+      "order": 15,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "AE1CB59BDAD72BDA9C87E9534D4F3DC5200D4F36C2B7461FFFD2360E05870835",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-25 10:45:33",
+      "seconds": 126.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 160000,-85000 30000\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed '_.ZOOM _C 160000,-85000 30000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 160000,-85000 | Enter magnification or ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar VIEWSIZE -> $vs0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "VIEWSIZE = 30000"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar VIEWCTR -> $vc0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "VIEWCTR = 160000.0 | -85000.0 | 0.0"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 16.6,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar VIEWSIZE -> $vs1",
+          "ok": false,
+          "seconds": 60.9,
+          "evidence": "the step stopped with an error: BUSY: AutoCAD did not accept a COM call for 61 s (it kept answering 'call rejected': it is busy). Exception calling \"Get\" with \"2\" argument(s): \"Call was rejected by callee. (0x80010001 (RPC_E_CALL_REJECTED))\""
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31043451_B1_1f14e9657.log)",
+        "Civil CE log: 6 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-25 10:47:40",
+      "session_id": "RUN-20261025-1043-C3.0.75-b3p3-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R02b",
+      "proves_bugs": "",
+      "title": "A new pipe that ends on pit P8 joins it: the flow line says Open end -> P8",
+      "kind": "deterministic",
+      "order": 21,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-PIPE-02 (daily case D03), the pipe-ends-on-a-pit half",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After the setup (pit P8 at 150000,-80000 and a pipe leaving it), CD from the open point 130000,-80000 to the pit centre 150000,-80000 with levels 18.300 / 18.100 prints 'Inserted flow arrow. Flow: Open end -> P8' once, makes exactly one new pipe object, and the pipe box sits at y -80112.5 like the pipe that leaves the pit. A twin that ends the pipe 2 m short of the pit (R02b_BROKEN) must not say 'Flow: Open end -> P8'.",
+      "why_not_unit": "The join is made by the live CD point landing against the real pit in the drawing.",
+      "not_automated": [
+        "This case counts for 'a pipe ended on a pit joins it' only. The Pit Schedule row of P8 is read in R02 (the pipe that starts on the pit). The pipe's last vertex is not read: only CE's own command line and the pipe box row are checked."
+      ],
+      "file_sha256": "6F6EEF4B1E666A934CED629580EF929A9A182B82A25361CDAF3C6A95AD2F7ED9",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-25 10:47:40",
+      "seconds": 507.5,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 10:52:43",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31043451_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 15.7,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 146.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "the window /^New Pit/ closed after 3 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 15.1,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 10.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 10.3,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 60.5,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31043451_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C64F CeCvlPipeObject STORMWATER PIPE ; 11C655 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65A AcDbMText 20TEXT IL 18.000 ; 11C65F AcDbMText 20TEXT IL 17.900 ; 11C681 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $nb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}130000,-80000{NL}150000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $b_t1",
+          "ok": true,
+          "seconds": 15.3,
+          "evidence": "typed 'CD 130000,-80000 150000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 130000,-80000 | Specify second point: 150000,-80000 | Se..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.300\"",
+          "ok": true,
+          "seconds": 11.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.300: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.100\"",
+          "ok": true,
+          "seconds": 11.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.100: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $b_t2",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $b_w1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31043451_B1.dwg] ; Creative Engineering | Grade mismatch"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e1",
+          "ok": false,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: REFUSED: the AutoCAD main window is disabled: a window is open in front of it and the key would go to that window. No key was sent."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31043451_B1_1892bcb8b.log)",
+        "Civil CE log: 134 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 191624 ms ; Command outcome: CD completed 98204 ms",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-25 10:56:07",
+      "session_id": "RUN-20261025-1043-C3.0.75-b3p3-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

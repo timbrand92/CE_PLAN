@@ -1,0 +1,817 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-1424-C3.0.75-b3z5",
+    "started": "2026-10-25 14:24:10",
+    "finished": "2026-10-25 14:34:02",
+    "build": {
+      "civil": {
+        "product_version": "3.0.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "3.0.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0",
+        "file_version": "1.0.123.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+        "file_version": "1.1.75.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.75+2c805a39 / struc 1.0.123+4af3f37d / mgr 1.1.75+2c805a39",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "DF859586C9000385CF97167AD36FA7AFC744FF45B4F0839C725F02B69534E06B",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.75+2c805a39733ea4649b4273f1f425a37cda463046; Structural 1.0.123+4af3f37d7da3684c6d7179a65633aee40372c5a0; Manager 1.1.75+2c805a39733ea4649b4273f1f425a37cda463046",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 A229DC0BAFA1, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 DF859586C9000385CF97167AD36FA7AFC744FF45B4F0839C725F02B69534E06B; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 2972CE70C514 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 14:24 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-1424-C3.0.75-b3z5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 14:24:12",
+      "finished": "2026-10-25 14:27:19",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31424151_B1.dwg",
+      "cases": [
+        "R07"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261025-1424-C3.0.75-b3z5-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-25 14:27:19",
+      "finished": "2026-10-25 14:34:02",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31427232_B1.dwg",
+      "cases": [
+        "R09_OFF_BROKEN"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "2972CE70C514"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R07",
+      "proves_bugs": "",
+      "title": "The Settings window opens with all eight tabs, a changed value is thrown away by Cancel, and the four settings files are unchanged",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "Settings window (spec C13 reduced to the eight tabs; spec C14: a changed value is thrown away by Cancel)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDS opens 'Creative Engineering | Settings (CDS)' with the eight tabs Drafting, Pipes and Pits, Design, Survey, Display, Advanced, Newer tools and Fixes, a Cancel and a Save button, and the line 'No changes. Everything shown is saved.'; changing the Drafting field Label slide step to 123 makes that line go and the field read 123; Cancel closes the window; the four settings files have the same SHA-256 as before the window was opened (checked BEFORE the guard's restore runs).",
+      "why_not_unit": "The window loads the real settings file in real AutoCAD; only a live run shows that opening it and pressing Cancel writes nothing.",
+      "not_automated": [
+        "Batch 3 fixes of 25 Oct 2026 (spec C14 assertion 2): the window is opened a SECOND time after the Cancel and must show the saved value again (Label slide step 125, the value in Tim's file) and the 'No changes' line, so a Cancel that kept 123 in memory would fail. The true red for the hashes-unchanged check is the variant R07_SETTING_BROKEN (the settings guard changes CD_Settings.json in the middle of the case; a Save press is not possible because the v2 allow-list refuses the button now named \"Settings, Save\").",
+        "The per-field look and the discard wording (spec C14) are not judged. C14 itself IS covered: one field (Drafting, Label slide step) is changed to 123 with the settings guard armed, the window shows the change (the No-changes line goes), Cancel closes it, and the four settings files are byte-for-byte unchanged (no Save, no discard prompt answered).",
+        "The per-tab look (C13) and the tab contents are not read: only that all eight tabs exist."
+      ],
+      "file_sha256": "7D08DB109F80C46F3DC3A615F37452087F75FB02A6666C20E922A60DBE755BBB",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-25 14:24:42",
+      "seconds": 130.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t",
+          "ok": true,
+          "seconds": 16.9,
+          "evidence": "typed 'CDS': Command: | Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 80 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Settings\" \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" \"123\"",
+          "ok": true,
+          "seconds": 11.1,
+          "evidence": "ui set 'Settings' AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm = 123: SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set2",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 80 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr",
+          "ok": true,
+          "seconds": 27.9,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31424151_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t3",
+          "ok": true,
+          "seconds": 16.6,
+          "evidence": "typed 'CDS': Command: | Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set3",
+          "ok": true,
+          "seconds": 8.7,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 80 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr3",
+          "ok": true,
+          "seconds": 26.1,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end3",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31424151_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $set \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"125\"",
+          "ok": true,
+          "expected": "125",
+          "actual": "125",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '125' (expected '125')"
+        },
+        {
+          "n": 2,
+          "text": "control $set3 \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"125\"",
+          "ok": true,
+          "expected": "125",
+          "actual": "125",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '125' (expected '125')"
+        },
+        {
+          "n": 3,
+          "text": "control-text $set3 has \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window shows 'No changes. Everything shown is saved.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 4,
+          "text": "window-closed $pr3",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_end3 \"Settings (CDS)\"",
+          "ok": true,
+          "expected": "does not contain 'Settings (CDS)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31424151_B1.dwg]",
+          "evidence": "'Settings (CDS)' is absent from: Autodesk AutoCAD 2027 - [CLDV31424151_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "control $set \"AdvancedSettingsDialog.CancelCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.CancelCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.CancelCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 7,
+          "text": "control $set \"AdvancedSettingsDialog.OkCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.OkCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.OkCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 8,
+          "text": "control $set \"Settings, Settings Tabs, Drafting\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Drafting' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Drafting' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 9,
+          "text": "control $set \"Settings, Settings Tabs, Pipes and Pits\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Pipes and Pits' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Pipes and Pits' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 10,
+          "text": "control $set \"Settings, Settings Tabs, Design\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Design' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Design' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 11,
+          "text": "control $set \"Settings, Settings Tabs, Survey\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Survey' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Survey' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 12,
+          "text": "control $set \"Settings, Settings Tabs, Display\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Display' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Display' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 13,
+          "text": "control $set \"Settings, Settings Tabs, Advanced\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Advanced' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Advanced' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 14,
+          "text": "control $set \"Settings, Settings Tabs, Newer tools\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Newer tools' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Newer tools' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 15,
+          "text": "control $set \"Settings, Settings Tabs, Fixes\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Fixes' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Fixes' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 16,
+          "text": "control-text $set has \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window shows 'No changes. Everything shown is saved.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 17,
+          "text": "window-closed $pr",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 18,
+          "text": "not-contains $win_end \"Settings (CDS)\"",
+          "ok": true,
+          "expected": "does not contain 'Settings (CDS)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31424151_B1.dwg]",
+          "evidence": "'Settings (CDS)' is absent from: Autodesk AutoCAD 2027 - [CLDV31424151_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "text": "control $set2 \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"123\"",
+          "ok": true,
+          "expected": "123",
+          "actual": "123",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '123' (expected '123')"
+        },
+        {
+          "n": 20,
+          "text": "control-text $set2 absent \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window lacks 'No changes. Everything shown is saved.'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 21,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 8 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDS completed 49406 ms ; Command outcome: CDS completed 32103 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-25 14:26:53",
+      "session_id": "RUN-20261025-1424-C3.0.75-b3z5-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: the independent review (R07_settings_window_cancel.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R09_OFF_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R09: the switch doubleClick.sourceEditWindow is OFF, so AutoCAD's own editor opens instead of the CE Edit source window (must FAIL)",
+      "kind": "deterministic",
+      "order": 91,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R09 (a real switch)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R09",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "Batch 3 fixes of 25 Oct 2026: run unchanged first on Civil 3.0.75 it FAILED for the real reason (the double-click opened AutoCAD's Enhanced Attribute Editor, run b3r09a), so the Tag box name is still unknown. Cancel is now pressed with ui-press (Edit source, Cancel) and its closing is asserted; close-windows stays behind it only to put AutoCAD right if the wrong window opened. The true red after this edit is the variant R09_OFF_BROKEN (the switch doubleClick.sourceEditWindow set false: AutoCAD's editor must open).",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug."
+      ],
+      "file_sha256": "301DB4117A1AC88223DA9C388363A42ABD5832BE37ECF1A702F3D876CC39F6B9",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Edit source' is NOT in: Enhanced Attribute Editor",
+      "started": "2026-10-25 14:31:51",
+      "seconds": 106.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 60 -> $placed",
+          "ok": true,
+          "seconds": 30.4,
+          "evidence": "typed 'DP 3000,3000': Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 12 -> $tail",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "history: Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnification or height <23920.948>: 3000 | Command: | Comm..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55C AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C564 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"name~^DOWNPIPE\" -> $dp_blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55C DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dp_blocks handle -> $dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55C"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-part",
+          "text": "ent-part $dp outer-circle -> $part",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "outer circle of 11C55C is part block:1 (world radius 75)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 1200\"",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _C 3000,3000 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 view-read : view stored: centre 3,000.000,3,000.000 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 18.0,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w0",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31427232_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-dblclick \"ent {$dp}\" -Part \"{$part}\" -> $dc",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "v3 pt-dblclick ent 11C55C: pt-dblclick: world 3,075.000,3,000.000 -> pixel 2763,706 (exact 2,763.02,706.00); cursor read-back 2763,706; view live (aim check: AutoCAD reports 1 object(s) picked: 11C55C (expected 11C55C); after Esc 0 selected)"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "windows-new",
+          "text": "windows-new $w0 -> $opened",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "new window(s): Enhanced Attribute Editor"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 3 -> $es",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV31427232_B1.dwg] ; Enhanced Attribute Editor ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Cancel\" -Optional -> $esc",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui-press 'Cancel' (optional) not done: no visible allowed window matches /Edit source/"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 19.7,
+          "evidence": "closed open CE windows: round 1: 'Enhanced Attribute Editor' <- Cancel : ok=True"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Tag: DP1\"",
+          "ok": true,
+          "expected": "command line has 'Tag: DP1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "contains $opened \"Edit source\"",
+          "ok": false,
+          "expected": "contains 'Edit source'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Edit source' is NOT in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 3,
+          "text": "not-contains $opened \"Enhanced Attribute Editor\"",
+          "ok": false,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Enhanced Attribute Editor' WAS found in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 4,
+          "text": "control $es \"Tag\" value \"DP1\"",
+          "ok": false,
+          "expected": "control 'Tag' value",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'Tag' could not be read"
+        },
+        {
+          "n": 5,
+          "text": "window-closed $esc",
+          "ok": false,
+          "expected": "the window closed",
+          "actual": "closed=",
+          "evidence": "ui-press reported window_closed = "
+        },
+        {
+          "n": 6,
+          "text": "record $opened \"the window(s) the double-click opened\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "RECORDED, not judged: the window(s) the double-click opened = Enhanced Attribute Editor"
+        },
+        {
+          "n": 7,
+          "text": "record $placed \"what the DP command printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N...",
+          "evidence": "RECORDED, not judged: what the DP command printed = Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 95 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 31320 ms",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-25 14:33:38",
+      "session_id": "RUN-20261025-1424-C3.0.75-b3z5-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}
