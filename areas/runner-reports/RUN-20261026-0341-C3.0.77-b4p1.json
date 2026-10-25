@@ -1,0 +1,584 @@
+{
+  "header": {
+    "run_id": "RUN-20261026-0341-C3.0.77-b4p1",
+    "started": "2026-10-26 03:41:06",
+    "finished": "2026-10-26 03:42:52",
+    "build": {
+      "civil": {
+        "product_version": "3.0.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+        "file_version": "3.0.77.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+        "file_version": "1.1.77.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.77+0d885094 / struc 1.0.124+3a3caac5 / mgr 1.1.77+0d885094",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "557E0B3F183012A55F4C5F1247F4C7B5EEBD4482FE2ABD782FFB39223F01804D",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.77+0d8850949cb764e4b3af36f99276b74312584ce5; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 A229DC0BAFA1, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 557E0B3F183012A55F4C5F1247F4C7B5EEBD4482FE2ABD782FFB39223F01804D; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 26 Oct 2026 03:41 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261026-0341-C3.0.77-b4p1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-26 03:41:11",
+      "finished": "2026-10-26 03:42:52",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30341161_B1.dwg",
+      "cases": [
+        "PRB12B"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PRB12B",
+      "proves_bugs": "",
+      "title": "probe: IL texts near pit P3",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "probe",
+      "why_not_unit": "probe",
+      "not_automated": [],
+      "file_sha256": "2E30BAF1C427E1B78DE0D110F83A9566B6FD64A6CEC984A3D5FED0F8D841295A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 03:42:13",
+      "seconds": 20.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $a0",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a5",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $a10",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a5 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $n5",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a10 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $n10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n0 handle -All -> $h0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n0 text -All -> $t0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' of an empty list: empty"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n0 x -All -> $x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' of an empty list: empty"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n0 y -All -> $y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' of an empty list: empty"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n5 handle -All -> $h5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n5 text -All -> $t5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.25 | IL 17.30 | IL 18.10 | IL 18.10"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n5 x -All -> $x5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54327.7237944863 | 52367.6304628793 | 53026.7474394765 | 54262.9263743631"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n5 y -All -> $y5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25217.5591057691 | -25217.6066650945 | -26891.457980793 | -26095.5347073798"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n10 handle -All -> $h10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n10 text -All -> $t10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.24"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n10 x -All -> $x10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53922.4981693185 | 53376.6145419975"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n10 y -All -> $y10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25007.0580650023 | -25031.4544549785"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"handle=116A0E\" -> $q0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a5 \"handle=116A0E\" -> $q5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 116A0E IL 18.10 20TEXT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a10 \"handle=116A0E\" -> $q10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q0 text -All -> $qt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' of an empty list: empty"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q5 text -All -> $qt5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.10"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q10 text -All -> $qt10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' of an empty list: empty"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q0 x -All -> $qx0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' of an empty list: empty"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q5 x -All -> $qx5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53026.7474394765"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q10 x -All -> $qx10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' of an empty list: empty"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q0 y -All -> $qy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' of an empty list: empty"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q5 y -All -> $qy5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26891.457980793"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q10 y -All -> $qy10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' of an empty list: empty"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $h0 \"FULL c0 handles\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL c0 handles = "
+        },
+        {
+          "n": 2,
+          "text": "record $t0 \"FULL c0 texts\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL c0 texts = "
+        },
+        {
+          "n": 3,
+          "text": "record $x0 \"FULL c0 x\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL c0 x = "
+        },
+        {
+          "n": 4,
+          "text": "record $y0 \"FULL c0 y\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL c0 y = "
+        },
+        {
+          "n": 5,
+          "text": "record $h5 \"FULL c5 handles\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "RECORDED, not judged: FULL c5 handles = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 6,
+          "text": "record $t5 \"FULL c5 texts\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.25 | IL 17.30 | IL 18.10 | IL 18.10",
+          "evidence": "RECORDED, not judged: FULL c5 texts = IL 17.25 | IL 17.30 | IL 18.10 | IL 18.10"
+        },
+        {
+          "n": 7,
+          "text": "record $x5 \"FULL c5 x\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "54327.7237944863 | 52367.6304628793 | 53026.7474394765 | 54262.9263743631",
+          "evidence": "RECORDED, not judged: FULL c5 x = 54327.7237944863 | 52367.6304628793 | 53026.7474394765 | 54262.9263743631"
+        },
+        {
+          "n": 8,
+          "text": "record $y5 \"FULL c5 y\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-25217.5591057691 | -25217.6066650945 | -26891.457980793 | -26095.5347073798",
+          "evidence": "RECORDED, not judged: FULL c5 y = -25217.5591057691 | -25217.6066650945 | -26891.457980793 | -26095.5347073798"
+        },
+        {
+          "n": 9,
+          "text": "record $h10 \"FULL c10 handles\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "116BB6 | 116BE4",
+          "evidence": "RECORDED, not judged: FULL c10 handles = 116BB6 | 116BE4"
+        },
+        {
+          "n": 10,
+          "text": "record $t10 \"FULL c10 texts\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.24 | IL 18.24",
+          "evidence": "RECORDED, not judged: FULL c10 texts = IL 18.24 | IL 18.24"
+        },
+        {
+          "n": 11,
+          "text": "record $x10 \"FULL c10 x\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "53922.4981693185 | 53376.6145419975",
+          "evidence": "RECORDED, not judged: FULL c10 x = 53922.4981693185 | 53376.6145419975"
+        },
+        {
+          "n": 12,
+          "text": "record $y10 \"FULL c10 y\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-25007.0580650023 | -25031.4544549785",
+          "evidence": "RECORDED, not judged: FULL c10 y = -25007.0580650023 | -25031.4544549785"
+        },
+        {
+          "n": 13,
+          "text": "record $qt0 \"116A0E in c0 text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: 116A0E in c0 text = "
+        },
+        {
+          "n": 14,
+          "text": "record $qt5 \"116A0E in c5 text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.10",
+          "evidence": "RECORDED, not judged: 116A0E in c5 text = IL 18.10"
+        },
+        {
+          "n": 15,
+          "text": "record $qt10 \"116A0E in c10 text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: 116A0E in c10 text = "
+        },
+        {
+          "n": 16,
+          "text": "record $qx0 \"116A0E in c0 x\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: 116A0E in c0 x = "
+        },
+        {
+          "n": 17,
+          "text": "record $qx5 \"116A0E in c5 x\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "53026.7474394765",
+          "evidence": "RECORDED, not judged: 116A0E in c5 x = 53026.7474394765"
+        },
+        {
+          "n": 18,
+          "text": "record $qx10 \"116A0E in c10 x\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: 116A0E in c10 x = "
+        },
+        {
+          "n": 19,
+          "text": "record $qy0 \"116A0E in c0 y\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: 116A0E in c0 y = "
+        },
+        {
+          "n": 20,
+          "text": "record $qy5 \"116A0E in c5 y\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-26891.457980793",
+          "evidence": "RECORDED, not judged: 116A0E in c5 y = -26891.457980793"
+        },
+        {
+          "n": 21,
+          "text": "record $qy10 \"116A0E in c10 y\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: 116A0E in c10 y = "
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-26 03:42:33",
+      "session_id": "RUN-20261026-0341-C3.0.77-b4p1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PRB12B_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

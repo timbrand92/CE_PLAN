@@ -1,0 +1,2412 @@
+{
+  "header": {
+    "run_id": "RUN-20261026-0446-C3.0.77-b4a2",
+    "started": "2026-10-26 04:46:45",
+    "finished": "2026-10-26 05:40:13",
+    "build": {
+      "civil": {
+        "product_version": "3.0.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+        "file_version": "3.0.77.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+        "file_version": "1.1.77.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.77+0d885094 / struc 1.0.124+3a3caac5 / mgr 1.1.77+0d885094",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "D63EA5998829464A29A8C6E91812DA00C695DCF385188349B3D4A96B1B6DFD18",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.77+0d8850949cb764e4b3af36f99276b74312584ce5; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 A229DC0BAFA1, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 9 case file(s) plus 1 shared setup(s); pack SHA-256 D63EA5998829464A29A8C6E91812DA00C695DCF385188349B3D4A96B1B6DFD18; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 26 Oct 2026 04:46 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 5,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-26 05:01:10",
+      "finished": "2026-10-26 05:09:22",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30501141_B1.dwg",
+      "cases": [
+        "R06",
+        "R06_BROKEN",
+        "R04_SAVE_BROKEN"
+      ],
+      "calibration": null,
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Codex-D6",
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-26 05:32:25",
+      "finished": "2026-10-26 05:40:13",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30532292_B1.dwg",
+      "cases": [
+        "R37b",
+        "R37b_BROKEN",
+        "R37b_COPY_BROKEN",
+        "R40",
+        "R40_BROKEN",
+        "R04"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R06",
+      "proves_bugs": "",
+      "title": "About CE Suite shows the installed version of each suite and closes",
+      "kind": "look",
+      "order": 30,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "About CE Suite window (spec C12)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "The About CE Suite window lists Civil Suite, Structural Suite and Suite Manager, each followed by its installed version (on the first build under test: Civil v3.0.70, Structural v1.0.121, Manager v1.1.70, always compared with the DLLs read live), no row says CONFLICT or Not loaded, and the window closes by its Close button with AutoCAD idle afterwards.",
+      "why_not_unit": "The version rows come from the DLLs AutoCAD actually loaded, and the window must open, show and close inside the real AutoCAD (runs 44 and 46 could not close it by script).",
+      "not_automated": [],
+      "file_sha256": "6D94611EC40B3F53123A72CAE8FDF6A95170DA92FE30E15DB81B309D968B92FE",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 05:01:55",
+      "seconds": 53.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CE_VERSION\" -Force -ExpectWindow \"About CE Suite\" -> $t",
+          "ok": true,
+          "seconds": 14.5,
+          "evidence": "typed 'CE_VERSION': Command: | Command: CE_VERSION"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"About CE Suite\" -> $about",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui-dump 'About CE Suite': 22 controls, tabs: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "capture",
+          "text": "capture $about R06_about -> $pic",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "picture R06_about.png 470x390, SHA-256 57526DCAE935, blank=False, duplicate_of="
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"About CE Suite\" \"Close\" -> $pr",
+          "ok": true,
+          "seconds": 26.6,
+          "evidence": "pressed 'Close' in /About CE Suite/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30501141_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $about \"Close\" exists",
+          "ok": true,
+          "expected": "control 'Close' exists",
+          "actual": "2",
+          "evidence": "'Close' found in 'About CE Suite' (2 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "control-next $about \"Civil Suite\" \"v{$dll_civil}\"",
+          "ok": true,
+          "expected": "v3.0.77",
+          "actual": "v3.0.77",
+          "evidence": "the text after 'Civil Suite' is 'v3.0.77' (expected 'v3.0.77')"
+        },
+        {
+          "n": 3,
+          "text": "control-next $about \"Structural Suite\" \"v{$dll_struc}\"",
+          "ok": true,
+          "expected": "v1.0.124",
+          "actual": "v1.0.124",
+          "evidence": "the text after 'Structural Suite' is 'v1.0.124' (expected 'v1.0.124')"
+        },
+        {
+          "n": 4,
+          "text": "control-next $about \"Suite Manager\" \"v{$dll_mgr}\"",
+          "ok": true,
+          "expected": "v1.1.77",
+          "actual": "v1.1.77",
+          "evidence": "the text after 'Suite Manager' is 'v1.1.77' (expected 'v1.1.77')"
+        },
+        {
+          "n": 5,
+          "text": "control-text $about absent \"CONFLICT\"",
+          "ok": true,
+          "expected": "window lacks 'CONFLICT'",
+          "actual": "0",
+          "evidence": "no control of 'About CE Suite' shows 'CONFLICT'"
+        },
+        {
+          "n": 6,
+          "text": "control-text $about absent \"Not loaded\"",
+          "ok": true,
+          "expected": "window lacks 'Not loaded'",
+          "actual": "0",
+          "evidence": "no control of 'About CE Suite' shows 'Not loaded'"
+        },
+        {
+          "n": 7,
+          "text": "control-text $about has \"AutoCAD\"",
+          "ok": true,
+          "expected": "window shows 'AutoCAD'",
+          "actual": "2",
+          "evidence": "window 'About CE Suite' shows 'AutoCAD tools for Creative Engineering'"
+        },
+        {
+          "n": 8,
+          "text": "control-text $about has \".NET\"",
+          "ok": true,
+          "expected": "window shows '.NET'",
+          "actual": "1",
+          "evidence": "window 'About CE Suite' shows '.NET 10.0.12'"
+        },
+        {
+          "n": 9,
+          "text": "picture-ok $pic",
+          "ok": true,
+          "expected": "picture saved, not blank, not duplicate",
+          "actual": "blank=False duplicate=",
+          "evidence": "picture R06_about.png SHA-256 57526DCAE935 blank=False duplicate_of="
+        },
+        {
+          "n": 10,
+          "text": "window-closed $pr",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win_end \"About CE Suite\"",
+          "ok": true,
+          "expected": "does not contain 'About CE Suite'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30501141_B1.dwg]",
+          "evidence": "'About CE Suite' is absent from: Autodesk AutoCAD 2027 - [CLDV30501141_B1.dwg]"
+        }
+      ],
+      "pictures": [
+        {
+          "path": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261026-0446-C3.0.77-b4a2\\pictures\\R06_about.png",
+          "sha256": "57526DCAE935BBCEDCB7B09B44F9602580EB43FD97B387B43BF01A3726F8C735",
+          "width": 470,
+          "height": 390,
+          "blank": false,
+          "duplicate_of": null,
+          "dpi": 96,
+          "window_title": "About CE Suite",
+          "taken": "2026-10-26 05:02:16",
+          "method": "PrintWindow of the window handle read by UI Automation"
+        }
+      ],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:02:48",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: the independent review (R06_about_ce_suite_versions.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)",
+          "look case: a Codex look at the picture has not been recorded (RULES 5.7: a window is never accepted by a machine)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      },
+      "look_note": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261026-0446-C3.0.77-b4a2\\looks\\R06.md"
+    },
+    {
+      "id": "R06_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R06: expects a CONFLICT row and Civil v9.9.9 (must FAIL)",
+      "kind": "deterministic",
+      "order": 94,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R06",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R06",
+      "expected": "This variant is wrong on purpose: the About window shows the installed versions and no CONFLICT row, so both expectations fail.",
+      "why_not_unit": "It exists only to prove R06's checks can fail.",
+      "not_automated": [],
+      "file_sha256": "64832165EEB7172436BEDC4ED6FB09C51CDF00CF1698BDACAFFAE92E312D4E1A",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no control of 'About CE Suite' shows 'CONFLICT' (22 controls read)",
+      "started": "2026-10-26 05:02:48",
+      "seconds": 58.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CE_VERSION\" -Force -ExpectWindow \"About CE Suite\" -> $t",
+          "ok": true,
+          "seconds": 14.9,
+          "evidence": "typed 'CE_VERSION': Command: CE_VERSION"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"About CE Suite\" -> $about",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui-dump 'About CE Suite': 22 controls, tabs: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"About CE Suite\" \"Close\" -> $pr",
+          "ok": true,
+          "seconds": 24.5,
+          "evidence": "pressed 'Close' in /About CE Suite/: window closed = True"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control-text $about has \"CONFLICT\"",
+          "ok": false,
+          "expected": "window shows 'CONFLICT'",
+          "actual": "0",
+          "evidence": "no control of 'About CE Suite' shows 'CONFLICT' (22 controls read)"
+        },
+        {
+          "n": 2,
+          "text": "control-next $about \"Civil Suite\" \"v9.9.9\"",
+          "ok": false,
+          "expected": "v9.9.9",
+          "actual": "v3.0.77",
+          "evidence": "the text after 'Civil Suite' is 'v3.0.77' (expected 'v9.9.9')"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30501141_B1_1372f9423.log)",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:03:46",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R04_SAVE_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R04: the drawing is saved by the driver, so the file on disk changes (must FAIL)",
+      "kind": "deterministic",
+      "order": 99,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R04 (UX-STD-03, daily case D18)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R04",
+      "expected": "This variant is wrong on purpose: a save happens, so the file hash and time on disk differ from the start and R04's 'copy-unchanged' check fails. The checks before it (relinked, recovered, Pit Schedule closed) still pass.",
+      "why_not_unit": "It exists only to prove R04's file-unchanged check can go red when a save really happens in AutoCAD.",
+      "not_automated": [],
+      "file_sha256": "CF906DD5B5FBFF6F389E4887BFAAD87E2218770347FA2ABF756FEB456DF2EF4C",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "SHA-256 95C1524BED34 vs 34BBE37C2EA4; last written 05:08:57 DIFFERENT",
+      "started": "2026-10-26 05:03:46",
+      "seconds": 314.4,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 05:07:46",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30501141_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 13.6,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 10.9,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 96.2,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 17.3,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 11.4,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 11.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 50.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30501141_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C64F CeCvlPipeObject STORMWATER PIPE ; 11C655 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65A AcDbMText 20TEXT IL 18.000 ; 11C65F AcDbMText 20TEXT IL 17.900 ; 11C681 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSYNC\" -Force -> $sync",
+          "ok": true,
+          "seconds": 10.6,
+          "evidence": "typed 'CDSYNC': Command: | Command: CDSYNC | [CE] CDSYNC will re-link every pit and pipe in this drawing to CE's records, from what is currently drawn. One U undoes it. | CDSYNC complete. Pits relinked: 12, Pipes relinked: 50"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRECOVERINVERTS\" -Force -> $recover",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'CDRECOVERINVERTS': Command: | Command: CDRECOVERINVERTS | CDRECOVERINVERTS: Found 50 pipes in project data, 26 with stored invert values. | CDRECOVERINVERTS: 26 pipes recovered, 0 invert texts written, 21 already had invert text, 24 skippe..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 23.9,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $psc",
+          "ok": true,
+          "seconds": 21.7,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "save-copy",
+          "text": "save-copy -> $sv",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "save-copy: file changed on disk = True; SHA-256 34BBE37C2EA4 -> 95C1524BED34; DBMOD 17 -> 0"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30501141_B1.dwg: 972282 bytes, SHA-256 95C1524BED34, last written 05:08:57; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"relinked\"",
+          "ok": true,
+          "expected": "command line has 'relinked'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDSYNC complete. Pits relinked: 12, Pipes relinked: 50'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"recovered\"",
+          "ok": true,
+          "expected": "command line has 'recovered'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDRECOVERINVERTS: 26 pipes recovered, 0 invert texts written, 21 already had invert text, 24 skipped (no levels in the project record, not in the drawing, or upstream end not proven).'"
+        },
+        {
+          "n": 3,
+          "text": "window-closed $psc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 4,
+          "text": "copy-unchanged $copy0",
+          "ok": false,
+          "expected": "file unchanged",
+          "actual": "CHANGED",
+          "evidence": "SHA-256 95C1524BED34 vs 34BBE37C2EA4; last written 05:08:57 DIFFERENT"
+        },
+        {
+          "n": 5,
+          "text": "folder-new-only $copy0 \"_PRE_C7_.*\\.dwg$\"",
+          "ok": true,
+          "expected": "new files only /_PRE_C7_.*\\.dwg$/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30501141_B1_1b6eccd21.log)",
+        "Civil CE log: 317 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 135776 ms ; Command outcome: CD completed 91445 ms ; Command outcome: CDSYNC completed 5385 ms ; Command outcome: CDRECOVERINVERTS completed 68 ms ; Command outcome: PITSCHEDULE completed 37789 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:09:01",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R37b",
+      "proves_bugs": "BUG-236 (the PD1 text is linked to its drain: MOVE of the drain moves the text by the same 1000 mm, ERASE of the drain erases the text, and COPY of the drain gives the copy its own PD2 text and record instead of a second PD1; the text height from Settings is not driven)",
+      "title": "The PD1 text of a perimeter drain moves with the drain on MOVE and goes with it on ERASE, and a COPY of the drain gets its own PD2 text",
+      "kind": "deterministic",
+      "order": 37,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Perimeter drain tag (triage group R2; daily card D07 neighbour); BUG-236",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-236 in BUG_CARPARK.md (test that catches it: erase / move / copy a perimeter drain: its PD1 text follows or goes; the height reads from Settings). COPY (a second PD1) and the height from Settings are NOT driven here.",
+      "variant_of": "",
+      "expected": "After CDPERIMETER places PD1 (polyline and text PD1 on layer AGI DRAIN), a native MOVE of the drain polyline by 0,1000 moves the PD1 text by 1000 as well (its y is 1000 higher), and ERASE of the drain polyline leaves no PD1 text in the drawing. A COPY of the drain by 0,3000 prints \"Perimeter drain copy is PD2: it has its own record and its own PD2 text.\" and adds one PD2 text 3000 higher than PD1 (PD1 and PD2 are then the only PD texts); after the MOVE and the ERASE of the original the copy's PD2 text is still there. The drawing file on disk is unchanged.",
+      "why_not_unit": "The link between the drawn tag and its drain is kept by CE watching native MOVE and ERASE in the live drawing.",
+      "not_automated": [
+        "Batch 3 fixes of 25 Oct 2026: the COPY half is now driven (probe b3p1: CE prints \"Perimeter drain copy is PD2: it has its own record and its own PD2 text.\" and the copy carries a PD2 MText 3000 higher). Renumbering of a first drain and the text height read from Settings (the R-00 item: the key is not known and ent-read of an MText gives no height) are NOT driven, so BUG-236 is proved for move, erase and copy only."
+      ],
+      "file_sha256": "AFAA3A7A7A17B46685DBA0E27CF258FD35E71E0C695B97EFEE27CAF49F82AA87",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 05:33:03",
+      "seconds": 39.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30532292_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPERIMETER{NL}{NL}150000,-80000{NL}152000,-80000{NL}{NL}{NL}18{NL}17.9{NL}\" -Force -TimeoutSec 90 -> $pd",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'CDPERIMETER 150000,-80000 152000,-80000 18 17.9': Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]:..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pde",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"object~^AcDbPolyline$\" -> $pd_line",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 AGI DRAIN"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PD1$\" -> $pd_tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55A PD1 AGI DRAIN"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_line handle -> $hline",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag handle -> $htag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55A"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag y -> $ty0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79925"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hline}\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,3000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.COPY 0,0 0,3000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,3000 | ..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_copy",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "4 object(s) after index 1034 (model space now 1038); by type: AcDbMText 2; AcDbPolyline 2; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1 ; 11C562 AcDbPolyline AGI DRAIN ; 11C566 AcDbMText AGI DRAIN PD2"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_copy \"text~^PD\" -> $cp_tags",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 4: 11C55A PD1 AGI DRAIN ; 11C566 PD2 AGI DRAIN"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_tags text -All -> $cp_tag_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = PD1 | PD2"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_copy \"text~^PD2$\" -> $cp_tag2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 4: 11C566 PD2 AGI DRAIN"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_tag2 y -> $cp_ty",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -76925"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hline}\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C559: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,1000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.MOVE 0,0 0,1000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1000"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_move",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "4 object(s) after index 1034 (model space now 1038); by type: AcDbMText 2; AcDbPolyline 2; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1 ; 11C562 AcDbPolyline AGI DRAIN ; 11C566 AcDbMText AGI DRAIN PD2"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_move \"handle~^{$htag}$\" -> $tag_m",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 4: 11C55A PD1 AGI DRAIN"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $tag_m y -> $ty1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -78925"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hline}\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ERASE\" -Force -> $er",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.ERASE': Command: | Command: _.ERASE | 1 found"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_erase",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C562 AcDbPolyline AGI DRAIN ; 11C566 AcDbMText AGI DRAIN PD2"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_erase \"handle~^{$htag}$\" -> $tag_e",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_erase \"text~^PD1$\" -> $any_pd1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_erase \"text~^PD2$\" -> $pd2_left",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C566 PD2 AGI DRAIN"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $pd_tag = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd_tag = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "number $ty1 = -78925 +- 5",
+          "ok": true,
+          "expected": "= -78925",
+          "actual": "-78925",
+          "evidence": "$ty1 = -78925 (expected = -78925 +- 5)"
+        },
+        {
+          "n": 3,
+          "text": "count $tag_e = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $tag_e = 0 (expected = 0)"
+        },
+        {
+          "n": 4,
+          "text": "count $any_pd1 = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $any_pd1 = 0 (expected = 0)"
+        },
+        {
+          "n": 5,
+          "text": "contains $cp \"Perimeter drain copy is PD2: it has its own record and its own PD2 text.\"",
+          "ok": true,
+          "expected": "contains 'Perimeter drain copy is PD2: it has its own record and its own PD2 text.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found 'Perimeter drain copy is PD2: it has its own record and its own PD2 text.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 6,
+          "text": "equals $cp_tag_text \"PD1 | PD2\"",
+          "ok": true,
+          "expected": "PD1 | PD2",
+          "actual": "PD1 | PD2",
+          "evidence": "value 'PD1 | PD2' (expected 'PD1 | PD2')"
+        },
+        {
+          "n": 7,
+          "text": "number $cp_ty = -76925 +- 5",
+          "ok": true,
+          "expected": "= -76925",
+          "actual": "-76925",
+          "evidence": "$cp_ty = -76925 (expected = -76925 +- 5)"
+        },
+        {
+          "n": 8,
+          "text": "count $pd2_left = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd2_left = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $ty0 \"PD1 text y before the MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-79925",
+          "evidence": "RECORDED, not judged: PD1 text y before the MOVE = -79925"
+        },
+        {
+          "n": 12,
+          "text": "record $ty1 \"PD1 text y after the MOVE (expected 1000 higher)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-78925",
+          "evidence": "RECORDED, not judged: PD1 text y after the MOVE (expected 1000 higher) = -78925"
+        },
+        {
+          "n": 13,
+          "text": "record $mv \"FULL MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1000",
+          "evidence": "RECORDED, not judged: FULL MOVE = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1000"
+        },
+        {
+          "n": 14,
+          "text": "record $er \"FULL ERASE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ERASE | 1 found",
+          "evidence": "RECORDED, not judged: FULL ERASE = Command: | Command: _.ERASE | 1 found"
+        },
+        {
+          "n": 15,
+          "text": "record $after_erase \"FULL objects left by the drain after ERASE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C562\",\"object\":\"AcDbPolyline\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-77000.0} | {\"index\":1035,\"handle\":\"11C566\",\"object\":\"AcDbMText\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"PD2\",\"x\":151000.0,\"y\":-76925.0}",
+          "evidence": "RECORDED, not judged: FULL objects left by the drain after ERASE = {\"index\":1034,\"handle\":\"11C562\",\"object\":\"AcDbPolyline\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-77000.0} | {\"index\":1035,\"handle\":\"11C566\",\"object\":\"AcDbMText\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"PD2\",\"x\":151000.0,\"y\":-76925.0}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 42 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPERIMETER completed 249 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:33:43",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R37b_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R37b_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R37b: the drain is not moved or erased, so the PD1 text neither moves nor goes (must FAIL)",
+      "kind": "deterministic",
+      "order": 38,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R37b (a real switch: the MOVE and ERASE are left out)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R37b",
+      "expected": "This variant is wrong on purpose: with no MOVE the text y stays -79925 and with no ERASE the PD1 text is still in the drawing.",
+      "why_not_unit": "It exists only to prove R37b's move and erase checks can go red.",
+      "not_automated": [],
+      "file_sha256": "9F40F9896631D39756972B12F437DA5AA4964BBFDD8E00A8D42AEAA0A3984556",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "$ty1 = -79925 (expected = -78925 +- 5)",
+      "started": "2026-10-26 05:33:43",
+      "seconds": 16.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPERIMETER{NL}{NL}150000,-80000{NL}152000,-80000{NL}{NL}{NL}18{NL}17.9{NL}\" -Force -TimeoutSec 90 -> $pd",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CDPERIMETER 150000,-80000 152000,-80000 18 17.9': Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pde",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PD1$\" -> $pd_tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55A PD1 AGI DRAIN"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag handle -> $htag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55A"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag y -> $ty1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79925"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PD1$\" -> $any_pd1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55A PD1 AGI DRAIN"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "number $ty1 = -78925 +- 5",
+          "ok": false,
+          "expected": "= -78925",
+          "actual": "-79925",
+          "evidence": "$ty1 = -79925 (expected = -78925 +- 5)"
+        },
+        {
+          "n": 2,
+          "text": "count $any_pd1 = 0",
+          "ok": false,
+          "expected": "count = 0",
+          "actual": "1",
+          "evidence": "count of $any_pd1 = 1 (expected = 0)"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30532292_B1_172260e65.log)",
+        "Civil CE log: 13 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPERIMETER completed 76 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:33:59",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R37b_COPY_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R37b: expects a second PD1 after a COPY of the drain (must FAIL)",
+      "kind": "deterministic",
+      "order": 38,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R37b (the copy half)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R37b",
+      "expected": "This variant is wrong on purpose: the copied drain carries PD2, not a second PD1.",
+      "why_not_unit": "It exists only to prove R37b's copy check can go red.",
+      "not_automated": [],
+      "file_sha256": "795EB9EF387F635C02F937B3342ACB5F9AF26C8FF2F69D2163656E1E41D6841D",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "value 'PD1 | PD2' (expected 'PD1 | PD1')",
+      "started": "2026-10-26 05:33:59",
+      "seconds": 26.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPERIMETER{NL}{NL}150000,-80000{NL}152000,-80000{NL}{NL}{NL}18{NL}17.9{NL}\" -Force -TimeoutSec 90 -> $pd",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CDPERIMETER 150000,-80000 152000,-80000 18 17.9': Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pde",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"object~^AcDbPolyline$\" -> $pd_line",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 AGI DRAIN"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_line handle -> $hline",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hline}\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C559: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C559\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,3000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.COPY 0,0 0,3000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,3000 | ..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_copy",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "4 object(s) after index 1034 (model space now 1038); by type: AcDbMText 2; AcDbPolyline 2; first: 11C559 AcDbPolyline AGI DRAIN ; 11C55A AcDbMText AGI DRAIN PD1 ; 11C562 AcDbPolyline AGI DRAIN ; 11C566 AcDbMText AGI DRAIN PD2"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_copy \"text~^PD\" -> $cp_tags",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 4: 11C55A PD1 AGI DRAIN ; 11C566 PD2 AGI DRAIN"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_tags text -All -> $cp_tag_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = PD1 | PD2"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "equals $cp_tag_text \"PD1 | PD1\"",
+          "ok": false,
+          "expected": "PD1 | PD1",
+          "actual": "PD1 | PD2",
+          "evidence": "value 'PD1 | PD2' (expected 'PD1 | PD1')"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30532292_B1_14785e365.log)",
+        "Civil CE log: 31 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPERIMETER completed 75 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:34:25",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R40",
+      "proves_bugs": "BUG-606 (CDCHECKDWG on the current drawing writes no report file beside the source drawing: the folder of the test copy gets only AutoCAD lock files and the CE backup; the report went to the CE logs folder on this PC instead)",
+      "title": "CDCHECKDWG on the current drawing prints one summary line (not a long dump), opens the results window, closes cleanly, and changes nothing in the drawing file",
+      "kind": "look",
+      "order": 45,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDCHECKDWG (daily card D28; triage groups C2 and W2)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with daily card D28 (assertions 1 to 4: the four CE lines in order, one summary line matching the layer recognition pattern, at most 5 new CE lines, window title and Close, one new report file beside the drawing, file hash unchanged). BUG-606 says that report file beside the drawing is wrong (approved CV07: reports go to the approved project report location); on 3.0.75 the command still prints \"wrote report: <path>\" (the case asserts that line) and no file lands beside the drawing; the path is under %APPDATA%, folder TIM_CE_CADTOOLS, subfolder logs, subfolder checkdwg. Whether that folder is the \"approved project report location\" of BUG-606 and CV7-12 is NOT recorded anywhere found (25 Oct 2026 batch 3 review): the desk owns that question, so this case does not claim BUG-606 is fixed. The case asserts \"no report beside the drawing\" instead of card step 4 (a new report file beside the drawing); card D28 step 4 is out of date. Batch 3 fixes of 25 Oct 2026: stale sentence replaced, a stray backspace character (left in this file by an earlier sed on the logs\\checkdwg path) removed, and the C1 claim dropped (C1 is CDCHECK, not CDCHECKDWG).",
+      "variant_of": "",
+      "expected": "CDCHECKDWG with the empty answer prints \"[CE] CDCHECKDWG: checking current drawing (...)\", \"[CE] CDCHECKDWG reading: <path>\", exactly one summary line \"[CE] CDCHECKDWG: <n>.<n>% layer recognition, <n> unrecognized layers, <n> QA findings ...\" and \"[CE] CDCHECKDWG wrote report: <path>\" (four CE lines, no long dump); the report path is in the CE logs folder under TIM_CE_CADTOOLS (folder logs, subfolder checkdwg), not beside the drawing; the window \"Check consultant drawing results (CDCHECKDWG)\" opens and its Close button closes it; no report file appears beside the drawing (only AutoCAD lock files and the CE backup are new in the test-copy folder); the drawing file SHA-256 does not change.",
+      "why_not_unit": "The command reads a real DWG off disk and opens a live window.",
+      "not_automated": [
+        "The folder check (folder-new-only) can only go red if a file appears beside the drawing: on 3.0.75 R40_BROKEN passed it in both runs (nothing new appeared at all), so it has never been seen red. The proof that the report went elsewhere is the \"wrote report\" line carrying TIM_CE_CADTOOLS, and that check did go red in R40_BROKEN.",
+        "BUG-790 (design review ignoring office Settings) and BUG-801 (QA going stale) are NOT claimed. The window look is not judged. The \"approved project report location\" itself is not read: the case only shows that nothing is written beside the drawing.",
+        "The report the command now writes to the CE logs folder under %APPDATA% (TIM_CE_CADTOOLS, logs, checkdwg) on this PC is left there (each run adds one small text file); it is not read."
+      ],
+      "file_sha256": "CAB6A794E695C2634A548EF9BE7BB6929D784766D496829277D269F60B6F92C8",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 05:34:25",
+      "seconds": 48.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30532292_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKDWG{NL}\" -Force -ExpectWindow \"Check consultant\" -TimeoutSec 180 -> $ck",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "typed 'CDCHECKDWG': Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CD..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_open",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg] ; Creative Engineering | Check consultant drawing results (CDCHECKDWG)"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Check consultant\" -> $ckd",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "ui-dump 'Creative Engineering | Check consultant drawing results (CDCHECKDWG)': 65 controls, tabs: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "capture",
+          "text": "capture $ckd R40_checkdwg_results -> $pic",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "picture R40_checkdwg_results.png 980x660, SHA-256 6D7AE2F17141, blank=False, duplicate_of="
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Check consultant\" \"Close\" -> $ckc",
+          "ok": true,
+          "seconds": 17.7,
+          "evidence": "pressed 'Close' in /Check consultant/: window closed = True"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Check consultant\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Check consultant/ closed after 0 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30532292_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $ck \"\\[CE\\] CDCHECKDWG: checking current drawing \\(\"",
+          "ok": true,
+          "expected": "matches /\\[CE\\] CDCHECKDWG: checking current drawing \\(/",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-...",
+          "evidence": "matched '[CE] CDCHECKDWG: checking current drawing ('"
+        },
+        {
+          "n": 2,
+          "text": "contains $ck \"[CE] CDCHECKDWG reading:\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECKDWG reading:'",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-...",
+          "evidence": "found '[CE] CDCHECKDWG reading:' in: Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved change..."
+        },
+        {
+          "n": 3,
+          "text": "matches $ck \"[0-9]+\\.[0-9]% layer recognition, [0-9]+ unrecognized layers?, ([0-9]+ QA findings?|no CE project data)\"",
+          "ok": true,
+          "expected": "matches /[0-9]+\\.[0-9]% layer recognition, [0-9]+ unrecognized layers?, ([0-9]+ QA findings?|no CE project data)/",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-...",
+          "evidence": "matched '73.9% layer recognition, 19 unrecognized layers, 91 QA findings'"
+        },
+        {
+          "n": 4,
+          "text": "picture-ok $pic",
+          "ok": true,
+          "expected": "picture saved, not blank, not duplicate",
+          "actual": "blank=False duplicate=",
+          "evidence": "picture R40_checkdwg_results.png SHA-256 6D7AE2F17141 blank=False duplicate_of="
+        },
+        {
+          "n": 5,
+          "text": "history count \"[CE] CDCHECKDWG\" = 4",
+          "ok": true,
+          "expected": "4 line(s) with '[CE] CDCHECKDWG'",
+          "actual": "4",
+          "evidence": "command line holds 4 line(s) containing '[CE] CDCHECKDWG' (expected 4)"
+        },
+        {
+          "n": 6,
+          "text": "history has \"[CE] CDCHECKDWG wrote report:\"",
+          "ok": true,
+          "expected": "command line has '[CE] CDCHECKDWG wrote report:'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30532292_B1_CDCHECKDWG_20261026_053434.txt'"
+        },
+        {
+          "n": 7,
+          "text": "history has \"TIM_CE_CADTOOLS\"",
+          "ok": true,
+          "expected": "command line has 'TIM_CE_CADTOOLS'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30532292_B1_CDCHECKDWG_20261026_053434.txt'"
+        },
+        {
+          "n": 8,
+          "text": "folder-new-only $copy0 \"dwl2?$|_PRE_C7_\"",
+          "ok": true,
+          "expected": "new files only /dwl2?$|_PRE_C7_/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        },
+        {
+          "n": 9,
+          "text": "contains $win_open \"Check consultant drawing results\"",
+          "ok": true,
+          "expected": "contains 'Check consultant drawing results'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)",
+          "evidence": "found 'Check consultant drawing results' in: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)"
+        },
+        {
+          "n": 10,
+          "text": "window-closed $ckc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win_end \"Check consultant\"",
+          "ok": true,
+          "expected": "does not contain 'Check consultant'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]",
+          "evidence": "'Check consultant' is absent from: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 13,
+          "text": "record $ck \"FULL CDCHECKDWG\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CDCHECKDWG reading: C:\\ce_rc_drv\\CLDV30532292_B1.dwg | [CE] CDCHECKDWG: 73.9% layer recognition, 19 unrecognized layers, 91 QA findings, 1 schedule issue",
+          "evidence": "RECORDED, not judged: FULL CDCHECKDWG = Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CDCHECKDWG reading: C:\\ce_rc_drv\\CLDV30532292_B1.dwg | [CE] CDCHECKDWG: 73.9% layer recognition, 19 unrecognized layers, 91 QA findings, 1 schedule issue"
+        },
+        {
+          "n": 14,
+          "text": "record $win_open \"windows while the results were open\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)",
+          "evidence": "RECORDED, not judged: windows while the results were open = Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg] | Creative Engineering | Check consultant drawing results (CDCHECKDWG)"
+        },
+        {
+          "n": 15,
+          "text": "record $copy1 \"FULL copy info after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30532292_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_222552.dwg\",\"CLD10_B1.dwg\",\"CLD10_S1.dwg\",\"CLD101_B1_PRE_C7_20261018_172900.dwg\",\"CLD101_B1.dwg\",\"CLD102_B1_PRE_C7_20261018_174433.dwg\",\"CLD102_B1.dwg\",\"CLD11_B1_PRE_C7_20261009_230550.dwg\",\"CLD11_B1.dwg\",\"CLD11_S1.dwg\",\"CLD12_B1_PRE_C7_20261009_232405.dwg\",\"CLD12_B1.dwg\",\"CLD12_S1.dwg\",\"CLD13_B1_PRE_C7_20261010_023950.dwg\",\"CLD13_B1.dwg\",\"CLD13_S1.dwg\",\"CLD14_B1_PRE_C7_20261010_030921.dwg\",\"CLD14_B1.dwg\",\"CLD14_S1.dwg\",\"CLD15_B1_PRE_C7_20261010_042655.dwg\",\"CLD15_B1.dwg\",\"CLD15_S1.dwg\",\"CLD16_B1.dwg\",\"CLD16_S1.dwg\",\"CLD17_B1_PRE_C7_20261010_052219.dwg\",\"CLD17_B1.dwg\",\"CLD17_S1.dwg\",\"CLD18_B1_PRE_C7_20261010_055307.dwg\",\"CLD18_B1.dwg\",\"CLD18_B2_PRE_C7_20261010_055812.dwg\",\"CLD18_B2.dwg\",\"CLD18_M1.dwg\",\"CLD18_S1.dwg\",\"CLD19_B1_PRE_C7_20261010_061957.dwg\",\"CLD19_B1.dwg\",\"CLD19_S1.dwg\",\"CLD20_B1_PRE_C7_20261010_071101.dwg\",\"CLD20_B1.dwg\",\"CLD20_S1.dwg\",\"CLD20_TGT.dwg\",\"CLD21_B1_PRE_C7_20261010_072234.dwg\",\"CLD21_B1.dwg\",\"CLD21_CVL_B1_PRE_C7_20261010_072218.dwg\",\"CLD21_CVL_B1.dwg\",\"CLD22_B1_PRE_C7_20261010_084533.dwg\",\"CLD22_B1.dwg\",\"CLD22_B2.dwg\",\"CLD23_B1_PRE_C7_20261010_102430.dwg\",\"CLD23_B1.dwg\",\"CLD24_B1_PRE_C7_20261010_140454.dwg\",\"CLD24_B1.dwg\",\"CLD24_B2_PRE_C7_20261010_140820.dwg\",\"CLD24_B2.dwg\",\"CLD24_S1.dwg\",\"CLD25_B1_PRE_C7_20261010_210000.dwg\",\"CLD25_B1.dwg\",\"CLD25_B2.dwg\",\"CLD25_B3.dwg\",\"CLD25_B4.dwg\",\"CLD25_S1.dwg\",\"CLD26_B1_PRE_C7_20261010_211959.dwg\",\"CLD26_B1.dwg\",\"CLD26_B2.dwg\",\"CLD26_B3_PRE_C7_20261010_212336.dwg\",\"CLD26_B3.dwg\",\"CLD26_B4_PRE_C7_20261010_212527.dwg\",\"CLD26_B4.dwg\",\"CLD26_B5.dwg\",\"CLD26_S1.dwg\",\"CLD27_B1_PRE_C7_20261010_213917.dwg\",\"CLD27_B1.dwg\",\"CLD27_B2_PRE_C7_20261010_214231.dwg\",\"CLD27_B2.dwg\",\"CLD27_B3.dwg\",\"CLD27_S1.dwg\",\"CLD27_S2.dwg\",\"CLD27_S3.dwg\",\"CLD28_B1.dwg\",\"CLD28_S1.dwg\",\"CLD321_B1_PRE_C7_20261019_122627.dwg\",\"CLD321_B1.dwg\",\"CLD322_B1_PRE_C7_20261019_124752.dwg\",\"CLD322_B1.dwg\",\"CLD331_B1_PRE_C7_20261019_230837.dwg\",\"CLD331_B1.dwg\",\"CLD332_B1_PRE_C7_20261019_232458.dwg\",\"CLD332_B1.dwg\",\"CLD341_B1_PRE_C7_20261020_052212.dwg\",\"CLD341_B1.dwg\",\"CLD342_B1_PRE_C7_20261020_054122.dwg\",\"CLD342_B1.dwg\",\"CLD35_B1_PRE_C7_20261012_002754.dwg\",\"CLD35_B1.dwg\",\"CLD35_B2.dwg\",\"CLD35_S1.dwg\",\"CLD351_B1_PRE_C7_20261020_100820.dwg\",\"CLD351_B1.dwg\",\"CLD352_B1_PRE_C7_20261020_102521.dwg\",\"CLD352_B1.dwg\",\"CLD361_B1_PRE_C7_20261020_120256.dwg\",\"CLD361_B1.dwg\",\"CLD362_B1.dwg\",\"CLD371_B1_PRE_C7_20261020_133137.dwg\",\"CLD371_B1.dwg\",\"CLD372_B1_PRE_C7_20261020_134629.dwg\",\"CLD372_B1.dwg\",\"CLD381_B1_PRE_C7_20261020_144018.dwg\",\"CLD381_B1.dwg\",\"CLD391_B1_PRE_C7_20261020_153011.dwg\",\"CLD391_B1.dwg\",\"CLD392_B1_PRE_C7_20261020_154257.dwg\",\"CLD392_B1.dwg\",\"CLD393_METRE.dwg\",\"CLD40_B1_PRE_C7_20261012_034744.dwg\",\"CLD40_B1.dwg\",\"CLD40_B1R.dwg\",\"CLD40_S1.dwg\",\"CLD401_B1_PRE_C7_20261020_173941.dwg\",\"CLD401_B1.dwg\",\"CLD41_B1_PRE_C7_20261012_080000.dwg\",\"CLD41_B1.dwg\",\"CLD41_S1.dwg\",\"CLD411_B1_PRE_C7_20261020_200618.dwg\",\"CLD411_B1.dwg\",\"CLD421_B1_PRE_C7_20261020_202235.dwg\",\"CLD421_B1.dwg\",\"CLD422_B1_PRE_C7_20261020_221307.dwg\",\"CLD422_B1.dwg\",\"CLD431_B1_PRE_C7_20261021_041708.dwg\",\"CLD431_B1.dwg\",\"CLD431_S1.dwg\",\"CLD441_B1_PRE_C7_20261021_063930.dwg\",\"CLD441_B1.dwg\",\"CLD441_S1.dwg\",\"CLD442_B1_PRE_C7_20261021_064649.dwg\",\"CLD442_B1.dwg\",\"CLD442_S1.dwg\",\"CLD451_B1_PRE_C7_20261021_185016.dwg\",\"CLD451_B1.dwg\",\"CLD451_S1.dwg\",\"CLD452_B1_PRE_C7_20261021_190216.dwg\",\"CLD452_B1.dwg\",\"CLD461_B1_PRE_C7_20261022_143805.dwg\",\"CLD461_B1.dwg\",\"CLD461_S1.dwg\",\"CLD462_S1.dwg\",\"CLD471_B1_PRE_C7_20261022_203405.dwg\",\"CLD471_B1.dwg\",\"CLD471_R1_PRE_C7_20261022_202804.dwg\",\"CLD471_R1.dwg\",\"CLD472_R2.dwg\",\"CLD472_S1.dwg\",\"CLD473_B1_PRE_C7_20261022_204046.dwg\",\"CLD473_B1.dwg\",\"CLD50_B1_PRE_C7_20261017_141915.dwg\",\"CLD50_B1.dwg\",\"CLD50_S1.dwg\",\"CLD51_B1_PRE_C7_20261017_165657.dwg\",\"CLD51_B1.dwg\",\"CLD51_S1.dwg\",\"CLD52_S1.dwg\",\"...",
+          "evidence": "RECORDED, not judged: FULL copy info after = {\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30532292_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_222552.dwg\",\"CLD10_B1.dwg\",\"CLD10_S1.dwg\",\"CLD101_B1_PRE_C7_20261018_172900.dwg\",\"CLD101_B1.dwg\",\"CLD102_B1_PRE_C7_20261018_174433.dwg\",\"CLD102_B1.dwg\",\"CLD11_B1_PRE_C7_20261009_230550.dwg\",\"CLD11_B1.dwg\",\"CLD11_S1.dwg\",\"CLD12_B1_PRE_C7_20261009_232405.dwg\",\"CLD12_B1.dwg\",\"CLD12_S1.dwg\",\"CLD13_B1_PRE_C7_20261010_023950.dwg\",\"CLD13_B1.dwg\",\"CLD13_S1.dwg\",\"CLD14_B1_PRE_C7_20261010_030921.dwg\",\"CLD14_B1.dwg\",\"CLD14_S1.dwg\",\"CLD15_B1_PRE_C7_20261010_042655.dwg\",\"CLD15_B1.dwg\",\"CLD15_S1.dwg\",\"CLD16_B1.dwg\",\"CLD16_S1.dwg\",\"CLD17_B1_PRE_C7_20261010_052219.dwg\",\"CLD17_B1.dwg\",\"CLD17_S1.dwg\",\"CLD18_B1_PRE_C7_20261010_055307.dwg\",\"CLD18_B1.dwg\",\"CLD18_B2_PRE_C7_20261010_055812.dwg\",\"CLD18_B2.dwg\",\"CLD18_M1.dwg\",\"CLD18_S1.dwg\",\"CLD19_B1_PRE_C7_20261010_061957.dwg\",\"CLD19_B1.dwg\",\"CLD19_S1.dwg\",\"CLD20_B1_PRE_C7_20261010_071101.dwg\",\"CLD20_B1.dwg\",\"CLD20_S1.dwg\",\"CLD20_TGT.dwg\",\"CLD21_B1_PRE_C7_20261010_072234.dwg\",\"CLD21_B1.dwg\",\"CLD21_CVL_B1_PRE_C7_20261010_072218.dwg\",\"CLD21_CVL_B1.dwg\",\"CLD22_B1_PRE_C7_20261010_084533.dwg\",\"CLD22_B1.dwg\",\"CLD22_B2.dwg\",\"CLD23_B1_PRE_C7_20261010_102430.dwg\",\"CLD23_B1.dwg\",\"CLD24_B1_PRE_C7_20261010_140454.dwg\",\"CLD24_B1.dwg\",\"CLD24_B2_PRE_C7_20261010_140820.dwg\",\"CLD24_B2.dwg\",\"CLD24_S1.dwg\",\"CLD25_B1_PRE_C7_20261010_210000.dwg\",\"CLD25_B1.dwg\",\"CLD25_B2.dwg\",\"CLD25_B3.dwg\",\"CLD25_B4.dwg\",\"CLD25_S1.dwg\",\"CLD26_B1_PRE_C7_20261010_211959.dwg\",\"CLD26_B1.dwg\",\"CLD26_B2.dwg\",\"CLD26_B3_PRE_C7_20261010_212336.dwg\",\"CLD26_B3.dwg\",\"CLD26_B4_PRE_C7_20261010_212527.dwg\",\"CLD26_B4.dwg\",\"CLD26_B5.dwg\",\"CLD26_S1.dwg\",\"CLD27_B1_PRE_C7_20261010_213917.dwg\",\"CLD27_B1.dwg\",\"CLD27_B2_PRE_C7_20261010_214231.dwg\",\"CLD27_B2.dwg\",\"CLD27_B3.dwg\",\"CLD27_S1.dwg\",\"CLD27_S2.dwg\",\"CLD27_S3.dwg\",\"CLD28_B1.dwg\",\"CLD28_S1.dwg\",\"CLD321_B1_PRE_C7_20261019_122627.dwg\",\"CLD321_B1.dwg\",\"CLD322_B1_PRE_C7_20261019_124752.dwg\",\"CLD322_B1.dwg\",\"CLD331_B1_PRE_C7_20261019_230837.dwg\",\"CLD331_B1.dwg\",\"CLD332_B1_PRE_C7_20261019_232458.dwg\",\"CLD332_B1.dwg\",\"CLD341_B1_PRE_C7_20261020_052212.dwg\",\"CLD341_B1.dwg\",\"CLD342_B1_PRE_C7_20261020_054122.dwg\",\"CLD342_B1.dwg\",\"CLD35_B1_PRE_C7_20261012_002754.dwg\",\"CLD35_B1.dwg\",\"CLD35_B2.dwg\",\"CLD35_S1.dwg\",\"CLD351_B1_PRE_C7_20261020_100820.dwg\",\"CLD351_B1.dwg\",\"CLD352_B1_PRE_C7_20261020_102521.dwg\",\"CLD352_B1.dwg\",\"CLD361_B1_PRE_C7_20261020_120256.dwg\",\"CLD361_B1.dwg\",\"CLD362_B1.dwg\",\"CLD371_B1_PRE_C7_20261020_133137.dwg\",\"CLD371_B1.dwg\",\"CLD372_B1_PRE_C7_20261020_134629.dwg\",\"CLD372_B1.dwg\",\"CLD381_B1_PRE_C7_20261020_144018.dwg\",\"CLD381_B1.dwg\",\"CLD391_B1_PRE_C7_20261020_153011.dwg\",\"CLD391_B1.dwg\",\"CLD392_B1_PRE_C7_20261020_154257.dwg\",\"CLD392_B1.dwg\",\"CLD393_METRE.dwg\",\"CLD40_B1_PRE_C7_20261012_034744.dwg\",\"CLD40_B1.dwg\",\"CLD40_B1R.dwg\",\"CLD40_S1.dwg\",\"CLD401_B1_PRE_C7_20261020_173941.dwg\",\"CLD401_B1.dwg\",\"CLD41_B1_PRE_C7_20261012_080000.dwg\",\"CLD41_B1.dwg\",\"CLD41_S1.dwg\",\"CLD411_B1_PRE_C7_20261020_200618.dwg\",\"CLD411_B1.dwg\",\"CLD421_B1_PRE_C7_20261020_202235.dwg\",\"CLD421_B1.dwg\",\"CLD422_B1_PRE_C7_20261020_221307.dwg\",\"CLD422_B1.dwg\",\"CLD431_B1_PRE_C7_20261021_041708.dwg\",\"CLD431_B1.dwg\",\"CLD431_S1.dwg\",\"CLD441_B1_PRE_C7_20261021_063930.dwg\",\"CLD441_B1.dwg\",\"CLD441_S1.dwg\",\"CLD442_B1_PRE_C7_20261021_064649.dwg\",\"CLD442_B1.dwg\",\"CLD442_S1.dwg\",\"CLD451_B1_PRE_C7_20261021_185016.dwg\",\"CLD451_B1.dwg\",\"CLD451_S1.dwg\",\"CLD452_B1_PRE_C7_20261021_190216.dwg\",\"CLD452_B1.dwg\",\"CLD461_B1_PRE_C7_20261022_143805.dwg\",\"CLD461_B1.dwg\",\"CLD461_S1.dwg\",\"CLD462_S1.dwg\",\"CLD471_B1_PRE_C7_20261022_203405.dwg\",\"CLD471_B1.dwg\",\"CLD471_R1_PRE_C7_20261022_202804.dwg\",\"CLD471_R1.dwg\",\"CLD472_R2.dwg\",\"CLD472_S1.dwg\",\"CLD473_B1_PRE_C7_20261022_204046.dwg\",\"CLD473_B1.dwg\",\"CLD50_B1_PRE_C7_20261017_141915.dwg\",\"CLD50_B1.dwg\",\"CLD50_S1.dwg\",\"CLD51_B1_PRE_C7_20261017_165657.dwg\",\"CLD51_B1.dwg\",\"CLD51_S1.dwg\",\"CLD52_S1.dwg\",\"..."
+        }
+      ],
+      "pictures": [
+        {
+          "path": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261026-0446-C3.0.77-b4a2\\pictures\\R40_checkdwg_results.png",
+          "sha256": "6D7AE2F1714157CD8A269E7683A1EBD59F72F36EB13304F5D9EAA49637A92AEC",
+          "width": 980,
+          "height": 660,
+          "blank": false,
+          "duplicate_of": null,
+          "dpi": 96,
+          "window_title": "Creative Engineering | Check consultant drawing results (CDCHECKDWG)",
+          "taken": "2026-10-26 05:34:53",
+          "method": "PrintWindow of the window handle read by UI Automation"
+        }
+      ],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30532292_B1_184b07753.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKDWG completed 24939 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:35:13",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R40_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "look case: a Codex look at the picture has not been recorded (RULES 5.7: a window is never accepted by a machine)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      },
+      "look_note": "C:\\Lisp Files\\_TEST_COPIES_20260923\\pack_runs\\case_RUN-20261026-0446-C3.0.77-b4a2\\looks\\R40.md"
+    },
+    {
+      "id": "R40_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R40: expects the report file beside the drawing and none in the CE logs folder (must FAIL)",
+      "kind": "deterministic",
+      "order": 46,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R40",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R40",
+      "expected": "This variant is wrong on purpose: with the report no longer written beside the drawing, the \"wrote report\" line is absent and the folder holds no CDCHECKDWG text file.",
+      "why_not_unit": "It exists only to prove R40's folder check can go red.",
+      "not_automated": [],
+      "file_sha256": "ED13B7439D68D00ACF6D5A78F0A32C06B3E05140DEB7A59203A8CBD9D8A849D7",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "found: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30532292_B1_CDCHECKDWG_20261026_053522.txt'",
+      "started": "2026-10-26 05:35:13",
+      "seconds": 38.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30532292_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKDWG{NL}\" -Force -ExpectWindow \"Check consultant\" -TimeoutSec 180 -> $ck",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "typed 'CDCHECKDWG': Command: CDCHECKDWG | Enter DWG path to check (Enter = current drawing): | [CE] CDCHECKDWG: checking current drawing (CLDV30532292_B1.dwg). Note: unsaved changes are not reflected - this reads the on-disk file. | [CE] CD..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Check consultant\" \"Close\" -> $ckc",
+          "ok": true,
+          "seconds": 16.8,
+          "evidence": "pressed 'Close' in /Check consultant/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Check consultant\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /Check consultant/ closed after 0 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "folder-new-only $copy0 \"CDCHECKDWG.*txt$\"",
+          "ok": true,
+          "expected": "new files only /CDCHECKDWG.*txt$/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"TIM_CE_CADTOOLS\"",
+          "ok": false,
+          "expected": "command line lacks 'TIM_CE_CADTOOLS'",
+          "actual": "1 matching line(s)",
+          "evidence": "found: '[CE] CDCHECKDWG wrote report: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\logs\\checkdwg\\CLDV30532292_B1_CDCHECKDWG_20261026_053522.txt'"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30532292_B1_182d10aff.log)",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKDWG completed 14224 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:35:52",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R04",
+      "proves_bugs": "",
+      "title": "CE never saves the drawing: the file stays unchanged until the drafter saves",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-03 (daily case D18)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After placing a pit and a pipe and running CDSYNC and CDRECOVERINVERTS, the drawing file on disk has the same SHA-256 and last-written time as when AutoCAD opened it, and the only new files beside it are CE's own _PRE_C7_ backups.",
+      "why_not_unit": "Only the real file on disk after a real AutoCAD session shows whether anything wrote to it.",
+      "not_automated": [
+        "CDSYNC and CDRECOVERINVERTS here run on the drawing after SETUP-P8 (every case has its own fresh drawing); the checks only prove they ran and that the file on disk did not change.",
+        "PITSCHEDULE is opened and closed with its Close button (batch 3 fixes, 25 Oct 2026: D18 assertion 1 now covered); the window text is not read here (R38 and R25 read it).",
+        "CDREBUILD wording 'it does not save the drawing itself' (D18 assertion 2): CDREBUILD was dropped from this case because it has never been driven and its prompts are unknown."
+      ],
+      "file_sha256": "443604166CC0C57BCD3C01A377E05A9E1C55915E9EC404F889C6963139CBB056",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 05:35:52",
+      "seconds": 242.0,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 05:38:44",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30532292_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 61.9,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 4.6,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 54.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30532292_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C64F CeCvlPipeObject STORMWATER PIPE ; 11C655 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65A AcDbMText 20TEXT IL 18.000 ; 11C65F AcDbMText 20TEXT IL 17.900 ; 11C681 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSYNC\" -Force -> $sync",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "typed 'CDSYNC': Command: | Command: CDSYNC | [CE] CDSYNC will re-link every pit and pipe in this drawing to CE's records, from what is currently drawn. One U undoes it. | CDSYNC complete. Pits relinked: 12, Pipes relinked: 50"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRECOVERINVERTS\" -Force -> $recover",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CDRECOVERINVERTS': Command: | Command: CDRECOVERINVERTS | CDRECOVERINVERTS: Found 50 pipes in project data, 26 with stored invert values. | CDRECOVERINVERTS: 26 pipes recovered, 0 invert texts written, 21 already had invert text, 24 skippe..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 22.4,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $psc",
+          "ok": true,
+          "seconds": 22.2,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30532292_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"relinked\"",
+          "ok": true,
+          "expected": "command line has 'relinked'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDSYNC complete. Pits relinked: 12, Pipes relinked: 50'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"recovered\"",
+          "ok": true,
+          "expected": "command line has 'recovered'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDRECOVERINVERTS: 26 pipes recovered, 0 invert texts written, 21 already had invert text, 24 skipped (no levels in the project record, not in the drawing, or upstream end not proven).'"
+        },
+        {
+          "n": 3,
+          "text": "window-closed $psc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 4,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 5,
+          "text": "folder-new-only $copy0 \"_PRE_C7_.*\\.dwg$\"",
+          "ok": true,
+          "expected": "new files only /_PRE_C7_.*\\.dwg$/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        },
+        {
+          "n": 6,
+          "text": "record $copy1 \"the copy on disk at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30532292_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_22...",
+          "evidence": "RECORDED, not judged: the copy on disk at the end = {\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30532292_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_22..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30532292_B1_1de1eb02b.log)",
+        "Civil CE log: 301 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 87149 ms ; Command outcome: CD completed 73054 ms ; Command outcome: CDSYNC completed 5212 ms ; Command outcome: CDRECOVERINVERTS completed 67 ms ; Command outcome: PITSCHEDULE completed 36544 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 05:39:54",
+      "session_id": "RUN-20261026-0446-C3.0.77-b4a2-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: the independent review (R04_ce_never_saves.review.txt) does not say CLAUDE-ACCEPTED-READY (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}
