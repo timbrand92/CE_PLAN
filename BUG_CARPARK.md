@@ -16767,3 +16767,19 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** fresh copy of DRV1_B1. Type CDFW, Enter, then type 51777.389,-46593.223, Enter. Right looks like: a floor waste placed, or one plain sentence saying why not. Repeat at 51777.389,-30233.425, 55879.087,-30233.481 and 80936.111,-30304.267.
 
 **Status:** OPEN
+## BUG-1224
+
+**Command / Area:** CEADMINSETTINGS (also CEADS), Drafting Standards, Drawing Layers page, "Apply CE Standard Layers" button, Structural 1.0.124. LOW, SURE (read; source audit 7 Oct finding 5, never filed).
+
+**Symptom:** a drafter locks BEAM (or any CE standard layer), then presses "Apply CE Standard Layers". Every locked CE layer is unlocked, and every frozen or turned-off CE layer is thawed and turned on. The status line says only "CE standard layers applied." It does not name a single layer it unlocked. Breaks the native protection rule "never silently unlock".
+
+**Expected behaviour:** recommended default (Tim's answer replaces it): the button resets colour, linetype, lineweight and plot to the standard, but leaves lock, freeze and on/off exactly as the drafter set them, and the status line names them: "Left 2 locked layers as you set them: BEAM, 25TEXT." Alternative if Tim prefers: before applying, list the layers that would be unlocked, thawed or turned on and ask once, Yes or No.
+
+**Reference:** `Modules/Structural/Services/LayerService.cs:325-345` (ApplyStandardLayers) and `522-541` (ApplyStandard; lock at line 535, off and frozen at 536-537); `Modules/Structural/UI/LayerManagerWindow.xaml.cs:141-153`; `04_REFERENCE/release/SOURCE_AUDIT_2026-10-07.md:120`; review `areas/REVIEW_STRUC_LAYERSERVICE_UNLOCK_25OCT.md`. Related, not duplicates: BUG-367 (allows this button in its guard test, `Bug367LayerKeepTests.cs:98-112`), BUG-417.
+
+**Test that catches it:** a unit test on the pure "what would Apply change" step: a layer that is locked in the drawing and unlocked in the standard stays locked and appears in the "left as you set them" list; same for frozen and off. Update the BUG-367 guard comment so it no longer lists the Apply button as allowed to change lock, freeze or on/off. Codex AutoCAD case below.
+
+**Steps to confirm in AutoCAD:** test copy of any Structural drawing. Lock BEAM, freeze 25TEXT. Type CEADMINSETTINGS, Drawing Layers, press "Apply CE Standard Layers", close. Type LAYER. Right looks like: BEAM still locked, 25TEXT still frozen, and the status line named both before you closed. Then one U: check whether the colour reset undoes in one step.
+
+**Status:** OPEN
+
