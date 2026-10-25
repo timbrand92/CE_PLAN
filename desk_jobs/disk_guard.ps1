@@ -17,7 +17,7 @@ while (-not (Test-Path "$d\STOP_DISKGUARD.flag")) {
     }
     try { & pwsh -NoProfile -File "$d\scripts\clean_dotnet_tmp.ps1" 2>&1 | Out-Null } catch { }
     Log ("C: was {0} GB: removed idle bin/obj {1:N1} GB; now {2} GB" -f $f, ($freed / 1GB), (Free))
-    if ((Free) -lt 10) { Set-Content "$d\STOP_CODEX.flag" "disk guard $(Get-Date -Format s)"; Log 'C: under 10 GB: STOP_CODEX.flag written' }
+    if ((Free) -lt 7) { Set-Content "$d\STOP_CODEX.flag" "disk guard $(Get-Date -Format s)"; Log 'C: under 7 GB: STOP_CODEX.flag written' }
   }
   Start-Sleep 600
 }
