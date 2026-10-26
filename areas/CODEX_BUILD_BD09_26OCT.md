@@ -19,3 +19,5 @@ ANSWER FIRST — BUG-1113
 16. **Final three-build check in progress:** net48 passed with 0 errors; net8.0-windows passed with 0 errors. net10.0-windows is running. All use SkipDevBundle=true, no build servers and the brief's absolute AutoCAD reference paths. No deployment.
 
 17. **All three final product builds passed:** net48, net8.0-windows and net10.0-windows each returned exit 0 and 0 errors. The final focused tests and full net10 Civil suite are next. An AutoCAD process was observed running elsewhere on the PC during builds; this job did not start or control it. Earlier chat wording that AutoCAD was closed was not verified and has been corrected.
+
+18. **Final focused checks passed:** 91 total, 91 passed, 0 failed, 0 skipped, on the final source with no Settings row. Includes all new BUG-1113 cases and the unchanged Blue Factor, BJ32 row/persistence and recorded-direction neighbours. Evidence: green-final.trx and green-final.log. The full after-change Civil net10 suite has started.
