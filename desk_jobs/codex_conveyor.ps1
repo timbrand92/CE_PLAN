@@ -29,7 +29,8 @@ Log 'conveyor started'
 $idle = 0
 while ($true) {
   if (Test-Path "$d\STOP_CODEX.flag") { Log 'STOP flag'; exit }
-  if ((CurUsage) -ge 90) { Log 'Codex weekly usage 90 percent: stop'; exit }
+  $stopAt = 90; if (Test-Path 'C:\Lisp Files\_CODEX_RUNNER\BURN_UNTIL.txt') { $stopAt = 97 }
+  if ((CurUsage) -ge $stopAt) { Log "Codex weekly usage $stopAt percent: stop"; exit }
   $pm = (Get-Content "$d\CODEX_MODE.txt" -TotalCount 1 -ErrorAction SilentlyContinue); if ($pm -eq 'HOLD') { Log 'mode HOLD: conveyor stops'; exit }
   if ($pm -eq 'PACE') { $o = & 'C:\Program Files\Git\bin\bash.exe' -c 'bash "/c/Lisp Files/_CODEX_RUNNER/daily_cap.sh"' 2>$null; $cv = 0; if ([int]::TryParse(($o | Select-Object -First 1), [ref]$cv) -and ((CurUsage) + 1) -gt $cv) { Log ("over today's cap ($cv): waiting 10 minutes"); Start-Sleep 600; continue } }
   $doneList = @(Get-Content $done -ErrorAction SilentlyContinue)
