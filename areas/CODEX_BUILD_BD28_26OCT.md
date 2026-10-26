@@ -1,0 +1,7 @@
+1. **ANSWER FIRST — BUG-1216:** IN PROGRESS. No PR yet. Branch cx6/bug-1216-bd28; untouched base suite running before edits.
+2. **Base used:** claude/rel-20261026u at 270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1. The fetched claude/rel-20261026t head is d3f9c5dfc6241815d587f335a7ae49ca603c58fa. These replace the stale master instruction in the appended brief.
+3. **Setup checked:** C: had 43,467,067,392 bytes free. Live BUG-1216 entry OPEN. No open PR matched BUG-1216 in title or body. Own worktree C:\ce-cx\bd28; other working copies left alone. Recorded 27 October 2026, Melbourne time.
+4. **What the code shows:** CdHelpService has an older hand-written command set. CommandRegistryService already resolves names and aliases. The guide already contains Rainfall, Design, Checks and Solve Run. No guide pages need adding.
+5. **Drawing safety:** the proposed change only remembers the last Help topic in memory. CDHELP writes nothing to a drawing. No engineering number is needed. No installation or AutoCAD run is authorised.
+6. **Tests and remaining work:** base full suite compiling; red first, switch coverage, three builds, after suite, draft PR and final evidence still pending. Evidence logs are outside the code working copy under C:\ce-cx\bd28-evidence and C:\ce-cx\bd28-*.log.
+7. **Before and after:** before, CDS then CDRAINFALL then CDHELP can show Settings. Intended after: Rainfall · CDRAINFALL. Real AutoCAD confirmation remains unrun.
