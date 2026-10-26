@@ -44,3 +44,5 @@ Passed: 36
 ```
 
 Evidence: C:\ce-cx\bd18-green.log and C:\ce-cx\bd18-evidence\bd18-green.trx. Product and tests saved at bc6c4930. Manager's net48, net8.0-windows and net10.0-windows builds are running sequentially with all required safe flags and reference paths. No deploy, no new build script and no changes to CE_SHARED source.
+
+12. **Build checks so far.** Manager Release net48: build succeeded, 0 warnings, 0 errors. Manager Release net8.0-windows: build succeeded, 0 warnings, 0 errors. The net10.0-windows build is underway. Evidence remains outside the working copy at C:\ce-cx\bd18-build-net48.log and C:\ce-cx\bd18-build-net8.0-windows.log. The release head was fetched again and remains 270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1; no merge was needed.
