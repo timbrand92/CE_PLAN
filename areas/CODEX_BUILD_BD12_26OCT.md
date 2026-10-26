@@ -1,6 +1,6 @@
 BLOCKED — BUG-1111 full-suite comparison
 
-1. **ANSWER FIRST — BUG-1111: full-suite comparison blocked.** The wording change is built and automated-tested. All 13 added cases passed in the first full after-run. The PDF test passed on the base and alone, but failed in both full after-runs. No unrelated PDF change or test weakening has been made. The extra repeat was stopped after that failure returned. The required failing-name comparison has not passed.
+1. **ANSWER FIRST — BUG-1111: full-suite comparison blocked.** The wording change is built and automated-tested. All 13 added cases passed in the first full after-run. The PDF test passed on the base and alone, but failed in the complete after-run and again in the stopped partial repeat. No unrelated PDF change or test weakening has been made. The extra repeat was stopped after that failure returned. The required failing-name comparison has not passed.
 
 2. **Draft PR:** [#1801](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1801), against `claude/rel-20261025r`. Branch: `cx4/bug-1111-predev-c-working-text`.
 
@@ -79,4 +79,4 @@ GREEN: Passed CouncilRuleValues_Bug1111_SwitchOff_KeepsTheStoredText
 
    Committed pictures are `docs/image/V3_WINDOWS/bug1111-settings-dark-1.png` through `bug1111-settings-dark-8.png`, and `bug1111-settings-light-1.png` through `bug1111-settings-light-8.png`. Tabs are Drafting, Pipes & Pits, Design, Survey, Display, Advanced, Newer tools and Fixes. Every individual picture path is listed in PR #1801. The new row is tab 7.
 
-10. **Delivery and undo.** The branch and draft PR are pushed. Manual and hook leak scans passed, with the private terms file present. The final report is committed and pushed by name from CE_PLAN. Delivery ends by removing only the own code worktree `C:\ce-cx\bd12` after the report push. PR #1801 remains open and a draft; it has not been merged, closed or marked ready. Undo the wording change by unticking its comparison switch, or revert the BUG-1111 commit.
+10. **Delivery and undo.** The branch and draft PR are pushed. Manual and hook leak scans passed, with the private terms file present. The report is saved by name in CE_PLAN. The final report push is followed by removal of only the own code worktree `C:\ce-cx\bd12`. PR #1801 remains open and a draft; it has not been merged, closed or marked ready. Undo the wording change by unticking its comparison switch, or revert the BUG-1111 commit.
