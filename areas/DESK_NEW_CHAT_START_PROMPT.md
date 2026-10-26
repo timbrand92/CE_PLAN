@@ -12,3 +12,7 @@ Do not re-derive history: everything is in the continuity record and the log.
 
 ## UPDATE Sat 24 Oct 2026 09:55 (use this instead of the "First jobs" of the 23 Oct text above)
 Read continuity item 40 (and the DESK_LOG tail) FIRST: it replaces items 34 to 39 as the current picture. Then: (1) check every lane by real process; (2) recreate the 20-minute silent desk tick with CronCreate (text: GOAL FIRST, the three plan numbers; prefer installs and acceptance over activity); (3) next number-movers: C-63 install, runner hardening and independent re-review, Codex looks inside the daily cap, S-43. Tim: plan-item pause stays until Thu 29 Oct; the Claude-accepted rule is live; Codex runs in PACE (looks first).
+
+
+## UPDATE Mon 26 Oct 2026 17:00 for a fresh desk chat
+Read C:\CE_PLAN\areas\release-v3-colleagues-DESK_CONTINUITY_RECORD.md item 43 FIRST (then 40 to 42), then the DESK_LOG tail. Recreate the 20-minute DESK KEEP-ALIVE TICK cron if it is missing (goal first: the 3 plan numbers and the 40 everyday tools; silent when nothing changed). Check at every tick: lanes by real process, newest runner report age and a robot job running, Codex FRESH usage and reset date (codex_usage.sh fresh-pct), C: free, new reports in areas, push CE_PLAN by name.
