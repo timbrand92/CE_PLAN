@@ -8,4 +8,16 @@
 
 5. **Shared-file notice.** BUG-1115 (cx_bd17) also changes `WaterTankCommand.cs`, near the later tank-point section. BUG-1174 belongs near the opening window fallback. No protected file or CE_SHARED source is to be changed.
 
-6. **Not run and remaining work.** AutoCAD, the real tank window and real tank master files have not been opened. Still to do: prove the first two requested tests fail against the silent method, implement the line and default-on switch, check Settings coverage and fit, build three lanes, compare full-suite failure names, add the top regression entry, push a draft PR and this report, then remove this session's worktree.
+6. **Not run and remaining work.** AutoCAD, the real tank window and real tank master files have not been opened. The line and default-on switch are now written; the green check is building. Still to do: check Settings coverage and fit, build three lanes, compare full-suite failure names, add the top regression entry, push a draft PR and this report, then remove this session's worktree.
+
+7. **Red first, observed before implementing the line.** Added the method returning null, then ran `FullyQualifiedName~Bug1174` in the requested Civil test project. Actual result: 3 total, 1 passed, 2 failed. Both failed assertions expected the requested line and received null.
+
+   ```text
+   Failed WaterTank_Bug1174_BlankSetting_SaysNoFolderIsSet [31 ms]
+   Expected: "[CE] Tank pictures not shown: no Standard Details folder is set."
+   But was:  null
+   Failed WaterTank_Bug1174_MissingFolder_LineNamesTheFolder [< 1 ms]
+   Expected: "[CE] Tank pictures not shown: Standard Details folder not found at C:\Example Job\Standard Details."
+   But was:  null
+   Passed WaterTank_Bug1174_SwitchOff_NoLine [1 ms]
+   ```
