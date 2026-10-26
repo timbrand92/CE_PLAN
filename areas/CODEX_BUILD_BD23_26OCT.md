@@ -65,4 +65,3 @@ Passed: 12
 
 23. **Evidence on this PC:** `C:\ce-cx\bd23-evidence\bug1102-base.trx`, `bug1102-red.trx`, `bug1102-green.trx`, `bug1102-after.trx` and the rejected `bug1102-row-fit.trx`. Logs are outside the code worktree and are not pushed. The report is the only file staged from CE_PLAN.
 24. **Undo and acceptance:** revert the BUG-1102 warning commit to restore the older behaviour. Nothing was installed. The bug carpark, desk log and queue were not edited; no acceptance claim is made. The remaining native check is item 6.
-
