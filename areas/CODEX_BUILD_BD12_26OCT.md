@@ -1,4 +1,6 @@
-1. **ANSWER FIRST — BUG-1111: final comparison in progress.** The wording change is built and automated-tested. All 13 added cases passed in the first full after-run. The repeated full suite is still running; the first after-run had an additional blank-PDF-page failure, so the required comparison is not yet complete.
+BLOCKED — BUG-1111 full-suite comparison
+
+1. **ANSWER FIRST — BUG-1111: full-suite comparison blocked.** The wording change is built and automated-tested. All 13 added cases passed in the first full after-run. The PDF test passed on the base and alone, but failed in both full after-runs. No unrelated PDF change or test weakening has been made. The repeat is still finishing.
 
 2. **Draft PR:** [#1801](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1801), against `claude/rel-20261025r`. Branch: `cx4/bug-1111-predev-c-working-text`.
 
@@ -27,7 +29,7 @@ GREEN: Passed CouncilRuleValues_Bug1111_SwitchOff_KeepsTheStoredText
 
 7. **First full suite after:** console total 20,393; 20,359 passed, 2 failed, 32 skipped. All 13 added cases passed. The baseline log failure repeated. The additional failure was `MarkupFileImageLoaderTests.LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully`, which returned a blank rendered page. That one PDF case then passed in a fresh test process: 1 ran, 1 passed. No PDF code or test was edited.
 
-8. **Final repeated full suite:** PENDING_FINAL_FULL_SUITE. The repeat uses the same committed code and the same safety flags and reference paths. Both after-run results will be retained in this report.
+8. **Final repeated full suite:** PENDING_FINAL_FULL_SUITE. The repeat has also failed the PDF case, this time with “PDF rendering failed: The requested resource is in use. (0x800700AA)”. Its exact totals are pending. Both after-run results are retained. The required failing-name comparison is blocked; its cause has not been established.
 
 9. **What Tim will see on a build containing this change:** CDRULEBOOK on a Whitehorse job, open the before-development C source: the working now reads `(0.35 x pervious + 0.9 x impervious) / site`, matching the 0.35 at zero existing impervious area, instead of 0.3. This is the expected AutoCAD result; it has not been observed on screen.
 
