@@ -5581,6 +5581,8 @@
 
 **Status:** OPEN (30 Sep 2026, found by Codex sweep C1; look before anyone edits the list).
 
+**Evidence 27 Oct 2026 (Codex look F5, Civil 3.0.80, CODEX_VERIFY_F5_20261027_0751.md, F5-01 FAIL SURE):** opening the Drawing Standards Manager (CDMANAGER), eight layer names visibly appear twice in the Draw Order list; Close returned without a question and the drawing object count was unchanged (C-1 equals C-0, 1054). Screenshots F5-09-M2-draw-order.png and F5-10-draw-order-scroll.png in LOOKS\F5_20261027_0751. So the fix that is installed since Civil 3.0.70 (PR #622, entry above) does NOT cure the duplicates on 3.0.80 (or only part). Not independently repeated yet; the Codex look is one session.
+
 ---
 
 ## BUG-240
