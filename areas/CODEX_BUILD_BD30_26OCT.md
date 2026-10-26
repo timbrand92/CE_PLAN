@@ -153,7 +153,7 @@ CE_CVL_SUITE.Tests.Services.LoggingServiceThroughputTests.Diagnostic_MessagesRea
 ---
 
 1. **Delivery:** branch and draft PR remain open; no merge, rebase, force-push, ready-for-review change or branch deletion. All four branch commit messages name BUG-1044. The latest release merge was already up to date. Leak scans on branch pushes passed. This report is saved and pushed by its own name only; no carpark, desk log, queue or unrelated plan file was staged.
-2. **Cleanup:** after confirming the report push and branch push, remove only this job's `C:\ce-cx\bd30` worktree as instructed. The branch, PR, committed pictures and evidence outside that worktree remain available. No other working copy is removed.
+2. **Cleanup:** after confirming both pushes and clean status, I verified the absolute path, branch and head, then removed only this job's `C:\ce-cx\bd30` worktree with git worktree remove. The path is absent and the branch remains at d38ca6ed75c9fe33682444fc06c678083d48e95c. The draft PR, committed pictures and outside evidence remain available. No other working copy was removed.
 3. **Undo and remaining check:** a saved false for this switch restores the older behaviour (proved in memory); reverting the BUG-1044 branch removes the change. Nothing was installed, so no live rollback is needed. The real-AutoCAD copy check in answer item 10 remains owed, not claimed as passed.
 
 4. **Recorded:** 27 October 2026 04:25 AEDT (Melbourne). Initial C: free space was 40.86 GB, above the 8 GB stop limit. Live BUG-1044 was OPEN and the exact open-PR search found no existing fix before work began.
