@@ -1,0 +1,9 @@
+1. **ANSWER FIRST — BUG-1107.** Work in progress. No PR yet. Branch cx6/bug-1107-bd26, based on claude/rel-20261026u at 270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1. The untouched-base full Civil suite is running; no test total claimed yet.
+
+2. **Release heads checked after fetch.** claude/rel-20261026u: 270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1. claude/rel-20261026t: d3f9c5dfc6241815d587f335a7ae49ca603c58fa. C: had 41.45 GB free. The live BUG-1107 entry was OPEN. The requested open-PR search returned no match. The main code checkout contained other work; it was left alone. This job owns C:\ce-cx\bd26 only.
+
+3. **Finding and chosen route.** RaingardenPlacementPlan.AddExactProjectRow receives the project, boundary handle and grated-inlet handle. It receives no outlet pit. Changing placement would touch protected files, so this job uses the brief's permitted Inspector wording route. A recorded inlet pipe will show [CE] Outlet not tracked; no pipe keeps the older display and an existing named outlet stays unchanged. No engineering figure changes and no drawing write is needed.
+
+4. **Checks still to record.** The three named regression tests, control and switch tests; red and green output; all three Civil builds; full-suite totals and failing names before and after; Settings page fit and pictures; overlapping open PRs; final branch head and draft PR.
+
+5. **Real-AutoCAD check, not run.** CDRG a raingarden with its inlet pipe to pit P3, select the boundary and read Civil Inspector. With the switch ON and a recorded inlet-pipe connection, the outlet must say [CE] Outlet not tracked. The wording route does not save P3 as the raingarden outlet. A garden with no pipe keeps the older words. A spoon-drain outlet already naming P3 must still show P3. AutoCAD, deployment and Tim's real settings file have not been opened or changed.
