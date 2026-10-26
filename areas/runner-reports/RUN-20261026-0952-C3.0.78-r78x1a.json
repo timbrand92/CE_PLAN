@@ -1,0 +1,92 @@
+{
+  "header": {
+    "run_id": "RUN-20261026-0952-C3.0.78-r78x1a",
+    "started": "2026-10-26 09:52:39",
+    "finished": "2026-10-26 09:52:40",
+    "build": {
+      "civil": {
+        "product_version": "3.0.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e",
+        "file_version": "3.0.78.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e",
+        "file_version": "1.1.78.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.78+d8840a09 / struc 1.0.124+3a3caac5 / mgr 1.1.78+d8840a09",
+    "acad_version": "",
+    "pack_sha256": "63E09C03BDE50FFCEAFA298E2655775DE0D481E960CDCE56585E2F1FE325F537",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 9CA386C76FB7, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 63E09C03BDE50FFCEAFA298E2655775DE0D481E960CDCE56585E2F1FE325F537; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 26 Oct 2026 09:52 (PC clock); in Tim's AutoCAD hours now: True",
+      "BLOCKED: this is Tim's AutoCAD in-use time (weekdays 8:30 am to 2:00 pm and 3:00 to 5:30 pm Melbourne). No AutoCAD was started."
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [],
+  "cases": [
+    {
+      "id": "R08x_1_exact",
+      "proves_bugs": "",
+      "title": "R08 probe 1: the exact R08 round 1 again (control round, then three real-mouse pit picks)",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Control round says 'Everything has been redone'. Then three rounds: draw a line, U, blind real-mouse click on pit P3, wait 12 s, REDO. On 3.0.75 round 1 is expected to say 'Nothing to redo' and rounds 2 and 3 'Everything has been redone' (the R08 result). The probe records what happens, it does not judge CE.",
+      "why_not_unit": "Whether REDO survives depends on what happens in a real AutoCAD undo stack in the seconds after a pick.",
+      "not_automated": [
+        "This is a probe for the R08 question only; it is not a feature test and is never accepted."
+      ],
+      "file_sha256": "55F1B957B68FE4A9F50AA3CCFD7C832169B13D8D6F798EA00E2F5AE651602B99",
+      "plan_item": "BUG-861 characterisation (R08 round 1 fails on Civil 3.0.75)",
+      "result": "BLOCKED",
+      "blocked": "Tim's AutoCAD in-use hours: no session was started",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-0952-C3.0.78-r78x1a-none",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}
