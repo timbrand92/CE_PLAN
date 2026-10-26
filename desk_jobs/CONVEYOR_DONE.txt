@@ -37,9 +37,10 @@ verifyE9_cur
 verifyE10_cur
 verifyE11_cur
 verifyE12_cur
-verifyF1_cur
 verifyF2_cur
 verifyF6_cur
 verifyF8_cur
 verifyF9_cur
-verifyF10_cur
+verifyF3_cur
+verifyF4_cur
+verifyF7_cur
