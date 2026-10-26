@@ -1,6 +1,6 @@
 BLOCKED — BUG-1111 full-suite comparison
 
-1. **ANSWER FIRST — BUG-1111: full-suite comparison blocked.** The wording change is built and automated-tested. All 13 added cases passed in the first full after-run. The PDF test passed on the base and alone, but failed in both full after-runs. No unrelated PDF change or test weakening has been made. The repeat is still finishing.
+1. **ANSWER FIRST — BUG-1111: full-suite comparison blocked.** The wording change is built and automated-tested. All 13 added cases passed in the first full after-run. The PDF test passed on the base and alone, but failed in both full after-runs. No unrelated PDF change or test weakening has been made. The extra repeat was stopped after that failure returned. The required failing-name comparison has not passed.
 
 2. **Draft PR:** [#1801](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1801), against `claude/rel-20261025r`. Branch: `cx4/bug-1111-predev-c-working-text`.
 
@@ -29,7 +29,7 @@ GREEN: Passed CouncilRuleValues_Bug1111_SwitchOff_KeepsTheStoredText
 
 7. **First full suite after:** console total 20,393; 20,359 passed, 2 failed, 32 skipped. All 13 added cases passed. The baseline log failure repeated. The additional failure was `MarkupFileImageLoaderTests.LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully`, which returned a blank rendered page. That one PDF case then passed in a fresh test process: 1 ran, 1 passed. No PDF code or test was edited.
 
-8. **Final repeated full suite:** PENDING_FINAL_FULL_SUITE. The repeat has also failed the PDF case, this time with “PDF rendering failed: The requested resource is in use. (0x800700AA)”. Its exact totals are pending. Both after-run results are retained. The required failing-name comparison is blocked; its cause has not been established.
+8. **Final repeated full suite:** Additional verification only; PARTIAL, STOPPED after the extra PDF failure reproduced. The error was “PDF rendering failed: The requested resource is in use. (0x800700AA)”. No full-suite total is claimed for that partial repeat. The complete after-run in point 7 remains the after result: 20,393 console total, 20,359 passed, 2 failed, 32 skipped. The required failing-name comparison is BLOCKED; the cause of the PDF failure has not been established. Investigating or changing that PDF path belongs to a separate bug brief.
 
 9. **What Tim will see on a build containing this change:** CDRULEBOOK on a Whitehorse job, open the before-development C source: the working now reads `(0.35 x pervious + 0.9 x impervious) / site`, matching the 0.35 at zero existing impervious area, instead of 0.3. This is the expected AutoCAD result; it has not been observed on screen.
 
@@ -75,8 +75,8 @@ GREEN: Passed CouncilRuleValues_Bug1111_SwitchOff_KeepsTheStoredText
 
 8. **Drawing and file safety.** Display only: nothing is written to a drawing, so Redo safety and locked layers, Xrefs and REFEDIT protection are unaffected. No tracked CE_SHARED or protected-file change; nothing under Modules/Structural changed. BUG_CARPARK.md, DESK_LOG.md and QUEUE.md were not edited. The council JSON, engineering values and calculation results are unchanged. No install, deploy or AutoCAD start was performed.
 
-9. **Evidence locations.** Raw local results are `C:\ce-cx\bd12-evidence\base.trx`, `red.trx`, `green.trx`, `after.trx`, `pdf-recheck.trx` and the running `after-repeat.trx`. Local console/build logs are `C:\ce-cx\bd12-*.log`. Only this named report is staged in CE_PLAN.
+9. **Evidence locations.** Raw local results are `C:\ce-cx\bd12-evidence\base.trx`, `red.trx`, `green.trx`, `after.trx`, `pdf-recheck.trx` plus `C:\ce-cx\bd12-after-repeat.log` from the stopped partial repeat. Local console/build logs are `C:\ce-cx\bd12-*.log`. Only this named report is staged in CE_PLAN.
 
    Committed pictures are `docs/image/V3_WINDOWS/bug1111-settings-dark-1.png` through `bug1111-settings-dark-8.png`, and `bug1111-settings-light-1.png` through `bug1111-settings-light-8.png`. Tabs are Drafting, Pipes & Pits, Design, Survey, Display, Advanced, Newer tools and Fixes. Every individual picture path is listed in PR #1801. The new row is tab 7.
 
-10. **Delivery and undo.** The branch and draft PR are pushed. Manual and hook leak scans passed, with the private terms file present. The report will be pushed by name after the repeat result is recorded; the own code worktree is then removed. No PR will be merged, closed or marked ready. Undo the wording change by unticking its comparison switch, or revert the BUG-1111 commit.
+10. **Delivery and undo.** The branch and draft PR are pushed. Manual and hook leak scans passed, with the private terms file present. The final report is committed and pushed by name from CE_PLAN. Delivery ends by removing only the own code worktree `C:\ce-cx\bd12` after the report push. PR #1801 remains open and a draft; it has not been merged, closed or marked ready. Undo the wording change by unticking its comparison switch, or revert the BUG-1111 commit.
