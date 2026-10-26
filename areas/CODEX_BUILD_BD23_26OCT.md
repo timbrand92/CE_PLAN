@@ -65,3 +65,5 @@ Passed: 12
 
 23. **Evidence on this PC:** `C:\ce-cx\bd23-evidence\bug1102-base.trx`, `bug1102-red.trx`, `bug1102-green.trx`, `bug1102-after.trx` and the rejected `bug1102-row-fit.trx`. Logs are outside the code worktree and are not pushed. The report is the only file staged from CE_PLAN.
 24. **Undo and acceptance:** revert the BUG-1102 warning commit to restore the older behaviour. Nothing was installed. The bug carpark, desk log and queue were not edited; no acceptance claim is made. The remaining native check is item 6.
+
+25. **Shared-plan save note:** while the first report was staged and its trailing-blank-line check paused the save, concurrent commit `0efa67d5` (BUG-1216) included this report. The report content remained correct. Commit `beb7d05b` (BUG-1102) removed the trailing blank line; this follow-up records the event. No other builder's work or history was rewritten. The lesson is to remove a failed-check file from the shared index immediately before correcting it.
