@@ -9,3 +9,18 @@ ANSWER FIRST — BUG-1089
 7. **Evidence:** C:\ce-cx\bd15-base.log (setup failure); C:\ce-cx\bd15-base-placeholder.log and C:\ce-cx\bd15-evidence\bd15-base.trx (run in progress). The Notion Inbox search returned no CE items. Working on the existing BUG-1089 carpark entry only; the carpark, desk log and queue remain untouched.
 8. **Progress, 26 October 2026 evening (Melbourne):** the untouched-base rerun reached the test host at about 20:11 and is still running. Two failing short names observed so far: Diagnostic_MessagesReachTheLogFile and LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully. Final totals, full names and messages are pending. The installed DLL was read directly: 3.0.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa. No product or test source has been edited. Four red-first checks, the switch coverage and six off-screen picture checks are prepared in memory, to be written only after the before-run closes.
 9. **Untouched-base completed:** total 20,539; passed 20,505; skipped 32; failed 2; duration 50 min 50 s. Failing names: CE_CVL_SUITE.Tests.Services.LoggingServiceThroughputTests.Diagnostic_MessagesReachTheLogFile (queued diagnostic never reached the log file; expected true, got false) and CE_CVL_SUITE.Tests.Services.MarkupFileImageLoaderTests.LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully (PDF rendering failed: The requested resource is in use, 0x800700AA). The outer SettingsIsolationSetup cleanup also reported its temporary CE_CVL_SUITE.log was in use. No source was edited during the run. Evidence: C:\ce-cx\bd15-evidence\bd15-base.trx and C:\ce-cx\bd15-base-placeholder.log. Four BUG-1089 tests have now been written, with the product code unchanged; their red-first run is in progress.
+10. **Red first proved, product unchanged:** commit 49c1c902 contains the four tests only. The command filtered FullyQualifiedName~Bug1089. The failing lines were:
+
+```text
+Failed PipeFlowCalc_Bug1089_ConcreteDn300At1In600_WarnsBelowSettingsMinimum
+Expected: equivalent to < "Velocity is low; check for sedimentation risk." >
+But was: <empty>
+Failed PipeFlowCalc_Bug1089_ConcreteDn375At1In20_NoScourWarningUnderConcreteCap
+Expected: <empty>
+But was: < "Velocity is high; check for scour risk." >
+Failed PipeFlowCalc_Bug1089_UnknownMaterialUsesGeneralMaximum
+Passed PipeFlowCalc_Bug1089_UpvcDn150At1In100_InsideBothLimits_NoWarning
+Test Run Failed. Total tests: 4; Failed: 3; Passed: 1.
+```
+
+11. **Change written:** only the warning-limit block in PipeFlowCalcViewModel changed. The shared MaterialVelocityLimits.GetMaxVelocityMs(null) lookup supplies the general maximum because there is no material choice. The minimum is read directly from SettingsSizingStandards.CurrentOffice().MinimumVelocityMs. No parser was changed: Recalculate already has access to Settings, so no extra static-parser parameter is needed. The new default-on switch is detention.pipeFlowsUseSettingsSpeedLimits. Its Settings row uses the existing Newer tools draft, search and save behaviour, in the shorter column. The old high-speed test now uses a grade steep enough to exceed the general maximum. Off-screen pictures, green run, all three builds and after-suite are pending.
