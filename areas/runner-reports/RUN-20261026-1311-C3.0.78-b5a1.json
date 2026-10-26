@@ -1,0 +1,139 @@
+{
+  "header": {
+    "run_id": "RUN-20261026-1311-C3.0.78-b5a1",
+    "started": "2026-10-26 13:11:20",
+    "finished": "2026-10-26 13:11:32",
+    "build": {
+      "civil": {
+        "product_version": "3.0.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e",
+        "file_version": "3.0.78.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e",
+        "file_version": "1.1.78.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.78+d8840a09 / struc 1.0.124+3a3caac5 / mgr 1.1.78+d8840a09",
+    "acad_version": "",
+    "pack_sha256": "EEDF1271BA750F39AB1E6F95AA86ACBBC2944BFC6CE97C82F0ABB6D39A29178C",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.78+d8840a0920f97fedc3b94f98e56eb5a4eb6b663e",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 9CA386C76FB7, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 EEDF1271BA750F39AB1E6F95AA86ACBBC2944BFC6CE97C82F0ABB6D39A29178C; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 26 Oct 2026 13:11 (PC clock); in Tim's AutoCAD hours now: True",
+      "BLOCKED: this is Tim's AutoCAD in-use time (weekdays 8:30 am to 2:00 pm and 3:00 to 5:30 pm Melbourne). No AutoCAD was started."
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 2,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [],
+  "cases": [
+    {
+      "id": "R09",
+      "proves_bugs": "",
+      "title": "Double-click on the DP1 downpipe circle opens the CE Edit source window",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-859",
+      "known_fail": "BUG-859",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "Batch 3 fixes of 25 Oct 2026: run unchanged first on Civil 3.0.75 it FAILED for the real reason (the double-click opened AutoCAD's Enhanced Attribute Editor, run b3r09a), so the Tag box name is still unknown. Cancel is now pressed with ui-press (Edit source, Cancel) and its closing is asserted; close-windows stays behind it only to put AutoCAD right if the wrong window opened. The true red after this edit is the variant R09_OFF_BROKEN (the switch doubleClick.sourceEditWindow set false: AutoCAD's editor must open).",
+        "Batch 4 (26 Oct 2026, Civil 3.0.77): evidence for BUG-859 from CE own log at every double-click of runs on 3.0.75 (b3r09a, b3w1, b3z4): \"double-click hit-test: 1 block(s) under the pointer; source tag = DP1\", \"pick set emptied so EATTEDIT stops at its prompt\", \"CANCELCMD posted=true for EATTEDIT\", \"CDEDIT scheduled at Idle\", then \"starting CDEDIT in command context\" only 21 to 37 s later, after the robot had closed AutoCAD Enhanced Attribute Editor. So CE catches the double-click but AutoCAD editor still opens first. The check log civilx has CDEDIT scheduled at Idle (civilx = the structured CE log ce_cvl_structured_<date>.log, a runner key added 26 Oct 2026 because the first try with log civil could not pass on any build: those lines are written only to the structured log, not to CE_CVL_SUITE.log; runs b4c1 b4c2) passes when the switch is ON and must FAIL in R09_OFF_BROKEN, where CE logs EATTEDIT left to AutoCAD: the double-click switch reads OFF (that is its true red). R09 itself stays a real fault (EXPECT-FAIL BUG-859) because AutoCAD editor opens first.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug."
+      ],
+      "file_sha256": "E6C6A80BBB7D180C3E28A5C9B5240E77E729BF92B6BE202230B12109DB62E6F9",
+      "plan_item": "BUG-859,",
+      "result": "BLOCKED",
+      "blocked": "Tim's AutoCAD in-use hours: no session was started",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1311-C3.0.78-b5a1-none",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BUG-859): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R09_OFF_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R09: the switch doubleClick.sourceEditWindow is OFF, so AutoCAD's own editor opens instead of the CE Edit source window (must FAIL)",
+      "kind": "deterministic",
+      "order": 91,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R09",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "Batch 3 fixes of 25 Oct 2026: run unchanged first on Civil 3.0.75 it FAILED for the real reason (the double-click opened AutoCAD's Enhanced Attribute Editor, run b3r09a), so the Tag box name is still unknown. Cancel is now pressed with ui-press (Edit source, Cancel) and its closing is asserted; close-windows stays behind it only to put AutoCAD right if the wrong window opened. The true red after this edit is the variant R09_OFF_BROKEN (the switch doubleClick.sourceEditWindow set false: AutoCAD's editor must open).",
+        "Batch 4 (26 Oct 2026, Civil 3.0.77): evidence for BUG-859 from CE own log at every double-click of runs on 3.0.75 (b3r09a, b3w1, b3z4): \"double-click hit-test: 1 block(s) under the pointer; source tag = DP1\", \"pick set emptied so EATTEDIT stops at its prompt\", \"CANCELCMD posted=true for EATTEDIT\", \"CDEDIT scheduled at Idle\", then \"starting CDEDIT in command context\" only 21 to 37 s later, after the robot had closed AutoCAD Enhanced Attribute Editor. So CE catches the double-click but AutoCAD editor still opens first. The check log civilx has CDEDIT scheduled at Idle (civilx = the structured CE log ce_cvl_structured_<date>.log, a runner key added 26 Oct 2026 because the first try with log civil could not pass on any build: those lines are written only to the structured log, not to CE_CVL_SUITE.log; runs b4c1 b4c2) passes when the switch is ON and must FAIL in R09_OFF_BROKEN, where CE logs EATTEDIT left to AutoCAD: the double-click switch reads OFF (that is its true red). R09 itself stays a real fault (EXPECT-FAIL BUG-859) because AutoCAD editor opens first.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug."
+      ],
+      "file_sha256": "9C7CA3AD9D5667BDE8996519B8728B3277D5B6CBE9DCBE39E419CB85F9AC7471",
+      "plan_item": "red-before-green proof for R09 (a real switch)",
+      "result": "BLOCKED",
+      "blocked": "Tim's AutoCAD in-use hours: no session was started",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1311-C3.0.78-b5a1-none",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

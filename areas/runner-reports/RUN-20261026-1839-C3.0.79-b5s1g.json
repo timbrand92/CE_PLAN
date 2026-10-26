@@ -1,0 +1,1356 @@
+{
+  "header": {
+    "run_id": "RUN-20261026-1839-C3.0.79-b5s1g",
+    "started": "2026-10-26 18:39:15",
+    "finished": "2026-10-26 19:28:15",
+    "build": {
+      "civil": {
+        "product_version": "3.0.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa",
+        "file_version": "3.0.79.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa",
+        "file_version": "1.1.79.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.79+d3f9c5df / struc 1.0.124+3a3caac5 / mgr 1.1.79+d3f9c5df",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "8AA9DB20DD6B7CC3166DFFA92BCC91CF6ADE9C23CC8125EB42E60BEA48D229AA",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 6 case file(s) plus 0 shared setup(s); pack SHA-256 8AA9DB20DD6B7CC3166DFFA92BCC91CF6ADE9C23CC8125EB42E60BEA48D229AA; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 26 Oct 2026 18:39 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 4,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-26 19:20:56",
+      "finished": "2026-10-26 19:28:15",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31921491_B1.dwg",
+      "cases": [
+        "R21",
+        "R21_BROKEN",
+        "R22",
+        "R26",
+        "R26_BROKEN",
+        "R26_PICK_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R21",
+      "proves_bugs": "",
+      "title": "CDCHECK All and Problems repeat the expected totals; object count and file on disk stay unchanged",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDCHECK fixed-fixture totals baseline only; not D28, Checks palette acceptance or whole BUG-461/BUG-809",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group C1 (BUG-461 and BUG-809 item 1 as written in BUG_CARPARK.md) and the wording CDCHECK printed on build 3.0.73: only the totals line, that both answers print it and that the drawing and the file are unchanged are checked; BUG-461 sentence and the palette counts are not compared.",
+      "variant_of": "",
+      "expected": "CDCHECK with the answer All prints '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' and the same totals line again for Problems; 179 + 1 + 4 + 0 = 184; the number of objects in the drawing and the file on disk are unchanged afterwards; no CE window stays open.",
+      "why_not_unit": "The totals come from the real drawing's links and the sentence is only seen on the live command line.",
+      "not_automated": [
+        "Whether the Checks palette (\"What CE Found\") shows the same counts as CDCHECK (BUG-809 item 1) is not read here: the palette is not driven.",
+        "No complete in-memory drawing comparison, action/failure route or palette-count comparison is made (cx_cr05, run B5). Moving an object or changing a stored level would keep the object count and the unsaved file: the case does not prove the drawing is unchanged beyond those two reads.",
+        "The sentence \"Nothing in the drawing has been changed so far.\" is asserted in the Esc reply of both answers (run B5); BUG-461 action and failure routes are not driven."
+      ],
+      "file_sha256": "2462CD753D2920F4E412A964C10EBADA700362BD8E32C1766241BC260531B4AB",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 19:22:35",
+      "seconds": 30.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "copy CLDV31921491_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $all1",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "typed 'CDCHECK': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $all_e",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 40 -> $h_all",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "history: 54. Unclassified attached to C1->STUB: Connected | 55. Unclassified attached to C1->STUB: Connected | 56. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 57. Unclassified attached to CE-CIV-PIPE-03E867..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $prob1",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $prob_e",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31921491_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history count \"[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' (expected 2)"
+        },
+        {
+          "n": 2,
+          "text": "contains $all1 \"[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresol...",
+          "evidence": "found '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connectio..."
+        },
+        {
+          "n": 3,
+          "text": "contains $prob1 \"[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, ...",
+          "evidence": "found '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 184 ..."
+        },
+        {
+          "n": 4,
+          "text": "contains $all_e \"Nothing in the drawing has been changed so far.\"",
+          "ok": true,
+          "expected": "contains 'Nothing in the drawing has been changed so far.'",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Conn...",
+          "evidence": "found 'Nothing in the drawing has been changed so far.' in: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): on..."
+        },
+        {
+          "n": 5,
+          "text": "contains $prob_e \"Nothing in the drawing has been changed so far.\"",
+          "ok": true,
+          "expected": "contains 'Nothing in the drawing has been changed so far.'",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Conn...",
+          "evidence": "found 'Nothing in the drawing has been changed so far.' in: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): on..."
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31921491_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31921491_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $h_all \"FULL the last 40 lines CDCHECK printed after All\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "54. Unclassified attached to C1->STUB: Connected | 55. Unclassified attached to C1->STUB: Connected | 56. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 57. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 58. Unclassified attached to CE-CIV-PIPE-0766B123-0820-46F0-994F-003666042E6A: Connected | 59. Unclassified attached to CE-CIV-PIPE-144E3025-C150-486F-99B4-0DAD9248514A: Connected | 60. Unclassified attached to CE-CIV-PIPE-144E3025-C150-486F-99B4-0DAD9248514A: Connected | ... 124 more in the saved list. | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168�). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow, handle 119803, points away from the nearest grated pit P3 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow, handle 119827, points away from the nearest grated pit P2 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow, handle 119839, points away from the nearest grated pit P2 (off by 172�). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow, handle 11984B, points away from the nearest grated pit P1 (off by 172�). Check the fall direction or move the arrow. | [CE] Pipe ends: 22 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450 (handle 109359): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450 (handle 109390): one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100 (handle 1093C7): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100 (handle 109430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150 (handle 1098B6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150 (handle 1098E8): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150 (handle 109B80): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150 (handle 109C15): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150 (handle 109CCF): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150 (handle 109F81): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150 (handle 10A1D4): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150 (handle 10A27D): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150 (handle 10A348): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150 (handle 10A3B0): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150 (handle 10A3E0): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150 (handle 10A430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full l...",
+          "evidence": "RECORDED, not judged: FULL the last 40 lines CDCHECK printed after All = 54. Unclassified attached to C1->STUB: Connected | 55. Unclassified attached to C1->STUB: Connected | 56. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 57. Unclassified attached to CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977: Connected | 58. Unclassified attached to CE-CIV-PIPE-0766B123-0820-46F0-994F-003666042E6A: Connected | 59. Unclassified attached to CE-CIV-PIPE-144E3025-C150-486F-99B4-0DAD9248514A: Connected | 60. Unclassified attached to CE-CIV-PIPE-144E3025-C150-486F-99B4-0DAD9248514A: Connected | ... 124 more in the saved list. | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168�). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow, handle 119803, points away from the nearest grated pit P3 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow, handle 119827, points away from the nearest grated pit P2 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow, handle 119839, points away from the nearest grated pit P2 (off by 172�). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow, handle 11984B, points away from the nearest grated pit P1 (off by 172�). Check the fall direction or move the arrow. | [CE] Pipe ends: 22 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450 (handle 109359): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450 (handle 109390): one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100 (handle 1093C7): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100 (handle 109430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150 (handle 1098B6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150 (handle 1098E8): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150 (handle 109B80): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150 (handle 109C15): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150 (handle 109CCF): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150 (handle 109F81): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150 (handle 10A1D4): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150 (handle 10A27D): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150 (handle 10A348): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150 (handle 10A3B0): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150 (handle 10A3E0): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150 (handle 10A430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full l..."
+        },
+        {
+          "n": 10,
+          "text": "record $prob_e \"FULL what the Esc after Problems printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31921491_B1-20261026-082251.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-4) or [Ends]: *Cancel*",
+          "evidence": "RECORDED, not judged: FULL what the Esc after Problems printed = [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31921491_B1-20261026-082251.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-4) or [Ends]: *Cancel*"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 8636 ms ; Command outcome: CDCHECK cancelled 8641 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 19:23:05",
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R21_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R21_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R21: one expected word is wrong (must FAIL)",
+      "kind": "deterministic",
+      "order": 11,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R21",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group C1 (BUG-461 and BUG-809 item 1 as written in BUG_CARPARK.md) and the wording CDCHECK printed on build 3.0.73: only the totals line, that both answers print it and that the drawing and the file are unchanged are checked; BUG-461 sentence and the palette counts are not compared.",
+      "variant_of": "R21",
+      "expected": "CDCHECK with the answer All prints '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' and the same totals line again for Problems; 179 + 1 + 4 + 0 = 184; the number of objects in the drawing and the file on disk are unchanged afterwards; no CE window stays open.",
+      "why_not_unit": "The totals come from the real drawing's links and the sentence is only seen on the live command line.",
+      "not_automated": [
+        "Whether the Checks palette (\"What CE Found\") shows the same counts as CDCHECK (BUG-809 item 1) is not read here: the palette is not driven.",
+        "No complete in-memory drawing comparison, action/failure route or palette-count comparison is made (cx_cr05, run B5). Moving an object or changing a stored level would keep the object count and the unsaved file: the case does not prove the drawing is unchanged beyond those two reads.",
+        "The sentence \"Nothing in the drawing has been changed so far.\" is asserted in the Esc reply of both answers (run B5); BUG-461 action and failure routes are not driven."
+      ],
+      "file_sha256": "8A3037724FDB9F4D285E1D71049311273A328AE571A8B804AD0A544B8F79E254",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "command line holds 0 line(s) containing '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' (expected 2)",
+      "started": "2026-10-26 19:23:05",
+      "seconds": 63.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31921491_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $all1",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "typed 'CDCHECK': Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not Connected, 0 Unknow..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $all_e",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 40 -> $h_all",
+          "ok": true,
+          "seconds": 21.1,
+          "evidence": "history: 54. CE-CIV-PIPE-73B797A9-8E64-4517-A874-E5F12E7F6635 flows to WT8: Connected | 55. CE-CIV-PIPE-94C7EB08-79E4-400C-86AD-AD71B569A5D4 flows from WT4: Connected | 56. CE-CIV-PIPE-9DF90D6E-ED64-4006-8E68-6A9D4AB310EE flows from AGI: Connected |..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $prob1",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $prob_e",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31921491_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history count \"[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\" = 2",
+          "ok": false,
+          "expected": "2 line(s) with '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "0",
+          "evidence": "command line holds 0 line(s) containing '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' (expected 2)"
+        },
+        {
+          "n": 2,
+          "text": "contains $all1 \"[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\"",
+          "ok": false,
+          "expected": "contains '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not...",
+          "evidence": "'[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' is NOT in: Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not..."
+        },
+        {
+          "n": 3,
+          "text": "contains $prob1 \"[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\"",
+          "ok": false,
+          "expected": "contains '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, ...",
+          "evidence": "'[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' is NOT in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, ..."
+        },
+        {
+          "n": 4,
+          "text": "contains $all_e \"Nothing in the drawing has been changed so far.\"",
+          "ok": true,
+          "expected": "contains 'Nothing in the drawing has been changed so far.'",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Conn...",
+          "evidence": "found 'Nothing in the drawing has been changed so far.' in: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): on..."
+        },
+        {
+          "n": 5,
+          "text": "contains $prob_e \"Nothing in the drawing has been changed so far.\"",
+          "ok": true,
+          "expected": "contains 'Nothing in the drawing has been changed so far.'",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Conn...",
+          "evidence": "found 'Nothing in the drawing has been changed so far.' in: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): on..."
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31921491_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31921491_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $h_all \"FULL the last 40 lines CDCHECK printed after All\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "54. CE-CIV-PIPE-73B797A9-8E64-4517-A874-E5F12E7F6635 flows to WT8: Connected | 55. CE-CIV-PIPE-94C7EB08-79E4-400C-86AD-AD71B569A5D4 flows from WT4: Connected | 56. CE-CIV-PIPE-9DF90D6E-ED64-4006-8E68-6A9D4AB310EE flows from AGI: Connected | 57. CE-CIV-PIPE-AC57DED1-4D54-42DB-BC3B-1F5B9A8C6783 flows from WT12: Connected | 58. CE-CIV-PIPE-B6CD7A06-FEAA-4AA4-8E1F-5AA7CA9D9CC9 flows from WT11: Connected | 59. CE-CIV-PIPE-C0565AB7-948F-42DD-9784-FC6119E75102 flows from AGI: Connected | 60. CE-CIV-PIPE-C15D54D3-D011-48C5-8446-0CC39EFACB53 flows from WT3: Connected | ... 127 more in the saved list. | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168�). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow, handle 119803, points away from the nearest grated pit P3 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow, handle 119827, points away from the nearest grated pit P2 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow, handle 119839, points away from the nearest grated pit P2 (off by 172�). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow, handle 11984B, points away from the nearest grated pit P1 (off by 172�). Check the fall direction or move the arrow. | [CE] Pipe ends: 22 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450 (handle 109359): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450 (handle 109390): one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100 (handle 1093C7): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100 (handle 109430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150 (handle 1098B6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150 (handle 1098E8): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150 (handle 109B80): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150 (handle 109C15): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150 (handle 109CCF): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150 (handle 109F81): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150 (handle 10A1D4): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150 (handle 10A27D): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150 (handle 10A348): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150 (handle 10A3B0): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150 (handle 10A3E0): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150 (handle 10A430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [...",
+          "evidence": "RECORDED, not judged: FULL the last 40 lines CDCHECK printed after All = 54. CE-CIV-PIPE-73B797A9-8E64-4517-A874-E5F12E7F6635 flows to WT8: Connected | 55. CE-CIV-PIPE-94C7EB08-79E4-400C-86AD-AD71B569A5D4 flows from WT4: Connected | 56. CE-CIV-PIPE-9DF90D6E-ED64-4006-8E68-6A9D4AB310EE flows from AGI: Connected | 57. CE-CIV-PIPE-AC57DED1-4D54-42DB-BC3B-1F5B9A8C6783 flows from WT12: Connected | 58. CE-CIV-PIPE-B6CD7A06-FEAA-4AA4-8E1F-5AA7CA9D9CC9 flows from WT11: Connected | 59. CE-CIV-PIPE-C0565AB7-948F-42DD-9784-FC6119E75102 flows from AGI: Connected | 60. CE-CIV-PIPE-C15D54D3-D011-48C5-8446-0CC39EFACB53 flows from WT3: Connected | ... 127 more in the saved list. | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168�). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow, handle 119803, points away from the nearest grated pit P3 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow, handle 119827, points away from the nearest grated pit P2 (off by 173�). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow, handle 119839, points away from the nearest grated pit P2 (off by 172�). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow, handle 11984B, points away from the nearest grated pit P1 (off by 172�). Check the fall direction or move the arrow. | [CE] Pipe ends: 22 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450 (handle 109359): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450 (handle 109390): one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100 (handle 1093C7): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100 (handle 109430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150 (handle 1098B6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150 (handle 1098E8): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150 (handle 10993C): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150 (handle 10996E): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150 (handle 109B80): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150 (handle 109C15): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150 (handle 109CCF): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150 (handle 109F81): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150 (handle 10A1D4): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150 (handle 10A27D): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150 (handle 10A348): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150 (handle 10A3B0): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150 (handle 10A3E0): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150 (handle 10A430): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [..."
+        },
+        {
+          "n": 10,
+          "text": "record $prob_e \"FULL what the Esc after Problems printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31921491_B1-20261026-082354.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-44) or [Ends]: *Cancel*",
+          "evidence": "RECORDED, not judged: FULL what the Esc after Problems printed = [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100 (handle 10AAB6): both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100 (handle 1136A4): both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31921491_B1-20261026-082354.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-44) or [Ends]: *Cancel*"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31921491_B1_1401233e9.log)",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 10230 ms ; Command outcome: CDCHECK cancelled 9196 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 19:24:08",
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R22",
+      "proves_bugs": "",
+      "title": "CDCHECK words: no raw handle, no CE-CIV internal id, no escape code on the command line",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-360 CDCHECK command-line extension only; related handle wording in BUG-372/BUG-814; BUG-389 needs an old-name fixture",
+      "bug": "BUG-372 BUG-814 BUG-360 BUG-389",
+      "known_fail": "BUG-372",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with BUG-372, BUG-814, BUG-360 and BUG-389 as written in BUG_CARPARK.md (no handle, no internal id, no escape code on screen). Only the CDCHECK command line is swept. The case is meant to FAIL on 3.0.73: it does.",
+      "variant_of": "",
+      "expected": "After CDCHECK (All) the command line holds no '(handle ' text, no 'CE-CIV-PIPE-' or 'CE-CIV-PIT-' id and no '\\U+' escape code. On the installed build 3.0.73 CDCHECK still prints 'Pipe 150 (handle 10A86B): one end is not connected', so this case is MEANT to FAIL until the wording fix is installed.",
+      "why_not_unit": "The words are built from the real drawing's pipes and are only seen on the live command line.",
+      "not_automated": [
+        "Only the CDCHECK command line is swept here. The Checks palette rows (BUG-753, BUG-814 item 3) and the Pit Schedule footer (BUG-360) are not read."
+      ],
+      "file_sha256": "8C3D7C746AD46DE73F7F630E6D8233442651A1EF129C469276B85E7C0D8FC835",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "found: '[CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow.'",
+      "started": "2026-10-26 19:24:08",
+      "seconds": 28.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $all1",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "typed 'CDCHECK': Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not Connected, 0 Unknow..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $all_e",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 150 -> $h_all",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "history: [ AutoCAD - Mon Oct 26 19:24:11 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Menu item failed to load: CE_CVL_SUITE_MENU:C..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] CDCHECK:\"",
+          "ok": true,
+          "expected": "command line has '[CE] CDCHECK:'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not Connected, 0 Unknown.'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"handle \"",
+          "ok": false,
+          "expected": "command line lacks 'handle '",
+          "actual": "27 matching line(s)",
+          "evidence": "found: '[CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow.'"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"CE-CIV-PIPE-\"",
+          "ok": false,
+          "expected": "command line lacks 'CE-CIV-PIPE-'",
+          "actual": "60 matching line(s)",
+          "evidence": "found: '1. CE-CIV-PIPE-20707BD7-D950-495C-BCBB-F3CF8515534F flows from TG1: Unresolved (not confirmed from the other side)'"
+        },
+        {
+          "n": 4,
+          "text": "history absent \"CE-CIV-PIT-\"",
+          "ok": false,
+          "expected": "command line lacks 'CE-CIV-PIT-'",
+          "actual": "35 matching line(s)",
+          "evidence": "found: '8. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-3EC51633-0EF6-4E95-9C81-A5267A6B4258: Unresolved (not confirmed from the other side)'"
+        },
+        {
+          "n": 5,
+          "text": "history absent \"U+2192\"",
+          "ok": true,
+          "expected": "command line lacks 'U+2192'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'U+2192' (97 lines read)"
+        },
+        {
+          "n": 6,
+          "text": "history absent \"\\U+\"",
+          "ok": true,
+          "expected": "command line lacks '\\U+'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains '\\U+' (97 lines read)"
+        },
+        {
+          "n": 7,
+          "text": "record $h_all \"FULL the last 150 command-line lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[ AutoCAD - Mon Oct 26 19:24:11 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Opening an AutoCAD 2018 format file. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Ground\": .\\Xref\\XW2626-Arch Ground.dwg | \"XW2626-Arch Ground.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Site\": .\\Xref\\XW2626-Site.dwg | \"XW2626-Site.dwg\" cannot be found. | Xref \"22547_XCivil\": .\\Engineering\\Markups\\2026-04-07_Revised Design from Mike\\22547_XCivil.dwg | \"22547_XCivil\" is unloaded. | Regenerating model. | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Ground. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Site. Type CDXREFREPAIR to look for it and fix the path. | AutoCAD menu utilities loaded.*Cancel* | Command: | Autodesk DWG. This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application. | Command: | Command: | Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. (a PRE_C7 backup already exists beside the drawing.)Regenerating model. | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 212 are in the drawing now (0 added since, 11 no longer there). | 1. CE-CIV-PIPE-20707BD7-D950-495C-BCBB-F3CF8515534F flows from TG1: Unresolved (not confirmed from the other side) | 2. CE-CIV-PIPE-6A33BA73-044F-4489-AC73-78E75527B461 flows to WT4: Unresolved (not confirmed from the other side) | 3. CE-CIV-PIPE-7ED70B2C-90D3-4950-96EA-282201BBF4AB flows to WT10: Unresolved (not confirmed from the other side) | 4. CE-CIV-PIPE-B5E70382-0641-4744-9443-6AB98FE1E0A2 flows to WT7: Unresolved (not confirmed from the other side) | 5. CE-CIV-PIPE-D6873A07-FD37-4D3D-8455-504DD1AE059A flows to WT6: Unresolved (not confirmed from the other side) | 6. CE-CIV-PIPE-EDF227EE-D6CD-46D8-9429-B6B96FBBE97B flows from TG1: Unresolved (not confirmed from the other side) | 7. CE-CIV-PIPE-EDF227EE-D6CD-46D8-9429-B6B96FBBE97B flows to TG1: Unresolved (not confirmed from the other side) | 8. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-3EC51633-0EF6-4E95-9C81-A5267A6B4258: Unresolved (not confirmed from the other side) | 9. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-548B9B65-FCB8-4A4D-87D5-92CF725C97B4: Unresolved (not confirmed from the other side) | 10. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-94C7EB08-79E4-400C-86AD-AD71B569A5D4: Unresolved (not confirmed from the other side) | 11. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-C15D54D3-D011-48C5-8446-0CC39EFACB53: Unresolved (not confirmed from the other side) | 12. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-C31C342F-D1D7-4C71-B8CB-84C0EE50322E: Unresolved (not confirmed from the other side) | 13. CE-CIV-PIT-1773A76E-0F9...",
+          "evidence": "RECORDED, not judged: FULL the last 150 command-line lines = [ AutoCAD - Mon Oct 26 19:24:11 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Opening an AutoCAD 2018 format file. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Ground\": .\\Xref\\XW2626-Arch Ground.dwg | \"XW2626-Arch Ground.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Site\": .\\Xref\\XW2626-Site.dwg | \"XW2626-Site.dwg\" cannot be found. | Xref \"22547_XCivil\": .\\Engineering\\Markups\\2026-04-07_Revised Design from Mike\\22547_XCivil.dwg | \"22547_XCivil\" is unloaded. | Regenerating model. | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Ground. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Site. Type CDXREFREPAIR to look for it and fix the path. | AutoCAD menu utilities loaded.*Cancel* | Command: | Autodesk DWG. This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application. | Command: | Command: | Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. (a PRE_C7 backup already exists beside the drawing.)Regenerating model. | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 212 are in the drawing now (0 added since, 11 no longer there). | 1. CE-CIV-PIPE-20707BD7-D950-495C-BCBB-F3CF8515534F flows from TG1: Unresolved (not confirmed from the other side) | 2. CE-CIV-PIPE-6A33BA73-044F-4489-AC73-78E75527B461 flows to WT4: Unresolved (not confirmed from the other side) | 3. CE-CIV-PIPE-7ED70B2C-90D3-4950-96EA-282201BBF4AB flows to WT10: Unresolved (not confirmed from the other side) | 4. CE-CIV-PIPE-B5E70382-0641-4744-9443-6AB98FE1E0A2 flows to WT7: Unresolved (not confirmed from the other side) | 5. CE-CIV-PIPE-D6873A07-FD37-4D3D-8455-504DD1AE059A flows to WT6: Unresolved (not confirmed from the other side) | 6. CE-CIV-PIPE-EDF227EE-D6CD-46D8-9429-B6B96FBBE97B flows from TG1: Unresolved (not confirmed from the other side) | 7. CE-CIV-PIPE-EDF227EE-D6CD-46D8-9429-B6B96FBBE97B flows to TG1: Unresolved (not confirmed from the other side) | 8. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-3EC51633-0EF6-4E95-9C81-A5267A6B4258: Unresolved (not confirmed from the other side) | 9. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-548B9B65-FCB8-4A4D-87D5-92CF725C97B4: Unresolved (not confirmed from the other side) | 10. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-94C7EB08-79E4-400C-86AD-AD71B569A5D4: Unresolved (not confirmed from the other side) | 11. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-C15D54D3-D011-48C5-8446-0CC39EFACB53: Unresolved (not confirmed from the other side) | 12. CE-CIV-PIT-1773A76E-0F91-4329-8B40-3F68DB663CC7 flows from CE-CIV-PIPE-C31C342F-D1D7-4C71-B8CB-84C0EE50322E: Unresolved (not confirmed from the other side) | 13. CE-CIV-PIT-1773A76E-0F9..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31921491_B1_1fcc01e8a.log)",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 11273 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 19:24:37",
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-372): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R26",
+      "proves_bugs": "",
+      "title": "CDSURVEY on a drawing with no survey Xref says so, a wrong pick is refused, and nothing is stored",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDSURVEY wrong-pick refusal and Esc with no survey loaded; V1 part only; not D26",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D26 (survey half) and triage group V1: only that a refusal stores nothing. BUG-134, BUG-142, BUG-144 and BUG-699 to BUG-709 are not proved (no survey Xref exists).",
+      "variant_of": "",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "2EC1D6D74E0F7E7A6BD4EA133B2A66E7FB8B590AEA4B2E50C29EECC49F4D2502",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-26 19:24:37",
+      "seconds": 38.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31921491_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY{NL}53777.7,-25569.8\" -Force -> $s1",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "typed 'CDSURVEY 53777.7,-25569.8': Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF blo..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s_e",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "esc-prompt: [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the s..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY\" -Force -> $s3",
+          "ok": true,
+          "seconds": 8.7,
+          "evidence": "typed 'CDSURVEY': Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s3_e",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "esc-prompt: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $s1 \"Current survey: Survey: not loaded\"",
+          "ok": true,
+          "expected": "contains 'Current survey: Survey: not loaded'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found 'Current survey: Survey: not loaded' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 2,
+          "text": "contains $s1 \"Click on the survey XREF\"",
+          "ok": true,
+          "expected": "contains 'Click on the survey XREF'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found 'Click on the survey XREF' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 3,
+          "text": "contains $s1 \"[CE] Please click directly on the survey XREF block.\"",
+          "ok": true,
+          "expected": "contains '[CE] Please click directly on the survey XREF block.'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found '[CE] Please click directly on the survey XREF block.' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 4,
+          "text": "history count \"Current survey: Survey: not loaded\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'Current survey: Survey: not loaded'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'Current survey: Survey: not loaded' (expected 2)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "command line has 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: '[CE] CDSURVEY cancelled - nothing stored.'"
+        },
+        {
+          "n": 6,
+          "text": "contains $s3 \"Current survey: Survey: not loaded\"",
+          "ok": true,
+          "expected": "contains 'Current survey: Survey: not loaded'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing...",
+          "evidence": "found 'Current survey: Survey: not loaded' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "text": "contains $s3_e \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "contains 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - ...",
+          "evidence": "found 'CDSURVEY cancelled - nothing stored.' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XRE..."
+        },
+        {
+          "n": 8,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 9,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 10,
+          "text": "record $s1 \"FULL what CDSURVEY printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block.",
+          "evidence": "RECORDED, not judged: FULL what CDSURVEY printed after the wrong pick = Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block."
+        },
+        {
+          "n": 11,
+          "text": "record $s_e \"FULL what Esc printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored.",
+          "evidence": "RECORDED, not judged: FULL what Esc printed after the wrong pick = [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31921491_B1_15ccba71e.log)",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSURVEY cancelled 8792 ms ; Command outcome: CDSURVEY cancelled 8470 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 19:25:15",
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R26_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R26_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R26: one expected word is wrong (must FAIL)",
+      "kind": "deterministic",
+      "order": 51,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R26",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D26 (survey half) and triage group V1: only that a refusal stores nothing. BUG-134, BUG-142, BUG-144 and BUG-699 to BUG-709 are not proved (no survey Xref exists).",
+      "variant_of": "R26",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "F97ED32F05D5C38A78410AFD7183441FDD8025C0B7CA50C2F65969461A237AC3",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Current survey: Survey: loaded' is NOT in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+      "started": "2026-10-26 19:25:15",
+      "seconds": 38.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31921491_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY{NL}53777.7,-25569.8\" -Force -> $s1",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "typed 'CDSURVEY 53777.7,-25569.8': Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF blo..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s_e",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "esc-prompt: [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the s..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY\" -Force -> $s3",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "typed 'CDSURVEY': Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s3_e",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $s1 \"Current survey: Survey: loaded\"",
+          "ok": false,
+          "expected": "contains 'Current survey: Survey: loaded'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "'Current survey: Survey: loaded' is NOT in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on..."
+        },
+        {
+          "n": 2,
+          "text": "contains $s1 \"Click on the survey XREF\"",
+          "ok": true,
+          "expected": "contains 'Click on the survey XREF'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found 'Click on the survey XREF' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 3,
+          "text": "contains $s1 \"[CE] Please click directly on the survey XREF block.\"",
+          "ok": true,
+          "expected": "contains '[CE] Please click directly on the survey XREF block.'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found '[CE] Please click directly on the survey XREF block.' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 4,
+          "text": "history count \"Current survey: Survey: not loaded\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'Current survey: Survey: not loaded'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'Current survey: Survey: not loaded' (expected 2)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "command line has 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: '[CE] CDSURVEY cancelled - nothing stored.'"
+        },
+        {
+          "n": 6,
+          "text": "contains $s3 \"Current survey: Survey: not loaded\"",
+          "ok": true,
+          "expected": "contains 'Current survey: Survey: not loaded'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing...",
+          "evidence": "found 'Current survey: Survey: not loaded' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "text": "contains $s3_e \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "contains 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - ...",
+          "evidence": "found 'CDSURVEY cancelled - nothing stored.' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XRE..."
+        },
+        {
+          "n": 8,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 9,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 10,
+          "text": "record $s1 \"FULL what CDSURVEY printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block.",
+          "evidence": "RECORDED, not judged: FULL what CDSURVEY printed after the wrong pick = Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block."
+        },
+        {
+          "n": 11,
+          "text": "record $s_e \"FULL what Esc printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored.",
+          "evidence": "RECORDED, not judged: FULL what Esc printed after the wrong pick = [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31921491_B1_1a43fca94.log)",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSURVEY cancelled 11436 ms ; Command outcome: CDSURVEY cancelled 8538 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 19:25:54",
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R26_PICK_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R26: expects a different refusal sentence (must FAIL)",
+      "kind": "deterministic",
+      "order": 52,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for the R26 refusal sentence",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D26 (survey half) and triage group V1: only that a refusal stores nothing. BUG-134, BUG-142, BUG-144 and BUG-699 to BUG-709 are not proved (no survey Xref exists).",
+      "variant_of": "R26",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "D4D56A81DFC8C2B0ECAF89EFB20A776DC39299204471ABA04D091DF52410692A",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'[CE] Survey accepted and stored.' is NOT in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+      "started": "2026-10-26 19:25:54",
+      "seconds": 52.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "copy CLDV31921491_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY{NL}53777.7,-25569.8\" -Force -> $s1",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "typed 'CDSURVEY 53777.7,-25569.8': Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF blo..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s_e",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "esc-prompt: [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the s..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSURVEY\" -Force -> $s3",
+          "ok": true,
+          "seconds": 11.3,
+          "evidence": "typed 'CDSURVEY': Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s3_e",
+          "ok": true,
+          "seconds": 4.6,
+          "evidence": "esc-prompt: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $s1 \"Current survey: Survey: not loaded\"",
+          "ok": true,
+          "expected": "contains 'Current survey: Survey: not loaded'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found 'Current survey: Survey: not loaded' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 2,
+          "text": "contains $s1 \"Click on the survey XREF\"",
+          "ok": true,
+          "expected": "contains 'Click on the survey XREF'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "found 'Click on the survey XREF' in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,..."
+        },
+        {
+          "n": 3,
+          "text": "contains $s1 \"[CE] Survey accepted and stored.\"",
+          "ok": false,
+          "expected": "contains '[CE] Survey accepted and stored.'",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on...",
+          "evidence": "'[CE] Survey accepted and stored.' is NOT in: Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on..."
+        },
+        {
+          "n": 4,
+          "text": "history count \"Current survey: Survey: not loaded\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'Current survey: Survey: not loaded'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'Current survey: Survey: not loaded' (expected 2)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "command line has 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: '[CE] CDSURVEY cancelled - nothing stored.'"
+        },
+        {
+          "n": 6,
+          "text": "contains $s3 \"Current survey: Survey: not loaded\"",
+          "ok": true,
+          "expected": "contains 'Current survey: Survey: not loaded'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing...",
+          "evidence": "found 'Current survey: Survey: not loaded' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing..."
+        },
+        {
+          "n": 7,
+          "text": "contains $s3_e \"CDSURVEY cancelled - nothing stored.\"",
+          "ok": true,
+          "expected": "contains 'CDSURVEY cancelled - nothing stored.'",
+          "actual": "Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - ...",
+          "evidence": "found 'CDSURVEY cancelled - nothing stored.' in: Command: | Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XRE..."
+        },
+        {
+          "n": 8,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 9,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 10,
+          "text": "record $s1 \"FULL what CDSURVEY printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block.",
+          "evidence": "RECORDED, not judged: FULL what CDSURVEY printed after the wrong pick = Command: CDSURVEY | [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block."
+        },
+        {
+          "n": 11,
+          "text": "record $s_e \"FULL what Esc printed after the wrong pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored.",
+          "evidence": "RECORDED, not judged: FULL what Esc printed after the wrong pick = [CE] Current survey: Survey: not loaded | [CE] Step 1 of 2: Click on the survey XREF in your drawing... | Click on the survey XREF: 53777.7,-25569.8 | [CE] Please click directly on the survey XREF block. | Click on the survey XREF: *Cancel* | [CE] CDSURVEY cancelled - nothing stored."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31921491_B1_16d72593d.log)",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSURVEY cancelled 10230 ms ; Command outcome: CDSURVEY cancelled 11925 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-26 19:26:46",
+      "session_id": "RUN-20261026-1839-C3.0.79-b5s1g-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

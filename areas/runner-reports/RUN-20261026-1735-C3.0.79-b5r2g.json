@@ -1,0 +1,323 @@
+{
+  "header": {
+    "run_id": "RUN-20261026-1735-C3.0.79-b5r2g",
+    "started": "2026-10-26 17:35:39",
+    "finished": "2026-10-26 18:35:48",
+    "build": {
+      "civil": {
+        "product_version": "3.0.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa",
+        "file_version": "3.0.79.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa",
+        "file_version": "1.1.79.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.79+d3f9c5df / struc 1.0.124+3a3caac5 / mgr 1.1.79+d3f9c5df",
+    "acad_version": "",
+    "pack_sha256": "8AA9DB20DD6B7CC3166DFFA92BCC91CF6ADE9C23CC8125EB42E60BEA48D229AA",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.79+d3f9c5dfc6241815d587f335a7ae49ca603c58fa",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 6 case file(s) plus 0 shared setup(s); pack SHA-256 8AA9DB20DD6B7CC3166DFFA92BCC91CF6ADE9C23CC8125EB42E60BEA48D229AA; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 26 Oct 2026 17:35 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 6,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-26 18:35:48",
+      "finished": "2026-10-26 18:35:48",
+      "result": "BLOCKED",
+      "blocked": "the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": null,
+      "copy": null,
+      "cases": [
+        "R21",
+        "R21_BROKEN",
+        "R22",
+        "R26",
+        "R26_BROKEN",
+        "R26_PICK_BROKEN"
+      ],
+      "calibration": null,
+      "clean": null,
+      "acad_left": null,
+      "lock_holder_after": null,
+      "lock_after": null,
+      "guard_clear": null,
+      "hashes_start": null,
+      "hashes_end": null,
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "R21",
+      "proves_bugs": "",
+      "title": "CDCHECK All and Problems repeat the expected totals; object count and file on disk stay unchanged",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group C1 (BUG-461 and BUG-809 item 1 as written in BUG_CARPARK.md) and the wording CDCHECK printed on build 3.0.73: only the totals line, that both answers print it and that the drawing and the file are unchanged are checked; BUG-461 sentence and the palette counts are not compared.",
+      "variant_of": "",
+      "expected": "CDCHECK with the answer All prints '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' and the same totals line again for Problems; 179 + 1 + 4 + 0 = 184; the number of objects in the drawing and the file on disk are unchanged afterwards; no CE window stays open.",
+      "why_not_unit": "The totals come from the real drawing's links and the sentence is only seen on the live command line.",
+      "not_automated": [
+        "Whether the Checks palette (\"What CE Found\") shows the same counts as CDCHECK (BUG-809 item 1) is not read here: the palette is not driven.",
+        "No complete in-memory drawing comparison, action/failure route or palette-count comparison is made (cx_cr05, run B5). Moving an object or changing a stored level would keep the object count and the unsaved file: the case does not prove the drawing is unchanged beyond those two reads.",
+        "The sentence \"Nothing in the drawing has been changed so far.\" is asserted in the Esc reply of both answers (run B5); BUG-461 action and failure routes are not driven."
+      ],
+      "file_sha256": "2462CD753D2920F4E412A964C10EBADA700362BD8E32C1766241BC260531B4AB",
+      "plan_item": "CDCHECK fixed-fixture totals baseline only; not D28, Checks palette acceptance or whole BUG-461/BUG-809",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R21_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R21: one expected word is wrong (must FAIL)",
+      "kind": "deterministic",
+      "order": 11,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group C1 (BUG-461 and BUG-809 item 1 as written in BUG_CARPARK.md) and the wording CDCHECK printed on build 3.0.73: only the totals line, that both answers print it and that the drawing and the file are unchanged are checked; BUG-461 sentence and the palette counts are not compared.",
+      "variant_of": "R21",
+      "expected": "CDCHECK with the answer All prints '[CE] CDCHECK: 212 objects, 184 connections: 180 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' and the same totals line again for Problems; 179 + 1 + 4 + 0 = 184; the number of objects in the drawing and the file on disk are unchanged afterwards; no CE window stays open.",
+      "why_not_unit": "The totals come from the real drawing's links and the sentence is only seen on the live command line.",
+      "not_automated": [
+        "Whether the Checks palette (\"What CE Found\") shows the same counts as CDCHECK (BUG-809 item 1) is not read here: the palette is not driven.",
+        "No complete in-memory drawing comparison, action/failure route or palette-count comparison is made (cx_cr05, run B5). Moving an object or changing a stored level would keep the object count and the unsaved file: the case does not prove the drawing is unchanged beyond those two reads.",
+        "The sentence \"Nothing in the drawing has been changed so far.\" is asserted in the Esc reply of both answers (run B5); BUG-461 action and failure routes are not driven."
+      ],
+      "file_sha256": "8A3037724FDB9F4D285E1D71049311273A328AE571A8B804AD0A544B8F79E254",
+      "plan_item": "red-before-green proof for R21",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R22",
+      "proves_bugs": "",
+      "title": "CDCHECK words: no raw handle, no CE-CIV internal id, no escape code on the command line",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-372 BUG-814 BUG-360 BUG-389",
+      "known_fail": "BUG-372",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with BUG-372, BUG-814, BUG-360 and BUG-389 as written in BUG_CARPARK.md (no handle, no internal id, no escape code on screen). Only the CDCHECK command line is swept. The case is meant to FAIL on 3.0.73: it does.",
+      "variant_of": "",
+      "expected": "After CDCHECK (All) the command line holds no '(handle ' text, no 'CE-CIV-PIPE-' or 'CE-CIV-PIT-' id and no '\\U+' escape code. On the installed build 3.0.73 CDCHECK still prints 'Pipe 150 (handle 10A86B): one end is not connected', so this case is MEANT to FAIL until the wording fix is installed.",
+      "why_not_unit": "The words are built from the real drawing's pipes and are only seen on the live command line.",
+      "not_automated": [
+        "Only the CDCHECK command line is swept here. The Checks palette rows (BUG-753, BUG-814 item 3) and the Pit Schedule footer (BUG-360) are not read."
+      ],
+      "file_sha256": "8C3D7C746AD46DE73F7F630E6D8233442651A1EF129C469276B85E7C0D8FC835",
+      "plan_item": "BUG-360 CDCHECK command-line extension only; related handle wording in BUG-372/BUG-814; BUG-389 needs an old-name fixture",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BUG-372): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R26",
+      "proves_bugs": "",
+      "title": "CDSURVEY on a drawing with no survey Xref says so, a wrong pick is refused, and nothing is stored",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D26 (survey half) and triage group V1: only that a refusal stores nothing. BUG-134, BUG-142, BUG-144 and BUG-699 to BUG-709 are not proved (no survey Xref exists).",
+      "variant_of": "",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "2EC1D6D74E0F7E7A6BD4EA133B2A66E7FB8B590AEA4B2E50C29EECC49F4D2502",
+      "plan_item": "CDSURVEY wrong-pick refusal and Esc with no survey loaded; V1 part only; not D26",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R26_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R26: one expected word is wrong (must FAIL)",
+      "kind": "deterministic",
+      "order": 51,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D26 (survey half) and triage group V1: only that a refusal stores nothing. BUG-134, BUG-142, BUG-144 and BUG-699 to BUG-709 are not proved (no survey Xref exists).",
+      "variant_of": "R26",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "F97ED32F05D5C38A78410AFD7183441FDD8025C0B7CA50C2F65969461A237AC3",
+      "plan_item": "red-before-green proof for R26",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R26_PICK_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R26: expects a different refusal sentence (must FAIL)",
+      "kind": "deterministic",
+      "order": 52,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D26 (survey half) and triage group V1: only that a refusal stores nothing. BUG-134, BUG-142, BUG-144 and BUG-699 to BUG-709 are not proved (no survey Xref exists).",
+      "variant_of": "R26",
+      "expected": "CDSURVEY says 'Current survey: Survey: not loaded' and asks for the survey Xref. A pick of the pit P3 (a block, not an Xref) is refused with a sentence and stores no survey; asking again still says 'Survey: not loaded'; Esc prints 'CDSURVEY cancelled - nothing stored.'; the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the stored survey record are seen only in a live drawing.",
+      "not_automated": [
+        "THE WHOLE INTAKE IS NOT DRIVEN: no synthetic survey Xref (millimetre and metre hosts, outliers, levels kept) exists as a drawing, so BUG-699 to BUG-709 and BUG-134, BUG-142, BUG-144 are NOT proved here. Only 'a refusal stores nothing' is."
+      ],
+      "file_sha256": "D4D56A81DFC8C2B0ECAF89EFB20A776DC39299204471ABA04D091DF52410692A",
+      "plan_item": "red-before-green proof for the R26 refusal sentence",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 14 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261026-1735-C3.0.79-b5r2g-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}
