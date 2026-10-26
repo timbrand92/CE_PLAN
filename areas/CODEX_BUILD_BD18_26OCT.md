@@ -18,3 +18,16 @@
 7. **Not run and limits.** AutoCAD and the Manager window on screen have not been run. No deployment. No layout changes or pictures are needed for this text-reading correction. Unknown bundle names will not be given another module's ancestor notes. Remaining evidence will be added to this report.
 
 8. **Untouched base suite completed.** Total 1041, passed 1040, skipped 1, failed 0. Failure names: none. Skipped: PaletteTile_UsesTheSameCancelFirstPathAsRibbon. No placeholder ARX or PATH change was needed. All safe build flags and all three reference paths from the brief were supplied. Evidence: C:\ce-cx\bd18-base.log and C:\ce-cx\bd18-evidence\bd18-base.trx. The three named tests have now been added, with product code still unchanged, for the red run.
+
+9. **Red proof before product changes.** Only the three named tests were run with --filter "FullyQualifiedName~Bug1182", with the product files unchanged. Exact lines:
+
+```text
+Failed ViewHistory_Bug1182_CivilFolder_IgnoresManagersNotesInTheParent [54 ms]
+Expected: "CIVIL-ONLY-NOTE"
+But was:  "MANAGER-ONLY-NOTE"
+Passed ViewHistory_Bug1182_OwnNotesStillShown [13 ms]
+Passed ViewHistory_Bug1182_SwitchTrue_RestoresOldBehaviour [3 ms]
+Total tests: 3; Passed: 2; Failed: 1
+```
+
+10. **Change now under test.** Only ReadUpdateNotes changes in CePluginInstallerService.cs. Exact prefixes CE_CVL_SUITE or Civil, CE_SUITE_MANAGER or Manager, CE_STRUC_SUITE or Structural must immediately precede _Update_, ignoring case. A longer word cannot pass as Civil. Unnamed notes remain allowed inside their own bundle. Shared ancestors require the matching name. Existing folder order, newest-first order within each folder, parsing, headings and words are unchanged. The inverse viewHistoryShowsAllModulesNotes key uses the same strict Manager reader once per history lookup. Missing or broken means OFF, with the correction active; plain true restores the previous selection. No switch file is created by reading it. Added checks cover the other modules, both ancestors, case, partial names, unnamed notes, order/headings, one shared reader, absent and broken switch files and plain true.
