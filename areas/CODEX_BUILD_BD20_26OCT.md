@@ -80,7 +80,7 @@
 
 15. **Builds and safe environment.** All three `Modules/Drainage/CE_CVL_SUITE.csproj` Release builds passed: net48, 0 errors, 6 minutes 46 seconds; net8.0-windows, 0 errors, 11 minutes 25 seconds; net10.0-windows, 0 errors, 7 minutes 50 seconds. Existing warnings remain. No production code changed after those builds; the later edit only maintained the existing source check.
 
-    Every build/test used `-p:SkipDevBundle=true -nr:false --disable-build-servers`, Release, `-m:1`, and all three reference parameters:
+    Every build/test used `-p:SkipDevBundle=true -nr:false --disable-build-servers`, Release and all three reference parameters below. Completed runs also used `-m:1` (the first missing-placeholder build attempt did not):
 
     ```text
     -p:_AcadRef48="C:\TimOS\refs\autocad\autocad-2024-ref"
