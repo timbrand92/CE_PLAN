@@ -8,7 +8,7 @@
 
 5. **Shared-file notice.** BUG-1115 (cx_bd17) also changes `WaterTankCommand.cs`, near the later tank-point section. BUG-1174 belongs near the opening window fallback. No protected file or CE_SHARED source is to be changed.
 
-6. **Not run and remaining work.** AutoCAD, the real tank window and real tank master files have not been opened. The line and default-on switch are now written; the green check is building. Still to do: check Settings coverage and fit, build three lanes, compare full-suite failure names, add the top regression entry, push a draft PR and this report, then remove this session's worktree.
+6. **Not run and remaining work.** AutoCAD, the real tank window and real tank master files have not been opened. The 12 wording and switch checks passed. A normal Settings row failed its off-screen height check in both themes: 725 px against the brief's 673 px limit. As expressly allowed by the brief, the row and all its window changes were left out instead of squeezing the page. The default-on switch stays in the saved settings, with default-on, typed-off, both round trips and unchanged-other-keys coverage. No window changes or new pictures remain. Still to do: build three lanes, rerun the final 12-test check, compare full-suite failure names, add the top regression entry, push a draft PR and this report, then remove this session's worktree.
 
 7. **Red first, observed before implementing the line.** Added the method returning null, then ran `FullyQualifiedName~Bug1174` in the requested Civil test project. Actual result: 3 total, 1 passed, 2 failed. Both failed assertions expected the requested line and received null.
 
