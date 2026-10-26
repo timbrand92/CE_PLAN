@@ -24,3 +24,15 @@ Test Run Failed. Total tests: 4; Failed: 3; Passed: 1.
 ```
 
 11. **Change written:** only the warning-limit block in PipeFlowCalcViewModel changed. The shared MaterialVelocityLimits.GetMaxVelocityMs(null) lookup supplies the general maximum because there is no material choice. The minimum is read directly from SettingsSizingStandards.CurrentOffice().MinimumVelocityMs. No parser was changed: Recalculate already has access to Settings, so no extra static-parser parameter is needed. The new default-on switch is detention.pipeFlowsUseSettingsSpeedLimits. Its Settings row uses the existing Newer tools draft, search and save behaviour, in the shorter column. The old high-speed test now uses a grade steep enough to exceed the general maximum. Off-screen pictures, green run, all three builds and after-suite are pending.
+12. **Green focused run:** 17 tests ran and all 17 passed, none skipped or failed. The four original lines now read:
+
+```text
+Passed PipeFlowCalc_Bug1089_ConcreteDn300At1In600_WarnsBelowSettingsMinimum
+Passed PipeFlowCalc_Bug1089_ConcreteDn375At1In20_NoScourWarningUnderConcreteCap
+Passed PipeFlowCalc_Bug1089_UnknownMaterialUsesGeneralMaximum
+Passed PipeFlowCalc_Bug1089_UpvcDn150At1In100_InsideBothLimits_NoWarning
+Test Run Successful. Total tests: 17; Passed: 17.
+Settings tallest tab needs 670 px. (Dark and Light, under the 673 px limit.)
+```
+
+13. **Pictures seen:** six 96 dpi off-screen PNGs, within a 1920 x 1080 desktop envelope. The Pipe Flows test constructs the compiled calculation window; Settings uses the existing SettingsWindowV3Tests source-window render helper. The warning, clear result and new tick are readable and unclipped in both themes; no new scrolling. Paths under docs/image/V3_WINDOWS: cdcalc-bug1089-dark-pipeflows-low.png; cdcalc-bug1089-light-pipeflows-low.png; cdcalc-bug1089-dark-pipeflows-clear.png; cdcalc-bug1089-light-pipeflows-clear.png; settings-bug1089-dark-newertools.png; settings-bug1089-light-newertools.png. The existing roughness note and the calculation pane layout were left alone. Evidence: C:\ce-cx\bd15-green.log and C:\ce-cx\bd15-evidence\bd15-green.trx. Existing related Pipe Flows, Settings rows, persistence and full Settings window checks are now running; three-lane builds and the after-suite remain pending.
