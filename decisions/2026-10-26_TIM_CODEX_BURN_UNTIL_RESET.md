@@ -7,3 +7,6 @@ Tim's words: "another weekly usage reset is coming for codex can you use it on f
 3. **Fast mode everywhere.** queue4.sh (fillers, case reviews, builds) already ran with service_tier fast; queue3.sh (the AutoCAD looks, via launch_codex_retry.ps1) now does too (backup queue3.sh.pre_fast).
 4. **Usage check at every new task.** The conveyor (before each look) and the supervisor (before each filler) read `codex_usage.sh fresh-pct`, which probes when the reading is over 20 minutes old; the desk reads it before queuing any Codex work.
 Backups: daily_cap.sh.pre_burn, codex_conveyor.ps1.pre_burn (desk_jobs), queue3.sh.pre_fast.
+
+## Update 26 Oct 2026 about 19:35
+Tim: "theres no confirmed time just use it up until it resets". So the Friday 30 Oct 07:00 end time (the desk's guess) is dropped: BURN_UNTIL.txt now ends at Mon 2 Nov 17:17 (the natural week end in Codex's own reading) and the burn ends EARLIER only when a reset shows: Codex shows a new reset time, OR the used percent falls 8 or more points below the highest reading seen in the burn (line 3 of BURN_UNTIL.txt). No question to Tim about the time is open any more.
