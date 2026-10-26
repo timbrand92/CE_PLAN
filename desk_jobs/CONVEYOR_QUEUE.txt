@@ -38,3 +38,13 @@ verifyE9_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
 verifyE10_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
 verifyE11_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
 verifyE12_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyF1_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF2_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF3_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF4_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF5_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF6_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF7_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF8_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF9_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF10_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3

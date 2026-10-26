@@ -116,3 +116,9 @@ cx_bd13|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
 cx_bd14|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
 cx_cr21|C:/Lisp Files/_CODEX_RUNNER|gpt-6-astra|high|97|3
 cx_cr22|C:/Lisp Files/_CODEX_RUNNER|gpt-6-astra|high|97|3
+cx_bd15|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
+cx_bd16|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
+cx_bd17|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
+cx_bd18|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
+cx_bd19|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
+cx_bd20|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|97|8
