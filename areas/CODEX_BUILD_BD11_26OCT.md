@@ -1,8 +1,8 @@
-BUG-1191 — BUILD IN PROGRESS (full-suite comparison running)
+BUG-1191 — DONE (built and unit-tested; not installed)
 
-1. **ANSWER FIRST:** BUG-1191 only. Built and tested off-screen; nothing installed. Draft PR not created yet. Final full-suite result and delivery remain pending.
+1. **ANSWER FIRST:** BUG-1191 only. Draft PR #1809: https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1809, against claude/rel-20261025r. Built and unit-tested, with all six off-screen pictures inspected; nothing installed. Final full suite: 20,398 tests, 20,366 passed, zero failed, 32 skipped.
 
-2. **Heads:** Branch cx4/bug-1191-survey-intake-all-findings. Saved head bd0586b70b6b85b371036c7fbed00fd318563691. Base used at the first fetch: d8840a0920f97fedc3b94f98e56eb5a4eb6b663e, matching the brief's head. Latest fetch gives the same release head; merge reports already up to date. No master merge, rebase or force-push.
+2. **Heads:** Branch cx4/bug-1191-survey-intake-all-findings. Pushed branch head 1b0190e13989eff0d6979ca9f768a18f87916745. Base used at the first fetch: d8840a0920f97fedc3b94f98e56eb5a4eb6b663e, matching the brief's head. Latest fetch gives the same release head; merge reports already up to date. No master merge, rebase or force-push.
 
 3. **What Tim will see after installation:** CDSURVEY on a survey Xref with eleven doubtful spot levels: the Survey Intake page lists all eleven, including the one at RL 100.000 and (31.0, 0.0), instead of ten and 'and 1 more'.
 
@@ -18,7 +18,7 @@ BUG-1191 — BUILD IN PROGRESS (full-suite comparison running)
    Passed SurveyIntakePendingReview_Bug1191_SwitchOff_KeepsTheOlderTenAndMoreLine [6 ms]
    Passed SurveyIntakePendingReview_Bug1191_TenFindings_StillListedWithoutAMoreLine [1 ms]
 
-6. **Full suite before:** Untouched-base console total 20,380: passed 20,347, failed 1, skipped 32. Only failure: Diagnostic_MessagesReachTheLogFile, 'Queued diagnostic never reached the log file'. Duration 27 m 26 s. The TRX includes 28 additional unexecuted cases: total 20,408, not executed 60. The final after run is currently active; do not treat its partial output as a result.
+6. **Full suite before:** Untouched-base console total 20,380: passed 20,347, failed 1, skipped 32. Only failure: Diagnostic_MessagesReachTheLogFile, 'Queued diagnostic never reached the log file'. Duration 27 m 26 s. The TRX includes 28 additional unexecuted cases: total 20,408, not executed 60. Final after run completed 27 October 2026 (Melbourne): console total 20,398, passed 20,366, failed 0, skipped 32; duration 41 m 12 s. Detailed TRX total 20,426, passed 20,366, failed 0, not executed 60. No additional failed names. Diagnostic_MessagesReachTheLogFile, the PDF-loading case and the original-wording guard all passed in this final run; no log or PDF code change is claimed.
 
 7. **Exact real-AutoCAD check — NOT RUN:** Use a survey Xref with 32 text spot levels: 21 values 10.000 to 10.200 at 0.010 m steps, then eleven at 100.000; last point at (31.0, 0.0). Run CDSURVEY, open Survey Intake, scroll and count eleven descriptions including 'Spot RL 100.000 at (31.0, 0.0)'. Cancel intake so nothing is stored. Without Manager, check all eleven descriptions print before the approval choice, then cancel. Switch off and repeat to check the older ten-and-more list returns.
 
@@ -58,6 +58,10 @@ BUG-1191 — BUILD IN PROGRESS (full-suite comparison running)
 
 15. **Safety and scope:** Display only; no drawing write. Undo/REDO, locked layers, Xrefs and REFEDIT protection are unaffected. The survey Xref remains read only. No protected file, Structural file, CE_SHARED source, save/undo handler, placement service or protected window was edited. No client names, site addresses or secrets were introduced; all six pictures use synthetic inputs.
 
-16. **Evidence on disk:** C:\ce-cx\bd11-evidence holds base.log/base.trx; red.log/red.trx; complete-settings-checks.log/.trx (78 passed); verified-pictures.log/.trx (18 passed); verified-build-*.log (latest three builds); pdf-resource-retry.log/.trx; and earlier comparison evidence. The current full run writes after.log/after.trx. Worktree: C:\ce-cx\bd11.
+16. **Evidence on disk:** C:\ce-cx\bd11-evidence holds base.log/base.trx; red.log/red.trx; complete-settings-checks.log/.trx (78 passed); verified-pictures.log/.trx (18 passed); verified-build-*.log (latest three builds); pdf-resource-retry.log/.trx; and earlier comparison evidence. The completed final full run is after.log/after.trx. Source branch and pictures are pushed to GitHub. Evidence remains outside the owned worktree at C:\ce-cx\bd11-evidence.
 
-17. **Remaining delivery:** Finish and compare the full run; update only the top BUG-1191 regression entry with actual totals; commit, scan and push the source branch; create a DRAFT PR against claude/rel-20261025r; replace this report's pending fields and push it by name; remove only the owned worktree. Do not report DONE if any additional failed name remains. BUG_CARPARK.md, DESK_LOG.md and QUEUE.md remain untouched.
+17. **Delivery:** Source branch pushed after a clean manual leak scan and a clean pre-push hook. PR #1809 is open as a DRAFT against claude/rel-20261025r; it was not merged, closed or marked ready. The source working copy is clean and has no unpushed commits. This report is saved and pushed by its one filename only. BUG_CARPARK.md, DESK_LOG.md and QUEUE.md remain untouched.
+
+18. **Cleanup:** The owned worktree C:\ce-cx\bd11 will be removed after this report push, as requested. C:\ce-cx\bd11-evidence remains for inspection. No other worktree will be removed.
+
+19. **Undo:** After installation, clear Settings > Survey > 'Survey Intake lists every suspect point' for the next review to restore the older ten-and-more display. Alternatively revert the BUG-1191 commits. Nothing has been installed by this job.
