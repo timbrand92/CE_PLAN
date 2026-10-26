@@ -62,6 +62,6 @@ BUG-1191 — DONE (built and unit-tested; not installed)
 
 17. **Delivery:** Source branch pushed after a clean manual leak scan and a clean pre-push hook. PR #1809 is open as a DRAFT against claude/rel-20261025r; it was not merged, closed or marked ready. The source working copy is clean and has no unpushed commits. This report is saved and pushed by its one filename only. BUG_CARPARK.md, DESK_LOG.md and QUEUE.md remain untouched.
 
-18. **Cleanup:** The owned worktree C:\ce-cx\bd11 will be removed after this report push, as requested. C:\ce-cx\bd11-evidence remains for inspection. No other worktree will be removed.
+18. **Cleanup:** After the draft PR and report were pushed, git worktree remove removed the owned C:\ce-cx\bd11 working copy. Its resolved path was checked first and its absence was verified afterwards. C:\ce-cx\bd11-evidence remains for inspection. No other worktree was removed.
 
 19. **Undo:** After installation, clear Settings > Survey > 'Survey Intake lists every suspect point' for the next review to restore the older ten-and-more display. Alternatively revert the BUG-1191 commits. Nothing has been installed by this job.
