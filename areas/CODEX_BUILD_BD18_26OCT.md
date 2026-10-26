@@ -31,3 +31,16 @@ Total tests: 3; Passed: 2; Failed: 1
 ```
 
 10. **Change now under test.** Only ReadUpdateNotes changes in CePluginInstallerService.cs. Exact prefixes CE_CVL_SUITE or Civil, CE_SUITE_MANAGER or Manager, CE_STRUC_SUITE or Structural must immediately precede _Update_, ignoring case. A longer word cannot pass as Civil. Unnamed notes remain allowed inside their own bundle. Shared ancestors require the matching name. Existing folder order, newest-first order within each folder, parsing, headings and words are unchanged. The inverse viewHistoryShowsAllModulesNotes key uses the same strict Manager reader once per history lookup. Missing or broken means OFF, with the correction active; plain true restores the previous selection. No switch file is created by reading it. Added checks cover the other modules, both ancestors, case, partial names, unnamed notes, order/headings, one shared reader, absent and broken switch files and plain true.
+
+11. **Focused green proof.** All 36 BUG-1182 cases passed, no skips or failures. Exact required passing lines:
+
+```text
+Passed ViewHistory_Bug1182_CivilFolder_IgnoresManagersNotesInTheParent [25 ms]
+Passed ViewHistory_Bug1182_OwnNotesStillShown [3 ms]
+Passed ViewHistory_Bug1182_SwitchTrue_RestoresOldBehaviour [5 ms]
+Test Run Successful.
+Total tests: 36
+Passed: 36
+```
+
+Evidence: C:\ce-cx\bd18-green.log and C:\ce-cx\bd18-evidence\bd18-green.trx. Product and tests saved at bc6c4930. Manager's net48, net8.0-windows and net10.0-windows builds are running sequentially with all required safe flags and reference paths. No deploy, no new build script and no changes to CE_SHARED source.
