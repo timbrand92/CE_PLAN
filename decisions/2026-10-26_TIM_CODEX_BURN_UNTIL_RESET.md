@@ -10,3 +10,6 @@ Backups: daily_cap.sh.pre_burn, codex_conveyor.ps1.pre_burn (desk_jobs), queue3.
 
 ## Update 26 Oct 2026 about 19:35
 Tim: "theres no confirmed time just use it up until it resets". So the Friday 30 Oct 07:00 end time (the desk's guess) is dropped: BURN_UNTIL.txt now ends at Mon 2 Nov 17:17 (the natural week end in Codex's own reading) and the burn ends EARLIER only when a reset shows: Codex shows a new reset time, OR the used percent falls 8 or more points below the highest reading seen in the burn (line 3 of BURN_UNTIL.txt). No question to Tim about the time is open any more.
+
+## Update 27 Oct 2026 about 08:55
+Tim: "not sure when this reset is coming but be on the look out, testing is our priority". The watcher (codex_burn_watch.ps1) re-reads Codex's weekly figures every 5 minutes (a tiny probe when the newest reading is over 20 minutes old), so a reset shows within about 25 minutes by a new reset time or a usage fall of 8 or more points. When it shows: CODEX_MODE goes back to PACE, running jobs finish, and the NEW WEEK's share goes to TESTING first: independent case re-reviews (cx_cr), then the window looks, then reviews and builds (the supervisor's PACE order already does this). The robot keeps first call on AutoCAD; Codex looks queue behind its lock.
