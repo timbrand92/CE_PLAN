@@ -2,3 +2,4 @@
 # Rule: budget per day = (100 - used) / days left. Check at every tick with get_usage; if the projected line crosses 100 before the reset, lengthen the tick (30 to 40 minutes), use shorter replies, and stop Agent subagents; if far under, spend the spare on Opus Agent subagents doing testing work (independent case reviews).
 # time (Melbourne)     weekly all models %     5-hour %     note
 Tue 27 Oct 19:12      76                      8            start of this log; 2 days 17 hours left; 24 points to spend (about 9 a day)
+Tue 27 Oct 19:29      76                      8            two readings 17 minutes apart show NO change: a desk tick costs under 1 point; ample room. Started ONE Opus Agent (background): specs for the next 10 to 12 robot cases (uncovered everyday tools): ROBOT_NEXT_CASES_SPEC_27OCT.md
