@@ -1,0 +1,461 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0358-C3.0.83-n27b1",
+    "started": "2026-10-28 03:58:51",
+    "finished": "2026-10-28 04:03:51",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 03:58 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0358-C3.0.83-n27b1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 03:58:52",
+      "finished": "2026-10-28 04:03:51",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30358551_B1.dwg",
+      "cases": [
+        "N01",
+        "N03"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "N01",
+      "proves_bugs": "",
+      "title": "CDREBUILD warns first, says it does not save the drawing, rebuilds 11 pits and 49 pipes, the file on disk stays unchanged, and one U echoes CDREBUILD",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-REP-01 CDREBUILD half (daily card D27) and UX-STD-03 CDREBUILD half (daily card D18)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Typing CDREBUILD on the untouched copy prints first '[CE] CDREBUILD will rebuild this drawing's stored pit and pipe data ... it does not save the drawing itself - you still decide when to do that. One U undoes it.', then '[CE] CDREBUILD complete: 11 pits, 49 pipes', and last '[CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing. Run PITSCHEDULE to verify output.'; it asks nothing; the Civil log holds one 'Command outcome: CDREBUILD completed'; one U echoes CDREBUILD; the drawing file on disk keeps its SHA-256 and time, and the only new files beside it are CE's own _PRE_C7_ backups.",
+      "why_not_unit": "The order of the warning against the real rebuild, and whether anything wrote the file on disk, only show in a live AutoCAD session on a real drawing.",
+      "not_automated": [
+        "The three Warning and Fix lines CDREBUILD prints about missing levels (X1, P9, P10 on this fixture) are recorded, not judged.",
+        "Whether the rebuilt records are right is not read here (R13 reads the Pit Schedule around CDSYNC; a schedule read around CDREBUILD is not in this draft)."
+      ],
+      "file_sha256": "DD27359CAA38962D4CB657C5F77366A0EC5427B99696B9B5EFFFB24B1E8EEF14",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 03:59:28",
+      "seconds": 11.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30358551_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDREBUILD\" -Force -> $rb",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed 'CDREBUILD': Command: | Command: CDREBUILD | [CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it doe..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30358551_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | CDREBUILD"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30358551_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it do...",
+          "ok": true,
+          "expected": "command line has '[CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it does not save the drawing itself - you still decide when to do that. One U undoes it.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it does not save t...'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] CDREBUILD complete: 11 pits, 49 pipes\"",
+          "ok": true,
+          "expected": "command line has '[CE] CDREBUILD complete: 11 pits, 49 pipes'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDREBUILD complete: 11 pits, 49 pipes'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing. Run PITSCHEDULE to verify output.\"",
+          "ok": true,
+          "expected": "command line has '[CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing. Run PITSCHEDULE to verify output.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing. Run PITSCHEDULE to verify output.'"
+        },
+        {
+          "n": 4,
+          "text": "matches $rb \"will rebuild this drawing.*CDREBUILD complete.*It does not save the drawing\\.\"",
+          "ok": true,
+          "expected": "matches /will rebuild this drawing.*CDREBUILD complete.*It does not save the drawing\\./",
+          "actual": "Command: | Command: CDREBUILD | [CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside ...",
+          "evidence": "matched 'will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it does not save the drawing itself - you still decide when to do that. One U undoes it. | [CE] CDREBUILD complete: 11 pits, 49 pipes | [CE]   Warning: 3 pit(s) missing invert level: X1, P9, P10 | [CE]     Fix: 2 pit(s) have no connected pipe. Connect a pipe with CD, or enter the IL in PITEDIT. | [CE]     Fix: 1 pit(s) have connected pipes but those pipes have no IL - run PIPEEDIT on adjacent pipes to set inverts, then CDREBUILD again. | [CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing.'"
+        },
+        {
+          "n": 5,
+          "text": "history absent \"Error during CDREBUILD\"",
+          "ok": true,
+          "expected": "command line lacks 'Error during CDREBUILD'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Error during CDREBUILD' (11 lines read)"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win1 \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30358551_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30358551_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 8,
+          "text": "folder-new-only $copy0 \"_PRE_C7_.*\\.dwg$\"",
+          "ok": true,
+          "expected": "new files only /_PRE_C7_.*\\.dwg$/",
+          "actual": "0 new",
+          "evidence": "files added beside the drawing: (none)"
+        },
+        {
+          "n": 9,
+          "text": "contains $u1 \"CDREBUILD\"",
+          "ok": true,
+          "expected": "contains 'CDREBUILD'",
+          "actual": "Command: | Command: U | CDREBUILD",
+          "evidence": "found 'CDREBUILD' in: Command: | Command: U | CDREBUILD"
+        },
+        {
+          "n": 10,
+          "text": "log civil count \"Command outcome: CDREBUILD completed\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDREBUILD completed'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDREBUILD completed' (expected 1): 2026-10-28 03:59:30.038 [INFO] Command outcome: CDREBUILD completed 169 ms"
+        },
+        {
+          "n": 11,
+          "text": "record $c0 \"object count before CDREBUILD\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: object count before CDREBUILD = 1034"
+        },
+        {
+          "n": 12,
+          "text": "record $c1 \"object count after CDREBUILD (not judged)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: object count after CDREBUILD (not judged) = 1034"
+        },
+        {
+          "n": 13,
+          "text": "record $c2 \"object count after U (not judged)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: object count after U (not judged) = 1034"
+        },
+        {
+          "n": 14,
+          "text": "record $rb \"FULL what CDREBUILD printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDREBUILD | [CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it does not save the drawing itself - you still decide when to do that. One U undoes it. | [CE] CDREBUILD complete: 11 pits, 49 pipes | [CE] Warning: 3 pit(s) missing invert level: X1, P9, P10 | [CE] Fix: 2 pit(s) have no connected pipe. Connect a pipe with CD, or enter the IL in PITEDIT. | [CE] Fix: 1 pit(s) have connected pipes but those pipes have no IL - run PIPEEDIT on adjacent pipes to set inverts, then CDREBUILD again. | [CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing. Run PITSCHEDULE to verify output.",
+          "evidence": "RECORDED, not judged: FULL what CDREBUILD printed = Command: | Command: CDREBUILD | [CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it does not save the drawing itself - you still decide when to do that. One U undoes it. | [CE] CDREBUILD complete: 11 pits, 49 pipes | [CE] Warning: 3 pit(s) missing invert level: X1, P9, P10 | [CE] Fix: 2 pit(s) have no connected pipe. Connect a pipe with CD, or enter the IL in PITEDIT. | [CE] Fix: 1 pit(s) have connected pipes but those pipes have no IL - run PIPEEDIT on adjacent pipes to set inverts, then CDREBUILD again. | [CE] CE's stored pit and pipe data is up to date in this drawing. It does not save the drawing. Run PITSCHEDULE to verify output."
+        },
+        {
+          "n": 15,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDREBUILD",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDREBUILD"
+        },
+        {
+          "n": 16,
+          "text": "record $copy1 \"the copy on disk at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30358551_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_22...",
+          "evidence": "RECORDED, not judged: the copy on disk at the end = {\"path\":\"C:\\\\ce_rc_drv\\\\CLDV30358551_B1.dwg\",\"sha256\":\"34BBE37C2EA43857BED81D141AE277DA57564455944358FABD4D91A3BD7BEC53\",\"mtime\":639265523871742693,\"length\":1080181,\"folder\":[\"ACAD_LOCK.json\",\"CLD10_B1_PRE_C7_20261009_22..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 26 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDREBUILD completed 169 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 03:59:40",
+      "session_id": "RUN-20261028-0358-C3.0.83-n27b1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N01_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N03",
+      "proves_bugs": "",
+      "title": "OF and FO each place one OVERFLOW symbol, say Overflow placed with an OF tag and Front overflow placed with an FO tag, and offer the next one until Esc",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-01 (daily card D08)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "OF at 150000,-80000 prints 'Overflow placed. Tag: OF<n>.' and '[CE] Pick the next OF, or press Esc to stop.'; one Esc stops it; FO at 152000,-80000 prints 'Front overflow placed. Tag: FO<n>.' and '[CE] Pick the next FO, or press Esc to stop.'; exactly two new OVERFLOW block inserts exist, one at each point, so both use the same symbol.",
+      "why_not_unit": "The real block insert, the tag counter and the label are written in the live drawing by the live command.",
+      "not_automated": [
+        "The plan labels OF and FO (card D08 assertion 3, the Number sources setting) are RECORDED only: the object that carries the plan label has not been read by any run yet.",
+        "Tag numbers counting from 1 need a blank drawing; on DRV1_B1 the number is recorded, not asserted.",
+        "That the two symbols look identical on the plan is a picture item (Codex D7-02 PASS on 3.0.78)."
+      ],
+      "file_sha256": "7A7AEF23FDD4A085AA4F6B7B466D9FEC893316FA5DCC2C7A35E30AF71DC8483C",
+      "result": "BLOCKED",
+      "blocked": "v2 HARD TIMEOUT: AutoCAD did not answer in time (a tool or load problem, not a result)",
+      "first_failure": null,
+      "started": "2026-10-28 03:59:40",
+      "seconds": 146.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"OF{NL}150000,-80000\" -Force -> $of",
+          "ok": false,
+          "seconds": 33.8,
+          "evidence": "type refused or failed: HARD TIMEOUT: AutoCAD did not answer. A dialog may be open or a command may be waiting at a prompt. Press Esc in AutoCAD; nothing further was sent. If the settings guard held backups: while the test AutoCAD you launched ..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30358551_B1_1e76975c9.log)",
+        "Civil CE log: 115 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-28 04:02:06",
+      "session_id": "RUN-20261028-0358-C3.0.83-n27b1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

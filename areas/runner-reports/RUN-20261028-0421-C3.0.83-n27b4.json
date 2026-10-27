@@ -1,0 +1,999 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0421-C3.0.83-n27b4",
+    "started": "2026-10-28 04:21:58",
+    "finished": "2026-10-28 04:29:57",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 04:21 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0421-C3.0.83-n27b4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 04:21:59",
+      "finished": "2026-10-28 04:27:46",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30422021_B1.dwg",
+      "cases": [
+        "N05"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261028-0421-C3.0.83-n27b4-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-28 04:27:46",
+      "finished": "2026-10-28 04:29:57",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30427512_B1.dwg",
+      "cases": [
+        "N07"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N05",
+      "proves_bugs": "",
+      "title": "A placed pit gets one PIT LABEL reading P8 on layer STORMWATER PIT LABEL and one cover text reading CL 19.000, and one U removes all three",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-21 (daily card D09)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT at 150000,-80000 with cover level 19.000, the label point clicked at 150000,-78500 and the cover text point clicked at 151500,-81500: exactly one new pit block on STORMWATER PIT, one new PIT LABEL block on STORMWATER PIT LABEL whose PIT_LABEL attribute reads P8, and one new text reading exactly CL 19.000 (no IL line); the command line says 'Pit placed successfully.' and offers the next pit; one U echoes PIT and leaves no new object behind.",
+      "why_not_unit": "The label block, its attribute and the cover MText are created by the live PIT prompts in the real drawing.",
+      "not_automated": [
+        "The label position is not asserted to the millimetre (card asks within 1 unit of the typed point): a mouse click lands near, not exactly on, the point (R01 note). The distance is recorded.",
+        "The cover text's corner (BR) and its look are a picture item."
+      ],
+      "file_sha256": "4C28CE66C02FB7C77F35F91A95DAE34D2B188CC3025134F293DB92C2938EC7D0",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 04:26:22",
+      "seconds": 64.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 150000,-80000 8000\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed '_.ZOOM _C 150000,-80000 8000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 150000,-80000 | Enter magnif..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 150,000.000,-80,000.000 height 8,000.000 screen 1604x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 21.9,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150000,-78500\" -Blind -> $click_label",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "v3 pt-click 150000,-78500: pt-click: world 150,000.000,-78,500.000 -> pixel 2728,599 (exact 2,727.50,599.31); cursor read-back 2728,599; view stored (40 s old)"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"151500,-81500\" -Blind -> $click_cover",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "v3 pt-click 151500,-81500: pt-click: world 151,500.000,-81,500.000 -> pixel 2834,813 (exact 2,834.07,812.69); cursor read-back 2834,813; view stored (45 s old)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C5AE AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C652 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL 2 ; 11C659 AcDbMText 25TEXT CL 19.000"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5AE PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^PIT LABEL\" -> $labels",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C652 PIT LABEL 2 STORMWATER PIT LABEL"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labels handle -> $lh",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C652"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labels layer -> $ll",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT LABEL"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$lh} -> $le",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C652: {\"handle\":\"11C652\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03700671368,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $labels \"150000,-78500\" -> $ld",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C652 to 150000,-78500 = 8.3"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^CL \" -> $covers",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C659 CL 19.000 25TEXT"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $covers text -> $ct",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = CL 19.000"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $covers layer -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30422021_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | PIT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_u",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Pit placed successfully.\"",
+          "ok": true,
+          "expected": "command line has 'Pit placed successfully.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Pit placed successfully.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] Pit placed. Pick the next pit, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pit placed. Pick the next pit, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pit placed. Pick the next pit, or press Esc to stop.'"
+        },
+        {
+          "n": 3,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $labels = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $labels = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "equals $ll \"STORMWATER PIT LABEL\"",
+          "ok": true,
+          "expected": "STORMWATER PIT LABEL",
+          "actual": "STORMWATER PIT LABEL",
+          "evidence": "value 'STORMWATER PIT LABEL' (expected 'STORMWATER PIT LABEL')"
+        },
+        {
+          "n": 6,
+          "text": "matches $le \"text.:.P8.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P8.,.insertion/",
+          "actual": "{\"handle\":\"11C652\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03700671368,-78495.6061596281,0.0],\"rotation\":0....",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 7,
+          "text": "count $covers = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $covers = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "equals $ct \"CL 19.000\"",
+          "ok": true,
+          "expected": "CL 19.000",
+          "actual": "CL 19.000",
+          "evidence": "value 'CL 19.000' (expected 'CL 19.000')"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"New Pit\"",
+          "ok": true,
+          "expected": "does not contain 'New Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30422021_B1.dwg]",
+          "evidence": "'New Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV30422021_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "contains $u1 \"PIT\"",
+          "ok": true,
+          "expected": "contains 'PIT'",
+          "actual": "Command: | Command: U | PIT",
+          "evidence": "found 'PIT' in: Command: | Command: U | PIT"
+        },
+        {
+          "n": 11,
+          "text": "count $after_u = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $after_u = 0 (expected = 0)"
+        },
+        {
+          "n": 12,
+          "text": "record $ld \"distance of the label insertion point from the clicked point (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "8.3",
+          "evidence": "RECORDED, not judged: distance of the label insertion point from the clicked point (mm) = 8.3"
+        },
+        {
+          "n": 13,
+          "text": "record $cl \"layer of the cover text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the cover text = 25TEXT"
+        },
+        {
+          "n": 14,
+          "text": "record $le \"FULL the new PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C652\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03700671368,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[149761.84601080645,-78670.6061596281,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[150007.03700671368,-78495.6061596281,0.0],\"bbox\":[149761.84601080645,-78676.57478172907,150252.22800262092,-78319.17369032388]}],\"bbox\":[149607.03700671368,-78895.6061596281,150407.03700671368,-78095.6061596281],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[149761.84601080645,-78670.6061596281]}]}",
+          "evidence": "RECORDED, not judged: FULL the new PIT LABEL = {\"handle\":\"11C652\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03700671368,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[149761.84601080645,-78670.6061596281,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[150007.03700671368,-78495.6061596281,0.0],\"bbox\":[149761.84601080645,-78676.57478172907,150252.22800262092,-78319.17369032388]}],\"bbox\":[149607.03700671368,-78895.6061596281,150407.03700671368,-78095.6061596281],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[149761.84601080645,-78670.6061596281]}]}"
+        },
+        {
+          "n": 15,
+          "text": "record $click_label \"what the label click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 04:27:07\",\"elapsed_ms\":1657,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,000.000,-78,500.000 -> pixel 2728,599 (exact 2,727.50,599.31); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the label click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 04:27:07\",\"elapsed_ms\":1657,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,000.000,-78,500.000 -> pixel 2728,599 (exact 2,727.50,599.31); cursor read-back 2..."
+        },
+        {
+          "n": 16,
+          "text": "record $click_cover \"what the cover click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 04:27:11\",\"elapsed_ms\":1670,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 151,500.000,-81,500.000 -> pixel 2834,813 (exact 2,834.07,812.69); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the cover click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 04:27:11\",\"elapsed_ms\":1670,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 151,500.000,-81,500.000 -> pixel 2834,813 (exact 2,834.07,812.69); cursor read-back 2..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 78 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 49075 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 04:27:27",
+      "session_id": "RUN-20261028-0421-C3.0.83-n27b4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N05_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N07",
+      "proves_bugs": "",
+      "title": "With the two Undo switches on, CD's [Undo] at the third route point says Undid: point 3 of the pipe route, Esc then cancels with nothing drawn, and U after PIT and after MOVE echoes PIT and MOVE",
+      "kind": "deterministic",
+      "order": 70,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-UNDO-01 (daily card D19), switch-on setting only",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD with points 150000,-85000, 160000,-85000 and 165000,-87000, then U at the [Undo] prompt, prints 'Undid: point 3 of the pipe route.'; Esc prints '[CE] CD command cancelled.', no New Pipe window opens and the object count is unchanged. PIT at 150000,-88000 (cover 19.000, Esc at label, cover and next pit) places a pit; one U echoes PIT. MOVE of pit P3 by 0,2000 says '1 found' and moves it to Y -23569.8; one U echoes MOVE and puts it back at Y -25569.8.",
+      "why_not_unit": "AutoCAD's own undo echo and the live CD prompt keyword are only visible in a running session, and the switches are read from the real settings file at start-up.",
+      "not_automated": [
+        "The settings switches are OFF in Tim's file: this case does NOT prove what a colleague with Tim's switches gets (the plain U echoes are proved in R12, R13 and N01 to N02 for MOVE, CDSYNC, CDREBUILD and EXPLODE).",
+        "REDO after each U is not driven here (BUG-861 family; R08)."
+      ],
+      "file_sha256": "57A7624D75F9CA1E8B11C5B9895584B8D734D0A60526A6BDDF2BB4234C471658",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 04:28:16",
+      "seconds": 82.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-85000{NL}160000,-85000{NL}165000,-87000{NL}U\" -Force -> $cd_u",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed 'CD 150000,-85000 160000,-85000 165000,-87000 U': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 160000,-85000 | Sp..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd_esc",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | Specify ne..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_a",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30427512_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-88000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 11.9,
+          "evidence": "typed 'PIT 150000,-88000': Command: | Command: PIT | Specify pit insertion point: 150000,-88000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 22.4,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-88000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-88000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u_pit",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | PIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $p3_moved",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u_mv",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | MOVE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $p3_back",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Undid: point 3 of the pipe route.\"",
+          "ok": true,
+          "expected": "command line has 'Undid: point 3 of the pipe route.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Undid: point 3 of the pipe route.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] CD command cancelled.\"",
+          "ok": true,
+          "expected": "command line has '[CE] CD command cancelled.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CD command cancelled.'"
+        },
+        {
+          "n": 3,
+          "text": "not-contains $win_a \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30427512_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30427512_B1.dwg]"
+        },
+        {
+          "n": 4,
+          "text": "equals $c1 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 5,
+          "text": "history has \"Pit placed successfully.\"",
+          "ok": true,
+          "expected": "command line has 'Pit placed successfully.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Pit placed successfully.'"
+        },
+        {
+          "n": 6,
+          "text": "number $c2 > $c1",
+          "ok": true,
+          "expected": "> 1034",
+          "actual": "1035",
+          "evidence": "$c2 = 1035 (expected > 1034)"
+        },
+        {
+          "n": 7,
+          "text": "contains $u_pit \"PIT\"",
+          "ok": true,
+          "expected": "contains 'PIT'",
+          "actual": "Command: | Command: U | PIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\setti...",
+          "evidence": "found 'PIT' in: Command: | Command: U | PIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Orig..."
+        },
+        {
+          "n": 8,
+          "text": "contains $mv \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2..."
+        },
+        {
+          "n": 9,
+          "text": "matches $p3_moved \"insertion\\W+53777\\.7\\d*,-23569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-23569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-23569.8'"
+        },
+        {
+          "n": 10,
+          "text": "contains $u_mv \"MOVE\"",
+          "ok": true,
+          "expected": "contains 'MOVE'",
+          "actual": "Command: | Command: U | MOVE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\sett...",
+          "evidence": "found 'MOVE' in: Command: | Command: U | MOVE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Ori..."
+        },
+        {
+          "n": 11,
+          "text": "matches $p3_back \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 12,
+          "text": "record $cd_u \"FULL what CD printed up to the [Undo] answer\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CD printed up to the [Undo] answer = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $cd_esc \"what the Esc printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | Specify ne...",
+          "evidence": "RECORDED, not judged: what the Esc printed = Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | Specify ne..."
+        },
+        {
+          "n": 14,
+          "text": "record $c3 \"object count after the U of PIT (expected equal to the count before PIT; not asserted)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1034",
+          "evidence": "RECORDED, not judged: object count after the U of PIT (expected equal to the count before PIT; not asserted) = 1034"
+        },
+        {
+          "n": 15,
+          "text": "record $u_pit \"FULL what U printed after PIT\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | PIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U printed after PIT = Command: | Command: U | PIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "text": "record $u_mv \"FULL what U printed after MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | MOVE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U printed after MOVE = Command: | Command: U | MOVE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 148 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD cancelled 7041 ms ; Command outcome: PIT completed 54816 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 04:29:38",
+      "session_id": "RUN-20261028-0421-C3.0.83-n27b4-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N07_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0231-C3.0.83-n27a3",
+    "started": "2026-10-28 02:31:51",
+    "finished": "2026-10-28 02:34:35",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "F8D156D398D5413A528B29973573FF2292C23C9FA2F7DEED935D4F0BAB7F883C",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 F8D156D398D5413A528B29973573FF2292C23C9FA2F7DEED935D4F0BAB7F883C; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 02:31 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0231-C3.0.83-n27a3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 02:31:52",
+      "finished": "2026-10-28 02:34:35",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30231561_B1.dwg",
+      "cases": [
+        "N03",
+        "N03_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N03",
+      "proves_bugs": "",
+      "title": "OF and FO each place one OVERFLOW symbol, say Overflow placed with an OF tag and Front overflow placed with an FO tag, and offer the next one until Esc",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-01 (daily card D08)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "OF at 150000,-80000 prints 'Overflow placed. Tag: OF<n>.' and '[CE] Pick the next OF, or press Esc to stop.'; one Esc stops it; FO at 152000,-80000 prints 'Front overflow placed. Tag: FO<n>.' and '[CE] Pick the next FO, or press Esc to stop.'; exactly two new OVERFLOW block inserts exist, one at each point, so both use the same symbol.",
+      "why_not_unit": "The real block insert, the tag counter and the label are written in the live drawing by the live command.",
+      "not_automated": [
+        "The plan labels OF and FO (card D08 assertion 3, the Number sources setting) are RECORDED only: the object that carries the plan label has not been read by any run yet.",
+        "Tag numbers counting from 1 need a blank drawing; on DRV1_B1 the number is recorded, not asserted.",
+        "That the two symbols look identical on the plan is a picture item (Codex D7-02 PASS on 3.0.78)."
+      ],
+      "file_sha256": "7A7AEF23FDD4A085AA4F6B7B466D9FEC893316FA5DCC2C7A35E30AF71DC8483C",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 02:32:26",
+      "seconds": 69.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"OF{NL}150000,-80000\" -Force -> $of",
+          "ok": true,
+          "seconds": 29.7,
+          "evidence": "typed 'OF 150000,-80000': Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $of_esc",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"FO{NL}152000,-80000\" -Force -> $fo",
+          "ok": true,
+          "seconds": 28.7,
+          "evidence": "typed 'FO 152000,-80000': Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow pla..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fo_esc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing ne..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "4 object(s) after index 1034 (model space now 1038); by type: AcDbBlockReference 2; AcDbText 2; first: 11C559 AcDbBlockReference DOWNPIPES OVERFLOW ; 11C55F AcDbText GUIDELINES OF ; 11C568 AcDbBlockReference DOWNPIPES OVERFLOW ; 11C56E AcDbText GUIDELINES FO"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=OVERFLOW\" -> $ovs",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 4: 11C559 OVERFLOW DOWNPIPES ; 11C568 OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $ovs \"near=150000,-80000,50\" -> $ov_of",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $ovs \"near=152000,-80000,50\" -> $ov_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C568 OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ov_of handle -> $h_of",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ov_fo handle -> $h_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C568"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h_of} -> $e_of",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C559: {\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h_fo} -> $e_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ent-read 11C568: {\"handle\":\"11C568\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new name -All -> $new_names",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'name' = OVERFLOW | | OVERFLOW |"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new text -All -> $new_texts",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = | OF | | FO"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Overflow placed. Tag: OF\"",
+          "ok": true,
+          "expected": "command line has 'Overflow placed. Tag: OF'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Front overflow placed. Tag: FO\"",
+          "ok": true,
+          "expected": "command line has 'Front overflow placed. Tag: FO'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Pick the next OF, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next OF, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next OF, or press Esc to stop.'"
+        },
+        {
+          "n": 4,
+          "text": "history has \"[CE] Pick the next FO, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next FO, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next FO, or press Esc to stop.'"
+        },
+        {
+          "n": 5,
+          "text": "history count \"[CE] Stopped. Everything placed stays; U takes back the last one.\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with '[CE] Stopped. Everything placed stays; U takes back the last one.'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing '[CE] Stopped. Everything placed stays; U takes back the last one.' (expected 2)"
+        },
+        {
+          "n": 6,
+          "text": "count $ovs = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $ovs = 2 (expected = 2)"
+        },
+        {
+          "n": 7,
+          "text": "count $ov_of = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ov_of = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "count $ov_fo = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ov_fo = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "record $of \"FULL what OF printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next OF, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what OF printed = Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next OF, or press Esc to stop."
+        },
+        {
+          "n": 10,
+          "text": "record $fo \"FULL what FO printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next FO, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what FO printed = Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next FO, or press Esc to stop."
+        },
+        {
+          "n": 11,
+          "text": "record $e_of \"FULL the OF insert (attributes, layer)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[150075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[150175.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the OF insert (attributes, layer) = {\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[150075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[150175.0,-80000.0]}]}"
+        },
+        {
+          "n": 12,
+          "text": "record $e_fo \"FULL the FO insert (attributes, layer)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C568\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[152075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[152175.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the FO insert (attributes, layer) = {\"handle\":\"11C568\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[152075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[152175.0,-80000.0]}]}"
+        },
+        {
+          "n": 13,
+          "text": "record $new_names \"block names of every new object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "OVERFLOW | | OVERFLOW |",
+          "evidence": "RECORDED, not judged: block names of every new object = OVERFLOW | | OVERFLOW |"
+        },
+        {
+          "n": 14,
+          "text": "record $new_texts \"text of every new text object (plan labels, if they are text)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "| OF | | FO",
+          "evidence": "RECORDED, not judged: text of every new text object (plan labels, if they are text) = | OF | | FO"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 98 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: OF completed 30905 ms ; Command outcome: FO completed 29112 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 02:33:35",
+      "session_id": "RUN-20261028-0231-C3.0.83-n27a3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no N03_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N03_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N03: OF is typed twice and FO never, so the Front overflow line must be missing (must FAIL)",
+      "kind": "deterministic",
+      "order": 31,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N03 (UX-SRC-01, daily card D08)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N03",
+      "expected": "This variant is wrong on purpose: no FO is placed, so the check for 'Front overflow placed. Tag: FO' fails.",
+      "why_not_unit": "It exists only to prove N03's FO check can go red.",
+      "not_automated": [],
+      "file_sha256": "9B3809FF25062993D97ABA8FFFBF6D19D8F68029E1643D5B1E8E7A0B9044A495",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no command-line line contains 'Overflow placed. Tag: OF' (17 lines read: Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadabl...; log file CLDV30231561_B1_15e6822f6.log, from byte 2000)",
+      "started": "2026-10-28 02:33:35",
+      "seconds": 43.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"OF{NL}150000,-80000\" -Force -> $of",
+          "ok": true,
+          "seconds": 13.9,
+          "evidence": "typed 'OF 150000,-80000': Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $of_esc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091A0:pipe-row [first {..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"OF{NL}152000,-80000\" -Force -> $of2",
+          "ok": true,
+          "seconds": 13.1,
+          "evidence": "typed 'OF 152000,-80000': Command: | Command: OF | Specify overflow insertion point: 152000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $of2_esc",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091A0:pipe-row [first {..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Overflow placed. Tag: OF\"",
+          "ok": false,
+          "expected": "command line has 'Overflow placed. Tag: OF'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains 'Overflow placed. Tag: OF' (17 lines read: Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadabl...; log file CLDV30231561_B1_15e6822f6.log, from byte 2000)"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Front overflow placed. Tag: FO\"",
+          "ok": false,
+          "expected": "command line has 'Front overflow placed. Tag: FO'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains 'Front overflow placed. Tag: FO' (17 lines read: Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadabl...; log file CLDV30231561_B1_15e6822f6.log, from byte 2000)"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30231561_B1_15e6822f6.log)",
+        "Civil CE log: 217 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: OF cancelled 14817 ms ; Command outcome: OF cancelled 13869 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 02:34:18",
+      "session_id": "RUN-20261028-0231-C3.0.83-n27a3-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

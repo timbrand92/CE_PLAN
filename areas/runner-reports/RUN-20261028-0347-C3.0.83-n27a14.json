@@ -1,0 +1,224 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0347-C3.0.83-n27a14",
+    "started": "2026-10-28 03:47:16",
+    "finished": "2026-10-28 03:48:31",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 03:47 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0347-C3.0.83-n27a14-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 03:47:17",
+      "finished": "2026-10-28 03:48:31",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30347201_B1.dwg",
+      "cases": [
+        "N01_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N01_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N01: the drawing is saved by the driver after CDREBUILD, so the file on disk changes (must FAIL)",
+      "kind": "deterministic",
+      "order": 999,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N01 (UX-STD-03 CDREBUILD half, daily card D18)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N01",
+      "expected": "This variant is wrong on purpose: a save happens after CDREBUILD, so the file hash and time on disk differ from the start and the check 'copy-unchanged' fails. The CDREBUILD wording checks before it still pass.",
+      "why_not_unit": "It exists only to prove N01's file-unchanged check can go red when a save really happens in AutoCAD.",
+      "not_automated": [],
+      "file_sha256": "A145CF62F5FCA0AB2A6895A7D5726949C6DE0342173661DF4EF423E8871E812E",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "SHA-256 6790A1485D9D vs 34BBE37C2EA4; last written 03:48:02 DIFFERENT",
+      "started": "2026-10-28 03:47:53",
+      "seconds": 14.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30347201_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDREBUILD\" -Force -> $rb",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed 'CDREBUILD': Command: | Command: CDREBUILD | [CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it doe..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "save-copy",
+          "text": "save-copy -> $sv",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "save-copy: file changed on disk = True; SHA-256 34BBE37C2EA4 -> 6790A1485D9D; DBMOD 1 -> 0"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30347201_B1.dwg: 973766 bytes, SHA-256 6790A1485D9D, last written 03:48:02; folder holds 256 files"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] CDREBUILD complete: 11 pits, 49 pipes\"",
+          "ok": true,
+          "expected": "command line has '[CE] CDREBUILD complete: 11 pits, 49 pipes'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDREBUILD complete: 11 pits, 49 pipes'"
+        },
+        {
+          "n": 2,
+          "text": "copy-unchanged $copy0",
+          "ok": false,
+          "expected": "file unchanged",
+          "actual": "CHANGED",
+          "evidence": "SHA-256 6790A1485D9D vs 34BBE37C2EA4; last written 03:48:02 DIFFERENT"
+        },
+        {
+          "n": 3,
+          "text": "record $sv \"what the driver's save-copy reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: what the driver's save-copy reported = "
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 20 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDREBUILD completed 177 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 03:48:07",
+      "session_id": "RUN-20261028-0347-C3.0.83-n27a14-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

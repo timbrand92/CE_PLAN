@@ -1,0 +1,838 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0415-C3.0.83-n27b3",
+    "started": "2026-10-28 04:15:17",
+    "finished": "2026-10-28 04:18:48",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 1 shared setup(s); pack SHA-256 3B1B2DE36BC811DAE3065926928D7BEB0E66D51B4059CFF0F5F0F86C1309659F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 04:15 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0415-C3.0.83-n27b3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 04:15:17",
+      "finished": "2026-10-28 04:18:48",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30415201_B1.dwg",
+      "cases": [
+        "N04",
+        "N06"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N04",
+      "proves_bugs": "",
+      "title": "A downpipe and a raingarden place on empty ground with no pipe to join, nothing is refused, and one U takes back only the raingarden",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-05 (daily card D07); BUG-176 (CDRG no longer needs a pipe)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>. Nothing nearby. The source connects when a pipe is drawn to it.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists. CDRG with the four corners 160000,-80000 / 164000,-80000 / 164000,-77000 / 160000,-77000, C (Close) and Skip at the GIO question prints 'Raingarden RG<n> placed. 4 vertices, 12.0 m2' (square metres), with no 'CDRG command cancelled.' and no error; the object count rises; one U echoes CDRG and the object count returns to the count after the downpipe (the downpipe stays).",
+      "why_not_unit": "The placement route depends on the live drawing having no pipe near the point to split or join, and the outline is collected by a live drag prompt.",
+      "not_automated": [
+        "A drawing with NO pipe at all (the card's blank fixture F-BLANK) is not used: the runner has no blank DRV master. Codex D7-01 covered the blank drawing on 3.0.78 (DIFFERENT only on the unitless-area wording).",
+        "The RG plan label and the raingarden's look are not judged (Codex D7-01 could not read the RG1 label; a picture item)."
+      ],
+      "file_sha256": "74CA6C503ADD33264B0BC67424D39168E7F03E12249632C2B74C6383AE072E27",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 04:15:48",
+      "seconds": 45.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 29.6,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_dp",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C559 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C561 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_dp \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRG{NL}160000,-80000{NL}164000,-80000{NL}164000,-77000{NL}160000,-77000{NL}C{NL}Skip\" -Force -> $rg",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'CDRG 160000,-80000 164000,-80000 164000,-77000 160000,-77000 C Skip': Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 |..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_rg",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "2 object(s) after index 1036 (model space now 1038); by type: AcDbHatch 1; AcDbPolyline 1; first: 11C56B AcDbPolyline 50CONT ; 11C56C AcDbHatch HATCH113"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new_rg object -All -> $rg_objects",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = AcDbPolyline | AcDbHatch"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | CDRG"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"The source connects when a pipe is drawn to it.\"",
+          "ok": true,
+          "expected": "command line has 'The source connects when a pipe is drawn to it.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Pick the next DP, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next DP, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next DP, or press Esc to stop.'"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"Add a GIO source to this raingarden?\"",
+          "ok": true,
+          "expected": "command line has 'Add a GIO source to this raingarden?'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"Raingarden RG\"",
+          "ok": true,
+          "expected": "command line has 'Raingarden RG'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 7,
+          "text": "history has \"placed. 4 vertices, 12.0 m\"",
+          "ok": true,
+          "expected": "command line has 'placed. 4 vertices, 12.0 m'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 8,
+          "text": "history absent \"CDRG command cancelled.\"",
+          "ok": true,
+          "expected": "command line lacks 'CDRG command cancelled.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'CDRG command cancelled.' (20 lines read)"
+        },
+        {
+          "n": 9,
+          "text": "history absent \"Error during CDRG\"",
+          "ok": true,
+          "expected": "command line lacks 'Error during CDRG'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Error during CDRG' (20 lines read)"
+        },
+        {
+          "n": 10,
+          "text": "history absent \"was not placed\"",
+          "ok": true,
+          "expected": "command line lacks 'was not placed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'was not placed' (20 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "number $c2 > $c1",
+          "ok": true,
+          "expected": "> 1036",
+          "actual": "1038",
+          "evidence": "$c2 = 1038 (expected > 1036)"
+        },
+        {
+          "n": 12,
+          "text": "contains $u1 \"CDRG\"",
+          "ok": true,
+          "expected": "contains 'CDRG'",
+          "actual": "Command: | Command: U | CDRG",
+          "evidence": "found 'CDRG' in: Command: | Command: U | CDRG"
+        },
+        {
+          "n": 13,
+          "text": "equals $c3 $c1",
+          "ok": true,
+          "expected": "1036",
+          "actual": "1036",
+          "evidence": "value '1036' (expected '1036')"
+        },
+        {
+          "n": 14,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        },
+        {
+          "n": 15,
+          "text": "record $rg \"FULL what CDRG printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m�.",
+          "evidence": "RECORDED, not judged: FULL what CDRG printed = Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m�."
+        },
+        {
+          "n": 16,
+          "text": "record $rg_objects \"object types CDRG added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "AcDbPolyline | AcDbHatch",
+          "evidence": "RECORDED, not judged: object types CDRG added = AcDbPolyline | AcDbHatch"
+        },
+        {
+          "n": 17,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDRG",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDRG"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 99 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 30977 ms ; Command outcome: CDRG completed 89 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 04:16:33",
+      "session_id": "RUN-20261028-0415-C3.0.83-n27b3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N04_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N06",
+      "proves_bugs": "",
+      "title": "After PIT and CD the current layer is still BLOCKS, nothing new is on layer 0 or on BLOCKS, the pit is on STORMWATER PIT and the flow arrow on ARROW",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-LYR-01 installed part (daily card D24); the never-recolour half is not built",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After SETUP-P8 (PIT at 150000,-80000 and a CD pipe to 170000,-80000) the current layer CLAYER still reads BLOCKS (its value when the drawing opened); none of the new objects is on layer 0 or on BLOCKS; the one new pit block is on STORMWATER PIT; the one new flow arrow (TIM_CVL_ARROW) is on ARROW. The layers of the IL texts, the pipe label and the pipe object are recorded.",
+      "why_not_unit": "Layer choice and the current-layer restore happen in the live drawing's layer table during real PIT and CD runs.",
+      "not_automated": [
+        "'An existing layer is never recoloured' is NOT BUILT; the layer table colours are not read.",
+        "The pit label layer is covered by N05 (this setup escapes the label prompt, so no label exists here)."
+      ],
+      "file_sha256": "4A402A8FB2CF87861EEAEA07BCA0011EDF2900FC62417FF887B253B737E8CD24",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 04:16:33",
+      "seconds": 115.1,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 04:18:27",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30415201_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 22.4,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 11.4,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 19.8,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30415201_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C64F CeCvlPipeObject STORMWATER PIPE ; 11C655 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65A AcDbMText 20TEXT IL 18.000 ; 11C65F AcDbMText 20TEXT IL 17.900 ; 11C681 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CLAYER -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CLAYER = BLOCKS"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"layer=0\" -> $on0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 6: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"layer=BLOCKS\" -> $onb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 6: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AB PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all name=TIM_CVL_ARROW -> $arrows",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C681 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arrows layer -All -> $arrl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = ARROW"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=CeCvlPipeObject -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C64F STORMWATER PIPE"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes layer -All -> $pipel",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIPE"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~^IL \" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 6: 11C65A IL 18.000 20TEXT ; 11C65F IL 17.900 20TEXT"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ils layer -All -> $ill",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 20TEXT | 20TEXT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~ DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C655 225 DIA. UPVC PIPE AT 1 IN 200 25TEXT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab layer -All -> $labl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new_all layer -All -> $all_layers",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT | STORMWATER PIPE | 25TEXT | 20TEXT | 20TEXT | ARROW"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "equals $cl \"BLOCKS\"",
+          "ok": true,
+          "expected": "BLOCKS",
+          "actual": "BLOCKS",
+          "evidence": "value 'BLOCKS' (expected 'BLOCKS')"
+        },
+        {
+          "n": 2,
+          "text": "count $on0 = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $on0 = 0 (expected = 0)"
+        },
+        {
+          "n": 3,
+          "text": "count $onb = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $onb = 0 (expected = 0)"
+        },
+        {
+          "n": 4,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $arrows = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $arrows = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "equals $arrl \"ARROW\"",
+          "ok": true,
+          "expected": "ARROW",
+          "actual": "ARROW",
+          "evidence": "value 'ARROW' (expected 'ARROW')"
+        },
+        {
+          "n": 7,
+          "text": "record $pipel \"layer of the new pipe object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "STORMWATER PIPE",
+          "evidence": "RECORDED, not judged: layer of the new pipe object = STORMWATER PIPE"
+        },
+        {
+          "n": 8,
+          "text": "record $ill \"layers of the two new IL texts\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "20TEXT | 20TEXT",
+          "evidence": "RECORDED, not judged: layers of the two new IL texts = 20TEXT | 20TEXT"
+        },
+        {
+          "n": 9,
+          "text": "record $labl \"layer of the new pipe label\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the new pipe label = 25TEXT"
+        },
+        {
+          "n": 10,
+          "text": "record $all_layers \"FULL layer of every new object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "STORMWATER PIT | STORMWATER PIPE | 25TEXT | 20TEXT | 20TEXT | ARROW",
+          "evidence": "RECORDED, not judged: FULL layer of every new object = STORMWATER PIT | STORMWATER PIPE | 25TEXT | 20TEXT | 20TEXT | ARROW"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30415201_B1_1576178b6.log)",
+        "Civil CE log: 98 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 56831 ms ; Command outcome: CD completed 44142 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 04:18:28",
+      "session_id": "RUN-20261028-0415-C3.0.83-n27b3-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N06_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}
