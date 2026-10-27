@@ -16792,3 +16792,20 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 
 **BUG-861 evidence 27 Oct 2026 (robot bisect, areas\release-v3-colleagues-RUNNER_BUG861_BISECT_REPORT.md):** with ALL 14 diag.redo switches ON on Civil 3.0.81 (every CE selection, Inspector, ribbon-tab, highlight and hover piece skipped; CE log confirms) the first click after U still loses REDO: 6 of 6 fresh sessions (4 of 4 on a pit click, 2 of 2 on a plain AutoCAD line, no CE object). Baseline all-off: 3.0.80 2 of 2 fail, 3.0.81 4 of 5 fail (one pass). So the cause is outside the 14 pieces: still possible are the Civil work that runs on U itself (Project data reloaded after Undo/Redo, LinkService.RebuildRuntimeCaches trigger undo/redo), Structural/Manager add-ins, CE_SHARED, or AutoCAD's own first-real-click handling. BUG-861 stays OPEN. Next: code read of everything that runs on U (Team Opus job).
+
+
+## BUG-1225
+
+**Command / Area:** DP (downpipe) and OF (overflow) placement, Civil 3.0.83. Possible fault, found by the independent Opus review of the N cases (areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md finding 1), cause UNKNOWN, one observation in two sessions.
+
+**Symptom:** in two robot sessions (RUN-20261028-0231-C3.0.83-n27a3 and RUN-20261028-0237-C3.0.83-n27a4), a downpipe or overflow typed on a fresh copy of the test drawing, opened in the SAME AutoCAD after the previous test drawing was closed without saving, printed: "[CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: ...". Nothing was placed. The second OF in the same session (n27a3) did place.
+
+**Expected behaviour:** DP and OF place when the drawing is valid, including after a drawing has been closed without saving and another opened in the same AutoCAD session. A drafter hits exactly this when reopening a drawing.
+
+**Reference:** the two run reports in areas\runner-reports (RUN-20261028-0231-C3.0.83-n27a3.md and RUN-20261028-0237-C3.0.83-n27a4.md); the full log line is quoted in the Opus review; source: the landing index and 'Source evidence changed during capture' message (grep the plugin source).
+
+**Test that catches it:** a robot case that places DP, reopens the fresh copy (as the runner's reopen-copy does), places DP again and asserts 'Downpipe placed. Tag: DP' with the history free of 'could not be refreshed'. Same for OF.
+
+**Steps to confirm in AutoCAD:** open a test copy, place a downpipe (DP), close the drawing without saving, open another copy in the same AutoCAD, place DP again. Right looks like: the downpipe is placed both times.
+
+**Status:** OPEN (28 Oct 2026; not reproduced by hand; may be a robot reopen-copy timing effect: first find out whether it needs the reopen).
