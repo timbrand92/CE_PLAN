@@ -16789,3 +16789,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+
+
+**BUG-861 evidence 27 Oct 2026 (robot bisect, areas\release-v3-colleagues-RUNNER_BUG861_BISECT_REPORT.md):** with ALL 14 diag.redo switches ON on Civil 3.0.81 (every CE selection, Inspector, ribbon-tab, highlight and hover piece skipped; CE log confirms) the first click after U still loses REDO: 6 of 6 fresh sessions (4 of 4 on a pit click, 2 of 2 on a plain AutoCAD line, no CE object). Baseline all-off: 3.0.80 2 of 2 fail, 3.0.81 4 of 5 fail (one pass). So the cause is outside the 14 pieces: still possible are the Civil work that runs on U itself (Project data reloaded after Undo/Redo, LinkService.RebuildRuntimeCaches trigger undo/redo), Structural/Manager add-ins, CE_SHARED, or AutoCAD's own first-real-click handling. BUG-861 stays OPEN. Next: code read of everything that runs on U (Team Opus job).
