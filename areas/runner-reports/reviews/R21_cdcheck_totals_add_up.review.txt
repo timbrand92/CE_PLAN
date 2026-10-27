@@ -1,0 +1,6 @@
+REVIEWED_AGAINST triage group C1 as narrowed by Codex cx_cr05 item 2 (fixed-fixture CDCHECK totals baseline); not D28, not BUG-461 or BUG-809 whole
+VERDICT CLAUDE-ACCEPTED-READY for its narrow baseline only: CDCHECK All and Problems each print '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected', each Esc says 'Nothing in the drawing has been changed so far.', object count and file on disk unchanged, no CE window left, on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa / Structural 1.0.125 (PASS RUN-20261027-0715-C3.0.80-x80a6-s1 and RUN-20261027-0826-C3.0.80-x80b6-s1; flipped red R21_BROKEN fails checks 1-3 both runs). No daily card and no bug is proved.
+CASE_SHA256_REVIEWED 2462CD753D2920F4E412A964C10EBADA700362BD8E32C1766241BC260531B4AB
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 6
+REVIEWER Opus-Team-B5-review

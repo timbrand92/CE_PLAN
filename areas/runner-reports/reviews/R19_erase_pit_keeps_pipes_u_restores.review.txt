@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D14 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-EDIT-01) one-pipe branch; Codex cx_cr05 item 1 asks; several-pipe branch is R19b
+VERDICT CLAUDE-ACCEPTED-READY for D14 one-pipe branch whole (the full singular sentence, exactly one pipe kept after the ERASE, count 1040 to 1039, one U echoing ERASE brings the pit back and the count, CDCHECK totals line equal before and after U), on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa (PASS RUN-20261027-0926-C3.0.80-x80b2-s1 and RUN-20261027-1011-C3.0.80-x80c2-s1, Structural 1.0.125; also x80a2-s1; true red R19_NOU_BROKEN fails checks 9, 12-14, flipped R19_BROKEN fails check 4, each time). Done on new pit P8, not P3; D14 several-pipe branch is R19b. SETUP-R47 not bound by the gate.
+CASE_SHA256_REVIEWED BE503780EB3BF585F48EA72A2147279E8D99A68D404041EDB3672C983230714E
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 5
+REVIEWER Opus-Team-B5-review

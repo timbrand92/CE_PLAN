@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card C39 higher-setting coverage asked by Codex cx_cr04 items 1.4-1.5; Tim settings file holds pipe.detentionFreeboardMm 150 and designStandards.detentionFreeboardMm 150
+VERDICT CLAUDE-ACCEPTED-READY for: with both freeboard keys raised to 200 CDTWL says '(200 mm is wanted)' for C1, P1 and P7, idle, one completed outcome, on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa / Structural 1.0.125 (PASS RUN-20261027-0701-C3.0.80-x80a5-s2 and RUN-20261027-0813-C3.0.80-x80b5-s2; the same steps at 150 print '(150 mm is wanted)' in R14 x80a4/x80b4, so these checks can fail). 200 mm is diagnostic, not approval.
+CASE_SHA256_REVIEWED DF7288A8869801D99C86FDA4FA46872D119FAECAE0C60F7F153810008E72DC51
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 4
+REVIEWER Opus-Team-B5-review

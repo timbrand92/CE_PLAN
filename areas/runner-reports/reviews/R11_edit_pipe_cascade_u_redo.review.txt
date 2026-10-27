@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card C40 (TEST_CASES_DRAFT_22OCT.md), gap plan section 3 item 7 Edit Pipe cascade with U and REDO, UX-LBL-02; Codex cx_cr03 item 1 asks; BUG-797 and BUG-782 not tested
+VERDICT CLAUDE-ACCEPTED-READY for PART of C40 only: the cascade line (4 pipes, 3 pits, IL 17.50, Min grade 1:16), the whole IL text set after the cascade, one U echoing CDEDIT restoring every IL text and the object count, REDO 'Everything has been redone' restoring the cascade texts, no window left, on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa (PASS RUN-20261027-0909-C3.0.80-x80b1-s1 and RUN-20261027-0956-C3.0.80-x80c1-s1, Structural 1.0.125; also x80a1-s1; true red R11_BROKEN fails checks 10-12 each time). NOT proved: stored pipe levels, text-to-pipe ownership, the Recalculate box body, the STUB to X1 warning. SETUP-R47 0CB83BDF7853 not bound by the gate.
+CASE_SHA256_REVIEWED B40EBE88E6B68B7C9ABE8EEAE565FE2F999AC96915F9C8BD76F63FB286641BA5
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 2
+REVIEWER Opus-Team-B5-review

@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D18 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-STD-03) assertions 1 and 3; Codex cx_cr01 item 1 asks; PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of D18 only: after SETUP-P8 (PIT, CD), CDSYNC, CDRECOVERINVERTS and PITSCHEDULE open/Close the drawing file keeps its SHA-256 and time and only _PRE_C7_ files appear, on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa (PASS RUN-20261027-0940-C3.0.80-x80b3-s2 and RUN-20261027-1024-C3.0.80-x80c3-s2, Structural 1.0.125; also x80a3-s2 on Structural 1.0.124; true red R04_SAVE_BROKEN fails only copy-unchanged in all three). NOT D18 whole: CDREBUILD and its two no-save sentences (assertion 2) are not driven. SETUP-P8 7A241608EB59 not bound by the gate.
+CASE_SHA256_REVIEWED 443604166CC0C57BCD3C01A377E05A9E1C55915E9EC404F889C6963139CBB056
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 1
+REVIEWER Opus-Team-B5-review

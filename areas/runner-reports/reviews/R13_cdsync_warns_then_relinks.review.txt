@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D27 (CDSYNC half, UX-REP-01) and card C42 (rows), Codex cx_cr03 item 3 asks; BUG-698 regression (already FIXED Codex-accepted); BUG-855 not tested
+VERDICT CLAUDE-ACCEPTED-READY for PART only: D27 assertion 1 (the full CDSYNC warning before 'CDSYNC complete. Pits relinked: 12, Pipes relinked: 50') and C42 assertions 1-2 (every Pit Schedule row and cell equal before and after CDSYNC, object count unchanged, U reaches CDSYNC), on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa (PASS RUN-20261027-0909-C3.0.80-x80b1-s1 and RUN-20261027-0956-C3.0.80-x80c1-s1, Structural 1.0.125; also x80a1-s1; reds R13_ROWS_BROKEN (real erase, check 7) and R13_BROKEN (flipped count, check 2) fail each time). NOT proved: D27 CDREBUILD half, C42 header record (BUG-855), C42 cascade preparation; the U echo does not prove relinks undone. SETUP-R47 not bound by the gate.
+CASE_SHA256_REVIEWED BE176845E3D259275AB308ADEACC2242D7AE06028E14C76DD59E92F60D545356
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 3
+REVIEWER Opus-Team-B5-review

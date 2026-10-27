@@ -1,0 +1,6 @@
+REVIEWED_AGAINST triage group V1 refusal part as narrowed by Codex cx_cr06 item 3; not D26 (CDSL); BUG-134, 142, 144, 699-709 not tested
+VERDICT CLAUDE-ACCEPTED-READY for its narrow part only: CDSURVEY with no survey says 'Survey: not loaded', a pick on pit P3 is refused with '[CE] Please click directly on the survey XREF block.', a second call still says not loaded, Esc says 'CDSURVEY cancelled - nothing stored.', object count and file unchanged, on Civil 3.0.80+270215aa / Manager 1.1.80+270215aa / Structural 1.0.125 (PASS RUN-20261027-0715-C3.0.80-x80a6-s1 and RUN-20261027-0826-C3.0.80-x80b6-s1; flipped reds R26_BROKEN check 1 and R26_PICK_BROKEN check 3 fail both runs). No survey intake, no D26, no bug proved.
+CASE_SHA256_REVIEWED 2EC1D6D74E0F7E7A6BD4EA133B2A66E7FB8B590AEA4B2E50C29EECC49F4D2502
+DATE 2026-10-27 (Tue, about 11:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md, The cases item 7
+REVIEWER Opus-Team-B5-review
