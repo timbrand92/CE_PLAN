@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D16 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-EDIT-04) assertions 1 to 3; source ExplodeLeftScheduleMessagePolicy.cs at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for D16 on pit P3 (6 pipes): the exact line 'P3 is now plain linework and has left the schedule; 6 pipes now have ends not connected yet. U restores it.', 109D56 gone and the Pit Schedule has no P3 row, the six pipes stay on STORMWATER PIPE, two U (PITSCHEDULE, then EXPLODE) bring 109D56 back on STORMWATER PIT and the P3 row back, every schedule window closed, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0216-C3.0.83-n27a1-s1, RUN-20261028-0224-C3.0.83-n27a2-s1, RUN-20261028-0407-C3.0.83-n27b2-s1; true red N02_BROKEN (no U) fails the restore check in n27a2). Not covered: the no-pipe wording branch (a pit with no pipe), the look of the exploded linework (picture).
+CASE_SHA256_REVIEWED 7428272CD63B517B02715A5CAC128A6C6D5382A8A4E798CA3D2E7372A738EFED
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 2
+REVIEWER Opus-Team-N27-review

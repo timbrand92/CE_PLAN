@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D15 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-EDIT-02, plain COPY) assertions 1 and 3 whole, assertion 2 in part; CopiedLevelsRule.cs at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none (BUG-665 rotate and scale copies not part of this card)
+VERDICT CLAUDE-ACCEPTED-READY for PART of D15 only: COPY of pit P3 by 0,-5000 prints '1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).', adds exactly one pit block and one pit label reading P8, one U echoes COPY and the object count returns, and the file on disk is unchanged, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0342-C3.0.83-n27a13-s1 and RUN-20261028-0440-C3.0.83-n27b6-s1; red N12_BROKEN (expects P3 on the copy) fails in n27a13). NOT asserted: that the original label 109E08 still reads P3 (it did in both runs, recorded only); the Inspector mark (Codex look); a COPY that takes pipes.
+CASE_SHA256_REVIEWED 9E2E8556D1BC76DFC9E8E63B5BDA9024C330E91145263B1EF1EDDEDD96F6607F
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 11
+REVIEWER Opus-Team-N27-review

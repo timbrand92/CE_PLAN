@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D27 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-REP-01) assertions 2 and 3 (the CDREBUILD half) and card D18 (UX-STD-03) assertions 1 to 3 for CDREBUILD; source LinkCommands.cs lines 222, 265, 314 at 96455f13 (origin/claude/rel-20261026x, the installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for the whole CDREBUILD half of D27 and D18: the warning (full sentence, before 'CDREBUILD complete: 11 pits, 49 pipes'), the last no-save line, one 'Command outcome: CDREBUILD completed', U echoes CDREBUILD, file on disk unchanged and no new file beside it, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0216-C3.0.83-n27a1-s1 and RUN-20261028-0358-C3.0.83-n27b1-s1; true red N01_BROKEN (driver save after CDREBUILD) fails only copy-unchanged in RUN-20261028-0347-C3.0.83-n27a14-s1). With R04 (D18 rest) and R13 (D27 CDSYNC half), both passing twice on 3.0.83 with current reviews, D18 and D27 are whole. Not judged: whether the rebuilt records are right; the three missing-level Warning lines.
+CASE_SHA256_REVIEWED DD27359CAA38962D4CB657C5F77366A0EC5427B99696B9B5EFFFB24B1E8EEF14
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 1
+REVIEWER Opus-Team-N27-review

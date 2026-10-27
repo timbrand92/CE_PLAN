@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D24 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-LYR-01, part-built) assertions 1 (at the end only) and 2 (pit and arrow asserted, the rest recorded); LayerService.cs at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of D24 only (the installed part, and not all of that): after SETUP-P8 (PIT and CD) the current layer is still BLOCKS, no new object is on layer 0 or on BLOCKS, the new pit is on STORMWATER PIT and the flow arrow on ARROW, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0303-C3.0.83-n27a7-s1 and RUN-20261028-0415-C3.0.83-n27b3-s1; true red N06_BROKEN (CLAYER set to 0) fails the BLOCKS check in n27a7). Recorded, same in both runs: pipe STORMWATER PIPE, IL texts 20TEXT, pipe label 25TEXT. NOT covered: 'never recolour a layer' (not built), CLAYER after each Esc path, the layer-table record (assertion 3). D24 cannot be whole until the missing half is built.
+CASE_SHA256_REVIEWED 4A402A8FB2CF87861EEAEA07BCA0011EDF2900FC62417FF887B253B737E8CD24
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 6
+REVIEWER Opus-Team-N27-review

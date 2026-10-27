@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D09 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-CPLAN-21) assertions 1 (number and layer only), 2 and 3; source PitCommand.cs, PitAnnotationTextFormatter.cs line 28 and BlockService.cs lines 220-221 ('PIT LABEL 2' is a valid pit label block name) at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of D09 only: a new pit gets exactly one pit label block on STORMWATER PIT LABEL whose PIT_LABEL reads P8, exactly one cover text reading 'CL 19.000' and nothing else (no IL line), 'Pit placed successfully.', and one U echoes PIT and leaves no new object, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0253-C3.0.83-n27a6-s1 and RUN-20261028-0421-C3.0.83-n27b4-s1; true red N05_BROKEN (Esc at both prompts) fails label and cover counts in n27a6). NOT covered: the label position (card: within 1 unit of the point; mouse click landed 8.3 mm away, recorded) and the cover text corner: a Codex look.
+CASE_SHA256_REVIEWED 4C28CE66C02FB7C77F35F91A95DAE34D2B188CC3025134F293DB92C2938EC7D0
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 5
+REVIEWER Opus-Team-N27-review

@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D20 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-CPLAN-18/19) assertions 1 to 3 in part; PitRenumberCommand.cs at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of D20 only: CDRENUMBER asks for the main outlet (C1), lists 'Renumber downhill to uphill:', 'P9 -> P8' and 'P10 -> P9', asks the Apply question twice, No prints 'Renumber cancelled - nothing changed.', Yes prints 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.', the Pit Schedule then has Pit P8 and no Pit P10, and after two U (PITSCHEDULE, then CDRENUMBER) it has Pit P10 again and no Pit P8, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0318-C3.0.83-n27a10-s1 and RUN-20261028-0433-C3.0.83-n27b5-s1; true red N08_BROKEN (answers No) fails the no-P10 check in n27a9 and n27a10). NOT asserted: that No changed nothing (no read after No), full schedule equality after U (equal in both runs, recorded), that non-P marks (C1) are untouched. The numbering rule itself is Tim's word.
+CASE_SHA256_REVIEWED 35C4E2C9193115E573FB9BD7E7F35F744BBEE54845EF3F577BE3EF0FCF3E0E88
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 8
+REVIEWER Opus-Team-N27-review

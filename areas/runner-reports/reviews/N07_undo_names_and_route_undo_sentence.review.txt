@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D19 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-UNDO-01) Profile B assertion 2 whole and assertion 1 in part; CdCommand.cs [Undo] branch at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of D19, switch-on setting only (options.autoCadStyleCdPrompts and options.cdCommandLine.sayWhatWasUndone true through the guard; both OFF in Tim's file): CD's [Undo] at the third route point prints 'Undid: point 3 of the pipe route.', Esc prints '[CE] CD command cancelled.' with no New Pipe window and no object added; U after PIT echoes PIT; U after MOVE of P3 echoes MOVE and puts it back to Y -25569.8, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0351-C3.0.83-n27a15-s2 and RUN-20261028-0421-C3.0.83-n27b4-s2; true red N07_BROKEN (undo-sentence switch off, CE says 'Last point taken back.') in n27a8-s1 and n27a15-s1). NOT covered: the U echo after a placed CD pipe (card assertion 1 names CD), and Profile A on Tim's own switches.
+CASE_SHA256_REVIEWED 57A7624D75F9CA1E8B11C5B9895584B8D734D0A60526A6BDDF2BB4234C471658
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 7
+REVIEWER Opus-Team-N27-review

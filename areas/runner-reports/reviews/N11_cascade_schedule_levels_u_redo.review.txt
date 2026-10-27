@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card C40 (TEST_CASES_DRAFT_22OCT.md, Edit Pipe cascade, UX-LBL-02) assertion 2 (stored levels) and assertion 3; gap plan section 3 item 7; R11 covers the IL texts; PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of C40 only (the stored-level half): after the Edit Pipe cascade from P3 ('Updated 4 pipes and 3 pits from P3 (IL 17.50)'), U (echo CDEDIT) and REDO ('Everything has been redone'), the Pit Schedule reads P3 inlet 17.50 and outlet 17.45 and P2 inlet 17.33 and outlet 17.28 (the same levels as R11's accepted IL texts), and after two more U (PITSCHEDULE, then CDEDIT) every schedule row and cell equals the rows before the edit, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0331-C3.0.83-n27a12-s1 and RUN-20261028-0440-C3.0.83-n27b6-s1; true red N11_BROKEN (no U) fails the full-row comparison in n27a12). NOT covered: the STUB to X1 warning and the Recalculate box body (C40 assertion 1 and step 3), the P4 outlet 17.60 and P1 rows (recorded only), which text belongs to which pipe.
+CASE_SHA256_REVIEWED C13A2B8D31203C2DB6263B4B5BAD0791713C59594D9D7D334E153F9CB59C78AC
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 10
+REVIEWER Opus-Team-N27-review

@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D21 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-SCHED-06) assertion 2 whole; PitIdComparer.cs CompareLegacy at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for PART of D21: the basic number order with Tim's switch (pitScheduleNaturalOrder off): PITSCHEDULE lists Pit P1, P2, P3, P4, P5, P6, P7, P9, P10 top to bottom, P10 never before P1 or P2, Close closes it and the file is unchanged, on Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-0326-C3.0.83-n27a11-s1 and RUN-20261028-0433-C3.0.83-n27b5-s1; red N09_BROKEN (flipped order expected) fails in n27a11, a flipped red only). NOT covered: assertion 1 (three newly placed pits; the fixture's own P9 and P10 are used), assertion 3 group order (recorded; this drawing has only P rows and C1), the P1A and SPS refinement (switch off).
+CASE_SHA256_REVIEWED 6597D8D540B38D5E9F68644211D491E3E394938730ED269751B2428CF551D5BD
+DATE 2026-10-28 (Wed, about 05:10 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md, The cases item 9
+REVIEWER Opus-Team-N27-review
