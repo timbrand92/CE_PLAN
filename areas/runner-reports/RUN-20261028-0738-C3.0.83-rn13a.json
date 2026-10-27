@@ -1,0 +1,419 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0738-C3.0.83-rn13a",
+    "started": "2026-10-28 07:38:33",
+    "finished": "2026-10-28 07:40:22",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "475D799783EF6365A5049F10974D50CF4EAD8CAD0357FABC3CED03857DC89F39",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 475D799783EF6365A5049F10974D50CF4EAD8CAD0357FABC3CED03857DC89F39; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 07:38 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0738-C3.0.83-rn13a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 07:38:35",
+      "finished": "2026-10-28 07:40:22",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30738381_B1.dwg",
+      "cases": [
+        "N13a",
+        "N13"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N13a",
+      "proves_bugs": "",
+      "title": "First drawing of the session: a downpipe places on empty ground (the half of BUG-1225 that comes before the reopen)",
+      "kind": "deterministic",
+      "order": 130,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1225 (DP refused after a drawing is reopened)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>.' and offers the next DP; Esc stops it; no 'could not be refreshed' line.",
+      "why_not_unit": "The refusal comes from the live drawing's landing index after a real close and reopen in the same AutoCAD.",
+      "not_automated": [
+        "This case only sets the scene; the reopen and the second downpipe are case N13."
+      ],
+      "file_sha256": "F0AEB819C588D8A2195601F39DD2F1D3E35B89CF44E961867481BB728E981EEF",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 07:39:05",
+      "seconds": 34.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 28.6,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C559 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C561 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C559 DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"could not be refreshed\"",
+          "ok": true,
+          "expected": "command line lacks 'could not be refreshed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'could not be refreshed' (8 lines read)"
+        },
+        {
+          "n": 3,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 92 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 29560 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 07:39:40",
+      "session_id": "RUN-20261028-0738-C3.0.83-rn13a-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no N13a_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "N13",
+      "proves_bugs": "",
+      "title": "After the first drawing was closed without saving and a fresh copy reopened in the same AutoCAD, a downpipe still places (BUG-1225)",
+      "kind": "deterministic",
+      "order": 131,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1225 (DP refused after a drawing is reopened)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "On the reopened copy, DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>.' and offers the next DP; one new DOWNPIPE DYNAMIC WITH MASK insert exists; no 'could not be refreshed' and no 'Nothing will be placed here' in the history.",
+      "why_not_unit": "The refusal comes from the live drawing's landing index after a real close and reopen in the same AutoCAD.",
+      "not_automated": [
+        "Whether a drafter's own close-without-save and reopen behaves the same as the runner's reopen-copy is not established by this case."
+      ],
+      "file_sha256": "D2444F411E242A2B9F91F316C2F0D8FDF94B5EA2B8A0E07C21395DF15AB3F2D5",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no command-line line contains 'Downpipe placed. Tag: DP' (8 lines read: Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadabl...; log file CLDV30738381_B1_17ee9b283.log, from byte 2000)",
+      "started": "2026-10-28 07:39:40",
+      "seconds": 26.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 12.9,
+          "evidence": "typed 'DP 150000,-80000': Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091A0:pipe-row [first {..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -> $tail",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "history: Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. | Resolve Xref \"XW26..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": false,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains 'Downpipe placed. Tag: DP' (8 lines read: Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadabl...; log file CLDV30738381_B1_17ee9b283.log, from byte 2000)"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"could not be refreshed\"",
+          "ok": false,
+          "expected": "command line lacks 'could not be refreshed'",
+          "actual": "1 matching line(s)",
+          "evidence": "found: '[CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091...'"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"Nothing will be placed here\"",
+          "ok": false,
+          "expected": "command line lacks 'Nothing will be placed here'",
+          "actual": "1 matching line(s)",
+          "evidence": "found: '[CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091...'"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $dps = 0 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "log civil absent \"could not be refreshed\"",
+          "ok": false,
+          "expected": "civil log lacks 'could not be refreshed'",
+          "actual": "1",
+          "evidence": "found: '2026-10-28 07:39:58.564 [INFO] [Source] The pick was refused: The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source ...'"
+        },
+        {
+          "n": 6,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091A0:pipe-row [first {\"id\":\"1091A0\",\"from\":\"AGI\",\"to\":\"C1\",\"toSpineKey\":\"CE-CIV-PIT-3A3010EE-B370-4132-BE87-2787B1B42B42\",\"diameter\":\"100\",\"m | then {\"id\":\"1091A0\",\"from\":\"AGI\",\"to\":\"C1\",\"spineKey\":\"CE-CIV-PIPE-9DF90D6E-ED64-4006-8E68-6A9D4AB310EE\",\"toSpineKey\":\"CE-CIV ]; Source evidence changed during capture: 1091E0:pipe-row [first {\"id\":\"1091E0\",\"from\":\"TG1\",\"to\":\"C1\",\"toSpineKey\":\"CE-CIV-PIT-3A3010EE-B370-4132-BE87-2787B1B42B42\",\"diameter\":\"225\",\"m | then {\"id\":\"1091E0\",\"from\":\"TG1\",\"to\":\"C1\",\"spineKey\":\"CE-CIV-PIPE-1C229204-4239-4D68-B79C-13FAA24A3102\",\"toSpineKey\":\"CE-CIV ]; Source evidence changed during capture: 109359:pipe-row [first {\"id\":\"109359\",\"from\":\"\",\"to\":\"X1\",\"toSpineKey\":\"CE-CIV-PIT-C3B33D2F-4701-4643-9A76-83AA544D5D4C\",\"diameter\":\"450\",\"mate | then {\"id\":\"109359\",\"from\":\"\",\"to\":\"X1\",\"spineKey\":\"CE-CIV-PIPE-CC3DB6FF-124B-48B0-B8B4-D77E512ABF41\",\"toSpineKey\":\"CE-CIV-PI ]; Source evidence changed during capture: 109390:pipe-row [first {\"id\":\"109390\",\"from\":\"X1\",\"to\":\"\",\"fromSpineKey\":\"CE-CIV-PIT-C3B33D2F-4701-4643-9A76-83AA544D5D4C\",\"diameter\":\"450\",\"ma | then {\"id\":\"109390\",\"from\":\"X1\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977\",\"fromSpineKey\":\"CE-CIV- ]; Source evidence changed during capture: 1093C7:pipe-row [first {\"id\":\"1093C7\",\"from\":\"\",\"to\":\"\",\"diameter\":\"100\",\"material\":\"UPVC\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"showGradeInT | then {\"id\":\"1093C7\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-1BC30AFE-F2EA-4946-948E-5A875BAF466F\",\"diameter\":\"100\",\"materia ]; Source evidence changed during capture: 109430:pipe-row [first {\"id\":\"109430\",\"from\":\"\",\"to\":\"\",\"diameter\":\"100\",\"material\":\"UPVC\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"showGradeInT | then {\"id\":\"109430\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-2FCB2CA4-188E-4456-8D8D-3C0EF9A62F1B\",\"diameter\":\"100\",\"materia ]; Source evidence changed during capture: 1094BE:pipe-row [first {\"id\":\"1094BE\",\"from\":\"C1\",\"to\":\"STUB\",\"fromSpineKey\":\"CE-CIV-PIT-3A3010EE-B370-4132-BE87-2787B1B42B42\",\"diameter\":\"375\" | then {\"id\":\"1094BE\",\"from\":\"C1\",\"to\":\"STUB\",\"spineKey\":\"CE-CIV-PIPE-EDF227EE-D6CD-46D8-9429-B6B96FBBE97B\",\"fromSpineKey\":\"CE- ]; Source evidence changed during capture: 109500:pipe-row [first {\"id\":\"109500\",\"from\":\"STUB\",\"to\":\"X1\",\"toSpineKey\":\"CE-CIV-PIT-C3B33D2F-4701-4643-9A76-83AA544D5D4C\",\"diameter\":\"375\",\" | then {\"id\":\"109500\",\"from\":\"STUB\",\"to\":\"X1\",\"spineKey\":\"CE-CIV-PIPE-20707BD7-D950-495C-BCBB-F3CF8515534F\",\"toSpineKey\":\"CE-CI ]; Source evidence changed during capture: 109835:pipe-row [first {\"id\":\"109835\",\"from\":\"P2\",\"to\":\"P1\",\"fromSpineKey\":\"CE-CIV-PIT-CE6A28EF-5A80-4257-A691-085626483F90\",\"toSpineKey\":\"CE-C | then {\"id\":\"109835\",\"from\":\"P2\",\"to\":\"P1\",\"spineKey\":\"CE-CIV-PIPE-F0AFC27C-0279-4FA6-A9FC-90F052C071B3\",\"fromSpineKey\":\"CE-CI ]; Source evidence changed during capture: 109874:pipe-row [first {\"id\":\"109874\",\"from\":\"WT12\",\"to\":\"P2\",\"toSpineKey\":\"CE-CIV-PIT-CE6A28EF-5A80-4257-A691-085626483F90\",\"diameter\":\"150\",\" | then {\"id\":\"109874\",\"from\":\"WT12\",\"to\":\"P2\",\"spineKey\":\"CE-CIV-PIPE-AC57DED1-4D54-42DB-BC3B-1F5B9A8C6783\",\"toSpineKey\":\"CE-CI ]; Source evidence changed during capture: 1098B6:pipe-row [first {\"id\":\"1098B6\",\"from\":\"\",\"to\":\"\",\"diameter\":\"150\",\"material\":\"UPVC\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"showGradeInT | then {\"id\":\"1098B6\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-EB805DF6-4C16-4973-BFA5-219606DE28C1\",\"diameter\":\"150\",\"materia ]; Source evidence changed during capture: 1098E8:pipe-row [first {\"id\":\"1098E8\",\"from\":\"\",\"to\":\"\",\"diameter\":\"150\",\"material\":\"UPVC CHARGED\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"show | then {\"id\":\"1098E8\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-7F3DF45E-9027-44BD-8745-B0170EE71548\",\"diameter\":\"150\",\"materia ]; ...",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source landing could not be refreshed. Nothing will be placed here. Reason: The complete landing index has missing or unreadable drawing evidence (Source evidence changed during capture: 1091A0:pipe-row [first {\"id\":\"1091A0\",\"from\":\"AGI\",\"to\":\"C1\",\"toSpineKey\":\"CE-CIV-PIT-3A3010EE-B370-4132-BE87-2787B1B42B42\",\"diameter\":\"100\",\"m | then {\"id\":\"1091A0\",\"from\":\"AGI\",\"to\":\"C1\",\"spineKey\":\"CE-CIV-PIPE-9DF90D6E-ED64-4006-8E68-6A9D4AB310EE\",\"toSpineKey\":\"CE-CIV ]; Source evidence changed during capture: 1091E0:pipe-row [first {\"id\":\"1091E0\",\"from\":\"TG1\",\"to\":\"C1\",\"toSpineKey\":\"CE-CIV-PIT-3A3010EE-B370-4132-BE87-2787B1B42B42\",\"diameter\":\"225\",\"m | then {\"id\":\"1091E0\",\"from\":\"TG1\",\"to\":\"C1\",\"spineKey\":\"CE-CIV-PIPE-1C229204-4239-4D68-B79C-13FAA24A3102\",\"toSpineKey\":\"CE-CIV ]; Source evidence changed during capture: 109359:pipe-row [first {\"id\":\"109359\",\"from\":\"\",\"to\":\"X1\",\"toSpineKey\":\"CE-CIV-PIT-C3B33D2F-4701-4643-9A76-83AA544D5D4C\",\"diameter\":\"450\",\"mate | then {\"id\":\"109359\",\"from\":\"\",\"to\":\"X1\",\"spineKey\":\"CE-CIV-PIPE-CC3DB6FF-124B-48B0-B8B4-D77E512ABF41\",\"toSpineKey\":\"CE-CIV-PI ]; Source evidence changed during capture: 109390:pipe-row [first {\"id\":\"109390\",\"from\":\"X1\",\"to\":\"\",\"fromSpineKey\":\"CE-CIV-PIT-C3B33D2F-4701-4643-9A76-83AA544D5D4C\",\"diameter\":\"450\",\"ma | then {\"id\":\"109390\",\"from\":\"X1\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977\",\"fromSpineKey\":\"CE-CIV- ]; Source evidence changed during capture: 1093C7:pipe-row [first {\"id\":\"1093C7\",\"from\":\"\",\"to\":\"\",\"diameter\":\"100\",\"material\":\"UPVC\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"showGradeInT | then {\"id\":\"1093C7\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-1BC30AFE-F2EA-4946-948E-5A875BAF466F\",\"diameter\":\"100\",\"materia ]; Source evidence changed during capture: 109430:pipe-row [first {\"id\":\"109430\",\"from\":\"\",\"to\":\"\",\"diameter\":\"100\",\"material\":\"UPVC\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"showGradeInT | then {\"id\":\"109430\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-2FCB2CA4-188E-4456-8D8D-3C0EF9A62F1B\",\"diameter\":\"100\",\"materia ]; Source evidence changed during capture: 1094BE:pipe-row [first {\"id\":\"1094BE\",\"from\":\"C1\",\"to\":\"STUB\",\"fromSpineKey\":\"CE-CIV-PIT-3A3010EE-B370-4132-BE87-2787B1B42B42\",\"diameter\":\"375\" | then {\"id\":\"1094BE\",\"from\":\"C1\",\"to\":\"STUB\",\"spineKey\":\"CE-CIV-PIPE-EDF227EE-D6CD-46D8-9429-B6B96FBBE97B\",\"fromSpineKey\":\"CE- ]; Source evidence changed during capture: 109500:pipe-row [first {\"id\":\"109500\",\"from\":\"STUB\",\"to\":\"X1\",\"toSpineKey\":\"CE-CIV-PIT-C3B33D2F-4701-4643-9A76-83AA544D5D4C\",\"diameter\":\"375\",\" | then {\"id\":\"109500\",\"from\":\"STUB\",\"to\":\"X1\",\"spineKey\":\"CE-CIV-PIPE-20707BD7-D950-495C-BCBB-F3CF8515534F\",\"toSpineKey\":\"CE-CI ]; Source evidence changed during capture: 109835:pipe-row [first {\"id\":\"109835\",\"from\":\"P2\",\"to\":\"P1\",\"fromSpineKey\":\"CE-CIV-PIT-CE6A28EF-5A80-4257-A691-085626483F90\",\"toSpineKey\":\"CE-C | then {\"id\":\"109835\",\"from\":\"P2\",\"to\":\"P1\",\"spineKey\":\"CE-CIV-PIPE-F0AFC27C-0279-4FA6-A9FC-90F052C071B3\",\"fromSpineKey\":\"CE-CI ]; Source evidence changed during capture: 109874:pipe-row [first {\"id\":\"109874\",\"from\":\"WT12\",\"to\":\"P2\",\"toSpineKey\":\"CE-CIV-PIT-CE6A28EF-5A80-4257-A691-085626483F90\",\"diameter\":\"150\",\" | then {\"id\":\"109874\",\"from\":\"WT12\",\"to\":\"P2\",\"spineKey\":\"CE-CIV-PIPE-AC57DED1-4D54-42DB-BC3B-1F5B9A8C6783\",\"toSpineKey\":\"CE-CI ]; Source evidence changed during capture: 1098B6:pipe-row [first {\"id\":\"1098B6\",\"from\":\"\",\"to\":\"\",\"diameter\":\"150\",\"material\":\"UPVC\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"showGradeInT | then {\"id\":\"1098B6\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-EB805DF6-4C16-4973-BFA5-219606DE28C1\",\"diameter\":\"150\",\"materia ]; Source evidence changed during capture: 1098E8:pipe-row [first {\"id\":\"1098E8\",\"from\":\"\",\"to\":\"\",\"diameter\":\"150\",\"material\":\"UPVC CHARGED\",\"gradeMode\":\"default\",\"customGrade\":\"\",\"show | then {\"id\":\"1098E8\",\"from\":\"\",\"to\":\"\",\"spineKey\":\"CE-CIV-PIPE-7F3DF45E-9027-44BD-8745-B0170EE71548\",\"diameter\":\"150\",\"materia ]; ..."
+        },
+        {
+          "n": 7,
+          "text": "record $tail \"last command-line lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. ...",
+          "evidence": "RECORDED, not judged: last command-line lines = Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. ..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30738381_B1_17ee9b283.log)",
+        "Civil CE log: 110 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP cancelled 13659 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 07:40:07",
+      "session_id": "RUN-20261028-0738-C3.0.83-rn13a-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

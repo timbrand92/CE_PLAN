@@ -1,0 +1,251 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0734-C3.0.83-rn4t",
+    "started": "2026-10-28 07:34:00",
+    "finished": "2026-10-28 07:35:32",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "84962F67C03D86E8E0E9661774F7A296D9E8CC62249A6D5C34955ACF133E471B",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 84962F67C03D86E8E0E9661774F7A296D9E8CC62249A6D5C34955ACF133E471B; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 07:34 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0734-C3.0.83-rn4t-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 07:34:00",
+      "finished": "2026-10-28 07:35:32",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30734041_B1.dwg",
+      "cases": [
+        "N04_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N04_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N04: no U after CDRG, so the raingarden stays and the count check must FAIL",
+      "kind": "deterministic",
+      "order": 41,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N04 (UX-SRC-05, daily card D07)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N04",
+      "expected": "This variant is wrong on purpose: the U is left out, so the object count after CDRG is not back to the count after the downpipe and the check fails.",
+      "why_not_unit": "It exists only to prove N04's undo check can go red.",
+      "not_automated": [],
+      "file_sha256": "DE3C4B2DB50B9315E16C296BC3D3765D68E3CFB73A41DE430046D391DD1CF538",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "value '1038' (expected '1036')",
+      "started": "2026-10-28 07:34:37",
+      "seconds": 38.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 27.3,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRG{NL}160000,-80000{NL}164000,-80000{NL}164000,-77000{NL}160000,-77000{NL}C{NL}Skip\" -Force -> $rg",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "typed 'CDRG 160000,-80000 164000,-80000 164000,-77000 160000,-77000 C Skip': Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 |..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $u1 \"no U typed in this variant\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $u1"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Raingarden RG\"",
+          "ok": true,
+          "expected": "command line has 'Raingarden RG'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 2,
+          "text": "equals $c3 $c1",
+          "ok": false,
+          "expected": "1036",
+          "actual": "1038",
+          "evidence": "value '1038' (expected '1036')"
+        },
+        {
+          "n": 3,
+          "text": "record $rg \"FULL what CDRG printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m².",
+          "evidence": "RECORDED, not judged: FULL what CDRG printed = Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m²."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 94 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 27765 ms ; Command outcome: CDRG completed 88 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 07:35:15",
+      "session_id": "RUN-20261028-0734-C3.0.83-rn4t-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}
