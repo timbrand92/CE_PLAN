@@ -4,3 +4,4 @@
 Tue 27 Oct 19:12      76                      8            start of this log; 2 days 17 hours left; 24 points to spend (about 9 a day)
 Tue 27 Oct 19:29      76                      8            two readings 17 minutes apart show NO change: a desk tick costs under 1 point; ample room. Started ONE Opus Agent (background): specs for the next 10 to 12 robot cases (uncovered everyday tools): ROBOT_NEXT_CASES_SPEC_27OCT.md
 Tue 27 Oct 20:15      76                      0            after the Opus Agent finished (460K subagent tokens, 109 tool uses, 21 minutes): weekly meter did NOT move (76 to 76), 5-hour window reset to 0. So a background Opus Agent costs under one point: spend more on testing work.
+Tue 27 Oct 22:12      76                      0            flat for 3 hours (2 tick sets + 1 Agent); started a second Opus Agent: pre-flight check of the 12 draft robot cases (reads only, fixes certain draft mistakes) so the robot's 5 hours are not wasted
