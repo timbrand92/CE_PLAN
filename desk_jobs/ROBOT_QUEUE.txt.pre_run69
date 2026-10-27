@@ -1,0 +1,7 @@
+# Robot standing queue (Desk 26 Oct 2026). One job file path per line, run in order by chain_robot_standing.ps1; a .done marker is written beside each finished job. Append only.
+C:\CE_PLAN\desk_jobs\tester_run65_regrade_3079.txt
+C:\CE_PLAN\desk_jobs\tester_run66_redo_bisect.txt
+C:\CE_PLAN\desk_jobs\tester_run67_regrade_3080.txt
+C:\CE_PLAN\desk_jobs\tester_run66b_redo_bisect_3081.txt
+C:\CE_PLAN\desk_jobs\tester_run67b_regrade_3081.txt
+C:\CE_PLAN\desk_jobs\tester_run68_gapwatch_redo.txt

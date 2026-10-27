@@ -4,4 +4,5 @@ C:\CE_PLAN\desk_jobs\tester_run66_redo_bisect.txt
 C:\CE_PLAN\desk_jobs\tester_run67_regrade_3080.txt
 C:\CE_PLAN\desk_jobs\tester_run66b_redo_bisect_3081.txt
 C:\CE_PLAN\desk_jobs\tester_run67b_regrade_3081.txt
+C:\CE_PLAN\desk_jobs\tester_run69_validate_n_cases.txt
 C:\CE_PLAN\desk_jobs\tester_run68_gapwatch_redo.txt
