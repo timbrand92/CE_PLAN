@@ -16809,3 +16809,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** open a test copy, place a downpipe (DP), close the drawing without saving, open another copy in the same AutoCAD, place DP again. Right looks like: the downpipe is placed both times.
 
 **Status:** OPEN (28 Oct 2026; not reproduced by hand; may be a robot reopen-copy timing effect: first find out whether it needs the reopen).
+
+
+**BUG-861 evidence 28 Oct 2026 (robot gap watch on Civil 3.0.83, areas\release-v3-colleagues-RUNNER_BUG861_GAPWATCH_REPORT.md):** the lost REDO reproduces at baseline (4 of 4 sessions, round 1 only). With the new log-only watch on, the first click after U shows, and only on that first click, AutoCAD dropping and retaking the drawing's WRITE LOCK twice within 3 ms, with NO CE_SUITE code on the stack ('AutoCAD itself, a native add-in or LISP'); nothing else changes in the gap (no system variable, no command). Turning off all of Civil's end-of-U work (disableUndoEndWork) does not change it (4 of 4 still lost; the log proves the skip). So the cause is in AutoCAD or another add-in loaded in the same session (candidates: Structural, Manager, CE.AutoCADLink.2027, CE.Transform.Trial.2027, a LISP). Needs a controlled run with add-ins not loaded (Tim's yes: QUESTIONS_FOR_MONDAY item 14). BUG-861 stays OPEN.
