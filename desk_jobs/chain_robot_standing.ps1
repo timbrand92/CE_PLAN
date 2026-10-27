@@ -30,7 +30,9 @@ while ($true) {
   $lg = [IO.Path]::ChangeExtension($next, '.log')
   $cmd = 'set "CLAUDE_CONFIG_DIR=C:\Users\TimothyBrand\.claude-team"&& set "PATH=%PATH%;C:\Users\TimothyBrand\AppData\Roaming\npm"&& claude -p --model sonnet --permission-mode bypassPermissions --output-format text < "' + $next + '" > "' + $lg + '" 2>&1'
   Log "starting ${next}"
-  Start-Process cmd.exe -ArgumentList '/c', $cmd -WorkingDirectory 'C:\Lisp Files\CE_ACAD_PLUGIN' -WindowStyle Hidden -Wait
+  # 27 Oct: -Wait also waits for the job's orphaned grandchildren (tail -f processes it left behind held the queue 47 minutes); wait for the job's own process only
+  $sp = Start-Process cmd.exe -ArgumentList '/c', $cmd -WorkingDirectory 'C:\Lisp Files\CE_ACAD_PLUGIN' -WindowStyle Hidden -PassThru
+  $sp.WaitForExit()
   Set-Content "$next.done" (Get-Date -Format 'yyyy-MM-dd HH:mm')
   Log "finished ${next}"
   if ((Test-Path $lg) -and ((Get-Content $lg -Tail 3 -ErrorAction SilentlyContinue) -match 'hit your session limit')) { Log "${next} log ends with the session-limit line: the desk relaunches it (delete its .done to repeat)" }
