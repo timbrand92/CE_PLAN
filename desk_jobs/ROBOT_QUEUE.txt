@@ -7,3 +7,4 @@ C:\CE_PLAN\desk_jobs\tester_run67b_regrade_3081.txt
 C:\CE_PLAN\desk_jobs\tester_run69_validate_n_cases.txt
 C:\CE_PLAN\desk_jobs\tester_run68_gapwatch_redo.txt
 C:\CE_PLAN\desk_jobs\tester_run70_n03_n04_bug1225.txt
+C:\CE_PLAN\desk_jobs\tester_run71_validate_b2_cases.txt
