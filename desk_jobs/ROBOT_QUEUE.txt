@@ -10,3 +10,4 @@ C:\CE_PLAN\desk_jobs\tester_run70_n03_n04_bug1225.txt
 C:\CE_PLAN\desk_jobs\tester_run71_validate_b2_cases.txt
 C:\CE_PLAN\desk_jobs\tester_run72_remaining_asks.txt
 C:\CE_PLAN\desk_jobs\tester_run73_bug1225_proof_and_regrade_3084.txt
+C:\CE_PLAN\desk_jobs\tester_run74_validate_b3_cases.txt
