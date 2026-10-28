@@ -1,0 +1,1111 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-1437-C3.0.84-b6a4",
+    "started": "2026-10-28 14:37:29",
+    "finished": "2026-10-28 14:40:32",
+    "build": {
+      "civil": {
+        "product_version": "3.0.84+94f521cc75811785800faf436d7c259c26337569",
+        "file_version": "3.0.84.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.84+94f521cc75811785800faf436d7c259c26337569",
+        "file_version": "1.1.84.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.84+94f521cc / struc 1.0.125+204dfad2 / mgr 1.1.84+94f521cc",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "7B25B6097234413D00BDF5B93BA529BAB5FA89189BBF6214C9D41960FE2C4F7C",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.84+94f521cc75811785800faf436d7c259c26337569; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.84+94f521cc75811785800faf436d7c259c26337569",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 7B25B6097234413D00BDF5B93BA529BAB5FA89189BBF6214C9D41960FE2C4F7C; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 14:37 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 4,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-1437-C3.0.84-b6a4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 14:37:33",
+      "finished": "2026-10-28 14:40:32",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31437361_B1.dwg",
+      "cases": [
+        "R36e_p2",
+        "R36e_p3",
+        "R36e_p4",
+        "R36e"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R36e_p2",
+      "proves_bugs": "",
+      "title": "CDFW typed at another inspection opening (51777.389,-30233.425) places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 98,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same",
+      "bug": "",
+      "known_fail": "BUG-1223",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 51777.389,-30233.425 (an inspection opening on pipe ends) prints \"Floor waste placed.\" and adds exactly one FLOOR WASTE block and one text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "F1F9F0FD3DCB1FD00E2829C8EF4431B4092E30F88D57C8D15761423390D55BE5",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Floor waste placed.' is NOT in: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+      "started": "2026-10-28 14:38:09",
+      "seconds": 24.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31437361_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}51777.389,-30233.425\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 14.7,
+          "evidence": "typed 'CDFW 51777.389,-30233.425': Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "esc-prompt: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel*..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "64 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"Floor waste placed.\"",
+          "ok": false,
+          "expected": "contains 'Floor waste placed.'",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Floor waste placed.' is NOT in: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": false,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Civil record changed' WAS found in: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, o..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, o..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 1)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: | Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-28 14:38:11.694 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:38:11.695 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:38:11.724 [INFO] [PERF] ProjectDataService.SaveToDrawing: 27.8 ms jsonLen=243925 | 2026-10-28 14:38:11.724 [INFO] Project data saved to DWG successfully | 2026-10-28 14:38:11.724 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:38:11.759 [INFO] [PERF] ProjectDataService.SaveToDrawing: 2.5 ms jsonLen=246963 | 2026-10-28 14:38:11.759 [INFO] Project data saved to DWG successfully | 2026-10-28 14:38:11.759 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:38:12.149 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:38:12.290 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:38:13.058 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:38:13.191 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:38:13.483 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:38:13.923 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:38:14.017 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:38:14.111 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:38:14.195 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:38:14.282 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:38:14.497 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:38:14.497 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:38:14.540 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:38:14.721 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:38:14.809 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:38:15.352 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:38:15.438 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:38:15.523 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:38:15.610 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-28 14:38:15.696 [INFO] C...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-28 14:38:11.694 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:38:11.695 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:38:11.724 [INFO] [PERF] ProjectDataService.SaveToDrawing: 27.8 ms jsonLen=243925 | 2026-10-28 14:38:11.724 [INFO] Project data saved to DWG successfully | 2026-10-28 14:38:11.724 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:38:11.759 [INFO] [PERF] ProjectDataService.SaveToDrawing: 2.5 ms jsonLen=246963 | 2026-10-28 14:38:11.759 [INFO] Project data saved to DWG successfully | 2026-10-28 14:38:11.759 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:38:12.149 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:38:12.290 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:38:13.058 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:38:13.191 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:38:13.483 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:38:13.923 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:38:14.017 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:38:14.111 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:38:14.195 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:38:14.282 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:38:14.497 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:38:14.497 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:38:14.540 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:38:14.721 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:38:14.809 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:38:15.352 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:38:15.438 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:38:15.523 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:38:15.610 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-28 14:38:15.696 [INFO] C..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 64 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 16661 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 14:38:33",
+      "session_id": "RUN-20261028-1437-C3.0.84-b6a4-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-1223): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R36e_p3",
+      "proves_bugs": "",
+      "title": "CDFW typed at another inspection opening (55879.087,-30233.481) places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 98,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same",
+      "bug": "",
+      "known_fail": "BUG-1223",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 55879.087,-30233.481 (an inspection opening on pipe ends) prints \"Floor waste placed.\" and adds exactly one FLOOR WASTE block and one text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "9DBF33D1FD64DE9CFF6311D22F08E261DAF3771F15E6C22A74249FFE87FC4697",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Floor waste placed.' is NOT in: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+      "started": "2026-10-28 14:38:33",
+      "seconds": 32.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31437361_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}55879.087,-30233.481\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 19.2,
+          "evidence": "typed 'CDFW 55879.087,-30233.481': Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "90 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"Floor waste placed.\"",
+          "ok": false,
+          "expected": "contains 'Floor waste placed.'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Floor waste placed.' is NOT in: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": false,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Civil record changed' WAS found in: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 1)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-28 14:38:40.606 [INFO] [PERF] CivilProjectQaAutomaticService.Advance: 21.5 ms trigger=phase2 | 2026-10-28 14:38:41.807 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:38:41.807 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:38:41.807 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:38:41.810 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:38:41.825 [INFO] [PERF] ProjectDataService.SaveToDrawing: 2.7 ms jsonLen=246963 | 2026-10-28 14:38:41.825 [INFO] Project data saved to DWG successfully | 2026-10-28 14:38:41.825 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:38:41.982 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:38:42.079 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:38:42.610 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:38:42.712 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:38:42.937 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:38:43.478 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:38:43.587 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:38:43.693 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:38:43.794 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:38:43.892 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:38:44.127 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:38:44.127 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:38:44.179 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:38:44.375 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:38:44.477 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:38:45.092 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:38:45.185 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:38:45.287 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:38:45.387 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-28 14:38:40.606 [INFO] [PERF] CivilProjectQaAutomaticService.Advance: 21.5 ms trigger=phase2 | 2026-10-28 14:38:41.807 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:38:41.807 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:38:41.807 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:38:41.810 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:38:41.825 [INFO] [PERF] ProjectDataService.SaveToDrawing: 2.7 ms jsonLen=246963 | 2026-10-28 14:38:41.825 [INFO] Project data saved to DWG successfully | 2026-10-28 14:38:41.825 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:38:41.982 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:38:42.079 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:38:42.610 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:38:42.712 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:38:42.937 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:38:43.478 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:38:43.587 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:38:43.693 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:38:43.794 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:38:43.892 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:38:44.127 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:38:44.127 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:38:44.179 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:38:44.375 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:38:44.477 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:38:45.092 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:38:45.185 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:38:45.287 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:38:45.387 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31437361_B1_1f939ebe2.log)",
+        "Civil CE log: 90 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 20154 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 14:39:06",
+      "session_id": "RUN-20261028-1437-C3.0.84-b6a4-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-1223): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R36e_p4",
+      "proves_bugs": "",
+      "title": "CDFW typed at another inspection opening (80936.111,-30304.267) places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 98,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same",
+      "bug": "",
+      "known_fail": "BUG-1223",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 80936.111,-30304.267 (an inspection opening on pipe ends) prints \"Floor waste placed.\" and adds exactly one FLOOR WASTE block and one text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "2DF642D424AA8D4C1E12EEEED28DB7F46A2559AA3019DAEC4EEF2A1BB5FD7EB3",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Floor waste placed.' is NOT in: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+      "started": "2026-10-28 14:39:06",
+      "seconds": 32.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31437361_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}80936.111,-30304.267\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 18.8,
+          "evidence": "typed 'CDFW 80936.111,-30304.267': Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "90 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"Floor waste placed.\"",
+          "ok": false,
+          "expected": "contains 'Floor waste placed.'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Floor waste placed.' is NOT in: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": false,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Civil record changed' WAS found in: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 1)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-28 14:39:14.105 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:14.105 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:39:14.105 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:39:14.107 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:14.123 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.1 ms jsonLen=246963 | 2026-10-28 14:39:14.123 [INFO] [PERF-SUMMARY] ProjectDataService.SaveToDrawing: 4 call(s), 36.2 ms in last ~62s (lifetime 4 call(s), 36.2 ms) | 2026-10-28 14:39:14.123 [INFO] Project data saved to DWG successfully | 2026-10-28 14:39:14.123 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:39:14.300 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:39:14.406 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:39:14.960 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:39:15.056 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:39:15.259 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:39:15.750 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:39:15.850 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:39:15.945 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:39:16.046 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:39:16.148 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:39:16.409 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:39:16.409 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:39:16.474 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:39:16.697 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:39:16.800 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:39:17.393 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:39:17.492 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:39:17.596 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:39:17.698 [INFO] CDRG index filled pipe 10A901 From end...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-28 14:39:14.105 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:14.105 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:39:14.105 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:39:14.107 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:14.123 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.1 ms jsonLen=246963 | 2026-10-28 14:39:14.123 [INFO] [PERF-SUMMARY] ProjectDataService.SaveToDrawing: 4 call(s), 36.2 ms in last ~62s (lifetime 4 call(s), 36.2 ms) | 2026-10-28 14:39:14.123 [INFO] Project data saved to DWG successfully | 2026-10-28 14:39:14.123 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:39:14.300 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:39:14.406 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:39:14.960 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:39:15.056 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:39:15.259 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:39:15.750 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:39:15.850 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:39:15.945 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:39:16.046 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:39:16.148 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:39:16.409 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:39:16.409 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:39:16.474 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:39:16.697 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:39:16.800 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:39:17.393 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:39:17.492 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:39:17.596 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:39:17.698 [INFO] CDRG index filled pipe 10A901 From end..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31437361_B1_14d70a87a.log)",
+        "Civil CE log: 90 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 19747 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 14:39:38",
+      "session_id": "RUN-20261028-1437-C3.0.84-b6a4-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-1223): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R36e",
+      "proves_bugs": "",
+      "title": "CDFW typed at an inspection opening that sits on pipe ends places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 99,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same",
+      "bug": "",
+      "known_fail": "BUG-1223",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 51777.389,-46593.223 (inspection opening 108F55, on pipe ends) prints \"Floor waste placed.\" and adds exactly one FLOOR WASTE block and one text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "F257C55D135C97BA3D0674B80B8DB5B7881B2A2A72310AC83C930E604B531E51",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Floor waste placed.' is NOT in: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+      "started": "2026-10-28 14:39:38",
+      "seconds": 33.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31437361_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}51777.389,-46593.223\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 19.7,
+          "evidence": "typed 'CDFW 51777.389,-46593.223': Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW can..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "89 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"Floor waste placed.\"",
+          "ok": false,
+          "expected": "contains 'Floor waste placed.'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Floor waste placed.' is NOT in: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": false,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'Civil record changed' WAS found in: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 1)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31437361_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 51777.389,-46593.223 | [CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-28 14:39:47.134 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:47.134 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:39:47.134 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:39:47.136 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:47.147 [INFO] [PERF] ProjectDataService.SaveToDrawing: 5.3 ms jsonLen=246963 | 2026-10-28 14:39:47.147 [INFO] Project data saved to DWG successfully | 2026-10-28 14:39:47.147 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:39:47.328 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:39:47.442 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:39:47.957 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:39:48.060 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:39:48.258 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:39:48.751 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:39:48.851 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:39:48.952 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:39:49.047 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:39:49.149 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:39:49.402 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:39:49.402 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:39:49.454 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:39:49.660 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:39:49.761 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:39:50.329 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:39:50.425 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:39:50.521 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:39:50.617 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-28 14:39:50.716 [INFO] CDRG index filled pipe 10A942 From ...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-28 14:39:47.134 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:47.134 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-28 14:39:47.134 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31437361_B1_937ff3f7.json | 2026-10-28 14:39:47.136 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-28 14:39:47.147 [INFO] [PERF] ProjectDataService.SaveToDrawing: 5.3 ms jsonLen=246963 | 2026-10-28 14:39:47.147 [INFO] Project data saved to DWG successfully | 2026-10-28 14:39:47.147 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-28 14:39:47.328 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-28 14:39:47.442 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-28 14:39:47.957 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-28 14:39:48.060 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-28 14:39:48.258 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-28 14:39:48.751 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-28 14:39:48.851 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-28 14:39:48.952 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-28 14:39:49.047 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-28 14:39:49.149 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-28 14:39:49.402 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-28 14:39:49.402 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-28 14:39:49.454 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-28 14:39:49.660 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-28 14:39:49.761 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-28 14:39:50.329 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-28 14:39:50.425 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-28 14:39:50.521 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-28 14:39:50.617 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-28 14:39:50.716 [INFO] CDRG index filled pipe 10A942 From ..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31437361_B1_1a2b177c4.log)",
+        "Civil CE log: 89 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 20494 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 14:40:11",
+      "session_id": "RUN-20261028-1437-C3.0.84-b6a4-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-1223): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    }
+  ]
+}
