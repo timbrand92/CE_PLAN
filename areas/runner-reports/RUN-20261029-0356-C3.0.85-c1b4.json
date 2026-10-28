@@ -1,0 +1,1341 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-0356-C3.0.85-c1b4",
+    "started": "2026-10-29 03:56:56",
+    "finished": "2026-10-29 03:59:57",
+    "build": {
+      "civil": {
+        "product_version": "3.0.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "3.0.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "1.1.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.85+09126560 / struc 1.0.125+204dfad2 / mgr 1.1.85+09126560",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.85+09126560f98acc4fd6ca4be298d087307a89a259; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 0 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 03:56 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 3
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-0356-C3.0.85-c1b4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 03:56:58",
+      "finished": "2026-10-29 03:59:57",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30357021_B1.dwg",
+      "cases": [
+        "R34s",
+        "R34sn",
+        "R34so"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R34s",
+      "proves_bugs": "",
+      "title": "With the Settings tick \"Clean up grip Ctrl-drag, ROTATE Copy and SCALE Copy like COPY\" switched ON, ROTATE Copy and SCALE Copy of pit P3 each make a real CE pit: a CE line says it was numbered as new and the copy comes with its own PIT LABEL",
+      "kind": "deterministic",
+      "order": 34,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-665 part only: pit COPY, ROTATE Copy and SCALE Copy label creation with the switch ON; independent records, pipes, grip copies and whole D15 not proved",
+      "bug": "BUG-665",
+      "known_fail": "BUG-665",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With linking.cleanUpGripRotateScaleCopies true in CD_Settings.json when AutoCAD starts, the plain COPY of pit P3 prints \"1 pit copied and numbered as new.\" and adds one pit block and one PIT LABEL block (as R34's control); ROTATE Copy by 90 degrees and SCALE Copy by 1.5 of the same pit must each give the same: a CE line saying one pit was copied and numbered as new, and one new PIT LABEL block beside the new pit block. The case also RECORDS (never judges) whether each copy gets a cover text (\"CL ...\") and what the PIT LABEL of each copy reads. Result of the first runs (b3v1, 25 Oct 2026, Civil 3.0.75, switch ON): the plain COPY and the SCALE Copy get a PIT LABEL, a cover text \"CL 18.88\" and the \"numbered as new\" line, but the ROTATE Copy about the pit's own centre gets the \"numbered as new\" line and a pit block and NO PIT LABEL and NO cover text, so this case FAILS on the rotate label check (tagged EXPECT-FAIL BUG-665). R34so shows whether a ROTATE Copy about a point elsewhere does better. If this ever passes in two sessions the ROTATE Copy / SCALE Copy half of BUG-665 works when the switch is on, and R34 (switch off) is its true red. The drawing file on disk is unchanged.",
+      "why_not_unit": "The copy clean-up runs when AutoCAD ends the native COPY, ROTATE or SCALE command on the live drawing, and the switch is read from the real settings file when AutoCAD starts.",
+      "not_automated": [
+        "Grip Ctrl-drag copy (the other half of BUG-665) is not driven. Whether the new pit NUMBER differs from P3 is read from the PIT LABEL block in R34sn, not here.",
+        "The switch is set only for this case's AutoCAD session; Tim's file is restored by hash. Whether the office should switch the tick on is Tim's decision (Monday question 8)."
+      ],
+      "file_sha256": "05D4BE8105FC06A87FB10E18233A8A3F90B4F6769D40123690B72571113BB46B",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 03:57:33",
+      "seconds": 45.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30357021_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_cp",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C559 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C573 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C57A AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT BLOCK\" -> $cp_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C559 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C573 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"text~^CL \" -> $cp_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C57A CL 18.88 25TEXT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_label handle -> $hcp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C573"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hcp} -> $cpl",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C573: {\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ROTATE{NL}53777.7,-25569.9{NL}C{NL}90{NL}\" -Force -> $ro",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.ROTATE 53777.7,-25569.9 C 90': Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a co..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $roe",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was pla..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_ro",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1037 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C57F AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C599 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C5A0 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT BLOCK\" -> $ro_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C57F PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT LABEL\" -> $ro_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C599 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"text~^CL \" -> $ro_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5A0 CL 18.88 25TEXT"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.SCALE{NL}53777.7,-25569.9{NL}C{NL}1.5{NL}\" -Force -> $sc",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.SCALE 53777.7,-25569.9 C 1.5': Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | 1 pit..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sce",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was pla..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1043 objects"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $new_sc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1040 (model space now 1043); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C5A5 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C5BF AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C5C6 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"name~^PIT BLOCK\" -> $sc_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5A5 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"name~^PIT LABEL\" -> $sc_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5BF PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"text~^CL \" -> $sc_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5C6 CL 18.88 25TEXT"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sc_label handle -> $hsc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5BF"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hsc} -> $scl",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5BF: {\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $cp \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 2,
+          "text": "count $cp_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $cp_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_label = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $ro_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $ro_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_label = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "history count \"pit copied and numbered as new\" = 3",
+          "ok": true,
+          "expected": "3 line(s) with 'pit copied and numbered as new'",
+          "actual": "3",
+          "evidence": "command line holds 3 line(s) containing 'pit copied and numbered as new' (expected 3)"
+        },
+        {
+          "n": 7,
+          "text": "count $sc_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sc_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "count $sc_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sc_label = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "count $cp_cover = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_cover = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $ro_cover = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_cover = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "count $sc_cover = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sc_cover = 1 (expected = 1)"
+        },
+        {
+          "n": 12,
+          "text": "matches $cpl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 13,
+          "text": "matches $scl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P12\",\"insertion'"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]"
+        },
+        {
+          "n": 15,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 16,
+          "text": "record $cpl \"FULL the COPY's PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}",
+          "evidence": "RECORDED, not judged: FULL the COPY's PIT LABEL = {\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}"
+        },
+        {
+          "n": 17,
+          "text": "record $scl \"FULL the SCALE Copy's PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P12\",\"insertion\":[52214.21744936394,-26413.275094625427,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.90230611701,-26238.275094625427,0.0],\"bbox\":[52214.21744936394,-26413.275094625427,52927.58716287008,-26061.8426253212]}],\"bbox\":[52170.90230611701,-26638.275094625427,52970.90230611701,-25838.275094625427],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.71131020978,-26413.275094625427]}]}",
+          "evidence": "RECORDED, not judged: FULL the SCALE Copy's PIT LABEL = {\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P12\",\"insertion\":[52214.21744936394,-26413.275094625427,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.90230611701,-26238.275094625427,0.0],\"bbox\":[52214.21744936394,-26413.275094625427,52927.58716287008,-26061.8426253212]}],\"bbox\":[52170.90230611701,-26638.275094625427,52970.90230611701,-25838.275094625427],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.71131020978,-26413.275094625427]}]}"
+        },
+        {
+          "n": 18,
+          "text": "record $ro_cover \"how many cover texts (CL) the ROTATE Copy added (0 while BUG-665 stands; the ROTATE label cannot be read while it is missing, so its number is not asserted here)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1039,\"handle\":\"11C5A0\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.35846280958,\"y\":-24866.595799198476}",
+          "evidence": "RECORDED, not judged: how many cover texts (CL) the ROTATE Copy added (0 while BUG-665 stands; the ROTATE label cannot be read while it is missing, so its number is not asserted here) = {\"index\":1039,\"handle\":\"11C5A0\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.35846280958,\"y\":-24866.595799198476}"
+        },
+        {
+          "n": 19,
+          "text": "record $cp \"FULL COPY (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL COPY (control) = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 20,
+          "text": "record $new_cp \"FULL objects the COPY added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762} | {\"index\":1036,\"handle\":\"11C57A\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762} | {\"index\":1036,\"handle\":\"11C57A\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}"
+        },
+        {
+          "n": 21,
+          "text": "record $ro \"FULL ROTATE Copy\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL ROTATE Copy = Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 22,
+          "text": "record $roe \"FULL ROTATE Copy after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL ROTATE Copy after the wait = [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 23,
+          "text": "record $new_ro \"FULL objects the ROTATE Copy added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1037,\"handle\":\"11C57F\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.67543006733,\"y\":-25569.873867640432} | {\"index\":1038,\"handle\":\"11C599\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.83853764498,\"y\":-26238.285817164862} | {\"index\":1039,\"handle\":\"11C5A0\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.35846280958,\"y\":-24866.595799198476}",
+          "evidence": "RECORDED, not judged: FULL objects the ROTATE Copy added = {\"index\":1037,\"handle\":\"11C57F\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.67543006733,\"y\":-25569.873867640432} | {\"index\":1038,\"handle\":\"11C599\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.83853764498,\"y\":-26238.285817164862} | {\"index\":1039,\"handle\":\"11C5A0\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.35846280958,\"y\":-24866.595799198476}"
+        },
+        {
+          "n": 24,
+          "text": "record $sc \"FULL SCALE Copy\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (outlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL SCALE Copy = Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (outlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 25,
+          "text": "record $sce \"FULL SCALE Copy after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL SCALE Copy after the wait = [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 26,
+          "text": "record $new_sc \"FULL objects the SCALE Copy added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1040,\"handle\":\"11C5A5\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.739198539355,\"y\":-25569.863145100997} | {\"index\":1041,\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.90230611701,\"y\":-26238.275094625427} | {\"index\":1042,\"handle\":\"11C5C6\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.422231281605,\"y\":-24866.58507665904}",
+          "evidence": "RECORDED, not judged: FULL objects the SCALE Copy added = {\"index\":1040,\"handle\":\"11C5A5\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.739198539355,\"y\":-25569.863145100997} | {\"index\":1041,\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.90230611701,\"y\":-26238.275094625427} | {\"index\":1042,\"handle\":\"11C5C6\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.422231281605,\"y\":-24866.58507665904}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 117 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-29 03:58:19",
+      "session_id": "RUN-20261029-0356-C3.0.85-c1b4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R34s_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R34sn",
+      "proves_bugs": "",
+      "title": "With the Settings tick \"Clean up grip Ctrl-drag, ROTATE Copy and SCALE Copy like COPY\" switched ON, the copies of pit P3 made by COPY and by SCALE Copy each carry a pit number of their own (not P3) (the ROTATE Copy adds no label to read: see R34s)",
+      "kind": "deterministic",
+      "order": 35,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-665 part only: the COPY and SCALE Copy labels each read a P number other than P3, switch ON; D15 is case R34a",
+      "bug": "BUG-665",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the tick ON when AutoCAD starts, the PIT LABEL of the COPY and of the SCALE Copy of pit P3 each reads a pit number that is not P3 (the ROTATE Copy label count is recorded, not judged). The drawing file on disk is unchanged.",
+      "why_not_unit": "The number is given by the live COPY / ROTATE / SCALE clean-up and read back from the PIT LABEL block in the real drawing.",
+      "not_automated": [
+        "DERIVED (29 Oct 2026 fix-up, Opus B6 review item 6): the COPY label reading exactly P8 is taken from the first free number on this test drawing (the other pit numbers on DRV1_B1 are P1 to P7, P9 and P10 and C1, so P8 is the one gap), not from a card line that guarantees P8; the SCALE label is only checked to differ from P3 and from the COPY label (P8), so the two copies cannot share a number. The ROTATE Copy of pit P3 about its own centre (the route R34 uses) adds NO PIT LABEL even with the tick ON (run b3v1, 25 Oct 2026), so its number cannot be read: that is R34s's red, and the label count is only recorded here. Grip Ctrl-drag copy is not driven. Which number each copy should get (P12, P13, ...) is not asserted: only that it is a number of its own."
+      ],
+      "file_sha256": "F8A2788F0DEC0B46B19F7E4943F883696DA4048F37DE8AF94B3EA3B7C3FE2677",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 03:58:19",
+      "seconds": 49.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30357021_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_cp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C559 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C573 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C57A AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C573 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_label handle -> $hcp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C573"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hcp} -> $cpl",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C573: {\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ROTATE{NL}53777.7,-25569.9{NL}C{NL}90{NL}\" -Force -> $ro",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed '_.ROTATE 53777.7,-25569.9 C 90': Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a co..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $roe",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was pla..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_ro",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1037 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C57F AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C599 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C5A0 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT LABEL\" -> $ro_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C599 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.SCALE{NL}53777.7,-25569.9{NL}C{NL}1.5{NL}\" -Force -> $sc",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.SCALE 53777.7,-25569.9 C 1.5': Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | 1 pit..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sce",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was pla..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1043 objects"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $new_sc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1040 (model space now 1043); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C5A5 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C5BF AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C5C6 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"name~^PIT LABEL\" -> $sc_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5BF PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sc_label handle -> $hsc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5BF"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hsc} -> $scl",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5BF: {\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $cpl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 2,
+          "text": "matches $scl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P12\",\"insertion'"
+        },
+        {
+          "n": 3,
+          "text": "matches $cpl \"text.:.P8.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P8.,.insertion/",
+          "actual": "{\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 4,
+          "text": "matches $scl \"text.:.P(?!3.,)(?!8.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)(?!8.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P12\",\"insertion'"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 7,
+          "text": "record $cpl \"FULL the COPY's PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}",
+          "evidence": "RECORDED, not judged: FULL the COPY's PIT LABEL = {\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}"
+        },
+        {
+          "n": 8,
+          "text": "record $ro_label \"how many PIT LABEL blocks the ROTATE Copy added (0 on 3.0.75: it is the fault R34s shows)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1038,\"handle\":\"11C599\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.83853764498,\"y\":-26238.285817164862}",
+          "evidence": "RECORDED, not judged: how many PIT LABEL blocks the ROTATE Copy added (0 on 3.0.75: it is the fault R34s shows) = {\"index\":1038,\"handle\":\"11C599\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.83853764498,\"y\":-26238.285817164862}"
+        },
+        {
+          "n": 9,
+          "text": "record $scl \"FULL the SCALE Copy's PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P12\",\"insertion\":[52214.21744936394,-26413.275094625427,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.90230611701,-26238.275094625427,0.0],\"bbox\":[52214.21744936394,-26413.275094625427,52927.58716287008,-26061.8426253212]}],\"bbox\":[52170.90230611701,-26638.275094625427,52970.90230611701,-25838.275094625427],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.71131020978,-26413.275094625427]}]}",
+          "evidence": "RECORDED, not judged: FULL the SCALE Copy's PIT LABEL = {\"handle\":\"11C5BF\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P12\",\"insertion\":[52214.21744936394,-26413.275094625427,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.90230611701,-26238.275094625427,0.0],\"bbox\":[52214.21744936394,-26413.275094625427,52927.58716287008,-26061.8426253212]}],\"bbox\":[52170.90230611701,-26638.275094625427,52970.90230611701,-25838.275094625427],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.71131020978,-26413.275094625427]}]}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30357021_B1_14d79a34c.log)",
+        "Civil CE log: 117 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-29 03:59:09",
+      "session_id": "RUN-20261029-0356-C3.0.85-c1b4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R34sn_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R34so",
+      "proves_bugs": "",
+      "title": "With the Settings tick ON, a ROTATE Copy of pit P3 about a point 5 m away (so the copy lands elsewhere) comes with its own PIT LABEL and cover text",
+      "kind": "deterministic",
+      "order": 36,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-665 part only: ROTATE Copy of pit P3 about a pivot 5 m east with the switch ON; number, record, pipes, grip copies and D15 plain COPY/U not proved",
+      "bug": "BUG-665",
+      "known_fail": "BUG-665",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "(First result, b3v2 of 25 Oct 2026 on Civil 3.0.75: the copy gets the \"numbered as new\" line and a pit block but NO PIT LABEL and NO cover text, also when the copy lands 5 m away, so the missing label belongs to ROTATE Copy itself, not to a copy sitting on top of its original; the case is tagged EXPECT-FAIL BUG-665.) With the tick ON when AutoCAD starts, ROTATE Copy of P3 by 90 degrees about 58777.7,-25569.9 prints \"1 pit copied and numbered as new.\" and adds one pit block, one PIT LABEL block and one cover text (CL ...) for the copy. The drawing file on disk is unchanged.",
+      "why_not_unit": "The copy clean-up runs when AutoCAD ends the native ROTATE command on the live drawing, and the switch is read from the real settings file when AutoCAD starts.",
+      "not_automated": [
+        "Grip Ctrl-drag copy is not driven. The copy's number is not read here (R34sn reads the COPY and SCALE numbers)."
+      ],
+      "file_sha256": "82FDD260D756637BC0F28B29059113027F26EC6397F193207498842AEA4681AC",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 03:59:09",
+      "seconds": 25.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30357021_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ROTATE{NL}58777.7,-25569.9{NL}C{NL}90{NL}\" -Force -> $ro",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.ROTATE 58777.7,-25569.9 C 90': Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 58777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a co..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $roe",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_ro",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C559 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C573 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C57A AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT BLOCK\" -> $ro_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C559 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ro_pit x -> $rx",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 58777.6754300673"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ro_pit y -> $ry",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -30569.8738676404"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT LABEL\" -> $ro_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C573 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"text~^CL \" -> $ro_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C57A CL 18.88 25TEXT"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $ro \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 58777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 58777.7,-25569.9 | Specify r..."
+        },
+        {
+          "n": 2,
+          "text": "count $ro_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $ro_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_label = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $ro_cover = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ro_cover = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "number $rx = 58777.7 +- 1",
+          "ok": true,
+          "expected": "= 58777.7",
+          "actual": "58777.6754300673",
+          "evidence": "$rx = 58777.6754300673 (expected = 58777.7 +- 1)"
+        },
+        {
+          "n": 6,
+          "text": "number $ry = -30569.9 +- 1",
+          "ok": true,
+          "expected": "= -30569.9",
+          "actual": "-30569.8738676404",
+          "evidence": "$ry = -30569.8738676404 (expected = -30569.9 +- 1)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30357021_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $ro \"FULL ROTATE Copy about a point 5 m away\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 58777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL ROTATE Copy about a point 5 m away = Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 58777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "text": "record $roe \"FULL after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL after the wait = Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a copy of the selected objects. | Specify rotation angle or [Copy/Reference] <0.000>: 90 | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "text": "record $new_ro \"FULL objects the ROTATE Copy added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":58777.67543006732,\"y\":-30569.873867640432} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":57570.83853764497,\"y\":-31238.285817164862} | {\"index\":1036,\"handle\":\"11C57A\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":59354.35846280957,\"y\":-29866.595799198476}",
+          "evidence": "RECORDED, not judged: FULL objects the ROTATE Copy added = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":58777.67543006732,\"y\":-30569.873867640432} | {\"index\":1035,\"handle\":\"11C573\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":57570.83853764497,\"y\":-31238.285817164862} | {\"index\":1036,\"handle\":\"11C57A\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":59354.35846280957,\"y\":-29866.595799198476}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30357021_B1_1700fb4da.log)",
+        "Civil CE log: 30 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-29 03:59:34",
+      "session_id": "RUN-20261029-0356-C3.0.85-c1b4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R34so_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}
