@@ -71,3 +71,12 @@ Tim: "check in job folders". The intake chat looked at the office project folder
 5. A 2024 and a 2025 file search in Civil (depth 3) found only 45 files whose name says RFI, request for information or council comment, so most councils' letters are NOT named RFI. CE must recognise a council RFI by its content and folder, not by its file name.
 
 Interpretation (guess, not a ruling): the learning pool is the Civil council folders above (about 125 jobs), read one anonymised lesson at a time; Tim names the folders or years before any is opened (DATA-01). Nothing was copied or opened beyond counting.
+
+## PC-04 update 3 (Tim, 29 Oct) — first read of the council folders (counts only)
+
+Tim: "yes" to reading "Council Feedback" for 2025 and 2026. Result, read-only, nothing copied, no names recorded:
+1. **"Council Feedback" holds almost nothing in 2025 and 2026** (2025: 1 job, 0 PDFs; 2026: 0). The recent jobs use **"From Council"** instead (2024: 18 jobs, 16 PDFs; 2025: 13 jobs, 15 PDFs; 2026: none yet). The folder name changed over time, so CE cannot rely on a fixed folder name.
+2. **Read the first three pages of the 15 PDFs in 2025 "From Council":** 8 look like RFIs (asking for more information), 3 approvals or permits, 4 other (2 had no readable text, probably scanned). Classified by wording only, not by a person: treat 8 of 15 as approximate.
+3. **Councils could not be counted yet.** The simple text search picked up junk, so this chat does not claim any per-council figure. Needs a proper pass (council name from the letter head and the application-number pattern).
+4. **The 2026 jobs have no council folder files at all**, so recent letters (for example the three Kingston samples, kept in Tim's Downloads) are not yet filed in the job folders. Not checked where else they arrive (email?).
+Interpretation (guess): enough RFI letters exist (roughly 8 per year per folder pattern, plus the older years' "Council Feedback" and "From Council" folders) to learn from. Next step, if Tim wants it, is a proper read of all years by a builder with an anonymising output (council, request type, wording only).
