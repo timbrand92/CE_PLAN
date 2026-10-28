@@ -31,3 +31,19 @@ Meaning: BUG-1230 is held (kept as evidence, not fixed on its own). Wanted: one 
 ## PC-03 update (Tim, 29 Oct, later)
 
 Tim on the proposed BUG-1230 wording: "yoru understanding is perfect lets get this as ready to go whenever possible". BUG-1230 now carries the agreed wording. Interpretation (guess): get the whole-functionality review and its workflow card (PC-02 + PC-03, with BUG-1229 and BUG-1230) ready for the review gate as soon as possible, so it can be built when approved. No code change is authorised by this line. Desk chat to schedule the review with Tim.
+
+## PC-04 — Council RFI letters: ingest and handle them (extends UX-RFI-01..03)
+
+Tim: "need to be able to ingest and handle rfis from council, here is example how and what can we do with this?" (three City of Kingston RFI letters attached; PDFs stay in Tim's Downloads, they name client addresses and are not copied into any repo).
+
+Already ruled (25 Sep, UX-RFI-01..03): CE finds the RFI PDF in the job folder, lists every item as a to-do in a Council RFI tab in Project Review, checks what it can against the drawing (Met / Not met / Can't tell, Show where), learns what councils keep asking, no response-letter drafting.
+
+What the three letters add (anonymised; counted by the intake chat from the PDFs):
+1. **Standard wording on the notes (about half of the asks):** a Kingston notes library CE can check against the drawing's notes and offer to insert before submission. Contact phone numbers differ between letters (two different Assets Engineer numbers), so they must come from council data in Settings and be flagged to verify, never hard-coded.
+2. **Checks from CE's own numbers:** permit discharge limit versus the calculated flow (7.7 versus 8.21 L/s in one letter), drawn orifice versus calculated orifice (90 mm versus 58 mm), roof area per tank (council minimum 50 m2), charged pipes under a dwelling (150 mm UPVC minimum in one letter), cover versus pipe class.
+3. **Details to add:** retaining wall section, concrete driveway paving section. Detail work for the drafter, listed as to-dos.
+4. **Human decisions, CE only lists them:** who maintains a shared drainage system (owners corporation, s173 agreement, easement), whether to split the system per unit.
+5. **Letter housekeeping:** 90-day deadline before the application is closed (CE can count it down), the application reference number, the subject address and a covering letter with bubbled changes on the plans.
+
+Interpretation (guess, not a ruling): the cheapest first step is a pre-submission Kingston checklist built from these asks (so the RFI never comes), then the RFI reader. Both need a workflow card and Tim's approval before code. Open question for Tim: the 25 Sep ruling says no response-letter drafting, but Kingston wants a covering letter listing the changes; does Tim want a plain change list produced from the to-do tick-offs?
+Related: BUG-538 (Kingston rules written into the code); the Kingston council rules in 02_COUNCIL_RULES should be checked for the 50 m2 per tank rule.
