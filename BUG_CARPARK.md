@@ -16903,3 +16903,19 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Reference:** Tim's pasted command line, 29 Oct 2026, hand check H4 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md. Related: card D16 and robot cases N02 and N22 (they check the P3 / P8 sentence, not the lines before it).
 
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+---
+
+## BUG-1232 - Label tidy after a MOVE treats the sheet border block as something a label clashes with (suspected)
+
+**Command / Area:** Tidy labels after MOVE (label clash tidy-up), Civil 3.0.84 and 3.0.85. Found by reading the robot's CE log lines (found by CE 01 triage, 29 Oct 2026; not seen in AutoCAD by hand).
+
+**Symptom:** every "no clear spot" line in robot runs 31 and 33 names the block "Drawing Border" as what the label clashes with. On a drawing with a bordered sheet that could mean labels never find a clear spot, or are pushed away from the border for no reason.
+
+**Expected behaviour:** a sheet border block is not something a label should avoid or clash with; the tidy-up should only avoid pits, pipes, other labels and real linework.
+
+**Steps to confirm in AutoCAD:** (1) Open a drawing that has a sheet border block (Drawing Border) and a pit with a label near it. (2) MOVE the pit so its label comes close to the border, with Tidy labels ON. (3) Read the command line. Right = no line says the label clashes with the Drawing Border and the label lands on a clear spot. Wrong = a "no clear spot" line naming the Drawing Border.
+
+**Reference:** areas\release-v3-colleagues-PILOT_NOFIX_TRIAGE_29OCT.md (what I did not do, item 8); robot runs 31 and 33 logs; LinkService.TextClashTidyUp.cs and TextClashTidyUpRule.cs (see BUG-816). Not yet reproduced by hand; may be a robot test-drawing effect.
+
+**Status:** OPEN (found 29 Oct 2026; unproven). Never FIXED until Tim confirms in AutoCAD.

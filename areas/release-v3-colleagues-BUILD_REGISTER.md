@@ -29,6 +29,29 @@ Started Thu 29 Oct 2026 by CE 01 Build. Tim: "yes, build numbers" (29 Oct 2026, 
 14. **B-014 BUG-860, double-click on the green DP label opens Edit source.** team_fix_c77i, stacked on #1834. Tim: "yes". Queued.
 15. **B-015 PR #1771, computations-sheet line (hydraulic grade line not calculated) on every council sheet.** Existing PR on an old base (rel-20261025o). Tim: "do as you recommend". Needs the usual review and a rebase onto the newest line before a train. Not started.
 
+## After C-76 and the nine backlog jobs: pilot-critical bugs with no fix (Control Room ruling 29 Oct; from areas\release-v3-colleagues-PILOT_NOFIX_TRIAGE_29OCT.md)
+
+BUG-901 is B-012 and BUG-907 is B-013 above. Each item below is a draft behind a Settings switch ON, built on the recommended answer where the triage says so; Tim's word replaces the default (questions in QUESTIONS_FOR_MONDAY.md item 21). Sizes are the triage's guesses. Nothing started.
+
+16. **B-016 BUG-866, rainfall note wording on the detention sheet (no curve value changes, Tim: "leave them until you've checked the curve").** S. Build on recommended.
+17. **B-017 BUG-1095, the council minimum runoff figure is never applied (Darebin 0.80, CDDESIGN uses 0.70).** M. Build now (council documents and the 4 Sep ruling answer it).
+18. **B-018 BUG-1099, council time of concentration for detention (Boroondara, Maribyrnong, Maroondah).** M. Build on recommended (question 21b).
+19. **B-019 BUG-1091, pipes DN450 and larger lose their minimum grade in redesign.** S. Build now. Base for B-020 and B-022.
+20. **B-020 BUG-1088, pipe sizer picks the smallest pipe at any grade.** M. Build on recommended (question 21a). After B-019.
+21. **B-021 BUG-1192, long section hides a ground depression (step one: a plain warning line).** M. Build now; dashed stretch waits for question 21d.
+22. **B-022 BUG-903, screens that disagree on minimum cover.** M. Build now, after B-019.
+23. **B-023 BUG-857, New Pipe window Grade mismatch box.** S. Build now; needs a Codex look.
+24. **B-024 BUG-1031, Pit Schedule delete-cell button.** S. Build now; needs a Codex look.
+25. **B-025 BUG-816, label tidy-up setting row.** S to M. Build now.
+26. **B-026 BUG-902, one Unknown note on the CDRULES cover row.** S. Build now.
+27. **B-027 BUG-525, no blue in Civil windows and icons (water line and snap glow wait for questions 21j and 21k).** M. Build now (Civil only).
+28. **B-028 BUG-587, Pit Schedule row grows for a long remark.** M to L. Build on recommended (question 21e); needs a Codex look.
+29. **B-029 BUG-1096 with BUG-1098, rainwater reuse boxes in CDDESIGN and the Kingston credit.** L. Build on recommended (question 21c); needs a Codex look.
+30. **B-030 BUG-648, AG drain copy gets its own grade label.** L. Build on recommended (questions 21f and 21g); needs an Opus review and a Codex look.
+31. **B-031 BUG-1228 follow-up, PIT is also slow (readiness report); B-004 only covers the source-placing reads (DP, OF, floor waste).** Not started; the robot timing from B-004 comes first.
+32. **B-032 BUG-1232, label tidy after MOVE treats the Drawing Border block as a clash (suspected).** Not started; confirm by hand or robot first.
+
+Not buildable (no B number): BUG-685 and BUG-1148 wait for Tim's rulings (21h, 21i); BUG-1166, 1169, 1170, 1209, 1210, 855, 865 are facts to gather; BUG-1171 needs a Shared train.
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
