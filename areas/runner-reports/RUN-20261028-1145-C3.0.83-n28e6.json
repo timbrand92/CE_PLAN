@@ -1,0 +1,484 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-1145-C3.0.83-n28e6",
+    "started": "2026-10-28 11:45:30",
+    "finished": "2026-10-28 11:51:58",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "4CD94FF0D0E6CBE294563FA378181F3282493FBC50C5AE88C0B77F5FE7FD9A11",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 4CD94FF0D0E6CBE294563FA378181F3282493FBC50C5AE88C0B77F5FE7FD9A11; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 11:45 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-1145-C3.0.83-n28e6-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 11:45:31",
+      "finished": "2026-10-28 11:51:58",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31145331_B1.dwg",
+      "cases": [
+        "N20"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N20",
+      "proves_bugs": "",
+      "title": "A 2 m pipe gets its label on a leader: CE asks to snap the callout arrow to the pipe, places exactly one multileader, and draws no plain label along the pipe",
+      "kind": "deterministic",
+      "order": 200,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-24 short-pipe label on a leader (daily card D11)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-80000 to 152000,-80000 with inverts 18.000 / 17.990 and Start Pipe: CE asks 'Snap callout arrow to pipe:'; a click on the pipe at 151000,-80000 and a click for the text at 151000,-78500 place the label; the CD run then offers the next pipe and Esc ends it. The drawing gains exactly one pipe, exactly one multileader, and no plain text containing ' DIA. '; 'Pipe text callout cancelled.' is never printed.",
+      "why_not_unit": "The fit test uses the real text width and the drawn length, and the leader is placed by live prompts in the drawing.",
+      "not_automated": [
+        "The leader's arrow point lying on the pipe (card assertion 2) and the leader's look are a Codex look; the arrow point is not readable by the robot.",
+        "The leader's own wording (size, material, grade) is RECORDED only: the robot has never read a multileader's text."
+      ],
+      "file_sha256": "AA6B716294DFF09799BF5036A7B3A1CACA9522F571BCA8C7ACF8146A57C70D7C",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 11:50:12",
+      "seconds": 77.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 151000,-79500 6000\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _C 151000,-79500 6000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 151000,-79500 | Enter magnif..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 view-read : view stored: centre 151,000.000,-79,500.000 height 6,000.000 screen 1604x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}152000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 14.0,
+          "evidence": "typed 'CD 150000,-80000 152000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 152000,-80000 | Se..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.990\"",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.990: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 20.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150300,-80000\" -Blind -> $click_anchor",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "v3 pt-click 150300,-80000: pt-click: world 150,300.000,-80,000.000 -> pixel 2661,753 (exact 2,661.19,753.42); cursor read-back 2661,753; view stored (56 s old)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150300,-78500\" -Blind -> $click_text",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "v3 pt-click 150300,-78500: pt-click: world 150,300.000,-78,500.000 -> pixel 2661,611 (exact 2,661.19,611.17); cursor read-back 2661,611; view stored (60 s old)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMLeader 1; AcDbMText 2; CeCvlPipeObject 1; first: 11C55C CeCvlPipeObject STORMWATER PIPE ; 11C562 AcDbMLeader 25TEXT ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.990 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=CeCvlPipeObject -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55C STORMWATER PIPE"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbMLeader -> $leaders",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C562 25TEXT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~ DIA\\. \" -> $plain",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 5: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^IL \" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C566 IL 18.000 20TEXT ; 11C56B IL 17.990 20TEXT"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new object -All -> $types",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = CeCvlPipeObject | AcDbMLeader | AcDbMText | AcDbMText | AcDbBlockReference"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $leaders layer -> $leader_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31145331_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Snap callout arrow to pipe:\"",
+          "ok": true,
+          "expected": "command line has 'Snap callout arrow to pipe:'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Snap callout arrow to pipe:'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"Pipe text callout cancelled.\"",
+          "ok": true,
+          "expected": "command line lacks 'Pipe text callout cancelled.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Pipe text callout cancelled.' (23 lines read)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'"
+        },
+        {
+          "n": 4,
+          "text": "count $pipes = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipes = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $leaders = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $leaders = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $plain = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $plain = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31145331_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV31145331_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "record $types \"FULL object types of everything the pipe added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CeCvlPipeObject | AcDbMLeader | AcDbMText | AcDbMText | AcDbBlockReference",
+          "evidence": "RECORDED, not judged: FULL object types of everything the pipe added = CeCvlPipeObject | AcDbMLeader | AcDbMText | AcDbMText | AcDbBlockReference"
+        },
+        {
+          "n": 9,
+          "text": "record $leader_layer \"layer of the multileader\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the multileader = 25TEXT"
+        },
+        {
+          "n": 10,
+          "text": "record $ils \"the IL texts of the short pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1036,\"handle\":\"11C566\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-80457.5} | {\"index\":1037,\"handle\":\"11C56B\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 1...",
+          "evidence": "RECORDED, not judged: the IL texts of the short pipe = {\"index\":1036,\"handle\":\"11C566\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-80457.5} | {\"index\":1037,\"handle\":\"11C56B\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 1..."
+        },
+        {
+          "n": 11,
+          "text": "record $click_anchor \"what the anchor click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 11:51:12\",\"elapsed_ms\":1781,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-80,000.000 -> pixel 2661,753 (exact 2,661.19,753.42); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the anchor click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 11:51:12\",\"elapsed_ms\":1781,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-80,000.000 -> pixel 2661,753 (exact 2,661.19,753.42); cursor read-back 2..."
+        },
+        {
+          "n": 12,
+          "text": "record $click_text \"what the text click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 11:51:17\",\"elapsed_ms\":1696,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-78,500.000 -> pixel 2661,611 (exact 2,661.19,611.17); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the text click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-28 11:51:17\",\"elapsed_ms\":1696,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-78,500.000 -> pixel 2661,611 (exact 2,661.19,611.17); cursor read-back 2..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 73 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 63974 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 11:51:30",
+      "session_id": "RUN-20261028-1145-C3.0.83-n28e6-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N20_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

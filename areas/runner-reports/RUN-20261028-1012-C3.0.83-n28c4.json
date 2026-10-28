@@ -1,0 +1,399 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-1012-C3.0.83-n28c4",
+    "started": "2026-10-28 10:12:24",
+    "finished": "2026-10-28 10:14:27",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "4F95DE5BD59A6D508D68B7A0675663B8C1F352C06B54B07D37DD89732DBC786B",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 4F95DE5BD59A6D508D68B7A0675663B8C1F352C06B54B07D37DD89732DBC786B; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 10:12 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-1012-C3.0.83-n28c4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 10:12:24",
+      "finished": "2026-10-28 10:14:27",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31012291_B1.dwg",
+      "cases": [
+        "N18"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N18",
+      "proves_bugs": "",
+      "title": "With both Undo switches on, CD's [Undo] takes back point 3, Enter finishes a straight two-point pipe, and one U after placing it echoes CD and takes the pipe away",
+      "kind": "deterministic",
+      "order": 180,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-UNDO-01 profile B, switch-on setting (daily card D19 assertion 1 for a placed CD pipe; N07 covers the rest)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD with points 150000,-85000, 160000,-85000 and 165000,-87000, then U at the [Undo] prompt prints 'Undid: point 3 of the pipe route.'; Enter finishes the route on the first two points and New Pipe opens; with inverts 18.000 / 17.950 Start Pipe places exactly one pipe whose box starts at x 150000 and stays above y -86000 (the taken-back point at y -87000 is not in it), with the two IL texts IL 18.000 and IL 17.950; one U echoes CD and leaves nothing new in the drawing.",
+      "why_not_unit": "AutoCAD's own undo echo and the live CD prompt keyword are only visible in a running session, and the switches are read from the real settings file at start-up.",
+      "not_automated": [
+        "The settings switches are OFF in Tim's file: this case proves the switch-on setting only (N17 proves Tim's own switches).",
+        "REDO after the U is not driven (BUG-861 family; R08)."
+      ],
+      "file_sha256": "3C39E3F9B3BBE647C4D727E5E436C35F57EC0BA240C76B9797ACDCED61E7ED2E",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-28 10:12:59",
+      "seconds": 64.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-85000{NL}160000,-85000{NL}165000,-87000{NL}U{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $cd_t1",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "typed 'CD 150000,-85000 160000,-85000 165000,-87000 U': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 160000,-85000 | Sp..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.950\"",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.950: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $cd_t2",
+          "ok": true,
+          "seconds": 23.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd_e1",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C559 CeCvlPipeObject STORMWATER PIPE ; 11C55F AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C564 AcDbMText 20TEXT IL 18.000 ; 11C569 AcDbMText 20TEXT IL 17.950 ; 11C58B AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=CeCvlPipeObject -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C559 STORMWATER PIPE"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes x -> $px",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150000"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes y -> $py",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -85112.5"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^IL (18\\.000|17\\.950)$\" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C564 IL 18.000 20TEXT ; 11C569 IL 17.950 20TEXT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_a",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31012291_B1.dwg]"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u_cd",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | CD | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_u",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Undid: point 3 of the pipe route.\"",
+          "ok": true,
+          "expected": "command line has 'Undid: point 3 of the pipe route.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Undid: point 3 of the pipe route.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'"
+        },
+        {
+          "n": 3,
+          "text": "count $pipes = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipes = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "number $px = 150000 +- 5",
+          "ok": true,
+          "expected": "= 150000",
+          "actual": "150000",
+          "evidence": "$px = 150000 (expected = 150000 +- 5)"
+        },
+        {
+          "n": 5,
+          "text": "number $py > -86000",
+          "ok": true,
+          "expected": "> -86000",
+          "actual": "-85112.5",
+          "evidence": "$py = -85112.5 (expected > -86000)"
+        },
+        {
+          "n": 6,
+          "text": "count $ils = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $ils = 2 (expected = 2)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_a \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31012291_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV31012291_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "matches $u_cd \"(^|\\| )CD\\s*(\\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )CD\\s*(\\||$)/",
+          "actual": "Command: | Command: U | CD | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settin...",
+          "evidence": "matched '| CD  |'"
+        },
+        {
+          "n": 9,
+          "text": "count $after_u = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $after_u = 0 (expected = 0)"
+        },
+        {
+          "n": 10,
+          "text": "record $cd_t1 \"FULL what CD printed up to New Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | Specify next point <Enter to finish, 1 segment>: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CD printed up to New Pipe = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 160000,-85000 | Specify next point <Enter to finish, 1 segment>: 165000,-87000 | Specify next point or [Undo] <Enter to finish, 2 segments> [Undo]: U | Undid: point 3 of the pipe route. | Specify next point <Enter to finish, 1 segment>: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "text": "record $u_cd \"FULL what U printed after the placed pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CD | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U printed after the placed pipe = Command: | Command: U | CD | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 12,
+          "text": "record $py \"pipe box lower-left y (expected about -85000 minus half the pipe width)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-85112.5",
+          "evidence": "RECORDED, not judged: pipe box lower-left y (expected about -85000 minus half the pipe width) = -85112.5"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 74 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 55237 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-28 10:14:04",
+      "session_id": "RUN-20261028-1012-C3.0.83-n28c4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no N18_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

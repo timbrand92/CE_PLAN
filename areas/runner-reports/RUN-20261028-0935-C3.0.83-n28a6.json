@@ -1,0 +1,170 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-0935-C3.0.83-n28a6",
+    "started": "2026-10-28 09:35:29",
+    "finished": "2026-10-28 09:41:33",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "",
+    "pack_sha256": "23A933ABFBB6FB39CE28D90AD835E04265E50ABE823CB7FF12ACD3EF9604ED91",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 23A933ABFBB6FB39CE28D90AD835E04265E50ABE823CB7FF12ACD3EF9604ED91; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 09:35 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 2,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-0935-C3.0.83-n28a6-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 09:41:09",
+      "finished": "2026-10-28 09:41:33",
+      "result": "BLOCKED",
+      "blocked": null,
+      "error": "the watchdog did not start within 20 s",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": null,
+      "copy": null,
+      "cases": [
+        "N20",
+        "N20_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "N20",
+      "proves_bugs": "",
+      "title": "A 2 m pipe gets its label on a leader: CE asks to snap the callout arrow to the pipe, places exactly one multileader, and draws no plain label along the pipe",
+      "kind": "deterministic",
+      "order": 200,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-80000 to 152000,-80000 with inverts 18.000 / 17.990 and Start Pipe: CE asks 'Snap callout arrow to pipe:'; a click on the pipe at 151000,-80000 and a click for the text at 151000,-78500 place the label; the CD run then offers the next pipe and Esc ends it. The drawing gains exactly one pipe, exactly one multileader, and no plain text containing ' DIA. '; 'Pipe text callout cancelled.' is never printed.",
+      "why_not_unit": "The fit test uses the real text width and the drawn length, and the leader is placed by live prompts in the drawing.",
+      "not_automated": [
+        "The leader's arrow point lying on the pipe (card assertion 2) and the leader's look are a Codex look; the arrow point is not readable by the robot.",
+        "The leader's own wording (size, material, grade) is RECORDED only: the robot has never read a multileader's text."
+      ],
+      "file_sha256": "BFE535DC7B9571E0AFC6F0815181D6438FFBBB9B8135D6BCC964B09A2C0556B0",
+      "plan_item": "UX-CPLAN-24 short-pipe label on a leader (daily card D11)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261028-0935-C3.0.83-n28a6-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "N20_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N20: a 20 m pipe whose label fits along it, so no multileader is drawn (must FAIL)",
+      "kind": "deterministic",
+      "order": 201,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N20",
+      "expected": "This variant is wrong on purpose: the pipe is long enough for its label, so there is no leader and the check 'count $leaders = 1' fails.",
+      "why_not_unit": "It exists only to prove N20's leader check can go red.",
+      "not_automated": [],
+      "file_sha256": "8BA604AEC3DA203825024ECE11D8F93058C7F86BEA91BA0F854B8D60DEE65301",
+      "plan_item": "red-before-green proof for N20 (UX-CPLAN-24, daily card D11)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261028-0935-C3.0.83-n28a6-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}
