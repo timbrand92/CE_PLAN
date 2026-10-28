@@ -16865,18 +16865,18 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 ---
 
-## BUG-1230 — CD and CDEDIT plan preview does not show what the pipe will become after a change (old and new labels pile up; label says 1 IN 200 while the box says 150)
+## BUG-1230 — CD and CDEDIT plan preview does not show what the pipe will become after you change something
 
-**Command / Area:** CDEDIT (Edit Pipe window) and CD (New Pipe window), "Plan preview", Civil 3.0.85 (Tim's PC, by hand, 29 Oct 2026). WRONG ANSWER (preview), severity to confirm.
+**Command / Area:** CD (New Pipe window) and CDEDIT (Edit Pipe window), "Plan preview", Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026). WRONG ANSWER (the preview), severity to confirm. Wording agreed with Tim 29 Oct 2026.
 
-**Symptom:** In Edit Pipe the banner reads "Preview - changes not saved - Custom grade", the grade box was changed to 1 in 150, known upstream 19.45, downstream still 19.40. The preview pipe label still reads "100 DIA. UPVC PIPE AT 1 IN 200", so it shows neither the 150 typed nor a new level. The old gold level captions (P10 IL 19.45, P9 IL 19.40) sit on top of the new red IL 19.45 / IL 19.40 labels so both are hard to read, and a stray red mark sits next to the upstream label. Tim: "when you modify something with the existing preview, how do you know what it will become, it looks wrong does it not?". Not verified in code; read from the screenshot only.
+**Symptom:** You change the grade, a level or "I know one end". The preview keeps the old pipe label (for example "AT 1 IN 200" while the grade box says 150), the downstream level does not move (stays 19.40 where 1 in 150 gives about 19.38 over 10 m), the old gold level captions (P10 IL 19.45, P9 IL 19.40) stay underneath the new red ones so both are hard to read, and a stray red mark sits by the upstream label. Tim: "when you modify something with the existing preview, how do you know what it will become, it looks wrong does it not?". Read from Tim's screenshot 2 only; not yet checked in the code.
 
-**Expected behaviour:** After any change in the window the preview shows the pipe as it will be drawn: the new label text, the new calculated level, the new IL labels, with the old ones not left underneath. Where the window and the preview disagree (150 versus 200) the preview says which will be saved.
+**Expected behaviour:** The preview always shows the pipe as it will be drawn: the new label, the new levels, the new level captions, with nothing old left underneath. Where the window and the preview disagree, it says which one will be saved.
 
-**Steps to confirm in AutoCAD:** (1) Open Edit Pipe on a pipe at 19.45 / 19.40 labelled 1 IN 200. (2) Set my own, type 1 in 150, "I know one end", upstream known. (3) Check the downstream level and the preview label change to the 150 result (about 19.38 over 10 m) and that no old caption sits under the new one. Right = preview label, levels and the numbers in the window all agree.
+**Scope (Tim, 29 Oct 2026):** "we need to look into this entire fucntionality more overall before formally putting it in, how does it work in all situations and how it looks and feels for end user". Not fixed on its own: it is reviewed with the grade and level working and the two-controls problem (decisions/2026-10-29_TIM_PLANNING_CHANGES.md PC-02 and PC-03), covering every situation (new pipe, edit pipe, upstream or downstream known, set my own, standard, flat, levels already present) and how it feels to a first-time user. Tim: "your understanding is perfect lets get this as ready to go whenever possible" = the review and card are to be made ready as soon as possible (intake chat's reading of that sentence; not a go-ahead to change code).
 
-**Reference:** Tim's screenshot 2 (29 Oct 2026, desk chat). Related: BUG-582 (calculated free-end level Unknown in the editor preview), BUG-1229, BUG-199.
+**Steps to confirm in AutoCAD:** (1) Open Edit Pipe on a pipe at 19.45 / 19.40 labelled 1 IN 200. (2) Choose Set my own, type 1 in 150, choose "I know one end", upstream known. (3) Right = the preview label, the downstream level and the captions all change to the 150 result at once, no old caption left underneath, and the window and preview numbers agree. Repeat for CD (New Pipe) and for downstream known.
 
-**Tim 29 Oct (later):** "with bug 1230 - we need to look into this entire fucntionality more overall before formally putting it in, how does it work in all situations and how it looks and feels for end user". So this entry is an OBSERVATION kept as evidence, not a formal bug to fix on its own: do not fix piecemeal. The whole CD and CDEDIT preview and grade/level working is to be reviewed first (see decisions/2026-10-29_TIM_PLANNING_CHANGES.md PC-03).
+**Reference:** Tim's screenshot 2 (29 Oct 2026, desk chat). Related: BUG-1229 (same window, grade box and level), BUG-582 (calculated free-end level Unknown in the editor preview), BUG-199.
 
-**Status:** OPEN - ON HOLD (Tim 29 Oct: review the whole functionality before it is formally a bug). Never FIXED until confirmed in AutoCAD.
+**Status:** OPEN - ON HOLD for the whole-functionality review (Tim 29 Oct). Never FIXED until Tim or Codex has confirmed it in AutoCAD.

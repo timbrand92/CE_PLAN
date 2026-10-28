@@ -27,3 +27,7 @@ Process: this is a user-facing workflow change, so it goes through the command a
 Tim: "with bug 1230 - we need to look into this entire fucntionality more overall before formally putting it in, how does it work in all situations and how it looks and feels for end user"
 
 Meaning: BUG-1230 is held (kept as evidence, not fixed on its own). Wanted: one review of how the plan preview, the grade box, the "I know one end" choice and the worked-out levels behave in every situation (new pipe, edit pipe, upstream or downstream known, custom grade, standard grade, flat, existing levels) and how it looks and feels, together with PC-02. Not a fix yet. Interpretation (guess): this becomes one workflow card for the review gate, with BUG-1229 and BUG-1230 attached.
+
+## PC-03 update (Tim, 29 Oct, later)
+
+Tim on the proposed BUG-1230 wording: "yoru understanding is perfect lets get this as ready to go whenever possible". BUG-1230 now carries the agreed wording. Interpretation (guess): get the whole-functionality review and its workflow card (PC-02 + PC-03, with BUG-1229 and BUG-1230) ready for the review gate as soon as possible, so it can be built when approved. No code change is authorised by this line. Desk chat to schedule the review with Tim.
