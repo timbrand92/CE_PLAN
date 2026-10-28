@@ -59,3 +59,15 @@ Meaning (Tim's words, little to interpret):
 4. Learning: CE should learn from past RFIs what each council keeps asking, so the next job's checklist already contains it. This is the same learning ruled on 25 Sep as UX-LEARN-01 and in UX-RFI (what councils keep asking feeds council rules and checklists); it is a Tim-confirmed use of it, not a new rule. Existing safeguards still apply: every suggestion shows why, nothing changes an engineering rule silently, the engineer promotes a learned default.
 5. Privacy (DATA-01): the RFI letters name clients and addresses. They are read for evidence only when Tim names the folder; the anonymised lesson goes to the repo, the letters stay local-only.
 Open question for Tim: where do the other councils' RFIs live (job folders, an email folder, one drawer)? Not guessed.
+
+## PC-04 update 2 (Tim, 29 Oct) — where the RFIs live (read from the drive, counts only)
+
+Tim: "check in job folders". The intake chat looked at the office project folders (read-only, counted files by folder name only; no job names, client names or addresses read or recorded). Office folder: C:\Users\TimothyBrand\Creative Engineering\Creative Engineering - Projects, years 2020 to 2026, 1,979 job folders.
+
+1. **Council letters sit in the job's Civil folder, in folders with no fixed name.** Counted across all years (jobs that have files in the folder / PDF files): "Council Feedback" 71 jobs / 58 PDFs; "From Council" 47 jobs / 55 PDFs (plus one job with the misspelling "From Coucil", 3 PDFs); "Council Coordination" 6 jobs / 9 PDFs; one job has a folder named by date and "Council RFI". So roughly 125 jobs have council letters in a council-named folder. Not every file in them is an RFI (they also hold approvals and other letters): not yet checked.
+2. **"LPD & OSD" (282 jobs, 418 PDFs)** holds legal point of discharge and on-site detention papers, some of them council replies; it is not an RFI folder as such.
+3. **The job's own "RFI's" folder is NOT the council drainage RFIs.** It exists in about 1,900 jobs but has files in only about 130 (2020 to 2026), and is the general queries folder. Its contents were not opened.
+4. **Letters are PDFs with a 7-digit file name** (the three Kingston samples are 4067823, 4095355, 4095421): the file name carries no council or job, so CE must read the letter text (council name, application number DCA-year/number, address) to place it.
+5. A 2024 and a 2025 file search in Civil (depth 3) found only 45 files whose name says RFI, request for information or council comment, so most councils' letters are NOT named RFI. CE must recognise a council RFI by its content and folder, not by its file name.
+
+Interpretation (guess, not a ruling): the learning pool is the Civil council folders above (about 125 jobs), read one anonymised lesson at a time; Tim names the folders or years before any is opened (DATA-01). Nothing was copied or opened beyond counting.
