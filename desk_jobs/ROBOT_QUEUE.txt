@@ -13,3 +13,4 @@ C:\CE_PLAN\desk_jobs\tester_run73_bug1225_proof_and_regrade_3084.txt
 C:\CE_PLAN\desk_jobs\tester_run74_validate_b3_cases.txt
 C:\CE_PLAN\desk_jobs\tester_run75_b6_fixups.txt
 C:\CE_PLAN\desk_jobs\tester_run76_c75_fixes_and_regrade.txt
+C:\CE_PLAN\desk_jobs\tester_run75b_b6_fixups_retry.txt
