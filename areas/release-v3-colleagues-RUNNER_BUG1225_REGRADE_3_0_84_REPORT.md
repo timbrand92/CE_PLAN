@@ -2,7 +2,7 @@
 
 Job "TEST ROBOT: PROVE THE BUG-1225 FIX, THEN RE-GRADE EVERY ACCEPTED CASE ON CIVIL 3.0.84" (desk plan/03, Team, Sonnet). Real AutoCAD on test copies only, Tim away, `CE_RUNNER_TIM_AWAY=1`, one session at a time, 3 minutes with AutoCAD closed between sessions. Build read live from the installed DLLs at the start and in every run header: **Civil 3.0.84+94f521cc, Manager 1.1.84+94f521cc, Structural 1.0.125+204dfad2** (same in every run so far). No review.txt written, no runner, driver, ledger-by-hand, DESK_LOG, BUG_CARPARK or CD_RecentValues edit.
 
-**INTERIM VERSION: Part 1 (the proof) is complete. Part 2 (the regrade) is in progress; its section below is filled as it finishes.**
+**FINAL VERSION (Wed 28 Oct 2026, finished 23:09 Melbourne PC clock). Part 1 (the proof) and Part 2 (the regrade) are both complete. The build was Civil 3.0.84+94f521cc in every run header and again at the end; no C-75 install happened.**
 
 ## ANSWER FIRST
 
@@ -13,7 +13,10 @@ Job "TEST ROBOT: PROVE THE BUG-1225 FIX, THEN RE-GRADE EVERY ACCEPTED CASE ON CI
 3. **The control proves it is the fix:** with the new switch turned OFF (set through the settings guard, restored by file hash afterwards), the refusal came back in 2 of 2 sessions: "The source landing could not be refreshed. Nothing will be placed here." So the case does catch the bug, and the switch does turn the fix on and off.
 4. **Right looks like this:** "Downpipe placed. Tag: DP1." and "Overflow placed. Tag: OF1." both times, and the CE log shows one new line in the reopened drawing: "[BUG-1225] ... was opened again after its drawing closed; CE loads this drawing's own record."
 5. **Still not proven:** a drafter's own File > Close then File > Open by hand (the robot reopens a fresh copy of the file through its own driver); a plain pit or CD pipe as the first placement was not tried. Tim or Codex should do the 4 hand steps once before BUG-1225 is called fixed. It is NOT marked fixed.
-6. **The regrade (Part 2) is still running** when this interim version was written. Its numbers follow in the final version of this file.
+6. **No regression from the BUG-1225 fix (C-74).** All 49 counted accepted cases passed in two separate AutoCAD starts on Civil 3.0.84: 49 of 49, 98 passing case-runs, 0 failures, 0 flakes. Every accepted review.txt still names the current hash of its case file (none differ, none skipped).
+7. **Three known-fault cases behaved as expected, reported separately and not counted:** R08 (REDO after a pick: "Nothing to redo", failed twice), R09 (double-click opens the Enhanced Attribute Editor, not Edit source: failed twice), R22 (CDCHECK still prints a raw handle and a CE-CIV id: failed twice). Same faults as before; nothing new.
+8. **One thing that cost time, not results:** Codex held the AutoCAD lock for 60 minutes and one of my sessions (the N04, N05, N06, N12 group) gave up as BLOCKED with nothing run. I re-ran it later and it passed. My first chain was also cut off by its 90-minute background limit between two sessions (nothing was running); I restarted the rest as a new chain. No AutoCAD, background helper or lock of mine is left.
+9. **Nothing for you to do.** Built, installed and robot-tested only. Nobody has done the 4 BUG-1225 steps by hand, and BUG-1225 is NOT marked fixed.
 
 ---
 
@@ -32,6 +35,21 @@ Job "TEST ROBOT: PROVE THE BUG-1225 FIX, THEN RE-GRADE EVERY ACCEPTED CASE ON CI
 4. **CE log note:** the live CE log rotated at 14:55 (the first two sessions' reopen lines are in `CE_CVL_SUITE.log.1`); every session's line was read from the log files.
 5. **Not tested (RULES 5.9):** a hand close and reopen by a person; the second suspect named in the fix report (identities missing from stored rows with the save skipped); nothing was looked at on screen.
 
-## Part 2: the regrade on 3.0.84 (in progress)
+## Part 2: the regrade on 3.0.84
 
-(to be filled in)
+1. **Which cases:** every `*.review.txt` in `C:\Lisp Files\_ACAD_DRIVER\cases` whose verdict line says CLAUDE-ACCEPTED-READY and whose CASE_SHA256_REVIEWED equals the current SHA-256 of the case file: 50 files, all hashes equal (none differ). Not eligible (not accepted, so not run as counted): R06, R12, R18 (they ask for a Codex look or a stronger assertion). R08 is on the accepted list but is a known real-fault case, so it is an extra. Counted: 49 = N01 to N09, N11, N12, N15 to N22, R01, R02, R02b, R03, R04, R05, R07, R10, R11, R13, R14, R14h_both_200, R14h_dstd_200, R14h_pipekey_200, R15, R16, R17, R19, R19b, R20, R21, R23, R26, R28, R31, R35, R37, R38, R39, R39b. (R24 not run, as told.)
+2. **Method:** the runner's `run-pack <folder> -Only "<cases>" -NoRerun -Tag <tag>`, one AutoCAD start per group, each group run twice (pass A tags `a...`, pass B tags `b...`), 3-minute gap with AutoCAD closed, `CE_RUNNER_TIM_AWAY=1`, settings guard and restore by hash done by the runner. Cases with different SETTING lines cannot share a start, so the groups were: X1 (N03, N08, N09, N11: N03 first), X2 (N04, N05, N06, N12: N04 first), X3 (N01, N02, N15, N16, N17), X4 (N19 to N22), X5 (R01, R02, R02b, R03, R04), X6 (R11, R13, R14, R15, R17), X7 (R19, R19b, R20, R21, R23), X8 (R26, R28, R31, R35, R37), X9 (R38, R39, R39b, plus R22 extra), G2 (N07, N18), G4 (R05, R07, R08 extra, R10), then single-case starts G1 R14h_both_200, G5 R16, G6 R14h_dstd_200, G7 R14h_pipekey_200, and R09 (extra) on its own. Every DP or OF case (N03, N04) was the first case of its start.
+3. **Result: 49 of 49 counted cases passed in two separate sessions** (pass A and pass B). No FAIL, BLOCKED or FLAKY on a counted case in any run that ran. So no regression from C-74 to report, and no third run was needed.
+4. **Run ids, pass A (in order):** aX1 RUN-20261028-1531, aX2 -1543, aX3 -1555, aX4 -1607, aX5 -1621, aX6 -1643, aX7 -1658, aX8 -1708, aX9 -1717, aG2 -1726, aG4 -1733, aR09 -1744, aG1 -1755, aG5 -1801, aG6 -1808, aG7 -1814 (all `RUN-20261028-<hhmm>-C3.0.84-<tag>`).
+5. **Run ids, pass B:** bX1 RUN-20261028-1818, bX2 -1831 (**BLOCKED, 4 cases, nothing ran: Codex held the lock the whole 60-minute wait; void and re-run**), bX3 -1934, bX2r -1950 (the re-run of the X2 group, PASS 4 of 4), bX4 -2012, bX5 -2059, bX6 -2130, bX7 -2146, bX8 -2155, bX9 -2204, bG2 -2215, bG4 -2223, bR09 -2234, bG1 -2245, bG5 -2252, bG6 -2259, bG7 -2305. Full reports for every run are in `C:\CE_PLAN\areas\runner-reports\<run id>.md`; the runner wrote the ledger rows (not edited by hand).
+6. **Extras, reported separately and never counted (both sessions, same result):**
+   1. **R08 (BUG-861):** FAIL x2 (aG4, bG4): checks 5 and 6: REDO printed "Nothing to redo" instead of "Everything has been redone". Known fault, unchanged by C-74 (the C-68 deferral switch did not fix it on the robot's mouse pick, as on 3.0.78 to 3.0.81).
+   2. **R09 (BUG-859):** FAIL x2 (aR09, bR09): the double-click on the DP1 circle opened "Enhanced Attribute Editor", not the CE Edit source window.
+   3. **R22 (BUG-372):** FAIL x2 (aX9, bX9): the command line holds "handle 1197BB" in a fall-arrow line and the raw "CE-CIV-PIPE-6A33BA73-..." id in a "flows to WT4: Unresolved" line.
+7. **Build and cleanliness:** every run header and the end-of-run progress lines read Civil 3.0.84+94f521cc, Manager 1.1.84+94f521cc, Structural 1.0.125+204dfad2; no install happened during the job. At the end: no acad.exe, no lock file, `CD_Settings.json` hash ACD64E79A33B (equal to the start; it holds no `reopenedDrawingLoadsItsOwnRecord` key, so the switch stays at its default ON), 0 settings fingerprint differences in the runs that set a switch.
+8. **Files I made (all mine, none edited that were not):** `C:\Lisp Files\_ACAD_DRIVER\cases\controls\C13a_dp_before_reopen_switch_off.case.txt` and `C13_dp_after_reopen_switch_off_refused.case.txt` (the switch-OFF control). Scratch (chain scripts, run logs, tally): `C:\ce-fx\b1225_regrade\`. No review.txt written; no runner, driver, ledger-by-hand, DESK_LOG, BUG_CARPARK or CD_RecentValues edit.
+9. **Not tested (RULES 5.9):** nothing was looked at on a screen; a drafter's own File > Close and File > Open by hand; R06, R12 and R18 (not accepted); R24; the window and picture cases that need a Codex look; whether the structural and Manager windows are fine (only Civil cases ran). These are Claude-accepted-style results on Civil 3.0.84 only, not Tim's word.
+
+## Summary (under 100 words)
+
+BUG-1225 fix works in the robot's AutoCAD: 6 of 6 sessions on Civil 3.0.84 placed DP and OF both times, each showing the new "was opened again" log line; with the switch OFF the refusal returned in 2 of 2. All 49 counted accepted cases passed in two separate sessions: no regression from C-74. R08, R09, R22 failed as the known faults. One group was BLOCKED by Codex's lock for 60 minutes and re-run. Not tried by hand; BUG-1225 stays unmarked.
