@@ -16842,6 +16842,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Command / Area:** DP (downpipe) takes a long time to place, Civil 3.0.85 (Tim, 29 Oct 2026, by hand on his own PC: 'the dp command takes a long time'). The robot measured about 29 to 32 seconds per DP placement on 3.0.84 (N13 run 28 Oct: 'DP completed 32406 ms' then '29090 ms'). Right result: a downpipe places in about a second or two like PIT and CD. To investigate: where the time goes (landing index capture, source evidence, record refresh); the same may apply to OF and the other sources. Tim's PC at the time was also running builds in the background.
 
+**Also reported 29 Oct 2026 (hand check H1, Civil 3.0.85):** Tim: "pit command takes a while" (PIT, from the click to the New Pit window and again for each next pit). Same family; profile PIT together with DP. Not timed yet.
+
 **Status:** OPEN (reported by Tim 29 Oct 2026; not yet profiled). Never FIXED until Tim confirms in AutoCAD.
 
 
@@ -16880,3 +16882,20 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Reference:** Tim's screenshot 2 (29 Oct 2026, desk chat). Related: BUG-1229 (same window, grade box and level), BUG-582 (calculated free-end level Unknown in the editor preview), BUG-199.
 
 **Status:** OPEN - ON HOLD for the whole-functionality review (Tim 29 Oct). Never FIXED until Tim or Codex has confirmed it in AutoCAD.
+
+
+---
+
+## BUG-1231 — EXPLODE of a pit prints a run of repeated "Pit schedule cell for C1 ... not updated" lines about a different item before its one useful sentence
+
+**Command / Area:** EXPLODE on a CE pit (P11, with one pipe) on a drawing that already has a drawn Pit Schedule, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H4). NOISE / WORDING, severity low; the EXPLODE itself worked.
+
+**Symptom:** Tim exploded P11. The command line printed, in order: "1 found", then seven lines "[CE] Pit schedule cell for C1 (outlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record." and the same for "(inlet from)" and "(inlet pipe size)" (the pair repeated three times), then "[CE] A pit schedule cell whose pit or pipe no longer matches was left as drawn. Run Update existing schedule in PITSCHEDULE to bring the schedule up to date.", and only last the useful line "P11 is now plain linework and has left the schedule; 1 pipe now has an end not connected yet. U restores it." The lines name C1, not P11, so a drafter reads them as a fault in C1.
+
+**Expected behaviour:** One short, plain line per cause, and the line that answers "what happened to my pit" first or alone. If a drawn schedule cell is left as drawn, one line saying how many cells and which item is enough (or only the last 'Run Update existing schedule' line). Not yet known: why C1's cells no longer matched (the drawing may already have been out of step before the EXPLODE), whether the same lines print on EXPLODE of a pit when no drawn schedule exists, and whether they print on a clean drawing.
+
+**Steps to confirm in AutoCAD:** (1) On a drawing with a drawn Pit Schedule (PITSCHEDULE > put it on the drawing) that includes a pit C1 whose cells may be stale, EXPLODE another pit that has a pipe. (2) Read the command line. Right = one clear sentence about the exploded pit, with at most one short line about schedule cells left as drawn. Wrong = a run of repeated lines about another pit.
+
+**Reference:** Tim's pasted command line, 29 Oct 2026, hand check H4 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md. Related: card D16 and robot cases N02 and N22 (they check the P3 / P8 sentence, not the lines before it).
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
