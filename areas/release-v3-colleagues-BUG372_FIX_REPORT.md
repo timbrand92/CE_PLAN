@@ -1,4 +1,4 @@
-# BUG-372 fix report: CDCHECK prints a raw handle and CE's internal id on the command line (Thu 29 Oct 2026, about 10:20 Melbourne)
+# BUG-372 fix report: CDCHECK prints a raw handle and CE's internal id on the command line (Thu 29 Oct 2026, about 10:00 Melbourne)
 
 ## ANSWER FIRST
 
