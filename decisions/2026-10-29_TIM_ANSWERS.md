@@ -53,3 +53,21 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "yes".
    2. Interpretation: keep importing as millimetres and print one soft line "This drawing has no units set; CE read it as millimetres." A note, never a block.
    3. Desk must: build it as a note only (R-27, no hard block).
+
+## Batch 2 follow-up (about 10:10 Melbourne)
+
+11. **Team login (QUESTIONS item 17): done.**
+   1. Tim's words: "login successful" (then "try look again").
+   2. Verified, not assumed: at 10:02 the Team credentials file was rewritten and `claude auth status` with CLAUDE_CONFIG_DIR=C:\Users\TimothyBrand\.claude-team read loggedIn true, orgName Creative Engineering, subscriptionType team.
+   3. Desk must: lift desk_jobs\HOLD_ROBOT.flag and go back to Team for headless jobs.
+   4. **New request from Tim (not a ruling): "can we set this up so it automatically always opens automatically without me everytime the compouter restarts".** Interpretation (GUESS): after a restart the desk's Team jobs and lanes should start again and stay logged in without Tim doing anything. The login itself is saved on disk and survives a restart; the 29 Oct expiry was the sign-in running out, cause not known. Desk must: propose (not build; no new script without Tim's approval, rule 10.5) how the lanes restart after a reboot, and say what happens when the Team sign-in expires again. Ask Tim to approve before any startup task is created.
+
+12. **#1788 drainPluginOutbox receiver (QUESTIONS item 13): the receiver is Tim.**
+   1. Tim's words: "everything goes to me as the coordinator/manager".
+   2. Interpretation (GUESS on the fields): every report from colleagues' PCs is sent to Tim, and Tim alone reads them. Not confirmed: whether "everything" also means client names and drawing names, and whether the office IT folder can be opened by anyone besides Tim. Rule 11 (private data, client-identifying evidence is local-only) and the OneDrive syncing warning (11.7) still apply, so those two points are put back to Tim in the next batch.
+   3. Desk must: keep the switch OFF and change no code until Tim answers the field question and the folder question.
+
+13. **BUG-1090 computations sheet line (QUESTIONS item 9): asked again.**
+   1. Tim's words: "do we do that in the non - ce plugin comps sheets? why should we add ?"
+   2. Answer given to him: CE_PLAN does not show what other plugins' sheets print. Civil 3D calculates a hydraulic grade line (CE_VS_CIVIL3D_DRAINAGE_COMPARE_2026-10-10.md item 1), so its sheets have one; CE has none. Frankston, Banyule and Whitehorse ask for the HGL on the long section.
+   3. Desk must: leave PR #1771 out until Tim says yes or no. Not a decision.
