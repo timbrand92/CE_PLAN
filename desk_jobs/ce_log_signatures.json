@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "written": "2026-10-29",
+  "about": "What each everyday CE tool leaves in the CE logs on Tim's PC. ran = CE logged that the command ran and how it ended. did = CE logged a sentence that shows what it did. weak = indirect evidence only. silent = no, partly or yes: does the tool leave NO proof of its result in the log. Patterns are .NET regular expressions, matched against one log line. Written from the real logs (28 to 29 Oct 2026) and from the robot cases in C:\\Lisp Files\\_ACAD_DRIVER\\cases. A log line proves the command ran and CE printed that sentence. It does not prove the drawing looks right.",
+  "logs": [
+    "%APPDATA%\\CE_CVL_SUITE\\logs\\CE_CVL_SUITE.log*",
+    "%APPDATA%\\CE_SUITE_MANAGER\\logs\\ce_manager_structured_*.log"
+  ],
+  "robotSessionNames": "^(CLDV?\\d|DRV\\d)",
+  "blankSessionNames": "^Drawing\\d",
+  "knownNonTimWindows": [
+    { "from": "2026-10-28 18:30", "to": "2026-10-28 21:05", "who": "Codex looks G1 and G2 (reports CODEX_VERIFY_G1 and G2, 28 Oct)" }
+  ],
+  "ignoreLines": [
+    "SECURITY: Block file resolved",
+    "CE could not find this drawing's job folder",
+    "Diagnostics logging",
+    "JobTime weekly export"
+  ],
+  "failPatterns": [
+    { "tool": "any", "pattern": "Command outcome: \\S+ (refused|failed)" },
+    { "tool": "any", "pattern": "\\[(ERR|ERROR|FATAL)\\]" },
+    { "tool": "any", "pattern": "could not be " },
+    { "tool": "any", "pattern": "Nothing will be placed" },
+    { "tool": "any", "pattern": "edit refused" },
+    { "tool": "any", "pattern": "[Uu]nhandled|[Ee]xception|[Ss]tack ?trace" },
+    { "tool": "any", "pattern": "The pick was refused" },
+    { "tool": "DP / OF / CDRG (D07, D08, BUG-1225)", "pattern": "Final landing refresh refused" },
+    { "tool": "Schedule (D21, D22)", "pattern": "Pit schedule refresh after a command left" },
+    { "tool": "CE never saves (D18)", "pattern": "the project record was the drawing's only unsaved change" },
+    { "tool": "Edit Pipe (D17, cascade)", "pattern": "exact pipe-text roles unavailable" },
+    { "tool": "any", "pattern": "\\[WARN\\] (?!SECURITY)" }
+  ],
+  "tools": [
+    {
+      "id": "D01", "name": "PIT and CD keep placing until Esc", "silent": "partly",
+      "silentWhat": "The repeat prompt and the Esc sentence are command-line only. The log shows each command finished, not that it offered the next one.",
+      "ran": ["Command outcome: (PIT|CD) (completed|cancelled)"],
+      "did": ["Pit added: P\\d+", "Pipe added: \\S+"]
+    },
+    {
+      "id": "D02", "name": "Pit catches a pipe end within outline + 100 mm", "silent": "yes",
+      "silentWhat": "The sentence 'Pipe end moved to the inside wall of ...' is command-line only. Only the endpoint review lines hint at it.",
+      "ran": ["Command outcome: (PIT|CD) (completed|cancelled)"],
+      "weak": ["Pipe endpoint review recorded: \\S+ (First|Last) = (Connected|Unresolved)"]
+    },
+    {
+      "id": "D03", "name": "New pipe end joins the only matching pit", "silent": "partly",
+      "silentWhat": "The flow line 'Flow: P8 -> Open end' is command-line only. The log shows Connected or Unresolved for each end.",
+      "ran": ["Command outcome: CD (completed|cancelled)"],
+      "did": ["Pipe endpoints updated: \\S+ from=\\S+ to=P\\d+"],
+      "weak": ["Pipe endpoint review recorded: \\S+ (First|Last) = Connected"]
+    },
+    {
+      "id": "D04", "name": "Esc at CD's third point cancels cleanly", "silent": "partly",
+      "silentWhat": "Only 'Command outcome: CD cancelled' proves a cancelled CD. The line 'CD command cancelled by user' also prints when Esc simply ends CD after a pipe was placed (outcome then says completed), so it is a weak hint only. The empty drawing and no pipe window are not logged.",
+      "ran": ["Command outcome: CD cancelled"],
+      "weak": ["CD command cancelled (during draw-first point collection|by user)"]
+    },
+    {
+      "id": "D05", "name": "Recent diameter/material/levels in New Pipe window", "silent": "yes",
+      "silentWhat": "Nothing is logged for the window's fields. The file CD_RecentValues.json changes when values are remembered (file time shown below).",
+      "ran": ["Command outcome: CD (completed|cancelled)"],
+      "files": [{ "dir": "%APPDATA%\\TIM_CE_CADTOOLS", "filter": "CD_RecentValues.json", "label": "recent-values file saved" }]
+    },
+    {
+      "id": "D06", "name": "Hide grade on every pipe type", "silent": "yes",
+      "silentWhat": "A window setting. Nothing is logged.",
+      "ran": ["Command outcome: CD (completed|cancelled)"]
+    },
+    {
+      "id": "D07", "name": "DP and CDRG place like pits, before pipes", "silent": "partly",
+      "silentWhat": "'Downpipe placed. Tag: DP1' is command-line only. The log shows the command ended and any source refusal.",
+      "ran": ["Command outcome: (DP|CDRG) (completed|cancelled)"],
+      "did": ["Command outcome: (DP|CDRG) completed"],
+      "weak": ["\\[Source\\] The source name '\\w+' is on \\d+ blocks"]
+    },
+    {
+      "id": "D08", "name": "OF and FO share one symbol, different tag", "silent": "partly",
+      "silentWhat": "'Overflow placed. Tag: OF1.' is command-line only.",
+      "ran": ["Command outcome: (OF|FO) (completed|cancelled)"],
+      "did": ["Command outcome: (OF|FO) completed"]
+    },
+    {
+      "id": "D09", "name": "Pit label shows number and cover level", "silent": "partly",
+      "silentWhat": "The label text (P8, CL 19.000) is not logged. The pit being added and its cover level being set are.",
+      "ran": ["Command outcome: PIT (completed|cancelled)"],
+      "did": ["Pit added: P\\d+", "Pit cover updated: P\\d+ ->"]
+    },
+    {
+      "id": "D10", "name": "Pipe label mid-pipe ('100 DIA. UPVC PIPE AT 1 IN 100')", "silent": "yes",
+      "silentWhat": "Label text and position are not logged.",
+      "ran": ["Command outcome: CD (completed|cancelled)"],
+      "weak": ["Pipe added: \\S+"]
+    },
+    {
+      "id": "D11", "name": "Short pipe label goes out on a leader", "silent": "yes",
+      "silentWhat": "A leader is a picture item. Nothing is logged.",
+      "ran": ["Command outcome: CD (completed|cancelled)"]
+    },
+    {
+      "id": "D12", "name": "One IL text per pipe end at the pit", "silent": "yes",
+      "silentWhat": "The IL texts are not logged.",
+      "ran": ["Command outcome: CD (completed|cancelled)"],
+      "weak": ["Pipe added: \\S+"]
+    },
+    {
+      "id": "D13", "name": "Hand-placed label stays after an edit", "silent": "partly",
+      "silentWhat": "Only Tidy labels says it left a label alone, and only with the switch ON (Tim's file has it OFF).",
+      "ran": ["Command outcome: CDTIDYLABELS (completed|cancelled)"],
+      "did": ["was placed by hand, so it stays"]
+    },
+    {
+      "id": "D14", "name": "ERASE a pit: pipes stay, one U restores", "silent": "no",
+      "silentWhat": "The U that restores it leaves only the generic Undo lines.",
+      "did": ["\\[DeletionReactor\\] The pit was erased and the schedule is updated", "Pit removed by handle: \\S+"]
+    },
+    {
+      "id": "D15", "name": "COPY a pit: real CE copy, own number", "silent": "partly",
+      "silentWhat": "'1 pit copied and numbered as new' is command-line only. The label text is not logged.",
+      "did": ["\\[CloneReconcile\\] command=COPY", "was copied from pit \\S+ before CE re-mapped copies"]
+    },
+    {
+      "id": "D16", "name": "EXPLODE a pit: allowed, with a note", "silent": "no",
+      "did": ["\\[UX-EDIT-04\\] P\\d+ is now plain linework and has left the schedule"]
+    },
+    {
+      "id": "D17", "name": "CDEDIT keeps the selection", "silent": "partly",
+      "silentWhat": "That the pipes are still selected afterwards is not logged.",
+      "ran": ["Command outcome: CDEDIT (completed|cancelled)"],
+      "did": ["Command outcome: CDEDIT completed"]
+    },
+    {
+      "id": "D18", "name": "CE never saves the drawing", "silent": "yes",
+      "silentWhat": "No log line says 'file not saved'. 'Project data saved to DWG successfully' is CE writing its record INSIDE the open drawing, not saving the file: do not read it as a save. Only the file date on disk proves this.",
+      "ran": ["Command outcome: (CDREBUILD|CDSYNC) completed"]
+    },
+    {
+      "id": "D19", "name": "Every CE Undo step has a plain name", "silent": "partly",
+      "silentWhat": "The Undo echo ('U PIT') and 'Undid: ...' are command-line only. The log shows that an Undo or Redo happened.",
+      "weak": ["Project data reloaded after Undo/Redo", "\\[REDO\\] write after (U|REDO) finished"]
+    },
+    {
+      "id": "D20", "name": "CDRENUMBER: outlet first, downhill to uphill", "silent": "partly",
+      "silentWhat": "The list, the Yes/No question and the Pit Schedule result are command-line or window only. Yes leaves temporary-number lines; No leaves none.",
+      "ran": ["Command outcome: CDRENUMBER (completed|cancelled)"],
+      "did": ["Pit id updated: P\\d+ -> CDRENUMBER-TEMP"]
+    },
+    {
+      "id": "D21", "name": "Pit Schedule in natural order (P1, P2 ... P10)", "silent": "partly",
+      "silentWhat": "The row order is not logged.",
+      "ran": ["Command outcome: PITSCHEDULE (completed|cancelled)"]
+    },
+    {
+      "id": "D22", "name": "Long Pit Schedule continues on the next sheet", "silent": "partly",
+      "silentWhat": "The continuation part is not logged.",
+      "ran": ["Command outcome: PITSCHEDULE (completed|cancelled)"]
+    },
+    {
+      "id": "D23", "name": "Excel export with a checking sheet", "silent": "yes",
+      "silentWhat": "The Export Excel button writes no log line. The saved .xlsx file on disk is the only trace.",
+      "ran": ["Command outcome: PITSCHEDULE (completed|cancelled)"]
+    },
+    {
+      "id": "D24", "name": "CE objects land on office layers, current layer kept", "silent": "yes",
+      "silentWhat": "A drawing look. Nothing is logged.",
+      "ran": ["Command outcome: (PIT|CD) (completed|cancelled)"]
+    },
+    {
+      "id": "D25", "name": "Existing greyed, demolished dashed (NOT BUILT)", "silent": "yes",
+      "silentWhat": "Not built, so nothing to find."
+    },
+    {
+      "id": "D26", "name": "CDSL shows the survey level as existing", "silent": "partly",
+      "silentWhat": "The level text and the 18600 refusal are command-line only.",
+      "ran": ["Command outcome: CDSL (completed|cancelled)"],
+      "did": ["Command outcome: CDSL completed"]
+    },
+    {
+      "id": "D27", "name": "CDSYNC and CDREBUILD warn before they run", "silent": "partly",
+      "silentWhat": "The warning sentence and the counts ('Pits relinked: 12') are command-line only. The log shows the command ended.",
+      "ran": ["Command outcome: (CDSYNC|CDREBUILD) (completed|cancelled)"],
+      "did": ["Command outcome: (CDSYNC|CDREBUILD) completed"]
+    },
+    {
+      "id": "D28", "name": "CDCHECKDWG ends with one summary line", "silent": "partly",
+      "silentWhat": "The one summary line is command-line only. A cdcheck report file is saved (file time shown below).",
+      "ran": ["Command outcome: CDCHECKDWG (completed|cancelled)"],
+      "files": [{ "dir": "%APPDATA%\\CE_CVL_SUITE\\logs", "filter": "cdcheck-*.txt", "label": "CDCHECKDWG report files saved" }]
+    },
+    {
+      "id": "D29", "name": "CDFEEDBACK prints one honest result line", "silent": "partly",
+      "silentWhat": "The log does not say whether Send or Cancel was pressed (not verified which word it writes for Cancel).",
+      "ran": ["Command outcome: CDFEEDBACK (completed|cancelled)"]
+    },
+    {
+      "id": "D30", "name": "Selecting a pipe or pit jumps to its ribbon tab", "silent": "yes",
+      "silentWhat": "A ribbon change. Nothing is logged."
+    },
+    {
+      "id": "REG1", "name": "PIT (daily regression)", "silent": "no",
+      "ran": ["Command outcome: PIT (completed|cancelled)"],
+      "did": ["Pit added: P\\d+"]
+    },
+    {
+      "id": "REG2", "name": "CD (daily regression)", "silent": "no",
+      "ran": ["Command outcome: CD (completed|cancelled)", "CD command started"],
+      "did": ["CD command completed successfully", "Pipe added: \\S+"]
+    },
+    {
+      "id": "REG3", "name": "Edit Pipe cascade (levels flow down the line)", "silent": "partly",
+      "silentWhat": "The 'Updated 4 pipes and 3 pits' sentence is command-line only, but the log keeps the same numbers on the CASCADE line.",
+      "ran": ["Command outcome: CDEDIT (completed|cancelled)"],
+      "did": ["CDEDIT-CASCADE: anchor=\\S+ IL=\\S+ pipes=\\d+ pits=\\d+"]
+    },
+    {
+      "id": "REG4", "name": "Quick MOVE of a pit (label and pipes follow)", "silent": "no",
+      "did": ["\\[PitMove\\] pit \\S+ moved .*pipes relinked, label and cover text followed"]
+    },
+    {
+      "id": "REG5", "name": "CDSYNC keeps the Pit Schedule", "silent": "partly",
+      "silentWhat": "That the schedule rows are unchanged is not logged.",
+      "ran": ["Command outcome: CDSYNC (completed|cancelled)"]
+    },
+    {
+      "id": "REG6", "name": "CDTWL freeboard (150 mm below the lid)", "silent": "no",
+      "ran": ["Command outcome: CDTWL (completed|cancelled)"],
+      "did": ["\\[TWL\\] Detention system", "Only \\d+ mm between the water and the lid of pit"]
+    },
+    {
+      "id": "REG7", "name": "Recover Inverts", "silent": "partly",
+      "silentWhat": "The totals (26 recovered, 24 skipped) are command-line only.",
+      "ran": ["Command outcome: CDRECOVERINVERTS (completed|cancelled)"],
+      "did": ["CDRECOVERINVERTS: pipe .* invert text written"]
+    },
+    {
+      "id": "REG8", "name": "Tidy labels names the pipe", "silent": "partly",
+      "silentWhat": "The sentence that names the pipe and the distance is command-line only; the log keeps the route marker and any 'no clear spot' line. Works only with the switch ON.",
+      "ran": ["Command outcome: CDTIDYLABELS (completed|cancelled)"],
+      "did": ["\\[TidyUp\\] route=cdtidylabels-(count|apply)", "\\[TidyUp\\] pipe P\\d+ -> .* no clear spot"]
+    },
+    {
+      "id": "NC1", "name": "Named check: CDCHECKIGNORE switch off refuses (R10)", "silent": "no",
+      "did": ["Command outcome: CDCHECKIGNORE refused"]
+    },
+    {
+      "id": "NC2", "name": "Named check: outcome line for CDCHECKCURRENT (R05)", "silent": "no",
+      "did": ["Command outcome: CDCHECKCURRENT completed"]
+    },
+    {
+      "id": "NC3", "name": "Named check: CDSURVEY wrong pick or Esc stores nothing (R26)", "silent": "partly",
+      "silentWhat": "'Nothing stored' is command-line only. The log shows cancelled.",
+      "ran": ["Command outcome: CDSURVEY (completed|cancelled)"]
+    },
+    {
+      "id": "NC4", "name": "Named check: CDPERIMETER draws its PD tag (R37, R37b)", "silent": "no",
+      "ran": ["Command outcome: CDPERIMETER (completed|cancelled)"],
+      "did": ["\\[PD\\] Registered surface drain PD\\d+", "Perimeter drain copy is PD\\d+", "PD text \\S+ followed drain"]
+    },
+    {
+      "id": "NC5", "name": "Named check: CDFW floor waste (R36)", "silent": "partly",
+      "silentWhat": "Placement sentences are command-line only.",
+      "ran": ["Command outcome: CDFW (completed|cancelled)"]
+    },
+    {
+      "id": "NC6", "name": "Named check: CDPROFILE opens the Profiles window (R28)", "silent": "partly",
+      "silentWhat": "The window itself is not logged.",
+      "ran": ["Command outcome: CDPROFILE (completed|cancelled)"]
+    },
+    {
+      "id": "NC7", "name": "Named check: BUG-1225 DP and OF after a drawing is reopened", "silent": "partly",
+      "silentWhat": "The reopen line 'was opened again after its drawing closed' printed in the robot's reopens (25 times since 28 Oct) but NOT in Tim's own reopen of 29 Oct 09:21 (only the 'drawing that owns CE's record closed' line printed). The proof that matters is the DP or OF outcome line AFTER the close line, with no 'Final landing refresh refused' or 'Nothing will be placed here' line.",
+      "ran": ["Command outcome: (DP|OF) completed"],
+      "did": ["\\[BUG-1225\\] .* was opened again after its drawing closed"],
+      "weak": ["\\[BUG-1225\\] The drawing that owns CE's record closed"]
+    },
+    {
+      "id": "NC8", "name": "Named check: CDEDIT refuses on a locked pipe layer (R23)", "silent": "no",
+      "did": ["CDEDIT: pipe \\S+ has ambiguous pipe-text attachment ownership or roles; edit refused\\. Cause: The pipe attachment owner is on locked layer"]
+    },
+    {
+      "id": "NC9", "name": "Named check: ROTATE Copy and SCALE Copy of a pit (BUG-665)", "silent": "partly",
+      "silentWhat": "That the copy has its own label and number is not logged.",
+      "did": ["\\[CloneReconcile\\] command=(ROTATE|SCALE)"]
+    },
+    {
+      "id": "NC10", "name": "Named check: About CE Suite shows versions (R06, Manager log)", "silent": "partly",
+      "silentWhat": "The version text on the window is not logged.",
+      "ran": ["Command outcome: CE_VERSION completed"]
+    },
+    {
+      "id": "NC11", "name": "Named check: CDCHECK totals (R21)", "silent": "partly",
+      "silentWhat": "The totals are command-line only.",
+      "ran": ["Command outcome: CDCHECK (completed|cancelled)"]
+    }
+  ]
+}
