@@ -12,10 +12,10 @@
       "done": 19,
       "of": 40
     },
-    "timConfirmed": 3
+    "timConfirmed": 4
   },
   "installed": "Civil 3.0.85 · Manager 1.1.85 · Structural 1.0.125",
-  "waiting": "Train C-76 (fixes for BUG-1228, 1229, 859, 372, 090), not built or installed",
+  "waiting": "Train C-76 (PRs 1834 to 1837, branch claude/rel-20261029a) in assembly; C-77 backlog (9 jobs) building; nothing new installed since C-75",
   "planCountedAt": "2026-10-28T18:12:00+11:00",
-  "countedAt": "2026-10-29T10:21:07+11:00"
+  "countedAt": "2026-10-29T10:47:40+11:00"
 }

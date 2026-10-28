@@ -1,5 +1,22 @@
-{"accounts":[
- {"name":"Main","fiveHour":10,"week":82,"readAt":"2026-10-29T09:53:00+11:00"},
- {"name":"Team","fiveHour":null,"week":41,"readAt":"2026-10-28T18:10:00+11:00"},
- {"name":"Codex","fiveHour":null,"week":9,"readAt":"2026-10-29T09:53:00+11:00"}
-]}
+{
+  "accounts": [
+    {
+      "week": 84,
+      "fiveHour": 17,
+      "name": "Main",
+      "readAt": "2026-10-29T10:47:40+11:00"
+    },
+    {
+      "week": 41,
+      "fiveHour": null,
+      "name": "Team",
+      "readAt": "2026-10-28T18:10:00+11:00"
+    },
+    {
+      "week": 13,
+      "fiveHour": null,
+      "name": "Codex",
+      "readAt": "2026-10-29T10:47:40+11:00"
+    }
+  ]
+}
