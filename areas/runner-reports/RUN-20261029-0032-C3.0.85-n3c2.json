@@ -1,0 +1,542 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-0032-C3.0.85-n3c2",
+    "started": "2026-10-29 00:32:41",
+    "finished": "2026-10-29 00:36:12",
+    "build": {
+      "civil": {
+        "product_version": "3.0.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "3.0.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "1.1.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.85+09126560 / struc 1.0.125+204dfad2 / mgr 1.1.85+09126560",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AFAD6D6BA0D29BB2053B5A36E23173F7A199D680E2EF22875F383DB03EEC848C",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.85+09126560f98acc4fd6ca4be298d087307a89a259; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 AFAD6D6BA0D29BB2053B5A36E23173F7A199D680E2EF22875F383DB03EEC848C; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 00:32 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-0032-C3.0.85-n3c2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 00:32:41",
+      "finished": "2026-10-29 00:36:12",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30032441_B1.dwg",
+      "cases": [
+        "N30",
+        "N30_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N30",
+      "proves_bugs": "",
+      "title": "After a pipe is placed with inverts 18.240 and 18.190, the next New Pipe window offers 'Use recent invert' buttons for both, newest first, before any older level",
+      "kind": "deterministic",
+      "order": 300,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-PIPE-04 recent values as buttons, the recent-invert part (daily card D05; part only)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-90000 to 160000,-90000 with inverts 18.240 / 18.190 and Start Pipe places one pipe ('[CE] Pipe placed.'). A second CD from 150000,-92000 to 160000,-92000 opens New Pipe, whose Levels & Flow tab shows a button 'Use recent invert 18.190 m AHD' as the FIRST recent invert button and 'Use recent invert 18.240 m AHD' after it. Cancel without saving closes it (the object count is recorded).",
+      "why_not_unit": "The buttons are built in the installed window from the remembered list that the real Start Pipe just wrote.",
+      "not_automated": [
+        "Card D05 assertion 1 (diameter and material buttons equal the remembered lists) and assertion 2 (a press fills the box and the label) are NOT driven: the buttons are on a tab the robot cannot open and pressing them is not on the press list. Assertion 3 is a picture item."
+      ],
+      "file_sha256": "DF06428BDFFACCEC7DCE2DFCEADCD28E1AF0CA6C18C472C60494EE035DE996D1",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no control of 'New Pipe' shows 'Use recent invert 18.19' (100 controls read)",
+      "started": "2026-10-29 00:33:09",
+      "seconds": 84.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}160000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $p1_t",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "typed 'CD 150000,-90000 160000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 160000,-90000 | Se..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.240\"",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.240: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.190\"",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.190: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $p1_s",
+          "ok": true,
+          "seconds": 21.2,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $p1_e",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}160000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $p2_t",
+          "ok": true,
+          "seconds": 12.3,
+          "evidence": "typed 'CD 150000,-92000 160000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 160000,-92000 | Se..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np2",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "ui-dump 'New Pipe': 100 controls, tabs: "
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"Cancel without saving\" -> $p2_c",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "pressed 'Cancel without saving' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $p2_e",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 160000,-92000 | Select point 3 (or Enter fo..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30032441_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] Pipe placed.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pipe placed.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'"
+        },
+        {
+          "n": 2,
+          "text": "control-text $np2 has \"Use recent invert 18.19\"",
+          "ok": false,
+          "expected": "window shows 'Use recent invert 18.19'",
+          "actual": "0",
+          "evidence": "no control of 'New Pipe' shows 'Use recent invert 18.19' (100 controls read)"
+        },
+        {
+          "n": 3,
+          "text": "control-text $np2 has \"Use recent invert 18.24\"",
+          "ok": false,
+          "expected": "window shows 'Use recent invert 18.24'",
+          "actual": "0",
+          "evidence": "no control of 'New Pipe' shows 'Use recent invert 18.24' (100 controls read)"
+        },
+        {
+          "n": 4,
+          "text": "matches $np2 \"^(?:(?!Use recent invert ).)*Use recent invert 18\\.190* m AHD\"",
+          "ok": false,
+          "expected": "matches /^(?:(?!Use recent invert ).)*Use recent invert 18\\.190* m AHD/",
+          "actual": "{\"title\":\"New Pipe\",\"handle\":381619858,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":100,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"i...",
+          "evidence": "no match for /^(?:(?!Use recent invert ).)*Use recent invert 18\\.190* m AHD/ in: {\"title\":\"New Pipe\",\"handle\":381619858,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":100,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"i..."
+        },
+        {
+          "n": 5,
+          "text": "matches $np2 \"Use recent invert 18\\.190* m AHD.*Use recent invert 18\\.240* m AHD\"",
+          "ok": false,
+          "expected": "matches /Use recent invert 18\\.190* m AHD.*Use recent invert 18\\.240* m AHD/",
+          "actual": "{\"title\":\"New Pipe\",\"handle\":381619858,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":100,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"i...",
+          "evidence": "no match for /Use recent invert 18\\.190* m AHD.*Use recent invert 18\\.240* m AHD/ in: {\"title\":\"New Pipe\",\"handle\":381619858,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":100,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"i..."
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30032441_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30032441_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "record $c1 \"object count before the second CD\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1039",
+          "evidence": "RECORDED, not judged: object count before the second CD = 1039"
+        },
+        {
+          "n": 8,
+          "text": "record $c2 \"object count after the second window's Cancel (expected the same; not judged here)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1039",
+          "evidence": "RECORDED, not judged: object count after the second window's Cancel (expected the same; not judged here) = 1039"
+        },
+        {
+          "n": 9,
+          "text": "record $p2_e \"what the command line showed after the second window's Cancel\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 160000,-92000 | Select point 3 (or Enter fo...",
+          "evidence": "RECORDED, not judged: what the command line showed after the second window's Cancel = Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 160000,-92000 | Select point 3 (or Enter fo..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 71 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 48709 ms ; Command outcome: CD completed 21244 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 00:34:34",
+      "session_id": "RUN-20261029-0032-C3.0.85-n3c2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N30_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N30: the first pipe window is cancelled, so its typed levels are not offered as the newest recent invert (must FAIL)",
+      "kind": "deterministic",
+      "order": 301,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N30 (UX-PIPE-04, daily card D05)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N30",
+      "expected": "This variant is wrong on purpose: nothing was placed from the first window, so the first recent invert button of the second window is not 18.210 and that check fails. The second window does show recent invert buttons.",
+      "why_not_unit": "It exists only to prove N30's recent-button check can go red.",
+      "not_automated": [],
+      "file_sha256": "1FDFB44C249FD7377DDF0B1DEE581A088BDF2A56053CD3FEFF4918FF4CAA564B",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no control of 'New Pipe' shows 'Use recent invert ' (99 controls read)",
+      "started": "2026-10-29 00:34:34",
+      "seconds": 79.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}160000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $p1_t",
+          "ok": true,
+          "seconds": 11.9,
+          "evidence": "typed 'CD 150000,-90000 160000,-90000': Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 160000,-90000 | Select point ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.260\"",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.260: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.210\"",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.210: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"Cancel without saving\" -> $p1_c",
+          "ok": true,
+          "seconds": 11.4,
+          "evidence": "pressed 'Cancel without saving' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $p1_e",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 160000,-90000 | Select point 3 (or Enter fo..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}160000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $p2_t",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "typed 'CD 150000,-92000 160000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 160000,-92000 | Se..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np2",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "ui-dump 'New Pipe': 99 controls, tabs: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"Cancel without saving\" -> $p2_c",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "pressed 'Cancel without saving' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $p2_e",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 160000,-92000 | Select point 3 (or Enter fo..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control-text $np2 has \"Use recent invert \"",
+          "ok": false,
+          "expected": "window shows 'Use recent invert '",
+          "actual": "0",
+          "evidence": "no control of 'New Pipe' shows 'Use recent invert ' (99 controls read)"
+        },
+        {
+          "n": 2,
+          "text": "matches $np2 \"^(?:(?!Use recent invert ).)*Use recent invert 18\\.210* m AHD\"",
+          "ok": false,
+          "expected": "matches /^(?:(?!Use recent invert ).)*Use recent invert 18\\.210* m AHD/",
+          "actual": "{\"title\":\"New Pipe\",\"handle\":103031884,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":99,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"id...",
+          "evidence": "no match for /^(?:(?!Use recent invert ).)*Use recent invert 18\\.210* m AHD/ in: {\"title\":\"New Pipe\",\"handle\":103031884,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":99,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"id..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30032441_B1_139827fe9.log)",
+        "Civil CE log: 18 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 29747 ms ; Command outcome: CD completed 20764 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 00:35:53",
+      "session_id": "RUN-20261029-0032-C3.0.85-n3c2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

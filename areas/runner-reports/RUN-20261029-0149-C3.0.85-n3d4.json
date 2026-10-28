@@ -1,0 +1,583 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-0149-C3.0.85-n3d4",
+    "started": "2026-10-29 01:49:39",
+    "finished": "2026-10-29 01:51:11",
+    "build": {
+      "civil": {
+        "product_version": "3.0.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "3.0.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "1.1.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.85+09126560 / struc 1.0.125+204dfad2 / mgr 1.1.85+09126560",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AFAD6D6BA0D29BB2053B5A36E23173F7A199D680E2EF22875F383DB03EEC848C",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.85+09126560f98acc4fd6ca4be298d087307a89a259; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 AFAD6D6BA0D29BB2053B5A36E23173F7A199D680E2EF22875F383DB03EEC848C; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 01:49 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-0149-C3.0.85-n3d4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 01:49:40",
+      "finished": "2026-10-29 01:51:11",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30149431_B1.dwg",
+      "cases": [
+        "N24"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N24",
+      "proves_bugs": "",
+      "title": "CDRENUMBER on the plan: No leaves every pit label as it was, Yes turns the P9 label into P8 and the P10 label into P9 (same blocks) and leaves P1 to P7 and C1 alone, and one U puts every label back",
+      "kind": "deterministic",
+      "order": 240,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-18/19 CDRENUMBER, the plan-label half (daily card D20 assertions 1 to 3 on the labels; with N15 the whole card)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "On the untouched copy the plan labels read P1 to P7, P9, P10 and C1, and none reads P8. CDRENUMBER answered C1 then No prints 'Renumber cancelled - nothing changed.' and every label still reads what it read. CDRENUMBER answered C1 then Yes prints 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'; the block that read P9 now reads P8, the block that read P10 now reads P9, no label reads P10 or a temporary id, and the blocks reading P1 to P7 and C1 are unchanged (109E08 still reads P3). One U echoes CDRENUMBER and the P9 and P10 blocks read P9 and P10 again; no label reads P8.",
+      "why_not_unit": "The network walk runs on the real drawing's pits and pipes and writes every plan label in one live command.",
+      "not_automated": [
+        "A TG mark is not in this fixture, so 'TG untouched' is not checked. Whether the numbering order is right as engineering is Tim's word.",
+        "DBMOD before and after the No answer is recorded, not judged (it is already 1 when the copy opens: N15)."
+      ],
+      "file_sha256": "323E733AB1AC7961E4A1C87B090DE83E8C8CC32299A1636DF7ECEB7BFA563E02",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 01:50:18",
+      "seconds": 32.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab0",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109E08 -> $p3_0",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 109E08: {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}No\" -Force -> $rn_no",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'CDRENUMBER C1 No': Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: ..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $labN",
+          "ok": true,
+          "seconds": 4.6,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}Yes\" -Force -> $rn_yes",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'CDRENUMBER C1 Yes': Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab1",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109E08 -> $p3_1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ent-read 109E08: {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | CDRENUMBER"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab2",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $jn \"{$lab0} @@AFTER@@ {$labN}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $jn"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $jy \"{$lab0} @@AFTER@@ {$lab1}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $jy"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $ju \"{$lab0} @@AFTER@@ {$lab2}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $ju"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Which pit is the main outlet?\"",
+          "ok": true,
+          "expected": "command line has 'Which pit is the main outlet?'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1'"
+        },
+        {
+          "n": 2,
+          "text": "history count \"P9 -> P8\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'P9 -> P8'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'P9 -> P8' (expected 2)"
+        },
+        {
+          "n": 3,
+          "text": "history count \"P10 -> P9\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'P10 -> P9'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'P10 -> P9' (expected 2)"
+        },
+        {
+          "n": 4,
+          "text": "history count \"Renumber cancelled - nothing changed.\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Renumber cancelled - nothing changed.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Renumber cancelled - nothing changed.' (expected 1)"
+        },
+        {
+          "n": 5,
+          "text": "history count \"Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.' (expected 1)"
+        },
+        {
+          "n": 6,
+          "text": "matches $lab0 \"PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'PIT_LABEL=P9\\'"
+        },
+        {
+          "n": 7,
+          "text": "matches $lab0 \"PIT_LABEL=P10\\W\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL=P10\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'PIT_LABEL=P10\\'"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $lab0 \"PIT_LABEL=P8\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P8'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P8' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 9,
+          "text": "matches $jn \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:26\",\"elapsed_ms\":4607,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"'"
+        },
+        {
+          "n": 10,
+          "text": "matches $jn \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:26\",\"elapsed_ms\":4607,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"'"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $labN \"PIT_LABEL=P8\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P8'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:26\",\"elapsed_ms\":4607,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P8' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:26\",\"elapsed_ms\":4607,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 12,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P8\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P8\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"'"
+        },
+        {
+          "n": 13,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"'"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $lab1 \"PIT_LABEL=P10\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P10'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P10' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 15,
+          "text": "not-contains $lab1 \"TEMP\"",
+          "ok": true,
+          "expected": "does not contain 'TEMP'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'TEMP' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 16,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P1\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P1\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"'"
+        },
+        {
+          "n": 17,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P2\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P2\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P2\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P2\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"'"
+        },
+        {
+          "n": 18,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P4\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P4\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P4\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P4\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"'"
+        },
+        {
+          "n": 19,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P5\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P5\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P5\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P5\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"'"
+        },
+        {
+          "n": 20,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P6\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P6\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P6\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P6\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"'"
+        },
+        {
+          "n": 21,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P7\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P7\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P7\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P7\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"'"
+        },
+        {
+          "n": 22,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=C1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=C1\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=C1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=C1\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"'"
+        },
+        {
+          "n": 23,
+          "text": "matches $p3_0 \"PIT_LABEL.,.text.:.P3.,.insertion\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL.,.text.:.P3.,.insertion/",
+          "actual": "{\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'PIT_LABEL\",\"text\":\"P3\",\"insertion'"
+        },
+        {
+          "n": 24,
+          "text": "matches $p3_1 \"PIT_LABEL.,.text.:.P3.,.insertion\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL.,.text.:.P3.,.insertion/",
+          "actual": "{\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'PIT_LABEL\",\"text\":\"P3\",\"insertion'"
+        },
+        {
+          "n": 25,
+          "text": "matches $u1 \"(^|\\| )CDRENUMBER\\s*(\\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )CDRENUMBER\\s*(\\||$)/",
+          "actual": "Command: | Command: U | CDRENUMBER",
+          "evidence": "matched '| CDRENUMBER '"
+        },
+        {
+          "n": 26,
+          "text": "matches $ju \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:44\",\"elapsed_ms\":4213,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"'"
+        },
+        {
+          "n": 27,
+          "text": "matches $ju \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:44\",\"elapsed_ms\":4213,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"'"
+        },
+        {
+          "n": 28,
+          "text": "not-contains $lab2 \"PIT_LABEL=P8\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P8'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:44\",\"elapsed_ms\":4213,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P8' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:44\",\"elapsed_ms\":4213,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 29,
+          "text": "record $m0 \"DBMOD before CDRENUMBER No (not judged)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD before CDRENUMBER No (not judged) = 1"
+        },
+        {
+          "n": 30,
+          "text": "record $m1 \"DBMOD after CDRENUMBER No (not judged; card D20 asks for it unchanged)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD after CDRENUMBER No (not judged; card D20 asks for it unchanged) = 1"
+        },
+        {
+          "n": 31,
+          "text": "record $lab0 \"FULL every plan label before (handle and PIT_LABEL)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}}",
+          "evidence": "RECORDED, not judged: FULL every plan label before (handle and PIT_LABEL) = {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:18\",\"elapsed_ms\":4545,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}}"
+        },
+        {
+          "n": 32,
+          "text": "record $lab1 \"FULL every plan label after Yes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"]}]}}",
+          "evidence": "RECORDED, not judged: FULL every plan label after Yes = {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-29 01:50:37\",\"elapsed_ms\":4175,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"]}]}}"
+        },
+        {
+          "n": 33,
+          "text": "record $rn_yes \"FULL what CDRENUMBER printed for Yes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: Yes | Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.",
+          "evidence": "RECORDED, not judged: FULL what CDRENUMBER printed for Yes = Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: Yes | Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers."
+        },
+        {
+          "n": 34,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDRENUMBER",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDRENUMBER"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 26 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDRENUMBER completed 53 ms ; Command outcome: CDRENUMBER completed 216 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 01:50:50",
+      "session_id": "RUN-20261029-0149-C3.0.85-n3d4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N24_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}
