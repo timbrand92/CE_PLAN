@@ -26,3 +26,30 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "yes".
    2. Interpretation: the robot may move the installed add-in folders aside one set at a time (Structural, Manager, CE.AutoCADLink.2027.bundle, CE.Transform.Trial.2027.bundle) for a controlled run, restoring each by hash. Tim's yes covers moving them aside; it does not cover anything else. GUESS: timing. The side session told Tim the run would be after 5:30pm or when he says AutoCAD is closed; he did not object.
    3. Desk must: before each run record the original hashes and a backup copy of each folder; AutoCAD closed (check yourself twice); restore and verify by hash at the end of every run; say where the backup is and the one-step undo; run in a free window (rule 1.8); report which add-in set made REDO work.
+
+## Batch 2 (about 10:00 Melbourne)
+
+6. **#1788 drainPluginOutbox (QUESTIONS item 13): extras accepted; the main question is OPEN.**
+   1. Tim's words: "why would we keep it off if it can help the plugin? agreed to two small extras".
+   2. Interpretation: (a) ACCEPTED: a figure typed with a comma (630,5) is refused instead of being read ten times too big; an unset material speed in the pipe-speed check falls back to the office figure. He did not ask for a message on the second, so no message (GUESS: silence means no message). (b) The "keep it OFF" recommendation was a challenge, not a decision. It is NOT a ruling to switch it on. It ships OFF as built; that is the current state, not a decision by Tim. Reasons given to him: with it ON, Manager writes usage and fault records with a scrubbed drawing label to the office IT folder; two independent reviews (Codex HOLD, Opus merge-with-fixes) disagreed; nobody has said who may receive the reports or which fields may leave the PC.
+   3. Desk must: keep the switch OFF, keep the two extras, and wait for Tim's answer to: who may receive the reports, and may the short list (job number, command failure) be sent. Do not turn the question into a decision.
+
+7. **BUG-1090 computations sheet line (QUESTIONS item 9): NOT ANSWERED.**
+   1. Tim's words: "is that what we do currently?"
+   2. Answer given to him: no. Today the sheet and CDRULES show pipes passing and nothing says the hydraulic grade line and pit losses were not checked (BUG-1090 symptom). The draft PR #1771 would print the sentence on every council sheet.
+   3. Desk must: leave PR #1771 out of the next update until he says yes or no.
+
+8. **Tidy labels switch ON by default (QUESTIONS item 7): yes.**
+   1. Tim's words: "yes".
+   2. Interpretation: the "Tidy labels names the pipe" switch is ON by default for colleagues and for new installs.
+   3. Desk must: set the default ON in the next train; Tim's own settings file may still hold OFF (check it and say so).
+
+9. **Grip copy switch ON for the office (QUESTIONS item 8): yes.**
+   1. Tim's words: "yes".
+   2. Interpretation: the switch "Clean up grip Ctrl-drag, ROTATE Copy and SCALE Copy like COPY" is ON by default. GUESS: the question text said "yes, once a robot run passes with it on"; I kept that condition (turn the default ON after a robot pass with it on) because Tim answered the question as worded.
+   3. Desk must: run the robot pass with it ON, then ship the default ON; Tim's file may need the value changed.
+
+10. **Import with no units set (QUESTIONS 22 Oct item 1, BUG-505): yes.**
+   1. Tim's words: "yes".
+   2. Interpretation: keep importing as millimetres and print one soft line "This drawing has no units set; CE read it as millimetres." A note, never a block.
+   3. Desk must: build it as a note only (R-27, no hard block).
