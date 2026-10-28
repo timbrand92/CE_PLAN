@@ -16754,7 +16754,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Steps to confirm in AutoCAD:** fresh copy of DRV1_B1. CD from 150000,-90000 to 170000,-90000, levels 18.000 then 17.900, Start Pipe, Esc. CDEDIT the pipe, type first level 17.900 and second 18.000, Save. CDEDIT again, change only the diameter to 150, Save. Right looks like: the arrow still points from IL 18.000 to IL 17.900.
 
-**Status:** OPEN
+**Status:** FIXED (Claude-accepted, Civil 3.0.85, 29 Oct 2026): the arrow-reading fix is PR #1832 (C-75); runner case R32b (size-only Save, whole claim as filed) passed in two separate AutoCAD starts on 3.0.85 (c1a1 and c1b1), the broken twin R32b_BROKEN and the switch-OFF control C32 fail as they must, and the independent Opus review (areas\release-v3-colleagues-OPUS_CASE_REVIEW_B8_29OCT.md) agrees; R32 (second plain Save) is ready for the part named. Pipes joined to pits and Edit 2+ pipes were not driven. Not Tim-confirmed in his own drawings.
 
 **Evidence 25 Oct 2026 (Civil 3.0.75, runner R32 and R32b, runs b3a1 b3a2):** wider than first filed: after the first Save flips the arrow, a SECOND plain Edit Pipe Save with nothing typed already turns the arrow back to rotation 0. Edit Pipe's own window says "The levels fall from point 2 to point 1; CE records that as the flow direction", so the window knows the right direction and the Save draws the arrow the other way.
 
@@ -16825,4 +16825,13 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Command / Area:** CD New Pipe window (daily tool D05, recent invert buttons): the one-page New Pipe window that CD opens on Civil 3.0.84 and 3.0.85 shows NO 'Recent levels' row and no 'Use recent invert ...' buttons, although card D05 says the New Pipe and Edit Pipe window offers the last pipe's levels as 'Recent:' buttons. Found by robot case N30 (draft, FAIL 2 of 2 on 3.0.85, run ids n3c2 and n3d2; report areas\release-v3-colleagues-ROBOT_B3_CASES_VALIDATION_28OCT.md item 6). To SEE: type CD, pick 150000,-90000 then 160000,-90000, Enter; in New Pipe type first invert 18.240 and second 18.190, press Start Pipe, then Esc; type CD again and pick two points 2 m south; read the New Pipe window: it is one page (ENGINEERING, DRAFTING, PLAN PREVIEW), no tabs, no Recent levels text. The tabbed layout that carries the buttons (PipeEditWorkshopDialog.xaml lines 257 to 266 at the installed commit) is not what CD opens. Not known: whether the buttons were dropped on purpose when the one-page layout came in; whether Edit Pipe shows them. Right result: Tim to say (card or product).
 
 **Status:** OPEN (found by the robot 29 Oct 2026; a card-versus-product question for Tim, not a proven CE fault yet; nothing seen by Codex). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1227
+
+**Command / Area:** ROTATE Copy or SCALE Copy of a pit that lands exactly on top of the original (offset 0), Civil 3.0.84 and 3.0.85. Found by the Opus reviewer of the C-75 fix proofs (areas\release-v3-colleagues-OPUS_CASE_REVIEW_B8_29OCT.md item 8; not proven by a case): CE prints six to nine lines saying P3's pit schedule cells were not updated; when the copy lands 5 m away it prints none. The copy may be disturbing the original pit's own record. To SEE: ROTATE (or SCALE) a pit with the C (Copy) option so the copy sits on the original, read the command line; repeat with the copy 5 m away. The desk queued a robot look (tester_run75b): evidence to follow.
+
+**Status:** OPEN (unproven; filed 29 Oct 2026 from a review note). Never FIXED until Tim confirms in AutoCAD.
 
