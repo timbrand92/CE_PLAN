@@ -16844,3 +16844,35 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; not yet profiled). Never FIXED until Tim confirms in AutoCAD.
 
+
+---
+
+## BUG-1229 — New Pipe, "Set my own" with "I know one end": the grade box and the worked-out downstream level end up shallower (1 in 102) than the grade the drafter wanted
+
+**Command / Area:** CD (New Pipe window), pipe grade "Set my own" + "I know one end - work the other out from the grade", Civil 3.0.85 (Tim's PC, by hand, 29 Oct 2026). WRONG ANSWER, severity to confirm.
+
+**Symptom:** P10 to P9, 100 mm UPVC. Upstream level typed 19.45, the window worked the downstream out as 19.36 (a 90 mm fall) and the grade box reads "1 in 102". Tim: "it rounding to 1 in 102 which is shallower than what it should be". Not yet known: the pipe length, and whether Tim typed 100 and the window changed it to 102, or typed 102. By my reading of the code (not seen in AutoCAD): the fall is length divided by the grade, always rounded UP to the next 10 mm, which should make a pipe steeper than the chosen grade, never shallower; 1 in 102 with a 90 mm fall suggests the grade box is being overwritten from a rounded result, or the length used is not the drawn length. This is a guess to be checked, not a finding.
+
+**Expected behaviour:** A grade the drafter picks (for example 1 in 100) is a minimum: the calculated level gives that grade or steeper, never shallower, and the grade box keeps what he typed. Tim's words: "it rounding to 1 in 102 which is shallower than what it should be".
+
+**Steps to confirm in AutoCAD:** (1) Run CD from P10 to P9, choose Set my own 1 in 100 and "I know one end", type 19.45 upstream. (2) Read the downstream level and the grade box. (3) Compare 90 mm fall against the drawn pipe length divided by 100. Right = fall is at least length divided by 100 and the box still says 100.
+
+**Reference:** Tim's screenshot 1 (29 Oct 2026, desk chat). Code read at commit 09126560: CdCommand.Grade.cs, MathHelper.CalculateInvertDrop and ApplyCalculatedInvertRule. Related: BUG-199, BUG-866..872 (Opus audit 22 Oct: "grade on straight distance"), AUDIT_ENGINEERING_CIVIL_2026-10-22.md (round-up ignores the decimals setting).
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1230 — CD and CDEDIT plan preview does not show what the pipe will become after a change (old and new labels pile up; label says 1 IN 200 while the box says 150)
+
+**Command / Area:** CDEDIT (Edit Pipe window) and CD (New Pipe window), "Plan preview", Civil 3.0.85 (Tim's PC, by hand, 29 Oct 2026). WRONG ANSWER (preview), severity to confirm.
+
+**Symptom:** In Edit Pipe the banner reads "Preview - changes not saved - Custom grade", the grade box was changed to 1 in 150, known upstream 19.45, downstream still 19.40. The preview pipe label still reads "100 DIA. UPVC PIPE AT 1 IN 200", so it shows neither the 150 typed nor a new level. The old gold level captions (P10 IL 19.45, P9 IL 19.40) sit on top of the new red IL 19.45 / IL 19.40 labels so both are hard to read, and a stray red mark sits next to the upstream label. Tim: "when you modify something with the existing preview, how do you know what it will become, it looks wrong does it not?". Not verified in code; read from the screenshot only.
+
+**Expected behaviour:** After any change in the window the preview shows the pipe as it will be drawn: the new label text, the new calculated level, the new IL labels, with the old ones not left underneath. Where the window and the preview disagree (150 versus 200) the preview says which will be saved.
+
+**Steps to confirm in AutoCAD:** (1) Open Edit Pipe on a pipe at 19.45 / 19.40 labelled 1 IN 200. (2) Set my own, type 1 in 150, "I know one end", upstream known. (3) Check the downstream level and the preview label change to the 150 result (about 19.38 over 10 m) and that no old caption sits under the new one. Right = preview label, levels and the numbers in the window all agree.
+
+**Reference:** Tim's screenshot 2 (29 Oct 2026, desk chat). Related: BUG-582 (calculated free-end level Unknown in the editor preview), BUG-1229, BUG-199.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until confirmed in AutoCAD.
