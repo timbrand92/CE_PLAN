@@ -16859,6 +16859,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** Tim's screenshot 1 (29 Oct 2026, desk chat). Code read at commit 09126560: CdCommand.Grade.cs, MathHelper.CalculateInvertDrop and ApplyCalculatedInvertRule. Related: BUG-199, BUG-866..872 (Opus audit 22 Oct: "grade on straight distance"), AUDIT_ENGINEERING_CIVIL_2026-10-22.md (round-up ignores the decimals setting).
 
+**Tim answered 29 Oct (later):** "i just typed the first invert. 9.2m". So the pipe is 9.2 m long and only the upstream level was typed; the grade box was NOT typed by Tim. **Cause found by arithmetic and code reading (commit 09126560, not yet seen live):** typing the first level runs the "suggest downstream" step (UpstreamDownstreamSuggest.SuggestFromStandardGrade): fall = 9.2 / 100 = 0.092 m, downstream = 19.45 - 0.092 = 19.358, which is rounded to the NEAREST 10 mm = 19.36 (a 90 mm fall, not 92 mm). The window then works the grade back from the rounded levels: 9.2 / 0.09 = 102.2, and writes 102 into "Set my own". So the level is rounded to nearest (flatter than 1 in 100), not up. Correction of my earlier note: the "round the fall up to 10 mm" rule belongs to a different path (levels worked out at Start Pipe from the grade); the two paths disagree, which is the real fault (one rule per behaviour). Right answer for 9.2 m at 1 in 100: fall at least 0.092, so downstream 19.35 (or 19.358 shown to 3 decimals), and the grade box stays 100.
+
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until confirmed in AutoCAD.
 
 ---
@@ -16875,4 +16877,6 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** Tim's screenshot 2 (29 Oct 2026, desk chat). Related: BUG-582 (calculated free-end level Unknown in the editor preview), BUG-1229, BUG-199.
 
-**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until confirmed in AutoCAD.
+**Tim 29 Oct (later):** "with bug 1230 - we need to look into this entire fucntionality more overall before formally putting it in, how does it work in all situations and how it looks and feels for end user". So this entry is an OBSERVATION kept as evidence, not a formal bug to fix on its own: do not fix piecemeal. The whole CD and CDEDIT preview and grade/level working is to be reviewed first (see decisions/2026-10-29_TIM_PLANNING_CHANGES.md PC-03).
+
+**Status:** OPEN - ON HOLD (Tim 29 Oct: review the whole functionality before it is formally a bug). Never FIXED until confirmed in AutoCAD.

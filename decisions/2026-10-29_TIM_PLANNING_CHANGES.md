@@ -14,3 +14,16 @@ Interpretation (guess): Tim wants every number in this working on the Settings p
 Tim: "the i know one end - work out from the other grade could be implemented far better into the whole system do you get what i mean?"
 
 Interpretation (guess, NOT confirmed): today the option is a tick in the CD and CDEDIT windows only; Tim may want the same working wherever a level is set or a pit or pipe moves (pit move, Pit Schedule, CDPROPAGATE, long section). Question open with Tim: where does he want it to work that it does not now.
+
+## PC-02 update (Tim, 29 Oct, later) — replaces the interpretation above
+
+Tim: "what i meant was theres that button but then theres also the pipe grade above so it feels likes theres two points of contact and as an end suer what do you use if youve never used the program before, surely thsi can eb designed for better end user experience"
+
+Meaning (Tim's own words, little to interpret): in the CD and CDEDIT windows the "I know one end - work the other out from the grade" button and the "Pipe grade" row both control how the levels and grade are worked out, so a new user does not know which one to use. Wants it designed better for a first-time user. The earlier guess (wire it into pit move, Pit Schedule and so on) is NOT what he meant; it is withdrawn.
+Process: this is a user-facing workflow change, so it goes through the command and workflow review gate (AGENTS.md): a review with Tim, a card, his approval, before any code.
+
+## PC-03 — Review the whole CD / CDEDIT preview and grade-and-level working before it is formally a bug
+
+Tim: "with bug 1230 - we need to look into this entire fucntionality more overall before formally putting it in, how does it work in all situations and how it looks and feels for end user"
+
+Meaning: BUG-1230 is held (kept as evidence, not fixed on its own). Wanted: one review of how the plan preview, the grade box, the "I know one end" choice and the worked-out levels behave in every situation (new pipe, edit pipe, upstream or downstream known, custom grade, standard grade, flat, existing levels) and how it looks and feels, together with PC-02. Not a fix yet. Interpretation (guess): this becomes one workflow card for the review gate, with BUG-1229 and BUG-1230 attached.
