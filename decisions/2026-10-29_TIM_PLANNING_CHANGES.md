@@ -47,3 +47,15 @@ What the three letters add (anonymised; counted by the intake chat from the PDFs
 
 Interpretation (guess, not a ruling): the cheapest first step is a pre-submission Kingston checklist built from these asks (so the RFI never comes), then the RFI reader. Both need a workflow card and Tim's approval before code. Open question for Tim: the 25 Sep ruling says no response-letter drafting, but Kingston wants a covering letter listing the changes; does Tim want a plain change list produced from the to-do tick-offs?
 Related: BUG-538 (Kingston rules written into the code); the Kingston council rules in 02_COUNCIL_RULES should be checked for the 50 m2 per tank rule.
+
+## PC-04 update (Tim, 29 Oct, later) — checklist, other councils, learning
+
+Tim: "we have lots of rfis and from other councils, the checklist sounds good, automation is key and also machine learning to know what to add for next time would be great"
+
+Meaning (Tim's words, little to interpret):
+1. There are many more RFI letters, from other councils too, not only Kingston. They are the source material.
+2. The pre-submission checklist (PC-04 item "cheapest first step") "sounds good": Tim likes it. Interpretation (guess): approval in principle only; it still needs a workflow card and Tim's approval before any code.
+3. "Automation is key": the checklist and the RFI to-dos should be ticked and filled by CE itself wherever it can, not by the drafter by hand.
+4. Learning: CE should learn from past RFIs what each council keeps asking, so the next job's checklist already contains it. This is the same learning ruled on 25 Sep as UX-LEARN-01 and in UX-RFI (what councils keep asking feeds council rules and checklists); it is a Tim-confirmed use of it, not a new rule. Existing safeguards still apply: every suggestion shows why, nothing changes an engineering rule silently, the engineer promotes a learned default.
+5. Privacy (DATA-01): the RFI letters name clients and addresses. They are read for evidence only when Tim names the folder; the anonymised lesson goes to the repo, the letters stay local-only.
+Open question for Tim: where do the other councils' RFIs live (job folders, an email folder, one drawer)? Not guessed.
