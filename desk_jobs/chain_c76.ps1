@@ -43,7 +43,7 @@ function InstalledCivil() {
 }
 # Any other pwsh process that runs a dotnet-using chain (never this chain itself, never an install chain).
 function OtherDotnetChains() {
-  return @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'pwsh' -and $_.ProcessId -ne $PID -and $_.CommandLine -match 'chain_c(?!76)\d+\w*\.ps1|chain_fix_\w+\.ps1|chain_bug\w+\.ps1|chain_fb_team\d*\.ps1|chain_apply_\w+\.ps1|chain_payload\w+\.ps1' })
+  return @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'pwsh' -and $_.ProcessId -ne $PID -and $_.CommandLine -match 'chain_c(?!76)\d+\w*\.ps1|chain_bug\w+\.ps1|chain_fb_team\d*\.ps1|chain_apply_\w+\.ps1|chain_payload\w+\.ps1' })
 }
 
 if (Stopped) { exit }
