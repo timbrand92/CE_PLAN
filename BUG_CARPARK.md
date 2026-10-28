@@ -2673,7 +2673,7 @@
 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding C1. Code: Services/ExternalMutationCommandPolicy.cs:13-46 (GRIP_*, ROTATE, SCALE listed transform-only), LinkService.Reactors.cs:52-56, LinkService.Utilities.cs:1230, LinkService.cs:522-538, Cache.cs:268-290. Assumes AutoCAD reports the copy under those command names.
 
-**Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1328; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+**Status:** TIM-CONFIRMED 29 Oct 2026 (Civil 3.0.85, his own AutoCAD): ROTATE Copy of a pit: the new pit got its own number label and cover text (passed). SCALE Copy was not hand-tested.  OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1328; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
 **Evidence 25 Oct 2026 (Civil 3.0.75, runner R34 R34s R34so):** the fix sits behind the Settings tick linking.cleanUpGripRotateScaleCopies (OFF by default, not in Tim's file). Tick OFF: ROTATE Copy and SCALE Copy both leave a pit with no label or cover text. Tick ON: COPY and SCALE Copy are right; ROTATE Copy still gets its own number but no label and no cover text, about its own centre or a point 5 m away. Monday question 8 is about switching the tick on.
 
@@ -16754,7 +16754,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Steps to confirm in AutoCAD:** fresh copy of DRV1_B1. CD from 150000,-90000 to 170000,-90000, levels 18.000 then 17.900, Start Pipe, Esc. CDEDIT the pipe, type first level 17.900 and second 18.000, Save. CDEDIT again, change only the diameter to 150, Save. Right looks like: the arrow still points from IL 18.000 to IL 17.900.
 
-**Status:** FIXED (Claude-accepted, Civil 3.0.85, 29 Oct 2026): the arrow-reading fix is PR #1832 (C-75); runner case R32b (size-only Save, whole claim as filed) passed in two separate AutoCAD starts on 3.0.85 (c1a1 and c1b1), the broken twin R32b_BROKEN and the switch-OFF control C32 fail as they must, and the independent Opus review (areas\release-v3-colleagues-OPUS_CASE_REVIEW_B8_29OCT.md) agrees; R32 (second plain Save) is ready for the part named. Pipes joined to pits and Edit 2+ pipes were not driven. Not Tim-confirmed in his own drawings.
+**Status:** TIM-CONFIRMED 29 Oct 2026 (Civil 3.0.85, his own AutoCAD): Edit Pipe, swap the levels, Save, Save again: the arrow stayed correct (passed).  FIXED (Claude-accepted, Civil 3.0.85, 29 Oct 2026): the arrow-reading fix is PR #1832 (C-75); runner case R32b (size-only Save, whole claim as filed) passed in two separate AutoCAD starts on 3.0.85 (c1a1 and c1b1), the broken twin R32b_BROKEN and the switch-OFF control C32 fail as they must, and the independent Opus review (areas\release-v3-colleagues-OPUS_CASE_REVIEW_B8_29OCT.md) agrees; R32 (second plain Save) is ready for the part named. Pipes joined to pits and Edit 2+ pipes were not driven. Not Tim-confirmed in his own drawings.
 
 **Evidence 25 Oct 2026 (Civil 3.0.75, runner R32 and R32b, runs b3a1 b3a2):** wider than first filed: after the first Save flips the arrow, a SECOND plain Edit Pipe Save with nothing typed already turns the arrow back to rotation 0. Edit Pipe's own window says "The levels fall from point 2 to point 1; CE records that as the flow direction", so the window knows the right direction and the Save draws the arrow the other way.
 
@@ -16808,7 +16808,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Steps to confirm in AutoCAD:** open a test copy, place a downpipe (DP), close the drawing without saving, open another copy in the same AutoCAD, place DP again. Right looks like: the downpipe is placed both times.
 
-**Status:** OPEN (28 Oct 2026; not reproduced by hand; may be a robot reopen-copy timing effect: first find out whether it needs the reopen).
+**Status:** TIM-CONFIRMED 29 Oct 2026 (Civil 3.0.85, his own AutoCAD): close the drawing without saving, reopen it, DP again: it placed both times (passed). Remaining wish from Tim: the DP command takes a long time (see BUG-1228).  OPEN (28 Oct 2026; not reproduced by hand; may be a robot reopen-copy timing effect: first find out whether it needs the reopen).
 
 
 **BUG-861 evidence 28 Oct 2026 (robot gap watch on Civil 3.0.83, areas\release-v3-colleagues-RUNNER_BUG861_GAPWATCH_REPORT.md):** the lost REDO reproduces at baseline (4 of 4 sessions, round 1 only). With the new log-only watch on, the first click after U shows, and only on that first click, AutoCAD dropping and retaking the drawing's WRITE LOCK twice within 3 ms, with NO CE_SUITE code on the stack ('AutoCAD itself, a native add-in or LISP'); nothing else changes in the gap (no system variable, no command). Turning off all of Civil's end-of-U work (disableUndoEndWork) does not change it (4 of 4 still lost; the log proves the skip). So the cause is in AutoCAD or another add-in loaded in the same session (candidates: Structural, Manager, CE.AutoCADLink.2027, CE.Transform.Trial.2027, a LISP). Needs a controlled run with add-ins not loaded (Tim's yes: QUESTIONS_FOR_MONDAY item 14). BUG-861 stays OPEN.
@@ -16834,4 +16834,13 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Command / Area:** ROTATE Copy or SCALE Copy of a pit that lands exactly on top of the original (offset 0), Civil 3.0.84 and 3.0.85. Found by the Opus reviewer of the C-75 fix proofs (areas\release-v3-colleagues-OPUS_CASE_REVIEW_B8_29OCT.md item 8; not proven by a case): CE prints six to nine lines saying P3's pit schedule cells were not updated; when the copy lands 5 m away it prints none. The copy may be disturbing the original pit's own record. To SEE: ROTATE (or SCALE) a pit with the C (Copy) option so the copy sits on the original, read the command line; repeat with the copy 5 m away. The desk queued a robot look (tester_run75b): evidence to follow.
 
 **Status:** OPEN (unproven; filed 29 Oct 2026 from a review note). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1228
+
+**Command / Area:** DP (downpipe) takes a long time to place, Civil 3.0.85 (Tim, 29 Oct 2026, by hand on his own PC: 'the dp command takes a long time'). The robot measured about 29 to 32 seconds per DP placement on 3.0.84 (N13 run 28 Oct: 'DP completed 32406 ms' then '29090 ms'). Right result: a downpipe places in about a second or two like PIT and CD. To investigate: where the time goes (landing index capture, source evidence, record refresh); the same may apply to OF and the other sources. Tim's PC at the time was also running builds in the background.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026; not yet profiled). Never FIXED until Tim confirms in AutoCAD.
 
