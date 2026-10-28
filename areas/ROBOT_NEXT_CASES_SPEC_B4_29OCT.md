@@ -132,3 +132,67 @@ Written Thu 29 Oct 2026, about 09:00 to 09:50 Melbourne (PC clock), by an Opus c
 ## Summary
 
 Four new robot drafts with failing twins (8 files, format check clean) for Civil 3.0.85. Two aim to finish a tool: every new object on its office layer (D24, with N28) and the Pit Schedule groups LPD, OG, P, CP, rest (D21, with N29), made possible because the robot can type a pit number. Two cover switch-ON parts: a hand-placed text through a pit move (D13) and natural order P1A / SPS (D21). D05 is not drafted: its buttons sit behind "More...". If both finishers pass twice and are reviewed, 18 could become 20 of 40.
+
+## CE 02 amendment after Codex cx_cr25 (29 Oct)
+
+Made by the CE 02 Sonnet case-editing helper on 29 Oct 2026, from `C:\CE_PLAN\areas\CODEX_CASE_REVIEW_cx_cr25.md`. Text editing and an offline validate only: no AutoCAD, no runner run, no driver call, no lock, no commit, no push. Nothing here is a runtime result and no case is accepted. Only files in `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_opus_29oct_b4` were edited. Only verbs already in the runner were used (`number ... >`, `contains`, `equals`, `matches`, `field ... text`, and the `SETTING` header line, each already used in working cases or other B4 drafts). No check was weakened or deleted. Hashes are SHA-256, first 12 hex, upper case.
+
+1. **N31_hand_placed_text_kept_through_pit_move.case.txt** (707DAB4421B8 to E6CB28593940).
+   - Added `number $pm_moved > 1` straight after the `<= 20` check, so a stationary text can no longer pass.
+   - Title and EXPECTED now say "moves more than 1 mm and no more than 20 mm", and now say the Tidy labels step is only a PREVIEW closed with Esc. The WHY_NOT_UNIT_TEST line and the last `record` line say the same.
+   - Added the NOT_AUTOMATED line "The later CDTIDYLABELS operation is a preview followed by Esc; it does not exercise an applied tidy."
+   - Replaced "Profile A (switch off) is the twin" with wording that the twin is a contrast with tidy ON and hand-placed protection OFF, not D13's literal profile A.
+   - The DERIVED header line now reads "more than 1 mm and at most 20 mm".
+
+2. **N31_hand_placed_text_kept_through_pit_move_BROKEN.case.txt** (1511AFC4F088 to A10D737F3C5D).
+   - Added `number $pm_moved > 1` straight after the pit-moved check, as Codex asked.
+   - Header line 2 and PLAN_ITEM no longer call this D13's profile A. They now say it is a contrast with hand-placed protection off.
+   - Header line 4 now says the red counts for the pit-move claim only when the `$pm_moved <= 20` check is among the FAILED checks. A failure of the count line alone proves only that the switch changes marking and counting.
+   - EXPECTED now lists the new `> 1` check among the ones that must pass.
+   - Which check fails and why: `number $pm_moved <= 20` fails if the pit move's tidy shoves the unmarked text about 275 mm (DERIVED, never seen); `history has "Placed by hand (left alone) 1"` fails because the count is 0 with the switch off. Both are CHECK lines. The steps before them (hand move, spot-level move, pit move, tidy preview) are the same as the main case. `> 1` passes in the twin only if the text really moved. No step is broken on purpose.
+
+3. **N32_every_new_object_on_its_office_layer.case.txt** (BB0D461CE2B8 to C2AD8DEB2229).
+   - Changed "every new object" to "every new top-level model-space object" in header line 3, TITLE, PLAN_ITEM, EXPECTED ("Exactly 8 new top-level model-space objects") and the closing `record`.
+   - Removed the whole-card claim from header line 2 and PLAN_ITEM. Line 2 now says the case covers only part of the card and is not whole UX-LYR-01 acceptance. PLAN_ITEM now says "for this ordinary pipe and labelled pit only".
+   - Added the NOT_AUTOMATED line "Block contents and attribute layers are not read; layer-table colours and linetypes are not read."
+   - Took the optional wording check as the stricter option: a new step `field $covers text -> $covt` and a new check `equals $covt "CL 19.000"`.
+   - The case file name still says "every_new_object". I did not rename it (the case id N32 is what the runner and the ledger use).
+
+4. **N32_every_new_object_on_its_office_layer_BROKEN.case.txt** (EC73AE1E03B5 to 1C2329B0493F).
+   - Added the passing control `equals $ill "CETWIN20TEXT | CETWIN20TEXT"` straight after the `20TEXT | 20TEXT` check (the optional line, taken as the stricter option).
+   - Header and EXPECTED now say the twin covers the IL layer comparison only, and that the red counts only when the IL layer check fails with the actual value CETWIN20TEXT while the current-layer check and the IL count pass.
+   - Which check fails and why: `equals $ill "20TEXT | 20TEXT"` fails because Settings renames 20TEXT to CETWIN20TEXT, so the two new IL texts are on CETWIN20TEXT. This is a CHECK. The steps are only a CLAYER read, a select and a field read.
+
+5. **N33_schedule_groups_lpd_og_p_cp_then_rest.case.txt** (DC4CBDA88743 to F013F6476293).
+   - Codex said no change was mandatory. I added the optional `SETTING CD_Settings.json linking.pitScheduleNaturalOrder false` after the SLOT line, which pins the legacy order on purpose.
+   - Header line 1 now says the case has one SETTING line and runs in its own guarded session (it used to say "no SETTING line").
+   - The ASSERT block is unchanged.
+
+6. **N33_schedule_groups_lpd_og_p_cp_then_rest_BROKEN.case.txt** (9F366E0CDD07 to 2A2F034EA688).
+   - Added the same SETTING line after the SLOT line.
+   - Added the two presence controls straight after `count $pits = 4`: `contains $rows "Pit CP2= | CP2=CP2 |"` and `contains $rows "Pit P1= | P1=P1 |"`.
+   - Header and EXPECTED say the two controls must pass before the order failure is credited.
+   - Which check fails and why: `matches $rows "Pit CP2= ... Pit P1= ..."` fails because the real order has P1 above CP2 (a reversed-expectation red, the same shape the reviewers accepted for N29). It is a CHECK. The presence controls make sure it is not failing just because a pit is missing.
+
+7. **N34_schedule_natural_order_p1a_sps_switch_on.case.txt** (C383BF06A108 to C4EC4AA9C3C9).
+   - The chain check now also demands P4, P5 and P6 present and in order (inserted between the P3 and P7 fragments).
+   - New check after the SPS10/SPS2 check: P1 immediately followed by P1A immediately followed by P2, with no other primary pit row in either gap (comma-qualified secondary rows are allowed). It is Codex's expression, character for character.
+   - A comment above it says why it was added.
+
+8. **N34_schedule_natural_order_p1a_sps_switch_on_BROKEN.case.txt** (2785BD62FEC1 to 14A88008ED79).
+   - Same P4/P5/P6 insertion in its chain check, and the same adjacency check after its SPS10/SPS2 check.
+   - Added three presence controls straight after `count $pits = 3`: `contains $rows` for the P1A, SPS2 and SPS10 rows. A comment says all three must pass before the order failures count as the red.
+   - EXPECTED now lists the adjacency check among the failures and the presence controls among the passes.
+   - Which checks fail and why: the chain check, the new adjacency check and both order checks, because with the switch off P1A, SPS10 and SPS2 sort after P10 by plain text. All are CHECK lines. The presence controls and the two placement checks pass.
+
+9. **Validate result (offline).** I first read `case_runner.ps1` (`Invoke-CaseRunnerMain`, `validate` branch) and `case_runner_lib.ps1` (`Read-CaseFile`, `Read-CaseSetup`, `Test-CaseFile`, `Test-CaseStepLine`). Validate only reads case and setup files, computes file hashes, checks that the fixture master exists and writes lines to the console. It starts no AutoCAD, takes no lock and writes no file. It does dot-source the driver library (`-Library` mode, which defines functions and runs nothing). Result, quoted: `8 file(s) checked, 0 invalid`, with every file listed as `ok`.
+   - Check counts after the edit: N31 19 checks, N31_BROKEN 7, N32 28, N32_BROKEN 5, N33 11, N33_BROKEN 6, N34 9, N34_BROKEN 10.
+   - Extra offline check: I ran the new N34 adjacency expression and chain in Python on made-up row text. A good order matched; Codex's counterexample (P4 sitting between P1 and P1A, P5 and P6 missing) and the switch-off order did not match; a comma-qualified secondary row between P1 and P1A still matched. This is only a sanity check of the logic, not parser or AutoCAD evidence. The files are plain ASCII with no control characters.
+
+10. **Cannot be done or not done, and why.**
+    - **Applied-tidy protection test for N31.** Codex says an apply test needs another known movable clash so the Yes question appears. I cannot invent that without a run, so nothing was added beyond the NOT_AUTOMATED line. It needs a later run to find such a clash.
+    - **Exact carry proof for N31.** Codex says the stored segment, T and offset are not exposed by any verb, so only the bounded movement check (more than 1 mm, at most 20 mm) is possible.
+    - **Block contents, attribute layers, layer-table colours and linetypes (N32).** No verb reads them. Recorded as NOT_AUTOMATED. A pit label's inner number text on a different layer would not be caught.
+    - **The spec's own profile-A claim for N31.** Codex says to change "the spec's profile-A claim". I was told to append only, so the body of this spec is unchanged. It still calls N31_BROKEN card D13's profile A. This amendment is the correction until the desk edits it.
+    - **Desk-side items from the review, not case text:** the true-red requirement that the `<= 20` check (not only the count line) fails in N31_BROKEN; the 20-of-40 scope question; the D13 and D05 recommendations for Tim; remembered-settings risk on the schedule drafts. None is changed here.
+    - **Not run, not accepted.** Nothing in this amendment has been seen in AutoCAD.
