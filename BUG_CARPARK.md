@@ -16896,6 +16896,10 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Steps to confirm in AutoCAD:** (1) On a drawing with a drawn Pit Schedule (PITSCHEDULE > put it on the drawing) that includes a pit C1 whose cells may be stale, EXPLODE another pit that has a pipe. (2) Read the command line. Right = one clear sentence about the exploded pit, with at most one short line about schedule cells left as drawn. Wrong = a run of repeated lines about another pit.
 
+**Also seen on ERASE (hand check H5, 29 Oct 2026):** erasing a pit with one pipe printed the useful sentence first and then the same eight 'Pit schedule cell for C1 ... not updated' lines, so it is every pit removal on this drawing, not only EXPLODE. Likely cause (not checked): C1's drawn schedule cells were already out of step with the record on this drawing.
+
+**Also seen on COPY (hand check H6, 29 Oct 2026):** a plain COPY of a pit printed "1 pit copied and numbered as new..." and then the same eight C1 lines. So it follows EVERY pit change on this drawing (EXPLODE, ERASE, COPY): the problem is probably C1's cells being stale in this one drawing, and the fix may be to say it once, plainly, or to explain what C1 needs.
+
 **Reference:** Tim's pasted command line, 29 Oct 2026, hand check H4 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md. Related: card D16 and robot cases N02 and N22 (they check the P3 / P8 sentence, not the lines before it).
 
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
