@@ -161,3 +161,7 @@ Not asked, because the rulebook already answers them: the 600 mm cover fallback 
 2. **Q3 brace over 2700 mm:** keeps its drawn length and WARNS (never cut): CL4 builds 'keep length and warn' (build/02 run 95).
 3. **Q1 UPVC speed:** 'whatever the design document from creative engineering says'. CE's own guide (Civil Stuff\CIVIL AND DRAINAGE DESIGN GUIDEBOOK.pdf, 33 pages) names NO maximum pipe speed: UNCONFIRMED. CL5 step 1 (one table read by every screen) is fine; do NOT lower Civil Design from 6 to 3 m/s (CL5 step 2) until Tim names the authority (CPAA Hydraulics Design Manual or AS/NZS 3500.3: the desk is asking him). Keep the 'Confirmed' tick OFF and warn plainly.
 4. **CL3 detention numbers to check as Settings values (from the guide):** minimum detention pipe grade 1:200 for pipes 225 and greater; an orifice is required only above 12 L/s.
+
+## UPDATE 29 Oct 2026 (guidebook v1.3 audit): correction to update item 4 above
+
+Item 4 ("minimum detention pipe grade 1:200 for pipes 225 and greater; an orifice is required only above 12 L/s") was read from guidebook v1 (33 pages). In v1.3 the 12 L/s rule is gone, and 1:200 is stated only for Darebin, Banyule, Manningham and Maroondah; the general rule is 1 in 100. Detail: `areas/GUIDEBOOK_V1_3_VS_CE_AUDIT_2026-10-29.md`. Item 3 (the guide names no maximum speed) is confirmed for v1.3.

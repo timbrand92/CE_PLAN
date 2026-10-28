@@ -121,3 +121,20 @@ is also a **council map** (§7.1.1), which answers how CE finds the right counci
    are they being added council by council as RFIs come in?
 4. **Pump: "the engineer determines the effective catchment"** — is that judgement, or is there a rule the plugin
    could offer as a starting point?
+
+---
+
+## 9. Addendum, 29 Oct 2026 (stage 1 audit; full detail in `areas/GUIDEBOOK_V1_3_VS_CE_AUDIT_2026-10-29.md`)
+
+What the 53-page PDF (every page rendered, every picture looked at) adds to or corrects in the notes above:
+
+1. **Version header.** The cover says 1.3; every page header says "Version 1.2". Same file, dated 5 Feb 2026.
+2. **Minimum pit depth table is derivable.** Every figure (459 to 1236) equals 300 mm cover plus the pipe's outside diameter minus its wall (outside minus inside diameter, halved), from the StormPro table on page 18. CE can calculate it from pipe data instead of holding a list.
+3. **Cover table is printed in full** (page 19, AS/NZS 3500.3 Table 6.2.5, "finished surface to top of pipe"): plastics 100 / 300 / 450 / 100 or 75 under pavement / 600 / 750.
+4. **The 1:200 detention grade is council-specific** in v1.3 (Darebin, Banyule, Manningham, Maroondah, pages 41 to 45); the general thumb rule is 1 in 100 (page 48). Manningham's own 2021 checklist says 1 in 180.
+5. **The book contradicts itself:** Casey (Boyd's in Table 1 on page 9, EDCM growth-area on page 46); Banyule (council-provided in Table 1, OSD4W on page 42); Manningham in two Table 1 groups; pervious C 0.3 in the text but 0.35 in the Boyd's sheet; "no detention pipes under garages" versus "pipes under the garage 150 UPVC SN8"; the Banyule "65%" has a blank symbol (Banyule's 2019 document says over 65%).
+6. **Rainfall in the book's sheets** (BOM, per site) is 5 to 8 per cent higher than CE's fixed Melbourne curve; CE's curve is 4 to 6 per cent higher than the OSD4W Melbourne zone the company prints. Numbers in the audit.
+7. **The book names no maximum or minimum pipe speed and no roughness** (searched). The 8 Oct Settings plan line "orifice only above 12 L/s; 1:200 for 225 and greater" was from v1 and is stale.
+8. **Pump sheet method (page 24):** one 2-hour 1-in-10 storm, 30 minutes pumped, wet well = shortfall or 1 per cent of the catchment (m3 per 100 m2), pervious 0.3 and impervious 0.9, 3 m3 stated as the Standard's minimum.
+9. **Soakage sheet (pages 26 to 27):** soil factor 0.5 / 1 / 2, set-backs 1 / 2 / 2 / 4 / 5 m by soil, 1-in-100 storm sweep, minimum 100 mm/h for Kingston, Frankston, Mornington.
+10. **Industrial rule (page 8):** detention only if the existing outlet stub carries less than the 1 in 10 flow; find the 1 in 100 overland path.
