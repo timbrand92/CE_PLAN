@@ -471,13 +471,60 @@
 
 # D. Run order for the robot (task 3)
 
-To be filled once the drafts pass the format check (section E).
+**When.** Only with no other AutoCAD running: the runner refuses to start beside another `acad.exe`, and yours (started 09:14) was open while I worked. So tonight after 5:30 pm once you have closed AutoCAD, or the weekend. Keep AutoCAD closed for at least 3 minutes between starts.
+
+**Build.** Read the installed Civil DLL version first (expected 3.0.85+09126560). Both passes of a case must be on that same build; if C-76 (3.0.86) installs mid-job, stop and start both passes again on it.
+
+**Order (most severe first, grouped by identical SETTING lines so one start covers several cases).** P02 (BUG-1140) and P01 (BUG-1194) are both MEDIUM; BUG-1140 is listed first. Inside one start the runner plays cases by their ORDER line (P01 then P02); since every case reopens a fresh copy, that order does not change any result.
+
+1. **Start 1, no SETTING lines (the shipped defaults): P02 and P01, first pass.**
+   1. **Command:** `pwsh -NoProfile -File "C:\Lisp Files\_ACAD_DRIVER\case_runner.ps1" run-pack "C:\Lisp Files\_ACAD_DRIVER\cases\drafts_pilot_29oct" -Only "P02,P01" -Tag p29a -NoRerun` (`-Only "P01"` matches only the non-broken file; the runner skips names ending `_BROKEN` for a short name).
+   2. **Expected minutes:** about 15 to 25 (AutoCAD start and calibration 3 to 5; P01 about 5 to 10, its CD and New Pipe took 45 s to 4 minutes under load before; P02 about 4 to 8). An estimate from README_CASES timing notes, not measured for these cases.
+2. **Start 2, two SETTING lines (`linking.pipeTextFollowsClickedLeg false` and `linking.sourceLabelOwnerCheck false`): both broken twins, once each.**
+   1. **Command:** `... run-pack "...\drafts_pilot_29oct" -Only "P02_pasted_downpipe_leaves_original_label_BROKEN,P01_cdtextseg_label_goes_to_clicked_leg_BROKEN" -Tag p29t -NoRerun` (full names, so no other file is caught).
+   2. **Why one start:** both twins carry the same two SETTING lines on purpose, so the guard sets both switches once. P01 places no downpipe and P02 runs no CDTEXTSEG, so neither line changes the other twin's result.
+   3. **Expected minutes:** about 15 to 25.
+   4. **Intended reds:** P01_BROKEN on `number $x2 < 166000`; P02_BROKEN on `number $d1 < 1`. A red on any other check means a broken route, not a proof.
+3. **Start 3, no SETTING lines: P02 and P01, second pass in a new AutoCAD start (tag p29b).** About 15 to 25 minutes.
+4. **Total:** about 50 to 85 minutes of AutoCAD time plus the gaps.
+
+**Which cases rewrite `%APPDATA%\TIM_CE_CADTOOLS\CD_RecentValues.json`.**
+1. **P01 and P01_BROKEN: yes.** The New Pipe window puts 18.000 and 17.800 at the front of the recent inverts.
+2. **P02 and P02_BROKEN: UNKNOWN.** DP was not traced to that file; treat it as possibly rewritten. Copy the file and record its SHA-256 before start 1 and after start 3; the desk decides whether to restore it.
+
+**Fix only mistakes in the draft text** (a wrong prompt word, a BLOCKED step, a wrong window or button name). Never weaken a check because CE behaves differently: report it. Each case header lists the outcomes that are findings, not edits.
 
 ---
 
-# E. Draft cases written today
+# E. Draft cases written today (folder `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_pilot_29oct\`, 4 files)
 
-To be filled after task 2.
+1. **P01 `P01_cdtextseg_label_goes_to_clicked_leg` (BUG-1194). Hash 6F7B249A8154; twin `P01_BROKEN` 3397202B3CD3.**
+   1. **Proves:** on a CE pipe with a 20 m leg then a 1 m leg (R39's own CD E route, passing on 3.0.85), CDTEXTSEG first sends the label to the short leg (a click right on it), then a click on the long leg 1 m from the bend brings it back beside the long leg (label x below 166000). On the old rule the short leg's middle is nearer that click, so the label would stay put.
+   2. **Rests on:** `CdCommand.Arrows.cs`, `PipeTextPlacementService.PromptMovePipeTextToSegment` and `PipeTextSegmentChooser.NearestSegmentToPick` at `09126560`; R39's evidence that the source line is replaced by the CE pipe (run `RUN-20261029-0727-C3.0.85-bX9`).
+   3. **DERIVED:** the two x bands and the count of "Pipe text moved." = 2.
+   4. **Does not prove:** how the label looks (Codex); the CD and Edit Pipe move-text question and the arrow placement callers; pipes on pits.
+   5. **Twin:** the switch OFF; the second click leaves the label on the short leg.
+2. **P02 `P02_pasted_downpipe_leaves_original_label` (BUG-1140, MOVE half). Hash 0F5D48A216B1; twin `P02_BROKEN` CB980017340D.**
+   1. **Proves:** DP1 placed on empty ground (N04's route, passing on 3.0.85), the block alone copied with COPYCLIP and pasted with PASTECLIP; MOVE of the pasted copy by 3 m leaves the original label within 1 mm; MOVE of the original by 2 m still takes its label 2 m.
+   2. **Rests on:** `LinkService.SourceLinkedObjectIsOwn` and `SourceLabelOwnerRule` at `09126560`; N04's run showing DP adds one block and one GUIDELINES text `DP` (run `RUN-20261029-0507-C3.0.85-bX2`).
+   3. **DERIVED:** that the GUIDELINES text is the label the downpipe's link points at; that MOVE of a pasted copy reaches the label at all (the carpark marks the MOVE trigger UNSURE).
+   4. **Does not prove:** the CDREPAIR half (its window is not on the robot's lists: Codex); a paste from another drawing; an old drawing whose labels have no owner note.
+   5. **Twin:** the switch OFF; the copy's MOVE should drag the original label. **If the twin passes, P02 cannot be accepted**: the MOVE trigger is not real on this build and BUG-1140 falls back to a Codex look.
+3. **Format check:** I read `case_runner.ps1` first: `validate` only parses files (`Read-CaseFile`, `Test-CaseFile`); its library is loaded with `-Library`, which "defines the functions and runs nothing". Run on the new folder at about 10:55: "4 file(s) checked, 0 invalid". The only `acad.exe` running was yours (pid 30056, started 09:14), before and after; no new one started.
+4. **Verbs used:** only verbs already in the runner (`type`, `esc-prompt`, `wait`, `sleep`, `ui2-set`, `ui-press`, `await-window-gone`, `ms-count`, `ms-new`, `select`, `field`, `dist`, `pick-first`, `copy-info`, `windows-snapshot`); typed words checked against the driver's deny list (COPYCLIP and PASTECLIP are not on it). No allow-list change, no non-ASCII character.
+
+**Why only 2 cases, not 8 to 12.** Of the 26 installed fixes, only these two have a route the robot can drive today without a new test drawing, another PC, a window it cannot read, or a reviewed runner change (section C lists what each of the other 24 needs). I did not pad the folder with cases that cannot prove their bug.
+
+---
+
+# F. Findings for the desk (RULES 6.2)
+
+1. **Two bug entries describe a check the built fix will not pass, so a case written from the entry would fail by design (not drafted):**
+   1. **BUG-1167:** the entry's step is "export the colleague defaults and read the file: folder paths blank or relative". PR #1754 does not change any export; it moves another person's folder paths onto this PC's profile at AutoCAD start. The colleague-defaults export (F-023) is recorded as not done in the readiness report. The entry's check needs rewriting to the fix report's second-login check.
+   2. **BUG-1149:** the entry expects "source bound" and "QA passes"; PR #1767 shows SOURCE NOT FOUND with a "frozen as placed" sentence and a QA warning that the QA gate still counts as not proven. Settle the wording with Tim's BIND answer before any case.
+2. **BUG-1202's own confirm step types LISP** (`(princ ...)`), which robot cases forbid; its check needs another route (a CE log line at start-up, read on a test profile).
+3. **The robot cannot reach 24 of the 26 installed pilot-critical fixes.** The quickest unlocks are four Codex-made test drawings and four reviewed allow-list edits (section C). Without them the pilot-critical score can move by at most 2 through the robot before 9 Nov.
+4. **PR #1748 (BUG-1138)** was merged at `990238b6`, not at the head `f9667b01` its batch 1 report names; the PR moved after the report. Harmless, noted so a reviewer compares the right head.
 
 ---
 
@@ -487,3 +534,12 @@ To be filled after task 2.
 2. **Switch values:** your `CD_Settings.json` has no entry for any of these keys, so the built-in default applies; I did not see CE read the file.
 3. **Nothing was run.** No AutoCAD, no runner, no Codex.
 4. **The readiness report's own times** (11:10 to 12:00) are later than this PC's clock when I read it (10:40 Melbourne); its content is unaffected.
+5. **The two drafts have never run.** Every DERIVED value in them (the x bands in P01; the label link and the MOVE trigger in P02) is from reading the source, not from AutoCAD. No independent review has been done; `PROVES_BUGS` and `REVIEWED_AGAINST` are left empty for the reviewer.
+6. **Minutes per start** are estimates from earlier robot timing notes, not measured for these cases.
+7. **Severity order** follows the triage's and the carpark's severity words; inside one severity the order is my judgement.
+
+---
+
+## Summary (under 100 words)
+
+0 of 60 pilot-critical bugs closed. 26 have a fix installed (checked in source, not the DLL); the robot can drive only 2 today, so I drafted those: P01 (BUG-1194, label to the clicked leg) and P02 (BUG-1140, pasted downpipe), each with a switch-off twin; format check 4 files, 0 invalid. 18 need a case (8 need test drawings or allow-list edits, 10 another PC or login), 6 a Codex look, 2 Tim's word, 32 have no installed fix. Not verified: nothing ran in AutoCAD; DERIVED values unproven; DLL versions not read.
