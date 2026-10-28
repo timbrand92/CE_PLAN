@@ -80,3 +80,8 @@ Tim: "yes" to reading "Council Feedback" for 2025 and 2026. Result, read-only, n
 3. **Councils could not be counted yet.** The simple text search picked up junk, so this chat does not claim any per-council figure. Needs a proper pass (council name from the letter head and the application-number pattern).
 4. **The 2026 jobs have no council folder files at all**, so recent letters (for example the three Kingston samples, kept in Tim's Downloads) are not yet filed in the job folders. Not checked where else they arrive (email?).
 Interpretation (guess): enough RFI letters exist (roughly 8 per year per folder pattern, plus the older years' "Council Feedback" and "From Council" folders) to learn from. Next step, if Tim wants it, is a proper read of all years by a builder with an anonymising output (council, request type, wording only).
+
+## PC-04 update 4 (Tim, 29 Oct)
+
+Tim: "looks like its from council"
+Interpretation (guess, the intake chat read it as an answer to "where do the RFIs live"): the council RFIs are in the job's "From Council" folder (Civil\From Council), the folder used by recent jobs; "Council Feedback" is the older name. CE should look in both, plus any date-named council RFI folder. Not yet answered: the full all-years read (the question is still with Tim) and where letters arrive before they are filed (the 2026 jobs have none filed).
