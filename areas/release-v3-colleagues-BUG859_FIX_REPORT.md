@@ -1,4 +1,4 @@
-# BUG-859 fix report: double-click on a downpipe opens AutoCAD's attribute editor instead of CE's Edit source (Thu 29 Oct 2026, about 10:15 Melbourne)
+# BUG-859 fix report: double-click on a downpipe opens AutoCAD's attribute editor instead of CE's Edit source (Thu 29 Oct 2026, about 09:45 Melbourne)
 
 ## ANSWER FIRST
 
