@@ -71,3 +71,50 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "do we do that in the non - ce plugin comps sheets? why should we add ?"
    2. Answer given to him: CE_PLAN does not show what other plugins' sheets print. Civil 3D calculates a hydraulic grade line (CE_VS_CIVIL3D_DRAINAGE_COMPARE_2026-10-10.md item 1), so its sheets have one; CE has none. Frankston, Banyule and Whitehorse ask for the HGL on the long section.
    3. Desk must: leave PR #1771 out until Tim says yes or no. Not a decision.
+
+## Batch 3 (about 10:30 Melbourne)
+
+14. **#1788 drainPluginOutbox fields and folder (QUESTIONS item 13).**
+   1. Tim's words: "no and yes" (answering: does "everything" include client names and drawing names? / can anyone besides you open the office IT folder?).
+   2. Interpretation (GUESS, he gave one word each): fields: NO, client names and drawing names do not leave the PC (the recommended short list: job number, command that failed, which PC). Folder: YES, other people can open the office IT folder, so nothing client-identifying may go there. Receiver stays Tim.
+   3. Desk must: keep the switch OFF until it is scheduled; when built, send only the short list; never delete anything unsent. If Tim meant the opposite, he will say.
+
+15. **BUG-1090 computations sheet line (QUESTIONS item 9): yes, every sheet.**
+   1. Tim's words: "do as you recommend" (recommended: print the line on every council sheet). He also asked: "i meant our current jobs where we dont use the or a plugin for computations ... how does our comp sheet look and how does our package compare to what is being sent out by our company now?" (his earlier question "do we do that in the non-CE plugin comps sheets?" meant the company's hand-made sheets for current jobs, not other software).
+   2. Interpretation: build PR #1771's line on every council sheet. The comparison of the CE sheet with the package the company sends now is a NEW request, not yet answered (see item 23).
+   3. Desk must: include PR #1771 in the next update after the usual review.
+
+16. **Rainfall curve note, BUG-866 (QUESTIONS 22 Oct late item 1).**
+   1. Tim's words: "leave them until you've checked the curve".
+   2. Interpretation: the curve numbers are NOT changed. He did not separately say yes or no to the new note wording ("may be high or low by up to about 8 per cent; storage moves about 2.5 times as much"). GUESS: build the note as a draft, since the old note ("7 to 9 per cent high") is wrong on the two Glen Eira sheets checked; the desk says so in the next report so Tim can object.
+   3. Desk must: check the curve against the guidebook and the council sheets (part of item 23), then report; change no curve value.
+
+17. **Cover to the outside of the pipe (QUESTIONS 22 Oct late item 2): yes.**
+   1. Tim's words: "yes, add the pipe wall: about 20 mm for UPVC 225 and about 45 mm for concrete 375".
+   2. Interpretation: cover is measured to the outside top of the pipe (AS/NZS 3500.3). The wall figures quoted are examples for those two pipes; the desk must take the wall thickness per size and material from the pipe data, not hard-code them (Settings-first R-00). GUESS: other sizes follow the same rule.
+   3. Desk must: build it with the wall thickness from Settings or pipe data; show cover before and after on one job; warn that a pipe at the minimum cover may newly warn.
+
+18. **Pit drop where the pipe gets bigger (QUESTIONS 22 Oct late item 3): yes.**
+   1. Tim's words: "yes".
+   2. Interpretation: warn (never block, R-27) when the outlet pipe top sits above the inlet pipe top at a pit, as well as when inverts are wrong.
+   3. Desk must: build the warning.
+
+19. **Minimum grade table (QUESTIONS 22 Oct late item 5): the guidebook decides.**
+   1. Tim's words: "review guidebook and save this guidebook in the memory of this plugin im sick of mentioning it and always being asked."
+   2. Interpretation: no number given. The Civil and Drainage Design Guidebook v1.3 is the authority for minimum grades; the desk takes the values from it, not from the old office table. Not a decision on 450 and larger until the review reports.
+   3. Desk must: read the guidebook for the minimum grade by size; show Tim the difference from the office table in Settings.
+
+20. **Unknown pipe material roughness, BUG-868 (QUESTIONS 23 Oct evening item 1): Settings roughness.**
+   1. Tim's words: "yes". Interpretation: use the Settings roughness (0.013) for an Unknown material. Desk must: keep the draft PR #1664 behaviour.
+
+21. **Wording (QUESTIONS 23 Oct evening item 2): "Unknown" everywhere.**
+   1. Tim's words: "yes". Desk must: use "Unknown" in messages for missing values.
+
+22. **Double-click on the green DP label, BUG-860 (QUESTIONS 22 Oct item 3): yes.**
+   1. Tim's words: "yes". Interpretation: opens the same Edit source window as the symbol, only when the label belongs to that downpipe; otherwise plain text edit. Desk must: build it.
+
+23. **STANDING RULING AND NEW REQUEST: the Civil and Drainage Design Guidebook v1.3.**
+   1. Tim's words: "review guidebook and save this guidebook in the memory of this plugin im sick of mentioning it and always being asked" and "i need you to compare all our engineering vs our current guidebook for design, then update our plugin to suit and then need to create a document with questions for civil engineers but it needs to have context and cant be super technical and with all this jargon it needs to be in simple english and qwuestions need to be studied before being actually added to this questions, then we need to update the guidebook to suit. make se you review images and text within it".
+   2. Where it is: `C:\Users\TimothyBrand\Creative Engineering\Creative Engineering - Engineering\Civil Stuff\Councils\CIVIL AND DRAINAGE DESIGN GUIDEBOOK.docx` and `... v1.3.pdf` (both dated 5 Feb 2026, 53 pages). CE_PLAN already holds notes on it: `02_COUNCIL_RULES\CE_GUIDEBOOK_V1_3_SUPERSEDES.md` (v1.3 wins over v1), `02_COUNCIL_RULES\CE_DESIGN_GUIDEBOOK_RULESET.md`, `COUNCIL_DIFF_V1_TO_V1_3.md`. Every session must read these and never ask Tim for the guidebook again.
+   3. Interpretation: four stages. (a) Compare all of CE's engineering (ENGINEERING_RULEBOOK, Settings values, code behaviour) against the guidebook text AND its images and tables. (b) Draft the plugin changes needed, as Settings values and cards; nothing is coded until the command review gate (cards, Tim's approval) is done, and nothing changes in the live bundle. (c) Write a plain-English questions document for civil engineers, each question studied and checked before it is added, with context and no jargon. (d) Update the guidebook to match what CE and the engineers settle on. GUESS: "update our plugin to suit" means guidebook-led values go into Settings with the guidebook as the source, not that CE overrides Tim's office rules without his word.
+   4. Desk must: start stage (a) in its own session (proposed as a card); report the CE comps sheet versus the package the company sends now (client material read locally only, nothing copied into a repo, rule 11).
