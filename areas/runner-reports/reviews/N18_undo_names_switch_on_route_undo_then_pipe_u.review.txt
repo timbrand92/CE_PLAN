@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D19 (DAILY_TOOLS_TEST_CASES_2026-10-23.md, UX-UNDO-01) profile B (both switches ON through the guard) and assertion 1 for a placed CD pipe, the line the Opus N27 review asked for N07; source CdCommand.CommandLineSpec.cs at 96455f13 (installed Civil 3.0.83); PROVES_BUGS none
+VERDICT CLAUDE-ACCEPTED-READY for N18's whole claim (switch-on setting): CD 150000,-85000 / 160000,-85000 / 165000,-87000 then U prints 'Undid: point 3 of the pipe route.', Enter finishes on two points, Start Pipe with 18.000 / 17.950 places exactly one pipe whose box starts at x 150000 and stays above y -86000 (read -85112.5, so point 3 is not in it), with IL 18.000 and IL 17.950, and one U echoes CD and leaves nothing new. On Civil 3.0.83+96455f13 / Manager 1.1.83 / Structural 1.0.125 (PASS RUN-20261028-1012-C3.0.83-n28c4-s1 and RUN-20261028-1127-C3.0.83-n28e3-s1, settings fingerprint differences 0 at the end; true red N18_BROKEN (no U) fails only 'count $after_u = 0' with 5 in RUN-20261028-0917-C3.0.83-n28a4-s1). NOT covered: Tim's own switches (N17), Esc after [Undo] (N07), REDO.
+CASE_SHA256_REVIEWED 3C39E3F9B3BBE647C4D727E5E436C35F57EC0BA240C76B9797ACDCED61E7ED2E
+DATE 2026-10-28 (Wed, about 12:20 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B2_28OCT.md, The cases item 4
+REVIEWER Opus-Team-B2-review
