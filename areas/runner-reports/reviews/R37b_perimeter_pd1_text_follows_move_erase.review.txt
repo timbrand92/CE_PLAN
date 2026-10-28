@@ -1,0 +1,6 @@
+REVIEWED_AGAINST BUG-236 in C:\CE_PLAN\BUG_CARPARK.md (test that catches it: erase / move / copy a perimeter drain); Codex asks cx_cr11, cx_cr18 and cx_cr22 item 1
+VERDICT CLAUDE-ACCEPTED-READY for PART only, on Civil 3.0.84+94f521cc (PASS RUN-20261028-1310-C3.0.84-b6a2-s1 and RUN-20261028-1418-C3.0.84-b6a3-s1, 21 of 21; true reds R37b_BROKEN and R37b_SIDE_BROKEN, flipped red R37b_COPY_BROKEN, all fail in both sessions). The part: after CDPERIMETER draws PD1, a COPY of the drain by 0,3000 says it is PD2 with its own record and adds one PD2 text 3000 higher at the same x (PD1 and PD2 are the only PD texts); a MOVE of the original by 0,1000 moves PD1 1000 up at the same x; ERASE of the original leaves no PD1 text; the copy's PD2 text stays exactly where it was. NOT accepted: the text height from Settings (surface.drainTagTextHeightMm; the runner cannot read an MText height), renumbering PD1 to another number, an independent read of the drain record (the own-record claim is CE's sentence), and any look.
+CASE_SHA256_REVIEWED 7DC161EA7A8A2B755A2E9AF1C02D9948E865E37D4A75AC612DE1F085089E6C3F
+DATE 2026-10-28 (Wed, about 15:00 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B6_28OCT.md, The cases item 4
+REVIEWER Opus-Team-B6-review

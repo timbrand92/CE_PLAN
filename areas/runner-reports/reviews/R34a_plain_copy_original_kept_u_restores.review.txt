@@ -1,0 +1,6 @@
+REVIEWED_AGAINST card D15 (DAILY_TOOLS_TEST_CASES_2026-10-23.md lines 458-482, UX-EDIT-02); Codex asks cx_cr10 and cx_cr22 items 5.3 and 5.4; source CopiedLevelsRule.cs at 94f521cc
+VERDICT CLAUDE-ACCEPTED-READY for PART of D15 only, on Civil 3.0.84+94f521cc (PASS RUN-20261028-1328-C3.0.84-b6b2-s1 and RUN-20261028-1353-C3.0.84-b6b3-s1, 18 of 18; true red R34a_NOU_BROKEN fails in both sessions). The part: D15 assertion 1 whole (the full "1 pit copied and numbered as new. Check levels: ..." sentence), D15 assertion 3 whole (one U brings back 1034 objects with the same handles in all three chunks), and assertion 2 except "free": the copy has one pit and one PIT LABEL reading a P number that is not P3, and the original label 109E08 reads P3 before, after the COPY and after the U. NOT accepted: that the copy's number is the next free number (only "not P3" is checked; it read P8 in every run, which is this drawing's first free number), the copy's levels, the schedule cells, and any look. Whole D15 needs the P8 check and two new sessions.
+CASE_SHA256_REVIEWED 1A7904894EE67E2D5FD81A0D1D89EEE07BFBC906F965415FAD82146A9D5399CD
+DATE 2026-10-28 (Wed, about 15:00 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B6_28OCT.md, The cases item 5
+REVIEWER Opus-Team-B6-review

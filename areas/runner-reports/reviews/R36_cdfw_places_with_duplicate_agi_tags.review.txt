@@ -1,0 +1,6 @@
+REVIEWED_AGAINST BUG-132 and BUG-102 in C:\CE_PLAN\BUG_CARPARK.md (CDFW portion); card D07 neighbour only; Codex asks cx_cr10 and cx_cr21 item 4
+VERDICT CLAUDE-ACCEPTED-READY for PART only, on Civil 3.0.84+94f521cc (PASS RUN-20261028-1310-C3.0.84-b6a2-s1 and RUN-20261028-1418-C3.0.84-b6a3-s1, 21 of 21; true red R36_BROKEN, flipped red R36_AGI_BROKEN, both fail in both sessions). The part: CDFW at a point in open space on a drawing whose four blocks share the tag AGI places one FLOOR WASTE block on DOWNPIPES and one text reading exactly FW on GUIDELINES, with no "could not be verified", no "more than one source" and no roll-back; one U (echo CDFW) brings the object count back; CDFW ended with Esc at its point places nothing. NOT accepted: CDSOURCE, BUG-102's original 12 pit / 50 pipe drawing, a point on a pipe end or inspection opening (BUG-1223, case R36e, real fault), excluded-pipe diagnostics, retagging, BUG-650, the block position, and any look. Card D07 gets no credit.
+CASE_SHA256_REVIEWED 68100FB1BBAB0174439D789B64AEE30F8FEDB907593D63BE997FCCE87023C870
+DATE 2026-10-28 (Wed, about 15:00 Melbourne)
+DETAIL C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B6_28OCT.md, The cases item 3
+REVIEWER Opus-Team-B6-review
