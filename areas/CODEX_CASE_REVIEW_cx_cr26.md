@@ -29,7 +29,7 @@ Read rules, cards/bugs, cases/twins, installed DLLs, fresh hashes, ledger and re
    6. **Older pair, R33/R36/R37b:** `RUN-20261028-1310-C3.0.84-b6a2-s1` and `RUN-20261028-1418-C3.0.84-b6a3-s1`; packs 13:10:29-13:25:29 / 14:18:49-14:34:09, at each finish. Historical part evidence only.
 8. **Hash/failure audit:** 1,385 ledger rows in the snapshot. Every counted row equals my fresh Get-FileHash SHA-256. No current-hash FAIL on 3.0.85 for these six. Old-text rows excluded: R32 5, R33 10, R33m 0, R36 9, R37b 8, R34sn 9. Current-text R32/R33m failures on 3.0.84 are historical, not standing current-build failures.
 9. **Excluded install-straddling pack:** b6b1 began 28 Oct 12:42:58 and ended 13:06:53, across the 3.0.84 install. Rows say 3.0.83 at 13:06:53. Its first session ended 12:58:19; later sessions started 12:59:59 and 13:03:38. I count none of it under the brief's row-time rule.
-10. **Live hashes, first 12 characters:** R33 `EC16A6B2B6C2`; R33m `F9DDB36AE114`; R36 `68100FB1BBAB`; R37b `7DC161EA7A8A`; R32 `B441549C8A69`; R34sn `F8A2788F0DEC`. R33m lives under cases/variants but has CASE R33m and no VARIANT_OF. None of these six or their reviewed broken twins references a SETUP; run setup fields are empty. There is no referenced setup to hash. 
+10. **Live hashes, first 12 characters:** R33 `EC16A6B2B6C2`; R33m `F9DDB36AE114`; R36 `68100FB1BBAB`; R37b `7DC161EA7A8A`; R32 `B441549C8A69`; R34sn `F8A2788F0DEC`. R33m lives under cases/variants but has CASE R33m and no VARIANT_OF. None of these six or their reviewed broken twins references a SETUP; run setup fields are empty. There is no referenced setup to hash.
 11. **Reds checked against current hashes and failing assertions:**
    1. **R33:** R33_BROKEN `696221D5C1BB`, no lock: missing refusal, count 1035 instead of 1034. R33_NUM_BROKEN `5085519BBD1C`, expects P3 while reading P8: **flipped red**. Both VARIANT_OF R33, FAIL/from_check true in b6a2/b6a3 on 3.0.84.
    2. **R36:** R36_BROKEN `6D5FBC221FFB`, Escape instead of placement: no placement line and zero blocks. R36_AGI_BROKEN `748A61AEEC08`, expects five AGI blocks instead of four: **flipped red**. Both VARIANT_OF R36, FAIL/from_check true in b6a2/b6a3.
@@ -118,7 +118,7 @@ Read rules, cards/bugs, cases/twins, installed DLLs, fresh hashes, ledger and re
 ## Files written
 
 1. **Report only:** C:\CE_PLAN\areas\CODEX_CASE_REVIEW_cx_cr26.md. All six existing Opus slips match and remain untouched. No case, variant, setup, ledger, run report, staged edit, settings, bug entry, DESK_LOG or QUEUE changed.
-2. **Delivery:** stage/commit this report by name only; fetch, merge origin/main and push through the existing leak-scan hook. Other jobs' changes are excluded.
+2. **Delivery:** this report alone is committed by name; merge/push use the existing leak-scan hook.
 
 ## Summary
 
