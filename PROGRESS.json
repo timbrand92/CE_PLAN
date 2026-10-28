@@ -1,0 +1,9 @@
+{
+  "built": {"done": 300, "of": 548},
+  "tested": {"done": 12, "of": 548},
+  "dailyTools": {"claudeAccepted": {"done": 18, "of": 40}, "timConfirmed": 3},
+  "installed": "Civil 3.0.85 · Manager 1.1.85 · Structural 1.0.125",
+  "waiting": "Train C-76 (fixes for BUG-1228, 1229, 859, 372, 090), not built or installed",
+  "planCountedAt": "2026-10-28T18:12:00+11:00",
+  "countedAt": "2026-10-29T09:53:00+11:00"
+}

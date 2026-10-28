@@ -34,3 +34,6 @@ Hand-offs go through files: a bug found by testing goes in BUG_CARPARK.md (next 
 5. CE 04 Questions for Tim: local_670b1ff9-0cc3-488c-af9b-3bd7101d4daa
 6. CE 05 Carpark and Planning: local_ac2aa50f-4722-46ea-a561-fefdf0849310
 
+
+## Rule 8 (Tim, relayed from TimOS 29 Oct): progress and usage files
+Each time anyone recounts the plan numbers or reads the usage meters, also rewrite C:\CE_PLAN\PROGRESS.json (built / tested of the 548-item plan, dailyTools claudeAccepted and timConfirmed, installed line, waiting line, countedAt, planCountedAt) and C:\CE_PLAN\USAGE.json (accounts Main = Max, Team, Codex: fiveHour, week, readAt) with the REAL figures and push them by name. Unknown stays null, never 0 (the Team week 41 is from 28 Oct 18:10 and stale until Tim logs in again). The Control Room does this at its hourly check; CE 01 and CE 02 refresh it when they move a number.
