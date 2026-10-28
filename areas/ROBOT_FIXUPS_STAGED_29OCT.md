@@ -514,3 +514,245 @@ Copy-Item "$S\controls\C36e_cdfw_opening_switch_off.case.txt"                  "
 ## Summary (under 100 words)
 
 Staged one edit pass in `C:\ce-fx\c75fixups_staged\`: 13 case files edited plus a new twin R34so_OFF_BROKEN, live files untouched. ROTATE Copy cases now read the copy's label (P8, P11, P12, marked DERIVED); R33m checks "no cover text"; six stale expected-fail tags removed; R34s_OFF_BROKEN turns the new switch off; four controls got VARIANT_OF; N24 gained three every-label checks. All 14 pass the offline checker. The apply is 14 copy commands, not run. Next: fresh double runs on 8 cases and 6 twins or controls.
+
+---
+
+## R36e family after Tim's ruling (CE 02, 29 Oct)
+
+### ANSWER FIRST (for Tim)
+
+1. **The four floor-waste-on-an-inspection-opening checks are rewritten, in a staging folder only.** They now say what you ruled: CE refuses, plainly, and nothing is placed. Example: at the first opening the check now looks for "IO1 is already at this point, and a new source cannot sit on top of it." and counts zero floor waste blocks and zero FW texts.
+2. **Nothing live was touched and AutoCAD was not started.** The live case files are unchanged (checked by hash). The offline checker passes all five files.
+3. **Nothing is accepted yet.** These cases still need two fresh AutoCAD starts on Civil 3.0.85 each, their switch-off twin showing red, and a fresh independent review. That happens in a free window.
+4. **Your words behind it:** "as recommended" (item 4 of `C:\CE_PLAN\decisions\2026-10-29_TIM_ANSWERS.md`): no floor waste on top of an inspection opening; CE keeps its plain refusal.
+
+### What was edited (staged copies only, in `C:\ce-fx\c75fixups_staged\`)
+
+1. **R36e** (`cases\R36e_cdfw_at_pipe_end_claim.case.txt`, opening IO1): SHA-256 first 12 before **F257C55D135C**, after **DDA649CC47A0**.
+2. **R36e_p2** (`variants\R36e_p2_cdfw_inspection_opening_2.case.txt`, IO2): before **F1F9F0FD3DCB**, after **323BEA524023**.
+3. **R36e_p3** (`variants\R36e_p3_cdfw_inspection_opening_3.case.txt`, IO3): before **9DBF33D1FD64**, after **730C33D23AA9**.
+4. **R36e_p4** (`variants\R36e_p4_cdfw_inspection_opening_4.case.txt`, IO4): before **2DF642D424AA**, after **04C4E78F8A34**.
+5. **C36e** (`controls\C36e_cdfw_opening_switch_off.case.txt`, the switch-OFF control): live before **71BB3540DA97**; staged before this job **895539A2D84B** (the earlier staging pass had already added `VARIANT_OF R36e`); after **FC5C7C905431**.
+
+What changed in each of the four R36e files:
+
+1. `contains $fw "Floor waste placed."` became `contains $fw "IOn is already at this point, and a new source cannot sit on top of it."`
+2. `count $fwb = 1` became `count $fwb = 0`, and `count $fwt = 1` became `count $fwt = 0`.
+3. The three not-contains checks (no "Civil record changed", no "rolled back", no "more than one source") are kept exactly. No check was weakened or removed; the other checks (window check, `copy-unchanged`, the five `record` lines) are untouched.
+4. `EXPECT-FAIL BUG-1223` deleted; the empty `BUG` line is now `BUG BUG-1223`.
+5. TITLE, PLAN_ITEM, EXPECTED, REVIEWED_AGAINST, the header comment and the two NOT_AUTOMATED notes now describe the refusal and Tim's ruling. REVIEWED_AGAINST says a fresh independent review of the revised hash is required.
+
+What changed in C36e: it already carried `VARIANT_OF R36e`. I also mirrored the new checks and wording from R36e so it remains a true copy (it still has the `SETTING ... sourcePickComparesPipeRecordLikeForLike false` line, an empty `BUG` and `EXPECT-FAIL BUG-1223`, like C32 and C34). Check 2 (`not-contains $fw "Civil record changed"`) is kept, so with the switch OFF it must still FAIL there because the false "record changed" sentence returns. This mirroring goes slightly beyond the Opus review, which asked only for `VARIANT_OF`; say so if you want it reverted to the one-line change.
+
+**The IO numbers are confirmed, not guessed.** The exact sentences, with the right opening number, were read in the recorded 3.0.85 runs (`runner-reports\RUN-20261029-0244-C3.0.85-c1a1.json` and `RUN-20261029-0259-C3.0.85-c1a2.json`): point 51777.389,-46593.223 gives IO1; 51777.389,-30233.425 gives IO2; 55879.087,-30233.481 gives IO3; 80936.111,-30304.267 gives IO4. Nothing here is marked DERIVED. The case files keep a line saying where the numbering was read.
+
+### Offline validate (nothing started, nothing written)
+
+I read `case_runner.ps1` first. The `validate` branch (line 422) only lists case files, reads each one, hashes it and checks it against the vocabulary and the fixture master's presence; it starts no AutoCAD, takes no lock and writes nothing but console text (the AutoCAD driver is only loaded as a library of functions, `-Library` runs nothing). Results:
+
+1. `validate C:\ce-fx\c75fixups_staged\cases`: `ok R36e_cdfw_at_pipe_end_claim.case.txt (R36e: 11 steps, 13 checks)`; "8 file(s) checked, 0 invalid".
+2. `validate C:\ce-fx\c75fixups_staged\variants`: `ok` for R36e_p2, R36e_p3 and R36e_p4 (11 steps, 13 checks each); "6 file(s) checked, 0 invalid".
+3. `validate C:\ce-fx\c75fixups_staged\controls`: `ok C36e_cdfw_opening_switch_off.case.txt (C36e: 11 steps, 13 checks)`; "4 file(s) checked, 0 invalid".
+
+### Diffs (unified, zero context; long header lines are shown in full)
+
+#### cases/R36e_cdfw_at_pipe_end_claim.case.txt
+```diff
+@@ -1 +1 @@
+-# R36e = the endpoint-claim half of R36. Owner: BUG-1223 (the false refusal "A nearby pipe's Civil record changed while you picked"); BUG-147 (CDFW / CDSOURCE rolled back on a duplicate AGI tag via endpoint claims) is related only; BUG-132 and BUG-102 are in R36. Added by the batch 3 fixes job of 25 Oct 2026 from the batch 3 review (RUNNER_CASE_REVIEW_B3_2026-10-25.md item 7, gap 2). R36's floor waste is placed at 150000,-98000 where CE says "Nothing nearby", so no pipe end is claimed. R36e types the floor waste AT inspection opening 108F55 of DRV1_B1 (51777.389,-46593.223), a block that sits on pipe ends, so CE has to look at the pipes around it. On Civil 3.0.75 (probe b3p1 to b3p3) CE answers "[CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc." and places nothing, at all four openings tried (108F55, 108F67, 108F79, 108F8B). This case asserts the CORRECT result (a floor waste is placed and no such refusal), so it is expected to FAIL until that is fixed. Which four blocks carry the AGI tag is not readable by a case (the blocks hold no attributes); the case therefore does not claim these openings are the AGI ones.
++# R36e = the endpoint-claim half of R36. Owner: BUG-1223 (the false refusal "A nearby pipe's Civil record changed while you picked"); BUG-147 (CDFW / CDSOURCE rolled back on a duplicate AGI tag via endpoint claims) is related only; BUG-132 and BUG-102 are in R36. Added by the batch 3 fixes job of 25 Oct 2026 from the batch 3 review (RUNNER_CASE_REVIEW_B3_2026-10-25.md item 7, gap 2). R36's floor waste is placed at 150000,-98000 where CE says "Nothing nearby", so no pipe end is claimed. R36e types the floor waste AT inspection opening 108F55 of DRV1_B1 (51777.389,-46593.223), a block that sits on pipe ends, so CE has to look at the pipes around it. On Civil 3.0.75 (probe b3p1 to b3p3) CE answers "[CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc." and places nothing, at all four openings tried (108F55, 108F67, 108F79, 108F8B). Tim ruled on 29 Oct 2026 (C:\CE_PLAN\decisions\2026-10-29_TIM_ANSWERS.md item 4, his words 'as recommended'): a floor waste is NOT allowed on top of an inspection opening, and CE keeps its plain refusal. On Civil 3.0.85 CE says '[CE] IO1 is already at this point, and a new source cannot sit on top of it. Move clear of IO1 and pick again, or press Esc.' (read in the c1a and c1b runs of 29 Oct). This case therefore asserts the refusal and that nothing is placed, and it must PASS on 3.0.85 (rewritten 29 Oct 2026, CE 02 robot job; the old false 'Civil record changed' refusal must stay absent). Which four blocks carry the AGI tag is not readable by a case (the blocks hold no attributes); the case therefore does not claim these openings are the AGI ones.
+@@ -3,2 +3,2 @@ CASE R36e
+-TITLE CDFW typed at an inspection opening that sits on pipe ends places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)
+-PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same
++TITLE CDFW typed at an inspection opening that sits on pipe ends is refused with CE's plain 'IO1 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)
++PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same
+@@ -11,4 +11,3 @@ TIMEOUT 600
+-BUG
+-EXPECT-FAIL BUG-1223
+-REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.
+-EXPECTED CDFW with the point 51777.389,-46593.223 (inspection opening 108F55, on pipe ends) prints "Floor waste placed." and adds exactly one FLOOR WASTE block and one text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
++BUG BUG-1223
++REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.
++EXPECTED CDFW with the point 51777.389,-46593.223 (inspection opening 108F55, on pipe ends) is refused with "IO1 is already at this point, and a new source cannot sit on top of it." and adds no FLOOR WASTE block and no text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
+@@ -16,2 +15,2 @@ WHY_NOT_UNIT_TEST The claim of a pipe end by a block runs against the real pits,
+-NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.
+-NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
++NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.
++NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
+@@ -31 +30 @@ ASSERT
+-  contains $fw "Floor waste placed."
++  contains $fw "IO1 is already at this point, and a new source cannot sit on top of it."
+@@ -35,2 +34,2 @@ ASSERT
+-  count $fwb = 1
+-  count $fwt = 1
++  count $fwb = 0
++  count $fwt = 0
+```
+
+#### variants/R36e_p2_cdfw_inspection_opening_2.case.txt
+```diff
+@@ -1 +1 @@
+-# R36e_p2 (batch 6, 28 Oct 2026, Codex cx_cr11 and cx_cr21): the same case as R36e at another inspection opening of DRV1_B1, typed point 51777.389,-30233.425. Fresh drawing for each, so no prompt state carries over. Owner BUG-1223; expected to FAIL while the refusal exists.
++# R36e_p2 (batch 6, 28 Oct 2026, Codex cx_cr11 and cx_cr21): the same case as R36e at another inspection opening of DRV1_B1, typed point 51777.389,-30233.425. Fresh drawing for each, so no prompt state carries over. Owner BUG-1223; rewritten 29 Oct 2026 after Tim's ruling (item 4 of 2026-10-29_TIM_ANSWERS.md, 'as recommended'): a floor waste is NOT allowed on an inspection opening, so this case asserts CE's refusal (IO sentence below) and that nothing is placed; it must PASS on 3.0.85.
+@@ -3,2 +3,2 @@ CASE R36e_p2
+-TITLE CDFW typed at another inspection opening (51777.389,-30233.425) places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)
+-PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same
++TITLE CDFW typed at another inspection opening (51777.389,-30233.425) is refused with CE's plain 'IO2 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)
++PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same
+@@ -11,4 +11,3 @@ TIMEOUT 600
+-BUG
+-EXPECT-FAIL BUG-1223
+-REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.
+-EXPECTED CDFW with the point 51777.389,-30233.425 (an inspection opening on pipe ends) prints "Floor waste placed." and adds exactly one FLOOR WASTE block and one text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
++BUG BUG-1223
++REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.
++EXPECTED CDFW with the point 51777.389,-30233.425 (an inspection opening on pipe ends) is refused with "IO2 is already at this point, and a new source cannot sit on top of it." and adds no FLOOR WASTE block and no text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
+@@ -16,2 +15,2 @@ WHY_NOT_UNIT_TEST The claim of a pipe end by a block runs against the real pits,
+-NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.
+-NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
++NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.
++NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
+@@ -31 +30 @@ ASSERT
+-  contains $fw "Floor waste placed."
++  contains $fw "IO2 is already at this point, and a new source cannot sit on top of it."
+@@ -35,2 +34,2 @@ ASSERT
+-  count $fwb = 1
+-  count $fwt = 1
++  count $fwb = 0
++  count $fwt = 0
+```
+
+#### variants/R36e_p3_cdfw_inspection_opening_3.case.txt
+```diff
+@@ -1 +1 @@
+-# R36e_p3 (batch 6, 28 Oct 2026, Codex cx_cr11 and cx_cr21): the same case as R36e at another inspection opening of DRV1_B1, typed point 55879.087,-30233.481. Fresh drawing for each, so no prompt state carries over. Owner BUG-1223; expected to FAIL while the refusal exists.
++# R36e_p3 (batch 6, 28 Oct 2026, Codex cx_cr11 and cx_cr21): the same case as R36e at another inspection opening of DRV1_B1, typed point 55879.087,-30233.481. Fresh drawing for each, so no prompt state carries over. Owner BUG-1223; rewritten 29 Oct 2026 after Tim's ruling (item 4 of 2026-10-29_TIM_ANSWERS.md, 'as recommended'): a floor waste is NOT allowed on an inspection opening, so this case asserts CE's refusal (IO sentence below) and that nothing is placed; it must PASS on 3.0.85.
+@@ -3,2 +3,2 @@ CASE R36e_p3
+-TITLE CDFW typed at another inspection opening (55879.087,-30233.481) places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)
+-PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same
++TITLE CDFW typed at another inspection opening (55879.087,-30233.481) is refused with CE's plain 'IO3 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)
++PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same
+@@ -11,4 +11,3 @@ TIMEOUT 600
+-BUG
+-EXPECT-FAIL BUG-1223
+-REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.
+-EXPECTED CDFW with the point 55879.087,-30233.481 (an inspection opening on pipe ends) prints "Floor waste placed." and adds exactly one FLOOR WASTE block and one text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
++BUG BUG-1223
++REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.
++EXPECTED CDFW with the point 55879.087,-30233.481 (an inspection opening on pipe ends) is refused with "IO3 is already at this point, and a new source cannot sit on top of it." and adds no FLOOR WASTE block and no text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
+@@ -16,2 +15,2 @@ WHY_NOT_UNIT_TEST The claim of a pipe end by a block runs against the real pits,
+-NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.
+-NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
++NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.
++NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
+@@ -31 +30 @@ ASSERT
+-  contains $fw "Floor waste placed."
++  contains $fw "IO3 is already at this point, and a new source cannot sit on top of it."
+@@ -35,2 +34,2 @@ ASSERT
+-  count $fwb = 1
+-  count $fwt = 1
++  count $fwb = 0
++  count $fwt = 0
+```
+
+#### variants/R36e_p4_cdfw_inspection_opening_4.case.txt
+```diff
+@@ -1 +1 @@
+-# R36e_p4 (batch 6, 28 Oct 2026, Codex cx_cr11 and cx_cr21): the same case as R36e at another inspection opening of DRV1_B1, typed point 80936.111,-30304.267. Fresh drawing for each, so no prompt state carries over. Owner BUG-1223; expected to FAIL while the refusal exists.
++# R36e_p4 (batch 6, 28 Oct 2026, Codex cx_cr11 and cx_cr21): the same case as R36e at another inspection opening of DRV1_B1, typed point 80936.111,-30304.267. Fresh drawing for each, so no prompt state carries over. Owner BUG-1223; rewritten 29 Oct 2026 after Tim's ruling (item 4 of 2026-10-29_TIM_ANSWERS.md, 'as recommended'): a floor waste is NOT allowed on an inspection opening, so this case asserts CE's refusal (IO sentence below) and that nothing is placed; it must PASS on 3.0.85.
+@@ -3,2 +3,2 @@ CASE R36e_p4
+-TITLE CDFW typed at another inspection opening (80936.111,-30304.267) places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)
+-PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same
++TITLE CDFW typed at another inspection opening (80936.111,-30304.267) is refused with CE's plain 'IO4 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)
++PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same
+@@ -11,4 +11,3 @@ TIMEOUT 600
+-BUG
+-EXPECT-FAIL BUG-1223
+-REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.
+-EXPECTED CDFW with the point 80936.111,-30304.267 (an inspection opening on pipe ends) prints "Floor waste placed." and adds exactly one FLOOR WASTE block and one text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
++BUG BUG-1223
++REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.
++EXPECTED CDFW with the point 80936.111,-30304.267 (an inspection opening on pipe ends) is refused with "IO4 is already at this point, and a new source cannot sit on top of it." and adds no FLOOR WASTE block and no text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
+@@ -16,2 +15,2 @@ WHY_NOT_UNIT_TEST The claim of a pipe end by a block runs against the real pits,
+-NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.
+-NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
++NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.
++NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
+@@ -31 +30 @@ ASSERT
+-  contains $fw "Floor waste placed."
++  contains $fw "IO4 is already at this point, and a new source cannot sit on top of it."
+@@ -35,2 +34,2 @@ ASSERT
+-  count $fwb = 1
+-  count $fwt = 1
++  count $fwb = 0
++  count $fwt = 0
+```
+
+#### controls/C36e_cdfw_opening_switch_off.case.txt
+```diff
+@@ -1,2 +1,2 @@
+-# C-75 control (Claude Team robot, 29 Oct 2026): copy of R36e_cdfw_at_pipe_end_claim.case.txt with the new switch linking.sourcePickComparesPipeRecordLikeForLike turned OFF through the settings guard. The original failure must come back.
+-# R36e = the endpoint-claim half of R36. Owner: BUG-1223 (the false refusal "A nearby pipe's Civil record changed while you picked"); BUG-147 (CDFW / CDSOURCE rolled back on a duplicate AGI tag via endpoint claims) is related only; BUG-132 and BUG-102 are in R36. Added by the batch 3 fixes job of 25 Oct 2026 from the batch 3 review (RUNNER_CASE_REVIEW_B3_2026-10-25.md item 7, gap 2). R36's floor waste is placed at 150000,-98000 where CE says "Nothing nearby", so no pipe end is claimed. R36e types the floor waste AT inspection opening 108F55 of DRV1_B1 (51777.389,-46593.223), a block that sits on pipe ends, so CE has to look at the pipes around it. On Civil 3.0.75 (probe b3p1 to b3p3) CE answers "[CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc." and places nothing, at all four openings tried (108F55, 108F67, 108F79, 108F8B). This case asserts the CORRECT result (a floor waste is placed and no such refusal), so it is expected to FAIL until that is fixed. Which four blocks carry the AGI tag is not readable by a case (the blocks hold no attributes); the case therefore does not claim these openings are the AGI ones.
++# C-75 control (Claude Team robot, 29 Oct 2026; assertions mirrored from the rewritten R36e on 29 Oct after Tim's ruling): copy of R36e_cdfw_at_pipe_end_claim.case.txt with the new switch linking.sourcePickComparesPipeRecordLikeForLike turned OFF through the settings guard. The original failure must come back.
++# R36e = the endpoint-claim half of R36. Owner: BUG-1223 (the false refusal "A nearby pipe's Civil record changed while you picked"); BUG-147 (CDFW / CDSOURCE rolled back on a duplicate AGI tag via endpoint claims) is related only; BUG-132 and BUG-102 are in R36. Added by the batch 3 fixes job of 25 Oct 2026 from the batch 3 review (RUNNER_CASE_REVIEW_B3_2026-10-25.md item 7, gap 2). R36's floor waste is placed at 150000,-98000 where CE says "Nothing nearby", so no pipe end is claimed. R36e types the floor waste AT inspection opening 108F55 of DRV1_B1 (51777.389,-46593.223), a block that sits on pipe ends, so CE has to look at the pipes around it. On Civil 3.0.75 (probe b3p1 to b3p3) CE answers "[CE] A nearby pipe's Civil record changed while you picked. Pick again, or press Esc." and places nothing, at all four openings tried (108F55, 108F67, 108F79, 108F8B). Tim ruled on 29 Oct 2026 (C:\CE_PLAN\decisions\2026-10-29_TIM_ANSWERS.md item 4, his words 'as recommended'): a floor waste is NOT allowed on top of an inspection opening, and CE keeps its plain refusal. On Civil 3.0.85 CE says '[CE] IO1 is already at this point, and a new source cannot sit on top of it. Move clear of IO1 and pick again, or press Esc.' (read in the c1a and c1b runs of 29 Oct). This case therefore asserts the refusal and that nothing is placed, and the main case R36e must PASS on 3.0.85, while this switch-OFF control must still FAIL check 2 because the false record-changed sentence returns (rewritten 29 Oct 2026, CE 02 robot job; the old false 'Civil record changed' refusal must stay absent). Which four blocks carry the AGI tag is not readable by a case (the blocks hold no attributes); the case therefore does not claim these openings are the AGI ones.
+@@ -4,2 +4,2 @@ CASE C36e
+-TITLE CDFW typed at an inspection opening that sits on pipe ends places a floor waste (no 'Civil record changed while you picked' refusal, no rollback)
+-PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the refusal seen here); BUG-147 is related, not the same
++TITLE CDFW typed at an inspection opening that sits on pipe ends is refused with CE's plain 'IO1 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)
++PLAN_ITEM CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same
+@@ -15,2 +15,3 @@ EXPECT-FAIL BUG-1223
+-REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; independent review required for the revised hash; BUG-147 is related only.
+-EXPECTED CDFW with the point 51777.389,-46593.223 (inspection opening 108F55, on pipe ends) prints "Floor waste placed." and adds exactly one FLOOR WASTE block and one text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
++VARIANT_OF R36e
++REVIEWED_AGAINST builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.
++EXPECTED CDFW with the point 51777.389,-46593.223 (inspection opening 108F55, on pipe ends) is refused with "IO1 is already at this point, and a new source cannot sit on top of it." and adds no FLOOR WASTE block and no text FW; it does not print "A nearby pipe's Civil record changed", "rolled back" or "more than one source". The drawing file on disk is unchanged.
+@@ -18,2 +19,2 @@ WHY_NOT_UNIT_TEST The claim of a pipe end by a block runs against the real pits,
+-NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed while the fault exists.
+-NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim has not recorded whether a floor waste may be placed at an inspection opening; no approved refusal sentence and no pipe-connection reader exist). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
++NOT_AUTOMATED Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has "Landing index changed between preview and pick" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.
++NOT_AUTOMATED BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven.
+@@ -33 +34 @@ ASSERT
+-  contains $fw "Floor waste placed."
++  contains $fw "IO1 is already at this point, and a new source cannot sit on top of it."
+@@ -37,2 +38,2 @@ ASSERT
+-  count $fwb = 1
+-  count $fwt = 1
++  count $fwb = 0
++  count $fwt = 0
+```
+
+(The C36e diff is against the live file, so it also shows the `VARIANT_OF R36e` line added by the earlier staging pass.)
+
+### Exact copy commands (staged to live; NOT run)
+
+```powershell
+$S = 'C:\ce-fx\c75fixups_staged'; $L = 'C:\Lisp Files\_ACAD_DRIVER\cases'
+Copy-Item "$S\cases\R36e_cdfw_at_pipe_end_claim.case.txt"            "$L\R36e_cdfw_at_pipe_end_claim.case.txt"
+Copy-Item "$S\variants\R36e_p2_cdfw_inspection_opening_2.case.txt"    "$L\variants\R36e_p2_cdfw_inspection_opening_2.case.txt"
+Copy-Item "$S\variants\R36e_p3_cdfw_inspection_opening_3.case.txt"    "$L\variants\R36e_p3_cdfw_inspection_opening_3.case.txt"
+Copy-Item "$S\variants\R36e_p4_cdfw_inspection_opening_4.case.txt"    "$L\variants\R36e_p4_cdfw_inspection_opening_4.case.txt"
+Copy-Item "$S\controls\C36e_cdfw_opening_switch_off.case.txt"         "$L\controls\C36e_cdfw_opening_switch_off.case.txt"
+```
+
+1. **Check after copying:** hash each live file; the first 12 characters must equal the "after" hashes above. Then run `validate` on `C:\Lisp Files\_ACAD_DRIVER\cases`, its `variants` and its `controls` folder.
+2. **Undo:** the untouched originals of the four R36e files are in `C:\ce-fx\c75fixups_staged\_orig\` (hashes equal the "before" list). The control's original is `_orig\controls\C36e_cdfw_opening_switch_off.case.txt` (71BB3540DA97). Copy them back.
+3. **Do not copy while a runner chain is going** (RULES 8.3). Apply this together with the earlier 29 Oct staged set above (one apply, not two).
+
+### What these cases need to be accepted
+
+1. **Civil build:** read the Civil DLL version live at the start and in every run header (3.0.85 as of the B8 review); a new install voids runs that straddle it.
+2. **Two fresh AutoCAD starts on Civil 3.0.85 for each of R36e, R36e_p2, R36e_p3 and R36e_p4** (eight runs, each on a fresh drawing). Each must pass all 13 checks.
+3. **Their twin red:** C36e (switch OFF) must run at least once and FAIL check 2, with the ledger row carrying `variant_of R36e`.
+4. **A fresh independent review** (Opus, or Tim) of the new hashes, written into each case's REVIEWED_AGAINST line (acceptance amendment of 24 Oct 2026, condition 3). The B8 review's slip for these four quotes the old hashes and goes stale at the apply.
+5. **Counts only for the refusal half.** The other half of BUG-1223 (a floor waste or downpipe on a free pipe end whose keys were never saved now places) has no case yet.
+
+### What I did NOT verify (RULES 5.9)
+
+1. **Nothing was run in AutoCAD.** The offline checker proves the files parse and the fixture exists, nothing about results.
+2. **The refusal sentence is read from recorded runs, not seen on screen.** Whether the same refusal shows on a real mouse pick (not a typed point) is not driven.
+3. **Not touched, by instruction:** live case files (live R36e re-hashed after the edit: still F257C55D135C), review slips, ledger, runner and driver, DESK_LOG, BUG_CARPARK, CD_RecentValues.json.
+4. I did not check whether another chat changed the live R36e files since the B8 review; the live hashes matched the review's four hashes at the start of this job.
+
+### Summary (under 100 words)
+
+R36e, R36e_p2, R36e_p3 and R36e_p4 are rewritten in staging to expect CE's refusal ("IOn is already at this point...") with zero floor waste blocks and zero FW texts, tagged BUG-1223, no EXPECT-FAIL. C36e carries VARIANT_OF R36e and mirrors the new checks, still failing check 2. IO1 to IO4 were confirmed from the 3.0.85 runs. All five pass the offline checker; live files untouched. Copy commands recorded, not run. Needs two fresh 3.0.85 starts each, the twin red and a fresh review.
