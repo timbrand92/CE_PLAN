@@ -2,9 +2,23 @@
 
 Job "TEST ROBOT: PROVE THE THREE C-75 BUG FIXES ON CIVIL 3.0.85, THEN RE-GRADE EVERY ACCEPTED CASE ON 3.0.85" (desk plan/03, Team, Sonnet). Real AutoCAD on test copies only, Tim away until 08:40, `CE_RUNNER_TIM_AWAY=1`, one session at a time, 3 minutes with AutoCAD closed between sessions. Build read live from the installed files at the start and in every run header: **Civil 3.0.85+09126560, Manager 1.1.85+09126560, Structural 1.0.125+204dfad2** (the chain script refuses to start a session if Civil is not 3.0.85; none refused). No review.txt written; no runner, driver, ledger-by-hand, DESK_LOG, BUG_CARPARK or CD_RecentValues edit.
 
-**INTERIM VERSION: Part 1 (the fixes) is complete (written 04:35). Part 2 (the regrade) is running; this file is updated at the end.**
+**VERSION OF Thu 29 Oct 2026 08:17 (Melbourne PC clock): Part 1 complete; Part 2 PARTLY complete, stopped on purpose at the desk's rule of no new AutoCAD start after 08:35. The headless job tester_run76 died at 05:29 (Team login expired); a stand-in session finished what could be finished before Tim's hours. Build was Civil 3.0.85+09126560 in every run header and at the end.** (Part 1 text below was written at 04:35 and is unchanged.)
 
-## ANSWER FIRST
+## FINAL ANSWER FIRST (Part 2 added at 08:17)
+
+### FOR TIM
+
+1. **No regression from C-75 so far. 53 of 65 counted accepted cases have passed in two separate AutoCAD starts on Civil 3.0.85. 0 failures, 0 flakes, 0 blocked on any counted case in any 3.0.85 run.** On 3.0.84 all 49 then-counted cases passed; everything I have re-run on 3.0.85 passed again.
+2. **12 counted cases still have no 3.0.85 session at all:** R01, R02, R02b, R03, R04 (pit and pipe drawing basics), R05 (outcome line), R07 (Settings window cancel), R10 (CDCHECK ignore switch off), R14h_both_200, R14h_dstd_200, R14h_pipekey_200 (the three CDTWL freeboard-200 variants) and R16 (tidy labels names the pipe). None failed; they were not reached, because no new start is allowed once Tim's hours begin and a full set takes about 6 hours. They need about 2 more hours of robot time: exact groups are in item 7 of the Part 2 detail.
+3. **Known-fault extra, not counted: R22** (CDCHECK still prints a raw handle "1197BB" and the long CE-CIV-PIPE id) failed in both sessions, same fault as on 3.0.84. R08 and R09 (also known faults) were not reached this time.
+4. **Downpipe and overflow cases ran first in their start (N03 and N04): 2 of 2 sessions each, all PASS.** The newer cases N23 to N29 have two separate PASS sessions on 3.0.85 from the overnight runs. The Part 1 cases that now hold a review (R32, R32b, R33m, R34a, R34sn) have two PASS sessions each from the Part 1 runs.
+5. **My mistakes:** none that cost a session. For the record, the dead job's run bX11 (started 05:27) died with it; I re-ran it from scratch at 05:34 and it passed, so the dead half-run counts for nothing.
+6. **Not tested (RULES 5.9):** the 12 cases above; R08 and R09 on this build; nothing was looked at on a screen; Structural and Manager windows were not exercised. These are Claude-accepted-style robot results only, not Tim's word and not a Codex look.
+7. **Nothing for you to do.** No AutoCAD, background job or lock of mine is left. CD_Settings.json hash is ACD64E79A33B, the same as at the start.
+
+---
+
+## PART 1 ANSWER FIRST (written 04:35, unchanged)
 
 ### FOR TIM
 
@@ -36,6 +50,18 @@ Job "TEST ROBOT: PROVE THE THREE C-75 BUG FIXES ON CIVIL 3.0.85, THEN RE-GRADE E
 6. **Files I made:** the four control cases `C34_rotate_copy_switch_off.case.txt`, `C33m_copy_message_switch_off.case.txt`, `C32_edit_pipe_arrow_switch_off.case.txt`, `C36e_cdfw_opening_switch_off.case.txt` in `C:\Lisp Files\_ACAD_DRIVER\cases\controls\` (copies of the real cases with the CASE and ORDER lines changed and one SETTING line added; validated offline first). Scratch (chain script, specs, logs): `C:\ce-fx\c75run\`.
 7. **CD_RecentValues.json:** not touched by me. The runner's cases that run Edit Pipe or place sources may rewrite it inside the test copy's profile; I did not read or edit it.
 
-## Part 2: the regrade on 3.0.85
+## Part 2: the regrade on 3.0.85 (done as far as time allowed, 08:17)
 
-*(in progress; see the final version of this file)*
+1. **Who did what.** The headless job tester_run76 finished Part 1 and the groups X1, X2 and the first half of X11 (aX1 to aX11) before its Team login expired at 05:29. A stand-in session took over at 05:30 and ran only what was missing, with the same runner and method (`run-pack cases -Only "<cases>" -NoRerun -Tag <tag>`, `CE_RUNNER_TIM_AWAY=1`, one start per group, 3 minutes with AutoCAD closed between starts), through its own chain script `C:\ce-fx\c75regrade2\chain.ps1` (refuses to start unless Civil is 3.0.85; starts no first pass after 07:50 and nothing after 08:10). Specs: `spec1.txt`, `spec2.txt` in the same folder.
+2. **Which cases count.** 69 review.txt files read at 05:33: 66 say CLAUDE-ACCEPTED-READY with a hash equal to the current case file (none differ now; R34a showed a mismatch at 02:44 and matches after its review was rewritten), 3 are not accepted (R06, R09, R18). R08 is accepted but is a known-fault extra, so **65 are counted**. R22 has no review (extra). Variants and controls are never counted.
+3. **Result: 53 of 65 counted cases have two separate PASS starts on Civil 3.0.85:** N01 N02 N03 N04 N05 N06 N07 N08 N09 N11 N12 N15 N16 N17 N18 N19 N20 N21 N22 N23 N24 N25 N26 N27 N28 N29, R11 R12 R13 R14 R15 R17 R19 R19b R20 R21 R23 R26 R28 R31 R32 R32b R33 R33m R34a R34sn R35 R36 R37 R37b R38 R39 R39b. No FAIL, BLOCKED or FLAKY on any counted case in any 3.0.85 run, so no regression and no third session was needed.
+4. **Run ids (pass A then pass B, all `RUN-20261029-<hhmm>-C3.0.85-<tag>`):** X1 (N03 N08 N09 N11) 0430 aX1 / 0442 bX1; X2 (N04 N05 N06 N12) 0455 aX2 / 0507 bX2; X11 (R12 R33 R36 R37b) 0519 aX11 / 0534 bX11; X3 (N01 N02 N15 N16 N17) 0542 aX3 / 0554 bX3; X6 (R11 R13 R14 R15 R17) 0607 aX6 / 0624 bX6; X8 (R26 R28 R31 R35 R37) 0640 aX8 / 0649 bX8; X7 (R19 R19b R20 R21 R23) 0659 aX7 / 0708 bX7; X9 (R38 R39 R39b, R22 extra) 0718 aX9 / 0727 bX9; G2 (N07 N18) 0736 aG2 / 0743 bG2; X4 (N19 N20 N21 N22) 0749 aX4 / 0802 bX4. The N23 to N29 passes come from the overnight runs n3c1, n3c3 to n3c8 and n3d1, n3d3 to n3d8 (0024 to 0218); R32, R32b, R33m, R34a, R34sn and R36 also have c1a1, c1a2, c1a4, c1b1, c1b2, c1b4 from Part 1. Reports: `C:\CE_PLAN\areas\runner-reports\<run id>.md` and `.json`.
+5. **Extra, not counted: R22 (BUG-372)** FAIL in aX9 and bX9, the known fault: the command line holds "handle 1197BB" (a FALL arrow line) and the raw "CE-CIV-PIPE-6A33BA73-..." id (a "flows to WT4: Unresolved" line). Checks 2 and 3 fail, the rest pass; same as on 3.0.84.
+6. **Clean end in every run I made:** AutoCAD left 0, lock none, guard clear, 0 settings fingerprint differences. At the start of every run the runner notes the structural settings file reads B3B5A004B929 against an expected 2972CE70C514 (a stale expected value in the runner; it never changed during a run). CD_Settings.json hash ACD64E79A33B before and after.
+7. **Still to run (nothing started, nothing failed).** Same method, Civil must read 3.0.85 first, two separate starts each: (a) G4: R05, R07, R10, plus R08 as an extra, in one start; (b) X5: R01, R02, R02b, R03, R04 (about 22 minutes a start); (c) G1 R14h_both_200; (d) G5 R16; (e) G6 R14h_dstd_200; (f) G7 R14h_pipekey_200 (single-case starts, because their SETTING lines differ); (g) R09 as an extra, alone. The specs are ready in `C:\ce-fx\c75regrade2\spec2.txt` (the lines from `aG4` on); `chain.ps1` has the 07:50 and 08:10 deadline lines at its top to change. About 2 hours of robot time. Any FAIL there that passed on 3.0.84 is a possible C-75 regression: report it first and run it a third time.
+8. **Files I made:** `C:\ce-fx\c75regrade2\` only (chain.ps1, spec1.txt, spec2.txt, tally2.ps1, logs). No review.txt, runner, driver, DESK_LOG, BUG_CARPARK or CD_RecentValues edit; ledger.json written only by the runner. Cases that Edit Pipe or place sources may rewrite CD_RecentValues.json inside the test copy's profile; I did not read or edit it.
+9. **Not tested (RULES 5.9):** the 12 cases above (no 3.0.85 session at all); R08 and R09 on 3.0.85; anything looked at on screen; the Structural and Manager windows.
+
+## Summary (under 100 words)
+
+Part 1 stands: BUG-665, 672, 1222 and 1223 fixes work (2 of 2 sessions each) and the controls fail as they should. Part 2: 53 of 65 counted accepted cases passed in two separate AutoCAD starts on Civil 3.0.85, no failure or flake, so no C-75 regression. R22 failed as the known fault. 12 cases (R01 to R05, R07, R10, R14h x3, R16) have no 3.0.85 session yet; stopped to keep clear of Tim's hours. Specs are ready for about 2 more hours.

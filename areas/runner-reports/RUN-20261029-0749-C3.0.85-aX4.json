@@ -1,0 +1,1577 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-0749-C3.0.85-aX4",
+    "started": "2026-10-29 07:49:04",
+    "finished": "2026-10-29 07:59:49",
+    "build": {
+      "civil": {
+        "product_version": "3.0.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "3.0.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+        "file_version": "1.1.85.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.85+09126560 / struc 1.0.125+204dfad2 / mgr 1.1.85+09126560",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.85+09126560f98acc4fd6ca4be298d087307a89a259; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.85+09126560f98acc4fd6ca4be298d087307a89a259",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 07:49 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-0749-C3.0.85-aX4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 07:49:06",
+      "finished": "2026-10-29 07:59:49",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30749081_B1.dwg",
+      "cases": [
+        "N19",
+        "N20",
+        "N21",
+        "N22"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N19",
+      "proves_bugs": "",
+      "title": "A pipe end 50 mm outside pit P8's opening is caught and moved onto the inside wall; a pipe end 150 mm outside stays a free end",
+      "kind": "deterministic",
+      "order": 190,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-PIT-02 pit catch, outline plus 100 mm (daily card D02)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "New pit P8 at 150000,-80000 (cover 19.000, three Esc). Near pipe from 160225,-79850 to 150275,-79850 (start moved from 160275 after run n28a5 so the pipe is exactly 10 m once the end is caught; the 10.05 m pipe opened a Grade mismatch question the robot cannot answer) (end 50 mm outside the 450 mm opening, inverts 18.000 / 17.950): CE says 'Pipe end moved to the inside wall of P8 (was 50 mm short of the wall).' and 'Flow: Open end -> P8', and the pipe box starts at x 150225. Far pipe from 160375,-80150 to 150375,-80150 (end 150 mm outside): no wall move, 'Flow: Open end -> Open end', the pipe box starts at x 150375. In all, three 'End is free' lines (the near pipe's east end, both ends of the far pipe).",
+      "why_not_unit": "The catch uses the real pit block's outline and the live CD landing in the drawing.",
+      "not_automated": [
+        "The exact boundary (an end 90 mm out caught, 110 mm out not) is not driven: the drawn wall line at 100 mm would sit within a few mm of those points. Codex can do the card's 90 / 110 pair by eye if wanted.",
+        "The pit's size is not set by the robot (the Pit tab cannot be selected); it is the remembered 450 x 450 (recorded)."
+      ],
+      "file_sha256": "7E497825375130852075C26FD60D61BF1B08E2DB67EF926DAE0EE5EAD4D0F5B1",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 07:53:32",
+      "seconds": 168.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 11.6,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 21.9,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $pit_new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbBlockReference 1; first: 11C5AE AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $pit_new object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C5AE PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pits handle -> $hpit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5AE"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hpit} -> $pit_e",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C5AE: {\"handle\":\"11C5AE\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U187\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149050.0,-80950.0,150950.0,-7905..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}149900,-81000{NL}151900,-79000\" -Force",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "typed '_.ZOOM _W 149900,-81000 151900,-79000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 149900,-81000 | Specify oppo..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}160225,-79850{NL}150275,-79850{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $near_t1",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "typed 'CD 160225,-79850 150275,-79850': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 160225,-79850 | Specify second point: 150275,-79850 | Se..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 8.9,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.950\"",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.950: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $near_t2",
+          "ok": true,
+          "seconds": 19.6,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $near_e1",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> P..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $near_new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1035 (model space now 1040); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C652 CeCvlPipeObject STORMWATER PIPE ; 11C658 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65D AcDbMText 20TEXT IL 18.000 ; 11C662 AcDbMText 20TEXT IL 17.950 ; 11C684 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $near_new object=CeCvlPipeObject -> $near_pipe",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C652 STORMWATER PIPE"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $near_pipe x -> $near_px",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150225"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}160375,-80150{NL}150375,-80150{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $far_t1",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "typed 'CD 160375,-80150 150375,-80150': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 160375,-80150 | Specify second point: 150375,-80150 | Se..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.950\"",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.950: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $far_t2",
+          "ok": true,
+          "seconds": 21.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $far_e1",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $far_new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "5 object(s) after index 1040 (model space now 1045); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C689 CeCvlPipeObject STORMWATER PIPE ; 11C68F AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C694 AcDbMText 20TEXT IL 18.000 ; 11C699 AcDbMText 20TEXT IL 17.950 ; 11C6BB AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $far_new object=CeCvlPipeObject -> $far_pipe",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C689 STORMWATER PIPE"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $far_pipe x -> $far_px",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150375"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Pit placed successfully.\"",
+          "ok": true,
+          "expected": "command line has 'Pit placed successfully.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Pit placed successfully.'"
+        },
+        {
+          "n": 2,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "history count \"Flow: Open end -> P8\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Flow: Open end -> P8'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Flow: Open end -> P8' (expected 1)"
+        },
+        {
+          "n": 4,
+          "text": "history count \"Flow: Open end -> Open end\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Flow: Open end -> Open end'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Flow: Open end -> Open end' (expected 1)"
+        },
+        {
+          "n": 5,
+          "text": "history count \"Pipe end moved to the inside wall of\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Pipe end moved to the inside wall of'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Pipe end moved to the inside wall of' (expected 1)"
+        },
+        {
+          "n": 6,
+          "text": "history has \"Pipe end moved to the inside wall of P8 (was 50 mm short of the wall).\"",
+          "ok": true,
+          "expected": "command line has 'Pipe end moved to the inside wall of P8 (was 50 mm short of the wall).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pipe end moved to the inside wall of P8 (was 50 mm short of the wall).'"
+        },
+        {
+          "n": 7,
+          "text": "history count \"End is free: open end flagged, connect it later.\" = 3",
+          "ok": true,
+          "expected": "3 line(s) with 'End is free: open end flagged, connect it later.'",
+          "actual": "3",
+          "evidence": "command line holds 3 line(s) containing 'End is free: open end flagged, connect it later.' (expected 3)"
+        },
+        {
+          "n": 8,
+          "text": "count $near_pipe = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $near_pipe = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "count $far_pipe = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $far_pipe = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "number $near_px = 150225 +- 10",
+          "ok": true,
+          "expected": "= 150225",
+          "actual": "150225",
+          "evidence": "$near_px = 150225 (expected = 150225 +- 10)"
+        },
+        {
+          "n": 11,
+          "text": "number $far_px = 150375 +- 10",
+          "ok": true,
+          "expected": "= 150375",
+          "actual": "150375",
+          "evidence": "$far_px = 150375 (expected = 150375 +- 10)"
+        },
+        {
+          "n": 12,
+          "text": "not-contains $win_end \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]"
+        },
+        {
+          "n": 13,
+          "text": "record $pit_e \"FULL the new pit P8 (rotation, scale, any size attributes)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5AE\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U187\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149050.0,-80950.0,150950.0,-79050.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149775.0,-80225.0],\"world_end\":[150225.0,-79775.0],\"world_mid\":[150000.0,-80000.0]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149775.0,-79775.0],\"world_end\":[150225.0,-80225.0],\"world_mid\":[150000.0,-80000.0]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149325.0,-80300.0],\"world_end\":[149925.0,-79700.0],\"world_mid\":[149625.0,-80000.0]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149325.0,-79700.0],\"world_end\":[149925.0,-80300.0],\"world_mid\":[149625.0,-80000.0]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":900.0,\"world_on_line\":[150900.0,-80000.0]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":950.0,\"world_on_line\":[150950.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the new pit P8 (rotation, scale, any size attributes) = {\"handle\":\"11C5AE\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U187\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149050.0,-80950.0,150950.0,-79050.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":1,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":2,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":3,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":4,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":5,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149775.0,-80225.0],\"world_end\":[150225.0,-79775.0],\"world_mid\":[150000.0,-80000.0]},{\"index\":6,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149775.0,-79775.0],\"world_end\":[150225.0,-80225.0],\"world_mid\":[150000.0,-80000.0]},{\"index\":7,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":8,\"object\":\"AcDbPolyline\",\"layer\":\"PITS HIDDEN\",\"color\":256},{\"index\":9,\"object\":\"AcDbWipeout\",\"layer\":\"STORMWATER PIT\",\"color\":256},{\"index\":10,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149325.0,-80300.0],\"world_end\":[149925.0,-79700.0],\"world_mid\":[149625.0,-80000.0]},{\"index\":11,\"object\":\"AcDbLine\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"world_start\":[149325.0,-79700.0],\"world_end\":[149925.0,-80300.0],\"world_mid\":[149625.0,-80000.0]},{\"index\":12,\"object\":\"AcDbHatch\",\"layer\":\"GRATED TRENCH\",\"color\":256,\"hatch\":true},{\"index\":13,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":900.0,\"world_on_line\":[150900.0,-80000.0]},{\"index\":14,\"object\":\"AcDbCircle\",\"layer\":\"PITS HIDDEN\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":950.0,\"world_on_line\":[150950.0,-80000.0]}]}"
+        },
+        {
+          "n": 14,
+          "text": "record $near_t1 \"FULL CD to the near end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 160225,-79850 | Specify second point: 150275,-79850 | Select point 3 (or Enter for straight pipe):",
+          "evidence": "RECORDED, not judged: FULL CD to the near end = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 160225,-79850 | Specify second point: 150275,-79850 | Select point 3 (or Enter for straight pipe):"
+        },
+        {
+          "n": 15,
+          "text": "record $near_e1 \"what the near pipe printed after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> P...",
+          "evidence": "RECORDED, not judged: what the near pipe printed after Start Pipe = [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> P..."
+        },
+        {
+          "n": 16,
+          "text": "record $far_e1 \"what the far pipe printed after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre...",
+          "evidence": "RECORDED, not judged: what the far pipe printed after Start Pipe = [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 198 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 54907 ms ; Command outcome: CD completed 49286 ms ; Command outcome: CD completed 47970 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 07:56:21",
+      "session_id": "RUN-20261029-0749-C3.0.85-aX4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N20",
+      "proves_bugs": "",
+      "title": "A 2 m pipe gets its label on a leader: CE asks to snap the callout arrow to the pipe, places exactly one multileader, and draws no plain label along the pipe",
+      "kind": "deterministic",
+      "order": 200,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-24 short-pipe label on a leader (daily card D11)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-80000 to 152000,-80000 with inverts 18.000 / 17.990 and Start Pipe: CE asks 'Snap callout arrow to pipe:'; a click on the pipe at 151000,-80000 and a click for the text at 151000,-78500 place the label; the CD run then offers the next pipe and Esc ends it. The drawing gains exactly one pipe, exactly one multileader, and no plain text containing ' DIA. '; 'Pipe text callout cancelled.' is never printed.",
+      "why_not_unit": "The fit test uses the real text width and the drawn length, and the leader is placed by live prompts in the drawing.",
+      "not_automated": [
+        "The leader's arrow point lying on the pipe (card assertion 2) and the leader's look are a Codex look; the arrow point is not readable by the robot.",
+        "The leader's own wording (size, material, grade) is RECORDED only: the robot has never read a multileader's text."
+      ],
+      "file_sha256": "AA6B716294DFF09799BF5036A7B3A1CACA9522F571BCA8C7ACF8146A57C70D7C",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 07:56:21",
+      "seconds": 76.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 151000,-79500 6000\"",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed '_.ZOOM _C 151000,-79500 6000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 151000,-79500 | Enter magnification or ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 151,000.000,-79,500.000 height 6,000.000 screen 1604x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}152000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "typed 'CD 150000,-80000 152000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 152000,-80000 | Se..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.990\"",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.990: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 18.7,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150300,-80000\" -Blind -> $click_anchor",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "v3 pt-click 150300,-80000: pt-click: world 150,300.000,-80,000.000 -> pixel 2661,753 (exact 2,661.19,753.42); cursor read-back 2661,753; view stored (49 s old)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150300,-78500\" -Blind -> $click_text",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "v3 pt-click 150300,-78500: pt-click: world 150,300.000,-78,500.000 -> pixel 2661,611 (exact 2,661.19,611.17); cursor read-back 2661,611; view stored (54 s old)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMLeader 1; AcDbMText 2; CeCvlPipeObject 1; first: 11C559 CeCvlPipeObject STORMWATER PIPE ; 11C55F AcDbMLeader 25TEXT ; 11C563 AcDbMText 20TEXT IL 18.000 ; 11C568 AcDbMText 20TEXT IL 17.990 ; 11C58A AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=CeCvlPipeObject -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C559 STORMWATER PIPE"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbMLeader -> $leaders",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55F 25TEXT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~ DIA\\. \" -> $plain",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 5: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^IL \" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C563 IL 18.000 20TEXT ; 11C568 IL 17.990 20TEXT"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new object -All -> $types",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = CeCvlPipeObject | AcDbMLeader | AcDbMText | AcDbMText | AcDbBlockReference"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $leaders layer -> $leader_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Snap callout arrow to pipe:\"",
+          "ok": true,
+          "expected": "command line has 'Snap callout arrow to pipe:'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Snap callout arrow to pipe:'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"Pipe text callout cancelled.\"",
+          "ok": true,
+          "expected": "command line lacks 'Pipe text callout cancelled.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Pipe text callout cancelled.' (22 lines read)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.'"
+        },
+        {
+          "n": 4,
+          "text": "count $pipes = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipes = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $leaders = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $leaders = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $plain = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $plain = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "record $types \"FULL object types of everything the pipe added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "CeCvlPipeObject | AcDbMLeader | AcDbMText | AcDbMText | AcDbBlockReference",
+          "evidence": "RECORDED, not judged: FULL object types of everything the pipe added = CeCvlPipeObject | AcDbMLeader | AcDbMText | AcDbMText | AcDbBlockReference"
+        },
+        {
+          "n": 9,
+          "text": "record $leader_layer \"layer of the multileader\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the multileader = 25TEXT"
+        },
+        {
+          "n": 10,
+          "text": "record $ils \"the IL texts of the short pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1036,\"handle\":\"11C563\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-80457.5} | {\"index\":1037,\"handle\":\"11C568\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 1...",
+          "evidence": "RECORDED, not judged: the IL texts of the short pipe = {\"index\":1036,\"handle\":\"11C563\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-80457.5} | {\"index\":1037,\"handle\":\"11C568\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 1..."
+        },
+        {
+          "n": 11,
+          "text": "record $click_anchor \"what the anchor click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-29 07:57:20\",\"elapsed_ms\":1793,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-80,000.000 -> pixel 2661,753 (exact 2,661.19,753.42); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the anchor click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-29 07:57:20\",\"elapsed_ms\":1793,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-80,000.000 -> pixel 2661,753 (exact 2,661.19,753.42); cursor read-back 2..."
+        },
+        {
+          "n": 12,
+          "text": "record $click_text \"what the text click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-29 07:57:25\",\"elapsed_ms\":1684,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-78,500.000 -> pixel 2661,611 (exact 2,661.19,611.17); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the text click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-29 07:57:25\",\"elapsed_ms\":1684,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,300.000,-78,500.000 -> pixel 2661,611 (exact 2,661.19,611.17); cursor read-back 2..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30749081_B1_10b0066cf.log)",
+        "Civil CE log: 70 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 57696 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 07:57:37",
+      "session_id": "RUN-20261029-0749-C3.0.85-aX4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N21",
+      "proves_bugs": "",
+      "title": "CDFEEDBACK opens the Feedback window with Send report and Cancel; Cancel closes it, prints exactly CDFEEDBACK cancelled. and sends or saves nothing",
+      "kind": "deterministic",
+      "order": 210,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-WORD-03 CDFEEDBACK, Part A (Cancel) only (daily card D29)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDFEEDBACK opens 'Creative Engineering | Feedback' with a 'Send report' button and a 'Cancel' button; pressing Cancel closes the window and the command line says 'CDFEEDBACK cancelled.'; neither result line ('Report sent to the office feedback folder' or 'Saved on this PC only') is printed; no window is left open and the drawing file on disk is unchanged.",
+      "why_not_unit": "The window, its buttons and the cancel path only exist in a live AutoCAD session.",
+      "not_automated": [
+        "Part B (Send report: the one honest result line, the file in the office folder or on this PC) needs the spare Windows login and Tim's yes: not driven.",
+        "The feedback folder under %APPDATA% is not listed by the robot (no verb lists that folder); 'nothing saved' rests on the source (Cancel returns before the save) and on no result line being printed.",
+        "Whether the window text is readable and the buttons uncut is a Codex look (Codex D8-03 saw it readable on 3.0.78)."
+      ],
+      "file_sha256": "073A456296334D3189EA6897FABC1766F50D50E2BA437BDB8B94E7E9F80343C7",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 07:57:37",
+      "seconds": 39.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30749081_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFEEDBACK\" -Force -ExpectWindow \"Feedback\" -TimeoutSec 120 -> $fb",
+          "ok": true,
+          "seconds": 12.2,
+          "evidence": "typed 'CDFEEDBACK': Command: CDFEEDBACK"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Feedback\" -> $fd",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "ui-dump 'Creative Engineering | Feedback (CDFEEDBACK)': 31 controls, tabs: Details | Included information"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_open",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg] ; Creative Engineering | Feedback (CDFEEDBACK)"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Feedback\" \"Cancel\" -> $fc",
+          "ok": true,
+          "seconds": 10.1,
+          "evidence": "pressed 'Cancel' in /Feedback/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Feedback\" -Secs 60",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Feedback/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $win_open \"Creative Engineering | Feedback\"",
+          "ok": true,
+          "expected": "contains 'Creative Engineering | Feedback'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg] | Creative Engineering | Feedback (CDFEEDBACK)",
+          "evidence": "found 'Creative Engineering | Feedback' in: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg] | Creative Engineering | Feedback (CDFEEDBACK)"
+        },
+        {
+          "n": 2,
+          "text": "control $fd \"Send report\" exists",
+          "ok": true,
+          "expected": "control 'Send report' exists",
+          "actual": "2",
+          "evidence": "'Send report' found in 'Creative Engineering | Feedback (CDFEEDBACK)' (2 control(s))"
+        },
+        {
+          "n": 3,
+          "text": "control $fd \"Cancel\" exists",
+          "ok": true,
+          "expected": "control 'Cancel' exists",
+          "actual": "2",
+          "evidence": "'Cancel' found in 'Creative Engineering | Feedback (CDFEEDBACK)' (2 control(s))"
+        },
+        {
+          "n": 4,
+          "text": "window-closed $fc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 5,
+          "text": "history has \"CDFEEDBACK cancelled.\"",
+          "ok": true,
+          "expected": "command line has 'CDFEEDBACK cancelled.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDFEEDBACK cancelled.'"
+        },
+        {
+          "n": 6,
+          "text": "history count \"CDFEEDBACK cancelled.\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'CDFEEDBACK cancelled.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'CDFEEDBACK cancelled.' (expected 1)"
+        },
+        {
+          "n": 7,
+          "text": "history absent \"Report sent to the office feedback folder\"",
+          "ok": true,
+          "expected": "command line lacks 'Report sent to the office feedback folder'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Report sent to the office feedback folder' (2 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "history absent \"Saved on this PC only\"",
+          "ok": true,
+          "expected": "command line lacks 'Saved on this PC only'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Saved on this PC only' (2 lines read)"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Feedback\"",
+          "ok": true,
+          "expected": "does not contain 'Feedback'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]",
+          "evidence": "'Feedback' is absent from: Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $win_open \"windows while Feedback was open\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg] | Creative Engineering | Feedback (CDFEEDBACK)",
+          "evidence": "RECORDED, not judged: windows while Feedback was open = Autodesk AutoCAD 2027 - [CLDV30749081_B1.dwg] | Creative Engineering | Feedback (CDFEEDBACK)"
+        },
+        {
+          "n": 12,
+          "text": "record $fb \"FULL what CDFEEDBACK printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFEEDBACK",
+          "evidence": "RECORDED, not judged: FULL what CDFEEDBACK printed = Command: CDFEEDBACK"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30749081_B1_1bdd675a5.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFEEDBACK completed 21763 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 07:58:16",
+      "session_id": "RUN-20261029-0749-C3.0.85-aX4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N22",
+      "proves_bugs": "",
+      "title": "EXPLODE on a new pit P8 with no pipe says P8 is now plain linework and has left the schedule with no pipe clause, and one U brings the pit back",
+      "kind": "deterministic",
+      "order": 220,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-EDIT-04 EXPLODE, the no-pipe wording (daily card D16 assertion 1, second sentence)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT at 150000,-80000 (cover 19.000, three Esc) places one pit P8 with no pipe. Selecting that pit block and typing EXPLODE prints 'P8 is now plain linework and has left the schedule. U restores it.' and no 'pipe(s) now have ends' clause; the pit block's handle is gone from the drawing; one U echoes EXPLODE and the same pit block handle is back on layer STORMWATER PIT.",
+      "why_not_unit": "The line comes from CE watching a real EXPLODE of its own block in a live drawing.",
+      "not_automated": [
+        "The look of the exploded linework is a picture item.",
+        "The Pit Schedule is not opened (N02 proves the schedule side for P3); this case proves the wording branch and the U."
+      ],
+      "file_sha256": "A3E5B86CDFA013DA92BA4F32E6967C8251A5101896E144AE4DD092BB4E77DC05",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 07:58:16",
+      "seconds": 74.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 11.4,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 22.5,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbBlockReference 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C5AB PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pits handle -> $hp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5AB"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hp}\"",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "pick-first 11C5AB: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C5AB\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.EXPLODE\" -Force -> $ex",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "typed '_.EXPLODE': Command: | Command: _.EXPLODE | 1 found | P8 is now plain linework and has left the schedule. U restores it."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_ex",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbHatch 1; AcDbPolyline 1; AcDbWipeout 1; first: 11C64F AcDbPolyline PITS HIDDEN ; 11C650 AcDbWipeout STORMWATER PIT ; 11C651 AcDbHatch GRATED TRENCH"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_ex \"handle={$hp}\" -> $gone",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 3: "
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | EXPLODE"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_u",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbBlockReference 1; first: 11C5AB AcDbBlockReference STORMWATER PIT PIT BLOCK 3"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_u \"handle={$hp}\" -> $back",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C5AB PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $back layer -> $back_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Pit placed successfully.\"",
+          "ok": true,
+          "expected": "command line has 'Pit placed successfully.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Pit placed successfully.'"
+        },
+        {
+          "n": 2,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"P8 is now plain linework and has left the schedule. U restores it.\"",
+          "ok": true,
+          "expected": "command line has 'P8 is now plain linework and has left the schedule. U restores it.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'P8 is now plain linework and has left the schedule. U restores it.'"
+        },
+        {
+          "n": 4,
+          "text": "history absent \"now have ends not connected yet\"",
+          "ok": true,
+          "expected": "command line lacks 'now have ends not connected yet'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'now have ends not connected yet' (18 lines read)"
+        },
+        {
+          "n": 5,
+          "text": "history absent \"now has an end not connected yet\"",
+          "ok": true,
+          "expected": "command line lacks 'now has an end not connected yet'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'now has an end not connected yet' (18 lines read)"
+        },
+        {
+          "n": 6,
+          "text": "count $gone = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $gone = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "matches $u1 \"(^|\\| )EXPLODE\\s*(\\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )EXPLODE\\s*(\\||$)/",
+          "actual": "Command: | Command: U | EXPLODE",
+          "evidence": "matched '| EXPLODE '"
+        },
+        {
+          "n": 8,
+          "text": "count $back = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $back = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "equals $back_layer \"STORMWATER PIT\"",
+          "ok": true,
+          "expected": "STORMWATER PIT",
+          "actual": "STORMWATER PIT",
+          "evidence": "value 'STORMWATER PIT' (expected 'STORMWATER PIT')"
+        },
+        {
+          "n": 10,
+          "text": "record $ex \"FULL what EXPLODE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.EXPLODE | 1 found | P8 is now plain linework and has left the schedule. U restores it.",
+          "evidence": "RECORDED, not judged: FULL what EXPLODE printed = Command: | Command: _.EXPLODE | 1 found | P8 is now plain linework and has left the schedule. U restores it."
+        },
+        {
+          "n": 11,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | EXPLODE",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | EXPLODE"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30749081_B1_1b11b8d12.log)",
+        "Civil CE log: 92 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 54288 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 07:59:31",
+      "session_id": "RUN-20261029-0749-C3.0.85-aX4-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}
