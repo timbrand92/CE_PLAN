@@ -1,4 +1,4 @@
-# GB-04 Ready to submit: DRAFT card (not approved)
+# GB-04 Ready to submit: APPROVED 29 Oct 2026 (Tim, item 30); not built, tested or installed
 
 **New command, name to be agreed.** **Classification:** Missing. The most valuable new check: each item below is a reason councils send drawings back (book p32 to 38).
 
@@ -34,3 +34,6 @@ Guards: each check on a drawing with one deliberate fault. Codex in AutoCAD on a
 1. How CE knows where the splay is (a drawn line? a layer?).
 2. Per-council lists for councils the book does not cover.
 3. Whether the check should also run inside the issue step (warn only).
+
+## 8. Approval (29 Oct 2026, item 30)
+"Approve GB-04". The splay question is still open: the builder builds the recommended default (a drawn line on a named layer set once in Settings; no line means Unknown) as a DRAFT, and Tim's later answer replaces it.

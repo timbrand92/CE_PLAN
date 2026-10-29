@@ -11,11 +11,11 @@
 5. **GB-01 slice 5, pit-size table to Settings.** Waiting.
 6. **GB-02 council data (all items).** Approved 29 Oct. Waiting for GB-01 slice 1 to land (same council profile and Settings files; two writers never touch the same files).
 7. **GB-03 calculations (slices: sheet layout, rainfall for new Boyd's jobs, pump, soakage, collate the package).** Approved 29 Oct. Waiting for GB-02.
+8. **GB-04 ready to submit (slices: seven every-council checks, Kingston/Monash/Frankston extras, Bayside and the rest, record on the job).** Approved 29 Oct. Waiting for GB-03 (may start the checks that need no splay earlier if builders are free and files do not overlap). Splay method is a DRAFT default until Tim answers.
 
 ## Cards waiting for Tim's approval (no build until approved)
 
-1. **GB-04 Ready to submit.** Draft.
-2. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
+1. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
 
 ## Open items that block or shape builds
 
