@@ -15,7 +15,7 @@
     "timConfirmed": 25
   },
   "installed": "Civil 3.0.86 · Manager 1.1.86 · Structural 1.0.125",
-  "waiting": "C-76 installed 17:51 and verified; robot full pass on 3.0.86 running since 17:56 (31 progress lines done at 03:36, pass b under way, finish about 05:30 Fri; one red R21 under diagnosis); Tim on site Fri 30 Oct so the desk keeps going; C-77 install Fri 30 Oct about 11:00 to 12:00 then area plus smoke re-test (Rule 14); C-78 Mon 2 Nov evening; cut Fri 13 Nov, pilot Mon 16 Nov",
+  "waiting": "C-76 installed 17:51 and verified; robot full pass on 3.0.86 running since 17:56 (34 progress lines done at 04:34, finish about 05:30 Fri, then the R21 diagnostic starts and the report job; R21 is repeatable and diagnosed as an old reopen-then-CDCHECK fault, not proved yet); Tim on site Fri 30 Oct so the desk keeps going; C-77 install Fri 30 Oct about 11:00 to 12:00 then area plus smoke re-test (Rule 14); C-78 Mon 2 Nov evening; cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T03:36:55+11:00"
+  "countedAt": "2026-10-30T04:36:37+11:00"
 }
