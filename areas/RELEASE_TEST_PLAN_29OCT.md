@@ -162,3 +162,9 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 2. **Full re-tests that DO stay:** the weekend full re-tests (Sat 31 Oct, Sat 7 Nov) and ONE full re-test of the pilot build before Max, by Fri 13 Nov (plus the confirming pass on Sat 14 and Sun 15 Nov if Tim keeps the conditional go).
 3. **Release note:** every item says "tested" (robot twice, Codex look or Tim's hand check, with build and date) or "carried from <build>" or "not tested". The tested / not tested list (CE 02) is the source.
 4. **Sections 3 to 5 of this plan (pass line, schedule) read with this rule.** Where they say "full re-test after the last full-class install", read "area plus smoke re-test, then the one full re-test before Max".
+
+## 16. Clarification to the standing rule (Tim answered "1", Fri 30 Oct about 00:3x, via CE 00)
+
+1. **A changed default or a one-time move of saved settings counts as touching its OWN tool plus the Settings smoke set, not FULL.** Settings-file changes therefore no longer trigger a full re-test of the train that carries them (this refines Addendum 1 of the re-test rule, where editing an existing setting meant FULL).
+2. **C-77 (Fri 30 Oct, install 11:00 to 12:00):** re-test is AREA plus SMOKE from about 12:15; CE 02 sized 51 of 66 cases, about 6 h 10 min (estimate). Saturday's weekend full re-test is the safety net.
+3. **Unchanged:** one full re-test of the pilot build before Max by Fri 13 Nov, the weekend full re-tests, and "carried from <build>" labels.
