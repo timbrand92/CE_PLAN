@@ -85,3 +85,10 @@ Interpretation (guess): enough RFI letters exist (roughly 8 per year per folder 
 
 Tim: "looks like its from council"
 Interpretation (guess, the intake chat read it as an answer to "where do the RFIs live"): the council RFIs are in the job's "From Council" folder (Civil\From Council), the folder used by recent jobs; "Council Feedback" is the older name. CE should look in both, plus any date-named council RFI folder. Not yet answered: the full all-years read (the question is still with Tim) and where letters arrive before they are filed (the 2026 jobs have none filed).
+
+## PC-05 — Claude API and machine learning inside the plugin, planned into the overall plan
+
+Tim: "is there a way through the claude api that we can have machine learning be smart? and to use the the api for anything else useful within the plugin?" Then, on the intake chat's six proposed uses (RFI reader, smart checklist, markup reader, plain-English help, plan reviewer, learning notes): "yes lets fully plan and add to the overall plan".
+
+Done (planning only): new area AI, `areas\claude-api-and-learning.md`, added as item 22 in the area list of `MASTER_PLAN.md`. Eight slices AI-0 to AI-7 (governance and switches first, learning pool and pre-submission checklist with no API, then the RFI reader, then the learning loop, then markup reader, reviewer and habit learning). Six questions for Tim are listed in section 6 of that file and are NOT decided.
+Interpretation (guess): "fully plan" = the written plan with the build order, safety rules and questions; no building, and every slice still goes through the command and workflow review gate with Tim's approval first. Nothing in it overrides Tim's 25 Sep rules (Claude only, one page or letter at a time, blanked) or DATA-01.
