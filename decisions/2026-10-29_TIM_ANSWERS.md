@@ -474,3 +474,24 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "keep the tick box, but unticked by default. The user ticks it when they want you and IT to get the file straight away".
    2. Interpretation: the Help tab has the tick box "Also copy it to the office IT folder" but it starts unticked. The other four accepted answers stand.
    3. Desk must: tell CE 11 and CE 01 so the build uses unticked; the tab still shows line 3 naming who can read it; the file should still carry no client or drawing names where avoidable (decision 14).
+
+## Batch 21 (evening, Melbourne)
+
+91. **Window position memory (QUESTIONS B5): as recommended.** Tim's words: "as recommended". Interpretation: it ships OFF until a Codex run passes on two monitors, then it is switched ON by default. Desk must: run the two-monitor Codex look, then flip the default.
+
+92. **Manager theme preview pictures (I1): as recommended.** Tim's words: "as recommended" (build the three little pictures: Follow AutoCAD, Light, Dark). Because "nothing waits for the pilot" (decision 68), it is on the build list, not parked. Desk must: build it as a draft; picture first.
+
+93. **Add administrator button (I4): yes.** Tim's words: "yes". Interpretation: build the Add administrator button now (with the name-matching and lost-list fixes BUG-829, BUG-843). Desk must: build it; it is a Manager change that needs the full re-test class.
+
+94. **Double-click on a pit label (22 Oct item 2): as recommended.** Tim's words: "as recommended". Interpretation: the Edit Pit window opens on a double-click of a pit label; ON by default only after a Codex look passes. Desk must: run the look, then flip the default.
+
+95. **CEMEMBER Z purlin orientation (23 Oct review item 1): yes.** Tim's words: "yes". Interpretation: keep the current orientation names and show them as four pictures in the CEMEMBER window; the wide flange goes on top. Desk must: add the four pictures to the window plan (B-036).
+
+96. **Unequal angles (23 Oct review item 2): yes.** Tim's words: "yes". Interpretation: add long-leg-flat, so a 150x90 ledger angle with the 150 leg lying flat can be drawn. Desk must: add it to CEMEMBER.
+
+97. **Disk space (item 12): delete the old installer leftover.**
+   1. Tim's words: "yes" (to deleting the old 1.7 GB Visual Studio installer leftover `lestw1e0` in his Temp folder).
+   2. Interpretation: that one folder only. Nothing bigger (C:\ce_rc_scratch, Codex worktrees) is touched without a further word.
+   3. Desk must: look at the folder first (rule 12.7: read the drive, check it is the Visual Studio leftover from 21 Oct and nothing in use), then delete only it, and say how much space came back.
+
+98. **Updates & Rollback button (QUESTIONS item 56, BUG-1247): yes.** Tim's words: "yes". Interpretation: every user's Updates & Rollback button opens that user's own screen (what is running, what is waiting, go back to the previous version); the Administrator Dashboard is reachable only through the separate Admin button, for the owner only. Desk must: build it with the CEHEALTH, Version and Help tab work (B-047) in one Manager change.
