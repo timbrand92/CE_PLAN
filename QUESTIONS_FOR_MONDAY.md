@@ -270,3 +270,25 @@ GB-D. **CLAUDE ASSISTANT (GB-05): PROVIDER AND MODEL, MONTHLY COST CEILING, WHO 
 **ANSWERED Thu 29 Oct 2026 (decisions/2026-10-29_TIM_ANSWERS.md items 108 to 111):** carpark tidy (yes), overnight restart (Windows Updates paused until 9 Nov, screenshot), CDSL far survey spot (item 59: yes, warn only, default 10 m).
 
 60. **Cover under paved ground: measured from the top of the slab, or from below it? (from CE 01 Build, Opus review of the guidebook cover table, PR #1850, 29 Oct 2026; areas\OPUS_PREREVIEW_B_29OCT.md).** Two small parts. (a) The new cover table lets a pipe under a concrete driveway pass with 100 mm cover (75 mm for reinforced concrete) measured from the TOP of the driveway. The standard's 100 / 75 mm is measured BELOW THE UNDERSIDE of the slab. Example on a job: a 125 mm driveway slab with a pipe whose top is 120 mm down: CDRULES says OK today, but the top of the pipe is inside the slab; under the standard's measure it needs about 225 mm from the top. Your earlier "keep as built" confirmed the numbers, but the question you were asked did not say the paved rows are measured below the slab. **Recommendation:** keep 100 / 75 and add ONE Settings value for slab thickness (starting at 100 mm); CE then judges the driveway and footpath rows from the top as 100 plus the slab. **Other choice:** keep it as built (pass from the top of the driveway). (b) In Frankston the council's 250 mm replaces the whole table, so a pipe under a ROAD there passes with 300 mm, not 600. **Recommendation:** use whichever figure is bigger, the council's or the table's, so Frankston's 250 works as a floor (which is how their page reads). **Other choice:** the council figure always wins.
+
+61. **Failure reports from colleagues' PCs: four small questions (from CE 01 Build, planner report BUG1171_SHARED_PLAN_29OCT.md, 29 Oct 2026). The fix is Manager-only (no change to the shared file).**
+   B-050 / BUG-1171 — Civil's failure reports to Tim (planner report: areas\release-v3-colleagues-BUG1171_SHARED_PLAN_29OCT.md)
+   Context: Civil's failure reports pile up on each PC (25,842 files on Tim's own PC since 28 Apr) and never reach Tim.
+   The fix is Manager-only; the protected shared file does not need to change.
+   
+   Q1. Once the short list is built and tested, may Manager start sending it (turn drainPluginOutbox ON)?
+       Recommended: YES, in the train after the robot and Codex have seen it pass. Real-world: Max's CDDESIGN failure
+       shows in your admin view the next morning as "job 2417, CDDESIGN, PC code, 30 Oct". If NO: nothing changes, the
+       pile keeps growing, you hear about faults only by phone.
+       Also: does the same short-list rule apply to Manager's OWN reports? Recommended: YES (one rule for everything).
+   
+   Q2. Besides job number, failed command and which PC, may the date and the CE version go too?
+       Recommended: YES. Without the date you cannot tell an old fault from today's; without the version you cannot
+       tell if the fault was fixed in the update Max has not installed yet. Neither names a client or a drawing.
+   
+   Q3. Should usage records (every command a colleague runs, not just failures) be sent?
+       Recommended: NO. You asked for "the command that failed". Usage stays on the PC.
+   
+   Q4. The old files: CE will move them to a "kept-not-sent" folder on each PC and never send them (your rule: never
+       delete anything unsent). May CE ever delete them, for example after 90 days?
+       Recommended: NO for now: keep them, they are small text files; revisit if a colleague's disk complains.
