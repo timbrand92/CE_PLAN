@@ -265,3 +265,18 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "the desk takes each size and material from the pipe data or the standard and shows you the table on Settings, tagged Assumed until you tick it".
    2. Interpretation: wall thickness per size and material comes from the pipe data or the standard, is shown on Settings tagged Assumed until Tim ticks it. His earlier "about 20 mm UPVC 225" was an example (decision 17); the desk uses the table.
    3. Desk must: build the table on Settings with the Assumed tag; verify UPVC wall against the standard (CE 01 thought 20 mm looked high).
+
+## Batch 9 (afternoon, Melbourne)
+
+51. **Pit snap glow colour (QUESTIONS 21k): yes, gold.** Tim's words: "yes". Interpretation: the temporary glow when snapping to a pit changes from light blue to gold; picture first. Desk must: build it behind a Settings switch and show Tim a picture before it ships.
+
+52. **BUG-1189 survey XREF detached after approval (QUESTIONS 24 Oct item 5): keep as built.** Tim's words: "keep it as built, because CE can't check a survey it can't see". Desk must: keep draft PR #1756 as built (stops offering stored levels, says the XREF is no longer in the drawing; typed levels still work; the switch can turn the check off).
+
+53. **BUG-1149 stage drawing BIND versus accidental detach (QUESTIONS 24 Oct item 6): keep the yellow.** Tim's words: "keep the yellow. A false red Fail on a normal BIND would train drafters to ignore Fails". Desk must: keep draft PR #1767 as built (yellow warning, not a red QA Fail).
+
+54. **Old July install files (QUESTIONS item 25, BUG-483): move now, delete on a timeline.**
+   1. Tim's words: "yes - set a timeline to delete".
+   2. Interpretation: move `Install-All-CE-Plugins.ps1`, `CE CVL SUITE`, `CE STR SUITE`, `CE SUITE MANAGER` and `CE_CVL_SUITE_Installer_v2.1.11.exe` into an OLD folder before the pilot; later delete them on a dated timeline. Rule 10.4 still applies: every file to delete is listed for Tim's yes before anything is deleted. The date is NOT his: it is proposed (see 3).
+   3. Desk must: move first (nothing deleted); proposed delete review date Mon 14 Dec 2026 (four weeks after the Mon 16 Nov pilot starts; GUESS, for Tim to change); on that date list every file for his yes. Ask Tim whether any colleague still installs from them (he did not say) before moving, and tell colleagues who do.
+
+55. **Card D06 point 3, hide-grade setting (QUESTIONS item 20, card): agreed.** Tim's words: "agreed". Desk must: reword the card so the test turns the grade back on before it ends, and compare the remembered-values file before and after; do not widen the robot's settings protection to that file.
