@@ -17223,3 +17223,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **BUG-1247 update 29 Oct 2026 (Tim's second screenshot, hand check H45):** after it finished loading ('Updated 15:38:08', Refresh button back to 'Refresh') the dashboard filled in: Active Users 2, Active Machines 2, Failures 24h 0, Restart Needed 0, Behind Approved 2, Missing Signals 1; Updates tab list: CE_CVL_SUITE approved 2026.0420.1549, available 2.1.14, installed 3.0.85, devices behind 0; CE_STRUC_SUITE approved 1.0.117.0001, available 1.0.41, installed 1.0.125, devices behind 2; Status 'Approved release tracked' on both. **So the blank tiles and the stuck 'Refreshing...' were only the load time: that part of this bug is NOT a fault (it took longer than I assumed; no 'loading' word shown while it waited, which is a small wording wish).** What stands: (1) a drafter's 'Updates & Rollback' button opens the company-wide Administrator Dashboard with Approve, Canary and Promote buttons; (2) the version columns use three different numbering styles for one plugin (approved 2026.0420.1549, available 2.1.14, installed 3.0.85), and the available and approved numbers for the structural plugin (1.0.41, 1.0.117.0001) are LOWER than what is installed (1.0.125) while 'Behind Approved 2' and 'Devices behind 2' are shown: unexplained to a reader, may be the other machine, not checked.
 
 **Tim's verdict (hand check H47):** "failed" (read as: Updates & Rollback FAILED, the button a drafter would click opens the company-wide Administrator Dashboard).
+
+
+---
+
+## BUG-1248 — The Survey Intake review is written in survey-software words (XREF, sha256, TIN triangles, "modified z-score") that a drafter cannot read
+
+**Command / Area:** CDSURVEY and the CE Manager Survey Intake tab ('Survey intake review'), Manager 1.1.85 / Civil 3.0.85 (Tim, by hand, 29 Oct 2026, hand check H49). WORDING / USER FRIENDLINESS, severity low to medium. Job and drawing names are deliberately NOT recorded here (client data); the wording below is quoted without them.
+
+**Symptom:** After 'Link survey' (Choose the source, a survey DWG linked as a reference, 'Continue to survey review') the Survey Intake tab shows: 'Captured from <drawing name> at <time>. Nothing has been stored yet. Sources and the drawing are re-checked when you approve.', then 'XREF: Xref_26-01.dwg (Unknown, 1867924 bytes, sha256 35526fd67281...)', 'Drawing units code: 4', 'Transform: none (XREF geometry used as-is)', '0 TIN triangles, 160 spot levels, 7 finding(s)', 'OUTLIER_RL: 7', 'Advisory: 7 RL outlier(s) kept as Unknown (stored, never used for a suggestion).' and seven lines such as 'Spot RL 30.480 at (181606.3, -167948.1) is a statistical outlier (median 119.000, modified z-score -112.7)'. The levels listed (30.480, 91.440, 2.440 against a median of 119.000) look like wrong spot levels in the survey, which is useful, but a drafter reads 'sha256', 'TIN triangles', 'units code 4' and 'modified z-score' as noise, and the page does not say what to do ('check these seven spot levels in the survey, then approve or cancel').
+
+**Expected behaviour:** Plain words: 'Survey linked: 160 spot levels read, no surface built yet. 7 spot levels look wrong (they are far from the others): list in drawing terms (X, Y, level and 'about 90 m lower than the rest'). Check them in the survey, then approve or cancel.' Technical detail (file hash, units code, statistics) behind a 'Details' fold for support.
+
+**Steps to confirm in AutoCAD:** (1) CDSURVEY, choose a survey DWG, Continue. (2) Read the Survey Intake tab. Right = plain sentences and a clear next step. Wrong = the technical lines above.
+
+**Reference:** Tim's screenshots 29 Oct 2026, hand check H49 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; Tim's rule 'this whole plugin needs to be user friendly'; Survey Review button (H48); card/robot case R26 (CDSURVEY refusal half only).
+
+**Status:** OPEN (found by hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
