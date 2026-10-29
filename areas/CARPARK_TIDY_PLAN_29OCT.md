@@ -39,3 +39,11 @@ T-1 (header) and T-4 (the retest list for CE 02) today, because they need no jud
 2. **T-1 done (ccf3c8ae):** the 43 KB "Next BUG ID" line in the carpark header is now one short line; the old line is word for word in `areas/CARPARK_ID_RANGES_HISTORY.md` (checked identical). Entry count before and after: 1,196 and 1,196.
 3. **T-4 done:** `areas/CARPARK_IN_PROGRESS_RETEST_LIST.md` lists all 47 IN PROGRESS entries in four groups; no status changed; handed to CE 02.
 4. **Next:** T-2 and T-3 (read each of the 41 no-status and 5 two-status entries first), then T-5 to T-8 as desk review jobs.
+
+## 6. Progress (later, 29 Oct 2026)
+
+1. **T-2 done (585e44b3):** the 41 entries without a Status line each got one. All 41 read as OPEN in their own text and none is marked fixed; BUG-569 says "code ready, needs an independent review before merge"; BUG-558 says "not a confirmed CE bug, kept as a note"; BUG-195 is a group entry for 195 to 201. Entries with no Status line now: 0. Entry count unchanged at 1,198.
+2. **T-3 done (same commit):** BUG-023, 024 and 865 had an older second Status line, relabelled "Earlier status (superseded)". BUG-042 (29 per-item lines, a batch entry) and BUG-872 (two later build lines for two findings) were left as they are.
+3. **T-6 first pass:** `areas/CARPARK_BY_COMMAND_INDEX.md` (1,054 open or IN PROGRESS entries in 140 groups; 422 name no command).
+4. **T-7 and T-8 first pass:** `areas/CARPARK_DUPLICATES_AND_RELEASE_CANDIDATES_29OCT.md` (a weak duplicate list, and release-blocker candidates). Both limits are written in the files.
+5. **T-5 not done:** matching open bugs to the robot's PASS evidence needs the robot case files mapped to bug numbers (the ledger rows carry case ids, not bug numbers). That is an Opus read for the desk (CE 02 holds the cases).
