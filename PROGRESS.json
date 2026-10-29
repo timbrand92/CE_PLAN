@@ -14,8 +14,8 @@
     },
     "timConfirmed": 25
   },
-  "installed": "Civil 3.0.85 · Manager 1.1.85 · Structural 1.0.125",
-  "waiting": "C-76 package (payload 112) in its verify step, AutoCAD closed 17:11, install follows its report (about 18:00); C-77 and C-78 lanes paused until the report or the 20:00 Team window; cut Fri 13 Nov, pilot Mon 16 Nov",
+  "installed": "Civil 3.0.86 · Manager 1.1.86 · Structural 1.0.125",
+  "waiting": "C-76 installed 17:51 and verified; robot full pass on 3.0.86 starting about 18:00 (about 8 h 15 min); C-77 install Fri 30 Oct evening, C-78 Mon 2 Nov evening; cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-29T17:37:45+11:00"
+  "countedAt": "2026-10-29T17:54:35+11:00"
 }
