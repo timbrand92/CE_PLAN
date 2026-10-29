@@ -594,3 +594,10 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "Yes, build it" (pipes under garages from a closed outline drawn on a layer named once in Settings; none drawn = Unknown) and "Keep as built" (the five cover rows Garden 300, Footpath 100, Driveway 100, Driveway (larger vehicles) 450, Road 600, and a pit with no surface keeps the single office 300).
    2. Interpretation: the cover rows are confirmed (no longer Assumed in the code); the card's "Unknown surface = Unknown" is NOT used, by his word. Garages: layer names are Settings values, blank by default, so every job shows two Unknown rows until the office names its layers (GUESS: that noise is acceptable; not stated by Tim).
    3. Built: PRs 1841, 1842, 1843, 1849, 1850, 1851 (see areas/council-rulebook.md items 3 to 8 and 04_REFERENCE/guidebook-cards/BUILD_LIST.md).
+
+## Batch 29 (22:38, Melbourne; said in the Control Room chat, relayed by CE 00, not seen by CE 04 directly)
+
+113. **Fri 30 Oct: Tim is on site, the desk keeps going.**
+   1. Tim's words (as relayed by CE 00): "tomorrow im on site so you can keep going until i say so".
+   2. Interpretation (CE 00's, logged as an interpretation): on Fri 30 Oct Tim is away from the work PC all day, so the robot and Codex may use AutoCAD through his usual weekday hours (the runner's away flag is authorised), the overnight self-stop need not cut the pass, installs need not wait for 17:30, and it lasts until Tim says otherwise; the PC stays on and signed in. No question to ask Tim about it unless he returns. Note: Windows Updates are paused until 9 Nov (decision 110); automatic sign-in stays off (decision 109).
+   3. Desk must: run through Fri 30 Oct without Tim's PC being needed; stop and ask only if something needs his word; tell Tim when he returns what ran.
