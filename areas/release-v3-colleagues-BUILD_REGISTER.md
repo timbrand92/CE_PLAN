@@ -18,7 +18,7 @@ Started Thu 29 Oct 2026 by CE 01 Build. Tim: "yes, build numbers" (29 Oct 2026, 
 ## Next (fix agents and Team jobs running, one dotnet at a time)
 
 5. **B-005 BUG-1229, grade shown flatter than the grade chosen (1 in 102 for 1 in 100).** PR #1838 (29 Oct 10:35). Switch pipe.suggestedLevelNeverFlatterThanGrade ON. Built yes; tested unit only (net10 20,853 passed, 0 real failures); installed no; Tim-accepted no. NOT in C-76 (the assembler read the list at 10:27 and skipped it; assembly report 11:36). Goes into C-77. Robot proof N32_cd_grade_never_flatter, control N32_off.
-6. **B-006 BUG-1226, "Recent:" invert buttons back on the New Pipe window.** Team job team_fix_c77a. Tim: "yep bring back". Robot guard N30. Running.
+6. **B-006 BUG-1226, "Recent:" invert buttons back on the New Pipe window.** Draft PR #1839 (29 Oct 12:30), switch pipe.recentInvertButtonsOnMainPage ON. Tim: "yep bring back". Robot guard N30 (control: the BROKEN twin, plus a run with the switch false). **Code written and read only: NOT built, NOT tested** (the job waited 2 hours for a free build slot and never got one; lesson recorded in the desk log). A verify job (team_fix_c77a2) builds, runs the tests and finishes it; started 12:37.
 7. **B-007 Raingarden RG1, RG2 label from CDRG.** Team job team_fix_c77b. Tim: "as recommended" (ruling UX-SRC-03, card D07). Queued.
 8. **B-008 Tidy labels switch ON by default.** team_fix_c77c. Tim: "yes". Queued.
 9. **B-009 Grip, ROTATE and SCALE copy clean-up ON by default.** team_fix_c77d. Tim: "yes", after a robot pass with it ON (CE 02 runs that pass); not for a train before then. Queued.
