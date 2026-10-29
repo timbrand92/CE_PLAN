@@ -15,7 +15,7 @@
     "timConfirmed": 25
   },
   "installed": "Civil 3.0.85 · Manager 1.1.85 · Structural 1.0.125",
-  "waiting": "C-76 package (payload 112) building, install after 17:30 once it lands and Tim's AutoCAD is closed; C-77 and C-78 in two build lanes; cut Fri 13 Nov, pilot Mon 16 Nov",
+  "waiting": "C-76 package (payload 112) waits for Tim's AutoCAD to close (then about 40 min, then install); C-77 and C-78 in two build lanes; cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
   "countedAt": "2026-10-29T14:47:45+11:00"
 }
