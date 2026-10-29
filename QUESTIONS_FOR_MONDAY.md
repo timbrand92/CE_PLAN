@@ -228,3 +228,16 @@ GB-A. **MINIMUM FALL FOR 450 TO 750 GRAVITY PIPES.** Tim: "bigger pipes get thei
 GB-B. **MAXIMUM PIPE SPEED AND ITS DOCUMENT.** The guidebook names none; placeholders stay and CE only warns (draft question 7).
 GB-C. **BAYSIDE PUMP 1 IN 20: WHERE IS IT WRITTEN?** If nobody can point to the document it is dropped (draft question 14; Tim: "if nobody can point to the document, drop it").
 GB-D. **CLAUDE ASSISTANT (GB-05): PROVIDER AND MODEL, MONTHLY COST CEILING, WHO GETS IT (9 NOV OR LATER)** and confirm the 22 Oct privacy finding on the AI connection is fixed. GB-05 is not approved yet.
+
+## Added Thu 29 Oct 2026 by CE 04 (from CE 03's hand checks with Tim; details in BUG_CARPARK.md, IDEAS_INBOX.md and areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md H1 to H41)
+
+43. **FO symbol (BUG-1236).** Card D08 says OF and FO share one symbol; Tim says "fo places a block which says of not fo". Recommended: FO gets its own symbol reading FO.
+44. **Source tags on the plan (BUG-1242).** The plan shows OF and FO (no RG1 at all); the number (OF1, DP1, RG1) shows only in the Inspector. Recommended: show the number on the plan for every source block, default ON.
+45. **Pipe label gap (BUG-1239).** Tim: "450 is wrong im telling you". What gap for Above and Below? Recommended: a Settings value, default about half a text height clear of the pipe at plot scale; Tim names the number.
+46. **Move+Rotate and Copy+Rotate on a raingarden (BUG-1245).** They refuse with a code word. Recommended: a plain sentence naming the object now, support later.
+47. **Copied downpipe (BUG-1246).** CR leaves a plain copy with no new tag. Recommended: a copied downpipe becomes a real downpipe with the next tag, as a copied pit does.
+48. **StrucPlus in Manager (IDEAS UX-MANAGER-TABS).** Tim: "lets remove strucplus". Recommended scope: take CE StrucPlus out of CE Manager only, no StrucPlus code or product deleted.
+49. **CE Blocks (BUG-1243).** Tim: "ceblock still doesnt work how i wanted it to"; what he wanted is not recorded. Ask what he typed or clicked, what he wanted, what it did.
+50. **Help tab (UX-HELP-IN-MANAGER).** Five questions in areas\UX_HELP_TAB_BRIEF_2026-10-29.md section 8, picture areas\UX_HELP_TAB_MOCKUP_2026-10-29.png.
+51. **Two CE_SUITE_MANAGER installs on his PC (CEHEALTH warning, ledger H31).** Which to keep, ProgramData or his AppData? Nothing removed.
+52. **Garages for GB-01 slice 4.** Recommended in the build list: a closed outline on a named layer set once in Settings; Tim's splay ruling (decision 72, "selected by end user") suggests the same here: the user picks the garage outline.
