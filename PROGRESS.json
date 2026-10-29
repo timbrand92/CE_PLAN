@@ -4,7 +4,7 @@
     "of": 548
   },
   "tested": {
-    "done": 12,
+    "done": 17,
     "of": 548
   },
   "dailyTools": {
@@ -15,7 +15,7 @@
     "timConfirmed": 17
   },
   "installed": "Civil 3.0.85 · Manager 1.1.85 · Structural 1.0.125",
-  "waiting": "Train C-76 in the Opus final check; C-77 and C-78 building in two lanes; freeze Fri 6 Nov, pilot Mon 16 Nov",
-  "planCountedAt": "2026-10-28T18:12:00+11:00",
-  "countedAt": "2026-10-29T12:47:36+11:00"
+  "waiting": "Train C-76 (full class) passed its Opus final check and installs this evening after 17:30, then a full pass tonight; C-77 and C-78 building in two lanes; cut Fri 13 Nov, pilot Mon 16 Nov",
+  "planCountedAt": "2026-10-29T13:27:00+11:00",
+  "countedAt": "2026-10-29T13:31:00+11:00"
 }

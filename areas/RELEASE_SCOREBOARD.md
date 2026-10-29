@@ -15,7 +15,8 @@
    1. **Gate list:** 1 of 9 done / 8 open (you confirmed gate item 1 and took gate items 6 and 7 out).
    2. **Pilot-critical bugs (60):** 0 of 60 closed by Claude / 0 of 60 confirmed by you. 26 fixes installed, 5 built not installed, 27 no fix.
    3. **Everyday tools (40):** 19 of 40 Claude-accepted (47.5 percent) / 17 of 40 confirmed by you (42.5 percent; PROGRESS.json 12:47, hand checks H1 to H18). Not passed yet: the OF and FO symbol (BUG-1236) and the "Show grade in pipe text" tickbox (found under More..., you dislike where it is; a design pass is running).
-   4. **9 Nov-scope items (390):** built 47 percent (184 of 390) / tested 3.1 percent (12 of 390).
+   4. **9 Nov-scope items (390):** built 47 percent (184 of 390) / tested 4.4 percent (17 of 390; was 3.1). Whole plan (548): built 54.7 percent / tested 3.1 percent (17 of 548; was 2.2).
+
 4. **Installed right now (I read the files at 13:11):** Civil 3.0.85 and Manager 1.1.85, commit 09126560, in all three folders (Legacy, Modern, Net8). Unchanged since 00:21. **Next: C-76 (Civil 3.0.86 / Manager 1.1.86)** passed its Opus final check ("GO", commit adcd57e4: double-click on a downpipe, CDCHECK wording, the Manager About window, DP speed). Its install package (payload 112, candidate c1072) is building; CE 01 plans to install it this evening after 5:30 pm when AutoCAD is closed. Undo: the old bundle folders are kept beside the new ones as backup folders; rename them back.
 5. **Your decisions today that shape the plan:**
    1. **Max** is on AutoCAD 2022 now and will have 2027 before the pilot ("yes", read as by about Fri 13 Nov). The pilot is **2027 only**; nothing is installed on his PC until 2027 is in. His install rights are not answered.
@@ -83,11 +84,13 @@ Gate score: **1 of 9 done / 8 open.** Open: items 2, 3, 4, 5, 8, 9, 10, 11.
 4. **Next:** CDTWL freeboard, layers D24, schedule order D21, hide grade D06, Excel export D23, D13 (needs Tim), CDCHECKDWG D28, mid-pipe label D10, D05 and D07 after their builds.
 5. **Tested / not tested list, first cut (CE 02, TESTED_NOT_TESTED_LIST_29OCT.md, 13:15 to 14:00 by its own times):** everyday tools **21 tested, 12 tested in part, 5 not tested** (38 lines; the plan names 38 of the 40; the 21 includes Tim's own hand passes, so it differs from CE 00's 19 on purpose, explained in the file); pilot-critical bugs **0 tested of 60**; gate items and hand checks 58 entries: 26 passed, 1 failed, 16 in part, 15 not tested (gate list alone: 0 whole, 1 in part, 10 not tested). **Honest line for the colleague note today:** the everyday drawing tools were tested in AutoCAD on 3.0.85 by the robot and by Tim; do NOT say the pilot-critical bugs are fixed and tested; say fixes are installed and testing is in progress. Gaps that would hurt a colleague first: D05 recent buttons, D06 hide grade (under More...), D25 existing and demolished layers (not built), D22 and D28 (Codex gaps), the 60 fixes, the gate items. The file still says BUG-905 and BUG-1097 need Tim's answers; Tim answered both on 29 Oct (items 30 and 31), so CE 02 should refresh that line. It is refreshed after each re-test.
 
-## 5. Plan numbers (PROGRESS.json, counted 29 Oct 12:47)
+## 5. Plan numbers (PLAN_RECOUNT_29OCT_2026.md, counted 29 Oct 13:27; PROGRESS.json rewritten 13:31)
 
-1. **Whole plan (548):** built 300 of 548 (54.7 percent) / tested 12 of 548 (2.2 percent). Plan last recounted 28 Oct 18:12.
-2. **9 Nov scope (390):** built 47 percent installed (184 of 390; 290 including unshipped drafts) / tested 3.1 percent (12 whole; 26 counting parts). Never mixed with the 40 tools. About 100 scope items are unbuilt and are not pilot blockers.
-3. **Meters (USAGE.json 12:47):** Max 4 percent five-hour / 85 percent week; Codex 13 percent week; Team week 41 percent, stale (28 Oct 18:10).
+1. **Whole plan (548):** built 300 of 548 (54.7 percent; 412, 75 percent, counting unshipped drafts) / tested 17 of 548 (3.1 percent; was 12, 2.2 percent), 27 of 548 (4.9 percent) counting parts. Built did not move: the only install since 28 Oct was a bug-fix train (C-75). Tested rose because five Civil plan items were completed by new robot and Codex evidence (pit label and cover level UX-CPLAN-21, pit catch UX-PIT-02, the short-pipe leader label UX-CPLAN-24, CDRENUMBER labels UX-CPLAN-18/19, and one more named in the recount). **Caveat from the recount:** three of the five rest on a robot partial pass plus a Codex look; read strictly, tested is 14 of 548, not 17. The 300 and 412 are the 18 Oct item count carried forward; nothing ran in AutoCAD in the recount job.
+2. **9 Nov scope (390):** built 47 percent (184 of 390 installed; 290, 74 percent, with drafts) / tested 4.4 percent (17 of 390; 27 of 390, 6.9 percent, counting parts). Never mixed with the 40 tools. About 100 scope items are unbuilt and are not pilot blockers.
+3. **40 tools:** Claude-accepted 19 of 40 (47.5 percent, CE 00's official count) / Tim-confirmed 17 of 40 (42.5 percent, PROGRESS.json); the ledger's later hand checks support 19 of 40 Tim-confirmed (21 counting two half-checks). The wider-bug totals are UNKNOWN (the 28 Oct recount had no bug section).
+4. **60 pilot-critical bugs:** closed 0 of 60; fix installed 26 of 60 (43 percent); built not installed 5; no fix 27.
+5. **Meters (USAGE.json 12:47):** Max 4 percent five-hour / 85 percent week; Codex 13 percent week; Team week 41 percent, stale (28 Oct 18:10).
 
 ## 6. Build trains
 
