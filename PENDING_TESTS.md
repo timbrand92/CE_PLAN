@@ -1,5 +1,9 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-03 slice 4, soakage sheet (ENGINE ONLY) — 29 October 2026 (Built and unit-tested only)
+
+PR 1855, branch `claude/gb03-soakage`. No window or printed sheet calls the new calculation yet, so there is nothing for Codex to see in AutoCAD. The numbers are proved by 20 unit tests against the guidebook's own worked sheet (every printed row). When a window or the printed sheet uses it, Codex checks: the soakage page shows the sweep, the worst storm and the 2-hour row, a set-back warning, a soil-rate warning for Kingston, Frankston and Mornington Peninsula (minimum 100 mm/h), and "Unknown" for a soil with no moderation factor.
+
 ### GB-02 part A, council data — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
 PR 1854 (stacked on B-017 PR 1852), branch `claude/gb02-council-data-a`.

@@ -35,6 +35,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 9. **GB-02 part A, council data, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1854 (stacked on B-017 PR 1852). Glen Eira 50% underground rule removed (book p34); Port Phillip Boyd's (Tim item 27); Cardinia, Brimbank, Greater Dandenong, Hobsons Bay, Nillumbik, Merri-bek profiles (no suburb lists, unsourced figures Assumed, Cardinia submission item 'Professional registration number'); guidebook version 1.3 on the file and on the eight touched profiles. Parts B to D not built (see BUILD_LIST item 6). Steps in `PENDING_TESTS.md`.
 
+10. **GB-03 slice 4 engine, soakage by the book's method, 29 Oct 2026 — Built and unit-tested; no window uses it; not installed.** PR 1855 (`claude/gb03-soakage`). Reproduces the guidebook's worked soakage sheet; Settings soil table (moderation factor, set-back); council minimum soil rate 100 mm/h for Kingston, Frankston, Mornington Peninsula (information only, no Stale). Open for the engineers: worst storm (180 min, 25.766 m3) versus the highlighted 2-hour row (25.348 m3); factor applied as multiplier or divisor. Other GB-03 slices not built.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
