@@ -6408,6 +6408,8 @@ Checked and fine: selection observer, highlights, attachment queue (holds one), 
 
 **Reference:** Modules/Manager/Services/CeBlocksInsertService.cs (the Insert method, lines ~61-113).
 
+
+**Retest triage (29 Oct 2026, CE 02 retest triage, Team Opus, areas/CARPARK_RETEST_TRIAGE_29OCT.md; nothing run in AutoCAD yet, evidence only, no status changed):** passed on an older build; needs a run on the installed build before it counts.
 **Status:** IN PROGRESS - fixed and merged to master, PR #333 (28 Sep 09:55; `AppendAttributesFromDefinition` added, verified by the release chat directly plus the builder's own revert-and-confirm-tests-fail check). Placement/rotation preview jig also built. Installed 28 Sep 11:20 (Civil 3.0.10/Manager 1.1.10) - this is one of the two live fixes Tim was actively blocked by. **Not yet Tim-confirmed in AutoCAD** (his check: place an attribute-tagged block, confirm the tag shows and stays editable; repeat with Explode) - do not mark FIXED until he does. CEBLOCKS smart redesign (tabs/search/recent/stamp mode, PR #337) also merged and installed same cycle; verified it left the attribute fix's code untouched.
 
 **Also raised by Tim, same message, separate/bigger items (own workflow cards, not a quick fix):**
@@ -6695,6 +6697,8 @@ green after. Full REGRESSION_LOG.md entry at the top. Never mark FIXED until Tim
 
 **Tim's AutoCAD steps:** open PIT, Edit Pit and double-click a pipe: each looks like the CD window you draw pipes with.
 
+
+**Retest triage (29 Oct 2026, CE 02 retest triage, Team Opus, areas/CARPARK_RETEST_TRIAGE_29OCT.md; nothing run in AutoCAD yet, evidence only, no status changed):** STILL BROKEN: the New Pit window has large empty areas.
 **Status:** IN PROGRESS for native acceptance. Pit one-page [PR #184](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/184) is ready for review at `a760d7d4`: all 20 new scaling failures cleared, 304 requested/pit and 599 wider fit checks pass, three Civil Release builds have zero errors, and the full Civil run has 10,935 passed / 6 existing non-Pit failures / 19 skipped. Thirty-two 150% dark/light New/Edit Pit renders were inspected. The real-drawing preview still needs command-owner plan-anchor/dry-run integration. Pipe one-page PR #180 remains separate. Neither is installed or Tim-accepted; the combined 2027/2024 native check remains.
 
 ---
@@ -7295,6 +7299,8 @@ every line since 13 Sep).
 
 **Reference:** `Modules/Drainage/Commands/CdCommand.GradeSuggestion.cs`, `Modules/Drainage/ViewModels/CdViewModel.Preview.cs`. Filed from Tim's CD-smartify field report (2026-07-03).
 
+
+**Retest triage (29 Oct 2026, CE 02 retest triage, Team Opus, areas/CARPARK_RETEST_TRIAGE_29OCT.md; nothing run in AutoCAD yet, evidence only, no status changed):** STILL BROKEN: the New Pipe preview is blank. Tim's screenshot of the New Pipe window on 29 Oct (Civil 3.0.85) shows the two pits and the downpipe in the plan preview but no pipe drawn between them. See also BUG-1230 (on hold, whole-functionality review).
 **Status:** IN PROGRESS (2026-07-03) — CODED, 28/28 filtered unit tests green on net48, awaiting Tim's AutoCAD confirm. See REGRESSION_LOG.md "BUG-073".
 
 ## BUG-074
@@ -7319,6 +7325,8 @@ every line since 13 Sep).
 
 **Reference / diagnosis (2026-07-03):** (a) vertical-pipe direction — `GeometryHelper.GetAbovePerpendicularAngle` vertical fallback + `TextService.CalculateResolvedInvertAnchorPoint`/`GetInvertPerpendicularDirection` (~lines 652-678) push "Bottom" the wrong way for near-vertical pipes; (b) clash-avoidance (`PipeCreationService.DetectPreferredInvertPosition`) only runs at CREATE time, never re-checked when the user edits/toggles. Filed from Tim's CD-smartify field report.
 
+
+**Retest triage (29 Oct 2026, CE 02 retest triage, Team Opus, areas/CARPARK_RETEST_TRIAGE_29OCT.md; nothing run in AutoCAD yet, evidence only, no status changed):** already has a Codex pass of 27 Oct; needs only a reviewer's comparison with this entry before it can be written Codex-accepted.
 **Status:** IN PROGRESS (2026-07-03) — CODED, 71/71 targeted tests green on net48, awaiting Tim's AutoCAD confirm. Root cause was the rotated-text FOOTPRINT attachment (not the anchor); fix derives the attachment corner from the true perpendicular. Edit-path clash re-check added. See REGRESSION_LOG.md "BUG-075". (Follow-up: XCIVIL import path still on legacy table.)
 
 ## BUG-076
@@ -8258,6 +8266,8 @@ The Floor Waste insertion points must be computed on the centerline, not on the 
 
 **Note (round 2, 2026-05-20):** Tim's clarification "within 2 or 3 grades of 100" — the round 1 band was half-open `[N-3, N]` which over-suffixed mild overshoots. Round 2 made the band SYMMETRIC `[N-3, N+3]`. Above-band (achieved > N+3) now produces a NEW " MAX." suffix instead of the legacy "log warning + still MIN." behaviour. Tests rewritten: explicit upper boundary at N+3, MAX. at N+4 / N+100.
 
+
+**Retest triage (29 Oct 2026, CE 02 retest triage, Team Opus, areas/CARPARK_RETEST_TRIAGE_29OCT.md; nothing run in AutoCAD yet, evidence only, no status changed):** LIKELY STILL BROKEN. Tim's ruling UX-CPLAN-05, 26 Sep 11:46: "Keep the May rule: no MIN." The installed CdCommand.Grade.cs lines 212 to 221 still add " MIN." when the grade is Standard, only the first level is typed and "I know one end" is off (the intake chat read the same lines on 29 Oct); a unit test asserts it, and every existing label case types both levels so none reaches this path. Robot case K02 is drafted to test it. Same typing-one-level path as BUG-1229 and BUG-1233.
 **Status:** IN PROGRESS — coded 2026-05-20, awaiting Tim's AutoCAD test.
 
 ---
