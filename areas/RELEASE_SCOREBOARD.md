@@ -164,3 +164,7 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 6. **Codex looks:** Codex weekly 13 percent; each look 1 to 3 points; daily caps 30 from Thu 17:53, 44 from Fri 17:53, 58 from Sat 17:53. Thu from 17:53: G3 G7 G4, then H1 to H3 (my C4, C5, C2). Fri from 17:53: H4 to H6, G6, G5. Sat daytime: my C1 (no blue incl. printed sheet), C3 (nothing leaves the PC), C6 (CDCHECKDWG, ribbon jump, label positions); briefs by Fri evening. Looks need Tim's AutoCAD closed.
 7. **Max-like configuration run:** CE 02 will run the Tue 3 Nov full re-test ONCE with CE.AutoCADLink.2027 and CE.Transform.Trial.2027 moved aside (restored by hash; Tim's 29 Oct yes covers it) and report which cases change. Evidence for Max's PC, not proof of it. Reported in the BUG-861 control run report.
 8. **Unmoved items (4 hour watch):** none yet; replies received from CE 02 (this one), CE 00. Not yet heard from CE 03, CE 04 (messages delivered 29 Oct; no reply needed unless blocked).
+
+## 14. Add-in bundles answer (CE 01 via CE 00, 29 Oct)
+
+1. Do not add `CE.AutoCADLink.2027` or `CE.Transform.Trial.2027` to Max's package (test bundles; Civil ships its own transform file). Not proven that behaviour is the same without them: BUG-861 control run and the rehearsal prove it. Handover plan section 1 item 4 and test plan check B9 updated.

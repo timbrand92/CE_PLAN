@@ -7,7 +7,7 @@
 
 # FOR TIM
 
-1. **The answer.** 34 checks decide whether Max gets the build: 8 are package and install checks (mine), 8 are robot checks run twice (CE 02), 6 are Codex looks at windows and printed pages (CE 02), 2 are hand checks by you (CE 03), and 10 are your decisions (CE 04). Several overlap with each other, so the real count of separate sittings for you is small.
+1. **The answer.** 35 checks decide whether Max gets the build: 8 are package and install checks (mine), 9 are robot checks run twice (CE 02), 6 are Codex looks at windows and printed pages (CE 02), 2 are hand checks by you (CE 03), and 10 are your decisions (CE 04). Several overlap with each other, so the real count of separate sittings for you is small.
 2. **Your hand checks are only two,** both on the final frozen build, about 20 minutes in total: the five-step walk Max will do (PIT, CD, Edit Pipe, Pit Schedule, CDFEEDBACK), and a look at one finished council sheet. Everything else is the robot, Codex or a spare login.
 3. **The exit rule I propose for the 60 pilot-critical bugs.** By Fri 6 Nov each of the 60 is one of: closed (Claude-accepted or Tim-confirmed), written on page 04 as a known problem with a workaround, or switched off and not offered to Max. Nothing is left unaccounted for. That is realistic where closing all 60 is not, because the robot can reach only 2 of the 26 installed fixes today.
 4. **What I need from you this week** (each sits in QUESTIONS_FOR_MONDAY.md as a numbered item for CE 04): Max's AutoCAD year and whether his login has administrator rights; a spare standard Windows login; the frozen-copy folder; the old-files move; one-pass approval of the pack; a few engineering words. Detail in section 6.
@@ -47,6 +47,7 @@
 6. **B6 Engineering HIGH 1, 2, 3** (route length for grade, solver material, rainfall note): drawing values by robot, wording by Codex look, or a plain warning on the tool.
 7. **B7 Tim's new defaults:** Tidy labels ON, grip copy ON (needs a robot pass with it ON first, Tim 29 Oct item 9), BUG-1226 Recent levels (N30), DP speed N31 against control C31, grade-not-flatter N32.
 8. **B8 Full re-test on the frozen candidate:** weekend 1 Sat 31 Oct, pre-pilot Tue 3 Nov and Wed 4 Nov, nightly Thu 5 and Fri 6; weekend 2 Sat 7 Nov. All accepted cases still PASS; any regression is a stop.
+9. **B9 Max-like configuration re-run:** the release-critical cases re-run once with `CE.AutoCADLink.2027` and `CE.Transform.Trial.2027` moved aside (restored by hash; Tim's 29 Oct yes covers it), planned by CE 02 for the Tue 3 Nov full re-test and reported with the BUG-861 control run. Any case that changes is a finding for Max's page. Evidence for Max's PC, not proof of it.
 
 ### C. Codex looks (owner CE 02; held until Tim is off AutoCAD, rule 1.8)
 
@@ -123,4 +124,4 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 1. I ran nothing: no AutoCAD, robot, Codex or build.
 2. Installed versions were read from the DLLs (Civil 3.0.85, Manager 1.1.85, 09126560); source-based statements about pilot-critical fixes come from CE 02's list.
 3. The robot and Codex schedules above are proposals until CE 02 confirms them.
-4. Counts of checks (34) are mine and will change as CE 02 refines the pilot cases.
+4. Counts of checks (35) are mine and will change as CE 02 refines the pilot cases.
