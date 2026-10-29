@@ -17128,3 +17128,37 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's words 29 Oct 2026, hand check H35 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; BUG-842 and HUNT-MI-30 (CE Blocks, different faults); Modules\Manager (CeBlocksSettings).
 
 **Status:** OPEN (parked by Tim 29 Oct 2026; needs Tim's description). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1244 — CE Manager Refresh (CEMANAGERREFRESH) prints only its own name and gives no sign of what it did
+
+**Command / Area:** CE Tools > Refresh (CEMANAGERREFRESH), Manager 1.1.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H38). NO FEEDBACK, severity low.
+
+**Symptom:** Tim ran Refresh. The command line showed only "Command: CEMANAGERREFRESH". Tim: "thats all it did i have no idea what else it did". No result line, no window change, no 'nothing to refresh'. Not known: what Refresh is meant to do (re-read the update approvals? re-check module status?); I did not read its code.
+
+**Expected behaviour:** One plain line saying what was refreshed and the result, for example 'Refreshed: 3 modules loaded, no update waiting' (matching what the Manager window's Status tab shows), or a plain 'Nothing changed' line. Part of Tim's rule that the whole plugin is user friendly (UX-HELP-IN-MANAGER).
+
+**Steps to confirm in AutoCAD:** (1) Click Refresh on the CE Tools tab. (2) Read the command line. Right = a line saying what it did. Wrong = only the command name.
+
+**Reference:** Tim's words and command line 29 Oct 2026, hand check H38 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; idea UX-HELP-IN-MANAGER.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1245 — Move + Rotate (MR) and Copy + Rotate (CR) stop on Tim's selection with a code word in the message, and Tim cannot tell why
+
+**Command / Area:** CE Tools > Move + Rotate (MR) and Copy + Rotate (CR), the native transform commands (Modules\Shared.Transform.Native2027\TransformCommands.cpp:325-332), Manager 1.1.85 / Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H38). WRONG ANSWER OR WRONG WORDING, severity to confirm. What the two selected objects were is NOT known (asked).
+
+**Symptom:** Tim ran MR and then CR, each time selecting two objects ('2 found') and pressing Enter. Both printed: "CE transform stopped (eNotApplicable). Drawing changes rolled back. This trial accepts ordinary local lines, arcs, circles, ellipses, lightweight polylines, text and blocks only; external/protected content is blocked." The first sentence contains a programmer's error word ('eNotApplicable'), the second calls the command 'this trial', and neither says WHICH of his two objects was refused or what to do. Reading the code (not seen running): the message appears when AutoCAD refuses an object that is not one of the ordinary types listed (or a protected one); nothing was changed (rolled back, so no harm).
+
+**Expected behaviour:** Either the command moves and rotates the selection (if the objects are ordinary), or it says in plain words which object type or layer stopped it ('2 objects selected; the pipe P3 is a CE pipe and cannot be moved this way'; 'one object is on a locked layer: unlock the layer or pick others'), and never shows a code word or the word 'trial' to a drafter. The native protection rule stays: nothing protected is moved, unlocked or bypassed.
+
+**Steps to confirm in AutoCAD:** (1) Draw two plain lines (ordinary objects) and run MR on them. Right = they move and rotate as asked. (2) Run MR on a CE pit and a CE pipe. Right = either it works or the message names the object that cannot be moved. Record which objects Tim had selected.
+
+**Reference:** Tim's pasted command lines 29 Oct 2026, hand check H38; code at TransformCommands.cpp:327-332; the 'Native AutoCAD protection rule' in AGENTS.md.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026; needs to know which two objects he selected). Never FIXED until Tim confirms in AutoCAD.
