@@ -125,3 +125,52 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "we have spare autocad licenses".
    2. Interpretation (GUESS on the details): at least one AutoCAD seat is unassigned, so a test machine (the spare PC or the AutoCAD 2026 laptop) can use its own seat and the robot need not sign Tim out of his own. Not stated: which AutoCAD year the spare seat covers (2026 or 2027), who assigns it, and whether the laptop or spare PC already has one signed in. Not a decision to install anything on any machine.
    3. Desk must: record the licence question as answered in principle; ask Tim only which year the spare seat is and who (office admin) assigns it to the laptop's user; do not install or sign in anything on another PC without his word (decisions\2026-10-29_TIM_RELEASE_FREEZE.md item 4). No paid tools (decisions\2026-10-29_TIM_NO_PAID_TOOLS.md).
+
+## Batch 5 (afternoon, Melbourne; Tim answered the corrected batch of 22 to 33)
+
+25. **Max's AutoCAD year and Windows rights (QUESTIONS item 22): year answered; rights not.**
+   1. Tim's words: "he will have 2027, currently has 2022".
+   2. Interpretation (GUESS on timing): Max is on AutoCAD 2022 today and will be on 2027 before the pilot. Not stated: when he upgrades, and whether he can install programs. Because his year is 2027, the paid cloud test (item 32) is not needed; paid tools are ruled out anyway (decisions\2026-10-29_TIM_NO_PAID_TOOLS.md).
+   3. Desk must: keep the pack on 2027; keep BUG-1209 and BUG-1210 on the known-problems page as a note for anyone on an older year; do not install anything on Max's PC before his 2027 is in. Ask Tim once more for the date and the install rights when the pilot pack is near.
+
+26. **Spare ordinary Windows login for install rehearsals (QUESTIONS item 23): Tim organises it.**
+   1. Tim's words: "i will organise".
+   2. Interpretation (GUESS): Tim will set up the standard (non-administrator) login himself. Item 23 was replaced by the laptop item 33, so this may refer to either; the desk should not assume which machine.
+   3. Desk must: wait for Tim to say the login exists and which PC; start no rehearsal before that.
+
+27. **What goes into the frozen build (QUESTIONS item 27): the latest version.**
+   1. Tim's words: "the latest version ideally".
+   2. Interpretation: consistent with his earlier "option b": freeze on Fri 6 Nov with the latest passing build (C-76, C-77 and the pilot-critical fixes), not a Sat 31 Oct build.
+   3. Desk must: freeze the latest reviewed build on 6 Nov; nothing frozen early.
+
+28. **Where the frozen copy sits (QUESTIONS item 24): yes.**
+   1. Tim's words: "Recommended: a separate `CE V3 PILOT` folder, shared "can view" to Max only, with the July copies untouched."
+   2. Interpretation: approved as the plan. GUESS: the folder is created and shared at the publishing step after the 6 Nov freeze, with the desk saying when before it does (his approval was of the place, not of sharing today).
+   3. Desk must: create the folder and share only to Max at the packaging step; never touch the July copies.
+
+29. **Two gate settings (QUESTIONS item 26): yes to both.**
+   1. Tim's words: "Recommended: yes to both."
+   2. Interpretation: (a) the administrator set-up on Tim's PC is right; (b) Structural stays on Tim's PC only, so gate items 6 and 7 (Publish Issue stamps, job record) are out of the pilot gate.
+   3. Desk must: mark gate item 1 confirmed by Tim and remove items 6 and 7 from the gate.
+
+30. **BUG-905 hard-ground runoff 0.9 (QUESTIONS item 20a): yes.**
+   1. Tim's words: "Recommended: yes, 0.9. Your real OSD4W printout uses 0.90 for existing hard area. I haven't confirmed the guidebook gives the same figure."
+   2. Interpretation: 0.9 is right for hard ground in CDCALC Boyd's; the fix is switched ON. The guidebook figure is not yet confirmed (the guidebook audit session may check).
+   3. Desk must: switch the BUG-905 fix ON in the next train; ask the guidebook audit to confirm 0.9 on its page and tell Tim only if it disagrees.
+
+31. **BUG-1097 the 300 mm head check (QUESTIONS item 20b): the head left after losses.**
+   1. Tim's words: "Recommended: the head left after losses, because that's the real head at that point. On 25 Oct the desk's view was to keep the typed head as built. This is the newer view."
+   2. Interpretation: the 300 mm minimum head check uses the head left after pipe losses (supersedes the 25 Oct "keep the typed head" draft view).
+   3. Desk must: change PR #1772's check to the head after losses; keep it a warning (R-27).
+
+32. **Fixes for the freeze, BUG-1095, BUG-1091, BUG-1088 (my question 5): build all three.**
+   1. Tim's words: "build all three before 6 Nov."
+   2. Interpretation: all three are built and in the frozen build, not warned. (CE 07 already read them as in the build list.)
+   3. Desk must: build all three before the 6 Nov freeze.
+
+33. **Test laptop with AutoCAD 2026 (QUESTIONS item 33): Tim will use another PC with 2027 instead.**
+   1. Tim's words: "i will get 2027 on another pc".
+   2. Interpretation (GUESS): Tim is not providing the 2026 laptop; he will get AutoCAD 2027 on another PC. The six laptop questions (whose, login type, sign-in, when free, powered on, network) are not answered. Together with decision 24 (spare AutoCAD licences), this suggests a spare seat of 2027 on that PC, not confirmed.
+   3. Desk must: pause the 2026 laptop assessment; ask Tim which PC, when, who assigns the licence; install nothing on any PC without his word. The robot driver was built for 2027, so a 2027 PC is the easier route.
+
+34. **Re-test rule detail (my question 6, new switch only): NOT ANSWERED yet.** Tim's reply did not include it. The testing session keeps treating any settings change as a full re-test.
