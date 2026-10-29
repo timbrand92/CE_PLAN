@@ -17162,3 +17162,22 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's pasted command lines 29 Oct 2026, hand check H38; code at TransformCommands.cpp:327-332; the 'Native AutoCAD protection rule' in AGENTS.md.
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs to know which two objects he selected). Never FIXED until Tim confirms in AutoCAD.
+
+**Tim's answer 29 Oct 2026 (hand check H39):** "with mr/cr this worked this time, last time i did the raingarden and it didnt work". So the refused selection included the RAINGARDEN. A single other object (a downpipe, per the CE line below) moved and rotated, and copied and rotated, without trouble: 'Move Rotate complete.' and 'Copy Rotate complete.' So the fault is narrowed to: MR and CR refuse a raingarden (its object type is not one of the listed ordinary types), with a code-word message that does not name the raingarden. The wording part of this bug stands unchanged; the question 'should MR and CR work on a raingarden?' is Tim's call (raingardens are CE source objects, not plain lines).
+
+
+---
+
+## BUG-1246 — Copy + Rotate of a downpipe: the copy "could not be given its own link on this AutoCAD", left as AutoCAD copied it
+
+**Command / Area:** CR (Copy + Rotate) on a downpipe (DP) block, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H39). POSSIBLY WRONG, severity to confirm. Tim reported only 'this worked this time'; this line is from his pasted command line.
+
+**Symptom:** CR on one downpipe printed 'Copy Rotate complete.' and then "[CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing." (Tim had pits and pipes in the drawing; he selected 1 object.) Meaning (my reading of the wording, not checked): the copied downpipe is a plain AutoCAD copy with no CE link or tag of its own, unlike a copied pit (D15) which gets a new number. Not known: whether the copy carries a duplicate tag (two DP1), or a blank one.
+
+**Expected behaviour:** A copied downpipe is a real CE downpipe with its own tag (DP2), or the line says plainly what the drafter must do ('the copy has no tag yet; run CDSYNC'). 'On this AutoCAD' should name the reason in drawing words.
+
+**Steps to confirm in AutoCAD:** (1) Place a DP. (2) CR it (select it, base, destination, rotation). (3) Select the copy and open the CE Inspector, read its tag. Right = its own tag (DP2) and linked. Wrong = DP1 again, or blank.
+
+**Reference:** Tim's pasted command line 29 Oct 2026, hand check H39; related BUG-665 (COPY and ROTATE of a pit gets its own number), BUG-1242 (source tags show no number on the drawing).
+
+**Status:** OPEN (found by hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
