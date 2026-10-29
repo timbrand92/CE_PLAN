@@ -52,3 +52,6 @@ See decisions\2026-10-29_TIM_RETEST_RULE.md: after an install re-test only what 
 
 ## Rule 10 (Tim, 29 Oct 13:10): no Claude/Codex ownership labels
 Any builder can build any item, windows included (decisions\2026-10-29_TIM_ANSWERS.md item 67). Acceptance, one-session-per-file and who deploys are unchanged. CEMEMBER (with its window) is on the post-freeze build list.
+
+## Rule 11 (Tim, 29 Oct 14:00): check-ins only while a plan is running
+A side session whose task is finished and that is not actively working through a plan runs NO recurring check-in (CronList, then CronDelete any it has); it wakes only when a message arrives (from CE 00, another CE session or Tim) or when it starts new work, and then creates its check-in again. CE 01 (build), CE 02 (testing) and CE 07 (release) keep theirs while the build, test and release plan runs to the pilot; CE 00 keeps its hourly check. TimOS bar v0.4.0: already on disk and validated (plugin.json 0.4.0, 'Validation passed'); it is global (CLAUDE_CODE_PLUGIN_DIRS), so every NEW chat has it; an open chat keeps the old look until it is reopened.
