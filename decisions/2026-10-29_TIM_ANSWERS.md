@@ -305,3 +305,20 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "yes definetely, remember i dont want to test anything unless i say i can you two will be in charge of acceptance".
    2. Interpretation: a Codex pass on the test PC counts as Codex-accepted with the PC's name beside it. GUESS: the conditions in the question stand (the PC has its own licence seat; its graphics card and screen scale are compared on three cases against Tim's PC first; a window that looks wrong only there is re-looked on Tim's PC). Standing rule restated: Tim does not test unless he says he can; Claude and Codex own acceptance (RULES 4.5 and the 20 Oct and 24 Oct amendments). Items needing engineering judgement still need Tim's word (rule 4.5, unchanged).
    3. Desk must: write the PC name beside every Codex-accepted from the test PC; never ask Tim to test.
+
+## Batch 11 (afternoon, Melbourne)
+
+63. **One-piece pipe object (QUESTIONS item 40): default ON for everyone.**
+   1. Tim's words: "defualt on for everyone".
+   2. Interpretation: the one-piece pipe object (setting `options.pipeObjectUpgrade`) is ON by default for every login, Max's and any test PC's included, not Automatic (which is on for Tim's login only). Consistent with his 24 Sep rule that colleagues get his exact setup. The extra full test pass with it on Automatic (CE 07's recommendation) is for the desk to decide; Tim did not rule on it.
+   3. Desk must: change the default to On in the next train and in Max's starting settings (F-023 export); test the ordinary pipe once so the fallback is known; tell Tim whether any existing setting is edited (re-test rule, decision 35).
+
+64. **Old July install files (QUESTIONS item 25 follow-up): no colleague installs from them.**
+   1. Tim's words: "no they dont" (to: does any colleague still install from them?).
+   2. Interpretation: nobody installs from the July files, so they can move to the OLD folder with nothing deleted (decision 54). This differs from page 06 of the colleague pack, which says some colleagues use the July copies; Tim's word stands, the desk corrects page 06.
+   3. Desk must: move the files to the OLD folder before the pilot; correct page 06; the deletion date still needs Tim's yes with a file list.
+
+65. **Max's install rights (QUESTIONS item 36): yes (GUESS).**
+   1. Tim's words: "yes".
+   2. Interpretation (GUESS): Max's Windows login can install programs. Taken as the answer to "can his Windows login install programs?".
+   3. Desk must: plan the hand install on that basis; confirm at the install rehearsal, which uses the ordinary-login test.
