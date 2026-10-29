@@ -17090,3 +17090,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's screenshot 29 Oct 2026 (CDCHECKDWG results window, 2 findings), hand checks H11, H14, H22.
 
 **Status:** OPEN (question raised by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1242 — The tag on every source block (DP, OF, FO, RG) does not show its number on the drawing; the number only shows in the Inspector
+
+**Command / Area:** Source blocks (downpipe DP, overflow OF, front overflow FO, raingarden RG, and the same family), Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H28). WRONG LOOK (drawing output), severity to confirm.
+
+**Symptom:** Tim: "bug to add is that the guidelines tag for all source blocks doesnt show the number behind it , it shows only in inspector". On the drawing the green plan text beside a source block reads only the letters (OF, FO on the screenshot in H12; the raingarden shows no RG1 at all), while the command line and the CE Inspector give the full tag with its number (OF1, FO1, DP1, RG1). Two sources of the same kind therefore look identical on the plan. Possible link (not checked): the project's 'Number sources' setting in the Pit Schedule window (default 'Only when scheduled') decides whether the label reads OF or OF1 (card D08).
+
+**Expected behaviour:** The tag on the plan carries its number (DP1, OF1, FO1, RG1) so each source can be told apart and matched to the schedule. Which setting controls it should be stated, and the default should be the one Tim wants (number shown).
+
+**Steps to confirm in AutoCAD:** (1) Place DP, OF, FO, CDRG in empty ground. (2) Look at the plan text beside each. (3) Select one and open the CE Inspector. Right = the plan shows DP1, OF1, FO1, RG1. Wrong = letters only (or nothing for the raingarden) while the Inspector shows the number.
+
+**Reference:** Tim's words 29 Oct 2026; hand checks H12 (OF and FO) and H28 (D07); related BUG-1236 (FO symbol text reads OF), card D08 and D07, QUESTIONS_FOR_MONDAY item 15 (RG1 label).
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
