@@ -23,6 +23,7 @@
    3. **The one-piece pipe object is ON by default for everyone** (item 63, "defualt on for everyone"). That is a build and a full re-test; the tests so far already ran with it on, so they stay valid.
    4. The frozen copy goes in a separate `CE V3 PILOT` folder shared "can view" to Max only (created after your word on Fri 13 Nov); the old July install files move to an OLD folder now and are deleted later on a dated timeline; BUG-905 ON (0.9); BUG-1097 head after losses; BUG-1095, 1091, 1088 all built; BUG-1099, 1096, 1192 built; BUG-587 two-row-thick row with a wipeout mask (picture first); AG drains carry no text at all; BUG-1189 and 1149 keep as built; BUG-685 a one-line note; BUG-1148 a known limit on page 04; the settings-switch re-test point yes. The 2026 laptop is dropped (you will get 2027 on another PC and organise the ordinary login: "tomorrow maybe").
 6. **Needs you, through CE 04:** confirm the dates in section 1 (question 42); Max's install rights; which PC is the second 2027 PC and when (item 37); two words on the test PC (items 38 and 39); the one-pass pack approval; whether any colleague still installs from the old July files before they are moved; your word on Fri 13 Nov.
+**Confirmed by Tim at item 70:** the whole dates plan (installs C-76 to C-81, full re-tests Sat 31 Oct, Sat 7 Nov and Tue 10 Nov, packaging from Wed 11 Nov, cut Fri 13 Nov, the conditional go with a confirming full pass on Sat 14 and Sun 15 Nov, fallback C-80 as tested on Tue 10 Nov or Mon 23 Nov, the folder shared to Max only after his word and that confirmation, hand-over Mon 16 Nov). His "yes to all" is NOT recorded as covering the New Pipe window questions 3 to 6 or the beam-size question.
 7. **The main risk now:** more builds, fewer tests. the hotfix (C-81, Thu 12 Nov) gets an area re-test only until the confirming full pass on Sat 14 and Sun 15 Nov; so your "yes" on Fri 13 Nov is, in my proposal, conditional on that weekend result, with C-80 (fully re-tested on Tue 10 Nov) as the fallback build. You accepted that; the release note will say so.
 8. **Nothing has been published, copied or sent to Max.**
 
@@ -124,7 +125,7 @@ Gate score: **1 of 9 done / 8 open.** Open: items 2, 3, 4, 5, 8, 9, 10, 11.
 1. **Running (session list):** CE 01 build, CE 09 (New Pipe window declutter), CE 10 (guidebook slice 1, pipe).
 2. **Idle:** CE 00 Control Room, CE 02 testing, CE 03, CE 04, CE 05, CE 06 guidebook, CE 08 research.
 3. **Not yet moved:** C-77 lanes (still unconfirmed); the second 2027 PC (item 37); Max's install rights; the old-files move (Tim said yes, not done; the colleague check before moving is not done); CE 02's runner changes (due Fri); Tim's confirmation of the dates (question 42); BUG-1209/1210 scope not yet in the pack.
-4. **Blockers for Tim:** all in QUESTIONS_FOR_MONDAY.md for CE 04 (items 22 to 42; 31, 33 and 35 are withdrawn).
+4. **Blockers for Tim:** all in QUESTIONS_FOR_MONDAY.md for CE 04 (items 22 to 42; 31, 33 and 35 are withdrawn; 42 is answered).
 
 ## 11. Decision log
 
