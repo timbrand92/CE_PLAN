@@ -155,3 +155,10 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 2. **Kept:** the weekend full re-tests (Sat 31 Oct, Sat 7 Nov) and one full re-test before Max, by Fri 13 Nov (the pilot build's own full re-test; also the confirming full pass on Sat 14 and Sun 15 Nov if Tim still wants the conditional go).
 3. **B8 (full re-test on the frozen candidate)** becomes: one full re-test of the pilot build before Max, plus the weekend full re-tests. **B9** (Max-like run) stays one full pass.
 4. **Pass line item 2 (section 3):** "B1 at 30 of 40 or more; B2 to B8 green; no regression in the last full re-test" now reads: the last full re-test is the one before Max; area re-tests cover the rest; every pilot item says tested or carried.
+
+## 15. STANDING RULE (Tim, 29 Oct late: "thats should be the plan throughout as a rule"; CE 00 Rule 14 in CE_SESSIONS_MAP_29OCT.md). Section 14 is not a one-off; it applies to every install through the pilot.
+
+1. **Per install:** CE 02 places every changed file in a tool area (the area map), re-tests the areas the install touches, adds a small smoke set for each SHARED file touched, and records everything else as "carried from <build>". No install forces a full re-test by itself.
+2. **Full re-tests that DO stay:** the weekend full re-tests (Sat 31 Oct, Sat 7 Nov) and ONE full re-test of the pilot build before Max, by Fri 13 Nov (plus the confirming pass on Sat 14 and Sun 15 Nov if Tim keeps the conditional go).
+3. **Release note:** every item says "tested" (robot twice, Codex look or Tim's hand check, with build and date) or "carried from <build>" or "not tested". The tested / not tested list (CE 02) is the source.
+4. **Sections 3 to 5 of this plan (pass line, schedule) read with this rule.** Where they say "full re-test after the last full-class install", read "area plus smoke re-test, then the one full re-test before Max".
