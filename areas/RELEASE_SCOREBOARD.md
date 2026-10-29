@@ -168,3 +168,10 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 ## 14. Add-in bundles answer (CE 01 via CE 00, 29 Oct)
 
 1. Do not add `CE.AutoCADLink.2027` or `CE.Transform.Trial.2027` to Max's package (test bundles; Civil ships its own transform file). Not proven that behaviour is the same without them: BUG-861 control run and the rehearsal prove it. Handover plan section 1 item 4 and test plan check B9 updated.
+
+## 15. Colleague pack change list ready (Sonnet drafting job, read by CE 07 only at the top and the approval heading; the detail is the job's reading and is not re-checked)
+
+1. File: areas\RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md (625 lines). 97 changes across pages 01 to 05 (01: 12, 02: 19, 03: 16, 04: 40, 05: 10). Page 06: 3 answered, 4 partly, 13 open. 31 [CHECK] marks on pages 01 to 05: 10 settled, 5 partly, 16 open (Tim 6, Max 3, spare-login rehearsal 3, Codex look 4). Section 10 holds 12 yes/no decisions for one pass. Question 29 in QUESTIONS_FOR_MONDAY.md points to it.
+2. **Three things that are wrong or unsafe as drafted (per the job; I have confirmed only the first against BUG-1135's entry in the pilot list):** (a) page 02 says drawings are safe either way after a rollback, but an older CE deletes newer parts of the job record when it saves (BUG-1135); (b) page 05 says the support zip drops drawing paths and never sends itself anywhere, one part never checked and one false if Max's Desktop is inside OneDrive (BUG-482); (c) page 04 says "no fix yet" for about 15 problems that are already installed and that Tim has not decided things he decided on 20 and 29 Oct.
+3. **Effect on the rehearsal:** the rollback rehearsal R3 must also open a drawing worked on in the new build and check its record after the old build saves. Added to the handover plan section 4.
+4. Nothing is edited in pages 01 to 06; nothing published. Tim's one-pass approval comes first (QUESTIONS item 29), after the freeze ruling, because 8 wording changes depend on which build items are in the frozen build.

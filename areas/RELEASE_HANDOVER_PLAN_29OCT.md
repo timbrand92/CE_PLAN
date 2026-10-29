@@ -115,3 +115,8 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 2. The no-administrator claim for the hand copy rests on the Team audit's reading of the code and on %APPDATA% being the user's own folder; it is not rehearsed.
 3. I did not open any old script in the IT Admin folder.
 4. Whether Max's PC runs the two extra add-ins, WebView2, or which Windows rights, is Unknown.
+
+## 10. Update 29 Oct: rollback and drawings (from the pack change list job)
+
+1. The pack's line "Your drawings are safe either way" after a rollback is not true (BUG-1135: an older CE deletes newer parts of the job record when it saves). Until the pack says otherwise, step 7 of the rollback section 4 gains: "Do not open and save a drawing in the old version that you worked on in the new version."
+2. Rehearsal R3 therefore includes: work a drawing copy in the new build, roll back, open and save that copy in the old build, return to the new build, and note what is missing from the record.
