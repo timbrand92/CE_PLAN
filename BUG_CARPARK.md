@@ -16562,6 +16562,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Steps to confirm in AutoCAD:** as the test, one year at a time. Right looks like: joined placement on every supported year.
 
+**Scope correction (29 Oct 2026, from CE 02 and the Team Opus addendum in areas/TESTING_SPEED_OPTIONS_29OCT.md, item 5, read by the intake chat; not re-tested):** this is NOT "2022 to 2024 only". The missing parts are built for AutoCAD 2027 only, so AutoCAD 2025 and 2026 (the Net8 lane) lose them too, because on those years pipes stay ordinary polylines as for colleagues. If the pilot colleague Max uses 2025 or 2026 this bug is pilot-relevant. Max's AutoCAD year is still unknown (QUESTIONS_FOR_MONDAY item 22).
+
 **Status:** OPEN
 
 ## BUG-1210 — Edit Pipe and Edit Pit lose the real plan and picture selection on the older lane
@@ -16577,6 +16579,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Test that catches it:** pipe P1 (0,0) to P2 (10000,5000) bent through (10000,0), inverts 19.000 and 18.850; on 2027 the caption "Real plan, north up." appears and clicking an end ring focuses its level box; on net48 compare.
 
 **Steps to confirm in AutoCAD:** PIPEEDIT the bent pipe, then PITEDIT P1 and click a pipe tag, on 2024 and 2027. Right looks like: the real route and clickable picture on both.
+
+**Scope correction (29 Oct 2026, from CE 02 and the Team Opus addendum in areas/TESTING_SPEED_OPTIONS_29OCT.md, item 5, read by the intake chat; not re-tested):** this is NOT "2022 to 2024 only". The missing parts are built for AutoCAD 2027 only, so AutoCAD 2025 and 2026 (the Net8 lane) lose them too, because on those years pipes stay ordinary polylines as for colleagues. If the pilot colleague Max uses 2025 or 2026 this bug is pilot-relevant. Max's AutoCAD year is still unknown (QUESTIONS_FOR_MONDAY item 22).
 
 **Status:** OPEN
 
