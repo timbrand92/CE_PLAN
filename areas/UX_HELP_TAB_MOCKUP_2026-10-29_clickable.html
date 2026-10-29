@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><title>CE Manager - Help tab (clickable mock-up)</title>
+<style>
+:root{--bg:#1C1C1C;--surface:#252525;--alt:#202020;--line:#41413D;--text:#EEEAE1;--sub:#BCBCB3;--dim:#8A8A82;--gold:#C9A84C;--soft:#332A10;--warn:#E2A83A;--warnbg:#2E2312;--okbg:#10281C;--ok:#6FBF8B}
+*{box-sizing:border-box}
+body{margin:0;background:#111;font-family:"Segoe UI",Arial,sans-serif;color:var(--text);font-size:13px;padding:22px 28px 28px;width:1236px}
+.note{background:var(--soft);border:1px solid var(--gold);border-radius:8px;padding:8px 14px;color:var(--text);margin-bottom:12px;width:1180px;line-height:1.45}
+.note b{color:var(--gold)}
+.win{width:1180px;background:var(--bg);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.title{display:flex;align-items:center;gap:10px;padding:9px 16px;background:var(--alt);border-bottom:1px solid var(--line)}
+.title b{color:var(--gold);font-size:14px;font-weight:600}
+.title span{color:var(--dim);font-size:12px}
+.tabs{display:flex;background:var(--alt);border-bottom:1px solid var(--line);padding:0 10px}
+.tabs div{padding:9px 16px;color:var(--sub);font-size:13px;border-bottom:2px solid transparent}
+.tabs .on{color:var(--gold);border-bottom-color:var(--gold);font-weight:600}
+.body{padding:16px 22px 14px}
+h1{margin:0;font-size:20px;font-weight:600}
+.sub{color:var(--dim);margin:2px 0 12px}
+h3{margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:var(--gold);font-weight:600}
+.help{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:330px 1fr;gap:26px;align-items:start;min-height:230px}
+.help .q{font-size:15px;font-weight:600;margin-bottom:4px}
+.help .small{color:var(--sub);font-size:12px;margin-bottom:12px;line-height:1.45}
+.go{display:inline-block;background:var(--gold);color:#1C1C1C;border-radius:8px;padding:12px 22px;font-size:15px;font-weight:700;cursor:pointer}
+.go:hover{filter:brightness(1.1)}
+.go.done{background:transparent;color:var(--ok);border:1px solid var(--ok);font-weight:600;font-size:14px;padding:10px 20px}
+.three div{display:flex;gap:10px;margin:0 0 9px;line-height:1.4}
+.three .n{flex:none;width:19px;height:19px;border-radius:10px;background:var(--gold);color:#1C1C1C;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.three b{color:var(--text)}
+.three span{color:var(--sub)}
+.tick{display:flex;align-items:flex-start;gap:9px;margin-top:10px;color:var(--text);line-height:1.4;cursor:pointer}
+.box{flex:none;width:16px;height:16px;border:1px solid var(--sub);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1;margin-top:1px}
+.box.on{background:var(--gold);border-color:var(--gold);color:#1C1C1C;font-weight:700}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.hl{display:flex;gap:9px;margin:0 0 6px;line-height:1.4}
+.ok{color:var(--ok);font-weight:700;width:52px;flex:none}
+.wn{color:var(--warn);font-weight:700;width:52px;flex:none}
+.warnrow{background:var(--warnbg);border-left:3px solid var(--warn);padding:6px 10px;border-radius:0 6px 6px 0;margin:6px 0}
+.btn{display:inline-block;border:1px solid var(--line);color:var(--text);border-radius:7px;padding:6px 14px;font-size:13px;margin-right:8px;cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.link{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.link:last-of-type{border-bottom:0}
+.link a{color:var(--gold);text-decoration:underline;font-weight:600;cursor:pointer}
+.link span{color:var(--dim);font-size:12px}
+.guides{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.sec{display:flex;margin-top:8px}
+.sec div{padding:6px 14px;color:var(--sub);border:1px solid var(--line);border-right:0;cursor:pointer;font-family:Consolas,monospace}
+.sec div:hover{color:var(--gold)}
+.sec div:first-child{border-radius:7px 0 0 7px}
+.sec div:last-child{border-right:1px solid var(--line);border-radius:0 7px 7px 0}
+.msg{background:var(--alt);border:1px dashed var(--line);border-radius:7px;padding:8px 12px;color:var(--sub);margin:6px 0 10px 29px;font-family:Consolas,monospace;font-size:12px;line-height:1.5}
+.file{color:var(--text);font-family:Consolas,monospace;font-size:12px}
+.tag{display:inline-block;background:var(--okbg);color:var(--ok);border-radius:10px;padding:1px 9px;font-size:12px;margin-left:6px}
+.dim{color:var(--dim);font-size:12px}
+.hide{display:none}
+</style></head>
+<body>
+<div class="note"><b>CLICKABLE MOCK-UP, nothing is built.</b> Click the gold button. Tick and untick the box and watch line 3 change. Click "Check again", a log link, or an old command name at the bottom. Nothing here touches your PC. Example numbers only.</div>
+<div class="win">
+  <div class="title"><b>CE Suite Manager</b><span>Civil 3.0.85 · Structural 1.0.125 · Manager 1.1.85</span></div>
+  <div class="tabs"><div>Status</div><div>Module</div><div>Updates</div><div class="on">Help</div><div>Settings</div><div>Project / Sheets</div><div>Drawing Repair</div><div>Project QA</div><div>Survey Intake</div></div>
+  <div class="body">
+    <h1>CE Help</h1>
+    <div class="sub">Get help when something is wrong, check your setup, and read the guides.</div>
+
+    <div class="help" id="s1">
+      <div>
+        <div class="q">Something is wrong?</div>
+        <div class="small">One click gathers what CE support needs to fix it. You do not need to know what is wrong or where the files are.</div>
+        <span class="go" id="go">Something is wrong: get help</span>
+        <div class="tick" id="tick"><span class="box on" id="box">✓</span><span>Also copy it to the office IT folder, so Tim and IT get it straight away</span></div>
+      </div>
+      <div class="three">
+        <h3>BEFORE YOU PRESS IT</h3>
+        <div><span class="n">1</span><span><b>What it collects:</b> your CE setup, the CE log files, and the result of the health check below. Never your drawings. Drawing paths are cut down to the job number, and your login and computer name are coded.</span></div>
+        <div><span class="n">2</span><span><b>Where it is saved:</b> on this PC in a CE Support folder that is <b>not</b> in OneDrive, as one zip file named with the date and time (Melbourne time).</span></div>
+        <div><span class="n">3</span><span id="who"><b>Who can see it:</b> <b>you and Creative Engineering IT</b> (the shared "CE Diagnostics" folder in IT Admin). Nobody outside the office. Untick the box and only you can.</span></div>
+      </div>
+    </div>
+
+    <div class="help hide" id="s2">
+      <div>
+        <div class="q">Help file made</div>
+        <div class="small" id="madeat"></div>
+        <span class="go done" id="again">✓ Done. Make another</span>
+        <div style="margin-top:10px"><span class="btn" id="showfile">Show me the file</span></div>
+        <div class="dim" id="showmsg" style="margin-top:6px"></div>
+      </div>
+      <div class="three">
+        <h3>WHAT HAPPENED</h3>
+        <div><span class="n">1</span><span><b>Saved on this PC:</b> <span class="file" id="fname"></span> in your CE Support folder (not in OneDrive).</span></div>
+        <div><span class="n">2</span><span id="copied"></span></div>
+        <div><span class="n">3</span><span><b>Now tell someone:</b> CE has not messaged anyone. Paste this into Teams or an email to Tim:</span></div>
+        <div class="msg" id="msg"></div>
+        <div style="margin-left:29px"><span class="btn" id="copy">Copy this message</span></div>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>YOUR SETUP · HEALTH CHECK <span class="dim">(was the CEHEALTH command)</span></h3>
+        <div class="hl"><span class="ok">OK</span><span>Civil 3.0.85, Structural 1.0.125, Manager 1.1.85</span></div>
+        <div class="hl"><span class="ok">OK</span><span>CE Civil and CE Manager are a matching pair</span></div>
+        <div class="warnrow hl"><span class="wn">CHECK</span><span>CE Manager is installed in two places, so AutoCAD may load both. Remove one: ProgramData\Autodesk\ApplicationPlugins and your AppData\Roaming copy.</span></div>
+        <div class="hl"><span class="ok">OK</span><span>Office IT folder is reachable</span></div>
+        <div style="margin-top:8px"><span class="btn" id="chk">Check again</span><span class="dim" id="chkt">Last checked 15:08 today · 1 thing to look at</span></div>
+      </div>
+      <div class="card">
+        <h3>LOG FOLDERS <span class="dim">(was Open Logs, which opened four at once)</span></h3>
+        <div class="link"><a class="lg">Open Civil logs</a><span>what the drainage and road tools wrote</span></div>
+        <div class="link"><a class="lg">Open Structural logs</a><span>what the structural tools wrote</span></div>
+        <div class="link"><a class="lg">Open Manager logs</a><span>updates, health check and this window</span></div>
+        <div class="link"><a class="lg">Open older Civil logs</a><span>old folder name TIM_CE_CADTOOLS · only shown if it has files</span></div>
+        <div class="dim" id="lgmsg" style="margin-top:8px">You never need these to get help. They are here for when someone asks "can I see the log?".</div>
+      </div>
+    </div>
+
+    <div class="guides">
+      <h3>THE OLD COMMANDS <span class="dim">(typed in AutoCAD; each now just opens this tab)</span></h3>
+      <div class="sec"><div class="old">CESUPPORT</div><div class="old">CEMANAGERDIAG</div><div class="old">CEMANAGERLOGS</div><div class="old">CEHEALTH</div></div>
+      <div class="dim" id="oldmsg" style="margin-top:8px">Click one to see what it does.</div>
+    </div>
+  </div>
+</div>
+<script>
+var on = true;
+function $(i){ return document.getElementById(i); }
+function now(){
+  var d = new Date();
+  function p(n){ return String(n).padStart(2,'0'); }
+  return { hm: p(d.getHours()) + ':' + p(d.getMinutes()),
+           stamp: d.getFullYear() + '-' + p(d.getMonth()+1) + '-' + p(d.getDate()) + '_' + p(d.getHours()) + '-' + p(d.getMinutes()) + '-' + p(d.getSeconds()) };
+}
+$('tick').onclick = function(){
+  on = !on;
+  $('box').className = 'box' + (on ? ' on' : '');
+  $('box').textContent = on ? '✓' : '';
+  $('who').innerHTML = on
+    ? '<b>Who can see it:</b> <b>you and Creative Engineering IT</b> (the shared "CE Diagnostics" folder in IT Admin). Nobody outside the office. Untick the box and only you can.'
+    : '<b>Who can see it:</b> <b>only you.</b> Nothing is copied to the office IT folder. You can send the file yourself.';
+};
+$('go').onclick = function(){
+  var x = now(), f = 'CE_SUPPORT_PC4F2A_' + x.stamp + '.zip';
+  $('fname').textContent = f;
+  $('madeat').textContent = 'Made at ' + x.hm + ' today. 28 files included, 19 left out.';
+  $('copied').innerHTML = on
+    ? '<b>Copied to the office IT folder:</b> <span class="tag">Yes</span> Tim and IT can read it. Nobody outside the office can.'
+    : '<b>Copied to the office IT folder:</b> <span class="tag" style="background:#332A10;color:#C9A84C">No</span> Only you have this file.';
+  $('msg').innerHTML = 'I pressed "Something is wrong: get help" at ' + x.hm + ' today.<br>File: ' + f + (on ? ' (in the CE Diagnostics folder).' : ' (I will send it to you).') + '<br>What I was doing: ';
+  $('s1').className = 'help hide';
+  $('s2').className = 'help';
+};
+$('again').onclick = function(){ $('s2').className = 'help hide'; $('s1').className = 'help'; $('showmsg').textContent = ''; };
+$('showfile').onclick = function(){ $('showmsg').textContent = 'Mock-up: this opens your CE Support folder with the file selected.'; };
+$('copy').onclick = function(){ $('copy').textContent = 'Copied'; setTimeout(function(){ $('copy').textContent = 'Copy this message'; }, 1500); };
+$('chk').onclick = function(){ $('chkt').textContent = 'Last checked ' + now().hm + ' today · 1 thing to look at'; };
+Array.prototype.forEach.call(document.querySelectorAll('.lg'), function(a){
+  a.onclick = function(){ $('lgmsg').textContent = 'Mock-up: this opens ' + a.textContent.replace('Open ', 'the ') + ' in Explorer.'; };
+});
+var oldt = {
+  CESUPPORT: 'CESUPPORT opens CE Manager on this Help tab. It does not make the bundle by itself: you press the gold button.',
+  CEMANAGERDIAG: 'CEMANAGERDIAG opens CE Manager on this Help tab. The diagnostics are now part of the one help file.',
+  CEMANAGERLOGS: 'CEMANAGERLOGS opens CE Manager on this Help tab, with the log folders in view.',
+  CEHEALTH: 'CEHEALTH still prints its lines at the AutoCAD command line as today, and the same result shows in the health check card above.'
+};
+Array.prototype.forEach.call(document.querySelectorAll('.old'), function(a){
+  a.onclick = function(){ $('oldmsg').textContent = oldt[a.textContent]; };
+});
+</script>
+</body></html>
