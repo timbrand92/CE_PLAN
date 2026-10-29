@@ -1,5 +1,18 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-01 slice 4, pipes under garages (R-33) — 29 October 2026 (Built and unit-tested only; the drawing read has NOT been run in AutoCAD; Codex to run on COPIES)
+
+PR 1849 (stacked on 1843 on 1842), branch `claude/gb01-slice4b-garages`. Tim 29 Oct: "Yes. Build pipes-under-garages from a closed outline drawn on a layer named once in Settings; none drawn = Unknown."
+
+1. **Nothing named:** CDRULES on any job shows two Unknown rows (R-33): no garage outline layer named, no dwelling outline layer named. No warnings.
+2. **Name the layers:** in `CD_Settings.json` under `draftingChecks` set `garageLayerNames` and `dwellingLayerNames` to layer names on the test copy. With the layer named but nothing drawn on it, the Unknown row now says "No closed garage outline is drawn on layer ...".
+3. **Draw a closed rectangle polyline on the garage layer** across a detention pipe: R-33 warns "detention pipes may not go under a dwelling or garage". Move the rectangle away: the warning goes.
+4. **Plain drain under the garage:** a 150 UPVC SN8 pipe under the rectangle: green. The same pipe as 100, or UPVC without SN8, or RCP: yellow naming "150 UPVC SN8".
+5. **Dwelling layer:** a detention pipe under a rectangle on the dwelling layer warns. A plain pipe under a dwelling gives no row.
+6. **Arcs and blocks:** an outline with an arc is read as straight corner-to-corner lines; outlines inside blocks or xrefs are not read. Say what you see.
+7. **CDRULES stale marker:** naming a layer makes saved runs Stale once; a drawing with nothing named does not move.
+8. **Not testable yet:** no Settings window rows for the four values.
+
 ### GB-01 slice 4, lid class (garages half NOT built) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
 PR 1843 (stacked on 1842), branch `claude/gb01-slice4-lid-class`.

@@ -27,6 +27,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 5. **GB-01 slice 4, lid class half, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1843 (stacked on 1842). Shared residential driveway = Class B (was C), larger vehicles = C, chart is `pit.lidClassByUse` (blank = Guidebook chart), unknown use class is `pit.lidClassWhenUseUnknown` (blank = C). Pipes under garages NOT built: needs Tim's yes on how CE learns where a garage is (recommended: closed outline on a named Settings layer; none drawn = Unknown). Steps in `PENDING_TESTS.md`.
 
+6. **GB-01 slice 4, garage half (R-33), 29 Oct 2026 — Built and unit-tested; the drawing read never run in AutoCAD; not installed.** PR 1849 (stacked on 1843). Tim: "Yes. Build pipes-under-garages from a closed outline drawn on a layer named once in Settings; none drawn = Unknown." Detention pipe under a dwelling or garage warns; plain drain under a garage passes only as 150 UPVC SN8; every job shows two Unknown rows until the office names its layers (`draftingChecks`). Steps in `PENDING_TESTS.md`.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
