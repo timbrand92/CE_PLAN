@@ -59,3 +59,13 @@ verifyG1b_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 # Fri 30 Oct: release after 17:53 Fri (cap 44) by deleting "#HOLD " on these two:
 #HOLD verifyG6_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 #HOLD verifyG5_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# H-series looks (written Thu 29 Oct 2026 11:30 by the Opus desk assistant, job CE_ACAD / robot / draft / 15; report areas\CODEX_LOOK_BRIEFS_H_29OCT.md). Six pilot-critical window bugs. All HELD. Planning cost 3 percent each (queue.log shows 0 to 2 real).
+# Thu 29 Oct: delete the leading "#HOLD " after 17:53 Thu (cap 30), AFTER the three G lines above are released, on these two only (13 at 11:00 + G3 G7 G4 9 + these 6 = 28):
+#HOLD verifyH1_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH2_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# Fri 30 Oct: delete "#HOLD " after 17:53 Fri (cap 44), after G6 and G5, on these three (28 + G6 G5 6 + these 9 = 43):
+#HOLD verifyH3_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH4_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH5_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# Sat 31 Oct: delete "#HOLD " after 17:53 Sat (cap 58) on this one (43 + 3 = 46; it does not fit under Friday 44):
+#HOLD verifyH6_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
