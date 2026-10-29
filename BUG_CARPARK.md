@@ -12002,6 +12002,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** CODEX_HUNT_LABELS_22OCT.md F1; `Services/LinkService.PipeAttachmentActions.cs:323-352`, `Services/LinkService.TidyPitText.cs:87,100`. Opus check: real; needs two default-OFF switches. Re-checked at the installed commit 23 Oct. Lane: Sonnet (protected file); base claude/rel-20261022m.
 
+
+**Related evidence (30 Oct 2026, CE 02, Codex look G7, CODEX_VERIFY_G7_20261030_0627.md):** a different route to the same switch failed too: a description moved by hand with AutoCAD's own MOVE, then its pit moved 500 mm, was shifted 250 mm and Tidy labels counted zero placed by hand (see BUG-1252). Evidence only.
 **Status:** OPEN
 
 ## BUG-880
@@ -17380,3 +17382,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 
 **BUG-1251 update 30 Oct 2026 05:21 (CE 02 robot runs on 3.0.86):** the cause is CONFIRMED by robot runs, not only by reading code. a80X8 (R12 then R21): R12 PASS, R21 FAIL (187 connections, 142 Connected, 44 Unresolved). a80X9 (same pair with linking.sourceLandingReadsEachObjectOnce false): R21 still FAIL, so BUG-1228 (#1837) is cleared. a80X7 (the 3.0.85 grouping, R21 first): R21, R23, R20, R19, R19b all PASS. So R21 fails only when CDCHECK is the first CE command on a reopened copy. Nothing in the C-76 train is implicated. R21 stays the expect-fail proof for B-055; robot cases N38/C38 are ready for the C-77 build. Status stays OPEN (never FIXED until Tim confirms in AutoCAD).
+
+---
+
+## BUG-1252 — A hand-placed pipe label is shifted when its pit moves, with "hand-placed labels stay" ON, and Tidy labels does not count it as hand-placed
+
+**Command / Area:** CE label handling when a pit moves (switch linking.handPlacedLabelsStay ON) and CDTIDYLABELS, Civil 3.0.86 (Codex look G7, 30 Oct 2026 06:27, on a copy; card D13 step 3). Severity to confirm; WRONG ANSWER (label position), not Claude-accepted or Tim-confirmed.
+
+**Symptom:** A 100 mm UPVC pipe from pit P8. The pipe's description was moved up by hand with AutoCAD's MOVE. Then pit P8 was moved sideways 500 mm. The description shifted sideways 250 mm (it stayed above the pipe). Tidy labels then reported "placed by hand: 0". Codex: FAIL, SURE; evidence folder C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\G7_20261030_0627.
+
+**Expected behaviour (the card's wording, D13 step 3):** after you MOVE the description up 1000 mm and then MOVE its pit sideways 500 mm, the label you moved by hand is still exactly where you put it, and Tidy labels counts it as "Placed by hand (left alone) 1".
+**Open design question (Tim's Monday question 19, QUESTIONS_FOR_MONDAY.md):** CE's design today is that a label travels with its pipe end when the pit moves. Option (a): keep that and change the card; option (b): build it so a hand-placed label stays put. Recommended (a), because a label left behind ends up detached from its pipe. If Tim chooses (a) this entry becomes a card correction plus a wording fix for Tidy labels; if (b) it is a build item. Note the new result: the label moved HALF the pit's distance (250 mm of 500), which fits neither design.
+
+**Steps to confirm in AutoCAD:** (1) Switch ON. Place P8 and a 100 mm pipe; MOVE the pipe description up 1000 mm. (2) MOVE P8 sideways 500 mm. (3) Read the description's position and run Tidy labels. Right (if option b) = description unmoved, Tidy labels says "Placed by hand 1"; right (if option a) = description moved the full 500 mm with the pipe end, never half.
+
+**Reference:** CODEX_VERIFY_G7_20261030_0627.md (G7-01 FAIL), CE 02 message to CE 05 30 Oct 2026. Related BUG-879 (hand-placement marks, another route), robot check N27 (passes only the part it names) and N31, QUESTIONS_FOR_MONDAY.md item 19, CODEX_CASE_REVIEW_cx_cr25.md.
+
+**Status:** OPEN - ON HOLD (waits for Tim's answer to Monday question 19: keep or change the label rule). Evidence only; never FIXED until confirmed in AutoCAD.
