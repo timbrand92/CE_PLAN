@@ -123,7 +123,7 @@ What was already known (so not repeated): accoreconsole, Design Automation, FlaU
 2. Whether ADN's licence can run on an unattended machine, and the current 2026 price of a Flex token.
 3. Whether the spare PC has a monitor, auto-login, or its own licence.
 4. Whether the CoreConsoleRunner sample builds against AutoCAD 2027 and .NET 10 (it targets 2026 and .NET 8).
-5. Whether CCR-01 or `RunCADtests` exists anywhere in the repo.
+5. ~~Whether CCR-01 exists anywhere in the repo.~~ **Corrected (CE 01 told me, 29 Oct, not re-checked by me):** CCR-01 is in the plugin repo on branch `claude/rel-20261026z`: `docs/workflows/CLAUDE_HANDOFF_2026-09-15_PM.md` line 30 (Tim approved STEP 1, the audit; STEP 2 belongs to another chat; ruling: InternalsVisibleTo, not reflection) and `docs/workflows/C7_STEP1_AUDIT_2026-09-15.md` section e. No record that STEP 2 was done. So F3 is the unfinished STEP 2, and it belongs to the testing lane (CE 02), not CE 01.
 6. Licences of ezdxf, the virtual display driver and the CoreConsoleRunner sample.
 
 ### Hand-offs (round 1)
