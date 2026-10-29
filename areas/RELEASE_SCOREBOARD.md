@@ -119,7 +119,7 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 
 1. **29 Oct 11:17 CE 07:** first scoreboard written. Read installed DLLs and c1071 (identical). Asked CE 02, CE 03, CE 04 for their lists. Pack change list job started.
 
-## 12. Two schedules ready for Tim's freeze ruling (CE 00 asked for both, 29 Oct 11:25; his answer drops straight in)
+## 12. Two schedules ready for Tim's freeze ruling (CE 00 asked for both, 29 Oct; his answer drops straight in)
 
 **Option A: freeze Sat 31 Oct (C-76 + C-77 only), pilot Mon 9 Nov.**
 1. **Thu 29 Oct (tonight, after 5:30 pm):** C-76 installs; CE 02 re-tests what C-76 touched (R09, R22, N31/C31, N32, About window Codex look); P01 and P02 first pass.
