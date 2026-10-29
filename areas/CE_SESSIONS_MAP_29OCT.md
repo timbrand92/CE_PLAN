@@ -44,3 +44,5 @@ Each time anyone recounts the plan numbers or reads the usage meters, also rewri
 See decisions\2026-10-29_TIM_RETEST_RULE.md: after an install re-test only what the fix touched; untouched accepted cases keep their earlier pass ('carried from build') until the full weekend re-test and the pre-Max re-test.
 
 7. **CE 07 Release: testing sign-off and final release** (started 29 Oct 11:20): local_1c1741bd-d338-4eb4-94ab-2c7351d13092. Owns areas\RELEASE_SCOREBOARD.md, the release test plan, the install rehearsal, the frozen copy and the final go checklist (Fri 6 Nov); never publishes or sends anything without Tim's word.
+
+8. **CE 08 Research Scout: what others have built** (started 29 Oct ~11:50): see list_sessions (name ce-08-research). Finds, reads and judges what others have built or documented (testing without taking over the PC, drainage design checkers, plugin packaging and speed, AI reading of drawings and council letters); reports go to areas\RESEARCH_SCOUT_29OCT.md and RESEARCH_INDEX.md and are handed to the owning session. Downloads need Tim's yes.
