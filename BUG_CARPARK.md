@@ -17069,3 +17069,22 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's screenshots 29 Oct 2026, hand check H22 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; BUG-1225 (ProjectDataService.SetDrawingPath cache keyed by path, report areas\release-v3-colleagues-BUG1225_READER_FIX_REPORT.md); my instruction to Tim to SAVEAS was part of the CDCHECKDWG check D28, so this is the first time the Save As path was exercised in these hand checks.
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs one answer from Tim about the order he opened things). Never FIXED until Tim confirms in AutoCAD.
+
+**Tim's answer (29 Oct 2026, same session):** "i clicked inspector first, now its come up." So the Inspector said Unknown while the Pit Schedule had not yet been opened, and it shows real values now that the Pit Schedule has been opened. This fits the guess above (the saved drawing's record is only attached when something like the Pit Schedule asks for it). Needs one fix owner to confirm in code; the steps above reproduce it.
+
+
+---
+
+## BUG-1241 — CDCHECKDWG says pit P2 has no invert level although two pipes with levels meet at it (question, not yet a proven fault)
+
+**Command / Area:** CDCHECKDWG QA finding "Invert level is missing or not a valid number ('')" (check code MISSING_PIT_LEVEL), Civil 3.0.85 (Tim's scratch drawing test1.dwg, 29 Oct 2026, hand check H22). POSSIBLE WRONG ANSWER, severity to confirm.
+
+**Symptom:** The finding names pit P2. P2 has two pipes at it (inlet IL 17.80, outlet IL 17.78; Pit Schedule shows both). Tim: "i dont understand why p2 doesnt have a pit invert level its got an inlet and outlet pipes?" Facts so far: CDREBUILD earlier in the same drawing printed '1 pit invert(s) derived from connected pipe inverts' and 'All pits have cover and invert levels' (hand check H11), then the pit numbers were swapped with CDRENUMBER (H14) and a pipe added; the check was run on the SAVED file after that. Not known: whether the swap or the added pipe cleared P2's stored invert, or whether the saved file never held it. The 'pit invert' is a number stored on the pit itself, worked out from the pipes only when CE rebuilds; the Pit Schedule shows pipe levels, which is why it looks complete.
+
+**Expected behaviour:** A pit with pipes that have levels either shows its own invert (the lowest pipe invert at it, or the standard rule) or the check says plainly that it is worked out from its pipes and is fine.
+
+**Steps to confirm in AutoCAD:** (1) Two pits and a pipe each side with levels. (2) CDREBUILD, SAVEAS, CDCHECKDWG: note whether P2 is reported. (3) CDRENUMBER (swap), add a pipe, QSAVE, CDCHECKDWG again. Right = no MISSING_PIT_LEVEL for a pit that has piped inverts. Wrong = reported only after the swap or the added pipe.
+
+**Reference:** Tim's screenshot 29 Oct 2026 (CDCHECKDWG results window, 2 findings), hand checks H11, H14, H22.
+
+**Status:** OPEN (question raised by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
