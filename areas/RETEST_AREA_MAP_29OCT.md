@@ -226,4 +226,4 @@ Tim's words (decisions\2026-10-29_TIM_RETEST_RULE.md, Addendum 1): "yes. An Edit
 
 ---
 
-## Addendum 2 (30 Oct 2026 00:10): the smoke sets and Rule 14 live in RETEST_SMOKE_SETS.md (permanent, kept current by CE 02).
+## Addendum 2 (29 Oct 2026 22:50): the smoke sets and Rule 14 live in RETEST_SMOKE_SETS.md (permanent, kept current by CE 02).

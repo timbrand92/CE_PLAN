@@ -1,10 +1,10 @@
-# C-77 re-test: area plus smoke sets, the two unmapped files, and the revised Friday (DRAFT, Thu 29 Oct 2026 23:50)
+# C-77 re-test: area plus smoke sets, the two unmapped files, and the revised Friday (DRAFT, Thu 29 Oct 2026 22:45)
 
 Written by CE 02 Robot and Codex Testing after Tim's ruling "do your recommendation" (relayed by CE 00 at 23:45). This is a DRAFT from the area map (`RETEST_AREA_MAP_29OCT.md`) and CE 01's list of what C-77 changes. The final set for C-77 is cut at about 07:30 Fri from the real file list (`git diff --name-only 5888ee75..<C-77 head>`), and this file is then rewritten as the decision record.
 
 ## ANSWER FIRST
 
-0. **CAVEAT (30 Oct 00:10): Rule 14 still forces FULL when an existing setting is edited or removed.** CE 01 lists changed defaults and moved saved data in C-77 (B-008, B-046, #1841, #1843, #1854, #1850), so C-77 is FULL-class unless Tim rules a changed default is not an edit. The real file list at 07:30 decides.
+0. **CAVEAT (29 Oct 22:50): Rule 14 still forces FULL when an existing setting is edited or removed.** CE 01 lists changed defaults and moved saved data in C-77 (B-008, B-046, #1841, #1843, #1854, #1850), so C-77 is FULL-class unless Tim rules a changed default is not an edit. The real file list at 07:30 decides.
 1. **C-77 is re-tested by AREA plus SMOKE, not FULL, WHEN the diff touches no existing setting.** The robot re-runs the cases of every tool area the train touches, plus a small named smoke set for each shared file the train touches. Everything else is carried from 3.0.86.
 2. **Cost, indicative (3.6 minutes per case measured tonight, two separate starts per case):** a worst case where every shared group is touched is a smoke union of 27 cases, about 3 h 15 min. Add the touched areas (6 to 30 cases each). Expect 3 to 5 hours against about 8 hours for FULL.
 3. **The two unmapped files are placed:** `FallArrowDirectionReviewService` goes to the Checks area; `LinkService.SourceScanMemo` goes to the sources area plus copy and move, because its caller `LinkService.Geometry.cs` is core (details below).
@@ -28,7 +28,7 @@ Written by CE 02 Robot and Codex Testing after Tim's ruling "do your recommendat
 3. Any FAIL, FLAKY or BLOCKED in the set widens to FULL in the next free window.
 4. Each case runs in two separate AutoCAD starts on 3.0.87. No twins for a case whose file hash is unchanged.
 5. The ledger labels every other accepted case "carried from 3.0.86 (two passes, ledger item for C-76)".
-6. **CORRECTED 30 Oct 00:10 against Rule 14:** editing or removing an EXISTING setting still forces FULL; a brand-new switch touches only its own tool. CE 01's C-77 list includes changed defaults and moved saved data (section 4), so C-77 is FULL-class under Rule 14 as written unless Tim rules that a changed default of an existing key is not an edit. Question sent to CE 00 for Tim.
+6. **CORRECTED 29 Oct 22:50 against Rule 14:** editing or removing an EXISTING setting still forces FULL; a brand-new switch touches only its own tool. CE 01's C-77 list includes changed defaults and moved saved data (section 4), so C-77 is FULL-class under Rule 14 as written unless Tim rules that a changed default of an existing key is not an edit. Question sent to CE 00 for Tim.
 
 ### 2. Smoke sets, one per shared group (named cases from the weekend spec)
 

@@ -1,4 +1,4 @@
-# RETEST SMOKE SETS and the standing re-test rule (PERMANENT FILE, CE 02; created Fri 30 Oct 2026 00:10; keep current)
+# RETEST SMOKE SETS and the standing re-test rule (PERMANENT FILE, CE 02; created Thu 29 Oct 2026 22:50; keep current)
 
 Companion of `RETEST_AREA_MAP_29OCT.md` (the areas) and `decisions\2026-10-29_TIM_RETEST_RULE.md`. Owner: CE 02. The C-77 working draft stays in `C77_AREA_SMOKE_SETS_DRAFT_29OCT.md`.
 
@@ -45,5 +45,5 @@ Checked with `git grep` on `origin/claude/rel-20261029a` (5888ee75, the 3.0.86 l
 
 ### Placements recorded so far
 
-1. `Services/FallArrowDirectionReviewService.cs`: Checks area 10 (R05 R10 R19 R21); only CDCHECK code uses it (30 Oct 2026).
-2. `Services/LinkService.SourceScanMemo.cs`: sources area 8 (N03 N04 R36) plus copy and move area 7 plus core smoke S3, because the core file `LinkService.Geometry.cs` calls it (30 Oct 2026).
+1. `Services/FallArrowDirectionReviewService.cs`: Checks area 10 (R05 R10 R19 R21); only CDCHECK code uses it (29 Oct 2026).
+2. `Services/LinkService.SourceScanMemo.cs`: sources area 8 (N03 N04 R36) plus copy and move area 7 plus core smoke S3, because the core file `LinkService.Geometry.cs` calls it (29 Oct 2026).
