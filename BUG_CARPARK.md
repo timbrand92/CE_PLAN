@@ -17031,3 +17031,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's answer 29 Oct 2026, hand check H16; card D05 in areas\DAILY_TOOLS_TEST_CASES_2026-10-23.md. Related: CD_RecentValues.json (the file CE keeps its recent values in).
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs one clarifying look at the window). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1239 — Pipe text is placed about 450 units off the middle of the pipe, at right angles to it (Tim, D06 hand check)
+
+**Command / Area:** CD, pipe label position, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, while checking D06 'Show grade in pipe text' switched off). WRONG PLACE (drawing output), severity to confirm.
+
+**Symptom:** Tim: "there is a bug where the pipe text got placed 450 units perpendicular away from centre point of the pipe". Read as: the pipe label sits 450 drawing units (450 mm at his scale) to the side of the pipe's midpoint, measured at right angles to the pipe. Not yet known: whether this happens only with the grade text switched off, whether it is the normal 'Above' gap (the Pipe text buttons are On plan / Above / Below), whether the label was then moved by the label tidy-up, and which side it landed on. The pipe card D10 says the label sits mid-pipe along the line.
+
+**Expected behaviour:** With the pipe text set to 'On plan' the label sits on the pipe's middle; 'Above' or 'Below' puts it a small fixed gap clear to that side, the same distance every time, and a pipe label placed by hand or by tidy-up stays where it was put. The distance for 'Above' or 'Below' should be a Settings value and stated, not a surprise.
+
+**Steps to confirm in AutoCAD:** (1) CD, any two points, set Pipe text to On plan, Start Pipe. (2) Zoom to the pipe and measure the distance from the label's middle to the pipe line (DIST or LIST). Right = on the line. (3) Repeat with Above and Below and with 'Show grade in pipe text' off and on. Record each distance.
+
+**Reference:** Tim's words 29 Oct 2026, hand check H20 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md. Related: D10 (label mid-pipe), D11 (leader for short pipes), BUG-1234 (IL and arrow clash), Settings-first rule R-00.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026; needs one clarifying look). Never FIXED until Tim confirms in AutoCAD.
