@@ -12780,6 +12780,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Tim's ruling 29 Oct 2026 (decisions/2026-10-29_TIM_ANSWERS.md item 74):** "when dimscale = 100 ltscale = 1000, member gets drawn at 5 times its actual size, when dimscale = 120 ltscale = 200, member gets drawn at actual scale, this should be the rule with dim/ltscale". Interpretation (two guesses, to be put in front of Tim with the picture): "dimscale = 120" is a slip for 20; other scales follow the same rule (1:50 gives 2.5 times). So CEMEMBER changes to the old SBEAM rule (real size x DIMSCALE / 20; the 20 is a Settings value); SBEAM unchanged; plain never-blocking warning states the factor. Build item B-036/B-037 (BUILD_REGISTER.md). Show Tim a picture before it ships. Status stays OPEN until built and accepted.
+
 ## BUG-953
 
 **Command / Area:** EH, CH, LBH and LBUH when LTSCALE is not 10 x DIMSCALE, ledger F-131.

@@ -1,3 +1,5 @@
+> **UPDATE 29 Oct 2026 (Tim, TIM_ANSWERS item 74): the beam-size question is ANSWERED: Option B. CEMEMBER draws real size x DIMSCALE / 20 (5 times at 1:100, real at 1:20; the 20 is a Settings value), the old SBEAM rule; SBEAM unchanged. Everything below that says "Option A recommended" or "no size changes until Tim answers" is SUPERSEDED. The warning keeps its wording and states the factor. Two guesses still to show Tim with the picture: "dimscale = 120" is a slip for 20, and other scales follow the same rule.**
+
 # CEMEMBER window and beam-size warning: plan (Thu 29 Oct 2026, Melbourne; build items B-036 and B-037)
 
 Design only. No code written, no build, no PR, no AutoCAD. Written from the code on the branch that built the installed Structural 1.0.125 (`origin/claude/rel-20261026s`, S-45, version commit `204dfad2`), read with `git show`; the main checkout was not touched. Tim's rulings used: decisions\2026-10-29_TIM_ANSWERS.md items 57, 66 and 67; the approved card (19 Oct, "yes"); the 19 Oct answers.
