@@ -8814,6 +8814,8 @@ closed-AutoCAD authority and 100/150/200% field proof remain.
 
 **Evidence 29 Oct 2026 (Tim, by hand, Manager 1.1.85 / Civil 3.0.85, hand check H31):** still FAILS. Tim opened Version (CE_VERSION): the window shows Civil Suite v3.0.85, Structural Suite v1.0.125 and Suite Manager v1.1.85 correctly, but the AutoCAD row is cut off at the bottom (only the top of 'AutoCAD 26.0' is visible, no Runtime row) and there is no scroll bar. Screenshot in the testing-partner session, not stored in the repo.
 
+**Tim's decision 29 Oct 2026 (hand check H31, idea UX-VERSION-IN-MANAGER):** "ce version should just be within cemanager from now on". The separate About CE Suite window is to be retired in favour of CE Manager; this bug is therefore likely to be closed by that change rather than by resizing the window. Not closed: Tim has not said so, and nothing is built.
+
 **Evidence 26 Oct 2026 (Codex look D8-01, Manager 1.1.78, areas: CODEX_VERIFY_D8_20261026_0623.md):** still FAILS on 3.0.78 / Manager 1.1.78: the About CE Suite window shows the three suite versions but the AutoCAD row is only a top fragment and the Runtime line is unreadable; the heading is readable and Close works.
 
 ## BUG-091
