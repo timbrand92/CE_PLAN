@@ -46,3 +46,9 @@ See decisions\2026-10-29_TIM_RETEST_RULE.md: after an install re-test only what 
 7. **CE 07 Release: testing sign-off and final release** (started 29 Oct 11:20): local_1c1741bd-d338-4eb4-94ab-2c7351d13092. Owns areas\RELEASE_SCOREBOARD.md, the release test plan, the install rehearsal, the frozen copy and the final go checklist (Fri 6 Nov); never publishes or sends anything without Tim's word.
 
 8. **CE 08 Research Scout: what others have built** (started 29 Oct ~11:50): see list_sessions (name ce-08-research). Finds, reads and judges what others have built or documented (testing without taking over the PC, drainage design checkers, plugin packaging and speed, AI reading of drawings and council letters); reports go to areas\RESEARCH_SCOUT_29OCT.md and RESEARCH_INDEX.md and are handed to the owning session. Downloads need Tim's yes.
+
+9. **CE 09 Design: New Pipe window declutter** (started by CE 03): local_aa5b58b5-28f2-47c3-9ce3-e5947ea15731. Design brief and mock picture for Tim's Apple-style New Pipe window (UX-NEWPIPE-DECLUTTER); also to mock the CEMEMBER window picture.
+10. **CE 10 Build: guidebook slice 1 (pipe)** (started by CE 06): local_3edf9e61-7df9-4ebe-afd9-c853e86722e2. Builds the first guidebook slice (GB-01: pipe fall warnings) as draft PRs; coordinates with CE 01 (train calendar, B numbers).
+
+## Rule 10 (Tim, 29 Oct 13:10): no Claude/Codex ownership labels
+Any builder can build any item, windows included (decisions\2026-10-29_TIM_ANSWERS.md item 67). Acceptance, one-session-per-file and who deploys are unchanged. CEMEMBER (with its window) is on the post-freeze build list.
