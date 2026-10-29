@@ -83,6 +83,15 @@ Tim's ruling (decisions\2026-10-29_TIM_RELEASE_FREEZE.md): release candidate fro
 5. **C-80 (hotfix only, if needed): fixes for faults found by the Sat 31 Oct re-test and the Codex looks.** **Install:** no later than Fri 6 Nov morning. Nothing new goes in after this.
 6. **Not in any train before the freeze:** B-031 (PIT slow), B-032 (BUG-1232 Drawing Border clash) until they are confirmed; BUG-685 and BUG-1148 (wait for Tim's rulings, QUESTIONS item 21); the facts bugs; BUG-1171 (needs a Shared train); the unbuilt 9 Nov-scope plan items (stay behind the pilot-critical work).
 7. **Risks I can see now:** the finalizer is the slow step (about 2 hours each) and there are five trains in eight days; each install resets the two-pass clock for the areas it touches, so C-78 and C-79 are the ones that cost the most re-testing; B-029 and B-030 are large and may not make the freeze; Tim's PC has to be free of AutoCAD for each install.
+## Pilot-critical classification and build-slot order (Control Room interim ruling 29 Oct 13:15; Tim can overrule)
+
+Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-77: the backlog (B-005 to B-015) plus Tim's named fixes (BUG-1095 = B-017, BUG-1091 = B-019, BUG-1088 = B-020, BUG-905 = B-033, BUG-1097 = B-034) plus F-023 (B-035) as far as they are PR-ready at the Fri 30 Oct 06:00 cut. 3. C-78: everything else pilot-critical that is built by Mon 2 Nov. The two build lanes are mine; CE 10 (guidebook slice 1) and CE 09 (New Pipe declutter) get NO build slot for non-freeze work.
+
+1. **Pilot-critical (stay, in the 60 of the 24 Oct triage):** B-012 (BUG-901), B-013 (BUG-907), B-016 (BUG-866), B-017 (BUG-1095), B-018 (BUG-1099), B-019 (BUG-1091), B-020 (BUG-1088), B-021 (BUG-1192), B-022 (BUG-903), B-023 (BUG-857), B-024 (BUG-1031), B-025 (BUG-816), B-026 (BUG-902), B-027 (BUG-525), B-028 (BUG-587), B-029 (BUG-1096 with 1098), B-030 (BUG-648), B-033 (BUG-905), B-034 (BUG-1097).
+2. **Tim's named freeze fixes (first in every queue):** B-017, B-019, B-020, B-033, B-034. B-035 (F-023) is a FULL re-test class change, because the one-piece pipe object becomes ON by default for everyone.
+3. **At risk of slipping past the freeze (large, window work, need a Codex look):** B-028, B-029, B-030, and the picture part of B-027. They stay pilot-critical; they go last in the C-78 queue and move to the first update after the pilot if they are not PR-ready by Mon 2 Nov.
+4. **Tim's rulings of 29 Oct that are not in the 60 but are daily-tool or colleague-setup items (in C-77):** B-006, B-007, B-008, B-010, B-011, B-014, B-015; B-009 only after CE 02's robot pass with the switch ON.
+5. **After the pilot (not pilot-critical):** B-031 (PIT slow, until confirmed), B-032 (BUG-1232, until confirmed), B-036 and B-037 (CEMEMBER and its scale warning), B-040 (BUG-1238) and B-041 (BUG-1233), the New Pipe declutter and guidebook slice 1 except any piece that is one of Tim's named freeze fixes or a pilot-critical bug.
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
