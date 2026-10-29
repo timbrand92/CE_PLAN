@@ -355,3 +355,5 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "1. follow book" (Port Phillip) and "2. warning for both" (Banyule underground share).
    2. Interpretation: Port Phillip follows the book (Boyd's method; most Port Phillip jobs need no detention). Banyule: CE warns against BOTH figures with their sources: below 100 per cent underground warns citing Banyule's own 2019 document ("all below ground, above-ground tanks not approved"); below 50 per cent also cites the book ("at least 50 per cent good practice"). GUESS: "both" is read as two separate warning lines, not one figure.
    3. Desk must: add these to GB-02 (done in the card); do not build GB-02 until Tim says it is approved.
+
+28. **GB-02 COUNCIL DATA: APPROVED (29 Oct 2026).** Tim's words: "approve gb02". Interpretation: approved to build as written in `04_REFERENCE/guidebook-cards/GB-02_COUNCIL_DATA.md` with his two answers (item 27). Desk must: queue it after GB-01 slice 1 lands (both edit the council profiles and Settings; two writers never touch the same files); Codex checks in AutoCAD on copies; no install without "AutoCAD is closed, deploy".

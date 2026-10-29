@@ -9,13 +9,13 @@
 3. **GB-01 slice 3, minimum pit depth.** Waiting.
 4. **GB-01 slice 4, lid class and garages.** Waiting.
 5. **GB-01 slice 5, pit-size table to Settings.** Waiting.
+6. **GB-02 council data (all items).** Approved 29 Oct. Waiting for GB-01 slice 1 to land (same council profile and Settings files; two writers never touch the same files).
 
 ## Cards waiting for Tim's approval (no build until approved)
 
-1. **GB-02 Council data.** Draft; Tim answered the two open points 29 Oct, card approval not yet said.
-2. **GB-03 Calculations.** Draft.
-3. **GB-04 Ready to submit.** Draft.
-4. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
+1. **GB-03 Calculations.** Draft.
+2. **GB-04 Ready to submit.** Draft.
+3. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
 
 ## Open items that block or shape builds
 
