@@ -23,10 +23,9 @@ structural engineer, not a coder. Talk to him in plain English, numbered lists, 
    Build Tools with the C++ desktop workload (the Civil native build needs it); the ObjectARX SDK for AutoCAD 2027 as
    recorded in the plugin repo's docs; Node.js LTS and the Codex CLI (Tim signs in to Codex himself).
 3. **Check AutoCAD:** read which AutoCAD versions are installed (2027 needed; 2024 wanted for the 2022-2024 lane) and
-   **which Autodesk account is signed in** (top right of AutoCAD). If it is Tim's own account, STOP and tell Tim in
-   one line: AutoCAD may not run on two PCs at once under one named licence, so tests here could clash with his
-   drafting. Ask whether another licence can be used. Never change licences yourself.
-4. **Keep the PC awake:** set Windows power to never sleep and never turn the screen off while plugged in; tell Tim
+   **which Autodesk account is signed in** (top right of AutoCAD) and tell Tim in one line. Licences are NOT a stop
+   (Tim, 29 Oct 2026: "we have as many licenses as we need dont worry about this", decisions\2026-10-29_TIM_NO_PAID_TOOLS.md);
+   the office has spare seats, so just report the name shown. Never change licences or sign in yourself.4. **Keep the PC awake:** set Windows power to never sleep and never turn the screen off while plugged in; tell Tim
    which setting you changed and how to undo it. Do not change any other Windows or security setting.
 4b. **An unlocked desktop that Windows thinks has a screen (added 29 Oct 2026 from the research scout, CE 08; a lead from web summaries, not yet proved on this PC):** the robot types real keys and moves the real mouse, so with a locked screen, no monitor, or a disconnected remote-desktop window the Esc key and the six mouse-click cases fail without any message. Tell Tim: (a) if the PC has no monitor, a small "dummy HDMI plug" makes Windows believe one is attached; (b) the screen must not lock or sleep; (c) automatic sign-in at start-up is wanted. Lock and automatic sign-in are SECURITY settings: do NOT change them yourself, ask Tim or the office admin to set them. (d) If you set the PC up over remote desktop, run `tscon` to hand the session back to the console BEFORE disconnecting, or the desktop locks. (e) The robot's first step should check that the desktop is unlocked and AutoCAD is on top, and stop with a plain message if not.
 5. **Prove it works, without touching Tim's PC:** build the plugin once with
