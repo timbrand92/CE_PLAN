@@ -2,6 +2,7 @@
 
 **Status:** DESIGN PROPOSAL. Not built, no code touched, not yet seen by Tim. Tim approved the idea; the details below are my recommendations until he answers section 8.
 **Picture:** `areas\UX_HELP_TAB_MOCKUP_2026-10-29.png` (source `.html`, same folder). Two states: how the tab opens, and after the button is pressed.
+**Clickable version (open in a browser, same kind as the New Pipe v2 one Tim accepted):** `areas\UX_HELP_TAB_MOCKUP_2026-10-29_clickable.html`. Press the gold button, tick and untick the box and watch line 3 change, try the old command names. Checked by script that the button, the tick box and "Make another" work; not looked at by eye.
 **Idea it answers:** UX-HELP-IN-MANAGER in IDEAS_INBOX.md. **Related:** UX-MANAGER-TABS (CEHEALTH as a tab, StrucPlus removed), UX-VERSION-IN-MANAGER, hand checks H34 and H37 in `areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md`.
 
 **Tim, 29 Oct 2026 about 17:05:** "one Help tab inside CE Manager with one button in plain words, such as 'Something is wrong: get help'. lets do this please, this whole plugin needs to be user friendly".
