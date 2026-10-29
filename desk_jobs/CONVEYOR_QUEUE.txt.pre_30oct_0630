@@ -1,0 +1,81 @@
+# Codex conveyor queue: one line per run: name|folder|model|effort|cap|cost. Lines starting # are ignored. A line runs only when C:\Lisp Files\_CODEX_RUNNER\<name>_full.txt exists. Done names are in CONVEYOR_DONE.txt.
+verifyV9b_s41|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW1_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW2_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW3_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW4_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW5_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW6_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW7_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyW8_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX1_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX2_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX3_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX4_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX5_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX6_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX7_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX8_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX9_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyX10_c60|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|6
+verifyD1_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD2_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD3_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD4_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD5_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD6_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD7_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyD8_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|1
+verifyE1_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE2_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE3_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE4_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE5_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE6_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE7_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE8_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE9_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE10_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE11_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyE12_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|90|3
+verifyF1_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF2_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF3_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF4_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF5_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF6_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF7_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF8_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF9_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyF10_cur|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# G-series looks (written Wed 28 Oct 2026 18:30 by the Opus desk assistant; report areas\CODEX_LOOK_BRIEFS_G_28OCT.md). Today (cap 16 percent until Thu 17:53): G1 and G2 only.
+verifyG1_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG2_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG1b_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# tomorrow (Thu 29 Oct): HELD so today stays inside the 16 percent cap. Release after 17:53 Thu (cap rises to 30) by deleting the leading "#HOLD " on these three lines, in this order:
+verifyG3_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG7_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG4_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# Fri 30 Oct: release after 17:53 Fri (cap 44) by deleting "#HOLD " on these two:
+#HOLD verifyG6_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyG5_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# H-series looks (written Thu 29 Oct 2026 11:30 by the Opus desk assistant, job CE_ACAD / robot / draft / 15; report areas\CODEX_LOOK_BRIEFS_H_29OCT.md). Six pilot-critical window bugs. All HELD. Planning cost 3 percent each (queue.log shows 0 to 2 real).
+# Thu 29 Oct: delete the leading "#HOLD " after 17:53 Thu (cap 30), AFTER the three G lines above are released, on these two only (13 at 11:00 + G3 G7 G4 9 + these 6 = 28):
+#HOLD verifyH1_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH2_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# Fri 30 Oct: delete "#HOLD " after 17:53 Fri (cap 44), after G6 and G5, on these three (28 + G6 G5 6 + these 9 = 43):
+#HOLD verifyH3_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH4_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH5_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# Sat 31 Oct: delete "#HOLD " after 17:53 Sat (cap 58) on this one (43 + 3 = 46; it does not fit under Friday 44):
+#HOLD verifyH6_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# H7 and H8 (written Thu 29 Oct 2026 12:40 by the Opus desk assistant, job CE_ACAD / robot / draft / 20; report areas\CODEX_LOOK_BRIEFS_H7_H8_29OCT.md): release only after the first build carrying the fix is installed AND the desk has recorded it in the launcher; Codex weekly cost about 3 percent each; daily caps in daily_cap.sh
+#HOLD verifyH7_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH8_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+
+# ORDER FOR TONIGHT, Thu 29 Oct (CE 02, 15:58; answer to Tim's question 'will Codex run tests tonight'): AutoCAD is one machine, so the order is: (1) Tim closes his AutoCAD; (2) payload 112 (about 40 minutes, needs ALL AutoCAD closed); (3) chain_install_c76 (17:30 or when AutoCAD is closed and the lock is free); (4) the robot: tester_run80 FULL pass on 3.0.86, about 8 h 15 min (about 49 starts), then the other queued robot jobs; (5) ONLY THEN the Codex looks below (G3, G7, G4, H1, H2 for Thursday, H3 to H5 and G6, G5 Friday, H6 Saturday), each inside the daily cap (30 percent Thu, 44 Fri from 17:53, 58 Sat). NO Codex job starts before the install lands. start_lanes.ps1 enforces it: the Codex supervisor (which starts the conveyor and janitor) is not started while any acad.exe is running, HOLD_ROBOT.flag exists, a robot job (tester_run) is running or ROBOT_QUEUE.txt still has a job without its .done file, or it is Tim's AutoCAD hours without CODEX_AUTOSTART.flag. Unused daily cap carries to the next day. No Codex look is planned before the install. The '#HOLD ' prefixes below are removed by the desk when the robot queue is empty and the time is outside Tim's AutoCAD hours.
+# A1 and C-series looks (written Thu 29 Oct 2026 16:44 by the Opus desk assistant, job CE_ACAD / robot / draft / 28; report areas/CODEX_LOOK_BRIEFS_A1_C_29OCT.md). Release only after the C-76 install (Civil 3.0.86 / Manager 1.1.86) is verified AND the robot queue is empty (start_lanes.ps1 enforces); about 3 percent of Codex weekly each; A1 first. A1 repeats G4-02 and C6 repeats G4-01 and G5-01 on the new build: once A1 and C6 have run, G4 and G5 need not run.
+#HOLD verifyA1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyC6_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyC3_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyC1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3

@@ -49,4 +49,5 @@ $codexWhy = if ($acadRunning) { 'an AutoCAD (acad.exe) is running' } elseif ($ho
 if (Test-Path "$d\HOLD_ROBOT.flag") { Log 'note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job' }
 StartLane 'disk_guard' @('STOP_DISKGUARD.flag') $true ''
 StartLane 'chain_robot_standing' @('STOP_CHAIN.flag') $true ''
+StartLane 'acad_watchdog' @('STOP_WATCHDOG.flag') $true ''   # 30 Oct 06:25 Rule 15: AutoCAD must never sit idle outside Tim's hours; the watchdog logs occupancy and restarts the lanes
 StartLane 'codex_supervisor' @('STOP_SUPERVISOR.flag', 'STOP_CODEX.flag') $codexOk $codexWhy

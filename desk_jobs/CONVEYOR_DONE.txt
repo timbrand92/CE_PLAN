@@ -45,3 +45,8 @@ verifyF3_cur
 verifyF4_cur
 verifyF7_cur
 verifyF5_cur
+verifyF1_cur
+verifyF10_cur
+verifyG1_c84
+verifyG2_c84
+verifyG1b_c84
