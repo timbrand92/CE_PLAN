@@ -4,7 +4,7 @@ Written by CE 02 Robot and Codex Testing after Tim's ruling "do your recommendat
 
 ## ANSWER FIRST
 
-0. **CAVEAT (29 Oct 22:50): Rule 14 still forces FULL when an existing setting is edited or removed.** CE 01 lists changed defaults and moved saved data in C-77 (B-008, B-046, #1841, #1843, #1854, #1850), so C-77 is FULL-class unless Tim rules a changed default is not an edit. The real file list at 07:30 decides.
+0. **SETTLED (Tim "1", relayed by CE 00): C-77 Friday is AREA plus SMOKE; a changed default or a one-time settings move is its own area plus S1, not FULL.** (Earlier caveat, now superseded: 29 Oct 22:50): Rule 14 still forces FULL when an existing setting is edited or removed.** CE 01 lists changed defaults and moved saved data in C-77 (B-008, B-046, #1841, #1843, #1854, #1850), so C-77 is FULL-class unless Tim rules a changed default is not an edit. The real file list at 07:30 decides.
 1. **C-77 is re-tested by AREA plus SMOKE, not FULL, WHEN the diff touches no existing setting.** The robot re-runs the cases of every tool area the train touches, plus a small named smoke set for each shared file the train touches. Everything else is carried from 3.0.86.
 2. **Cost, indicative (3.6 minutes per case measured tonight, two separate starts per case):** a worst case where every shared group is touched is a smoke union of 27 cases, about 3 h 15 min. Add the touched areas (6 to 30 cases each). Expect 3 to 5 hours against about 8 hours for FULL.
 3. **The two unmapped files are placed:** `FallArrowDirectionReviewService` goes to the Checks area; `LinkService.SourceScanMemo` goes to the sources area plus copy and move, because its caller `LinkService.Geometry.cs` is core (details below).

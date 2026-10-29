@@ -8,7 +8,7 @@ Companion of `RETEST_AREA_MAP_29OCT.md` (the areas) and `decisions\2026-10-29_TI
 2. ONE full re-test (all counted accepted cases, two separate starts each) before anything goes to Max (cut-off Fri 13 Nov) and every weekend, as planned.
 3. A file the map does not know is PLACED in an area by CE 02 (record the placement here) and does not force FULL.
 4. A fix whose only settings change is a brand-new switch with a new name counts as touching only its own tool.
-5. EDITING or REMOVING an EXISTING setting still forces FULL. A saved-data migration (an old saved table or ladder moved once) counts as editing existing data. A changed DEFAULT of an existing key is a judgement call put to Tim (question raised 29 Oct via CE 00); until he answers, treat it as FULL.
+5. EDITING or REMOVING an EXISTING setting forces FULL ONLY IF the settings engine itself changes (how settings are loaded, saved, migrated or switched). CLARIFIED by Tim ('1', relayed by CE 00): a changed DEFAULT of an existing setting, or a one-time move of saved settings, is NO: it counts as touching its own tool's area plus the Settings smoke set S1 (load, save, migrate, switches), not FULL. The weekend full re-test on the same build is the safety net for moved saved data; any red goes to the next small build.
 6. Any FAIL, FLAKY or BLOCKED in the smaller set widens to FULL in the next free window.
 7. The job text of every tester_run job says this (tester_run81 carries it now).
 
