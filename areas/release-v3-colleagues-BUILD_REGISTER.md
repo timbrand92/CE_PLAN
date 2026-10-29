@@ -127,6 +127,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 3. **At risk of slipping past the freeze (large, window work, need a Codex look):** B-028, B-029, B-030, and the picture part of B-027. They stay pilot-critical; they go last in the C-78 queue and move to the first update after the pilot if they are not PR-ready by Mon 2 Nov.
 4. **Tim's rulings of 29 Oct that are not in the 60 but are daily-tool or colleague-setup items (in C-77):** B-006, B-007, B-008, B-010, B-011, B-014, B-015; B-009 only after CE 02's robot pass with the switch ON.
 5. **After the pilot (not pilot-critical):** B-031 (PIT slow, until confirmed), B-032 (BUG-1232, until confirmed), B-036 and B-037 (CEMEMBER and its scale warning), B-040 (BUG-1238) and B-041 (BUG-1233), the New Pipe declutter and guidebook slice 1 except any piece that is one of Tim's named freeze fixes or a pilot-critical bug.
+62. **B-055 BUG-1251, CDCHECK shows false Unresolved joins when it is the first CE command on a reopened drawing.** Found 30 Oct by the robot (R21) and explained by a read-only Opus diagnosis (areas\R21_MOVE_UNDO_DIAGNOSIS_30OCT.md): not a C-76 regression, old. Team job team_fix_c85a started 04:37; CDCHECK reads the saved list when none is in memory; switch checks.cdcheckReadsThisDrawingsRecord ON; targets the C-77 cut at 06:00. Proof: robot case N38_cdcheck_reopen with control C38.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).

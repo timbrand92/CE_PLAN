@@ -17360,3 +17360,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** areas/BUG859_BLOCKED_ANALYSIS_29OCT.md items 5 and 6 and the side-effect note at line 52. Related BUG-859 (the fix that opens Edit source) and BUG-860. CE 02 message to CE 05, 29 Oct 2026.
 
 **Status:** OPEN (reported by CE 02 robot run 29 Oct 2026; evidence only). Never FIXED until confirmed in AutoCAD.
+
+
+---
+
+## BUG-1251 — CDCHECK run first on a drawing that was closed and opened again shows false "Unresolved" joins (44 instead of 4 on the robot drawing)
+
+**Command / Area:** CDCHECK (and the Checks palette, which uses the same gather), Civil, seen by the robot as case R21 failing on 3.0.86 (CE 02, 29-30 Oct 2026, passes a and b) and in the CE log; same numbers on 3.0.73, 3.0.78, 3.0.79, 3.0.80 and 3.0.83 (a read-only Opus diagnosis found the old runs).
+
+**Symptom:** On a drawing that was closed and reopened (or a second drawing opened) in the same AutoCAD, if CDCHECK is the FIRST CE command, the totals read "212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved" instead of "184 connections: 179 Connected, 1 Possible, 4 Unresolved"; every pipe shows as an unnamed pipe and every pit as a long ID. Any CE drawing command run first (PIT, PIPE, EDIT) makes it right. CDCHECK writes nothing, so the drawing data is not harmed; the check's answer is wrong.
+
+**Cause (from the code and the CE log, NOT yet proven by a run):** CDCHECK reads the pit/pipe record from CE's memory, which still belongs to the closed drawing until a CE drawing command runs; the pipe-to-pit fit check already falls back to the saved list (BUG-589), the connection list does not. Report: C:\CE_PLANreas\R21_MOVE_UNDO_DIAGNOSIS_30OCT.md. Not a 3.0.86 regression and not MOVE then U. Related to Tim's BUG-1240 remark ("i always have to cdsync when i reopen drawing").
+
+**Expected behaviour:** CDCHECK gives the true totals on any opened drawing, whichever CE command ran first.
+
+**Steps to confirm in AutoCAD:** (1) Open a job drawing, type CDCHECK, note the totals. (2) Close it without saving and open it again. (3) Type CDCHECK as the very first CE command. Right: the same totals as step 1 and pipes named like P3-P2.
+
+**Status:** OPEN. Fix job B-055 started 30 Oct 2026 04:37 (CDCHECK reads the list saved in the drawing when none is in memory; switch checks.cdcheckReadsThisDrawingsRecord ON). Never FIXED until Tim confirms in AutoCAD.
