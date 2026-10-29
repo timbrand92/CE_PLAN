@@ -1,5 +1,18 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-01 slice 3, minimum pit depth (R-34) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+PR 1851 (stacked on 1850, on B-012 1848), branch `claude/gb01-slice3-pit-depth`.
+
+1. **The card's example:** a pit 700 mm deep with a 450 UPVC pipe running into it. CDRULES shows a "Minimum pit depth" warning on that pit: "pit is 700 mm deep; DN450 UPVC needs at least 750 mm (300 minimum cover + 450 pipe) ... Pipe wall Unknown". (The wall table ships only UPVC 225 and concrete 375.)
+2. **With a wall:** add `UPVC 450` = 31 to `cover.pipeWallThicknessMm` in `CD_Settings.json`: the same row now says 781 mm (the book's figure for a 450 at 300 cover).
+3. **Just deep enough:** a 450 pipe in a 781 mm deep pit passes. One millimetre less warns.
+4. **Several pipes:** a 150 and a 450 into one pit: the 450 governs and is named.
+5. **Surface and council:** the same 150 pipe in a 400 mm pit passes under a Driveway pit (needs 250) and warns under Road (needs 750); a council figure (Frankston 250) beats the table (needs 400, passes).
+6. **Missing levels:** a pit with no cover level, or no invert anywhere, shows one Unknown row saying why. A pit with no pipe into it has no row.
+7. **Both rows can warn:** the pipe-end "Minimum cover" row and this pit row may both warn for the pipe at the pit's lowest invert. That is expected.
+8. **Not testable yet:** the wall table needs a row per size (the engineers must supply them); no Settings window rows.
+
 ### GB-01 slice 2, minimum cover by surface — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
 PR 1850 (stacked on B-012 PR 1848), branch `claude/gb01-slice2-cover-table`. Cover is measured to the OUTSIDE top of the pipe (1848). The table rows are ASSUMED, Tim to confirm.

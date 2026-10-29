@@ -31,6 +31,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 7. **GB-01 slice 2, cover table, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1850 (stacked on B-012 PR 1848). CDRULES minimum cover per pit end follows the pit's Surface pick (office table, Table 6.2.5 plastic rows; rows ASSUMED, Tim to confirm); council figure and project override still win; no surface = single office minimum. Open for Tim: confirm the five rows (Garden 300, Footpath 100, Driveway 100, Driveway (larger vehicles) 450, Road 600), and whether a pit with no surface should say Unknown instead (card) or keep the 300 (built). Steps in `PENDING_TESTS.md`.
 
+8. **GB-01 slice 3, minimum pit depth (R-34), 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1851 (stacked on 1850 on B-012 1848). Per pit: depth against minimum cover (cover table or council figure) + pipe + wall, for every pipe, deepest governs; wall from the B-012 Settings table (two rows shipped); missing data = Unknown. Open: wall figures per pipe size and material (engineers). Steps in `PENDING_TESTS.md`.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
