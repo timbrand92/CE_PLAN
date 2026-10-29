@@ -589,3 +589,8 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "2. leave for later" (to my numbered list where item 2 was the Hazen-Williams C value). This also confirms that his "1." answered the CDSL warning (decision 111).
    2. Interpretation: no C value now; the Settings value stays empty/Unknown and the pump main check says "C value not set" (decision 105). Not a decision on the figure.
    3. Desk must: ask again when the pump station window is near (before CDPUMP is built into a train), and do not guess a figure.
+
+113. **GB-01 pipe and pit checks, slices 2 to 5 built; Tim on the cover rows and garages (29 Oct 2026, builder chat CE 10).**
+   1. Tim's words: "Yes, build it" (pipes under garages from a closed outline drawn on a layer named once in Settings; none drawn = Unknown) and "Keep as built" (the five cover rows Garden 300, Footpath 100, Driveway 100, Driveway (larger vehicles) 450, Road 600, and a pit with no surface keeps the single office 300).
+   2. Interpretation: the cover rows are confirmed (no longer Assumed in the code); the card's "Unknown surface = Unknown" is NOT used, by his word. Garages: layer names are Settings values, blank by default, so every job shows two Unknown rows until the office names its layers (GUESS: that noise is acceptable; not stated by Tim).
+   3. Built: PRs 1841, 1842, 1843, 1849, 1850, 1851 (see areas/council-rulebook.md items 3 to 8 and 04_REFERENCE/guidebook-cards/BUILD_LIST.md).
