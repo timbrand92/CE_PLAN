@@ -66,6 +66,7 @@ Provisional; the final map is made from the real file list at about 07:30.
 4. **B-035 new-profile defaults:** S1 and a fresh-profile check (new case needed; carried until written).
 5. **B-009 grip copy default:** area 7. **BUG-1227 fix (B-049a):** area 7 plus S3; the failing case for it joins the next batch.
 6. **Everything else adds a new switch beside unchanged settings:** the area of the tool plus S1 only if a settings file line is edited.
+7. **CE 01 addition (CE 10 review fixes, 23:18 Thu 29 Oct):** #1841 falls: a hand-edited grade list holding DN450 and over changes the CDRULES fingerprint (a saved run goes Stale once for those users); #1850 cover table now reads two Settings values (designStandards.minCoverPavedSlabMm, minCoverCouncilFigureIsFloor, both Assumed until QUESTIONS item 60); new additive switches cover.pitMinimumDepthCheck (#1851) and pipe.largePipeRedesignReadsMinFall (B-019, when it has a PR). All calculations or rules, no accepted robot case: S1 plus the Codex look H8; no change to the set.
 
 ### 5. Revised Friday (to confirm once CE 01 gives the file list)
 
