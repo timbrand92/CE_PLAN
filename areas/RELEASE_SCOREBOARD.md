@@ -91,7 +91,7 @@ Gate score: **1 of 9 done / 8 open.** Done: item 1. Open: items 2, 3, 4, 5, 8, 9
 
 ## 7. Re-test rules and capacity
 
-1. After an install, re-test only what the fix touched; untouched cases are "carried from <build>" (Tim, 29 Oct). Until Tim rules on the settings-switch question (CE 04), the robot treats any settings change as a FULL re-test.
+1. After an install, re-test only what the fix touched; untouched cases are "carried from <build>" (Tim, 29 Oct). **Tim ruled YES on the settings-switch question** (decisions\2026-10-29_TIM_RETEST_RULE.md Addendum 1): a fix whose only settings change is a brand-new switch counts as touching only its own tool; editing, renaming or removing an EXISTING setting (including defaults and the sizing and start-value files) still means a FULL re-test, as does any shared-code change. Examples (CE 02 estimates): an Edit Pipe fix re-tests 7 of 66 checks (about 1 h instead of 6 h 40 min); a 3.0.85-type install 32 of 66 (about 3 h 25 min); PIT or CD fixes about 30 checks; a core change (pit/pipe record, undo/redo, start-up) is FULL, which was 3 of the last 4 installs. **My note:** B-008 (Tidy labels ON by default) and B-009 (grip copy ON by default) change the default of an existing setting, and B-012 (cover) and B-033/B-034 touch engineering values, so a train carrying them is likely a FULL re-test; that fits the full re-tests already scheduled, but it means the Tue 3 Nov C-78 install will not be a cheap one.
 2. A full set is 66 checks twice in 38 starts: about 6 h 40 min now, about 5 h 45 min after the shorter-wait change (CE 02 estimates).
 3. Codex: weekly 13 percent; each look 1 to 3 points; daily caps 30 from Thu 17:53, 44 from Fri 17:53, 58 from Sat 17:53. Looks need Tim's AutoCAD closed.
 
