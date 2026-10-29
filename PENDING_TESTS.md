@@ -17,7 +17,8 @@ PR 1849 (stacked on 1843 on 1842), branch `claude/gb01-slice4b-garages`. Tim 29 
 
 PR 1843 (stacked on 1842), branch `claude/gb01-slice4-lid-class`.
 
-1. **Driveway is B:** PIT advice on a copy with surface use "driveway" (and "shared residential driveway") proposes a Class B lid and grate. It was Class C.
+1. **Driveway is B (Pit window):** open PIT on a copy, pick Surface = Driveway: the suggestion line reads "Suggested lid class: Class B (Driveway)" (it was Class C). Pick Surface = "Driveway (larger vehicles)" (new choice): Class C. Garden A, Footpath B, Road D as before. A settings file that held the old table moves to the new one once at start (CE log line); one that was edited is left alone.
+1a. **Same answer in the pit advice:** Smartify pit and the pit set-up advice for the same surface names give the same class; a free-text use "driveway" or "shared residential driveway" proposes Class B.
 2. **Larger vehicles are C:** surface use "trafficable", "car park", "driveway used by trucks" propose Class C. "landscaped" is A; "pedestrian" and "residential" are B.
 3. **Blank or odd use:** blank use, or "garden bed", still proposes Class C.
 4. **Changed chart:** put `lidClassByUse` rows (use words and class A to E) under `pit` in `CD_Settings.json`; the advice follows it. A row with class "F" or no words: the Guidebook chart is used and one note says so.
