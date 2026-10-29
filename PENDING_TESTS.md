@@ -15,7 +15,7 @@ PR 1851 (stacked on 1850, on B-012 1848), branch `claude/gb01-slice3-pit-depth`.
 
 ### GB-01 slice 2, minimum cover by surface — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
-PR 1850 (stacked on B-012 PR 1848), branch `claude/gb01-slice2-cover-table`. Cover is measured to the OUTSIDE top of the pipe (1848). The table rows are ASSUMED, Tim to confirm.
+PR 1850 (stacked on B-012 PR 1848), branch `claude/gb01-slice2-cover-table`. Cover is measured to the OUTSIDE top of the pipe (1848). The table rows are confirmed by Tim ("Keep as built", 29 Oct).
 
 1. **No surface picked:** a pipe with 200 mm cover to the outside of a 150 UPVC and pits with no Surface: CDRULES "Minimum cover" warns below 300 mm, as before.
 2. **Driveway pit:** pick Surface = Driveway on both pits, same pipe: the cover row now passes (100 mm), and reads "(Driveway surface, office cover table)". A pipe under a concrete driveway with about 120 mm cover passes.
