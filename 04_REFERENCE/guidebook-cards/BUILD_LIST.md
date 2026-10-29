@@ -4,7 +4,7 @@
 
 ## Approved cards (build in this order)
 
-1. **GB-01 slice 1, falls.** Building: session `local_3edf9e61-7df9-4ebe-afd9-c853e86722e2`, started 29 Oct. Open: someone names the minimum fall for 450 and larger gravity pipes (blank until then).
+1. **GB-01 slice 1, falls.** BUILT and unit-tested only (25 new tests pass; net10 and net48 build 0 errors); draft PR #1841 on `claude/gb01-slice1-falls`, 29 Oct. Not Codex-checked, not installed. Known: every saved CDRULES run shows Stale once; a saved old ladder moves to 1 in 100 once at load; the Edit Pipe strip does not know a pipe is a detention pipe (only CDRULES applies the 1 in 200 allowance); two IL-shape tests fail and were not compared with the base; Settings window rows for the three new values do not exist yet (Codex window work). Next: finalizer review, then Codex steps in `PENDING_TESTS.md` "GB-01 slice 1". Open: someone names the minimum fall for 450 and larger gravity pipes (blank until then).
 2. **GB-01 slice 2, cover table.** Waiting for slice 1.
 3. **GB-01 slice 3, minimum pit depth.** Waiting.
 4. **GB-01 slice 4, lid class and garages.** Waiting.
