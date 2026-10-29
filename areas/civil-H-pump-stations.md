@@ -41,6 +41,18 @@ Tim (decisions/2026-10-29_TIM_ANSWERS.md item 99, question 17, gap audit 17 Oct 
 
 **Still open on the card, not asked in item 99:** Q2 friction method and roughness, Q4 duty flow on a stormwater job, Q5 command name and ribbon home (recommended `CDPUMP`, hidden until the first slice passes).
 
+## 3c. Tim's answers, 29 Oct 2026 (decisions/2026-10-29_TIM_ANSWERS.md items 103 to 107, relayed by CE 04 and checked against that file)
+
+These answer section 3b. The questions there are now answered; the text of 3b stays as the record.
+1. **Q1 master detail (item 103).** Tim: "7a. yes". The master is `Creative Engineering - Drafting\Standard Details\Civil\CE Civil WATER TANKS - PUMP STATIONS Details.dwg`. The two PDFs are print copies; the .dxf, .bak copies and `0_SUPERSEDED` are ignored. CE fills that drawing's levels, storage, pump duty and main size from the job; build against that path.
+2. **Q3 storage rule (item 104).** Tim: "7b. yes" and "keep it as recommenmded". The rule in the code is approved (wet well = larger of storm water minus the pump's 30 minutes, and 10 mm of rain over the catchment). Every fixed number goes to Settings with its source. Flagged to Tim, not asked: CE 04 read this as the 10 mm floor overriding R-14 ("no fixed floor, 3 m3 is a review flag") for pump stations only; R-14 stays as written elsewhere and its 3 m3 remains a warning. That reading is a guess.
+3. **Friction method (item 105).** Tim: "1. Hazen-Williams". He did NOT give the roughness (C) value. It sits on the Settings page empty / Unknown, and the pump main check says "C value not set" until Tim types it or a guidebook page gives one with his word. Never guessed.
+4. **Duty flow on a stormwater job (item 106).** Tim: "2. recommended: typed by the engineer." The engineer types the duty flow; CE does not work it out. Note for the card: the CDCALC Pump System tab in 3.0.85 picks a duty from the pump ladder today. Interpretation (guess, not asked): that tab stays as a suggestion beside the typed figure and does not set it; the card must say so.
+5. **Command name (item 107).** Tim: "3. CDPUMP". Register CDPUMP for the Pump Station command (hidden until the first slice passes in AutoCAD, as the card says).
+6. **Card.** The card `UX-SPS-01-04_PUMP_STATION_CARD_2026-10-07.md` is approved on these answers (Tim's "yes" to 7a and 7b, per CE 04). Slices H-1 onward may be built as drafts, each OFF by default.
+
+**Effect on the build order:** H-1 (Settings) goes ahead now on the approved rule; H-2 (full duty point) builds the Hazen-Williams working with the C value Unknown; H-3 is `CDPUMP`; H-5 fills the .dwg above. Nothing is built, tested, installed or Tim-accepted yet.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
