@@ -17183,3 +17183,22 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Status:** OPEN (found by hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
 
 **Tim's confirmation 29 Oct 2026 (hand check H40):** "the cr mr didnt make a block with a new tag though". So the copied downpipe made by CR (and, as he says, MR/CR together) did NOT get its own new tag: the CE line was right that the copy is only a plain AutoCAD copy. This is confirmed as a real fault by Tim: a copied downpipe should be a CE downpipe with a new tag (compare COPY of a pit, D15, which gets its own number). Not known: whether the copy shows the old tag (DP1) or none; Tim did not say.
+
+**BUG-1246 update 29 Oct 2026 (hand check H44):** asked whether the copied downpipe had been DP1 or DP2 (to tell a new tag from a kept one), Tim answered "dp2" (earlier: "shows dp2 like what was copied"). Read as: the ORIGINAL downpipe was DP2 and the Inspector shows DP2 for the copy too, i.e. **the copy kept the same tag DP2 instead of getting the next one**: a duplicate tag, as feared. This reading is mine; if the original was DP1, the copy got a new tag and only the warning line is wrong. Stays OPEN until Tim's correction or a re-run.
+
+
+---
+
+## BUG-1247 — "Updates & Rollback" opens the Administrator Dashboard (company-wide rollout controls) for an ordinary user; its numbers are blank and its Refresh sits on "Refreshing..."
+
+**Command / Area:** CE Tools > Updates & Rollback (CEMANAGERUPDATES), Manager 1.1.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H44). WRONG WINDOW / SAFETY, severity to confirm.
+
+**Symptom:** Tim: "opens window shown in image above". The window is titled 'CE Suite Manager | Admin Dashboard' ('Administrator Dashboard: Company-wide usage, failures, rollout state, and support data for CE plugins') with, along the top, 'Upload Pending', 'Create Support Bundle' and a greyed 'Refreshing...' button and the green words 'OneDrive IT Admin: available'. Six headline tiles (Active Users, Active Machines, Failures 24h, Restart Needed, Behind Approved, Missing Signals) show NO numbers. Tabs: Overview, Machines, Usage, Failures, Updates (open), Support Bundles, Policies. The Updates tab shows three buttons, 'Approve Available Build', 'Canary Rollout...' and 'Promote to All', over an empty list. Not known: whether the blank tiles and the greyed 'Refreshing...' are a slow load (Tim was on a copy of the drawing and the IT folder was reported reachable) or stuck; whether anything is restricted to administrators once a button is pressed (nothing was pressed).
+
+**Expected behaviour:** A drafter who clicks 'Updates & Rollback' sees what applies to THEM (what is running, what update is waiting, how to go back to the previous version: the Manager's own Updates tab does this), not company-wide controls such as 'Promote to All'. If the Administrator Dashboard is meant for the owner only, it opens only for the owner and says so; the headline numbers fill in or say 'loading' or 'no data'.
+
+**Steps to confirm in AutoCAD:** (1) Click Updates & Rollback on the CE Tools tab. (2) Read the window title and the buttons. Right = the user's own update and rollback screen. Wrong = the Administrator Dashboard with Approve, Canary and Promote buttons. (3) Wait a minute: do the tiles and the Refreshing button settle?
+
+**Reference:** Tim's screenshot 29 Oct 2026, hand check H44 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; the CE Tools tab also has a separate 'Admin (CEMANAGERADMIN)' button; Manager Updates tab (hand check H31) is the user-level one. Related: UX-HELP-IN-MANAGER and UX-MANAGER-TABS, the Help tab design.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
