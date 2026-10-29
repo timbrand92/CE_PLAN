@@ -37,6 +37,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 10. **GB-03 slice 4 engine, soakage by the book's method, 29 Oct 2026 — Built and unit-tested; no window uses it; not installed.** PR 1855 (`claude/gb03-soakage`). Reproduces the guidebook's worked soakage sheet; Settings soil table (moderation factor, set-back); council minimum soil rate 100 mm/h for Kingston, Frankston, Mornington Peninsula (information only, no Stale). Open for the engineers: worst storm (180 min, 25.766 m3) versus the highlighted 2-hour row (25.348 m3); factor applied as multiplier or divisor. Other GB-03 slices not built.
 
+11. **Review fixes on the guidebook stack, 29 Oct 2026 (CE 01's Opus pre-reviews B and C) — all built and unit-tested, not installed.** PR 1851: own switch for R-34, unknown wall is Unknown. PR 1850: paved rows judged below the slab (100 + slab, Settings value) and council figure is a floor, both DRAFT on the recommended answers of QUESTIONS 60 (Tim's answer replaces them; both reversible by Settings values). PR 1843: typed 'larger vehicles' is Class C. PR 1841: hand-edited grade list marks the fingerprint. PR 1854: Cardinia method Assumed; Port Phillip effect in numbers. QUESTIONS item 60 is still Tim's to answer.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.

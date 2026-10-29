@@ -1,5 +1,16 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Review fixes on the guidebook stack (Opus pre-reviews B and C) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+These change what the GB-01 and GB-02 steps below should show. Where a step below disagrees, this section wins.
+
+1. **Slice 2 cover, paved rows (PR 1850; draft on the recommended answer of QUESTIONS 60, Tim's answer replaces it):** Surface = Driveway or Footpath is now judged from the TOP as 100 + slab thickness (slab 100 by default, so 200). A driveway pit with the top of the pipe 120 mm down now WARNS (it passed). About 220 mm passes. The source line says "plus 100 mm slab ... Tim's answer to QUESTIONS 60 pending".
+2. **Slice 2, council figure is a floor:** in Frankston (250) a pipe under a ROAD now needs 600 (the table's figure is bigger); a Driveway needs at least 250. The switch `designStandards.minCoverCouncilFigureIsFloor` = false gives the first build (council figure always wins).
+3. **Slice 3 minimum pit depth (PR 1851):** the "Minimum pit depth" rows can be switched off with `cover.pitMinimumDepthCheck` = false (none appear). A pipe whose wall is not in `cover.pipeWallThicknessMm` now reads Unknown when the pit meets the need without the wall (UPVC 450 into a 760 pit); it still warns when the pit is short even without the wall (UPVC 450 into 700).
+4. **Slice 4 lid class (PR 1843):** typing the use "driveway for larger vehicles" (not picking) now gives Class C, like picking "Driveway (larger vehicles)".
+5. **Slice 1 falls (PR 1841):** a settings file whose grade list was edited by hand and still holds sizes 450 and over makes a saved CDRULES run show Stale once; an untouched list does not.
+6. **GB-02 part A (PR 1854):** Cardinia's method is marked Assumed (not Sourced). Port Phillip, a 600 m2 site with 400 m2 impervious: CDDESIGN now sizes a 2.4 m3 tank at 5.18 L/s with a 60 mm orifice (it used to wait for the council's figure).
+
 ### GB-03 slice 4, soakage sheet (ENGINE ONLY) — 29 October 2026 (Built and unit-tested only)
 
 PR 1855, branch `claude/gb03-soakage`. No window or printed sheet calls the new calculation yet, so there is nothing for Codex to see in AutoCAD. The numbers are proved by 20 unit tests against the guidebook's own worked sheet (every printed row). When a window or the printed sheet uses it, Codex checks: the soakage page shows the sweep, the worst storm and the 2-hour row, a set-back warning, a soil-rate warning for Kingston, Frankston and Mornington Peninsula (minimum 100 mm/h), and "Unknown" for a soil with no moderation factor.
