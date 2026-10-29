@@ -17,7 +17,7 @@ Started Thu 29 Oct 2026 by CE 01 Build. Tim: "yes, build numbers" (29 Oct 2026, 
 
 ## Next (fix agents and Team jobs running, one dotnet at a time)
 
-5. **B-005 BUG-1229, grade shown flatter than the grade chosen (1 in 102 for 1 in 100).** PR #1838 (29 Oct 10:35). Switch pipe.suggestedLevelNeverFlatterThanGrade ON. Built yes; tested unit only (net10 20,853 passed, 0 real failures); installed no; Tim-accepted no. Promoted in the C-76 list at 10:35 after the assembler had started: in C-76 only if the assembly report says so, otherwise the next train. Robot proof N32_cd_grade_never_flatter, control N32_off.
+5. **B-005 BUG-1229, grade shown flatter than the grade chosen (1 in 102 for 1 in 100).** PR #1838 (29 Oct 10:35). Switch pipe.suggestedLevelNeverFlatterThanGrade ON. Built yes; tested unit only (net10 20,853 passed, 0 real failures); installed no; Tim-accepted no. NOT in C-76 (the assembler read the list at 10:27 and skipped it; assembly report 11:36). Goes into C-77. Robot proof N32_cd_grade_never_flatter, control N32_off.
 6. **B-006 BUG-1226, "Recent:" invert buttons back on the New Pipe window.** Team job team_fix_c77a. Tim: "yep bring back". Robot guard N30. Running.
 7. **B-007 Raingarden RG1, RG2 label from CDRG.** Team job team_fix_c77b. Tim: "as recommended" (ruling UX-SRC-03, card D07). Queued.
 8. **B-008 Tidy labels switch ON by default.** team_fix_c77c. Tim: "yes". Queued.
