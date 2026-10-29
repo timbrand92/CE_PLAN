@@ -560,3 +560,10 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
 106. **Pump station duty flow on a stormwater job: typed by the engineer.** Tim's words: "2. recommended: typed by the engineer." Desk must: the engineer types the duty flow; CE does not work it out.
 
 107. **Pump station command name: CDPUMP.** Tim's words: "3. CDPUMP". Desk must: register CDPUMP for the pump station command.
+
+## Batch 27 (evening, Melbourne)
+
+108. **Carpark and bug tidy (plan areas\CARPARK_TIDY_PLAN_29OCT.md): yes.**
+   1. Tim's words: "8. yes" (to: start the carpark tidy with T-1 and T-4, then T-2 and T-3, then T-5 to T-8 as review jobs; nothing deleted or closed). Earlier he asked "can we start tidying the carpark and bugs?".
+   2. Interpretation: approved as the plan states: T-1 (replace the stale id-range paragraph in the carpark header with one line, the old text moved word for word to a history file), T-4 (a retest list of the 47 IN PROGRESS bugs for the robot and Codex, no status changed), then T-2 and T-3 (a clear status on the 41 entries with none and the 5 with two; none marked fixed), then T-5 to T-8 as review jobs. Nothing is deleted or closed (rule D6 and the 13.3 amendments).
+   3. Desk must: CE 05 does T-1 and T-4 first; T-4 goes to CE 02; one session edits BUG_CARPARK.md at a time (RULES 6.4); never mark a bug fixed without the Claude-accepted or Codex-accepted rule.
