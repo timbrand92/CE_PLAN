@@ -42,7 +42,7 @@ BUG-901 is B-012 and BUG-907 is B-013 above. Each item below is a draft behind a
 20. **B-020 BUG-1088, pipe sizer picks the smallest pipe at any grade.** M. Build on recommended (question 21a). After B-019.
 21. **B-021 BUG-1192, long section hides a ground depression (step one: a plain warning line).** M. Build now; dashed stretch waits for question 21d.
 22. **B-022 BUG-903, screens that disagree on minimum cover.** M. Build now, after B-019.
-23. **B-023 BUG-857, New Pipe window Grade mismatch box.** S. Build now; needs a Codex look.
+23. **B-023 BUG-857, New Pipe window Grade mismatch box.** S. Build now; needs a Codex look. **DRAFT PR #1858 open 29 Oct 23:52, WRITTEN BUT NOT COMPILED OR TESTED (the job waited 3 h for a build slot); follow-up job team_fix_c83a (B-023b, build and test only) starts 01:08.**
 24. **B-024 BUG-1031, Pit Schedule delete-cell button.** S. Build now; needs a Codex look.
 25. **B-025 BUG-816, label tidy-up setting row.** S to M. Build now.
 26. **B-026 BUG-902, one Unknown note on the CDRULES cover row.** S. Build now.
