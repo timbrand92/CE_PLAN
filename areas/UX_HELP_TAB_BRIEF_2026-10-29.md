@@ -15,7 +15,7 @@
 1. **One button, "Something is wrong: get help", at the top of the existing Help tab.** The Manager already has a Help tab (section 2), so no new tab is added. The button sits in a fixed panel above the guides, visible the moment the tab opens.
 2. **One press makes ONE zip** holding the diagnostics report, the CE logs and the health-check result. Three plain lines beside the button say what it collects, where it is saved and who can see it, before anyone presses.
 3. **The three old commands stay, but only as shortcuts that open this tab.** CEHEALTH also shows here as a short list with "Check again".
-4. **Recommended answers to Tim's questions are in section 8.** The two that matter: the zip is saved on the PC outside OneDrive, and a ticked box (with the audience named beside it) copies it to the shared IT folder.
+4. **Recommended answers to Tim's questions are in section 8.** The two that matter: the zip is saved on the PC outside OneDrive, and an UNTICKED box (with the audience named beside it) that the user ticks to copy it to the shared IT folder (Tim, decision 90, replaced the ticked default).
 
 ---
 
@@ -35,7 +35,7 @@
 
 1. **Title "CE Help"** and one line: "Get help when something is wrong, check your setup, and read the guides."
 2. **Panel "Something is wrong?"** (gold outline in the picture):
-   1. Left: one sentence ("One click gathers what CE support needs to fix it. You do not need to know what is wrong or where the files are"), the **one gold primary button**, and one tick box: "Also copy it to the office IT folder, so Tim and IT get it straight away".
+   1. Left: one sentence ("One click gathers what CE support needs to fix it. You do not need to know what is wrong or where the files are"), the **one gold primary button**, and one tick box, unticked when the tab opens: "Also copy it to the office IT folder, so Tim and IT get it straight away".
    2. Right, headed "Before you press it": the **three plain lines**, numbered 1 to 3 (section 4).
 3. **Two cards side by side:**
    1. **Your setup · health check** (the CEHEALTH result as a list, OK in green, anything wrong in amber with the plain fix, a "Check again" button and "last checked" time).
@@ -54,11 +54,11 @@ The three lines, as they should read on screen:
 
 1. **What it collects:** your CE setup, the CE log files, and the result of the health check below. Never your drawings. Drawing paths are cut down to the job number, and your login and computer name are coded.
 2. **Where it is saved:** on this PC in a CE Support folder that is not in OneDrive, as one zip file named with today's date and time (Melbourne time).
-3. **Who can see it:** you and Creative Engineering IT (the shared "CE Diagnostics" folder in IT Admin). Nobody outside the office. Untick the box and only you can.
+3. **Who can see it:** only you, unless you tick the box. Ticked: you and Creative Engineering IT (the shared "CE Diagnostics" folder in IT Admin). Nobody outside the office.
 
 Rules for these lines:
 
-1. **Line 3 changes with the tick box.** Ticked: "you and Creative Engineering IT". Unticked: "only you". It can never say one thing while the code does another.
+1. **Line 3 changes with the tick box.** Unticked is the default and reads "only you". Ticked: "you and Creative Engineering IT". Unticked: "only you". It can never say one thing while the code does another.
 2. **If the IT folder is not reachable** (OneDrive not synced), the tab says so in line 3 and the zip stays on the PC only. It must not silently fall back to a Desktop folder, which is what the diagnostics code does today.
 3. **"Never your drawings" is a requirement, not a checked fact.** I have not looked inside a real zip. The builder must prove it (a test that opens the zip and finds no .dwg), or the sentence is reworded to what is true.
 
@@ -106,7 +106,7 @@ One zip, nothing else produced:
    2. Alternative: keep Desktop\CE Support (easy to find, but it syncs to OneDrive).
    3. I have not checked whether other users' Documents or Desktop are redirected into OneDrive. Tim's PC is, per the 29 Oct message.
 2. **Who gets it, and who is told?**
-   1. **Recommend: a tick box, ticked by default, "Also copy it to the office IT folder, so Tim and IT get it straight away", with line 3 saying exactly who can read it.** The user can untick. The IT folder is shared, so the warning today's diagnostics skip is the point of line 3.
+   1. **Recommend: a tick box, "Also copy it to the office IT folder, so Tim and IT get it straight away", with line 3 saying exactly who can read it.** **SUPERSEDED 29 Oct (decision 90): Tim chose UNTICKED by default, "The user ticks it when they want you and IT to get the file straight away". My first recommendation (ticked) is kept here as written.** The user can tick or untick. The IT folder is shared, so the warning today's diagnostics skip is the point of line 3.
    2. **Recommend: CE sends no message itself** (no email or Teams code exists for this that I know of). The tab shows a ready-to-paste sentence with the file name and a "Copy this message" button.
    3. Alternative: never copy automatically; the user sends the file themselves. Safer, but the colleague has to know whom to send it to, which is the problem Tim raised.
 3. **Does the button do everything in one go, with no "are you sure"?**

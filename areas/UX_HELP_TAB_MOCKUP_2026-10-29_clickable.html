@@ -68,13 +68,13 @@ h3{margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:var(--gold);font-wei
         <div class="q">Something is wrong?</div>
         <div class="small">One click gathers what CE support needs to fix it. You do not need to know what is wrong or where the files are.</div>
         <span class="go" id="go">Something is wrong: get help</span>
-        <div class="tick" id="tick"><span class="box on" id="box">✓</span><span>Also copy it to the office IT folder, so Tim and IT get it straight away</span></div>
+        <div class="tick" id="tick"><span class="box" id="box"></span><span>Also copy it to the office IT folder, so Tim and IT get it straight away</span></div>
       </div>
       <div class="three">
         <h3>BEFORE YOU PRESS IT</h3>
         <div><span class="n">1</span><span><b>What it collects:</b> your CE setup, the CE log files, and the result of the health check below. Never your drawings. Drawing paths are cut down to the job number, and your login and computer name are coded.</span></div>
         <div><span class="n">2</span><span><b>Where it is saved:</b> on this PC in a CE Support folder that is <b>not</b> in OneDrive, as one zip file named with the date and time (Melbourne time).</span></div>
-        <div><span class="n">3</span><span id="who"><b>Who can see it:</b> <b>you and Creative Engineering IT</b> (the shared "CE Diagnostics" folder in IT Admin). Nobody outside the office. Untick the box and only you can.</span></div>
+        <div><span class="n">3</span><span id="who"><b>Who can see it:</b> <b>only you.</b> Nothing is copied to the office IT folder unless you tick the box.</span></div>
       </div>
     </div>
 
@@ -123,7 +123,7 @@ h3{margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:var(--gold);font-wei
   </div>
 </div>
 <script>
-var on = true;
+var on = false;
 function $(i){ return document.getElementById(i); }
 function now(){
   var d = new Date();
