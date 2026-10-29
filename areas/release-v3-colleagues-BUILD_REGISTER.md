@@ -51,6 +51,10 @@ BUG-901 is B-012 and BUG-907 is B-013 above. Each item below is a draft behind a
 31. **B-031 BUG-1228 follow-up, PIT is also slow (readiness report); B-004 only covers the source-placing reads (DP, OF, floor waste).** Not started; the robot timing from B-004 comes first.
 32. **B-032 BUG-1232, label tidy after MOVE treats the Drawing Border block as a clash (suspected).** Not started; confirm by hand or robot first.
 
+33. **B-033 BUG-905, hard-ground runoff 0.9 in CDCALC Boyd's: turn the fix's default ON.** Tim (29 Oct, item 30): "Recommended: yes, 0.9". Team job team_fix_c78f. Needs a robot proof by CE 02 (CDCALC Boyd's example with a known hard area, switch-off control). The guidebook figure is not yet confirmed (guidebook audit session).
+34. **B-034 BUG-1097, the 300 mm minimum head check uses the head left after pipe losses (PR #1772 was installed with the typed head).** Tim (item 31). A warning only. Team job team_fix_c78g. Robot proof: a charged-system example where typed head is above 300 mm and head after losses is below it (warning appears; switch-off control keeps the old answer).
+
+**Freeze fixes Tim named (item 32, "build all three before 6 Nov"):** BUG-1095 = B-017, BUG-1091 = B-019, BUG-1088 = B-020. They are in the C-78 job lanes below and in the frozen build. Robot proofs: B-017 a CDDESIGN Darebin example (council minimum C 0.80 applied; control switch off gives 0.70); B-019 a redesign of a DN450 pipe (grade not flatter than the Settings minimum; control gives the old flat grade); B-020 a 40 L/s connection (DN225 near 1 in 200, not DN100 at 1 in 3; control gives the old pick).
 Not buildable (no B number): BUG-685 and BUG-1148 wait for Tim's rulings (21h, 21i); BUG-1166, 1169, 1170, 1209, 1210, 855, 865 are facts to gather; BUG-1171 needs a Shared train.
 ## Train calendar to the Fri 6 Nov freeze (PLANNED, estimates, not promises; written Thu 29 Oct 11:35 after Tim's "option b")
 
@@ -65,7 +69,7 @@ Tim's ruling (decisions\2026-10-29_TIM_RELEASE_FREEZE.md): release candidate fro
    3. **Build:** assemble Fri 30 Oct early morning. **Install:** Fri 30 Oct evening after 17:30 (or Sat 31 Oct morning), so the full re-test on Sat 31 Oct runs on it.
 3. **C-78 (engineering numbers): B-012 (if moved), B-016 to B-022, B-026.** Council minimum runoff, council time of concentration, minimum grade for DN450 and up, the pipe sizer, cover screens agreeing, the long section ground warning, the CDRULES cover note, the rainfall note wording.
    1. **Areas touched:** CDDESIGN and the sizing and detention figures, CDRULES, CDCHECK cover, the long section. This is the train that changes answers, so its robot proof is by worked examples (9.2 m style hand-checks, the Darebin C figure, the Maroondah Tc).
-   2. **Build:** fix jobs Sat 31 Oct to Mon 2 Nov, assemble Mon 2 Nov. **Install:** Tue 3 Nov (Cup Day, a free day for the robot).
+   2. **Also in C-78:** B-033 (BUG-905 ON) and B-034 (BUG-1097 head after losses). **Build:** two more lanes (chain_fix_c78_a with B-017, B-019, B-020, B-022, B-021; chain_fix_c78_b with B-033, B-034, B-018, B-016, B-026) start automatically when the C-77 lanes finish (Thu evening), so the fix jobs may be done by Fri; assemble when the C-77 train is through its finalizer. **Install:** Tue 3 Nov (Cup Day, a free day for the robot), earlier if C-77 is clear.
 4. **C-79 (windows and looks): B-023, B-024, B-025, B-027, B-028; B-029 and B-030 only if finished by Mon 2 Nov.**
    1. **Areas touched:** the New Pipe Grade mismatch box, the Pit Schedule (delete cell, row height), the label tidy-up setting, colours in Civil windows and icons, and (if in) the CDDESIGN rainwater reuse boxes and AG drain copy labels.
    2. **Build:** Mon 2 to Tue 3 Nov, assemble Tue 3 Nov. **Install:** Wed 4 Nov evening, so the Codex looks (windows and pictures need a Codex look) run Thu 5 and Fri 6 Nov.
