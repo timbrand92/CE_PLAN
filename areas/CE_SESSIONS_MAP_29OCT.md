@@ -58,3 +58,8 @@ A side session whose task is finished and that is not actively working through a
 
 ## Rule 12 (Tim, 29 Oct 15:10, written by CE 00 at CE 01's request): B numbers for every build item
 Every build item (a piece of work that ends in a PR) gets a B number in areas\release-v3-colleagues-BUILD_REGISTER.md BEFORE work starts. Only CE 01 writes the register: other sessions ask CE 01 by message with branch, base, files and PR number. The B number goes in the PR title and in the report; a bug fix keeps its BUG number beside it; building never creates a BUG number. CE 01 renames existing draft PR titles to start with their B number (titles only; no PR is closed or changed otherwise).
+
+11. **CE 11 Design: CE Manager Help tab** (started by CE 03): local_72b76096-e761-406c-bd7d-6bc7af68b185. Design for the Help tab inside CE Manager (UX-MANAGER-TABS).
+
+## Rule 13 (Tim, 29 Oct 15:20): all questions go to the questions chat
+Every question or decision for Tim is written to QUESTIONS_FOR_MONDAY.md and sent to CE 04, who asks him in small batches and records his words; no session asks Tim a decision question in its own chat or in the Control Room. Exceptions that stay where they are: CE 03's hand-check prompts (do this, tell me passed or failed) and CE 09/CE 11's design pictures, which Tim answers in those chats; anything they find that needs a decision goes to CE 04.
