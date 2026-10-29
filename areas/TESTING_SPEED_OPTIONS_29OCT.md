@@ -217,3 +217,157 @@ ESTIMATE: with steps 1 to 4, 2 to 4 more tools a week, if case writing keeps pac
 ## Summary
 
 The robot's own hours are not the bottleneck: about 128 free hours a week remain. A third of its clock is a fixed 3-minute wait, and each install triggers a 6 to 8 hour full regrade. Recommended order: (1) cut the gap; (2) group the mouse line-ups; (3) re-test only what a fix touched, which needs a ruling; (4) switch on the spare work PC, which needs a licence check. A hidden core-console robot and idle mode cannot run beside Tim's open AutoCAD, so neither helps on this PC. The count rises as new checks are written.
+
+---
+
+# ADDENDUM: A LAPTOP WITH AUTOCAD 2026 (29 Oct)
+
+Job `CE_ACAD / robot / plan / 17` (CE 02 Robot and Codex Testing, Team, Opus). Research only. Written Thu 29 Oct 2026, from 11:28 Melbourne (PC clock). Nothing was started in AutoCAD, the core console, the runner, the driver, the settings guard or the lock. Nothing was installed or changed. Source was read with `git show` and `git grep` on `claude/rel-20261029a`; the driver folder, the installed bundles and the ledger were read only. The click-by-click steps for CE 07 are in `areas\TEST_LAPTOP_STEPS_29OCT.md`.
+
+## ANSWER FIRST
+
+1. **Yes, a laptop with AutoCAD 2026 can be a test machine, but for a different AutoCAD.** It runs the part of CE that AutoCAD 2025 and 2026 load (the "Net8" folder), not the part your 2027 loads. Its passes cannot count towards today's 19 of 40.
+2. **The robot needs about one day of reviewed changes first.** It refuses any AutoCAD that is not 2027 (in two places). Its own clock stops it in your work hours on any PC. And its build check would label a 2026 run exactly like a 2027 one.
+3. **The biggest difference is the pipe itself.** On your PC, every CE pipe in the robot's test drawing becomes a one-piece CE pipe object when the drawing opens. AutoCAD 2026 has no pipe-object add-on, so on the laptop pipes stay ordinary polylines. 20 of the 85 checks name the pipe object and will read differently.
+4. **That difference is also the laptop's value.** No colleague's PC upgrades pipes either (that switch is tied to your own Windows account). So the laptop runs CE the way colleagues get it: ordinary pipes, no extra 2027 add-ins, a fresh login. If Max is on 2025 or 2026, it is the only place his version gets driven before 16 Nov.
+5. **A correction for the bug file (RULES 6.2):** by the source, BUG-1209 (downpipe on a pit) and BUG-1210 (Edit Pipe and Edit Pit plan picture) are not "2022 to 2024 only". The missing parts are built for 2027 only, so 2025 and 2026 lose them too. BUG-1137 (COPY with a downpipe) very likely the same. The laptop would show this in its first hour.
+
+## FOR TIM
+
+1. **Can the laptop be the test machine? Yes, for AutoCAD 2026, once the licence is checked.** It cannot stand in for your 2027 results.
+
+2. **How long: about 3 working days from your yes.**
+   - **Day 1, on your PC, no AutoCAD needed:** the robot changes, reviewed by Opus.
+   - **Day 2, on the laptop:** set-up, mostly unattended.
+   - **Day 3, half a day:** the first three-check proof.
+   - **Earliest ready:** Tue 3 Nov (Cup Day), if the laptop questions are answered on Fri 30 Oct.
+
+3. **What it needs from you: about 45 minutes in total.**
+   - **The licence check, first.** Open AutoCAD 2026 on the laptop and look at the name at the top right. If it is your own Autodesk login, ask the office admin whether that licence is per person. If it is, the robot starting AutoCAD on the laptop may sign you out of your 2027 while you draft. Example: half-way through a pit schedule at 10 am, your AutoCAD asks you to sign in again.
+   - **A Windows login on the laptop that is not yours and not an administrator.** The office admin creates it. The same login is then the colleague install rehearsal.
+   - **The admin sets four things:** never sleep, never lock, sign in automatically, closing the lid does nothing. They are security settings, so I do not change them.
+   - **You sign in to GitHub, Claude and Codex yourself** when the laptop asks (about 10 minutes).
+   - **The rest is already asked** in the CE 04 questions list (item 33): whose laptop, free nights, network.
+
+4. **What its results CAN prove.**
+   - **The colleague install works on an ordinary login.** Example: copy the two CE folders, start AutoCAD, the CE tab appears and CEHEALTH shows every line OK.
+   - **CE works on AutoCAD 2025 and 2026 the way a colleague gets it.** Example: CDREBUILD on the test drawing says "11 pits, 49 pipes" on the laptop as it does on your PC.
+   - **Where the 2027-only parts leave real holes on 2026.** Example: does copying pit P3 still number the copy P8 without the 2027 copy helper?
+
+5. **What its results CANNOT prove.**
+   - **Anything about your 2027 AutoCAD.** A 2026 pass is not a 2027 pass.
+   - **The CE pipe object, the 2027 grip module and the 2027 copy helper.** AutoCAD 2026 never loads them.
+   - **How a window looks on your screen.** The laptop screen is a different size and scale, so pictures are approved separately on each machine.
+
+6. **Your call (for the Monday list, no rush): how a laptop pass counts.**
+   - **Recommended:** write it as "robot-accepted on 2026 (Net8 lane)". It counts only on a separate "AutoCAD 2025/2026" line of the scoreboard, never in the 19 of 40.
+   - **Why it needs your word:** today's rules say a Codex pass counts "on Tim's PC", and the robot rule does not mention the AutoCAD year at all.
+
+7. **My recommendation: yes, start now, as the install rehearsal PC and a 2026 proof, not as the robot's new home.**
+   - Do the licence check first. Decide whether the robot runs there every night once Max tells you his AutoCAD year (due Fri 30 Oct).
+   - **Example:** if Max is on 2026, the laptop becomes the most important test PC we have. If he is on 2027, the laptop is mainly the rehearsal PC, and the spare work PC (with 2027) is still the better robot home.
+
+---
+
+## Technical detail (laptop addendum)
+
+### L1. Everything in the robot that assumes AutoCAD 2027 or Tim's PC
+
+Files read: `C:\Lisp Files\_ACAD_DRIVER\acad_driver_witness_v2.ps1` (v2), `acad_driver_v3.ps1`, `acad_driver_v3_session.ps1`, `acad_driver_v3_watchdog.ps1`, `case_runner.ps1`, `case_runner_lib.ps1`, both allow-lists, `C:\CE_PLAN\desk_jobs\chain_robot_standing.ps1` and `acad_janitor.ps1`.
+
+**A. One-line changes (each still needs an Opus review, because v3 checks v2's own fingerprint):**
+
+1. **The year refusal, twice.** v2 line 43 `[int]$ExpectMajor = 26` ("AutoCAD 2027 = R26.0. Any other release is refused") and v3 line 56 `$script:AcadExpectMajor = 26`; both refuse at attach (v2 line 718, v3 line 469). AutoCAD 2026 reports a version starting 25 (public Autodesk release numbering, R25.1; not read on a 2026 machine). Recommended: a laptop-only machine setting that allows 25, so the number on Tim's PC never changes.
+2. **The fixed AutoCAD path.** v2 line 333 `C:\Program Files\Autodesk\AutoCAD 2027\acad.exe`. Used only by the `-Env` direct launch (the CE log moved to a scratch folder). The normal launch hands the drawing to File Explorer, so the laptop opens it in whatever AutoCAD owns `.dwg` there: 2026, if it is the only one.
+3. **The fingerprint pins.** v3 lines 42 to 45 pin v2 (`120EE24D15B2`), the v2 allow-list (`5B542F2145F4`) and the v3 allow-list (full SHA-256). Any edit to v2 refuses every v3 call until the pin is changed in the same reviewed diff. Copy the folder byte-identical first, then apply the laptop diff as one reviewed change.
+4. **The in-use hours.** `Test-V3InUseHours` (v3 line 503) and the runner (line 58) stop the robot on weekdays 8:30 am to 2:00 pm and 3:00 to 5:30 pm on ANY PC. On the laptop that throws away 40 hours a week. The existing `CE_RUNNER_TIM_AWAY` switch would do it, but it means "the desk has told Tim is away"; using it on a test machine would blur its meaning. Recommended: a separate "test machine" setting, and a ruling that RULES 1.8 protects Tim's PC only.
+5. **The standing chain's paths.** `chain_robot_standing.ps1` line 31 hard-codes `C:\Users\TimothyBrand\.claude-team` and `C:\Users\TimothyBrand\AppData\Roaming\npm`. On a different Windows login both differ. Change in the laptop copy only.
+6. **The settings fingerprints.** v3 line 71 holds four 12-hex fingerprints of Tim's settings files. On the laptop all four differ, so every report carries `hash_unexpected_at_start` lines. Read: they are recorded, not a stop (session lines 265 and 269). The `hashes-unchanged` check compares start with end, so it still works. Give the laptop its own four values, or the reports are noisy.
+7. **Fixed folders, kept as they are by recreating them:** `C:\ce_rc_drv` (masters, copies, the lock `ACAD_LOCK.json`), `C:\ce_rc_scratch` (v3 state, scratch), `C:\Lisp Files\_TEST_COPIES_20260923\pack_runs` and `robot_shots` (outputs), `C:\CE_PLAN\areas\runner-reports` (reports and ledger), `C:\Lisp Files\_ACAD_DRIVER` (the robot). `C:\Tools` is not used by the driver or runner (only by the old probes). The janitor uses `C:\ce_rc_drv` and `C:\ce_rc_scratch` too.
+
+**B. Fine as they are (checked):**
+
+1. **Window titles.** The allow-lists match `Autodesk AutoCAD*`, with no year, so the 2026 title is covered. CE window names come from the same window files on both lanes.
+2. **The AutoCAD profile.** Nothing selects a profile by name or reads the registry. The driver uses the current profile and puts back the profile variables it changed from its own record. No mention of a profile called "Tim".
+3. **Screen scale.** The driver declares itself per-monitor DPI aware, reads the drawing-area scale (never assumes it), calibrates each session and refuses a scale error over 0.5 percent. A laptop at 125 or 150 percent should be handled. Not tried.
+4. **The test drawings.** `DRV1_B1.dwg` and `DRV15_METRE.dwg` are in AutoCAD 2018 format (first bytes `AC1032`), which 2026 opens.
+5. **CE_SHARED (memory note `ce-shared-one-assembly-identity`).** The Net8 copy is identical in Civil and Manager (both `C1EB22CB338B`, read today). The hand install copies both folders together, which keeps it so.
+6. **Grips.** The pipe-label grip route defaults to "managed" (`GripRouteSettings.cs` line 22) and Tim's `grip-route.txt` reads `managed`; the Net8 lane always uses the managed route. So Slide, Offset and Flip run the same code on both.
+7. **The ribbon.** `StandaloneCivilRibbonService` is the same for Net8 and Modern (`#if !NET48`).
+
+**C. Real differences (CE itself behaves differently on 2026):**
+
+1. **Which folder loads.** `CE_CVL_SUITE.csproj` and `CE_SUITE_MANAGER.csproj` build `net48;net8.0-windows;net10.0-windows`. The installed `PackageContents.xml` loads `Legacy` (net48) on R24.1 to R24.9 (2022 to 2024), `Net8` on R25.0 to R25.9 (2025 and 2026), and `Modern` (net10) on R26.0 to R27.0 (2027). All three Civil DLLs read `3.0.85+09126560`, Manager `1.1.85+09126560`.
+2. **Files the Net8 folder does not have** (compared today): `CE_CVL_NATIVE_GRIP_2027.arx`, `CE_CVL_OBJECTS_2027.dbx` (the pipe-object add-on), `CE_TRANSFORM_2027.arx` (the copy helper), `PDFiumCore.dll` and `pdfium.dll`. Structural's Net8 folder lacks `CE_STRUC_NATIVE_2027.arx`.
+3. **Code built for 2027 only** (`NET10_0_OR_GREATER`): the copy-receipt bridge (`SourceCloneMapNativeBridge.cs` line 185, returns nothing on Net8); the Edit Pipe real plan (`PipeOnePageLayout.cs` line 241); the Edit Pit block picture (`PitOnePageLayout.cs` line 96); the grip-module presence report; parts of the water tank and help windows.
+4. **The pipe object.** `PipeObjectUpgradeGate.cs`: "Automatic" means "on only for the CE test-bed Windows account", Tim's `AzureAD\TimothyBrand` identifier. On Tim's PC every robot session upgrades its copy on open: run report `RUN-20261028-0000-C3.0.83-g83a4` lists "CeCvlPipeObject 42" in model space and a new CD pipe as `CeCvlPipeObject`, and `C:\ce_rc_drv` holds 85 `_PRE_C7_` backups. On the laptop no add-on means no upgrade, so pipes stay ordinary polylines, which is what every colleague gets on any year. If the laptop login were Tim's own Microsoft work account, the gate would say yes with no add-on present; what CE then does was not read. Use a separate login.
+5. **The extra 2027 test add-ins** (`CE.Transform.Trial.2027`, `CE.AutoCADLink.2027`) are not on the laptop. That makes it "Max-like" for check B9 of the handover plan.
+
+**D. Main cases that will behave differently (of the 85 in `cases\`):**
+
+1. **They name the pipe object (20), expected to read differently as written:** N06, N17, N18, N19, N20, N23, N28, R01, R02, R02b, R17, R19, R19b, R20, R23, R31, R32, R32b, R39, R39b. They need a 2026 variant or a second expected text.
+2. **COPY (8), result unknown without the copy helper:** N12, N16, R33, R34, R34s, R34sn, R34so, R37b. BUG-1137's read says the clean-up fails when the copy map is missing; that code path is absent on Net8 too.
+3. **Edit Pipe or Edit Pit windows (10):** N11, N17, N26, R09, R11, R20, R23, R32, R32b, R33. The numeric boxes should match; any check that touches the plan picture will not (BUG-1210).
+4. **Real mouse (6):** N05, N20, N25, R01, R08, R09: their own calibration on the laptop screen.
+5. **Pictures (6):** R06, R25, R27, R29, R30, R40: a Codex look on that machine, never compared pixel for pixel with Tim's.
+6. **AutoCAD's own words (7):** N13, N13c, N13d, N14, R09, R21, R22 check AutoCAD's command history text. Expected to be the same English; not verified.
+7. **Expected to match:** typed command and reads with no pipe object and no COPY, for example N01 (CDREBUILD), N24 (CDRENUMBER labels), R10 (CDCHECKIGNORE off), R12 (MOVE of a pit).
+
+### L2. What the laptop needs
+
+1. **Windows:** a standard login that is not Tim's and not an administrator. An administrator account for the installs, used once. The four admin settings (never sleep, never lock, automatic sign-in, lid does nothing) or a display plug if the lid must close (`04_REFERENCE\TEST_PC_START_PROMPT.md` step 4b). The robot types real Esc keys and moves the real mouse, so a locked or sleeping laptop fails silently.
+2. **AutoCAD 2026 licence:** see L5.
+3. **Tools:** Git for Windows; GitHub CLI (Tim runs `gh auth login` as `timbrand92`); PowerShell 7 (the driver needs it; Tim's PC has 7.6.6); Node.js LTS; Claude Code (Tim logs in to the Team account); Codex CLI (Tim signs in). **Not needed:** the .NET SDK, Visual Studio, ObjectARX. The laptop never builds; builds stay on Tim's PC.
+4. **Repositories:** `timbrand92/TimOS` to `C:\TimOS` and `timbrand92/CE_PLAN` to `C:\CE_PLAN`. The plugin repository only if the laptop reads source.
+5. **Reports and ledger:** two machines pushing `ledger.json` will collide. Recommended: the laptop writes to its own report folder (the runner already reads `CASE_RUNNER_REPORT_DIR`, today kept for its own tests) and its own ledger file, merged by the desk.
+6. **The robot folder:** `C:\Lisp Files\_ACAD_DRIVER` is NOT a git repository (checked). It is 32 MB, of which 27 MB is transcripts and 2.1 MB cases. Copy by USB: the scripts, the two allow-lists, `cases\` and the READMEs, with a SHA-256 list made on Tim's PC and compared on the laptop. Leave out `transcripts\`, `state.json` and `calls_v2.json` (they are Tim's PC's running state). Never via OneDrive. A private repository for the robot folder would be cleaner later; that is a structure decision for the desk, not made here.
+7. **The test drawings:** only `C:\ce_rc_drv\DRV1_B1.dwg` (84 cases) and `DRV15_METRE.dwg` (1). Do NOT copy all of `C:\ce_rc_drv` (291 files, mostly session copies) or `_TEST_COPIES_20260923` (screenshots and logs). **DRV1_B1 carries an attached reference drawing whose name looks like a real job number** (seen in a run report's model-space list), so treat both drawings as client content: USB only, into `C:\ce_rc_drv` on the laptop, never a synced or OneDrive folder, never a repository; wipe the USB copy after. Check the laptop's OneDrive backup covers only Desktop, Documents and Pictures (not verified).
+8. **CE, by the real colleague route only:** `areas\RELEASE_HANDOVER_PLAN_29OCT.md` section 3 (copy the Civil and Manager folders together into `%APPDATA%\Autodesk\ApplicationPlugins` on that login, read back the SHA-256, start AutoCAD, CEHEALTH, CE_VERSION). Never the developer build path. This is rehearsal R1 at the same time. Structural is not in the colleague package, so no Structural case runs there. Tim's word is needed first (the 29 Oct decision: "nothing is installed on any other PC without Tim's word"; RULES 8.7).
+9. **CE settings:** a fresh settings file; never a copy of Tim's (BUG-1167). The 17 cases with SETTING lines set their values through the guard.
+10. **Network:** internet for GitHub, Claude and Codex. The robot does not need OneDrive. Whether CE's start-up looks for the "Creative Engineering - Drafting" library is a rehearsal check (BUG-1166, BUG-1168).
+
+### L3. Labelling: a 2026 pass is not a 2027 pass
+
+1. **The trap today:** `Get-CaseBuild` (`case_runner_lib.ps1` lines 152 to 160) takes the version of the first DLL it finds in `Modern`, then `Net8`, then `Legacy`. The colleague bundle carries all three, so a laptop row would read the Modern version and look exactly like a 2027 row. The ledger row has no machine, AutoCAD year or lane field (checked the last of 1,385 rows: run, session, case, build, result, variant_of, at, case_sha256, from_check).
+2. **Proposed ledger fields:** `machine` ("TEST-LAPTOP"), `acad` (the year and ACADVER read at launch, for example "2026 R25.1"), `lane` ("Net8", read from the DLL that acad.exe actually loaded, not from the folder list). Rows without them are Tim's PC on 2027 (all 1,385 today).
+3. **Proposed build key:** the lane in brackets, for example `civil 3.0.85+09126560 (Net8) / mgr 1.1.85+09126560 (Net8)`, so two lanes never share a key.
+4. **Proposed words:** "robot-accepted on 2026 (Net8 lane)" and "Codex-accepted on 2026 (Net8 lane)". Never plain "Claude-accepted" or "Codex-accepted".
+5. **Proposed rule (Tim decides; recommended):** the 24 Oct conditions apply in full on that machine (two sessions on the same installed build there, a failing twin, a review). The result counts on a separate "AutoCAD 2025/2026" line, never in the 19 of 40. A 2026 failure on a check that passes on 2027 is a 2025/2026 bug, filed with that in its area line, not a 2027 regression.
+6. **Stays 2027-only:** the whole present count; every pipe-object check; COPY with the 2027 copy helper; the native grip module; anything Tim or Codex has seen on Tim's screen.
+7. **What it does for the pilot:** Max's year is Unknown (QUESTIONS_FOR_MONDAY items 22 and 32; handover plan section 2; readiness file item 4 says BUG-1209 and BUG-1210 "only on 2022 to 2024"). The 22 Oct gap plan and the readiness file say nothing has been driven on 2022 to 2026.
+   - **Max on 2025 or 2026:** laptop results are the pilot evidence for his PC, and BUG-1209 and BUG-1210 (likely BUG-1137) apply to him.
+   - **Max on 2022 to 2024:** he loads `Legacy` (net48). The laptop is the nearest lane but not his; results do not carry over.
+   - **Max on 2027:** the laptop gives the install rehearsal and colleague-like pipes only.
+
+### L4. The plan in short (full steps in `areas\TEST_LAPTOP_STEPS_29OCT.md`)
+
+1. **Before anything:** licence check; Tim's word to install CE on the laptop; Max's year if possible.
+2. **Day 1 (Tim's PC, no AutoCAD):** one reviewed robot diff for a laptop copy (year 25 allowed by a machine setting, the test-machine hours switch, lane and year in the ledger, own report folder, new pins and fingerprints); the USB pack with its SHA-256 list.
+3. **Day 2 (laptop):** standard login and admin settings; tools; Tim's sign-ins; clones; USB copy checked; CE by the colleague hand install (rehearsal R1).
+4. **Day 3 (half):** the first proof: N01, R10 and N12, two sessions each.
+5. **Then:** if Max is on 2025 or 2026, run all 85 on the laptop and file the differences; otherwise keep it for rehearsals R2 and R3.
+
+### L5. The licence, plainly
+
+1. **What could go wrong:** if AutoCAD 2026 on the laptop is signed in with Tim's own Autodesk account and the office licence is per person, Autodesk's public terms (summarised in section 5 above) allow use on one device at a time. The robot starting AutoCAD at 10 am might sign Tim out of his 2027, or be refused.
+2. **What to look at:** on the laptop, the name at the top right of AutoCAD 2026. In Autodesk Account (manage.autodesk.com), the office admin reads Products and Services (the licence type: per person, network or standalone) and User Management (how many seats, who holds them, whether one can be given to a test login).
+3. **What I could not read:** the laptop's licence (not seen) and Tim's own licence type (section 3 item 3 above: the files did not settle it).
+
+### L6. What I did NOT verify (RULES 5.9)
+
+1. Nothing was run on any laptop or in any AutoCAD. Every "expected to match" and "will read differently" is from reading code and case files.
+2. That AutoCAD 2026 reports version 25 to COM (public release numbering, not read on a 2026 machine), and its ProgId.
+3. What CE does on 2026 when a drawing already holds CE pipe objects from Tim's PC (BUG-1151 and BUG-1138 describe 2022 to 2024).
+4. What CE does if the laptop login is Tim's own work account (the gate says yes, the add-on is missing).
+5. Whether CE window names read the same through UI Automation under .NET 8.
+6. Whether AutoCAD 2026's own command-line words match 2027's in the 7 history checks.
+7. The laptop's screen size, scale, graphics, OneDrive backup scope and power settings.
+8. Whether a standard (non-administrator) login can install PowerShell 7, Node.js, Claude Code and Codex without an administrator (some installers need one: plan for the admin to do them).
+9. The full contents of `DRV1_B1` beyond the run-report listing; whether `DRV15_METRE` holds client content.
+10. **For the desk (RULES 6.2):** BUG-1209, BUG-1210 and likely BUG-1137 carry "2022-2024" in their titles, but the code they rest on is built for 2027 only, so 2025 and 2026 are affected too (`SourceCloneMapNativeBridge.cs` line 185, `PipeOnePageLayout.cs` line 241, `PitOnePageLayout.cs` line 96). I did not edit the bug file (not allowed in this job). The bug owner should re-word them and re-check the pilot list items 5, 27, 43 and 51.
+11. **For the desk:** the robot on Tim's PC tests the pipe-object model that no colleague gets (the upgrade switch is on for Tim's Windows account only). That is by design (the 25 Sep ruling), but it means no robot result so far covers colleagues' ordinary pipes on any year.
+12. **For the desk:** `decisions\2026-10-29_TIM_RELEASE_FREEZE.md` is headed "about 12:05 Melbourne", but this PC's clock read 11:28 to 11:40 while I worked after it existed. One of the two is wrong; I did not change either.
+
+## Addendum summary
+
+A 2026 laptop can test CE's Net8 lane (AutoCAD 2025 and 2026) and rehearse the colleague install, but its results never stand for Tim's 2027. The robot needs one reviewed day of changes: allow version 25, a test-machine hours switch, the lane and year in the ledger. On 2026, pipes stay ordinary polylines, as on every colleague PC, so 20 checks read differently. Check the licence first; recommended: start now as the rehearsal PC, and decide nightly robot use once Max's AutoCAD year is known.
