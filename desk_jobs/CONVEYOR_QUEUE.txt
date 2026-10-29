@@ -69,3 +69,6 @@ verifyG1b_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 #HOLD verifyH5_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 # Sat 31 Oct: delete "#HOLD " after 17:53 Sat (cap 58) on this one (43 + 3 = 46; it does not fit under Friday 44):
 #HOLD verifyH6_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# H7 and H8 (written Thu 29 Oct 2026 12:40 by the Opus desk assistant, job CE_ACAD / robot / draft / 20; report areas\CODEX_LOOK_BRIEFS_H7_H8_29OCT.md): release only after the first build carrying the fix is installed AND the desk has recorded it in the launcher; Codex weekly cost about 3 percent each; daily caps in daily_cap.sh
+#HOLD verifyH7_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyH8_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
