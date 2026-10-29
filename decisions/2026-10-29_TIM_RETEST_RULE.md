@@ -18,3 +18,9 @@
 10. **Tim's words (relayed by CE 00, not seen by CE 04):** "do your recommendation".
 11. **Interpretation (CE 00's, marked as such):** option 1 is chosen. Unknown or unmapped files stop forcing a FULL re-test once CE 02 places them in areas; tonight's running pass is unchanged; the weekend full re-tests and the pre-Max full re-test stay.
 12. **Desk must:** from C-77, CE 02 places every changed file in an area, runs the area re-test plus a small smoke set per shared file touched, records the rest as "carried from <build>", and keeps one full re-test before Max by Fri 13 Nov plus the weekend full re-tests. Question 12 / item 61 is closed; do not ask it again.
+
+## Addendum 3 (Thu 29 Oct 2026, night; relayed by CE 00 and recorded by CE 04): it is a standing rule
+
+13. **Tim's words (relayed by CE 00, not seen by CE 04), after "do your recommendation":** "thats should be the plan throughout as a rule".
+14. **Interpretation (CE 00's):** the re-test rule is STANDING, not only for C-77: after ANY install, re-test only what the train touches plus a small smoke set per shared file touched; carry the rest, labelled "carried from <build>"; one full re-test before Max (cut-off Fri 13 Nov) and at the weekends; unmapped files are placed in areas, not forced to FULL; a change that only adds a new switch touches only its own tool (Addendum 1). Also Rule 14 in areas\CE_SESSIONS_MAP_29OCT.md.
+15. **Desk must:** apply this to every install until Tim says otherwise; engineering-judgement items and anything new still need the usual acceptance. Nothing to ask Tim.
