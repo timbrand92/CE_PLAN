@@ -380,3 +380,10 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    3. Desk must: run the calendar; at C-80 treat Mon 9 Nov after 5:30 pm as the last default-changing install.
 
 31. **GB-04 SPLAY METHOD (29 Oct 2026): accepted.** Tim's words: "a drawn line on a named layer that you set once in Settings. If no line is drawn, that item shows Unknown. Your answer later replaces it". Interpretation: this replaces the draft default of item 30: the splay is a drawn line on a named layer, the layer name is a Settings value set once, and with no line the splay check shows Unknown. GUESS: Tim's last sentence repeats the card's wording; read as acceptance, and he can still change the layer or method later. Desk must: build it so (no longer a draft).
+
+## Batch 17 (afternoon, Melbourne; relayed by CE 09, quote read in areas\UX_NEWPIPE_DECLUTTER_BRIEF_2026-10-29.md line 113)
+
+71. **New Pipe window design v2 and its four questions: approved.**
+   1. Tim's words (to CE 09, after trying the clickable v2 mock-up areas\UX_NEWPIPE_DECLUTTER_MOCKUP_2026-10-29_v2_clickable.html): "i am happy with that".
+   2. Interpretation (GUESS on scope): the v2 design is approved as shown, and the four questions in section 7 of the brief (merge into "Which level do you know?"; the three group names; "Same as last pipe" in the header; keep the older creation controls under While placing until the new window is accepted) are treated as answered with the recommended answers, as CE 09 reads it. The exact button words stay Tim's call after he sees the real window (brief section 9 item 7); the real window still needs a Codex look.
+   3. Desk must: build B-043 (slices a to e) with CE 01 on the v2 design; do not ask Tim questions 3 to 6 again; Tim's earlier "yes to all" is not needed to cover them.
