@@ -8,6 +8,14 @@ How to read the tags: **[READ]** means I read it on a page or file this round; *
 
 ## ANSWER FIRST (ROUND 1B, FREE ONLY): FOR TIM
 
+**UPDATE 29 Oct, later (Tim): "we have as many licenses as we need dont worry about this, the rest i am happy with if you can implement".** So (a) the licence question is closed: find 1 below and G1 are withdrawn, the spare PC and the core-console experiment can use any seat they need, and the one-at-a-time worry is dropped; (b) Tim approves the rest in principle. I cannot build or run anything (my brief forbids AutoCAD, the robot, Codex and builds), so "implement" means: I did the read-only check of the six pointer cases myself (result below, **find 4 is mostly refuted**), CE 02 had already added the unlocked-desktop step to the test-PC prompt (step 4b), and the remaining trials are handed to CE 02 with Tim's go-ahead.
+
+**Six pointer cases checked by reading their STEPS (29 Oct, read only, `C:\Lisp Files\_ACAD_DRIVER\cases`):**
+1. **N05, N20, N25:** the label, cover and callout points come after a CE window, and the case files say typed text is refused ("BUSY") while CE waits at that prompt, so they use real mouse clicks. A typed coordinate cannot reach that prompt, so my "type the pick" idea does not work for them.
+2. **R08:** the real mouse pick is the thing being tested (a pick of pit P3 between U and REDO, with no runner read in between). Typing would change the test.
+3. **R09:** a real double-click. **R01:** a hover. Neither can be typed.
+4. **So 0 of 6 can drop the real mouse by typing.** The only way is a CE-side test hook that feeds prompt answers (a production-code change; not recommended without Tim's word). The real mouse stays for these six, so a second PC with its own screen remains the way to stop them disturbing Tim.
+
 Tim, 29 Oct 2026, after round 1: "im not paying for anything else, we need to do proper research on open source and other options". From now on this scout recommends only free or already-owned things. Anything that costs money is listed as **parked (paid)** and not recommended. Round 1 below is kept, but its top five is **superseded** where it relied on a paid item (the developer membership and the cloud runner).
 
 1. **The honest answer on your main wish (testing while you work, without touching your PC).** I found no free way to run a second real AutoCAD while yours is open. Autodesk's own terms, as quoted on its forums, let one subscription be installed on three PCs but used on **one at a time** [SEARCH]. So the real free questions are two: does the office already own a spare AutoCAD seat, and does the headless "core console" take a seat at all. Both are cheap to find out.
