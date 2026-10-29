@@ -17259,3 +17259,5 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's screenshot and words 29 Oct 2026, hand check H53 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; Inspector header 'Recorded values - block and label values may differ'.
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs which row Tim meant). Never FIXED until Tim confirms in AutoCAD.
+
+**BUG-1241 update 29 Oct 2026 16:23 (hand check H54):** Tim's Inspector screenshot of pit P2 (after reopening the drawing and, by his words, the usual CDSYNC) shows 'Invert level 17.780' on the Item tab (Number P2, Type GRATED PIT, Dimensions 450 x 450 mm, Cover level 19.50, Lid Class C Grated Lid, Schedule Main). So P2's invert is held once the drawing has been synced; the CDCHECKDWG finding 'P2 invert level missing' was read from the SAVED file before that was written, which fits 'CE writes it only after CDSYNC or a rebuild' (same cause as BUG-1240). Not yet proven: that a plain save after CDREBUILD would have held it.
