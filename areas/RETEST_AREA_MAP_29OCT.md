@@ -223,3 +223,7 @@ Tim's words (decisions\2026-10-29_TIM_RETEST_RULE.md, Addendum 1): "yes. An Edit
 2. **FULL re-test** if any existing setting line is edited, renamed or removed (including default values and the sizing/start-value files such as `Models/TabStartValueSettings.cs` and `Services/SettingsSizingStandards.cs`, which edit existing lines), or any SHARED file is touched, or any changed file matches no area.
 3. The robot job file names the decision ('AREA: added switch(es) only: <names>' or 'FULL: <reason>') and lists the carried checks. A new-switch decision is made by reading the diff, not by trusting the PR text.
 4. The weekend full re-tests (Sat 31 Oct, Sat 7 Nov), the pre-pilot full re-test on the frozen build and the Max-like run stay as scheduled whatever the install rules say.
+
+---
+
+## Addendum 2 (30 Oct 2026 00:10): the smoke sets and Rule 14 live in RETEST_SMOKE_SETS.md (permanent, kept current by CE 02).
