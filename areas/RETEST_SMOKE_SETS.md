@@ -8,7 +8,7 @@ Companion of `RETEST_AREA_MAP_29OCT.md` (the areas) and `decisions\2026-10-29_TI
 2. ONE full re-test (all counted accepted cases, two separate starts each) before anything goes to Max (cut-off Fri 13 Nov) and every weekend, as planned.
 3. A file the map does not know is PLACED in an area by CE 02 (record the placement here) and does not force FULL.
 4. A fix whose only settings change is a brand-new switch with a new name counts as touching only its own tool.
-5. EDITING or REMOVING an EXISTING setting still forces FULL. A saved-data migration (an old saved table or ladder moved once) counts as editing existing data. A changed DEFAULT of an existing key is a judgement call put to Tim (question raised 30 Oct via CE 00); until he answers, treat it as FULL.
+5. EDITING or REMOVING an EXISTING setting still forces FULL. A saved-data migration (an old saved table or ladder moved once) counts as editing existing data. A changed DEFAULT of an existing key is a judgement call put to Tim (question raised 29 Oct via CE 00); until he answers, treat it as FULL.
 6. Any FAIL, FLAKY or BLOCKED in the smaller set widens to FULL in the next free window.
 7. The job text of every tester_run job says this (tester_run81 carries it now).
 
