@@ -17050,3 +17050,22 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs one clarifying look). Never FIXED until Tim confirms in AutoCAD.
 
 **Tim, same day, after I asked whether 450 might be the normal 'Above' gap:** "450 is wrong im telling you" with a screenshot of the Edit Pipe window (preview at the bottom). **So 450 is NOT accepted as the normal gap: it is too far.** The screenshot shows the label '100 DIA. UPVC PIPE' (grade text off) standing clear of the pipe by roughly a full text height, well away from the pipe's middle, with the Pipe text buttons 'On plan' and 'Above' BOTH lit gold (two buttons looking selected at once). Expected: the label sits close to the pipe, a small gap. How small is Tim's call; a Settings value (R-00), to be agreed. This is the Edit Pipe preview as well as the drawing, so the same offset is used in both.
+
+
+---
+
+## BUG-1240 — After Save As, the CE Inspector says "This pit is not in CE's recorded project data yet. Values below are Unknown" for a pit the Pit Schedule lists correctly
+
+**Command / Area:** CE Inspector on a pit, after SAVEAS of a drawing that was never saved (Drawing2 saved as test1.dwg), Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H22). WRONG ANSWER, severity to confirm. Same family as BUG-1225 (record kept per drawing path).
+
+**Symptom:** Tim: "something has happened to p2 pit", with three screenshots. (1) On the plan, pit P2 looks normal: label P2, cover text CL 19.50, a pipe leaving to the right (IL 17.78) and one below (IL 17.80). (2) The CE Inspector on P2 says "This pit is not in CE's recorded project data yet. Values below are Unknown", with Number, Type, Dimensions, Cover level, Invert level, Lid and Schedule all Unknown. (3) The Pit Schedule (PITSCHEDULE) lists the same pit correctly: P2, 450 x 450, FROM P1, inlet 100 at IL 17.80, outlet 100 at IL 17.78, cover 19.50, depth 1.72, with 'Drawing check: 1 data issue may affect this schedule'. Earlier, CDCHECKDWG on the saved file also reported 'P2 Invert level is missing or not a valid number'.
+
+**What the CE log shows (29 Oct 2026, read-only, not proof of cause):** the Pit Schedule run at 13:22:38 printed 'Project data loaded from DWG: 2 pits, 4 pipes, manual rows=0' and 'Project data bound (nothing written) to ...CD_ProjectData_test1_d7b4c88b.json', i.e. CE only attached the saved drawing's record when the Pit Schedule was opened, after the Save As at about 13:20. If the Inspector was opened before that, it looked in a record that was not attached yet (my guess, not checked: when Tim opened the Inspector is not known).
+
+**Expected behaviour:** The Inspector shows P2's real values (number P2, cover 19.50, invert from its pipes) straight after a Save As, the same as the Pit Schedule does. If the record is not ready it loads it, or says 'loading', never 'Unknown'.
+
+**Steps to confirm in AutoCAD:** (1) New drawing (never saved), PIT, CD two pits and a pipe. (2) SAVEAS to a new name. (3) Select a pit and open the CE Inspector BEFORE opening the Pit Schedule. Right = real values. Wrong = 'not in CE's recorded project data yet'. (4) Open PITSCHEDULE, then the Inspector again: if it is now right the cause is the late attach.
+
+**Reference:** Tim's screenshots 29 Oct 2026, hand check H22 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; BUG-1225 (ProjectDataService.SetDrawingPath cache keyed by path, report areas\release-v3-colleagues-BUG1225_READER_FIX_REPORT.md); my instruction to Tim to SAVEAS was part of the CDCHECKDWG check D28, so this is the first time the Save As path was exercised in these hand checks.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026; needs one answer from Tim about the order he opened things). Never FIXED until Tim confirms in AutoCAD.
