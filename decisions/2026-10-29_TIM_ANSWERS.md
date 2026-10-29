@@ -574,3 +574,8 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "1".
    2. Interpretation (GUESS): the last message listed three options numbered 1 to 3 for the overnight restart (1 = pause Windows Updates until Mon 2 Nov, recommended; 2 = also automatic sign-in; 3 = leave as is) and, further down, a separate "Still open" list whose first item was the Hazen-Williams C value. "1" is read as option 1, pause updates. If he meant the C value, "1" cannot be a Hazen-Williams C (usual values are about 100 to 150), so that reading is rejected, but it was not confirmed.
    3. Desk must: Tim pauses the updates himself (Settings, Windows Update, Pause updates, to Mon 2 Nov); the desk does not touch his Windows settings. Check on the first morning (Fri 30 Oct) whether the PC restarted overnight (uptime, Event log) and tell Tim; if the pause was not set, say so. Automatic sign-in stays OFF. The Hazen-Williams C value stays open.
+
+110. **Windows Updates paused (follow-up to item 109): done by Tim, until 9 Nov.**
+   1. Evidence: Tim sent a screenshot of Settings, Windows Update: "Updates paused until 9/11/2026", the Pause updates box showing 9/11/2026, Resume updates button. This PC's date format is day/month/year, so 9 Nov 2026 (Monday), a week longer than the Mon 2 Nov asked for.
+   2. Interpretation: the pause is set, so the "1" in item 109 was the pause option, confirmed. Automatic sign-in stays OFF.
+   3. Desk must: treat overnight Windows restarts as unlikely until Mon 9 Nov; before the last big install on Mon 9 Nov after 5:30 pm (C-80) remind Tim that updates resume that day and ask whether to pause again until Fri 13 Nov or later; still check uptime on Fri 30 Oct morning.
