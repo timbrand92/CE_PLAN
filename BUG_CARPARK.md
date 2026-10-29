@@ -17181,3 +17181,5 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's pasted command line 29 Oct 2026, hand check H39; related BUG-665 (COPY and ROTATE of a pit gets its own number), BUG-1242 (source tags show no number on the drawing).
 
 **Status:** OPEN (found by hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+**Tim's confirmation 29 Oct 2026 (hand check H40):** "the cr mr didnt make a block with a new tag though". So the copied downpipe made by CR (and, as he says, MR/CR together) did NOT get its own new tag: the CE line was right that the copy is only a plain AutoCAD copy. This is confirmed as a real fault by Tim: a copied downpipe should be a CE downpipe with a new tag (compare COPY of a pit, D15, which gets its own number). Not known: whether the copy shows the old tag (DP1) or none; Tim did not say.
