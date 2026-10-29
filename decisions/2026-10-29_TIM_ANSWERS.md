@@ -454,3 +454,23 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Interpretation: (1) the zip is saved on the PC in a CE Support folder outside OneDrive (not Desktop\CE Support); (2) a tick box, ticked by default, copies it to the shared IT folder, line 3 on screen names who can read it, and CE sends no message itself (the tab gives a paste-ready sentence); (3) no "are you sure" pop-up; (4) typed CESUPPORT and CEMANAGERDIAG only open the tab; (5) the button wording "Something is wrong: get help" and "Open older Civil logs" stay as shown. Source of the answers: areas\UX_HELP_TAB_BRIEF_2026-10-29.md section 8.
    2. GUESS on scope: "all five" means the five recommended answers in section 8, not the earlier idea text. The design is approved; nothing is built and nothing is accepted until seen in AutoCAD.
    3. Desk must: CE 01 gives it a B number; build it with UX-MANAGER-TABS and UX-VERSION-IN-MANAGER so the Manager tabs change once; the builder re-reads the Help tab on the real release branch first and proves "no drawings in the zip" with a test.
+
+## Batch 20 (evening, Melbourne)
+
+85. **Garages for GB-01 slice 4: the recommended answer, plus Tim asks CE to find them on the architect's plan.**
+   1. Tim's words: "recommended answers but also why cant it read the architectural drawings and find it on plan?".
+   2. Interpretation: the recommended answer stands (the user picks the garage outline; if none is picked the check shows Unknown) AND CE should also try to find garages on the architect's background plan and offer them to pick, the same "detect and confirm" pattern Tim ruled for the architect's downpipes and slab outlines (decisions\2026-09-25_V3_PLAN_DISCUSSION_RULINGS.md UX-DP-01 and the slab outline offer, about lines 883 and 2263). Answer given to him: nothing in CE_PLAN says CE cannot; whether CE can recognise a garage depends on how the architect marks it (a layer name, a hatch or the word GARAGE), which varies per architect and is not recorded; whether any garage detection is already built is not known.
+   3. Desk must: add "offer garage outlines found in the architect's Xref (closed outlines on layers or with text containing garage), user confirms or picks" to GB-01 slice 4; check what the Xref reader can already find; never decide a garage without the user confirming.
+
+86. **StrucPlus in Manager (item 48): yes.** Tim's words: "yes". Interpretation: take CE StrucPlus out of CE Manager only; no StrucPlus code or product deleted. Desk must: remove the Manager Updates tab entry only.
+
+87. **CE Blocks (item 49, BUG-1243): park it.** Tim's words: "just add to carpark for later". Interpretation: no question answered; BUG-1243 stays in BUG_CARPARK.md as OPEN, parked, with what he wanted still unrecorded (ask him when he is ready). Desk must: confirm BUG-1243 holds "Tim: park for later 29 Oct"; build nothing.
+
+88. **Two CE_SUITE_MANAGER installs (item 51): the recommended answer.** Tim's words: "recommedned answer" (recommended: keep the ProgramData one, the all-users location the installer uses, after the desk reads the version of each and which one AutoCAD loads). Desk must: read both versions first; remove nothing without Tim's yes; tell him which is which.
+
+89. **Long Pit Schedule (item from CE 03, card D22): one table.** Tim's words: "one table". Interpretation: a placed Pit Schedule keeps growing as ONE table with no splitting; the row limit stays as an optional setting for sheets that need a split, headers repeat only when it splits (the recommended answer). Desk must: change card D22 and build it; D22 not counted until then.
+
+90. **Help tab, copy to the IT folder (decision 84 item 2): unticked by default.** SUPERSEDES the ticked default in decision 84, 29 Oct 2026 (old text kept).
+   1. Tim's words: "keep the tick box, but unticked by default. The user ticks it when they want you and IT to get the file straight away".
+   2. Interpretation: the Help tab has the tick box "Also copy it to the office IT folder" but it starts unticked. The other four accepted answers stand.
+   3. Desk must: tell CE 11 and CE 01 so the build uses unticked; the tab still shows line 3 naming who can read it; the file should still carry no client or drawing names where avoidable (decision 14).
