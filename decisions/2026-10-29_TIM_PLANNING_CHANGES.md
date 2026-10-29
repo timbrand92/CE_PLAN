@@ -122,3 +122,8 @@ Tim (item 99 of decisions/2026-10-29_TIM_ANSWERS.md, relayed by CE 04): "can we 
 
 Tim's words (decisions/2026-10-29_TIM_ANSWERS.md items 103 to 107): "7a. yes"; "7b. yes" and "keep it as recommenmded"; "1. Hazen-Williams"; "2. recommended: typed by the engineer."; "3. CDPUMP". Recorded in `areas\civil-H-pump-stations.md` section 3c: master detail = the .dwg in Standard Details\Civil; storage rule kept with every fixed number on Settings; Hazen-Williams with the C value left Unknown until Tim types it; duty flow typed by the engineer; command CDPUMP; card approved on these answers.
 Interpretation (guesses, flagged in 3c): (a) the 10 mm floor stands for pump stations only and supersedes R-14's "no fixed floor" there (CE 04's reading, not asked of Tim); (b) the CDCALC Pump System tab's duty pick stays as a suggestion, not the answer.
+
+## PC-08 — Rules for managing the bugs and the carpark
+
+Tim: "need to manage bugs and carpark far better in future, write some rules for it". Done: thirteen rules written into the header of `BUG_CARPARK.md` (the file every chat reads first), commit 0dfb8be8: one writer and short edits, take the number last, search before adding, a fixed set of fields, one Status line with a fixed set of words, IN PROGRESS must name its PR and date, FIXED only on an accepted pass, nothing deleted in bulk, short entries, a PILOT-BLOCKER tag with lane, a weekly tidy by the desk, Tim's words verbatim, questions go to CE 04.
+Interpretation (guess): the rules live in the carpark header, not in `C:\TimOS\RULES.md` (the only rulebook; section 13 already covers bugs). A one-line pointer from RULES section 13 to the header is proposed, not made, because that file is shared by every project.
