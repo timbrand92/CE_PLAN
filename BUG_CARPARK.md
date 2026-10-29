@@ -16976,3 +16976,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Update 29 Oct 2026 (pit catch re-run, hand check H9b):** with the points typed correctly the two pipes were exactly 10.000 m and neither printed a silting warning (1 in 200 exactly is fine). So BUG-1235 is the rounding case: the earlier pipe was a hair flatter than 1 in 200 and the sentence printed '1:200' for both numbers. Wording fix only (show a decimal when the two figures would print the same).
 
 **BUG-1234 second screenshot (29 Oct 2026, hand check H9b, correct 90 / 110 mm pipes):** same look again. The upper pipe's start IL 17.95 sits on the pit's right edge; the lower pipe's start IL 17.95 sits in the gap beside the pit; the lower pipe's flow arrow overlaps its label ('100 DIA. UPVC PIPE AT 1 IN 200', arrow through the word PIPE). So it repeats with ordinary 10 m pipes 300 mm apart, not only with the odd first test. CE printed the tidy-up lines (an invert text moved 240 mm, a label moved 625 mm) so the tidy-up ran; whether it made it better or worse than leaving the texts where they were drawn is not known.
+
+
+---
+
+## BUG-1236 — FO (front overflow) places a block whose symbol text says "OF", not "FO"
+
+**Command / Area:** FO and OF source symbols, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H12). LOOK / DESIGN QUESTION, severity to confirm.
+
+**Symptom:** Tim typed OF and picked a point, then FO and picked another. Command lines were right ("Overflow placed. Tag: OF1." and "Front overflow placed. Tag: FO1.", each followed by "Pick the next ... or press Esc to stop."), and the green plan labels read OF and FO. But the SYMBOL itself (the white rotated text in the black box) reads "OF" for both. Tim: "fo places a block which says of not fo".
+
+**Expected behaviour (Tim's view):** The front overflow block should say FO. **What the card says:** daily card D08 (UX-SRC-01) says OF and FO deliberately place the same symbol (BLOCK_OVERFLOW) and the tag and plan label tell them apart, so this is a conflict between the card and what Tim expected: Tim's call whether the card stands or FO gets its own symbol.
+
+**Steps to confirm in AutoCAD:** (1) Type OF, click empty ground, Esc. (2) Type FO, click empty ground, Esc. (3) Zoom in. Right (Tim's view) = the FO symbol reads FO. Wrong = it reads OF.
+
+**Reference:** Tim's screenshot and command line, 29 Oct 2026, hand check H12 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; card D08 in areas\DAILY_TOOLS_TEST_CASES_2026-10-23.md; robot case N03 (it asserts the same symbol, so it will agree with the old design and not catch this).
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
