@@ -48,3 +48,24 @@ PENDING. See the final section, which a later edit replaces.
 ## Status of the wait
 
 Waited for a free slot from Thu 22:52 to Fri 07:27 (several restarts: my launcher bug at 02:08, then two background-job time limits). At every check one or two other jobs' Drainage test or build commands were running.
+
+---
+
+## BUILD AND TEST (job B-049c, Fri 30 Oct 2026, Melbourne time)
+
+### FOR TIM
+
+1. **Answer first: PR #1867 now compiles and its unit tests pass.** It is still a draft. Nobody has opened it in AutoCAD, so nothing is proven on a drawing yet.
+2. **What a drafter will see:** nothing new since the section above. Copy a pit on top of a pit and the original keeps its pipes.
+3. **My mistakes first.** (a) One of my own tests had the wrong expected answer: with two overlapping copies, the copy 0.3 mm further east is the nearer one, and my test expected the other. I fixed the test, not the behaviour. (b) My extra argument on the relink call tripped an older BUG-288 check that reads the source text of that call; I updated its text match. The full suite found it, so the first full run failed 1 test of 20,935. (c) I blanked the PR description by mistake while updating it. I restored it from my earlier saved copy within a few minutes (draft status unchanged), with only the status line changed. (d) The first wait loop was killed by the 30 minute background limit and had to be restarted.
+4. **What is NOT proven:** everything in AutoCAD. The robot case N36_rotcopy_on_pit with control C36 (section above) is the proof.
+5. **Nothing for you to do.**
+
+### Technical detail
+
+1. **Worktree and commits:** `C:\ce-fx\c86a`, local branch `b049c-work` pushed to `fb/bug1227-pit-copy-keeps-pipe-ends` (normal push). Head `a6969702` on top of `28d8b972`. Two new commits: `9c466530` (test expectation) and `a6969702` (BUG-288 guard text match, REGRESSION_LOG result line). No behaviour change; switch `linking.pitCopyKeepsOriginalPipeEnds` still ON.
+2. **Compile:** Civil net10.0-windows Release (via the test project): 0 errors. Drainage net48 Release (AutoCAD 2024 refs): Build succeeded, 0 errors, 242 warnings (none new from this change that I saw).
+3. **Focused tests (net10, Release):** first run `FullyQualifiedName~Bug1227`: 14 tests, 13 passed, 1 failed (my test expectation, above). After the fix: Bug1227 plus C75 plus C76: 71 passed, 0 failed (count is not zero). After the second fix: Bug285To298C5Tests plus Bug1227: 42 passed, 0 failed.
+4. **Full Civil suite, once, Release net10:** 20,935 tests: 20,902 passed, 32 skipped, 1 failed (`Bug288_Wiring_TheCopyQueuesItsSources_AndTheRelinkReadsThemInTheSameWalk`, caused by my change, fixed). The two Debug-only SourceAtomicCoordinatorDependencyTests failures did not appear because this was Release. I did NOT re-run the whole 43 minute suite after the one-line fix; the affected class re-ran green (item 3).
+5. **Not run:** Manager and Structural suites (not touched), CE_SHARED unchanged, no AutoCAD, no accoreconsole, nothing deployed.
+6. **Robot case:** unchanged from the ANSWER FIRST section: N36_rotcopy_on_pit (renumber if taken) with control C36.
