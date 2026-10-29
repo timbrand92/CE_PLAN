@@ -6,7 +6,90 @@ How to read the tags: **[READ]** means I read it on a page or file this round; *
 
 ---
 
-## ANSWER FIRST: FOR TIM
+## ANSWER FIRST (ROUND 1B, FREE ONLY): FOR TIM
+
+Tim, 29 Oct 2026, after round 1: "im not paying for anything else, we need to do proper research on open source and other options". From now on this scout recommends only free or already-owned things. Anything that costs money is listed as **parked (paid)** and not recommended. Round 1 below is kept, but its top five is **superseded** where it relied on a paid item (the developer membership and the cloud runner).
+
+1. **The honest answer on your main wish (testing while you work, without touching your PC).** I found no free way to run a second real AutoCAD while yours is open. Autodesk's own terms, as quoted on its forums, let one subscription be installed on three PCs but used on **one at a time** [SEARCH]. So the real free questions are two: does the office already own a spare AutoCAD seat, and does the headless "core console" take a seat at all. Both are cheap to find out.
+
+2. **Top five free finds, most helpful first.**
+
+   1. **Ask the office admin (free) what AutoCAD licences exist and whether any seat is unassigned. Who: CE 04 asks you; the admin answers.**
+      - **Why:** a spare seat, or the spare PC already having its own licence, answers the licence question for nothing. You said the spare PC "has AutoCAD on it already". Look in Autodesk Account, Products and Services, and User Management.
+      - **If there is no spare seat:** the spare PC can still run the robot at night and on weekends on your own login, as long as your own AutoCAD is closed. That is what Autodesk's one-at-a-time rule allows. It gains no extra hours, but it frees your PC and its screen.
+
+   2. **Run the "no screen" AutoCAD (core console) on the spare PC or a free virtual PC, and test whether it uses a licence seat. Who: CE 02, one 30-minute experiment.**
+      - **Why:** on your own PC the core console cannot start while your AutoCAD is open. CE's old investigation found the block is one machine-wide Autodesk lock, not anything about your profile, and logging in as a different Windows user would not get round it [READ, `docs/SMOKE_TEST_HARNESS_isolation_investigation.md`; my reading of the second half]. A different PC, or a virtual PC, has its own lock.
+      - **Free tools:** the spare PC (no virtual PC needed); or Hyper-V (built into Windows Pro, free, needs the admin to switch it on and restart); or VMware Workstation Pro, which Broadcom made free for commercial use from version 17.5.2 (needs a Broadcom sign-in) [SEARCH]. The core console needs no graphics card, so the earlier "slow virtual graphics" worry does not apply.
+      - **The unknown:** nobody has established whether the core console takes a seat, and Autodesk's forums have two old questions with no answer [SEARCH]. The experiment settles it: run one headless check on the spare PC while your own AutoCAD is open, and see if either session is signed out.
+      - **Effect:** the 9 typed-command cases and the saved-drawing checks could run any time, with no screen, mouse or keyboard.
+
+   3. **Run many logic checks in one AutoCAD start with a test command (Autodesk's free sample, already on this PC). Who: CE 02 (it is the unfinished CCR-01 STEP 2).**
+      - **Why:** every robot AutoCAD start costs about 33 seconds, and a third of the robot's clock is waiting. One typed command can run a whole group of checks inside AutoCAD, in seconds each, with no mouse and no real keyboard.
+      - **Free:** the sample is at `C:\Autodesk\ADN-Samples\coreconsolerunner` (NUnit, which is open source). CE 01 reports the 15 Sep ruling is to use InternalsVisibleTo rather than reflection.
+
+   4. **Replace the robot's mouse clicks with typed coordinates for the picks. Who: CE 02, a 15-minute probe first.**
+      - **Why:** six cases need the real mouse, and 54 need a real Esc. Several of the six may be plain "pick this object" steps. At a "Select objects" prompt AutoCAD accepts a typed coordinate as a pick, and a typed `(handent "2C1")` picks an object by its permanent handle [SEARCH, Autodesk forum]. The driver's COM typing already works with no keyboard.
+      - **Still needs the mouse:** dragging a grip, hovering for a tooltip, and anything that looks at a picture. I did not find a proven way to send Esc or a click to AutoCAD's drawing area without the keyboard or mouse: posted window messages are known to fail on custom-drawn windows and on windows that are not active [SEARCH, AutoIt and AutoHotkey forums]. So expect a probe, not an answer from the web.
+
+   5. **Press ribbon buttons from inside AutoCAD instead of with the mouse. Who: CE 02 or CE 01, a trial.**
+      - **Why:** the ribbon is built from Autodesk's `AdWindows` library, and each button has a handler that can be run directly (`CommandHandler.Execute`; this pattern is visible in the decompiled library at `C:\Tools\AcadDecomp\2027\AdWindows`). A small test-only command could find a CE button by its id and run it, with no mouse. This would prove "the right button runs the right command".
+      - **Free and already on the PC.** Whether it works for CE's buttons is untested.
+
+3. **A correction to the earlier research (RULES 6.2).** The 9 Oct note lists the ODA File Converter (installed here, version 27.1.0) as a way to turn DWG into DXF. ODA's own FAQ says the converter is for **non-commercial use only unless you are an ODA member** [SEARCH]. Using it in CE's test pipeline would be commercial use. Do not build anything that depends on it. The free replacement is **ACadSharp (open source, already used by the test harness) to read the DWG, then ezdxf (MIT licence) to draw it as a picture**; I believe ACadSharp can also write DXF, which I have not confirmed.
+
+4. **What I need from you:** nothing today. One free item for Monday: ask the office admin the licence question in find 1. The paid developer-membership question I sent CE 04 earlier is **withdrawn**.
+
+### Round 1b detail (free options)
+
+**G1. Licence facts for a second AutoCAD**
+1. **What Autodesk's terms say [SEARCH, quoted on forums; Autodesk's own page returned 403 to me]:** a subscription may be installed on up to three devices and used on one at a time; the account terms add that one named user may not be logged on to more than three computers at once.
+2. **Free action:** the admin checks the licence type (named user, network or standalone), number of seats, and whether one is unassigned. Not a purchase.
+3. **Recommendation:** **adopt now** (a question, not a tool).
+
+**G2. Core console on a separate PC or free virtual PC**
+1. **What:** accoreconsole.exe is installed with AutoCAD and runs without a screen. CE's May 2026 investigation SAW the failure on this PC: with Tim's AutoCAD open, it stops with "Configuration file may be locked by another process"; the object it contends for is a machine-wide named lock `{52813408-3561-4705-820a-2b3b78be92ba}_0` held twice by acad.exe, outside every per-user and per-session area [READ, 22 May update in the investigation doc]. Option C in that note (a second Windows account) was never tried; my reading is that a machine-wide object would still block it.
+2. **Free hosts:** the spare PC; Hyper-V (a Windows Pro feature, free; admin switches it on, restart needed); VMware Workstation Pro (free for commercial use from 17.5.2 as of Nov 2024 per Broadcom [SEARCH]; Broadcom account sign-in); VirtualBox (open source, GPL for the base program [from my knowledge, not checked this round]). A virtual PC needs its own Windows licence; Microsoft's free evaluation images expire [from my knowledge, not checked].
+3. **Unknown:** whether the core console takes a seat or needs a sign-in. Two old Autodesk forum questions (a 2017 licence-error thread and an unanswered service-account thread) have no answer [SEARCH].
+4. **Steps for CE 02:** (a) on the spare PC, with Tim's AutoCAD open on his PC, run one headless check (N16, R19b or R23); (b) look whether either AutoCAD asks for a sign-in; (c) run it a second time with the spare PC's AutoCAD signed in as a different account if the admin has one.
+5. **Effort and risk:** 30 minutes to answer. Risk: it could sign Tim out. Run it while he is away, as the robot rules already require.
+6. **Recommendation:** **trial**.
+
+**G3. CCR-01 STEP 2: the in-process test command**
+1. **What and where:** see round 1, F3. CE 01 reports (not verified by me) that the plugin repo holds the 15 Sep approval of STEP 1 only.
+2. **Licence:** NUnit and NUnitLite are open source (MIT-style); the sample has a LICENSE.txt that I did not read.
+3. **Recommendation:** **trial** (CE 02's call).
+
+**G4. Typed picks instead of mouse picks**
+1. **What:** AutoCAD takes a typed `x,y` at a selection prompt as a pick at that point, and a typed `(handent "<handle>")` as a pick of that object. The `handent` part is supported by an Autodesk forum thread, which also warns that `SELECT` behaves differently inside a script file than at the keyboard [SEARCH]. The typed-coordinate part I did not find a source for; it is ordinary AutoCAD behaviour as I know it, unverified here.
+2. **Solves:** some of the 6 pointer cases (N05, N20, N25, R01, R08, R09) may not need the mouse at all; also removes the 4-minute pixel calibration for those sessions.
+3. **Steps:** CE 02 looks at those 6 cases' STEPS and marks each as "pick" (typed) or "drag/hover" (real mouse); tries one on a test copy.
+4. **Recommendation:** **trial** (15 minutes of reading plus one probe).
+
+**G5. Ribbon button from inside AutoCAD**
+1. **What:** `Autodesk.Windows` (AdWindows) ribbon items expose `CommandHandler.Execute(item)`; the decompiled 2027 library shows menu items calling it [READ, `RibbonControl.cs` line 983] and a `FindItem(id)` helper that is internal [READ, `RibbonUtil.cs`]. Public ways to find an item by id exist in the API [GUESS].
+2. **Licence:** Autodesk's, already referenced by CE; no new software.
+3. **Recommendation:** **trial** later, after G3 gives a place to run test commands.
+
+**G6. Free drawing checks without AutoCAD**
+1. **ACadSharp** (reads DWG in plain .NET, MIT licensed per a mirror page [SEARCH]; used by TH-01). **ezdxf** (MIT [SEARCH, PyPI]; Python; draws DXF to PNG, SVG or PDF). **LibreDWG** (GPLv3 [SEARCH, secondary source]; reads DWG; not for shipped product use, a GPL concern; test-only use is probably fine but I have not checked). **ODA File Converter: non-commercial only, do not use.**
+2. **Chain:** saved test DWG, ACadSharp reads and writes DXF [GUESS], ezdxf draws a picture, picture compared with an approved one. Python and ezdxf are downloads: need Tim's yes with name, source and size (not asked yet; ask only when the trial is scheduled).
+3. **Recommendation:** **trial later.**
+
+**G7. Free things looked at and rejected**
+1. **Faking the AutoCAD API for unit tests:** no open-source in-memory fake of `DatabaseServices` exists that I could find. The only route is CE's own thin wrapper over AutoCAD calls (CE already does this for pure logic: 19,000 Civil tests). A NuGet interface pack by "Tum4ik" exists; its quality and licence are not checked [SEARCH]. **Ignore.**
+2. **AutoHotkey / AutoIt `ControlClick`:** free, but posted clicks fail on custom-drawn windows, and AutoCAD's canvas is custom-drawn [SEARCH, inference]. **Ignore for the canvas.**
+3. **GPU sharing for a virtual PC (Hyper-V GPU-P):** unofficial; not needed if the virtual PC only runs the core console. **Ignore.**
+4. **Parked (paid):** Autodesk Developer Network membership; Design Automation cloud runs; Windows 365 Cloud PC; any cloud rental. Not recommended unless Tim says otherwise.
+
+### Hand-offs (round 1b)
+1. **CE 02:** G2, G3, G4, G5 and the ODA warning (check no test depends on the ODA converter).
+2. **CE 04:** record Tim's "no paid tools" word; withdraw the developer-membership item from the Monday list; add the free licence question (G1).
+3. **CE 07:** the spare-PC desktop notes in round 1 F2 still stand (free). Max's AutoCAD year is still unrecorded.
+
+---
+
+## Round 1 first answer (partly superseded by round 1b above; paid items parked)
 
 1. **Round 1 in one line.** Most of the "how do we test without your keyboard and mouse" ground was already covered by CE 02's 9 Oct, 22 Oct and 29 Oct notes. What I add is the missing practical pieces for the spare test PC, a cheaper way to run many logic checks in one AutoCAD start, and a price for the cloud option.
 
