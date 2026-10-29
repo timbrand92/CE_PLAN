@@ -17240,3 +17240,22 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's screenshots 29 Oct 2026, hand check H49 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; Tim's rule 'this whole plugin needs to be user friendly'; Survey Review button (H48); card/robot case R26 (CDSURVEY refusal half only).
 
 **Status:** OPEN (found by hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+**BUG-1240 update 29 Oct 2026 16:21 (hand check H53):** Tim, after closing and reopening the drawing and opening the Inspector on pit P2: "half passed but i always have to cdsync when i reopen drawing". So this is not only a Save As effect: **after EVERY reopen Tim has to run CDSYNC before CE shows its recorded data** (the Inspector shows values only after that). This is the same family as BUG-1225 (the reopened drawing's record). Which first screen he saw before running CDSYNC (Unknown or values) was not reported this time. Needs: open and close test, then Inspector first, with no CDSYNC, to prove it; and a fix that loads the drawing's own record on open.
+
+
+---
+
+## BUG-1249 — CE Inspector, On plan tab, says the pit label is "bottom right" when the P2 label is drawn above the pit (and Tim reports the cover text position as wrong too)
+
+**Command / Area:** CE Inspector on a pit, 'On plan' tab (Pit label, Cover text, Invert text, Label position, Cover text position, Label style, Layer), Civil 3.0.85 (Tim, by hand, 29 Oct 2026, hand check H53). WRONG ANSWER, severity to confirm.
+
+**Symptom:** The screenshot of pit P2 shows the P2 label circle ABOVE the pit and the cover text 'CL 19.50' up and to the right of the pit. The Inspector's On plan tab reads: Pit label On, Cover text On, Invert text Off, **Label position: bottom right**, **Cover text position: top right**, Label style Default ('Last checked label style; individual changes have not been checked'), Layer STORMWATER PIT; the header says 'Recorded values - block and label values may differ'. Tim's words: "it shows here that cover level text is bottom right whern its actually top right , then shows label position wrong also". My reading (flagged, not certain): the 'Label position' row says bottom right but the label is above the pit, so it is wrong; the 'Cover text position' row (top right) matches the drawing; Tim says the cover-text row is wrong, which does not match the screenshot as I read it, so the two rows may be swapped or labelled the wrong way round in his view. To be settled by asking Tim which row he meant. The Inspector's own header already says the recorded values may differ from the drawing.
+
+**Expected behaviour:** The On plan tab reports where the label and the cover text really are on the drawing for this pit (above, top right), or says 'recorded position, not read from the drawing' and shows the real one beside it.
+
+**Steps to confirm in AutoCAD:** (1) Place a pit, leave the label where it lands. (2) Select it, open the Inspector, On plan tab. (3) Compare 'Label position' and 'Cover text position' with where the P-label circle and the CL text really sit. Right = they agree. Wrong = bottom right against a label drawn at the top.
+
+**Reference:** Tim's screenshot and words 29 Oct 2026, hand check H53 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; Inspector header 'Recorded values - block and label values may differ'.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026; needs which row Tim meant). Never FIXED until Tim confirms in AutoCAD.
