@@ -22,3 +22,7 @@ Guards: each profile field reads back with its source; Glen Eira shows no minimu
 ## 4. Open points for Tim
 1. The Port Phillip method (book: Boyd's; CE: council gives it) needs one engineer line.
 2. Banyule's underground share stays 100 (council document) although the book says 50 good practice.
+
+## 5. Tim's answers (29 Oct 2026, item 27): approval of the card not yet given
+1. Port Phillip follows the book: Boyd's method.
+2. Banyule underground share: warn against both figures with their sources (below 100 cites the council's 2019 document; below 50 also cites the book).

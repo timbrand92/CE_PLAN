@@ -12,7 +12,7 @@
 
 ## Cards waiting for Tim's approval (no build until approved)
 
-1. **GB-02 Council data.** Draft.
+1. **GB-02 Council data.** Draft; Tim answered the two open points 29 Oct, card approval not yet said.
 2. **GB-03 Calculations.** Draft.
 3. **GB-04 Ready to submit.** Draft.
 4. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
