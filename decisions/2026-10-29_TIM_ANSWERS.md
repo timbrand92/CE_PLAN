@@ -415,3 +415,37 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "yes your readings are correct".
    2. Interpretation: both readings in item 74 are confirmed by Tim: (1) "dimscale = 120" was a slip for 20; (2) other scales follow the same rule (DIMSCALE 50 gives 2.5 times real size). The earlier GUESS flags on item 74 are cleared. The picture is still shown before it ships (rule 5.2).
    3. Desk must: build with DIMSCALE / 20 as the factor at every scale.
+
+## Batch 19 (late afternoon, Melbourne; CE 03, CE 05 and CE 02 questions)
+
+76. **FO symbol and source labels (QUESTIONS item 43, BUG-1236): yes, with a label and a tag.**
+   1. Tim's words: "the source block should have the dp text thats visible on print that can be modified then it has the tag, we should be able to edit both when double clicking does that make sense? in this case yes fo should insert with FO as the label".
+   2. Interpretation: every source block (DP, OF, FO, RG) has two parts: a VISIBLE LABEL that prints and can be changed (for example DP, FO), and a TAG that holds the reference (DP1, FO1). Double-clicking opens one window where both can be edited. FO inserts with FO as its label (not OF). Whether FO gets a different drawn symbol from OF is not stated; the label is what he asked for (GUESS: the symbol can stay shared as card D08 says, the label tells them apart).
+   3. Desk must: build label plus tag on all source blocks with one edit window on double-click (extends the DP double-click ruling, QUESTIONS 22 Oct item 3 and BUG-860); FO inserts labelled FO.
+
+77. **Source numbers on the plan (item 44, BUG-1242): number in the tag only; the label never carries it.**
+   1. Tim's words: "number shows in tag only, for reference. label is always without the number".
+   2. Interpretation: the plan label is OF, FO, DP, RG with no number; OF1, DP1, RG1 live in the tag, for reference. The recommended "show the number on the plan, default ON" is NOT chosen.
+   3. Desk must: keep numbers off the plan labels; RG gets a plain label RG (decision 3: raingarden label wanted).
+
+78. **Pipe label gap, Above and Below (item 45, BUG-1239): research done, no number from Tim.**
+   1. Tim's words: "what do the current default settings say, do your research before askign em dumb questions?"
+   2. Research (29 Oct, read from the installed source branch claude/rel-20261029a and Tim's own file; not seen running): the Settings value is Annotation offsets > pipeTextOffsetMm, default 200 (Models/PipeAnnotationHandles.cs lines 22, 44 to 46; the same file keeps PipeTextSide "Top"). Tim's own settings file C:\Users\TimothyBrand\AppData\Roaming\CE_CVL_SUITE\settings.json holds no annotationOffsets entry, so his PC uses the default 200 mm. The drawing code that applies it was not found in this search. What Tim measured (BUG-1239) is about 450: about two and a quarter times the default; why is not known (not checked: whether 200 is measured to the text middle or edge, or scaled by DIMSCALE).
+   3. Interpretation (GUESS, mine, not Tim's): he expects the desk to find the cause and propose a figure. No number is his.
+   4. Desk must: measure the real distance on a copy (BUG-1239 steps) and find why 200 reads as 450; set a small default gap measured from the pipe line to the nearest edge of the text (proposal: 50 mm at plot scale, a Settings value, R-00); show Tim a picture of Above and Below before it ships; do not ask him for the number first.
+
+79. **Move+Rotate and Copy+Rotate on a raingarden (item 46, BUG-1245): yes.** Tim's words: "yes". Interpretation: a plain sentence naming the object now, support for moving and rotating later. Desk must: build the sentence; put "support later" on the build list.
+
+80. **Copied CE objects (item 47, BUG-1246): yes, and it is a general rule.**
+   1. Tim's words: "yes like pits, all ce items should be like this".
+   2. Interpretation: a copied downpipe becomes a real downpipe with the next tag; and every CE object (source, pit, pipe and others) that is copied becomes a real CE object with its own next number, as a copied pit does. GUESS on scope: all CE items means every CE-recorded object, not ordinary AutoCAD lines.
+   3. Desk must: build it for downpipes now; audit every CE object kind for the same copy behaviour and list the ones that do not.
+
+81. **Council letters inbox (item 53): yes.** Tim's words: "yes". Interpretation: a plain "council letters inbox" folder per office; CE reads the PDF you save there and files it in the job's Civil\From Council folder; CE never reads a mailbox. Desk must: build it as card UX with the privacy rule (no mailbox access).
+
+82. **AI cost cap (item 54): yes, A$50 a month.** Tim's words: "yes". Interpretation: A$50 per month is the Settings default for the cap, with a warning at 80 per cent and the AI stops at the cap; drawing is never blocked. Note: GB-05's card had the cap blank by default; this is the named figure. Desk must: set the default A$50.
+
+83. **AutoCAD close and reopen helper (QUESTIONS item 55): 08:30 next working day, and weekends and holidays are open for testing.**
+   1. Tim's words: "8:30 am next working day, you can also always test on weekends and public holidays".
+   2. Interpretation: after the 5:30 pm close, AutoCAD reopens at 08:30 the next working day (Friday's close reopens Monday 08:30). Weekends and public holidays: the robot and Codex may test any time on them, Tim's PC included (GUESS on Tim's PC; the existing hours rule already treated weekends as free, RULES 1.8).
+   3. Desk must: set the reopen time 08:30 next working day; schedule tests on weekends and public holidays freely; the helper still only acts after 5 minutes idle.
