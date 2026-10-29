@@ -103,3 +103,13 @@ Verified by the intake chat: Tim's words are in item 67 as quoted. Done 29 Oct 2
 3. CEMEMBER with its window is on the build list as a post-freeze item (`IMPLEMENTATION_ROADMAP.md`, after the Structural order). Picture of the window first. Not started; no code.
 Not touched: the plugin repo's AGENTS.md (CE 01 does that), who tests or accepts (decision 62), the one-session-per-file rule, who deploys.
 Interpretation (guess, same as item 67): the ownership labels stop deciding who builds; acceptance and deployment rules are unchanged. Other old copies of the wording elsewhere in CE_PLAN (for example in archive folders, history records and older area logs) were left as history and not searched exhaustively.
+
+## PC-05 update (Tim, 29 Oct, later) — answers to the six questions of area AI
+
+Tim, in order: 1. "yes" 2. "yes" 3. "yes" 4. "50$" 5. "all of them" 6. "yes". Full question text and the recorded meaning are in `areas\claude-api-and-learning.md` section 6.
+1. Sending one blanked letter to Claude through CE Cloud: yes (switch stays off by default; verifying Anthropic's current retention terms before any real letter is still required, AI-0).
+2. Letters do arrive by email before they are filed: so the RFI reader needs an email way-in; the route is NOT decided (AI-3 card).
+3. The full all-years read of the council folders is wanted: the desk to schedule AI-1 (one builder pass, anonymised output). Not started by the intake chat.
+4. Monthly cost cap: $50. Interpretation (guess): dollars per month; currency and period were not named.
+5. All councils, not only Kingston; order by how many letters each has.
+6. A plain list of changes for the covering letter: yes. Interpretation (guess): an exception to "no response-letter drafting", a list from the ticked-off items, not a drafted letter.

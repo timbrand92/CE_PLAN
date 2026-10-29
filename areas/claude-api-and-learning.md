@@ -44,14 +44,14 @@
 5. Every window, command and wording follows the plain-English and no-jargon rules; every slice carries a Tim AutoCAD checklist and a Codex check.
 6. Test with synthetic letters first (the three Kingston letters, anonymised, are the first fixtures; the originals never enter a repo).
 
-## 6. Questions for Tim (one batch; none decided)
+## 6. Questions for Tim and his answers (29 Oct 2026, same afternoon; recorded in PC-05 update)
 
-1. Are you happy for ONE letter's text, with the applicant, client name and address blanked, to go to Claude through CE Cloud? (Recommended: yes, switch off by default.)
-2. Do the other councils' letters arrive by email before they are filed? (The 2026 jobs have none filed.)
-3. Do you want the full all-years read of the council folders (AI-1)?
-4. A monthly cost cap figure for AI use, or leave it to the desk to propose?
-5. Which council after Kingston?
-6. Does Tim want a plain list of changes made (for the covering letter), given the 25 Sep rule of no letter drafting?
+1. **ONE letter's text, with the applicant, client name and address blanked, to Claude through CE Cloud?** Tim: "yes". (Switch still off by default, per section 4 AI-0.)
+2. **Do the other councils' letters arrive by email before they are filed?** Tim: "yes". So the RFI reader needs a way in from email (how is NOT decided: for example a save-attachment folder CE watches, or Tim dropping the PDF in). Open design question for the AI-3 card; do not guess a route.
+3. **Full all-years read of the council folders (AI-1)?** Tim: "yes". Wanted: the desk schedules AI-1 as one builder pass with anonymised output; a spending decision on the desk's meters, not started by the intake chat.
+4. **Monthly cost cap:** Tim: "50$". Recorded as $50 a month for AI use, the Settings default for the cap (the answer did not name the currency or the period: read as dollars per month; Tim can correct).
+5. **Which council after Kingston?** Tim: "all of them". Every council that has letters in the folders is in scope; order to be set by how many letters each has (AI-1 will count).
+6. **A plain list of changes made, for the covering letter?** Tim: "yes". Recorded as an exception to the 25 Sep "no response-letter drafting": CE produces a plain list of what changed (from the ticked-off items), not a drafted letter. Wording of the list is for the AI-3 card.
 
 ## 7. Parked / related
 
