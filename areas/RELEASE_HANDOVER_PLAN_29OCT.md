@@ -153,3 +153,10 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 6. **Gate list (section 8):** Tim confirmed the administrator set-up (gate 1) and ruled Structural out, so gate items 6 and 7 are out. Go checklist item 9 now reads: old-files move decided (Tim) only; the frozen-copy folder is decided.
 7. **Build list, from Tim's rulings:** BUG-905 ON (0.9), BUG-1097 head left after losses (still a warning), BUG-1095, 1091 and 1088 all built before the freeze. They sit in CE 01's list.
 8. **Still open for Tim:** the old-files move (item 25), Max's old July Structural (item 30; moot until 2027 goes in), the pack approval (item 29), Max's install rights and upgrade date (item 36), the rehearsal PC (item 37).
+
+## 13. UPDATE 29 Oct, after Tim's item 69 (cut-off Fri 13 Nov; this section overrides earlier dates)
+
+1. **The pilot build** is the newest build that has passed review and testing on Fri 13 Nov. The earlier "freeze Fri 6 Nov" in sections 6 and 8 is superseded.
+2. **Frozen copy (section 6):** made at packaging from about Wed 11 Nov from the build then installed and tested; rebuilt and hash-checked after any later fix (about 1 hour), so it always equals the newest tested build. The hash manifest is dated and versioned each time. The compare with the installed bundle on Tim's PC is repeated on Thu 12 and Fri 13 Nov. The `CE V3 PILOT` folder is created and shared "can view" to Max only after Tim's word on Fri 13 Nov.
+3. **Rehearsals (sections 3 to 5):** R1 on the current build as soon as the second 2027 PC and ordinary login exist; R2 and R3 on a build from Wed 11 Nov (the package build), repeated if the package changes by more than an area fix.
+4. **Final go checklist (section 8) is ticked Fri 13 Nov;** item 5 reads "no new serious bug on Tim's PC since the last full-class install". Each item in the pilot carries "tested" or "not tested" in the release note (Tim's item 68). Hand-over Mon 16 Nov.
