@@ -9,19 +9,19 @@
   },
   "dailyTools": {
     "claudeAccepted": {
-      "done": 19,
+      "done": 20,
       "of": 40
     },
     "timConfirmed": 25,
     "accepted": {
-      "done": 28,
+      "done": 29,
       "of": 40
     },
     "bothRoutes": 15,
-    "acceptedNote": "Rule 16 union at 06:40 Fri 30 Oct: Tim by hand 25 + robot-only 3 (D19, CDSYNC keeps schedule C42, Tidy labels C37) = 28 of 40; CDTWL freeboard C39 makes 29 once its ledger item is written; D08 FO/OF symbol disputed (robot accepted it, Tim saw OF, BUG-1236) and not counted"
+    "acceptedNote": "Rule 16 union at 07:50 Fri 30 Oct: Tim by hand 25 + robot-only 4 (D19 Tim half-tested, CDSYNC keeps schedule C42, Tidy labels C37, CDTWL freeboard C39 = ledger item 30) = 29 of 40; both routes 15; D08 FO/OF symbol disputed (robot accepted it, Tim saw OF, BUG-1236) and not counted"
   },
   "installed": "Civil 3.0.86 · Manager 1.1.86 · Structural 1.0.125",
   "waiting": "C-76 installed 17:51 and verified; full robot pass on 3.0.86 COMPLETE 04:40 (62 of 66 accepted cases have two clean passes; R21 is the old reopened-drawing CDCHECK bug BUG-1251, confirmed by robot; R08, R02b, R32 short), CDTWL qualifies as the 20th tool once reviews and the ledger item are done; Codex looks G3 and G7 start about 06:30; Tim on site Fri 30 Oct; C-77 install about 11:00 to 12:00 then area plus smoke (Rule 14); C-78 Mon 2 Nov evening; cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T06:29:17+11:00"
+  "countedAt": "2026-10-30T07:25:44+11:00"
 }
