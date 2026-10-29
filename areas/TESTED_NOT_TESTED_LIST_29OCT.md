@@ -26,7 +26,7 @@ CE_ACAD / robot / plan / 22. CE 02 Robot and Codex Testing, Team Sonnet headless
    4. **A long Pit Schedule on the next sheet (D22) and the check-drawing summary window (D28).** Codex could not finish D22; D28 had a real fault seen.
    5. **All 60 pilot-critical fixes.** Example: the "AT 1 IN 100" invented on an imported pipe (BUG-1188) is fixed in the build but nobody has run it.
    6. **Gate list.** Roll Back hidden, update route, old scripts, fault report coding, millimetre imports, no blue, nothing sent off the PC, the privacy pass: none tested.
-4. **What you need to do for this list:** nothing. Two answers from you would turn entries green: D13 (does a label you dragged ride with its pipe end when the pit moves; I recommend ride along) and BUG-905 / BUG-1097 (hard-ground C figure; which head the 300 mm rule means).
+4. **What you need to do for this list:** nothing. One answer from you would turn entries green: D13 (does a label you dragged ride with its pipe end when the pit moves; I recommend ride along). BUG-905 and BUG-1097 are no longer waiting on you: you answered both on 29 Oct (0.9 hard-ground ON; the 300 mm rule uses the head left after pipe losses); they are builds to prove by Codex looks H1 and H7 once CE 01 installs them.
 
 ---
 
@@ -89,11 +89,11 @@ Source: `PILOT_CRITICAL_TEST_LIST_29OCT.md`. For every entry: **What was tested:
 4. **A LandXML pipe with no grade gets an invented "AT 1 IN 100" (BUG-1188).** NOT TESTED: no test file, file chooser not drivable. Fix in Civil 3.0.76.
 5. **On AutoCAD 2022 to 2024, one downpipe in a COPY cancels the clean-up of every pit and pipe copied (BUG-1137).** NOT TESTED: needs AutoCAD 2024. Fix in Civil 3.0.76.
 6. **Step-iron depth read from two places that can disagree (BUG-540).** NOT TESTED: the remarks cell is not read by the robot. Fix already on the base.
-7. **CDCALC Boyd's tab and CDDESIGN use different hard-ground C (BUG-905).** NOT TESTED: the fix is installed but switched OFF until Tim confirms 0.9. Needs Tim's word, then a Codex look.
+7. **CDCALC Boyd's tab and CDDESIGN use different hard-ground C (BUG-905).** NOT TESTED: the fix is installed but switched OFF; Tim confirmed 0.9 on 29 Oct (the default goes ON in a coming build, B-033). Needs that build installed, then a Codex look (H7).
 8. **On a PC without the CE pipe add-on, CDSYNC empties every pit's pipe list (BUG-1138).** NOT TESTED: needs a PC without the add-on. Fix in Civil 3.0.75.
 9. **A network pasted into a new drawing goes quiet after save and reopen: pits move without their pipes (BUG-1150).** NOT TESTED: needs a pasted-and-saved test drawing. Fix in Civil 3.0.75.
 10. **One unreadable pit record stops new pipes linking to any pit (BUG-1142).** NOT TESTED: no test drawing with a damaged record. Fix in Civil 3.0.75.
-11. **The 300 mm minimum head on a charged downpipe system is never checked (BUG-1097).** NOT TESTED: the CDCALC window cannot be read by the robot; needs Tim's word on which head, then a Codex look. Fix (partial) in Civil 3.0.76.
+11. **The 300 mm minimum head on a charged downpipe system is never checked (BUG-1097).** NOT TESTED: the CDCALC window cannot be read by the robot. Tim ruled on 29 Oct that the check uses the head left after pipe losses; that change is a coming build (B-034). Needs that build installed, then a Codex look (H1). The partial fix in Civil 3.0.76 uses the typed head.
 12. **A pasted downpipe keeps a link to the original's label, so MOVE takes the wrong label (BUG-1140).** NOT TESTED: draft case P02 and its twin written, never run, never reviewed (MOVE half only). Fix in Civil 3.0.75.
 13. **CDTEXTSEG puts the pipe label on the leg round the corner, not the leg you clicked (BUG-1194).** NOT TESTED: draft case P01 and its twin written, never run, never reviewed. Fix in Civil 3.0.75.
 14. **An Xref'd Pit Schedule says OUT OF DATE when nothing changed (BUG-1145).** NOT TESTED: needs two linked test drawings and a save. Fix in Civil 3.0.75.
@@ -255,3 +255,7 @@ C:\TimOS\RULES.md; areas\EVERYDAY_TOOLS_STATUS_29OCT.md; areas\PILOT_CRITICAL_TE
 # Summary
 
 Everyday tools: 21 tested, 12 in part, 5 not tested (38 lines). Pilot-critical bugs: 0 tested, 60 not tested. Gate and hand-check entries: 26 tested, 1 failed, 16 in part, 15 not tested (gate list alone: 1 in part, 10 not tested). The colleague note can say the everyday drawing tools were tested; it cannot say bug fixes, update route, privacy or other-PC installs were tested. Counts are by hand; recount at first refresh.
+
+---
+
+**Last line of the plan (confirmed by Tim, TIM_ANSWERS item 70): the confirming full pass on the named pilot build runs Sat 14 and Sun 15 Nov; Tim's go is conditional on its Sunday night result. Anything that arrives after Sat 7 Nov is listed here as 'tested in these areas, not in full' until that pass.**
