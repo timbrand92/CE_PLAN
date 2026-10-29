@@ -1,4 +1,4 @@
-# GB-01 Pipe and pit checks: DRAFT card (not approved)
+# GB-01 Pipe and pit checks: APPROVED 29 Oct 2026 (Tim, item 26); not built, tested or installed
 
 **Commands grouped:** CD (pipe layout), PIT, Edit Pipe, Civil Design, CDRULES. **Classification:** Modify (falls, cover, lid class) and Missing (minimum pit depth, pipes under garages).
 
@@ -31,3 +31,9 @@ Guards: each rule against the examples above. AutoCAD look: Edit Pipe strip and 
 2. 450 and larger gravity pipes now warn flatter than 1 in 100 (the book gives no ladder); confirm that is wanted.
 3. Do charged and pumped pipes count as "gravity pipes"? Recommend not.
 4. Retires the old R-03 ladder and the every-council R-32 rule once approved.
+
+## 8. Tim's answers to the open points (29 Oct 2026, item 26 of the decisions file)
+1. Manningham: 1 in 200 ("do as you recommend").
+2. 450 and larger gravity pipes: "bigger pipes get their own figure". The book gives none, so this is its own Settings row, **left Unknown until a figure is named**; blank means "no minimum fall set for this size", no warning. Open: who names the figure.
+3. Charged and pumped pipes are not held to the grade rule ("yes").
+4. The old size ladder (R-03) and the every-council detention rule (R-32) are retired when slice 1 is built ("yes").
