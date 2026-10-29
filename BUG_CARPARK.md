@@ -17377,3 +17377,6 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Steps to confirm in AutoCAD:** (1) Open a job drawing, type CDCHECK, note the totals. (2) Close it without saving and open it again. (3) Type CDCHECK as the very first CE command. Right: the same totals as step 1 and pipes named like P3-P2.
 
 **Status:** OPEN. Fix job B-055 started 30 Oct 2026 04:37 (CDCHECK reads the list saved in the drawing when none is in memory; switch checks.cdcheckReadsThisDrawingsRecord ON). Never FIXED until Tim confirms in AutoCAD.
+
+
+**BUG-1251 update 30 Oct 2026 05:21 (CE 02 robot runs on 3.0.86):** the cause is CONFIRMED by robot runs, not only by reading code. a80X8 (R12 then R21): R12 PASS, R21 FAIL (187 connections, 142 Connected, 44 Unresolved). a80X9 (same pair with linking.sourceLandingReadsEachObjectOnce false): R21 still FAIL, so BUG-1228 (#1837) is cleared. a80X7 (the 3.0.85 grouping, R21 first): R21, R23, R20, R19, R19b all PASS. So R21 fails only when CDCHECK is the first CE command on a reopened copy. Nothing in the C-76 train is implicated. R21 stays the expect-fail proof for B-055; robot cases N38/C38 are ready for the C-77 build. Status stays OPEN (never FIXED until Tim confirms in AutoCAD).
