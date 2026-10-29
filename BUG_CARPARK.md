@@ -17014,3 +17014,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's pasted command line 29 Oct 2026; hand check H13; Modules\Drainage\Rules\PitRenumberNetworkBuilder.cs:124-133.
 
 **Status:** OPEN (reported through a hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1238 — New Pipe window: Tim does not see the recent diameters, materials and inverts as one-click buttons (card D05)
+
+**Command / Area:** CD, New Pipe window, recent-value buttons, Civil 3.0.85 (Tim, from his own daily use, 29 Oct 2026, question 4 of the extra checks). MISSING OR NOT NOTICEABLE, severity to confirm.
+
+**Symptom:** Asked "Does the New Pipe window offer your recent diameters, materials and inverts as one-click buttons?", Tim answered "no". Not yet known: whether the buttons exist but are hard to see or are on another tab, whether they only appear after a number of uses, or whether they are not in the build he runs (daily card D05 says the window should offer them, plan item to be looked up).
+
+**Expected behaviour (card D05):** The pipe window offers the recent diameters, materials and inverts as one-click buttons so the drafter does not retype them.
+
+**Steps to confirm in AutoCAD:** (1) Run CD and place two pipes with different sizes and materials (so there is something recent). (2) Run CD again and look at the New Pipe window. Right = buttons for the recent sizes, materials and inverts. Wrong = nothing to click, only empty boxes.
+
+**Reference:** Tim's answer 29 Oct 2026, hand check H16; card D05 in areas\DAILY_TOOLS_TEST_CASES_2026-10-23.md. Related: CD_RecentValues.json (the file CE keeps its recent values in).
+
+**Status:** OPEN (reported by Tim 29 Oct 2026; needs one clarifying look at the window). Never FIXED until Tim confirms in AutoCAD.
