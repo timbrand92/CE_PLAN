@@ -579,3 +579,8 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Evidence: Tim sent a screenshot of Settings, Windows Update: "Updates paused until 9/11/2026", the Pause updates box showing 9/11/2026, Resume updates button. This PC's date format is day/month/year, so 9 Nov 2026 (Monday), a week longer than the Mon 2 Nov asked for.
    2. Interpretation: the pause is set, so the "1" in item 109 was the pause option, confirmed. Automatic sign-in stays OFF.
    3. Desk must: treat overnight Windows restarts as unlikely until Mon 9 Nov; before the last big install on Mon 9 Nov after 5:30 pm (C-80) remind Tim that updates resume that day and ask whether to pause again until Fri 13 Nov or later; still check uptime on Fri 30 Oct morning.
+
+111. **CDSL when the nearest survey spot is far away (QUESTIONS item 59, ledger H50): yes.**
+   1. Tim's words: "1. yes" (to my numbered list where item 1 was the CDSL warning).
+   2. Interpretation: when the nearest survey spot is more than the Settings distance (default 10 m), CDSL warns in plain words ("nearest survey spot is 35 m away: this level is a rough guide only") before it asks for the proposed level. A warning only, never a block (R-27). GUESS: the "1" answered the CDSL question, the first item of the list I had just sent; it could also have meant the Hazen-Williams C value (rejected: not a plausible C value).
+   3. Desk must: build it with the distance a Settings value, default 10 m; tell CE 03.
