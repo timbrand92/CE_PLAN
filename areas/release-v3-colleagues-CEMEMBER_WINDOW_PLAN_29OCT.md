@@ -1,4 +1,4 @@
-> **UPDATE 29 Oct 2026 (Tim, TIM_ANSWERS item 74): the beam-size question is ANSWERED: Option B. CEMEMBER draws real size x DIMSCALE / 20 (5 times at 1:100, real at 1:20; the 20 is a Settings value), the old SBEAM rule; SBEAM unchanged. Everything below that says "Option A recommended" or "no size changes until Tim answers" is SUPERSEDED. The warning keeps its wording and states the factor. Two guesses still to show Tim with the picture: "dimscale = 120" is a slip for 20, and other scales follow the same rule.**
+> **UPDATE 29 Oct 2026 (Tim, TIM_ANSWERS item 74): the beam-size question is ANSWERED: Option B. CEMEMBER draws real size x DIMSCALE / 20 (5 times at 1:100, real at 1:20; the 20 is a Settings value), the old SBEAM rule; SBEAM unchanged. Everything below that says "Option A recommended" or "no size changes until Tim answers" is SUPERSEDED. The warning keeps its wording and states the factor. Item 75 ("yes your readings are correct") confirms the two readings: "dimscale = 120" is a slip for 20, and other scales follow the same rule. Item 100 approves the window and the warning for building. The picture and sections 5, 6, 9 and 10 were corrected to this on 29 Oct.**
 
 # CEMEMBER window and beam-size warning: plan (Thu 29 Oct 2026, Melbourne; build items B-036 and B-037)
 
@@ -8,35 +8,36 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 ## FOR TIM (read this part only)
 
-**THE PICTURE:** open `C:\CE_PLAN\areas\CEMEMBER_WINDOW_MOCK_29OCT.html` in any browser. It is labelled MOCK-UP. Top left is the window (1280 x 680 px). Top right are small numbered notes about the mock-up (they are not in the window). Bottom is your question, "How big will the beam draw?", with the same beam drawn both ways, and a strip showing both about life size on an A1 sheet.
+**ANSWER FIRST:** your beam-size question is ANSWERED and the picture now shows the rule, not a choice. The window and the warning are approved (decisions item 100) and ready to build after the Civil freeze. Two small readings still need your yes.
 
-1. **What the window will look like.** One window, three columns, as you approved on 19 Oct. Steps are numbered 1 to 8 straight through.
-   1. **Left:** 1 Member (12 one-click buttons), 2 Size (a Find box and the list), then a small box of figures (depth, width, web, flange, mass, Ix, Iy, Zx, Zy; a dash where the list has none).
-   2. **Middle:** a live picture of the member, always showing, with points 1 and 2 marked on a side or top view. It is drawn by the same code that draws it in the drawing, so what you see is what you get.
-   3. **Right:** 3 View, 4 Orientation pictures (greyed for a UB), 5 Section in front or beyond, 6 Points sit on (swapped for the 3 x 3 grid when the view is Section), 7 Break lines at (Both, Start, End, None), 8 Scale 1 : number. A quiet status line, then Reset, Cancel, Place at the bottom right. Only Place is solid gold.
-2. **What Place does.** The window hides. You pick point 1 then point 2 (a section: one pick). Escape stops. Press Enter or Space afterwards and the window comes back with your last choices. Reset clears them. All of that already works today on the command line; the window is a nicer front for it.
-3. **Your question, and what I found.** You said you cannot answer "real size or 5 times" until you see it. I checked the code.
-   1. **CEMEMBER (the new command) always draws real size.** A 310UB32.0 is 298 mm deep at every scale. Scale only changes the break-line size.
-   2. **The old SBEAM draws size = DIMSCALE divided by 20.** At DIMSCALE 100 that is 5 times (1490 mm for the same beam). At DIMSCALE 20 it is normal. That is your 100 / 20 sentence, and it matches SBEAM's 1490.
-   3. **LTSCALE is not the cause.** It only changes how long the dashes are. It looks linked because your office pairs are always 20 with 200 and 100 with 1000.
-4. **The warning you asked for (never stops the drawing).**
+**THE PICTURE:** open `C:\CE_PLAN\areas\CEMEMBER_WINDOW_MOCK_29OCT.html` in any browser. It is labelled MOCK-UP. Top left is the window (1280 x 680 px). Top right are small numbered notes about the mock-up. Bottom is "How big the beam draws (decided)": the same 310UB32.0 at 1:20, 1:50 and 1:100, and a strip showing the beam printed the same size on an A1 sheet at every scale.
+
+1. **What the window looks like.** One window, three columns, as you approved.
+   1. **Left:** 1 Member (12 one-click buttons), 2 Size (a Find box and the list), then a box of figures (depth, width, web, flange, mass, Ix, Iy, Zx, Zy; a dash where the list has none).
+   2. **Middle:** a live picture of the member with points 1 and 2 marked. It is drawn by the same code that draws it in the drawing, so what you see is what you get.
+   3. **Right:** 3 View, 4 Orientation pictures (greyed for a UB), 5 Section in front or beyond, 6 Points sit on, 7 Break lines at (Both, Start, End, None), 8 Scale 1 : number. A status line, then Reset, Cancel and Place (bottom right, the only solid gold button).
+2. **The beam-size rule (your words, items 74 and 75).** The member draws at its real size times DIMSCALE divided by 20. The 20 is a Settings value you can change.
+   1. **1:20:** real size. A 310UB32.0 draws 298 mm deep.
+   2. **1:50:** 2.5 times. It draws 745 mm deep.
+   3. **1:100:** 5 times. It draws 1490 mm deep.
+   4. **On paper:** the beam prints 14.9 mm deep on A1 at every one of those scales. That is the point of the rule: it stays readable.
+   5. **SBEAM is unchanged.** It already does this.
+3. **The warning (never stops the drawing).**
    1. **Wording:** "Beam size: 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) because the drawing scale is 1:100. It prints the same as at 1:20."
-   2. **Where:** amber line in the window under Scale; the command line when you Place; one line in the log.
-   3. **When:** only when the beam is drawn at other than real size. With real size (today's CEMEMBER) it never fires and the window shows one quiet grey line, "Real size - line scale OK".
-   4. **Separate warning, already built:** if LTSCALE is not 10 times the scale, CEMEMBER warns and carries on. The window will show that in the same band.
-5. **What is NOT decided (your call after you see the picture).**
-   1. **Option A real size, or Option B about 5 times at 1:100.** I recommend A (true dimensions; a dimension or clash check reads right) with the beam printing small at 1:100 (3.0 mm on an A1 sheet). Option B prints 14.9 mm at every scale but the drawing no longer holds the true size. The picture now has a strip showing both about life size as printed (a 10 m beam at 1:100 is 100 mm long; A is 3.0 mm deep, B 14.9 mm; approximate on a screen). Nothing changes until you answer.
-   2. **Should the same warning go on the old SBEAM now?** SBEAM draws 5 times at 1:100 today and says nothing. It is a one-line addition and changes no size. I recommend yes, as a small separate piece, because it protects drafters this week. It touches an old command, so I will not do it without your yes.
-6. **What I need from you.**
-   1. Look at the picture and tell me what to change in the layout.
-   2. Answer A or B (or "show me more").
-   3. Yes or no to the warning on SBEAM.
-   4. Nothing else. Any builder can build this (your 29 Oct ruling); it goes after the Civil freeze work.
+   2. **Where:** an amber line in the window under Scale (short form, with the factor), the command line when you Place, and one line in the log.
+   3. **When:** only when the factor is not 1. At 1:20 the window shows one quiet grey line, "Real size - line scale OK".
+   4. **Separate warning, already built:** if LTSCALE is not 10 times the scale, CEMEMBER warns and carries on.
+4. **What Place does.** The window hides. You pick point 1 then point 2 (a section: one pick). Escape stops. Press Enter or Space afterwards and the window comes back with your last choices. Reset clears them.
+5. **Still to confirm with you (two readings).**
+   1. **"dimscale = 120"** in your answer is read as **20** (so 1:20 draws real size).
+   2. **Other scales follow the same rule** (1:50 gives 2.5 times). Your reply "yes your readings are correct" (item 75) already confirms both; the picture is shown so you can see it before it ships.
+6. **How it will be accepted.** A window is accepted only after a Codex look at the real window in AutoCAD (screenshots kept), never by a test alone. You may still change the button words after you see the real window.
 7. **Mistakes of my own and what I did not check.**
-   1. The mock-up is a drawing, not the window. It has not been seen in AutoCAD and no code exists.
-   2. The first version of the picture overflowed its box and was drawn 1880 px wide while this plan said about 1100 x 640; Option A also lacked the inside lines Option B had, and the window carried the picture's own notes. All fixed in the 29 Oct revision after the design review: the window is drawn at 1280 x 680, and the picture fits 1920 x 1032 with no scrolling (Edge headless screenshot, 29 Oct).
-   3. Your memory notes say **no blue**: gold, black, white and grey (9 Oct ruling), so the picture is gold on dark with no blue. I did not use the old deep-blue idea.
-   4. The 5-times claim: I confirmed it for SBEAM from the code, not by drawing one in AutoCAD.
+   1. The picture is a drawing, not the window. No code exists and nothing has been seen in AutoCAD.
+   2. My first picture asked you to choose A or B after you had already ruled B. This revision replaces it with the rule. I also had to change the window's status line in the picture to amber, because at 1:100 the rule always gives a warning.
+   3. Gold on dark, no blue (9 Oct ruling).
+   4. The 5-times behaviour of SBEAM is from reading the code, not from drawing one in AutoCAD. The new rule's numbers (745 mm, 1490 mm) are arithmetic, not drawn.
+   5. The A1 strip is approximate on a screen.
 
 ---
 
@@ -80,12 +81,22 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 1. **`structural.cememberWindow`** = `CeMemberUserSettings.UseWindow`, **default ON**. OFF returns exactly today's typed questions. Documented "Default: on.", pinned through both start-up reads, shown on the Settings page. (Read at AutoCAD start, as all settings guards are.)
 2. **`structural.cememberSizeWarning`** = `SizeWarning`, **default ON**: print the beam-size warning (section 6). OFF prints nothing new.
-3. **Every value from Settings or the section list:** default scale (existing `DefaultScale`), break sizes, layer names (existing), the reference scale for the size rule (new `SizeReferenceScale`, default 20, used only by the warning arithmetic and by SBEAM's rule; nothing is hard-coded in the window).
-4. **Not changed:** the beam size rule (real size in CEMEMBER, DIMSCALE / 20 in SBEAM). Tim's ruling 29 Oct: no change until he answers.
+3. **Every value from Settings or the section list:** default scale (existing `DefaultScale`), break sizes, layer names (existing), the reference scale for the size rule (new `ReferenceDimscale`, default 20, used by the size factor and the warning; nothing is hard-coded in the window).
+4. **The beam-size rule is now a setting (ANSWERED, items 74 and 75):** `structural.cememberReferenceDimscale` = `CeMemberUserSettings.ReferenceDimscale`, **default 20**, shown on the Settings page, pinned through both start-up reads. Size factor = scale / this value. It replaces the planned `SizeReferenceScale` name. Nothing is hard-coded.
+5. **Beam-size switch:** `structural.cememberSizeFollowsDimscale` = `SizeFollowsDimscale`, **default ON** (a switch that guards new behaviour ships ON). OFF returns exactly today's real-size drawing at every scale (factor 1).
+6. **Not changed:** SBEAM (it keeps its own DIMSCALE / 20 rule and sizes). Its warning line is still the separate optional slice 0.
 
 ### 6. B-037: the scale warning
 
-**What the code does today (read, not run).**
+**BEAM-SIZE QUESTION: ANSWERED (29 Oct, TIM_ANSWERS items 74 and 75).** The Option A / Option B text that stood here is superseded. The rule:
+
+1. **Size factor = DIMSCALE / reference scale**, reference scale 20 from Settings (`structural.cememberReferenceDimscale`, default 20). Every dimension of the member (depth, width, web, flange) is multiplied by the factor; break lines keep their own paper-size rule.
+2. **Worked for 310UB32.0 (298 deep, 149 wide):** 1:20 = 1 x, 298 mm; 1:50 = 2.5 x, 745 mm; 1:100 = 5 x, 1490 mm. On A1 the beam is 14.9 mm deep at all three (the same printed size is the point of the rule).
+3. **SBEAM is unchanged.** CEMEMBER now follows the same rule SBEAM already has.
+4. **Tim's words:** "when dimscale = 100 ltscale = 1000, member gets drawn at 5 times its actual size, when dimscale = 120 ltscale = 200, member gets drawn at actual scale, this should be the rule with dim/ltscale". Item 75: "yes your readings are correct" (120 read as 20; other scales follow the same rule).
+5. **Consequences for the build:** the preview and Place share one factor (one code path, rule 1); the typed route gets it too. The warning (below) fires whenever the factor is not 1.
+
+**What the code does today (read, not run; this is the state BEFORE the ruling is built).**
 
 1. **CEMEMBER:** scale = DIMSCALE (`CeMemberScale.Resolve`), used only for break-line size (`CeBreakLine`: 1.5 mm overshoot and 2 mm kink on paper times scale). The member is drawn at its list size at every scale. LTSCALE is only compared with 10 x DIMSCALE.
 2. **SBEAM:** `SbeamPlacementPlanner.cs:23` and `:87`: `scale = effectiveDimScale / BaseDimScale` with `BaseDimScale = 20.0`; `effectiveDimScale` is the drawing's DIMSCALE (Auto) or 20 or 100 if the old window's 1:20 / 1:100 buttons are chosen (`SteelSectionPickerDialog.ComputeEffectiveDimscale`, `:689-696`). So SBEAM multiplies every dimension by DIMSCALE / 20.
@@ -99,7 +110,7 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 **When it fires.**
 
-1. **Size warning:** when the size multiplier is not 1, where multiplier = (scale the size rule uses) / `SizeReferenceScale`. Today CEMEMBER's multiplier is always 1, so it never fires on CEMEMBER; it fires on SBEAM at any DIMSCALE other than 20; it would fire on CEMEMBER at any scale other than 20 if Tim chooses Option B.
+1. **Size warning:** when the size multiplier is not 1, where multiplier = DIMSCALE (the window's typed scale) / `ReferenceDimscale` (Settings, default 20). It fires on CEMEMBER at every scale other than 20 (the rule is decided). Today's CEMEMBER (before this is built) is always 1, so it never fires; SBEAM would fire at any DIMSCALE other than 20 if slice 0 is approved.
 2. **LTSCALE warning (card section 7, 19 Oct "yes as per recommended"):** when LTSCALE is not 10 x the scale. Already built for elevations; add the same check for sections (review Part A item 10: the Beyond section is dashed, so a wrong LTSCALE hides the dashes).
 3. **Never blocks (R-27); warn and carry on; one log line each.**
 
@@ -110,7 +121,7 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 3. **Where it prints** (moved here from the picture's warning panel, 29 Oct, because Tim does not read big documents):
    1. **Window:** the status line under Scale turns amber, with the short text "Beam drawn 5 x real size (1490 mm deep, real 298 mm) at 1:100." (bold numbers; it updates as the typed scale changes). Its height is reserved so nothing moves.
    2. **Command line:** the full sentence above, once per run at the first pick ("CEMEMBER: ..."). **Log:** "CEMEMBER size: ..." beside the existing "CEMEMBER scale:" line.
-   3. **It never stops the beam being drawn.** With Option A the status line stays one quiet grey line and never turns amber.
+   3. **It never stops the beam being drawn.** At factor 1 (scale 20) the status line stays one quiet grey line and does not turn amber.
    4. **The LTSCALE warning is separate:** if LTSCALE is not 10 x the scale (for example 100 at 1:100), dashed lines may look wrong, and the same status line turns amber and says so.
 4. **SBEAM (recommended, needs Tim's yes):** the same sentence on the command line when SBEAM is placed, no size change, switch `structural.sbeamSizeWarning` ON. Without that yes, B-037 covers CEMEMBER only.
 
@@ -118,7 +129,7 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 1. **Add DesignCore:** `CeMemberChoices.cs`, `CeMemberWindowModel.cs`, `CeMemberSizeNote.cs` (the size-warning arithmetic and wording; pure).
 2. **Add Structural:** `UI/Dialogs/CeMemberWindow.xaml`, `CeMemberWindow.xaml.cs`, `CeMemberWindow.Preview.cs` (painter), `CeMemberOrientationPicture.cs` (small pictures from `CeMemberSection.Plan`).
-3. **Change:** `Commands/CeMemberCommands.cs` (split `Run()` into get-choices and pick-and-draw; window when the switch is ON); `Models/UserSettings.cs` (`UseWindow`, `SizeWarning`, `SizeReferenceScale` in `CeMemberUserSettings`); the Settings dialog (three rows); `command-registry.json` (CEMEMBER notes now wrong: "Elevations only", unhide only when Tim accepts); `REGRESSION_LOG.md`.
+3. **Change:** `Commands/CeMemberCommands.cs` (split `Run()` into get-choices and pick-and-draw; window when the switch is ON); `Models/UserSettings.cs` (`UseWindow`, `SizeWarning`, `SizeFollowsDimscale`, `ReferenceDimscale` in `CeMemberUserSettings`); the Settings dialog (four rows); `command-registry.json` (CEMEMBER notes now wrong: "Elevations only", unhide only when Tim accepts); `REGRESSION_LOG.md`.
 4. **Not changed:** `CeMemberElevation.cs`, `CeMemberSectionWriter.cs`, `CeMemberLineWriter.cs`, the section list, SBEAM sizes, `CE_SHARED`.
 
 ### 8. Tests
@@ -132,10 +143,11 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 1. **S31_cm_window_ub_side (robot, with switch-off control S31off):** type `CEMEMBER`; with `structural.cememberWindow` OFF (set before launch) the command line asks `View [SIde/Top/SEction/Reset]`; with it ON a window opens (window title "CEMEMBER - draw a steel member"). Types in the window: UB, 310UB32.0, Side elevation, Centreline, Both, scale 100, Place; then `0,0` and `3000,0`, Esc. Checks: 6 new entities, 25CONT lines at Y = 149 and -149, 18CONT at Y = 141 and -141 (the E1 values), and the same entity list as the typed twin. Control: switch OFF gives the typed questions and the same 6 entities.
 2. **S32_cm_window_enter_repeat:** place one member, Esc, press Enter at Command: window reopens with 310UB32.0, Side, Centreline, Both, 100 preset. Reset clears them.
-3. **S33_cm_size_warning:** `DIMSCALE 100`, `LTSCALE 1000`: status line is the quiet grey "Real size - line scale OK", no extra command-line line. `LTSCALE 100`: amber LTSCALE band and the line "CEMEMBER: The line scale (LTSCALE 100) is not 10 x ..." with the member still drawn. Switch-off control (`cememberSizeWarning` OFF): the new size line is absent. (Option B cases only after Tim answers.)
+3. **S33_cm_size_warning:** `DIMSCALE 20`, `LTSCALE 200`: status line is the quiet grey "Real size - line scale OK", no size line on the command line; the member is 298 mm deep (25CONT at Y = 149 and -149). `DIMSCALE 100`, `LTSCALE 1000`: amber size band, the line "CEMEMBER: Beam size: 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) ...", and 25CONT at Y = 745 and -745. `DIMSCALE 50`: 2.5 x, Y = 372.5. `LTSCALE 100` at 1:100: amber LTSCALE band as well, member still drawn. Switch-off controls: `cememberSizeWarning` OFF removes the size line; `cememberSizeFollowsDimscale` OFF draws 298 mm (Y = 149) at DIMSCALE 100.
 4. **S34_cm_window_cancel:** Cancel and Esc: "CEMEMBER cancelled. Nothing changed.", zero new entities, U has nothing to undo.
-5. **C35_cm_window_codex_look (Codex, real AutoCAD, screenshots):** open the window on 1920 x 1032 and on a small laptop screen; check no scrolling layout, gold on dark with no blue, orientation pictures change with PFC, ZC, EA, preview matches the drawn member, band positions fixed, Place in the bottom-right corner.
-6. **Not provable by a machine:** whether it looks right to a drafter (Codex look or Tim), and the A or B answer (Tim's engineering call).
+5. **C35_cm_window_codex_look (Codex, real AutoCAD, screenshots):** open the window on 1920 x 1032 and on a small laptop screen; check no scrolling layout, gold on dark with no blue, orientation pictures change with PFC, ZC, EA, preview matches the drawn member, band positions fixed, Place in the bottom-right corner. **CE 09 acceptance points (added 29 Oct):** (a) the beam in the live preview is drawn up to about 85 percent of the preview width (not a small sliver in the middle); (b) the properties labels (Depth, Width, Mass, and so on) are at least 11 to 12 px, readable without leaning in.
+6. **Acceptance rule (RULES 5.7 and 4.5):** a window is accepted only by a Codex look at the real window in AutoCAD, with screenshots; a unit test or robot case never accepts a window. It is then written "Codex-accepted", never plain accepted. **Tim may still change the button words after he sees the real window** (his word, 29 Oct item 100: show him the real window, not only the picture).
+7. **Not provable by a machine:** whether it looks right to a drafter (Codex look or Tim). The beam-size rule is decided (items 74 and 75); the factor arithmetic is machine-provable.
 
 ### 10. Slices, estimate and order
 
@@ -145,14 +157,14 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 4. **Slice 3: Place wiring, repeat, warning band (B-036c, B-037).** Pick loop fed from the window, Enter-to-repeat pre-set, size and LTSCALE band, section LTSCALE check, log lines, regression log, the robot cases above. About 2 days.
 5. **Proof and fixes:** robot runs, Codex look, one fix round. About 2 days.
 6. **Total:** about 10 working days of building (0.5 more with slice 0), one Opus review per slice. Each slice is a DRAFT PR behind its switch, ON by default.
-7. **Order:** after the Civil freeze work (final go Fri 6 Nov, release Mon 9 Nov per the session map); first the picture is shown to Tim and A or B answered. The window slices do not depend on A or B (the status band shows "real size" until he answers), so slices 1 and 2 can start straight after the freeze whatever he says. If Tim wants the section list correction in first (review question 4), that goes ahead of slice 3 so the window shows decimal names such as 310UB32.0 from the start.
+7. **Order:** after the Civil freeze work (final go Fri 6 Nov, release Mon 9 Nov per the session map). The window and warning are approved (item 100) and the size rule is decided (items 74, 75), so slices 1 to 3 can start straight after the freeze. The size factor (DIMSCALE / `ReferenceDimscale`) goes into slice 1 with the shared planner call so preview and Place agree from the start. If Tim wants the section list correction in first (review question 4), that goes ahead of slice 3 so the window shows decimal names such as 310UB32.0 from the start.
 
 ### 11. Open items and what I did not do
 
-1. **Open for Tim:** A or B; SBEAM warning yes or no; the four review questions of 23 Oct (Z purlin names, unequal angle long leg flat, C purlin flanges-up top view, corrected section list), because the orientation pictures show them.
+1. **Open for Tim:** (A or B is ANSWERED, items 74 and 75; window and warning approved, item 100); SBEAM warning yes or no (slice 0); the four review questions of 23 Oct (Z purlin names, unequal angle long leg flat, C purlin flanges-up top view, corrected section list), because the orientation pictures show them.
 2. **Not done:** no code, no build, no test, no AutoCAD, no Codex; the live train after `rel-20261026s` not read; SBEAM's 5x not driven in AutoCAD; properties figures in the picture are from the installed list's 310UB32 row (Iy 4.42, Zy 59.3 are that list's figures, not checked against the supplier).
 3. **Records not touched:** no decision file, BUG_CARPARK.md, DESK_LOG.md or register edited. The "Codex owns the window" wording in the 23 Oct review is for its owning session to remove (decision 67).
 
 ## Summary (under 100 words)
 
-Plan and picture written for CEMEMBER's window (B-036) and beam-size warning (B-037). Code read: CEMEMBER always draws real size; old SBEAM draws DIMSCALE/20 (5 times at 1:100, normal at 1:20); LTSCALE is not the cause. Warning never blocks, shown in the window, command line and log. Switches `structural.cememberWindow` and size-warning, both ON. Slices ~10 days after the Civil freeze. Nothing built or run. Files: areas\release-v3-colleagues-CEMEMBER_WINDOW_PLAN_29OCT.md and areas\CEMEMBER_WINDOW_MOCK_29OCT.html. Tim must choose A or B.
+Plan and picture written for CEMEMBER's window (B-036) and beam-size warning (B-037). Code read: CEMEMBER always draws real size; old SBEAM draws DIMSCALE/20 (5 times at 1:100, normal at 1:20); LTSCALE is not the cause. Warning never blocks, shown in the window, command line and log. Switches `structural.cememberWindow` and size-warning, both ON. Slices ~10 days after the Civil freeze. Nothing built or run. Files: areas\release-v3-colleagues-CEMEMBER_WINDOW_PLAN_29OCT.md and areas\CEMEMBER_WINDOW_MOCK_29OCT.html. Corrected 29 Oct to Tim's ruling: beam draws real size x DIMSCALE / 20 (reference scale on Settings, SBEAM unchanged); picture now shows the rule at 1:20, 1:50 and 1:100.
