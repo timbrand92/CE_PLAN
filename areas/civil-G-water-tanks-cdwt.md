@@ -1,5 +1,7 @@
 # Area G — Water tanks, reuse, underground/underdeck tanks and complete standard details (CDWT)
 
+> *Note 29 Oct 2026 (Tim: "lets remove the codex or claude ownship rubbish, add cemember to build list"): the lines below that say who owned a branch or window ("Codex owns codex/ui-cdwt", "ownership remains CDWT only") record the situation at that time, not a rule. Any builder can build any item, windows included; acceptance rules and who deploys are unchanged.*
+
 **Product:** CE_ACAD (the AutoCAD plugin). **Plan:** `C:\CE_PLAN\MASTER_PLAN.md`. **This file is the one place for this area's items, status, bugs, parked ideas, test steps and regression list.** Update it in the same reply as the work.
 
 ## 1. What this area is

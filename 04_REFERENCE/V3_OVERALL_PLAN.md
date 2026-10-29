@@ -433,7 +433,7 @@ M1: independent Manager/release work; required before S3.
 | S1–S3 | Structural adoption, colleague workflows, pilot | Existing Structural card gates and current work orders; no completion inferred from source on another branch. |
 | M1 | Manager/version truth, safe updates/rollback | Independent of Civil; required for S3. |
 
-**Current recorded ownership:** Claude owns behaviour/shared spine/deployment; Codex owns windows.
+**Ownership (superseded 29 Oct 2026; was: Claude owns behaviour/shared spine/deployment, Codex owns windows):** Any builder can build any item, windows included; acceptance rules and who deploys are unchanged (Tim, 29 Oct 2026: "lets remove the codex or claude ownship rubbish, add cemember to build list"; decisions/2026-10-29_TIM_ANSWERS.md item 67).
 This supersedes the August briefs' earlier Claude-UI/Codex-intelligence assignment. Work orders still require
 bounded file ownership, reviewed interfaces and the single authorised deployment lane.
 
@@ -526,7 +526,7 @@ For any engineering value, follow its exact sourced/versioned authority.
 Treat current approved decisions as authoritative, the board as delivery
 status, and archived research/UI as evidence only. Preserve D1-D10,
 especially D9 (DWG geometry remains the model) and C5 before C6.
-Claude owns behaviour/spine/deploys; Codex owns windows under current work orders.
+(Superseded 29 Oct 2026; was: Claude owns behaviour/spine/deploys, Codex owns windows.) Any builder can build any item, windows included; acceptance rules and who deploys are unchanged (Tim, 29 Oct 2026: "lets remove the codex or claude ownship rubbish, add cemember to build list"; decisions/2026-10-29_TIM_ANSWERS.md item 67).
 
 Do not re-ask settled questionnaires, invent missing approvals, infer
 completion from code/test counts, or replace sound workflows merely because

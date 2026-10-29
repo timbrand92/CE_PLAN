@@ -274,6 +274,9 @@ remains behind the P0/P1 dependency gates.
 | 8 | Section/details | working RC/steel sections first; placeholders remain hidden until designed |
 | 9 | Markup/checklists/notes/time | CEMARKUP, checklist, notes and job-time workflows after safety review |
 
+**CEMEMBER (added to the build list 29 Oct 2026, post-freeze):** the member command that replaces SBEAM, with its window (live preview, properties box, orientation pictures, a typed scale, and the "drawn at N times its real size" warning). Tim: "lets remove the codex or claude ownship rubbish, add cemember to build list". Any builder can build it, window included. It is built after the pilot freeze, picture of the window first. The card is `areas/release-v3-colleagues-CEMEMBER_CARD_DRAFT_2026-10-18.md`; decisions `decisions/2026-10-18_CEMEMBER_DESIGN.md`, `decisions/2026-10-19_CEMEMBER_ANSWERS.md`; the intake record is PC-06 in `decisions/2026-10-29_TIM_PLANNING_CHANGES.md`.
+
+
 ## 9. P5 — contextual help, QA and assistant bridge
 
 Only expose tools whose workflow cards are approved. Build contextual discovery and Help Centre from the same

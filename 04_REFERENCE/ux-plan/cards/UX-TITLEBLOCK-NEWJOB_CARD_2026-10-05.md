@@ -25,7 +25,7 @@ keep theirs. Background: `04_REFERENCE\structural\JOBS_PROCESS_STUDY_2026-10-04.
 
 ## 3. Build (smallest slice)
 
-1. **Window (Codex owns windows):** remove the pre-selection; show the two choices first, the other templates under
+1. **Window (any builder; ownership split removed, Tim, 29 Oct 2026):** remove the pre-selection; show the two choices first, the other templates under
    "More templates"; Create disabled until a choice. This is the whole change.
 2. **Engine:** none needed. The engine already refuses to create without a template. Optional guard test: set-up with no
    template chosen creates nothing.

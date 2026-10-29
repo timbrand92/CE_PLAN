@@ -36,10 +36,10 @@ section 1 rules 18, 25, 26, 39 and section 2 items 6 and 7.
    tip, once". Recommended: the number of showings becomes a Settings value; default **1** (the later ruling).
 
 **Who does what (INT-073: windows stay Codex's):**
-1. **Claude (behaviour):** when things show and when they never show again, what is remembered and where, the headless/accoreconsole
+1. **Behaviour work (any builder):** when things show and when they never show again, what is remembered and where, the headless/accoreconsole
    skips, the job-folder and recent-jobs logic, the admin routing, the ribbon panel contents and the discipline switch, all Settings
    values, tests.
-2. **Codex (windows):** the look and layout of the splash, the welcome card, the practice-job entry in the Help Centre, the clip player
+2. **Window work (any builder):** the look and layout of the splash, the welcome card, the practice-job entry in the Help Centre, the clip player
    in the Help Centre, the recent-jobs drop-down list, and the Feedback window wording changes; and the AutoCAD acceptance runs.
 
 ---
@@ -146,7 +146,7 @@ section 1 rules 18, 25, 26, 39 and section 2 items 6 and 7.
    - Shown at the top of that task's Help page and from the welcome card's three pictures ("Show me").
    - Each clip records the CE version it was made on; a guard lists clips older than the window they show (so a changed window prompts a
      re-record rather than showing an out-of-date clip).
-5. **Codex owns** the recording and the player; **Claude owns** the version guard and where each clip appears.
+5. **Any builder** can build the recording and the player, the version guard and where each clip appears (ownership split removed, Tim, 29 Oct 2026: "lets remove the codex or claude ownship rubbish").
 
 ## Card 4.6 — UX-FAIL-02: "Send to admin" reaches the office admin named in Manager
 

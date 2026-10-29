@@ -140,7 +140,7 @@ How to read each item: **Decision** (Tim's words where recorded) / **Code** (doe
       `CeMemberCommands.cs:157-163`); "Reset" at the first question clears them (`:326-331`).
    2. **Missing:** the window itself, the live preview with points 1 and 2 marked, the properties box (depth, width, web,
       flange, mass, Ix, Iy, Zx, Zy), the orientation pictures, and the **typed scale** (there is no way to type a scale; it
-      is always DIMSCALE, `CeMemberCommands.cs:98-101`). Codex owns the window.
+      is always DIMSCALE, `CeMemberCommands.cs:98-101`). Any builder can build the window (Tim, 29 Oct 2026: "lets remove the codex or claude ownship rubbish, add cemember to build list").
    3. **Contradicted:** nothing.
 
 10. **Scale: default 100, read from DIMSCALE; LTSCALE is 10 x DIMSCALE, only a check; mismatch warns, carries on, and

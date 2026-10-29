@@ -320,6 +320,6 @@ Provide one callable highlight/zoom service that strongly highlights target CE o
 
 # Implementation boundary
 
-Do not redesign the UI in this task. Claude owns editor presentation/workflow according to `CE_CIVIL_EDITOR_UI_UX_BRIEF.md`.
+Do not redesign the UI in this task. Editor presentation/workflow follows (any builder can build it; Tim, 29 Oct 2026: "lets remove the codex or claude ownship rubbish") `CE_CIVIL_EDITOR_UI_UX_BRIEF.md`.
 
 Do not let UI convenience weaken topology rules. Where a UI needs a service, expose a clean service/contract and let the editor consume it.

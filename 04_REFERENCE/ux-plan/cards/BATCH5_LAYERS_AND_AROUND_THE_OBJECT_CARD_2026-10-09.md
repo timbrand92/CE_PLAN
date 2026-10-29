@@ -39,11 +39,11 @@ menu); `BATCH2_CHECKING_THE_NETWORK_CARD_2026-10-09.md` (the Checks palette and 
 `UX-PIPE-01-03-07_CARD_2026-09-29.md`; `S4_FOUNDATIONS_WALLS_CARD_2026-09-30.md` (footing depths come from there).
 
 **Who does what (INT-073: windows stay Codex's):**
-1. **Claude (behaviour):** the one layer-maker rule (made only if missing, never recoloured, never made current); the wrong-layer and
+1. **Behaviour work (any builder):** the one layer-maker rule (made only if missing, never recoloured, never made current); the wrong-layer and
    wrong-colour findings and their safe fixes; ByLayer on every drawn object; the New / Existing / To be removed status and its layers and
    "TO BE REMOVED" text; the right-click items and what each does; the Ctrl+1 values behaviour (and the AutoCAD 2027 native module part);
    the pipe-near-footing and downpipe-near-post checks; Settings values; tests.
-2. **Codex (windows):** the Status field in Edit Pit and Edit Pipe; the CDMANAGER Layer tab additions (layer names next to colours); the
+2. **Window work (any builder):** the Status field in Edit Pit and Edit Pipe; the CDMANAGER Layer tab additions (layer names next to colours); the
    Civil Properties palette's editable values (its look, keys, the rows); the Checks palette rows' look; any Settings page rows' look; and
    every AutoCAD acceptance run (right-click menus and Ctrl+1 need the mouse: the AutoCAD driver cannot right-click, DRIVER_RUN20 item 81).
 
@@ -99,7 +99,7 @@ menu); `BATCH2_CHECKING_THE_NETWORK_CARD_2026-10-09.md` (the Checks palette and 
      `Services/LinkService.Registration.cs:2061-2063`). So the drafter meets the problem only as a refusal.
 3. **Classification: MISSING** (the finding) / **KEEP** (Edit Pipe's refusal until the fix exists; then it points to the Checks row).
 4. **Proposed:**
-   - Two new kinds of Checks row (the Checks palette is Batch 2's; Codex owns its look):
+   - Two new kinds of Checks row (the Checks palette is Batch 2's; its look is window work, any builder):
      a) **"On the wrong layer":** a CE pit, pipe, CE label, IL text or cover text whose layer is not its office layer. Example row: "P3-P4
         label is on layer 0; office layer 25TEXT. Fix: move it back." **Pre-ticked.**
      b) **"Layer differs from the office standard":** an office layer whose colour or linetype differs (only when "CE may recolour
@@ -205,7 +205,7 @@ menu); `BATCH2_CHECKING_THE_NETWORK_CARD_2026-10-09.md` (the Checks palette and 
 4. **Proposed (question 6):**
    - **Step 1, all AutoCAD versions:** the Civil Properties palette gets editable values for the key fields (pipe: size, material, grade or
      the two ILs; pit: number, size, cover level, type). Typing a value runs the same rule as the Edit window, shows the preview in the
-     drawing, and Enter applies it as **one U**; Esc puts the value back. Codex builds the palette rows; Claude the rules.
+     drawing, and Enter applies it as **one U**; Esc puts the value back. any builder can build the palette rows and the rules.
    - **Step 2, AutoCAD 2027 first:** a "CE" section in AutoCAD's own Ctrl+1 for CE pipes (the C7-OPM native work), same values, same
      rules, one U; 2022 to 2024 keep step 1 (UX-MIX: greyed with "needs AutoCAD 2027" where shown).
    - Ctrl+1 never lets a typed value bypass CE's checks; a value CE cannot accept is refused in one plain line.

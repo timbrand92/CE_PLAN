@@ -92,3 +92,14 @@ Tim: "is there a way through the claude api that we can have machine learning be
 
 Done (planning only): new area AI, `areas\claude-api-and-learning.md`, added as item 22 in the area list of `MASTER_PLAN.md`. Eight slices AI-0 to AI-7 (governance and switches first, learning pool and pre-submission checklist with no API, then the RFI reader, then the learning loop, then markup reader, reviewer and habit learning). Six questions for Tim are listed in section 6 of that file and are NOT decided.
 Interpretation (guess): "fully plan" = the written plan with the build order, safety rules and questions; no building, and every slice still goes through the command and workflow review gate with Tim's approval first. Nothing in it overrides Tim's 25 Sep rules (Claude only, one page or letter at a time, blanked) or DATA-01.
+
+## PC-06 — Remove the Claude / Codex ownership labels; CEMEMBER on the build list (Tim ruling, relayed by CE 00)
+
+Tim (decisions/2026-10-29_TIM_ANSWERS.md item 67): "lets remove the codex or claude ownship rubbish, add cemember to build list".
+
+Verified by the intake chat: Tim's words are in item 67 as quoted. Done 29 Oct 2026 (wording only, history kept and marked superseded, nothing deleted):
+1. The wording "Claude owns behaviour/spine/deploys; Codex owns windows" is replaced by "Any builder can build any item, windows included; acceptance rules and who deploys are unchanged" in `04_REFERENCE\V3_OVERALL_PLAN.md` (the two lines, old text kept in brackets as superseded), `04_REFERENCE\CE_CIVIL_DRAWING_INTELLIGENCE_BRIEF.md`, the three ux-plan cards (BATCH4, BATCH5, UX-TITLEBLOCK-NEWJOB: the "Claude (behaviour)" and "Codex (windows)" headings and the per-line "Codex owns" lines) and `areas\REVIEW_CEMEMBER_AND_MANAGER_2026-10-23.md` ("Codex owns the window").
+2. `areas\civil-G-water-tanks-cdwt.md` keeps its history (who held a branch then); a dated note at the top says those lines are not a rule.
+3. CEMEMBER with its window is on the build list as a post-freeze item (`IMPLEMENTATION_ROADMAP.md`, after the Structural order). Picture of the window first. Not started; no code.
+Not touched: the plugin repo's AGENTS.md (CE 01 does that), who tests or accepts (decision 62), the one-session-per-file rule, who deploys.
+Interpretation (guess, same as item 67): the ownership labels stop deciding who builds; acceptance and deployment rules are unchanged. Other old copies of the wording elsewhere in CE_PLAN (for example in archive folders, history records and older area logs) were left as history and not searched exhaustively.
