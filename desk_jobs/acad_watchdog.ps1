@@ -15,6 +15,18 @@ function AllowedReason {
   }
   return $null
 }
+function CloseStaleCodexStarts {
+  # Rule 15 follow-up (CE 00 06:27): a Codex try or look stopped by a pid leaves a START with no END, and the next look then refuses to run (gate 2.4). If no Codex look process is running, close any open START in the last 60 lines with a marked END line.
+  $q = 'C:\Lisp Files\_CODEX_RUNNER\queue.log'
+  if (-not (Test-Path $q)) { return }
+  $running = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'launch_codex_retry|queue4\.sh|codex\.js exec|codex-win32-x64.*exec' -and $_.Name -match 'pwsh|node|codex|bash' }).Count -gt 0
+  if ($running) { return }
+  $tail = @(Get-Content $q -Tail 60); $open = [ordered]@{}
+  foreach ($l in $tail) { if ($l -match '^(\d\d:\d\d) START (\S+)') { $open[$Matches[2]] = $l } elseif ($l -match '^(\d\d:\d\d) END (\S+)') { $open.Remove($Matches[2]) } }
+  foreach ($k in @($open.Keys)) { if ($k -like 'cx_*') { continue }
+    $line = (Get-Date -Format 'HH:mm') + " END $k exit 124 usage 0.0% -> 0.0% (CLOSED BY acad_watchdog: a START with no END and no Codex look running; the look was stopped by a pid or died)"
+    if ($DryRun) { Log "WOULD close stale START of $k" } else { [IO.File]::AppendAllText($q, $line + "`n"); Log "closed stale Codex START of $k in queue.log" } }
+}
 function PendingWork {
   $w = @()
   if (Test-Path "$d\ROBOT_QUEUE.txt") { foreach ($line in Get-Content "$d\ROBOT_QUEUE.txt") { $l = $line.Trim(); if ($l -eq '' -or $l.StartsWith('#')) { continue }; if (-not (Test-Path "$l.done")) { $w += "robot:$([IO.Path]::GetFileName($l))" } } }
@@ -25,6 +37,7 @@ function PendingWork {
 $idleSince = $null; $lastBusyLog = Get-Date; $idleLogged = $false; $busyMin = 0; $idleMin = 0
 Log 'watchdog started'
 while ($true) {
+  CloseStaleCodexStarts
   $busy = @(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0
   if ($busy) {
     if ($idleSince) { $mins = [math]::Round(((Get-Date) - $idleSince).TotalMinutes, 1); Log ("IDLE ENDED after $mins min (started " + $idleSince.ToString('HH:mm') + ")"); $idleSince = $null; $idleLogged = $false; Remove-Item "$d\AUTOCAD_IDLE.txt" -Force -ErrorAction SilentlyContinue }
