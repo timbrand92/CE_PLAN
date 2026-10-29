@@ -3,11 +3,11 @@
 # Starts through WMI (Win32_Process Create) so a lane does not die with the window that started it. Never touches AutoCAD, Tim's files or any setting.
 #   disk_guard.ps1          always (unless STOP_DISKGUARD.flag)
 #   chain_robot_standing.ps1 always (unless STOP_CHAIN.flag). It reads HOLD_ROBOT.flag itself and starts no AutoCAD while that flag exists.
-#   codex_supervisor.ps1    only OUTSIDE Tim's AutoCAD hours (Mon-Fri 8:30-14:00 and 15:00-17:30), or when CODEX_AUTOSTART.flag exists (unless STOP_SUPERVISOR.flag or STOP_CODEX.flag).
+#   codex_supervisor.ps1    NEVER while any acad.exe is running or HOLD_ROBOT.flag exists (fixed 29 Oct 14:50); and only OUTSIDE Tim's AutoCAD hours (Mon-Fri 8:30-14:00 and 15:00-17:30), or when CODEX_AUTOSTART.flag exists (unless STOP_SUPERVISOR.flag or STOP_CODEX.flag).
 #                           The supervisor itself starts and watches the Codex conveyor, the AutoCAD janitor and the disk guard, so none of those is started here.
 # The AutoCAD janitor can close an AutoCAD that has no drawing open and no lock for 15 minutes, which is why it is left to the supervisor and never started in Tim's hours.
 # Usage: pwsh -NoProfile -File C:\CE_PLAN\desk_jobs\start_lanes.ps1 [-DryRun] [-PretendNothingRunning]   (DryRun lists what it would start and starts nothing)
-param([switch]$DryRun, [switch]$PretendNothingRunning)
+param([switch]$DryRun, [switch]$PretendNothingRunning, [int]$AssumeAcad = -1, [int]$AssumeHold = -1, [int]$AssumeHours = -1)   # the three Assume* switches (1 or 0) only change the DECISION in a -DryRun, for tests
 $d = 'C:\CE_PLAN\desk_jobs'
 function Log($t) { $line = "{0} {1}" -f (Get-Date -Format 'ddd dd HH:mm'), $t; Add-Content "$d\start_lanes.log" $line; Write-Output $line }
 function IsRunning([string]$name) {
@@ -29,8 +29,13 @@ function StartLane([string]$name, [string[]]$stopFlags, [bool]$allowed, [string]
   if ($r.ReturnValue -eq 0) { Log "${name}: started (pid $($r.ProcessId))" } else { Log "${name}: START FAILED (WMI return $($r.ReturnValue))" }
 }
 $hours = InTimsAutoCadHours
-$codexOk = (-not $hours) -or (Test-Path "$d\CODEX_AUTOSTART.flag")
+$acadRunning = @(Get-Process acad -ErrorAction SilentlyContinue).Count -gt 0
+$holdOn = Test-Path "$d\HOLD_ROBOT.flag"
+if ($DryRun) { if ($AssumeAcad -ge 0) { $acadRunning = [bool]$AssumeAcad }; if ($AssumeHold -ge 0) { $holdOn = [bool]$AssumeHold }; if ($AssumeHours -ge 0) { $hours = [bool]$AssumeHours } }
+# 29 Oct 14:50 (CE 00 found it started the Codex supervisor at 14:47 while Tim's AutoCAD was open for hand checks, inside the 14:00 to 15:00 lunch window): the Codex lanes (the supervisor starts the conveyor and the janitor) are NEVER started while any acad.exe is running or HOLD_ROBOT.flag exists, whatever the hour or CODEX_AUTOSTART.flag says.
+$codexOk = (-not $acadRunning) -and (-not $holdOn) -and ((-not $hours) -or (Test-Path "$d\CODEX_AUTOSTART.flag"))
+$codexWhy = if ($acadRunning) { 'an AutoCAD (acad.exe) is running' } elseif ($holdOn) { 'HOLD_ROBOT.flag exists' } else { "inside Tim's AutoCAD hours and no CODEX_AUTOSTART.flag" }
 if (Test-Path "$d\HOLD_ROBOT.flag") { Log 'note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job' }
 StartLane 'disk_guard' @('STOP_DISKGUARD.flag') $true ''
 StartLane 'chain_robot_standing' @('STOP_CHAIN.flag') $true ''
-StartLane 'codex_supervisor' @('STOP_SUPERVISOR.flag', 'STOP_CODEX.flag') $codexOk "inside Tim's AutoCAD hours and no CODEX_AUTOSTART.flag"
+StartLane 'codex_supervisor' @('STOP_SUPERVISOR.flag', 'STOP_CODEX.flag') $codexOk $codexWhy

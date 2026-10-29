@@ -18,3 +18,31 @@ Thu 29 10:28 note: HOLD_ROBOT.flag exists, the robot lane will start but run no 
 Thu 29 10:28 disk_guard: already running, nothing to do
 Thu 29 10:28 chain_robot_standing: already running, nothing to do
 Thu 29 10:28 codex_supervisor: not started (inside Tim's AutoCAD hours and no CODEX_AUTOSTART.flag)
+Thu 29 14:47 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:47 disk_guard: already running, nothing to do
+Thu 29 14:47 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:47 codex_supervisor: started (pid 67836)
+Thu 29 14:48 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:48 disk_guard: already running, nothing to do
+Thu 29 14:48 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:48 codex_supervisor: not started (an AutoCAD (acad.exe) is running)
+Thu 29 14:48 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:48 disk_guard: already running, nothing to do
+Thu 29 14:48 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:48 codex_supervisor: not started (an AutoCAD (acad.exe) is running)
+Thu 29 14:48 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:48 disk_guard: WOULD START (dry run)
+Thu 29 14:48 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:48 codex_supervisor: not started (HOLD_ROBOT.flag exists)
+Thu 29 14:48 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:48 disk_guard: WOULD START (dry run)
+Thu 29 14:48 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:48 codex_supervisor: not started (an AutoCAD (acad.exe) is running)
+Thu 29 14:48 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:48 disk_guard: WOULD START (dry run)
+Thu 29 14:48 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:48 codex_supervisor: not started (inside Tim's AutoCAD hours and no CODEX_AUTOSTART.flag)
+Thu 29 14:48 note: HOLD_ROBOT.flag exists, the robot lane will start but run no AutoCAD job
+Thu 29 14:48 disk_guard: WOULD START (dry run)
+Thu 29 14:48 chain_robot_standing: skipped, STOP_CHAIN.flag exists
+Thu 29 14:48 codex_supervisor: WOULD START (dry run)
