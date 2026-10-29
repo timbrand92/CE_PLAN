@@ -32,3 +32,10 @@
 ## 4. What I recommend doing first
 
 T-1 (header) and T-4 (the retest list for CE 02) today, because they need no judgement and remove the most confusion. T-2 and T-3 next, each entry read first. T-5 and T-6 are Opus jobs for the desk's meters. Needs Tim's yes through CE 04 before any edit to the carpark.
+
+## 5. Progress (updated 29 Oct 2026)
+
+1. **Tim said yes:** "8. yes" (decisions/2026-10-29_TIM_ANSWERS.md item 108).
+2. **T-1 done (ccf3c8ae):** the 43 KB "Next BUG ID" line in the carpark header is now one short line; the old line is word for word in `areas/CARPARK_ID_RANGES_HISTORY.md` (checked identical). Entry count before and after: 1,196 and 1,196.
+3. **T-4 done:** `areas/CARPARK_IN_PROGRESS_RETEST_LIST.md` lists all 47 IN PROGRESS entries in four groups; no status changed; handed to CE 02.
+4. **Next:** T-2 and T-3 (read each of the 41 no-status and 5 two-status entries first), then T-5 to T-8 as desk review jobs.
