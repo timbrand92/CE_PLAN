@@ -1,6 +1,6 @@
 # New Pipe window: declutter design brief (29 Oct 2026)
 
-**Status:** DESIGN PROPOSAL. Not built, not decided, no code touched. Written for Tim to judge from the picture, then for the review gate in AGENTS.md (a card, Tim's approval, then code).
+**Status:** DESIGN COMPLETE, handed to CE 01 for build slots and B numbers (29 Oct 2026, after Tim's items 68 and 69). Not built, no code touched. Tim has not answered the four questions in section 7; build on the recommended answers as a draft.
 **Picture:** `areas\UX_NEWPIPE_DECLUTTER_MOCKUP_2026-10-29.png` (source page `UX_NEWPIPE_DECLUTTER_MOCKUP_2026-10-29.html`, same folder). Numbers in it are examples (Tim's P10 to P9, 100 UPVC, 9.2 m).
 **Idea it answers:** UX-NEWPIPE-DECLUTTER in IDEAS_INBOX.md. **Related:** BUG-1229, BUG-1230 (on hold), BUG-1233, BUG-1238, PC-02 and PC-03 in `decisions\2026-10-29_TIM_PLANNING_CHANGES.md`.
 
@@ -86,7 +86,7 @@
 3. **"Same as last pipe" in the header instead of "Use last settings" in a hidden tab?** Recommend yes.
 4. **Keep "Existing creation controls" (the older window) under While placing until the new window is accepted, then retire it?** Recommend yes; hide and redirect before removing.
 
-Until Tim answers, nothing here is a decision.
+**Status update 29 Oct 2026 (later):** Tim ruled "nothing waits for the pilot" (decisions6-10-29_TIM_ANSWERS.md items 68 and 69), so this is no longer held. Per the "builds never wait on Tim's answers" rule, it is built as a DRAFT on my recommended answers above; when Tim answers, his answer replaces the default. Nothing here is accepted until Tim or a Codex look has seen it in AutoCAD.
 
 ---
 
@@ -96,3 +96,22 @@ Until Tim answers, nothing here is a decision.
 2. **Not checked:** the real window's current size and exact look in AutoCAD (this is read from the code only); whether the mock-up's width fits the work area (proportions are indicative; the fit check decides); the older `CdDialog` layout; how the plan preview control draws its captions (BUG-1230 was read from Tim's screenshot only); what text the "Place pipe" button really carries (`WorkshopPrimaryActionText`).
 3. **For the card, later:** the exact label wording of each choice, what each tab shows on a Detention or Existing pipe, the keyboard order (Tab through the five decisions in order), and Tim's AutoCAD checklist. Test steps must say what "right" looks like (RULES 13.4).
 4. **Who owns it:** design only. A build chat takes it after Tim approves the card.
+
+---
+
+## 9. Build handover for CE 01 (design finished 29 Oct 2026)
+
+**Read this first, then sections 3 to 6.** Existing register items this touches: B-006 (BUG-1226, Recent levels, PR #1839), B-040 (BUG-1238), B-041 (BUG-1233, PR #1838 file). D06 ("Show grade in pipe text", card in areas\DAILY_TOOLS_TEST_CASES_2026-10-23.md) is the placement test for slice 2.
+
+1. **One rule for every slice: same controls, same bindings, only moved.** The window was built so that re-homing never loses a control (comment in `PipeEditWorkshopDialog.xaml`). Add one guard test: the set of binding keys on the old page plus everything in the old More… window equals the set on the new page plus the three tabs. Nothing dropped, nothing renamed in the model.
+2. **One switch, ON by default:** `pipe.declutteredLayout` in the C75 pattern ("Default: on.", pinned through `DeserializeSettings` and `DeserializeSettingsTolerant`, shown on the Settings page). OFF returns today's page with its More… button. Both New Pipe and Edit Pipe use this layout (`IsEditMode` on the same window), so both change. The older `CdDialog` fallback is not touched.
+3. **Slices, in this order** (times are my guesses, not measured):
+   1. **S1, Recent size and material one-click on the page (B-040).** Move the "Recent" size and material rows next to the boxes. B-006 already puts the Recent level buttons on the main page behind `pipe.recentInvertButtonsOnMainPage`; in the new layout they sit directly under the level boxes, so slice 1 must not move them a second way (one code path). Built after #1839 is verified. About 0.5 day.
+   2. **S2, label column and D06 placement.** "Pipe text on plan", "Show grade in pipe text", level text at the ends and extra text become the right-hand LABEL rows. On an Existing pipe the grade row is labelled "Include known grade" (as `GradeToggleLabel` does today). On Charged and Rising Main it stays in place, greyed, with a short reason (today it disappears: `ShowGradeToggle`). Same layout every open. About 0.5 day.
+   3. **S3, the one question "Which level do you know" (B-041 and PC-02).** Four choices (Upstream, Downstream, Both ends, Not set yet) driving the existing `AutoCalcSecondInvert`, `IsAutoCalcUpToDown` / `IsAutoCalcDownToUp` and the two Set ticks, with the "you typed this" / "worked out" tags and the one result line. The amber "keep my levels or follow Standard" line replaces the silent switch to Set my own in `TryApplyUpstreamDownstreamSuggestion`. Same file as #1838 (`CdViewModel.Inverts.cs`), so after #1838 is in a train. About 2 days.
+   4. **S4, replace More… with the three named tabs.** Label style, Arrow and breaks, While placing, each with its one-line summary; "Same as last pipe" in the header; flow direction, pit names and measured length in the header line; reserved line for Charged-to, required length and twin pipes. Retire `CivilMoreOptions` only after Tim accepts (hide first, per the review gate). About 2 days.
+   5. **S5, preview shows what will be drawn (BUG-1230).** Replace, never stack, the end captions; one source for label and levels; Unknown shown as "?". BUG-1230's agreed wording is in BUG_CARPARK.md. About 1.5 days. Needs a read of `CePipePreviewControl` / `CdPlanPreviewControl` first (not read for this brief).
+4. **One session per file.** Files across the slices: `PipeOnePageLayout.cs`, `CivilMoreOptions.cs`, `PipeEditWorkshopDialog.xaml` and `.xaml.cs`, `CdViewModel.Inverts.cs`, `CdViewModel.PipeType.cs` (grey, not hide), the preview controls, `UserSettings.cs` and the Settings page, `REGRESSION_LOG.md`. #1838 and #1839 own two of them today.
+5. **Proof for each slice.** A robot case per slice that reads the control by its binding key and asserts the drawn result (D06-style: label with and without "AT 1 IN", levels unchanged), each with a switch-OFF control run. **A Codex look is needed for the window** (RULES 5.7): one screenshot set for New Pipe and Edit Pipe at the real size and a small laptop scale, checking nothing scrolls, nothing moves when the kind changes, gold on dark with no blue, Place in the fixed corner. The fit check (`FitsAvailableArea`) must still pass or the window falls back as today.
+6. **Wording check:** label text drawn in the mock-up is "100 DIA. UPVC PIPE AT 1 IN 100", taken from the pattern the D06 case asserts; the mock-up's exact preview text and decimals are illustrative until S5 reads the real preview.
+7. **Not decided, builder must not invent:** the final words on each button (Tim's call after he sees the real window), what each tab shows for Detention and Existing pipes, and the keyboard order.
