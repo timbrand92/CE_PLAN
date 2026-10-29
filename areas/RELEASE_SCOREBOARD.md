@@ -35,10 +35,10 @@
 2. **Fri 30 Oct:** C-77 candidate assembled (install Friday night so Saturday's full re-test runs on it); rehearsal R1 if a login exists; Max's year known? Codex H4 to H6, G6, G5 from 17:53.
 3. **Sat 31 Oct (weekend re-test 1):** full re-test on the build installed before the start (an install mid-run voids it).
 4. **Sun 1 and Mon 2 Nov:** fix builds continue (B-016 to B-032); reviews; Tim's soak continues on his PC.
-5. **Tue 3 Nov (Cup Day):** early Max-like run (both extra add-ins moved aside) on the current build; Codex looks C1, C3, C6; rehearsal R2 and rollback R3 if a login exists.
+5. **Tue 3 Nov (Cup Day) and Wed 4 Nov:** partial re-tests of whatever has installed (CE 02, revised after option b); Codex looks C1, C3, C6; rehearsal R2 and rollback R3 if a login exists.
 6. **Wed 4 and Thu 5 Nov:** train C-78 assembled with every reviewed pilot-critical fix; Opus finalizer; page 04 drafted.
 7. **Fri 6 Nov (freeze):** C-78 (or later) installed after 5:30 pm = **freeze candidate**. Anything not reviewed by then waits for the release after the pilot and goes on page 04.
-8. **Sat 7 Nov (pre-pilot re-test, weekend 2, pass 1) and Sun 8 Nov (pass 2, separate start):** full re-test on the freeze candidate; Codex looks on the final build; Max-like run again; R2 and R3 on the final build.
+8. **Sat 7 Nov (pre-pilot re-test, pass 1) and Sun 8 Nov (second start if needed):** full re-test on the freeze candidate; one full pass in the Max-like configuration (add-ins moved aside); Codex looks on the final build; R2 and R3 on the final build. CE 02 then runs nightly Thu 12 and Fri 13 Nov and a last full pass Sat 14 Nov.
 9. **Mon 9 to Thu 12 Nov:** Tim's soak (4 working days) and his two hand checks (D1 five-step walk, D2 one council sheet); pack approved in one pass (Mon 9); package from the frozen folder (Tue 10); page 04 final from results (Wed 11); Opus freeze report (Thu 12). A blocker means a new candidate and a restarted clock for what it touches.
 10. **Fri 13 Nov:** final go checklist (hand-over plan section 8); Tim's word "yes, hand it to Max".
 11. **Mon 16 Nov:** hand-over.
@@ -115,3 +115,9 @@ Gate score: **1 of 11 done / 10 open.**
 1. **29 Oct (Tim, "option b"):** freeze Fri 6 Nov including the pilot-critical fixes the desk can build now; pilot Mon 16 Nov. My earlier Option A text was removed from this file (it is in git history).
 2. **29 Oct:** 30 of 40 by Fri 30 Oct is not reachable (CE 02); the target is now Sat 7 Nov.
 3. **29 Oct (Tim):** questions only through CE 04; a test laptop with AutoCAD 2026 is to be assessed.
+
+## 12. Inputs received after the first schedule B draft (29 Oct)
+
+1. **CE 02 (revised after option b):** Sat 31 Oct weekend-1 full re-test on whatever is installed; per-install area re-tests; FULL pre-pilot re-test on the frozen build run Sat 7 Nov (second start Sun 8 Nov if needed); nightly Thu 12 and Fri 13 Nov; last full pass Sat 14 Nov; one full pass in the Max-like configuration. The Tue 3 and Wed 4 Nov slots are partial re-tests. A 2026 pass is labelled 2026-only, never a 2027 pass. Click-by-click laptop steps are coming in areas\TEST_LAPTOP_STEPS_29OCT.md.
+2. **CE 08 research (RESEARCH_SCOUT_29OCT.md, figures from search summaries, unchecked):** a test PC or laptop must keep an unlocked desktop (monitor or a dummy display plug), no lock, no sleep, auto-login, or the robot's real key presses fail. Max's AutoCAD year decides whether a cloud AutoCAD trial is worth it. A separate test seat licence may exist through an Autodesk developer membership (decision queued with CE 04).
+3. **Effect:** the laptop questions to CE 04 (item 33) now also ask for: unlocked desktop with the lid open or a display plug, auto-login, no lock or sleep.
