@@ -80,3 +80,34 @@
 
 1. Worktree `C:\ce-fx\c78k` (private, short path), base `origin/claude/rel-20261026z` at `09126560` (Civil 3.0.85). Every dotnet command had `-p:SkipDevBundle=true -nr:false --disable-build-servers`, Release, below normal priority, AutoCAD 2027 on PATH, a 0-byte placeholder `CE_TRANSFORM_2027.arx` (git-ignored), a fresh TEMP and CE log folder per run, net48 refs at `C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`. At most two top-level dotnet commands ran at once (count checked by script before each). Never deployed. Tim's settings, bundles and ProgramData not touched. `CE_SHARED` unchanged.
 2. Scratch: `C:\ce-fx\f023\`. Worktree `bin/obj` cleaned at the end with `git clean -fdXq` inside the worktree only.
+
+---
+
+## FOLLOW-UP B-035b (Fri 30 Oct 2026, built overnight): Tim's remembered tank picks removed from the shipped file
+
+### FOR TIM
+
+1. **Answer first:** done. The starting settings for a new colleague no longer carry your three remembered water-tank plan choices. It is the same draft PR, #1844 (same branch `fb/f023-colleague-defaults`, new commit `ab8ea0b9`, normal push, nothing forced).
+2. **What a drafter will see differently:** a colleague on a fresh login picks a 3000 L round, above-ground tank in CDWT. Before this fix, CDWT would have pre-selected your "U/G TANK" plan and said "The plan you chose before for this tank is selected". Now CDWT picks by litres and above or below ground, as it does for everyone, with no "chose before" line. After they pick a plan themselves, CE remembers that for them.
+3. **What did not change:** everything else in the starting settings (pipe object On, snaps, dark window, rising main WT, pit lid). A PC that already has a settings file, yours included, is untouched, so you keep your own tank picks.
+4. **Mistakes of my own first:**
+   1. I lost about 7 hours waiting for a free build slot. The first wait script I started was killed by the tool at 30 minutes without telling me, so it never ran. Cost: the PR came late.
+   2. My first relaunch of the test script ran nothing and reported "exit" with no result (the tool's search path has no `cmd`). I only saw it when the log came back empty. Cost: one more wait in the queue.
+5. **What is NOT proven:** nothing was run in AutoCAD. The three tank picks are gone from the file and the unit tests prove that a fresh profile loads with no remembered tank plan. I did not look at what CDWT does on screen. Also not checked: whether the 2000 L round tank should share the slimline caption for everyone (review said it may be right if the master has one 2000 L plan); that is a separate question.
+6. **Robot case that proves it:** **F23t_no_tank_pick** (control **F23ts**, broken twin **F23tx**). Wording in section 4 below.
+7. **What to test in AutoCAD:** nothing for you; the robot does it.
+
+---
+
+### Technical detail
+
+1. **Cause:** `Modules/Drainage/Assets/Config/colleague-defaults.json` had a `waterTank.planForTank` group of three entries ("2000 L SLIMLINE|2000", "3000 L ROUND|3000", "2000 L ROUND|2000") copied from Tim's settings. In `WaterTankPlanMatch.Arrange` a remembered plan beats the litres and above/below-ground match (Opus pre-review finding 1, #1844).
+2. **Change:** the `waterTank` group is deleted from the shipped file. No code change. The switch `settings.firstStartUsesColleagueDefaults` is untouched and still ON. A key the shipped file lacks keeps its built-in value, here an empty list.
+3. **Tests (`F023ColleagueDefaultsTests`):** the old "three picks read back" assertions now assert `WaterTank.PlanForTank` is empty after a fresh-profile load; new `ShippedFile_CarriesNoRememberedChoice_NoTankPlanPicks` (no `waterTank` group, no `planForTank` key anywhere in the file, no "U/G TANK" text, empty list after the load); leaf-count floor 8 to 7 (one group of 3 picks counted as one leaf, so 8 became 7).
+4. **Results:** focused net10 classes (F023, ColleagueDefaults, ColleagueStandalone, WaterTank): **291 total, 291 passed, 0 failed** (count not 0). Full net10 suite and net48 compile: see the RESULT LINE at the end of this section.
+5. **REGRESSION_LOG.md:** new B-035b entry at the top.
+6. **Proof for CE 02 (proposed):**
+   1. **F23t_no_tank_pick:** non-Tim login, no `CD_Settings.json`, installed build carries the shipped file with the switch true. Start AutoCAD, type `CDWT`, choose a 3000 L round tank and above ground. Check the plan list does NOT pre-select "3000 LITRE GARANTIA LI-LO / U/G TANK (2456 x 2139 mm)" and the dialog does not show the line "The plan you chose before for this tank is selected". Esc out.
+   2. **F23ts (control, a pick the drafter made themselves):** same login, but a `CD_Settings.json` is first written that holds `waterTank.planForTank["3000 L ROUND|3000"]` set to the U/G TANK caption. The same `CDWT` steps must show that plan pre-selected with the "chose before" line. This proves the line still works for a real remembered pick.
+   3. **F23tx (broken twin, switch off):** shipped file switch false, no settings file: the tank list must also be unselected (built-in empty list). If F23t shows a pre-selected U/G TANK plan, the picks are back in the shipped file.
+7. **Environment:** worktree `C:\ce-fx\c81b` (short path), detached at `origin/fb/f023-colleague-defaults` (the branch was already checked out in the older worktree `C:\ce-fx\c78k`, so I pushed with `git push origin HEAD:refs/heads/fb/f023-colleague-defaults`). Every dotnet command had `-p:SkipDevBundle=true -nr:false --disable-build-servers`, below normal priority, AutoCAD 2027 on PATH, placeholder `CE_TRANSFORM_2027.arx`, fresh TEMP per run, one top-level dotnet command at a time and only when the count was 0. Never deployed. Tim's settings, bundles and ProgramData not touched. `CE_SHARED` unchanged. Scratch: `C:\ce-fx\c81b_*`.
