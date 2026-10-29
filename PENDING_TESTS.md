@@ -1,5 +1,17 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-01 slice 2, minimum cover by surface — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+PR 1850 (stacked on B-012 PR 1848), branch `claude/gb01-slice2-cover-table`. Cover is measured to the OUTSIDE top of the pipe (1848). The table rows are ASSUMED, Tim to confirm.
+
+1. **No surface picked:** a pipe with 200 mm cover to the outside of a 150 UPVC and pits with no Surface: CDRULES "Minimum cover" warns below 300 mm, as before.
+2. **Driveway pit:** pick Surface = Driveway on both pits, same pipe: the cover row now passes (100 mm), and reads "(Driveway surface, office cover table)". A pipe under a concrete driveway with about 120 mm cover passes.
+3. **Larger vehicles:** Surface = "Driveway (larger vehicles)": the same 200 mm warns "below 450 mm". Surface = Road: warns below 600 mm; a pipe with 550 mm passes the vehicle row and warns on Road.
+4. **Council wins:** set the job's council to Frankston (250): every surface is judged against 250 and no row says "office cover table".
+5. **Edit the table:** put `minCoverBySurfaceMm` rows (surface name to mm) under `designStandards` in `CD_Settings.json`; the rows follow. A zero row is ignored.
+6. **CDRULES stale marker:** a saved run on a job with a surface picked goes Stale when a table row is edited; a job with no surface picked does not.
+7. **Not testable yet:** the Edit Pipe strip, Civil Design, auto-design and the pit editor still use the single office 300 (CE 01's B-022); no Settings window rows for the table; no pick for the unsealed-road-or-construction 750.
+
 ### GB-01 slice 4, pipes under garages (R-33) — 29 October 2026 (Built and unit-tested only; the drawing read has NOT been run in AutoCAD; Codex to run on COPIES)
 
 PR 1849 (stacked on 1843 on 1842), branch `claude/gb01-slice4b-garages`. Tim 29 Oct: "Yes. Build pipes-under-garages from a closed outline drawn on a layer named once in Settings; none drawn = Unknown."

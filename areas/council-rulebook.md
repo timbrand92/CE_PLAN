@@ -29,6 +29,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 6. **GB-01 slice 4, garage half (R-33), 29 Oct 2026 — Built and unit-tested; the drawing read never run in AutoCAD; not installed.** PR 1849 (stacked on 1843). Tim: "Yes. Build pipes-under-garages from a closed outline drawn on a layer named once in Settings; none drawn = Unknown." Detention pipe under a dwelling or garage warns; plain drain under a garage passes only as 150 UPVC SN8; every job shows two Unknown rows until the office names its layers (`draftingChecks`). Steps in `PENDING_TESTS.md`.
 
+7. **GB-01 slice 2, cover table, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1850 (stacked on B-012 PR 1848). CDRULES minimum cover per pit end follows the pit's Surface pick (office table, Table 6.2.5 plastic rows; rows ASSUMED, Tim to confirm); council figure and project override still win; no surface = single office minimum. Open for Tim: confirm the five rows (Garden 300, Footpath 100, Driveway 100, Driveway (larger vehicles) 450, Road 600), and whether a pit with no surface should say Unknown instead (card) or keep the 300 (built). Steps in `PENDING_TESTS.md`.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.
