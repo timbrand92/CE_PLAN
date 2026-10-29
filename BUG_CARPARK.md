@@ -17111,3 +17111,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's words 29 Oct 2026; hand checks H12 (OF and FO) and H28 (D07); related BUG-1236 (FO symbol text reads OF), card D08 and D07, QUESTIONS_FOR_MONDAY item 15 (RG1 label).
 
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1243 — CE Blocks (CEBLOCKS) does not work the way Tim wanted
+
+**Command / Area:** CE Tools > CE Blocks (CEBLOCKS), Manager 1.1.85 / Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, while looking at the CE Tools tab buttons, hand check H35). WRONG BEHAVIOUR OR MISSING FEATURE, severity to confirm. **Parked by Tim's instruction; details not yet taken.**
+
+**Symptom:** Tim: "ceblock still doesnt work how i wanted it to, carpark this please and then lets move on". The word 'still' means he has said this before; I could not find an earlier BUG entry for what he wanted (the only CE Blocks entries are BUG-842, the settings file falling back to standard values, and HUNT-MI-30 'CE Blocks button on a PC without Structural'; neither is about how it works). What he wanted is not recorded anywhere I can find (RULES 12.1: not guessing). He did not say what it did, or what he expected.
+
+**Expected behaviour:** To be written from Tim's own words the next time CE Blocks is looked at: what he typed or clicked, what he expected, what happened. Suggested questions: which button or command inside CE Blocks, what he wanted it to do on the drawing, and what it did instead.
+
+**Steps to confirm in AutoCAD:** Not known yet (see above).
+
+**Reference:** Tim's words 29 Oct 2026, hand check H35 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; BUG-842 and HUNT-MI-30 (CE Blocks, different faults); Modules\Manager (CeBlocksSettings).
+
+**Status:** OPEN (parked by Tim 29 Oct 2026; needs Tim's description). Never FIXED until Tim confirms in AutoCAD.
