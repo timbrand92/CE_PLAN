@@ -15,4 +15,5 @@ C:\CE_PLAN\desk_jobs\tester_run75_b6_fixups.txt
 C:\CE_PLAN\desk_jobs\tester_run76_c75_fixes_and_regrade.txt
 C:\CE_PLAN\desk_jobs\tester_run75b_b6_fixups_retry.txt
 C:\CE_PLAN\desk_jobs\tester_run77_regrade_part3_cdtwl_first.txt
+C:\CE_PLAN\desk_jobs\tester_run79_pilot_p01_p02.txt
 C:\CE_PLAN\desk_jobs\tester_run78_apply_staged_and_run.txt
