@@ -495,3 +495,29 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    3. Desk must: look at the folder first (rule 12.7: read the drive, check it is the Visual Studio leftover from 21 Oct and nothing in use), then delete only it, and say how much space came back.
 
 98. **Updates & Rollback button (QUESTIONS item 56, BUG-1247): yes.** Tim's words: "yes". Interpretation: every user's Updates & Rollback button opens that user's own screen (what is running, what is waiting, go back to the previous version); the Administrator Dashboard is reachable only through the separate Admin button, for the owner only. Desk must: build it with the CEHEALTH, Version and Help tab work (B-047) in one Manager change.
+
+## Batch 22 (evening, Melbourne): the older standing questions, answered as a block of 18
+
+99. **Older standing questions (Codex bug triage 16 Oct section 4, gap audit 17 Oct section 3, CEMEMBER review 23 Oct): yes to 17, one sent to planning.**
+   1. Tim's words: "1. yes" through "16. yes", "17. can we plan this in planning chat if its not organised already", "18. yes", to the numbered list sent by CE 04 (numbering below is that list's).
+   2. Interpretation: each of these is answered YES as recommended:
+      1. Rising above-ground drain says plainly "falls the wrong way (rises 200 mm towards the outlet)" (triage 1, BUG-649).
+      2. A cover label without an IL line never blanks a stored invert (triage 3, BUG-650).
+      3. Pit Schedule remarks keep the custom note and "With Step Irons" as two parts; step irons only by the tick (triage 5, BUG-586, BUG-637).
+      4. Excel exports save numbers as numbers; "Unknown" stays text (triage 6, BUG-571, BUG-591).
+      5. DRAFT stamp "DRAFT - NOT FOR CONSTRUCTION" and the job name on every PDF page and Excel tab until the sheet is issued (triage 7, BUG-590).
+      6. A command that would write to a locked layer stops up front with one sentence naming the layer (triage 8; consistent with the native protection rule).
+      7. LandXML import previews pits and pipes before anything is drawn (triage 9, BUG-603).
+      8. Footing label height from the drawing scale, 2.5 mm plot height times the annotation scale (triage 10, BUG-454).
+      9. Wind class: Enter with nothing typed keeps the old value (triage 11, BUG-504).
+      10. C purlin, flanges up, top view: flange lines drawn hidden because the lips sit over them (CEMEMBER review item 3).
+      11. One "Set up C01 and C02" command previews and places the legend and four note blocks, one Undo (gap audit 3).
+      12. Level 3 network options: A fewest pits, B shortest total pipe, C Tim's usual set-off from the boundary (gap audit 4).
+      13. Detention criteria block goes beside the orifice pit (gap audit 5).
+      14. Proposed downpipes when a few fail: place the rest, name the ones left out (gap audit 6).
+      15. Colleague updates (BUG-478): Manager finishes the update the next time AutoCAD closes (gap audit 10).
+      16. Retaining wall and fence footing sizes: layout built now, sizes read "Unknown, engineer to fill" until typed in Settings (gap audit 11).
+      18. Office learning suggests something office-wide after 3 people (gap audit 14).
+   3. **Item 17 (pump station master detail and storage rule, gap audit 12): NOT decided.** Tim's words: "can we plan this in planning chat if its not organised already". Routed to the planning chat (CE 05); "detail not set" stays the default meanwhile; the duty-point working still runs.
+   4. Parked, not asked: clearances (footing, service, zone of influence angle, crossing service, pool zone): "not set, not checked" until Tim types numbers; the new job title block card (UX-TITLEBLOCK-NEWJOB) and the Structural/Manager ribbon card (UX-RIBBON-04) need Tim at the cards.
+   5. Desk must: build each as a draft or as part of its existing item; items that are new commands (11, 12, 13, 14) go on the build list (nothing waits for the pilot, decision 68); cross them off QUESTIONS and the gap audit.
