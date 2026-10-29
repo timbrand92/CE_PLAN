@@ -56,7 +56,11 @@ while ($true) {
       foreach ($fn in 'HOLD_ROBOT.flag', 'STOP_CODEX.flag') { $f = "$d\$fn"; if ((Test-Path $f) -and ((Get-Content $f -Raw) -match '^CE 02') -and $own -eq 0) { if ($DryRun) { Log "WOULD release stale $fn" } else { Remove-Item $f -Force; Log "released stale $fn (CE 02's own, no job of ours running)" } } }
       # 2. start the lanes (idempotent)
       if ($DryRun) { Log 'WOULD run start_lanes.ps1' } else { & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null; Log 'ran start_lanes.ps1' }
-      # 3. still idle after 6 minutes: say so
+      # 2b. nothing pending anywhere (queues empty): move the next held robot job from ROBOT_QUEUE_AFTER_C77.txt into ROBOT_QUEUE.txt so AutoCAD gets work (the robot lane starts it). One job at a time.
+      if (((PendingWork).Count -eq 0 -or $mins -ge 10) -and (Test-Path "$d\ROBOT_QUEUE_AFTER_C77.txt")) {   # queues empty, or still idle after 10 minutes (e.g. the Codex daily cap has paused the conveyor)
+        $held = @(Get-Content "$d\ROBOT_QUEUE_AFTER_C77.txt" | Where-Object { $_.Trim() -and -not $_.StartsWith('#') })
+        if ($held.Count) { $next = $held[0]; if ($DryRun) { Log "WOULD queue the robot job $next (nothing else pending)" } else { Add-Content "$d\ROBOT_QUEUE.txt" $next; $rest = @(Get-Content "$d\ROBOT_QUEUE_AFTER_C77.txt" | Where-Object { $_.Trim() -ne $next.Trim() }); [IO.File]::WriteAllText("$d\ROBOT_QUEUE_AFTER_C77.txt", (($rest -join "`r`n") + "`r`n")); Log "queues were empty: moved $([IO.Path]::GetFileName($next)) into ROBOT_QUEUE.txt"; & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null } }
+      }      # 3. still idle after 6 minutes: say so
       if ($mins -ge 6 -and -not (Test-Path "$d\AUTOCAD_IDLE.txt")) {
         $pw = PendingWork
         $txt = "AUTOCAD IDLE since $($idleSince.ToString('ddd HH:mm')) with no allowed reason. Pending work: " + $(if ($pw.Count) { $pw -join ', ' } else { 'NONE (queues empty: top them up)' }) + ". Codex cap/mode: " + ((Get-Content "$d\CODEX_MODE.txt" -TotalCount 1 -ErrorAction SilentlyContinue)) + "."
