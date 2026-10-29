@@ -7,7 +7,8 @@ $done = "$d\CONVEYOR_DONE.txt"
 function Log($t) { Add-Content "$d\codex_conveyor.log" ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm'), $t) }
 function Usage { $q = Get-Content 'C:\Lisp Files\_CODEX_RUNNER\queue.log' -Tail 40 -ErrorAction SilentlyContinue; $m = $q | Select-String 'usage ([\d\.]+)%' -AllMatches | Select-Object -Last 1; if ($m) { [double]$m.Matches[-1].Groups[1].Value } else { 0 } }
 function Cleanup {
-  Start-Sleep 90
+  # 30 Oct 2026 08:00 (Rule 15): was a fixed 90 s sleep after every look (AutoCAD sat idle). Now waits only until the last look's AutoCAD has gone (at most 90 s, at least 8 s) so the next look starts within seconds.
+  Start-Sleep 8; $wc = 0; while (@(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0 -and $wc -lt 41) { Start-Sleep 2; $wc++ }
   $lk = 'C:\ce_rc_drv\ACAD_LOCK.json'; if (Test-Path $lk) { try { $lj = Get-Content $lk -Raw | ConvertFrom-Json; if ([double]$lj.expires -gt [DateTimeOffset]::UtcNow.ToUnixTimeSeconds() -and $lj.who -notmatch '^Codex') { Log ('lock held by ' + $lj.who + ': cleanup skipped'); return $true } } catch { } }
   $a = Get-Process acad -ErrorAction SilentlyContinue
   $g = 'C:\Lisp Files\_ACAD_DRIVER\settings_guard.json'
