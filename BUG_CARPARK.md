@@ -16993,3 +16993,20 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's screenshot and command line, 29 Oct 2026, hand check H12 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; card D08 in areas\DAILY_TOOLS_TEST_CASES_2026-10-23.md; robot case N03 (it asserts the same symbol, so it will agree with the old design and not catch this).
 
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+
+---
+
+## BUG-1237 — CDRENUMBER stops with "No pit discharges outside the network" and does not say what to draw
+
+**Command / Area:** CDRENUMBER, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H13). WORDING / HELPFULNESS, severity low.
+
+**Symptom:** On a small drawing with pit P1, a second pit P2 and one pipe P1 -> P2 (plus two older pipes running into P1 from open ends), CDRENUMBER printed one line, "No pit discharges outside the network - CE could not tell which pit is nearest the outlet.", and stopped. No question, no list, no hint. Reading the code (not seen running): CE needs exactly one pit with a pipe leaving it to something that is not a pit (an open end or outfall); here none had one.
+
+**Expected behaviour:** When CE cannot find the outlet it says what to do in drawing terms, for example "Draw the pipe that leaves the last pit to open ground (or an outfall), or pick the outlet pit yourself", and ideally offers to pick the outlet pit (Tim's earlier plan has a 'Which pit is the main outlet?' question).
+
+**Steps to confirm in AutoCAD:** (1) Two pits joined by one pipe and no pipe leaving either pit to open ground. (2) CDRENUMBER. Right = a plain sentence that says what to add, or a question that lets you pick the outlet. Wrong = the current dead-end line.
+
+**Reference:** Tim's pasted command line 29 Oct 2026; hand check H13; Modules\Drainage\Rules\PitRenumberNetworkBuilder.cs:124-133.
+
+**Status:** OPEN (reported through a hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
