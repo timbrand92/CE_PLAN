@@ -11,7 +11,7 @@
 5. **GB-01 slice 5, pit-size table to Settings.** Waiting.
 6. **GB-02 council data (all items).** Approved 29 Oct. Waiting for GB-01 slice 1 to land (same council profile and Settings files; two writers never touch the same files).
 7. **GB-03 calculations (slices: sheet layout, rainfall for new Boyd's jobs, pump, soakage, collate the package).** Approved 29 Oct. Waiting for GB-02.
-8. **GB-04 ready to submit (slices: seven every-council checks, Kingston/Monash/Frankston extras, Bayside and the rest, record on the job).** Approved 29 Oct. Waiting for GB-03 (may start the checks that need no splay earlier if builders are free and files do not overlap). Splay method is a DRAFT default until Tim answers.
+8. **GB-04 ready to submit (slices: seven every-council checks, Kingston/Monash/Frankston extras, Bayside and the rest, record on the job).** Approved 29 Oct. Waiting for GB-03 (may start the checks that need no splay earlier if builders are free and files do not overlap). Splay method settled 29 Oct (drawn line on a named layer set once in Settings; none drawn = Unknown).
 
 ## Cards waiting for Tim's approval (no build until approved)
 
@@ -22,7 +22,6 @@
 1. Minimum fall for 450 to 750 gravity pipes (GB-01 slice 1).
 2. Maximum pipe speed and its document (engineers; question 7).
 3. Bayside 1 in 20 pump rule source (question 14).
-4. How CE finds the splay (GB-04).
 5. Claude provider, model, cost ceiling (GB-05).
 
 ## After every build

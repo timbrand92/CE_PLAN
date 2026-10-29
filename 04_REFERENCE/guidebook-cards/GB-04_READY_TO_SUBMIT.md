@@ -37,3 +37,6 @@ Guards: each check on a drawing with one deliberate fault. Codex in AutoCAD on a
 
 ## 8. Approval (29 Oct 2026, item 30)
 "Approve GB-04". The splay question is still open: the builder builds the recommended default (a drawn line on a named layer set once in Settings; no line means Unknown) as a DRAFT, and Tim's later answer replaces it.
+
+## 9. Splay answered (29 Oct 2026, item 31)
+Tim accepted: the splay is a drawn line on a named layer; the layer name is a Settings value set once; no line drawn means Unknown. No longer a draft default.
