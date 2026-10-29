@@ -113,3 +113,7 @@ Tim, in order: 1. "yes" 2. "yes" 3. "yes" 4. "50$" 5. "all of them" 6. "yes". Fu
 4. Monthly cost cap: $50. Interpretation (guess): dollars per month; currency and period were not named.
 5. All councils, not only Kingston; order by how many letters each has.
 6. A plain list of changes for the covering letter: yes. Interpretation (guess): an exception to "no response-letter drafting", a list from the ticked-off items, not a drafted letter.
+
+## PC-07 — Plan the pump station master detail and storage rule (area H)
+
+Tim (item 99 of decisions/2026-10-29_TIM_ANSWERS.md, relayed by CE 04): "can we plan this in planning chat if its not organised already". Done: planned in `areas\civil-H-pump-stations.md` section 3b (what already exists in the code, where the master detail probably lives, the storage rule in plain English, seven build slices H-0 to H-6). Planning only; no code. Two answers from Tim are needed and are NOT decided: (Q1) which file is the master detail, recommended the .dwg named "CE Civil WATER TANKS - PUMP STATIONS Details" in Standard Details\Civil; (Q3) approve or change the storage rule already in the code. "Detail not set" stays the default meanwhile. Interpretation (guess): "if its not organised already" = plan it only to the extent it is not already organised; the card and engine exist but are out of step, so the plan reconciles them.
