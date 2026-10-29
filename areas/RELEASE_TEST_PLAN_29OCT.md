@@ -126,3 +126,12 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 2. Installed versions were read from the DLLs (Civil 3.0.85, Manager 1.1.85, 09126560); source-based statements about pilot-critical fixes come from CE 02's list.
 3. The robot and Codex schedules above are proposals until CE 02 confirms them.
 4. Counts of checks (35) are mine and will change as CE 02 refines the pilot cases.
+
+## 10. UPDATE after Tim's afternoon answers (29 Oct, TIM_ANSWERS items 24 to 34); overrides anything above that says otherwise
+
+1. **A8 (older AutoCAD year) is no longer needed for the pilot:** Max is moving to 2027; the pilot is 2027 only. BUG-1209 and BUG-1210 stay on page 04 as a note for anyone on an older year.
+2. **A3 and A5 (rehearsals, rollback):** on a PC with AutoCAD 2027 and an ordinary login that Tim organises. No start until he says it exists (question 37). The laptop route is dropped.
+3. **A7:** Max's install rights, upgrade date, folders, old Structural and Manager version are still Unknown (question 36). Nothing is installed on his PC before his 2027 is in.
+4. **Decisions E:** answered by Tim: freeze content (latest, Fri 6 Nov), frozen-copy folder (`CE V3 PILOT`, view to Max only), gate settings (item 1 confirmed; items 6 and 7 out), BUG-905, BUG-1097, BUG-1095/1091/1088 (build all). Open: old-files move, pack approval, Max's rights and date, rehearsal PC, BUG-1189, 1149, 685, 1148, the settings-switch re-test point.
+5. **B9 (Max-like run):** still wanted, one full pass on the freeze candidate.
+6. **Pass line, item 4 and 5:** the answered engineering words no longer wait on Tim; BUG-905 and BUG-1097 need only their builds and checks.
