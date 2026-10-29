@@ -1,6 +1,6 @@
 # Codex look briefs H1 to H6: the six pilot-critical window bugs (Thu 29 Oct 2026)
 
-Written Thu 29 Oct 2026, 11:12 to 11:40 Melbourne (PC clock), by the Opus desk assistant, headless Team job "CE_ACAD / robot / draft / 15". Codex weekly use 13 percent (read 11:26); today's cap 16 percent until 17:53. I started nothing: no AutoCAD, no Codex, no conveyor, no job. Your AutoCAD (started 09:14) was open the whole time and was not touched. No existing brief, case, runner file, ledger, DESK_LOG or BUG_CARPARK entry was edited. The briefs live outside CE_PLAN and stay uncommitted.
+Written Thu 29 Oct 2026, 11:12 to 11:28 Melbourne (PC clock; the queue comment says 11:30, the lines went in at 11:26), by the Opus desk assistant, headless Team job "CE_ACAD / robot / draft / 15". Codex weekly use 13 percent (read 11:26); today's cap 16 percent until 17:53. I started nothing: no AutoCAD, no Codex, no conveyor, no job. Your AutoCAD (started 09:14) was open the whole time and was not touched. No existing brief, case, runner file, ledger, DESK_LOG or BUG_CARPARK entry was edited. The briefs live outside CE_PLAN and stay uncommitted.
 
 ## ANSWER FIRST
 
