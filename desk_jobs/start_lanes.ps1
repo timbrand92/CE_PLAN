@@ -25,7 +25,9 @@ function StartLane([string]$name, [string[]]$stopFlags, [bool]$allowed, [string]
   if (IsRunning $name) { Log "${name}: already running, nothing to do"; return }
   if (-not $allowed) { Log "${name}: not started ($whyNot)"; return }
   if ($DryRun) { Log "${name}: WOULD START (dry run)"; return }
-  $r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{ CommandLine = "pwsh.exe -NoProfile -WindowStyle Hidden -File `"$d\$name.ps1`""; CurrentDirectory = $d }
+  # 29 Oct 22:45 (CE 00 relaying Tim: "tomorrow im on site so you can keep going until i say so"): while TIM_AWAY.flag exists the lane starts with CE_RUNNER_TIM_AWAY=1, which the runner and driver read to ignore Tim's weekday AutoCAD hours. Delete the flag the moment Tim is back at the PC.
+  $cl = if (Test-Path "$d\TIM_AWAY.flag") { "pwsh.exe -NoProfile -WindowStyle Hidden -Command `"`$env:CE_RUNNER_TIM_AWAY='1'; & '$d\$name.ps1'`"" } else { "pwsh.exe -NoProfile -WindowStyle Hidden -File `"$d\$name.ps1`"" }
+  $r = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{ CommandLine = $cl; CurrentDirectory = $d }
   if ($r.ReturnValue -eq 0) { Log "${name}: started (pid $($r.ProcessId))" } else { Log "${name}: START FAILED (WMI return $($r.ReturnValue))" }
 }
 $hours = InTimsAutoCadHours

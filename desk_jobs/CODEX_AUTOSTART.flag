@@ -1,0 +1,1 @@
+CE 02 22:45 Thu 29 Oct 2026: Tim away Fri 30 Oct (CE 00 relay). Lets the Codex supervisor start inside Tim's usual hours, but start_lanes still holds it while any acad.exe runs, HOLD_ROBOT.flag exists or the robot queue has a job without .done. Delete when Tim is back.
