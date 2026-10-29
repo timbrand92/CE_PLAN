@@ -2871,6 +2871,8 @@
 5. **Real retest:** repeat the10m free-ended route with first19.50 and calculated19.40: all current-value displays agree and known levels are not called Unknown. Reverse known-end selection, test equal and absent levels, Cancel, oneUndo/delayedRedo and disk reopen. Preserve open-end warnings and genuine Unknown ownership. No production code or installation; review the existing pipe workflow before repair.
 **15 October source-to-source replay:** Civil3.0.49/AutoCAD2027, actual CD from saved DP1 to IO1. Individual keystrokes enter20m; known-end calculation shows19.97 and enables StartPipe, while IO1 preview/direction remain Unknown. Completed pipe labels20.00/19.97 at1in70, downward arrow; command still says levels Unknown. Confirms existing582 with recognised source ends, no newbug/numerical-loss claim. Screens1386/1387, source-connection ledger SC03; oneUndo/9.432secondRedo passes visually. No full stored dictionary/provenance or plot acceptance.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-581 — Manager Help Start tool minimises without launching its drawing prompts
 
 1. **Area/status:** CEMANAGER Help -> Step-by-step guides -> Move and rotate, Civil3.0.49/Manager1.1.49+48662ddd, OPEN, personally exercised14Oct2026 AutoCAD2027 on owned Structuralfixture.
@@ -2878,6 +2880,9 @@
 3. **Observed:** guide and before/after picture open. Start tool is enabled with text saying it minimises Help and starts normal prompts. Click minimises Manager; repeated actual drawing capture shows idle command line and no MR prompt. Restoring Manager shows Start tool disabled and Finish the current AutoCAD command first. Close Manager; direct typedMR immediately presents Select objects. Escape cancels without altering geometry. Screens192-200. CDHELP opens a different Civil HTML guide, so it is not a like-for-like standalone shared-guide comparison. Cause is not proven; Manager command/modal ownership is a hypothesis to investigate.
 4. **Proposed guard:** integration check from actual CEMANAGER embedded guide with no unrelated active command; correct host hand-off/readiness so launch works or stays visibly unavailable. Retain the strict installed-command qualification and protected-object workflow. Do not bypass busy/identity checks to force launch. Add a genuine-active-command refusal case and Cancel return case.
 5. **Acceptance steps:** in AutoCAD2027 ownedcopy CEMANAGER -> Help -> Step-by-step -> Move and rotate -> Start tool; MR Selectobjects must appear, then Escape returns safely. Repeat from a genuinely busy command and verify honest refusal without minimising unexpectedly. Test direct MR separately. No production code/installation by thischat; reviewed launch workflow card needed before repair.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-580 — Manager Light theme makes the header name disappear
 
 **Codex look L3 (18 Oct, installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118):** L3-01c PASS, SURE: in the Light theme the header brand and the Suite Manager subtitle are dark and readable (L3-05-manager-light.png, L3-28-manager-light-header.png). Status left OPEN for the desk; not marked FIXED here. Same look, L3-01d FAIL, SURE: the UI Theme drop-down lists Follow AutoCAD, Light and Dark as words only, with no preview pictures shown together. That is plan item EM-06, not a defect, and new plan items are paused (ruling A). Dark tab text is a separate finding, BUG-754.
@@ -2890,6 +2895,9 @@
 6. **Candidate14October2026:** draftPR1255, commit8789a8ed, based on installed48662ddd. Existing white-wordmark transparency now masks the live UiHeroHeaderTextBrush, preserving originalproportions/22pxheight. Both modern/net48 builds0warnings/0errors; existingappearancechecks3/3PASS; static source-derived Light/Dark renders personally inspected. Not installed, no realAutoCAD candidateacceptance; subtitle sourcebrush alreadyappropriate, runtime symptom still to check. Combine with approved theme work before installation. BUG580 remainsOPEN. Verification144-145 holds limitations and regressionchecklist.
 
 **Codex look L3 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56):** L3-01c PASS, SURE: staged Light shows dark readable header text; Discard restored Dark; title X closed. Status left OPEN for the desk, not marked FIXED. L3-01d DIFFERENT, SURE: the UI Theme list is words only (Follow AutoCAD, Light, Dark) with no preview pictures; a design question, queued for Tim as QUESTIONS_FOR_MONDAY section I item 1. Evidence: CODEX_LOOK_L3_20261019_1427.md, L3-01c-light.png, L3-01d-theme-choices.png.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-579
 
 **Command / Area:** FPFC depth, FEDIT readback and CSFOOTINGSCHEDULE, installedStructural1.0.116+f180b349, real14Oct2026.
@@ -6244,6 +6252,9 @@ Full steps, screenshots and logs: `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_EXP
 7. **BUG-201 (Civil, X1 #9, UX):** ordinary pit placement prints internal diagnostic jargon on the command line. OPEN. **Codex 30 Sep pass18: STILL PRESENT on installed Civil 3.0.15.** PIT placement still prints "Auto inline split skipped: No inline pipe segment found at owner point. considered=50, geometryRejected=36, hitboxRejected=14, nearestPipe=11C584, nearestDistance=1060.128." (and, at a pipe end, the same text followed by hundreds of digits) before "Pit placed successfully." Screenshots `P18_screenshots\BUG192_PIT_placed.png`, `Q3_P2_open_end_placed.png`; report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_TEST_REPORT_PASS18_2026-09-28.md` (journal items under BUG-192 PIT and "Q3 open-end connection"). The fix (PR #387) is not installed.
 Also from X1: **BUG-192 REPRODUCED (X1 #1)** - CD a branch onto a main, U (view), U (CD), then REDO straight away: "Nothing to redo". **BUG-193 still failing on 3.0.14 (X1 #4)** - typing "1200 x 900" in the Pit Schedule SIZE cell shows blank outside the editor. UX (ideas): CD preview omits the pending route and completing loses the view (X1 #8); two "CE Settings" menu entries open different windows (X1 #11); status bar vs Structural Settings show different installed versions (X1 #12).
 
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; it is the group entry for BUG-195 to 201 and each finding stays open until confirmed fixed)
+
 ---
 
 ## BUG-194
@@ -8149,7 +8160,7 @@ The Floor Waste insertion points must be computed on the centerline, not on the 
 - `Commands/CdCommand.cs` — after a basement breakline lands, erases the just-drawn second-invert MText (no IL label at the breakline). After a continuation half is paired, erases the just-drawn first-invert MText and calls `SyncBreaklinePairOnLink`. New helper `EraseBreaklineEndInvertText` also clears the attachment record.
 - `Commands/PipeEditCommand.cs` — on CDEDIT save, reads `TryGetBreaklineLink` and skips drawing the IL MText at whichever end is the breakline (the stored value still updates via `StorePipeInverts`). After the invert text block, calls `SyncBreaklineInvertToLinkedHalf` so any change to the breakline-end IL propagates to the partner half automatically.
 
-**Status:** PARTIAL — 2026-05-20. Mechanics confirmed working (IL labels hidden at breakline; auto-sync between paired halves OK). Multiple UX issues raised after testing — captured as BUG-030 (F12 keyword), BUG-031 (popup dialog), BUG-032 (Inspector visibility), BUG-033 (small-diameter arrow offset), BUG-034 (continuation auto-mode). All deferred to next batch.
+**Earlier status (superseded by the later Status line below; tidy 29 Oct 2026):** PARTIAL — 2026-05-20. Mechanics confirmed working (IL labels hidden at breakline; auto-sync between paired halves OK). Multiple UX issues raised after testing — captured as BUG-030 (F12 keyword), BUG-031 (popup dialog), BUG-032 (Inspector visibility), BUG-033 (small-diameter arrow offset), BUG-034 (continuation auto-mode). All deferred to next batch.
 
 ---
 
@@ -8176,7 +8187,7 @@ The Floor Waste insertion points must be computed on the centerline, not on the 
 - `Commands/PipeEditCommand.cs` — `BuildGradeValue` aligned with CD; `ResolveEffectiveGradeMode` returns "inverts" for Default+both-inverts case so CDEDIT refreshes the label.
 - `Models/UserSettings.cs` — `DefaultMinimumValue` default changed to `"100"`.
 
-**Status:** ✅ Built 2026-05-19. 78 grade tests green on net48 and net10.0-windows. Full per-step AutoCAD test checklist lives in REGRESSION_LOG.md under **BUG-118** (the regression log uses its own sequential numbering — BUG-118 there ↔ BUG-024 here). Awaiting Tim's AutoCAD confirmation.
+**Earlier status (superseded by the later Status line below; tidy 29 Oct 2026):** ✅ Built 2026-05-19. 78 grade tests green on net48 and net10.0-windows. Full per-step AutoCAD test checklist lives in REGRESSION_LOG.md under **BUG-118** (the regression log uses its own sequential numbering — BUG-118 there ↔ BUG-024 here). Awaiting Tim's AutoCAD confirmation.
 
 **Known leftover (parked for next round):**
 - CDEDIT Rising Main destination still hardcoded to "WT" — TODO marker in code, separate touch-up.
@@ -10518,6 +10529,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **UPDATE 10 Oct 02:20, Codex W49 (report CODEX_VERIFYW49_2026-10-10.md items 16, 26, 31, 39): REPRODUCED TWICE by Codex, so the driver's run 3 pass does not close it. W49-02 Civil: PIT placed, U (echo PIT), switched to the other drawing by tab clicks (57 s and 66 s after the U), back, REDO after 77 s = 'Nothing to redo', SAVETIME 0 so no autosave. W49-07b Structural: plain CIRCLE 0,0 50, U, switch to Civil and back (32 s and 79 s after the U), REDO after 96 s = 'Nothing to redo'. A plain CIRCLE failing points at AutoCAD's own rule (a document switch ends the REDO chance) rather than CE, but the driver's 5 of 5 PASS (fast switches, 4 s between steps) says it may depend on the time or on HOW the switch is made. CE's own log line for the Civil case reports 'switches 57.1 s and 66.2 s after U, zero changes seen', i.e. CE saw no change to the drawing. Clean Civil comparison on DRV15_METRE.dwg (no missing xrefs) still NOT done: the fixture is now copied into the test copies folder. Cause still UNPROVEN; the witness recorder is the tool to settle it.** **UPDATE 10 Oct 03:15, Claude driver run 5 (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN5_2026-10-10.md plus two witness .jsonl logs): the lost REDO after a drawing switch reproduced 4 of 4 on a PLAIN CIRCLE on the Structural copy with the switch at 15, 18, 64 and 67 s after the U: NOT time dependent (the earlier 'depends on the time' guess is wrong). The WITNESS RECORDER (first live use, loaded with no prompt) shows NOTHING from CE between the U and the REDO; only 3 VIEWBACKSTATUS changes per drawing at the moment of the switch (AutoCAD's own view flag). Not yet proven to be AutoCAD's own rule: no no-switch control was run in that session; driver run 6 (4 separating cases) does it. Hypothesis: it depends on whether the OTHER drawing was modified by a CE command in the session (runs 3 and 4 had an untouched other drawing and passed).** **UPDATE 10 Oct 03:30, Claude driver run 6 (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN6_2026-10-10.md): cases (a) untouched Civil, (b) after a typed MOVE on Civil, (c) no switch: ALL KEPT REDO, and NO VIEWBACKSTATUS events this time (run 5 had 3 per drawing at each switch and lost REDO 4 of 4). So the loss follows WHAT WAS DONE in the Civil drawing before the switch: run 5 had placed a pipe with CD and the New Pipe window (DBMOD 17); run 2 had run CD and PIT journeys. WORKING HYPOTHESIS: a CD / New Pipe / PIT command leaves the session in a state where a later drawing switch loses REDO; typed MOVE and plain circles do not. Case (d) and the CD-then-switch test are the next driver run. Cause still UNPROVEN (CE or AutoCAD).** **UPDATE 10 Oct 04:50, Claude driver run 7 (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN7_2026-10-10.md): STILL UNPROVEN. The CD + New Pipe window test could not be driven (the driver now finds the New Pipe window but it is not on the CE window allow-list; a journey line also used a space that AutoCAD took as Enter). Lighter cases: a Structural plain circle KEPT REDO after switching with no CE use on Civil, and after a PIT window was opened and cancelled; the REGEN spoiler was caught by the witness (PASS). IMPORTANT CAVEAT: witness calibration C4 FAILED: the recorder does NOT log object changes (no ObjectModified / Appended / Erased lines even for a real change), so 'the witness saw nothing from CE' proves ONLY that there was no command, no system-variable change and no view event; it does NOT prove nothing was written to the drawing between the U and the REDO. Any claim from runs 5, 6 and 7 about 'nothing written between U and REDO' must say that. The tooling worker is fixing the recorder next.** **UPDATE 10 Oct 05:25, Claude driver run 8, VANILLA AutoCAD with the five CE bundles renamed off (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN8_VANILLA_2026-10-10.md; CE-off proof: CEHEALTH 'Unknown command'): VANILLA KEEPS REDO at a drawing switch (2 of 2 switch cases plus a no-switch control: 'Everything has been redone'), and the witness shows no VIEWBACKSTATUS event at the switch (run 5 with CE loaded: 3 per drawing, REDO lost 4 of 4). So BUG-558 is NOT plain AutoCAD behaviour: the loss is only seen with CE loaded, in a session where a CD pipe had been placed (runs 3, 4, 6, 7 with CE loaded but no CD placement kept REDO). Cause still UNPROVEN. The decompile chat MEASURED that ANY command between U and REDO kills REDO (an empty CE command, ZOOM, REGEN), while a bare LISP princ does not; so the suspect is a command that CE starts or posts when the OTHER drawing becomes current (a DocumentBecameCurrent / DocumentActivated / Idle path) after a CD pipe. Work for the Civil lane: find everything CE starts, posts or sends as a command on DocumentBecameCurrent, DocumentActivated and Idle (RED test first). The witness caveat stands: it does not log object changes.** **UPDATE 10 Oct 06:40, Claude driver run 10 (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN10_2026-10-10.md, Civil 3.0.43 / Structural 1.0.112): REPRODUCED WITH A CD PIPE, 2 of 2: REDO was lost after switching to the Civil copy that holds a CD pipe placed through the New Pipe window; the CONTROL (a fresh Civil copy with no pipe) kept REDO. The witness recorder (calibration now PASS: it sees object changes) shows 3 VIEWBACKSTATUS changes per drawing at the lost switch and none at the control. TRIGGER: placing a CD pipe leaves the Civil drawing in a state where being re-activated changes the view and kills REDO. PRIORITY: HIGH (every drafter switches drawings). Status now OPEN, trigger = CD pipe placement; cause still not located. RED-TEST LEAD for the Civil lane (build/03 or 04): after a CD pipe is placed, find whatever CE does when that drawing is re-activated that changes the view: SetCurrentView, Zoom, a viewport record, Regen, SendStringToExecute ZOOM, Idle handlers, the pipe object overrule or the pipe-connection record; the decompilation chat is searching the CE source for those and will write to the desk. Earlier measurement: ANY command between U and REDO kills REDO (even ZOOM or REGEN).** **UPDATE 10 Oct 07:35 (PC clock), driver run 12 (CLAUDE_DRIVER_RUN12_PREVIEW_SPLIT, desk): opening and cancelling the New Pipe window does NOT lose REDO; a pipe pasted without the window keeps REDO; the control keeps REDO. So the New Pipe live-preview lead is WEAK. PROVEN: (a) U in a CE-owned Civil drawing runs StartTransaction calls inside CommandEnded of U (four read-only calls: LinkService.Reactors.cs:698-710, ProjectDataService.Persistence.cs:692, LinkService.Cache.cs:492/535/636; sweep file areas/BUG-558_REDO_SWEEP_2026-10-10.md), and by the measured rule ANY StartTransaction with no command running kills REDO. Tester run 13 (the CVL-named copy prediction) is running.** **FINAL STATUS 11 Oct 23:25 (PC clock), Claude driver runs 18 and 19 (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN18_AUTOZOOM_2026-10-10.md and CLAUDE_DRIVER_RUN19_VANILLA_ZOOM): AUTOCAD NATIVE BEHAVIOUR, needs Tim's confirmation (NOT FIXED, not a CE defect on this evidence). Run 18: a PLAIN typed ZOOM W or ZOOM E on the Civil drawing (no pipe, no CD, no CE command), then Structural circle, U, switch to the Civil drawing and back, REDO says 'Nothing to redo'; the untouched control keeps REDO; ZOOM Previous back to the same view keeps REDO: the trigger is a VIEW CHANGE in the other drawing. Run 19 in VANILLA AutoCAD with the five CE bundles parked (profile start-up file still loaded): the same test LOSES REDO 3 of 3, the control keeps it, with the same VIEWBACKSTATUS signature. So CE is not the cause. The CE-side work (#1002 #994 #1007 REDO-wait and open-close reads, installed in Civil 3.0.46) stays as hardening. A help sentence for the drafter ('REDO works only straight after U; a view change in another drawing ends it') is a small task for build/04 (NEXT_FIXES 23:20). BUG-256 (REDO after U) stays OPEN until Tim confirms plain U/REDO in AutoCAD.** **Status (superseded by the 10 Oct 06:40 update above: OPEN, HIGH, trigger = CD pipe placement):** NOT REPRODUCED, kept as a note (desk 9 Oct 23:25): Claude driver run 3 (areas/release-v3-colleagues-CLAUDE_DRIVER_RUN3_2026-10-09.md) could not reproduce it: 5 of 5 PASS on fresh Civil and Structural copies (plain circle, CE pit MOVE twice, run 2's fast form, Structural control). Run 4 repeats run 2's exact order (UNDO 2, SAVETIME 1 then 5, then the switch) to find the step that loses REDO. Not a confirmed CE bug; if it recurs, note whether UNDO 2 or an autosave came first. Filed 9 Oct 23:15 by controller 06 from the desk's first note, downgraded 23:35 on the desk's update. Never FIXED until Tim confirms in AutoCAD.
 
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text says it is not a confirmed CE bug and is kept as a note until it recurs or Tim retires it)
+
 ---
 
 ## BUG-559
@@ -10616,6 +10630,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 4. **Repair/guard:** recognise ONLY the exact empty public wrapper and exact internal signature; preserve direct call order, all original hostile cases and rejection of unrelated overloads. Eleven added tests reject reordered/duplicate/conditional calls, work in the wrapper, wrong input functions/types, third constructor and duplicate wrappers/targets without throwing. Full Core now 2,056 pass / 0 fail / 0 skip. Source and receipt checks were not removed.
 5. **Acceptance evidence:** local structural-core-repaired.trx; no manual AutoCAD action needed for this test-only change. Independent review must assess the narrow guard exception before merge. Production picker is byte/source unchanged; no claim about a new drawing workflow.
 
+**Status:** OPEN - code ready, needs an independent review before merge (tidy 29 Oct 2026: this entry had no Status line; its own text says code ready and not yet merged)
+
 ## BUG-568 — Structural test host times out during compiled-proof work
 **Codex isolation,14 October2026 before08:30:** exact existing1.0.116+f180b349 compiled product tested from own source/tool branch3af7d6b2. Hostile route group27/27 and required-seam/dead-writer group29/29 each COMPLETE/PASS with process exit0. Unsigned-opcode group12 selected aborts on first Bne_Un at20s; zero completed results, TRXFailed/exit1. Temporary test-only opt-in trace on Unsigned64_Bne_Un:Negative confirms read-complete and serialize-complete, then analyze-start without analyze-complete. This isolated reproduction stalls in VerifyR7 analysis, not serialization. Historical hottest Cecil stack does not establish the cause of every abort. No assertion removed, tolerance changed or product source altered. Trace removed after diagnosis; source clean. Receipts local V3UX_20261014/structural-proof-isolation, console and TRX retained. Next: trace R7 method/state traversal and explain the expensive/nonterminating path; retain all challenge cases and later prove full suite termination. OPEN, not fixed. Do not count this automated diagnostic as real AutoCAD acceptance.
 
@@ -10625,6 +10641,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 4. **Diagnostic/next guard:** hottest native stack in one dump spends 65 s CPU in Mono.Cecil MetadataReader/ModuleWriter, called while serialising a hostile test assembly. Last-test naming alone was misleading. Inspect exact mutable-assembly reading/serialization and filter effectiveness, retain strict malformed-input checks, prove the isolated challenge and full suite both terminate. No production handler changed to make the tests pass.
 5. **Reproduce/accept:** run the existing Structural test project with usual safe build flags, temporary log override and --blame-hang --blame-hang-timeout 60s; inspect the console AND TRX summary. Save dotnet's exit immediately before any git command (a git status call overwrote this chat's last wrapper exit with 0 while the receipt still said Failed; not product behaviour). Local dumps/TRX in V3UX_20261013; no dump or raw log goes into a repo. Accept only a completed test process and truthful exclusions/receipt, never only the pass count.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-567 — Structural compatibility tests require obsolete version 1.0.78
 
 1. **Area/status:** testing tools, OPEN, found by Codex 13 Oct 2026 on exact installed Structural source f180b349 / 1.0.116. Not an AutoCAD drawing failure.
@@ -10632,6 +10650,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 3. **Observed:** RequireStandaloneAssembly and RequireHostedAssembly both require `1.0.78+<source head>` although the source declares 1.0.116. Ordinary full DesignCore run also has five missing-proof-input failures; those are setup gaps and are not themselves this obsolete-version fault.
 4. **Proposed fix/guard:** derive the expected version from the checked-out Structural csproj, retaining exact source-head/framework/path identity guards. Build three standalone lanes plus hosted Modern; rerun all five compatibility cases, reject a mismatched version or commit. No lowered requirement and no production runtime change.
 5. **Acceptance:** test-project proof only; no manual AutoCAD action required. Source-level picker constructor-order failure is separate and remains unverified as a product issue. Evidence in release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md; local structural-designcore-live.trx. This chat owns the test-file repair after the currently running suite finishes.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-566
 
@@ -10730,6 +10750,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 ---
 
 **15 October evidence-index correction:** original schedule-placement/case-ledger.json::SCHED-LAYOUT-08 explicitly records this bug via its numeric bug field; that link is now restored in the current coverage index after rehashing its referenced evidence. Existing native verdict FAIL retained; no new execution or repair acceptance.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-585
 
@@ -11091,6 +11113,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 2. **Saved specimens:** bothmembersQSAVE870/normalclose871;162345bytes/SHA5D1D62E663CED541D9C09B55BF0864D63D114CDA26498D25E11B20FE54CBFA80. Theearlier2774175Ahashisthesinglemembersnapshot,supersededbytwo-membersave,notevidencecorruption. SourceReaderReadDetached/AutoCadEvidenceReaderinspectedreadonly,genericrefusaldoesnotidentifythrow/cause;filteredcurrentlogcontainednoSBEAMEDITrefusallines,so nologdiagnosisclaimed.
 3. **Preferences:** CDandsharedCSunchanged;CE_STRUC_SUITECSchangedfrom34196to34217bytes/hashC5186042afteractualplacement. Secondpickerhasrecent200PFCrow;sourcehaspreferencecommitpath,butexactfielddiffnotavailableandnotclaimed. Noall-preferences-unchangedclaimforthisplacementbatch.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-613 — RC beam and rectangular-column outlines move separately and strand detail components
 
@@ -11102,6 +11125,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 6. **Rectangular-column follow-through,15October:** same installedStructural; RCRECTCOL400x400/N20/2perface/N10/40cover placesfourbars/hatch/tie/4N20/dimensions on syntheticcolumncopy. Selectleftoutline/nativeMOVE1found/base1300,750->1300,900: onlyoutline moves; bars,tie,hatch,labelanddimensionsstaybehind (919-921). Undo922restoresoutline;QSAVE924/close925/reopen926retainsrestoredrectangleandseparate450mm/eightbarcircle. Column171312bytes/SHAF1B7E094CCF727617F4F01342BE348710C3AE3E23C4A5AEDEDABCBCCD7E63850. Thisextends613,notanewbugorproofofcircularMOVEfailure.
 7. **Distinct recovery controls:** rectangleoneUndo912/delayedRedo913andcircle917/918bothPASSvisibly,untouched29970/29171ms,SAVETIME0/nointerveningdrawingactions. Original5minuteautosaverestored923;laterautosaveisoutsidetherecoveryinterval. These narrowpositivecontrols do not repair whole-detailmovement. Re-testoneoutline carryingallcomponentsaftercanonicalrepair,thenprotectedcontent/otherRCshapes/2024;RC25FAIL.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-614 — scale-aware Structural hatches refuse 1:50
 
@@ -11116,6 +11141,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Regression and acceptance:** add a meaningful scale-policy guard covering supported20/50/100 and invalid values without inventing engineering density. After the authorised combined release, in AutoCAD use owned boundaries at1:20,1:50,1:100; compare preview and placed appearance on real plots, verify native associative HATCH, HATCHEDIT, Cancel/Escape, one Undo/Redo and save/reopen. Keep existing20/100 behaviour. This batch creates no output; associativity, plots, protected objects and older versions remain UNTESTED.
 6. **Improvement with the same repair:** show the actual drawing scale and actionable scale selection/help before Place; current invalid preview remains selectable and its detailed refusal only appears after the window closes. No extra bug number for this closely related guidance gap.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-615 — concrete hatch commits before the approved live preview and Apply step
 
@@ -11134,6 +11160,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **15 October native gap follow-through:** CEHATCHGAP default5mm bridges a measured2mm opening and safely refuses20mm; original polyline geometry stays open/unchanged. Native associative output passes narrowly. Actual drawing preview/Scale-Angle-Origin/Apply is still absent (HG-06); BUG-615 remains OPEN. Local evidence1073–1079/hatch-gap-case-ledger.json. No gap Undo/Redo/reopen/plot/protected-content acceptance.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-616
 
 1. **Command / area:** Structural XRL, MEDIUM OPEN. ApprovedST5-11 review-before-change missing in installed1.0.116+f180b349.
@@ -11142,6 +11170,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Evidence:** xrl-case-ledger.json XRL-08FAIL/screens1014–1016 under localV3UX_20261014. Positivecontrols XRL-02/03/04 verify nativepropertiesexceptlayerunchanged, exactsingleUndo andRedo. SourceDWGhashunchanged.
 5. **Guard / confirmation:** Onsame two-referencefixture, launchXRL; inspectcounts/highlightbeforechange, Escapecompareoriginals; rerunApply/Undo/Redo/save-reopen. Includeoverlays/paperspace/protectedlayers later.
 6. **Ownership / status:** Claude command/service lane; noimplementation/deploybyCodex. OPEN, notfixed orwholeworkflowaccepted.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-617
 
@@ -11153,6 +11183,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Guard / confirmation:** Run normal/fast/silent onmixed unlocked+lockedfixture; compare referenceproperties, layerflagsandlayer-tablebefore/after. Expectplainrefusal,no newtargetlayer, no movedreferences. Retestnormalunlockedcase/oneUndo separately.
 7. **Ownership / status:** Claude command/service lane; distinctfromABSBUG583. OPEN; nofixbuilt/installed/accepted.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-618
 
@@ -11163,6 +11194,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence / guard:** xref-settings-copy-case-ledger.json XC-06FAIL/screens1042–1045/nativepropertyexport. Clipboardabsentbefore/after; host/source/settingsfilehashesunchanged. PositivecontrolsCXREFEscapeandPXREFemptyclipboardrefusalpass. RepeatonsamefixtureandminimalfreshnativeXref, tracefailurewithoutbypassingprotection. Comparefullcopy/pasteproperties/Undo/save-reopenafterrepair.
 6. **Ownership / status:** Claude command/service lane NativeCopyPasteXrefService. OPEN; nofixbuilt/installed/accepted.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-619
 
@@ -11173,6 +11205,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence / positivecontrol:** hatch-audit-change-case-ledger.json HA-01/HA-03FAIL;1048–1058/twonativeexports/proof. Fullnativeentgetincludingxdata forall24hatchesmatchesexactlyTaftereachfailure; total105/24unchanged. AuditEscapeatmodepromptpasses. Controls1/1/5/0restored. No repair-mode/Undo/fullworkflowacceptance.
 6. **Guard / next:** ReproduceonthisfixtureandminimalfreshCH/BLHhatches; captureunderlyingerrorwithoutchangingusergeometry. VerifyReportonmixedstandard/custom/unsupported/protectedhatches; Applypreset/Cancel/Undo/Redo/save-reopen separately. Do notinferrootcausefromsameerrorwordinginCXREF618.
 7. **Ownership / status:** Claude command/service lane HatchUpgradeCommands; OPEN. No fixbuilt/installed/accepted.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-620 — FASTSAVE still purges and moves Xrefs before saving
 
@@ -11217,6 +11251,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 9. **Diameter cancellation follow-through,15 October2026:** RD → Diameter → select native circle → Escape at placement preview preserves all155 captured ordinary records/Xdata. DIMSTYLE still changes Standard → TIM LEADER while the other eight staged controls match. AE-01/02, screenshots1315–1316 and arc-edit baseline/cancel readbacks extend BUG621. Originalninecontrols and rememberedLength restored; exactpreferences/sourceDWG preserved. No repair installed.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-622 — MLL and MLR reject the approved F side-toggle
 
 1. **Status / area:** MEDIUM OPEN. Structural annotation, approved ST-03 decision ST3-6. Actual AutoCAD2027; installedStructural1.0.116+f180b349, DLL SHA47B7E010C607109F8CEDA56771F38B888F28F2DB29A55A9B2BFD83578BE5A388. Claude command/service ownership.
@@ -11228,6 +11264,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 7. **Test that catches it:** start each side; F switches once, F again switches back. Text, arrow point and paragraph breaks remain identical. Place after flipping and inspect native object, one Undo/delayed Redo and save/reopen. Escape after either flip adds no object.
 8. **Real AutoCAD confirmation:** on an owned metric drawing at1:100 with2.5mm text/3mm arrows, MLL→arrow→two-line note→F→click right; MLR→arrow→note→F→click left. Both previews and saved results must face the new side. Repeat supported scales, rotatedUCS/paper space and protected-layer refusal. Whole ST-03 remains unaccepted.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-623 — Q note is blank inside native text editor on the tested fixture
 
@@ -11246,6 +11283,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Codex V1-03 (20 Oct, 3.0.65) and V3-05 (21 Oct 2026, Civil 3.0.66), DP1 label: NOT a new bug, a third place for this one.** Double-click on the green DP label of a Detention Pit (DP1) enters TEXTEDIT (in-place text editing) and the command history shows "** Undefined shape 68" and "** Undefined shape 80", three of each, alternating. Esc twice, nothing typed, nothing changed. The desk checked the carpark: the same message family is already filed here (Q note, BUG-396 Pit Schedule cell: shapes 80 and 50) and in the 14 Oct Codex report; this is the first time on a plain CE label and the first time shape 68 is named. A plain label showing it points away from Q/leader-only causes toward the font the drawing's text style uses (an SHX shape font), which is what the first diagnostic was already investigating; no new id filed. Same drawing context: the DP1 block double-click prints the Set/Remove prompt (Action for tag "DP1" [Set/Remove] <Set>:), no window, and a nearby pipe opens Edit Pipe (see ROBOT_GAPS_2026-10-19.md item 5; lane 03 is building the DP edit window). Evidence: CODEX_VERIFY_V3_20261021_0259.md item 13 (V3-37-DP-label-SEEN-0.png). Not FIXED.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-624 — MLL left-side placement puts the note right of its arrow
 
@@ -11257,6 +11295,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Repair responsibility:** Claude command/service owner; no production edit, dispatch or deployment in this batch. Inspect MLeaderCalloutService layout/text extents/side placement under captured controls. Preserve working multiline, three-stage Escape, exact state restoration and one Undo/Redo. Do not globally rewrite existing styles or bypass protected layers.
 7. **AutoCAD fix confirmation:** use owned synthetic metric drawing, stage1:100/2.5mm text/3mm arrows; MLL arrow→two-line note→click clearly left. Preview and output must agree at chosen point. Repeat MLR right, long/short notes, native edits, snaps on/off, supported scales/UCS/paper/protected layers, Undo/Redo and reopen. Do not call full ST03 accepted from one placement.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-625 — Level Update overwrites ordinary notes without recognising a CE level mark
 
@@ -11268,6 +11307,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Repair responsibility:** Claude command/record owner. LevelMarkCommands.cs inspected bytes match installed f180 source; selection accepts TEXT/MTEXT and directly writes each selected object. Use recognised ownership/source relationships, not proximity, loose type filtering or a window-only warning. No production edit, dispatch, build or install in this batch.
 7. **Real AutoCAD confirmation:** place an ordinary note beside a genuine CE level mark on an owned copy. LMU must preserve the ordinary note, show the recognised affected set and proposed value/source, then change only that set after Apply. Cancel at each stage; verify one Undo/Redo, reopening, locked/Xref/REFEDIT protection and both supported runtime lanes. Existing notes must never become levels accidentally.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-626 — FFL bypasses the approved source review and complete placement preview
 
 1. **Status/severity:** OPEN / MEDIUM. Real AutoCAD2027 / Structural1.0.116/f180,15October2026; approved ST3-7. Existing V3 implementation gap, not claimed a recent regression.
@@ -11276,6 +11317,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** installed flow is point→side→value→immediate drawing output. It offers no source/Manual choice, no complete following preview, no placement F stage or final placement click. A readable triangle/tail/12.345 is drawn, but that does not fulfil the approved workflow. No claim that blank input invents zero; that case was not run.
 5. **Evidence/guard:** levels-case-ledger.json LV-04/05/06; screenshots1198/1201–1205 and ffl-output-native.txt. Native F42polyline/F43line/F44text are created; immediate one Undo and quiet66.046-second Redo pass.
 6. **Repair/confirmation:** Claude command/service/compound owner; no code edited or deployed. Replay trusted-source and Manual paths, readable complete preview, F both ways, Escape at every prompt, one Undo/Redo and reopen. Repeat FFL/RL/SSL/NGL, scale/current-space/UCS and protected content. Preserve working entered-value and recovery paths.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-627 — Moving an FFL triangle leaves its tail and level value behind
 
@@ -11286,6 +11329,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** levels-case-ledger.json LV-07; screenshots1206–1209, ffl-output-native.txt and levels-before-save-native.txt. Require equal displacement for all owned mark components after normal MOVE and retained relationships after reopening.
 6. **Repair/confirmation:** Claude native compound/record owner; no production repair installed. On an owned copy, move by triangle, tail and label separately; each must carry the recognised whole set. Verify COPY fresh identity, edit, safe erase, Undo/Redo and reopen while unrelated nearby text stays untouched. Repeat remaining level-mark types/protection/units/scales/UCS/paper and older releases.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-628 — Breakline zigzag does not scale consistently at 1:50
 
@@ -11297,6 +11341,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** FAA at20 has40mm half-height/40mm width/30mm extension; FAB at50 has the same40/40/30; FAC at100 has200/200/150. Therefore50 would plot0.8/0.8/0.6mm, only40% of the reference size. This is native geometry plus scale arithmetic; no physical/PDF plot inspected.
 5. **Evidence/guard:** breakline-case-ledger.json BL-05;1223/1224, breakline-scales-native.txt. All four output records survive actual save/close/reopen. Source BreaklineCommands.GetBreakDimensions special-cases100 and otherwise returns20 sizes. Claude command/geometry owner; no production edit or install.
 6. **Fix confirmation:** use copies; place BL at20/50/100 and another supported scale; compare measured and plotted zigzag dimensions, clean single-polyline output, preview, Escape, Undo/Redo, rotated UCS/current-space/protection and reopen. Preserve simple two-point workflow.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-629 — Paper-space BL writes its breakline into model space
 
@@ -11310,6 +11356,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 7. **15October2026 native text extension — OPEN:** typed25C on Layout1/PAPER, nativeCTABLayout1/TILEMODE0/CVPORT1 andDIMSCALE1 before/after; entered PAPER NOTE and physicallyclicked500,700 outside the model viewport. Command silentlycompleted, sheetnoteabsent. NewTEXT893 has410Model/67=0,height2.5,25TEXT/Standard/0deg; all53existingordinaryrecordsunchanged. This broadens the observed wrong-space symptom beyondBL; no assertion that ST3-11 itself governs text. Expected text placement is on the clicked sheet or a visible refusal. text-paper-case-ledger.json TP-01/screens1432–1435/nativebeforeafter. Actualplot/activeviewport/UndoRedo/reopen unexecuted. Claude behaviour owner; nofix/deploy.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-630 — Section mark bypasses the approved complete preview and placement review
 
 1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/installed Structural1.0.116+f180,15October2026. Approved ST3-9; existing V3 implementation gap, no recent regression claimed.
@@ -11319,6 +11367,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** sectionmarks-case-ledger.json SM-02;1234–1239. Source SectionMarkCommands follows that order and directly creates entities after sheet input. Claude command/preview owner; no edit/dispatch/install.
 6. **Fix confirmation:** drive approved full sequence with readable complete preview, both directions, Enter/Escape at every stage, final confirmation, one UndoRedo and reopen; scales/UCS/paper/protection/older runtime. Preserve working output data and simple placement.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-631 — Moving the section cut line leaves both bubbles and references behind
 
 1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-10 compound editing.
@@ -11327,6 +11377,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** only cut line moves; both end markers and A/S02 labels remain. Native U MOVE restores original arrangement; full11component record comparison returns T. Trial restored before save, no saved split specimen claim.
 5. **Evidence/guard:** SM-05/06;1240–1243 plus section-output-native.txt/section-before-save-native.txt. Require equal displacement across owned components after ordinary selection, with unrelated nearby objects unchanged. Claude compound/record owner; no repair installed.
 6. **Fix confirmation:** MOVE from line/bubble/label, COPY fresh identity with duplicate-reference confirmation, edit, safe erase, UndoRedo/reopen and protection/UCS/space/scale matrix. Do not solve with broad nearby-object selection.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-632 — Section identifiers are partly hidden against the filled bubble half
 
@@ -11339,6 +11391,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** SM-04;1239/1243/1244 and full output/reopen records. Check both dark/light actual drawing and exported plot with single/multi-character identifiers and all directions. Claude drawing-output owner; no competing window-only repair or install.
 6. **Fix confirmation:** complete identifier and sheet must remain legible at approved paper size with both half-fill directions, through MOVE/COPY/scale/edit, one UndoRedo and reopening. Confirm intended bubble text positioning against approved drafting presentation before geometry changes.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-633 — DSET refuses an ordinary native linear dimension
 
@@ -11348,6 +11401,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Evidence/guard:** dimrepair-case-ledger.json DR-01; screenshots1247–1251/1253 and dimrepair-baseline-native.txt.
 5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. After repair, select native aligned/rotated dimensions through both line and text, including preselection; refuse other objects safely. Verify review/Cancel/Apply, protections, one UndoRedo and reopen.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-634 — DSET1 converts an unrecognised dimension style without controlled review
 
@@ -11357,6 +11411,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Evidence/guard:** dimrepair-case-ledger.json DR-02; screenshots1252–1254, dimrepair-baseline-native.txt/dset1-result-native.txt.
 5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. An unrecognised style must remain unchanged and be reported. On supported styles, review only selected scope and apply explicitly. Check leaders/mixed objects/protection, every Escape stage, one UndoRedo and no forced save.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-635 — DSET1 reports conversion but displayed measurement stays unchanged after reopening
 
@@ -11368,6 +11423,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 7. **Recognised CE style now reproduced,15October:** nativeTIM LEADER110B,5000mm geometriclength,selectedwith1118factor0.5. DSET1reportsConverted1Skipped1;immediateCtrlZacknowledged,CtrlYafter51.691secondsrestoresnative0.2overrideonlyon110B. Visibleandanonymousgraphics\\A1;5000persistafterexplicitREGENandactualsavecloseopen. AllthreecompleteDIMENSIONrecords/eligiblegraphics/lockedlayer/nineoriginalcontrols match afteronlysession-addressnormalisation. Thisremovesunknownstyleasnecessaryprecondition;rootcauseunproved. dimprotection-case-ledger DP-03;1283/1285/1286/1292–1295. Skipped0.5recordunchanged;noPDFphysicalplot.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-636 — DUP changes unselected dimensions across the drawing without controlled review
 
 1. **Status/severity:** OPEN / HIGH. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-12 forbids accidental whole-drawing conversion and requires unknown styles unchanged/reported.
@@ -11376,6 +11433,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Observed:** immediately reports setting0.2 on8dimensions and changing one scale20 dimension. Native readback confirms all8dimensionrecords changed across Standard/TIM LEADER/CODEX_UNRECOGNISED; unrecognised1098 gains100scaleoverride. DIMSCALE20→100/LTSCALE1→1000. No selected scope/Preview/Apply; no unknown-style report. Two unrelated note changes separately637.
 5. **Evidence/guard:** dimcancel-case-ledger.json DC-04;1269/1270/1275/1276;dup-before-native.txt/dup-after-native.txt. DUP did not forceSave in this sample withSAVETIME0; DWG hashunchanged. Immediate U acknowledged; after delayedRedo/secondU complete native object/control baseline equalityT. Full postRedo record equality unproven.
 6. **Repair/confirmation:** Claude command/native writer owner; no competing production edit/install. Review only explicitly selected scope, preserve/report unknown styles and foreign/protected objects, cancel unchanged, Apply asoneUndo; verify saved-file hash until drafterSave, actual plot and reopening across model/paper/scales/UCS/older releases.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-637 — Running DUP also rewrites unrelated pit-schedule remarks
 
@@ -11386,6 +11445,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** DC-09;1275/1276;dup-before-native.txt/dup-after-native.txt. Native secondU restores the full original entity/control snapshotT (dup-undo-native.txt); sourceDWG unchanged after normalcloseNo. Changed state was not saved/reopened or plotted. Existing schedule typing/layout bugs586/587 are separate triggers; sharedcause not established.
 6. **Repair/confirmation:** coordinated Civil schedule/Structural command owners. A dimension-only command must preserve exact unrelated notes and overrides through command/REGEN/UndoRedo/save-reopen. Exercise schedules with custom remarks, generated warnings, paragraphs/capitalisation and changed pit data; legitimate schedule updates remain an explicit separate case. No fix built/installed.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-638 — DSET1 opens an unhandled-error dialog when a dimension is on a locked layer
 
@@ -11396,6 +11456,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** dimprotection-case-ledger DP-05/06;1287–1292;dimprotection-after-redo-native.txt/dimprotection-locked-after-native.txt. Validunlockedconversion/skippedfactor control testedbefore. No Xref/REFEDIT/mixedlockedbatch verdict.
 6. **Repair/confirmation:** Claude command/native-owner; no sourceedit/install fromthischat. Check/refuse protectedtargets beforewrite, present plain draftingfeedback, and preserve normalnativeprotections/transactionrollback. Test locked-onlyandmixedeligible/locked selections,cancel,oneUndoRedoandactualreopen. Never silentlyunlock or bypass. Stack corroborates write-openfailure; broaderrootcauseaudit remains.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-639 — Historical workflow-card index has eleven unresolved local document links
 
@@ -11406,6 +11467,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Evidence/guard:** currentcoverageindex authorityInventoryAudit.historicalCardIndexReferenceAudit lists all11writtenlinks andcandidatepaths withsourcehash. Re-resolve all45references; each must eitherreachtheexactsourceorcarryanexplicitdatedsupersession/currentpointer. Checksemantics/hash/provenancebeforecalling anarchiveequivalent.
 6. **Repair/remainder:** preservethecopiedhistoricaltext;correctnavigationthroughreviewedcurrentpointers or a clearlylabelledoverlay, coordinatedwithplanowner. Ownreportnowlinksthecurrentmastermap/separateshistoricalrecords;the11originallinksremainOPEN. No nativecheck/percentagecredit, no duplicateplan or commandapproval created. **16 October source recovery:** the five exact missing foundation records FND-01/CT-01/TH-01/RS-01/PD-01 are present under docs/workflows at immutable CE_ACAD_PLUGIN revision48662dddb2dc36d09a121642f36aecc2465cc673. All five canonical ID headers match;75 numbered decisions are now source-indexed with hashes and line locations. The local written targets and eleven original links remain unresolved; this does not accept the whole bug or substitute old implementation claims for current native evidence. Coverage index canonicalRequirementInventory records the exact Git-object provenance.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-640 — RD asks for dimension type before selecting the geometry
 
@@ -11415,6 +11477,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Evidence:** arc-modes-case-ledger.json AM-09, screenshots1299/1300/1305; original card source retained. Native quarter-circle1571mm and circle diameter2000mm outputs, recovery and save/reopen are separate bounded passes, not acceptance of the prompt order.
 5. **Repair guard / native confirmation:** preserve working native output and remembered type while implementing the reviewed geometry-first flow. In AutoCAD, select an arc/circle first, then choose each applicable mode, inspect the native preview and click placement. Escape at every stage must add nothing and restore drafting controls; unsupported geometry needs a clear refusal. Retest association, oneUndo/delayedRedo and save/reopen.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-641
 
@@ -11552,6 +11615,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 7. **16 October AGI storage evidence:** AGI1 likewise appears in pits[] with pitTypeAGI,450mm x/y and spsRadius900; actual line handle936 and outlet211/P2 are stored. This extends the CV4-3 real-asset storage failure only. Native AGI MOVE/COPY and child ownership were not tested. Evidence: agi-case-ledger.json AG-08, screenshot1458 and agi-accepted-nod.txt. **CDFW integration follow-up:** on16October typedCDFW plus a clear canvas pick refuses placement because SD1 and AGI1 are reported as two pits without CE identities, directing CDSPINEUPGRADE. Both were created by this installed plugin. Escape leaves71ordinary records and the post-first-Cancel project unchanged. This extends the same fake-pit/shared-identity gap, not permission to upgrade the drawing. Evidence: floor-waste-case-ledger.json FW-04/screens1470–1471. StableFWnumbering/ownership remain untested here.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
 ## BUG-648 — AG drain grade is checked but never labelled on the drawing
 
 1. **Status / priority:** OPEN / MEDIUM. Real AutoCAD2027, Civil3.0.49+48662ddd; native placement15October, recording16October2026. Approved UX-SURF-04 says grade check and label; no full hydraulics. Claude owns behaviour.
@@ -11559,6 +11624,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 3. **Expected / observed:** a10m AG run with a visible grade label. Preview reports1:50 and stores that grade text, but Accept adds only LWPOLYLINE936; no TEXT/MTEXT or other label entity. All70old ordinary records and14staged controls remain unchanged. AG_LINE contains its AG lettering definition; this is the missing grade label, not a missing AG glyph or older perimeter PD tag BUG217/236.
 4. **Guard / confirmation:** repeat this exact run after the authorised repair; the accepted plan must visibly show its1:50 grade, associated with the run. Verify no duplicate label after edit/Undo/Redo/save-reopen and correct plotted paper height. Compare reverse/flat/unknown grades separately.
 5. **Evidence / limits:** agi-case-ledger.json AG-07;1458_agi_accepted.jpg; agi-accepted-native.txt and decoded NOD. Source at the commit named by installed DLL corroborates AG label creation returning null; source is not reproducible binary proof. No code/build/deployment or plot check here.
+
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-649 — AG drain rising towards its selected outlet receives a passing grade verdict
 
@@ -11568,6 +11635,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 4. **Guard / confirmation:** run the descending and rising pair with identical10m path and selected outlet. Descending control may retain its1:50 result; rising case must visibly warn about direction and must not receive a passing fall verdict. Repeat flat/unknown levels, switched outlet and save/reopen after an authorised repair. Engineering acceptance of office minimum values remains Tim’s call.
 5. **Evidence / limits:** agi-case-ledger.json AG-11;1463_agi_reverse_grade_preview.jpg visibly shows both levels and verdict. Preview was cancelled; all71accepted normal objects,14original controls and decoded project remain exact. Whole NOD equality across the intervening save is not claimed. Source at48662ddd uses absolute level difference, corroborating a direction-loss hypothesis; not compiled-binary proof. No fix/build/deployment.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-650 — Cancelling CDFW clears existing pit invert records before any placement
 
@@ -11579,6 +11647,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 6. **Independent control —16 October2026:** without SD1 or AGI1, typedCDFW plus physical clear-point pick successfully placesFW1 and still clears both existing pitinverts. One native U CDFW restores all52oldordinaryrecords/14stagedcontrols and the exact original decodedproject, including both inverts. CtrlY after73.893seconds and one intervening read-only capture restores the placed state exactly. This confirms the level-loss trigger also occurs on placement; it is not caused solely by the mixedsurface refusal. Existing pipe2C3 gains from/toSpineKeys; its invert values stay exact. These identity additions are not level loss. Evidence: floor-waste-control-case-ledger.json FC-03/04/05, placed/undo/redo native and NOD captures. Saved-reopen qualification,16 October2026: floor-waste-reopen-case-ledger.json FR-01 reopens the exact saved control (162116 bytes/SHA9F1EE7DA). FW1/FW2 bodies/labels/source identity graphs persist; both pit invertLevel strings return to20.000/19.800, with all other decoded project fields exact. Thus earlier in-session blanking remains confirmed, but permanent loss is not established. Save versus reopen recovery timing and downstream use need isolation. Status remains OPEN; no fix or deployment. CDSOURCE extension,16 October2026: generic-source-case-ledger.json GS-02 proves typing CDSOURCE then Escape at the first Source type category question also blanks P1/P2 invertLevel20.000/19.800 before any pick. All56ordinary records/14staged controls remain exact; only other decoded project change is drawingPath. Later roof-drain placement preserves that post-Cancel project state; oneUndo removes source+label without undoing the earlier Cancel blanking. Guard: repeat categoryEscape and require both stored inverts unchanged. Existing saved-reopen recovery qualification still applies; no permanent-loss or fix claim.
 
+**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-697
 
@@ -11755,7 +11824,7 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Symptom:** Every double-click on any block with attributes scans every block in the drawing; in a survey drawing with thousands of point blocks this will lag. BUG-859 round 2 (#1522) keeps the same scan in its first form.
 
-**Status:** OPEN (to review with BUG-859 round 2)
+**Earlier status (superseded by the later Status line below; tidy 29 Oct 2026):** OPEN (to review with BUG-859 round 2)
 
 ## BUG-CDCHECKIGNORE-UNDO-C60
 
