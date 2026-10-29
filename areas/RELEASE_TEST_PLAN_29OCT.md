@@ -135,3 +135,10 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 4. **Decisions E:** answered by Tim: freeze content (latest, Fri 6 Nov), frozen-copy folder (`CE V3 PILOT`, view to Max only), gate settings (item 1 confirmed; items 6 and 7 out), BUG-905, BUG-1097, BUG-1095/1091/1088 (build all). Open: old-files move, pack approval, Max's rights and date, rehearsal PC, BUG-1189, 1149, 685, 1148, the settings-switch re-test point.
 5. **B9 (Max-like run):** still wanted, one full pass on the freeze candidate.
 6. **Pass line, item 4 and 5:** the answered engineering words no longer wait on Tim; BUG-905 and BUG-1097 need only their builds and checks.
+
+## 11. UPDATE 29 Oct (CE 02's second 2027 PC route and Tim's answers 35 to 55)
+
+1. **New check B10, pipe-object switch:** `options.pipeObjectUpgrade` is Automatic by default = on only for Tim's Windows login. Every robot test, Codex look and hand check so far ran with it effectively ON. B10 = one full pass on a different 2027 login with it on Automatic (what Max gets unless Tim says On, QUESTIONS item 40), on the Sat 7 or Sun 8 Nov pre-pilot re-test, plus normal runs with it On. The 20 cases that name the pipe object read differently on Automatic. This replaces the Max-like run on Tim's own account for B9's purpose (B9 stays as the add-ins check).
+2. **Tim's pilot-critical rulings are all answered** (scoreboard section 3 item 7). The no-fix 27 are now builds to prove, not questions: robot cannot prove the engineering five (BUG-905, 1097, 1095, 1091, 1088) today; CE 02's ENGINEERING_FIX_PROOF_PLAN proposes three Codex looks, each with the pre-fix build as the broken twin; BUG-587 (two-row-thick row with a wipeout mask) and the pit snap glow and long-section water line need a picture first (RULES 5.2), which is a Codex look.
+3. **Page 04 lines Tim asked for:** BUG-1148 ("check the pit after pasting from a stage drawing"); BUG-1209 and BUG-1210 as a note for older years; BUG-685 is a note, not a known problem.
+4. **Old July install files (gate 4):** before the move, ask whether any colleague still installs from them; delete-review date proposed Mon 14 Dec.

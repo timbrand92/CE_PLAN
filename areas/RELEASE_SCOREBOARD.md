@@ -1,7 +1,7 @@
 # Release scoreboard: Civil + Manager pilot hand-over to Max
 
 **Owner:** CE 07 Release. One file, refreshed at least hourly. Others read it, they do not edit it.
-**Last refreshed:** Thu 29 Oct 2026, 12:02 Melbourne (PC clock; session list times agree). One ledger entry (H15) says "about 12:55"; that is a typo for about 11:55.
+**Last refreshed:** Thu 29 Oct 2026, 12:31 Melbourne (PC clock; session list times agree). Ledger entries H15 to H19 carry times about an hour ahead of the PC clock (for example "about 13:40" at 12:29); I use the PC clock.
 **Schedule in force:** Tim's ruling "option b" (decisions\2026-10-29_TIM_RELEASE_FREEZE.md): **freeze Fri 6 Nov, pilot Mon 16 Nov.** Mon 9 Nov is no longer the target.
 **Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never Tim's word. Unknown stays Unknown.
 
@@ -19,8 +19,10 @@
 4. **Installed right now (I read the files):** Civil 3.0.85 and Manager 1.1.85, commit 09126560, in all three folders (Legacy, Modern, Net8). Unchanged since 00:21 today. Next build C-76 is assembled but not installed.
 5. **What is not moving:** the C-77 build jobs. Of nine, only one (B-006) has a log file, and it is empty since 10:20; the other eight have a brief but no log. Friday night's install of C-77 is at risk unless more start soon. I have asked CE 01.
 6. **Your answers this afternoon (decisions\2026-10-29_TIM_ANSWERS.md items 24 to 34) change the plan:** Max is on AutoCAD 2022 today and will have 2027 before the pilot, so the pilot is **2027 only** and nothing is installed on his PC until 2027 is in; the frozen copy goes in a separate `CE V3 PILOT` folder shared "can view" to Max only; the freeze is the latest build on Fri 6 Nov; BUG-905 is ON (0.9), BUG-1097 uses the head left after losses, and BUG-1095, 1091 and 1088 are all built before the freeze; the 2026 laptop is dropped (you will get 2027 on another PC) and you will organise the spare ordinary Windows login.
-7. **Still needs you, through CE 04:** **when Max moves to 2027 and whether he can install programs** (the pilot cannot start before his 2027 is in: new item 36); **which PC has the ordinary login and when it is ready** (item 37); the old-files move (item 25); one-pass approval of the pack; your rulings on BUG-1189, BUG-1149, BUG-685 and BUG-1148; your word on Fri 13 Nov.
-8. **Nothing has been published, copied or sent to Max.**
+7. **Since then you also answered (items 35 to 55):** the settings-switch re-test point (yes); the pipe sizer, rainwater reuse and long-section dashed stretch (yes, build); BUG-1189 (keep as built) and BUG-1149 (keep the yellow); BUG-685 (keep 10 mm rounding, one line says so); BUG-1148 (known limit, one line on page 04); AG drains carry no text at all; the old July install files (move now, delete later on a dated timeline, proposed Mon 14 Dec); Max's 2027 "yes" (by about Fri 13 Nov); the other PC "tomorrow maybe". **All six pilot-critical engineering rulings that were waiting on you are now answered.**
+8. **A NEW FINDING for the release (CE 02, TEST_PC_2027_ROUTE_29OCT.md):** CE's one-piece pipe object (what every robot test, Codex look and hand check so far has used) is switched on only for YOUR Windows login. On Max's login it is "Automatic" = off, so Max would get ordinary pipes, not the ones tested. 20 robot checks name the pipe object. Recommended: switch it On for Max's pilot set-up and run one full test pass on Automatic as well. This is your call (new question 40).
+9. **Still needs you, through CE 04:** Max's install rights (his 2027 date is "yes, by about Fri 13 Nov"); which PC is the second 2027 PC and when it is ready (item 37); the pipe-object switch for Max (item 40); two words on the test PC (items 38 and 39, asked by CE 04); the one-pass pack approval; whether any colleague still installs from the old July files before they are moved; your word on Fri 13 Nov.
+10. **Nothing has been published, copied or sent to Max.**
 
 ---
 
@@ -46,7 +48,7 @@
 1. **Item 1, administrator set-up on Tim's PC (BUG-476): DONE and CONFIRMED BY TIM** (29 Oct: "Recommended: yes to both", answering question 26; Codex W53 PASS 3 of 3 on 10 Oct). Just closed. Other PCs not shown.
 2. **Item 2, Roll Back hidden (BUG-477, BUG-441): OPEN.** Records disagree. Needs a Codex look at Manager (C2).
 3. **Item 3, update route or reworded messages (BUG-478): OPEN, decided.** Updates by hand during the pilot.
-4. **Item 4, old install scripts moved (BUG-483): TIM'S CALL.** Question 25.
+4. **Item 4, old install scripts moved (BUG-483): TIM SAID YES, NOT DONE.** Tim (29 Oct): "yes - set a timeline to delete". Move five items to an OLD folder first (nothing deleted); proposed delete-review date Mon 14 Dec (a guess for Tim to change). Before moving, ask whether any colleague still installs from them. Open until the move is done.
 5. **Item 5, fault report and CEMANAGERDIAG code the login (BUG-488): OPEN.** Fallback: Max told not to press them.
 6. **Items 6 (BUG-495) and 7 (BUG-496), Structural only: OUT OF THE GATE** (Tim, 29 Oct: Structural stays on his PC only). The bugs stay open for Structural's own release.
 7. **Item 8, units (BUG-505): OPEN.** Tim said yes 29 Oct; B-010 queued, not started; robot cases C35, C36 not recorded passing.
@@ -64,7 +66,7 @@ Gate score: **1 of 9 done / 8 open.** Done: item 1. Open: items 2, 3, 4, 5, 8, 9
 4. **No fix: 27.** Queued B-016 to B-032; none started as of the build register. Under schedule B they go in the freeze candidate if reviewed by Thu 5 Nov.
 5. **Exit rule for 16 Nov:** each of the 60 is closed, written on page 04 as a known problem with a workaround, or switched off.
 6. **Robot-provable by Fri:** P01 and P02 tonight; up to 4 to 6 more by Sat 31 Oct if CE 02's four runner changes and four test drawings land (CE 02 confirms Friday midday).
-7. **Tim answered 29 Oct:** BUG-905 yes (0.9, fix ON in the next train); BUG-1097 the head left after losses (PR #1772 to change; still a warning); BUG-1095, 1091, 1088: build all three before the freeze. **Still waiting on Tim's word:** BUG-1189, 1149, 685, 1148.
+7. **Tim answered 29 Oct (TIM_ANSWERS items 30 to 55):** BUG-905 yes (0.9, ON); BUG-1097 head left after losses (warning only); BUG-1095, 1091, 1088 build before the freeze; BUG-1099 yes (read as yes: council time of concentration for storage, office 5 min for the pipe); BUG-1096 yes (rainwater reuse boxes); BUG-1192 yes (dashed stretch and note); BUG-587 not the recommended answer (reduce line spacing, or a two-row-thick row with a wipeout mask like Structural's XCLMTXT; picture first); BUG-648 AG drains carry no text at all; BUG-685 keep the 10 mm rounding with one line saying so; BUG-1148 known limit (one line on page 04, fix after a workflow card, so it stays unfixed for the pilot); BUG-1189 keep as built (PR #1756); BUG-1149 keep the yellow (PR #1767); BUG-525 the long-section water line may stay blue (picture first), pit snap glow turns gold. **Nothing is waiting on Tim for the pilot-critical list now; the work is building and proving.**
 8. **Scope (carpark, CE 02):** BUG-1209 and BUG-1210 apply to AutoCAD 2022 to 2026. Max is going to 2027 (Tim, 29 Oct), so they stay on page 04 only as a note for anyone on an older year. I have not re-read the entries.
 
 ## 4. Everyday tools (the 40; EVERYDAY_TOOLS_STATUS_29OCT.md)
@@ -99,7 +101,9 @@ Gate score: **1 of 9 done / 8 open.** Done: item 1. Open: items 2, 3, 4, 5, 8, 9
 
 1. **Hand install on a normal login rehearsed: 0 of 2.** Rollback rehearsed: 0 of 1.
 2. **Test PC (Tim, 29 Oct):** the 2026 laptop is dropped; "i will get 2027 on another pc" and "i will organise" the ordinary login. The office has spare AutoCAD licences (year and who assigns: not stated). No rehearsal starts until Tim says the login exists and which PC. This is the 2027 normal-login rehearsal I needed; it also suits the robot (built for 2027). Needs an unlocked live desktop, no lock or sleep (CE 08). **CE 02's answer (12:35): YES, the second 2027 PC can run the robot nightly and the Codex looks,** provided (a) step 4b holds (an unlocked desktop Windows thinks has a monitor, no lock or sleep, auto-login set by Tim or the office admin, tscon before leaving a remote desktop), (b) the office gives it its own AutoCAD seat so a robot start cannot sign Tim out, and (c) about half a day of reviewed runner changes lands first (the working-hours stop becomes a per-machine setting, hard-coded C:\ paths and the profile name "Tim", the machine name in each run header, pointer calibration checked on three cases; an estimate). The exact list is coming in areas\TEST_PC_2027_ROUTE_29OCT.md (about 30 minutes), and the engineering proof plan in areas\ENGINEERING_FIX_PROOF_PLAN_29OCT.md. The robot still refuses to start beside another acad.exe on the same PC.
-3. **Max:** AutoCAD 2022 today, 2027 before the pilot (Tim). The pilot is 2027 only; nothing is installed on his PC until his 2027 is in; his install rights, the date of the upgrade, folders, old Structural and Manager version are Unknown.
+3. **Max:** AutoCAD 2022 today, 2027 before the pilot (Tim: "yes", read as by about Fri 13 Nov). The pilot is 2027 only; nothing is installed on his PC until his 2027 is in; his install rights, folders, old Structural and Manager version are Unknown.
+4. **Second 2027 PC (CE 02, TEST_PC_2027_ROUTE_29OCT.md):** about 3 working days from Tim naming the PC, about 45 minutes of his time; if named by Fri 30 Oct the first proof runs Wed 4 Nov and the PC joins the Sat 7 and Sun 8 Nov pre-pilot re-test. Tim: "tomorrow maybe" (not planned on). Its results count as normal 2027 passes. The office admin creates the ordinary login ("CE Test"), no sleep or lock, auto sign-in. Two words needed from Tim: the "Tim is drafting" hours do not apply on a PC Tim never uses; a Codex look there counts as "Codex-accepted (test PC name)" (items 38 and 39, already asked).
+5. **Pipe-object switch (the finding in FOR TIM item 8):** `options.pipeObjectUpgrade` is Automatic by default = on only for Tim's Windows login. The test PC and Max's login read Automatic = off = ordinary pipes. The plan: run the test PC with it On for normal runs and one full pass on Automatic (exactly what Max would get unless Tim says On for Max).
 4. **Dependency I am raising:** if Max's 2027 is not in by about Fri 13 Nov, the 16 Nov hand-over cannot happen on his own PC. The date of his upgrade is a new question for Tim (item 36).
 5. **Tim's PC all-users folder (read earlier):** the stale Manager 1.0.0 in C:\ProgramData is disabled (PackageContents.xml renamed), not removed.
 6. **Colleague pack:** change list ready (RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md): 97 changes, 12 decisions. Wrong as drafted: "drawings are safe either way" after a rollback (BUG-1135). Approval Mon 9 Nov once the freeze list is known.
@@ -110,11 +114,11 @@ Gate score: **1 of 9 done / 8 open.** Done: item 1. Open: items 2, 3, 4, 5, 8, 9
 2. **Mon 16 Nov: at risk, fair chance.** For: 5 working days to build, 11 days of re-tests, tools rising (19 to a likely 26 to 30), Tim's 12 hand checks mostly passed. Against: 0 of 60 pilot-critical closed and the robot reaches only 2 of 26 installed fixes; nine C-77 jobs barely started; one big last train; no rehearsal machine yet; Max still on 2022 with his 2027 date unknown.
 3. **What turns it to NO:** the C-77 jobs not finishing in time for a Friday-night install, a rehearsal that finds an install fault needing a build, a blocker found after the Fri 6 Nov freeze, or Max's move to 2027 not being in before the hand-over (the pilot is 2027 only), or no ordinary-login PC being ready for the rehearsals.
 
-## 10. Idle, blockers, not moving (12:02)
+## 10. Idle, blockers, not moving (12:31)
 
-1. **Running (session list):** CE 02 (testing), CE 04 (questions).
-2. **Idle:** CE 00 Control Room, CE 01 build (done on #1837; the Team jobs are separate processes), CE 03, CE 05, CE 06 guidebook, CE 08 research.
-3. **Not yet moved:** C-77 jobs B-007 to B-014 (no log); Max's 2027 date and install rights (item 36), the rehearsal PC (item 37); CE 02's runner changes (due Fri); acknowledgements from CE 03 and CE 04 (CE 04 is working); BUG-1209/1210 scope not yet in the pack.
+1. **Running (session list, 12:29):** CE 02 (testing), CE 03 (hand checks with Tim).
+2. **Idle:** CE 00 Control Room, CE 01 build (the Team jobs are separate processes; two C-78 lane chains are waiting for the C-77 lanes), CE 04, CE 05, CE 06 guidebook, CE 08 research.
+3. **Not yet moved:** C-77 lanes (CE 01 expects both done Thu about 17:00 to 20:00; still unconfirmed); the second 2027 PC (item 37, "tomorrow maybe"); Max's install rights (his 2027 date is "yes, by about Fri 13 Nov"); the pipe-object switch for Max (item 40, new); the old-files move (Tim said yes, not done, and the colleague check before moving is not done); CE 02's runner changes (due Fri); acknowledgements from CE 03 and CE 04 (CE 04 is working); BUG-1209/1210 scope not yet in the pack.
 4. **Blockers for Tim:** all in QUESTIONS_FOR_MONDAY.md for CE 04 (items 22 to 37; 31, 33 and 35 are withdrawn because the laptop was dropped).
 
 ## 11. Decision log
