@@ -25,6 +25,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 4. **GB-01 slice 5, pit size by depth on Settings, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1842 (`claude/gb01-slice5-pit-sizes`). The depth table (350/450/600/600x900/900x900) is now `pit.pitSizeByDepth`, blank = Guidebook table, answers unchanged; unusable table falls back with a note; a changed table joins the CDRULES fingerprint. Steps in `PENDING_TESTS.md`. Gap: pipe-fit table and step-iron start still in code; no window row.
 
+5. **GB-01 slice 4, lid class half, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1843 (stacked on 1842). Shared residential driveway = Class B (was C), larger vehicles = C, chart is `pit.lidClassByUse` (blank = Guidebook chart), unknown use class is `pit.lidClassWhenUseUnknown` (blank = C). Pipes under garages NOT built: needs Tim's yes on how CE learns where a garage is (recommended: closed outline on a named Settings layer; none drawn = Unknown). Steps in `PENDING_TESTS.md`.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.

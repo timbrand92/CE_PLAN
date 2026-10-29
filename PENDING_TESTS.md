@@ -1,5 +1,15 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-01 slice 4, lid class (garages half NOT built) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+PR 1843 (stacked on 1842), branch `claude/gb01-slice4-lid-class`.
+
+1. **Driveway is B:** PIT advice on a copy with surface use "driveway" (and "shared residential driveway") proposes a Class B lid and grate. It was Class C.
+2. **Larger vehicles are C:** surface use "trafficable", "car park", "driveway used by trucks" propose Class C. "landscaped" is A; "pedestrian" and "residential" are B.
+3. **Blank or odd use:** blank use, or "garden bed", still proposes Class C.
+4. **Changed chart:** put `lidClassByUse` rows (use words and class A to E) under `pit` in `CD_Settings.json`; the advice follows it. A row with class "F" or no words: the Guidebook chart is used and one note says so.
+5. **Not testable:** pipes under garages (not built; needs a Tim-approved way to know where a garage is); no Settings window row for the chart.
+
 ### GB-01 slice 5, pit size by depth on Settings — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
 PR 1842, branch `claude/gb01-slice5-pit-sizes`. Nothing should look different until the table is changed.
