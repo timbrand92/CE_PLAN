@@ -47,3 +47,8 @@ Checked with `git grep` on `origin/claude/rel-20261029a` (5888ee75, the 3.0.86 l
 
 1. `Services/FallArrowDirectionReviewService.cs`: Checks area 10 (R05 R10 R19 R21); only CDCHECK code uses it (29 Oct 2026).
 2. `Services/LinkService.SourceScanMemo.cs`: sources area 8 (N03 N04 R36) plus copy and move area 7 plus core smoke S3, because the core file `LinkService.Geometry.cs` calls it (29 Oct 2026).
+3. `Helpers/UpstreamDownstreamSuggest.cs`: New Pipe/CD area 2 (called only by `ViewModels/CdViewModel.Inverts.cs`) (30 Oct 2026).
+4. `Services/PipeBuildingOverlap.cs`, `Services/BuildingOutlineReader.cs`, `Services/RulebookPipeLengthReader.cs`: the rules/calculations area (no accepted robot case; proof by Codex look H8) plus the pit-and-pipe-record smoke set S2, because their only caller is `ProjectDataService.RulebookDrawing.cs` (30 Oct 2026).
+5. `Services/PitSelector.cs`, `Services/PitSizeTable.cs`: Pit placement area 1 (called by `Commands/PitEditCommand.cs` and the pit setup advisor) (30 Oct 2026).
+6. `Services/ColleagueDefaultsService.cs`: Settings smoke set S1 (called only by `SettingsService.cs`) (30 Oct 2026).
+7. `Services/CompoundEditModeService.cs`: pipe-object smoke set S8 and core smoke set S3 (called from `LinkService.Reactors.cs`, core, and `PluginInitialization.cs`) (30 Oct 2026).
