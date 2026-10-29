@@ -16972,3 +16972,7 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's pasted command line 29 Oct 2026 (hand check H9 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md). Related: BUG-1229 (rounding of the grade).
 
 **Status:** OPEN (reported through a hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+**Update 29 Oct 2026 (pit catch re-run, hand check H9b):** with the points typed correctly the two pipes were exactly 10.000 m and neither printed a silting warning (1 in 200 exactly is fine). So BUG-1235 is the rounding case: the earlier pipe was a hair flatter than 1 in 200 and the sentence printed '1:200' for both numbers. Wording fix only (show a decimal when the two figures would print the same).
+
+**BUG-1234 second screenshot (29 Oct 2026, hand check H9b, correct 90 / 110 mm pipes):** same look again. The upper pipe's start IL 17.95 sits on the pit's right edge; the lower pipe's start IL 17.95 sits in the gap beside the pit; the lower pipe's flow arrow overlaps its label ('100 DIA. UPVC PIPE AT 1 IN 200', arrow through the word PIPE). So it repeats with ordinary 10 m pipes 300 mm apart, not only with the odd first test. CE printed the tidy-up lines (an invert text moved 240 mm, a label moved 625 mm) so the tidy-up ran; whether it made it better or worse than leaving the texts where they were drawn is not known.
