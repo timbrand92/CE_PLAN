@@ -17370,7 +17370,7 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Symptom:** On a drawing that was closed and reopened (or a second drawing opened) in the same AutoCAD, if CDCHECK is the FIRST CE command, the totals read "212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved" instead of "184 connections: 179 Connected, 1 Possible, 4 Unresolved"; every pipe shows as an unnamed pipe and every pit as a long ID. Any CE drawing command run first (PIT, PIPE, EDIT) makes it right. CDCHECK writes nothing, so the drawing data is not harmed; the check's answer is wrong.
 
-**Cause (from the code and the CE log, NOT yet proven by a run):** CDCHECK reads the pit/pipe record from CE's memory, which still belongs to the closed drawing until a CE drawing command runs; the pipe-to-pit fit check already falls back to the saved list (BUG-589), the connection list does not. Report: C:\CE_PLANreas\R21_MOVE_UNDO_DIAGNOSIS_30OCT.md. Not a 3.0.86 regression and not MOVE then U. Related to Tim's BUG-1240 remark ("i always have to cdsync when i reopen drawing").
+**Cause (from the code and the CE log, NOT yet proven by a run):** CDCHECK reads the pit/pipe record from CE's memory, which still belongs to the closed drawing until a CE drawing command runs; the pipe-to-pit fit check already falls back to the saved list (BUG-589), the connection list does not. Report: C:\CE_PLAN\areas\R21_MOVE_UNDO_DIAGNOSIS_30OCT.md. Not a 3.0.86 regression and not MOVE then U. Related to Tim's BUG-1240 remark ("i always have to cdsync when i reopen drawing").
 
 **Expected behaviour:** CDCHECK gives the true totals on any opened drawing, whichever CE command ran first.
 
