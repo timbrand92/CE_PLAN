@@ -100,7 +100,7 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 2. **Civil and Manager CE_SHARED identical in all three lanes** (CE 07).
 3. **Rehearsals R1, R2 and R3 done;** times and prompt text recorded (CE 07 / spare login).
 4. **Pass line in RELEASE_TEST_PLAN_29OCT.md section 3 all met** (CE 02 reports the robot and Codex lines).
-5. **No new serious bug on Tim's PC since Mon 2 Nov** (Tim's soak; CE 05 carpark check).
+5. **No new serious bug on Tim's PC since the freeze install on Fri 6 Nov** (Tim's soak; CE 05 carpark check).
 6. **Known-problems page final from the frozen build's results** (CE 07 drafts, Tim approves).
 7. **Pack approved by Tim in one pass** (CE 04).
 8. **Max's facts recorded** (year, rights, folders, Structural, Manager, OneDrive, results folder) (CE 07).
