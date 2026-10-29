@@ -280,3 +280,28 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    3. Desk must: move first (nothing deleted); proposed delete review date Mon 14 Dec 2026 (four weeks after the Mon 16 Nov pilot starts; GUESS, for Tim to change); on that date list every file for his yes. Ask Tim whether any colleague still installs from them (he did not say) before moving, and tell colleagues who do.
 
 55. **Card D06 point 3, hide-grade setting (QUESTIONS item 20, card): agreed.** Tim's words: "agreed". Desk must: reword the card so the test turns the grade back on before it ends, and compare the remembered-values file before and after; do not widen the robot's settings protection to that file.
+
+## Batch 10 (afternoon, Melbourne; Structural batch and the test PC rules)
+
+56. **LBH and LBUH hatch scales (QUESTIONS 23 Oct early item 1): Tim gave the numbers.**
+   1. Tim's words: "hacth scale 50 at 1:100 and scale 10 at 1:20. lbuh hacth scale 20 at 1:100 and scale 4 at 1:20".
+   2. Interpretation: LBH (load-bearing wall hatch) pattern scale 50 at 1:100 and 10 at 1:20; LBUH 20 at 1:100 and 4 at 1:20. That is 0.5 times and 0.2 times the drawing scale, so the lines keep the same spacing on the printed sheet. This replaces the "minimum line spacing" recommendation. GUESS: other scales (for example 1:50) follow the same straight proportion (LBH 25, LBUH 10); "hacth" read as hatch. The numbers are Tim's, not assumed.
+   3. Desk must: put these four values on the Settings page (Settings-first), compare with the installed values, and tell Tim what changed; a wall nib must show hatch at 1:100; tell Tim the 1:50 value it derives.
+
+57. **SBEAM versus CEMEMBER size (QUESTIONS 23 Oct early item 2): part answered, part unclear.**
+   1. Tim's words: "1:100 draw at real size, 1:20 draw 5 times bigger. does that make sense?"
+   2. Interpretation: 1:100 at real size confirms CEMEMBER (298 mm for a 310UB32); SBEAM's 1490 mm is exactly 5 times that, so SBEAM draws 5 times real size at 1:100. The "1:20 draw 5 times bigger" part is not clear: a real-size beam already prints 5 times bigger on paper at 1:20 than at 1:100, so Tim may mean that, or he may mean 5 times real size in the drawing at 1:20. NOT settled.
+   3. Desk must: keep the real-size draw (CEMEMBER); ask Tim one line: "Do you want the beam drawn at real size at every scale, so it prints 5 times bigger on paper at 1:20 without being enlarged in the drawing?"
+
+58. **Hatch refusal when LTSCALE is not 10 x DIMSCALE (item 3): yes.** Tim's words: "yes". Interpretation: warn and draw using DIMSCALE (his 20 Oct ruling), never refuse (R-27). Desk must: build it.
+
+59. **Fixed label heights (item 4): yes.** Tim's words: "yes". Interpretation: TH, PF, BP, column and 18-text labels follow the label height setting like EBT already does (BUG-531). Desk must: build it.
+
+60. **Corrected steel section list (CEMEMBER review item 4): yes.** Tim's words: "yes". Interpretation: the corrected 17-type list goes into the installed command now with the code it needs (310UB32.0 accepted, Z15015 added, 380PFC web 10 mm). Desk must: build it; Structural stays on Tim's PC only.
+
+61. **Robot hours rule on the second PC (QUESTIONS item 38): Tim's PC only.** Tim's words: "no only my computer, on the other one testing all day". Interpretation: the stop on starting AutoCAD in Tim's drafting hours applies to Tim's own PC only; the test PC runs all day and night (the "no" is to applying it to both; the substance is the recommended yes). Desk must: apply the hours rule to Tim's PC only; the robot still refuses to start beside another AutoCAD on the same PC.
+
+62. **Codex looks on the test PC (QUESTIONS item 39), and who accepts: yes, Claude and Codex.**
+   1. Tim's words: "yes definetely, remember i dont want to test anything unless i say i can you two will be in charge of acceptance".
+   2. Interpretation: a Codex pass on the test PC counts as Codex-accepted with the PC's name beside it. GUESS: the conditions in the question stand (the PC has its own licence seat; its graphics card and screen scale are compared on three cases against Tim's PC first; a window that looks wrong only there is re-looked on Tim's PC). Standing rule restated: Tim does not test unless he says he can; Claude and Codex own acceptance (RULES 4.5 and the 20 Oct and 24 Oct amendments). Items needing engineering judgement still need Tim's word (rule 4.5, unchanged).
+   3. Desk must: write the PC name beside every Codex-accepted from the test PC; never ask Tim to test.
