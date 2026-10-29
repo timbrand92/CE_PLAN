@@ -17,12 +17,20 @@
 
 1. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
 
+## Planned, not started
+
+1. **GB-06 update the guidebook (stage 4).** After GB-01 to GB-04 pass Codex. Plan: `GB-06_UPDATE_THE_GUIDEBOOK.md`. The book itself is untouched.
+
+## Who keeps this list
+
+From 29 Oct 2026 the desk (the chat that runs builders, trains and Codex hand-offs) keeps this list current: after each builder or Codex report it moves the slice and updates `areas/council-rulebook.md`. The side session that wrote the audit and cards is no longer needed once this is read. Tim never needs to open it.
+
 ## Open items that block or shape builds
 
-1. Minimum fall for 450 to 750 gravity pipes (GB-01 slice 1).
+1. Minimum fall for 450 to 750 gravity pipes (GB-01 slice 1; QUESTIONS_FOR_MONDAY GB-A).
 2. Maximum pipe speed and its document (engineers; question 7).
 3. Bayside 1 in 20 pump rule source (question 14).
-5. Claude provider, model, cost ceiling (GB-05).
+5. Claude provider, model, cost ceiling, who gets it (GB-05; QUESTIONS_FOR_MONDAY GB-D).
 
 ## After every build
 
