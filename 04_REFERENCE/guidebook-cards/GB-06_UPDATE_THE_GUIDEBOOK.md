@@ -26,3 +26,13 @@ Maximum pipe speed and its document; the 450 to 750 minimum fall; the Bayside pu
 
 ## 4. How it is done
 Claude writes the v1.4 text as a tracked copy beside v1.3 (changes marked), Tim reads only the change list, engineers read the sections they own, then it is saved as the new guidebook and recorded in CE_PLAN. The plugin's "guidebook version on the job" (GB-02) then names v1.4.
+
+## 5. Rules for doing it (so Tim reads almost nothing)
+1. Claude writes v1.4 in a **copy** beside v1.3; v1.3 is never overwritten or deleted. File names: `... v1.4 DRAFT.docx` then `... v1.4.docx` once approved.
+2. Every change is listed in one short change list in plain English (what the old book said, what the new one says, who decided: Tim's item number or "engineer").
+3. Items still blank (section 3) are written as "to be confirmed", never filled with a guess.
+4. The guidebook's own images and example sheets stay; client addresses on the sample sheets (e.g. example calculations) are replaced by "example site" in v1.4.
+5. Starts only after GB-01 to GB-04 have passed Codex in AutoCAD. Nothing in the plugin depends on the book being updated.
+
+## 6. Status
+DRAFT plan. Not started. Not yet approved by Tim.
