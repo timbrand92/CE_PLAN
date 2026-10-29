@@ -204,3 +204,32 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "yes. On a Manningham job a 3,000 L plumbed tank credits 1.50 m³ and today the sheet shows none".
    2. Interpretation: a "Rainwater reuse" group on the CDDESIGN page (tank litres, roof connected pre-filled, "plumbed for reuse" tick), built with the Kingston credit fix (BUG-1098); the sheet says "needs confirmation" where a council has no recorded rule (R-10).
    3. Desk must: build it as above.
+
+## Batch 7 (afternoon, Melbourne)
+
+40. **Max's move to 2027 (QUESTIONS item 36): "yes" (GUESS).**
+   1. Tim's words: "yes".
+   2. Interpretation (GUESS): he accepts the recommended plan, Max on AutoCAD 2027 by about Fri 13 Nov so the Mon 16 Nov hand-over works. The question asked two things (when, and can his login install programs); "yes" does not say which. Install rights are NOT answered.
+   3. Desk must: plan on Max's 2027 by Fri 13 Nov; ask Tim once more for the install rights near the pack stage; install nothing on Max's PC before his 2027 is in.
+
+41. **The other 2027 PC (QUESTIONS item 37): ready maybe tomorrow.**
+   1. Tim's words: "tomorrow maybe".
+   2. Interpretation: Tim may have the other PC ready about Fri 30 Oct; not certain. Which PC, awake and unlocked overnight, and how it reads the plan folder are not given.
+   3. Desk must: not plan on it; ask Tim for the PC name when he says it is ready; install nothing before.
+
+42. **BUG-1192 long section where the survey is not trusted (QUESTIONS 21d): yes.**
+   1. Tim's words: "yes".
+   2. Interpretation: CDPROFILE draws the untrusted stretch of ground line dashed with the note "Ground not confirmed here: check survey", on its own Settings switch, alongside the warning line.
+   3. Desk must: build it.
+
+43. **BUG-587 Pit Schedule row height (QUESTIONS 21e): NOT the recommended answer; a row does not just grow one line.**
+   1. Tim's words: "no - reduce line spacing or yes but you have to make that entire row two rows thick and it needs wipeouts like the structural xclmtxt command".
+   2. Interpretation (GUESS on the order): (a) first try: reduce the line spacing of a remark so more lines fit in the standard row; (b) if a remark still needs more room, the whole row becomes two rows thick (not one extra line), and the text sits on a wipeout (a mask) like Structural's XCLMTXT command. Tim wrote both with "or"; it is not clear whether he wants (a) always or only when it fits.
+   3. Desk must: read XCLMTXT in the Structural module to copy how it masks text; build (a) first and (b) for what does not fit; show Tim a picture of a three-line remark in each before it ships (rule 5.2); never one line taller. Ask Tim the order only if the picture does not settle it.
+
+44. **BUG-587 (same item), existing schedules: unchanged.** Tim's answer implies ordinary rows keep their height (his words keep rows in whole-row steps). Desk must: no existing schedule row moves.
+
+45. **AG drain (QUESTIONS 21f and 21g): answers conflict; clarification needed.**
+   1. Tim's words: "1. yes" (a copied AG drain gets its own grade label worked out from its own levels) and "2. no text needed, agis are shown location only" (to the question: keep the wording "AG DRAIN AT 1 IN 50"?).
+   2. Interpretation (GUESS): the AG drain label should carry no wording, AG drains are shown by location only; if so a grade label on a copy is not drawn. These two answers do not fit together unless "yes" meant the copy keeps its own stored grade, with nothing printed. Not decided.
+   3. Desk must: build nothing on the AG drain label until Tim answers one line: "Should an AG drain show no text at all, including no grade, on the original and on a copy?" Recommended to him: no text at all, but the grade still stored for the schedule.
