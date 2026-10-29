@@ -211,3 +211,15 @@ Commits: C-71 `a2408a96` (3.0.81), C-72 `e30556ca` (3.0.82), C-73 `96455f13` (3.
 ## Summary
 
 The map sorts the 66 accepted checks into 17 tool areas and lists the shared code that forces a full re-test. A focused fix (Edit Pipe) re-tests 7 checks in about 1 hour instead of 6 h 40 min. But every fix adds a settings switch, so under the rule as written every install is still full: Tim's ruling is needed. On C-72 to C-75 the rule gives FULL three times and saves about half on C-75, missing nothing. The weekend spec covers all 66 twice in 38 starts: about 6 h 40 min, 5 h 45 min with the short wait.
+
+
+---
+
+## ADDENDUM 1 (29 Oct 2026, CE 02): Tim has answered the new-switch question: YES
+
+Tim's words (decisions\2026-10-29_TIM_RETEST_RULE.md, Addendum 1): "yes. An Edit Pipe fix then re-tests 7 checks (about 1 hour) instead of all 66 (about 6 h 40 min)." So the rule in the procedure above ("A settings model: FULL unless Tim's switch ruling is yes AND the diff only adds new switch blocks") is now live. For every install the robot job states, before it runs anything, which of these applies:
+
+1. **AREA re-test** only if the changed-files list touches no SHARED file and the only settings change is a brand-new switch with a new name added in a settings model file (for example `Models/UserSettings.cs`): confirm with `git diff <previous installed commit>..<new commit> -- <that file>` that every changed line is an ADDED line (a new property, default and doc comment) and none is an edited, renamed or removed existing line. Re-test the union of the touched areas' checks; record every other accepted check as 'carried from <build>'.
+2. **FULL re-test** if any existing setting line is edited, renamed or removed (including default values and the sizing/start-value files such as `Models/TabStartValueSettings.cs` and `Services/SettingsSizingStandards.cs`, which edit existing lines), or any SHARED file is touched, or any changed file matches no area.
+3. The robot job file names the decision ('AREA: added switch(es) only: <names>' or 'FULL: <reason>') and lists the carried checks. A new-switch decision is made by reading the diff, not by trusting the PR text.
+4. The weekend full re-tests (Sat 31 Oct, Sat 7 Nov), the pre-pilot full re-test on the frozen build and the Max-like run stay as scheduled whatever the install rules say.
