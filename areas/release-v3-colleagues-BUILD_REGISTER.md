@@ -52,6 +52,25 @@ BUG-901 is B-012 and BUG-907 is B-013 above. Each item below is a draft behind a
 32. **B-032 BUG-1232, label tidy after MOVE treats the Drawing Border block as a clash (suspected).** Not started; confirm by hand or robot first.
 
 Not buildable (no B number): BUG-685 and BUG-1148 wait for Tim's rulings (21h, 21i); BUG-1166, 1169, 1170, 1209, 1210, 855, 865 are facts to gather; BUG-1171 needs a Shared train.
+## Train calendar to the Fri 6 Nov freeze (PLANNED, estimates, not promises; written Thu 29 Oct 11:35 after Tim's "option b")
+
+Tim's ruling (decisions\2026-10-29_TIM_RELEASE_FREEZE.md): release candidate frozen Fri 6 Nov, pilot Mon 16 Nov, last install by Fri 6 Nov before the pre-pilot re-test. Re-test rule (decisions\2026-10-29_TIM_RETEST_RULE.md): an install re-tests only the areas it touches, so each train lists its areas. Full re-tests: Sat 31 Oct, Sat 7 Nov, and before Max. How long a train takes (C-75 as the measure): assembler about 1 hour, Opus finalizer about 2 hours, payload about 40 minutes, so about 4 hours from start to a ready payload; the install then waits for AutoCAD to be closed and the robot lock. Builds run one at a time, so the nine backlog jobs and the trains queue behind each other.
+
+1. **C-76 (Civil 3.0.86 / Manager 1.1.86): B-001, B-002, B-003, B-004 (+ B-005 only if the assembly report took #1838).**
+   1. **Areas touched:** double-click on a downpipe (editing), CDCHECK wording, the Manager About window, the placing of DP, OF and floor waste (how fast the drawing is read), and (if B-005 is in) the New Pipe level suggestion.
+   2. **Build:** assembler started Thu 29 Oct 10:27; payload ready about Thu 15:00 to 16:30. **Install:** Thu 29 Oct evening after 17:30 when AutoCAD is closed (install chain, undo stated at install). **Robot proof:** R09, R22, N31_dp_time (+ control C31), a Codex look at the About window.
+2. **C-77 (Civil 3.0.87 / Manager 1.1.87, Manager only if the work touches it): B-005 (if not in C-76), B-006 to B-011, B-013, B-014, B-015.** B-009 (grip copy default) joins only after CE 02's robot pass with the switch ON; B-012 (cover to the outside of the pipe) joins if its Opus job is done by the assembly start, otherwise it goes to C-78.
+   1. **Areas touched:** the New Pipe and Edit Pipe windows (Recent buttons), raingarden CDRG labels, Tidy labels and copy clean-up defaults, drawing import (units note), typed-figure parsing and pipe-speed check, pit drop warning, double-click on the green DP label, the computations sheet line.
+   2. **Build:** the nine backlog jobs finish about Thu night; assemble Fri 30 Oct morning. **Install:** Fri 30 Oct evening after 17:30 (or Sat 31 Oct morning), so the full re-test on Sat 31 Oct runs on it.
+3. **C-78 (engineering numbers): B-012 (if moved), B-016 to B-022, B-026.** Council minimum runoff, council time of concentration, minimum grade for DN450 and up, the pipe sizer, cover screens agreeing, the long section ground warning, the CDRULES cover note, the rainfall note wording.
+   1. **Areas touched:** CDDESIGN and the sizing and detention figures, CDRULES, CDCHECK cover, the long section. This is the train that changes answers, so its robot proof is by worked examples (9.2 m style hand-checks, the Darebin C figure, the Maroondah Tc).
+   2. **Build:** fix jobs Sat 31 Oct to Mon 2 Nov, assemble Mon 2 Nov. **Install:** Tue 3 Nov (Cup Day, a free day for the robot).
+4. **C-79 (windows and looks): B-023, B-024, B-025, B-027, B-028; B-029 and B-030 only if finished by Mon 2 Nov.**
+   1. **Areas touched:** the New Pipe Grade mismatch box, the Pit Schedule (delete cell, row height), the label tidy-up setting, colours in Civil windows and icons, and (if in) the CDDESIGN rainwater reuse boxes and AG drain copy labels.
+   2. **Build:** Mon 2 to Tue 3 Nov, assemble Tue 3 Nov. **Install:** Wed 4 Nov evening, so the Codex looks (windows and pictures need a Codex look) run Thu 5 and Fri 6 Nov.
+5. **C-80 (hotfix only, if needed): fixes for faults found by the Sat 31 Oct re-test and the Codex looks.** **Install:** no later than Fri 6 Nov morning. Nothing new goes in after this.
+6. **Not in any train before the freeze:** B-031 (PIT slow), B-032 (BUG-1232 Drawing Border clash) until they are confirmed; BUG-685 and BUG-1148 (wait for Tim's rulings, QUESTIONS item 21); the facts bugs; BUG-1171 (needs a Shared train); the unbuilt 9 Nov-scope plan items (stay behind the pilot-critical work).
+7. **Risks I can see now:** the finalizer is the slow step (about 2 hours each) and there are five trains in eight days; each install resets the two-pass clock for the areas it touches, so C-78 and C-79 are the ones that cost the most re-testing; B-029 and B-030 are large and may not make the freeze; Tim's PC has to be free of AutoCAD for each install.
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
