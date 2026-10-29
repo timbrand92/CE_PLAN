@@ -68,3 +68,30 @@ Fri 30 Oct 2026, 03:20 (Melbourne), CE 01 Build, headless job. Worktree `C:\ce-f
 2. **N88 (switch ON, default):** on a fixture copy, run CDDESIGN on a site whose minor (connection) flow is about 40 L/s. Read the "CONNECTION PIPE" section of the result text. Pass = "Diameter" line `225 mm` and "Grade" line `1:100`. Fail = `100 mm` / `1:3`.
 3. **C88 (switch OFF control):** before launching AutoCAD, set `designStandards.sizerStepsUpBeforeSteepGrade` false in the copy's settings (CE reads settings at start-up). Run the same CDDESIGN. Pass = `100 mm` / `1:3`, proving the switch alone makes the difference.
 4. **Not known:** which fixture gives exactly 40 L/s; the case writer should pick a site and record its minor flow. The check reads the two lines, not the flow.
+
+---
+
+## BUILD AND TEST (B-020b, Fri 30 Oct 2026, 03:20 to 08:27 Melbourne; worktree `C:\ce-fx\c84a`, head `30990e61`, no new commits)
+
+### FOR TIM
+
+1. **Answer:** the sizer change now compiles, and its own tests pass. The full test run and the older-AutoCAD (net48) compile did NOT run: no build slot came free in the 3-hour wait.
+2. **What a drafter sees:** nothing new yet. Same as above: CDDESIGN connection pipe comes out DN225 at 1 in 100 for 40 L/s.
+3. **Not tried in AutoCAD.** The proof is robot case `N88_sizer_grade` with the switch-off control `C88` (see above).
+4. **PR #1863** is still a draft; the title and description now say "built net10 + focused tests only". Nothing closed, merged or marked FIXED.
+5. **My own mistakes:** my first wait script had a mangled dotnet path (a sed edit ate the backslashes), and a second quoting fault on the AutoCAD 2027 path (spaces). Each cost one wait cycle (about 40 minutes of queue time). No effect on the code.
+
+### TECHNICAL DETAIL
+
+1. **What compiled:** `CE_CVL_SUITE.Tests.csproj`, Release, net10.0-windows (this also builds the Drainage plugin for net10). 0 errors. Flags: `-p:SkipDevBundle=true -nr:false --disable-build-servers`, AutoCAD refs from the C-62 report, AutoCAD 2027 on PATH, below-normal priority.
+2. **Focused tests (net10, Release):** filter `Bug1088 | C75NewSwitch | Gb01Slice1`: **Total 72, Passed 72, Failed 0, Skipped 0.** The count is not zero. This includes `Bug1088SizerGradeLadderTests` (24 test attributes in the file; theory rows expand), the switch default through both start-up reads, and the slice 1 falls tests. The note's "risk" test (`TheSwitch_TypedValue_IsRead_AndTouchesNothingElse`) passed, so no narrowing was needed.
+3. **No fix commits were needed.** No code, switch default or behaviour changed. The branch is still at `30990e61`.
+4. **NOT run:**
+   1. **Full Civil suite (net10, Release):** queued from 05:26 to 08:27, never got a slot (other lanes held two or three top-level dotnet commands the whole time; the count was 2 or 3 at every check). The 3-hour limit ended it. Not run, so the two Debug-only `SourceAtomicCoordinatorDependencyTests` failures were not seen here and were not touched. They are not this change.
+   2. **net48 compile:** not run (needs a slot after the full suite).
+   3. **Manager tests:** not in scope.
+5. **Still unproven:** anything in AutoCAD (CDDESIGN window, result text, sheet, network redesign preview, Run solve); the full-suite effect of the switch default ON on other tests (for example, tests elsewhere that size a pipe through `NetworkDesignService.Design` or CDDESIGN and expect the old size). That is the main residual risk: only the full run can show it.
+6. **For the next lane:** run `dotnet test Modules\Drainage.Tests\CE_CVL_SUITE.Tests.csproj -c Release -f net10.0-windows --no-build` (the test bin is already built at head `30990e61` unless cleaned; I ran `git clean -fdXq` in `C:\ce-fx\c84a`, so it must be rebuilt), then the net48 compile of `Modules\Drainage\CE_CVL_SUITE.csproj`.
+7. **Hygiene:** worktree `C:\ce-fx\c84a` cleaned of bin/obj, detached at `30990e61`; scratch in `C:\ce-fx\b020b\` (count.ps1, waitrun.ps1, logs). Settings files, bundles and ProgramData untouched. AutoCAD not started.
+
+Four words: **built (net10) and focused-tested. Full suite and net48 not run. Not installed. Not Tim-accepted.**
