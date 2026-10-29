@@ -8,6 +8,8 @@ Started Thu 29 Oct 2026 by CE 01 Build. Tim: "yes, build numbers" (29 Oct 2026, 
 
 **Before 29 Oct:** earlier trains are not renumbered. C-75 (installed 29 Oct 00:21) was PR #1831 (BUG-665 and BUG-672), #1832 (BUG-1222) and #1833 (BUG-1223); see TRAIN_C75_PR_LIST_2026-10-28.md.
 
+**Rule 14 (Tim, 29 Oct 2026, "thats should be the plan throughout as a rule"; CE_SESSIONS_MAP_29OCT.md):** from C-77 on, every install is re-tested only on what the train touches plus a small smoke set per shared file; the rest is carried; one full re-test before Max (by Fri 13 Nov). So EVERY train gets (1) a changed-files list for CE 02 (git diff --name-only) as soon as the assembler has it, (2) settings changes kept ADDITIVE-ONLY where possible (a brand-new switch name touches only its own tool; editing or removing an existing setting forces a full re-test), (3) a train-report section naming the areas and shared files it touches.
+
 ## Train C-76 (Civil 3.0.86 / Manager 1.1.86), assembling from 10:27
 
 1. **B-001 BUG-859, double-click on a downpipe opens CE's Edit source window first.** PR #1834. Switch doubleClick.sourceStopsAttributeEditorFirst, ON. Built yes; tested unit only; installed no; Tim-accepted no. Robot proof R09s (CE 02 29 Oct: the old R09 cannot pass as written even when the fix works, because it looks for buttons named Cancel/OK and a box named Tag while the real Edit source window uses "Cancel source changes", "Accept source changes" and "Source tag"; R09s is the corrected copy), twin R09_off_broken.
