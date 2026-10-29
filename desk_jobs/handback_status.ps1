@@ -1,0 +1,10 @@
+# CE 02 Fri 30 Oct 2026 (Rule 17): what is running now, how long it has left, and the hand-back deadline if one is active. Read-only. Usage: pwsh -NoProfile -File handback_status.ps1
+$d = 'C:\CE_PLAN\desk_jobs'
+"NOW " + (Get-Date -Format 'ddd HH:mm')
+if (Test-Path "$d\ROBOT_STOP_AT.txt") { $dl = [datetime](Get-Content "$d\ROBOT_STOP_AT.txt" -TotalCount 1); "HAND-BACK deadline " + $dl.ToString('HH:mm') + " (" + [math]::Round(($dl - (Get-Date)).TotalMinutes) + " min left)" } else { 'no hand-back active' }
+$q = 'C:\Lisp Files\_CODEX_RUNNER\queue.log'; $open = $null
+foreach ($l in (Get-Content $q -Tail 60)) { if ($l -match '^(\d\d:\d\d) START (\S+)') { $open = [pscustomobject]@{At = $Matches[1]; Name = $Matches[2]} } elseif ($l -match '^(\d\d:\d\d) END (\S+)') { if ($open -and $open.Name -eq $Matches[2]) { $open = $null } } }
+if ($open -and @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'launch_codex_retry|codex\.js exec' }).Count) { $st = [datetime]::ParseExact($open.At, 'HH:mm', $null); "CODEX LOOK running: $($open.Name) since $($open.At); cap 75 min, so it ends by " + $st.AddMinutes(75).ToString('HH:mm') + " at the latest" } else { 'no Codex look running' }
+$ch = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'chain4\.ps1|chain3\.ps1' -and $_.Name -match 'pwsh' })
+if ($ch.Count) { $pr = Get-ChildItem 'C:\ce-fx\c75regrade3' -Filter '*.txt' | Where-Object { $_.Name -match '^[ab]\d' -and $_.LastWriteTime -gt (Get-Date).AddHours(-1) } | Sort-Object LastWriteTime | Select-Object -Last 1; if ($pr) { $h = Get-Content $pr.FullName -TotalCount 1; if ($h -match 'start (\S+ \S+) .*only=(\S+)') { $n = ($Matches[2] -split ',').Count; $s = [datetime]$Matches[1]; "ROBOT PACK $($pr.BaseName): $n cases, started $($s.ToString('HH:mm')), estimate ends " + $s.AddMinutes($n * 4.5).ToString('HH:mm') } } } else { 'no robot chain running' }
+Get-Process acad, accoreconsole -ErrorAction SilentlyContinue | ForEach-Object { "{0} pid {1} since {2:HH:mm}" -f $_.Name, $_.Id, $_.StartTime }

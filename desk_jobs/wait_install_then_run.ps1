@@ -15,7 +15,7 @@ while ($true) {
   if ($cur -eq $last) { $stable++ } else { $stable = 0; $last = $cur; L "installed build now reads $cur; waiting for it to stay put" }
   $busy = @(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0
   $inst = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'payload1|chain_install|desk_install|payload_final|installer' -and $_.Name -match 'pwsh|cmd|powershell' -and $_.CommandLine -notmatch 'wait_install_then_run' }).Count -gt 0
-  if ($stable -ge 6 -and -not $busy -and -not $inst) { break }
+  if ($stable -ge 6 -and -not $busy -and -not $inst -and -not (Test-Path "$d\HOLD_ROBOT.flag") -and -not (Test-Path "$d\TIM_AT_PC.flag")) { break }
 }
 L "install settled on ${last}: starting the chain"
 Remove-Item "$d\ACAD_IDLE_OK.txt" -Force -ErrorAction SilentlyContinue

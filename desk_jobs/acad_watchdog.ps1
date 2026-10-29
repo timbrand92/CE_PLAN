@@ -8,6 +8,7 @@ $log = "$d\AUTOCAD_OCCUPANCY.log"
 function Log($t) { Add-Content $log ("{0} {1}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm'), $t) }
 function TimHours { $n = Get-Date; if ($n.DayOfWeek -in 'Saturday','Sunday') { return $false }; $m = $n.Hour*60+$n.Minute; return (($m -ge 510 -and $m -lt 840) -or ($m -ge 900 -and $m -lt 1050)) }
 function AllowedReason {
+  if (Test-Path "$d\TIM_AT_PC.flag") { return "Tim is at the PC (hand-back, Rule 17)" }
   if ((TimHours) -and -not (Test-Path "$d\TIM_AWAY.flag")) { return "Tim's AutoCAD hours" }
   if (Test-Path "$d\ACAD_IDLE_OK.txt") {
     $l = Get-Content "$d\ACAD_IDLE_OK.txt" -TotalCount 2
