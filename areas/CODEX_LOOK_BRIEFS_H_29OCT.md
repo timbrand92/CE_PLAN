@@ -81,7 +81,7 @@ Written Thu 29 Oct 2026, 11:12 to 11:40 Melbourne (PC clock), by the Opus desk a
    2. **The H5 PDF builder:** it is described, not written. Codex writes it into its own tools folder.
    3. **Codex's real cost per look:** 3 is a planning figure.
    4. **Window sizes and wording on screen:** whether they match the source.
-   5. **Why CE_PLAN said "ahead 1" before my commit:** `git log origin/main..main` listed nothing, so I took the "ahead 1" to be a stale tracking ref and checked again after the fetch.
+   5. **Why CE_PLAN said "ahead 1" at 11:26:** after the fetch it read level with origin, so another session most likely pushed its own commit in between. I did not check whose it was. My push carries only my own commits.
 6. **Files in CE_PLAN changed by others and NOT committed by me:** BUG_CARPARK.md, the acceptance ledger, desk_jobs/.last_tick and CODEX_MODE.txt (other sessions' work in progress). I committed only this report and the queue file, by name.
 
 ## Summary (under 100 words)
