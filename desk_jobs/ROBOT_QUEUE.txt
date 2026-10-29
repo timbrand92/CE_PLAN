@@ -1,3 +1,4 @@
+C:\CE_PLAN\desk_jobs\tester_run80_c76_proofs.txt
 # Robot standing queue (Desk 26 Oct 2026). One job file path per line, run in order by chain_robot_standing.ps1; a .done marker is written beside each finished job. Append only.
 C:\CE_PLAN\desk_jobs\tester_run65_regrade_3079.txt
 C:\CE_PLAN\desk_jobs\tester_run66_redo_bisect.txt
