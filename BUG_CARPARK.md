@@ -17048,3 +17048,5 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's words 29 Oct 2026, hand check H20 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md. Related: D10 (label mid-pipe), D11 (leader for short pipes), BUG-1234 (IL and arrow clash), Settings-first rule R-00.
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs one clarifying look). Never FIXED until Tim confirms in AutoCAD.
+
+**Tim, same day, after I asked whether 450 might be the normal 'Above' gap:** "450 is wrong im telling you" with a screenshot of the Edit Pipe window (preview at the bottom). **So 450 is NOT accepted as the normal gap: it is too far.** The screenshot shows the label '100 DIA. UPVC PIPE' (grade text off) standing clear of the pipe by roughly a full text height, well away from the pipe's middle, with the Pipe text buttons 'On plan' and 'Above' BOTH lit gold (two buttons looking selected at once). Expected: the label sits close to the pipe, a small gap. How small is Tim's call; a Settings value (R-00), to be agreed. This is the Edit Pipe preview as well as the drawing, so the same offset is used in both.
