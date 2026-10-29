@@ -1,6 +1,6 @@
 # Help tab in CE Manager: design brief (29 Oct 2026)
 
-**Status:** DESIGN PROPOSAL. Not built, no code touched, not yet seen by Tim. Tim approved the idea; the details below are my recommendations until he answers section 8.
+**Status:** DESIGN APPROVED by Tim, 29 Oct 2026: "Accept all five" (section 8; recorded as decision 84 in `decisions\2026-10-29_TIM_ANSWERS.md`). Not built, no code touched, not accepted until seen in AutoCAD.
 **Picture:** `areas\UX_HELP_TAB_MOCKUP_2026-10-29.png` (source `.html`, same folder). Two states: how the tab opens, and after the button is pressed.
 **Clickable version (open in a browser, same kind as the New Pipe v2 one Tim accepted):** `areas\UX_HELP_TAB_MOCKUP_2026-10-29_clickable.html`. Press the gold button, tick and untick the box and watch line 3 change, try the old command names. Checked by script that the button, the tick box and "Make another" work; not looked at by eye.
 **Idea it answers:** UX-HELP-IN-MANAGER in IDEAS_INBOX.md. **Related:** UX-MANAGER-TABS (CEHEALTH as a tab, StrucPlus removed), UX-VERSION-IN-MANAGER, hand checks H34 and H37 in `areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md`.
@@ -115,7 +115,7 @@ One zip, nothing else produced:
    Recommend open the tab only (section 7, item 1). Costs the colleague one extra click.
 5. **Wording check.** Is "Something is wrong: get help" final, and is "Open older Civil logs" clear? Tim's own phrase is used for the button; the rest is mine.
 
-Interpretation, not Tim's words: if Tim answers "i am happy with that" to the picture alone, I would read it as the recommended answer to all five, as was done for the New Pipe window, and log that reading. If he wants any one different, his word replaces it.
+**Tim's answer, 29 Oct 2026:** "Accept all five". Read as the five recommended answers above (my reading; if he wants any one different, his word replaces it).
 
 ---
 
