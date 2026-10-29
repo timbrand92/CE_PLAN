@@ -567,3 +567,10 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "8. yes" (to: start the carpark tidy with T-1 and T-4, then T-2 and T-3, then T-5 to T-8 as review jobs; nothing deleted or closed). Earlier he asked "can we start tidying the carpark and bugs?".
    2. Interpretation: approved as the plan states: T-1 (replace the stale id-range paragraph in the carpark header with one line, the old text moved word for word to a history file), T-4 (a retest list of the 47 IN PROGRESS bugs for the robot and Codex, no status changed), then T-2 and T-3 (a clear status on the 41 entries with none and the 5 with two; none marked fixed), then T-5 to T-8 as review jobs. Nothing is deleted or closed (rule D6 and the 13.3 amendments).
    3. Desk must: CE 05 does T-1 and T-4 first; T-4 goes to CE 02; one session edits BUG_CARPARK.md at a time (RULES 6.4); never mark a bug fixed without the Claude-accepted or Codex-accepted rule.
+
+## Batch 28 (evening, Melbourne)
+
+109. **Windows restart overnight (QUESTIONS item 58): option 1, pause Windows Updates (GUESS on what "1" meant).**
+   1. Tim's words: "1".
+   2. Interpretation (GUESS): the last message listed three options numbered 1 to 3 for the overnight restart (1 = pause Windows Updates until Mon 2 Nov, recommended; 2 = also automatic sign-in; 3 = leave as is) and, further down, a separate "Still open" list whose first item was the Hazen-Williams C value. "1" is read as option 1, pause updates. If he meant the C value, "1" cannot be a Hazen-Williams C (usual values are about 100 to 150), so that reading is rejected, but it was not confirmed.
+   3. Desk must: Tim pauses the updates himself (Settings, Windows Update, Pause updates, to Mon 2 Nov); the desk does not touch his Windows settings. Check on the first morning (Fri 30 Oct) whether the PC restarted overnight (uptime, Event log) and tell Tim; if the pause was not set, say so. Automatic sign-in stays OFF. The Hazen-Williams C value stays open.
