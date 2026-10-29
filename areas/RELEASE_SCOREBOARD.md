@@ -118,3 +118,38 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 ## 11. Change log (newest first)
 
 1. **29 Oct 11:17 CE 07:** first scoreboard written. Read installed DLLs and c1071 (identical). Asked CE 02, CE 03, CE 04 for their lists. Pack change list job started.
+
+## 12. Two schedules ready for Tim's freeze ruling (CE 00 asked for both, 29 Oct 11:25; his answer drops straight in)
+
+**Option A: freeze Sat 31 Oct (C-76 + C-77 only), pilot Mon 9 Nov.**
+1. **Thu 29 Oct (tonight, after 5:30 pm):** C-76 installs; CE 02 re-tests what C-76 touched (R09, R22, N31/C31, N32, About window Codex look); P01 and P02 first pass.
+2. **Fri 30 Oct (checkpoint 1):** 30 of 40 tools? first rehearsal R1 on the spare login (current 3.0.85 build)? Max's year known? Tim's 9-or-16 lean.
+3. **Sat 31 Oct:** C-77 (B-006 to B-014) finalised and installed = freeze candidate FC-A. Weekend-1 full re-test starts (about 8 hours).
+4. **Sun 1 Nov:** second pass of the full re-test; rehearsal R2 and rollback R3 on FC-A.
+5. **Mon 2 Nov:** freeze. Tim's soak on his PC Mon 2, Wed 4, Thu 5, Fri 6 (Cup Day Tue 3 is a free robot day).
+6. **Tue 3 Nov (Cup Day):** pre-pilot full re-test, Codex looks C1 to C6, second Codex pass on windows; Tim's D1 and D2 hand checks not in this day (he is on a holiday); do them Wed 4 Nov evening or Thu 5.
+7. **Wed 4 Nov:** package from the frozen folder, hash read-back; pack changes approved by Tim in one pass.
+8. **Thu 5 Nov:** page 04 final from the test results; nightly re-test.
+9. **Fri 6 Nov:** freeze report, final go checklist, Tim's word.
+10. **Mon 9 Nov:** hand-over.
+11. **What Max gets with it:** the 27 no-fix bugs and the 5 built-not-installed ones are written on page 04 with workarounds; CDDESIGN, CDRUNSOLVE and CDTWL are for drafting only, never an issued number (page 06 question 8). Twelve of them are wrong-answer engineering bugs (BUG-1088, 1095, 1099, 1091, 866, 901, 902, 903, 907, 1096, 685, 1192): that is what a first colleague would meet on a storage or pipe-size job.
+12. **Biggest A risks:** only 4 working days for the soak; any blocker after Sat 31 Oct builds a new candidate and restarts the two-pass clock; 30 of 40 must come in tomorrow.
+
+**Option B: freeze Fri 6 Nov (C-76 + C-77 + the pilot-critical fixes CE 01 can build now, B-016 to B-032), pilot Mon 16 Nov.**
+1. **Thu 29 Oct to Wed 4 Nov:** C-76 installs tonight and C-77 on Sat 31 Oct as ordinary trains, so the robot has early passes on them; CE 01 builds B-016 to B-032 as drafts behind switches ON; Opus reviews as they land. Rehearsal R1 on the spare login by Fri 30 Oct, still on the current build.
+2. **Thu 5 Nov:** train C-78 assembled and finalised with every reviewed pilot-critical fix.
+3. **Fri 6 Nov (after 5:30 pm):** C-78 installs = freeze candidate FC-B. Anything not reviewed by then stays out and goes on page 04.
+4. **Sat 7 and Sun 8 Nov:** full re-test, first pass Sat, second pass Sun in a separate start; Codex looks; rehearsals R2 and R3 on FC-B.
+5. **Mon 9 to Thu 12 Nov:** Tim's soak (4 working days); targeted fixes only for blockers (each one restarts the clock for its area); pack changes approved Mon 9 Nov; package from the frozen folder Tue 10 Nov.
+6. **Wed 11 Nov:** page 04 final from the results.
+7. **Fri 13 Nov:** freeze report, final go checklist, Tim's word.
+8. **Mon 16 Nov:** hand-over. Fallback Mon 23 Nov.
+9. **What Max gets with it:** the 11 build-now and 6 build-on-recommended no-fix bugs fixed and tested; only the Tim-ruling, facts-from-Max and protected-file items stay on page 04.
+10. **Biggest B risks:** 17 new fixes in one train with one week of tests is a large batch (Tim 16 Sep: large batches failed); several need a Codex look; Tim's rulings on 685 and 1148 and the Max facts still outstanding; one week later than the pilot target.
+
+**Side by side (my reading; Tim decides):**
+1. **Earlier pilot:** A by 7 days.
+2. **Fewer known wrong-answer problems for Max:** B (about 17 fewer).
+3. **Chance the test numbers are ready:** A needs 30 of 40 tomorrow and a rehearsal before there is a login; B has a week more.
+4. **Hybrid I would consider:** A's Sat 31 Oct freeze plus only the four small sourced fixes (BUG-1095, BUG-1091, and B-012 and B-013 already in C-77), with BUG-1088 as a CDDESIGN warning and the rest on page 04. This moves the pilot to Mon 9 Nov only if Friday's checkpoint is green; otherwise it becomes B.
+5. **My lean:** B, because the first colleague job is likely to hit CDDESIGN, and 0 of 60 closed with no rehearsal makes 9 Nov a guess. Tim's call.
