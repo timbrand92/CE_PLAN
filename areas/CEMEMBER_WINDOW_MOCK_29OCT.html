@@ -4,116 +4,151 @@
 <meta charset="utf-8">
 <title>CEMEMBER window - MOCK-UP (not the real window)</title>
 <style>
-  :root { --bg:#14120e; --panel:#1d1a14; --panel2:#262218; --line:#3a3426; --text:#e9e4d6; --mute:#9a927c; --gold:#d9a521; --gold2:#f0c24a; --amber:#3b2d0a; --red:#d4574b; --green:#5aa86b; }
+  :root { --bg:#1C1C1C; --panel:#252525; --line:#41413D; --text:#EEEAE1; --mute:#9A968B; --gold:#C9A84C; --tint:#332A10; --page:#0e0e0e; --amberText:#EBD58F; }
   * { box-sizing:border-box; }
-  html,body { margin:0; height:100%; overflow:hidden; background:#0b0a08; color:var(--text); font-family:"Segoe UI",Arial,sans-serif; font-size:13px; }
-  .page { width:1880px; height:1010px; margin:6px auto 0; display:flex; flex-direction:column; gap:8px; }
-  .banner { height:34px; background:var(--gold); color:#14120e; font-weight:700; font-size:15px; display:flex; align-items:center; padding:0 14px; letter-spacing:.3px; }
+  html,body { margin:0; height:100%; overflow:hidden; background:var(--page); color:var(--text); font-family:"Segoe UI",Arial,sans-serif; font-size:13px; }
+  .page { width:1880px; height:1020px; margin:6px auto 0; display:flex; flex-direction:column; gap:8px; }
+  .banner { height:34px; flex:none; background:var(--gold); color:#14120e; font-weight:700; font-size:15px; display:flex; align-items:center; padding:0 14px; letter-spacing:.3px; }
   .banner span { font-weight:400; margin-left:14px; font-size:13px; }
-  .win { height:618px; background:var(--panel); border:2px solid var(--gold); display:flex; flex-direction:column; }
-  .titlebar { height:30px; background:#0e0c08; border-bottom:1px solid var(--line); display:flex; align-items:center; padding:0 12px; color:var(--gold2); font-weight:600; }
+  .toprow { height:680px; flex:none; display:flex; gap:20px; }
+
+  /* ===== THE WINDOW: 1280 x 680 ===== */
+  .win { width:1280px; height:680px; flex:none; background:var(--bg); border:1px solid var(--line); display:flex; flex-direction:column; }
+  .titlebar { height:30px; flex:none; background:#141414; border-bottom:1px solid var(--line); display:flex; align-items:center; padding:0 12px; color:var(--text); font-weight:600; }
   .titlebar .x { margin-left:auto; color:var(--mute); }
   .body { flex:1; display:flex; min-height:0; }
-  .col { padding:10px 12px; border-right:1px solid var(--line); }
-  .left { width:420px; display:flex; flex-direction:column; gap:8px; }
-  .mid { flex:1; min-width:0; min-height:0; display:flex; flex-direction:column; }
-  .right { width:470px; border-right:0; display:flex; flex-direction:column; gap:7px; }
-  h4 { margin:0 0 4px; font-size:12px; text-transform:uppercase; letter-spacing:.8px; color:var(--gold); }
-  .sel { background:var(--panel2); border:1px solid var(--line); padding:5px 8px; color:var(--text); }
-  .list { background:var(--panel2); border:1px solid var(--line); height:222px; overflow:hidden; }
-  .list div { padding:3px 8px; border-bottom:1px solid #2c271b; }
-  .list .on { background:var(--gold); color:#14120e; font-weight:700; }
-  .props { background:var(--panel2); border:1px solid var(--line); padding:6px 8px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:3px 10px; }
-  .props b { color:var(--gold2); font-weight:600; }
-  .props i { color:var(--mute); font-style:normal; }
-  .preview { flex:1; min-height:0; overflow:hidden; background:#0e0c08; border:1px solid var(--line); position:relative; }
+  .col { padding:10px 12px; border-right:1px solid var(--line); min-height:0; }
+  .left { width:330px; display:flex; flex-direction:column; gap:9px; }
+  .mid { width:548px; display:flex; flex-direction:column; }
+  .right { width:400px; border-right:0; display:flex; flex-direction:column; gap:8px; }
+  h4 { margin:0 0 4px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.8px; color:var(--mute); }
+  h4 .n { color:var(--gold); margin-right:6px; }
+
+  .types { display:grid; grid-template-columns:repeat(6,1fr); gap:4px; }
+  .types span, .chip { text-align:center; padding:5px 0; border:1px solid var(--line); background:var(--panel); color:var(--text); }
+  .types .on, .chip.on { border-color:var(--gold); background:var(--tint); color:var(--text); font-weight:700; }
+  .find { border:1px solid var(--line); background:var(--panel); color:var(--mute); padding:5px 8px; margin-bottom:4px; }
+  .sizebox { flex:1; min-height:0; display:flex; flex-direction:column; }
+  .list { flex:1; min-height:0; background:var(--panel); border:1px solid var(--line); overflow:hidden; }
+  .list div { padding:4px 8px; border-bottom:1px solid #2c2c2a; }
+  .list .on { background:var(--tint); outline:1px solid var(--gold); outline-offset:-1px; font-weight:700; }
+  .props { background:var(--panel); border:1px solid var(--line); padding:6px 8px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:5px 8px; }
+  .props span { display:flex; flex-direction:column; line-height:1.2; }
+  .props i { color:var(--mute); font-style:normal; font-size:11px; }
+  .props b { font-weight:600; }
+
+  .preview { flex:1; min-height:0; overflow:hidden; background:#141414; border:1px solid var(--line); position:relative; }
   .preview svg { position:absolute; left:0; top:0; width:100%; height:100%; }
+
   .opt { display:flex; flex-wrap:wrap; gap:5px; }
-  .chip { padding:4px 9px; border:1px solid var(--line); background:var(--panel2); color:var(--text); }
-  .chip.on { background:var(--gold); color:#14120e; border-color:var(--gold); font-weight:700; }
-  .chip.off { color:#5d5746; border-style:dashed; }
-  .orient { display:flex; gap:7px; }
-  .orient div { width:62px; height:62px; border:1px solid #3a3426; background:#0e0c08; display:flex; align-items:center; justify-content:center; opacity:.35; }
-  .grid3 { display:grid; grid-template-columns:repeat(3,18px); gap:3px; }
-  .grid3 span { width:18px; height:18px; border:1px solid var(--line); background:var(--panel2); }
-  .grid3 .on { background:var(--gold); }
+  .chip { padding:5px 10px; }
+  .chip.off { color:#5d5a50; border-style:dashed; background:transparent; }
+  .orient { display:flex; gap:8px; }
+  .orient div { width:58px; height:58px; border:1px solid var(--line); background:#141414; display:flex; align-items:center; justify-content:center; opacity:.35; }
+  .reserve { min-height:66px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,20px); gap:3px; }
+  .grid3 span { width:20px; height:20px; border:1px solid var(--line); background:var(--panel); }
+  .grid3 .on { border-color:var(--gold); background:var(--tint); }
   .scalebox { display:flex; align-items:center; gap:6px; }
-  .scalebox .num { width:70px; border:1px solid var(--gold); background:#0e0c08; color:var(--gold2); font-weight:700; padding:4px 8px; text-align:right; }
-  .warn { border-left:5px solid var(--gold2); background:var(--amber); padding:6px 9px; color:#fbe9b0; }
-  .warn.none { border-left-color:#3b4a3b; background:#18221a; color:#a9cdb0; }
+  .scalebox .num { width:80px; border:1px solid var(--line); background:var(--panel); color:var(--text); font-weight:700; padding:5px 8px; text-align:right; }
+  .status { height:58px; flex:none; padding:4px 2px; color:var(--mute); font-size:12px; }
   .btns { margin-top:auto; display:flex; gap:8px; justify-content:flex-end; }
-  .btn { padding:8px 20px; border:1px solid var(--line); background:var(--panel2); color:var(--text); }
-  .btn.place { background:var(--gold); color:#14120e; font-weight:700; border-color:var(--gold); padding:8px 34px; font-size:14px; }
-  .q { flex:1; background:var(--panel); border:2px solid var(--gold); display:flex; flex-direction:column; min-height:0; }
-  .q h3 { margin:0; padding:8px 14px; background:#0e0c08; color:var(--gold2); font-size:15px; border-bottom:1px solid var(--line); }
-  .q .two { flex:1; display:flex; min-height:0; }
-  .q .opt-box { flex:1; padding:8px 14px; border-right:1px solid var(--line); display:flex; flex-direction:column; }
-  .q .opt-box:last-child { border-right:0; }
-  .q .tag { display:inline-block; background:var(--gold); color:#14120e; font-weight:700; padding:2px 10px; margin-right:8px; }
-  .q .nums { color:var(--mute); margin-top:4px; line-height:1.5; }
-  .q .nums b { color:var(--text); }
-  .foot { color:var(--mute); font-size:12px; }
-  .ul { text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:3px; }
+  .btn { padding:8px 20px; border:1px solid var(--line); background:var(--panel); color:var(--text); }
+  .btn.place { background:var(--gold); color:#14120e; font-weight:700; border-color:var(--gold); padding:8px 38px; font-size:14px; }
+
+  /* ===== MOCK-UP NOTES (outside the window) ===== */
+  .notes { flex:1; min-width:0; display:flex; flex-direction:column; gap:7px; }
+  .notes h5 { margin:0 0 2px; font-size:12px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--gold); }
+  .note { display:flex; gap:9px; align-items:flex-start; border:1px dashed var(--line); padding:6px 9px; color:var(--mute); line-height:1.35; }
+  .note .k { flex:none; width:24px; height:24px; border-radius:50%; border:1px solid var(--gold); color:var(--gold); font-weight:700; font-size:11px; display:flex; align-items:center; justify-content:center; }
+  .note b { color:var(--text); font-weight:600; }
+  .miniGrid { display:inline-grid; grid-template-columns:repeat(3,11px); gap:2px; vertical-align:middle; margin-left:6px; }
+  .miniGrid span { width:11px; height:11px; border:1px solid var(--line); background:var(--panel); }
+  .miniGrid .on { border-color:var(--gold); background:var(--tint); }
+
+  /* ===== THE QUESTION ===== */
+  .q { flex:1; min-height:0; background:var(--bg); border:1px solid var(--gold); display:flex; flex-direction:column; }
+  .q h3 { margin:0; padding:7px 14px; flex:none; background:#141414; color:var(--text); font-size:15px; border-bottom:1px solid var(--line); }
+  .q h3 span { color:var(--amberText); font-weight:400; font-size:12px; margin-left:8px; }
+  .q .four { flex:1; display:flex; min-height:0; }
+  .q .box { flex:1; padding:8px 14px; border-right:1px solid var(--line); display:flex; flex-direction:column; min-width:0; }
+  .q .box:last-child { border-right:0; }
+  .tag { display:inline-block; border:1px solid var(--gold); color:var(--gold); font-weight:700; padding:1px 9px; margin-right:8px; }
+  .tag.rec { background:var(--tint); }
+  .three { display:flex; gap:8px; margin-top:4px; }
+  .three div { flex:1; border:1px solid var(--line); background:var(--panel); padding:3px 7px; line-height:1.2; }
+  .three b { display:block; font-size:17px; color:var(--text); }
+  .three i { font-style:normal; font-size:11px; color:var(--mute); }
+  .gc { margin-top:5px; color:var(--text); line-height:1.4; }
+  .gc u { text-decoration:none; color:var(--gold); font-weight:700; }
+  .amber { border-left:4px solid var(--gold); background:var(--tint); padding:5px 9px; color:var(--amberText); line-height:1.35; }
+  .lbl { margin:6px 0 3px; color:var(--mute); font-size:11px; text-transform:uppercase; letter-spacing:.6px; }
+  .small { color:var(--mute); font-size:12px; }
 </style>
 </head>
 <body>
 <div class="page">
 
-<div class="banner">MOCK-UP, NOT THE REAL WINDOW <span>Nothing here is built. It shows what the CEMEMBER window would look like (card section 5, approved 19 Oct). Drawn 29 Oct 2026.</span></div>
+<div class="banner">MOCK-UP, NOT THE REAL WINDOW <span>Nothing here is built. It shows what the CEMEMBER window would look like (card section 5, approved 19 Oct). Drawn 29 Oct 2026, revised after the design review.</span></div>
 
-<!-- ===== THE WINDOW ===== -->
+<div class="toprow">
+
+<!-- ===== THE WINDOW (1280 x 680; left 330, middle about 550, right 400) ===== -->
 <div class="win">
   <div class="titlebar">CEMEMBER - draw a steel member <span class="x">x</span></div>
   <div class="body">
 
     <!-- LEFT -->
     <div class="col left">
-      <div><h4>Member type</h4><div class="sel">UB - Universal Beam &nbsp;&#9662;</div></div>
-      <div><h4>Size</h4>
+      <div><h4><span class="n">1</span>Member</h4>
+        <div class="types">
+          <span class="on">UB</span><span>UC</span><span>WB</span><span>WC</span><span>PFC</span><span>SHS</span>
+          <span>RHS</span><span>CHS</span><span>EA</span><span>UA</span><span>ZC</span><span>CP</span>
+        </div>
+      </div>
+      <div class="sizebox"><h4><span class="n">2</span>Size</h4>
+        <div class="find">Find, e.g. 310</div>
         <div class="list">
           <div>200UB18.2</div><div>250UB25.7</div><div>250UB37.3</div><div class="on">310UB32.0</div>
           <div>310UB40.4</div><div>360UB44.7</div><div>360UB50.7</div><div>410UB53.7</div>
           <div>460UB67.1</div><div>460UB82.1</div><div>530UB82.0</div><div>530UB92.4</div><div>610UB101</div>
         </div>
       </div>
-      <div><h4>Properties</h4>
+      <div>
         <div class="props">
-          <span><i>Depth</i> <b>298 mm</b></span><span><i>Width</i> <b>149 mm</b></span><span><i>Mass</i> <b>32.0 kg/m</b></span>
-          <span><i>Web</i> <b>5.5 mm</b></span><span><i>Flange</i> <b>8.0 mm</b></span><span><i>Ix</i> <b>63.2 x10&#8310; mm&#8308;</b></span>
-          <span><i>Iy</i> <b>4.42 x10&#8310;</b></span><span><i>Zx</i> <b>424 x10&#179;</b></span><span><i>Zy</i> <b>59.3 x10&#179;</b></span>
+          <span><i>Depth</i><b>298 mm</b></span><span><i>Width</i><b>149 mm</b></span><span><i>Mass</i><b>32.0 kg/m</b></span>
+          <span><i>Web</i><b>5.5 mm</b></span><span><i>Flange</i><b>8.0 mm</b></span><span><i>Ix (mm&#8308;)</i><b>63.2 x10&#8310;</b></span>
+          <span><i>Iy (mm&#8308;)</i><b>4.42 x10&#8310;</b></span><span><i>Zx (mm&#179;)</i><b>424 x10&#179;</b></span><span><i>Zy (mm&#179;)</i><b>59.3 x10&#179;</b></span>
         </div>
-        <div class="foot" style="margin-top:3px">Figures from the installed section list (the list still says 310UB32). A dash would mean no figure.</div>
       </div>
     </div>
 
     <!-- MIDDLE: live preview -->
     <div class="col mid">
-      <h4>Live preview - drawn with the real line rules</h4>
+      <h4>Live preview</h4>
       <div class="preview">
-        <svg viewBox="0 0 640 470" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 524 600" preserveAspectRatio="xMidYMid meet">
           <!-- member outline 25cont -->
-          <line x1="90" y1="205" x2="550" y2="205" stroke="#f2efe6" stroke-width="2.6"/>
-          <line x1="90" y1="265" x2="550" y2="265" stroke="#f2efe6" stroke-width="2.6"/>
-          <!-- 18cont web/flange lines -->
-          <line x1="90" y1="213" x2="550" y2="213" stroke="#b64dc9" stroke-width="1.2"/>
-          <line x1="90" y1="257" x2="550" y2="257" stroke="#b64dc9" stroke-width="1.2"/>
+          <line x1="60" y1="215" x2="470" y2="215" stroke="#f2efe6" stroke-width="2.6"/>
+          <line x1="60" y1="275" x2="470" y2="275" stroke="#f2efe6" stroke-width="2.6"/>
+          <!-- 18cont inside lines -->
+          <line x1="60" y1="223" x2="470" y2="223" stroke="#b64dc9" stroke-width="1.2"/>
+          <line x1="60" y1="267" x2="470" y2="267" stroke="#b64dc9" stroke-width="1.2"/>
           <!-- break lines (Z kink) both ends -->
-          <polyline points="76,205 76,205 90,205" fill="none" stroke="#b64dc9" stroke-width="1.2"/>
-          <polyline points="90,196 90,225 80,231 100,239 90,245 90,274" fill="none" stroke="#b64dc9" stroke-width="1.6" transform="translate(0,0)"/>
-          <polyline points="550,196 550,225 540,231 560,239 550,245 550,274" fill="none" stroke="#b64dc9" stroke-width="1.6"/>
-          <!-- points 1 and 2 on centreline -->
-          <line x1="90" y1="235" x2="550" y2="235" stroke="#5d5746" stroke-width="1" stroke-dasharray="10 5 2 5"/>
-          <circle cx="90" cy="235" r="5" fill="none" stroke="#f0c24a" stroke-width="2"/>
-          <circle cx="550" cy="235" r="5" fill="none" stroke="#f0c24a" stroke-width="2"/>
-          <text x="82" y="172" fill="#f0c24a" font-size="22" font-weight="700">1</text>
-          <text x="545" y="172" fill="#f0c24a" font-size="22" font-weight="700">2</text>
-          <line x1="90" y1="180" x2="90" y2="188" stroke="#f0c24a"/><line x1="550" y1="180" x2="550" y2="188" stroke="#f0c24a"/>
-          <!-- key -->
-          <g font-size="12" fill="#9a927c">
-            <line x1="40" y1="372" x2="76" y2="372" stroke="#f2efe6" stroke-width="2.6"/><text x="84" y="376">25cont  outline</text>
-            <line x1="40" y1="392" x2="76" y2="392" stroke="#b64dc9" stroke-width="1.2"/><text x="84" y="396">18cont  visible inside lines and break lines</text>
-            <line x1="40" y1="412" x2="76" y2="412" stroke="#8a8a8a" stroke-width="1.2" stroke-dasharray="6 4"/><text x="84" y="416">18hidden  hidden lines (none in a side view of a UB)</text>
-            <text x="40" y="448" fill="#d9a521">Preview shown: side elevation, 310UB32.0, break lines at both ends, 1:100.</text>
+          <polyline points="60,206 60,235 50,241 70,249 60,255 60,284" fill="none" stroke="#b64dc9" stroke-width="1.6"/>
+          <polyline points="470,206 470,235 460,241 480,249 470,255 470,284" fill="none" stroke="#b64dc9" stroke-width="1.6"/>
+          <!-- centreline and points 1 and 2 -->
+          <line x1="60" y1="245" x2="470" y2="245" stroke="#5d5a50" stroke-width="1" stroke-dasharray="10 5 2 5"/>
+          <circle cx="60" cy="245" r="5" fill="none" stroke="#C9A84C" stroke-width="2"/>
+          <circle cx="470" cy="245" r="5" fill="none" stroke="#C9A84C" stroke-width="2"/>
+          <line x1="60" y1="190" x2="60" y2="198" stroke="#C9A84C"/><line x1="470" y1="190" x2="470" y2="198" stroke="#C9A84C"/>
+          <text x="53" y="182" fill="#C9A84C" font-size="22" font-weight="700">1</text>
+          <text x="463" y="182" fill="#C9A84C" font-size="22" font-weight="700">2</text>
+          <!-- key: only the layers in the picture -->
+          <g font-size="12" fill="#9A968B">
+            <line x1="40" y1="500" x2="76" y2="500" stroke="#f2efe6" stroke-width="2.6"/><text x="86" y="504">25cont  outline</text>
+            <line x1="40" y1="522" x2="76" y2="522" stroke="#b64dc9" stroke-width="1.2"/><text x="86" y="526">18cont  inside lines and break lines</text>
+            <text x="40" y="566" fill="#EEEAE1">Side elevation, 310UB32.0, 1:100</text>
           </g>
         </svg>
       </div>
@@ -121,73 +156,103 @@
 
     <!-- RIGHT -->
     <div class="col right">
-      <div><h4>1. View</h4><div class="opt"><span class="chip on">Side elevation</span><span class="chip">Top elevation</span><span class="chip">Section</span></div></div>
-      <div><h4>2. Orientation <span style="color:var(--mute);text-transform:none;letter-spacing:0">(odd shapes only: PFC, angles, Z, C)</span></h4>
+      <div><h4><span class="n">3</span>View</h4><div class="opt"><span class="chip on">Side elevation</span><span class="chip">Top elevation</span><span class="chip">Section</span></div></div>
+      <div><h4><span class="n">4</span>Orientation</h4>
         <div class="orient">
           <div><svg width="40" height="40"><rect x="6" y="6" width="28" height="6" fill="#999"/><rect x="6" y="6" width="6" height="28" fill="#999"/></svg></div>
           <div><svg width="40" height="40"><rect x="6" y="6" width="28" height="6" fill="#999"/><rect x="28" y="6" width="6" height="28" fill="#999"/></svg></div>
           <div><svg width="40" height="40"><rect x="6" y="28" width="28" height="6" fill="#999"/><rect x="6" y="6" width="6" height="28" fill="#999"/></svg></div>
           <div><svg width="40" height="40"><rect x="6" y="28" width="28" height="6" fill="#999"/><rect x="28" y="6" width="6" height="28" fill="#999"/></svg></div>
         </div>
-        <div class="foot" style="margin-top:3px">Greyed because a UB has only one way of sitting. Pictures show the real section.</div>
       </div>
-      <div><h4>3. Section</h4><div class="opt"><span class="chip off">In front</span><span class="chip off">Beyond</span></div><div class="foot">Greyed for elevations.</div></div>
-      <div><h4>4. Points sit on</h4><div class="opt"><span class="chip on">Centreline</span><span class="chip">Top of member</span><span class="chip">Bottom of member</span></div>
-        <div class="foot" style="margin-top:3px">For a section this becomes a 3 x 3 grid for the base point:</div>
-        <div class="grid3" style="margin-top:3px;opacity:.45"><span></span><span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span><span></span></div>
+      <div><h4><span class="n">5</span>Section</h4><div class="opt"><span class="chip off">In front</span><span class="chip off">Beyond</span></div></div>
+      <div class="reserve"><h4><span class="n">6</span>Points sit on</h4><div class="opt"><span class="chip on">Centreline</span><span class="chip">Top of member</span><span class="chip">Bottom of member</span></div></div>
+      <div><h4><span class="n">7</span>Break lines at</h4><div class="opt"><span class="chip on">Both</span><span class="chip">Start</span><span class="chip">End</span><span class="chip">None</span></div></div>
+      <div><h4><span class="n">8</span>Scale</h4>
+        <div class="scalebox"><span>1 :</span><span class="num">100</span></div>
       </div>
-      <div><h4>5. Ends</h4><div class="opt"><span class="chip on">Both broken</span><span class="chip">Start</span><span class="chip">End</span><span class="chip">None (closed)</span></div></div>
-      <div><h4>6. Scale</h4>
-        <div class="scalebox"><span>1 :</span><span class="num">100</span><span class="foot">Typed. Starts at the drawing's DIMSCALE.</span></div>
-      </div>
-      <div class="warn none"><b>Line scale OK</b> - LTSCALE 1000 matches 1:100. &nbsp;<span class="ul">Beam size: drawn at real size.</span></div>
+      <div class="status">Real size - line scale OK</div>
       <div class="btns"><span class="btn">Reset to default</span><span class="btn">Cancel</span><span class="btn place">Place</span></div>
     </div>
 
   </div>
 </div>
 
+<!-- ===== MOCK-UP NOTES: not part of the window ===== -->
+<div class="notes">
+  <h5>Mock-up notes (not part of the window)</h5>
+  <div class="note"><span class="k">N1</span><div><b>Member:</b> the 12 codes are one-click buttons. Tees and bars are left out for now. <b>Size:</b> typing in Find narrows the list. The figures come from the installed section list (it still says 310UB32); a dash would mean the list has no figure.</div></div>
+  <div class="note"><span class="k">N2</span><div><b>4 Orientation:</b> greyed because a UB has only one way of sitting. For a PFC, angle, Z or C the four pictures come alive and show the real section.</div></div>
+  <div class="note"><span class="k">N3</span><div><b>5 Section:</b> greyed for elevations; In front or Beyond only matters for a section.</div></div>
+  <div class="note"><span class="k">N4</span><div><b>6 Points sit on:</b> when View is Section, this row is swapped in place for a 3 x 3 grid for the base point <span class="miniGrid"><span></span><span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span><span></span></span>. The row keeps the same height, so nothing moves.</div></div>
+  <div class="note"><span class="k">N5</span><div><b>8 Scale:</b> typed. It starts at the drawing's DIMSCALE.</div></div>
+  <div class="note"><span class="k">N6</span><div><b>Status line under Scale:</b> one quiet grey line when all is well, shown here. It turns amber only when there is a warning (sample in the question below). Its height is reserved for 3 lines, so nothing moves when a warning appears.</div></div>
+  <div class="note"><span class="k">N7</span><div><b>Colours:</b> only Place is solid gold. Chosen buttons, the chosen size and the chosen scale have a gold outline and a soft tint. No blue.</div></div>
+  <div class="note"><span class="k">N8</span><div><b>Size:</b> drawn at 1280 x 680 px (left 330, preview about 550, right 400). Fits 1920 x 1032 with no scrolling; only the size list may scroll inside itself.</div></div>
+</div>
+
+</div>
+
 <!-- ===== THE QUESTION ===== -->
 <div class="q">
-  <h3>How big will the beam draw? &nbsp;<span style="color:#fbe9b0;font-weight:400;font-size:13px">TIM'S OPEN QUESTION - nothing is decided and nothing changes until you answer. Same beam (310UB32.0: 298 mm deep, 149 mm wide), same drawing scale 1:100.</span></h3>
-  <div class="two">
+  <h3>How big will the beam draw?<span>TIM'S OPEN QUESTION - nothing is decided and nothing changes until you answer. Same beam (310UB32.0: 298 mm deep, 149 mm wide), same drawing scale 1:100.</span></h3>
+  <div class="four">
 
-    <div class="opt-box">
-      <div><span class="tag">OPTION A</span><b>Real size</b> &nbsp;(what CEMEMBER does today, at every scale)</div>
-      <svg viewBox="0 0 520 150" width="100%" height="150" preserveAspectRatio="xMinYMid meet">
-        <rect x="0" y="0" width="520" height="150" fill="#0e0c08"/>
-        <!-- 10 m grid reference: 1 m = 40 px ; beam 298 mm deep -->
-        <line x1="20" y1="120" x2="500" y2="120" stroke="#3a3426" stroke-dasharray="4 4"/>
-        <line x1="40" y1="95" x2="440" y2="95" stroke="#f2efe6" stroke-width="2.4"/>
-        <line x1="40" y1="107" x2="440" y2="107" stroke="#f2efe6" stroke-width="2.4"/>
-        <text x="448" y="104" fill="#d9a521" font-size="13">298 mm deep</text>
-        <text x="40" y="30" fill="#e9e4d6" font-size="13">A 10 m long beam at 1:100: a thin pair of lines</text>
-        <line x1="40" y1="140" x2="80" y2="140" stroke="#d9a521" stroke-width="2"/><text x="86" y="144" font-size="11" fill="#9a927c">1 m</text>
+    <div class="box">
+      <div><span class="tag rec">OPTION A</span><b>Real size</b> <span class="small">(today's CEMEMBER) - recommended</span></div>
+      <svg viewBox="0 0 520 108" width="100%" preserveAspectRatio="xMinYMid meet">
+        <rect x="0" y="0" width="520" height="108" fill="#141414"/>
+        <text x="20" y="14" fill="#EEEAE1" font-size="12">10 m beam at 1:100: a thin pair of lines</text>
+        <line x1="20" y1="70" x2="420" y2="70" stroke="#f2efe6" stroke-width="1.6"/>
+        <line x1="20" y1="82" x2="420" y2="82" stroke="#f2efe6" stroke-width="1.6"/>
+        <line x1="20" y1="71.6" x2="420" y2="71.6" stroke="#b64dc9" stroke-width="1"/>
+        <line x1="20" y1="80.4" x2="420" y2="80.4" stroke="#b64dc9" stroke-width="1"/>
+        <text x="428" y="80" fill="#C9A84C" font-size="13">298 mm deep</text>
+        <line x1="20" y1="98" x2="60" y2="98" stroke="#C9A84C" stroke-width="2"/><text x="66" y="102" font-size="11" fill="#9A968B">1 m</text>
       </svg>
-      <div class="nums">At 1:100 it draws <b>298 mm</b> deep and <b>149 mm</b> wide. On the printed A1 sheet it is <b>3.0 mm</b> deep.<br>At 1:20 it draws 298 mm and prints <b>14.9 mm</b> deep.<br><b>Good:</b> true dimensions, so a dimension or a clash check reads right. <b>Cost:</b> small and hard to see at 1:100.</div>
+      <div class="three"><div><b>298 mm</b><i>drawn depth</i></div><div><b>3.0 mm</b><i>deep on A1 at 1:100</i></div><div><b>14.9 mm</b><i>deep on A1 at 1:20</i></div></div>
+      <div class="gc"><u>Good:</u> true dimensions, so a dimension or clash check reads right.<br><u>Cost:</u> small and hard to see at 1:100.</div>
     </div>
 
-    <div class="opt-box">
-      <div><span class="tag">OPTION B</span><b>About 5 times at 1:100</b> &nbsp;(what the old SBEAM does: size follows DIMSCALE / 20)</div>
-      <svg viewBox="0 0 520 150" width="100%" height="150" preserveAspectRatio="xMinYMid meet">
-        <rect x="0" y="0" width="520" height="150" fill="#0e0c08"/>
-        <line x1="20" y1="120" x2="500" y2="120" stroke="#3a3426" stroke-dasharray="4 4"/>
-        <line x1="40" y1="60" x2="440" y2="60" stroke="#f2efe6" stroke-width="2.4"/>
-        <line x1="40" y1="120" x2="440" y2="120" stroke="#f2efe6" stroke-width="2.4"/>
-        <line x1="40" y1="64" x2="440" y2="64" stroke="#b64dc9" stroke-width="1.2"/>
-        <line x1="40" y1="116" x2="440" y2="116" stroke="#b64dc9" stroke-width="1.2"/>
-        <text x="448" y="94" fill="#d9a521" font-size="13">1490 mm deep</text>
-        <text x="40" y="30" fill="#e9e4d6" font-size="13">Same beam: 5 times deeper, about 1.5 m on the drawing</text>
-        <line x1="40" y1="140" x2="80" y2="140" stroke="#d9a521" stroke-width="2"/><text x="86" y="144" font-size="11" fill="#9a927c">1 m</text>
+    <div class="box">
+      <div><span class="tag">OPTION B</span><b>About 5 times at 1:100</b> <span class="small">(old SBEAM: DIMSCALE / 20)</span></div>
+      <svg viewBox="0 0 520 108" width="100%" preserveAspectRatio="xMinYMid meet">
+        <rect x="0" y="0" width="520" height="108" fill="#141414"/>
+        <text x="20" y="14" fill="#EEEAE1" font-size="12">Same beam: 5 times deeper, about 1.5 m on the drawing</text>
+        <line x1="20" y1="22" x2="420" y2="22" stroke="#f2efe6" stroke-width="1.6"/>
+        <line x1="20" y1="82" x2="420" y2="82" stroke="#f2efe6" stroke-width="1.6"/>
+        <line x1="20" y1="26" x2="420" y2="26" stroke="#b64dc9" stroke-width="1"/>
+        <line x1="20" y1="78" x2="420" y2="78" stroke="#b64dc9" stroke-width="1"/>
+        <text x="428" y="56" fill="#C9A84C" font-size="13">1490 mm deep</text>
+        <line x1="20" y1="98" x2="60" y2="98" stroke="#C9A84C" stroke-width="2"/><text x="66" y="102" font-size="11" fill="#9A968B">1 m</text>
       </svg>
-      <div class="nums">At 1:100 it draws <b>1490 mm</b> deep and <b>745 mm</b> wide (5 x). On the printed sheet it is <b>14.9 mm</b> deep, the same as a real-size beam at 1:20.<br>At 1:20 it draws 298 mm: <b>normal</b> (1 x). At 1:50 it would be 2.5 x.<br><b>Good:</b> readable at every scale. <b>Cost:</b> the drawing no longer holds the true size, so CE warns: <span class="ul">"drawn 5 times its real size"</span>.</div>
+      <div class="three"><div><b>1490 mm</b><i>drawn depth</i></div><div><b>14.9 mm</b><i>deep on A1 at 1:100</i></div><div><b>298 mm</b><i>drawn at 1:20 (normal)</i></div></div>
+      <div class="gc"><u>Good:</u> readable at every scale.<br><u>Cost:</u> the drawing no longer holds the true size, so CE warns.</div>
     </div>
 
-    <div class="opt-box" style="max-width:430px">
-      <div><span class="tag" style="background:#fbe9b0">WARNING</span><b>What you would see (never blocks)</b></div>
-      <div class="warn" style="margin-top:8px"><b>Beam size:</b> 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) because the drawing scale is 1:100. Prints the same as at 1:20.</div>
-      <div class="nums" style="margin-top:8px">Shown <b>amber in the window</b> under Scale, on the <b>command line</b> when you Place, and as a <b>line in the log</b>. It never stops the beam being drawn. With Option A it shows "drawn at real size" in green and never turns amber.</div>
-      <div class="nums" style="margin-top:6px"><b>The LTSCALE warning is separate:</b> if LTSCALE is not 10 x the scale (for example 100 at 1:100), the dashes may look wrong, and the same amber band says so.</div>
+    <div class="box">
+      <div><b>As printed on an A1 sheet, about life size</b></div>
+      <svg width="400" height="130" viewBox="0 0 400 130" style="margin-top:4px;background:#141414">
+        <text x="10" y="14" fill="#EEEAE1" font-size="12">Option B: 14.9 mm deep</text>
+        <line x1="10" y1="20" x2="388" y2="20" stroke="#f2efe6" stroke-width="1.5"/>
+        <line x1="10" y1="76" x2="388" y2="76" stroke="#f2efe6" stroke-width="1.5"/>
+        <line x1="10" y1="24" x2="388" y2="24" stroke="#b64dc9" stroke-width="1"/>
+        <line x1="10" y1="72" x2="388" y2="72" stroke="#b64dc9" stroke-width="1"/>
+        <text x="10" y="102" fill="#EEEAE1" font-size="12">Option A: 3.0 mm deep</text>
+        <line x1="10" y1="109" x2="388" y2="109" stroke="#f2efe6" stroke-width="1.5"/>
+        <line x1="10" y1="120" x2="388" y2="120" stroke="#f2efe6" stroke-width="1.5"/>
+        <line x1="10" y1="110.5" x2="388" y2="110.5" stroke="#b64dc9" stroke-width="1"/>
+        <line x1="10" y1="118.5" x2="388" y2="118.5" stroke="#b64dc9" stroke-width="1"/>
+      </svg>
+      <div class="gc small">A 10 m beam at 1:100 = <b style="color:#EEEAE1">100 mm</b> long on paper. About life size at 96 dpi: 378 px long, 11 px deep (A) against 56 px deep (B). <span style="color:var(--amberText)">Approximate: your screen may differ.</span></div>
+    </div>
+
+    <div class="box">
+      <div><span class="tag" style="color:var(--amberText);border-color:var(--amberText)">WARNING</span><b>What you would see (never blocks)</b></div>
+      <div class="lbl">In the window, under Scale (Option B only)</div>
+      <div class="amber"><b>Beam drawn 5 x real size</b> (1490 mm deep, real 298 mm) at 1:100.</div>
+      <div class="lbl">On the command line when you Place</div>
+      <div class="amber"><b>Beam size:</b> 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) because the drawing scale is 1:100. Prints the same as at 1:20.</div>
     </div>
 
   </div>

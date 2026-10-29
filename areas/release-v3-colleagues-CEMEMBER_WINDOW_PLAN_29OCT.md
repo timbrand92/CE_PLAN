@@ -6,12 +6,12 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 ## FOR TIM (read this part only)
 
-**THE PICTURE:** open `C:\CE_PLAN\areas\CEMEMBER_WINDOW_MOCK_29OCT.html` in any browser. It is labelled MOCK-UP. Top half is the window. Bottom half is your question, "How big will the beam draw?", with the same beam drawn both ways.
+**THE PICTURE:** open `C:\CE_PLAN\areas\CEMEMBER_WINDOW_MOCK_29OCT.html` in any browser. It is labelled MOCK-UP. Top left is the window (1280 x 680 px). Top right are small numbered notes about the mock-up (they are not in the window). Bottom is your question, "How big will the beam draw?", with the same beam drawn both ways, and a strip showing both about life size on an A1 sheet.
 
-1. **What the window will look like.** One window, three columns, as you approved on 19 Oct.
-   1. **Left:** member type, the size list, a small box of figures (depth, width, web, flange, mass, Ix, Iy, Zx, Zy; a dash where the list has none).
+1. **What the window will look like.** One window, three columns, as you approved on 19 Oct. Steps are numbered 1 to 8 straight through.
+   1. **Left:** 1 Member (12 one-click buttons), 2 Size (a Find box and the list), then a small box of figures (depth, width, web, flange, mass, Ix, Iy, Zx, Zy; a dash where the list has none).
    2. **Middle:** a live picture of the member, always showing, with points 1 and 2 marked on a side or top view. It is drawn by the same code that draws it in the drawing, so what you see is what you get.
-   3. **Right:** View, Orientation pictures (greyed for a UB), Section in front or beyond, Points sit on (or the 3 x 3 grid for a section), Ends, Scale 1 : number. Reset, Cancel, Place at the bottom right.
+   3. **Right:** 3 View, 4 Orientation pictures (greyed for a UB), 5 Section in front or beyond, 6 Points sit on (swapped for the 3 x 3 grid when the view is Section), 7 Break lines at (Both, Start, End, None), 8 Scale 1 : number. A quiet status line, then Reset, Cancel, Place at the bottom right. Only Place is solid gold.
 2. **What Place does.** The window hides. You pick point 1 then point 2 (a section: one pick). Escape stops. Press Enter or Space afterwards and the window comes back with your last choices. Reset clears them. All of that already works today on the command line; the window is a nicer front for it.
 3. **Your question, and what I found.** You said you cannot answer "real size or 5 times" until you see it. I checked the code.
    1. **CEMEMBER (the new command) always draws real size.** A 310UB32.0 is 298 mm deep at every scale. Scale only changes the break-line size.
@@ -19,11 +19,11 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
    3. **LTSCALE is not the cause.** It only changes how long the dashes are. It looks linked because your office pairs are always 20 with 200 and 100 with 1000.
 4. **The warning you asked for (never stops the drawing).**
    1. **Wording:** "Beam size: 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) because the drawing scale is 1:100. It prints the same as at 1:20."
-   2. **Where:** amber band in the window under Scale; the command line when you Place; one line in the log.
-   3. **When:** only when the beam is drawn at other than real size. With real size (today's CEMEMBER) it never fires and the window says "drawn at real size" in green.
+   2. **Where:** amber line in the window under Scale; the command line when you Place; one line in the log.
+   3. **When:** only when the beam is drawn at other than real size. With real size (today's CEMEMBER) it never fires and the window shows one quiet grey line, "Real size - line scale OK".
    4. **Separate warning, already built:** if LTSCALE is not 10 times the scale, CEMEMBER warns and carries on. The window will show that in the same band.
 5. **What is NOT decided (your call after you see the picture).**
-   1. **Option A real size, or Option B about 5 times at 1:100.** I recommend A (true dimensions; a dimension or clash check reads right) with the beam printing small at 1:100 (3.0 mm on an A1 sheet). Option B prints 14.9 mm at every scale but the drawing no longer holds the true size. Nothing changes until you answer.
+   1. **Option A real size, or Option B about 5 times at 1:100.** I recommend A (true dimensions; a dimension or clash check reads right) with the beam printing small at 1:100 (3.0 mm on an A1 sheet). Option B prints 14.9 mm at every scale but the drawing no longer holds the true size. The picture now has a strip showing both about life size as printed (a 10 m beam at 1:100 is 100 mm long; A is 3.0 mm deep, B 14.9 mm; approximate on a screen). Nothing changes until you answer.
    2. **Should the same warning go on the old SBEAM now?** SBEAM draws 5 times at 1:100 today and says nothing. It is a one-line addition and changes no size. I recommend yes, as a small separate piece, because it protects drafters this week. It touches an old command, so I will not do it without your yes.
 6. **What I need from you.**
    1. Look at the picture and tell me what to change in the layout.
@@ -32,7 +32,7 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
    4. Nothing else. Any builder can build this (your 29 Oct ruling); it goes after the Civil freeze work.
 7. **Mistakes of my own and what I did not check.**
    1. The mock-up is a drawing, not the window. It has not been seen in AutoCAD and no code exists.
-   2. The first version of the picture overflowed its box; I looked at a screenshot and fixed it. It now fits 1920 x 1032 with no scrolling (Edge headless screenshot, 29 Oct).
+   2. The first version of the picture overflowed its box and was drawn 1880 px wide while this plan said about 1100 x 640; Option A also lacked the inside lines Option B had, and the window carried the picture's own notes. All fixed in the 29 Oct revision after the design review: the window is drawn at 1280 x 680, and the picture fits 1920 x 1032 with no scrolling (Edge headless screenshot, 29 Oct).
    3. Your memory notes say **no blue**: gold, black, white and grey (9 Oct ruling), so the picture is gold on dark with no blue. I did not use the old deep-blue idea.
    4. The 5-times claim: I confirmed it for SBEAM from the code, not by drawing one in AutoCAD.
 
@@ -51,13 +51,13 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 ### 2. The window (layout exactly as card section 5)
 
-1. **Size:** designed at about 1100 x 640 px, no scrolling layout (rule ui-no-scroll-rule: high-use window; the size list is a bounded list that may scroll inside itself). Fits 1920 x 1032 and shrinks through `FitToWorkArea` on small screens.
-2. **Left column:** member type drop-down (UB, UC, WB, WC, PFC, SHS, RHS, CHS, EA, UA, ZC, CP; tees and bars are deferred); size list (typing filters, as the typed route's name search does); properties box (depth, width, web, flange, mass, Ix, Iy, Zx, Zy, "-" where blank).
-3. **Middle:** live preview canvas, always shown, drawn with the real line rules (section 4 below). Points 1 and 2 on elevations; base point mark on sections. Key of the three layer looks under the picture.
-4. **Right column, top to bottom:** 1 View (Side, Top, Section); 2 Orientation (four small pictures, greyed unless PFC, angle, Z, C; each picture is the real section drawn at that orientation by `CeMemberSection.Plan`); 3 Section In front / Beyond (greyed for elevations); 4 Points sit on (Centreline default, Top, Bottom) or for a section the 3 x 3 base-point grid (centre of the box, not the balance point); 5 Ends (Both default, Start, End, None; greyed for a section); 6 Scale 1 : [typed number, default from the drawing's DIMSCALE, else the Settings DefaultScale].
-5. **Under Scale:** one status band. Green "Line scale OK / drawn at real size" when quiet; amber when a warning applies (section 6). Same position every open (cockpit test).
-6. **Bottom right:** Reset to default, Cancel, **Place** (gold, fixed corner). Enter = Place, Esc = Cancel.
-7. **Look:** gold on dark, black, white and grey, **no blue** (9 Oct ruling). Plain words only; AutoCAD terms (layer, DIMSCALE, LTSCALE) are fine. Amber band for a waiting decision, bold key numbers (ui-emphasis-rule).
+1. **Size:** **1280 x 680 px** (revised 29 Oct after the design review; the first version said about 1100 x 640 and the picture was drawn wider than that). Left column 330, live preview about 550, right column 400. No scrolling layout (rule ui-no-scroll-rule: high-use window; the size list is a bounded list that may scroll inside itself). Fits 1920 x 1032 and shrinks through `FitToWorkArea` on small screens.
+2. **Left column, numbered 1 and 2:** 1 Member: the 12 codes (UB, UC, WB, WC, PFC, SHS, RHS, CHS, EA, UA, ZC, CP) as one-click buttons in two rows of six, not a drop-down (tees and bars are deferred); 2 Size: a **Find** box above the size list (typing filters, as the typed route's name search does), then the list; under it a properties box (depth, width, web, flange, mass, Ix, Iy, Zx, Zy, "-" where blank).
+3. **Middle:** live preview canvas, always shown, drawn with the real line rules (section 4 below). Points 1 and 2 on elevations; base point mark on sections. The key under the picture lists only the layers actually in the picture (for a side view of a UB: 25cont outline, 18cont inside lines and break lines; 18hidden appears only when something hidden is drawn).
+4. **Right column, numbered 3 to 8 so the order reads straight through from the left column:** 3 View (Side, Top, Section); 4 Orientation (four small pictures, greyed unless PFC, angle, Z, C; each picture is the real section drawn at that orientation by `CeMemberSection.Plan`); 5 Section In front / Beyond (greyed for elevations); 6 Points sit on (Centreline default, Top, Bottom); **when View is Section this row is swapped in place for the 3 x 3 base-point grid** (centre of the box, not the balance point), and the row's height is reserved so nothing moves; no faded ghost grid under an elevation; 7 **Break lines at: Both | Start | End | None** (default Both; greyed for a section); 8 Scale 1 : [typed number, default from the drawing's DIMSCALE, else the Settings DefaultScale].
+5. **Under Scale:** one status line with a **fixed height reserved for about 3 lines** (the longest amber text), so nothing moves when a warning appears. Healthy state: one quiet muted line, "Real size - line scale OK", no underline, no colour. Amber only when a warning applies (section 6). Same position every open (cockpit test). The in-window text is the short form, "Beam drawn 5 x real size (1490 mm deep, real 298 mm) at 1:100."; the full sentence goes on the command line.
+6. **Bottom right:** Reset to default, Cancel, **Place** (solid gold, fixed corner; the only solid gold in the window). Enter = Place, Esc = Cancel.
+7. **Look:** the real dark theme: background `#1C1C1C`, panels `#252525`, lines `#41413D`, text `#EEEAE1`, gold `#C9A84C`; **no blue** (9 Oct ruling). Chosen buttons, the chosen size and the chosen scale get a gold outline with a soft tint (`#332A10`), not a solid fill. Plain words only; AutoCAD terms (layer, DIMSCALE, LTSCALE) are fine. Amber band for a waiting decision, bold key numbers (ui-emphasis-rule). The window carries no explanatory hint lines (cockpit test: no repeated hints); the picture keeps its own notes outside the frame, as numbered call-outs N1 to N8.
 8. **Typed scale:** a number box; blank, zero, negative or text turns the box red with "Type a scale such as 100" and Place stays off. Never silently replaced.
 
 ### 3. Place, Escape, Enter-to-repeat (card section 6)
@@ -103,9 +103,13 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 **Exact wording (plain, drawing terms; numbers filled in):**
 
-1. **Size:** "Beam size: 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) because the drawing scale is 1:100. It prints the same as at 1:20." (A factor under 1: "drawn 0.5 times its real size ... smaller".) Quiet state: "Beam size: drawn at real size."
+1. **Size:** "Beam size: 310UB32.0 is drawn 5 times its real size (1490 mm deep, real 298 mm) because the drawing scale is 1:100. It prints the same as at 1:20." (A factor under 1: "drawn 0.5 times its real size ... smaller".) Quiet state in the window: "Real size - line scale OK" (no amber).
 2. **LTSCALE (existing text kept):** "The line scale (LTSCALE 100) is not 10 x the drawing scale (1000), so dashed lines may look off. CEMEMBER carried on at 1:100."
-3. **Where it prints:** window status band under Scale (amber, bold numbers, updates as the typed scale changes); command line once per run at the first pick ("CEMEMBER: ..."); structural log "CEMEMBER size: ..." beside the existing "CEMEMBER scale:" line.
+3. **Where it prints** (moved here from the picture's warning panel, 29 Oct, because Tim does not read big documents):
+   1. **Window:** the status line under Scale turns amber, with the short text "Beam drawn 5 x real size (1490 mm deep, real 298 mm) at 1:100." (bold numbers; it updates as the typed scale changes). Its height is reserved so nothing moves.
+   2. **Command line:** the full sentence above, once per run at the first pick ("CEMEMBER: ..."). **Log:** "CEMEMBER size: ..." beside the existing "CEMEMBER scale:" line.
+   3. **It never stops the beam being drawn.** With Option A the status line stays one quiet grey line and never turns amber.
+   4. **The LTSCALE warning is separate:** if LTSCALE is not 10 x the scale (for example 100 at 1:100), dashed lines may look wrong, and the same status line turns amber and says so.
 4. **SBEAM (recommended, needs Tim's yes):** the same sentence on the command line when SBEAM is placed, no size change, switch `structural.sbeamSizeWarning` ON. Without that yes, B-037 covers CEMEMBER only.
 
 ### 7. Files to add or change (on the live Structural line; confirm paths at build time)
@@ -117,7 +121,7 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 ### 8. Tests
 
-1. **Unit (DesignCore.Tests):** window model greying (UB: orientation off; PFC: on; section: Ends and Points-on swap to the grid); typed scale parse (blank, 0, -5, "abc", "1:50", 20, 100, 37.5); Reset; memory round trip; size note numbers for DIMSCALE 100 / 20 / 50 and the below-1 case; LTSCALE wording unchanged; **parity test:** for every family x view x orientation, the preview's line list equals the line list Place would draw for the same inputs (same planner, so this pins that nobody adds a second routine).
+1. **Unit (DesignCore.Tests):** window model greying (UB: orientation off; PFC: on; section: Break lines at greys and the Points-on row swaps to the grid); typed scale parse (blank, 0, -5, "abc", "1:50", 20, 100, 37.5); Reset; memory round trip; size note numbers for DIMSCALE 100 / 20 / 50 and the below-1 case; LTSCALE wording unchanged; **parity test:** for every family x view x orientation, the preview's line list equals the line list Place would draw for the same inputs (same planner, so this pins that nobody adds a second routine).
 2. **Switch tests:** defaults ON through both `DeserializeSettings` and `DeserializeSettingsTolerant`; with `UseWindow` OFF the typed route is unchanged (existing source guards `CeMemberCommandSourceGuardTests` and `CeMemberRepeatSourceGuardTests` stay green).
 3. **Source guards:** window files call only the shared planners; no number or layer name literals; Cancel path draws nothing; no `SetSystemVariable`, regen or zoom in the window (REDO-safe, BUG-861).
 4. **Drawing-output (robot, existing review Part A item 5 E1 to E12):** run each case once typed and once through the window with identical choices; assert the same entities (layers, counts, coordinates). Plus the scale cases below.
@@ -126,7 +130,7 @@ Design only. No code written, no build, no PR, no AutoCAD. Written from the code
 
 1. **S31_cm_window_ub_side (robot, with switch-off control S31off):** type `CEMEMBER`; with `structural.cememberWindow` OFF (set before launch) the command line asks `View [SIde/Top/SEction/Reset]`; with it ON a window opens (window title "CEMEMBER - draw a steel member"). Types in the window: UB, 310UB32.0, Side elevation, Centreline, Both, scale 100, Place; then `0,0` and `3000,0`, Esc. Checks: 6 new entities, 25CONT lines at Y = 149 and -149, 18CONT at Y = 141 and -141 (the E1 values), and the same entity list as the typed twin. Control: switch OFF gives the typed questions and the same 6 entities.
 2. **S32_cm_window_enter_repeat:** place one member, Esc, press Enter at Command: window reopens with 310UB32.0, Side, Centreline, Both, 100 preset. Reset clears them.
-3. **S33_cm_size_warning:** `DIMSCALE 100`, `LTSCALE 1000`: status band green "drawn at real size", no extra command-line line. `LTSCALE 100`: amber LTSCALE band and the line "CEMEMBER: The line scale (LTSCALE 100) is not 10 x ..." with the member still drawn. Switch-off control (`cememberSizeWarning` OFF): the new size line is absent. (Option B cases only after Tim answers.)
+3. **S33_cm_size_warning:** `DIMSCALE 100`, `LTSCALE 1000`: status line is the quiet grey "Real size - line scale OK", no extra command-line line. `LTSCALE 100`: amber LTSCALE band and the line "CEMEMBER: The line scale (LTSCALE 100) is not 10 x ..." with the member still drawn. Switch-off control (`cememberSizeWarning` OFF): the new size line is absent. (Option B cases only after Tim answers.)
 4. **S34_cm_window_cancel:** Cancel and Esc: "CEMEMBER cancelled. Nothing changed.", zero new entities, U has nothing to undo.
 5. **C35_cm_window_codex_look (Codex, real AutoCAD, screenshots):** open the window on 1920 x 1032 and on a small laptop screen; check no scrolling layout, gold on dark with no blue, orientation pictures change with PFC, ZC, EA, preview matches the drawn member, band positions fixed, Place in the bottom-right corner.
 6. **Not provable by a machine:** whether it looks right to a drafter (Codex look or Tim), and the A or B answer (Tim's engineering call).
