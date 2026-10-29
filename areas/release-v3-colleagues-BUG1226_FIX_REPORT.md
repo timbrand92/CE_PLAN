@@ -24,3 +24,24 @@
 7. **To do before trusting it:** run, one at a time, `dotnet test Modules/Drainage.Tests/CE_CVL_SUITE.Tests.csproj -c Release -f net10.0-windows --filter "FullyQualifiedName~Bug1226RecentButtons|FullyQualifiedName~PipeOnePageLayout|FullyQualifiedName~C75NewSwitch"` with `-p:SkipDevBundle=true -nr:false --disable-build-servers`, AutoCAD 2027 on PATH (check the test count is not 0), then the full suite and the net48 compile. A 0-byte placeholder `Modules/Shared.Transform.Native2027/bin/x64/Release/CE_TRANSFORM_2027.arx` is already in the worktree (untracked).
 8. **N30 note:** its header comment still says the buttons are on the Levels and Flow tab; after this change they are on the main page. The checks need no change. N30 reads the window dump text, so it should see "Use recent invert 18.190 m AHD" before "18.240".
 9. **Hygiene:** nothing closed, retargeted or merged; no branch deleted; bug not marked FIXED; BUG_CARPARK.md and DESK_LOG.md not edited. bin/obj were never built, so no clean-up needed. Scratch in `C:\ce-fx\b1226j`.
+
+---
+
+## VERIFIED (second job, 29 Oct 2026, 1:50 pm Melbourne)
+
+### FOR TIM
+
+1. **Answer:** draft PR **#1839** is now built and unit-tested. Nobody has opened it in AutoCAD.
+2. **My first version was wrong:** with the Recent row added, the one-page window needed 622 to 636 px at 150% display scaling and only 620 are allowed, so the window would not have fitted for a Charged or Detention pipe with a connected pit. I made the buttons slimmer (smaller text, no extra padding, tucked into the gap above). Now it fits and the window height is unchanged.
+3. **What you will see:** same as before: "Recent:" under the two level boxes, last pipe's levels first. The buttons are a little smaller than the old tab's buttons.
+4. **Not proven:** how it looks. Slim buttons at 150% may look cramped; the row sits directly under the level boxes with no gap. A Codex look is needed.
+5. **Robot case N30 (comment only, do not edit the case):** line 4 says "on the Levels & Flow tab (line 155)" and line 21 says "whose Levels & Flow tab shows a button"; both should say "on the main one-page window under the two level boxes" (line 2 is a long line that also needs checking). Case file: `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_opus_28oct_b3\N30_recent_invert_buttons_follow_last_pipe.case.txt`. Its checks need no change. Switch-off control: set `pipe.recentInvertButtonsOnMainPage` false before AutoCAD starts; the "Use recent invert 18.190" line must then be missing.
+
+### Technical detail
+
+1. **Commit:** 5092bbf9 on `fb/bug1226-recent-buttons` (normal push, on top of 07eebe49).
+2. **Faults found and fixed:** (a) tests looked for the buttons in the logical tree, but template buttons exist only in the visual tree (the first test failed twice); fixed with a visual-tree walk. (b) 17 existing `OnePageFitsTheAgreedOwnerArea` cases at 150% failed because the 26 px tall buttons added about 16 to 30 px (default settings carry three recent levels). Without my row the tightest case needs 606 px; the limit is 620. Fix in `PipeOnePageLayout.CompactRecentButtons`: slim button style (MinHeight 0, padding 5,0, font 10), a replacement item template with the same bindings, command and automation name, row margin -2 top, caption margin 0. Tightest case now 620 of 620.2.
+3. **Switch test:** `C75NewSwitchDefaultsTests.RecentInvertButtonsSwitch_LoadsOn_ThroughBothStartUpReads` (3 file shapes through `DeserializeSettings` and `DeserializeSettingsTolerant`, plus typed false through both). `Bug1226RecentButtonsTests` already covers four more shapes and the switch-off window.
+4. **What ran:** net10 focused (Bug1226RecentButtons, PipeOnePageLayout, C75NewSwitch): 331 total, 331 passed. Full Civil net10 suite: 20,816 total, 20,784 passed, 0 failed, 32 skipped (14 min). net48 build of CE_CVL_SUITE: 0 errors. Test counts were never 0. AutoCAD 2027 on PATH, placeholder arx, SkipDevBundle, two-lane slot check, below-normal priority.
+5. **Not run:** the Manager and Structural suites (not touched); no AutoCAD; no screenshot of the window.
+6. **Hygiene:** nothing closed, merged or deleted; bug not marked FIXED; CE_SHARED untouched; temporary diagnostics removed before commit; bin/obj cleaned with `git clean -fdXq` in `C:\ce-fx\b1226` only.
