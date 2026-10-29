@@ -549,3 +549,14 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "7b. yes" and "keep it as recommenmded".
    2. Interpretation: the storage rule already in the code is approved: the wet well holds the larger of (i) the worst storm's water minus what the pump moves in 30 minutes, and (ii) 10 mm of rain over the catchment (1 per cent of the area in cubic metres); the pump is the smallest standard one (1 to 12 L/s) that covers it; every fixed number goes on the Settings page with its source. GUESS: this floor (ii) sits beside his R-14 ("no fixed floor, 3 m3 is a review flag"); approving the rule is read as the pump-station rule superseding R-14's "no fixed floor" for pump stations only, 29 Oct 2026; R-14 stays as written elsewhere. He did not mention R-14.
    3. Desk must: keep the rule; move every fixed number to Settings with its source; keep R-14's 3 m3 review flag as a warning; tell Tim in the report that this overrides "no fixed floor" for pump stations. NOT covered by "keep it as recommended": the three open points on the card (friction method and roughness, duty flow on a stormwater job, the command name), asked next.
+
+## Batch 26 (evening, Melbourne)
+
+105. **Pump station friction method: Hazen-Williams; the roughness figure is NOT given.**
+   1. Tim's words: "1. Hazen-Williams".
+   2. Interpretation: the pump main uses Hazen-Williams. He did not give the roughness (C value), which my question asked for; nothing in CE_PLAN gives one. Not guessed.
+   3. Desk must: put the Hazen-Williams C value on the Settings page, empty/Unknown until Tim types it (R-27, Unknown stays Unknown); the pump main check shows "C value not set" meanwhile; ask Tim for the figure when the pump station window is near, or find one in a guidebook page with Tim's word.
+
+106. **Pump station duty flow on a stormwater job: typed by the engineer.** Tim's words: "2. recommended: typed by the engineer." Desk must: the engineer types the duty flow; CE does not work it out.
+
+107. **Pump station command name: CDPUMP.** Tim's words: "3. CDPUMP". Desk must: register CDPUMP for the pump station command.
