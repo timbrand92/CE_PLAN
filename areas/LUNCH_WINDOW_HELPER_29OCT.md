@@ -2,6 +2,175 @@
 
 CE_ACAD / robot / build / 23 · written Thu 29 Oct 2026, 15:04 Melbourne time · Team, Opus
 
+## AMENDMENT 1 (29 Oct, after Tim's 5:30pm and idle-check words)
+
+CE_ACAD / robot / build / 24 · Thu 29 Oct 2026, 15:20 Melbourne time · Team, Opus
+
+Tim's words (Thu 29 Oct 2026): *"if autocad is open at 2pm you need to save everything and close it during lunch then reopen everything at 3pm as it was, same thing with 5:30pm except with both those times, check that the pc has been idle for 5 minutes before doing so, that way it knows im not around"*.
+
+**ANSWER FIRST:** the helper now also closes at 5:30 pm, and before either close it waits until nobody has touched the mouse or keyboard for 5 minutes. It passes 76 of 76 offline checks against a pretend AutoCAD. It is still **not switched on and not run on a real AutoCAD**.
+
+### FOR TIM
+
+1. **2:00 pm, weekdays:** if AutoCAD is open, it waits until the PC has had no mouse or keyboard use for 5 minutes. Then it saves every drawing (like QSAVE) and closes AutoCAD the normal way.
+2. **3:00 pm:** AutoCAD reopens with your drawings as tabs, in the same order, with the drawing you were on in front.
+3. **5:30 pm, weekdays:** the same close as 2:00 pm, with the same 5-minute idle check.
+4. **8:30 am the next working day:** AutoCAD reopens with the drawings from the night before. A Friday 5:30 pm close reopens on Monday at 8:30 am.
+5. **What "idle" means:** no mouse movement and no key pressed on this PC for 5 minutes. If you are working, it does not close. It checks again every minute.
+6. **It gives up rather than close on you:** at 2:55 pm for lunch, and at 8:00 pm for the evening. AutoCAD is then left open, exactly as you had it.
+7. **If you open AutoCAD yourself before 3:00 pm or 8:30 am,** it does nothing. It never starts a second AutoCAD.
+8. **It will NOT close AutoCAD when:**
+   1. **A new drawing was never saved** and has work in it.
+   2. **A command or dialog box is still open**, or a save fails.
+   3. **It cannot tell whether you are away** (it cannot read the idle time).
+   4. **The robot or Codex is already using AutoCAD.**
+   5. **It is Saturday or Sunday.**
+9. **It never force-closes AutoCAD.** If AutoCAD will not close, it leaves it running.
+10. **Pause switch:** if the desk creates the file `LUNCH_PAUSE.flag`, the closes do nothing. Use it on Cup Day (Tue 3 Nov) and other public holidays, or a day you want left alone. Holidays are not detected automatically.
+11. **Change from before:** it no longer waits for "the robot has a test queued". Your instruction was to close every time, so it now closes every time (unless paused).
+12. **PLEASE CHECK, my assumption:** you did not say when the 5:30 pm close should reopen. **I picked 8:30 am the next working day.** Tell me if you want a different time, or no reopen at all.
+13. **Tested:** the decisions only, against a pretend AutoCAD (76 checks, all pass). **Not tested:** a real save, close and reopen, and whether the idle reading works from a scheduled task. Nothing is switched on yet.
+
+---
+
+### Technical changes (Amendment 1)
+
+1. **Idle check before every close.** `Wait-ForIdle` reads `GetLastInputInfo` (user32, through the existing inline `LunchCom` C# type). It needs `-IdleMinutes` (default 5) of no input and re-checks every 60 s. It gives up at 14:55 (lunch) or 20:00 (evening) and logs `left open: not idle: keyboard or mouse used N min ago`. Only whole minutes are logged, never a clock time of input.
+2. **Unreadable idle time = not idle.** `Get-IdleMs` now returns nothing when `GetLastInputInfo` fails (the C# returns -1) or when the process runs in session 0 (no desktop). The close then logs `left open: cannot read idle time` straight away. Before this change a failure counted as "idle forever", which was unsafe.
+3. **Locked screen:** Windows keeps the last-input time per session, so a locked screen is expected to read normally and count as idle. This is **not verified** on this PC. If the read fails, AutoCAD stays open (point 2).
+4. **Slots:** `Get-Slot` picks the slot from the clock. Close: Lunch 13:55–14:20, Evening 17:25–17:50. Reopen: Lunch 14:55–15:30, Morning 08:25–09:00. Weekends give no slot. With `-IgnoreClock`, `-Slot Lunch|Evening|Morning` is used, otherwise the slot is guessed from the hour, and the idle give-up is now + 30 minutes.
+5. **State keeps a `slot`** (`lunch` or `evening`). The 15:00 reopen needs a lunch close from today. The 08:30 reopen needs an evening close from the previous working day (Monday looks back to Friday). The list is kept until a successful reopen.
+6. **Stale list:** at any reopen, a list captured more than 4 days ago is logged (`N days old (over 4): deleted, nothing opened`) and deleted.
+7. **Removed** `Test-RobotWantsWindow` (the ROBOT_QUEUE / HOLD_ROBOT / LUNCH_CLOSE guard). **Added** `LUNCH_PAUSE.flag` in `C:\CE_PLAN\desk_jobs`. It stops Close only; Reopen still works.
+8. **Added a guard:** Close leaves AutoCAD open if the driver lock is live or a robot, Codex or driver process is running. In that case the open AutoCAD may be the robot's, not Tim's. It uses the same `Get-RobotActivity` as Reopen.
+9. **Unchanged safety rules:** refuse on unsaved untitled work, read-only changes, a failed save, or a busy command or dialog (10 minutes; this busy wait now also stops at the give-up time). Never kill. Paths only in `C:\ce_rc_scratch\lunch`. Counts only in the repo log. The 2-minute keyboard check inside the busy wait is kept, so Tim coming back mid-close still stops it.
+10. **Log tags** now say `close (lunch)`, `close (evening)`, `reopen (lunch)` or `reopen (morning)`.
+11. **Dry run** reads the idle time once and never waits. Example: `close (lunch) (dry run): not idle now (keyboard or mouse used 1 min ago, needs 5 min); a real run re-checks every 60 s until 14:55`.
+12. **Status** now adds the slot, the pause flag and the current idle minutes. Real run, read-only, 15:16: `lunch window: no state recorded; pause flag: not set; idle now: 0 min (needs 5)`. No repo log was created.
+
+### Superseded in the original report below
+
+1. FOR TIM item 4.4 ("the robot has nothing to test") and item 10 ("today it would do nothing: the robot is on hold") no longer apply. The helper now closes regardless of the robot queue.
+2. "How Close decides" step 3 and the section "So the robot actually uses the window", points 1, 3 and 4, are replaced by the pause switch.
+3. The trigger section below is replaced by the four tasks here.
+
+### Scheduled tasks (designed, NOT registered)
+
+There are four tasks, all for Tim's account and weekdays only. Each must be **"Run only when user is logged on"** (`-LogonType Interactive`, not elevated). That is the only way the 14:00 and 17:30 tasks can read Tim's idle time and see his AutoCAD, and the reopen tasks can show AutoCAD on his screen.
+
+The run-time limits are set so a close can wait until its give-up time. "Start when available" stays off, so a missed run never fires late. A consequence: if Tim is not logged on at 08:30 (for example after an overnight restart), the morning reopen does not run. The list is kept for a by-hand `-Action Reopen -IgnoreClock`.
+
+```powershell
+$pw = 'C:\Program Files\PowerShell\7\pwsh.exe'
+$h  = '-NoProfile -WindowStyle Hidden -File "C:\CE_PLAN\desk_jobs\lunch_window.ps1"'
+$p  = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited
+$d  = 'Monday','Tuesday','Wednesday','Thursday','Friday'
+$s1 = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Minutes 75)  -MultipleInstances IgnoreNew
+$s3 = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Minutes 180) -MultipleInstances IgnoreNew
+$s0 = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Minutes 30)  -MultipleInstances IgnoreNew
+Register-ScheduledTask -TaskName 'CE Lunch Close'    -Principal $p -Settings $s1 -Trigger (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $d -At 14:00) -Action (New-ScheduledTaskAction -Execute $pw -Argument "$h -Action Close")
+Register-ScheduledTask -TaskName 'CE Lunch Reopen'   -Principal $p -Settings $s0 -Trigger (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $d -At 15:00) -Action (New-ScheduledTaskAction -Execute $pw -Argument "$h -Action Reopen")
+Register-ScheduledTask -TaskName 'CE Evening Close'  -Principal $p -Settings $s3 -Trigger (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $d -At 17:30) -Action (New-ScheduledTaskAction -Execute $pw -Argument "$h -Action Close")
+Register-ScheduledTask -TaskName 'CE Morning Reopen' -Principal $p -Settings $s0 -Trigger (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $d -At 08:30) -Action (New-ScheduledTaskAction -Execute $pw -Argument "$h -Action Reopen")
+```
+
+Undo, one line each:
+
+```powershell
+Unregister-ScheduledTask -TaskName 'CE Lunch Close'    -Confirm:$false
+Unregister-ScheduledTask -TaskName 'CE Lunch Reopen'   -Confirm:$false
+Unregister-ScheduledTask -TaskName 'CE Evening Close'  -Confirm:$false
+Unregister-ScheduledTask -TaskName 'CE Morning Reopen' -Confirm:$false
+```
+
+As before, put these lines in a scratch `.ps1` file and run the file (Defender note in `C:\Lisp Files\CLAUDE.md`).
+
+### Offline test output (pwsh, Thu 29 Oct 2026 ~15:15; earlier checks 1–13 still pass, quoted in the original section below)
+
+Checks 6, 6b and 6c were flipped on Tim's instruction: the hold flag, the old `LUNCH_CLOSE.flag` and an empty queue no longer stop a close. The count of old checks is still 52. The new checks follow:
+
+```
+--- 6. HOLD_ROBOT.flag set -> closes anyway (the robot-queue guard was removed on Tim's instruction)
+PASS  hold flag no longer blocks: closed
+--- 6b. old LUNCH_CLOSE.flag present -> ignored, closes as normal
+PASS  closed with LUNCH_CLOSE.flag
+--- 6c. every queued job done -> still closes (Tim: 'if autocad is open at 2pm you need to save everything and close it')
+PASS  empty queue no longer blocks: closed
+...
+--- A1. not idle at 14:00 (mouse used 30 s ago, the whole time) -> retries every minute, leaves open at 14:55
+Thu 29 Oct 14:55 close (lunch): left open: not idle: keyboard or mouse used 0 min ago (needs 5 min), gave up at 14:55
+PASS  A1 re-checked every 60 s from 14:00 to 14:55 (55 waits)
+PASS  A1 nothing saved, Quit not called, no state
+PASS  A1 repo log: left open: not idle, minutes only, gave up at 14:55
+--- A2. not idle at first, idle 5 min after 3 checks -> then saves and closes
+Thu 29 Oct 14:03 close (lunch): closed 1 drawing(s), active one recorded, AutoCAD gone
+PASS  A2 waited 3 minutes, then saved and quit once
+PASS  A2 exactly 5 min idle counts as idle; state slot lunch
+--- A3. idle time unreadable (no desktop session) -> AutoCAD left open
+Thu 29 Oct 14:00 close (lunch): left open: cannot read idle time (no desktop session or the call failed), treated as not idle
+PASS  A3 nothing saved, Quit not called, no waiting
+PASS  A3 repo log: cannot read idle time
+--- A4. Thu 17:30 evening close -> Fri 15:00 does nothing -> Fri 08:30 reopens
+Thu 29 Oct 17:30 close (evening): closed 1 drawing(s), active one recorded, AutoCAD gone
+PASS  A4 evening close: saved, quit, state closed with slot evening
+Fri 30 Oct 15:00 reopen (lunch): nothing was closed at lunch today, nothing to do
+PASS  A4 Fri 15:00 lunch reopen ignores an evening close
+Fri 30 Oct 08:30 reopen (morning): reopened 1 drawing(s) in order, active one restored
+PASS  A4 Fri 08:30 morning reopen: AutoCAD started, 1 drawing opened, status reopened
+PASS  A4 repo log: reopen (morning): reopened 1
+--- A4b. Tim working late (never idle) -> evening close gives up at 20:00
+Thu 29 Oct 20:00 close (evening): left open: not idle: keyboard or mouse used 0 min ago (needs 5 min), gave up at 20:00
+PASS  A4b 150 one-minute checks, left open at 20:00
+--- A5. Fri 17:30 close -> Sat 08:30 nothing -> Mon 08:30 reopens
+PASS  A5 Saturday: nothing started, state kept
+Mon 02 Nov 08:30 reopen (morning): reopened 1 drawing(s) in order, active one restored
+PASS  A5 Monday 08:30: reopened the Friday list
+--- A5b. Sunday 17:30 and Thursday 16:00 -> nothing
+PASS  A5b no save, no quit on Sunday or at 16:00
+--- A6. state 3.6 days old on Tue (not the last working evening) kept; 4.6 days old on Wed -> deleted
+PASS  A6 Tue: not reopened, state kept
+Wed 28 Oct 08:30 reopen (morning): the saved drawing list is 4 days old (over 4): deleted, nothing opened
+PASS  A6 Wed: stale list deleted, nothing started
+--- A7. LUNCH_PAUSE.flag -> Close does nothing; Reopen still works
+Thu 29 Oct 14:00 close (lunch): paused (LUNCH_PAUSE.flag is set): AutoCAD left as it is
+PASS  A7 paused: nothing saved, Quit not called, no state, said so
+PASS  A7 reopen with the pause flag set still reopens
+--- A8. dry run, not idle -> reports once, no wait, touches nothing
+Thu 29 Oct 14:00 close (lunch) (dry run): not idle now (keyboard or mouse used 1 min ago, needs 5 min); a real run re-checks every 60 s until 14:55
+PASS  A8 no sleep, no save, no quit, no state
+PASS  A8 says 1 min ago and the 14:55 give-up
+--- A9. robot running at 14:00 -> left open
+PASS  A9 robot running: nothing saved or quit
+--- A10. 08:30 reopen, robot lock live -> waits 10 minutes, leaves closed, list kept
+Fri 30 Oct 08:40 reopen (morning): left closed: the AutoCAD lock is held after 10 minutes (state kept; run -Action Reopen -IgnoreClock to reopen by hand)
+PASS  A10 waited 20 steps, nothing started, list kept closed
+--- A11. Tim already started AutoCAD before 08:30 -> nothing opened
+Fri 30 Oct 08:30 reopen (morning): AutoCAD is already running (Tim or another session started it): nothing opened
+PASS  A11 nothing started, status skipped-acad-running
+
+RESULT: 76 passed, 0 failed, 76 checks
+```
+
+### Changes to tonight's real test (on top of the steps below)
+
+1. **Step 4 is no longer needed:** `LUNCH_CLOSE.flag` is ignored now.
+2. **Run every close by hand with `-Slot Evening -IgnoreClock`.** The idle give-up is then 30 minutes from the start.
+3. **Hands off for 5 minutes, not 2,** before the real close. Put `Start-Sleep 330;` in front of the command.
+4. **Add an idle test:** run Close while moving the mouse now and then. Expected: it waits, then logs `left open: not idle` 30 minutes later.
+5. **Add a pause test:** create `LUNCH_PAUSE.flag`, run Close, and expect `paused`. Then delete the flag.
+6. **Add a morning test:** after a successful evening close, run `-Action Reopen -Slot Morning -IgnoreClock`. Expected: the drawings come back.
+7. **Still not testable tonight:** whether a real scheduled task (as opposed to a console) can read the idle time, and the real 08:30 run. Both need the tasks registered first.
+
+### What I did NOT verify (Amendment 1)
+
+1. Nothing ran against a real AutoCAD. Tim's AutoCAD was open and was not touched; no COM attach was made.
+2. No scheduled task is registered, and none was test-registered.
+3. The locked-screen idle reading, and the idle reading from a task that has no desktop session.
+4. Cup Day (Tue 3 Nov) and other public holidays: they are not detected. The desk must create `LUNCH_PAUSE.flag` on those days if Tim wants AutoCAD left alone.
+5. The 08:30 reopen time is my assumption, not Tim's words.
+
+---
+
 **ANSWER FIRST:** the helper is written and its decision logic passes 52 of 52 offline checks against a pretend AutoCAD.
 **It has NOT been run on a real AutoCAD yet** and nothing is switched on: no scheduled task is registered.
 The first real test can be tonight after 17:30 on throw-away copies (steps below). The earliest it can run at lunch is **Fri 30 Oct**, and only if that test passes and the desk then registers the two tasks.
