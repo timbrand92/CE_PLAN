@@ -16936,3 +16936,39 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Related BUG-1229 (same step, rounded level and 102), BUG-1230 (on hold) and PC-02 / PC-03 in decisions/2026-10-29_TIM_PLANNING_CHANGES.md (the two-controls problem: the grade row and "I know one end"). Part of the whole-functionality review, but it is a plain wrong answer on its own and Tim reported it as a bug. BUG-1229's fix is in draft PR 1838 per the desk log; whether it also stops the switch is NOT known and must be checked.
 
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until confirmed in AutoCAD.
+
+
+---
+
+## BUG-1234 — Two new pipes that end at a new pit: the IL texts sit on top of the pit symbol and the flow arrow runs into the pipe label
+
+**Command / Area:** CD, labels and flow arrows on pipes that end at a pit, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H9 of pit catch). WRONG LOOK (drawing output), severity to confirm. Read from Tim's screenshot only; not yet checked in the drawing or the code.
+
+**Symptom:** A new pit P1 (cover text CL 19.50) with two parallel pipes running away from it, each 100 DIA. UPVC. The pit-end IL texts (IL 17.95 on the upper pipe, IL 18.95 on the lower pipe) are drawn on top of the pit symbol itself; on the lower pipe the flow arrow overlaps the pipe label ('100 DIA. UPVC PIPE AT 1 IN 202') so the arrow's tail runs through the word PIPE. The far-end IL texts (IL 18.00, IL 19.00) look right except the lower one (IL 19.00) is partly under the pipe line. Tim's words: "the placement looks correct but the invert levels and the pipe arrow have been messed up as part of a separate issue". The two pipes are only about 300 mm apart on the drawing, so the tidy-up may have no room; whether that is the cause is not known.
+
+**Expected behaviour:** IL texts and the arrow sit clear of the pit symbol, of each other and of the pipe label. Where there is genuinely no room, CE says so in one line (it did say 'no clear spot' on earlier pipes), rather than printing over another item.
+
+**Steps to confirm in AutoCAD:** (1) Turn object snap off (F3). PIT at 0,0 (any cover level). (2) CD 10225,150 then #315,150 then Enter, levels 18.000 / 17.950 (a pipe ending 90 mm outside the pit's opening). (3) CD 10335,-150 then #335,-150 then Enter, same levels. (4) Zoom to the pit. Right = IL texts clear of the pit symbol, arrow clear of the label, or a 'no clear spot' line. Wrong = text on the pit, arrow through the label.
+
+**Reference:** Tim's screenshot 29 Oct 2026 in the testing-partner session (image not stored in the repo). Related: D11 short pipe label on a leader (G1 Codex look PASS on a 2 m pipe), BUG-1232 (label tidy after a MOVE), the pit catch hand check H9 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
+
+**Tim's suspicion (29 Oct 2026, same chat):** "i think that bug comes from the command that moves everything automatically to avoid clashes?" Read as: the automatic label tidy-up (the 'Tidy-up after the move' and 'no clear spot among its usual positions' lines seen in hand checks H7 and this one) may be what put the IL texts and arrow where they are. Not checked: whether the switch for it is on in Tim's file, and whether the same drawing looks right with it off. Next test to settle it: place the same two pipes with the label tidy-up switched off in Settings and compare.
+
+
+---
+
+## BUG-1235 — Silting warning says "Grade 1:200 is shallower than minimum 1:200"
+
+**Command / Area:** CD, the minimum-grade warning, Civil 3.0.85 (Tim's command line, hand check H9, 29 Oct 2026). WRONG WORDING / BOUNDARY, severity low.
+
+**Symptom:** After a pipe was placed Tim's command line read "[CE] Warning: Grade 1:200 is shallower than minimum 1:200 - risk of silting". The two numbers are the same, so the sentence contradicts itself. The next pipe in the same run read "Grade 1:202 is shallower than minimum 1:200", which is correct. Not known: whether the real grade was a hair under 1 in 200 (for example 1 in 200.4 shown rounded as 200) or whether the check uses 'less than or equal'. Read from the pasted command line only; the pipe was placed with levels 18.000 / 17.950.
+
+**Expected behaviour:** The warning fires only when the real grade is flatter than the minimum, and when it does, the two figures shown must differ (show a decimal when they would otherwise print the same, for example 1:200.4). A pipe at exactly the minimum gets no warning.
+
+**Steps to confirm in AutoCAD:** (1) Place a pipe whose levels give exactly 1 in 200 (50 mm fall over 10.000 m). (2) Read the command line. Right = no silting warning. Then place one at 1 in 202: Right = warning with 1:202 and 1:200.
+
+**Reference:** Tim's pasted command line 29 Oct 2026 (hand check H9 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md). Related: BUG-1229 (rounding of the grade).
+
+**Status:** OPEN (reported through a hand check 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
