@@ -20,6 +20,8 @@ Latest state only; older detail is in the DESK_LOG lines headed "CE 02" (from 09
 
 ## 3. Next steps in order
 
+0. (17:41 addition) Cup Day fallback: Tue 3 Nov full re-test on C-78 only if C-78 is installed by Mon 2 Nov 21:00, else on C-77; C-77 install Fri 30 Oct evening is about 70 percent; C-76 payload report expected 17:50 to 18:15.
+
 1. When CE 01 messages "3.0.86 installed and DLLs re-read" (or the Monitor shows INSTALL VERIFIED): read the DLL ProductVersion yourself (Civil 3.0.86, Manager 1.1.86), mark tester_run77 done (write tester_run77_regrade_part3_cdtwl_first.txt.done), put tester_run80 FIRST in ROBOT_QUEUE.txt (edit with PowerShell, not printf), remove HOLD_ROBOT.flag, make sure STOP_CHAIN.flag is gone (CE 01's) and that chain_robot_standing is running (run start_lanes.ps1), set CE_RUNNER_TIM_AWAY only if Tim's absence is confirmed (the runner refuses AutoCAD before 17:30 and in his weekday hours otherwise). Tell CE 00 and CE 07 when the pass starts and each hour what it reached (CE 00 asked for hourly progress).
 2. Read each run's report as it lands; a regression is reported first. Send results to CE 05 for the carpark. Opus case reviews of each finished run (Team, after 20:00 for headroom).
 3. After the pass: run79, run78, run82; then Codex looks when the queue is empty; register the four lunch tasks only if run82 passes.
