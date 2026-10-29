@@ -15,7 +15,7 @@
    3. **Everyday tools (the 40):** 19 of 40 Claude-accepted / 4 of 40 confirmed by you (up to 6 or 7 by the hand checks since; CE 02 recounts).
    4. **9 Nov scope (390 items):** built 47 percent (184 of 390 installed) / tested 3.1 percent (12 of 390).
 3. **What decides 9 Nov this week.**
-   1. **Fri 30 Oct:** the everyday tools reach 30 of 40 (today 19).
+   1. **Fri 30 Oct:** the everyday tools reach 30 of 40 (today 19). **CE 02 says 30 by Fri 30 Oct is not reachable; it expects 22 to 24 by Sat 31 Oct.**
    2. **Fri 30 Oct:** the hand install is rehearsed once on a spare standard Windows login. Nobody has one set up yet.
    3. **Fri 30 Oct:** Max's AutoCAD year is known (he types ABOUT).
    4. **Sat 31 Oct:** the freeze candidate (C-76 plus C-77) is built.
@@ -153,3 +153,14 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 3. **Chance the test numbers are ready:** A needs 30 of 40 tomorrow and a rehearsal before there is a login; B has a week more.
 4. **Hybrid I would consider:** A's Sat 31 Oct freeze plus only the four small sourced fixes (BUG-1095, BUG-1091, and B-012 and B-013 already in C-77), with BUG-1088 as a CDDESIGN warning and the rest on page 04. This moves the pilot to Mon 9 Nov only if Friday's checkpoint is green; otherwise it becomes B.
 5. **My lean:** B, because the first colleague job is likely to hit CDDESIGN, and 0 of 60 closed with no rehearsal makes 9 Nov a guess. Tim's call.
+
+## 13. CE 02 confirmations and new facts (CE 02 message, 29 Oct, after reading the test plan)
+
+1. **Everyday tools: 30 of 40 by Fri 30 Oct is NOT reachable.** CE 02 expects 22 to 24 by Sat 31 Oct. Quickest in order: CDTWL freeboard (R14h x3 tonight, 20th), D24 current layer and D21 schedule order (N32, N33, N28, N29 tonight then Opus review, 21st and 22nd), D06 hide grade (N35 live after 17:30, 23rd), D05 recent buttons (N30, needs the BUG-1226 build installed first). The rest need a Codex look (quick MOVE G5, D10 label direction, D22 drawn schedule, D28 CDCHECKDWG, D07 raingarden after RG1 is built) or Tim's word (D13, question 19). Per-tool list: areas\EVERYDAY_TOOLS_STATUS_29OCT.md (being compiled by CE 02, due about 20 minutes after its message).
+2. **Effect on the date:** the Fri 30 Oct checkpoint target (30 of 40) cannot be met. Reaching 30 of 40 realistically means the pilot is 16 Nov or later, unless Tim accepts fewer than 30 for 9 Nov. This strengthens the case for Option B (section 12).
+3. **Re-test slots confirmed by CE 02:** weekend 1 Sat 31 Oct; Tue 3 Nov Cup Day full re-test plus second start Wed 4 Nov; nightly Thu 5 and Fri 6; weekend 2 Sat 7 Nov. One frozen build, carried passes labelled. A full set takes 6 to 8 hours now, about 4 once the speed changes are tested tonight (estimates).
+4. **Condition I must plan around:** the candidate must be INSTALLED before the Sat 31 start (an install mid-run voids it). So for Option A, C-77 must install Friday night (Fri 30 Oct after 5:30 pm), not Saturday; my section 12 A step 3 says Sat 31 Oct and is wrong on this point. Tim's AutoCAD must be closed; weekdays only with his word.
+5. **Pilot-critical robot unlocks (CE 02):** P01 and P02 run tonight after 17:30 (50 to 85 min). Realistic closed count by Fri: 2 (if they pass twice and are reviewed). Four runner changes (Edit Pit save press, Edit 2 Pipes window, LandXML file chooser, Pit Schedule remarks cell) drafted and reviewed by Fri, live Fri night; four test drawings (BUG-1150, 1142, 1190, 1145) are Codex jobs Fri night or Sat. Up to 4 to 6 more by Sat 31 Oct if reviews are clean (BUG-1196, 1049, 1188, 540 and the drawing ones). Confirmed Friday midday.
+6. **Codex looks:** Codex weekly 13 percent; each look 1 to 3 points; daily caps 30 from Thu 17:53, 44 from Fri 17:53, 58 from Sat 17:53. Thu from 17:53: G3 G7 G4, then H1 to H3 (my C4, C5, C2). Fri from 17:53: H4 to H6, G6, G5. Sat daytime: my C1 (no blue incl. printed sheet), C3 (nothing leaves the PC), C6 (CDCHECKDWG, ribbon jump, label positions); briefs by Fri evening. Looks need Tim's AutoCAD closed.
+7. **Max-like configuration run:** CE 02 will run the Tue 3 Nov full re-test ONCE with CE.AutoCADLink.2027 and CE.Transform.Trial.2027 moved aside (restored by hash; Tim's 29 Oct yes covers it) and report which cases change. Evidence for Max's PC, not proof of it. Reported in the BUG-861 control run report.
+8. **Unmoved items (4 hour watch):** none yet; replies received from CE 02 (this one), CE 00. Not yet heard from CE 03, CE 04 (messages delivered 29 Oct; no reply needed unless blocked).
