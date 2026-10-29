@@ -53,7 +53,7 @@ function OtherDotnetChains() {
 }
 
 if (Stopped) { exit }
-Log 'chain start: C-77 (Civil + Manager, twelve backlog PRs #1840 #1847 #1846 #1844 #1845 #1838 #1839 #1841 #1848 #1842 #1843 #1849, plus any late additions in the PR list); nothing is installed by this chain.'
+Log 'chain start: C-77 (Civil + Manager, 25 PROMOTED PRs: the twelve backlog PRs plus the late additions named in section 0 of the PR list); nothing is installed by this chain.'
 
 # If another train or payload chain is still running, wait (up to 8 hours).
 $w = 0
