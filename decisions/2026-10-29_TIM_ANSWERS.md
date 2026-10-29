@@ -357,3 +357,10 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    3. Desk must: add these to GB-02 (done in the card); do not build GB-02 until Tim says it is approved.
 
 28. **GB-02 COUNCIL DATA: APPROVED (29 Oct 2026).** Tim's words: "approve gb02". Interpretation: approved to build as written in `04_REFERENCE/guidebook-cards/GB-02_COUNCIL_DATA.md` with his two answers (item 27). Desk must: queue it after GB-01 slice 1 lands (both edit the council profiles and Settings; two writers never touch the same files); Codex checks in AutoCAD on copies; no install without "AutoCAD is closed, deploy".
+
+## Batch 15 (afternoon, Melbourne)
+
+69. **Release cut-off (follow-up to item 68): the pilot takes the newest tested build on Fri 13 Nov.**
+   1. Tim's words: "other choice" (to: keep the Fri 6 Nov freeze as the cut-off, or the other choice: the pilot takes whatever is newest and tested on Fri 13 Nov, the day Max's 2027 should be in).
+   2. Interpretation: the Fri 6 Nov freeze in "option b" (decisions\2026-10-29_TIM_RELEASE_FREEZE.md item 1) is SUPERSEDED as the cut-off, 29 Oct 2026. The pilot (Mon 16 Nov) gets the newest build that has passed review and testing on Fri 13 Nov. GUESS: the packaging happens from Wed 11 Nov to Fri 13 Nov instead of Wed 4 Nov to Fri 6 Nov; the exact packaging dates are the desk's to propose. The pilot date stays Mon 16 Nov. Tim accepted that late builds carry less testing (said in the question); the notes say per item what was tested.
+   3. Desk must: stop treating Fri 6 Nov as a freeze; plan trains to Fri 13 Nov; keep the full re-test rule (decision 35 and the retest file) and say what was and was not tested per item; give Tim the packaging dates once planned; keep the old option b text, marked superseded.

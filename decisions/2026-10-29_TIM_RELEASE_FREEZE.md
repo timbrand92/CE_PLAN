@@ -16,3 +16,7 @@ Source: Tim, in the Control Room chat, answering the list "what have I missed". 
    1. Tim's words: "i cant do it now, can i do on a laptop with 2026 installed?" (about the spare work PC as a test PC; he cannot do the 30-minute setup now).
    2. Interpretation: a different machine: a laptop with AutoCAD 2026 (not 2027). NOT a decision to start; it is a request to assess. The 2026 line is a .NET 8 lane (the bundle already carries a Net8 folder); the robot driver was built for 2027.
    3. Desk must: CE 02 and CE 07 assess what the robot driver needs to run against AutoCAD 2026 and what the laptop needs (Claude session, repo access, install through the real install route, which doubles as the install rehearsal); CE 04 asks Tim the laptop questions (whose laptop, Windows user type, AutoCAD 2026 sign-in, when available, can it stay powered on, network/OneDrive access); nothing is installed on any other PC without Tim's word.
+
+## Addendum 1 (Thu 29 Oct 2026, added by CE 04): item 1 is superseded
+
+5. **Item 1 (freeze Fri 6 Nov, option b) is SUPERSEDED as the cut-off.** Tim, later on 29 Oct (decisions\2026-10-29_TIM_ANSWERS.md items 68 and 69): "nothing waits for the pilot, pilot get very latest version at the time of release, we try to test as much as we can", then "other choice" (the pilot takes whatever is newest and tested on Fri 13 Nov). The pilot date Mon 16 Nov stands. The old text above is kept as written.
