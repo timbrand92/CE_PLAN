@@ -2,7 +2,7 @@
 
 **Owner:** CE 07 Release. One file, refreshed at least hourly. Others read it, they do not edit it.
 **Last refreshed:** Thu 29 Oct 2026, 13:11 Melbourne (PC clock). Ledger entries H15 to H19 carry times about an hour ahead of the PC clock; I use the PC clock.
-**Schedule in force:** Tim's item 69 (decisions\2026-10-29_TIM_ANSWERS.md): the pilot takes the newest build that has passed review and testing on **Fri 13 Nov**; the Fri 6 Nov freeze of option b is superseded. **Pilot Mon 16 Nov.** The dates inside the schedule (section 1, schedule E, matching CE 01's train calendar) are a proposal until Tim confirms them (question 42).
+**Schedule in force:** Tim's item 69 (decisions\2026-10-29_TIM_ANSWERS.md): the pilot takes the newest build that has passed review and testing on **Fri 13 Nov**; the Fri 6 Nov freeze of option b is superseded. **Pilot Mon 16 Nov.** The dates inside the schedule (section 1, schedule E, matching CE 01's train calendar) are CONFIRMED by Tim ("yes to all", item 70, question 42).
 **Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never Tim's word. Unknown stays Unknown.
 
 ---
@@ -22,8 +22,8 @@
    2. **Cut-off (item 69):** "other choice": the pilot gets the newest build that has passed review and testing on Fri 13 Nov. **Nothing is deferred (item 68):** every build goes in, and the release note says per item what was tested and what was not.
    3. **The one-piece pipe object is ON by default for everyone** (item 63, "defualt on for everyone"). That is a build and a full re-test; the tests so far already ran with it on, so they stay valid.
    4. The frozen copy goes in a separate `CE V3 PILOT` folder shared "can view" to Max only (created after your word on Fri 13 Nov); the old July install files move to an OLD folder now and are deleted later on a dated timeline; BUG-905 ON (0.9); BUG-1097 head after losses; BUG-1095, 1091, 1088 all built; BUG-1099, 1096, 1192 built; BUG-587 two-row-thick row with a wipeout mask (picture first); AG drains carry no text at all; BUG-1189 and 1149 keep as built; BUG-685 a one-line note; BUG-1148 a known limit on page 04; the settings-switch re-test point yes. The 2026 laptop is dropped (you will get 2027 on another PC and organise the ordinary login: "tomorrow maybe").
-6. **Needs you, through CE 04:** confirm the dates in section 1 (question 42); Max's install rights; which PC is the second 2027 PC and when (item 37); two words on the test PC (items 38 and 39); the one-pass pack approval; whether any colleague still installs from the old July files before they are moved; your word on Fri 13 Nov.
-**Confirmed by Tim at item 70:** the whole dates plan (installs C-76 to C-81, full re-tests Sat 31 Oct, Sat 7 Nov and Tue 10 Nov, packaging from Wed 11 Nov, cut Fri 13 Nov, the conditional go with a confirming full pass on Sat 14 and Sun 15 Nov, fallback C-80 as tested on Tue 10 Nov or Mon 23 Nov, the folder shared to Max only after his word and that confirmation, hand-over Mon 16 Nov). His "yes to all" is NOT recorded as covering the New Pipe window questions 3 to 6 or the beam-size question.
+6. **Needs you, through CE 04:** Max's install rights; which PC is the second 2027 PC and when (item 37); two words on the test PC (items 38 and 39); the one-pass pack approval; whether any colleague still installs from the old July files before they are moved; your word on Fri 13 Nov.
+   **Confirmed by Tim at item 70:** the whole dates plan (installs C-76 to C-81, full re-tests Sat 31 Oct, Sat 7 Nov and Tue 10 Nov, packaging from Wed 11 Nov, cut Fri 13 Nov, the conditional go with a confirming full pass on Sat 14 and Sun 15 Nov, fallback C-80 as tested on Tue 10 Nov or Mon 23 Nov, the folder shared to Max only after his word and that confirmation, hand-over Mon 16 Nov). His "yes to all" is NOT recorded as covering the New Pipe window questions 3 to 6 or the beam-size question.
 7. **The main risk now:** more builds, fewer tests. the hotfix (C-81, Thu 12 Nov) gets an area re-test only until the confirming full pass on Sat 14 and Sun 15 Nov; so your "yes" on Fri 13 Nov is, in my proposal, conditional on that weekend result, with C-80 (fully re-tested on Tue 10 Nov) as the fallback build. You accepted that; the release note will say so.
 8. **Nothing has been published, copied or sent to Max.**
 
@@ -31,7 +31,7 @@
 
 # DETAIL
 
-## 1. Schedule E (in force: Tim's item 69 plus CE 01's train calendar, BUILD_REGISTER "Train calendar to the Fri 13 Nov cut", which now matches my cut-offs; dates are proposals until Tim confirms, question 42)
+## 1. Schedule E (in force: Tim's item 69 plus CE 01's train calendar, BUILD_REGISTER "Train calendar to the Fri 13 Nov cut", which now matches my cut-offs; dates CONFIRMED by Tim, item 70: "yes to all")
 
 1. **Thu 29 Oct, after 5:30 pm:** **C-76 installs, AREA class (wide):** the shared double-click redirect is touched (additions only), so every double-click case is re-tested, plus CDCHECK text, the DP/OF/floor-waste reading step and the Manager About window. Pilot cases P01 and P02; Codex looks G3 G7 G4 then H1 to H3 from 17:53.
 2. **Fri 30 Oct, evening:** **C-77 installs, FULL class** (F-023 fresh-profile defaults and pipe object ON for everyone, Tidy default, grip default if its robot pass is in, and B-033/B-034/B-017/B-019/B-020 change answers). **Sat 31 Oct: full re-test 1.**
