@@ -185,7 +185,7 @@ Rule (Tim, 17 Oct 2026, RULINGS B5 in decisions/2026-10-17_V3_ALIGNMENT_RESET.md
 
 20b. **SPARE WORK PC AS A TEST PC (CE 02 report 29 Oct):** the spare work PC could run the robot with no effect on your screen; it takes about 30 minutes of your time (start prompt at 04_REFERENCE\TEST_PC_START_PROMPT.md). First check: is the AutoCAD login on that PC your own (a second sign-in could sign you out here)? Also 10 of the 60 pilot-critical day-one checks need another PC, a spare Windows login or an older AutoCAD. Do you want to switch it on? When?
 
-## Added Thu 29 Oct 2026 12:10 by CE 07 Release (for CE 04 to ask Tim, in this order; detail and recommendations in areas\RELEASE_TEST_PLAN_29OCT.md section 6 and areas\RELEASE_HANDOVER_PLAN_29OCT.md)
+## Added Thu 29 Oct 2026 11:17 by CE 07 Release (for CE 04 to ask Tim, in this order; detail and recommendations in areas\RELEASE_TEST_PLAN_29OCT.md section 6 and areas\RELEASE_HANDOVER_PLAN_29OCT.md)
 
 22. **Max's AutoCAD year and Windows rights (needed by Fri 30 Oct).** Nobody has looked; the pack says 2027. Please ask Max to type ABOUT in AutoCAD and tell you the year, and whether he can install programs on his PC. Recommended: ask him today. On a job: if he is on 2022 to 2024, nothing driven so far applies to him and two pilot-critical bugs (BUG-1209, BUG-1210) apply.
 23. **A spare standard Windows login for the install rehearsals (by Fri 30 Oct).** Same PC as item 20b, but with a new ordinary (non-administrator) user, so the hand install is practised twice and the going-back steps once. A Windows setting, not ours to make. Recommended: yes, on the spare work PC. If no: the 9 Nov date is a guess.

@@ -1,6 +1,6 @@
 # Hand-over plan: install rehearsal, frozen copy, old-files move, final go checklist
 
-**Owner:** CE 07 Release. Written Thu 29 Oct 2026, 12:05 Melbourne. **DRAFT. Nothing in this file has been done, published, copied or sent.** Every step that copies a file to an office folder, a USB stick or Max's PC needs Tim's word in chat first (RULES, publishing).
+**Owner:** CE 07 Release. Written Thu 29 Oct 2026, 11:17 Melbourne. **DRAFT. Nothing in this file has been done, published, copied or sent.** Every step that copies a file to an office folder, a USB stick or Max's PC needs Tim's word in chat first (RULES, publishing).
 **Read for this plan:** colleague-pack page 02, TEAM_AUDIT_T5_24OCT.md, RELEASE_9NOV_TODO_FROM_T5_2026-10-24.md, ROLLBACK_GUIDE_2026-10-07.md, BUG-483, BUG-1165 to BUG-1170, the gap plan, and (read-only today) Tim's installed bundle folders and the all-users plug-in folders.
 
 ---
@@ -20,7 +20,7 @@
 ## 1. What goes to Max (the package)
 
 1. **Two folders only, taken from the frozen candidate:** `CE_CVL_SUITE.bundle` (Civil) and `CE_SUITE_MANAGER.bundle` (Manager). They go in together every time; they share one file (CE_SHARED) and one new with one old stops the CE ribbon loading.
-2. **Today's candidate matches Tim's installed bundle exactly:** `C:\ce_rc_scratch\c1071`, Civil 3.0.85 and Manager 1.1.85, commit 09126560, 903 files, the six main DLLs (Legacy, Modern, Net8 for each) have identical SHA-256 to the installed ones (read 29 Oct 11:20). The real frozen folder will be the Sat 31 Oct candidate (C-76 plus C-77), not this one.
+2. **Today's candidate matches Tim's installed bundle exactly:** `C:\ce_rc_scratch\c1071`, Civil 3.0.85 and Manager 1.1.85, commit 09126560, 903 files, the six main DLLs (Legacy, Modern, Net8 for each) have identical SHA-256 to the installed ones (read 29 Oct about 11:15). The real frozen folder will be the Sat 31 Oct candidate (C-76 plus C-77), not this one.
 3. **Not in the package:** Structural (stays on Tim's PC, ruling B3), the old July scripts, Tim's settings file as it stands (it carries his folder paths, BUG-1167).
 4. **Open question for CE 01 (also to CE 00):** do `CE.AutoCADLink.2027.bundle` (dated 23 Jul) and `CE.Transform.Trial.2027.bundle` (7 Sep) belong in Max's package? One note in the Desk records says the first has no event hooks and the second was examined for the REDO bug, but I found no statement that a Max install works without them. The BUG-861 control run (Tim said yes today) moves them aside on Tim's PC; its result answers whether REDO behaves without them. If they are needed for a 2022 to 2024 year ("enabler", BUG-1137, BUG-1138, BUG-1151) that must be in the package list too.
 5. **WebView2:** the installer program installs the Microsoft WebView2 runtime and sets AutoCAD's trust setting; a hand copy does neither (T5 to-do item 9). I have not found a statement of which CE windows need WebView2. The rehearsal must open every window Max uses and note any blank one. Rehearsal check, not a claim.

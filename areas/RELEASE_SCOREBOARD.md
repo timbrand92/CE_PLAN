@@ -1,7 +1,7 @@
 # Release scoreboard: Civil + Manager pilot hand-over to Max
 
 **Owner:** CE 07 Release. One file, refreshed at least hourly (30-minute check). Other sessions read it; they do not edit it.
-**Last refreshed:** Thu 29 Oct 2026, 11:35 Melbourne (PC clock).
+**Last refreshed:** Thu 29 Oct 2026, 11:17 Melbourne (PC clock).
 **Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never written as Tim's word. Unknown stays Unknown.
 
 ---
@@ -73,7 +73,7 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 
 ## 6. Build train state
 
-1. **Installed now (read from the DLLs by CE 07, 11:20):** Civil 3.0.85 and Manager 1.1.85 at commit 09126560 in Legacy, Modern and Net8. The candidate folder C:\ce_rc_scratch\c1071 has the same six DLL hashes and 903 files, same as the installed bundle. Structural 1.0.125 (not shipped to Max).
+1. **Installed now (read from the DLLs by CE 07, about 11:15):** Civil 3.0.85 and Manager 1.1.85 at commit 09126560 in Legacy, Modern and Net8. The candidate folder C:\ce_rc_scratch\c1071 has the same six DLL hashes and 903 files, same as the installed bundle. Structural 1.0.125 (not shipped to Max).
 2. **C-76 (Civil 3.0.86 / Manager 1.1.86): assembling.** PRs #1834 (BUG-859 downpipe double-click), #1835 (BUG-372 CDCHECK wording), #1836 (BUG-090 About window, Manager), #1837 (BUG-1228 DP speed). #1838 (BUG-1229 grade) joins if the assembler says so. Built and unit-tested only. Not installed.
 3. **C-77 backlog (nine jobs), building:** B-006 Recent levels buttons (running), B-007 raingarden label, B-008 Tidy labels ON by default, B-009 grip copy ON (after a robot pass with it ON), B-010 no-units note, B-011 two small extras, B-012 cover to the outside of the pipe, B-013 pit drop warning, B-014 green DP label double-click. B-015 (PR #1771 sheet line) needs rebase and review.
 4. **After that:** B-016 to B-032, the pilot-critical no-fix items. Not all can make a freeze on Mon 2 Nov.
@@ -92,7 +92,7 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 2. **Rollback rehearsed: 0 of 1.**
 3. **Max's AutoCAD year: Unknown.** Pack says 2027 but nobody has looked. Question for Tim (to CE 04).
 4. **Max's login rights, old Structural 1.0.41, Manager version, all-users plug-in folders, OneDrive folder layout: all Unknown.**
-5. **Tim's PC all-users folder (read 11:20):** C:\ProgramData\Autodesk\ApplicationPlugins holds a CE_SUITE_MANAGER.bundle whose PackageContents.xml has been renamed PackageContents.xml.DISABLED-duplicate-appdata-wins, files at Manager 1.0.0 (commit cac19768). So the stale copy is disabled, not removed. The 20 Oct "not done" note is out of date for this folder (the disabled file does the job). Nothing under C:\Program Files\Autodesk\ApplicationPlugins starts with CE. Max's PC is not read.
+5. **Tim's PC all-users folder (read about 11:15):** C:\ProgramData\Autodesk\ApplicationPlugins holds a CE_SUITE_MANAGER.bundle whose PackageContents.xml has been renamed PackageContents.xml.DISABLED-duplicate-appdata-wins, files at Manager 1.0.0 (commit cac19768). So the stale copy is disabled, not removed. The 20 Oct "not done" note is out of date for this folder (the disabled file does the job). Nothing under C:\Program Files\Autodesk\ApplicationPlugins starts with CE. Max's PC is not read.
 6. **Frozen copy:** not placed (publishing, Tim's word). Plan in RELEASE_HANDOVER_PLAN_29OCT.md.
 7. **Colleague pack:** 5 pages are 22 Oct drafts against 3.0.70; page 06 has 20 questions, several answered. Change list for one-pass approval is being drafted: RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md.
 
@@ -109,7 +109,7 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 
 **What would turn it to NO:** the 30 of 40 check on Fri 30 Oct comes in below about 26, or the rehearsal finds an install fault that needs a build, or Max is on AutoCAD 2022 to 2024 (those years have never been driven with this build; BUG-1209, BUG-1210 apply).
 
-## 10. Blockers and who is idle (11:35)
+## 10. Blockers and who is idle (11:17)
 
 1. **Idle:** CE 03 (test-with-tim), CE 04 (questions-for-tim), CE 05 (carpark-planning), guidebook session. CE 01 build session reported done on PR #1837; CE 02 working.
 2. **Held by Tim being on AutoCAD:** robot, Codex looks G3 G7 G4 (Thu 17:53), G6 G5 (Fri 17:53).
@@ -117,4 +117,4 @@ Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms St
 
 ## 11. Change log (newest first)
 
-1. **29 Oct 11:35 CE 07:** first scoreboard written. Read installed DLLs and c1071 (identical). Asked CE 02, CE 03, CE 04 for their lists. Pack change list job started.
+1. **29 Oct 11:17 CE 07:** first scoreboard written. Read installed DLLs and c1071 (identical). Asked CE 02, CE 03, CE 04 for their lists. Pack change list job started.

@@ -1,6 +1,6 @@
 # Release test plan: the smallest set of checks before "yes, hand it to Max"
 
-**Owner:** CE 07 Release. Written Thu 29 Oct 2026, 11:45 Melbourne. Draft until CE 00 and Tim see it; nothing here starts a run (CE 02 and CE 03 start their own).
+**Owner:** CE 07 Release. Written Thu 29 Oct 2026, 11:17 Melbourne. Draft until CE 00 and Tim see it; nothing here starts a run (CE 02 and CE 03 start their own).
 **Sources:** release gate (release-v3-colleagues.md top), gap plan section 3 (22 Oct), Team audit T5 (24 Oct), PILOT_CRITICAL_TEST_LIST_29OCT.md, COLLEAGUE_READINESS_29OCT.md, Tim's rulings of 29 Oct (TIM_ANSWERS, TIM_RETEST_RULE), RULES 4.5 and the 24 Oct acceptance amendment.
 
 ---
