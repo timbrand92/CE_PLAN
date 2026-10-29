@@ -148,3 +148,10 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 1. **B10 changes:** Tim ruled the one-piece pipe object ON by default for every login, so the "full pass on Automatic" is no longer the Max case. B10 becomes: after the build that makes the default On is installed, one clean-profile pass on a different 2027 login that reads the new default (the pipe is the one-piece object, no Tim folder path in the settings page). The 20 cases that name the pipe object then run on both PCs the same way.
 2. **A6 (Max's starting settings equal Tim's)** = the F-023 proof in B-035: needs the ordinary login or the 2027 test PC.
 3. **Re-test class of the build that carries it:** FULL (existing default changed).
+
+## 14. UPDATE 29 Oct late (Tim's re-test policy, relayed by CE 00; supersedes the full re-test rhythm in sections 4 and 5 and in B8)
+
+1. **From C-77:** re-test the areas the train touches plus a small smoke set per shared file touched; carry the rest, labelled "carried from <build>". Unknown files stop forcing a full re-test once CE 02 places them in an area.
+2. **Kept:** the weekend full re-tests (Sat 31 Oct, Sat 7 Nov) and one full re-test before Max, by Fri 13 Nov (the pilot build's own full re-test; also the confirming full pass on Sat 14 and Sun 15 Nov if Tim still wants the conditional go).
+3. **B8 (full re-test on the frozen candidate)** becomes: one full re-test of the pilot build before Max, plus the weekend full re-tests. **B9** (Max-like run) stays one full pass.
+4. **Pass line item 2 (section 3):** "B1 at 30 of 40 or more; B2 to B8 green; no regression in the last full re-test" now reads: the last full re-test is the one before Max; area re-tests cover the rest; every pilot item says tested or carried.
