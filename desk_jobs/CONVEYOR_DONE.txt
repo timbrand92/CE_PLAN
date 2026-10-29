@@ -50,3 +50,5 @@ verifyF10_cur
 verifyG1_c84
 verifyG2_c84
 verifyG1b_c84
+verifyG7_c84
+verifyG3_c84
