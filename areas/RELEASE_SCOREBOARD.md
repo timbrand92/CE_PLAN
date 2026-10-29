@@ -126,3 +126,8 @@ Gate score: **1 of 11 done / 10 open.**
 
 1. Laptop with AutoCAD 2026 can be a 2026-only test machine: about 3 working days after Tim's yes, earliest Tue 3 Nov; it does the install rehearsal, a first 2026 check and Codex looks first; the robot runs there nightly only after Max's year is known. Licence check first (stop if it is Tim's own login and no spare seat). Pipes are plain polylines on 2026, so about 20 of 85 checks read differently. Detail: RELEASE_HANDOVER_PLAN_29OCT.md section 11a.
 2. **Gap that stays open under every route:** a normal-login rehearsal on AutoCAD 2027 does not exist yet. If Max is on 2027 and no 2027 machine is available, the first 2027 normal-login install is on Max's own PC.
+
+## 14. Two corrections picked up at 11:50 check (CE 02 / carpark)
+
+1. **BUG-1209 and BUG-1210 (downpipe placement on a pit; Edit Pipe/Edit Pit plan picture) now apply to AutoCAD 2025 and 2026 as well, not only 2022 to 2024** (carpark commit d8fa0f78, "CE 02 correction"). So if Max is on 2025 or 2026 (or the 2026 laptop is used), those two pilot-critical bugs apply to him and to the laptop results. Question 22 and the pack must say "2022 to 2026", not "2022 to 2024". Detail is in the carpark entries; I have not re-read them.
+2. **Hand checks:** commit 82c31173 says the 12 planned hand checks are complete (H14 CDRENUMBER passed). Tim-confirmed tool count per the ledger/PROGRESS.json is for CE 00 and CE 02 to recount; I have not re-read the ledger since 11:30.
