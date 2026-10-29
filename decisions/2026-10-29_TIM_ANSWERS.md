@@ -238,3 +238,30 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "is there a way through the claude api that we can have machine learning be smart?" then, asked whether the API work is its own card or waits: "yes add its own card".
    2. Interpretation: the API work is planned as its own card, GB-05, behind the plain GB-04 ready-to-submit checker. Claude reads, checks and drafts and proposes only; every number stays on Settings and plain rules; nothing is written without Preview, Apply and one Undo. Builds on the already-approved Ask CE plan (AI-01); no model training. Not approved, not built.
    3. Draft cards for all the guidebook changes: `04_REFERENCE/guidebook-cards/` (GB-01 pipe and pit checks, GB-02 council data, GB-03 calculations, GB-04 ready to submit, GB-05 Claude assistant), all DRAFT for Tim's approval before any code. Open for Tim in GB-05: provider and model, cost ceiling, who gets it, and confirmation that the 22 Oct privacy finding on the AI connection is fixed.
+
+## Batch 8 (afternoon, Melbourne)
+
+46. **AG drain label (QUESTIONS 21f, 21g, clarification): no text at all.**
+   1. Tim's words: "no text at all" (to: should an AG drain show no text at all, on the original and on a copy?).
+   2. Interpretation: an AG drain carries no label text, original or copy; it is shown by location only (this settles the conflict in item 45). Recommended to him, not stated by him: the grade is still stored for the schedule (GUESS that this part stands).
+   3. Desk must: draw no text for AG drains; keep the stored grade; the "AG DRAIN AT 1 IN 50" wording is not drawn.
+
+47. **BUG-685 typed level not to the nearest 10 mm (QUESTIONS 21h): recommended answer.**
+   1. Tim's words: "keep the 10 mm rule but say it in one line: "Typed level 10.125 held as 10.13 (levels are held to the nearest 10 mm)". The grade stays exactly 1 in 100".
+   2. Interpretation: levels are held to the nearest 10 mm; CE prints one line saying so when a typed level is rounded; the grade stays exactly as asked.
+   3. Desk must: build the one-line note (a note, never a block, R-27).
+
+48. **BUG-1148 pasting a pit between Save As stage drawings (QUESTIONS 21i): known limit for the pilot.**
+   1. Tim's words: "treat it as a known limit for the pilot, with one line on the known-problems page, "check the pit after pasting from a stage drawing". Build the fix after a workflow card".
+   2. Interpretation: no fix before the pilot; one line on the known-problems page; the "made in this drawing" stamp waits for a workflow card.
+   3. Desk must: add the line to page 04 and write the workflow card after the pilot gate.
+
+49. **Blue in the long section water line (QUESTIONS 21j): yes, one place only (GUESS on the words).**
+   1. Tim's words: "may it stay blue? Recommended: yes in that one place only. You see a picture first" (pasted the recommended answer).
+   2. Interpretation (GUESS): the water line stays blue, nowhere else; Tim sees a picture first. The pit snap glow (21k) was not answered.
+   3. Desk must: keep the water line blue and show Tim a picture; leave the pit snap glow as it is until he answers 21k.
+
+50. **Pipe wall table (QUESTIONS 21l): from the pipe data or the standard.**
+   1. Tim's words: "the desk takes each size and material from the pipe data or the standard and shows you the table on Settings, tagged Assumed until you tick it".
+   2. Interpretation: wall thickness per size and material comes from the pipe data or the standard, is shown on Settings tagged Assumed until Tim ticks it. His earlier "about 20 mm UPVC 225" was an example (decision 17); the desk uses the table.
+   3. Desk must: build the table on Settings with the Assumed tag; verify UPVC wall against the standard (CE 01 thought 20 mm looked high).
