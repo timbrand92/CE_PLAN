@@ -2,14 +2,14 @@
 
 **Owner:** CE 07 Release. One file, refreshed at least hourly. Others read it, they do not edit it.
 **Last refreshed:** Thu 29 Oct 2026, 13:11 Melbourne (PC clock). Ledger entries H15 to H19 carry times about an hour ahead of the PC clock; I use the PC clock.
-**Schedule in force:** Tim's item 69 (decisions\2026-10-29_TIM_ANSWERS.md): the pilot takes the newest build that has passed review and testing on **Fri 13 Nov**; the Fri 6 Nov freeze of option b is superseded. **Pilot Mon 16 Nov.** The dates inside the schedule (section 1) are my proposal until Tim confirms them (question 42).
+**Schedule in force:** Tim's item 69 (decisions\2026-10-29_TIM_ANSWERS.md): the pilot takes the newest build that has passed review and testing on **Fri 13 Nov**; the Fri 6 Nov freeze of option b is superseded. **Pilot Mon 16 Nov.** The dates inside the schedule (section 1, schedule D, merged with CE 01's train calendar) are a proposal until Tim confirms them (question 42).
 **Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never Tim's word. Unknown stays Unknown.
 
 ---
 
 # FOR TIM
 
-1. **Will Mon 16 Nov hold? At risk, but a fair chance.** Mon 9 Nov is no longer the target. It holds if the everyday tools climb from 19 to about 30 of 40 (CE 02 estimates 26 to 30 by Sat 7 Nov), the latest builds get their tests before Fri 13 Nov, the install steps pass on an ordinary login, and Max's AutoCAD 2027 is in by Fri 13 Nov. Fallback is Mon 23 Nov.
+1. **Will Mon 16 Nov hold? At risk, but a fair chance.** Mon 9 Nov is no longer the target. It holds if the everyday tools climb from 19 to about 30 of 40 (CE 02 estimates 26 to 30 by Sat 7 Nov), the latest builds get their tests, the weekend full re-test on Sat 14 and Sun 15 Nov passes, the install steps pass on an ordinary login, and Max's AutoCAD 2027 is in by Fri 13 Nov. Fallback is Mon 23 Nov.
 2. **Days left:** 11 to Mon 9 Nov, 18 to Mon 16 Nov, 15 to the Fri 13 Nov cut-off (10 working days; Tue 3 Nov is Cup Day).
 3. **The scores (two figures each).**
    1. **Gate list:** 1 of 9 done / 8 open (you confirmed gate item 1 and took gate items 6 and 7 out).
@@ -23,27 +23,27 @@
    3. **The one-piece pipe object is ON by default for everyone** (item 63, "defualt on for everyone"). That is a build and a full re-test; the tests so far already ran with it on, so they stay valid.
    4. The frozen copy goes in a separate `CE V3 PILOT` folder shared "can view" to Max only (created after your word on Fri 13 Nov); the old July install files move to an OLD folder now and are deleted later on a dated timeline; BUG-905 ON (0.9); BUG-1097 head after losses; BUG-1095, 1091, 1088 all built; BUG-1099, 1096, 1192 built; BUG-587 two-row-thick row with a wipeout mask (picture first); AG drains carry no text at all; BUG-1189 and 1149 keep as built; BUG-685 a one-line note; BUG-1148 a known limit on page 04; the settings-switch re-test point yes. The 2026 laptop is dropped (you will get 2027 on another PC and organise the ordinary login: "tomorrow maybe").
 6. **Needs you, through CE 04:** confirm the dates in section 1 (question 42); Max's install rights; which PC is the second 2027 PC and when (item 37); two words on the test PC (items 38 and 39); the one-pass pack approval; whether any colleague still installs from the old July files before they are moved; your word on Fri 13 Nov.
-7. **The main risk now:** more builds, fewer tests. Every build that lands after Tue 10 Nov gets an area re-test only, not a full one, and the one build lane is shared by everything. You accepted that; the release note will say so.
+7. **The main risk now:** more builds, fewer tests. C-80 (Tue 10 Nov) and the hotfix (Thu 12 Nov) get area re-tests and Codex looks only until the full re-test on Sat 14 and Sun 15 Nov; so your "yes" on Fri 13 Nov is, in my proposal, conditional on that weekend result, with C-79 (fully tested on Sat 7 Nov) as the fallback build. You accepted that; the release note will say so.
 8. **Nothing has been published, copied or sent to Max.**
 
 ---
 
 # DETAIL
 
-## 1. Schedule C (in force from item 69; dates are CE 07's PROPOSAL, Tim confirms through CE 04, question 42)
+## 1. Schedule D (in force: Tim's item 69 plus CE 01's train calendar, BUILD_REGISTER "Train calendar to the Fri 13 Nov cut"; dates are proposals until Tim confirms, question 42)
 
-1. **Thu 29 Oct (tonight, after 5:30 pm):** C-76 installs (area re-test of what it touched); pilot cases P01 and P02 (50 to 85 min); Codex looks G3 G7 G4 then H1 to H3 from 17:53.
-2. **Fri 30 Oct:** C-77 pieces land as PR-ready (Fri 06:00 cut, CE 01; CE 01 will say at 08:00 which made it); Codex H4 to H6, G6, G5 from 17:53; rehearsal R1 if the second 2027 PC exists.
-3. **Sat 31 Oct (full re-test 1):** on whatever is installed before it starts (an install mid-run voids it).
-4. **Mon 2 to Fri 6 Nov:** trains install as they pass review. Each gets an AREA re-test, or a FULL one if it changes an existing default, shared code, the pit or pipe record, undo or start-up (B-035 is FULL). Tue 3 Nov (Cup Day) is a free robot day for catch-up and rehearsals R2 and R3. Fri 6 Nov is no longer a cut-off, only a progress check.
-5. **Sat 7 and Sun 8 Nov (full re-test 2, Tim's weekend rule):** full re-test on the build installed by then; one full pass in the Max-like setup (add-ins moved aside); Codex looks.
-6. **Mon 9 Nov after 5:30 pm: proposed LAST FULL-CLASS INSTALL.** Anything FULL-class installs by here so the pre-pilot full re-test can run on it: **Tue 10 Nov after 5:30 pm** (two passes in separate starts, about 6 h 40 min; less on the second 2027 PC, which has no working-hours stop).
-7. **Wed 11 Nov: packaging starts** from the build then installed and tested (Tim: "from about Wed 11 Nov"). Opus builds the per-item "what was tested, what was not" list. Pack approval (Tim, one pass) by Wed 11. Page 04 final from the results on Thu 12.
-8. **Wed 11 to Fri 13 Nov:** only AREA-class fixes (blockers and small tested items) install, each with its own area re-test; the package is rebuilt and hash-checked after each (about 1 hour) so it always equals the newest tested build.
-9. **Thu 12 Nov:** Opus release report (what passed, what is known, how to roll back). Tim's soak on his own PC runs Mon 9 to Thu 12 on whatever he has installed.
-10. **Fri 13 Nov:** the newest build that has passed review and testing is fixed as the pilot build; final go checklist (hand-over plan section 8); Tim's word "yes, hand it to Max"; the `CE V3 PILOT` folder is created and shared "can view" to Max only after his word; Max's 2027 should be in.
-11. **Mon 16 Nov:** hand-over. Fallback Mon 23 Nov.
-12. **Cost of Tim's choice (he accepted it):** a build that lands after Tue 10 Nov carries an area re-test only, so the release note says "tested in these areas, not in full". **Biggest risks:** late builds with thin testing; a late FULL-class change that cannot get its full re-test; the one dotnet build lane; Max's 2027 not in by Fri 13 Nov.
+1. **Thu 29 Oct, after 5:30 pm:** C-76 installs (area re-test of what it touched); pilot cases P01 and P02; Codex looks G3 G7 G4 then H1 to H3 from 17:53.
+2. **Fri 30 Oct:** C-77 (backlog B-005 to B-015, Tim's named fixes BUG-1095/1091/1088/905/1097, and F-023 B-035, as far as PR-ready at the Fri 06:00 cut) installs Fri evening after 5:30 pm; Codex H4 to H6, G6, G5 from 17:53. B-035 is FULL class.
+3. **Sat 31 Oct (full re-test 1):** on C-77 (or C-76 if C-77 slips).
+4. **Tue 3 Nov (Cup Day):** C-78 (the rest of the pilot-critical list) installs; catch-up re-tests, rehearsals R2 and R3, Max-like run.
+5. **Fri 6 Nov evening:** C-79 (window and look items, first guidebook slice, the New Pipe declutter if Tim approves its card) installs. **Sat 7 and Sun 8 Nov (full re-test 2):** full re-test, Codex looks, a full pass in the Max-like setup. **C-79 is the last build planned to have a full re-test before the cut.**
+6. **Tue 10 Nov evening:** C-80 (large items B-029, B-030, more guidebook slices) installs; Codex looks Wed 11 and Thu 12; packaging starts Wed 11 from the newest tested build; pack approval (Tim, one pass) by Wed 11; page 04 final Thu 12.
+7. **Thu 12 Nov, by noon:** C-81, hotfix only. Opus release report Thu 12 (what passed, what is known, how to roll back).
+8. **Fri 13 Nov (the cut):** Tim and CE 02 name the newest TESTED build; untested builds stay out of the pilot build but still ship to Tim's PC. Final go checklist (hand-over plan section 8). **Tim's "yes, hand it to Max" is CONDITIONAL on step 9** (my proposal).
+9. **Sat 14 and Sun 15 Nov:** pre-pilot full re-test on the named build (two starts). **Sun 15 night: final confirmation.** If it fails, the pilot uses the last build that passed a full re-test (expected C-79) or slips to Mon 23 Nov.
+10. **Package copy and share (publishing):** the `CE V3 PILOT` folder is created and shared "can view" to Max only after Tim's word AND the Sun 15 night confirmation; Mon 16 morning at the latest.
+11. **Mon 16 Nov:** hand-over, if Max's 2027 is in. Fallback Mon 23 Nov.
+12. **Cost of Tim's choice (accepted):** C-80 and C-81 reach the pilot with Codex looks and area re-tests, and a full pass only on Sat 14 and Sun 15; the release note says "tested in these areas, not in full" for them. **Biggest risks:** a go given before the weekend full re-test; late builds with thin testing; a FULL-class change in C-80 or C-81; the one dotnet build lane; Max's 2027 not in by Fri 13 Nov.
 
 ## 2. Gate list (the 11 items at the top of release-v3-colleagues.md; items 6 and 7 removed by Tim, 29 Oct)
 
