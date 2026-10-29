@@ -124,3 +124,9 @@
 3. **Question 3 (cover by surface).** Changes warnings on every job with a driveway or road.
 4. **Question 7 (maximum pipe speed).** Unanswered since 8 Oct; the book cannot answer it.
 5. **Question 16 (ready-to-submit list).** The highest-value new check, and it needs the engineers to say which items are universal.
+
+---
+
+## TIM'S MARKS, 29 Oct 2026 (after the walk-through)
+
+Tim answered all 16 himself; his exact words and my reading are in `decisions/2026-10-29_TIM_ANSWERS.md` item 24. Summary: 3 to 6 and 8 to 16 take the recommended answer; **1 and 2 are "as the guidebook says"** (1 in 100 for all ordinary pipes; 1 in 200 for detention pipes only in Darebin, Banyule, Manningham, Maroondah); 7 stays open; 14 is conditional. Whether any question still goes to engineers is Tim's call.
