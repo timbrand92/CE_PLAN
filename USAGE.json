@@ -1,19 +1,19 @@
 {
   "accounts": [
     {
-      "readAt": "2026-10-30T04:36:37+11:00",
-      "fiveHour": 1,
+      "readAt": "2026-10-30T05:36:58+11:00",
+      "fiveHour": 2,
       "name": "Main",
       "week": 93
     },
     {
-      "readAt": "2026-10-30T04:36:37+11:00",
-      "fiveHour": 20,
+      "readAt": "2026-10-30T05:36:58+11:00",
+      "fiveHour": 25,
       "name": "Team",
-      "week": 69
+      "week": 70
     },
     {
-      "readAt": "2026-10-30T04:36:37+11:00",
+      "readAt": "2026-10-30T05:36:58+11:00",
       "fiveHour": null,
       "name": "Codex",
       "week": 14
