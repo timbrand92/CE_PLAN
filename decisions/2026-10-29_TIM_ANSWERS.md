@@ -584,3 +584,8 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    1. Tim's words: "1. yes" (to my numbered list where item 1 was the CDSL warning).
    2. Interpretation: when the nearest survey spot is more than the Settings distance (default 10 m), CDSL warns in plain words ("nearest survey spot is 35 m away: this level is a rough guide only") before it asks for the proposed level. A warning only, never a block (R-27). GUESS: the "1" answered the CDSL question, the first item of the list I had just sent; it could also have meant the Hazen-Williams C value (rejected: not a plausible C value).
    3. Desk must: build it with the distance a Settings value, default 10 m; tell CE 03.
+
+112. **Hazen-Williams C value (decision 105): leave for later.**
+   1. Tim's words: "2. leave for later" (to my numbered list where item 2 was the Hazen-Williams C value). This also confirms that his "1." answered the CDSL warning (decision 111).
+   2. Interpretation: no C value now; the Settings value stays empty/Unknown and the pump main check says "C value not set" (decision 105). Not a decision on the figure.
+   3. Desk must: ask again when the pump station window is near (before CDPUMP is built into a train), and do not guess a figure.
