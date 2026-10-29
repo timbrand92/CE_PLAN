@@ -1,5 +1,15 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-01 slice 5, pit size by depth on Settings — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+PR 1842, branch `claude/gb01-slice5-pit-sizes`. Nothing should look different until the table is changed.
+
+1. **Same answers:** on a copy, PIT advice for pits 0.40, 0.55, 0.80, 1.10 and 1.50 m deep (one 100 mm pipe) gives 350x350, 450x450, 600x600, 600x900, 900x900. A 450 mm pipe in a 0.50 m pit gives 600x900 with step irons.
+2. **Changed table:** put a table in `CD_Settings.json` under `pit` (`pitSizeByDepth`: rows of maxDepthM, widthMm, lengthMm; last row no maxDepthM), for example 0.60 m 450x450, 1.50 m 600x600, deeper 900x900. The same 0.40 m pit now advises 450x450 and the 1.10 m pit 600x600.
+3. **Unusable table:** make the last row carry a maxDepthM. The advice uses the Guidebook sizes and shows one note: "The pit size table in Settings cannot be used ...".
+4. **CDRULES:** a saved run is NOT Stale with the table blank; it goes Stale after the table is changed.
+5. **Not testable yet:** no Settings window row for the table.
+
 
 ### GB-01 slice 1, the flattest fall — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 

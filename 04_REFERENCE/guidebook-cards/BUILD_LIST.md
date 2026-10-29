@@ -8,7 +8,7 @@
 2. **GB-01 slice 2, cover table.** Waiting for slice 1.
 3. **GB-01 slice 3, minimum pit depth.** Waiting.
 4. **GB-01 slice 4, lid class and garages.** Waiting.
-5. **GB-01 slice 5, pit-size table to Settings.** Waiting.
+5. **GB-01 slice 5, pit-size table to Settings.** BUILT and unit-tested only (19 new cases, 4,101 pit tests pass, net10 and net48 0 errors); draft PR 1842 on `claude/gb01-slice5-pit-sizes`, 29 Oct. Not Codex-checked, not installed. Built out of order (it touches no cover code); slices 2 and 3 wait for CE 01's B-012 (cover to pipe outside) and B-022 (cover screens agree).
 6. **GB-02 council data (all items).** Approved 29 Oct. Waiting for GB-01 slice 1 to land (same council profile and Settings files; two writers never touch the same files).
 7. **GB-03 calculations (slices: sheet layout, rainfall for new Boyd's jobs, pump, soakage, collate the package).** Approved 29 Oct. Waiting for GB-02.
 8. **GB-04 ready to submit (slices: seven every-council checks, Kingston/Monash/Frankston extras, Bayside and the rest, record on the job).** Approved 29 Oct. Waiting for GB-03 (may start the checks that need no splay earlier if builders are free and files do not overlap). Splay method settled 29 Oct (drawn line on a named layer set once in Settings; none drawn = Unknown).
