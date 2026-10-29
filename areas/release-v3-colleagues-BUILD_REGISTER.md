@@ -45,7 +45,7 @@ BUG-901 is B-012 and BUG-907 is B-013 above. Each item below is a draft behind a
 23. **B-023 BUG-857, New Pipe window Grade mismatch box.** S. Build now; needs a Codex look. **DRAFT PR #1858 open 29 Oct 23:52, WRITTEN BUT NOT COMPILED OR TESTED (the job waited 3 h for a build slot); follow-up job team_fix_c83a (B-023b, build and test only) starts 01:08.**
 24. **B-024 BUG-1031, Pit Schedule delete-cell button.** S. Build now; needs a Codex look.
 25. **B-025 BUG-816, label tidy-up setting row.** S to M. Build now.
-26. **B-026 BUG-902, one Unknown note on the CDRULES cover row.** S. Build now.
+26. **B-026 BUG-902, one Unknown note on the CDRULES cover row.** S. Build now. **30 Oct 03:10: code and tests written and committed locally (d1d088ab, worktree c78j) but NOT built, NOT pushed, NO PR; build-test-and-PR job team_fix_c84b (B-026b) started 03:22.**
 27. **B-027 BUG-525, no blue in Civil windows and icons (water line and snap glow wait for questions 21j and 21k).** M. Build now (Civil only).
 28. **B-028 BUG-587, Pit Schedule row grows for a long remark.** M to L. Build on recommended (question 21e); needs a Codex look.
 29. **B-029 BUG-1096 with BUG-1098, rainwater reuse boxes in CDDESIGN and the Kingston credit.** L. Build on recommended (question 21c); needs a Codex look.
