@@ -13,13 +13,13 @@
 7. **GB-03 calculations (slices: sheet layout, rainfall for new Boyd's jobs, pump, soakage, collate the package).** Approved 29 Oct. Waiting for GB-02.
 8. **GB-04 ready to submit (slices: seven every-council checks, Kingston/Monash/Frankston extras, Bayside and the rest, record on the job).** Approved 29 Oct. Waiting for GB-03 (may start the checks that need no splay earlier if builders are free and files do not overlap). Splay method settled 29 Oct (drawn line on a named layer set once in Settings; none drawn = Unknown).
 
-## Cards waiting for Tim's approval (no build until approved)
+## Last in the queue
 
-1. **GB-05 Claude assistant.** Draft; also needs the 22 Oct privacy finding confirmed fixed.
+1. **GB-05 Claude assistant.** Approved 29 Oct (recommended answers). Starts after GB-04 works; slice 1 also needs the 22 Oct privacy finding fixed and Codex-checked.
 
 ## Planned, not started
 
-1. **GB-06 update the guidebook (stage 4).** After GB-01 to GB-04 pass Codex. Plan: `GB-06_UPDATE_THE_GUIDEBOOK.md`. The book itself is untouched.
+1. **GB-06 update the guidebook (stage 4).** Approved 29 Oct but ON HOLD until Tim supplies the updated council guidebooks; then the desk compares them with the council profiles first (any difference goes to Tim). Also after GB-01 to GB-04 pass Codex. Plan: `GB-06_UPDATE_THE_GUIDEBOOK.md`. The book itself is untouched.
 
 ## Who keeps this list
 
@@ -30,7 +30,7 @@ From 29 Oct 2026 the desk (the chat that runs builders, trains and Codex hand-of
 1. Minimum fall for 450 to 750 gravity pipes (GB-01 slice 1; QUESTIONS_FOR_MONDAY GB-A).
 2. Maximum pipe speed and its document (engineers; question 7).
 3. Bayside 1 in 20 pump rule source (question 14).
-5. Claude provider, model, cost ceiling, who gets it (GB-05; QUESTIONS_FOR_MONDAY GB-D).
+5. Tim to supply the updated council guidebooks (GB-06 start condition).
 
 ## After every build
 

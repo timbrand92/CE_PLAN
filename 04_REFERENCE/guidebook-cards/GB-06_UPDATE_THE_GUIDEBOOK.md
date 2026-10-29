@@ -1,4 +1,4 @@
-# GB-06 Update the guidebook (stage 4): DRAFT plan, not started
+# GB-06 Update the guidebook: APPROVED 29 Oct 2026 (Tim, item 32) but ON HOLD until Tim supplies the updated council guidebooks
 
 **Status: planned, not started. The guidebook itself has not been edited** (`...\Civil Stuff\Councils\CIVIL AND DRAINAGE DESIGN GUIDEBOOK.docx` and the v1.3 PDF). **When:** after GB-01 to GB-04 have passed Codex in AutoCAD, so the book says what the plugin actually does. Tim approves the finished text before it replaces anything; the old version is kept (never deleted), and the new one is named v1.4 with a change log.
 
@@ -35,4 +35,4 @@ Claude writes the v1.4 text as a tracked copy beside v1.3 (changes marked), Tim 
 5. Starts only after GB-01 to GB-04 have passed Codex in AutoCAD. Nothing in the plugin depends on the book being updated.
 
 ## 6. Status
-DRAFT plan. Not started. Not yet approved by Tim.
+APPROVED (Tim, item 32: "gb06 is approved but i am getting updated guidebooks from all the councils before we update"). ON HOLD: starts only after Tim supplies the updated council guidebooks. Then the desk compares them with the council profiles and the audit, and any difference goes to Tim before v1.4 is written.

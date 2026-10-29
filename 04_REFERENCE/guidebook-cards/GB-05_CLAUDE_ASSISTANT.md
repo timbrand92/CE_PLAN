@@ -1,4 +1,4 @@
-# GB-05 Claude assistant: DRAFT card (not approved)
+# GB-05 Claude assistant: APPROVED 29 Oct 2026 (Tim, item 32) with the recommended answers; not built; starts last, after GB-04 and the privacy fix
 
 **Builds on** the approved Ask CE plan (`docs/CARDS/AI-01_ASK_CE_MCP_AUTOMATION.md`, AI1 to AI15; summary in `04_REFERENCE/civil-system-design-2026-09-16/CIVIL_SYSTEM_DESIGN_2026-09-16/whole-plugin/10_ASSISTANT_AND_CLOUD_RECOVERY.md`). Not a new AI system and not machine-learning training. **Starts only after GB-04's plain version works.** I have not checked how much of Ask CE is built.
 
@@ -44,4 +44,4 @@ Guards: a document with a known value is read correctly with the right page; a w
 3. **Who gets it:** Tim's PC only until the privacy finding is fixed and Codex has accepted slice 1; colleagues after that, not on 9 Nov.
 
 ## 10. Status
-DRAFT. Not approved. Not built.
+APPROVED 29 Oct 2026 (Tim, item 32: "gb05 approved with your recommended answers"). Not built. Slice 1 does not start until GB-04 works and the 22 Oct privacy finding is fixed and Codex-checked.
