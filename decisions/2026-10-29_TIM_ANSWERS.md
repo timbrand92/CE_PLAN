@@ -597,7 +597,7 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
 
 ## Batch 29 (22:38, Melbourne; said in the Control Room chat, relayed by CE 00, not seen by CE 04 directly)
 
-113. **Fri 30 Oct: Tim is on site, the desk keeps going.**
+114. **Fri 30 Oct: Tim is on site, the desk keeps going.** (Renumbered from 113: CE 10 also used 113 for the GB-01 garages and cover rows entry.)
    1. Tim's words (as relayed by CE 00): "tomorrow im on site so you can keep going until i say so".
    2. Interpretation (CE 00's, logged as an interpretation): on Fri 30 Oct Tim is away from the work PC all day, so the robot and Codex may use AutoCAD through his usual weekday hours (the runner's away flag is authorised), the overnight self-stop need not cut the pass, installs need not wait for 17:30, and it lasts until Tim says otherwise; the PC stays on and signed in. No question to ask Tim about it unless he returns. Note: Windows Updates are paused until 9 Nov (decision 110); automatic sign-in stays off (decision 109).
    3. Desk must: run through Fri 30 Oct without Tim's PC being needed; stop and ask only if something needs his word; tell Tim when he returns what ran.
