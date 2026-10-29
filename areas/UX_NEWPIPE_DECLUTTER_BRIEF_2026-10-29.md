@@ -86,7 +86,7 @@
 3. **"Same as last pipe" in the header instead of "Use last settings" in a hidden tab?** Recommend yes.
 4. **Keep "Existing creation controls" (the older window) under While placing until the new window is accepted, then retire it?** Recommend yes; hide and redirect before removing.
 
-**Status update 29 Oct 2026 (later):** Tim ruled "nothing waits for the pilot" (decisions6-10-29_TIM_ANSWERS.md items 68 and 69), so this is no longer held. Per the "builds never wait on Tim's answers" rule, it is built as a DRAFT on my recommended answers above; when Tim answers, his answer replaces the default. Nothing here is accepted until Tim or a Codex look has seen it in AutoCAD.
+**Status update 29 Oct 2026 (later):** Tim ruled "nothing waits for the pilot" (decisions\2026-10-29_TIM_ANSWERS.md items 68 and 69), so this is no longer held. Per the "builds never wait on Tim's answers" rule, it is built as a DRAFT on my recommended answers above; when Tim answers, his answer replaces the default. Nothing here is accepted until Tim or a Codex look has seen it in AutoCAD.
 
 ---
 
