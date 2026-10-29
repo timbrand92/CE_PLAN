@@ -27,8 +27,8 @@ no dotnet was run, no branch or worktree was made. Code read from `origin/claude
    Manager's private name book on your own PC.
 
 5. **What is piling up today.** On your own PC, Civil's folder holds **25,842 report files** dated 28 Apr to
-   29 Oct 2026 (138 day folders of failure records and 150 of usage records). Nothing ever sends or clears them.
-   Size on disk: not measured (the count took over two minutes). Max's PC: not measured (GUESS: the same kind of pile).
+   29 Oct 2026 (1,950 failure records, 23,893 usage records, 2 machine files; about 43 MB). Nothing ever sends or clears them.
+   Max's PC: not measured (GUESS: the same kind of pile).
 
 6. **One thing in the existing code clashes with your ruling.** You said "never delete anything unsent". The
    collector already built (#1788) DELETES Civil's old files instead of sending them the first time it is switched
