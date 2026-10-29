@@ -1,6 +1,6 @@
 # New Pipe window: declutter design brief, VERSION 2 (29 Oct 2026)
 
-**Status:** DESIGN COMPLETE (version 2), registered by CE 01 as B-043 (slices a to e). Not built, no code touched. Tim has not answered the questions in section 7; build on the recommended answers as a draft, his answer replaces them.
+**Status:** DESIGN COMPLETE (version 2), registered by CE 01 as B-043 (slices a to e). Not built, no code touched. Tim said "i am happy with that" on 29 Oct after trying the clickable mock-up (see section 7); the four questions in section 7 are treated as answered "recommended".
 **Picture (v2):** `areas\UX_NEWPIPE_DECLUTTER_MOCKUP_2026-10-29.png` (source `.html`, same folder). Example numbers (Tim's P10 to P9, 100 UPVC, 9.2 m).
 **Previous version (v1, kept):** `areas\UX_NEWPIPE_DECLUTTER_MOCKUP_2026-10-29_v1_tabs_and_columns.png` and `..._v1_tabs_and_columns.md` / `.html`. v1 = two columns, preview beside the label rows, three tabs with their controls open under the preview.
 **Idea it answers:** UX-NEWPIPE-DECLUTTER in IDEAS_INBOX.md. **Related:** BUG-1229, BUG-1230, BUG-1233, BUG-1238, BUG-1239, B-006 (Recent levels), PC-02 and PC-03 in `decisions\2026-10-29_TIM_PLANNING_CHANGES.md`.
@@ -109,6 +109,9 @@ The old window has the Pipe grade row, the "I know one end" button, the "end I k
 2. **Three named buttons that open over the window (Label style, Arrow and breaks, While placing) instead of v1's open tabs?** Recommend yes; it is the biggest clutter cut, and each shows its values. If you read them as the same as More…, we go back to v1's tabs.
 3. **Kind of pipe as one box instead of six buttons?** Recommend yes.
 4. **"Same as last pipe" in the header, and "Older window" kept under While placing until the new window is accepted?** Recommend yes.
+
+**Tim's answer, 29 Oct 2026 (after trying the clickable v2 mock-up, areas/UX_NEWPIPE_DECLUTTER_MOCKUP_2026-10-29_v2_clickable.html):** "i am happy with that".
+Interpretation (not a quote): Tim accepts the v2 design as shown, which contains my recommended answer to all four questions above (level boxes say "you typed" / "worked out", three named buttons, Kind as one box, "Same as last pipe" with "Older window" kept). GUESS: he did not read the four questions one by one. If he wants any one different, his word replaces it. This approves the design only; nothing is built, and it is not accepted until Tim or a Codex look has seen the real window in AutoCAD.
 
 **Status:** Tim ruled "nothing waits for the pilot" (decisions\2026-10-29_TIM_ANSWERS.md items 68 and 69). Built as a DRAFT on my recommended answers; his answer replaces the default. Nothing is accepted until Tim or a Codex look has seen it in AutoCAD.
 
