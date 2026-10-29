@@ -1,6 +1,21 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 
+### GB-01 slice 1, the flattest fall — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+Branch `claude/gb01-slice1-falls`, build and install only when Tim says "AutoCAD is closed, deploy". Warnings only; nothing here changes a drawing. Use copies of a job in Kingston and a copy in Darebin.
+
+1. **Ordinary pipe, 1 in 200:** a 300 UPVC, 18 m long, 90 mm fall (1 in 200). Edit Pipe: the strip warns it is flatter than 1 in 100. CDRULES R-03 shows a yellow warning "flatter than the ladder minimum 1:100". Before this change it passed. A 300 at exactly 1 in 100 passes with no warning.
+2. **450 mm and larger gravity pipe:** a 600 UPVC at 1 in 300. Edit Pipe grade strip says "No minimum fall set for this size" and does not warn. CDRULES R-03 shows Unknown with the same words, not a warning. Project Review pipe sizes still offers 450 and larger sizes for a big flow.
+3. **Detention pipe, Kingston copy:** a 450 detention pipe at 1 in 200. CDRULES R-03 warns ("flatter than the ladder minimum 1:100"). No R-32 line appears.
+4. **Detention pipe, Darebin copy** (repeat for Banyule, Manningham, Maroondah if time): the same 450 detention pipe at 1 in 200 gives no R-03 warning (R-03 says the flatter detention fall applies and R-32 judges it) and R-32 passes. At 1 in 250 R-32 warns "flatter than 1 in 200"; R-03 does not repeat it.
+5. **Charged or pumped pipe:** a flat charged pipe gets no minimum-grade finding at all.
+6. **Settings file:** after the first start on this build, `CD_Settings.json` should hold `minGradeByDiameter` with 90, 100, 150, 225, 300, 375 all at 100 (only if the file held the old ladder before), and the CE log should carry one line "The minimum pipe grades in your settings were CE's old size ladder". No `largeGravityMinGradeN` key appears while the row is blank.
+7. **Stale marker:** a job with a saved CDRULES run shows it Stale once; re-run CDRULES and it clears.
+8. **Not testable yet:** the Settings window rows for the three new values (not built); the Edit Pipe strip on a detention pipe in the four councils (still judges it against 1 in 100).
+9. **What "right" looks like:** no drawing object changes at any point; every finding names the pipe and the figure; Escape and Cancel change nothing.
+
+
 ### Allowance checkpoint —16 October2026
 
 1. **Testing stopped at the requested usage limit:** account100%used/ordinaryusageunavailable. No new native batch;762checks/70ledgers unchanged. Goal remainsACTIVE.
