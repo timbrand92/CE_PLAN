@@ -1,0 +1,6 @@
+# Tim's ruling: re-testing after an install (Thu 29 Oct 2026, about 11:05 Melbourne)
+
+1. **Question (from CE 02's testing-speed report, areas\TESTING_SPEED_OPTIONS_29OCT.md):** after an install, may a tool that the fix never touched keep its earlier Claude-accepted pass until the weekend re-test?
+2. **Tim's words:** "Yes, recommended" (the recommended answer: after an install re-test only what the fix touched; a tool the fix never touched keeps its earlier pass until the weekend re-test and before Max).
+3. **Interpretation:** the "two passes in two separate AutoCAD starts on the current build" rule of 24 Oct stays for NEW acceptances and for every tool or case the install touched. For a case in an area the install did not touch (decided by the fix reports and the finalizer's changed-files list, written down per install), the earlier pass on the previous build stays counted. A full re-test of every accepted case runs every weekend and before anything goes to Max (the 9 Nov pilot). This is not a change to any other part of the Claude-accepted rule.
+4. **Desk must:** each install's robot job lists the areas the fix touched, re-tests those, and records the untouched cases as "carried from <build>"; CE 02 schedules the full weekend re-test (Sat 31 Oct and Sat 7 Nov) and the pre-pilot re-test. The ledger counts a carried pass as accepted but says so.
