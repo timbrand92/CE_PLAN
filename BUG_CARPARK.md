@@ -17344,3 +17344,19 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **BUG-1249 update 29 Oct 2026 16:26 (hand check H55, Tim's plan screenshot, "look at label and cover label position on the plan"):** the plan shows pit P2 with its P2 label circle directly ABOVE the pit and its 'CL 19.50' cover text up and to the RIGHT of the pit; pit P1 has its P1 label circle to the LEFT of the pit (lower left) and its 'CL 19.50' up and to the right. Against the Inspector's On plan rows for P2 ('Label position: bottom right', 'Cover text position: top right'): **'Cover text position: top right' matches the drawing for both pits; 'Label position: bottom right' matches neither pit** (P2's label is above, P1's is to the left). Reading: the Label position row is wrong; the cover text row is right. This is the reverse of how I understood Tim's first sentence, so Tim to correct me if he meant the other row. Likely cause (not checked): the row shows the recorded or default position setting, not where this label really is; the label was placed at a different spot on each pit.
 
 **BUG-1246 CONFIRMED 29 Oct 2026 16:43 (hand check H56):** Tim, asked yet again which tag the original downpipe had: "for 5th time the original was dp2". So the original was DP2 and the copy made by CR also shows DP2: **the copy kept the SAME tag (a duplicate), it did not get the next one.** My question was a repeat of something he had already told me ("shows dp2 like what was copied" and "dp2"); my fault. Decision from Tim (questions chat item 80): copied CE objects get new tags as a general rule.
+
+---
+
+## BUG-1250 — Double-clicking a downpipe symbol leaves one stray "Unknown command" line with the click coordinates on the command line
+
+**Command / Area:** Double-click on a downpipe symbol (DP1) with the switch doubleClick.sourceStopsAttributeEditorFirst ON (the BUG-859 fix), Civil 3.0.86 (C-76), AutoCAD 2027. Seen by the robot (CE 02) in run RUN-20261029-2000-C3.0.86-b80R09s. LOW, WORDING (noise on the command line).
+
+**Symptom:** After the double-click, CE stops AutoCAD's attribute editor and opens its Edit source window correctly (R09s passed 11 of 11 checks). The command line then shows one extra line: Unknown command "904072,2998.945877,-5729.000000" (the pick point typed as if it were a command). Nothing in the drawing changes. Seen once, in one run; not yet checked with the switch OFF or on other blocks. CE 02's reading (not verified): AutoCAD's double-click sends the click point after the editor command, and with the editor stopped the point lands on the empty command prompt.
+
+**Expected behaviour:** No stray line. The command line after a double-click on a downpipe shows only CE's own lines.
+
+**Steps to confirm in AutoCAD:** (1) Open a drawing with a downpipe symbol (DP1), switch ON. (2) Double-click its circle. (3) Read the command line history. Right = the Edit source window opens and there is no "Unknown command" line. Needs a robot check line ("not contains Unknown command") on case R09s before it can be accepted either way.
+
+**Reference:** areas/BUG859_BLOCKED_ANALYSIS_29OCT.md items 5 and 6 and the side-effect note at line 52. Related BUG-859 (the fix that opens Edit source) and BUG-860. CE 02 message to CE 05, 29 Oct 2026.
+
+**Status:** OPEN (reported by CE 02 robot run 29 Oct 2026; evidence only). Never FIXED until confirmed in AutoCAD.
