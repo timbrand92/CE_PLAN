@@ -16919,3 +16919,20 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Reference:** areas\release-v3-colleagues-PILOT_NOFIX_TRIAGE_29OCT.md (what I did not do, item 8); robot runs 31 and 33 logs; LinkService.TextClashTidyUp.cs and TextClashTidyUpRule.cs (see BUG-816). Not yet reproduced by hand; may be a robot test-drawing effect.
 
 **Status:** OPEN (found 29 Oct 2026; unproven). Never FIXED until Tim confirms in AutoCAD.
+
+---
+
+## BUG-1233 — New Pipe / Edit Pipe silently switches "Pipe grade" from Standard to "Set my own" when it guesses the downstream level
+
+**Command / Area:** CD (New Pipe) and CDEDIT (Edit Pipe) windows, "Pipe grade" choice (Standard / Set my own) with the "I know one end" invert working, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026). WRONG ANSWER (the window changes your choice without telling you), severity to confirm.
+
+**Symptom:** You draw a pipe and type the upstream level. The window guesses the downstream level, and then the Pipe grade choice switches itself to "Set my own" and fills in a grade number. That is different from Standard, and you did not ask for it. Tim: "i draw a pipe and then i set both upstream and downstream points, after it guessed my downstream it sets the pipe grade to set my own automatically which is different to standard this feature is decieving".
+Code reading of the installed build (commit 09126560, not seen live): the step that suggests the downstream level (CdViewModel.Inverts.cs, TryApplyUpstreamDownstreamSuggestion) turns the Standard and Default grade choices off, turns Custom on and writes the worked-back grade number into it. The same step produced the "1 in 102" of BUG-1229 (9.2 m pipe, 90 mm fall).
+
+**Expected behaviour:** The window never changes a choice you made. If Standard was chosen it stays Standard and the guessed downstream level follows it. If a level or grade you typed changes the grade, the window says so in plain words before it switches (for example "This now works out at 1 in 102; keep Standard or use this grade?"). Tim's wording: this is "decieving".
+
+**Steps to confirm in AutoCAD:** (1) CD from P10 to P9, Pipe grade = Standard. (2) Type only the upstream level. (3) Look at the Pipe grade buttons and the grade box. Right = still Standard, no new number in "Set my own", and the downstream level follows Standard. Then type a downstream level by hand: the window may say the grade now differs, but must not switch the choice silently. Repeat in Edit Pipe.
+
+**Reference:** Related BUG-1229 (same step, rounded level and 102), BUG-1230 (on hold) and PC-02 / PC-03 in decisions/2026-10-29_TIM_PLANNING_CHANGES.md (the two-controls problem: the grade row and "I know one end"). Part of the whole-functionality review, but it is a plain wrong answer on its own and Tim reported it as a bug. BUG-1229's fix is in draft PR 1838 per the desk log; whether it also stops the switch is NOT known and must be checked.
+
+**Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until confirmed in AutoCAD.
