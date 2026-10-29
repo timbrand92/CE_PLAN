@@ -142,3 +142,9 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 2. **Tim's pilot-critical rulings are all answered** (scoreboard section 3 item 7). The no-fix 27 are now builds to prove, not questions: robot cannot prove the engineering five (BUG-905, 1097, 1095, 1091, 1088) today; CE 02's ENGINEERING_FIX_PROOF_PLAN proposes three Codex looks, each with the pre-fix build as the broken twin; BUG-587 (two-row-thick row with a wipeout mask) and the pit snap glow and long-section water line need a picture first (RULES 5.2), which is a Codex look.
 3. **Page 04 lines Tim asked for:** BUG-1148 ("check the pit after pasting from a stage drawing"); BUG-1209 and BUG-1210 as a note for older years; BUG-685 is a note, not a known problem.
 4. **Old July install files (gate 4):** before the move, ask whether any colleague still installs from them; delete-review date proposed Mon 14 Dec.
+
+## 12. UPDATE 13:00 29 Oct: pipe object ON for everyone (Tim, item 63)
+
+1. **B10 changes:** Tim ruled the one-piece pipe object ON by default for every login, so the "full pass on Automatic" is no longer the Max case. B10 becomes: after the build that makes the default On is installed, one clean-profile pass on a different 2027 login that reads the new default (the pipe is the one-piece object, no Tim folder path in the settings page). The 20 cases that name the pipe object then run on both PCs the same way.
+2. **A6 (Max's starting settings equal Tim's)** = the F-023 proof in B-035: needs the ordinary login or the 2027 test PC.
+3. **Re-test class of the build that carries it:** FULL (existing default changed).
