@@ -1,0 +1,3 @@
+# CE 02 29 Oct 23:15: held back from ROBOT_QUEUE.txt so the Codex looks on 3.0.86 run first (Fri 05:30 to 09:40) and AutoCAD is free for the C-77 payload and install. Append these two lines back to ROBOT_QUEUE.txt AFTER the C-77 full re-test (or when CE 01 says there is no install). Undo: append the lines back; backup ROBOT_QUEUE.txt.pre_29oct_2310.
+C:\CE_PLAN\desk_jobs\tester_run79_pilot_p01_p02.txt
+C:\CE_PLAN\desk_jobs\tester_run78_apply_staged_and_run.txt

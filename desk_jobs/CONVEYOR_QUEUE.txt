@@ -53,9 +53,9 @@ verifyG1_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyG2_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyG1b_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 # tomorrow (Thu 29 Oct): HELD so today stays inside the 16 percent cap. Release after 17:53 Thu (cap rises to 30) by deleting the leading "#HOLD " on these three lines, in this order:
-#HOLD verifyG3_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
-#HOLD verifyG7_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
-#HOLD verifyG4_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG3_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG7_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG4_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 # Fri 30 Oct: release after 17:53 Fri (cap 44) by deleting "#HOLD " on these two:
 #HOLD verifyG6_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 #HOLD verifyG5_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3

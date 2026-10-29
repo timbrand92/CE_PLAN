@@ -1,0 +1,20 @@
+C:\CE_PLAN\desk_jobs\tester_run80_c76_proofs.txt
+# Robot standing queue (Desk 26 Oct 2026). One job file path per line, run in order by chain_robot_standing.ps1; a .done marker is written beside each finished job. Append only.
+C:\CE_PLAN\desk_jobs\tester_run65_regrade_3079.txt
+C:\CE_PLAN\desk_jobs\tester_run66_redo_bisect.txt
+C:\CE_PLAN\desk_jobs\tester_run67_regrade_3080.txt
+C:\CE_PLAN\desk_jobs\tester_run66b_redo_bisect_3081.txt
+C:\CE_PLAN\desk_jobs\tester_run67b_regrade_3081.txt
+C:\CE_PLAN\desk_jobs\tester_run69_validate_n_cases.txt
+C:\CE_PLAN\desk_jobs\tester_run68_gapwatch_redo.txt
+C:\CE_PLAN\desk_jobs\tester_run70_n03_n04_bug1225.txt
+C:\CE_PLAN\desk_jobs\tester_run71_validate_b2_cases.txt
+C:\CE_PLAN\desk_jobs\tester_run72_remaining_asks.txt
+C:\CE_PLAN\desk_jobs\tester_run73_bug1225_proof_and_regrade_3084.txt
+C:\CE_PLAN\desk_jobs\tester_run74_validate_b3_cases.txt
+C:\CE_PLAN\desk_jobs\tester_run75_b6_fixups.txt
+C:\CE_PLAN\desk_jobs\tester_run76_c75_fixes_and_regrade.txt
+C:\CE_PLAN\desk_jobs\tester_run75b_b6_fixups_retry.txt
+C:\CE_PLAN\desk_jobs\tester_run77_regrade_part3_cdtwl_first.txt
+C:\CE_PLAN\desk_jobs\tester_run79_pilot_p01_p02.txt
+C:\CE_PLAN\desk_jobs\tester_run78_apply_staged_and_run.txt
