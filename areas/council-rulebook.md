@@ -33,6 +33,8 @@ _Opened 19 Sep 2026; this area had no area file before. Its state in the old mas
 
 8. **GB-01 slice 3, minimum pit depth (R-34), 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1851 (stacked on 1850 on B-012 1848). Per pit: depth against minimum cover (cover table or council figure) + pipe + wall, for every pipe, deepest governs; wall from the B-012 Settings table (two rows shipped); missing data = Unknown. Open: wall figures per pipe size and material (engineers). Steps in `PENDING_TESTS.md`.
 
+9. **GB-02 part A, council data, 29 Oct 2026 — Built and unit-tested; not installed, not Codex-tested.** PR 1854 (stacked on B-017 PR 1852). Glen Eira 50% underground rule removed (book p34); Port Phillip Boyd's (Tim item 27); Cardinia, Brimbank, Greater Dandenong, Hobsons Bay, Nillumbik, Merri-bek profiles (no suburb lists, unsourced figures Assumed, Cardinia submission item 'Professional registration number'); guidebook version 1.3 on the file and on the eight touched profiles. Parts B to D not built (see BUILD_LIST item 6). Steps in `PENDING_TESTS.md`.
+
 ## 4. Bugs
 
 `BUG_CARPARK.md` at the root of this repository is the one bug file. List this area's open bug IDs here.

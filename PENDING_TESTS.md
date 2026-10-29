@@ -1,5 +1,17 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### GB-02 part A, council data — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
+
+PR 1854 (stacked on B-017 PR 1852), branch `claude/gb02-council-data-a`.
+
+1. **Glen Eira:** pick Glen Eira as the council on a copy and open the council profile viewer: minimum underground share shows 0 (no minimum), source "Civil and Drainage Design Guidebook v1.3 p34", and the warnings say the entire detention may be in tanks. A Glen Eira detention design no longer warns about being under half underground.
+2. **Port Phillip:** pick Port Phillip: the method reads Boyd's (it read "council gives it") with source "Guidebook v1.3 Table 1". A St Kilda address still picks Port Phillip by itself.
+3. **Six new councils:** Cardinia, Brimbank, Greater Dandenong, Hobsons Bay, Nillumbik and Merri-bek appear in the council list and can be chosen by name. No address picks them up by itself (no suburb lists). Their figures are marked Assumed ("no council source") and CDRULES prints the assumption warning. Brimbank and Greater Dandenong say the council gives the discharge and storage by email.
+4. **Cardinia:** its profile lists "Professional registration number" as an extra submission item.
+5. **Version stamp:** the profile viewer shows "last checked against 1.3" for those eight councils and nothing for the others.
+6. **Stale marker:** a saved CDRULES run on a Glen Eira or Port Phillip job shows Stale once; jobs for other councils do not.
+7. **Not testable yet (parts B to D):** the Design start questions (Banyule 65 per cent trigger, rear-fall), the Banyule dual underground warning, per-council submission details and the job's own version stamp, the industrial stub test, and the profile viewer line for the version stamp (a window row) are not built.
+
 ### GB-01 slice 3, minimum pit depth (R-34) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
 PR 1851 (stacked on 1850, on B-012 1848), branch `claude/gb01-slice3-pit-depth`.
