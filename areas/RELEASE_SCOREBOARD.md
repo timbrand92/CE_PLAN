@@ -1,177 +1,117 @@
 # Release scoreboard: Civil + Manager pilot hand-over to Max
 
-**Owner:** CE 07 Release. One file, refreshed at least hourly (30-minute check). Other sessions read it; they do not edit it.
-**Last refreshed:** Thu 29 Oct 2026, 11:17 Melbourne (PC clock).
-**Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never written as Tim's word. Unknown stays Unknown.
+**Owner:** CE 07 Release. One file, refreshed at least hourly. Others read it, they do not edit it.
+**Last refreshed:** Thu 29 Oct 2026, 11:32 Melbourne (PC clock).
+**Schedule in force:** Tim's ruling "option b" (decisions\2026-10-29_TIM_RELEASE_FREEZE.md): **freeze Fri 6 Nov, pilot Mon 16 Nov.** Option A (freeze Sat 31 Oct, pilot 9 Nov) was not chosen.
+**Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never Tim's word. Unknown stays Unknown.
 
 ---
 
 # FOR TIM
 
-1. **Will Mon 9 Nov hold? AT RISK, leaning to Mon 16 Nov.** I would plan for 16 Nov and treat 9 Nov as a stretch that holds only if the four things in item 3 are green by Fri 30 Oct (tomorrow).
+1. **Will Mon 16 Nov hold? AT RISK, but a fair chance.** It is a better bet than 9 Nov was. It holds if: the everyday tools climb from 19 to 30 of 40 by Sat 7 Nov (CE 02 estimates 26 to 30), the final build is installed by Fri 6 Nov, one install rehearsal on a normal login passes, and Max is on an AutoCAD year we can test. Fallback is Mon 23 Nov.
 2. **The scores (two figures each).**
    1. **Gate list:** 1 of 11 done / 10 open.
-   2. **Pilot-critical bugs:** 0 of 60 closed by Claude / 0 of 60 confirmed by you. 26 have a fix installed, 5 are built but not installed, 27 have no fix.
-   3. **Everyday tools (the 40):** 19 of 40 Claude-accepted / 4 of 40 confirmed by you (up to 6 or 7 by the hand checks since; CE 02 recounts).
-   4. **9 Nov scope (390 items):** built 47 percent (184 of 390 installed) / tested 3.1 percent (12 of 390).
-3. **What decides 9 Nov this week.**
-   1. **Fri 30 Oct:** the everyday tools reach 30 of 40 (today 19). **CE 02 says 30 by Fri 30 Oct is not reachable; it expects 22 to 24 by Sat 31 Oct.**
-   2. **Fri 30 Oct:** the hand install is rehearsed once on a spare standard Windows login. Nobody has one set up yet.
-   3. **Fri 30 Oct:** Max's AutoCAD year is known (he types ABOUT).
-   4. **Sat 31 Oct:** the freeze candidate (C-76 plus C-77) is built.
-4. **Only you can do these.** They are listed with a recommendation in RELEASE_TEST_PLAN_29OCT.md section 6 (and the hand-over steps in RELEASE_HANDOVER_PLAN_29OCT.md) and go to CE 04 as numbered items: Max's AutoCAD year and rights, the spare login, where the frozen copy sits, the old-files move, the pack approval, then "yes, hand it to Max" on Fri 6 Nov.
-5. **Nothing has been published, copied or sent.** The frozen copy plan, the install steps and the pack changes are drafts.
+   2. **Pilot-critical bugs (60):** 0 of 60 closed by Claude / 0 of 60 confirmed by you. 26 fixes installed, 5 built not installed, 27 no fix (the builds before the freeze target these).
+   3. **Everyday tools (40):** 19 of 40 Claude-accepted / 4 of 40 confirmed by you (PROGRESS.json). Today you completed 8 of 12 planned hand checks.
+   4. **9 Nov-scope items (390):** built 47 percent (184 of 390) / tested 3.1 percent (12 of 390).
+3. **Needs you, all through CE 04** (items 22 to 30 in QUESTIONS_FOR_MONDAY.md, plus the laptop items): Max's AutoCAD year and Windows rights; the test laptop (whose, user type, sign-in, when); where the frozen copy sits; the old-files move; one-pass approval of the pack; your word on Fri 13 Nov.
+4. **A finding that matters for the laptop:** the installed Civil bundle sends AutoCAD 2025 and 2026 to its own "Net8" folder, and 2027 to a different folder that also carries 2027-only pipe-object files. So a 2026 laptop tests a different build of CE from the one on your PC, and nobody has ever run that one in AutoCAD. It is good for the install rehearsal, and for Max if he is on 2025 or 2026. It does not repeat your 2027 tests.
+5. **Nothing has been published, copied or sent to Max.**
 
 ---
 
 # DETAIL
 
-## 1. Dates
+## 1. Dates (Melbourne)
 
 1. **Today:** Thu 29 Oct 2026.
-2. **Days to Mon 9 Nov:** 11 calendar days. Working days left before the Fri 6 Nov go decision: Fri 30, Mon 2, Wed 4, Thu 5, Fri 6 (5), plus the rest of today. **Tue 3 Nov is Cup Day**, a full free AutoCAD day.
-3. **Days to Mon 16 Nov:** 18 calendar days.
-4. **Fixed points (gap plan 22 Oct):** checkpoint 1 Fri 30 Oct; candidate Sat 31 Oct; freeze Mon 2 Nov; package Wed 4 Nov; soak Thu 5 Nov; checkpoint 2 and Tim's word Fri 6 Nov; hand-over Mon 9 Nov.
+2. **Freeze:** Fri 6 Nov, installed after 5:30 pm = 8 days away. Working days left before it: Fri 30 Oct, Mon 2, Wed 4, Thu 5, Fri 6 (5), plus the rest of today. **Tue 3 Nov is Cup Day** (free AutoCAD day).
+3. **Pilot:** Mon 16 Nov = 18 calendar days away. Fallback Mon 23 Nov.
 
-## 2. Gate list (the 11 items at the top of release-v3-colleagues.md)
+## 2. Schedule B (in force)
 
-1. **Item 1, administrator set-up on Tim's PC (BUG-476): DONE, not yet confirmed by Tim.** Evidence: Codex W53 PASS 3 of 3, 10 Oct; shared admin list holds one entry. Other PCs not shown. **Tim's call:** confirm.
-2. **Item 2, Roll Back hidden (BUG-477, BUG-441): OPEN.** Records disagree (24 Oct triage says installed, T5 audit item 17 says NOT MET). Evidence needed: a Codex look at Manager's window. Fallback: pack tells Max not to press it.
-3. **Item 3, update route or reworded messages (BUG-478): OPEN, decided.** Updates by hand during the pilot (Tim 20 Oct). Messages not shown reworded.
-4. **Item 4, old install scripts moved (BUG-483): TIM'S CALL.** Recommended yes before 9 Nov.
-5. **Item 5, fault report and CEMANAGERDIAG code the login (BUG-488): OPEN.** Fallback: Max told not to press them (pack does not yet say so for CEMANAGERDIAG).
-6. **Item 6, Publish Issue stamps only ticked sheets (BUG-495): OPEN, Structural only.** **Tim's call:** confirm out of scope (Structural stays on his PC, ruling B3).
-7. **Item 7, job record lives with the job (BUG-496): OPEN, Structural only.** Same call.
-8. **Item 8, X-Civil and LandXML units (BUG-505): OPEN.** Tim said yes 29 Oct to one soft line; build item B-010 queued, not built. Robot cases C35 and C36 not recorded as passing.
-9. **Item 9, no blue anywhere (BUG-517): OPEN, partly built.** Printed sheet colour installed (built only); windows and ribbon (BUG-525) not fixed. Needs a Codex look at three windows and the printed sheet.
-10. **Item 10, markup and chat send nothing off the PC (BUG-549 family): OPEN.** Fixes installed, untested. For the pilot AI is OFF and Structural is not shipped.
-11. **Item 11, Structural 1.0.113 and C-35 installed plus a driver pass: OPEN.** Install long met; the driver pass (AI-off messages, nothing sent) not found.
+1. **Thu 29 Oct (tonight, after 5:30 pm):** C-76 installs; CE 02 re-tests only what it touched; P01 and P02 pilot cases (50 to 85 min); Codex looks G3 G7 G4 then H1 to H3 from 17:53; CE 02's CDTWL, layer and schedule cases.
+2. **Fri 30 Oct:** C-77 candidate assembled (install Friday night so Saturday's full re-test runs on it); rehearsal R1 if a login exists; Max's year known? Codex H4 to H6, G6, G5 from 17:53.
+3. **Sat 31 Oct (weekend re-test 1):** full re-test on the build installed before the start (an install mid-run voids it).
+4. **Sun 1 and Mon 2 Nov:** fix builds continue (B-016 to B-032); reviews; Tim's soak continues on his PC.
+5. **Tue 3 Nov (Cup Day):** early Max-like run (both extra add-ins moved aside) on the current build; Codex looks C1, C3, C6; rehearsal R2 and rollback R3 if a login exists.
+6. **Wed 4 and Thu 5 Nov:** train C-78 assembled with every reviewed pilot-critical fix; Opus finalizer; page 04 drafted.
+7. **Fri 6 Nov (freeze):** C-78 (or later) installed after 5:30 pm = **freeze candidate**. Anything not reviewed by then waits for the release after the pilot and goes on page 04.
+8. **Sat 7 Nov (pre-pilot re-test, weekend 2, pass 1) and Sun 8 Nov (pass 2, separate start):** full re-test on the freeze candidate; Codex looks on the final build; Max-like run again; R2 and R3 on the final build.
+9. **Mon 9 to Thu 12 Nov:** Tim's soak (4 working days) and his two hand checks (D1 five-step walk, D2 one council sheet); pack approved in one pass (Mon 9); package from the frozen folder (Tue 10); page 04 final from results (Wed 11); Opus freeze report (Thu 12). A blocker means a new candidate and a restarted clock for what it touches.
+10. **Fri 13 Nov:** final go checklist (hand-over plan section 8); Tim's word "yes, hand it to Max".
+11. **Mon 16 Nov:** hand-over.
+12. **Biggest risks:** about 17 fixes in one last train with one week of tests (Tim, 16 Sep: large batches failed, so split the train if CE 01 can); several fixes need a Codex look; Tim's rulings on BUG-685 and BUG-1148 and Max's facts are outstanding; the final install is on Fri 6 Nov so every later bug costs a new candidate.
 
-Gate score: **1 of 11 done / 10 open** (2 of the 10 fall away if Tim confirms Structural stays on his PC).
+## 3. Gate list (the 11 items at the top of release-v3-colleagues.md)
 
-## 3. Pilot-critical bugs (the 60; detail in PILOT_CRITICAL_TEST_LIST_29OCT.md)
+1. **Item 1, administrator set-up on Tim's PC (BUG-476): DONE, Tim has not confirmed.** Codex W53 PASS 3 of 3, 10 Oct. Other PCs not shown.
+2. **Item 2, Roll Back hidden (BUG-477, BUG-441): OPEN.** Records disagree. Needs a Codex look at Manager (C2).
+3. **Item 3, update route or reworded messages (BUG-478): OPEN, decided.** Updates by hand during the pilot.
+4. **Item 4, old install scripts moved (BUG-483): TIM'S CALL.** Question 25.
+5. **Item 5, fault report and CEMANAGERDIAG code the login (BUG-488): OPEN.** Fallback: Max told not to press them.
+6. **Items 6 (BUG-495) and 7 (BUG-496), Structural only: OPEN.** Out of the gate if Tim confirms Structural stays on his PC (question 26).
+7. **Item 8, units (BUG-505): OPEN.** Tim said yes 29 Oct; B-010 queued, not built; robot cases C35, C36 not recorded passing.
+8. **Item 9, no blue (BUG-517): OPEN, partly built.** B-027 (BUG-525) queued; needs Codex look C1.
+9. **Item 10, nothing off the PC (BUG-549 family): OPEN.** AI OFF and Structural not shipped; Codex look C3.
+10. **Item 11, Structural 1.0.113 and C-35 installed plus a driver pass: OPEN.** Install met; the driver pass was not found.
+
+Gate score: **1 of 11 done / 10 open.**
+
+## 4. Pilot-critical bugs (the 60; PILOT_CRITICAL_TEST_LIST_29OCT.md)
 
 1. **Closed (Claude-accepted or Tim-confirmed): 0 of 60.**
-2. **Fix installed on Tim's PC, awaiting acceptance: 26 of 60** (24 fix PRs, plus BUG-1049 and BUG-540). Source-checked by CE 02, not read from the DLL.
-3. **Fix installed but switched OFF: 1** (BUG-905, waits for Tim's hard-ground C figure). **Document fix only: 1** (BUG-1173, pack page 02).
-4. **Fix built, not installed: 5** (BUG-1189, 1149, 1090, 1052, 1053). Two wait for Tim (1189, 1149), BUG-1090 needs rebase and review (Tim said yes), 1052 and 1053 need review.
-5. **No fix: 27.** Triage of 29 Oct: 11 build now, 6 build on a recommended answer, 2 need Tim (BUG-685, 1148), 7 are facts to gather (Max's PC or a robot run), 1 needs the protected shared file. Queued as B-016 to B-032.
-6. **Needs Tim before it can move:** BUG-905 and BUG-1097 (fix built, his figure), BUG-1189 and BUG-1149 (his question), BUG-685 and BUG-1148 (his ruling).
-7. **Robot can prove now: 2** (P01 BUG-1194, P02 BUG-1140; drafts, never run). 18 need a test drawing, a runner change or a second PC. 6 need a Codex look.
+2. **Fix installed, awaiting acceptance: 26.** Plus 1 installed but OFF (BUG-905, waits for Tim's figure) and 1 document fix (BUG-1173).
+3. **Built, not installed: 5** (BUG-1189 and 1149 wait on Tim; 1090 needs rebase and review; 1052 and 1053 need review).
+4. **No fix: 27.** Triage: 11 build now, 6 build on a recommended answer, 2 need Tim (685, 1148), 7 facts to gather (Max's PC or a robot run), 1 needs the protected shared file. Queued B-016 to B-032; under schedule B they go in the freeze candidate if reviewed by Thu 5 Nov.
+5. **Exit rule for 16 Nov:** each of the 60 is closed, written on page 04 as a known problem with a workaround, or switched off.
+6. **Robot-provable by Fri:** P01 and P02 tonight; up to 4 to 6 more by Sat 31 Oct if CE 02's four runner changes and four test drawings land (CE 02 confirms Friday midday).
+7. **Waiting on Tim's word:** BUG-905, 1097, 1189, 1149, 685, 1148 (asked through CE 04).
 
-## 4. Everyday tools (the 40)
+## 5. Everyday tools (the 40; EVERYDAY_TOOLS_STATUS_29OCT.md)
 
-1. **Claude-accepted: 19 of 40 (47.5 percent).** Target at checkpoint 1 (Fri 30 Oct): 30 of 40. Gap: 11.
-2. **Tim-confirmed (PROGRESS.json, 10:47): 4 of 40.** The ledger hand checks H1 to H7 since then passed PIT and CD keep placing (D01 both halves), Recover Inverts, EXPLODE a pit, ERASE a pit, COPY a pit, U names what it undid (PIT half only). Not passed: CDRENUMBER (ran, nothing to renumber), pit catch D02 (invalid test). By that mapping the figure may now be 6 or 7 of 40; **CE 00/CE 02 own the recount**, I do not change PROGRESS.json.
-3. **Next ones in reach:** CDTWL freeboard (the 20th, needs R14h x3 two passes), New Pipe recent values (B-006), Hide grade, mid-pipe label, hand-placed label, schedule onto next sheet, CDCHECKDWG summary (real fault seen), ribbon tab jump (real fault seen).
+1. **Claude-accepted: 19 of 40 (47.5 percent).** CE 02 notes the plan names only 38 of the 40.
+2. **Tim-confirmed: 4 of 40 (PROGRESS.json).** Hand checks passed today: PIT, CD, Recover Inverts, EXPLODE, ERASE, COPY, U names PIT, pit catch (90 mm caught, 110 mm free). Open: CDRENUMBER (nothing to renumber), quick MOVE, CDSYNC and CDREBUILD, OF and FO. CE 00 and CE 02 recount.
+3. **Estimate (CE 02):** 20 to 22 by Fri 30 Oct, 26 to 30 by Sat 7 Nov. The 30 target is now Sat 7 Nov, not Fri 30 Oct.
+4. **Next 11:** CDTWL freeboard, PIT and CD (by ruling), layers D24, schedule order D21, quick MOVE, hide grade D06, Excel export D23, D13 (needs Tim), CDCHECKDWG D28, mid-pipe label D10.
 
-## 5. 9 Nov scope and whole plan
+## 6. Plan numbers (PROGRESS.json, counted 29 Oct 10:47)
 
-1. **390-item 9 Nov scope:** built 47 percent (184 of 390 installed; 290 including unshipped drafts, 74 percent) / tested 3.1 percent (12 of 390 whole; 6.7 percent counting parts).
-2. **Whole 548-item plan (PROGRESS.json):** built 300 of 548 (54.7 percent) / tested 12 of 548 (2.2 percent). Never mixed with the 40 tools.
-3. **About 100 plan items in the 9 Nov scope are not built.** The gap plan cut them from the pilot on purpose.
+1. **Whole plan (548):** built 300 of 548 (54.7 percent) / tested 12 of 548 (2.2 percent).
+2. **9 Nov scope (390):** built 47 percent installed (184 of 390; 290 including unshipped drafts) / tested 3.1 percent (12 whole; 26 counting parts). Never mixed with the 40 tools. About 100 scope items are unbuilt and are not pilot blockers.
 
-## 6. Build train state
+## 7. Build trains
 
-1. **Installed now (read from the DLLs by CE 07, about 11:15):** Civil 3.0.85 and Manager 1.1.85 at commit 09126560 in Legacy, Modern and Net8. The candidate folder C:\ce_rc_scratch\c1071 has the same six DLL hashes and 903 files, same as the installed bundle. Structural 1.0.125 (not shipped to Max).
-2. **C-76 (Civil 3.0.86 / Manager 1.1.86): assembling.** PRs #1834 (BUG-859 downpipe double-click), #1835 (BUG-372 CDCHECK wording), #1836 (BUG-090 About window, Manager), #1837 (BUG-1228 DP speed). #1838 (BUG-1229 grade) joins if the assembler says so. Built and unit-tested only. Not installed.
-3. **C-77 backlog (nine jobs), building:** B-006 Recent levels buttons (running), B-007 raingarden label, B-008 Tidy labels ON by default, B-009 grip copy ON (after a robot pass with it ON), B-010 no-units note, B-011 two small extras, B-012 cover to the outside of the pipe, B-013 pit drop warning, B-014 green DP label double-click. B-015 (PR #1771 sheet line) needs rebase and review.
-4. **After that:** B-016 to B-032, the pilot-critical no-fix items. Not all can make a freeze on Mon 2 Nov.
-5. **Risk I am raising to CE 00:** every install after the freeze candidate restarts the two-pass clock for the areas it touches. Recommend freeze candidate = C-76 plus C-77 only, built by Sat 31 Oct; B-016 onward go to the release after the pilot unless Tim wants a specific one (see test plan section 4).
+1. **Installed (CE 07 read the DLLs):** Civil 3.0.85 and Manager 1.1.85 at 09126560 in all three lanes; hash for hash equal to candidate C:\ce_rc_scratch\c1071 (903 files). Structural 1.0.125 (not shipped).
+2. **C-76 (3.0.86 / 1.1.86):** PRs #1834 BUG-859, #1835 BUG-372, #1836 BUG-090, #1837 BUG-1228; #1838 BUG-1229 if the assembler takes it. Built, unit-tested, not installed.
+3. **C-77 backlog (B-006 to B-014):** Recent levels, raingarden label, Tidy labels ON, grip copy ON (after a robot pass), no-units note, two small extras, cover to outside, pit drop warning, green DP label. B-015 (#1771) needs rebase and review.
+4. **C-78 and later (B-016 to B-032):** the pilot-critical no-fix list. Nothing started as of the build register.
+5. **Add-ins:** CE.AutoCADLink.2027 and CE.Transform.Trial.2027 stay out of Max's package (CE 01 note); Max-like re-run check B9 proves it.
 
-## 7. Re-test schedule (Tim's re-test rule, 29 Oct)
+## 8. Re-test schedule (Tim's rule, 29 Oct)
 
-1. **Rule:** after an install, re-test only what the fix touched; untouched accepted cases are written "carried from <build>". A full re-test runs every weekend and before anything goes to Max.
-2. **Planned full runs (CE 02 owns):** Sat 31 Oct (weekend 1), Sat 7 Nov (weekend 2), and the **pre-pilot full re-test on the frozen candidate**: proposed Tue 3 Nov (Cup Day, whole day free) with a second start on Wed 4 Nov, then nightly on Thu 5 and Fri 6. Last full regrade took 7.6 hours (3.0.84, 33 runs); about 6.3 sessions an hour.
-3. **Weakness:** the robot can reach only 2 of the 26 installed pilot-critical fixes today. Unlocking the rest needs four test drawings, four reviewed runner changes and a spare login (test list section C). Without them the 0 of 60 barely moves before 9 Nov.
-4. **Status:** none of these runs has been confirmed scheduled by CE 02 yet (I have asked, see test plan).
+1. After an install, re-test only what the fix touched; untouched cases are "carried from <build>". Full re-tests: Sat 31 Oct, Sat 7 Nov plus Sun 8 Nov second pass, and the pre-pilot re-test after the freeze.
+2. A full set takes 6 to 8 hours now (about 4 with the speed changes CE 02 is testing tonight).
+3. CE 02's re-test area map warns that every fix adds a settings switch, and the settings rule then forces a full re-test, so "carry" saves little until Tim rules on it (their question).
+4. Codex looks: weekly 13 percent; daily caps 30 from Thu 17:53, 44 from Fri 17:53, 58 from Sat 17:53.
 
-## 8. Install rehearsal and hand-over
+## 9. Install rehearsal and the test laptop
 
-1. **Hand install on a standard Windows login rehearsed: 0 of 2** (target before Fri 30 Oct for the first). No spare login recorded anywhere.
-2. **Rollback rehearsed: 0 of 1.**
-3. **Max's AutoCAD year: Unknown.** Pack says 2027 but nobody has looked. Question for Tim (to CE 04).
-4. **Max's login rights, old Structural 1.0.41, Manager version, all-users plug-in folders, OneDrive folder layout: all Unknown.**
-5. **Tim's PC all-users folder (read about 11:15):** C:\ProgramData\Autodesk\ApplicationPlugins holds a CE_SUITE_MANAGER.bundle whose PackageContents.xml has been renamed PackageContents.xml.DISABLED-duplicate-appdata-wins, files at Manager 1.0.0 (commit cac19768). So the stale copy is disabled, not removed. The 20 Oct "not done" note is out of date for this folder (the disabled file does the job). Nothing under C:\Program Files\Autodesk\ApplicationPlugins starts with CE. Max's PC is not read.
-6. **Frozen copy:** not placed (publishing, Tim's word). Plan in RELEASE_HANDOVER_PLAN_29OCT.md.
-7. **Colleague pack:** 5 pages are 22 Oct drafts against 3.0.70; page 06 has 20 questions, several answered. Change list for one-pass approval is being drafted: RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md.
+1. **Hand install on a standard login rehearsed: 0 of 2.** Rollback rehearsed: 0 of 1. The spare 2027 work PC: Tim cannot set it up now.
+2. **Tim's alternative: a laptop with AutoCAD 2026.** See RELEASE_HANDOVER_PLAN_29OCT.md section 11. Questions sent to CE 04.
+3. **Max's year, rights, folders, old Structural, Manager version: all Unknown.**
+4. **Tim's PC all-users folder (read):** the stale Manager 1.0.0 in C:\ProgramData is disabled (PackageContents.xml renamed), not removed.
+5. **Colleague pack:** change list ready (RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md): 97 changes, 12 decisions. Wrong as drafted: "drawings are safe either way" after a rollback (BUG-1135). Approval once the freeze list is known.
 
-## 9. Will 9 Nov hold? AT RISK
+## 10. Idle, blockers, not moving (11:32)
 
-**Why at risk:**
-1. Gate 1 of 11, pilot-critical 0 of 60 closed, tools 19 of 40 against 30 wanted tomorrow.
-2. Hand install never rehearsed; no spare login; Max's year and rights Unknown.
-3. Robot can drive only 2 of 26 installed pilot-critical fixes.
-4. Fixes still landing (C-76, C-77, then B-016 on); each install resets the two-pass clock for what it touches.
-5. Colleague pack unapproved; the known-problems page must be final on Thu 5 Nov.
+1. **Idle at last list:** CE 03, CE 04, CE 05, guidebook session, CE 02, CE 01 (done on #1837). CE 08 research is working (Tim started it).
+2. **Not yet moved:** the standard-login route (now the laptop question), Max's year, the freeze-candidate list, CE 02's runner changes (due Fri), acknowledgements from CE 03 and CE 04.
+3. **Blockers for Tim:** all in QUESTIONS_FOR_MONDAY.md for CE 04.
 
-**What would turn it to YES:** 30 of 40 and the first rehearsal by Fri 30 Oct; candidate frozen Sat 31 Oct; full re-test green Tue 3 and Wed 4 Nov; Tim's pack approval by Wed 4 Nov; his word on Fri 6 Nov.
+## 11. Decision log
 
-**What would turn it to NO:** the 30 of 40 check on Fri 30 Oct comes in below about 26, or the rehearsal finds an install fault that needs a build, or Max is on AutoCAD 2022 to 2024 (those years have never been driven with this build; BUG-1209, BUG-1210 apply).
-
-## 10. Blockers and who is idle (11:17)
-
-1. **Idle:** CE 03 (test-with-tim), CE 04 (questions-for-tim), CE 05 (carpark-planning), guidebook session. CE 01 build session reported done on PR #1837; CE 02 working.
-2. **Held by Tim being on AutoCAD:** robot, Codex looks G3 G7 G4 (Thu 17:53), G6 G5 (Fri 17:53).
-3. **Blockers for Tim:** listed as numbered items in QUESTIONS_FOR_MONDAY.md for CE 04 (see section 6 of RELEASE_TEST_PLAN_29OCT.md).
-
-## 11. Change log (newest first)
-
-1. **29 Oct 11:17 CE 07:** first scoreboard written. Read installed DLLs and c1071 (identical). Asked CE 02, CE 03, CE 04 for their lists. Pack change list job started.
-
-## 12. Two schedules ready for Tim's freeze ruling (CE 00 asked for both, 29 Oct; his answer drops straight in)
-
-**Option A: freeze Sat 31 Oct (C-76 + C-77 only), pilot Mon 9 Nov.**
-1. **Thu 29 Oct (tonight, after 5:30 pm):** C-76 installs; CE 02 re-tests what C-76 touched (R09, R22, N31/C31, N32, About window Codex look); P01 and P02 first pass.
-2. **Fri 30 Oct (checkpoint 1):** 30 of 40 tools? first rehearsal R1 on the spare login (current 3.0.85 build)? Max's year known? Tim's 9-or-16 lean.
-3. **Sat 31 Oct:** C-77 (B-006 to B-014) finalised and installed = freeze candidate FC-A. Weekend-1 full re-test starts (about 8 hours).
-4. **Sun 1 Nov:** second pass of the full re-test; rehearsal R2 and rollback R3 on FC-A.
-5. **Mon 2 Nov:** freeze. Tim's soak on his PC Mon 2, Wed 4, Thu 5, Fri 6 (Cup Day Tue 3 is a free robot day).
-6. **Tue 3 Nov (Cup Day):** pre-pilot full re-test, Codex looks C1 to C6, second Codex pass on windows; Tim's D1 and D2 hand checks not in this day (he is on a holiday); do them Wed 4 Nov evening or Thu 5.
-7. **Wed 4 Nov:** package from the frozen folder, hash read-back; pack changes approved by Tim in one pass.
-8. **Thu 5 Nov:** page 04 final from the test results; nightly re-test.
-9. **Fri 6 Nov:** freeze report, final go checklist, Tim's word.
-10. **Mon 9 Nov:** hand-over.
-11. **What Max gets with it:** the 27 no-fix bugs and the 5 built-not-installed ones are written on page 04 with workarounds; CDDESIGN, CDRUNSOLVE and CDTWL are for drafting only, never an issued number (page 06 question 8). Twelve of them are wrong-answer engineering bugs (BUG-1088, 1095, 1099, 1091, 866, 901, 902, 903, 907, 1096, 685, 1192): that is what a first colleague would meet on a storage or pipe-size job.
-12. **Biggest A risks:** only 4 working days for the soak; any blocker after Sat 31 Oct builds a new candidate and restarts the two-pass clock; 30 of 40 must come in tomorrow.
-
-**Option B: freeze Fri 6 Nov (C-76 + C-77 + the pilot-critical fixes CE 01 can build now, B-016 to B-032), pilot Mon 16 Nov.**
-1. **Thu 29 Oct to Wed 4 Nov:** C-76 installs tonight and C-77 on Sat 31 Oct as ordinary trains, so the robot has early passes on them; CE 01 builds B-016 to B-032 as drafts behind switches ON; Opus reviews as they land. Rehearsal R1 on the spare login by Fri 30 Oct, still on the current build.
-2. **Thu 5 Nov:** train C-78 assembled and finalised with every reviewed pilot-critical fix.
-3. **Fri 6 Nov (after 5:30 pm):** C-78 installs = freeze candidate FC-B. Anything not reviewed by then stays out and goes on page 04.
-4. **Sat 7 and Sun 8 Nov:** full re-test, first pass Sat, second pass Sun in a separate start; Codex looks; rehearsals R2 and R3 on FC-B.
-5. **Mon 9 to Thu 12 Nov:** Tim's soak (4 working days); targeted fixes only for blockers (each one restarts the clock for its area); pack changes approved Mon 9 Nov; package from the frozen folder Tue 10 Nov.
-6. **Wed 11 Nov:** page 04 final from the results.
-7. **Fri 13 Nov:** freeze report, final go checklist, Tim's word.
-8. **Mon 16 Nov:** hand-over. Fallback Mon 23 Nov.
-9. **What Max gets with it:** the 11 build-now and 6 build-on-recommended no-fix bugs fixed and tested; only the Tim-ruling, facts-from-Max and protected-file items stay on page 04.
-10. **Biggest B risks:** 17 new fixes in one train with one week of tests is a large batch (Tim 16 Sep: large batches failed); several need a Codex look; Tim's rulings on 685 and 1148 and the Max facts still outstanding; one week later than the pilot target.
-
-**Side by side (my reading; Tim decides):**
-1. **Earlier pilot:** A by 7 days.
-2. **Fewer known wrong-answer problems for Max:** B (about 17 fewer).
-3. **Chance the test numbers are ready:** A needs 30 of 40 tomorrow and a rehearsal before there is a login; B has a week more.
-4. **Hybrid I would consider:** A's Sat 31 Oct freeze plus only the four small sourced fixes (BUG-1095, BUG-1091, and B-012 and B-013 already in C-77), with BUG-1088 as a CDDESIGN warning and the rest on page 04. This moves the pilot to Mon 9 Nov only if Friday's checkpoint is green; otherwise it becomes B.
-5. **My lean:** B, because the first colleague job is likely to hit CDDESIGN, and 0 of 60 closed with no rehearsal makes 9 Nov a guess. Tim's call.
-
-## 13. CE 02 confirmations and new facts (CE 02 message, 29 Oct, after reading the test plan)
-
-1. **Everyday tools: 30 of 40 by Fri 30 Oct is NOT reachable.** CE 02 expects 22 to 24 by Sat 31 Oct. Quickest in order: CDTWL freeboard (R14h x3 tonight, 20th), D24 current layer and D21 schedule order (N32, N33, N28, N29 tonight then Opus review, 21st and 22nd), D06 hide grade (N35 live after 17:30, 23rd), D05 recent buttons (N30, needs the BUG-1226 build installed first). The rest need a Codex look (quick MOVE G5, D10 label direction, D22 drawn schedule, D28 CDCHECKDWG, D07 raingarden after RG1 is built) or Tim's word (D13, question 19). Per-tool list: areas\EVERYDAY_TOOLS_STATUS_29OCT.md (being compiled by CE 02, due about 20 minutes after its message).
-2. **Effect on the date:** the Fri 30 Oct checkpoint target (30 of 40) cannot be met. Reaching 30 of 40 realistically means the pilot is 16 Nov or later, unless Tim accepts fewer than 30 for 9 Nov. This strengthens the case for Option B (section 12).
-3. **Re-test slots confirmed by CE 02:** weekend 1 Sat 31 Oct; Tue 3 Nov Cup Day full re-test plus second start Wed 4 Nov; nightly Thu 5 and Fri 6; weekend 2 Sat 7 Nov. One frozen build, carried passes labelled. A full set takes 6 to 8 hours now, about 4 once the speed changes are tested tonight (estimates).
-4. **Condition I must plan around:** the candidate must be INSTALLED before the Sat 31 start (an install mid-run voids it). So for Option A, C-77 must install Friday night (Fri 30 Oct after 5:30 pm), not Saturday; my section 12 A step 3 says Sat 31 Oct and is wrong on this point. Tim's AutoCAD must be closed; weekdays only with his word.
-5. **Pilot-critical robot unlocks (CE 02):** P01 and P02 run tonight after 17:30 (50 to 85 min). Realistic closed count by Fri: 2 (if they pass twice and are reviewed). Four runner changes (Edit Pit save press, Edit 2 Pipes window, LandXML file chooser, Pit Schedule remarks cell) drafted and reviewed by Fri, live Fri night; four test drawings (BUG-1150, 1142, 1190, 1145) are Codex jobs Fri night or Sat. Up to 4 to 6 more by Sat 31 Oct if reviews are clean (BUG-1196, 1049, 1188, 540 and the drawing ones). Confirmed Friday midday.
-6. **Codex looks:** Codex weekly 13 percent; each look 1 to 3 points; daily caps 30 from Thu 17:53, 44 from Fri 17:53, 58 from Sat 17:53. Thu from 17:53: G3 G7 G4, then H1 to H3 (my C4, C5, C2). Fri from 17:53: H4 to H6, G6, G5. Sat daytime: my C1 (no blue incl. printed sheet), C3 (nothing leaves the PC), C6 (CDCHECKDWG, ribbon jump, label positions); briefs by Fri evening. Looks need Tim's AutoCAD closed.
-7. **Max-like configuration run:** CE 02 will run the Tue 3 Nov full re-test ONCE with CE.AutoCADLink.2027 and CE.Transform.Trial.2027 moved aside (restored by hash; Tim's 29 Oct yes covers it) and report which cases change. Evidence for Max's PC, not proof of it. Reported in the BUG-861 control run report.
-8. **Unmoved items (4 hour watch):** none yet; replies received from CE 02 (this one), CE 00. Not yet heard from CE 03, CE 04 (messages delivered 29 Oct; no reply needed unless blocked).
-
-## 14. Add-in bundles answer (CE 01 via CE 00, 29 Oct)
-
-1. Do not add `CE.AutoCADLink.2027` or `CE.Transform.Trial.2027` to Max's package (test bundles; Civil ships its own transform file). Not proven that behaviour is the same without them: BUG-861 control run and the rehearsal prove it. Handover plan section 1 item 4 and test plan check B9 updated.
-
-## 15. Colleague pack change list ready (Sonnet drafting job, read by CE 07 only at the top and the approval heading; the detail is the job's reading and is not re-checked)
-
-1. File: areas\RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md (625 lines). 97 changes across pages 01 to 05 (01: 12, 02: 19, 03: 16, 04: 40, 05: 10). Page 06: 3 answered, 4 partly, 13 open. 31 [CHECK] marks on pages 01 to 05: 10 settled, 5 partly, 16 open (Tim 6, Max 3, spare-login rehearsal 3, Codex look 4). Section 10 holds 12 yes/no decisions for one pass. Question 29 in QUESTIONS_FOR_MONDAY.md points to it.
-2. **Three things that are wrong or unsafe as drafted (per the job; I have confirmed only the first against BUG-1135's entry in the pilot list):** (a) page 02 says drawings are safe either way after a rollback, but an older CE deletes newer parts of the job record when it saves (BUG-1135); (b) page 05 says the support zip drops drawing paths and never sends itself anywhere, one part never checked and one false if Max's Desktop is inside OneDrive (BUG-482); (c) page 04 says "no fix yet" for about 15 problems that are already installed and that Tim has not decided things he decided on 20 and 29 Oct.
-3. **Effect on the rehearsal:** the rollback rehearsal R3 must also open a drawing worked on in the new build and check its record after the old build saves. Added to the handover plan section 4.
-4. Nothing is edited in pages 01 to 06; nothing published. Tim's one-pass approval comes first (QUESTIONS item 29), after the freeze ruling, because 8 wording changes depend on which build items are in the frozen build.
+1. **29 Oct (Tim, "option b"):** freeze Fri 6 Nov including the pilot-critical fixes the desk can build now; pilot Mon 16 Nov. My earlier Option A text was removed from this file (it is in git history).
+2. **29 Oct:** 30 of 40 by Fri 30 Oct is not reachable (CE 02); the target is now Sat 7 Nov.
+3. **29 Oct (Tim):** questions only through CE 04; a test laptop with AutoCAD 2026 is to be assessed.

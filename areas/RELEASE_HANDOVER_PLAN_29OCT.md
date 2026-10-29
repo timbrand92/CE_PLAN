@@ -8,7 +8,7 @@
 # FOR TIM
 
 1. **The route is a hand copy.** The desk copies two folders (Civil and Manager) into Max's own AutoCAD plug-in folder with AutoCAD closed. No administrator rights are needed for that copy (the Team audit read the code and agrees). About 10 to 20 minutes on the day.
-2. **It has never been tried on a normal login.** I need one spare standard Windows login to practise it twice, and the going-back steps once. Without that, 9 Nov is a guess. Recommendation: a new standard user on the spare work PC you offered on 17 Oct.
+2. **It has never been tried on a normal login.** I need one spare standard Windows login to practise it twice, and the going-back steps once. Without that, 16 Nov is a guess. Recommendation: a new standard user on the spare work PC you offered on 17 Oct.
 3. **A fact I found today that matters.** Your PC runs two other CE add-ins beside Civil and Manager (CE.AutoCADLink.2027 and CE.Transform.Trial.2027). Max's PC will not have them, and CE 01 recommends we do not add them (they are test bundles). Every robot and Codex test so far ran WITH them, so we are testing a setup Max will not have. CE 02 will re-run the key cases once with both moved aside, and the rehearsal login shows what Max's setup does.
 4. **Old-files move (BUG-483).** The old July install scripts and builds still sit in the IT Admin folder, and a normal user would hit them first. Moving them to an OLD folder needs your yes, and one check first: does anyone still install from them today?
 5. **Questions for you** (each as a numbered item for CE 04): Max's AutoCAD year and rights, the spare login, the frozen-copy folder, the old-files move, the pack approval. Nothing is sent to Max by me.
@@ -20,7 +20,7 @@
 ## 1. What goes to Max (the package)
 
 1. **Two folders only, taken from the frozen candidate:** `CE_CVL_SUITE.bundle` (Civil) and `CE_SUITE_MANAGER.bundle` (Manager). They go in together every time; they share one file (CE_SHARED) and one new with one old stops the CE ribbon loading.
-2. **Today's candidate matches Tim's installed bundle exactly:** `C:\ce_rc_scratch\c1071`, Civil 3.0.85 and Manager 1.1.85, commit 09126560, 903 files, the six main DLLs (Legacy, Modern, Net8 for each) have identical SHA-256 to the installed ones (read 29 Oct about 11:15). The real frozen folder will be the Sat 31 Oct candidate (C-76 plus C-77), not this one.
+2. **Today's candidate matches Tim's installed bundle exactly:** `C:\ce_rc_scratch\c1071`, Civil 3.0.85 and Manager 1.1.85, commit 09126560, 903 files, the six main DLLs (Legacy, Modern, Net8 for each) have identical SHA-256 to the installed ones (read 29 Oct about 11:15). The real frozen folder will be the Fri 6 Nov freeze candidate (C-76, C-77 and the pilot-critical builds), not this one.
 3. **Not in the package:** Structural (stays on Tim's PC, ruling B3), the old July scripts, Tim's settings file as it stands (it carries his folder paths, BUG-1167).
 4. **The two extra add-ins on Tim's PC (answered by CE 01, ADDON_BUNDLES_NOTE_29OCT.md, from manifests and source only, nothing run): do NOT add them to Max's package.** `CE.Transform.Trial.2027` is a two-command test bundle (CETESTCR, CETESTMR) and Civil ships its own `CE_TRANSFORM_2027.arx`. `CE.AutoCADLink.2027` is a synthetic read-only test adapter that loads at start; no Civil or Manager source mentions it. Both are AutoCAD 2027 only. **Not proven:** whether REDO, selection, UCS or transform behave the same without them. Only the BUG-861 control run (Tim said yes 29 Oct) and the spare-login rehearsal prove it. All robot and Codex results so far had both loaded. A Max-like re-run is a line in the test plan (check B9). If a 2022 to 2024 "enabler" is needed (BUG-1137, BUG-1138, BUG-1151) that is a separate question for CE 01.
 5. **WebView2:** the installer program installs the Microsoft WebView2 runtime and sets AutoCAD's trust setting; a hand copy does neither (T5 to-do item 9). I have not found a statement of which CE windows need WebView2. The rehearsal must open every window Max uses and note any blank one. Rehearsal check, not a claim.
@@ -69,7 +69,7 @@
 ## 5. Rehearsal plan (needs the spare standard login)
 
 1. **R1 (target Fri 30 Oct):** steps 2 to 11 of section 3 on the spare login with the CURRENT candidate (3.0.85 equals c1071), no administrator rights, AutoCAD 2027. Record: whether a Load prompt appears, the exact wording, WebView2 windows, CEHEALTH, CE log, time taken.
-2. **R2 (Sun 1 Nov or Tue 3 Nov):** the same on the frozen candidate; then **R3 rollback once.**
+2. **R2 (Tue 3 Nov on the current build; again Sat 7 or Sun 8 Nov on the freeze candidate):** the same; then **R3 rollback once on each.**
 3. **Who drives:** a person following the steps, or Codex driving the spare login (a new standard user can be signed in on the spare PC by Tim; I do not set this up). Evidence is the screenshots and the command lines, saved to the results folder.
 4. **If Max is not on 2027:** repeat R2 on his year if a PC with that year exists; otherwise the pack says so in plain words and BUG-1209 and BUG-1210 go on page 04.
 5. **Windows Sandbox** is a possible fallback (T5 to-do 12: switch the feature on). I believe the Sandbox user holds administrator rights and has no AutoCAD licence, so it would test the copy and the folder only, not a standard user's AutoCAD. **I have not verified this.** Tim's call if the spare login falls through.
@@ -77,9 +77,9 @@
 
 ## 6. Frozen release copy
 
-1. **Source:** the candidate folder of the freeze build (Sat 31 Oct), for example `C:\ce_rc_scratch\c1072`. Never rebuilt for Max; the seal (#1649, built, not installed) would refuse any file whose hash differs.
+1. **Source:** the candidate folder of the freeze build (Fri 6 Nov), for example `C:\ce_rc_scratch\c1072`. Never rebuilt for Max; the seal (#1649, built, not installed) would refuse any file whose hash differs.
 2. **Make the frozen copy on Tim's PC first (not publishing):** copy the candidate's two bundles to a new local folder, set it read-only, write a manifest of every file with its SHA-256 (`SHA256SUMS.txt`, made with Get-FileHash, one command, no new script), and read the six DLL version strings back. The manifest is the proof for the Fri 6 Nov go checklist.
-3. **Compare with the installed bundle:** the installed bundle on Tim's PC (the version he has used during the soak) must hash equal to the frozen copy, file for file, on Mon 2 Nov and again on Fri 6 Nov. A difference means a deploy changed it and the soak is invalid (HARD RULE in the repo notes).
+3. **Compare with the installed bundle:** the installed bundle on Tim's PC (the version he has used during the soak) must hash equal to the frozen copy, file for file, on Fri 6 Nov and again on Fri 13 Nov. A difference means a deploy changed it and the soak is invalid (HARD RULE in the repo notes).
 4. **Where the shared copy sits (publishing, Tim's word):** recommended `CE V3 PILOT`, a new folder separate from the IT Admin folder, shared "can view" to Max only. USB stick is the alternative. Placing the folder is publishing: I do not do it. Tim says the folder and "yes, copy it".
 5. **Undo:** delete the `CE V3 PILOT` folder (one folder; nothing else references it). The local frozen copy stays as the record.
 6. **Hash record kept in:** `C:\CE_PLAN\areas\RELEASE_FROZEN_MANIFEST_<build>.md` (the manifest summary only, not the files).
@@ -92,7 +92,7 @@
 4. **Undo:** move them back; the folder contents are unchanged.
 5. **Done by:** Tim, or the desk after his written yes. Not today.
 
-## 8. Final go checklist for Fri 6 Nov
+## 8. Final go checklist for Fri 13 Nov (pilot Mon 16 Nov)
 
 Each line is ticked by the owner named, with the evidence filed in RELEASE_SCOREBOARD.md.
 
@@ -107,7 +107,7 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 9. **Old-files move decided** (Tim). **Frozen-copy folder decided** (Tim).
 10. **Opus freeze report: what passed, what is known, how to roll back** (CE 07 asks CE 00 to run it).
 11. **Tim's words in chat: "yes, hand it to Max"** and the date. Nothing is copied or sent before that.
-12. **Mon 9 Nov (or 16 Nov):** AutoCAD closed, hand install by Tim with the desk on the line, five-step walk, page in Max's hand, daily check-in for the first week.
+12. **Mon 16 Nov:** AutoCAD closed, hand install by Tim with the desk on the line, five-step walk, page in Max's hand, daily check-in for the first week.
 
 ## 9. What I did NOT verify
 
@@ -120,3 +120,16 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 
 1. The pack's line "Your drawings are safe either way" after a rollback is not true (BUG-1135: an older CE deletes newer parts of the job record when it saves). Until the pack says otherwise, step 7 of the rollback section 4 gains: "Do not open and save a drawing in the old version that you worked on in the new version."
 2. Rehearsal R3 therefore includes: work a drawing copy in the new build, roll back, open and save that copy in the old build, return to the new build, and note what is missing from the record.
+
+## 11. Test laptop with AutoCAD 2026 (Tim, 29 Oct: "can i do on a laptop with 2026 installed?")
+
+**Status:** an assessment only. Nothing is installed on any other PC without Tim's word. The robot-driver half is CE 02's; the install-rehearsal half is mine. Questions go to CE 04 only.
+
+1. **Which part of CE a 2026 laptop runs (read from the installed Civil bundle's PackageContents.xml, 29 Oct):** AutoCAD 2022 to 2024 load the `Legacy` folder; AutoCAD 2025 and 2026 load the `Net8` folder (series R25.0 to R25.9); AutoCAD 2027 loads the `Modern` folder, and only 2027 also loads the two native files (`CE_CVL_NATIVE_GRIP_2027.arx`, `CE_CVL_OBJECTS_2027.dbx`). I read the file; I did not run anything. I believe 2026 is series R25.1 but the laptop's own `ACADVER` or About will say.
+2. **So the laptop tests the Net8 lane, not Tim's 2027 lane.** The gap plan (22 Oct) and the Team audit say nothing on these builds has been driven in AutoCAD 2022 to 2026. Expect new findings; some may be 2026-only (no native pipe object files there). That is valuable if Max is on 2025 or 2026, and a warning if he is not, because green results on the laptop would not carry to a 2027 Max.
+3. **What the laptop gives the release:** the real hand-install rehearsal (R1 to R3) on an ordinary profile, the first start on a fresh profile with a clean CE log (A4), whether AutoCAD asks "Load / Always Load", whether WebView2 windows open, and the rollback including the BUG-1135 drawing-record check.
+4. **What it needs (my side):** a Windows login that is NOT an administrator (a standard user, even if the laptop has an administrator for setup); AutoCAD 2026 signed in and licensed for that user; Microsoft Edge WebView2 present (check, do not assume); the frozen or candidate folder delivered by USB or a synced folder (not a downloaded zip); a way to read back files and the CE log (CEMANAGERLOGS) and to copy screenshots to the results folder. **No Tim settings file** (it carries folder paths, BUG-1167) and no keys; the write keys never leave Tim's PC (RULES 11.6a).
+5. **What it needs (CE 02's side, to be confirmed by them):** the robot driver, case runner and settings guard were built against 2027 (AutoCAD path, window names, the pointer calibration, the allow-lists); each would have to be checked against 2026 before a case runs there; a Claude session on the laptop with read access to C:\CE_PLAN (a private repository) and to the driver folder, which means a GitHub login and a Claude login on that laptop. I do not know how long that takes; CE 02's estimate decides whether the laptop does the robot's job or only the install rehearsal and Codex looks.
+6. **Private data:** client drawings never go to the laptop (RULES 11). Test fixture drawings only; Tim's own CE settings and log files stay on his PC.
+7. **Questions for CE 04 (sent):** whose laptop; Windows user type (is there an administrator and can a standard user be added); AutoCAD 2026 sign-in (whose Autodesk account, and does a second sign-in sign anyone out elsewhere); when it is available (free windows), and for how many nights; can it stay powered on, awake, with the lid open overnight; network access (internet, OneDrive for "Creative Engineering - Drafting", GitHub for the plan repository); may a Claude session run on it, and under whose login; whether the laptop also has AutoCAD 2027 or any older CE copy.
+8. **Rehearsal use if the answer is yes:** R1 on the current 3.0.85 build as soon as the laptop is ready; R2 and R3 on the freeze candidate Sat 7 or Sun 8 Nov.
