@@ -180,3 +180,27 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
    2. Interpretation: 3 to 6, 8 to 16 accept the recommended answers written in the draft. **Q1 and Q2 differ from the recommendation:** Tim chose "as the guidebook says", so ordinary gravity pipes are **1 in 100 at every size** (no size ladder) and detention pipes are **1 in 200 from 225 up for Darebin, Banyule, Manningham and Maroondah only**. GUESS (open): for Manningham the book says 1 in 200 and the council's own 2021 checklist says 1 in 180; "as the guidebook says" is read as 1 in 200, flagged for Tim. This replaces the office ladder (1:200 at 225, 1:250 at 300, 1:300 at 375, 1:200 at 450 and up) and the every-council 1:200 detention rule. Consequence to tell Tim: real 2026 company drawings lay detention pipes at about 1 in 200 in councils that are not in the four, so those jobs will newly warn; and 450 and larger gravity pipes now warn flatter than 1 in 100.
    3. Q7 stays open (the engineers must name the figure and document); Q14 is conditional (drop the Bayside 1 in 20 only if nobody can point to a document). Items 1 to 13 are Tim's working answers; engineers may still correct them before stage 4 updates the guidebook.
    4. Desk must: stage 2, draft command cards (Settings values first, warn and record, never block) for Tim's approval before any code; supersede the minimum grade ladder (R-03) and the every-council detention grade (R-32) only when the card is approved; nothing changes in the live bundle.
+
+## Batch 6 (afternoon, Melbourne)
+
+35. **Re-test rule, new switch only: yes.** Tim's words: "yes. An Edit Pipe fix then re-tests 7 checks (about 1 hour) instead of all 66 (about 6 h 40 min)". Recorded as Addendum 1 in decisions\2026-10-29_TIM_RETEST_RULE.md.
+
+36. **Spare AutoCAD seat and the other PC: 2027.**
+   1. Tim's words: "i will get 2027 on that pc".
+   2. Interpretation: the other PC gets AutoCAD 2027 (Tim installs it), on the office's spare seat (decision 24). Not stated: which PC, when, who assigns the seat, whether it stays awake and unlocked, how it reads the plan folder (QUESTIONS item 37 still open).
+   3. Desk must: wait for Tim's word that the PC is ready; install nothing before.
+
+37. **Pipe sizer, BUG-1088 (QUESTIONS 21a): yes.**
+   1. Tim's words: "yes. Today a 40 L/s connection comes out DN100 at about 1 in 3. With the rule it's DN225 at about 1 in 200".
+   2. Interpretation: CDDESIGN and network redesign use the flattest grade each size is allowed and step up a size before going steeper. No new number (28 Sep rule, warn above 1 in 10).
+   3. Desk must: build it before the 6 Nov freeze (decision 32).
+
+38. **Council time of concentration, BUG-1099 (QUESTIONS 21b): yes (GUESS).**
+   1. Tim's words: "On a bare 600 m² Maroondah lot, CE says 5.18 L/s permitted discharge and the council method says 3.68, so the tank comes out too small" (he pasted the example without the word yes).
+   2. Interpretation (GUESS): he agrees the council's own time of concentration should drive permitted discharge and storage, with the office 5 min kept for the pipe (the recommended answer). If he meant otherwise he will say.
+   3. Desk must: build two times of concentration (council's for storage and permitted discharge, office 5 min for the pipe) as a draft; tell Tim in the next report that this one was read as yes.
+
+39. **Rainwater reuse boxes, BUG-1096 (QUESTIONS 21c): yes.**
+   1. Tim's words: "yes. On a Manningham job a 3,000 L plumbed tank credits 1.50 m³ and today the sheet shows none".
+   2. Interpretation: a "Rainwater reuse" group on the CDDESIGN page (tank litres, roof connected pre-filled, "plumbed for reuse" tick), built with the Kingston credit fix (BUG-1098); the sheet says "needs confirmation" where a council has no recorded rule (R-10).
+   3. Desk must: build it as above.
