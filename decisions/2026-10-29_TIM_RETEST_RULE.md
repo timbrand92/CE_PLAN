@@ -24,3 +24,10 @@
 13. **Tim's words (relayed by CE 00, not seen by CE 04), after "do your recommendation":** "thats should be the plan throughout as a rule".
 14. **Interpretation (CE 00's):** the re-test rule is STANDING, not only for C-77: after ANY install, re-test only what the train touches plus a small smoke set per shared file touched; carry the rest, labelled "carried from <build>"; one full re-test before Max (cut-off Fri 13 Nov) and at the weekends; unmapped files are placed in areas, not forced to FULL; a change that only adds a new switch touches only its own tool (Addendum 1). Also Rule 14 in areas\CE_SESSIONS_MAP_29OCT.md.
 15. **Desk must:** apply this to every install until Tim says otherwise; engineering-judgement items and anything new still need the usual acceptance. Nothing to ask Tim.
+
+## Addendum 4 (Fri 30 Oct 2026, about 00:2x; relayed by CE 00 and recorded by CE 04): a changed starting value or a one-time settings move
+
+16. **Question (asked by CE 00 in the Control Room):** does a changed starting value (default) of an existing setting, or a one-time move of saved settings, count as editing a setting, which forces a FULL re-test? Options: (1) no, it counts as touching its own tool plus the Settings smoke set; Friday AREA plus SMOKE; the Saturday full re-test is the safety net; (2) yes, full on Friday.
+17. **Tim's word (relayed by CE 00, not seen by CE 04):** "1".
+18. **Interpretation (CE 00's):** option 1, unless the settings engine itself changes (the code that reads, writes or migrates the Settings file). A changed default or a one-time move touches its own tool plus the Settings smoke set.
+19. **Desk must:** classify such trains AREA plus the Settings smoke set; keep FULL for a change to the settings engine itself.
