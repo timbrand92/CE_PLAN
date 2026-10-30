@@ -1,0 +1,17 @@
+PRE-REVIEW BRIEF: PR #1875 (B-025, BUG-816, After-MOVE label tidy gets its own Settings row), Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the named branch is allowed), build nothing, deploy nothing, open no AutoCAD, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_J_1875_B025_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven). Also the UI rules in C:\Users\TimothyBrand\.claude\projects\C--Lisp-Files-CE-ACAD-PLUGIN\memory\ui-no-scroll-rule.md and plain-english-ui-rule.md (read only).
+
+The PR: #1875 (B-025), branch fb/bug816-tidy-setting-row head 1c270c459fe0dbe60cb3cfa3a6bd021d6501311c on base claude/rel-20261026z. Author's report: C:\CE_PLAN\areas\release-v3-colleagues-BUG816_FIX_REPORT.md. Built and unit-tested only: focused 245 passed; full net10 20,787 passed with 3 failed, and the job could not prove on the base that two of those three were already failing. It adds a Settings window row (Drafting tab) for the After-MOVE label tidy. BUG-1232 (sheet border treated as a clash) is NOT covered.
+
+Answer, with file and line for each claim:
+1. What exactly does the new row control (the switch name, its default, what ON and OFF each do after a MOVE), and is the default the same as today's behaviour (no hidden change for a drafter who never opens Settings)? Is the wording plain English, and does the Drafting tab stay within the no-scroll rule at 100 and 150 percent (the Settings page-height test)?
+2. The three failed tests: name them, say for each whether it is related to this PR or already failing on the base (check the base branch's own test files and git history read-only), and whether any could hide a real regression.
+3. Does the change touch the Tidy labels path used by CDTIDYLABELS (D13 Tidy labels, which Tim has refused/open) or the label-move logic (BUG-1252: D13 label moves with its pit)? Any risk of changing behaviour there?
+4. Clashes with the open trains (claude/rel-20261030a, claude/rel-20261102a) and with other PRs touching UserSettings.cs or the Settings XAML (#1871, #1872, #1873, #1874): a read-only trial merge, naming each clash.
+5. What is NOT proven, and the AutoCAD scenario Tim or the robot should run (a pit with its label, MOVE it with the row ON and OFF), plus the Codex look needed at 100 and 150 percent.
+6. Verdict: KEEP, KEEP-WITH-NOTE (give the note) or DROP, and which train it could join.
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
