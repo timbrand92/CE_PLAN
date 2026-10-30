@@ -17186,6 +17186,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Status:** OPEN (reported by Tim 29 Oct 2026; needs one answer from Tim about the order he opened things). Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note (CE 05, 30 Oct 2026, draft PR #1880 = B-059 and Opus pre-review Q, areas\OPUS_PREREVIEW_Q_1880_BUG1240_30OCT.md):** KEEP-WITH-NOTE for train C-79 (FULL re-test). After a drawing is reopened or saved as, and a pit is picked, the Inspector shows the pit number, cover level, invert level and connections at once (before: "not in CE's recorded project data yet, Values below are Unknown" until CDSYNC); with nothing picked the pit and pipe counts show too. Switch linking.inspectorReadsSavedRecordWhenNotLoaded, ON, settings file only (no Settings page row; add to the file-only list for Tim's question). Reads the record stored inside the drawing, read-only, same reader as #1866; a missing, unreadable or older-CE record stays honestly Unknown. Not proven in AutoCAD; speed on a big drawing not measured. Robot case N39_inspector_reopen with control C39 (switch false). Follow-up cards: BUG-1263 to BUG-1266. Still OPEN until confirmed in AutoCAD.
+
 **Tim's answer (29 Oct 2026, same session):** "i clicked inspector first, now its come up." So the Inspector said Unknown while the Pit Schedule had not yet been opened, and it shows real values now that the Pit Schedule has been opened. This fits the guess above (the saved drawing's record is only attached when something like the Pit Schedule asks for it). Needs one fix owner to confirm in code; the steps above reproduce it.
 
 
@@ -17586,3 +17588,67 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's 28 Sep 2026 ruling (decisions folder; exact wording not re-read here); p6 report; related BUG-495. Question for Tim: what should plot when nothing is ticked (goes to CE 04).
 
 **Status:** OPEN (nothing built; needs Tim's wording of what plots). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1263 — Inspector (after #1880): with two drawings open and a CE change that could not be saved before switching away, the Inspector can show the last saved values
+
+**Command / Area:** CE Inspector, project record on open (follow-up card from the Opus pre-review Q of draft PR #1880 = B-059, areas\OPUS_PREREVIEW_Q_1880_BUG1240_30OCT.md, 30 Oct 2026). LOW, rare. Code read only; nothing run in AutoCAD.
+
+**Symptom:** With two drawings open, if a CE change in drawing A could not be saved before the drafter switched to drawing B, then switched back, the Inspector shows A's last saved values until a CE command runs in A. It never shows another drawing's values.
+
+**Expected behaviour:** The Inspector shows A's current values, or says the values are older than the drawing.
+
+**Steps to confirm in AutoCAD:** Open two drawings, make a CE change in A that fails to save (for example a read-only file), switch to B and back, pick a pit in A. Right = current values or a plain "older than the drawing" line.
+
+**Reference:** Pre-review Q point 5; PR #1880; BUG-1240.
+
+**Status:** OPEN (follow-up card, nothing built). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1264 — Inspector (after #1880): Undo in drawing A, after picking in drawing B, going back past A's first CE save leaves CE's old pit list instead of clearing it
+
+**Command / Area:** CE Inspector and the in-memory pit list (follow-up card from pre-review Q of #1880, 30 Oct 2026). LOW, rare. Code read only.
+
+**Symptom:** After picking in drawing B, an Undo in drawing A that goes back past A's first CE save keeps CE's pit list instead of clearing it, so the Inspector may show a pit the Undo removed. Never another drawing's pit.
+
+**Expected behaviour:** The pit list is cleared (or reloaded) to match the drawing after such an Undo.
+
+**Steps to confirm in AutoCAD:** Open two drawings, run a CE command in A (first save), pick in B, Undo in A back before that save, pick in A. Right = the Inspector no longer lists the removed pit.
+
+**Reference:** Pre-review Q point 5; PR #1880; BUG-1240.
+
+**Status:** OPEN (follow-up card, nothing built). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1265 — Two near-identical rules decide when to read the saved drawing record (#1866 and #1880), and a comment names the wrong switch
+
+**Command / Area:** Code housekeeping, Civil project record (follow-up from pre-review Q of #1880). LOW. Design rule 1 (one code path per behaviour).
+
+**Symptom:** The small rule that decides when to read the saved record (InspectorProjectSourceRule.cs) is a near line-for-line copy of the #1866 rule, and a comment at line 20 names the switch wrongly. Two copies can drift apart so the Inspector and CDCHECK disagree.
+
+**Expected behaviour:** One shared rule, one correct comment.
+
+**Steps to confirm in AutoCAD:** None in AutoCAD; check by test that CDCHECK and the Inspector read the record in the same cases.
+
+**Reference:** Pre-review Q point 6; PRs #1866 and #1880. Do after both are in a train.
+
+**Status:** OPEN (follow-up card, nothing built). Never FIXED until confirmed.
+
+---
+
+## BUG-1266 — Inspector (after #1880): an unreadable drawing record writes two log lines on every pick
+
+**Command / Area:** CE Inspector, CE log (follow-up from pre-review Q of #1880). LOW. Log noise.
+
+**Symptom:** When the saved record in the drawing is unreadable, the Inspector writes two log lines on every pick (and the saved list is read again on every pick and every drawing switch until a CE command runs). Speed on a big drawing is also not measured.
+
+**Expected behaviour:** One log line per unreadable record per drawing, not per pick; the read is remembered per drawing.
+
+**Steps to confirm in AutoCAD:** Open a drawing with an unreadable record on a test copy, pick several pits, read the CE log. Right = one line, not two per pick.
+
+**Reference:** Pre-review Q point 4; PR #1880; BUG-1240.
+
+**Status:** OPEN (follow-up card, nothing built). Never FIXED until confirmed.
