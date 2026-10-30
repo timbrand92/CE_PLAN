@@ -12370,6 +12370,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1907 (B-087): RD asks for the arc or ci
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): Tim said "10yes" (decision item 127): the Inspector, Civil Hub and repair check will measure cover to the outside top of the pipe, as CDRULES does. Follow-up job w4 queued (starts from the #1897 branch) for after the 14:00 Team reset. Still OPEN: #1897 is a draft, not opened in AutoCAD.
+
 ## BUG-904
 
 **Command / Area:** CDDESIGN storm sweep, ledger F-049.
@@ -17798,3 +17800,5 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Status:** OPEN (possible bug, unconfirmed; not reproduced). Never FIXED until confirmed in AutoCAD.
 
 **Evidence note (CE 05, 30 Oct 2026, from CE 01, code read at the C-78 head 7c6af57b; not run, not opened in AutoCAD):** B-057 (#1873) does NOT cover this: it only stops the Grade mismatch window opening on the window's own suggested level (rule MismatchBoxOwnSuggestionRule plus CdCommand.Grade and CdCommand); it does not touch the hold-the-fall logic. Likely cause: "Recall Last" (CdViewModel.Settings.cs 191-192, ApplyStoredSettings) writes the remembered downstream 18.50 through the public SecondInvert setter; that setter (CdViewModel.Inverts.cs 727-731) flips _secondInvertUserSet to true whenever the re-entrancy guard is off, and Recall Last does not switch the guard on; ResolveHasEstablishedFall (858-870) then returns true, so typing a new upstream 19.45 holds the old 0.50 fall (18.95). A recalled level is treated as a fall the drafter set. The hold-the-fall rule is the BUG-076 design (a code comment says it needs Tim's confirmation), so what is right is Tim's call: (a) keep the remembered 0.50 fall (18.95, today) or (b) work from the standard grade for the new upstream (19.40, CE 02's expectation; note CE 02's 19.40 comes from the chosen "Set my own" 1 in 100 over 4.1 m). CE 01 recommends (b) behind a Settings switch ON by default. Question with CE 04. When Tim answers, CE 01 registers one build (next free B-076) together with BUG-1229 and BUG-1233 checks, on the C-79 line. Nothing built until then. Still OPEN, unconfirmed.
+
+Note (CE 05, Sat 31 Oct 2026): Tim answered by voice ("5as recommened", decision item 122): after Recall Last, a new upstream level works from the standard grade for the new pipe's length (19.40 for a 4.1 m pipe at 1 in 100), behind a Settings switch ON; this supersedes the 18.95 behaviour. Job w3 queued for after the 14:00 Team reset (Civil, base rel-20261102a). Still OPEN: not built, not tested in AutoCAD. Separately, decision item 119 (a steeper pipe than the chosen grade also warns) is CE 04's GUESS on Tim's words "2no but warn" and stays UNCONFIRMED; job w1 builds it behind its own switch.
