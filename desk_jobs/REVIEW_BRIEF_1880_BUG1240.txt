@@ -1,0 +1,19 @@
+PRE-REVIEW BRIEF: PR #1880 (B-059, BUG-1240: the Inspector reads the saved drawing record when none is loaded, so it no longer says 'Unknown' after a drawing is reopened), head 3f7ed338, branch fb/bug1240-inspector-reads-saved-record, base claude/rel-20261102a, Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the branch is allowed), build nothing, run no test, deploy nothing, open no AutoCAD, do not read or write Tim's real settings files, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_Q_1880_BUG1240_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven).
+
+The PR: #1880 (B-059), head 3f7ed338. Author's report: C:\CE_PLAN\areas\BUGFIX_p2_REPORT_30OCT.md (job p2 in CE 05's bug pipeline, Civil). Built and unit-tested only; the author says #1866 files are untouched and CE_SHARED is unchanged. Related earlier work: #1866 (B-055, BUG-1251) fixed CDCHECK shown first after reopening a drawing, in C-77 (installed as 3.0.87); the robot proved it on 3.0.87 (the aN1 proof). Switch name and default: find them in the diff.
+
+Answer, with file and line:
+1. What does the drafter see before and after (which window or command: the Inspector; when 'Unknown' appears; what it shows now)? Is the fix behind a Settings switch ON by default, documented 'Default: on.', and what does OFF restore? On the Settings page or file-only (note: the Settings page is at its height budget; list it in your report as file-only if so)?
+2. Where does the Inspector read the saved record from (the drawing's own stored record, not a file in %APPDATA%)? What if the record is missing, old, from another CE version, or belongs to a different drawing (copy-paste, xref, SAVEAS)? Could it show a STALE value as if it were current? Does it overlap with the #1866 / B-055 code path (CDCHECK reads this drawing's record, 'checks.cdcheckReadsThisDrawingsRecord'): same reader reused, or a second reader (Rule 1: one code path per behaviour)?
+3. Does it change CDRULES, CDCHECK, council or fingerprint behaviour (saved-run Stale effect)? Does it write anything to the drawing (it must only read)?
+4. Native AutoCAD protection: reading a locked layer, xref or REFEDIT is fine; confirm nothing is written.
+5. Test isolation: did any test touch real %APPDATA% files (author says isolation set)? Anything that should be isolated and is not?
+6. Clashes (read-only git merge-tree) with claude/rel-20261102a and the open PRs #1857, #1868, #1871 to #1881: files and lines.
+7. What is NOT proven and the AutoCAD scenario for the robot (open a drawing, Inspector first, before any CE command: expect values not 'Unknown'; switch OFF control; a drawing from another CE version).
+8. Verdict: KEEP, KEEP-WITH-NOTE or DROP, and the train (C-79 FULL?).
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
