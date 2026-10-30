@@ -197,3 +197,5 @@ H57. **END OF TIM'S HAND-TESTING SESSION, Thu 29 Oct 2026 16:48 Melbourne (date 
 - Fri 30 Oct 18:19 check: v87 pass a: R14h_dstd_200v87 R14h_both_200v87 R14h_pipekey_200v87 PASS (single session, not accepted). No acceptance change.
 
 - Fri 30 Oct 18:52 check: v87 pass a: R15v87 R17v87 R11v87 R19v87 R16v87 PASS (single session each; not accepted: pass b and review of derived figures outstanding). Codex J4 BLOCKED, J5 NOT STARTED: no acceptance change.
+
+- Fri 30 Oct 21:50 check: N05 PASS on 3.0.87 pass a (pointer case, one session, not accepted); aW4 four v87 variants PASS pass a; R01v87 N20v87 BLOCKED not counted. No acceptance change.
