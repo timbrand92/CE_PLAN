@@ -1,0 +1,30 @@
+# BUGFIX p1 report, Manager tier 1 (BUG-1173, BUG-1247), Fri 30 Oct 2026
+
+## FOR TIM
+
+1. **BUG-1247 (Updates & Rollback): draft PR #1876 is open.** After it, a click on CE Tools > Updates & Rollback opens the Manager window on its own Updates tab, even on your PC where you are the CE administrator. The company-wide dashboard (Approve, Canary, Promote to All) now opens only from the separate Admin button.
+2. **Why you saw the dashboard:** an earlier fix (BUG-948) already sent an ordinary drafter to the Updates tab, but anyone set up as a CE administrator (you, on every click) was still sent to the dashboard. Your ruling (decision 98, "yes") says everyone gets their own screen.
+3. **BUG-1173 (backup step): no code is at fault, so there is no PR.** The backup is a manual step in the colleague pack, not something the plug-in does. Pack page 02 already lists five folders (done on 25 Oct). I checked it against the newest code and found one more settings place the pack does not list: `%APPDATA%\CE_SUITE` (it holds `manager-switches.json`, the Manager switch file). Proposed wording is below for the pack-approval list. I did not edit the pack.
+4. **My own mistakes:** none that cost anything. One note: there is no B number in the build register for either bug, so the PR is titled "BUG-1247 ..." and CE 01 renames it.
+5. **What to look at in AutoCAD (needs a Codex look, a window must be seen):** click Updates & Rollback. Right = Manager window on its Updates tab, no Approve, Canary or Promote buttons. Then click Admin: the dashboard still opens.
+6. **Not proven:** nobody has opened it in AutoCAD. Not marked FIXED.
+
+---
+
+## Technical detail
+
+1. **PR:** #1876, DRAFT, base `claude/rel-20261102a`, branch `fb/bug1247-own-updates-screen`, commit names BUG-1247. Worktree `C:\ce-fx\m1`.
+2. **BUG-1247 cause:** `Modules/Manager/Commands/PluginManagerCommands.cs`, `ShowUpdatesDashboard` (about line 94): `if (!CeAdminPolicyService.IsCurrentUserAdmin())` opened the Manager Updates page; administrators fell through to `ShowAdminWindow("Updates")`. Pinned by the older `Bug948UpdatesButtonColleagueTests`, which still pass.
+3. **Switch:** `updatesButtonOpensOwnScreen` (`CeManagerSwitches.UpdatesButtonOpensOwnScreenKey`, reader `UpdatesButtonOpensOwnScreenEnabled`, text reader `UpdatesButtonOpensOwnScreenFromText`) in `Modules/Manager/Services/CeOneGlanceStatus.cs`, same pattern as `aboutWindowFitsItsRows`. File `%APPDATA%\CE_SUITE\manager-switches.json`. Default ON; only a plain `false` turns it off; documentation line ends "Default: on.". Manager switches have no Settings page row (they are file-only), so none was added.
+4. **Tests:** new `Modules/Manager.Tests/Services/Bug1247UpdatesButtonOwnScreenTests.cs` (switch default through nine texts, OFF for plain false, no other switch moved, command-source order guard, Admin button untouched). Focused 44 passed; Manager full net10 1,098 total, 1,097 passed, 1 skipped, 0 failed (count not 0); Manager net48 build 0 errors, 0 warnings. Civil suite not run: no Civil file changed. The Civil start-up reads (`SettingsService.DeserializeSettings`) do not apply: this switch is a Manager file switch, read by one reader.
+5. **REGRESSION_LOG.md:** entry added at the top (CRLF kept).
+6. **CE_SHARED:** not changed. Civil, Structural, Installer not changed.
+7. **Not touched:** the dashboard's three version-numbering styles and the "Behind Approved" figures (BUG-1247 update, point 2) are still open; the blank tiles were only load time (already recorded). B-047 (Help tab, Manager tabs) edits the same Manager window files; this change touches only the command class and the switch file code, so a clash is unlikely.
+8. **Robot case (proposed): `M31_updates_own_screen`.** Type `CEMANAGERUPDATES` on a PC whose Windows account is a CE administrator, then read which window is open: must be "CE Suite Manager" with its Updates tab selected, and the window title must not contain "Admin Dashboard". Twin with the switch OFF (put `{"updatesButtonOpensOwnScreen": false}` in the Manager switch file before AutoCAD starts) must open the "Admin Dashboard" with its Updates tab. Control: type `CEMANAGERADMIN`, which must open the dashboard in both. Window content needs a Codex look; the window title and tab are readable by the runner.
+9. **BUG-1173 findings (checked on 1.1.87 code, base `claude/rel-20261102a`):**
+   1. No code makes a backup: no `_PRE_V3` string exists anywhere in the repo. The 24 Oct entry's file names (`CeAdminStorageService.cs:33`, `CeSuiteManagerMenuService.cs:137`) are the places the folders are WRITTEN, which is how the missing folders were found.
+   2. Pack page 02 step 4 now lists: `%APPDATA%\TIM_CE_CADTOOLS`, `CE_CVL_SUITE`, `CE_CADTOOLS`, `Creative Engineering\CE Suite Manager`, `CE_SUITE_MANAGER\logs`. All five are confirmed written by code (CeAdminStorageService:33/36, Drainage UserSettings/RulesCommand, CeSuiteManagerMenuService:137, CeBlocksSettings:39, CommandOutcomeInfoLog:12).
+   3. **Gap found:** `%APPDATA%\CE_SUITE\manager-switches.json` (`CeManagerSwitches.DefaultPath`) is a Manager settings file and is not in the list. Proposed sixth folder for step 4 and rollback step 5: `%APPDATA%\CE_SUITE`. Also `%LOCALAPPDATA%\TIM_CE_CADTOOLS\learning` (what-ce-learned.json) and `%LOCALAPPDATA%\CE_CVL_SUITE` (WebView2 and audit data) are written but are data, not settings; the pack's wording decides whether they matter. Structural writes `%APPDATA%\CE_STRUC_SUITE` and `TIM_CETOOLS`; the pack lists neither (Max has no Structural per page 02: confirm).
+   4. "Never delete or overwrite a colleague setting": the step is copy-only. It does not say what to do if a `_PRE_V3` copy already exists from an earlier attempt (a second run would merge into or overwrite it). Proposed wording: "If a `_PRE_V3` folder already exists, stop and tell the desk; never copy over it."
+   5. Because pack changes go through `RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md`, I left page 02 unedited; CE 05 or the pack owner applies items 3 and 4 above. BUG-1173 stays a document fix.
+10. **Undo:** revert the commit on the branch, or set the switch false.
