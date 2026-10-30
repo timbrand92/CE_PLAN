@@ -20,8 +20,8 @@
     "bothRoutes": 15,
     "acceptedNote": "Rule 16 union at 07:50 Fri 30 Oct: Tim by hand 25 + robot-only 4 (D19 Tim half-tested, CDSYNC keeps schedule C42, Tidy labels C37, CDTWL freeboard C39 = ledger item 30) = 29 of 40; both routes 15; D08 FO/OF symbol disputed (robot accepted it, Tim saw OF, BUG-1236) and not counted"
   },
-  "installed": "Civil 3.0.86 · Manager 1.1.86 · Structural 1.0.125",
-  "waiting": "C-76 installed 17:51 Thu; C-77 finalizer GO 13:42 at 02681d9f (class FULL, 24 PRs), payload 113 starts by itself, AutoCAD-closed window notice about 14:30 to 14:50, install about 15:10 to 15:40, then FULL re-test on 3.0.87 (140 case-runs, about 8.4 h, done about 23:40 to 01:15) then Codex looks; AutoCAD busy (gaps 4 min or less since 12:05); Team 5-hour 94% until 16:00 reset (Max fallback armed, Max 0% weekly); Tim out of the office until at least 14:00, hand-back in 50 minutes on his word (Rule 17); small train C-77b/C-78 (Civil 3.0.88) tonight; cut Fri 13 Nov, pilot Mon 16 Nov",
+  "installed": "Civil 3.0.87 · Manager 1.1.87 (C-77, 14:29 Fri, commit f5dd72a0) · Structural 1.0.125",
+  "waiting": "C-77 installed 14:29 Fri 30 Oct (class FULL; Civil 832 / Manager 75 files match, settings unchanged; undo = rename the *_PRE_5888ee75_20261030-142802.backup folders back). Nobody has opened it in AutoCAD yet; FULL robot re-test running since 14:35 (66 accepted cases twice plus the CDCHECK-after-reopen proof, done about 01:15 to 02:45 Sat), Codex block about 18:00 to 19:30; C-78 assembler started 14:26 (BUG-1227 Part A, BUG-857), Team 5-hour 97% until 16:00 reset; Tim out until at least 14:00, hand-back on his word (Rule 17); cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T13:45:00+11:00"
+  "countedAt": "2026-10-30T14:45:00+11:00"
 }
