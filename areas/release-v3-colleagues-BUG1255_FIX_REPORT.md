@@ -53,3 +53,53 @@ Probe: `C:\ce-fx\b056\probe` (a throwaway DLL, reflection only, no ClosedXML ref
 ## 3. Files
 
 `Shared/ExcelBinding/ExcelLibraryBinding.cs` (new), `Modules/Drainage/Rules/ExcelPartRule.cs` (new), `Modules/Drainage/Models/UserSettings.cs`, `PluginInitialization.cs`, `CE_CVL_SUITE.csproj`, `Services/CalculationExportPackage.cs`, `ViewModels/CalculationsV2ViewModel.cs`, `ViewModels/PitScheduleViewModel.Schedule.cs`, `Modules/Structural/{CE_STRUC_SUITE.csproj, Models/UserSettings.cs, Services/CeToolsInitializer.cs, Services/ExportService.cs}`, two `Bug1255ExcelPartTests.cs`, `REGRESSION_LOG.md`. Cleanup: bin/obj removed with `git clean -fdXq` in `C:\ce-fx\c88a` only. Probe folder `C:\ce-fx\b056` left for the reviewer.
+
+
+---
+
+# FOLLOW-UP (B-056b, Fri 30 Oct 2026, about 20:45 Melbourne): four fixes to draft PR #1871 from the Opus pre-review
+
+## FOR TIM
+
+1. **The answer.** Draft PR **#1871** now carries the four fixes (branch head `0b8698eb`, two new commits, normal push). Built and unit-tested only. Nobody has opened it in AutoCAD. BUG-1255 stays open.
+
+2. **What a drafter will see differently.**
+   1. **Pit Schedule Export Excel, CDCALC Export XLSX, STRUCEXPORTCSV:** the same as before this follow-up (the save box opens and the .xlsx saves on AutoCAD 2027).
+   2. **If Excel still cannot start:** CDCALC's box and the Structural command line now say only "Excel export could not start on this AutoCAD." Neither has an Export CSV button, so the old "Use Export CSV" pointed at nothing. Pit Schedule keeps its sentence with Export CSV, because it does have that button.
+   3. **Another firm's add-on on AutoCAD 2025 or 2026** is no longer handed CE's Excel part when it asks for a different version of it. Nothing changes on screen for a drafter.
+
+3. **Mistakes of my own, first.**
+   1. My editing script stripped an invisible start-of-file mark from `UserSettings.cs`. I caught it in the diff and put it back before committing. No cost.
+   2. My first test run failed at once: a Release build needs an empty placeholder file for the 2027 transform part, which the Debug builds already had. Cost: one wasted slot wait (about 15 minutes).
+   3. The earlier worktree `C:\ce-fx\b056` was not a git folder (only the probe and logs); the real worktree is `C:\ce-fx\c88a`. I used that.
+
+4. **The probe re-run answers your fourth item.** The earlier probe ran a 16:38 build. I rebuilt the Civil lane from the branch (Release, net10) and re-ran the AutoCAD 2027 console probe, both load orders, isolated profile, copies only. Result: with the fix both orders PASS (the Pit Schedule workbook saved, 8,011 bytes, sheets "Pit Schedule" and "Checking" read from the file); with the switch off both orders FAIL, as before. The probed DLL is byte-identical to the Release DLL built from the branch code (SHA256 `C349E9F7...BAB8B1E`). One honest gap: the build's own version stamp reads `3.0.87+9a1f4e64`, because I built before committing; the code in it is the committed `c137e78a` (the working tree had no other change).
+
+5. **What is NOT proven.**
+   1. The full AutoCAD 2027 window (acad.exe). The probe is the console version, and it called the Pit Schedule writer by reflection, not the button.
+   2. CDCALC Export XLSX and Structural STRUCEXPORTCSV were still not saved in the probe. The Structural test run covers the wording, not a real save.
+   3. The new plain sentences were not seen on screen.
+   4. The new step (c) check was exercised only by the probe's Pit Schedule save (the one library from CE's folder, ExcelNumberFormat, was still served after the check). AutoCAD 2025 and 2026 are not installed here.
+   5. Excel opening the file. I read the sheet list only.
+   6. Pre-review note (d), Pit Schedule with the switch off keeping the old generic line, and note (e), the first-product-registers rule, are NOT done (not in the four). Note (e) belongs in the card.
+
+6. **Robot case, corrected: `N41_excel_export` with control `N41c_excel_export_off`.**
+   1. `N41` is unchanged from section 6.1 above, plus: `CDCALC`, preview a package, Export XLSX, type `C:\CE_TEST\BUG1255\CDCALC.xlsx`; check the file exists and no error box. And in a Structural copy drawing `STRUCEXPORTCSV`, save to `C:\CE_TEST\BUG1255\structural_schedule.xlsx`; check the file exists and no `[STRUCEXPORTCSV] Error:` line. Run Structural first in a fresh session, then Pit Schedule, to cover "Structural registered the handler first".
+   2. **`N41c` must be rewritten before it runs** (the pre-review is right, my first wording was wrong): with `excel.useAutoCadLoadedClosedXml` false before launch, the code does NOT show the plain sentence. It lets the library fault through, so expect: no file saved, the save box opens, then the old failure ("rendering error" or the library's own text), and no "Excel export could not start" line. That is the "fails when broken" control.
+
+---
+
+## Technical detail (follow-up)
+
+1. **Fix 1.** `Shared/ExcelBinding/ExcelLibraryBinding.cs`, step (c) of `Resolve`: `File.Exists(own) && PickIndex(name, new[] { AssemblyName.GetAssemblyName(own) }, true) == 0`. Same name, same publisher token, same major.minor as the request, else null. One shared file, so Civil and Structural get it together. CE_SHARED untouched (`git diff --stat` shows no `Shared/CE_SHARED`). Risk to watch: if AutoCAD's ClosedXML ever asks for a library at a major.minor CE does not ship, step (c) now returns nothing and the export fails with the plain line; the probe shows ExcelNumberFormat 1.1 is fine on 2027.
+2. **Fix 2.** `UserSettings.cs` comment on `ExcelSettings` now says the switch lives only in the settings file. No Settings row added (as instructed).
+3. **Fix 3.** New `ExcelLibraryBinding.ExcelCouldNotStartPlainLine` and `ExcelPartRule.CouldNotStartPlainLine`, used by `CalculationsV2ViewModel` (CDCALC). `ExportService.ExcelCouldNotStartLine` (Structural) is now the plain sentence. Pit Schedule's `ExcelPartRule.CouldNotStartLine` is unchanged.
+4. **Tests.** New Civil tests: `CdcalcAndStructural_NeverPointAtAnExportCsvThatIsNotThere` (the exact sentence, no "CSV" in it, CDCALC source uses the plain line and not the CSV line, Pit Schedule keeps the CSV line), `CesOwnCopy_IsOnlyHandedToARequestForTheVersionCeShips` (PickIndex: 1.1 and 1.1.5 accepted, 2.0 refused, another publisher refused; source guard on the step (c) expression), `TheSettingsComment_DoesNotClaimASettingsPageRow`. Structural: the plain line pinned exactly and without "CSV". Switch-off behaviour is unchanged by this follow-up (the handler returns before step (c) when the switch is off); no new test of that beyond the existing `SwitchOff_HandsBackNothing`.
+5. **Results, Release, one top-level dotnet command at a time, below-normal priority.**
+   1. Civil focused (`Bug1255ExcelPartTests` and `C60AuditSourcePinGuardTests`): 71 total, 68 passed, 3 skipped, 0 failed.
+   2. Structural `Bug1255ExcelPartTests`: 8 of 8.
+   3. Civil full suite net10 Release: **21,534 total, 21,502 passed, 32 skipped, 0 failed** (16 m 29 s; count not zero; the PDF page test passed in the run).
+   4. Structural full suite net10 Release: 1,293 total, 1,281 passed, 5 skipped, **7 failed**. All 7 are source-reading guards that open files that are not in this tree (`AutoCadBeamSpecialAtomicWriter.cs`, `BeamExtensionAutoCadEvidenceReader.cs`, `BeamSpecialCommandAutoCadCaptureFactory.cs`, `BeamSpecialCommandAutoCadPromptSession.cs`) or compare file lists in `ConnectedDesign/Commit` and the beam command route (`AutoCadWriter_OwnsExactlyOneTransactionAndCommit`, `CommitFolder_IsExactUnhostedScope`, `SpecialWriter_MapsPickedSupportsToTheFinalBeamEnds`, `B5RoutesCommand4WhileCommand5RemainsLegacy`, `BextEvidenceReaderIsSelectedOnlyExactLabelAndReadOnly`, `SpecialCaptureFactoryAssemblesOnlyTheNoWritePromptFlow`, `SpecialInitialPromptSessionIsReadOnlyAndUnrouted`). `git ls-files` finds none of those four files at all, and none of the tests touches Excel. I did NOT run them on the base to compare by name, so "pre-existing" is my reading of the cause, not a measured comparison.
+   5. net48 Release compile: Civil 0 errors, Structural 0 errors (refs as in the C62 report).
+6. **Probe:** `C:\ce-fx\b056\run_A0, run_A1, run_B0, run_B1` (20:34 to 20:37), CE copy in `C:\ce-fx\b056\ce`. The probe's own "sheets:" log line is blank (its pattern); I read `xl/workbook.xml` from `A1.xlsx` and `B1.xlsx` directly. The isolated profile folder `C:\ce-fx\b056\iso` was kept and never copied into any repo.
+7. **Files:** `Shared/ExcelBinding/ExcelLibraryBinding.cs`, `Modules/Drainage/{Rules/ExcelPartRule.cs, ViewModels/CalculationsV2ViewModel.cs, Models/UserSettings.cs}`, `Modules/Structural/Services/ExportService.cs`, the two `Bug1255ExcelPartTests.cs`, `REGRESSION_LOG.md`.
