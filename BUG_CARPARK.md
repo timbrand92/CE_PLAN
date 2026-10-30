@@ -17478,3 +17478,19 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 
 **BUG-1255 update 30 Oct 2026 (CE 01, read-only confirmation after CE 00's Max Opus analysis areas\CODEX_BLOCKED_ANALYSIS_30OCT.md):** CAUSE CONFIRMED. The CE log %APPDATA%\CE_CVL_SUITE\logs\ce_cvl_structured_20261030.log line 22682 (08:13:13) shows the Pit Schedule dialog crashing with FileLoadException: ClosedXML 0.102.3.0 requested, "the located assembly's manifest definition does not match" (thrown at PitScheduleViewModel.Schedule.cs:113, ExportExcel). AutoCAD 2027 ships its own C:\Program Files\Autodesk\AutoCAD 2027\ClosedXML.dll, file version 0.102.2.0 (read just now), and it wins over CE's bundled 0.102.3 (CE_CVL_SUITE.csproj line 192; CE_STRUC_SUITE.csproj line 193). Reach: every ClosedXML export in Civil on AutoCAD 2027 (Pit Schedule Excel; likely CDCALC XLSX), Structural very likely the same (not yet seen). PILOT-CRITICAL for the Modern lane (Max moves to 2027). A drafter sees only a generic rendering-error line. Fix job B-056 (team_fix_c88a, Sonnet) started 30 Oct 12:13: probe with accoreconsole, smallest working fix as a draft PR behind switch excel.useAutoCadLoadedClosedXml (ON) if a runtime route works, else a build-time pin of the Modern lane; plain line "Excel export could not start on this AutoCAD; use Export CSV". Not in C-77 unless it builds before the finalizer's GO; otherwise C-77b first in line. Status stays OPEN; never FIXED until Tim confirms in AutoCAD.
+
+---
+
+## BUG-1257 — A test run rewrote Tim's real Structural settings file on his PC (test isolation)
+
+**Command / Area:** Structural test suite and every automated build job on Tim's PC (test setup, not a drafter command). PILOT-CRITICAL for Structural and for the whole test setup. Found 30 Oct 2026 by CE 00 reading file times.
+
+**Symptom:** A test run rewrote Tim's real Structural settings file (%APPDATA%\CE_STRUC_SUITE\CS_Settings.json) at 19:47:55 on 30 Oct 2026. A start-up save repaired it at 19:54:14. Only two Structural test files redirect the settings folder with the CE_STRUC_SUITE_APPDATA_ROOT variable (SettingsServiceNoWriteTests and BeamCommandSettingsSnapshotReaderTests). Build job c92a ran the full Structural suite on Tim's PC without that variable set. No file contents are recorded here.
+
+**Expected behaviour:** No automated test or build job ever writes to Tim's real settings, logs or project files. Every job points the Structural, Civil, Manager and shared settings folders at a fresh scratch folder before any test step, and the tests that touch settings use that redirect.
+
+**Steps to confirm in AutoCAD:** None in AutoCAD. Check: record the file time and size of the CE settings files, run the full Structural, Civil and Manager test suites with the scratch-folder variables set, and confirm none of the real settings files changed.
+
+**Reference:** CE 00 message to CE 05, 30 Oct 2026 19:5x. Related: memory note "Tests can touch Tim's real files" (an earlier run truncated a live Structural log), "Installer tests run live deploy scripts". Fix drafted next as B-062 (test isolation, CE 01). Until then every pipeline job sets CE_STRUC_SUITE_APPDATA_ROOT (and the Civil, Manager and shared roots CE 01 names) to a scratch folder first. CE 05 stopped job p3 (Structural BUG-1136 and 1199) at about 20:05 because it might have been running the Structural suite unprotected; whether it already ran tests is not known.
+
+**Status:** OPEN (fix drafted next, B-062). Never FIXED until Tim confirms or the acceptance ledger accepts it by name.
