@@ -1,0 +1,29 @@
+PAPER REVIEW BRIEF, C-78 CASES (CE 02, Sat 31 Oct 2026 07:05 PC clock). For ONE read-only background Opus agent. It reads case files, setup files, reports and source; it WRITES only its report file. It does NOT run AutoCAD, the driver or case_runner (validate is allowed), builds nothing, edits NO case, setup, driver, spec or settings file, writes NO .review.txt slip (slips need two passing runs on the build, which do not exist yet).
+
+REPORT FILE: C:\CE_PLAN\areas\OPUS_PAPER_REVIEW_C78_31OCT.md . Answer first. Plain Australian English, metric, numbered lists, no tables.
+
+WHY. C-78 (Civil 3.0.88, Manager 1.1.88, candidate payload c1074 built 05:33, class FULL, GO 7c6af57b) will be installed this morning and the robot then runs spec_c78_full. These cases have NEVER run. Every earlier new case needed one or two repair rounds because of faults a paper read would have caught. Find those faults now so the first run is a real result.
+
+CASES TO REVIEW (all under C:\Lisp Files\_ACAD_DRIVER\cases\):
+1. drafts_c78_30oct\: N33_grade_mismatch_x, N33_grade_mismatch_x_off, N33a to N33h (each with its _BROKEN twin), N33s_switch_off_box_returns, N91_startup_smoke and N91_startup_smoke_BROKEN, N90_plain_rg_label_on_guidelines, N90_..._BROKEN, N90x_plain_rg_switch_off.
+2. drafts_v387_30oct\: N41_cdcheck_words_after_stretch_and_movev87 (+ _BROKENv87), N67_tidy_labels_apply_uv87 (+ _BROKENv87), N71_rotate_copy_onto_loose_pipe_end_joinsv87 (+ _BROKENv87). These are copies of accepted or reviewed drafts on SETUP-R47v (levels 1 in 100).
+
+SOURCE OF TRUTH FOR THE C-78 BEHAVIOUR: the files changed by the train are listed in C:\CE_PLAN\areas\TRAIN_C78_CHANGED_FILES.txt (Modules/Drainage/Commands/CdCommand.Grade.cs, Dialogs/GradeMismatchDialog.xaml(.cs), Rules/GradeMismatchChoiceRule.cs, Rules/MismatchBoxOwnSuggestionRule.cs, Rules/RaingardenLabelRule.cs, Rules/ExcelPartRule.cs, Services/CalculationExportPackage.cs, others). Read them at the C-78 candidate commit in the monorepo (ask git: the branch is the C-78 payload branch; start with git log --oneline -5 on origin/claude/rel-20261009* heads and the TRAIN notes in C:\CE_PLAN\areas\release-v3-colleagues-BUILD_REGISTER.md; if you cannot pin the commit, say so and use master as a fallback and say that too). The expected-behaviour text is in C:\CE_PLAN\areas\OPUS_RECHECK_H2_1873_B057_30OCT.md and CASE_WRITING_C78_REPORT_30OCT.md.
+
+WHAT THE ROBOT LEARNED ON 3.0.87 (ground truth, use it):
+1. The Grade mismatch window (CdCommand.Grade.cs about line 233) opens only when the Custom grade is chosen, both levels are typed, work-out is OFF, and the typed fall is more than 10 percent off the Custom grade (two sided: flatter or steeper). With a pit at the first point it opens; on empty ground it did not (GM1 failed, GM1p with a pit first passed). While the window is open every key the driver sends is refused ("the AutoCAD main window is disabled").
+2. The pipe-size grade table is now 1 in 100 at every ordinary size (#1841). A pipe typed flatter than 1 in 100 over its length, with the default Custom grade, opens the window. Old cases typed 18.000/17.900 over 20 m (1 in 200): blocked. The fix used was SETUP-R47v (17.800).
+3. After a STRETCH the end level follows the longer pipe at the same grade (N41v87: 20 m pipe 18.000 to 17.800, stretched 2 m, end text reads IL 17.78, not 17.800).
+4. The driver refuses the whole word PRINT, SAVE, QSAVE, OPEN, NETLOAD and the like; a ui press only works for ids it knows (C:\ce-fx\c75regrade3\check_ids.ps1 lists every control id in a folder: run it on drafts_c78_30oct and drafts_v387_30oct, it must say every control id is known).
+5. A CE window left open (New Pipe, the Grade mismatch box, Edit source) disables COM; a case must close it with a known press or Esc before the next step. A single-element list cannot be read with field if the select returned nothing. FPFC and similar redraw whole networks, so "new object" lists contain regions, not polylines.
+6. A case that runs two cases from the variants folder in one pack once failed with a runner null error; it passed single-case. Not your concern, but note any case that depends on state left by another case.
+7. The case runner evidence reads the command line and the Civil log only; a checked line must be a word the build really prints (copy it from the source at the candidate commit).
+
+FOR EACH CASE:
+(a) Read it fully. List every step that sends a key while a window may be open; say which window and whether the case closes it by a known press/Esc.
+(b) For every assertion that holds a word, number or level: show where the word comes from in the source at the candidate commit (file and line), or mark it UNSOURCED. Work out every level dependent figure with arithmetic (grade, fall, cover, IL after the edit) and say whether it matches the case.
+(c) Does the setup actually reach the state the case needs (a pit at the first point if the window must open; the switch value set by SETTING or by ui2-set; Custom grade chosen; work-out OFF)? Do the twins break exactly one thing and fail on a CHECK, not on a stalled step?
+(d) Control ids: any id not known to check_ids.ps1 is a fault.
+(e) Verdict, one of: READY TO RUN (no fault found), FIX FIRST (give the exact line and the exact replacement text), NOT RUNNABLE (say why). Quote file name and line numbers. Do not rewrite cases yourself.
+
+ALSO: say in the answer-first section how many cases are READY TO RUN, FIX FIRST, NOT RUNNABLE, and name the three riskiest cases with the reason. If a case needs a Codex look instead of a robot case (a picture, a click, a mouse drag), say so.
