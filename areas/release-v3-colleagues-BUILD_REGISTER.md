@@ -224,6 +224,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 109. **Merge conflicts resolved after the C-78 addendum moved the train (30 Oct ~22:50; only REGRESSION_LOG.md clashed, both entries kept, normal merge commits, no rebase): #1878 (B-063) new head a9a0a4f5 (11 of 11 B-063 tests pass on the merged branch, GitHub MERGEABLE) and #1884 (B-062) new head f9fa356c (Manager guard check: 1 passed, 1 skipped as expected because the real Manager switch file is absent on this PC).** The code of C-78 (Excel handler, Grade mismatch rule) came in without a textual conflict and was not re-tested in these two branches.
 
+110. **#1887 = B-069 (Civil BUG-1092, a pipe even 1 mm uphill is reported as flowing uphill), job p9 second half, from CE 05 (found 22:33).** Draft, title already starts with B-069; base per CE 05 (check it is claude/rel-20261102a). Pre-review by CE 00 still to come. Together with #1882 (BUG-1093) it is B-069.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
