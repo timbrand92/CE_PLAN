@@ -1,0 +1,30 @@
+# B-018 BUG-1099 fix report: the council's own detention time of concentration (Fri 30 Oct 2026)
+
+## ANSWER FIRST
+
+1. **PR:** draft PR #1872, `fb/bug1099-council-tc` into `claude/rel-20261026z` (Civil 3.0.85 line). Commit on top of 09126560.
+2. **State:** built and unit-tested only. Nobody has opened it in AutoCAD. BUG-1099 is NOT marked fixed and stays OPEN.
+3. **Mistakes of my own, first:** (a) this job found an earlier stopped attempt in `C:\ce-fx\c78h` with the code written but uncommitted and never confirmed run; I reused it and ran every test myself before trusting it. (b) The carpark's 3.68 L/s needs two halves (Tc and before-development C). I built only the Tc half, so a Maroondah 600 m2 lot now reads 4.29 L/s, not 3.68 L/s. (c) The earlier attempt's log text said 4.30 L/s; the test proves 4.29, and I corrected it.
+4. **Robot case:** `N99_dp_tc` (below).
+
+## FOR TIM
+
+1. **What changes on the drawing job:** in CDDESIGN, the permitted discharge (and so the tank size) for Maroondah, Boroondara and Maribyrnong is now worked at the council's own detention time, not CE's 5 minutes. Maroondah reads its lot-size table (6, 7, 8, 9, 12 min). Boroondara is 15 min. Maribyrnong is 10 min.
+2. **What does NOT change:** the outlet pipe flow still uses the 5 min, so pipes are not made smaller (your recommended answer to 21b, read as yes).
+3. **Worked example, bare 600 m2 Maroondah lot, 1 in 5, office C 0.35:** before, 5 min at 88.80 mm/h gives 5.18 L/s. After, the council's 8 min at 73.63 mm/h gives 4.29 L/s. Permitted discharge drops about 17 per cent, so the tank gets bigger and the orifice smaller. The pipe flows are identical before and after.
+4. **Still not matching the council's 3.68 L/s:** that figure also uses the council's own before-development C of 0.30 (35 per cent cap on impervious area). That needs a new CDDESIGN box for the existing impervious share. I did not build it. It is the next piece.
+5. **What you will see in the CDDESIGN notes:** one plain line, for example "Permitted discharge worked at Maroondah's own detention time of concentration, 8 min, from the council's lot-size table for a 600 m² lot ... The pipe flows keep the 5 min Tc." If the council's table cannot be read (no site area), it says Unknown, keeps 5 min and tells you to check. Anything without a council source is tagged "(Assumed - no council source)".
+6. **Switch:** `detention.councilTcForStorage`, ON. Setting it false gives exactly the old figures. It is in the settings file only, with no Settings page row (the other recent switches have none either).
+7. **Yarra Ranges:** no write-up exists, so it keeps the office 5 min.
+8. **Your call later:** your answer to 21b replaces the draft default. "Yes" was read from your pasted example, tagged GUESS in the decisions file.
+
+## TECHNICAL DETAIL
+
+1. **Carpark references, confirmed on the shipping line:** the files named in the 24 Oct entry still hold the code. `DetentionSizingService.ComputePreDevPsdLps` (tc now at line 324, was 309) and `AutoDesignService` (tc now at line 420, was 408) both took `site.TcMinutes ?? profile.TcMinutes ?? office`. `CouncilRuleValues.TimeOfConcentration` (line 142) and `PreDevelopmentC` (line 116) still have no caller outside tests.
+2. **Fix:** one chooser, `CouncilRuleValues.DetentionTimeOfConcentration` (line 175), read by both permitted-discharge paths. Order: Kingston site-case Tc, then (switch ON) the council detention Tc, then the single Tc, then the office Tc. `RationalFlowService` never reads it (pinned by a source-guard test).
+3. **Data:** `council-profiles.json`: Maroondah `detentionTcFromLotAreaTable: true` (existing table), Boroondara `detentionTcMinutes: 15`, Maribyrnong `detentionTcMinutes: 10`, each with Sourced provenance from `02_COUNCIL_RULES`. New model fields `DetentionTcMinutes` and `DetentionTcFromLotAreaTable`; two labels in `CouncilSourceViewModel`.
+4. **Files:** `Models/CouncilProfileModels.cs`, `Models/UserSettings.cs`, `Rules/CouncilRuleValues.cs`, `Services/DetentionSizingService.cs`, `Services/AutoDesignService.cs`, `ViewModels/CouncilSourceViewModel.cs`, `Assets/Config/council-profiles.json`, `REGRESSION_LOG.md`; tests `Bug1099CouncilDetentionTcTests` (new), `CouncilSweepParityTests`, `KingstonStormFrequencyTests` (three profile hashes moved on purpose). CE_SHARED, Structural, Manager unchanged.
+5. **Tests:** focused 69 passed, 0 failed (count not zero). Full Civil net10: 20,798 passed, 32 skipped, 1 failed (`LoadAsync_ValidSinglePagePdf_RendersOnePageSuccessfully`, needs AutoCAD's renderer); re-run alone it passed. net48 compile: 0 errors. The switch default is pinned through both `DeserializeSettings` and `DeserializeSettingsTolerant`; OFF returns the old figure to 1e-9 and the other 19 councils are checked unchanged across land uses and areas.
+6. **Not proven:** storage volume figures (I show direction only: smaller discharge, more storage); the on-screen CDDESIGN text; the Council source window labels; any AutoCAD behaviour; the before-development C half; Maroondah's high-density 5 min case and multi-unit "average lot size" (CE reads the whole site as one lot and says so). Boroondara normally supplies its own permitted discharge, so its 15 min applies only when CE works it out. Darebin's single Tc is already 10 min and still sizes its pipe too (unchanged, flagged). Other councils with write-ups (Kingston, Frankston, Banyule, Darebin) were not touched: they publish a per-council figure that CE already holds, or none.
+7. **Robot case `N99_dp_tc`:** open a copy of a Maroondah job, type `CDDESIGN`, site area 600 m2, roof 400 m2, 1 in 5, and read the permitted discharge line and the notes. Right: the line is lower than the switch-off run and the notes carry "Maroondah's own detention time of concentration, 8 min". Control `N99_dp_tc_off`: set `detention.councilTcForStorage` to false before AutoCAD starts (settings are read at launch), same typing: the old (higher) figure and no such note. Then a second Maroondah case at 900 m2 should read 9 min.
+8. **Cleanup:** `git clean -fdXq` run in `C:\ce-fx\c78h` only, after this report.
