@@ -16094,6 +16094,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 30 Oct 2026, from job p1 report areasBUGFIX_p1_REPORT_30OCT.md and CE 00 Opus pre-review L):** no code fault; the backup is a manual step in the colleague pack (page 02 lists five folders: TIM_CE_CADTOOLS, CE_CVL_SUITE, CE_CADTOOLS, Creative EngineeringCE Suite Manager, CE_SUITE_MANAGERogs, all confirmed written by code). Pack line to add: "also %APPDATA%CE_SUITE if it exists" (an optional hand-written Manager switch file, CeOneGlanceStatus.cs line 314; it does not exist on Tim's PC today), and "if a _PRE_V3 folder already exists, stop and tell the desk, never copy over it". SECURITY: on an administrator's PC that folder may still hold an old blob-config.local.json with a write key (SEC-001 history): a local backup copy is fine but it must NEVER be zipped, emailed or sent; question for CE 01: add it to the CESUPPORT support-zip exclusion check. Pack wording not yet edited. Still OPEN until Tim confirms.
+
 ## BUG-1174 — CDWT skips its window without saying why
 
 **Command / Area:** CDWT, Civil 3.0.72 (T5 finding 10). LOW, SURE.
@@ -17302,6 +17304,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Steps to confirm in AutoCAD:** (1) Click Updates & Rollback on the CE Tools tab. (2) Read the window title and the buttons. Right = the user's own update and rollback screen. Wrong = the Administrator Dashboard with Approve, Canary and Promote buttons. (3) Wait a minute: do the tiles and the Refreshing button settle?
 
 **Reference:** Tim's screenshot 29 Oct 2026, hand check H44 in areas\ACCEPTANCE_LEDGER_CLAUDE_2026-10-24.md; the CE Tools tab also has a separate 'Admin (CEMANAGERADMIN)' button; Manager Updates tab (hand check H31) is the user-level one. Related: UX-HELP-IN-MANAGER and UX-MANAGER-TABS, the Help tab design.
+
+**Evidence note (CE 05, 30 Oct 2026):** draft PR #1876 (B-058) makes Updates & Rollback open the drafter's own Updates tab for everyone, behind a Settings switch ON; Opus pre-review L says KEEP-WITH-NOTE for C-79. Still missing: a "go back" (rollback) step on the user's own screen; rollback exists only on the Admin Dashboard. Stays OPEN. Not proven in AutoCAD; needs a Codex look.
 
 **Status:** OPEN (reported by Tim 29 Oct 2026). Never FIXED until Tim confirms in AutoCAD.
 
