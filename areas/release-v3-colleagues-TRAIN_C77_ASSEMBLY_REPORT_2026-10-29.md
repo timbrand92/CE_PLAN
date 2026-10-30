@@ -135,7 +135,7 @@ Added lines in `Modules/Drainage` and `Modules/Manager` product code (comment li
 ## Files written
 
 1. `C:\CE_PLAN\areas\TRAIN_C77_CHANGED_FILES.txt`: the bare changed-files list (116 files, `git diff --name-only 5888ee75..9889c01a`), pushed to CE_PLAN as soon as the merges were done.
-2. Scratch (not in any repo): `C:\ce-asm\logs77\` (build log, test logs, trx files, per-class lists, the hit list, my notes), `C:\ce-asm\c77` (merge worktree) and `C:\asm77\w` (build worktree).
+2. Scratch (not in any repo): `C:\ce-asm\logs77\` (build log, test logs, trx files, per-class lists, the hit list, my notes) is kept. The merge worktree `C:\ce-asm\c77`, the build worktrees `C:\asm77\w` and `C:\asm77\b`, `C:\asm77` itself and my `t77_*` temp folders are removed (the branch stays on origin). The C-76 era `C:\asm76` folders were left alone.
 
 ## RULE 14
 
