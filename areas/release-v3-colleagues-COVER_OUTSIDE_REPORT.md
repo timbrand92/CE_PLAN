@@ -67,3 +67,42 @@ Built and unit-tested. **Not installed. Nobody has opened it in AutoCAD.** BUG-9
    4. net48 compile of `CE_CVL_SUITE`: 0 errors (242 existing warnings).
    5. Nothing was deployed. No AutoCAD, Codex or accoreconsole was started.
 8. **Undo:** revert commit `3261cf8f`, or set `cover.measuredToPipeOutside` to false.
+
+
+---
+
+## FOLLOW-UP B-012b (30 Oct 2026): an Unknown pipe wall now reads Unknown, never a green Pass
+
+PR 1848 (draft, same branch `fb/cover-to-pipe-outside`), new commit `21a3bbb4`. Built and unit-tested only; nobody has opened it in AutoCAD. BUG-901 is not marked FIXED.
+
+### FOR TIM
+
+1. **What you will see:** in CDRULES, a pipe with no wall figure (a UPVC 150, say) that has enough cover to the inside top now shows **Unknown**, with the words "the pipe wall is Unknown (no wall in Settings for UPVC 150), so cover to the outside top cannot be confirmed (add the wall in Settings, cover.pipeWallThicknessMm)". Before, it showed a green Pass. A pipe that is already too shallow still shows the same warning as before.
+2. **Worked example, lid 10.000 and invert 9.200 (800 mm to the invert):**
+   1. UPVC 150: 650 mm to the inside top, shows Unknown.
+   2. UPVC 225: 575 mm before, 555 mm now (Pass at a 300 minimum).
+   3. Concrete 375: 425 mm before, 380 mm now (Pass at a 300 minimum).
+3. **Wall figures for other sizes: NOT added, on purpose.** I found no pipe table or pipe record in the plugin that holds a wall thickness, and the rules say no hard-coded figures. So only your two (UPVC 225 = 20, concrete 375 = 45, both Assumed) exist. Every other size stays Unknown until you give the figures. Question for you: send the wall thickness for the sizes and materials you use (UPVC and concrete at 100, 150, 300, 450 and so on) and they go into the Settings table; they stay tagged Assumed until you tick them.
+4. **Not fixed here (this is B-022):** CD's own screens (the levels proposal, the cover tick in New Pipe, pipe sizing, network design, grade suggestion) still measure to the inside top. So CD can still say "320 mm cover" where CDRULES says 275 or Unknown.
+5. **Same switch:** it rides on `cover.measuredToPipeOutside` (ships ON). Turn it off and the old green Pass comes back exactly.
+6. **Robot case (name it like the others): C81_cover_unknown_wall.** Set the pipe to UPVC 150, pit cover level 10.000, pipe invert 9.200 (the same line at both pits), run CDRULES, and read the "Minimum cover" row: it must say Unknown with the words "pipe wall is Unknown" (650 mm to obvert). Then change the pipe to UPVC 225 and run again: the row must read Pass with "cover 555 mm to the outside top ... (pipe wall 20 mm, Settings UPVC 225, Assumed)". Switch-off control: set `cover.measuredToPipeOutside` to false before AutoCAD starts (settings are read at launch), run CDRULES on the UPVC 150: the row must read Pass, "cover 650 mm to obvert", with no "Unknown".
+
+### Mistakes of my own
+
+1. **Seven existing tests turned red on my first full run** and I should have predicted them: any test that used a UPVC 150 and expected a cover Pass now correctly reads Unknown. I fixed them by moving those fixtures to a UPVC 225 (a known wall), and added a test that pins the UPVC 150 Unknown. Two further red tests in that first run (`RefusedNativeCallbackInvalidatesTheManagedSessionBeforeReportingChannelFailure`, `FinalLandingProducerCollapsesOnlyItsOwnFreeEndRun...`) read compiled IL and only fail in a Debug build; the Release full suite has 0 failed.
+2. **Build-slot rule:** I waited the full 3 hours for a free slot (other jobs held it all night), then ran once, so for part of one run three top-level dotnet commands were alive at once (two were other jobs').
+3. **A wrong guess:** my first build script called `dotnet` by bare name and failed; it also needed the 0-byte placeholder arx. Both are known traps in memory; I re-learnt them and lost about an hour.
+
+### Not proven
+
+1. Nothing was run in AutoCAD. The CDRULES wording, colour and where the Unknown row sorts were not seen.
+2. The 20 mm and 45 mm walls are still your "about" figures, not a pipe maker's table.
+3. A saved CDRULES run is still not marked Stale after this update (Opus finding 4 of #1848): a drafter must re-run CDRULES.
+4. `RulebookLevelsCheck.Passes` is false whenever any row is Unknown, so the same UPVC 150 would now read "not passed" there; I found no production caller of it in this branch (tests only), so nothing a drafter sees changes today, but B-022 should keep this in mind.
+
+### Technical detail
+
+1. **Code:** `Modules/Drainage/Rules/RulebookEngine.cs`, `CoverRules`: when `measured.UnknownWallReason` is set and cover is at or above the minimum, yield `RuleOutcome.Unknown` (evidence unchanged) and `continue`. Warn path untouched. Doc line on `CoverSettings.MeasuredToPipeOutside` updated.
+2. **Tests:** `Bug901CoverToPipeOutsideTests` (Unknown expectation changed; new `WorkedExample_LidTen_InvertNineTwo_Upvc150Unknown_Upvc225_Rcp375`, `UnknownWall_BelowMinimum_StaysAWarn_AndNeverUnknown`); `RulebookLevelsCheckTests` (new `GoodLevels_Upvc150_WallUnknown_IsUnknown_NotPass`); fixtures moved to DN225 in `RulebookEngineTests`, `Bug432OtherScreensCoverTests`, `RulebookLevelsCheckTests`; `RuleSourceEvidenceTests` input count 4 to 5 (an Unknown finding keeps the observed-pipe-inputs input, existing behaviour).
+3. **Results:** full Civil net10 Release run: 20,869 total, 20,809 passed, 0 failed, 60 skipped. Focused rules run (Debug) after the fixes: 0 failed except the one evidence-count test, which was then fixed and is inside the Release full run. net48 compile of `CE_CVL_SUITE`: exit 0. `CE_SHARED` untouched. Nothing deployed; no AutoCAD, Codex or accoreconsole started.
+4. **Undo:** revert `21a3bbb4`, or set the switch to false.
