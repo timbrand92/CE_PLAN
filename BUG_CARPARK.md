@@ -566,6 +566,8 @@
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 30 Oct 2026, from job p16 report areas\BUGFIX_p16_REPORT_30OCT.md; code read only):** not built. It is not a wording fault: nobody knows what opens the docked "Creative Engineering | What's New" panel the robot listed. The What's New window in the code is a plain window shown once at start-up after an update, not a docked palette, so the docked one may be a different thing. Question to Tim (via CE 04): has he ever seen a docked What's New panel open by itself while drafting? Recommendation: park until a test lists the windows after each step. Still OPEN.
+
 **run 33 (19 Oct night, installed Civil 3.0.57 / C-46): STILL SEEN (no claim about the cause):** a docked "Creative Engineering | What's New" palette was in the window list in session 1 after the cascade, CDSYNC and MOVE (quit closed it); in session 2 none was listed 35 s after launch or at quit six minutes later. So it opens some minutes after start-up or after one of the commands run; which one is not known. Evidence: CLAUDE_DRIVER_RUN33_V2_2026-10-20.md, C item 3.
 
 **run 35 (20 Oct, installed Civil 3.0.59 / C-49): STILL SEEN:** the docked What's New palette was in the window list again in session 1 (closed by quit); evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md C item 8.
@@ -9603,6 +9605,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (observations; W42 re-run in progress). Filed 9 Oct by the controller. Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note (CE 05, 30 Oct 2026, from job p17 report):** this entry is a list of what Codex saw (W41), not a single fault; most was the test brief. Two points are still not understood (FSF showing no "Specify start point" prompt; where the pad footing label text sits) and need an AutoCAD re-run (W42), so it is a test item, not a build. Still OPEN.
+
 ---
 
 ## BUG-452
@@ -9734,6 +9738,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note (CE 05, 30 Oct 2026, from job p15 report areas\BUGFIX_p15_REPORT_30OCT.md; code read only, nothing run in AutoCAD):** the Structural train line (origin/claude/rel-20261026s, head 204dfad2 = Structural 1.0.125) ALREADY contains this fix, from the earlier hunt job HUNT-S-02 (PR #879, commits 2a395832 and f79e17e6): BT1, AB, BB and the R1 Point option turn clicked points from the current UCS to World; FPFC and FSF too (BracingCommands.cs 279/587/600/746, BracingService.cs 1419, RafterJoistCommands.cs 1367/1377, FoundationService.cs 1248). Draft PR #1883 (B-068, base rel-20261102a) builds the same fix again with a Settings switch (Bracing.PickedPointsFollowUcs); on the Structural line it would be a second code path. A twin PR was NOT opened. Not proven in AutoCAD; check: UCS, Z, 30, run BT1 on two wall corners, then R1 Point and FPFC, then UCS W. Question for CE 01: is #1883 still wanted (switch), or redundant on the Structural line? Still OPEN until confirmed in AutoCAD.
+
 ---
 
 ## BUG-468
@@ -9773,6 +9779,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** HUNT-S-07 (MEDIUM): on a layout tab or during REFEDIT, R1, BT1, C1, TS1, BTX, FSF and FPFC still write into Model space and never check REFEDIT or the space (R1 RafterJoistCommands.cs 202; BT1 BracingService.cs 1672; C1/TS1 SupportBlockCommands.cs 285; BTX BeamTextConvertCommands.cs 103 and 155; FSF FoundationService.cs 3787; FPFC 3806). The beam command refuses with a plain line ("Beam commands require model space outside REFEDIT", Services/ConnectedDesign/Host/BeamCommandAutoCadContext.cs 52-56) and so does CSREOBAR (Services/ReoBarService.cs 88-92). Worst case BTX: text picked on a layout is erased there and re-made in Model space at the layout's coordinates, so it vanishes from the sheet. Right result: the same refusal line for every Day 1 command. To SEE: a layout tab (not inside a viewport), C1 and click; BTX a layout text. HUNT file: C:\CE_PLAN\areas\release-v3-colleagues-HUNT_STRUC_2026-10-09.md (hunt_struc run 1, read-only, MAX account, 9 Oct about 09:00, installed Structural rel-20261009f 9babe787 = 1.0.110; code reading only; none seen in AutoCAD).
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural bug hunt. Never FIXED until Tim confirms in AutoCAD.
+
+**Evidence note (CE 05, 30 Oct 2026, from job p17 report areas\BUGFIX_p17_REPORT_30OCT.md; code read only):** already fixed on the Structural train line: R1, BT1, AB, BB, C1, TS1, BTX, FSF and FPFC stop with one plain line on a layout tab or inside REFEDIT and draw nothing (PR #887 / HUNT-S-07 is an ancestor of rel-20261026s head 204dfad2; DrawingSafetyService.CommandPreFlightModelSpace, ModelSpaceWriteGuard). Not proven in AutoCAD: a test for CE 02 (type BT1, C1, BTX on a layout tab; one stop line and an unchanged entity count). Related, not part of this entry: STRSCHEDCREATE on a layout tab was not checked (HUNT_STRUC_BRACING_REO_2026-10-12.md item 9). Still OPEN until confirmed.
 
 ---
 
@@ -9842,6 +9850,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** HUNT-M-05 (MEDIUM): the status line says "CE is current." when the office folder cannot be reached at all. When the office folder is missing no approvals are read (CeApprovedReleaseService.cs 33) and the status falls through to "CE is current." (CeReleaseStatusService.cs 138); CEHEALTH does warn about the folder, the status line does not. On a job: a colleague at home without OneDrive, or whose office folder synced under a different name (Manager looks in only two places, CePluginInstallerService.cs 46-71), sees a green "current" for months while the office has moved on. Right result: say "CE cannot see the office folder, so it cannot tell if you are up to date." To SEE: rename the office folder on a test account, restart AutoCAD, read the status line. HUNT file: C:\CE_PLAN\areas\release-v3-colleagues-HUNT_MANAGER_2026-10-09.md (hunt_mgr run 1, read-only, MAX account, 9 Oct 08:40-08:54; installed Manager 1.1.41 / Civil 3.0.41 at 660487d1, Structural 1.0.110; code, office folder and installed files read only; nothing built or run; none seen in AutoCAD).
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Manager and installer bug hunt. Never FIXED until Tim confirms in AutoCAD.
+
+**Evidence note (CE 05, 30 Oct 2026, from job p17 report):** this is a MANAGER bug ("CE is current" when the office folder is missing), not Structural, and already fixed on the Civil/Manager line (CeReleaseStatusService.cs line 158, comment HUNT-M-05, on rel-20261102a). To see it needs a PC or second Windows login without the office folder, so it is a test set-up item for CE 02 / CE 04, not a build. Still OPEN until confirmed.
 
 ---
 
@@ -15508,6 +15518,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 30 Oct 2026, from job p3b report areas\BUGFIX_p3_REPORT_30OCT.md):** draft PR #1893 (head 4bfdbf62, base rel-20261102a, the Civil line, NOT the Structural line): a damaged footing register is kept (raw text copied to <SettingsFolder>\Recovery\FootingRegister_DAMAGED_<drawing>_<utc>.txt, one editor warning) and never saved over. Built and unit-tested, focused tests only; settings listings before and after identical. Needs a twin on claude/rel-20261026s before a Structural train. Not proven in AutoCAD. Still OPEN.
+
 ## BUG-1137 — On AutoCAD 2022-2024, one downpipe in a COPY cancels the copy clean-up for every pit and pipe in that copy
 
 **Command / Area:** COPY of pits, pipes and downpipes on the older lane, Civil 3.0.72 (T4-03). HIGH, SURE in code (MIRROR case UNSURE).
@@ -16280,6 +16292,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 30 Oct 2026, from job p13):** draft PR #1895 (head d09b4935, base claude/rel-20261026s = the Structural line): a new size gets the next free BR/SPR mark. Built and unit-tested only; not proven in AutoCAD. Still OPEN.
+
 ## BUG-1185 — Tag Bearers adds unwanted overlapping or shortcut lines
 
 **Command / Area:** CSTAGBEARERS, Structural 1.0.122 (RD14-03). MEDIUM, SURE.
@@ -16521,6 +16535,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** as the test, reading FST_DATA/TH_MEMORY after each step. Right looks like: only 82 in the library.
 
 **Status:** OPEN
+
+**Evidence note (CE 05, 30 Oct 2026, from job p3b report areas\BUGFIX_p3_REPORT_30OCT.md):** draft PR #1894 (head 0224c2e2, base rel-20261102a, the Civil line, NOT the Structural line): with the new switch ON, footing sizes removed by Undo are not read from or written back to the cache (ResolveFstData always calls the loader; SaveFstData skips the cache update); OFF = old path exactly. Needs a twin on claude/rel-20261026s before a Structural train. Not proven in AutoCAD. Still OPEN.
 
 ## BUG-1200 — Escape from THCL leaves a saved size, and a later Escape leaves an unlabelled outline
 
@@ -16830,6 +16846,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 30 Oct 2026, from job p16):** draft PR #1896 (B-074, head 6c6f0db1, base rel-20261102a) covers BUG-1218 and BUG-1220 (Help pages: Reverse Flow wording, Label Styles and Move Arrow cards). Wording only, built and unit-tested; not seen in AutoCAD. Still OPEN.
+
 ## BUG-1219 — Structural Beam Settings and Rafter/Joist Settings Help describe placing a member, but the commands only open Settings
 
 **Command / Area:** CEHELP (Show advanced commands), "Beam Settings (8)" and RJSET, Structural 1.0.122 (RD22-05). LOW, SURE.
@@ -16861,6 +16879,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** CDHELP search CDREVERSEFLOW, then run the command on a test pipe and press Enter. Right looks like: Help matches the Yes/No step.
 
 **Status:** OPEN
+
+**Evidence note (CE 05, 30 Oct 2026, from job p16):** draft PR #1896 (B-074, head 6c6f0db1, base rel-20261102a) covers BUG-1218 and BUG-1220. Wording only, not seen in AutoCAD. Still OPEN.
 
 ## BUG-1222
 
