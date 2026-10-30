@@ -572,6 +572,8 @@
 
 **run 35 (20 Oct, installed Civil 3.0.59 / C-49): STILL SEEN:** the docked What's New palette was in the window list again in session 1 (closed by quit); evidence CLAUDE_DRIVER_RUN35_V2_2026-10-20.md C item 8.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "4no" (decision 151): he has never seen the docked What's New panel. Parked as a robot-only oddity until a test lists the open windows after each step; no build. Still OPEN.
+
 ---
 
 ## BUG-821 — CDTAG ignores a block that is already selected and asks for a pick
@@ -2936,6 +2938,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1909 (B-088): FPFC and FSF keep the typ
 **Status:** OPEN
 
 **Evidence note (CE 05, 31 Oct 2026, from job s4 report):** SKIPPED, needs Tim's wording. The entry asks for one mark convention (number-only "1" versus full "PF1") and to "explain conflicting legacy rows". FEDIT rename already asks before changing a saved size (HUNT-S-11). Open PR #1898 (B-077, footing-size memory per drawing) is already in this area. Question to Tim via CE 04: when a drafter saves "PF1" in the footing library, should the saved row be called "PF1" or "1"? Still OPEN.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "10yes" (decision 157): the footing library name is PF1, one convention everywhere; this closes the PF1-versus-1 question. Job x5 queued (Structural). Still OPEN: not built.
 
 ## BUG-577
 
@@ -11186,6 +11190,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Evidence note (CE 05, 31 Oct 2026, from job s4 report):** SKIPPED, needs a design decision. The entry's own repair is "canonical native writer publishes all owned components as one identity" (card ST-08); COMMAND_TO_CARD_COVERAGE lists RCBEAM and RCRECTCOL as "implementation not started". It means a new grouping scheme for every RC detail with MOVE, ROTATE, ERASE and COPY rules: not a smallest-safe change. Needs the ST-08 design decision first. Still OPEN.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "11yes" (decision 158): moving an RC beam gives a warning now when only part of the detail moves; full grouping (card ST-08) is built after the pilot. Job x6 queued (Structural). Still OPEN: not built.
+
 ## BUG-614 — scale-aware Structural hatches refuse 1:50
 
 **Codex look L3 (18 Oct, installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118):** the CEHATCH window was opened on a Structural copy at DIMSCALE 1 and five library cards showed the words 'No preview: the drawing scale is not valid' instead of pictures; that is filed as BUG-751. The 1:50 refusal itself was not re-driven through the window.
@@ -15536,6 +15542,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1902 (B-082): length over 100 read as m
 
 **Evidence note (CE 05, 31 Oct 2026, from job s5 report):** SKIPPED, nothing to fix yet. The old-name problem only appears after the BUG-818 rename of the section list; the list has not been renamed (310UB32 is still 310UB32) and nothing on the Structural line calls the redraw code yet. It needs the BUG-818 decision first. Still OPEN.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "12this release" (decision 159): the CEMEMBER section-list rename IS in this release, so this stays OPEN and old beams must still redraw after the rename; job x7 writes the must-still-redraw test first. Not built.
+
 ## BUG-1133 — The new XCLMTXT angle rule only works when the angle symbol comes straight after the size
 
 **Command / Area:** XCLMTXT angle symbols, Structural 1.0.122 (T3 finding 13). LOW, UNSURE (not known whether any sheet puts the symbol elsewhere).
@@ -17043,6 +17051,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1916 (B-092): CEHELP wording for Beam S
 
 **BUG-861 evidence 27 Oct 2026 (robot bisect, areas\release-v3-colleagues-RUNNER_BUG861_BISECT_REPORT.md):** with ALL 14 diag.redo switches ON on Civil 3.0.81 (every CE selection, Inspector, ribbon-tab, highlight and hover piece skipped; CE log confirms) the first click after U still loses REDO: 6 of 6 fresh sessions (4 of 4 on a pit click, 2 of 2 on a plain AutoCAD line, no CE object). Baseline all-off: 3.0.80 2 of 2 fail, 3.0.81 4 of 5 fail (one pass). So the cause is outside the 14 pieces: still possible are the Civil work that runs on U itself (Project data reloaded after Undo/Redo, LinkService.RebuildRuntimeCaches trigger undo/redo), Structural/Manager add-ins, CE_SHARED, or AutoCAD's own first-real-click handling. BUG-861 stays OPEN. Next: code read of everything that runs on U (Team Opus job).
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "2yes" (decision 149): Apply CE Standard Layers resets colour, linetype, lineweight and plot only; lock, freeze and on/off stay as set, and the status line names them. Job x1 queued (Structural). Still OPEN: not built.
+
 
 ## BUG-1225
 
@@ -17718,6 +17728,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Tim's 28 Sep 2026 ruling (decisions folder; exact wording not re-read here); p6 report; related BUG-495. Question for Tim: what should plot when nothing is ticked (goes to CE 04).
 
 **Status:** OPEN (nothing built; needs Tim's wording of what plots). Never FIXED until confirmed in AutoCAD.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "3yes" (decision 150): with nothing ticked, a plain warning, plot nothing, keep every revision, record "no sheets" in the history, never a block. Job x2 queued (Structural). Still OPEN: not built.
 
 ---
 
