@@ -4,7 +4,7 @@
 
 Approved by CE 00 Fri 30 Oct 2026 for Tim's ruling "try to complete everything in the bug document" (decisions\2026-10-30_TIM_COMPLETE_ALL_BUGS.md). Any new CE 01 session resumes from this file.
 
-1. **Last launch:** Sat 31 Oct 01:22 PC clock: s4 (Structural batch S-4: BUG-578, 613, 616; chain_fix_g83) and s5 (S-5: BUG-1121, 1132; chain_fix_g84) on Team (Team week 92 at 01:21; stop launching at 97). Done: s1 (all already fixed, no PR), s2 (PR #1898 B-077), s3 (PR #1899 B-078), v1 read-only check. p18 held. Next: s6.. only if the Team week stays at or under 95; Max from about 09:30; the rest after the Team reset 14:00.
+1. **Last launch:** Sat 31 Oct 01:42 PC clock: s6 (Structural batch S-6: BUG-611, 1126, 1131; chain_fix_g85) and s7 (S-7: BUG-1122, 1123, 1128; chain_fix_g86) on Team (Team week 92 at 01:41; stop at 97). Done: s4 (PR #1901 BUG-616, B-080; BUG-613 and 578 skipped), s5 (PR #1900 BUG-1121, B-081; BUG-1132 skipped), s2 #1898, s3 #1899. p18 held. Next: s8.. only if the Team week stays at or under 95; Max from about 09:30; the rest after the Team reset 14:00.
 2. **Queue:** empty until q1 writes the ordered build queue. Then the check-in launches the next item. Already in flight before the pipeline: c87a (B-011), c87b (BUG-1091), c92a (#1871), c93a (#1873), c95a (#1875), Max Sonnet agents B-029b (#1874, worktree c79f) and B-028 (BUG-587, worktree c79e, started 19:55).
 3. **Guards, checked at every launch (read C:\CE_PLAN\desk_jobs\team_usage.ps1, exact; USAGE.json is hourly and can be stale):**
    1. Until Sat 31 Oct 14:00: Team 7-day under 99 and Team 5-hour under 85.

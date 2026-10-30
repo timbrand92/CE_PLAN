@@ -2933,6 +2933,8 @@
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 31 Oct 2026, from job s4 report):** SKIPPED, needs Tim's wording. The entry asks for one mark convention (number-only "1" versus full "PF1") and to "explain conflicting legacy rows". FEDIT rename already asks before changing a saved size (HUNT-S-11). Open PR #1898 (B-077, footing-size memory per drawing) is already in this area. Question to Tim via CE 04: when a drafter saves "PF1" in the footing library, should the saved row be called "PF1" or "1"? Still OPEN.
+
 ## BUG-577
 
 **Command / Area:** Structural beam1/2/4, installed1.0.116+f180b349, unitlessownedfixture14Oct2026.
@@ -11164,6 +11166,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
+**Evidence note (CE 05, 31 Oct 2026, from job s4 report):** SKIPPED, needs a design decision. The entry's own repair is "canonical native writer publishes all owned components as one identity" (card ST-08); COMMAND_TO_CARD_COVERAGE lists RCBEAM and RCRECTCOL as "implementation not started". It means a new grouping scheme for every RC detail with MOVE, ROTATE, ERASE and COPY rules: not a smallest-safe change. Needs the ST-08 design decision first. Still OPEN.
+
 ## BUG-614 — scale-aware Structural hatches refuse 1:50
 
 **Codex look L3 (18 Oct, installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118):** the CEHATCH window was opened on a Structural copy at DIMSCALE 1 and five library cards showed the words 'No preview: the drawing scale is not valid' instead of pictures; that is filed as BUG-751. The 1:50 refusal itself was not re-driven through the window.
@@ -11208,6 +11212,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Ownership / status:** Claude command/service lane; noimplementation/deploybyCodex. OPEN, notfixed orwholeworkflowaccepted.
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
+**Evidence note (CE 05, 31 Oct 2026, from job s4 report areas\BUGFIX_s4_REPORT_31OCT.md; built and unit-tested only, nothing run in AutoCAD):** still present on the Structural train line (204dfad2): NativeXrefLayerService.Run moved every reference straight after the counts (lines 68 to 96). Draft PR #1901 (B-080, head 468b252c, base claude/rel-20261026s): XRL highlights the Xrefs and asks "12 Xref instances will move to layer XREF. Apply or Cancel?"; Enter moves as today; Cancel or Esc moves nothing and makes no XREF layer; XRLFAST and XRLSILENT never ask. Switch XrefLayer.ConfirmBeforeMove, ON (settings file only). Needs an AutoCAD look. Still OPEN.
 
 ## BUG-617
 
@@ -15300,6 +15306,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 31 Oct 2026, from job s5 report areas\BUGFIX_s5_REPORT_31OCT.md; built and unit-tested only):** draft PR #1900 (head 7fd49669, base claude/rel-20261026s; title has no B number yet, CE 01 gives B-081): at the CEMEMBER "Section name" prompt, typing 114.3x6, 168.3x6, 60.3x4 or 89x89x3 used to pick the 6.4, 6.4, 4.5 or 3.5 wall without saying so; now CEMEMBER says there is no section called that. 114.3x6.4 and 114.3x6.4chs still work; 310UB3 still finds 310UB32. Switch CeMember.SectionNamePrefixStopsAtDecimalPoint, ON (settings file only; off = old behaviour). Files: CeMemberPrompts.cs, CeMemberCommands.cs, UserSettings.cs. Needs an AutoCAD look. Still OPEN.
+
 ## BUG-1122 — The office short spellings and the Lysaght purlin names are not found by SBEAM or CEMEMBER
 
 **Command / Area:** SBEAM search, CEMEMBER and XCLMTXT spelling table, Structural 1.0.122 (T3 finding 2). MEDIUM (a refusal, never a wrong section), SURE.
@@ -15475,6 +15483,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** after BUG-818, edit a beam placed before it. Right looks like: it redraws, no "not in the section list".
 
 **Status:** OPEN
+
+**Evidence note (CE 05, 31 Oct 2026, from job s5 report):** SKIPPED, nothing to fix yet. The old-name problem only appears after the BUG-818 rename of the section list; the list has not been renamed (310UB32 is still 310UB32) and nothing on the Structural line calls the redraw code yet. It needs the BUG-818 decision first. Still OPEN.
 
 ## BUG-1133 — The new XCLMTXT angle rule only works when the angle symbol comes straight after the size
 
