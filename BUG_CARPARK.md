@@ -2914,6 +2914,8 @@
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 27):** CANNOT TELL from the code. The depth is held in FoundationElementData.Depth (Models/FoundationModels.cs 101), set at placement and read back by FEDIT (FoundationService.cs 1942-1948) and the schedule (FoundationScheduleBuilder.cs 160-204). The loss after Undo/Redo of the registry record could not be followed to a line; no commit or log line names it. Needs an AutoCAD run (FPFC with depth 350, U, REDO, FEDIT) or a trace of the registry write timing. Still OPEN.
+
 **Fresh isolation, 14 Oct 07:24 Melbourne:** PF2 placed with X800/Y800/depth450, point-2000,2000 and rotation0. Before any Undo/Redo of PF2, FEDIT offers depth0 and the live schedule shows PF2 depthUNKNOWN. Initial placement/readback is sufficient to reproduce. In contrast FEDIT explicitly re-entered PF1 depth350 with width1000; actual schedule updated immediately and still reads350 after FEDIT Undo/Redo and later PF2 creation. Screens145-153. Keep OPEN; editing depth again is a workaround. Proposed regression must inspect the element/editor/schedule immediately after FPFC, before recovery tests.
 **Strip route extension, 14 Oct:** FSF SF1 width400/depth300, native two-point straight line, successful outline and one Undo/delayedRedo. FEDIT correctly reads width400 but depth0; inspection cancelled. Screen157. Include strip placement in the proposed depth-retention guard; immediate-before-Undo proof is already established separately for PF2.
 
@@ -9766,6 +9768,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note (CE 05, 31 Oct 2026, from the read-only check areas\STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 33; code read only, nothing run in AutoCAD):** already fixed in the code on the Structural train line (origin/claude/rel-20261026s, head 204dfad2 = installed 1.0.125): HUNT-S-05, PR #899 (commit 987ca9dd, merged into S-31 as 1907fd78). FoundationService.cs 3911-3918 calls RefuseCentrelinePick; FoundationService.Identity.cs 89-114 refuses CE's own outline, a raft edge and another footing's centre line with "That is the outline CE drew for [footing]. Pick or draw a centre line instead. Nothing was drawn." No Settings switch (native-protection refusal). Pinned by HuntS05CentrelinePickTests. Proof candidate for CE 02 (FSF, pick an existing footing's outline). Still OPEN until confirmed in AutoCAD.
+
 ---
 
 ## BUG-471
@@ -9791,6 +9795,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** HUNT-S-08 (MEDIUM, symptom "I think"): locked layers: BT1, C1, TS1 and BTX have no locked-layer check. CSREOBAR uses CE's shared check and plain line (LayerService.cs 219-236; ReoBarService.cs 150-155); BT1, C1, TS1 and BTX do not. BT1: after the brace is added the flip question opens it for changing (BracingService.cs 1748, 1762) and BT1 has no error catch (BracingCommands.cs 255-361 has only a finally); I think WALL BRACING TYPE BT1 locked plus Yes or Esc at "Toggle flip?" ends in an AutoCAD error with the brace left in place. BTX opens each picked text for changing with no catch (BeamTextConvertCommands.cs 102, 154): locked text probably ends in an error box, nothing converted. C1/TS1 rotation uses AutoCAD's ROTATE (SupportBlockCommands.cs 775), which I think skips a column on a locked SUPPORT COLUMN layer with no CE sentence. Right result: check first, say one plain line, draw nothing; never unlock. HUNT file: C:\CE_PLAN\areas\release-v3-colleagues-HUNT_STRUC_2026-10-09.md (hunt_struc run 1, read-only, MAX account, 9 Oct about 09:00, installed Structural rel-20261009f 9babe787 = 1.0.110; code reading only; none seen in AutoCAD).
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural bug hunt. Never FIXED until Tim confirms in AutoCAD.
+
+**Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md):** already fixed in the code on the Structural train line (head 204dfad2): HUNT-S-08 locked-layer guard; BT1, C1, TS1, AB, BB and BTX stop with one plain line when their layer is locked and draw nothing; BTX leaves locked text alone and counts it; nothing is ever unlocked. Proof candidate for CE 02 (lock the target layer, run each command). Still OPEN until confirmed in AutoCAD.
 
 ---
 
@@ -10357,6 +10363,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Desk note (9 Oct): the audit's own per-item status ('in the file only' / 'ignored or part') is the authority; the list in this entry is the clerk's mapping and is good enough but not exact. The Codex rows brief reads the audit directly.**
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
+
+**Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 34):** PART fixed on the Structural train line (head 204dfad2): SCREWPILE offers the Settings diameter; REBAR starts from the Settings bar size, spacing and count; beam shorten reads its choices from Settings. Half done: BP (bored pier) reads the Settings default diameter but still always uses the 450 block. Still fixed numbers: label height read by only two commands, member schedule sizes, footing schedule column widths, the load-path round-up to 50 mm and the 450 mm pier. A builder should take only the four open parts. Still OPEN.
 
 ---
 
@@ -11105,6 +11113,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 ## BUG-611
 
 **Status:** OPEN — installedStructural1.0.116+f180b349, realAutoCAD2027,15October2026.
+
+**Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 12; code read, window not looked at):** already fixed in the code on the Structural train line (head 204dfad2): SteelSectionPickerDialog.xaml.cs 450-453 shows "No local steel sections match that search." only when the list is empty and the family is not Timber. PR #1262 (commit 0bae4ef8, merged into train S-38 as 12786435), REGRESSION_LOG entry "BUG-611". Codex looked at rendered frames in the PR, not at AutoCAD. Needs a Codex look in AutoCAD (SBEAM, choose Timber, 90x240 preview live). Still OPEN.
 **Severity:** LOW — valid Timber preview wrongly reports no local steel section matching a search.
 
 1. **Steps:** syntheticcopy,SBEAM/PFC/search200,then200ZZZ; clearsearch/restoredPFC, select200PFC, SideElevation/Away/FrontElevation, thenTimber. Typewidth90/depth240mm; switchSection.
