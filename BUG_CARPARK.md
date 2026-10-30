@@ -16490,6 +16490,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Steps to confirm in AutoCAD:** PITSCHEDULE, Export CSV, Cancel, close the schedule, CLOSE. Right looks like: no "Save changes?" question.
 
+
+**Related evidence (30 Oct 2026, CE 02, Codex look H3, CODEX_VERIFY_H3_20261030_0807.md):** the Export Excel step of the cancel test could not be reached: no file chooser opened and the command line showed a Pit Schedule rendering error twice (BUG-1255). BUG-1198 is not Codex-accepted by this run; the CSV-cancel half added no drawing-write line. Evidence only.
 **Status:** OPEN
 
 ## BUG-1199 — Structural keeps and later re-saves footing sizes that Undo removed
@@ -17399,3 +17401,67 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** CODEX_VERIFY_G7_20261030_0627.md (G7-01 FAIL), CE 02 message to CE 05 30 Oct 2026. Related BUG-879 (hand-placement marks, another route), robot check N27 (passes only the part it names) and N31, QUESTIONS_FOR_MONDAY.md item 19, CODEX_CASE_REVIEW_cx_cr25.md.
 
 **Status:** OPEN - ON HOLD (waits for Tim's answer to Monday question 19: keep or change the label rule). Evidence only; never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1253 — After moving a pit 2 m, its upper-left invert text sits on the blue pipe strip
+
+**Command / Area:** MOVE of a pit (pit P3, moved 2 m) and the re-placing of its labels, Civil 3.0.86 (Codex look G5, 30 Oct 2026 07:39, on a copy). WRONG ANSWER (label placement), FAIL, SURE; not Claude-accepted or Tim-confirmed.
+
+**Symptom:** MOVE of P3 by 0,2000 prints "1 found" and no window opens. At the new place the pit's upper-left invert text (IL 18.24) newly overlaps the upper-left blue pipe strip: the red lettering crosses the blue fill. Before the move it sat beside the strip. The number circle and the four other invert texts stay clear. Codex could not accept the complete look because the close view clips the cover and upper invert values. A separate old overlap (the two lower IL 18.10 texts crossing the yellow boundary before the move) is recorded as pre-existing and is gone after the move.
+
+**Expected behaviour:** After the move the pit's number circle, cover text and invert texts are each readable and none newly sits on another text, the pit outline or a pipe strip.
+
+**Steps to confirm in AutoCAD:** (1) Open the G5 copy (pit P3 with two upper pipe ends). (2) MOVE P3 by 0,2000. (3) Zoom to the pit and read where the upper-left IL text sits against the blue strip. Right = clear of the strip.
+
+**Reference:** CODEX_VERIFY_G5_20261030_0739.md (G5-01), evidence C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\G5_20261030_0739. Related BUG-141 (label tidy) and the Tidy labels family. CE 02 message to CE 05, 30 Oct 2026.
+
+**Status:** OPEN (evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1254 — The CDCHECKDWG results list cuts off its next row at the bottom, and one wheel turn does not bring it into view
+
+**Command / Area:** CDCHECKDWG results window (card D28, case R40), Civil 3.0.86 (Codex look G4-01, 30 Oct 2026 07:27, on a copy). LOW to MEDIUM, LOOK, FAIL, SURE; not Claude-accepted or Tim-confirmed.
+
+**Symptom:** The window has a readable summary, complete headings (Where, Finding, Check) and a Close button. Ten rows show fully (the last is GUIDELINES, "Not a recognised drainage layer"). A following row shows only tiny unreadable fragments at the bottom edge of the list. A vertical scrollbar is present, but one mouse-wheel turn did not bring the row into view.
+
+**Expected behaviour:** Every row is either fully shown or fully hidden below the edge, and scrolling brings the next row fully into view. (The About window passed the same kind of check: all rows complete, no scrolling.)
+
+**Steps to confirm in AutoCAD:** (1) Run CDCHECKDWG on a copy that gives more than ten findings (Enter at the path question). (2) Look at the bottom edge of the list. (3) Turn the wheel once. Right = no half-cut row, and the next row appears whole.
+
+**Reference:** CODEX_VERIFY_G4_20261030_0727.md (G4-01; G4-02 About window PASS), evidence LOOKS\G4_20261030_0727. CE 02 message to CE 05, 30 Oct 2026. Related BUG-808 and BUG-790 (other CDCHECKDWG findings).
+
+**Status:** OPEN (evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1255 — Pit Schedule Export Excel opens no file box and the command line shows a "Pit Schedule rendering error" twice (to check)
+
+**Command / Area:** PITSCHEDULE window, Export Excel button, Civil 3.0.86 (Codex look H3, 30 Oct 2026 08:07, on a copy). Severity to confirm; the Codex result is BLOCKED, not a verdict.
+
+**Symptom:** Clicking Export Excel (and one allowed repeat click) opened no file chooser. After the window was closed the command line showed "[CE] Creative Engineering | Pit Schedule rendering error - see CE log for details." twice. No export was made. The CSV export cancel half ran and added no drawing-write line. Codex did not open the CE log, so the cause is unknown; it may be a real fault or a test-set-up fault (the fixture had 27 rows and "95 data issues").
+
+**Expected behaviour:** Export Excel opens the Windows save box, as CSV does. A rendering error line never appears for a normal export.
+
+**Steps to confirm in AutoCAD:** (1) Run PITSCHEDULE on a copy with schedule rows. (2) Click Export Excel. (3) Right = the Windows save box opens; read the command line after closing the window for any rendering error. If it repeats, read the CE log line it points at (a robot or desk job; Codex did not).
+
+**Reference:** CODEX_VERIFY_H3_20261030_0807.md (H3-01 BLOCKED), evidence LOOKS\H3_20261030_0807. Related BUG-1198 (cancelling a Pit Schedule export saves the row order), evidence note added there. CE 02 message to CE 05, 30 Oct 2026.
+
+**Status:** OPEN (to check; evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1256 — The consultant drawing reader's cancel line reads "Import aborted at pre-flight gate" instead of the card's cancelled sentence
+
+**Command / Area:** Consultant drawing import (card C3-03), Civil 3.0.86 (Codex look C3, 30 Oct 2026 09:13, on a copy). LOW, WORDING, DIFFERENT (not a fail); decide which is right.
+
+**Symptom:** The consultant DWG reader offered no AI extraction and sent nothing (correct). On Close it printed "Import aborted at pre-flight gate - no entities were inserted." The card expected the plain cancelled sentence.
+
+**Expected behaviour:** The closing line matches the card's wording, in plain English without the words "pre-flight gate" (no jargon in lines a drafter reads). Or the card is changed to the real wording if Tim prefers it. Tim has not seen this.
+
+**Steps to confirm in AutoCAD:** Run the consultant drawing import on a copy, choose a drawing, then Close; read the last command line. Right = a plain cancelled sentence that says nothing was inserted.
+
+**Reference:** CODEX_VERIFY_C3_20261030_0913.md (C3-03 DIFFERENT; C3-01 and C3-02 PASS: Send and Analyse markups refuse with the AI switch off). CE 02 message to CE 05, 30 Oct 2026.
+
+**Status:** OPEN (wording; evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
