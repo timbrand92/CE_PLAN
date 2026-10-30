@@ -21,7 +21,7 @@
     "acceptedNote": "Rule 16 union at 07:50 Fri 30 Oct: Tim by hand 25 + robot-only 4 (D19 Tim half-tested, CDSYNC keeps schedule C42, Tidy labels C37, CDTWL freeboard C39 = ledger item 30) = 29 of 40; both routes 15; D08 FO/OF symbol disputed (robot accepted it, Tim saw OF, BUG-1236) and not counted"
   },
   "installed": "Civil 3.0.87 · Manager 1.1.87 (C-77, 14:29 Fri, commit f5dd72a0) · Structural 1.0.125",
-  "waiting": "C-77 installed 14:29 Fri 30 Oct (Civil 3.0.87 / Manager 1.1.87, class FULL, 24 PRs, GO at 02681d9f); CE 02 runs the FULL re-test on 3.0.87 (B-055 proof N38/C38 first). C-78 (tonight, Civil 3.0.88): assembler started 14:26 with #1867 BUG-1227 Part A and #1858 BUG-857, plus BUG-1255 Excel fix and plain RG label when built; install after 17:30, one more AutoCAD-closed window of about 15 to 35 minutes.",
+  "waiting": "C-77 installed 14:29 Fri (Civil 3.0.87 / Manager 1.1.87, class FULL; undo = rename the *_PRE_5888ee75_20261030-142802.backup folders back); FULL robot re-test running on 3.0.87 since 14:35 (pass a of the 66 ends about 17:40, then priority tier 1 extras, Codex block about 18:00 to 19:30, then pass b; whole set ends about 01:15 Sat); C-78 (Civil 3.0.88) builds tonight but installs only after the full set and Codex block end; Team 5-hour at 100% until 16:00 reset (Max Opus case reviews ready as Max agents, first about 19:15); colleague hand-over by hand being prepared (waiting on Tim: folder path, yes to place, colleague's AutoCAD year); cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T14:42:55+11:00"
+  "countedAt": "2026-10-30T15:43:06+11:00"
 }
