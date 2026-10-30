@@ -46,3 +46,8 @@ Overwrote CE 01's chain_fix_g61 for a minute (restored); said BUG-495 was alread
 2. **B numbers:** asked CE 01 for five (B-093..B-097?) for w1..w5; ask again at launch if no reply. B-086 is "no build yet" (BUG-630/631).
 3. **Item 126 (new Settings tab "Switches")** is a window: written as a Codex brief, areas\CODEX_BRIEF_SWITCHES_TAB_31OCT.md; B number needed from CE 01 before its PR. Items 124 (bug order) and 129 (colleague pack) are NOT decided: do not act.
 4. **Carpark:** BUG-467 corrected (unconfirmed robot FAIL, #1883 does not fix the second point); notes added on BUG-1267 and BUG-903 for Tim's answers. Next free BUG number still 1268.
+
+## UPDATE Sat 31 Oct 08:55 PC clock (launch order after the 14:00 Team reset; supersedes the order in the 07:55 update)
+1. **ONE job at a time on Team, in this order:** y1 (g109, B-099, read-only Opus audit of writers into Tim's real outbox/logs; CE 01 wants it FIRST), p19 (g96, BUG-467 root cause, Opus, read-only), w1 (g97, B-093), w2 (g98, B-094), w3 (g99, B-095), w4 (g100, B-096), then x1..x7 (g102..g108, B-100..B-106), w5 (g101, B-097) only if CE 02's proof or the Codex look fails, p18 (g74) once the footing PRs are in a head. Next free B number B-107. Team limit 15 points a day after the reset.
+2. **Voice batch 2 (items 148 to 159) jobs x1..x7 are written;** items 151 (BUG-822 parked) and 156 not built. Item 126 = Codex brief areas\CODEX_BRIEF_SWITCHES_TAB_31OCT.md. FIXED rule changed in BUG_CARPARK.md (ledger acceptance). A one-shot check at 14:08 launches y1 first.
+3. **Waiting on CE 04:** areas\BUG_PROOF_LANES_31OCT.md; then add lane (A/B/C) and pass record (build, date, run ids) fields to carpark entries and recount in the four words Built, Tested, Installed, Tim/Codex-accepted.
