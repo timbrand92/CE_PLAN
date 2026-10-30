@@ -23,19 +23,19 @@
   "installed": "Civil 3.0.87 · Manager 1.1.87 (C-77, 14:29 Fri, commit f5dd72a0) · Structural 1.0.125",
   "waiting": "C-77 installed 14:29 Fri (Civil 3.0.87 / Manager 1.1.87, class FULL; undo = rename the *_PRE_5888ee75_20261030-142802.backup folders back); nothing accepted on 3.0.87 yet; full robot re-test running (1-in-100 variants pass, no FAIL so far); Codex block started 18:34 (J4 first, 11 looks, about 3 h); C-78 (Civil 3.0.88, class AREA, finalizer GO 18:26 at 91963bd0) installs Sat morning at the earliest after the C-77 full set (about 08:30 to 09:30), with the Excel (#1871) and grade-window (#1873) fixes added after my re-check; reviews #1872 #1874 #1875 go to the train after C-78; colleague copy held; Rule 18: side sessions cleared at about 60 percent context (CE 01 first); cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T18:54:10+11:00",
+  "countedAt": "2026-10-30T19:37:51+11:00",
   "allBugs": {
-    "scope": "every entry in BUG_CARPARK.md (Tim 30 Oct: 'my idea is try to complete everything in the bug document'); the earlier 37-bug release list is dropped as a total; the 60 pilot-critical bugs stay a subset",
+    "scope": "every entry in BUG_CARPARK.md (Tim 30 Oct: 'my idea is try to complete everything in the bug document'); the 60 pilot-critical bugs stay a subset",
     "total": 1205,
-    "openNoFix": 698,
-    "openFixInstalled": 336,
-    "openFixDrafted": 32,
-    "inProgress": 47,
-    "fixedAnyKind": 75,
-    "wontFix": 1,
-    "freeTextToClassify": 16,
+    "confirmedOrAccepted": 34,
+    "fixedInSourceNotAccepted": 49,
+    "fixInstalledWaitingConfirmation": 359,
+    "fixDraftedNotInstalled": 47,
+    "inProgress": 48,
+    "openNoFix": 664,
+    "closedNotAFix": 4,
     "tim_confirmed_fixed": null,
-    "countedBy": "CE 01 by Status line, Fri 30 Oct 2026 evening; source decisions\\2026-10-30_TIM_COMPLETE_ALL_BUGS.md",
-    "note": "fixed counts only what Tim confirmed in AutoCAD or the ledger accepts by name; installed is not fixed"
+    "countedBy": "CE 05 by each entry's last Status line, Fri 30 Oct 2026 evening (one keyword rule; 'not installed' statuses excluded; 13 free-text statuses classified by hand); definitions in areas\\BUG_PIPELINE_STATE.md; replaces CE 01's earlier count and job q1's recount",
+    "note": "installed is never counted as fixed; fixed means Tim confirmed in AutoCAD or the ledger accepts it by name"
   }
 }
