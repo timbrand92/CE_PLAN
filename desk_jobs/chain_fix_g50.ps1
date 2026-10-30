@@ -5,7 +5,7 @@ foreach ($k in 'p3b') {
   if (Test-Path "$d\STOP_CHAIN.flag") { Log 'STOP flag'; exit }
   $model = 'sonnet'; if ($k -eq 'c' -or $k -eq 'h') { $model = 'opus' }
   $job = "$d\team_fix_$k.txt"; $lg = "$d\team_fix_$k.log"
-  $cmd = 'set "CLAUDE_CONFIG_DIR=C:\Users\TimothyBrand\.claude-team"&& set "PATH=%PATH%;C:\Users\TimothyBrand\AppData\Roaming\npm"&& claude -p --model ' + $model + ' --permission-mode bypassPermissions --output-format text < "' + $job + '" > "' + $lg + '" 2>&1'
+  $cmd = 'set "CE_STRUC_SUITE_APPDATA_ROOT=C:\ce-scratch\p3b\struc"&& set "CE_LOG_DIR_OVERRIDE=C:\ce-scratch\p3b\logs"&& set "TEMP=C:\ce-scratch\p3b\tmp"&& set "TMP=C:\ce-scratch\p3b\tmp"&& set "CLAUDE_CONFIG_DIR=C:\Users\TimothyBrand\.claude-team"&& set "PATH=%PATH%;C:\Users\TimothyBrand\AppData\Roaming\npm"&& claude -p --model ' + $model + ' --permission-mode bypassPermissions --output-format text < "' + $job + '" > "' + $lg + '" 2>&1'
   Log "starting team_fix_${k} (${model})"
   Start-Process cmd.exe -ArgumentList '/c', $cmd -WorkingDirectory 'C:\Lisp Files\CE_ACAD_PLUGIN' -WindowStyle Hidden -Wait
   Log "finished team_fix_${k}"
