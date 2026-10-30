@@ -44,7 +44,7 @@
 
 ## Robot case (for CE 02)
 1. **Case name:** N35_sched_row2 (keep the style of N31_dp_time) with its switch-off control N35_sched_row2_off.
-2. **N35_sched_row2 types:** open the P1/P2/P3 test drawing (two 450 x 450 pits with a note on P2, as in BUG-587), PITSCHEDULE, Place, then read the drawn cells. **Checks:** P1 to P2 column 1 text is 750 apart in Y as before, P2 to P3 is 1125 apart (P2's row is two rows thick, so its text is centred 375 lower and P3 is one row lower); the number of WIPEOUT entities carrying xdata CE_SCHED_ROWMASK is 10 (one per column); every cell of P2's row has the same Y.
+2. **N35_sched_row2 types:** open the P1/P2/P3 test drawing (two 450 x 450 pits with a note on P2, as in BUG-587), PITSCHEDULE, Place, then read the drawn cells. **Checks:** P1 to P2 column 1 text is 1125 apart in Y and P2 to P3 is 1125 apart (P2's row is two rows thick and its text is centred on it, so it sits 1.5 rows below P1 and P3 is 1.5 rows below that; with the switch off both gaps are 750); the number of WIPEOUT entities carrying xdata CE_SCHED_ROWMASK is 10 (one per column); every cell of P2's row has the same Y.
 3. **N35_sched_row2_off types:** the same, with linking.scheduleRowGrowsForLongRemark false in the case's own settings copy, a fresh Place. **Checks:** P1 to P2 and P2 to P3 are both 750 apart and there are 0 CE_SCHED_ROWMASK wipeouts. If the off case passes the same checks as the on case, the check is not testing the fix.
 4. **Reopen check:** QSAVE, reopen, Update placed schedule, read again: all Y values unchanged.
 
