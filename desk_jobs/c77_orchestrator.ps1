@@ -19,6 +19,8 @@ Set-Content "$d\ROBOT_STOP_AT.txt" ($blockStart.ToString('yyyy-MM-dd HH:mm'))
 L "ROBOT_STOP_AT written ($($blockStart.ToString('HH:mm'))): chain finishes its pack and stops"
 while (ChainAlive) { Start-Sleep 20 }
 Remove-Item "$d\ROBOT_STOP_AT.txt" -Force -ErrorAction SilentlyContinue
+L 'chain paused: running the B-055 proof again (spec_c77_proof_fix.txt) before the Codex block'
+& pwsh -NoProfile -File 'C:\ce-fx\c75regrade3\chain4.ps1' -SpecFile 'C:\ce-fx\retest\spec_c77_proof_fix.txt' -StopFirst '2026-10-31 05:00' -StopAll '2026-10-31 05:30' -Fresh
 L 'chain paused; Codex block starts'
 $f = "$d\STOP_CODEX.flag"; if ((Test-Path $f) -and ((Get-Content $f -Raw) -match '^CE 02 chain4')) { Remove-Item $f -Force }
 & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null
