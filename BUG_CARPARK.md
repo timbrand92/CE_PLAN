@@ -10195,6 +10195,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the cross-cutting bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note 2 (CE 05, 31 Oct 2026, from CE 02):** the W2 picture is C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\C1b_20261031_0103\screenshots\C1b-03-W2z.png (full window C1b-03-W2.png beside it; colour reading exports\colours.txt in the same folder; report C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_C1b_20261031_0103.md, item C1b-03). Build 3.0.87+f5dd72a0. These are local test-copy files, not in a repo.
+
 **Evidence note (CE 05, 31 Oct 2026, from CE 00 via CE 01; Codex look W2 by CE 02 on build 3.0.87, Sat 31 Oct):** case C1b-03 (item a) FAIL SURE: the selected Diameter text in the New Pipe window has a BLUE background (#16436A). Picture C1b-03-W2z.png in CE 02's results (exact path not found by CE 01 or CE 05; asked CE 02). Not a C-78 fix; registered by CE 01 as B-079, a C-79 candidate (register item 127), no work started. Still OPEN, not accepted either way.
 
 ---
