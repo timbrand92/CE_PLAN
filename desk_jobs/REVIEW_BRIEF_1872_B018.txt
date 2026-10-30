@@ -1,0 +1,16 @@
+PRE-REVIEW BRIEF: PR #1872 (B-018, BUG-1099 council detention Tc), Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the named branch is allowed), build nothing, deploy nothing, open no AutoCAD, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_G_1872_B018_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven).
+
+The PR: #1872 (B-018, BUG-1099), branch fb/bug1099-council-tc head 336bc513b193959db02df8073fc54c42ee8b58b4, base claude/rel-20261026z. Author's report: C:\CE_PLAN\areas\release-v3-colleagues-BUG1099_FIX_REPORT.md. It sets the council detention time of concentration (Tc) for Maroondah, Boroondara and Maribyrnong. It is HALF the job: the council before-development C half (a new CDDESIGN box) is not built, so a 600 square metre Maroondah lot reads 4.29 L/s, not 3.68. Built and unit-tested only.
+
+Answer, with file and line for each claim:
+1. Are the three councils' Tc values what the report says, taken from the council data in the repository (never invented)? Is any value hard-coded instead of living in the council data / Settings (Tim's Settings-first rule)? Is there a switch, and its default?
+2. Does the change alter any OTHER council's results (regression risk)? Check the council sweep parity tests and the clash with #1841's council field that stopped #1854 and #1855 from merging into C-77.
+3. Does the base claude/rel-20261026z matter: will this rebase cleanly on the current train line claude/rel-20261030a (Civil 3.0.87) or claude/rel-20261102a? Say what would clash.
+4. What is NOT proven, and the AutoCAD scenario Tim or the robot would run to prove it.
+5. Verdict: KEEP, KEEP-WITH-NOTE (give the note) or DROP, and which train it could join.
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
