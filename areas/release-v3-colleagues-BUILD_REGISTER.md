@@ -176,6 +176,14 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 85. **B-011 PRE-REVIEW M (CE 00 Opus, 30 Oct; areas\OPUS_PREREVIEW_M_1857_B011_30OCT.md): PR #1857 head 09a6d1b8 = KEEP-WITH-NOTE, first train AFTER C-78 (C-79). B-011b fix list (Max Sonnet agent, worktree C:\ce-fx\c87a, branch fb/1788-extras-comma-and-speed).** Comma figure: in New Pipe (CD) and Edit Pipe (CDEDIT) a figure like 630,5 holds Start Pipe / Save with 'Diameter box: 630,5 has a comma: type 630.5' (1,200 offers both readings); only four boxes (Diameter, the two invert levels, detention Required length); a 'fix this box first' hold, not a hard stop. Unset material speed: CDRULES checks against the office 'Maximum pipe velocity' (6.0 m/s as shipped); blank office figure stays Unknown. Switches pipe.boxRefusesCommaFigure and pipeSpeedChecks.unsetMaterialUsesOfficeFigure ON, OFF = old answer. **Fix list B-011b:** (1) add Settings window tick rows for both switches (Settings-first; check the page height tests); (2) reword the CDRULES warning that calls 6.0 m/s 'the UPVC cap' (it is the office figure); (3) drop the PR's rewrite of one line of the older BUG-1222 REGRESSION_LOG entry ('set either switch to false'); (4) update the PR title and body ('NOT YET COMPILED' is stale); (5) merge the current base origin/claude/rel-20261102a into the branch (normal merge, keep both sides) and re-run the tests there (the 26 of 26 and 20,800 were on the PR's old base). NOT in B-011b, a follow-up card for CE 05: Project Review > Proposals > Pipe sizes still calls a pipe with no material speed Unknown while CDRULES now judges it at 6 m/s. The speed switch is deliberately not in the CDRULES staleness comparison (no STALE line). Robot cases N40 (switch-off control and a CDEDIT leg) and N41 with control. Not proven in AutoCAD.
 
+86. **B-064 RESERVED for CE 05's follow-up card BUG-1258 (pipe-size speed limit disagrees between CDRULES after #1857 and Project Review > Proposals > Pipe sizes).** Not started; CE 05 tells CE 01 when it starts.
+
+87. **B-065 Structural BUG-625 then BUG-1183 (bug pipeline job p5, CE 05, launched Fri 30 Oct 20:40).** Team job, chain_fix_g51, base origin/claude/rel-20261102a, isolated (scratch under C:\ce-scratch\p5). Report areas\BUGFIX_p5_REPORT_30OCT.md. PR number to be added when it opens.
+
+88. **B-066 Structural BUG-495, CESHEETS Publish Issue (job p6, CE 05, 20:40).** Team job, chain_fix_g52, same base, isolated (C:\ce-scratch\p6). Report areas\BUGFIX_p6_REPORT_30OCT.md. PR number to be added when it opens.
+
+89. **B-067 Civil BUG-1237 then BUG-1071 (job p7, CE 05, 20:40).** Team job, chain_fix_g53, same base, isolated (C:\ce-scratch\p7). Report areas\BUGFIX_p7_REPORT_30OCT.md. PR number to be added when it opens.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
