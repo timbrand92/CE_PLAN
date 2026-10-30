@@ -55,3 +55,8 @@ Civil 3.0.87 / Manager 1.1.87 (+f5dd72a0), installed Fri 30 Oct 14:29 (C-77, FUL
 2. Report to CE 00 when the payload is built and when the install is done; CE 07 told (its scoreboard gate changes).
 3. Outbox: 16 p14 test files quarantined in C:\ce_rc_scratch\quarantine_outbox_30oct (undo = MANIFEST.txt); the plugin outbox is never uploaded by design (drainPluginOutbox OFF); item 120 was wrong, item 122 corrects it. Question for Tim queued as QUESTIONS item 80 (CE 04 reframed it).
 4. Register items 111 to 123 written. Next free B number: B-077. B-064 held for BUG-1258. Open owed by me: B-018c, B-056c, the C-79 assembly (merge #1887 to #1892, #1893/#1894 reference only, #1896, #1897 and the others onto 7c6af57b), the Structural S-xx train.
+
+## 11. Payload 114 started (CE 01, Sat 31 Oct 03:43) - replaces the lane facts in sections 3 and 4
+1. The flag was written 03:30:42, but chain_c78d (pid 31336, started Fri 16:39) never reacted: it was still inside the 16:39 finalizer's Start-Process -Wait (the finalizer job ended 18:26, no child process left). My hourly checks only asked "is the pid alive", so I missed it for about 9 hours. MY MISTAKE. I stopped pid 31336 by its own pid and started chain_c78e.ps1 (the payload part of chain_c78d, GO check at 7c6af57b, flag, installed Civil 3.0.87, disk check, then payload114_c78_job.txt) through WMI: pid 45124. It logged to chain_c78.log: payload 114 (Sonnet, Team) started at 03:43. Install is NOT done by any chain; I install by hand after the payload report.
+2. The 22:52 BelowNormal patch means chain_c78e starts the job at BelowNormal and uses WaitForExit; the other lanes' running processes still hold the old text.
+3. Check from now on: a chain's log line for its current stage, not only its pid being alive.
