@@ -135,6 +135,10 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 65. **B-018b BUG-1099 second half: the council's own before-development C for Maroondah (35 percent cap on impervious area), so a 600 m2 lot reads 3.68 L/s not 4.29 L/s.** Needs a new CDDESIGN box for the existing impervious share. Not built; after #1872 is in a train.
 
+66. **B-057 Grade mismatch window skips the New Pipe window's own suggested level (found by the robot on C-77).** Team job team_fix_c91a; **DRAFT PR #1873 open 30 Oct 17:24 (base claude/rel-20261030a, head 75e3baab, 7 files +281 -3)**; built and unit-tested (B057MismatchBoxOwnSuggestionTests: 4.1 m at 1 in 100, 6.1 m at 1 in 200 and 2.5 m at 1 in 100 give no window with the flag, the window without it; a typed or edited level keeps the 10 percent test); switch pipe.mismatchBoxSkipsOwnSuggestion ON; not seen in AutoCAD; robot case N33_mismatch_own_level (control N33s_mismatch_own_level_off). Question for CE 04: when the window is skipped the label says the grade TYPED (1 IN 100), not the real 1 in 82: should it show the real one? NOTE: this fixes the short-pipe rounding case only; the both-levels-typed window of C-77 is the 1-in-100 table change (question 63).
+
+67. **B-056b four fixes to PR #1871 from the Opus pre-review F (30 Oct):** version check on the last fallback of ExcelLibraryBinding.cs (lines 121 to 123), the Settings-page comment (UserSettings.cs about 3308), no 'Use Export CSV' in the CDCALC and Structural messages (they have no CSV), and confirm the probed build equals the committed code by re-running the probe. Team job team_fix_c92a started 30 Oct 17:38. Robot case N41c must be rewritten by CE 02 (the plain message shows only with the switch ON). Privacy: C:\ce-fx056\iso\Local (AutoCAD logs with real job names and addresses) stays local and is cleaned up after the follow-up probe.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
