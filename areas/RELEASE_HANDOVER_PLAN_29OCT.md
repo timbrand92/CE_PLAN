@@ -165,3 +165,20 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 
 1. Add to the §8 go checklist: for BUG-1227, BUG-1088, BUG-1095, BUG-1251 and BUG-1255 the shipping build either has a passed named proof (robot case or Codex look, two clean starts where robot) or page 04 names the fault with its workaround. Page 04 wording for BUG-1227 is "place the copy well clear (5 m was safe; 0.1 mm was not)", not "a small offset". Status of each is in RELEASE_SCOREBOARD section 2, item 3a.
 2. Max's AutoCAD year stays a gate: if it is not 2027 by Fri 13 Nov, BUG-1209 and BUG-1210 apply and the pilot waits.
+
+## 15. Addition Sat 31 Oct 07:33: Tim's spoken answers (decisions 130 to 139) change the hand-over (CE 07)
+
+Source: decisions\2026-10-29_TIM_ANSWERS.md items 130 to 140 (Tim's words in quotes there). Nothing below is sent to Max; everything below is for Tim.
+
+1. **Install on Max's PC, Mon 16 Nov 08:40: Tim does it** ("1me"), about 20 minutes, following page 02, the desk on the line. **I owe:** page 02 rewritten as the exact steps for Tim (not for Max), with the one-line undo; Tim's own settings are not touched.
+2. **Old Manager in Max's all-users folder: Tim checks** ("2me but youll need to run me through it"). **I owe:** a plain step-by-step with exact clicks, ready by Mon 9 Nov, for the check in the week of Mon 9 Nov. Remember BUG-1165: the old copies in the all-users folder must go before the install.
+3. **Max's July Structural: rename its folder to .backup before install day** ("3yep"). **I owe:** the rename as a step in Tim's install-day list, and the undo (rename back).
+4. **First week on COPIES of live jobs** ("4yes"); real jobs only after Codex has passed the pilot build and 5 working days with no new bug. **I owe:** one line on page 01 and page 05.
+5. **Share 'CE Plugin Pilot Results' with Max as 'can edit', with a walk-through on the day** ("5yes run me through on the day what i need to do"). **I owe:** the exact SharePoint steps (Share, Max's name, can edit) for Mon 16 Nov. This is separate from the 'CE V3 PILOT' folder (can view) that carries the build copy; that one is created only after Tim's word on Fri 13 Nov.
+6. **Reply time** ("6yes"): same working day for anything that stops him, a weekly Monday session for the rest. One line on page 05.
+7. **CDRULES wins over the Inspector** ("7cdrules"): page 04 tells Max to trust CDRULES.
+8. **Pages 01 and 05 printed as one-page sheets; page 02 stays on screen** ("8yes").
+9. **Screenshots on page 02 by Codex on a test copy, Wed 11 to Fri 13 Nov, on the pilot build** ("9yes"): part of packaging.
+10. **Max's first 10 minutes: he does nothing but use it** ("10dont make max do anything else apart from use it he is busy"): no practice drawing, no setup steps.
+11. **NOT answered: the pack approval (129) and the pack wording (140): the 97 changes in RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md and the CE 00 approval sheet stay DRAFT.** I do not edit pages 01 to 06 until Tim says.
+12. **Product facts for page 04 (from decisions 118 to 128): the Grade mismatch window is to be replaced by a plain warning line (build not started in C-78); colleagues' New Pipe starts in Custom 1 in 100; the raingarden label is plain 'RG' (in C-78); a What's New window opens on the first start after an update (seen in C-78); the Checks window changes (gold banner, one grey line for passes) and a new Settings tab 'Switches' arrives; cover is measured to the outside top of the pipe everywhere.** Each is in the pilot build only if built and tested by the Fri 13 Nov cut.
