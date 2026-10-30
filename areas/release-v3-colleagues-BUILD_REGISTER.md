@@ -222,6 +222,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 108. **Structural-line twins from CE 05 (found by CE 01's 22:17 check; both drafts, titles already start with B-065):** **#1885 = B-065 BUG-625 (Level Update only changes CE level marks), head 044cf047, base claude/rel-20261026s (the STRUCTURAL train line), the twin of #1879 (8990ae3f, base claude/rel-20261102a, the Civil + Manager line).** **#1886 = B-065 BUG-1183 (Pier schedule SYNC checks which pier each row is), head bb822e60, base claude/rel-20261026s.** Structural fixes ship from the Structural line (S-xx trains), NOT the Civil + Manager line: #1879 on rel-20261102a has no Structural train to ride; only #1885 can. Ask CE 05 whether #1879 should stay open (a reference copy) or be left alone; nothing is closed (D6). Same applies to #1883 (B-068 BUG-467, base rel-20261102a) and the other Structural jobs (p3b, p6, p13): each needs a rel-20261026s version before a Structural train. Pre-review by CE 00 still to come (heavy ones Saturday after 06:00).
 
+109. **Merge conflicts resolved after the C-78 addendum moved the train (30 Oct ~22:50; only REGRESSION_LOG.md clashed, both entries kept, normal merge commits, no rebase): #1878 (B-063) new head a9a0a4f5 (11 of 11 B-063 tests pass on the merged branch, GitHub MERGEABLE) and #1884 (B-062) new head f9fa356c (Manager guard check: 1 passed, 1 skipped as expected because the real Manager switch file is absent on this PC).** The code of C-78 (Excel handler, Grade mismatch rule) came in without a textual conflict and was not re-tested in these two branches.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
