@@ -21,7 +21,7 @@
     "acceptedNote": "Rule 16 union at 07:50 Fri 30 Oct: Tim by hand 25 + robot-only 4 (D19 Tim half-tested, CDSYNC keeps schedule C42, Tidy labels C37, CDTWL freeboard C39 = ledger item 30) = 29 of 40; both routes 15; D08 FO/OF symbol disputed (robot accepted it, Tim saw OF, BUG-1236) and not counted"
   },
   "installed": "Civil 3.0.86 · Manager 1.1.86 · Structural 1.0.125",
-  "waiting": "C-76 installed 17:51 Thu; C-77 Opus final review running since 11:49 (assembler 6 h, 23 of 25 PRs merged), GO about 14:30, payload about 15:30, AutoCAD-closed window and install about 16:00 to 16:30, then area plus smoke re-test; AutoCAD busy with robot filler packs and Codex looks; Tim out of the office until at least 14:00, desk keeps going and hands the PC back in 50 minutes on his word (Rule 17); C-78 Mon 2 Nov evening; cut Fri 13 Nov, pilot Mon 16 Nov",
+  "waiting": "C-76 installed 17:51 Thu; C-77 Opus final review running since 11:49 (assembler 6 h, 23 of 25 PRs merged), GO about 14:30 to 15:00, payload about 15:30, AutoCAD-closed window and install about 16:00 to 16:30, then area plus smoke re-test; AutoCAD busy (robot filler packs and Codex looks, longest gap since 12:05 is 4 min); Team lanes held at 88% 5-hour until 16:00 reset; Tim out of the office until at least 14:00, desk keeps going and hands the PC back in 50 minutes on his word (Rule 17); small train C-77b/C-78 (Civil 3.0.88) tonight; cut Fri 13 Nov, pilot Mon 16 Nov",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T12:02:44+11:00"
+  "countedAt": "2026-10-30T12:45:00+11:00"
 }
