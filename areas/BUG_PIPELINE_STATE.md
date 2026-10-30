@@ -4,7 +4,7 @@
 
 Approved by CE 00 Fri 30 Oct 2026 for Tim's ruling "try to complete everything in the bug document" (decisions\2026-10-30_TIM_COMPLETE_ALL_BUGS.md). Any new CE 01 session resumes from this file.
 
-1. **Last launch:** Sat 31 Oct 00:55 PC clock: s2 (Structural batch S-2: BUG-1146, 1147, 1159; chain_fix_g81) on Team, CE 00 allowed ONE now; a second only if Team week is at or under 95 at the next reading, stop at 97. Done: v1 read-only check (36 of 40 still real, 3 already fixed, 1 cannot tell), s1 (all three already fixed, no PR). Next: s3.. in tier order; Max from about 09:30; p18 (g74) after the Team reset 14:00. Team 5h 40 / week 92 at 00:41.
+1. **Last launch:** Sat 31 Oct 01:02 PC clock: s3 (Structural batch S-3: BUG-1139, 1204, 1162; chain_fix_g82) on Team (Team week 92, second job allowed at or under 95; stop at 97). Running: s2 (B-077, PR #1898 open, head 731349f5, base rel-20261026s), s3. p18 held until the footing PRs exist. Next: s4.. only if the next Team reading is at or under 95; Max from about 09:30; the rest after the Team reset 14:00.
 2. **Queue:** empty until q1 writes the ordered build queue. Then the check-in launches the next item. Already in flight before the pipeline: c87a (B-011), c87b (BUG-1091), c92a (#1871), c93a (#1873), c95a (#1875), Max Sonnet agents B-029b (#1874, worktree c79f) and B-028 (BUG-587, worktree c79e, started 19:55).
 3. **Guards, checked at every launch (read C:\CE_PLAN\desk_jobs\team_usage.ps1, exact; USAGE.json is hourly and can be stale):**
    1. Until Sat 31 Oct 14:00: Team 7-day under 99 and Team 5-hour under 85.
