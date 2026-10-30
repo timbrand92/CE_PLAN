@@ -160,3 +160,8 @@ Each line is ticked by the owner named, with the evidence filed in RELEASE_SCORE
 2. **Frozen copy (section 6):** made at packaging from about Wed 11 Nov from the build then installed and tested; rebuilt and hash-checked after any later fix (about 1 hour), so it always equals the newest tested build. The hash manifest is dated and versioned each time. The compare with the installed bundle on Tim's PC is repeated on Thu 12 and Fri 13 Nov. The `CE V3 PILOT` folder is created and shared "can view" to Max only after Tim's word on Fri 13 Nov.
 3. **Rehearsals (sections 3 to 5):** R1 on the current build as soon as the second 2027 PC and ordinary login exist; R2 and R3 on a build from Wed 11 Nov (the package build), repeated if the package changes by more than an area fix.
 4. **Final go checklist (section 8) is ticked Fri 13 Nov;** item 5 reads "no new serious bug on Tim's PC since the last full-class install". Each item in the pilot carries "tested" or "not tested" in the release note (Tim's item 68). Hand-over Mon 16 Nov.
+
+## 14. Addition Fri 30 Oct 12:16: pilot risk items in the final go checklist (from PILOT_RISK_PLAN_30OCT.md, via CE 00 12:50)
+
+1. Add to the §8 go checklist: for BUG-1227, BUG-1088, BUG-1095, BUG-1251 and BUG-1255 the shipping build either has a passed named proof (robot case or Codex look, two clean starts where robot) or page 04 names the fault with its workaround. Page 04 wording for BUG-1227 is "place the copy well clear (5 m was safe; 0.1 mm was not)", not "a small offset". Status of each is in RELEASE_SCOREBOARD section 2, item 3a.
+2. Max's AutoCAD year stays a gate: if it is not 2027 by Fri 13 Nov, BUG-1209 and BUG-1210 apply and the pilot waits.
