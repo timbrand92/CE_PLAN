@@ -9851,6 +9851,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Manager and installer bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note 2 (CE 05, 30 Oct 2026, from CE 01, register item 119):** the fixing commit is 4c4134fd (HUNT-M-04/05, 9 Oct) from PR #869 (OPEN draft, base b03/hunt-m02-rollback-hidden); CE 01 verified it is an ancestor of origin/claude/rel-20261102a. NOT checked: whether it is already in the installed Civil 3.0.87 / Manager 1.1.87. Still OPEN; needs a PC without the office folder to see.
+
 **Evidence note (CE 05, 30 Oct 2026, from job p17 report):** this is a MANAGER bug ("CE is current" when the office folder is missing), not Structural, and already fixed on the Civil/Manager line (CeReleaseStatusService.cs line 158, comment HUNT-M-05, on rel-20261102a). To see it needs a PC or second Windows login without the office folder, so it is a test set-up item for CE 02 / CE 04, not a build. Still OPEN until confirmed.
 
 ---
