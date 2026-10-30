@@ -54,3 +54,23 @@ c78d pid 38488 conhost
 c78d pid 36448 conhost
 c78d pid 31756 conhost
 c78d pid 23096 bash
+
+Stopped by CE 01 at Fri 30 Oct 12:36 to protect the C-77 finalizer (Team 5-hour at 88 percent): restart when the 5-hour window is under 60 percent or after the 16:00 reset (job files unchanged):
+c89a pid 75172 conhost
+c89a pid 74636 bash
+c89a pid 72880 pwsh
+c89a pid 58944 claude
+c89a pid 56920 conhost
+c89a pid 51908 bash
+c89a pid 19312 cmd
+c90a pid 76840 cmd
+c90a pid 69864 conhost
+c90a pid 69760 claude
+c90a pid 64620 conhost
+c90a pid 56204 pwsh
+c90a pid 50700 conhost
+c90a pid 49204 pwsh
+c90a pid 48720 pwsh
+c90a pid 40268 cmd
+c90a pid 36164 cmd
+c90a pid 10748 pwsh
