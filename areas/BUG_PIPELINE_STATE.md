@@ -4,7 +4,7 @@
 
 Approved by CE 00 Fri 30 Oct 2026 for Tim's ruling "try to complete everything in the bug document" (decisions\2026-10-30_TIM_COMPLETE_ALL_BUGS.md). Any new CE 01 session resumes from this file.
 
-1. **Last launch:** Sat 31 Oct 00:02 PC clock: s1 (Structural batch S-1 tier 2: BUG-529, 300, 474; chain_fix_g80 pid 1440) on TEAM. Before: p14 B-022 finished 23:33 (PR #1897). Nothing else running. Next: s2 onwards on Team after the reset Sat 14:00 (or one at a time if Team has room), Max from about 09:30 when the Max week passes the pace line (Max week 14 at 00:01 vs line about 9); p18 (g74) after the reset. Team 5h 37 / week 91 at 00:01, C: 56 GB.
+1. **Last launch:** Sat 31 Oct ~00:30 PC clock: v1 READ-ONLY verification of batches S-2..S-16 (chain_fix_g75): which of the 40 queued Structural entries are already fixed on rel-20261026s; output areasSTRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md. Reason: s1 (BUG-529, 300, 474) found all three already fixed (HUNT-S fixes), report BUGFIX_s1_REPORT_31OCT.md, no PR. Hold s2..s16 until v1 reports; then launch only batches with STILL THERE entries. p18 (Structural twins, g74) after the Team reset Sat 14:00. Team 5h 38 / week 91 at 00:21, Max week 14.
 2. **Queue:** empty until q1 writes the ordered build queue. Then the check-in launches the next item. Already in flight before the pipeline: c87a (B-011), c87b (BUG-1091), c92a (#1871), c93a (#1873), c95a (#1875), Max Sonnet agents B-029b (#1874, worktree c79f) and B-028 (BUG-587, worktree c79e, started 19:55).
 3. **Guards, checked at every launch (read C:\CE_PLAN\desk_jobs\team_usage.ps1, exact; USAGE.json is hourly and can be stale):**
    1. Until Sat 31 Oct 14:00: Team 7-day under 99 and Team 5-hour under 85.
