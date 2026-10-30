@@ -84,3 +84,8 @@ Do NOT arm chain_install_c78 (it has no gate of its own) until ALL FOUR hold, ea
 3. acad.exe AND accoreconsole.exe not running, checked twice (if the EV-04 scan keeps starting accoreconsole, pause python 25092 with CE 00's pause_scan.ps1 -Mode pause). [not yet: ]
 4. No human input on the PC in the last 10 minutes (CE 02's input_watch2 gate; it is Saturday). [not yet: ]
 Then: arm the chain by hand (pwsh via WMI), watch the log C:\CE_PLAN\desk_jobs\chain_install_c78.log to INSTALL VERIFIED; send CE 00 ONE line with the two backup folder names and the undo; resume the scan (-Mode resume); tell CE 02 "installed, DLLs re-read" (its waiter wait_install_c78 then starts the area-plus-smoke set by itself); delete CLOSED_WINDOW_NOTICE; tell Tim one line. If INSTALL PROBLEM: roll back by renaming the PRE backups back, tell CE 00, and DO NOT retry without CE 00's word.
+
+## 15. C-78 INSTALL RUN (CE 01, Sat 31 Oct 06:50) - gate log for section 14
+1. Condition 1 (pass a): CE 00 relayed at ~06:46 that CE 02 wrote at 06:33 that C-77 pass a is COMPLETE on 3.0.87 with no unexplained FAIL (R09 = known BUG-859; broken twins fail as twins should; N41v87 first FAIL was a case fault, passed corrected; BLOCKED ones passed on re-run); the Structural FAILs (aS1/aS2, BUG-467) are a separate line. CE 00 ruled: do NOT wait for 09:00, install now. I asked CE 02 to confirm the line to me in writing (see below). [relayed by CE 00 06:50; CE 02's own line to me: pending]
+2. Condition 2 (notice): CLOSED_WINDOW_NOTICE.txt written 06:50 with closed time 2026-10-31 07:01 (10 minutes ahead); CE 02 told 06:50.
+3. Condition 3 (AutoCAD absent twice) and 4 (no human input 10 min): pending at 2026-10-31 07:01.
