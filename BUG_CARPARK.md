@@ -17536,3 +17536,35 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** CE 00 message to CE 05, 30 Oct 2026; request to the scan owner in areas\EV04_ISOLATION_REQUEST_30OCT.md. Same family as BUG-1257 (test isolation, B-062).
 
 **Status:** OPEN (fix route: the scan owner isolates the scans; nothing built here). Never FIXED until the check above passes.
+
+---
+
+## BUG-1260 — The Structural support zip has the same by-name gap as the Manager zip and includes the real login, PC name and drawing path
+
+**Command / Area:** Structural support zip (Modules/Structural/Services/SupportBundleService.cs, started from DiagnosticsCommands.cs). MEDIUM, privacy. Found 30 Oct 2026 by CE 00's independent pre-review O of draft PR #1878 (B-063), areas\OPUS_PREREVIEW_O_1878_B063_30OCT.md. No file contents or client names recorded here.
+
+**Symptom:** The Structural support zip walks its folders by folder name only, so any key or settings file copied into one of them would be zipped (the same gap B-063 closes for the Manager zip, see BUG-1173). It also includes the real Windows login name, the PC name and the drawing path. Nothing can start it today (the CESUPPORT command belongs to the Manager).
+
+**Expected behaviour:** Either the Structural zip is removed (nothing starts it), or it skips key and settings files by name (blob-config*, *.local.json, anything under a CE_SUITE folder) and scrubs the login, PC name and drawing path before anything is zipped.
+
+**Steps to confirm in AutoCAD:** Not reachable from the ribbon. Check by test: build a zip from a folder holding a dummy blob-config.local.json and confirm the file is not in it, and that the text inside has no real login or PC name.
+
+**Reference:** CE 00 message to CE 05, 30 Oct 2026; related BUG-1173, B-063 (#1878).
+
+**Status:** OPEN (nothing built). Never FIXED until confirmed.
+
+---
+
+## BUG-1261 — The Manager upload of the support zip to the office folder has the same by-name gap
+
+**Command / Area:** Manager support zip upload to the office folder (CESUPPORT, Manager). LOW risk, privacy. Found 30 Oct 2026 by CE 00's pre-review O of draft PR #1878 (B-063). No file contents recorded.
+
+**Symptom:** The upload copies the zip chosen by folder name, so it has the same by-name gap as the zip itself: a key or settings file copied into a collected folder would be sent to the office folder. Low risk today (nothing in the code writes such a file into those folders).
+
+**Expected behaviour:** The upload applies the same by-name skip as the zip (blob-config*, *.local.json, anything under a CE_SUITE folder). Later improvement (idea, not a fault): pass the zip text through CeSensitiveDataGuard.Redact before zipping.
+
+**Steps to confirm in AutoCAD:** Check by test as for BUG-1260, then run CESUPPORT on a test drawing folder and read the zip listing.
+
+**Reference:** CE 00 message to CE 05, 30 Oct 2026; related BUG-1173, BUG-1260, B-063 (#1878).
+
+**Status:** OPEN (nothing built). Never FIXED until confirmed.
