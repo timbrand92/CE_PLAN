@@ -1128,6 +1128,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "4no" (decision 151):
 
 **Status:** REOPENED 23 Oct 2026 (CODEX_SWEEP_S05 S05-01, ledger F-154, Opus check VERIFIED): the Xref fingerprint returns the first Xref's record. PitScheduleXrefDiscoveryService.cs:394-398 returns the first Xref's record for any later Xref with the same FingerprintGuid, so the installed fix (#1404, core only) never sees a SAVEAS copy's different data. Fix the adapter, not the core. Earlier status: OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1404; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS (reopened 23 Oct) per the proof-lane count. Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
+
 ---
 
 ## BUG-787 — Typed pit-level cell values are saved per row and slide to another row when an inlet is added
@@ -3282,6 +3284,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "10yes" (decision 157
 **Status:** OPEN (fix installed; still fails in real AutoCAD with the double-click switch ON: Codex look L4-01a DIFFERENT, 19 Oct 2026; reconciled 23 Oct 2026)
 
 **Codex look L4 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56, double-click switch ON):** STILL SEEN: L4-01a DIFFERENT, SURE. Double-click on the P8 pit label again opened AutoCAD's own Enhanced Attribute Editor (block PIT LABEL 2, tag PIT_LABEL, value P8), not Edit Pit. Cancel, no change. Pipe line and IL text double-clicks DID open Edit Pipe P8 to P11 (L4-01b, L4-01c PASS). This is a bug, not a different expectation: Tim's 17 Oct ruling G2 says double-click any CE object opens its Edit window. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-05-pit-doubleclick.png, L4-53-pit-closeup.png.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per the proof-lane count (areas\BUG_PROOF_LANES_31OCT.md). Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
 
 ---
 
@@ -9756,6 +9760,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 Note (CE 05, Sat 31 Oct 2026, from CE 02): written as FAIL SURE on installed 1.0.125, typed points only, not accepted. CE 02 also found that rotating the correct World second point by 30 degrees a second time gives exactly the point the command used, which fits the double conversion. R1 Point (S467c) passes; FPFC (S467d) is a case fault being re-run. A clicked second point still needs the Codex look.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "9as recommended" (decision 169): bracing following a rotated UCS stays always on, NO Settings switch; the second-point fix (job p19, root cause first) must not add one, and PR #1883 is not wanted. Still OPEN until the rotated-UCS check passes in AutoCAD.
+
 ---
 
 ## BUG-468
@@ -10096,6 +10102,8 @@ Note (CE 05, Sat 31 Oct 2026): Read of the Structural line 31 Oct (job s15): alr
 
 **Codex V3-04 (21 Oct 2026, Civil 3.0.66): BLOCKED, operator deviation; retry with a corrected brief** (CODEX_VERIFY_V3_20261021_0259.md item 12). Codex answered Y to the untagged question, the X-Civil import window opened, Choose DWG and Read source reached the "Pit and pipe schedule" page ("Check the schedule first"), and Codex then clicked Import to drawing, which imported (61 objects, "Post-import QA: 52 data sanity findings") with no "Proceed with import?" question. No verdict. What the desk found in the source (read-only, rel-20261020j): in the window route there is NO command-line "Proceed with import?" question (that is the headless route only); the window's "Import to drawing" button is the Yes and Close is the No. The CHECK THE SCALE sentence is printed on the command line before that page opens, so it sits behind the modal window; the window page itself does not show it. Corrected brief verifyV3b_c56 reads it from the command history after Close. Not FIXED.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per the proof-lane count. Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
+
 ---
 
 ## BUG-506
@@ -10291,6 +10299,8 @@ Note (CE 05, Sat 31 Oct 2026): Read of the Structural line 31 Oct (job s15): alr
 
 Note (CE 05, Sat 31 Oct 2026): Job s13, 31 Oct: still real; not built. Tim must mark which of the 29 Settings groups a drafter changes. Question with CE 04.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "7yes" (decision 167): start with the five groups that print on drawings; the other 24 come later with his command cards. Draft card queued (job z4). Still OPEN.
+
 ---
 
 ## BUG-527
@@ -10360,6 +10370,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s13, 31 Oct: still real; not built. Tim must 
 
 Note (CE 05, Sat 31 Oct 2026): Job s13, 31 Oct: still real; not built. The entry says fix with BUG-500 and BUG-496 (job record). Question with CE 04.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: parked, Tim said "8talk later". Not decided.
+
 ---
 
 ## BUG-534
@@ -10380,6 +10392,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s13, 31 Oct: still real; not built. The entry
 
 Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1910 (B-089), PARTIAL: CESETTINGS shows the footing widths and wall brace lengths. The rest (wind class steps, founding note wording, lintel values) needs Tim rulings (with CE 04). Needs a Codex look. Not fixed.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the rest (wind class steps, founding note wording, lintel override) is parked, Tim said "8talk later". Not decided.
+
 ---
 
 ## BUG-536
@@ -10393,6 +10407,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1910 (B-089), PARTIAL: CESETTINGS shows
 **Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 34):** PART fixed on the Structural train line (head 204dfad2): SCREWPILE offers the Settings diameter; REBAR starts from the Settings bar size, spacing and count; beam shorten reads its choices from Settings. Half done: BP (bored pier) reads the Settings default diameter but still always uses the 450 block. Still fixed numbers: label height read by only two commands, member schedule sizes, footing schedule column widths, the load-path round-up to 50 mm and the 450 mm pier. A builder should take only the four open parts. Still OPEN.
 
 Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1911 (B-090), PARTIAL: CSLOADPATH reads pad round-up and unsized-pier size from Settings (switch ON). Schedule sizes, column widths and label height need Tim decision on the office block (with CE 04). Not fixed.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the office-block sizes (schedule sizes, column widths, label height) are parked, Tim said "8talk later". Not decided.
 
 ---
 
@@ -11228,6 +11244,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "11yes" (decision 158
 
 Note (CE 05, Sat 31 Oct 2026): Job s12, 31 Oct: still real; not built. Needs a live-preview and Apply workflow and an approved command card. Question with CE 04.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "6yes" (decision 166): write the command card first (live preview plus Apply), get his approval, then build. Draft card queued (job z4). Still OPEN.
+
 ## BUG-616
 
 1. **Command / area:** Structural XRL, MEDIUM OPEN. ApprovedST5-11 review-before-change missing in installed1.0.116+f180b349.
@@ -11392,6 +11410,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1901 (B-080): XRL says how many Xrefs w
 
 Note (CE 05, Sat 31 Oct 2026): Job s9, 31 Oct: still real on Structural 1.0.125; no PR. Needs a decision on the level source (suggestion: Manual and Unknown only, with preview). Question with CE 04.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "2yes" (decision 162): FFL ships Manual and Unknown only, with preview, F to flip and click to place; real level sources later. Job z1 queued (Structural). Still OPEN: not built.
+
 ## BUG-627 — Moving an FFL triangle leaves its tail and level value behind
 
 1. **Status/severity:** OPEN / MEDIUM. Real AutoCAD2027 / Structural1.0.116/f180,15October2026; approved ST3-7 and ST3-13. Separate annotation family from RC compound BUG613.
@@ -11404,6 +11424,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s9, 31 Oct: still real on Structural 1.0.125;
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 Note (CE 05, Sat 31 Oct 2026): Job s9, 31 Oct: still real; no PR. Suggestion: AutoCAD group behind a Settings switch ON. Question with CE 04.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "3yes" (decision 163): the FFL triangle, tail and value move as one normal AutoCAD group, behind a Settings switch ON. Job z2 queued (Structural). Still OPEN: not built.
 
 ## BUG-628 — Breakline zigzag does not scale consistently at 1:50
 
@@ -11445,6 +11467,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s9, 31 Oct: still real; no PR. Suggestion: Au
 
 Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a decision on the bubble source (SECT MARK block or drawn lines) and approval of the SM card (ST3-9/10). Question with CE 04. B-086 held.
 
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "4my block in my standard blocks file" (decision 164). UNCONFIRMED (a guess): the bubble is the SECT MARK block in his standard blocks file. NOT answered: whether the SM card (ST3-9/10) is approved. A draft card is queued (job z4); nothing is built.
+
 ## BUG-631 — Moving the section cut line leaves both bubbles and references behind
 
 1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-10 compound editing.
@@ -11457,6 +11481,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a decis
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a link between cut line, bubbles and labels (reviewed design plus AutoCAD run). Question with CE 04.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 164: Tim's answer does not cover the link between the cut line, bubbles and labels; still undecided. Card queued (job z4); nothing built.
 
 ## BUG-632 — Section identifiers are partly hidden against the filled bubble half
 
@@ -11492,6 +11518,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a link 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 Note (CE 05, Sat 31 Oct 2026): Job s11, 31 Oct: still real; not built. Needs Tim to say which dimension styles count as recognised (suggestion: TIM LEADER and TIM DOT LEADER). Question with CE 04.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "5yes purge the rest out automatically by making them mine" (decision 165). UNCONFIRMED (a guess on the mapping): TIM LEADER and TIM DOT LEADER are recognised; any other dimension style is converted to one of his two and the old style purged (which of the two is not stated). This changes drawing content, so a workflow card comes first (job z4); never touches Xref or locked content. Nothing built.
 
 ## BUG-635 — DSET1 reports conversion but displayed measurement stays unchanged after reopening
 
@@ -11605,6 +11633,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1907 (B-087): RD asks for the arc or ci
 
 
 **15 October overload follow-through:** local catchment-overload-case-ledger CO-03/screenshot1360 confirms the same blue overlay/overlapping label also obscures the120m² over-capacity warning. Command-line warning and native MTEXT correctly say120m² exceeds ClassC110m²; this does not close642 or earlier209. No new bug number.
+
+Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per the proof-lane count. Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
 
 ## BUG-643
 
