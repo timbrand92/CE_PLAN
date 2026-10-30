@@ -17654,3 +17654,19 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** Pre-review Q point 4; PR #1880; BUG-1240.
 
 **Status:** OPEN (follow-up card, nothing built). Never FIXED until confirmed.
+
+---
+
+## BUG-1267 — New Pipe, "Set my own": typing a new upstream level may carry the OLD fall over to the downstream level (POSSIBLE, found by reading code, not run in AutoCAD)
+
+**Command / Area:** CD (New Pipe window), "Set my own" with remembered levels. Civil. POSSIBLE BUG, UNCONFIRMED. Reported by CE 02 (30 Oct 2026, 23:22) from reading code via CE 00; nothing has been run in AutoCAD. It sits in the same flow as B-057 (#1873) and BUG-1229 and BUG-1233: check whether B-057 already covers it before opening a new build number.
+
+**Symptom (as reported):** Open New Pipe with the previous pipe's levels still remembered (example: upstream 19.00, downstream 18.50). Choose "Set my own" and type a new upstream level 19.45. The old fall (0.50) is carried over, so the downstream fills 18.95. CE 02 expected 19.40. The reason for 19.40 is not given in the message (a 0.50 fall would give 18.95), so the expected value is Unknown until CE 02 says what rule it expects.
+
+**Expected behaviour:** Not settled. To be decided from the reproduction: either the old fall is kept on purpose (then 18.95 is right and the window should say so) or the downstream is recalculated from the grade the drafter chose.
+
+**Steps to confirm in AutoCAD:** Open New Pipe so the previous levels (19.00 and 18.50) are remembered, choose "Set my own", and type 19.45 in the upstream box WITHOUT clearing it first. Note the downstream level. The C-78 robot cases clear the upstream box first to avoid this, so a new case must NOT clear it.
+
+**Reference:** CE 02 via CE 00, 30 Oct 2026. Code pointers from CE 02: CdViewModel.Settings.cs lines 191-192, CdViewModel.Inverts.cs lines 727-731 and 858-870. Related: B-057 (#1873), BUG-1229, BUG-1233.
+
+**Status:** OPEN (possible bug, unconfirmed; not reproduced). Never FIXED until confirmed in AutoCAD.
