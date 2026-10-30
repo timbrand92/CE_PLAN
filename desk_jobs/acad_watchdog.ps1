@@ -47,7 +47,7 @@ while ($true) {
     if (-not $idleSince) { $idleSince = Get-Date; Log ('IDLE STARTED ' + $idleSince.ToString('HH:mm:ss') + ' (checking for an allowed reason)') }
     $mins = ((Get-Date) - $idleSince).TotalMinutes; $idleMin += 0.5
     $why = AllowedReason
-    if (-not $why -and $mins -lt 3) { $why = 'gap between two starts' }
+    if (-not $why -and $mins -lt 1.5) { $why = 'gap between two starts' }
     # Rule 15 (CE 00 07:55): a Codex look that is launching (launcher process alive) is a reason for up to 12 minutes; with no look launching a gap over 4 minutes is a breach and the filler below starts at once.
     if (-not $why -and $mins -lt 12 -and @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'launch_codex_retry|codex\.js exec' -and $_.Name -match 'pwsh|node|codex' }).Count -gt 0) { $why = 'a Codex look is launching' }
     if ($why) { if (-not $idleLogged -and $mins -ge 4) { Log ("idle, allowed: $why"); $idleLogged = $true } }
