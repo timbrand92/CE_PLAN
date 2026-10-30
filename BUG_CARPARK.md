@@ -2919,6 +2919,8 @@
 **Fresh isolation, 14 Oct 07:24 Melbourne:** PF2 placed with X800/Y800/depth450, point-2000,2000 and rotation0. Before any Undo/Redo of PF2, FEDIT offers depth0 and the live schedule shows PF2 depthUNKNOWN. Initial placement/readback is sufficient to reproduce. In contrast FEDIT explicitly re-entered PF1 depth350 with width1000; actual schedule updated immediately and still reads350 after FEDIT Undo/Redo and later PF2 creation. Screens145-153. Keep OPEN; editing depth again is a workaround. Proposed regression must inspect the element/editor/schedule immediately after FPFC, before recovery tests.
 **Strip route extension, 14 Oct:** FSF SF1 width400/depth300, native two-point straight line, successful outline and one Undo/delayedRedo. FEDIT correctly reads width400 but depth0; inspection cancelled. Screen157. Include strip placement in the proposed depth-retention guard; immediate-before-Undo proof is already established separately for PF2.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1909 (B-088): FPFC and FSF keep the typed depth on the new footing (switch ON). Undo/Redo part not traced. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-578
 
 **Command / Area:** FST size-library Key field and FPFC pad-size lookup, realStructural1.0.116+f180b349,14Oct2026.
@@ -9772,6 +9774,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Evidence note (CE 05, 31 Oct 2026, from the read-only check areas\STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 33; code read only, nothing run in AutoCAD):** already fixed in the code on the Structural train line (origin/claude/rel-20261026s, head 204dfad2 = installed 1.0.125): HUNT-S-05, PR #899 (commit 987ca9dd, merged into S-31 as 1907fd78). FoundationService.cs 3911-3918 calls RefuseCentrelinePick; FoundationService.Identity.cs 89-114 refuses CE's own outline, a raft edge and another footing's centre line with "That is the outline CE drew for [footing]. Pick or draw a centre line instead. Nothing was drawn." No Settings switch (native-protection refusal). Pinned by HuntS05CentrelinePickTests. Proof candidate for CE 02 (FSF, pick an existing footing's outline). Still OPEN until confirmed in AutoCAD.
 
+Note (CE 05, Sat 31 Oct 2026): Read of the Structural line 31 Oct (job s14): already fixed by commit 987ca9dd (FoundationService.cs:3912). Not confirmed by Tim or Codex; no PR.
+
 ---
 
 ## BUG-471
@@ -9799,6 +9803,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
 **Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md):** already fixed in the code on the Structural train line (head 204dfad2): HUNT-S-08 locked-layer guard; BT1, C1, TS1, AB, BB and BTX stop with one plain line when their layer is locked and draw nothing; BTX leaves locked text alone and counts it; nothing is ever unlocked. Proof candidate for CE 02 (lock the target layer, run each command). Still OPEN until confirmed in AutoCAD.
+
+Note (CE 05, Sat 31 Oct 2026): Read of the Structural line 31 Oct (job s15): already fixed by commit 06af5e65 (tests HuntS08LockedLayerTests.cs). Not confirmed by Tim or Codex; no PR.
 
 ---
 
@@ -10275,6 +10281,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the cross-cutting bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+Note (CE 05, Sat 31 Oct 2026): Job s13, 31 Oct: still real; not built. Tim must mark which of the 29 Settings groups a drafter changes. Question with CE 04.
+
 ---
 
 ## BUG-527
@@ -10342,6 +10350,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
 
+Note (CE 05, Sat 31 Oct 2026): Job s13, 31 Oct: still real; not built. The entry says fix with BUG-500 and BUG-496 (job record). Question with CE 04.
+
 ---
 
 ## BUG-534
@@ -10360,6 +10370,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1910 (B-089), PARTIAL: CESETTINGS shows the footing widths and wall brace lengths. The rest (wind class steps, founding note wording, lintel values) needs Tim rulings (with CE 04). Needs a Codex look. Not fixed.
+
 ---
 
 ## BUG-536
@@ -10371,6 +10383,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
 
 **Evidence note (CE 05, 31 Oct 2026, from the read-only check STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md, item 34):** PART fixed on the Structural train line (head 204dfad2): SCREWPILE offers the Settings diameter; REBAR starts from the Settings bar size, spacing and count; beam shorten reads its choices from Settings. Half done: BP (bored pier) reads the Settings default diameter but still always uses the 450 block. Still fixed numbers: label height read by only two commands, member schedule sizes, footing schedule column widths, the load-path round-up to 50 mm and the 450 mm pier. A builder should take only the four open parts. Still OPEN.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1911 (B-090), PARTIAL: CSLOADPATH reads pad round-up and unsized-pier size from Settings (switch ON). Schedule sizes, column widths and label height need Tim decision on the office block (with CE 04). Not fixed.
 
 ---
 
@@ -11202,6 +11216,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
+Note (CE 05, Sat 31 Oct 2026): Job s12, 31 Oct: still real; not built. Needs a live-preview and Apply workflow and an approved command card. Question with CE 04.
+
 ## BUG-616
 
 1. **Command / area:** Structural XRL, MEDIUM OPEN. ApprovedST5-11 review-before-change missing in installed1.0.116+f180b349.
@@ -11214,6 +11230,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 **Evidence note (CE 05, 31 Oct 2026, from job s4 report areas\BUGFIX_s4_REPORT_31OCT.md; built and unit-tested only, nothing run in AutoCAD):** still present on the Structural train line (204dfad2): NativeXrefLayerService.Run moved every reference straight after the counts (lines 68 to 96). Draft PR #1901 (B-080, head 468b252c, base claude/rel-20261026s): XRL highlights the Xrefs and asks "12 Xref instances will move to layer XREF. Apply or Cancel?"; Enter moves as today; Cancel or Esc moves nothing and makes no XREF layer; XRLFAST and XRLSILENT never ask. Switch XrefLayer.ConfirmBeforeMove, ON (settings file only). Needs an AutoCAD look. Still OPEN.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1901 (B-080): XRL says how many Xrefs will move and waits for Apply. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-617
 
@@ -11362,6 +11380,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
+Note (CE 05, Sat 31 Oct 2026): Job s9, 31 Oct: still real on Structural 1.0.125; no PR. Needs a decision on the level source (suggestion: Manual and Unknown only, with preview). Question with CE 04.
+
 ## BUG-627 — Moving an FFL triangle leaves its tail and level value behind
 
 1. **Status/severity:** OPEN / MEDIUM. Real AutoCAD2027 / Structural1.0.116/f180,15October2026; approved ST3-7 and ST3-13. Separate annotation family from RC compound BUG613.
@@ -11372,6 +11392,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Repair/confirmation:** Claude native compound/record owner; no production repair installed. On an owned copy, move by triangle, tail and label separately; each must carry the recognised whole set. Verify COPY fresh identity, edit, safe erase, Undo/Redo and reopen while unrelated nearby text stays untouched. Repeat remaining level-mark types/protection/units/scales/UCS/paper and older releases.
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
+Note (CE 05, Sat 31 Oct 2026): Job s9, 31 Oct: still real; no PR. Suggestion: AutoCAD group behind a Settings switch ON. Question with CE 04.
 
 ## BUG-628 — Breakline zigzag does not scale consistently at 1:50
 
@@ -11411,6 +11433,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
+Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a decision on the bubble source (SECT MARK block or drawn lines) and approval of the SM card (ST3-9/10). Question with CE 04. B-086 held.
+
 ## BUG-631 — Moving the section cut line leaves both bubbles and references behind
 
 1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-10 compound editing.
@@ -11421,6 +11445,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 6. **Fix confirmation:** MOVE from line/bubble/label, COPY fresh identity with duplicate-reference confirmation, edit, safe erase, UndoRedo/reopen and protection/UCS/space/scale matrix. Do not solve with broad nearby-object selection.
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
+Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a link between cut line, bubbles and labels (reviewed design plus AutoCAD run). Question with CE 04.
 
 ## BUG-632 — Section identifiers are partly hidden against the filled bubble half
 
@@ -11454,6 +11480,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Repair/confirmation:** Claude command/native-writer ownership; no source repair or install from this chat. An unrecognised style must remain unchanged and be reported. On supported styles, review only selected scope and apply explicitly. Check leaders/mixed objects/protection, every Escape stage, one UndoRedo and no forced save.
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
+Note (CE 05, Sat 31 Oct 2026): Job s11, 31 Oct: still real; not built. Needs Tim to say which dimension styles count as recognised (suggestion: TIM LEADER and TIM DOT LEADER). Question with CE 04.
 
 ## BUG-635 — DSET1 reports conversion but displayed measurement stays unchanged after reopening
 
@@ -11520,6 +11548,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 5. **Repair guard / native confirmation:** preserve working native output and remembered type while implementing the reviewed geometry-first flow. In AutoCAD, select an arc/circle first, then choose each applicable mode, inspect the native preview and click placement. Escape at every stage must add nothing and restore drafting controls; unsupported geometry needs a clear refusal. Retest association, oneUndo/delayedRedo and save/reopen.
 
 **Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1907 (B-087): RD asks for the arc or circle first, then the dimension type (switch Annotation.ArcDimSelectsGeometryFirst ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-641
 
@@ -15308,6 +15338,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Evidence note (CE 05, 31 Oct 2026, from job s5 report areas\BUGFIX_s5_REPORT_31OCT.md; built and unit-tested only):** draft PR #1900 (head 7fd49669, base claude/rel-20261026s; title has no B number yet, CE 01 gives B-081): at the CEMEMBER "Section name" prompt, typing 114.3x6, 168.3x6, 60.3x4 or 89x89x3 used to pick the 6.4, 6.4, 4.5 or 3.5 wall without saying so; now CEMEMBER says there is no section called that. 114.3x6.4 and 114.3x6.4chs still work; 310UB3 still finds 310UB32. Switch CeMember.SectionNamePrefixStopsAtDecimalPoint, ON (settings file only; off = old behaviour). Files: CeMemberPrompts.cs, CeMemberCommands.cs, UserSettings.cs. Needs an AutoCAD look. Still OPEN.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1900 (B-081): a typed 114.3x6 no longer picks 114.3x6.4CHS (switch ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1122 — The office short spellings and the Lysaght purlin names are not found by SBEAM or CEMEMBER
 
 **Command / Area:** SBEAM search, CEMEMBER and XCLMTXT spelling table, Structural 1.0.122 (T3 finding 2). MEDIUM (a refusal, never a wrong section), SURE.
@@ -15324,6 +15356,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1905 (B-083): SBEAM search finds a section by its XCLMTXT mass spelling (switch ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1123 — Since 1.0.122, UB and UC rows in the office MEMBERS.csv are never applied
 
 **Command / Area:** XCLMTXT office spelling list, Structural 1.0.122 (T3 finding 3). MEDIUM if the office file has UB/UC rows, otherwise none. SURE about the code path, UNSURE about the file contents (outside the repo, not opened).
@@ -15339,6 +15373,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** if the office MEMBERS.csv has a UB row, XCLMTXT a cell using the left-hand spelling. Right looks like: the right-hand spelling is printed.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1903 (B-083): XCLMTXT applies an office spelling row for a UB or UC size (switch ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1124 — CEMEMBER always stands an unequal angle on its long leg
 
@@ -15388,6 +15424,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1902 (B-082): SBEAM window small figures to three significant figures. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1127 — The angle toe radius is drawn on the wrong corner of each leg tip
 
 **Command / Area:** SBEAM and CEMEMBER angle sections (EA, UA), Structural 1.0.122 (T3 finding 7). LOW, SURE about what the code draws (supplier drawings from memory, UNVERIFIED).
@@ -15420,6 +15458,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1904 (B-083): XCLMTXT writes PLATE for the word PL (switch ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1129 — BARWEIGHT and the bar schedule use two different bar mass tables
 
 **Command / Area:** BARWEIGHT and the bar schedule, Structural 1.0.122 (T3 finding 9). LOW (0.1 to 0.2 per cent, but a quantity check will not tie), SURE.
@@ -15435,6 +15475,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** BARWEIGHT 100 N20 at 6 m, then add the same bars to a bar schedule. Right looks like: the same kg.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1908 (B-088): BARWEIGHT and the bar schedule use one bar mass table (switch ON). N40, R6 and R10 still UNKNOWN on the schedule (no catalogue row). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1130 — 250UC89.5 is drawn with square corners; every other UC has fillets
 
@@ -15467,6 +15509,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** SBEAM, pick 310UB32, type 6000 in the length. Right looks like: 192 kg.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1902 (B-082): length over 100 read as millimetres. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1132 — Placed members will not find their section once the list gets supplier names
 
@@ -15517,6 +15561,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** with the schedule switched on, two FB3 beams labelled both ways. Right looks like: FB3 310 UB 32, no "different sizes".
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1914 (B-092): CSMEMBERSCHED counts 310UB32 and 310 UB 32 as one size (switch ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1135 — An older CE silently deletes newer parts of the job record, and the "newer CE" warning can never fire
 
@@ -15599,6 +15645,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** test copy: COPY beam B3, place a column under the copy, move the copy. Right looks like: B3's label stays with B3.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1899 (B-078): copied beam starts with empty links. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1140 — A pasted downpipe keeps a link to the original's label, so MOVE or CDREPAIR acts on the wrong object
 
@@ -15712,6 +15760,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1898 (B-077, Structural line rel-20261026s): footing-size memory per drawing. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1147 — Older Structural builds strip newer footing and beam data, with no "newer drawing" refusal
 
 **Command / Area:** footing register, beam links, footing-size library, Structural 1.0.122 and earlier (T4-13). MEDIUM, SURE.
@@ -15727,6 +15777,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** none practical until a newer field exists; confirm by the round-trip case.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1898 (B-077): newer footing data kept. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1148 — Pasting a pit from a "Save As" sister drawing gives it this drawing's pit values
 
@@ -15920,6 +15972,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1898 (B-077): unreadable size entries kept. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1160 — No drawing records which CE version last wrote it
 
 **Command / Area:** job record / discipline marker, Civil and Structural (T4-26). LOW, SURE.
@@ -15967,6 +16021,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** switch on the command on a test copy with one damaged group. Right looks like: a refusal, earlier loads still there.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1899 (B-078): damaged point load list refused. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1163 — DXFOUT may leave out a CE record still waiting to be saved
 
@@ -16342,6 +16398,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1906 (B-084): CSTAGBEARERS adds only a label (switch TagBearersLabelOnly ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1186 — Bearer tagging writes onto locked output layers
 
 **Command / Area:** CSTAGBEARERS, Structural 1.0.122 (RD14-04). MEDIUM, SURE. Protected: yes (native locked-layer rule).
@@ -16358,6 +16416,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1912 (B-091): CSTAGBEARERS and CSSUBFLOORGRID refuse to write onto a locked layer (never unlock). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1187 — An invalid layer lineweight in Drawing standards silently becomes Default
 
 **Command / Area:** CEADMINSETTINGS, Drawing Layers, Lineweight cell, Structural 1.0.122 (RD14-05). MEDIUM, SURE.
@@ -16373,6 +16433,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** CEADMINSETTINGS, Drawing Layers, edit the Lineweight cell to "typo", Save Layer Changes. Right looks like: weight unchanged, plain error.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1913 (B-091): a mistyped layer lineweight keeps the layer unchanged and says why (switch ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1188 — A LandXML pipe with no grade prints an invented "AT 1 IN 100"
 
@@ -16586,6 +16648,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1906 (B-084): THCL family leaves nothing behind on Esc (switch RectTextCommitsOnceAccepted ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1201 — Cancelling the first CDSL placement leaves an imported SPOT LEVEL block definition
 
 **Command / Area:** CDSL (spot level), Civil 3.0.72 (RD18-03). MEDIUM, SURE.
@@ -16634,6 +16698,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1915 (B-092): unticked Background refresh stops the start-up scan (switch ON, no Settings row yet). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1204 — A discarded first-open link conversion is remembered, so reopening the same old drawing leaves labels unlinked
 
 **Command / Area:** Structural legacy link migration on open, Structural 1.0.122 (RD19-03). MEDIUM, SURE.
@@ -16649,6 +16715,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** as the test, then click the line and MOVE with Enter to take the group. Right looks like: label moves with the line.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1899 (B-078): discarded open not remembered. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1205 — Opening a second AutoCAD is recorded as a crash of the first
 
@@ -16895,6 +16963,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 **Steps to confirm in AutoCAD:** CEHELP, tick Show advanced commands, open the two entries, then type RJSET and 8. Right looks like: Help matches the Settings pages.
 
 **Status:** OPEN
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1916 (B-092): CEHELP wording for Beam Settings (8) and RJSET. Built only; not opened in AutoCAD. Not fixed.
 
 ## BUG-1220 — Reverse Flow Help promises a change preview and an Apply button that do not exist
 
