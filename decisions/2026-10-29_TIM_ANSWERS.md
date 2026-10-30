@@ -633,3 +633,27 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
 128. **Raingarden label (V11): as recommended, plain "RG".** Tim's words: "11as recommended". Interpretation: plain label RG, number in the tag only (matches decision 77). Desk must: fix the C-77 build labelling RG1, RG2 so the visible label is RG.
 
 129. **Colleague pack approval (V12): NOT answered.** Tim's words: "12send them through sgsin i have no idea what youre talking about". The sheet was unclear. Desk must: re-ask in plain words (the ten page-06 questions one at a time, and a short plain description of what is being approved); do not treat the pack as approved.
+
+## Sat 31 Oct 2026: Tim's spoken answers to the ten colleague-pack questions (page 06, plain-words re-ask by CE 04). Tim's words: "1me, 2me but youll need to run me through it, 3yep, 4yes, 5yes run me through on the day what i need to do, 6yes, 7cdrules, 8yes, 9yes, 10dont make max do anything else apart from use it he is busy"
+
+130. **Who installs on Max's PC on Mon 16 Nov (pack Q1): Tim.** Tim's words: "1me". Desk must: Tim installs at 8:40 Mon 16 Nov following page 02, about 20 minutes, desk on the line (the desk cannot reach Max's PC).
+
+131. **Old Manager in Max's all-users folder (Q2, page 06 Q4): Tim checks, with a walk-through.** Tim's words: "2me but youll need to run me through it". Desk must: write Tim a step-by-step (plain words, exact clicks) for checking Max's PC in the week of Mon 9 Nov and run him through it live. Nothing is removed without Tim's word.
+
+132. **Max's old July Structural (Q3): rename its folder to ".backup" before install day.** Tim's words: "3yep" (to the recommended option A). Desk must: include the rename in Tim's install-day steps (undone by renaming back); do not rely on the old Manager working.
+
+133. **Real jobs or copies (Q4): yes.** Tim's word: "4yes". Desk must: Max works on copies of live jobs for the first week; real jobs only once Codex has passed the pilot build and there have been 5 working days with no new bug.
+
+134. **Share the "CE Plugin Pilot Results" folder with Max as "can edit" (Q5): yes, with a walk-through on the day.** Tim's words: "5yes run me through on the day what i need to do". Desk must: give Tim the exact SharePoint steps on the day (Share, Max Mishchenko, "can edit") and confirm Max can save one test file there.
+
+135. **Reply time for Max's reports (Q6): yes, option A.** Tim's word: "6yes". Desk must: same working day for anything that stops him; the weekly Monday session for the rest.
+
+136. **Inspector versus CDRULES (Q7): CDRULES.** Tim's word: "7cdrules". Desk must: Max trusts CDRULES (council first); the Inspector is changed to match (B-022 / decision 127).
+
+137. **Print pages 01 and 05 as one-page sheets (Q8): yes.** Tim's word: "8yes". Page 02 stays on screen for whoever installs.
+
+138. **Screenshots on page 02 taken by Codex on a test copy (Q9): yes.** Tim's word: "9yes". Desk must: Codex takes them during packaging, Wed 11 to Fri 13 Nov, on the pilot build.
+
+139. **Max's first 10 minutes (Q10): Max does nothing except use it.** Tim's words: "10dont make max do anything else apart from use it he is busy". Interpretation (mine, not a template choice): no practice-drawing task, no setup steps, no extra reading for Max. The A1/A3 template choice is NOT answered. Desk must: everything that can be done for Max (install, settings, folder sharing, template opened for him) is done by Tim and the desk; the pack asks Max for nothing beyond using CE on real work copies. Ask Tim the template question only if the desk needs it to open a drawing for him.
+
+140. **Pack wording (follow-up to 129): NOT answered.** The suggestion "the five pages' wording is the desk's job, checked by Codex, Tim reads only if he wants" was put to him; he did not reply to it. Desk must: not treat the 97 changes as approved; keep them as DRAFT until he says so.
