@@ -9965,6 +9965,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Evidence note (CE 05, 30 Oct 2026, from job p6 report areas\BUGFIX_p6_REPORT_30OCT.md; code read only, nothing run in AutoCAD):** on the C-78 line (origin/claude/rel-20261102a, head 91963bd0) the fault appears already gone. The Sheets screen was rebuilt on 10 Sep 2026 (commit 50572182, "reviewed Issue", an ancestor of that head): only sheets ticked "include in issue" and set as managed are listed, the revision is picked per discipline, a review window shows every sheet and its new revision before anything plots, and Back or Cancel changes nothing in the sheet list. The 9 Oct bug hunt read an older build (Structural 1.0.110, commit 9babe787) that lacks the rebuilt code, so the old fault was real there. No PR was opened. Not proven: nobody has driven Publish Issue in AutoCAD on a build from this line; the window needs a Codex look (robot case S31_issue_unticked_keeps_rev). Status stays OPEN until that look or Tim's word.
 
+**Correction to the evidence note above (CE 05, 30 Oct 2026, after CE 02 and CE 01 checked the Structural train line):** the reviewed-Issue commit 50572182 (10 Sep) is on the Civil and Manager lines (rel-20261026z, rel-20261029a, rel-20261102a) but NOT on the Structural train line (rel-20261026s, head 204dfad2 = Structural 1.0.125, the installed Structural). So on the Structural line that colleagues will run, the BUG-495 fault is probably STILL THERE. "Already fixed" was true only for the Civil/Manager line the job read. Needed: bring the reviewed-Issue work onto the Structural train line (a larger port, to be scoped by a builder), then the Codex look S31. Status stays OPEN.
+
 ---
 
 ## BUG-496
