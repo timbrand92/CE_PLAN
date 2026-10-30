@@ -24,3 +24,21 @@ Thu 29 Oct 2026, written 23:20 Melbourne. Draft PR **#1857** (branch `fb/1788-ex
 4. **Risk to check when compiled:** the `RulebookEngine` helper sits in the same static class as the scour rule (line numbers differ by about 300). I did not confirm this by compiling. The `TypedFigureCommaTests` source guard uses `TestPaths.SourceFile`, which exists in the test project. A unit test that sets `SettingsService.Current` leaves the switch as found (TearDown).
 5. **Still to do on this PR:** the net10 focused tests (check the count is not 0, AutoCAD 2027 on PATH), the full suite once, the net48 compile, all with `-p:SkipDevBundle=true -nr:false --disable-build-servers`. The worktree is `C:\ce-fx\b1788x` (bin/obj not yet created, nothing to clean). CE_SHARED not changed; no layer unlocked; no write, regen, view or variable change.
 6. **Wait log:** the slot checker (`C:\ce-fx\b1788x_scratch\slot.ps1`, top-level dotnet build/test count) reported 1 or 2 from 20:12 to 23:14; the holder was another job's `dotnet test Modules\Drainage.Tests ... net10.0-windows` (started 20:33).
+
+## BUILD AND TEST (B-011b, Fri 30 Oct 2026, 20:10 Melbourne)
+
+### FOR TIM
+
+1. **Answer first:** PR #1857 now compiles and passes its tests. No code change was needed, so the branch is untouched (still commit 09a6d1b8). The "NOT YET COMPILED" warning in the PR title can go. It is still a draft and has not been tried in AutoCAD.
+2. **Results:** the 26 new tests for the comma refusal and the unset-speed fallback pass. The whole Civil suite passes: 20,800 passed, 0 failed, 32 skipped (the usual skips). The AutoCAD 2024 build (net48) compiles with 0 errors.
+3. **My mistakes first:** (a) my first two launcher scripts started nothing, and a third built the main checkout instead of my worktree. That cost about 90 minutes of queue time, and it left ignored build folders (bin/obj) in `C:\Lisp Files\CE_ACAD_PLUGIN`. Nothing tracked changed there. I did not delete them because they are not all mine. (b) About 4 hours were spent in the build queue, behind other jobs' tests.
+4. **Not proven:** nothing has been seen in AutoCAD. The two robot cases above (N40_comma_refused, N41_unset_speed, each with its switch-off control) still need to run. The PDF page test passed in the full run (no re-run needed).
+
+### Technical detail
+
+1. **Worktree:** `C:\ce-fx\c87a`, detached at origin/fb/1788-extras-comma-and-speed (09a6d1b8), because the branch is already checked out in `C:\ce-fx\b1788x`. No commit and no push were needed. bin/obj cleaned with `git clean -fdXq` there.
+2. **Focused (net10.0-windows, Release):** `TypedFigureCommaTests` + `UnsetMaterialSpeedFallbackTests`: Total 26, Passed 26. Count is not 0.
+3. **net48 compile:** `Modules\Drainage\CE_CVL_SUITE.csproj -f net48 -c Release`: 0 Error(s) (refs `C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`).
+4. **Full Civil suite once (net10.0-windows, Release, 19:48 to 20:07, 18 m 40 s test time):** Failed 0, Passed 20800, Skipped 32, Total 20832.
+5. **Flags:** every command used `-p:SkipDevBundle=true -nr:false --disable-build-servers`, BelowNormal priority, AutoCAD 2027 on PATH, 0-byte placeholder `CE_TRANSFORM_2027.arx`, a fresh TEMP and log folder per step. Slot checker waited for under 2 top-level dotnet commands.
+6. **Unproven:** the "risk to check when compiled" in item 4 above is resolved (the `RulebookEngine` helper compiles and its tests pass). Full-suite was not run on net48 (net48 test lanes do not load). Release-only; no Debug build. Nothing driven in AutoCAD. No bundle, settings file or ProgramData touched. CE_SHARED unchanged.
