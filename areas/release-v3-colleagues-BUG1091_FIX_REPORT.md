@@ -27,3 +27,27 @@
 6. **Files:** `Models/UserSettings.cs`, `Services/SettingsSizingStandards.cs`, the test file, `REGRESSION_LOG.md` (entry says plainly it is not built or run). `PipeSizingSolver.cs` untouched (B-020). CE_SHARED untouched. No drawing write, regen, view or system variable change.
 7. **Still to do:** run the focused net10 tests (check the count is not 0), the full suite once, the net48 compile, then update the regression-log wording from "NOT YET BUILT" to the real result. A last focused run was re-queued as `C:\ce-fx\b019\focus7.log`; if it has finished by the time anyone reads this, read that log first.
 8. **Other open points from the Opus pre-review of #1841, not done here:** the "Stale once" marker, sizes between 375 and 450 having no minimum (sizes between 375 and 450 are outside this fix; and sizes above 2400 or not in the 15-size large list, such as DN1000, are not in the shipped list, and the solver looks up exact keys).
+
+---
+
+## BUILD AND TEST (job B-019b, Fri 30 Oct 2026, 5:00 pm to 6:55 pm Melbourne)
+
+### FOR TIM
+
+1. **Answer:** PR #1868 now compiles and its tests pass. Built and unit-tested, nothing more. Nobody has opened it in AutoCAD, it is not installed, BUG-1091 stays open.
+2. **What the checks showed:** the new tests confirm that with a 1 in 200 large-pipe minimum a 450 carrying 30 L/s is held to 1 in 200 by the redesign, the same figure as the Edit Pipe strip. With a blank row nothing changes. With the switch off you get the old answer back. The switch loads ON at start-up.
+3. **Mistakes of my own:** the first two waits for a build slot were killed by the tool after 30 minutes, so the first build only started at 5:36 pm. No code mistakes found; I changed no code, only one line of the change log.
+4. **What is NOT proven:** how it looks and behaves in AutoCAD. The proof is the robot case `C78_redesign_min_fall` (the 450 at 30 L/s with a 1 in 200 row, switch-off control) plus a Codex look H8.
+5. **Your call needed:** none.
+
+---
+
+### Technical detail
+
+1. **Worktree:** `C:\ce-fx\c87b`, detached at the branch head `c88cd7dc` (the branch is also checked out in `C:\ce-fx\c78b`, so a second checkout was not allowed). Pushed with `git push origin HEAD:refs/heads/fb/bug1091-redesign-reads-min-fall`, normal push, new head `38c3f825`. Only change: the REGRESSION_LOG.md line "NOT YET BUILT OR RUN" now states the real result.
+2. **Environment:** Release, `-p:SkipDevBundle=true -nr:false --disable-build-servers`, net48 refs `C:\Autodesk\CERef\AutoCAD2024-24.3.0\refs`, net10 off AutoCAD 2027 (on PATH), placeholder 0-byte `CE_TRANSFORM_2027.arx` untracked, below-normal priority, fresh TEMP and CE log folder per step, two-slot wait script `C:\ce-fx\b019b_run.ps1`. Logs `C:\ce-fx\b019b_focus.log`, `_full.log`, `_n48.log`.
+3. **Focused net10** (filter `Bug1091` or `C75NewSwitch`): Total 31, Passed 31, Failed 0 (count not zero; the 7 cases of `Bug1091RedesignReadsMinFallTests` are inside it).
+4. **Full Civil net10:** Total 20,840, Passed 20,808, Skipped 32, **Failed 0** (35.8 min). The PDF page test did not need a re-run. One log line "TearDown failed for test fixture SettingsIsolationSetup" (a CE_CVL_SUITE.log file lock when the test harness deletes its temp folder) is harness noise that does not fail any test; it comes from test setup, not from this change.
+5. **net48 compile:** `CE_CVL_SUITE.csproj` Release net48, 0 errors, 242 warnings. net10 compile of the same project 0 errors.
+6. **Not run:** net48 test run (reference-only AutoCAD assemblies fail AutoCAD-needing tests on this PC), Manager and Installer suites (untouched), the net8.0-windows target, anything in AutoCAD. The "Stale once" marker and the 375 to 450 and above-2400 size gaps (open points in section 8 above) are unchanged. `PipeSizingSolver.cs` and CE_SHARED untouched.
+7. **Proof still needed:** robot `C78_redesign_min_fall` (see the FOR TIM block in the first part of this report) and a Codex look H8 on the 450 at 30 L/s example.
