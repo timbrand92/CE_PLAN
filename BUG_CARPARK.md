@@ -13862,6 +13862,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Reference:** `CODEX_VERIFY_W4_20261023_0731.md` item 9 (evidence W4-33-applied-detail2.png, W4-34-afterapply.png); `release-v3-colleagues-CLAUDE_DRIVER_RUN35_V2_2026-10-20.md` B item 4. Related UX-LBL-03.
 
+
+**Related (30 Oct 2026, areas/CODEX_BLOCKED_ANALYSIS_30OCT.md (CE 00 Control Room, 30 Oct 2026; read against the source at the installed commit, evidence only, not seen in AutoCAD beyond the Codex looks)):** same root as BUG-1253 (a text's own pipe strip is never treated as keep-clear); fix together.
 **Status:** OPEN
 
 ---
@@ -17400,6 +17402,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Reference:** CODEX_VERIFY_G7_20261030_0627.md (G7-01 FAIL), CE 02 message to CE 05 30 Oct 2026. Related BUG-879 (hand-placement marks, another route), robot check N27 (passes only the part it names) and N31, QUESTIONS_FOR_MONDAY.md item 19, CODEX_CASE_REVIEW_cx_cr25.md.
 
+
+**Cause note (30 Oct 2026, areas/CODEX_BLOCKED_ANALYSIS_30OCT.md (CE 00 Control Room, 30 Oct 2026; read against the source at the installed commit, evidence only, not seen in AutoCAD beyond the Codex looks)):** each pipe label is stored as a segment plus a fraction along the pipe plus an offset (LinkService.SegmentAnalysis.cs, the PipeAttachment builder around lines 260 to 280), so a label near the middle of the pipe moves HALF the pit's move (250 mm of 500). That is the half that fits neither design: it is design (a) with the hand offset kept, anchored mid-pipe. The hand-placed mark (PlacedByHand) is read only by Tidy labels (LinkService.TextClashTidyUp.cs lines 244 to 346); the pit-move re-placement never reads it, so the switch cannot keep a label put. The mark is written only by the atomic attachment move inside a tidy pass, which is why Tidy labels counted zero placed by hand. Also seen: the description re-worded from 1 IN 100 to 1 IN 101 after the move (same family as BUG-357). Stays ON HOLD for Tim's Monday question 19.
 **Status:** OPEN - ON HOLD (waits for Tim's answer to Monday question 19: keep or change the label rule). Evidence only; never FIXED until confirmed in AutoCAD.
 
 ---
@@ -17416,6 +17420,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Reference:** CODEX_VERIFY_G5_20261030_0739.md (G5-01), evidence C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\G5_20261030_0739. Related BUG-141 (label tidy) and the Tidy labels family. CE 02 message to CE 05, 30 Oct 2026.
 
+
+**Cause note (30 Oct 2026, areas/CODEX_BLOCKED_ANALYSIS_30OCT.md (CE 00 Control Room, 30 Oct 2026; read against the source at the installed commit, evidence only, not seen in AutoCAD beyond the Codex looks)):** CE never treats a text's own pipe strip as keep-clear. In LinkService.TextClashTidyUp.cs the pipe, its strip (mline) and its own texts go into ownIds (lines 273 to 286) and the filter skips them as obstacles (lines 687 and 704), so a text on its own pipe strip is never a clash. After a pit move the texts are re-placed by the stored along and offset values on a pipe whose angle changed, and nothing notices the overlap. Seen again independently in the C6-03 look at 08:54. Same root as BUG-1034: fix together.
 **Status:** OPEN (evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
 
 ---
@@ -17432,11 +17438,13 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Reference:** CODEX_VERIFY_G4_20261030_0727.md (G4-01; G4-02 About window PASS), evidence LOOKS\G4_20261030_0727. CE 02 message to CE 05, 30 Oct 2026. Related BUG-808 and BUG-790 (other CDCHECKDWG findings).
 
+
+**Note (30 Oct 2026, areas/CODEX_BLOCKED_ANALYSIS_30OCT.md (CE 00 Control Room, 30 Oct 2026; read against the source at the installed commit, evidence only, not seen in AutoCAD beyond the Codex looks)):** PROBABLY NO FAULT; not closed (only Tim or a clean re-look closes it). The list is a scrolling list with a star-sized row (CheckDwgResultWindow.xaml), and a partly shown row at the bottom is normal for any scrolling list. The same window, build and fixture passed at 08:57 (C6-01: PASS, and one wheel turn scrolled ten new rows); the G4 wheel turn probably had the pointer off the list. Possible LOW polish only: fit the list to whole rows. The brief's wording "no cell cut off at an edge" should exclude the last partly shown row of a scrolling list.
 **Status:** OPEN (evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
 
 ---
 
-## BUG-1255 — Pit Schedule Export Excel opens no file box and the command line shows a "Pit Schedule rendering error" twice (to check)
+## BUG-1255 - Pit Schedule Export Excel fails in AutoCAD 2027: AutoCAD's own older ClosedXML wins over CE's
 
 **Command / Area:** PITSCHEDULE window, Export Excel button, Civil 3.0.86 (Codex look H3, 30 Oct 2026 08:07, on a copy). Severity to confirm; the Codex result is BLOCKED, not a verdict.
 
@@ -17448,7 +17456,9 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Reference:** CODEX_VERIFY_H3_20261030_0807.md (H3-01 BLOCKED), evidence LOOKS\H3_20261030_0807. Related BUG-1198 (cancelling a Pit Schedule export saves the row order), evidence note added there. CE 02 message to CE 05, 30 Oct 2026.
 
-**Status:** OPEN (to check; evidence from a Codex look, 30 Oct 2026). Never FIXED until confirmed in AutoCAD.
+
+**Cause found (30 Oct 2026, areas/CODEX_BLOCKED_ANALYSIS_30OCT.md (CE 00 Control Room, 30 Oct 2026; read against the source at the installed commit, evidence only, not seen in AutoCAD beyond the Codex looks)):** the CE log (08:13:13 and 08:13:22) shows FileLoadException: could not load ClosedXML 0.102.3.0, thrown at ViewModels/PitScheduleViewModel.Schedule.cs line 113 (ExportExcel). AutoCAD 2027 ships its own older ClosedXML 0.102.2.0 (C:\Program Files\Autodesk\AutoCAD 2027\ClosedXML.dll, same publisher key) and it wins over the 0.102.3 that CE Civil and CE Structural reference and ship (CE_CVL_SUITE.csproj line 192, CE_STRUC_SUITE.csproj line 193). Reach: every ClosedXML export in Civil on AutoCAD 2027 (Pit Schedule Excel, likely the CDCALC XLSX export too). Structural's Excel exports very likely fail the same way but this has NOT been seen in AutoCAD: it needs one robot check before it gets its own entry (not filed, to avoid a guess). A second, smaller fault: the window guard turns the crash into "rendering error - see CE log" with no reason for the drafter; a plain line such as "Excel export could not start on this AutoCAD; use Export CSV" is wanted. Fix options for the builder: build the Modern (net10) lane against ClosedXML 0.102.2 to match AutoCAD 2027, or load ClosedXML in CE's own load context; a short accoreconsole probe can show which works. **PILOT-BLOCKER** (lane: 2027; colleagues on 2025 and 2026 not checked). This entry is the bug the analysis calls BUG-1255; no second entry was opened.
+**Status:** OPEN - PILOT-BLOCKER (cause found 30 Oct 2026; evidence only). Never FIXED until confirmed in AutoCAD.
 
 ---
 
