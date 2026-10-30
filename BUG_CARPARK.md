@@ -17502,3 +17502,19 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Status:** OPEN (fix drafted next, B-062). Never FIXED until Tim confirms or the acceptance ledger accepts it by name.
 
 **Facts added by CE 01 (30 Oct 2026, evidence only):** the run was build job c92a, the full Structural suite (1,293 tests), at 19:47 on Tim's PC; his real CS_Settings.json and the Structural log changed in that same minute. The cause is the test set-up, not the product (which test wrote it is not proven; no copy of the file from before 19:47 exists). Tim's two Rebar flags WarnInsteadOfChangeStirrupCover and WarnInsteadOfRefuseSpacing read True now and were False in his 18 Oct backup: a question for Tim (via CE 04) whether he wants them False again. Isolation that the product honours: CE_STRUC_SUITE_APPDATA_ROOT (Structural settings), CE_LOG_DIR_OVERRIDE (Civil and Manager settings and logs), plus TEMP and TMP; Manager's CE_Admin outbox and CeBlocksSettings are not redirected by anything. Fix B-062 (register item 81): assembly-wide test isolation plus a guard test, a Max Sonnet agent.
+
+---
+
+## BUG-1258 — Project Review's "Pipe sizes" proposals call a pipe with no material speed "Unknown" while CDRULES (after #1857) judges it against the office maximum pipe velocity: the two screens disagree
+
+**Command / Area:** Project Review > Proposals > Pipe sizes, and CDRULES (Civil). Found 30 Oct 2026 by CE 00's independent pre-review M of draft PR #1857 (B-011), areas\OPUS_PREREVIEW_M_1857_B011_30OCT.md; passed on by CE 01. MEDIUM, consistency (one code path, design rule 1). Not part of B-011b.
+
+**Symptom:** Once #1857 is in, CDRULES judges a pipe whose material has no speed limit set against the office "Maximum pipe velocity" Settings value (6.0 m/s as shipped). Project Review > Proposals > Pipe sizes still reports the same pipe as "Unknown". The same pipe gets two different answers on two screens.
+
+**Expected behaviour:** One code path decides the speed limit for a pipe with no material speed, so CDRULES and Project Review agree (both use the office Maximum pipe velocity, or both say Unknown with the reason). The value comes from Settings, nothing hard-coded.
+
+**Steps to confirm in AutoCAD:** After #1857 is installed: draw a pipe in a material with no speed limit set, run CDRULES and note the speed verdict, then open Project Review > Proposals > Pipe sizes. Right = both name the same limit (or both say Unknown for the same reason).
+
+**Reference:** BUG_CARPARK follow-up of #1857 / B-011; CE 01 message to CE 05, 30 Oct 2026. Needs a follow-up build card; CE 01 will give the next B number (B-064 free) when the build starts.
+
+**Status:** OPEN (follow-up build card, nothing built). Never FIXED until confirmed in AutoCAD.
