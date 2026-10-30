@@ -191,3 +191,5 @@ H57. **END OF TIM'S HAND-TESTING SESSION, Thu 29 Oct 2026 16:48 Melbourne (date 
 - Fri 30 Oct 16:49 check: no acceptance change. Diagnostic dA/dB evidence logged in DESK_LOG; diagnostic results are never counted.
 
 - Fri 30 Oct 17:20 check: no acceptance change; aU1 BLOCKED x3 (not counted).
+
+- Fri 30 Oct 17:49 check: v87 pass a so far R02v87 R02bv87 R03v87 R04v87 PASS (one session each, not accepted; needs pass b and review). No acceptance change.
