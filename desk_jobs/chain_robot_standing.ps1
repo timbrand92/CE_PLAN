@@ -24,7 +24,9 @@ while ($true) {
   if (-not (AcadAbsent)) { $gap = 0; Start-Sleep 30; continue }
   # AutoCAD absent: it must stay absent for 3 minutes (installs and payload tests use the gap), then go
   $gap++
-  if ($gap -lt 6) { Start-Sleep 30; continue }
+  # 30 Oct 12:05 (Rule 15, staged speed step 2): 3 minutes only while CE 01 has asked for a closed window (ACAD_IDLE_OK.txt) or an install/payload job runs (Busy above); otherwise 1 minute (two polls)
+  $need = if (Test-Path "$d\ACAD_IDLE_OK.txt") { 6 } else { 2 }
+  if ($gap -lt $need) { Start-Sleep 30; continue }
   $gap = 0
   if (-not (Test-Path $next)) { Log "queue line missing file: ${next}"; Set-Content "$next.done" 'missing'; continue }
   $lg = [IO.Path]::ChangeExtension($next, '.log')
