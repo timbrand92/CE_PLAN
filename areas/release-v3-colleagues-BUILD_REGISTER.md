@@ -184,6 +184,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 89. **B-067 Civil BUG-1237 then BUG-1071 (job p7, CE 05, 20:40).** Team job, chain_fix_g53, same base, isolated (C:\ce-scratch\p7). Report areas\BUGFIX_p7_REPORT_30OCT.md. PR number to be added when it opens.
 
+90. **B-058b DONE 30 Oct (follow-up to item 83): PR #1876 new head d30041c4 (was 798d15e1).** Comment fix (B-051 to B-058), an exact-condition test that FAILED when a 'not' was slipped in front of the switch as a trial (then put back), a REGRESSION_LOG entry, the PR description corrected. Focused 16 of 16; full Manager net10 1,099 run, 1,098 passed, 1 skipped, 0 failed; Manager net48 compile 0 errors; every run isolated (worktree C:\ce-fx\m1). Tim's real CE_Admin folder grew by 11 files and 4 changed between 20:11 and 20:39: attributed to a real AutoCAD (acad.exe started 20:34, CE_CVL_SUITE 3.0.87), not proven file by file. Not tested: AutoCAD, the net48 tests. BUG-1247 stays open (the go-back step).
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
