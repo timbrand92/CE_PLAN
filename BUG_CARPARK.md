@@ -9750,6 +9750,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status update (CE 05, 31 Oct 2026):** OPEN. CORRECTION and ROBOT FAIL (CE 05, Sat 31 Oct 2026, from CE 00 and CE 02): the 30 Oct evidence note above, which said the fix "is already on the Structural line", was a code read only and is WRONG for the second point. UNCONFIRMED robot FAIL on the installed Structural 1.0.125 (204dfad2), UCS turned 30 degrees, typed points, one session (a clicked point still needs a Codex look): BT1, AB and BB place the first point right (0 mm off) but the SECOND point is converted twice. BT1 typed 17700,-3300 then 20100,-3300 (2400 mm apart in the UCS) prints "Preview length: 10579.52 rotation: 112.63" and draws a 10.6 m brace; the same job with World-converted points prints 2400 and 30 and is right. AB 10091.2 mm at 120.81, BB 9826.58 mm at 129.62. R1 Point (aS3) passes. FPFC (aS4) inconclusive (case fault, re-run). Runs: RUN-20261031-0601-C3.0.87-aS1, aS2, aS3 (areas\runner-reports). BUG-467 is NOT fixed in code and NOT accepted anywhere. PR #1883 (B-068): read-only check 31 Oct, no build: it turns the jig answer (jig.CurrentPoint) by the UCS once, exactly as the installed line already does, so it would NOT change the second-point conversion; do not withdraw or rely on it. Nothing built on this tonight.
 
+Note (CE 05, Sat 31 Oct 2026, from CE 02): written as FAIL SURE on installed 1.0.125, typed points only, not accepted. CE 02 also found that rotating the correct World second point by 30 degrees a second time gives exactly the point the command used, which fits the double conversion. R1 Point (S467c) passes; FPFC (S467d) is a case fault being re-run. A clicked second point still needs the Codex look.
+
 ---
 
 ## BUG-468
