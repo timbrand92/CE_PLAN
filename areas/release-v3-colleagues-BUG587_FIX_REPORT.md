@@ -58,3 +58,21 @@
 ## Hand-offs
 1. **Decision for CE 04:** the Settings page is at its height budget; where should the two BUG-587 switches be shown, or does the Settings page get a second page for the fix switches (R-00)?
 2. **Decision for CE 04 (low risk):** the 0.75 character width is a guess; Codex looks 1 and 2 will show whether it needs changing.
+
+## B-028b (Fri 30 Oct 2026, Sonnet): switch-off fault and review notes on PR #1881
+
+FOR TIM
+1. **Fixed (built and unit-tested only, nobody opened AutoCAD):** if a drafter turns the long-note switch off after a schedule already has a double row, Update placed schedule now puts the table back: the white strips are removed and every row returns to the normal 750 spacing, so the frame holds all the pits again.
+2. **If the strip layer is locked** the strips stay (CE never unlocks) and one command-line line says so.
+3. **A schedule that never had a double row** and the switch off: nothing changes.
+4. **Said plainly now:** at the shipped figures a note of three lines or more always goes straight to a double row; a two-line note fits; the "draw the lines closer" step never really happens. No threshold was lowered.
+5. **Wording corrected:** a schedule with a double row does move on Update, and a hand nudge of 300 or more is reset; smaller nudges are kept.
+6. **Settings page:** no rows added. The five figures for CE 04's question are 0.75 (character width), 1.2 (closest line spacing), 50 (text margin), 20 (strip inset) and 25 (strip half height), plus the two switches.
+
+TECHNICAL
+1. **Head:** 72b032fa (fix commit 07df4f48 plus a normal merge of origin/claude/rel-20261102a, 7c6af57b; only REGRESSION_LOG.md clashed, both sides kept). Base unchanged.
+2. **Code:** PitScheduleSwitchOffRecovery (pure decision) in Services/PitScheduleRowGrowth.cs; ResolveLayoutReflowThreshold now takes the transaction and finds owned strips when the switch is off; RebuildRowMasksInTransaction no longer returns early with the switch off.
+3. **Tests (isolated):** Bug587PitScheduleRowGrowthTests 38 passed (4 new on the fix plus a source guard). Civil net10 Release full suite on the merged result: 21,628 passed, 32 skipped, 1 failed, 21,661 total; the failure was HelpGuideWindowRenderTests offline Help timeout (30 s under load), 2 of 2 pass alone. net48 compile of Drainage 0 errors.
+4. **Real CD_RecentValues.json:** before 11,948 bytes, modified 21:36:44; after 11,948 bytes, modified 21:53:36. No test of mine was running at 21:53, so that change is the robot's AutoCAD.
+5. **Not tested:** the strip erase and the switch-off Update in AutoCAD (decision logic only), locked-layer behaviour in AutoCAD, net48 tests, everything in the earlier NOT proven list. Review finding B (draw order), C (strips above older text), F, G untouched.
+6. **Robot case additions** from the review (switch-off Update of a grown schedule: expect 750 apart and 0 strips) now have code to test.
