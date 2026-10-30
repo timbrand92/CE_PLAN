@@ -8,6 +8,9 @@ Recorded by CE 00 (desk chat), Fri 30 Oct 2026 about 22:25 Melbourne time.
 for the scope below. Same shape as the 28 Sep holiday ruling in `2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md`, but with
 no end date. Tim's word overrides the rule (RULES 14.6); the override is written down here with its scope.
 
+**Confirmed by Tim, 30 Oct 2026 about 22:35, in the CE 00 chat** (after CE 01 asked for confirmation): "yes, confirmed". This
+was in answer to CE 00 telling him CE 01 wanted it confirmed and that the scope below was CE 00's reading.
+
 ## Scope (CE 00's reading of the words; not Tim's wording, correct it if wrong)
 
 1. **What may be installed:** CE plugin builds (Civil, Manager, Structural bundles) and CE test tooling on Tim's own
