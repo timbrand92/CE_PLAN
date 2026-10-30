@@ -17520,3 +17520,19 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** BUG_CARPARK follow-up of #1857 / B-011; CE 01 message to CE 05, 30 Oct 2026. Needs a follow-up build card; CE 01 will give the next B number (B-064 free) when the build starts.
 
 **Status:** OPEN (follow-up build card, nothing built). Never FIXED until confirmed in AutoCAD.
+
+---
+
+## BUG-1259 — The EV-04 evidence scans write into Tim's real CE usage, session and machine records and end without a clean shutdown
+
+**Command / Area:** Test and evidence set-up (not a drafter command): the EV-04 evidence scans, a headless AutoCAD console (accoreconsole) loading the Civil plug-in over drawing folders under C:\ce_evidence_local. MEDIUM. Reported by CE 00 from CE 02's observation, 30 Oct 2026, 19:19 to 20:42 (not proven file by file).
+
+**Symptom:** The scans write into Tim's real CE_Admin usage, session and machines records, and end without a clean shutdown. The next real AutoCAD start then logs a Critical line "previous CE CVL session did not close cleanly". It may also explain a change to a real recent-values file at 20:46 on 30 Oct (not proven; the robot's AutoCAD runs write that file too). No file contents or client names recorded here.
+
+**Expected behaviour:** An evidence scan never writes to Tim's real CE records. Each scan points CE_LOG_DIR_OVERRIDE and CE_STRUC_SUITE_APPDATA_ROOT at fresh scratch folders and ends with a clean QUIT, so a real start never sees a false crash.
+
+**Steps to confirm in AutoCAD:** None to run in AutoCAD by hand. Check: note the real CE_Admin file times, run one scan with the scratch variables set and a clean QUIT, confirm no real file changed and the next real AutoCAD start logs no "did not close cleanly" line.
+
+**Reference:** CE 00 message to CE 05, 30 Oct 2026; request to the scan owner in areas\EV04_ISOLATION_REQUEST_30OCT.md. Same family as BUG-1257 (test isolation, B-062).
+
+**Status:** OPEN (fix route: the scan owner isolates the scans; nothing built here). Never FIXED until the check above passes.
