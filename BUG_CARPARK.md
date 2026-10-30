@@ -9762,6 +9762,8 @@ Note (CE 05, Sat 31 Oct 2026, from CE 02): written as FAIL SURE on installed 1.0
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "9as recommended" (decision 169): bracing following a rotated UCS stays always on, NO Settings switch; the second-point fix (job p19, root cause first) must not add one, and PR #1883 is not wanted. Still OPEN until the rotated-UCS check passes in AutoCAD.
 
+Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): Tim said "yes close it" (decision 173): PR #1883 is being closed by CE 01 as superseded; the real fix is a new job with no switch (p19 root cause first). Still OPEN.
+
 ---
 
 ## BUG-468
@@ -11469,6 +11471,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a decis
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "4my block in my standard blocks file" (decision 164). UNCONFIRMED (a guess): the bubble is the SECT MARK block in his standard blocks file. NOT answered: whether the SM card (ST3-9/10) is approved. A draft card is queued (job z4); nothing is built.
 
+Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): the earlier UNCONFIRMED mark is lifted: Tim confirmed the bubble is the SECT MARK block in his standard blocks file ("assumptions 1yes"), and approved the SM card (ST3-9/10): "sm card approved". Build is under that card. BUG-631 (the link between cut line, bubbles and labels) still needs a design pass inside the card. Still OPEN: not built.
+
 ## BUG-631 — Moving the section cut line leaves both bubbles and references behind
 
 1. **Status/severity:** OPEN / MEDIUM. Actual AutoCAD2027/Structural1.0.116+f180,15October2026; approved ST3-10 compound editing.
@@ -11483,6 +11487,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "4my block in my stan
 Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a link between cut line, bubbles and labels (reviewed design plus AutoCAD run). Question with CE 04.
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 164: Tim's answer does not cover the link between the cut line, bubbles and labels; still undecided. Card queued (job z4); nothing built.
+
+Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): the SM card is approved (decision 171), but the link between cut line, bubbles and labels still needs a design pass inside the card; not answered. Still OPEN.
 
 ## BUG-632 — Section identifiers are partly hidden against the filled bubble half
 
@@ -11520,6 +11526,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 164: Tim's answer doe
 Note (CE 05, Sat 31 Oct 2026): Job s11, 31 Oct: still real; not built. Needs Tim to say which dimension styles count as recognised (suggestion: TIM LEADER and TIM DOT LEADER). Question with CE 04.
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "5yes purge the rest out automatically by making them mine" (decision 165). UNCONFIRMED (a guess on the mapping): TIM LEADER and TIM DOT LEADER are recognised; any other dimension style is converted to one of his two and the old style purged (which of the two is not stated). This changes drawing content, so a workflow card comes first (job z4); never touches Xref or locked content. Nothing built.
+
+Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): the mapping is now Tim's word (decision 172): every other dimension style becomes TIM LEADER, except a dot-leader style which becomes TIM DOT LEADER, then the old style is purged. The earlier UNCONFIRMED mark on the mapping is lifted. The DSET workflow card stays DRAFT until he approves it, before any code; never touches Xref or locked content. Still OPEN: not built.
 
 ## BUG-635 — DSET1 reports conversion but displayed measurement stays unchanged after reopening
 
