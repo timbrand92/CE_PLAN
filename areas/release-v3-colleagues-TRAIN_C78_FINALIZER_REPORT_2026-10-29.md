@@ -8,8 +8,8 @@ Installed line read first (16:40, read-only, `FileVersionInfo` from a .ps1 file)
 
 ## ANSWER FIRST
 
-1. **GO at `91963bd08ad7b99ff2d68cce7d15267c9cd0c410`.**
-2. **CLASS: AREA.** The real diff holds three brand-new switches (all ON, nothing existing edited), one window, the CD mismatch branch, the raingarden label text and the pit-copy relink; no default, starting value, council figure, CDRULES / CDDESIGN / CDCALC answer, sizer, Settings loader, CE_SHARED or Manager change, and the shared pit-owner walk runs the C-77 code exactly whenever no pit was copied (pinned by my test). Under Tim's re-test rule (decisions 115 to 117) that is AREA plus a smoke set for the shared files touched (`UserSettings.cs`, the linking walk).
+1. **GO at `7c6af57bd7a715477ece9993d603997272999abe`.**
+2. **CLASS: FULL (ADDENDUM 30 Oct, CE 00 ruling of 21:20 after Opus re-check F2): #1871 adds a session-wide handler at Civil start-up that changes how the Excel libraries load, which is a loader-type change (Rule 14, the C-77 reasoning). Re-test FULL plus a start-up smoke for the robot: AutoCAD opens, the CE ribbon loads, one Civil command runs.** *Superseded 30 Oct 2026 by the line above: "CLASS: AREA" for the three-PR head `91963bd0`.* The earlier AREA reasoning, kept for the record: the real diff holds three brand-new switches (all ON, nothing existing edited), one window, the CD mismatch branch, the raingarden label text and the pit-copy relink; no default, starting value, council figure, CDRULES / CDDESIGN / CDCALC answer, sizer, Settings loader, CE_SHARED or Manager change, and the shared pit-owner walk runs the C-77 code exactly whenever no pit was copied (pinned by my test). Under Tim's re-test rule (decisions 115 to 117) that is AREA plus a smoke set for the shared files touched (`UserSettings.cs`, the linking walk).
 3. **Mistakes first, plainly:**
    1. **I changed the build-slot wait from 60 seconds to 10 seconds (cost: none to other jobs, but it is not the job text's number).** My restores sat 36 minutes for a slot (16:43 to 17:19, one of 27 done) because other jobs' Civil test runs took each freed slot before my 60-second re-count. Tim's ruling says a train job gets a slot first, so from 17:20 my script re-counted every 10 seconds. It still counted before every command and never ran with two others going; it never touched another job's process. Restores then took 2 minutes, the solution build 10.
    2. **The job text names a `C77ManagerSwitchDefaultsTests` (11) class; it does not exist on the branch** and the C-77 finalizer report never added one (its Manager pins are `C76ManagerSwitchDefaultsTests`, 11, which pass). Said so rather than counted.
@@ -127,7 +127,7 @@ Checked first: `QUESTIONS_FOR_MONDAY.md`, `decisions/2026-10-29_TIM_ANSWERS.md` 
 
 ## SUMMARY
 
-GO at `91963bd08ad7b99ff2d68cce7d15267c9cd0c410` on `claude/rel-20261102a`, CLASS AREA (three new ON switches only; no loader, default, answer, CE_SHARED or Manager change). Merged the late #1870 at `3a152ada` (clean); added `C78NewSwitchDefaultsTests` (26). Three PRs: #1867 KEEP-WITH-NOTE, #1858 KEEP-WITH-NOTE, #1870 KEEP. Solution 0 errors; Civil net10 21,565, 0 failed; net48 4,846 with exactly the 114 known reference-only reds; Manager 1,085, 0 failed, guard 75 files (re-stamp); Arch Civil 14 of 14; bundle 832 files. Nothing FIXED; nothing in AutoCAD.
+*SUPERSEDED 30 Oct 2026 (about 22:20) by the ADDENDUM below: the GO is now at `7c6af57bd7a715477ece9993d603997272999abe`, CLASS FULL. The original sentence is kept as written:* GO at `91963bd08ad7b99ff2d68cce7d15267c9cd0c410` on `claude/rel-20261102a`, CLASS AREA (three new ON switches only; no loader, default, answer, CE_SHARED or Manager change). Merged the late #1870 at `3a152ada` (clean); added `C78NewSwitchDefaultsTests` (26). Three PRs: #1867 KEEP-WITH-NOTE, #1858 KEEP-WITH-NOTE, #1870 KEEP. Solution 0 errors; Civil net10 21,565, 0 failed; net48 4,846 with exactly the 114 known reference-only reds; Manager 1,085, 0 failed, guard 75 files (re-stamp); Arch Civil 14 of 14; bundle 832 files. Nothing FIXED; nothing in AutoCAD.
 
 ## RULE 14
 
@@ -156,3 +156,65 @@ GO at `91963bd08ad7b99ff2d68cce7d15267c9cd0c410` on `claude/rel-20261102a`, CLAS
 2. **(b) Areas (tools and windows) touched:** pit COPY, ROTATE Copy and SCALE Copy and the pit-to-pipe relink after them (core linking); New Pipe (CD) and its Grade mismatch window; CDRG's raingarden plan label.
 3. **(c) Shared files touched:** `Models/UserSettings.cs` (three added keys only), `REGRESSION_LOG.md` (four entries), and the shared pit-owner walk in `Services/LinkService.Geometry.cs` (unchanged path when no pit was copied). **CE_SHARED, Settings loader (`SettingsService.cs`), the Settings pages, the ribbon, the rulebook and the installer are NOT touched.**
 4. **(d) Changes that EDIT or REMOVE an existing setting, default or saved-data format: NONE.** All three settings are brand-new additive switches (`linking.pitCopyKeepsOriginalPipeEnds`, `grade.mismatchBoxCloseCancels`, `linking.raingardenLabelWithoutNumber`), all ON. The changed existing code is behaviour only: the copy relink's pit-owner walk, the CD mismatch branch and Esc binding, and the raingarden label text. No saved drawing record or settings file changes shape.
+
+
+## ADDENDUM 30 Oct 2026: #1873 (B-057) and #1871 (B-056, BUG-1255) joined C-78 (CE 01 addendum job, Opus 5.5, real clock 21:15 to about 22:25 Melbourne)
+
+### FOR TIM
+
+1. **What is in the train now:** the three earlier fixes plus two more. (a) The New Pipe "Grade mismatch" box no longer pops up on a short pipe whose second level CE worked out itself (4.1 m at 1 in 100 from 19.45 gives 19.40, no box). (b) Excel export works on AutoCAD 2027 (Pit Schedule Export Excel, CDCALC Export XLSX); if it still cannot start, a plain line says "Excel export could not start on this AutoCAD."
+2. **Re-test size changed to FULL**, because the Excel fix adds something that runs every time CE starts.
+3. **Nothing installed. Nothing opened in AutoCAD.** Built and unit-tested only.
+
+### What was merged
+
+1. **Train branch** `claude/rel-20261102a`: was `91963bd08ad7b99ff2d68cce7d15267c9cd0c410` (checked with `git ls-remote` at 21:16 before starting), now **`7c6af57bd7a715477ece9993d603997272999abe`** (normal fast-forward push at about 22:19, leak scan clean, `git ls-remote` reads `7c6af57b` after).
+2. **#1873 (B-057, branch `fb/b057-mismatch-box-own-suggestion`) at `ba2993205b5b0f6d4eb28fda46a809709542c83a`**, merge commit `4e8cbc0b`. Note: Opus re-check H2 reviewed `2b0953fc`; `ba299320` is ONE commit later (B-057c, 20:22): the two percentage tests and the updated `pipe.mismatchBoxSkipsOwnSuggestion` description that H2 asked for (its notes 1 and 2). Tests, a doc comment and a log entry only (`git diff --stat 2b0953fc ba299320`: test file +36, `UserSettings.cs` comment only, log +8). The job text names `ba299320` as the expected head. Files (8): `B057MismatchBoxOwnSuggestionTests.cs` (new), `GradeMismatchToleranceTests.cs`, `CdCommand.Grade.cs`, `CdCommand.cs`, `Models/UserSettings.cs`, `Rules/MismatchBoxOwnSuggestionRule.cs` (new), `ViewModels/CdViewModel.Inverts.cs`, `REGRESSION_LOG.md`.
+3. **#1871 (B-056 / BUG-1255, branch `fb/bug1255-closedxml-autocad-2027`) at `0b8698ebf0b5cb3a0a6aa3133daa1115f80b3bcb`** (the head Opus re-check F2 reviewed), merge commit `68b93ed5`, the WHOLE PR (CE 00 ruling 3b(i)). Files (15): Civil `CE_CVL_SUITE.csproj` (links the shared source file), `Models/UserSettings.cs`, `PluginInitialization.cs` (registers the handler at start-up), `Rules/ExcelPartRule.cs` (new), `Services/CalculationExportPackage.cs`, `ViewModels/CalculationsV2ViewModel.cs`, `ViewModels/PitScheduleViewModel.Schedule.cs`, `Drainage.Tests/Services/Bug1255ExcelPartTests.cs`; shared source `Shared/ExcelBinding/ExcelLibraryBinding.cs` (new; a SOURCE file linked into Civil and Structural with `Compile Include`, NOT the CE_SHARED assembly); Structural `CE_STRUC_SUITE.csproj`, `Models/UserSettings.cs`, `Services/CeToolsInitializer.cs`, `Services/ExportService.cs`, `Structural.Tests/Services/Bug1255ExcelPartTests.cs`; `REGRESSION_LOG.md`.
+4. **Which #1871 changes reach Civil/Manager and which only Structural:** reaches Civil (ships in C-78): the eight Civil files plus the linked `ExcelLibraryBinding.cs`, compiled into `CE_CVL_SUITE.dll`. Reaches Manager: nothing. Structural only (in the branch, NOT shipped by this Civil + Manager train; the Structural lane ships from its own train): the five Structural files. Side effect from re-check F2 item 5.4: once Civil 3.0.88 is loaded, its session-wide handler may also serve an installed Structural's Excel parts on AutoCAD 2027 (untested).
+5. **Conflicts:** `REGRESSION_LOG.md` top of file only, in both merges; both sides kept (no line removed; each merge's contribution equals its PR's own `f5dd72a0..head` numstat, file by file). `UserSettings.cs` auto-merged. No conflict markers left.
+6. **Scope stop-checks:** `git diff --stat 91963bd0 7c6af57b -- Shared/CE_SHARED Modules/Manager '*SettingsService*' Installer` is EMPTY. CE_SHARED and the Settings loader are unchanged, so no STOP.
+7. **Separate small commit `7c6af57b`:** a dated `REGRESSION_LOG.md` note (CE 00 ruling 3b(v)): the #1871 builder's Structural test run of 30 Oct 19:44 to 19:48 caused the 19:47 rewrite of the developer PC's real Structural settings file (BUG-1257; the set-up lacked the Structural settings-root redirect; the fix itself does not write settings; B-062 adds the isolation). No file contents.
+
+### Tests (Release, worktree `C:\ce-fx\c78add` at the merged tree; every test step isolated in a fresh `C:\ce-fx\c78add_scratch\t_<step>` with `CE_LOG_DIR_OVERRIDE`, `CE_STRUC_SUITE_APPDATA_ROOT`, `TEMP` and `TMP` inside it)
+
+1. **Solution build** `CE_ACAD_PLUGIN.slnx` (all frameworks): the first try (21:34 to 21:37) had ONE error, `Installer.Tests` could not run `git` (my runner's PATH lacked Git: MSB3073, code 9009), not a code fault; with Git on PATH the retry at 22:05 built **0 errors**. Civil, Manager, Structural and CE_SHARED built for net48, net8.0-windows and net10.0-windows (output lines read from the log); Civil and Structural tests built for all three.
+2. **Civil focused, net10** (B057MismatchBoxOwnSuggestionTests, GradeMismatchToleranceTests, Bug1255ExcelPartTests, C78NewSwitchDefaultsTests, Bug857GradeMismatchBoxTests, NewSettingsKeys_NeedADocumentedDefault, C77NewSwitch*, RedoSafeCallGraphTests): **186 total, 186 passed, 0 failed, 0 skipped.** The new switch tests of #1873 (`pipe.mismatchBoxSkipsOwnSuggestion`) and #1871 (`excel.useAutoCadLoadedClosedXml`) read the key through BOTH `DeserializeSettings` and `DeserializeSettingsTolerant` (checked in the test source) and passed.
+3. **Civil full, net10: 21,623 total, 21,591 passed, 32 skipped, 0 failed** (22:07 to 22:13). The C-78 finalizer had 21,565; the +58 are the two PRs' new tests.
+4. **Civil focused, net48 (same filter): 186 total, 186 passed, 0 failed.**
+5. **Manager full, net10: 1,085 total, 1,084 passed, 1 skipped, 0 failed** (same as the finalizer; Manager unchanged).
+6. **Structural, net10, BEFORE the merge** (worktree `C:\ce-fx\c78add_base` at `91963bd0`): **1,285 total, 1,273 passed, 5 skipped, 7 failed.** **AFTER the merge: 1,293 total, 1,281 passed, 5 skipped, 7 failed** (+8 = #1871's Structural tests, all passed). The failed names are the SAME 7 in both runs: `AutoCadWriter_OwnsExactlyOneTransactionAndCommit`, `CommitFolder_IsExactUnhostedScope`, `SpecialWriter_MapsPickedSupportsToTheFinalBeamEnds`, `B5RoutesCommand4WhileCommand5RemainsLegacy`, `BextEvidenceReaderIsSelectedOnlyExactLabelAndReadOnly`, `SpecialCaptureFactoryAssemblesOnlyTheNoWritePromptFlow`, `SpecialInitialPromptSessionIsReadOnlyAndUnrouted`. **No new failure.** They match by name re-check F2 item 4.
+7. **No test count was 0.**
+
+### Tim's real files (read-only: length and last-write time)
+
+1. **`%APPDATA%\CE_STRUC_SUITE\CS_Settings.json`:** before (21:18) 35,613 bytes, last written 30 Oct 19:54:14; after (22:18) 35,613 bytes, 19:54:14. **Unchanged.**
+2. **`%APPDATA%\TIM_CE_CADTOOLS\CE_Admin`:** before 26,791 files, 10,696,237 bytes, newest 21:17:08; after 26,819 files, 10,707,292 bytes, newest 22:16:30. The 28 new files are `outbox\usage` (24, 21:31 to 22:15), `outbox\failures` (4, "The previous CE CVL/STRUC session did not close cleanly", plug-in 3.0.87.0 and v1.0.125, at 21:31 and 22:06), `outbox\machines` (2) and `sessions` (2, 22:15). They come from the INSTALLED plug-ins inside a running AutoCAD (an acad.exe started 22:15; the first writes at 21:31 came before my first test at 21:39); my tests run the 3.0.88 tree with no AutoCAD. The two top-level files (`manager-menu-state.json` 204 bytes, 28 Apr; `seat_tokens.txt` 772 bytes, 3 Jul) are unchanged.
+
+### Class (Rule 14)
+
+1. **CLASS FULL.** Reason: #1871 adds a session-wide Excel library-loading handler registered at Civil start-up (`PluginInitialization.cs`), a loader-type change (CE 00 ruling 3b(ii), the C-77 reasoning). The settings changes themselves are brand-new additive switches only (`pipe.mismatchBoxSkipsOwnSuggestion`, `excel.useAutoCadLoadedClosedXml`; the Structural `Excel.UseAutoCadLoadedClosedXml` is not shipped here); no Settings loader, default, saved-data format or CE_SHARED change.
+2. **Changed files** (`git diff --name-only f5dd72a0..7c6af57b`): **39 files**, written to `areas\TRAIN_C78_CHANGED_FILES.txt` and `areas\TRAIN_C-78_CHANGED_FILES.txt` (both replaced). New against the 21-file list: `B057MismatchBoxOwnSuggestionTests.cs`, `GradeMismatchToleranceTests.cs`, Civil `Bug1255ExcelPartTests.cs`, `CE_CVL_SUITE.csproj`, `CdCommand.Grade.cs`, `PluginInitialization.cs`, `ExcelPartRule.cs`, `MismatchBoxOwnSuggestionRule.cs`, `CalculationExportPackage.cs`, `CalculationsV2ViewModel.cs`, `CdViewModel.Inverts.cs`, `PitScheduleViewModel.Schedule.cs`, the five Structural files, `Shared/ExcelBinding/ExcelLibraryBinding.cs`.
+
+### Robot proofs now added to the train (Civil 3.0.88 / Manager 1.1.88 when installed)
+
+1. **#1873 (B-057):** N33a to N33h and the twin N33s (OPUS_RECHECK_H2 section 5.2): two CE pits 4.1 m apart, 100 mm pipe, Set my own; N33s with `pipe.mismatchBoxSkipsOwnSuggestion` false before launch.
+2. **#1871 (BUG-1255), AutoCAD 2027, two sessions:** the Excel pair **N41** (Pit Schedule Export Excel, switch on: the file saves with sheets "Pit Schedule" and "Checking") and **N41c** (`excel.useAutoCadLoadedClosedXml` false in the TEST profile only: the old failure, no "could not start" line); plus CDCALC Export XLSX, and a Codex look that opens the saved file in Excel (OPUS_RECHECK_F2 section 8.2).
+3. **Start-up smoke (the CLASS FULL reason):** AutoCAD opens, the CE ribbon loads, one ordinary Civil command runs.
+
+### Notes for the robot (CE 02 and CE 07 read this)
+
+1. **New C-78 head: `7c6af57bd7a715477ece9993d603997272999abe`. CLASS FULL** (session-wide Excel handler at Civil start-up), plus the start-up smoke above.
+2. Every bug stays OPEN (BUG-1255, BUG-857, BUG-1227, BUG-1257 and the rest); nothing is FIXED.
+
+### NOT tested
+
+1. Anything in AutoCAD; the Excel handler in a real AutoCAD 2025, 2026 or 2027 session; the Grade mismatch box on screen.
+2. The Installer suite (compiled only); the Civil net48 full suite (focused 186 only); Structural net48 and net8 test runs (compiled only); the Arch guards; the bundle and the Manager release build (not rebuilt by this addendum; the payload does that).
+
+### Mistakes and hygiene
+
+1. **My first solution build failed on a missing Git path in my own runner** (cost about 3 minutes plus a 27-minute wait for a slot to retry). Not a code fault.
+2. **`C:\ce-fx\c78b` already existed (another job's worktree), so the before-merge Structural run used `C:\ce-fx\c78add_base`.** The other folder was left alone.
+3. **Slot rule:** before every dotnet command my `slots.ps1` counted top-level dotnet build/test/msbuild/publish/restore and ran only at 0 or 1 (re-count every 60 s); every command had `-p:SkipDevBundle=true -nr:false --disable-build-servers` and the C-62 refs; foreground, normal priority. C: never under 41 GB free. No AutoCAD, accoreconsole or Codex started. `C78_PAYLOAD_GO.flag` NOT written; no payload or install started.
+4. **Undo:** `git revert 7c6af57b`, `git revert -m 1 68b93ed5` (#1871), `git revert -m 1 4e8cbc0b` (#1873); or set `pipe.mismatchBoxSkipsOwnSuggestion` / `excel.useAutoCadLoadedClosedXml` false.
