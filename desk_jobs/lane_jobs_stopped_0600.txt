@@ -74,3 +74,5 @@ c90a pid 48720 pwsh
 c90a pid 40268 cmd
 c90a pid 36164 cmd
 c90a pid 10748 pwsh
+
+Stopped by CE 01 at Fri 30 Oct 13:17 (Team 5-hour at 91 percent and rising about 4 percent an hour; protect the C-77 finalizer): c88a BUG-1255 Excel fix, chain g35 (start again with chain_fix_g35.ps1 after the 16:00 reset; job file team_fix_c88a.txt unchanged; its worktree C:\ce-fx\c88a may hold partial work, the brief says reuse it).
