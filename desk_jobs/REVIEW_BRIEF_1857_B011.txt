@@ -1,0 +1,17 @@
+PRE-REVIEW BRIEF: PR #1857 (B-011, BUG-1788 extras: a number typed with a comma, and the speed check for a pipe with an unset material), head 09a6d1b8, Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the PR branch is allowed; find it with gh pr view 1857), build nothing, run no test, deploy nothing, open no AutoCAD, do not read or write Tim's real settings files, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_M_1857_B011_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven).
+
+The PR: #1857 (B-011), head 09a6d1b8 (unchanged since it was first built on an old base; CE 01's job c87a re-ran it at 20:13 with no code change). Switches pipe.boxRefusesCommaFigure and pipeSpeedChecks.unsetMaterialUsesOfficeFigure, both ON. Author's numbers: focused 26 of 26, full Civil net10 20,800 passed 0 failed 32 skipped, net48 0 errors; built and tested on the PR's OLD base, not on the C-77 or C-78 line; not tried in AutoCAD. Author's report and register entry: search C:\CE_PLAN\areas for B-011 and BUG-1788.
+
+Answer, with file and line:
+1. What does the drafter see before and after, in AutoCAD terms, for (a) a number typed with a comma in a CE box (for example 1,5 or 1,200) and (b) the speed check on a pipe whose material is unset? Is each behind its own switch, ON by default with a documented default ('Default: on.'), and what does OFF restore exactly? Is each switch on the Settings page (Settings-first rule) or only in the settings file?
+2. 'Refuses a comma figure': does it refuse in every box that parses numbers or only some? Could it block a legitimate entry (decimal comma users, thousands separators, a list separated by commas such as levels 'Recent' values, a pipe size list)? Nothing hard-blocks (R-27): is the refusal a warning that lets the drafter carry on, or a hard stop? Which is it, and which should it be?
+3. 'Unset material uses the office figure': which office figure, where read, what if the office figure is blank, and does it change any result on a saved job (CDRULES Stale effect, council sweep parity)?
+4. Does it still hold on the C-77 / C-78 lines (the 1-in-100 minimum fall table, the Grade mismatch window, the speed checks)? A read-only trial merge (git merge-tree) with claude/rel-20261030a, claude/rel-20261102a and the open PRs #1868 to #1876: files and lines of every clash.
+5. What is NOT proven, and the AutoCAD scenario Tim or the robot should run.
+6. Verdict: KEEP, KEEP-WITH-NOTE (give the note) or DROP, and which train (after C-78).
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
