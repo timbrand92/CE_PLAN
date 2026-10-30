@@ -168,3 +168,12 @@ I check each owner's files every 30 minutes (section 8). A line goes in RELEASE_
 1. **A changed default or a one-time move of saved settings counts as touching its OWN tool plus the Settings smoke set, not FULL.** Settings-file changes therefore no longer trigger a full re-test of the train that carries them (this refines Addendum 1 of the re-test rule, where editing an existing setting meant FULL).
 2. **C-77 (Fri 30 Oct, install 11:00 to 12:00):** re-test is AREA plus SMOKE from about 12:15; CE 02 sized 51 of 66 cases, about 6 h 10 min (estimate). Saturday's weekend full re-test is the safety net.
 3. **Unchanged:** one full re-test of the pilot build before Max by Fri 13 Nov, the weekend full re-tests, and "carried from <build>" labels.
+
+## 17. Addition Sat 31 Oct 07:49: no full re-test (Tim's decision 148, voice batch 2)
+
+1. Tim: "i think no full retest cause it would take forever" (147), confirmed "1yes" (148); "if something has passed we dont need to retest unless code has changed since tested" (146).
+2. **Dropped from this plan:** the standing full re-test before Max (section 14), the dated full passes (Sat 31 Oct, Sat 7 Nov, Tue 10 Nov), and the confirming full pass Sat 14 and Sun 15 Nov (section 10 and the handover plan section 8 item on the confirming pass).
+3. **Now the plan:** (a) after each install, the robot re-tests what the train touches plus the small smoke set per shared file; (b) each acceptance is recorded against the build it passed on and not re-run unless that tool's code or a shared file it uses changes; (c) ONE short check of Max's ten commands on the final pilot build, Fri 13 Nov (proposed), before Tim's yes; (d) Tim's weekly spot-check of about 5 accepted fixes (decision 142).
+4. **Not stopped:** the C-78 FULL run in progress (class FULL because of the Excel loader change), ending about Sun 1 Nov 02:00.
+5. **Open:** the Cup Day (Tue 3 Nov) 5 to 7 hour 'Max-like' pass: not covered, marked ASKED (question 43, CE 04).
+6. **Check A and B of this plan stay; check D (Tim's two hand checks) stays as a choice for Tim, not a gate.**
