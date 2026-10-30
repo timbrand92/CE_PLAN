@@ -17570,3 +17570,19 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Reference:** CE 00 message to CE 05, 30 Oct 2026; related BUG-1173, BUG-1260, B-063 (#1878).
 
 **Status:** OPEN (nothing built). Never FIXED until confirmed.
+
+---
+
+## BUG-1262 — Structural Publish Issue still refuses a blank revision, but Tim ruled "Allow" for an issue with no sheet ticked and a blank revision
+
+**Command / Area:** Structural CESHEETS Publish Issue window. Found 30 Oct 2026 by build job p6 while checking BUG-495 (areas\BUGFIX_p6_REPORT_30OCT.md, FOR TIM item 5; code read only, nothing run in AutoCAD).
+
+**Symptom:** The Publish Issue window refuses a blank revision. Tim's 28 Sep 2026 ruling on an issue with no sheet ticked and a blank revision was "Allow". Allowing it means changing the issue pipeline (folder name, history, review), so it is a separate item from BUG-495.
+
+**Expected behaviour:** Per the ruling, an issue with nothing ticked and a blank revision is allowed (warn and carry on, rule R-27). What should plot, and what the folder and history show, needs Tim's wording; not assumed.
+
+**Steps to confirm in AutoCAD:** Open CESHEETS on a test copy, tick no sheets, leave the revision blank, press Publish Issue. Right = allowed with a plain warning and the outcome Tim words; today it refuses.
+
+**Reference:** Tim's 28 Sep 2026 ruling (decisions folder; exact wording not re-read here); p6 report; related BUG-495. Question for Tim: what should plot when nothing is ticked (goes to CE 04).
+
+**Status:** OPEN (nothing built; needs Tim's wording of what plots). Never FIXED until confirmed in AutoCAD.
