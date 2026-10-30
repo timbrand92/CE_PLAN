@@ -1,5 +1,7 @@
 # Bug pipeline state (latest state only; CE 01 rewrites this file, it keeps no history)
 
+**OWNER CHANGE, Fri 30 Oct ~20:00 PC clock: CE 05 (Carpark, bug intake and bug pipeline) now owns this pipeline** (intake, ordered queue, launching fixes), as set by CE 00 for Tim's ruling. CE 01 stopped its 17/37/57 launch check. Job q1 (chain_fix_g46, pid 77036) keeps running for CE 05 to adopt. CE 01 keeps the in-flight items until their PRs land (c87a, c87b, c92a, c93a, c95a, Max agents B-029b and B-028), plus trains, finalizers, payload, installs and the B-number register (CE 05 sends a B-number request per new fix PR). CE 05 should take over this file.
+
 Approved by CE 00 Fri 30 Oct 2026 for Tim's ruling "try to complete everything in the bug document" (decisions\2026-10-30_TIM_COMPLETE_ALL_BUGS.md). Any new CE 01 session resumes from this file.
 
 1. **Last launch:** Fri 30 Oct 19:05 PC clock, job q1 (refresh of the whole-file triage and the ordered build queue), chain_fix_g46.ps1 pid 77036, Team Sonnet, read-only. Output: a section appended to areas\BUG_REGISTER_TRIAGE_2026-10-24.md.
