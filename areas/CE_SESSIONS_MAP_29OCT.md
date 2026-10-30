@@ -102,3 +102,11 @@ Tim asked on 30 Oct 18:50 to clear side sessions earlier, not at the edge of the
 2. **How (the CE 00 route):** (a) the session saves its state first (`areas\SESSION_STATE_<CE nn>.md`: every job with its pid, PRs and heads, what it owes whom, its own mistakes), pushes by name, and sends CE 00 one line 'READY TO CLEAR'; (b) it stops any background agent it started (a clear kills its children) and notes the unsaved edits in the state file; (c) CE 00 clears it (`clear_session`, Tim approves the card; refused for a pinned, open or queued session, then close and restart under the same name is the fallback); (d) CE 00 sends a start message: read the state file, `CE_SESSIONS_MAP_29OCT.md`, recreate the hourly check.
 3. **Who and when:** CE 00 reads each linked session's context fill (`get_usage` with its session id) at the hourly check and starts step (a) at 60 percent. First: CE 01 (93 percent at 18:55). Then CE 02 after the Codex block (about 21:30, its monitors on queue.log are session-bound), CE 07 and CE 04 when they pass 60 percent. CE 00 saves a safe point with `/ce-compact` before it is cleared itself.
 4. **Never clear** a session that holds a closed AutoCAD window, an install, a half-merged branch or an unanswered Tim question; wait for its next calm moment.
+
+## Rule 19: Max is fine, the single rule is the weekly pace (Tim, Fri 30 Oct 2026 19:45)
+
+Tim: "using max subscription is perfectly fine the single rule for this is to manage weekly usage. i want it to keep moving do you get what i mean". This lifts the old cap of 2 Max agents at once and the reserved review slot.
+
+1. **Rule:** Max background agents (Opus reviews, Sonnet builders, case drafting) run whenever there is work; no concurrency cap. The only limits are the weekly pace and the 5-hour window.
+2. **Pace:** Max week resets Fri 6 Nov 13:00. Keep the Max week at or under about 6 percent plus 14 points a day from Fri 30 Oct 19:45 (about 20 Sat evening, 34 Sun, 48 Mon, 62 Tue, 76 Wed, 90 Thu, 100 at the reset) and the 5-hour window under 90 percent. Team week resets Sat 31 Oct 14:00 (spend it first); Codex follows CAP_RAMP.txt.
+3. **Keep moving:** no lane waits for another's slot. If Team is over a guard the work runs on Max. CE 00 reads all three meters at every hourly check and tells the lanes when pace allows more.
