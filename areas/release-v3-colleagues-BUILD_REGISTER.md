@@ -164,6 +164,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 79. **B-061 Civil BUG-1112, the WSUD export prints a sample site's figures (bug pipeline job p4, CE 05, 30 Oct).** Max Sonnet agent (started by CE 05), base origin/claude/rel-20261102a. Report areas\BUGFIX_p4_REPORT_30OCT.md. PR number to be added when it opens; the Opus pre-review by CE 00 comes before any train.
 
+80. **B-057c two short tests and a wording fix on PR #1873 (CE 00 Opus re-check H2, 30 Oct: RE-CHECK OK WITH NOTE at head 2b0953fc; Max Sonnet agent, worktree C:\ce-fx\c91a, branch fb/b057-mismatch-box-own-suggestion).** (1) Add two short tests: a lowered Settings percentage with the switch ON, and a typed level equal to CE's own level (nothing now checks a lowered percentage with the switch ON). (2) Fix the UserSettings.cs description at about lines 1452 to 1458, which still describes the OLD version. (3) Reviewer's extra robot cases N33g (a plain retype of the upstream stays CE's own) and N33h ('I know one end' ON at 1 in 200) go to CE 02. Known trade-off for Tim's question J, NOT changed: with 'I know one end' ON the window effectively never opens, so a short pipe can show 1 IN 200 while really falling at 1 in 50. Must push BEFORE the C-78 addendum merges #1873.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
