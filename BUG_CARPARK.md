@@ -17527,7 +17527,7 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Command / Area:** Test and evidence set-up (not a drafter command): the EV-04 evidence scans, a headless AutoCAD console (accoreconsole) loading the Civil plug-in over drawing folders under C:\ce_evidence_local. MEDIUM. Reported by CE 00 from CE 02's observation, 30 Oct 2026, 19:19 to 20:42 (not proven file by file).
 
-**Symptom:** The scans write into Tim's real CE_Admin usage, session and machines records, and end without a clean shutdown. The next real AutoCAD start then logs a Critical line "previous CE CVL session did not close cleanly". It may also explain a change to a real recent-values file at 20:46 on 30 Oct (not proven; the robot's AutoCAD runs write that file too). No file contents or client names recorded here.
+**Symptom:** The scans write into Tim's real CE_Admin usage, session and machines records, and end without a clean shutdown. The next real AutoCAD start then logs a Critical line "previous CE CVL session did not close cleanly". The 20:46 change to the real recent-values file is NOT this: CE 00 confirmed the robot's AutoCAD pack was running then, and robot and Codex runs legitimately rewrite that file. No file contents or client names recorded here.
 
 **Expected behaviour:** An evidence scan never writes to Tim's real CE records. Each scan points CE_LOG_DIR_OVERRIDE and CE_STRUC_SUITE_APPDATA_ROOT at fresh scratch folders and ends with a clean QUIT, so a real start never sees a false crash.
 
