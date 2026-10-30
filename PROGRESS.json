@@ -23,5 +23,5 @@
   "installed": "Civil 3.0.87 · Manager 1.1.87 (C-77, 14:29 Fri, commit f5dd72a0) · Structural 1.0.125",
   "waiting": "C-77 installed 14:29 Fri 30 Oct (Civil 3.0.87 / Manager 1.1.87, class FULL, 24 PRs, GO at 02681d9f); CE 02 runs the FULL re-test on 3.0.87 (B-055 proof N38/C38 first). C-78 (tonight, Civil 3.0.88): assembler started 14:26 with #1867 BUG-1227 Part A and #1858 BUG-857, plus BUG-1255 Excel fix and plain RG label when built; install after 17:30, one more AutoCAD-closed window of about 15 to 35 minutes.",
   "planCountedAt": "2026-10-29T13:27:00+11:00",
-  "countedAt": "2026-10-30T14:45:00+11:00"
+  "countedAt": "2026-10-30T14:42:55+11:00"
 }
