@@ -1,7 +1,7 @@
 # EV-04 construction methods read: brief for a chat on Tim's PC (30 Oct 2026)
 
 **Why this exists:** stages A and B of the EV-04 library read are done (`areas\EV-04_LIBRARY_COUNTS_STAGE_A.md`, `areas\EV-04_LIBRARY_COUNTS_STAGE_B.md`). Sheet kinds are counted. **Construction methods are still Unknown**, and they cannot be read from the PDFs. This brief is the piece that is left of the first brief, `areas\EV-04_LIBRARY_READ_BRIEF_2026-10-30.md`, section 1.3.3.
-**Status:** not started. Needs Tim's go and a free AutoCAD window (RULES 1.8).
+**Status:** pilot on the 78 jobs done 30 Oct 2026 from Evidence Job 2's saved drawing scan, no AutoCAD run (`areas\EV-04_METHODS_PILOT_STAGE_A.md`). Stopped for Tim's check of the mapping. Stage B needs a free AutoCAD window (RULES 1.8).
 
 ## 1. What was tried, and why it failed
 
