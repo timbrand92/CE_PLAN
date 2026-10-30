@@ -42,12 +42,12 @@ while ($true) {
   $busy = @(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0
   if ($busy) {
     if ($idleSince) { $mins = [math]::Round(((Get-Date) - $idleSince).TotalMinutes, 1); Log ("IDLE ENDED after $mins min (started " + $idleSince.ToString('HH:mm') + ")"); $idleSince = $null; $idleLogged = $false; Remove-Item "$d\AUTOCAD_IDLE.txt" -Force -ErrorAction SilentlyContinue }
-    $busyMin += 2
+    $busyMin += 0.5
   } else {
-    if (-not $idleSince) { $idleSince = Get-Date }
-    $mins = ((Get-Date) - $idleSince).TotalMinutes; $idleMin += 2
+    if (-not $idleSince) { $idleSince = Get-Date; Log ('IDLE STARTED ' + $idleSince.ToString('HH:mm:ss') + ' (checking for an allowed reason)') }
+    $mins = ((Get-Date) - $idleSince).TotalMinutes; $idleMin += 0.5
     $why = AllowedReason
-    if (-not $why -and $mins -lt 4) { $why = 'gap between two starts' }
+    if (-not $why -and $mins -lt 3) { $why = 'gap between two starts' }
     # Rule 15 (CE 00 07:55): a Codex look that is launching (launcher process alive) is a reason for up to 12 minutes; with no look launching a gap over 4 minutes is a breach and the filler below starts at once.
     if (-not $why -and $mins -lt 12 -and @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'launch_codex_retry|codex\.js exec' -and $_.Name -match 'pwsh|node|codex' }).Count -gt 0) { $why = 'a Codex look is launching' }
     if ($why) { if (-not $idleLogged -and $mins -ge 4) { Log ("idle, allowed: $why"); $idleLogged = $true } }
@@ -60,7 +60,7 @@ while ($true) {
       if ($DryRun) { Log 'WOULD run start_lanes.ps1' } else { & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null; Log 'ran start_lanes.ps1' }
       # 2a. Codex looks are queued (and Codex is not paused by the cap): the conveyor takes the gap, so no robot filler now (a filler would grab AutoCAD first and make the look refuse). The conveyor starts one within seconds; if AutoCAD is still idle after 8 minutes the fillers below run anyway.
       $codexQueued = @(PendingWork | Where-Object { $_ -like 'codex:*' }).Count -gt 0
-      if ($codexQueued -and $mins -lt 8) { if (-not $DryRun) { & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null }; Log 'Codex looks queued: leaving the gap to the conveyor'; Start-Sleep 120; continue }      # 2b. nothing pending anywhere (queues empty): move the next held robot job from ROBOT_QUEUE_AFTER_C77.txt into ROBOT_QUEUE.txt so AutoCAD gets work (the robot lane starts it). One job at a time.
+      if ($codexQueued -and $mins -lt 3) { if (-not $DryRun) { & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null }; Log 'Codex looks queued: leaving the gap to the conveyor'; Start-Sleep 30; continue }      # 2b. nothing pending anywhere (queues empty): move the next held robot job from ROBOT_QUEUE_AFTER_C77.txt into ROBOT_QUEUE.txt so AutoCAD gets work (the robot lane starts it). One job at a time.
       if (($true) -and (Test-Path "$d\ROBOT_QUEUE_AFTER_C77.txt")) {   # queues empty, or still idle after 10 minutes (e.g. the Codex daily cap has paused the conveyor)
         $held = @(Get-Content "$d\ROBOT_QUEUE_AFTER_C77.txt" | Where-Object { $_.Trim() -and -not $_.StartsWith('#') })
         if ($held.Count) { $next = $held[0]; if ($DryRun) { Log "WOULD queue the robot job $next (nothing else pending)" } else { Add-Content "$d\ROBOT_QUEUE.txt" $next; $rest = @(Get-Content "$d\ROBOT_QUEUE_AFTER_C77.txt" | Where-Object { $_.Trim() -ne $next.Trim() }); [IO.File]::WriteAllText("$d\ROBOT_QUEUE_AFTER_C77.txt", (($rest -join "`r`n") + "`r`n")); Log "queues were empty: moved $([IO.Path]::GetFileName($next)) into ROBOT_QUEUE.txt"; & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null } }
@@ -70,7 +70,7 @@ while ($true) {
         $fs = @(Get-Content "$d\FILL_SCRIPTS.txt" | Where-Object { $_.Trim() -and -not $_.StartsWith('#') })
         if (-not $running -and $fs.Count) { $f1 = $fs[0].Trim(); if ($DryRun) { Log "WOULD start the filler $f1" } else { Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{ CommandLine = ('pwsh.exe -NoProfile -WindowStyle Hidden -File "' + $f1 + '"'); CurrentDirectory = $d } | Out-Null; $rest = @($fs | Select-Object -Skip 1); [IO.File]::WriteAllText("$d\FILL_SCRIPTS.txt", (($rest -join "`r`n") + "`r`n")); Log "AutoCAD idle with nothing queued: started the filler $f1" } }
       }      # 3. still idle after 6 minutes: say so
-      if ($mins -ge 6 -and -not (Test-Path "$d\AUTOCAD_IDLE.txt")) {
+      if ($mins -ge 4 -and -not (Test-Path "$d\AUTOCAD_IDLE.txt")) {
         $pw = PendingWork
         $txt = "AUTOCAD IDLE since $($idleSince.ToString('ddd HH:mm')) with no allowed reason. Pending work: " + $(if ($pw.Count) { $pw -join ', ' } else { 'NONE (queues empty: top them up)' }) + ". Codex cap/mode: " + ((Get-Content "$d\CODEX_MODE.txt" -TotalCount 1 -ErrorAction SilentlyContinue)) + "."
         if (-not $DryRun) { Set-Content "$d\AUTOCAD_IDLE.txt" $txt }
@@ -80,5 +80,5 @@ while ($true) {
   }
   if (((Get-Date) - $lastBusyLog).TotalMinutes -ge 30) { Log ("occupancy last 30 min: busy $busyMin min, idle $idleMin min"); $busyMin = 0; $idleMin = 0; $lastBusyLog = Get-Date }
   if ($Once) { break }
-  Start-Sleep 120
+  Start-Sleep 30
 }
