@@ -1,0 +1,18 @@
+PRE-REVIEW BRIEF: PR #1874 (B-029, BUG-1096 and BUG-1098, rainwater reuse boxes in CDDESIGN), Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the named branch is allowed), build nothing, deploy nothing, open no AutoCAD, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_I_1874_B029_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven). Also the UI rules in C:\Users\TimothyBrand\.claude\projects\C--Lisp-Files-CE-ACAD-PLUGIN\memory\ui-no-scroll-rule.md, plain-english-ui-rule.md and ui-cockpit-test.md (read only).
+
+The PR: #1874 (B-029), branch fb/bug1096-reuse-boxes head d1f3cb401d7e22025dd68ae7c8df9a4be252b285 on base claude/rel-20261026z. Author's report: C:\CE_PLAN\areas\release-v3-colleagues-BUG1096_FIX_REPORT.md. Built (net48 0 errors) and unit-tested (full Civil net10 20,807 passed, 0 failed) only. It adds rainwater reuse boxes to the CDDESIGN page, changes the Kingston credit (6,000 L = 1.00 m3, was 1.50) and adds 'needs confirmation' wording. The stated limit: Manningham's example is proved only in the engine tests: five councils supply the permitted discharge and CDDESIGN has no box for it.
+
+Answer, with file and line for each claim:
+1. The new CDDESIGN page layout against the no-scroll rule (high-use windows never scroll their layout; long lists and help pages may), the cockpit test (same layout on every open, quiet unless one decision) and the plain-English rule (no software jargon). Does anything need a scroll bar at 100 percent and at 150 percent scaling on a laptop?
+2. The Kingston credit change 1.50 to 1.00 m3 for 6,000 L: where does it come from (council data, Settings, or hard-coded), is it a switch or data, and does it change results for any other council or for saved jobs (CDRULES Stale effect, council sweep parity tests)?
+3. The 'needs confirmation' wording: is it plain English, does it appear only when it should, and could it make a drafter think a result is final when it is not?
+4. The limit: for the five councils that supply the permitted discharge, what does CDDESIGN show today, can a drafter be misled into a wrong storage figure, and what is the smallest safe wording or guard?
+5. Clashes with the other open trains (claude/rel-20261030a, claude/rel-20261102a) and with the council work in #1841, #1854, #1855, #1872: any overlap in CouncilProfileModels.cs, CouncilSweepParityTests.cs, CDDESIGN view files or REGRESSION_LOG?
+6. What is NOT proven, and the AutoCAD scenario Tim or the robot should run (e.g. Kingston 6,000 L reuse tank on a 600 square metre lot).
+7. Verdict: KEEP, KEEP-WITH-NOTE (give the note) or DROP, and which train it could join.
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
