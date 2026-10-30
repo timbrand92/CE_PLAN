@@ -162,6 +162,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 78. **B-060 Structural BUG-1136 then BUG-1199, footing data loss (bug pipeline job p3, CE 05, 19:39).** Team job team_fix_p3, chain_fix_g49 (pid 75760), base origin/claude/rel-20261102a. Report areas\BUGFIX_p3_REPORT_30OCT.md. Structural has its own CE_SHARED copy; PR number to be added when it opens.
 
+79. **B-061 Civil BUG-1112, the WSUD export prints a sample site's figures (bug pipeline job p4, CE 05, 30 Oct).** Max Sonnet agent (started by CE 05), base origin/claude/rel-20261102a. Report areas\BUGFIX_p4_REPORT_30OCT.md. PR number to be added when it opens; the Opus pre-review by CE 00 comes before any train.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
