@@ -675,3 +675,29 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
 ## Sat 31 Oct 2026: Tim on full re-tests
 
 147. **No full re-test (changes decision 116 and the dated full passes of decision 70).** Tim's words: "i think no full retest cause it would take forever". Interpretation (mine; Tim said "i think", GUESS on how far it reaches): the standing "one full re-test before Max (Fri 13 Nov) and at the weekends" is dropped. After any install the desk re-tests only what the train touches plus the small smoke set per shared file (decisions 115 to 117); each acceptance is tied to the build it passed on (decision 146); the weekly spot-check (decision 142) is the backstop. The dated full passes in decision 70 (Sat 31 Oct, Sat 7 Nov, Tue 10 Nov and the confirming full pass Sat 14 and Sun 15 Nov) are probably dropped too: NOT confirmed. Desk must: tell CE 07 and CE 01; do not cancel any dated pass until Tim has confirmed in batch 2 (voice question 1); the robot still uses idle AutoCAD time for area and smoke work (Rule 15).
+
+## Sat 31 Oct 2026: Tim's spoken answers to VOICE BATCH 2 (QUESTIONS item 87; asked by CE 04). Tim's words: "1yes, 2yes, 3yes, 4no, 5yes, 6yes, 7yes, 8yes, 9ill figure that out, 10yes, 11yes, 12this release"
+
+148. **No full re-test at all (V1, confirms decision 147): yes.** Tim's word: "1yes". Confirmed: the standing full re-test before Max and the dated full passes of decision 70 (Sat 31 Oct, Sat 7 Nov, Tue 10 Nov, the confirming pass Sat 14 and Sun 15 Nov) are DROPPED. Replacement (as asked): after each install the robot re-tests only what changed plus the small smoke set per shared file; before Max, ONE short check of Max's ten commands on the final pilot build (Tim said yes to this as part of V1). Desk must: CE 07 and CE 01 rework the calendar; the separate 5 to 7 hour "Max-like" pass planned for Cup Day (item 43) is NOT covered by this answer: ask Tim whether it stays (not decided).
+
+149. **Apply CE Standard Layers (V2, item 70, BUG-1224): yes.** Tim's word: "2yes". Desk must: the button resets colour, linetype, lineweight and plot only; lock, freeze and on/off stay as the drafter set them; the status line names them ("Left 2 locked layers as you set them: BEAM, 25TEXT").
+
+150. **Publish Issue with nothing ticked (V3, item 73, BUG-1262): yes.** Tim's word: "3yes". Desk must: plain-English warning, plot nothing, keep every revision, record the issue in the history as "no sheets"; never a block (R-27).
+
+151. **Docked What's New panel (V4, item 77, BUG-822): never seen.** Tim's word: "4no" (to "have you ever seen it open by itself while drafting?"). Interpretation: not seen, so park it as a robot-only oddity until a test lists the open windows after each step; no build. If he meant "no, don't park it", he will say.
+
+152. **Usage records to the dashboard (V5, items 80/80b): yes.** Tim's word: "5yes". Desk must: switch drainPluginOutbox ON for Tim's own PC once the B-062 redirect (decision 153) is installed; colleagues' PCs after the pilot week; short list only (decisions 12 and 14).
+
+153. **Test-noise fix B-062 (V6): yes.** Tim's word: "6yes". Desk must: test runs and the robot write to a separate folder, never to Tim's real records or settings files; CE 01 installs it before the dashboard switch (152).
+
+154. **Cover under a concrete driveway (V7, item 60a): yes.** Tim's word: "7yes". Desk must: keep 100 mm (75 mm for reinforced concrete) and add ONE Settings value for slab thickness (start 100 mm), so CE judges driveway and footpath rows as 100 plus the slab, measured from the top.
+
+155. **Frankston cover (V8, item 60b): yes, the bigger figure.** Tim's word: "8yes". Desk must: use whichever is bigger, the council's 250 mm or the table's, so Frankston's 250 works as a floor.
+
+156. **The second PC with AutoCAD 2027 (V9, item 37): not answered.** Tim's words: "9ill figure that out". Which PC and when are unknown. Desk must: ask again later; do not plan install rehearsals on it until he names it.
+
+157. **Footing library name (V10, item 81.1, BUG-578): "PF1".** Tim's word: "10yes". Desk must: one convention everywhere (full mark PF1); CE explains any old "1" rows when it finds them.
+
+158. **Moving an RC beam (V11, item 81.2, BUG-613): warning for now.** Tim's word: "11yes". Desk must: warn when only part of the RC detail is moved; the full grouping (design card ST-08) is built after the pilot.
+
+159. **CEMEMBER section list rename (V12, item 81.3, BUG-1132/BUG-818): this release.** Tim's words: "12this release". Desk must: the rename IS planned for this release, so BUG-1132 is NOT closed "not needed yet": old CEMEMBER beams must still redraw after the rename (old name mapped to new, or a plain message). Structural stays on Tim's PC for the pilot (decision 29), so this is Tim's own PC.
