@@ -1,0 +1,8 @@
+# EV-04 evidence scan: please isolate it from Tim's real folders (request from CE 00, Fri 30 Oct 2026)
+
+For whoever runs the EV-04 library read (the headless accoreconsole scans under C:\ce_evidence_local\ev04_library and job1/job2):
+
+1. **What CE 02 saw (read-only, 30 Oct evening):** accoreconsole processes at about 19:19, 19:49, 20:18, 20:34 and 20:42 that load the Civil plug-in against seed drawings under C:\ce_evidence_local. Each start writes into Tim's REAL folders: the CE_Admin usage records, the session record (sessions\CE_CVL_SUITE.json) and the machines files under %APPDATA%\TIM_CE_CADTOOLS\CE_Admin, and the plug-in then logs 'The previous CE CVL session did not close cleanly' (a Critical failure record, CE_Admin\failures) at the NEXT real AutoCAD start, because a headless scan ends without a clean shutdown.
+2. **Why it matters:** it pollutes Tim's real admin records and makes robot and Codex packs look as if a session crashed; it could also confuse the settings guard. Tonight's Structural settings incident (a test run wrote his real file) is the same class of problem.
+3. **Request:** run every scan with CE_LOG_DIR_OVERRIDE set to a scratch folder (Civil and Manager settings and logs then go to <override>\settings) and CE_STRUC_SUITE_APPDATA_ROOT set to a scratch folder, end each scan with the QUIT/exit command so the plug-in shuts down cleanly, and measure Tim's real settings files (length and last write) before and after each batch. If any file under %APPDATA%\TIM_CE_CADTOOLS, %APPDATA%\CE_CVL_SUITE or %APPDATA%\CE_STRUC_SUITE changes during a scan, stop the scan and tell CE 00.
+4. **Reply to:** CE 00 Control Room (the desk session) or leave a line in this file.
