@@ -52,3 +52,14 @@ verifyG2_c84
 verifyG1b_c84
 verifyG7_c84
 verifyG3_c84
+verifyG6_c84
+verifyG4_c84
+verifyG5_c84
+verifyH1_c85
+verifyH4_c85
+verifyH5_c85
+verifyH6_c85
+verifyA1_c86
+verifyC6_c86
+verifyC3_c86
+verifyC1_c86

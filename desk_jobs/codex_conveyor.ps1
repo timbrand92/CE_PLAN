@@ -38,6 +38,9 @@ while ($true) {
   $next = Get-Content $qf -ErrorAction SilentlyContinue | Where-Object { $_.Trim() -and $_ -notmatch '^\s*#' -and ($doneList -notcontains $_.Split('|')[0]) } | Select-Object -First 1
   if (-not $next) { Start-Sleep 300; $idle++; if ($idle -gt 72) { Log 'no new queue line for 6 h: stop'; exit }; continue }
   $idle = 0
+  # 30 Oct 12:10 (Rule 15, sharing AutoCAD with the robot): never launch a look while a robot pack has AutoCAD (the look's own gate would refuse it and waste the try). Wait for a free AutoCAD, 15 minutes at most, then look again.
+  $gw = 0; while (@(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0 -and $gw -lt 90) { Start-Sleep 10; $gw++ }
+  if (@(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0) { Log 'AutoCAD still busy after 15 minutes: not launching a look yet'; continue }
   $name = $next.Split('|')[0]
   $m = [regex]::Match($name, '^verify([A-Za-z]+\d+[a-z]?)_')
   $id = if ($m.Success) { $m.Groups[1].Value.ToUpper() } else { $name }
