@@ -18,7 +18,7 @@ while ($true) {
   if ($stable -ge 6 -and -not $busy -and -not $inst -and -not (Test-Path "$d\HOLD_ROBOT.flag") -and -not (Test-Path "$d\TIM_AT_PC.flag")) { break }
 }
 L "install settled on ${last}: starting the chain"
-Remove-Item "$d\ACAD_IDLE_OK.txt" -Force -ErrorAction SilentlyContinue
+Remove-Item "$d\ACAD_IDLE_OK.txt","$d\ROBOT_STOP_AT.txt","$d\CLOSED_WINDOW_NOTICE.txt" -Force -ErrorAction SilentlyContinue   # 30 Oct 14:40: a stale stop file made the first start refuse every pack
 [IO.File]::WriteAllText("$d\STOP_CODEX.flag", "CE 02 chain4 $(Get-Date -Format 'HH:mm') Fri 30 Oct: holds the Codex lane while the C-77 area plus smoke robot set runs; wait_install_then_run.ps1 removes it when the chain ends.`n")
 $spec = 'C:\ce-fx\retest\spec_c77_area_smoke_FINAL_DRAFT.txt'
 if (Test-Path 'C:\ce-fx\retest\C77_SPEC_TO_RUN.txt') { $sp = (Get-Content 'C:\ce-fx\retest\C77_SPEC_TO_RUN.txt' -TotalCount 1).Trim(); if ($sp -and (Test-Path $sp)) { $spec = $sp } }
