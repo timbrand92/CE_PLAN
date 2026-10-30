@@ -41,5 +41,6 @@ L 'Codex block over; chain resumes'
 StartChain
 while (-not (Done)) { Start-Sleep 30; if (-not (ChainAlive) -and -not (Done)) { L 'chain4 ended without ALL DONE: restarting (it resumes)'; Start-Sleep 15; StartChain } }
 L 'full set ALL DONE'
+Set-Content "$d\FULL_SET_DONE.txt" ("C-77 full set ALL DONE " + (Get-Date -Format 'ddd dd HH:mm') + "; the Codex block (if any) is over; AutoCAD is free for the C-78 window (CE 01 writes CLOSED_WINDOW_NOTICE.txt).")
 Release
 L 'Codex lane released; start_lanes run; the watchdog now feeds fillers'
