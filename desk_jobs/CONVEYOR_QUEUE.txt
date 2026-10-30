@@ -79,3 +79,19 @@ verifyA1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyC6_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyC3_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyC1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# CE 02 Fri 30 Oct 2026 12:55: corrected and new looks in the TEST_NEXT_40 order (J1 Excel, J2 ribbon tab, J3 Show where, J4 pit label spot, J5 green line, J6 override picks, J7 administrator list, then the corrected H1b H4b H5b H6b C1b A1b G6b). J8 (BUG-857 window third button) waits for the C-77b build.
+verifyJ1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ2_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ3_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ4_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ5_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ6_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ7_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyH1b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyH4b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyH5b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyH6b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyC1b_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyA1b_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyG6b_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+#HOLD verifyJ8_c87|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
