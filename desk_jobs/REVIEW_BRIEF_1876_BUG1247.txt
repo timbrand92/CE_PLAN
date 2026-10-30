@@ -1,0 +1,18 @@
+PRE-REVIEW BRIEF: PR #1876 (BUG-1247, Manager 'Updates and Rollback' opens the drafter's own screen), Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the branch fb/bug1247-own-updates-screen is allowed), build nothing, run no test, deploy nothing, open no AutoCAD, do not read or write Tim's real settings files, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_L_1876_BUG1247_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven).
+
+The PR: #1876, branch fb/bug1247-own-updates-screen, base claude/rel-20261102a (find the head with git ls-remote or gh pr view 1876). Author's report: C:\CE_PLAN\areas\BUGFIX_p1_REPORT_30OCT.md (job p1 by CE 05's pipeline: Manager BUG-1173 then BUG-1247). Per the report: BUG-1247 Updates and Rollback opens the drafter's own screen; BUG-1173 has no PR (pack wording, no code fault; one extra settings folder %APPDATA%\CE_SUITE proposed for the pack list). The job ran the Manager full suite; CE 05 says its report states it ran unprotected (no settings isolation). Built and unit-tested only; nothing in AutoCAD.
+
+Answer, with file and line:
+1. What does the drafter see before and after (which Manager command or ribbon button, which window), in AutoCAD terms? Is the new behaviour behind a Settings switch ON by default, with a documented default ('Default: on.'), and what does OFF restore exactly?
+2. Does it touch update delivery, the installer, the signed-approval route or the rollback itself (Tim's rule: updates go via signed OneDrive approvals; a failed build must never push an update)? Or only which screen opens? Any path that could let a drafter roll back or update something they should not, or hide the admin screen from the administrator?
+3. Manager and CE_SHARED identity: Civil and Manager must ship a byte-identical CE_SHARED. Does this PR change CE_SHARED? If so, say so loudly.
+4. Tests: which ran, do they cover the drafter and administrator cases, and did any write to the real %APPDATA% (Tim's real settings: the job ran the Manager suite without isolation; look for tests that write to TIM_CE_CADTOOLS, CE_Admin, CE_SUITE_MANAGER, Creative Engineering\CE Suite Manager)? Name any test that should be isolated.
+5. Clashes with claude/rel-20261102a and the open PRs #1868 to #1875 (read-only git merge-tree): files and lines.
+6. What is NOT proven, and the AutoCAD scenario Tim or the robot should run (a drafter login and an administrator login: CEMANAGER, Updates and Rollback).
+7. Verdict: KEEP, KEEP-WITH-NOTE or DROP, which train, and whether BUG-1173's proposed extra settings folder in the pack list is right.
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
