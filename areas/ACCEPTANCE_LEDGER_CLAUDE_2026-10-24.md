@@ -189,3 +189,5 @@ H57. **END OF TIM'S HAND-TESTING SESSION, Thu 29 Oct 2026 16:48 Melbourne (date 
 - Fri 30 Oct 16:36 check: no acceptance change; orchestrator 2 running; see DESK_LOG.
 
 - Fri 30 Oct 16:49 check: no acceptance change. Diagnostic dA/dB evidence logged in DESK_LOG; diagnostic results are never counted.
+
+- Fri 30 Oct 17:20 check: no acceptance change; aU1 BLOCKED x3 (not counted).
