@@ -1,0 +1,18 @@
+PRE-REVIEW BRIEF: PR #1878 (B-063, 'CESUPPORT zip never takes a key or local settings file by name'), head f0500eda, branch fb/support-zip-name-guard, Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the branch is allowed), build nothing, run no test, deploy nothing, open no AutoCAD, do not read or write Tim's real files (never open any real key or settings file; reason from the code only), spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_O_1878_B063_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven).
+
+The PR: #1878 (B-063), head f0500eda, draft against claude/rel-20261102a. Manager only (Modules/Manager/Services/CeSupportBundleService.cs), no Settings switch because it only narrows what is zipped. It skips any file named blob-config*, any *.local.json and anything under a folder called CE_SUITE, by NAME only, and lists it as 'key or local settings file, never included'; normal logs and the CE_SUITE_MANAGER trace folder are still collected. Author's report: C:\CE_PLAN\areas\BUGFIX_B063_SUPPORT_ZIP_REPORT_30OCT.md. Tests: 11 new cases; focused 105 of 106 (1 unrelated skip), full Manager 1,095 of 1,096 (1 skipped), net48 compile 0 errors, CE_SHARED unchanged, all runs isolated. NOT proven: AutoCAD; the new test was never run against the code WITHOUT the fix (no failing twin); a real key file under %APPDATA%\CE_SUITE; 8.3 short names; the Civil and Structural zip routes. Background: an earlier read of the code (CE 01) found no path under %APPDATA%\CE_SUITE reaches the zip by the code's own lists; the only gap is by NAME: the collected folders (CE_Admin logs and sessions, the Desktop 'CE Diagnostics' folder, all sub-folders) accept any .json and the scrubber removes user, machine, drawing and job names, not keys or tokens.
+
+Answer, with file and line:
+1. Does the guard run in AddFile for EVERY route into the zip (all five collection routes: CE_Admin logs and sessions, CE Diagnostics, the office diagnostics .txt, the plugin log folders, the redirected log folder)? Is the match case-insensitive (BLOB-CONFIG.JSON, Blob-Config.Local.Json), robust to trailing dots or spaces, alternate data streams, 8.3 short names (BLOBCO~1.JSO), a path under CE_SUITE reached through a junction or a different casing, and a folder named 'ce_suite' deeper in a path? What can still slip through, and is it realistic?
+2. Is a guard by NAME enough, or should the scrubber also refuse content that looks like a key (a long base64 or 'SharedAccessSignature'/'sig=' style token)? Say what is sensible and what is over-engineering for this PR.
+3. The 11 new tests: would they FAIL without the fix? (Reason it through; they were never run against the unfixed code: say for each of the 11 whether it can fail on the old code.) What is the smallest failing-twin check to add?
+4. 'Left out' reporting: is the 'key or local settings file, never included' line shown to the drafter, and could it leak the file's name in a way that matters (it names a file, not contents)?
+5. Clashes with claude/rel-20261102a and #1868 to #1877 (read-only git merge-tree): files and lines.
+6. The Structural and Civil zip routes: not changed here; is the same name gap present there, and where (file, line)?
+7. Verdict: KEEP, KEEP-WITH-NOTE or DROP, and which train.
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
