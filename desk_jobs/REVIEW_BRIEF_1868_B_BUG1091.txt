@@ -1,0 +1,19 @@
+PRE-REVIEW BRIEF: PR #1868 (BUG-1091 redesign: large-pipe redesign reads the minimum fall), Max Opus, read-only. Written by CE 00 Fri 30 Oct 2026.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only fetch of the named branch is allowed), build nothing, deploy nothing, open no AutoCAD, spawn no agents. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_K_1868_BUG1091_30OCT.md. Do not push.
+
+Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven).
+
+The PR: #1868, new head 38c3f825 (was c88cd7dc; only the REGRESSION_LOG line changed, no code). Switch pipe.largePipeRedesignReadsMinFall. Author's numbers: 31 of 31 focused tests, full Civil net10 20,840 passed 0 failed, net48 0 errors; nobody has opened it in AutoCAD. Intended robot case C78_redesign_min_fall plus Codex look H8. Intended for the train AFTER C-78 (rel-20261102a). Find the PR's base and its author's report in C:\CE_PLAN\areas (search for BUG1091 and B-0xx register entries in release-v3-colleagues-BUILD_REGISTER.md).
+
+Context: since C-77 (#1841, B-042, Tim's Guidebook ruling of 29 Oct) the minimum pipe grade is 1 in 100 at every ordinary size (the pipe-size grade table was changed and a one-time move of the saved ladder replaces an unedited old ladder). A pipe typed flatter than 1 in 100 now raises the Grade mismatch window. Check that this PR does not fight that.
+
+Answer, with file and line for each claim:
+1. What does the redesign do now, in AutoCAD terms (which command, which pipe sizes, what a drafter sees), and what does the switch OFF restore exactly? Default, documented default (NewSettingsKeys_NeedADocumentedDefault), Settings page row or not (Settings-first rule).
+2. Does it read the minimum fall from the Settings ladder (not a hard-coded number), and what happens for a size with no ladder row, for an Unknown wall, and for a saved ladder the drafter edited?
+3. Interaction with the 1-in-100 table move (#1841), the grade mismatch window (#1873 B-057) and the cover/CDRULES rows: any case where the redesign now produces a pipe that CDRULES then fails, or a window that opens?
+4. Clashes (read-only trial merge with git merge-tree) against claude/rel-20261030a, claude/rel-20261102a and the open PRs #1871 to #1875: which files, which lines.
+5. What is NOT proven, and the AutoCAD scenario Tim or the robot should run (a large pipe redesign at a long and a short length, switch ON and OFF).
+6. Verdict: KEEP, KEEP-WITH-NOTE (give the note) or DROP, and which train it could join.
+
+Format: FOR TIM first (at most six numbered lines, no tables), then DETAIL. Say plainly if you could not verify something.
