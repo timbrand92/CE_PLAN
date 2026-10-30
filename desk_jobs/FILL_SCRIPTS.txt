@@ -1,2 +1,5 @@
 C:\CE_PLAN\desk_jobs\fill_priority_tier2.ps1
+C:\CE_PLAN\desk_jobs\fill_twins.ps1
+C:\CE_PLAN\desk_jobs\fill_carpark_30oct.ps1
+C:\CE_PLAN\desk_jobs\fill_gap_cases.ps1
 C:\CE_PLAN\desk_jobs\fill_next40_b.ps1
