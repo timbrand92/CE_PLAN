@@ -607,3 +607,29 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
 116. **Re-test rule is a standing rule (follows 115).** Tim's words (relayed by CE 00): "thats should be the plan throughout as a rule". Interpretation (CE 00's): after ANY install, re-test what the train touches plus a small smoke set per shared file, carry the rest, one full re-test before Max (Fri 13 Nov) and at the weekends; unmapped files placed in areas; new-switch-only changes touch only their own tool. Recorded as Addendum 3 in decisions\2026-10-29_TIM_RETEST_RULE.md and Rule 14 in areas\CE_SESSIONS_MAP_29OCT.md.
 
 117. **A changed starting value or a one-time settings move (re-test rule, follows 116): option 1.** Tim's word (relayed by CE 00): "1". Interpretation (CE 00's): it counts as touching its own tool plus the Settings smoke set (Friday AREA plus SMOKE; the Saturday full re-test is the safety net), unless the settings engine itself changes. Recorded as Addendum 4 in decisions\2026-10-29_TIM_RETEST_RULE.md.
+
+## Sat 31 Oct 2026: Tim's spoken answers to VOICE BATCH 1 (QUESTIONS item 83; asked by CE 04). Tim's words: "1b, 2no but warn, 3yes, 4yes, 5as recommened, 6yes, 7dicuss with me the less i have to do to get these accepted the better, 8yes, 9yes, 10yes, 11as recommended, 12send them through sgsin i have no idea what youre talking about"
+
+118. **Grade mismatch window in Custom grade (voice V1, QUESTIONS item 74): option b.** Tim's words: "1b". Interpretation: when the drafter types their own two levels and they do not match the chosen grade, CE shows a plain warning line (strip and CDRULES) and ACCEPTS the levels. No Grade mismatch window, never a block (R-27). Desk must: replace the Grade mismatch window with a warning line; keep it only in Custom grade as today unless 120 says otherwise; Settings switch per R-00 so it can be reversed; small fix, own tool plus Settings smoke set (re-test rule).
+
+119. **Steeper pipe than the chosen grade (V2, item 74): no window, but warn.** Tim's words: "2no but warn". Interpretation (mine; GUESS on the "warn" part): a pipe typed steeper than the chosen grade does NOT ask in a window, but the same plain warning line shows. This differs from the recommendation (steeper passes quietly). Desk must: same warning line for steeper as for flatter, no window, never a block. If he meant a warning only when flatter than the 1 in 100 minimum, he will say.
+
+120. **Same warning on empty ground in Default grade (V3, items 74c/74d): yes.** Tim's word: "3yes". Interpretation: typing two levels flatter than the 1 in 100 minimum on empty ground in Default grade shows the same plain warning line (the minimum is in Settings). Desk must: build the Default-mode warning; warn, never block.
+
+121. **New Pipe starts in Custom 1 in 100 for colleagues' fresh logins (V4, item 66 second part): yes.** Tim's word: "4yes". Desk must: colleagues' starting settings put New Pipe in Custom 1 in 100, the same as Tim.
+
+122. **Recall Last then a new upstream level (V5, items 76/76a, BUG-1267): as recommended.** Tim's words: "5as recommened". Interpretation: the downstream works from the standard grade for the new pipe's length (19.40 on a 4.1 m pipe at 1 in 100), behind a Settings switch ON by default so he can go back. The old BUG-076 comment needing his confirmation is now confirmed. Desk must: build it; the robot expects 19.40.
+
+123. **Kingston rainwater credit (V6, item 67): yes, close #1817 as replaced by #1874.** Tim's word: "6yes". Desk must: close PR #1817 as replaced (branch stays; keep its idea of storing the credit as council data for later). Note: CDDESIGN still cannot show a reuse credit for any council until there is a box for the permitted discharge (BUG-1096 stays open).
+
+124. **Bug order and pilot cut (V7, item 68): Tim wants to discuss, with the least effort for him.** Tim's words: "7dicuss with me the less i have to do to get these accepted the better". NOT a decision. Desk must: not act on the recommended order as ruled; propose a way where the robot and Codex do the proving and Tim confirms by exception, then discuss. CE 05 keeps using the recommended order as a working default only, as it already says.
+
+125. **Checks window look (V8, item 69): yes.** Tim's word: "8yes". Desk must: gold banner when anything is found, every pass folded into one grey line, make the "not known" count wording plain.
+
+126. **Where the new switches and tuning figures are shown (V9, items 75/75a): new Settings tab "Switches".** Tim's word: "9yes". Desk must: CE 01 builds one new tab listing every new on/off switch and the five Pit Schedule tuning figures in plain English (long list may scroll, no collapsed sections); until then file-only and ON. Settings change: re-test rule applies.
+
+127. **One cover measure on every screen (V10, item 79, BUG-903): yes.** Tim's word: "10yes". Desk must: the Inspector, Civil Hub and repair check measure cover to the outside top of the pipe, as CDRULES does (follow-up build after draft #1897).
+
+128. **Raingarden label (V11): as recommended, plain "RG".** Tim's words: "11as recommended". Interpretation: plain label RG, number in the tag only (matches decision 77). Desk must: fix the C-77 build labelling RG1, RG2 so the visible label is RG.
+
+129. **Colleague pack approval (V12): NOT answered.** Tim's words: "12send them through sgsin i have no idea what youre talking about". The sheet was unclear. Desk must: re-ask in plain words (the ten page-06 questions one at a time, and a short plain description of what is being approved); do not treat the pack as approved.
