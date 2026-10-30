@@ -15118,6 +15118,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 **Status:** OPEN
 
+**Evidence note (CE 05, 30 Oct 2026, from draft PR #1877 = B-061 and Opus pre-review N, areas\OPUS_PREREVIEW_N_1877_BUG1112_30OCT.md):** verdict KEEP-WITH-NOTE for the next Civil train on claude/rel-20261102a. With the switch (linking.wsudExportSkipsSampleSite, ON; settings file only, a Settings-page row to be added after #1875) the site area, both impervious areas and all four runoff lines read "not entered". Limits found: (1) the author's report was wrong that a drafter can "type 850": every box on the CDCALC WSUD tab is read-only, so the robot case C32_wsud_export_sample as first written cannot run (the reviewer wrote a replacement case in the review); (2) "not entered" is decided by whether any of the three boxes changed since the window opened, not by the number: a saved calculation holding exactly 1000 / 200 / 700 would read "not entered" (low risk), and once one box changes all three print (a real site area beside the untouched 200 / 700 would print 200 / 700 as the job's); (3) the 630 mm rainfall and the two C figures still print (they come from Settings); this reading belongs to BUG-1112; (4) the failed test (PDF to picture) is an old fault on the Edge browser engine, not AutoCAD's renderer. Not proven in AutoCAD. Still OPEN.
+
 ## BUG-1113 — A Blue Factor catchment that shares its name with another is dropped
 
 **Command / Area:** Blue Factor report reading, Civil 3.0.72 (T2 finding 19). LOW, UNSURE (not known whether Blue Factor allows two catchments with the same name).
