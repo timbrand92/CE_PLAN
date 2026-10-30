@@ -193,3 +193,5 @@ H57. **END OF TIM'S HAND-TESTING SESSION, Thu 29 Oct 2026 16:48 Melbourne (date 
 - Fri 30 Oct 17:20 check: no acceptance change; aU1 BLOCKED x3 (not counted).
 
 - Fri 30 Oct 17:49 check: v87 pass a so far R02v87 R02bv87 R03v87 R04v87 PASS (one session each, not accepted; needs pass b and review). No acceptance change.
+
+- Fri 30 Oct 18:19 check: v87 pass a: R14h_dstd_200v87 R14h_both_200v87 R14h_pipekey_200v87 PASS (single session, not accepted). No acceptance change.
