@@ -210,6 +210,10 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 102. **More PRs from CE 05's bug pipeline (30 Oct ~21:50; found by CE 01's check, titles renamed to start with the B number; no train before CE 00's pre-review):** **#1882 = B-069 (Civil BUG-1093, a pit lid at exactly RL 0.000 gets the cover check; job p9 continues with BUG-1092)** and **#1883 = B-068 (Structural BUG-467, BT1, A, B and R1 Point pick follow a rotated UCS; job p8)**, both base claude/rel-20261102a, drafts.
 
+103. **B-072 Civil BUG-1195 (CDTEXTSEG UCS angle in a World-plane text) then BUG-1050 (the last custom label style cannot be deleted) (bug pipeline job p12, CE 05, Team, chain_fix_g58, launched 30 Oct ~21:55).** Base origin/claude/rel-20261102a, isolated, with a 12 GB free-space check. Report areas\BUGFIX_p12_REPORT_30OCT.md. PR number to be added when it opens.
+
+104. **B-073 Structural BUG-1184 (BR1/SPR1 marks for different sizes) (job p13, CE 05, Team, chain_fix_g59).** Same base, isolated. Report areas\BUGFIX_p13_REPORT_30OCT.md. PR number to be added when it opens.
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
