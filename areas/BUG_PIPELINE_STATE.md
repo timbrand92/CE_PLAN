@@ -4,7 +4,7 @@
 
 Approved by CE 00 Fri 30 Oct 2026 for Tim's ruling "try to complete everything in the bug document" (decisions\2026-10-30_TIM_COMPLETE_ALL_BUGS.md). Any new CE 01 session resumes from this file.
 
-1. **Last launch:** Fri 30 Oct 19:05 PC clock, job q1 (chain_fix_g46 pid 77036, Team Sonnet, read-only) still running at the CE 05 check of 19:22; it has written its FOR TIM section (134 bugs ready to build: 61 Civil or Manager, 73 Structural) but not yet the full ordered queue. CE 05 launched nothing at 19:22 (queue not written). Guards at 19:22: Team 5-hour 29, Team 7-day 87; Max 5-hour 10, week 7; C: 52 GB free; no STOP_CHAIN.flag.
+1. **Last launch:** Fri 30 Oct 19:39 PC clock (CE 05). Team Sonnet jobs: p1 Manager BUG-1173 then 1247 (chain_fix_g47 pid 56876); p2 Civil BUG-1240 (g48 pid 37672); p3 Structural BUG-1136 then 1199 (g49 pid 75760). Max Sonnet agent p4: BUG-1112 WSUD sample figures (worktree). Base claude/rel-20261102a. q1 finished 19:24 (queue in areasBUG_REGISTER_TRIAGE_2026-10-24.md TASK 3, first 40 in full). Next in queue after these: BUG-1246 (after #1867), 1093, 1092, 873/1253/1034 (after B-025b), 1141, 467, 625, 1183, 1184, 495, 529. Reports: areasBUGFIX_p1..p4_REPORT_30OCT.md. 4 launches this hour used.
 2. **Queue:** empty until q1 writes the ordered build queue. Then the check-in launches the next item. Already in flight before the pipeline: c87a (B-011), c87b (BUG-1091), c92a (#1871), c93a (#1873), c95a (#1875), Max Sonnet agents B-029b (#1874, worktree c79f) and B-028 (BUG-587, worktree c79e, started 19:55).
 3. **Guards, checked at every launch (read C:\CE_PLAN\desk_jobs\team_usage.ps1, exact; USAGE.json is hourly and can be stale):**
    1. Until Sat 31 Oct 14:00: Team 7-day under 99 and Team 5-hour under 85.
