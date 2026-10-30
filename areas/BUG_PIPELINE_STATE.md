@@ -30,3 +30,9 @@ Classes, each defined once. Installed is never fixed.
 Total 34+49+359+47+48+664+4 = 1,205.
 
 Why this differs from the two earlier counts: CE 01 (about 19:30) used 336 installed, 32 drafted, 698 no fix; job q1 (19:24) used 345 installed, 72 built or drafted, 692 no fix. Mine matches the Status text with one rule everywhere; differences are mostly entries whose Status line mentions "installed" or "PR" later in the sentence. Entries that had no `**Status:**` line at the start of a line (about 53, mostly BUG-3xx/4xx written with the Status inline) are now read from the inline Status. Method script (throwaway): scratchpad count.py; limits: keyword rules, the 13 free-text statuses were classified by hand (above), no entry was changed.
+
+## Standing launch rules added by CE 05 (Fri 30 Oct 2026 ~22:55 PC clock)
+1. **Build priority (CE 00 ruling, via CE 01, commit e782659c):** every build wave runs at BelowNormal priority with -m:2. Every NEW job text carries -m:2 on each dotnet build and dotnet test; every NEW lane script copies the Start-Process line from chain_fix_g70.ps1 (PassThru, PriorityClass BelowNormal, WaitForExit).
+2. **Lane script names:** mine are chain_fix_g47 to g59 and g70 upward; CE 01 uses g60 to g69. Check the name is free before writing.
+3. **Every job:** isolation variables (CE_STRUC_SUITE_APPDATA_ROOT, CE_LOG_DIR_OVERRIDE, TEMP, TMP on C:\ce-scratch\<key>), 12 GB free-space check, before and after listing of the real settings files including %APPDATA%\TIM_CE_CADTOOLS, no Manager tests until B-062 (#1884) lands, Structural jobs start from origin/claude/rel-20261026s.
+4. **Robot writes:** a robot case with a SETTING line legitimately changes CD_Settings.json for a few minutes; the guard restores the contents (the date may read wrong: told CE 00).
