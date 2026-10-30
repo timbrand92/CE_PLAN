@@ -703,3 +703,23 @@ Source: Tim, in the questions-partner chat, about 09:50 Melbourne. Batch 1 of th
 159. **CEMEMBER section list rename (V12, item 81.3, BUG-1132/BUG-818): this release.** Tim's words: "12this release". Desk must: the rename IS planned for this release, so BUG-1132 is NOT closed "not needed yet": old CEMEMBER beams must still redraw after the rename (old name mapped to new, or a plain message). Structural stays on Tim's PC for the pilot (decision 29), so this is Tim's own PC.
 
 160. **Cup Day "Max-like" pass (follows 148): dropped.** Tim's words: "2. drop" (answering my last message's open item 2, keep or drop the 5 to 7 hour "Max-like" pass planned for Tue 3 Nov, QUESTIONS item 43). Desk must: remove the Max-like pass from the calendar; the short ten-commands check on the final pilot build stays (decision 148). Suggestion not yet put to him: run that short check on an ordinary non-Tim login, because the Max-like pass was the only thing proving a fresh login; he has not answered this.
+
+## Sat 31 Oct 2026: Tim's spoken answers to VOICE BATCH 3 (QUESTIONS item 90a; asked by CE 04). Tim's words: "1as recommened, 2yes, 3yes, 4my block in my standard blocks file, 5yes purge the rest out automatically by making them mine, 6yes, 7yes, 8talk later, 9as recommended"
+
+161. **Start-up or Settings-engine changes (item 89): area plus start-up smoke only.** Tim's words: "1as recommened". Desk must: a loader or Settings-engine change gets the usual area test plus the start-up smoke (N91, always included); a wider pass only if the smoke fails. CE 07 plans C-79 to C-81 on this.
+
+162. **FFL source (item 82.1, BUG-626): yes.** Tim's word: "2yes". Desk must: ship Manual and Unknown only, with preview, F to flip and click to place; real level sources later.
+
+163. **FFL MOVE (item 82.2, BUG-627): yes.** Tim's word: "3yes". Desk must: the triangle, tail and value move as one normal AutoCAD group, behind a Settings switch ON by default.
+
+164. **Section mark bubble (item 82.3, BUG-630/631): Tim's block in his standard blocks file.** Tim's words: "4my block in my standard blocks file". Interpretation (GUESS): the bubble comes from the SECT MARK block in Tim's standard blocks file (the approved block), not drawn lines. NOT answered: whether the SM command card (ST3-9/10) is approved, and BUG-631's link between cut line, bubbles and labels. Desk must: find the block in his standard blocks file and show it to him; ask the card question again in one line.
+
+165. **DSET dimension styles (item 82.4, BUG-634): yes, and convert the rest to his styles automatically.** Tim's words: "5yes purge the rest out automatically by making them mine". Interpretation (GUESS): recognised styles are TIM LEADER and TIM DOT LEADER; any other dimension style found is not skipped but converted automatically to one of his two ("making them mine"), then the unused old style is purged. Not stated: which of his two each unknown style becomes (GUESS: the nearest match, else TIM LEADER). Desk must: this changes drawing content, so review it as a workflow card first (mandatory command review gate); never touch Xref or locked-layer content (native protection rule); show a plain list of what was converted (R-27: warn and record, never block).
+
+166. **CH hatch (item 82.5, BUG-615): yes.** Tim's word: "6yes". Desk must: write the command card first (live preview plus Apply step), get Tim's approval, then build.
+
+167. **CESETTINGS unread groups (item 82.6, BUG-526): yes.** Tim's word: "7yes". Desk must: start with the five groups that print on drawings; go through the other 24 later with his command cards.
+
+168. **Three design talks (item 82.7 and 82.8, BUG-533/535/536): talk later.** Tim's words: "8talk later". Parked: bracing lengths per job (with BUG-500 and BUG-496), the tab layout, the AS 2870 wording for the founding note, the per-job lintel override, and the schedule sizes, column widths and label height for the office block. Not answered, not decided.
+
+169. **Bracing following a rotated UCS (item 78, BUG-467): as recommended, no switch.** Tim's words: "9as recommended". Desk must: keep it always on; do not add the Bracing.PickedPointsFollowUcs switch (close draft #1883 or leave it unmerged); BUG-467 stays open until the rotated-UCS check passes in AutoCAD.
