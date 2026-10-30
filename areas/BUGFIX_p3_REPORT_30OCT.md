@@ -1,0 +1,30 @@
+# BUGFIX p3 report — BUG-1136 and BUG-1199 (Structural footings), 30 Oct 2026
+
+## FOR TIM
+
+1. **Two draft PRs are open, both against origin/claude/rel-20261102a (which contains Structural):** #1893 for BUG-1136, #1894 for BUG-1199. No B number was in the build register for these (B-060 names the job only), so the titles start "BUG-nnnn": CE 01 renames them.
+2. **BUG-1136 (footing register damaged):** if a drawing's footing register can't be read, CE no longer treats it as "no footings". It keeps the stored text exactly as it is, saves a copy of that text in the CE settings folder under Recovery, shows one plain line, and refuses to save footing changes over it. Before, the next THC on a 40-footing slab plan silently wrote a new register and footings 1 to 40 dropped out of the footing schedule.
+3. **BUG-1199 (Undo and footing sizes):** THCL now reads the size library from the drawing every time. Before: THCL 81 (600 x 600), Undo, THCL 82 saved both 81 and 82, and typing 81 again reused 600 x 600 without asking. Now 81 stays gone.
+4. **Both ship with a switch, ON:** Options.KeepDamagedFootingRegister and Options.FootingSizesReadFromDrawing in the Structural settings file. OFF gives the old behaviour exactly. They are not on the Settings window (a window change, owed to Codex).
+5. **Mistakes of my own:** (a) an earlier attempt of this job had left both fixes mixed in one worktree; I split them into one PR each. (b) My first test launches failed twice because this tool cannot find `dotnet` by name (about 25 minutes lost); the full path fixed it. (c) The build slots were full for about 1.5 hours from other jobs.
+6. **Not proven:** nothing was run in AutoCAD. A real damaged register and a real Undo cannot be built in the test host, so the rules are tested as pure code. Not marked FIXED.
+7. **Robot cases that prove it:** see "Robot cases" below.
+
+---
+
+## Technical detail
+
+1. **BUG-1136 cause (confirmed):** `Services/FoundationRegistryService.cs` `LoadCore` returned an empty `FoundationRegistryData` on any parse failure or exception; `Load` cached it and every footing `Save` (the `FoundationService.cs` callers) wrote it back. Entry point confirmed on rel-20261102a.
+2. **BUG-1136 fix:** `LoadCore` now reports `damaged` (text present but unparsable, or an exception after the register was found). `Load` records the drawing in `DamagedByDrawing`, copies the raw text to `<SettingsFolder>\Recovery\FootingRegister_DAMAGED_<drawing>_<utc>.txt` and writes one editor line. `Save` returns without writing when `ShouldRefuseSave(switch, damaged)`; `Invalidate` clears the mark. "Nothing stored" (null, blank, "null") stays empty and saves normally. Files: `FoundationRegistryService.cs`, `Models/UserSettings.cs`, `Structural.Tests/Services/FootingRegisterDamagedKeptTests.cs`, `REGRESSION_LOG.md`. Branch claude/b060-bug1136-footing-register, PR #1893.
+3. **BUG-1199 cause (confirmed):** `Services/CeTextService.cs` `GetFstData` cached `FstMemoryService.Load` in static `FstCacheByDrawing` keyed by file name, and `SaveFstData` wrote the cached whole library back. Other footing tools in `FoundationService.cs`, `FoundationScrewPileService.cs`, `FoundationStumpFootingService.cs` already call `FstMemoryService.Load` directly, so only THCL's cache needed changing.
+4. **BUG-1199 fix:** new `ResolveFstData(readFromDrawing, cache, key, loader)`; with the switch ON it always calls the loader and neither reads nor fills the cache, and `SaveFstData` skips the cache update. OFF = old code path exactly. Files: `CeTextService.cs`, `Models/UserSettings.cs`, `FootingSizesReadFromDrawingTests.cs`, `REGRESSION_LOG.md`. Branch claude/b060-bug1199-footing-sizes, PR #1894. BUG-1200 (Escape leaves a saved size) is not touched.
+5. **Tests run (net10, AutoCAD 2027 on PATH, isolation variables set, count checked not 0):** FootingRegisterDamagedKeptTests 12 passed; FootingSizesReadFromDrawingTests 4 passed. Switch default is tested on `UserSettings` deserialised from "{}", an old Options block and an explicit false (Structural has a single Newtonsoft settings read, so there is no separate strict/tolerant pair here).
+6. **net48 compile:** Structural Release net48 with the TimOS refs, 0 errors on both branches.
+7. **Not run:** the full Structural suite (forbidden by the test-isolation rule), `SettingsServiceNoWriteTests`, any Civil or Manager test, anything in AutoCAD. Settings-file listing (`%APPDATA%\CE_STRUC_SUITE`, `CE_SUITE`, `CE_CVL_SUITE`) taken before and after: identical (CS_Settings.json 35613 bytes, 19:54:14 on 30 Oct, unchanged; CE_SUITE folder does not exist; CE_CVL_SUITE settings.json 672 bytes, 16 Sep).
+8. **Settings page:** the Structural Settings window is XAML (`UI/Dialogs/CeSettingsDialog.xaml`); a checkbox there is a window change, left for Codex.
+9. **Worktrees:** C:\ce-fx\p3 (BUG-1136, reused from the stopped attempt) and C:\ce-fx\p3b (BUG-1199). Scratch helper scripts in C:\ce-fx\p3_hold.
+
+## Robot cases
+
+1. **S31_foot_register_damaged (BUG-1136, with switch-off control S31off):** on a fresh copy with a few footings placed by THC, corrupt the register in the copy (cut the FOUNDATION register text short), reopen, then type THC and place one footing. Check the command line shows "The footing register in this drawing could not be read" and "NOT saved", that a FootingRegister_DAMAGED_*.txt file exists under the Structural settings folder\Recovery, and that the register text read back from the drawing is byte-identical to the corrupted text. Control S31off: set `Options.KeepDamagedFootingRegister` to false before launch (read at start-up), repeat: the register is overwritten and no refusal line appears.
+2. **S32_thcl_undo_size (BUG-1199, with switch-off control S32off):** fresh unique drawing, type THCL, 81, N, 600, 600, centre 0,0, text 500,500; then U; then THCL, 82, N, 900, 900, centre 2000,0, text point. Read FST_DATA/TH_MEMORY: only key 82 is present (81 absent). Then THCL, 81 must ask for sizes again. Control S32off: set `Options.FootingSizesReadFromDrawing` to false before launch: after the same steps both 81=600/600 and 82=900/900 are present.
