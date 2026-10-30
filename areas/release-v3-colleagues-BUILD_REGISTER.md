@@ -194,6 +194,8 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 94. **B-071 Civil BUG-1246, a copied downpipe keeps its tag (job p11, CE 05, Team, chain_fix_g57); stacks on #1867 (B-009).** Same base, isolated. Report areas\BUGFIX_p11_REPORT_30OCT.md. PR number to be added when it opens; the PR must say it needs #1867 (which is in C-78).
 
+95. **B-056c tidy-ups on PR #1871's branch fb/bug1255-closedxml-autocad-2027, for train C-79 (CE 00 ruling 30 Oct 21:2x, NOT before the C-78 addendum; not started).** From re-check F2: (1) CalculationsV2ViewModel.cs lost its invisible start-of-file mark (harmless); (2) stale text in the first REGRESSION_LOG entry and one test summary; (3) the report's SHA256 has a one-character typo (the file hashes to c349e9f7...cdab8b1e); (4) the probe's 'switch off' runs stopped the handler being set up instead of setting the switch to off (N41c will be the first real switch-off path); (5) review F's notes (d) and (e) still open. Runs on TEAM as a small job with test isolation once the C-78 addendum is done. The addendum's GO must state the class (expected FULL), the merged head and the Structural before/after failed test names (checked by CE 01 when it lands).
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
