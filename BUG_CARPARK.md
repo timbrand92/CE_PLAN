@@ -16,9 +16,9 @@
 >
 > **When a carpark bug is being fixed:**
 > - Change its status to `IN PROGRESS` before starting work.
-> - Change it to `FIXED — YYYY-MM-DD` once Tim has confirmed it works in AutoCAD.
+> - Change it to `FIXED — YYYY-MM-DD (Codex-accepted / Claude-accepted / TIM-CONFIRMED, build, evidence id)` once the ledger accepts it (see the rule change below).
 > - *27 Sep 2026 (Tim: "if codex can test then my rule of me driving it is no longer necessary and it can be the measure of that"):* a Codex PASS in real AutoCAD on Tim's PC also counts - write `FIXED — YYYY-MM-DD (Codex-accepted, pass N)`. Engineering-judgement items still need Tim.
-> - Never mark FIXED until Tim has confirmed the test in AutoCAD — not assumed, confirmed.
+> - **RULE CHANGED 31 Oct 2026 (Tim, by voice, "5yep", decisions 141 to 146):** a bug counts FIXED when the ledger accepts it by name: a robot PASS in real AutoCAD AND an independent Codex PASS (decision 62), or a Claude-accepted pass under the 24 Oct amendment; write the evidence id and the build hash beside it. Tim confirms by exception and by a weekly spot-check of about 5 accepted fixes picked by the desk (the number 5 is the desk's proposal); any failure stops that lane until fixed. "Installed" is still NOT "fixed". Engineering-judgement items (council values, design rules, sizing) still need Tim's word. A pass is not re-run unless that tool's own code, or a shared file it uses, has changed since it passed. The old line "never mark FIXED until Tim has confirmed" is replaced by this.
 >
 > **Adding a new bug — use this exact template:**
 > ```
