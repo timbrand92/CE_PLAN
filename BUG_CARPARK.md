@@ -4665,6 +4665,8 @@
 
 **Status:** OPEN (1 Oct 20:20)
 
+**Evidence note (CE 05, 31 Oct 2026, from job s1 report):** already fixed in the code on the Structural train line (head 204dfad2): SyncRegistryWithDrawingState (FoundationService.cs 896-911, 986-995) clears the "set aside" mark when the erased line is back and redraws the outline, saying "PF1 is back; CE redrew its outline." It runs at the start of the NEXT footing command; there is no reactor on OOPS itself, so a gap between OOPS and the next footing command remains (unseen in AutoCAD). The carpark text cites line 1651 of release 9babe787 (1 Oct), which has moved. Needs an AutoCAD look. Still OPEN.
+
 ---
 
 ## BUG-299
@@ -9798,6 +9800,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+**Evidence note (CE 05, 31 Oct 2026, from job s1 report):** already fixed in the code on the Structural train line (head 204dfad2): FEDIT now asks Change / Leave / Another before changing the saved size when a rename lands on an existing mark (FoundationService.cs 1977-2007, HUNT-S-11, FeditSavedSizeRule.NeedsAsk; switch FootingWidth.AskBeforeRenameChangesSavedSize, ON); Another or Esc stops FEDIT and changes nothing. Needs an AutoCAD look. Still OPEN.
+
 ---
 
 ## BUG-475
@@ -10282,6 +10286,8 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 **Command / Area:** R00_STRUC items 2, 3, 16 and 18 (MEDIUM-HIGH; the THREE HARD BLOCKS against Tim's R-27: warn and carry on, with only two hard blocks allowed, deleting spine IDs and pushing an update on a failed build). What the drafter sees: (a) FPFC, FSF and FEDIT footing size or depth: type 12000 and CE says 'Value must be 10000 or less.' and asks again, with no way to carry on. Evidence: Modules/Structural/Services/FoundationService.cs 4033 (the 10 000 limit), 4150-4161 (the refusal); asked at 4053, 4064, 4082, 4108, 4124, in FEDIT at 1843, 1850, 1871, 1887 and at 4443. (b) STR and CE_STIRRUP: the stirrup cover question offers 30, and any number under 10 is silently changed to 10, so a drafter who types 5 gets 10 on the drawing without a word. Evidence: Modules/Structural/Commands/RebarCommands.cs 311-321. (c) RBL, RBC and STR: the 'Spacing (mm)' question refuses anything outside 50 to 1000. Evidence: Modules/Structural/Commands/RebarCommands.cs 530-531. Related, not a block: the 'Size {n}mm exceeds typical range. Continue? [Yes/No] <Yes>' question at 3000 mm already warns and carries on, but its 3000 has no Settings name (FoundationService.cs 4034, checked at 4071 and 4113, message at 4137). None of these numbers has a Settings name today. A wrong number on paper is the risk: the silent 5-becomes-10 stirrup cover puts a cover on the drawing that the drafter did not type. Right result: each number comes from the Settings page (proposed names Footings.LargestSizeMm, Footings.TypicalSizeWarningMm, Rebar.StirrupCoverMm, Rebar.StirrupCoverLowestMm, Rebar.SpacingRangeMm), a value outside the usual range gets a plain-words warning and CE carries on with what the drafter typed, and CE never changes a typed number without saying so. Smallest fix: swap the three refusals for 'warn and carry on' questions, read the five numbers from the Settings page, and make the stirrup cover message say what it changed. To SEE it: run FPFC, place a pad, answer 12000 for the size (today: refused; right: a warning and it carries on); run STR, answer cover 5 and read the cover on the drawing (today: 10, silently); run RBL and answer spacing 40 or 1200 (today: refused). Source file: C:\CE_PLAN\areas\release-v3-colleagues-R00_STRUC_2026-10-09.md (Structural R-00 audit, 9 Oct; nothing built or run; none seen in AutoCAD). Code locations are at the installed Structural release 9babe787 (origin/claude/rel-20261009f).
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet). Filed 9 Oct by the controller from the Structural R-00 audit. Never FIXED until Tim confirms in AutoCAD.
+
+**Evidence note (CE 05, 31 Oct 2026, from job s1 report areas\BUGFIX_s1_REPORT_31OCT.md; code read only, nothing run in AutoCAD):** already fixed in the code on the Structural train line (origin/claude/rel-20261026s, head 204dfad2 = installed Structural 1.0.125). (a) Footing size over the limit: warns and carries on (FoundationService.cs 4197-4198 and PromptDoubleWithinLimit 4314-4334; switch FootingWidth.WarnInsteadOfRefusingOverLimit, ON). (b) Typed stirrup cover 5 is kept with a warning (RebarCommands.cs 311-330, ReoEntryRules.ResolveStirrupCover; switch WarnInsteadOfChangeStirrupCover). (c) Spacing outside the usual range is kept with a warning (RebarCommands.cs 533-562; switch WarnInsteadOfRefuseSpacing); zero and below still cannot be drawn. Needs an AutoCAD look on 1.0.125. Note: Tim's two Rebar flags WarnInsteadOfChangeStirrupCover and WarnInsteadOfRefuseSpacing were found True after the 30 Oct test-run incident (BUG-1257), see that entry. Still OPEN.
 
 ---
 
