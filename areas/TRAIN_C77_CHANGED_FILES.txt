@@ -5,6 +5,7 @@ Modules/Drainage.Tests/Dialogs/Bug1095CouncilMinimumCRenderTests.cs
 Modules/Drainage.Tests/Dialogs/Bug1226RecentButtonsTests.cs
 Modules/Drainage.Tests/Dialogs/Bug1238RecentLineTests.cs
 Modules/Drainage.Tests/Dialogs/SettingsWindowV3Tests.cs
+Modules/Drainage.Tests/Rules/Bug432OtherScreensCoverTests.cs
 Modules/Drainage.Tests/Rules/Bug901CoverToPipeOutsideTests.cs
 Modules/Drainage.Tests/Rules/EngineeringRealLengthTests.cs
 Modules/Drainage.Tests/Rules/Gb01Slice1FallsTests.cs
@@ -13,18 +14,25 @@ Modules/Drainage.Tests/Rules/Gb01Slice3PitDepthTests.cs
 Modules/Drainage.Tests/Rules/Gb01Slice4GarageTests.cs
 Modules/Drainage.Tests/Rules/Int068DetentionFingerprintTests.cs
 Modules/Drainage.Tests/Rules/Int068PitOutletSpeedFingerprintTests.cs
+Modules/Drainage.Tests/Rules/RuleFixPlannerTests.cs
+Modules/Drainage.Tests/Rules/RuleSourceEvidenceTests.cs
 Modules/Drainage.Tests/Rules/RulebookEngineTests.cs
+Modules/Drainage.Tests/Rules/RulebookLevelsCheckTests.cs
 Modules/Drainage.Tests/Rules/TidyLabelsGateTests.cs
 Modules/Drainage.Tests/Services/B046PipeObjectOnForEveryoneTests.cs
+Modules/Drainage.Tests/Services/B055CdcheckReadsThisDrawingsRecordTests.cs
 Modules/Drainage.Tests/Services/Bug1031DeleteCellMenuTests.cs
 Modules/Drainage.Tests/Services/Bug1192LongSectionSurveyWarningTests.cs
 Modules/Drainage.Tests/Services/Bug251KingstonCommercialTests.cs
 Modules/Drainage.Tests/Services/Bug422CoverUnknownTests.cs
 Modules/Drainage.Tests/Services/Bug505NoUnitsNoteTests.cs
+Modules/Drainage.Tests/Services/Bug589CdCheckReadsSavedRecordTests.cs
 Modules/Drainage.Tests/Services/Bug860SourceLabelDoubleClickTests.cs
 Modules/Drainage.Tests/Services/C75NewSwitchDefaultsTests.cs
 Modules/Drainage.Tests/Services/C76TidyLabelsDefaultOnTests.cs
+Modules/Drainage.Tests/Services/C77NewSwitchDefaultsTests.cs
 Modules/Drainage.Tests/Services/CL5OneSizingStandardsTests.cs
+Modules/Drainage.Tests/Services/Checks/CheckIgnoreUndoTests.cs
 Modules/Drainage.Tests/Services/Cl1MissingNotZeroTests.cs
 Modules/Drainage.Tests/Services/Cl3DetentionSettingsTests.cs
 Modules/Drainage.Tests/Services/Cl6SurveyMarkupSettingsTests.cs
@@ -50,6 +58,7 @@ Modules/Drainage.Tests/Services/PitSelectorTests.cs
 Modules/Drainage.Tests/Services/Proposals/LevelsProposalEngineTests.cs
 Modules/Drainage.Tests/Services/RaingardenLabelTests.cs
 Modules/Drainage.Tests/Services/RedoSafeReviewedHooks.baseline.txt
+Modules/Drainage.Tests/Services/SpineCommandContractTests.cs
 Modules/Drainage.Tests/Services/StormStillRisingTests.cs
 Modules/Drainage.Tests/Services/XcivilImportToleranceSettingsTests.cs
 Modules/Drainage.Tests/ViewModels/BoydsCalcViewModelTests.cs
@@ -67,6 +76,7 @@ Modules/Drainage/Models/CouncilProfileModels.cs
 Modules/Drainage/Models/DoubleClickSettings.cs
 Modules/Drainage/Models/PipeSizingModels.cs
 Modules/Drainage/Models/UserSettings.cs
+Modules/Drainage/Rules/CdCheckProjectSourceRule.cs
 Modules/Drainage/Rules/CouncilRuleValues.cs
 Modules/Drainage/Rules/DoubleClickSourceLabelRule.cs
 Modules/Drainage/Rules/LongSectionSurveyIgnoredRule.cs
@@ -81,6 +91,7 @@ Modules/Drainage/Rules/SuggestedLevelGradeRule.cs
 Modules/Drainage/Rules/TidyLabelsGateRule.cs
 Modules/Drainage/Services/AutoDesignService.cs
 Modules/Drainage/Services/BuildingOutlineReader.cs
+Modules/Drainage/Services/Checks/ChecksResultReader.cs
 Modules/Drainage/Services/ColleagueDefaultsService.cs
 Modules/Drainage/Services/CompoundEditModeService.cs
 Modules/Drainage/Services/ComputationsRecordBuilder.cs
@@ -92,6 +103,7 @@ Modules/Drainage/Services/PipeSizeNetworkReviewService.cs
 Modules/Drainage/Services/PitSelector.cs
 Modules/Drainage/Services/PitSizeTable.cs
 Modules/Drainage/Services/ProjectDataService.RulebookDrawing.cs
+Modules/Drainage/Services/ProjectDataService.cs
 Modules/Drainage/Services/PumpSizingService.cs
 Modules/Drainage/Services/RaingardenPlacementPlan.cs
 Modules/Drainage/Services/RulebookPipeLengthReader.cs
