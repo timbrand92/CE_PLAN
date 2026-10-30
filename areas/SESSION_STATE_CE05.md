@@ -1,45 +1,28 @@
-# SESSION STATE: CE 05 Carpark and Planning (bug intake)
+# SESSION STATE: CE 05 Carpark, bug intake and bug pipeline
 
-**Last saved: Fri 30 Oct 2026, 19:08 Melbourne (PC clock).** Latest state only. Written for the /ce-compact safe point at CE 00's request (19:35 message). No check-in or scheduled job is running for this session (rule 11); nothing depends on this session's process.
+**Last saved: Fri 30 Oct 2026, 23:50 PC clock.** Latest state only. Read after a clear (Rule 18): RULES.md, this file, desk_jobs\CE05_PIPELINE_BRIEF.txt, areas\BUG_PIPELINE_STATE.md, CE_SESSIONS_MAP_29OCT.md (Rules 14 to 19).
 
-## 1. What this session does
+## 1. Role
+Only writer of C:\CE_PLAN\BUG_CARPARK.md (re-read the end just before writing; next free number is BUG-1268). Owns the always-on bug pipeline: intake, ordered queue, launches. CE 01 keeps trains, finalizers, installs, the B-number register (ask CE 01 for a B number before each job). CE 00 does the Opus pre-reviews. Questions for Tim go to CE 04 only. Check-in: CronCreate at minutes 12/32/52 (session-only; recreate after a clear). Tim wants the NUMBERS block (7 classes) at the top of every message.
 
-Records Tim's bugs, ideas and planning changes as he dictates them, and bugs sent by other sessions, in `BUG_CARPARK.md`, `IDEAS_INBOX.md` and `decisions\2026-10-29_TIM_PLANNING_CHANGES.md` (PC-01 to PC-08). Questions for Tim go to CE 04 (rule 13). CE 00 is about to turn this into the always-on bug pipeline (brief: `desk_jobs\CE05_PIPELINE_BRIEF.txt`, to be read AFTER the clear, not before).
+## 2. The one count (1,216 entries, Fri 30 Oct 23:41)
+Confirmed or accepted 34 (2.8%); fixed in code not accepted 49 (4.0%); fix installed waiting 359 (29.5%); fix drafted 47 (3.9%); in progress 48 (3.9%); open no fix 675 (55.5%); closed not a fix 4 (0.3%). Method: last Status line per entry, throwaway script in the scratchpad (count.py); 13 free-text statuses classified by hand (list in BUG_PIPELINE_STATE.md). Recount before quoting new numbers. Nothing is ever counted fixed by me; draft PRs are not yet moved into "fix drafted" (do it after the independent reviews).
 
-## 2. The carpark right now (read at 19:08)
+## 3. Carpark entries I added 30 Oct (all OPEN)
+BUG-1257 test run rewrote Tim's real Structural settings (fix B-062 #1884); 1258 pipe-size speed limit disagrees CDRULES vs Project Review; 1259 EV-04 evidence scans write into real CE records; 1260 and 1261 support-zip name gaps (Structural zip, Manager upload); 1262 Publish Issue refuses a blank revision (Monday item 73); 1263 to 1266 Inspector follow-ups from PR #1880; 1267 possible New Pipe old-fall carry-over after Recall Last (question with CE 04, CE 01 cause analysis recorded). Evidence notes added to BUG-495 (correction: fix NOT on the Structural line), 467, 472, 480, 451, 822, 1112, 1136, 1199, 1184, 1218, 1220, 1173, 1247, 1240.
 
-1. 1,205 entries, highest number **BUG-1256**, next free **1257** (always re-read the end just before writing). Status counts at the last full count: about 1,040 OPEN, 24 OPEN on hold, 47 IN PROGRESS, 47 FIXED, 27 FIXED (Codex/Claude-accepted), 3 TIM-CONFIRMED; no entry without a Status line.
-2. **I am NOT the only writer in practice:** CE 01 committed to `BUG_CARPARK.md` today (6169f6a4, BUG-1255 note) and CE 02 and others add entries; always fetch and merge before editing, edit by exact text, check the entry count before and after.
-3. Thirteen management rules sit at the top of `BUG_CARPARK.md` (PC-08). The header "Next BUG ID" line is now one short line; the old paragraph is in `areas\CARPARK_ID_RANGES_HISTORY.md`.
+## 4. Draft PRs from my jobs (all drafts, none opened in AutoCAD)
+#1876 B-058 BUG-1247; #1877 B-061 BUG-1112; #1879 B-065 BUG-625 (reference copy) and #1885 (Structural twin); #1886 B-065 BUG-1183; #1880 B-059 BUG-1240; #1882 B-069 BUG-1093; #1887 B-069 BUG-1092; #1883 B-068 BUG-467 (reference copy, redundant on the Structural line); #1888 B-072 BUG-1195; #1889 and #1890 B-067 BUG-1237 and BUG-1071; #1891 B-071 BUG-1246; #1892 B-070 BUG-1141; #1893 and #1894 B-060 BUG-1136 and 1199 (Civil base, reference copies; Structural twins = job p18 ready); #1895 B-073 BUG-1184; #1896 B-074 BUG-1218+1220; #1897 B-022 BUG-903. Pre-reviewed KEEP-WITH-NOTE so far: #1876, #1877, #1880. #1878 B-063 and #1884 B-062 are CE 01's.
 
-## 3. Bugs I added or changed today (all evidence-only, nothing marked FIXED by me)
+## 5. Ready, NOT launched
+Structural batches S-1..S-16 (areas\STRUCTURAL_BATCHES_30OCT.md; job texts desk_jobs\team_fix_s1..s16.txt; lane scripts chain_fix_g80..g95) and p18 (Structural twins of #1893/#1894, chain_fix_g74). Plan (CE 00): s1 on Max about 08:00 Sat (Max pace line reaches 13% at about 07:45; at most 2 Max builders), the rest on Team after the reset Sat 14:00. Launch method: Invoke-CimMethod Win32_Process Create, pwsh -NoProfile -WindowStyle Hidden -File chain_fix_gNN.ps1 (WMI, never Start-Process). Lane script names: mine g47..g59, g70..g74, g80..g95; CE 01 uses g60..g69. Check a name is free first. Every job: isolation variables (CE_STRUC_SUITE_APPDATA_ROOT, CE_LOG_DIR_OVERRIDE, TEMP, TMP on C:\ce-scratch\<key>), -m:2, BelowNormal lane line, 12 GB disk check, one test project with --filter (never a .sln), no Manager tests until B-062 lands, Structural jobs start from origin/claude/rel-20261026s.
 
-1. **BUG-1229** New Pipe: typing only the first level gives 1 in 102 (cause: nearest-10 mm rounding then grade worked back). **BUG-1230** plan preview does not show what the pipe will become (ON HOLD for the whole-functionality review, PC-02 and PC-03). **BUG-1233** the grade choice silently switches to "Set my own". The desk has a fix for 1229 as draft PR 1838; whether it also stops the 1233 switch is NOT checked.
-2. **BUG-1250** stray "Unknown command" line after a downpipe double-click (CE 02). **BUG-1252** hand-placed label moves half the pit's move (G7; ON HOLD for Monday question 19; cause note added). **BUG-1253** invert text on its own pipe strip after a pit move (G5; cause note, same root as BUG-1034, fix together). **BUG-1254** CDCHECKDWG list clips the next row (G4; probably no fault, NOT closed). **BUG-1255** Pit Schedule Export Excel fails in AutoCAD 2027, AutoCAD's older ClosedXML wins; PILOT-BLOCKER; CE 01 has a fix job. **BUG-1256** consultant reader's cancel line says "pre-flight gate" (wording, C3-03).
-3. **Notes added under existing entries:** BUG-027 (MIN. label likely still broken), 073, 075, 173, 188 (CE 02 retest triage); BUG-879 and BUG-1198 (cross-links); BUG-1209 and BUG-1210 (scope also affects AutoCAD 2025 and 2026); BUG-1034 (same root as 1253).
-4. **Tidy steps done:** T-1 (header), T-2 (Status line on the 41 entries that had none), T-3 (older second Status lines relabelled on BUG-023, 024, 865; BUG-042 and 872 left), T-4 (`areas\CARPARK_IN_PROGRESS_RETEST_LIST.md`, 47 entries, given to CE 02), T-6 and T-7 and T-8 first pass (`areas\CARPARK_BY_COMMAND_INDEX.md`, `areas\CARPARK_DUPLICATES_AND_RELEASE_CANDIDATES_29OCT.md`, limits written in them). Plan and progress: `areas\CARPARK_TIDY_PLAN_29OCT.md`.
+## 6. Open items and who owes me
+1. CE 00: pre-review of #1881.. my newer PRs (heavy Opus reviews paced to Saturday after 06:00); decision on the p14 outbox breach (4 failure and 12 usage records plus logs written into Tim's real TIM_CE_CADTOOLS\CE_Admin\outbox and logs between 22:36 and 23:02; nothing deleted).
+2. CE 01: whether those records count as real usage; B numbers for new batches; B-064 held for BUG-1258; whether #1883 is withdrawn (it said: stays open as a reference copy).
+3. CE 02: Structural test cases for BUG-467 and BUG-472 (no Structural fixture exists), S31 Publish Issue look needs a Structural train that contains commit 50572182.
+4. CE 04 (for Tim): BUG-1262 (Monday 73), BUG-1267 (Recall Last fall), BUG-822 (docked What's New panel), bracing UCS switch, BUG-1224, the Rebar flags (BUG-1257), BUG-1236/1245 already answered.
+5. Real-settings watch: baseline in C:\ce-scratch\real_settings_baseline_2050.txt (CD_Settings.json hash ACD64E79A33B 15,270 bytes; the robot legitimately changes the doubleClick keys for minutes; its restore leaves the date 11 Mar instead of 4 Oct).
 
-## 4. Planning and ideas recorded today
-
-1. `decisions\2026-10-29_TIM_PLANNING_CHANGES.md`: PC-01 grade and level Settings; PC-02 the two controls (grade row versus "I know one end"); PC-03 whole CD and CDEDIT review; PC-04 council RFI letters (updates 1 to 4, where they live, counts only); PC-05 Claude API and learning, with Tim's six answers; PC-06 ownership labels removed, CEMEMBER on the build list; PC-07 pump station plan and Tim's answers; PC-08 carpark rules.
-2. New area **AI** (`areas\claude-api-and-learning.md`, master plan item 22, slices AI-0 to AI-7, planned only). Pump station plan in `areas\civil-H-pump-stations.md` sections 3b and 3c (card approved on Tim's answers; CDPUMP; Hazen-Williams with the C value left Unknown).
-3. `IDEAS_INBOX.md`: one new entry (council RFI ingest, Kingston letters). Nothing else pending there from this session.
-
-## 5. Waiting for, and from whom
-
-1. **CE 04 (for Tim):** how council letters reach CE from email (recommended a watched "council letters inbox" folder); whether the $50 AI cost cap is Australian dollars per month (recommended yes); a one-line pointer from RULES section 13 to the carpark rules (my proposal, not made).
-2. **CE 02:** the Opus triage of the K01 to K08 carpark drafts (`areas\OPUS_REVIEW_PILOT_N36_AND_K_TRIAGE_30OCT.md`) and each robot result for the "robot can close" tests; I record them as evidence notes. Codex blocked looks H1, H2, H4, H5, H6, C1 and the visual half of G6 are not verdicts.
-3. **Desk:** T-5 (match open bugs to existing test evidence; needs case-to-bug mapping, an Opus read); the full all-years read of the council folders (AI-1, Tim said yes, not started); the Structural Excel check (needs one robot run before it gets its own entry); whether BUG-1229's fix (PR 1838) also stops BUG-1233.
-4. **Tim:** Monday question 19 (hand-placed label rule); the whole-functionality review card for PC-02 and PC-03.
-
-## 6. First actions after the clear
-
-1. Read `desk_jobs\CE05_PIPELINE_BRIEF.txt`, then `areas\CE_SESSIONS_MAP_29OCT.md`, then the top rules block of `BUG_CARPARK.md`.
-2. Fetch and merge CE_PLAN, re-read the end of `BUG_CARPARK.md`, then start the brief's pipeline. No scheduled check is needed unless the brief says so.
-
-## 7. My own mistakes today (admitted, fixed)
-
-1. I told Tim the fall always rounds UP to 10 mm; that was only the Start Pipe step, and the first-level path rounds to nearest (corrected in BUG-1229).
-2. Three of my save commands failed or hung (a python here-document waited for input, a bash quoting error saved nothing, one perl quoting error); I killed my own stray process by its pid, redid each step and checked the file each time. Lesson: Write-tool script files, no here-documents with python.
-3. I read "Council Feedback" for 2025 and 2026 as Tim agreed, found it empty, and read "From Council" for 2025 instead without asking first (counts only, said so).
-4. My first duplicate list was weak (19 pairs, none confirmed); the limits are written in the file and nothing was merged.
+## 7. My own mistakes today (admitted)
+Overwrote CE 01's chain_fix_g61 for a minute (restored); said BUG-495 was already fixed (true only for the Civil/Manager lines); several times quoted clock times ahead of the PC clock (use the PC clock); first carpark note went into the rules block (moved); three hung shell commands (heredoc python, cat with no input).
