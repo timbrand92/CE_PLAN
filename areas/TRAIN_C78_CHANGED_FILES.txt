@@ -1,0 +1,17 @@
+Modules/Drainage.Tests/Commands/Bug857GradeMismatchBoxTests.cs
+Modules/Drainage.Tests/Rules/Bug285To298C5Tests.cs
+Modules/Drainage.Tests/Services/Bug1227PitCopyKeepsPipeEndsTests.cs
+Modules/Drainage/Commands/CdCommand.cs
+Modules/Drainage/Dialogs/GradeMismatchDialog.xaml
+Modules/Drainage/Dialogs/GradeMismatchDialog.xaml.cs
+Modules/Drainage/Models/UserSettings.cs
+Modules/Drainage/Rules/CopiedPitEndOwnerGuard.cs
+Modules/Drainage/Rules/GradeMismatchChoiceRule.cs
+Modules/Drainage/Services/LinkService.Cache.cs
+Modules/Drainage/Services/LinkService.Geometry.cs
+Modules/Drainage/Services/LinkService.PitRelinks.cs
+Modules/Drainage/Services/LinkService.RepairAudit.Relink.cs
+Modules/Drainage/Services/LinkService.State.cs
+Modules/Drainage/Services/LinkService.Utilities.cs
+Modules/Drainage/Services/ScopePitClaimEvidence.cs
+REGRESSION_LOG.md
