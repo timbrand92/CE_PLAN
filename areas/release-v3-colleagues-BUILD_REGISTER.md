@@ -186,6 +186,14 @@ Build-slot order until the freeze (Fri 6 Nov): 1. C-76 install (tonight). 2. C-7
 
 90. **B-058b DONE 30 Oct (follow-up to item 83): PR #1876 new head d30041c4 (was 798d15e1).** Comment fix (B-051 to B-058), an exact-condition test that FAILED when a 'not' was slipped in front of the switch as a trial (then put back), a REGRESSION_LOG entry, the PR description corrected. Focused 16 of 16; full Manager net10 1,099 run, 1,098 passed, 1 skipped, 0 failed; Manager net48 compile 0 errors; every run isolated (worktree C:\ce-fx\m1). Tim's real CE_Admin folder grew by 11 files and 4 changed between 20:11 and 20:39: attributed to a real AutoCAD (acad.exe started 20:34, CE_CVL_SUITE 3.0.87), not proven file by file. Not tested: AutoCAD, the net48 tests. BUG-1247 stays open (the go-back step). **RE-CHECK OK (CE 00, 30 Oct, head d30041c4, diff read by CE 00: 3 files +36 -1, no behaviour change); train C-79 as before. CE 00 asked CE 02 to confirm the CE_Admin growth file by file against the robot's session logs.**
 
+91. **B-068 Structural BUG-467, rotated UCS bracing (bug pipeline job p8, CE 05, Team, chain_fix_g54, launched 30 Oct 21:02).** Base origin/claude/rel-20261102a, isolated. May end with no PR if it is already fixed. Report areas\BUGFIX_p8_REPORT_30OCT.md. PR number to be added when it opens.
+
+92. **B-069 Civil BUG-1093 then BUG-1092, cover check skipped at RL 0.000 and the 'essentially flat' tolerance (job p9, CE 05, Team, chain_fix_g55).** Same base, isolated. Report areas\BUGFIX_p9_REPORT_30OCT.md. PR number to be added when it opens.
+
+93. **B-070 Civil BUG-1141, one unreadable pit record stops link memory (sibling of #1752) (job p10, CE 05, Team, chain_fix_g56).** Same base, isolated. Report areas\BUGFIX_p10_REPORT_30OCT.md. PR number to be added when it opens.
+
+94. **B-071 Civil BUG-1246, a copied downpipe keeps its tag (job p11, CE 05, Team, chain_fix_g57); stacks on #1867 (B-009).** Same base, isolated. Report areas\BUGFIX_p11_REPORT_30OCT.md. PR number to be added when it opens; the PR must say it needs #1867 (which is in C-78).
+
 ## Rules for this register
 
 1. **New number = next free B number**, written the same moment the work is queued; never reused, never deleted (D6).
