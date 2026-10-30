@@ -16,3 +16,17 @@ Approved by CE 00 Fri 30 Oct 2026 for Tim's ruling "try to complete everything i
 5. **How a launch is made:** copy desk_jobs\chain_fix_g46.ps1 to the next chain_fix_gNN.ps1 with the job key replaced, job text in desk_jobs\team_fix_<key>.txt, started through WMI Win32_Process Create. No new script type.
 6. **CE 00 backstop:** CE 00 checks at each hourly check that the last launch above is under 90 minutes old and wakes CE 01 if not.
 7. **Updated:** Fri 30 Oct 19:05 PC clock.
+
+## ONE bug count (CE 05, Fri 30 Oct 2026 ~19:50 PC clock, 1,205 entries, counted by the last Status line of each entry)
+
+Classes, each defined once. Installed is never fixed.
+1. **Confirmed or accepted: 34** (2.8%). Status says Tim-confirmed (6, plus BUG-168) or FIXED (Codex-accepted or Claude-accepted) (27).
+2. **Fixed in source or fixed long ago, not confirmed by the new rules: 49** (4.1%). Status starts FIXED with no acceptance word (47), plus BUG-096 and BUG-097 (locally corrected). These are NOT counted as accepted.
+3. **Fix installed, waiting to be confirmed: 359** (29.8%). Status says the fix is installed (357, with "not installed" statuses excluded), plus BUG-402 (awaiting Tim confirm) and BUG-476 (seen by Codex).
+4. **Fix drafted or built, not installed: 47** (3.9%).
+5. **In progress: 48** (4.0%).
+6. **Open, no fix: 664** (55.1%). Includes 2 on hold and BUG-788, 418, 409, 401, 392, 361, 620.
+7. **Closed, not a fix: 4** (0.3%): BUG-359 (driver), BUG-040 (retired), BUG-163 (not reproduced), one won't fix.
+Total 34+49+359+47+48+664+4 = 1,205.
+
+Why this differs from the two earlier counts: CE 01 (about 19:30) used 336 installed, 32 drafted, 698 no fix; job q1 (19:24) used 345 installed, 72 built or drafted, 692 no fix. Mine matches the Status text with one rule everywhere; differences are mostly entries whose Status line mentions "installed" or "PR" later in the sentence. Entries that had no `**Status:**` line at the start of a line (about 53, mostly BUG-3xx/4xx written with the Status inline) are now read from the inline Status. Method script (throwaway): scratchpad count.py; limits: keyword rules, the 13 free-text statuses were classified by hand (above), no entry was changed.
