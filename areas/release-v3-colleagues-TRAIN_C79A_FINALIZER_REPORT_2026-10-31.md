@@ -9,7 +9,7 @@ Opus 5.5 (claude-opus-5-5), headless finalizer (CE 01 job `train_c79a_finalizer_
 3. **Branch** `claude/rel-20261106a`. Head found `b8089300ab8446ac7dd1aa3d86964d06559dd555` (matched `git ls-remote` at 00:00). **Final head `37dc1e62c106efdb062e6ed974851d203d2c4edb`** (my one tests commit, normal fast-forward push at about 00:56, leak scan clean, `git ls-remote` reads it back). Base: the installed C-78 tip `3fbb9da5` (Civil 3.0.88 / Manager 1.1.88). This train becomes Civil 3.0.89 / Manager 1.1.89 through the payload builder; I made no version commit.
 4. **What I changed:** one commit, tests and a log entry only: `Modules/Drainage.Tests/Services/C79aFinalizerGuardsTests.cs` (22 tests) plus a `REGRESSION_LOG.md` entry. No product code, no revert, no default changed.
 5. **Verdicts:** 22 PRs merged, 22 kept: **KEEP 13, KEEP-WITH-NOTE 9, DROP 0.** Not in the train, by the assembler's decision and not reviewed here: #1922 and #1923.
-6. **Tests:** whole solution 0 errors. Civil net10 full **21,893: 21,861 passed, 32 skipped, 0 failed**. Civil net10 focused after my commit **615: 612 passed, 3 skipped, 0 failed**. Civil net48 focused **5,284: 5,022 passed, 141 skipped, 121 failed** (the 114 known reds by name, plus 6 new ones of the same "invalid program" kind, plus the real-settings guard, item 8). Manager net10 full **1,148: 1,146 passed, 2 skipped, 0 failed**. Arch (Civil half) **14 of 14**. Structural net10 **1,299: 1,287 passed, 5 skipped, 7 failed** (the same 7 old names as C-78).
+6. **Tests:** whole solution 0 errors. Civil net10 full **21,893: 21,861 passed, 32 skipped, 0 failed**. Civil net10 focused after my commit **615: 612 passed, 3 skipped, 0 failed**. Civil net48 focused **5,284: 5,022 passed, 141 skipped, 121 failed** (the 114 known reds by name, plus 6 new ones of the same "invalid program" kind, plus the real-settings guard, item 8). Manager net10 full **1,148: 1,146 passed, 2 skipped, 0 failed**. Arch (Civil half) **14 of 14**. Structural net10 **1,299: 1,287 passed, 5 skipped, 7 failed** (the same 7 old names as C-78). Civil bundle **832 files, the same paths as the installed 3.0.88 bundle**; official Manager build **"Complete 75-file, three-lane release candidate verified."** (Manager is real code); CE_SHARED byte-identical in both.
 7. **Nothing was opened in AutoCAD. Nothing installed or deployed. Every bug stays OPEN.** Built and unit-tested only.
 
 ## MISTAKES AND HONEST GAPS (first, plainly)
@@ -17,8 +17,9 @@ Opus 5.5 (claude-opus-5-5), headless finalizer (CE 01 job `train_c79a_finalizer_
 1. **My first tests commit rewrote the whole change log's line endings** (96,054 lines changed instead of 10). I caught it from the commit's own numbers BEFORE pushing, undid it locally (`git reset --soft`), rebuilt the file with plain line endings and committed again (`37dc1e62`, 2 files, 98 lines added). Nothing wrong reached the branch. Cost: about 5 minutes.
 2. **I wrote my new test file into the worktree while my full Civil run was going** (00:17 to 00:25). The run used the already-built test DLL, so it could not change that run's result, but it breaks RULES 8.3 ("never edit while a test run is going in the same copy"). I committed only after the run ended.
 3. **The real-settings guard went red on net48 (not weakened).** Tim's `CD_Settings.json` was put back to its 4 October copy at about 01:05 while my net48 run was going. My reading of the evidence says the robot did it; I have not proved it (item 8).
-4. **The official Manager build and the Civil bundle were held by the disk floor.** C: fell from 46.8 GB free at 00:05 to 22.3 GB at 01:07. My own folders hold about 2 GB; the rest is other work on this PC, which I did not touch (D6). Section "BUNDLE AND MANAGER RELEASE BUILD" gives the result. 
-5. **Build slots:** two other jobs (`C:\CE_WORK\build\fx23` and `n11`) held both slots from 00:41 to 00:52; my Civil test build waited 11 minutes. I stopped nothing of theirs.
+4. **The official Manager build and the Civil bundle waited 1 hour 30 minutes for the disk floor.** C: fell from 46.8 GB free at 00:05 to 22.3 GB at 01:07. My own folders hold about 2 GB; the rest is other work on this PC, which I did not touch (D6). At 02:33 it came back to 58.3 GB and both builds passed at 02:42 (section "BUNDLE AND MANAGER RELEASE BUILD").
+5. **My plan-repo commit was swept into another job's commit.** In `C:\CE_PLAN` I staged my three files; at 01:13 the fx23 job's commit (`52bae2ed`, "fx23 report: PR 1923 ships OFF, switch-default audit") took everything staged, mine included, and pushed it. I checked: the pushed report, review-lane entries and file list are byte-for-byte mine. Only the commit message is theirs. Two jobs sharing one working copy (RULES 8.3) caused it. This update is committed by path.
+6. **Build slots:** two other jobs (`C:\CE_WORK\build\fx23` and `n11`) held both slots from 00:41 to 00:52; my Civil test build waited 11 minutes. I stopped nothing of theirs.
 
 ## THE PRs, ONE BY ONE (KEEP / DROP / KEEP-WITH-NOTE; read on the merged head, each merge against its first parent)
 
@@ -129,6 +130,7 @@ Opus 5.5 (claude-opus-5-5), headless finalizer (CE 01 job `train_c79a_finalizer_
    3. **00:54:58 (start of my net48 run, the guard's own baseline):** 15,357 bytes, last written **00:51:35**.
    4. **01:05:48:** `ACD64E79A33B`, **15,270 bytes, last written 4 Oct 08:22:30**, no AutoCAD running. This is exactly the "before" stamp the assembler recorded at 22:09: Tim's own file copied back with its original date.
    5. **01:06:58:** unchanged; a new AutoCAD (process 4928) started 01:06:28 without rewriting it.
+   6. **02:43:22:** `D9CF29BCA631`, 15,314 bytes, last written **02:41:25**; AutoCAD process 70376 started **02:41:28**. At that moment only my bundle build was running, which runs no CE code.
 2. **My reading:** each rewrite lands 3 seconds before an AutoCAD start (the robot sets its settings before launch; memory "driver-settings-guard-read-at-launch"), and the 4 October copy coming back after an AutoCAD closed is a restore that keeps the original date. A test writing the file would leave a fresh date, not 4 October. My tests ran with the settings redirected (`SettingsIsolationSetup`) and every one of the train's new tests was read for writes under %APPDATA%: none. **I believe it is CE 02's robot; I have not proved it. I never touched the file.**
 3. **The guard:** inconclusive in the full net10 run (AutoCAD started during it), passed in the focused net10 run, **red on net48** (the restore happened inside the run and no AutoCAD had started since its baseline). That is the guard doing its job against a real outside change. **Not weakened.** Run it with no robot session and it should pass; the robot desk should know its settings restore trips it.
 4. **Unchanged through all my runs:** `TIM_CE_CADTOOLS\CS_Settings.json` `622A246F7D3B`; `CE_STRUC_SUITE\CS_Settings.json` `D604CE689671` (last written 30 Oct 19:54, before this job; it differs from C-78's `B3B5A004`, a change from before this job); `CE_CVL_SUITE\settings.json` `EFE307C4FC74`; `CE_SUITE\manager-switches.json` does not exist.
@@ -138,7 +140,11 @@ Opus 5.5 (claude-opus-5-5), headless finalizer (CE 01 job `train_c79a_finalizer_
 
 1. **Disk before:** C: 46.8 GB free at 00:05; 29.1 GB at 00:25; 22.3 GB at 01:07. My own worktree is 1.97 GB and my scratch 0.07 GB; the other job folders under `C:\CE_WORK\build` hold under 2 GB together, so most of the 24 GB went somewhere else on the PC. I deleted nothing.
 2. **The step:** my copy `C:\CE_WORK\scratch\c79af\bundle_and_mgr.ps1` runs the unchanged `Installer\build_installer.ps1`, then the official Manager line copied unchanged from `C:\ce_rc_scratch\p114_scripts\payload114_mgr_build.ps1` (its own `-m:8` kept, worktree `R:\` replaced by `C:\CE_WORK\build\c79af`; output only inside my worktree; never the c1058 to c1074 folders). It waits in 5-minute steps, up to 2 hours, while C: is under 27 GB.
-3. **Result:** BUNDLE_RESULT_PENDING
+3. **The wait:** under 27 GB from 01:07:49 to 02:33 (checked every 5 minutes; 22.0 to 22.4 GB). At 02:33 C: jumped to 58.3 GB (someone else's clean-up; not mine) and the step started at 02:38.
+4. **Civil bundle:** the unchanged `Installer\build_installer.ps1` from my worktree, exit 0 at 02:42:21. Legacy, Net8 and Modern lanes verified; "Shared config verified: 9 file(s)". **832 files, the same 832 paths as the INSTALLED Civil bundle (compared name by name: nothing added, removed or renamed).** The installed Civil DLLs read `3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527` on all three lanes, so the base of this train is what is installed. No PR adds a bundle file; nothing in this diff pins 832. The script also wrote its usual release archive `C:\Lisp Files\SUPERSEDED\CE_CVL_SUITE\20261101_024211_v2026.1101.0238` (kept; earlier ones untouched).
+5. **Official Manager release build:** exit 0 at 02:42:44, 0 errors: **"[CE_SUITE_MANAGER] Complete 75-file, three-lane release candidate verified."** Prepared bundle `Modules\Manager\Installer\payload_build\CE_SUITE_MANAGER.bundle`: 75 files. **Manager 1.1.89 is REAL CODE** (four PRs), not a re-stamp.
+6. **CE_SHARED, one assembly identity:** Civil's three CE_SHARED copies (Legacy `86C7C940CCF4`, Net8 `C30CD1340215`, Modern `DDD4352B52DF`) were the approved root, and the Manager bundle's three copies hash the same. Civil and Manager ship a byte-identical CE_SHARED.
+7. **Disk after:** 58.3 GB free (02:43).
 
 ## CHANGED FILES BY AREA (for CE 02 to pick the re-runs)
 
@@ -221,7 +227,7 @@ BUG-1093, BUG-1092, BUG-1195, BUG-1237, BUG-1071, BUG-1218, BUG-1220, B-011b (#1
 2. **Settings window height:** the Survey tab is at exactly 670 px of the 670 px limit; the next new row on that tab breaks the fit test.
 3. **CDRULES answers change without a Stale mark** (#1887, #1857, #1949): an old saved CDRULES run still reads current until re-run.
 4. **The robot's settings restore trips the new real-file guard** whenever a test run overlaps a robot session (item 8 above). Expect it again.
-5. **Disk:** C: was 22 GB free at 01:07, under the 27 GB floor, with other work using it.
+5. **Disk:** C: was 22 GB free from 01:07 to 02:33, under the 27 GB floor, with other work using it; 58.3 GB at the end.
 
 ## QUESTIONS FOR TIM (work hours; RULES 3.2; all OPEN; none blocks this train)
 
@@ -234,7 +240,7 @@ Checked first: `QUESTIONS_FOR_MONDAY.md` and `decisions\2026-10-29_TIM_ANSWERS.m
 
 ## HYGIENE
 
-1. **Locations:** worktree `C:\CE_WORK\build\c79af` (detached from `origin/claude/rel-20261106a`, local branch `fin/c79a-guards` for my commit); scripts, logs and test scratch in `C:\CE_WORK\scratch\c79af` (logs in `logs\`, changed-files list in `out\changed.txt`).
+1. **Locations:** worktree `C:\CE_WORK\build\c79af` (detached from `origin/claude/rel-20261106a`, local branch `fin/c79a-guards` for my commit); scripts, logs and test scratch in `C:\CE_WORK\scratch\c79af` (logs in `logs\`, changed-files list in `out\changed.txt`). **Both LEFT in place** (C: had 58.3 GB free at the end, over 40 GB, so per the job CE 01 clears them).
 2. **Every dotnet command:** `-p:SkipDevBundle=true -nr:false --disable-build-servers`, Release, `_AcadRef48` CERef 24.3.0, `_AcadRefNet8` autocad-2026-ref, `_AcadRefNet10` AutoCAD 2027, `_AcadRef100` autocad-net8-ref (the official Manager build uses the payload script's own set), AutoCAD 2027 on PATH for tests, `VSTEST_CONNECTION_TIMEOUT=900`, the 0-byte `CE_TRANSFORM_2027.arx` placeholder in place. Builds and tests at Below Normal and `-m:2`; the bundle and official Manager build at Normal (vswhere hangs under Below Normal, p105) with the payload line's own `-m:8`.
 3. **Slots:** before every dotnet command my script counted top-level dotnet build/test/msbuild/publish/restore processes (dotnet only) and ran only at 0 or 1; one command of mine at a time.
 4. **Nothing deployed, installed or opened in AutoCAD. No force-push. No PR closed. No bug marked FIXED. Nothing of anyone else's deleted.** I did not edit DESK_LOG.md, the build register or BUG_CARPARK.md.
@@ -242,7 +248,7 @@ Checked first: `QUESTIONS_FOR_MONDAY.md` and `decisions\2026-10-29_TIM_ANSWERS.m
 
 ## SUMMARY
 
-GO at `37dc1e62c106efdb062e6ed974851d203d2c4edb`, CLASS AREA (plus N91 and the smoke cases in RULE 14). 22 PRs kept (13 KEEP, 9 KEEP-WITH-NOTE), #1922 and #1923 left out by the assembler. One tests commit (`C79aFinalizerGuardsTests`, 22). Civil net10 21,893 with 0 failed; net48 focused 5,284 with the 114 known reds plus 6 of the same kind plus the real-file guard (robot restore); Manager 1,148, 0 failed; Arch 14 of 14. Nothing FIXED; nothing in AutoCAD.
+GO at `37dc1e62c106efdb062e6ed974851d203d2c4edb`, CLASS AREA (plus N91 and the smoke cases in RULE 14). 22 PRs kept (13 KEEP, 9 KEEP-WITH-NOTE), #1922 and #1923 left out by the assembler. One tests commit (`C79aFinalizerGuardsTests`, 22). Civil net10 21,893 with 0 failed; net48 focused 5,284 with the 114 known reds plus 6 of the same kind plus the real-file guard (robot restore); Manager 1,148, 0 failed; Arch 14 of 14; bundle 832 files; Manager guard 75 files. Nothing FIXED; nothing in AutoCAD.
 
 ## RULE 14
 
