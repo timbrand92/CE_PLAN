@@ -1,7 +1,7 @@
 {
   "accounts": [
-    {"name": "Main", "fiveHour": null, "week": 33, "readAt": "2026-10-31T19:48:00+11:00"},
-    {"name": "Team", "fiveHour": 5, "week": 10, "readAt": "2026-10-31T19:36:00+11:00"},
+    {"name": "Main", "fiveHour": null, "week": 34, "readAt": "2026-10-31T20:29:00+11:00"},
+    {"name": "Team", "fiveHour": 9, "week": 10, "readAt": "2026-10-31T20:12:00+11:00"},
     {"name": "Codex", "fiveHour": null, "week": 26, "readAt": "2026-10-30T21:43:39+11:00"}
   ]
 }
