@@ -71,3 +71,10 @@
 3. When the CEMEMBER edit command is built, it must call `CeMemberReplanner.FindRow(list, record, SectionDatabaseService.GetFormerNameMap())` and `Replan(..., formerNames)`; and write the new name back into the record after a redraw.
 
 Finished: Sat 31 Oct 2026, 17:53 (Melbourne time), report pushed.
+
+## FOLLOW-UP (31 Oct, coordinator request): 250UC72.9 added, and the 34 other names checked
+
+1. **250UC73 is no longer held.** It is renamed 250UC72.9 behind the same switch, as Tim confirmed (19 Oct item 11, design item 7, decision 60 of 29 Oct, QUESTIONS item 100). The row keeps its own mass 73.0 and all its sizes; 250UC73 is in its former names, so a beam saved as 250UC73 is found and redrawn. 35 rows are renamed now. Wherever this report above says 34 renamed or 250UC73 held back, read 35 and renamed.
+2. **Check for CE 04 (every new name against the confirmed list):** I compared all 35 new names in `section-catalogue.json` with the UB and UC names of the corrected list Tim approved (`04_REFERENCE/section_data_2026-10-18/section-catalogue_CORRECTED_DRAFT.json`). Result: 35 of 35 identical, 0 differences, and no UB or UC name in the corrected list is missing from the catalogue. Note: Tim's ten-row check on 19 Oct covered only two UB/UC rows (310UB32.0 and 250UC72.9); the other 33 names come from the same corrected list that decision 60 approved as a whole.
+3. **Tests:** `CeMemberOldSectionNamesStillRedrawTests` (already covers all 372 old names, so 250UC73 included), `CeMemberSupplierNamesTests`, the catalogue integrity guard, `SectionDetailBatch2cTests`, `S45NewSwitchDefaultsTests`: 30 of 30 passed (net10, one project, with filter, isolation variables set, C: 42.9 GB free). The first run hit a one-off file lock on CE_SHARED.dll from the parallel build; the re-run was clean. Not run: full suite, net48 (no change to code), AutoCAD.
+4. **Not touched:** the 250UC72.9 row's mass (73.0) is the older rounded figure; correcting it is a BUG-818 data change, not done here.
