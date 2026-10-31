@@ -1,4 +1,4 @@
-# SESSION STATE: CE 07 Release (saved Sun 1 Nov 2026 08:31 PC clock; Rule 18 safe point, replaces the 31 Oct 12:35 version)
+# SESSION STATE: CE 07 Release (saved Sun 1 Nov 2026 08:30 PC clock; Rule 18 safe point, replaces the 31 Oct 12:35 version)
 
 Read first in a new session: this file, C:\TimOS\RULES.md, areas\CE_SESSIONS_MAP_29OCT.md (Rules 1 to 19), then areas\RELEASE_SCOREBOARD.md (the one scoreboard I own). Do NOT re-read the whole scoreboard each hour: read its top (FOR TIM), section 1 (CURRENT CALENDAR block), and only the newest notes 2a-70 to 2a-78 near the end of section 6. The long history is not needed.
 
