@@ -33,7 +33,7 @@
 
 ## NOT in C-79a (do not merge)
 
-- **#1868 B-019** (stacked on #1841, B-042, which has not been reviewed) and **#1841** itself: held, needs an Opus review of #1841 first.
+- **CORRECTED 31 Oct 22:50 (CE 01, after Opus review AB):** my first note said #1868 (B-019) was held because #1841 (B-042) was unreviewed. WRONG: #1841 is ALREADY IN the line (an ancestor of 3fbb9da5; it shipped in C-77) and had Opus review B on 29 Oct; its GitHub page is open only because trains merge without closing pages. **#1841 must NEVER be merged again in any train.** **#1868 (B-019, head 38c3f825, KEEP-WITH-NOTE, area plus smoke) can ride a C-79 assembly; the C-79a assembler had already passed its merge step when this was found, so #1868 goes FIRST in C-79b1** (two keep-both clashes: the Settings file and the change log; it does nothing until Tim types the 1-in-N figure for 450 mm and larger gravity pipes).
 - **C-79b1 / C-79b2 (later):** #1891, #1892, #1940+#1943, #1945, #1946, #1950, #1952, #1955, #1960, #1881; #1874 (+#1954, #1956), #1880+#1951+#1953+#1958, #1897+#1920, #1919+#1927, #1937, #1938, #1939, #1941+#1942, #1944, #1965, #1967.
 - **Held for Tim or a document check:** #1948, #1961, #1963, #1964, #1966, #1872, #1924.
 - **Structural** PRs (#1885, #1895, #1898 to #1916, #1918, #1921, #1929 to #1934 and so on): a separate S-train from `claude/rel-20261026s`, NOT here.
