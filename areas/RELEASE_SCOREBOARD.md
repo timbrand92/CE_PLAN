@@ -1,7 +1,7 @@
 # Release scoreboard: Civil + Manager pilot hand-over to Max
 
 **Owner:** CE 07 Release. One file, refreshed at least hourly. Others read it, they do not edit it.
-**Last refreshed:** Sun 01 Nov 00:20 2026 Melbourne (PC clock). Ledger entries H15 to H19 carry times about an hour ahead of the PC clock; I use the PC clock.
+**Last refreshed:** Sun 1 Nov 2026, 00:20 Melbourne (PC clock). Ledger entries H15 to H19 carry times about an hour ahead of the PC clock; I use the PC clock.
 **Schedule in force:** Tim's item 69 (decisions\2026-10-29_TIM_ANSWERS.md): the pilot takes the newest build that has passed review and testing on **Fri 13 Nov**; the Fri 6 Nov freeze of option b is superseded. **Pilot Mon 16 Nov.** The dates inside the schedule (section 1, schedule E, matching CE 01's train calendar) are CONFIRMED by Tim ("yes to all", item 70, question 42).
 **Words:** Built, Tested, Installed and Tim-accepted are four separate facts (RULES 4). "Claude-accepted" and "Codex-accepted" are never Tim's word. Unknown stays Unknown.
 
