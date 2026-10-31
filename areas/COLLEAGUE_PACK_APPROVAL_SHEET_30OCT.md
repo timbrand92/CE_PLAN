@@ -389,3 +389,15 @@ The order is: what blocks the install plan first, then what fills in the pack, t
    2. **Install time:** "about 5 minutes".
    3. **Old install files:** Q6's "July copies other colleagues use" is contradicted by item 64.
    4. **Desk reading 2:** it cites "ruling F2" for updates; no such ruling exists (see 02-13).
+
+---
+
+## ADDED 31 Oct 2026 by CE 01 (draft, for Tim's approval with the batches; nothing in `areas\colleague-pack\` was edited)
+
+**Source:** CE 00's request of 31 Oct 19:12 (from CE 04 item 105, BUG-354 and BUG-402), under Tim's rule "colleagues get his exact setup", plus CE 05's n2 report (BUG-1173). These are proposed additions to **page 02, Install and update** (and to the pilot install check), so they go through this sheet, not straight into the page.
+
+1. **Proposed new step on page 02, in the "before you start" part (BUG-354, BUG-402):** "Open `%APPDATA%\Autodesk\AutoCAD 2027\R26.0\enu\Support\ce_suite_startup.lsp` (use the folder for your own AutoCAD year). If it exists, find the line that loads the old Structural Plus bundle (`ce:load-strucplus-lisp`, about line 76 in Tim's file). It must start with a semicolon (commented out). If it does not, replace the file with Tim's copy, or put a semicolon at the start of that line and save. If you see `[CE_StrucPlus] LISP not found` when AutoCAD starts, this is why." (Harmless noise, not a fault in CE; Tim's own file is already fixed, with a backup beside it.)
+2. **Proposed addition to the pilot install check (the hand-over check each colleague's PC gets):** one line: "ce_suite_startup.lsp: old Structural Plus call commented out, YES / NO / file not present". The person doing the install (Tim, by hand) ticks it.
+3. **From CE 05's n2 report (BUG-1173), two missing wording lines on page 02:** (a) the optional `%APPDATA%\CE_SUITE` folder in the "copy your settings aside" step; (b) "stop if a `_PRE_V3` folder already exists". Exact wording is in `areas\BUGFIX_n2_REPORT_31OCT.md`.
+4. **Who edits the pack:** the pack owner, after Tim approves this addition. CE 01 does not edit the pages.
+5. **Not verified by CE 01:** the exact line number in a colleague's file (it may differ), the path for AutoCAD years other than 2027, and whether any colleague's PC carries the old file at all (nobody has looked; the check above finds out).
