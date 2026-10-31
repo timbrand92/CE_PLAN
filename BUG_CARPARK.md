@@ -586,7 +586,9 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "4no" (decision 151):
 
 **Reference:** CLAUDE_DRIVER_RUN32_V2_2026-10-19.md, B item 14 and C item 5. Related BUG-814. Not seen by Tim.
 
-**Status:** OPEN
+**Status:** WONT FIX - works as designed (FIX_BRIEFS 23 Oct): CDTAG asks for a pick when a block is already selected. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN
 
 ---
 
@@ -3165,7 +3167,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1930 (B-104, Structural line): the pad 
 
 **Driver checks (9 in the report):** CHPROP 11C807 to ZOTHER (label stays, one U); old pit copy MOVE 0,-500 (original's labels stay); ZOOM W -200,-80600 1200,-79400 then STRETCH C 300,-80100 600,-79900 Enter 0,0 0,300 (label becomes 1 IN 101, one U restores all, again re-words); the same STRETCH inside one LISP line then U; pit P11 moved alone / pit+pipe together (as 3.0.24); grip-drag a pipe end onto another pit (label re-words); fresh open + lock STORMWATER PIPE + MOVE P11 0,500 as the FIRST command (names 'P8 -> P11 and P11 -> P12' or 'the 2 pipes', never 11C807; then the Pit Schedule shows P11 right); CDDESIGN grey Confirm LPD hover reason on Setup / Areas and route / Results / During (ui read); names ui scan (Pit Schedule, Edit Pit, Inspector, New Pit, five CDDESIGN tabs: 0 jargon 0 unnamed; During reads 'During'; CDREPAIR 17 ids: press only Close; in AutoCAD 2024 also scan CDDESIGN Start).
 
-**Status:** OPEN (LOW). Not fixed until Tim confirms in AutoCAD.
+**Status:** WONT FIX - finalizer LOW findings of train C-10, a record not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (LOW). Not fixed until Tim confirms in AutoCAD.
 
 
 **UPDATE 3 Oct 14:40 PC (driver sessions 12 and 13 on the INSTALLED Civil 3.0.25, `DRIVER_RUN12/13_2026-10-03.md`): ALL PASS.** CHPROP of pipe 11C807 to a new layer: label stays '225 DIA. UPVC PIPE AT 1 IN 100', other label and all 4 invert texts unchanged, no CE line, ONE U restores; first move after a fresh start with the pipe layer locked prints the P names (no raw handle) = BUG-364 FIXED; typed STRETCH (two line breaks after the crossing corners): label 1 IN 100 to 1 IN 101, ONE U restores pipe, label and both invert texts exactly, the same STRETCH again re-words again; **item (3) of the finalizer notes (a STRETCH inside ONE LISP line is not undone by U) was a CONSOLE ARTEFACT: in REAL AutoCAD one U brings it back (echo '(Lisp Expression) GROUP'): closed**; P11 moved alone and P11 + pipe 11C807 together: both labels 1 IN 101, one U restores each; CDDESIGN opens with no question first, During tab reads 'During', the grey Confirm LPD exposes its reason on all five tabs ('The existing LPD record needs review before Design can change it.': read-only help text, not a real hover); ui scan on Pit Schedule, Edit Pit, CE Inspector, New Pit, five CDDESIGN tabs and Repair Center: 0 jargon, 0 unnamed, 17 Repair Center button ids; the only flag: 8 'error codes' on the Pit Schedule Source tab = job numbers in drawing names. Old pit copy MOVE (OLDCOPY_C10.dwg, handles in C:\ce_rc_drv\OLDCOPY_C10_note.txt): session 14.
@@ -3202,6 +3206,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1930 (B-104, Structural line): the pad 
 
 ---
 - **Update 8 Oct 02:06 (W17):** a fifth episode, AFTER the launchers were reworded to "carry out every step of that file exactly". While Codex typed `(setvar "SAVETIME" 0)` the command line showed untyped text `follow UCSFOLLOW`, `Enter new value for UCSFOLLOW <0>:` and `it.`: the same word "follow" and "it." again, so the fragment probably comes from the brief text itself (the brief says "follow ..." in its rules), not only from the launcher. Esc twice, no value submitted to UCSFOLLOW, no harm. Next step: find every sentence in the brief files that contains the word "follow" and reword it ("carry out", "keep to").
+
+**Status:** WONT FIX - not a CE fault: stray text typed during Codex passes came from brief wording. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
 
 
 ## BUG-422
@@ -3347,7 +3353,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Update 8 Oct 08:35 (CODEX W27, CDAUDITDETAIL right after the import, W26-26 copy, Civil 3.0.36):** 57 distinct stored pipe handles against 45 on the consultant schedule (+12; the import window counted 53 pipe polylines + 4 AGI drain lines); 52 pits retained (8 CE pit blocks + 44 source-tag pits IO/OF/DP/WT); 33 'Unknown: unresolved stored pipe' lines (branch pipes between source tags, e.g. DP4 -> DP8, OF5 -> IO5, 100 and 150 mm: they join no CE pit, 'outside schedule=44'); ONE 'STORED BOTH ENDS' pipe H=10366B P8 -> P8 DIA 100, IL Unknown (the self pipe); two matching FROM/TO/DIA groups (5 handles): Unknown -> P2 DIA 150 (H=103355 and 10345E) and Unknown -> P8 DIA 100 (H=103643, 103672, 10369A): matching Unknown ends do not prove they are physical duplicates. P8 has 6 stored connections (three 100 mm pipes arriving from Unknown at IL 16.82 / 16.82 / 18.20, one leaving to Unknown 16.82). 'Stored rows retained: 52 pit(s), 57 pipe(s)' stayed the same after U x2 / REDO x2. **Undo finding (new):** U echoed 'GRAPHSCR', the next U echoed 'TEXTSCR': the native display commands TEXTSCR/GRAPHSCR (and earlier LIST) leave their own undo step in a CE session, so one U after reading output undoes nothing visible (AutoCAD does not record them in plain use; BUG-358/368 extra-undo-step pattern, now for native display commands): Team question; the whole-import single-U check needs NOTHING typed after the import (W29 does that). Next: W29 (import, immediate U/wait/REDO, then LIST of the six suspect handles for length, ends and overlap).
 
-**Status:** OPEN (result record; tracked as BUG-061; reconciled 23 Oct 2026)
+**Status:** DUPLICATE OF BUG-061 (a Codex result record tracked as BUG-061). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (result record; tracked as BUG-061; reconciled 23 Oct 2026)
 
 ---
 
@@ -3419,7 +3427,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Command / Area:** C-24 Opus finalizer findings (8 Oct, TRAIN_C24_FINALIZER_REPORT.md; GO at 996fd85d, NO commit, nothing HIGH or MEDIUM, nine LOWs). **THE REBUILT #805 STAYS IN: the finalizer shows no drawing write lands between a U and the following REDO, by two independent reasons:** (1) the automatic marker erase has ONE caller, the full Pit Schedule cell refresh (`ScheduleLinkService.cs:486`, erase at `:510`), which always opens a drawing transaction first: opening a transaction already loses REDO, so any path reaching the erase would already have lost REDO in the installed 3.0.37 (Codex proved no such path runs in the gap); (2) the erase asks the redo guard first (`GradeNoteMarker.cs:138`) and does nothing until the next command starts. The 'U or REDO just finished' state is SET when U, REDO, MREDO or an UNDO that really changed the drawing ends (`RedoWindowGuard.cs:192-215`) and CLEARED when the next command of ANY kind starts (Tim's 'Wait after Undo' = 0 = until the next command, so the 12 s wait is fully covered); at the end of the U/REDO command CE only reloads its memory (`LinkService.Reactors.cs:860-911`, change-watching is off while U runs, nothing queued); a REGEN between U and REDO acts only if work is waiting (after a U nothing is). The redo-safety guard test passes with NO baseline line (`EveryHookBetweenCommands_IsRedoSafe_OrReviewed`, `TheBoundariesAreHonest`; baseline byte-identical to base). **Codex test to run after the install (W33):** Pit Schedule: type 19.85 at P2, close the window, U once (level + marker go back), 12 s untouched, REDO (PASS 'Everything has been redone', level + marker back); repeat with a REGEN between U and REDO, then with a pick, then with the Pit Schedule left open; also locked marker layer, and a plot preview showing no marker. **Per PR:** #791: the orifice figure is a per-council value, blank by default; blank = CDAUTODESIGN sizes as before, no built-in 12 anywhere; the removed office row detention.orificeRequiredAboveLps (12.0) had no reader and an old CD_Settings.json that still has the key loads fine (unknown keys ignored); #809 (LOW): the Long Section, detention top-water-level screens, the CDRULES fix planner and the hover/Inspector text STILL read an old 0.000 trench grate as a real level (same as installed: not a regression); #803/#801 a test attribute and one message line. **Settings:** one new key grade.showGradeCheckMarkerOnPlan = true with NO Settings-window row (Settings-first LOW); council profile gains optional orificeRequiredAboveLps (blank); one office key removed. **Facts:** Shared/ unchanged (CE_SHARED.dll byte-identical Civil/Manager); command-registry.json and council-profiles.json unchanged; the marker never unlocks a layer, never touches anything inside an Xref, stops while a reference edit is open; every new catch writes a log line. **Tests (re-run by the finalizer):** whole solution 0 errors; Civil net10 16,389 run / 16,369 pass / 19 skipped / 1 red (Glen Eira); Manager 636/636; focused net48 144 run / 143 pass / 1 red (the known stale PitBlockPreviewControl.OnTick baseline line).
 
-**Status:** OPEN (LOW + Codex test W33). Filed 8 Oct by the controller.
+**Status:** WONT FIX - finalizer LOW findings of train C-24, a record not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (LOW + Codex test W33). Filed 8 Oct by the controller.
 
 ---
 
@@ -3561,7 +3571,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Reference:** decisions\2026-09-28_HOLIDAY_AUTONOMOUS_RUN.md (INT-058, INT-060); queue items 190-195; TIM_DESK.md.
 
-**Status:** OPEN
+**Status:** WONT FIX - not a drafter command: PC housekeeping (C: drive free space). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN
 
 ## BUG-403
 
@@ -3572,6 +3584,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 ## BUG-402
 
 **Command / Area:** AutoCAD start-up message (Codex W9d, 4 Oct 19:31): the command line prints '[CE_StrucPlus] LISP not found: C:\ProgramData\Autodesk\ApplicationPlugins\CE_STRUCPLUS.bundle\Contents\CE_StrucPlus.lsp' although no CE_STRUCPLUS bundle is installed (leftover loader reference). Noise for every drafter at start-up. Codex build bj6 item N-2 (4 Oct 19:40) looks for the printer; if it lives outside the repo (old autoload) it is reported. Also seen: four '[CE] Background not found: <xref> Type CDXREFREPAIR' lines when returning to the Civil fixture (xref paths in the fixture, expected). **Status:** AWAITING TIM CONFIRM (5 Oct 01:40: desk commented out line 76 of ce_suite_startup.lsp with Tim's yes, backup .bak-20261005-before-strucplus-removal beside it; check the next AutoCAD start is clean). UPDATE 4 Oct 19:40 (Codex bj6): the printer is OUTSIDE the repo: Tim's own support file ce_suite_startup.lsp in his AppData Roaming Autodesk AutoCAD 2027 R26.0 enu Support folder (acad.lsp loads it; line 76 calls the retired StrucPlus loader). Editing it needs Tim's separate authorisation (desk to ask), or the installer should own that file.
+
+**Status:** DUPLICATE OF BUG-354 (the same AutoCAD start-up line). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
 
 ---
 
@@ -3639,7 +3653,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 6. **BLOCKED by the brief:** W8-01 (FSF asks "Enter text <SF1>:" first: Esc cancelled it; the strip was never made; FEDIT outline click at the 50 mm gap NOT TESTED), W8-02 (FPFC prompts are: Enter text <PF1>, "Label 'PF1' already exists... [Yes/No/Increment]" -> auto-incremented to PF5, X, Y, depth, insertion point (centre), rotation; no 600 x 600 'size prompt' as my brief assumed; a pad at 12000,0 redrew the system with 5 footings, U echoed FPFC), W8-06 and W8-07 (the standard 'Esc twice before every command' protocol clears the selection before COPYCLIP, so the paste checks were not reached: the next brief must select and type COPYCLIP in ONE step WITHOUT Esc between).
 7. **W8-10 NOT TESTED: TIME** (25% reached).
 
-**Status:** OPEN (Codex W8 result record; each finding is tracked under its own BUG id; reconciled 23 Oct 2026)
+**Status:** WONT FIX - a Codex run result record, not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (Codex W8 result record; each finding is tracked under its own BUG id; reconciled 23 Oct 2026)
 
 ---
 
@@ -3662,7 +3678,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 5. **W7-05 BLOCKED:** CEMANAGER typed ONCE opened the window (so finding 6 of BUG-391, 'typed twice opened none', is probably the second call while the window is open: build/04 run 7 reads it); on Status / Updates NO clearly greyed button was visible: "Send a fault report" and "Send waiting reports", "Admin Dashboard", "Refresh" all looked enabled (nothing to prepare for all three modules), so the 'greyed button has a reason' check could not be exercised (nothing pressed).
 6. **Other:** CD_Settings.json rewritten four times by CE on Pit Schedule Close (15,273 -> 15,270 bytes, hash 63AF5316 -> ACD64E79; BUG-306 family); OSMODE unchanged at every reading; clean exit by File > Exit (a drawing-free AutoCAD has no command line).
 
-**Status:** result record; FINDING A to build/02 (read-first), FINDING B LOW wording to build/02.
+**Status:** WONT FIX - a Codex run result record, not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: result record; FINDING A to build/02 (read-first), FINDING B LOW wording to build/02.
 
 ---
 
@@ -3681,7 +3699,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **BLOCKED:** pier diameter / stump shape (Esc needed), FST "Remove unlinked" box, Manning's n (no concrete-pipe fixture; Edit Pipe shows no velocity: a fixture is wanted), Manager greyed buttons (Codex W7 W7-05). **NOT TESTED:** "Stop overriding" (not built yet), record copy with pavement areas (no fixture), ribbon hover words, overlay label height, renumber question.
 
-**Status:** OPEN (items 1-7 to the Team; fixture wishes: a concrete-pipe job for Manning's n, a record with pavement areas).
+**Status:** WONT FIX - a desk driver run result record, not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (items 1-7 to the Team; fixture wishes: a concrete-pipe job for Manning's n, a record with pavement areas).
 
 ---
 
@@ -3694,7 +3714,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 3. **W6-03 BLOCKED (my brief error):** DWG-S1_LOCKED.dwg (STRIP FOOTINGS locked, flag 4 before and after): FST "Foundation systems" shows Footing Network, 4 elements, PF1-PF4 (Pad footing, Linked object); select PF2, "Delete Selected Element": the question is "Delete footing 'PF2' (Pad footing)?" with Yes / No (title "Delete Footing"). My brief told Codex to click No if asked, so the locked-layer box after a Yes was NOT reached. Redo with YES (the copy is never saved) in the next pass. FST has no Close button (Cancel / Save Size Library at the foot): "[FST] Cancelled." The window's buttons: Refresh, Rename System, Delete System, Regenerate Selected System, Regenerate All, Zoom Selected Element, Delete Selected Element; header View Log.
 4. **Other:** a drawing-free AutoCAD has no command strip, so the final typed QUIT is unavailable (use the window Close button); CD_Settings.json rewritten three times by CE during PITSCHEDULE work (content hash unchanged); OSMODE end = start.
 
-**Status:** OPEN (Codex W6 result record; each finding is tracked under its own BUG id; reconciled 23 Oct 2026)
+**Status:** WONT FIX - a Codex run result record, not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (Codex W6 result record; each finding is tracked under its own BUG id; reconciled 23 Oct 2026)
 
 ---
 
@@ -3848,7 +3870,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Other:** Civil settings (CD_Settings.json) changed through CE during the run (BUG-306: New Pit writes it); Structural settings files unchanged; OSMODE restored 5375; typed QUIT was unavailable after the command strip disappeared, closed with the Close button; usage 4% -> 8% (over the 3-point guess).
 
-**Status:** OPEN. Not accepted until Tim confirms.
+**Status:** WONT FIX - a Codex run result record, not a product fault. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN. Not accepted until Tim confirms.
 
 ---
 
@@ -4235,7 +4259,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Symptom:** (1) LOW: no reminder on reopen / PITSCHEDULE for schedule rows a batch Apply left as drawn (BUG-340 item 7): needs a persisted list of left-out rows first. (2) LOW: `CalculationsWindowViewModelTests` (34 tests) fail as a class when run after `CalculationsV2ViewModelTests` in one chunk (DocumentManager InvalidProgramException); each passes alone: test-order problem, not a plugin fault. (3) LOW: in non-carry mode the warning for pipes outside the batch arriving at a pit shows in the preview only, not again after Apply. (4) LOW: Edit Pipe still marks a typed level on one half of a split pipe only; the grade lock now reads both halves. (5) LOW: a split detention pipe with no project record is not checked for mixed units. (6) Not proven: paste clean-up inside RegisterPitAttachment during clone regeneration is overwritten by RemapClonePit straight after (traced in code, not run).
 
-**Status:** OPEN, carpark. Not fixed until Tim confirms in AutoCAD.
+**Status:** WONT FIX - test tooling: builder leftovers including a test-runner crash. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN, carpark. Not fixed until Tim confirms in AutoCAD.
 
 ---
 
@@ -4425,7 +4451,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Symptom:** after typing `(command "_.-LAYER" "_LOCK" "25TEXT" "")` the AutoCAD main window disappeared; exception window titled `Exception in AcSmNav.arx ARX Command`, then `FATAL ERROR: Unhandled e0434352h Exception at 905F41CAh` (a managed .NET exception that escaped). Codex did not attribute it to CE; `AcSmNav.arx` is Autodesk's own (Sheet Set / navigation). Cause UNKNOWN: investigation running (Opus a1d3bb4852ccf8d97, report `CRASH_C5_INVESTIGATION_2026-10-02.md`). After the crash the Codex S3 pass could not start AutoCAD normally ("No Profile name exists: Tim", "Customization file load failed ... acad", WebView data-directory error, then "Security - Unsigned Executable File" for CE_STRUC_SUITE.dll: every CE DLL is NotSigned, old and new, so the prompt is not new with 1.0.88; Tim's R26.0 Tim profile has empty TRUSTEDPATHS in the registry view that was read).
 
-**Status:** OPEN (2 Oct 02:20). UPDATE 2 Oct 02:55, Opus investigation `CRASH_C5_INVESTIGATION_2026-10-02.md`: NOT CE code (about 80% sure; trigger about 60%). The 02:06 error is a .NET out-of-memory (0x8007000E, 29 GB free so not real) on a background AutoCAD/WebView2 thread, after AutoCAD's own Sheet Set Manager (AcSmNav.arx) failed at about 02:03:40, 6 s after an autosave of DWG-B3; no CE code in the crash record, CE logged normal work until 02:03:37, C-5 locked-layer code never reached. No CE change proposed. Next time: Codex screenshots the FIRST error dialog, ProcDump on acad.exe needs Tim's OK to download, optional CE log breadcrumb of recent errors at exit (needs a card); then re-run C5-12..14 on a fresh DWG-B copy. PROBLEM 2 (S3 would not start): CAUSE = start method: Codex started AutoCAD from a PowerShell `Start-Process`, which sees a PRIVATE registry copy (BUG-238) where a blank profile "Tim" was created at 02:12; Tim's REAL profile and acad.CUIX are INTACT and unchanged (checked through a WMI-started process; nothing written to the real profile since 30 Sep 16:43; CUIX last written 00:34:10 by the normal CE/AutoCAD start). The desk's 02:25 profile backup is the SANDBOX copy: marked DO NOT IMPORT; the REAL read-only export is C:\ce_rc_scratch\acad_profile_backup_REAL_20261002 (local only, contains job names). Rule added to the Codex briefs: start AutoCAD only through launch_app or the Start-menu shortcut, never Start-Process, never /p, plus a START CHECK and a first-dialog screenshot rule.
+**Status:** WONT FIX - not attributed to CE: AutoCAD fatal error on a LAYER lock from a Codex script. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (2 Oct 02:20). UPDATE 2 Oct 02:55, Opus investigation `CRASH_C5_INVESTIGATION_2026-10-02.md`: NOT CE code (about 80% sure; trigger about 60%). The 02:06 error is a .NET out-of-memory (0x8007000E, 29 GB free so not real) on a background AutoCAD/WebView2 thread, after AutoCAD's own Sheet Set Manager (AcSmNav.arx) failed at about 02:03:40, 6 s after an autosave of DWG-B3; no CE code in the crash ...
 
 ---
 
@@ -4623,7 +4651,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **Symptom:** stored volume (SSR) 1.69 m3 against the sheet's 2.58 m3 (34.6% off the 30% allowance); discharge (PSD) 6.54 against 5.87 L/s. AutoDesign is the Boyd's storage engine and does not use pipe cover. Probable cause (not verified): job 24-115 in the test does not fix the after-development soft-ground figure at 0.35 as job 23-129 does, so it runs on the newer 0.30 default. Whether the TEST or the ENGINE is wrong is an engineering question (report both figures to Tim).
 
-**Status:** OPEN (duplicate of BUG-095; current fix work under BUG-872; reconciled 23 Oct 2026)
+**Status:** DUPLICATE OF BUG-095 (the same red Glen Eira back-test). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (duplicate of BUG-095; current fix work under BUG-872; reconciled 23 Oct 2026)
 
 ---
 
@@ -5654,7 +5684,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit la
 
 **~12:10:** Tim: "done" (changed Log File Location in OPTIONS). Real registry still showed the old value at 12:10 while AutoCAD stayed open, and AutoCAD kept its open log in the old folder (1 file; copy taken). Not known when AutoCAD writes the setting (Autodesk internals). Check after AutoCAD's next restart: registry value = the AppData folder, new logs land there, plugin folder has no new logs; then move the last one. Log names are AutoCAD's own (drawing name + code), so moving kept them: 290 logs from 44 drawings, job numbers in the names where the drawing name has one.
 
-**Status:** OPEN - (2) log files moved; log folder setting changed by Tim, confirm after AutoCAD restart; (1) TRUSTEDPATHS duplicates for a plugin chat, do not edit Tim's profile without his yes.
+**Status:** WONT FIX - not a product fault: a record of Tim's AutoCAD profile settings. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN - (2) log files moved; log folder setting changed by Tim, confirm after AutoCAD restart; (1) TRUSTEDPATHS duplicates for a plugin chat, do not edit Tim's profile without his yes.
 
 ---
 
@@ -7831,7 +7863,9 @@ The **real live crash** is the same exception in a path that IS registered: `Lin
 15. ⏭ MoveRot / MR — Skipped (CE_STRUC_SUITE not loaded at work)
 16. ❌ TEXTEDIT on plain DTEXT — T25 Fail (may require CE_STRUC_SUITE to resolve)
 
-**Status:** OPEN (umbrella record only; open parts tracked as BUG-002, BUG-011, BUG-012; reconciled 23 Oct 2026)
+**Status:** WONT FIX - not a bug: umbrella record for the 8 May batch. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (umbrella record only; open parts tracked as BUG-002, BUG-011, BUG-012; reconciled 23 Oct 2026)
 
 ---
 
@@ -8509,7 +8543,9 @@ The Floor Waste insertion points must be computed on the centerline, not on the 
 
 **Reference:** `Commands/WaterTankCommand.cs` — `TryRunDetentionPitMode`, `BuildPitDetentionCalloutText`, `ResolvePitTag`.
 
-**Status:** RETIRED FROM CDWT — 2026-09-13. Tim: "This command is for water tanks only". The `TryRunDetentionPitMode` / `BuildPitDetentionCalloutText` / `ResolvePitTag` branch was removed in the CV4-9/15 CDWT rebuild; annotating an existing detention pit needs its own reviewed card before it returns as a separate tool.
+**Status:** WONT FIX - retired from CDWT on 13 Sep (its own status said so). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: RETIRED FROM CDWT — 2026-09-13. Tim: "This command is for water tanks only". The `TryRunDetentionPitMode` / `BuildPitDetentionCalloutText` / `ResolvePitTag` branch was removed in the CV4-9/15 CDWT rebuild; annotating an existing detention pit needs its own reviewed card before it returns as a separate tool.
 
 ---
 
@@ -9148,7 +9184,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Reference:** Modules/Structural.ReleaseTests/CE_STRUC_SUITE.ReleaseTests.csproj and StructuralManifestReleaseTests.cs; Modules/Structural/MONOREPO_NOTE.md records that Installer was deliberately excluded from the import. Independent lunch review 2026-09-07, logs C:/Autodesk/CERef/LunchBuild-20260907/build-checks. Correct producer build ordering removed the separate harness-copy errors.
 
-**Status:** LOCALLY CORRECTED 2026-09-08 at 3ccb9e59 — restored the real historical Structural manifest verbatim from cf5bb756 (blob 5d4fd29c48d71f14a89aea8471bf1ca5a91958b5). The now-runnable exact test inventory exposed a second defect: discovery omitted NUnit ordinary tests. Recognising both simple and parameterised test-builder interfaces retains all eight expected identities/assertions. Offline tests pass 8/8 on net48/net8/net10; full release matrix still pending. No Structural product/installer/live deployment change and no native test needed for this offline repair. Evidence: C:/Autodesk/CERef/Colleague-20260908/verification/structural-release-input-corrected*.
+**Status:** WONT FIX - not a product fault: test packaging file, locally corrected. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: LOCALLY CORRECTED 2026-09-08 at 3ccb9e59 — restored the real historical Structural manifest verbatim from cf5bb756 (blob 5d4fd29c48d71f14a89aea8471bf1ca5a91958b5). The now-runnable exact test inventory exposed a second defect: discovery omitted NUnit ordinary tests. Recognising both simple and parameterised test-builder interfaces retains all eight expected identities/assertions. Offline tests pas ...
 
 ---
 
@@ -9162,7 +9200,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Reference:** Tests/CE.CommandTruth.Tests; logs C:/Autodesk/CERef/LunchBuild-20260907/build-checks. Existing findings reproduced on the pre-C2 owner base plus build wiring and Reverse Flow guards. No command registration, tool exposure or test assertion changed by lunch integration.
 
-**Status:** LOCALLY CORRECTED 2026-09-08 at 0233ff05 — the central Civil migration receipt was stale (95 recorded versus 107 existing command rows), not a missing AI-tool set. Audited twelve existing additions, recorded two grip routes and the retained COPYMULTI helper as hidden/unqualified compatibility metadata, and refreshed the exact receipt to110 rows. Restored COPYMULTI outside the net10 CR/MR split using its existing implementation, as required by the 25 August C-to-Circle retirement decision. Unchanged cross-runtime/compiled assertions now pass21/21; Civil retirement guards4/4NET10. No parity exemption, new staff/AI qualification or live deployment. Final native COPYMULTI acceptance is deferred with the product; full release matrix still pending. Logs: C:/Autodesk/CERef/Colleague-20260908/verification/command-truth-copy-restored.trx and copymulti-circle-retirement.trx.
+**Status:** WONT FIX - not a product fault: test counts, locally corrected. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: LOCALLY CORRECTED 2026-09-08 at 0233ff05 — the central Civil migration receipt was stale (95 recorded versus 107 existing command rows), not a missing AI-tool set. Audited twelve existing additions, recorded two grip routes and the retained COPYMULTI helper as hidden/unqualified compatibility metadata, and refreshed the exact receipt to110 rows. Restored COPYMULTI outside the net10 CR/MR split usi ...
 ## BUG-098
 
 **Command / Area:** pit labels vs stored pit identity (plan label text, CDINSPECTOR, long section, schedule).
@@ -9664,7 +9704,9 @@ AutoCAD drawing or Claude-owned Architectural Change Review screen has been chan
 
 **Command / Area:** Codex W45 on the installed Civil 3.0.40+1200744d / Manager 1.1.40+1200744d (train C-26, install 47; 9 Oct 06:55 to 07:16, usage 63% to 64%, DWG-B1_VC7.dwg copy, report CODEX_VERIFYW45_2026-10-09_065710.md): PASS 3, FAIL 1, BLOCKED 1 (BLOCKED = a phantom fifth item in my brief). **(1) PASS, versions and health:** status bar CE MANAGER v1.1.40 [Modern], CE CVL SUITE v3.0.40 [Modern], CE STRUC SUITE v1.0.110; CEHEALTH "[OK] CE Civil Suite v3.0.40", "[OK] CE Structural Suite v1.0.110", "[OK] The office IT folder ... can be reached.", "[CEHEALTH] All checks passed." **(2) The start-up lines REMAIN, all three (BUG-435):** "Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL", "Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager" and "; error: syntax error" (the finalizer had warned the CVL line would stay on a PC whose profile already holds the entry; the other two were never in C-26). The acad.cuix* file list and times were recorded before and after in the evidence folder (menus_start.json, menus_end.json); no judgement made. **(3) PASS, CESUPPORT (#816, #811 scrub):** the zip holds 10 files plus its index (WHAT_IS_IN_THIS_ZIP.txt): the Civil logs of the last 14 days, the Structural and Manager traces and one Manager session file; 8 items left out are listed with reasons (rotated logs over 5 MB, older than 14 days, 68 non-CE files); NO real login or computer name in any entry name or index line, and the drawing name is absent. The index says "Never in it: drawings ... menu files or install ids" and tells the reader what was left out. **(4) FAIL / not proven (#819):** a flat pipe drawn P10 to P9 with 18.500 at both ends gets the label "100 DIA. UPVC PIPE FLAT", but the Edit Pipe window still shows the grade selector "Pipe grade / Standard / Set my own / 1 in / 100" (known gap 5 of DAY1). #819 changed the read-only PREVIEW line (CdViewModel.Preview.cs GradePreviewText: "Grade: FLAT (same inverts)" and "Flow: FLAT (same inverts)"), which Codex did not find in the window, so the #819 text itself is NOT yet seen in AutoCAD. Next look: open the Edit Pipe and New Pipe windows on a flat pipe and read the preview/summary lines (not the selector). **(5) Other:** a design-warnings modal "Pipe is essentially flat - no measurable fall ... Warnings are informational - the pipe has been saved." appears and is acknowledged with Enter; U after the Edit Pipe Cancel echoed CDEDIT (not the pipe creation: the cancelled Edit Pipe leaves its own undo step, as noted in BUG-373), REDO said "Everything has been redone"; TEXTSCR did not expose a usable text window late in the run. **(6) Settings:** all three files unchanged (Structural 28,872 bytes D3890D56), SAVETIME back to 5, clean exit with No.
 
-**Status:** OPEN (duplicate; tracked as BUG-435 and BUG-562; reconciled 23 Oct 2026)
+**Status:** DUPLICATE OF BUG-435 (and BUG-562). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (duplicate; tracked as BUG-435 and BUG-562; reconciled 23 Oct 2026)
 
 ---
 
@@ -10670,6 +10712,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the office-block
 
 **UPDATE 10 Oct 02:40, Codex W46 (CODEX_VERIFYW46_20261010_0222.md item 7): the START-UP TEXT in full, in this order: 'Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL' / 'Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager' / '; error: syntax error' / 'CE CVL loaded: CE_CVL_SUITE v3.0.41.0 [Modern]' / 'Start with CD, PIT, PITSCHEDULE, or CDEDIT.' / 'Use CDHELP for workflow guidance and CDREPAIR for recovery.' So the syntax error comes right AFTER the two stale-menu lines (BUG-435: the old CE menus in Tim's acad.cuix still listed under CE_CVL_SUITE_MENU, CE_STRUC_SUITE_MENU, CE_SUITE_MANAGER_MENU, plus two unresolved partial files SP2006 and TIM_CAD_SUITE); likely the same cause, to be proven by Tim's manual menu clean-up (DAY1 section). Also seen: AutoCAD warns the automatic-save folder and the Activity Insights log folder are invalid.** **Status:** OPEN (seen by Codex W49). Never FIXED until Tim confirms in AutoCAD.
 
+**Status:** DUPLICATE OF BUG-435 (a start-up record of the same family as BUG-455). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
 ---
 
 ## BUG-563
@@ -10692,7 +10736,9 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the office-block
 
 **Next step:** decide whether a cancelled FEDIT should leave no undo mark (probably a Start/End mark opened before the first question and not rolled back on cancel); test: FEDIT, Esc at the type question, U must undo the step before FEDIT.
 
-**Status:** OPEN (seen by Codex W57). Never FIXED until Tim confirms in AutoCAD.
+**Status:** DUPLICATE OF BUG-469 (the same Esc family at the FEDIT Select new type question). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (seen by Codex W57). Never FIXED until Tim confirms in AutoCAD.
 
 ---
 
@@ -10718,7 +10764,9 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the office-block
 4. **Repair/guard:** recognise ONLY the exact empty public wrapper and exact internal signature; preserve direct call order, all original hostile cases and rejection of unrelated overloads. Eleven added tests reject reordered/duplicate/conditional calls, work in the wrapper, wrong input functions/types, third constructor and duplicate wrappers/targets without throwing. Full Core now 2,056 pass / 0 fail / 0 skip. Source and receipt checks were not removed.
 5. **Acceptance evidence:** local structural-core-repaired.trx; no manual AutoCAD action needed for this test-only change. Independent review must assess the narrow guard exception before merge. Production picker is byte/source unchanged; no claim about a new drawing workflow.
 
-**Status:** OPEN - code ready, needs an independent review before merge (tidy 29 Oct 2026: this entry had no Status line; its own text says code ready and not yet merged)
+**Status:** WONT FIX - test guard only: the beam-picker source guard (the code is ready and needs a review, not a fix). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN - code ready, needs an independent review before merge (tidy 29 Oct 2026: this entry had no Status line; its own text says code ready and not yet merged)
 
 ## BUG-568 — Structural test host times out during compiled-proof work
 **Codex isolation,14 October2026 before08:30:** exact existing1.0.116+f180b349 compiled product tested from own source/tool branch3af7d6b2. Hostile route group27/27 and required-seam/dead-writer group29/29 each COMPLETE/PASS with process exit0. Unsigned-opcode group12 selected aborts on first Bne_Un at20s; zero completed results, TRXFailed/exit1. Temporary test-only opt-in trace on Unsigned64_Bne_Un:Negative confirms read-complete and serialize-complete, then analyze-start without analyze-complete. This isolated reproduction stalls in VerifyR7 analysis, not serialization. Historical hottest Cecil stack does not establish the cause of every abort. No assertion removed, tolerance changed or product source altered. Trace removed after diagnosis; source clean. Receipts local V3UX_20261014/structural-proof-isolation, console and TRX retained. Next: trace R7 method/state traversal and explain the expensive/nonterminating path; retain all challenge cases and later prove full suite termination. OPEN, not fixed. Do not count this automated diagnostic as real AutoCAD acceptance.
@@ -10729,7 +10777,9 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the office-block
 4. **Diagnostic/next guard:** hottest native stack in one dump spends 65 s CPU in Mono.Cecil MetadataReader/ModuleWriter, called while serialising a hostile test assembly. Last-test naming alone was misleading. Inspect exact mutable-assembly reading/serialization and filter effectiveness, retain strict malformed-input checks, prove the isolated challenge and full suite both terminate. No production handler changed to make the tests pass.
 5. **Reproduce/accept:** run the existing Structural test project with usual safe build flags, temporary log override and --blame-hang --blame-hang-timeout 60s; inspect the console AND TRX summary. Save dotnet's exit immediately before any git command (a git status call overwrote this chat's last wrapper exit with 0 while the receipt still said Failed; not product behaviour). Local dumps/TRX in V3UX_20261013; no dump or raw log goes into a repo. Accept only a completed test process and truthful exclusions/receipt, never only the pass count.
 
-**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+**Status:** WONT FIX - test only: Structural test host timeout. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-567 — Structural compatibility tests require obsolete version 1.0.78
 
@@ -10739,7 +10789,9 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): decision 168: the office-block
 4. **Proposed fix/guard:** derive the expected version from the checked-out Structural csproj, retaining exact source-head/framework/path identity guards. Build three standalone lanes plus hosted Modern; rerun all five compatibility cases, reject a mismatched version or commit. No lowered requirement and no production runtime change.
 5. **Acceptance:** test-project proof only; no manual AutoCAD action required. Source-level picker constructor-order failure is separate and remains unverified as a product issue. Evidence in release-v3-colleagues-CODEX_V3UX_VERIFICATION_2026-10-13.md; local structural-designcore-live.trx. This chat owns the test-file repair after the currently running suite finishes.
 
-**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+**Status:** WONT FIX - test only: Structural compatibility tests expect obsolete version 1.0.78. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-566
 
@@ -11597,7 +11649,9 @@ Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): the mapping is now Tim'
 5. **Evidence/guard:** currentcoverageindex authorityInventoryAudit.historicalCardIndexReferenceAudit lists all11writtenlinks andcandidatepaths withsourcehash. Re-resolve all45references; each must eitherreachtheexactsourceorcarryanexplicitdatedsupersession/currentpointer. Checksemantics/hash/provenancebeforecalling anarchiveequivalent.
 6. **Repair/remainder:** preservethecopiedhistoricaltext;correctnavigationthroughreviewedcurrentpointers or a clearlylabelledoverlay, coordinatedwithplanowner. Ownreportnowlinksthecurrentmastermap/separateshistoricalrecords;the11originallinksremainOPEN. No nativecheck/percentagecredit, no duplicateplan or commandapproval created. **16 October source recovery:** the five exact missing foundation records FND-01/CT-01/TH-01/RS-01/PD-01 are present under docs/workflows at immutable CE_ACAD_PLUGIN revision48662dddb2dc36d09a121642f36aecc2465cc673. All five canonical ID headers match;75 numbered decisions are now source-indexed with hashes and line locations. The local written targets and eleven original links remain unresolved; this does not accept the whole bug or substitute old implementation claims for current native evidence. Coverage index canonicalRequirementInventory records the exact Git-object provenance.
 
-**Status:** OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
+**Status:** WONT FIX - docs only: historical workflow-card index with dead local links. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN (tidy 29 Oct 2026: this entry had no Status line; its own text records it as OPEN and not fixed)
 
 ## BUG-640 — RD asks for dimension type before selecting the geometry
 
@@ -15376,7 +15430,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 
 **Steps to confirm in AutoCAD:** none until a command uses it; confirm by unit case.
 
-**Status:** OPEN
+**Status:** WONT FIX - latent code: the background downpipe detector has no caller yet. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN
 
 ## BUG-1120 — Wording and citations to confirm: STORM "None", Bayside reuse formula, charged downpipe coefficient note
 
@@ -16344,7 +16400,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1899 (B-078): damaged point load list r
 
 **Steps to confirm in AutoCAD:** CDS, look for a job-time switch; turn it off and restart. Right looks like: no export written.
 
-**Status:** OPEN
+**Status:** DUPLICATE OF BUG-1202 (the same weekly time export, PR #1776). (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
+
+History: previous status was: OPEN
 
 ## BUG-1178 — A shared-file mismatch tells a colleague to "run the CE installer again"
 
