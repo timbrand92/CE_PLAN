@@ -54,4 +54,4 @@ Settings files, identical before and after:
 1. **Shared files touched:** `Modules/Drainage/Models/UserSettings.cs` (one new switch per PR, add-only) and `REGRESSION_LOG.md` (one entry per PR, added at the top) in all three PRs. `CE_SHARED` not touched. No Settings-engine or loader code changed (only new keys in existing groups, read through the existing start-up reads); area plus N91 is a precaution for the three new keys, not for an engine change.
 2. **Commits:** every message names the BUG number and ends with the Co-Authored-By line; no force-push, no branch deleted, no PR closed.
 3. **Disk:** C: free was 30.2 GB (Get-PSDrive) at the first build and 29.6 GB at the end, after the worktree was cleaned (`git clean -fdXq`, worktree unregistered and its files removed). Net move about 0.6 GB; Tim's own activity also moves that figure. Scratch folder emptied apart from this job's small text files.
-4. **Finished:** 20:44 Melbourne, Sat 31 Oct 2026.
+4. **Finished:** 20:43 Melbourne (report pushed 20:42 to 20:43), Sat 31 Oct 2026.
