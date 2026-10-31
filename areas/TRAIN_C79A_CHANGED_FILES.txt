@@ -20,6 +20,7 @@ Modules/Drainage.Tests/Services/Bug1211MenuRestoreTests.cs
 Modules/Drainage.Tests/Services/Bug1214MarkupPickerTests.cs
 Modules/Drainage.Tests/Services/Bug505ScaleNoteOnReviewPageTests.cs
 Modules/Drainage.Tests/Services/Bug788XrefRecordCacheTests.cs
+Modules/Drainage.Tests/Services/C79aFinalizerGuardsTests.cs
 Modules/Drainage.Tests/Services/C79aNewSwitchDefaultsTests.cs
 Modules/Drainage.Tests/Services/HelpGuideCoverageTests.cs
 Modules/Drainage.Tests/ViewModels/Bj34SettingsPersistenceTests.cs
