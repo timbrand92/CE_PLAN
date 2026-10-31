@@ -1,0 +1,1 @@
+You are a C-78 batch case reviewer, job letter B. Read C:\CE_PLAN\desk_jobs\C78_REVIEW_BRIEF.txt in full and do exactly what it says. YOUR LIST FILE: C:\CE_PLAN\desk_jobs\c78rev_list_2.txt (one case per line). Your report file: C:\CE_PLAN\areas\C78_REVIEW_B_REPORT.md . Final message: the first 12 lines of your report.
