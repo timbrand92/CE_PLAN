@@ -55,3 +55,24 @@ Settings files, identical before and after:
 2. **Commits:** every message names the BUG number and ends with the Co-Authored-By line; no force-push, no branch deleted, no PR closed.
 3. **Disk:** C: free was 30.2 GB (Get-PSDrive) at the first build and 29.6 GB at the end, after the worktree was cleaned (`git clean -fdXq`, worktree unregistered and its files removed). Net move about 0.6 GB; Tim's own activity also moves that figure. Scratch folder emptied apart from this job's small text files.
 4. **Finished:** 20:43 Melbourne (report pushed 20:42 to 20:43), Sat 31 Oct 2026.
+
+---
+
+## FOLLOW-UP (coordinator, 31 Oct, after the first report): BUG-80 built, PR 1960
+
+### FOR TIM
+
+1. **BUG-80 is now a draft, PR 1960.** A uPVC pipe has one maximum speed, 3.0 m/s, from the Settings table (concrete 6.0, metal 4.0, unknown material 6.0, source "house rule"). The auto-design connection pipe and the Edit Pipe grade strip used to hold uPVC to 6.0; they now read the same table as the rest of Edit Pipe. A uPVC pipe at about 4 m/s is flagged as a warning, never a block. A connection pipe on a high flow can come out one size larger than before.
+2. **The CPAA manual states no uPVC figure**, so nothing differs from the house rule. It does give 8 m/s for precast concrete pipe against the house 6.0 (not changed; a concrete question for another day).
+3. **Switch:** `pipeSpeedChecks.sizingReadsMaterialTable`, ON; OFF returns the old 6.0 numbers exactly.
+4. **Left alone, said plainly:** the whole-network sizing screens (no single material) and the older checks switch `pipeSpeedChecks.useMaterialLimit` (default OFF) keep today's behaviour.
+5. **Not tested:** anything in AutoCAD. My "fails first" proof is partial: the test that the connection pipe and Edit Pipe agree could not be compiled on the old code, so the fail-first evidence is the switch-OFF case, which reproduces the old 6.0 against 3.0 split.
+6. **Mistake of my own:** I had deleted my scratch folder after the first report, so I recreated the test runner; no harm.
+
+### Technical
+
+1. PR 1960, base `claude/rel-20261102a`, branch `fb/bug80-one-velocity-table`. New `SettingsSizingStandards.ForSizedMaterial(office, material, tableOn)` (one path); used by `AutoDesignService.SizeConnectionPipe` (was `PipeSizingStandards.CreateDefault()`) and `CdCommand.BuildGradeSuggestionRequest`. New `PipeSpeedChecksSettings.SizingReadsMaterialTable`. `RulebookEngine.cs` not needed. `Bug80OneVelocityTableTests` 7 tests; 510 related tests passed (CL5OneSizing, NewSwitchDefaults, GradeSuggestion, AutoDesign, MaterialVelocity, PipeSpeed, Bug255, ConnectionPipe filters); net48 compile 0 errors.
+2. Shared files touched: `REGRESSION_LOG.md` (one entry, top) and `Models/PipeSpeedChecksSettings.cs` (one new key). `UserSettings.cs` and `CE_SHARED` not touched. A new key in an existing Settings group through the existing start-up reads: area plus N91 as a precaution.
+3. Clashes seen by `gh pr list --search`: `AutoDesignService.cs` also in #1863 (sizer grade ladder, a different place; expect a small merge), #1882, #920, #791, #773, #772 (older CL3/CL5 drafts); `SettingsSizingStandards.cs`: #1868 and #1841 (GB-01 grade ladder, `GradeLadder` code, not edited here), #772; `CdCommand.GradeSuggestion.cs`: #772, #769. None stacked on.
+4. Real-files compare: the four settings files (`CE_STRUC_SUITE\CS_Settings.json` 35613 B 2026-10-30 19:54:14; `CE_CVL_SUITE\settings.json` 672 B 2026-09-16 12:13:17; `TIM_CE_CADTOOLS\CD_Settings.json` 15404 B 2026-10-31 20:47:50; `CS_Settings.json` 351713 B 2026-03-31 13:18:00) were identical before my first test and after my last. CD_Settings.json had been rewritten by your running AutoCAD at 20:47:50, before my run (it was 15270 B, 4 Oct, in the first listing). One caveat: the broad filter run included a council calibration test that read office project files read-only; it wrote nothing I could see.
+5. Cleanup: worktree files cleaned and unregistered; C: free 29.26 to 29.7 GB after cleaning; the empty folder `C:\CE_WORK\build\n6` still cannot be deleted (busy, same as before; a shell of this session likely holds it). **Finished: 20:59 Melbourne, Sat 31 Oct 2026.**
