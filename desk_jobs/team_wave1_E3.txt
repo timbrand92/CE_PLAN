@@ -1,0 +1,3 @@
+You are a Wave 1 case writer, job letter E3. Read C:\CE_PLAN\desk_jobs\WAVE1_WRITER_BRIEF.txt in full and do exactly what it says.
+YOUR BUGS: BUG-654, BUG-655, BUG-656, BUG-657 (group E: cascade Keep, junction with more than one pipe arriving, relink, locked level-text layer).
+Your report file: C:\CE_PLAN\areas\WAVE1_WRITING_E3_REPORT.md . Write your case files into C:\Lisp Files\_ACAD_DRIVER\cases\drafts_wave1_31oct\ . Your final message: the first 12 lines of your report's answer-first section.
