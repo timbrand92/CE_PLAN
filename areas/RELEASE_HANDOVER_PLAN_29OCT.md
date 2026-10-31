@@ -182,3 +182,9 @@ Source: decisions\2026-10-29_TIM_ANSWERS.md items 130 to 140 (Tim's words in quo
 10. **Max's first 10 minutes: he does nothing but use it** ("10dont make max do anything else apart from use it he is busy"): no practice drawing, no setup steps.
 11. **NOT answered: the pack approval (129) and the pack wording (140): the 97 changes in RELEASE_PACK_CHANGES_FOR_APPROVAL_29OCT.md and the CE 00 approval sheet stay DRAFT.** I do not edit pages 01 to 06 until Tim says.
 12. **Product facts for page 04 (from decisions 118 to 128): the Grade mismatch window is to be replaced by a plain warning line (build not started in C-78); colleagues' New Pipe starts in Custom 1 in 100; the raingarden label is plain 'RG' (in C-78); a What's New window opens on the first start after an update (seen in C-78); the Checks window changes (gold banner, one grey line for passes) and a new Settings tab 'Switches' arrives; cover is measured to the outside top of the pipe everywhere.** Each is in the pilot build only if built and tested by the Fri 13 Nov cut.
+
+## 16. Addition Sat 31 Oct 22:07: release note with per-item tested / not tested (Tim's item 68)
+
+1. Source of each line: the ACCEPTANCE_LEDGER (a case accepted by name = robot PASS plus Codex PASS, on a named build), the run reports for the pilot build, and each PR's own 'what is NOT proven' lines.
+2. Each pilot-build item is listed as **tested** (named case, build), **partly tested** (what part), or **not tested** (and the page 04 workaround where one exists), in Tim's plain words, no case ids on the page Max reads.
+3. Produced by the Opus release report on Thu 12 Nov, refreshed on Fri 13 Nov when the cut names the build; part of the pack Tim reads only if he wants (decision 140). Nothing in it is sent to Max without Tim's word.
