@@ -80,7 +80,7 @@ CE_SUITE: no files
 ```
 
 ### Clean-up
-No worktree was created (code read with git show). Scratch C:\CE_WORK\scratch\n20 removed at the end. Carpark and DESK_LOG not edited.
+No worktree was created (code read with git show). My own scratch files (code copies, the two listings) were removed from C:\CE_WORK\scratch\n20. The folder itself stays: it still holds logs, struc and tmp, which the job launcher made as this session's TEMP and log redirect folders, in use until the session ends. Carpark and DESK_LOG not edited.
 
 ### Summary
 No PR (planning job). Five DRAFT FOR TIM cards plus index under C:\CE_PLAN\areas\cards: CEMEMBER UCS (BUG-909), layout break marks (BUG-910), UA leg (BUG-1124), RHS flat (BUG-1125), and installer/CEMARKUPRUN downloads (BUG-553/554). Proposed switches, all shipped ON: "CEMEMBER draws in the current UCS", "break lines at paper size on layouts", "asks which UA leg stands upright", "asks how an RHS sits", "say and record before downloading Python helpers". Key finding: the WebView2 download has been switched-off code since 22 Jul; BUG-553's default-OFF is already installed.
