@@ -33,4 +33,4 @@ Name: **S49_apply_layers_keep** (control: **S49c_apply_layers_switch_off**), Str
 
 ## Clean-up
 
-Worktree `C:\CE_WORK\build\x1` removed with git worktree remove after `git clean -fdXq`; scratch `C:\CE_WORK\scratch\x1` removed (the two file listings went with it; the changed names are in item 7 of the technical detail).
+Worktree `C:\CE_WORK\build\x1` removed with git worktree remove after `git clean -fdXq`; scratch `C:\CE_WORK\scratch\x1` emptied except `tmp\claude\...\tasks\*.output`, a file this job's own session still holds open, so the folder could not be deleted; it is safe to delete once the session ends (the two file listings were deleted; the changed names are in item 7 of the technical detail).
