@@ -441,3 +441,7 @@ GB-D. **CLAUDE ASSISTANT (GB-05): PROVIDER AND MODEL, MONTHLY COST CEILING, WHO 
    7. **Repair labels left as "1 IN 1" or "0.01m" by the old metre fault (BUG-343 item 5).** A repair command would rewrite drawn labels on pipes that never went flat, so it needs a command card first. Recommended: yes, card first.
    8. **Reminder when the Pit Schedule opens that a batch left rows "as drawn" (BUG-340 item 7).** Needs a small saved list in the drawing (design card). Recommended: no for now, not pilot work.
    FYI only: the BUG-343 item 4 Repair Center cut-off buttons go to Codex (window brief added to CODEX_BRIEF_WINDOW_BUGS_31OCT.md). CE 05 reads the CD_Settings.json change at 19:30 as the robot restoring its temporary change; nothing for Tim.
+
+109. **Two questions from CE 05 (31 Oct), Opus pre-reviews of #1945 and #1928. VOICE BATCH 7, questions 9 and 10.**
+   9. **Colleagues' New Pipe starts with "Recall last settings" ticked (#1928, item 97 was an FYI; the reviewer wants one yes or no).** Beyond what item 97 said: each New Pipe refills the last pipe's size, material, text choices AND both levels. It is how Tim's own window works. Recommended: yes.
+   10. **Save As copy warning in CDDESIGN (#1945, BUG-1158).** A colleague who opens the same job from a different folder (their own OneDrive, another drive letter) sees the warning on every CDDESIGN run, and so does every Save As stage drawing until its outlets are approved. Warn every time, or once per drawing per session? Recommended: once per drawing per session.
