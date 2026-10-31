@@ -11880,6 +11880,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per 
 
 Note (CE 05, Sat 31 Oct 2026, from CE 02): robot case R09 FAILED as an expected known bug on 3.0.87 (xR09, 02:21, "no control named Tag in Edit source") and PASSED on installed Civil 3.0.88+3fbb9da5 (xE, 15:07, one session, RUN-20261031-1507-C3.0.88-xE.md). One pass is not acceptance; the second session, the review and a broken twin that fails are still needed. BUG-859 may already be fixed by something in C-78. Still OPEN: not accepted. Related: the pit label double-click (BUG-430) still fails per job z3.
 
+Note (CE 05, Sat 31 Oct 2026, CORRECTION from CE 02): the 15:07 PASS above was a one-off, NOT a fix. R09 gave an expected FAIL on 3.0.88 at 08:19 ("no control named Tag in Edit source"), a single PASS at 15:07 (xE) and an expected FAIL again at 15:36 (bxE, same words): 2 of 3 runs FAIL. BUG-859 stays OPEN, counted as FAIL on 3.0.88; the flaky route or timing behind the one pass is not investigated.
+
 ## BUG-860
 
 **Command / Area:** Double-click on the green DP label of a downpipe (Civil 3.0.68 / 3.0.69). Found by Codex V4 and V5 (22 Oct 2026); cause explained by Opus (REVIEWLANE_LOG entry 1588 item 9). LOW.
