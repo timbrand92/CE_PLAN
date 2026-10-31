@@ -30,3 +30,6 @@ No cards written yet. Check each entry against the current build first; some may
 
 ## Added 31 Oct 18:35 (from job n1, BUG-540 follow-up; CE 04 says this is not a Tim question)
 9. **Step-iron depth box on the Settings page.** The step-iron depth is already read from one Settings value by the Pit Schedule remark, pit size advice, CDRULES and the refresh, but the Settings page has no box for it. Recommendation: put it beside the other pit depth figures on the pit and cover tab (the page is at its height limit, so this may belong on the new "Switches" tab; see CODEX_BRIEF_SWITCHES_TAB_31OCT.md). Tim sees one picture. Needs a B number from CE 01.
+
+## Added 31 Oct 19:55 (from job n3, BUG-343 item 4)
+10. **Repair Center buttons are cut off (BUG-343 item 4).** A window layout fault in the Repair Center; the exact wording of the fault and the one-line questions for Tim are in `areas\BUGFIX_n3_REPORT_31OCT.md` (section on BUG-343). Check the entry against the current build first (the item may be overtaken). Tim approves wording only. Needs a B number from CE 01.
