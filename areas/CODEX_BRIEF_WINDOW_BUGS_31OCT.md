@@ -27,3 +27,6 @@ A screenshot of each changed window and the exact click steps. The robot or Code
 
 ## Open
 No cards written yet. Check each entry against the current build first; some may already be overtaken.
+
+## Added 31 Oct 18:35 (from job n1, BUG-540 follow-up; CE 04 says this is not a Tim question)
+9. **Step-iron depth box on the Settings page.** The step-iron depth is already read from one Settings value by the Pit Schedule remark, pit size advice, CDRULES and the refresh, but the Settings page has no box for it. Recommendation: put it beside the other pit depth figures on the pit and cover tab (the page is at its height limit, so this may belong on the new "Switches" tab; see CODEX_BRIEF_SWITCHES_TAB_31OCT.md). Tim sees one picture. Needs a B number from CE 01.
