@@ -1,0 +1,99 @@
+TRAIN C-79b2 changed files, Sun 1 Nov 2026 (assembler, resumed job). Branch claude/rel-20261110a against its base origin/claude/rel-20261108a = bab2dbf8 (the C-79b1 GO head).
+Civil only. No Modules/Manager, CE_SHARED, Shared, installer, loader, SettingsService.cs or colleague-defaults.json file changed. Nothing opened in AutoCAD.
+
+SHARED PATHS and the smoke case each needs
+  Modules/Drainage/Models/UserSettings.cs  (17 new ON switches, additive; BOM kept)  -> N91 start-up smoke: file loads with the new keys missing; a saved file keeps its values
+  Modules/Drainage/Services/SettingsSizingStandards.cs  (#1960, BOM restored)  -> S1 and the connection-pipe / Edit Pipe grade strip: a uPVC pipe above 3.0 m/s warns; concrete stays 6.0
+  Modules/Drainage/Commands/CdCommand.cs, CdCommand.Grade.cs, CdCommand.GradeSuggestion.cs  (#1960, #1897, #1919, #1927)  -> Edit Pipe grade strip, Grade mismatch window, Recall Last then a new upstream level
+  Modules/Drainage/Commands/PipeEditCommand.GradeSuggestion.cs  -> Edit Pipe grade suggestion
+  Modules/Drainage/Services/ProjectDataService.cs, ProjectDataService.Recovery.cs, ProjectDataRecoveryGuardService.cs  (#1944)  -> record recovery in a drawing with non-metre units; save, close, reopen
+  Modules/Drainage/Services/InspectorPaletteService.cs  (#1920)  -> Inspector cover figure measured to the outside top of the pipe
+  Modules/Drainage/Services/CivilHubService.cs, CivilNetworkHealthService.cs, MinimumCoverForChecks.cs  (#1897, #1920)  -> Civil Hub and repair check cover figure
+  Modules/Drainage/Services/PumpSizingService.cs, ViewModels/RationalMethodViewModel.cs  (#1965, changed shipped C use)  -> S1: CDCALC Pump system and Rational tabs
+  Modules/Drainage/Services/ReuseCreditService.cs, Commands/CivilDesignCommand.cs, Dialogs/CivilDesignWindow.xaml  (#1874, #1954, #1956)  -> CDDESIGN Rainwater reuse boxes, Save Draft
+  Modules/Drainage/ViewModels/LongitudinalSectionViewModel.cs  (#1938, #1939)  -> long section with a curved boundary and survey layers
+  Modules/Drainage/Services/PitScheduleQaService.cs, PitScheduleStatusService.cs  (#1937, reads an Xref, writes nothing to it)  -> pit schedule with a recreated Xref source
+
+RE-TEST CLASS: area plus N91, S1 for each changed shipped figure (#1960 maximum speed, #1965 roof-and-paved C), the cover screens (#1897, #1920: Inspector, Civil Hub, repair check) and the Grade mismatch window (#1919, #1927) each need their own tool case.
+
+CHANGED FILES (git diff --name-status bab2dbf8..HEAD)
+A  Modules/Drainage.Tests/Commands/B093GradeMismatchWarningTests.cs
+A  Modules/Drainage.Tests/Commands/B095RecallLastStandardGradeTests.cs
+A  Modules/Drainage.Tests/Helpers/Bug1193CurvedBoundaryTests.cs
+A  Modules/Drainage.Tests/Rules/Bug1175BundleFolderWordingTests.cs
+A  Modules/Drainage.Tests/Rules/Bug765SurveyLevelLayerTests.cs
+A  Modules/Drainage.Tests/Services/B133RoofPavedCTests.cs
+A  Modules/Drainage.Tests/Services/Bug1096ReuseBoxesTests.cs
+A  Modules/Drainage.Tests/Services/Bug1108ReuseShareMinimumTests.cs
+M  Modules/Drainage.Tests/Services/Bug1145ScheduleFingerprintScopeTests.cs
+A  Modules/Drainage.Tests/Services/Bug1155RecreatedSourceTests.cs
+A  Modules/Drainage.Tests/Services/Bug1235GradeWarningFiguresTests.cs
+M  Modules/Drainage.Tests/Services/Bug255EditPipeCoverTests.cs
+A  Modules/Drainage.Tests/Services/Bug296RecoveryPositionUnitsTests.cs
+A  Modules/Drainage.Tests/Services/Bug321LabelUnitsTests.cs
+M  Modules/Drainage.Tests/Services/Bug422CoverUnknownTests.cs
+A  Modules/Drainage.Tests/Services/Bug80OneVelocityTableTests.cs
+A  Modules/Drainage.Tests/Services/Bug903OneCoverFigureTests.cs
+A  Modules/Drainage.Tests/Services/Bug903PipeTopCoverTests.cs
+A  Modules/Drainage.Tests/Services/C79b2NewSwitchDefaultsTests.cs
+A  Modules/Drainage.Tests/ViewModels/Bug1156DraftUnknownFieldsTests.cs
+M  Modules/Drainage/AI/SmartifyPitTool.cs
+M  Modules/Drainage/Commands/CdCommand.Grade.cs
+M  Modules/Drainage/Commands/CdCommand.GradeSuggestion.cs
+M  Modules/Drainage/Commands/CdCommand.cs
+M  Modules/Drainage/Commands/CivilDesignCommand.cs
+M  Modules/Drainage/Commands/LinkCommands.cs
+M  Modules/Drainage/Commands/PipeEditCommand.GradeSuggestion.cs
+M  Modules/Drainage/Commands/PitEditCommand.cs
+M  Modules/Drainage/Commands/SpotLevelCommand.cs
+M  Modules/Drainage/Dialogs/CivilDesignWindow.xaml
+M  Modules/Drainage/Helpers/LongSectionBoundaryProjector.cs
+M  Modules/Drainage/Models/AgreedDesignSnapshot.cs
+M  Modules/Drainage/Models/CivilProjectStartDraft.cs
+M  Modules/Drainage/Models/CouncilProfileModels.cs
+M  Modules/Drainage/Models/DesignPackageModels.cs
+M  Modules/Drainage/Models/PipeSpeedChecksSettings.cs
+M  Modules/Drainage/Models/ReuseCreditModels.cs
+M  Modules/Drainage/Models/UserSettings.cs
+M  Modules/Drainage/Rules/AgreedDesignRules.cs
+A  Modules/Drainage/Rules/BundleFolderWording.cs
+M  Modules/Drainage/Rules/CivilDesignWorkflow.cs
+A  Modules/Drainage/Rules/DraftUnknownFieldsRule.cs
+A  Modules/Drainage/Rules/GradeMismatchWarningRule.cs
+A  Modules/Drainage/Rules/GradeWarningFiguresRule.cs
+A  Modules/Drainage/Rules/LabelUnitsRule.cs
+A  Modules/Drainage/Rules/LongSectionSurveyLayerRule.cs
+A  Modules/Drainage/Rules/PitCoverToPipeTopRule.cs
+A  Modules/Drainage/Rules/RecallLastGradeRule.cs
+A  Modules/Drainage/Rules/RecoveryPositionMatchRule.cs
+M  Modules/Drainage/Rules/StormReportOffer.cs
+M  Modules/Drainage/Services/ArrowService.cs
+M  Modules/Drainage/Services/AutoDesignOrchestrator.cs
+M  Modules/Drainage/Services/AutoDesignService.cs
+M  Modules/Drainage/Services/CivilDesignService.cs
+M  Modules/Drainage/Services/CivilHubService.cs
+M  Modules/Drainage/Services/CivilNetworkHealthService.cs
+M  Modules/Drainage/Services/CivilProjectStartDraftStorage.cs
+M  Modules/Drainage/Services/DesignValidationService.cs
+M  Modules/Drainage/Services/InspectorPaletteService.cs
+M  Modules/Drainage/Services/LinkService.RepairAudit.Analysis.cs
+M  Modules/Drainage/Services/LinkService.RepairAudit.AuditPasses.cs
+M  Modules/Drainage/Services/MinimumCoverForChecks.cs
+M  Modules/Drainage/Services/PitHoverService.cs
+M  Modules/Drainage/Services/PitScheduleQaService.cs
+M  Modules/Drainage/Services/PitScheduleStatusService.cs
+M  Modules/Drainage/Services/ProjectDataRecoveryGuardService.cs
+M  Modules/Drainage/Services/ProjectDataService.Recovery.cs
+M  Modules/Drainage/Services/ProjectDataService.cs
+M  Modules/Drainage/Services/PumpSizingService.cs
+M  Modules/Drainage/Services/QuickModeService.cs
+M  Modules/Drainage/Services/ReuseCreditService.cs
+M  Modules/Drainage/Services/SettingsSizingStandards.cs
+M  Modules/Drainage/Services/TextService.cs
+M  Modules/Drainage/ViewModels/CdViewModel.Grade.cs
+M  Modules/Drainage/ViewModels/CdViewModel.Inverts.cs
+M  Modules/Drainage/ViewModels/CdViewModel.Settings.cs
+M  Modules/Drainage/ViewModels/CivilDesignWindowViewModel.cs
+M  Modules/Drainage/ViewModels/LongitudinalSectionViewModel.cs
+M  Modules/Drainage/ViewModels/RationalMethodViewModel.cs
+M  REGRESSION_LOG.md
