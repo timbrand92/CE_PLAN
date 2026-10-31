@@ -20,3 +20,9 @@ What the robot and Codex still need to prove:
 4. **Tests run (net10.0-windows only, scoped, -p:SkipDevBundle=true, isolated env folders under C:\CE_WORK\scratch\fx1945):** #1940: Bug1144 + NetworkRedesignApplyTicketServiceTests, 29 passed. #1943 (after merge): Bug1144 + Bug1153 + ticket tests, 39 passed. #1945: Bug1158, 6 passed.
 5. **NOT tested:** net48 build (the DWGTITLED call uses `Autodesk.AutoCAD.ApplicationServices.Core.Application`, which should exist there, unverified); the full suite; Manager tests; anything in AutoCAD; the other Opus notes left alone (double blank line in UserSettings.cs, duplicate LPD read in #1943, several-complete-outlets silent skip). A 0-byte placeholder CE_TRANSFORM_2027.arx was created in the worktree only (not committed).
 6. **Undo:** revert the single new commit on each branch (#1943: revert the merge commit).
+
+## UPDATE (31 Oct 2026, re-check fix on #1945)
+
+1. **FOR TIM:** the re-check review found the "drawing never saved" check could never run (it compared two drawing wrapper objects the one way that always says different). Now compared properly. Built and unit-tested only; not proven in AutoCAD.
+2. **New head of #1945:** 7c31c33c (was a6a892bc). Source-guard test failed before the fix and passes after; Bug1158 tests 7 of 7 pass (net10 only).
+3. **Not tested:** net48, full suite, AutoCAD.
