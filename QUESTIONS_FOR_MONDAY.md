@@ -419,3 +419,5 @@ GB-D. **CLAUDE ASSISTANT (GB-05): PROVIDER AND MODEL, MONTHLY COST CEILING, WHO 
    8. **Downloads (BUG-553, 554):** CEMARKUPRUN's automatic software download OFF by default; installer checks the WebView2 signature or bundles it. Recommended: yes.
    9. **Time-log files named after each person's Windows login (BUG-492):** keep as is. Recommended: keep (office tool, your own staff).
    10. **CEMEMBER (BUG-909, 910, 1124, 1125):** 909 section follows the UCS; 910 break marks follow paper scale; 1124 any leg may stand upright (ask when the angle is unequal); 1125 add a flat-on orientation question for RHS. Recommended: yes to all four.
+
+102. **ANSWERED Sat 31 Oct 2026 by Tim, by voice (decisions\2026-10-29_TIM_ANSWERS.md items 176 to 185): voice batch 6 (item 101).** "1yes, 2yes, 3yes, 4yes, 5yes, 6yes, 7yes, 8yes, 9yes, 10yes". Read as batch 6 only. Batches 4 (item 95) and 5 (items 96, 99) remain OPEN.
