@@ -1,11 +1,12 @@
 # Trains C-79b1 and C-79b2 (Civil + Manager): the PR lists, Sun 1 Nov 2026 (CE 01)
 
-**What this is.** The second and third of the three follow-on assemblies after C-78 (CE 00's GO of Sat 31 Oct 22:15). C-79a is assembled (branch `claude/rel-20261106a`, head b8089300). **Each of these two sits on top of the one before it:** C-79b1 on `claude/rel-20261106a`, C-79b2 on C-79b1's branch (the assembler names it: next free branch letter). One assembly at a time. Heads below were read with `gh` at 00:30 on 1 Nov: the assembler reads them AGAIN at merge time and stops and reports if one moved. Source of the verdicts: the Opus pre-reviews in `areas\OPUS_PREREVIEW_*` (R, S, T, X, Y, Z, AB and the re-check where a PR is named in them). **#1969, #1970, #1972, #1965, #1967 and #1974 have NO Opus pre-review yet: the finalizer reads them as the first independent look and says so.** No install, no version commit (the payload makes that). Rules as for C-79a: warn not block (R-27); Settings-first (R-00); nothing bypasses locked layers, Xrefs or REFEDIT; every new switch ships as the PR says; never close, retarget or delete a PR or branch; never mark a bug FIXED.
+**What this is.** The second and third of the three follow-on assemblies after C-78 (CE 00's GO of Sat 31 Oct 22:15). C-79a is assembled (branch `claude/rel-20261106a`, head b8089300). **Each of these two sits on top of the one before it:** C-79b1 on `claude/rel-20261106a`, C-79b2 on C-79b1's branch (the assembler names it: next free branch letter). One assembly at a time. Heads below were read with `gh` at 00:30 on 1 Nov: the assembler reads them AGAIN at merge time and stops and reports if one moved. Source of the verdicts: the Opus pre-reviews in `areas\OPUS_PREREVIEW_*` (R, S, T, X, Y, Z, AB and the re-check where a PR is named in them). **#1969, #1970, #1972, #1965, #1967 and #1974 have NO Opus pre-review yet: CE 05 is running them on Team (CE 00, 00:20 Sun): the three b1 ones (#1969, #1970, #1972) must be in before b1 assembly starts; the b2 ones before b2.** No install, no version commit (the payload makes that). Rules as for C-79a: warn not block (R-27); Settings-first (R-00); nothing bypasses locked layers, Xrefs or REFEDIT; every new switch ships as the PR says; never close, retarget or delete a PR or branch; never mark a bug FIXED.
 
-## C-79b1: the saved record, Undo, the Inspector and Edit Pipe (16 PRs, merge order)
+## C-79b1: the saved record, Undo, the Inspector and Edit Pipe (18 PRs, merge order; CE 00 allowed 18 at 00:20 Sun for the two small ones, #1922 and #1923)
 
 Re-test class: area plus N91 (UserSettings.cs additive) and the record/Undo smoke cases; protected-file code is in this train (LinkService.Persistence.cs, ProjectDataService.Persistence.cs): the finalizer reads every write path.
 
+0. **#1922 B-099 BUG-1257** (CE 00, 00:10 Sun: goes FIRST in b1, not in C-79a) Structural test runs on the Civil line write nothing into Tim's real CE folders; 16 files, mostly test projects (Modules/TestSupport and three test project files), head 7a3238a7, base claude/rel-20261102a. It protects Tim's real settings and logs. **The finalizer of this train confirms it changes no shipped DLL behaviour**; if it touches shipped behaviour beyond the old Structural copy's test redirect, it moves out of the train.
 1. **#1868 B-019 BUG-1091** large-pipe minimum fall, head 38c3f825, base `claude/gb01-slice1-falls` (stacked on #1841, which is ALREADY IN the line: never merge #1841). Four files; keep both sides of the Settings file and the change log. Does nothing until Tim types the 1-in-N figure for 450 mm and larger gravity pipes. FIRST.
 2. **#1891 B-071 BUG-1246** a copied downpipe gets its own next tag, head 4f21fc9d (stacks on #1867, which is in C-78). Touches the REDO-safe baseline file.
 3. **#1892 B-070 BUG-1141** one unreadable pit or pipe record no longer stops CE remembering every pit's links, head 9545489c. Protected file LinkService.Persistence.cs; shares it with #1970 (merge #1892 first).
@@ -22,6 +23,7 @@ Re-test class: area plus N91 (UserSettings.cs additive) and the record/Undo smok
 14. **#1969 B-119 BUG-1164** Edit Pipe stores a typed level with a full stop on a comma-decimal PC, head 1d411b28 (switch ON).
 15. **#1970 B-119 BUG-1157** Edit Pipe says so when it could not write the level onto the pipe itself, head b3e76c82 (PipeEditCommand.Update.cs shared with #1969 and #1972; LinkService.Persistence.cs shared with #1892).
 16. **#1972 B-119 BUG-658** Edit Pipe's downstream-recalculation question and cascade come after the change is accepted, head 556b3848.
+17. **#1923 B-110 BUG-430** double-click on a pit label stops AutoCAD's attribute editor first, switch `doubleClick.pitLabelStopsAttributeEditorFirst`. **LAST, and only if its shipped default is OFF** (Tim 22 Oct: until a Codex look). CE 05 owes a fix commit on the PR branch (job fx23, due soon); the head at 00:30 was e3dfb957 (default ON): read the live head and the default in the diff at merge time; if it is still ON, do NOT merge it, say so in the report and carry on.
 
 Stacked children are merged as their branch (the branch's base is its parent PR's branch, whose commits are already in the line by then). If a child's own diff would carry commits that are not its own, the assembler uses the net diff (cherry-pick of its own commits), never a merge of a branch whose history holds a dropped PR's commits.
 
@@ -46,14 +48,14 @@ Re-test class: area plus N91; S1 for any changed shipped figure (#1960, #1965); 
 15. **#1939 B-122 BUG-765** the long section's ground line reads only level texts on a survey layer, head 209cc31d (LongitudinalSectionViewModel.cs shared with #1938).
 16. **#1974 B-123 BUG-1175** CDSL and CDTRENCHGRATEAUDIT wording no longer names C:\Lisp Files, head 3993061a.
 
-## Over the limit of 16: left for a third small assembly (C-79c), or for CE 00 to allow 18 in C-79b2
+## Left for a third small assembly (C-79c) (CE 00, 00:20 Sun: b2 stays at 16)
 
 1. **#1941 B-122 BUG-898** the import results page lists what was really drawn, head 9ec6f131, and **#1942 B-122 BUG-1256** closing the consultant import's schedule page prints a plain cancelled sentence, head 6733f165 (stacked on #1941; both in LinkCommands.ImportXcivil.cs and XcivilImportService.cs). #1926 (B-112, in C-79a) must be in the line first: it is.
-2. **#1881 B-028 BUG-587** Pit Schedule row grows for a long lid and remarks note, head 72b032fa: base is the OLDER line `claude/rel-20261026z` and GitHub reports 189 changed files. It cannot be merged as a branch. It needs the net diff of its own commits and an Opus look first (reviews P, Q, X name it). Not scheduled until CE 00 says.
+2. **#1881 B-028 BUG-587** Pit Schedule row grows for a long lid and remarks note, head 72b032fa: base is the OLDER line `claude/rel-20261026z` and GitHub reports 189 changed files. It cannot be merged as a branch. It needs the net diff of its own commits and an Opus look first (reviews P, Q, X name it). Do NOT start #1881: CE 05 runs an Opus net-diff review on it first.
 
 ## Held for Tim or a document check (not in any of these trains)
 
-#1948, #1961, #1963, #1964, #1966 (and #1968, #1971, #1973: council numbers need a document check), #1872 (B-018c follow-up owed), #1924 (Codex label look), #1922 (B-099: out-of-scope files; decision owed), #1923 (B-110: switch must ship OFF; fix owed by CE 05).
+#1948, #1961, #1963, #1964, #1966 (and #1968, #1971, #1973: council numbers need a document check), #1872 (B-018c follow-up owed), #1924 (Codex label look).
 
 ## Never
 
