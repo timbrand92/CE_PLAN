@@ -31,4 +31,4 @@
    3. **Full listings** were kept in my scratch and removed with it; the differences above are the complete diff.
 7. **C: free space:** 47.08 GB at start, 46.30 GB after cleaning my worktree (other jobs were building at the same time: f2, f3, w4).
 8. **Cleanup:** worktree C:\CE_WORK\build\f4 cleaned (git clean -fdXq) and removed; scratch C:\CE_WORK\scratch\f4 removed after this report.
-9. **Finished:** Saturday 31 Oct 2026, 16:52 Melbourne.
+9. **Finished:** Saturday 31 Oct 2026, 16:51 Melbourne (clock reads AEST UTC+10 on this PC).
