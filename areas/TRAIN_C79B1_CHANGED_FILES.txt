@@ -19,6 +19,7 @@ Modules/Drainage.Tests/Services/Bug1266InspectorUnreadableRecordOnceTests.cs
 Modules/Drainage.Tests/Services/Bug192LightReadTests.cs
 Modules/Drainage.Tests/Services/Bug430PitLabelStopsAttributeEditorTests.cs
 Modules/Drainage.Tests/Services/C79aNewSwitchDefaultsTests.cs
+Modules/Drainage.Tests/Services/C79b1FinalizerGuardsTests.cs
 Modules/Drainage.Tests/Services/C79b1NewSwitchDefaultsTests.cs
 Modules/Drainage.Tests/Services/LinkServiceIdleCacheRefreshContractTests.cs
 Modules/Drainage.Tests/Services/LinkServiceSpeedRound4Tests.cs
