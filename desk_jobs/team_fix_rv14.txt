@@ -1,0 +1,14 @@
+PRE-REVIEW BRIEF: PRs #1965 (B-133, BUG-539: CDCALC's Pump system tab and the Rational tab's new-row C now read the one Settings value hardGroundRunoffC), #1967 (BUG-1235, the grade-warning figures that never matched; B-119) and #1974 (B-123, BUG-1175: CDSL and CDTRENCHGRATEAUDIT no longer name C:\Lisp Files), all Civil; reports areas\BUGFIX_n19_REPORT_31OCT.md, BUGFIX_n5_REPORT_31OCT.md and BUGFIX_n9_REPORT_31OCT.md. Opus, Team, read-only. Written by CE 05 Sun 1 Nov 2026 at CE 00's request.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only git fetch is allowed), build nothing, run no test, deploy nothing, open no AutoCAD, do not read or write Tim's real settings files, spawn no agents. Write exactly ONE file (named below). Do not push it; CE 05 pushes it. Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven). The style of an earlier review is C:\CE_PLAN\areas\OPUS_PREREVIEW_S_1889_GROUP_31OCT.md. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_AD_1965_GROUP_01NOV.md .
+
+For EACH PR (gh pr view <n> and gh pr diff <n>; the author's report is in C:\CE_PLAN\areas, a BUGFIX_*_REPORT_*.md naming the PR number or bug number: search for it), answer with file and line:
+1. What exactly changes for the drafter in AutoCAD terms, and is it what the carpark entry and Tim's decision (C:\CE_PLAN\decisions\2026-10-29_TIM_ANSWERS.md) ask for?
+2. The Settings switch: default per Tim's rulings, pinned in a defaults test through both start-up reads, OFF restores the old behaviour exactly? Any engineering value hard-coded that belongs in Settings (R-00)?
+3. No-hard-blocks (R-27): any stop, refusal or modal window that a warning should have been.
+4. Native AutoCAD protection (locked layers, Xrefs, REFEDIT) and REDO-safety; and any PROTECTED file touched (for example LinkService.Persistence.cs, ProjectDataService.Persistence.cs, RulebookEngine.cs): review those lines with extra care.
+5. The keep-both merge: read-only git merge-tree against claude/rel-20261102a and the other open PRs in this group, especially UserSettings.cs and REGRESSION_LOG.md.
+6. Tests: do they really fail before and pass after? Did any test touch the real %APPDATA%?
+7. What is NOT proven, and the AutoCAD scenario for the robot (CE 02) and any Codex look.
+8. Verdict per PR: KEEP, KEEP-WITH-NOTE or CHANGE-NEEDED (say exactly what), and the train class (area plus smoke or FULL).
+Format: FOR TIM first (at most eight numbered lines, one verdict line per PR, no tables), then DETAIL per PR. Say plainly if you could not verify something. Your final message must be one line: the file path and one verdict per PR.
