@@ -11878,6 +11878,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per 
 
 **Evidence 25 Oct 2026 (Civil 3.0.75, runner R09, runs b3r09a b3w1 b3z4):** AutoCAD's Enhanced Attribute Editor still opens on a double-click of DP1's outer circle. CE's log shows round 3 catching it (hit-test finds DP1, EATTEDIT cancel posted, CDEDIT scheduled) but CDEDIT starts only after AutoCAD's editor is closed, 21 to 37 s later. The drafter sees AutoCAD's editor first, then CE's. Review: areas\RUNNER_CASE_REVIEW_B3FIX_2026-10-25.md.
 
+Note (CE 05, Sat 31 Oct 2026, from CE 02): robot case R09 FAILED as an expected known bug on 3.0.87 (xR09, 02:21, "no control named Tag in Edit source") and PASSED on installed Civil 3.0.88+3fbb9da5 (xE, 15:07, one session, RUN-20261031-1507-C3.0.88-xE.md). One pass is not acceptance; the second session, the review and a broken twin that fails are still needed. BUG-859 may already be fixed by something in C-78. Still OPEN: not accepted. Related: the pit label double-click (BUG-430) still fails per job z3.
+
 ## BUG-860
 
 **Command / Area:** Double-click on the green DP label of a downpipe (Civil 3.0.68 / 3.0.69). Found by Codex V4 and V5 (22 Oct 2026); cause explained by Opus (REVIEWLANE_LOG entry 1588 item 9). LOW.
