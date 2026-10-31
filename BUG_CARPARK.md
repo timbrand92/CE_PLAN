@@ -652,6 +652,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "4no" (decision 151):
 
 **Status:** OPEN
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1932 (B-106): only the names of 34 UB and UC rows change; no size or mass is corrected. Data corrections for this entry are still open. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-817 — Opening the Pit Schedule leaves an undo step of its own (U echoes PITSCHEDULE)
 
 **Command / Area:** PITSCHEDULE (opening the window), Civil 3.0.55. LOW; not yet shown to be a fault (it may only be the undo mark for a refresh of the drawn table).
@@ -1129,6 +1131,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "4no" (decision 151):
 **Status:** REOPENED 23 Oct 2026 (CODEX_SWEEP_S05 S05-01, ledger F-154, Opus check VERIFIED): the Xref fingerprint returns the first Xref's record. PitScheduleXrefDiscoveryService.cs:394-398 returns the first Xref's record for any later Xref with the same FingerprintGuid, so the installed fix (#1404, core only) never sees a SAVEAS copy's different data. Fix the adapter, not the core. Earlier status: OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1404; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS (reopened 23 Oct) per the proof-lane count. Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref is remembered by drawing ID plus file path so two Save As copies stay two sources (existing switch linking.pitScheduleXrefSeparatesSaveAsCopies ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ---
 
@@ -2943,6 +2947,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1909 (B-088): FPFC and FSF keep the typ
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "10yes" (decision 157): the footing library name is PF1, one convention everywhere; this closes the PF1-versus-1 question. Job x5 queued (Structural). Still OPEN: not built.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1930 (B-104, Structural line): the pad library is keyed by the full mark PF1 (old bare-1 rows still found and explained; switch FootingWidth.PadLibraryKeyIsFullMark ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-577
 
 **Command / Area:** Structural beam1/2/4, installed1.0.116+f180b349, unitlessownedfixture14Oct2026.
@@ -3286,6 +3292,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "10yes" (decision 157
 **Codex look L4 (19 Oct, installed Civil 3.0.56 / Manager 1.1.56, double-click switch ON):** STILL SEEN: L4-01a DIFFERENT, SURE. Double-click on the P8 pit label again opened AutoCAD's own Enhanced Attribute Editor (block PIT LABEL 2, tag PIT_LABEL, value P8), not Edit Pit. Cancel, no change. Pipe line and IL text double-clicks DID open Edit Pipe P8 to P11 (L4-01b, L4-01c PASS). This is a bug, not a different expectation: Tim's 17 Oct ruling G2 says double-click any CE object opens its Edit window. Evidence: CODEX_LOOK_L4_20261019_1502.md, L4-05-pit-doubleclick.png, L4-53-pit-closeup.png.
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per the proof-lane count (areas\BUG_PROOF_LANES_31OCT.md). Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1923 (B-110, rel-20261102a): the pit label double-click stops AutoCAD's attribute editor first (switch doubleClick.pitLabelStopsAttributeEditorFirst ON); the double-click feature itself stays OFF by default until Codex has looked (Tim, 22 Oct). Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ---
 
@@ -9764,6 +9772,8 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "9as recommended" (de
 
 Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): Tim said "yes close it" (decision 173): PR #1883 is being closed by CE 01 as superseded; the real fix is a new job with no switch (p19 root cause first). Still OPEN.
 
+Note (CE 05, Sat 31 Oct 2026): ROOT CAUSE found (job p19, areas\BUGFIX_p19_REPORT_31OCT.md): BracingCommands.cs line 769 turns the jig's World answer by the UCS again, and the preview line in BracingService does the same; introduced by commit 2a395832 (HUNT-S-02). DRAFT PR #1921 (B-109, Structural line, no switch) removes the extra turn. A clicked second point and the drag preview need a Codex look; robot cases aS1 to aS3 are the acceptance cases. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ---
 
 ## BUG-468
@@ -10105,6 +10115,8 @@ Note (CE 05, Sat 31 Oct 2026): Read of the Structural line 31 Oct (job s15): alr
 **Codex V3-04 (21 Oct 2026, Civil 3.0.66): BLOCKED, operator deviation; retry with a corrected brief** (CODEX_VERIFY_V3_20261021_0259.md item 12). Codex answered Y to the untagged question, the X-Civil import window opened, Choose DWG and Read source reached the "Pit and pipe schedule" page ("Check the schedule first"), and Codex then clicked Import to drawing, which imported (61 objects, "Post-import QA: 52 data sanity findings") with no "Proceed with import?" question. No verdict. What the desk found in the source (read-only, rel-20261020j): in the window route there is NO command-line "Proceed with import?" question (that is the headless route only); the window's "Import to drawing" button is the Yes and Close is the No. The CHECK THE SCALE sentence is printed on the command line before that page opens, so it sits behind the modal window; the window page itself does not show it. Corrected brief verifyV3b_c56 reads it from the command history after Close. Not FIXED.
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per the proof-lane count. Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1926 (B-112, rel-20261102a): the CHECK THE SCALE sentence, or the no-units note, leads the banner on the import window's schedule page (switch xcivilImport.scaleNoteOnReviewPage ON). The units rule (drawing UNITS versus CE's size guess) is with CE 04 for Tim. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ---
 
@@ -11210,6 +11222,8 @@ Desk 12 Oct 06:50: confirmed as BUG-566; candidate fix at CuiMenuGeneratorServic
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "11yes" (decision 158): moving an RC beam gives a warning now when only part of the detail moves; full grouping (card ST-08) is built after the pilot. Job x6 queued (Structural). Still OPEN: not built.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1931 (B-105, Structural line): moving only part of an RC beam or column detail prints one plain warning (switch RcDetail.WarnWhenOnlyPartMoves ON); full grouping (card ST-08) is after the pilot. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-614 — scale-aware Structural hatches refuse 1:50
 
 **Codex look L3 (18 Oct, installed Civil 3.0.54 / Manager 1.1.54 / Structural 1.0.118):** the CEHATCH window was opened on a Structural copy at DIMSCALE 1 and five library cards showed the words 'No preview: the drawing scale is not valid' instead of pictures; that is filed as BUG-751. The 1:50 refusal itself was not re-driven through the window.
@@ -11643,6 +11657,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1907 (B-087): RD asks for the arc or ci
 **15 October overload follow-through:** local catchment-overload-case-ledger CO-03/screenshot1360 confirms the same blue overlay/overlapping label also obscures the120m² over-capacity warning. Command-line warning and native MTEXT correctly say120m² exceeds ClassC110m²; this does not close642 or earlier209. No new bug number.
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): installed but STILL FAILS per the proof-lane count. Read-only job z3 queued to confirm why and propose the smallest fix; nothing built.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1924 (B-111, rel-20261102a): the CDCATCHMENT label looks for a clear spot (switch surface.catchmentOverlayLabelAvoidsText ON; label height from Settings). Units question (300 mm / 200 mm are drawing units) and pit-symbol/pipe-line avoidance are with CE 04 for Tim. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-643
 
@@ -12421,6 +12437,8 @@ Note (CE 05, Sat 31 Oct 2026, CORRECTION from CE 02): the 15:07 PASS above was a
 Note (CE 05, Sat 31 Oct 2026): Tim said "10yes" (decision item 127): the Inspector, Civil Hub and repair check will measure cover to the outside top of the pipe, as CDRULES does. Follow-up job w4 queued (starts from the #1897 branch) for after the 14:00 Team reset. Still OPEN: #1897 is a draft, not opened in AutoCAD.
 
 Note (CE 05, Sat 31 Oct 2026, job x3): driveway and footpath cover rows already add a slab thickness in the Civil C-78 line (setting minCoverPavedSlabMm, blank = 100 mm, in UserSettings.cs; rule MinCoverFor in Rules/RulebookValues.cs; commit 8f2d61cd, 29 Oct; tests Gb01Slice2CoverTableTests.cs). Tim's "7yes" (decision 154) is therefore already built: no new PR; B-102 is not used. File-only (no Settings page box) and there is no separate 75 mm reinforced-concrete row. Still not seen in AutoCAD.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cover is measured to the outside top of the pipe on the Inspector, Civil Hub and repair check. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ## BUG-904
 
@@ -15588,6 +15606,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1902 (B-082): length over 100 read as m
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "12this release" (decision 159): the CEMEMBER section-list rename IS in this release, so this stays OPEN and old beams must still redraw after the rename; job x7 writes the must-still-redraw test first. Not built.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1932 (B-106, Structural line): the CEMEMBER section list takes supplier names for 34 UB and UC rows with a former-names map, so old beams still redraw (switch CeMember.SectionListUsesSupplierNames ON). 250UC73 held for Tim (73.0 versus draft 250UC72.9). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ## BUG-1133 — The new XCLMTXT angle rule only works when the angle symbol comes straight after the size
 
 **Command / Area:** XCLMTXT angle symbols, Structural 1.0.122 (T3 finding 13). LOW, UNSURE (not known whether any sheet puts the symbol elsewhere).
@@ -17097,6 +17117,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1916 (B-092): CEHELP wording for Beam S
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "2yes" (decision 149): Apply CE Standard Layers resets colour, linetype, lineweight and plot only; lock, freeze and on/off stay as set, and the status line names them. Job x1 queued (Structural). Still OPEN: not built.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1918 (B-100, Structural line): Apply CE Standard Layers resets colour, linetype, lineweight and plot only; lock, freeze and on/off stay and the status line names them (switch Options.ApplyStandardsKeepsLockFreezeOnOff ON). Robot case S49_apply_layers_keep. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 
 ## BUG-1225
 
@@ -17693,6 +17715,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 
 **Facts added by CE 01 (30 Oct 2026, evidence only):** the run was build job c92a, the full Structural suite (1,293 tests), at 19:47 on Tim's PC; his real CS_Settings.json and the Structural log changed in that same minute. The cause is the test set-up, not the product (which test wrote it is not proven; no copy of the file from before 19:47 exists). Tim's two Rebar flags WarnInsteadOfChangeStirrupCover and WarnInsteadOfRefuseSpacing read True now and were False in his 18 Oct backup: a question for Tim (via CE 04) whether he wants them False again. Isolation that the product honours: CE_STRUC_SUITE_APPDATA_ROOT (Structural settings), CE_LOG_DIR_OVERRIDE (Civil and Manager settings and logs), plus TEMP and TMP; Manager's CE_Admin outbox and CeBlocksSettings are not redirected by anything. Fix B-062 (register item 81): assembly-wide test isolation plus a guard test, a Max Sonnet agent.
 
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1922 (B-099, rel-20261102a): the Civil line carries a 2 July copy of Structural whose Logger, LoggingService, CommandHistoryService and XclmTxtService had no redirect; the PR adds it plus a guard that fails if a test run touches the real folders. The Structural line itself is already safe. Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
 ---
 
 ## BUG-1258 — Project Review's "Pipe sizes" proposals call a pipe with no material speed "Unknown" while CDRULES (after #1857) judges it against the office maximum pipe velocity: the two screens disagree
@@ -17774,6 +17798,8 @@ Code reading of the installed build (commit 09126560, not seen live): the step t
 **Status:** OPEN (nothing built; needs Tim's wording of what plots). Never FIXED until confirmed in AutoCAD.
 
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "3yes" (decision 150): with nothing ticked, a plain warning, plot nothing, keep every revision, record "no sheets" in the history, never a block. Job x2 queued (Structural). Still OPEN: not built.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1929 (B-101, Structural line): Publish Issue with nothing ticked warns, plots nothing, keeps every revision and records "no sheets" (switch CeSheets.IssueWithNothingTickedWarnsAndRecords ON). Fixes the OLDER Publish Issue window, because commit 50572182 is not on that line; overlaps open drafts #721 and #1248. Built and unit-tested only; not opened in AutoCAD. Not fixed.
 
 ---
 
@@ -17858,3 +17884,5 @@ Note (CE 05, Sat 31 Oct 2026, Tim voice batch 2): Tim said "3yes" (decision 150)
 **Evidence note (CE 05, 30 Oct 2026, from CE 01, code read at the C-78 head 7c6af57b; not run, not opened in AutoCAD):** B-057 (#1873) does NOT cover this: it only stops the Grade mismatch window opening on the window's own suggested level (rule MismatchBoxOwnSuggestionRule plus CdCommand.Grade and CdCommand); it does not touch the hold-the-fall logic. Likely cause: "Recall Last" (CdViewModel.Settings.cs 191-192, ApplyStoredSettings) writes the remembered downstream 18.50 through the public SecondInvert setter; that setter (CdViewModel.Inverts.cs 727-731) flips _secondInvertUserSet to true whenever the re-entrancy guard is off, and Recall Last does not switch the guard on; ResolveHasEstablishedFall (858-870) then returns true, so typing a new upstream 19.45 holds the old 0.50 fall (18.95). A recalled level is treated as a fall the drafter set. The hold-the-fall rule is the BUG-076 design (a code comment says it needs Tim's confirmation), so what is right is Tim's call: (a) keep the remembered 0.50 fall (18.95, today) or (b) work from the standard grade for the new upstream (19.40, CE 02's expectation; note CE 02's 19.40 comes from the chosen "Set my own" 1 in 100 over 4.1 m). CE 01 recommends (b) behind a Settings switch ON by default. Question with CE 04. When Tim answers, CE 01 registers one build (next free B-076) together with BUG-1229 and BUG-1233 checks, on the C-79 line. Nothing built until then. Still OPEN, unconfirmed.
 
 Note (CE 05, Sat 31 Oct 2026): Tim answered by voice ("5as recommened", decision item 122): after Recall Last, a new upstream level works from the standard grade for the new pipe's length (19.40 for a 4.1 m pipe at 1 in 100), behind a Settings switch ON; this supersedes the 18.95 behaviour. Job w3 queued for after the 14:00 Team reset (Civil, base rel-20261102a). Still OPEN: not built, not tested in AutoCAD. Separately, decision item 119 (a steeper pipe than the chosen grade also warns) is CE 04's GUESS on Tim's words "2no but warn" and stays UNCONFIRMED; job w1 builds it behind its own switch.
+
+Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Recall Last, then a new upstream level, works from the standard grade (19.40 on a 4.1 m pipe at 1 in 100; switch pipe.recallLastNewUpstreamUsesStandardGrade ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
