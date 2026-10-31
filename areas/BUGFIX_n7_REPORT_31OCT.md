@@ -1,6 +1,20 @@
 # BUGFIX n7 report, batch 7 (Redesign Apply safeguards), B-121, Sat 31 Oct 2026
 
-## FOR TIM (read this part only)
+## UPDATE 31 Oct, 19:2x Melbourne (follow-up from CE 04; this block supersedes items 2, 3, 4, 5 and 6 below)
+
+1. **Three draft PRs now: #1940 (BUG-1144), #1943 (BUG-1153, stacked on #1940), #1945 (BUG-1158).** All built and unit-tested only; nothing opened in AutoCAD; no bug marked fixed.
+2. **BUG-1144 now warns instead of stopping.** If the saved outlet roles are damaged, Apply shows ONE warning line under "Redesign applied", first copies the damaged record into the drawing beside the original (`CE_CVL_NETWORK_REDESIGN`, record `OUTLET_ROLES_DAMAGED_COPY`; same Undo; no new folder), then carries on. Copying was cheap because the record already lives in the drawing. Switches: `linking.redesignApplyNoticesDamagedOutletRoles` ON = this behaviour, OFF = the old silent overwrite exactly; `linking.redesignApplyStopsOnDamagedOutletRoles` OFF by default = when turned ON, Apply stops with the plain line instead (my first version, option a).
+3. **BUG-1153 now warns instead of stopping.** If the drawing's LPD record is there but cannot be read, Apply shows ONE warning line and carries on. Apply never writes the LPD record, so there is nothing to copy. Switches: `linking.redesignApplyNoticesUnreadableLpd` ON (OFF = old silent skip); `linking.redesignApplyStopsOnUnreadableLpd` OFF (ON = stop). Drawings with several complete outlets still behave as before; that stays a question for CE 05.
+4. **BUG-1158 built as #1945, small.** When Design outlets are approved, CE also records the drawing's full file path beside them. When CDDESIGN opens a drawing whose file path is different, the outlets load exactly as before and one command-line warning says they were approved under another file name or folder. A renamed or moved job also warns (accepted). Drawings approved before this build have no recorded path and never warn. Switch `linking.lpdWarnsWhenOutletsApprovedInAnotherFile` ON; OFF = old behaviour, no path recorded.
+5. **Tests:** focused Civil net10: 275 of 275 on the #1943 stack (Bug1153, Bug1144, ticket service, NewSwitchDefaults); 243 of 243 on #1945 (Bug1158 plus NewSwitchDefaults); net48 compile 0 errors on #1943 and #1945. Isolation variables printed before every run; C: was 30.7 to 31.2 GB free at each start; build slots were free.
+6. **Not tested (new):** nothing in AutoCAD; the copy of a damaged record is written by code that only compiled (the unit tests check the order of copy-then-overwrite in the source and the ticket decisions, not a real Xrecord); the CDDESIGN warning and the path record are likewise untested in a real drawing. Robot case ideas: N121 now expects the warning plus a `OUTLET_ROLES_DAMAGED_COPY` record holding the damaged text; control = notice switch OFF (no copy, no warning); N122 expects the CDLPD warning, control = notice switch OFF; N123 (BUG-1158): approve, Save As, run CDDESIGN, expect the warning line; control = switch OFF.
+7. **Real-files check, second session:** I did not take a full listing again. I checked `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` only: 15,270 bytes, last write 4 Oct 08:22 (it is back to its original stamp, so whoever changed it earlier at 18:49 has since restored it), and none of my new key names are in it.
+8. **Shared files touched, all three PRs:** `Models/UserSettings.cs` and `REGRESSION_LOG.md`. `CE_SHARED` untouched.
+9. **Mistake of my own:** my first edit of the regression-log entries left a doubled line and a missing blank line; fixed before commit. Two shell commands that waited on the keyboard cost minutes again.
+
+---
+
+## FOR TIM (read this part only) (first version, items 2 to 6 now superseded by the block above)
 
 1. **Two of the three bugs are built as draft pull requests: #1940 (BUG-1144) and #1943 (BUG-1153).** Nothing has been opened in AutoCAD. No bug is marked fixed.
 2. **BUG-1144, damaged outlet record:** if the "outlet roles" that CE saves in the drawing at each redesign Apply were damaged, the redesign used to skip its outlet check without saying so, and Apply then wrote over the damaged record. Now Apply stops with one plain line (it says the saved outlet roles cannot be read and tells you to check the drawing's outlet record). A drawing that has never been through Apply applies as before.
