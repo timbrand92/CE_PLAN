@@ -70,4 +70,4 @@
 2. Should SBEAM favourites and recents saved under an old name be carried over to the new name? (small change inside the picker files other PRs are editing; do after #1905 and #1902 merge)
 3. When the CEMEMBER edit command is built, it must call `CeMemberReplanner.FindRow(list, record, SectionDatabaseService.GetFormerNameMap())` and `Replan(..., formerNames)`; and write the new name back into the record after a redraw.
 
-Finished: Sat 31 Oct 2026, 17:55 (Melbourne time).
+Finished: Sat 31 Oct 2026, 17:53 (Melbourne time), report pushed.
