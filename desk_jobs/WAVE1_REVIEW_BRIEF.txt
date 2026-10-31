@@ -1,0 +1,23 @@
+WAVE 1 PAPER REVIEW BRIEF (CE 02, Sat 31 Oct 2026 14:55 PC clock). For ONE read-only Opus agent on Team. It reads case files, setup files, reports and source; it WRITES only its report file. It does NOT run AutoCAD, the driver or case_runner (validate and check_ids.ps1 are allowed), builds nothing, edits NO case, setup, spec, driver or settings file, writes NO .review.txt slip (slips need two passing robot runs), commits and pushes nothing, spawns no further agents. Tim's rules (C:\TimOS\RULES.md): plain Australian English, metric, numbered lists with bold labels, NO tables, answer first.
+
+WHY. Writers (Team Opus) wrote robot cases for bug fixes that are installed in Civil 3.0.88+3fbb9da5 (commit 3fbb9da5, branch origin/claude/rel-20261102a, monorepo C:\Lisp Files\CE_ACAD_PLUGIN; read the code with git show 3fbb9da5:Modules/Drainage/<path> or git grep -n "<words>" 3fbb9da5 -- Modules/Drainage). These cases have NEVER run. Every earlier new case needed one or two repair rounds because of faults a paper read would have caught; find them now so the first robot run is a real result.
+
+WHAT TO REVIEW: the case files in C:\Lisp Files\_ACAD_DRIVER\cases\drafts_wave1_31oct\ named in your job file (each case and its _BROKEN twin), together with the writer reports C:\CE_PLAN\areas\WAVE1_WRITING_<letter>_REPORT.md. The bug entries are in C:\CE_PLAN\BUG_CARPARK.md (search BUG-<number>). The setups are in cases\_setups\.
+
+GROUND TRUTH LEARNED ON 3.0.87 AND 3.0.88 (use it).
+1. Read C:\CE_PLAN\areas\OPUS_PAPER_REVIEW_C78_31OCT.md section 2 (facts that apply to many cases): pipe ends move 225 mm into the pit wall; New Pipe does not recall the last pipe on this PC (it opens on Standard grade, 100 mm, levels 1.10 / 1.20); the Grade mismatch window opens only when Set my own grade is chosen, both levels are typed, work-out is off and the typed fall is more than 10 percent off either way; while any CE window is open every key is refused; a typed pipe flatter than 1 in 100 over its length is blocked on 3.0.87 and later UNLESS the case chooses Standard grade (check what the case does).
+2. A level map made for a 20 m pipe is wrong for a 10 m pipe (R39v87 failed twice: the label read 1 IN 50, then a leftover IL 17.800 assertion). Redo the arithmetic for every pipe length in your cases.
+3. After a STRETCH or MOVE the end level follows the longer or shorter pipe at the same grade (N41v87: IL 17.78, not 17.800).
+4. The driver refuses PRINT, SAVE, QSAVE, OPEN, NETLOAD; ent-read needs a HANDLE (read it first with 'field $list handle'); 'field' on an empty selection stops the case; after commands that redraw a whole network the new objects can be regions, not polylines; control ids must be known (C:\ce-fx\c75regrade3\check_ids.ps1 -Folders drafts_wave1_31oct says every control id is known or lists the unknown ones).
+5. The first CDRG on the standard fixture prints RG2 (the drawing already holds RG1).
+6. A CE window or prompt left open after a command blocks the next step and the next cases ('AutoCAD busy'); every case must close what it opens (known ui-press, Esc, or wait).
+7. A Team writer's visible console used to steal the foreground from AutoCAD; not your concern.
+
+FOR EACH CASE (and its twin):
+(a) Read it fully. List every step that sends a key while a window or prompt may be open; say which, and whether the case closes it by a known press, Esc or wait.
+(b) For every assertion that holds a word, number or level: show where it comes from in the code at 3fbb9da5 (file and line) or mark UNSOURCED; work out every level, length and count with arithmetic and compare with the case.
+(c) Does the set-up reach the state the case needs (right fixture, right setup, setting values, a pit where one is needed)? Does the case prove THE BUG named, and would it pass on a build WITHOUT the fix (then it proves nothing)? Does the twin break exactly one thing and fail on a CHECK, not on a stalled step?
+(d) Run validate and check_ids on the folder once at the start; note any file not clean.
+(e) Verdict, one of: READY TO RUN, FIX FIRST (give the exact line and the exact replacement text), NOT RUNNABLE (say why), or NEEDS A CODEX LOOK (a picture, a mouse drag or a window layout the robot cannot read).
+
+REPORT FILE: C:\CE_PLAN\areas\WAVE1_REVIEW_<your letter>_REPORT.md . Answer first: counts of READY TO RUN, FIX FIRST, NOT RUNNABLE, NEEDS A CODEX LOOK; name the three riskiest cases and why. Then per case one short numbered entry with file name and line numbers.

@@ -1,0 +1,3 @@
+You are a Wave 1 paper reviewer, job letter RE. Read C:\CE_PLAN\desk_jobs\WAVE1_REVIEW_BRIEF.txt in full and do exactly what it says.
+YOUR CASES: those written by writer letters E1, E2, E3, E4 (bugs 223, 261, 278, 292, 324, 339, 652, 653, 654, 655, 656, 657, 687, 688, 689, 682). Find the case ids in the writer reports C:\CE_PLAN\areas\WAVE1_WRITING_<letter>_REPORT.md and the files in C:\Lisp Files\_ACAD_DRIVER\cases\drafts_wave1_31oct\ (W<bug number>... and W<bug number>_BROKEN).
+Your report file: C:\CE_PLAN\areas\WAVE1_REVIEW_RE_REPORT.md . Your final message: the first 12 lines of your report's answer-first section.
