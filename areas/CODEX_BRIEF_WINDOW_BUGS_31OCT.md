@@ -33,3 +33,6 @@ No cards written yet. Check each entry against the current build first; some may
 
 ## Added 31 Oct 19:55 (from job n3, BUG-343 item 4)
 10. **Repair Center buttons are cut off (BUG-343 item 4).** A window layout fault in the Repair Center; the exact wording of the fault and the one-line questions for Tim are in `areas\BUGFIX_n3_REPORT_31OCT.md` (section on BUG-343). Check the entry against the current build first (the item may be overtaken). Tim approves wording only. Needs a B number from CE 01.
+
+## Added 31 Oct 21:00 (from job n6, BUG-1108)
+11. **CDDESIGN: a box for the detention litres.** Manningham's 2,000 L minimum is now tested against the reuse share of the tank (tank less detention litres), but CDDESIGN has no box that feeds the detention litres, so the credit reads exactly as before until the box exists. This is a window change (a new field in CDDESIGN); the builder's brief is in `areas\BUGFIX_n6_REPORT_31OCT.md`. Needs a B number from CE 01 and Tim's wording.
