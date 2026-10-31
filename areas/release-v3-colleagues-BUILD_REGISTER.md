@@ -436,3 +436,23 @@ Civil C-79 candidates now: #1857, #1868, #1874, #1875, #1876, #1872, #1878, #188
 - **#1932 = B-106 (x7) BUG-1132 / BUG-818 (names only): the section list takes the supplier names, and old CEMEMBER beams still redraw (switch ON), head 5813608b.** 250UC73 is renamed 250UC72.9, so 35 rows are renamed; mass 73.0 and sizes unchanged; 250UC73 is kept as an old name so old beams still redraw. All 35 new UB and UC names match the corrected list Tim approved, 0 differences (CE 05). **Caveat for the reviewer: Tim's own 19 Oct check covered only TWO rows (310UB32.0 and 250UC72.9); the other 33 rest on decision 60 (QUESTIONS item 100). This is engineering data: the reviewer must confirm the rename list against the supplier table, and Tim's word still applies if any row is in doubt.** Tests 30 of 30.
 - **#1933 = B-107 (z1) BUG-626: FFL asks "Level source [Manual/Unknown] <Manual>"; Manual asks for the value as before, Unknown asks nothing more and writes the plain word Unknown; the triangle, tail and value follow the cursor, F flips the side, a click places it, Escape draws nothing; switch Annotation.FflOffersSourceAndPreview ON (OFF gives the old prompts exactly); RL, SSL, NGL and LM unchanged; the locked-layer and REFEDIT stops are kept; head 8dcd66c5.** Tests 22, 52 and 54 pass; net48 compiles. The preview needs a Codex look (a live window/preview). #1736 touches the same file (already in the start point). Report areas\BUGFIX_z1_REPORT_31OCT.md.
 **z2 (B-108, FFL group) started on Max ~18:00, stacked on #1933.** CE 05's planner is ranking a new tranche; the batch list follows. Next free B number: **B-115**.
+
+191. **#1934 = B-108 (z2) BUG-627, FFL triangle, tail and value move as one AutoCAD group, switch Annotation.LevelMarkGroupsComponents ON (OFF gives three loose objects); head 85a7e636, draft, base claude/z1-ffl-source-preview (the branch of #1933 / B-107: STACKED, merge #1933 first), GitHub MERGEABLE (CE 05 ~18:10; head and base read with gh by CE 01).** The three parts go into one anonymous group in the same transaction that draws them, in the new preview flow and the old one. 78 of 78 focused Structural tests pass; net48 compiles. Not tested in AutoCAD. Robot cases Z2_ffl_group and Z2_ffl_group_off. Report areas\BUGFIX_z2_REPORT_31OCT.md. CE 05 also notes Civil's CD_Settings.json changed during the job (15,298 bytes at 18:00, back to 15,270 dated 4 Oct): the open AutoCAD session or the robot, not their jobs (consistent with the robot's settings guard).
+
+192. **NEW TRANCHE, fifteen batch jobs n1 to n15 (CE 05, per CE 00's "fill the pipe"; plan areas\NEXT_TRANCHE_31OCT.md: 15 batches, 53 bugs; job texts desk_jobs\team_fix_n1.txt to n15 (15 files checked present)). ONE B number per batch, as CE 05 asked; every PR of a batch carries that batch's B number.** CE 05 started n1 and n2 on Max at 18:10 without waiting for numbers (their PRs get renamed to the B number).
+- **B-115 = n1** Pit Schedule truth (BUG-540, 1197, 1155).
+- **B-116 = n2** Manager colleague pack and start-up lines (BUG-1173, 1172, 1244, 1261).
+- **B-117 = n3** Edit Pipe batch editor and grade lock.
+- **B-118 = n4** lock, copy and damaged-record safeguards.
+- **B-119 = n5** Edit Pipe follow-up (after n3).
+- **B-120 = n6** CDDESIGN.
+- **B-121 = n7** Redesign Apply.
+- **B-122 = n8** survey and import lines.
+- **B-123 = n9** weekly tools.
+- **B-124 = n10** after-MOVE tidy (first half).
+- **B-125 = n11** after-MOVE tidy (second half).
+- **B-126 = n12** metre leftovers.
+- **B-127 = n13** Inspector.
+- **B-128 = n14** Structural (base claude/rel-20261026s).
+- **B-129 = n15** the 2022 to 2024 (net48) lane.
+Batch contents are as named in CE 05's batch map; the authoritative list is areas\NEXT_TRANCHE_31OCT.md section A (CE 01 has read its section headings and counts only, not the 53 bug entries). Rules for all: warn not block, Settings-first, nothing bypasses locked layers, Xrefs or REFEDIT, every title starts with its B number, new folders under C:\CE_WORK\build. Settings-engine or loader changes: area plus N91. Next free B number: **B-130**.
