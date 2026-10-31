@@ -43,5 +43,5 @@
 
 1. **Worktree** C:\CE_WORK\build\n15 cleaned (`git clean -fdXq`, `git worktree remove`) at 20:54 Melbourne. Scratch folder C:\CE_WORK\scratch\n15 (22.6 MB of logs) removed after this report.
 2. **C: free space:** 31.76 GB at start, 29.24 GB just before cleanup, 29.68 GB after the worktree went. The net effect on C: from my work is small and hidden by other jobs building at the same time, so I cannot quote a clean figure. The worktree and its build folders were the only large thing I made.
-3. **Finished:** Saturday 31 October 2026, about 20:58 Melbourne time (the real clock read 20:54:44 at worktree removal).
+3. **Finished:** Saturday 31 October 2026, 20:55 by the PC clock (20:54:44 at worktree removal).
 4. BUG_CARPARK.md not edited. AutoCAD, Codex and accoreconsole not started by me. No installed bundle or settings file touched.
