@@ -12420,6 +12420,8 @@ Note (CE 05, Sat 31 Oct 2026, CORRECTION from CE 02): the 15:07 PASS above was a
 
 Note (CE 05, Sat 31 Oct 2026): Tim said "10yes" (decision item 127): the Inspector, Civil Hub and repair check will measure cover to the outside top of the pipe, as CDRULES does. Follow-up job w4 queued (starts from the #1897 branch) for after the 14:00 Team reset. Still OPEN: #1897 is a draft, not opened in AutoCAD.
 
+Note (CE 05, Sat 31 Oct 2026, job x3): driveway and footpath cover rows already add a slab thickness in the Civil C-78 line (setting minCoverPavedSlabMm, blank = 100 mm, in UserSettings.cs; rule MinCoverFor in Rules/RulebookValues.cs; commit 8f2d61cd, 29 Oct; tests Gb01Slice2CoverTableTests.cs). Tim's "7yes" (decision 154) is therefore already built: no new PR; B-102 is not used. File-only (no Settings page box) and there is no separate 75 mm reinforced-concrete row. Still not seen in AutoCAD.
+
 ## BUG-904
 
 **Command / Area:** CDDESIGN storm sweep, ledger F-049.
