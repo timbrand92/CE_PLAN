@@ -46,10 +46,10 @@ $dll = "$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Wi
 $env:CE_RUNNER_TIM_AWAY = '1'
 $pr = 'C:\ce-fx\c75regrade3'
 $spec = $null
-foreach ($sp in 'spec_passc', 'spec_passe') { $pf = Join-Path $pr "progress_$sp.txt"; $done = (Test-Path $pf) -and (@(Get-Content $pf -Tail 3) -match 'ALL DONE').Count -gt 0; if (-not $done) { $spec = $sp; break } }
+foreach ($sp in 'spec_passc', 'spec_passe', 'spec_passg') { $pf = Join-Path $pr "progress_$sp.txt"; $done = (Test-Path $pf) -and (@(Get-Content $pf -Tail 3) -match 'ALL DONE').Count -gt 0; if (-not $done) { $spec = $sp; break } }
 if ($spec -and (Get-Date) -lt [datetime]'2026-11-02 07:45') {
   L "restarting chain4 on $spec.txt (build $ver; finished packs are skipped)"
-  Start-Process pwsh -WindowStyle Hidden -ArgumentList '-NoProfile','-File','C:\ce-fx\c75regrade3\chain4.ps1','-SpecFile',"C:\ce-fx\retest\$spec.txt",'-ExpectBuild',$ver,'-StopFirst','2026-11-02 08:00','-StopAll','2026-11-02 08:20'
+  Start-Process pwsh -WindowStyle Hidden -ArgumentList '-NoProfile','-File','C:\ce-fx\c75regrade3\chain4.ps1','-SpecFile',"C:\ce-fx\retest\$spec.txt",'-ExpectBuild',$ver,'-StopFirst','"2026-11-02 08:00"','-StopAll','"2026-11-02 08:20"'
 } else { L "no pass restart (spec=$spec, after 07:45 or all done)" }
 L 'Batch A6 ends.'
 Set-Content 'C:\CE_PLAN\desk_jobs\CODEX_NEXT.txt' '2026-11-02T19:00 A3 (wave 1 nine looks, after the C-79a install, needs CE 00 written GO); then B Tue 3 Nov 09:00; C Wed 4 Nov 19:00'
