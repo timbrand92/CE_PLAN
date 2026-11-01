@@ -50,3 +50,9 @@ The 7 real looks (4 more PRs are settled by the reviewer's logic evidence: #1868
 1. **W234 (wave 1, BUG-234: a flat pipe MOVEd onto two pits records the right pit pair)** is a CODEX LOOK for batch C (Wed 4 Nov 19:00), not a robot proof. The robot case W234 is marked BLOCKED and is NOT counted (one pass of its own before the block); W234_BROKEN stays out of the reruns.
 2. **Diagnosis (probe PROBE-W234, 17:37):** after Start Pipe on the flat pipe CE opens 'Creative Engineering | Design Warnings' (14 controls). The driver cannot press it: v2 ui2-press times out (HARD TIMEOUT), v3's press list is pinned and has no such window. A new pressed window would be a change to the test tooling and is Tim's call (CE 00 will put it to him later, optional).
 3. **What Codex must do:** place the two pits, draw the flat pipe (the same levels at both ends), press OK on Design Warnings, MOVE the pipe onto the other two pits and read that the flow line records the pit pair named in the case (steps and expected words are in cases\drafts_wave1_31oct\W234_flat_pipe_moved_onto_other_pits.case.txt).
+
+## Added Sun 1 Nov 21:3x (CE 00): decision 186 and W234
+
+1. Tim said yes to item 118 (robot may press OK on the Design Warnings box). Decision 186, decisions/2026-10-29_TIM_ANSWERS.md.
+2. Timing is unchanged: no driver or allow-list edit before the 9 Nov release. After it, one reviewed edit (title 'Design Warnings*', button 'OK', pin updated, new fingerprints reported) goes to CE 00 for review first.
+3. Until then W234 stays a Codex look in batch C (Wed 4 Nov 19:00).
