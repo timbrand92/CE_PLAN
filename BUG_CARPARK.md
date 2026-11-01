@@ -17974,3 +17974,17 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 - Note (CE 05, Sun 1 Nov 2026): root cause by rc1 (areas\ROOTCAUSE_BUG1268_CDCALC_XLSX_01NOV.md): about 75 per cent the Save As window returned "not saved" and CDCALC treats that like Cancel (silent return at CalculationsV2ViewModel.cs:846, no message, no log); the Excel writer (#1871) never ran. Design fault ~95 per cent: CDCALC never says "saved", never checks the file, and has no starting folder (Pit Schedule has both). CE 00 approved the smallest fix 16:50: build q11 / B-157, switch excel.confirmCalcXlsxSaved ON; log lines always. NOT proven: why Windows returned "not saved" (box opened partly off the captured area); stays open. Codex look K1-02b follows. Status unchanged (OPEN).
 
 ---
+
+---
+
+## BUG-1269 — Cascade Preview window never shows the junction warning (Recalculate downstream inverts); the warning only appears in the command line after Apply
+
+**Command / Area:** Edit Pipe, "Recalculate downstream inverts", Cascade Preview window (PropagationPreviewDialog). MEDIUM. Found by Codex look S5-03 (case W655, build 3.0.88), 2 Nov 2026, reported by CE 00 about 09:00.
+
+**Symptom:** With a pit that has a second, lower pipe arriving, the preview before Apply shows the new levels but NO junction warning. The outlet stayed at 17.88 / 17.78 (correct, the BUG-655 behaviour holds) and the completion line after Apply named the lower arriving pipe, but a drafter deciding in the preview is not told that the pipe leaving the pit will follow the lower level. Also possibly a label (P82) partly hidden in one picture (Y4); unconfirmed, may be the drawing and not the window.
+
+**Expected behaviour:** The warning text the plan already builds ("Pit X: pipe P-nn arrives at 17.88, lower than the 18.xx this change brings, so the pipe leaving the pit follows the lower level.") shows inside the Cascade Preview before Apply, in the warnings area under the pit table, in warning colour. Warn and carry on: it never blocks Apply (R-27).
+
+**Reference:** Code read at origin/claude/rel-20261102a by CE 05, 2 Nov: LinkService.RepairAudit.InvertPropagation.cs line 416 builds the warning ("JunctionLowest"); PropagationPreviewViewModel.cs line 183 copies every plan warning into its Warnings list; Dialogs/PropagationPreviewDialog.xaml line 163 is commented "Warnings / errors" but binds only Errors, and nothing in the window binds Warnings. So every plan warning (junction, unknown level, no grade, mixed units, velocity text) is hidden in the preview. Not run in AutoCAD by me; Codex saw the symptom.
+
+**Status:** OPEN. Fix-ready: switch preview.showsPlanWarnings, ON, and a robot/Codex case on W655 (made-up junction). Queued on Team as job 220 (B-161 provisional). Never FIXED until the ledger accepts it by name.
