@@ -16,6 +16,7 @@ $env:CE_RUNNER_TIM_AWAY = '1'
 & pwsh -NoProfile -File 'C:\ce-fx\c75regrade3\chain4.ps1' -SpecFile 'C:\ce-fx\retest\spec_wave1.txt' -ExpectBuild $ver -StopFirst '2026-11-02 08:00' -StopAll '2026-11-02 08:20'
 L 'wave 1 chain ended'
 $f = "$d\STOP_CODEX.flag"
-if ((Test-Path $f) -and ((Get-Content $f -Raw) -match '^CE 02 chain4')) { Remove-Item $f -Force; L 'STOP_CODEX.flag lifted' }
+# 1 Nov 13:40 (CE 00): never delete the Codex hold at a hand-back; only when wave 1 is really over (Mon 2 Nov 08:20 or later)
+if ((Test-Path $f) -and ((Get-Content $f -Raw) -match '^CE 02 chain4') -and ((Get-Date) -ge [datetime]'2026-11-02 08:20')) { Remove-Item $f -Force; L 'STOP_CODEX.flag lifted' }
 & pwsh -NoProfile -File "$d\start_lanes.ps1" *> $null
 L 'start_lanes run; done'
