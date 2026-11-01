@@ -51,3 +51,8 @@
    3. The restore leaves a prior drafter's "registry memory" state to `FoundationRegistryMemory` (line 84 of that file skips the U family); I did not change it.
 8. **Not done:** no Settings window row; no U handling; no change to `BUG_CARPARK.md` or `DESK_LOG.md` (per rules). Bug stays OPEN.
 9. **Clean-up:** done after this file was pushed; see the line at the very end.
+
+## Clean-up result
+
+1. Worktree `C:\CE_WORK\build\t3` cleaned (`git clean -fdXq`) and removed; the branch `claude/bug300-oops-restores-outline` is kept (PR #1988). C: free moved from 43.16 GB to 43.40 GB (0.24 GB).
+2. **My mistake:** the scratch folder removal also deleted the two AppData listing files named in technical item 5, so the full listings no longer exist; the changed-file list in item 5.1 (from the comparison I ran first) is the record. The scratch folder itself could not be fully removed: this job's own tool-output file under `C:\CE_WORK\scratch\t3\tmp\claude` is held open by the running session. It holds only that session's output files.
