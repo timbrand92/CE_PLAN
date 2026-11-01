@@ -73,4 +73,4 @@
 ```
 
    Reading: every changed file is a log, session, usage-outbox or recent-values file written by a real AutoCAD session with the CE plugins loaded (Civil and Manager files included, which no Structural unit test touches). It started before my first test and ended at 22:33:06. My run could not have written them, and my scratch log folders held no files afterwards. I am stating it because the rule says to; I have not proven it beyond this.
-8. **Cleanup:** worktree `C:CE_WORKbuildq10` and scratch `C:CE_WORKscratchq10` removed (`git clean -fdXq`, `git worktree remove`). C: free was about 44 GB at the start and is 44,729 MB now; I lost the exact before-cleanup figure (the tool output file sat inside the scratch folder I deleted), so I cannot state how much the cleanup freed.
+8. **Cleanup:** worktree `C:\CE_WORK\build\q10` and scratch `C:\CE_WORK\scratch\q10` removed (`git clean -fdXq`, `git worktree remove`). C: free was about 44 GB at the start and is 44,729 MB now; I lost the exact before-cleanup figure (the tool output file sat inside the scratch folder I deleted), so I cannot state how much the cleanup freed.
