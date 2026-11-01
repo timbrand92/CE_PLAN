@@ -17,7 +17,7 @@ if ((Usage) -ge 43) { L 'Codex usage 43 percent or more: not started'; exit }
 while ((HumanIdle) -lt 600 -or (Test-Path "$d\TIM_AT_PC.flag") -or (Test-Path "$d\PAUSE_BATCH_A.flag")) { if ((Get-Date) -ge $end) { L 'window closed'; exit }; Start-Sleep 30 }
 Set-Content "$d\HOLD_ROBOT.flag" "CE 00 GO $(Get-Date -Format 'ddd HH:mm'): Codex batch A3 (CE 00 GO 04:00) (written by the batchA7 script). batchA7_codex.ps1 removes this flag when it ends."
 $roller = Start-Job -ScriptBlock { while ($true) { Set-Content 'C:\CE_PLAN\desk_jobs\ROBOT_STOP_AT.txt' ((Get-Date).AddMinutes(1).ToString('yyyy-MM-dd HH:mm')); Start-Sleep 15 } }
-$tw = Get-Date; while (Get-Process acad -ErrorAction SilentlyContinue) { if (((Get-Date) - $tw).TotalMinutes -gt 30) { L 'AutoCAD still running after 30 minutes: stopped'; Stop-Job $roller; Remove-Item "$d\HOLD_ROBOT.flag", "$d\ROBOT_STOP_AT.txt" -Force -ErrorAction SilentlyContinue; exit }; Start-Sleep 20 }
+$tw = Get-Date; while ((Get-Process acad -ErrorAction SilentlyContinue) -or (@(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'pwsh' -and $_.CommandLine -match 'chain4|case_runner' }).Count -gt 0)) { if (((Get-Date) - $tw).TotalMinutes -gt 60) { L 'robot or AutoCAD still busy after 60 minutes: stopped'; Stop-Job $roller; Remove-Item "$d\HOLD_ROBOT.flag", "$d\ROBOT_STOP_AT.txt" -Force -ErrorAction SilentlyContinue; exit }; Start-Sleep 20 }
 # the robot's settings guard restores Tim's files a few seconds AFTER its AutoCAD ends: wait (up to 5 minutes) until the guard file is gone and the three settings files read their known originals, then back up
 $knownW = @{ 'TIM_CE_CADTOOLS\CD_Settings.json' = 'ACD64E79A33B'; 'CE_STRUC_SUITE\CS_Settings.json' = 'D604CE689671'; 'CE_CVL_SUITE\settings.json' = 'EFE307C4FC74' }
 $tr = Get-Date
@@ -51,7 +51,7 @@ $env:CE_RUNNER_TIM_AWAY = '1'
 $pr = 'C:\ce-fx\c75regrade3'
 $spec = $null
 foreach ($sp in 'spec_passc', 'spec_passe', 'spec_passg', 'spec_passh', 'spec_passi', 'spec_passj') { $pf = Join-Path $pr "progress_$sp.txt"; $done = (Test-Path $pf) -and (@(Get-Content $pf -Tail 3) -match 'ALL DONE').Count -gt 0; if (-not $done) { $spec = $sp; break } }
-if ($spec -and (Get-Date) -lt [datetime]'2026-11-02 21:45') {
+if ($spec -and -not (@(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'pwsh' -and $_.CommandLine -match 'chain4' }).Count -gt 0) -and (Get-Date) -lt [datetime]'2026-11-02 21:45') {
   L "restarting chain4 on $spec.txt (build $ver; finished packs are skipped)"
   Start-Process pwsh -WindowStyle Hidden -ArgumentList '-NoProfile','-File','C:\ce-fx\c75regrade3\chain4.ps1','-SpecFile',"C:\ce-fx\retest\$spec.txt",'-ExpectBuild',$ver,'-StopFirst','"2026-11-02 08:00"','-StopAll','"2026-11-02 22:30"'
 } else { L "no pass restart (spec=$spec, after 07:45 or all done)" }
