@@ -17988,3 +17988,14 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Code read at origin/claude/rel-20261102a by CE 05, 2 Nov: LinkService.RepairAudit.InvertPropagation.cs line 416 builds the warning ("JunctionLowest"); PropagationPreviewViewModel.cs line 183 copies every plan warning into its Warnings list; Dialogs/PropagationPreviewDialog.xaml line 163 is commented "Warnings / errors" but binds only Errors, and nothing in the window binds Warnings. So every plan warning (junction, unknown level, no grade, mixed units, velocity text) is hidden in the preview. Not run in AutoCAD by me; Codex saw the symptom.
 
 **Status:** OPEN. Fix-ready: switch preview.showsPlanWarnings, ON, and a robot/Codex case on W655 (made-up junction). Queued on Team as job 220 (B-161 provisional). Never FIXED until the ledger accepts it by name.
+## BUG-1270
+
+**Command / Area:** CDSYNC then Pit Schedule and level text (Civil 3.0.88), found by Codex look S2 rerun, case R13 (2 Nov 2026).
+
+**Symptom:** After CDSYNC on the test copy, pit P8 PIT DEPTH changed from 1.00 to 1.10 m, the inlet level texts changed from 17.900 to 17.90 (P11 17.800 to 17.80), and the check banner went from 99 to 97 issues. BUG-698 and robot tool C42 say CDSYNC leaves the schedule unchanged.
+
+**Expected behaviour:** CDSYNC changes no schedule row and no level text format (three decimals stay three).
+
+**Reading by CE 05 (code read only, not run):** CDSYNC (LinkCommands.cs) relinks, then ProjectDataService.SyncWithDrawing and UpdatePipeEndpointsFromProjectData. The depth change is plausibly BUG-869 (pit-floor depth, merged into this line as PR #1660, drawn cell kept until Update placed schedule), but that should NOT move a cell on CDSYNC alone, so treat as unexplained. The 3-to-2 decimal change has no ruling in the carpark or INT rulings and looks like a defect. Not fix-ready: cause not found. Related: BUG-698, BUG-855 (banner count), BUG-869.
+
+**Status:** OPEN. Needs a robot read-only before/after diff of P8 depth and the IL texts on 3.0.88 to separate the two changes, then a fix job.
