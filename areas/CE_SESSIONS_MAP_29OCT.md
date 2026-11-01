@@ -110,3 +110,13 @@ Tim: "using max subscription is perfectly fine the single rule for this is to ma
 1. **Rule:** Max background agents (Opus reviews, Sonnet builders, case drafting) run whenever there is work; no concurrency cap. The only limits are the weekly pace and the 5-hour window.
 2. **Pace:** Max week resets Fri 6 Nov 13:00. Keep the Max week at or under about 6 percent plus 14 points a day from Fri 30 Oct 19:45 (about 20 Sat evening, 34 Sun, 48 Mon, 62 Tue, 76 Wed, 90 Thu, 100 at the reset) and the 5-hour window under 90 percent. Team week resets Sat 31 Oct 14:00 (spend it first); Codex follows CAP_RAMP.txt.
 3. **Keep moving:** no lane waits for another's slot. If Team is over a guard the work runs on Max. CE 00 reads all three meters at every hourly check and tells the lanes when pace allows more.
+
+## Rule 20: Team and Codex are never forgotten (Tim, Sun 1 Nov 2026, night)
+
+Tim: "this happens far far too much where 'oops i forgot about team and codex' make it a rule, dont forget them. MAKE IT HAPPEN. Im sick of managing you on this". Cause on 1 Nov: Team sat idle 4 hours after q11 ended (17:00 to 21:42), AutoCAD sat idle from 21:36 with empty queues, and the desk's checks read meters but never asked whether each lane was working.
+
+1. **Rule:** at every moment Team has a job running or queued, Codex has a look batch running or scheduled with a date and time, and AutoCAD has a pack running. The only allowed alternatives are a written reason in the DESK_LOG (with the time it ends) or Tim being at the PC.
+2. **Machine check, no Claude usage:** `C:\CE_PLAN\desk_jobs\lane_watch.ps1` (started by WMI, every 10 minutes) writes `C:\CE_PLAN\desk_jobs\LANE_STATUS.txt`. Any line starting ALERT is an order, not information: Team idle 30 minutes or more means CE 05 launches the next fix job; Codex idle 4 hours or more means CE 02 proposes the next look batch and CE 00 gives or refuses it in writing the same hour; AutoCAD not running means CE 02 starts a pack.
+3. **Every check reads it:** every CE 00, CE 01, CE 02, CE 05 and CE 07 check opens LANE_STATUS.txt first, acts on each ALERT in that same check, and says what it did. CE 00 puts one line per lane (Team, Codex, AutoCAD) at the top of every message to Tim.
+4. **Codex is never idle by default:** STOP_CODEX is a hold for one named window, not a resting state. CE 00 keeps a dated next Codex batch at all times and never leaves the flag up with no batch planned. Codex weekly cap and pace (CAP_RAMP.txt) still apply.
+5. **Restart:** if lane_watch.ps1 is not running (check by name at every CE 00 check) CE 00 restarts it by WMI.
