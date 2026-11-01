@@ -751,3 +751,9 @@ Tim's words: "1yes, 2yes, 3yes, 4yes, 5yes, 6yes, 7yes, 8yes, 9yes, 10yes". Inte
 183. **Downloads (BUG-553, 554): yes.** CEMARKUPRUN's automatic software download OFF by default; installer checks the WebView2 signature or bundles it. Desk must: card first for the installer change.
 184. **Time-log files named after the Windows login (BUG-492): yes, keep.** No change.
 185. **CEMEMBER (BUG-909, 910, 1124, 1125): yes to all four.** 909 section follows the UCS; 910 break marks follow paper scale on layouts; 1124 any UA leg may stand upright, CE asks which when the angle is unequal; 1125 add an orientation question for RHS laid flat. Desk must: put these on the CEMEMBER card batch; 1125 overrides his earlier "one orientation" (GUESS: he is happy to add the question; say so on the card).
+
+## Voice batch 9 (1 Nov 2026)
+
+Tim's words: "yes" (a single word, sent right after the message that listed item 118 as the last question). Interpretation (GUESS, flagged): it answers item 118 only, the last single yes/no question asked. It cannot answer 116 (needs a number), 117 (a, b or c) or the multi-question batches 4, 5, 7, 8, which stay OPEN.
+
+186. **Robot may press OK on the "Design Warnings" box (item 118): yes, later, after 9 Nov.** GUESS: Tim did not say "later"; the later timing is CE 00's recommendation, applied because the question said no answer was needed for 9 Nov. Desk (CE 00) must: after the 9 Nov release, make one reviewed edit to the robot's approved-windows list (fingerprinted driver file, same conditions as the record-set verb); W234 stays a Codex look on Wed 4 Nov until then.
