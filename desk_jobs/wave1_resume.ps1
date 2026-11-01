@@ -4,10 +4,11 @@ function L($t) { Add-Content $log ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm:ss'
 function Running($pat) { @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'pwsh' -and $_.CommandLine -match $pat }).Count -gt 0 }
 function Prog($tag) { (Test-Path 'C:\ce-fx\c75regrade3\progress_spec_wave1.txt') -and ((Get-Content 'C:\ce-fx\c75regrade3\progress_spec_wave1.txt') -match "^$tag (done|skipped)").Count -gt 0 }
 L 'wave1_resume started'
-$specs = 'C:\ce-fx\retest\spec_wave1.txt', 'C:\ce-fx\retest\spec_wave1_retry.txt'
+$specs = 'C:\ce-fx\retest\spec_wave1_retry.txt'   # 1 Nov 16:25: spec_wave1 is ALL DONE (14:42); a chain4 started on a finished spec starts it again from its first pack, so only the unfinished retry spec is run
 $end = [datetime]'2026-11-02 08:20'
 $idle = 0
 while ((Get-Date) -lt $end) {
+  if ((Test-Path 'C:\ce-fx\c75regrade3\progress_spec_wave1_retry.txt') -and (@(Get-Content 'C:\ce-fx\c75regrade3\progress_spec_wave1_retry.txt') -match '^ALL DONE').Count -gt 0) { L 'retry spec ALL DONE: wave1_resume ends'; break }
   Start-Sleep 60
   $near13 = ((Get-Date) -ge [datetime]::Today.AddHours(12).AddMinutes(30))
   $held = (Running 'chain4\.ps1') -or ((Running 'batchA_codex\.ps1') -and $near13) -or (Test-Path "$d\HOLD_ROBOT.flag") -or (Test-Path "$d\PAUSE_WAVE1_ROBOT.flag") -or (Test-Path "$d\CLOSED_WINDOW_NOTICE.txt") -or (Test-Path "$d\ROBOT_STOP_AT.txt")
