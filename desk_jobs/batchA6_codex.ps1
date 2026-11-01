@@ -46,7 +46,7 @@ $dll = "$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Wi
 $env:CE_RUNNER_TIM_AWAY = '1'
 $pr = 'C:\ce-fx\c75regrade3'
 $spec = $null
-foreach ($sp in 'spec_passc', 'spec_passe', 'spec_passg', 'spec_passh') { $pf = Join-Path $pr "progress_$sp.txt"; $done = (Test-Path $pf) -and (@(Get-Content $pf -Tail 3) -match 'ALL DONE').Count -gt 0; if (-not $done) { $spec = $sp; break } }
+foreach ($sp in 'spec_passc', 'spec_passe', 'spec_passg', 'spec_passh', 'spec_passi') { $pf = Join-Path $pr "progress_$sp.txt"; $done = (Test-Path $pf) -and (@(Get-Content $pf -Tail 3) -match 'ALL DONE').Count -gt 0; if (-not $done) { $spec = $sp; break } }
 if ($spec -and (Get-Date) -lt [datetime]'2026-11-02 07:45') {
   L "restarting chain4 on $spec.txt (build $ver; finished packs are skipped)"
   Start-Process pwsh -WindowStyle Hidden -ArgumentList '-NoProfile','-File','C:\ce-fx\c75regrade3\chain4.ps1','-SpecFile',"C:\ce-fx\retest\$spec.txt",'-ExpectBuild',$ver,'-StopFirst','"2026-11-02 08:00"','-StopAll','"2026-11-02 08:20"'
