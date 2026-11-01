@@ -3764,6 +3764,8 @@ History: previous status was: OPEN (Codex W6 result record; each finding is trac
 
 **Codex verifyW4 result (4 Oct 00:54-01:26 PC clock, 13% -> 15%): W4-01 BLOCKED (input fault: keys went to the AutoCAD parent window and Esc closed the schedule; Revert fix on P3 still NOT proven), W4-02 PASS as a reading (BUG-386), W4-03 FAIL (BUG-385), W4-04 PASS in substance (the brief wrongly expected both pipes' labels to change: only the selected pipe P8 -> P11 became "300 DIA. UPVC PIPE AT 1 IN 100", P11 -> P12 stayed 225, as designed; "Pipe updated."; CLAYER/OSMODE/DBMOD unchanged; one U restores 225; no Design Warnings window appeared).** END OSMODE 5375 = START, SAVETIME unchanged. CD_Settings.json written 7 times by CE during the pass (BUG-306 family; hash changed ACD64E79 -> 67270C52, 15,270 -> 15,273 bytes); Structural settings unchanged.
 
+- Note (CE 05, Sun 1 Nov 2026): tranche 2 batch q4 (B-147) built NOTHING: Tim ruled on 4 Oct (INT-043) "revert row override i think stop overriding", the menu is already "Stop overriding" and the typed cover stays (and 9 Oct Set A item 4 says typed levels wait for Stop overriding). Interpretation, not a verbatim answer, so one question goes to CE 04: typed value stays (recommended) or CE puts its figure back. Report areas\BUGFIX_q4_REPORT_01NOV.md. Status unchanged (OPEN, awaiting Tim).
+
 ---
 
 ## BUG-384
@@ -11538,6 +11540,8 @@ Note (CE 05, Sat 31 Oct 2026): Job s10, 31 Oct: still real; no PR. Needs a decis
 Note (CE 05, Sat 31 Oct 2026, Tim voice batch 3): Tim said "4my block in my standard blocks file" (decision 164). UNCONFIRMED (a guess): the bubble is the SECT MARK block in his standard blocks file. NOT answered: whether the SM card (ST3-9/10) is approved. A draft card is queued (job z4); nothing is built.
 
 Note (CE 05, Sat 31 Oct 2026, Tim decisions 170 to 173): the earlier UNCONFIRMED mark is lifted: Tim confirmed the bubble is the SECT MARK block in his standard blocks file ("assumptions 1yes"), and approved the SM card (ST3-9/10): "sm card approved". Build is under that card. BUG-631 (the link between cut line, bubbles and labels) still needs a design pass inside the card. Still OPEN: not built.
+
+- Note (CE 05, Sun 1 Nov 2026): draft PR #1981 (B-146, Structural, switch Annotation.SectionMarkPreviewThenPlace ON): SM asks number and sheet first, shows the whole mark, waits for Enter, bubble from the SECT MARK block. Built and unit-tested only (42 focused tests); not seen in AutoCAD; the view direction is shown in the preview but not yet applied to the block (block never opened); BUG-631 untouched. Report areas\BUGFIX_q3_REPORT_01NOV.md. Robot case N40_sm_preview_enter with off-control. Status unchanged (OPEN).
 
 ## BUG-631 — Moving the section cut line leaves both bubbles and references behind
 
