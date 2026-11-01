@@ -1,0 +1,24 @@
+I queued ten Team jobs (400 to 409) in `C:\CE_PLAN\desk_jobs\team_queue`. The report is `C:\CE_PLAN\areas\FILL_CODEX_BRIEFS_02NOV.md`. I wrote only the job files and the report. No briefs have been written yet: each job writes one when it runs.
+
+**Looks found:** I found no set of looks named A3, B and C.
+- **A3:** in the 24 Oct triage it means "needs Tim's word", which is not a look, so I briefed nothing for it.
+- **B and C:** my best reading is batches B and C in `CODEX_LOOKS_PLAN_C78_C79_01NOV.md`, which have no briefs. If you meant something else, tell me before the jobs run.
+- **Batch A:** already has briefs (`verifyA78`, `A78b`, `A78c`, `S467`, `K1`), so I did not re-queue it.
+
+**Queued jobs, each writing one `LOOKBRIEF_*_02NOV.md` file in `C:\CE_PLAN\areas`:**
+1. **400:** K1_02b (BUG-1268, draft PR #1983), covering the Enter run, the Save-click run, Cancel, a bad folder, switch off (needs a GO flag) and the Excel look.
+2. **401:** batch B Civil screens: #1857, #1875, #1962 and the CDRULES window answers (#1949, #1887).
+3. **402:** batch B drawing looks (#1888, #1926) and Manager looks (#1876, #1936, #1935).
+4. **403:** batch C Civil Hub looks (#1940, #1945) and drawing edits (#1972, #1892, #1950, #1923).
+5. **404:** W234 and every other robot case blocked for a window, ribbon, second drawing or restart.
+6. **405, 406, 407:** the 27 "judged by eye" bugs in `BUG_PROOF_LANES_31OCT.md` lane B, nine per job. Each job first decides whether the bug is still real on the installed build.
+7. **408:** every other fix that opens an Export, Save As or Open box.
+8. **409:** fixes that need the ribbon, a second drawing, a second monitor or two AutoCAD starts.
+
+All ten are Sonnet. Each job carries the safety paragraph copied word for word from `010_weakcheck_N06v87.txt`. Each tells the worker to use the existing brief style and the driver rules D1 to D12. Each also bars the word "follow" and the folder a box opened in, and sets the evidence folder under `C:\CE_WORK\codex`.
+
+**Not proven:** I checked that the PRs in jobs 400 to 403 exist on GitHub and are open drafts, apart from #1857, whose state didn't print. I did not check the exact on-screen words, the fixtures, or whether the lane B items are still real; the workers do that. Nothing was run in AutoCAD.
+
+**Duplicate risk:** `team_queue_started\021_fill_codex_briefs.txt` is this same job, so another session may already have started it. I found no earlier output, so I carried on.
+
+Final message: C:\CE_PLAN\areas\FILL_CODEX_BRIEFS_02NOV.md, 10 jobs queued (400 to 409), A3 not found as a named look.

@@ -1,0 +1,5 @@
+I wrote `C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK20_02NOV.md`. It classifies 60 entries, BUG-1191 to BUG-1251 (there is no BUG-1221 heading): HAS-DRAFT 35, FIXABLE-NOW 9, NEEDS-TIM 5, UNCLEAR 9, ALREADY-FIXED 2.
+
+The live `C:\CE_PLAN\BUG_CARPARK.md` is damaged. It holds 5 lines, the BUG-791 note pasted three times, after commits 20e999d3 and 5cd059e9. I read the last good copy (commit b498a968) and left the live file alone, so someone should restore it.
+
+I did not check which build is installed in AutoCAD, so no entry is marked installed-waiting-proof.

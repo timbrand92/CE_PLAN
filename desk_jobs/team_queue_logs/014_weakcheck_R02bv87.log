@@ -1,0 +1,7 @@
+`C:\CE_PLAN\areas\ROBOT_WEAKCHECK_REPAIR_R02bv87_02NOV.md`: verdict REPAIRABLE with the robot alone (no Codex look needed), PART claim only. Nothing was run, so the new check is untested.
+
+The old weak line (line 36 of the `.pre_weakfix` file) was `number $b_py = -80112.5 +- 50`. CE 02 already deleted it on 1 Nov.
+
+That left one proof of the join: the flow-line text. The repair also reads the pipe's right edge, which every earlier run recorded at 149775 (the pit wall). The broken twin carries the same check first, so a red result proves that check on its own.
+
+The 149775 figure comes from earlier reports. It has not been checked against the source code. The case needs one robot run and then a fresh independent review, because its text changed.

@@ -1,0 +1,13 @@
+Chunk 1 is classified: `C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK01_02NOV.md` covers all 60 entries, BUG-855 down to BUG-796.
+
+The counts are:
+- **Installed, waiting proof:** 45
+- **Has a draft:** 4
+- **Needs Tim:** 3
+- **Unclear:** 3
+- **Fixable now:** 2
+- **Already fixed:** 2
+- **Closed:** 1
+- **Duplicate:** 0
+
+I did not read the installed DLL version or the source, so "installed" comes from the carpark text and from the commits on the release line.

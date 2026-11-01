@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK18_02NOV.md — 60 entries (BUG-1071 to 1130): 35 HAS-DRAFT, 9 ALREADY-FIXED, 7 FIXABLE-NOW, 6 NEEDS-TIM, 2 UNCLEAR, 1 CLOSED-OR-WONT-FIX. `C:\CE_PLAN\BUG_CARPARK.md` is damaged: commit 20e999d3 cut it to 5 lines, and the last good copy is b498a968. I read the entries from b498a968 and did not touch the live file.

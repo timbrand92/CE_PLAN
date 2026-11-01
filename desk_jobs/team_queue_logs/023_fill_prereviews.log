@@ -1,0 +1,36 @@
+`C:\CE_PLAN\areas\FILL_PREREVIEWS_02NOV.md`: 65 open drafts with a Settings switch had no Opus pre-review, and I queued 58 of them in 15 jobs. I read PR titles, file lists and sizes only. Nothing was built, tested or opened in AutoCAD, and no PR has been judged yet.
+
+**Count:** 1,564 drafts are open and 177 have "switch" in the title. The 65 are the ones left after dropping any PR already named in an Opus review, the two triage files, the other filler reports, or PRs 1975 to 1988. That filter is loose: a PR merely mentioned in one of those files counts as covered. A draft with a switch but no "switch" in its title was not searched for. So the true count could be higher.
+
+**The 15 jobs** are in `C:\CE_PLAN\desk_jobs\team_queue`, files 601 to 615, all `# MODEL: opus`. Each uses the eight questions of `team_fix_rv19.txt` and its safety paragraph, both word for word. I added only a changed PR list, the output name, and a few lines of context in each job. I could not check same-function overlap from file lists alone, so each job tells the reviewer to flag it under question 5.
+
+Output files are `OPUS_PREREVIEW_FILL_<key>_02NOV.md` in `C:\CE_PLAN\areas`.
+
+1. **601 `rec`** (Civil): #1658, #1416, #1419, #1837. #1658 touches a protected file, so this job runs first.
+2. **602 `uphill`** (Civil): #1434, #1435, #1437. This is a stack with Cancel and Undo/REDO behaviour.
+3. **603 `chain`** (Civil): #1562, #1567, #1570, #1558. Each shows a diff of about 6,600 lines, so the job says to review only each PR's own commits.
+4. **604 `long`** (Civil): #1433, #1421, #1432.
+5. **605 `chk`** (Civil): #1525, #1512, #1403, #1407.
+6. **606 `edit`** (Civil): #1417, #1328, #1430, #1429, #1176. This is the Xref and copy-clean-up group.
+7. **607 `detn`** (Civil): #1411, #1305, #1825, #1664.
+8. **608 `older`** (Civil): #1010, #705, #928, #1382, #1513. The job first asks whether each fix is still needed.
+9. **609 `late`** (Civil): #1278, #1297, #1495, #1517, #1180.
+10. **610 `mgr`** (Manager): #1836, #1473, #1515.
+11. **611 `struc`** (Structural): #1794, #1797, #1600.
+12. **612 `old`** (Civil): #487, #610, #398, #406. These are the oldest drafts, so the job also asks whether to close them.
+13. **613 `ps1`** (Civil): #1426, #1425, #1413, #1409, #1431.
+14. **614 `ps2`** (Civil): #1410, #1422, #1420.
+15. **615 `ps3`** (Civil): #1415, #1412, #1424.
+
+**Not queued (7):**
+- #1829 and #1798 are robot-only diagnostics with no drafter change.
+- #1576 is replaced by #1658, and job 601 asks whether it can be closed.
+- #1306, #871 and #954 share files with other queued PRs and need another group later.
+- #441 is too large to review in one go (36,669 lines).
+
+**Slips:**
+- My first `gh` attempt created an empty scratch file in `C:\ce-fx`. I deleted that one file straight away.
+- `gh` and git were not on the tool path, so I called them by full path and added Git's folder for those calls only.
+- Nothing else was written outside the 15 job files and the report.
+
+Final message: `C:\CE_PLAN\areas\FILL_PREREVIEWS_02NOV.md`. Verdict: 65 unreviewed drafts found, 58 queued in 15 Opus jobs (601 to 615), 7 not queued with reasons in the report.

@@ -1,0 +1,40 @@
+# MODEL: sonnet
+WORKFLOW CARD DRAFTS 11 of 15: CIVIL START-UP, MENU, ASK CE AND HELP (Sonnet, Team, read-only). Written by CE 05 Mon 2 Nov 2026 at CE 00's request. You change NOTHING except the output file named below. Edit no other file, run no git write command (read-only git fetch, git log, git show, gh pr list and gh pr view are allowed), do not push (CE 05 pushes), build nothing, run no test, open no AutoCAD, do not run the robot, do not read or write Tim's real settings files, spawn no agents, never touch C:\CE_DrawingIntelligence, never put a key or secret in a file. Read C:\TimOS\RULES.md first (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is read, built, tested and NOT proven). Latest Civil/Manager line: origin/claude/rel-20261102a (git fetch first). Latest Structural line: origin/claude/rel-20261026s.
+
+Output file: C:\CE_PLAN\areas\CARD_DRAFTS_CIVIL_STARTUP_HELP_02NOV.md (do not overwrite; if it exists, stop and say so).
+
+WHY: the repo's AGENTS.md "Mandatory AutoCAD command/workflow review gate" says every user-facing command or workflow that is materially modified needs a concise card BEFORE code is accepted: what works now, what changes, Keep / Modify / Rebuild / Retire / Missing, trigger, prompts, selection, preview, output, Cancel / Escape / Undo, save and reopen, assets, performance, discovery, example drawing, expected result, Tim's checklist. The C-79a and C-79b trains changed these commands, and no change-specific card exists. Older FAMILY cards exist in C:\Lisp Files\CE_ACAD_PLUGIN\docs\CARDS and docs\workflows (CARDS\AI-01_ASK_CE_MCP_AUTOMATION.md, workflows\C6_SHARED_CANONICAL_ASK_CE_2026-09-13.md, FIRST_COLLEAGUE_ISSUE_2026-09-07.md, CARDS\CV-08_REPAIR_MIGRATION.md: read as history, say what they no longer cover).
+
+COMMANDS (draft one card each, 5 cards):
+1. CDMENU and the Repair command check that the Civil menu is really loaded on AutoCAD 2022 to 2024: PR #1957 (BUG-1211, C-79a; clashes in intent with open draft #599, which is not in a train).
+2. CDASK (Ask CE, canonical name CEASK) "From file" picker on AutoCAD 2022 to 2024: PR #1959 (BUG-1214, C-79a; one flaky test of 47 not understood yet).
+3. WSUD export prints "not entered" instead of a blank or zero: PR #1877 (BUG-1112, C-79a). Find the command (CDDESIGN WSUD export) and the exact lines.
+4. Civil Help pages: PR #1896 (BUG-1218, BUG-1220, C-79a). Find which Help pages changed and how a drafter reaches them (CDHELP, ribbon Help button).
+5. Two Save As Xrefs read separately: PR #1925 (BUG-788, existing switch, C-79a) and the X-Civil import CHECK THE SCALE line is on the import card (cross-refer only). Say plainly whether any path writes to an Xref.
+
+SOURCES TO READ: C:\CE_PLAN\areas\OPUS_PREREVIEW_*.md that mention these PR numbers (search the folder for the numbers: the T, X, Y, Z groups and the final re-check OPUS_PREREVIEW_RECHECK_31OCT.md), the BUILD REGISTER C:\CE_PLAN\areas\release-v3-colleagues-BUILD_REGISTER.md, TRAIN_C79A_PR_LIST_2026-10-31.md, release-v3-colleagues-TRAIN_C79A_FINALIZER_REPORT_2026-10-31.md, the carpark C:\CE_PLAN\BUG_CARPARK.md (BUG-1211, 1214, 1112, 1218, 1220, 788), REGRESSION_LOG.md on origin/claude/rel-20261102a (git show) and the code on the line (git grep on the ref). Say which PRs are on rel-20261102a and which only on the later C-79 branches (claude/rel-20261106a, 20261108a, 20261110a, 20261112a).
+
+CARD FIELDS (use these numbered fields in this order for every command; one card per command, each headed "DRAFT FOR TIM: nothing is approved"):
+1. **Name, and what it does for a drafter** (one line, drawing terms).
+2. **Ribbon or trigger** (read the command registry and ribbon files on the line; quote the exact tab, panel, button name or command).
+3. **Works today** (what Keep would protect).
+4. **What the train or PR changes** (PR numbers, switch names, ON or OFF default, read from the PR text and the Settings file code).
+5. **Suggested class: Keep / Modify / Rebuild / Retire / Missing**, with one line why. Suggestion only.
+6. **Prompts and windows** (exact wording where the code has it).
+7. **Selection.**
+8. **Preview.**
+9. **Drawing output** (what is drawn, on which layer, what is NOT touched; locked layers, Xrefs and REFEDIT must stay protected: say what the code does).
+10. **Cancel, Escape, Undo and Redo.**
+11. **Save and reopen.**
+12. **Assets, data and Settings it reads or writes.**
+13. **Performance.**
+14. **Discovery** (Help page, ribbon, command line).
+15. **Example drawing and expected result** (real numbers, an engineer's example).
+16. **Older family card** (path) and what it no longer says.
+17. **Tim's AutoCAD checklist** (numbered, exact clicks and typing, what he should see).
+18. **Questions only Tim can answer** (context line, what you understand, a recommendation with why, what each answer means on a job). Never turn a question into a decision.
+19. **NOT proven**: state Built, Tested, Installed and Tim-accepted as four separate facts for this command, and which of them nobody has done.
+
+OUTPUT: FOR TIM first (at most eight numbered lines: how many cards, which commands could not be pinned down, which questions need him, what was read and what was NOT proven), then a line, then the cards. Use only facts you read in the files and code; mark a guess "GUESS". Do not claim anything was run in AutoCAD.
+
+Final message: one line, file path and verdict

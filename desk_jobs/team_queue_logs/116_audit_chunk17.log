@@ -1,0 +1,3 @@
+`C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK17_02NOV.md` covers all 60 entries (BUG-1011 to BUG-1070): 32 INSTALLED-WAITING-PROOF, 12 FIXABLE-NOW, 11 HAS-DRAFT, 5 NEEDS-TIM. BUG-1010 is the 961st heading by my count, so it falls outside this range.
+
+I couldn't list PRs because `gh` isn't available here, so the HAS-DRAFT lines name branches, not PR numbers.

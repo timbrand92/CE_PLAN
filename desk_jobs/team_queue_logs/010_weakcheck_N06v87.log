@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\ROBOT_WEAKCHECK_REPAIR_N06v87_02NOV.md`: verdict REPAIRABLE with the robot alone, not run; one open risk is that `pick-first "{$ph}"` in the new twins may be refused by the runner.

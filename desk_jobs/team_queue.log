@@ -1,0 +1,102 @@
+Mon 02:25 FEEDER feeder started
+Mon 02:25 FEEDER launched 010_weakcheck_N06v87.txt pid 39996 (Team week 29, C: 42.5 GB)
+Mon 02:25 starting 010_weakcheck_N06v87 (sonnet)
+Mon 02:28 finished 010_weakcheck_N06v87
+Mon 02:30 FEEDER launched 011_weakcheck_N17.txt pid 49912 (Team week 29, C: 42.5 GB)
+Mon 02:30 starting 011_weakcheck_N17 (sonnet)
+Mon 02:33 finished 011_weakcheck_N17
+Mon 02:36 FEEDER launched 012_weakcheck_N61.txt pid 78904 (Team week 29, C: 42.5 GB)
+Mon 02:36 starting 012_weakcheck_N61 (sonnet)
+Mon 02:38 finished 012_weakcheck_N61
+Mon 02:40 FEEDER launched 013_weakcheck_N41v87.txt pid 84776 (Team week 29, C: 42.5 GB)
+Mon 02:40 starting 013_weakcheck_N41v87 (sonnet)
+Mon 02:42 finished 013_weakcheck_N41v87
+Mon 02:45 FEEDER launched 014_weakcheck_R02bv87.txt pid 75724 (Team week 29, C: 42.5 GB)
+Mon 02:45 starting 014_weakcheck_R02bv87 (sonnet)
+Mon 02:47 finished 014_weakcheck_R02bv87
+Mon 02:49 FEEDER launched 020_fill_robot_cases.txt pid 53176 (Team week 29, C: 42.5 GB)
+Mon 02:49 starting 020_fill_robot_cases (sonnet)
+Mon 02:58 finished 020_fill_robot_cases
+Mon 03:01 FEEDER launched 021_fill_codex_briefs.txt pid 84000 (Team week 30, C: 42.5 GB)
+Mon 03:01 starting 021_fill_codex_briefs (sonnet)
+Mon 03:07 finished 021_fill_codex_briefs
+Mon 03:10 FEEDER launched 022_fill_workflow_cards.txt pid 12276 (Team week 30, C: 41.8 GB)
+Mon 03:10 starting 022_fill_workflow_cards (sonnet)
+Mon 03:16 finished 022_fill_workflow_cards
+Mon 03:19 FEEDER launched 023_fill_prereviews.txt pid 82820 (Team week 30, C: 41.6 GB)
+Mon 03:19 starting 023_fill_prereviews (sonnet)
+Mon 03:25 finished 023_fill_prereviews
+Mon 03:27 FEEDER launched 024_fill_cd_cards_closeout.txt pid 78548 (Team week 30, C: 41.6 GB)
+Mon 03:28 starting 024_fill_cd_cards_closeo (sonnet)
+Mon 03:31 finished 024_fill_cd_cards_closeo
+Mon 03:33 FEEDER launched 100_audit_chunk01.txt pid 78876 (Team week 30, C: 41.6 GB)
+Mon 03:33 starting 100_audit_chunk01 (sonnet)
+Mon 03:37 finished 100_audit_chunk01
+Mon 03:40 FEEDER launched 101_audit_chunk02.txt pid 72572 (Team week 30, C: 41.6 GB)
+Mon 03:40 starting 101_audit_chunk02 (sonnet)
+Mon 03:49 finished 101_audit_chunk02
+Mon 03:51 FEEDER launched 102_audit_chunk03.txt pid 60192 (Team week 30, C: 41.6 GB)
+Mon 03:51 starting 102_audit_chunk03 (sonnet)
+Mon 03:54 finished 102_audit_chunk03
+Mon 03:56 FEEDER launched 103_audit_chunk04.txt pid 66364 (Team week 30, C: 41.6 GB)
+Mon 03:56 starting 103_audit_chunk04 (sonnet)
+Mon 04:00 finished 103_audit_chunk04
+Mon 04:03 FEEDER launched 104_audit_chunk05.txt pid 57664 (Team week 30, C: 41.6 GB)
+Mon 04:03 starting 104_audit_chunk05 (sonnet)
+Mon 04:10 finished 104_audit_chunk05
+Mon 04:13 FEEDER launched 105_audit_chunk06.txt pid 5316 (Team week 30, C: 41.6 GB)
+Mon 04:13 starting 105_audit_chunk06 (sonnet)
+Mon 04:19 finished 105_audit_chunk06
+Mon 04:22 FEEDER launched 106_audit_chunk07.txt pid 49896 (Team week 31, C: 41.5 GB)
+Mon 04:22 starting 106_audit_chunk07 (sonnet)
+Mon 04:26 finished 106_audit_chunk07
+Mon 04:29 FEEDER launched 107_audit_chunk08.txt pid 2300 (Team week 31, C: 41.6 GB)
+Mon 04:29 starting 107_audit_chunk08 (sonnet)
+Mon 04:33 finished 107_audit_chunk08
+Mon 04:36 FEEDER launched 108_audit_chunk09.txt pid 60676 (Team week 31, C: 41.5 GB)
+Mon 04:36 starting 108_audit_chunk09 (sonnet)
+Mon 04:39 finished 108_audit_chunk09
+Mon 04:42 FEEDER launched 109_audit_chunk10.txt pid 73448 (Team week 31, C: 41.5 GB)
+Mon 04:42 starting 109_audit_chunk10 (sonnet)
+Mon 04:48 finished 109_audit_chunk10
+Mon 04:51 FEEDER launched 110_audit_chunk11.txt pid 2352 (Team week 31, C: 54.9 GB)
+Mon 04:51 starting 110_audit_chunk11 (sonnet)
+Mon 04:57 finished 110_audit_chunk11
+Mon 05:00 FEEDER launched 111_audit_chunk12.txt pid 78444 (Team week 31, C: 54.9 GB)
+Mon 05:00 starting 111_audit_chunk12 (sonnet)
+Mon 05:05 finished 111_audit_chunk12
+Mon 05:07 FEEDER launched 112_audit_chunk13.txt pid 14312 (Team week 31, C: 54.9 GB)
+Mon 05:07 starting 112_audit_chunk13 (sonnet)
+Mon 05:13 finished 112_audit_chunk13
+Mon 05:15 FEEDER launched 113_audit_chunk14.txt pid 74512 (Team week 31, C: 54.9 GB)
+Mon 05:15 starting 113_audit_chunk14 (sonnet)
+Mon 05:21 finished 113_audit_chunk14
+Mon 05:23 FEEDER launched 114_audit_chunk15.txt pid 62348 (Team week 31, C: 54.9 GB)
+Mon 05:23 starting 114_audit_chunk15 (sonnet)
+Mon 05:29 finished 114_audit_chunk15
+Mon 05:32 FEEDER launched 115_audit_chunk16.txt pid 60588 (Team week 31, C: 55.3 GB)
+Mon 05:32 starting 115_audit_chunk16 (sonnet)
+Mon 05:39 finished 115_audit_chunk16
+Mon 05:41 FEEDER launched 116_audit_chunk17.txt pid 44984 (Team week 32, C: 55.1 GB)
+Mon 05:41 starting 116_audit_chunk17 (sonnet)
+Mon 05:49 finished 116_audit_chunk17
+Mon 05:51 FEEDER launched 117_audit_chunk18.txt pid 84448 (Team week 32, C: 55.1 GB)
+Mon 05:51 starting 117_audit_chunk18 (sonnet)
+Mon 05:57 finished 117_audit_chunk18
+Mon 06:00 FEEDER launched 118_audit_chunk19.txt pid 39260 (Team week 32, C: 55.1 GB)
+Mon 06:00 starting 118_audit_chunk19 (sonnet)
+Mon 06:05 finished 118_audit_chunk19
+Mon 06:08 FEEDER launched 119_audit_chunk20.txt pid 61764 (Team week 32, C: 54.9 GB)
+Mon 06:08 starting 119_audit_chunk20 (sonnet)
+Mon 06:11 finished 119_audit_chunk20
+Mon 06:14 FEEDER launched 120_audit_chunk21.txt pid 11940 (Team week 32, C: 54.9 GB)
+Mon 06:14 starting 120_audit_chunk21 (sonnet)
+Mon 06:16 finished 120_audit_chunk21
+Mon 06:19 FEEDER launched 300_robot_cases_set01_pipe_levels.txt pid 76248 (Team week 32, C: 54.7 GB)
+Mon 06:19 starting 300_robot_cases_set01_pi (sonnet)
+Mon 06:24 finished 300_robot_cases_set01_pi
+Mon 06:27 FEEDER launched 301_robot_cases_set02_cover_and_checks.txt pid 71028 (Team week 32, C: 54.7 GB)
+Mon 06:27 starting 301_robot_cases_set02_co (sonnet)
+Mon 06:32 finished 301_robot_cases_set02_co
+Mon 06:35 FEEDER launched 302_robot_cases_set03_inspector_records.txt pid 900 (Team week 32, C: 54.7 GB)
+Mon 06:35 starting 302_robot_cases_set03_in (sonnet)

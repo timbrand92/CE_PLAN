@@ -1,0 +1,16 @@
+# MODEL: opus
+PRE-REVIEW BRIEF: Civil #1658 (BUG-971, every route that writes the CE record asks the unreadable-record hold; replaces #1576; touches ProjectDataService.Persistence.cs, a PROTECTED file), Civil #1416 (BUG-801, CE write commands mark automatic Project QA stale), Civil #1419 (BUG-803, CDREBUILD treats an original with an out-of-date stored handle as the original), Civil #1837 (BUG-1228, DP takes about 30 s to place; reads each drawing object once per landing read). Opus, Team, read-only. Written by CE 05 Mon 2 Nov 2026 at CE 00's request (queue filler 6). Open draft PRs with a Settings switch and no Opus pre-review as at 2 Nov 2026; the bases are rel-20261023m (#1658), rel-20261018d (#1416, #1419) and rel-20261026z (#1837). #1576 is the older version of #1658: say if it can be closed once #1658 is kept.
+
+You are an independent reviewer. Do not edit any repository file, run no git write command (a read-only git fetch is allowed), build nothing, run no test, deploy nothing, open no AutoCAD, do not read or write Tim's real settings files, spawn no agents. Write exactly ONE file (named below). Do not push it; CE 05 pushes it. Read first: C:\TimOS\RULES.md (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is built, tested and NOT proven). The style of an earlier review is C:\CE_PLAN\areas\OPUS_PREREVIEW_AF_1975_1980_GROUP_01NOV.md. Write exactly ONE file: C:\CE_PLAN\areas\OPUS_PREREVIEW_FILL_REC_02NOV.md .
+
+For EACH PR (gh pr view <n> and gh pr diff <n>; the PR description and the carpark entry in C:\CE_PLAN\BUG_CARPARK.md state the intent; a BUGFIX_*REPORT* in C:\CE_PLAN\areas may also name the PR), answer with file and line:
+1. What exactly changes for the drafter in AutoCAD terms, and is it what the carpark entry and Tim's decisions (C:\CE_PLAN\decisions) ask for?
+2. The Settings switch: default per Tim's rulings, pinned in a defaults test through both start-up reads, OFF restores the old behaviour exactly? Any engineering value hard-coded that belongs in Settings (R-00)?
+3. No-hard-blocks (R-27): any stop, refusal or modal window that a warning should have been.
+4. Native AutoCAD protection (locked layers, Xrefs, REFEDIT) and REDO-safety; and any PROTECTED file touched (for example LinkService.Persistence.cs, ProjectDataService.Persistence.cs, RulebookEngine.cs): review those lines with extra care.
+5. The keep-both merge: read-only git merge-tree against the PR's base and the other open PRs in this group, especially UserSettings.cs and REGRESSION_LOG.md. Check any stack is sound.
+6. Tests: do they really fail before and pass after? Did any test touch the real %APPDATA%?
+7. What is NOT proven, and the AutoCAD scenario for the robot (CE 02) and any Codex look.
+8. Verdict per PR: KEEP, KEEP-WITH-NOTE or CHANGE-NEEDED (say exactly what), and the train class (area plus smoke or FULL).
+Format: FOR TIM first (at most eight numbered lines, one verdict line per PR, no tables), then DETAIL per PR. Say plainly if you could not verify something. If two PRs in this group touch the same function, say so in question 5. Your final message must be one line: the file path and one verdict per PR.
+Final message: one line, file path and verdict.

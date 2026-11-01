@@ -1,0 +1,27 @@
+`C:\CE_PLAN\areas\FILL_ROBOT_CASES_02NOV.md`: 24 robot-case jobs queued (`C:\CE_PLAN\desk_jobs\team_queue\300` to `323`, all Sonnet), covering 137 fixes in sets of 4 to 6, Civil first. Nothing was built, run or tested.
+
+The "no case" finding is a text match of each bug number against the case files and earlier drafts. It can miss a case that never names its bug, so each job re-checks the ledger before drafting. I checked PRs #1700 to #1988 only. Older and closed PRs were not examined, and I read no PR code.
+
+- **Sets:** The Civil sets cover:
+  - pipe levels
+  - cover and checks
+  - the Inspector records
+  - the CDRULES council rows
+  - detention
+  - Design drafts and reuse
+  - import and Xrefs
+  - labels and units
+  - long section
+  - Manager
+  - Pit Schedule
+  - six sets of fixes already installed in earlier trains
+
+  The Structural sets (seven) come last.
+- **Codex looks:** Many fixes will end up as numbered Codex looks. The robot can't press Export, type in a cell, use a file picker or place a drawn Pit Schedule.
+- **Opus review:** Each job names the fixes that need an Opus review first (Undo, locked layer, Xref).
+- **Structural on the robot:** Structural may not run on the robot at all. The only Structural command it has ever typed is CSREOBAR, so those jobs are told to say so plainly.
+- **Not queued:** About 90 older fixes, mostly Help or wording, Manager text, tests-only or docs-only. They are listed in section 4 of the report.
+
+I damaged one path in all 24 files with a text edit, then repaired it and read the files back to confirm. The safety paragraph in each file is checked identical to the earlier queue jobs.
+
+I used file prefix 300 to 323, which sorts after 122 and before 990. The brief's "three-digit prefix plus two digits" was ambiguous.

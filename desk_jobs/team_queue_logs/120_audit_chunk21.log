@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK21_02NOV.md: 17 entries (BUG-1252 to 1268): FIXABLE-NOW 4, NEEDS-TIM 1, HAS-DRAFT 4, INSTALLED-WAITING-PROOF 1, UNCLEAR 7. `C:\CE_PLAN\BUG_CARPARK.md` is wiped down to 5 lines by commits 20e999d3 and 5cd059e9; I read the last intact copy from b498a968 and did not repair it.

@@ -1,0 +1,6 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET02_COVER_AND_CHECKS_02NOV.md` — verdict: 2 robot cases with broken twins drafted (W1949, W1890), 4 fixes Codex-only, nothing run or validated. W1890 needs an Opus review before it runs.
+
+- **Robot cases:** W1949 is #1949, the outlet pipe top above the inlet pipe top. W1890 is #1890, CDRULEBOOK saying "Not saved". Each twin turns the PR's own switch off before launch.
+- **Codex only:** #1882, #1897 with #1920, #1962 and #1889, with exact Codex steps in the file.
+- **Not checked:** the printed wording came from the PR text, not a run. W1949's new row may be cut off by CDRULES's 20-row limit on DRV1_B1.
+- **Checked again:** no case, draft or ledger entry names any of the six PRs.

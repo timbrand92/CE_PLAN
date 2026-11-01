@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\ROBOT_WEAKCHECK_REPAIR_N41v87_02NOV.md — verdict: PART-strong. The weak line is `history has "is not connected"`, which a fixture pipe satisfies. The repaired case and twin are drafted but not validated or run, and the stretched-pipe tie rests on two DERIVED steps; Codex steps are included if the robot refuses them.

@@ -1,0 +1,16 @@
+`C:\CE_PLAN\areas\FILL_WORKFLOW_CARDS_02NOV.md` is written, and I queued 15 card-drafting jobs (500 to 514) in `C:\CE_PLAN\desk_jobs\team_queue`. I changed nothing else, and nothing was built, tested or opened in AutoCAD.
+
+1. **Commands listed:** the C-79a, C-79b and C-79c trains and the C-80 candidates, plus the older Opus backlog drafts. In the report they are grouped by train.
+2. **Cards that exist:** none of these commands has a change-specific card. About a dozen sit inside older family cards from July to September 2026, which predate the October changes. Examples are Pit Schedule (`PS-01`), the X-Civil import (`CV-07`), CDDESIGN, Inspector and CDCHECK (`QA-01`), long section (`CV-06`) and Edit Pipe.
+3. **No card of any kind found:** Tidy labels, the Grade mismatch window, Recall Last, CDRENUMBER, CDMENU and Repair, CESUPPORT, and the Manager screens (Updates & Rollback, CE Tools Refresh, start-up line).
+4. **Jobs queued:** 15 jobs of 5 cards each, so 75 cards to draft. Twelve cover Civil and Manager, three cover Structural. Each is Sonnet and read-only, and writes one `CARD_DRAFTS_*_02NOV.md` file in `areas`. Every card is marked DRAFT FOR TIM: nothing is approved.
+5. **Not covered:**
+   - The guidebook (B-042) and declutter (B-043d, B-043e) slices have no job, because no code or PR exists yet to draft from. They need a card from Tim before code starts.
+   - The section mark (#1981) already has a draft card, so it is not redrafted.
+6. **Not proven:** "No change-specific card" means none found by file name and keyword search. I did not read every old card in full or the code for each command.
+7. **Gaps and shortcuts:**
+   - `gh` was not available in my shell, so PR titles come from the train lists and reviews. I did not check live PR heads.
+   - Job 501 has no BUG number for PR #1047, and job 509's long-section command name is unconfirmed. Both jobs tell the writer to confirm them.
+   - The safety wording is copied from the earlier queue-filler jobs, because `team_fix_cs1.txt` has no separate safety paragraph.
+
+Final message: C:\CE_PLAN\areas\FILL_WORKFLOW_CARDS_02NOV.md, no card exists for these changes, 15 jobs queued
