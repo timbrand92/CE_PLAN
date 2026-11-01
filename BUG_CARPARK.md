@@ -12558,6 +12558,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 
 **Status:** OPEN
 
+- Note (CE 05, Sun 1 Nov 2026): draft PR #1982 (B-150, Civil, switch xcivilImport.levelRangeFollowsSettings ON): the X-Civil import level range now follows Settings. Built and unit-tested only; not seen in AutoCAD. Builder finding: the Settings range is -50 to 1000 m, so at shipped values an import now keeps levels from 250 to 1000 m and 0 or below down to -50 m (today dropped silently); levels of exactly 0 now count as real. Needs Opus review + N91 start-up smoke (decision 161). Report areas\BUGFIX_q7_REPORT_01NOV.md. Status unchanged (OPEN).
+
 ## BUG-909
 
 **Command / Area:** CEMEMBER picked plane and UCS, ledger F-055.
@@ -17948,3 +17950,21 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1929 (B-101, Structural line): Publish 
 Note (CE 05, Sat 31 Oct 2026): Tim answered by voice ("5as recommened", decision item 122): after Recall Last, a new upstream level works from the standard grade for the new pipe's length (19.40 for a 4.1 m pipe at 1 in 100), behind a Settings switch ON; this supersedes the 18.95 behaviour. Job w3 queued for after the 14:00 Team reset (Civil, base rel-20261102a). Still OPEN: not built, not tested in AutoCAD. Separately, decision item 119 (a steeper pipe than the chosen grade also warns) is CE 04's GUESS on Tim's words "2no but warn" and stays UNCONFIRMED; job w1 builds it behind its own switch.
 
 Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Recall Last, then a new upstream level, works from the standard grade (19.40 on a 4.1 m pipe at 1 in 100; switch pipe.recallLastNewUpstreamUsesStandardGrade ON). Built and unit-tested only; not opened in AutoCAD. Not fixed.
+
+## BUG-1268: CDCALC "Export to XLSX" closes the Save As window but writes no file (found by Codex batch A, 1 Nov 2026)
+
+**Command / Area:** CDCALC (Drainage calculator), Export to XLSX; Civil 3.0.88 installed (C-78). Found by Codex batch A, case K1-02, run by CE 02, 1 Nov 2026 about 14:22 (ledger and CODEX_VERIFY_K1 files). Reported by CE 00 on 1 Nov, 14:30. Severity MEDIUM-HIGH: a drafter loses the calculation export with no warning.
+
+**What was done:** In CDCALC, pressed Export to XLSX, chose a folder and the file name K1_CDCALC.xlsx in the Save As window, and pressed Save.
+
+**Expected:** The Save As window closes and the file K1_CDCALC.xlsx exists in the chosen folder, with the calculation sheets in it (as Pit Schedule Export Excel does).
+
+**What happened:** The Save As window closes, there is no error box, and the file K1_CDCALC.xlsx is NOT written. Pit Schedule Export Excel in the same session works (K1-01 and K1-03 pass), so this is specific to the CDCALC export. Either a real fault in the Excel-writer path used by CDCALC (the #1871 loader path) or a save-folder question (the folder chosen, or a different folder used). Cause not known yet.
+
+**Test that catches it:** Robot or Codex case K1-02: open CDCALC on a test copy, press Export to XLSX, type the full path of a new file in the Save As window, press Save, then check the file exists on disk, is not empty, and opens as a workbook. Control: the same with Pit Schedule Export Excel (passes). A unit guard should also assert that a failed write shows a plain message rather than closing silently.
+
+**Real-world effect:** A drafter exports the pipe calculation for a council submission, sees the window close as if it worked, and sends a package with no spreadsheet in it. C-78 listed CDCALC Export XLSX among its five fixes, so this is a FAILED PROOF of an installed fix.
+
+**Status:** OPEN (found 1 Nov 2026, installed fix failed proof; read-only root-cause job rc1 queued on Team, no build until the cause is known). Never FIXED until the ledger accepts it by name.
+
+---
