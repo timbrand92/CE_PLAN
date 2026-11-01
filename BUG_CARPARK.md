@@ -11918,6 +11918,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1924 (B-111, rel-20261102a): the CDCATC
 
 **Codex W4-02 (23 Oct, 3.0.70): still seen.** Closing Grade mismatch with X placed the pipe with the typed 1 IN 100. Still needs Tim's call on what X should mean.
 
+- Note (CE 05, Sun 1 Nov 2026, from CE 00): NEW FINDING, Esc does not close the box. Codex look A78c, Sun 1 Nov 22:07, Civil 3.0.88: with the Grade mismatch box open, pressing Esc did NOT close it (title bar active, two tries); pressing Cancel closed it and no pipe was placed. (This build has a Cancel button; the 20 Oct note said two buttons only.) Possible product fault against Tim's rule UX-WIN-01 (Esc = Cancel). Evidence: screenshots A78c-E2-active, E3-try1, E3-try2 in CE 02's Codex folder. Plain fix proposed: Esc closes the window exactly as Cancel does (no pipe placed); any value involved goes to Settings (R-00); nothing hard-blocked (R-27). Classification: fixable without engineering judgement, CLASS fix-ready for tranche 3 (the X-button question above stays with Tim). Status unchanged (OPEN).
+
 ---
 
 ## BUG-858
