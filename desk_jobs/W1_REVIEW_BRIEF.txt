@@ -1,0 +1,22 @@
+WAVE 1 BATCH CASE REVIEW BRIEF (CE 02, Sun 1 Nov 2026 18:20, CE 00 "slips next"). For ONE read-only Opus agent on Team. It reads case files, reports and source and WRITES only (a) one review slip per case that passes review and (b) its own report. It does NOT run AutoCAD, the driver or case_runner (validate is allowed), builds nothing, edits NO case, setup, spec, driver or settings file, commits and pushes nothing, spawns no further agents. Tim's rules (C:\TimOS\RULES.md): plain Australian English, metric, numbered lists with bold labels, NO tables, answer first. Keep it LEAN: read each file once, no repeat reads, short report.
+
+WHY. Each case in your list is a WAVE 1 bug-proof case (plan areasBUG_PROOF_PLAN_31OCT.md): it passed in two or more separate AutoCAD starts on Civil 3.0.88+3fbb9da5 (1 Nov) and has a broken twin that fails on a check where one exists. Earlier paper reviews of the drafts: areasWAVE1_REVIEW_RP_REPORT.md, WAVE1_REVIEW_RE_REPORT.md, WAVE1_REVIEW_RS_REPORT.md and the writer reports areasWAVE1_WRITING_*_REPORT.md (read the entries for your cases). Several cases were repaired after their first runs (backups *.pre_run1, .pre_run1b, .pre_run1c, .pre_run1d next to the case: the passing runs used the repaired text, the sha256 in your list is the repaired text). Under the 24 Oct acceptance conditions a case becomes Claude-accepted only after an INDEPENDENT reviewer compared it with its card and wrote a reviewed_against line and a slip. That is your job, for about 13 to 14 cases.
+
+YOUR LIST: the job file names a list file (one case per line: id | case path | sha256 of the case text | the passing run ids | plan item | bug | twin and its last result).
+
+FOR EACH CASE.
+1. Read the case file (header, EXPECTED, STEPS, ASSERT), its twin if one is named, and the case's plan item or bug entry (C:\CE_PLAN\BUG_CARPARK.md, search the bug number; C:\CE_PLAN\areas\ and the workflow cards in the repo C:\Lisp Files\CE_ACAD_PLUGIN\docs\workflows if the plan item names a card). Read the two passing runner reports only where a check looks doubtful: C:\CE_PLAN\areas\runner-reports\<run id>.md.
+2. For every word, number or level the case asserts, check where it comes from (source at the build: git show 3fbb9da5:Modules/Drainage/... or git grep -n "<words>" 3fbb9da5 -- Modules/Drainage; Structural and Manager likewise) or whether it was seen on a run. Say UNSOURCED if it is neither.
+3. Judge: (a) does the case check what its card or bug says, or only part of it; (b) any check too weak to fail (a contains on a very common word, a count that cannot differ, a check that passes even if the fix is absent); (c) does the twin break exactly one thing and fail on a CHECK, not on a stalled step (read the twin's report); (d) anything the robot cannot read that Codex must SEE (labels, overlaps, window layout).
+4. Verdict per case, one of: ACCEPT FULL (covers its card), ACCEPT PART (covers part; say exactly which part and which part it does not cover), or NOT YET (say the exact line to fix).
+5. For ACCEPT FULL or ACCEPT PART write the slip. File: the case path with .case.txt replaced by .review.txt. If a slip already exists whose CASE_SHA256_REVIEWED equals the sha256 in your list line, leave it alone and say ALREADY. If a slip exists with a different sha, first copy it to <name>.review.txt.old, then write the new one. Slip format, exactly these lines (copy the wording style of C:\Lisp Files\_ACAD_DRIVER\cases\R09s_dp1_double_click_stops_editor_first.review.txt):
+   REVIEWED_AGAINST <the card, bug or plan item and the source files and commit 3fbb9da5 you compared>
+   VERDICT CLAUDE-ACCEPTED-READY for FULL: <one sentence what it proves>   (or  for PART: <what it proves; not covered: ...>)
+   CASE_SHA256_REVIEWED <the sha256 from your list line, exactly>
+   DATE <real date and time from the date command>
+   DETAIL <your report path>
+   REVIEWER Opus-Team-W1rev-<your job letter>
+   Add the passing run ids and the twin run id inside the VERDICT sentence.
+6. Never write a slip for NOT YET.
+
+REPORT. Write C:\CE_PLAN\areas\C78_REVIEW_<job letter>_REPORT.md : answer first (counts ACCEPT FULL, ACCEPT PART, NOT YET, ALREADY; the three weakest cases), then one short numbered entry per case (id, verdict, what it proves, what it does not, UNSOURCED items, any check too weak). Final message: the first 12 lines of the report. Record in the report how many minutes you took (read the real clock with the date command at start and end).
