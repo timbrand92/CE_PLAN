@@ -38,3 +38,9 @@ The 7 real looks (4 more PRs are settled by the reviewer's logic evidence: #1868
 3. **During:** `STOP_CODEX.flag` removed by me; the robot lane holds (one AutoCAD at a time); the Codex runner at `C:\Lisp Files\_CODEX_RUNNER`.
 4. **After:** the flag goes back up, the Codex logs are copied to a safe place (a test run once truncated a live log), results written into the ledger as PASS / FAIL / BLOCKED / NOT TESTED per look. Nothing counts as accepted until the pilot rule's conditions are met (the robot proof plus, for the SEEN part, a Codex PASS; audit sample 1 in 10).
 5. **Meter:** your reading before and after each batch, written beside the result.
+
+## Added Sun 1 Nov 16:55 (CE 00 request): look K1-02b for BUG-1268 (CDCALC Export to XLSX), on the build that carries the fix
+
+1. **Why:** K1-02 FAILED on 3.0.88 (the CDCALC Save As closed, no file on disk). CE 05's root cause is in `areas\ROOTCAUSE_BUG1268_CDCALC_XLSX_01NOV.md`; a fix with a switch is approved. This look proves the fix by sight and by file.
+2. **Steps for Codex (one AutoCAD session, test copy):** (a) CDCALC, Export to XLSX, type the FULL path of a file in the look's own evidence folder, Save: the file must exist on disk, be non-empty, open in Excel with its sheets, the status line must name it, and the CE log must carry the new line. (b) Cancel in the same box: no file, no error box, a "cancelled" log line. (c) A bad folder: a plain error box. (d) The switch OFF reproduces the old failure only if CE 00 sets the GO flag, as for K1-04.
+3. **Where it goes:** the first Codex batch after the build with the BUG-1268 fix is installed (batch B or C, or a small batch of its own), under a separate written GO from CE 00. The brief is written when the fix build exists, from verifyK1_c88 (K1-02 is its parent step) and the root-cause note.
