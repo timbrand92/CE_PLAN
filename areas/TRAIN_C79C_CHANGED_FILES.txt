@@ -8,6 +8,7 @@ Modules/Drainage.Tests/Rules/Bug1256CancelLineTests.cs
 Modules/Drainage.Tests/Rules/Bug898ImportResultsFromDrawnTests.cs
 Modules/Drainage.Tests/Services/Bug587PitScheduleRowGrowthTests.cs
 Modules/Drainage.Tests/Services/C60AuditSourcePinGuardTests.cs
+Modules/Drainage.Tests/Services/C79cFinalizerGuardsTests.cs
 Modules/Drainage.Tests/Services/C79cNewSwitchDefaultsTests.cs
 Modules/Drainage.Tests/Services/PerformancePass1bTests.cs
 Modules/Drainage/Commands/LinkCommands.ImportXcivil.cs
