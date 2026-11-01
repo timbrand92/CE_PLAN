@@ -33,6 +33,8 @@ while ($true) {
   if (-not $nextAt -or $nextAt -lt $now) { $lines += "ALERT CODEX has no dated next batch in CODEX_NEXT.txt (Rule 20.4): CE 02 propose one, CE 00 write it." }
   if ($codexIdleH -ge $CodexIdleAlertHours -and -not ($nextAt -and $nextAt -gt $now)) { $lines += "ALERT CODEX idle $codexIdleH h: CE 02 propose the next look batch to CE 00 now, or CE 00 write the reason (STOP_CODEX is $(if($stop){'UP'}else{'down'}))." }
   if ($acad -eq 0 -and $acadGone -ge 15) { $lines += "ALERT AUTOCAD not running: CE 02 start the next pack (Rule 15)." }
+  $stopF = 'C:\CE_PLAN\desk_jobs\CHAIN_Q_STOPPED.txt'
+  if (Test-Path $stopF) { $lines += "ALERT TEAM FEEDER STOPPED: " + ((Get-Content $stopF -TotalCount 2) -join ' ') }
   Set-Content -Path $out -Value $lines
   Start-Sleep -Seconds $Seconds
 }
