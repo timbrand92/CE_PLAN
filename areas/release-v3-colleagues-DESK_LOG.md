@@ -1682,3 +1682,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 20:28: #1962 confirmed in 3.0.89 (DLL commit 61fd6fbc); CE 05 told; B1e planned; job 225 draft file landed (W1888P position-only runs now); fix PRs 1989 to 1993 open as drafts.
 
 - CE 02 Mon 02 Nov 20:29: B1e queued first in batchN5 (pid 73980); CODEX_NEXT re-dated.
+
+- Mon 02 Nov 20:48 PC clock CE 00 SAFE POINT item 63 saved (Max hit 60 at 20:47; Tim asked to type /compact; CE 07 and CE 01 told to stay quiet until 06:00 Tue; my checks moved to 22:37 and 06:37).
