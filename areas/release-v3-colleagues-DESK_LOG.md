@@ -1658,3 +1658,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 17:49 30-minute check: lanes up, no ALERT, C: 45 GB free, HOLD_ROBOT.flag is the Codex window (CE 00 GO), AUD3 running since 17:47 (usage 50 percent). S3b BLOCKED (driver refuses typed zoom at a CE prompt), B1b-04b BLOCKED (wrong ribbon tab), B1b-06b DIFFERENT (Grade mismatch window first). Briefs need fixes; proposal to CE 00.
 
 - CE 02 Mon 02 Nov 17:52: B1c and S3c briefs written; batchN3_codex.ps1 started (pid 78212) to take over from batchN2 after B2b; CODEX_NEXT re-dated 22:30.
+
+- CE 02 Mon 02 Nov 17:52: CE 00 approved the queue; the three brief faults recorded as NOT product results; end-of-evening check of the Inspector palette (original ON) and the three settings files is due at 22:30.
