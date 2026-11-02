@@ -19,7 +19,7 @@
 
 ## Section 3: isolation listings (files in the five folders; before at 05:19, after at 05:28 Melbourne)
 
-Differences only (full listings saved at `C:\CE_WORK\scratch\w1042\appdata_before.txt` and `appdata_after.txt` until cleanup):
+Differences only (the full listings were in the scratch folder, now removed):
 
 1. `CD_Settings.json`: before 15355 bytes, 2026-11-03 05:06:10; after 15270 bytes, 2026-10-04 08:22:30.
 2. `CD_RecentValues.json`: before 13190 bytes, 05:19:09; after 13190 bytes, 05:23:12.
