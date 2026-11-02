@@ -1688,3 +1688,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 21:20 60-minute check: no ALERT, no gap, C: 40 GB free, usage 56 percent; reports L1a, L2a, L3a, B1e, S3d, L2b recorded (Codex halves; mostly BLOCKED by input and brief faults, L1a west callout PASS, L3a dark Manager tabs PASS SURE); B1f queued via batchN6 pid 38184.
 
 - CE 02 Mon 02 Nov 22:20: Codex evening over (L3b ended 21:37); robot night running from 22:18 (about 40 min idle caused by my batchN6 list bug, fixed by not rerunning it); CD_RecentValues restore moved to Tue 08:17; batched report sent to CE 00.
+
+- CE 02 Tue 3 Nov 00:55 (PC clock): AutoCAD was idle 00:01 to 00:55. Cause: chain4 finished spec_passk (ALL DONE 00:01, 11 packs on 3.0.89) and I had queued nothing behind it. Fixed: chain4 pid 68900 now runs spec_passl (16 packs: wave 1 second session, Pit Schedule probes, R1-R3), AutoCAD pid 85272 up 00:55:28; follow_passm.ps1 (WMI) starts spec_passm (second session of the passk packs) when passl ends, so the queue runs to 07:50. Codex 05:30 still needs CE 00 GO. Results are recorded by name at the 06:03 check.
