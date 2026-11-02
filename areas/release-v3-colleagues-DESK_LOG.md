@@ -1662,3 +1662,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 17:52: CE 00 approved the queue; the three brief faults recorded as NOT product results; end-of-evening check of the Inspector palette (original ON) and the three settings files is due at 22:30.
 
 - CE 02 Mon 02 Nov 18:23 30-minute check: AutoCAD idle 14 minutes 18:07 to 18:21 (stale Codex-S5 lock left by my takeover race; removed, B1c running since 18:22); AUD3 3 x PASS UNSURE; B2b BLOCKED (pick hit the label); B2c briefed and queued via batchN4 (pid 29640, clears stale locks).
+
+- CE 02 Mon 02 Nov 18:50 30-minute check: no ALERT, no idle gap (S3c running since 18:48), C: 44 GB free, usage 51 percent. B1c: B1b-04b BLOCKED (Grade line not on screen, needs Show full detail), B1b-06b DIFFERENT (uphill row amber/gold, not red). Inspector back ON, tab order changed.
