@@ -1652,3 +1652,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 17:20 30-minute check: no ALERT in LANE_STATUS (17:17); HOLD_ROBOT.flag is the Codex window (CE 00 GO), STOP_SUPERVISOR up; C: 46 GB free; Codex launcher log clean, S3b started 17:15 (usage 48 percent). New reports: B2 (2 PASS SURE, 2 BLOCKED), B3 (B3-01 PASS SURE), AUD2 attempt 2 BLOCKED again (my brief defect: run list AUD-01..11 vs steps for 01..03 only; F2 note ran CLEAN). Evening batchN continues to 22:30.
 
 - CE 02 Mon 02 Nov 17:24: AUD3 and B2b briefs written; batchN2_codex.ps1 started (WMI pid 81824) to replace batchN after S3b; CE 00 asked for B3-02 OK; robot cases wanted for B2-02a/b and B3-01 logged.
+
+- CE 02 Mon 02 Nov 17:25: CE 00 refused B3_REFRESH_GO.flag (B3-02 NOT TESTED, reason recorded); AUD3, B2b, batchN2 order approved; CODEX_NEXT re-dated 22:30; batchN2 waiting for S3b to finish (S3b running since 17:15).
