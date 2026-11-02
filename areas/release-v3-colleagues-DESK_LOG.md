@@ -1676,3 +1676,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 19:21: CE 00 order 19:30 done: Codex halves recorded, BUG-1195 robot case asked of CE 05, S3d brief with the cover-box routine written and queued (batchN5 pid 81424 after L3a).
 
 - CE 02 Mon 02 Nov 20:23 60-minute check: no AutoCAD gap, C: 42 GB free, usage 54 percent; B1d BLOCKED (Inspector shows no Grade validation line though #1962 is in the build), S5-02 PASS SURE, S5-01/S5-03 DIFFERENT (known bugs); Team feeder queue empty (CE 00/CE 05); CD_RecentValues.json question to CE 00.
+
+- CE 02 Mon 02 Nov 20:27: CD_RecentValues baseline chosen (2772272A952C, Sun 1 Nov 13:01), safe copies saved, batchN5 restarted with a time-stamped backup folder and no automatic CD_RecentValues restore; manual restore planned for 22:30.

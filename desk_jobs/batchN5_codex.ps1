@@ -1,5 +1,5 @@
 # CE 02 Mon 2 Nov 2026 17:30 (CE 00 order 17:25): takes over from batchN4_codex.ps1 the moment its L3a look has finished (it stops batchN4 and its roller job, clears a stale lock a killed launcher left behind, then runs S3d (the repaired S3c look: cover box routine) and the last Structural looks L2b, L1b, L3b), each look only if it can end by 22:30 and Codex usage is under 65 percent. No setting is changed; settings originals checked before and after each look; the robot night queue is restarted at the end. Not a build script.
-$d = 'C:\CE_PLAN\desk_jobs'; $log = "$d\batchN5_codex.log"; $runner = 'C:\Lisp Files\_CODEX_RUNNER'; $bak = 'C:\CE_WORK\scratch\batchB_backup'
+$d = 'C:\CE_PLAN\desk_jobs'; $log = "$d\batchN5_codex.log"; $runner = 'C:\Lisp Files\_CODEX_RUNNER'; $bak = "C:\CE_WORK\scratch\batchN5_backup_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
 function L($t) { Add-Content $log ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm:ss'), $t) }
 function Usage { $q = Get-Content (Join-Path $runner 'queue.log') -Tail 80 -ErrorAction SilentlyContinue | Where-Object { $_ -match 'usage .*-> *([0-9.]+)%' } | Select-Object -Last 1; if ($q -match '-> *([0-9.]+)%') { [double]$Matches[1] } else { -1 } }
 function Sha($p) { if (Test-Path -LiteralPath $p) { (Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash.Substring(0, 12) } else { 'missing' } }
@@ -42,7 +42,7 @@ foreach ($lk in $looks) {
 }
 Set-Content "$d\STOP_CODEX.flag" 'CE 00 HOLD: Codex lane held after looks S3 to AUD (put back by batchN5_codex.ps1 per CE 00 GO 07:15). Only CE 00 releases it.'
 while (Get-Process acad -ErrorAction SilentlyContinue) { Start-Sleep 20; if ((Get-Date) -ge $end.AddMinutes(30)) { L 'AutoCAD still running 30 minutes past 10:45: files not restored'; break } }
-if (-not (Get-Process acad -ErrorAction SilentlyContinue)) { foreach ($f in $before.Keys) { $now = Sha $f; if ($now -ne $before[$f].sha) { Copy-Item -LiteralPath $before[$f].copy -Destination $f -Force; (Get-Item -LiteralPath $f).LastWriteTimeUtc = $before[$f].mtime; L "RESTORED $([IO.Path]::GetFileName($f)): was $now, back to $($before[$f].sha)" } else { L "unchanged $([IO.Path]::GetFileName($f)) sha $now" } } }
+if (-not (Get-Process acad -ErrorAction SilentlyContinue)) { foreach ($f in $before.Keys) { $now = Sha $f; if ($now -ne $before[$f].sha -and [IO.Path]::GetFileName($f) -ne 'CD_RecentValues.json') { Copy-Item -LiteralPath $before[$f].copy -Destination $f -Force; (Get-Item -LiteralPath $f).LastWriteTimeUtc = $before[$f].mtime; L "RESTORED $([IO.Path]::GetFileName($f)): was $now, back to $($before[$f].sha)" } else { L "unchanged $([IO.Path]::GetFileName($f)) sha $now" } } }
 Stop-Job $roller -ErrorAction SilentlyContinue; Remove-Job $roller -Force -ErrorAction SilentlyContinue
 Remove-Item "$d\HOLD_ROBOT.flag", "$d\ROBOT_STOP_AT.txt" -Force -ErrorAction SilentlyContinue
 L 'HOLD_ROBOT.flag removed.'
