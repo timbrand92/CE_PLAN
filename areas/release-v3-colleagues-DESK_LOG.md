@@ -1670,3 +1670,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 18:54: CE 01 confirms #1887 is in 3.0.89; uphill row colour question stays with CE 05; CDRULES not used to fail it.
 
 - CE 02 Mon 02 Nov 18:55: CE 00 ruling recorded: no #1887 fail on CDRULES; amber Design Warnings row = window defect (CE 05 job 224), finding only.
+
+- CE 02 Mon 02 Nov 19:19 30-minute check: no ALERT, no idle gap, C: 43 GB free, usage 52 percent; batchN4 running B1d (since 19:11); B2c B2-01a/b PASS SURE (Codex half); S3c BLOCKED (New Pit cover field would not take the value).
