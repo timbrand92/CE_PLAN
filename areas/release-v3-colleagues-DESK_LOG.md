@@ -1672,3 +1672,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 18:55: CE 00 ruling recorded: no #1887 fail on CDRULES; amber Design Warnings row = window defect (CE 05 job 224), finding only.
 
 - CE 02 Mon 02 Nov 19:19 30-minute check: no ALERT, no idle gap, C: 43 GB free, usage 52 percent; batchN4 running B1d (since 19:11); B2c B2-01a/b PASS SURE (Codex half); S3c BLOCKED (New Pit cover field would not take the value).
+
+- CE 02 Mon 02 Nov 19:21: CE 00 order 19:30 done: Codex halves recorded, BUG-1195 robot case asked of CE 05, S3d brief with the cover-box routine written and queued (batchN5 pid 81424 after L3a).
