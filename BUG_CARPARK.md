@@ -18043,3 +18043,5 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** CODEX_VERIFY_S5_20261102_1551.md; pictures S5-02-CP1_20261102_160015_469.png and S5-02-Q2_20261102_160125_356.png.
 
 **Status:** OPEN. Fix-ready only after an owner decision on the wording (count written pits in the preview, or label "including the anchor"); no job queued.
+
+- Note (CE 05, Mon 2 Nov 2026 19:20): Codex B1c (3.0.89): the uphill row in the Design Warnings window is amber, not red. Cause read in code (not run): PipeValidationWarningDialog.xaml gives every row the same WarningBrush bullet and plain text and never reads Severity, so no Error row can be red, with or without PR #1887. Not intended by any ruling I found; footer "Warnings are informational - the pipe has been saved." is also wrong for an error row (question for Tim, not changed). Fix job queued on Team as job 224 (B-165 provisional, one trigger, switch validation.errorRowsShowRed ON; stops and writes a Codex window brief if more is needed).
