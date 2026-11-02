@@ -1,0 +1,12 @@
+HEADLESS JOB "PAYLOAD 117 STAGE B: OPUS RE-READ OF THE C-79b2 MERGE" (CE 01, Tue 3 Nov 2026 01:20; Opus on Team; register B-174). You are a reviewer. You build nothing, push nothing, install nothing, change no file except your one verdict file. Read C:\TimOS\RULES.md first. Keep this short: the whole job should take well under 15 minutes of reading.
+
+INPUT: C:\CE_PLAN\desk_jobs\PAYLOAD117A_MERGE_NOTE.md (stage A's note) and the worktree C:\CE_WORK\build\wt117 (local branch p117-b2, one local merge commit on top of d4ce878ebfff53ec58e4a330fd0079ee4b999c67; it is NOT pushed). If the note's first line is not "STAGE A RESULT: MERGE CLEAN", write the verdict "NOT OK" with that reason and stop.
+
+CHECK, with git commands in the worktree (read-only):
+1. `git log d4ce878e..HEAD --oneline` is exactly the merge commit and the one commit cf059dcfd3dcd4bc325423f7d7110f0da924f6cc; `git diff d4ce878e HEAD --stat` is only Installer\PackageContents.xml and Modules\Drainage\CE_CVL_SUITE.csproj with 2 insertions and 2 deletions.
+2. Read those two diffs yourself: Civil 3.0.89 becomes 3.0.90 (every place, file version and assembly version and product version if present), Manager and `1.1.89` untouched, no stray byte change. Confirm UserSettings.cs still starts with the UTF-8 mark (git show d4ce878e:Modules/Drainage/Models/UserSettings.cs | head -c 3 | xxd, and the same on HEAD).
+3. Compare the merged tree with the signed b2 GO head and the signed b1 GO head: `git diff bab2dbf8 d4ce878e --stat` is the b2 train; confirm the merge changed none of those files (`git diff d4ce878e HEAD` touches only the two version files). Confirm cf059dcf's parent is bab2dbf8 (`git rev-parse cf059dcf^`).
+4. Read the stage A test counts in the note: version pin tests, C79b2 and C79b1 switch and guard classes: zero failures, non-zero totals; if one red is named and explained, judge whether the explanation is sound.
+5. Nothing hooks an event, starts a transaction, sets a system variable or writes a file in either commit (the merge adds no product code).
+
+WRITE `C:\CE_PLAN\desk_jobs\PAYLOAD117B_VERDICT.md`. FIRST LINE exactly "VERDICT: OK" or "VERDICT: NOT OK", then 5 to 10 numbered lines of what you checked and found. OK means: the merge is exactly the one version commit, nothing else moved, tests are clean. END with a summary under 50 words.
