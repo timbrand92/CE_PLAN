@@ -1654,3 +1654,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 17:24: AUD3 and B2b briefs written; batchN2_codex.ps1 started (WMI pid 81824) to replace batchN after S3b; CE 00 asked for B3-02 OK; robot cases wanted for B2-02a/b and B3-01 logged.
 
 - CE 02 Mon 02 Nov 17:25: CE 00 refused B3_REFRESH_GO.flag (B3-02 NOT TESTED, reason recorded); AUD3, B2b, batchN2 order approved; CODEX_NEXT re-dated 22:30; batchN2 waiting for S3b to finish (S3b running since 17:15).
+
+- CE 02 Mon 02 Nov 17:49 30-minute check: lanes up, no ALERT, C: 45 GB free, HOLD_ROBOT.flag is the Codex window (CE 00 GO), AUD3 running since 17:47 (usage 50 percent). S3b BLOCKED (driver refuses typed zoom at a CE prompt), B1b-04b BLOCKED (wrong ribbon tab), B1b-06b DIFFERENT (Grade mismatch window first). Briefs need fixes; proposal to CE 00.
