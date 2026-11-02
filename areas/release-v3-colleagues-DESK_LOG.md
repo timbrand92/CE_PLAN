@@ -1680,3 +1680,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 20:27: CD_RecentValues baseline chosen (2772272A952C, Sun 1 Nov 13:01), safe copies saved, batchN5 restarted with a time-stamped backup folder and no automatic CD_RecentValues restore; manual restore planned for 22:30.
 
 - CE 02 Mon 02 Nov 20:28: #1962 confirmed in 3.0.89 (DLL commit 61fd6fbc); CE 05 told; B1e planned; job 225 draft file landed (W1888P position-only runs now); fix PRs 1989 to 1993 open as drafts.
+
+- CE 02 Mon 02 Nov 20:29: B1e queued first in batchN5 (pid 73980); CODEX_NEXT re-dated.
