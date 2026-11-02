@@ -18015,3 +18015,15 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** CODEX_VERIFY_S8_20261102_1535.md, pictures S8-03-R2_20261102_154411_772.png and S8-03-R2z.png. Earlier sighting: UX finding 50 (30 Sep, build 3.0.15, New Pipe, "Staff ente...", release-v3-colleagues-UX_FINDINGS_2026-09-30.md). Windows are Codex-owned.
 
 **Status:** OPEN. Fix-ready: one width fix behind switch edit.captionsKeepFullWidth (ON); queued on Team as job 222 (B-163 provisional). Never FIXED until the ledger accepts it by name.
+
+## BUG-1272
+
+**Command / Area:** Edit Pipe window, "Material conflict: using STORMPRO from Pipe label in this drawing" banner (Civil 3.0.89), found by Codex look S5 (2 Nov 2026).
+
+**Symptom:** The Material conflict banner shows twice in Edit Pipe. COSMETIC (LOW); not confirmed it is two banners or one drawn twice.
+
+**Expected behaviour:** One banner per warning.
+
+**Reading by CE 05 (code read only, not run):** the text is built once in PipeTruthResolverService.cs:286 and carried as vm.NetworkTruthWarning (PipeEditCommand.Update.cs:66). PipeEditWorkshopDialog.xaml:305-306 shows it in one banner, and CdViewModel.cs:212 passes the same text on as NetworkWarning to a second consumer. Suspect the second display. Not fix-ready until a Codex picture or code read names the second place.
+
+**Status:** OPEN. Needs the second display found (Team read job or Codex picture) before a fix.
