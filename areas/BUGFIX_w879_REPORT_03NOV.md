@@ -1,0 +1,20 @@
+# BUGFIX w879 report: BUG-879 CE's own label moves mark the label "placed by hand" (3 Nov 2026)
+
+## FOR TIM
+
+1. **Result:** one draft PR, #2002 (title starts B-183, CE 01 may renumber). Built and unit-tested only. Nobody has opened it in AutoCAD. BUG-879 is NOT marked fixed.
+2. **What you will see differently:** with "hand-placed labels stay" ON, a pipe label you move with CE's own Slide along pipe, Move away from pipe, Flip side or CDANNOTATIONEDIT now stays put when you run Tidy labels. So does a pit cover text you flip with CE's grip. Tidy labels counts it under "Placed by hand (left alone)" when it sits on other text.
+3. **New switch:** `linking.ceMovesMarkHandPlaced`, on by default. Off gives the old behaviour exactly. It does nothing while "hand-placed labels stay" is off (that one is still off by default).
+4. **My own mistakes first:** (a) I checked for other open PRs on the same files only after editing; #599 and #469 touch `AnnotationEditCommand.cs`, I did not read them. (b) `gh` and `dotnet` were not on the shell path, so two test runs failed on quoting before the third ran.
+5. **NOT proven:** nothing was driven in AutoCAD. A pit cover text moved with AutoCAD's own MOVE is NOT covered (that is BUG-1252, on hold for your Monday question 19). The Opus note said two switches; the batch asked for one, so the pit text and the pipe labels share one.
+6. **Robot case (to write, switch-off control):** `N879_ce_move_marks`. Switch on and "hand-placed labels stay" on: place P1, P2 and a 100 mm pipe, type CDTIDYLABELS once, then use the Slide along pipe grip on the pipe description and move it onto a second label, run CDTIDYLABELS: it must report "Placed by hand 1" and the description's insertion point must be unchanged. Control: set `ceMovesMarkHandPlaced` false before launch, repeat: the description is moved by Tidy labels, "Placed by hand 0". Pit variant: CDPITCOVERFLIP on P1's cover text, then Tidy labels with pit text tidy on, same two checks.
+
+---
+
+## Technical detail
+
+1. **Fault confirmed on `origin/claude/rel-20261102a` (3fbb9da5):** `LinkService.PipeAttachmentActions.cs` (the `refreshed.PlacedByHand` block, about line 339) only cleared the mark for Reset Position; `Commands/AnnotationEditCommand.cs` called `UpdateAttachmentFromEntity(annotId)` with no mark; `LinkService.TidyPitText.cs` `PlanOnePitCoverText` had no hand check and the pit record had no field. The carpark line numbers (323-352, 87, 100) have moved.
+2. **Change:** switch in `Models/UserSettings.cs` (`CeMovesMarkHandPlaced`, "Default: on."); `Rules/HandPlacedLabelRule.cs` (`CeMovesMarkEnabled`, `MarksOnCeMove`); grip actions mark in the same write; `UpdateAttachmentFromEntity(id, markPlacedByHand)` with the new argument passed only from CDANNOTATIONEDIT, whose Execute* helpers now return whether the label really changed; `PitData.CoverTextPlacedByHand` set by `TryMovePitCoverText(..., markPlacedByHand: true)` from CDPITCOVERFLIP only, and read by `PlanOnePitCoverText` (item not movable, counted in `PlacedByHand`). A tidy never sets it.
+3. **Tests (net10, one project, filtered):** `Bug879CeMovesMarkHandPlacedTests` + `HandPlacedLabelMarkTests` 21 passed; settings/tidy/RedoSafe/C77/C78 classes 162 passed, 0 failed. The new tests pin the switch ON through `DeserializeSettings` and `DeserializeSettingsTolerant`, typed false changes only itself, the saved key, "Default: on." in the source, the truth table, PitData defaults and old-file read, and source guards (Reset still clears, no tidy marks, no regen or system variable). net48 compile of `CE_CVL_SUITE.csproj`: 0 errors. Not run: the full suite, Manager tests.
+4. **Isolation:** TEMP, TMP, CE_LOG_DIR_OVERRIDE set under `C:\CE_WORK\scratch\w879`. Listings of `%APPDATA%\TIM_CE_CADTOOLS`, `CE_STRUC_SUITE`, `CE_CVL_SUITE`, `CE_CADTOOLS` before and after the tests: 36,465 files each, no difference by name, size or write time (full listings `C:\CE_WORK\scratch\w879\before.txt` and `after.txt`; scratch removed at cleanup).
+5. **Disk:** C: free 67.8 GB before, 67.2 GB after the build; cleanup figure below.
