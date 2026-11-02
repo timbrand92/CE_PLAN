@@ -32,7 +32,7 @@
 5. **Overlap:** open draft #1989 (BUG-1269, B-161) also edits `PropagationPreviewViewModel.cs`, `UserSettings.cs` and `REGRESSION_LOG.md`, in different places (it adds a warnings list property and a Preview settings group). Not stacked. Expect a trivial textual merge, keep both sides. Its summary line is not touched by #1989.
 6. **Commit and PR:** branch `claude/w1273-preview-count`, one commit `1e310948`, draft PR #1994 against `claude/rel-20261102a`.
 7. **Environment:** `CE_LOG_DIR_OVERRIDE`, TEMP, TMP set to `C:\CE_WORK\scratch\w1273\...` before the run (the job started with `...\242_fix_w1273\logs`, which I overrode). No Manager tests, no AutoCAD, no accoreconsole.
-8. **Real-folder listings (rule 1):** before 36,201 files, after 36,212 files, across the four folders (names, sizes, last-write) saved at `C:\CE_PLAN\areas\w1273_listing_before.txt` and `w1273_listing_after.txt`. The changed files (right column is after; left is before):
+8. **Real-folder listings (rule 1):** before 36,201 files, after 36,212 files, across the four folders (names, sizes, last-write) kept outside the repo in `C:\CE_WORK\keep_w1273` (they hold client project folder names, which the leak scan refuses). The changed files (right column is after; left is before):
 
 ```
 12 files changed in place, 11 new usage events (all under outbox\usage\2026-11-02, 23:51:38 to 23:59:28):
