@@ -1666,3 +1666,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 18:50 30-minute check: no ALERT, no idle gap (S3c running since 18:48), C: 44 GB free, usage 51 percent. B1c: B1b-04b BLOCKED (Grade line not on screen, needs Show full detail), B1b-06b DIFFERENT (uphill row amber/gold, not red). Inspector back ON, tab order changed.
 
 - CE 02 Mon 02 Nov 18:51: B1d queued ahead of S5; batchN4 restarted (pid 40100); Inspector tab order recorded as cosmetic; uphill amber-not-red finding passed to CE 05.
+
+- CE 02 Mon 02 Nov 18:54: CE 01 confirms #1887 is in 3.0.89; uphill row colour question stays with CE 05; CDRULES not used to fail it.
