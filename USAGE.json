@@ -1,7 +1,7 @@
 {
   "accounts": [
-    {"name": "Main", "fiveHour": null, "week": 56, "readAt": "2026-11-02T17:37:00+11:00"},
-    {"name": "Team", "fiveHour": null, "week": 43, "readAt": "2026-11-02T17:33:00+11:00"},
-    {"name": "Codex", "fiveHour": null, "week": 49, "readAt": "2026-11-02T17:28:00+11:00"}
+    {"name": "Main", "fiveHour": null, "week": 59, "readAt": "2026-11-02T19:37:00+11:00"},
+    {"name": "Team", "fiveHour": null, "week": 44, "readAt": "2026-11-02T19:36:00+11:00"},
+    {"name": "Codex", "fiveHour": null, "week": 52, "readAt": "2026-11-02T19:22:00+11:00"}
   ]
 }
