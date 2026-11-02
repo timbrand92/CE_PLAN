@@ -1,1 +1,1 @@
-2026-11-02T05:30 A2 (N20 retake, W1-385, W1-791); then A3 Mon 2 Nov after the C-79a install; B Tue 3 Nov 09:00; C Wed 4 Nov 19:00
+2026-11-03T18:00 Codex evening batch after Tim leaves 17:30 (needs CE 00 written GO): b1 Codex looks if b1 is installed, S4, S7, reruns of lost looks; robot has AutoCAD overnight; Tuesday early window 06:20 to 08:20 is the GO in DESK_LOG
