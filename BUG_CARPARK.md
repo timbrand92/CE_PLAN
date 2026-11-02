@@ -18029,3 +18029,17 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Status:** OPEN. Needs the second display found (Team read job or Codex picture) before a fix.
 
 - Note (CE 05, Mon 2 Nov 2026 17:20): downhill half of BUG-1092 (real 4 mm fall on 2 m called "no measurable fall", Codex B1-06c FAIL SURE on 3.0.89). CE 00 ruled WORDING ONLY on the recommended default: the message states the real figure ('Very shallow fall: 4 mm over 2.0 m, 1 in 500'), behind switch validation.shallowFallStatesFigure (ON). Tolerance value, severity and the uphill rule (PR #1887) unchanged. Queued on Team as job 223 (B-164 provisional). Open engineering question for Tim (via CE 04): should a downhill fall inside the 5 mm band be a warning at all.
+
+## BUG-1273
+
+**Command / Area:** Edit Pipe cascade, Cascade Preview summary versus completion message (Civil 3.0.89), found by Codex look S5-02 (2 Nov 2026).
+
+**Symptom:** The preview says "4 pipes, 5 pits — ready to apply". After Apply the history says "[CDEDIT-CASCADE] Updated 4 pipes and 3 pits from P3 (IL 17.50)". Same cascade, 5 pits against 3. COSMETIC (LOW).
+
+**Expected behaviour:** The two lines count the same thing, or say what they count (for example "5 pits including the anchor").
+
+**Reading by CE 05 (code read only, not run):** PropagationPreviewViewModel.cs:203 counts every pit row in the plan, including the anchor pit (P3). LinkService.RepairAudit.InvertPropagation.cs:963-971 counts only pits actually written: it skips the anchor and any pit with no CE record. So the gap of two is most likely the anchor plus one pit with no record (the run also skipped the pipe STUB -> X1 with no level at one end). Not proven which pit; Codex did not list the five.
+
+**Reference:** CODEX_VERIFY_S5_20261102_1551.md; pictures S5-02-CP1_20261102_160015_469.png and S5-02-Q2_20261102_160125_356.png.
+
+**Status:** OPEN. Fix-ready only after an owner decision on the wording (count written pits in the preview, or label "including the anchor"); no job queued.
