@@ -757,3 +757,9 @@ Tim's words: "1yes, 2yes, 3yes, 4yes, 5yes, 6yes, 7yes, 8yes, 9yes, 10yes". Inte
 Tim's words: "yes" (a single word, sent right after the message that listed item 118 as the last question). Interpretation (GUESS, flagged): it answers item 118 only, the last single yes/no question asked. It cannot answer 116 (needs a number), 117 (a, b or c) or the multi-question batches 4, 5, 7, 8, which stay OPEN.
 
 186. **Robot may press OK on the "Design Warnings" box (item 118): yes, later, after 9 Nov.** GUESS: Tim did not say "later"; the later timing is CE 00's recommendation, applied because the question said no answer was needed for 9 Nov. Desk (CE 00) must: after the 9 Nov release, make one reviewed edit to the robot's approved-windows list (fingerprinted driver file, same conditions as the record-set verb); W234 stays a Codex look on Wed 4 Nov until then.
+
+## Voice batch 10 (3 Nov 2026)
+
+Tim's words, as relayed by CE 00 from the desk chat (3 Nov, Tue 06:45 PC clock): "clean up c drive". Interpretation (CE 00's reading, GUESS, not Tim's words): yes to option (a) of item 122 (zip old look logs) and yes to the dead-temp list; the Codex runner change (item 122 q2) is NOT answered and stays open.
+
+187. **Clean up C: drive (item 122; first filed as 121, renumbered because CE 02 filed a different 121, the Civil ribbon question).** GUESS on scope. Desk/CE 02 must: zip the two log copies in look folders older than 3 days after each zip is verified, remove originals only after verification, keep screenshots, exports and reports untouched (CE 02 after 08:20). Temp list already done by CE 00: 5 GB dead task file plus two stale Temp installer folders, 10.6 GB, manifest C:\CE_WORK\scratch\disk_cleanup_manifest_0303_0645.txt. The runner change (copy only changed logs) waits for Tim's answer.
