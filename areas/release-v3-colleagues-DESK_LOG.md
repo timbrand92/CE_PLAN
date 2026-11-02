@@ -1668,3 +1668,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Mon 02 Nov 18:51: B1d queued ahead of S5; batchN4 restarted (pid 40100); Inspector tab order recorded as cosmetic; uphill amber-not-red finding passed to CE 05.
 
 - CE 02 Mon 02 Nov 18:54: CE 01 confirms #1887 is in 3.0.89; uphill row colour question stays with CE 05; CDRULES not used to fail it.
+
+- CE 02 Mon 02 Nov 18:55: CE 00 ruling recorded: no #1887 fail on CDRULES; amber Design Warnings row = window defect (CE 05 job 224), finding only.
