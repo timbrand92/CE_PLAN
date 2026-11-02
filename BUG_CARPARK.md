@@ -18003,3 +18003,15 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 - Note (CE 05, Mon 2 Nov 2026 11:50): CE 02 robot reproduced the DECIMALS half with CDSYNC as the only command on 3.0.89 (probe PROBE-CDSYNC-BA, run RUN-20261102-1106-C3.0.89-smCS): 'IL 18.100 | IL 17.900' became 'IL 18.100 | IL 17.90'. The P8 DEPTH half is not read yet (probe PROBE-CDSYNC-BA2, next robot chain). Fix job for the decimals queued on Team as job 221 (B-162 provisional, switch cdsync.keepsLevelTextFormat, ON). Depth half stays open until BA2 reports.
 
 - Note (CE 05, Mon 2 Nov 2026 12:40): CE 02 reproduced the DECIMALS half a second time (PROBE-CDSYNC-BA2, run RUN-20261102-1219-C3.0.89-smCS2). The robot cannot read the P8 DEPTH cell (the grid text gives no value and the recorded text is cut before the P8 row), so the depth half (1.00 to 1.10 m) rests on Codex alone (S2-04, CODEX_LOOK_S2_20261102_1014.md). A third check needs a one-cell driver verb (driver edits wait until after 9 Nov) or a second Codex look photographing P8 before and after CDSYNC on the build with the decimals fix (job 221). Depth half stays OPEN, cause unknown, no fix job.
+
+## BUG-1271
+
+**Command / Area:** Edit Pipe window, ENGINEERING section captions (Civil 3.0.89), found by Codex look S8 rerun, case W223 (2 Nov 2026).
+
+**Symptom:** In the settled Edit Pipe window at normal size, 10 seconds after it opens, the first caption under ENGINEERING is cut at its right edge and reads "Downstre". The first type button "Stormwater" and the first field caption "Diameter" are intact, and the Downstream caption is complete after reopening. COSMETIC (LOW). Seen once per run, so it may depend on the window's first layout.
+
+**Expected behaviour:** Every caption in the window shows in full the first time it opens.
+
+**Reference:** CODEX_VERIFY_S8_20261102_1535.md, pictures S8-03-R2_20261102_154411_772.png and S8-03-R2z.png. Earlier sighting: UX finding 50 (30 Sep, build 3.0.15, New Pipe, "Staff ente...", release-v3-colleagues-UX_FINDINGS_2026-09-30.md). Windows are Codex-owned.
+
+**Status:** OPEN. Fix-ready: one width fix behind switch edit.captionsKeepFullWidth (ON); queued on Team as job 222 (B-163 provisional). Never FIXED until the ledger accepts it by name.
